@@ -92,11 +92,14 @@ def test_b6d_framework_sync_receipt_is_exact_non_authorizing_and_integrated() ->
     ).validate(receipt)
     assert receipt["artifact_hash"] == _canonical_hash(receipt)
     delta = receipt["framework_delta"]
-    assert _git(FRAMEWORK, "rev-parse", "HEAD") == delta["current_commit"]
-    assert _git(ROOT, "rev-parse", "HEAD:framework/RAKL") == delta["current_commit"]
-    assert _load(ROOT / "config/rakl-framework-pin.json")["commit"] == delta[
-        "current_commit"
-    ]
+    # This receipt is historical after a later pin refresh.  Preserve and audit
+    # the exact b6d object instead of coupling it to today's live gitlink.
+    assert _git(
+        FRAMEWORK, "cat-file", "-e", f'{delta["current_commit"]}^{{commit}}'
+    ) == ""
+    assert _git(
+        FRAMEWORK, "rev-parse", f'{delta["current_commit"]}^{{tree}}'
+    ) == delta["current_tree"]
     assert int(
         _git(
             FRAMEWORK,

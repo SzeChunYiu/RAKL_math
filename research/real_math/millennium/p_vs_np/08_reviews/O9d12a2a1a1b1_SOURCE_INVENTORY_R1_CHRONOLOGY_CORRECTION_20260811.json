@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "correction_id": "PNP-O9d12a2a1a1b1-SOURCE-INVENTORY-R1-CHRONOLOGY-CORRECTION-20260811",
+  "recorded_at": "2026-08-11T19:12:20Z",
+  "atom_id": "O9d12a2a1a1b1",
+  "defect_class": "POST_REVIEW_MUTATION_RETAINED_STALE_RECORDED_AT",
+  "predecessor": {
+    "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_SOURCE_NATIVE_THEOREM_INVENTORY_R1_20260811.json",
+    "raw_sha256": "sha256:7397ae3673d1c4b9363c00cc00996937bc76397b8a3ddc8d8408fe98a1b0206d",
+    "artifact_hash": "sha256:a9bbd2013a72e9c67395a2c96da7c9afd25b308f76df8e9b9208be23bd42dc74",
+    "disposition": "SUPERSEDED_CHRONOLOGY_DEFECT_RETAINED"
+  },
+  "review_binding": {
+    "path": "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1a1b1_SOURCE_INVENTORY_R1_HOSTILE_MATH_REVIEW_20260811.json",
+    "raw_sha256": "sha256:3ed6061027a9533eb969d3a5027bf512db726e0b7fcb1728cf1a28ce05852126",
+    "artifact_hash": "sha256:ddcf47b8a0e77571057d6f3f275b9eb7901237cc09be665a6b341f4ec475044a",
+    "recorded_at": "2026-08-11T18:33:00Z",
+    "authority": "SAME_CONTEXT_INTERNAL_HOSTILE_MATHEMATICAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW"
+  },
+  "historical_trace_binding": {
+    "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_SOURCE_INVENTORY_R1_RESULT_TRACE_20260811.json.shadow",
+    "raw_sha256": "sha256:8c91f836dc10f5654278ede43760440ebf7dc31de5539d57d19311a2e6387e33",
+    "artifact_hash": "sha256:d2ce12da318de52da459ecd0d7ffb2368ec997a3c5563cffb5cb74bd5f412c75"
+  },
+  "successor": {
+    "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_SOURCE_NATIVE_THEOREM_INVENTORY_R1_V2_20260811.json",
+    "raw_sha256": "sha256:35dd229c8c271784a10df0c6f17e4018fbf10958600a65867bb3da93019eca00",
+    "artifact_hash": "sha256:0c220ffad15617554149d84ccd34ee6ab0ca859ca201f6e2d010ebcaeffbba8a",
+    "recorded_at": "2026-08-11T19:12:05Z"
+  },
+  "correction": {
+    "defect": "V1 recorded_at predates RESULT_RECORDED and hostile review while its review_authority field says review complete",
+    "v1_recorded_at": "2026-08-11T18:13:13Z",
+    "result_recorded_at": "2026-08-11T18:32:45Z",
+    "review_recorded_at": "2026-08-11T18:33:00Z",
+    "v2_recorded_after_review": true,
+    "mathematical_payload_changed": false,
+    "outcome_changed": false,
+    "historical_bytes_rewritten": false
+  },
+  "mathematical_result": {
+    "outcome_branch": "SUCCESS",
+    "final_verdict": "MATCH_FOUND_ECCC_T24_AND_T30",
+    "candidate_generated": false,
+    "root_status": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE"
+  },
+  "authority_contract": {
+    "grants_proof_authority": false,
+    "grants_new_theorem_authority": false,
+    "grants_novelty_authority": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_framework_evolution_authority": false,
+    "grants_review_independence": false
+  },
+  "artifact_hash": "sha256:e8a7f841b0d56a84a5b139a10f49e6c1c9f88cc7257007ae42962ef40505c818"
+}

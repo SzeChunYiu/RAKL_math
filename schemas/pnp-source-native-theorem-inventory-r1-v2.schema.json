@@ -1,0 +1,1078 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/pnp-source-native-theorem-inventory-r1-v2.schema.json",
+  "title": "P-vs-NP source-native theorem inventory R1 V2 chronology successor",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "inventory_id",
+    "recorded_at",
+    "atom_id",
+    "object",
+    "qoi",
+    "framework",
+    "application_base",
+    "pre_action_binding",
+    "source_universe",
+    "scope_gap",
+    "theorem_rows",
+    "inventory_coverage",
+    "discriminator_evaluation",
+    "mathematical_experience",
+    "operational_assurance_excluded_from_mathematical_experience",
+    "next_action",
+    "review_authority",
+    "authority_contract",
+    "root_status",
+    "artifact_hash",
+    "predecessor_binding",
+    "review_binding",
+    "chronology_correction"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0.0"
+    },
+    "inventory_id": {
+      "const": "PNP-O9d12a2a1a1b1-SOURCE-NATIVE-THEOREM-INVENTORY-R1-V2-20260811"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "atom_id": {
+      "const": "O9d12a2a1a1b1"
+    },
+    "object": {
+      "type": "string",
+      "minLength": 1
+    },
+    "qoi": {
+      "type": "string",
+      "minLength": 1
+    },
+    "framework": {
+      "const": {
+        "repository": "SzeChunYiu/RAKL",
+        "commit": "787c7e00af2a5877ccb715bc807ec14f52974e9c"
+      }
+    },
+    "application_base": {
+      "const": {
+        "repository": "SzeChunYiu/RAKL_math",
+        "commit": "812addd25a7f34d3c6272143e21d5d7db34539aa"
+      }
+    },
+    "pre_action_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "raw_sha256",
+        "canonical_sha256",
+        "allowed_outcome_branches"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "raw_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "canonical_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "allowed_outcome_branches": {
+          "const": [
+            "SUCCESS",
+            "FAILURE",
+            "BLOCKED"
+          ]
+        }
+      }
+    },
+    "source_universe": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "allOf": [
+        {
+          "contains": {
+            "properties": {
+              "source_id": {
+                "const": "ECCC-TR25-033-2025"
+              },
+              "content_status": {
+                "const": "FULL_PRIMARY_CONTENT_INSPECTED"
+              }
+            },
+            "required": [
+              "source_id",
+              "content_status"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "source_id": {
+                "const": "RAZBOROV-1989"
+              },
+              "content_status": {
+                "const": "FULL_PRIMARY_CONTENT_INSPECTED"
+              }
+            },
+            "required": [
+              "source_id",
+              "content_status"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "source_id": {
+                "const": "KARCHMER-1993"
+              },
+              "content_status": {
+                "const": "METADATA_ONLY_PRIMARY_CONTENT_UNAVAILABLE"
+              }
+            },
+            "required": [
+              "source_id",
+              "content_status"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "source_id": {
+                "const": "WIGDERSON-1993"
+              },
+              "content_status": {
+                "const": "FULL_PRIMARY_CONTENT_INSPECTED"
+              }
+            },
+            "required": [
+              "source_id",
+              "content_status"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "source_id": {
+                "const": "NAKAYAMA-MARUOKA-1995"
+              },
+              "content_status": {
+                "const": "METADATA_ONLY_PRIMARY_CONTENT_UNAVAILABLE"
+              }
+            },
+            "required": [
+              "source_id",
+              "content_status"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        }
+      ],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_id",
+          "required_by_r1",
+          "identity",
+          "content_status",
+          "local_path",
+          "raw_sha256",
+          "size_bytes",
+          "access_observations"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "required_by_r1": {
+            "const": true
+          },
+          "identity": {
+            "type": "string",
+            "minLength": 1
+          },
+          "content_status": {
+            "enum": [
+              "FULL_PRIMARY_CONTENT_INSPECTED",
+              "METADATA_ONLY_PRIMARY_CONTENT_UNAVAILABLE",
+              "AUTHOR_ABSTRACT_ONLY_FULL_PRIMARY_CONTENT_UNAVAILABLE"
+            ]
+          },
+          "local_path": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "raw_sha256": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          },
+          "size_bytes": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "access_observations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "local_path": {
+                  "type": "null"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "raw_sha256": {
+                  "type": "null"
+                },
+                "size_bytes": {
+                  "type": "null"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "local_path": {
+                  "type": "string"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "raw_sha256": {
+                  "type": "string",
+                  "pattern": "^sha256:[0-9a-f]{64}$"
+                },
+                "size_bytes": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "content_status": {
+                  "const": "FULL_PRIMARY_CONTENT_INSPECTED"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "local_path": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "raw_sha256": {
+                  "type": "string",
+                  "pattern": "^sha256:[0-9a-f]{64}$"
+                },
+                "size_bytes": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "content_status": {
+                  "const": "METADATA_ONLY_PRIMARY_CONTENT_UNAVAILABLE"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "local_path": {
+                  "type": "null"
+                },
+                "raw_sha256": {
+                  "type": "null"
+                },
+                "size_bytes": {
+                  "type": "null"
+                }
+              }
+            }
+          },
+          {
+            "$comment": "exact binding for ECCC-TR25-033-2025",
+            "if": {
+              "properties": {
+                "source_id": {
+                  "const": "ECCC-TR25-033-2025"
+                }
+              },
+              "required": [
+                "source_id"
+              ]
+            },
+            "then": {
+              "properties": {
+                "local_path": {
+                  "const": "research/real_math/millennium/p_vs_np/00_sources/ECCC_TR25_033_20250318.pdf"
+                },
+                "raw_sha256": {
+                  "const": "sha256:3f7d98691f3ac28208df6e8669d860c45b6068781dd77c737eb1e780641fbea7"
+                },
+                "size_bytes": {
+                  "const": 464382
+                }
+              }
+            }
+          },
+          {
+            "$comment": "exact binding for RAZBOROV-1989",
+            "if": {
+              "properties": {
+                "source_id": {
+                  "const": "RAZBOROV-1989"
+                }
+              },
+              "required": [
+                "source_id"
+              ]
+            },
+            "then": {
+              "properties": {
+                "local_path": {
+                  "const": "research/real_math/millennium/p_vs_np/00_sources/RAZBOROV_1989_ON_METHOD_OF_APPROXIMATIONS.pdf"
+                },
+                "raw_sha256": {
+                  "const": "sha256:a829725a0b7a70d78ed9ba8cf26fd15d58c7a12270443610c2391f5768b40706"
+                },
+                "size_bytes": {
+                  "const": 1483297
+                }
+              }
+            }
+          },
+          {
+            "$comment": "exact binding for KARCHMER-1993",
+            "if": {
+              "properties": {
+                "source_id": {
+                  "const": "KARCHMER-1993"
+                }
+              },
+              "required": [
+                "source_id"
+              ]
+            },
+            "then": {
+              "properties": {
+                "local_path": {
+                  "const": null
+                },
+                "raw_sha256": {
+                  "const": null
+                },
+                "size_bytes": {
+                  "const": null
+                }
+              }
+            }
+          },
+          {
+            "$comment": "exact binding for WIGDERSON-1993",
+            "if": {
+              "properties": {
+                "source_id": {
+                  "const": "WIGDERSON-1993"
+                }
+              },
+              "required": [
+                "source_id"
+              ]
+            },
+            "then": {
+              "properties": {
+                "local_path": {
+                  "const": "research/real_math/millennium/p_vs_np/00_sources/WIGDERSON_1993_FUSION_METHOD_FULL.pdf"
+                },
+                "raw_sha256": {
+                  "const": "sha256:69893dfc288a89c2b7243b11ec0851ed73cbdda004e0046257bdbe439082e1d7"
+                },
+                "size_bytes": {
+                  "const": 247902
+                }
+              }
+            }
+          },
+          {
+            "$comment": "exact binding for NAKAYAMA-MARUOKA-1995",
+            "if": {
+              "properties": {
+                "source_id": {
+                  "const": "NAKAYAMA-MARUOKA-1995"
+                }
+              },
+              "required": [
+                "source_id"
+              ]
+            },
+            "then": {
+              "properties": {
+                "local_path": {
+                  "const": null
+                },
+                "raw_sha256": {
+                  "const": null
+                },
+                "size_bytes": {
+                  "const": null
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "scope_gap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "reason",
+        "status",
+        "authority"
+      ],
+      "properties": {
+        "source_id": {
+          "const": "WIGDERSON-1995"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "const": "PROSPECTIVE_R2_SCOPE_ADDITION_REQUIRED_NOT_BACKFILLED"
+        },
+        "authority": {
+          "const": "NO_THEOREM_TRANSFER"
+        }
+      }
+    },
+    "theorem_rows": {
+      "type": "array",
+      "minItems": 16,
+      "maxItems": 16,
+      "uniqueItems": true,
+      "allOf": [
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "ECCC-C17"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "ECCC-D18-D21"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "ECCC-T22"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "ECCC-T24-C27-EQ6-EQ8"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "ECCC-COR28"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "ECCC-T30"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "ECCC-COR35"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "ECCC-P36-T37"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "ECCC-P38-L39"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "ECCC-P40-C41-L42-L43"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "ECCC-D21-WIG95-RESTRICTION"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "ECCC-D44-D46-T45"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "ECCC-P47-L48-C49"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "ECCC-INTRO-NM95-SCOPE"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "RAZ89-C25-T26-T27"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "row_id": {
+                "const": "WIG93-META-THEOREM-CONVERSE"
+              }
+            },
+            "required": [
+              "row_id"
+            ]
+          },
+          "minContains": 1,
+          "maxContains": 1
+        }
+      ],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "row_id",
+          "source_locator",
+          "source_object",
+          "quantifiers",
+          "assumptions",
+          "conclusion",
+          "t_dependence",
+          "restriction_class",
+          "dependencies",
+          "non_guarantees",
+          "shared_cover_fusion_interface",
+          "discriminator_status",
+          "difference_witness"
+        ],
+        "properties": {
+          "row_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_object": {
+            "type": "string",
+            "minLength": 1
+          },
+          "quantifiers": {
+            "type": "string",
+            "minLength": 1
+          },
+          "assumptions": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "conclusion": {
+            "type": "string",
+            "minLength": 1
+          },
+          "t_dependence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "restriction_class": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "non_guarantees": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "shared_cover_fusion_interface": {
+            "type": "string",
+            "minLength": 1
+          },
+          "discriminator_status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "difference_witness": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "source_to_target_map",
+              "preserved_conditions",
+              "changed_or_broken_conditions",
+              "implication_direction",
+              "match_assessment",
+              "rationale"
+            ],
+            "properties": {
+              "source_to_target_map": {
+                "type": "string",
+                "minLength": 1
+              },
+              "preserved_conditions": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "changed_or_broken_conditions": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "implication_direction": {
+                "type": "string",
+                "minLength": 1
+              },
+              "match_assessment": {
+                "enum": [
+                  "MATCH",
+                  "NO_MATCH",
+                  "SCOPE_WARNING"
+                ]
+              },
+              "rationale": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "inventory_coverage": {
+      "const": {
+        "material_rows_recorded": 16,
+        "coverage_claim": "MATERIAL_R1_ROWS_REVIEWED_NOT_EXHAUSTIVE_OF_ALL_RESULTS",
+        "ancestry_completeness": "INCOMPLETE_CANNOT_CHECK_WHETHER_STRONGER_OR_DIFFERENT_BOUND_EXISTS"
+      }
+    },
+    "discriminator_evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "conditions",
+        "modern_source_findings",
+        "required_primary_sources_fully_inspected",
+        "blocked_source_ids",
+        "provisional_match_status",
+        "final_verdict",
+        "outcome_branch",
+        "candidate_generation_allowed",
+        "candidate_generated"
+      ],
+      "properties": {
+        "conditions": {
+          "type": "array",
+          "minItems": 6,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "modern_source_findings": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required_primary_sources_fully_inspected": {
+          "const": false
+        },
+        "blocked_source_ids": {
+          "const": [
+            "KARCHMER-1993",
+            "NAKAYAMA-MARUOKA-1995"
+          ]
+        },
+        "provisional_match_status": {
+          "const": "EXACT_MATCH_ON_INSPECTED_PRIMARY_SOURCE_WITH_ANCESTRY_COMPLETENESS_UNRESOLVED"
+        },
+        "final_verdict": {
+          "const": "MATCH_FOUND_ECCC_T24_AND_T30"
+        },
+        "outcome_branch": {
+          "const": "SUCCESS"
+        },
+        "candidate_generation_allowed": {
+          "const": false
+        },
+        "candidate_generated": {
+          "const": false
+        }
+      }
+    },
+    "mathematical_experience": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "lesson_id",
+          "kind",
+          "lesson",
+          "authority",
+          "evidence_rows"
+        ],
+        "properties": {
+          "lesson_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "SCOPED_SUCCESS_KNOWLEDGE",
+              "ROUTE_PRUNING",
+              "METHOD_TRANSFER_BOUNDARY",
+              "TRANSFER_WARNING"
+            ]
+          },
+          "lesson": {
+            "type": "string",
+            "minLength": 1
+          },
+          "authority": {
+            "enum": [
+              "PRIMARY_SOURCE_STATEMENT_INSPECTED",
+              "SOURCE_DISCUSSION_INSPECTED_PRIMARY_ANCESTRY_BLOCKED"
+            ]
+          },
+          "evidence_rows": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "operational_assurance_excluded_from_mathematical_experience": {
+      "const": [
+        "HTTP access status",
+        "Git branch movement",
+        "CI execution",
+        "artifact hashing",
+        "timestamp chronology"
+      ]
+    },
+    "next_action": {
+      "const": "FREEZE_PROSPECTIVE_R2_WITH_DISTINCT_NONCIRCULAR_EXPLICIT_TARGET_LOWER_BOUND_COORDINATE_AND_ADD_WIG95_SCOPE_BEFORE_REEXECUTION"
+    },
+    "review_authority": {
+      "const": "SAME_CONTEXT_INTERNAL_HOSTILE_MATHEMATICAL_REVIEW_COMPLETE_NOT_INDEPENDENT_PEER_REVIEW"
+    },
+    "authority_contract": {
+      "const": {
+        "grants_proof_authority": false,
+        "grants_new_theorem_authority": false,
+        "grants_novelty_authority": false,
+        "grants_p_vs_np_root_authority": false,
+        "grants_framework_evolution_authority": false,
+        "grants_review_independence": false
+      }
+    },
+    "root_status": {
+      "const": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE"
+    },
+    "artifact_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "predecessor_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "raw_sha256",
+        "artifact_hash",
+        "disposition"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "raw_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "artifact_hash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "disposition": {
+          "const": "SUPERSEDED_CHRONOLOGY_DEFECT_RETAINED"
+        }
+      }
+    },
+    "review_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "raw_sha256",
+        "artifact_hash",
+        "recorded_at",
+        "authority"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "raw_sha256": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "artifact_hash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "recorded_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "authority": {
+          "const": "SAME_CONTEXT_INTERNAL_HOSTILE_MATHEMATICAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW"
+        }
+      }
+    },
+    "chronology_correction": {
+      "const": {
+        "defect": "V1 recorded_at predates RESULT_RECORDED and hostile review while its review_authority field says review complete",
+        "v1_recorded_at": "2026-08-11T18:13:13Z",
+        "result_recorded_at": "2026-08-11T18:32:45Z",
+        "review_recorded_at": "2026-08-11T18:33:00Z",
+        "v2_recorded_after_review": true,
+        "mathematical_payload_changed": false,
+        "outcome_changed": false,
+        "historical_bytes_rewritten": false
+      }
+    }
+  }
+}
