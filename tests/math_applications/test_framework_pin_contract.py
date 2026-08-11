@@ -22,6 +22,9 @@ FINAL_SYNC_RECEIPT = (
 CURRENT_MAIN_SYNC_RECEIPT = (
     APPLICATION_ROOT / "receipts/framework-pin-sync-4ee5e9a-20260811.json"
 )
+FINAL_CURRENT_MAIN_SYNC_RECEIPT = (
+    APPLICATION_ROOT / "receipts/framework-pin-sync-f224d91-20260811.json"
+)
 
 
 def _canonical_hash(value: object) -> str:
@@ -358,4 +361,79 @@ def test_current_main_pin_sync_receipt_is_exact_historical_and_non_authorizing()
     assert "storage_admission" in json.loads(schema_raw)["required"]
     assert gate["storage_admission_required"] is True
     assert gate["storage_admission_gate_weakened"] is False
+    assert not any(receipt["authority_contract"].values())
+
+
+def test_final_current_main_pin_sync_receipt_binds_f224_without_gate_drift() -> None:
+    receipt = json.loads(FINAL_CURRENT_MAIN_SYNC_RECEIPT.read_text(encoding="utf-8"))
+    payload = copy.deepcopy(receipt)
+    payload["artifact_hash"] = ""
+    assert receipt["artifact_hash"] == _canonical_hash(payload)
+    assert receipt["receipt_id"] == "RAKL-MATH-FRAMEWORK-PIN-SYNC-F224D91-20260811"
+    assert datetime.fromisoformat(receipt["recorded_at"]) > datetime.fromisoformat(
+        receipt["verification"]["verified_at"]
+    )
+
+    delta = receipt["framework_delta"]
+    assert delta["current_commit"] == EXPECTED_FRAMEWORK_COMMIT
+    assert delta["remote_main_at_observation"] == EXPECTED_FRAMEWORK_COMMIT
+    changed_paths = subprocess.run(
+        [
+            "git", "-C", str(FRAMEWORK_ROOT), "diff", "--name-only",
+            delta["previous_commit"], delta["current_commit"],
+        ],
+        check=True,
+        stdout=subprocess.PIPE,
+        text=True,
+    ).stdout.splitlines()
+    commit_count = subprocess.run(
+        [
+            "git", "-C", str(FRAMEWORK_ROOT), "rev-list", "--count",
+            f'{delta["previous_commit"]}..{delta["current_commit"]}',
+        ],
+        check=True,
+        stdout=subprocess.PIPE,
+        text=True,
+    ).stdout.strip()
+    assert changed_paths == delta["changed_paths"]
+    assert len(changed_paths) == delta["changed_files"] == 28
+    assert int(commit_count) == delta["commits_between"] == 1
+
+    integration = receipt["application_pin_integration"]
+    assert integration["pin_commit"] == receipt["verification"]["subject_commit"]
+    for field, path in (
+        ("config_blob", "config/rakl-framework-pin.json"),
+        ("gitlink_commit", "framework/RAKL"),
+        ("pin_contract_test_blob", "tests/math_applications/test_framework_pin_contract.py"),
+    ):
+        observed = subprocess.run(
+            [
+                "git", "-C", str(APPLICATION_ROOT), "rev-parse",
+                f'{integration["pin_commit"]}:{path}',
+            ],
+            check=True,
+            stdout=subprocess.PIPE,
+            text=True,
+        ).stdout.strip()
+        assert observed == integration[field]
+    assert integration["gitlink_commit"] == EXPECTED_FRAMEWORK_COMMIT
+    assert integration["historical_receipts_rewritten"] is False
+    assert integration["mathematical_lesson_artifacts_mutated"] is False
+
+    gate = receipt["current_gate_preservation"]
+    assert gate["previous_task_episode_schema_blob"] == gate["current_task_episode_schema_blob"]
+    assert gate["previous_experience_substrate_blob"] == gate["current_experience_substrate_blob"]
+    schema_raw = subprocess.run(
+        [
+            "git", "-C", str(FRAMEWORK_ROOT), "show",
+            f'{delta["current_commit"]}:{gate["task_episode_schema_path"]}',
+        ],
+        check=True,
+        stdout=subprocess.PIPE,
+    ).stdout
+    assert "storage_admission" in json.loads(schema_raw)["required"]
+    assert gate["storage_admission_required"] is True
+    assert gate["storage_admission_gate_weakened"] is False
+    assert receipt["verification"]["tests_passed"] == 34
+    assert receipt["verification"]["exit_code"] == 0
     assert not any(receipt["authority_contract"].values())
