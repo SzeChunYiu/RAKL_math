@@ -1,0 +1,33 @@
+{
+  "schema_version": "bsd-r5-failure-experience-v1",
+  "artifact_type": "FAILURE_EXPERIENCE_PROPOSAL_SHADOW",
+  "failure_id": "F-BSD-A1A1-R5-AUXILIARY-K-EXACT-SCOPE-GAP",
+  "source_episode_id": "EP-BSD-A1A1-BASECHANGE-PLECTIC-20260811-R5",
+  "diagnosis_id": "D-BSD-A1A1-R5-AUXILIARY-K-SCOPE-BINDING",
+  "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "context_hash": "sha256:0738fbeff600a8025d89c0d0c215272768e23133d2291e0cbb29734d08f1ecf2",
+  "status": "OBSERVED_ONLY",
+  "attempted_strategy": "Use quadratic-twist central nonvanishing with finite local prescriptions to choose an imaginary quadratic K that simultaneously lands the analytic-rank-two E/Q datum in the exact mock-plectic E/K setup.",
+  "what_worked": [
+    "source-bound exact base-change factorization",
+    "elementary Taylor calculation preserving complex derivative order",
+    "primary-source evidence that finite local quadratic-character behavior can coexist with central nonvanishing subject to sign compatibility",
+    "no immediate parity contradiction with the even-N^- plectic condition"
+  ],
+  "what_failed": [
+    "no single theorem was source-bound at the exact combined Fornea-Gehrmann p-inert/conductor-pattern/residual-hypothesis scope for arbitrary active E",
+    "downstream plectic sources still do not derive Q_K/class nonvanishing from complex L''(E/K,1)"
+  ],
+  "failure_signature": [
+    "AUXILIARY_K_PLECTIC_ADMISSIBILITY_NOT_EXACTLY_BOUND",
+    "COMPLEX_SECOND_DERIVATIVE_TO_PLECTIC_NONVANISHING_UNCLOSED"
+  ],
+  "not_a_failure_of": [
+    "quadratic base change itself",
+    "the conditional complex-order transport lemma",
+    "global BSD gluing, which was not attempted in this local cycle"
+  ],
+  "reusable_warning": "Do not treat a theorem with finite local prescription in a near context as automatic satisfaction of all plectic residual hypotheses; instantiate every local character and E,p,N^- condition before composing.",
+  "authority": "OBSERVED_ONLY_SEARCH_GUIDANCE_NO_PROOF_AUTHORITY",
+  "artifact_hash": "sha256:f92d984d3d3e47fbbd6c9346043caa8a0d7efca7c59e9a1aac84f1bf291b3a62"
+}

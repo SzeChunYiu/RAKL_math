@@ -1,0 +1,102 @@
+schema_version: bsd-r5-route-diagnostic-v1
+artifact_type: SHADOW_ROUTE_DIAGNOSTIC_DELTA
+atom_id: BSD-A1a1-THETA-ORDER-COMPARISON
+cycle_id: BSD-A1a1-BASECHANGE-PLECTIC-20260811-R5
+cycle_base: 47f56df0492339097a651d40b6c7289c4e2d4034
+framework_semantic_authority_at_freeze: 3863b4814e0020e72c8681727357eda1aab7bf2b
+framework_method_version: 3.0.0
+execution_dependency_pin_observed_from_r4: 787c7e00af2a5877ccb715bc807ec14f52974e9c
+pin_matches_current_framework_at_cycle: false
+context_packet_hash: sha256:0738fbeff600a8025d89c0d0c215272768e23133d2291e0cbb29734d08f1ecf2
+status: BASECHANGE_LOCAL_RELATION_CLOSED_AUXILIARY_K_AND_PLECTIC_NONVANISHING_OPEN
+authority:
+  effective: PROPOSAL_SHADOW_SEARCH_PRIORITY_ONLY
+  mathematical_candidate: false
+  theorem: false
+  novelty_claim: scoped_compositional_only
+  root: false
+scoped_local_success:
+  statement: >-
+    For a quadratic K/Q with twist E^K, the source-bound base-change factorization
+    L(E/K,s)=L(E,s)L(E^K,s) implies that ord_{s=1} L(E,s)=2 together with
+    L(E^K,1) != 0 gives ord_{s=1} L(E/K,s)=2 and
+    L''(E/K,1)=L''(E,1)L(E^K,1) != 0.
+  novelty_class: compositional
+  secondary_role: transfer_representation
+  root_authority: none
+local_sections:
+  - exact complex s-order over E/Q and quadratic-base-change product
+  - auxiliary imaginary-quadratic local-condition / twist-nonvanishing selection
+  - mock-plectic / plectic arithmetic nonvanishing over E/K
+  - p-primary Selmer/Iwasawa consequences after plectic nonvanishing
+  - Mordell-Weil/regulator/Sha/Tamagawa/torsion leading-term gluing back to E/Q
+missing_interfaces:
+  - id: AUXILIARY_K_EXACT_PLECTIC_LOCAL_RESIDUAL_COMPATIBILITY_PLUS_NONVANISHING
+    category: LOCAL_SOURCE_INTERFACE
+    statement: >-
+      Source-bind an imaginary quadratic K meeting the exact Fornea-Gehrmann
+      p-inert, conductor inert/split/unramified and residual E,p,N^- hypotheses
+      together with L(E^K,1) != 0. Friedberg-Hoffstein finite-local-prescription
+      evidence is strong but has not yet been instantiated at this exact combined scope.
+  - id: E_OVER_K_COMPLEX_SECOND_DERIVATIVE_TO_PLECTIC_NONVANISHING
+    category: LOCAL_MATHEMATICAL_BRIDGE
+    statement: >-
+      Prove that exact complex second-derivative nonvanishing over the same K
+      yields a nonzero root-faithful mock-plectic/plectic class, point or regulator,
+      without importing algebraic rank two, Selmer rank two, finite Sha, p-adic BSD,
+      or equivalent-strength arithmetic input.
+  - id: PLETIC_SELMER_TO_E_OVER_Q_MORDELL_WEIL_REGULATOR_SHA_TAMAGAWA_TORSION_GLUING
+    category: LOCAL_TO_GLOBAL_GLUING
+    statement: >-
+      Even after a plectic/Selmer theorem, recover the exact BSD root over Q,
+      including Mordell-Weil rank, regulator, Sha, real period, Tamagawa/local
+      factors, torsion and the full complex leading term.
+current_source_bound_contexts:
+  - id: Nelson-IMRN-2022-Quadratic-Hecke-Sums
+    result_role: exact quadratic-base-change product plus explicit application of Friedberg-Hoffstein finite-local-prescription nonvanishing
+    disanalogy: source setup is not identical to every Fornea-Gehrmann local/residual hypothesis
+  - id: Friedberg-Hoffstein-Annals-1995
+    result_role: original GL2 quadratic-twist nonvanishing theorem behind the local-prescription application
+    disanalogy: exact theorem text was not reconstructed beyond the source-bound later primary application
+  - id: arXiv:2311.03100v2
+    result_role: exact mock-plectic target typing and Q_K nonzero -> p-Selmer rank information
+    disanalogy: Q_K nonvanishing is a premise rather than a consequence of complex analytic rank two
+  - id: arXiv:2603.28327
+    result_role: partially global plectic Heegner classes and comparison maps
+    disanalogy: bounded audit does not locate complex-second-derivative -> class nonvanishing theorem
+  - id: arXiv:2202.12573-current
+    result_role: p-adic Gross-Zagier formula for higher Hida-Rankin derivatives and plectic points
+    disanalogy: derivative coordinate is p-adic/Hida, not complex s
+retained_memory:
+  selected_episode_ids:
+    - EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4
+    - EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3
+  selected_tool_ids:
+    - T-XM-ROOT-BRIDGE-STABILITY-AUDIT
+  relevant_failure_ids:
+    - F-XM001-POINTWISE-GAP-COLLAPSE
+    - F-BSD-A1A1-COMPLEX-HIGHER-GZ-TARGET-CELL-GAP-R4
+  retrieved_but_rejected:
+    - BSD-S001c1-KURIHARA-TAYLOR-COMPARISON
+    - YUN-ZHANG-FUNCTION-FIELD-HIGHER-DERIVATIVE-ANALOGUE
+    - REPEAT_SCALAR_THETA_ORDER_SCAN
+new_shadow_records:
+  episode: EP-BSD-A1A1-BASECHANGE-PLECTIC-20260811-R5
+  diagnosis: D-BSD-A1A1-R5-AUXILIARY-K-SCOPE-BINDING
+  failure: F-BSD-A1A1-R5-AUXILIARY-K-EXACT-SCOPE-GAP
+  obstruction: O-BSD-A1A1-R5-AUXILIARY-K-PLECTIC-ADMISSIBILITY
+saturation_reading:
+  KNOWLEDGE: REOPENED_AND_PARTIALLY_FLATTENED_BY_BASECHANGE_RESULT
+  OPERATOR: FLATTENED
+  EXPERIENCE_PATTERN: OPEN_NO_RETAINED_NEW_PATTERN
+  OBSTRUCTION: REOPENED_BY_AUXILIARY_K_INTERFACE_BUT_NOT_PROMOTED
+  RELATION: REOPENED_AND_LOCALLY_ADVANCED
+  PATH: REOPENED_AND_LOCALLY_ADVANCED_BUT_ROOT_PATH_OPEN
+  META_METHOD: FLATTENED
+next_step_policy: >-
+  Do not repeat scalar theta-order or generic higher-Gross-Zagier scans. First
+  specialize the finite-local quadratic-twist nonvanishing theorem to the exact
+  Fornea-Gehrmann local/residual signature. If compatible, immediately attack the
+  clean complex L''(E/K,1) -> plectic nonvanishing arrow. If exact local/residual
+  hypotheses conflict, rotate the plectic setup rather than weakening gates.
+root_state: OPEN_NO_SOLUTION_CERTIFICATE

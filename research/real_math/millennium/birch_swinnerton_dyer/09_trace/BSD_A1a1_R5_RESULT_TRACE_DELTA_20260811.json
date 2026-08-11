@@ -1,0 +1,155 @@
+{
+  "trace_id": "TRACE-BSD-A1a1-PRETRACE-PLUS-R4-PLUS-R5-20260811",
+  "delta_id": "TRACE-BSD-A1a1-R5-RESULT-20260811",
+  "base_last_event_id": "BSD-A1a1-E15-R4-REVIEW",
+  "base_last_event_hash": "sha256:b66bf6b5d2f0b91823a1eb049586da2b98d8e1f6463419c50adeec8f7d6fe603",
+  "entries": [
+    {
+      "event_id": "BSD-A1a1-E16-R5-PROSPECTIVE",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "PROSPECTIVE_DISCRIMINATOR_FROZEN",
+      "timestamp": "2026-08-11T19:02:34+00:00",
+      "state_summary": "R4 left an exact number-field weight-two complex-second-derivative target cell; R3 left a richer plectic E/K representation with nonvanishing missing.",
+      "action_summary": "Freeze an auxiliary-quadratic-base-change discriminator before targeted search: preserve complex s-order from E/Q to E/K using a complementary nonzero quadratic twist, then separately test plectic nonvanishing.",
+      "evidence_pointers": [
+        "commit:0c87fcdf33c4755d07cd26affe2e7fcebc7981a4",
+        "commit:ca22f08b98eaffc6d7bbee58a039f6ab30602c3b"
+      ],
+      "alternatives_considered": [
+        "repeat scalar theta-order scan",
+        "repeat generic higher Gross-Zagier search",
+        "test exact E/Q-to-E/K base-change typing"
+      ],
+      "decision_rationale": "RELATION and PATH axes were reopened while scalar/operator families were locally flat.",
+      "outputs": [
+        "fibre_hash:sha256:0738fbeff600a8025d89c0d0c215272768e23133d2291e0cbb29734d08f1ecf2",
+        "same_context_expert_roles:7",
+        "independent_review_credit:0"
+      ],
+      "uncertainties": [
+        "prefreeze scouting receives no prospective discovery credit"
+      ],
+      "residuals": [
+        "whether exact plectic local conditions coexist with a nonzero complementary twist",
+        "whether complex L'' over K generates plectic nonvanishing"
+      ],
+      "next_steps": [
+        "run source-bound base-change/local-prescription falsifier"
+      ],
+      "previous_event_hash": "sha256:b66bf6b5d2f0b91823a1eb049586da2b98d8e1f6463419c50adeec8f7d6fe603",
+      "artifact_hash": "sha256:b42b4c0a63f7f918e8fae6926a796d848e6193702da74eb7ac46e244952a7bc2"
+    },
+    {
+      "event_id": "BSD-A1a1-E17-R5-LOCAL-LEMMA",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "SCOPED_LOCAL_RELATION_VERIFIED",
+      "timestamp": "2026-08-11T19:07:57+00:00",
+      "state_summary": "Quadratic base change is source-bound by L(E/K,s)=L(E,s)L(E^K,s); finite-local quadratic twist nonvanishing has source-bound prescription evidence.",
+      "action_summary": "Differentiate the product twice at s=1 under ord L(E)=2 and L(E^K,1)!=0; separately type-check the mock-plectic local conditions.",
+      "evidence_pointers": [
+        "Nelson-IMRN-2022 equation (4.2)",
+        "Nelson-IMRN-2022 Proposition 3.1 / Friedberg-Hoffstein Theorem B application",
+        "arXiv:2311.03100v2 lines 41-60"
+      ],
+      "alternatives_considered": [
+        "treat E/Q versus E/K as a hard coordinate mismatch",
+        "replace complex s by p-adic derivative coordinates",
+        "use exact base-change product and complementary twist"
+      ],
+      "decision_rationale": "The product preserves the exact complex s-coordinate; exact order follows if the complementary twist central value is nonzero.",
+      "outputs": [
+        "SCOPED_LEMMA: ord L(E/Q)=2 + L(E^K,1)!=0 -> ord L(E/K)=2",
+        "SCOPED_IDENTITY: L''(E/K,1)=L''(E,1)L(E^K,1)"
+      ],
+      "uncertainties": [
+        "exact plectic admissibility of the same selected K is not yet source-bound for arbitrary active E"
+      ],
+      "residuals": [
+        "AUXILIARY_K_EXACT_PLECTIC_LOCAL_RESIDUAL_COMPATIBILITY_PLUS_NONVANISHING",
+        "E_OVER_K_COMPLEX_SECOND_DERIVATIVE_TO_PLECTIC_NONVANISHING"
+      ],
+      "next_steps": [
+        "audit exact local prescription against Fornea-Gehrmann residual hypotheses"
+      ],
+      "previous_event_hash": "sha256:b42b4c0a63f7f918e8fae6926a796d848e6193702da74eb7ac46e244952a7bc2",
+      "artifact_hash": "sha256:4464938f1c661e0694cc8ca522693004d801cdfa8f27537574748adf24fc8d29"
+    },
+    {
+      "event_id": "BSD-A1a1-E18-R5-RESIDUAL",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "DIAGNOSIS_AND_FAILURE_RECORDED",
+      "timestamp": "2026-08-11T19:10:00+00:00",
+      "state_summary": "The old representation mismatch is decomposed into a solved conditional relation and a smaller auxiliary-field selection interface; the deeper arithmetic nonvanishing arrow is unchanged.",
+      "action_summary": "Freeze episode, diagnosis, observed-only failure, and proposal-shadow obstruction as distinct objects; reject automatic transfer of a near-context local-prescription theorem.",
+      "evidence_pointers": [
+        "D-BSD-A1A1-R5-AUXILIARY-K-SCOPE-BINDING",
+        "F-BSD-A1A1-R5-AUXILIARY-K-EXACT-SCOPE-GAP",
+        "O-BSD-A1A1-R5-AUXILIARY-K-PLECTIC-ADMISSIBILITY"
+      ],
+      "alternatives_considered": [
+        "count the proposal obstruction as protected learning",
+        "claim Friedberg-Hoffstein closes all plectic local conditions",
+        "retain a typed auxiliary-K residual"
+      ],
+      "decision_rationale": "Residual representation/residual-Galois assumptions are not supplied merely by selecting K; protected obstruction promotion did not run.",
+      "outputs": [
+        "episode:EP-BSD-A1A1-BASECHANGE-PLECTIC-20260811-R5",
+        "diagnosis:D-BSD-A1A1-R5-AUXILIARY-K-SCOPE-BINDING",
+        "failure:F-BSD-A1A1-R5-AUXILIARY-K-EXACT-SCOPE-GAP:OBSERVED_ONLY",
+        "obstruction:O-BSD-A1A1-R5-AUXILIARY-K-PLECTIC-ADMISSIBILITY:PROPOSAL_SHADOW"
+      ],
+      "uncertainties": [
+        "bounded source audit is not literature-complete"
+      ],
+      "residuals": [
+        "source-bind exact K-selection theorem",
+        "complex-second-derivative -> plectic nonvanishing",
+        "separate global BSD gluing"
+      ],
+      "next_steps": [
+        "update route diagnostic and metrology conservatively"
+      ],
+      "previous_event_hash": "sha256:4464938f1c661e0694cc8ca522693004d801cdfa8f27537574748adf24fc8d29",
+      "artifact_hash": "sha256:eaf62c03d91a72658eef7bb3cd588e8cb275788cb9c976d8c5d1534e49f7633c"
+    },
+    {
+      "event_id": "BSD-A1a1-E19-R5-REVIEW",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "SAME_CONTEXT_REVIEWED",
+      "timestamp": "2026-08-11T19:10:30+00:00",
+      "state_summary": "Seven role-separated same-context passes agree on a scoped compositional local success and two still-open local interfaces plus later global gluing.",
+      "action_summary": "Classify solved subproblem as compositional with secondary transfer/representation role; retain no root candidate and no protected obstruction/lesson promotion.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/08_reviews/BSD_A1a1_R5_PROSPECTIVE_EXPERT_REVIEW_20260811.md",
+        "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_R5_BASECHANGE_PLECTIC_BRIDGE_AUDIT_20260811.md"
+      ],
+      "alternatives_considered": [
+        "promote scoped lemma as BSD progress certificate",
+        "count same-context review as independent",
+        "retain local lemma with root open"
+      ],
+      "decision_rationale": "A valid local compositional lemma does not supply plectic arithmetic nonvanishing or the BSD Mordell-Weil/Sha/leading-term gluing.",
+      "outputs": [
+        "outcome:PARTIAL_SUCCESS",
+        "novelty_class:compositional",
+        "secondary_class:transfer/representation",
+        "root_state:OPEN_NO_SOLUTION_CERTIFICATE",
+        "candidate_generated:false"
+      ],
+      "uncertainties": [
+        "no isolated mathematical review because no root-facing theorem candidate exists"
+      ],
+      "residuals": [
+        "AUXILIARY_K_EXACT_PLECTIC_LOCAL_RESIDUAL_COMPATIBILITY_PLUS_NONVANISHING",
+        "E_OVER_K_COMPLEX_SECOND_DERIVATIVE_TO_PLECTIC_NONVANISHING",
+        "PLETIC_SELMER_TO_E_OVER_Q_MORDELL_WEIL_REGULATOR_SHA_TAMAGAWA_TORSION_GLUING"
+      ],
+      "next_steps": [
+        "specialize finite-local twist nonvanishing theorem exactly; then retest the clean complex-to-plectic arrow"
+      ],
+      "previous_event_hash": "sha256:eaf62c03d91a72658eef7bb3cd588e8cb275788cb9c976d8c5d1534e49f7633c",
+      "artifact_hash": "sha256:168c42cc9f472ea942413e52b1ac96dd17dfc76277c464a8dde400a48ea7649e"
+    }
+  ],
+  "authority": "PUBLIC_DECISION_TRACE_DELTA_NO_ROOT_AUTHORITY"
+}

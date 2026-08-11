@@ -1,0 +1,11 @@
+# RAKL_METHOD_CASE_STUDY — BSD A1a1 R5 verification addendum
+
+This is an additive post-verification addendum to `RAKL_METHOD_CASE_STUDY_BSD_A1a1_BASECHANGE_PLECTIC_20260811_R5.md`. It does not alter the frozen research episode or its mathematical outcome.
+
+The first application workflow exposed a process failure that the pre-CI case study could not yet record. On head `022af7ee80059c6daae5dd0d158583146f6da5c6`, the PR83 post-merge assurance test detected that this cycle had overwritten the previously provenance-bound `BSD_A1a1_CURRENT_2026_ROUTE_DIAGNOSTIC.yaml`. The run therefore failed with `1 failed, 458 passed`. This is classified `PROVENANCE / TOOLING / META_POLICY`, not a mathematical failure and not a local-to-global gluing failure.
+
+The diagnosis is `D-BSD-A1A1-R5-PROTECTED-ARTIFACT-WRITESET`: a prior byte-bound receipt had been treated incorrectly as mutable current state. The corresponding observed-only failure is `F-BSD-A1A1-R5-PROTECTED-ARTIFACT-MUTATION-ATTEMPT`. No matching prior failure ID was located in a bounded repository-memory search, so no repeated-failure lineage is asserted. The repair restored the protected artifact byte-identically, emitted the R5 route as a new additive delta, and changed the R5 test to assert both the protected old bytes and the new delta. The next workflow on exact head `290233dd30fc009a192fdf07ca2144a57872a855` passed `459` tests in `35.54s` against the pinned application framework `787c7e00af2a5877ccb715bc807ec14f52974e9c`.
+
+This process episode changes none of the mathematical residuals and contributes zero retained semantic novelty on all seven axes. In particular, it is not counted as `EXPERIENCE_PATTERN` or `META_METHOD` learning because no protected lesson/meta-method promotion ran. It does strengthen the case-study evidence that provenance gates are operational rather than ceremonial: an unsafe write-set was falsified before merge and repaired without weakening the gate.
+
+A concrete application/tooling improvement hypothesis follows: before a cycle writes application state, construct a write-set preflight from protected assurance receipts and reject any path whose exact bytes are bound by prior provenance unless an explicit migration gate is present. This is proposal-only and is not treated as a framework defect or promoted lesson in this cycle.

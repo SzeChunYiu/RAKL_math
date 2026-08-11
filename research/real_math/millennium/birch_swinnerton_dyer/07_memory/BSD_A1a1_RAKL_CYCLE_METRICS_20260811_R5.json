@@ -1,0 +1,315 @@
+{
+  "schema_version": "rakl-cycle-metrics-v3-bsd-r5",
+  "record_type": "RAKL_CYCLE_METRICS",
+  "cycle_id": "BSD-A1a1-BASECHANGE-PLECTIC-20260811-R5",
+  "recorded_at_utc": "2026-08-11T19:17:01Z",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "current_main_sha": "21ba1dd8289237ca5af7a3c5367b70cff7e0bb71",
+    "cycle_freeze_main_sha": "3863b4814e0020e72c8681727357eda1aab7bf2b",
+    "rakl_version_manifest_blob_sha": "7363c88f4b19638299968e5e0ee3a93c3d567121",
+    "method_specs_blob_sha": "3f629c4dd0ef55aedf14206b2be3df19875988b7",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "drift_audit": "RAKL advanced after the durable fibre freeze. Compare 3863b481..21ba1dd8 shows Paper-2 experiment/reporting/workflow changes and a one-line static core-workflow change; src/rakl/method_specs.py, RAKL_VERSION.json, and inspected v3 TaskEpisode/metrology docs were not changed in the compared file set. The exact method/version therefore remains 3.0.0 for this cycle."
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "47f56df0492339097a651d40b6c7289c4e2d4034",
+    "base_tree_sha": "ed795d7daf07b73fe7bc898d858448896e638aee",
+    "cycle_scientific_head_before_metrics_sha": "0674d2eaca9c12a6200de31f77a0e7b13c73adc7",
+    "cycle_scientific_head_tree_sha": "c52f1b70eb7c95be3bdbf1cabc9aa493f3f96150",
+    "receipt_commit_sha": "CANNOT_MEASURE: self-referential; the commit SHA containing this receipt is not available before the receipt is committed",
+    "root_issue": 7,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "execution_dependency_pin_observed_from_r4": "787c7e00af2a5877ccb715bc807ec14f52974e9c",
+    "execution_pin_matches_current_rakl_main": false
+  },
+  "state_fingerprints": {
+    "pre_canonical_raklv3_state_fingerprint": "CANNOT_MEASURE: RAKL_math does not materialize a canonical RAKLV3State snapshot for this research lane",
+    "post_canonical_raklv3_state_fingerprint": "CANNOT_MEASURE: no canonical RAKLV3State materialization occurred",
+    "measurable_repository_pre_tree_sha": "ed795d7daf07b73fe7bc898d858448896e638aee",
+    "measurable_repository_post_scientific_tree_sha": "c52f1b70eb7c95be3bdbf1cabc9aa493f3f96150",
+    "warning": "repository-tree growth is an operational fingerprint only and is not counted as learning"
+  },
+  "active_atom": {
+    "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+    "problem_signature": [
+      "exact complex analytic rank two for E/Q",
+      "quadratic base-change E/K versus twist E^K",
+      "preserve complex s-coordinate and exact order two",
+      "match exact plectic local/residual conditions plus complementary twist nonvanishing",
+      "separate complex-second-derivative-to-plectic bridge from global BSD gluing"
+    ],
+    "fibre_snapshot_hash": "sha256:0738fbeff600a8025d89c0d0c215272768e23133d2291e0cbb29734d08f1ecf2",
+    "fibre_file": "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_R5_BASECHANGE_PLECTIC_CONTEXT_FIBRE_20260811.json"
+  },
+  "process_surfaces_invoked": [
+    "memory",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "ontology_terminology_normalization",
+    "mathematical_context_translation",
+    "equivalence_similarity",
+    "contextual_theory_gluing",
+    "contradiction_diagnosis",
+    "gap_discovery",
+    "experiment_query_selection",
+    "synthesis",
+    "review",
+    "saturation_stopping"
+  ],
+  "memory_retrieval": {
+    "retrieved_counts": {
+      "context_packets": 1,
+      "episodes": 2,
+      "failures": 3,
+      "tools": 1,
+      "motifs": 0,
+      "other_memory": 2
+    },
+    "retrieved_ids": {
+      "context_packets": [
+        "sha256:0738fbeff600a8025d89c0d0c215272768e23133d2291e0cbb29734d08f1ecf2"
+      ],
+      "episodes": [
+        "EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4",
+        "EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3"
+      ],
+      "failures": [
+        "F-BSD-A1A1-COMPLEX-HIGHER-GZ-TARGET-CELL-GAP-R4",
+        "F-BSD-A1A1-PLECTIC-NONVANISHING-RELATION-GAP-V3-RETROSPECTIVE",
+        "F-XM001-POINTWISE-GAP-COLLAPSE"
+      ],
+      "tools": [
+        "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+      ],
+      "motifs": [],
+      "other_memory": [
+        "BSD_A1a1_R4_RESULT_TRACE_DELTA_20260811",
+        "BSD_A1a1_RAKL_CYCLE_METRICS_CURRENT_V3_SUCCESSOR_20260811_R4"
+      ]
+    },
+    "selected_ids": [
+      "EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4",
+      "EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "F-XM001-POINTWISE-GAP-COLLAPSE"
+    ],
+    "retrieved_not_route_selected_ids": [
+      "F-BSD-A1A1-COMPLEX-HIGHER-GZ-TARGET-CELL-GAP-R4",
+      "F-BSD-A1A1-PLECTIC-NONVANISHING-RELATION-GAP-V3-RETROSPECTIVE",
+      "BSD_A1a1_R4_RESULT_TRACE_DELTA_20260811",
+      "BSD_A1a1_RAKL_CYCLE_METRICS_CURRENT_V3_SUCCESSOR_20260811_R4"
+    ],
+    "rejected_ids": [
+      "BSD-S001c1-KURIHARA-TAYLOR-COMPARISON",
+      "YUN-ZHANG-FUNCTION-FIELD-HIGHER-DERIVATIVE-ANALOGUE"
+    ],
+    "rejected_action_ids": [
+      "REPEAT_SCALAR_THETA_ORDER_SCAN",
+      "TREAT_P_ADIC_OR_HIDA_DERIVATIVE_AS_COMPLEX_S_DERIVATIVE",
+      "REVERSE_Q_K_NONVANISHING_IMPLIES_SELMER_THEOREM",
+      "CLAIM_GENERIC_FH_LOCAL_PRESCRIPTION_AUTOMATICALLY_SATISFIES_ALL_PLECTIC_RESIDUAL_HYPOTHESES"
+    ],
+    "missed_relevant_memory": "CANNOT_MEASURE: no coverage-complete memory universe or recall denominator exists"
+  },
+  "search_and_verification": {
+    "prospective_freeze_commit": "0c87fcdf33c4755d07cd26affe2e7fcebc7981a4",
+    "prospective_expert_review_commit": "ca22f08b98eaffc6d7bbee58a039f6ab30602c3b",
+    "prefreeze_scouting_credit": "MOTIVATING_ONLY",
+    "falsifiers_checked": [
+      "global sign incompatibility",
+      "absence of finite local quadratic-character prescription",
+      "complex-order failure under base change",
+      "complex-vs-p-adic derivative coordinate mismatch",
+      "arithmetic-strength circularity"
+    ],
+    "verification_performed": [
+      "primary-source quadratic-base-change factorization",
+      "second-derivative/Taylor calculation at s=1",
+      "primary-source Friedberg-Hoffstein finite-local-prescription application",
+      "Fornea-Gehrmann exact plectic local/residual hypothesis audit",
+      "current plectic source coordinate/direction audit",
+      "same-context seven-role post-result review",
+      "hash-chain construction from R4 trace"
+    ],
+    "source_family_completeness": "BOUNDED_NOT_LITERATURE_COMPLETE",
+    "nonexistence_claim": false
+  },
+  "outcome": {
+    "status": "PARTIAL_SUCCESS",
+    "summary": "SCOPED_COMPOSITIONAL_LOCAL_RELATION_SUCCESS_ROUTE_REFINEMENT_NO_ROOT_CANDIDATE",
+    "solved_subproblem": "ord_{s=1}L(E,s)=2 plus L(E^K,1)!=0 implies ord_{s=1}L(E/K,s)=2 and L''(E/K,1)=L''(E,1)L(E^K,1)!=0",
+    "novelty_class_primary": "compositional",
+    "novelty_class_secondary": [
+      "transfer",
+      "representation"
+    ],
+    "candidate_generated": false
+  },
+  "residual_before": [
+    "NUMBER_FIELD_WEIGHT2_COMPLEX_DERIVATIVE_ORDER2_TO_ROOT_FAITHFUL_ARITHMETIC_OBJECT",
+    "EXACT_PLECTIC_GENERALIZED_KATO_COMPARISON",
+    "SAME_THEORY_MORDELL_WEIL_REGULATOR_SHA_TAMAGAWA_TORSION_GLOBAL_BSD_GLUE"
+  ],
+  "residual_after": [
+    "AUXILIARY_K_EXACT_PLECTIC_LOCAL_RESIDUAL_COMPATIBILITY_PLUS_NONVANISHING",
+    "E_OVER_K_COMPLEX_SECOND_DERIVATIVE_TO_PLECTIC_NONVANISHING",
+    "PLETIC_SELMER_TO_E_OVER_Q_MORDELL_WEIL_REGULATOR_SHA_TAMAGAWA_TORSION_GLUING"
+  ],
+  "residual_change": "The implicit E/Q-to-E/K representation mismatch is replaced by a verified conditional complex-coordinate relation plus a smaller typed auxiliary-K selection interface; the deeper arithmetic nonvanishing and global gluing residuals remain open.",
+  "retained_semantic_novelty": {
+    "KNOWLEDGE": 1,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 0,
+    "OBSTRUCTION": 0,
+    "RELATION": 1,
+    "PATH": 1,
+    "META_METHOD": 0
+  },
+  "novelty_scope_notes": {
+    "KNOWLEDGE": "retained source-bound base-change/local-prescription scope clarification",
+    "RELATION": "retained exact conditional E/Q-to-E/K complex-order relation",
+    "PATH": "retained scoped local composition path only; not a root path",
+    "OBSTRUCTION": "zero because the new auxiliary-K obstruction record is proposal-shadow and no protected obstruction promotion/validation gate ran",
+    "RAW_REPOSITORY_GROWTH": "not counted"
+  },
+  "saturation_axes": {
+    "KNOWLEDGE": {
+      "before": "REOPENED",
+      "after": "PARTIALLY_FLATTENED_LOCAL_RESULT_RETAINED"
+    },
+    "OPERATOR": {
+      "before": "LOCALLY_FLAT",
+      "after": "FLATTENED"
+    },
+    "EXPERIENCE_PATTERN": {
+      "before": "OPEN",
+      "after": "FLATTENED_NO_RETAINED_NEW_PATTERN"
+    },
+    "OBSTRUCTION": {
+      "before": "OPEN_EXISTING",
+      "after": "REOPENED_BY_AUXILIARY_K_INTERFACE_NOT_PROMOTED"
+    },
+    "RELATION": {
+      "before": "REOPENED_BY_E_OVER_K_TYPING",
+      "after": "LOCALLY_ADVANCED_SCOPED_RELATION_CLOSED"
+    },
+    "PATH": {
+      "before": "REOPENED_BY_AUXILIARY_K_ROUTE",
+      "after": "LOCALLY_ADVANCED_ROOT_PATH_OPEN"
+    },
+    "META_METHOD": {
+      "before": "FLATTENED",
+      "after": "FLATTENED"
+    }
+  },
+  "axes_reopened": [
+    "KNOWLEDGE",
+    "OBSTRUCTION",
+    "RELATION",
+    "PATH"
+  ],
+  "axes_flattened": [
+    "OPERATOR",
+    "EXPERIENCE_PATTERN",
+    "META_METHOD"
+  ],
+  "hypothesis_and_coordinate_ledger": {
+    "local_p_inert_split_unramified_conditions": "OPEN_EXACT_BINDING",
+    "residual_surjectivity_ramification_conditions": "OPEN_AND_E_P_NMINUS_DEPENDENT",
+    "tamagawa_factors": "NOT_TOUCHED_REMAIN_GLOBAL_GLUE",
+    "torsion": "NOT_TOUCHED_REMAIN_GLOBAL_GLUE",
+    "regulator": "NOT_TOUCHED_REMAIN_GLOBAL_GLUE",
+    "sha_finiteness_and_order": "NOT_TOUCHED_REMAIN_GLOBAL_GLUE",
+    "extra_or_trivial_zeros": "NOT_APPLICABLE_TO_THE_COMPLEX_BASECHANGE_LOCAL_LEMMA; p-adic exceptional-zero sources were near matches only and were not composed into the proof route",
+    "complex_vs_p_adic_coordinate_faithfulness": "PRESERVED_COMPLEX_S_FOR_LOCAL_LEMMA; p-adic/Hida derivative formulas explicitly rejected as closure"
+  },
+  "resource_proxies": {
+    "model_tokens": "CANNOT_MEASURE: automation runtime does not expose a trustworthy token counter to the research receipt",
+    "context_tokens": "CANNOT_MEASURE: no authoritative context-token meter is exposed",
+    "prospective_web_tool_invocations_after_expert_freeze": 9,
+    "prospective_web_search_queries": 18,
+    "prospective_source_open_requests": 7,
+    "prospective_find_selector_requests": 4,
+    "repository_retrieval_calls": "CANNOT_MEASURE: connector call count was not instrumented prospectively across the full run",
+    "all_tool_calls": "CANNOT_MEASURE: no centralized per-cycle tool-call meter was frozen before execution",
+    "application_write_commits_before_metrics": 12,
+    "elapsed_proxy": {
+      "from_fibre_freeze_commit_time_utc": "2026-08-11T19:01:59Z",
+      "to_metrics_sample_time_utc": "2026-08-11T19:17:01Z",
+      "seconds": 902,
+      "qualification": "elapsed proxy only; not calibrated compute wall-time"
+    }
+  },
+  "new_ids": {
+    "episodes": [
+      "EP-BSD-A1A1-BASECHANGE-PLECTIC-20260811-R5"
+    ],
+    "diagnoses": [
+      "D-BSD-A1A1-R5-AUXILIARY-K-SCOPE-BINDING"
+    ],
+    "failures": [
+      "F-BSD-A1A1-R5-AUXILIARY-K-EXACT-SCOPE-GAP"
+    ],
+    "obstructions": [
+      "O-BSD-A1A1-R5-AUXILIARY-K-PLECTIC-ADMISSIBILITY"
+    ],
+    "lessons": [],
+    "tools": [],
+    "motifs": []
+  },
+  "successful_reuse_ids": [
+    "EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4",
+    "EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "gates": {
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "candidate_generated": false,
+    "formal_verifier_gate": "NOT_APPLICABLE_NO_ROOT_CANDIDATE",
+    "dependency_axiom_audit": "NOT_APPLICABLE_NO_ROOT_CANDIDATE",
+    "barrier_audit": "NOT_APPLICABLE_NO_ROOT_CANDIDATE; exact coordinate/circularity barriers were locally audited",
+    "isolated_rechecks": 0,
+    "independent_mathematical_reviews": 0,
+    "same_context_review_roles": 7,
+    "same_context_review_independent": false,
+    "protected_episode_authority": "PROPOSAL_SHADOW_STORED",
+    "protected_obstruction_promotion": false,
+    "protected_lesson_promotion": false,
+    "root_promotion_authorized": false
+  },
+  "provenance": {
+    "fibre_freeze": "commit:0c87fcdf33c4755d07cd26affe2e7fcebc7981a4",
+    "expert_freeze": "commit:ca22f08b98eaffc6d7bbee58a039f6ab30602c3b",
+    "source_receipt_hash": "sha256:c6fd0024b0b097a0dde8b9dd42a19fe2c4f71814fcd4cb64555790de6181c4c9",
+    "taskepisode_hash": "b1c4db54cbc7381d1d87700bd9822896433a8eac5dd0cdeecfd47367ff0231c8",
+    "episode_admission_hash": "fb897e13885379417f0f18657b8179d2bbc34991cf695cc13f270ac01d5b1628",
+    "trace_last_event_hash": "sha256:168c42cc9f472ea942413e52b1ac96dd17dfc76277c464a8dde400a48ea7649e",
+    "source_scope": "PRIMARY_SOURCE_BOUND_BOUNDED_SEARCH",
+    "negative_history_preserved": true
+  },
+  "ci_status": {
+    "status": "NOT_YET_RUN_AT_RECEIPT_TIME",
+    "reason": "the branch has not yet been submitted to the application PR workflow at the moment this self-contained metric receipt is created",
+    "successor_receipt_policy": "after an exact-head workflow result exists, a successor receipt may bind that tested head without rewriting this measurement"
+  },
+  "rakl_action_effect": {
+    "observed_memory_influence": true,
+    "observed_effect": "R3/R4 experience and the bridge-stability tool rotated the action away from another scalar/higher-Gross-Zagier scan toward exact E/Q-to-E/K base-change typing.",
+    "pre_memory_pre_gate_preference": "CANNOT_MEASURE: no independent prospective pre-memory/pre-gate preference was frozen",
+    "did_rakl_change_action_relative_to_observable_counterfactual": "CANNOT_MEASURE: observed routing influence is not a causal counterfactual",
+    "causal_attribution_claim": false
+  },
+  "framework_improvement_hypothesis": {
+    "status": "PROPOSAL_ONLY_NOT_FRAMEWORK_DEFECT",
+    "hypothesis": "Add a typed interface-instantiation checklist to contextual_theory_gluing so every source local character/sign/residual hypothesis must be mapped to each target local requirement before compatibility can be marked.",
+    "framework_issue_opened": false,
+    "reason": "useful case-study hypothesis but no reproduced framework defect warrants a RAKL issue in this cycle"
+  },
+  "artifact_hash": "sha256:f73579f1dbedb023d3966d12ec8810a361610c71466d3de10ec10e2c1de576b6"
+}
