@@ -1,0 +1,39 @@
+{
+  "trace_id": "TRACE-H4d1b-SOURCE-CALIBRATION-CONTINUATION-20260811",
+  "entries": [
+    {
+      "event_id": "H4d1b-E08",
+      "atom_id": "H4d1b",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-11T13:24:00+00:00",
+      "state_summary": "The published complete-intersection source identifies the Hodge tangent with I_e=(P_i,Q_i)_e.",
+      "action_summary": "Use degree-compatible ideal membership to construct deltaP_i, deltaQ_i and the dual-number pair deformation, establishing a source-bound first-order incidence preimage for every source Hodge tangent.",
+      "evidence_pointers": ["research/real_math/millennium/hodge/deformation/03_routes/H4d1b_KLOOSTERMAN_TANGENT_LIFT_CALIBRATION_20260811.md", "https://arxiv.org/abs/2104.14845"],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": ["verdict:KLOOSTERMAN_SOURCE_FIRST_ORDER_DIRECT_LIFT_PASS", "authority:SOURCE_BOUND_METHOD_CALIBRATION"],
+      "uncertainties": ["source class is semiregular", "higher Artin order not checked", "arbitrary cycles not covered"],
+      "residuals": ["strict-weaker nonsemiregular control still missing", "higher-Artin stability still missing"],
+      "next_steps": ["open H4d1c strict-weaker source search", "open H4d1b-HO only under a separately frozen context"],
+      "artifact_hash": "sha256:12e2d079df24cfe03331cdc811c9457d064e52daeffa1ee45face712be1696a4",
+      "previous_event_hash": "sha256:9003af6faf55cdc26decd91f8f0d010bc982dd44a2f179fa673bdcc4db2a8b97"
+    },
+    {
+      "event_id": "H4d1b-E09",
+      "atom_id": "H4d1b",
+      "event_type": "RESIDUAL_OPENED",
+      "timestamp": "2026-08-11T13:24:00+00:00",
+      "state_summary": "The first-order source calibration is positive but does not establish a weaker-than-semiregularity mechanism or higher-order propagation.",
+      "action_summary": "Split the residual into two non-conflated children: strict-weaker nonsemiregular calibration and higher-Artin stability.",
+      "evidence_pointers": ["research/real_math/millennium/hodge/deformation/03_routes/H4d1b_KLOOSTERMAN_TANGENT_LIFT_CALIBRATION_20260811.md", "research/real_math/millennium/hodge/deformation/08_reviews/H4d1b_EXPERT_CONTEXT_REVIEW_20260811.md"],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": ["residual:H4d1c-STRICT-WEAKER-NONSEMIREGULAR-CALIBRATION", "residual:H4d1b-HO-HIGHER-ARTIN-STABILITY"],
+      "uncertainties": ["it is unknown from the inspected source set whether a clean nonsemiregular positive control exists"],
+      "residuals": [],
+      "next_steps": ["freeze a fresh H4d1c context before any new candidate", "do not infer all-order lifting from the tangent calculation"],
+      "artifact_hash": "sha256:2fd65f3bc8fe1343f99ca9f284733a080db0c38db04d924087c09e90e52c878c",
+      "previous_event_hash": "sha256:12e2d079df24cfe03331cdc811c9457d064e52daeffa1ee45face712be1696a4"
+    }
+  ]
+}

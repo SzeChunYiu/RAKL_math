@@ -1,0 +1,49 @@
+{
+  "target_atom_id": "H4d1b",
+  "target_context_hash": "sha256:1adeb04b277f2e53f27aa969a8de29bcf868d851e974834789891305499f272e",
+  "tool_inventory_snapshot_hash": "git-blob-sha1:18959577ed007f27773a7e64a4fe8cfd799ce759",
+  "failure_lattice_snapshot_hash": "git-blob-sha1:c37b78245450acfc9b6857cfbf1ee0200cd402ac",
+  "tool_query_status": "NO_RELEVANT_MATCH",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "direct incidence/flag-Hilbert tangent preimage",
+    "same-detector branch restriction (regression-only; verified impossible for nonzero kernel-free envelope at first order)",
+    "reduced-obstruction/semiregularity annihilation",
+    "special-family Hodge-locus versus witness-locus tangent comparison",
+    "strict-weaker nonsemiregular calibration",
+    "higher-Artin recursive pair lifting"
+  ],
+  "relevant_tool_ids": [],
+  "relevant_failure_ids": [
+    "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO",
+    "F-H4D1-DETECTOR-KERNEL-GAP"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "No promoted Hodge-deformation ResearchTool in the frozen inventory has an authority record whose preconditions cover H4d1b.",
+    "Kloosterman's tangent-space calculation is treated as primary-source evidence for a calibration, not silently promoted to a RAKL ResearchTool."
+  ],
+  "failure_reuse_notes": [
+    "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO changes the route: H4d1b does not ask the same detector to become injective; it asks whether the geometric incidence projection has a preimage for every allowed Hodge tangent.",
+    "DifferenceWitness: the method family changes from detector faithfulness on B_{T,1} to explicit source-bound incidence factorization. The old no-go may no longer apply because no detector injectivity premise is used.",
+    "Cheapest old-failure regression test: find a source Hodge tangent deltaF that lies in the source-computed Hodge tangent space but has no degree-compatible decomposition deltaF=sum_i(P_i deltaQ_i+deltaP_i Q_i). In Kloosterman's complete-intersection source, the tangent-space ideal identity rules this out at first order.",
+    "F-H4D1-DETECTOR-KERNEL-GAP remains a warning against treating cohomological Hodge persistence alone as witness lifting outside the explicit incidence source."
+  ],
+  "unresolved_warnings": [
+    "The positive source class is semiregular, so it does not yet establish a strict weakening of full semiregularity.",
+    "The source is complete-intersection geometry and cannot be transported to arbitrary rational cycles without an explicit representation/transfer witness.",
+    "First-order tangent surjectivity does not imply higher-Artin formal lifting.",
+    "Formal lifting would still leave algebraization, monodromy/global continuation and root initial algebraicity open.",
+    "Movasati's rigid-selected-witness/positive-Hodge-locus configurations remain a hostile warning that a chosen witness locus can be too small."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1a_BRANCH_DETECTOR_COMPATIBILITY_NOGO_20260811.md",
+    "research/real_math/millennium/hodge/deformation/07_memory/H4d1a_FAILURE_EXPERIENCE_LATTICE_COMBINED_20260811.json",
+    "https://arxiv.org/abs/2104.14845",
+    "https://arxiv.org/abs/2203.00664",
+    "https://arxiv.org/abs/math/9912245",
+    "https://arxiv.org/abs/1208.3111",
+    "https://arxiv.org/abs/1902.00831"
+  ],
+  "artifact_hash": "sha256:5518ad2448acd80126d6aedda42af1418b9af0dfd877daa535587f939c502c22"
+}

@@ -1,0 +1,152 @@
+{
+  "schema_version": "rakl-cycle-metrics-v1-proposal-shadow",
+  "cycle_id": "H4d1b-KLOOSTERMAN-FIRST-ORDER-DIRECT-LIFT-20260811",
+  "authority": "PROPOSAL_SHADOW_TELEMETRY_PLUS_SOURCE_BOUND_METHOD_CALIBRATION_ONLY",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "current_main_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "method_version": "rakl-core manifest 0.6.6; RAKL v3 architecture",
+    "application_framework_pin_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "pin_status": "MATCHES_CURRENT_RAKL_MAIN_AT_CYCLE_START",
+    "authority_note": "Current v3 protected authority rules were read directly; this application cycle creates no framework promotion."
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "main_sha_at_cycle_start": "71f5810f0a92532fd2a172b06bb080d699a4599f",
+    "main_sha_observed_after_result": "704915c788ed08704c1f338ef4712ea8d5f59ad9",
+    "research_branch": "research/hodge-deformation-h4d1b-tangent-lift-20260811",
+    "pre_cycle_branch_sha": "71f5810f0a92532fd2a172b06bb080d699a4599f",
+    "source_calibration_commit_sha": "3302a46ae37c46c5ce9813f18c9177da1f246bf2",
+    "result_trace_commit_sha": "d243c6ae7f431e5fcbf455594a95a022276efe55",
+    "method_case_study_commit_sha": "caadf102d2d2b63659b57713e9f6ef943618c458",
+    "base_drift_note": "Application main advanced with unrelated BSD assurance work during the cycle; the H4d1b branch preserves its exact start base and will be judged through PR mergeability/exact-head CI before integration."
+  },
+  "state": {
+    "pre_state_fingerprint": {
+      "value": "CANNOT_MEASURE",
+      "reason": "RAKL_math stores proposal/shadow v3 artifacts but does not materialize one canonical RAKLV3State object for this lane."
+    },
+    "post_state_fingerprint": {
+      "value": "CANNOT_MEASURE",
+      "reason": "same as pre_state_fingerprint; git SHA is reported separately and is not substituted for a v3 state fingerprint."
+    },
+    "atom_id": "H4d1b",
+    "fibre_snapshot_hash": "sha256:1adeb04b277f2e53f27aa969a8de29bcf868d851e974834789891305499f272e",
+    "pre_calibration_final_event_hash": "sha256:9003af6faf55cdc26decd91f8f0d010bc982dd44a2f179fa673bdcc4db2a8b97",
+    "post_calibration_final_event_hash": "sha256:2fd65f3bc8fe1343f99ca9f284733a080db0c38db04d924087c09e90e52c878c"
+  },
+  "process_surfaces_invoked": [
+    "decomposition",
+    "search_query_generation",
+    "source_selection_reliability",
+    "mathematical_context_translation",
+    "equivalence_similarity",
+    "gap_discovery",
+    "experiment_query_selection",
+    "memory",
+    "review",
+    "saturation_stopping"
+  ],
+  "memory": {
+    "relevant_tools_retrieved_count": 0,
+    "relevant_tool_ids": [],
+    "relevant_failures_retrieved_count": 2,
+    "relevant_failure_ids": [
+      "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO",
+      "F-H4D1-DETECTOR-KERNEL-GAP"
+    ],
+    "selected_failure_ids": [
+      "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO",
+      "F-H4D1-DETECTOR-KERNEL-GAP"
+    ],
+    "rejected_or_deferred_items": [
+      "same-detector nonzero kernel-free envelope retry rejected by verified first-order impossibility",
+      "automatic promotion of Kloosterman source result to reusable ResearchTool rejected",
+      "arbitrary-cycle transfer rejected without representation witness",
+      "higher-Artin lifting deferred to separately frozen child"
+    ]
+  },
+  "outcome": {
+    "status": "PARTIAL_SUCCESS",
+    "category": "SOURCE_BOUND_METHOD_CALIBRATION",
+    "result_id": "H4d1b-S001-KLOOSTERMAN-TANGENT-LIFT",
+    "result_summary": "In Kloosterman's complete-intersection source, T_Hodge=I_e with I=(P_i,Q_i); every deltaF in I_e has a degree-compatible decomposition deltaF=sum_i(P_i deltaQ_i+deltaP_i Q_i), yielding an explicit dual-number pair deformation and hence direct first-order branch-obstruction annihilation for the selected witness.",
+    "novelty_class": "TRANSFER_NOVEL",
+    "novel_structure_rank": 0,
+    "new_mathematics_claim": false
+  },
+  "residual": {
+    "before": [
+      "prove delta_1|T=0 directly from source-specific witness geometry without same-detector injectivity",
+      "identify a source control that distinguishes geometric incidence lifting from detector-kernel reasoning"
+    ],
+    "after": [
+      "H4d1c: find a strict-weaker nonsemiregular positive control or a source-bound obstruction to one",
+      "H4d1b-HO: separately freeze higher-Artin stability of the incidence lift",
+      "arbitrary-cycle representation/transfer, algebraization, monodromy/global continuation and root initial algebraicity remain open"
+    ]
+  },
+  "retained_semantic_novelty": {
+    "KNOWLEDGE": 1,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 1,
+    "OBSTRUCTION": 1,
+    "RELATION": 1,
+    "PATH": 1,
+    "META_METHOD": 0
+  },
+  "saturation": {
+    "axes_reopened": ["OBSTRUCTION", "RELATION", "PATH"],
+    "axes_flattened": [],
+    "absolute_saturation_claim": false
+  },
+  "resources": {
+    "model_input_tokens": {
+      "value": "CANNOT_MEASURE",
+      "reason": "automation harness does not expose exact per-cycle model-token accounting"
+    },
+    "model_output_tokens": {
+      "value": "CANNOT_MEASURE",
+      "reason": "automation harness does not expose exact per-cycle model-token accounting"
+    },
+    "context_tokens": {
+      "value": "CANNOT_MEASURE",
+      "reason": "automation harness does not expose compiled-context token count"
+    },
+    "external_web_tool_invocations_observed": 8,
+    "github_connector_calls": {
+      "value": "CANNOT_MEASURE",
+      "reason": "connector runtime does not expose a reliable aggregate per-cycle counter and manual counting would mix research and repository-maintenance calls"
+    },
+    "wall_time_ms": {
+      "value": "CANNOT_MEASURE",
+      "reason": "no exact cycle timer is exposed to the research artifact"
+    }
+  },
+  "new_records": {
+    "episode_ids": ["H4d1b-S001-KLOOSTERMAN-TANGENT-LIFT"],
+    "lesson_ids": [],
+    "failure_ids": [],
+    "tool_ids": [],
+    "obstruction_or_residual_ids": ["H4d1c-STRICT-WEAKER-NONSEMIREGULAR-CALIBRATION", "H4d1b-HO-HIGHER-ARTIN-STABILITY"],
+    "motif_ids": [],
+    "successful_reuse_ids": []
+  },
+  "gates": {
+    "context_frozen_before_source_calibration": true,
+    "dual_memory_review_frozen_before_source_calibration": true,
+    "hash_chained_pre_calibration_trace": true,
+    "same_context_expert_review": true,
+    "independent_review": false,
+    "new_theorem_candidate_generated": false,
+    "application_branch_exact_head_ci": "PENDING_AFTER_WRITE",
+    "root_authority": "NONE",
+    "provenance_note": "Published-source mathematics is kept at source scope. The H4d1b context/memory/expert/trace artifacts precede the result commits. Main drift during the cycle is recorded rather than hidden."
+  },
+  "rakl_action_attribution": {
+    "did_rakl_change_action": "QUALITATIVE_ONLY_NOT_CAUSALLY_IDENTIFIED",
+    "observed_effect": "The registered H4d1a verified impossibility explicitly removed a same-detector retry and selected direct incidence preimage as the next admissible representation.",
+    "causal_claim": "CANNOT_MEASURE",
+    "reason": "No frozen randomized/model-only pre-memory action exists for this exact episode; causal attribution requires the matched Paper-5 control."
+  }
+}
