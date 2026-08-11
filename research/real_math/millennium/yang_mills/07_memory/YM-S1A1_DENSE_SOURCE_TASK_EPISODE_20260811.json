@@ -1,0 +1,81 @@
+{
+  "episode_id": "EP-YM-S1A1-DENSE-SOURCE-GAP-20260811",
+  "task_id": "RAKL-VERIFIED-DISCOVERY-YM-SPECTRAL",
+  "atom_id": "YM-S1a1",
+  "context_hash": "sha256:082ddb6131aa0316cbdd17248d762af6bc036caed877a2acce42087f1c940e3a",
+  "problem_signature": [
+    "positive self-adjoint physical transfer operator",
+    "excited-space source density/cyclicity",
+    "common asymptotic source moment rate q<1",
+    "restricted-source hidden-state failure already registered",
+    "target application requires OS/SZZ same-theory binding"
+  ],
+  "fibre_snapshot_hash": "sha256:082ddb6131aa0316cbdd17248d762af6bc036caed877a2acce42087f1c940e3a",
+  "operator_ids": [
+    "failure-guided-hypothesis-repair",
+    "spectral-measure-support-exclusion",
+    "dense-subspace-closure",
+    "counterexample-first-falsification"
+  ],
+  "action_trace": [
+    "retrieved F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE and retained it as a scoped warning rather than a blacklist",
+    "rejected direct restricted-source clustering because prior failure shows hidden lower spectral modes",
+    "derived the minimum abstract implication from source moment rates to full spectral support using the spectral theorem",
+    "ran the old hidden-state failure world, a complete-source success world, and a dense-but-nonuniform-rate hostile world",
+    "same-context expert cell accepted local derivation and separated target-specific gluing debt",
+    "opened YM-S1a2 as CONTEXT_REQUIRED rather than silently instantiating SZZ/OS hypotheses"
+  ],
+  "observation_ids": [
+    "YM-S1A1-C001:LOCAL_DERIVATION_PASS",
+    "WORLD-F1:DENSITY_HYPOTHESIS_REJECTS_HIDDEN_STATE",
+    "WORLD-P1:COMMON_Q_RECOVERS_EXACT_THREE_STATE_GAP",
+    "WORLD-F2:DENSE_SOURCE_DEPENDENT_Q_TO_ONE_HAS_ZERO_FULL_GAP"
+  ],
+  "verification_ids": [
+    "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_C001_RESULT_REVIEW_20260811.md",
+    "candidate_sha256:a8b6081ac1333468fc05fa98ad2d456f89d2ea934250517af265f803e8408f9b",
+    "review_sha256:10d91730dced3360463219897955e303f0b46f481cd5dcdafe713366327fcfc0"
+  ],
+  "outcome": "PARTIAL_SUCCESS",
+  "residual_signature": [
+    "LOCAL_MATH_CLOSED:dense-source common-q spectral exclusion implication",
+    "GLUING_OPEN:Euclidean covariance to exact physical transfer moment",
+    "GLUING_OPEN:density/cyclicity of the SZZ-controlled smooth gauge-invariant source class in the infinite-volume OS excited space",
+    "G5_OPEN:strong-to-weak coupling/RG transport",
+    "G6_OPEN:physical lattice-spacing scaling",
+    "G7_OPEN:continuum spectral identification"
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/01_frontier/YM-S1A1_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_PRE_CANDIDATE_REVIEW_20260811.md",
+    "research/real_math/millennium/yang_mills/04_candidates/YM-S1A1_C001_DENSE_SOURCE_COMMON_RATE_SPECTRAL_EXCLUSION_20260811.md",
+    "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_C001_RESULT_REVIEW_20260811.md",
+    "research/real_math/millennium/yang_mills/02_problem_dag/YM-S1A2.yaml",
+    "K. Osterwalder and E. Seiler, Annals of Physics 110 (1978), DOI:10.1016/0003-4916(78)90039-8",
+    "M. Luescher, Communications in Mathematical Physics 54 (1977), DOI:10.1007/BF01614090",
+    "H. Shen, R. Zhu, X. Zhu, arXiv:2204.12737 / CMP 400 (2023)",
+    "G. Burgio et al., arXiv:hep-lat/9906036"
+  ],
+  "timestamp": "2026-08-11T11:28:00+00:00",
+  "cost": 1.0,
+  "proposal_shadow": true,
+  "cost_proxy_note": "one autonomous research cycle; cost field is a relative effort proxy, not monetary cost",
+  "episode_diagnosis": "The abstract spectral bridge is locally derivable; the active obstruction has moved to target-specific gluing between a common Euclidean covariance exponent, the physical transfer-matrix moment representation, and source density in the same reconstructed theory.",
+  "reusable_lesson_proposal": {
+    "lesson_id": "LESSON-YM-DENSE-COVERAGE-PLUS-UNIFORM-RATE-20260811",
+    "kind": "BOUNDARY",
+    "trigger_signature": [
+      "global spectral conclusion inferred from sourcewise decay"
+    ],
+    "action": "require both dense/cyclic source coverage and one common asymptotic rate before upgrading source decay to a full spectral gap",
+    "boundaries": [
+      "requires positive self-adjoint spectral measure semantics",
+      "does not establish target-specific source density or covariance-to-transfer identity",
+      "does not transport a fixed-cutoff gap through RG or continuum limits"
+    ],
+    "authority": "CANDIDATE"
+  },
+  "novelty_classification": "PROVISIONAL_RAKL_TRIVIAL",
+  "artifact_hash": "sha256:9fb1fd2ba7b01283195fc7bb1716596bb34c43bb9f2fe1edd0904c4d661cb4bb"
+}

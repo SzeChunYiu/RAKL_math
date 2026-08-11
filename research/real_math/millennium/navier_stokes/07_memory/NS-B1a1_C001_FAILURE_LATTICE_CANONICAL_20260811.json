@@ -1,0 +1,57 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "atom_id": "NS-B1a1",
+      "candidate_id": "NS-B1a1-C001",
+      "context_packet_hash": "sha256:2dd3659dd73036559e41fddd35b599fc1945933730d99ad2dc60d98ba28b67ce",
+      "research_trace_event_id": "NS-B1a1-E10",
+      "method_family": "standard finite-I local-energy scale-charge summation",
+      "failure_mode": "standard absolute cutoff bookkeeping is scale-neutral after normalization and supplies no well-founded/summable descendant charge",
+      "residual_signature": [
+        "standard finite-I local-energy ledger is scale-neutral after normalization",
+        "no positive scale decay or telescoping defect is obtained from standard absolute bookkeeping",
+        "finite physical expenditure does not make dyadic scale descent well-founded",
+        "need no-recrossing, dimensionless monotone defect, coherence/cancellation, disjoint charge, or compactness-rigidity"
+      ],
+      "broken_assumptions": [
+        "bounded O(1) dimensionless local-energy cost per dyadic scale limits the number of dynamically realized descendants",
+        "finite physical energy/flux budget is by itself a well-founded scale rank"
+      ],
+      "scope_conditions": [
+        "mild/suitable target class with the source-valid local-energy inequality",
+        "finite A,C,D,E on Q(2R)",
+        "standard cutoff derivative bounds R^-1 and R^-2",
+        "absolute Hölder estimate for pressure work after subtracting a time-dependent spatial mean",
+        "no extra cancellation, no-recrossing, compactness, monotonicity, or global L3 assumption"
+      ],
+      "competing_diagnoses": [
+        "pressure or nonlinear flux may contain sign/coherence cancellation invisible to absolute estimates",
+        "a no-recrossing theorem may turn repeated threshold crossings into genuinely new events",
+        "a dimensionless monotone defect may exist but is not the standard A+C+D+E ledger",
+        "minimality/compactness may bypass any direct scale-charge argument"
+      ],
+      "selected_diagnosis": "The standard finite-I local-energy ledger is a local certificate whose scale invariance prevents naive summation from becoming a root-useful termination argument; the missing coordinate is a dynamics-specific scale-symmetry breaker or assembly rule.",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a1_CONTEXT_FIBER_20260811.json",
+        "research/real_math/millennium/navier_stokes/07_memory/NS-B1a1_RESEARCH_MEMORY_REVIEW_20260811.json",
+        "research/real_math/millennium/navier_stokes/08_reviews/NS-B1a1_EXPERT_CONTEXT_REVIEW_20260811.md",
+        "research/real_math/millennium/navier_stokes/09_trace/NS-B1a1_PRE_CANDIDATE_TRACE_20260811.json",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a1_C001_SCALE_CHARGE_AUDIT_20260811.md",
+        "research/real_math/millennium/navier_stokes/07_memory/NS-B1a1_C001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+        "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a1_C001_POSTMERGE_ASSURANCE_CORRECTION_20260811.json"
+      ],
+      "falsifier_or_attempt": "Exact parabolic scaling audit of linear cutoff, convection and pressure-work terms, plus nested dyadic geometric-sum stress test.",
+      "observed_result": "Each physical cutoff contribution is O(R) under bounded dimensionless A,C,D,E, hence O(1) after normalization; physical costs O(R_j) or O(R_j^2) remain summable through infinite dyadic descent.",
+      "local_repair_attempts": [
+        "checked pressure work with spatial-mean subtraction and Hölder",
+        "separated dimensionless threshold recurrence from physical integrated cost",
+        "retained sign/coherence, no-recrossing, compactness and monotone-defect routes"
+      ],
+      "timestamp": "2026-08-11T12:03:53Z",
+      "artifact_hash": "sha256:e48ce553c901a9f834c64571233b948552d8f5b4fd51aac9a07967ce09e96d9b"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,188 @@
+{
+  "trace_id": "TRACE-YM-S1A1-C001-V2-CORRECTION-20260811",
+  "continues_trace": "TRACE-YM-S1A1-POST-CANDIDATE-20260811",
+  "entries": [
+    {
+      "event_id": "YM-S1A1-E013",
+      "atom_id": "YM-S1a1",
+      "event_type": "REVIEWED",
+      "timestamp": "2026-08-11T11:40:00+00:00",
+      "state_summary": "Hostile exact-head review found the q=0/logarithm boundary defect in frozen v1.",
+      "action_summary": "Retain v1 bytes and classify the defect as a local specification boundary, not a refutation of the positive-q spectral proof.",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_C001_V2_Q_ZERO_BOUNDARY_REVIEW_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "Use the smallest scope-preserving correction exposed by exact-head hostile review; do not rewrite frozen v1 or escalate authority.",
+      "outputs": [
+        "v1_sha256:a8b6081ac1333468fc05fa98ad2d456f89d2ea934250517af265f803e8408f9b"
+      ],
+      "uncertainties": [
+        "same-context review is not independent"
+      ],
+      "residuals": [
+        "LOGARITHM_DOMAIN"
+      ],
+      "next_steps": [
+        "open a narrow successor rather than mutate v1"
+      ],
+      "previous_event_hash": "sha256:bfa9c462a1b2d098d279814739ffcbaec1b73192ae12ebb9973399c01cda4515",
+      "artifact_hash": "sha256:9d69673ee6fbd5e123f0de501bb1f9c4de7234a51d0bc8c27ac01927d500b37f"
+    },
+    {
+      "event_id": "YM-S1A1-E014",
+      "atom_id": "YM-S1a1",
+      "event_type": "RESIDUAL_OPENED",
+      "timestamp": "2026-08-11T11:41:00+00:00",
+      "state_summary": "The target-facing Hamiltonian corollary lacks a valid ordinary logarithm at q=0.",
+      "action_summary": "Open the exact LOGARITHM_DOMAIN repair obligation; do not reopen unrelated Yang-Mills target claims.",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_C001_V1_TO_V2_REVIEW_CORRECTION_20260811.json"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "Use the smallest scope-preserving correction exposed by exact-head hostile review; do not rewrite frozen v1 or escalate authority.",
+      "outputs": [
+        "residual:LOGARITHM_DOMAIN"
+      ],
+      "uncertainties": [
+        "same-context review is not independent"
+      ],
+      "residuals": [
+        "LOGARITHM_DOMAIN"
+      ],
+      "next_steps": [
+        "narrow the target-facing q domain"
+      ],
+      "previous_event_hash": "sha256:9d69673ee6fbd5e123f0de501bb1f9c4de7234a51d0bc8c27ac01927d500b37f",
+      "artifact_hash": "sha256:a91adb95fc2b05c4adaf0eca4caf61d48eef0211cae929cdfedad249ba53fabb"
+    },
+    {
+      "event_id": "YM-S1A1-E015",
+      "atom_id": "YM-S1a1",
+      "event_type": "CANDIDATE_PROPOSED",
+      "timestamp": "2026-08-11T11:42:00+00:00",
+      "state_summary": "The prior proof is valid for positive q and the target covariance exponent corresponds to positive exponential q.",
+      "action_summary": "Propose v2 with 0<q<1 and no other mathematical or authority change.",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/04_candidates/YM-S1A1_C001_V2_DENSE_SOURCE_COMMON_RATE_SPECTRAL_EXCLUSION_20260811.md",
+        "sha256:7cd5b6cf8070aa792c3793e55f332f139953897180ec792f2f893113df680bf9"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "Use the smallest scope-preserving correction exposed by exact-head hostile review; do not rewrite frozen v1 or escalate authority.",
+      "outputs": [
+        "candidate:YM-S1A1-C001-V2"
+      ],
+      "uncertainties": [
+        "same-context review is not independent"
+      ],
+      "residuals": [
+        "YM-S1a2",
+        "G5",
+        "G6",
+        "G7"
+      ],
+      "next_steps": [
+        "rerun hostile boundary and original worlds"
+      ],
+      "previous_event_hash": "sha256:a91adb95fc2b05c4adaf0eca4caf61d48eef0211cae929cdfedad249ba53fabb",
+      "artifact_hash": "sha256:f5bdb9115cbec04b6c36e8124a7ed1f1f238444a40758867de1900cac69d05e3"
+    },
+    {
+      "event_id": "YM-S1A1-E016",
+      "atom_id": "YM-S1a1",
+      "event_type": "FALSIFIER_RUN",
+      "timestamp": "2026-08-11T11:43:00+00:00",
+      "state_summary": "The q=0 endpoint is excluded explicitly; positive-q planted worlds remain applicable.",
+      "action_summary": "Check q=0 is outside v2, q=1/2 recovers the finite example, and sourcewise q_k approaching one remains rejected.",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/04_candidates/YM-S1A1_C001_V2_DENSE_SOURCE_COMMON_RATE_SPECTRAL_EXCLUSION_20260811.md",
+        "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_C001_V2_Q_ZERO_BOUNDARY_REVIEW_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "Use the smallest scope-preserving correction exposed by exact-head hostile review; do not rewrite frozen v1 or escalate authority.",
+      "outputs": [
+        "QZERO:OUTSIDE_V2",
+        "P1:PASS",
+        "F2:REJECTED_NO_COMMON_Q"
+      ],
+      "uncertainties": [
+        "same-context review is not independent"
+      ],
+      "residuals": [
+        "YM-S1a2",
+        "G5",
+        "G6",
+        "G7"
+      ],
+      "next_steps": [
+        "record corrected result"
+      ],
+      "previous_event_hash": "sha256:f5bdb9115cbec04b6c36e8124a7ed1f1f238444a40758867de1900cac69d05e3",
+      "artifact_hash": "sha256:ab8198f6e1d0e724e4ee24e2f98bfe961c0b32c8dde050a741c430a90fd8e6a7"
+    },
+    {
+      "event_id": "YM-S1A1-E017",
+      "atom_id": "YM-S1a1",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-11T11:44:00+00:00",
+      "state_summary": "The narrow v2 statement removes the logarithm-domain defect without changing the spectral proof or target residuals.",
+      "action_summary": "Record v2 as the authoritative local candidate and preserve v1 as superseded negative/specification history.",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_C001_V1_TO_V2_REVIEW_CORRECTION_20260811.json",
+        "research/real_math/millennium/yang_mills/04_candidates/YM-S1A1_C001_V2_DENSE_SOURCE_COMMON_RATE_SPECTRAL_EXCLUSION_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "Use the smallest scope-preserving correction exposed by exact-head hostile review; do not rewrite frozen v1 or escalate authority.",
+      "outputs": [
+        "v2_sha256:7cd5b6cf8070aa792c3793e55f332f139953897180ec792f2f893113df680bf9",
+        "V1_PRESERVED"
+      ],
+      "uncertainties": [
+        "same-context review is not independent"
+      ],
+      "residuals": [
+        "YM-S1a2",
+        "G5",
+        "G6",
+        "G7"
+      ],
+      "next_steps": [
+        "recursive same-context review"
+      ],
+      "previous_event_hash": "sha256:ab8198f6e1d0e724e4ee24e2f98bfe961c0b32c8dde050a741c430a90fd8e6a7",
+      "artifact_hash": "sha256:b65742261a102ad4748fc663e18f2833d16a77933c35f5990179690d580dd413"
+    },
+    {
+      "event_id": "YM-S1A1-E018",
+      "atom_id": "YM-S1a1",
+      "event_type": "REVIEWED",
+      "timestamp": "2026-08-11T11:45:00+00:00",
+      "state_summary": "Recursive same-context review accepts the v2 boundary correction and confirms all target gluing debt remains open.",
+      "action_summary": "Bind the correction review and deny independent, novelty, formal-proof, and root authority.",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_C001_V2_Q_ZERO_BOUNDARY_REVIEW_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "Use the smallest scope-preserving correction exposed by exact-head hostile review; do not rewrite frozen v1 or escalate authority.",
+      "outputs": [
+        "V2_NARROW_CORRECTION_ACCEPTED",
+        "ROOT_AUTHORITY_NONE"
+      ],
+      "uncertainties": [
+        "same-context review is not independent"
+      ],
+      "residuals": [
+        "YM-S1a2",
+        "G5",
+        "G6",
+        "G7"
+      ],
+      "next_steps": [
+        "continue only with fresh YM-S1a2 pre-candidate packet"
+      ],
+      "previous_event_hash": "sha256:b65742261a102ad4748fc663e18f2833d16a77933c35f5990179690d580dd413",
+      "artifact_hash": "sha256:aa54344cc82adca5fb3a925b8111f6fa514a7c4523b30dc94204304bbe88173d"
+    }
+  ],
+  "authority": "PUBLIC_DECISION_TRACE / NO_ROOT_AUTHORITY"
+}
