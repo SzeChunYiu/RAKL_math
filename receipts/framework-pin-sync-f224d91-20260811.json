@@ -1,0 +1,81 @@
+{
+  "schema_version": "framework-pin-current-main-sync-receipt-v1",
+  "receipt_id": "RAKL-MATH-FRAMEWORK-PIN-SYNC-F224D91-20260811",
+  "recorded_at": "2026-08-11T19:26:51Z",
+  "framework_delta": {
+    "repository": "https://github.com/SzeChunYiu/RAKL.git",
+    "previous_commit": "0f1f9f6072f878a745c5a5d549d8b07db7e46961",
+    "current_commit": "f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
+    "current_tree": "8ed91734773262b90c46cc051bfa1faf836113c5",
+    "remote_main_observed_at": "2026-08-11T19:26:51Z",
+    "remote_main_at_observation": "f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
+    "commits_between": 1,
+    "changed_files": 28,
+    "changed_paths": [
+      "experiments/paper2/lunarc/build_native_harvest_receipt_v4_3.py",
+      "experiments/paper2/lunarc/build_task_seed_receipt_v4_3.py",
+      "experiments/paper2/lunarc/harvest_model_staging_v4_3.sh",
+      "experiments/paper2/lunarc/harvest_pendulum_microtrial_v4_3.sh",
+      "experiments/paper2/lunarc/network_probe_v4_3.sbatch",
+      "experiments/paper2/lunarc/run_pendulum_microtrial_v4_3.sbatch",
+      "experiments/paper2/lunarc/stage_model_assets_v4_3.sbatch",
+      "experiments/paper2/lunarc/submit_model_staging_v4_3.sh",
+      "experiments/paper2/lunarc/submit_pendulum_microtrial_v4_3.sh",
+      "research/paper2_microtrial_v4_3/BATCH_CONTRACT_V4_3.json",
+      "research/paper2_microtrial_v4_3/DIFFERENCE_WITNESS_V4_3.json",
+      "research/paper2_microtrial_v4_3/ENVIRONMENT_V4_3.json",
+      "research/paper2_microtrial_v4_3/EXECUTION_CONTRACT_V4_3.json",
+      "research/paper2_microtrial_v4_3/EXECUTION_PACKET_V4_3_20260811.json",
+      "research/paper2_microtrial_v4_3/MODEL_MANIFEST_V4_3.json",
+      "research/paper2_microtrial_v4_3/MODEL_STAGING_ASSET_MANIFEST_V4_3.json",
+      "research/paper2_microtrial_v4_3/MODEL_STAGING_CONTRACT_V4_3.json",
+      "research/paper2_microtrial_v4_3/README_V4_3_STATUS.md",
+      "research/paper2_microtrial_v4_3/RESEARCH_MEMORY_REVIEW_V4_3.json",
+      "research/paper2_microtrial_v4_3/RESOURCE_CEILING_V4_3.json",
+      "research/paper2_microtrial_v4_3/TOKENIZER_MANIFEST_V4_3.json",
+      "research/paper2_microtrial_v4_3/TOOL_INVENTORY_SNAPSHOT_EMPTY_V4_3.json",
+      "schemas/paper2-pendulum-native-harvest-receipt-v4-3.schema.json",
+      "schemas/paper2-pendulum-submission-receipt-v4-3.schema.json",
+      "schemas/paper2-pendulum-task-seed-receipt-v4-3.schema.json",
+      "src/rakl/paper2_model_staging_v4_3.py",
+      "src/rakl/paper2_pendulum_microtrial_v4_3.py",
+      "tests/test_paper2_pendulum_microtrial_v4_3.py"
+    ]
+  },
+  "application_pin_integration": {
+    "previous_application_head": "1699d1d57883dc56c6dbf94bec4043b57cc776e9",
+    "pin_commit": "aa4fcce20512d164e468f65677045cb99b9d86a9",
+    "pin_commit_tree": "73d84f022bd8c7869114cf02b19855cfcde538f6",
+    "config_blob": "0b89bb0d7d25d47987da6c8e8344bfec2bb10f6f",
+    "gitlink_commit": "f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
+    "pin_contract_test_blob": "ef9992341a5ee864753fb891594f48e1d79ef2df",
+    "historical_receipts_rewritten": false,
+    "mathematical_lesson_artifacts_mutated": false
+  },
+  "current_gate_preservation": {
+    "task_episode_schema_path": "schemas/task-episode.schema.json",
+    "previous_task_episode_schema_blob": "62ab5b250c7cc075dbac7da47e3ca3ba9e32175e",
+    "current_task_episode_schema_blob": "62ab5b250c7cc075dbac7da47e3ca3ba9e32175e",
+    "experience_substrate_path": "src/rakl/experience_substrate.py",
+    "previous_experience_substrate_blob": "bac7467472fc93ca068bcc1195f763bd2b207b58",
+    "current_experience_substrate_blob": "bac7467472fc93ca068bcc1195f763bd2b207b58",
+    "storage_admission_required": true,
+    "storage_admission_gate_weakened": false
+  },
+  "verification": {
+    "subject_commit": "aa4fcce20512d164e468f65677045cb99b9d86a9",
+    "verified_at": "2026-08-11T19:26:50Z",
+    "command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_framework_pin_contract.py tests/math_applications/test_framework_pin_b6d_source_inventory_assurance.py tests/math_applications/test_cross_xm005_pr71_retrospective_assurance.py tests/math_applications/test_framework_episode_inventory_extension.py tests/math_applications/test_framework_pr153_hash_contract_migration.py tests/math_applications/test_pnp_o9d12a2a1a1b1_source_inventory_r1.py tests/math_applications/test_pnp_o9d12a2a1a1b1_source_inventory_r1_v2.py",
+    "tests_passed": 34,
+    "exit_code": 0,
+    "status": "PASS_FOCUSED_CURRENT_PIN_AND_HISTORICAL_COMPATIBILITY"
+  },
+  "authority_contract": {
+    "grants_mathematical_authority": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_framework_evolution_authority": false,
+    "grants_review_independence": false,
+    "grants_strict_latest_process_credit_to_historical_results": false
+  },
+  "artifact_hash": "sha256:9a95c745a86e32c458a3fe7daef21b4af975726d00ab977ee557448bba4d0892"
+}

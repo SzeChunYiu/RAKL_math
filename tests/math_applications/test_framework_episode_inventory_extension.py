@@ -7,12 +7,6 @@ from pathlib import Path
 import subprocess
 
 from jsonschema import Draft202012Validator, FormatChecker
-from rakl.experience_substrate import (
-    EpisodeOutcome,
-    TaskEpisode,
-    episode_content_bytes,
-    validate_episode,
-)
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -47,25 +41,31 @@ def _canonical_hash(value: dict) -> str:
     return "sha256:" + hashlib.sha256(raw).hexdigest()
 
 
-def _episode(value: dict) -> TaskEpisode:
-    return TaskEpisode(
-        episode_id=value["episode_id"],
-        task_id=value["task_id"],
-        atom_id=value["atom_id"],
-        context_hash=value["context_hash"],
-        problem_signature=tuple(value["problem_signature"]),
-        fibre_snapshot_hash=value["fibre_snapshot_hash"],
-        operator_ids=tuple(value["operator_ids"]),
-        action_trace=tuple(value["action_trace"]),
-        observation_ids=tuple(value["observation_ids"]),
-        verification_ids=tuple(value["verification_ids"]),
-        outcome=EpisodeOutcome(value["outcome"]),
-        residual_signature=tuple(value["residual_signature"]),
-        evidence_pointers=tuple(value["evidence_pointers"]),
-        artifact_hash=value["artifact_hash"],
-        timestamp=value["timestamp"],
-        cost=value["cost"],
+def _historical_episode_content_bytes(value: dict) -> bytes:
+    """Reproduce the exact TaskEpisode identity contract at framework 9027cc6."""
+
+    fields = (
+        "episode_id", "task_id", "atom_id", "context_hash",
+        "problem_signature", "fibre_snapshot_hash", "operator_ids",
+        "action_trace", "observation_ids", "verification_ids", "outcome",
+        "residual_signature", "evidence_pointers", "timestamp", "cost",
     )
+    payload = {field: value[field] for field in fields}
+    return json.dumps(
+        payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False
+    ).encode("utf-8")
+
+
+def _assert_current_schema_rejects_historical_episode(value: dict) -> None:
+    schema = _load(FRAMEWORK / "schemas/task-episode.schema.json")
+    assert "storage_admission" in schema["required"]
+    assert "storage_admission" not in value
+    errors = list(
+        Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(value)
+    )
+    assert len(errors) == 1
+    assert errors[0].validator == "required"
+    assert errors[0].message == "'storage_admission' is a required property"
 
 
 def test_extension_receipt_schema_hash_and_authority_are_exact() -> None:
@@ -142,9 +142,9 @@ def test_new_episode_passes_exact_historical_schema_runtime_and_hash_contract() 
     Draft202012Validator(
         json.loads(schema_raw), format_checker=FormatChecker()
     ).validate(value)
-    episode = _episode(value)
-    digest = hashlib.sha256(episode_content_bytes(episode)).hexdigest()
-    assert validate_episode(episode) == ()
+    digest = hashlib.sha256(_historical_episode_content_bytes(value)).hexdigest()
+    assert digest == value["artifact_hash"]
+    _assert_current_schema_rejects_historical_episode(value)
     assert receipt["runtime_binding"] == {
         "stored_hash": value["artifact_hash"],
         "computed_runtime_digest": digest,

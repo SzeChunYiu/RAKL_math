@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/pnp-source-inventory-r1-result-trace-shadow.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "trace_id", "recorded_at", "atom_id", "storage_authority", "historical_framework_commit", "pre_action_binding", "events", "root_status", "authority_contract", "artifact_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "trace_id": {"const": "PNP-O9d12a2a1a1b1-SOURCE-INVENTORY-R1-RESULT-TRACE-SHADOW-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "atom_id": {"const": "O9d12a2a1a1b1"},
+    "storage_authority": {"const": "SHADOW_NONCANONICAL_NO_TASK_EPISODE_ADMISSION"},
+    "historical_framework_commit": {"const": "787c7e00af2a5877ccb715bc807ec14f52974e9c"},
+    "pre_action_binding": {"type": "object"},
+    "events": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "object", "additionalProperties": false, "required": ["event_id", "event_type", "recorded_at", "previous_event_hash", "state", "evidence", "result", "residuals", "next_action", "event_hash"], "properties": {"event_id": {"type": "string", "minLength": 1}, "event_type": {"enum": ["RESULT_RECORDED", "REVIEWED", "NEXT_STEP_PROPOSED"]}, "recorded_at": {"type": "string", "format": "date-time"}, "previous_event_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, "state": {"type": "string", "minLength": 1}, "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/artifact"}}, "result": {"type": "string", "minLength": 1}, "residuals": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}, "next_action": {"type": "string", "minLength": 1}, "event_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}}},
+    "root_status": {"const": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE"},
+    "authority_contract": {"const": {"grants_proof_authority": false, "grants_new_theorem_authority": false, "grants_novelty_authority": false, "grants_p_vs_np_root_authority": false, "grants_framework_evolution_authority": false, "grants_review_independence": false}},
+    "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "$defs": {"artifact": {"type": "object", "additionalProperties": false, "required": ["path", "artifact_hash"], "properties": {"path": {"type": "string", "minLength": 1}, "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}}}
+}

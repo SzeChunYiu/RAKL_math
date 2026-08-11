@@ -1,0 +1,854 @@
+{
+  "schema_version": "1.0.0",
+  "inventory_id": "PNP-O9d12a2a1a1b1-SOURCE-NATIVE-THEOREM-INVENTORY-R1-20260811",
+  "recorded_at": "2026-08-11T18:13:13Z",
+  "atom_id": "O9d12a2a1a1b1",
+  "object": "one shared integral family Lambda={(H_i,E_i)}_{i=1}^m covering every Definition-21 pair (a,F) with a in non-trivial A and F a semi-filter above a relative to nonempty B; m=|Lambda| is arbitrary witness size and r=rho(A,B) is the optimum",
+  "qoi": "whether the bounded primary-source universe already states a universal function-of-m bound for a source-native aspect of the exact shared integral m-pair cover/cyclic system while preserving integrality, common-resource multiplexing, full noncanonical obligations, and cheap-target controls",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "commit": "787c7e00af2a5877ccb715bc807ec14f52974e9c"
+  },
+  "application_base": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "commit": "812addd25a7f34d3c6272143e21d5d7db34539aa"
+  },
+  "pre_action_binding": {
+    "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_SOURCE_INVENTORY_R1_PRE_ACTION_20260811.json",
+    "raw_sha256": "sha256:7ba48dae8e25d8589e725962ca9a2522e173186300f3d627ce232123b9e878c9",
+    "canonical_sha256": "sha256:aab44dcb80dbca53adbb85cc42ff1c4a504b5e5d50e3809b7ad2aadb53faf560",
+    "allowed_outcome_branches": [
+      "SUCCESS",
+      "FAILURE",
+      "BLOCKED"
+    ]
+  },
+  "source_universe": [
+    {
+      "source_id": "ECCC-TR25-033-2025",
+      "required_by_r1": true,
+      "identity": "Cavalar and Oliveira, Boolean Circuit Complexity and Two-Dimensional Cover Problems, ECCC TR25-033 (2025)",
+      "content_status": "FULL_PRIMARY_CONTENT_INSPECTED",
+      "local_path": "research/real_math/millennium/p_vs_np/00_sources/ECCC_TR25_033_20250318.pdf",
+      "raw_sha256": "sha256:3f7d98691f3ac28208df6e8669d860c45b6068781dd77c737eb1e780641fbea7",
+      "size_bytes": 464382,
+      "access_observations": [
+        "local PDF contains 25 pages and the complete Definitions 18-21, Theorems 22/24/30/37, Claim 27, equations (6)-(8), Corollary 28, Proposition 38, Lemma 39, Proposition 40 and Claims/Lemmas 41-43"
+      ]
+    },
+    {
+      "source_id": "RAZBOROV-1989",
+      "required_by_r1": true,
+      "identity": "A. A. Razborov, On the method of approximations, STOC 1989, DOI 10.1145/73007.73023",
+      "content_status": "FULL_PRIMARY_CONTENT_INSPECTED",
+      "local_path": "research/real_math/millennium/p_vs_np/00_sources/RAZBOROV_1989_ON_METHOD_OF_APPROXIMATIONS.pdf",
+      "raw_sha256": "sha256:a829725a0b7a70d78ed9ba8cf26fd15d58c7a12270443610c2391f5768b40706",
+      "size_bytes": 1483297,
+      "access_observations": [
+        "full 10-page ACM author copy retrieved from the Internet Archive capture of the author-hosted mi.ras.ru PDF",
+        "retrieval URL https://web.archive.org/web/20060510134904id_/http://www.mi.ras.ru:80/~razborov/approx.pdf",
+        "Claim 2.5 and Theorems 2.6-2.7 were inspected from the rendered primary pages"
+      ]
+    },
+    {
+      "source_id": "KARCHMER-1993",
+      "required_by_r1": true,
+      "identity": "Mauricio Karchmer, On proving lower bounds for circuit size, CCC 1993, DOI 10.1109/SCT.1993.336535",
+      "content_status": "METADATA_ONLY_PRIMARY_CONTENT_UNAVAILABLE",
+      "local_path": null,
+      "raw_sha256": null,
+      "size_bytes": null,
+      "access_observations": [
+        "Crossref and OpenAlex resolve the exact conference item and DOI",
+        "IEEE endpoint redirected to an HTML landing response with no paper bytes",
+        "Springer chapter endpoint exposed HTML preview rather than full theorem text",
+        "no inspectable theorem text was obtained"
+      ]
+    },
+    {
+      "source_id": "WIGDERSON-1993",
+      "required_by_r1": true,
+      "identity": "Avi Wigderson, The Fusion Method for Lower Bounds in Circuit Complexity, 1993",
+      "content_status": "FULL_PRIMARY_CONTENT_INSPECTED",
+      "local_path": "research/real_math/millennium/p_vs_np/00_sources/WIGDERSON_1993_FUSION_METHOD_FULL.pdf",
+      "raw_sha256": "sha256:69893dfc288a89c2b7243b11ec0851ed73cbdda004e0046257bdbe439082e1d7",
+      "size_bytes": 247902,
+      "access_observations": [
+        "full 13-page author copy retrieved from an Internet Archive capture of the author-hosted PDF",
+        "the primary text defines model-specific cover/program resources and states a model-paired polynomial converse with exponent C independent of n and C=4 valid for all listed rows",
+        "cover and input-definition classes vary across the table, so exact transfer to Definition-21 full semi-filters requires a model-alignment witness"
+      ]
+    },
+    {
+      "source_id": "NAKAYAMA-MARUOKA-1995",
+      "required_by_r1": true,
+      "identity": "Katsutoshi Nakayama and Akira Maruoka, Loop Circuits and Their Relation to Razborov approximation model, Information and Computation 119(2), 1995, DOI 10.1006/inco.1995.1083",
+      "content_status": "METADATA_ONLY_PRIMARY_CONTENT_UNAVAILABLE",
+      "local_path": null,
+      "raw_sha256": null,
+      "size_bytes": null,
+      "access_observations": [
+        "Crossref and OpenAlex resolve the exact article and DOI",
+        "Elsevier core XML returned bibliographic/open-access metadata only",
+        "full-view API returned HTTP 401 and ScienceDirect PDF endpoint returned HTTP 403",
+        "no inspectable theorem text was obtained"
+      ]
+    }
+  ],
+  "scope_gap": {
+    "source_id": "WIGDERSON-1995",
+    "reason": "Definition 21 explicitly cites this source for the branching-model restriction requiring at least one generator-derived set per pair, but R1 named only four ancestry families",
+    "status": "PROSPECTIVE_R2_SCOPE_ADDITION_REQUIRED_NOT_BACKFILLED",
+    "authority": "NO_THEOREM_TRANSFER"
+  },
+  "theorem_rows": [
+    {
+      "row_id": "ECCC-C17",
+      "source_locator": "ECCC TR25-033, PDF p. 11, Corollary 17",
+      "source_object": "acyclic and convergent cyclic discrete intersection complexity for the same target A and generator family B",
+      "quantifiers": "for every A subset Gamma and every generator family B",
+      "assumptions": [
+        "the cyclic syntactic sequence is evaluated by the monotone update rule of Section 2.5"
+      ],
+      "conclusion": "D_cyclic_intersection(A|B) <= D_intersection(A|B) <= D_cyclic_intersection(A|B)^2",
+      "t_dependence": "if a cyclic construction uses s intersections then unfolding gives an acyclic construction with at most s^2 intersections; this row alone does not bind s to an arbitrary cover size m",
+      "restriction_class": "cyclic versus acyclic discrete intersection complexity",
+      "dependencies": [
+        "Lemma 16"
+      ],
+      "non_guarantees": [
+        "does not by itself identify cyclic complexity with rho",
+        "does not prove an explicit-target lower bound"
+      ],
+      "shared_cover_fusion_interface": "CYCLIC_ACYCLIC_BRIDGE_USED_BY_T30",
+      "discriminator_status": "NO_STANDALONE_COVER_SIZE_BOUND",
+      "difference_witness": {
+        "source_to_target_map": "compose with Theorem 30 only after matching the cyclic model to Definition-21 cover complexity",
+        "preserved_conditions": [
+          "same A and B",
+          "same intersection-operation count"
+        ],
+        "changed_or_broken_conditions": [
+          "no Lambda or semi-filter object occurs in Corollary 17 itself"
+        ],
+        "implication_direction": "D_cyclic <= D <= D_cyclic^2",
+        "match_assessment": "NO_MATCH",
+        "rationale": "The row is a model bridge, but without Theorem 30 it is not a function-of-m theorem for the cover witness."
+      }
+    },
+    {
+      "row_id": "ECCC-D18-D21",
+      "source_locator": "ECCC TR25-033, PDF pp. 12-13, Definitions 18-21",
+      "source_object": "nonempty proper upward-closed semi-filters over U=A^c; above-w generator obligations; preservation by one common integral pair family Lambda; cover complexity rho(A,B)",
+      "quantifiers": "for non-trivial A subset Gamma and nonempty B subset P(Gamma), Lambda covers exactly when no pair (a,F) exists with a in A and F a semi-filter above a that preserves every pair in Lambda",
+      "assumptions": [
+        "A and A^c nonempty",
+        "B nonempty",
+        "semi-filter upward-closed and excludes emptyset",
+        "one common integral Lambda"
+      ],
+      "conclusion": "defines the exact shared-cover object and set-cover graph; supplies no additional universal noncircular coordinate bound",
+      "t_dependence": "r=rho(A,B) is the minimum m=|Lambda| over legal shared covers",
+      "restriction_class": "full noncanonical semi-filter obligations and unrestricted pairs of subsets of U",
+      "dependencies": [],
+      "non_guarantees": [
+        "not a lower bound for an explicit target",
+        "not a new shared-system invariant"
+      ],
+      "shared_cover_fusion_interface": "EXACT_OBJECT_MATCH",
+      "discriminator_status": "OBJECT_DEFINITION_ONLY",
+      "difference_witness": {
+        "source_to_target_map": "identity map from the frozen target object to Definition 21",
+        "preserved_conditions": [
+          "integrality",
+          "one common pair family",
+          "all full semi-filter obligations"
+        ],
+        "changed_or_broken_conditions": [
+          "this is a definition rather than a quantitative theorem"
+        ],
+        "implication_direction": "r <= m for every legal cover Lambda",
+        "match_assessment": "NO_MATCH",
+        "rationale": "Definition 21 aligns the object and yields r<=m, but does not alone bound another source-native coordinate."
+      }
+    },
+    {
+      "row_id": "ECCC-T22",
+      "source_locator": "ECCC TR25-033, PDF pp. 14-15, Theorem 22 and Claim 23",
+      "source_object": "acyclic extended set construction with k intersection operations and its extracted relativized intersection-pair family",
+      "quantifiers": "for every non-trivial A and nonempty B, rho(A,B) <= D_intersection(A|B)",
+      "assumptions": [
+        "A is non-trivial",
+        "B is nonempty"
+      ],
+      "conclusion": "rho(A,B) <= D_intersection(A|B); the proof extracts the intersection-operation pairs from a legal acyclic construction and uses Claim 23",
+      "t_dependence": "a construction with k intersections yields a family of at most k pairs, so r<=k",
+      "restriction_class": "exact Definition-21 full cover object",
+      "dependencies": [
+        "Definitions 18-21"
+      ],
+      "non_guarantees": [
+        "does not identify another source-native shared-system coordinate",
+        "does not prove a lower bound on rho"
+      ],
+      "shared_cover_fusion_interface": "EXACT_LOWER_BOUND_INTERFACE",
+      "discriminator_status": "KNOWN_ROOT_INTERFACE_NOT_NEW_COORDINATE",
+      "difference_witness": {
+        "source_to_target_map": "extract each intersection operation as one relativized pair over U=A^c",
+        "preserved_conditions": [
+          "same full Definition-21 semi-filters",
+          "integral pairs",
+          "one family extracted from the whole construction"
+        ],
+        "changed_or_broken_conditions": [
+          "direction starts from construction cost k and upper-bounds r; it does not upper-bound a coordinate from arbitrary m"
+        ],
+        "implication_direction": "r <= D_intersection",
+        "match_assessment": "NO_MATCH",
+        "rationale": "The direction is a fusion lower-bound interface, not the requested universal coordinate upper bound from m."
+      }
+    },
+    {
+      "row_id": "ECCC-T24-C27-EQ6-EQ8",
+      "source_locator": "ECCC TR25-033, PDF pp. 15-17, Theorem 24, Claims 26-27 and equations (6)-(8)",
+      "source_object": "one fixed t-pair cover Lambda and the minimal above-w upward/Lambda-preserving closure recurrence",
+      "quantifiers": "for every non-trivial A and nonempty B, with r=rho(A,B), D_intersection(A|B)<=r^2; consequently every legal m-pair cover gives D_intersection(A|B)<=m^2",
+      "assumptions": [
+        "A is non-trivial",
+        "B is nonempty"
+      ],
+      "conclusion": "an optimal r-pair shared system reconstructs A in r+1 stages using at most r^2 intersections; any legal m-pair cover gives the weaker bound at most m^2",
+      "t_dependence": "D_intersection(A|B) <= r^2 <= m^2 because r<=m; propagation stages <=r+1 for an optimal witness or <=m+1 for an arbitrary legal witness",
+      "restriction_class": "exact full integral pair cover; syntactic labels may distinguish equal underlying sets during construction",
+      "dependencies": [
+        "Definitions 18-21",
+        "Claims 26-27"
+      ],
+      "non_guarantees": [
+        "known reconstruction upper bound is not a lower-bound certificate",
+        "does not prevent rule multiplexing",
+        "does not give an explicit target description lower bound"
+      ],
+      "shared_cover_fusion_interface": "EXACT_RECONSTRUCTION_INTERFACE",
+      "discriminator_status": "EXACT_LITERAL_R1_MATCH_KNOWN_RECONSTRUCTION_BOUND",
+      "difference_witness": {
+        "source_to_target_map": "use the exact legal Lambda as the preservation-rule family in Claims 26-27 and equations (6)-(8)",
+        "preserved_conditions": [
+          "integrality",
+          "one common shared family",
+          "full noncanonical semi-filter obligations",
+          "multiplexed pair reuse"
+        ],
+        "changed_or_broken_conditions": [
+          "the coordinate is acyclic construction cost, not a new lower-bound invariant; this non-guarantee was not an R1 exclusion"
+        ],
+        "implication_direction": "D_intersection <= r^2 <= m^2",
+        "match_assessment": "MATCH",
+        "rationale": "This is an already-stated universal function-of-m bound satisfying the literal frozen R1 predicate."
+      }
+    },
+    {
+      "row_id": "ECCC-COR28",
+      "source_locator": "ECCC TR25-033, PDF p. 17, Corollary 28",
+      "source_object": "total acyclic union/intersection construction complexity derived from intersection complexity t and generator family B",
+      "quantifiers": "for every A subset Gamma and nonempty B, if D_intersection(A|B)=t then D_union(A|B) <= D(A|B) <= O(t+|B|)^3",
+      "assumptions": [
+        "legal source construction model",
+        "empty/trivial boundary cases treated separately"
+      ],
+      "conclusion": "bounds total operations with an explicit generator-count dependence",
+      "t_dependence": "O(t+|B|)^3, not a function of t alone when |B| varies",
+      "restriction_class": "acyclic discrete complexity",
+      "dependencies": [
+        "Theorems 22 and 24"
+      ],
+      "non_guarantees": [
+        "not a t-only bound for varying B",
+        "not a lower bound"
+      ],
+      "shared_cover_fusion_interface": "DERIVED_CONSTRUCTION_INTERFACE",
+      "discriminator_status": "GENERATOR_DEPENDENT_NOT_T_ONLY",
+      "difference_witness": {
+        "source_to_target_map": "combine Theorems 22 and 24 with operation counting in the source construction",
+        "preserved_conditions": [
+          "same A and B",
+          "same acyclic construction model"
+        ],
+        "changed_or_broken_conditions": [
+          "bound retains |B| and uses t=D_intersection rather than arbitrary cover size m"
+        ],
+        "implication_direction": "D_union <= D <= O(D_intersection+|B|)^3",
+        "match_assessment": "NO_MATCH",
+        "rationale": "The generator-count dependence prevents a universal function of m alone when B varies."
+      }
+    },
+    {
+      "row_id": "ECCC-T30",
+      "source_locator": "ECCC TR25-033, PDF pp. 17-19, Theorem 30 and Claims 31-34",
+      "source_object": "convergent cyclic syntactic sequence and exact Definition-21 cover complexity",
+      "quantifiers": "for every non-trivial A and nonempty B, D_cyclic_intersection(A|B)=r=rho(A,B); hence D_cyclic_intersection(A|B)<=m for every legal m-pair cover",
+      "assumptions": [
+        "finite cyclic syntactic sequence converges under source evaluation",
+        "same set-generator model"
+      ],
+      "conclusion": "exactly identifies the optimum cover parameter r with cyclic intersection complexity",
+      "t_dependence": "D_cyclic_intersection(A|B)=r<=m; equality to m holds only when Lambda is optimal",
+      "restriction_class": "cyclic discrete complexity with unrestricted Definition-21 semi-filters",
+      "dependencies": [
+        "Definition 21",
+        "cyclic evaluation Lemma 16"
+      ],
+      "non_guarantees": [
+        "root-equivalent identity is circular for inventing a distinct lower-bound coordinate",
+        "proof truth does not make the result novel in this application"
+      ],
+      "shared_cover_fusion_interface": "EXACT_CYCLIC_IDENTITY",
+      "discriminator_status": "EXACT_LITERAL_R1_MATCH_ROOT_EQUIVALENT",
+      "difference_witness": {
+        "source_to_target_map": "map an optimal cover to a cyclic construction and a converged cyclic construction back to one cover family",
+        "preserved_conditions": [
+          "same A and B",
+          "full Definition-21 semi-filters",
+          "integral intersection pairs",
+          "shared cyclic reuse"
+        ],
+        "changed_or_broken_conditions": [
+          "the coordinate equals the root optimum, so mere renaming gives no distinct certificate; distinctness was not an R1 condition"
+        ],
+        "implication_direction": "D_cyclic_intersection = r <= m",
+        "match_assessment": "MATCH",
+        "rationale": "This is a second literal universal function-of-m theorem, though it adds no independent lower-bound coordinate."
+      }
+    },
+    {
+      "row_id": "ECCC-COR35",
+      "source_locator": "ECCC TR25-033, PDF p. 19, Corollary 35 and preceding paragraph",
+      "source_object": "monotone cyclic Boolean circuits for 3-clique under the monotone Boolean basis",
+      "quantifiers": "for n-vertex input graphs, every monotone cyclic Boolean circuit computing 3-clique",
+      "assumptions": [
+        "Theorem 30",
+        "the cover lower bound attributed to Karchmer 1993"
+      ],
+      "conclusion": "requires Omega(n^3/(log n)^4) fan-in-two AND gates",
+      "t_dependence": "target-specific asymptotic lower bound, not a universal function of arbitrary cover-witness size m",
+      "restriction_class": "monotone cyclic circuits and the 3-clique target",
+      "dependencies": [
+        "Theorem 30",
+        "Karchmer 1993 primary theorem content unavailable in R1"
+      ],
+      "non_guarantees": [
+        "does not apply to unrestricted nonmonotone circuits",
+        "ancestry theorem statement cannot be independently checked from primary bytes in R1"
+      ],
+      "shared_cover_fusion_interface": "TARGET_SPECIFIC_CYCLIC_LOWER_BOUND_WITH_BLOCKED_ANCESTRY",
+      "discriminator_status": "NO_UNIVERSAL_M_BOUND_NEWLY_ADDED",
+      "difference_witness": {
+        "source_to_target_map": "transfer Karchmer cover lower bound through D_cyclic_intersection=rho",
+        "preserved_conditions": [
+          "monotone basis",
+          "same cover optimum under Theorem 30"
+        ],
+        "changed_or_broken_conditions": [
+          "fixed 3-clique target",
+          "monotone-only model",
+          "Kar93 primary theorem content unavailable"
+        ],
+        "implication_direction": "Kar93 rho lower bound => cyclic AND-gate lower bound",
+        "match_assessment": "NO_MATCH",
+        "rationale": "This is a target-specific lower bound and does not state a new universal coordinate bound from m."
+      }
+    },
+    {
+      "row_id": "ECCC-P36-T37",
+      "source_locator": "ECCC TR25-033, PDF pp. 19-20, Proposition 36 and Theorem 37",
+      "source_object": "random bipartite G subset [N]x[N] under row/column generators; acyclic intersection complexity and cover complexity",
+      "quantifiers": "asymptotically almost surely over random G, rho(G,G_N,N)=Theta(N)",
+      "assumptions": [
+        "G is sampled as a random bipartite graph",
+        "B=G_{N,N} is the fixed 2N row/column generator family"
+      ],
+      "conclusion": "asymptotically almost surely D_intersection(G|G_{N,N})=Theta(N) and rho(G,G_{N,N})=Theta(N); Theorem 37 uses an O(m(|B|+m))-bit incidence description plus random-target incompressibility",
+      "t_dependence": "description length O(t(|B|+t))",
+      "restriction_class": "random graph specialization; nonconstructive asymptotic statement",
+      "dependencies": [
+        "Lemma 9 and Proposition 36 counting bound for the first statement",
+        "Theorem 24 equations (6)-(8) and Kolmogorov/counting incompressibility for Theorem 37"
+      ],
+      "non_guarantees": [
+        "does not transfer to an explicit target from ordinary short description alone",
+        "does not supply target-side incompressibility for an NP language",
+        "does not remove |B| dependence"
+      ],
+      "shared_cover_fusion_interface": "EXACT_FOR_RANDOM_GRAPH_SPECIALIZATION",
+      "discriminator_status": "TARGET_SPECIFIC_RANDOM_BOUND_ONLY",
+      "difference_witness": {
+        "source_to_target_map": "specialize the exact cover object to random bipartite graphs and row/column generators",
+        "preserved_conditions": [
+          "integral shared cover",
+          "full semi-filter obligations",
+          "fixed common Lambda"
+        ],
+        "changed_or_broken_conditions": [
+          "almost-sure random target rather than universal A",
+          "independent random incompressibility is essential"
+        ],
+        "implication_direction": "description length O(m(|B|+m)) plus Omega(N^2) target lower bound => m=Omega(N)",
+        "match_assessment": "NO_MATCH",
+        "rationale": "It is a target-specific application, not a universal new coordinate bound for all legal covers."
+      }
+    },
+    {
+      "row_id": "ECCC-P38-L39",
+      "source_locator": "ECCC TR25-033, PDF pp. 20-21, Proposition 38 and Lemma 39",
+      "source_object": "bipartite graph cover under row/column generators and Boolean-function cover under the standard Boolean basis",
+      "quantifiers": "for every non-trivial graph G, rho(G,G_N,N) <= D_intersection(f_G^-1(1)|B_2n) and rho(G,G_N,N) <= rho(f_G^-1(1),B_2n)",
+      "assumptions": [
+        "N=2^n encoding",
+        "bijection phi",
+        "upward closure transfers above-edge obligations"
+      ],
+      "conclusion": "gives a one-way model-aligned fusion transference from Boolean function cover to graph cover",
+      "t_dependence": "monotone inequality; no new internal t-coordinate",
+      "restriction_class": "graph-to-Boolean encoding with different above relations checked explicitly",
+      "dependencies": [
+        "Theorem 22",
+        "Lemma 13"
+      ],
+      "non_guarantees": [
+        "does not reverse the inequality",
+        "does not construct an explicit hard graph or language"
+      ],
+      "shared_cover_fusion_interface": "EXACT_ONE_WAY_TRANSFERENCE",
+      "discriminator_status": "ROOT_TRANSFER_NOT_NEW_COORDINATE",
+      "difference_witness": {
+        "source_to_target_map": "use phi(u,v)=binary(u)binary(v) and transport subsets/pairs along the bijection",
+        "preserved_conditions": [
+          "integrality",
+          "upward closure",
+          "pair preservation",
+          "above-edge obligations map to above-input obligations"
+        ],
+        "changed_or_broken_conditions": [
+          "the source proves graph cover <= Boolean cover only; no reverse inequality is supplied"
+        ],
+        "implication_direction": "rho(graph,row-column) <= rho(Boolean,literals)",
+        "match_assessment": "NO_MATCH",
+        "rationale": "The exact one-way transference is model-aligned but is not a universal function-of-m coordinate theorem and cannot be reversed."
+      }
+    },
+    {
+      "row_id": "ECCC-P40-C41-L42-L43",
+      "source_locator": "ECCC TR25-033, PDF pp. 21-22, Proposition 40, Claim 41 and Lemmas 42-43",
+      "source_object": "G_NEQ under row/column generators and its canonical semi-filter subfamily",
+      "quantifiers": "for N=2^n, rho_can(G_NEQ)=rho(G_NEQ)=D_intersection(G_NEQ)=n",
+      "assumptions": [
+        "target exactly G_NEQ",
+        "canonical obligations generated by unequal pairs",
+        "normalization licensed by Claim 41 and Lemmas 42-43"
+      ],
+      "conclusion": "for G_NEQ the canonical, full-cover, and acyclic intersection optima all equal n=log N; the source lower bound normalizes covering pairs to disjoint complementary partitions and recursively restricts row/column spans",
+      "t_dependence": "t=n=log N",
+      "restriction_class": "canonical first-order obligation family inside full cover model",
+      "dependencies": [
+        "Claim 41",
+        "Lemmas 42-43",
+        "Lemma 13",
+        "Theorem 22"
+      ],
+      "non_guarantees": [
+        "the source proof does not state a joint-signature argument; joint signatures are only a derived equivalent representation",
+        "normalization does not extend to arbitrary full semi-filters",
+        "does not yield superlogarithmic complexity"
+      ],
+      "shared_cover_fusion_interface": "EXACT_CANONICAL_CALIBRATION_ONLY",
+      "discriminator_status": "KNOWN_CANONICAL_LOG_CALIBRATION",
+      "difference_witness": {
+        "source_to_target_map": "restrict full obligations to canonical semi-filters Fe and normalize each covering pair using Claim 41 and Lemmas 42-43",
+        "preserved_conditions": [
+          "one common integral family",
+          "canonical obligations are genuine full-model obligations",
+          "row/column generator structure"
+        ],
+        "changed_or_broken_conditions": [
+          "normalization is proved only for canonical G_NEQ obligations",
+          "arbitrary noncanonical semi-filters need not normalize"
+        ],
+        "implication_direction": "canonical lower bound <= rho <= D_intersection <= n",
+        "match_assessment": "NO_MATCH",
+        "rationale": "The exact logarithmic calibration is target-specific and warns that canonical normalization cannot be generalized silently."
+      }
+    },
+    {
+      "row_id": "ECCC-D21-WIG95-RESTRICTION",
+      "source_locator": "ECCC TR25-033, PDF p. 13, Definition-21 discussion citing Wigderson 1995",
+      "source_object": "alternative cover notions and branching-model pair restrictions",
+      "quantifiers": "source discussion states that requiring at least one set in every pair to be generator-intersection-derived characterizes branching models",
+      "assumptions": [
+        "restricted pair class",
+        "generator-derived operand condition"
+      ],
+      "conclusion": "restriction class materially changes the characterized computational model",
+      "t_dependence": "not stated in the inspected ECCC discussion",
+      "restriction_class": "branching-model restriction, not unrestricted Definition-21 pairs",
+      "dependencies": [
+        "Wigderson 1995 primary source not inspected"
+      ],
+      "non_guarantees": [
+        "cannot transfer a restricted-pair theorem to the unrestricted full cover object",
+        "secondary statement is not a primary-source theorem inventory"
+      ],
+      "shared_cover_fusion_interface": "RESTRICTION_MISMATCH_WARNING",
+      "discriminator_status": "PRIMARY_SOURCE_REQUIRED_SCOPE_GAP",
+      "difference_witness": {
+        "source_to_target_map": "compare unrestricted Definition-21 pairs with the cited restriction that at least one operand is generator-intersection-derived",
+        "preserved_conditions": [
+          "pair preservation semantics",
+          "above-obligation concept"
+        ],
+        "changed_or_broken_conditions": [
+          "legal pair class is strictly restricted",
+          "characterized computational model changes to branching models",
+          "Wig95 primary theorem unavailable"
+        ],
+        "implication_direction": "restricted cover theorem -/-> unrestricted full cover theorem without translation",
+        "match_assessment": "SCOPE_WARNING",
+        "rationale": "The ECCC discussion is a valid restriction warning but not primary-source authority for a theorem transfer."
+      }
+    },
+    {
+      "row_id": "ECCC-D44-D46-T45",
+      "source_locator": "ECCC TR25-033, PDF pp. 22-23, Definitions 44 and 46 and Theorem 45",
+      "source_object": "semi-ultra-filter cover complexity and conondeterministic/nondeterministic Boolean circuit complexity",
+      "quantifiers": "for every Boolean function f, there is a constant c>=1 with rho_ultra(f,B_n) <= conondet-size_intersection(f)=nondet-size_union(not f) <= c*rho_ultra(f,B_n)",
+      "assumptions": [
+        "obligation family is restricted from all semi-filters to semi-ultra-filters",
+        "standard Boolean generator family B_n"
+      ],
+      "conclusion": "constant-factor characterization of conondeterministic complexity, attributed to Karchmer 1993",
+      "t_dependence": "constant-factor in restricted optimum rho_ultra, not a bound from unrestricted cover-witness size m",
+      "restriction_class": "semi-ultra-filter obligations only",
+      "dependencies": [
+        "Karchmer 1993 primary theorem content unavailable in R1"
+      ],
+      "non_guarantees": [
+        "rho_ultra<=rho does not give a reverse transfer to full cover complexity",
+        "Kar93 primary theorem statement is not independently checked in R1"
+      ],
+      "shared_cover_fusion_interface": "RESTRICTED_OBLIGATION_CHARACTERIZATION",
+      "discriminator_status": "RESTRICTION_MISMATCH_PRIMARY_ANCESTRY_BLOCKED",
+      "difference_witness": {
+        "source_to_target_map": "replace all above-A semi-filters by the semi-ultra-filter subclass",
+        "preserved_conditions": [
+          "same above relation",
+          "same pair-cover operation"
+        ],
+        "changed_or_broken_conditions": [
+          "obligation class is smaller",
+          "complexity target is conondeterministic",
+          "only constant-factor characterization"
+        ],
+        "implication_direction": "rho_ultra <= conondet complexity <= c*rho_ultra",
+        "match_assessment": "SCOPE_WARNING",
+        "rationale": "A theorem for the restricted optimum cannot be imported as a full-semi-filter theorem without an assumption-preserving bridge."
+      }
+    },
+    {
+      "row_id": "ECCC-P47-L48-C49",
+      "source_locator": "ECCC TR25-033, PDF p. 23, Proposition 47, Lemma 48 and Corollary 49",
+      "source_object": "canonical G_NEQ obligations, semi-ultra-filter graph cover, Boolean-function semi-ultra-filter cover, and nondeterministic EQ/NEQ complexity",
+      "quantifiers": "for G_NEQ and N=2^n, the stated chain of inequalities collapses to n",
+      "assumptions": [
+        "target is G_NEQ/NEQ/EQ",
+        "semi-ultra-filter restriction",
+        "graph-to-Boolean bijection phi"
+      ],
+      "conclusion": "n <= rho_can(G_NEQ) <= rho_ultra(G_NEQ) <= rho_ultra(NEQ) <= ... <= n, giving exact nondeterministic union complexity n",
+      "t_dependence": "exact target-specific logarithmic calibration",
+      "restriction_class": "canonical plus semi-ultra-filter obligations and nondeterministic complexity",
+      "dependencies": [
+        "Proposition 40",
+        "Theorem 45",
+        "Lemma 48"
+      ],
+      "non_guarantees": [
+        "does not characterize unrestricted full-semi-filter rho for arbitrary targets",
+        "does not give a superlogarithmic bound"
+      ],
+      "shared_cover_fusion_interface": "RESTRICTED_TARGET_SPECIFIC_TRANSFERENCE",
+      "discriminator_status": "NO_UNIVERSAL_FULL_COVER_M_BOUND",
+      "difference_witness": {
+        "source_to_target_map": "transport semi-ultra-filters through the graph/Boolean bijection and specialize to G_NEQ",
+        "preserved_conditions": [
+          "integrality",
+          "bijection",
+          "restricted obligation preservation"
+        ],
+        "changed_or_broken_conditions": [
+          "fixed equality/inequality target",
+          "semi-ultra-filter subclass",
+          "nondeterministic circuit target"
+        ],
+        "implication_direction": "chain of target-specific restricted inequalities",
+        "match_assessment": "NO_MATCH",
+        "rationale": "The chain is exact in its specialization but does not supply a universal full-cover coordinate bound from m."
+      }
+    },
+    {
+      "row_id": "ECCC-INTRO-NM95-SCOPE",
+      "source_locator": "ECCC TR25-033, PDF p. 4 and footnote 3 on p. 5; Section 3.4 introduction",
+      "source_object": "comparison between the ECCC monotone semi-filter/intersection-complexity formulation and Nakayama-Maruoka 1995 generalized approximation/legitimate-model formulation",
+      "quantifiers": "source authors describe scope differences and a constant-factor ancestry result rather than state a transferable exact theorem from NM95",
+      "assumptions": [
+        "comparison is the ECCC authors' characterization of the cited ancestry; NM95 primary bytes were not inspected"
+      ],
+      "conclusion": "NM95 uses more general functionals, Boolean circuit complexity, legitimate models and a constant-factor characterization; its formulation is stated not to be automatically consistent with the monotone functionals used for rho here",
+      "t_dependence": "no primary-source-checked t dependence in R1",
+      "restriction_class": "ancestry scope comparison only",
+      "dependencies": [
+        "Nakayama-Maruoka 1995 primary theorem content unavailable in R1"
+      ],
+      "non_guarantees": [
+        "secondary scope discussion is not a primary theorem inventory",
+        "cannot infer the exact NM95 hypotheses or constants"
+      ],
+      "shared_cover_fusion_interface": "ANCESTRY_MODEL_MISMATCH_WARNING",
+      "discriminator_status": "PRIMARY_SOURCE_REQUIRED_FOR_TRANSFER",
+      "difference_witness": {
+        "source_to_target_map": "compare the named mathematical objects and complexity targets at the ECCC authors' stated interface",
+        "preserved_conditions": [
+          "fusion/approximation ancestry relation"
+        ],
+        "changed_or_broken_conditions": [
+          "functional class differs",
+          "Boolean versus intersection complexity differs",
+          "legitimate-model formulation differs",
+          "constant-factor versus exact characterization differs"
+        ],
+        "implication_direction": "NM95 result -/-> exact ECCC rho theorem without a checked translation",
+        "match_assessment": "SCOPE_WARNING",
+        "rationale": "The modern source itself warns that the ancestry formulation is not automatically consistent with the current monotone semi-filter object."
+      }
+    },
+    {
+      "row_id": "RAZ89-C25-T26-T27",
+      "source_locator": "Razborov 1989 primary PDF, p. 170 Claim 2.5 and Theorems 2.6-2.7; proof on pp. 175-176",
+      "source_object": "an f-dependent legitimate approximation model M(S0), monotone functionals over subsets of U=f^-1(0), and the minimum number rho(f,M(S0)) of pairs covering the selected functional family S0",
+      "quantifiers": "for Boolean f on n0 variables with L(f)>=omega(n0^3), the maximal f-dependent model M_max satisfies rho>=Omega(L(f)^(1/3)); some selected S0 also satisfies that lower bound with |S0|<=exp(O(L(f)|U|))",
+      "assumptions": [
+        "the legitimate model and functional family are constructed from the target f",
+        "L(f)>=omega(n0^3)",
+        "the cover relation is Claim 2.5 over the selected monotone functionals"
+      ],
+      "conclusion": "a t-pair cover together with n0 literal pairs generates a closure set of size O(t+n0), yielding a circuit of size O((t+n0)^3); under the hypothesis t=omega(n0), this gives O(t^3) and hence rho>=Omega(L(f)^(1/3))",
+      "t_dependence": "model-specific polynomial reconstruction L(f)=O((t+n0)^3), simplified to O(t^3) only after using the lower-growth hypothesis",
+      "restriction_class": "target-dependent legitimate approximation models and selected functional families, not the exact unrestricted Definition-21 semi-filter class",
+      "dependencies": [
+        "Razborov Claim 2.5",
+        "target-dependent construction of M(S0)",
+        "Theorem 2.6 proof"
+      ],
+      "non_guarantees": [
+        "does not state the reconstruction theorem for every arbitrary Cavalar-Oliveira full semi-filter cover",
+        "does not supply a target-independent extra shared-system coordinate",
+        "Theorem 2.7 is nonconstructive and states multiplication L(f)|U|, not division"
+      ],
+      "shared_cover_fusion_interface": "ANCESTRAL_POLYNOMIAL_RECONSTRUCTION_MODEL_TRANSLATION_REQUIRED",
+      "discriminator_status": "PRIMARY_SOURCE_INSPECTED_SCOPE_MISMATCH",
+      "difference_witness": {
+        "source_to_target_map": "identify pair-cover size t in the legitimate model with a possible cover resource, but no exact equivalence to Definition-21 full semi-filters is proved in R1",
+        "preserved_conditions": [
+          "integral pair cover",
+          "one family covers a registered functional family",
+          "polynomial reconstruction from cover size"
+        ],
+        "changed_or_broken_conditions": [
+          "functional family is selected and target-dependent",
+          "model includes target-defined inputs and relevance conditions",
+          "literal-pair overhead n0 enters before asymptotic simplification"
+        ],
+        "implication_direction": "rho lower bound Omega(L^(1/3)) via L=O((t+n0)^3) in M(S0)",
+        "match_assessment": "SCOPE_WARNING",
+        "rationale": "The theorem is a genuine ancestral reconstruction/lower-bound result, but the exact assumptions are not translated to every legal full semi-filter cover in the current object."
+      }
+    },
+    {
+      "row_id": "WIG93-META-THEOREM-CONVERSE",
+      "source_locator": "Wigderson 1993 primary PDF, Sections 2.3 and 4.3, Meta-Theorem, Meta-Converse and model/cover table",
+      "source_object": "for each paired legitimate model Delta and cover class Gamma, rho_Gamma(f) is the minimum number of gate triples covering the relevant target set Omega_f and s_Delta(f) is shortest operator-program size",
+      "quantifiers": "for every listed paired model/cover row and every f, rho_Gamma(f)<=s_Delta(f)<=rho_Gamma(f)^C, where C is independent of n and C=4 is valid in all rows; some rows have a linear-strength converse",
+      "assumptions": [
+        "the cover kind and input definition are exactly the row paired with the legitimate model",
+        "the target relevance set Omega_f and legal gate triples use the source definitions"
+      ],
+      "conclusion": "cover size lower-bounds operator-program size and, within each registered paired model, program size is polynomially upper-bounded by cover size",
+      "t_dependence": "s_Delta(f)<=t^C with C<=4 for t=rho_Gamma(f) in a matched source row",
+      "restriction_class": "model-paired Filters/SDF/Affine functionals, weak/strong input definitions, and cover kinds 2^U, X union Xbar, or X",
+      "dependencies": [
+        "source-specific legitimate-model and cover definitions",
+        "model/cover pairing in Section 4.3"
+      ],
+      "non_guarantees": [
+        "not one theorem over every arbitrary Definition-21 full semi-filter system",
+        "does not identify an additional coordinate beyond paired cover/program size",
+        "row restrictions cannot be discarded when transferring the polynomial converse"
+      ],
+      "shared_cover_fusion_interface": "ANCESTRAL_MODEL_PAIRED_POLYNOMIAL_CONVERSE",
+      "discriminator_status": "PRIMARY_SOURCE_INSPECTED_TRANSLATION_NOT_ESTABLISHED",
+      "difference_witness": {
+        "source_to_target_map": "map cover triples and operator programs only after selecting an exact Wigderson model/cover row",
+        "preserved_conditions": [
+          "integral cover count",
+          "shared cover resource",
+          "polynomial reconstruction within each row"
+        ],
+        "changed_or_broken_conditions": [
+          "functional class varies by row",
+          "input definition varies weak/strong",
+          "cover universe varies",
+          "no proved identity with unrestricted Definition-21 semi-filters"
+        ],
+        "implication_direction": "rho_Gamma(f) <= s_Delta(f) <= rho_Gamma(f)^C with C<=4",
+        "match_assessment": "SCOPE_WARNING",
+        "rationale": "The universal polynomial converse is exact only inside each registered paired model; R1 has no assumption-preserving translation to the full current object."
+      }
+    }
+  ],
+  "discriminator_evaluation": {
+    "conditions": [
+      "already-stated theorem concerns the exact shared integral m-pair cover/cyclic system or has an explicit assumption-preserving translation",
+      "universal function-of-m bound on a source-defined shared-system coordinate",
+      "integrality preserved",
+      "common-resource multiplexing preserved",
+      "full noncanonical semi-filter obligations preserved",
+      "cheap-target controls survived"
+    ],
+    "modern_source_findings": [
+      "Theorem 24 is a literal MATCH: D_intersection(A|B)<=rho(A,B)^2<=m^2 for every legal m-pair full cover",
+      "Theorem 30 is a literal MATCH: D_cyclic_intersection(A|B)=rho(A,B)<=m for every legal m-pair full cover",
+      "Razborov 1989 and Wigderson 1993 primary bytes add polynomial reconstruction/converse results in target-dependent or model-paired cover settings, but R1 establishes no exact translation from those restricted objects to every Definition-21 full semi-filter cover",
+      "these bounds are already known and do not establish a new, distinct, or explicit-target lower-bound coordinate",
+      "Karchmer 1993 and Nakayama-Maruoka 1995 remain uninspected, so R1 cannot say whether a stronger or different bound exists"
+    ],
+    "required_primary_sources_fully_inspected": false,
+    "blocked_source_ids": [
+      "KARCHMER-1993",
+      "NAKAYAMA-MARUOKA-1995"
+    ],
+    "provisional_match_status": "EXACT_MATCH_ON_INSPECTED_PRIMARY_SOURCE_WITH_ANCESTRY_COMPLETENESS_UNRESOLVED",
+    "final_verdict": "MATCH_FOUND_ECCC_T24_AND_T30",
+    "outcome_branch": "SUCCESS",
+    "candidate_generation_allowed": false,
+    "candidate_generated": false
+  },
+  "mathematical_experience": [
+    {
+      "lesson_id": "PNP-SOURCE-T24-RECONSTRUCTION",
+      "kind": "SCOPED_SUCCESS_KNOWLEDGE",
+      "lesson": "Every legal shared integral m-pair full cover yields an acyclic construction with at most m^2 intersections; this is an already-known construction upper bound, not an explicit-target lower-bound certificate.",
+      "authority": "PRIMARY_SOURCE_STATEMENT_INSPECTED",
+      "evidence_rows": [
+        "ECCC-T24-C27-EQ6-EQ8"
+      ]
+    },
+    {
+      "lesson_id": "PNP-SOURCE-T30-CIRCULARITY",
+      "kind": "ROUTE_PRUNING",
+      "lesson": "The cyclic optimum equals r=rho and is at most arbitrary witness size m; mere renaming therefore creates no distinct certificate, though a substantively new proof in the cyclic representation is not ruled out.",
+      "authority": "PRIMARY_SOURCE_STATEMENT_INSPECTED",
+      "evidence_rows": [
+        "ECCC-T30"
+      ]
+    },
+    {
+      "lesson_id": "PNP-SOURCE-T37-TRANSFER",
+      "kind": "METHOD_TRANSFER_BOUNDARY",
+      "lesson": "The source encoding bound becomes a lower bound only after an independently justified target description lower bound; random incompressibility does not transfer to an explicit target by analogy.",
+      "authority": "PRIMARY_SOURCE_STATEMENT_INSPECTED",
+      "evidence_rows": [
+        "ECCC-P36-T37"
+      ]
+    },
+    {
+      "lesson_id": "PNP-RESTRICTION-CLASS-NONTRANSFER",
+      "kind": "TRANSFER_WARNING",
+      "lesson": "Fusion and cover theorems with ultrafilter, linear-function, generator-derived-operand, canonical-only, or other restricted obligation classes cannot be imported into the unrestricted full-semi-filter object without an explicit assumption-preserving translation.",
+      "authority": "SOURCE_DISCUSSION_INSPECTED_PRIMARY_ANCESTRY_BLOCKED",
+      "evidence_rows": [
+        "ECCC-D18-D21",
+        "ECCC-D21-WIG95-RESTRICTION",
+        "ECCC-D44-D46-T45",
+        "ECCC-P47-L48-C49"
+      ]
+    },
+    {
+      "lesson_id": "PNP-GRAPH-BOOLEAN-ONE-WAY",
+      "kind": "METHOD_TRANSFER_BOUNDARY",
+      "lesson": "The inspected graph-to-Boolean fusion map preserves the needed above and upward-closure relations only in the proved direction; the inequality cannot be silently reversed.",
+      "authority": "PRIMARY_SOURCE_STATEMENT_INSPECTED",
+      "evidence_rows": [
+        "ECCC-P38-L39"
+      ]
+    },
+    {
+      "lesson_id": "PNP-CANONICAL-NORMALIZATION-SCOPE",
+      "kind": "TRANSFER_WARNING",
+      "lesson": "The G_NEQ lower bound normalizes canonical covering pairs through a target-specific recursive row/column-span proof; it does not authorize normalization of arbitrary full noncanonical semi-filter obligations.",
+      "authority": "PRIMARY_SOURCE_STATEMENT_INSPECTED",
+      "evidence_rows": [
+        "ECCC-P40-C41-L42-L43"
+      ]
+    },
+    {
+      "lesson_id": "PNP-FROZEN-DISCRIMINATOR-LITERALITY",
+      "kind": "SCOPED_SUCCESS_KNOWLEDGE",
+      "lesson": "Under the exact frozen R1 predicate, known T24 and T30 bounds count as MATCH; novelty, distinctness, lower-bound polarity, or explicit-target usefulness cannot be inserted after result access.",
+      "authority": "PRIMARY_SOURCE_STATEMENT_INSPECTED",
+      "evidence_rows": [
+        "ECCC-T24-C27-EQ6-EQ8",
+        "ECCC-T30"
+      ]
+    },
+    {
+      "lesson_id": "PNP-RAZ89-TARGET-DEPENDENT-RECONSTRUCTION",
+      "kind": "METHOD_TRANSFER_BOUNDARY",
+      "lesson": "Razborov 1989 gives a genuine cubic reconstruction relation from pair-cover size inside an f-dependent legitimate model, but its selected functional family and literal-pair overhead must be translated before use for every full Definition-21 semi-filter cover.",
+      "authority": "PRIMARY_SOURCE_STATEMENT_INSPECTED",
+      "evidence_rows": [
+        "RAZ89-C25-T26-T27"
+      ]
+    },
+    {
+      "lesson_id": "PNP-WIG93-MODEL-PAIRED-CONVERSE",
+      "kind": "METHOD_TRANSFER_BOUNDARY",
+      "lesson": "Wigderson 1993 gives a polynomial cover-to-program converse with exponent at most four within each explicitly paired model, cover class, and input definition; discarding the row restrictions would change the mathematical object.",
+      "authority": "PRIMARY_SOURCE_STATEMENT_INSPECTED",
+      "evidence_rows": [
+        "WIG93-META-THEOREM-CONVERSE"
+      ]
+    }
+  ],
+  "operational_assurance_excluded_from_mathematical_experience": [
+    "HTTP access status",
+    "Git branch movement",
+    "CI execution",
+    "artifact hashing",
+    "timestamp chronology"
+  ],
+  "next_action": "FREEZE_PROSPECTIVE_R2_WITH_DISTINCT_NONCIRCULAR_EXPLICIT_TARGET_LOWER_BOUND_COORDINATE_AND_ADD_WIG95_SCOPE_BEFORE_REEXECUTION",
+  "review_authority": "SAME_CONTEXT_INTERNAL_HOSTILE_MATHEMATICAL_REVIEW_COMPLETE_NOT_INDEPENDENT_PEER_REVIEW",
+  "authority_contract": {
+    "grants_proof_authority": false,
+    "grants_new_theorem_authority": false,
+    "grants_novelty_authority": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_framework_evolution_authority": false,
+    "grants_review_independence": false
+  },
+  "root_status": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE",
+  "artifact_hash": "sha256:a9bbd2013a72e9c67395a2c96da7c9afd25b308f76df8e9b9208be23bd42dc74",
+  "inventory_coverage": {
+    "material_rows_recorded": 16,
+    "coverage_claim": "MATERIAL_R1_ROWS_REVIEWED_NOT_EXHAUSTIVE_OF_ALL_RESULTS",
+    "ancestry_completeness": "INCOMPLETE_CANNOT_CHECK_WHETHER_STRONGER_OR_DIFFERENT_BOUND_EXISTS"
+  }
+}

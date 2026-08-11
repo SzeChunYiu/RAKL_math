@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/pnp-source-inventory-r1-chronology-correction.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "correction_id", "recorded_at", "atom_id", "defect_class", "predecessor", "review_binding", "historical_trace_binding", "successor", "correction", "mathematical_result", "authority_contract", "artifact_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "correction_id": {"const": "PNP-O9d12a2a1a1b1-SOURCE-INVENTORY-R1-CHRONOLOGY-CORRECTION-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "atom_id": {"const": "O9d12a2a1a1b1"},
+    "defect_class": {"const": "POST_REVIEW_MUTATION_RETAINED_STALE_RECORDED_AT"},
+    "predecessor": {"type": "object"},
+    "review_binding": {"type": "object"},
+    "historical_trace_binding": {"type": "object"},
+    "successor": {"type": "object"},
+    "correction": {"type": "object"},
+    "mathematical_result": {"const": {"outcome_branch": "SUCCESS", "final_verdict": "MATCH_FOUND_ECCC_T24_AND_T30", "candidate_generated": false, "root_status": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE"}},
+    "authority_contract": {"const": {"grants_proof_authority": false, "grants_new_theorem_authority": false, "grants_novelty_authority": false, "grants_p_vs_np_root_authority": false, "grants_framework_evolution_authority": false, "grants_review_independence": false}},
+    "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}

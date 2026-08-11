@@ -9,7 +9,7 @@ import subprocess
 
 import pytest
 from jsonschema import Draft202012Validator, FormatChecker, ValidationError
-from rakl.experience_substrate import EpisodeOutcome, TaskEpisode, episode_content_bytes, validate_episode
+from rakl.experience_substrate import EpisodeOutcome, TaskEpisode, validate_episode
 from rakl.failure_lattice import (
     FailureDiagnosisStatus,
     FailureExperience,
@@ -32,6 +32,7 @@ PR_HEAD = "08fd327f0e211b2e807363c9f8c31cba50bd6497"
 MERGE = "48d1153c3b5fa749b1a6fd84212befb9e39daabe"
 MERGE_TREE = "dc467172b96b06a9108d45879bf7f272665fa224"
 FRAMEWORK = "bd1a2768f0f474ff44ffa25243241f94bfaf6466"
+HISTORICAL_EXPERIENCE_RUNTIME_BLOB = "4d7044bd4825c2d058c6a95ee63cea703c3234f3"
 
 CORRECTION = NS / "10_case_study/NS-B1a2_C001_POSTMERGE_ASSURANCE_CORRECTION_20260811.json"
 EPISODE = NS / "10_case_study/NS-B1a2_C001_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_V2_20260811.json"
@@ -89,6 +90,66 @@ def _parse_time(value: str) -> datetime:
     return parsed
 
 
+def _historical_episode_content_bytes(episode: TaskEpisode) -> bytes:
+    """Exact TaskEpisode identity payload used by the recorded bd1a276 runtime."""
+
+    return json.dumps(
+        {
+            "episode_id": episode.episode_id,
+            "task_id": episode.task_id,
+            "atom_id": episode.atom_id,
+            "context_hash": episode.context_hash,
+            "problem_signature": list(episode.problem_signature),
+            "fibre_snapshot_hash": episode.fibre_snapshot_hash,
+            "operator_ids": list(episode.operator_ids),
+            "action_trace": list(episode.action_trace),
+            "observation_ids": list(episode.observation_ids),
+            "verification_ids": list(episode.verification_ids),
+            "outcome": episode.outcome.value,
+            "residual_signature": list(episode.residual_signature),
+            "evidence_pointers": list(episode.evidence_pointers),
+            "timestamp": episode.timestamp,
+            "cost": episode.cost,
+        },
+        sort_keys=True,
+        separators=(",", ":"),
+        ensure_ascii=False,
+    ).encode("utf-8")
+
+
+def _historical_validate_episode(episode: TaskEpisode) -> tuple[str, ...]:
+    """Reproduce validate_episode at the immutable recorded framework commit."""
+
+    reasons: list[str] = []
+    for name in (
+        "episode_id", "task_id", "atom_id", "context_hash",
+        "fibre_snapshot_hash", "artifact_hash",
+    ):
+        if not getattr(episode, name):
+            reasons.append(f"episode:{name}_missing")
+    try:
+        _parse_time(episode.timestamp)
+    except (AssertionError, ValueError):
+        reasons.append("episode:timestamp_missing_or_invalid")
+    if not episode.problem_signature:
+        reasons.append("episode:problem_signature_missing")
+    if not episode.action_trace:
+        reasons.append("episode:action_trace_missing")
+    if not episode.evidence_pointers:
+        reasons.append("episode:evidence_pointers_missing")
+    if (
+        episode.outcome
+        in {EpisodeOutcome.FAILURE, EpisodeOutcome.PARTIAL_SUCCESS, EpisodeOutcome.BLOCKED}
+        and not episode.residual_signature
+    ):
+        reasons.append("episode:residual_signature_required_for_non_success")
+    if len(episode.artifact_hash) == 64 and hashlib.sha256(
+        _historical_episode_content_bytes(episode)
+    ).hexdigest() != episode.artifact_hash:
+        reasons.append("episode:artifact_hash_mismatch")
+    return tuple(reasons)
+
+
 def test_pr89_original_merge_bytes_are_immutable() -> None:
     receipt = _load(CORRECTION)
     assert _git("show", "-s", "--format=%P", MERGE).split() == [BASE, PR_HEAD]
@@ -119,9 +180,18 @@ def test_successors_use_exact_v3_schemas_and_runtime_shapes() -> None:
     trace = _load(TRACE)
     lattice = _load(LATTICE)
     _validate(correction, SCHEMA)
-    _validate(episode, ROOT / "framework/RAKL/schemas/task-episode.schema.json")
-    _validate(trace, ROOT / "framework/RAKL/schemas/math-research-trace.schema.json")
-    _validate(lattice, ROOT / "framework/RAKL/schemas/failure-experience-lattice.schema.json")
+    recorded_episode_schema = _framework_schema_at(FRAMEWORK, "task-episode.schema.json")
+    recorded_trace_schema = _framework_schema_at(FRAMEWORK, "math-research-trace.schema.json")
+    recorded_lattice_schema = _framework_schema_at(
+        FRAMEWORK, "failure-experience-lattice.schema.json"
+    )
+    Draft202012Validator(recorded_episode_schema, format_checker=FormatChecker()).validate(episode)
+    Draft202012Validator(recorded_trace_schema, format_checker=FormatChecker()).validate(trace)
+    Draft202012Validator(recorded_lattice_schema, format_checker=FormatChecker()).validate(lattice)
+    assert _git(
+        "-C", str(ROOT / "framework/RAKL"), "rev-parse",
+        f"{FRAMEWORK}:src/rakl/experience_substrate.py",
+    ) == HISTORICAL_EXPERIENCE_RUNTIME_BLOB
     assert correction["artifact_hash"] == _canonical_hash(correction)
     assert all(item["artifact_hash"] == _canonical_hash(item) for item in lattice["experiences"])
     assert correction["framework_authority"]["current_main_commit"] == FRAMEWORK
@@ -183,9 +253,18 @@ def test_successors_use_exact_v3_schemas_and_runtime_shapes() -> None:
         cost=episode["cost"],
     )
     assert episode["artifact_hash"] == hashlib.sha256(
-        episode_content_bytes(episode_object)
+        _historical_episode_content_bytes(episode_object)
     ).hexdigest()
-    assert validate_episode(episode_object) == ()
+    assert _historical_validate_episode(episode_object) == ()
+    # Prospective b724b75 storage admission remains fail closed: historical
+    # bytes are not silently reinterpreted as a current canonical episode.
+    live_errors = list(Draft202012Validator(
+        _load(ROOT / "framework/RAKL/schemas/task-episode.schema.json")
+    ).iter_errors(episode))
+    assert [error.message for error in live_errors] == [
+        "'storage_admission' is a required property"
+    ]
+    assert validate_episode(episode_object) == ("episode:artifact_hash_mismatch",)
 
     state = FailureExperienceLattice()
     for item in lattice["experiences"]:

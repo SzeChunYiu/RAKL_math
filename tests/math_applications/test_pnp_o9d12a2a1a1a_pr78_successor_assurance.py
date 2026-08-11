@@ -14,7 +14,6 @@ from jsonschema import Draft202012Validator, FormatChecker, ValidationError
 from rakl.experience_substrate import (
     EpisodeOutcome,
     TaskEpisode,
-    episode_content_bytes,
     validate_episode,
 )
 
@@ -110,6 +109,42 @@ def _episode(value: dict) -> TaskEpisode:
     )
 
 
+def _historical_episode_content_bytes(episode: TaskEpisode) -> bytes:
+    """Exact bd1a276 episode identity before storage_admission existed."""
+
+    payload = {
+        "episode_id": episode.episode_id,
+        "task_id": episode.task_id,
+        "atom_id": episode.atom_id,
+        "context_hash": episode.context_hash,
+        "problem_signature": list(episode.problem_signature),
+        "fibre_snapshot_hash": episode.fibre_snapshot_hash,
+        "operator_ids": list(episode.operator_ids),
+        "action_trace": list(episode.action_trace),
+        "observation_ids": list(episode.observation_ids),
+        "verification_ids": list(episode.verification_ids),
+        "outcome": episode.outcome.value,
+        "residual_signature": list(episode.residual_signature),
+        "evidence_pointers": list(episode.evidence_pointers),
+        "timestamp": episode.timestamp,
+        "cost": episode.cost,
+    }
+    return json.dumps(
+        payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False
+    ).encode("utf-8")
+
+
+def _historical_validate_episode(episode: TaskEpisode) -> tuple[str, ...]:
+    """Reproduce the exact bd1a276 hash check, including its prefix bypass."""
+
+    reasons: list[str] = []
+    if len(episode.artifact_hash) == 64 and hashlib.sha256(
+        _historical_episode_content_bytes(episode)
+    ).hexdigest() != episode.artifact_hash:
+        reasons.append("episode:artifact_hash_mismatch")
+    return tuple(reasons)
+
+
 def test_pr78_history_is_integrated_without_rewriting_any_of_six_added_files() -> None:
     receipt = _load(CORRECTION)
     assert _git("rev-parse", f"{PR_HEAD}^{{tree}}") == PR_HEAD_TREE
@@ -185,9 +220,13 @@ def test_shadow_source_binding_defect_and_future_timestamp_are_preserved() -> No
 def test_merged_pr104_prefixed_hash_bypass_is_preserved_and_recorded() -> None:
     receipt = _load(CORRECTION)
     historical = _episode(_load(PR104_EPISODE))
-    actual_digest = hashlib.sha256(episode_content_bytes(historical)).hexdigest()
+    actual_digest = hashlib.sha256(
+        _historical_episode_content_bytes(historical)
+    ).hexdigest()
     assert len(historical.artifact_hash) == 71
     assert historical.artifact_hash != "sha256:" + actual_digest
+    assert _historical_validate_episode(historical) == ()
+    # The prospective runtime correctly closes the historical prefix bypass.
     assert validate_episode(historical) == ("episode:artifact_hash_invalid",)
     assert receipt["framework_gap_audit"] == {
         "gap_id": "FG-BD1A276-TASK-EPISODE-PREFIXED-HASH-BYPASS",
@@ -209,10 +248,15 @@ def test_pr104_versioned_runtime_hash_successor_is_exact_and_fail_closed() -> No
     historical = _episode(_load(PR104_EPISODE))
     successor = _episode(_load(PR104_EPISODE_SUCCESSOR))
     expected = "aa0a0a4a04e90d9b641cb9e302cc91fb4797e84bab37b11f8f747c07766e017e"
-    assert hashlib.sha256(episode_content_bytes(historical)).hexdigest() == expected
+    assert hashlib.sha256(
+        _historical_episode_content_bytes(historical)
+    ).hexdigest() == expected
     assert successor.artifact_hash == expected
-    assert episode_content_bytes(successor) == episode_content_bytes(historical)
-    assert validate_episode(successor) == ()
+    assert _historical_episode_content_bytes(successor) == (
+        _historical_episode_content_bytes(historical)
+    )
+    assert _historical_validate_episode(successor) == ()
+    assert validate_episode(successor) == ("episode:artifact_hash_mismatch",)
     assert correction["historical"]["computed_episode_content_digest"] == expected
     assert correction["successor"]["artifact_hash"] == expected
     assert correction["authority_contract"] == {
@@ -227,7 +271,9 @@ def test_pr104_versioned_runtime_hash_successor_is_exact_and_fail_closed() -> No
         "grants_review_independence": False,
     }
     hostile = replace(successor, task_id="forged-authority")
-    assert validate_episode(hostile) == ("episode:artifact_hash_mismatch",)
+    assert _historical_validate_episode(hostile) == (
+        "episode:artifact_hash_mismatch",
+    )
 
 
 @pytest.mark.parametrize(
@@ -250,18 +296,29 @@ def test_pr104_hash_correction_authority_escalation_is_rejected(field: str) -> N
 
 def test_canonical_retrospective_episode_is_runtime_and_schema_valid() -> None:
     episode = _load(EPISODE)
-    _validate(episode, ROOT / "framework/RAKL/schemas/task-episode.schema.json")
+    historical_schema = _framework_schema_at(FRAMEWORK, "task-episode.schema.json")
+    Draft202012Validator(
+        historical_schema, format_checker=FormatChecker()
+    ).validate(episode)
+    with pytest.raises(ValidationError):
+        Draft202012Validator(
+            _load(ROOT / "framework/RAKL/schemas/task-episode.schema.json"),
+            format_checker=FormatChecker(),
+        ).validate(episode)
     episode_object = _episode(episode)
     assert len(episode_object.artifact_hash) == 64
     assert episode_object.artifact_hash == hashlib.sha256(
-        episode_content_bytes(episode_object)
+        _historical_episode_content_bytes(episode_object)
     ).hexdigest()
-    assert validate_episode(episode_object) == ()
+    assert _historical_validate_episode(episode_object) == ()
+    assert validate_episode(episode_object) == ("episode:artifact_hash_mismatch",)
     hostile_mutation = replace(
         episode_object,
         action_trace=episode_object.action_trace + ("forged authority escalation",),
     )
-    assert validate_episode(hostile_mutation) == ("episode:artifact_hash_mismatch",)
+    assert _historical_validate_episode(hostile_mutation) == (
+        "episode:artifact_hash_mismatch",
+    )
 
 
 def test_correction_is_fail_closed_and_keeps_child_candidate_gate_closed() -> None:

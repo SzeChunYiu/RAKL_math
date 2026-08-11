@@ -55,7 +55,9 @@ def test_787c_pin_sync_receipt_is_exact_and_non_authorizing() -> None:
     assert len(_git("diff", "--name-only", delta["previous_commit"], delta["current_commit"], cwd=framework).splitlines()) == 36
     assert _git("rev-parse", f'{delta["previous_commit"]}^{{tree}}', cwd=framework) == delta["previous_tree"]
     assert _git("rev-parse", f'{delta["current_commit"]}^{{tree}}', cwd=framework) == delta["current_tree"]
-    assert _git("rev-parse", "HEAD", cwd=framework) == delta["current_commit"]
+    assert _git(
+        "cat-file", "-e", f'{delta["current_commit"]}^{{commit}}', cwd=framework
+    ) == ""
 
     assert receipt["compatibility_review"]["historical_artifacts_rewritten"] is False
     assert not any(receipt["authority_contract"].values())
