@@ -1,0 +1,54 @@
+{
+  "schema_version": "problem-fibre-snapshot-v3-proposal-shadow-r1",
+  "task_id": "NS-CLAY-A",
+  "atom_id": "NS-B1a3b1b",
+  "context_hash": "e59069326dc6e893e2883c365d7cca2a826c189eecbd0b57c1d187d05cfef362",
+  "problem_signature": [
+    "Leray energy / finite Type-I E gives time-integrated L2 vorticity or gradient control on the relevant parabolic region",
+    "standard NSE enstrophy identity + Calderon-Zygmund/Gagliardo-Nirenberg/Young + Gronwall/Osgood",
+    "uniform or sufficiently small one-time critical enstrophy/vorticity trace, as needed before stronger geometric-depletion or one-slice epsilon-regularity routes",
+    "derive the sharp scalar differential inequality supplied by the standard enstrophy route and test it against the Type-I scale profile y(t)=a(T-t)^(-1/2), which is L1_t but unbounded"
+  ],
+  "selected_epistemic_ids": [
+    "AB-TYPEI-ANCIENT",
+    "PINEAU-VICOL-2607.09619v2"
+  ],
+  "selected_episode_ids": [
+    "EP-NS-B1a3b1-C001-R2-20260811",
+    "EP-NS-B1a3b1a-C001-R1-20260811"
+  ],
+  "selected_failure_ids": [
+    "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION",
+    "F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY",
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+    "F-NS-R001D1-C001-UNSIGNED-DUHAMEL-ENDPOINT"
+  ],
+  "selected_tool_ids": [
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+    "PRE-ACTION-FIBRE-RECEIPT-v1"
+  ],
+  "motif_ids": [
+    "MOTIF-COUNTEREXAMPLE-FIRST-ENDPOINT-STRESS",
+    "MOTIF-PRODUCER-CONSUMER-SIGNATURE-SEPARATION"
+  ],
+  "unresolved_warnings": [
+    "finite dissipation is time-integrated",
+    "standard vortex stretching is superlinear",
+    "local cutoff errors may worsen the favorable global identity",
+    "pending PR#131 noncanonical",
+    "global Lorentz/far-field and state-space gluing are separate"
+  ],
+  "rejected_ids": [
+    "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+    "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION",
+    "TYPEII-EULER-TAIL",
+    "REPEAT-BARE-NORM-BURST"
+  ],
+  "memory_review_hash": "sha256:f966e4f30c5b7f5f94ef0789ca81607621c4f0096b30cc619ed9f3c18b4c7be4",
+  "framework_sha": "812e9cf18345ef430f0a4cc3ff78f93d7f18ed22",
+  "application_base_sha": "dc83b72201cb58844b2bdc76117e4dcb9190211d",
+  "frozen_at": "2026-08-11T18:03:00Z",
+  "hash_basis_note": "SHA-256 of canonical JSON excluding fibre_snapshot_hash",
+  "fibre_snapshot_hash": "sha256:2b62a3f3cab69352fa7b154b395a79a1b8dac4e218bd1b214a56996f8392aa08"
+}

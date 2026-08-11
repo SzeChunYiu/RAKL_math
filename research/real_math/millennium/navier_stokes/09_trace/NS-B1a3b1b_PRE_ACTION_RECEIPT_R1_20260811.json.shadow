@@ -1,0 +1,36 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "PAR-NS-B1a3b1b-C001-R1-20260811",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "812e9cf18345ef430f0a4cc3ff78f93d7f18ed22",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "dc83b72201cb58844b2bdc76117e4dcb9190211d",
+  "task_id": "NS-CLAY-A",
+  "atom_id": "NS-B1a3b1b",
+  "context_hash": "e59069326dc6e893e2883c365d7cca2a826c189eecbd0b57c1d187d05cfef362",
+  "fibre_snapshot_hash": "2b62a3f3cab69352fa7b154b395a79a1b8dac4e218bd1b214a56996f8392aa08",
+  "operator_ids": [
+    "OP-NS-ENSTROPHY-IDENTITY",
+    "OP-NS-SCALAR-ODE-ENDPOINT-FALSIFIER",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "selected_retrievals": [
+    {"retrieval_id":"RAKL-V3-METHOD-SUBJECT","authority":"CANONICAL","payload_hash":"89a3a4ea1bb9e41d2ae151e66d1c1156d2dbcad79c09dab899be16513925a834"},
+    {"retrieval_id":"NS-B1a3b1-CONTEXT-R2","authority":"CANONICAL","payload_hash":"d2fd0de8a4e45655ea4d36061c841761308259f4dec9c60414e1c8afa1b3081e"},
+    {"retrieval_id":"NS-B1a3b1-MEMORY-R2","authority":"CANONICAL","payload_hash":"8b37aabf5b34c3cfe2d3297e2b678fcfe1482c05b549c5e081f40e836f90e6a8"},
+    {"retrieval_id":"AB-TYPEI-ANCIENT","authority":"CANONICAL","payload_hash":"d164aaf871d929effdd53503136dd60db67c1dcb4d6eb813a3e4ae3d4dd946bd"},
+    {"retrieval_id":"PINEAU-VICOL-2607.09619v2","authority":"CANONICAL","payload_hash":"8f08d229eded0098bf6dc3d0fb313f777dd1cc44c4c8fa4d49eacb4f5c77afb2"},
+    {"retrieval_id":"EP-NS-B1a3b1a-C001-R1-20260811","authority":"PENDING","payload_hash":"21c9a548f5584cf84378ee84fd33f4babc114666c66f83625c59c72043a14e23"}
+  ],
+  "rejected_retrievals": [
+    {"retrieval_id":"REPEAT-BARE-NORM-BURST","rejection_reason":"pending PR#131 already exercises that norm-only family; use only its route signal"},
+    {"retrieval_id":"REPEAT-SHELL-CURRENCY","rejection_reason":"already saturated/pruned scalar shell-budget family; different obstruction"},
+    {"retrieval_id":"DIRECT-PINEAU-VICOL-PROMOTION","rejection_reason":"consumer hypotheses cannot be assumed as producer output"},
+    {"retrieval_id":"TYPEII-EULER-TAIL","rejection_reason":"different sibling lane and equation/state-space"}
+  ],
+  "predeclared_discriminator": "Derive, from the favorable global smooth-decaying 3D NSE vorticity identity using standard Calderon-Zygmund + Gagliardo-Nirenberg + Young, the scalar inequality for y(t)=||omega(t)||_2^2. Then test whether y_a(t)=a(T-t)^(-1/2) is both L1_t and unbounded and can satisfy that inequality for an admissible amplitude. If yes, prune only finite-dissipation + standard-enstrophy-Gronwall as a uniform/small one-slice producer.",
+  "allowed_outcome_branches": ["SUCCESS","PARTIAL_SUCCESS","FAILURE","BLOCKED","UNKNOWN"],
+  "frozen_at_utc": "2026-08-11T18:03:00Z",
+  "sequence_index": 1,
+  "receipt_canonical_sha256": "37f81faa2acfd4d753d94d4bd762dc098d75cf51d9820344871d44bc0ad740aa"
+}

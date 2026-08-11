@@ -1,0 +1,135 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow-r1",
+  "atom_id": "NS-B1a3b1b",
+  "parent_atom_id": "NS-B1a3b1",
+  "issue_id": "RAKL_math#137",
+  "object_context": "Whole-space 3D incompressible Navier-Stokes Type-I regularity child. Test whether the standard equation-specific vorticity/enstrophy energy route can upgrade finite dissipation / finite Type-I spacetime gradient control into a uniform or small critical time-slice vorticity trace. This is a proof-architecture audit, not a singular-solution construction.",
+  "root_contract": {
+    "root_issue": "RAKL_math#4",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "accepted_terminal_outcomes": [
+      "Clay A",
+      "Clay B",
+      "Clay C",
+      "Clay D"
+    ],
+    "independent_mathematical_reviews": "0/3",
+    "root_promotion_authority": "NONE"
+  },
+  "active_problem_signature": {
+    "producer": "Leray energy / finite Type-I E gives time-integrated L2 vorticity or gradient control on the relevant parabolic region",
+    "candidate_upgrade": "standard NSE enstrophy identity + Calderon-Zygmund/Gagliardo-Nirenberg/Young + Gronwall/Osgood",
+    "consumer": "uniform or sufficiently small one-time critical enstrophy/vorticity trace, as needed before stronger geometric-depletion or one-slice epsilon-regularity routes",
+    "counterexample_first_discriminator": "derive the sharp scalar differential inequality supplied by the standard enstrophy route and test it against the Type-I scale profile y(t)=a(T-t)^(-1/2), which is L1_t but unbounded"
+  },
+  "fibre_contents_actually_consulted": {
+    "framework": [
+      "RAKL_VERSION.json@812e9cf18345ef430f0a4cc3ff78f93d7f18ed22",
+      "docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md@812e9cf18345ef430f0a4cc3ff78f93d7f18ed22",
+      "docs/RAKL_METROLOGY.md@812e9cf18345ef430f0a4cc3ff78f93d7f18ed22",
+      "src/rakl/method_specs.py@812e9cf18345ef430f0a4cc3ff78f93d7f18ed22",
+      "src/rakl/pre_action_receipt.py@812e9cf18345ef430f0a4cc3ff78f93d7f18ed22",
+      "src/rakl/experience_substrate.py@812e9cf18345ef430f0a4cc3ff78f93d7f18ed22"
+    ],
+    "application": [
+      "RAKL_math#4",
+      "RAKL_math#122",
+      "NS-B1a3b1_CONTEXT_FIBER_R2_20260811.json@dc83b72201cb58844b2bdc76117e4dcb9190211d",
+      "NS-B1a3b1_RESEARCH_MEMORY_REVIEW_R2_20260811.json@dc83b72201cb58844b2bdc76117e4dcb9190211d",
+      "RAKL_math PR#131 / EP-NS-B1a3b1a-C001-R1-20260811 (PENDING_NONCANONICAL_ROUTING_ONLY)"
+    ],
+    "primary_sources": [
+      {
+        "id": "AB-TYPEI-ANCIENT",
+        "source": "Albritton-Barker, arXiv:1811.00502v2",
+        "selectors": [
+          "Theorem 1.1 Type-I/ancient equivalence",
+          "Theorem 1.2 backward-sequence global L3 Liouville trigger"
+        ]
+      },
+      {
+        "id": "PINEAU-VICOL-2607.09619v2",
+        "source": "Pineau-Vicol, arXiv:2607.09619v2, revised 2026-08-06",
+        "selectors": [
+          "Theorem 1.9",
+          "Proposition 9.5 / equations (9.14)-(9.16)"
+        ]
+      }
+    ]
+  },
+  "structural_coordinates": [
+    "Navier-Stokes scaling: u_lambda=lambda u(lambda x,lambda^2 t), omega_lambda=lambda^2 omega(lambda x,lambda^2 t).",
+    "Global enstrophy y=||omega||_2^2 has scaling dimension length^-1; (T-t)^(1/2)y is scale invariant.",
+    "Finite energy dissipation supplies an L1_t enstrophy budget, not an L-infinity_t enstrophy trace.",
+    "Vortex stretching has one derivative and cubic criticality; standard interpolation risks a superlinear y^3 closure.",
+    "A Type-I-compatible y~(T-t)^(-1/2) profile is integrable in time but unbounded and has constant rescaled enstrophy.",
+    "Pineau-Vicol Proposition 9.5 consumes sufficiently small one-time rescaled local enstrophy under stronger pointwise Type-I and annular-pressure hypotheses; the producer must not assume that smallness.",
+    "Local cutoffs introduce transport/pressure/boundary errors, so the global smooth-decaying identity is a deliberately favorable test of the standard route.",
+    "Global Lorentz/far-field production, vorticity-direction normalization, and pre-singularity/ancient-state gluing remain separate residuals.",
+    "Pending PR#131 may alter routing only; it cannot bear theorem or canonical-memory authority."
+  ],
+  "analogues_and_disanalogies": [
+    {
+      "id": "PINEAU-VICOL-ONE-SLICE",
+      "analogue": "one-slice small enstrophy is a source-valid downstream regularity trigger",
+      "transfer_assumptions": [
+        "pointwise local Type-I bound",
+        "annular pressure control",
+        "sufficiently late slice"
+      ],
+      "disanalogies": [
+        "finite AB I does not already provide those stronger hypotheses",
+        "consumer smallness is exactly what this atom tests whether standard enstrophy production can supply"
+      ]
+    },
+    {
+      "id": "EP-NS-B1a3b1a-C001-R1-20260811",
+      "analogue": "pending hostile near-miss blocks bare norm-only time-trace embedding",
+      "authority": "PENDING_NONCANONICAL_SEARCH_PRIORITY_ONLY",
+      "disanalogies": [
+        "that burst is not an NSE solution",
+        "this atom explicitly adds NSE vorticity evolution"
+      ]
+    },
+    {
+      "id": "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION",
+      "analogue": "prior derivative/normalization failure warns against inferring instantaneous vorticity geometry from velocity compactness",
+      "disanalogies": [
+        "current target is enstrophy amplitude/time trace, not direction compactness"
+      ]
+    }
+  ],
+  "counterexample_first_falsifier": {
+    "scalar_profile": "y_a(t)=a*(T-t)^(-1/2), a>0",
+    "tests": [
+      "integral_{T-epsilon}^T y_a(t) dt = 2 a sqrt(epsilon) < infinity",
+      "sup_{t<T} y_a(t)=infinity",
+      "(T-t)^(1/2)y_a(t)=a",
+      "after deriving y' <= C y^3, check y_a' <= C y_a^3 for a^2 >= 1/(2C)"
+    ],
+    "scope": "Scalar compatibility test only. It is not claimed to arise from an NSE solution."
+  },
+  "audit_checklist": [
+    "scaling",
+    "units",
+    "constants/signs",
+    "time endpoint",
+    "vortex-stretching derivative loss",
+    "pressure absent globally but cutoff pressure tracked separately",
+    "circular bootstrap",
+    "local-vs-global gluing",
+    "consumer-source hypothesis match"
+  ],
+  "framework": {
+    "method": "RAKL Verified Discovery Method / v3 proposal-shadow",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "git_sha": "812e9cf18345ef430f0a4cc3ff78f93d7f18ed22",
+    "manifest_evidence_cutoff_main_sha": "0cea6cc39a3cf67ef7ecff3fff9a704944c32ab8"
+  },
+  "application_base_sha": "dc83b72201cb58844b2bdc76117e4dcb9190211d",
+  "application_framework_execution_pin": "fe47a12c4bad8253658baaf37e1300cab15d0823",
+  "framework_freshness": "CURRENT_FRAMEWORK_READ_DIRECTLY; EXECUTION_PIN_STALE; no protected current-main execution claim",
+  "frozen_at": "2026-08-11T18:03:00Z",
+  "packet_hash": "sha256:e59069326dc6e893e2883c365d7cca2a826c189eecbd0b57c1d187d05cfef362"
+}
