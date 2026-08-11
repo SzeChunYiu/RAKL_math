@@ -1,0 +1,39 @@
+{
+  "schema_version": "bsd-r5-process-failure-v1",
+  "artifact_type": "FAILURE_EXPERIENCE_PROPOSAL_SHADOW",
+  "failure_id": "F-BSD-A1A1-R5-PROTECTED-ARTIFACT-MUTATION-ATTEMPT",
+  "cycle_id": "BSD-A1a1-BASECHANGE-PLECTIC-20260811-R5",
+  "source_episode_id": "EP-BSD-A1A1-BASECHANGE-PLECTIC-20260811-R5",
+  "diagnosis_id": "D-BSD-A1A1-R5-PROTECTED-ARTIFACT-WRITESET",
+  "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "context_hash": "sha256:0738fbeff600a8025d89c0d0c215272768e23133d2291e0cbb29734d08f1ecf2",
+  "status": "OBSERVED_ONLY",
+  "attempted_action": "Overwrite a previously assurance-bound route diagnostic with the new R5 route state.",
+  "failure_signature": [
+    "PROTECTED_PRIOR_ARTIFACT_BYTES_MUTATED",
+    "APPLICATION_PROVENANCE_ASSURANCE_GATE_FAILURE"
+  ],
+  "evidence": {
+    "failed_head": "022af7ee80059c6daae5dd0d158583146f6da5c6",
+    "workflow_run_id": 31527567257,
+    "job_id": 93899507626,
+    "test": "tests/math_applications/test_bsd_a1a1_pr83_postmerge_assurance.py::test_pr83_git_provenance_and_all_seven_original_bytes_are_immutable",
+    "result": "1 failed, 458 passed",
+    "detected_path": "research/real_math/millennium/birch_swinnerton_dyer/02_problem_dag/BSD_A1a1_CURRENT_2026_ROUTE_DIAGNOSTIC.yaml"
+  },
+  "repair_evidence": {
+    "restore_commit": "3278a20aeaed4247de2157ab11ba61c8bce1ba93",
+    "new_delta_commit": "d18b9f84d48805ce2c1f5eecf7bf93804d0aa9d9",
+    "corrected_test_head": "290233dd30fc009a192fdf07ca2144a57872a855",
+    "success_workflow_run_id": 31527859141,
+    "success_job_id": 93900465670,
+    "success_result": "459 passed in 35.54s"
+  },
+  "effect_on_mathematical_outcome": "NONE: scoped base-change lemma and mathematical residual signatures unchanged.",
+  "effect_on_retained_semantic_novelty": "NONE: process failure is not counted as EXPERIENCE_PATTERN, META_METHOD, or other learning without protected promotion.",
+  "reusable_warning": "Do not mutate application artifacts whose exact bytes are bound by earlier assurance/provenance receipts; emit a new cycle delta unless an explicit migration gate authorizes replacement.",
+  "prior_matching_failure_link": "NO_MATCH_LOCATED_IN_BOUNDED_MEMORY_SEARCH; not a completeness claim",
+  "authority": "OBSERVED_ONLY_SEARCH_AND_PROCESS_GUIDANCE_NO_PROOF_AUTHORITY",
+  "timestamp_utc": "2026-08-11T19:28:00Z",
+  "artifact_hash": "sha256:074ac8ff77bf24c27fbd9c7adc837c25345d55b8863b68991569b99f9af01f57"
+}
