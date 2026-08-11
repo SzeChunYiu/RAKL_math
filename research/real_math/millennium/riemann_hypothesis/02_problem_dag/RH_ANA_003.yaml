@@ -1,7 +1,7 @@
 atom_id: RH-ANA-003
 parent_atom_id: RH-ANA-002
 root_issue: 3
-status: CONTEXT_REQUIRED
+status: CONTEXT_FROZEN_NEXT_DISCRIMINATOR
 root_authority: NONE
 
 question: >-
@@ -26,23 +26,41 @@ known_boundary:
   - Any finite prime truncation, termwise-positive decomposition, or computed prefix is non-authoritative until a rigorous all-n remainder/tail theorem is proved.
   - Exact regularization, sum/interchange order, archimedean terms, binomial weights and cancellation must be preserved.
 
+cycle_20260811_pnt_transform:
+  context_hash: sha256:cf1aba3880a0deef2e0c6f14e5e5a4e51c41cf15db15bce9b4dc3188fa3cbdc9
+  task_episode_id: EP-RH-ANA-003-PNT-TRANSFORM-20260811
+  result: EXACT_PNT_ERROR_TRANSFORM_LOCALIZED_NO_ALL_N_BOUND
+  exact_relation: >-
+    With K_n(t)=L_{n-1}^{(1)}(-t), W_n(t)=K_n(t)-K_n'(t),
+    psi(x)=sum_{m<=x} Lambda(m), and E(x)=psi(x)-x, the Lagarias
+    finite-place formula can be reorganized for each fixed n as
+    S_f(n)=n+integral_0^infinity [E(e^t)/e^t] W_n(t) dt, using the
+    source regularization and unconditional PNT decay to close the fixed-n
+    boundary term.
+  retained_obstruction: >-
+    The next root-relevant coordinate is a one-sided, uniform-in-n bound on
+    the signed PNT-error transform at the scale S_infty(n)-n+1. Current
+    zero-free/zero-density results primarily provide pointwise magnitude
+    control and do not by themselves supply the required signed/correlation
+    information.
+  authority: SOURCE_DERIVED_REPRESENTATION_ONLY_NO_NEW_THEOREM
+
 candidate_generation_gate:
   allowed: false
   reason: >-
-    RH-ANA-003 is a new representation child opened after the Suzuki
-    faithfulness audit. Before proposing any new inequality, decomposition,
-    recurrence, mollifier, resonance construction, tail theorem or positivity
-    mechanism, freeze a fresh MathContextFiber, equivalent and near-solved
-    analogues, method-transfer assumptions/disanalogies, cross-domain
-    structural analogy, same-context expert cell, dual success/failure memory
-    review and hash-chained pre-candidate trace under the current RAKL main.
+    The fresh context, expert cell, dual-memory review and pre-candidate trace
+    are frozen, but this cycle produced only an exact source-derived
+    representation and a sharper residual. No strictly weaker all-n bound has
+    been established. Before proposing a mathematical inequality or positivity
+    candidate, execute the frozen quantitative discriminator for the induced
+    sign-blind PNT majorant and verify that any added signed/correlation
+    hypothesis is strictly weaker than RH.
 
 next_pre_candidate_discriminators:
-  - Reconstruct the exact Bombieri-Lagarias arithmetic formula for lambda_n from primary sources and separate prime/Laurent, zeta-value and archimedean pieces without changing regularization.
-  - Locate the first family of n-dependent binomial/cancellation terms for which known unconditional bounds lose the sign or required uniformity.
-  - Compare any prime-side truncation with a hostile planted-cancellation model before treating finite numerical behavior as informative.
-  - Audit whether zero-free/zero-density estimates can control the required remainder at all n without silently strengthening to an RH-equivalent bound.
-  - Keep the Lagarias-Voros growth-class route as a contrastive alternative and state the minimum unconditional growth threshold needed to exclude an off-line zero contribution.
-  - Query mollifier/resonance and explicit-formula tool memory only after applicability and DifferenceWitness checks against the finite-surrogate and faithfulness failures.
+  - Quantify M_n(B)=integral B(t)|W_n(t)|dt for a current primary-source PNT error envelope B and compare it with S_infty(n)-n+1; finite computations are calibration only.
+  - If sign-blind domination is not competitive, identify the weakest zeta-specific signed/correlation statistic of E(e^t)/e^t that changes the family transform bound.
+  - Audit whether that added statistic is strictly weaker than RH, Li positivity, Weil positivity, or the Lagarias-Voros RH growth class.
+  - Retain the finite-prefix quartet calibration as a regression against any finite-n extrapolation.
+  - Query mollifier/resonance constructions only if they map to the exact signed-transform residual or expose a different exact root bridge with a DifferenceWitness.
 
 authority: STRICT_CHILD_RESIDUAL_ONLY / NO_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE
