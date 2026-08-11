@@ -1,0 +1,52 @@
+{
+  "schema_version": "ns-r001d1-fibre-snapshot-v1",
+  "atom_id": "NS-R001d1",
+  "framework_main_sha": "decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8",
+  "application_main_inspected_sha": "5d6bdc6f566921f51a375fdc2e8035123cf4830c",
+  "candidate_branch_head_sha": "54974135e15027d58eae1dba474aec685b74e4f7",
+  "context_hash": "sha256:a984bc0c0495297d16341169ac70eb0c7ac718b5118f3a0e07ba02aa8aa923a3",
+  "root_contract": [
+    "Clay 3D incompressible Navier-Stokes existence/smoothness remains OPEN_NO_SOLUTION_CERTIFICATE",
+    "active regularity obstruction: bridge finite Leray energy to a scale-critical regularity control using exact Navier-Stokes structure"
+  ],
+  "consulted_fibre_items": [
+    {"kind":"framework","id":"RAKL-v3-manifest","authority":"CURRENT_MAIN","pointer":"SzeChunYiu/RAKL@decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8:docs/RAKL_V3_IMPLEMENTATION_MANIFEST.md"},
+    {"kind":"framework","id":"task-episode-schema","authority":"CURRENT_MAIN","pointer":"SzeChunYiu/RAKL@decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8:schemas/task-episode.schema.json"},
+    {"kind":"application","id":"NS-R001d1-context","authority":"FROZEN_PRE_CANDIDATE","pointer":"RAKL_math PR #48: NS_R001D1_HEAT_BASELINE_CONTEXT_FIBER_20260811.json"},
+    {"kind":"application","id":"NS-R001d1-candidate","authority":"PROOF_ARCHITECTURE_CANDIDATE","pointer":"RAKL_math@54974135e15027d58eae1dba474aec685b74e4f7:NS_R001D1_C001_DUHAMEL_ENDPOINT_SCREEN_20260811.md"},
+    {"kind":"failure","id":"F-NS-R001-A1-ENERGY-CRITICALITY","authority":"SUPPORTED","effect":"warn against energy-only critical closure"},
+    {"kind":"failure","id":"F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP","authority":"SUPPORTED","effect":"require exact dynamics plus global/nonlocal coordinates"},
+    {"kind":"application","id":"NS-R001d-C001","authority":"PROVISIONAL_OPEN_PR_ONLY","pointer":"RAKL_math PR #33","effect":"not imported as canonical failure authority"},
+    {"kind":"source","id":"Barker-Prange-1812.09115","authority":"PRIMARY_PREPRINT","effect":"near-solved localized critical smoothing; assumes critical local data"},
+    {"kind":"source","id":"Miller-2407.02691","authority":"PRIMARY_PREPRINT","effect":"conditional nonlinear-depletion coordinate; no energy-to-critical bridge"},
+    {"kind":"source","id":"Cheskidov-Eguchi-2503.11642","authority":"PRIMARY_PREPRINT","effect":"finite-energy plus frequency-local critical smallness; richer Carleson/time-frequency closure"},
+    {"kind":"source","id":"Coiculescu-Palasek-2503.14699","authority":"PRIMARY_PREPRINT","effect":"hostile warning: large critical-space membership is not small-data closure"}
+  ],
+  "retrieval_outcomes": {
+    "selected": [
+      "frozen NS-R001d1 context/candidate",
+      "supported A1 and R001b failures",
+      "Cheskidov-Eguchi frequency-local critical closure as near-solved representation",
+      "Barker-Prange localized critical smoothing as assumption-bound contrast"
+    ],
+    "rejected_or_deferred": [
+      {"item":"PR #33 result","reason":"open/unmerged; cannot be silently upgraded to canonical failure authority"},
+      {"item":"heat positive-time L2-to-L3 smoothing","reason":"linear baseline, not evidence of nonlinear depletion"},
+      {"item":"Koch-Tataru/Cheskidov-Eguchi theorem as direct root bridge","reason":"requires critical smallness not generated from arbitrary Clay data"},
+      {"item":"immediate new invariant invention","reason":"predeclared endpoint falsifier has higher information value and lower cost"}
+    ]
+  },
+  "operator_candidates": [
+    "COUNTEREXAMPLE_FIRST_TEMPORAL_CONCENTRATION",
+    "CRITICAL_SCALING_AND_DIMENSION_AUDIT",
+    "CONTRASTIVE_LINEAR_BASELINE_SEPARATION",
+    "SOURCE_BOUND_NEAR_SOLVED_TRANSFER"
+  ],
+  "selected_operator_sequence": [
+    "COUNTEREXAMPLE_FIRST_TEMPORAL_CONCENTRATION",
+    "CRITICAL_SCALING_AND_DIMENSION_AUDIT",
+    "SOURCE_BOUND_NEAR_SOLVED_TRANSFER"
+  ],
+  "selection_rationale": "Execute the exact predeclared unit-L2 near-diagonal pulse first. It can decisively test the unsigned scalar semigroup/energy closure without making assumptions about an actual singular trajectory; a negative result localizes the missing representation toward time-frequency/cancellation structure.",
+  "artifact_hash": "sha256:772c86902e4096a9cd7578f364b2b8beab1862464ab92de0f6a25cc903abf8cc"
+}
