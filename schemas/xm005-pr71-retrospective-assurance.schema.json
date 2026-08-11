@@ -1,0 +1,350 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/xm005-pr71-retrospective-assurance.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "recorded_at",
+    "historical_pr71",
+    "current_main_integration",
+    "framework_authority",
+    "preserved_pr71_artifacts",
+    "historical_evidence_manifest",
+    "chronology_audit",
+    "schema_audit",
+    "source_version_binding",
+    "successors",
+    "correction",
+    "prospective_gate",
+    "pr71_disposition",
+    "authority_contract",
+    "non_guarantees",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "receipt_id": {
+      "const": "XM005-PR71-OPEN-HEAD-RETROSPECTIVE-ASSURANCE-20260811"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "historical_pr71": {
+      "type": "object",
+      "properties": {
+        "state_observed": {
+          "const": "OPEN"
+        },
+        "merge_commit": {
+          "type": "null"
+        },
+        "remote_branch_rewritten": {
+          "const": false
+        }
+      },
+      "required": [
+        "state_observed",
+        "merge_commit",
+        "remote_branch_rewritten"
+      ]
+    },
+    "current_main_integration": {
+      "type": "object",
+      "properties": {
+        "effect": {
+          "const": "IMPORT_PR71_HEAD_BYTES_WITHOUT_CLAIMING_PR71_WAS_MERGED"
+        }
+      },
+      "required": [
+        "effect"
+      ]
+    },
+    "framework_authority": {
+      "type": "object",
+      "minProperties": 6
+    },
+    "preserved_pr71_artifacts": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "chronology_audit": {
+      "type": "object",
+      "properties": {
+        "context_fiber_status": {
+          "const": "MISSING"
+        },
+        "dual_memory_review_status": {
+          "const": "MISSING"
+        },
+        "pre_candidate_trace_status": {
+          "const": "MISSING"
+        },
+        "verdict": {
+          "const": "CANDIDATE_PRECEDES_REQUIRED_CONTEXT_MEMORY_TRACE_AND_EXACT_SOURCE_BINDING"
+        }
+      },
+      "required": [
+        "context_fiber_status",
+        "dual_memory_review_status",
+        "pre_candidate_trace_status",
+        "verdict"
+      ]
+    },
+    "schema_audit": {
+      "type": "object",
+      "properties": {
+        "historical_proposal_episode_canonical_task_schema": {
+          "const": "FAIL"
+        },
+        "historical_failure_lattice_status": {
+          "const": "MISSING"
+        },
+        "historical_research_trace_status": {
+          "const": "MISSING"
+        },
+        "strict_discovery_verdict": {
+          "const": "FAIL_NO_RETROACTIVE_REPAIR"
+        }
+      },
+      "required": [
+        "historical_proposal_episode_canonical_task_schema",
+        "historical_failure_lattice_status",
+        "historical_research_trace_status",
+        "strict_discovery_verdict"
+      ]
+    },
+    "source_version_binding": {
+      "type": "object",
+      "minProperties": 6
+    },
+    "successors": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "prefixItems": [
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "path",
+            "source_commit",
+            "git_blob_sha",
+            "raw_sha256",
+            "artifact_hash"
+          ],
+          "properties": {
+            "kind": {
+              "const": "CANONICAL_RETROSPECTIVE_TASK_EPISODE"
+            },
+            "source_commit": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "git_blob_sha": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "raw_sha256": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            },
+            "artifact_hash": {
+              "description": "Exact bd1 TaskEpisode content digest: raw lowercase 64-hex, never sha256-prefixed.",
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "CANONICAL_FAILURE_LATTICE"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "CANONICAL_RETROSPECTIVE_TRACE"
+            }
+          }
+        }
+      ]
+    },
+    "correction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "classification",
+        "mathematical_lemma_status",
+        "exact_seregin_counterexample_status",
+        "strict_discovery_credit",
+        "navier_stokes_candidate_authority",
+        "root_authority",
+        "novelty_authority",
+        "originals_preserved",
+        "repairs_original_chronology"
+      ],
+      "properties": {
+        "classification": {
+          "const": "RETROSPECTIVE_CONDITIONAL_HOSTILE_CALIBRATION_ONLY"
+        },
+        "mathematical_lemma_status": {
+          "const": "RETROSPECTIVELY_CHECKABLE_NOT_STRICT_DISCOVERY"
+        },
+        "exact_seregin_counterexample_status": {
+          "const": "NOT_ESTABLISHED"
+        },
+        "strict_discovery_credit": {
+          "const": "NONE"
+        },
+        "navier_stokes_candidate_authority": {
+          "const": "NONE"
+        },
+        "root_authority": {
+          "const": "NONE"
+        },
+        "novelty_authority": {
+          "const": "NONE"
+        },
+        "originals_preserved": {
+          "const": true
+        },
+        "repairs_original_chronology": {
+          "const": false
+        }
+      }
+    },
+    "prospective_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "candidate_generation_allowed",
+        "required_fresh_artifacts",
+        "reopen_rule"
+      ],
+      "properties": {
+        "status": {
+          "const": "CLOSED"
+        },
+        "candidate_generation_allowed": {
+          "const": false
+        },
+        "required_fresh_artifacts": {
+          "type": "array",
+          "minItems": 5,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "reopen_rule": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "pr71_disposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "close_now",
+        "close_after_successor_review_and_merge",
+        "close_reason_after_merge"
+      ],
+      "properties": {
+        "close_now": {
+          "const": false
+        },
+        "close_after_successor_review_and_merge": {
+          "const": true
+        },
+        "close_reason_after_merge": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "authority_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "effective_authority",
+        "grants_strict_discovery_credit",
+        "grants_proof_authority",
+        "grants_candidate_authority",
+        "grants_root_authority",
+        "grants_theorem_authority",
+        "grants_novelty_authority",
+        "grants_framework_authority",
+        "grants_review_independence",
+        "may_backfill_chronology",
+        "may_rewrite_pr71"
+      ],
+      "properties": {
+        "effective_authority": {
+          "const": "RETROSPECTIVE_PROCESS_ASSURANCE_AND_NEGATIVE_HISTORY_ONLY"
+        },
+        "grants_strict_discovery_credit": {
+          "const": false
+        },
+        "grants_proof_authority": {
+          "const": false
+        },
+        "grants_candidate_authority": {
+          "const": false
+        },
+        "grants_root_authority": {
+          "const": false
+        },
+        "grants_theorem_authority": {
+          "const": false
+        },
+        "grants_novelty_authority": {
+          "const": false
+        },
+        "grants_framework_authority": {
+          "const": false
+        },
+        "grants_review_independence": {
+          "const": false
+        },
+        "may_backfill_chronology": {
+          "const": false
+        },
+        "may_rewrite_pr71": {
+          "const": false
+        }
+      }
+    },
+    "non_guarantees": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "artifact_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "historical_evidence_manifest": {
+      "type": "object",
+      "required": [
+        "entries",
+        "encoding",
+        "artifact_hash"
+      ]
+    }
+  }
+}
