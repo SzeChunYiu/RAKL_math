@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
@@ -10,6 +11,11 @@ BSD = ROOT / "research/real_math/millennium/birch_swinnerton_dyer"
 
 def _json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _canonical_sha256(value: object) -> str:
+    payload = json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
 
 
 def test_r9_frozen_fibre_and_exact_taskepisode_shadow_are_bound() -> None:
@@ -27,6 +33,26 @@ def test_r9_frozen_fibre_and_exact_taskepisode_shadow_are_bound() -> None:
     assert episode["artifact_hash"] == "4bbededb9c3577e97e200234d70d149296ecafc181715626b5463c8c2f73c66f"
     assert wrapper["telemetry_extension"]["failure_category"] == ["representation", "contextual_theory_gluing"]
     assert wrapper["authority"] == "PROPOSAL_SHADOW_NO_SCIENTIFIC_AUTHORITY"
+
+    core_keys = (
+        "episode_id",
+        "task_id",
+        "atom_id",
+        "context_hash",
+        "problem_signature",
+        "fibre_snapshot_hash",
+        "operator_ids",
+        "action_trace",
+        "observation_ids",
+        "verification_ids",
+        "outcome",
+        "residual_signature",
+        "evidence_pointers",
+        "timestamp",
+        "cost",
+        "storage_admission",
+    )
+    assert _canonical_sha256({key: episode[key] for key in core_keys}) == episode["artifact_hash"]
 
 
 def test_r9_episode_diagnosis_failure_obstruction_are_distinct_and_nonpromoted() -> None:
