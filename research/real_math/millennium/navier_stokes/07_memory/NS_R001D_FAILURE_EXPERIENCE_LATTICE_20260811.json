@@ -1,0 +1,101 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-NS-R001-A1-ENERGY-CRITICALITY",
+      "atom_id": "NS-R001",
+      "candidate_id": "A1-ENERGY-ONLY-ROUTE-SCREEN",
+      "context_packet_hash": "sha256:7140a6a639e76f9fd7abdcd6c4dc8570c3356c61058f7a7b503194660e4b5bea",
+      "research_trace_event_id": "NS-R001-E009",
+      "method_family": "Leray-energy interpolation plus generic divergence-free/Calderon-Zygmund structure",
+      "failure_mode": "criticality mismatch survives exact scale concentration on arbitrary smooth divergence-free histories",
+      "residual_signature": [
+        "L_t^infinity L_x^2 and L_t^2 dot H_x^1 remain fixed",
+        "every velocity Serrin-critical mixed norm scales like lambda^(1/2)",
+        "pressure-critical mixed norms scale like lambda",
+        "natural-scale CKN cubic quantity scales like lambda^(3/2)"
+      ],
+      "broken_assumptions": [
+        "finite Leray energy norms plus generic incompressibility/CZ structure would uniformly control a scale-critical regularity quantity"
+      ],
+      "scope_conditions": [
+        "arbitrary smooth compactly supported divergence-free spacetime histories",
+        "route uses no equation-specific trajectory identity beyond generic divergence-free and pressure CZ mapping"
+      ],
+      "competing_diagnoses": [
+        "the failure is purely a scaling mismatch and geometry may restore control",
+        "exact Navier-Stokes trajectories may exclude the adversarial histories",
+        "pressure-tail or frequency-local cancellations may be the missing coordinate"
+      ],
+      "selected_diagnosis": "energy-class size and generic divergence-free/CZ structure omit at least one equation-specific critical coordinate; the next test should add geometry without yet assuming full dynamics",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001_ENERGY_CRITICAL_ATLAS_20260811.md",
+        "tests/math_applications/test_navier_stokes_r001_energy_atlas.py",
+        "research/real_math/millennium/navier_stokes/09_trace/NS_R001_PRE_CANDIDATE_TRACE_20260811.json"
+      ],
+      "falsifier_or_attempt": "U_lambda=lambda^(3/2) phi(lambda x) psi(lambda^2 t) with fixed smooth compactly supported divergence-free phi and time profile psi",
+      "observed_result": "the Leray energy pair is scale invariant while all tested/general critical velocity and pressure norms diverge with positive powers of lambda",
+      "local_repair_attempts": [
+        "open NS-R001b to test whether strain/vorticity geometry removes the same concentration family",
+        "require any later estimate to identify a true-evolution coordinate absent from arbitrary histories"
+      ],
+      "timestamp": "2026-08-11T06:58:10+00:00",
+      "artifact_hash": "sha256:55488c51fde58c20036afac7550e9c192fb16e9fd0c18fad3df9ca093612ceac"
+    },
+    {
+      "failure_id": "F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP",
+      "atom_id": "NS-R001b",
+      "candidate_id": "A2A3-LOCAL-GEOMETRY-ROUTE-SCREEN",
+      "context_packet_hash": "sha256:ccac0992d2eedfd070ff1126e27922338e1b3243daaf383d27f9ccb3035601be",
+      "research_trace_event_id": "NS-R001b-E009",
+      "method_family": "local pointwise strain/vorticity alignment or depletion used without jointly enforcing exact trajectory dynamics and finite-energy/global localization",
+      "failure_mode": "the same strong positive-eigenframe alignment is compatible separately with finite-energy divergence-free localization and with exact Navier-Stokes dynamics, so local alignment alone does not isolate the Clay-relevant regime",
+      "residual_signature": [
+        "A2 is smooth compactly supported divergence free and has an open core with constant vorticity direction and omega·S omega>0, but is not an exact trajectory",
+        "A3 is an exact smooth Navier-Stokes linear flow with the same positive alignment and exponential vorticity growth, but has infinite kinetic energy on R^3",
+        "the surviving route must use the intersection of exact dynamics and finite-energy/global localization"
+      ],
+      "broken_assumptions": [
+        "local positive/negative alignment geometry by itself would distinguish dangerous from regular configurations in the Millennium class",
+        "exact PDE compatibility alone would make a local geometry calibration relevant to finite-energy Clay data"
+      ],
+      "scope_conditions": [
+        "pointwise or purely local strain/vorticity geometry without the full nonlocal solution-side hypotheses of established geometric criteria",
+        "route omits either exact trajectory information or global finite-energy/spatial localization"
+      ],
+      "competing_diagnoses": [
+        "nonlocal vorticity-direction coherence, not pointwise alignment, is the missing geometric object",
+        "exact advection/pressure interactions generate a trajectory-level depletion unavailable to static fields",
+        "finite-energy/global localization constrains exact aligned flows strongly enough to prevent persistent concentration",
+        "a different frequency-local or pressure-tail coordinate is load-bearing"
+      ],
+      "selected_diagnosis": "local alignment is a descriptive coordinate, not a sufficient bridge; the next method basis must couple exact trajectory dynamics to global finite-energy/localization and retain nonlocal structure",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001B_STRAIN_VORTICITY_ATLAS_20260811.md",
+        "tests/math_applications/test_navier_stokes_r001b_geometry_atlas.py",
+        "research/real_math/millennium/navier_stokes/09_trace/NS_R001B_GEOMETRY_TRACE_20260811.json"
+      ],
+      "falsifier_or_attempt": "paired A2/A3 calibration using the exact linear core S0=diag(-1/2,-1/2,1), omega parallel e3: compact-support curl localization for finite energy and b(t)=b0 e^t linear exact Navier-Stokes flow for exact dynamics",
+      "observed_result": "A2 preserves strong local positive alignment under finite-energy concentration without being a trajectory; A3 preserves the same alignment under exact Navier-Stokes evolution without finite energy; neither missing assumption can be ignored",
+      "local_repair_attempts": [
+        "open NS-R001d around exact advection-depletion plus finite-energy/global-localization",
+        "retain Constantin-Fefferman-type nonlocal coherence as a separate live route rather than equating it with pointwise alignment"
+      ],
+      "timestamp": "2026-08-11T06:59:55+00:00",
+      "artifact_hash": "sha256:77f3874811e1b96e03c7db2e0c3d34441f06ac235cc7ba77a45b14a79fcbba1e"
+    }
+  ],
+  "links": [
+    {
+      "source_id": "F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP",
+      "target_id": "F-NS-R001-A1-ENERGY-CRITICALITY",
+      "relation": "SHARES_BROKEN_ASSUMPTION_WITH",
+      "rationale": "Both screens show that a scale-compatible global regularity bridge cannot be supplied by a static low-order coordinate alone: first energy size, then local geometry.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001_ENERGY_CRITICAL_ATLAS_20260811.md",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001B_STRAIN_VORTICITY_ATLAS_20260811.md"
+      ]
+    }
+  ]
+}
