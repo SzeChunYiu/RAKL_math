@@ -1,0 +1,70 @@
+{
+  "application_checkout": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+  "command": "python tools/run_application_tests.py --framework framework/RAKL",
+  "does_not_establish": [
+    "mathematical validity",
+    "Millennium progress",
+    "independent review",
+    "framework research completeness",
+    "feedback lesson promotion"
+  ],
+  "evidence_artifacts": [
+    {
+      "commit_sha": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+      "git_blob_sha": "8631dad44286df39379e94c7acc0dba7d591e103",
+      "path": "tools/run_application_tests.py",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "834463372df959e503616fde4e47889302ff3e13c00edce0460fe849e18666ac"
+    },
+    {
+      "commit_sha": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+      "git_blob_sha": "b351194b2c4d63b4cadcb648c5bfcb8b2667ff31",
+      "path": "config/rakl-framework-pin.json",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "89457b9a51c15f6f44faf5635865652a53036304b26f2feba64a982e1db6a92c"
+    },
+    {
+      "commit_sha": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+      "git_blob_sha": "aa2f409afdd09f52a5c08fd0ecc10bf2b5cf62fe",
+      "path": "receipts/framework-pin-sync-15f1c3a-20260811.json",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "3b3f499cce29cf8d98a1de8eec1099089b065b862e2a4247075d63e35f7b9b74"
+    },
+    {
+      "commit_sha": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+      "git_blob_sha": "f96ac13d20d1d47c224ff0cf280839a55269d427",
+      "path": "tests/math_applications/test_framework_pin_contract.py",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "92ba9614d7a2b92a6a374c3c14db4d0297ca36fed18afb530343f5ac6e140455"
+    },
+    {
+      "commit_sha": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+      "git_blob_sha": "f6bf0b411239406b71a5bfae32fc69f5f07374ec",
+      "path": "docs/development.md",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "5ff284ec7d673cc8279630194d8bfbc66874be3d0b474ef78a9eb570bace7882"
+    }
+  ],
+  "exit_code": 0,
+  "framework_checkout": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+  "observed_suite_runs": [
+    {
+      "receipt_id": "RAKL-MATH-FRAMEWORK-PIN-SYNC-15f1c3a-20260811",
+      "recorded_receipt_tests_passed": 166
+    },
+    {
+      "live_recheck_tests_passed": 167,
+      "recorded_at_utc": "2026-08-11T08:20:18Z"
+    }
+  ],
+  "result_id": "result::rakl-math-feedback::exact-framework-pin-runner-v1",
+  "status": "PASS_EXACT_PIN_APPLICATION_CONFORMANCE",
+  "verified_guards": [
+    "config commit equals committed gitlink",
+    "framework HEAD equals configured commit",
+    "framework origin equals configured repository",
+    "framework src schemas and pyproject.toml are clean",
+    "PYTHONNOUSERSITE=1",
+    "PYTHONPATH exposes only verified framework src"
+  ]
+}

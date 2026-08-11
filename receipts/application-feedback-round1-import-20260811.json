@@ -1,0 +1,63 @@
+{
+  "authority_downgrades": [
+    "foreign_authority_downgraded:VERIFIED_LOCAL->HEURISTIC"
+  ],
+  "bundle_canonical_sha256": "cbc37595c5cae92e81fdf32405f951e747d42e87c5633c7f834833ae96f12520",
+  "bundle_id": "github.com/SzeChunYiu/RAKL_math::feedback-bundle::round1-20260811",
+  "effective_authority": "HEURISTIC",
+  "grants_method_promotion": false,
+  "grants_scientific_authority": false,
+  "item_records": [
+    {
+      "item_id": "github.com/SzeChunYiu/RAKL_math::failure-experience::o9-source-trace-hash-v1",
+      "kind": "FAILURE_EXPERIENCE",
+      "payload_canonical_sha256": "adedc6c5d5b04942b376e9ab2312676fa13b0b35e1492432816c59cd4c47c7dd"
+    },
+    {
+      "item_id": "github.com/SzeChunYiu/RAKL_math::failure-experience::migrated-test-root-v1",
+      "kind": "FAILURE_EXPERIENCE",
+      "payload_canonical_sha256": "137227c8c7cf41686e3124dc2a90f2922dd197abea3341de0633d3521a415eee"
+    },
+    {
+      "item_id": "github.com/SzeChunYiu/RAKL_math::failure-experience::framework-split-dangling-tests-v1",
+      "kind": "FAILURE_EXPERIENCE",
+      "payload_canonical_sha256": "f2638cb86975823534290f7cf8f842ce6b17ac65665c07987c5bf87cda3a574d"
+    },
+    {
+      "item_id": "github.com/SzeChunYiu/RAKL_math::tool-candidate::exact-framework-pin-runner-v1",
+      "kind": "TOOL_CANDIDATE",
+      "payload_canonical_sha256": "8305bc69660c50880f0c3b34aaf318a1894f937880d5347632c380baa0f74e9d"
+    }
+  ],
+  "mutation": {
+    "failure_lattice_mutation_performed": false,
+    "inventory_mutation_performed": false
+  },
+  "preserved_item_ids": [
+    "github.com/SzeChunYiu/RAKL_math::failure-experience::framework-split-dangling-tests-v1",
+    "github.com/SzeChunYiu/RAKL_math::failure-experience::migrated-test-root-v1",
+    "github.com/SzeChunYiu/RAKL_math::failure-experience::o9-source-trace-hash-v1"
+  ],
+  "producer": {
+    "commit_sha": "590b96278bb0bd4c89bc5db4bfe265061c52846a",
+    "repository_namespace": "github.com/SzeChunYiu/RAKL_math",
+    "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "tree_sha": "09981798985a0c075200afb97c9db3beece782c4"
+  },
+  "quarantined_item_ids": [
+    "github.com/SzeChunYiu/RAKL_math::failure-experience::o9-source-trace-hash-v1",
+    "github.com/SzeChunYiu/RAKL_math::failure-experience::migrated-test-root-v1",
+    "github.com/SzeChunYiu/RAKL_math::failure-experience::framework-split-dangling-tests-v1",
+    "github.com/SzeChunYiu/RAKL_math::tool-candidate::exact-framework-pin-runner-v1"
+  ],
+  "reasons": [
+    "all_transport_bindings_verified",
+    "application_feedback_remains_proposal_only",
+    "no_inventory_lattice_or_promotion_mutation_performed"
+  ],
+  "receipt_id": "rakl::application-feedback-import::7523595e8f7ff4fc55024b8fda1941443820e2db6b0ed0437007a7fdf422f5a4",
+  "requested_authority": "VERIFIED_LOCAL",
+  "schema_version": "application-feedback-import-receipt-v1",
+  "supersession_edges": [],
+  "verdict": "QUARANTINED_PROPOSAL"
+}

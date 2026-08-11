@@ -1,0 +1,64 @@
+{
+  "experience": {
+    "failure_id": "F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE",
+    "atom_id": "YM-E1a1",
+    "candidate_id": "YM-E1a1-C001",
+    "context_packet_hash": "sha256:95fe4879b25e9319e2de43ae287b467b86138752e66fd6dfa380e3a810d59802",
+    "research_trace_event_id": "YM-E1a1-E010",
+    "method_family": "exact finite scalar/single-contour source closure under local SU(N) Haar elimination",
+    "failure_mode": "a shared-link integration tangent between adjacent plaquette factors generates the concatenated rectangular Wilson-loop coordinate outside a marked vocabulary that omits that geometry",
+    "residual_signature": [
+      "for SU(N), N>=3, normalized Haar orthogonality gives integral Tr(AU) Tr(U^dagger B) dU = Tr(AB)/N",
+      "center invariance kills integral Tr(AU) Tr(B^dagger U) dU for N>=3",
+      "therefore F'_0(A,B)=Tr(AB)/(2N) for F_t defined with exp(t Re Tr(U^dagger B))",
+      "for SU(3), A=P and B=P versus B=P^2 keep Tr(A)=Tr(B)=0 while Tr(AB) changes from 0 to 3, so the generated rectangle coordinate is not determined by the separate scalar traces"
+    ],
+    "broken_assumptions": [
+      "a deliberately tiny finite fundamental-plaquette/single-contour mark vocabulary remains exactly closed under local gauge integration",
+      "the geometry of a Wilson-loop mark can be compressed to an unchanged scalar coefficient through blocking/elimination"
+    ],
+    "scope_conditions": [
+      "gauge group SU(N) with N>=3",
+      "normalized Haar integration over one shared link",
+      "two adjacent oriented plaquette factors in which the shared link appears with opposite orientation",
+      "first tangent at t=0 of a local interaction exp(t Re Tr(U^dagger B))",
+      "marked source vocabulary omits the concatenated rectangle loop or an equivalent coordinate capable of representing Tr(AB)"
+    ],
+    "competing_diagnoses": [
+      "genuine operator/geometry mixing under local gauge integration forces the concatenated contour into the marked state",
+      "the observed leakage is a strong-coupling/local-Haar feature whose coefficient or organization may differ in the weak-coupling Balaban RG regime, limiting transfer but not the exact local identity",
+      "a full block transformation may reorganize or cancel some local generated terms, so the local result cannot be promoted to a Balaban-wide impossibility without a block-specific derivation"
+    ],
+    "selected_diagnosis": "within the registered local Haar scope, the marked representation is too small: exact gauge integration generates a new concatenated-loop geometry that is not recoverable from the omitted scalar/single-contour coordinates; the broader method-level diagnosis remains scoped and is not promoted to a Balaban-wide impossibility",
+    "diagnosis_status": "SUPPORTED",
+    "evidence_pointers": [
+      "research/real_math/millennium/yang_mills/04_candidates/YM_E1a1_C001_LOCAL_HAAR_CONCATENATION_LEAKAGE_20260811.md",
+      "tests/math_applications/test_yang_mills_yme1a1_haar_leakage.py",
+      "research/real_math/millennium/yang_mills/03_sources/YM_E1a1_SOURCE_ADDENDUM_HAAR_20260811.md",
+      "R. A. Brandt, F. Neri, M.-a. Sato, Phys. Rev. D 24 (1981) 879, DOI:10.1103/PhysRevD.24.879",
+      "M. Creutz, J. Math. Phys. 19 (1978) 2043, DOI:10.1063/1.523581"
+    ],
+    "falsifier_or_attempt": "evaluate the exact one-link Haar contraction for adjacent plaquette source/action factors and use an SU(3) permutation-matrix pair as a planted witness against reconstruction of Tr(AB) from the separate scalar traces",
+    "observed_result": "the exact derivative contains Tr(AB)/(2N), and the SU(3) witness changes this generated coordinate while holding the separate traces fixed; exact closure of the tiny registered vocabulary is therefore false",
+    "local_repair_attempts": [
+      "add concatenated-contour and geometry labels rather than patching only scalar coefficients",
+      "prefer a graded/quasi-local marked loop/polymer or spin-network space with an explicit weighted support/complexity norm and typed irrelevant remainder",
+      "test the actual weak-coupling Balaban block before transferring the local impossibility beyond its registered scope",
+      "carry reflection-half-space buffer coordinates explicitly so support growth and positivity are audited separately"
+    ],
+    "timestamp": "2026-08-11T08:25:00+00:00",
+    "artifact_hash": "sha256:67ed53e303746e483a20304e2d1c25be07b0223d16a8f42c36474ffeeb2897a7"
+  },
+  "links": [
+    {
+      "source_id": "F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE",
+      "target_id": "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE",
+      "relation": "SHARES_BROKEN_ASSUMPTION_WITH",
+      "rationale": "Both failures warn that an aggressively compressed finite source representation can omit a load-bearing coordinate, but their causes and authorities differ: YM-E1a1-C001 is local operator/geometry proliferation under gauge integration, while YM-S1a is spectral invisibility of a non-dense source-generated sector.",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1A_FAILURE_EXPERIENCE_DELTA_20260811.json",
+        "research/real_math/millennium/yang_mills/04_candidates/YM_E1a1_C001_LOCAL_HAAR_CONCATENATION_LEAKAGE_20260811.md"
+      ]
+    }
+  ]
+}
