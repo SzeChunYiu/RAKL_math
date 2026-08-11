@@ -1,0 +1,401 @@
+{
+  "authority_envelope": {
+    "failure_lattice_mutation_allowed": false,
+    "inventory_mutation_allowed": false,
+    "promotion_allowed": false,
+    "proposal_only": true,
+    "requested_authority": "VERIFIED_LOCAL"
+  },
+  "bundle_canonical_sha256": "cbc37595c5cae92e81fdf32405f951e747d42e87c5633c7f834833ae96f12520",
+  "bundle_id": "github.com/SzeChunYiu/RAKL_math::feedback-bundle::round1-20260811",
+  "framework_requirement": {
+    "commit_sha": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+    "repository_url": "https://github.com/SzeChunYiu/RAKL.git",
+    "version": "0.6.0"
+  },
+  "items": [
+    {
+      "application_bindings": {
+        "context_git_blob_sha": "da9cd60ffeec7b8b8d21eb6ebec9804074177e9c",
+        "context_path": "research/meta/application_feedback/round1/contexts/o9_source_trace_hash.json",
+        "context_sha256": "fc0352c18084eaac077ec84e8ca45dba471660b5912888734cdc3f596aa6cc72",
+        "observed_at_utc": "2026-08-11T08:20:18Z",
+        "result_git_blob_sha": "04e687f5f49618132dbf6defcac5c41c247aeda9",
+        "result_id": "result::rakl-math-feedback::o9-source-trace-hash-v1",
+        "result_path": "research/meta/application_feedback/round1/results/o9_source_trace_hash.json",
+        "result_sha256": "0cf0a44cba598832d2a1fbb9a7d70b9af3f45a806b9086fd55f31378d5d126f9",
+        "trace_event_id": "trace-event::rakl-math-feedback::o9-source-trace-hash-observed-v1",
+        "trace_git_blob_sha": "d589877ae31bc1d67447cc14677f9ff6c6622d05",
+        "trace_path": "research/meta/application_feedback/round1/traces/o9_source_trace_hash.json",
+        "trace_sha256": "2368aac482d263d981cc3de9f0ca15917552789442b2a729a4f3c0f085fc224d"
+      },
+      "item_id": "github.com/SzeChunYiu/RAKL_math::failure-experience::o9-source-trace-hash-v1",
+      "kind": "FAILURE_EXPERIENCE",
+      "payload": {
+        "artifact_hash": "0cf0a44cba598832d2a1fbb9a7d70b9af3f45a806b9086fd55f31378d5d126f9",
+        "atom_id": "meta::migration-integrity::O9d12a2a1a",
+        "broken_assumptions": [
+          "stored artifact_hash equals the canonical JSON hash of the exact event payload with artifact_hash blank"
+        ],
+        "candidate_framework_delta": {
+          "proposal": "require byte-preservation evidence, independent canonical hash recomputation, immutable failed identity, and explicit unresolved-cause state for migrated hash chains",
+          "required_validation": [
+            "known-answer valid migration PASS",
+            "planted payload/hash mutation FAIL",
+            "unavailable source binding CANNOT_CHECK",
+            "fresh assurance outside this application packet"
+          ],
+          "status": "UNVALIDATED_PROPOSAL"
+        },
+        "candidate_id": "migrated-trace::TRACE-O9d12a2a1a-STRICT-20260811",
+        "competing_diagnoses": [
+          "source event payloads changed after E01-E06 hashes were frozen",
+          "E01-E06 hashes used a noncanonical payload or serializer",
+          "source packet was assembled from semantically similar but hash-incompatible generations"
+        ],
+        "context_packet_hash": "fc0352c18084eaac077ec84e8ca45dba471660b5912888734cdc3f596aa6cc72",
+        "diagnosis_status": "HYPOTHESIS",
+        "evidence_pointers": [
+          "result::rakl-math-feedback::o9-source-trace-hash-v1",
+          "trace-event::rakl-math-feedback::o9-source-trace-hash-observed-v1",
+          "https://github.com/SzeChunYiu/RAKL_math.git@6751eb1076597cfc93bdf874cf50db0d5774f4fa:migration/O9d12a2a1a_TRACE_INTEGRITY_REPAIR_RECEIPT_20260811.json#blob=addc8186b88a1fa1f963e6bbe317245b694d915a&sha256=82f3266eb2c8df8b563554287df54a92baa375a36d6f7822fa2baf358a6a1cce",
+          "https://github.com/SzeChunYiu/RAKL_math.git@6751eb1076597cfc93bdf874cf50db0d5774f4fa:research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a_PRE_CANDIDATE_TRACE_20260811.json#blob=1333d5fc80fa8ef37d42bd423b0574f1aaa67f3f&sha256=4842f757e095af3981e9261f76316983ca18c938ef4ba5f9f3d17f251e292094",
+          "https://github.com/SzeChunYiu/RAKL_math.git@6751eb1076597cfc93bdf874cf50db0d5774f4fa:research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a_PRE_CANDIDATE_TRACE_MIGRATION_REPAIRED_20260811.json#blob=5233ca223efafb638cdd6a9f54a72a8587873f7a&sha256=816a08928a81d81dfe615935e3cd1da9ef185144525322b277d21012009643d0",
+          "https://github.com/SzeChunYiu/RAKL_math.git@6751eb1076597cfc93bdf874cf50db0d5774f4fa:tests/math_applications/test_pnp_o9d12a2a1a_trace_migration_integrity.py#blob=3c7d3266f8e3e97d7442d17735ce70d3678c2485&sha256=2add863c4abd97fec4f5480c89cc9f86de4ccc82416bd5a903547e85b947eee3",
+          "https://github.com/SzeChunYiu/RAKL_math.git@6751eb1076597cfc93bdf874cf50db0d5774f4fa:migration/RAKL_FINAL_SOURCE_OVERLAY_PROVENANCE.md#blob=a80aed03d43ffd71b56aa188d8eee4f02b20e7be&sha256=bb74c455947dde79128e1e5c7a608e332d4189b3c87554f78e88c4d00ee4d178"
+        ],
+        "failure_id": "failure::rakl-math::o9-source-trace-hash-v1",
+        "failure_lattice_relations": [
+          "MOTIVATES_META_ATOM:cross_repository_feedback_transport",
+          "TRANSFER_WARNING_FOR:any_hash_chained_artifact_migration"
+        ],
+        "failure_mode": "canonical_event_hash_mismatch_in_source-preserved_trace",
+        "falsifier_or_attempt": "byte equality against source commit plus canonical per-event recomputation and stored-link audit",
+        "local_repair_attempts": [
+          "preserved original as negative history",
+          "created separately identified repaired trace by changing only identity and hash-chain fields"
+        ],
+        "method_family": "cross-repository-byte-preserving-migration",
+        "observed_result": "migration did not alter bytes; E01-E06 hashes were canonically invalid while stored links remained internally consistent; exact cause unresolved",
+        "research_trace_event_id": "trace-event::rakl-math-feedback::o9-source-trace-hash-observed-v1",
+        "residual_signature": [
+          "artifact_hash_mismatch",
+          "stored_hash_chain_links_preserved",
+          "semantic_event_order_preserved",
+          "migration_bytes_equal_source"
+        ],
+        "scope_conditions": [
+          "O9d12a2a1a migrated pre-candidate trace only",
+          "migration byte equality was checked against source commit 901307e4fb75e92f2ed3a547dcc696533ae52f2e",
+          "no mathematical candidate was evaluated"
+        ],
+        "selected_diagnosis": "source-side hash-generation inconsistency is localized, but the exact mutation or serializer cause is unresolved",
+        "timestamp": "2026-08-11T08:20:18Z",
+        "transport_limits": [
+          "one source trace is not cross-problem recurrence",
+          "byte preservation distinguishes transport mutation from source invalidity but cannot identify the source-side cause"
+        ]
+      },
+      "payload_canonical_sha256": "adedc6c5d5b04942b376e9ab2312676fa13b0b35e1492432816c59cd4c47c7dd",
+      "source": {
+        "git_blob_sha": "d062291352837684ecb552b6390bcd11150db6ba",
+        "path": "research/meta/application_feedback/round1/lessons/o9_source_trace_hash.json"
+      },
+      "supersedes": []
+    },
+    {
+      "application_bindings": {
+        "context_git_blob_sha": "188a5594dd590e003a25b43845a8607b87d11e7a",
+        "context_path": "research/meta/application_feedback/round1/contexts/migrated_test_root.json",
+        "context_sha256": "b677e32e8542b0d7ba9cdc9888a14169cde35cfef89a7c7cc34613c782a4f77e",
+        "observed_at_utc": "2026-08-11T08:20:18Z",
+        "result_git_blob_sha": "cb67e1184ee7c08ee8855a43a833d944ad98aab8",
+        "result_id": "result::rakl-math-feedback::migrated-test-root-v1",
+        "result_path": "research/meta/application_feedback/round1/results/migrated_test_root.json",
+        "result_sha256": "0acd344779f0f79b58976a1813e379af379c45245f887e753fd3f7d4ce334dd3",
+        "trace_event_id": "trace-event::rakl-math-feedback::migrated-test-root-observed-v1",
+        "trace_git_blob_sha": "0887818de512d95067382150a27ad602cf3d1140",
+        "trace_path": "research/meta/application_feedback/round1/traces/migrated_test_root.json",
+        "trace_sha256": "1b5d9332dee37926c6f27223ff71adab57a9949e5ab3f56e247933b94e66516f"
+      },
+      "item_id": "github.com/SzeChunYiu/RAKL_math::failure-experience::migrated-test-root-v1",
+      "kind": "FAILURE_EXPERIENCE",
+      "payload": {
+        "artifact_hash": "0acd344779f0f79b58976a1813e379af379c45245f887e753fd3f7d4ce334dd3",
+        "atom_id": "meta::repository-split::test-root-binding",
+        "broken_assumptions": [
+          "the relative depth from the test file to repository root is unchanged after migration"
+        ],
+        "candidate_framework_delta": {
+          "proposal": "make repository-migration assurance enumerate moved test locations and prove that resolved artifact roots stay within the declared destination repository",
+          "required_validation": [
+            "known-answer unchanged-layout PASS",
+            "planted extra-directory-depth FAIL",
+            "missing destination artifact CANNOT_CHECK rather than guessed rebinding",
+            "fresh non-Python migration assurance"
+          ],
+          "status": "UNVALIDATED_PROPOSAL"
+        },
+        "candidate_id": "migration-layout-assumption::parents[1]",
+        "competing_diagnoses": [
+          "artifact omitted from migration",
+          "test root points one directory too shallow",
+          "test executed from an unexpected working directory",
+          "case-sensitive path mismatch"
+        ],
+        "context_packet_hash": "b677e32e8542b0d7ba9cdc9888a14169cde35cfef89a7c7cc34613c782a4f77e",
+        "diagnosis_status": "SUPPORTED",
+        "evidence_pointers": [
+          "result::rakl-math-feedback::migrated-test-root-v1",
+          "trace-event::rakl-math-feedback::migrated-test-root-observed-v1",
+          "https://github.com/SzeChunYiu/RAKL_math.git@9ffa00dcb43639607bd58eca667eb83de4627a30:tests/math_applications/test_rh_spec_001_strict_packet.py#blob=1aa391f481994464205122a133248d9081ea4036&sha256=08410cc5f4bf99d34934668facb663510e04282f72d5894dd4dfae6f7715aa05",
+          "https://github.com/SzeChunYiu/RAKL_math.git@9ffa00dcb43639607bd58eca667eb83de4627a30:research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_001_CONTEXT_FIBER_20260811.json#blob=45eb9a78f2bb00b935abc426d64cc2c723f282b9&sha256=bfe98ee1f437a2435a4a7444a0a0086aa7db5ae6e3ebcc649f8df0539faaf0d8",
+          "https://github.com/SzeChunYiu/RAKL_math.git@264f6ce869d726fbfa064d1e49eb0db2a38bceda:tests/math_applications/test_rh_spec_001_strict_packet.py#blob=c4dd334eebcc4850553c7de45e65e320806530d2&sha256=0ee80057f585d681e334af8d0383a886cf021edd1ed9f6d36718d032cb029308",
+          "https://github.com/SzeChunYiu/RAKL_math.git@6751eb1076597cfc93bdf874cf50db0d5774f4fa:change_log/2026-08-11-bootstrap.md#blob=8c99872ce1abca797f29351b87e639ad51f3e5d2&sha256=220c2a541d081ec8fb57fee794076f94fb602d10c262f3b429d1003426cc5513"
+        ],
+        "failure_id": "failure::rakl-math::migrated-test-root-v1",
+        "failure_lattice_relations": [
+          "INSTANCE_OF:repository_layout_context_drift",
+          "SHARES_BROKEN_ASSUMPTION_WITH:path_bound_migration_failures"
+        ],
+        "failure_mode": "test_root_retained_source_repository_depth",
+        "falsifier_or_attempt": "run exact migrated test at source migration commit with exact framework code and inspect resolved missing path",
+        "local_repair_attempts": [
+          "rebind ROOT from parents[1] to parents[2]",
+          "bootstrap normalized the same structural pattern across migrated application tests"
+        ],
+        "method_family": "repository-tree-migration",
+        "observed_result": "pytest failed before mathematical gates because parents[1] resolved to tests/ rather than the application repository root",
+        "research_trace_event_id": "trace-event::rakl-math-feedback::migrated-test-root-observed-v1",
+        "residual_signature": [
+          "FileNotFoundError",
+          "resolved_path_under_tests/research",
+          "artifact_exists_under_repository_root/research",
+          "test_body_not_reached"
+        ],
+        "scope_conditions": [
+          "test moved from tests/ to tests/math_applications/",
+          "ROOT derived from Path(__file__).parents index",
+          "application artifacts remained under repository-root research/"
+        ],
+        "selected_diagnosis": "test root points one directory too shallow after the test moved into tests/math_applications",
+        "timestamp": "2026-08-11T08:20:18Z",
+        "transport_limits": [
+          "witness is a Python pathlib test-root defect",
+          "other languages and build systems require their own root-resolution checks"
+        ]
+      },
+      "payload_canonical_sha256": "137227c8c7cf41686e3124dc2a90f2922dd197abea3341de0633d3521a415eee",
+      "source": {
+        "git_blob_sha": "7835c20039c9d70dbfc396b04b614f5cde38b15d",
+        "path": "research/meta/application_feedback/round1/lessons/migrated_test_root.json"
+      },
+      "supersedes": []
+    },
+    {
+      "application_bindings": {
+        "context_git_blob_sha": "d25a092217cfbd55c049b9a1d848a270c4076c51",
+        "context_path": "research/meta/application_feedback/round1/contexts/framework_split_dangling_tests.json",
+        "context_sha256": "55a5794e43afa4d443863af0640a677aaec2fbb00a0faa8cb289991f5d1ef08d",
+        "observed_at_utc": "2026-08-11T08:20:18Z",
+        "result_git_blob_sha": "fda179ba06082b73acfcde1aaab5d30e21ade569",
+        "result_id": "result::rakl-math-feedback::framework-split-dangling-tests-v1",
+        "result_path": "research/meta/application_feedback/round1/results/framework_split_dangling_tests.json",
+        "result_sha256": "75933dc70681b882bdc3ad4057c3945e6c0a9a33de8c68940fb90434198bd86a",
+        "trace_event_id": "trace-event::rakl-math-feedback::framework-split-dangling-tests-observed-v1",
+        "trace_git_blob_sha": "d88c78f22d68226d65de989065d77a434043b523",
+        "trace_path": "research/meta/application_feedback/round1/traces/framework_split_dangling_tests.json",
+        "trace_sha256": "a166b4485867bdf63c00d1ed607a0365608a56c97430198c378bdd2277b96c5b"
+      },
+      "item_id": "github.com/SzeChunYiu/RAKL_math::failure-experience::framework-split-dangling-tests-v1",
+      "kind": "FAILURE_EXPERIENCE",
+      "payload": {
+        "artifact_hash": "75933dc70681b882bdc3ad4057c3945e6c0a9a33de8c68940fb90434198bd86a",
+        "atom_id": "meta::repository-split::ownership-closure",
+        "broken_assumptions": [
+          "removing application artifacts from the framework is sufficient to complete the ownership split"
+        ],
+        "candidate_framework_delta": {
+          "proposal": "require a bidirectional split manifest covering every moved artifact, its owning tests, destination preservation blob, and source removal decision before either suite may pass",
+          "required_validation": [
+            "known-answer complete split PASS",
+            "planted dangling source test FAIL",
+            "unavailable destination repository CANNOT_CHECK",
+            "fresh split task outside RAKL_math"
+          ],
+          "status": "UNVALIDATED_PROPOSAL"
+        },
+        "candidate_id": "framework-split::209a030b8ba5a1d1432fa79ff99db11d7c4769d8",
+        "competing_diagnoses": [
+          "destination migration omitted required artifacts",
+          "framework deletion set omitted application-owned tests",
+          "tests should remain cross-repository integration tests with an explicit checkout",
+          "test discovery cache referenced deleted files"
+        ],
+        "context_packet_hash": "55a5794e43afa4d443863af0640a677aaec2fbb00a0faa8cb289991f5d1ef08d",
+        "diagnosis_status": "SUPPORTED",
+        "evidence_pointers": [
+          "result::rakl-math-feedback::framework-split-dangling-tests-v1",
+          "trace-event::rakl-math-feedback::framework-split-dangling-tests-observed-v1",
+          "https://github.com/SzeChunYiu/RAKL.git@209a030b8ba5a1d1432fa79ff99db11d7c4769d8:tests/test_pnp_c024_fractional_semifilter.py#blob=620c57bdc5c262bedf4fd76adac06835498408e5&sha256=e20f80ad44251ac308883034c1379d978a7da767d67db613030d3942a5969566",
+          "https://github.com/SzeChunYiu/RAKL.git@209a030b8ba5a1d1432fa79ff99db11d7c4769d8:research/real_math/README.md#blob=8cf799e118ec8bcfc84a9d700b8b4ebf8c19ae62&sha256=76ecb27d53aae98a25c9297fb1697f9b0c6bcdee9636132007df83fbe59276c4",
+          "https://github.com/SzeChunYiu/RAKL_math.git@9ffa00dcb43639607bd58eca667eb83de4627a30:tests/math_applications/test_pnp_c024_fractional_semifilter.py#blob=620c57bdc5c262bedf4fd76adac06835498408e5&sha256=e20f80ad44251ac308883034c1379d978a7da767d67db613030d3942a5969566",
+          "https://github.com/SzeChunYiu/RAKL_math.git@9ffa00dcb43639607bd58eca667eb83de4627a30:research/real_math/millennium/p_vs_np/07_memory/C024_RESEARCH_TOOL_DELTA_20260811.json#blob=3e874f25aab5192c7e5468a7fba2f6979b283f20&sha256=ea685cce50ad13b0423c69da68048d2783506234a1463510da108dc158be8844",
+          "https://github.com/SzeChunYiu/RAKL_math.git@6751eb1076597cfc93bdf874cf50db0d5774f4fa:AGENTS.md#blob=2fae7dfa9e2a9754d84fcae549f268c30349cbd2&sha256=e4225bdc057c8437586e710aa6139fb6b6601ee18b547141de697ceaf9ccc469"
+        ],
+        "failure_id": "failure::rakl-math::framework-split-dangling-tests-v1",
+        "failure_lattice_relations": [
+          "INSTANCE_OF:repository_ownership_closure_failure",
+          "SHARES_RESIDUAL_WITH:migrated_test_root_v1",
+          "MOTIVATES_META_ATOM:bidirectional_split_manifest"
+        ],
+        "failure_mode": "application_tests_retained_after_bound_artifacts_removed",
+        "falsifier_or_attempt": "execute a retained application regression at the exact intermediate framework split commit and compare exact source/destination trees",
+        "local_repair_attempts": [
+          "verify application artifacts and regressions exist in RAKL_math",
+          "remove 19 migrated application regressions from framework",
+          "rerun framework and application suites separately"
+        ],
+        "method_family": "framework-application-repository-split",
+        "observed_result": "one retained test produced two missing-artifact failures; preservation in RAKL_math followed by removal of 19 application regressions from framework restored ownership closure",
+        "research_trace_event_id": "trace-event::rakl-math-feedback::framework-split-dangling-tests-observed-v1",
+        "residual_signature": [
+          "FileNotFoundError in framework pytest",
+          "application tests still discovered",
+          "bound research artifacts absent from framework tree",
+          "destination repository already contains preserved test and artifacts"
+        ],
+        "scope_conditions": [
+          "RAKL framework commit 209a030 removed application artifacts",
+          "application regressions still existed under framework tests/",
+          "RAKL_math commit 9ffa00d preserved the migrated counterparts"
+        ],
+        "selected_diagnosis": "framework deletion set omitted application-owned regressions after their path-bound artifacts moved to RAKL_math",
+        "timestamp": "2026-08-11T08:20:18Z",
+        "transport_limits": [
+          "observed on the RAKL to RAKL_math split",
+          "test removal is valid only after exact destination preservation; it is not a general instruction to delete failing tests"
+        ]
+      },
+      "payload_canonical_sha256": "f2638cb86975823534290f7cf8f842ce6b17ac65665c07987c5bf87cda3a574d",
+      "source": {
+        "git_blob_sha": "b715af98c2238cec2c035572eedf861e261b88c2",
+        "path": "research/meta/application_feedback/round1/lessons/framework_split_dangling_tests.json"
+      },
+      "supersedes": []
+    },
+    {
+      "application_bindings": {
+        "context_git_blob_sha": "496a3fa10fa8f2c46142a46e5e7e08fe0214119b",
+        "context_path": "research/meta/application_feedback/round1/contexts/exact_framework_pin_runner.json",
+        "context_sha256": "b67461fc2238a686ab3356f05a6beb6cb02e5742089da96386e915a10e71825b",
+        "observed_at_utc": "2026-08-11T08:20:18Z",
+        "result_git_blob_sha": "4d4aad846972154207720478ac478abbb809ea37",
+        "result_id": "result::rakl-math-feedback::exact-framework-pin-runner-v1",
+        "result_path": "research/meta/application_feedback/round1/results/exact_framework_pin_runner.json",
+        "result_sha256": "2caf9e01c299b3ff5c214d845a78486c21775782d1a5266fa4a625e530cf125a",
+        "trace_event_id": "trace-event::rakl-math-feedback::exact-framework-pin-runner-observed-v1",
+        "trace_git_blob_sha": "6ef049bf0e8e79b6445e080557e2817042a59cff",
+        "trace_path": "research/meta/application_feedback/round1/traces/exact_framework_pin_runner.json",
+        "trace_sha256": "f08931c1602cbd49db0c5bb651642ed002f3a568ea935d617c092ba2ee490f11"
+      },
+      "item_id": "github.com/SzeChunYiu/RAKL_math::tool-candidate::exact-framework-pin-runner-v1",
+      "kind": "TOOL_CANDIDATE",
+      "payload": {
+        "abstraction": "bind the dependency gitlink, machine config, repository identity, clean executable authority surface, import path, and full application suite before accepting conformance",
+        "artifact_hash": "2caf9e01c299b3ff5c214d845a78486c21775782d1a5266fa4a625e530cf125a",
+        "candidate_framework_delta": {
+          "proposal": "offer the exact-pin runner pattern as a scoped repository-split assurance tool, never as an automatic promoted tool",
+          "required_validation": [
+            "known-answer PASS",
+            "planted mismatch FAIL",
+            "structurally missing Git authority CANNOT_CHECK",
+            "fresh target-specific assurance"
+          ],
+          "status": "UNVALIDATED_PROPOSAL"
+        },
+        "evidence_pointers": [
+          "result::rakl-math-feedback::exact-framework-pin-runner-v1",
+          "trace-event::rakl-math-feedback::exact-framework-pin-runner-observed-v1",
+          "https://github.com/SzeChunYiu/RAKL_math.git@6751eb1076597cfc93bdf874cf50db0d5774f4fa:tools/run_application_tests.py#blob=8631dad44286df39379e94c7acc0dba7d591e103&sha256=834463372df959e503616fde4e47889302ff3e13c00edce0460fe849e18666ac",
+          "https://github.com/SzeChunYiu/RAKL_math.git@6751eb1076597cfc93bdf874cf50db0d5774f4fa:config/rakl-framework-pin.json#blob=b351194b2c4d63b4cadcb648c5bfcb8b2667ff31&sha256=89457b9a51c15f6f44faf5635865652a53036304b26f2feba64a982e1db6a92c",
+          "https://github.com/SzeChunYiu/RAKL_math.git@6751eb1076597cfc93bdf874cf50db0d5774f4fa:receipts/framework-pin-sync-15f1c3a-20260811.json#blob=aa2f409afdd09f52a5c08fd0ecc10bf2b5cf62fe&sha256=3b3f499cce29cf8d98a1de8eec1099089b065b862e2a4247075d63e35f7b9b74",
+          "https://github.com/SzeChunYiu/RAKL_math.git@6751eb1076597cfc93bdf874cf50db0d5774f4fa:tests/math_applications/test_framework_pin_contract.py#blob=f96ac13d20d1d47c224ff0cf280839a55269d427&sha256=92ba9614d7a2b92a6a374c3c14db4d0297ca36fed18afb530343f5ac6e140455",
+          "https://github.com/SzeChunYiu/RAKL_math.git@6751eb1076597cfc93bdf874cf50db0d5774f4fa:docs/development.md#blob=f6bf0b411239406b71a5bfae32fc69f5f07374ec&sha256=5ff284ec7d673cc8279630194d8bfbc66874be3d0b474ef78a9eb570bace7882"
+        ],
+        "guaranteed_effects": [
+          "fails closed before pytest on a detected gitlink/config/HEAD/origin mismatch",
+          "fails closed on detected dirty or untracked files under enumerated framework authority paths",
+          "runs the complete discovered application test directory against the verified framework src when all preconditions hold"
+        ],
+        "kind": "reproducible-execution-gate",
+        "known_failure_ids": [
+          "failure::rakl-math::migrated-test-root-v1",
+          "failure::rakl-math::framework-split-dangling-tests-v1"
+        ],
+        "name": "exact submodule/config/clean-authority application runner",
+        "non_guarantees": [
+          "does not prove any mathematical statement",
+          "does not establish test adequacy or complete path discovery",
+          "does not make same-context review independent",
+          "does not validate or promote application feedback",
+          "does not detect executable authority paths omitted from its enumerated surface"
+        ],
+        "operation": "verify gitlink=config=framework HEAD and origin, reject dirty src/schemas/pyproject.toml, isolate Python imports, then run the full application suite",
+        "preconditions": [
+          "application commit contains an exact framework gitlink",
+          "machine-readable config names the same full framework SHA and repository",
+          "framework checkout is available at that SHA with matching origin",
+          "all import-bearing framework authority paths are enumerated",
+          "complete destination application suite is discoverable"
+        ],
+        "proof_backing": [],
+        "requested_authority": "VERIFIED_LOCAL",
+        "source_atom_id": "meta::execution-authority::framework-pin",
+        "source_candidate_id": "tools/run_application_tests.py@6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+        "source_context_hash": "b67461fc2238a686ab3356f05a6beb6cb02e5742089da96386e915a10e71825b",
+        "source_result_ids": [
+          "result::rakl-math-feedback::exact-framework-pin-runner-v1"
+        ],
+        "structural_signature": [
+          "split application/framework repositories",
+          "Git-pinned Python dependency",
+          "application tests import framework runtime",
+          "dirty or untracked import-bearing files can alter effective authority"
+        ],
+        "successful_reuse_ids": [
+          "RAKL-MATH-FRAMEWORK-PIN-SYNC-15f1c3a-20260811",
+          "live-recheck::167-passed::2026-08-11T08:20:18Z"
+        ],
+        "tool_id": "tool::rakl-math::exact-framework-pin-runner-v1",
+        "transport_limits": [
+          "verified only for this Python/Git/submodule application layout",
+          "a new target must enumerate its own executable authority surface and complete test roots"
+        ],
+        "validation_obligations": [
+          "DifferenceWitness",
+          "ToolApplicabilityWitness",
+          "plant gitlink/config/HEAD mismatch and require failure",
+          "plant wrong origin and require failure",
+          "plant dirty src and untracked src/sitecustomize.py and require failure",
+          "confirm full destination test discovery independently",
+          "rerun on a fresh target repository before any reusable authority claim"
+        ]
+      },
+      "payload_canonical_sha256": "8305bc69660c50880f0c3b34aaf318a1894f937880d5347632c380baa0f74e9d",
+      "source": {
+        "git_blob_sha": "f791fd0293e34cbaaf2891185ac21bb8dcd56e8c",
+        "path": "research/meta/application_feedback/round1/lessons/exact_framework_pin_runner.json"
+      },
+      "supersedes": []
+    }
+  ],
+  "previous_bundle": null,
+  "producer": {
+    "commit_sha": "590b96278bb0bd4c89bc5db4bfe265061c52846a",
+    "repository_namespace": "github.com/SzeChunYiu/RAKL_math",
+    "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "tree_sha": "09981798985a0c075200afb97c9db3beece782c4"
+  },
+  "schema_version": "application-feedback-bundle-v1"
+}

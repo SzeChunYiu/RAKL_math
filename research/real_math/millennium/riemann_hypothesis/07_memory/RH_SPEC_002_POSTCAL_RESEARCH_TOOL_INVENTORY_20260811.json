@@ -1,0 +1,67 @@
+{
+  "tools": [
+    {
+      "tool_id": "T-RH-SPEC-HURWITZ-DOMAIN-ZERO-TRANSPORT",
+      "name": "Domain-local Hurwitz zero transport for real-rooted approximants",
+      "kind": "spectral_entire_function_limit_filter",
+      "abstraction": "If holomorphic approximants are zero-free off the real axis in an open target domain and converge locally uniformly there to a nonzero holomorphic limit, then Hurwitz prevents new nonreal limit zeros in that domain; Rouche/Hurwitz counting transports local multiplicity on zero-isolating compact contours.",
+      "source_atom_id": "RH-SPEC-002",
+      "source_candidate_id": "RETROSPECTIVE:RH-SPEC-002-LIMIT-STABILITY-CAL001",
+      "source_result_ids": [
+        "CAL-HURWITZ-REAL-ZERO-TRANSPORT"
+      ],
+      "source_context_hash": "sha256:99eb4c30af5c745c5d1f6b546fa8df0e775494c07f51fe9548c50ce81bfba224",
+      "authority": "CONDITIONALLY_REUSABLE",
+      "preconditions": [
+        "there is a fixed open complex domain D in which each approximant is holomorphic",
+        "each approximant has no zeros in D minus the real axis",
+        "the approximants converge locally uniformly on D to a holomorphic limit not identically zero",
+        "for multiplicity transfer, the chosen contour lies compactly inside D and its boundary is zero-free for the limit",
+        "reuse relies on the standard Hurwitz/Rouche theorem, not on PR15 preregistration or result chronology"
+      ],
+      "structural_signature": [
+        "holomorphic/entire approximant family",
+        "real-zero or off-real zero-free finite-stage property",
+        "locally uniform convergence on a fixed open domain",
+        "nonzero target limit",
+        "compact-by-compact zero transport"
+      ],
+      "operation": "for any proposed spectral/determinant route, identify the minimal root-relevant open domain, prove source-normalized local-uniform convergence on every compact subset of that domain, then apply Hurwitz off the real axis and Rouche/Hurwitz counting near isolated target zeros",
+      "guaranteed_effects": [
+        "rules out nonreal zeros of the nonzero limit inside the proved convergence domain",
+        "transports the total zero multiplicity inside any sufficiently small zero-isolating contour compactly contained in the domain"
+      ],
+      "non_guarantees": [
+        "does not prove source-side convergence or normalization",
+        "does not establish finite-stage real-rootedness",
+        "does not identify the limit with Xi",
+        "does not control zeros outside the convergence domain",
+        "does not by itself prove that the chosen domain contains every root-relevant nontrivial Xi zero",
+        "does not convert the retrospective PR15 case record into preregistered validator evidence",
+        "does not merge with or inherit authority from the distinct 11-case preregistered local lineage"
+      ],
+      "validation_obligations": [
+        "freeze the target domain before evaluation and justify why it covers the root-relevant zeros",
+        "verify local-uniform rather than pointwise/zero-prefix/statistical convergence",
+        "verify the limit is not identically zero and is exactly the intended arithmetic target",
+        "verify finite-stage zero-free/real-rooted hypotheses on the same cofinal family",
+        "keep any source-side normalization fixed independently of known target zeros",
+        "cite and independently check the applicable Hurwitz/Rouche hypotheses; PR15 is only retrospective provenance"
+      ],
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.json",
+        "Alain Connes, Caterina Consani, Henri Moscovici, Zeta Spectral Triples, arXiv:2511.22755 (2025), Sections 7-8",
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_SPEC_002_PR15_CHRONOLOGY_HASH_AUDIT_20260811.json",
+        "sha256:117313f7b46a16510945bc912e9039ddb15c62b559525cb010afce899b9eaac1"
+      ],
+      "known_failure_ids": [
+        "F-RH-SPEC-002-FINITE-ZERO-PREFIX",
+        "F-RH-SPEC-002-JOINT-LIMIT-AMBIGUITY",
+        "F-RH-SPEC-002-PR15-CHRONOLOGY"
+      ],
+      "successful_reuse_ids": [],
+      "proof_backing": [],
+      "artifact_hash": "sha256:12376b9e762078498ccf9d88992f746119159411ef8549859c287e5f805b3cf9"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "artifact_hash": "75933dc70681b882bdc3ad4057c3945e6c0a9a33de8c68940fb90434198bd86a",
+  "atom_id": "meta::repository-split::ownership-closure",
+  "broken_assumptions": [
+    "removing application artifacts from the framework is sufficient to complete the ownership split"
+  ],
+  "candidate_framework_delta": {
+    "proposal": "require a bidirectional split manifest covering every moved artifact, its owning tests, destination preservation blob, and source removal decision before either suite may pass",
+    "required_validation": [
+      "known-answer complete split PASS",
+      "planted dangling source test FAIL",
+      "unavailable destination repository CANNOT_CHECK",
+      "fresh split task outside RAKL_math"
+    ],
+    "status": "UNVALIDATED_PROPOSAL"
+  },
+  "candidate_id": "framework-split::209a030b8ba5a1d1432fa79ff99db11d7c4769d8",
+  "competing_diagnoses": [
+    "destination migration omitted required artifacts",
+    "framework deletion set omitted application-owned tests",
+    "tests should remain cross-repository integration tests with an explicit checkout",
+    "test discovery cache referenced deleted files"
+  ],
+  "context_packet_hash": "55a5794e43afa4d443863af0640a677aaec2fbb00a0faa8cb289991f5d1ef08d",
+  "diagnosis_status": "SUPPORTED",
+  "evidence_pointers": [
+    "result::rakl-math-feedback::framework-split-dangling-tests-v1",
+    "trace-event::rakl-math-feedback::framework-split-dangling-tests-observed-v1",
+    "https://github.com/SzeChunYiu/RAKL.git@209a030b8ba5a1d1432fa79ff99db11d7c4769d8:tests/test_pnp_c024_fractional_semifilter.py#blob=620c57bdc5c262bedf4fd76adac06835498408e5&sha256=e20f80ad44251ac308883034c1379d978a7da767d67db613030d3942a5969566",
+    "https://github.com/SzeChunYiu/RAKL.git@209a030b8ba5a1d1432fa79ff99db11d7c4769d8:research/real_math/README.md#blob=8cf799e118ec8bcfc84a9d700b8b4ebf8c19ae62&sha256=76ecb27d53aae98a25c9297fb1697f9b0c6bcdee9636132007df83fbe59276c4",
+    "https://github.com/SzeChunYiu/RAKL_math.git@9ffa00dcb43639607bd58eca667eb83de4627a30:tests/math_applications/test_pnp_c024_fractional_semifilter.py#blob=620c57bdc5c262bedf4fd76adac06835498408e5&sha256=e20f80ad44251ac308883034c1379d978a7da767d67db613030d3942a5969566",
+    "https://github.com/SzeChunYiu/RAKL_math.git@9ffa00dcb43639607bd58eca667eb83de4627a30:research/real_math/millennium/p_vs_np/07_memory/C024_RESEARCH_TOOL_DELTA_20260811.json#blob=3e874f25aab5192c7e5468a7fba2f6979b283f20&sha256=ea685cce50ad13b0423c69da68048d2783506234a1463510da108dc158be8844",
+    "https://github.com/SzeChunYiu/RAKL_math.git@6751eb1076597cfc93bdf874cf50db0d5774f4fa:AGENTS.md#blob=2fae7dfa9e2a9754d84fcae549f268c30349cbd2&sha256=e4225bdc057c8437586e710aa6139fb6b6601ee18b547141de697ceaf9ccc469"
+  ],
+  "failure_id": "failure::rakl-math::framework-split-dangling-tests-v1",
+  "failure_lattice_relations": [
+    "INSTANCE_OF:repository_ownership_closure_failure",
+    "SHARES_RESIDUAL_WITH:migrated_test_root_v1",
+    "MOTIVATES_META_ATOM:bidirectional_split_manifest"
+  ],
+  "failure_mode": "application_tests_retained_after_bound_artifacts_removed",
+  "falsifier_or_attempt": "execute a retained application regression at the exact intermediate framework split commit and compare exact source/destination trees",
+  "local_repair_attempts": [
+    "verify application artifacts and regressions exist in RAKL_math",
+    "remove 19 migrated application regressions from framework",
+    "rerun framework and application suites separately"
+  ],
+  "method_family": "framework-application-repository-split",
+  "observed_result": "one retained test produced two missing-artifact failures; preservation in RAKL_math followed by removal of 19 application regressions from framework restored ownership closure",
+  "research_trace_event_id": "trace-event::rakl-math-feedback::framework-split-dangling-tests-observed-v1",
+  "residual_signature": [
+    "FileNotFoundError in framework pytest",
+    "application tests still discovered",
+    "bound research artifacts absent from framework tree",
+    "destination repository already contains preserved test and artifacts"
+  ],
+  "scope_conditions": [
+    "RAKL framework commit 209a030 removed application artifacts",
+    "application regressions still existed under framework tests/",
+    "RAKL_math commit 9ffa00d preserved the migrated counterparts"
+  ],
+  "selected_diagnosis": "framework deletion set omitted application-owned regressions after their path-bound artifacts moved to RAKL_math",
+  "timestamp": "2026-08-11T08:20:18Z",
+  "transport_limits": [
+    "observed on the RAKL to RAKL_math split",
+    "test removal is valid only after exact destination preservation; it is not a general instruction to delete failing tests"
+  ]
+}

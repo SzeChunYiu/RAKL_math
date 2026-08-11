@@ -1,0 +1,21 @@
+{
+  "allowed_evidence": [
+    "exact Git trees and blobs",
+    "isolated pytest execution at framework commit 209a030",
+    "application preservation commit 9ffa00d",
+    "framework test-removal commit 3527827 and merged split commit 55d4cb0"
+  ],
+  "application_preservation_commit": "9ffa00dcb43639607bd58eca667eb83de4627a30",
+  "authority": "APPLICATION_OBSERVATION_ONLY",
+  "context_id": "context::rakl-math-feedback::framework-split-dangling-tests-v1",
+  "framework_failure_commit": "209a030b8ba5a1d1432fa79ff99db11d7c4769d8",
+  "framework_merge_commit": "55d4cb0a83f271d3263fbe48f99b173119c732d2",
+  "framework_resolution_commit": "3527827463081b46d8fd451b3154f9eaaabc3ba9",
+  "object": "framework/application repository split completeness",
+  "observation_boundary": "one exact failing P/NP regression at framework commit 209a030 plus tree-level preservation/removal commits",
+  "quantity_of_interest": "whether the framework tree retained executable application regressions after their bound application artifacts were removed, and whether artifacts/tests were preserved in RAKL_math before framework removal",
+  "scope_limits": [
+    "repository ownership and CI integrity only",
+    "does not evaluate the mathematical application assertions"
+  ]
+}
