@@ -1,0 +1,64 @@
+{
+  "episode_id": "EP-RH-ANA-003-DENSITY-THRESHOLD-20260811",
+  "task_id": "TASK-RH-ANA-003-DENSITY-THRESHOLD-20260811",
+  "atom_id": "RH-ANA-003",
+  "context_hash": "31e2fc6491b0b61f8e7b7b96c668592b860b37166dc84e12cb488b3a19bb985d",
+  "problem_signature": [
+    "classical Riemann zeta",
+    "exact RH zero occupancy for every fixed sigma>1/2",
+    "current zero-density/zero-free plus finite-height standalone tail closure"
+  ],
+  "fibre_snapshot_hash": "31e2fc6491b0b61f8e7b7b96c668592b860b37166dc84e12cb488b3a19bb985d",
+  "operator_ids": [
+    "gap_discovery",
+    "experiment_query_selection",
+    "contradiction_diagnosis",
+    "equivalence_similarity",
+    "synthesis",
+    "saturation_stopping"
+  ],
+  "action_trace": [
+    "derived local integer-count <1 threshold before testing source bounds",
+    "tested Guth-Maynard 2026 cumulative density exponent against occupancy threshold",
+    "tested Bellotti explicit log-free density against occupancy threshold",
+    "tested Mossinghoff-Trudgian-Yang zero-free region coverage of fixed half-strips",
+    "kept Platt-Trudgian verification confined to finite-height calibration",
+    "constructed one-defect monotone count as an inference-form DifferenceWitness only"
+  ],
+  "observation_ids": [
+    "OBS-RH-ANA-003-GM-POSITIVE-EXPONENT",
+    "OBS-RH-ANA-003-BELLOTTI-POSITIVE-BOUND",
+    "OBS-RH-ANA-003-ZFR-SHRINKS-TO-ONE",
+    "OBS-RH-ANA-003-FINITE-PREFIX-ONLY",
+    "OBS-RH-ANA-003-COUNT-THRESHOLD"
+  ],
+  "verification_ids": [
+    "VERIFY-RH-ANA-003-INTEGRAL-COUNT-LEMMA",
+    "SRC-GM-2026",
+    "SRC-BELLOTTI-ZD-2024",
+    "SRC-MTY-ZFR",
+    "SRC-PT-VERIFY",
+    "pre_action_receipt:ef4ceea2dd867fd33ba2e95d1f2e0981edfcf0b093cb07a0c36c201b962ebefb"
+  ],
+  "outcome": "FAILURE",
+  "residual_signature": [
+    "current cumulative density bounds still permit one or more off-critical tail zeros",
+    "near-one zero-free region does not cover any fixed sigma<1 half-strip at all large heights",
+    "finite rigorous verification has no infinite-tail authority",
+    "need local tail count <1, single-zero contradiction, or exact weighted prime/archimedean exclusion mechanism"
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_ANA_003_ZERO_DENSITY_TO_EXCLUSION_NO_GO_20260811.md",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003_PRIMARY_SOURCE_PACKET_20260811.md",
+    "research/real_math/millennium/riemann_hypothesis/08_reviews/SAME_CONTEXT_REVIEW_RH_ANA_003_PRE_CANDIDATE_20260811.md",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003_RESEARCH_MEMORY_REVIEW_20260811.json"
+  ],
+  "artifact_hash": "158c40ee7fe06661d0ae4a95c72cc81597aa6a41b3bb14b2f094c4eac20e7209",
+  "timestamp": "2026-08-11T16:14:00+00:00",
+  "cost": 0.0,
+  "chronology_binding": {
+    "receipt_pointer": "pre_action_receipt:ef4ceea2dd867fd33ba2e95d1f2e0981edfcf0b093cb07a0c36c201b962ebefb",
+    "status": "PROSPECTIVE_BY_REPOSITORY_CHRONOLOGY; CANONICAL_BINDING_CHECKER_NOT_EXECUTED",
+    "authority": "NO_THEOREM_AUTHORITY"
+  }
+}
