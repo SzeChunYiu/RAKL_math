@@ -1,0 +1,424 @@
+{
+  "schema": "RAKL_math.v3_case_study_metrics_task_episode.v1",
+  "authority": "PROPOSAL_SHADOW_MEASUREMENT_ONLY_ROOT_AUTHORITY_NONE",
+  "RAKL_METHOD_CASE_STUDY": {
+    "case_id": "YM-E3a1-CASE-20260811T1939Z",
+    "atom": "YM-E3a1",
+    "atom_signature": "YM-E3a1-A10-INVARIANT-BALL-RECURRENCE-REPAIR-AND-SOURCE-BINDING",
+    "problem_signature": "constructive_continuum_qft | weak_coupling_FRD_RG | quadratic_recurrence | invariant_small_ball | source_specific_gluing",
+    "actual_fibre": {
+      "fibre_receipt": "research/real_math/millennium/yang_mills/10_case_study/YM-E3a1_FIBRE_RECEIPT_20260811T1939Z.json",
+      "fibre_snapshot_hash": "7afd90bb326b40a960aaac81fce5049f5423b9b034b20fca2ecaad9abb4b4c66",
+      "hash_scope": "canonical receipt payload before insertion of the self-hash field; operational fingerprint only",
+      "selected": [
+        "SzeChunYiu/RAKL current main and v3 manifest/method_specs/v3_metrology",
+        "RAKL_math#5 Yang-Mills exact root",
+        "RAKL_math#93 / YM-E3a",
+        "RAKL_math PR#97 retrospective source audit",
+        "Faizal-Shabir arXiv:2606.19362v1 Theorem 5.3 and Appendix A.9/A.10"
+      ],
+      "rejected_or_downstream": [
+        "RAKL_math#69 / YM-S1c1",
+        "RAKL_math#109 / YM-E4a",
+        "RAKL_math#126 / YM-E4b",
+        "RAKL_math PR#140 / YM-E4b2b",
+        "cross-Millennium memory"
+      ]
+    },
+    "methods_operators_motifs_tried": {
+      "canonical_method_specs_surfaces": [
+        "decomposition",
+        "routing",
+        "search_query_generation",
+        "source_selection_reliability",
+        "claim_extraction",
+        "mathematical_context_translation",
+        "gap_discovery",
+        "experiment_query_selection",
+        "memory",
+        "review",
+        "contextual_theory_gluing",
+        "saturation_stopping"
+      ],
+      "operators_motifs": [
+        "invariant-small-ball induction",
+        "variation-of-constants recurrence unrolling",
+        "counterexample-first threshold check",
+        "source-native repair search before external analogue transfer",
+        "local-versus-gluing type separation",
+        "constant-floor versus true exponential-decay discriminator"
+      ]
+    },
+    "retrieved_prior_experience": [
+      {
+        "id": "RAKL_math#93/YM-E3a",
+        "status": "SELECTED",
+        "effect": "supplied the already-frozen invariant-small-ball repair direction and prevented treating that direction itself as new discovery"
+      },
+      {
+        "id": "RAKL_math PR#97",
+        "status": "SELECTED",
+        "effect": "preserved the retrospective A.10 proof failure and avoided re-minting it as a new obstruction"
+      },
+      {
+        "id": "RAKL_math#109/YM-E4a",
+        "status": "REJECTED_FOR_ACTIVE_ATOM_BUT_ROUTING_RELEVANT",
+        "effect": "showed that the initially attractive single-source-to-full-gap obstruction was already stored; routing rotated away from duplicate spectral-source work"
+      },
+      {
+        "id": "RAKL_math#69/YM-S1c1",
+        "status": "REJECTED_FOR_ACTIVE_ATOM",
+        "why": "bare-coupling escape is a parallel/downstream bridge and does not decide the scalar recurrence"
+      },
+      {
+        "id": "RAKL_math#126/YM-E4b",
+        "status": "REJECTED_FOR_ACTIVE_ATOM",
+        "why": "OS semigroup/varying-Hilbert gluing is downstream of weak-coupling contraction"
+      },
+      {
+        "id": "RAKL_math PR#140/YM-E4b2b",
+        "status": "REJECTED_FOR_ACTIVE_ATOM",
+        "why": "relative OS-form domination is a different residual family"
+      }
+    ],
+    "missed_prior_experience": "Repository search located no prior RAKL_math repair candidate that proves the strict invariant-ball lemma and audits main-text equation (5.11). This is a bounded repository-search statement, not a completeness or literature-novelty claim.",
+    "cross_millennium_memory": {
+      "queried": false,
+      "applicability_difference_witness": "Exact same-theory Yang-Mills memory (#93/#97) already contained the local recurrence signature and prospective repair coordinate; far transfer would add representation distance without resolving the source-specific constants."
+    },
+    "decision_policy": "Rotate away from the already-stored source-completeness failure family, attack the smallest high-information open repair atom in #93, prove the scalar recurrence only under an invariant domain, then attempt same-source gluing. Treat missing FRD constants and tuning details as BLOCKED rather than reconstructing them from memory.",
+    "falsifier_and_verification": [
+      "Appendix printed closure condition: for C>0,r>0, 2Cr+Cr^2>0",
+      "main Theorem 5.3 equation (5.11): rho=1/2,n=4 gives n*rho^(n-1)=1/2 while claimed RHS is 1/4",
+      "threshold hostile control: if C*r_star=1-rho, equality recurrence started at r_star is constant and does not decay",
+      "exact invariant-ball induction with q=rho+C*r_star<1",
+      "variation-of-constants derivation of the weaker Appendix-style bound",
+      "deterministic exact-rational regression tests; computation is verification/calibration only, not proof",
+      "primary parsed-PDF recheck of Theorem 5.3 and A.9/A.10",
+      "visual PDF page-574 screenshot recheck succeeded for Theorem 5.3 equation (5.11)",
+      "Appendix page-591 screenshot recheck failed with backend Cache miss and remains CANNOT_CHECK visually",
+      "six role-separated same-context expert passes; independent review credit=0"
+    ],
+    "expert_cell": [
+      {
+        "role": "nonlinear discrete dynamics",
+        "finding": "strict C*r_star<1-rho gives q-contraction, invariant domain, and exponential decay; equality threshold admits a fixed point"
+      },
+      {
+        "role": "constructive RG/polymer norms",
+        "finding": "shrinking an already-valid local Banach ball is safe, but same norm/rho/C and entry into the smaller ball must be proved separately"
+      },
+      {
+        "role": "constructive continuum QFT",
+        "finding": "local weak-coupling propagation does not establish Euclidean measure construction, gauge/OS reconstruction, nontriviality, continuum limits, or mass gap"
+      },
+      {
+        "role": "primary-source mathematical physics",
+        "finding": "Theorem 5.3 has the right smallness shape but its displayed all-n estimate (5.11) is false; exact same-Yang-Mills FRD constants remain unbound"
+      },
+      {
+        "role": "adversarial proof verification",
+        "finding": "a bound with a positive n-independent floor cannot by itself imply exponential decay; domain invariance must precede repeated use of a local recurrence"
+      },
+      {
+        "role": "RAKL v3 assurance/metrology",
+        "finding": "keep episode, diagnosis, scoped failure, existing obstruction, and any future lesson distinct; no protected promotion or independent-review credit"
+      }
+    ],
+    "outcome": "PARTIAL_SUCCESS_LOCAL_RECURRENCE_REPAIR_PROVED__SOURCE_SPECIFIC_FRD_ENTRY_AND_CONSTANT_BINDING_BLOCKED",
+    "residual_before": {
+      "signature_sha256": "3192eea1431b33106531b86c7a986a10b827c978e50aedd4c6faf91c15c72f0d",
+      "items": [
+        "Appendix A.10 printed proof invalid and no explicit invariant-ball hypothesis licenses all iterates",
+        "same-source FRD/polymer rho,C,r and prescribed-small-ball entry not independently primary-source-bound",
+        "main-text Theorem 5.3 source-native repair surface not yet checked for proof validity",
+        "downstream AF/continuum/OS/spectral/root obligations remain open"
+      ]
+    },
+    "residual_after": {
+      "signature_sha256": "603fd5ee8cd522c29b7bb9daee406dd0d8c97f5b90607895ae6628694dfb099d",
+      "items": [
+        "local scalar recurrence repaired under strict C*r_star < 1-rho with q=rho+C*r_star",
+        "same-Yang-Mills FRD/polymer estimate with scale-uniform rho,C and tuning into prescribed r_star remains source/gluing BLOCKED",
+        "main Theorem 5.3 equation (5.11) and additive-floor-to-decay inference are locally invalid as printed",
+        "downstream bare-coupling escape, gap transport, OS quotient/source completeness, continuum existence/nontriviality and root gates remain open"
+      ]
+    },
+    "failure_category": {
+      "mathematical_local": [
+        "Appendix A.10 printed induction cannot close as written",
+        "main equation (5.11) has a false all-n inequality",
+        "displayed positive-floor bounds do not alone imply exponential convergence"
+      ],
+      "retrieval": [
+        "exact primary theorem supplying the same Yang-Mills FRD nonlinear map and scale-uniform rho,C was not acquired in this cycle"
+      ],
+      "decomposition": [],
+      "representation": [
+        "the recurrence must be represented as a local-domain map plus an invariant-ball certificate; an untyped all-n scalar inequality hides the domain obligation"
+      ],
+      "gluing": [
+        "local recurrence repair is not yet glued to a source-bound same-theory FRD map and tuning into a prescribed strict radius",
+        "all continuum OS/nontriviality/spectral interfaces remain separate"
+      ],
+      "source": [
+        "source proof surfaces contain the displayed A.10 and 5.11 defects; stronger intended theorems remain possible"
+      ],
+      "verification": [
+        "independent mathematical reviews=0",
+        "Appendix page-591 visual screenshot=CANNOT_CHECK due backend Cache miss"
+      ],
+      "tooling": [
+        "repeated PDF screenshot Cache miss persists on Appendix page 591; main page 574 screenshot succeeded"
+      ],
+      "meta_policy": [
+        "the exact in-run candidate idea preceded durable fibre-file creation; issue #93 prospectively froze the repair direction, but this run claims only verification/composition chronology and no strict in-run pre-candidate discovery credit",
+        "RAKL main advanced after the initial framework read; current-main manifest, method_specs.py and v3_metrology.py were rechecked and their inspected blobs remained unchanged"
+      ]
+    },
+    "episode_diagnosis_obstruction_lesson": {
+      "episode_id": "TE-YM-E3A1-INVARIANT-BALL-REPAIR-20260811T1939Z",
+      "diagnosis_id": "DX-YM-E3A1-A10-MISSING-INVARIANT-BALL-AND-NONDECAYING-BOUND",
+      "diagnosis": "The scalar contraction route is repairable, but only after typing the recurrence to an invariant strict small ball; the manuscript's alternative main-text proof has a separate all-n arithmetic defect and neither printed positive-floor bound alone yields exponential decay.",
+      "failure_id": "F-YM-E3A1-MAIN-5P11-N-BOUND-INVALID",
+      "obstruction_id": "RAKL_math#93 / YM-E3a",
+      "obstruction_status": "NARROWED_NOT_CLOSED",
+      "lesson_ids": [],
+      "lesson_status": "NO_PROTECTED_OR_REUSABLE_LESSON_MINTED_THIS_CYCLE"
+    },
+    "local_vs_global": {
+      "local_mathematical": "SOLVED_SCOPED: invariant-ball recurrence lemma YM-E3a1-C001",
+      "local_source_proof": "PARTIAL: a valid sufficient repair is explicit, but the source-specific FRD hypotheses/entry are not independently established",
+      "local_to_global_gluing": "BLOCKED: weak-coupling RG repair has not been carried through same-theory continuum measures, OS reconstruction, nontriviality, physical mass gap, or root closure"
+    },
+    "seven_saturation_axes": {
+      "theory_route": "REOPENED",
+      "proof_route": "REOPENED",
+      "tool_route": "FLATTENED",
+      "decomposition": "REOPENED",
+      "local_expert_coverage": "FLATTENED",
+      "analogue_coverage": "FLATTENED",
+      "structural_novelty": "REOPENED"
+    },
+    "novelty_class": {
+      "solved_subproblem": "YM-E3a1-C001",
+      "class": "compositional",
+      "why": "standard invariant-region plus contraction reasoning is composed with the exact source recurrence/domain; no new mathematical ontology or operator is claimed",
+      "authority": "proposal/shadow scoped local result; no external novelty audit and no root authority"
+    },
+    "v3_feature_helped": [
+      "dual-memory retrieval exposed #109 as a duplicate route and #93 as the closer active obstruction",
+      "routing/gap-discovery separated local recurrence repair from downstream OS/spectral failure families",
+      "contextual_theory_gluing prevented a local scalar lemma from being promoted into source-specific RG or continuum Yang-Mills",
+      "v3 metrology kept repository growth separate from retained semantic novelty",
+      "same-context review was explicitly prevented from counting as independent review"
+    ],
+    "v3_feature_missing_or_stressed": "The automation/runtime does not expose an exact programmatic token/tool-call/wall-time counter to application artifacts, while v3 ProcessTelemetry expects numeric cost when instantiated; this cycle therefore records CANNOT_MEASURE rather than manufacturing cost data.",
+    "framework_improvement_hypothesis": "Add a proposal-only runtime resource receipt adapter that can populate ProcessTelemetry-compatible cost fields from authenticated execution counters or, when absent, encode a typed CANNOT_MEASURE state without forcing arbitrary numeric proxies.",
+    "repeated_process_failure_links": [
+      "RAKL_math PR#135: primary PDF screenshot Cache miss",
+      "RAKL_math PR#140: primary PDF screenshot Cache miss",
+      "RAKL_math PR#144: primary PDF screenshot Cache miss",
+      "YM-E3a1 current cycle: Appendix page-591 screenshot Cache miss; main page-574 screenshot succeeded"
+    ],
+    "next_action": "Acquire and audit a primary mathematical theorem for the same Yang-Mills FRD/polymer norm that supplies the nonlinear RG estimate with scale-uniform rho<1,C and proves tuning into a prescribed strict r_star<min(r0,(1-rho)/C). Do not spend another cycle re-proving the scalar recurrence."
+  },
+  "TASK_EPISODE_SHADOW": {
+    "episode_id": "TE-YM-E3A1-INVARIANT-BALL-REPAIR-20260811T1939Z",
+    "authority": "PROPOSAL_SHADOW_EVIDENCE_ROOT_ONLY",
+    "task_id": "YM-E3a1",
+    "active_atom_signature": "YM-E3a1-A10-INVARIANT-BALL-RECURRENCE-REPAIR-AND-SOURCE-BINDING",
+    "input_fibre_hash": "7afd90bb326b40a960aaac81fce5049f5423b9b034b20fca2ecaad9abb4b4c66",
+    "search_policy": "memory-first duplicate guard -> smallest unsaturated source-repair obstruction -> counterexample-first algebra checks -> invariant-domain proof -> source-specific gluing audit",
+    "fibre_contents_actually_consulted": [
+      "RAKL@current main v3 manifest/method specs/metrology",
+      "RAKL_math#5",
+      "RAKL_math#93",
+      "RAKL_math PR#97",
+      "RAKL_math#109",
+      "RAKL_math#69",
+      "RAKL_math#126",
+      "RAKL_math PR#140",
+      "Faizal-Shabir arXiv:2606.19362v1 Theorem 5.3 and Appendix A.9/A.10"
+    ],
+    "operators_tried": [
+      "memory duplicate detection",
+      "exact recurrence induction",
+      "variation of constants",
+      "threshold hostile control",
+      "source-proof arithmetic falsifier",
+      "same-theory gluing type audit"
+    ],
+    "observations": [
+      "issue #93 already stored the invariant-small-ball direction",
+      "main Theorem 5.3 supplies Cr<=(1-rho)/2 but equation (5.11) is false for large n",
+      "strict invariant ball yields q=rho+C*r_star<1 and exact exponential decay",
+      "source-specific FRD constants/tuning remain unverified"
+    ],
+    "verification_performed": [
+      "analytic proof",
+      "exact hostile examples",
+      "primary parsed-PDF selectors",
+      "visual source screenshot for main page 574",
+      "deterministic exact-rational test artifact",
+      "six same-context expert passes"
+    ],
+    "outcome": "PARTIAL_SUCCESS",
+    "residual_signature_before": "3192eea1431b33106531b86c7a986a10b827c978e50aedd4c6faf91c15c72f0d",
+    "residual_signature_after": "603fd5ee8cd522c29b7bb9daee406dd0d8c97f5b90607895ae6628694dfb099d",
+    "cost_effort_proxy": {
+      "exact_model_tokens": "CANNOT_MEASURE: runtime did not expose token accounting to the artifact writer",
+      "exact_context_tokens": "CANNOT_MEASURE: runtime did not expose context-token accounting",
+      "exact_retrieval_call_count": "CANNOT_MEASURE: no authenticated aggregate counter is exposed; individual tool invocations are present in the runtime trace but are not programmatically countable here without inventing a total",
+      "exact_tool_call_count": "CANNOT_MEASURE: same reason",
+      "wall_time_seconds": "CANNOT_MEASURE: no authenticated elapsed-run clock receipt is exposed",
+      "repository_commits_before_metrics": 5,
+      "repository_commits_are_learning": false
+    },
+    "next_action": "same-theory FRD constant and strict-radius entry source binding"
+  },
+  "RAKL_CYCLE_METRICS": {
+    "cycle_id": "YM-E3a1-CYCLE-20260811T1939Z",
+    "rakl_method_version": "3.0.0",
+    "rakl_software_package_version": "0.1.0",
+    "rakl_constitution_epoch": "v3-authority-hardening-20260811",
+    "rakl_git_sha_current_at_metrics_freeze": "4771576204b1b7fca5279a7245f0e144dca3436b",
+    "rakl_git_sha_initial_framework_read": "f5a6a11f089669a715d35bafa0a0c8affce929e3",
+    "rakl_manifest_evidence_cutoff_sha": "0cea6cc39a3cf67ef7ecff3fff9a704944c32ab8",
+    "framework_drift_audit": {
+      "status": "DRIFT_PRESENT_RECHECKED",
+      "initial_to_metrics_main_changed": true,
+      "method_specs_blob_initial": "3f629c4dd0ef55aedf14206b2be3df19875988b7",
+      "method_specs_blob_metrics_freeze": "3f629c4dd0ef55aedf14206b2be3df19875988b7",
+      "v3_metrology_blob_initial": "a08afef55d235aa991b7282a154e56b93238211f",
+      "v3_metrology_blob_metrics_freeze": "a08afef55d235aa991b7282a154e56b93238211f",
+      "version_manifest_blob_metrics_freeze": "7363c88f4b19638299968e5e0ee3a93c3d567121",
+      "verdict": "audited governed method/version/metrology surfaces unchanged across observed drift; proposal/shadow authority only"
+    },
+    "rakl_math_base_sha": "350861b1c2755033893068e5519b8b06a6315aa6",
+    "rakl_math_base_tree_sha": "c779c3bb98a24a70054571b9c63a46673c711cec",
+    "rakl_math_semantic_head_before_metrics_sha": "d2133dccfadc57040aaa604418175dde75a3efc3",
+    "rakl_math_semantic_head_tree_sha": "81eb87d0a90a39136c523965b6aeab2c806371f3",
+    "rakl_math_final_head_after_this_self_appending_receipt": "CANNOT_MEASURE inside the receipt before its own commit exists; exact final branch/PR head is bound externally by GitHub metadata after commit",
+    "state_fingerprints": {
+      "pre_canonical_raklv3_state_fingerprint": "CANNOT_MEASURE: this RAKL_math lane does not materialize a canonical RAKLV3State snapshot that can be fed to v3_metrology.measure_state",
+      "post_canonical_raklv3_state_fingerprint": "CANNOT_MEASURE: no canonical RAKLV3State materialization occurred",
+      "measurable_repository_pre_tree_sha": "c779c3bb98a24a70054571b9c63a46673c711cec",
+      "measurable_repository_post_semantic_tree_sha": "81eb87d0a90a39136c523965b6aeab2c806371f3",
+      "warning": "git tree/commit growth is operational provenance only and is not counted as learning"
+    },
+    "active_atom": "YM-E3a1",
+    "atom_signature": "YM-E3a1-A10-INVARIANT-BALL-RECURRENCE-REPAIR-AND-SOURCE-BINDING",
+    "fibre_snapshot_hash": "7afd90bb326b40a960aaac81fce5049f5423b9b034b20fca2ecaad9abb4b4c66",
+    "canonical_method_specs_process_surfaces_invoked": [
+      "decomposition",
+      "routing",
+      "search_query_generation",
+      "source_selection_reliability",
+      "claim_extraction",
+      "mathematical_context_translation",
+      "gap_discovery",
+      "experiment_query_selection",
+      "memory",
+      "review",
+      "contextual_theory_gluing",
+      "saturation_stopping"
+    ],
+    "memory_retrieval": {
+      "retrieved_count": 7,
+      "retrieved_ids": [
+        "RAKL_math#5",
+        "RAKL_math#93/YM-E3a",
+        "RAKL_math PR#97",
+        "RAKL_math#69/YM-S1c1",
+        "RAKL_math#109/YM-E4a",
+        "RAKL_math#126/YM-E4b",
+        "RAKL_math PR#140/YM-E4b2b"
+      ],
+      "selected_count": 3,
+      "selected_ids": [
+        "RAKL_math#5",
+        "RAKL_math#93/YM-E3a",
+        "RAKL_math PR#97"
+      ],
+      "rejected_for_active_atom_count": 4,
+      "rejected_ids": [
+        "RAKL_math#69/YM-S1c1",
+        "RAKL_math#109/YM-E4a",
+        "RAKL_math#126/YM-E4b",
+        "RAKL_math PR#140/YM-E4b2b"
+      ],
+      "cross_millennium_retrieval_count": 0
+    },
+    "outcome": "PARTIAL_SUCCESS_LOCAL_RECURRENCE_REPAIR_PROVED__SOURCE_SPECIFIC_FRD_ENTRY_AND_CONSTANT_BINDING_BLOCKED",
+    "residual_before_signature": "3192eea1431b33106531b86c7a986a10b827c978e50aedd4c6faf91c15c72f0d",
+    "residual_after_signature": "603fd5ee8cd522c29b7bb9daee406dd0d8c97f5b90607895ae6628694dfb099d",
+    "retained_semantic_novelty": {
+      "KNOWLEDGE": 1,
+      "OPERATOR": 0,
+      "EXPERIENCE_PATTERN": 0,
+      "OBSTRUCTION": 1,
+      "RELATION": 1,
+      "PATH": 1,
+      "META_METHOD": 0
+    },
+    "retained_novelty_scope_note": "proposal/shadow internal semantic accounting only; no independent novelty audit. KNOWLEDGE counts the verified scoped repair/result packet, OBSTRUCTION the newly source-bound equation-(5.11) failure signature, RELATION the source-native-smallness/failed-proof connection, PATH the narrowed source-facing FRD-entry discriminator. Raw files/issues/commits are not counted.",
+    "saturation_axes_reopened": [
+      "theory_route",
+      "proof_route",
+      "decomposition",
+      "structural_novelty"
+    ],
+    "saturation_axes_flattened": [
+      "tool_route",
+      "local_expert_coverage",
+      "analogue_coverage"
+    ],
+    "resource_proxies": {
+      "model_tokens": "CANNOT_MEASURE: runtime does not expose authenticated model-token usage",
+      "context_tokens": "CANNOT_MEASURE: runtime does not expose authenticated context-token usage",
+      "retrieval_calls": "CANNOT_MEASURE exact aggregate: no authenticated counter exposed to artifact writer",
+      "tool_calls": "CANNOT_MEASURE exact aggregate: no authenticated counter exposed to artifact writer",
+      "wall_time": "CANNOT_MEASURE: no authenticated elapsed-run receipt exposed",
+      "materialized_application_commits_before_metrics": 5,
+      "commit_count_learning_credit": 0
+    },
+    "new_ids": {
+      "episode_ids": ["TE-YM-E3A1-INVARIANT-BALL-REPAIR-20260811T1939Z"],
+      "diagnosis_ids": ["DX-YM-E3A1-A10-MISSING-INVARIANT-BALL-AND-NONDECAYING-BOUND"],
+      "failure_ids": ["F-YM-E3A1-MAIN-5P11-N-BOUND-INVALID"],
+      "lesson_ids": [],
+      "tool_ids": [],
+      "obstruction_ids": [],
+      "motif_ids": []
+    },
+    "successful_reuse_ids": [
+      "RAKL_math#93/YM-E3a",
+      "RAKL_math PR#97",
+      "RAKL_math#109/YM-E4a"
+    ],
+    "rakl_changed_observable_action_relative_to_pre_memory_pre_gate_preference": {
+      "value": true,
+      "counterfactual_observation": "Initial repository/source search considered the decay/source-completeness spectral interface. Retrieval of #109 showed the exact single-source hidden-state obstruction was already stored, so the chosen action rotated away from duplicate work to #93's unsolved weak-coupling recurrence repair. #93 then constrained the candidate to an invariant-domain proof rather than another unrestricted induction.",
+      "causal_strength": "OBSERVED_ROUTING_CHANGE_NOT_A_MATCHED_ABLATION"
+    },
+    "gate_provenance_ci": {
+      "root_issue": "RAKL_math#5",
+      "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "root_candidate": false,
+      "exact_statement_binding": "BOUND_TO_ROOT_ISSUE_5_ONLY; no closure",
+      "closed_proof_DAG": false,
+      "formal_verifier_audit": "INCOMPLETE",
+      "dependency_audit": "INCOMPLETE",
+      "axiom_audit": "INCOMPLETE",
+      "relevant_barrier_audit": "INCOMPLETE",
+      "isolated_recheck": "LOCAL_SELF_RECHECK_ONLY_NOT_ROOT_ISOLATION",
+      "bounded_novelty_search": "BOUNDED_REPOSITORY_DUPLICATE_SEARCH_ONLY; external mathematical novelty not established",
+      "independent_mathematical_reviews": 0,
+      "same_context_expert_reviews": 6,
+      "primary_source_provenance": "Faizal-Shabir arXiv:2606.19362v1 exact parsed selectors; main p574 visual screenshot verified; Appendix p591 visual screenshot CANNOT_CHECK due Cache miss",
+      "ci_status": "PENDING_EXACT_HEAD_CHECK_AT_RECEIPT_WRITE_TIME",
+      "promotion_status": "NO_PROMOTION_REQUESTED_OR_GRANTED"
+    }
+  }
+}
