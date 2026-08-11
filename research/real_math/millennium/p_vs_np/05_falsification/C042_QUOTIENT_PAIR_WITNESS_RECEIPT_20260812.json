@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "PNP-C042-QUOTIENT-PAIR-WITNESSES-20260812",
+  "parent_receipt": "research/real_math/millennium/p_vs_np/05_falsification/C042_ACTIVATION_QUOTIENT_RECEIPT_20260812.json",
+  "instances": [
+    {
+      "instance_id": "C042-G9-FOUR-TYPE-QUOTIENT",
+      "side": 4,
+      "ordered_complement": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "relevant_semifilter_count": 19,
+      "cover_pairs": [
+        {
+          "e_mask": 1,
+          "h_mask": 10
+        },
+        {
+          "e_mask": 3,
+          "h_mask": 12
+        }
+      ],
+      "covers_every_relevant_semifilter": true,
+      "no_single_pair_covers_every_relevant_semifilter": true,
+      "exact_full_cover_number": 2,
+      "lifted_full_graph_upper_bound": 2
+    },
+    {
+      "instance_id": "C042-G13-FIVE-TYPE-QUOTIENT",
+      "side": 5,
+      "ordered_complement": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "relevant_semifilter_count": 226,
+      "cover_pairs": [
+        {
+          "e_mask": 3,
+          "h_mask": 20
+        },
+        {
+          "e_mask": 14,
+          "h_mask": 17
+        }
+      ],
+      "covers_every_relevant_semifilter": true,
+      "no_single_pair_covers_every_relevant_semifilter": true,
+      "exact_full_cover_number": 2,
+      "lifted_full_graph_upper_bound": 2
+    }
+  ],
+  "authority": {
+    "mathematical_content": "explicit finite two-pair quotient covers and C013 upper-bound lift",
+    "grants_later_level_bound": false,
+    "grants_asymptotic_bound": false,
+    "grants_circuit_lower_bound": false,
+    "grants_p_vs_np_authority": false,
+    "implementation_hashes_tests_ci_runtime_are_math_credit": false
+  },
+  "artifact_hash": "sha256:0ce312a6ad3ba3ab976d24fd2ceb38a00239966b86b35ebfb70feb6ecea3992d"
+}

@@ -1,0 +1,575 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "PNP-C042-ACTIVATION-QUOTIENT-GATE-20260812",
+  "candidate_id": "C042-ACTIVATION-QUOTIENT-GATE-v1",
+  "length_formula": "L0(v,m)=8+gamma_len(v)+gamma_len(m)+3m(1+bit_length(v)); L=L0+(L0 mod 2)",
+  "frozen_threshold_claims": {
+    "magic_prefix_first_parent_level": 4,
+    "canonical_syntax_first_parent_level": 8,
+    "canonical_unsat_first_parent_level": 12,
+    "canonical_unsat_equality_parameters": {
+      "v": 1,
+      "m": 2
+    }
+  },
+  "levels_2_through_12": [
+    {
+      "parent_level": 2,
+      "word_length": 4,
+      "all_unsat_words": [
+        "0000"
+      ],
+      "canonical_magic_unsat_words": [],
+      "cross_unsat_pairs": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "parent_level": 3,
+      "word_length": 6,
+      "all_unsat_words": [
+        "000000"
+      ],
+      "canonical_magic_unsat_words": [],
+      "cross_unsat_pairs": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "parent_level": 4,
+      "word_length": 8,
+      "all_unsat_words": [
+        "00000000"
+      ],
+      "canonical_magic_unsat_words": [],
+      "cross_unsat_pairs": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "parent_level": 5,
+      "word_length": 10,
+      "all_unsat_words": [
+        "0000000000"
+      ],
+      "canonical_magic_unsat_words": [],
+      "cross_unsat_pairs": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "parent_level": 6,
+      "word_length": 12,
+      "all_unsat_words": [
+        "000000000000"
+      ],
+      "canonical_magic_unsat_words": [],
+      "cross_unsat_pairs": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "parent_level": 7,
+      "word_length": 14,
+      "all_unsat_words": [
+        "00000000000000"
+      ],
+      "canonical_magic_unsat_words": [],
+      "cross_unsat_pairs": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "parent_level": 8,
+      "word_length": 16,
+      "all_unsat_words": [
+        "0000000000000000"
+      ],
+      "canonical_magic_unsat_words": [],
+      "cross_unsat_pairs": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "parent_level": 9,
+      "word_length": 18,
+      "all_unsat_words": [
+        "000000000000000000"
+      ],
+      "canonical_magic_unsat_words": [],
+      "cross_unsat_pairs": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "parent_level": 10,
+      "word_length": 20,
+      "all_unsat_words": [
+        "00000000000000000000"
+      ],
+      "canonical_magic_unsat_words": [],
+      "cross_unsat_pairs": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "parent_level": 11,
+      "word_length": 22,
+      "all_unsat_words": [
+        "0000000000000000000000"
+      ],
+      "canonical_magic_unsat_words": [],
+      "cross_unsat_pairs": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "parent_level": 12,
+      "word_length": 24,
+      "all_unsat_words": [
+        "000000000000000000000000",
+        "111001011010010101111111",
+        "111001011010111111010101"
+      ],
+      "canonical_magic_unsat_words": [
+        "111001011010010101111111",
+        "111001011010111111010101"
+      ],
+      "cross_unsat_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          3674,
+          1407
+        ],
+        [
+          3674,
+          4053
+        ]
+      ]
+    }
+  ],
+  "first_syntax_child": {
+    "level": 9,
+    "side": 512,
+    "complement_edge_count": 11,
+    "row_types": [
+      {
+        "type_index": 0,
+        "representative": 0,
+        "class_size": 1,
+        "vertices": [
+          0
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          0,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ]
+      },
+      {
+        "type_index": 1,
+        "representative": 1,
+        "class_size": 1,
+        "vertices": [
+          1
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          2
+        ]
+      },
+      {
+        "type_index": 2,
+        "representative": 2,
+        "class_size": 1,
+        "vertices": [
+          2
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          1,
+          2
+        ]
+      },
+      {
+        "type_index": 3,
+        "representative": 3,
+        "class_size": 509,
+        "vertices": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "vertices_truncated": true,
+        "complement_neighborhood": []
+      }
+    ],
+    "column_types": [
+      {
+        "type_index": 0,
+        "representative": 0,
+        "class_size": 8,
+        "vertices": [
+          0,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          0
+        ]
+      },
+      {
+        "type_index": 1,
+        "representative": 1,
+        "class_size": 1,
+        "vertices": [
+          1
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          2
+        ]
+      },
+      {
+        "type_index": 2,
+        "representative": 2,
+        "class_size": 1,
+        "vertices": [
+          2
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          1,
+          2
+        ]
+      },
+      {
+        "type_index": 3,
+        "representative": 3,
+        "class_size": 502,
+        "vertices": [
+          3,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "vertices_truncated": true,
+        "complement_neighborhood": []
+      }
+    ],
+    "row_type_count": 4,
+    "column_type_count": 4,
+    "explicit_row_rectangle_count": 4,
+    "quotient_complement": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "quotient_complement_edge_count": 4,
+    "quotient_exact_full_cover_number": 2,
+    "rho_full_upper_bound_by_quotient_lift": 2,
+    "authority": "C013 twin-quotient lift plus exact bounded quotient cover; no asymptotic conclusion"
+  },
+  "first_unsat_capable_child": {
+    "level": 13,
+    "side": 8192,
+    "complement_edge_count": 17,
+    "row_types": [
+      {
+        "type_index": 0,
+        "representative": 0,
+        "class_size": 1,
+        "vertices": [
+          0
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          0,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096
+        ]
+      },
+      {
+        "type_index": 1,
+        "representative": 1,
+        "class_size": 1,
+        "vertices": [
+          1
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          2
+        ]
+      },
+      {
+        "type_index": 2,
+        "representative": 2,
+        "class_size": 1,
+        "vertices": [
+          2
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          1,
+          2
+        ]
+      },
+      {
+        "type_index": 3,
+        "representative": 3,
+        "class_size": 8188,
+        "vertices": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "vertices_truncated": true,
+        "complement_neighborhood": []
+      },
+      {
+        "type_index": 4,
+        "representative": 3674,
+        "class_size": 1,
+        "vertices": [
+          3674
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          5503,
+          8149
+        ]
+      }
+    ],
+    "column_types": [
+      {
+        "type_index": 0,
+        "representative": 0,
+        "class_size": 12,
+        "vertices": [
+          0,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          0
+        ]
+      },
+      {
+        "type_index": 1,
+        "representative": 1,
+        "class_size": 1,
+        "vertices": [
+          1
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          2
+        ]
+      },
+      {
+        "type_index": 2,
+        "representative": 2,
+        "class_size": 1,
+        "vertices": [
+          2
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          1,
+          2
+        ]
+      },
+      {
+        "type_index": 3,
+        "representative": 3,
+        "class_size": 8176,
+        "vertices": [
+          3,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "vertices_truncated": true,
+        "complement_neighborhood": []
+      },
+      {
+        "type_index": 4,
+        "representative": 5503,
+        "class_size": 2,
+        "vertices": [
+          5503,
+          8149
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          3674
+        ]
+      }
+    ],
+    "row_type_count": 5,
+    "column_type_count": 5,
+    "explicit_row_rectangle_count": 5,
+    "quotient_complement": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "quotient_complement_edge_count": 5,
+    "quotient_exact_full_cover_number": 2,
+    "rho_full_upper_bound_by_quotient_lift": 2,
+    "authority": "C013 twin-quotient lift plus exact bounded quotient cover; no asymptotic conclusion"
+  },
+  "scope": {
+    "proves_only_through_level": 13,
+    "grants_uniform_quotient_bound": false,
+    "grants_recurrence": false,
+    "grants_circuit_lower_bound": false,
+    "grants_p_vs_np_authority": false,
+    "computation_is_proof": false
+  },
+  "artifact_hash": "sha256:b72fabdfc00868cc7c5ba51a2d86603af447ad8002b78e27fd40590a5ef77c2d"
+}
