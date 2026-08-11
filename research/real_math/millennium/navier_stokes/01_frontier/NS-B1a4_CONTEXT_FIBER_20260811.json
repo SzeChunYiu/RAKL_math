@@ -1,0 +1,121 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow",
+  "atom_id": "NS-B1a4",
+  "parent_atom_id": "NS-B1a3",
+  "root_id": "NS0",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "authority": "PROPOSAL_SHADOW_CONTEXT_ONLY",
+  "object_context": "Whole-space Type-I Navier-Stokes blow-up-classification sibling. Test whether the already registered finite-I magnitude ledger A+C+D+E plus the suitable local-energy inequality and pressure localization can itself furnish a signed temporal/no-recrossing law, or whether a new signed flux/correlation coordinate and additional trajectory/global input are required. Type-II remains out of scope.",
+  "problem_signature": [
+    "3D incompressible Navier-Stokes",
+    "whole-space unforced viscosity 1",
+    "Type-I finite Albritton-Barker I=A+C+D+E",
+    "suitable local-energy inequality",
+    "pressure localization and harmonic remainder",
+    "nested-scale temporal/no-recrossing",
+    "ancient-limit rigidity interface",
+    "global L3/backward-sequence target"
+  ],
+  "structural_coordinates": [
+    "parabolic scaling u_lambda(x,t)=lambda u(lambda x,lambda^2 t), p_lambda=lambda^2 p(lambda x,lambda^2 t)",
+    "finite I controls nonnegative scale-invariant magnitudes A,C,D,E but does not encode the sign of mixed local-energy flux terms",
+    "the local-energy inequality contains signed transport/pressure work through (|u|^2+2p)u·grad(phi), in addition to cutoff/time/diffusion terms",
+    "spatial-mean pressure normalization is compatible with divergence-free local-energy testing; the active issue is correlation/sign, not pressure gauge",
+    "local pressure decomposes into a localized Calderon-Zygmund contribution plus a harmonic/nonlocal remainder; local pressure representation does not eliminate far-field/gluing obligations",
+    "strong L3_loc velocity and weak L3/2_loc pressure compactness are insufficient by themselves to pass a sign-definite global tail/no-recrossing statement",
+    "a pressure-free exact smooth shear solution can display inward local kinetic-energy replenishment; it is a hostile local-PDE calibration only and is not a finite-energy/finite-I ancient Clay-class witness",
+    "Albritton-Barker ancient Liouville requires a separate global L3 backward-sequence hypothesis; an epsilon-regularity criterion or pressure representation theorem is not an ancient Liouville theorem",
+    "same-context expert review supplies no independent mathematical review credit",
+    "Type-II remains a separate open sibling even if this Type-I atom closes"
+  ],
+  "target_interface": {
+    "producer_input": "mild bounded ancient Type-I Navier-Stokes solution with finite registered I, or the pre-singularity suitable sequence producing it",
+    "existing_state": "A,C,D,E magnitude bounds; suitable local-energy inequality; local pressure decomposition; local compactness",
+    "desired_output": "a scale-critical signed potential/increment/flux certificate with one-sided temporal behavior strong enough to prevent repeated critical threshold recrossing or to activate an exact source-valid rigidity theorem",
+    "audit_question": "Does the existing state already encode the required sign/temporal orientation, or is a separately controlled signed correlation/flux coordinate necessary?"
+  },
+  "solved_analogues": [
+    {
+      "id": "AB-TYPEI-ANCIENT",
+      "source": "Albritton-Barker arXiv:1811.00502",
+      "fact": "Type-I singularity is tied to a nontrivial mild bounded ancient finite-I solution; global-L3-on-a-backward-sequence is a separate Liouville trigger."
+    },
+    {
+      "id": "KWON-PRESSURE-LOCAL",
+      "source": "Hyunju Kwon arXiv:2104.03160",
+      "fact": "local pressure can be reformulated using local Leray projection in regularity theory; this is representation/local regularity machinery, not a no-recrossing theorem."
+    },
+    {
+      "id": "GUEVARA-PHUC-HEAD-PRESSURE",
+      "source": "Guevara-Phuc arXiv:1702.00449",
+      "fact": "signed head-pressure distributions can capture pressure oscillation in epsilon-regularity criteria; conditional regularity does not supply temporal monotonicity for the finite-I ancient class."
+    }
+  ],
+  "prior_obstructions_consulted": [
+    "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+    "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+    "F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY",
+    "F-NS-B1a3b1-GLOBAL-CONSUMER-SIGNATURE-MISMATCH"
+  ],
+  "explicit_disanalogies": [
+    "Failure of absolute shell bookkeeping does not imply failure of a signed telescoping law.",
+    "A pressure-free local-suitable calibration is not a counterexample to a finite-I ancient theorem.",
+    "Pressure epsilon-regularity and local pressure projection are not ancient-solution rigidity.",
+    "Local sign information does not automatically glue to global L3 tail tightness or backward-uniqueness hypotheses.",
+    "A Type-I result does not close Type-II."
+  ],
+  "counterexample_first_falsifier": {
+    "model": "u(x,t)=(f(x2,t),0,0), p=0 with f_t=f_x2x2. Choose smooth nonnegative f0 supported outside [-R,R]; the heat kernel makes f(y,t)>0 in [-R,R] for t>0, so kinetic energy in B_R rises from zero despite zero pressure.",
+    "verification_scope": "exact smooth Navier-Stokes/local-energy solution and sign calibration",
+    "difference_witness": "independent of x1,x3, hence not global finite energy and not asserted finite-I/ancient; it can falsify only pressure-alone/local-identity one-sidedness, not a finite-I dynamics-specific theorem"
+  },
+  "expert_cell_roles": [
+    {
+      "id": "E1",
+      "role": "Type-I blow-up/compactness PDE",
+      "charge": "audit rescaling, ancient/pre-singularity state, convergence and noncompact symmetry boundaries"
+    },
+    {
+      "id": "E2",
+      "role": "pressure/local-energy harmonic analysis",
+      "charge": "audit pressure decomposition, mixed flux sign, head pressure and local Leray representations"
+    },
+    {
+      "id": "E3",
+      "role": "critical scaling/rigidity",
+      "charge": "check scale invariance of any candidate observable and exact consumer/Liouville interface"
+    },
+    {
+      "id": "E4",
+      "role": "adversarial verifier",
+      "charge": "construct hostile exact-PDE calibrations and enforce DifferenceWitness/nonpromotion boundaries"
+    },
+    {
+      "id": "E5",
+      "role": "RAKL authority/metrology",
+      "charge": "preserve v3 shadow authority, episode-diagnosis-lesson separation and seven-axis telemetry"
+    }
+  ],
+  "chronology": {
+    "hypothesis_generation": "RETROSPECTIVE_GENERAL_IDEA_ALREADY_PRESENT_IN_DAG_AND_SCOPING",
+    "exact_verification_target": "PROSPECTIVELY_FROZEN_IN_RAKL_math_ISSUE_173_BEFORE_RESULT_SERIALIZATION",
+    "issue": 173
+  },
+  "framework_binding": {
+    "rakl_main_sha": "0d1b0746c35a0fa23b7ec69e39255068df08f9e2",
+    "method_version": "3.0.0",
+    "package_version": "0.1.0",
+    "rakl_math_base_sha": "9c2cebe8d5a2b1381af5a40cbea86a6826e7210a"
+  },
+  "source_anchors": [
+    "RAKL_math success_contract.yaml at base 9c2cebe8d5a2b1381af5a40cbea86a6826e7210a",
+    "RAKL_math NS-B1a1, NS-B1a3, NS-B1a3b and NS-B1a3b1 records at base 9c2cebe8d5a2b1381af5a40cbea86a6826e7210a",
+    "Albritton-Barker arXiv:1811.00502",
+    "Hyunju Kwon arXiv:2104.03160",
+    "Guevara-Phuc arXiv:1702.00449"
+  ],
+  "frozen_at": "2026-08-11T21:16:30+00:00",
+  "packet_hash": "sha256:49764dd1f412e50e0aebb0740a88eec46c3e3370c868f961710f876c78850439"
+}
