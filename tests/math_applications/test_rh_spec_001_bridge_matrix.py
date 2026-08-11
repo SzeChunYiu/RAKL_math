@@ -15,7 +15,7 @@ from rakl.research_trace import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "research/real_math/millennium/riemann_hypothesis"
 MATRIX = BASE / "01_frontier/RH_SPEC_001_OPERATOR_BRIDGE_MATRIX_20260811.json"
 CHILD_CONTEXT = BASE / "01_frontier/RH_SPEC_002_CONTEXT_FIBER_20260811.json"
