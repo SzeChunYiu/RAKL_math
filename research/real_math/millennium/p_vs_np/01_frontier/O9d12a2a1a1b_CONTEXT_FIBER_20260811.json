@@ -1,0 +1,76 @@
+{
+  "atom_id": "O9d12a2a1a1b",
+  "parent_atom_id": "O9d12a2a1a1a",
+  "status": "OPEN_REATOMIZED_NO_CANDIDATE",
+  "root_authority": "NONE",
+  "objective": "After quotienting witness-local Theorem-24 propagation by exact antecedent-membership state, determine whether global closure incidence contains an additional source-native dynamical coordinate. First factor the source recurrence exactly before proposing any global score.",
+  "problem_signature": [
+    "P-vs-NP via graph/two-dimensional cover complexity",
+    "fixed integral pair family Lambda",
+    "Theorem-24 minimal preservation closures G_w(Lambda)",
+    "global S_C^j incidence recurrence",
+    "cyclic intersection characterization"
+  ],
+  "frozen_inputs": {
+    "root_contract": "research/real_math/millennium/p_vs_np/00_problem_contract/canonical_statement.md",
+    "success_contract": "research/real_math/millennium/p_vs_np/00_problem_contract/success_contract.yaml",
+    "framework_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "application_base_sha": "24194bba4c88cc4be19dad03d59bfa79599d5ee9",
+    "parent_fibre_hash": "sha256:0c2a46839a95a7af6cfa2cff1a8257432ec397865e10515c84f8004719818ad7"
+  },
+  "structural_coordinates": [
+    "U=A^c and Lambda={(H_i,E_i)}_{i=1}^t is a fixed integral cover witness",
+    "Omega contains generator traces B∩U, every E_i, H_i, E_i∩H_i, and emptyset, with source-defined multiplicities",
+    "for C in Omega and stage j, S_C^j={w in Gamma : C is in G_w before stage j}",
+    "source equations (6)-(8) construct S_C^j from generator incidence, subset inclusion, and pair-rule intersections",
+    "Theorem 30 identifies rho(A,B) exactly with cyclic intersection complexity"
+  ],
+  "exact_local_target": {
+    "name": "fixed-Lambda pointwise factorization",
+    "statement": "For fixed Lambda and Omega, the full trajectory x_w^j(C)=1[C in G_w before stage j] is a deterministic monotone recurrence of the base vector x_w^1 and the fixed inclusion/pair-rule system. Therefore x_u^1=x_v^1 implies x_u^j=x_v^j for every stage j and C. No later global closure stage can separate two witnesses already identified by the full source-defined base state."
+  },
+  "method_transfers": [
+    {
+      "source": "Cavalar-Oliveira 2025 Theorem 24, Claim 27, equations (6)-(8)",
+      "status": "SELECTED_EXACT",
+      "shared_structure": "same G_w closure and same fixed Lambda",
+      "disanalogy": "their recurrence is used for an upper construction; factorization does not supply a lower bound"
+    },
+    {
+      "source": "PR #78 retrospective activation-congruence audit",
+      "status": "SELECTED_SEARCH_PRIORITY_ONLY",
+      "shared_structure": "test whether a proposed projection is a congruence before scoring it",
+      "disanalogy": "PR #78 is retrospective, draft, and not current-main mathematical authority"
+    },
+    {
+      "source": "Horn/data-flow propagation",
+      "status": "REJECTED_FOR_LOWER_BOUND_AUTHORITY",
+      "shared_structure": "monotone multi-premise recurrence",
+      "disanalogy": "Horn evaluation complexity is not cover complexity"
+    },
+    {
+      "source": "2026 range-avoidance / general-circuit lower-bound results",
+      "status": "REJECTED_NO_DIFFERENCEWITNESS",
+      "shared_structure": "general circuit lower-bound research only",
+      "disanalogy": "no proven map from their range-avoidance/win-win coordinates to this fixed cover/fusion object"
+    },
+    {
+      "source": "cross-Millennium memory",
+      "status": "REJECTED_NOT_QUERIED",
+      "shared_structure": "none required",
+      "disanalogy": "exact local source recurrence resolves the immediate obstruction without a justified transfer"
+    }
+  ],
+  "hostile_controls": [
+    "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",
+    "F-O9D12A2A1A1-PARTITION-CLOSURE-COLLAPSE",
+    "F-C010-MULTIPLEXING",
+    "F-C021-CHEAP-ADJACENCY",
+    "F-C023-SCALAR-COLLAPSE",
+    "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+    "XM004 generator-basis upward-closure inflation"
+  ],
+  "candidate_generation": "BLOCKED_THIS_CYCLE",
+  "frozen_at": "2026-08-11T13:52:16Z",
+  "packet_hash": "sha256:912f028b6ca1c52f700dace9fa315448e3ed6a7d52d8b1ee04f0e11d66a1f398"
+}
