@@ -1,0 +1,62 @@
+atom_id: NS-B1a3b1
+parent_atom_id: NS-B1a3b
+candidate_id: NS-B1a3b1-C001-R2
+status: REPRESENTATION_BRIDGE_VERIFIED_PRODUCER_AND_GLUING_OPEN
+root_status: OPEN_NO_SOLUTION_CERTIFICATE
+authority: PROPOSAL_SHADOW_NO_ROOT_AUTHORITY
+result: >-
+  The exact global bmo_{1/|log rho|} phase norm used by Grujic v2 is
+  non-expansive under Navier-Stokes zoom-in 0<r<=1, and global
+  L^{3/2,infinity} vorticity is scale invariant. Hence the conditional
+  consumer inputs are not lost under dilation. Direct transfer from the
+  Albritton-Barker finite-I producer remains blocked upstream because finite I
+  does not supply the global uniform phase/amplitude inputs; Grujic's far-field
+  proof uses global Lorentz vorticity, and Theorem 7.4 is pre-singularity
+  analyticity/escape-time machinery rather than an ancient Liouville theorem.
+local_math_status: LOG_BMO_ZOOM_NONEXPANSION_VERIFIED
+local_representation_status: CONDITIONAL_CONSUMER_SCALE_TRANSPORT_CLOSED
+producer_status: GLOBAL_PHASE_AMPLITUDE_GENERATION_OPEN
+local_to_global_gluing_status: BLOCKED_GLOBAL_LORENTZ_AND_FAR_FIELD_CONSUMER_INPUT
+state_space_status: BLOCKED_PRESINGULAR_THEOREM_NOT_ANCIENT_LIOUVILLE
+source_applicability_status: XI_ZERO_SET_CONVENTION_UNBOUND
+pruned_or_closed_subroutes:
+  - log_bmo_destroyed_by_zoom_in
+  - compensating_renormalization_for_log_bmo_weight
+  - direct_Theorem_7_4_as_ancient_solution_Liouville
+live_routes:
+  - finite_I_to_global_log_bmo_and_L3_2_infinity_producer_estimate
+  - global_critical_tightness_state_space_certificate
+  - pressure_temporal_coherence_no_recrossing
+  - alternate_source_valid_liouville_trigger
+next_children:
+  - id: NS-B1a3b1a
+    title: Finite-I to global log-BMO/Lorentz producer test
+    question: >-
+      Can exact finite-I Navier-Stokes dynamics on the original pre-singularity
+      solution produce a uniform-in-time global bmo_{1/|log r|} vorticity-phase
+      and L^{3/2,infinity} vorticity certificate without assuming derivative
+      regularity, global tail tightness, or the desired geometry?
+    status: CONTEXT_REQUIRED
+  - id: NS-B1a4
+    title: Pressure-temporal coherence / no-recrossing sibling
+    status: OPEN_ORTHOGONAL
+failure_ids:
+  - F-NS-B1a3b1-GLOBAL-CONSUMER-SIGNATURE-MISMATCH
+  - F-NS-B1a3b1-PRESINGULAR-ANCIENT-MISMATCH
+  - F-NS-B1a3b1-XI-ZERO-SET-CONVENTION-UNBOUND
+obstruction_ids:
+  - O-NS-B1a3b1-PRODUCER-TO-GLOBAL-GEOMETRY
+  - O-NS-B1a3b1-PRESINGULAR-ANCIENT-INTERFACE
+successful_reuse_ids:
+  - F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY
+  - F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH
+  - F-NS-B1a3-UNCONTROLLED-FAR-FIELD
+  - T-XM-ROOT-BRIDGE-STABILITY-AUDIT
+novelty_class: representation
+novel_structure_rank: 0
+nonpromotion:
+  - representation transport is not a Navier-Stokes regularity theorem
+  - source audit is not validation of all steps in the July 2026 preprint
+  - same-context expert review is not independent review
+  - Type-I route progress does not close Type-II
+  - root remains open

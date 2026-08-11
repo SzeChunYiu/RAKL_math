@@ -1,0 +1,47 @@
+{
+  "episode_id": "EP-NS-B1a3b1-C001-R2-20260811",
+  "task_id": "NAVIER-STOKES-VERIFIED-DISCOVERY",
+  "atom_id": "NS-B1a3b1",
+  "context_hash": "sha256:86321f8f12444616c9d8bdcbb02ede3384ebfcd6687f599a0cc6b9ff90e6d949",
+  "problem_signature": [
+    "whole-space unforced 3D incompressible Navier-Stokes, viscosity normalized to 1",
+    "Albritton-Barker finite-I Type-I producer",
+    "conditional consumer: Grujic v2 global bmo_{1/|log rho|} vorticity direction plus global L^{3/2,infty} vorticity",
+    "audit: zoom transport, global/far-field gluing, pre-singularity versus ancient state-space",
+    "Clay A root OPEN_NO_SOLUTION_CERTIFICATE; Type-II out of scope"
+  ],
+  "fibre_snapshot_hash": "sha256:0c9d8dd85e7dc09ea19bd94fb74aea31f415977bb6a54fc8afc69d3aa66f47f7",
+  "operator_ids": ["OP-NS-LOGBMO-ZOOM-IDENTITY","OP-NS-GRUJIC-SOURCE-SIGNATURE-AUDIT"],
+  "action_trace": [
+    "proved exact mean-oscillation change-of-variables identity under zoom-in",
+    "verified log weight ratio |log rho|/|log(r rho)|<=1 for 0<r<=1 and radius cutoff preservation",
+    "verified global L-infinity phase norm preservation and critical L^{3/2,infty} vorticity scaling",
+    "audited Grujic v2 Definition 2.1 and bmo_phi definition for global center/radius/time signatures",
+    "audited Theorem 4.1 near/far-field proof for global weak-Lorentz and tail dependence",
+    "audited Theorem 7.4 for first-singular-time, escape-time, forward-analyticity and harmonic-measure state-space",
+    "searched source text for explicit omega=0 direction convention and recorded CANNOT_CHECK applicability warning",
+    "kept representation success separate from finite-I producer failure and local-to-global gluing failure"
+  ],
+  "observation_ids": ["OBS-NS-B1a3b1-LOGBMO-ZOOM-NONEXPANSIVE","OBS-NS-B1a3b1-GLOBAL-LORENTZ-CRITICAL","OBS-NS-B1a3b1-GRUJIC-GLOBAL-TAIL","OBS-NS-B1a3b1-GRUJIC-PRESINGULAR","OBS-NS-B1a3b1-XI-ZERO-UNBOUND"],
+  "verification_ids": ["V-NS-B1a3b1-CHANGE-OF-VARIABLES","V-NS-B1a3b1-LOG-WEIGHT-RATIO","V-NS-B1a3b1-LORENTZ-SCALING","V-NS-B1a3b1-GRUJIC-V2-SOURCE-SIGNATURE","V-NS-B1a3b1-PRESINGULAR-DIFFERENCE-WITNESS"],
+  "outcome": "PARTIAL_SUCCESS",
+  "residual_signature": [
+    "finite-I dynamics still do not produce the required global uniform log-BMO phase certificate",
+    "global L^{3/2,infty} vorticity/far-field state remains outside registered local compactness",
+    "Grujic Theorem 7.4 is not an ancient Liouville theorem",
+    "zero-vorticity direction convention remains source-applicability CANNOT_CHECK",
+    "Type-II classification remains open",
+    "root remains OPEN_NO_SOLUTION_CERTIFICATE"
+  ],
+  "evidence_pointers": [
+    "pre_action_receipt:e48d16f0f14e066e6620d402a81ad1d5d7a47affb02a303600f38d507aacfd19",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3b1_C001_R2_LOGBMO_ZOOM_INTERFACE_AUDIT_20260811.md",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b1_C001_R2_FAILURE_DIAGNOSIS_20260811.json",
+    "arXiv:2607.08866v2",
+    "arXiv:1811.00502"
+  ],
+  "timestamp": "2026-08-11T16:52:00+00:00",
+  "cost": 1.0,
+  "schema_version": "task-episode-v3-proposal-shadow",
+  "artifact_hash": "c3b8b828204d35ec1ec4c7ee1dfbe6ae6941a9ebab5d6fdbc6d990d07d9f32b9"
+}
