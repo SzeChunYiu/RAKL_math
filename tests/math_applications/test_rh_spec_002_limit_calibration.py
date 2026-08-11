@@ -12,6 +12,10 @@ ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "research/real_math/millennium/riemann_hypothesis"
 CALIBRATION = BASE / "04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.json"
 PROVENANCE = BASE / "04_candidates/negative_history/RH_SPEC_002_PR15_CHRONOLOGY_HASH_AUDIT_20260811.json"
+HISTORICAL_TOOL_SNAPSHOT = (
+    BASE
+    / "04_candidates/negative_history/RH_SPEC_002_PR15_TOOL_INVENTORY_SNAPSHOT_7F45008.json"
+)
 CONTINUATION = BASE / "09_trace/RH_SPEC_002_CALIBRATION_TRACE_CONTINUATION_20260811.json"
 PARENT_TRACE = BASE / "09_trace/RH_SPEC_002_OPEN_TRACE_20260811.json"
 FAILURES = BASE / "07_memory/RH_SPEC_002_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json"
@@ -30,6 +34,10 @@ def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def raw_sha256(path: Path) -> str:
+    return "sha256:" + hashlib.sha256(path.read_bytes()).hexdigest()
+
+
 def assert_self_hash(raw: dict) -> None:
     expected = raw["artifact_hash"]
     payload = copy.deepcopy(raw)
@@ -40,6 +48,7 @@ def assert_self_hash(raw: dict) -> None:
 def test_retrospective_authority_and_pr15_provenance_are_explicit() -> None:
     receipt = load(CALIBRATION)
     provenance = load(PROVENANCE)
+    historical_tools = load(HISTORICAL_TOOL_SNAPSHOT)
     assert_self_hash(receipt)
     assert_self_hash(provenance)
     assert receipt["authority"].startswith("RETROSPECTIVE_KNOWN_ANSWER_CALIBRATION")
@@ -54,9 +63,22 @@ def test_retrospective_authority_and_pr15_provenance_are_explicit() -> None:
     assert provenance["preserved_source_identity"]["original_trace_commit"] == (
         "b22e345e830e6d6da804c6da901a83e9b420b483"
     )
-    assert provenance["hash_failure_observation"]["stored_tool_hash"] != (
-        provenance["hash_failure_observation"]["canonical_tool_hash_at_pr15_head"]
+    historical_tool = copy.deepcopy(historical_tools["tools"][0])
+    historical_stored_hash = historical_tool["artifact_hash"]
+    historical_tool["artifact_hash"] = ""
+    historical_canonical_hash = canonical_hash(historical_tool)
+    assert provenance["hash_failure_observation"]["stored_tool_hash"] == historical_stored_hash
+    assert provenance["hash_failure_observation"]["canonical_tool_hash_at_pr15_head"] == (
+        historical_canonical_hash
     )
+    snapshot_binding = provenance["historical_payload_snapshot"]
+    assert snapshot_binding["source_commit"] == (
+        "7f45008de9ad394ea8926a41b02195bdbce96773"
+    )
+    assert snapshot_binding["raw_file_sha256"] == raw_sha256(HISTORICAL_TOOL_SNAPSHOT)
+    assert snapshot_binding["stored_tool_hash"] == historical_stored_hash
+    assert snapshot_binding["recomputed_canonical_tool_hash"] == historical_canonical_hash
+    assert historical_stored_hash != historical_canonical_hash
     assert "11-case" in receipt["provenance"]["identity_separation"]
     assert "NO_BACKFILLED_PREREGISTRATION" in provenance["disposition"]
     validation = load(VALIDATION)
@@ -64,6 +86,15 @@ def test_retrospective_authority_and_pr15_provenance_are_explicit() -> None:
     assert validation["focused_result"] == {"exit_code": 0, "passed": 10, "failed": 0}
     assert validation["full_result"] == {"exit_code": 0, "passed": 175, "failed": 0}
     assert validation["subjects"]["calibration_hash"] == receipt["artifact_hash"]
+    assert validation["subjects"]["chronology_audit_hash"] == provenance["artifact_hash"]
+    assert validation["subjects"]["failure_lattice_hash"] == canonical_hash(load(FAILURES))
+    assert validation["subjects"]["research_tool_inventory_hash"] == canonical_hash(load(TOOLS))
+    assert validation["subjects"]["historical_tool_snapshot_raw_sha256"] == raw_sha256(
+        HISTORICAL_TOOL_SNAPSHOT
+    )
+    assert validation["subjects"]["historical_tool_payload_canonical_hash"] == (
+        historical_canonical_hash
+    )
 
 
 def test_retrospective_package_classification_remains_narrow() -> None:
@@ -103,7 +134,8 @@ def test_failure_lattice_preserves_math_and_assurance_failures() -> None:
     chronology = next(item for item in failures["experiences"] if item["failure_id"].endswith("CHRONOLOGY"))
     stale_hash = next(item for item in failures["experiences"] if item["failure_id"].endswith("STALE-TOOL-HASH"))
     assert "result artifact was the first calibration commit" in chronology["observed_result"]
-    assert "blocking exact CI" in stale_hash["observed_result"]
+    assert "exact temporal cause remains unverified" in stale_hash["observed_result"]
+    assert "does not establish which temporal mutation" in stale_hash["selected_diagnosis"]
 
 
 def test_hurwitz_tool_is_conditionally_reusable_and_rebound() -> None:
