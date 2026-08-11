@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rakl-math.local/schemas/framework-episode-inventory-extension.schema.json",
+  "title": "RAKL_math post-migration TaskEpisode inventory extension receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "receipt_id", "recorded_at", "object", "qoi",
+    "parent_inventory", "source_binding", "framework_binding", "classification",
+    "runtime_binding", "triggering_failure", "disposition", "authority_contract",
+    "evidence_pointers", "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"const": "RAKL-MATH-TASK-EPISODE-INVENTORY-EXTENSION-H4D1B-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "object": {"type": "string", "minLength": 1},
+    "qoi": {"type": "string", "minLength": 1},
+    "parent_inventory": {
+      "type": "object", "additionalProperties": false,
+      "required": ["receipt_path", "receipt_artifact_hash", "receipt_blob_at_merge", "receipt_file_sha256", "merge_commit", "frozen_episode_count"],
+      "properties": {
+        "receipt_path": {"type": "string", "minLength": 1},
+        "receipt_artifact_hash": {"$ref": "#/$defs/prefixed_sha256"},
+        "receipt_blob_at_merge": {"$ref": "#/$defs/git_sha"},
+        "receipt_file_sha256": {"$ref": "#/$defs/prefixed_sha256"},
+        "merge_commit": {"$ref": "#/$defs/git_sha"},
+        "frozen_episode_count": {"const": 19}
+      }
+    },
+    "source_binding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["repository_url", "current_main_at_audit", "current_tree", "introduction_commit", "introduction_tree", "path", "git_blob_sha", "raw_sha256"],
+      "properties": {
+        "repository_url": {"type": "string", "format": "uri"},
+        "current_main_at_audit": {"$ref": "#/$defs/git_sha"},
+        "current_tree": {"$ref": "#/$defs/git_sha"},
+        "introduction_commit": {"$ref": "#/$defs/git_sha"},
+        "introduction_tree": {"$ref": "#/$defs/git_sha"},
+        "path": {"type": "string", "minLength": 1},
+        "git_blob_sha": {"$ref": "#/$defs/git_sha"},
+        "raw_sha256": {"$ref": "#/$defs/raw_sha256"}
+      }
+    },
+    "framework_binding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["commit", "task_episode_schema_blob", "experience_substrate_blob"],
+      "properties": {
+        "commit": {"$ref": "#/$defs/git_sha"},
+        "task_episode_schema_blob": {"$ref": "#/$defs/git_sha"},
+        "experience_substrate_blob": {"$ref": "#/$defs/git_sha"}
+      }
+    },
+    "classification": {"const": "POST_MIGRATION_CURRENT_VALID_RAW_EXACT"},
+    "runtime_binding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["stored_hash", "computed_runtime_digest", "schema_verdict", "runtime_verdict", "runtime_reasons"],
+      "properties": {
+        "stored_hash": {"$ref": "#/$defs/raw_sha256"},
+        "computed_runtime_digest": {"$ref": "#/$defs/raw_sha256"},
+        "schema_verdict": {"const": "PASS"},
+        "runtime_verdict": {"const": "PASS"},
+        "runtime_reasons": {"type": "array", "maxItems": 0}
+      }
+    },
+    "triggering_failure": {
+      "type": "object", "additionalProperties": false,
+      "required": ["run_id", "head_sha", "passed", "failed", "failure_test", "failure_reason"],
+      "properties": {
+        "run_id": {"const": 31506541609},
+        "head_sha": {"$ref": "#/$defs/git_sha"},
+        "passed": {"const": 418},
+        "failed": {"const": 1},
+        "failure_test": {"type": "string", "minLength": 1},
+        "failure_reason": {"type": "string", "minLength": 1}
+      }
+    },
+    "disposition": {
+      "type": "object", "additionalProperties": false,
+      "required": ["parent_receipt_modified", "source_episode_modified", "extension_registered", "main_ci_repair_required"],
+      "properties": {
+        "parent_receipt_modified": {"const": false},
+        "source_episode_modified": {"const": false},
+        "extension_registered": {"const": true},
+        "main_ci_repair_required": {"const": true}
+      }
+    },
+    "authority_contract": {"$ref": "#/$defs/all_false_authority"},
+    "evidence_pointers": {"type": "array", "minItems": 3, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "artifact_hash": {"$ref": "#/$defs/prefixed_sha256"}
+  },
+  "$defs": {
+    "git_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "raw_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "prefixed_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "all_false_authority": {
+      "type": "object", "additionalProperties": false,
+      "required": ["grants_mathematical_result", "grants_proof_authority", "grants_novelty_authority", "grants_millennium_root_authority", "grants_framework_authority", "grants_review_independence"],
+      "properties": {
+        "grants_mathematical_result": {"const": false},
+        "grants_proof_authority": {"const": false},
+        "grants_novelty_authority": {"const": false},
+        "grants_millennium_root_authority": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false}
+      }
+    }
+  }
+}

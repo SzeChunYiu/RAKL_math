@@ -19,6 +19,9 @@ ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK = ROOT / "framework/RAKL"
 RECEIPT = ROOT / "receipts/framework-pr153-hash-contract-migration-20260811.json"
 SCHEMA = ROOT / "schemas/framework-pr153-hash-contract-migration.schema.json"
+INVENTORY_EXTENSIONS = (
+    ROOT / "receipts/framework-episode-inventory-extension-h4d1b-20260811.json",
+)
 OLD_FRAMEWORK = "bd1a2768f0f474ff44ffa25243241f94bfaf6466"
 TARGET_FRAMEWORK = "9027cc6beab7e935d714bbdf8e902b89b50caaa8"
 PROVISIONAL_FRAMEWORK = "3d4dde94ed8d6be04641b96ecf89389de55b61ce"
@@ -188,7 +191,10 @@ def test_episode_inventory_is_the_exact_frozen_19_object_audit() -> None:
         if isinstance(value, dict) and "episode_id" in value:
             discovered.add(str(path.relative_to(ROOT)))
     successor_paths = {item["successor_path"] for item in receipt["successor_bindings"]}
-    assert discovered == expected_paths | successor_paths
+    extension_paths = {
+        _load(path)["source_binding"]["path"] for path in INVENTORY_EXTENSIONS
+    }
+    assert discovered == expected_paths | successor_paths | extension_paths
     old_schema = _schema_at(OLD_FRAMEWORK, "task-episode.schema.json")
     new_schema = _schema_at(TARGET_FRAMEWORK, "task-episode.schema.json")
     for item in inventory:
