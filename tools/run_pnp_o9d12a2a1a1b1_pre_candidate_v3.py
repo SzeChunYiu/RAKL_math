@@ -214,7 +214,9 @@ def audit_git_state(
         return {"verdict": "FAIL", "reason": "SUBJECT_FRAMEWORK_GITLINK_MISMATCH"}
     if pin_config != FRAMEWORK_PIN:
         return {"verdict": "FAIL", "reason": "PIN_CONFIG_MISMATCH"}
-    if origin_url != APPLICATION_REPOSITORY:
+    normalized_origin = origin_url.rstrip("/").removesuffix(".git")
+    normalized_expected = APPLICATION_REPOSITORY.rstrip("/").removesuffix(".git")
+    if normalized_origin != normalized_expected:
         return {"verdict": "FAIL", "reason": "ORIGIN_URL_MISMATCH"}
     if require_current_origin:
         try:

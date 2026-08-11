@@ -229,7 +229,9 @@ def audit_git_state(
         return {"verdict": "FAIL", "reason": "SUBJECT_FRAMEWORK_GITLINK_MISMATCH"}
     if pin_config != FRAMEWORK_PIN:
         return {"verdict": "FAIL", "reason": "PIN_CONFIG_MISMATCH"}
-    if origin_url != APPLICATION_REPOSITORY:
+    normalized_origin = origin_url.rstrip("/").removesuffix(".git")
+    normalized_expected = APPLICATION_REPOSITORY.rstrip("/").removesuffix(".git")
+    if normalized_origin != normalized_expected:
         return {"verdict": "FAIL", "reason": "ORIGIN_URL_MISMATCH"}
     if require_current_origin:
         try:
@@ -324,18 +326,15 @@ def audit_input_bindings(receipt: object) -> dict[str, Any]:
         raw_hash = binding["raw_sha256"]
         if not isinstance(raw_hash, str) or re.fullmatch(r"[0-9a-f]{64}", raw_hash) is None:
             return {"verdict": "FAIL", "reason": "MALFORMED_INPUT_RAW_SHA256"}
-        absolute = ROOT / path
-        if not absolute.is_file():
-            return {"verdict": "CANNOT_CHECK", "reason": "INPUT_FILE_UNAVAILABLE"}
         try:
             committed = git("show", f"{subject}:{path}", binary=True)
             blob = git("rev-parse", f"{subject}:{path}")
         except RuntimeError:
             return {"verdict": "CANNOT_CHECK", "reason": "INPUT_GIT_OBJECT_UNAVAILABLE"}
-        current = absolute.read_bytes()
-        if committed != current or hashlib.sha256(current).hexdigest() != raw_hash:
+        assert isinstance(committed, bytes)
+        if hashlib.sha256(committed).hexdigest() != raw_hash:
             return {"verdict": "FAIL", "reason": "INPUT_RAW_BYTES_MISMATCH"}
-        if blob != binding["git_blob_sha"] or len(current) != binding["size_bytes"]:
+        if blob != binding["git_blob_sha"] or len(committed) != binding["size_bytes"]:
             return {"verdict": "FAIL", "reason": "INPUT_BLOB_OR_SIZE_MISMATCH"}
     return {"verdict": "PASS", "checked_bindings": len(TESTED_INPUTS)}
 
@@ -726,13 +725,21 @@ def audit_gate_bindings(gate: object, machine: object) -> dict[str, Any]:
     artifacts = gate.get("artifacts")
     if not isinstance(artifacts, list) or len(artifacts) != len(expected_pairs):
         return {"verdict": "FAIL", "reason": "GATE_ARTIFACT_SET_MISMATCH"}
-    for item, (path, kind) in zip(artifacts, expected_pairs):
+    subject = machine.get("source_binding", {}).get("subject_commit")
+    for index, (item, (path, kind)) in enumerate(zip(artifacts, expected_pairs)):
         if not isinstance(item, dict) or item.get("path") != path or item.get("kind") != kind:
             return {"verdict": "FAIL", "reason": "GATE_ARTIFACT_IDENTITY_MISMATCH"}
-        absolute = ROOT / path
-        if not absolute.is_file():
-            return {"verdict": "CANNOT_CHECK", "reason": "GATE_ARTIFACT_UNAVAILABLE"}
-        raw = absolute.read_bytes()
+        if index < len(TESTED_INPUTS):
+            try:
+                raw = git("show", f"{subject}:{path}", binary=True)
+            except RuntimeError:
+                return {"verdict": "CANNOT_CHECK", "reason": "GATE_ARTIFACT_GIT_OBJECT_UNAVAILABLE"}
+            assert isinstance(raw, bytes)
+        else:
+            absolute = ROOT / path
+            if not absolute.is_file():
+                return {"verdict": "CANNOT_CHECK", "reason": "GATE_ARTIFACT_UNAVAILABLE"}
+            raw = absolute.read_bytes()
         if item.get("raw_sha256") != hashlib.sha256(raw).hexdigest() or item.get("size_bytes") != len(raw):
             return {"verdict": "FAIL", "reason": "GATE_ARTIFACT_RAW_BINDING_MISMATCH"}
 

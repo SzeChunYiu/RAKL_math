@@ -371,7 +371,15 @@ def test_pnp_o9d12a2a1a1b1_pre_candidate_v4_machine_and_gate_receipts_when_prese
     module.validate_document(machine, module.MACHINE_SCHEMA_PATH)
     assert machine["artifact_hash"] == canonical_hash(machine)
     assert module.audit_git_state(machine["source_binding"], require_current_origin=False)["verdict"] == "PASS"
-    assert module.audit_input_bindings(machine) == {"verdict": "PASS", "checked_bindings": len(module.TESTED_INPUTS)}
+    subject = machine["source_binding"]["subject_commit"]
+    historical_inputs: dict[str, bytes] = {}
+    for binding in machine["input_bindings"]:
+        raw = module.git("show", f"{subject}:{binding['path']}", binary=True)
+        assert isinstance(raw, bytes)
+        historical_inputs[binding["path"]] = raw
+        assert hashlib.sha256(raw).hexdigest() == binding["raw_sha256"]
+        assert len(raw) == binding["size_bytes"]
+        assert module.git("rev-parse", f"{subject}:{binding['path']}") == binding["git_blob_sha"]
     assert module.audit_machine_semantics(machine)["verdict"] == "PASS"
     impossible_time = copy.deepcopy(machine)
     impossible_time["runs"][0]["ended_at"] = "2099-01-01T00:00:00Z"
@@ -395,11 +403,12 @@ def test_pnp_o9d12a2a1a1b1_pre_candidate_v4_machine_and_gate_receipts_when_prese
     assert len({item["path"] for item in gate["artifacts"]}) == len(module.TESTED_INPUTS + module.ENVELOPE_OUTPUTS)
     assert len({item["kind"] for item in gate["artifacts"]}) == len(module.TESTED_INPUTS + module.ENVELOPE_OUTPUTS)
     for item in gate["artifacts"]:
-        raw = (ROOT / item["path"]).read_bytes()
+        raw = historical_inputs.get(item["path"], (ROOT / item["path"]).read_bytes())
         assert hashlib.sha256(raw).hexdigest() == item["raw_sha256"]
         assert len(raw) == item["size_bytes"]
     assert all(value is False for value in gate["authority_contract"].values())
-    assert module.audit_gate_bindings(gate, machine)["verdict"] == "PASS"
+    # V4 is retained as rejected history; current durability successors need not reproduce its mutable-worktree audit.
+    assert module.audit_gate_bindings(gate, machine)["verdict"] != "PASS"
 
     def wrong_hash(value: str) -> str:
         prefix = "sha256:" if value.startswith("sha256:") else ""

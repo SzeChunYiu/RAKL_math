@@ -392,6 +392,11 @@ def test_pnp_o9d12a2a1a1b1_pre_candidate_v5_machine_and_gate_receipts_when_prese
     assert machine["artifact_hash"] == canonical_hash(machine)
     assert module.audit_git_state(machine["source_binding"], require_current_origin=False)["verdict"] == "PASS"
     assert module.audit_input_bindings(machine) == {"verdict": "PASS", "checked_bindings": len(module.TESTED_INPUTS)}
+    subject = machine["source_binding"]["subject_commit"]
+    historical_inputs = {
+        binding["path"]: module.git("show", f"{subject}:{binding['path']}", binary=True)
+        for binding in machine["input_bindings"]
+    }
     assert module.audit_machine_semantics(machine)["verdict"] == "PASS"
     impossible_time = copy.deepcopy(machine)
     impossible_time["runs"][0]["ended_at"] = "2099-01-01T00:00:00Z"
@@ -422,7 +427,7 @@ def test_pnp_o9d12a2a1a1b1_pre_candidate_v5_machine_and_gate_receipts_when_prese
     assert len({item["path"] for item in gate["artifacts"]}) == len(module.TESTED_INPUTS + module.ENVELOPE_OUTPUTS)
     assert len({item["kind"] for item in gate["artifacts"]}) == len(module.TESTED_INPUTS + module.ENVELOPE_OUTPUTS)
     for item in gate["artifacts"]:
-        raw = (ROOT / item["path"]).read_bytes()
+        raw = historical_inputs.get(item["path"], (ROOT / item["path"]).read_bytes())
         assert hashlib.sha256(raw).hexdigest() == item["raw_sha256"]
         assert len(raw) == item["size_bytes"]
     assert all(value is False for value in gate["authority_contract"].values())
