@@ -11,33 +11,23 @@ from __future__ import annotations
 
 import argparse
 import copy
+from contextlib import contextmanager
+from datetime import datetime
+import hashlib
+import importlib
 import json
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
-from typing import Any
+from typing import Any, Iterator
 
 
 ROOT = Path(__file__).resolve().parents[1]
 FRAMEWORK_ROOT = ROOT / "framework" / "RAKL"
-FRAMEWORK_SRC = FRAMEWORK_ROOT / "src"
-if str(FRAMEWORK_SRC) not in sys.path:
-    sys.path.insert(0, str(FRAMEWORK_SRC))
-
-from rakl.application_feedback import (  # noqa: E402
-    FeedbackImportVerdict,
-    FeedbackKind,
-    canonical_json_sha256,
-    import_application_feedback,
-    parse_application_feedback_bundle,
-    stage_feedback_failure,
-    stage_feedback_tool_candidate,
-)
-
-
 FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
 FRAMEWORK_VERSION = "0.6.0"
+FRAMEWORK_REPOSITORY_URL = "https://github.com/SzeChunYiu/RAKL.git"
 REPOSITORY_URL = "https://github.com/SzeChunYiu/RAKL_math.git"
 REPOSITORY_NAMESPACE = "github.com/SzeChunYiu/RAKL_math"
 BUNDLE_PATH = ROOT / "receipts" / "application-feedback-round1-bundle-20260811.json"
@@ -79,6 +69,22 @@ def run_git(repo: Path, *args: str) -> str:
     return completed.stdout.strip()
 
 
+def git_succeeds(repo: Path, *args: str) -> bool:
+    return (
+        subprocess.run(
+            ["git", "-C", str(repo), *args],
+            check=False,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        ).returncode
+        == 0
+    )
+
+
+def normalized_repository_url(value: str) -> str:
+    return value.strip().rstrip("/").removesuffix(".git")
+
+
 def git_bytes(repo: Path, specification: str) -> bytes:
     completed = subprocess.run(
         ["git", "-C", str(repo), "show", specification],
@@ -101,23 +107,62 @@ def blob_at(commit: str, path: str) -> str:
 
 
 def sha256_bytes(value: bytes) -> str:
-    import hashlib
-
     return hashlib.sha256(value).hexdigest()
 
 
-def binding(commit: str, stem: str, payload: dict[str, Any]) -> dict[str, Any]:
+def canonical_json_sha256(value: object) -> str:
+    raw = json.dumps(
+        value,
+        ensure_ascii=False,
+        allow_nan=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest()
+
+
+def validate_binding_documents(
+    result: dict[str, Any],
+    trace: dict[str, Any],
+    context: dict[str, Any],
+    *,
+    producer_committed_at: str,
+) -> str:
+    if trace.get("result_id") != result.get("result_id"):
+        raise ValueError("trace result_id does not match result")
+    if trace.get("context_id") != context.get("context_id"):
+        raise ValueError("trace context_id does not match context")
+    observed = trace.get("observed_at_utc")
+    if not isinstance(observed, str) or not observed.endswith("Z"):
+        raise ValueError("trace observed_at_utc missing or not strict UTC")
+    try:
+        observed_at = datetime.fromisoformat(observed.replace("Z", "+00:00"))
+        committed_at = datetime.fromisoformat(producer_committed_at)
+    except ValueError as exc:
+        raise ValueError("trace or producer timestamp is invalid") from exc
+    if observed_at.tzinfo is None or committed_at.tzinfo is None:
+        raise ValueError("trace or producer timestamp lacks timezone")
+    if observed_at > committed_at:
+        raise ValueError("observation timestamp is after producer commit")
+    return observed
+
+
+def binding(commit: str, stem: str, *, producer_committed_at: str) -> dict[str, Any]:
     result_path = f"{BASE}/results/{stem}.json"
     trace_path = f"{BASE}/traces/{stem}.json"
     context_path = f"{BASE}/contexts/{stem}.json"
     result = load_json_at(commit, result_path)
     trace = load_json_at(commit, trace_path)
+    context = load_json_at(commit, context_path)
     result_bytes = git_bytes(ROOT, f"{commit}:{result_path}")
     trace_bytes = git_bytes(ROOT, f"{commit}:{trace_path}")
     context_bytes = git_bytes(ROOT, f"{commit}:{context_path}")
-    observed = trace.get("observed_at_utc")
-    if not isinstance(observed, str):
-        raise ValueError(f"trace observed_at_utc missing: {trace_path}")
+    observed = validate_binding_documents(
+        result,
+        trace,
+        context,
+        producer_committed_at=producer_committed_at,
+    )
     return {
         "result_id": result["result_id"],
         "result_path": result_path,
@@ -135,17 +180,14 @@ def binding(commit: str, stem: str, payload: dict[str, Any]) -> dict[str, Any]:
 
 
 def build_bundle(producer_commit: str) -> dict[str, Any]:
-    framework_head = run_git(FRAMEWORK_ROOT, "rev-parse", "HEAD")
-    if framework_head != FRAMEWORK_COMMIT:
-        raise ValueError(
-            f"framework checkout is {framework_head}; expected {FRAMEWORK_COMMIT}"
-        )
-    pin = json.loads((ROOT / "config/rakl-framework-pin.json").read_text())
-    if pin.get("commit") != FRAMEWORK_COMMIT:
-        raise ValueError("machine-readable framework pin disagrees with bundle contract")
     remote = run_git(ROOT, "remote", "get-url", "origin")
-    if remote.rstrip("/").removesuffix(".git") != REPOSITORY_URL.removesuffix(".git"):
+    if normalized_repository_url(remote) != normalized_repository_url(REPOSITORY_URL):
         raise ValueError(f"unexpected producer origin: {remote}")
+    if not git_succeeds(ROOT, "merge-base", "--is-ancestor", producer_commit, "HEAD"):
+        raise ValueError("producer commit is not reachable from current HEAD")
+    producer_committed_at = run_git(
+        ROOT, "show", "-s", "--format=%cI", producer_commit
+    )
 
     items: list[dict[str, Any]] = []
     for stem, kind, item_id in ITEMS:
@@ -161,7 +203,11 @@ def build_bundle(producer_commit: str) -> dict[str, Any]:
                 },
                 "payload": payload,
                 "payload_canonical_sha256": canonical_json_sha256(payload),
-                "application_bindings": binding(producer_commit, stem, payload),
+                "application_bindings": binding(
+                    producer_commit,
+                    stem,
+                    producer_committed_at=producer_committed_at,
+                ),
                 "supersedes": [],
             }
         )
@@ -176,7 +222,7 @@ def build_bundle(producer_commit: str) -> dict[str, Any]:
             "tree_sha": run_git(ROOT, "rev-parse", f"{producer_commit}^{{tree}}"),
         },
         "framework_requirement": {
-            "repository_url": "https://github.com/SzeChunYiu/RAKL.git",
+            "repository_url": FRAMEWORK_REPOSITORY_URL,
             "commit_sha": FRAMEWORK_COMMIT,
             "version": FRAMEWORK_VERSION,
         },
@@ -194,7 +240,85 @@ def build_bundle(producer_commit: str) -> dict[str, Any]:
     return document
 
 
-def import_bundle(document: dict[str, Any], producer_commit: str) -> dict[str, Any]:
+def verify_framework_source(source: Path) -> None:
+    if not (source / ".git").exists():
+        raise ValueError(f"historical framework source is not a Git checkout: {source}")
+    origin = run_git(source, "remote", "get-url", "origin")
+    if normalized_repository_url(origin) != normalized_repository_url(
+        FRAMEWORK_REPOSITORY_URL
+    ):
+        raise ValueError(f"unexpected framework origin: {origin}")
+    dirty = run_git(
+        source,
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all",
+        "--",
+        "src",
+        "schemas",
+        "pyproject.toml",
+    )
+    if dirty:
+        raise ValueError("framework authority paths are not clean")
+
+
+def verify_historical_framework_checkout(checkout: Path) -> None:
+    if run_git(checkout, "rev-parse", "HEAD") != FRAMEWORK_COMMIT:
+        raise ValueError("historical framework checkout is not at the exact contract commit")
+    origin = run_git(checkout, "remote", "get-url", "origin")
+    if normalized_repository_url(origin) != normalized_repository_url(
+        FRAMEWORK_REPOSITORY_URL
+    ):
+        raise ValueError(f"unexpected historical framework origin: {origin}")
+    dirty = run_git(
+        checkout,
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all",
+        "--",
+        "src",
+        "schemas",
+        "pyproject.toml",
+    )
+    if dirty:
+        raise ValueError("historical framework authority paths are not clean")
+
+
+@contextmanager
+def historical_framework_checkout(source: Path) -> Iterator[Path]:
+    source = source.expanduser().resolve()
+    verify_framework_source(source)
+    with tempfile.TemporaryDirectory(prefix="rakl-framework-round1-") as temporary:
+        checkout = Path(temporary) / "RAKL"
+        run_git(Path(temporary), "init", "-q", str(checkout))
+        run_git(checkout, "remote", "add", "origin", FRAMEWORK_REPOSITORY_URL)
+        if git_succeeds(source, "cat-file", "-e", f"{FRAMEWORK_COMMIT}^{{commit}}"):
+            run_git(checkout, "fetch", "-q", "--no-tags", str(source), FRAMEWORK_COMMIT)
+        else:
+            run_git(
+                checkout,
+                "fetch",
+                "-q",
+                "--no-tags",
+                "--depth=1",
+                "origin",
+                FRAMEWORK_COMMIT,
+            )
+        run_git(checkout, "checkout", "-q", "--detach", "FETCH_HEAD")
+        verify_historical_framework_checkout(checkout)
+        yield checkout
+
+
+def load_feedback_api(framework_checkout: Path):
+    source = str(framework_checkout / "src")
+    if source not in sys.path:
+        sys.path.insert(0, source)
+    return importlib.import_module("rakl.application_feedback")
+
+
+def import_bundle(
+    document: dict[str, Any], producer_commit: str, feedback_api
+) -> dict[str, Any]:
     with tempfile.TemporaryDirectory(prefix="rakl-math-feedback-") as temporary:
         checkout = Path(temporary) / "RAKL_math"
         subprocess.run(
@@ -203,23 +327,23 @@ def import_bundle(document: dict[str, Any], producer_commit: str) -> dict[str, A
         )
         run_git(checkout, "remote", "set-url", "origin", REPOSITORY_URL)
         run_git(checkout, "checkout", "-q", "--detach", producer_commit)
-        receipt = import_application_feedback(
+        receipt = feedback_api.import_application_feedback(
             document,
             source_repository=checkout,
             current_framework_commit_sha=FRAMEWORK_COMMIT,
             current_framework_version=FRAMEWORK_VERSION,
         )
-    if receipt.verdict is not FeedbackImportVerdict.QUARANTINED_PROPOSAL:
+    if receipt.verdict is not feedback_api.FeedbackImportVerdict.QUARANTINED_PROPOSAL:
         raise ValueError(
             f"feedback import did not quarantine: {receipt.verdict.value}: "
             + ", ".join(receipt.reasons)
         )
-    bundle = parse_application_feedback_bundle(document)
+    bundle = feedback_api.parse_application_feedback_bundle(document)
     for item in bundle.items:
-        if item.kind is FeedbackKind.FAILURE_EXPERIENCE:
-            stage_feedback_failure(bundle, receipt, item.item_id)
-        elif item.kind is FeedbackKind.TOOL_CANDIDATE:
-            tool = stage_feedback_tool_candidate(bundle, receipt, item.item_id)
+        if item.kind is feedback_api.FeedbackKind.FAILURE_EXPERIENCE:
+            feedback_api.stage_feedback_failure(bundle, receipt, item.item_id)
+        elif item.kind is feedback_api.FeedbackKind.TOOL_CANDIDATE:
+            tool = feedback_api.stage_feedback_tool_candidate(bundle, receipt, item.item_id)
             if tool.authority.value != "HEURISTIC":
                 raise ValueError("foreign tool authority was not downgraded")
     return receipt.to_dict()
@@ -232,6 +356,11 @@ def serialize(document: dict[str, Any]) -> str:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--producer-commit", required=True)
+    parser.add_argument(
+        "--framework-source",
+        default=str(FRAMEWORK_ROOT),
+        help="clean RAKL Git checkout used only as an object source for the exact historical authority commit",
+    )
     parser.add_argument("--check", action="store_true")
     return parser.parse_args()
 
@@ -240,7 +369,13 @@ def main() -> int:
     args = parse_args()
     producer = run_git(ROOT, "rev-parse", args.producer_commit)
     document = build_bundle(producer)
-    receipt = import_bundle(copy.deepcopy(document), producer)
+    with historical_framework_checkout(Path(args.framework_source)) as framework_checkout:
+        feedback_api = load_feedback_api(framework_checkout)
+        if feedback_api.canonical_json_sha256(document["items"][0]["payload"]) != document[
+            "items"
+        ][0]["payload_canonical_sha256"]:
+            raise ValueError("local canonical JSON implementation disagrees with framework")
+        receipt = import_bundle(copy.deepcopy(document), producer, feedback_api)
     expected = {BUNDLE_PATH: serialize(document), RECEIPT_PATH: serialize(receipt)}
     if args.check:
         mismatches = [
