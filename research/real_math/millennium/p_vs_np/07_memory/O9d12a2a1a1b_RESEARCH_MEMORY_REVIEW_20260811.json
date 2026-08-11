@@ -1,0 +1,27 @@
+{
+  "schema_version": "research-memory-review-v1-shadow",
+  "atom_id": "O9d12a2a1a1b",
+  "context_packet_hash": "sha256:eea19518e2925dfd8fbd6335e1053519c388a1cf76cd84172625956ebf2a1478",
+  "memory_snapshot_bindings": {
+    "tool_snapshot": "C025_RESEARCH_TOOL_DELTA_20260811.json@blob:23b4aaf67f667c7805ff5eda21d2f84eaaf11637",
+    "failure_snapshot": "O9d12a2a1_FAILURE_EXPERIENCE_LATTICE_20260811.json@blob:bb79c237dbfca5d38ab08807446640f1eb672e39",
+    "parent_episode": "O9d12a2a1a1a retrospective activation-congruence episode on PR78 head ce3a6dfc2af3c5c3e7fc93616e3fd774097e4d9b"
+  },
+  "candidate_method_families_searched": ["exact cover-incidence quotient", "minimal-antichain encoding", "fractional packing", "canonical joint signatures", "generic hierarchy/rank/entropy"],
+  "relevant_tool_ids": ["T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION", "T-PNP-UPPER-FIRST"],
+  "relevant_failure_ids": ["F-C025-FIRST-ORDER-CANONICAL-COLLAPSE", "F-C024-FRACTIONAL-INTEGRALITY-GAP", "F-C010-MULTIPLEXING", "F-C021-CHEAP-ADJACENCY", "F-C023-SCALAR-COLLAPSE", "F-O9D12A2A1A1-PARTITION-CLOSURE-COLLAPSE"],
+  "selected_reusable_tools": ["T-PNP-UPPER-FIRST"],
+  "tool_applicability_notes": [
+    "T-PNP-UPPER-FIRST applies as search control: fail a cheap/easy calibration before spending on a hard-target scalar.",
+    "T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION is a known-answer comparator only; it does not define full semi-filter state."
+  ],
+  "failure_reuse_scope_notes": [
+    "C024 warns that fractional incidence can erase joint integrality.",
+    "C025 and O9d12a2a1a1a warn that canonical/witness-local compression can look informative while remaining logarithmically capped.",
+    "C010/C021/C023 remain mandatory if any scalar survives the exact quotient audit."
+  ],
+  "unresolved_warnings": ["No semantics-preserving quotient size is known to lower-bound rho.", "Current branch is stacked on PR78 and does not yet carry the live application-main framework pin merge."],
+  "evidence_pointers": ["Cavalar-Oliveira 2025 Definitions 18-21, Proposition 40, Theorem 30", "PR78 retrospective activation-congruence packet", "C024/C025 memory deltas"],
+  "frozen_at": "2026-08-11T12:59:00Z",
+  "artifact_hash": "sha256:3db652c95376b5ab7ee82dace85491b0bc30a3e64cf8402911e0672f3d9a967e"
+}
