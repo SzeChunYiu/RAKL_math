@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "validation_id": "VALIDATE-NS-B1a-C001-RETROSPECTIVE-20260811",
+  "atom_id": "NS-B1a",
+  "application_base": "0ad7991d8b4f05792d6d43b6e36128ef4b7eada9",
+  "framework_pin": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+  "subjects": {
+    "retrospective_result_raw_sha256": "sha256:416a543b2fa43ae5fa666d72b9ed9f77e72ecc613b04fd1aa8c735395fd14156",
+    "chronology_audit_hash": "sha256:e324b2948be5158efccee7835452002faa884b056954ccf139f813fe5e19eb1d",
+    "analytic_failure_experience_hash": "sha256:cb319a5124e14a1730f88e51a827c4a1d64377325ce4bad086ffcb13fe7d1636",
+    "assurance_failure_experience_hash": "sha256:368aea074728360f841f1f69c66326b801651fcb65ca43487da714811b94ceb3",
+    "replacement_trace_final_hash": "sha256:742f55e56d2a3183153a0115aede6568972b3a5c3b7f53ddd4ae334761b91e1b",
+    "historical_result_snapshot_raw_sha256": "sha256:cbba8a4f90ccb189de0a8affd0682db400e0f0e39bad4b9259aad9cfc24f1da5",
+    "historical_trace_snapshot_raw_sha256": "sha256:ff353360726367858259f03294316a56f58c2f38408b07d75c7bafc24f22f653"
+  },
+  "focused_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_navier_stokes_ns_b1a_c001_pressure_tail.py -q",
+  "focused_result": {
+    "exit_code": 0,
+    "passed": 6,
+    "failed": 0
+  },
+  "full_command": "python tools/run_application_tests.py --framework framework/RAKL",
+  "full_result": {
+    "exit_code": 0,
+    "passed": 190,
+    "failed": 0
+  },
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONINTMAXSTRDIGITS": "0"
+  },
+  "interpretation": [
+    "exact pin, Git provenance, historical snapshot, authority-scope, self-hash, schema, and regression checks pass",
+    "test success does not repair PR19 chronology and creates no Navier-Stokes root evidence",
+    "same-context assurance review is not independent review or peer review"
+  ],
+  "authority": "EXACT_LOCAL_VALIDATION_RECEIPT / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:3d6ec7a8d2b1f2941d337e432f33f0f95a6430fb22fc7dce54120cbd031d0af6"
+}
