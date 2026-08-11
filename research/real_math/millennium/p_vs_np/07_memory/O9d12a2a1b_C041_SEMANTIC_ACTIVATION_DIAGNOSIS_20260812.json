@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PROPOSAL_SHADOW_DIAGNOSIS",
+  "diagnosis_id": "D-C041-SYNTACTIC-MAGIC-NOT-SEMANTIC-ACTIVATION",
+  "atom_id": "O9d12a2a1b-C041S1",
+  "source_episode_id": "EP-PNP-C041S1-SEMANTIC-ACTIVATION-20260812",
+  "observation": "The frozen plan's 'first-magic-level structural screen' reaches canonical MAGIC syntax at n=8, but every 16-bit canonical MAGIC formula is a satisfiable one-clause v=1 formula; no new MAGIC-coded complement point exists there.",
+  "competing_diagnoses": ["the decoder implementation is wrong", "the all-zero short branch should be counted as MAGIC activation", "the discriminator conflated syntactic branch reachability with semantic predicate change", "MAGIC-coded UNSAT appears at n=8 but was missed by enumeration"],
+  "selected_diagnosis": "The discriminator was too coarse: syntactic branch reachability was used as a proxy for semantic activation of the UNSAT-defined complement predicate.",
+  "diagnosis_status": "SUPPORTED_LOCAL",
+  "failure_category": ["DECOMPOSITION", "REPRESENTATION"],
+  "local_mathematical_failure": false,
+  "local_to_global_gluing_failure": false,
+  "verification": ["closed-form canonical encoding-length comparison", "complete sign-pattern proof for v=1,m=1 and v=1,m=2", "independent deterministic finite enumeration calibration"],
+  "residual": "Whether the first semantic MAGIC geometry at n=12 admits any positive fresh dual capacity remains open.",
+  "evidence_pointers": ["research/real_math/millennium/p_vs_np/04_candidates/C041_FX_SAT_ONE_SIDED_FREEZE_20260812.md", "research/real_math/millennium/p_vs_np/04_candidates/C041_SEMANTIC_ACTIVATION_RESULT_20260812.md"],
+  "recorded_at": "2026-08-11T23:16:46Z",
+  "artifact_hash": "sha256:21060bb159319d70494a50b09e4d65ba1a73e7d45e7a9f36988a64d8e5e1a737"
+}
