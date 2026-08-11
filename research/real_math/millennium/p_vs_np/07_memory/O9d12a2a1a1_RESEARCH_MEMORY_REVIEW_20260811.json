@@ -1,0 +1,57 @@
+{
+  "target_atom_id": "O9d12a2a1a1",
+  "target_context_hash": "sha256:0c2a46839a95a7af6cfa2cff1a8257432ec397865e10515c84f8004719818ad7",
+  "tool_inventory_snapshot_hash": "sha256:b44a411861a98e997ff5989c38efdeaee0256a8bf2f2d1499f07b90bd62efcae",
+  "failure_lattice_snapshot_hash": "sha256:ca6341d2c7c7acb223831017b45e27bf4574a934cdbb8a9551ef30119d2cb81e",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "source-native minimal-preservation closure reconstruction",
+    "Horn/data-flow activation ancestry as equivalent representation",
+    "closure-state projection comparison against C025 signatures",
+    "upper-first hostile calibration on cheap explicit targets",
+    "generic lifted-consistency hierarchy as negative-control baseline"
+  ],
+  "relevant_tool_ids": [
+    "T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION",
+    "T-PNP-UPPER-FIRST"
+  ],
+  "relevant_failure_ids": [
+    "F-C010-MULTIPLEXING",
+    "F-C021-CHEAP-ADJACENCY",
+    "F-C023-SCALAR-COLLAPSE",
+    "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+    "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE"
+  ],
+  "selected_tool_ids": [
+    "T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION",
+    "T-PNP-UPPER-FIRST"
+  ],
+  "tool_applicability_notes": [
+    "T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION applies only as a known-answer projection test on the source-normalized G_NEQ canonical family; it is not a full semi-filter normalization theorem.",
+    "T-PNP-UPPER-FIRST applies to hostile controls: if closure richness appears on a target with a cheap explicit unrestricted construction, that richness cannot by itself be used as a monotone hardness proxy."
+  ],
+  "failure_reuse_notes": [
+    "DifferenceWitness from F-C025: the child does not reuse generator-only signatures as the state; it uses the exact source G_w closure containing derived pair intersections and asks whether that extra state is real before scoring it.",
+    "Regression for F-C010: any later accumulation claim must expose and charge shared derived closure facts rather than counting them independently across repeated blocks.",
+    "Regression for F-C021: target-specific closure richness must be checked after an upper-first construction ceiling.",
+    "Regression for F-C023: scalar closure depth/size/entropy is forbidden as a primary candidate until a cheap-extremal calibration fails to collapse it.",
+    "Regression for F-C024: independent fractional weights are not reused; the child representation is induced by one integral Lambda and exact simultaneous closure rules."
+  ],
+  "unresolved_warnings": [
+    "Theorem 24 uses G_w for an upper-bound construction; no lower-bound monotonicity or bounded fusion potential follows from the source.",
+    "The finite closure vocabulary may still admit strong sharing/compression, so apparent higher-order state size may be representation overhead.",
+    "Horn/data-flow analogies can clarify dependencies but cannot transfer complexity lower bounds.",
+    "C025 itself is still on an unmerged stacked PR lineage; this child must remain stacked and pre-candidate until its parent lineage is integrated."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/p_vs_np/03_routes/R004_C025_ROUTE_DELTA_20260811.md",
+    "research/real_math/millennium/p_vs_np/07_memory/C025_RESEARCH_TOOL_DELTA_20260811.json",
+    "research/real_math/millennium/p_vs_np/07_memory/C025_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C010_fixed_gadget_block_sum_ceiling.md",
+    "Cavalar-Oliveira 2025 Theorem 24 and Claim 27",
+    "Dowling-Gallier 1984 Horn data-flow formulation"
+  ],
+  "artifact_hash": "sha256:6b72e31cd790d9a9c2340f23a19da84c0cd4563f8d6a78137441eb4664a15b30"
+}

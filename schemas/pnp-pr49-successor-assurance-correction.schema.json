@@ -1,0 +1,273 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/pnp-pr49-successor-assurance-correction.schema.json",
+  "title": "P-vs-NP PR49 successor assurance correction",
+  "description": "Immutable integration successor for PR49. It preserves historical bytes, repairs current v3 runtime shapes without rewriting history, and cannot grant P-vs-NP authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "receipt_id", "recorded_at", "application_repository",
+    "framework_authority", "preserved_artifacts", "schema_audit",
+    "runtime_audit", "chronology_audit", "successors", "correction",
+    "prospective_gate", "authority_contract", "evidence_pointers", "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"const": "PNP-PR49-O9d12a2a1a1-SUCCESSOR-ASSURANCE-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "application_repository": {"$ref": "#/$defs/applicationRepository"},
+    "framework_authority": {"$ref": "#/$defs/frameworkAuthority"},
+    "preserved_artifacts": {
+      "type": "array", "minItems": 16, "maxItems": 16,
+      "items": {"$ref": "#/$defs/preservedArtifact"}
+    },
+    "schema_audit": {"$ref": "#/$defs/schemaAudit"},
+    "runtime_audit": {"$ref": "#/$defs/runtimeAudit"},
+    "chronology_audit": {"$ref": "#/$defs/chronologyAudit"},
+    "successors": {
+      "type": "array", "minItems": 4, "maxItems": 4,
+      "prefixItems": [
+        {"$ref": "#/$defs/episodeSuccessor"},
+        {"$ref": "#/$defs/traceSuccessor"},
+        {"$ref": "#/$defs/latticeSuccessor"},
+        {"$ref": "#/$defs/schemaSuccessor"}
+      ],
+      "items": false
+    },
+    "correction": {"$ref": "#/$defs/correction"},
+    "prospective_gate": {"$ref": "#/$defs/prospectiveGate"},
+    "authority_contract": {"$ref": "#/$defs/authorityContract"},
+    "evidence_pointers": {"$ref": "#/$defs/nonEmptyStrings"},
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha1": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "nonEmptyStrings": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "applicationRepository": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "url", "pr_number", "pr_state_at_audit", "pr_base_commit",
+        "pr_head_commit", "pr_head_tree", "integration_base_commit",
+        "integration_merge_commit", "integration_merge_tree", "integration_merge_parents"
+      ],
+      "properties": {
+        "url": {"const": "https://github.com/SzeChunYiu/RAKL_math.git"},
+        "pr_number": {"const": 49},
+        "pr_state_at_audit": {"const": "OPEN_UNMERGED_AT_AUDIT"},
+        "pr_base_commit": {"const": "60bd1c0e86313a3b2228a83d0a273a36c7d5cc14"},
+        "pr_head_commit": {"const": "3ccdcc51aa312af8b8288ff7cf6f4a681966d1fd"},
+        "pr_head_tree": {"const": "0f50d7d987a82bf01ea9542336976c479604beaf"},
+        "integration_base_commit": {"const": "0fddc66a70a1f89b5aada81b63678fd66da589eb"},
+        "integration_merge_commit": {"const": "f44e7b59373cbe6885d551b12b1e29898f381133"},
+        "integration_merge_tree": {"const": "7db7418021afbb7bdaa65f8544497bf93a1dce33"},
+        "integration_merge_parents": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "prefixItems": [
+            {"const": "0fddc66a70a1f89b5aada81b63678fd66da589eb"},
+            {"const": "3ccdcc51aa312af8b8288ff7cf6f4a681966d1fd"}
+          ],
+          "items": false
+        }
+      }
+    },
+    "schemaBinding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "git_blob_sha"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "git_blob_sha": {"$ref": "#/$defs/sha1"}
+      }
+    },
+    "frameworkAuthority": {
+      "type": "object", "additionalProperties": false,
+      "required": ["url", "current_main_commit", "current_main_tree", "schema_bindings"],
+      "properties": {
+        "url": {"const": "https://github.com/SzeChunYiu/RAKL.git"},
+        "current_main_commit": {"const": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"},
+        "current_main_tree": {"const": "b0f14dc300e20eb74a69f946e06343af1683ca16"},
+        "schema_bindings": {
+          "type": "array", "minItems": 6, "maxItems": 6,
+          "items": {"$ref": "#/$defs/schemaBinding"}
+        }
+      }
+    },
+    "preservedArtifact": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "git_blob_sha", "content_sha256", "introduced_commit", "introduced_commit_time"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "git_blob_sha": {"$ref": "#/$defs/sha1"},
+        "content_sha256": {"$ref": "#/$defs/sha256"},
+        "introduced_commit": {"$ref": "#/$defs/sha1"},
+        "introduced_commit_time": {"type": "string", "format": "date-time"}
+      }
+    },
+    "schemaFinding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["subject", "schema_path", "error_count", "violations"],
+      "properties": {
+        "subject": {"type": "string", "minLength": 1},
+        "schema_path": {"type": "string", "minLength": 1},
+        "error_count": {"type": "integer", "minimum": 0},
+        "violations": {
+          "type": "array", "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "schemaAudit": {
+      "type": "object", "additionalProperties": false,
+      "required": ["error_counts", "strict_process_verdict", "findings"],
+      "properties": {
+        "error_counts": {
+          "const": {
+            "context": 0, "tool_inventory": 0, "failure_lattice": 0,
+            "memory_review": 0, "pretrace": 0, "continuation": 1,
+            "failure_delta": 4
+          }
+        },
+        "strict_process_verdict": {"const": "INVALID_CURRENT_V3_OUTPUTS_NO_RETROACTIVE_DISCOVERY_REPAIR"},
+        "findings": {
+          "type": "array", "minItems": 7, "maxItems": 7,
+          "items": {"$ref": "#/$defs/schemaFinding"}
+        }
+      }
+    },
+    "runtimeAudit": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "standalone_continuation_verdict", "failure_delta_verdict",
+        "failure_delta_defects", "historical_relation_disposition"
+      ],
+      "properties": {
+        "standalone_continuation_verdict": {"const": "FAIL_NONEMPTY_PREVIOUS_HASH_AND_NON_PRE_CANDIDATE_START"},
+        "failure_delta_verdict": {"const": "FAIL_SCHEMA_AND_FAILURE_EXPERIENCE_RUNTIME"},
+        "failure_delta_defects": {"$ref": "#/$defs/nonEmptyStrings"},
+        "historical_relation_disposition": {
+          "type": "object", "additionalProperties": false,
+          "required": ["STRENGTHENS_WITHIN_EXACT_INTERFACE", "PRECEDES_CONTROL"],
+          "properties": {
+            "STRENGTHENS_WITHIN_EXACT_INTERFACE": {"const": "NORMALIZED_TO_CONTEXT_SPECIALIZATION_OF"},
+            "PRECEDES_CONTROL": {"const": "NOT_PROMOTED_NO_SUPPORTED_CANONICAL_RELATION"}
+          }
+        }
+      }
+    },
+    "chronologyAudit": {
+      "type": "object", "additionalProperties": false,
+      "required": ["checked_json_artifact_count", "checked_timestamp_count", "future_dated_claim_count", "future_dated_claims", "verdict"],
+      "properties": {
+        "checked_json_artifact_count": {"const": 7},
+        "checked_timestamp_count": {"const": 18},
+        "future_dated_claim_count": {"const": 0},
+        "future_dated_claims": {"type": "array", "maxItems": 0},
+        "verdict": {"const": "NO_FUTURE_DATED_STRUCTURED_PR49_CLAIMS_DETECTED"}
+      }
+    },
+    "episodeSuccessor": {"$ref": "#/$defs/successorBaseEpisode"},
+    "successorBaseEpisode": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "path", "artifact_hash", "hash_mode", "authority"],
+      "properties": {
+        "kind": {"const": "CANONICAL_RETROSPECTIVE_TASK_EPISODE"},
+        "path": {"const": "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_TASK_EPISODE_CANONICAL_20260811.json"},
+        "artifact_hash": {"$ref": "#/$defs/sha256"},
+        "hash_mode": {"const": "EMBEDDED_SELF_HASH"},
+        "authority": {"const": "AUDIT_EPISODE_ONLY"}
+      }
+    },
+    "traceSuccessor": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "path", "artifact_hash", "hash_mode", "authority"],
+      "properties": {
+        "kind": {"const": "CANONICAL_COMBINED_TRACE"},
+        "path": {"const": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1_TRACE_COMBINED_CANONICAL_20260811.json"},
+        "artifact_hash": {"$ref": "#/$defs/sha256"},
+        "hash_mode": {"const": "FILE_SHA256"},
+        "authority": {"const": "AUDITABLE_RETROSPECTIVE_HISTORY_ONLY"}
+      }
+    },
+    "latticeSuccessor": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "path", "artifact_hash", "hash_mode", "authority"],
+      "properties": {
+        "kind": {"const": "CANONICAL_FAILURE_LATTICE"},
+        "path": {"const": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1_FAILURE_LATTICE_CANONICAL_20260811.json"},
+        "artifact_hash": {"$ref": "#/$defs/sha256"},
+        "hash_mode": {"const": "FILE_SHA256"},
+        "authority": {"const": "SCOPED_NEGATIVE_HISTORY_ONLY"}
+      }
+    },
+    "schemaSuccessor": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "path", "artifact_hash", "hash_mode", "authority"],
+      "properties": {
+        "kind": {"const": "PROTECTED_CORRECTION_SCHEMA"},
+        "path": {"const": "schemas/pnp-pr49-successor-assurance-correction.schema.json"},
+        "artifact_hash": {"$ref": "#/$defs/sha256"},
+        "hash_mode": {"const": "FILE_SHA256"},
+        "authority": {"const": "AUTHORITY_FAIL_CLOSED_CONTRACT"}
+      }
+    },
+    "correction": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "classification", "strict_discovery_credit", "originals_preserved",
+        "repairs_original_chronology", "mathematical_result_retained",
+        "prospective_child_atom"
+      ],
+      "properties": {
+        "classification": {"const": "RETROSPECTIVE_INTEGRATION_ROUTE_PRUNING"},
+        "strict_discovery_credit": {"const": "NO_STRICT_DISCOVERY_CREDIT"},
+        "originals_preserved": {"const": true},
+        "repairs_original_chronology": {"const": false},
+        "mathematical_result_retained": {"const": "SCOPED_NORMALIZED_GNEQ_CLOSURE_INTERFACE_COLLAPSE"},
+        "prospective_child_atom": {"const": "O9d12a2a1a1a"}
+      }
+    },
+    "prospectiveGate": {
+      "type": "object", "additionalProperties": false,
+      "required": ["atom_id", "candidate_generation_allowed", "required_before_candidate", "missing_evidence_fails_closed"],
+      "properties": {
+        "atom_id": {"const": "O9d12a2a1a1a"},
+        "candidate_generation_allowed": {"const": false},
+        "required_before_candidate": {
+          "type": "array", "minItems": 5, "maxItems": 5,
+          "prefixItems": [
+            {"const": "fresh current-schema-valid O9d12a2a1a1a context fiber"},
+            {"const": "fresh dual-memory review bound to canonical combined failure lattice"},
+            {"const": "fresh role-separated same-context expert review explicitly not independent peer review"},
+            {"const": "fresh seven-event hash-chained pre-candidate trace"},
+            {"const": "successful plan_math_research gate under exact bd1a276 runtime"}
+          ],
+          "items": false
+        },
+        "missing_evidence_fails_closed": {"const": true}
+      }
+    },
+    "authorityContract": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "effective_authority", "grants_strict_discovery_credit",
+        "grants_proof_authority", "grants_p_vs_np_root_authority",
+        "grants_theorem_authority", "grants_novelty_authority",
+        "grants_framework_authority", "grants_review_independence",
+        "may_backfill_chronology"
+      ],
+      "properties": {
+        "effective_authority": {"const": "RETROSPECTIVE_SCOPED_ROUTE_PRUNING_ONLY"},
+        "grants_strict_discovery_credit": {"const": false},
+        "grants_proof_authority": {"const": false},
+        "grants_p_vs_np_root_authority": {"const": false},
+        "grants_theorem_authority": {"const": false},
+        "grants_novelty_authority": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false},
+        "may_backfill_chronology": {"const": false}
+      }
+    }
+  }
+}
