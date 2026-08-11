@@ -1,0 +1,150 @@
+{
+  "trace_id": "NS-R001D-ADVECTION-DEPLETION-20260811",
+  "entries": [
+    {
+      "event_id": "NS-R001d-E008",
+      "atom_id": "NS-R001d",
+      "event_type": "CANDIDATE_PROPOSED",
+      "timestamp": "2026-08-11T08:24:40+00:00",
+      "state_summary": "The strict pre-candidate packet is complete; the only candidate is the weakest static energy-to-Miller bridge.",
+      "action_summary": "Freeze NS-R001d-C001: a finite function of kinetic energy uniformly bounds Q over all smooth rapidly decaying divergence-free initial data.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/04_candidates/NS_R001D_C001_STATIC_REMAINDER_RATIO_SCREEN_20260811.md",
+        "sha256:b846a739651692306c82255b1e7f76cd13347b4c00bc3f61e2ea28d3c7bb711f",
+        "sha256:71063a2b8249886ddd05fbf7e160f15a27c6c9e9abb93d8d3b43e9bacf08b9da"
+      ],
+      "alternatives_considered": [
+        "claim Q<1 directly",
+        "test only one seed without scaling",
+        "test the weaker finite-bound snapshot hypothesis"
+      ],
+      "decision_rationale": "Refuting even finite snapshot boundedness would prune every direct kinetic-energy-only route to Miller's critical remainder coordinate.",
+      "outputs": [
+        "candidate:NS-R001d-C001",
+        "hypothesis:H_snapshot"
+      ],
+      "uncertainties": [
+        "a failure does not address any actual t>0 trajectory estimate."
+      ],
+      "residuals": [],
+      "next_steps": [],
+      "artifact_hash": "sha256:3f74e65ae73a43c2b4fc1be06b3d9e28c7fd9bd20c5a60604bbe26eabd2fc97e",
+      "previous_event_hash": "sha256:193472a4c4d2bf005240f5298fc9572baff8eafac9027ba168ba6624be5f7838"
+    },
+    {
+      "event_id": "NS-R001d-E009",
+      "atom_id": "NS-R001d",
+      "event_type": "FALSIFIER_RUN",
+      "timestamp": "2026-08-11T08:25:00+00:00",
+      "state_summary": "NS-R001d-C001 is frozen and the exact counterexample-first discriminator is executed.",
+      "action_summary": "Compute exact Gaussian moments for v=curl((xy,yz,xz)e^{-r^2/2}), bind P_st through the strain-space pairing, then apply fixed-energy spatial concentration.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/05_falsifiers/NS_R001D_C001_EXACT_GAUSSIAN_FALSIFIER_20260811.md",
+        "tests/math_applications/test_navier_stokes_r001d_static_ratio.py"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "energy_coefficient:3/2",
+        "D2_coefficient:3861/32",
+        "FD_normalized_alpha3:8/27",
+        "pairing_nonzero:true"
+      ],
+      "uncertainties": [
+        "exact-head application CI still required for repository-level verification."
+      ],
+      "residuals": [],
+      "next_steps": [],
+      "artifact_hash": "sha256:873e25ec1079f4c51844ed5f5aa7388931d95fe2e26b2e5ef1d7b017ebaa74aa",
+      "previous_event_hash": "sha256:3f74e65ae73a43c2b4fc1be06b3d9e28c7fd9bd20c5a60604bbe26eabd2fc97e"
+    },
+    {
+      "event_id": "NS-R001d-E010",
+      "atom_id": "NS-R001d",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-11T08:25:10+00:00",
+      "state_summary": "The exact seed has nonzero projected-remainder pairing and fixed-energy concentration makes the rigorous lower bound for Q grow without bound.",
+      "action_summary": "Record H_snapshot as refuted within its registered initial-data scope and create a SUPPORTED failure experience.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/05_falsifiers/NS_R001D_C001_EXACT_GAUSSIAN_FALSIFIER_20260811.md",
+        "research/real_math/millennium/navier_stokes/07_memory/NS_R001D_C001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+        "tests/math_applications/test_navier_stokes_r001d_static_ratio.py"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "Q(v_lambda)>=512*sqrt(6)/938223*lambda^(1/2)",
+        "fixed_energy:(3/2)*pi^(3/2)",
+        "candidate:NS-R001d-C001:REFUTED_WITHIN_SCOPE"
+      ],
+      "uncertainties": [
+        "this is not a Navier-Stokes trajectory counterexample and gives no positive-time information."
+      ],
+      "residuals": [
+        "any surviving Miller-based regularity route must use actual evolution or additional critical information."
+      ],
+      "next_steps": [],
+      "artifact_hash": "sha256:09734542c1d8900b4b502d2e2798e7d03c05f07a07643d2ad4502b116a75f654",
+      "previous_event_hash": "sha256:873e25ec1079f4c51844ed5f5aa7388931d95fe2e26b2e5ef1d7b017ebaa74aa"
+    },
+    {
+      "event_id": "NS-R001d-E011",
+      "atom_id": "NS-R001d",
+      "event_type": "REVIEWED",
+      "timestamp": "2026-08-11T08:25:20+00:00",
+      "state_summary": "Six same-context roles reviewed the result and agreed the projection binding, Gaussian arithmetic and concentration exponents support only a static route no-go.",
+      "action_summary": "Preserve the negative result, block dynamic overreach, and delegate the next child to positive-time/time-integrated actual-solution depletion.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/08_reviews/NS_R001D_C001_RESULT_REVIEW_20260811.md",
+        "research/real_math/millennium/navier_stokes/05_falsifiers/NS_R001D_C001_EXACT_GAUSSIAN_FALSIFIER_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "review_authority:SAME_CONTEXT_ONLY",
+        "diagnosis:SUPPORTED",
+        "root_authority:NONE"
+      ],
+      "uncertainties": [
+        "generic parabolic smoothing and genuinely nonlinear depletion have not yet been separated."
+      ],
+      "residuals": [],
+      "next_steps": [],
+      "artifact_hash": "sha256:6c94df7b4e69cf016855a7665ffd5c5544413161b97a62c099a541cc72746489",
+      "previous_event_hash": "sha256:09734542c1d8900b4b502d2e2798e7d03c05f07a07643d2ad4502b116a75f654"
+    },
+    {
+      "event_id": "NS-R001d-E012",
+      "atom_id": "NS-R001d",
+      "event_type": "RESIDUAL_OPENED",
+      "timestamp": "2026-08-11T08:25:30+00:00",
+      "state_summary": "Static kinetic-energy control of Miller's critical remainder ratio is pruned; global regularity remains open.",
+      "action_summary": "Open NS-R001d1 around the smallest positive-time or time-integrated actual-solution property that distinguishes heat smoothing from nonlinear advection/pressure depletion.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/02_problem_dag/NS_R001D_DELTA_20260811.yaml",
+        "research/real_math/millennium/navier_stokes/08_reviews/NS_R001D_C001_RESULT_REVIEW_20260811.md",
+        "RAKL_math issue #4"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "child:NS-R001d1",
+        "parent_candidate:NS-R001d-C001:REFUTED"
+      ],
+      "uncertainties": [
+        "no source yet derives the required dynamic critical control from finite energy."
+      ],
+      "residuals": [
+        "positive-time projected-remainder depletion mechanism unresolved",
+        "Type-II and full Clay root remain open"
+      ],
+      "next_steps": [
+        "freeze a fresh NS-R001d1 context before candidate generation",
+        "audit heat-semigroup smoothing baseline",
+        "identify a dimensionless/time-integrated quantity that actual nonlinear evolution could improve beyond the linear heat baseline"
+      ],
+      "artifact_hash": "sha256:c872779609c3c7de50d8e4176095a4ce7b4d36f55bd5163ef417a0c565174b2c",
+      "previous_event_hash": "sha256:6c94df7b4e69cf016855a7665ffd5c5544413161b97a62c099a541cc72746489"
+    }
+  ]
+}
