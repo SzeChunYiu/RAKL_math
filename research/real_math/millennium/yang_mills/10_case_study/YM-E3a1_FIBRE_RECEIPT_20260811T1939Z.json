@@ -1,0 +1,102 @@
+{
+  "schema": "RAKL_math.shadow_fibre_receipt.v1",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "cycle_id": "YM-E3a1-CYCLE-20260811T1939Z",
+  "atom_id": "YM-E3a1",
+  "atom_signature": "YM-E3a1-A10-INVARIANT-BALL-RECURRENCE-REPAIR-AND-SOURCE-BINDING",
+  "problem_signature": "constructive_continuum_qft | weak_coupling_FRD_RG | quadratic_recurrence | invariant_small_ball | source_specific_gluing",
+  "framework": {
+    "repo": "SzeChunYiu/RAKL",
+    "main_sha": "f5a6a11f089669a715d35bafa0a0c8affce929e3",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811"
+  },
+  "application_base": {
+    "repo": "SzeChunYiu/RAKL_math",
+    "main_sha": "350861b1c2755033893068e5519b8b06a6315aa6"
+  },
+  "chronology": {
+    "status": "ISSUE_93_PROSPECTIVELY_FROZEN_BEFORE_THIS_RUN__IN_RUN_IDEA_PRECEDED_THIS_FILE__THIS_RECEIPT_BINDS_VERIFICATION_ONLY",
+    "credit_boundary": "No claim of strict in-run pre-candidate chronology. Issue #93 had already frozen the exact invariant-small-ball repair direction. This receipt freezes the exact verification target and fibre before source-wide falsification and repository preservation."
+  },
+  "fibre": {
+    "object": "nonnegative scalar norm recurrence abstracted from FRD RG",
+    "qoi": [
+      "Does an explicit smallness condition make the ball invariant?",
+      "Does that condition recover the displayed A.55 estimate?",
+      "Can the corrected scalar lemma be typed back to the same A.9 norm/rho/C/r data without circularly leaving the domain?",
+      "Does another source theorem already supply the needed smallness relation, and if so is its proof valid?"
+    ],
+    "population_scale_regime": "all n>=0 in one fixed FRD small-norm regime; source application at weak-coupling entry scale K and later RG iterates",
+    "observation_model": "primary PDF equations plus exact deterministic inequalities; no numerical evidence counted as proof",
+    "assumptions": [
+      "0 < rho < 1",
+      "C > 0",
+      "quadratic recurrence x_{n+1} <= rho*x_n + C*x_n^2 is valid whenever x_n <= r0",
+      "candidate radius r_star is no larger than r0",
+      "x_0 <= r_star",
+      "source-specific gluing requires same Banach norm, same rho and C, and entry into r_star"
+    ],
+    "residual_before": [
+      "Lemma A.10 printed proof is invalid and has no explicit invariant-ball hypothesis",
+      "A.9 invokes the recurrence only on its local validity domain, so propagation cannot be assumed before invariance is proved",
+      "source-specific same-constant/radius binding remains unverified",
+      "downstream asymptotic-freedom, continuum-identification, OS, spectral-gap and root obligations remain open"
+    ],
+    "invariants": [
+      "do not infer missing constants from memory",
+      "computation calibrates/falsifies only",
+      "local recurrence repair is not a Yang-Mills theorem",
+      "local proof success does not close source-specific or continuum gluing",
+      "same-context expert passes are not independent reviews"
+    ]
+  },
+  "selected_fibre_contents": [
+    "RAKL current main f5a6a11f089669a715d35bafa0a0c8affce929e3",
+    "RAKL_math root issue #5",
+    "RAKL_math issue #93 / YM-E3a",
+    "RAKL_math PR #97 retrospective source audit",
+    "Faizal-Shabir arXiv:2606.19362v1 main Theorem 5.3 / equations (5.6)-(5.12)",
+    "Faizal-Shabir arXiv:2606.19362v1 Appendix A Theorem A.9 / Lemma A.10 / equations (A.42)-(A.59)"
+  ],
+  "retrieved_but_rejected": [
+    {"id": "RAKL_math#69/YM-S1c1", "why": "parallel bare-coupling escape obstruction; does not decide the scalar invariant-ball lemma"},
+    {"id": "RAKL_math#109/YM-E4a", "why": "downstream source-family completeness; irrelevant to weak-coupling recurrence"},
+    {"id": "RAKL_math#126/YM-E4b", "why": "downstream OS semigroup/varying-Hilbert gluing; irrelevant to local recurrence"},
+    {"id": "RAKL_math PR#140/YM-E4b2b", "why": "OS form-domination countermodel; different residual family"}
+  ],
+  "cross_millennium_memory": {
+    "queried": false,
+    "difference_witness": "Exact Yang-Mills source issue #93 already contains the directly applicable recurrence failure and repair direction; far transfer has lower applicability and is unnecessary for this discriminator."
+  },
+  "planned_canonical_process_surfaces": [
+    "memory",
+    "routing",
+    "source_selection_reliability",
+    "claim_extraction",
+    "mathematical_context_translation",
+    "gap_discovery",
+    "experiment_query_selection",
+    "review",
+    "contextual_theory_gluing",
+    "saturation_stopping"
+  ],
+  "planned_falsifiers": [
+    "test the printed A.10 condition 2Cr+Cr^2<=0 for C,r>0",
+    "test whether ball invariance follows from Cr_star<=1-rho",
+    "derive the recurrence by variation of constants without the invalid A.58 step",
+    "source-wide search for an existing smallness condition using the same rho/C/r interface",
+    "audit any such source theorem for algebraic validity rather than treating it as authority by citation"
+  ],
+  "expert_cell": [
+    {"role": "nonlinear-discrete-dynamics analyst", "task": "prove the sharp/sufficient invariant-ball recurrence statement and identify minimal smallness"},
+    {"role": "constructive RG/polymer-norm analyst", "task": "type the scalar recurrence back to the FRD Banach-ball domain and constants"},
+    {"role": "constructive QFT/continuum analyst", "task": "separate local RG repair from continuum existence/OS/nontriviality obligations"},
+    {"role": "primary-source mathematical-physics auditor", "task": "bind every source-specific claim to exact equations/pages and search for same-source repair surfaces"},
+    {"role": "adversarial proof reviewer", "task": "attack induction, radius shrinking, dependence of constants, and limit/gluing inferences"},
+    {"role": "RAKL v3 assurance/metrology reviewer", "task": "enforce chronology, dual-memory routing, episode/diagnosis/obstruction distinction, seven-axis telemetry and non-escalation"}
+  ],
+  "fibre_snapshot_sha256": "7afd90bb326b40a960aaac81fce5049f5423b9b034b20fca2ecaad9abb4b4c66",
+  "next_action": "Verify the corrected recurrence analytically, then search the primary source for the exact same-constant smallness/radius interface and audit its proof."
+}
