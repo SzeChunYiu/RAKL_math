@@ -1,0 +1,53 @@
+{
+  "target_atom_id": "RH-SPEC-002a",
+  "target_context_hash": "sha256:a96f3f0360c2127a0e5542d5d799961e878492d94c476a78db675f0e90e35932",
+  "tool_inventory_snapshot_hash": "sha256:4d9d12edf6c340c903fa93573326fe282d61ea14bc56a5adeb13f4e46d4c341e",
+  "failure_lattice_snapshot_hash": "sha256:5b886e957a45b31324ceba659a2f8cba2f40f411e5b49452feb3cc35e6dbc3e5",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "domain-local Hurwitz/Rouche zero transport on the minimal root-relevant strip",
+    "weighted-L1 or source-specific transform-continuity bridge from ground-state error to compact-uniform complex Fourier/Mellin error",
+    "lowest-eigenspace perturbation with quantitative spectral separation or alternate rigidity",
+    "source-specific QW_lambda/prolate trace-formula bridge without generic operator-norm assumptions",
+    "hostile small-gap and growing-domain norm-loss calibrations before target-specific theorem search"
+  ],
+  "relevant_tool_ids": [
+    "T-RH-SPEC-HURWITZ-DOMAIN-ZERO-TRANSPORT"
+  ],
+  "relevant_failure_ids": [
+    "F-RH-SPEC-002-STRONG-RESOLVENT-INCOMPLETE",
+    "F-RH-SPEC-002-GALERKIN-POLLUTION",
+    "F-RH-SPEC-002-JOINT-LIMIT-AMBIGUITY",
+    "F-RH-SPEC-002-FINITE-ZERO-PREFIX"
+  ],
+  "selected_tool_ids": [
+    "T-RH-SPEC-HURWITZ-DOMAIN-ZERO-TRANSPORT"
+  ],
+  "tool_applicability_notes": [
+    "The Hurwitz tool is selected only for the target-side implication: once a source-defined cofinal family has finite-stage off-real zero exclusion and locally uniform convergence to exact nonzero Xi on every compact subset of the open strip |Im z|<1/2, the tool transports zero exclusion there. It supplies no source-side ground-state/proxy estimate.",
+    "DifferenceWitness from the parent calibration: RH-SPEC-002a no longer asks which generic convergence topology is sufficient. It asks how the actual CCM semilocal ground state xi_lambda can be related to the explicit proxy k_lambda strongly enough to meet the selected tool's preconditions."
+  ],
+  "failure_reuse_notes": [
+    "F-RH-SPEC-002-FINITE-ZERO-PREFIX warns that zeros or one-point normalization do not control the zero-free/growth factor; therefore c_lambda and the transform norm must be source-defined before comparing with Xi.",
+    "F-RH-SPEC-002-JOINT-LIMIT-AMBIGUITY requires keeping fixed-lambda N->infinity transport separate from the lambda->infinity proxy bridge unless a uniform joint-limit theorem is proved.",
+    "F-RH-SPEC-002-STRONG-RESOLVENT-INCOMPLETE and F-RH-SPEC-002-GALERKIN-POLLUTION warn against substituting generic operator convergence for the exact ground-state transform bridge. They do not prove the CCM family fails.",
+    "Cheapest repeat-failure regressions for any candidate are: a nearly degenerate self-adjoint 2x2 family testing residual-to-eigenvector stability, and a growing-domain function family testing whether the proposed source norm truly controls compact-uniform complex transform error."
+  ],
+  "unresolved_warnings": [
+    "CCM explicitly leave simplicity/evenness of the semilocal QW_lambda ground state open; RH-SPEC-002a treats it as a sibling dependency rather than an assumption silently consumed by the proxy bridge.",
+    "The source proves k_lambda transform convergence to Xi on closed substrips but does not prove k_lambda approximates a scalar multiple of xi_lambda strongly enough for zero transport.",
+    "Qualitative simplicity without quantitative spectral separation may be insufficient for perturbative eigenspace stability.",
+    "Unweighted L2 proximity on a lambda-dependent growing logarithmic interval may not control complex transforms uniformly on a strip.",
+    "A source-side scalar normalization c_lambda must not be fitted to known zeta zeros or chosen after seeing Xi discrepancy.",
+    "Success of the lambda-stage ground-state/proxy bridge would not discharge fixed-lambda finite-N determinant/eigenvector transport."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_002A_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_002A_SOURCE_PACKET_20260811.md",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "Alain Connes, Caterina Consani, Henri Moscovici, Zeta Spectral Triples, arXiv:2511.22755 (2025), Lemma 7.3 and Section 8"
+  ],
+  "artifact_hash": "sha256:0a4e3ebe361d48ad7d656c981fb5329969162146af7c4452ac9ecdbccfda1c60"
+}
