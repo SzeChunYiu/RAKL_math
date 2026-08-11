@@ -20,6 +20,9 @@ CHRONOLOGY_AUDIT = (
 )
 POSTRESULT_ADDENDUM = BASE / "07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json"
 SYNTHESIS_RECEIPT = BASE / "05_falsification/C025_SYNTHESIS_RECEIPT_20260811.json"
+INTEGRATION_RECEIPT = (
+    BASE / "05_falsification/C025_CURRENT_MAIN_INTEGRATION_RECEIPT_20260811.json"
+)
 
 
 def _canonical_hash(value: object) -> str:
@@ -538,3 +541,46 @@ def test_pnp_readme_exposes_c025_scope_and_next_blocked_child() -> None:
     assert "OPEN_PROBLEM / NO_AUTHORITY" in readme
     assert "O9d12a2a1a1" in readme
     assert "Candidate generation there remains blocked" in readme
+
+
+def test_current_main_integration_receipt_binds_non_circular_git_history() -> None:
+    receipt = json.loads(INTEGRATION_RECEIPT.read_text(encoding="utf-8"))
+    payload = copy.deepcopy(receipt)
+    payload["artifact_hash"] = ""
+    assert receipt["artifact_hash"] == _canonical_hash(payload)
+
+    merge = receipt["integration_merge"]
+    assert _git("cat-file", "-e", f'{merge["commit"]}^{{commit}}', check=False).returncode == 0
+    assert _git("rev-parse", f'{merge["commit"]}^{{tree}}').stdout.decode().strip() == merge[
+        "tree"
+    ]
+    assert _git("show", "-s", "--format=%P", merge["commit"]).stdout.decode().split() == merge[
+        "parents"
+    ]
+    assert merge["parents"] == [
+        receipt["documentation_successor"]["commit"],
+        receipt["current_main_snapshot"]["commit"],
+    ]
+
+    for role, commit in receipt["durable_ancestors"].items():
+        assert (
+            _git("merge-base", "--is-ancestor", commit, merge["commit"], check=False).returncode
+            == 0
+        ), role
+
+    for subject in (receipt["documentation_successor"], receipt["current_main_snapshot"]):
+        assert _git("rev-parse", f'{subject["commit"]}^{{tree}}').stdout.decode().strip() == subject[
+            "tree"
+        ]
+
+    binding = receipt["assurance_source"]["synthesis_receipt"]
+    assert _git("rev-parse", f'{binding["commit"]}^{{tree}}').stdout.decode().strip() == binding[
+        "tree"
+    ]
+    assert _git("rev-parse", f'{binding["commit"]}:{binding["path"]}').stdout.decode().strip() == binding[
+        "git_blob_sha"
+    ]
+    historical = _git("show", f'{binding["commit"]}:{binding["path"]}').stdout
+    assert "sha256:" + hashlib.sha256(historical).hexdigest() == binding["raw_sha256"]
+    assert historical == (ROOT / binding["path"]).read_bytes()
+    assert receipt["scope"]["p_vs_np_root"] == "NO_AUTHORITY"
