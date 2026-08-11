@@ -1,0 +1,26 @@
+{
+  "failure_id": "F-O9D12A2A1A1B-FIXED-LAMBDA-GLOBAL-STATE-FACTORIZATION",
+  "atom_id": "O9d12a2a1a1b",
+  "context_hash": "sha256:912f028b6ca1c52f700dace9fa315448e3ed6a7d52d8b1ee04f0e11d66a1f398",
+  "failure_mode": "A global score is proposed as though later closure stages create an independent cross-witness hardness coordinate, but for fixed Lambda the source equations factor pointwise through each witness's full base state and the shared rule/inclusion system.",
+  "diagnosis": "SUPPORTED_EXACT_LOCAL_SEMANTICS",
+  "scope_conditions": [
+    "fixed integral pair family Lambda",
+    "source-defined Omega and equations (6)-(8)",
+    "claims about distinctions created only by later closure dynamics"
+  ],
+  "non_claims": [
+    "does not prove that all global statistics are weak",
+    "does not upper-bound rho",
+    "does not rule out a statistic that is provably bounded for all t-rule systems",
+    "does not refute the fusion method or cyclic characterization"
+  ],
+  "repair": "factor any proposed global closure statistic through the exact recurrence; isolate a property of the shared t-rule/base-incidence system and prove a legal bound in terms of t before target scoring",
+  "links": [
+    {"target":"F-C025-FIRST-ORDER-CANONICAL-COLLAPSE","relation":"REFINES_AFTER"},
+    {"target":"F-O9D12A2A1A1-PARTITION-CLOSURE-COLLAPSE","relation":"GENERALIZES_ROUTE_PRUNING_BEYOND_NORMALIZED_SCOPE"},
+    {"target":"F-C010-MULTIPLEXING","relation":"EXPOSES_SHARED_RULE_REUSE"}
+  ],
+  "authority": "PROPOSAL_SHADOW_FAILURE_EXPERIENCE",
+  "artifact_hash": "sha256:8e6431c6a99c0b5fc5b6562b9beb7b11c65351b3cbccce32de4387a66dd9de14"
+}

@@ -1,0 +1,32 @@
+{
+  "review_id": "PNP-O9d12a2a1a1b-MEMORY-20260811-R2",
+  "atom_id": "O9d12a2a1a1b",
+  "context_hash": "sha256:912f028b6ca1c52f700dace9fa315448e3ed6a7d52d8b1ee04f0e11d66a1f398",
+  "bound_universe": {
+    "scope": "current-main P-vs-NP success/failure memory plus explicitly inspected draft PR78",
+    "coverage": "BOUNDED_NOT_EXHAUSTIVE",
+    "miss_rate": "CANNOT_MEASURE: repository retrieval universe was not enumerated exhaustively"
+  },
+  "retrieved": [
+    {"id":"T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION","kind":"tool","authority":"VERIFIED_LOCAL","decision":"SELECTED","effect":"forces projection/calibration discipline; prevents treating richer-looking state as automatically root-relevant"},
+    {"id":"F-C025-FIRST-ORDER-CANONICAL-COLLAPSE","kind":"failure","authority":"SUPPORTED","decision":"SELECTED","effect":"blocks another first-order signature repair"},
+    {"id":"F-O9D12A2A1A1-PARTITION-CLOSURE-COLLAPSE","kind":"failure","authority":"SCOPED_CURRENT_MAIN","decision":"SELECTED","effect":"rotates out of normalized G_NEQ closure state"},
+    {"id":"O9d12a2a1a1a-PR78-ACTIVATION-CONGRUENCE","kind":"draft_retrospective_episode","authority":"SEARCH_PRIORITY_ONLY","decision":"SELECTED_WITH_AUTHORITY_DOWNGRADE","effect":"suggests congruence/factorization test before global scoring"},
+    {"id":"F-C010-MULTIPLEXING","kind":"failure","authority":"SCOPED_WARNING","decision":"SELECTED","effect":"requires shared-rule accounting before additive scoring"},
+    {"id":"F-C021-CHEAP-ADJACENCY","kind":"failure","authority":"SCOPED_WARNING","decision":"SELECTED","effect":"requires cheap-target control"},
+    {"id":"F-C023-SCALAR-COLLAPSE","kind":"failure","authority":"SCOPED_WARNING","decision":"SELECTED","effect":"blocks unproved scalar summaries"},
+    {"id":"F-C024-FRACTIONAL-INTEGRALITY-GAP","kind":"failure","authority":"SCOPED_WARNING","decision":"SELECTED","effect":"requires integral shared-family semantics"}
+  ],
+  "rejected": [
+    {"id":"GENERIC-HORN-LOWER-BOUND-TRANSFER","reason":"Horn/data-flow is an exact representation analogy but its evaluation complexity is not cover complexity"},
+    {"id":"GENERIC-SET-COVER-HIERARCHY-TRANSFER","reason":"higher-order consistency alone has no bridge to the root and repeats a saturated representation family"},
+    {"id":"ECCC-TR26-118-RANGE-AVOIDANCE","reason":"current primary result is important but no applicability map/DifferenceWitness to this cover recurrence was established"},
+    {"id":"CROSS-MILLENNIUM-IMPORT","reason":"the immediate obstruction is resolved by exact same-domain source equations; importing another domain would add unsupported assumptions"}
+  ],
+  "selected_policy": "SOURCE_RECURRENCE_FACTORIZATION_BEFORE_GLOBAL_SCORE",
+  "pre_memory_preference": "GLOBAL_CLOSURE_CORRELATION_OR_ENTROPY_SEARCH",
+  "post_memory_action": "FIXED_LAMBDA_POINTWISE_FACTORIZATION_AUDIT",
+  "rakl_changed_action": true,
+  "change_reason": "retained failure memory and the retrospective congruence lesson converted a score-search into a candidate-free sufficiency/factorization falsifier",
+  "artifact_hash": "sha256:0c211e7a69f327bb38368a2efb964be8a17a6ed66f1014e6ff2c4aa844afec90"
+}
