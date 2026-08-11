@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "assessment_id": "PNP-O9d12a2a1b-C041-TOOL-APPLICABILITY-20260811",
+  "recorded_at": "2026-08-11T22:21:22Z",
+  "witness": {
+    "target_atom_id": "O9d12a2a1b",
+    "target_context_hash": "sha256:70e3a8014330040d06d54d3e9b688b2dfe35ff5552f7bdd2396bde2cfd48770e",
+    "tool_id": "T-PNP-FRACTIONAL-SEMIFILTER-PACKING",
+    "matched_preconditions": [
+      "the exact Cavalar-Oliveira cover graph is the target lower-bound object",
+      "the proposed semi-filter weights are nonnegative and satisfy unit mass under every pair neighbourhood"
+    ],
+    "unmatched_preconditions": [],
+    "shared_structural_coordinates": [
+      "set-cover formulation of fusion lower bound",
+      "dual feasible weighting over semi-filters",
+      "per-pair unit budget"
+    ],
+    "changed_structural_coordinates": [
+      "single finite certificate becomes a prospective uniform square power-of-two sequence",
+      "uniformity is poly(2^n), not poly(n)",
+      "N_n, D_n, a_n, b_n, E-language, and NP-bridge coordinates are separated"
+    ],
+    "known_failure_ids_reviewed": [
+      "F-C024-FRACTIONAL-INTEGRALITY-GAP"
+    ],
+    "target_validation_plan": [
+      "check nonnegative exact rational weights",
+      "enumerate every relevant witness and legal pair in the frozen finite gate",
+      "run G_NEQ and exact C037 cylinder controls",
+      "keep finite feasibility separate from recurrence, explicitness, and asymptotic authority"
+    ],
+    "evidence_pointers": [
+      "research/real_math/millennium/p_vs_np/07_memory/C024_RESEARCH_TOOL_DELTA_20260811.json",
+      "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C041_MATH_CONTEXT_FIBER_20260811.json",
+      "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C041_SIZE_RATE_CONTRACT_20260811.json"
+    ]
+  },
+  "assessment": {
+    "verdict": "APPLICABLE_WITH_VALIDATION",
+    "reasons": [
+      "tool_scope_matches_but_target_specific_validation_is_required"
+    ]
+  },
+  "authority_contract": {
+    "grants_theorem_authority": false,
+    "grants_candidate_authority": false,
+    "grants_root_authority": false
+  },
+  "artifact_hash": "sha256:739468d2265e28532687f66c5ede00b3f43a33b7c7a47d99b2be99b1117e8534"
+}

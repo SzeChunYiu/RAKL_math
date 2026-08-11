@@ -1,0 +1,143 @@
+{
+  "schema_version": "root-coordinate-preservation-receipt-v1",
+  "receipt_id": "PNP-O9d12a2a1b-C041-ROOT-COORDINATE-PRESERVATION-20260811",
+  "root_claim_id": "O9d12a2a1b",
+  "root_coordinate": "an explicit NP language with superpolynomial Boolean circuit complexity sufficient for P != NP",
+  "surrogate_coordinate": "fractional-dual lower bounds for rho of G_n=[M_n]^2\\U_n and source transference to f_{G_n}",
+  "bridge_edges": [
+    {
+      "edge_id": "C041-RCP-E1",
+      "source_coordinate": "exact feasible dual mass L_n on complement U_n",
+      "target_coordinate": "rho_frac(G_n;U_n)",
+      "interface_map": "LP weak duality for the associated graph full-cover instance",
+      "proof_status": "PROVED",
+      "enabling_assumptions": [
+        "nonnegative weights",
+        "all U_n legal-pair loads at most one"
+      ]
+    },
+    {
+      "edge_id": "C041-RCP-E2",
+      "source_coordinate": "rho_frac(G_n;U_n)",
+      "target_coordinate": "rho(G_n,G_{M_n,M_n})",
+      "interface_map": "fractional relaxation lower-bounds integral cover optimum of the same associated graph",
+      "proof_status": "PROVED",
+      "enabling_assumptions": [
+        "same U_n-derived witness and pair classes"
+      ]
+    },
+    {
+      "edge_id": "C041-RCP-E3",
+      "source_coordinate": "rho(G_n,G_{M_n,M_n})",
+      "target_coordinate": "rho(f_{G_n}^{-1}(1),B_{2n})",
+      "interface_map": "Cavalar-Oliveira Proposition 38 and Lemma 39 one-way graph-to-Boolean cover transference",
+      "proof_status": "PROVED",
+      "enabling_assumptions": [
+        "G_n=[M_n]^2\\U_n",
+        "M_n=2^n",
+        "standard binary bijection"
+      ]
+    },
+    {
+      "edge_id": "C041-RCP-E4",
+      "source_coordinate": "Boolean cover lower bound for f_{G_n}",
+      "target_coordinate": "Boolean circuit lower-bound checkpoint",
+      "interface_map": "source circuit transference/Remark 14 in exact scope",
+      "proof_status": "CONDITIONAL",
+      "enabling_assumptions": [
+        "rate and model bound to source",
+        "no implication reversal"
+      ]
+    },
+    {
+      "edge_id": "C041-RCP-E5",
+      "source_coordinate": "uniform poly(2^n)-time membership for U_n and hence G_n",
+      "target_coordinate": "explicit E language f_{G_n}",
+      "interface_map": "negate the U_n membership bit and evaluate within 2^{O(n)} time",
+      "proof_status": "CONDITIONAL",
+      "enabling_assumptions": [
+        "an eventual candidate supplies the uniform algorithm"
+      ]
+    },
+    {
+      "edge_id": "C041-RCP-E6",
+      "source_coordinate": "explicit E-language circuit lower bound for f_{G_n}",
+      "target_coordinate": "explicit NP-language circuit lower bound",
+      "interface_map": "prove f_{G_n} has an NP verifier or give a separate lower-bound-preserving NP reduction",
+      "proof_status": "UNPROVED",
+      "enabling_assumptions": [
+        "reduction direction, input length, and circuit overhead proved"
+      ]
+    },
+    {
+      "edge_id": "C041-RCP-E7",
+      "source_coordinate": "superpolynomial circuit lower bound for an explicit NP language",
+      "target_coordinate": "P != NP",
+      "interface_map": "P subset P/poly",
+      "proof_status": "CONDITIONAL",
+      "enabling_assumptions": [
+        "E6 supplies NP membership",
+        "superpolynomial rate on correct NP input"
+      ]
+    }
+  ],
+  "obligations": [
+    {
+      "obligation_id": "C041-RCP-O1",
+      "description": "Prove a uniform relevance-preserving augmentation recurrence on complements U_n.",
+      "non_compensatory": true,
+      "discharged_by_surrogate_evidence_only": false
+    },
+    {
+      "obligation_id": "C041-RCP-O2",
+      "description": "Give uniform poly(2^n)-time membership for U_n and hence associated G_n.",
+      "non_compensatory": true,
+      "discharged_by_surrogate_evidence_only": false
+    },
+    {
+      "obligation_id": "C041-RCP-O3",
+      "description": "Bind rho(G_n) to f_{G_n} with the exact source rate.",
+      "non_compensatory": true,
+      "discharged_by_surrogate_evidence_only": false
+    },
+    {
+      "obligation_id": "C041-RCP-O4",
+      "description": "Supply an NP verifier for f_{G_n} or a separate lower-bound-preserving NP reduction.",
+      "non_compensatory": true,
+      "discharged_by_surrogate_evidence_only": false
+    },
+    {
+      "obligation_id": "C041-RCP-O5",
+      "description": "Achieve a superpolynomial lower bound in the NP input length.",
+      "non_compensatory": true,
+      "discharged_by_surrogate_evidence_only": false
+    }
+  ],
+  "known_disanalogies": [
+    "U_n is the complement object for relevance, whereas G_n is the graph transferred to Boolean complexity.",
+    "Poly(n) decidability of f_{G_n} forbids its superpolynomial circuit target.",
+    "Uniform 2^{O(n)} membership yields E, not automatically NP."
+  ],
+  "source_authority": "ESTABLISHED",
+  "target_authority": "PROPOSAL_ONLY",
+  "cheapest_hostile_world": "A uniform complement family U_n may yield a valid lower bound for rho(G_n) and f_{G_n} in E while no NP verifier or reduction is known.",
+  "registered_observations": [
+    {
+      "state_id": "C041-OBJECT-NORMALIZATION",
+      "projected_state": "U_n complement and associated graph G_n are separated",
+      "registered_downstream_outcome": "ROOT_OPEN: local f_{G_n} only known in E; NP bridge absent"
+    }
+  ],
+  "reverification_triggers": [
+    "any U_n/G_n role change",
+    "any membership bound",
+    "any NP bridge",
+    "any rate claim"
+  ],
+  "prior_failure_ids": [
+    "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+    "F-C037-ARBITRARY-EXTENSION-NONMONOTONE",
+    "F-C041-POLYTIME-EXPLICITNESS-SUPERPOLY-CONTRADICTION"
+  ],
+  "receipt_canonical_sha256": "96bd3b23a1ca367748795ff1fe1130a19ff69e011498c655d9accddeb1879632"
+}
