@@ -63,12 +63,19 @@
   ],
   "framework": {
     "repository": "SzeChunYiu/RAKL",
-    "git_sha": "f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
-    "rakl_core_version": "3.0.0-alpha3",
-    "method_version": "1.3",
-    "method_spec": "RAKL_METHOD.md",
-    "method_spec_sha256": "4449722996c0596291bc78bb35097d10d6e2bc9369d4eecc4c041726f2de3104",
+    "cycle_start_git_sha": "f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
+    "incumbent_method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "manifest": "RAKL_VERSION.json",
+    "method_specs": "src/rakl/method_specs.py",
     "authority": "v3 proposal/shadow; experience changes routing priority only"
+  },
+  "post_cycle_framework_freshness": {
+    "observed_main_sha": "4771576204b1b7fca5279a7245f0e144dca3436b",
+    "drift_from_cycle_start_commits": 15,
+    "semantic_framework_diff": "NONE_OBSERVED_IN_RAKL_VERSION.json/src/rakl/method_specs.py/ARCHITECTURE.md; compare listed only paper/experiment artifacts",
+    "action": "No mathematical reroute required; preserve cycle-start source-of-truth SHA and final drift receipt."
   },
   "application_state": {
     "canonical_main_observed": "47f56df0492339097a651d40b6c7289c4e2d4034",
