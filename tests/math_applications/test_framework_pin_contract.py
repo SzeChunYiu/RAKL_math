@@ -13,7 +13,7 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "bd1a2768f0f474ff44ffa25243241f94bfaf6466"
+EXPECTED_FRAMEWORK_COMMIT = "2d0b797228648b1332e7285fae6bc2826a2f5820"
 HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
 FINAL_SYNC_RECEIPT = (
     APPLICATION_ROOT / "receipts/framework-pin-final-integration-bd1a276-20260811.json"
