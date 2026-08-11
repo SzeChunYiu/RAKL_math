@@ -1,0 +1,63 @@
+{
+  "tools": [
+    {
+      "tool_id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "name": "Root-bridge stability audit",
+      "kind": "cross_problem_diagnostic_screen",
+      "abstraction": "Before strengthening a surrogate/local/finite certificate, freeze the exact passage to the root-critical quantity and try to construct the cheapest family or source-level witness on which the surrogate premise remains valid while the required root-critical coordinate is not preserved.",
+      "source_atom_id": "XM-ROOT-BRIDGE-001",
+      "source_candidate_id": "XM001",
+      "source_result_ids": [
+        "XM001-YM-S1-SCALED-GAP-CALIBRATION"
+      ],
+      "source_context_hash": "sha256:bc11ed85c3987cd24998512641afbf0e8317d09aabf665f06852ef2a8c02f120",
+      "authority": "CONDITIONALLY_REUSABLE",
+      "preconditions": [
+        "a precise surrogate object and surrogate certificate are defined",
+        "the target root quantity or implication and the surrogate-to-root lift/limit/assembly/representation map are explicitly defined",
+        "a target-specific DifferenceWitness states why the source calibration and target failure mode are structurally comparable and mathematically different"
+      ],
+      "structural_signature": [
+        "surrogate certificate is locally, finite-scale, source-restricted, or representation-locally valid",
+        "root conclusion requires an additional lift, limit, normalization, compactness, integrality, realization, assembly, completeness, or coordinate-preservation step",
+        "the missing preservation property can be stated quantitatively or as an exact logical implication"
+      ],
+      "operation": "write the tuple (surrogate object, local certificate, root-critical quantity, bridge map, preservation property), then run the cheapest exact target-specific falsifier that preserves the local premises while attempting to break the required root-critical coordinate; if it breaks, retire the weak bridge and split the DAG at the earliest missing preservation arrow",
+      "guaranteed_effects": [
+        "an exact inference-form or source-level falsifier proves that the stated local premises alone are insufficient for the stated root-critical conclusion",
+        "a successful target reuse localizes the next proof obligation to a target-specific preservation/uniformity/faithfulness/completeness condition rather than further optimization of the surrogate"
+      ],
+      "non_guarantees": [
+        "does not prove that the actual target theory realizes an abstract adversarial family",
+        "does not prove the strengthened bridge condition",
+        "does not identify a universal common mathematical obstruction across Millennium problems",
+        "does not authorize literal transfer of source mathematics across domains",
+        "does not create theorem, novelty, independent-review, or root-solution authority"
+      ],
+      "validation_obligations": [
+        "preserve units, variables, normalization and exact target/root-critical coordinate",
+        "state order of limits, source/target categories and all uniformity/completeness domains",
+        "separate a counterexample to an inference form from a counterexample inside the target theory",
+        "provide a fresh DifferenceWitness for every cross-domain reuse",
+        "run a target-specific falsifier before treating the audit as informative",
+        "record the earliest missing arrow and weakest surviving bridge statement after falsification"
+      ],
+      "evidence_pointers": [
+        "research/real_math/millennium/cross_problem/04_candidates/XM001_root_bridge_stability_audit.md",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_RESEARCH_MEMORY_REVIEW_20260811.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a_COMPLEX_TO_KATO_IMPLICATION_GRAPH_20260811.md",
+        "https://eccc.weizmann.ac.il/report/2025/033/",
+        "https://arxiv.org/abs/1809.09066",
+        "https://arxiv.org/abs/2204.12737"
+      ],
+      "known_failure_ids": [
+        "F-XM001-POINTWISE-GAP-COLLAPSE"
+      ],
+      "successful_reuse_ids": [
+        "BSD-A1a1-XM001-ROOT-BRIDGE-REUSE"
+      ],
+      "proof_backing": [],
+      "artifact_hash": "sha256:db047f1685aa0a153af9f1398c594657009b261eaa0abc6ece8f99bcf1ec40b7"
+    }
+  ]
+}
