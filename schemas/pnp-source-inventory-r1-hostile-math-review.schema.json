@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/pnp-source-inventory-r1-hostile-math-review.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "review_id", "recorded_at", "atom_id", "review_authority", "reviewed_artifact", "primary_sources_inspected", "blocking_concerns_resolved", "narrow_verdict", "mathematical_lessons_confirmed", "operational_assurance_excluded", "root_status", "authority_contract", "artifact_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "review_id": {"const": "PNP-O9d12a2a1a1b1-SOURCE-INVENTORY-R1-HOSTILE-MATH-REVIEW-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "atom_id": {"const": "O9d12a2a1a1b1"},
+    "review_authority": {"const": "SAME_CONTEXT_INTERNAL_HOSTILE_MATHEMATICAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW"},
+    "reviewed_artifact": {"$ref": "#/$defs/artifact"},
+    "primary_sources_inspected": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "object", "additionalProperties": false, "required": ["source_id", "raw_sha256"], "properties": {"source_id": {"enum": ["ECCC-TR25-033-2025", "RAZBOROV-1989", "WIGDERSON-1993"]}, "raw_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}}},
+    "blocking_concerns_resolved": {"type": "array", "minItems": 5, "items": {"type": "object", "additionalProperties": false, "required": ["concern_id", "finding", "resolution", "evidence_rows"], "properties": {"concern_id": {"type": "string", "minLength": 1}, "finding": {"type": "string", "minLength": 1}, "resolution": {"type": "string", "minLength": 1}, "evidence_rows": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}}}},
+    "narrow_verdict": {"const": {"outcome_branch": "SUCCESS", "result": "MATCH_FOUND_ECCC_T24_AND_T30", "ancestry_completeness": "INCOMPLETE_CANNOT_CHECK_WHETHER_STRONGER_OR_DIFFERENT_BOUND_EXISTS", "candidate_generated": false}},
+    "mathematical_lessons_confirmed": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "operational_assurance_excluded": {"const": ["HTTP access status", "Git branch movement", "CI execution", "artifact hashing", "timestamp chronology"]},
+    "root_status": {"const": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE"},
+    "authority_contract": {"$ref": "#/$defs/authority"},
+    "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "artifact": {"type": "object", "additionalProperties": false, "required": ["path", "artifact_hash"], "properties": {"path": {"type": "string", "minLength": 1}, "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}},
+    "authority": {"const": {"grants_proof_authority": false, "grants_new_theorem_authority": false, "grants_novelty_authority": false, "grants_p_vs_np_root_authority": false, "grants_framework_evolution_authority": false, "grants_review_independence": false}}
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "trace_id": "PNP-O9d12a2a1a1b1-SOURCE-INVENTORY-R1-RESULT-TRACE-SHADOW-20260811",
+  "recorded_at": "2026-08-11T18:34:00Z",
+  "atom_id": "O9d12a2a1a1b1",
+  "storage_authority": "SHADOW_NONCANONICAL_NO_TASK_EPISODE_ADMISSION",
+  "historical_framework_commit": "787c7e00af2a5877ccb715bc807ec14f52974e9c",
+  "pre_action_binding": {
+    "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_SOURCE_INVENTORY_R1_PRE_ACTION_20260811.json",
+    "raw_sha256": "sha256:7ba48dae8e25d8589e725962ca9a2522e173186300f3d627ce232123b9e878c9",
+    "canonical_sha256": "sha256:aab44dcb80dbca53adbb85cc42ff1c4a504b5e5d50e3809b7ad2aadb53faf560",
+    "allowed_outcome_branches": [
+      "SUCCESS",
+      "FAILURE",
+      "BLOCKED"
+    ]
+  },
+  "events": [
+    {
+      "event_id": "R1-RESULT-RECORDED",
+      "event_type": "RESULT_RECORDED",
+      "recorded_at": "2026-08-11T18:32:45Z",
+      "previous_event_hash": "sha256:aab44dcb80dbca53adbb85cc42ff1c4a504b5e5d50e3809b7ad2aadb53faf560",
+      "state": "Literal frozen discriminator matched by already-known ECCC Theorems 24 and 30.",
+      "evidence": [
+        {
+          "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_SOURCE_NATIVE_THEOREM_INVENTORY_R1_20260811.json",
+          "artifact_hash": "sha256:a9bbd2013a72e9c67395a2c96da7c9afd25b308f76df8e9b9208be23bd42dc74"
+        }
+      ],
+      "result": "SUCCESS_MATCH_FOUND_WITH_INCOMPLETE_ANCESTRY",
+      "residuals": [
+        "Karchmer 1993 and Nakayama-Maruoka 1995 full primary bytes unavailable",
+        "R1 does not answer whether a stronger or different coordinate theorem exists"
+      ],
+      "next_action": "same-context hostile mathematical review",
+      "event_hash": "sha256:b34a1ec8ecb9c932713283fda6c5f7780d25a2d6df35dc6e9f6e0780a1cb3fce"
+    },
+    {
+      "event_id": "R1-HOSTILE-REVIEWED",
+      "event_type": "REVIEWED",
+      "recorded_at": "2026-08-11T18:33:00Z",
+      "previous_event_hash": "sha256:b34a1ec8ecb9c932713283fda6c5f7780d25a2d6df35dc6e9f6e0780a1cb3fce",
+      "state": "Corrected result reviewed at same-context internal authority.",
+      "evidence": [
+        {
+          "path": "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1a1b1_SOURCE_INVENTORY_R1_HOSTILE_MATH_REVIEW_20260811.json",
+          "artifact_hash": "sha256:ddcf47b8a0e77571057d6f3f275b9eb7901237cc09be665a6b341f4ec475044a"
+        }
+      ],
+      "result": "NO_BLOCKER_AFTER_FIVE_MATHEMATICAL_CORRECTIONS",
+      "residuals": [
+        "review is not independent peer review",
+        "ancestry completeness remains unresolved"
+      ],
+      "next_action": "freeze a prospective R2 discriminator without rewriting R1",
+      "event_hash": "sha256:b2ddb11c7216f10172e8b455ecf47b783e78dce7841cf2ce6b4698797353da42"
+    },
+    {
+      "event_id": "R1-NEXT-STEP",
+      "event_type": "NEXT_STEP_PROPOSED",
+      "recorded_at": "2026-08-11T18:34:00Z",
+      "previous_event_hash": "sha256:b2ddb11c7216f10172e8b455ecf47b783e78dce7841cf2ce6b4698797353da42",
+      "state": "R1 closes only the bounded source-inventory action; root remains open.",
+      "evidence": [
+        {
+          "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_SOURCE_NATIVE_THEOREM_INVENTORY_R1_20260811.json",
+          "artifact_hash": "sha256:a9bbd2013a72e9c67395a2c96da7c9afd25b308f76df8e9b9208be23bd42dc74"
+        },
+        {
+          "path": "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1a1b1_SOURCE_INVENTORY_R1_HOSTILE_MATH_REVIEW_20260811.json",
+          "artifact_hash": "sha256:ddcf47b8a0e77571057d6f3f275b9eb7901237cc09be665a6b341f4ec475044a"
+        }
+      ],
+      "result": "PROSPECTIVE_R2_REQUIRED",
+      "residuals": [
+        "need a pre-frozen distinct noncircular explicit-target lower-bound coordinate criterion",
+        "need prospective Wig95 scope addition",
+        "need current-framework revalidation rather than historical backfill"
+      ],
+      "next_action": "FREEZE_PROSPECTIVE_R2_WITH_DISTINCT_NONCIRCULAR_EXPLICIT_TARGET_LOWER_BOUND_COORDINATE_AND_ADD_WIG95_SCOPE_BEFORE_REEXECUTION",
+      "event_hash": "sha256:b8d1fbf33ef8c4ccb3dc07294793c14336dd0d44044a7859523883da77d08630"
+    }
+  ],
+  "root_status": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE",
+  "authority_contract": {
+    "grants_proof_authority": false,
+    "grants_new_theorem_authority": false,
+    "grants_novelty_authority": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_framework_evolution_authority": false,
+    "grants_review_independence": false
+  },
+  "artifact_hash": "sha256:d2ce12da318de52da459ecd0d7ffb2368ec997a3c5563cffb5cb74bd5f412c75"
+}

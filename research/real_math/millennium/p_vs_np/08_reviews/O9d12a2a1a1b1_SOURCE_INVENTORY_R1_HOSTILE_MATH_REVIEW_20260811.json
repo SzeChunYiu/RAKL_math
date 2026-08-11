@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "PNP-O9d12a2a1a1b1-SOURCE-INVENTORY-R1-HOSTILE-MATH-REVIEW-20260811",
+  "recorded_at": "2026-08-11T18:33:00Z",
+  "atom_id": "O9d12a2a1a1b1",
+  "review_authority": "SAME_CONTEXT_INTERNAL_HOSTILE_MATHEMATICAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "reviewed_artifact": {
+    "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_SOURCE_NATIVE_THEOREM_INVENTORY_R1_20260811.json",
+    "artifact_hash": "sha256:a9bbd2013a72e9c67395a2c96da7c9afd25b308f76df8e9b9208be23bd42dc74"
+  },
+  "primary_sources_inspected": [
+    {
+      "source_id": "ECCC-TR25-033-2025",
+      "raw_sha256": "sha256:3f7d98691f3ac28208df6e8669d860c45b6068781dd77c737eb1e780641fbea7"
+    },
+    {
+      "source_id": "RAZBOROV-1989",
+      "raw_sha256": "sha256:a829725a0b7a70d78ed9ba8cf26fd15d58c7a12270443610c2391f5768b40706"
+    },
+    {
+      "source_id": "WIGDERSON-1993",
+      "raw_sha256": "sha256:69893dfc288a89c2b7243b11ec0851ed73cbdda004e0046257bdbe439082e1d7"
+    }
+  ],
+  "blocking_concerns_resolved": [
+    {
+      "concern_id": "R1-POSTFREEZE-CRITERION-INSERTION",
+      "finding": "The draft inserted distinct/new/lower-bound usefulness even though the frozen discriminator asked only for a universal function-of-m bound.",
+      "resolution": "Classify Theorems 24 and 30 as literal MATCH and map the single R1 outcome to narrow SUCCESS.",
+      "evidence_rows": [
+        "ECCC-T24-C27-EQ6-EQ8",
+        "ECCC-T30"
+      ]
+    },
+    {
+      "concern_id": "R1-WITNESS-OPTIMUM-CONFLATION",
+      "finding": "The draft conflated arbitrary witness size m=|Lambda| with optimum r=rho(A,B).",
+      "resolution": "Use D_cyclic_intersection=r<=m and D_intersection<=r^2<=m^2; equality to m is asserted only for an optimal witness.",
+      "evidence_rows": [
+        "ECCC-D18-D21",
+        "ECCC-T24-C27-EQ6-EQ8",
+        "ECCC-T30"
+      ]
+    },
+    {
+      "concern_id": "R1-ROW-LEVEL-TRANSFER-WITNESS-MISSING",
+      "finding": "The frozen action required a DifferenceWitness for every material statement, but the draft used only labels and prose non-guarantees.",
+      "resolution": "Every one of the 16 rows now records source-to-target map, preserved and broken conditions, implication direction and match assessment.",
+      "evidence_rows": [
+        "ECCC-C17",
+        "ECCC-D18-D21",
+        "ECCC-T22",
+        "ECCC-T24-C27-EQ6-EQ8",
+        "ECCC-COR28",
+        "ECCC-T30",
+        "ECCC-COR35",
+        "ECCC-P36-T37",
+        "ECCC-P38-L39",
+        "ECCC-P40-C41-L42-L43",
+        "ECCC-D21-WIG95-RESTRICTION",
+        "ECCC-D44-D46-T45",
+        "ECCC-P47-L48-C49",
+        "ECCC-INTRO-NM95-SCOPE",
+        "RAZ89-C25-T26-T27",
+        "WIG93-META-THEOREM-CONVERSE"
+      ]
+    },
+    {
+      "concern_id": "R1-MATERIAL-SOURCE-ROWS-OMITTED",
+      "finding": "The draft omitted cyclic, clique, semi-ultrafilter, NM95-scope, Raz89 and Wig93 material statements.",
+      "resolution": "Expand to 16 material rows while explicitly refusing an exhaustive-all-results claim.",
+      "evidence_rows": [
+        "ECCC-C17",
+        "ECCC-COR35",
+        "ECCC-D44-D46-T45",
+        "ECCC-P47-L48-C49",
+        "ECCC-INTRO-NM95-SCOPE",
+        "RAZ89-C25-T26-T27",
+        "WIG93-META-THEOREM-CONVERSE"
+      ]
+    },
+    {
+      "concern_id": "R1-SOURCE-PROOF-METHOD-OVERINTERPRETATION",
+      "finding": "The G_NEQ row presented joint signatures as the source proof method.",
+      "resolution": "Record the primary recursive row/column-span normalization proof and label joint signatures only as a derived representation.",
+      "evidence_rows": [
+        "ECCC-P40-C41-L42-L43"
+      ]
+    }
+  ],
+  "narrow_verdict": {
+    "outcome_branch": "SUCCESS",
+    "result": "MATCH_FOUND_ECCC_T24_AND_T30",
+    "ancestry_completeness": "INCOMPLETE_CANNOT_CHECK_WHETHER_STRONGER_OR_DIFFERENT_BOUND_EXISTS",
+    "candidate_generated": false
+  },
+  "mathematical_lessons_confirmed": [
+    "PNP-SOURCE-T24-RECONSTRUCTION",
+    "PNP-SOURCE-T30-CIRCULARITY",
+    "PNP-SOURCE-T37-TRANSFER",
+    "PNP-RESTRICTION-CLASS-NONTRANSFER",
+    "PNP-GRAPH-BOOLEAN-ONE-WAY",
+    "PNP-CANONICAL-NORMALIZATION-SCOPE",
+    "PNP-FROZEN-DISCRIMINATOR-LITERALITY",
+    "PNP-RAZ89-TARGET-DEPENDENT-RECONSTRUCTION",
+    "PNP-WIG93-MODEL-PAIRED-CONVERSE"
+  ],
+  "operational_assurance_excluded": [
+    "HTTP access status",
+    "Git branch movement",
+    "CI execution",
+    "artifact hashing",
+    "timestamp chronology"
+  ],
+  "root_status": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE",
+  "authority_contract": {
+    "grants_proof_authority": false,
+    "grants_new_theorem_authority": false,
+    "grants_novelty_authority": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_framework_evolution_authority": false,
+    "grants_review_independence": false
+  },
+  "artifact_hash": "sha256:ddcf47b8a0e77571057d6f3f275b9eb7901237cc09be665a6b341f4ec475044a"
+}
