@@ -1,0 +1,74 @@
+{
+  "atom_id": "NS-R001a1",
+  "parent_atom_id": "NS-R001a",
+  "object_context": "Determine whether an energy/epsilon-regularity or wavelet partial-regularity proof architecture that uses only averaging-stable 'amenable operator' structure can distinguish true 3D Navier-Stokes from known averaged equations with finite-time blowup.",
+  "problem_signature": [
+    "positive global-regularity lane for 3D incompressible Navier-Stokes",
+    "energy class is supercritical under u_lambda=lambda u(lambda x,lambda^2 t)",
+    "candidate route uses partial-regularity/epsilon-regularity localization rather than an a priori critical norm",
+    "Tao averaged Navier-Stokes preserves energy cancellation and broad harmonic-analysis bounds yet blows up",
+    "Coiculescu amenable-operator class preserves cancellation, pseudodifferential/Lp bounds and discrete scaling and admits both partial regularity and averaged blowup",
+    "root remains OPEN_NO_SOLUTION_CERTIFICATE"
+  ],
+  "actual_fibre": [
+    "00_problem_contract/canonical_statement.md and success_contract.yaml",
+    "02_problem_dag/NS_R001.yaml",
+    "01_frontier/NS_R001_CONTEXT_FIBER_20260811.json",
+    "07_memory/NS_R001_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "07_memory/NS_R001B_GEOMETRY_FAILURE_DELTA_20260811.json",
+    "current open PR #48 inspected but not treated as main/canonical memory",
+    "Tao arXiv:1402.0290",
+    "Coiculescu arXiv:2307.15986v4"
+  ],
+  "structural_coordinates": [
+    "classical alpha=1 dissipation",
+    "energy cancellation <B(u,u),u>=0",
+    "harmonic/pseudodifferential upper bounds",
+    "discrete/continuous scaling compatibility",
+    "localized wavelet coefficient energy bookkeeping",
+    "true Navier-Stokes local energy/pressure/vorticity structure not assumed unless source-bound separately",
+    "finite-energy Schwartz Clay data"
+  ],
+  "solved_analogues": [
+    "Tao averaged equation: finite-time blowup despite energy cancellation and generic harmonic-analysis structure",
+    "Coiculescu amenable averaged equation: finite-time blowup with first-blowup singular set Hausdorff dimension <=1 when alpha=1"
+  ],
+  "near_solved_analogues": [
+    "CKN suitable-weak partial regularity for true Navier-Stokes",
+    "Katz-Pavlovic wavelet partial-regularity architecture",
+    "critical epsilon-regularity criteria"
+  ],
+  "transfer_assumptions": [
+    "only properties explicitly included in the amenable-operator axioms may be transferred to the averaged countermodel",
+    "alpha=1 lies in (3/4,5/4), so Coiculescu's theorem applies",
+    "a proof architecture using only axioms shared by a countermodel must also apply to that countermodel"
+  ],
+  "disanalogies": [
+    "Coiculescu's Fourier/wavelet theorem is not the CKN suitable-local-energy theorem",
+    "amenable averaged operators need not inherit the true differential vorticity equation",
+    "the source does not establish that the CKN local energy inequality is averaging-stable",
+    "an averaged-equation blowup is not a Navier-Stokes blowup",
+    "partial regularity can coexist with blowup and therefore does not itself close the root"
+  ],
+  "expert_cell_roles": [
+    "PDE regularity/epsilon-regularity lead",
+    "harmonic-analysis/pseudodifferential lead",
+    "vorticity/local-energy geometry lead",
+    "pressure/nonlocality lead",
+    "critical-scaling/compactness lead",
+    "adversarial model-transfer verifier",
+    "RAKL v3/provenance verifier"
+  ],
+  "pre_memory_preference": "Attempt to sharpen energy-based localized epsilon/wavelet regularity until the singular set is forced empty.",
+  "falsifier_plan": "At alpha=1, instantiate Coiculescu Theorems 1.2 and 1.3 on the same amenable model class. If finite-time blowup coexists with the route's retained partial-regularity conclusions, reject that averaging-stable method basis as a sufficient global-regularity bridge.",
+  "verification_plan": [
+    "verify alpha=1 satisfies all source parameter ranges",
+    "verify the averaged blowup operator is in the amenable class used by the partial-regularity theorem",
+    "separate the source's Fourier/wavelet partial regularity from CKN suitable local energy",
+    "audit logical transfer: only shared axioms may be used in the no-go statement",
+    "no root/theorem/novelty promotion"
+  ],
+  "frozen_at": "2026-08-11T14:15:00Z",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:f357574cb08e88f75b276cddaa5997e4d471bc19a384bec2a02b9207933d377f"
+}
