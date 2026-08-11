@@ -1,0 +1,95 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow-r1",
+  "atom_id": "NS-B1a3b1b",
+  "parent_atom_id": "NS-B1a3b1",
+  "control_issue": "RAKL_math#145",
+  "root_contract": {
+    "root_id": "NS0",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "accepted_terminal_outcomes": [
+      "Clay A",
+      "Clay B",
+      "Clay C",
+      "Clay D"
+    ],
+    "independent_mathematical_reviews": "0/3",
+    "root_promotion_authority": "NONE"
+  },
+  "object_context": "Whole-space 3D incompressible Navier-Stokes Type-I blow-up-classification child. Audit whether the one-center critical-point morphology consumed by Grujic v2 is an independently missing producer coordinate beyond weak-L3/2 vorticity amplitude and log-BMO direction.",
+  "active_problem_signature": {
+    "producer": "Albritton-Barker finite-I Type-I singularity/ancient class",
+    "candidate_bridge": "finite-I / critical-amplitude data -> one-center critical-point morphology",
+    "consumer": "Grujic arXiv:2607.08866v2 Definition 2.1 + Theorem 4.1",
+    "consumer_coordinates": [
+      "one spatial center",
+      "omega=Phi |x-center|^-2 with uniformly bounded shape factor",
+      "high-vorticity super-level containment radius R <= C lambda^-1/2 uniformly in time",
+      "separate uniform weak-L3/2 vorticity amplitude",
+      "separate uniform bmo_{1/|log r|} vorticity direction"
+    ],
+    "verification_target": "two-core scale-critical divergence-free snapshot family with scale-uniform weak-L3/2 norm but no scale-uniform one-center super-level containment constant"
+  },
+  "structural_coordinates": [
+    "vorticity scaling omega_r(x)=r^-2 omega_0((x-a)/r) preserves weak-L3/2",
+    "one-center morphology is strictly more structured than membership in weak-L3/2",
+    "multiple separated critical cores are a concentration-compactness / source-family issue",
+    "local blow-up recentering and global consumer support/tail conditions are distinct interfaces",
+    "finite-I local compactness does not by itself identify a global unique core",
+    "vorticity direction control is logically independent of amplitude and one-core morphology",
+    "pressure disappears from the vorticity evolution but pressure localization remains relevant to producer-side suitable-solution compactness",
+    "backward uniqueness is downstream and cannot manufacture a missing morphology certificate",
+    "pre-singularity regularity criteria are not automatically ancient-solution Liouville theorems",
+    "Type-II remains outside this atom"
+  ],
+  "primary_sources": [
+    {
+      "id": "AB-TYPEI-ANCIENT",
+      "citation": "Albritton–Barker, arXiv:1811.00502v2 / J. Math. Fluid Mech. 21 (2019) 43",
+      "selectors": [
+        "abstract",
+        "Theorem 1.1/Type-I ancient equivalence as previously source-bound on current main"
+      ],
+      "role": "producer"
+    },
+    {
+      "id": "GRUJIC-2026-LOG-DEPLETION-v2",
+      "citation": "Zoran Grujic, arXiv:2607.08866v2, revised 2026-07-13",
+      "selectors": [
+        "Definition 2.1",
+        "Theorem 4.1",
+        "equations (8)-(12) near/far setup"
+      ],
+      "role": "consumer"
+    }
+  ],
+  "analogy_transfer": {
+    "same_context_analogues": [
+      "NS-B1a3 profile-leakage/global-critical-tightness obstruction",
+      "NS-B1a3b topology-to-vorticity-direction inheritance obstruction",
+      "NS-B1a3b1a pending amplitude/phase producer falsifier"
+    ],
+    "transfer_assumption": "only the producer/consumer type-check and noncompact-symmetry audit operation transfers; no theorem transfers",
+    "disanalogies": [
+      "the present child concerns source-family morphology, not derivative/direction continuity",
+      "the hostile family is not a Navier-Stokes solution",
+      "a blow-up argument may choose/recenter one core using equation-specific information unavailable to the bare amplitude model"
+    ]
+  },
+  "chronology": {
+    "hypothesis_generation": "RETROSPECTIVE_SCOPING_NO_PROSPECTIVE_CREDIT",
+    "reason": "two-core hostile idea was identified before durable issue #145",
+    "prospectively_frozen_stage": "exact source-bound verification target, scope, outcome branches, and serialization before candidate verification"
+  },
+  "framework": {
+    "method": "RAKL Verified Discovery Method / v3 proposal-shadow",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "repository": "SzeChunYiu/RAKL",
+    "git_sha": "3863b4814e0020e72c8681727357eda1aab7bf2b",
+    "execution_pin_in_application": "787c7e00af2a5877ccb715bc807ec14f52974e9c",
+    "execution_pin_status": "STALE_RELATIVE_TO_CURRENT_SEMANTIC_MAIN"
+  },
+  "application_base_sha": "47f56df0492339097a651d40b6c7289c4e2d4034",
+  "frozen_at_utc": "2026-08-11T19:03:30Z",
+  "packet_hash": "sha256:f86f9db826ceb8a6e44cbbe1d63052a0ee7261f709a61d19ab2a5453f7567da8"
+}
