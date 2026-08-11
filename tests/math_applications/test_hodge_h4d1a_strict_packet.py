@@ -206,6 +206,9 @@ def test_h4d1a_packet_keeps_scope_and_hostile_controls_explicit() -> None:
     assert "NOT_INDEPENDENT_REVIEW" in review
     assert "FULL" in review and "ZERO" in review and "PROPER_NONZERO" in review
     assert "root initial algebraicity" in review
-    assert "arxiv.org/abs/2211.11405" in addendum
-    assert "computational evidence is not promoted to a Hodge theorem" in addendum
+    assert "arxiv.org/abs/1902.00831" in addendum
+    assert "withdrawn on 2025-02-25" in addendum
+    assert "arxiv.org/abs/2502.19988" in addendum
+    assert "Withdrawn provenance only" in addendum
+    assert "computations and conjectural interpretations are not promoted to theorem authority" in addendum
     assert "0 < B_{T,m} < Ob_m" in addendum
