@@ -1,0 +1,26 @@
+schema_version: bsd-a1a1-r8-route-v1
+artifact_type: ROUTE_DIAGNOSTIC_PROPOSAL_SHADOW
+cycle_id: BSD-A1a1-BKS-RANK-INDEX-MISMATCH-20260812-R8
+atom_id: BSD-A1a1-THETA-ORDER-COMPARISON
+route_signature: KATO_DARMON_DERIVATIVE_ALGEBRAIC_RANK_INDEX_MISMATCH
+root_state: OPEN_NO_SOLUTION_CERTIFICATE
+route_state: DIRECT_BKS_ANALYTIC_RANK2_SUBSTITUTION_PRUNED
+local_mathematical_failure: false
+local_to_global_gluing_failure: true
+source_binding:
+  source: arXiv:1910.07404v2
+  algebraic_rank_symbol: "r = rank E(Q)"
+  carrier_degrees:
+    - "wedge^r H^1"
+    - "I^(r-1)/I^r"
+  analytic_rank_one_disanalogy: "Gross-Zagier/Kolyvagin independently imply r=1"
+invalid_transfer:
+  from: "ord_(s=1) L(E,s)=2"
+  to: "instantiate BKS carrier at r=2"
+  reason: "the target algebraic rank is used as the representation index before rank equality has been proved"
+residual_after:
+  - COMPLEX_ANALYTIC_RANK2_TO_ROOT_FAITHFUL_ARITHMETIC_INDEX_WITHOUT_TARGET_RANK_ASSUMPTION
+  - SELMER_MW_SHA_REGULATOR_TAMAGAWA_TORSION_COMPLEX_LEADING_TERM_GLUE
+successor_policy: "seek a strictly weaker complex-to-arithmetic index theorem; otherwise rotate representation"
+candidate_generated: false
+authority: PROPOSAL_SHADOW_NO_ROOT_AUTHORITY
