@@ -1,0 +1,164 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-XM001-POINTWISE-GAP-COLLAPSE",
+      "atom_id": "XM-ROOT-BRIDGE-001",
+      "candidate_id": "XM001",
+      "context_packet_hash": "sha256:bc11ed85c3987cd24998512641afbf0e8317d09aabf665f06852ef2a8c02f120",
+      "research_trace_event_id": "XM001-E10",
+      "method_family": "finite-scale positive surrogate gap -> positive root-normalized continuum gap inference",
+      "failure_mode": "pointwise positivity of the dimensionless finite-scale gap, even uniform in volume at each fixed lattice spacing, can vanish after the required inverse-spacing physical normalization",
+      "residual_signature": [
+        "r(a,L)=exp(-a^2) lies strictly between 0 and 1 for every a>0 and every L",
+        "dimensionless log-gap delta(a,L)=-log r(a,L)=a^2 is positive for every a and uniform in L",
+        "physical normalization delta(a,L)/a=a tends to 0 as a tends to 0",
+        "therefore fixed-a positivity alone does not imply a positive continuum physical liminf"
+      ],
+      "broken_assumptions": [
+        "positivity of a surrogate dimensionless gap at every cutoff is sufficient without a quantitative cutoff-scaled lower bound"
+      ],
+      "scope_conditions": [
+        "logical inference from pointwise positive finite-scale transfer-eigenvalue ratio gap to a positive inverse-spacing-normalized continuum gap",
+        "abstract positive sequences only; this record does not assert that the adversarial sequence is realized by Yang-Mills transfer matrices"
+      ],
+      "competing_diagnoses": [
+        "actual Yang-Mills dynamics may impose extra RG/positivity/locality structure excluding the adversarial sequence",
+        "uniformity in volume may be insufficient but a quantitative lower bound proportional to lattice spacing may repair the inference",
+        "the physically correct normalization or order of limits may differ for a concrete transfer-matrix setup and must be frozen target-specifically"
+      ],
+      "selected_diagnosis": "the weak bridge omits the quantitative lattice-spacing scaling needed to keep a finite positive physical gap through the continuum limit; the abstract inference is invalid, while the actual Yang-Mills bridge remains open",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/cross_problem/04_candidates/XM001_root_bridge_stability_audit.md",
+        "issue:85:YM-S1",
+        "tests/math_applications/test_cross_millennium_xm001_result.py"
+      ],
+      "falsifier_or_attempt": "set r(a,L)=exp(-a^2), independently of L, and compare the positive finite-a dimensionless gap -log r=a^2 with the physical normalization -a^{-1}log r=a",
+      "observed_result": "the surrogate gap is positive for every cutoff and uniform in L, while the physical normalized gap tends to zero; hence pointwise finite-scale positivity cannot supply the YM-S1 continuum conclusion without a stronger scaled bridge",
+      "local_repair_attempts": [
+        "replace pointwise positivity by an explicit target-specific condition such as liminf_{a->0} inf_L [-log r(a,L)]/a > 0 along the admissible scaling trajectory, with the correct order of limits",
+        "audit whether any cited lattice/RG theorem actually supplies the required uniform scaled bound rather than only fixed-cutoff positivity or correlation decay"
+      ],
+      "timestamp": "2026-08-11T06:19:00+00:00",
+      "artifact_hash": "sha256:38a237263df62ed4cb6f197076f0eb1674d1aadd602793190df8e6658ff2c4ad"
+    },
+    {
+      "failure_id": "F-BSD-A1A1-CURRENT-2026-CROSS-DIRECTION-RELATION-GAP-V3-RETROSPECTIVE",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "candidate_id": "NO_CANDIDATE_RETROSPECTIVE_SOURCE_AUDIT",
+      "context_packet_hash": "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d",
+      "research_trace_event_id": "BSD-A1a1-E08-RETROSPECTIVE",
+      "method_family": "bounded primary-source root-coordinate preservation audit",
+      "failure_mode": "the bounded exact-version source audit did not identify a target-scope theorem transporting exact complex analytic rank two into exact anticyclotomic order or regulator nondegeneracy",
+      "residual_signature": [
+        "complex-s versus anticyclotomic-character order preservation theorem missing in the bounded source snapshot",
+        "derived-height or regulator nondegeneracy is not derived from bare complex analytic rank two by the audited source versions",
+        "local complex, p-adic, and Selmer results lack a verified root-preserving interface at target scope"
+      ],
+      "broken_assumptions": [
+        "exact complex analytic rank two determines exact anticyclotomic T/J order without additional arithmetic input",
+        "target-scope regulator or height nondegeneracy follows from the audited local results"
+      ],
+      "scope_conditions": [
+        "BSD-A1a1 current analytic route",
+        "exact arXiv versions 2608.06879v1, 2603.22483v2, 1809.09066v4, and 2203.12161v7",
+        "bounded metadata and source audit only; no literature-wide nonexistence claim",
+        "retrospective correction with no strict discovery credit and no mathematical candidate",
+        "source receipt supports exact versions, metadata, abstract-level scope checks, and retrieved PDF hashes; it does not certify an exhaustive theorem/page audit"
+      ],
+      "competing_diagnoses": [
+        "a differently named exact bridge theorem exists outside the bounded source set",
+        "a richer leading-graded representation is required",
+        "a main-conjecture or height route closes the bridge only by importing root-strength arithmetic information",
+        "a new cross-direction leading-term theorem is required"
+      ],
+      "selected_diagnosis": "the bounded exact-version audit leaves a local-to-global root-coordinate relation gap; it establishes neither cause nor global theorem nonexistence",
+      "diagnosis_status": "OBSERVED_ONLY",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a1_CURRENT_2026_SOURCE_RECEIPT_V1_20260811.json@git:434436b1a08f46bc7df6b75c4aa342476dc0799f@blob:3fe4c5d319e32504117e970e9190d1ff92419866",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_FAILURE_SHADOW.json@git:8bc7a9cf17adf347e5be13ab61a08a690dda895e",
+        "research/real_math/millennium/birch_swinnerton_dyer/09_trace/BSD_A1a1_RESEARCH_TRACE_RETROSPECTIVE_SUCCESSOR_20260811.json@git:0e337640c4e5d3cb6fddfa3c1d01cfc7705bccae@blob:c768f074ca9791ddbeb50fff074d7724760be462@raw_sha256:sha256:df4a0ea5c5c3578d2fb5594713666403ea5ca3dd3105306e3d7f845e37850254@final_event:sha256:aa91b5d47d9807f0978cce920df136d032ba8bc39bb3e2a962660e9331b2436f",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_FAILURE_EXPERIENCE_LATTICE_V2_RETROSPECTIVE_20260811.json@status:IMMUTABLE_SUPERSEDED_PREDECESSOR"
+      ],
+      "falsifier_or_attempt": "bounded logical-strength audit of exact versioned sources against the typed interface complex s-order to anticyclotomic T/J-order or regulator to Selmer/Mordell-Weil/Sha",
+      "observed_result": "the bounded audit identified the recorded near-solved local scopes but did not identify a theorem closing the registered exact cross-direction bridge at target scope",
+      "local_repair_attempts": [
+        "freeze exact source versions and retrieved PDF hashes",
+        "separate the target weight-two elliptic-curve scope from CM ramified-prime and weight-at-least-four near-solved contexts",
+        "retain the failure as an observed warning rather than an impossibility or blacklist"
+      ],
+      "timestamp": "2026-08-11T13:02:21Z",
+      "artifact_hash": "sha256:a570ed450b4178c8395affb3eb817618b4d076d1cf0f9ec0ff8edb8525ff124c"
+    },
+    {
+      "failure_id": "F-BSD-A1A1-PLECTIC-NONVANISHING-RELATION-GAP-V3-RETROSPECTIVE",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "candidate_id": "NO_CANDIDATE_RETROSPECTIVE_SOURCE_AUDIT",
+      "context_packet_hash": "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d",
+      "research_trace_event_id": "BSD-A1a1-PR96-E08-RETROSPECTIVE",
+      "method_family": "bounded plectic representation and theorem-conjecture bridge audit",
+      "failure_mode": "the bounded exact-version chain does not prove complex analytic rank two implies root-faithful plectic nonvanishing or regulator nondegeneracy",
+      "residual_signature": [
+        "plectic construction and comparison theorems do not imply nonvanishing",
+        "p-adic derivative-to-plectic and plectic-nonvanishing-to-Selmer arrows lack the first complex-rank-to-plectic bridge",
+        "the source family leaves global regulator significance conjectural at the registered scope"
+      ],
+      "broken_assumptions": [
+        "a richer arithmetic representation automatically preserves the root complex analytic coordinate",
+        "construction of a plectic class implies its nonvanishing",
+        "p-adic Hida-Rankin derivative directions are interchangeable with bare complex s-derivatives without a theorem"
+      ],
+      "scope_conditions": [
+        "exact versions 2603.28327v2, 2311.03100v2 and 2202.12573v2",
+        "retrospective post-merge correction only; no strict discovery credit",
+        "not a literature-wide nonexistence claim and not a plectic-method blacklist",
+        "not a counterexample to BSD"
+      ],
+      "competing_diagnoses": [
+        "a direct complex-to-plectic theorem exists outside the bounded source set",
+        "an admissible comparison theorem transfers the relevant leading direction under additional hypotheses",
+        "the plectic route necessarily imports arithmetic strength equivalent to the target conclusion",
+        "another higher-rank representation is required"
+      ],
+      "selected_diagnosis": "the bounded plectic source chain relocates the root relation gap but does not close it; cause and global theorem nonexistence remain unverified",
+      "diagnosis_status": "OBSERVED_ONLY",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a1_PLECTIC_SOURCE_RECEIPT_V1_20260811.json@git:c799c1374c90dbbaa01e9a5ebe68dcddd2f9c2bc",
+        "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_PLECTIC_BRIDGE_AUDIT_20260811.md@git:9bb808752a4cf456f537c2e1d81253ef2883c109",
+        "research/real_math/millennium/birch_swinnerton_dyer/09_trace/BSD_A1a1_PLECTIC_RESEARCH_TRACE_RETROSPECTIVE_SUCCESSOR_20260811.json"
+      ],
+      "falsifier_or_attempt": "locate in the exact bounded chain a theorem taking exact complex analytic rank two to nonzero plectic class/point or a nondegenerate rank-two global regulator without importing the conclusion",
+      "observed_result": "the exact source versions support construction/comparison and downstream implications, but not the registered first root-facing arrow",
+      "local_repair_attempts": [
+        "freeze exact source versions and PDF hashes",
+        "separate theorem-level arrows from conjectural significance",
+        "bind the observed result to an actual canonical retrospective trace event"
+      ],
+      "timestamp": "2026-08-11T13:29:15Z",
+      "artifact_hash": "sha256:9b020387cdfcddcf6ed57e3f05e3da40e66df2fa8be4d2c592f0ae43c8acd8b1"
+    }
+  ],
+  "links": [
+    {
+      "source_id": "F-XM001-POINTWISE-GAP-COLLAPSE",
+      "target_id": "F-BSD-A1A1-CURRENT-2026-CROSS-DIRECTION-RELATION-GAP-V3-RETROSPECTIVE",
+      "relation": "TRANSFER_WARNING_FOR",
+      "rationale": "The frozen BSD memory review selected F-XM001 only as a warning that a locally valid surrogate coordinate needs a proved preservation map to the root-critical coordinate. The continuum-gap and anticyclotomic mechanisms differ; this link grants no causal equivalence, blacklist, impossibility, or theorem transfer.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_THETA_ORDER_CONTEXT_FIBER_20260811.json@context_hash:sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_RESEARCH_MEMORY_REVIEW_20260811.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a1_CURRENT_2026_SOURCE_RECEIPT_V1_20260811.json@git:434436b1a08f46bc7df6b75c4aa342476dc0799f"
+      ]
+    },
+    {
+      "source_id": "F-BSD-A1A1-CURRENT-2026-CROSS-DIRECTION-RELATION-GAP-V3-RETROSPECTIVE",
+      "target_id": "F-BSD-A1A1-PLECTIC-NONVANISHING-RELATION-GAP-V3-RETROSPECTIVE",
+      "relation": "SHARES_RESIDUAL_WITH",
+      "rationale": "Both exact bounded audits expose a missing root-coordinate preservation relation. Scalar anticyclotomic order and plectic arithmetic are different representations; this link grants no causal equivalence, impossibility, blacklist, or theorem transfer.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a1_CURRENT_2026_SOURCE_RECEIPT_V1_20260811.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a1_PLECTIC_SOURCE_RECEIPT_V1_20260811.json@git:c799c1374c90dbbaa01e9a5ebe68dcddd2f9c2bc"
+      ]
+    }
+  ]
+}
