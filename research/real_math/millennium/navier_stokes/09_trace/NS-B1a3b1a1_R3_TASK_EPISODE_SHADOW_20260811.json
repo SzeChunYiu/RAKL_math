@@ -1,0 +1,156 @@
+{
+  "schema_version": "task-episode-v3-proposal-shadow",
+  "episode_id": "TE-NS-B1a3b1a1-R3-C001",
+  "cycle_id": "NS-B1a3b1a1-R3-C001",
+  "authority": "PROPOSAL_SHADOW_SEARCH_EXPERIENCE_ONLY",
+  "atom_id": "NS-B1a3b1a1",
+  "problem_signature": "whole-space 3D incompressible Navier-Stokes; test whether same-slab finite-I plus uniformly controlled scale-critical velocity can force uniform-in-time global vorticity L^{3/2,infinity} amplitude",
+  "fibre_hash": "sha256:5fcac58aaeec6abba3faf07d37ec7e94b9fbc5a180763082afa2d881aa07cdaf",
+  "actual_fibre_consulted": [
+    "NS-B1_CONTEXT_FIBER_20260811",
+    "NS-B1_SOURCE_PACKET_20260811",
+    "NS-B1a3b1_CONTEXT_FIBER_R2_20260811",
+    "NS-B1a3b1_C001_R2_LOGBMO_ZOOM_INTERFACE_AUDIT_20260811",
+    "RAKL_math#148"
+  ],
+  "operators_motifs_tried": [
+    "OP-PACKET-MULTIPLICITY-STRESS",
+    "OP-SOURCE-BOUND-COMPOSITION",
+    "MOTIF-DERIVATIVE-ENDPOINT-MULTIPLICITY",
+    "Calderon-Zygmund pressure verification",
+    "local-energy cutoff verification",
+    "positive-time trace persistence"
+  ],
+  "search_policy": {
+    "choice": "COUNTEREXAMPLE_FIRST",
+    "reason": "directly falsify the smallest open producer implication before attempting a positive derivative bootstrap",
+    "prior_experience_changed_routing": [
+      {
+        "id": "NS-B1a3b1-C001-R2",
+        "effect": "log-BMO zoom transport already succeeds; move upstream to producer generation"
+      },
+      {
+        "id": "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION",
+        "effect": "avoid another topology-only geometry bootstrap; test amplitude via a different representation"
+      },
+      {
+        "id": "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+        "effect": "keep global/far-field gluing residual separate from local producer failure"
+      }
+    ],
+    "retrieved_but_rejected": [
+      {
+        "id": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+        "reason": "same-slab scalar budget family is already saturated and does not target derivative packet multiplicity"
+      },
+      {
+        "id": "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION",
+        "reason": "energy quantization is not the active amplitude producer interface"
+      }
+    ],
+    "missed_prior_experience": "CANNOT_MEASURE: no exhaustive relevance-labelled memory universe is frozen"
+  },
+  "observations": [
+    "Disjoint initial packets with amplitude epsilon N^{-1/3} keep the L3 velocity norm exactly fixed.",
+    "Kato small-L3 theory yields exact global nonlinear solutions with a common critical L3 bound.",
+    "The common L3 bound yields uniform A,C,D,E estimates on every normalized interior subcylinder; pressure is controlled in L3/2 by Riesz transforms.",
+    "Initial vorticity weak-L3/2 amplitude is bounded below by a constant times N^{1/3}.",
+    "For each N, smooth positive-time trace continuity preserves the lower bound at some t_N>0.",
+    "The family is smooth small-data and therefore does not satisfy first-singular-time / ancient-persistence hypotheses."
+  ],
+  "verification_performed": [
+    {
+      "check": "divergence_free",
+      "result": "PASS",
+      "detail": "phi=(d2 psi,-d1 psi,0); translated finite sums preserve divergence zero"
+    },
+    {
+      "check": "critical_L3_packet_count",
+      "result": "PASS",
+      "detail": "disjoint supports give exact cubic identity"
+    },
+    {
+      "check": "exact_NS_evolution",
+      "result": "PASS",
+      "detail": "Kato small-data theorem applied to each full initial datum; no nonlinear superposition"
+    },
+    {
+      "check": "finite_I_uniformity",
+      "result": "PASS",
+      "detail": "direct A,C,D,E scaling estimates plus local energy inequality; corroborated by AB Lemma 2.5 endpoint p=3,q=infinity"
+    },
+    {
+      "check": "weak_L32_lower_bound",
+      "result": "PASS",
+      "detail": "superlevel measure Nm at level proportional N^{-1/3} gives N^{1/3} divergence"
+    },
+    {
+      "check": "positive_time",
+      "result": "PASS",
+      "detail": "fixed-N C1 continuity near t=0; no uniform t_N claimed"
+    },
+    {
+      "check": "pressure_nonlocality",
+      "result": "PASS",
+      "detail": "whole-space p=R_iR_j(u_i u_j); L3/2 bounded by common L3 velocity"
+    },
+    {
+      "check": "difference_witness",
+      "result": "PASS",
+      "detail": "smooth small-data temporal-edge family distinguished from first-singular-time/ancient/profile contexts"
+    },
+    {
+      "check": "independent_review",
+      "result": "NOT_PERFORMED",
+      "detail": "same-context expert cell only; zero independent-review credit"
+    }
+  ],
+  "outcome": "SCOPED_FALSIFIER_VERIFIED",
+  "residual_before": "UNKNOWN whether same-slab finite-I plus critical velocity control alone can force global L^{3/2,infinity} vorticity amplitude",
+  "residual_after": "Universal same-slab producer pruned; history/frequency/tightness/profile-sensitive producer and local-to-global/ancient gluing remain OPEN",
+  "failure_signature": "F-NS-B1a3b1a1-SAMESLAB-FINITEI-TO-WL32",
+  "failure_category": "LOCAL_MATHEMATICAL_PRODUCER_INTERFACE",
+  "local_to_global_gluing_status": "SEPARATE_OPEN_RESIDUAL; existing F-NS-B1a3-UNCONTROLLED-FAR-FIELD and F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH not discharged",
+  "cost_effort_proxy": {
+    "model_tokens": "CANNOT_MEASURE: runtime does not expose exact token telemetry",
+    "context_tokens": "CANNOT_MEASURE: runtime does not expose exact context-token telemetry",
+    "retrieval_calls": "CANNOT_MEASURE: transcript compaction prevents exact run-wide count",
+    "tool_calls": "CANNOT_MEASURE: transcript compaction prevents exact run-wide count",
+    "elapsed_wall_time": "CANNOT_MEASURE: effective run-start timestamp for tool work is not exposed reliably",
+    "analytic_complexity_proxy": "one explicit N-packet family; four independent verification inequalities; one positive-time continuity step; one DifferenceWitness audit"
+  },
+  "next_action": "Open NS-B1a3b1a2: test the weakest source-valid one-sided-history/frequency/tightness anti-multiplicity mechanism inherited at a first singular time; rotate if this producer family saturates.",
+  "novelty_class": "compositional",
+  "structural_rank": 0,
+  "saturation_axes": {
+    "motif": {
+      "reopened": true,
+      "flattened_after_cycle": true
+    },
+    "operator": {
+      "reopened": false,
+      "flattened_after_cycle": true
+    },
+    "failure": {
+      "reopened": true,
+      "flattened_after_cycle": true
+    },
+    "context": {
+      "reopened": false,
+      "flattened_after_cycle": true
+    },
+    "retrieval": {
+      "reopened": false,
+      "flattened_after_cycle": true
+    },
+    "path": {
+      "reopened": true,
+      "flattened_after_cycle": false
+    },
+    "method_basis": {
+      "reopened": false,
+      "flattened_after_cycle": true
+    }
+  },
+  "artifact_hash": "sha256:24466b485b5b01e62175b558be8459e924a72139b45da4398c00bfd73e0e30d3"
+}
