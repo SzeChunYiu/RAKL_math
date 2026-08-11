@@ -1,0 +1,136 @@
+{
+  "atom_id": "RH-ANA-003",
+  "problem_signature": "RH / exact zeta zero-location / analytic-number-theory child: zero-density-to-exclusion threshold inside prime/explicit-formula uniform-tail search",
+  "root_binding": {
+    "statement": "Every nontrivial zero rho of zeta(s) satisfies Re(rho)=1/2.",
+    "canonical_statement_blob_sha": "73c819da51c773989fbbc90a6bba1fe4a284024d",
+    "success_contract_blob_sha": "1c778c7f284a6b4b8648470efaf15d12872e44f9",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "parent_residual": {
+    "parent_atom": "RH-ANA-002",
+    "opening_result": "NO_STRICTLY_WEAKER_BRIDGE_EXPOSED_IN_AUDITED_SUZUKI_SOURCE",
+    "opening_failure": "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE",
+    "active_child_contract_blob_sha": "bbda1d9e41299bddbdc9b6b3a91de573864b826b"
+  },
+  "object_context": "Audit whether currently proved zero-density and zero-free estimates, optionally combined with rigorous finite-height zero verification, can furnish the genuinely uniform tail/exclusion mechanism demanded by RH-ANA-003. The immediate quantity is N(sigma,T), the number of nontrivial zeros with Re(rho)>=sigma and |Im(rho)|<=T. The decision question is not whether density improves, but whether the available bound can be converted without circularity into zero occupancy for every fixed sigma>1/2.",
+  "quantity_of_interest": "For each fixed sigma>1/2, an unconditional certificate that N(sigma,T)=0 for all T, or an equivalent local-tail certificate that excludes every off-critical zero.",
+  "scope": {
+    "function": "classical Riemann zeta only",
+    "sigma": "1/2 < sigma < 1",
+    "height": "all heights; finite verified prefix may calibrate only",
+    "evidence_cutoff": "primary sources located/checked through 2026-08-11",
+    "authority_boundary": "experience and analogy guide search only; numerics calibrate/falsify only"
+  },
+  "fibre_contents_consulted": [
+    "00_problem_contract/canonical_statement.md",
+    "00_problem_contract/success_contract.yaml",
+    "02_problem_dag/RH_ANA_003.yaml",
+    "01_frontier/RH_ANA_002_CONTEXT_FIBER_20260811.json",
+    "07_memory/RH_ANA_001_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "07_memory/RH_ANA_002_POSTAUDIT_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "07_memory/RH_ANA_002_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "current RAKL 3.0.0 core workflow, v3 experience substrate, metrology, pre-action receipt and method_specs.py"
+  ],
+  "current_primary_sources": [
+    {
+      "id": "SRC-GM-2026",
+      "citation": "Larry Guth and James Maynard, New large value estimates for Dirichlet polynomials, Annals of Mathematics 203 (2026), 623-675.",
+      "role": "current non-explicit zero-density frontier",
+      "key_claim": "N(sigma,T) <= T^(30(1-sigma)/13+o(1)) after combining their theorem with Ingham in the stated ranges.",
+      "url": "https://annals.math.princeton.edu/2026/203-2/p06"
+    },
+    {
+      "id": "SRC-BELLOTTI-ZD-2024",
+      "citation": "Chiara Bellotti, An explicit log-free zero density estimate for the Riemann zeta-function, arXiv:2405.12545.",
+      "role": "explicit near-one zero-density calibration",
+      "key_claim": "Bounds of form N(sigma,T) <= C T^(B(1-sigma)); for one displayed uniform regime sigma>=0.9927, B=1.448 and C=1.62e11 over 3e12<T<=exp(6.7e12).",
+      "url": "https://arxiv.org/abs/2405.12545"
+    },
+    {
+      "id": "SRC-MTY-ZFR",
+      "citation": "Michael J. Mossinghoff, Timothy S. Trudgian, Andrew Yang, Explicit zero-free regions for the Riemann zeta-function, arXiv:2212.06867.",
+      "role": "explicit zero-free boundary",
+      "key_claim": "No zeros in an explicit Vinogradov-Korobov type region adjacent to sigma=1.",
+      "url": "https://arxiv.org/abs/2212.06867"
+    },
+    {
+      "id": "SRC-PT-VERIFY",
+      "citation": "Dave Platt and Tim Trudgian, The Riemann hypothesis is true up to 3·10^12, Bull. Lond. Math. Soc. 53 (2021), 792-797; arXiv:2004.09765.",
+      "role": "rigorous finite-height calibration only",
+      "key_claim": "All zeros with 0<gamma<=3e12 lie on the critical line.",
+      "url": "https://arxiv.org/abs/2004.09765"
+    }
+  ],
+  "equivalent_formulations": [
+    "RH itself.",
+    "For every fixed sigma>1/2 and every T>0, N(sigma,T)=0.",
+    "Finite verified height H plus, for every sigma>1/2 and every dyadic T>=H, the local tail count N(sigma,2T)-N(sigma,T)=0."
+  ],
+  "near_solved_analogues": [
+    "Rigorous finite-height verification gives exact zero occupancy only on a bounded height interval.",
+    "Explicit zero-free regions give exact occupancy zero only in a shrinking region adjacent to Re(s)=1.",
+    "Zero-density theorems give global cardinality upper bounds on off-line zeros but not occupancy zero.",
+    "Even the Density Hypothesis N(sigma,T)<<T^(2(1-sigma)+epsilon) is explicitly described in primary literature as weaker than RH."
+  ],
+  "method_transfers": [
+    {
+      "source": "integer-valued rare-event exclusion",
+      "transfer": "turn a counting upper bound into emptiness only after the upper bound for the relevant local count is strictly below 1",
+      "required_assumptions": [
+        "count is a nonnegative integer",
+        "bound applies to the exact target region",
+        "all constants and ranges are explicit if a numerical <1 test is used"
+      ],
+      "disanalogies": [
+        "global cumulative N(sigma,T) is nondecreasing and can retain old zeros; a bounded positive global count does not remove them",
+        "asymptotic T^a bounds with a>0 grow and cannot cross the <1 threshold for large T"
+      ]
+    },
+    {
+      "source": "finite verification plus tail certification",
+      "transfer": "pair an exact finite prefix with a theorem excluding every later dyadic block",
+      "required_assumptions": [
+        "finite verification is rigorous and exhaustive through H",
+        "tail theorem covers every block above H"
+      ],
+      "disanalogies": [
+        "a density estimate controlling only total count or average proportion is not a blockwise zero theorem",
+        "numerical height cannot substitute for an infinite tail theorem"
+      ]
+    }
+  ],
+  "structural_analogy": {
+    "name": "rare-defect rate versus zero-defect certificate",
+    "use": "search decomposition only",
+    "shared_structure": [
+      "integer defect count",
+      "upper-bound telemetry",
+      "closure requires exact emptiness"
+    ],
+    "difference_witness": "analytic zero counts have symmetry, zero-free subregions and cumulative height structure not present in generic reliability models",
+    "authority": "PROPOSAL_ONLY"
+  },
+  "hostile_controls": [
+    "A hypothetical zeta-like count with exactly one off-critical zero above the finite verification height is compatible with every upper bound whose right side is >=1 at that height.",
+    "A uniform O(1) global density bound with constant >=1 would still permit finitely many off-critical zeros and therefore would not imply RH.",
+    "A density-proportion tending to zero can coexist with infinitely many sparse off-critical zeros."
+  ],
+  "candidate_gate": {
+    "state": "FROZEN_BEFORE_CANDIDATE",
+    "allowed_after": [
+      "same-context expert review",
+      "dual memory review",
+      "pre-action proposal receipt",
+      "hash-chain entry"
+    ],
+    "forbidden_shortcuts": [
+      "finite zero computation as proof",
+      "density-to-zero inference without <1/local-tail threshold",
+      "zero-free region silently extended to the full half-strip",
+      "RH-equivalent assumption used as remainder control"
+    ]
+  },
+  "frozen_at": "2026-08-11T15:55:00+00:00",
+  "atom_fibre_snapshot_hash": "sha256:31e2fc6491b0b61f8e7b7b96c668592b860b37166dc84e12cb488b3a19bb985d"
+}
