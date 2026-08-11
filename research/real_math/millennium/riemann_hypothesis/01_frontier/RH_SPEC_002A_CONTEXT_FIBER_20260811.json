@@ -1,0 +1,98 @@
+{
+  "atom_id": "RH-SPEC-002a",
+  "object_context": "Source-bound finite-to-global bridge for the Connes-Consani-Moscovici spectral route: determine the weakest non-circular quantitative approximation of the semilocal Weil-form lowest eigenvector xi_lambda by a source-defined scalar multiple of the prolate proxy k_lambda that is sufficient to force locally uniform convergence of their Fourier/Mellin transforms on every closed substrip of the root-relevant open strip |Im z|<1/2, while keeping the separate simple/even and finite-N-to-continuum obligations explicit.",
+  "structural_coordinates": [
+    "the root-relevant transform domain can be restricted to the open z-strip |Im z|<1/2 rather than the whole complex plane: the source defines Xi(z)=xi(1/2+iz) and states that suitable determinant convergence on closed substrips of this open strip would entail RH via Hurwitz",
+    "Connes-Consani-Moscovici Theorem 1.1 gives finite-parameter self-adjointness and real entire Fourier-transform zeros under explicit simple/even lowest-eigenvector hypotheses",
+    "for fixed lambda, the paper describes convergence of finite-N regularized determinants to the transform of the continuous semilocal Weil-form ground state as part of a strategy, so finite-N-to-continuum stability remains a separate obligation from the lambda-to-infinity proxy bridge",
+    "Lemma 7.3 proves that the Fourier transform of the explicit prolate proxy k_lambda converges to Riemann Xi uniformly on closed substrips of |Im z|<1/2",
+    "Section 8 explicitly identifies as a missing step a sufficiently accurate approximation of a scalar multiple of the semilocal Weil-form ground state xi_lambda by k_lambda strong enough to justify zero convergence",
+    "Section 8 separately identifies simplicity and evenness of the smallest-eigenvalue eigenvector of QW_lambda as a missing step; this atom does not silently absorb that sibling obligation",
+    "a norm or error estimate on xi_lambda-c_lambda k_lambda is useful only if its transform-continuity consequence is proved uniformly on each closed root-relevant substrip",
+    "for a Fourier transform in logarithmic coordinate x, a direct triangle-inequality route suggests that weighted L1 control with exponential weight matched to the substrip could be sufficient for compact-uniform transform error, but this is only a method-transfer target until derived on the exact source functions",
+    "unweighted L2 closeness on intervals whose logarithmic width grows with lambda is not automatically enough for uniform transform control without a quantitative measure/weight factor",
+    "if eigenvector perturbation is used to compare QW_lambda with a prolate-related surrogate, qualitative simplicity is not by itself quantitative stability; a source-side spectral separation or another rigidity mechanism must control eigenvector rotation",
+    "the scalar normalization c_lambda must be defined from source-side data and cannot be fitted to known zeta zeros or chosen after inspecting the target Xi discrepancy",
+    "the post-calibration failure lattice already rejects generic strong-resolvent completeness, Galerkin exactness, unspecified two-parameter limits, and finite-zero-prefix inference; those are warnings, not impossibility theorems for this source family"
+  ],
+  "equivalent_formulations": [
+    "for every delta>0 and compact K contained in {z: |Im z|<=1/2-delta}, prove sup_{z in K}|hat(xi_lambda)(z)-c_lambda hat(k_lambda)(z)| -> 0 for a source-defined nonzero scalar c_lambda, with the finite-stage real-zero/simple-even hypotheses handled separately",
+    "identify a source-defined Banach norm X_delta and prove ||xi_lambda-c_lambda k_lambda||_{X_delta}->0 together with a bounded transform map X_delta -> H_infinity(K) for every closed substrip compact K",
+    "derive quantitative ground-state alignment between QW_lambda and the prolate proxy mechanism from an explicit residual plus spectral-separation/rigidity estimate strong enough to imply the transform convergence above",
+    "falsify the proxy route by exhibiting a source-compatible instability mechanism showing that all currently available QW_lambda-versus-prolate estimates can remain small while the normalized ground-state transform stays O(1) away on some root-relevant compact set",
+    "keep the fixed-lambda N->infinity determinant/eigenvector transport as a sibling atom rather than treating success of the lambda-stage proxy comparison as complete finite-to-global closure"
+  ],
+  "solved_analogues": [
+    "domain-local Hurwitz/Rouche zero transport for locally uniform holomorphic limits with finite-stage off-real zero exclusion",
+    "self-adjoint eigenvector perturbation with an isolated quantitative spectral gap, where operator/residual control can be converted into eigenspace-angle control",
+    "elementary weighted-L1-to-uniform Fourier/Laplace-transform bounds on a fixed horizontal strip"
+  ],
+  "near_solved_analogues": [
+    "Connes-Consani-Moscovici Lemma 7.2-7.3: the prolate-derived proxy k_lambda has a proved transform limit to Xi on every closed substrip of |Im z|<1/2",
+    "the same paper gives numerical evidence that k_lambda approximates a scalar multiple of xi_lambda but explicitly leaves rigorous justification as a main missing step",
+    "prolate-wave concentration theory supplies highly stable low prolate modes, but the semilocal Weil ground state is governed by a different arithmetic quadratic form and the exact comparison theorem is open"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "post-calibration RAKL tool T-RH-SPEC-HURWITZ-DOMAIN-ZERO-TRANSPORT",
+      "method": "minimize the target convergence domain before proof search: require locally uniform convergence only on the open domain containing all root-relevant nontrivial Xi zeros, then use Hurwitz/Rouche locally rather than demanding full-plane convergence",
+      "shared_structure": ["finite-stage transforms are holomorphic/entire with only real zeros under the source hypotheses", "the target Xi is holomorphic on the chosen domain", "the root conclusion is exclusion of nonreal zeros in the critical-strip coordinate"],
+      "required_assumptions": ["the chosen open z-domain really covers every nontrivial zeta zero under the source variable Xi(z)=xi(1/2+iz)", "the approximant transforms converge locally uniformly on every compact subset of that domain", "the limit is exactly nonzero Xi", "finite-stage real-zero hypotheses hold along the same cofinal family"],
+      "disanalogies": ["Hurwitz supplies no source-side ground-state/proxy approximation", "the finite-N and lambda limits remain distinct and may require different normalizations/comparison maps"],
+      "repair_question": "What source-side norm estimate on xi_lambda-c_lambda k_lambda is just strong enough to invoke the domain-local Hurwitz tool on every closed substrip |Im z|<=1/2-delta?",
+      "source_anchors": ["research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json", "Alain Connes, Caterina Consani, Henri Moscovici, Zeta Spectral Triples, arXiv:2511.22755 (2025), Sections 7-8"]
+    },
+    {
+      "source_context": "self-adjoint eigenvector perturbation with an isolated lowest eigenvalue",
+      "method": "convert a source-defined residual or operator comparison into an angle/norm estimate for the lowest eigenspace only after proving a quantitative separation from the next spectral value",
+      "shared_structure": ["a distinguished lowest eigenvector is the object whose transform carries the zeros", "a surrogate/proxy vector is motivated by a nearby structural operator", "small residuals are meaningful only relative to spectral separation"],
+      "required_assumptions": ["the relevant QW_lambda eigenvalue is simple", "a quantitative spectral-gap or alternate rigidity bound is available uniformly enough in lambda", "the proxy and target vectors are placed in a common Hilbert space with a frozen normalization", "the residual/operator comparison is proved for the actual QW_lambda and prolate-linked object"],
+      "disanalogies": ["QW_lambda is not currently proved to be a small-norm perturbation of the prolate wave operator", "the source highlights a trace-formula relationship rather than a ready-made perturbation identity", "a vanishing gap can make eigenvectors unstable even when scalar eigenvalue/residual errors are tiny"],
+      "repair_question": "Can the QW_lambda-prolate trace relationship yield a quantitative ground-state residual together with a spectral-separation estimate, or does a vanishing separation furnish a cheap route falsifier?",
+      "source_anchors": ["Alain Connes, Caterina Consani, Henri Moscovici, Zeta Spectral Triples, arXiv:2511.22755 (2025), Sections 3, 7, 8", "Tosio Kato, Perturbation Theory for Linear Operators"]
+    },
+    {
+      "source_context": "weighted Fourier/Laplace transform continuity on horizontal strips",
+      "method": "translate a function-space approximation into uniform transform control by bounding the complex Fourier kernel on a closed substrip; use the weakest source-plausible weighted L1-type norm rather than an unspecified L2 proximity claim",
+      "shared_structure": ["xi_lambda and k_lambda live on lambda-dependent compact multiplicative intervals and become functions on a growing logarithmic interval", "complex transform evaluation introduces an exponential weight depending on Im z", "uniform control on each closed substrip only needs the corresponding fixed exponential weight"],
+      "required_assumptions": ["the exact Fourier/Mellin convention and logarithmic measure are frozen", "the normalized error is integrable with the required substrip-dependent exponential weight", "the bound is uniform enough as lambda grows", "source-side endpoint/tail behavior introduced by the map E is included"],
+      "disanalogies": ["ordinary unweighted L2 convergence need not imply the required weighted L1 convergence on a growing interval", "the map E contains arithmetic summation and endpoint structure that generic Fourier estimates do not control"],
+      "repair_question": "For each delta>0, what explicit weighted error functional on xi_lambda-c_lambda k_lambda upper-bounds the transform discrepancy uniformly on |Im z|<=1/2-delta, and can the QW_lambda/prolate machinery plausibly control it?",
+      "source_anchors": ["Alain Connes, Caterina Consani, Henri Moscovici, Zeta Spectral Triples, arXiv:2511.22755 (2025), Lemma 7.3 and Section 8"]
+    }
+  ],
+  "explicit_disanalogies": [
+    "the parent calibration used full-plane local-uniform convergence as a clean sufficient positive control; RH-SPEC-002a deliberately weakens the required target domain only because the source itself identifies closed-substrip convergence in |Im z|<1/2 as sufficient for the RH route",
+    "proved convergence of the proxy k_lambda to Xi does not imply convergence of the true Weil-form ground state xi_lambda to k_lambda",
+    "numerical proximity of k_lambda and xi_lambda has no theorem authority",
+    "simplicity/evenness of the prolate eigenfunction does not transfer to QW_lambda without proof",
+    "a small QW_lambda ground-state eigenvalue or small residual does not by itself imply vector alignment if the next eigenvalue approaches it",
+    "weighted transform continuity is an analytic implication, not a proof that the required weighted norm tends to zero for the arithmetic source family",
+    "solving the lambda-stage proxy bridge would still leave finite-N-to-continuum stability and all finite-stage simple/even hypotheses to close"
+  ],
+  "source_anchors": [
+    "Clay Mathematics Institute, Riemann Hypothesis official Millennium problem statement",
+    "Alain Connes, Caterina Consani, Henri Moscovici, Zeta Spectral Triples, arXiv:2511.22755 (2025), Theorem 1.1, Lemma 7.3, Sections 7-8",
+    "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "numerical linear algebra / principal-eigenspace tracking",
+      "source_situation": "A tiny residual or tiny eigenvalue error can coexist with a large rotation of an eigenvector when the relevant spectral gap becomes small; stable eigenvector transfer requires separation or another rigidity mechanism.",
+      "common_abstraction": ["a distinguished one-dimensional state carries the downstream observable", "a surrogate state is close according to an incomplete diagnostic", "the downstream observable is sensitive to state rotation", "spectral separation controls whether local residual information determines the state"],
+      "source_to_target_mapping": ["principal eigenvector -> lowest QW_lambda eigenvector xi_lambda", "surrogate vector -> prolate-derived proxy k_lambda", "eigenvalue/residual fit -> QW/prolate discrepancy diagnostics", "eigenvector angle -> normalized xi_lambda versus c_lambda k_lambda error", "downstream observable -> complex Fourier/Mellin transform and zero set"],
+      "shared_constraints": ["the compared states must share a common normalized ambient space", "the gap/residual quantities must be source-defined rather than target-fitted", "the error metric must be strong enough for the downstream transform"],
+      "disanalogies": ["QW_lambda and the prolate mechanism are not currently presented as two finite matrices with a known operator-norm difference", "the RH target additionally requires arithmetic normalization and complex-analytic zero transport"],
+      "proposed_principle": "Before treating small ground-state/proxy discrepancy as evidence of vector convergence, expose the spectral-separation coordinate and test whether the available source relation controls the eigenspace strongly enough for the exact transform norm.",
+      "validation_obligation": "Derive from the actual QW_lambda/prolate trace or form identities either a quantitative alignment theorem with all lambda-dependence explicit or a structurally matched counterexample showing that the available residual can be small while transform error remains large.",
+      "provenance_note": "Proposal-only stability analogy used to choose a falsifier/representation; it creates no RH or eigenvector-convergence authority."
+    }
+  ],
+  "analogy_scan_notes": "The expert cell scanned domain-local zero transport, eigenvector perturbation, weighted Fourier/Mellin continuity, and prolate concentration. It retained only bridges with exact source-side validation obligations and rejected direct import of generic perturbation theorems without a QW_lambda/prolate operator comparison.",
+  "frozen_at": "2026-08-11T08:12:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:a96f3f0360c2127a0e5542d5d799961e878492d94c476a78db675f0e90e35932"
+}
