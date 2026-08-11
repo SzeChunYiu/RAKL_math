@@ -1,0 +1,20 @@
+{
+  "schema_version": "ns-b1a4-expert-postcheck-r1-v1",
+  "cycle_id": "NS-B1a4-SIGNED-NORECROSSING-20260811-R1",
+  "atom_id": "NS-B1a4",
+  "review_type": "SAME_CONTEXT_EXPERT_CELL_POSTCHECK",
+  "independent_mathematical_review_credit": 0,
+  "findings": [
+    {"role":"suitable-solution/local-energy specialist","verdict":"PASS_SCOPED","finding":"The displayed shear solves NSE exactly; the smooth local-energy identity is exact. K_eta' has both signs and the continuity/limit argument gives two crossings. Product cutoff makes the integrated convective cutoff term zero."},
+    {"role":"pressure/harmonic-analysis specialist","verdict":"PASS_SCOPED_WITH_BOUNDARY","finding":"p=0 makes the pressure ablation exact, so pressure cannot be a universal local sign source. This does not exclude pressure-velocity coherence when combined with stronger finite-I ancient trajectory information."},
+    {"role":"Type-I/scaling specialist","verdict":"PASS_DIFFERENCE_WITNESS","finding":"A,C,E are finite and D=0 on bounded cylinders. Constant background forces global A to grow like R^2; whole-space I is not finite. Backward exponential growth also blocks mild-bounded-ancient membership."},
+    {"role":"ancient/compactness/gluing specialist","verdict":"GLUING_OPEN","finding":"The local route-pruning cannot be glued into an ancient-class impossibility statement. Any positive theorem must add global/trajectory structure and separately connect it through compactness to a valid Liouville/epsilon-regularity consumer."},
+    {"role":"adversarial counterexample specialist","verdict":"PASS","finding":"No derivative-loss, endpoint or circular-bootstrap issue is used. The formula is smooth for all real t, nonlinear transport vanishes identically, and recrossing follows analytically rather than numerically."},
+    {"role":"RAKL v3/provenance specialist","verdict":"PASS_PROPOSAL_SHADOW","finding":"Prospective issue target and fibre precede verification; TaskEpisode remains PROPOSAL_SHADOW_STORED; episode, diagnosis, failure, gluing residual, obstruction and candidate lesson remain distinct; no authority promotion or independent review is claimed."}
+  ],
+  "joint_verdict": "ACCEPT_EXISTING_LEDGER_SIGN_INSUFFICIENT_ROUTE_PRUNING_SCOPED_ONLY",
+  "root_gate": "BLOCKED_NO_ROOT_CANDIDATE_OPEN_NO_SOLUTION_CERTIFICATE",
+  "next_action": "freeze and falsify one explicit scale-normalized signed/global trajectory observable rather than re-estimating unsigned A+C+D+E",
+  "authority": "SAME_CONTEXT_ONLY_NO_INDEPENDENT_REVIEW_AUTHORITY",
+  "recorded_at_utc": "2026-08-11T22:08:13Z"
+}
