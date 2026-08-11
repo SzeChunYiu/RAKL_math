@@ -1,0 +1,242 @@
+{
+  "schema_version": "rakl-cycle-metrics-v1-proposal-shadow",
+  "cycle_id": "NS-B1a3b-C001",
+  "authority": "PROPOSAL_SHADOW_METROLOGY_ONLY",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "cycle_framework_sha": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+    "framework_pin_status": "EXACT_AT_CYCLE_START_AND_MATCHED_RAKL_MATH_PIN",
+    "rakl_main_at_cycle_start": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+    "rakl_main_at_metrology_close": "9df550debdd97fc5ed5ab264221aee3d258954ff",
+    "mid_cycle_framework_drift_audit": {
+      "ahead_by": 1,
+      "changed_framework_src_or_schema_or_skill_files": 0,
+      "changed_files_summary": "one later main commit added Hodge application/research artifacts and tests only; no RAKL src/skills/schemas/version file changed",
+      "cycle_binding_decision": "retain exact 9027cc6 cycle binding; no mid-candidate framework rebinding"
+    }
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_main_sha": "111a3f95c72b0a418f968708bd3eda77ef98bccf",
+    "research_branch": "research/ns-b1a3b-vorticity-alignment-20260811",
+    "material_head_before_metrics": "520b5f328295dfab6b8d2f3a65897c51bf44bdd4",
+    "head_including_metrics": "CANNOT_MEASURE",
+    "head_including_metrics_reason": "self-referential commit identity is not knowable before writing this metrics artifact"
+  },
+  "state_fingerprints": {
+    "rakl_v3_state_pre": "CANNOT_MEASURE",
+    "rakl_v3_state_pre_reason": "the application does not materialize this research atom as a RAKLV3State object with a canonical state_fingerprint at cycle start",
+    "rakl_v3_state_post": "CANNOT_MEASURE",
+    "rakl_v3_state_post_reason": "the application does not materialize this research atom as a RAKLV3State object with a canonical state_fingerprint at cycle close",
+    "application_semantic_pre_sha256": "68bd842228cd22d5d6f0697af74d658f4d43b6b3abb8c31deeaaf3eed574203f",
+    "application_semantic_pre_basis": {
+      "scope": "NS-B1a3b semantic atom snapshot",
+      "rakl_math_base_sha": "111a3f95c72b0a418f968708bd3eda77ef98bccf",
+      "atom_id": "NS-B1a3b",
+      "status": "CONTEXT_REQUIRED_BEFORE_CANDIDATE",
+      "registered_exact_geometry_rigidity_edges": 0,
+      "registered_critical_directional_divergence_contrapositive": false,
+      "inheritance_status": "UNASSESSED",
+      "child_NS_B1a3b1_present": false,
+      "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+    },
+    "application_semantic_post_sha256": "2fabbbd4193d0e63d6fa28a2ae8ebbc73a80e8b0a399d11dd3cc77201b5379c2",
+    "application_semantic_post_basis": {
+      "scope": "NS-B1a3b semantic atom snapshot",
+      "material_head_before_metrics": "520b5f328295dfab6b8d2f3a65897c51bf44bdd4",
+      "atom_id": "NS-B1a3b",
+      "status": "PARTIAL_SUCCESS_SOURCE_DERIVED_CLASSIFICATION",
+      "registered_exact_geometry_rigidity_edges": 4,
+      "registered_critical_directional_divergence_contrapositive": true,
+      "inheritance_status": "OPEN_UNPROVED",
+      "child_NS_B1a3b1_present": true,
+      "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+    },
+    "atom_fibre_snapshot_hash": "sha256:5abea6153d4a3801a8f6637e6dc0e5aafeecefc438981052c5c9b082136818e4",
+    "pre_candidate_trace_final_hash": "sha256:31e329432e282e304feade437ab46352dae20488d4d6e7a9f49287d74ae1f2be",
+    "post_candidate_trace_final_hash": "sha256:46a16b936fa146724bbb094a2c45d94c75b7c4feae9eec4a32363372e62bb79d"
+  },
+  "pre_action_receipt": {
+    "receipt_id": "PAFR-NS-B1a3b-GM-GEOMETRY-20260811",
+    "receipt_canonical_sha256": "3b7de31711ce27d4b195fcd146ee5d2794005fc08d8ec62a31629be490e2d748",
+    "framework_commit": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+    "application_commit": "9e05490ea9fd1f3843c6266081baeb5e392ab940",
+    "frozen_at_utc": "2026-08-11T15:37:52.195083Z",
+    "episode_timestamp_utc": "2026-08-11T15:40:04.717147Z",
+    "prospective_binding_status": "PASS_BY_EXACT_V3_RULE_REPLAY",
+    "binding_notes": "episode context/fibre/operator IDs match the receipt, episode includes pre_action_receipt:<hash>, and episode timestamp is strictly later"
+  },
+  "canonical_method_specs_process_surfaces_invoked": [
+    "decomposition",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "mathematical_context_translation",
+    "equivalence_similarity",
+    "gap_discovery",
+    "experiment_query_selection",
+    "memory",
+    "review",
+    "synthesis",
+    "saturation_stopping",
+    "prompting_context_policy"
+  ],
+  "application_operator_ids": [
+    "source-signature-interface-audit",
+    "parabolic-scaling-audit",
+    "geometric-rigidity-audit",
+    "contrapositive-classification"
+  ],
+  "memory": {
+    "success_retrieved_count": 7,
+    "success_selected_count": 7,
+    "success_retrieved_ids": [
+      "GM-THM1.1",
+      "GM-COR2.6",
+      "GM-PROP2.1",
+      "GM-PROP2.2",
+      "GM-LEMMA2.3",
+      "AB-THM1.1",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "success_selected_ids": [
+      "GM-THM1.1",
+      "GM-COR2.6",
+      "GM-PROP2.1",
+      "GM-PROP2.2",
+      "GM-LEMMA2.3",
+      "AB-THM1.1",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "success_rejected_or_deferred_count": 3,
+    "success_rejected_or_deferred_ids": [
+      "ESS-L3",
+      "exact-self-similar-Liouville",
+      "CF/BB-Holder-direction"
+    ],
+    "failure_retrieved_count": 6,
+    "failure_selected_count": 3,
+    "failure_retrieved_ids": [
+      "F-NS-R001-A1-ENERGY-CRITICALITY",
+      "F-NS-R001B-LOCAL-ALIGNMENT-NONSUFFICIENCY",
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "F-NS-B1a3-UNCONTROLLED-FAR-FIELD"
+    ],
+    "failure_selected_ids": [
+      "F-NS-R001B-LOCAL-ALIGNMENT-NONSUFFICIENCY",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "F-NS-B1a3-UNCONTROLLED-FAR-FIELD"
+    ],
+    "missed_relevant_memory_count": "CANNOT_MEASURE",
+    "missed_relevant_memory_reason": "no exhaustive relevance-labelled universe was frozen"
+  },
+  "outcome": {
+    "status": "PARTIAL_SUCCESS",
+    "authority": "SOURCE_DERIVED_CLASSIFICATION_ONLY",
+    "result": "Any whole-space Type-I mild blow-up must have infinite critical L_t^2 L_x^infinity vorticity-direction gradient integral on every fixed high-vorticity threshold and must fail every uniform spatial modulus of direction continuity there.",
+    "root_authority": "NONE"
+  },
+  "residual": {
+    "before": "Find an exact scale-critical vorticity-direction/geometric-depletion property inherited by every relevant finite-I ancient limit and matched to a valid rigidity theorem.",
+    "after": "Exact Giga-Miura critical rigidity interface identified and its contrapositive blow-up class registered; finite-I -> directional-coherence inheritance remains OPEN_UNPROVED; next child NS-B1a3b1 targets Type-I-compatible critical angular cascades."
+  },
+  "semantic_novelty_counts": {
+    "KNOWLEDGE": 1,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 0,
+    "OBSTRUCTION": 0,
+    "RELATION": 1,
+    "PATH": 1,
+    "META_METHOD": 0
+  },
+  "semantic_novelty_notes": {
+    "KNOWLEDGE": "Giga-Miura Type-I scale-critical vorticity-direction criterion newly registered in this active DAG",
+    "RELATION": "exact contrapositive Type-I blow-up -> directional-critical divergence edge",
+    "PATH": "new child NS-B1a3b1",
+    "OBSTRUCTION": "explicit zero because the inheritance obstruction is proposal-only and root cause is not established"
+  },
+  "saturation": {
+    "axes_reopened": [
+      "KNOWLEDGE",
+      "RELATION",
+      "PATH"
+    ],
+    "axes_flattened": [
+      "OPERATOR",
+      "EXPERIENCE_PATTERN",
+      "OBSTRUCTION",
+      "META_METHOD"
+    ],
+    "novelty_class": "UNRESOLVED",
+    "novelty_class_reason": "the active finite-I-to-geometry inheritance problem remains unresolved; source-derived classification does not close the atom"
+  },
+  "resource_proxies": {
+    "model_input_tokens": "CANNOT_MEASURE",
+    "model_input_tokens_reason": "automation harness does not expose exact per-cycle token counters",
+    "model_output_tokens": "CANNOT_MEASURE",
+    "model_output_tokens_reason": "automation harness does not expose exact per-cycle token counters",
+    "peak_context_tokens": "CANNOT_MEASURE",
+    "peak_context_tokens_reason": "no authoritative context-meter receipt is exposed",
+    "retrieval_tool_calls": "CANNOT_MEASURE",
+    "retrieval_tool_calls_reason": "connector/web wrappers expose individual calls but no authoritative cumulative per-cycle counter after tool-result compaction; no count is guessed",
+    "wall_time_seconds_to_metrics_measurement": 1310.103,
+    "wall_time_basis": "runtime turn start 2026-08-11T15:22:59Z to local metrology measurement 2026-08-11T15:44:49.102626Z",
+    "git_commits_on_cycle_branch_before_metrics": 11,
+    "git_commit_count_basis": "one sequential GitHub contents-API commit for each pre-metrics artifact after branch creation"
+  },
+  "new_record_ids": {
+    "episode_ids": [
+      "EP-NS-B1a3b-GM-GEOMETRIC-CLASSIFICATION-20260811"
+    ],
+    "lesson_ids": [
+      "L-NS-B1a3b-CLASSIFY-BLOWUP-BY-CRITICAL-GEOMETRY-NEGATION"
+    ],
+    "failure_ids": [
+      "F-NS-B1a3b-DIRECTIONAL-INHERITANCE-UNPROVED"
+    ],
+    "tool_ids": [],
+    "obstruction_ids": [
+      "O-NS-B1a3b-DIRECTIONAL-INHERITANCE-INTERFACE"
+    ],
+    "motif_ids": [
+      "M-NS-B1a3b-DIRECTION-COLLAPSE-2D-LIOUVILLE-CANDIDATE"
+    ],
+    "successful_reuse_ids": [
+      "GM-THM1.1",
+      "GM-COR2.6",
+      "GM-PROP2.1",
+      "GM-PROP2.2",
+      "GM-LEMMA2.3",
+      "AB-THM1.1",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ]
+  },
+  "gates": {
+    "frozen_context": "PASS",
+    "pre_action_chronology": "PASS_BY_EXACT_V3_RULE_REPLAY",
+    "source_provenance": "PASS_PRIMARY_SOURCE_BOUND",
+    "same_context_expert_review": "PASS_AS_NONINDEPENDENT_ONLY",
+    "independent_review": "NOT_RUN_BLOCKS_ROOT_PROMOTION",
+    "formal_proof_checker": "NOT_RUN",
+    "application_ci": "PENDING",
+    "root_promotion": "BLOCKED_NO_ROOT_CERTIFICATE"
+  },
+  "rakl_action_attribution": {
+    "changed_observable_pre_memory_or_pre_gate_action_preference": true,
+    "before": "invent a new depletion quantity or theorem",
+    "after": "audit the already-available Giga-Miura critical interface first, forbid silent finite-I inheritance, and classify the exact negation",
+    "causal_limit": "single-cycle observational process evidence; not a controlled attribution experiment"
+  },
+  "framework_improvement_hypothesis": {
+    "id": "H-RAKL-EXTERNAL-THEOREM-SELECTOR-RECEIPT",
+    "status": "BENCHMARK_HYPOTHESIS_ONLY",
+    "statement": "prospective retrieval receipts may be more reproducible if external theorem selectors use a canonical typed payload containing source snapshot, theorem/section selector, content digest and authority rather than an opaque retrieval-ID hash",
+    "promotion": "NONE"
+  },
+  "nonlearning_guard": "Raw file/issue/commit/prose growth is not counted as learning. Only the explicit seven-axis retained semantic deltas above are counted; unavailable fields are CANNOT_MEASURE with reasons."
+}
