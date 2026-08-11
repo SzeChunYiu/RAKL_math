@@ -1,0 +1,23 @@
+{
+  "episode_id":"EP-NS-B1a3b1a-C001-20260812",
+  "created_at":"2026-08-11T22:21:13Z",
+  "problem_id":"NAVIER-STOKES-VERIFIED-DISCOVERY",
+  "task_signature":{"atom_id":"NS-B1a3b1a","problem_signature":"Type-I finite-I producer -> exact Grujic v2 consumer; test whether global weak-L^{3/2} vorticity + global log-BMO direction is a source-complete success contract before producer mathematics","root_status":"OPEN_NO_SOLUTION_CERTIFICATE"},
+  "bundle_id":"sha256:decd36dc90f6fc12b0895410942baf84177d9245279452b1b845ae92cbf2a2d7",
+  "search_policy":{"policy":"counterexample-first source-signature closure","reason":"grant proposed producer outputs hypothetically and test whether the selected consumer can legally be invoked","preference_changed_by_memory":true},
+  "retrieved_items":{"selected_success":["AB-TYPEI-ANCIENT","GRUJIC-2026-LOG-DEPLETION-v2","EP-NS-B1a3b1-C001-R2-20260811","T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],"selected_failure":["F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION","F-NS-B1a3-PROFILE-LEAKAGE","F-NS-B1a3-UNCONTROLLED-FAR-FIELD","F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH","F-NS-B1a3b1-GLOBAL-CONSUMER-SIGNATURE-MISMATCH","F-NS-B1a3b1-PRESINGULAR-ANCIENT-MISMATCH"],"rejected_success":["BARKER-PRANGE-2019-TYPEI-ALIGNMENT","MILLER-2020-ANISOTROPIC-VORTICITY"],"rejected_failure":["F-NS-B1a3b-NORMALIZATION-ZERO-INSTABILITY","F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY","F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER","F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"]},
+  "operators_tried":[{"id":"OP-SOURCE-SIGNATURE-CLOSURE","surface":"specialize_consequences","result":"unbound critical-profile/shape-gradient input"},{"id":"OP-DERIVATIVE-ORDER-AUDIT","surface":"report_difference_witness","result":"finite-I E and grad-Phi have different derivative/regularity signatures"},{"id":"OP-HYPOTHETICAL-SUCCESS-FALSIFIER","surface":"run_proof_gate","result":"named norm outputs alone do not authorize consumer invocation"}],
+  "tool_uses":[{"tool":"GitHub connector","purpose":"current RAKL main plus RAKL_math state/memory/trace"},{"tool":"web/arXiv primary sources","purpose":"bind Albritton-Barker and Grujic theorem signatures"},{"tool":"Python hash utility","purpose":"proposal/shadow hashes only; no proof authority"}],
+  "observations":["Grujic Definition 2.1 additionally requires omega=Phi|x|^-2 with scale-invariant or log-periodic core and |grad Phi|<=C|x|^-1 uniformly in time","Theorem 4.1 assumes that full critical concentration profile plus global weak-L^{3/2} omega and global log-BMO xi","grad Phi=2x omega+|x|^2 grad omega exposes a vorticity-derivative-level input","Albritton-Barker finite I uses A+C+D+E with E based on spacetime |grad u|^2; no registered edge supplies the missing pointwise/uniform grad-omega or grad-Phi bound","therefore the inherited child success contract is insufficient for its named consumer even under hypothetical success"],
+  "verification_results":[{"id":"V-NS-B1a3b1a-SOURCE-BINDING","status":"PASS"},{"id":"V-NS-B1a3b1a-DERIVATIVE-IDENTITY","status":"PASS"},{"id":"V-NS-B1a3b1a-FINITE-I-SIGNATURE","status":"PASS"},{"id":"V-NS-B1a3b1a-CONSUMER-CLOSURE","status":"FAIL_CLOSED"}],
+  "outcome":"MATERIAL_ROUTE_REFINEMENT",
+  "residual":{"before":"attempt two-global-norm producer as sufficient for Grujic consumer","after":"repair full consumer signature or select an exact-compatible alternate consumer before producer mathematics"},
+  "failure_signature":["DECOMPOSITION_SUCCESS_CONTRACT_INCOMPLETE","SOURCE_CONSUMER_SIGNATURE_UNBOUND","DERIVATIVE_LOSS_RISK","LOCAL_TO_GLOBAL_GLUING_STILL_OPEN","PRESINGULAR_ANCIENT_STATE_SPACE_MISMATCH"],
+  "time_cost":{"status":"CANNOT_MEASURE","reason":"runtime exposes no reliable wall-time counter"},
+  "token_cost":{"status":"CANNOT_MEASURE","reason":"runtime exposes no model/context token counts"},
+  "status":"PROPOSAL_SHADOW_NO_ROOT_AUTHORITY",
+  "fibre_snapshot_hash":"sha256:a561ad8ac50deed29e3e4753271d2d96dd137f3c2e6a3f626432c47afd639556",
+  "next_action":"repair NS-B1a3b1a into a source-complete interface atom; prefer alternate consumer or orthogonal lane before re-entering saturated derivative-generation family",
+  "previous_episode_hash":"5f44964eaec1fd5624af01b3a5180c5f268510a0487055a8b1b536f55fd4ce35",
+  "artifact_hash":"sha256:9916e2786f2863aa25320759648bc93ca41b65ff3924c095985cb95d82afb27d"
+}
