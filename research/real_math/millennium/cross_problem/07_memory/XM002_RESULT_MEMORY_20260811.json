@@ -1,0 +1,113 @@
+{
+  "candidate_result": {
+    "candidate_id": "XM002-HM1A-SURFACE-SHIFT",
+    "authority": "VERIFIED_DIAGNOSTIC_SURFACE_SHIFT",
+    "direct_sum_falsifier": "diag(1,0): Q⊕0 -> Q⊕Q is not surjective despite exact decomposition and solved first block",
+    "transfer_preconditions": "PASS",
+    "target_route_pruning": "CONFIRMED_FROM_HM1a_RECORD",
+    "theorem_authority_created": false,
+    "novelty_authority_created": false,
+    "root_authority_created": false
+  },
+  "tool_revision": {
+    "tool_id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+    "name": "Root-bridge stability audit",
+    "authority": "VERIFIED_LOCAL",
+    "revision": "XM002_SURFACE_SHIFT_VALIDATED",
+    "transfer_status": "FIRST_SURFACE_SHIFT_REUSE_VALIDATED",
+    "abstraction": "Freeze surrogate, root, bridge and preservation property; seek the cheapest exact countermodel that keeps surrogate premises but breaks root conclusion.",
+    "preconditions": [
+      "precise surrogate/intermediate certificate",
+      "precise root conclusion and bridge map",
+      "target-specific DifferenceWitness"
+    ],
+    "structural_signature": [
+      "valid intermediate certificate",
+      "extra root-preservation step",
+      "falsifiable weak inference"
+    ],
+    "operation": "materialize (surrogate,certificate,root,bridge,preservation); falsify weak bridge before optimizing surrogate",
+    "guaranteed_effects": [
+      "exact countermodel proves the stated premises insufficient",
+      "successful audit localizes the missing target preservation theorem"
+    ],
+    "non_guarantees": [
+      "not a target-theory counterexample",
+      "not a universal Millennium obstruction",
+      "no theorem/novelty/root authority"
+    ],
+    "validation_obligations": [
+      "preserve target scope/units/category",
+      "separate inference-form from target-theory counterexample",
+      "fresh DifferenceWitness per reuse",
+      "record route-pruning effect"
+    ],
+    "evidence_pointers": [
+      "XM001_root_bridge_stability_audit.md",
+      "research/real_math/millennium/cross_problem/04_candidates/XM002_hodge_surface_shift_transfer_audit.md",
+      "tests/math_applications/test_cross_millennium_xm002_transfer.py",
+      "research/real_math/millennium/cross_problem/07_memory/XM002_RESULT_MEMORY_20260811.json"
+    ],
+    "known_failure_ids": [
+      "F-XM001-POINTWISE-GAP-COLLAPSE",
+      "F-HM1a-OPEN-ROOT-LIKE-PIECE"
+    ],
+    "successful_reuse_ids": [
+      "XM002-HM1A-SURFACE-SHIFT"
+    ],
+    "artifact_hash": "sha256:1c33c5fb17257a52bc7dd0ec9393dd8f3e9b821c9a5a5f3ebccb277c5c61cecb"
+  },
+  "expertise_chunk": {
+    "chunk_id": "EC-XM-ROOT-BRIDGE-STABILITY-001",
+    "status": "PROVISIONAL_SURFACE_SHIFT_VALIDATED_NOT_MATURE",
+    "cue_signature": [
+      "valid surrogate/decomposition/local certificate",
+      "explicit extra passage to root",
+      "preservation theorem missing"
+    ],
+    "deep_structure": [
+      "intermediate correctness and root preservation are separate obligations",
+      "bridge can fail quantitatively or logically while surrogate stays valid",
+      "cheap bridge falsifier can dominate more surrogate optimization"
+    ],
+    "tool_ids": [
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "failure_warning_ids": [
+      "F-XM001-POINTWISE-GAP-COLLAPSE",
+      "F-HM1a-OPEN-ROOT-LIKE-PIECE"
+    ],
+    "applicability_conditions": [
+      "surrogate/root/bridge can be named exactly",
+      "cheap target-specific bridge falsifier exists",
+      "DifferenceWitness passes"
+    ],
+    "non_applicability_conditions": [
+      "no intermediate bridge exists",
+      "preservation theorem already proves the bridge",
+      "only surface vocabulary matches"
+    ],
+    "contrastive_near_misses": [
+      "Hodge route with every relevant graded map proved surjective or target zero",
+      "route with exact proved surrogate-root equivalence",
+      "direct root proof atom with no bridge"
+    ],
+    "retrieval_probes": [
+      "blind BSD local/global probe with Hodge/YM narrative hidden",
+      "blind RH spectral/globalization probe",
+      "negative probe with already-proved bridge must reject chunk"
+    ],
+    "evidence_pointers": [
+      "research/real_math/millennium/cross_problem/04_candidates/XM002_hodge_surface_shift_transfer_audit.md",
+      "research/real_math/millennium/cross_problem/07_memory/XM002_RESULT_MEMORY_20260811.json",
+      "HM1a_FAILURE_EXPERIENCE_DELTA_20260811.json"
+    ],
+    "artifact_hash": "sha256:316338f12fe037aaaaa015773a83102b6e0aba4cff53cd5dd94aeb850858e6d9"
+  },
+  "residual": {
+    "id": "XM003-BLIND-THIRD-DOMAIN-RETRIEVAL",
+    "status": "OPEN",
+    "authority": "PROPOSAL_ONLY"
+  },
+  "packet_hash": "sha256:e7c00f9b33690cbd0c72b53b1eeaf8cca4714153e48132f855fd1fac0c4615cd"
+}
