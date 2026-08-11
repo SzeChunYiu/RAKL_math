@@ -25,6 +25,18 @@ INVENTORY_EXTENSION_REGISTRY = (
         ROOT / "schemas/framework-episode-inventory-extension.schema.json",
     ),
 )
+INVENTORY_CLASSIFICATION_EXTENSION_REGISTRY = (
+    (
+        ROOT / "receipts/framework-episode-inventory-classification-extension-v2-ns-b1a3b1-r2-20260811.json",
+        ROOT / "schemas/framework-episode-inventory-classification-extension-v2.schema.json",
+    ),
+)
+INVENTORY_CLASSIFICATION_EXTENSION_REGISTRY = (
+    (
+        ROOT / "receipts/framework-episode-inventory-classification-extension-v2-ns-b1a3b1-r2-20260811.json",
+        ROOT / "schemas/framework-episode-inventory-classification-extension-v2.schema.json",
+    ),
+)
 OLD_FRAMEWORK = "bd1a2768f0f474ff44ffa25243241f94bfaf6466"
 TARGET_FRAMEWORK = "9027cc6beab7e935d714bbdf8e902b89b50caaa8"
 PROVISIONAL_FRAMEWORK = "3d4dde94ed8d6be04641b96ecf89389de55b61ce"
@@ -175,7 +187,81 @@ def _validated_inventory_extension_paths() -> set[str]:
         assert receipt["runtime_binding"]["stored_hash"] == value["artifact_hash"]
         assert receipt["runtime_binding"]["computed_runtime_digest"] == digest
         paths.add(source["path"])
-    assert len(paths) == len(INVENTORY_EXTENSION_REGISTRY)
+    for receipt_path, schema_path in INVENTORY_CLASSIFICATION_EXTENSION_REGISTRY:
+        receipt = _load(receipt_path)
+        schema = _load(schema_path)
+        Draft202012Validator.check_schema(schema)
+        Draft202012Validator(
+            schema, format_checker=FormatChecker()
+        ).validate(receipt)
+        assert receipt["artifact_hash"] == _canonical_hash(receipt)
+        assert all(value is False for value in receipt["authority_contract"].values())
+        audit = receipt["audit_binding"]
+        assert audit["current_tree"] == _git(
+            ROOT, "rev-parse", f'{audit["current_main_at_audit"]}^{{tree}}'
+        )
+        for item in receipt["classifications"]:
+            assert item["classification"] == "NON_TASK_EPISODE_CONTAINER_WITH_EPISODE_ID"
+            assert item["git_blob_sha"] == item["current_main_blob_sha"]
+            assert item["current_main_blob_sha"] == _git(
+                ROOT,
+                "rev-parse",
+                f'{audit["current_main_at_audit"]}:{item["path"]}',
+            )
+            paths.add(item["path"])
+    assert len(paths) == len(INVENTORY_EXTENSION_REGISTRY) + sum(
+        len(_load(receipt_path)["classifications"])
+        for receipt_path, _ in INVENTORY_CLASSIFICATION_EXTENSION_REGISTRY
+    )
+    return paths
+
+
+def _validated_inventory_classification_extension_paths() -> set[str]:
+    """Validate explicit registrations for episode-linked non-TaskEpisode containers."""
+
+    paths: set[str] = set()
+    strict_schema = _schema_at(TARGET_FRAMEWORK, "task-episode.schema.json")
+    for receipt_path, schema_path in INVENTORY_CLASSIFICATION_EXTENSION_REGISTRY:
+        receipt = _load(receipt_path)
+        schema = _load(schema_path)
+        Draft202012Validator.check_schema(schema)
+        Draft202012Validator(schema, format_checker=FormatChecker()).validate(receipt)
+        assert receipt["artifact_hash"] == _canonical_hash(receipt)
+        assert all(value is False for value in receipt["authority_contract"].values())
+
+        audit = receipt["audit_binding"]
+        assert audit["repository_url"] == _load(RECEIPT)["application_repository"]["repository"]
+        assert audit["current_tree"] == _git(ROOT, "rev-parse", f'{audit["current_main_at_audit"]}^{{tree}}')
+        assert audit["framework_commit"] == "fe47a12c4bad8253658baaf37e1300cab15d0823"
+        assert audit["task_episode_schema_blob"] == _git(
+            FRAMEWORK, "rev-parse", f'{TARGET_FRAMEWORK}:schemas/task-episode.schema.json'
+        )
+        assert audit["experience_substrate_blob"] == _git(
+            FRAMEWORK, "rev-parse", f'{TARGET_FRAMEWORK}:src/rakl/experience_substrate.py'
+        )
+        for item in receipt["classifications"]:
+            assert item["classification"] == "NON_TASK_EPISODE_CONTAINER_WITH_EPISODE_ID"
+            assert item["runtime_constructor_invoked"] is False
+            assert item["runtime_constructor_disposition"] == "NOT_APPLICABLE_NON_TASK_EPISODE_CONTAINER"
+            assert _git(ROOT, "merge-base", "--is-ancestor", item["introduction_commit"], audit["current_main_at_audit"]) == ""
+            assert item["introduction_tree"] == _git(ROOT, "rev-parse", f'{item["introduction_commit"]}^{{tree}}')
+            intro_blob = _git(ROOT, "rev-parse", f'{item["introduction_commit"]}:{item["path"]}')
+            current_blob = _git(ROOT, "rev-parse", f'{audit["current_main_at_audit"]}:{item["path"]}')
+            assert intro_blob == current_blob == item["git_blob_sha"] == item["current_main_blob_sha"]
+            raw = _git(ROOT, "show", f'{audit["current_main_at_audit"]}:{item["path"]}', binary=True)
+            assert isinstance(raw, bytes)
+            assert raw == (ROOT / item["path"]).read_bytes()
+            assert hashlib.sha256(raw).hexdigest() == item["raw_sha256"]
+            value = json.loads(raw)
+            assert value["episode_id"] == item["observed_episode_id"]
+            errors = list(Draft202012Validator(strict_schema, format_checker=FormatChecker()).iter_errors(value))
+            assert item["strict_task_episode_schema_verdict"] == "FAIL"
+            assert item["strict_task_episode_schema_error_count"] == len(errors) > 0
+            paths.add(item["path"])
+    assert len(paths) == sum(
+        len(_load(receipt_path)["classifications"])
+        for receipt_path, _ in INVENTORY_CLASSIFICATION_EXTENSION_REGISTRY
+    )
     return paths
 
 
@@ -289,7 +375,8 @@ def test_episode_inventory_is_the_exact_frozen_19_object_audit() -> None:
             discovered.add(str(path.relative_to(ROOT)))
     successor_paths = {item["successor_path"] for item in receipt["successor_bindings"]}
     extension_paths = _validated_inventory_extension_paths()
-    assert discovered == expected_paths | successor_paths | extension_paths
+    classification_extension_paths = _validated_inventory_classification_extension_paths()
+    assert discovered == expected_paths | successor_paths | extension_paths | classification_extension_paths
     old_schema = _schema_at(OLD_FRAMEWORK, "task-episode.schema.json")
     new_schema = _schema_at(TARGET_FRAMEWORK, "task-episode.schema.json")
     for item in inventory:

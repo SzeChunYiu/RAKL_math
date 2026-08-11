@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/pnp-o9d12a2a1a1b1-pre-candidate-gate.schema.json",
+  "title": "P-vs-NP O9d12a2a1a1b1 strict pre-candidate gate receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "atom_id",
+    "status",
+    "recorded_at",
+    "source_binding",
+    "freshness_check",
+    "artifacts",
+    "runtime_gate",
+    "test_runs",
+    "authority_contract",
+    "next_action",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "rakl-math-pnp-pre-candidate-gate-v1"},
+    "receipt_id": {"const": "RAKL-MATH-PNP-O9d12a2a1a1b1-PRE-CANDIDATE-GATE-20260811"},
+    "atom_id": {"const": "O9d12a2a1a1b1"},
+    "status": {"const": "PROCESS_GATES_PASS_CANDIDATE_GENERATION_ALLOWED_NO_CANDIDATE"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "source_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository_url", "application_base_sha", "framework_repository_url", "framework_pin", "primary_source", "primary_source_pdf_sha256"],
+      "properties": {
+        "repository_url": {"type": "string", "minLength": 1},
+        "application_base_sha": {"pattern": "^[0-9a-f]{40}$"},
+        "framework_repository_url": {"type": "string", "minLength": 1},
+        "framework_pin": {"pattern": "^[0-9a-f]{40}$"},
+        "primary_source": {"type": "string", "minLength": 1},
+        "primary_source_pdf_sha256": {"pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "freshness_check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["checked_at", "branch_moved", "local_base_sha", "origin_main_sha", "left_count", "right_count"],
+      "properties": {
+        "checked_at": {"type": "string", "format": "date-time"},
+        "branch_moved": {"const": false},
+        "local_base_sha": {"pattern": "^[0-9a-f]{40}$"},
+        "origin_main_sha": {"pattern": "^[0-9a-f]{40}$"},
+        "left_count": {"const": 0},
+        "right_count": {"const": 0}
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 7,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "kind", "sha256"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "kind": {"type": "string", "minLength": 1},
+          "sha256": {"pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "runtime_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["context_gate", "memory_gate", "trace_gate", "plan_math_research"],
+      "properties": {
+        "context_gate": {"$ref": "#/$defs/pass_gate"},
+        "memory_gate": {"$ref": "#/$defs/pass_gate"},
+        "trace_gate": {"$ref": "#/$defs/pass_gate"},
+        "plan_math_research": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["candidate_generation_allowed", "pre_candidate_actions", "candidate_paths_used", "candidate_identity"],
+          "properties": {
+            "candidate_generation_allowed": {"const": true},
+            "pre_candidate_actions": {"type": "array", "maxItems": 0},
+            "candidate_paths_used": {"const": false},
+            "candidate_identity": {"type": "null"}
+          }
+        }
+      }
+    },
+    "test_runs": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["scope", "command", "result", "passed", "failed"],
+        "properties": {
+          "scope": {"type": "string", "minLength": 1},
+          "command": {"type": "string", "minLength": 1},
+          "result": {"const": "PASS"},
+          "passed": {"type": "integer", "minimum": 1},
+          "failed": {"const": 0},
+          "duration_seconds": {"type": "number", "minimum": 0}
+        }
+      }
+    },
+    "authority_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["candidate_proposed", "mathematical_result", "proof_authority", "novelty_authority", "independent_peer_review", "p_vs_np_authority", "framework_promotion_authority"],
+      "properties": {
+        "candidate_proposed": {"const": false},
+        "mathematical_result": {"const": false},
+        "proof_authority": {"const": false},
+        "novelty_authority": {"const": false},
+        "independent_peer_review": {"const": false},
+        "p_vs_np_authority": {"const": false},
+        "framework_promotion_authority": {"const": false}
+      }
+    },
+    "next_action": {"const": "SOURCE_NATIVE_T_RULE_THEOREM_INVENTORY_IN_A_SEPARATE_VERSIONED_ROUND"},
+    "artifact_hash": {"pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "pass_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["verdict", "reasons"],
+      "properties": {
+        "verdict": {"const": "PASS"},
+        "reasons": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  }
+}

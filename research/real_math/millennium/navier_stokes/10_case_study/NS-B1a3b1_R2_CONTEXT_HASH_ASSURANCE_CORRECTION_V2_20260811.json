@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "NS-B1a3b1-R2-CONTEXT-HASH-ASSURANCE-CORRECTION-V2-20260811",
+  "recorded_at": "2026-08-11T16:56:44Z",
+  "correction_class": "RETROSPECTIVE_ASSURANCE_ONLY_NO_RETROACTIVE_CONTEXT_FREEZE",
+  "object": "Canonical self-hash integrity of the frozen NS-B1a3b1 R2 context packet and the related exact-CI hash subjects.",
+  "qoi": "Whether each stored self-hash equals SHA-256 of canonical JSON with its own hash key removed, without changing any historical subject bytes.",
+  "source_version_binding": {
+    "repository": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "path": "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3b1_CONTEXT_FIBER_R2_20260811.json",
+    "introduced_commit": "9fbbafc7d009f432ed468f7c5c1164d4f686eb7b",
+    "introduced_commit_tree": "3eae63a406b87a12c400d5ffbc63d30a7c10ccca",
+    "introduced_commit_time": "2026-08-11T18:35:43+02:00",
+    "git_blob_sha": "738fa2acc83789386c136e427d14e7b8bb330df0",
+    "raw_sha256": "sha256:c3b233c8559c3cac66250015891f783a1c8e9089d734757d5bc1dc16a9f9d52e",
+    "size_bytes": 6310,
+    "bytes_status": "PRESERVED_BYTE_IDENTICAL_TO_INTRODUCED_GIT_BLOB"
+  },
+  "audit_trigger": {
+    "test_path": "tests/math_applications/test_navier_stokes_b1a3b1_logbmo_zoom_r2.py",
+    "test_introduced_commit": "c48293364c6bdf7e0c5d93f5e01d889008c9eb61",
+    "observed_failure": "context packet_hash stored sha256:86321f... differs from recomputed sha256:079742...",
+    "root_cause_level": "R1_SCHEMA_HASH_TRANSFORMATION",
+    "bounded_diagnosis": "The committed context bytes and stored packet_hash disagree under the exact remove-key canonicalization asserted by CI. The temporal cause of the stale value is not established by repository history."
+  },
+  "hash_rule": "SHA256_CANONICAL_JSON_SORT_KEYS_COMPACT_UTF8_ENSURE_ASCII_FALSE_WITH_SUBJECT_HASH_KEY_REMOVED",
+  "related_hash_audit": [
+    {
+      "role": "context_packet",
+      "path": "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3b1_CONTEXT_FIBER_R2_20260811.json",
+      "hash_field": "packet_hash",
+      "stored_hash": "sha256:86321f8f12444616c9d8bdcbb02ede3384ebfcd6687f599a0cc6b9ff90e6d949",
+      "recomputed_remove_key_hash": "sha256:0797426f83ddf67d4bf259631281d60609a98cb855fdbb82ddd308f65a28cd74",
+      "raw_sha256": "sha256:c3b233c8559c3cac66250015891f783a1c8e9089d734757d5bc1dc16a9f9d52e",
+      "status": "MISMATCH_PRESERVED"
+    },
+    {
+      "role": "memory_review",
+      "path": "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b1_RESEARCH_MEMORY_REVIEW_R2_20260811.json",
+      "hash_field": "artifact_hash",
+      "stored_hash": "sha256:1054cee07da7198c240ad780076a2981386241526c0bd10b855a2710a1d1267c",
+      "recomputed_remove_key_hash": "sha256:1054cee07da7198c240ad780076a2981386241526c0bd10b855a2710a1d1267c",
+      "raw_sha256": "sha256:75091381e5d0093627dac36d12364b86a2ad15fb5d53a1c4e52838256fd0e436",
+      "status": "MATCH"
+    },
+    {
+      "role": "fibre_snapshot",
+      "path": "research/real_math/millennium/navier_stokes/09_trace/NS-B1a3b1_FIBRE_SNAPSHOT_R2_20260811.json",
+      "hash_field": "fibre_snapshot_hash",
+      "stored_hash": "sha256:0c9d8dd85e7dc09ea19bd94fb74aea31f415977bb6a54fc8afc69d3aa66f47f7",
+      "recomputed_remove_key_hash": "sha256:0c9d8dd85e7dc09ea19bd94fb74aea31f415977bb6a54fc8afc69d3aa66f47f7",
+      "raw_sha256": "sha256:1600cbd72d6a45c28ba5228f0a240f1ed8842d9bcbb2a1fc9827cc72930e4a60",
+      "status": "MATCH"
+    },
+    {
+      "role": "task_episode_shadow",
+      "path": "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a3b1_C001_R2_V3_TASK_EPISODE_20260811.json.shadow",
+      "hash_field": "artifact_hash",
+      "stored_hash": "5f44964eaec1fd5624af01b3a5180c5f268510a0487055a8b1b536f55fd4ce35",
+      "recomputed_remove_key_hash": "5f44964eaec1fd5624af01b3a5180c5f268510a0487055a8b1b536f55fd4ce35",
+      "raw_sha256": "sha256:5f8adf8b6eb854fe7a81cef3593d196dcda13e394b7dbafbb74f57ac298b9322",
+      "status": "MATCH"
+    }
+  ],
+  "historical_context_disposition": {
+    "status": "INVALID_SELF_HASH_PRESERVED_AS_NEGATIVE_HISTORY",
+    "stored_packet_hash": "sha256:86321f8f12444616c9d8bdcbb02ede3384ebfcd6687f599a0cc6b9ff90e6d949",
+    "recomputed_packet_hash": "sha256:0797426f83ddf67d4bf259631281d60609a98cb855fdbb82ddd308f65a28cd74",
+    "stored_equals_recomputed": false,
+    "repair": "No in-place edit. This receipt records the mismatch; a future prospective context successor would need a new identity, new chronology, and a fresh pre-candidate gate.",
+    "downstream_reference_status": "Historical downstream artifacts still reference the stored invalid packet_hash and are not silently rebound.",
+    "strict_pre_candidate_gate_status": "INVALID_NO_RETROACTIVE_REPAIR"
+  },
+  "downstream_historical_references_preserved": [
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b1_RESEARCH_MEMORY_REVIEW_R2_20260811.json",
+    "research/real_math/millennium/navier_stokes/09_trace/NS-B1a3b1_FIBRE_SNAPSHOT_R2_20260811.json",
+    "research/real_math/millennium/navier_stokes/09_trace/NS-B1a3b1_C001_PRE_ACTION_FIBRE_RECEIPT_R2_20260811.json",
+    "research/real_math/millennium/navier_stokes/09_trace/NS-B1a3b1_PRE_CANDIDATE_TRACE_R2_20260811.json",
+    "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a3b1_C001_R2_V3_TASK_EPISODE_20260811.json.shadow",
+    "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a3b1_C001_R2_RAKL_CYCLE_METRICS_20260811.json"
+  ],
+  "epistemic_status": {
+    "assurance_result": "ONE_CONTEXT_SELF_HASH_MISMATCH_CONFIRMED; THREE_RELATED_SUBJECT_SELF_HASHES_MATCH",
+    "mathematical_authority": "NONE",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "independent_review": "NOT_PERFORMED",
+    "non_guarantees": [
+      "This retrospective receipt does not make the historical context prospectively frozen.",
+      "It does not validate any Navier-Stokes candidate, theorem, transfer, novelty, or root claim.",
+      "Syntactically valid downstream self-hashes do not repair their dependency on the invalid stored context hash."
+    ]
+  },
+  "artifact_hash_rule": "SHA256_CANONICAL_JSON_WITH_ARTIFACT_HASH_KEY_REMOVED",
+  "artifact_hash": "sha256:f7f76e1025c887b601476b2cef8c529d5c3617eee2205412b048c9cc2ca844cd"
+}

@@ -1,0 +1,1039 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/pnp-o9d12a2a1a1b1-machine-run-v5.schema.json",
+  "title": "P-vs-NP O9d12a2a1a1b1 V5 retained machine run receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "atom_id",
+    "recorded_at",
+    "source_binding",
+    "input_bindings",
+    "runs",
+    "all_required_runs_passed",
+    "authority_contract",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "rakl-math-pnp-machine-run-v5"
+    },
+    "receipt_id": {
+      "const": "RAKL-MATH-PNP-O9d12a2a1a1b1-MACHINE-RUN-V5-20260811"
+    },
+    "atom_id": {
+      "const": "O9d12a2a1a1b1"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time",
+      "minLength": 20,
+      "maxLength": 30
+    },
+    "source_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository_url",
+        "application_base_commit",
+        "application_base_tree",
+        "latest_main_at_freeze",
+        "subject_commit",
+        "subject_tree",
+        "framework_repository_url",
+        "framework_pin",
+        "git_audit"
+      ],
+      "properties": {
+        "repository_url": {
+          "const": "https://github.com/SzeChunYiu/RAKL_math.git"
+        },
+        "application_base_commit": {
+          "$ref": "#/$defs/git_sha"
+        },
+        "application_base_tree": {
+          "$ref": "#/$defs/git_sha"
+        },
+        "latest_main_at_freeze": {
+          "$ref": "#/$defs/git_sha"
+        },
+        "subject_commit": {
+          "$ref": "#/$defs/git_sha"
+        },
+        "subject_tree": {
+          "$ref": "#/$defs/git_sha"
+        },
+        "framework_repository_url": {
+          "const": "https://github.com/SzeChunYiu/RAKL.git"
+        },
+        "framework_pin": {
+          "const": "fe47a12c4bad8253658baaf37e1300cab15d0823"
+        },
+        "git_audit": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "verdict",
+            "checked_relations",
+            "current_origin_main_at_freeze",
+            "worktree_framework_head_checked",
+            "subject_checkout_head_checked",
+            "subject_checkout_clean_checked",
+            "isolated_detached_execution"
+          ],
+          "properties": {
+            "verdict": {
+              "const": "PASS"
+            },
+            "checked_relations": {
+              "const": 12
+            },
+            "current_origin_main_at_freeze": {
+              "const": true
+            },
+            "worktree_framework_head_checked": {
+              "const": true
+            },
+            "subject_checkout_head_checked": {
+              "const": true
+            },
+            "subject_checkout_clean_checked": {
+              "const": true
+            },
+            "isolated_detached_execution": {
+              "const": true
+            }
+          }
+        }
+      }
+    },
+    "input_bindings": {
+      "type": "array",
+      "minItems": 33,
+      "maxItems": 33,
+      "prefixItems": [
+        {
+          "$ref": "#/$defs/i0"
+        },
+        {
+          "$ref": "#/$defs/i1"
+        },
+        {
+          "$ref": "#/$defs/i2"
+        },
+        {
+          "$ref": "#/$defs/i3"
+        },
+        {
+          "$ref": "#/$defs/i4"
+        },
+        {
+          "$ref": "#/$defs/i5"
+        },
+        {
+          "$ref": "#/$defs/i6"
+        },
+        {
+          "$ref": "#/$defs/i7"
+        },
+        {
+          "$ref": "#/$defs/i8"
+        },
+        {
+          "$ref": "#/$defs/i9"
+        },
+        {
+          "$ref": "#/$defs/i10"
+        },
+        {
+          "$ref": "#/$defs/i11"
+        },
+        {
+          "$ref": "#/$defs/i12"
+        },
+        {
+          "$ref": "#/$defs/i13"
+        },
+        {
+          "$ref": "#/$defs/i14"
+        },
+        {
+          "$ref": "#/$defs/i15"
+        },
+        {
+          "$ref": "#/$defs/i16"
+        },
+        {
+          "$ref": "#/$defs/i17"
+        },
+        {
+          "$ref": "#/$defs/i18"
+        },
+        {
+          "$ref": "#/$defs/i19"
+        },
+        {
+          "$ref": "#/$defs/i20"
+        },
+        {
+          "$ref": "#/$defs/i21"
+        },
+        {
+          "$ref": "#/$defs/i22"
+        },
+        {
+          "$ref": "#/$defs/i23"
+        },
+        {
+          "$ref": "#/$defs/i24"
+        },
+        {
+          "$ref": "#/$defs/i25"
+        },
+        {
+          "$ref": "#/$defs/i26"
+        },
+        {
+          "$ref": "#/$defs/i27"
+        },
+        {
+          "$ref": "#/$defs/i28"
+        },
+        {
+          "$ref": "#/$defs/i29"
+        },
+        {
+          "$ref": "#/$defs/i30"
+        },
+        {
+          "$ref": "#/$defs/i31"
+        },
+        {
+          "$ref": "#/$defs/i32"
+        }
+      ],
+      "items": false,
+      "uniqueItems": true
+    },
+    "runs": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        {
+          "$ref": "#/$defs/focused_run"
+        },
+        {
+          "$ref": "#/$defs/full_run"
+        }
+      ],
+      "items": false,
+      "uniqueItems": true
+    },
+    "all_required_runs_passed": {
+      "const": true
+    },
+    "authority_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mathematical_result",
+        "proof_authority",
+        "novelty_authority",
+        "independent_peer_review",
+        "p_vs_np_authority",
+        "framework_promotion_authority"
+      ],
+      "properties": {
+        "mathematical_result": {
+          "const": false
+        },
+        "proof_authority": {
+          "const": false
+        },
+        "novelty_authority": {
+          "const": false
+        },
+        "independent_peer_review": {
+          "const": false
+        },
+        "p_vs_np_authority": {
+          "const": false
+        },
+        "framework_promotion_authority": {
+          "const": false
+        }
+      }
+    },
+    "artifact_hash": {
+      "type": "string",
+      "minLength": 71,
+      "maxLength": 71,
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  },
+  "$defs": {
+    "git_sha": {
+      "type": "string",
+      "minLength": 40,
+      "maxLength": 40,
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "raw_sha256": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64,
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "prefixed_sha256": {
+      "type": "string",
+      "minLength": 71,
+      "maxLength": 71,
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "input_base": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "kind",
+        "commit",
+        "git_blob_sha",
+        "raw_sha256",
+        "size_bytes"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commit": {
+          "type": "string",
+          "minLength": 40,
+          "maxLength": 40,
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "git_blob_sha": {
+          "type": "string",
+          "minLength": 40,
+          "maxLength": 40,
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "raw_sha256": {
+          "type": "string",
+          "minLength": 64,
+          "maxLength": 64,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "run_base": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scope",
+        "command",
+        "environment",
+        "started_at",
+        "ended_at",
+        "duration_seconds",
+        "exit_code",
+        "result",
+        "passed",
+        "failed",
+        "skipped",
+        "log_path",
+        "log_sha256",
+        "log_size_bytes"
+      ],
+      "properties": {
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "command": {
+          "type": "string",
+          "minLength": 1
+        },
+        "environment": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "PYTHONDONTWRITEBYTECODE",
+            "PYTHONNOUSERSITE",
+            "PYTHONINTMAXSTRDIGITS"
+          ],
+          "properties": {
+            "PYTHONDONTWRITEBYTECODE": {
+              "const": "1"
+            },
+            "PYTHONNOUSERSITE": {
+              "const": "1"
+            },
+            "PYTHONINTMAXSTRDIGITS": {
+              "const": "0"
+            }
+          }
+        },
+        "started_at": {
+          "type": "string",
+          "format": "date-time",
+          "minLength": 20,
+          "maxLength": 30
+        },
+        "duration_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "exit_code": {
+          "const": 0
+        },
+        "result": {
+          "const": "PASS"
+        },
+        "passed": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "failed": {
+          "const": 0
+        },
+        "skipped": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "log_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "log_sha256": {
+          "type": "string",
+          "minLength": 64,
+          "maxLength": 64,
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "log_size_bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "ended_at": {
+          "type": "string",
+          "format": "date-time",
+          "minLength": 20,
+          "maxLength": 30
+        }
+      }
+    },
+    "focused_run": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/run_base"
+        },
+        {
+          "properties": {
+            "scope": {
+              "const": "FOCUSED_V5_GATE_PRE_RECEIPT"
+            },
+            "command": {
+              "const": "PYTHONDONTWRITEBYTECODE=1 PYTHONNOUSERSITE=1 PYTHONINTMAXSTRDIGITS=0 python tools/run_application_tests.py --framework framework/RAKL -- -k pnp_o9d12a2a1a1b1_pre_candidate_v5"
+            },
+            "log_path": {
+              "const": "receipts/logs/pnp-o9d12a2a1a1b1-focused-v5-20260811.log"
+            }
+          }
+        }
+      ]
+    },
+    "full_run": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/run_base"
+        },
+        {
+          "properties": {
+            "scope": {
+              "const": "EXACT_APPLICATION_SUITE_PRE_RECEIPT"
+            },
+            "command": {
+              "const": "PYTHONDONTWRITEBYTECODE=1 PYTHONNOUSERSITE=1 PYTHONINTMAXSTRDIGITS=0 python tools/run_application_tests.py --framework framework/RAKL"
+            },
+            "log_path": {
+              "const": "receipts/logs/pnp-o9d12a2a1a1b1-full-v5-20260811.log"
+            }
+          }
+        }
+      ]
+    },
+    "i0": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "receipts/pnp-o9d12a2a1a1b1-v0-hostile-failure-20260811.json"
+            },
+            "kind": {
+              "const": "V0_FAILURE_CORRECTION"
+            }
+          }
+        }
+      ]
+    },
+    "i1": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "receipts/pnp-o9d12a2a1a1b1-v2-hostile-failure-20260811.json"
+            },
+            "kind": {
+              "const": "V2_FAILURE_CORRECTION"
+            }
+          }
+        }
+      ]
+    },
+    "i2": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "research/real_math/millennium/p_vs_np/02_problem_dag/O9d12a2a1a1b1_ATOMIZATION_V2_20260811.json"
+            },
+            "kind": {
+              "const": "ATOMIZATION"
+            }
+          }
+        }
+      ]
+    },
+    "i3": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_MATH_CONTEXT_FIBER_V2_20260811.json"
+            },
+            "kind": {
+              "const": "MATH_CONTEXT_FIBER"
+            }
+          }
+        }
+      ]
+    },
+    "i4": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_SOURCE_AND_TRANSFER_PACKET_V3_20260811.md"
+            },
+            "kind": {
+              "const": "SOURCE_SYNTHESIS"
+            }
+          }
+        }
+      ]
+    },
+    "i5": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_TOOL_SNAPSHOT_V2_20260811.json"
+            },
+            "kind": {
+              "const": "TOOL_SNAPSHOT"
+            }
+          }
+        }
+      ]
+    },
+    "i6": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_FAILURE_SNAPSHOT_V2_20260811.json"
+            },
+            "kind": {
+              "const": "FAILURE_SNAPSHOT"
+            }
+          }
+        }
+      ]
+    },
+    "i7": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_NONCANONICAL_PARENT_WARNING_V2_20260811.json"
+            },
+            "kind": {
+              "const": "NONCANONICAL_PARENT_WARNING"
+            }
+          }
+        }
+      ]
+    },
+    "i8": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_RESEARCH_MEMORY_REVIEW_V2_20260811.json"
+            },
+            "kind": {
+              "const": "RESEARCH_MEMORY_REVIEW"
+            }
+          }
+        }
+      ]
+    },
+    "i9": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_MEMORY_FREEZE_V2_20260811.json"
+            },
+            "kind": {
+              "const": "MEMORY_FREEZE"
+            }
+          }
+        }
+      ]
+    },
+    "i10": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "research/real_math/millennium/p_vs_np/08_reviews/SAME_CONTEXT_EXPERT_REVIEW_O9d12a2a1a1b1_PRE_CANDIDATE_V2_20260811.json"
+            },
+            "kind": {
+              "const": "EXPERT_CONTEXT_REVIEW"
+            }
+          }
+        }
+      ]
+    },
+    "i11": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_PRE_CANDIDATE_TRACE_V3_20260811.json"
+            },
+            "kind": {
+              "const": "MATH_RESEARCH_TRACE"
+            }
+          }
+        }
+      ]
+    },
+    "i12": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "research/real_math/millennium/p_vs_np/00_sources/ECCC_TR25_033_20250318.pdf"
+            },
+            "kind": {
+              "const": "PRIMARY_SOURCE_PDF"
+            }
+          }
+        }
+      ]
+    },
+    "i13": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "research/real_math/millennium/p_vs_np/00_sources/ECCC_TR25_033_SOURCE_RETRIEVAL_RECEIPT_20260811.json"
+            },
+            "kind": {
+              "const": "SOURCE_RETRIEVAL_RECEIPT"
+            }
+          }
+        }
+      ]
+    },
+    "i14": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_PROBLEM_FIBRE_V3_20260811.json"
+            },
+            "kind": {
+              "const": "PROBLEM_FIBRE"
+            }
+          }
+        }
+      ]
+    },
+    "i15": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_PRE_ACTION_FIBRE_RECEIPT_V3_20260811.json"
+            },
+            "kind": {
+              "const": "PRE_ACTION_FIBRE_RECEIPT"
+            }
+          }
+        }
+      ]
+    },
+    "i16": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "receipts/pnp-o9d12a2a1a1b1-pre-candidate-gate-20260811.json"
+            },
+            "kind": {
+              "const": "ORIGINAL_V0_GATE"
+            }
+          }
+        }
+      ]
+    },
+    "i17": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "receipts/pnp-o9d12a2a1a1b1-pre-candidate-gate-v2-20260811.json"
+            },
+            "kind": {
+              "const": "ORIGINAL_V2_GATE"
+            }
+          }
+        }
+      ]
+    },
+    "i18": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "schemas/pnp-o9d12a2a1a1b1-pre-candidate-gate.schema.json"
+            },
+            "kind": {
+              "const": "ORIGINAL_V0_GATE_SCHEMA"
+            }
+          }
+        }
+      ]
+    },
+    "i19": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "schemas/pnp-o9d12a2a1a1b1-pre-candidate-gate-v2.schema.json"
+            },
+            "kind": {
+              "const": "ORIGINAL_V2_GATE_SCHEMA"
+            }
+          }
+        }
+      ]
+    },
+    "i20": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "receipts/pnp-o9d12a2a1a1b1-machine-run-v3-20260811.json"
+            },
+            "kind": {
+              "const": "PRIOR_V3_MACHINE_RUN"
+            }
+          }
+        }
+      ]
+    },
+    "i21": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "receipts/pnp-o9d12a2a1a1b1-pre-candidate-gate-v3-20260811.json"
+            },
+            "kind": {
+              "const": "PRIOR_V3_GATE"
+            }
+          }
+        }
+      ]
+    },
+    "i22": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "schemas/pnp-o9d12a2a1a1b1-machine-run-v3.schema.json"
+            },
+            "kind": {
+              "const": "PRIOR_V3_MACHINE_SCHEMA"
+            }
+          }
+        }
+      ]
+    },
+    "i23": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "schemas/pnp-o9d12a2a1a1b1-pre-candidate-gate-v3.schema.json"
+            },
+            "kind": {
+              "const": "PRIOR_V3_GATE_SCHEMA"
+            }
+          }
+        }
+      ]
+    },
+    "i24": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "receipts/pnp-o9d12a2a1a1b1-v4-hostile-failure-20260811.json"
+            },
+            "kind": {
+              "const": "V4_FAILURE_CORRECTION"
+            }
+          }
+        }
+      ]
+    },
+    "i25": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "receipts/pnp-o9d12a2a1a1b1-machine-run-v4-20260811.json"
+            },
+            "kind": {
+              "const": "PRIOR_V4_MACHINE_RUN"
+            }
+          }
+        }
+      ]
+    },
+    "i26": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "receipts/pnp-o9d12a2a1a1b1-pre-candidate-gate-v4-20260811.json"
+            },
+            "kind": {
+              "const": "PRIOR_V4_GATE"
+            }
+          }
+        }
+      ]
+    },
+    "i27": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "schemas/pnp-o9d12a2a1a1b1-machine-run-v4.schema.json"
+            },
+            "kind": {
+              "const": "PRIOR_V4_MACHINE_SCHEMA"
+            }
+          }
+        }
+      ]
+    },
+    "i28": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "schemas/pnp-o9d12a2a1a1b1-pre-candidate-gate-v4.schema.json"
+            },
+            "kind": {
+              "const": "PRIOR_V4_GATE_SCHEMA"
+            }
+          }
+        }
+      ]
+    },
+    "i29": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "schemas/pnp-o9d12a2a1a1b1-pre-candidate-gate-v5.schema.json"
+            },
+            "kind": {
+              "const": "GATE_SCHEMA"
+            }
+          }
+        }
+      ]
+    },
+    "i30": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "schemas/pnp-o9d12a2a1a1b1-machine-run-v5.schema.json"
+            },
+            "kind": {
+              "const": "MACHINE_RUN_SCHEMA"
+            }
+          }
+        }
+      ]
+    },
+    "i31": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "tests/math_applications/test_pnp_o9d12a2a1a1b1_pre_candidate_v5.py"
+            },
+            "kind": {
+              "const": "FOCUSED_TEST"
+            }
+          }
+        }
+      ]
+    },
+    "i32": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/input_base"
+        },
+        {
+          "properties": {
+            "path": {
+              "const": "tools/run_pnp_o9d12a2a1a1b1_pre_candidate_v5.py"
+            },
+            "kind": {
+              "const": "ASSURANCE_RUNNER"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

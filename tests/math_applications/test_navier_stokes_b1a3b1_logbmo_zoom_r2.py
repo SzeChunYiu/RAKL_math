@@ -1,10 +1,15 @@
 import hashlib
 import json
 import math
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 NS = ROOT / "research/real_math/millennium/navier_stokes"
+CONTEXT_CORRECTION = (
+    NS
+    / "10_case_study/NS-B1a3b1_R2_CONTEXT_HASH_ASSURANCE_CORRECTION_V2_20260811.json"
+)
 
 
 def _load(rel):
@@ -17,19 +22,83 @@ def _canonical_hash(obj, excluded):
     return hashlib.sha256(raw).hexdigest()
 
 
+def _git(*args):
+    return subprocess.run(
+        ["git", *args], cwd=ROOT, check=True, capture_output=True, text=True
+    ).stdout.strip()
+
+
 def test_context_memory_fibre_and_episode_hashes():
-    ctx = _load("01_frontier/NS-B1a3b1_CONTEXT_FIBER_R2_20260811.json")
-    assert ctx["packet_hash"] == "sha256:" + _canonical_hash(ctx, {"packet_hash"})
+    correction = json.loads(CONTEXT_CORRECTION.read_text())
+    assert correction["artifact_hash"] == "sha256:" + _canonical_hash(
+        correction, {"artifact_hash"}
+    )
+    assert correction["correction_class"] == (
+        "RETROSPECTIVE_ASSURANCE_ONLY_NO_RETROACTIVE_CONTEXT_FREEZE"
+    )
+
+    binding = correction["source_version_binding"]
+    context_path = ROOT / binding["path"]
+    context_raw = context_path.read_bytes()
+    assert len(context_raw) == binding["size_bytes"]
+    assert "sha256:" + hashlib.sha256(context_raw).hexdigest() == binding["raw_sha256"]
+    assert _git("rev-parse", f'{binding["introduced_commit"]}:{binding["path"]}') == (
+        binding["git_blob_sha"]
+    )
+    assert _git("hash-object", str(context_path)) == binding["git_blob_sha"]
+
+    related = {item["role"]: item for item in correction["related_hash_audit"]}
+    assert set(related) == {
+        "context_packet",
+        "memory_review",
+        "fibre_snapshot",
+        "task_episode_shadow",
+    }
+    for item in related.values():
+        subject_raw = (ROOT / item["path"]).read_bytes()
+        assert "sha256:" + hashlib.sha256(subject_raw).hexdigest() == item["raw_sha256"]
+
+    # The R2 context is historical negative assurance evidence: its committed
+    # bytes are preserved, while the stale stored hash is explicitly rejected.
+    ctx = json.loads(context_raw)
+    context_recomputed = "sha256:" + _canonical_hash(ctx, {"packet_hash"})
+    assert related["context_packet"]["stored_hash"] == ctx["packet_hash"]
+    assert related["context_packet"]["recomputed_remove_key_hash"] == context_recomputed
+    assert related["context_packet"]["status"] == "MISMATCH_PRESERVED"
+    assert ctx["packet_hash"] != context_recomputed
+    disposition = correction["historical_context_disposition"]
+    assert disposition["stored_packet_hash"] == ctx["packet_hash"]
+    assert disposition["recomputed_packet_hash"] == context_recomputed
+    assert disposition["stored_equals_recomputed"] is False
+    assert disposition["strict_pre_candidate_gate_status"] == (
+        "INVALID_NO_RETROACTIVE_REPAIR"
+    )
 
     mem = _load("07_memory/NS-B1a3b1_RESEARCH_MEMORY_REVIEW_R2_20260811.json")
-    assert mem["artifact_hash"] == "sha256:" + _canonical_hash(mem, {"artifact_hash"})
+    mem_recomputed = "sha256:" + _canonical_hash(mem, {"artifact_hash"})
+    assert mem["artifact_hash"] == mem_recomputed
+    assert related["memory_review"]["stored_hash"] == mem["artifact_hash"]
+    assert related["memory_review"]["recomputed_remove_key_hash"] == mem_recomputed
+    assert related["memory_review"]["status"] == "MATCH"
 
     fibre = _load("09_trace/NS-B1a3b1_FIBRE_SNAPSHOT_R2_20260811.json")
-    assert fibre["fibre_snapshot_hash"] == "sha256:" + _canonical_hash(fibre, {"fibre_snapshot_hash"})
+    fibre_recomputed = "sha256:" + _canonical_hash(fibre, {"fibre_snapshot_hash"})
+    assert fibre["fibre_snapshot_hash"] == fibre_recomputed
+    assert related["fibre_snapshot"]["stored_hash"] == fibre["fibre_snapshot_hash"]
+    assert related["fibre_snapshot"]["recomputed_remove_key_hash"] == fibre_recomputed
+    assert related["fibre_snapshot"]["status"] == "MATCH"
 
     ep = _load("10_case_study/NS-B1a3b1_C001_R2_V3_TASK_EPISODE_20260811.json.shadow")
-    assert ep["artifact_hash"] == _canonical_hash(ep, {"artifact_hash"})
+    episode_recomputed = _canonical_hash(ep, {"artifact_hash"})
+    assert ep["artifact_hash"] == episode_recomputed
+    assert related["task_episode_shadow"]["stored_hash"] == ep["artifact_hash"]
+    assert related["task_episode_shadow"]["recomputed_remove_key_hash"] == episode_recomputed
+    assert related["task_episode_shadow"]["status"] == "MATCH"
     assert ep["outcome"] == "PARTIAL_SUCCESS"
+    assert correction["epistemic_status"]["mathematical_authority"] == "NONE"
+    assert correction["epistemic_status"]["root_status"] == (
+        "OPEN_NO_SOLUTION_CERTIFICATE"
+    )
 
 
 def test_hash_chained_traces_are_contiguous():

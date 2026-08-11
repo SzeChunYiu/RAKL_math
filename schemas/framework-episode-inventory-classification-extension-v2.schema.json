@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rakl-math.local/schemas/framework-episode-inventory-classification-extension-v2.schema.json",
+  "title": "RAKL_math non-TaskEpisode inventory classification extension receipt v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "receipt_id", "recorded_at", "object", "qoi",
+    "lineage", "audit_binding", "classifications", "disposition",
+    "authority_contract", "evidence_pointers", "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "2.0.0"},
+    "receipt_id": {"const": "RAKL-MATH-TASK-EPISODE-INVENTORY-CLASSIFICATION-EXTENSION-NS-B1A3B1-R2-V2-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "object": {"type": "string", "minLength": 1},
+    "qoi": {"type": "string", "minLength": 1},
+    "lineage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["frozen_parent_inventory", "preserved_prior_extension"],
+      "properties": {
+        "frozen_parent_inventory": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "receipt_path", "receipt_artifact_hash", "receipt_blob_at_merge",
+            "receipt_file_sha256", "merge_commit", "frozen_episode_count"
+          ],
+          "properties": {
+            "receipt_path": {"const": "receipts/framework-pr153-hash-contract-migration-20260811.json"},
+            "receipt_artifact_hash": {"const": "sha256:a607a86135e4acbfeb551af86e8dd10febfeb0a3d461daf53c4862339e5c0f77"},
+            "receipt_blob_at_merge": {"const": "92135fdc9db0f37679fa5656e7052c7e02e00ec3"},
+            "receipt_file_sha256": {"const": "sha256:4f431762422e5746966ea55ab2b1da3d9c9c60ce263aebfa688a44dc5e629594"},
+            "merge_commit": {"const": "b18fcd35855d67962e28036f4a445ab24d0c4406"},
+            "frozen_episode_count": {"const": 19}
+          }
+        },
+        "preserved_prior_extension": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "receipt_path", "introduction_commit", "introduction_tree",
+            "git_blob_sha", "raw_sha256", "receipt_artifact_hash"
+          ],
+          "properties": {
+            "receipt_path": {"const": "receipts/framework-episode-inventory-extension-h4d1b-20260811.json"},
+            "introduction_commit": {"const": "7d664b20dc691170d86d9757aaa5edd1db16ddb4"},
+            "introduction_tree": {"const": "a886af4ec504c40ab0e2e0392f4e3a7f0b8dafa6"},
+            "git_blob_sha": {"const": "cb8296b8b7491afc0c655430b8c65c8fd92e16eb"},
+            "raw_sha256": {"const": "68c1c9c33b4a0c438a1a8fac865718de1c7a7e4bc111d881037b38fe30eb5216"},
+            "receipt_artifact_hash": {"const": "sha256:5e39ced6010ed4d8800b8cb34585184389956d68d194fdea533588aba2eb9351"}
+          }
+        }
+      }
+    },
+    "audit_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository_url", "current_main_at_audit", "current_tree",
+        "framework_commit", "task_episode_schema_blob", "experience_substrate_blob"
+      ],
+      "properties": {
+        "repository_url": {"const": "https://github.com/SzeChunYiu/RAKL_math.git"},
+        "current_main_at_audit": {"const": "c48293364c6bdf7e0c5d93f5e01d889008c9eb61"},
+        "current_tree": {"const": "38c29ac6fcb19baa3a14876a2ed081456ef1e70b"},
+        "framework_commit": {"const": "fe47a12c4bad8253658baaf37e1300cab15d0823"},
+        "task_episode_schema_blob": {"const": "aed1055565062a6adefe24eb48331e314d01adec"},
+        "experience_substrate_blob": {"const": "814aa24788d796b9cec7e35b6373b5d5e7ffbc77"}
+      }
+    },
+    "classifications": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        {"$ref": "#/$defs/failure_experience_classification"},
+        {"$ref": "#/$defs/failure_diagnosis_classification"}
+      ],
+      "items": false
+    },
+    "disposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "parent_receipt_modified", "prior_extension_modified",
+        "source_containers_modified", "classification_extension_registered",
+        "classification_basis"
+      ],
+      "properties": {
+        "parent_receipt_modified": {"const": false},
+        "prior_extension_modified": {"const": false},
+        "source_containers_modified": {"const": false},
+        "classification_extension_registered": {"const": true},
+        "classification_basis": {"const": "EXPLICIT_CONTAINER_IDENTITY_AND_STRICT_TASK_EPISODE_SCHEMA_FAILURE"}
+      }
+    },
+    "authority_contract": {"$ref": "#/$defs/all_false_authority"},
+    "evidence_pointers": {
+      "type": "array",
+      "minItems": 5,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "artifact_hash": {"$ref": "#/$defs/prefixed_sha256"}
+  },
+  "$defs": {
+    "classification_common": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path", "container_kind", "observed_episode_id", "classification",
+        "introduction_commit", "introduction_tree", "git_blob_sha", "raw_sha256",
+        "current_main_blob_sha", "strict_task_episode_schema_verdict",
+        "strict_task_episode_schema_error_count", "runtime_constructor_invoked",
+        "runtime_constructor_disposition"
+      ],
+      "properties": {
+        "path": {"type": "string"},
+        "container_kind": {"type": "string"},
+        "observed_episode_id": {"const": "EP-NS-B1a3b1-C001-R2-20260811"},
+        "classification": {"const": "NON_TASK_EPISODE_CONTAINER_WITH_EPISODE_ID"},
+        "introduction_commit": {"$ref": "#/$defs/git_sha"},
+        "introduction_tree": {"$ref": "#/$defs/git_sha"},
+        "git_blob_sha": {"$ref": "#/$defs/git_sha"},
+        "raw_sha256": {"$ref": "#/$defs/raw_sha256"},
+        "current_main_blob_sha": {"$ref": "#/$defs/git_sha"},
+        "strict_task_episode_schema_verdict": {"const": "FAIL"},
+        "strict_task_episode_schema_error_count": {"type": "integer", "minimum": 1},
+        "runtime_constructor_invoked": {"const": false},
+        "runtime_constructor_disposition": {"const": "NOT_APPLICABLE_NON_TASK_EPISODE_CONTAINER"}
+      }
+    },
+    "failure_experience_classification": {
+      "allOf": [
+        {"$ref": "#/$defs/classification_common"},
+        {
+          "properties": {
+            "path": {"const": "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b1_C001_R2_FAILURE_EXPERIENCE_DELTA_20260811.json"},
+            "container_kind": {"const": "FAILURE_EXPERIENCE_DELTA_PROPOSAL_SHADOW"},
+            "introduction_commit": {"const": "04fd906c9d1fd5585f3fc3efa4e614703c675715"},
+            "introduction_tree": {"const": "a42d22a47704debbbeaaed74f01b4e784093a86b"},
+            "git_blob_sha": {"const": "3c722ea8c5c3e7ff25e56a4cec2a3f3753753b0d"},
+            "raw_sha256": {"const": "8457393a7ef4f1ab8a931cee0106e08e5c024364b8d0783f9d12eed5f607afb0"},
+            "current_main_blob_sha": {"const": "3c722ea8c5c3e7ff25e56a4cec2a3f3753753b0d"},
+            "strict_task_episode_schema_error_count": {"const": 15}
+          }
+        }
+      ]
+    },
+    "failure_diagnosis_classification": {
+      "allOf": [
+        {"$ref": "#/$defs/classification_common"},
+        {
+          "properties": {
+            "path": {"const": "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b1_C001_R2_FAILURE_DIAGNOSIS_20260811.json"},
+            "container_kind": {"const": "FAILURE_DIAGNOSIS_PROPOSAL_SHADOW"},
+            "introduction_commit": {"const": "bc56b2ae70708509755efaf97a1ac8d462f42902"},
+            "introduction_tree": {"const": "646ffafe928aef720129729246b10aeae88fb8ca"},
+            "git_blob_sha": {"const": "fd14348ece534f40279308f46d9580345b7abca4"},
+            "raw_sha256": {"const": "544b168886ded0268989b8622118d37f0aaa66e1d2f6ec4e064f467a33713b28"},
+            "current_main_blob_sha": {"const": "fd14348ece534f40279308f46d9580345b7abca4"},
+            "strict_task_episode_schema_error_count": {"const": 16}
+          }
+        }
+      ]
+    },
+    "git_sha": {"type": "string", "minLength": 40, "maxLength": 40, "pattern": "^[0-9a-f]{40}$"},
+    "raw_sha256": {"type": "string", "minLength": 64, "maxLength": 64, "pattern": "^[0-9a-f]{64}$"},
+    "prefixed_sha256": {"type": "string", "minLength": 71, "maxLength": 71, "pattern": "^sha256:[0-9a-f]{64}$"},
+    "all_false_authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "grants_mathematical_result", "grants_proof_authority",
+        "grants_novelty_authority", "grants_millennium_root_authority",
+        "grants_framework_authority", "grants_review_independence"
+      ],
+      "properties": {
+        "grants_mathematical_result": {"const": false},
+        "grants_proof_authority": {"const": false},
+        "grants_novelty_authority": {"const": false},
+        "grants_millennium_root_authority": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false}
+      }
+    }
+  }
+}

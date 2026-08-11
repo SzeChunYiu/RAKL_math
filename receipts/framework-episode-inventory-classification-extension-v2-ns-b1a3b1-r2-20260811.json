@@ -1,0 +1,89 @@
+{
+  "schema_version": "2.0.0",
+  "receipt_id": "RAKL-MATH-TASK-EPISODE-INVENTORY-CLASSIFICATION-EXTENSION-NS-B1A3B1-R2-V2-20260811",
+  "recorded_at": "2026-08-11T16:57:11Z",
+  "object": "post-migration explicit inventory classification for two Navier-Stokes failure containers that carry a top-level episode_id but are not TaskEpisode objects",
+  "qoi": "Can the two current-main containers be classified without rewriting the frozen 19-object parent inventory, the prior H4d1b extension, or the source containers, while failing closed against accidental TaskEpisode promotion?",
+  "lineage": {
+    "frozen_parent_inventory": {
+      "receipt_path": "receipts/framework-pr153-hash-contract-migration-20260811.json",
+      "receipt_artifact_hash": "sha256:a607a86135e4acbfeb551af86e8dd10febfeb0a3d461daf53c4862339e5c0f77",
+      "receipt_blob_at_merge": "92135fdc9db0f37679fa5656e7052c7e02e00ec3",
+      "receipt_file_sha256": "sha256:4f431762422e5746966ea55ab2b1da3d9c9c60ce263aebfa688a44dc5e629594",
+      "merge_commit": "b18fcd35855d67962e28036f4a445ab24d0c4406",
+      "frozen_episode_count": 19
+    },
+    "preserved_prior_extension": {
+      "receipt_path": "receipts/framework-episode-inventory-extension-h4d1b-20260811.json",
+      "introduction_commit": "7d664b20dc691170d86d9757aaa5edd1db16ddb4",
+      "introduction_tree": "a886af4ec504c40ab0e2e0392f4e3a7f0b8dafa6",
+      "git_blob_sha": "cb8296b8b7491afc0c655430b8c65c8fd92e16eb",
+      "raw_sha256": "68c1c9c33b4a0c438a1a8fac865718de1c7a7e4bc111d881037b38fe30eb5216",
+      "receipt_artifact_hash": "sha256:5e39ced6010ed4d8800b8cb34585184389956d68d194fdea533588aba2eb9351"
+    }
+  },
+  "audit_binding": {
+    "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "current_main_at_audit": "c48293364c6bdf7e0c5d93f5e01d889008c9eb61",
+    "current_tree": "38c29ac6fcb19baa3a14876a2ed081456ef1e70b",
+    "framework_commit": "fe47a12c4bad8253658baaf37e1300cab15d0823",
+    "task_episode_schema_blob": "aed1055565062a6adefe24eb48331e314d01adec",
+    "experience_substrate_blob": "814aa24788d796b9cec7e35b6373b5d5e7ffbc77"
+  },
+  "classifications": [
+    {
+      "path": "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b1_C001_R2_FAILURE_EXPERIENCE_DELTA_20260811.json",
+      "container_kind": "FAILURE_EXPERIENCE_DELTA_PROPOSAL_SHADOW",
+      "observed_episode_id": "EP-NS-B1a3b1-C001-R2-20260811",
+      "classification": "NON_TASK_EPISODE_CONTAINER_WITH_EPISODE_ID",
+      "introduction_commit": "04fd906c9d1fd5585f3fc3efa4e614703c675715",
+      "introduction_tree": "a42d22a47704debbbeaaed74f01b4e784093a86b",
+      "git_blob_sha": "3c722ea8c5c3e7ff25e56a4cec2a3f3753753b0d",
+      "raw_sha256": "8457393a7ef4f1ab8a931cee0106e08e5c024364b8d0783f9d12eed5f607afb0",
+      "current_main_blob_sha": "3c722ea8c5c3e7ff25e56a4cec2a3f3753753b0d",
+      "strict_task_episode_schema_verdict": "FAIL",
+      "strict_task_episode_schema_error_count": 15,
+      "runtime_constructor_invoked": false,
+      "runtime_constructor_disposition": "NOT_APPLICABLE_NON_TASK_EPISODE_CONTAINER"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b1_C001_R2_FAILURE_DIAGNOSIS_20260811.json",
+      "container_kind": "FAILURE_DIAGNOSIS_PROPOSAL_SHADOW",
+      "observed_episode_id": "EP-NS-B1a3b1-C001-R2-20260811",
+      "classification": "NON_TASK_EPISODE_CONTAINER_WITH_EPISODE_ID",
+      "introduction_commit": "bc56b2ae70708509755efaf97a1ac8d462f42902",
+      "introduction_tree": "646ffafe928aef720129729246b10aeae88fb8ca",
+      "git_blob_sha": "fd14348ece534f40279308f46d9580345b7abca4",
+      "raw_sha256": "544b168886ded0268989b8622118d37f0aaa66e1d2f6ec4e064f467a33713b28",
+      "current_main_blob_sha": "fd14348ece534f40279308f46d9580345b7abca4",
+      "strict_task_episode_schema_verdict": "FAIL",
+      "strict_task_episode_schema_error_count": 16,
+      "runtime_constructor_invoked": false,
+      "runtime_constructor_disposition": "NOT_APPLICABLE_NON_TASK_EPISODE_CONTAINER"
+    }
+  ],
+  "disposition": {
+    "parent_receipt_modified": false,
+    "prior_extension_modified": false,
+    "source_containers_modified": false,
+    "classification_extension_registered": true,
+    "classification_basis": "EXPLICIT_CONTAINER_IDENTITY_AND_STRICT_TASK_EPISODE_SCHEMA_FAILURE"
+  },
+  "authority_contract": {
+    "grants_mathematical_result": false,
+    "grants_proof_authority": false,
+    "grants_novelty_authority": false,
+    "grants_millennium_root_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false
+  },
+  "evidence_pointers": [
+    "receipts/framework-pr153-hash-contract-migration-20260811.json",
+    "receipts/framework-episode-inventory-extension-h4d1b-20260811.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b1_C001_R2_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b1_C001_R2_FAILURE_DIAGNOSIS_20260811.json",
+    "tests/math_applications/test_framework_pr153_hash_contract_migration.py",
+    "tests/math_applications/test_framework_episode_inventory_classification_extension_v2.py"
+  ],
+  "artifact_hash": "sha256:0218a4312ec2c186f40987fa2aa8db8fe7ad56ff7574cb36bfa0dbdee1600519"
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "rakl-math-pnp-pre-candidate-v4-correction-v1",
+  "artifact_type": "HOSTILE_REVIEW_FAILURE_AND_PROSPECTIVE_V5_SUPERSESSION",
+  "receipt_id": "RAKL-MATH-PNP-O9d12a2a1a1b1-V4-HOSTILE-FAILURE-20260811",
+  "atom_id": "O9d12a2a1a1b1",
+  "recorded_at": "2026-08-11T17:11:42Z",
+  "reviewed_head": "5ef9e6b4402abffac00fe734cb616a08fba7fee7",
+  "reviewed_tree": "d81f261574bfe8b65020350a6d362b0176761812",
+  "review_authority": {
+    "kind": "SAME_CONTEXT_ROLE_SEPARATED_HOSTILE_REVIEW",
+    "independent_peer_review": false
+  },
+  "v4_bindings": [
+    {
+      "path": "receipts/pnp-o9d12a2a1a1b1-machine-run-v4-20260811.json",
+      "raw_sha256": "b6284efe4d9010ca8d099a02fcd90b7fa6434b68525618c0eb7e07504fa46a5e",
+      "artifact_hash": "sha256:94f23df92fbd5c39f599d2b12aed94a517de41a00efb30701120723bf10e2c54"
+    },
+    {
+      "path": "receipts/pnp-o9d12a2a1a1b1-pre-candidate-gate-v4-20260811.json",
+      "raw_sha256": "ce3222a8bf4a8a5dd351b28bef00b167f3d4ccb0de047b67f632c312dd45e429",
+      "artifact_hash": "sha256:cad72c98b189e7e2ae2dbc50a9fb00d00b8e86488a73d039eaa87b261a701329"
+    }
+  ],
+  "blocking_findings": [
+    {
+      "id": "V4-BLOCK-TESTED-SUBJECT-PROVENANCE",
+      "root_cause_level": "R1_SCHEMA_EXECUTION_BINDING",
+      "finding": "Selected inputs were bound at the declared subject commit but tests executed in the mutable current worktree without proving HEAD equality, cleanliness, or isolated detached execution.",
+      "required_repair": "Execute in a clean detached worktree at the exact subject and record/head-check that fact; add HEAD-mismatch and dirty-worktree hostile tests."
+    },
+    {
+      "id": "V4-BLOCK-CHRONOLOGY-SUBSTITUTION",
+      "root_cause_level": "R2_CLOCK_CHRONOLOGY",
+      "finding": "Valid-format future timestamps and reversed sequential run intervals could pass the executable audits.",
+      "required_repair": "Remove production timestamp overrides, enforce bounded-future and cross-run ordering, and add valid-format hostile substitutions."
+    }
+  ],
+  "retained_passes": [
+    "V4 schema/self-hash/raw binding tests passed",
+    "V4 exact suite recorded 452 passed",
+    "V4 authority contract remained all false",
+    "V0/V2/V3 negative and supersession lineage remained preserved"
+  ],
+  "v4_status": "REJECTED_ASSURANCE_ENVELOPE_PROVENANCE_AND_CHRONOLOGY",
+  "mathematical_status": "NO_MATHEMATICAL_CANDIDATE_NO_RESULT_ROOT_OPEN",
+  "authority_contract": {
+    "candidate_proposed": false,
+    "mathematical_result": false,
+    "proof_authority": false,
+    "novelty_authority": false,
+    "independent_peer_review": false,
+    "p_vs_np_authority": false,
+    "framework_promotion_authority": false
+  },
+  "superseded_by": "PROSPECTIVE_V5_ONLY",
+  "artifact_hash": "sha256:590f14441042ed4af808c3434ea16201835007b7b46ea61ce34ee131ba6f772f"
+}
