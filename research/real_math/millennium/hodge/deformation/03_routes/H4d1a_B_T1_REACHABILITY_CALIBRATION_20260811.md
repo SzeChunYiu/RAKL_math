@@ -1,11 +1,11 @@
 # H4d1a — source-bound first-order witness-reachability calibration
 
-**Atom:** `H4d1a`  
-**Frozen context:** `sha256:2a89d1bae5c4c675ec36ace29277fc885307226ceb13a0e6d09a09b72f52e35d`  
-**Pre-candidate terminal event:** `sha256:4035a5ee15fc2f1faa1d925f57648ba0cb76301219aa8bc913836f7063b7651f`  
-**Framework inspected for this run:** `SzeChunYiu/RAKL@decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8`  
-**Application subject:** `SzeChunYiu/RAKL_math@7bc2697d95d0b3021cc242f24712bda22fae0b90`  
-**Machine gate:** GitHub Actions `Pinned RAKL application tests` run `31481157823` — success.  
+**Atom:** `H4d1a`
+**Frozen context:** `sha256:2a89d1bae5c4c675ec36ace29277fc885307226ceb13a0e6d09a09b72f52e35d`
+**Pre-candidate terminal event:** `sha256:4035a5ee15fc2f1faa1d925f57648ba0cb76301219aa8bc913836f7063b7651f`
+**Framework inspected for this run:** `SzeChunYiu/RAKL@decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8`
+**Application subject:** `SzeChunYiu/RAKL_math@7bc2697d95d0b3021cc242f24712bda22fae0b90`
+**Machine gate:** GitHub Actions `Pinned RAKL application tests` run `31481157823` — success.
 **Authority:** `SOURCE_BOUND_CALIBRATION / V3_SHADOW_EPISODE / NO_MATHEMATICAL_CANDIDATE / NO_NOVELTY_CLAIM / ROOT_AUTHORITY_NONE`
 
 ## Question executed
