@@ -1,0 +1,175 @@
+{
+  "atom_id": "H4d1a",
+  "object_context": "Child of H4d1. Fix a smooth projective family f:X->S, a rational Hodge-locus branch T through s0, and a chosen algebraic central witness z0 for a flat rational Hodge class alpha. Determine whether the geometric obstructions generated specifically by lifting z0 along T lie in an independently defined, computable envelope B_{T,m} on which the relevant Hodge/semiregularity detector is injective at every required Artin order. This is a propagation problem from an already algebraic witness; it does not address root initial algebraicity.",
+  "structural_coordinates": [
+    "exact root coefficients are rational; integral Hodge counterexamples are outside the root contract",
+    "ambient fibers are smooth projective complex varieties; the active branch lies inside the Hodge locus of a fixed flat rational class",
+    "the chosen central witness may be a signed rational cycle; any local witness category must preserve coefficient bookkeeping",
+    "Hodge persistence constrains base directions but does not by itself imply geometric witness liftability",
+    "full semiregularity asks for detector faithfulness on the full obstruction space; H4d1a asks only for faithfulness on an independently described branch-generated envelope",
+    "the envelope must be defined from geometry, deformation maps, branch tangent data, or a derived obstruction complex before observing desired obstruction vanishing",
+    "first-order tangent or obstruction control is insufficient unless the construction persists compatibly through higher Artin orders",
+    "a zero branch envelope is a legitimate strict-weaker boundary control but may be vacuous for discovering a coupled lifting mechanism",
+    "formal lifting, algebraization, monodromy/global continuation, and root initial existence remain separate downstream obligations",
+    "higher codimension may require cotangent-complex/perfect-complex obstruction objects rather than a single normal-sheaf H^1"
+  ],
+  "equivalent_formulations": [
+    "restrict the geometric obstruction map to deformation directions induced by the Hodge-locus branch and identify its image inside the full obstruction group",
+    "construct a branch-reachable obstruction subobject B_{T,m} and test injectivity of the semiregularity/Hodge detector only on that subobject",
+    "compare the tangent/obstruction theory of a chosen cycle-witness space over T with the cohomological equations defining T, keeping the kernel of the detector explicit",
+    "seek a reduced obstruction theory adapted to the chosen Hodge branch whose obstruction sheaf is strictly smaller than the unrestricted witness obstruction sheaf"
+  ],
+  "solved_analogues": [
+    "codimension-one divisor/Picard deformation, where a relative line bundle or divisor can provide an explicit geometric lift",
+    "semiregular lci/subvariety settings where the semiregularity map annihilates obstructions and, under additional injectivity hypotheses, Hodge persistence controls geometric deformation"
+  ],
+  "near_solved_analogues": [
+    "Kloosterman's variational Hodge result for complete-intersection cycles on hypersurfaces, where flag-Hilbert and Hodge-locus tangent calculations identify a geometric locus in a special family",
+    "derived reduced obstruction theory attached to Buchweitz-Flenner semiregularity as developed by Pridham",
+    "Liu-Shen's analytic description of Hodge loci and Beltrami-differential criterion for variational Hodge questions, useful for specifying base directions but not by itself a cycle-witness theorem"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Buchweitz-Flenner semiregularity and Pridham's derived reduced obstruction theory",
+      "method": "factor geometric obstruction information through a semiregularity/reduced-obstruction map, then isolate the part of the obstruction theory actually visible to the target deformation problem",
+      "shared_structure": [
+        "chosen algebraic witness with a deformation functor",
+        "geometric obstructions mapped to Hodge/cohomological data",
+        "possibility of replacing a full obstruction space by a reduced one"
+      ],
+      "required_assumptions": [
+        "a source-bound semiregularity or derived obstruction map exists for the witness category",
+        "the branch-induced obstruction subobject is functorially defined before vanishing is known",
+        "injectivity/faithfulness is proved on that subobject rather than assumed"
+      ],
+      "disanalogies": [
+        "global annihilation of obstructions by a semiregularity map does not automatically provide injectivity on the geometric obstruction space",
+        "a reduced obstruction theory can remove directions without proving that all branch-generated lifts algebraize globally"
+      ],
+      "repair_question": "Can the branch T canonically define a proper reduced obstruction subobject whose inclusion and detector restriction are computable and stable across Artin order?",
+      "source_anchors": [
+        "https://arxiv.org/abs/math/9912245",
+        "https://arxiv.org/abs/1112.6001"
+      ]
+    },
+    {
+      "source_context": "Nishinou relative deformation of semiregular pairs/divisors",
+      "method": "express the next relative obstruction from the ambient Kodaira-Spencer direction and use Hodge persistence plus detector faithfulness to force its vanishing",
+      "shared_structure": [
+        "ambient family direction produces a geometric obstruction class",
+        "Hodge persistence supplies a cohomological vanishing condition",
+        "chosen witness is already algebraic on the central fiber"
+      ],
+      "required_assumptions": [
+        "the relevant relative obstruction class is explicitly identified",
+        "the semiregularity detector is sufficiently faithful on the generated obstruction directions",
+        "iteration hypotheses persist to the required order"
+      ],
+      "disanalogies": [
+        "Nishinou's stated theorem is in a special semiregular setting and does not establish a weaker branch-restricted criterion for arbitrary higher-codimension cycles",
+        "the root rational Hodge problem permits signed rational combinations and arbitrary codimension"
+      ],
+      "repair_question": "Which subspace is actually reached by branch Kodaira-Spencer directions before semiregularity is invoked, and can detector faithfulness be proved only there?",
+      "source_anchors": [
+        "https://arxiv.org/abs/2009.01651"
+      ]
+    },
+    {
+      "source_context": "Kloosterman variational Hodge conjecture for complete-intersection cycles on hypersurfaces",
+      "method": "compare a geometric flag-Hilbert locus with the Hodge locus using exact tangent-space calculations and dimension/smoothness control",
+      "shared_structure": [
+        "fixed algebraic cycle class in a moving smooth projective family",
+        "Hodge locus and geometric witness locus map to the same base",
+        "tangent directions can be computed independently on both sides"
+      ],
+      "required_assumptions": [
+        "the cycle has the special complete-intersection geometry of the source theorem",
+        "the flag-Hilbert parameter space and Artinian-Gorenstein tangent calculation apply",
+        "dimension/smoothness equalities needed to upgrade tangent comparison are verified"
+      ],
+      "disanalogies": [
+        "special hypersurface complete intersections are far from arbitrary rational cycles",
+        "tangent equality alone is not an all-order obstruction-envelope theorem"
+      ],
+      "repair_question": "Can the source tangent calculation be reinterpreted as an independently defined branch-reachable obstruction envelope, and which part survives outside complete-intersection geometry?",
+      "source_anchors": [
+        "https://arxiv.org/abs/2104.14845"
+      ]
+    },
+    {
+      "source_context": "Liu-Shen analytic Hodge-map description on Kuranishi families",
+      "method": "use explicit analytic equations/Beltrami data to specify the allowed Hodge-preserving base directions before comparing them with a separate witness obstruction map",
+      "shared_structure": [
+        "local deformation base with a distinguished Hodge locus",
+        "explicit characterization of directions preserving type (p,p)",
+        "need to distinguish base compatibility from geometric realization"
+      ],
+      "required_assumptions": [
+        "the Kuranishi/Hodge-map setup applies to the local family",
+        "the geometric witness deformation functor is independently specified",
+        "analytic base equations are not treated as proof of algebraic-cycle existence"
+      ],
+      "disanalogies": [
+        "an analytic Hodge-locus criterion does not construct algebraic cycles",
+        "Kähler/analytic conclusions can be weaker or differently scoped than algebraic witness domination"
+      ],
+      "repair_question": "Does an explicit description of T make the image of the branch-to-obstruction map computable without importing the desired algebraicity statement?",
+      "source_anchors": [
+        "https://arxiv.org/abs/2602.13951"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "a proper Hodge locus or explicit Hodge-locus equations do not imply a cycle-witness projection is surjective",
+    "full semiregularity is stronger than the desired branch-restricted faithfulness, but merely saying 'injective on relevant obstructions' is tautological unless relevance is independently constructed",
+    "a zero branch envelope proves logical separation from full semiregularity but may encode a decoupled/trivial deformation rather than a useful new mechanism",
+    "special complete-intersection or divisor geometry cannot be silently transported to arbitrary higher codimension",
+    "first-order tangent equality does not imply higher-order formal lifting",
+    "formal lifting does not imply algebraization, monodromy control, or global domination",
+    "H4d1a begins with an algebraic witness and cannot solve the Hodge conjecture's initial-existence step"
+  ],
+  "source_anchors": [
+    "https://github.com/SzeChunYiu/RAKL_math/issues/6",
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1_WITNESS_PROJECTION_CALIBRATION_20260811.md",
+    "https://arxiv.org/abs/math/9912245",
+    "https://arxiv.org/abs/1112.6001",
+    "https://arxiv.org/abs/2009.01651",
+    "https://arxiv.org/abs/2104.14845",
+    "https://arxiv.org/abs/2602.13951"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "control-theory/reachable-subspace restriction",
+      "source_situation": "A system may have a large ambient state/error space, while a restricted family of inputs reaches only a smaller subspace. Stability or observability need only be checked on the reachable subspace for that input family, provided reachability is defined independently of the desired stability conclusion.",
+      "common_abstraction": [
+        "full ambient obstruction space versus branch-reachable obstruction space",
+        "restricted input/base directions generate only part of the ambient response",
+        "faithfulness can be weaker when required only on the independently computed reachable part"
+      ],
+      "source_to_target_mapping": [
+        "allowed control inputs -> tangent/Artin directions of Hodge branch T",
+        "reachable error states -> geometric witness obstructions generated along T",
+        "observation map -> Hodge/semiregularity detector",
+        "unobservable modes outside reachability -> detector kernel directions never generated by T"
+      ],
+      "shared_constraints": [
+        "the restricted subspace must be computed before testing success",
+        "modes outside the reachable subspace cannot certify or refute branch-specific lifting",
+        "all-order dynamics may enlarge the reachable set relative to first order"
+      ],
+      "disanalogies": [
+        "deformation functors are nonlinear/algebro-geometric rather than linear control systems",
+        "obstruction spaces and maps can change with Artin order",
+        "algebraization and monodromy have no generic control-theory analogue"
+      ],
+      "proposed_principle": "Replace full semiregularity by detector faithfulness on an independently constructed branch-reachable obstruction envelope, then test whether the envelope remains proper and stable beyond first order.",
+      "validation_obligation": "After the strict gate, produce one source-bound non-semiregular positive control where the branch envelope is provably smaller than the full obstruction space, then seek a coupled example with a nonzero proper envelope and test the next Artin order.",
+      "provenance_note": "Structural proposal analogy only; it supplies no Hodge-theorem authority."
+    }
+  ],
+  "analogy_scan_notes": "Scanned reduced obstruction theory, relative semiregularity, special variational-Hodge families, explicit Hodge-locus equations, and restricted-input/reachable-subspace analogies. Retained only the reachable-subspace analogy because it produces an exact anti-tautology obligation and an adversarial strict-weaker calibration.",
+  "frozen_at": "2026-08-11T08:02:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:2a89d1bae5c4c675ec36ace29277fc885307226ceb13a0e6d09a09b72f52e35d"
+}
