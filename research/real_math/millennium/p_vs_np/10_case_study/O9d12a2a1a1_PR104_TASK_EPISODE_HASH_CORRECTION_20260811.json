@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "PNP-PR104-O9d12a2a1a1-TASK-EPISODE-RUNTIME-HASH-CORRECTION-20260811",
+  "recorded_at": "2026-08-11T13:55:00Z",
+  "framework_authority": {
+    "commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "submodule_path": "framework/RAKL"
+  },
+  "historical": {
+    "path": "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_TASK_EPISODE_CANONICAL_20260811.json",
+    "recorded_artifact_hash": "sha256:7428096611ba3368002ca129291cccd96dc8e743b8148d4f60a25abc6b8f6fee",
+    "computed_episode_content_digest": "aa0a0a4a04e90d9b641cb9e302cc91fb4797e84bab37b11f8f747c07766e017e",
+    "validate_episode_result": [],
+    "content_bound_by_runtime": false
+  },
+  "successor": {
+    "path": "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_20260811.json",
+    "artifact_hash": "aa0a0a4a04e90d9b641cb9e302cc91fb4797e84bab37b11f8f747c07766e017e",
+    "validate_episode_result": [],
+    "content_bound_by_runtime": true
+  },
+  "root_cause": "validate_episode checks the digest only for 64-character artifact_hash values while task-episode.schema.json permits any nonempty string",
+  "correction": {
+    "historical_bytes_mutated": false,
+    "semantic_episode_payload_changed": false,
+    "runtime_hash_contract": "RAW_64_HEX_SHA256_OF_EPISODE_CONTENT_BYTES"
+  },
+  "authority_contract": {
+    "effective_authority": "RUNTIME_HASH_IDENTITY_CORRECTION_ONLY",
+    "grants_new_mathematical_result": false,
+    "grants_strict_discovery_credit": false,
+    "grants_proof_authority": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_theorem_authority": false,
+    "grants_novelty_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false
+  },
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_TASK_EPISODE_CANONICAL_20260811.json",
+    "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_20260811.json",
+    "framework/RAKL/src/rakl/experience_substrate.py@bd1a2768f0f474ff44ffa25243241f94bfaf6466:validate_episode",
+    "framework/RAKL/schemas/task-episode.schema.json@bd1a2768f0f474ff44ffa25243241f94bfaf6466"
+  ],
+  "artifact_hash": "sha256:8a74f04f489f640e3e1cd5da30ccd49db2afb46702eff72dfe1f7abeb620d131"
+}

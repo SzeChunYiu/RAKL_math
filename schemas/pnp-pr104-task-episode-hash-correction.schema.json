@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/pnp-pr104-task-episode-hash-correction.schema.json",
+  "title": "P-vs-NP PR104 TaskEpisode runtime-hash correction",
+  "description": "Versioned successor for the merged PR104 TaskEpisode hash identity. Historical bytes remain immutable; the successor uses the exact raw 64-hex digest required by the pinned runtime.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "receipt_id", "recorded_at", "framework_authority",
+    "historical", "successor", "root_cause", "correction",
+    "authority_contract", "evidence_pointers", "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"const": "PNP-PR104-O9d12a2a1a1-TASK-EPISODE-RUNTIME-HASH-CORRECTION-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "framework_authority": {
+      "type": "object", "additionalProperties": false,
+      "required": ["commit", "submodule_path"],
+      "properties": {
+        "commit": {"const": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"},
+        "submodule_path": {"const": "framework/RAKL"}
+      }
+    },
+    "historical": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "path", "recorded_artifact_hash", "computed_episode_content_digest",
+        "validate_episode_result", "content_bound_by_runtime"
+      ],
+      "properties": {
+        "path": {"const": "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_TASK_EPISODE_CANONICAL_20260811.json"},
+        "recorded_artifact_hash": {"const": "sha256:7428096611ba3368002ca129291cccd96dc8e743b8148d4f60a25abc6b8f6fee"},
+        "computed_episode_content_digest": {"const": "aa0a0a4a04e90d9b641cb9e302cc91fb4797e84bab37b11f8f747c07766e017e"},
+        "validate_episode_result": {"type": "array", "maxItems": 0},
+        "content_bound_by_runtime": {"const": false}
+      }
+    },
+    "successor": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "artifact_hash", "validate_episode_result", "content_bound_by_runtime"],
+      "properties": {
+        "path": {"const": "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_20260811.json"},
+        "artifact_hash": {"const": "aa0a0a4a04e90d9b641cb9e302cc91fb4797e84bab37b11f8f747c07766e017e"},
+        "validate_episode_result": {"type": "array", "maxItems": 0},
+        "content_bound_by_runtime": {"const": true}
+      }
+    },
+    "root_cause": {"const": "validate_episode checks the digest only for 64-character artifact_hash values while task-episode.schema.json permits any nonempty string"},
+    "correction": {
+      "type": "object", "additionalProperties": false,
+      "required": ["historical_bytes_mutated", "semantic_episode_payload_changed", "runtime_hash_contract"],
+      "properties": {
+        "historical_bytes_mutated": {"const": false},
+        "semantic_episode_payload_changed": {"const": false},
+        "runtime_hash_contract": {"const": "RAW_64_HEX_SHA256_OF_EPISODE_CONTENT_BYTES"}
+      }
+    },
+    "authority_contract": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "effective_authority", "grants_new_mathematical_result",
+        "grants_strict_discovery_credit", "grants_proof_authority",
+        "grants_p_vs_np_root_authority", "grants_theorem_authority",
+        "grants_novelty_authority", "grants_framework_authority",
+        "grants_review_independence"
+      ],
+      "properties": {
+        "effective_authority": {"const": "RUNTIME_HASH_IDENTITY_CORRECTION_ONLY"},
+        "grants_new_mathematical_result": {"const": false},
+        "grants_strict_discovery_credit": {"const": false},
+        "grants_proof_authority": {"const": false},
+        "grants_p_vs_np_root_authority": {"const": false},
+        "grants_theorem_authority": {"const": false},
+        "grants_novelty_authority": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false}
+      }
+    },
+    "evidence_pointers": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}
