@@ -1,0 +1,38 @@
+{
+  "artifact_hash": "sha256:4594b5a2a35f3d906600daee4749695f9465bc2b7debf9d58e9d6896b739e154",
+  "atom_id": "NS-B1a3b1a1",
+  "authority": "SAME_CONTEXT_ADVERSARIAL_REVIEW_ONLY_NO_INDEPENDENT_CREDIT",
+  "context_hash": "sha256:4cd98526f19d3f178538f1f2bc0478ee5ec5d78f97af42bbc6630c4434b52fd1",
+  "cycle_id": "NS-B1a3b1a1-C001-CRITICAL-VORTICITY-PRODUCER-20260811",
+  "experts": [
+    {
+      "background": "3D Navier-Stokes critical-space well-posedness, local energy and Type-I blow-up analysis",
+      "id": "EX-NS-PDE-SCALING",
+      "role": "check Kato/Albritton-Barker source interfaces, divergence-free construction, scaling, units, and finite-I scope"
+    },
+    {
+      "background": "Lorentz spaces, singular integrals, vorticity and endpoint harmonic analysis",
+      "id": "EX-NS-HARMONIC-VORTICITY",
+      "role": "check curl formula, weak-Lorentz lower bound, derivative loss, and distinguish amplitude from phase/nonlocal strain"
+    },
+    {
+      "background": "concentration compactness, ancient solutions and persistence of singularities",
+      "id": "EX-NS-COMPACTNESS",
+      "role": "audit transfer from globally regular small-data calibration to singular-route producer claims and preserve DifferenceWitnesses"
+    },
+    {
+      "background": "formal verification, provenance, failure taxonomy and RAKL v3 protected-gate discipline",
+      "id": "EX-RAKL-ADVERSARIAL",
+      "role": "attack overclaim, separate local mathematical from gluing failures, and deny independent-review/root credit"
+    }
+  ],
+  "independent_review_credit": "0/3",
+  "predeclared_review_questions": [
+    "Does the exact family keep a uniform critical velocity norm independent of frequency?",
+    "Does a primary theorem turn that into exact global Navier-Stokes solutions and a uniform finite-I certificate?",
+    "Is the L^{3/2,infinity} vorticity lower bound rigorous and does positive-time continuity suffice for the time supremum?",
+    "What exact statement is falsified, and which singular-profile/history routes survive?",
+    "Are pressure/nonlocality, derivative loss and circular bootstraps separately audited?"
+  ],
+  "schema_version": "same-context-expert-cell-v3-proposal-shadow"
+}
