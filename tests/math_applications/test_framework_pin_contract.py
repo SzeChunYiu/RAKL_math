@@ -12,7 +12,8 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
+EXPECTED_FRAMEWORK_COMMIT = "bd1a2768f0f474ff44ffa25243241f94bfaf6466"
+HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
 
 
 def _canonical_hash(value: object) -> str:
@@ -63,19 +64,44 @@ def test_framework_pin_sync_receipt_is_exact_and_non_authorizing() -> None:
     receipt = json.loads(
         (
             APPLICATION_ROOT
-            / "receipts/framework-pin-sync-15f1c3a-20260811.json"
+            / "receipts/framework-pin-sync-bd1a276-20260811.json"
         ).read_text(encoding="utf-8")
     )
     payload = copy.deepcopy(receipt)
     payload["artifact_hash"] = ""
     assert receipt["artifact_hash"] == _canonical_hash(payload)
+    assert receipt["previous_framework_commit"] == HISTORICAL_FRAMEWORK_COMMIT
     assert receipt["current_framework_commit"] == EXPECTED_FRAMEWORK_COMMIT
     assert receipt["verification"] == {
         "command": "python tools/run_application_tests.py --framework framework/RAKL",
-        "tests_passed": 166,
+        "tests_passed": 260,
         "exit_code": 0,
         "pin_equals_gitlink": True,
         "framework_authority_paths_clean": True,
+        "status": "PASS_EXACT_APPLICATION_SUITE",
     }
     assert receipt["verdict"] == "PASS_APPLICATION_CONFORMANCE_ON_EXACT_FRAMEWORK_PIN"
     assert "NO_MATHEMATICAL_AUTHORITY_CHANGE" in receipt["authority"]
+    compatibility = receipt["semantic_authority_compatibility"]
+    assert compatibility["historical_artifacts_keep_recorded_framework_commits"] is True
+    assert compatibility["historical_receipts_or_outputs_rewritten"] is False
+    assert compatibility["new_execution_pin_applies_prospectively"] is True
+
+    historical_binding = receipt["historical_pin_receipt_binding"]
+    historical_bytes = subprocess.run(
+        [
+            "git",
+            "-C",
+            str(APPLICATION_ROOT),
+            "show",
+            f"{historical_binding['application_commit']}:{historical_binding['path']}",
+        ],
+        check=True,
+        stdout=subprocess.PIPE,
+    ).stdout
+    assert "sha256:" + hashlib.sha256(historical_bytes).hexdigest() == (
+        historical_binding["raw_sha256"]
+    )
+    historical = json.loads(historical_bytes)
+    assert historical["current_framework_commit"] == HISTORICAL_FRAMEWORK_COMMIT
+    assert historical["artifact_hash"] == historical_binding["artifact_hash"]

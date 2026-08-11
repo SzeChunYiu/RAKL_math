@@ -41,13 +41,13 @@
   },
   "verification": {
     "command": "python tools/run_application_tests.py --framework framework/RAKL",
-    "tests_passed": null,
-    "exit_code": null,
+    "tests_passed": 260,
+    "exit_code": 0,
     "pin_equals_gitlink": true,
     "framework_authority_paths_clean": true,
-    "status": "PENDING_EXACT_APPLICATION_SUITE"
+    "status": "PASS_EXACT_APPLICATION_SUITE"
   },
-  "verdict": "PENDING_EXACT_APPLICATION_CONFORMANCE",
+  "verdict": "PASS_APPLICATION_CONFORMANCE_ON_EXACT_FRAMEWORK_PIN",
   "non_guarantees": [
     "does not validate a Millennium claim",
     "does not rewrite or upgrade historical framework bindings",
@@ -55,6 +55,34 @@
     "does not establish empirical RAKL superiority",
     "does not automatically promote a lesson research tool or framework variant"
   ],
-  "authority": "DEPENDENCY_SYNC_PROPOSAL_ONLY / NO_MATHEMATICAL_AUTHORITY_CHANGE",
-  "artifact_hash": "sha256:69aa8864e8746ca2bc20c9c7f54089d2cb6ff91fef826315494876f0d169c5b9"
+  "authority": "DEPENDENCY_SYNC_AND_EXECUTABLE_CONFORMANCE_ONLY / NO_MATHEMATICAL_AUTHORITY_CHANGE",
+  "artifact_hash": "sha256:4fc89f31c10206b2c55464fa836c595b32f1c84d3bddb1f17fbd0d55f6df7778",
+  "pin_staging_commit": "67df037d3a4f000d6c1a267e965ced603e73b4f5",
+  "initial_exact_suite": {
+    "command": "python tools/run_application_tests.py --framework framework/RAKL",
+    "result": "5 failed, 255 passed",
+    "exit_code": 1,
+    "diagnosis": "historical semantic-authority receipts were incorrectly required by tests to equal the moving execution pin",
+    "failed_tests": [
+      "test_framework_pin_contract.py::test_machine_readable_framework_pin_is_valid_and_loaded_exactly",
+      "test_pnp_c025_joint_binary_signature_assurance.py::test_current_main_integration_receipt_binds_non_circular_git_history",
+      "test_yang_mills_yms1a1_git_provenance.py::test_yms1a1_packet_artifacts_have_executable_git_provenance",
+      "test_yang_mills_yms1a1_integrity_repair.py::test_yms1a1_memory_hash_repair_preserves_the_failed_identity",
+      "test_yang_mills_yms1a1_packet_binding_repair.py::test_yms1a1_packet_binding_repair_preserves_and_supersedes"
+    ]
+  },
+  "compatibility_migration": {
+    "scope": "TEST_ASSERTION_SEMANTICS_ONLY",
+    "historical_artifact_files_changed": [],
+    "historical_artifact_hashes_changed": [],
+    "protected_evaluators_weakened": false,
+    "repair": "tests now distinguish immutable artifact-local framework authority from the prospective live execution pin and bind both through this receipt",
+    "test_files_updated": [
+      "tests/math_applications/test_framework_pin_contract.py",
+      "tests/math_applications/test_pnp_c025_joint_binary_signature_assurance.py",
+      "tests/math_applications/test_yang_mills_yms1a1_git_provenance.py",
+      "tests/math_applications/test_yang_mills_yms1a1_integrity_repair.py",
+      "tests/math_applications/test_yang_mills_yms1a1_packet_binding_repair.py"
+    ]
+  }
 }

@@ -31,6 +31,7 @@ SYNTHESIS_RECEIPT = (
 INTEGRATION_RECEIPT = (
     BASE / "05_falsification/C025_CURRENT_MAIN_INTEGRATION_RECEIPT_20260811.json"
 )
+FRAMEWORK_PIN_SYNC = ROOT / "receipts/framework-pin-sync-bd1a276-20260811.json"
 
 
 def _canonical_hash(value: object) -> str:
@@ -685,10 +686,14 @@ def test_current_main_integration_receipt_binds_non_circular_git_history() -> No
     assert receipt["framework_authority_commit"] == (
         "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
     )
-    assert (
-        _git("rev-parse", "HEAD:framework/RAKL").stdout.decode().strip()
-        == receipt["framework_authority_commit"]
+    pin_sync = json.loads(FRAMEWORK_PIN_SYNC.read_text(encoding="utf-8"))
+    assert receipt["framework_authority_commit"] == pin_sync["previous_framework_commit"]
+    assert _git("rev-parse", "HEAD:framework/RAKL").stdout.decode().strip() == (
+        pin_sync["current_framework_commit"]
     )
+    assert pin_sync["semantic_authority_compatibility"][
+        "historical_artifacts_keep_recorded_framework_commits"
+    ] is True
 
     merge = receipt["integration_merge"]
     assert _git("cat-file", "-e", f'{merge["commit"]}^{{commit}}', check=False).returncode == 0

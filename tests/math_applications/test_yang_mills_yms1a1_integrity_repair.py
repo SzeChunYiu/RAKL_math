@@ -21,6 +21,7 @@ REPAIRED = (
 )
 RECEIPT = BASE / "08_reviews/YM-S1A1_MEMORY_HASH_REPAIR_RECEIPT_20260811.json"
 SCHEMA = ROOT / "schemas/artifact-integrity-repair-receipt.schema.json"
+FRAMEWORK_PIN_SYNC = ROOT / "receipts/framework-pin-sync-bd1a276-20260811.json"
 
 
 def _canonical_hash(value: object) -> str:
@@ -76,10 +77,13 @@ def test_yms1a1_memory_hash_repair_preserves_the_failed_identity() -> None:
     assert receipt["repair"]["invalid_path"] == str(INVALID.relative_to(ROOT))
     assert receipt["repair"]["repaired_path"] == str(REPAIRED.relative_to(ROOT))
     pin = json.loads((ROOT / "config/rakl-framework-pin.json").read_text())
-    assert receipt["framework_pin"]["commit"] == pin["commit"]
-    assert receipt["framework_pin"]["commit"] == _git(
-        "rev-parse", "HEAD:framework/RAKL"
-    )
+    pin_sync = json.loads(FRAMEWORK_PIN_SYNC.read_text(encoding="utf-8"))
+    assert receipt["framework_pin"]["commit"] == pin_sync["previous_framework_commit"]
+    assert pin["commit"] == pin_sync["current_framework_commit"]
+    assert pin["commit"] == _git("rev-parse", "HEAD:framework/RAKL")
+    assert pin_sync["semantic_authority_compatibility"][
+        "historical_artifacts_keep_recorded_framework_commits"
+    ] is True
 
     invalid_for_hash = copy.deepcopy(invalid)
     invalid_for_hash["artifact_hash"] = ""
