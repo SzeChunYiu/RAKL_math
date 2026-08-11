@@ -16,9 +16,10 @@
   },
   "source_atom": {
     "id": "NS-B1a1",
+    "failure_id": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
     "evidence": [
       "RAKL_math main merge 8a608f340d47b4b6ae612275b0595faf6b804432",
-      "RAKL_math PR #81"
+      "research/real_math/millennium/navier_stokes/07_memory/NS-B1a1_C001_FAILURE_EXPERIENCE_DELTA_20260811.json"
     ],
     "source_observation": "A scale-neutral O(1) local-energy ledger at each dyadic scale does not imply a summable or well-founded total charge over an infinite descendant chain. The failure is local-to-global/gluing rather than a failure of each local estimate."
   },
@@ -53,7 +54,7 @@
     "The target falsifier is an abstract sequence model; it is not asserted to be realized by actual Yang-Mills observables."
   ],
   "difference_witness": {
-    "prior_failure_ids": ["F-NS-B1a1-SCALE-NEUTRAL-CHARGE"],
+    "prior_failure_ids": ["F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER"],
     "changed_structural_coordinates": [
       "additive scale accumulation -> diagonal source-family selection",
       "physical radius index -> source/support/RG-family index",
@@ -64,7 +65,7 @@
     ],
     "prior_falsifier_escape_reason": "The NS O(1)-per-scale calculation does not itself test YM source-family asymptotics; only the quantifier-order audit operation transfers.",
     "cheapest_repeat_failure_test": "Construct bounded numbers m_n^(k)=q^max(n-k,0), 0<q<1. For every fixed k, (m_n^(k))^(1/n)->q, while the diagonal k=n has m_n^(n)=1 and nth root 1. If the target inference accepts pointwise fixed-source rates as uniform moving-source decay, this planted world must be rejected by a valid uniformity gate.",
-    "evidence_pointers": ["RAKL_math PR #81", "RAKL_math PR #46", "RAKL_math PR #79"]
+    "evidence_pointers": ["RAKL_math main NS-B1a1 failure artifact", "RAKL_math PR #46", "RAKL_math PR #79"]
   },
   "predicted_transferable_principle": "Before a fixed-object asymptotic certificate is used along a changing object/source/scale family, make the quantifier order explicit and require a uniform family bound, a controlled growth modulus, or a proved compactness/equicontinuity handoff. Do not infer diagonal control from pointwise limits.",
   "frozen_target_falsifier": {
