@@ -1,1 +1,67 @@
-PLACEHOLDER
+{
+  "schema": "MathContextFiber-shadow-v3",
+  "authority": "proposal_shadow",
+  "artifact_hash": "sha256:2b9b258dab05571249e0af3886f5975700f73d42767b50069d778b2ef5b2581b",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "method_version": "0.1.0",
+    "git_sha": "8118b9c96cd426439a7e3c4b737d279a047e37f2",
+    "method_specs_sha": "3f629c4dd0ef55aedf14206b2be3df19875988b7",
+    "v3_status": "implementation overlay; proposal/shadow use only"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "c48293364c6bdf7e0c5d93f5e01d889008c9eb61"
+  },
+  "root_contract": {
+    "statement": "Every nontrivial zero rho of zeta(s) satisfies Re(rho)=1/2.",
+    "binding": "research/real_math/millennium/riemann_hypothesis/00_problem_contract/canonical_statement.md",
+    "promotion_gate": "Exact RH binding, closed proof DAG, dependency/axiom/verifier audits, isolated recheck where supported, bounded novelty search, and three genuinely isolated mathematical reviews; none satisfied by this cycle."
+  },
+  "active_atom": {
+    "id": "RH-ANA-003",
+    "problem_signature": "RH-ANA-003|EXACT_ARITHMETIC_LI_PRIME_ARCHIMEDEAN_UNIFORM_TAIL",
+    "question": "Identify the weakest exact prime/archimedean cancellation or tail mechanism whose unconditional control is uniform in Li index n and advances all-index positivity without assuming an RH-equivalent statement."
+  },
+  "consulted_fibre_contents": [
+    "00_problem_contract/canonical_statement.md",
+    "02_problem_dag/RH_ANA_003.yaml",
+    "07_memory/RH_ANA_002_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "GitHub issue #3 RH negative history",
+    "Bombieri-Lagarias 1999 Theorem 2 and explicit formula",
+    "Guth-Maynard 2026 zero-density theorem",
+    "Conrey-Farmer-Kwan-Lin-Turnage-Butterbaugh 2025/2026 short-mollifier theorem",
+    "Voros 2006 Li-coefficient asymptotic dichotomy"
+  ],
+  "sources": [
+    {"id":"SRC-BL1999","type":"primary","title":"Complements to Li's Criterion for the Riemann Hypothesis","authors":["Enrico Bombieri","Jeffrey C. Lagarias"],"journal":"Journal of Number Theory 77 (1999), 274-287","doi":"10.1006/jnth.1999.2392","url":"https://websites.umich.edu/~lagarias/doc/bombieri.pdf","selectors":["Explicit Formula pp.6-7","Lemma 2 p.7","Theorem 2 p.8"]},
+    {"id":"SRC-GM2026","type":"primary","title":"New large value estimates for Dirichlet polynomials","authors":["Larry Guth","James Maynard"],"journal":"Annals of Mathematics 203 (2026), 623-675","doi":"10.4007/annals.2026.203.2.6","url":"https://annals.math.princeton.edu/2026/203-2/p06","selector":"N(sigma,T) <= T^{30(1-sigma)/13+o(1)}"},
+    {"id":"SRC-CFKLTB2026","type":"primary-preprint","title":"Short mollifiers of the Riemann zeta-function","authors":["J. Brian Conrey","David W. Farmer","Chung-Hang Kwan","Yongxiao Lin","Caroline L. Turnage-Butterbaugh"],"arxiv":"2508.11108","url":"https://arxiv.org/abs/2508.11108","selector":"Theorem 1 and introduction; revised 2026-03-22"},
+    {"id":"SRC-VOROS2006","type":"primary","title":"Sharpenings of Li's criterion for the Riemann Hypothesis","author":"Andre Voros","journal":"Math. Phys. Anal. Geom. 9 (2006), 53-63","arxiv":"math/0506326","doi":"10.1007/s11040-005-9002-8","url":"https://arxiv.org/abs/math/0506326","selector":"RH true/false asymptotic dichotomy"}
+  ],
+  "retrieved_experience": {
+    "failure_ids": ["F-RH-ANA-001-FINITE-LI-PREFIX","F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE","F-XM001-POINTWISE-GAP-COLLAPSE"],
+    "tool_ids": ["T-RH-LI-PREFIX-QUARTET-CALIBRATION","T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+    "episode_ids": ["EP-RH-ANA-002-SUZUKI-FAITHFULNESS-20260811"],
+    "selected_ids": ["F-RH-ANA-001-FINITE-LI-PREFIX","F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE","T-RH-LI-PREFIX-QUARTET-CALIBRATION"],
+    "rejected_ids": [
+      {"id":"T-XM-ROOT-BRIDGE-STABILITY-AUDIT","reason":"Audit pattern only; DifferenceWitness: continuum/cutoff-limit stability is not the zeta-specific renormalized arithmetic-tail theorem."},
+      {"id":"F-XM001-POINTWISE-GAP-COLLAPSE","reason":"Structural warning only; no target-theorem authority or direct arithmetic transfer."}
+    ],
+    "missed_later_found": []
+  },
+  "same_context_expert_cell": [
+    {"id":"ANT-Z","role":"analytic number theory; zero-density/zero-free"},
+    {"id":"EXF-T","role":"explicit formula/Mellin/prime-zero duality"},
+    {"id":"MOL-R","role":"mollifiers/resonance/large values"},
+    {"id":"AUD-P","role":"proof dependency/provenance/root-contract audit"},
+    {"id":"FAL-X","role":"adversarial countermodels/local-to-global falsification"}
+  ],
+  "search_policy": {
+    "pre_memory_preference": "zero-density + mollifier hybrid to squeeze exceptional off-line zeros",
+    "post_memory_route": "exact Bombieri-Lagarias arithmetic formula + sparse-exception falsifier + alternating-binomial tail audit",
+    "changed_by_RAKL_memory": true
+  },
+  "hostile_models": ["fixed finite off-line exceptional set against average density bounds","small fixed-j renormalized tails with large n-dependent alternating-binomial aggregate"],
+  "cross_millennium_query": "NOT_PERFORMED: no new applicability/DifferenceWitness justified theorem transfer; only previously retrieved structural audit-pattern records were considered."
+}
