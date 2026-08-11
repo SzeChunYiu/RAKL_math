@@ -31,34 +31,41 @@
       "type": "array",
       "prefixItems": [
         {"const": "STALE_EVIDENCE_POINTER"},
-        {"const": "FAIL_DEPENDENCY_BINDING"}
+        {"const": "FAIL_DEPENDENCY_BINDING"},
+        {"const": "FAIL_REVIEW_BINDING"}
       ],
       "items": false,
-      "minItems": 2,
-      "maxItems": 2
+      "minItems": 3,
+      "maxItems": 3
     },
     "artifacts": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["old_failure", "live_failure", "old_memory", "live_memory", "old_trace", "live_trace"],
+      "required": ["old_failure", "live_failure", "old_memory", "live_memory", "old_trace", "pre_review_trace", "live_trace", "old_review", "live_review"],
       "properties": {
         "old_failure": {"$ref": "#/$defs/artifactRef"},
         "live_failure": {"$ref": "#/$defs/artifactRef"},
         "old_memory": {"$ref": "#/$defs/artifactRef"},
         "live_memory": {"$ref": "#/$defs/artifactRef"},
         "old_trace": {"$ref": "#/$defs/artifactRef"},
-        "live_trace": {"$ref": "#/$defs/artifactRef"}
+        "pre_review_trace": {"$ref": "#/$defs/artifactRef"},
+        "live_trace": {"$ref": "#/$defs/artifactRef"},
+        "old_review": {"$ref": "#/$defs/artifactRef"},
+        "live_review": {"$ref": "#/$defs/artifactRef"}
       }
     },
     "lineage": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["supersedes_trace_id", "repaired_trace_id", "old_memory_hash", "live_memory_hash"],
+      "required": ["supersedes_trace_id", "pre_review_trace_id", "repaired_trace_id", "old_memory_hash", "live_memory_hash", "old_review_file_sha256", "live_review_file_sha256"],
       "properties": {
         "supersedes_trace_id": {"type": "string", "minLength": 1},
+        "pre_review_trace_id": {"type": "string", "minLength": 1},
         "repaired_trace_id": {"type": "string", "minLength": 1},
         "old_memory_hash": {"$ref": "#/$defs/sha256"},
-        "live_memory_hash": {"$ref": "#/$defs/sha256"}
+        "live_memory_hash": {"$ref": "#/$defs/sha256"},
+        "old_review_file_sha256": {"$ref": "#/$defs/sha256"},
+        "live_review_file_sha256": {"$ref": "#/$defs/sha256"}
       }
     },
     "repairs": {"$ref": "#/$defs/nonEmptyStrings"},

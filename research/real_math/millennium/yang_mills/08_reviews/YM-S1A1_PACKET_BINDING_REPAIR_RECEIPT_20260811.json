@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "receipt_id": "RAKL-MATH-YM-S1A1-PACKET-BINDING-REPAIR-20260811",
-  "recorded_at": "2026-08-11T08:41:16+00:00",
+  "recorded_at": "2026-08-11T08:54:35+00:00",
   "application_repository": {
     "url": "https://github.com/SzeChunYiu/RAKL_math",
     "base_commit": "21d349b20ff6373336974274be7752227223d478"
@@ -13,7 +13,8 @@
   "atom_id": "YM-S1a1",
   "observed_failures": [
     "STALE_EVIDENCE_POINTER",
-    "FAIL_DEPENDENCY_BINDING"
+    "FAIL_DEPENDENCY_BINDING",
+    "FAIL_REVIEW_BINDING"
   ],
   "artifacts": {
     "old_failure": {
@@ -36,25 +37,41 @@
       "path": "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_MEMORY_HASH_INVALID_20260811.json",
       "file_sha256": "sha256:fb22328a040ed52c773999b588f174adda731511d73815c1d24bd5603fd19b59"
     },
+    "pre_review_trace": {
+      "path": "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_REVIEW_BINDING_INVALID_20260811.json",
+      "file_sha256": "sha256:7d5c7739b03237320e87815f3cb2faf60affd588409654590459cc148dde5f6a"
+    },
     "live_trace": {
       "path": "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_20260811.json",
-      "file_sha256": "sha256:7d5c7739b03237320e87815f3cb2faf60affd588409654590459cc148dde5f6a"
+      "file_sha256": "sha256:5e1787bc6c85a03040ad71474516a738b131db3d245a15f41cef15ea3171decb"
+    },
+    "old_review": {
+      "path": "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_PRE_CANDIDATE_REVIEW_ROLE_COMBINED_20260811.md",
+      "file_sha256": "sha256:c5f62d4e5e1b53ab673fd0f718cdeaea0c5c5bfdb0c528652a6abc274579569f"
+    },
+    "live_review": {
+      "path": "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_PRE_CANDIDATE_REVIEW_20260811.md",
+      "file_sha256": "sha256:1ab9e8687ced355cc11978897b1f5e164caf0ab48e17102e95061e0ccf01fb6d"
     }
   },
   "lineage": {
     "supersedes_trace_id": "YM-S1A1-PRE-CANDIDATE-20260811",
-    "repaired_trace_id": "TRACE-YM-S1A1-PRE-CANDIDATE-PACKET-BINDING-REPAIRED-20260811",
+    "repaired_trace_id": "TRACE-YM-S1A1-PRE-CANDIDATE-REVIEW-BINDING-REPAIRED-20260811",
     "old_memory_hash": "sha256:cba10c36f5a6567749a080179e8ded8ba7d62a09f3cedd1fbf40604c8475e065",
-    "live_memory_hash": "sha256:24cfac6145bb262181f841f1bea09165c5e2f11e74789d4b7c7d1bb620efb038"
+    "live_memory_hash": "sha256:24cfac6145bb262181f841f1bea09165c5e2f11e74789d4b7c7d1bb620efb038",
+    "pre_review_trace_id": "TRACE-YM-S1A1-PRE-CANDIDATE-PACKET-BINDING-REPAIRED-20260811",
+    "old_review_file_sha256": "sha256:c5f62d4e5e1b53ab673fd0f718cdeaea0c5c5bfdb0c528652a6abc274579569f",
+    "live_review_file_sha256": "sha256:1ab9e8687ced355cc11978897b1f5e164caf0ab48e17102e95061e0ccf01fb6d"
   },
   "repairs": [
     "preserve the stale evidence-pointer failure lattice and freeze a successor with the live application-test path",
     "preserve the first hash-repaired memory identity and freeze a successor bound to the corrected failure snapshot",
-    "preserve the stale-memory trace and freeze a successor bound to the exact live memory hash before any candidate event"
+    "preserve the stale-memory trace and freeze a successor bound to the exact live memory hash before any candidate event",
+    "preserve the six-role path-only review/trace identities and freeze an eight-role review whose exact bytes are hash-bound into a newly chained E005-E007 sequence"
   ],
   "chronology": {
     "base_repair_commit": "21d349b20ff6373336974274be7752227223d478",
-    "superseding_trace_frozen_at": "2026-08-11T08:41:15+00:00",
+    "superseding_trace_frozen_at": "2026-08-11T08:54:34+00:00",
     "candidate_events_present": false
   },
   "evidence_pointers": [
@@ -63,9 +80,13 @@
     "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_HASH_REPAIRED_20260811.json",
     "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_20260811.json",
     "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_MEMORY_HASH_INVALID_20260811.json",
+    "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_REVIEW_BINDING_INVALID_20260811.json",
     "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_20260811.json",
-    "tests/math_applications/test_yang_mills_yms1a1_packet_binding_repair.py"
+    "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_PRE_CANDIDATE_REVIEW_ROLE_COMBINED_20260811.md",
+    "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_PRE_CANDIDATE_REVIEW_20260811.md",
+    "tests/math_applications/test_yang_mills_yms1a1_packet_binding_repair.py",
+    "tests/math_applications/test_yang_mills_yms1a1_strict_packet.py"
   ],
   "authority": "PACKET_BINDING_REPAIR_ONLY / ORIGINAL_NEGATIVE_HISTORY_PRESERVED / PRE_CANDIDATE / NO_MATHEMATICAL_RESULT / NO_THEOREM / ROOT_AUTHORITY_NONE",
-  "artifact_hash": "sha256:8aae60ecd93cbba593d74591eabfe28a17005078cd82292da13cd835b071a4ba"
+  "artifact_hash": "sha256:daf9d9db7f35cb4c92de62cfecfee533ed46064a41e50007f651d51f33e0c36c"
 }

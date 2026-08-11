@@ -234,12 +234,20 @@ def test_yms1a1_trace_binds_the_exact_live_memory_review() -> None:
 
 
 def test_yms1a1_packet_has_role_separation_and_live_evidence_paths() -> None:
-    review = (
-        BASE / "08_reviews/YM-S1A1_PRE_CANDIDATE_REVIEW_20260811.md"
-    ).read_text(encoding="utf-8")
+    review_path = BASE / "08_reviews/YM-S1A1_PRE_CANDIDATE_REVIEW_20260811.md"
+    review = review_path.read_text(encoding="utf-8")
     assert "## 6. Formal-methods lead" in review
     assert "## 7. Novelty / prior-art lead" in review
     assert "## 8. Analogy / method-transfer lead" in review
+
+    trace = _load("09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_20260811.json")
+    review_event = next(
+        event for event in trace["entries"] if event["event_id"] == "YM-S1A1-E005"
+    )
+    review_hash = "sha256:" + hashlib.sha256(review_path.read_bytes()).hexdigest()
+    assert "Eight role-separated" in review_event["state_summary"]
+    assert review_hash in review_event["evidence_pointers"]
+    assert review_hash in review_event["outputs"]
 
     failures = _load("07_memory/YM-S1A1_FAILURE_EXPERIENCE_LATTICE_20260811.json")
     for experience in failures["experiences"]:
