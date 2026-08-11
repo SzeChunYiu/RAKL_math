@@ -402,12 +402,17 @@ def test_review_dag_readme_and_validation_preserve_the_authority_boundary() -> N
 def test_final_integration_validation_is_self_hashed_and_exactly_scoped() -> None:
     receipt = _load(FINAL_VALIDATION)
     _assert_self_hash(receipt)
+    assert receipt["current_main"]["commit"] == _git(
+        "rev-parse", "origin/main"
+    ).stdout.strip()
     assert receipt["framework_pin"] == (
         "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
     )
     assert receipt["validation"]["focused_passed"] == 10
-    assert receipt["validation"]["full_passed"] == 215
-    assert receipt["validation"]["diff_check_result"] == "CLEAN"
+    assert receipt["validation"]["full_passed"] == 217
+    assert receipt["validation"]["diff_check_result"] == (
+        "CLEAN_IN_EXACT_HEAD_WORKTREE_CONTEXT"
+    )
     assert receipt["authority"] == (
         "FINAL_HEAD_INTEGRATION_VALIDATION / RETROSPECTIVE_ANALYTIC_CALIBRATION / "
         "SEARCH_CONTROL_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE"
@@ -461,10 +466,46 @@ def test_final_integration_git_provenance_planted_worlds_fail_closed() -> None:
 
 
 def test_whitespace_policy_preserves_only_the_immutable_snapshot_exception() -> None:
+    snapshot_path = (
+        "research/real_math/millennium/navier_stokes/04_candidates/negative_history/"
+        "NS_B1a_C001_PR19_RESULT_SNAPSHOT_9B6B8AE.md"
+    )
     attributes = (ROOT / ".gitattributes").read_text(encoding="utf-8").splitlines()
     exemptions = [line for line in attributes if "whitespace=" in line]
     assert exemptions == [
-        "research/real_math/millennium/navier_stokes/04_candidates/negative_history/"
-        "NS_B1a_C001_PR19_RESULT_SNAPSHOT_9B6B8AE.md whitespace=-trailing-space"
+        f"{snapshot_path} whitespace=-trailing-space"
     ]
+
+    default_attr = _git("check-attr", "whitespace", "--", snapshot_path).stdout.strip()
+    head_attr = _git(
+        "--attr-source=HEAD", "check-attr", "whitespace", "--", snapshot_path
+    ).stdout.strip()
+    base_attr = _git(
+        "--attr-source=origin/main",
+        "check-attr",
+        "whitespace",
+        "--",
+        snapshot_path,
+    ).stdout.strip()
+    assert default_attr.endswith("whitespace: -trailing-space")
+    assert head_attr.endswith("whitespace: -trailing-space")
+    assert base_attr.endswith("whitespace: unspecified")
+
     assert _git("diff", "--check", "origin/main...HEAD", check=False).returncode == 0
+    base_context = _git(
+        "--attr-source=origin/main",
+        "diff",
+        "--check",
+        "origin/main...HEAD",
+        check=False,
+    )
+    assert base_context.returncode != 0
+    assert base_context.stdout.count(f"{snapshot_path}:") == 3
+
+    receipt_context = _load(FINAL_VALIDATION)["validation"]["diff_check_context"]
+    assert receipt_context["default_exact_head_worktree_result"] == "CLEAN"
+    assert receipt_context["explicit_head_attribute_source_result"] == "CLEAN"
+    assert receipt_context["explicit_base_attribute_source_result"] == (
+        "EXPECTED_CONTEXTUAL_FAILURE_IMMUTABLE_SNAPSHOT_TRAILING_WHITESPACE"
+    )
+    assert receipt_context["context_free_clean_claim"] is False

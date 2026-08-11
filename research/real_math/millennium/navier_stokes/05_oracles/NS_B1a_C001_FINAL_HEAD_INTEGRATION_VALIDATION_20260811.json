@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "validation_id": "VALIDATE-NS-B1a-C001-FINAL-HEAD-INTEGRATION-20260811",
-  "recorded_at": "2026-08-11T09:36:01Z",
+  "recorded_at": "2026-08-11T09:43:23Z",
   "atom_id": "NS-B1a",
   "historical_identity": "NS-B1a-C001",
   "source_repository": "https://github.com/SzeChunYiu/RAKL_math.git",
@@ -26,48 +26,48 @@
   },
   "framework_pin": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
   "repair_source": {
-    "commit": "6e73d024ec9dcc9a8bfbfb34a159a23ab7c8579e",
-    "tree": "413b5b538005d644d4aa40bdfd0bd4502b851aea"
+    "commit": "16ea2517fb3614deed62438a6735530a0a9c9c08",
+    "tree": "ca7bd929a82836d016c520e5a63decb35e9560c5"
   },
   "prior_integration_commit": {
-    "commit": "7418fda3a2d76e4c64a9f847470c3d171a947ea3",
-    "tree": "bfcfcd2976a6288e2989087f71308c055e21c366",
-    "parents": [
-      "c8ee1b65820ca92c5374f2ddcf7f9ad97b2c4f31",
-      "d8e4b392c1d21b5a2bc832fc47a038b37490afa3"
-    ]
-  },
-  "current_main": {
-    "commit": "7f5771d5e47742debec5f4af0a29e937b9aeedf6",
-    "tree": "d3009ccb4a91fd757bfb879da8df0900206e809b"
-  },
-  "merge_base": "aa1b8920bfeba08cfcd7d8c4ea39fb00cf969267",
-  "integration_commit": {
     "commit": "cf476a3970153e3ce0d7038524fa52be5d54f177",
     "tree": "85e2799f7f95e9b8b2b93345f840c7c001aa4518",
     "parents": [
       "7418fda3a2d76e4c64a9f847470c3d171a947ea3",
       "7f5771d5e47742debec5f4af0a29e937b9aeedf6"
+    ]
+  },
+  "current_main": {
+    "commit": "29d566f7860240f22d634664c51e8583e50a3c5b",
+    "tree": "58fec902d5cc5bda62b5aca38f98e80b2ea4003d"
+  },
+  "merge_base": "7f5771d5e47742debec5f4af0a29e937b9aeedf6",
+  "integration_commit": {
+    "commit": "4888a4602ca143fbf0689e1a4d56422a73267cf0",
+    "tree": "e46389bc5bcbd66c86de2f6369ba5ef227851720",
+    "parents": [
+      "16ea2517fb3614deed62438a6735530a0a9c9c08",
+      "29d566f7860240f22d634664c51e8583e50a3c5b"
     ],
-    "first_parent_with_repair_source": "7418fda3a2d76e4c64a9f847470c3d171a947ea3",
-    "second_parent_current_main": "7f5771d5e47742debec5f4af0a29e937b9aeedf6",
+    "first_parent_with_repair_source": "16ea2517fb3614deed62438a6735530a0a9c9c08",
+    "second_parent_current_main": "29d566f7860240f22d634664c51e8583e50a3c5b",
     "strategy": "ort"
   },
   "ancestry_requirements": [
     {
       "role": "repair source reaches integration",
-      "ancestor": "6e73d024ec9dcc9a8bfbfb34a159a23ab7c8579e",
-      "descendant": "cf476a3970153e3ce0d7038524fa52be5d54f177"
+      "ancestor": "16ea2517fb3614deed62438a6735530a0a9c9c08",
+      "descendant": "4888a4602ca143fbf0689e1a4d56422a73267cf0"
     },
     {
       "role": "prior integration reaches final integration",
-      "ancestor": "7418fda3a2d76e4c64a9f847470c3d171a947ea3",
-      "descendant": "cf476a3970153e3ce0d7038524fa52be5d54f177"
+      "ancestor": "cf476a3970153e3ce0d7038524fa52be5d54f177",
+      "descendant": "4888a4602ca143fbf0689e1a4d56422a73267cf0"
     },
     {
       "role": "current main reaches integration",
-      "ancestor": "7f5771d5e47742debec5f4af0a29e937b9aeedf6",
-      "descendant": "cf476a3970153e3ce0d7038524fa52be5d54f177"
+      "ancestor": "29d566f7860240f22d634664c51e8583e50a3c5b",
+      "descendant": "4888a4602ca143fbf0689e1a4d56422a73267cf0"
     },
     {
       "role": "PR19 head reaches PR19 merge",
@@ -182,7 +182,7 @@
     },
     "exact_test": {
       "path": "tests/math_applications/test_navier_stokes_ns_b1a_c001_pressure_tail.py",
-      "raw_sha256": "sha256:ad359da81ca9aef36d2d5aacb47869069ecbdf17f2bb54779b09bbf3c30a8dda",
+      "raw_sha256": "sha256:63df9f735c981e95ab36b69e76bd15f07394f5d979e3161f724802413df4278c",
       "semantic_hash_kind": "RAW_ONLY",
       "semantic_hash": ""
     }
@@ -214,16 +214,31 @@
     "focused_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_navier_stokes_ns_b1a_c001_pressure_tail.py -q",
     "focused_passed": 10,
     "full_command": "python tools/run_application_tests.py --framework framework/RAKL",
-    "full_passed": 215,
+    "full_passed": 217,
     "diff_check_command": "git diff --check origin/main...HEAD",
-    "diff_check_result": "CLEAN"
+    "diff_check_result": "CLEAN_IN_EXACT_HEAD_WORKTREE_CONTEXT",
+    "diff_check_context": {
+      "snapshot_path": "research/real_math/millennium/navier_stokes/04_candidates/negative_history/NS_B1a_C001_PR19_RESULT_SNAPSHOT_9B6B8AE.md",
+      "policy": "whitespace=-trailing-space",
+      "default_exact_head_worktree_command": "git diff --check origin/main...HEAD",
+      "default_exact_head_worktree_result": "CLEAN",
+      "explicit_head_attribute_source_command": "git --attr-source=HEAD diff --check origin/main...HEAD",
+      "explicit_head_attribute_source_result": "CLEAN",
+      "explicit_base_attribute_source_command": "git --attr-source=origin/main diff --check origin/main...HEAD",
+      "explicit_base_attribute_source_result": "EXPECTED_CONTEXTUAL_FAILURE_IMMUTABLE_SNAPSHOT_TRAILING_WHITESPACE",
+      "base_attribute_observation": "whitespace: unspecified",
+      "head_attribute_observation": "whitespace: -trailing-space",
+      "context_free_clean_claim": false,
+      "interpretation": "Before this branch is merged, a neutral base worktree reads attributes from base and therefore reports the preserved snapshot hard breaks. The exact-head worktree and explicit HEAD attribute source apply the narrow snapshot exemption and pass. No live file is exempted."
+    }
   },
   "interpretation": [
     "Git provenance and mutation checks validate auditability only",
     "historical snapshot bytes are immutable negative history",
     "same-context review is not independent review or peer review",
-    "no candidate, theorem, novelty, Navier-Stokes, or Clay root authority is created"
+    "no candidate, theorem, novelty, Navier-Stokes, or Clay root authority is created",
+    "diff-check cleanliness is attribute-context dependent before the narrow policy lands on main"
   ],
   "authority": "FINAL_HEAD_INTEGRATION_VALIDATION / RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE",
-  "artifact_hash": "sha256:811b01d90625e9c841b1e5582223eaf915818f9ac9ddbaa87ccc5016a25042ac"
+  "artifact_hash": "sha256:2139eb1f4e63fd9ac94fb1ae41c158bfed584ddacee0c78ef3ac8bf8b534818c"
 }
