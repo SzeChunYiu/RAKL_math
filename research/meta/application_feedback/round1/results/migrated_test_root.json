@@ -1,0 +1,46 @@
+{
+  "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONNOUSERSITE=1 PYTHONPATH=<RAKL@15f1c3a>/src python -m pytest -q tests/math_applications/test_rh_spec_001_strict_packet.py",
+  "does_not_establish": [
+    "any claim about RH",
+    "that all possible migration failures share this cause"
+  ],
+  "evidence_artifacts": [
+    {
+      "commit_sha": "9ffa00dcb43639607bd58eca667eb83de4627a30",
+      "git_blob_sha": "1aa391f481994464205122a133248d9081ea4036",
+      "path": "tests/math_applications/test_rh_spec_001_strict_packet.py",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "08410cc5f4bf99d34934668facb663510e04282f72d5894dd4dfae6f7715aa05"
+    },
+    {
+      "commit_sha": "9ffa00dcb43639607bd58eca667eb83de4627a30",
+      "git_blob_sha": "45eb9a78f2bb00b935abc426d64cc2c723f282b9",
+      "path": "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_001_CONTEXT_FIBER_20260811.json",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "bfe98ee1f437a2435a4a7444a0a0086aa7db5ae6e3ebcc649f8df0539faaf0d8"
+    },
+    {
+      "commit_sha": "264f6ce869d726fbfa064d1e49eb0db2a38bceda",
+      "git_blob_sha": "c4dd334eebcc4850553c7de45e65e320806530d2",
+      "path": "tests/math_applications/test_rh_spec_001_strict_packet.py",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "0ee80057f585d681e334af8d0383a886cf021edd1ed9f6d36718d032cb029308"
+    },
+    {
+      "commit_sha": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+      "git_blob_sha": "8c99872ce1abca797f29351b87e639ad51f3e5d2",
+      "path": "change_log/2026-08-11-bootstrap.md",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "220c2a541d081ec8fb57fee794076f94fb602d10c262f3b429d1003426cc5513"
+    }
+  ],
+  "execution_checkout": "9ffa00dcb43639607bd58eca667eb83de4627a30",
+  "exit_code": 1,
+  "expected_path": "<checkout>/research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_001_CONTEXT_FIBER_20260811.json",
+  "observed_path": "<checkout>/tests/research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_001_CONTEXT_FIBER_20260811.json",
+  "pytest_summary": "1 failed",
+  "result_id": "result::rakl-math-feedback::migrated-test-root-v1",
+  "root_expression_after": "Path(__file__).resolve().parents[2]",
+  "root_expression_before": "Path(__file__).resolve().parents[1]",
+  "status": "FAIL_MIGRATED_TEST_ROOT_REBINDING"
+}

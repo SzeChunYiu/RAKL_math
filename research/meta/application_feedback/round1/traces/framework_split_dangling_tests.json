@@ -1,0 +1,10 @@
+{
+  "authority": "APPLICATION_OBSERVATION_ONLY",
+  "context_id": "context::rakl-math-feedback::framework-split-dangling-tests-v1",
+  "event_id": "trace-event::rakl-math-feedback::framework-split-dangling-tests-observed-v1",
+  "event_type": "RESULT_OBSERVED",
+  "next_discriminator": "A future split evaluator must compare owners, tests, and bound artifact paths in both source and destination trees before accepting either deletion set.",
+  "observed_at_utc": "2026-08-11T08:20:18Z",
+  "result_id": "result::rakl-math-feedback::framework-split-dangling-tests-v1",
+  "state_summary": "At framework commit 209a030, a retained P/NP application regression had two FileNotFound failures because its application artifacts had moved; the application state was preserved in RAKL_math and 19 migrated regressions were then removed from framework."
+}

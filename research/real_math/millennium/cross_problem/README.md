@@ -17,3 +17,18 @@ Active residual: `YM-S1-SCALED-UNIFORM-BRIDGE` — state/source the weakest targ
 BSD issues #90/#91 appeared after the XM001 pre-candidate context was frozen; they are intentionally not backfilled into that chronology. A future atom may incorporate them from a fresh context packet.
 
 No Millennium root status changes here. Same-context expert review is not independent review, and proposal/breakthrough mechanisms mint no theorem authority.
+
+## Application-to-framework learning boundary
+
+Repository-split successes and failures are cross-problem process evidence, not
+mathematical transfers. Round 1 is recorded under
+`research/meta/application_feedback/round1/` and transported by the
+self-hashing bundle in
+`receipts/application-feedback-round1-bundle-20260811.json`.
+
+Its exact import verdict is `QUARANTINED_PROPOSAL`: three scoped failure
+experiences and one exact-pin runner tool candidate were verified for transport
+only. The import performed no research-tool inventory mutation, no failure
+lattice mutation and no method promotion. Any recurring lesson must open a
+separate RAKL self-improvement fiber with a frozen meta-evaluator and fresh
+assurance before framework adoption.

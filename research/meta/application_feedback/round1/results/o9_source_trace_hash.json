@@ -1,0 +1,80 @@
+{
+  "does_not_establish": [
+    "mathematical validity",
+    "theorem authority",
+    "novelty",
+    "exact source-side cause"
+  ],
+  "evidence_artifacts": [
+    {
+      "commit_sha": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+      "git_blob_sha": "addc8186b88a1fa1f963e6bbe317245b694d915a",
+      "path": "migration/O9d12a2a1a_TRACE_INTEGRITY_REPAIR_RECEIPT_20260811.json",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "82f3266eb2c8df8b563554287df54a92baa375a36d6f7822fa2baf358a6a1cce"
+    },
+    {
+      "commit_sha": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+      "git_blob_sha": "1333d5fc80fa8ef37d42bd423b0574f1aaa67f3f",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a_PRE_CANDIDATE_TRACE_20260811.json",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "4842f757e095af3981e9261f76316983ca18c938ef4ba5f9f3d17f251e292094"
+    },
+    {
+      "commit_sha": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+      "git_blob_sha": "5233ca223efafb638cdd6a9f54a72a8587873f7a",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a_PRE_CANDIDATE_TRACE_MIGRATION_REPAIRED_20260811.json",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "816a08928a81d81dfe615935e3cd1da9ef185144525322b277d21012009643d0"
+    },
+    {
+      "commit_sha": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+      "git_blob_sha": "3c7d3266f8e3e97d7442d17735ce70d3678c2485",
+      "path": "tests/math_applications/test_pnp_o9d12a2a1a_trace_migration_integrity.py",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "2add863c4abd97fec4f5480c89cc9f86de4ccc82416bd5a903547e85b947eee3"
+    },
+    {
+      "commit_sha": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+      "git_blob_sha": "a80aed03d43ffd71b56aa188d8eee4f02b20e7be",
+      "path": "migration/RAKL_FINAL_SOURCE_OVERLAY_PROVENANCE.md",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "bb74c455947dde79128e1e5c7a608e332d4189b3c87554f78e88c4d00ee4d178"
+    }
+  ],
+  "observed_facts": {
+    "invalid_event_ids": [
+      "O9d12a2a1a-E01",
+      "O9d12a2a1a-E02",
+      "O9d12a2a1a-E03",
+      "O9d12a2a1a-E04",
+      "O9d12a2a1a-E05",
+      "O9d12a2a1a-E06"
+    ],
+    "migration_bytes_equal_recorded_source_commit": true,
+    "original_preserved": true,
+    "repair_changed_only": [
+      "trace_id",
+      "entries[*].artifact_hash",
+      "entries[*].previous_event_hash"
+    ],
+    "semantic_fields_changed": [],
+    "stored_chain_links_valid": true,
+    "valid_event_ids": [
+      "O9d12a2a1a-E07"
+    ]
+  },
+  "result_id": "result::rakl-math-feedback::o9-source-trace-hash-v1",
+  "root_cause_boundary": {
+    "exact_cause_status": "UNRESOLVED",
+    "ruled_out": [
+      "RAKL_math migration byte mutation"
+    ],
+    "unresolved_competing_diagnoses": [
+      "source event payloads changed after E01-E06 hashes were frozen",
+      "E01-E06 hashes used a noncanonical payload or serializer",
+      "source packet was assembled from semantically similar but hash-incompatible generations"
+    ]
+  },
+  "status": "FAIL_HASH_INTEGRITY_WITH_BYTE_PRESERVATION"
+}
