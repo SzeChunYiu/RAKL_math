@@ -1,0 +1,27 @@
+{
+  "receipt_id": "RH-ANA-003-FRAMEWORK-BASE-DRIFT-20260811",
+  "cycle_framework_main_at_freeze": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+  "cycle_framework_method_version": "3.0.0",
+  "cycle_rakl_math_main_at_freeze": "111a3f95c72b0a418f968708bd3eda77ef98bccf",
+  "observed_framework_main_after_cycle": "9df550debdd97fc5ed5ab264221aee3d258954ff",
+  "observed_rakl_math_main_after_cycle": "5a8c6bb2f297a536e1b0d1c8b0aa8e66cd1e3720",
+  "branch_head_before_this_receipt": "a99a1b1437894308465ae3776c57d02610ea820e",
+  "framework_surface_comparison": {
+    "method_version_at_end": "3.0.0",
+    "rakl_core_manifest_blob_start": "08189a10448d3b1ab85ea27005cf209b65cde83e",
+    "rakl_core_manifest_blob_end": "08189a10448d3b1ab85ea27005cf209b65cde83e",
+    "method_specs_blob_start": "3f629c4dd0ef55aedf14206b2be3df19875988b7",
+    "method_specs_blob_end": "3f629c4dd0ef55aedf14206b2be3df19875988b7",
+    "classification": "METHOD_SURFACES_CHECKED_UNCHANGED / REPOSITORY_BOUNDARY_PROVENANCE_DRIFT"
+  },
+  "boundary_regression": {
+    "observed": true,
+    "description": "Current RAKL/main contains H4d1 mathematical application artifacts even though the RAKL_math agent contract requires application state to remain in RAKL_math.",
+    "framework_issue": "SzeChunYiu/RAKL#177",
+    "authority_effect": "NONE: no mathematical result or framework-learning promotion is granted by the misplaced application content"
+  },
+  "effect_on_rh_cycle": "The RH cycle was chronologically frozen and executed against the then-current framework SHA 9027cc6... and the application pin matched it. The checked canonical method version, core manifest, and method_specs surface remained byte-identical at the later framework head, so no mathematical candidate/action is retroactively reinterpreted. The provenance drift is recorded separately and requires repository repair.",
+  "pr": "SzeChunYiu/RAKL_math#118",
+  "ci_status_at_observation": "NO_COMBINED_STATUSES_REPORTED_YET",
+  "root_authority": "NONE"
+}
