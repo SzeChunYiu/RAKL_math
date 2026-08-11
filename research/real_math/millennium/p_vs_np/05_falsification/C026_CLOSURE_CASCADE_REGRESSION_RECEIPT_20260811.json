@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "C026-CLOSURE-CASCADE-REGRESSION-20260811",
+  "candidate_id": "C026",
+  "atom_id": "O9d12a2a1a1",
+  "candidate_prereg_hash": "sha256:0f13981ea64a6c291ebe3d1f2c2d66a78b0139ef54b9b49358f5954fe16dc99b",
+  "branch": "research/pnp-o9d12a2a1a1-closure-cascade-20260811",
+  "bound_files": [
+    {"path":"research/real_math/millennium/p_vs_np/05_falsification/closure_cascade_falsifier.py","git_blob_sha1":"2992ff5796c7f09a289f42d6d3cbf2f01a4b3e81"},
+    {"path":"tests/math_applications/test_pnp_c026_closure_cascade.py","git_blob_sha1":"7c6eeec5cb5c20d5fb9f785e36d0dad603e60187"}
+  ],
+  "execution": {
+    "mode": "LOCAL_EXACT_CONTENT_RECONSTRUCTION_FROM_BRANCH_BLOBS",
+    "reason": "networked git checkout unavailable in execution container; exact branch file contents were fetched via GitHub connector and reconstructed locally",
+    "command": "pytest -q tests/math_applications/test_pnp_c026_closure_cascade.py",
+    "result": "3 passed in 0.06s",
+    "tested_m": [3,4,5,6,7,8,9],
+    "rows": [
+      {"m":3,"before_cardinality":4,"after_cardinality":8,"before_contains_empty":false,"after_contains_empty":true,"before_fired_count":0,"after_fired_count":2,"predictions_pass":true},
+      {"m":4,"before_cardinality":5,"after_cardinality":16,"before_contains_empty":false,"after_contains_empty":true,"before_fired_count":0,"after_fired_count":3,"predictions_pass":true},
+      {"m":5,"before_cardinality":6,"after_cardinality":32,"before_contains_empty":false,"after_contains_empty":true,"before_fired_count":0,"after_fired_count":4,"predictions_pass":true},
+      {"m":6,"before_cardinality":7,"after_cardinality":64,"before_contains_empty":false,"after_contains_empty":true,"before_fired_count":0,"after_fired_count":5,"predictions_pass":true},
+      {"m":7,"before_cardinality":8,"after_cardinality":128,"before_contains_empty":false,"after_contains_empty":true,"before_fired_count":0,"after_fired_count":6,"predictions_pass":true},
+      {"m":8,"before_cardinality":9,"after_cardinality":256,"before_contains_empty":false,"after_contains_empty":true,"before_fired_count":0,"after_fired_count":7,"predictions_pass":true},
+      {"m":9,"before_cardinality":10,"after_cardinality":512,"before_contains_empty":false,"after_contains_empty":true,"before_fired_count":0,"after_fired_count":8,"predictions_pass":true}
+    ]
+  },
+  "symbolic_derivation": {
+    "before_cardinality": "m+1",
+    "after_cardinality": "2^m",
+    "newly_forced_intersections": "m-1",
+    "log2_volume_jump": "m-log2(m+1)",
+    "general_claim_basis": "parametric set-containment/intersection proof in C026_source_native_closure_cascade.md; finite execution is regression only"
+  },
+  "verdict": "FROZEN_PREDICTIONS_SURVIVE_LOCAL_REGRESSION",
+  "scope": "generic finite source-compatible discrete spaces only",
+  "authority": "FINITE_EXECUTABLE_REGRESSION + SYMBOLIC_SCOPED_DERIVATION / NO_GRAPH_SPECIFIC_OR_P_VS_NP_ROOT_AUTHORITY",
+  "observed_at": "2026-08-11T12:18:00+00:00",
+  "artifact_hash": "sha256:7a71e1c948bb555ff7983589f25f13882fb467a4d0c2b85869c45042b1d1e6f8"
+}
