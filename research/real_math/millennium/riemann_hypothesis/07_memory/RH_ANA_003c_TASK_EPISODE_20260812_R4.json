@@ -1,0 +1,50 @@
+{
+  "schema": "RAKL-v3-shadow-TaskEpisode",
+  "episode_id": "EP-RH-ANA-003c-CUTOFF-GLUING-20260812-R4",
+  "atom_id": "RH-ANA-003c",
+  "problem_signature": ["Riemann Hypothesis","Li coefficients","Coffey S_Lambda prime/Laguerre remainder","source cutoff and conditional cancellation","localized log-scale decomposition","all-index uniformity","prime-zero duality"],
+  "context_fibre_hash": "sha256:f8f65c468d80f321113e4752664a1fecd41ed9376df22f1462ff99d3fb739bed",
+  "candidate_id": "C-RH-ANA-003c-INDEPENDENT-WINDOW-REORDERABILITY",
+  "search_policy": "source/rearrangement-legality-first; current-work-bound; counterexample-first",
+  "fibre_contents_actually_consulted": ["RAKL/main AGENTS.md","RAKL/main skills/rakl-core/SKILL.md","RAKL/main skills/rakl-core/manifest.yaml","RAKL/main skills/rakl-core/static/core/principles.md","RAKL/main skills/rakl-core/static/core/workflow.md","RAKL/main docs/RAKL_V3_IMPLEMENTATION_MANIFEST.md","RAKL/main RAKL_VERSION.json","RAKL/main src/rakl/method_specs.py","RAKL_math/main AGENTS.md","RAKL_math/main config/rakl-framework-pin.json","RAKL_math issue #3 root contract","RAKL_math issue #188 prospective RH-ANA-003c contract","RAKL_math PR #80 incomplete-Li/finite-height shadow","RAKL_math PR #118 aggregate-density exceptional-set shadow","RAKL_math PR #147 RH-ANA-003 R1-R3 shadow","RAKL_math PR #160 XM011 current-work coverage warning","RAKL_math PR #174 XM012 endpoint-anchor overtransfer falsifier","PR #147 file RH_ANA_003b_ROOT_COUPLING_FALSIFIER_20260811_R3.md","Coffey arXiv:0706.0343 primary source body/PDF","Coffey arXiv:math-ph/0505052 primary source landing record","Voros arXiv:math/0506326 primary source landing record","Guth-Maynard Annals of Mathematics 203 (2026), 623-675 / arXiv:2405.20552","Conrey-Farmer-Kwan-Lin-Turnage-Butterbaugh arXiv:2508.11108","Bellotti-Trudgian-Yang arXiv:2603.21490"],
+  "operators_and_motifs_tried": [
+    {"id":"OP-SOURCE-MOMENT-EXPANSION","operation":"expand the associated Laguerre polynomial into finitely many Coffey moment series","status":"SUCCESS_LOCAL"},
+    {"id":"OP-POSITIVE-DENSITY-ABSOLUTE-SUBSERIES","operation":"restrict absolute mass to even non-prime-powers where Lambda=0","status":"SUCCESS_FALSIFIER"},
+    {"id":"OP-SYNCHRONIZED-CONTIGUOUS-SHELLS","operation":"define finite contiguous m-windows and telescope in source order","status":"SUCCESS_REPRESENTATION_ONLY"},
+    {"id":"M-RH-ANA-ROOT-SENSITIVE-REMAINDER","operation":"audit whether proposed global/local gluing silently regains root strength","status":"REUSED_ROUTING_GUARD"},
+    {"id":"M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING","operation":"conditional source object requires explicit gluing witness","status":"NEW_PROPOSAL_SHADOW"}
+  ],
+  "experience_retrieval": {
+    "selected_ids": ["F-RH-ANA-001-FINITE-PREFIX","F-RH-ANA-002-SUZUKI-FAITHFULNESS","F-RH-ANA-003-DENSITY-EXCEPTION-GAP","F-RH-ANA-003a-MAGNITUDE-MAJORANT-CANCELLATION-LOSS","F-RH-ANA-003b-FULL-SLAMBDA-POLYNOMIAL-SMALLNESS-ROOT-COUPLED","F-RH-ANA-003b-PRIME-REMAINDER-AS-WEAKER-BRIDGE","F-XM011-CURRENT-WORK-COVERAGE-MISS","XM012-RH-ENDPOINT-ANCHOR-OVERTRANSFER","M-RH-ANA-ROOT-SENSITIVE-REMAINDER","CURRENT_WORK_BOUND_BEFORE_CONSEQUENTIAL_ROUTING","SUCCESSFUL_OVERTRANSFER_FALSIFICATION"],
+    "rejected_ids": ["F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE","zero-density-family-as-immediate-next-estimate","full-S_Lambda-PNT-global-bound"],
+    "missed_ids": "CANNOT_MEASURE: no complete governed denominator over all memories available in this connector runtime.",
+    "prior_experience_changed_routing": true,
+    "routing_change": "Immediate dyadic/log-window estimation was deferred; source summation legality was tested first."
+  },
+  "observations": ["Coffey Proposition 1 supplies convergent natural-order moment series for fixed logarithmic powers.","For fixed n, S_Lambda is a finite Laguerre-polynomial combination of those moments, hence source-order convergent.","The termwise absolute series diverges for every fixed n by restriction to even non-powers-of-two.","Contiguous finite windows telescope exactly only when assembled in the source order unless a stronger block-level convergence/equivalent-summation theorem is supplied."],
+  "verification_performed": [
+    {"kind":"PRIMARY_SOURCE_BODY","detail":"arXiv:0706.0343v2 Proposition 1/2 and proof around equation (48) opened; PDF page containing equations (12)-(17) visually inspected."},
+    {"kind":"ANALYTIC_FALSIFIER","detail":"leading Laguerre coefficient + positive-density even non-prime-power subseries proves absolute divergence."},
+    {"kind":"NUMERICAL_CALIBRATION_ONLY","detail":"n=1,2,3,5; cutoffs through 2e5; signed partial sums stable while absolute sums grow; no proof authority."},
+    {"kind":"PACKET_TEST_ADDED","detail":"tests/test_rh_ana003c_r4_packet.py validates hashes, chronology, current-work coverage and authority guards; CI pending at episode materialization."}
+  ],
+  "outcome": "REFUTED_ROUTE_LOCAL / PARTIAL_SUCCESS_REPRESENTATION_AND_GLUING",
+  "residual_before": "RH-ANA-003c localized one-sided prime discriminator not yet source/cutoff typed.",
+  "residual_after": "RH-ANA-003d synchronized moving-cutoff tail: freeze X(n)/shell family and prove source-order block-tail plus n-uniform Laguerre control under an obligation-strength audit.",
+  "failure_categories": ["math","representation","gluing"],
+  "local_math_failure_id": "F-RH-ANA-003c-ABSOLUTE-CONVERGENCE-FALSE",
+  "local_representation_failure_id": "F-RH-ANA-003c-ORDER-INDEPENDENT-WINDOW-SEMANTICS",
+  "local_to_global_gluing_failure_id": "F-RH-ANA-003c-UNWITNESSED-WINDOW-GLUE",
+  "diagnosis_id": "D-RH-ANA-003c-CONDITIONAL-SOURCE-CANCELLATION",
+  "obstruction_id": "O-RH-ANA-003c-SUMMATION-METHOD-BOUNDARY",
+  "candidate_lesson_id": "L-RH-ANA-003c-SYNCHRONIZE-CUTOFF-BEFORE-LOCAL-BOUND",
+  "candidate_motif_id": "M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING",
+  "novelty_class": {"primary":"REPRESENTATION","secondary":"COMPOSITIONAL","literature_novelty_claim":false},
+  "saturation_axes": {"KNOWLEDGE":"REOPENED_AND_RETAINED","OPERATOR":"NAIVE_ABSOLUTE_REORDER_FLATTENED; SYNCHRONIZED_CUTOFF_REOPENED","EXPERIENCE_PATTERN":"REOPENED","OBSTRUCTION":"REOPENED_AND_RETAINED","RELATION":"REOPENED_AT_LOCAL_TO_GLOBAL_GLUE","PATH":"INDEPENDENT_WINDOWS_FLATTENED; SYNCHRONIZED_TAIL_REOPENED","META_METHOD":"REOPENED_AS_PROPOSAL_ONLY_HYPOTHESIS_NOT_LEARNING"},
+  "cost_effort_proxy": {"source_body_primary_pdf_inspections":1,"numerical_calibration_runs":1,"same_context_expert_roles":7,"independent_reviews":0,"tokens":"CANNOT_MEASURE: model/context token counters are not exposed.","elapsed":"CANNOT_MEASURE: exact wall-clock cycle timer not exposed to the research artifact generator."},
+  "next_action": "Open/freeze RH-ANA-003d only after R4 result review and source-order gluing requirements are encoded.",
+  "chronology_note": "The separate TaskEpisode record was materialized after the combined negative-history result artifact. Thus this is proposal/shadow episode evidence but not a claim of strict v3 driver_learning result-episode-before-interpretation chronology. Pre-candidate fibre/memory/expert/trace chronology did precede candidate generation.",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "recorded_at": "2026-08-11T23:13:00Z",
+  "artifact_hash": "sha256:0899c07379a0ef25ff69ef0f8f7ed0edd291102e98f759696e2c633af9615e36"
+}
