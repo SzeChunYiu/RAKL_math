@@ -1,0 +1,39 @@
+{
+  "failure_id": "F-YM-S1C1-FIXED-REFERENCE-BARE-COUPLING-ESCAPE",
+  "atom_id": "YM-S1c1",
+  "source_episode_id": "EP-YM-S1C1-AF-BARE-COUPLING-AUDIT-20260811",
+  "diagnosis_status": "OBSERVED_ONLY",
+  "authority": "PROPOSAL_SHADOW_SEARCH_PRIORITY_ONLY",
+  "method_family": "fixed-reference implicit-function tuning -> asymptotically-free Wilson bare trajectory",
+  "failure_mode": "the audited theorem tunes beta_K into an exponentially shrinking neighborhood of one fixed finite beta_* while the downstream claim requires beta(a)->infinity",
+  "residual_signature": [
+    "Theorem 5.4 as stated yields beta_K -> fixed finite beta_* rather than beta(a)->infinity",
+    "moving-domain/uniform-estimate theorem for Wilson bare-coupling escape remains source-unbound",
+    "gap/clustering transport along a genuine asymptotically-free continuum trajectory remains open",
+    "root G5-G7 gluing interface remains incomplete"
+  ],
+  "broken_assumptions": [
+    "entry into a contraction ball near one fixed bare coupling is sufficient to prove the Wilson bare coupling escapes to weak coupling as lattice spacing vanishes",
+    "renormalized-coupling decay at increasing effective scale can replace a missing source-bound relation beta(a)->infinity",
+    "uniform estimates on one fixed compact beta interval automatically extend to a moving beta interval escaping to infinity"
+  ],
+  "scope_conditions": [
+    "Faizal-Shabir arXiv:2606.19362v1 Theorem 5.4 / Corollary 5.6 / Theorem 5.7 proof chain",
+    "the fixed-reference beta_* and compact-I argument as written",
+    "does not claim nonexistence of another asymptotically-free trajectory theorem"
+  ],
+  "competing_diagnoses": [
+    "a moving beta_*(K) was intended but its uniformity proof is absent from the audited theorem",
+    "a different bare-coupling coordinate was intended but is not explicitly converted to the Wilson beta used earlier",
+    "another theorem elsewhere may repair the bridge"
+  ],
+  "selected_diagnosis": "",
+  "falsifier_or_attempt": "take K->infinity in the source's explicit delta_K and beta_K interval and compare with its stated beta(a)->infinity requirement",
+  "observed_result": "delta_K=O(rho^K)->0 and beta_K remains in a shrinking neighborhood of fixed beta_*, so this construction converges to beta_*",
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/03_sources/YM_S1C1_FAIZAL_SHABIR_AF_ENTRY_AUDIT_20260811.md",
+    "RAKL_math issue #69",
+    "arXiv:2606.19362v1 pp. 572-578 and Appendix A.9"
+  ],
+  "timestamp": "2026-08-11T11:10:00+00:00"
+}
