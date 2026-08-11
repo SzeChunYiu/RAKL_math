@@ -1,0 +1,72 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow-r1",
+  "atom_id": "NS-B1a3b1a",
+  "parent_atom_id": "NS-B1a3b1",
+  "issue_id": "RAKL_math#127",
+  "object_context": "Whole-space Type-I Navier-Stokes blow-up-classification child. Test whether the numerical finite-I local Type-I functionals alone admit a bounded producer map into Grujic v2's uniform time-slice vorticity amplitude/phase signature. A hostile near-miss may falsify only a bare functional embedding; it cannot refute an equation-specific Navier-Stokes implication.",
+  "root_contract": {
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "accepted_terminal_outcomes": ["Clay A", "Clay B", "Clay C", "Clay D"],
+    "current_lane": "positive regularity / Type-I classification / geometric-depletion producer audit",
+    "independent_mathematical_reviews": "0/3",
+    "root_promotion_authority": "NONE"
+  },
+  "active_problem_signature": {
+    "producer": "Albritton-Barker local Type-I functional I(Q')=sup_{Q(z,r) subset Q'}[A+C+D+E] for suitable weak Navier-Stokes solutions",
+    "candidate_bare_map": "bounded numerical A/C/D/E signature -> uniform-in-time time-slice vorticity L^{3/2,infinity} amplitude plus bmo_{1/|log rho|} direction",
+    "consumer": "Grujic v2 global uniform-in-time L^{3/2,infinity} vorticity plus bmo_{1/|log rho|} vorticity direction, with critical-profile and far-field hypotheses",
+    "discriminator": "Can a smooth divergence-free time-frequency burst keep every numerical A/C/D/E scale functional uniformly bounded while its peak-time vorticity Lorentz amplitude and direction bmo_phi norm diverge?"
+  },
+  "fibre_contents_actually_consulted": {
+    "root_and_parent": ["RAKL_math issue #122", "NS-B1a3b1_CONTEXT_FIBER_R2_20260811.json", "NS_B1a3b1_C001_R2_DELTA_20260811.yaml", "NS-B1a3b1_C001_R2_RAKL_METHOD_CASE_STUDY_20260811.md", "NS-B1a3b1_C001_R2_RAKL_CYCLE_METRICS_20260811.json"],
+    "primary_sources": [
+      {"id": "AB-TYPEI-ANCIENT", "source": "Albritton–Barker, arXiv:1811.00502v2 / J. Math. Fluid Mech. 2019", "selectors": ["Theorem 1.1", "definitions (1.1)-(1.6) of A,C,E,D and I", "local Type-I discussion"]},
+      {"id": "GRUJIC-2026-LOG-DEPLETION-v2", "source": "Grujic, arXiv:2607.08866v2, revised 2026-07-13", "selectors": ["Definition 2.1", "bmo_phi definition with phi(r)=1/|log r|", "Theorem 4.1", "main pre-singularity analyticity/escape-time theorem"]}
+    ],
+    "selected_prior_experience": ["EP-NS-B1a3b-C001-20260811", "EP-NS-B1a3b1-C001-R2-20260811", "L-NS-B1a3b1-SCALE-STABLE-CONSUMER-MOVES-OBSTRUCTION-UPSTREAM@CANDIDATE", "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION", "F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY", "F-NS-B1a3-UNCONTROLLED-FAR-FIELD", "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH", "F-NS-B1a3b1-GLOBAL-CONSUMER-SIGNATURE-MISMATCH", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT", "PRE-ACTION-FIBRE-RECEIPT-v1"]
+  },
+  "structural_coordinates": [
+    "Parabolic scaling separates time-integrated first-derivative control from a uniform time-slice derivative norm.",
+    "AB finite-I controls velocity A/C, pressure D, and spacetime gradient E on parabolic cylinders; the source theorem does not list a uniform time-slice vorticity Lorentz norm or normalized-direction BMO norm as an output.",
+    "Grujic v2 consumes global uniform-in-time critical vorticity amplitude and global logarithmic BMO direction information.",
+    "Strong local L^3 convergence of velocity does not authorize differentiation to strong vorticity convergence.",
+    "Global Lorentz/far-field gluing is a distinct obstruction from failure of a local bare functional embedding.",
+    "A divergence-free non-solution hostile near-miss may invalidate a norm-only interpolation claim while leaving PDE-specific smoothing/rigidity open.",
+    "Backward uniqueness and ancient-solution rigidity are downstream consumers; they cannot create a missing producer certificate.",
+    "Type-II classification remains outside this child."
+  ],
+  "analogy_transfer": {
+    "same_context_analogue": "time-concentrated high-frequency divergence-free fields as hostile near-misses for converting parabolic Morrey control into uniform time-slice derivative control",
+    "transfer_assumption": "only the algebra of the numerical A/C/D/E functionals is transferred; no Navier-Stokes equation satisfaction is transferred",
+    "disanalogy": "actual AB producer lives on suitable weak Navier-Stokes solutions and may exploit the equation, pressure coupling, local energy inequality, analyticity/smoothing or rigidity unavailable to the hostile test family",
+    "cross_millennium_tool": {
+      "id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "applicability": "workflow-only producer-output/consumer-input type check",
+      "difference_witness": "equations, state spaces, norms, proof objects and source hypotheses differ; no mathematical theorem or evidence transfers across Millennium problems"
+    }
+  },
+  "counterexample_first_falsifier": {
+    "family": "A_N=(0,0,N^{-1} chi(x) cos(N x1)); v_N=curl A_N; u_N(x,t)=eta(N^2(t-t0)) v_N(x); q_N=0, with chi=1 on B_{3/4}, supp chi subset B_1, eta(0)=1 and compact time support",
+    "failure_condition": "If the numerical I-signature is uniformly bounded but peak-time ||omega_N||_{L^{3/2,infinity}} and ||xi_N||_{bmo_phi} diverge, a bare bounded producer map from I-functionals to those consumer norms is refuted.",
+    "non_overreach": "The family is deliberately not asserted to solve Navier-Stokes. Success does not refute NSE+finite-I -> consumer; it only blocks an interpolation/representation proof using the registered norms alone."
+  },
+  "interface_audits": [
+    "weak/strong convergence: keep velocity compactness distinct from derivative/direction compactness",
+    "pressure localization: hostile family q=0 is not an NSE pressure certificate; actual pressure hypotheses remain downstream",
+    "far field: global Lorentz and Biot-Savart tails remain a separate gluing failure",
+    "noncompact symmetries: not used to obtain the local hostile near-miss; still relevant to actual blow-up compactness",
+    "backward uniqueness: downstream and hypothesis-sensitive",
+    "equation change: hostile family is a norm-space probe, not an equation-preserving limit"
+  ],
+  "framework": {
+    "method": "RAKL Verified Discovery Method / v3 proposal-shadow",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "repository": "SzeChunYiu/RAKL",
+    "git_sha": "8118b9c96cd426439a7e3c4b737d279a047e37f2",
+    "manifest_evidence_cutoff_main_sha": "0cea6cc39a3cf67ef7ecff3fff9a704944c32ab8"
+  },
+  "application_base_sha": "c48293364c6bdf7e0c5d93f5e01d889008c9eb61",
+  "frozen_after_current_framework_read_at": "2026-08-11T17:13:12Z",
+  "packet_hash": "sha256:396a47d11ebcc548ed2bf9787bf173011c591d252fa32bc626832c9c1d0cb521"
+}
