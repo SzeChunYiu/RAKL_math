@@ -6,12 +6,17 @@ import json
 import math
 from pathlib import Path
 
+import jsonschema
+
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "research/real_math/millennium/riemann_hypothesis"
 CALIBRATION = BASE / "04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.json"
 CONTINUATION = BASE / "09_trace/RH_SPEC_002_CALIBRATION_TRACE_CONTINUATION_20260811.json"
 PARENT_TRACE = BASE / "09_trace/RH_SPEC_002_OPEN_TRACE_20260811.json"
+FAILURES = BASE / "07_memory/RH_SPEC_002_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json"
+TOOLS = BASE / "07_memory/RH_SPEC_002_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json"
+FRAMEWORK = ROOT / "framework/RAKL"
 
 
 def _canonical_hash(value: object) -> str:
@@ -19,8 +24,12 @@ def _canonical_hash(value: object) -> str:
     return "sha256:" + hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
 
+def _load(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def test_calibration_artifact_hash_and_route_classification() -> None:
-    raw = json.loads(CALIBRATION.read_text(encoding="utf-8"))
+    raw = _load(CALIBRATION)
     payload = copy.deepcopy(raw)
     payload["artifact_hash"] = ""
     assert raw["artifact_hash"] == _canonical_hash(payload)
@@ -40,6 +49,40 @@ def test_calibration_artifact_hash_and_route_classification() -> None:
     assert raw["research_decision"]["selected_next_residual"] == (
         "RH-SPEC-002a-DETERMINANT-COMPACTNESS-BRIDGE"
     )
+
+
+def test_postcalibration_dual_memory_is_scoped_and_hash_valid() -> None:
+    failures = _load(FAILURES)
+    tools = _load(TOOLS)
+    failure_schema = _load(FRAMEWORK / "schemas/failure-experience-lattice.schema.json")
+    tool_schema = _load(FRAMEWORK / "schemas/research-tool-inventory.schema.json")
+    jsonschema.Draft202012Validator(failure_schema).validate(failures)
+    jsonschema.Draft202012Validator(tool_schema).validate(tools)
+
+    ids = {item["failure_id"] for item in failures["experiences"]}
+    assert ids == {
+        "F-RH-SPEC-002-STRONG-RESOLVENT-INCOMPLETE",
+        "F-RH-SPEC-002-GALERKIN-POLLUTION",
+        "F-RH-SPEC-002-JOINT-LIMIT-AMBIGUITY",
+        "F-RH-SPEC-002-FINITE-ZERO-PREFIX",
+    }
+    for item in failures["experiences"]:
+        payload = copy.deepcopy(item)
+        artifact_hash = payload["artifact_hash"]
+        payload["artifact_hash"] = ""
+        assert artifact_hash == _canonical_hash(payload)
+        assert item["diagnosis_status"] == "SUPPORTED"
+        assert item["context_packet_hash"].startswith("sha256:")
+
+    assert len(tools["tools"]) == 1
+    tool = tools["tools"][0]
+    payload = copy.deepcopy(tool)
+    artifact_hash = payload["artifact_hash"]
+    payload["artifact_hash"] = ""
+    assert artifact_hash == _canonical_hash(payload)
+    assert tool["authority"] == "VERIFIED_LOCAL"
+    assert "does not prove source-side convergence or normalization" in tool["non_guarantees"]
+    assert "freeze the target domain before evaluation and justify why it covers the root-relevant zeros" in tool["validation_obligations"]
 
 
 def test_rank_one_projection_strong_resolvent_calibration() -> None:
@@ -96,8 +139,8 @@ def test_finite_real_zero_prefix_does_not_force_entire_convergence() -> None:
 
 
 def test_calibration_trace_continues_parent_hash_chain() -> None:
-    parent = json.loads(PARENT_TRACE.read_text(encoding="utf-8"))
-    continuation = json.loads(CONTINUATION.read_text(encoding="utf-8"))
+    parent = _load(PARENT_TRACE)
+    continuation = _load(CONTINUATION)
     parent_final = parent["entries"][-1]["artifact_hash"]
     assert parent_final == continuation["parent_final_event_hash"]
 
