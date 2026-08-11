@@ -1,0 +1,52 @@
+{
+  "schema_version": "v3-shadow-failure-v0",
+  "artifact_type": "FAILURE_EXPERIENCE_PROPOSAL",
+  "status": "OBSERVED_ONLY",
+  "failure_id": "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY",
+  "atom_id": "NS-B2a",
+  "candidate_id": "METHOD-FAMILY:F1-ABSOLUTE-CUTOFF-FLUX-TO-EULER-RIGIDITY",
+  "context_snapshot_hash": "sha256:cbe6fe7efbc0d70227a3543ee38f3f37917748f2453c75d80ce00d2c95d8c37b",
+  "method_family": "absolute local-energy cutoff flux at expanding scales -> no-incoming-energy tail -> ancient Euler rigidity",
+  "failure_mode": "Seregin's F(a)=1 bounds are exactly scale critical, so the canonical absolute time-cutoff, cubic transport, and pressure-transport estimates are O(R), hence O(1) after normalization by the natural kinetic-energy scale R; no large-scale decay follows from these absolute estimates alone.",
+  "residual_signature": [
+    "need an independently inherited tail/tightness or signed-flux coordinate",
+    "moving-center and profile-leakage control remain open",
+    "need a target-valid ancient Euler rigidity theorem once the tail condition is produced"
+  ],
+  "competing_diagnoses": [
+    "critical scaling alone prevents any absolute-cutoff decay and the route requires a new signed/telescoping quantity",
+    "the missing decay exists only at the Navier-Stokes prelimit level and is lost by weak Euler passage unless extra tightness is proved",
+    "origin-centered estimates miss moving-center incoming energy/profile leakage",
+    "a suitable Euler Liouville theorem can close the route using a different hypothesis not visible in the absolute cutoff estimate"
+  ],
+  "selected_diagnosis": "",
+  "diagnosis_status": "OBSERVED_ONLY",
+  "scope_conditions": [
+    "Seregin arXiv:2606.29468 Theorem 3.1 in the example where F(a)=1",
+    "canonical absolute estimates using only the scale-critical A/E/D information in (3.5), the local energy inequality (3.7), and standard local interpolation",
+    "does not rule out signed cancellation, monotonicity, annular tightness, prelimit flux information, symmetry-specific Liouville theorems, or other Euler rigidity mechanisms"
+  ],
+  "evidence_pointers": [
+    "arXiv:2606.29468v1, Theorem 3.1, equations (3.5)-(3.8), and the F(a)=1 example after Theorem 3.1",
+    "RAKL_math issue #65",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a_C001_PRESSURE_TAIL_LOCALIZATION_20260811.md",
+    "RAKL_math PR #54 (pending structural analogue only)"
+  ],
+  "local_repair_attempts": [
+    "rotate from absolute large-scale cutoff flux to a fresh child testing signed/telescoping flux or prelimit tail tightness",
+    "require a fresh strict context before any theorem candidate",
+    "keep backward uniqueness out unless a Navier-Stokes equation is actually retained"
+  ],
+  "authority_contract": {
+    "effective_authority": "PROPOSAL_ONLY",
+    "allowed_effect": "SEARCH_PRIORITY_ONLY",
+    "grants_tool_authority": false,
+    "grants_proof_authority": false,
+    "grants_gluing_authority": false,
+    "grants_theorem_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false
+  },
+  "timestamp": "2026-08-11T10:53:00Z",
+  "artifact_hash": "sha256:f0acdfda533fce4b197c13a9c1a2117e4f38335b15ed1b7bdab51c43a4ce9cc8"
+}

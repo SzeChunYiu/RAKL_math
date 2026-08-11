@@ -1,0 +1,92 @@
+{
+  "schema_version": "v3-shadow-fibre-v0",
+  "artifact_type": "PROBLEM_FIBRE_SNAPSHOT_PROPOSAL",
+  "status": "RETROSPECTIVE_SHADOW_ONLY",
+  "atom_id": "NS-B2a",
+  "goal": "Audit whether Seregin's F(a)=1 ancient Euler class plus its local-energy inequality yields an absolute large-scale no-incoming-flux decay sufficient for rigidity.",
+  "framework_source": {
+    "repository": "SzeChunYiu/RAKL",
+    "commit": "decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8"
+  },
+  "application_source": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "commit": "a071ef22d2478b1603567a9e90202ec3ce99fb59"
+  },
+  "structural_coordinates": [
+    "Type-II blowup",
+    "Euler scaling",
+    "ancient Euler limit",
+    "F(a)=1",
+    "scale-critical local energy",
+    "pressure localization",
+    "far-field tightness",
+    "no-incoming energy flux",
+    "local-to-global rigidity",
+    "profile leakage"
+  ],
+  "desired_effects": [
+    "prune invalid rigidity bridge",
+    "identify exact tail/gluing obligation",
+    "preserve retrospective chronology"
+  ],
+  "consulted_items": [
+    {
+      "id": "SRC-SEREGIN-2606.29468-THM3.1",
+      "kind": "PRIMARY_SOURCE",
+      "authority": "SOURCE_BOUND",
+      "role": "selected",
+      "reason": "Defines the exact F-weighted ancient Euler class, local energy inequality, and nontriviality."
+    },
+    {
+      "id": "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+      "kind": "FAILURE_EXPERIENCE",
+      "authority": "SUPPORTED_SCOPED_ON_MAIN",
+      "role": "selected_warning",
+      "reason": "Shows instantaneous far-field pressure divergence is already pruned in the Type-I route; prevents repeating a raw pressure-accumulation story."
+    },
+    {
+      "id": "F-NS-B1a1-ABSOLUTE-LOCAL-ENERGY-SCALE-CURRENCY",
+      "kind": "PENDING_PR54_FAILURE",
+      "authority": "NONCANONICAL_PENDING_ONLY",
+      "role": "retrieved_but_not_authority",
+      "reason": "Structurally analogous critical-scale failure; useful only as a DifferenceWitness because PR #54 is not merged and concerns viscous NS rather than the Euler limit."
+    },
+    {
+      "id": "SEREGIN-2507.08733",
+      "kind": "PRIMARY_SOURCE_ANALOGUE",
+      "authority": "SOURCE_BOUND",
+      "role": "selected_analogue",
+      "reason": "Confirms Euler-scaling/Liouville architecture requires additional scenario-specific structure; does not supply the F=1 tail theorem."
+    },
+    {
+      "id": "NS-BACKWARD-UNIQUENESS",
+      "kind": "RESEARCH_ROUTE",
+      "authority": "REJECTED_FOR_THIS_ATOM",
+      "role": "rejected",
+      "reason": "The limiting equation in Theorem 3.1 is Euler, so parabolic Navier-Stokes backward uniqueness is not a direct closure."
+    },
+    {
+      "id": "GAVRILOV-COMPACT-SUPPORT-EULER",
+      "kind": "ADVERSARIAL_ANALOGUE",
+      "authority": "REJECTED_AS_DIRECT_COUNTEREXAMPLE",
+      "role": "rejected",
+      "reason": "A stationary compactly supported Euler field does not automatically satisfy Seregin's gradient spacetime scale bound (3.5)."
+    }
+  ],
+  "operators_considered": [
+    {"id": "SOURCE_DEPENDENCY_AUDIT", "selected": true},
+    {"id": "SCALE_INVARIANCE_DISCRIMINATOR", "selected": true},
+    {"id": "CONTRASTIVE_DIFFERENCE_WITNESS", "selected": true},
+    {"id": "ABSOLUTE_CUTOFF_FLUX_BOUND", "selected": true},
+    {"id": "PARABOLIC_BACKWARD_UNIQUENESS", "selected": false},
+    {"id": "PREMATURE_EULER_LIOUVILLE_INVENTION", "selected": false}
+  ],
+  "unresolved_warnings": [
+    "no fresh strict pre-result MathContextFiber was frozen for this discriminator; this snapshot is retrospective and grants zero pre-candidate credit",
+    "origin-centered critical bounds do not imply far-field tightness under moving centers",
+    "absolute bounds do not rule out signed cancellation or telescoping",
+    "local Euler energy inequality plus critical bounds do not by themselves identify an admissible Liouville theorem",
+    "RAKL_math framework pin is stale relative to current RAKL main; current framework was read directly for this cycle"
+  ],
+  "snapshot_hash": "sha256:cbe6fe7efbc0d70227a3543ee38f3f37917748f2453c75d80ce00d2c95d8c37b"
+}

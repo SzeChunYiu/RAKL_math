@@ -1,0 +1,41 @@
+atom_id: NS-B2a1
+parent_atom_id: NS-B2a
+root_issue: 4
+status: CONTEXT_REQUIRED
+root_authority: NONE
+
+title: EULER_TAIL_TIGHTNESS_OR_SIGNED_FLUX
+question: >-
+  Can the original Navier-Stokes Type-II blow-up sequence supply a content-bound
+  annular/tail or signed-flux condition that survives the Euler scaling and weak
+  limit, and that combines with the exact inherited ancient-Euler class to close
+  a source-valid Liouville contradiction?
+
+opened_by:
+  failure_id: F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY
+  task_episode_id: EP-NS-B2a-F1-ABSOLUTE-FLUX-20260811
+  result: ABSOLUTE_F1_CUTOFF_ESTIMATES_REMAIN_SCALE_CRITICAL
+
+known_boundary:
+  - Seregin arXiv:2606.29468 Theorem 3.1 produces an ancient Euler limit, not a Navier-Stokes limit.
+  - In the logarithmic example F(a)=1, the displayed local energy, pressure and gradient bounds are scale critical.
+  - Canonical absolute time-cutoff, cubic-transport and pressure-transport estimates are O(R), hence O(1) after kinetic-energy normalization.
+  - This does not rule out signed cancellation, telescoping, annular tightness, moving-center compactness, or a different Euler Liouville theorem.
+  - Local convergence and origin-centered bounds do not by themselves preserve global tail information.
+
+candidate_generation_gate:
+  allowed: false
+  reason: >-
+    The parent discriminator is retrospective. Freeze a new strict MathContextFiber,
+    source packet, transfer/disanalogy matrix, structural analogy, same-context
+    expert cell, dual success/failure memory review, and hash-chained pre-candidate
+    trace before any theorem candidate.
+
+first_discriminators:
+  - Bind the exact prelimit-to-Euler convergence topology and identify which annular/tail quantities are lower-semicontinuous, compact, or uncontrolled.
+  - Test a moving-center/multiple-profile hostile world against any origin-centered tail claim.
+  - Search for a source-valid signed or telescoping Euler local-energy flux identity whose total budget is finite under hypotheses actually inherited from the prelimit.
+  - Separate pressure normalization/local harmonic pieces from genuine far-field incoming flux.
+  - State the exact Euler Liouville theorem needed only after its tail hypothesis has been produced independently.
+
+authority: STRICT_CHILD_RESIDUAL_ONLY / NO_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE
