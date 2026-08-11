@@ -1,0 +1,155 @@
+{
+  "schema_version": "h4d1d0-result-packet-v1",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "pre_action_receipt_hash": "734888108cce58b020ce31249cda538cfc727d732ac319319c892d7719d6542f",
+  "pre_action_commit": "0106e9186e19cca49728e39e94db74528dcd5418",
+  "result": {
+    "result_id": "H4d1d0-C001-PROPER-COVER-EQUIVALENCE",
+    "atom_id": "H4d1d0",
+    "authority": "SOURCE_BOUND_REPRESENTATION_LEMMA / PROPOSAL_SHADOW / NO_HODGE_THEOREM / ROOT_AUTHORITY_NONE",
+    "scope": {
+      "base_field": "C",
+      "branch": "irreducible reduced finite-type algebraic Hodge-locus branch T",
+      "family": "smooth projective X_T→T",
+      "class": "flat rational Hodge class α; this propagation atom assumes one central algebraic witness",
+      "parameterization_assumption": "there is a countable family {W_i→T} of proper finite-type exact-class signed-rational witness spaces whose fibres collectively contain every algebraic witness type under consideration"
+    },
+    "class_level_equivalence": {
+      "A": "for every t∈T(C), α_t has an exact signed-rational algebraic-cycle witness",
+      "B": "for some i, the proper image of W_i→T equals T",
+      "claim": "A iff B under the stated parameterization assumption",
+      "proof": [
+        "B⇒A is immediate from exact-class witness semantics.",
+        "For A⇒B, each Z_i=im(W_i→T) is Zariski closed because W_i→T is proper.",
+        "A gives T(C)=⋃_i Z_i(C).",
+        "An irreducible finite-type variety over uncountable C cannot be a countable union of proper Zariski-closed subsets; hence some Z_i=T.",
+        "The uncountability lemma is elementary: reduce by Noether normalization to A^n; for countably many nonzero defining polynomials, choose coordinates inductively outside the countable set of values making any specialization vanish identically."
+      ]
+    },
+    "standard_parameterization_calibration": {
+      "status": "SUFFICIENT_SCOPED_MODEL_NOT_ROOT_PROOF",
+      "construction": [
+        "clear one rational denominator N",
+        "write a witness as a finite signed integral combination Σ a_j[Z_j] with integral subvarieties Z_j",
+        "record the finite integer coefficient tuple and Hilbert polynomials P_j",
+        "use the fibre product over T of relative Hilb^{P_j}_{X_T/T}; fixed-P factors are proper over T by Stacks Tag 0DPH",
+        "there are countably many N, finite integer tuples and Hilbert-polynomial tuples",
+        "restrict to connected/exact-class pieces on which Σ a_j cl(Z_j)=Nα under the pulled-back local system; this class-binding is an explicit requirement and is not inferred from Hilbert polynomial alone"
+      ],
+      "boundary": "The audit does not claim a new general theorem about algebraicity of the exact-class locus; it only identifies the required typed condition for the countable proper-family implication."
+    },
+    "selected_component_falsifier": {
+      "claim": "A does not imply that the component containing the selected central witness z0 dominates T.",
+      "toy_control": "Let T=A^1_C. Let W_dom=T map by identity and W_vert={0} map to 0. Choose z0∈W_vert. Every t has a witness through W_dom and some component dominates, but the selected component through z0 has image {0}.",
+      "interpretation": "class-level component switching is logically distinct from persistence of a chosen witness; a selected-witness route needs a source-specific connectivity/replacement/transport theorem."
+    },
+    "outcome": "PARTIAL_SUCCESS",
+    "failure_category": "ROOT_LIKE_REPRESENTATION_NONCONTRACTION_PLUS_SELECTED_COMPONENT_GLUING_GAP",
+    "novelty_class": "representation",
+    "novel_structure_rank": 0,
+    "source_provenance": [
+      {"id":"CDK-ALG-GEOM-9402009","role":"algebraicity of fixed-class Hodge locus","url":"https://arxiv.org/abs/alg-geom/9402009"},
+      {"id":"STACKS-0DPH","role":"properness of fixed-Hilbert-polynomial relative Hilbert space","url":"https://stacks.math.columbia.edu/tag/0DPH"},
+      {"id":"DAN-1404.7519","role":"source-family flag-Hilbert variational-Hodge positive control","url":"https://arxiv.org/abs/1404.7519"},
+      {"id":"KLOOSTERMAN-2104.14845","role":"special complete-intersection VHC positive control","url":"https://arxiv.org/abs/2104.14845"}
+    ],
+    "negative_history": [
+      "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO: detector restriction cannot repair branch obstruction with the same detector",
+      "F-HM1a-OPEN-ROOT-LIKE-PIECE (pending/noncanonical): exact intermediate structure is nonprogress if a critical source-coverage obligation is root-like",
+      "H4d1c/PR119 warning (pending/noncanonical): selected-witness and class-level component switching must be typed"
+    ],
+    "local_vs_gluing": {
+      "local_mathematical_result": "conditional class-level equivalence and selected-component nonimplication",
+      "local_mathematical_failure": "no independent general mechanism was found that selects/dominates a component from central data",
+      "gluing_failure": "even a dominating class-level component need not contain z0; monodromy can still permute or disconnect witness components; global continuation and singular degeneration are not discharged",
+      "root_failure": "the entire deformation lane starts from an algebraic central witness and therefore does not solve initial algebraicity of an arbitrary rational Hodge class"
+    },
+    "next_action": "open H4d1e as a source-specific selected-or-bounded-complexity component transport atom: require a theorem from central witness geometry that forces a component containing z0, or a canonically replaceable bounded family, to dominate a dense open of T without assuming pointwise algebraicity on T.",
+    "timestamp": "2026-08-11T18:23:00+00:00",
+    "artifact_hash": "sha256:04f60bdff0e70a1276bfaa1ef31673823d52285813e95c46e782e3d5039b7b9b"
+  },
+  "task_episode": {
+    "episode_id": "H4d1d0-C001-PROPER-COVER-EQUIVALENCE",
+    "task_id": "HODGE-ROOT-6",
+    "atom_id": "H4d1d0",
+    "context_hash": "sha256:2f7f9cc25c81d0cf923bccbe42c53e231d7ba55a4f97b328dc9c86610febf154",
+    "problem_signature": {
+      "object": "irreducible reduced algebraic Hodge branch with exact signed-rational witness parameterization",
+      "goal": "test epistemic contraction of some-component proper domination",
+      "scope": "rational/smooth-projective/complex; propagation only; central witness assumed"
+    },
+    "fibre_snapshot_hash": "sha256:1bcb683112fa9827e4ee9c504e016c8f91908ca4d22014fe29cb850e4dfeb30d",
+    "operator_ids": ["OP-H4D1D0-ROOTLIKE-COVER-EQUIVALENCE-AUDIT", "OP-H4D1D0-SELECTED-COMPONENT-ADVERSARIAL-TEST"],
+    "action_trace": [
+      {"step":"proper-image reduction","detail":"set Z_i=im(W_i→T), closed by properness"},
+      {"step":"countable-cover falsifier","detail":"A implies T(C)=union_i Z_i(C); uncountability forces one Z_i=T"},
+      {"step":"reverse implication","detail":"dominating exact witness component gives pointwise algebraicity"},
+      {"step":"selected-component hostile control","detail":"W_dom⊔W_vert over A1 shows selected z0 component need not dominate"}
+    ],
+    "observation_ids": ["OBS-H4D1D0-CLASSLEVEL-EQUIVALENCE", "OBS-H4D1D0-SELECTED-COMPONENT-NONIMPLICATION"],
+    "verification_ids": ["SRC-CDK-ALG-GEOM-9402009", "STACKS-0DPH", "SRC-DAN-1404.7519", "SRC-KLOOSTERMAN-2104.14845", "SELF-CHECK-UNCOUNTABLE-COVER-INDUCTION", "HOSTILE-CONTROL-WDOM-WVERT"],
+    "outcome": "PARTIAL_SUCCESS",
+    "residual_signature": [
+      "selected-component or bounded-replacement transport is open",
+      "class-level domination route is noncontracting absent independent source geometry",
+      "monodromy/degeneration/global continuation open",
+      "root initial algebraicity untouched"
+    ],
+    "evidence_pointers": [
+      "pre_action_receipt:734888108cce58b020ce31249cda538cfc727d732ac319319c892d7719d6542f",
+      "https://arxiv.org/abs/alg-geom/9402009",
+      "https://stacks.math.columbia.edu/tag/0DPH",
+      "https://arxiv.org/abs/1404.7519",
+      "https://arxiv.org/abs/2104.14845"
+    ],
+    "timestamp": "2026-08-11T18:28:00+00:00",
+    "cost": 1.0,
+    "artifact_hash": "sha256:4fc0b5511b400b79e129cdfe66c78ee4ff96f4c185495009600755e655abf4e1"
+  },
+  "diagnosis": {
+    "diagnosis_id": "D-H4D1D0-DOMINATION-IS-CLASSLEVEL-REFORMULATION",
+    "episode_id": "H4d1d0-C001-PROPER-COVER-EQUIVALENCE",
+    "observed": "some-component proper domination is equivalent to pointwise class-level branch algebraicity under countable proper exact-class parameterization",
+    "cause": "the proposed bridge moved the existential cycle witness into an existential parameter-component witness without adding an independent selector or source theorem",
+    "not_diagnosed": "the Hodge conjecture itself is not refuted; special-family incidence methods can still prove the equivalent statement by independent geometry",
+    "category": "REPRESENTATION_NONCONTRACTION",
+    "timestamp": "2026-08-11T18:24:00+00:00",
+    "artifact_hash": "sha256:a52593f92e2be93f11e53f1949342a866d02b2b4111966266a41617392498265"
+  },
+  "failure_experience": {
+    "failure_id": "F-H4D1D0-SOME-COMPONENT-DOMINATION-NONCONTRACTING",
+    "atom_id": "H4d1d0",
+    "candidate_id": "H4d1d0-C001-PROPER-COVER-EQUIVALENCE",
+    "method_family": "general proper witness-component domination as an allegedly weaker branch bridge",
+    "failure_mode": "under countable proper exact-class witness parameterization, existence of some dominating component is logically equivalent to branch-wide pointwise algebraicity; it is a useful representation but no independent contraction",
+    "residual_signature": ["no source-specific component selector from central witness data", "selected central witness may lie on a nondominating vertical component", "component replacement/transport and monodromy remain open"],
+    "scope_conditions": ["irreducible reduced finite-type branch over uncountable C", "countable family of proper exact-class witness spaces covering all allowed witness types"],
+    "diagnosis_id": "D-H4D1D0-DOMINATION-IS-CLASSLEVEL-REFORMULATION",
+    "authority": "SUPPORTED_ROUTE_FAILURE / NOT_GLOBAL_BLACKLIST",
+    "timestamp": "2026-08-11T18:25:00+00:00",
+    "artifact_hash": "sha256:594784673603279371b1d9e9ad3814a7c2a097801caeaecf7bad5cac45af84a7"
+  },
+  "lesson": {
+    "lesson_id": "L-H4D1D0-TYPE-SOME-VS-SELECTED-COMPONENT",
+    "episode_id": "H4d1d0-C001-PROPER-COVER-EQUIVALENCE",
+    "diagnosis_id": "D-H4D1D0-DOMINATION-IS-CLASSLEVEL-REFORMULATION",
+    "lesson": "Before crediting proper-moduli domination as a geometric reduction, type whether the claim is (i) some exact witness component dominates, (ii) a component through the selected witness dominates, or (iii) a bounded/canonical replaceable family dominates. In a countably parameterized proper setting, (i) can be equivalent to the original pointwise existence statement; only (ii)/(iii) add a genuine transport constraint, and they require independent source geometry.",
+    "reuse_scope": "moduli/incidence routes with countably many proper parameter families over an irreducible uncountable-field base",
+    "authority": "PROPOSAL_SHADOW_LESSON_ONLY",
+    "timestamp": "2026-08-11T18:26:00+00:00",
+    "artifact_hash": "sha256:714fcb9478f414f16b65986b38166d8d4fbb02cb830a4e2202f110b290ea5e1c"
+  },
+  "successor_obstruction": {
+    "obstruction_id": "H4d1e-SELECTED-OR-BOUNDED-COMPONENT-TRANSPORT",
+    "parent_atom_id": "H4d1d0",
+    "opened_from_episode_id": "H4d1d0-C001-PROPER-COVER-EQUIVALENCE",
+    "statement": "Find a source-specific theorem, starting from the fixed central algebraic witness z0 and exact rational coefficient/category data, that forces either (a) an incidence component containing z0 to dominate a dense open of the reduced Hodge branch, or (b) a canonically controlled bounded family of replacement components to do so, without assuming branch-wide pointwise algebraicity.",
+    "falsifier": "Reject proofs that use pointwise algebraicity at every branch point, arbitrary component switching without a replacement theorem, detector vanishing alone, or special-family dimension identities without an explicit transfer witness.",
+    "separate_gluing_residuals": ["monodromy/branch component permutation", "extension across singular points and degeneration", "global continuation beyond one local algebraic branch", "root initial algebraicity"],
+    "authority": "OPEN_PROPOSAL_RESIDUAL_ONLY",
+    "timestamp": "2026-08-11T18:27:00+00:00",
+    "artifact_hash": "sha256:fb937581097272622228385321081491097198740476366480f073c5e6e49f27"
+  },
+  "episode_diagnosis_lesson_separation_asserted": true,
+  "packet_hash": "sha256:5d5143ff2f70bd7a374149e5436970ad115359311fd11beccbf979e84e5bca6e"
+}
