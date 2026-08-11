@@ -100,7 +100,7 @@ def test_receipt_schema_hash_framework_pin_and_non_authority_are_exact() -> None
     assert all(value is False for value in receipt["authority_contract"].values())
 
 
-def test_episode_inventory_is_the_exact_frozen_18_object_audit() -> None:
+def test_episode_inventory_is_the_exact_frozen_19_object_audit() -> None:
     receipt = _load(RECEIPT)
     inventory = receipt["episode_inventory"]
     expected_paths = {
@@ -117,14 +117,25 @@ def test_episode_inventory_is_the_exact_frozen_18_object_audit() -> None:
         "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a2_C001_V3_TASK_EPISODE_20260811.json",
         "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a3_C001_V3_TASK_EPISODE_20260811.json",
         "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1a_V3_TASK_EPISODE_SHADOW_20260811.json",
+        "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1b_TASK_EPISODE_20260811.json",
         "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_TASK_EPISODE_CANONICAL_20260811.json",
         "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_20260811.json",
         "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1a_TASK_EPISODE_CANONICAL_20260811.json",
         "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_SUZUKI_FAITHFULNESS_TASK_EPISODE_20260811.json",
         "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_DENSE_SOURCE_TASK_EPISODE_20260811.json",
     }
-    assert len(inventory) == 18
+    assert len(inventory) == 19
     assert {item["path"] for item in inventory} == expected_paths
+    discovered = set()
+    for path in (ROOT / "research").rglob("*.json"):
+        try:
+            value = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        if isinstance(value, dict) and "episode_id" in value:
+            discovered.add(str(path.relative_to(ROOT)))
+    successor_paths = {item["successor_path"] for item in receipt["successor_bindings"]}
+    assert discovered == expected_paths | successor_paths
     old_schema = _schema_at(OLD_FRAMEWORK, "task-episode.schema.json")
     new_schema = _schema_at(TARGET_FRAMEWORK, "task-episode.schema.json")
     for item in inventory:

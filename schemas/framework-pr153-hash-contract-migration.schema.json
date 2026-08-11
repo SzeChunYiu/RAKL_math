@@ -37,7 +37,7 @@
         "changed_blob_bindings": {"type": "array", "minItems": 3, "items": {"$ref": "#/$defs/blob_transition"}}
       }
     },
-    "episode_inventory": {"type": "array", "minItems": 18, "maxItems": 18, "items": {"$ref": "#/$defs/episode_entry"}},
+    "episode_inventory": {"type": "array", "minItems": 19, "maxItems": 19, "items": {"$ref": "#/$defs/episode_entry"}},
     "lesson_like_inventory": {"type": "array", "minItems": 8, "maxItems": 8, "items": {"$ref": "#/$defs/lesson_entry"}},
     "successor_bindings": {"type": "array", "minItems": 5, "maxItems": 5, "items": {"$ref": "#/$defs/successor"}},
     "historical_schema_policy": {"$ref": "#/$defs/all_true_policy"},
