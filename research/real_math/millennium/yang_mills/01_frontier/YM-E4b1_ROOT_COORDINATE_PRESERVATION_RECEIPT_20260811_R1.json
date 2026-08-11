@@ -1,0 +1,92 @@
+{
+  "schema_version": "root-coordinate-preservation-receipt-v1",
+  "receipt_id": "YM-E4b1-RCPR-20260811-R1",
+  "root_claim_id": "YM-ROOT-MASS-GAP",
+  "root_coordinate": "positive physical continuum Hamiltonian gap on the full vacuum-orthogonal gauge-invariant Hilbert space",
+  "surrogate_coordinate": "dense-domain strong convergence of regulator OS contraction semigroups under asymptotic embeddings",
+  "bridge_edges": [
+    {
+      "edge_id": "YM-E4b1-B1",
+      "source_coordinate": "dense-domain strong semigroup convergence",
+      "target_coordinate": "target-specific changing-space OS semigroup convergence",
+      "interface_map": "instantiate coherent regulator-to-continuum maps on the actual OS quotient with translation-compatible domain and null-space control",
+      "proof_status": "CONDITIONAL",
+      "enabling_assumptions": [
+        "asymptotic inner-product preservation on a semigroup-stable dense domain",
+        "matrix-element convergence at t and 2t",
+        "coherent representative/approximation maps across the regulator family"
+      ]
+    },
+    {
+      "edge_id": "YM-E4b1-B2",
+      "source_coordinate": "changing-space strong semigroup convergence on a dense domain",
+      "target_coordinate": "global semigroup/resolvent convergence on the physical continuum OS Hilbert space",
+      "interface_map": "extend the convergence through a valid changing-Hilbert-space core or form/resolvent theorem with exact map domains and codomains",
+      "proof_status": "UNPROVED",
+      "enabling_assumptions": [
+        "closed physical continuum OS Hilbert space",
+        "uniform contraction/form bounds",
+        "licensed changing-space convergence theorem"
+      ]
+    },
+    {
+      "edge_id": "YM-E4b1-B3",
+      "source_coordinate": "global physical semigroup/resolvent convergence",
+      "target_coordinate": "continuum vacuum projection and positive spectral-gap transport",
+      "interface_map": "identify vacuum sectors and exclude low positive spectrum under a convergence mode strong enough for the claimed gap statement",
+      "proof_status": "UNPROVED",
+      "enabling_assumptions": [
+        "same-theory vacuum identification",
+        "uniform positive spectral margin in physical units",
+        "source-family completeness or full-space operator control"
+      ]
+    },
+    {
+      "edge_id": "YM-E4b1-B4",
+      "source_coordinate": "continuum positive physical spectral gap",
+      "target_coordinate": "Yang-Mills root mass-gap coordinate in a constructed nontrivial 4D theory",
+      "interface_map": "compose the gap with continuum existence, nontriviality, axiomatic QFT, gauge constraints, ultraviolet behavior and limit-uniformity obligations",
+      "proof_status": "UNPROVED",
+      "enabling_assumptions": [
+        "continuum nontrivial Yang-Mills construction",
+        "OS/Wightman-strength axioms",
+        "correct gauge-invariant physical Hilbert space",
+        "renormalization/asymptotic-freedom compatibility"
+      ]
+    }
+  ],
+  "obligations": [
+    {"obligation_id": "YM-EXISTENCE", "description": "Construct the nontrivial four-dimensional continuum Yang-Mills theory with the official axiomatic strength.", "non_compensatory": true, "discharged_by_surrogate_evidence_only": false},
+    {"obligation_id": "YM-GAUGE-PHYSICAL-SPACE", "description": "Identify regulator and continuum gauge-invariant physical Hilbert spaces, quotient/null spaces and vacuum sector.", "non_compensatory": true, "discharged_by_surrogate_evidence_only": false},
+    {"obligation_id": "YM-SOURCE-COMPLETENESS", "description": "Bind the controlled gauge-invariant source family to the full excited physical space or replace it by full-space semigroup control.", "non_compensatory": true, "discharged_by_surrogate_evidence_only": false},
+    {"obligation_id": "YM-LIMIT-UNIFORMITY", "description": "Control volume, regulator and lattice-spacing limits in the exact physical units required by the gap.", "non_compensatory": true, "discharged_by_surrogate_evidence_only": false},
+    {"obligation_id": "YM-UV-NONTRIVIALITY", "description": "Preserve nontriviality and the required renormalization/asymptotic-freedom behavior.", "non_compensatory": true, "discharged_by_surrogate_evidence_only": false},
+    {"obligation_id": "YM-ROOT-ASSURANCE", "description": "Close the proof DAG and required verifier, dependency, axiom, novelty and isolated-review gates.", "non_compensatory": true, "discharged_by_surrogate_evidence_only": false}
+  ],
+  "known_disanalogies": [
+    "Strong convergence of semigroups can hold in a gapless theory; convergence itself is not a positive-gap certificate.",
+    "A changing-Hilbert-space theorem does not automatically respect Yang-Mills gauge quotients, regulator-dependent null spaces or physical source sectors.",
+    "Fixed-regulator or strong-coupling spectral separation does not automatically survive the continuum/weak-coupling trajectory.",
+    "A valid local operator lemma does not construct a nontrivial four-dimensional continuum Yang-Mills measure."
+  ],
+  "source_authority": "CONDITIONAL",
+  "target_authority": "ESTABLISHED",
+  "cheapest_hostile_world": "Take the regulator and continuum Hilbert spaces identical with J_n=I and T_n(t)=T(t)=exp(-tH), where H has spectrum accumulating at zero above the vacuum; dense-domain strong semigroup convergence is exact while no positive mass gap exists.",
+  "registered_observations": [
+    {"state_id": "YM-E4b1-CONTROL-GAPPED-IDENTITY", "projected_state": "DENSE_DOMAIN_STRONG_SEMIGROUP_CONVERGENCE_HOLDS", "registered_downstream_outcome": "POSITIVE_GAP_PRESENT"},
+    {"state_id": "YM-E4b1-CONTROL-GAPLESS-IDENTITY", "projected_state": "DENSE_DOMAIN_STRONG_SEMIGROUP_CONVERGENCE_HOLDS", "registered_downstream_outcome": "NO_POSITIVE_GAP"}
+  ],
+  "reverification_triggers": [
+    "a concrete regulator-to-continuum OS identification map is supplied",
+    "the source/domain or regulator family changes",
+    "a generalized Mosco/resolvent or form-convergence theorem is selected",
+    "vacuum or source-family identification is changed",
+    "a claimed uniform positive physical gap is introduced"
+  ],
+  "prior_failure_ids": [
+    "RAKL_math#126:YM-E4b-varying-Hilbert-identification",
+    "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE",
+    "RAKL_math#88:YM-S1a2-same-theory-OS-source-binding"
+  ],
+  "receipt_canonical_sha256": "1d80afed450cbf084b5e9fad5f2e7aa2799a274e39bd0ace5df4ffb03a1640e8"
+}
