@@ -1,0 +1,62 @@
+schema_version: problem-dag-delta-v3-proposal-shadow-r1
+root:
+  id: NS0
+  status: OPEN_NO_SOLUTION_CERTIFICATE
+  authority: NONE
+parent_atom:
+  id: NS-B1a3b1b
+  issue: 145
+active_atom:
+  id: NS-B1a3b1b1
+  issue: 153
+  title: Finite-center lift of logarithmic commutator consumer
+  outcome: PARTIAL_SUCCESS_SCOPED_CONTEXT_LIFT
+  novelty_class: REPRESENTATION_NOVEL_SHADOW
+verified_scoped_result:
+  statement: >-
+    Under the unchanged global vorticity weak-L3/2 and direction log-BMO
+    hypotheses used in Grujic v2, if A_lambda is covered by at most N0
+    translated balls of radius at most C lambda^-1/2, the localized
+    commutator estimate plus the weak-L3/2 finite-union inequality gives
+    ||alpha|| on A_lambda = O(N0^(2/3)/log lambda). For fixed N0 this is
+    eventually small enough for the nonlinear absorption in equations
+    (24)-(25).
+  scope: >-
+    Local consumer/context-lift lemma only. It does not prove finite-I
+    produces the cover, amplitude or direction hypotheses, does not
+    generalize the full Grujic theorem, and does not address Type II.
+producer_residual:
+  local_mathematical:
+    - finite-I_to_uniform_bounded_multiplicity_high_vorticity_cover
+    - finite-I_to_global_vorticity_weak_L3_2
+    - finite-I_to_global_direction_log_BMO
+  local_to_global_gluing:
+    - ancient_to_pre_singularity_state_space
+    - local_recentring_to_global_far_field_compatibility
+    - moving_secondary_profiles_and_pressure_localization
+obstruction:
+  id: O-NS-B1a3b1b1-BOUNDED-MULTIPLICITY-COVER-PRODUCER
+  replaces_at_scoped_interface: O-NS-B1a3b1b-ONE-CENTER-MORPHOLOGY-PRODUCER
+next_child:
+  id: NS-B1a3b1b1a
+  title: Source bounded-multiplicity Type-I concentration producer
+  discriminator: >-
+    Find a same-theory theorem from hypotheses genuinely available under the
+    Albritton-Barker finite-I class to a uniform bounded-multiplicity
+    O(lambda^-1/2) high-vorticity cover, with DifferenceWitness against
+    stronger global L3-infinity finite-singular-point results; otherwise
+    rotate the consumer.
+saturation_axes:
+  KNOWLEDGE: REOPENED
+  OPERATOR: REOPENED
+  EXPERIENCE_PATTERN: REOPENED
+  OBSTRUCTION: REOPENED_NARROWED
+  RELATION: REOPENED
+  PATH: REOPENED
+  META_METHOD: FLATTENED
+nonpromotion:
+  - same-context expert cell is 0-of-3 independent reviews
+  - computation or CI is artifact assurance, not proof
+  - no closed root proof DAG or root verifier/dependency/axiom audit
+  - Type-II remains open
+  - root authority remains NONE
