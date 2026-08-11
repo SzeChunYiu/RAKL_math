@@ -1,0 +1,25 @@
+{
+  "event_id": "O9d12a2a1a1-E08",
+  "atom_id": "O9d12a2a1a1",
+  "event_type": "PROCESS_CONTAMINATION_RECORDED",
+  "timestamp": "2026-08-11T12:36:00+00:00",
+  "previous_event_hash": "sha256:50e0aa6f32451d03fe752a7cbf7cf6a9e63c5a382236808b95b7d6bb17a9a9a6",
+  "state_summary": "After the strict pre-candidate trace was frozen but before evaluator bytes were frozen, the same session privately reimplemented the existing exact oracle semantics and inspected the intended 4x4, |U|<=4 census.",
+  "observed_exploratory_result": {
+    "graphs_checked": 2516,
+    "boundary": "all 4x4 complements with 1<=|U|<=4",
+    "strict_gap_observed": false,
+    "authority": "RETROSPECTIVE_CALIBRATION_ONLY"
+  },
+  "process_failure": "The intended prospective discriminator was exposed before its evaluator/content binding. It therefore cannot receive preregistered or assurance credit even though the output is reproducible.",
+  "containment": [
+    "preserve the observed null instead of hiding or backdating it",
+    "do not use the 4x4 |U|<=4 census as prospective evidence",
+    "move the prospective discriminator to an untouched task set",
+    "freeze the untouched sample manifest and evaluator bytes before running it"
+  ],
+  "fresh_next_action": "Hash-sample exactly 64 previously uninspected 4x4 complements with |U|=5 using seed C026-FRESH-M5-20260811-v1, freeze the exact sample list and evaluator, then run restricted-vs-unrestricted comparison.",
+  "scientific_interpretation": "The contaminated null is consistent with disjoint-pair sufficiency on that bounded universe but proves neither global disjointization nor absence of essential non-disjoint power.",
+  "artifact_hash": "sha256:PROCESS_CONTAMINATION_CONTENT_BOUND_BY_GIT_COMMIT",
+  "authority_boundary": "This event is a chronology/telemetry correction and grants no mathematical authority."
+}
