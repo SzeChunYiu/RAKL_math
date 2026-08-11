@@ -1,0 +1,26 @@
+{
+  "review_id": "PNP-O9d12a2a1a1c-MEMORY-20260811-R3",
+  "atom_id": "O9d12a2a1a1c",
+  "fibre_snapshot_hash": "sha256:f9822c371fbb99364b2225bfad885e1cdf70cd0007f22b9e9a0a8e54872974c0",
+  "coverage": "BOUNDED_NOT_EXHAUSTIVE",
+  "retrieved_selected": [
+    {"id":"F-C010-MULTIPLEXING","effect":"shared/free operations can invalidate additive score charging"},
+    {"id":"F-C021-CHEAP-ADJACENCY","effect":"forces zero/cheap target controls before scoring"},
+    {"id":"F-C023-SCALAR-COLLAPSE","effect":"blocks scalar lower bounds without a legal per-operation theorem"},
+    {"id":"F-C024-FRACTIONAL-INTEGRALITY-GAP","effect":"requires exact integral source semantics"},
+    {"id":"F-C025-FIRST-ORDER-CANONICAL-COLLAPSE","effect":"requires quotient/canonicalization before enriching signatures"},
+    {"id":"F-O9D12A2A1A1B-FIXED-LAMBDA-GLOBAL-STATE-FACTORIZATION","effect":"routes from later-dynamics scores to shared rule/base representation"},
+    {"id":"PNP-O9d12a2a1a1b-GLOBAL-FACTORIZATION-R2-20260811","effect":"next action explicitly requires a shared-rule invariant/accounting atom"}
+  ],
+  "retrieved_rejected": [
+    {"id":"ECCC-TR26-118-RANGE-AVOIDANCE","reason":"no DifferenceWitness/applicability map to free-union quotient"},
+    {"id":"GENERIC-HORN-LOWER-BOUND-TRANSFER","reason":"representation analogy does not preserve the target complexity measure"},
+    {"id":"CROSS-MILLENNIUM-IMPORT","reason":"same-domain cost-zero operation semantics resolves the immediate atom without extra assumptions"}
+  ],
+  "missed_prior_experience": "CANNOT_MEASURE: repository-wide semantic retrieval universe is not exhaustively enumerable in this runtime",
+  "pre_memory_preference": "define and test a candidate shared t-rule scalar directly",
+  "selected_policy": "NORMALIZE_BY_COST_ZERO_OPERATIONS_BEFORE_SCORE_GENERATION",
+  "post_memory_action": "prove generator free-union quotient invariance first",
+  "rakl_changed_action": true,
+  "authority": "PROPOSAL_SHADOW_SEARCH_PRIORITY_ONLY"
+}
