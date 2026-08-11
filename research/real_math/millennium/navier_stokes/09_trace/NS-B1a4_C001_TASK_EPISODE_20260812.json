@@ -1,68 +1,73 @@
 {
-  "schema_version": "task-episode-v3-proposal-shadow",
-  "episode_id": "EP-NS-B1a4-C001-SIGNED-FLUX-20260812",
-  "task_id": "TASK-NS-B1a4-C001",
-  "atom_id": "NS-B1a4",
-  "context_hash": "sha256:4f4201800bdb64d85704ed43c5acb44bb0a3edc4772df2a0477f4ad989c0f83a",
-  "problem_signature": [
-    "3D incompressible unforced whole-space Navier-Stokes",
-    "Type-I blow-up-classification / finite Albritton-Barker I",
-    "signed temporal local-energy / no-recrossing discriminator",
-    "pressure localization separated from signed flux",
-    "proposal-shadow only; Type-II and root remain open"
-  ],
-  "fibre_snapshot_hash": "sha256:cffa5d00fe4a5b3bced0c68328546f988801fdbea7a6b552527cac500f5fc29d",
-  "operator_ids": [
-    "agent:counterexample-first",
-    "agent:exact-NSE-calibration",
-    "agent:DifferenceWitness-scope-audit",
-    "agent:local-vs-global-failure-separation"
-  ],
-  "operator_authority": "UNPROMOTED_AGENT_OPERATORS_ONLY",
-  "motif_ids": [],
-  "action_trace": [
-    "verify divergence-free condition",
-    "verify convection term vanishes",
-    "verify partial_t u = Delta u with p=0",
-    "differentiate fixed-ball kinetic energy",
-    "audit target-class DifferenceWitness",
-    "classify local representation failure separately from global gluing"
-  ],
-  "observation_ids": [
-    "OBS-NS-B1a4-PZERO-EXACT-NSE",
-    "OBS-NS-B1a4-LOCAL-ENERGY-INCREASE",
-    "OBS-NS-B1a4-GLOBAL-TARGET-MISMATCH"
-  ],
-  "verification_ids": [
-    "V-NS-B1a4-C001-DIVERGENCE",
-    "V-NS-B1a4-C001-NONLINEAR",
-    "V-NS-B1a4-C001-HEAT-EQUALITY",
-    "V-NS-B1a4-C001-LOCAL-ENERGY-DERIVATIVE",
-    "V-NS-B1a4-C001-DIFFERENCE-WITNESS"
-  ],
-  "outcome": "PARTIAL_SUCCESS_ROUTE_PRUNING",
-  "residual_signature": [
-    "existing unsigned ledger lacks a fixed-region sign certificate",
-    "need new signed/correlation/trajectory coordinate or stronger global finite-I input",
-    "global ancient-state gluing remains separate",
-    "Type-II remains open"
-  ],
-  "evidence_pointers": [
-    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a4_C001_SIGNED_FLUX_NO_RECROSSING_AUDIT_20260812.md",
-    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a4_C001_FAILURE_DIAGNOSIS_20260812.json",
-    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a4_C001_FAILURE_EXPERIENCE_DELTA_20260812.json",
-    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a4_C001_OBSTRUCTION_LESSON_20260812.json"
-  ],
-  "candidate_chronology": "pressure-free shear was already prospectively scoped in issue #173; no strict RAKL candidate-generation credit",
-  "artifact_source_hash": "sha256:07b82baf9e60eba61ea694e46c5bfbfd63e60a4c23d79ff01d9b4182f81ad0ae",
-  "timestamp": "2026-08-11T22:51:53Z",
-  "cost": {
-    "core_elapsed_seconds": 285,
-    "model_tokens": "CANNOT_MEASURE: runtime does not expose exact token accounting",
-    "context_tokens": "CANNOT_MEASURE: runtime does not expose exact context-token accounting",
-    "aggregate_retrieval_calls": "CANNOT_MEASURE: runtime does not expose a reliable aggregate counter across compacted tool history",
-    "aggregate_tool_calls": "CANNOT_MEASURE: runtime does not expose a reliable aggregate counter across compacted tool history"
+  "schema_version": "task-episode-v3-proposal-shadow-envelope",
+  "task_episode_shadow_payload": {
+    "episode_id": "EP-NS-B1a4-C001-SIGNED-FLUX-20260812",
+    "task_id": "TASK-NS-B1a4-C001",
+    "atom_id": "NS-B1a4",
+    "context_hash": "sha256:4f4201800bdb64d85704ed43c5acb44bb0a3edc4772df2a0477f4ad989c0f83a",
+    "problem_signature": [
+      "3D incompressible unforced whole-space Navier-Stokes",
+      "Type-I blow-up-classification / finite Albritton-Barker I",
+      "signed temporal local-energy / no-recrossing discriminator",
+      "pressure localization separated from signed flux",
+      "proposal-shadow only; Type-II and root remain open"
+    ],
+    "fibre_snapshot_hash": "sha256:cffa5d00fe4a5b3bced0c68328546f988801fdbea7a6b552527cac500f5fc29d",
+    "operator_ids": [
+      "agent:counterexample-first",
+      "agent:exact-NSE-calibration",
+      "agent:DifferenceWitness-scope-audit",
+      "agent:local-vs-global-failure-separation"
+    ],
+    "action_trace": [
+      "verify divergence-free condition",
+      "verify convection term vanishes",
+      "verify partial_t u = Delta u with p=0",
+      "differentiate fixed-ball kinetic energy",
+      "audit target-class DifferenceWitness",
+      "classify local representation failure separately from global gluing"
+    ],
+    "observation_ids": [
+      "OBS-NS-B1a4-PZERO-EXACT-NSE",
+      "OBS-NS-B1a4-LOCAL-ENERGY-INCREASE",
+      "OBS-NS-B1a4-GLOBAL-TARGET-MISMATCH"
+    ],
+    "verification_ids": [
+      "V-NS-B1a4-C001-DIVERGENCE",
+      "V-NS-B1a4-C001-NONLINEAR",
+      "V-NS-B1a4-C001-HEAT-EQUALITY",
+      "V-NS-B1a4-C001-LOCAL-ENERGY-DERIVATIVE",
+      "V-NS-B1a4-C001-DIFFERENCE-WITNESS"
+    ],
+    "outcome": "PARTIAL_SUCCESS",
+    "residual_signature": [
+      "existing unsigned ledger lacks a fixed-region sign certificate",
+      "need new signed/correlation/trajectory coordinate or stronger global finite-I input",
+      "global ancient-state gluing remains separate",
+      "Type-II remains open"
+    ],
+    "evidence_pointers": [
+      "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a4_C001_SIGNED_FLUX_NO_RECROSSING_AUDIT_20260812.md",
+      "research/real_math/millennium/navier_stokes/07_memory/NS-B1a4_C001_FAILURE_DIAGNOSIS_20260812.json",
+      "research/real_math/millennium/navier_stokes/07_memory/NS-B1a4_C001_FAILURE_EXPERIENCE_DELTA_20260812.json",
+      "research/real_math/millennium/navier_stokes/07_memory/NS-B1a4_C001_OBSTRUCTION_LESSON_20260812.json"
+    ],
+    "artifact_hash": "4ba875bff9d2354658f2a62bde055665bc7fb66a7a6675cd8a1459192b770127",
+    "timestamp": "2026-08-11T22:51:53Z",
+    "cost": 285.0,
+    "storage_admission": "PROPOSAL_SHADOW_STORED"
+  },
+  "shadow_extensions": {
+    "operator_authority": "UNPROMOTED_AGENT_OPERATORS_ONLY",
+    "motif_ids": [],
+    "candidate_chronology": "pressure-free shear was already prospectively scoped in issue #173; no strict RAKL candidate-generation credit",
+    "resource_detail": {
+      "model_tokens": "CANNOT_MEASURE: runtime does not expose exact token accounting",
+      "context_tokens": "CANNOT_MEASURE: runtime does not expose exact context-token accounting",
+      "aggregate_retrieval_calls": "CANNOT_MEASURE: runtime does not expose a reliable aggregate counter across compacted tool history",
+      "aggregate_tool_calls": "CANNOT_MEASURE: runtime does not expose a reliable aggregate counter across compacted tool history"
+    }
   },
   "authority": "PROPOSAL_SHADOW_EPISODE_ONLY",
-  "artifact_hash": "sha256:9819af12b7554343579352e684ec2e54ef97dc8cd5b6eef35888d65aad1e295c"
+  "envelope_hash": "8cd3aa21ace0b1b1bc4fc61128b6992d5c26d97074e09844a6d87090d9ace194"
 }
