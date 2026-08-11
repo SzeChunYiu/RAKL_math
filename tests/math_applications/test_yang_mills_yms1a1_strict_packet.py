@@ -248,6 +248,12 @@ def test_yms1a1_packet_has_role_separation_and_live_evidence_paths() -> None:
     assert "Eight role-separated" in review_event["state_summary"]
     assert review_hash in review_event["evidence_pointers"]
     assert review_hash in review_event["outputs"]
+    next_step = next(
+        event for event in trace["entries"] if event["event_id"] == "YM-S1A1-E007"
+    )
+    assert len(next_step["evidence_pointers"]) == len(
+        set(next_step["evidence_pointers"])
+    )
 
     failures = _load("07_memory/YM-S1A1_FAILURE_EXPERIENCE_LATTICE_20260811.json")
     for experience in failures["experiences"]:
