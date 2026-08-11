@@ -21,6 +21,7 @@ from rakl.research_memory import (
     ResearchMemoryVerdict,
     audit_research_memory_review,
 )
+from rakl.semantic_shortcut import REQUIRED_SHORTCUT_ACTIONS, ShortcutReviewVerdict
 from rakl.research_trace import (
     MathResearchTrace,
     ResearchTraceEntry,
@@ -165,7 +166,7 @@ def test_yms1_first_packet_passes_all_pre_candidate_gates_without_candidate() ->
         audit_pre_candidate_trace(
             trace, atom_id=fiber.atom_id, context_packet_hash=fiber.packet_hash
         ).verdict
-        is TraceGateVerdict.PASS
+        is TraceGateVerdict.FAIL
     )
 
     plan = plan_math_research(
@@ -197,6 +198,7 @@ def test_yms1_first_packet_passes_all_pre_candidate_gates_without_candidate() ->
     )
     assert plan.context_gate.verdict is ContextGateVerdict.PASS
     assert plan.memory_gate.verdict is ResearchMemoryVerdict.PASS
-    assert plan.trace_gate.verdict is TraceGateVerdict.PASS
-    assert plan.candidate_generation_allowed
-    assert plan.pre_candidate_actions == ()
+    assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.CANNOT_CHECK
+    assert plan.trace_gate.verdict is TraceGateVerdict.CANNOT_CHECK
+    assert plan.candidate_generation_allowed is False
+    assert plan.pre_candidate_actions == REQUIRED_SHORTCUT_ACTIONS

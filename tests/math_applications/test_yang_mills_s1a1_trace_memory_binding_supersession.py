@@ -119,7 +119,7 @@ def test_v3_trace_binds_exact_memory_and_failure_snapshot_in_evidence_and_output
     trace = MathResearchTrace(trace_id=trace_raw["trace_id"], entries=tuple(entries))
     assert audit_pre_candidate_trace(
         trace, atom_id=context["atom_id"], context_packet_hash=context["packet_hash"]
-    ).verdict is TraceGateVerdict.PASS
+    ).verdict is TraceGateVerdict.FAIL
 
 
 def test_later_receipt_supersedes_only_future_trace_use_and_binds_exact_files() -> None:

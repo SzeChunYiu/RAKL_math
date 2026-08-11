@@ -280,7 +280,7 @@ def test_retrospective_trace_passes_integrity_but_prospective_candidate_gate_fai
     assert audit_research_trace(runtime).verdict is TraceGateVerdict.PASS
     pre = audit_pre_candidate_trace(runtime, atom_id="XM-MOVING-CORE-RIGIDITY-005", context_packet_hash="sha256:97140726c846578b96a5b31d484d94520691c618918a0d6ddba1d38b36011737")
     assert pre.verdict is TraceGateVerdict.FAIL
-    assert set(pre.reasons) == {f"required_trace_event_missing:{name}" for name in ["ATOMIZED", "CONTEXT_FROZEN", "ANALOGY_SCAN", "METHOD_TRANSFER_REVIEW", "EXPERT_CONTEXT_REVIEW", "EXPERIENCE_MEMORY_REVIEW", "NEXT_STEP_PROPOSED"]}
+    assert set(pre.reasons) == {f"required_trace_event_missing:{name}" for name in ["ATOMIZED", "CONTEXT_FROZEN", "ANALOGY_SCAN", "METHOD_TRANSFER_REVIEW", "EXPERT_CONTEXT_REVIEW", "EXPERIENCE_MEMORY_REVIEW", "OBSTRUCTION_TRANSFORMATION_REVIEW", "NEXT_STEP_PROPOSED"]}
     gate = _load(ASSURANCE)["prospective_gate"]
     assert gate["status"] == "CLOSED"
     assert gate["candidate_generation_allowed"] is False

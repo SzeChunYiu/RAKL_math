@@ -35,6 +35,7 @@ from rakl.research_tool_inventory import (
     ToolApplicabilityWitness,
     assess_tool_applicability,
 )
+from rakl.semantic_shortcut import REQUIRED_SHORTCUT_ACTIONS, ShortcutReviewVerdict
 from rakl.research_trace import (
     MathResearchTrace,
     ResearchTraceEntry,
@@ -277,7 +278,7 @@ def test_c041_schema_valid_runtime_gates_pass_without_a_candidate() -> None:
     ).verdict is ResearchMemoryVerdict.PASS
     assert audit_pre_candidate_trace(
         trace, atom_id=ATOM, context_packet_hash=context.packet_hash
-    ).verdict is TraceGateVerdict.PASS
+    ).verdict is TraceGateVerdict.FAIL
     assert audit_root_coordinate_preservation(preservation).verdict is PreservationVerdict.INTERFACE_UNPROVED
     assert [entry.event_type.value for entry in trace.entries] == [
         "ATOMIZED", "CONTEXT_FROZEN", "ANALOGY_SCAN", "METHOD_TRANSFER_REVIEW",
@@ -304,8 +305,10 @@ def test_c041_schema_valid_runtime_gates_pass_without_a_candidate() -> None:
         expected_preservation_sha256=EXPECTED_PRESERVATION_SHA256,
     )
     assert plan.preservation_gate.verdict is PreservationGateVerdict.SEARCH_LICENSED
-    assert plan.candidate_generation_allowed is True
-    assert plan.pre_candidate_actions == ()
+    assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.CANNOT_CHECK
+    assert plan.trace_gate.verdict is TraceGateVerdict.CANNOT_CHECK
+    assert plan.candidate_generation_allowed is False
+    assert plan.pre_candidate_actions == REQUIRED_SHORTCUT_ACTIONS
     assert trace.entries[-1].outputs == (
         "next_action:MATERIALIZE_ONE_LOCAL_C041_RULE_THEN_FREEZE_FINITE_GATE",
         "candidate_identity:none",

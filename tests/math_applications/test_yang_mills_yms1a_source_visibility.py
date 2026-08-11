@@ -119,7 +119,7 @@ def test_yms1_research_trace_appends_calibration_without_candidate() -> None:
         audit_pre_candidate_trace(
             trace, atom_id="YM-S1", context_packet_hash=CONTEXT_HASH
         ).verdict
-        is TraceGateVerdict.PASS
+        is TraceGateVerdict.FAIL
     )
 
     event_types = [entry.event_type for entry in entries]

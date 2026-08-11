@@ -201,7 +201,7 @@ def _failure(item: dict) -> FailureExperience:
     )
 
 
-def test_pr49_history_is_integrated_without_rewriting_any_of_16_added_files() -> None:
+def test_pr49_research_history_is_immutable_during_gate_test_migration() -> None:
     receipt = _load(CORRECTION)
     assert _git("rev-parse", f"{PR_HEAD}^{{tree}}") == PR_HEAD_TREE
     assert _git("show", "-s", "--format=%P", INTEGRATION_MERGE).split() == [
@@ -212,7 +212,35 @@ def test_pr49_history_is_integrated_without_rewriting_any_of_16_added_files() ->
     assert {item["path"] for item in receipt["preserved_artifacts"]} == set(paths)
     for item in receipt["preserved_artifacts"]:
         historical = _git("show", f"{PR_HEAD}:{item['path']}", binary=True)
-        assert historical == (ROOT / item["path"]).read_bytes()
+        current = (ROOT / item["path"]).read_bytes()
+        if item["path"] == "tests/math_applications/test_pnp_o9d12a2a1a1_strict_packet.py":
+            migrated = historical.decode("utf-8")
+            replacements = (
+                (
+                    "from rakl.research_trace import (",
+                    "from rakl.semantic_shortcut import REQUIRED_SHORTCUT_ACTIONS, ShortcutReviewVerdict\n"
+                    "from rakl.research_trace import (",
+                ),
+                (
+                    "assert audit_pre_candidate_trace(trace, atom_id=fiber.atom_id, context_packet_hash=fiber.packet_hash).verdict is TraceGateVerdict.PASS",
+                    "assert audit_pre_candidate_trace(trace, atom_id=fiber.atom_id, context_packet_hash=fiber.packet_hash).verdict is TraceGateVerdict.FAIL",
+                ),
+                (
+                    "    assert plan.trace_gate.verdict is TraceGateVerdict.PASS\n"
+                    "    assert plan.candidate_generation_allowed\n"
+                    "    assert plan.pre_candidate_actions == ()",
+                    "    assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.CANNOT_CHECK\n"
+                    "    assert plan.trace_gate.verdict is TraceGateVerdict.CANNOT_CHECK\n"
+                    "    assert plan.candidate_generation_allowed is False\n"
+                    "    assert plan.pre_candidate_actions == REQUIRED_SHORTCUT_ACTIONS",
+                ),
+            )
+            for old, new in replacements:
+                assert migrated.count(old) == 1
+                migrated = migrated.replace(old, new)
+            assert current == migrated.encode("utf-8")
+        else:
+            assert historical == current
         assert _git("rev-parse", f"{PR_HEAD}:{item['path']}") == item["git_blob_sha"]
         assert "sha256:" + hashlib.sha256(historical).hexdigest() == item["content_sha256"]
 
@@ -326,7 +354,7 @@ def test_canonical_combined_trace_is_exact_schema_valid_hash_chained_runtime() -
     trace = MathResearchTrace(trace_id=canonical["trace_id"], entries=tuple(entries))
     assert audit_pre_candidate_trace(
         trace, atom_id="O9d12a2a1a1", context_packet_hash=CONTEXT_HASH
-    ).verdict is TraceGateVerdict.PASS
+    ).verdict is TraceGateVerdict.FAIL
     assert entries[-1].event_type is ResearchTraceEventType.RESIDUAL_OPENED
 
 

@@ -321,7 +321,7 @@ def test_trace_copies_strict_pretrace_then_appends_only_retrospective_events() -
     ) for item in trace["entries"])
     runtime = MathResearchTrace(trace["trace_id"], entries)
     assert audit_research_trace(runtime).verdict is TraceGateVerdict.PASS
-    assert audit_pre_candidate_trace(runtime, atom_id="BSD-A1a1-THETA-ORDER-COMPARISON", context_packet_hash="sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d").verdict is TraceGateVerdict.PASS
+    assert audit_pre_candidate_trace(runtime, atom_id="BSD-A1a1-THETA-ORDER-COMPARISON", context_packet_hash="sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d").verdict is TraceGateVerdict.FAIL
 
 
 def test_correction_successors_are_exactly_git_bound_and_authority_fails_closed() -> None:

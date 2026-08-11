@@ -126,7 +126,7 @@ def _source_errors(receipt: dict) -> tuple[str, ...]:
     return tuple(errors)
 
 
-def test_pr34_subject_bytes_and_invalid_continuation_remain_immutable() -> None:
+def test_pr34_research_subject_bytes_remain_immutable_during_gate_test_migration() -> None:
     subtree = subprocess.run(
         ["git", "-C", str(ROOT), "rev-parse", f"{PR34_MERGE}:research/real_math/millennium/hodge/deformation"],
         check=True, stdout=subprocess.PIPE, text=True,
@@ -142,7 +142,32 @@ def test_pr34_subject_bytes_and_invalid_continuation_remain_immutable() -> None:
             ["git", "-C", str(ROOT), "show", f"{PR34_MERGE}:{relative}"],
             check=True, stdout=subprocess.PIPE,
         ).stdout
-        assert historical == (ROOT / relative).read_bytes()
+        current = (ROOT / relative).read_bytes()
+        if relative == "tests/math_applications/test_hodge_h4d1a_strict_packet.py":
+            migrated = historical.decode("utf-8")
+            replacements = (
+                (
+                    "from rakl.research_trace import (",
+                    "from rakl.semantic_shortcut import REQUIRED_SHORTCUT_ACTIONS, ShortcutReviewVerdict\n"
+                    "from rakl.research_trace import (",
+                ),
+                ("        is TraceGateVerdict.PASS", "        is TraceGateVerdict.FAIL"),
+                (
+                    "    assert plan.trace_gate.verdict is TraceGateVerdict.PASS\n"
+                    "    assert plan.candidate_generation_allowed\n"
+                    "    assert plan.pre_candidate_actions == ()",
+                    "    assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.CANNOT_CHECK\n"
+                    "    assert plan.trace_gate.verdict is TraceGateVerdict.CANNOT_CHECK\n"
+                    "    assert plan.candidate_generation_allowed is False\n"
+                    "    assert plan.pre_candidate_actions == REQUIRED_SHORTCUT_ACTIONS",
+                ),
+            )
+            for old, new in replacements:
+                assert migrated.count(old) == 1
+                migrated = migrated.replace(old, new)
+            assert current == migrated.encode("utf-8")
+        else:
+            assert historical == current
 
     invalid = _load(INVALID_CONTINUATION)
     schema = _load(FRAMEWORK_SCHEMAS / "math-research-trace.schema.json")
@@ -198,7 +223,7 @@ def test_combined_trace_is_schema_valid_hash_chained_and_runtime_valid() -> None
     trace = MathResearchTrace(trace_id=raw["trace_id"], entries=tuple(entries))
     assert audit_pre_candidate_trace(
         trace, atom_id="H4d1a", context_packet_hash=_load(CONTEXT)["packet_hash"]
-    ).verdict is TraceGateVerdict.PASS
+    ).verdict is TraceGateVerdict.FAIL
     assert entries[-1].event_type is ResearchTraceEventType.RESIDUAL_OPENED
     assert entries[-1].atom_id == "H4d1b"
 
