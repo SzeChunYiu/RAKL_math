@@ -126,7 +126,58 @@
     "successors": {
       "type": "array",
       "minItems": 3,
-      "maxItems": 3
+      "maxItems": 3,
+      "prefixItems": [
+        {
+          "type": "object",
+          "required": [
+            "kind",
+            "path",
+            "source_commit",
+            "git_blob_sha",
+            "raw_sha256",
+            "artifact_hash"
+          ],
+          "properties": {
+            "kind": {
+              "const": "CANONICAL_RETROSPECTIVE_TASK_EPISODE"
+            },
+            "source_commit": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "git_blob_sha": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{40}$"
+            },
+            "raw_sha256": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            },
+            "artifact_hash": {
+              "description": "Exact bd1 TaskEpisode content digest: raw lowercase 64-hex, never sha256-prefixed.",
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "CANONICAL_FAILURE_LATTICE"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "const": "CANONICAL_RETROSPECTIVE_TRACE"
+            }
+          }
+        }
+      ]
     },
     "correction": {
       "type": "object",

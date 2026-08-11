@@ -5,6 +5,7 @@ from datetime import datetime
 import hashlib
 import json
 from pathlib import Path
+import re
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
@@ -69,6 +70,36 @@ def _framework_path() -> None:
     value = str(FRAMEWORK / "src")
     if value not in sys.path:
         sys.path.insert(0, value)
+
+
+def _episode_runtime(value: dict):
+    _framework_path()
+    from rakl.experience_substrate import EpisodeOutcome, TaskEpisode
+
+    return TaskEpisode(
+        value["episode_id"], value["task_id"], value["atom_id"], value["context_hash"],
+        tuple(value["problem_signature"]), value["fibre_snapshot_hash"], tuple(value["operator_ids"]),
+        tuple(value["action_trace"]), tuple(value["observation_ids"]), tuple(value["verification_ids"]),
+        EpisodeOutcome(value["outcome"]), tuple(value["residual_signature"]), tuple(value["evidence_pointers"]),
+        value["artifact_hash"], value["timestamp"], value["cost"],
+    )
+
+
+def _application_episode_assurance_reasons(value: dict) -> tuple[str, ...]:
+    """Close bd1's length-gated TaskEpisode digest-verification bypass."""
+
+    _framework_path()
+    from rakl.experience_substrate import episode_content_bytes, validate_episode
+
+    claimed = value.get("artifact_hash")
+    if not isinstance(claimed, str) or re.fullmatch(r"[0-9a-f]{64}", claimed) is None:
+        return ("application:episode_artifact_hash_not_raw_64_hex",)
+    runtime = _episode_runtime(value)
+    reasons: list[str] = []
+    if hashlib.sha256(episode_content_bytes(runtime)).hexdigest() != claimed:
+        reasons.append("application:episode_artifact_hash_mismatch")
+    reasons.extend(f"framework:{reason}" for reason in validate_episode(runtime))
+    return tuple(dict.fromkeys(reasons))
 
 
 def test_pr71_is_open_historical_head_not_a_fake_merge_and_all_bytes_are_preserved() -> None:
@@ -167,7 +198,8 @@ def test_exact_bd1_framework_schema_and_runtime_blobs_are_pinned() -> None:
 def test_canonical_retrospective_episode_hash_schema_runtime_and_manifest_are_exact() -> None:
     episode = _load(EPISODE)
     _validator(FRAMEWORK / "schemas/task-episode.schema.json").validate(episode)
-    assert episode["artifact_hash"] == _hash(episode)
+    assert re.fullmatch(r"[0-9a-f]{64}", episode["artifact_hash"])
+    assert _application_episode_assurance_reasons(episode) == ()
     manifest = _load(ASSURANCE)["historical_evidence_manifest"]
     encoded = []
     for item in manifest["entries"]:
@@ -177,9 +209,30 @@ def test_canonical_retrospective_episode_hash_schema_runtime_and_manifest_are_ex
     assert observed == manifest["artifact_hash"] == episode["fibre_snapshot_hash"]
 
     _framework_path()
-    from rakl.experience_substrate import EpisodeOutcome, TaskEpisode, validate_episode
-    runtime = TaskEpisode(episode["episode_id"], episode["task_id"], episode["atom_id"], episode["context_hash"], tuple(episode["problem_signature"]), episode["fibre_snapshot_hash"], tuple(episode["operator_ids"]), tuple(episode["action_trace"]), tuple(episode["observation_ids"]), tuple(episode["verification_ids"]), EpisodeOutcome(episode["outcome"]), tuple(episode["residual_signature"]), tuple(episode["evidence_pointers"]), episode["artifact_hash"], episode["timestamp"], episode["cost"])
+    from rakl.experience_substrate import validate_episode
+    runtime = _episode_runtime(episode)
     assert validate_episode(runtime) == ()
+
+
+@pytest.mark.parametrize(
+    ("mutation", "expected_reason"),
+    [
+        ("WRONG_LENGTH", "application:episode_artifact_hash_not_raw_64_hex"),
+        ("SHA256_PREFIXED", "application:episode_artifact_hash_not_raw_64_hex"),
+        ("CONTENT_MUTATION", "application:episode_artifact_hash_mismatch"),
+    ],
+)
+def test_task_episode_application_assurance_rejects_hash_bypass_and_mutation(
+    mutation: str, expected_reason: str
+) -> None:
+    hostile = copy.deepcopy(_load(EPISODE))
+    if mutation == "WRONG_LENGTH":
+        hostile["artifact_hash"] = hostile["artifact_hash"][:-1]
+    elif mutation == "SHA256_PREFIXED":
+        hostile["artifact_hash"] = "sha256:" + hostile["artifact_hash"]
+    else:
+        hostile["action_trace"].append("planted post-hash mutation")
+    assert expected_reason in _application_episode_assurance_reasons(hostile)
 
 
 def test_failure_lattice_is_scoped_runtime_valid_and_not_a_blacklist() -> None:
@@ -246,3 +299,7 @@ def test_assurance_successors_are_git_bound_and_authority_mutations_fail_closed(
     hostile_gate["prospective_gate"]["candidate_generation_allowed"] = True
     with pytest.raises(jsonschema.ValidationError):
         schema.validate(hostile_gate)
+    hostile_episode_binding = copy.deepcopy(receipt)
+    hostile_episode_binding["successors"][0]["artifact_hash"] = "sha256:" + hostile_episode_binding["successors"][0]["artifact_hash"]
+    with pytest.raises(jsonschema.ValidationError):
+        schema.validate(hostile_episode_binding)
