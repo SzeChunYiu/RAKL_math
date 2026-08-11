@@ -1,0 +1,56 @@
+{
+  "schema_version": "v3-shadow-failure-v0",
+  "artifact_type": "FAILURE_EXPERIENCE_PROPOSAL",
+  "status": "OBSERVED_ONLY",
+  "failure_id": "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE",
+  "atom_id": "NS-B2a1",
+  "candidate_id": "METHOD-FAMILY:FIXED-CYLINDER-COMPACTNESS-TO-GLOBAL-EULER-TAIL",
+  "context_snapshot_hash": "sha256:98be9901f6e091516242ed427b7d1d95f660c8e2650c506fe7ab6ed89ac22e21",
+  "pre_action_receipt_hash": "sha256:58168d53d2982741d635fcd2436d4bc3d1f8691b6cc9c03b28ad352a6cb6c3e6",
+  "research_trace_event_id": "NS-B2a1-RESULT-RECORDED",
+  "method_family": "fixed-cylinder Euler-scaling compactness plus F=1 critical bounds -> global tail/no-incoming-energy -> Euler rigidity",
+  "failure_mode": "The audited source provides convergence on every fixed Q(a) and scale-critical upper bounds, but those analytic ingredients do not by themselves control lim_{R→∞} limsup_k annular escape. A critical-shell kinematic construction preserves the same scaling order while escaping every fixed compact set.",
+  "residual_signature": [
+    "source-derived uniform annular tightness or recentering remains open",
+    "signed local-energy-flux cancellation/telescoping remains open",
+    "specific Euler rigidity theorem cannot be selected until its global hypotheses are inherited"
+  ],
+  "competing_diagnoses": [
+    "the needed tightness exists at the Navier-Stokes prelimit level but has not been extracted from the source hypotheses",
+    "absolute tightness fails but a signed Euler local-energy flux cancels or telescopes",
+    "a concentration-compactness/minimality normalization can recenter the escaping profile",
+    "a different Euler invariant or symmetry-specific Liouville theorem bypasses tail tightness"
+  ],
+  "selected_diagnosis": "",
+  "diagnosis_status": "OBSERVED_ONLY",
+  "broken_assumptions": [],
+  "scope_conditions": [
+    "logical inference from fixed-cylinder convergence and displayed F(a)=1 critical scale-charge boundedness only",
+    "source audit of arXiv:2606.29468v1 and calibration against arXiv:2507.08733v2",
+    "critical-shell falsifier is kinematic and not an Euler/Navier-Stokes solution"
+  ],
+  "evidence_pointers": [
+    "arXiv:2606.29468v1, proof around (2.9), fixed-Q(a) convergence, Theorem 3.1 and F(a)=1 example",
+    "arXiv:2507.08733v2, Section 4 extra Liouville hypotheses",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1_SOURCE_TAIL_INHERITANCE_AUDIT_20260811.md"
+  ],
+  "falsifier_or_attempt": "SOURCE_TAIL_INHERITANCE_AUDIT plus divergence-free critical-shell kinematic falsifier",
+  "observed_result": "Predeclared branch B: ONLY_LOCAL_COMPACTNESS_AND_CRITICAL_BOUNDEDNESS.",
+  "local_repair_attempts": [
+    "open a prospective source-level annular-tightness child",
+    "keep signed-flux telescoping as an orthogonal successor",
+    "do not search a generic Euler Liouville theorem until one of its global hypotheses is source-bound"
+  ],
+  "timestamp": "2026-08-11T12:41:00+00:00",
+  "authority_contract": {
+    "effective_authority": "PROPOSAL_ONLY",
+    "allowed_effect": "SEARCH_PRIORITY_ONLY",
+    "grants_tool_authority": false,
+    "grants_proof_authority": false,
+    "grants_gluing_authority": false,
+    "grants_theorem_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false
+  },
+  "artifact_hash": "sha256:74fe2781dc22c1a5c8a206d105e25373f7d9c90c41eaef47ea996b149a49cdec"
+}
