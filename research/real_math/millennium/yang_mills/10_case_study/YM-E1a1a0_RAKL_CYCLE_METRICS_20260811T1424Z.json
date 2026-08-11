@@ -1,0 +1,136 @@
+{
+  "receipt_id": "YM-E1a1a0-RAKL-CYCLE-METRICS-20260811T1424Z",
+  "authority": "PROPOSAL_SHADOW_METROLOGY_ONLY",
+  "rakl": {
+    "method_label": "v3",
+    "method_version": "CANNOT_MEASURE:no_canonical_method_version_artifact_found_on_current_main",
+    "git_sha": "c8048b079ddc65ca336130a39de14af0e6dafcca",
+    "framework_pin_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "pin_relation": "PIN_BEHIND_CURRENT_MAIN",
+    "pin_lag_commits": 5,
+    "freshness_execution_status": "CURRENT_MAIN_READ_DIRECTLY_SHADOW",
+    "framework_freshness_receipt_id": "YM-E1a1a0-FRAMEWORK-FRESHNESS-20260811T1424Z"
+  },
+  "rakl_math": {
+    "base_sha": "41327f39783255fa96ff83754fec6c3ee77742ab",
+    "cycle_branch": "research/yang-mills-yme1a1a0-source-acquisition-metrics-20260811",
+    "branch_refresh_merge_commit": "1bad856ca59af7dd366722286b5f5898f098ae66",
+    "pre_state_fingerprint": "CANNOT_MEASURE:no_materialized_RAKLV3State_available_in_connector_runtime",
+    "post_state_fingerprint": "CANNOT_MEASURE:no_materialized_RAKLV3State_available_in_connector_runtime"
+  },
+  "atom_id": "YM-E1a1a0",
+  "parent_atom_id": "YM-E1a1a",
+  "context_hash": "sha256:f9404d230586967ab018d4d6537676dba58637e953e462fe0b8f52c662825b5a",
+  "compiled_fibre_snapshot_hash": "CANNOT_MEASURE:no_compiled_ProblemFibre_runtime_object_available",
+  "actual_fibre_manifest_hash": "sha256:c0ecb71bb77da5300657f93b1d429c3f217f9c4b5c3a9b280a108510c2261cd5",
+  "actual_fibre_manifest": {
+    "atom_id": "YM-E1a1a0",
+    "parent_atom_id": "YM-E1a1a",
+    "root_contract_blob_sha": "1b09055d655a28375b894a9a94b63ad54fa3abc1",
+    "context_hash": "sha256:f9404d230586967ab018d4d6537676dba58637e953e462fe0b8f52c662825b5a",
+    "actual_block_source_contract_blob_sha": "7a80d9afb41d885b60c7d154646d7edf17d8d9ab",
+    "primary_source_retrieval_blob_sha": "9fbee63196f16a0fb5d0c15af302bf038383a6e6",
+    "memory_review_hash": "sha256:4883bab0dd9c22650819f89d5bc1d7b13ea9624a19bfcf422a8081f5969552ca",
+    "rakl_main_sha": "c8048b079ddc65ca336130a39de14af0e6dafcca",
+    "rakl_math_main_sha": "41327f39783255fa96ff83754fec6c3ee77742ab",
+    "residuals": ["B1_FINE_COARSE_GEOMETRY","B2_GAUGE_AVERAGING_MAP","B3_REGULARITY_DOMAIN"]
+  },
+  "canonical_process_surfaces": ["memory","routing","search_query_generation","source_selection_reliability","claim_extraction","gap_discovery","review","saturation_stopping"],
+  "memory": {
+    "retrieved_ids": ["YM_E1a1a0_PRIMARY_SOURCE_RETRIEVAL_20260811","YM_E1a1a_RESEARCH_MEMORY_REVIEW_20260811","YM_E1a1a_CONTEXT_FIBER_20260811","YM_E1a1a_ACTUAL_BLOCK_SOURCE_CONTRACT_20260811","ROOT_CONTRACT"],
+    "retrieved_count": 5,
+    "selected_ids": ["YM_E1a1a0_PRIMARY_SOURCE_RETRIEVAL_20260811","YM_E1a1a_RESEARCH_MEMORY_REVIEW_20260811"],
+    "selected_count": 2,
+    "rejected_ids": [],
+    "rejected_count": 0,
+    "missed_prior_experience_ids": [],
+    "missed_prior_experience_count": 0,
+    "relevant_tool_ids": [],
+    "relevant_failure_ids": ["F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE","F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE"],
+    "successful_reuse_ids": ["YM_E1a1a0_PRIMARY_SOURCE_RETRIEVAL_20260811","YM_E1a1a_RESEARCH_MEMORY_REVIEW_20260811"],
+    "memory_before_external_search": true
+  },
+  "external_source_search": {
+    "web_tool_invocations_observed": 2,
+    "search_queries_observed": 4,
+    "publisher_page_opens_observed": 1,
+    "new_primary_fulltext_retrieved": false,
+    "publisher_record_status": "subscription preview; full PDF offered for purchase/institutional access",
+    "new_semantic_source_fact_after_deduplication": false,
+    "retrieved_source_ids": ["SPRINGER_DOI_10.1007/BF01211042"],
+    "rejected_as_mathematical_source_body": ["Rutgers institutional metadata record","INSPIRE bibliographic report-number record","secondary citation/search-result pages"]
+  },
+  "decision_policy": {
+    "route": "memory-first exact-primary-source acquisition",
+    "candidate_generation_allowed": false,
+    "reason": "B1-B3 remain primary-text unbound; missing source detail fails closed"
+  },
+  "falsifier_verification": {
+    "strongest_falsifier": "eventual exact averaging map has path/support/gauge-fixing dependencies incompatible with the proposed reflection buffer or marked transport",
+    "verification_performed": ["current RAKL main/pin ancestry check","current RAKL_math main/root contract check","frozen context and dual-memory retrieval","publisher-page access-boundary recheck","five-role same-context expert audit"],
+    "not_performed": ["mathematical candidate falsifier","proof checker","isolated recheck","independent review","novelty search for a theorem"]
+  },
+  "outcome": "BLOCKED",
+  "failure_category": "SOURCE_CONTEXT_COVERAGE_BLOCK",
+  "residual_before": ["B1_FINE_COARSE_GEOMETRY","B2_GAUGE_AVERAGING_MAP","B3_REGULARITY_DOMAIN"],
+  "residual_after": ["B1_FINE_COARSE_GEOMETRY","B2_GAUGE_AVERAGING_MAP","B3_REGULARITY_DOMAIN"],
+  "retained_semantic_novelty": {"KNOWLEDGE":0,"OPERATOR":0,"EXPERIENCE_PATTERN":0,"OBSTRUCTION":0,"RELATION":0,"PATH":0,"META_METHOD":0},
+  "saturation": {
+    "reopened_axes": [],
+    "flattened_axes": [],
+    "reason": "one same-route zero-novelty recheck does not establish bounded saturation; no new native residual reopened an axis"
+  },
+  "framework_adoption_observation": {
+    "new_current_main_feature_observed": "framework-freshness-receipt-v1",
+    "counted_as_cycle_learning": false,
+    "reason": "the feature pre-existed on current RAKL main and was adopted in shadow mode; repository/framework growth is not retained learning by this episode",
+    "framework_improvement_hypothesis": "RAKL_math research-cycle tooling should emit the current framework freshness receipt automatically before memory/routing when the application pin trails current RAKL main."
+  },
+  "resource_proxies": {
+    "model_input_tokens": "CANNOT_MEASURE:runtime_does_not_expose_per-cycle_model_token_accounting",
+    "model_output_tokens": "CANNOT_MEASURE:runtime_does_not_expose_per-cycle_model_token_accounting",
+    "compiled_context_tokens": "CANNOT_MEASURE:no_compiled_context_token_receipt_emitted",
+    "github_read_calls": "CANNOT_MEASURE:connector_does_not_expose_aggregate_per-cycle_counter",
+    "github_write_calls": "observable_after_emission_via_commit_history; not used as learning metric",
+    "web_tool_invocations_observed": 2,
+    "web_search_queries_observed": 4,
+    "publisher_page_opens_observed": 1,
+    "tool_calls_total": "CANNOT_MEASURE:aggregate_tool_counter_not_exposed",
+    "wall_time_ms": "CANNOT_MEASURE:no_stable_scientific_wall_clock_receipt_exposed"
+  },
+  "new_records": {
+    "episode_ids": ["YM-E1a1a0-EP-SOURCE-20260811T1424Z"],
+    "lesson_ids": [],
+    "failure_ids": [],
+    "tool_ids": [],
+    "obstruction_ids": [],
+    "motif_ids": [],
+    "successful_reuse_ids": ["YM_E1a1a0_PRIMARY_SOURCE_RETRIEVAL_20260811","YM_E1a1a_RESEARCH_MEMORY_REVIEW_20260811"],
+    "trace_id": "YM-E1a1a0-PRE-CANDIDATE-20260811T1424Z"
+  },
+  "gate_provenance_ci": {
+    "official_root_contract_read": true,
+    "frozen_context_read": true,
+    "analogies_disanalogies_rechecked": true,
+    "expert_cell_complete": true,
+    "dual_memory_complete": true,
+    "trace_complete_for_source_acquisition_child": true,
+    "candidate_generation": "BLOCKED",
+    "mathematical_candidate_generated": false,
+    "episode_diagnosis_lesson_separation": "PASS:no diagnosis promoted to obstruction/lesson; no failure/lesson minted",
+    "primary_source_detail_missing": true,
+    "current_rakl_main_read": true,
+    "application_framework_pin_current": false,
+    "framework_adoption_mode": "CURRENT_MAIN_READ_DIRECTLY_SHADOW",
+    "exact_head_application_ci": "PENDING_AFTER_CYCLE_ARTIFACT_EMISSION",
+    "root_authority": "NONE"
+  },
+  "rakl_changed_observable_pre_memory_pre_gate_action_preference": {
+    "status": "OBSERVED_BEHAVIORAL_CHANGE_CAUSAL_ATTRIBUTION_NOT_IDENTIFIED",
+    "observation": "This cycle retrieved the canonical source-block memory before external web search; the prior recorded cycle performed the external search before retrieving that memory.",
+    "causal_boundary": "The ordering change is consistent with the RAKL memory-first gate and current freshness/adoption discipline, but no prospectively randomized counterfactual was frozen."
+  },
+  "timestamp": "2026-08-11T14:24:09+00:00",
+  "artifact_hash": "sha256:f391af5e37c0f8d3d75ed47266c86843c1368362ea2a7f8b2fb70be045a39a5d",
+  "artifact_hash_basis": "sha256(canonical JSON of receipt before artifact_hash fields)"
+}
