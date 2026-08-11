@@ -1,0 +1,159 @@
+{
+  "atom_id": "NS-B1a1",
+  "object_context": "Child of NS-B1a. Let (v,q) be a non-trivial mild bounded ancient 3D incompressible Navier-Stokes solution on R^3 x (-infinity,0) with finite Albritton-Barker Type-I quantity I=sup_Q(A+C+D+E). Determine whether the standard suitable-solution local-energy inequality, with parabolic cutoffs on dynamically realized dyadic scales, supplies a scale-decaying, telescoping, monotone, no-recrossing, or otherwise finite total charge that can terminate infinite scale descent. The immediate discriminator is absolute scale accounting only; no theorem candidate is authorized.",
+  "structural_coordinates": [
+    "Navier-Stokes scaling v_lambda(x,t)=lambda v(lambda x,lambda^2 t), q_lambda=lambda^2 q(lambda x,lambda^2 t)",
+    "Albritton-Barker scale-invariant A,C,D,E on parabolic cylinders",
+    "local energy inequality with cutoff derivatives |dt phi|+|Delta phi|=O(R^-2), |grad phi|=O(R^-1)",
+    "natural localized kinetic-energy scale is R, so shell bookkeeping must be normalized by R",
+    "velocity cutoff term, cubic transport, pressure-velocity flux, dissipation and endpoint energy must be typed separately",
+    "pressure is normalized modulo a time-dependent spatial constant and must retain local Calderon-Zygmund plus harmonic/far-field structure",
+    "absolute shell bounds are distinct from signed/telescoping increments",
+    "nested critical core quantities are distinct from disjoint physical annuli",
+    "translation/dilation noncompactness and moving centers can leak a profile from any fixed shell",
+    "a Type-I singularity is represented by a non-trivial mild bounded ancient finite-I limit, not by a terminal smallest physical scale",
+    "far-field decay/global L3 is not inherited from local compactness alone",
+    "Type-II blow-up remains outside this atom"
+  ],
+  "equivalent_formulations": [
+    "Scale-currency form: identify a nonnegative or signed quantity whose total cost over every dynamically realized infinite dyadic descent is finite and whose per-descent effect is nontrivial.",
+    "Negative discriminator: after division by R, every canonical absolute term in the cutoff local-energy inequality is merely O(A+C+D^(2/3)C^(1/3)) and hence O(I), with no positive power of R.",
+    "Increment form: if absolute summation fails, prove a bounded-below functional Phi with a source-valid strict decrement or no-recrossing property across each certified descendant.",
+    "Rigidity form: use the resulting scale coordinate to show every non-trivial mild bounded ancient solution with finite I is impossible, or instead derive a backward sequence with bounded global L3 and invoke Albritton-Barker Theorem 1.2."
+  ],
+  "solved_analogues": [
+    "Albritton-Barker Theorem 1.2: a mild ancient Navier-Stokes solution uniformly bounded in global L3 along times t_k->-infinity is zero.",
+    "Classical epsilon-regularity/persistence-of-singularities: sufficiently small scale-invariant velocity-pressure packets yield regularity; strong L3_loc compactness preserves singularity information under the required hypotheses."
+  ],
+  "near_solved_analogues": [
+    "Albritton-Barker Theorem 1.1 identifies Type-I singularities with non-trivial mild bounded ancient solutions with finite I, but does not classify all such ancient solutions.",
+    "Bradshaw-Tsai construct discretely self-similar suitable weak/local-energy solutions in forward settings, showing the local-energy inequality is structurally compatible with exact scale recurrence; this is a hostile structural calibration, not an ancient blow-up example.",
+    "Lei-Yang-Yuan prove a backward-uniqueness result for bounded mild whole-space solutions with prescribed final data using weighted estimates, but finite I alone does not provide the terminal/far-field hypotheses needed to close NS-B1a1."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Suitable weak-solution local energy inequality and Albritton-Barker Type-I quantities",
+      "method": "Apply a parabolic cutoff phi_R, normalize the energy inequality by R, and compute the exact homogeneity of every absolute contribution before proposing any multiscale sum.",
+      "shared_structure": [
+        "same whole-space 3D Navier-Stokes scaling",
+        "same A,C,D,E quantities used to define finite Type I",
+        "same local-energy inequality available on compact subcylinders"
+      ],
+      "required_assumptions": [
+        "suitable/local-energy formulation on the cutoff cylinder",
+        "pressure in L^(3/2)_loc modulo a spatial constant at each time",
+        "standard cutoff derivative bounds at scale R"
+      ],
+      "disanalogies": [
+        "one-scale boundedness is not a finite budget over infinitely many scales",
+        "absolute values discard any cancellation that could support telescoping",
+        "annular support does not make scale-invariant normalized terms summable"
+      ],
+      "repair_question": "After the absolute O(1)-per-scale accounting is exhausted, is there a signed increment, monotone quantity, or no-recrossing theorem whose finite budget survives Navier-Stokes scaling?",
+      "source_anchors": [
+        "Albritton-Barker arXiv:1811.00502, definitions (1.1)-(1.5), Definition 2.1 and Lemma 2.2",
+        "Bradshaw-Tsai arXiv:1801.08060"
+      ]
+    },
+    {
+      "source_context": "Concentration-compactness / ancient blow-up limits",
+      "method": "Rescale around a Type-I singularity, use uniform critical local bounds and suitable-solution compactness to extract an ancient limit, and demand strong local convergence sufficient to preserve non-triviality.",
+      "shared_structure": [
+        "translation and dilation are noncompact symmetries",
+        "blow-up rescaling preserves the critical A,C,D,E quantities",
+        "rigidity is applied to an ancient limiting object"
+      ],
+      "required_assumptions": [
+        "uniform local L3 velocity and L^(3/2) pressure control on compact rescaled cylinders",
+        "strong L3_loc subsequential convergence of velocity",
+        "pressure normalization/decomposition and weak L^(3/2)_loc compactness",
+        "persistence of singularities or an equivalent non-triviality mechanism"
+      ],
+      "disanalogies": [
+        "local compactness does not control the far field",
+        "weak pressure convergence does not itself transport a global pressure normalization",
+        "moving-center descendants can leak outside a fixed annular coordinate"
+      ],
+      "repair_question": "What additional tightness/almost-periodicity theorem prevents profile leakage and binds every dynamically realized descendant to one compact scale coordinate?",
+      "source_anchors": [
+        "Albritton-Barker arXiv:1811.00502, Lemma 2.2 and Proposition 2.3"
+      ]
+    },
+    {
+      "source_context": "Backward uniqueness / Liouville closure",
+      "method": "Once a terminal-time or backward-sequence global hypothesis is genuinely produced, invoke a source-valid rigidity theorem rather than treating unique continuation as an automatic consequence of finite I.",
+      "shared_structure": [
+        "bounded mild whole-space Navier-Stokes solutions",
+        "rigidity is a possible final closure after compactness",
+        "pressure/Calderon-Zygmund terms are load-bearing"
+      ],
+      "required_assumptions": [
+        "the exact global final-data/decay or L3-sequence hypothesis of the selected theorem",
+        "coefficient/regularity class required by the unique-continuation estimate",
+        "a justified far-field condition after rescaling"
+      ],
+      "disanalogies": [
+        "finite local Type-I control does not supply global L3 or terminal spatial decay",
+        "a local-energy shell estimate does not imply final-time vorticity vanishing",
+        "backward uniqueness cannot repair profile leakage before its hypotheses are established"
+      ],
+      "repair_question": "Can a scale increment or compactness theorem actually manufacture the terminal/global hypothesis needed by a published Liouville or backward-uniqueness theorem?",
+      "source_anchors": [
+        "Albritton-Barker arXiv:1811.00502, Theorem 1.2",
+        "Lei-Yang-Yuan arXiv:2311.02429"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "Forward DSS suitable weak solutions are only hostile scale-recurrence controls; they are not evidence for ancient Type-I singular solutions.",
+    "A disjoint annulus decomposition of an unnormalized finite-energy density is not the same as a summable scale-invariant charge after division by R.",
+    "A lower bound on a nested critical core packet does not imply a lower bound on each annular increment.",
+    "Pressure far-field summability from NS-B1a-C001 prunes only raw instantaneous absolute pressure accumulation; it does not prune time-integrated or signed pressure work.",
+    "No smallest dyadic singular scale may be assumed.",
+    "Local depletion/vorticity geometry cannot be promoted to global tail control without an explicit propagation or compactness theorem.",
+    "Success here would eliminate only the registered Type-I ancient branch, not Type-II blow-up or the Clay root."
+  ],
+  "source_anchors": [
+    "Albritton-Barker arXiv:1811.00502 (current arXiv rendering accessed 2026-08-11)",
+    "Bradshaw-Tsai arXiv:1801.08060",
+    "Bradshaw-Tsai arXiv:1907.00256",
+    "Lei-Yang-Yuan arXiv:2311.02429",
+    "research/real_math/millennium/navier_stokes/03_source_audits/NS-B1a1_SRC001_SHAHMUROV_2606_07875_20260811.md",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a_C001_FAILURE_EXPERIENCE_DELTA_20260811.json"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "amortized analysis / potential methods",
+      "source_situation": "A process may perform infinitely many individually bounded-cost operations unless each operation consumes a strict decrement of a bounded-below potential or is charged injectively to a finite resource.",
+      "common_abstraction": [
+        "uniform O(1) per step is not a termination proof",
+        "finite total budget requires telescoping, disjoint charging, or no-recrossing",
+        "the charging map must be injective enough to prevent reuse of the same resource"
+      ],
+      "source_to_target_mapping": [
+        "operation -> one dynamically realized scale descent R to theta R",
+        "absolute step cost -> normalized local-energy cutoff terms",
+        "bounded-below potential -> candidate Navier-Stokes monotone/increment functional",
+        "resource reuse -> nested core energy being counted at every scale"
+      ],
+      "shared_constraints": [
+        "infinitely many scale steps are a priori possible",
+        "critical normalization makes one-step bounds scale neutral",
+        "termination requires more than uniform boundedness"
+      ],
+      "disanalogies": [
+        "Navier-Stokes local energy is a signed nonlinear balance rather than a discrete algorithm",
+        "no bounded-below monotone potential is currently known in this setting",
+        "pressure and moving centers make the charging map nonlocal"
+      ],
+      "proposed_principle": "Reject absolute O(1)-per-scale bookkeeping as a terminal currency; search only for a proved decrement, injective annular renewal, or no-recrossing coordinate.",
+      "validation_obligation": "Derive the coordinate from Navier-Stokes for every certified Type-I descendant and prove its total variation/budget is finite without assuming the desired global critical norm.",
+      "provenance_note": "Proposal-only structural analogy; it carries no PDE theorem authority."
+    }
+  ],
+  "analogy_scan_notes": "The retained potential-method analogy has a precise termination mapping. Cascade imagery and generic turbulence analogies were rejected because they do not supply a finite-budget theorem.",
+  "frozen_at": "2026-08-11T09:32:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:40c18e9e9975e6f7f972168c8701370c52fe06c567d51b3cc4517c1de4666141"
+}
