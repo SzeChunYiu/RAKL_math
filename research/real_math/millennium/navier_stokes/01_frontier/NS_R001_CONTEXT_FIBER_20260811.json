@@ -1,0 +1,162 @@
+{
+  "atom_id": "NS-R001",
+  "object_context": "Can exact 3D Navier–Stokes structure upgrade the global Leray energy class to a scale-critical regularity control before a first singular time?",
+  "structural_coordinates": [
+    "3D incompressible Navier–Stokes on R^3 or T^3 with viscosity nu>0",
+    "scaling u_lambda(x,t)=lambda u(lambda x,lambda^2 t); velocity L_t^p L_x^q is critical when 2/p+3/q=1",
+    "Leray energy control L_t^infinity L_x^2 intersect L_t^2 dot H_x^1 lies on 2/p+3/q=3/2 and is supercritical",
+    "3D vorticity has sign-indefinite stretching omega dot grad u; 2D vorticity does not",
+    "pressure is nonlocal and local regularity estimates must control pressure tails",
+    "critical criteria and epsilon-regularity regularize once critical control/smallness is supplied, but do not derive it from energy",
+    "Tao's averaged Navier–Stokes blowup shows energy cancellation plus broad generic harmonic-analysis structure is insufficient"
+  ],
+  "equivalent_formulations": [
+    "derive any established scale-critical Serrin/endpoint bound from arbitrary smooth finite-energy data",
+    "derive uniform epsilon-regularity smallness at every potential concentration scale from exact equation structure",
+    "exclude every minimal critical blowup element using hypotheses generated from the energy class rather than assumed",
+    "prove a scale-local vortex-stretching depletion law strong enough to prevent critical concentration"
+  ],
+  "solved_analogues": [
+    "2D incompressible Navier–Stokes global regularity",
+    "small-data global 3D Navier–Stokes well-posedness in Koch–Tataru critical BMO^{-1}"
+  ],
+  "near_solved_analogues": [
+    "Caffarelli–Kohn–Nirenberg epsilon/partial regularity",
+    "Escauriaza–Seregin–Sverak endpoint L_t^infinity L_x^3 regularity",
+    "Kenig–Koch critical-element concentration-compactness/rigidity"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "2D incompressible Navier–Stokes",
+      "method": "close a coercive vorticity/enstrophy estimate then bootstrap parabolic smoothing",
+      "shared_structure": [
+        "viscous incompressible transport-diffusion",
+        "energy dissipation",
+        "vorticity exposes nonlinear production"
+      ],
+      "required_assumptions": [
+        "vorticity production is absent or controlled by dissipation",
+        "estimate closes without supercritical loss"
+      ],
+      "disanalogies": [
+        "3D has vortex stretching omega dot grad u",
+        "2D enstrophy cancellation does not transfer by interpolation"
+      ],
+      "repair_question": "Is there an exact 3D geometric or multiscale replacement for missing enstrophy cancellation that yields critical control?",
+      "source_anchors": [
+        "Fefferman Clay Navier–Stokes problem description"
+      ]
+    },
+    {
+      "source_context": "Koch–Tataru small-data critical theory",
+      "method": "contract the mild equation in a scaling-critical solution space",
+      "shared_structure": [
+        "exact 3D Navier–Stokes nonlinearity",
+        "heat smoothing",
+        "critical bilinear estimates"
+      ],
+      "required_assumptions": [
+        "small critical initial-data norm"
+      ],
+      "disanalogies": [
+        "Millennium problem allows arbitrarily large smooth finite-energy data",
+        "large-data flow need not remain perturbative"
+      ],
+      "repair_question": "Can large data be decomposed into a controlled critical background plus small remainder without assuming the desired bound?",
+      "source_anchors": [
+        "Koch–Tataru, Adv. Math. 157 (2001), DOI 10.1006/aima.2000.1937"
+      ]
+    },
+    {
+      "source_context": "endpoint/epsilon regularity and critical-element rigidity",
+      "method": "exclude singularity once a critical bound or scale-invariant smallness condition is supplied",
+      "shared_structure": [
+        "same 3D equations",
+        "scale-critical rescaling",
+        "first-singular-time analysis"
+      ],
+      "required_assumptions": [
+        "bounded critical norm or epsilon-small scale-invariant local quantity"
+      ],
+      "disanalogies": [
+        "Leray energy does not supply the critical hypothesis",
+        "rigidity is downstream of the selected gap"
+      ],
+      "repair_question": "What exact structure generates the missing critical hypothesis from finite-energy smooth data?",
+      "source_anchors": [
+        "CKN 1982 DOI 10.1002/cpa.3160350604",
+        "Escauriaza–Seregin–Sverak 2003 DOI 10.1070/RM2003v058n02ABEH000609",
+        "Kenig–Koch arXiv:0908.3349"
+      ]
+    },
+    {
+      "source_context": "Tao averaged Navier–Stokes finite-time blowup",
+      "method": "negative transfer: reject proof bases using only energy cancellation and generic averaged-stable harmonic-analysis structure",
+      "shared_structure": [
+        "parabolic scaling",
+        "quadratic divergence-free evolution",
+        "energy cancellation"
+      ],
+      "required_assumptions": [
+        "candidate proof uses only properties preserved by the averaged operator"
+      ],
+      "disanalogies": [
+        "averaged operator is not exact convection",
+        "true nonlinear geometry may supply extra identities"
+      ],
+      "repair_question": "Which exact identity or geometry of true convection/stretching is indispensable and absent from the averaged model?",
+      "source_anchors": [
+        "Tao, JAMS 29 (2016), arXiv:1402.0290"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "energy interpolation remains supercritical and cannot by itself reach a critical Serrin/endpoint class",
+    "2D enstrophy closure fails in 3D because vortex stretching is present",
+    "critical criteria assume rather than generate the selected critical control",
+    "pressure localization can hide nonlocal tails",
+    "averaged-model blowup blocks energy-cancellation-only proof bases"
+  ],
+  "source_anchors": [
+    "https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf",
+    "https://doi.org/10.1002/cpa.3160350604",
+    "https://doi.org/10.1070/RM2003v058n02ABEH000609",
+    "https://doi.org/10.1006/aima.2000.1937",
+    "https://arxiv.org/abs/0908.3349",
+    "https://arxiv.org/abs/1402.0290"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "control-theory/dissipative-feedback systems",
+      "source_situation": "A dissipative system with an amplifying feedback channel is stable only if a dimensionless production-to-dissipation gain stays below runaway.",
+      "common_abstraction": [
+        "coercive dissipation competes with sign-indefinite production",
+        "instability needs sustained gain across scales",
+        "useful stability certificates must be scale compatible"
+      ],
+      "source_to_target_mapping": [
+        "damping -> viscosity",
+        "feedback production -> vortex stretching/nonlinear transfer",
+        "gain margin -> scale-local stretching efficiency versus dissipation"
+      ],
+      "shared_constraints": [
+        "certificate must use current state only",
+        "must compose across scales without assuming regularity",
+        "must survive worst-case admissible fields"
+      ],
+      "disanalogies": [
+        "Navier–Stokes is infinite-dimensional and nonlocal",
+        "pressure couples spatial regions",
+        "analogy supplies no PDE inequality"
+      ],
+      "proposed_principle": "Screen future candidates for a critical-scale production-versus-dissipation deficit specific to true Navier–Stokes.",
+      "validation_obligation": "A candidate quantity must be dimensionless under Navier–Stokes scaling, survive adversarial smooth divergence-free concentration/alignment fields, control pressure tails, and use structure absent from Tao's averaged blowup model.",
+      "provenance_note": "Proposal-generation bridge only; zero theorem authority."
+    }
+  ],
+  "analogy_scan_notes": "Retained one structurally mapped dissipative-feedback bridge; no everyday analogy survived the mapping/disanalogy gate.",
+  "frozen_at": "2026-08-11T06:03:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:7140a6a639e76f9fd7abdcd6c4dc8570c3356c61058f7a7b503194660e4b5bea"
+}
