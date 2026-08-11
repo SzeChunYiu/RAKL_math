@@ -11,6 +11,8 @@
     "framework_delta",
     "application_base",
     "compatibility_review",
+    "initial_verification",
+    "prospective_repair",
     "mathematical_experience_boundary",
     "verification",
     "authority_contract",
@@ -53,6 +55,31 @@
         "pre_action_outcome_enum_compatible": {"const": true},
         "new_surfaces_authority": {"const": "PROPOSAL_ONLY_OR_NON_AUTHORIZING"},
         "historical_artifacts_rewritten": {"const": false}
+      }
+    },
+    "initial_verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["subject_commit", "tests_passed", "tests_failed", "exit_code", "status", "failure_scope"],
+      "properties": {
+        "subject_commit": {"const": "f5ec71348a692f0107b713edbfd1c92ea2c4b8ef"},
+        "tests_passed": {"const": 453},
+        "tests_failed": {"const": 6},
+        "exit_code": {"const": 1},
+        "status": {"const": "FAIL_HISTORICAL_AUDIT_COUPLED_TO_LIVE_PIN"},
+        "failure_scope": {"const": "OPERATIONAL_ASSURANCE_ONLY_NO_MATHEMATICAL_RESULT"}
+      }
+    },
+    "prospective_repair": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["historical_pin_source", "historical_framework_check", "live_freeze_check", "historical_receipts_rewritten", "mathematical_memory_mutated"],
+      "properties": {
+        "historical_pin_source": {"const": "SUBJECT_COMMIT_CONFIG"},
+        "historical_framework_check": {"const": "PINNED_COMMIT_OBJECT_EXISTS_NOT_CURRENT_WORKTREE_HEAD_EQUALITY"},
+        "live_freeze_check": {"const": "CURRENT_ORIGIN_AND_CURRENT_PIN_REMAIN_FAIL_CLOSED"},
+        "historical_receipts_rewritten": {"const": false},
+        "mathematical_memory_mutated": {"const": false}
       }
     },
     "mathematical_experience_boundary": {

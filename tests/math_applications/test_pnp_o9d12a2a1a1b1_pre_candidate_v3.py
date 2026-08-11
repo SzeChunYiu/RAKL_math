@@ -308,7 +308,7 @@ def test_pnp_o9d12a2a1a1b1_pre_candidate_v3_git_audit_executes_and_mutations_fai
     # durable ancestry/gitlink audit must still pass while a *new* current
     # freeze correctly fails closed and requires a versioned successor.
     assert module.audit_git_state(source, require_current_origin=False) == {
-        "verdict": "PASS", "checked_relations": 12, "current_origin_main_at_freeze": False, "worktree_framework_head_checked": True
+        "verdict": "PASS", "checked_relations": 12, "current_origin_main_at_freeze": False, "worktree_framework_head_checked": False
     }
     current_audit = module.audit_git_state(source, require_current_origin=True)
     if module.git("rev-parse", "refs/remotes/origin/main") == module.BASE_COMMIT:

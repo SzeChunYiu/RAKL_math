@@ -22,6 +22,21 @@
     "new_surfaces_authority": "PROPOSAL_ONLY_OR_NON_AUTHORIZING",
     "historical_artifacts_rewritten": false
   },
+  "initial_verification": {
+    "subject_commit": "f5ec71348a692f0107b713edbfd1c92ea2c4b8ef",
+    "tests_passed": 453,
+    "tests_failed": 6,
+    "exit_code": 1,
+    "status": "FAIL_HISTORICAL_AUDIT_COUPLED_TO_LIVE_PIN",
+    "failure_scope": "OPERATIONAL_ASSURANCE_ONLY_NO_MATHEMATICAL_RESULT"
+  },
+  "prospective_repair": {
+    "historical_pin_source": "SUBJECT_COMMIT_CONFIG",
+    "historical_framework_check": "PINNED_COMMIT_OBJECT_EXISTS_NOT_CURRENT_WORKTREE_HEAD_EQUALITY",
+    "live_freeze_check": "CURRENT_ORIGIN_AND_CURRENT_PIN_REMAIN_FAIL_CLOSED",
+    "historical_receipts_rewritten": false,
+    "mathematical_memory_mutated": false
+  },
   "mathematical_experience_boundary": {
     "mathematical_memory_types": [
       "TaskEpisode",
@@ -54,5 +69,5 @@
     "grants_framework_evolution_authority": false,
     "grants_review_independence": false
   },
-  "artifact_hash": "sha256:bcb5a048063ae367b4c04d7163bf13ac79764130d592dff3893690da8b3eda8b"
+  "artifact_hash": "sha256:e20de740505756b1f83f8c271bd893e4dda4611697c0a8062510004ea487f111"
 }

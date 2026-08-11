@@ -192,7 +192,12 @@ def audit_git_state(
         subject_tree = git("rev-parse", f"{source_binding['subject_commit']}^{{tree}}")
         base_gitlink = git("rev-parse", f"{BASE_COMMIT}:framework/RAKL")
         subject_gitlink = git("rev-parse", f"{source_binding['subject_commit']}:framework/RAKL")
-        pin_config = load_json("config/rakl-framework-pin.json")["commit"]
+        if require_current_origin:
+            pin_config = load_json("config/rakl-framework-pin.json")["commit"]
+        else:
+            pin_config = json.loads(
+                git("show", f"{source_binding['subject_commit']}:config/rakl-framework-pin.json")
+            )["commit"]
         origin_url = git("remote", "get-url", "origin")
     except (KeyError, OSError, RuntimeError, ValueError):
         return {"verdict": "CANNOT_CHECK", "reason": "GIT_OBJECT_OR_CONFIG_UNAVAILABLE"}
@@ -212,8 +217,6 @@ def audit_git_state(
         return {"verdict": "FAIL", "reason": "BASE_FRAMEWORK_GITLINK_MISMATCH"}
     if subject_gitlink != FRAMEWORK_PIN:
         return {"verdict": "FAIL", "reason": "SUBJECT_FRAMEWORK_GITLINK_MISMATCH"}
-    if pin_config != FRAMEWORK_PIN:
-        return {"verdict": "FAIL", "reason": "PIN_CONFIG_MISMATCH"}
     normalized_origin = origin_url.rstrip("/").removesuffix(".git")
     normalized_expected = APPLICATION_REPOSITORY.rstrip("/").removesuffix(".git")
     if normalized_origin != normalized_expected:
@@ -224,26 +227,35 @@ def audit_git_state(
                 return {"verdict": "FAIL", "reason": "ORIGIN_MAIN_MOVED_BEFORE_FREEZE"}
         except RuntimeError:
             return {"verdict": "CANNOT_CHECK", "reason": "ORIGIN_MAIN_REF_UNAVAILABLE"}
+    if pin_config != FRAMEWORK_PIN:
+        return {"verdict": "FAIL", "reason": "PIN_CONFIG_MISMATCH"}
+    worktree_framework_head_checked = False
     if require_worktree_framework:
         try:
-            framework_head = subprocess.run(
-                ["git", "-C", str(ROOT / "framework/RAKL"), "rev-parse", "HEAD"],
+            framework_check = subprocess.run(
+                [
+                    "git", "-C", str(ROOT / "framework/RAKL"),
+                    "rev-parse" if require_current_origin else "cat-file",
+                    "HEAD" if require_current_origin else "-e",
+                    *([] if require_current_origin else [f"{FRAMEWORK_PIN}^{{commit}}"]),
+                ],
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 text=True,
                 check=False,
             )
-            if framework_head.returncode != 0:
+            if framework_check.returncode != 0:
                 return {"verdict": "CANNOT_CHECK", "reason": "FRAMEWORK_WORKTREE_UNAVAILABLE"}
-            if framework_head.stdout.strip() != FRAMEWORK_PIN:
+            if require_current_origin and framework_check.stdout.strip() != FRAMEWORK_PIN:
                 return {"verdict": "FAIL", "reason": "FRAMEWORK_WORKTREE_HEAD_MISMATCH"}
+            worktree_framework_head_checked = bool(require_current_origin)
         except OSError:
             return {"verdict": "CANNOT_CHECK", "reason": "FRAMEWORK_WORKTREE_UNAVAILABLE"}
     return {
         "verdict": "PASS",
         "checked_relations": 12,
         "current_origin_main_at_freeze": bool(require_current_origin),
-        "worktree_framework_head_checked": bool(require_worktree_framework),
+        "worktree_framework_head_checked": worktree_framework_head_checked,
     }
 
 
