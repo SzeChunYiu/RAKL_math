@@ -1,8 +1,8 @@
 # RAKL_METHOD_CASE_STUDY — Cross-Millennium observer R3
 
-**Application base:** `RAKL_math@6557b1b25fa839fe71aba8047c958d5da892edd8`  
-**Framework inspected first:** `RAKL@bd1a2768f0f474ff44ffa25243241f94bfaf6466`  
-**Execution pin:** `bd1a2768f0f474ff44ffa25243241f94bfaf6466` (`MATCHES_CURRENT_FRAMEWORK_MAIN` after merged RAKL_math PR #82)  
+**Application base:** `RAKL_math@6557b1b25fa839fe71aba8047c958d5da892edd8`
+**Framework inspected first:** `RAKL@bd1a2768f0f474ff44ffa25243241f94bfaf6466`
+**Execution pin:** `bd1a2768f0f474ff44ffa25243241f94bfaf6466` (`MATCHES_CURRENT_FRAMEWORK_MAIN` after merged RAKL_math PR #82)
 **Authority:** `SELF_RAKL_MEASUREMENT_ONLY / SAME_CONTEXT_INTERNAL_REVIEW / NO_ROOT_AUTHORITY / NO_FRAMEWORK_PROMOTION`
 
 ## Purpose and chronology
