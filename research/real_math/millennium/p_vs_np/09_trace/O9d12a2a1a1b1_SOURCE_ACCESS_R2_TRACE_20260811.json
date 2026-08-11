@@ -1,0 +1,103 @@
+{
+  "trace_id": "PNP-O9d12a2a1a1b1-SOURCE-ACCESS-R2-TRACE-20260811",
+  "entries": [
+    {
+      "event_id": "O9d12a2a1a1b1-R2-E01",
+      "atom_id": "O9d12a2a1a1b1",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-11T19:10:41Z",
+      "state_summary": "Current RAKL main and the integrated PR129 pre-candidate envelope were re-read; R1 left two full-primary source-access residuals.",
+      "action_summary": "Retry exact primary-source acquisition under the unchanged bounded source-family discriminator; reject abstract-only negative completeness.",
+      "evidence_pointers": [
+        "SzeChunYiu/RAKL@b6d0326735bce38842832e654b704053e7f4ed73:src/rakl/v3.py",
+        "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_PRE_CANDIDATE_TRACE_V3_20260811.json",
+        "SzeChunYiu/RAKL_math@926aff89fb2906c4486fb9d7e9cf7a95d8a8f64c:research/real_math/millennium/p_vs_np/00_sources/O9d12a2a1a1b1_SOURCE_FAMILY_INVENTORY_R1_20260811.json"
+      ],
+      "alternatives_considered": [
+        "invent a new shared-system score now",
+        "infer NO_MATCH from abstracts",
+        "retry full-primary access"
+      ],
+      "decision_rationale": "The inherited v3 routing gate and R1 failure episode make full-primary acquisition the smallest high-information action; candidate-first work would violate the frozen pre-candidate policy.",
+      "outputs": [
+        "KARCHMER_1993:FULL_PRIMARY_TEXT_NOT_OBTAINED",
+        "NAKAYAMA_MARUOKA_1995:FULL_PRIMARY_TEXT_NOT_OBTAINED",
+        "candidate_identity:none"
+      ],
+      "uncertainties": [
+        "A full primary copy may be obtainable through a different authorized repository or future retrieval environment."
+      ],
+      "residuals": [
+        "SOURCE_FAMILY_COMPLETENESS_BLOCKED_BY_KARCHMER_1993_FULL_PRIMARY_ACCESS",
+        "SOURCE_FAMILY_COMPLETENESS_BLOCKED_BY_NAKAYAMA_MARUOKA_1995_FULL_PRIMARY_ACCESS"
+      ],
+      "next_steps": [
+        "record typed source diagnosis and same-context review"
+      ],
+      "previous_event_hash": "",
+      "artifact_hash": "783f90d213da9effa30c85555cd5eb03d725c9e6209be1f8f8d72d5d0bfd61e1"
+    },
+    {
+      "event_id": "O9d12a2a1a1b1-R2-E02",
+      "atom_id": "O9d12a2a1a1b1",
+      "event_type": "RESIDUAL_OPENED",
+      "timestamp": "2026-08-11T19:10:41Z",
+      "state_summary": "The R1 source-completeness blocker persists unchanged after exact-title/DOI and primary-endpoint retry.",
+      "action_summary": "Classify the residual as SOURCE rather than mathematical or gluing failure; preserve the same two source identities.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/00_sources/O9d12a2a1a1b1_SOURCE_ACCESS_R2_20260811.json",
+        "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_SOURCE_COMPLETENESS_DIAGNOSIS_R2_20260811.json"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "failure_category:SOURCE",
+        "local_mathematical_failure:NOT_REACHED",
+        "gluing_failure:NOT_REACHED"
+      ],
+      "uncertainties": [
+        "The source-family technical discriminator remains CANNOT_CHECK until full text is available."
+      ],
+      "residuals": [
+        "SOURCE_FAMILY_COMPLETENESS_BLOCKED_BY_KARCHMER_1993_FULL_PRIMARY_ACCESS",
+        "SOURCE_FAMILY_COMPLETENESS_BLOCKED_BY_NAKAYAMA_MARUOKA_1995_FULL_PRIMARY_ACCESS"
+      ],
+      "next_steps": [
+        "acquire exact full primary copies before any candidate generation"
+      ],
+      "previous_event_hash": "783f90d213da9effa30c85555cd5eb03d725c9e6209be1f8f8d72d5d0bfd61e1",
+      "artifact_hash": "2fd689a210d77aa17a75623ceaee541a3355bbe6bdc3142de574c6aaa0b38827"
+    },
+    {
+      "event_id": "O9d12a2a1a1b1-R2-E03",
+      "atom_id": "O9d12a2a1a1b1",
+      "event_type": "REVIEWED",
+      "timestamp": "2026-08-11T19:10:41Z",
+      "state_summary": "A six-role same-context expert cell reviewed source identity, transfer disanalogies, adversarial falsifiers, chronology, and v3 telemetry.",
+      "action_summary": "Accept BLOCKED as the only gate-compatible outcome and retain a proposal-only source-completeness lesson without authority promotion.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/08_reviews/SAME_CONTEXT_REVIEW_O9d12a2a1a1b1_SOURCE_ACCESS_R2_20260811.md",
+        "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_SOURCE_ACCESS_OBSTRUCTION_LESSON_PROPOSAL_R2_20260811.json"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "same_context_review_only:true",
+        "independent_review_credit:0",
+        "root_authority:NONE"
+      ],
+      "uncertainties": [
+        "No independent mathematical review occurred because there is no mathematical candidate."
+      ],
+      "residuals": [
+        "SOURCE_FAMILY_COMPLETENESS_BLOCKED_BY_KARCHMER_1993_FULL_PRIMARY_ACCESS",
+        "SOURCE_FAMILY_COMPLETENESS_BLOCKED_BY_NAKAYAMA_MARUOKA_1995_FULL_PRIMARY_ACCESS"
+      ],
+      "next_steps": [
+        "continue the same source-acquisition residual in the next bounded cycle unless a full primary copy is obtained"
+      ],
+      "previous_event_hash": "2fd689a210d77aa17a75623ceaee541a3355bbe6bdc3142de574c6aaa0b38827",
+      "artifact_hash": "2ff63cf68500244b4d162eebfc820f7fa37b3fb61fef92cfd3f2e58139e6aace"
+    }
+  ]
+}
