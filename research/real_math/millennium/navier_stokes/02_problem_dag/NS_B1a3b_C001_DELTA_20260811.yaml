@@ -1,0 +1,52 @@
+atom_id: NS-B1a3b
+parent_atom_id: NS-B1a3
+candidate_id: NS-B1a3b-C001-FINITE-I-TO-DIRECTION-COHERENCE
+status: FUNCTIONAL_ROUTE_PRUNING_COMPLETE_DYNAMICS_CHILD_OPENED
+root_status: OPEN_NO_SOLUTION_CERTIFICATE
+authority: PROPOSAL_SHADOW_NO_ROOT_AUTHORITY
+result: >-
+  A compactly supported smooth divergence-free rotating-vector-potential family
+  has a uniformly bounded finite-I A+C+D+E functional ledger while its nonzero
+  vorticity direction has no uniform modulus of continuity and its
+  bmo_{1/|log r|} norm diverges. Thus finite I alone cannot supply the geometric
+  coherence coordinates consumed by the audited direction criteria.
+local_math_status: ACCEPTED_SCOPED_FUNCTIONAL_CALIBRATION
+local_math_failure_category: LOCAL_FUNCTIONAL_A_PRIORI_ESTIMATE_DERIVATIVE_GAP
+local_to_global_gluing_status: >-
+  SEPARATELY_BLOCKED: Giga-Miura uses a distinct pointwise Type-I hypothesis
+  package, and Grujic arXiv:2607.08866v2 additionally assumes critical-point
+  concentration plus weighted-BMO direction control. These are transfer/source
+  interfaces, not the local hostile-family failure.
+pruned_routes:
+  - finite_I_only_to_uniform_vorticity_direction_modulus
+  - finite_I_only_to_uniform_bmo_1_over_log_direction_bound
+  - direct_Giga_Miura_transfer_without_TypeI_hypothesis_reconciliation
+  - direct_Grujic_2607_transfer_without_concentration_and_direction_inheritance
+live_routes:
+  - id: NS-B1a3b1
+    title: Dynamics-specific vorticity-coherence/depletion inheritance
+    question: >-
+      Which quantity derived from the actual finite-I ancient Navier-Stokes
+      evolution controls vorticity-direction coherence or vortex-stretching
+      depletion without losing a derivative, dividing circularly by small
+      vorticity, or assuming the target regularity criterion?
+    status: CONTEXT_REQUIRED
+  - pressure_temporal_coherence_no_recrossing
+  - alternate_source_valid_liouville_trigger
+failure_ids:
+  - F-NS-B1a3b-FINITE-I-DIRECTION-COHERENCE-DERIVATIVE-GAP
+  - F-NS-B1a3b-GM-TYPEI-HYPOTHESIS-MISMATCH
+  - F-NS-B1a3b-GRUJIC-CRITICAL-POINT-INHERITANCE-GAP
+obstruction_ids:
+  - O-NS-B1a3b-DIRECTION-INHERITANCE-DERIVATIVE-GAP
+  - O-NS-B1a3b-GEOMETRIC-TRIGGER-HYPOTHESIS-GLUING
+novelty_class: REPRESENTATION_NOVEL_PROPOSAL_SHADOW
+retained_semantic_learning: NONE_PENDING_PROTECTED_RETENTION_GATE
+nonpromotion:
+  - hostile packet family is not a Navier-Stokes solution family
+  - failure of finite-I-only implication does not reject equation-specific vorticity geometry
+  - Giga-Miura calibration is not silently an ancient finite-I Liouville theorem
+  - Grujic 2607.08866v2 is a recent preprint and not independently validated here
+  - Type-I route pruning is not Type-I exclusion
+  - Type-I exclusion would not close Type-II
+  - same-context review is not independent review
