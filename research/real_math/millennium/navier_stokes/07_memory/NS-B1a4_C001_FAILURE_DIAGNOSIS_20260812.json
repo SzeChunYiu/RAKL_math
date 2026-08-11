@@ -1,0 +1,53 @@
+{
+  "schema_version": "failure-diagnosis-v3-proposal-shadow",
+  "atom_id": "NS-B1a4",
+  "candidate_or_test_id": "NS-B1a4-C001",
+  "episode_id": "EP-NS-B1a4-C001-SIGNED-FLUX-20260812",
+  "episode_observation": "The issue-#173 exact pressure-free shear is a smooth 3D NSE solution with strictly increasing kinetic energy in every fixed ball.",
+  "diagnoses": [
+    {
+      "diagnosis_id": "D-NS-B1a4-C001-UNSIGNED-LEDGER-NO-SIGN",
+      "status": "SUPPORTED_BY_EXACT_CALCULATION",
+      "statement": "A,C,D,E are magnitude coordinates and the standard localized energy balance permits positive boundary/cutoff influx, so the existing ledger does not itself orient local energy transfer."
+    },
+    {
+      "diagnosis_id": "D-NS-B1a4-C001-PRESSURE-NOT-UNIVERSAL-SIGN-SOURCE",
+      "status": "SUPPORTED_BY_EXACT_P_ZERO_CALIBRATION",
+      "statement": "Because p=0 in the exact calibration while local energy increases, pressure magnitude/localization cannot be the universal source of fixed-region one-sidedness."
+    },
+    {
+      "diagnosis_id": "D-NS-B1a4-C001-GLOBAL-DIFFERENCE-WITNESS",
+      "status": "MANDATORY_SCOPE_GUARD",
+      "statement": "The shear is unbounded at spatial infinity and not in the global finite-I mild bounded ancient class; the result is local route-pruning only."
+    }
+  ],
+  "failure_category": "LOCAL_MATHEMATICAL_REPRESENTATION",
+  "local_math_failure": true,
+  "local_to_global_gluing_failure": false,
+  "preexisting_gluing_warning": "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH remains active but is not re-counted as a new failure.",
+  "residual_before": [
+    "pressure-aware temporal cancellation/no-recrossing might be extractable from existing finite-I local ledger"
+  ],
+  "residual_after": [
+    "existing unsigned ledger lacks a fixed-region sign certificate",
+    "need new signed/correlation/trajectory coordinate or stronger global finite-I input",
+    "global ancient-state gluing remains separate",
+    "Type-II remains open"
+  ],
+  "verification_ids": [
+    "V-NS-B1a4-C001-DIVERGENCE",
+    "V-NS-B1a4-C001-NONLINEAR",
+    "V-NS-B1a4-C001-HEAT-EQUALITY",
+    "V-NS-B1a4-C001-LOCAL-ENERGY-DERIVATIVE",
+    "V-NS-B1a4-C001-DIFFERENCE-WITNESS"
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a4_C001_SIGNED_FLUX_NO_RECROSSING_AUDIT_20260812.md",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a4_CONTEXT_FIBER_20260812.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a4_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "research/real_math/millennium/navier_stokes/08_reviews/NS-B1a4_EXPERT_CONTEXT_REVIEW_20260812.md"
+  ],
+  "authority": "PROPOSAL_SHADOW_DIAGNOSIS_ONLY",
+  "timestamp": "2026-08-11T22:51:53Z",
+  "artifact_hash": "sha256:79141db919900a9c89c7134ce80c4b977fddc1a7ebb875a35837932160fcce67"
+}
