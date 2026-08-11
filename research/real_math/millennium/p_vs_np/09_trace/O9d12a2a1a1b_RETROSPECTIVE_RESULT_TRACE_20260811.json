@@ -1,0 +1,57 @@
+{
+  "trace_id": "TRACE-PNP-O9d12a2a1a1b-RETRO-RESULT-20260811",
+  "entries": [
+    {
+      "event_id": "O9d12a2a1a1b-R01",
+      "atom_id": "O9d12a2a1a1b",
+      "event_type": "FALSIFIER_RUN",
+      "timestamp": "2026-08-11T13:08:00+00:00",
+      "state_summary": "The exact full pair-cover neighborhood quotient is the candidate-free global incidence object; strict context-first credit is unavailable because the frozen serialized context did not pass the current executable context gate.",
+      "action_summary": "Enumerate exact G_NEQ semi-filters for N<=4, compute complete ordered-pair cover neighborhoods, compare quotient and canonical rows, and test a fixed-edge singleton-pair multiplexing control.",
+      "evidence_pointers": ["research/real_math/millennium/p_vs_np/05_falsification/cover_neighborhood_quotient_gneq.py", "Cavalar-Oliveira 2025 Definitions 18-21 and Proposition 40"],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": ["finite exact quotient counts N=2,3,4"],
+      "uncertainties": ["finite enumeration is regression only"],
+      "residuals": [],
+      "next_steps": [],
+      "artifact_hash": "sha256:7b0e88c24c5982553bc1893336a907cd879bde9277837cb872502560560f3bb0",
+      "previous_event_hash": ""
+    },
+    {
+      "event_id": "O9d12a2a1a1b-R02",
+      "atom_id": "O9d12a2a1a1b",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-11T13:09:00+00:00",
+      "state_summary": "Complete pair-cover neighborhoods are injective on relevant G_NEQ semi-filters, but one singleton pair covers every semi-filter above its fixed edge, so exact row richness is massively multiplexed.",
+      "action_summary": "Record source-derived injectivity and fixed-edge multiplexing lemmas and reject raw quotient count/entropy as a lower-bound coordinate.",
+      "evidence_pointers": ["research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b_COVER_NEIGHBORHOOD_QUOTIENT_AUDIT_20260811.md", "research/real_math/millennium/p_vs_np/05_falsification/cover_neighborhood_quotient_gneq.py"],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": ["NO_ROW_QUOTIENT_COMPRESSION_ON_GNEQ", "RAW_GLOBAL_ROW_RICHNESS_MULTIPLEXED"],
+      "uncertainties": ["A multiplexing-resistant integral global coordinate may still exist."],
+      "residuals": ["O9d12a2a1a1c"],
+      "next_steps": [],
+      "artifact_hash": "sha256:981651b6cfd36d9374c3b036d38a47db7b891710aebead81a8c654361863c263",
+      "previous_event_hash": "sha256:7b0e88c24c5982553bc1893336a907cd879bde9277837cb872502560560f3bb0"
+    },
+    {
+      "event_id": "O9d12a2a1a1b-R03",
+      "atom_id": "O9d12a2a1a1b",
+      "event_type": "RESIDUAL_OPENED",
+      "timestamp": "2026-08-11T13:10:00+00:00",
+      "state_summary": "The source incidence survives exact quotienting, but raw row richness cannot accumulate because one legal pair can discharge exponentially many exact rows.",
+      "action_summary": "Open a fresh child for a multiplexing-resistant integral global hitting structure, with no candidate authorized.",
+      "evidence_pointers": ["research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b_COVER_NEIGHBORHOOD_QUOTIENT_AUDIT_20260811.md"],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [],
+      "uncertainties": ["Any normalization by pair capacity may collapse back to a fractional packing relaxation already warned by C024."],
+      "residuals": ["O9d12a2a1a1c — MULTIPLEXING_RESISTANT_GLOBAL_HITTING_STRUCTURE"],
+      "next_steps": ["Freeze a fresh current-schema context/memory/expert/trace packet and execute plan_math_research before any candidate."],
+      "artifact_hash": "sha256:2db124138deae56e0a9043a2f994585dfa402004d76d4763ed84396740124a9c",
+      "previous_event_hash": "sha256:981651b6cfd36d9374c3b036d38a47db7b891710aebead81a8c654361863c263"
+    }
+  ],
+  "authority": "RETROSPECTIVE_RESULT_TRACE / NO_PRE_CANDIDATE_GATE_CREDIT"
+}
