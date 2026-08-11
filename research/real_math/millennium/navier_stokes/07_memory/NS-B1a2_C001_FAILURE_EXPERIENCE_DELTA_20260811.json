@@ -1,0 +1,46 @@
+{
+  "failure_id": "F-NS-B1a2-C001-COMPACTNESS-DRIFT",
+  "atom_id": "NS-B1a2",
+  "candidate_id": "NS-B1a2-C001",
+  "context_packet_hash": "sha256:93f1d63d36fe43910713623d0c385e799506530fbb02790706ca8c824a076fe5",
+  "research_trace_event_id": "NS-B1a2-E09",
+  "method_family": "renormalized-orbit compactness/minimality -> near-stationary slice",
+  "failure_mode": "COMPACTNESS_OR_VECTOR_AVERAGING_DOES_NOT_FORCE_SMALL_INSTANTANEOUS_SELF_SIMILAR_TIME_DRIFT",
+  "residual_signature": [
+    "need sign-controlled finite variation or Lyapunov defect",
+    "need direct PDE inheritance of one-slice scaling-generator smallness",
+    "Pineau-Vicol pointwise-Type-I and annular-pressure interfaces remain separate"
+  ],
+  "broken_assumptions": [
+    "precompactness implies asymptotic stationarity",
+    "small vector average of derivative implies small derivative norm at some time",
+    "time averaging commutes with nonlinear Navier-Stokes dynamics without a fluctuation stress"
+  ],
+  "scope_conditions": [
+    "logical/functional bridge from compact or recurrent renormalized orbit to one-slice drift smallness",
+    "long-time vector averaging without total-variation or fluctuation control",
+    "does not assert that finite-I Navier-Stokes orbits are precompact",
+    "does not block compactness plus an additional monotone/rigidity mechanism"
+  ],
+  "competing_diagnoses": [
+    "missing dynamical dissipation/monotonicity coordinate",
+    "wrong use of compactness as a convergence theorem",
+    "nonlinear fluctuation stress obstructs averaged stationary-profile closure"
+  ],
+  "selected_diagnosis": "compactness and vector averaging are topological/cancellation information and lack the sign-controlled variation needed to force one-slice generator smallness",
+  "diagnosis_status": "SUPPORTED",
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a2_C001_SELF_SIMILAR_TIME_DRIFT_AUDIT_20260811.md",
+    "https://arxiv.org/html/2607.09619v2",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1_TYPE_I_IMPLICATION_MATRIX_20260811.md"
+  ],
+  "falsifier_or_attempt": "compact-circle persistent-drift control + vector-average cancellation audit + nonlinear averaged-equation fluctuation stress",
+  "observed_result": "The compactness/long-time-averaging-only bridge is invalid. A new inherited finite-variation, monotone, no-recurrence or direct drift-smallness coordinate is required.",
+  "timestamp": "2026-08-11T12:05:20+00:00",
+  "local_repair_attempts": [
+    "replace compactness-only inference by finite total variation / Lyapunov search",
+    "link instead of duplicate Pineau-Vicol pointwise velocity/annular pressure transfer audit",
+    "retain Albritton-Barker backward-L3 sequence as an orthogonal Liouville trigger"
+  ],
+  "artifact_hash": "sha256:1b1a2b083fa09b787b02bff4ff9e3187f131c756340014e77219dd7c3c3109ec"
+}

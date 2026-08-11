@@ -1,0 +1,75 @@
+{
+  "trace_id": "NS-B1a2-C001-CONT-20260811",
+  "parent_trace_id": "NS-B1a2-PRE-20260811",
+  "parent_trace_hash": "sha256:54872dd6f0cb7482a09efc27a765124b5453b178a7788b3221592fb6c0d7be50",
+  "authority": "PROPOSAL_SHADOW_TRACE / ROUTE_PRUNING_ONLY",
+  "atom_id": "NS-B1a2",
+  "events": [
+    {
+      "event_id": "NS-B1a2-E08",
+      "event_type": "FALSIFIER_RUN",
+      "timestamp": "2026-08-11T12:05:18+00:00",
+      "payload": {
+        "falsifier_id": "NS-B1a2-C001",
+        "tests": [
+          "compact periodic circle has nonzero drift everywhere",
+          "vector-average derivative cancellation does not control average derivative norm",
+          "nonlinear time averaging produces fluctuation/Reynolds stress",
+          "fixed Gaussian velocity energy has sign-indefinite convection/pressure contributions at the calibrated level"
+        ],
+        "source_interface_checked": "Pineau-Vicol v2 Theorem 1.9 and Remark 1.11",
+        "candidate_theorem_generated": false
+      },
+      "previous_event_hash": "sha256:4f61cc757aaf6f61c621f47d663a002c669c385044df22558f9642ee9d65b7af",
+      "artifact_hash": "sha256:2a8f7304b5a22177dba2e13eac462672524415da01fe7d42c98f97709e266f0f"
+    },
+    {
+      "event_id": "NS-B1a2-E09",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-11T12:05:19+00:00",
+      "payload": {
+        "verdict": "NEGATIVE_DISCRIMINATOR / COMPACTNESS_ONLY_ROUTE_PRUNED",
+        "result_artifact": "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a2_C001_SELF_SIMILAR_TIME_DRIFT_AUDIT_20260811.md",
+        "supported_scope": "precompactness, bounded recurrence or long-time vector averaging alone does not logically force one-slice small self-similar-time derivative norm",
+        "not_supported": [
+          "no claim that finite-I Navier-Stokes orbits are precompact",
+          "no claim that all concentration-compactness routes fail",
+          "no claim that no Lyapunov or finite-variation defect exists",
+          "no Navier-Stokes theorem and no Type-I exclusion"
+        ]
+      },
+      "previous_event_hash": "sha256:2a8f7304b5a22177dba2e13eac462672524415da01fe7d42c98f97709e266f0f",
+      "artifact_hash": "sha256:926e99980e3aa4f7189ba555d4ca58e4ca541ae3e5ee9569af84972622589e88"
+    },
+    {
+      "event_id": "NS-B1a2-E10",
+      "event_type": "RESIDUAL_OPENED",
+      "timestamp": "2026-08-11T12:05:20+00:00",
+      "payload": {
+        "next_atom": "NS-B1a3",
+        "residual": "find an inherited sign-controlled/finite-variation self-similar-time defect or direct generator-smallness mechanism; separately link pointwise-Type-I and annular-pressure interface obligations rather than duplicating NS-B1b1",
+        "reopened_saturation_axes": [
+          "OBSTRUCTION",
+          "RELATION",
+          "PATH"
+        ]
+      },
+      "previous_event_hash": "sha256:926e99980e3aa4f7189ba555d4ca58e4ca541ae3e5ee9569af84972622589e88",
+      "artifact_hash": "sha256:931285504502a918019362818650809182b50a82cae33d11c8772944954728b1"
+    },
+    {
+      "event_id": "NS-B1a2-E11",
+      "event_type": "REVIEWED",
+      "timestamp": "2026-08-11T12:05:21+00:00",
+      "payload": {
+        "review_type": "same-context post-result scope check",
+        "disposition": "route-pruning only; preserve root open; do not promote logical control to PDE theorem",
+        "independent_review_credit": false
+      },
+      "previous_event_hash": "sha256:931285504502a918019362818650809182b50a82cae33d11c8772944954728b1",
+      "artifact_hash": "sha256:322b37639ca8e78c0bb6d4d8f26862c1514d7eaa8fb5b0b9955154bd98b2988a"
+    }
+  ],
+  "final_event_hash": "sha256:322b37639ca8e78c0bb6d4d8f26862c1514d7eaa8fb5b0b9955154bd98b2988a",
+  "trace_hash": "sha256:a49a167017ca29e04e3556187f9d3a865fcc6d288c9bc19284f3816e19c4b5f0"
+}
