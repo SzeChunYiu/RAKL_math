@@ -1,0 +1,64 @@
+{
+  "schema_version": "hash-chained-math-trace-v3-proposal-shadow",
+  "atom_id": "NS-B1a3b",
+  "candidate_id": "NS-B1a3b-C001",
+  "continues_from": "sha256:32e9c2c1df8152f9c5990557826ad1b6c2818fedd1ad3c159db0099a1531c187",
+  "events": [
+    {
+      "event_id": "NS-B1a3b-E8",
+      "kind": "CANDIDATE_PROPOSED",
+      "candidate_id": "NS-B1a3b-C001",
+      "claim_scope": "finite-I to Giga-Miura state-space and normalized-vorticity closure interface",
+      "prev_event_hash": "sha256:32e9c2c1df8152f9c5990557826ad1b6c2818fedd1ad3c159db0099a1531c187",
+      "event_hash": "sha256:e30f198e65d0b42519b51fc7c46a5b0b3d658fe4f94e4d6dc72175a9935fbf4b"
+    },
+    {
+      "event_id": "NS-B1a3b-E9",
+      "kind": "FALSIFIER_RUN",
+      "candidate_id": "NS-B1a3b-C001",
+      "falsifiers": [
+        "exact AB/GM theorem-signature comparison",
+        "divergence-free high-frequency normalized-curl topology calibration"
+      ],
+      "calibration_is_navier_stokes_solution": false,
+      "prev_event_hash": "sha256:e30f198e65d0b42519b51fc7c46a5b0b3d658fe4f94e4d6dc72175a9935fbf4b",
+      "event_hash": "sha256:85777db14be91b65d06b9f7b97f40e3cd650c4882fda269ce982ebcc25ba604e"
+    },
+    {
+      "event_id": "NS-B1a3b-E10",
+      "kind": "INTERFACE_AUDIT_OUTCOME",
+      "candidate_id": "NS-B1a3b-C001",
+      "outcome": "PARTIAL_SUCCESS",
+      "failure_category": "STATE_SPACE_AND_NONLINEAR_OBSERVABLE_CLOSURE_INTERFACE",
+      "result_commit_sha": "b1dfb7214cf62d038e949373dc19e88bb757f9fc",
+      "prev_event_hash": "sha256:85777db14be91b65d06b9f7b97f40e3cd650c4882fda269ce982ebcc25ba604e",
+      "event_hash": "sha256:44751abe4500146dac3fe3751eee2dc4c83c7f9b38c04f7c15efbcfb9de82bf4"
+    },
+    {
+      "event_id": "NS-B1a3b-E11",
+      "kind": "FAILURE_NORMALIZATION",
+      "failure_ids": [
+        "F-NS-B1a3b-TYPE-I-STATE-SPACE-MISMATCH",
+        "F-NS-B1a3b-VORTICITY-DIRECTION-NONCLOSURE"
+      ],
+      "obstruction_ids": [
+        "O-NS-B1a3b-TYPE-I-STATE-SPACE",
+        "O-NS-B1a3b-DIRECTION-COMPACTNESS"
+      ],
+      "failure_delta_commit_sha": "a4c3ce245e179bbb43a2ef880a15c516418e31ab",
+      "prev_event_hash": "sha256:44751abe4500146dac3fe3751eee2dc4c83c7f9b38c04f7c15efbcfb9de82bf4",
+      "event_hash": "sha256:116d4c0542fbfaac1c4bf2080ab8f3d6d4fc00cae17d06642caec95bfd9afdc2"
+    },
+    {
+      "event_id": "NS-B1a3b-E12",
+      "kind": "RESIDUAL_REATOMIZATION",
+      "next_children": ["NS-B1a3b1", "NS-B1a3a", "TYPE-II-SIBLING"],
+      "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "review_authority": "SAME_CONTEXT_ONLY",
+      "prev_event_hash": "sha256:116d4c0542fbfaac1c4bf2080ab8f3d6d4fc00cae17d06642caec95bfd9afdc2",
+      "event_hash": "sha256:9a16f1eea134efc61fec7628ff13f8a91e388e72f64588bfb9447c8e76d1c75c"
+    }
+  ],
+  "final_event_hash": "sha256:9a16f1eea134efc61fec7628ff13f8a91e388e72f64588bfb9447c8e76d1c75c",
+  "authority": "PROPOSAL_SHADOW_TRACE_ONLY"
+}
