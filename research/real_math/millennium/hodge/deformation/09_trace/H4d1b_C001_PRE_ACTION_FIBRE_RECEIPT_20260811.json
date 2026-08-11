@@ -1,0 +1,28 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "H4d1b-C001-PRE-ACTION-FIBRE-RECEIPT-20260811",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "b18fcd35855d67962e28036f4a445ab24d0c4406",
+  "task_id": "RATIONAL-HODGE-DEFORMATION-VERIFIED-DISCOVERY",
+  "atom_id": "H4d1b",
+  "context_hash": "sha256:97134ef4beac024251b7f6fd6d079208cf6f4be4246c2e7afab3bc5add8cf248",
+  "fibre_snapshot_hash": "sha256:1c288dcd49cd53dfa7f09c067316e713f9964e8cbcf4f0e6fd169384cf6a88f8",
+  "operator_ids": ["OP-H4D1B-FIRST-ORDER-TANGENT-OBSTRUCTION-EQUIVALENCE-AUDIT"],
+  "selected_retrievals": [
+    {"retrieval_id":"H4d1a_RESEARCH_MEMORY_REVIEW_20260811","authority":"NONCANONICAL","payload_hash":"b52d91fb4b35ce704a1878957d9526715284b81e3dc17038bae497c0c35aec45"},
+    {"retrieval_id":"F-H4D1A-SAME-DETECTOR-BRANCH-NOGO","authority":"NONCANONICAL","payload_hash":"129da81c98211cc00415c6673ef2a1a5aef6c5b26eb7a7e53867b4929408beac"}
+  ],
+  "rejected_retrievals": [
+    {"retrieval_id":"arXiv:2211.11405","rejection_reason":"withdrawn source; provenance only, not current authority"},
+    {"retrieval_id":"cross-Millennium method tools","rejection_reason":"no applicability witness to the exact algebraic-cycle/Hodge tangent obstruction fibre"},
+    {"retrieval_id":"alternate reduced-obstruction detector","rejection_reason":"different representation requires a separately frozen atom and source-bound compatibility theorem"},
+    {"retrieval_id":"higher-order/degeneration route","rejection_reason":"deferred until the first-order successor is shown non-tautological or the route is independently selected"}
+  ],
+  "predeclared_discriminator": "For the exact fixed-witness first-order incidence deformation problem, test whether the registered δ1 is the standard obstruction/connecting map with ker(δ1)=im(dπ_(z0,s0)), and whether coefficient-preserving witness deformation along the fixed branch gives im(dπ)⊆T_s0T. If so, determine whether δ1|_{T_s0T}=0 is equivalent to T_s0T⊆im(dπ), hence (when the reverse branch-bound inclusion holds) tangent equality. Falsify by finding a valid registered H4d1b model in which δ1 governs first-order witness lifting but ker(δ1)≠im(dπ), or a coefficient-preserving first-order witness deformation that is not tangent to the same Hodge branch.",
+  "allowed_outcome_branches": ["SUCCESS", "PARTIAL_SUCCESS", "FAILURE", "BLOCKED", "UNKNOWN"],
+  "frozen_at_utc": "2026-08-11T15:14:00+00:00",
+  "sequence_index": 1,
+  "receipt_canonical_sha256": "607deb554841472cb78e2d97f28343476e00a667770a57a941ae35b578ef8408"
+}
