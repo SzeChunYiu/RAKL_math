@@ -1,0 +1,124 @@
+{
+  "RAKL_METHOD_CASE_STUDY": {
+    "case_study_id": "CS-RH-ANA-003-DENSITY-EXCEPTION-20260811",
+    "episode": {
+      "episode_id": "EP-RH-ANA-003-DENSITY-EXCEPTION-20260811",
+      "task_id": "RAKL-VERIFIED-DISCOVERY-RH-ANALYTIC",
+      "active_atom_id": "RH-ANA-003",
+      "problem_signature": ["Riemann Hypothesis", "Li coefficients all-index positivity", "Bombieri-Lagarias explicit formula", "zero-density/zero-free exceptional sets", "prime-zero duality", "uniform-in-n gluing"],
+      "fibre_contents_actually_consulted": {
+        "context_hash": "sha256:d4c0af4c47905f84e3ca740251c75379c44c48de5c5cadc2b5ee6ea023f19e5f",
+        "structural_coordinates": ["universal all-n Li sign", "aggregate exceptional-set counts", "zero-free boundary near Re(s)=1", "off-line zero Li-transform sensitivity", "exact regularization/cancellation requirement"],
+        "primary_sources": ["Bombieri-Lagarias JNT 77 (1999), DOI 10.1006/jnth.1999.2392", "Voros arXiv:math/0506326", "Guth-Maynard arXiv:2405.20552v2", "Bellotti-Trudgian-Yang arXiv:2603.21490", "Conrey-Farmer-Kwan-Lin-Turnage-Butterbaugh arXiv:2508.11108"],
+        "memory_snapshot_artifact": "07_memory/RH_ANA_003_RESEARCH_MEMORY_REVIEW_20260811.json"
+      },
+      "operators_and_motifs_tried": ["T-RH-LI-PREFIX-QUARTET-CALIBRATION", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT", "single-exception adversarial bridge audit"],
+      "prior_successes_retrieved": ["T-RH-LI-PREFIX-QUARTET-CALIBRATION", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+      "prior_failures_retrieved": ["F-RH-ANA-001-FINITE-LI-PREFIX", "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE", "F-XM001-POINTWISE-GAP-COLLAPSE"],
+      "retrieved_then_rejected_or_scope_limited": ["finite Li-prefix certificate: saturated by F-RH-ANA-001", "Suzuki norm-faithfulness retry: saturated in audited source by F-RH-ANA-002", "F-XM001 mathematical content: rejected for transfer; only bridge-audit procedure reused", "direct mollifier proportion-to-universal inference: rejected before theorem invention"],
+      "later_found_missed_memory_ids": [],
+      "search_policy_choice": "Run a single-exception root-bridge falsifier before inventing a new prime-side inequality or optimizing aggregate density/proportion bounds.",
+      "falsifier_and_verification": ["Bellotti-Trudgian-Yang zero-free region does not exclude beta=3/4 at sufficiently large height", "Guth-Maynard positive-power zero-density upper bound does not force the exceptional count to zero", "exact identity |1-1/(1/4+iT)|^2=(T^2+9/16)/(T^2+1/16)>1", "same-context five-role result review with explicit synthetic-quartet provenance guard"],
+      "outcome": "REFUTED_ROUTE_LOCAL / PARTIAL_SUCCESS_AS_OBSTRUCTION",
+      "residual": "An exceptional-zero-sensitive exact prime/archimedean cancellation or genuinely pointwise extinction/neutralization theorem, uniform in Li index n, is still missing.",
+      "failure_category": ["gluing", "representation"],
+      "defensible_novelty_class": "PROJECT_LOCAL_STRUCTURAL_OBSTRUCTION / NOT_A_NEW_MATHEMATICS_CLAIM",
+      "authority": "NO_ROOT_AUTHORITY"
+    },
+    "diagnosis": {
+      "diagnosis_id": "D-RH-ANA-003-QUANTIFIER-REPRESENTATION-MISMATCH",
+      "statement": "The candidate failed because aggregate rarity/boundary control loses the pointwise phase/amplitude and no-exception quantifier required by the universal all-n Li sign target. This is a gluing/representation failure, not evidence that zero-density or mollifier methods are globally useless.",
+      "status": "SUPPORTED"
+    },
+    "obstruction_lesson": {
+      "obstruction_id": "O-RH-ANA-003-AGGREGATE-EXCEPTION-GAP",
+      "lesson_id": "L-RH-ANA-003-EXCEPTION-EXTINCTION-REQUIREMENT",
+      "statement": "Any future aggregate analytic route to Li/Weil universal positivity must state and verify an exceptional-set extinction or exact neutralization theorem and survive a planted-single-exception regression before receiving root-bridge credit.",
+      "scope": "aggregate density/zero-free/proportion conclusions used alone as the universal Li-sign bridge"
+    },
+    "seven_saturation_axes": {
+      "operator_family": {"state": "REOPENED_THEN_PARTIALLY_FLATTENED", "note": "zero-density/zero-free/mollifier aggregate family audited; aggregate-alone bridge flattened"},
+      "representation": {"state": "REOPENED", "note": "must move from exception counts to exceptional-zero-sensitive exact cancellation"},
+      "skill": {"state": "ACTIVE_NOT_SATURATED", "note": "analytic explicit-formula/zero-density reasoning remains productive"},
+      "source_family": {"state": "REOPENED", "note": "2026 zero-free and revised 2026 zero-density frontier incorporated"},
+      "granularity": {"state": "FLATTENED_AT_AGGREGATE_LEVEL", "note": "aggregate few-exceptions representation is too coarse for universal target"},
+      "verification": {"state": "FLATTENED_FOR_THIS_CANDIDATE", "note": "single-exception falsifier and same-context review complete"},
+      "theoretical_gluing": {"state": "REOPENED", "note": "density/proportion to all-index sign gluing failed; pointwise bridge remains open"}
+    },
+    "framework_improvement_hypothesis": {
+      "status": "NO_FRAMEWORK_CHANGE_WARRANTED_YET",
+      "hypothesis": "If the same few-versus-none failure recurs across independent applications, benchmark a reusable universal-goal exceptional-set-extinction motif in RAKL. One RH route-local result is insufficient for framework promotion.",
+      "evidence_note": "Current RAKL v3 dual-memory and root-bridge gates already changed action ordering and exposed the obstruction, so there is no demonstrated framework defect."
+    },
+    "experience_authority_rule": "Experience guided search/action ordering only; no experience record was used as theorem or RH authority."
+  },
+  "RAKL_CYCLE_METRICS": {
+    "rakl_method_version": "3.0.0",
+    "rakl_core_manifest_version": "0.6.6",
+    "rakl_git_sha": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+    "rakl_math_base_sha": "111a3f95c72b0a418f968708bd3eda77ef98bccf",
+    "rakl_math_research_result_head_sha": "e1889d0fea565e806c56e06ebba2f5af3a78cc57",
+    "rakl_math_head_semantics": "Research-result checkpoint immediately before writing this self-describing telemetry artifact. A telemetry artifact cannot contain the SHA of its own resulting content-addressed commit without self-reference.",
+    "pre_state_fingerprint": {"value":"sha256:bb4d304def6c3263152d93e3da5795a95f2c459140a365ebe79839965f0b347c","definition":"canonical SHA-256 of {rakl_sha,rakl_math_base,rh_tree_sha,atom_id}"},
+    "post_state_fingerprint": {"value":"sha256:7fa7c686871f36bb88c68908b351a5ea7de9a8035eb1276f7d5a38ad05189c8d","definition":"canonical SHA-256 of {result_head,context_hash,terminal_trace_hash,obstruction_id}"},
+    "atom_fibre_snapshot_hash": "sha256:d4c0af4c47905f84e3ca740251c75379c44c48de5c5cadc2b5ee6ea023f19e5f",
+    "terminal_research_trace_hash": "sha256:899557dc939929b4f86e53b3360a9bbef996388372665ccfc3aa6a925a8961e7",
+    "canonical_method_specs_process_surfaces_invoked": ["decomposition", "routing", "search_query_generation", "source_selection_reliability", "claim_extraction", "ontology_normalization", "math_context_translation", "equivalence_similarity", "contextual_theory_gluing", "contradiction_diagnosis", "gap_discovery", "experiment_query_selection", "synthesis", "memory", "review", "benchmarking", "authority_promotion", "saturation_stopping", "prompting_context_policy"],
+    "memory_retrieval": {
+      "retrieved_tool_ids": ["T-RH-LI-PREFIX-QUARTET-CALIBRATION", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+      "retrieved_tool_count": 2,
+      "selected_tool_ids": ["T-RH-LI-PREFIX-QUARTET-CALIBRATION", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+      "selected_tool_count": 2,
+      "retrieved_failure_ids": ["F-RH-ANA-001-FINITE-LI-PREFIX", "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE", "F-XM001-POINTWISE-GAP-COLLAPSE"],
+      "retrieved_failure_count": 3,
+      "selected_failure_guidance_ids": ["F-RH-ANA-001-FINITE-LI-PREFIX", "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE", "F-XM001-POINTWISE-GAP-COLLAPSE"],
+      "selected_failure_guidance_count": 3,
+      "rejected_memory_ids": [],
+      "scope_limited_memory_ids": ["F-XM001-POINTWISE-GAP-COLLAPSE"],
+      "later_found_missed_memory_ids": []
+    },
+    "outcome": "REFUTED_ROUTE_LOCAL / PARTIAL_SUCCESS_AS_OBSTRUCTION",
+    "residual_before": "Unclassified all-n prime/archimedean cancellation or uniform-tail mechanism after Suzuki-faithfulness route saturation.",
+    "residual_after": "Aggregate zero-density/zero-free/proportion controls alone are insufficient; search is narrowed to exceptional-zero-sensitive exact cancellation/extinction/neutralization uniform in n.",
+    "retained_semantic_novelty_counts": {"KNOWLEDGE":3,"OPERATOR":0,"EXPERIENCE_PATTERN":1,"OBSTRUCTION":1,"RELATION":2,"PATH":1,"META_METHOD":0},
+    "semantic_novelty_scope_note": "Counts are retained project-local semantic deltas after deduplication, not literature novelty or theorem claims.",
+    "axes_reopened": ["operator_family", "representation", "source_family", "granularity", "verification", "theoretical_gluing"],
+    "axes_flattened": ["operator_family:aggregate-zero-density/zero-free-alone", "granularity:aggregate-exception-count-alone", "verification:C-RH-ANA-003-ZD-EXCEPTION-BRIDGE", "theoretical_gluing:aggregate-rarity-to-universal-Li-sign"],
+    "observable_resource_proxies": {
+      "exact_tokens_context": "CANNOT_MEASURE: runtime does not expose exact token/context accounting as a stable cycle metric",
+      "web_retrieval_calls_observed": 8,
+      "github_retrieval_and_write_calls": "CANNOT_MEASURE: conversation compaction prevents a reliable exact full-cycle connector-call count",
+      "total_tool_calls": "CANNOT_MEASURE: same compaction limitation",
+      "elapsed_wall_time": "CANNOT_MEASURE: no monotonic cycle-start clock was preserved across compaction"
+    },
+    "new_ids": {
+      "episodes": ["EP-RH-ANA-003-DENSITY-EXCEPTION-20260811"],
+      "lessons": ["L-RH-ANA-003-EXCEPTION-EXTINCTION-REQUIREMENT"],
+      "failures": ["F-RH-ANA-003-DENSITY-EXCEPTION-GAP"],
+      "tools": [],
+      "obstructions": ["O-RH-ANA-003-AGGREGATE-EXCEPTION-GAP"],
+      "motifs": [],
+      "successful_reuses": ["T-RH-LI-PREFIX-QUARTET-CALIBRATION", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"]
+    },
+    "gate_status": {
+      "exact_root_contract": "PASS_BOUND_TO_REPO_CONTRACT",
+      "math_context_fiber": "PASS_PERSISTED_BEFORE_CANDIDATE",
+      "dual_memory_review": "PASS_PERSISTED_BEFORE_CANDIDATE",
+      "expert_cell": "PASS_SAME_CONTEXT_ONLY",
+      "hash_chained_pre_candidate_trace": "PASS",
+      "candidate_chronology": "PASS: pre-candidate terminal commit 4be6c353880978f3f79553074b2cc5f6be714ad2 preceded candidate commit 747660d9b5c129a6a2f433f0d61b8bd22b0eddc7",
+      "falsifier": "PASS",
+      "root_promotion": "NOT_ELIGIBLE: no closed proof DAG, proof receipt, verifier/axiom/dependency audit, novelty certificate, or three isolated mathematical reviews",
+      "isolated_independent_reviews": 0
+    },
+    "provenance_status": "PASS_WITH_SCOPE_GUARDS: primary-source anchors used; synthetic quartet explicitly calibration-only; application state kept in RAKL_math",
+    "ci_status": "CANNOT_MEASURE_AT_TELEMETRY_WRITE: branch checks queried after artifact persistence when available",
+    "rakl_changed_action_relative_to_observable_pre_memory_pre_gate_preference": {
+      "value": "PARTIAL_YES",
+      "explanation": "The broad atom already included density/tail auditing, but dual memory and the bridge-audit tool changed the immediate ordering from direct inequality/source expansion toward a planted-single-exception falsifier first and explicitly rejected saturated finite-prefix and Suzuki-faithfulness variants.",
+      "evidence_events": ["RH-ANA-003-E06", "RH-ANA-003-E07"]
+    },
+    "framework_changed": false,
+    "framework_improvement_hypothesis": "No framework change promoted; possible exceptional-set-extinction motif requires repeated cross-application evidence."
+  }
+}
