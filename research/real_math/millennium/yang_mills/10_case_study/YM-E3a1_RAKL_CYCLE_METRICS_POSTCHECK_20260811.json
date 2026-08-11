@@ -1,0 +1,46 @@
+{
+  "schema": "RAKL_math.rakl_cycle_metrics_postcheck.v1",
+  "authority": "PROPOSAL_SHADOW_MEASUREMENT_ONLY",
+  "cycle_id": "YM-E3a1-CYCLE-20260811T1939Z",
+  "supplements": "research/real_math/millennium/yang_mills/10_case_study/YM-E3a1_RAKL_V3_CASE_STUDY_METRICS_TASK_EPISODE_20260811.json#RAKL_CYCLE_METRICS",
+  "current_framework_postcheck": {
+    "rakl_git_sha": "ae023861063828ae7556cb002c8b10ea76163888",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "manifest_blob_sha": "7363c88f4b19638299968e5e0ee3a93c3d567121",
+    "method_specs_blob_sha": "3f629c4dd0ef55aedf14206b2be3df19875988b7",
+    "relevance_of_latest_change": "Current main now explicitly separates failed-episode persistence from verified reusable lesson creation in the Paper-II experience diagnostic. The YM-E3a1 cycle already conforms: one TaskEpisode and one scoped failure are preserved, while lesson_ids remains empty and no lesson authority is minted.",
+    "governed_surface_verdict": "METHOD_VERSION_AND_METHOD_SPECS_UNCHANGED; latest experience-semantics change reinforces the existing episode/failure/lesson separation rather than granting new application authority"
+  },
+  "application_postcheck": {
+    "frozen_base_sha": "350861b1c2755033893068e5519b8b06a6315aa6",
+    "semantic_head_before_metrics_sha": "d2133dccfadc57040aaa604418175dde75a3efc3",
+    "metrics_receipt_head_sha": "fe5189c6b951d655c205be9351cc93ebe8886473",
+    "exact_final_head_after_this_self_appending_postcheck": "CANNOT_MEASURE before this postcheck commit exists; final PR metadata externally binds it",
+    "raw_repository_growth_learning_credit": 0
+  },
+  "ci_postcheck_on_metrics_receipt_head": {
+    "subject_sha": "fe5189c6b951d655c205be9351cc93ebe8886473",
+    "workflow_runs_returned": 0,
+    "combined_status_entries_returned": 0,
+    "status": "CANNOT_CHECK",
+    "reason": "GitHub returned no pull-request workflow runs and no combined-status entries for the exact metrics-receipt head at query time. Absence of reported CI is not treated as pass or fail."
+  },
+  "root_gate_postcheck": {
+    "root_issue": "RAKL_math#5",
+    "state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "independent_mathematical_reviews": 0,
+    "promotion": "NONE"
+  },
+  "novelty_postcheck": {
+    "KNOWLEDGE": 1,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 0,
+    "OBSTRUCTION": 1,
+    "RELATION": 1,
+    "PATH": 1,
+    "META_METHOD": 0,
+    "changed_by_postcheck": false
+  }
+}
