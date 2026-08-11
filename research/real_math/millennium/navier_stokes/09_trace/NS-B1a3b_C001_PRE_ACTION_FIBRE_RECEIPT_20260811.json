@@ -1,0 +1,81 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "NS-B1a3b-C001-PRE-ACTION-FIBRE-RECEIPT-20260811",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "5875f40a4126ff1fc0563d8dd902887d839d4db3",
+  "task_id": "NAVIER-STOKES-VERIFIED-DISCOVERY",
+  "atom_id": "NS-B1a3b",
+  "context_hash": "sha256:864b444da3b0ef1b0a0e396ea89011fbad691cbbe35e88b78ec3613756ef92ca",
+  "fibre_snapshot_hash": "sha256:8ac43fac706388481a3acc575dc9b5ceed544858ea1e178b0fee57b6addda6ed",
+  "operator_ids": [
+    "OP-NS-VORTICITY-INHERITANCE-TOPOLOGY-AUDIT",
+    "OP-NS-DIFFERENCE-WITNESS-SOURCE-SIGNATURE"
+  ],
+  "selected_retrievals": [
+    {
+      "retrieval_id": "NS-B1a3b_CONTEXT_FIBER_20260811",
+      "authority": "NONCANONICAL",
+      "payload_hash": "6c69e870417b96699c47faf0c2812ce5d055a6bc1b80253a150b2bd5cea74c2f"
+    },
+    {
+      "retrieval_id": "NS-B1a3b_RESEARCH_MEMORY_REVIEW_20260811",
+      "authority": "NONCANONICAL",
+      "payload_hash": "28edeed6f8bf29bc0aab4c0abc026e885a0b93a0640ff2ac93733135aea2698f"
+    },
+    {
+      "retrieval_id": "NS-B1a3b_EXPERT_CONTEXT_REVIEW_20260811",
+      "authority": "NONCANONICAL",
+      "payload_hash": "b7c8d3f17a146bf53bf883cf9059b87a54f19be153abf65cc45b3c4485088e65"
+    },
+    {
+      "retrieval_id": "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "authority": "CANONICAL",
+      "payload_hash": "78f1118cd2613958e953bf9b06d2826648b3891071822a59cc23a0cc0aff2f58"
+    },
+    {
+      "retrieval_id": "BARKER-PRANGE-2019-TYPEI-ALIGNMENT",
+      "authority": "PENDING",
+      "payload_hash": "418480189714493265502507ad04edc8f0b2a9b368066ad6b5dd7a4767d88382"
+    },
+    {
+      "retrieval_id": "MILLER-2020-ANISOTROPIC-VORTICITY",
+      "authority": "PENDING",
+      "payload_hash": "03dd5a314a58134b10a43b0b8fdcd2dab22de2cfa2d55a38a7b4cfd3f21f7018"
+    }
+  ],
+  "rejected_retrievals": [
+    {
+      "retrieval_id": "GRUJIC-2026-LOG-DEPLETION",
+      "rejection_reason": "fresh preprint with extra concentration and log-BMO direction assumptions; search analogue only, not theorem authority"
+    },
+    {
+      "retrieval_id": "VASSEUR-2007-VELOCITY-DIRECTION",
+      "rejection_reason": "velocity-direction object mismatch"
+    },
+    {
+      "retrieval_id": "GIGA-HSU-MAEKAWA-HALFSPACE",
+      "rejection_reason": "less exact Type-I comparator and boundary/domain mismatch"
+    },
+    {
+      "retrieval_id": "direct Barker-Prange theorem transfer",
+      "rejection_reason": "DifferenceWitness fails: half-space/no-slip/ODE-Type-I and geometry is separately assumed"
+    },
+    {
+      "retrieval_id": "repeat scalar energy packing",
+      "rejection_reason": "prior B1a1/B1a2 failures already prune this family"
+    }
+  ],
+  "predeclared_discriminator": "Verify the counterexample-first inheritance audit in the frozen NS-B1a3b fibre. First check exactly that w_n=(0,n^{-1} sin(n x_1),0) is divergence free, tends strongly to zero in local L3, has uniformly bounded gradient L2, while curl w_n=(0,0,cos(n x_1)) has no uniform directional modulus away from its zero planes. Then verify from primary-source theorem signatures that the selected vorticity-geometry criteria consume additional geometry rather than derive it from Albritton-Barker finite I. Classify any failure of transfer as local derivative/normalization representation failure separately from B1a3's local-to-global gluing failure. Falsify the candidate if an exact source-valid estimate from finite I controls a consumer-ready scale-critical geometric functional through the blow-up limit.",
+  "allowed_outcome_branches": [
+    "SUCCESS",
+    "PARTIAL_SUCCESS",
+    "FAILURE",
+    "BLOCKED",
+    "UNKNOWN"
+  ],
+  "frozen_at_utc": "2026-08-11T15:37:00+00:00",
+  "sequence_index": 1,
+  "receipt_canonical_sha256": "61b972c4c14c1e91588515bd032dc79243901fe8e408b9fd6181192e0c53280a"
+}
