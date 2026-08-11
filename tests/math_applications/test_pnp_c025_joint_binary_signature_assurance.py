@@ -18,8 +18,16 @@ CHRONOLOGY_AUDIT = (
     BASE
     / "04_candidates/negative_history/C025_RETROSPECTIVE_ASSURANCE_CHRONOLOGY_AUDIT_20260811.json"
 )
-POSTRESULT_ADDENDUM = BASE / "07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json"
-SYNTHESIS_RECEIPT = BASE / "05_falsification/C025_SYNTHESIS_RECEIPT_20260811.json"
+POSTRESULT_ADDENDUM_V1 = (
+    BASE / "07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json"
+)
+POSTRESULT_ADDENDUM_V2 = (
+    BASE / "07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_V2_20260811.json"
+)
+SYNTHESIS_RECEIPT_V1 = BASE / "05_falsification/C025_SYNTHESIS_RECEIPT_20260811.json"
+SYNTHESIS_RECEIPT = (
+    BASE / "05_falsification/C025_SYNTHESIS_RECEIPT_V2_20260811.json"
+)
 INTEGRATION_RECEIPT = (
     BASE / "05_falsification/C025_CURRENT_MAIN_INTEGRATION_RECEIPT_20260811.json"
 )
@@ -50,6 +58,32 @@ def _git(*args: str, check: bool = True) -> subprocess.CompletedProcess[bytes]:
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
     )
+
+
+def _historical_binding_errors(binding: dict[str, object]) -> tuple[str, ...]:
+    errors: list[str] = []
+    commit = binding["source_commit"]
+    path = binding["path"]
+    assert isinstance(commit, str) and isinstance(path, str)
+    if _git("cat-file", "-e", f"{commit}^{{commit}}", check=False).returncode != 0:
+        return ("source commit missing",)
+    if _git("rev-parse", f"{commit}^{{tree}}").stdout.decode().strip() != binding[
+        "source_tree"
+    ]:
+        errors.append("source tree mismatch")
+    blob = _git("rev-parse", f"{commit}:{path}", check=False)
+    if blob.returncode != 0:
+        errors.append("source path missing")
+        return tuple(errors)
+    if blob.stdout.decode().strip() != binding["git_blob_sha"]:
+        errors.append("source blob mismatch")
+    raw = _git("show", f"{commit}:{path}").stdout
+    if "sha256:" + hashlib.sha256(raw).hexdigest() != binding["raw_sha256"]:
+        errors.append("source raw hash mismatch")
+    historical = json.loads(raw)
+    if historical["artifact_hash"] != binding["artifact_hash"]:
+        errors.append("source artifact hash mismatch")
+    return tuple(errors)
 
 
 def _git_provenance_errors(receipt: dict[str, object]) -> tuple[str, ...]:
@@ -279,14 +313,37 @@ def test_c025_success_failure_and_method_lesson_are_scoped_and_content_bound() -
     assert failure.diagnosis_status is FailureDiagnosisStatus.SUPPORTED
     assert any("higher-order" in item for item in raw_failure["scope_conditions"])
 
-    addendum = json.loads(POSTRESULT_ADDENDUM.read_text(encoding="utf-8"))
-    addendum_payload = copy.deepcopy(addendum)
-    addendum_payload["artifact_hash"] = ""
-    assert addendum["artifact_hash"] == _canonical_hash(addendum_payload)
-    assert addendum["lineage"]["immutable_parent_failure_artifact_hash"] == (
+    addendum_v1 = json.loads(POSTRESULT_ADDENDUM_V1.read_text(encoding="utf-8"))
+    addendum_v1_payload = copy.deepcopy(addendum_v1)
+    addendum_v1_payload["artifact_hash"] = ""
+    assert addendum_v1["artifact_hash"] == _canonical_hash(addendum_v1_payload)
+    assert addendum_v1["addendum_id"].endswith("-v1")
+    assert POSTRESULT_ADDENDUM_V1.read_bytes() == _git(
+        "show",
+        "37778fb4a345900efc47fb4198024f7e23806c1b:"
+        "research/real_math/millennium/p_vs_np/07_memory/"
+        "C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json",
+    ).stdout
+
+    addendum_v2 = json.loads(POSTRESULT_ADDENDUM_V2.read_text(encoding="utf-8"))
+    addendum_v2_payload = copy.deepcopy(addendum_v2)
+    addendum_v2_payload["artifact_hash"] = ""
+    assert addendum_v2["artifact_hash"] == _canonical_hash(addendum_v2_payload)
+    assert addendum_v2["addendum_id"].endswith("-v2")
+    assert addendum_v2["lineage"]["parent_addendum"]["artifact_hash"] == (
+        addendum_v1["artifact_hash"]
+    )
+    assert _historical_binding_errors(addendum_v2["lineage"]["parent_addendum"]) == ()
+    assert (
+        _historical_binding_errors(
+            addendum_v2["lineage"]["superseded_same_identity_revision"]
+        )
+        == ()
+    )
+    assert addendum_v2["lineage"]["immutable_parent_failure_artifact_hash"] == (
         raw_failure["artifact_hash"]
     )
-    lesson = addendum["method_lesson_candidate"]
+    lesson = addendum_v2["method_lesson_candidate"]
     assert lesson["status"].startswith("PROPOSAL_ONLY")
     assert "not independently recurrent" in lesson["transport_scope"]
     assert any("CANNOT_CHECK" in item for item in lesson["validation_obligations"])
@@ -324,8 +381,35 @@ def test_c025_success_failure_and_method_lesson_are_scoped_and_content_bound() -
     assert validate_research_tool(tool) == ()
     assert tool.authority is ResearchToolAuthority.VERIFIED_LOCAL
     assert tool.known_failure_ids == ("F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",)
-    assert addendum["lineage"]["immutable_parent_tool_artifact_hash"] == (
+    assert addendum_v2["lineage"]["immutable_parent_tool_artifact_hash"] == (
         tool.artifact_hash
+    )
+
+
+def test_c025_v2_addendum_lineage_planted_failures_fail_closed() -> None:
+    addendum_v2 = json.loads(POSTRESULT_ADDENDUM_V2.read_text(encoding="utf-8"))
+    parent = addendum_v2["lineage"]["parent_addendum"]
+
+    missing_commit = copy.deepcopy(parent)
+    missing_commit["source_commit"] = "0" * 40
+    assert _historical_binding_errors(missing_commit) == ("source commit missing",)
+
+    missing_path = copy.deepcopy(parent)
+    missing_path["path"] = "research/real_math/millennium/p_vs_np/DOES_NOT_EXIST.json"
+    assert "source path missing" in _historical_binding_errors(missing_path)
+
+    forged_blob = copy.deepcopy(parent)
+    forged_blob["git_blob_sha"] = "f" * 40
+    assert "source blob mismatch" in _historical_binding_errors(forged_blob)
+
+    forged_raw = copy.deepcopy(parent)
+    forged_raw["raw_sha256"] = "sha256:" + "f" * 64
+    assert "source raw hash mismatch" in _historical_binding_errors(forged_raw)
+
+    forged_artifact = copy.deepcopy(parent)
+    forged_artifact["artifact_hash"] = "sha256:" + "f" * 64
+    assert "source artifact hash mismatch" in _historical_binding_errors(
+        forged_artifact
     )
 
 
@@ -384,11 +468,12 @@ def test_c025_trace_continuation_is_hash_chained_and_never_promotes_root() -> No
         MathResearchTrace(trace_id=parent["trace_id"], entries=tuple(entries))
     )
     assert report.verdict is TraceGateVerdict.PASS
-    assert [entry.event_type for entry in entries[-5:]] == [
+    assert [entry.event_type for entry in entries[-6:]] == [
         ResearchTraceEventType.CANDIDATE_PROPOSED,
         ResearchTraceEventType.FALSIFIER_RUN,
         ResearchTraceEventType.RESULT_RECORDED,
         ResearchTraceEventType.RESIDUAL_OPENED,
+        ResearchTraceEventType.REVIEWED,
         ResearchTraceEventType.REVIEWED,
     ]
     assert all(entry.event_type is not ResearchTraceEventType.PROMOTED for entry in entries)
@@ -428,6 +513,7 @@ def test_parallel_assurance_trace_is_retrospective_and_preserves_failed_chronolo
         "RESULT_RECORDED",
         "EXPERIENCE_MEMORY_REVIEW",
         "REVIEWED",
+        "REVIEWED",
     ]
     assert all(
         raw["event_type"] not in {"CANDIDATE_PROPOSED", "FALSIFIER_RUN", "PROMOTED"}
@@ -442,13 +528,45 @@ def test_parallel_assurance_trace_is_retrospective_and_preserves_failed_chronolo
             encoding="utf-8"
         )
     )
-    assert "parallel_trace:RETROSPECTIVE_RECONCILED" in canonical["entries"][-1]["outputs"]
+    assert "parallel_trace:RETROSPECTIVE_RECONCILED" in canonical["entries"][-2]["outputs"]
+    addendum_v2 = json.loads(POSTRESULT_ADDENDUM_V2.read_text(encoding="utf-8"))
+    assert f'addendum_v2:{addendum_v2["artifact_hash"]}' in fork["entries"][-1][
+        "outputs"
+    ]
+    assert f'addendum_v2:{addendum_v2["artifact_hash"]}' in canonical["entries"][-1][
+        "outputs"
+    ]
 
 def test_synthesis_receipt_explicitly_reconciles_parallel_lineage() -> None:
     synthesis = json.loads(SYNTHESIS_RECEIPT.read_text(encoding="utf-8"))
     payload = copy.deepcopy(synthesis)
     payload["artifact_hash"] = ""
     assert synthesis["artifact_hash"] == _canonical_hash(payload)
+    parent_synthesis = json.loads(SYNTHESIS_RECEIPT_V1.read_text(encoding="utf-8"))
+    assert synthesis["receipt_lineage"]["parent_artifact_hash"] == parent_synthesis[
+        "artifact_hash"
+    ]
+    assert synthesis["receipt_lineage"]["parent_receipt_bytes_preserved"] is True
+    receipt_lineage = synthesis["receipt_lineage"]
+    assert _git(
+        "rev-parse", f'{receipt_lineage["source_commit"]}^{{tree}}'
+    ).stdout.decode().strip() == receipt_lineage["source_tree"]
+    assert _git(
+        "rev-parse",
+        f'{receipt_lineage["source_commit"]}:{receipt_lineage["path"]}',
+    ).stdout.decode().strip() == receipt_lineage["git_blob_sha"]
+    historical_parent = _git(
+        "show", f'{receipt_lineage["source_commit"]}:{receipt_lineage["path"]}'
+    ).stdout
+    assert "sha256:" + hashlib.sha256(historical_parent).hexdigest() == receipt_lineage[
+        "raw_sha256"
+    ]
+    assert SYNTHESIS_RECEIPT_V1.read_bytes() == _git(
+        "show",
+        "c52460ca974bc31bf14d729dc308f93ac062d997:"
+        "research/real_math/millennium/p_vs_np/05_falsification/"
+        "C025_SYNTHESIS_RECEIPT_20260811.json",
+    ).stdout
     assert synthesis["chronology"]["pre_result_case_plan_commit"] == (
         "03a4cb9a0bce32374d79210d8b712670c11626a7"
     )
@@ -466,6 +584,11 @@ def test_synthesis_receipt_explicitly_reconciles_parallel_lineage() -> None:
     assert synthesis["synthesis_target"]["integration_commit_after_live_main_merge"] == (
         "a423518794d7bbbfabfcf59ff14804491629b544"
     )
+    repair_target = synthesis["v2_repair_provenance"]["target_branch_head"]
+    assert repair_target["commit"] == "7b3edf22931f8b476fee4848685bea00fd92930d"
+    assert _git(
+        "rev-parse", f'{repair_target["commit"]}^{{tree}}'
+    ).stdout.decode().strip() == repair_target["tree"]
     for binding in synthesis["artifact_bindings"].values():
         path = ROOT / binding["path"]
         assert hashlib.sha256(path.read_bytes()).hexdigest() == binding["file_sha256"]
@@ -485,7 +608,17 @@ def test_synthesis_receipt_explicitly_reconciles_parallel_lineage() -> None:
     assert identities["canonical_tool_artifact_hash_preserved"] == (
         "sha256:bff3cc8c347f3ad4b007775d69abadffd408b8db2b3863990baf7b5c76d87475"
     )
-    assert identities["postresult_addendum_id"] == "C025-POSTRESULT-ASSURANCE-ADDENDUM-v1"
+    assert identities["postresult_addendum_v1"]["id"] == (
+        "C025-POSTRESULT-ASSURANCE-ADDENDUM-v1"
+    )
+    assert identities["postresult_addendum_v1"]["status"] == "IMMUTABLE_PARENT"
+    assert identities["postresult_addendum_v2"]["id"] == (
+        "C025-POSTRESULT-ASSURANCE-ADDENDUM-v2"
+    )
+    assert identities["postresult_addendum_v2"]["status"] == "CURRENT_SUCCESSOR"
+    assert identities["superseded_same_identity_v1_revision"]["disposition"].startswith(
+        "PRESERVED_NEGATIVE_HISTORY"
+    )
     assert "BACKFILLED_STRICT_PREREGISTRATION_IMPLICATION_SUPERSEDED" in (
         identities["supersession_action"]
     )

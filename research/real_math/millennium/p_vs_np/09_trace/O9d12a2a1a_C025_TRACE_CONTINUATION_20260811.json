@@ -194,6 +194,44 @@
       ],
       "artifact_hash": "sha256:24f55f5554c3f8c1b434713c03ed9852d53e5245d0d5fd6c199cd63fa8bb2dc0",
       "previous_event_hash": "sha256:13462a02e0523c9a5e0c98c63a27d8c71cf54fa75942a62072df6c28d5890704"
+    },
+    {
+      "event_id": "O9d12a2a1a-E13",
+      "atom_id": "O9d12a2a1a",
+      "event_type": "REVIEWED",
+      "timestamp": "2026-08-11T10:35:30Z",
+      "state_summary": "The post-result lineage is corrected after exact-head review: original addendum v1 is immutable, the later provenance-bearing revision is negative history, and v2 is the sole current successor.",
+      "action_summary": "Append, rather than backdate, the v2 lineage correction and keep all theorem, novelty, preregistration, and root authority ceilings unchanged.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json",
+        "sha256:f1e01ed92594fa7524fda1e15318770124d65732083e43f1be36ccc5d4999fa1",
+        "research/real_math/millennium/p_vs_np/07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_V2_20260811.json",
+        "sha256:0f4bac861dae927cddb09de3090e1e931adb8d16dd59222a9f726cdcd2d60b30"
+      ],
+      "alternatives_considered": [
+        "silently replace E12 evidence",
+        "keep ambiguous v1 identity"
+      ],
+      "decision_rationale": "An appended correction preserves the prior trace hash chain and makes supersession explicit.",
+      "outputs": [
+        "lineage_correction:V2_BOUND",
+        "addendum_v2:sha256:0f4bac861dae927cddb09de3090e1e931adb8d16dd59222a9f726cdcd2d60b30",
+        "computation_is_not_proof:true",
+        "independent_peer_review:ABSENT",
+        "root_status:OPEN_NO_SOLUTION_CERTIFICATE"
+      ],
+      "uncertainties": [
+        "independent mathematical review absent",
+        "framework method delta unevaluated"
+      ],
+      "residuals": [
+        "O9d12a2a1a1 remains OPEN_CONTEXT_REQUIRED"
+      ],
+      "next_steps": [
+        "validate synthesis v2 against exact Git and content bindings"
+      ],
+      "artifact_hash": "sha256:bdfabfe5d4228dd658b9178f438980ba9e2a214d93a823c2e2319d57ae24c841",
+      "previous_event_hash": "sha256:24f55f5554c3f8c1b434713c03ed9852d53e5245d0d5fd6c199cd63fa8bb2dc0"
     }
   ]
 }

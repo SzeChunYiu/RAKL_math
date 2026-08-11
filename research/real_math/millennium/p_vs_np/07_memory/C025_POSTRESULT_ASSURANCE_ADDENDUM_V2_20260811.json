@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0.0",
-  "addendum_id": "C025-POSTRESULT-ASSURANCE-ADDENDUM-v1",
-  "recorded_at": "2026-08-11T08:50:00Z",
+  "schema_version": "1.1.0",
+  "addendum_id": "C025-POSTRESULT-ASSURANCE-ADDENDUM-v2",
+  "recorded_at": "2026-08-11T10:34:00Z",
   "atom_id": "O9d12a2a1a",
   "candidate_id": "C025",
   "lineage": {
@@ -9,8 +9,29 @@
     "immutable_parent_failure_artifact_hash": "sha256:1ad323128652a32e1e1441339a94dba970374029d321acd951ea3afc442a3223",
     "extends_tool_id": "T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION",
     "immutable_parent_tool_artifact_hash": "sha256:bff3cc8c347f3ad4b007775d69abadffd408b8db2b3863990baf7b5c76d87475",
-    "chronology_audit_hash": "sha256:18e71545b1553d38b9ac1602384609f8b0e03bae7e350f5f0b4c5c8cea0d3118",
-    "original_result_commit": "1bfad13d82548fe61f70cd9f18828fe0240c8556"
+    "chronology_audit_hash": "sha256:7ccad2984ee95d49d8869263c2e7a429ec917d45ae566122872eb19123949488",
+    "original_result_commit": "1bfad13d82548fe61f70cd9f18828fe0240c8556",
+    "provenance_merge_commit": "73f6c779aa5481cd68808c01448949c322f608f8",
+    "parent_addendum": {
+      "addendum_id": "C025-POSTRESULT-ASSURANCE-ADDENDUM-v1",
+      "artifact_hash": "sha256:f1e01ed92594fa7524fda1e15318770124d65732083e43f1be36ccc5d4999fa1",
+      "source_commit": "37778fb4a345900efc47fb4198024f7e23806c1b",
+      "source_tree": "aa4d680e8d60571803f7921ef225f3adbf097d48",
+      "path": "research/real_math/millennium/p_vs_np/07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json",
+      "git_blob_sha": "93d3811fcb207ffe7c7113fbe1b5fc291053c30b",
+      "raw_sha256": "sha256:639cf7138adce1d22e67fc8c2a56cdca280e7cc0e087683a3fbce02a34a7e858"
+    },
+    "superseded_same_identity_revision": {
+      "addendum_id": "C025-POSTRESULT-ASSURANCE-ADDENDUM-v1",
+      "artifact_hash": "sha256:7cf5cc38f0f94fe4b6cd6c19a662f8cef456724482c1119bfe1e32dcd3c7b460",
+      "source_commit": "c52460ca974bc31bf14d729dc308f93ac062d997",
+      "source_tree": "690ed011bc9e612bd0ee698a7c95ff5d485d251d",
+      "path": "research/real_math/millennium/p_vs_np/07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json",
+      "git_blob_sha": "14059f9e5eb70413b4a90fe796f4d94d35396c68",
+      "raw_sha256": "sha256:07d4a18432328ce9cda9874f10d8ccd3782c919f04de29a6e268bf24457c1c97",
+      "disposition": "PRESERVED_AS_NEGATIVE_HISTORY; SUPERSEDED_BY_EXPLICIT_V2"
+    },
+    "supersession_reason": "Commit c52460c added provenance_merge_commit while retaining the v1 identity. Canonical v1 bytes are restored from 37778fb; these later facts belong to v2."
   },
   "retrospective_evidence": {
     "full_semifilter_counts": {
@@ -52,6 +73,6 @@
       "fresh assurance outside the design lineage"
     ]
   },
-  "authority": "VERSIONED_POSTRESULT_ADDENDUM / RETROSPECTIVE_EXECUTABLE_ASSURANCE / PROPOSAL_ONLY_METHOD_LESSON / COMPUTATION_IS_NOT_PROOF / ROOT_AUTHORITY_NONE",
-  "artifact_hash": "sha256:f1e01ed92594fa7524fda1e15318770124d65732083e43f1be36ccc5d4999fa1"
+  "authority": "VERSIONED_POSTRESULT_ADDENDUM_V2 / EXPLICIT_V1_SUPERSESSION_LINEAGE / RETROSPECTIVE_EXECUTABLE_ASSURANCE / PROPOSAL_ONLY_METHOD_LESSON / COMPUTATION_IS_NOT_PROOF / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:0f4bac861dae927cddb09de3090e1e931adb8d16dd59222a9f726cdcd2d60b30"
 }
