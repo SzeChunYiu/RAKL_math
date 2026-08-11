@@ -1,0 +1,65 @@
+{
+  "episode_id": "EP-RH-ANA-003-INDEX-HEIGHT-20260811-R1",
+  "task_id": "RAKL-VERIFIED-DISCOVERY-RH-ANALYTIC",
+  "atom_id": "RH-ANA-003",
+  "context_hash": "sha256:156df74ce368255b5b85065b49775ff6516ff24956388cc6dbf2b4988b4c154b",
+  "problem_signature": [
+    "Riemann Hypothesis",
+    "Li coefficients all-index positivity",
+    "Bombieri-Lagarias arithmetic/explicit formula",
+    "finite-place incomplete Li residual",
+    "height-to-index coupling",
+    "single off-line-zero hostile falsifier"
+  ],
+  "fibre_snapshot_hash": "sha256:156df74ce368255b5b85065b49775ff6516ff24956388cc6dbf2b4988b4c154b",
+  "operator_ids": [
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "action_trace": [
+    "Loaded current RAKL main and current RAKL_math RH-ANA-003 state.",
+    "Froze a fresh v3 shadow context, dual-memory review, six-role same-context review, and seven-event hash chain before the registered discriminator.",
+    "Re-opened primary Lagarias and Voros sources after the freeze and extracted exact finite-place/index-height and oscillatory-transform statements.",
+    "Derived the exact modulus identity for one Li zero summand and used it as a hostile test of density-only or finite-height extrapolation.",
+    "Rejected finite prime positivity, density-only closure, and immediate mollifier/resonance invention as insufficiently connected to the exact all-index residual.",
+    "Localized the next analytic interface at the incomplete Li residual near height sqrt(n), with explicit n-versus-height scaling."
+  ],
+  "observation_ids": [
+    "OBS-RH-ANA-003-LAGARIAS-FINITE-PLACE-INCOMPLETE-LI",
+    "OBS-RH-ANA-003-LAGARIAS-HEIGHT-INDEX-WINDOW",
+    "OBS-RH-ANA-003-VOROS-POSITIVE-Z-OSCILLATORY-TRANSFORM",
+    "OBS-RH-ANA-003-SINGLE-ZERO-MODULUS-IDENTITY",
+    "OBS-RH-ANA-003-DENSITY-NOT-EXCLUSION"
+  ],
+  "verification_ids": [
+    "primary:arXiv:math/0404394v4:Lagarias:pp3-4:eq1.14-1.18",
+    "primary:arXiv:math/0506326v2:Voros:p3:eq9-12",
+    "primary:Bombieri-Lagarias:JNT77:1999:DOI10.1006/jnth.1999.2392",
+    "algebra:direct-symbolic-modulus-identity"
+  ],
+  "outcome": "PARTIAL_SUCCESS",
+  "residual_signature": [
+    "The exact finite-place obstacle is not raw prime positivity but an incomplete Li coefficient at height about sqrt(n), plus controlled remainder.",
+    "Finite-height RH information up to T gives only a bounded index window n <= T^2/[4(log T)^2]; all-index positivity requires an unbounded closure mechanism.",
+    "Zero-density control compatible with even one off-line zero cannot alone close the all-index Li obstruction; a separate exclusion or exact cancellation theorem is required.",
+    "Voros' positive Z(j) coordinates still enter an oscillatory transform, so positive prime-derived coordinates do not give termwise Li positivity.",
+    "No strictly weaker unconditional all-index remainder theorem was proved in this cycle."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003_INDEX_HEIGHT_CANCELLATION_AUDIT_20260811_R1.md",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003_CONTEXT_FIBER_20260811_R1.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003_RESEARCH_MEMORY_REVIEW_20260811_R1.json",
+    "Jeffrey C. Lagarias, arXiv:math/0404394v4",
+    "Andre Voros, arXiv:math/0506326v2"
+  ],
+  "timestamp": "2026-08-11T11:36:00+00:00",
+  "cost": 1.0,
+  "cost_proxy": {
+    "autonomous_cycles": 1,
+    "primary_source_families_reopened": 3,
+    "pdf_pages_visually_audited": 2,
+    "repository_state_audits": 2,
+    "new_mathematical_candidates": 0
+  },
+  "authority": "TASK_EPISODE_SHADOW / SEARCH_CONTROL_ONLY / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:efc7936688ddbde8e22ac05d05ea8815f91dcb5c666c09652f3446b7f00532ef"
+}
