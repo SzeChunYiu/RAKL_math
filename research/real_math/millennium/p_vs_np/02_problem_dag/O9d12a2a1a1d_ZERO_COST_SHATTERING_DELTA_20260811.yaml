@@ -1,0 +1,51 @@
+atom_id: O9d12a2a1a1d
+parent_atom_id: O9d12a2a1a1b
+status: PARTIAL_SUCCESS_ROUTE_PRUNING
+root_authority: NONE
+claim: >-
+  For N>=2 in the exact graph discrete space with B=G_{N,N} and A=R_1,
+  the free-union trace family T_A={C intersect A : C in U(B)} equals P(A),
+  while Dcyc_cap(A|B)=rho(A,B)=0. Therefore log2|T_A|=VCdim(T_A)=N
+  cannot be uniformly upper-bounded by any finite function of counted cyclic intersections.
+proof_scope:
+  - Gamma=[N]x[N]
+  - B is the row-column generator family G_{N,N}
+  - A=R_1
+  - N>=2
+  - only absolute free-base trace cardinality/entropy and VC-dimension candidates
+local_candidate_failure:
+  id: F-O9D12A2A1A1D-ZERO-COST-BASE-RICHNESS-SHATTERING
+  category: REPRESENTATION
+  diagnosis: >-
+    The score measures combinatorial richness already expressible by uncharged unions,
+    so free-union quotient invariance alone is not sufficient for a t-bounded lower-bound coordinate.
+local_math_status: SOURCE_BOUND_EXACT_ELEMENTARY_LEMMA_PROPOSAL_SHADOW
+local_to_global_gluing_status: OPEN
+local_to_global_gluing_residual: >-
+  Find a target-relative or incremental coordinate Phi that vanishes on the zero-cost base,
+  prove a universal per-intersection accounting law, and prove super-logarithmic Phi
+  on an explicit graph before any root transfer.
+proposal_lesson:
+  id: L-PNP-NORMALIZE-ZERO-COST-BASE-BEFORE-RICHNESS
+  authority: PROPOSAL_ONLY_NOT_RETAINED
+  action: >-
+    Before scoring entropy, shattering, trace-count, rank-like, or other base-richness coordinates,
+    test the exact t=0 graph family and normalize/condition against the free base.
+next_child_atom:
+  id: O9d12a2a1a1e
+  objective: >-
+    Test incremental or conditional trace potentials that vanish on the free-union base and
+    ask whether one counted intersection has a universally bounded marginal effect after free unions.
+reused_ids:
+  - T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION
+  - F-C021-CHEAP-ADJACENCY
+  - F-C023-SCALAR-COLLAPSE
+  - F-O9D12A2A1A1B-FIXED-LAMBDA-GLOBAL-STATE-FACTORIZATION
+  - PNP-O9d12a2a1a1b-GLOBAL-FACTORIZATION-R2-20260811
+retrieved_shadow_dependency:
+  id: PNP-PR113-FREE-UNION-QUOTIENT
+  authority: SEARCH_PRIORITY_ONLY_UNMERGED
+  use: necessary-normalization warning only
+novelty_class_shadow: compositional
+retained_semantic_novelty: NONE_NO_PROTECTED_RETENTION_GATE
+root_status: OPEN_NO_SOLUTION_CERTIFICATE
