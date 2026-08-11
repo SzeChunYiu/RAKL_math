@@ -1,0 +1,67 @@
+{
+  "schema_version": "rakl-math-task-episode-shadow-v1",
+  "status": "PROPOSAL_SHADOW",
+  "authority_contract": {
+    "allowed_effect": "SEARCH_PRIORITY_ONLY",
+    "grants_tool_authority": false,
+    "grants_proof_authority": false,
+    "grants_gluing_authority": false,
+    "grants_theorem_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false
+  },
+  "episode": {
+    "episode_id": "NS-R001D1-C001-EPISODE-20260811",
+    "task_id": "navier-regularity::NS-R001d1::endpoint-falsifier",
+    "atom_id": "NS-R001d1",
+    "context_hash": "sha256:a984bc0c0495297d16341169ac70eb0c7ac718b5118f3a0e07ba02aa8aa923a3",
+    "problem_signature": [
+      "3D incompressible Navier-Stokes on R3",
+      "finite Leray energy versus critical L3 regularity control",
+      "mild Duhamel term with derivative heat kernel",
+      "near-diagonal temporal endpoint"
+    ],
+    "fibre_snapshot_hash": "sha256:772c86902e4096a9cd7578f364b2b8beab1862464ab92de0f6a25cc903abf8cc",
+    "operator_ids": [
+      "COUNTEREXAMPLE_FIRST_TEMPORAL_CONCENTRATION",
+      "CRITICAL_SCALING_AND_DIMENSION_AUDIT",
+      "SOURCE_BOUND_NEAR_SOLVED_TRANSFER"
+    ],
+    "action_trace": [
+      "re-read current RAKL v3 main and current RAKL_math main",
+      "reuse the already-gated NS-R001d1-C001 candidate rather than generate a new candidate",
+      "execute the predeclared unit-L2 pulse concentrating at the Duhamel endpoint",
+      "derive the general energy-line exponent balance after observing the registered falsifier outcome",
+      "contrast the failed scalar architecture with primary-source critical time-frequency/frequency-local closures",
+      "open a representation residual rather than retrying the same Holder architecture"
+    ],
+    "observation_ids": [
+      "OBS-NS-D1-PULSE-NORM-ONE",
+      "OBS-NS-D1-CONVOLUTION-DIVERGES",
+      "OBS-NS-D1-ENERGY-LINE-DEFICIT",
+      "OBS-NS-D1-CRITICAL-SPACE-CLOSURES-USE-RICHER-GEOMETRY"
+    ],
+    "verification_ids": [
+      "VERIFY-ANALYTIC-PULSE-INTEGRAL",
+      "VERIFY-SCALING-DIMENSION-CHECK",
+      "VERIFY-SEVEN-ROLE-SAME-CONTEXT-REVIEW",
+      "VERIFY-PRIMARY-SOURCE-SCOPE-AUDIT"
+    ],
+    "outcome": "FAILURE",
+    "residual_signature": [
+      "unsigned scalar energy/semigroup route cannot close pointwise critical L3",
+      "dynamic high-frequency replenishment/cancellation-aware critical coordinate remains open",
+      "root gluing remains blocked because successful critical-space hypotheses are not generated from arbitrary finite energy"
+    ],
+    "evidence_pointers": [
+      "SzeChunYiu/RAKL@decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8:docs/RAKL_V3_IMPLEMENTATION_MANIFEST.md",
+      "SzeChunYiu/RAKL_math@5d6bdc6f566921f51a375fdc2e8035123cf4830c",
+      "SzeChunYiu/RAKL_math@54974135e15027d58eae1dba474aec685b74e4f7:NS_R001D1_C001_DUHAMEL_ENDPOINT_SCREEN_20260811.md",
+      "research/real_math/millennium/navier_stokes/04_candidates/NS_R001D1_C001_DUHAMEL_ENDPOINT_RESULT_20260811.md",
+      "research/real_math/millennium/navier_stokes/08_reviews/NS_R001D1_C001_RESULT_REVIEW_20260811.md"
+    ],
+    "artifact_hash": "sha256:a0c15e537485aff1a4437b7b86ea23b2742f61859c60552e288edd4a2a823b17",
+    "timestamp": "2026-08-11T10:59:20+00:00",
+    "cost": 1.0
+  }
+}

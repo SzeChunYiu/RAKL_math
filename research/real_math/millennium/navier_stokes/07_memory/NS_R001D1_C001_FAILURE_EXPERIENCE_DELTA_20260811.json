@@ -1,0 +1,48 @@
+{
+  "failure_id": "F-NS-R001D1-C001-UNSIGNED-DUHAMEL-ENDPOINT",
+  "atom_id": "NS-R001d1",
+  "candidate_id": "NS-R001d1-C001",
+  "context_packet_hash": "sha256:a984bc0c0495297d16341169ac70eb0c7ac718b5118f3a0e07ba02aa8aa923a3",
+  "research_trace_event_id": "NS-R001d1-E010",
+  "method_family": "unsigned global-Lebesgue semigroup/energy pointwise critical closure",
+  "failure_mode": "near-diagonal temporal concentration defeats the scalar L2_t convolution induced after discarding Leray/pressure cancellation and time-frequency structure",
+  "residual_signature": [
+    "unit-L2 pulse g_epsilon yields J_t(g_epsilon)=4 epsilon^(-1/4) -> infinity",
+    "energy-line bilinear exponents satisfy a+1/m=3/2, while pointwise convolution closure requires a+1/m<1",
+    "one critical L-infinity_t L3_x factor plus one energy-line factor still gives a+1/m=5/4",
+    "successful near-solved closures use richer critical time-frequency/Carleson/frequency-local structure not present in the scalar reduction"
+  ],
+  "broken_assumptions": [
+    "Leray energy plus the unsigned derivative heat estimate could supply a finite pointwise critical L3 Duhamel coefficient",
+    "positive-time smoothing could be credited as nonlinear depletion without subtracting the linear heat baseline"
+  ],
+  "scope_conditions": [
+    "whole-space R3 mild formulation",
+    "proof architecture replaces the projected nonlinearity by unsigned global Lebesgue norms",
+    "only the L2_t information on ||u||_6 supplied by energy/Sobolev is retained",
+    "result is not an assertion about the set of actual Navier-Stokes time profiles"
+  ],
+  "competing_diagnoses": [
+    "pressure/Leray cancellation can remove the near-diagonal loss",
+    "time-frequency or tent/Carleson localization supplies the missing integrability",
+    "frequency-local critical smallness/coherence is dynamically generated on a useful interval",
+    "a projected-strain or local-energy coordinate is the correct nonlinear representation instead"
+  ],
+  "selected_diagnosis": "the tested failure is a representation/proof-architecture endpoint gap: global unsigned Lebesgue reduction erases the concentration-sensitive critical structure needed for closure; rotate to a cancellation-aware time-frequency representation",
+  "diagnosis_status": "SUPPORTED",
+  "evidence_pointers": [
+    "RAKL_math@54974135e15027d58eae1dba474aec685b74e4f7:research/real_math/millennium/navier_stokes/04_candidates/NS_R001D1_C001_DUHAMEL_ENDPOINT_SCREEN_20260811.md",
+    "research/real_math/millennium/navier_stokes/04_candidates/NS_R001D1_C001_DUHAMEL_ENDPOINT_RESULT_20260811.md",
+    "arXiv:2503.11642",
+    "arXiv:1812.09115"
+  ],
+  "falsifier_or_attempt": "g_epsilon(s)=epsilon^(-1/2) 1_(t-epsilon,t)(s), which has L2 norm one but convolution value 4 epsilon^(-1/4)",
+  "observed_result": "the predeclared endpoint inequality has no finite coefficient K(t)",
+  "local_repair_attempts": [
+    "prune repeated global unsigned Holder/Lebesgue endpoint closure",
+    "open a fresh representation atom around dynamic high-frequency replenishment and critical time-frequency/Carleson control",
+    "retain pressure-coherent, local-energy, frequency-local and projected-strain routes as live"
+  ],
+  "timestamp": "2026-08-11T10:59:10+00:00",
+  "artifact_hash": "sha256:e101e47a05dc091981f745de9b0fcd15bd5df4d52395d7cc33069503ea14341a"
+}
