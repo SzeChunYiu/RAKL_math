@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "validation_id": "VALIDATE-NS-B1a-C001-PR55-DIFF-SCOPE-CORRECTION-20260811",
+  "recorded_at": "2026-08-11T10:08:38Z",
+  "atom_id": "NS-B1a",
+  "historical_identity": "NS-B1a-C001",
+  "source_repository": "https://github.com/SzeChunYiu/RAKL_math.git",
+  "framework_pin": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+  "parent_receipt": {
+    "path": "research/real_math/millennium/navier_stokes/05_oracles/NS_B1a_C001_PR51_POSTMERGE_INVARIANCE_20260811.json",
+    "raw_sha256": "sha256:0e038a18caa83c746b7b3c3cd5206fd9439ab9f72f50a276d2488b9567496b5f",
+    "artifact_hash": "sha256:030ec7dc34b2698cc293be8c3846d0c85b908286fe9b14fb9fb478e794e37192"
+  },
+  "main_at_correction": {
+    "commit": "39bdd688bfd7cfc4a6f2d1e4201397c52e0975a7",
+    "tree": "ea785c05c887295aad9e45b49c714b6194667399",
+    "parents": [
+      "5d2977892f6fe726e1c983e5f50c55869ecc18e1",
+      "975dca447c835e717b47d4a342e98ff6e4450a09"
+    ]
+  },
+  "registered_ns_scope": {
+    "integration_base": "29d566f7860240f22d634664c51e8583e50a3c5b",
+    "repaired_pr_head": "85dd7838964daa238ab17790accf7b69b3cf2bb3",
+    "post_merge": "5d2977892f6fe726e1c983e5f50c55869ecc18e1"
+  },
+  "bounded_root_cause": "PR55 made a historical NS invariant depend on git diff --check origin/main...HEAD, so unrelated future receipt-bound whitespace outside the registered PR51 delta could fail NS assurance",
+  "scope_correction": {
+    "removed_moving_range": "origin/main...HEAD",
+    "registered_diff_range": "29d566f7860240f22d634664c51e8583e50a3c5b...85dd7838964daa238ab17790accf7b69b3cf2bb3",
+    "historical_attribute_source": "29d566f7860240f22d634664c51e8583e50a3c5b",
+    "corrected_attribute_source": "5d2977892f6fe726e1c983e5f50c55869ecc18e1",
+    "live_descendant_obligation": "registered post_merge must remain an ancestor of the live main ref",
+    "foreign_descendant_diff_policy": "OUT_OF_SCOPE_FOR_THIS_NS_INVARIANT",
+    "registered_ns_delta_defect_policy": "FAIL_CLOSED"
+  },
+  "correction_test_source": {
+    "commit": "6cdee384befd09c025eed802ab24fbba1280a7c8",
+    "tree": "c0b1bdfa8e026817d44f8b416396f228c2a2c6f1",
+    "path": "tests/math_applications/test_navier_stokes_ns_b1a_c001_pressure_tail.py",
+    "git_blob_sha": "cdc7d6462793dc5cbdfe2b930ea4d15f1ea36725",
+    "raw_sha256": "sha256:5f6fe9b9f5305bf5c6edb2c90fea19a737ddb6b9d6d63ce959a7ef45123be7d8",
+    "byte_mode": "GIT_SHOW_NO_TEXTCONV_NO_EXT_DIFF_BINARY_STDOUT"
+  },
+  "future_descendant_reproduction": {
+    "application_commit": "14ec86f656fe14218beeb7808da51890de306477",
+    "application_tree": "4813cbcedda40fc45182e5775c61514bdbcf4944",
+    "application_parents": [
+      "e8727447580c5a51733a3851cedee3f8507f77eb",
+      "39bdd688bfd7cfc4a6f2d1e4201397c52e0975a7"
+    ],
+    "relationship": "FUTURE_DESCENDANT_OF_MAIN_AT_CORRECTION_WITH_UNRELATED_C025_RECEIPT_HISTORY",
+    "pytest_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_navier_stokes_ns_b1a_c001_pressure_tail.py::test_whitespace_policy_preserves_only_the_immutable_snapshot_exception -q",
+    "pytest_result": "1 failed",
+    "old_assertion_command": "git diff --check origin/main...HEAD",
+    "old_assertion_exit_code": 2,
+    "diagnostics": [
+      "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_joint_signature_canonical_scope.md:3: trailing whitespace.",
+      "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_joint_signature_canonical_scope.md:4: trailing whitespace.",
+      "research/real_math/millennium/p_vs_np/08_reviews/SAME_CONTEXT_RESULT_REVIEW_C025_20260811.md:3: trailing whitespace."
+    ],
+    "diagnostic_scope": "UNRELATED_P_VS_NP_RECEIPT_BOUND_HISTORICAL_BYTES",
+    "corrected_helper_result": [],
+    "reproduction_note": "exact local branch snapshot observed before correction; recorded as bounded failure evidence, not mathematical evidence"
+  },
+  "tdd": {
+    "production_change_preceded_by_synthetic_regression": true,
+    "red_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_navier_stokes_ns_b1a_c001_pressure_tail.py::test_registered_ns_whitespace_scope_ignores_foreign_future_descendant_but_rejects_registered_defect -q",
+    "red_result": "1 failed: NameError for absent _registered_ns_whitespace_scope_errors",
+    "green_result": "1 passed",
+    "planted_future_descendant_world": "foreign trailing whitespace makes the broad integration-base-to-descendant diff fail while registered NS scope remains clean",
+    "planted_registered_defect_world": "trailing whitespace inside the registered NS delta emits registered NS delta whitespace defect"
+  },
+  "validation": {
+    "focused_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_navier_stokes_ns_b1a_c001_pressure_tail.py -vv",
+    "focused_passed": 13,
+    "full_command": "python tools/run_application_tests.py --framework framework/RAKL -- -vv",
+    "full_passed": 220
+  },
+  "preservation": {
+    "navier_stokes_historical_bytes_modified": false,
+    "p_vs_np_historical_bytes_modified": false,
+    "gitattributes_modified": false,
+    "narrow_ns_snapshot_policy_retained": "research/real_math/millennium/navier_stokes/04_candidates/negative_history/NS_B1a_C001_PR19_RESULT_SNAPSHOT_9B6B8AE.md whitespace=-trailing-space"
+  },
+  "interpretation": [
+    "a historical assurance invariant is evaluated over its receipt-registered subject range, not arbitrary future descendants",
+    "future descendant ancestry remains checked without importing unrelated descendant whitespace into the NS subject",
+    "the exact registered NS delta still fails closed on any non-exempt whitespace defect",
+    "the immutable NS snapshot and C025 receipt-bound history remain unchanged",
+    "no scientific, theorem, proof, novelty, Navier-Stokes, P-versus-NP, or Clay authority is created"
+  ],
+  "authority": "DIFF_SCOPE_CORRECTION / ASSURANCE_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / NO_P_VS_NP_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:4c8b7e910fbd871610544fe5e3be19f532b0f34a687cf411b2965b978244d72a"
+}

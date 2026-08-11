@@ -39,6 +39,9 @@ FINAL_VALIDATION = (
 POSTMERGE_VALIDATION = (
     BASE / "05_oracles/NS_B1a_C001_PR51_POSTMERGE_INVARIANCE_20260811.json"
 )
+DIFF_SCOPE_VALIDATION = (
+    BASE / "05_oracles/NS_B1a_C001_PR55_DIFF_SCOPE_CORRECTION_20260811.json"
+)
 FRAMEWORK = ROOT / "framework/RAKL"
 RETROSPECTIVE_AUTHORITY = (
     "RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / "
@@ -813,6 +816,61 @@ def test_registered_ns_whitespace_scope_ignores_foreign_future_descendant_but_re
             repository=repository,
             live_main_ref=defective_head,
         )
+    )
+
+
+def test_pr55_diff_scope_successor_receipt_is_self_hashed_and_source_bound() -> None:
+    receipt = _load(DIFF_SCOPE_VALIDATION)
+    _assert_self_hash(receipt)
+    parent = _load(POSTMERGE_VALIDATION)
+
+    assert receipt["framework_pin"] == (
+        "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
+    )
+    assert receipt["parent_receipt"]["artifact_hash"] == parent["artifact_hash"]
+    assert receipt["registered_ns_scope"] == {
+        "integration_base": parent["integration_base"]["commit"],
+        "repaired_pr_head": parent["repaired_pr_head"]["commit"],
+        "post_merge": parent["post_merge"]["commit"],
+    }
+    assert receipt["bounded_root_cause"] == (
+        "PR55 made a historical NS invariant depend on git diff --check "
+        "origin/main...HEAD, so unrelated future receipt-bound whitespace outside the "
+        "registered PR51 delta could fail NS assurance"
+    )
+
+    source = receipt["correction_test_source"]
+    assert _git("rev-parse", f'{source["commit"]}^{{tree}}').stdout.strip() == source[
+        "tree"
+    ]
+    source_object = f'{source["commit"]}:{source["path"]}'
+    assert _git("rev-parse", source_object).stdout.strip() == source["git_blob_sha"]
+    raw = _git_bytes("show", "--no-textconv", "--no-ext-diff", source_object).stdout
+    assert "sha256:" + hashlib.sha256(raw).hexdigest() == source["raw_sha256"]
+
+    reproduction = receipt["future_descendant_reproduction"]
+    assert reproduction["application_commit"] == (
+        "14ec86f656fe14218beeb7808da51890de306477"
+    )
+    assert reproduction["old_assertion_exit_code"] == 2
+    assert len(reproduction["diagnostics"]) == 3
+    assert all("p_vs_np" in value for value in reproduction["diagnostics"])
+    assert receipt["validation"] == {
+        "focused_command": (
+            "python tools/run_application_tests.py --framework framework/RAKL -- "
+            "tests/math_applications/"
+            "test_navier_stokes_ns_b1a_c001_pressure_tail.py -vv"
+        ),
+        "focused_passed": 13,
+        "full_command": (
+            "python tools/run_application_tests.py --framework framework/RAKL -- -vv"
+        ),
+        "full_passed": 220,
+    }
+    assert receipt["authority"] == (
+        "DIFF_SCOPE_CORRECTION / ASSURANCE_ONLY / "
+        "NO_NAVIER_STOKES_ROOT_EVIDENCE / NO_P_VS_NP_ROOT_EVIDENCE / "
+        "ROOT_AUTHORITY_NONE"
     )
 
 
