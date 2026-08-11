@@ -1,0 +1,34 @@
+atom_id: RH-ANA-003-SUMAN-UNIFORM-REPAIR-SHADOW-R1
+parent_atom_id: RH-ANA-003
+root_issue: 3
+status: CONTEXT_REQUIRED
+authority: PROPOSAL_SHADOW_ONLY
+opened_by:
+  episode_id: EP-RH-ANA-003-SUMAN-LAGUERRE-20260811-R1
+  failure_id: F-RH-ANA-003-SUMAN-AS-WRITTEN
+  obstruction_ids:
+    - O-RH-ANA-003-SUMAN-LAGUERRE-NONUNIFORM
+    - O-RH-ANA-003-SUMAN-BERNOULLI-DIVERGENCE
+question: >-
+  Can the Laguerre/Chebyshev route be repaired by proving a joint (n,x)-uniform
+  estimate on the full unbounded integration/prime-power domain, together with
+  a finite-order Euler-Maclaurin expansion and explicit remainder, strong enough
+  to yield the required o(n) Li-coefficient remainder without RH-equivalent input?
+required_quantifiers:
+  - Any Laguerre estimate must state its n- and x-regime and be uniform on every domain on which it is integrated or summed.
+  - Any domain split must cover the entire x-range and prove an integrable/summable majorant in each regime.
+  - Bernoulli/Euler-Maclaurin corrections must be finitely truncated with a source-bound remainder; no divergent infinite asymptotic series may be treated as a convergent sum.
+  - Limit/interchange order must be explicit.
+  - The final statement must bind back to the exact Li/Voros asymptotic rather than a finite prefix or neighboring smoothed coefficient.
+hostile_checks:
+  - Fixed-x asymptotic inserted under an unbounded-x integral.
+  - Pointwise-in-n tail control promoted to all-n uniform control.
+  - Infinite Bernoulli asymptotic series treated as ordinary convergence.
+  - A repaired remainder estimate that is itself equivalent to RH.
+candidate_generation_gate:
+  allowed: false
+  reason: >-
+    Freeze a fresh fibre for the repair theorem, retrieve uniform Laguerre
+    asymptotics by regime, and register exact remainder/quantifier falsifiers
+    before proposing a new inequality.
+root_authority: NONE
