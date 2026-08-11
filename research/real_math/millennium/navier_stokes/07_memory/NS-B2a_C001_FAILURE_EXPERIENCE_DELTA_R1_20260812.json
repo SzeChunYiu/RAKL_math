@@ -1,0 +1,71 @@
+{
+  "authority": "PROPOSAL_SHADOW",
+  "episode_ref": "EP-NS-B2a-C001-R1-20260812",
+  "diagnosis": {
+    "diagnosis_id": "D-NS-B2a-SCALE-CRITICAL-FLUX-NO-DECAY",
+    "status": "SUPPORTED_SCOPED",
+    "statement": "For Seregin's F(a)=1 ancient-Euler source state, standard absolute large-radius local-energy cutoff estimates retain scale-critical O(R) boundary errors; the missing closure coordinate is tail/cancellation/scale-breaking rather than another fixed-radius compactness estimate."
+  },
+  "failures": [
+    {
+      "failure_id": "F-NS-B2a-F1-ABSOLUTE-CUTOFF-NO-DECAY",
+      "category": "LOCAL_PROOF_ARCHITECTURE_REPRESENTATION_FAILURE",
+      "scope": "Only the direct inference from Seregin (3.5) F=1 magnitude bounds plus standard absolute cutoff estimates to vanishing large-radius flux.",
+      "falsifier": "Exact cutoff scaling of temporal, cubic and pressure-work terms.",
+      "observed_result": "Each standard absolute cutoff error is bounded only by O(R), not o(1).",
+      "not_claimed": [
+        "not an Euler counterexample",
+        "not a refutation of Seregin Theorem 3.1",
+        "does not exclude sign/cancellation or stronger inherited tail data"
+      ]
+    },
+    {
+      "failure_id": "G-NS-B2a-FIXED-R-TO-GLOBAL-FLUX-TIGHTNESS",
+      "category": "LOCAL_TO_GLOBAL_GLUING_FAILURE",
+      "scope": "Transfer from fixed-radius blow-up compactness to a global large-radius rigidity state.",
+      "falsifier": "Quantifier-order audit of fixed R then k->infinity versus the additional R->infinity tail limit.",
+      "observed_result": "The source's local convergence does not itself provide a sequence-uniform tail estimate or justify exchanging the limits."
+    }
+  ],
+  "obstruction": {
+    "obstruction_id": "O-NS-B2a-NO-INCOMING-FLUX-CERTIFICATE",
+    "scope": "Seregin F=1 Type-II ancient-Euler source class",
+    "statement": "A source-bound annular energy/pressure-flux, no-incoming-flux, tail-tightness or equivalent scale-breaking certificate is missing from the currently inherited state."
+  },
+  "lesson": {
+    "lesson_id": "L-NS-B2a-QUANTIFIER-ORDER-BEFORE-EULER-RIGIDITY",
+    "authority": "PROPOSAL_ONLY",
+    "statement": "Before global rigidity on a locally extracted blow-up limit, audit the cutoff growth exponent and the compactness/tail limit order."
+  },
+  "motif": {
+    "motif_id": "M-NS-SCALE-NEUTRAL-BOUNDARY-FLUX-ASSEMBLY",
+    "authority": "PROPOSAL_SHADOW",
+    "statement": "Critical local magnitude control plus a boundary assembly step can fail to globalize when the boundary error is scale neutral or grows at the cutoff scale."
+  },
+  "links": [
+    {
+      "source_id": "F-NS-B2a-F1-ABSOLUTE-CUTOFF-NO-DECAY",
+      "target_id": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "relation": "SHARES_RESIDUAL_WITH",
+      "difference_witness": "The prior failure concerns viscous Navier-Stokes dyadic-scale accounting; the present source is an inviscid Euler blow-up limit and concerns the large-radius global cutoff. Only the scale-neutral assembly morphology is reused."
+    },
+    {
+      "source_id": "G-NS-B2a-FIXED-R-TO-GLOBAL-FLUX-TIGHTNESS",
+      "target_id": "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "relation": "REFINES_INTERFACE_FAILURE",
+      "difference_witness": "The present failure identifies the exact quantifier pair fixed-R compactness versus R->infinity tail control in the Type-II Euler lane."
+    },
+    {
+      "source_id": "G-NS-B2a-FIXED-R-TO-GLOBAL-FLUX-TIGHTNESS",
+      "target_id": "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+      "relation": "REFINES_FAR_FIELD_FAILURE",
+      "difference_witness": "The current source gives explicit F=1 pressure/velocity exponents but still no vanishing annular flux."
+    },
+    {
+      "source_id": "O-NS-B2a-NO-INCOMING-FLUX-CERTIFICATE",
+      "target_id": "NS-B2a1",
+      "relation": "MOTIVATES_CHILD",
+      "issue": 198
+    }
+  ]
+}
