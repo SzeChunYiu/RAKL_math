@@ -48,3 +48,24 @@ hash-chain fields.
 
 Machine receipt:
 `migration/O9d12a2a1a_TRACE_INTEGRITY_REPAIR_RECEIPT_20260811.json`.
+
+## C025 retrospective-assurance boundary
+
+`C025` restores the canonical normalized `G_NEQ` joint-signature regression in
+the checked finite worlds, but collapses back to the already bounded
+first-order canonical representation. It is therefore retained as a local
+calibration success and route-level failure, not as progress authority for the
+P-versus-NP root.
+
+The case plan preceded the recorded output, but its evaluator bytes and hash
+were not frozen at registration. The exact result commit is now durable Git
+ancestry through a provenance-only merge, with executable commit/tree/blob/raw
+bindings. Its maximum authority remains `RETROSPECTIVE_EXECUTABLE_ASSURANCE`;
+computation is not proof and the root remains `OPEN_PROBLEM / NO_AUTHORITY`.
+
+The next child `O9d12a2a1a1` concerns genuinely higher-order semi-filter or
+closure state. Candidate generation there remains blocked until a fresh strict
+context, dual-memory review, expert cell, and pre-candidate trace are frozen.
+
+Machine receipt:
+`05_falsification/C025_SYNTHESIS_RECEIPT_20260811.json`.

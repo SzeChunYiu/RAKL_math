@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0.0",
+  "candidate_id": "C025",
+  "atom_id": "O9d12a2a1a",
+  "candidate_kind": "SCOPED_CALIBRATION_AND_CAPACITY_FALSIFIER",
+  "frozen_at": "2026-08-11T08:05:50Z",
+  "chronology": {
+    "rakl_math_base_commit": "f479e007e4a63e379188d7a16d08f30416c1cd4b",
+    "framework_authority_commit": "55d4cb0a83f271d3263fbe48f99b173119c732d2",
+    "framework_runtime_tree": "983e8e61613da3d8c1964bcb90df4c9e8086c4fb",
+    "pinned_framework_commit": "7853ec0c4ff8f862359835bca1af1d934bfbd887",
+    "pinned_framework_runtime_tree": "983e8e61613da3d8c1964bcb90df4c9e8086c4fb",
+    "current_and_pinned_runtime_trees_equal": true,
+    "context_packet_hash": "sha256:daa6e99832bd994ff5b081b861521f7465ef37b468d274eb08c93e0001358b89",
+    "memory_review_file_sha256": "sha256:314b8350a17c12c946a12bf5b98b948785d711794d440a9445b193705f59b123",
+    "repaired_pre_candidate_trace_file_sha256": "sha256:816a08928a81d81dfe615935e3cd1da9ef185144525322b277d21012009643d0",
+    "pre_candidate_gate_observation": {
+      "current_framework_context_gate": "PASS",
+      "current_framework_memory_gate": "PASS",
+      "current_framework_trace_gate": "PASS",
+      "candidate_generation_allowed": true,
+      "test_receipt": "3 passed against framework 55d4cb0a83f271d3263fbe48f99b173119c732d2"
+    }
+  },
+  "object": "A simultaneously selected family of normalized complementary cut pairs on the diagonal complement universe of G_NEQ.",
+  "qoi": "The minimum number k of binary cut coordinates needed so every unequal label pair is separated, together with the maximum discrimination available to the cardinality-only first-order signature argument.",
+  "scope": {
+    "included": [
+      "G_NEQ on N labels with N>=2",
+      "normalized complementary cut pairs (S,[N]\\S)",
+      "joint binary signatures of the N diagonal generator traces",
+      "exact finite construction and counterexample-first calibration",
+      "capacity-only pigeonhole arguments on a fixed distinguished trace set"
+    ],
+    "excluded": [
+      "arbitrary target graphs or arbitrary full semi-filter geometries",
+      "generic lift-and-project hierarchy strength",
+      "higher-order tuple, intersection, or closure-state signatures",
+      "an unrestricted-cover lower bound above logarithmic order",
+      "any theorem about P versus NP"
+    ]
+  },
+  "representation": {
+    "coordinate": "For cut S_j, bit_j(u)=1 iff u is in S_j.",
+    "joint_signature": "sig(u)=(bit_1(u),...,bit_k(u)) in {0,1}^k.",
+    "coverage_rule": "A normalized cut pair covers every semi-filter above unequal edge (u,v) whenever sig(u) and sig(v) differ in that coordinate; if all coordinates agree, the canonical semi-filter above (u,v) is not covered by the family.",
+    "preserved": [
+      "one common integral cut family",
+      "simultaneous obligations",
+      "G_NEQ generator separation"
+    ],
+    "discarded": [
+      "non-generator semi-filter closure structure outside G_NEQ",
+      "higher-order correlations beyond label signatures"
+    ]
+  },
+  "frozen_predictions": [
+    {
+      "id": "C025-P1",
+      "statement": "For every N>=2 and every normalized cut family, all G_NEQ unequal-pair obligations are covered iff the N joint binary signatures are injective."
+    },
+    {
+      "id": "C025-P2",
+      "statement": "The exact minimum coordinate count in this G_NEQ representation is ceil(log2 N)."
+    },
+    {
+      "id": "C025-P3",
+      "statement": "At k=ceil(log2 N)-1, capacity 2^k is strictly below N, so a collision and an uncovered unequal pair are forced."
+    },
+    {
+      "id": "C025-P4",
+      "statement": "A lower-bound argument using only cardinality of binary signatures on M distinguished traces saturates at ceil(log2 M); if M is polynomial in graph side size N, this capacity-only argument is O(log N)."
+    }
+  ],
+  "frozen_falsifiers": [
+    {
+      "id": "C025-F1",
+      "condition": "An exact small-N search finds a covering normalized family with k<ceil(log2 N).",
+      "effect": "REJECT_P2"
+    },
+    {
+      "id": "C025-F2",
+      "condition": "The constructive length-ceil(log2 N) codebook leaves any unequal pair unseparated.",
+      "effect": "REJECT_P1_P2"
+    },
+    {
+      "id": "C025-F3",
+      "condition": "Direct cut-membership coverage and signature-inequality coverage disagree on any enumerated family.",
+      "effect": "REJECT_REPRESENTATION"
+    },
+    {
+      "id": "C025-F4",
+      "condition": "A cardinality-only binary-signature argument distinguishes more than 2^k states with k coordinates.",
+      "effect": "REJECT_P3_P4"
+    }
+  ],
+  "evaluation_plan": {
+    "executable": "research/real_math/millennium/p_vs_np/05_falsification/joint_binary_signature_calibration.py",
+    "development_cases": {
+      "N_values": [
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        16,
+        17
+      ],
+      "exact_exhaustive_N_max": 4
+    },
+    "required_receipt": "research/real_math/millennium/p_vs_np/05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json",
+    "receipt_must_bind": [
+      "this preregistration hash",
+      "executable file hash",
+      "evaluated case outputs",
+      "claim-scope verdict",
+      "negative result"
+    ]
+  },
+  "planned_claim_if_predictions_pass": "Within normalized G_NEQ cut families, joint binary signatures exactly repair C024's lost integrality and recover ceil(log2 N), but the cardinality-only first-order capacity argument is exhausted at logarithmic order and supplies no super-logarithmic route evidence.",
+  "authority_ceiling": "EXACT_LOCAL_REPRESENTATION_CALIBRATION_ONLY / COMPUTATION_IS_NOT_PROOF / SAME_CONTEXT_REVIEW_NOT_INDEPENDENT / P_VS_NP_ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:39378a50357fd3807d1ee9bcfbdec79e7cf4e5f379d256cfc28d3bf0cb2ce286"
+}
