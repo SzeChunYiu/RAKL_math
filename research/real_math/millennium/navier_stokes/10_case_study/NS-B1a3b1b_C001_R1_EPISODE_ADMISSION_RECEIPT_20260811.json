@@ -1,0 +1,20 @@
+{
+  "schema_version": "episode-admission-receipt-v1",
+  "receipt_id": "EAR-NS-B1a3b1b-C001-R1-20260811",
+  "episode_id": "EP-NS-B1a3b1b-C001-R1-20260811",
+  "episode_artifact_hash": "59abd03412498115a46b18cfeaca0069fbbf044acdddb0a3f0d1a2a4c331e70f",
+  "storage_status": "PROPOSAL_SHADOW_STORED",
+  "inventory_registry_id": "shadow:RAKL_math/navier_stokes/NS-B1a3b1b",
+  "registered_at_utc": "2026-08-11T18:25:19Z",
+  "registration_evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a3b1b_C001_R1_TASK_EPISODE_20260811.json.shadow",
+    "SzeChunYiu/RAKL@b724b75c71f37956b6188584ce32e3c554ea2d6d:schemas/task-episode.schema.json",
+    "SzeChunYiu/RAKL@b724b75c71f37956b6188584ce32e3c554ea2d6d:schemas/episode-admission-receipt-v1.schema.json"
+  ],
+  "reverification_triggers": [
+    "episode artifact_hash changes",
+    "RAKL TaskEpisode storage/admission contract changes",
+    "any attempt to use this shadow episode for canonical inventory, promotion, lesson/tool, proof, or root gates"
+  ],
+  "receipt_canonical_sha256": "15097a9887426f03cf549aa6d21a77ac908e010c04b5c1ca26792947561f3e10"
+}
