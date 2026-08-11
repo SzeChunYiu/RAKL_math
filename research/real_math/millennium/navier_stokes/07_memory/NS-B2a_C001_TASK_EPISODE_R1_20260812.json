@@ -1,0 +1,116 @@
+{
+  "episode_id": "EP-NS-B2a-C001-R1-20260812",
+  "atom_id": "NS-B2a",
+  "candidate_id": "NS-B2a-C001-R1",
+  "authority": "PROPOSAL_SHADOW_STORED",
+  "problem_signature_hash": "sha256:6bbbc8c611be918bcedee40d0c8474b6928c2d01fce99bfca3150a80814a8867",
+  "fibre_snapshot_hash": "sha256:42f05a5bea869d15b4c938a663385050001c4c2d15b1a2f59082ff23a0a011bc",
+  "fibre_contents_consulted": [
+    "Seregin arXiv:2606.29468v1 Theorem 3.1, equations (3.5)-(3.8), F(a)=1 example",
+    "Seregin arXiv:2606.29468v1 Section 4 cutoff-decay/conservation analogue",
+    "Gavrilov arXiv:1810.08020 compact-support steady Euler solution",
+    "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "operators_motifs_tried": [
+    "OP-NS-B2a-F1-CUTOFF-SCALING-AUDIT",
+    "OP-NS-B2a-FIXED-R-TO-TAIL-QUANTIFIER-AUDIT",
+    "M-NS-SCALE-NEUTRAL-BOUNDARY-FLUX-ASSEMBLY",
+    "GAVRILOV-EXACT-ADVERSARY-SIGNATURE-CHECK"
+  ],
+  "search_policy": {
+    "route_order": ["SEARCH", "JUMP", "GLUE", "LIFT"],
+    "selected": "SEARCH",
+    "rationale": "Reuse the prior scale-neutral assembly failure only as a process/morphology analogue with a Navier-Stokes-to-Euler DifferenceWitness, then run the cheaper exact F=1 cutoff test before any Euler Liouville invention.",
+    "jump_status": "NO_STRICT_VIABLE_MATCH",
+    "glue_status": "BLOCKED_PENDING_TAIL_INTERFACE",
+    "lift_status": "NOT_LICENSED"
+  },
+  "prior_experience": {
+    "selected": [
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "rejected": [
+      {"id": "F-C024-FRACTIONAL-INTEGRALITY-GAP", "why": "Cross-Millennium assembly analogy is too remote for mathematical transfer; no target applicability witness."},
+      {"id": "GAVRILOV-1810.08020", "why": "Exact Euler adversary fails the F=1 gradient-spacetime source signature and cannot refute the target class."},
+      {"id": "ALBRITTON-BARKER-1811.00502", "why": "Type-I Navier-Stokes Liouville state space differs from the Type-II ancient-Euler source class."}
+    ],
+    "missed": "CANNOT_MEASURE: canonical v3 memory index was not materialized through the connector, so exhaustive recall cannot be certified."
+  },
+  "decision_policy": {
+    "pre_memory_preference": "Attempt direct Euler Liouville/energy vanishing from Seregin (3.5)-(3.8).",
+    "post_memory_action": "Audit large-radius cutoff scaling and fixed-radius-to-tail quantifier gluing first.",
+    "rakl_changed_chosen_action": true
+  },
+  "falsifier_verification": [
+    "Compute standard space/time cutoff terms from the exact F=1 exponents in Seregin (3.5).",
+    "Use the local multiplicative inequality to obtain scale-critical spacetime L3 control.",
+    "Use Holder on pressure-work to audit its cutoff scaling.",
+    "Test Gavrilov's steady compact-support Euler solution against the exact F=1 gradient-spacetime bound.",
+    "Audit the order fixed-R compactness -> subsequence limit versus required R->infinity tail limit."
+  ],
+  "observations": [
+    "F=1 gives sup_t integral_B_R |u|^2 = O(R), integral_Q_R |grad u|^2 = O(R), and integral_Q_R |p|^(3/2) = O(R^2).",
+    "The standard multiplicative inequality yields integral_Q_R |u|^3 = O(R^2).",
+    "Temporal cutoff, cubic flux, and pressure-work absolute estimates are each O(R), not o(1), after applying standard cutoff derivatives.",
+    "Seregin's convergence is fixed-radius local compactness and does not itself supply a uniform tail estimate.",
+    "Gavrilov's nonzero steady compact-support Euler field violates the F=1 gradient-spacetime bound because the normalized term grows linearly in R."
+  ],
+  "outcome": "TRANSFER_BLOCKED_SCOPED / F1_STANDARD_CUTOFF_SCALE_NEUTRAL / GLOBAL_FLUX_TIGHTNESS_NOT_INHERITED_BY_FIXED_RADIUS_COMPACTNESS",
+  "residual_signature": [
+    "Need a source-valid annular energy/pressure-flux or no-incoming-flux/tail-tightness certificate with constants uniform through Seregin's Euler scaling.",
+    "Alternatively need an exact Euler rigidity theorem consuming only the inherited F=1 state (3.5)-(3.8).",
+    "Noncompact translations/dilations and profile leakage remain live.",
+    "Navier-Stokes backward uniqueness is inapplicable because the limit equation is Euler."
+  ],
+  "failure_category": {
+    "local_mathematical_failure": "NONE",
+    "source_route_failure": "F-NS-B2a-F1-ABSOLUTE-CUTOFF-NO-DECAY",
+    "local_to_global_gluing_failure": "G-NS-B2a-FIXED-R-TO-GLOBAL-FLUX-TIGHTNESS",
+    "equation_change": "NAVIER_STOKES_TO_EULER",
+    "unique_continuation": "NS_BACKWARD_UNIQUENESS_INAPPLICABLE_AT_EULER_NODE"
+  },
+  "diagnosis": {
+    "diagnosis_id": "D-NS-B2a-SCALE-CRITICAL-FLUX-NO-DECAY",
+    "statement": "The F=1 source ledger is exactly scale critical at the large-cutoff boundary, so standard absolute local-energy estimates do not manufacture a vanishing global flux; the first missing bridge is tail/cancellation/scale-breaking rather than another local compactness estimate.",
+    "status": "SUPPORTED_SCOPED"
+  },
+  "obstruction": {
+    "obstruction_id": "O-NS-B2a-NO-INCOMING-FLUX-CERTIFICATE",
+    "statement": "No source-bound certificate currently bridges fixed-radius Euler compactness to vanishing annular energy/pressure flux at infinity."
+  },
+  "lesson": {
+    "lesson_id": "L-NS-B2a-QUANTIFIER-ORDER-BEFORE-EULER-RIGIDITY",
+    "authority": "PROPOSAL_ONLY",
+    "statement": "When a blow-up limit is obtained only on fixed compact sets, audit the large-domain cutoff exponent and limit order before invoking a global rigidity theorem; scale-critical O(R) boundary errors identify a distinct gluing obligation."
+  },
+  "cost_effort_proxy": {
+    "primary_sources_bound": 2,
+    "explicit_scaling_checks": 4,
+    "same_context_expert_roles": 7,
+    "independent_reviews": 0
+  },
+  "next_action": "NS-B2a1: bind or falsify a k-uniform annular energy/pressure-flux tightness certificate inherited from the original suitable weak Navier-Stokes sequence through Seregin's Euler scaling.",
+  "novelty_class": "transfer",
+  "saturation_axes": {
+    "KNOWLEDGE": "FLAT",
+    "OPERATOR": "FLAT",
+    "EXPERIENCE_PATTERN": "REOPENED",
+    "OBSTRUCTION": "REOPENED",
+    "RELATION": "REOPENED",
+    "PATH": "REOPENED",
+    "META_METHOD": "FLAT"
+  },
+  "successful_reuse_ids": [
+    "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "artifact_hash": "sha256:6849f010095c51250e006ca6c0198e88139017ba1b75f2c489e73b20f690de71"
+}
