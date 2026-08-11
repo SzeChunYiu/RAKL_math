@@ -1,0 +1,39 @@
+{
+  "schema_version": "rakl-adoption-receipt-v0-application-proposal-shadow",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_subject_sha": "41327f39783255fa96ff83754fec6c3ee77742ab",
+  "configured_framework_pin": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+  "observed_current_framework_main_sha": "1fe6477aac2299a210e99e1624e9f7e795a2a6d4",
+  "observed_framework_method_version": "rakl-core manifest 0.6.6",
+  "observed_at": "2026-08-11T14:30:27Z",
+  "pin_relation": "PIN_BEHIND_CURRENT_MAIN",
+  "execution_status": "CURRENT_MAIN_READ_DIRECTLY_SHADOW; APPLICATION_TEST_EXECUTION_REMAINS_PINNED_UNTIL_SYNC",
+  "framework_surfaces_inspected": [
+    "skills/rakl-core/manifest.yaml",
+    "src/rakl/v3.py",
+    "src/rakl/v3_runtime.py",
+    "src/rakl/experience_substrate.py",
+    "src/rakl/problem_fibre.py",
+    "src/rakl/method_specs.py"
+  ],
+  "v3_features_operationalized": [
+    "ProblemAtom/frozen problem fibre semantics",
+    "target-conditioned success/failure episode routing",
+    "proposal/shadow TaskEpisode evidence root",
+    "episode-to-diagnosis separation",
+    "seven-axis saturation accounting",
+    "explicit local-section versus gluing failure separation",
+    "protected-authority nonpromotion boundary"
+  ],
+  "framework_delta_note": "Current RAKL main includes post-pin framework work; this cycle follows current-main semantics directly but does not claim the application dependency was synchronized or tested against current main.",
+  "complete_application_tests_against_current_framework_main": "NOT_YET_RUN",
+  "complete_application_tests_against_pin": "NOT_YET_RUN_THIS_BRANCH",
+  "revalidation_triggers": [
+    "application branch head changes",
+    "configured framework pin changes",
+    "observed RAKL main changes"
+  ],
+  "authority": "TELEMETRY_ONLY / NO_FRAMEWORK_PROMOTION / NO_MATHEMATICAL_AUTHORITY",
+  "related_framework_issue": "SzeChunYiu/RAKL#128",
+  "receipt_hash": "sha256:50ebbc8575e3c474731ce2229e00d4fa206965d1f04ed5c2a3dd0ea624f036af"
+}
