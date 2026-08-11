@@ -1,0 +1,49 @@
+{
+  "target_atom_id": "NS-R001d1",
+  "target_context_hash": "sha256:a984bc0c0495297d16341169ac70eb0c7ac718b5118f3a0e07ba02aa8aa923a3",
+  "tool_inventory_snapshot_hash": "sha256:fe2f3b4ef49492d81cb350fb689bf9f9dff6cfd1817d72d6ff9fe3350e3d5e6a",
+  "failure_lattice_snapshot_hash": "sha256:e417fa7195d737cf42bf1e4a63b893bc65d0481c900d454148ca742e4c482468",
+  "tool_query_status": "NO_RELEVANT_MATCH",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "heat/Stokes baseline subtraction before nonlinear attribution",
+    "mild/Duhamel endpoint convolution closure",
+    "Koch-Tataru/tent-space critical bilinear control",
+    "localized critical smoothing and restart arguments",
+    "frequency-local dynamic smallness generation",
+    "Miller projected strain-remainder depletion"
+  ],
+  "relevant_tool_ids": [],
+  "relevant_failure_ids": [
+    "F-NS-R001-A1-ENERGY-CRITICALITY",
+    "F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "No promoted Navier-Stokes success tool exists in the current application inventory for deriving critical control from arbitrary finite energy.",
+    "Cross-Millennium research-control tools were inspected conceptually but no target-specific applicability witness supports importing one as mathematical method authority for this atom."
+  ],
+  "failure_reuse_notes": [
+    "DifferenceWitness from A1: NS-R001d1 no longer asks static/generic energy interpolation to control a critical norm; it restricts attention to actual mild Navier-Stokes evolution and explicitly separates the heat baseline from the nonlinear Duhamel term.",
+    "Repeat-failure regression from A1: any proposed dynamic estimate must track Navier-Stokes scaling and may not hide a supercritical factor in constants or restart time.",
+    "DifferenceWitness from NS-R001b: the new atom uses full trajectory evolution and nonlocal Leray/Duhamel structure rather than pointwise strain-vorticity geometry alone.",
+    "Repeat-failure regression from NS-R001b: a candidate must fail closed if it also holds for arbitrary divergence-free histories or for the linear heat equation without a witnessed nonlinear excess.",
+    "Pending PR #33 is not included in this frozen failure snapshot because its exact-head CI is unresolved; it is treated only as provisional route evidence and cannot mint memory authority here."
+  ],
+  "unresolved_warnings": [
+    "Crude heat-kernel estimates can create near-diagonal time singularities; failure of one Hölder/convolution closure is a proof-architecture failure, not a Navier-Stokes counterexample.",
+    "Positive-time smoothing that is already true for the heat equation is not evidence of nonlinear depletion.",
+    "Small critical-data and frequency-local theorems assume the critical coordinate whose dynamic generation is the active obstruction.",
+    "Miller's projected-remainder criteria remain conditional until their ratio/integral is controlled from the finite-energy Clay data class.",
+    "Any future candidate must distinguish R^3 finite-energy scope from periodic or infinite-energy exact flows."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/07_memory/NS_R001D1_RESEARCH_TOOL_INVENTORY_20260811.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS_R001D1_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS_R001D1_HEAT_BASELINE_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS_R001_ENERGY_CRITICAL_ATLAS_20260811.md",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS_R001B_STRAIN_VORTICITY_ATLAS_20260811.md",
+    "RAKL_math PR #33 (provisional, not memory authority)"
+  ],
+  "artifact_hash": "sha256:98440c57d6ce7d397ad841f2607e64483ec7dd537673b5e9509e90ead8b48470"
+}
