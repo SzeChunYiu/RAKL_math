@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/trace-memory-binding-supersession-receipt.schema.json",
+  "title": "Trace Memory Binding Supersession Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "atom_id",
+    "recorded_at",
+    "finding_classification",
+    "predecessor_trace",
+    "predecessor_receipt",
+    "successor_trace",
+    "exact_memory_bindings",
+    "supersession_scope",
+    "authority",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"type": "string", "minLength": 1},
+    "atom_id": {"type": "string", "minLength": 1},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "finding_classification": {"const": "QUARANTINED_APPLICATION_FEEDBACK_HYPOTHESIS"},
+    "predecessor_trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "file_sha256", "schema_result", "hash_chain_result", "semantic_binding_result", "stale_output_hash", "actual_memory_hash", "immutable"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "file_sha256": {"$ref": "#/$defs/sha256"},
+        "schema_result": {"const": "PASS"},
+        "hash_chain_result": {"const": "PASS"},
+        "semantic_binding_result": {"const": "FAIL"},
+        "stale_output_hash": {"$ref": "#/$defs/sha256"},
+        "actual_memory_hash": {"$ref": "#/$defs/sha256"},
+        "immutable": {"const": true}
+      }
+    },
+    "predecessor_receipt": {"$ref": "#/$defs/fileBinding"},
+    "successor_trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "file_sha256", "trace_id", "final_event_hash", "schema_result", "hash_chain_result", "semantic_binding_result", "immutable"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "file_sha256": {"$ref": "#/$defs/sha256"},
+        "trace_id": {"type": "string", "minLength": 1},
+        "final_event_hash": {"$ref": "#/$defs/sha256"},
+        "schema_result": {"const": "PASS"},
+        "hash_chain_result": {"const": "PASS"},
+        "semantic_binding_result": {"const": "PASS"},
+        "immutable": {"const": true}
+      }
+    },
+    "exact_memory_bindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["memory_path", "memory_file_sha256", "memory_artifact_hash", "failure_lattice_path", "failure_lattice_file_sha256", "failure_lattice_snapshot_hash"],
+      "properties": {
+        "memory_path": {"type": "string", "minLength": 1},
+        "memory_file_sha256": {"$ref": "#/$defs/sha256"},
+        "memory_artifact_hash": {"$ref": "#/$defs/sha256"},
+        "failure_lattice_path": {"type": "string", "minLength": 1},
+        "failure_lattice_file_sha256": {"$ref": "#/$defs/sha256"},
+        "failure_lattice_snapshot_hash": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "supersession_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["effect", "historical_bytes_rewritten", "candidate_emitted", "retroactive_credit"],
+      "properties": {
+        "effect": {"const": "FUTURE_TRACE_USE_ONLY"},
+        "historical_bytes_rewritten": {"const": false},
+        "candidate_emitted": {"const": false},
+        "retroactive_credit": {"const": "NONE"}
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["application_feedback", "framework_promotion", "mathematical_truth_effect", "independent_review", "novelty_authority", "root_authority"],
+      "properties": {
+        "application_feedback": {"const": "PROPOSAL_ONLY_LOCAL_BINDING_REPRODUCTION"},
+        "framework_promotion": {"const": "NONE"},
+        "mathematical_truth_effect": {"const": "NONE"},
+        "independent_review": {"const": false},
+        "novelty_authority": {"const": "NONE"},
+        "root_authority": {"const": "NONE"}
+      }
+    },
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "fileBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "file_sha256", "immutable"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "file_sha256": {"$ref": "#/$defs/sha256"},
+        "immutable": {"const": true}
+      }
+    }
+  }
+}
