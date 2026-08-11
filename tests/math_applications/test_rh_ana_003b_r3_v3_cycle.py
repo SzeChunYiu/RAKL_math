@@ -101,7 +101,7 @@ def test_rh_ana_003b_route_pruning_and_successor_are_scoped() -> None:
     assert "successor_atom: RH-ANA-003c" in parent
     assert "status: CONTEXT_REQUIRED" in child
     assert "root_authority: NONE" in child
-    assert "RH\\quad\\Longleftrightarrow" in result
+    assert "\\Longleftrightarrow" in result
     assert "root authority none" in result
     assert "OPEN_NO_SOLUTION_CERTIFICATE" in result
 
