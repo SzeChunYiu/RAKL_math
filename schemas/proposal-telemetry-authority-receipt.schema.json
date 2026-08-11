@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/proposal-telemetry-authority-receipt.schema.json",
+  "title": "RAKL Math proposal-only telemetry authority receipt",
+  "description": "Separates non-canonical application telemetry from a canonical TaskEpisode while granting no scientific, method, review, or root authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "artifact_type",
+    "receipt_id",
+    "recorded_at",
+    "source_original",
+    "canonical_episode",
+    "telemetry_payload",
+    "authority_contract",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "artifact_type": {"const": "PROPOSAL_TELEMETRY_AUTHORITY_RECEIPT"},
+    "receipt_id": {"type": "string", "minLength": 1},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "source_original": {"$ref": "#/$defs/sourceOriginal"},
+    "canonical_episode": {"$ref": "#/$defs/canonicalEpisode"},
+    "telemetry_payload": {"type": "object", "minProperties": 1},
+    "authority_contract": {"$ref": "#/$defs/authorityContract"},
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha1": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "sourceOriginal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["merge_commit", "path", "git_blob_sha", "content_sha256", "source_extension_key"],
+      "properties": {
+        "merge_commit": {"$ref": "#/$defs/sha1"},
+        "path": {"type": "string", "minLength": 1},
+        "git_blob_sha": {"$ref": "#/$defs/sha1"},
+        "content_sha256": {"$ref": "#/$defs/sha256"},
+        "source_extension_key": {"const": "shadow_extensions"}
+      }
+    },
+    "canonicalEpisode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "artifact_hash", "framework_schema_commit", "framework_schema_path", "framework_schema_git_blob"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "artifact_hash": {"$ref": "#/$defs/sha256"},
+        "framework_schema_commit": {"$ref": "#/$defs/sha1"},
+        "framework_schema_path": {"const": "schemas/task-episode.schema.json"},
+        "framework_schema_git_blob": {"$ref": "#/$defs/sha1"}
+      }
+    },
+    "authorityContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "effective_authority",
+        "allowed_effect",
+        "grants_tool_authority",
+        "grants_proof_authority",
+        "grants_gluing_authority",
+        "grants_theorem_authority",
+        "grants_root_authority",
+        "grants_strict_discovery_credit",
+        "grants_framework_authority",
+        "grants_review_independence",
+        "may_repair_original_chronology",
+        "may_suppress_failure_warning"
+      ],
+      "properties": {
+        "effective_authority": {"const": "PROPOSAL_ONLY"},
+        "allowed_effect": {"const": "RETROSPECTIVE_SEARCH_PRIORITY_ONLY"},
+        "grants_tool_authority": {"const": false},
+        "grants_proof_authority": {"const": false},
+        "grants_gluing_authority": {"const": false},
+        "grants_theorem_authority": {"const": false},
+        "grants_root_authority": {"const": false},
+        "grants_strict_discovery_credit": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false},
+        "may_repair_original_chronology": {"const": false},
+        "may_suppress_failure_warning": {"const": false}
+      }
+    }
+  }
+}
