@@ -35,7 +35,7 @@ def test_h4d1b_context_is_hash_bound_and_source_scoped() -> None:
     joined = " ".join(context["explicit_disanalogies"]).lower()
     assert "arbitrary rational cycle" in joined
     assert "semiregular" in joined
-    assert "higher" in joined
+    assert "all-order" in joined
 
 
 def test_h4d1b_memory_retrieves_parent_failures_without_minting_tool() -> None:
