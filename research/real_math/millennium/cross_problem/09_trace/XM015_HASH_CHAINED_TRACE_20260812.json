@@ -1,0 +1,107 @@
+{
+  "schema": "RAKL_math.hash_chained_trace.v3.proposal_shadow",
+  "cycle_id": "XM015-YM-PNP-FULL-TARGET-CONGRUENCE-20260812",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "context_hash": "cad26d6f26e7ce10d1e053869a6f470bff21dbf693c3cbc7f5ec6ccb4e93e7c7",
+  "events": [
+    {
+      "seq": 1,
+      "kind": "FRAMEWORK_CURRENT_READ",
+      "payload": {"rakl_sha": "10c35704445216fb7595fefb10e06e8ddaf694a2", "method": "3.0.0", "method_specs_blob": "6342f2692b3fd85de3f274f9c6548c9736225691"},
+      "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "event_hash": "2a545362298193443c2e0e4a97589c4adb3f147a7418713034e55ea1c10c53a5"
+    },
+    {
+      "seq": 2,
+      "kind": "APPLICATION_CURRENT_WORK_BOUND",
+      "payload": {"rakl_math_base": "3cfc8a3b2ff6d981351d2f15421c8cc08048f74b", "lanes": ["PNP", "RH", "NS", "YM", "Hodge", "BSD"], "observer_pr": 185},
+      "prev_hash": "2a545362298193443c2e0e4a97589c4adb3f147a7418713034e55ea1c10c53a5",
+      "event_hash": "37a6c07dd2211567793c4b7c8f49d39c96e466b605be443164364657161c8d68"
+    },
+    {
+      "seq": 3,
+      "kind": "ATOMIZED",
+      "payload": {"atom": "XM015-YM-R9-TO-PNP-C041-FULL-REOPT", "signature": "FROZEN_SUBSPACE_RESULT_REQUIRES_FULL_TARGET_CONGRUENCE_CHECK"},
+      "prev_hash": "37a6c07dd2211567793c4b7c8f49d39c96e466b605be443164364657161c8d68",
+      "event_hash": "8e9af9bff7cd86be9ee68037ad969409ce2833a472d029f136d75b09d221f72c"
+    },
+    {
+      "seq": 4,
+      "kind": "CONTEXT_FROZEN",
+      "payload": {"context_hash": "cad26d6f26e7ce10d1e053869a6f470bff21dbf693c3cbc7f5ec6ccb4e93e7c7", "fibre_snapshot_hash": "sha256:cad26d6f26e7ce10d1e053869a6f470bff21dbf693c3cbc7f5ec6ccb4e93e7c7"},
+      "prev_hash": "8e9af9bff7cd86be9ee68037ad969409ce2833a472d029f136d75b09d221f72c",
+      "event_hash": "50642935137da55444240e76f11d80cf8587dd5c00e578c1008ef069a83d2cd2"
+    },
+    {
+      "seq": 5,
+      "kind": "ANALOGY_SCAN",
+      "payload": {"source": "EP-YM-S1c1a1-R9-20260811", "target": "PNP C041 n=2->3", "difference_witness": {"source": "A tail-localized path may be short in varied fine coordinates yet fail to end at the original Theta1 when coarse coordinates are frozen.", "target": "The fixed-lift residual LP can have delta*=0 while, in principle, a full child LP could improve by redistributing previously inherited weights. Therefore the fixed-lift result and the full-target optimum are not definitionally identical.", "transfer_scope": "Only the discriminator 'check full target after a frozen-subspace calculation' transfers."}},
+      "prev_hash": "50642935137da55444240e76f11d80cf8587dd5c00e578c1008ef069a83d2cd2",
+      "event_hash": "c757806e105689f0e69c5a30fbc2ddcc2e20a5c632512a8b240f146e3c9dc13b"
+    },
+    {
+      "seq": 6,
+      "kind": "EXPERIENCE_MEMORY_REVIEW",
+      "payload": {"selected": ["EP-YM-S1c1a1-R9-20260811", "PNP-C041-FX-SAT-ONE-SIDED-EXACT-GATE-20260812", "EP-XM014-BSD-PNP-PARAMETER-BINDING-20260812", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"], "rejected": ["RH-ANA-003b", "NS-B1a3b1b1a", "H4d1c", "BSD-A1a1-R8"]},
+      "prev_hash": "c757806e105689f0e69c5a30fbc2ddcc2e20a5c632512a8b240f146e3c9dc13b",
+      "event_hash": "0ba77a60c55213d873d343dbd38af29a66b2c4eab45f6eaf89547f1b49ca8760"
+    },
+    {
+      "seq": 7,
+      "kind": "COUNTEREXAMPLE_FIRST_FALSIFIER",
+      "payload": {"question": "Does full reoptimization raise child optimum above 3/2?", "universe": {"relevant": 787, "pairs": 90}},
+      "prev_hash": "0ba77a60c55213d873d343dbd38af29a66b2c4eab45f6eaf89547f1b49ca8760",
+      "event_hash": "32854e4bc29fc3615c8501561a9565ae88a674031810de9479f926056874a5dc"
+    },
+    {
+      "seq": 8,
+      "kind": "ANALYTIC_PRIMAL_CERTIFICATE",
+      "payload": {"objective": "3/2", "filters": ["F23", "F13", "F12"], "max_pair_load": "1"},
+      "prev_hash": "32854e4bc29fc3615c8501561a9565ae88a674031810de9479f926056874a5dc",
+      "event_hash": "3e7df7dc34cf6f8d59beea79b7971fdd00d2f12269b08b05a6cafedbb8240cb7"
+    },
+    {
+      "seq": 9,
+      "kind": "ANALYTIC_DUAL_CERTIFICATE",
+      "payload": {"objective": "3/2", "pairs": ["P1", "P2", "P3"], "min_filter_coverage": "1"},
+      "prev_hash": "3e7df7dc34cf6f8d59beea79b7971fdd00d2f12269b08b05a6cafedbb8240cb7",
+      "event_hash": "e4a36e111031bef854ba314385101296c34312aa314ee652f0c50c6c72de5fba"
+    },
+    {
+      "seq": 10,
+      "kind": "EXHAUSTIVE_REGRESSION_VERIFICATION",
+      "payload": {"relevant": 787, "legal_pairs": 90, "status": "PASS_CALIBRATION_ONLY"},
+      "prev_hash": "e4a36e111031bef854ba314385101296c34312aa314ee652f0c50c6c72de5fba",
+      "event_hash": "d0d508e0f73717ae193f5ad0d03c0b29d18fa43434dfcc14c2f0469416305009"
+    },
+    {
+      "seq": 11,
+      "kind": "OUTCOME_TYPED",
+      "payload": {"outcome": "LOCAL_EXACT_SUCCESS__FULL_REOPTIMIZED_N3_CHILD_OPTIMUM_EQUALS_PARENT_3_OVER_2", "residual_after": "PNP_C041_N2_TO_N3_FULL_REOPTIMIZED_CHILD_EQUALS_PARENT_3_OVER_2; FIRST_MAGIC_CODED_LEVEL_LATER_TRANSITIONS_AND_ASYMPTOTIC_RECURRENCE_OPEN"},
+      "prev_hash": "d0d508e0f73717ae193f5ad0d03c0b29d18fa43434dfcc14c2f0469416305009",
+      "event_hash": "d98e686828a4eaa25b2c7e5dbc54dd54aa7e16667fb0fa1548bf415b01b44e77"
+    },
+    {
+      "seq": 12,
+      "kind": "EXPERT_CONTEXT_REVIEW",
+      "payload": {"roles": 7, "independent_credit": 0},
+      "prev_hash": "d98e686828a4eaa25b2c7e5dbc54dd54aa7e16667fb0fa1548bf415b01b44e77",
+      "event_hash": "bce737a0aa9af4dc1bb3c9f629822c1604934cbbe66c2be0916ea18b21943812"
+    },
+    {
+      "seq": 13,
+      "kind": "SATURATION_AUDIT",
+      "payload": {"reopened": ["KNOWLEDGE", "EXPERIENCE_PATTERN", "OBSTRUCTION", "RELATION", "PATH"], "flattened": ["OPERATOR", "META_METHOD"]},
+      "prev_hash": "bce737a0aa9af4dc1bb3c9f629822c1604934cbbe66c2be0916ea18b21943812",
+      "event_hash": "144eed881befbf8891779459346329549a0c31fdb063ecf2fe72355c6929bab4"
+    },
+    {
+      "seq": 14,
+      "kind": "NEXT_STEP_PROPOSED",
+      "payload": {"next": "Rotate from the now-closed first-step reoptimization escape to the earliest magic-coded C041 extension where genuinely new child geometry appears; freeze that transition and test whether full reoptimization remains flat or creates positive gain."},
+      "prev_hash": "144eed881befbf8891779459346329549a0c31fdb063ecf2fe72355c6929bab4",
+      "event_hash": "ecd3a36463090adf3eec06c22cfbc63eda009409cb2581c3360d2da311d9d305"
+    }
+  ],
+  "final_hash": "sha256:ecd3a36463090adf3eec06c22cfbc63eda009409cb2581c3360d2da311d9d305"
+}
