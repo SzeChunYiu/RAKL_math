@@ -4,8 +4,8 @@
     "atom_id": "NS-B1a",
     "candidate_id": "NS-B1a-C001",
     "context_packet_hash": "sha256:d0acf9ae066132883a893e669c09f5969f5e40281c558913b61c8ac0fcc2902d",
-    "research_trace_event_id": "NS-B1a-E10",
-    "method_family": "instantaneous pressure-divergence anti-replication from finite Type-I critical Morrey energy control",
+    "research_trace_event_id": "NS-B1a-E08R",
+    "method_family": "retrospective analytic-shell search control for instantaneous pressure-divergence anti-replication under finite Type-I critical Morrey energy control",
     "failure_mode": "far-field Calderon-Zygmund pressure accumulation is absolutely summable under the available time-slice Morrey growth",
     "residual_signature": [
       "pressure stress tail outside radius R is O(M R^-2)",
@@ -18,6 +18,7 @@
       "nonlocality alone upgrades local Type-I control to a global tail bound"
     ],
     "scope_conditions": [
+      "retrospective analytic calibration only because PR19 did not commit an exact immutable evaluator or candidate identity before the result artifact",
       "whole-space 3D pressure quadratic far-field represented by the Newtonian Hessian Calderon-Zygmund kernel outside a fixed radius",
       "fixed time slice satisfying sup_{x,r} r^-1 integral_{B(x,r)} |v|^2 <= M",
       "absolute far-field stress and first kernel-gradient contributions only",
@@ -29,9 +30,10 @@
       "diffusion/advection rather than pressure may supply the dynamics-specific tail mechanism",
       "finite I may simply be too weak to force any global tail trigger without an additional minimality or compactness property"
     ],
-    "selected_diagnosis": "The Type-I A/Morrey energy bound itself makes the instantaneous quadratic pressure far field summable, so raw pressure divergence is not the missing local-to-global bridge; the next discriminating coordinate is temporal/coherent dynamics.",
+    "selected_diagnosis": "Within the exact analytic-shell assumptions, the Type-I A/Morrey energy bound makes the instantaneous quadratic pressure far field summable; this is SEARCH_CONTROL_ONLY because PR19 chronology does not support preregistered candidate authority.",
     "diagnosis_status": "SUPPORTED",
     "evidence_pointers": [
+      "research/real_math/millennium/navier_stokes/04_candidates/negative_history/NS_B1a_C001_PR19_CHRONOLOGY_AUDIT_20260811.json",
       "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a_C001_PRESSURE_TAIL_LOCALIZATION_20260811.md",
       "research/real_math/millennium/navier_stokes/09_trace/NS-B1a_C001_TRACE_CONTINUATION_20260811.json",
       "research/real_math/millennium/navier_stokes/08_reviews/SAME_CONTEXT_REVIEW_NS-B1a_C001_RESULT_20260811.md",
@@ -39,14 +41,14 @@
       "Bradshaw-Tsai arXiv:2001.11526"
     ],
     "falsifier_or_attempt": "Dyadic-shell worst-case absolute accumulation under mu(B(x,r))<=M r: use |K(z)|<=c0|z|^-3 and |grad K(z)|<=c1|z|^-4 with no cancellation, compact support, or finite-packet assumption.",
-    "observed_result": "The shell sums are geometric: pressure tail <= (8/3)c0 M R^-2 and kernel-gradient tail <= (16/7)c1 M R^-3. The narrower instantaneous-pressure-divergence mechanism is therefore rejected within this registered scope.",
+    "observed_result": "Independent arithmetic recheck gives pressure tail <= (8/3)c0 M R^-2 and kernel-gradient tail <= (16/7)c1 M R^-3. Preserve this only as RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY; it creates no Navier-Stokes root evidence and does not exclude other pressure mechanisms.",
     "local_repair_attempts": [
       "test the pressure-gradient kernel as well as pressure; it is even more summable",
       "retain pressure-aware temporal/local-energy mechanisms as live rather than globally blacklisting pressure",
       "open NS-B1a1 for time-integrated shell-flux accumulation"
     ],
-    "timestamp": "2026-08-11T08:09:10+00:00",
-    "artifact_hash": "sha256:8020ad5ba3cf94daf2819b7fa2634a6133aee5a7f9ab98cb725a069e0b0c6054"
+    "timestamp": "2026-08-11T09:10:00+00:00",
+    "artifact_hash": "sha256:cb319a5124e14a1730f88e51a827c4a1d64377325ce4bad086ffcb13fe7d1636"
   },
   "links": [
     {
