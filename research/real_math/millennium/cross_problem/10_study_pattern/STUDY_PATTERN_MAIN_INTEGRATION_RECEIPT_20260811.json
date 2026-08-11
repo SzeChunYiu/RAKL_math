@@ -1,0 +1,66 @@
+{
+  "schema_version": "rakl-math-study-pattern-main-integration-receipt-v1",
+  "artifact_type": "STUDY_PATTERN_MAIN_INTEGRATION_RECEIPT",
+  "receipt_id": "rakl-math::study-pattern::main-integration::5d6bdc6-v1",
+  "status": "PROPOSAL_ONLY_INTEGRATION_PROVENANCE",
+  "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+  "framework_authority_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+  "frozen_source": {
+    "commit": "e05613ae4a86f8fbdc842bb51a51e41d5150d1fc",
+    "tree": "dcd5a558a38190ff9d28eb22484587a4f5b18851",
+    "source_binding_receipt": {
+      "commit": "fbc8c663402e497fcb7d908f47c8d6cf57ed78b7",
+      "tree": "e6c7fa2cf0c908c185ba233bacd5e20666241b38",
+      "path": "research/real_math/millennium/cross_problem/10_study_pattern/STUDY_PATTERN_SOURCE_BINDING_RECEIPT_20260811.json",
+      "git_blob_sha": "b1afee077b6bb188dded7602711cfd133f9c6b15",
+      "raw_sha256": "sha256:b171e366b345432d1aeab3f4edd79d01c568a40d535146b890334e60d22fcf9d",
+      "artifact_hash": "sha256:f9608ec6ed4645eebec7605bef5952d0f4badac184447de73c84b44591849103"
+    }
+  },
+  "prior_branch_checkpoint": {
+    "commit": "fbc8c663402e497fcb7d908f47c8d6cf57ed78b7",
+    "tree": "e6c7fa2cf0c908c185ba233bacd5e20666241b38"
+  },
+  "current_main_snapshot": {
+    "commit": "5d6bdc6f566921f51a375fdc2e8035123cf4830c",
+    "tree": "63c64c242edcf0357010f613c19d9aa713cbbb18"
+  },
+  "integration_merge": {
+    "commit": "1a36a43fdefdc2e1f76e17d24a3d41c2e59cc8dc",
+    "tree": "0e9302f034a323bea6e7d515a97a0e0115b74301",
+    "parents": [
+      "fbc8c663402e497fcb7d908f47c8d6cf57ed78b7",
+      "5d6bdc6f566921f51a375fdc2e8035123cf4830c"
+    ],
+    "first_parent_proposal_checkpoint": "fbc8c663402e497fcb7d908f47c8d6cf57ed78b7",
+    "second_parent_live_main": "5d6bdc6f566921f51a375fdc2e8035123cf4830c",
+    "strategy": "ort"
+  },
+  "chronology": {
+    "source_and_preregistration_remain_frozen_at_commit": "e05613ae4a86f8fbdc842bb51a51e41d5150d1fc",
+    "source_binding_receipt_remains_non_circular": true,
+    "integration_receipt_created_after_history_merge": true,
+    "pilot_protocol_changed_by_integration": false,
+    "pilot_executed": false,
+    "pilot_results_accessed": false,
+    "result_receipt_created": false
+  },
+  "verification": {
+    "focused_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_cross_millennium_study_pattern_shadow.py",
+    "focused_result": "13 passed",
+    "full_command": "python tools/run_application_tests.py --framework framework/RAKL",
+    "full_result": "260 passed"
+  },
+  "authority_contract": {
+    "effective_authority": "PROPOSAL_ONLY",
+    "allowed_effect": "INTEGRATION_PROVENANCE_ONLY",
+    "grants_tool_authority": false,
+    "grants_proof_authority": false,
+    "grants_gluing_authority": false,
+    "grants_theorem_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false
+  },
+  "recorded_at_utc": "2026-08-11T10:58:26Z",
+  "artifact_hash": "sha256:56467a256eefd20b94fc2d127ffcbd29decefc8d4f4919e165198559ed0cb695"
+}
