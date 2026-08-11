@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/framework-pin-sync-b6d0326-receipt.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "receipt_id", "recorded_at", "framework_delta", "application_integration", "compatibility_repair", "pre_action_gate_replay", "historical_r1_result_binding", "verification", "mathematical_experience_boundary", "authority_contract", "artifact_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"const": "RAKL-MATH-FRAMEWORK-PIN-SYNC-B6D0326-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "framework_delta": {"const": {"previous_commit": "787c7e00af2a5877ccb715bc807ec14f52974e9c", "current_commit": "b6d0326735bce38842832e654b704053e7f4ed73", "previous_tree": "3047f39eee221d82e261d4567bf87e3cdb76166b", "current_tree": "701b76184664d587528c76c8dc50545a6189f2cf", "commits_between": 41, "changed_files": 414, "fresh_origin_main": "b6d0326735bce38842832e654b704053e7f4ed73"}},
+    "application_integration": {"type": "object"},
+    "compatibility_repair": {"type": "object"},
+    "pre_action_gate_replay": {"type": "object"},
+    "historical_r1_result_binding": {"const": {"path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_SOURCE_NATIVE_THEOREM_INVENTORY_R1_20260811.json", "artifact_hash": "sha256:a9bbd2013a72e9c67395a2c96da7c9afd25b308f76df8e9b9208be23bd42dc74", "framework_commit": "787c7e00af2a5877ccb715bc807ec14f52974e9c", "outcome_branch": "SUCCESS", "root_status": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE"}},
+    "verification": {"const": {"subject_commit": "b1f1f05c9006d6155b64cd4019c5ceb7d458662f", "verified_at": "2026-08-11T19:04:05Z", "command": "python tools/run_application_tests.py --framework framework/RAKL", "tests_passed": 465, "exit_code": 0, "pin_equals_gitlink": true, "framework_authority_paths_clean": true, "status": "PASS_EXACT_APPLICATION_SUITE"}},
+    "mathematical_experience_boundary": {"type": "object"},
+    "authority_contract": {"const": {"grants_mathematical_authority": false, "grants_p_vs_np_root_authority": false, "grants_framework_evolution_authority": false, "grants_review_independence": false, "grants_strict_latest_process_credit": false}},
+    "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}

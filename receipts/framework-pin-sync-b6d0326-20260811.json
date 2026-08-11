@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "RAKL-MATH-FRAMEWORK-PIN-SYNC-B6D0326-20260811",
+  "recorded_at": "2026-08-11T19:04:40Z",
+  "framework_delta": {
+    "previous_commit": "787c7e00af2a5877ccb715bc807ec14f52974e9c",
+    "current_commit": "b6d0326735bce38842832e654b704053e7f4ed73",
+    "previous_tree": "3047f39eee221d82e261d4567bf87e3cdb76166b",
+    "current_tree": "701b76184664d587528c76c8dc50545a6189f2cf",
+    "commits_between": 41,
+    "changed_files": 414,
+    "fresh_origin_main": "b6d0326735bce38842832e654b704053e7f4ed73"
+  },
+  "application_integration": {
+    "round_base": "812addd25a7f34d3c6272143e21d5d7db34539aa",
+    "pre_merge_head": "0effa2fc4b21f27adfb82d9440385e68de2230cb",
+    "live_origin_main": "47f56df0492339097a651d40b6c7289c4e2d4034",
+    "live_origin_main_tree": "ed795d7daf07b73fe7bc898d858448896e638aee",
+    "integration_merge_commit": "b1f1f05c9006d6155b64cd4019c5ceb7d458662f",
+    "integration_merge_tree": "cb291f1006fbae4b1000653f3e5b0b1a45ba157c"
+  },
+  "compatibility_repair": {
+    "initial_subject_commit": "079d0ed52bf764129ffc7dc4e63181c9aa07055c",
+    "initial_framework_commit": "b724b75c71f37956b6188584ce32e3c554ea2d6d",
+    "initial_tests_passed": 456,
+    "initial_tests_failed": 9,
+    "initial_status": "FAIL_LIVE_TASK_EPISODE_SCHEMA_RUNTIME_APPLIED_TO_HISTORICAL_BYTES",
+    "repair_commit": "2c332bfd7f7ca6b27537c5e97495f0de3a29a8dc",
+    "repair_scope": "HISTORICAL_SCHEMA_RUNTIME_REPLAY_ONLY",
+    "historical_artifacts_rewritten": false,
+    "current_storage_admission_gate_weakened": false,
+    "mathematical_memory_mutated": false
+  },
+  "pre_action_gate_replay": {
+    "historical_receipt_path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_SOURCE_INVENTORY_R1_PRE_ACTION_20260811.json",
+    "historical_receipt_raw_sha256": "sha256:7ba48dae8e25d8589e725962ca9a2522e173186300f3d627ce232123b9e878c9",
+    "historical_receipt_canonical_sha256": "sha256:aab44dcb80dbca53adbb85cc42ff1c4a504b5e5d50e3809b7ad2aadb53faf560",
+    "replay_framework_commit": "b6d0326735bce38842832e654b704053e7f4ed73",
+    "gate": "rakl.pre_action_receipt.gate_consequential_operator_execution",
+    "intended_operator_id": "SOURCE_NATIVE_T_RULE_THEOREM_INVENTORY",
+    "verdict": "ALLOWED",
+    "reasons": [
+      "fibre_snapshot_bound",
+      "operator_bound",
+      "falsifier_and_outcome_branches_bound"
+    ],
+    "may_execute": true,
+    "original_execution_used_latest_gate": false,
+    "strict_latest_process_credit": false,
+    "result_remains_historical_framework_bound": true,
+    "prospective_r2_requires_fresh_gate_and_root_preservation_receipt": true
+  },
+  "historical_r1_result_binding": {
+    "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_SOURCE_NATIVE_THEOREM_INVENTORY_R1_20260811.json",
+    "artifact_hash": "sha256:a9bbd2013a72e9c67395a2c96da7c9afd25b308f76df8e9b9208be23bd42dc74",
+    "framework_commit": "787c7e00af2a5877ccb715bc807ec14f52974e9c",
+    "outcome_branch": "SUCCESS",
+    "root_status": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE"
+  },
+  "verification": {
+    "subject_commit": "b1f1f05c9006d6155b64cd4019c5ceb7d458662f",
+    "verified_at": "2026-08-11T19:04:05Z",
+    "command": "python tools/run_application_tests.py --framework framework/RAKL",
+    "tests_passed": 465,
+    "exit_code": 0,
+    "pin_equals_gitlink": true,
+    "framework_authority_paths_clean": true,
+    "status": "PASS_EXACT_APPLICATION_SUITE"
+  },
+  "mathematical_experience_boundary": {
+    "policy": "FRAMEWORK_SYNC_AND_COMPATIBILITY_REPAIR_ARE_OPERATIONAL_ASSURANCE_NOT_MATHEMATICAL_EXPERIENCE",
+    "mathematical_lessons_source": "R1 theorem rows and difference witnesses only",
+    "operational_events_excluded": [
+      "git pin movement",
+      "historical schema compatibility repair",
+      "CI execution",
+      "artifact hashing",
+      "timestamp chronology"
+    ]
+  },
+  "authority_contract": {
+    "grants_mathematical_authority": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_framework_evolution_authority": false,
+    "grants_review_independence": false,
+    "grants_strict_latest_process_credit": false
+  },
+  "artifact_hash": "sha256:4decfcbd8e4e20aac140a854b7701116a7763ba1c9f3a839eb087e5c2ee27c5f"
+}
