@@ -1,0 +1,44 @@
+{
+  "target_atom_id": "NS-B1a1",
+  "target_context_hash": "sha256:4dae5bafac63707c103256e9caa31c4df161d0a1bc4fe70d1d304afcb14df913",
+  "tool_inventory_snapshot_hash": "sha256:fa7c52385880128d6114b0d71f37f362dd382c1d91141e43497685b047c46a77",
+  "failure_lattice_snapshot_hash": "sha256:9cc2e12c8e6325a0ecbbc720616a063a031002c4902e1a5542f56b2df295bde9",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "nested-scale local-energy increment or telescoping currency",
+    "pressure-aware annular flux with exact scale normalization",
+    "critical-element or almost-periodicity route limiting simultaneously active scales",
+    "weighted backward-uniqueness route bypassing absolute shell summation",
+    "backward global-L3 trace extraction"
+  ],
+  "relevant_tool_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+  "relevant_failure_ids": ["F-NS-B1a-C001-PRESSURE-SUMMABILITY", "F-XM001-POINTWISE-GAP-COLLAPSE"],
+  "selected_tool_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+  "tool_applicability_notes": [
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT applies only as a diagnostic screen: finite-I scale-critical shell bounds are the surrogate, a summable/telescoping scale currency or global trace is the root bridge, and the target DifferenceWitness is dyadic PDE summability rather than lattice-spacing normalization.",
+    "The tool creates no Navier-Stokes theorem authority; its guaranteed effect is only to localize a failed inference if an exact scale-recurrent calibration preserves the local premises while destroying the desired summability coordinate."
+  ],
+  "failure_reuse_notes": [
+    "F-NS-B1a-C001-PRESSURE-SUMMABILITY is directly relevant: critical Morrey energy control makes absolute instantaneous far-field pressure geometrically summable, so repeating pressure-divergence arguments would ignore the diagnosed temporal/coherent residual.",
+    "F-XM001-POINTWISE-GAP-COLLAPSE is relevant only abstractly: a valid finite-scale surrogate may lose a root-critical coordinate under limit/assembly. DifferenceWitness: NS-B1a1 concerns an infinite dyadic sum/telescoping law for PDE energy-flux terms, not Yang-Mills continuum mass normalization.",
+    "The merged Shahmurov source audit is retained as a source-bound warning outside the FailureExperience lattice: no smallest physical scale or well-founded scale descent may be assumed."
+  ],
+  "unresolved_warnings": [
+    "Finite I supplies bounded critical quantities but no epsilon-smallness or registered monotonicity formula.",
+    "Forward DSS solutions are scaling calibrations only, not ancient Type-I counterexamples.",
+    "Subtracting local-energy inequalities at nested scales may introduce cutoff/sign/pressure errors and cannot be called telescoping before an exact identity is proved.",
+    "Any backward-uniqueness alternative must derive its weighted/tail hypotheses from finite I rather than importing them.",
+    "Even successful Type-I exclusion leaves Type-II and the Clay root open."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a_C001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "research/real_math/millennium/cross_problem/07_memory/XM001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "research/real_math/millennium/navier_stokes/03_source_audits/NS-B1a1_SRC001_SHAHMUROV_2606_07875_20260811.md",
+    "issue:43:NS-B1a1",
+    "RAKL-main:15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+    "RAKL_math-base:0ad7991d8b4f05792d6d43b6e36128ef4b7eada9"
+  ],
+  "artifact_hash": "sha256:d3816a2da7e2fcc4811c9b229e0b28aa7321c30be6cd434ea6598588146d047b"
+}
