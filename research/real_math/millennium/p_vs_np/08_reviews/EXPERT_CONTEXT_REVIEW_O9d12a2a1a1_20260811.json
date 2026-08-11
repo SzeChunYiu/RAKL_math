@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "EXPERT-CONTEXT-REVIEW-O9d12a2a1a1-20260811",
+  "atom_id": "O9d12a2a1a1",
+  "context_packet_hash": "sha256:c9399f1ca3809c6eee6a9cab12184e6a7f27763ea88fc406b6696b3cd09b422b",
+  "memory_review_hash": "sha256:0e20820da894885f0c1231ce93de8de70b1c94126b5d5631922e1b0d1b924802",
+  "review_kind": "ROLE_SEPARATED_SAME_CONTEXT_NOT_INDEPENDENT",
+  "roles": [
+    {
+      "role": "complexity/fusion-method lead",
+      "background": "Boolean circuit complexity, graph/discrete complexity, fusion-method lower bounds",
+      "evidence_inspected": [
+        "Cavalar-Oliveira 2025 definitions/cover-complexity framework",
+        "C024 and C025 route/memory state"
+      ],
+      "assessment": "The least fixed-point semi-filter closure is source-native and exactly aligned with unrestricted preservation, unlike the first-order G_NEQ signature state.",
+      "strongest_objection": "Exact representation alone says nothing about super-log lower bounds; the entire problem is now an accounting theorem that connects closure state to one-fusion cost.",
+      "recommended_falsifier": "attack O(1) marginal sensitivity before target-family search",
+      "vote": "ACCEPT_NEXT_FALSIFIER_ONLY"
+    },
+    {
+      "role": "combinatorics/closure-systems lead",
+      "background": "finite closure systems, implicational/Horn systems, extremal set systems",
+      "evidence_inspected": [
+        "source-native upward/intersection closure semantics",
+        "child context equivalent formulations"
+      ],
+      "assessment": "The closure is naturally a monotone Horn-style least fixed point. Latent rules can cascade after one new rule creates a missing antecedent.",
+      "strongest_objection": "Raw closure cardinality is especially suspect because one small derived intersection adds all of its supersets; derivation depth and new-intersection count can also cascade.",
+      "recommended_falsifier": "construct an explicit family D_1,...,D_m and dormant old pairs where adding one pair (D_1,D_2) produces C_2, then C_3,...,C_m=empty",
+      "vote": "ACCEPT_CASCADE_PROPOSITION"
+    },
+    {
+      "role": "adversarial lower-bound lead",
+      "background": "counterexample-first lower bounds, integrality gaps, hard-vs-easy target separation",
+      "evidence_inspected": [
+        "C010/C021 warnings inherited in context",
+        "C024/C025 failure modes"
+      ],
+      "assessment": "A generic cascade example is high information because it can kill a whole class of naive potentials at negligible cost.",
+      "strongest_objection": "A generic discrete-space construction may not be realizable by row/column traces of a graph. It cannot block graph-specific closure charges.",
+      "recommended_falsifier": "scope the proposition to source-compatible finite discrete spaces; then separately ask whether graph geometry suppresses the cascade",
+      "vote": "ACCEPT_WITH_STRICT_SCOPE"
+    },
+    {
+      "role": "formal-methods lead",
+      "background": "statement binding, executable finite checks, chronology and assurance",
+      "evidence_inspected": [
+        "RAKL AGENTS math chronology",
+        "current v3 protected-attestation surfaces",
+        "context and memory freeze commits"
+      ],
+      "assessment": "Chronology is clean so far: child context then memory were committed before any C026 candidate. A candidate may be proposed only after this review and a hash-chained NEXT_STEP_PROPOSED trace are frozen.",
+      "strongest_objection": "Do not label a finite program as proof of an all-m proposition. The general family needs a symbolic derivation; code is regression/calibration only.",
+      "recommended_falsifier": "state the construction parametrically and test small m as an implementation check",
+      "vote": "PASS_CHRONOLOGY_PENDING_TRACE"
+    },
+    {
+      "role": "novelty/research-value lead",
+      "background": "complexity-theory prior-art triage and method-transfer assessment",
+      "evidence_inspected": [
+        "primary 2025 cover-problem paper",
+        "parent context analogues",
+        "current PNP memory"
+      ],
+      "assessment": "The forward-chaining observation is elementary and should not be sold as a new mathematical theorem. Its value is route pruning inside this exact research programme.",
+      "strongest_objection": "Calling Horn-cascade sensitivity novel would overclaim known closure-system behavior.",
+      "recommended_falsifier": "make no novelty claim; record only a source-bound application-specific obstruction to raw closure-growth metrics",
+      "vote": "NO_NOVELTY_CLAIM"
+    },
+    {
+      "role": "research-metrology/control lead",
+      "background": "agentic research telemetry, causal attribution, fail-closed research-process evaluation",
+      "evidence_inspected": [
+        "v3 TaskEpisode/experience/saturation architecture",
+        "Paper-5 metrology requirements in automation prompt"
+      ],
+      "assessment": "The cycle should count one retained obstruction/representation relation if the cascade is proved, but must not count commits/files as learning.",
+      "strongest_objection": "The pre/post v3 state cannot be faithfully materialized from repository artifacts in this connector-only run, so state fingerprints must be CANNOT_MEASURE rather than guessed.",
+      "recommended_falsifier": "record exact Git subjects, retrieved IDs, process surfaces, and novelty axes; leave token/time/state fields unavailable when not observable",
+      "vote": "PASS_WITH_MISSINGNESS_EXPLICIT"
+    }
+  ],
+  "disagreements": [
+    "The closure-systems lead views the cascade proposition as structurally generic; the adversarial lead insists that its negative authority stop at generic finite discrete spaces until a graph-generator realization is shown.",
+    "The complexity lead considers source-native closure the right representation; the adversarial lead stresses that representation adequacy and lower-bound accounting remain separate."
+  ],
+  "strongest_shared_objection": "A rich exact closure state can still be useless for lower bounds if one legal pair has unbounded marginal effect through dormant-rule cascades.",
+  "recommendation": {
+    "next_action": "Freeze NEXT_STEP_PROPOSED, then propose C026 as a narrowly scoped cascade obstruction. Prove a parametric generic discrete-space construction and run small-m regression. If it passes, reject raw closure cardinality, raw derived-intersection count, and raw propagation depth as universally O(1)-per-fusion potentials. Do not reject source-native closure itself; reopen accounting/quotient search and separately test graph-specific suppression.",
+    "candidate_scope": "NEGATIVE_ROUTE_PRUNING_ONLY",
+    "candidate_generation_after_trace_freeze": true,
+    "root_authority": "NONE"
+  },
+  "frozen_at": "2026-08-11T12:05:00+00:00",
+  "artifact_hash": "sha256:f0f2d74682dd62b28a6df54ec40a4af6aa71fe6165e624ea8c14f434ff7f288f"
+}
