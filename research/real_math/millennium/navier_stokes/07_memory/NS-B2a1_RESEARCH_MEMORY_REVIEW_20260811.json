@@ -1,0 +1,87 @@
+{
+  "target_atom_id": "NS-B2a1",
+  "target_context_hash": "sha256:46107a3521175794ea4dadece4101723a57bf6af8dc9e8680a3c47d31c70902e",
+  "bound_repository_commit": "50c703f3f0c518bba1b48fb17e51b03d53ed02c3",
+  "fibre_snapshot_hash": "sha256:2478f3bfd56a80d3d3ef047512f31d690ffc972e9536a3ed9a7c56d3f2bdf457",
+  "fibre_contents_actually_consulted": [
+    "research/real_math/millennium/navier_stokes/00_problem_contract/canonical_statement.md@blob:89d19098094e60880bf016525a809b0ae2ebf03b",
+    "research/real_math/millennium/navier_stokes/02_problem_dag/open_obligations.yaml@blob:6288680116c39e18771443302a74caa201c00648",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1_CONTEXT_FIBER_20260811.json@blob:ed8f9f169a0771bb2cd7a337a6347ab2db330763",
+    "research/real_math/millennium/cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json@blob:12a77d4e9cf3b5704432ec4d9b6c84c5ad7fd967",
+    "issue:65@observed-2026-08-11T12:07Z",
+    "pending-pr:72@head:33b01df7ca7dd2d3a23ddf7cb92813efeeddeb87",
+    "pending-pr:71@head:260f971b72a1caa9d186fa00e29b0878b5b6a01c",
+    "arxiv:2606.29468v1@2026-06-28"
+  ],
+  "tool_query": {
+    "status": "MATCHES_FOUND",
+    "selected_tool_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+    "selected_tool_authority": "VERIFIED_LOCAL",
+    "retrieved_rejected": [
+      {"id": "pending PR72 absolute-cutoff-flux discriminator", "reason": "use as proposal-only warning; it prunes large-scale absolute decay but does not test prelimit-to-limit tail inheritance"},
+      {"id": "pending PR71 XM005 moving-core occupancy calibration", "reason": "use as proposal-only hostile near-miss; it shows centered local smallness can coexist with escape but does not formalize the quantifier-order inheritance gap"},
+      {"id": "Navier-Stokes backward uniqueness", "reason": "limit equation in Seregin Theorem 3.1 is Euler, so parabolic NS backward uniqueness is not an admissible immediate closure"}
+    ]
+  },
+  "failure_query": {
+    "status": "NO_CANONICAL_NS_B2_FAILURE_ON_BOUND_MAIN_PLUS_PENDING_WARNINGS",
+    "canonical_relevant_failure_ids": [],
+    "proposal_only_pending_failure_ids": ["F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY"],
+    "proposal_only_pending_warnings": ["XM005-MOVING-CORE-ESCAPE"],
+    "routing_effects": [
+      "do not repeat the O(1) scale-critical cutoff calculation",
+      "do not treat centered backward local smallness as global triviality",
+      "test the stronger bridge: whether local convergence can pass any tail condition without a uniform modulus"
+    ]
+  },
+  "tool_applicability_witness": {
+    "tool_id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+    "target_atom_id": "NS-B2a1",
+    "target_context_hash": "sha256:46107a3521175794ea4dadece4101723a57bf6af8dc9e8680a3c47d31c70902e",
+    "matched_preconditions": [
+      "surrogate certificate is explicit: fixed-Q(a) local convergence and local bounds",
+      "root bridge is explicit: prelimit tail/no-incoming control -> Euler-limit tail/rigidity",
+      "target DifferenceWitness is frozen in the context fibre"
+    ],
+    "changed_structural_coordinates": ["vanishing-viscosity limit", "two limit parameters k and R", "noncompact translations", "pressure normalization"],
+    "known_failure_ids_reviewed": ["F-XM001-POINTWISE-GAP-COLLAPSE"],
+    "target_validation_plan": [
+      "prove a divergence-free translated-packet compactness calibration",
+      "state the exact uniform-tightness quantifier needed to avoid it",
+      "compare that condition with the actual source convergence topology",
+      "keep the calibration outside PDE authority unless derived from Seregin's sequence"
+    ]
+  },
+  "candidate_method_families": [
+    "uniform annular/tail modulus from prelimit local-energy data",
+    "recentring/modulo-translation compactness",
+    "signed/telescoping Euler boundary flux",
+    "profile-decomposition/minimality route",
+    "Euler-specific Liouville theorem with explicitly source-inherited tail hypothesis"
+  ],
+  "selected_next_action": "Run the frozen translated divergence-free packet test against the inference from fixed-cylinder convergence to global tail inheritance. If it fails, register the quantifier-order obstruction and open a source-specific uniform-tail/recentering child rather than proposing an Euler rigidity theorem.",
+  "rakl_changed_action_relative_to_pre_memory_preference": {
+    "status": "YES_OBSERVABLE_AT_DECISION_RECORD_LEVEL",
+    "pre_memory_preference": "continue from issue #65 toward a candidate Euler no-incoming-flux/rigidity statement",
+    "post_memory_action": "first falsify the compactness handoff with a translated-packet quantifier-order test",
+    "cause_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT", "pending PR72 warning", "pending PR71 XM005 warning"]
+  },
+  "unresolved_warnings": [
+    "A translated packet is only a topology calibration, not an Euler or Navier-Stokes counterexample.",
+    "Uniform absolute tail tightness may be stronger than necessary; signed or recentered alternatives remain live.",
+    "Pressure tails require a consistent normalization and cannot be inferred from local pressure convergence alone.",
+    "Pending PR71/72 are not canonical main authority and are used only as proposal-level warnings."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/00_problem_contract/canonical_statement.md@blob:89d19098094e60880bf016525a809b0ae2ebf03b",
+    "research/real_math/millennium/navier_stokes/02_problem_dag/open_obligations.yaml@blob:6288680116c39e18771443302a74caa201c00648",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1_CONTEXT_FIBER_20260811.json@blob:ed8f9f169a0771bb2cd7a337a6347ab2db330763",
+    "research/real_math/millennium/cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json@blob:12a77d4e9cf3b5704432ec4d9b6c84c5ad7fd967",
+    "issue:65@observed-2026-08-11T12:07Z",
+    "pending-pr:72@head:33b01df7ca7dd2d3a23ddf7cb92813efeeddeb87",
+    "pending-pr:71@head:260f971b72a1caa9d186fa00e29b0878b5b6a01c",
+    "arxiv:2606.29468v1@2026-06-28"
+  ],
+  "frozen_at": "2026-08-11T12:10:00+00:00",
+  "artifact_hash": "sha256:baa4a039e9a51b50463cc9a0dc83cdbc5b7a1346f1ae7313face94226034f25c"
+}
