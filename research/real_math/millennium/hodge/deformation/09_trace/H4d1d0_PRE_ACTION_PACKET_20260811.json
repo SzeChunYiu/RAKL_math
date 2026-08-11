@@ -1,0 +1,244 @@
+{
+  "schema_version": "h4d1d0-pre-action-packet-v1",
+  "authority": "PROPOSAL_SHADOW_ONLY / NO_ROOT_AUTHORITY",
+  "framework_current_main_sha": "812e9cf18345ef430f0a4cc3ff78f93d7f18ed22",
+  "application_base_sha": "dc83b72201cb58844b2bdc76117e4dcb9190211d",
+  "context_fiber": {
+    "atom_id": "H4d1d0",
+    "parent_obstruction_id": "H4d1d-REDUCED-BRANCH-PROPER-WITNESS-DOMINATION@RAKL_math_PR119_PENDING",
+    "parent_authority": "PENDING_PROPOSAL_SHADOW_ONLY",
+    "object_context": "Let f:X→S be a smooth projective family of complex varieties, let T be one irreducible reduced algebraic Hodge-locus branch, and let α be a flat rational (p,p) class with one algebraic central witness z0. Audit whether the pending H4d1d target 'some exact-category proper witness-incidence component dominates T' is a genuine contraction of pointwise variational algebraicity, or merely an equivalent class-level reformulation under standard countable parameterization of rational cycles. Keep selected-witness persistence separate from class-level component switching.",
+    "structural_coordinates": [
+      "exact root scope remains rational Hodge classes on smooth projective complex varieties; this atom assumes one algebraic central witness and only audits propagation along one branch",
+      "Cattani-Deligne-Kaplan supplies algebraicity of the Hodge locus for a fixed integral Hodge class; work on one irreducible reduced algebraic component/branch",
+      "after clearing a denominator, a rational cycle is a finite signed integral combination of irreducible subvarieties; witness combinatorial types are countable (denominator, finite coefficient tuple, Hilbert polynomials)",
+      "for projective X_T→T, each fixed-Hilbert-polynomial relative Hilbert space is proper over T; finite products remain proper and their images are closed",
+      "on a connected witness component after a local-system trivialization, the fibrewise cohomology class of a flat algebraic family is locally constant; exact α-matching must be treated as an explicit assumption/typed subfamily, not inferred from arbitrary Hilbert membership",
+      "over uncountable C, an irreducible finite-type variety cannot be a countable union of proper Zariski-closed subsets",
+      "class-level pointwise coverage may switch witness components; existence of some dominating component does not imply that the component containing the selected central witness z0 dominates",
+      "proper-image domination is a branch-level statement and does not solve root initial algebraicity, higher-Artin lifting, algebraization beyond an already algebraic parameter family, monodromy/global continuation, or singular degeneration"
+    ],
+    "equivalent_formulations": [
+      "class-level audit: compare ∀t∈T(C) ∃ exact signed-rational cycle Z_t with cl(Z_t)=α_t against existence of one exact witness-type/component W→T with image T",
+      "selected-witness audit: compare domination by some witness component against domination by a component containing the fixed central witness z0",
+      "root-like test: expand the proposed bridge into its quantifiers and determine whether the bridge follows only after assuming the same pointwise algebraicity obligation it was meant to prove"
+    ],
+    "solved_analogues": [
+      "Lefschetz (1,1) as a solved pointwise Hodge-algebraicity control",
+      "Dan and Kloosterman complete-intersection/Noether-Lefschetz families where explicit flag-Hilbert geometry genuinely realizes a Hodge locus in special source classes"
+    ],
+    "near_solved_analogues": [
+      "pending H4d1c reduced-branch normalization (PR119), which already warns that selected-witness versus class-level component switching must be typed",
+      "HM1a source-bearing decomposition audit, whose failure F-HM1a-OPEN-ROOT-LIKE-PIECE records that a formally exact bridge is noncontracting when its critical source-surjectivity obligation is the original Hodge image problem in renamed form"
+    ],
+    "method_transfers": [
+      {
+        "source_context": "HM1a source-bearing decomposition route (pending HM1b/PR42 memory)",
+        "method": "expand a bridge into the exact source/existence obligation and reject it as progress if a critical obligation is root-like rather than independently discharged",
+        "shared_structure": [
+          "a mathematically valid intermediate representation is proposed as progress",
+          "success depends on a coverage/surjectivity statement",
+          "the coverage statement may be equivalent in role to the original algebraicity target"
+        ],
+        "required_assumptions": [
+          "only search-priority transfer; no theorem authority is imported from the pending HM1a memory artifact"
+        ],
+        "disanalogies": [
+          "HM1a concerns correspondence/filtration source pieces; H4d1d0 concerns relative cycle parameter spaces and proper images",
+          "H4d1d0 has an additional uncountability/countable-parameterization mechanism unavailable in the HM1a decomposition"
+        ],
+        "difference_witness": "Target-specific falsifier is the countable proper-image cover: if branch-wide pointwise algebraicity implies one image equals T, then 'some component dominates' is not independently weaker.",
+        "repair_question": "Can a source-specific theorem force dominance of a preselected or bounded-complexity component from central data without assuming pointwise algebraicity on all of T?"
+      },
+      {
+        "source_context": "Dan/Kloosterman flag-Hilbert variational-Hodge controls",
+        "method": "use an actual proper incidence parameter space plus source-specific geometry to prove dominance rather than infer it from target coverage",
+        "shared_structure": [
+          "cycle witnesses live in proper moduli over a projective deformation base",
+          "dominance of an incidence image implies fibrewise algebraicity"
+        ],
+        "required_assumptions": [
+          "special hypersurface/complete-intersection geometry and the exact source tangent/dimension identities"
+        ],
+        "disanalogies": [
+          "no general dimension/tangent theorem is known for arbitrary rational cycles",
+          "special-family success does not provide root-wide initial algebraicity"
+        ],
+        "repair_question": "Which source-specific invariant selects a component from central data and forces its image to contain a dense open of T?"
+      }
+    ],
+    "explicit_disanalogies": [
+      "the countable-cover implication needs an algebraic irreducible reduced branch over uncountable C and a countable family of proper exact-class witness spaces; it is not a statement about arbitrary analytic germs without algebraic control",
+      "the argument proves existence of some dominating component, not persistence of z0 or any prescribed component",
+      "a component-dominance equivalence is a representation diagnosis, not a Hodge theorem",
+      "global monodromy, singular degeneration, coefficient transport and initial algebraicity remain separate interfaces"
+    ],
+    "cross_domain_analogies": [],
+    "analogy_scan_status": "NO_SAFE_CROSS_DOMAIN_BRIDGE_RETAINED",
+    "source_anchors": [
+      "https://arxiv.org/abs/alg-geom/9402009",
+      "https://arxiv.org/abs/1404.7519",
+      "https://arxiv.org/abs/1407.8491",
+      "https://arxiv.org/abs/2104.14845",
+      "https://stacks.math.columbia.edu/tag/0DPH",
+      "https://stacks.math.columbia.edu/tag/01WC",
+      "SzeChunYiu/RAKL_math#119",
+      "SzeChunYiu/RAKL_math#42",
+      "research/real_math/millennium/hodge/deformation/07_memory/H4d1a_FAILURE_EXPERIENCE_DELTA_20260811.json"
+    ],
+    "pre_gate_inherited_action_preference": "SEARCH_FOR_GENERAL_PROPER_WITNESS_COMPONENT_DOMINATION_THEOREM",
+    "frozen_at": "2026-08-11T18:04:00+00:00",
+    "first_candidate_at": null,
+    "packet_hash": "sha256:2f7f9cc25c81d0cf923bccbe42c53e231d7ba55a4f97b328dc9c86610febf154"
+  },
+  "problem_fibre_snapshot": {
+    "atom_id": "H4d1d0",
+    "context_hash": "sha256:2f7f9cc25c81d0cf923bccbe42c53e231d7ba55a4f97b328dc9c86610febf154",
+    "knowledge_items": [
+      {"id": "SRC-CDK-ALG-GEOM-9402009", "authority": "PRIMARY_SOURCE", "role": "Hodge locus algebraicity"},
+      {"id": "SRC-DAN-1404.7519", "authority": "PRIMARY_SOURCE", "role": "special VHC and nonreduced Noether-Lefschetz control"},
+      {"id": "SRC-DAN-1407.8491", "authority": "PRIMARY_SOURCE", "role": "nonreduced Hodge-locus scheme-structure control"},
+      {"id": "SRC-KLOOSTERMAN-2104.14845", "authority": "PRIMARY_SOURCE", "role": "special flag-Hilbert/incidence positive control"},
+      {"id": "STACKS-0DPH", "authority": "AUTHORITATIVE_REFERENCE", "role": "fixed-Hilbert-polynomial Hilbert space proper over base"},
+      {"id": "STACKS-01WC", "authority": "AUTHORITATIVE_REFERENCE", "role": "projective/local projective implies proper"}
+    ],
+    "episodes": [],
+    "failures": [
+      {"id": "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO", "authority": "CANONICAL_CURRENT_MAIN", "selected": true},
+      {"id": "F-HM1a-OPEN-ROOT-LIKE-PIECE", "authority": "PENDING_NONCANONICAL_PR42", "selected": true},
+      {"id": "F-H4D1C-FULL-SCHEME-TANGENT-OVERREACH", "authority": "PENDING_NONCANONICAL_PR119", "selected": false}
+    ],
+    "pending_parent": [
+      {"id": "H4d1d-REDUCED-BRANCH-PROPER-WITNESS-DOMINATION", "authority": "PENDING_NONCANONICAL_PR119"}
+    ],
+    "tools": [],
+    "motifs": [],
+    "warnings": [
+      "no certified complete retrieval-universe coverage receipt",
+      "pending PR119 and PR42 artifacts may guide search only and bear no canonical authority",
+      "current RAKL_math framework pin fe47a12 is stale relative to current RAKL main 812e9cf; current semantic framework was read directly",
+      "exact class-constancy subfamily must be typed; generic Hilbert membership is not enough",
+      "selected central witness and class-level witness existence are different interfaces"
+    ],
+    "snapshot_hash": "sha256:1bcb683112fa9827e4ee9c504e016c8f91908ca4d22014fe29cb850e4dfeb30d"
+  },
+  "research_memory_review": {
+    "target_atom_id": "H4d1d0",
+    "target_context_hash": "sha256:2f7f9cc25c81d0cf923bccbe42c53e231d7ba55a4f97b328dc9c86610febf154",
+    "fibre_snapshot_hash": "sha256:1bcb683112fa9827e4ee9c504e016c8f91908ca4d22014fe29cb850e4dfeb30d",
+    "tool_query_status": "NO_RELEVANT_PROMOTED_TOOL_MATCH",
+    "failure_query_status": "MATCHES_FOUND",
+    "candidate_method_families": [
+      "proper relative Hilbert/Chow witness domination",
+      "root-like bridge noncontraction audit",
+      "selected-component persistence/connectivity",
+      "flag-Hilbert tangent/dimension special-family transfer",
+      "degeneration/specialization and monodromy transport"
+    ],
+    "retrieved_tool_ids": [],
+    "retrieved_failure_or_lesson_ids": [
+      "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO",
+      "F-HM1a-OPEN-ROOT-LIKE-PIECE",
+      "F-H4D1C-FULL-SCHEME-TANGENT-OVERREACH"
+    ],
+    "selected_ids": [
+      "F-HM1a-OPEN-ROOT-LIKE-PIECE",
+      "H4d1d-REDUCED-BRANCH-PROPER-WITNESS-DOMINATION@PR119_PENDING",
+      "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO"
+    ],
+    "rejected_or_deferred": [
+      {"id": "F-H4D1C-FULL-SCHEME-TANGENT-OVERREACH", "reason": "retrieved as representation warning but not selected as the active discriminator; H4d1d0 already works on T_red"},
+      {"id": "KLOOSTERMAN-GENERAL-DOMINATION-TRANSFER", "reason": "rejected as literal transfer: complete-intersection tangent/dimension identities are source-specific"},
+      {"id": "DETECTOR_VANISHING_REPAIR", "reason": "rejected by canonical H4d1a same-detector no-go and does not address class-level coverage"}
+    ],
+    "difference_witness": {
+      "source_experience_id": "F-HM1a-OPEN-ROOT-LIKE-PIECE",
+      "source_problem": "correspondence/filtration decomposition whose source-surjectivity piece remains Hodge-root-like",
+      "target_problem": "proper witness-component domination of an irreducible reduced Hodge branch",
+      "common_abstraction": "an intermediate bridge is noncontracting when its critical coverage condition is equivalent in role to the original algebraicity obligation",
+      "material_disanalogies": [
+        "target uses countably many proper cycle parameter spaces and uncountability of C",
+        "source uses decomposition/assembly of Hodge pieces rather than moduli images"
+      ],
+      "applicability": "SEARCH_PRIORITY_ONLY",
+      "cheapest_repeat_failure_test": "derive whether branch-wide pointwise algebraicity plus standard witness parameterization already forces one proper component to dominate T"
+    },
+    "missed_prior_experience": {"value": "CANNOT_MEASURE", "reason": "current v3 pre-action receipts do not certify retrieval-universe completeness and no Hodge-lane coverage receipt exists"},
+    "observable_pre_memory_preference": "SEARCH_FOR_GENERAL_PROPER_WITNESS_COMPONENT_DOMINATION_THEOREM",
+    "observable_post_memory_preference": "COUNTEREXAMPLE_FIRST_ROOTLIKE_EQUIVALENCE_AND_SELECTED_COMPONENT_AUDIT",
+    "preference_changed": true,
+    "causal_attribution": "CANNOT_MEASURE: no matched MODEL_ONLY/RAKL_RESET/RAKL_SHAM_MEMORY/RAKL_LEARNING trial",
+    "evidence_pointers": [
+      "current-main:F-H4D1A-SAME-DETECTOR-BRANCH-NOGO",
+      "PR42:F-HM1a-OPEN-ROOT-LIKE-PIECE",
+      "PR119:H4d1d-REDUCED-BRANCH-PROPER-WITNESS-DOMINATION",
+      "PR119:H4d1c case-study component-switching warning"
+    ],
+    "artifact_hash": "sha256:55b293d1fccdf485d1167ee46c0c012abb99e836d256882897f802d5ec9e80b2"
+  },
+  "expert_context_review": {
+    "atom_id": "H4d1d0",
+    "context_hash": "sha256:2f7f9cc25c81d0cf923bccbe42c53e231d7ba55a4f97b328dc9c86610febf154",
+    "roles": [
+      {"role": "VHS/Hodge-locus lead", "background": "variations of Hodge structure, Hodge loci, monodromy", "finding": "Use CDK to type T as an algebraic Hodge component/reduced branch; do not identify algebraic support with nilpotent scheme structure. Flat α and local-system trivialization are explicit."},
+      {"role": "algebraic-cycle moduli lead", "background": "Hilbert/Chow spaces, cycle classes, rational coefficients", "finding": "After denominator clearing, rational signed cycles have countably many finite coefficient/Hilbert-polynomial types. Fixed-P relative Hilbert spaces are proper over T. Exact α-class matching must be bound componentwise."},
+      {"role": "deformation/obstruction lead", "background": "deformation functors, incidence maps, semiregularity", "finding": "Some dominating witness component is a class-level statement. It does not imply deformation of the selected central witness z0; that requires a component-through-z0 or replacement theorem."},
+      {"role": "properness/countability lead", "background": "algebraic geometry, proper maps, Noether normalization", "finding": "If countably many proper closed images cover irreducible T(C) over uncountable C, one image equals T. This is the lowest-cost discriminator for whether the pending domination target is root-like."},
+      {"role": "adversarial falsification lead", "background": "counterexamples, moduli boundary cases", "finding": "Plant a two-component incidence W_dom ⊔ W_vert→A1 with W_dom=A1 and W_vert={0}; choose z0 in W_vert. Pointwise coverage and some-component domination hold while the selected central component does not dominate."},
+      {"role": "formal/metrology and gluing lead", "background": "proof assurance, provenance, RAKL v3 telemetry", "finding": "PR119/PR42 are noncanonical retrievals and cannot bear authority. Separate local representation result from local-to-global failures: root initial algebraicity, monodromy, degeneration, and global continuation remain open."}
+    ],
+    "synthesis": {
+      "recommendation": "Freeze and execute a source-bound root-like-equivalence audit before searching for a general domination theorem.",
+      "disagreement": "None on running the falsifier; caution remains over exact class-constancy typing and whether to use Hilbert tuples or Chow spaces.",
+      "resolution": "Use finite tuples of relative Hilbert components with integer coefficients as a sufficient countable parameterization, and state class constancy as an explicit local-system condition rather than silently assuming it.",
+      "independent_review": false
+    },
+    "artifact_hash": "sha256:6828f19efa4931c06591bf2575eb18873af222bc741a7730aa483c7932bcd194"
+  },
+  "pre_candidate_trace": {
+    "atom_id": "H4d1d0",
+    "events": [
+      {"event_id":"H4d1d0-E01","event_type":"ATOMIZED","atom_id":"H4d1d0","timestamp":"2026-08-11T18:05:00+00:00","current_public_state":"OPEN_NO_SOLUTION_CERTIFICATE / PROPOSAL_SHADOW_RESEARCH_CONTROL","action":"atomize pending H4d1d into class-level domination noncontraction audit versus selected-central-component persistence","alternatives_considered":["direct theorem search for general domination","return to detector faithfulness","jump to higher-Artin lifting"],"decision_basis":"smallest high-information obstruction is whether the proposed bridge reduces the target at all","evidence_pointers":["sha256:2f7f9cc25c81d0cf923bccbe42c53e231d7ba55a4f97b328dc9c86610febf154","SzeChunYiu/RAKL_math#6"],"output":"H4d1d0 active; class-level and selected-witness interfaces separated","uncertainties":["parent H4d1d is pending PR119, not canonical main"],"residuals":["branch-wide pointwise algebraicity","selected-component transport","root initial algebraicity"],"proposed_next_action":"continue pre-candidate gate","previous_event_hash":null,"artifact_hash":"sha256:a71cfd6511115f116461221a331eeec87191ed8bfe29c5f56887d7f05c57cbbb"},
+      {"event_id":"H4d1d0-E02","event_type":"CONTEXT_FROZEN","atom_id":"H4d1d0","timestamp":"2026-08-11T18:06:00+00:00","current_public_state":"OPEN_NO_SOLUTION_CERTIFICATE / PROPOSAL_SHADOW_RESEARCH_CONTROL","action":"freeze exact rational/smooth-projective/reduced-branch context","alternatives_considered":["reuse PR119 context without new binding"],"decision_basis":"current-main child needs exact own context and authority boundary","evidence_pointers":["sha256:2f7f9cc25c81d0cf923bccbe42c53e231d7ba55a4f97b328dc9c86610febf154","SzeChunYiu/RAKL_math#6"],"output":"context_packet sha256:2f7f9cc25c81d0cf923bccbe42c53e231d7ba55a4f97b328dc9c86610febf154","uncertainties":["exact class-matching subfamily requires explicit local-system constancy condition"],"residuals":[],"proposed_next_action":"continue pre-candidate gate","previous_event_hash":"sha256:a71cfd6511115f116461221a331eeec87191ed8bfe29c5f56887d7f05c57cbbb","artifact_hash":"sha256:5438478dedc8c840dc5e2ce637926564c1aef6e367e42067978245e94cd9bb6d"},
+      {"event_id":"H4d1d0-E03","event_type":"ANALOGY_SCAN","atom_id":"H4d1d0","timestamp":"2026-08-11T18:07:00+00:00","current_public_state":"OPEN_NO_SOLUTION_CERTIFICATE / PROPOSAL_SHADOW_RESEARCH_CONTROL","action":"run structural analogy scan","alternatives_considered":["retain software coverage analogy","retain control/Jacobian analogy"],"decision_basis":"no cross-domain analogy preserves uncountable algebraic-cover and cycle-class semantics sufficiently to influence action","evidence_pointers":["sha256:2f7f9cc25c81d0cf923bccbe42c53e231d7ba55a4f97b328dc9c86610febf154","SzeChunYiu/RAKL_math#6"],"output":"NO_SAFE_CROSS_DOMAIN_BRIDGE_RETAINED","uncertainties":[],"residuals":[],"proposed_next_action":"continue pre-candidate gate","previous_event_hash":"sha256:5438478dedc8c840dc5e2ce637926564c1aef6e367e42067978245e94cd9bb6d","artifact_hash":"sha256:e7cadf6a99129475717e0119afc89d50f2ba571d82647874988db28e5930bcca"},
+      {"event_id":"H4d1d0-E04","event_type":"METHOD_TRANSFER_REVIEW","atom_id":"H4d1d0","timestamp":"2026-08-11T18:08:00+00:00","current_public_state":"OPEN_NO_SOLUTION_CERTIFICATE / PROPOSAL_SHADOW_RESEARCH_CONTROL","action":"review HM1a root-like-piece and Dan/Kloosterman method transfers with DifferenceWitness","alternatives_considered":["literal Kloosterman transfer"],"decision_basis":"HM1a supplies the process-level noncontraction motif; Kloosterman is only a special-family positive control","evidence_pointers":["sha256:2f7f9cc25c81d0cf923bccbe42c53e231d7ba55a4f97b328dc9c86610febf154","SzeChunYiu/RAKL_math#6"],"output":"root-like bridge falsifier selected; literal special-family transfer rejected","uncertainties":["HM1a source artifact is pending/noncanonical and guides search only"],"residuals":[],"proposed_next_action":"continue pre-candidate gate","previous_event_hash":"sha256:e7cadf6a99129475717e0119afc89d50f2ba571d82647874988db28e5930bcca","artifact_hash":"sha256:659bdf72bb9d43daff5df963cddef13e04427e3ec4d4d3578618aaa3444cbe11"},
+      {"event_id":"H4d1d0-E05","event_type":"EXPERT_CONTEXT_REVIEW","atom_id":"H4d1d0","timestamp":"2026-08-11T18:09:00+00:00","current_public_state":"OPEN_NO_SOLUTION_CERTIFICATE / PROPOSAL_SHADOW_RESEARCH_CONTROL","action":"six-role same-context expert review","alternatives_considered":["proceed directly to proof sketch"],"decision_basis":"cycle-moduli, VHS, deformation, adversarial, properness, and formal/gluing lenses agree on the cheap discriminator","evidence_pointers":["sha256:2f7f9cc25c81d0cf923bccbe42c53e231d7ba55a4f97b328dc9c86610febf154","SzeChunYiu/RAKL_math#6"],"output":"expert_cell sha256:6828f19efa4931c06591bf2575eb18873af222bc741a7730aa483c7932bcd194","uncertainties":["same-context roles are not independent mathematical review"],"residuals":[],"proposed_next_action":"continue pre-candidate gate","previous_event_hash":"sha256:659bdf72bb9d43daff5df963cddef13e04427e3ec4d4d3578618aaa3444cbe11","artifact_hash":"sha256:72ea5383615978c30864b8515c419e49d7f53eef6e92bca715f2ac5b7400170e"},
+      {"event_id":"H4d1d0-E06","event_type":"EXPERIENCE_MEMORY_REVIEW","atom_id":"H4d1d0","timestamp":"2026-08-11T18:10:00+00:00","current_public_state":"OPEN_NO_SOLUTION_CERTIFICATE / PROPOSAL_SHADOW_RESEARCH_CONTROL","action":"query success-tool and failure memory; bind selected/rejected experience","alternatives_considered":["ignore pending cross-Hodge memory"],"decision_basis":"canonical H4d1a and pending HM1a/H4d1c memories materially change routing from theorem invention to root-like audit","evidence_pointers":["sha256:2f7f9cc25c81d0cf923bccbe42c53e231d7ba55a4f97b328dc9c86610febf154","sha256:55b293d1fccdf485d1167ee46c0c012abb99e836d256882897f802d5ec9e80b2"],"output":"memory_review sha256:55b293d1fccdf485d1167ee46c0c012abb99e836d256882897f802d5ec9e80b2","uncertainties":["retrieval universe completeness CANNOT_MEASURE"],"residuals":[],"proposed_next_action":"continue pre-candidate gate","previous_event_hash":"sha256:72ea5383615978c30864b8515c419e49d7f53eef6e92bca715f2ac5b7400170e","artifact_hash":"sha256:0b10d9f64e5717b0ab836de94c22d7efb4e8e423de7ae69c52e576ff2defb0f1"},
+      {"event_id":"H4d1d0-E07","event_type":"NEXT_STEP_PROPOSED","atom_id":"H4d1d0","timestamp":"2026-08-11T18:11:00+00:00","current_public_state":"OPEN_NO_SOLUTION_CERTIFICATE / PROPOSAL_SHADOW_RESEARCH_CONTROL","action":"predeclare source-bound discriminator: determine whether countable proper witness parameterization makes some-component domination equivalent to pointwise branch algebraicity, and separately test selected-z0 component preservation","alternatives_considered":["search a universal domination theorem","higher-order obstruction search"],"decision_basis":"counterexample-first, low-cost, high-separation test can eliminate a noncontracting route before theorem invention","evidence_pointers":["sha256:2f7f9cc25c81d0cf923bccbe42c53e231d7ba55a4f97b328dc9c86610febf154","sha256:55b293d1fccdf485d1167ee46c0c012abb99e836d256882897f802d5ec9e80b2"],"output":"next action frozen; no root theorem candidate proposed","uncertainties":["the audit may yield only a conditional equivalence if class constancy cannot be source-bound"],"residuals":["if equivalence holds, open a genuinely contracting selected/bounded-complexity source mechanism"],"proposed_next_action":"execute the predeclared root-like equivalence/selected-component falsifier","previous_event_hash":"sha256:0b10d9f64e5717b0ab836de94c22d7efb4e8e423de7ae69c52e576ff2defb0f1","artifact_hash":"sha256:06fa106c6d2f883fdd3db43ec9815743d2149feb5531520a5990b7fad8de549d"}
+    ],
+    "final_event_hash": "sha256:06fa106c6d2f883fdd3db43ec9815743d2149feb5531520a5990b7fad8de549d",
+    "authority": "STRICT_PRE_ACTION_RESEARCH_CONTROL_ONLY; NO_CANDIDATE_TRUTH_AUTHORITY",
+    "artifact_hash": "sha256:9cc83f9989e04f1443b3e269109d6cd7319c3091cc3a789baf694ace6e5252a2"
+  },
+  "pre_action_fibre_receipt": {
+    "schema_version": "pre-action-fibre-receipt-v1",
+    "receipt_id": "H4d1d0-PAFR-20260811-01",
+    "framework_repository": "SzeChunYiu/RAKL",
+    "framework_commit": "812e9cf18345ef430f0a4cc3ff78f93d7f18ed22",
+    "application_repository": "SzeChunYiu/RAKL_math",
+    "application_commit": "dc83b72201cb58844b2bdc76117e4dcb9190211d",
+    "task_id": "HODGE-ROOT-6",
+    "atom_id": "H4d1d0",
+    "context_hash": "sha256:2f7f9cc25c81d0cf923bccbe42c53e231d7ba55a4f97b328dc9c86610febf154",
+    "fibre_snapshot_hash": "sha256:1bcb683112fa9827e4ee9c504e016c8f91908ca4d22014fe29cb850e4dfeb30d",
+    "operator_ids": ["OP-H4D1D0-ROOTLIKE-COVER-EQUIVALENCE-AUDIT", "OP-H4D1D0-SELECTED-COMPONENT-ADVERSARIAL-TEST"],
+    "selected_retrievals": [
+      {"retrieval_id":"CURRENT_MAIN:F-H4D1A-SAME-DETECTOR-BRANCH-NOGO","authority":"CANONICAL","payload_hash":"129da81c98211cc00415c6673ef2a1a5aef6c5b26eb7a7e53867b4929408beac"},
+      {"retrieval_id":"PR42:F-HM1a-OPEN-ROOT-LIKE-PIECE","authority":"NONCANONICAL","payload_hash":"d2cf73affe2fca201b22d8d1f77025d7a407bb059ed06ed3da50531122b1c3ad"},
+      {"retrieval_id":"PR119:H4d1d-REDUCED-BRANCH-PROPER-WITNESS-DOMINATION","authority":"PENDING","payload_hash":"5547e7a7313505ce905c58f0f1fda503f1fd8f19ffc5baef0f27a3a21e98a3af"},
+      {"retrieval_id":"SRC:CDK-ALG-GEOM-9402009","authority":"CANONICAL","payload_hash":"b6dc7b1540a9d7a0e27126d534ff36988545420bded2da22b3e25b1f091fce36"},
+      {"retrieval_id":"REF:STACKS-0DPH","authority":"CANONICAL","payload_hash":"b2371d02157357836818d3a75d65a58405597789eedbc17df83c4e66ad111335"}
+    ],
+    "rejected_retrievals": [
+      {"retrieval_id":"PR119:F-H4D1C-FULL-SCHEME-TANGENT-OVERREACH","rejection_reason":"already normalized to reduced branch; not the active discriminator"},
+      {"retrieval_id":"KLOOSTERMAN-GENERAL-DOMINATION-TRANSFER","rejection_reason":"source-specific complete-intersection tangent/dimension identities do not transfer literally"}
+    ],
+    "predeclared_discriminator": "Under an irreducible reduced algebraic Hodge branch T over C and an explicit countable family of proper exact-class signed-cycle parameter spaces, test whether (A) branch-wide pointwise algebraicity implies one parameter component has closed image equal to T; then separately test whether that conclusion forces the component containing z0 to dominate. SUCCESS only if an independently weaker component-dominance mechanism is source-bound; PARTIAL_SUCCESS if some-component domination is shown root-like/equivalent while selected-z0 persistence remains strictly separate; FAILURE if the countable/proper cover implication is invalid under the frozen assumptions; BLOCKED if exact-class parameterization cannot be bound; UNKNOWN only if verification is inconclusive.",
+    "allowed_outcome_branches": ["SUCCESS", "PARTIAL_SUCCESS", "FAILURE", "BLOCKED", "UNKNOWN"],
+    "frozen_at_utc": "2026-08-11T18:12:00+00:00",
+    "sequence_index": 1,
+    "receipt_canonical_sha256": "734888108cce58b020ce31249cda538cfc727d732ac319319c892d7719d6542f"
+  },
+  "chronology_note": "This commit freezes the evaluation/discriminator before the source-bound native verification and before any result artifact. It does not claim a theorem candidate or independent review.",
+  "packet_hash": "sha256:ee189a6bf6f27d75babcef677143bbe815dfcbd056c952c1fcc0f575e4e101c5"
+}
