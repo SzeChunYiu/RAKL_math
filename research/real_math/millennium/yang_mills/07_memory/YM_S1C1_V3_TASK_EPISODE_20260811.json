@@ -1,0 +1,70 @@
+{
+  "episode_id": "EP-YM-S1C1-AF-BARE-COUPLING-AUDIT-20260811",
+  "task_id": "yang-mills-spectral-rakl-math",
+  "atom_id": "YM-S1c1",
+  "context_hash": "sha256:80a9a3b726ec85ed0e0f4bfe2d297d1d693e18c2e3c6f193a3f895c58901f56d",
+  "problem_signature": [
+    "4D SU(N) lattice Yang-Mills",
+    "reflection-positive RG",
+    "Wilson inverse bare coupling beta",
+    "asymptotic-freedom continuum trajectory",
+    "mass-gap transport G5-G7"
+  ],
+  "fibre_snapshot_hash": "sha256:27075442496d85c19f6bee4ac90345dd1c4b851e00f6aa70306a037fd6c1cb9c",
+  "operator_ids": [
+    "PRIMARY_SOURCE_COLLISION_AUDIT",
+    "ROOT_BRIDGE_STABILITY_AUDIT",
+    "CONTRASTIVE_DISCRIMINATION",
+    "GLUING_INTERFACE_AUDIT"
+  ],
+  "action_trace": [
+    "read current RAKL v3 framework and current RAKL_math Yang-Mills root/route state",
+    "retrieve newest primary source directly claiming reflection-positive continuum mass-gap and weak-coupling completion",
+    "separate fixed-cutoff gap claims from weak-coupling/continuum bridge claims",
+    "audit Theorem 5.4 bare-coupling tuning asymptotic against the source's own beta(a)->infinity requirement",
+    "search the full source for a moving-reference or equivalent repair",
+    "classify the result as a scoped gluing/trajectory obstruction and open a fresh prospective child"
+  ],
+  "observation_ids": [
+    "OBS-YM-S1C1-SOURCE-BETA-INVERSE-COUPLING",
+    "OBS-YM-S1C1-T5.4-FIXED-COMPACT-INTERVAL",
+    "OBS-YM-S1C1-DELTAK-RHOK",
+    "OBS-YM-S1C1-BETAK-NEAR-FIXED-BETASTAR",
+    "OBS-YM-S1C1-LATER-AF-CLAIM"
+  ],
+  "verification_ids": [
+    "VERIFY-SOURCE-INTERNAL-ASYMPTOTIC-CHECK",
+    "VERIFY-FULLTEXT-REPAIR-SEARCH",
+    "VERIFY-ROOT-CONTRACT-SCOPE",
+    "VERIFY-SIX-ROLE-SAME-CONTEXT-AUDIT"
+  ],
+  "outcome": "PARTIAL_SUCCESS",
+  "residual_signature": [
+    "Theorem 5.4 as stated yields beta_K -> fixed finite beta_* rather than beta(a)->infinity",
+    "moving-domain/uniform-estimate theorem for Wilson bare-coupling escape remains source-unbound",
+    "gap/clustering transport along a genuine asymptotically-free continuum trajectory remains open",
+    "root G5-G7 gluing interface remains incomplete"
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/00_problem_contract/ROOT_CONTRACT.md",
+    "RAKL_math PR #46",
+    "RAKL_math PR #62",
+    "RAKL_math issue #69",
+    "Mir Faizal and Arshid Shabir, arXiv:2606.19362v1, Theorem 5.4, Corollary 5.6, Theorem 5.7, Appendix A.9",
+    "Hao Shen, Rongchan Zhu, Xiangchan Zhu, arXiv:2204.12737",
+    "M. Luescher, Commun. Math. Phys. 54 (1977), 283-292",
+    "K. Osterwalder and E. Seiler, Ann. Phys. 110 (1978), 440-471"
+  ],
+  "timestamp": "2026-08-11T11:10:00+00:00",
+  "cost": 1.0,
+  "authority": {
+    "status": "PROPOSAL_SHADOW",
+    "allowed_effect": "SEARCH_PRIORITY_ONLY",
+    "grants_theorem_authority": false,
+    "grants_tool_authority": false,
+    "grants_gluing_authority": false,
+    "grants_framework_authority": false,
+    "chronology": "RETROSPECTIVE"
+  },
+  "artifact_hash": "sha256:df909deb100b5db65091ab764c31da0d1c026defe047c353c02810de92f857ba"
+}
