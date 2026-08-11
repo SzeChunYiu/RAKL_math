@@ -1,0 +1,56 @@
+{
+  "schema_version": "rakl-hash-chained-trace-shadow-v1",
+  "trace_id": "PNP-O9d12a2a1a1b1-SOURCE-INVENTORY-R1-TRACE-20260811",
+  "entries": [
+    {
+      "sequence": 1,
+      "kind": "FREEZE",
+      "summary": "Prospective R1 pre-action receipt committed before ancestry execution",
+      "artifact_sha256": "aab44dcb80dbca53adbb85cc42ff1c4a504b5e5d50e3809b7ad2aadb53faf560",
+      "prev_hash": "GENESIS",
+      "entry_hash": "c6dd9bd8d288bfb7a5a997b60b2fd0d5c81c91082e8694a966399cd033dcb169"
+    },
+    {
+      "sequence": 2,
+      "kind": "SOURCE_AUDIT",
+      "summary": "Bounded five-family source audit executed; fully inspected subfamily has no match; two full texts unavailable",
+      "artifact_sha256": "63c354b664b41dc7e5254d1ffa4b402ae4e363d5dca3b123425a5f115374e1f8",
+      "prev_hash": "c6dd9bd8d288bfb7a5a997b60b2fd0d5c81c91082e8694a966399cd033dcb169",
+      "entry_hash": "e0b1dfdf16866a9e25c9ce8006ddfba23e989f05e834928a80f6d3c0d31189f5"
+    },
+    {
+      "sequence": 3,
+      "kind": "EXPERT_REVIEW",
+      "summary": "Six-role same-context expert cell reviewed source transfer and outcome binding",
+      "artifact_sha256": "8d4002e31fd363095a3ef4a9e4b25fefbbdc44d965375a971def579de1268842",
+      "prev_hash": "e0b1dfdf16866a9e25c9ce8006ddfba23e989f05e834928a80f6d3c0d31189f5",
+      "entry_hash": "55a914331aa5c6122776c2e6ece03858c4377a0937965cea4ec9e2a526beb631"
+    },
+    {
+      "sequence": 4,
+      "kind": "DIAGNOSIS",
+      "summary": "Source-family completeness, not mathematics, diagnosed as blocker",
+      "artifact_sha256": "464a27848eb42c0dd778ea4365d018bdd1b846f2935bb4714334e6277d891ee1",
+      "prev_hash": "55a914331aa5c6122776c2e6ece03858c4377a0937965cea4ec9e2a526beb631",
+      "entry_hash": "9cb15aa914ca1c5e5c862830dd9f201b64ec57438e2362a982da7bfddd5d0695"
+    },
+    {
+      "sequence": 5,
+      "kind": "OBSTRUCTION_LESSON_CANDIDATE",
+      "summary": "Fail-closed source-completeness lesson recorded as unretained proposal",
+      "artifact_sha256": "ce1043f75c8d476c97dae62355041a6eee03abf5c3885ff3f0d69978ed929a76",
+      "prev_hash": "9cb15aa914ca1c5e5c862830dd9f201b64ec57438e2362a982da7bfddd5d0695",
+      "entry_hash": "24a7d7cb02a71633271d071177aa6339221616651700a5dd2e51e73a5f0632be"
+    },
+    {
+      "sequence": 6,
+      "kind": "TASK_EPISODE_SHADOW",
+      "summary": "TaskEpisode-style evidence closes cycle as BLOCKED",
+      "artifact_sha256": "953b7b18055c64b8b9582792b6e31944b61360c3597d142f32f53a022a10d6e9",
+      "prev_hash": "24a7d7cb02a71633271d071177aa6339221616651700a5dd2e51e73a5f0632be",
+      "entry_hash": "f70347a20f148908449343e9c08f7bcb3515803da0547d4908aeade3d22a03e0"
+    }
+  ],
+  "head_hash": "f70347a20f148908449343e9c08f7bcb3515803da0547d4908aeade3d22a03e0",
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}
