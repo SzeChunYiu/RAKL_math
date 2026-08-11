@@ -36,3 +36,15 @@ Current route tournament:
 6. Formalize any nontrivial surviving lemma and run isolated review.
 
 Every rejected route remains under `04_candidates/negative_history/`.
+
+## O9d12a2a1a migration-integrity boundary
+
+The migrated `O9d12a2a1a` strict packet remains pre-candidate and has no root
+authority. Its source trace preserved a valid stored link sequence but six event
+hashes did not equal the canonical hashes of their exact payloads. The original
+file is retained as negative history. Executable gates use the separately
+identified migration-repaired trace, which changes only the trace identity and
+hash-chain fields.
+
+Machine receipt:
+`migration/O9d12a2a1a_TRACE_INTEGRITY_REPAIR_RECEIPT_20260811.json`.

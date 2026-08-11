@@ -29,7 +29,7 @@ from rakl.research_trace import (
     audit_pre_candidate_trace,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "research/real_math/millennium/p_vs_np"
 
 
@@ -135,7 +135,9 @@ def test_o9d12a2a1a_joint_consistency_pre_candidate_packet_passes_current_gates(
         is ResearchMemoryVerdict.PASS
     )
 
-    trace_raw = _load("09_trace/O9d12a2a1a_PRE_CANDIDATE_TRACE_20260811.json")
+    trace_raw = _load(
+        "09_trace/O9d12a2a1a_PRE_CANDIDATE_TRACE_MIGRATION_REPAIRED_20260811.json"
+    )
     previous = ""
     entries = []
     for raw in trace_raw["entries"]:

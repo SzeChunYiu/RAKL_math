@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/migration-integrity-repair-receipt.schema.json",
+  "title": "RAKL Math migration integrity repair receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "recorded_at",
+    "application_repository",
+    "framework_pin",
+    "source_provenance",
+    "subject",
+    "observed_result",
+    "residual_signature",
+    "diagnosis",
+    "repair",
+    "evidence_pointers",
+    "failure_lattice_relations",
+    "next_discriminator",
+    "reusable_lesson_candidate",
+    "authority",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"type": "string", "minLength": 1},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "application_repository": {"$ref": "#/$defs/repositoryCommit"},
+    "framework_pin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "commit"],
+      "properties": {
+        "url": {"type": "string", "format": "uri"},
+        "commit": {"$ref": "#/$defs/sha1"}
+      }
+    },
+    "source_provenance": {"$ref": "#/$defs/sourceProvenance"},
+    "subject": {"$ref": "#/$defs/subject"},
+    "observed_result": {"$ref": "#/$defs/observedResult"},
+    "residual_signature": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "diagnosis": {"$ref": "#/$defs/diagnosis"},
+    "repair": {"$ref": "#/$defs/repair"},
+    "evidence_pointers": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "failure_lattice_relations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/failureRelation"}
+    },
+    "next_discriminator": {"type": "string", "minLength": 1},
+    "reusable_lesson_candidate": {"$ref": "#/$defs/reusableLesson"},
+    "authority": {"type": "string", "minLength": 1},
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha1": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "nonEmptyStrings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "repositoryCommit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "base_commit"],
+      "properties": {
+        "url": {"type": "string", "format": "uri"},
+        "base_commit": {"$ref": "#/$defs/sha1"}
+      }
+    },
+    "sourceProvenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository_url",
+        "source_ref",
+        "source_commit",
+        "source_path",
+        "source_file_sha256",
+        "migration_byte_preservation"
+      ],
+      "properties": {
+        "repository_url": {"type": "string", "format": "uri"},
+        "source_ref": {"type": "string", "minLength": 1},
+        "source_commit": {"$ref": "#/$defs/sha1"},
+        "source_path": {"type": "string", "minLength": 1},
+        "source_file_sha256": {"$ref": "#/$defs/sha256"},
+        "migration_byte_preservation": {"const": "VERIFIED_EQUAL_TO_SOURCE_COMMIT"}
+      }
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["atom_id", "context_packet_hash", "candidate_identity", "original_trace_id"],
+      "properties": {
+        "atom_id": {"type": "string", "minLength": 1},
+        "context_packet_hash": {"$ref": "#/$defs/sha256"},
+        "candidate_identity": {"type": "null"},
+        "original_trace_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "eventAudit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_id",
+        "stored_artifact_hash",
+        "computed_canonical_hash",
+        "artifact_hash_valid",
+        "previous_link_valid"
+      ],
+      "properties": {
+        "event_id": {"type": "string", "minLength": 1},
+        "stored_artifact_hash": {"$ref": "#/$defs/sha256"},
+        "computed_canonical_hash": {"$ref": "#/$defs/sha256"},
+        "artifact_hash_valid": {"type": "boolean"},
+        "previous_link_valid": {"type": "boolean"}
+      }
+    },
+    "observedResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "event_audit",
+        "invalid_event_ids",
+        "valid_event_ids",
+        "stored_chain_links_valid"
+      ],
+      "properties": {
+        "status": {"const": "FAIL_HASH_INTEGRITY"},
+        "event_audit": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/eventAudit"}},
+        "invalid_event_ids": {"$ref": "#/$defs/nonEmptyStrings"},
+        "valid_event_ids": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "stored_chain_links_valid": {"type": "boolean"}
+      }
+    },
+    "diagnosis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "ruled_out",
+        "competing_diagnoses",
+        "broken_assumption",
+        "scope"
+      ],
+      "properties": {
+        "status": {"enum": ["BOUNDED_UNRESOLVED_CAUSE", "SUPPORTED_CAUSE", "VERIFIED_CAUSE"]},
+        "ruled_out": {"$ref": "#/$defs/nonEmptyStrings"},
+        "competing_diagnoses": {"$ref": "#/$defs/nonEmptyStrings"},
+        "broken_assumption": {"type": "string", "minLength": 1},
+        "scope": {"type": "string", "minLength": 1}
+      }
+    },
+    "repair": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "original_preserved",
+        "repaired_path",
+        "repaired_file_sha256",
+        "repaired_trace_id",
+        "supersedes_for_executable_gate_only",
+        "semantic_fields_changed",
+        "identity_fields_changed"
+      ],
+      "properties": {
+        "method": {"const": "COPY_SEMANTICS_RECOMPUTE_CANONICAL_HASH_CHAIN_AS_NEW_TRACE_ID"},
+        "original_preserved": {"const": true},
+        "repaired_path": {"type": "string", "minLength": 1},
+        "repaired_file_sha256": {"$ref": "#/$defs/sha256"},
+        "repaired_trace_id": {"type": "string", "minLength": 1},
+        "supersedes_for_executable_gate_only": {"type": "string", "minLength": 1},
+        "semantic_fields_changed": {"type": "array", "maxItems": 0},
+        "identity_fields_changed": {"$ref": "#/$defs/nonEmptyStrings"}
+      }
+    },
+    "failureRelation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relation", "target"],
+      "properties": {
+        "relation": {"enum": ["PREVENTS", "INFORMS"]},
+        "target": {"type": "string", "minLength": 1}
+      }
+    },
+    "reusableLesson": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "preconditions",
+        "guaranteed_effects",
+        "non_guarantees",
+        "known_failures",
+        "target_validation_obligations"
+      ],
+      "properties": {
+        "status": {"const": "PROPOSAL_ONLY_PENDING_CROSS_PROBLEM_RECURRENCE_AND_FRAMEWORK_ASSURANCE"},
+        "preconditions": {"$ref": "#/$defs/nonEmptyStrings"},
+        "guaranteed_effects": {"$ref": "#/$defs/nonEmptyStrings"},
+        "non_guarantees": {"$ref": "#/$defs/nonEmptyStrings"},
+        "known_failures": {"$ref": "#/$defs/nonEmptyStrings"},
+        "target_validation_obligations": {"$ref": "#/$defs/nonEmptyStrings"}
+      }
+    }
+  }
+}
