@@ -1,0 +1,129 @@
+{
+  "schema_version": "bsd-a1a1-r5-fibre-v1",
+  "artifact_type": "FROZEN_MATH_CONTEXT_FIBRE_PROPOSAL_SHADOW",
+  "cycle_id": "BSD-A1a1-BASECHANGE-PLECTIC-20260811-R5",
+  "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "authority": "PROPOSAL_SHADOW_SEARCH_CONTEXT_ONLY",
+  "frozen_at_utc": "2026-08-11T19:01:30Z",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "main_sha": "3863b4814e0020e72c8681727357eda1aab7bf2b",
+    "method_version": "3.0.0",
+    "package_version": "0.1.0",
+    "v3_surfaces_inspected": [
+      "docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md",
+      "docs/RAKL_METROLOGY.md",
+      "ARCHITECTURE.md",
+      "src/rakl/method_specs.py",
+      "RAKL_VERSION.json"
+    ],
+    "drift_note": "RAKL advanced from b724b75 during this run to 3863b48; compare b724b75..3863b48 changes Paper-2 experiment/reporting surfaces only and does not touch the inspected v3 mathematical-research method surfaces."
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "47f56df0492339097a651d40b6c7289c4e2d4034",
+    "root_issue": 7,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "execution_pin_observed_from_r4": "787c7e00af2a5877ccb715bc807ec14f52974e9c"
+  },
+  "problem_signature": [
+    "exact complex analytic rank two for E/Q",
+    "quadratic base-change E/K versus twist E^K",
+    "preserve complex s-coordinate and exact order two",
+    "match plectic local hypotheses without importing algebraic rank/Selmer rank/BSD",
+    "then test complex-second-derivative-to-plectic/nondegenerate-regulator bridge",
+    "keep Mordell-Weil/Sha/Tamagawa/torsion/regulator gluing separate"
+  ],
+  "fibre_contents_actually_consulted": {
+    "root_contract": [
+      "00_problem/PROBLEM.md",
+      "issue #7"
+    ],
+    "dag_and_route": [
+      "02_problem_dag/open_obligations.yaml",
+      "02_problem_dag/BSD_A1a1_CURRENT_2026_ROUTE_DIAGNOSTIC.yaml"
+    ],
+    "frontier": [
+      "01_frontier/BSD_A1a1_PLECTIC_BRIDGE_AUDIT_20260811.md",
+      "01_frontier/BSD_A1a1_R4_COMPLEX_HIGHER_GZ_BRIDGE_AUDIT_20260811.md"
+    ],
+    "memory": [
+      "EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4",
+      "EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3",
+      "F-BSD-A1A1-COMPLEX-HIGHER-GZ-TARGET-CELL-GAP-R4",
+      "F-BSD-A1A1-PLECTIC-NONVANISHING-RELATION-GAP-V3-RETROSPECTIVE",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "F-XM001-POINTWISE-GAP-COLLAPSE"
+    ],
+    "trace": [
+      "09_trace/BSD_A1a1_R4_RESULT_TRACE_DELTA_20260811.json"
+    ],
+    "metrology": [
+      "07_memory/BSD_A1a1_RAKL_CYCLE_METRICS_CURRENT_V3_SUCCESSOR_20260811_R4.json"
+    ],
+    "fresh_primary_scouting_before_durable_freeze": [
+      "Friedberg-Hoffstein, Annals of Mathematics 142 (1995), Nonvanishing theorems for automorphic L-functions on GL(2)",
+      "Fornea-Gehrmann, arXiv:2311.03100v2",
+      "Fornea, arXiv:2603.28327"
+    ]
+  },
+  "experience_routing": {
+    "selected": [
+      {
+        "id": "EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4",
+        "effect": "forces exact complex derivative coordinate and normalized target-cell discipline"
+      },
+      {
+        "id": "EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3",
+        "effect": "routes to plectic representation because scalar theta-order search is locally flat"
+      },
+      {
+        "id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+        "effect": "type-checks coordinate preservation and local-to-global interfaces"
+      },
+      {
+        "id": "F-XM001-POINTWISE-GAP-COLLAPSE",
+        "effect": "warns against inferring exact downstream structure from pointwise/coordinate-near analogues"
+      }
+    ],
+    "retrieved_but_rejected": [
+      {
+        "id": "BSD-S001c1-KURIHARA-TAYLOR-COMPARISON",
+        "reason": "valid arbitrary-rank discrete lane but not the smallest active analytic/plectic rank-two discriminator"
+      },
+      {
+        "id": "YUN-ZHANG-FUNCTION-FIELD-HIGHER-DERIVATIVE-ANALOGUE",
+        "reason": "retained as DifferenceWitness/representation analogue only; no number-field theorem transfer"
+      },
+      {
+        "id": "REPEAT_SCALAR_THETA_ORDER_SCAN",
+        "reason": "saturated family after R3/R4"
+      }
+    ],
+    "missed_relevant_memory": "CANNOT_MEASURE: no coverage-complete memory universe"
+  },
+  "prospective_discriminator": {
+    "question": "Can exact complex analytic rank two of E/Q be transported, without changing the complex s-coordinate, into the exact even-rank E/K setting used by the mock-plectic route by choosing an imaginary quadratic K with compatible local splitting/inertness conditions and L(E^K,1) != 0; and if so, does any current primary theorem then convert the resulting nonzero complex second derivative over K into nonzero plectic arithmetic data?",
+    "falsifiers": [
+      "local sign conditions force every admissible twist to have central sign -1, making L(E^K,1)=0",
+      "the nonvanishing theorem cannot prescribe the finite local behavior needed by the plectic setup",
+      "base-change factorization does not preserve exact complex order under the selected twist",
+      "located downstream theorem uses p-adic/family derivatives rather than the complex s-second derivative",
+      "located nonvanishing/regulator theorem assumes rank two, Selmer rank two, finite Sha, p-adic BSD, or equivalent-strength arithmetic input"
+    ],
+    "success_contract": [
+      "prove/source-bind a scoped compositional local bridge from ord_{s=1}L(E,s)=2 to ord_{s=1}L(E/K,s)=2 for an admissible K, with exact assumptions and derivative identity",
+      "or isolate the smallest exact local-condition/nonvanishing obstruction preventing such K selection",
+      "separately classify whether any theorem closes complex second derivative over K to plectic/global arithmetic output"
+    ]
+  },
+  "saturation_before": {
+    "KNOWLEDGE": "REOPENED_BY_BASECHANGE_SELECTION_QUESTION",
+    "OPERATOR": "LOCALLY_FLAT",
+    "EXPERIENCE_PATTERN": "OPEN",
+    "OBSTRUCTION": "OPEN_EXISTING",
+    "RELATION": "REOPENED_BY_E_OVER_K_TYPING",
+    "PATH": "REOPENED_BY_AUXILIARY_K_ROUTE",
+    "META_METHOD": "FLATTENED"
+  }
+}
