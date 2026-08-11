@@ -1,0 +1,45 @@
+{
+  "schema_version": "framework-freshness-receipt-v1",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_subject_sha": "24194bba4c88cc4be19dad03d59bfa79599d5ee9",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_pin_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+  "task_episode_id": "EP-H4D1B-POINTED-PROJECTION-20260811",
+  "public_trace_event_id": "H4d1b-E01",
+  "declared_pin_relation": "PIN_BEHIND_CURRENT_MAIN",
+  "declared_execution_status": "CURRENT_MAIN_READ_DIRECTLY_SHADOW",
+  "claim_boundary": "Current RAKL main is read directly for this H4d1b proposal/shadow episode while RAKL_math remains pinned to its tested framework subject. This receipt performs no submodule update, does not claim current-main application-test binding, and grants no method or mathematical authority.",
+  "observed_current_main_sha": "0c5384e84ac62ab0fe14a7f728a0f68ffd3f2186",
+  "current_main_observed_at_utc": "2026-08-11T14:08:50+00:00",
+  "pin_is_ancestor_of_current_main": true,
+  "current_main_is_ancestor_of_pin": false,
+  "commits_behind_current_main": 2,
+  "commits_ahead_of_current_main": 0,
+  "inspected_surfaces": [
+    {"path": "src/rakl/v3.py", "subject_sha": "0c5384e84ac62ab0fe14a7f728a0f68ffd3f2186", "blob_sha": "3f8038ddeea34aebd48a26a9cdbf250250d5b437"},
+    {"path": "src/rakl/method_specs.py", "subject_sha": "0c5384e84ac62ab0fe14a7f728a0f68ffd3f2186", "blob_sha": "3f629c4dd0ef55aedf14206b2be3df19875988b7"},
+    {"path": "src/rakl/framework_freshness.py", "subject_sha": "0c5384e84ac62ab0fe14a7f728a0f68ffd3f2186", "blob_sha": "e032b2003def9041762504a5bfd33fcb14764b0d"},
+    {"path": "skills/rakl-core/SKILL.md", "subject_sha": "0c5384e84ac62ab0fe14a7f728a0f68ffd3f2186", "blob_sha": "aed7b9051cd2e43e587bf54d7ea427d55e74e7f6"},
+    {"path": "skills/rakl-core/manifest.yaml", "subject_sha": "0c5384e84ac62ab0fe14a7f728a0f68ffd3f2186", "blob_sha": "08189a10448d3b1ab85ea27005cf209b65cde83e"},
+    {"path": "skills/rakl-core/static/core/workflow.md", "subject_sha": "0c5384e84ac62ab0fe14a7f728a0f68ffd3f2186", "blob_sha": "f9a4c374f1bfd7a430620bf6010bedd326e2e9cf"},
+    {"path": "skills/rakl-core/workflows/mathematical-research.md", "subject_sha": "0c5384e84ac62ab0fe14a7f728a0f68ffd3f2186", "blob_sha": "4e15b1d1cbaa4ccafcb220743a99786484ee2057"}
+  ],
+  "v3_feature_set_claimed_operational": [
+    "current-main-read-directly shadow freshness discipline",
+    "v3 context-bound task-episode and expert-cell substrate",
+    "canonical method_specs process-surface naming",
+    "mathematical context, dual-memory, and public-trace pre-candidate gating"
+  ],
+  "application_pin_updated_in_episode": false,
+  "application_test_binding": null,
+  "evidence_pointers": [
+    "config/rakl-framework-pin.json",
+    "https://github.com/SzeChunYiu/RAKL/commit/0c5384e84ac62ab0fe14a7f728a0f68ffd3f2186",
+    "RAKL compare bd1a2768f0f474ff44ffa25243241f94bfaf6466...0c5384e84ac62ab0fe14a7f728a0f68ffd3f2186: ahead_by=2, behind_by=0",
+    "research/real_math/millennium/hodge/deformation/09_trace/H4d1b_PRE_CANDIDATE_TRACE_20260811.json"
+  ],
+  "receipt_canonical_sha256": "26f1acec5bc4a55fde64029b02608321f56d2f42b3c5bffd3b7c4bd924d1383e",
+  "performs_submodule_update": false,
+  "grants_method_authority": false,
+  "grants_application_mathematical_authority": false
+}
