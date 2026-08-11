@@ -85,10 +85,20 @@ def test_pr89_original_merge_bytes_are_immutable() -> None:
     assert _git("rev-parse", f"{MERGE}^{{tree}}") == MERGE_TREE
     paths = _git("diff", "--name-only", BASE, MERGE).splitlines()
     assert len(paths) == 13
+    added_paths = set(_git("diff", "--diff-filter=A", "--name-only", BASE, MERGE).splitlines())
     assert {item["path"] for item in receipt["preserved_artifacts"]} == set(paths)
     for item in receipt["preserved_artifacts"]:
         historical = _git("show", f"{MERGE}:{item['path']}", binary=True)
-        assert historical == (ROOT / item["path"]).read_bytes()
+        # Added evidence objects remain immutable at their live paths.  The
+        # problem DAG is an intentionally evolving state file; its PR89 bytes
+        # remain content-bound at MERGE without freezing all later DAG updates.
+        if item["path"] in added_paths:
+            assert historical == (ROOT / item["path"]).read_bytes()
+        else:
+            assert item["path"] == (
+                "research/real_math/millennium/navier_stokes/02_problem_dag/"
+                "open_obligations.yaml"
+            )
         assert _git("rev-parse", f"{MERGE}:{item['path']}") == item["git_blob_sha"]
         assert "sha256:" + hashlib.sha256(historical).hexdigest() == item["content_sha256"]
 
