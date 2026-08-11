@@ -1,94 +1,60 @@
-# Same-context result review — NS-B1a-C001 pressure-tail calibration
+# Same-context assurance review — PR #19 retrospective pressure-tail repair
 
-**Authority:** role-separated same-context review only; **not independent mathematical review**.  
-**Candidate:** `NS-B1a-C001`.  
-**Result under review:** critical-Morrey control makes the absolute instantaneous far-field quadratic pressure contribution dyadically summable; the narrower raw pressure-divergence anti-replication mechanism is rejected.
+**Review type:** role-separated same-context review after inspecting the PR #19 result and immutable Git history. This is **not independent review or peer review** and creates no Navier–Stokes, proof, novelty, preregistration, or root authority.
 
-## 1. PDE regularity / ancient-solution lead
+**Historical identity:** `NS-B1a-C001`.  
+**Repaired authority:** `RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE`.
 
-**Background:** mild and suitable Navier–Stokes solutions, Type-I rescaling, critical regularity, ancient-solution Liouville routes.
+## 1. Provenance / chronology lead
 
-**Delegation:** check whether the estimate composes with the parent Type-I route without silently creating the missing `L^3` trace.
+**Finding.** The exact identity, dyadic calculation, and interpreted result first appeared together in commit `9b6b8ae`. The later `070b5cc` trace asserted `CANDIDATE_PROPOSED` with earlier event timestamps. The parent `E07` selected only a broad PDE-consistent sparse-tail discriminator and explicitly left the candidate identity unopened.
 
-**Finding:** the calculation is compatible with finite `I` through the `A` term, but it only localizes the distant quadratic pressure contribution. It does not create global `L^3` integrability, a backward bounded sequence, or triviality.
+**Strongest objection.** The private wall-clock sequence might have matched the later timestamps.
 
-**Strongest objection:** do not rename pressure-tail summability as spatial tail tightness of velocity.
+**Disposition.** Repository chronology fails closed. Later timestamps cannot prove an immutable pre-result freeze. Preserve both original blobs and the machine chronology receipt; do not backfill preregistration.
 
-**Vote:** `ACCEPT_LOCAL_CALIBRATION / NO_LIOUVILLE_PROMOTION`.
+## 2. Formal assurance / identity lead
 
-## 2. Harmonic-analysis / pressure lead
+**Finding.** The original continuation's `CANDIDATE_PROPOSED -> FALSIFIER_RUN -> RESULT_RECORDED` authority is unsupported by repository-visible chronology. Exact tests added after the result cannot serve as the pre-result evaluator.
 
-**Background:** Calderón–Zygmund kernels, local pressure expansions, Morrey-type estimates.
+**Strongest objection.** The pre-candidate context packet itself genuinely predates the result.
 
-**Delegation:** stress-test the dyadic estimate and the pressure representation boundary.
+**Disposition.** Context-first work is preserved, but context chronology is not exact candidate/evaluator chronology. The successor trace therefore begins with a retrospective `RESULT_RECORDED` event and contains no candidate, falsifier, or promotion event.
 
-**Finding:** if `mu(B(x,r)) <= M r`, the sign-free far-field shell costs are `O(M 2^{-2k}R^{-2})`; the gradient-kernel shell costs are `O(M 2^{-3k}R^{-3})`. Both sums converge. This is stronger than relying on cancellation.
+## 3. Harmonic-analysis / analytic-shell lead
 
-**Strongest objection:** the estimate concerns the far-field quadratic kernel only. It does not settle the local singular pressure, harmonic normalization, or time-integrated pressure work.
+**Finding.** Under `mu(B(x,r)) <= M r`, the sign-free shell costs are `2 c0 M 2^{-2k} R^{-2}` and `2 c1 M 2^{-3k} R^{-3}`. Their exact geometric sums give `(8/3)c0 M R^{-2}` and `(16/7)c1 M R^{-3}`.
 
-**Vote:** `PASS_SCOPED_KERNEL_ESTIMATE`.
+**Strongest objection.** This controls only the absolute far-field quadratic stress and first kernel derivative. It does not control local singular pressure, harmonic normalization, time-integrated pressure work, velocity tails, or a global `L^3` trigger.
 
-## 3. Scaling / compactness lead
+**Disposition.** Retain the arithmetic only as an independently recheckable analytic shell calculation. Correctness does not repair chronology or create theorem authority.
 
-**Background:** critical scaling, translation/dilation noncompactness, concentration compactness.
+## 4. PDE / route-scope lead
 
-**Delegation:** determine what structural coordinate has actually been eliminated.
+**Finding.** The calculation makes raw instantaneous far-field divergence a low-information anti-replication route under the stated Morrey assumption.
 
-**Finding:** pressure nonlocality alone does not prevent spatially remote critical mass through divergent instantaneous coupling; the critical Morrey growth is sparse enough that the `|z|^-3` kernel remains summable. Translation escape therefore remains possible at the level of this bound.
+**Strongest objection.** No Navier–Stokes sparse-tail solution is constructed, and temporal, coherent, local, harmonic, diffusion, advection, and unique-continuation mechanisms remain live.
 
-**Strongest objection:** this does not prove an actual finite-`I` Navier–Stokes orbit can realize the sparse-tail geometry.
+**Disposition.** Use the calculation only to prioritize future search. It supplies no velocity-tail tightness, Type-I exclusion, Type-II exclusion, or Clay-root evidence.
 
-**Vote:** `ROUTE_PRUNED / NONCOMPACTNESS_RESIDUAL_REMAINS`.
+## 5. Failure-memory / method-learning lead
 
-## 4. Adversarial falsification lead
+**Finding.** Two different failures must remain separate: the scoped analytic route warning and the assurance chronology failure. The former is reusable search control; the latter warns that event timestamps and later tests cannot establish an immutable freeze.
 
-**Background:** counterexample-first theorem design and mechanism falsification.
+**Strongest objection.** Calling the shell result a failure could be mistaken for a refutation of pressure generally.
 
-**Delegation:** ask whether the proposed anti-replication mechanism survives the worst legal shell growth.
+**Disposition.** Keep exact scope conditions and a separate chronology audit. A prior failure is a warning, not a blacklist.
 
-**Finding:** it does not. Saturating `mu(B_r)~Mr` still gives geometric convergence. The pressure-gradient variant also converges, so adding one spatial derivative does not rescue raw divergence.
+## 6. Independence / research-value lead
 
-**Strongest objection:** a temporal accumulation of individually finite shell effects could still be decisive; this falsifier is intentionally instantaneous.
+**Finding.** Same-context rechecking supports a bounded repair but is not independent mathematical review. No bounded novelty search was performed for this repair.
 
-**Vote:** `FAIL_INSTANTANEOUS_PRESSURE_DIVERGENCE_MECHANISM`.
+**Strongest objection.** The shell calculation is elementary enough that another review may seem unnecessary.
 
-## 5. Formal-methods / assurance lead
+**Disposition.** Simplicity does not change the authority boundary. Future stronger use requires a fresh exact identity, frozen evaluator, and review appropriate to that new claim.
 
-**Background:** exact statement binding, proof-DAG scope, trace chronology and machine-auditable artifacts.
+## Cell synthesis
 
-**Delegation:** verify the authority transition.
+The original PR #19 artifacts remain exact negative history. The arithmetic survives only as `RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY`. The live trace removes candidate-authoritative chronology, the DAG and README remove verified-result wording, and the root remains `OPEN_NO_SOLUTION_CERTIFICATE`.
 
-**Finding:** `NS-B1a` had a valid pre-candidate packet before `C001`; the result should append `CANDIDATE_PROPOSED -> FALSIFIER_RUN -> RESULT_RECORDED -> RESIDUAL_OPENED`. The failure record must target the mechanism family, not pressure generally.
-
-**Strongest objection:** do not mark the failure as `VERIFIED_IMPOSSIBILITY`; alternative pressure-aware temporal or local mechanisms remain live.
-
-**Vote:** `SUPPORTED_DIAGNOSIS_ONLY`.
-
-## 6. Novelty / frontier lead
-
-**Background:** neighboring-result search and source-bound claim control.
-
-**Delegation:** assess whether the calculation is likely new and which current sources affect the next route.
-
-**Finding:** Calderón–Zygmund/Morrey pressure localization is established territory; Bradshaw–Tsai gives a modern primary-source pressure-localization framework. Lei–Yang–Yuan gives a distinct bounded-mild backward-uniqueness route handling Calderón–Zygmund terms. Neither source supplies the missing finite-`I` to global-`L^3` bridge identified here.
-
-**Strongest objection:** do not make a novelty claim from the specialized shell calculation.
-
-**Vote:** `NO_NOVELTY_AUTHORITY / KEEP_SOURCES_AS_ROUTE_CONTEXT`.
-
-## Cross-role discussion
-
-The group considered four interpretations:
-
-1. **Pressure solves the tail problem immediately.** Rejected: the far field is summable but no velocity-tail norm follows.
-2. **Pressure is irrelevant.** Rejected: local, harmonic, temporal and coherent pressure effects remain untested.
-3. **The whole Type-I route is dead.** Rejected: only one mechanism family was falsified.
-4. **Move the atom from instantaneous pressure divergence to temporal pressure-aware shell flux.** Selected.
-
-The selected move has the highest partition power because the current result proves that repeating more instantaneous far-field estimates in the same representation is unlikely to recover the missing global trace. A time-integrated shell balance can either produce a new summability mechanism or expose a second, sharper scale-accumulation failure.
-
-## Consensus
-
-`VERIFIED_LOCAL_CALIBRATION / INSTANTANEOUS_PRESSURE_DIVERGENCE_ROUTE_PRUNED / TEMPORAL_DYNAMICS_CHILD_OPENED / SAME_CONTEXT_ONLY / NO_NOVELTY / ROOT_AUTHORITY_NONE`
-
-Next atom: `NS-B1a1`, with a fresh context/memory/review/trace packet required before candidate generation.
+**Overall:** `ACCEPT_RETROSPECTIVE_SEARCH_CONTROL / CHRONOLOGY_FAILURE_PRESERVED / SAME_CONTEXT_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE`.
