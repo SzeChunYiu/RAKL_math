@@ -54,8 +54,19 @@ def test_scalar_endpoint_profile_is_integrable_unbounded_and_ode_compatible():
     assert a / math.sqrt(1e-24) > 1e10
 
 
-def test_episode_diagnosis_obstruction_lesson_are_distinct():
+def test_episode_diagnosis_obstruction_lesson_are_distinct_and_shadow_admitted():
     episode = json.loads((NS / "10_case_study/NS-B1a3b1b_C001_R1_TASK_EPISODE_20260811.json.shadow").read_text())
+    episode_hash = episode.pop("artifact_hash")
+    assert episode_hash == canonical_sha(episode)
+    assert episode["storage_admission"] == "PROPOSAL_SHADOW_STORED"
+
+    admission = json.loads((NS / "10_case_study/NS-B1a3b1b_C001_R1_EPISODE_ADMISSION_RECEIPT_20260811.json").read_text())
+    receipt_hash = admission.pop("receipt_canonical_sha256")
+    assert receipt_hash == canonical_sha(admission)
+    assert admission["episode_artifact_hash"] == episode_hash
+    assert admission["storage_status"] == "PROPOSAL_SHADOW_STORED"
+    assert admission["inventory_registry_id"].startswith("shadow:")
+
     diagnosis = json.loads((NS / "07_memory/NS-B1a3b1b_C001_DIAGNOSIS_R1_20260811.json").read_text())
     obstruction = json.loads((NS / "07_memory/NS-B1a3b1b_C001_OBSTRUCTION_R1_20260811.json.shadow").read_text())
     lesson = json.loads((NS / "07_memory/NS-B1a3b1b_C001_LESSON_R1_20260811.json.shadow").read_text())
@@ -73,3 +84,5 @@ def test_metrics_has_all_seven_axes_and_raw_growth_excluded():
     assert axes == {"KNOWLEDGE": 0, "OPERATOR": 0, "EXPERIENCE_PATTERN": 1, "OBSTRUCTION": 1, "RELATION": 1, "PATH": 1, "META_METHOD": 0}
     assert metrics["raw_repository_growth_counted_as_learning"] is False
     assert metrics["gate_status"]["root"] == "OPEN_NO_SOLUTION_CERTIFICATE"
+    assert metrics["framework"]["current_main_git_sha_at_completion_revalidation"] == "b724b75c71f37956b6188584ce32e3c554ea2d6d"
+    assert metrics["provenance_ci"]["episode_storage_admission"].startswith("PROPOSAL_SHADOW_STORED")
