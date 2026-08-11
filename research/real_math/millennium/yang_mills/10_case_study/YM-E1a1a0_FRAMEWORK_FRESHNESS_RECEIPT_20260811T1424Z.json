@@ -1,0 +1,70 @@
+{
+  "application_pin_updated_in_episode": false,
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_subject_sha": "41327f39783255fa96ff83754fec6c3ee77742ab",
+  "application_test_binding": null,
+  "claim_boundary": "Current RAKL main was read directly in proposal/shadow mode because the application pin was behind. This receipt does not claim the RAKL_math submodule was synchronized or application-tested against current RAKL main, and it grants no mathematical or method authority.",
+  "commits_ahead_of_current_main": 0,
+  "commits_behind_current_main": 5,
+  "current_main_is_ancestor_of_pin": false,
+  "current_main_observed_at_utc": "2026-08-11T14:24:09+00:00",
+  "declared_execution_status": "CURRENT_MAIN_READ_DIRECTLY_SHADOW",
+  "declared_pin_relation": "PIN_BEHIND_CURRENT_MAIN",
+  "evidence_pointers": [
+    "SzeChunYiu/RAKL@c8048b079ddc65ca336130a39de14af0e6dafcca",
+    "SzeChunYiu/RAKL_math@41327f39783255fa96ff83754fec6c3ee77742ab",
+    "framework/RAKL@bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "GitHub compare bd1a2768f0f474ff44ffa25243241f94bfaf6466...c8048b079ddc65ca336130a39de14af0e6dafcca: ahead_by=5 behind_by=0"
+  ],
+  "framework_pin_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "grants_application_mathematical_authority": false,
+  "grants_method_authority": false,
+  "inspected_surfaces": [
+    {
+      "blob_sha": "e032b2003def9041762504a5bfd33fcb14764b0d",
+      "path": "src/rakl/framework_freshness.py",
+      "subject_sha": "c8048b079ddc65ca336130a39de14af0e6dafcca"
+    },
+    {
+      "blob_sha": "3f8038ddeea34aebd48a26a9cdbf250250d5b437",
+      "path": "src/rakl/v3.py",
+      "subject_sha": "c8048b079ddc65ca336130a39de14af0e6dafcca"
+    },
+    {
+      "blob_sha": "4d7044bd4825c2d058c6a95ee63cea703c3234f3",
+      "path": "src/rakl/experience_substrate.py",
+      "subject_sha": "c8048b079ddc65ca336130a39de14af0e6dafcca"
+    },
+    {
+      "blob_sha": "2482532443147b55d86a08d94ec73a75ea5cd2e5",
+      "path": "src/rakl/saturation_vector.py",
+      "subject_sha": "c8048b079ddc65ca336130a39de14af0e6dafcca"
+    },
+    {
+      "blob_sha": "3f629c4dd0ef55aedf14206b2be3df19875988b7",
+      "path": "src/rakl/method_specs.py",
+      "subject_sha": "c8048b079ddc65ca336130a39de14af0e6dafcca"
+    },
+    {
+      "blob_sha": "a2f18bc1e1ab3c523a93679a7483a4cfaf359975",
+      "path": "src/rakl/research_trace.py",
+      "subject_sha": "c8048b079ddc65ca336130a39de14af0e6dafcca"
+    }
+  ],
+  "observed_current_main_sha": "c8048b079ddc65ca336130a39de14af0e6dafcca",
+  "performs_submodule_update": false,
+  "pin_is_ancestor_of_current_main": true,
+  "public_trace_event_id": "YM-E1a1a0-E001",
+  "receipt_canonical_sha256": "6d63c359d07e5d31d947edd8c83aea2614d99594154c8b29a66bf094e2ebd224",
+  "schema_version": "framework-freshness-receipt-v1",
+  "task_episode_id": "YM-E1a1a0-EP-SOURCE-20260811T1424Z",
+  "v3_feature_set_claimed_operational": [
+    "framework freshness/adoption receipt",
+    "immutable TaskEpisode evidence",
+    "memory-before-routing discipline",
+    "seven-axis semantic novelty accounting",
+    "hash-chained public research trace",
+    "missing-evidence fail-closed candidate gate"
+  ]
+}
