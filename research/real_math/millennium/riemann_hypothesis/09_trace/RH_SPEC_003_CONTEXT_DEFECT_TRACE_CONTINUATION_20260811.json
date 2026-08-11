@@ -1,0 +1,107 @@
+{
+  "trace_id": "RH-SPEC-003-TRACE-20260811",
+  "continuation_of": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_SPEC_003_OPEN_TRACE_20260811.json",
+  "parent_event_hash": "sha256:c8265e1d45f5bc05f51f2c3dc9ce664f711ec856955a936e31eb5d634dbb87a2",
+  "entries": [
+    {
+      "event_id": "RH-SPEC-003-E08",
+      "atom_id": "RH-SPEC-003",
+      "event_type": "FALSIFIER_RUN",
+      "timestamp": "2026-08-11T09:56:30+00:00",
+      "state_summary": "The frozen pre-candidate context classified the Riemann-counting first-order endpoint as suggestive of weak-L1 behavior, while no candidate had yet been proposed.",
+      "action_summary": "Run the cheapest endpoint falsifier directly from M(T)~C T log T by monotone inversion and singular-value comparison before allowing candidate generation.",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_003_CONTEXT_FIBER_20260811.json",
+        "H. von Mangoldt, Mathematische Annalen 60 (1905), 1-19, DOI:10.1007/BF01447494"
+      ],
+      "alternatives_considered": [
+        "Treat alpha*p>1 alone as sufficient and ignore the weak-endpoint sentence.",
+        "Proceed to a Hilbert-Polya construction before endpoint classification is settled."
+      ],
+      "decision_rationale": "The endpoint claim is a cheap exact structural assertion whose falsity would contaminate trace-ideal transfer; resolving it dominates more expensive operator search.",
+      "outputs": [
+        "nu_n~n/(C log n)",
+        "s_n((I+H^2)^(-alpha/2))~(C log n/n)^alpha",
+        "critical weak-S_{1/alpha} membership fails"
+      ],
+      "uncertainties": [
+        "No operator existence, prime matching or noncompact trace claim is evaluated by this falsifier."
+      ],
+      "residuals": [
+        "Frozen context contains a false weak-L1 endpoint interpretation."
+      ],
+      "next_steps": [
+        "Quarantine the frozen packet from candidate generation and record the endpoint result as retrospective calibration only."
+      ],
+      "artifact_hash": "sha256:d5fd1a1a0181f884917e438d4b4ef593dafe7d0f0450176119a4af257433ffd0",
+      "previous_event_hash": "sha256:c8265e1d45f5bc05f51f2c3dc9ce664f711ec856955a936e31eb5d634dbb87a2"
+    },
+    {
+      "event_id": "RH-SPEC-003-E09",
+      "atom_id": "RH-SPEC-003",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-11T09:56:40+00:00",
+      "state_summary": "The endpoint falsifier contradicts a non-load-bearing but mathematically false transfer statement in the frozen context.",
+      "action_summary": "Record the corrected Schatten/weak-Schatten/log-correction phase diagram as retrospective analytic calibration and explicitly deny preregistered-candidate authority.",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_SPEC_003_WEAK_L1_ENDPOINT_CONTEXT_DEFECT_20260811.md"
+      ],
+      "alternatives_considered": [
+        "Mutate the frozen context and recompute its hash as if the correction had been known at freeze time.",
+        "Append CANDIDATE_PROPOSED after already deriving the corrected result."
+      ],
+      "decision_rationale": "Both alternatives would erase chronology. Immutable negative history preserves the actual order: context freeze first, defect discovery second, no candidate event.",
+      "outputs": [
+        "PRE_CANDIDATE_CONTEXT_DEFECT",
+        "RETROSPECTIVE_ANALYTIC_CALIBRATION",
+        "ROOT_AUTHORITY_NONE"
+      ],
+      "uncertainties": [
+        "A future fresh atom may test a new log-corrected operator question, but no such candidate is licensed by this retrospective result."
+      ],
+      "residuals": [
+        "Focused current-framework RH workflow did not explicitly include the RH-SPEC-003 strict-packet test at the pre-defect head."
+      ],
+      "next_steps": [
+        "Repair application assurance coverage.",
+        "Freeze a genuinely fresh successor atom before generating any new result."
+      ],
+      "artifact_hash": "sha256:89f5a7b7b287366bec6c5aa4463d06b0b6d1a3afe06de68c8006f61b9b3b8990",
+      "previous_event_hash": "sha256:d5fd1a1a0181f884917e438d4b4ef593dafe7d0f0450176119a4af257433ffd0"
+    },
+    {
+      "event_id": "RH-SPEC-003-E10",
+      "atom_id": "RH-SPEC-003",
+      "event_type": "RESIDUAL_OPENED",
+      "timestamp": "2026-08-11T09:56:50+00:00",
+      "state_summary": "RH-SPEC-003 remains pre-candidate and is now blocked by a recorded context defect plus a focused-workflow coverage gap.",
+      "action_summary": "Open the residual boundary: future work must distinguish ordinary trace class, weak/Dixmier ideals, log-corrected compact-resolvent filters, and genuinely noncompact/distributional trace formulas without backfilling chronology.",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_SPEC_003_WEAK_L1_ENDPOINT_CONTEXT_DEFECT_20260811.md",
+        ".github/workflows/rh-spectral-assurance.yml",
+        "A. Connes, arXiv:math/9811068"
+      ],
+      "alternatives_considered": [
+        "Declare the parent threshold packet fully verified because exact-pin application CI was green.",
+        "Treat Connes-type noncompact trace formulas as refuted by the compact-resolvent endpoint calculation."
+      ],
+      "decision_rationale": "The first ignores a false context statement and incomplete focused coverage; the second violates the frozen compact-resolvent scope.",
+      "outputs": [
+        "CANDIDATE_GENERATION_BLOCKED",
+        "NONCOMPACT_TRACE_ROUTES_EXEMPT_PENDING_TARGET_SPECIFIC_AUDIT"
+      ],
+      "uncertainties": [
+        "No root-relevant positivity or prime-matching mechanism has been produced."
+      ],
+      "residuals": [
+        "Need a fresh preregistered operator question after corrected endpoint semantics are assimilated into memory."
+      ],
+      "next_steps": [
+        "Keep this atom as negative history/search control.",
+        "Do not generate a theorem candidate from the already-observed endpoint correction."
+      ],
+      "artifact_hash": "sha256:7597bea41f7d2ce2ea745835450cf31afe0c09f3d9fd91c71a92a5f54bd14640",
+      "previous_event_hash": "sha256:89f5a7b7b287366bec6c5aa4463d06b0b6d1a3afe06de68c8006f61b9b3b8990"
+    }
+  ]
+}
