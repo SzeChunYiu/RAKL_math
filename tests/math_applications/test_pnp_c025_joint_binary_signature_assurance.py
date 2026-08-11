@@ -529,3 +529,12 @@ def test_synthesis_receipt_git_provenance_planted_failures_fail_closed() -> None
     assert "canonical target raw hash mismatch: failure_memory" in _git_provenance_errors(
         forged_hash
     )
+
+
+def test_pnp_readme_exposes_c025_scope_and_next_blocked_child() -> None:
+    readme = (BASE / "README.md").read_text(encoding="utf-8")
+    assert "C025 retrospective-assurance boundary" in readme
+    assert "RETROSPECTIVE_EXECUTABLE_ASSURANCE" in readme
+    assert "OPEN_PROBLEM / NO_AUTHORITY" in readme
+    assert "O9d12a2a1a1" in readme
+    assert "Candidate generation there remains blocked" in readme
