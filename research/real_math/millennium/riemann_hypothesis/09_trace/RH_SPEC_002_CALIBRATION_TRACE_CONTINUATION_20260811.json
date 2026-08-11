@@ -1,0 +1,146 @@
+{
+  "trace_id": "TRACE-RH-SPEC-002-CAL001-CONTINUATION-20260811",
+  "parent_trace_id": "TRACE-RH-SPEC-002-OPEN-20260811",
+  "parent_final_event_hash": "sha256:6afa4c78f9ac563a863531ca4e3518bf32202c84ced4465110fc53c2f1d73b9c",
+  "entries": [
+    {
+      "event_id": "RH-SPEC-002-E08",
+      "atom_id": "RH-SPEC-002",
+      "event_type": "CANDIDATE_PROPOSED",
+      "timestamp": "2026-08-11T07:50:00+00:00",
+      "state_summary": "The strict RH-SPEC-002 context, memory and trace gates passed against current RAKL framework assurance; the registered action is a bounded convergence-package calibration rather than an RH theorem.",
+      "action_summary": "Freeze candidate identity RH-SPEC-002-LIMIT-STABILITY-CAL001: a known-answer suite testing which generic convergence packages can or cannot transport complete spectra/zeros.",
+      "evidence_pointers": [
+        "sha256:99eb4c30af5c745c5d1f6b546fa8df0e775494c07f51fe9548c50ce81bfba224",
+        "sha256:298a822066b1ef9ff1a6b928f9fa7e66ded0f5585d739265c70d4ccc8e915e19",
+        "sha256:6afa4c78f9ac563a863531ca4e3518bf32202c84ced4465110fc53c2f1d73b9c",
+        "RAKL_math PR #11 RH spectral assurance: 4 passed against RAKL framework 7853ec0c4ff8f862359835bca1af1d934bfbd887"
+      ],
+      "alternatives_considered": [
+        "immediately conjecture determinant convergence to Xi",
+        "immediately conjecture strong-resolvent convergence",
+        "execute the registered hostile calibration first"
+      ],
+      "decision_rationale": "The calibration has lower theorem debt and higher partition power: it can eliminate generic insufficient topologies before source-specific arithmetic proof search.",
+      "outputs": [
+        "candidate_id:RH-SPEC-002-LIMIT-STABILITY-CAL001",
+        "candidate_type:KNOWN_ANSWER_CALIBRATION"
+      ],
+      "uncertainties": [
+        "standard operator pollution examples may not match the actual RH approximant family"
+      ],
+      "residuals": [
+        "source-side determinant convergence remains untested"
+      ],
+      "next_steps": [
+        "run exact positive/negative calibration cases"
+      ],
+      "artifact_hash": "sha256:679a05b1584bb606b1da69c0d3553ae53c7acdce73892a3c9db6112e1e07d76a",
+      "previous_event_hash": "sha256:6afa4c78f9ac563a863531ca4e3518bf32202c84ced4465110fc53c2f1d73b9c"
+    },
+    {
+      "event_id": "RH-SPEC-002-E09",
+      "atom_id": "RH-SPEC-002",
+      "event_type": "FALSIFIER_RUN",
+      "timestamp": "2026-08-11T07:51:00+00:00",
+      "state_summary": "Four proposed information channels are subjected to exact hostile cases: strong-resolvent spectral disappearance, Galerkin pollution, joint-limit nonuniqueness, and finite-zero-prefix fit without entire-function convergence; local-uniform real-zero transport is checked as the positive control.",
+      "action_summary": "Execute the calibration derivations and machine-checkable finite identities, with no zeta-zero fitting.",
+      "evidence_pointers": [
+        "RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.json",
+        "Levitin-Shargorodsky arXiv:math/0212087",
+        "Connes-van Suijlekom arXiv:2511.23257"
+      ],
+      "alternatives_considered": [
+        "numerical comparison to known zeta zeros",
+        "random matrix statistics",
+        "exact abstract counterexamples and positive zero-stability theorem"
+      ],
+      "decision_rationale": "Exact counterexamples directly test sufficiency of convergence packages and avoid confusing numerical agreement with a theorem.",
+      "outputs": [
+        "falsifier:strong_resolvent_disappearing_eigenvalue",
+        "falsifier:galerkin_gap_pollution",
+        "falsifier:two_parameter_noncommuting_limit",
+        "falsifier:finite_zero_prefix_without_local_uniform_limit",
+        "positive_control:hurwitz_real_zero_transport"
+      ],
+      "uncertainties": [
+        "the positive Hurwitz package remains source-side unproved for RH"
+      ],
+      "residuals": [
+        "no failure of the actual CCM/Suzuki approximant families has been proved"
+      ],
+      "next_steps": [
+        "classify each package by what the calibration establishes"
+      ],
+      "artifact_hash": "sha256:5be7de360556481d844bcd2ae60586c784ec574da5691330d51a04487c5c2a98",
+      "previous_event_hash": "sha256:679a05b1584bb606b1da69c0d3553ae53c7acdce73892a3c9db6112e1e07d76a"
+    },
+    {
+      "event_id": "RH-SPEC-002-E10",
+      "atom_id": "RH-SPEC-002",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-11T07:52:00+00:00",
+      "state_summary": "The calibration cleanly separates target-side sufficiency from insufficient generic convergence: local-uniform convergence of source-normalized real-rooted entire approximants to exact nonzero Xi is target-side sufficient; strong-resolvent/Mosco without extra spectral exactness, finite-prefix agreement, and unspecified joint limits are insufficient.",
+      "action_summary": "Record a bounded route-pruning result and keep all conclusions below RH theorem authority.",
+      "evidence_pointers": [
+        "sha256:c8fb13b4b533ed0799a665428de44332716b7c68e30f92f301636b3087e47216",
+        "RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.md"
+      ],
+      "alternatives_considered": [
+        "declare a preferred Hilbert-Polya operator",
+        "treat local-uniform convergence itself as proved",
+        "record only the calibrated implication and rejected generic packages"
+      ],
+      "decision_rationale": "The result is a theorem-selection filter, not a proof of the missing arithmetic convergence.",
+      "outputs": [
+        "classification:local_uniform_entire=TARGET_SIDE_SUFFICIENT_BUT_SOURCE_SIDE_UNPROVED",
+        "classification:strong_resolvent_without_extra=TOO_WEAK",
+        "classification:finite_prefix=TOO_WEAK",
+        "classification:unspecified_joint_limit=UNDER_SPECIFIED"
+      ],
+      "uncertainties": [
+        "norm-resolvent plus route-specific compactness may be sufficient but has not been matched to the source family"
+      ],
+      "residuals": [
+        "need source-side uniform determinant/ground-state estimates"
+      ],
+      "next_steps": [
+        "open determinant-compactness bridge residual"
+      ],
+      "artifact_hash": "sha256:770c7ba25a1ae63c3c7f9763a7654364e1e53c312b96409d67f8aefa99230fe2",
+      "previous_event_hash": "sha256:5be7de360556481d844bcd2ae60586c784ec574da5691330d51a04487c5c2a98"
+    },
+    {
+      "event_id": "RH-SPEC-002-E11",
+      "atom_id": "RH-SPEC-002",
+      "event_type": "RESIDUAL_OPENED",
+      "timestamp": "2026-08-11T07:53:00+00:00",
+      "state_summary": "After removing generic convergence ambiguity, the sharp residual is source-side: derive a canonical normalization and uniform estimates for the actual finite/restricted RH approximants strong enough to yield local-uniform determinant convergence to Xi, or falsify that route.",
+      "action_summary": "Open RH-SPEC-002a-DETERMINANT-COMPACTNESS-BRIDGE as the next pre-candidate child; do not generate a theorem until a fresh context/memory/trace packet is frozen.",
+      "evidence_pointers": [
+        "sha256:c8fb13b4b533ed0799a665428de44332716b7c68e30f92f301636b3087e47216"
+      ],
+      "alternatives_considered": [
+        "continue generic operator search",
+        "attack source-side determinant compactness/normalization",
+        "switch immediately to a different RH paradigm"
+      ],
+      "decision_rationale": "Two independent modern operator programmes already expose a global-limit bottleneck; the calibration now identifies local-uniform exact-Xi convergence as the clean target-side sufficient package, so source-side compactness/normalization is the highest-information next atom.",
+      "outputs": [
+        "residual_id:RH-SPEC-002a-DETERMINANT-COMPACTNESS-BRIDGE",
+        "status:PRE_CANDIDATE_CONTEXT_REQUIRED"
+      ],
+      "uncertainties": [
+        "the determinant route may be unprovable or false for the current approximant family"
+      ],
+      "residuals": [
+        "no source-side convergence theorem exists in this cycle"
+      ],
+      "next_steps": [
+        "freeze a fresh context fiber for RH-SPEC-002a before any candidate"
+      ],
+      "artifact_hash": "sha256:53bc2f8fd0a983cd747034f32270e2ba4399a6b8d1e8224adadcef25f06423bb",
+      "previous_event_hash": "sha256:770c7ba25a1ae63c3c7f9763a7654364e1e53c312b96409d67f8aefa99230fe2"
+    }
+  ]
+}
