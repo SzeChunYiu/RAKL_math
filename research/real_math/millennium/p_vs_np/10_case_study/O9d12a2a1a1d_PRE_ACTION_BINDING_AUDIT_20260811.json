@@ -1,0 +1,31 @@
+{
+  "audit_id": "PNP-O9d12a2a1a1d-PRE-ACTION-BINDING-AUDIT-R1-20260811",
+  "framework_sha": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+  "framework_surface": "src/rakl/pre_action_receipt.py:audit_pre_action_binding",
+  "receipt_id": "PNP-O9d12a2a1a1d-PRE-ACTION-VERIFY-R1-20260811",
+  "receipt_hash": "88df72fdde1852416199e266ba950a7269af17aee65dadf170cd599250aabce6",
+  "episode_id": "PNP-O9d12a2a1a1d-JOIN-ELIMINATION-R1-20260811",
+  "verdict": "RETROSPECTIVE_BINDING_REFUTED",
+  "chronology_status": "RETROSPECTIVE_ONLY",
+  "prospective_gate_admissible": false,
+  "reasons": ["outcome_outside_predeclared_branches:PARTIAL_SUCCESS"],
+  "matched_fields": [
+    "receipt pointer",
+    "atom_id",
+    "task_id",
+    "context_hash",
+    "fibre_snapshot_hash",
+    "operator_ids",
+    "receipt strictly precedes episode"
+  ],
+  "root_cause": "The receipt used descriptive branch label PARTIAL_SUCCESS_WITH_RESIDUAL, but current v3 audit compares allowed_outcome_branches exactly to EpisodeOutcome.value and the episode outcome is PARTIAL_SUCCESS.",
+  "integrity_action": "Do not rewrite or replace the pre-action receipt after observing the result. Preserve the refutation and downgrade the verification chronology to retrospective-only.",
+  "supersedes_chronology_assertions": [
+    "Any earlier application prose saying the verification action was prospectively bound is superseded by this machine-semantics audit.",
+    "The mathematical local result may still be checked on its merits; this audit grants no discovery/proof/novelty authority."
+  ],
+  "framework_followup": "SzeChunYiu/RAKL#175",
+  "failure_class": ["META_POLICY","TOOLING_SCHEMA_INTERFACE","CHRONOLOGY"],
+  "reusable_process_lesson": "Pre-action outcome branches must use exact EpisodeOutcome enum values under current v3; descriptive branch taxonomies need a separate typed field.",
+  "authority": "PROPOSAL_SHADOW_PROCESS_AUDIT_ONLY"
+}
