@@ -1,0 +1,94 @@
+{
+  "schema_version": "pnp-source-family-inventory-r1-v1",
+  "audit_id": "PNP-O9d12a2a1a1b1-SOURCE-INVENTORY-R1-20260811",
+  "task_id": "PNP-O9d12a2a1a1b1-SOURCE-INVENTORY-R1",
+  "atom_id": "O9d12a2a1a1b1",
+  "pre_action_receipt_id": "PNP-O9d12a2a1a1b1-SOURCE-INVENTORY-R1-PRE-ACTION-20260811",
+  "pre_action_receipt_canonical_sha256": "aab44dcb80dbca53adbb85cc42ff1c4a504b5e5d50e3809b7ad2aadb53faf560",
+  "frozen_context_hash": "sha256:8fdaed5fe15968120a39614213e569462c64d2397ce79387e9daf07dafa1e010",
+  "fibre_snapshot_hash": "673dc6cbced6a93bd0a6656e5cd29a82d0d24a3c2456f2a6b5102569dc2e1b0d",
+  "operator_id": "SOURCE_NATIVE_T_RULE_THEOREM_INVENTORY",
+  "decision_policy": {
+    "search_policy": "bounded foundational-source completeness before candidate generation; exact-source first; reject transfer without DifferenceWitness",
+    "allowed_outcomes": ["SUCCESS", "FAILURE", "BLOCKED"],
+    "mapping": {"MATCH": "SUCCESS", "NO_RELEVANT_SOURCE_BOUND": "FAILURE", "CANNOT_CHECK": "BLOCKED"},
+    "candidate_generation_allowed": false
+  },
+  "source_family": [
+    {
+      "source_id": "ECCC-TR25-033-PRIMARY-PDF",
+      "citation": "Bruno P. Cavalar and Igor C. Oliveira, Boolean Circuit Complexity and Two-Dimensional Cover Problems, ECCC TR25-033 / arXiv:2503.14117, 2025.",
+      "url": "https://eccc.weizmann.ac.il/report/2025/033/",
+      "authority": "CANONICAL_PRIMARY",
+      "access_status": "FULL_PRIMARY_INSPECTED_PREVIOUSLY_AND_REBOUND",
+      "payload_sha256": "3f7d98691f3ac28208df6e8669d860c45b6068781dd77c737eb1e780641fbea7",
+      "anchors": ["Definition 21", "Theorem 24", "Theorem 30", "Theorem 37", "Proposition 40"],
+      "observation": "The current source gives rho<=D_cap<=rho^2, exact equality rho=D_cap^cyc, target-dependent random-graph encoding, and a canonical G_NEQ calibration. These are resource characterizations/constructions or target/canonical special cases, not a distinct shared-system coordinate whose source theorem yields a new target-independent lower-bound handle after the registered controls.",
+      "difference_witness": "The requested object is one common integral t-pair full-semifilter system with an additional source-defined coordinate universally bounded by f(t) and informative after integrality, multiplexing, cheap-target and noncanonical controls. The inspected current-source statements either identify t with the relevant complexity, reconstruct a circuit/construction from t, depend on target description/generator-family size, or restrict to canonical filters.",
+      "discriminator_result": "NO_MATCH"
+    },
+    {
+      "source_id": "RAZBOROV-1989-APPROXIMATION-PRIMARY",
+      "citation": "A. A. Razborov, On the Method of Approximations, STOC 1989, pp. 167-176.",
+      "url": "https://www.mi.ras.ru/~razborov/approx.pdf",
+      "authority": "CANONICAL_PRIMARY_AUTHOR_COPY",
+      "access_status": "FULL_PRIMARY_PDF_DOWNLOADED_RENDERED_AND_INSPECTED",
+      "payload_sha256": "a829725a0b7a70d78ed9ba8cf26fd15d58c7a12270443610c2391f5768b40706",
+      "anchors": ["Claim 2.5", "Theorem 2.6", "Theorem 2.7", "proof of Theorem 2.6 / rules (48)-(52)"],
+      "observation": "Claim 2.5 identifies approximation distance with a minimum number of pairs covering a family of monotone functionals in a function-dependent legitimate model. Theorem 2.6 reconstructs a circuit of polynomial size from such a t-pair cover (the proof gives cubic-size closure recognition up to the auxiliary-variable term).",
+      "difference_witness": "Razborov's pairs cover a model-specific family of monotone functionals and the theorem bounds/reconstructs circuit size from the cover resource itself. It does not state a separate invariant of the exact Cavalar-Oliveira full-semifilter shared integral system that remains informative for explicit lower bounds after cheap-target and multiplexing controls. The modern current-source D_cap<=rho^2 is the direct set-theoretic analogue already inventoried.",
+      "discriminator_result": "NO_MATCH"
+    },
+    {
+      "source_id": "WIGDERSON-1993-FUSION-PRIMARY",
+      "citation": "Avi Wigderson, The Fusion Method for Lower Bounds in Circuit Complexity, Combinatorics, Paul Erdos is Eighty, 1993, pp. 453-468.",
+      "url": "https://www.math.ias.edu/~avi/PUBLICATIONS/MYPAPERS/AVI/HUNGARY/proc.pdf",
+      "authority": "CANONICAL_PRIMARY_AUTHOR_COPY",
+      "access_status": "FULL_PRIMARY_PDF_DOWNLOADED_RENDERED_AND_INSPECTED",
+      "payload_sha256": "69893dfc288a89c2b7243b11ec0851ed73cbdda004e0046257bdbe439082e1d7",
+      "anchors": ["Section 2.3 Theorems 1-2", "Section 4.2 Cover Problems", "Section 4.3 Table 1"],
+      "observation": "Wigderson defines cover number rho as the number of covering gate-triples/pairs, proves it lower-bounds program length, and gives model-dependent converses polynomial or sometimes linear in rho. Section 4 varies the functional class, input definition and cover kind.",
+      "difference_witness": "Here t is already the cover/program resource, and the source theorem characterizes computational size from that resource across model-dependent functional classes. It supplies no further source-native shared-system coordinate universally bounded by t in the exact full-semifilter object. Importing a theorem between rows of the model table requires assumptions not present in the target fibre.",
+      "discriminator_result": "NO_MATCH"
+    },
+    {
+      "source_id": "KARCHMER-1993-CIRCUIT-LOWER-BOUNDS-PRIMARY",
+      "citation": "Mauricio Karchmer, On Proving Lower Bounds for Circuit Size, 8th Structure in Complexity Theory Conference, 1993, pp. 112-118, DOI 10.1109/SCT.1993.336535.",
+      "url": "https://doi.org/10.1109/SCT.1993.336535",
+      "authority": "PRIMARY_METADATA_ABSTRACT_ONLY",
+      "access_status": "CANNOT_CHECK_FULL_PRIMARY_TEXT",
+      "payload_sha256": "CANNOT_MEASURE: full 1993 primary PDF bytes were not retrievable in this runtime",
+      "anchors": ["publisher/DBLP bibliographic record", "public abstract only"],
+      "observation": "Accessible primary/authoritative metadata and abstract confirm the finite-ultraproduct/filter framework and circuit-lower-bound setting, but not the complete theorem inventory of the 1993 paper.",
+      "difference_witness": "A secondary/current-source summary is insufficient for the frozen bounded-family completeness predicate. Absence of another relevant theorem in the inaccessible pages cannot be established.",
+      "discriminator_result": "CANNOT_CHECK"
+    },
+    {
+      "source_id": "NAKAYAMA-MARUOKA-1995-LOOP-CIRCUITS-PRIMARY",
+      "citation": "Katsutoshi Nakayama and Akira Maruoka, Loop Circuits and Their Relation to Razborov's Approximation Model, Information and Computation 119(2), 1995, pp. 154-159, DOI 10.1006/inco.1995.1083.",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0890540185710838",
+      "authority": "CANONICAL_PRIMARY_PUBLISHER_ABSTRACT",
+      "access_status": "PRIMARY_ABSTRACT_INSPECTED_FULL_TEXT_NOT_RETRIEVED",
+      "payload_sha256": "CANNOT_MEASURE: publisher full-text PDF bytes were not retrievable in this runtime",
+      "anchors": ["publisher abstract", "current-source comparison at Theorem 3 discussion"],
+      "observation": "The publisher abstract states that a generalized legitimate model distance is Theta(loop-circuit size). The current 2025 source explicitly notes technical differences: general functionals and Boolean circuit complexity there versus semi-filters and intersection complexity in the current exact characterization.",
+      "difference_witness": "The available primary abstract establishes the headline characterization but cannot certify that no other theorem in the six-page paper satisfies the frozen discriminator. The current paper's assumption-preserving adaptation is already Theorem 30/Theorem 3 and does not supply a separate missing coordinate.",
+      "discriminator_result": "CANNOT_CHECK"
+    }
+  ],
+  "verified_subfamily_result": {
+    "status": "NO_MATCH_IN_FULLY_INSPECTED_ECCC_RAZBOROV_WIGDERSON_SUBFAMILY",
+    "scope_limit": "Does not extend to a bounded-family negative theorem because Karchmer 1993 and Nakayama-Maruoka 1995 full primary texts were not fully inspected."
+  },
+  "overall_discriminator": "CANNOT_CHECK",
+  "episode_outcome": "BLOCKED",
+  "local_mathematical_failure": "NOT_REACHED_NO_CANDIDATE_GENERATED",
+  "local_to_global_gluing_failure": "NOT_REACHED_NO_LOCAL_PROOF_OR_CANDIDATE_TO_GLUE",
+  "source_failure_signature": [
+    "SOURCE_FAMILY_COMPLETENESS_BLOCKED_BY_KARCHMER_1993_FULL_PRIMARY_ACCESS",
+    "SOURCE_FAMILY_COMPLETENESS_BLOCKED_BY_NAKAYAMA_MARUOKA_1995_FULL_PRIMARY_ACCESS"
+  ],
+  "next_action": "Acquire and inspect exact full primary bytes for Karchmer 1993 and Nakayama-Maruoka 1995 under the already-frozen discriminator. Do not generate a new invariant/candidate until the bounded source-family inventory returns MATCH or NO_RELEVANT_SOURCE_BOUND.",
+  "recorded_at_utc": "2026-08-11T17:41:48Z",
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}
