@@ -1,216 +1,67 @@
 {
-  "schema_version": "bsd-v3-case-study-episode-v0",
-  "artifact_type": "TASK_EPISODE_SHADOW",
-  "episode_id": "EP-BSD-A1A1-V3-BRIDGE-AUDIT-20260811-R1",
+  "schema_version": "experience-episode-proposal-v0",
+  "artifact_type": "EXPERIENCE_EPISODE_PROPOSAL",
+  "proposal_id": "episode-proposal::bsd-a1a1-v3-bridge-audit-20260811-r1",
+  "status": "PROPOSAL_ONLY",
+  "source_role": "CONTRADICTION",
   "task_id": "RAKL-VERIFIED-DISCOVERY-BSD-ANALYTIC",
   "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
-  "authority": "PROPOSAL_SHADOW_SEARCH_PRIORITY_ONLY",
-  "framework_semantic_authority": {
-    "repository": "https://github.com/SzeChunYiu/RAKL.git",
-    "commit": "decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8",
-    "tree": "60d04e9d82e5b2d06d6f2739271830e8913a7768",
-    "note": "current main inspected for v3 semantics; not substituted into the application's frozen execution dependency pin"
-  },
-  "application_subject": {
-    "repository": "https://github.com/SzeChunYiu/RAKL_math.git",
-    "commit": "a071ef22d2478b1603567a9e90202ec3ce99fb59",
-    "tree": "efa9d5582ab373e6857f1f3cd6d90c3af8cd1512"
-  },
-  "execution_dependency_pin": {
-    "repository": "https://github.com/SzeChunYiu/RAKL.git",
-    "commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
-    "note": "current RAKL_math reproducibility pin; historical receipts remain bound to their recorded framework identities"
-  },
   "context_hash": "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d",
   "problem_signature": [
     "Birch and Swinnerton-Dyer conjecture",
     "complex analytic rank two",
     "anticyclotomic theta J-adic order",
-    "derived p-adic heights",
-    "Selmer/Iwasawa semisimplicity",
     "complex-to-anticyclotomic faithfulness/gluing bridge"
   ],
-  "fibre_contents_consulted": [
-    {
-      "kind": "CONTEXT",
-      "path": "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_THETA_ORDER_CONTEXT_FIBER_20260811.json",
-      "git_blob_sha": "58bfe3f766aef8513ded35ae265f3cfe00385347",
-      "effect": "kept complex s-order and anticyclotomic T/J-order as distinct coordinates"
-    },
-    {
-      "kind": "MEMORY",
-      "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1_RESEARCH_MEMORY_REVIEW_20260811.json",
-      "git_blob_sha": "4ebfa5d84e8751f4074c8edde20f0b86e602768c",
-      "effect": "retained warnings about rank-two nontriviality, Sha, and auxiliary-field dependence"
-    },
-    {
-      "kind": "MEMORY",
-      "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD-S001c1_RESEARCH_MEMORY_REVIEW_20260811.json",
-      "git_blob_sha": "aca786797427c59656a513ba7609c991c0249e75",
-      "effect": "used the parallel discrete/Selmer route as a near-miss showing exact arithmetic reconstruction can remain insensitive to complex analytic rank"
-    },
-    {
-      "kind": "TOOL",
-      "tool_id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
-      "path": "research/real_math/millennium/cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json",
-      "git_blob_sha": "12a77d4e9cf3b5704432ec4d9b6c84c5ad7fd967",
-      "effect": "selected only as a research-control audit; no literal mathematics transferred"
-    },
-    {
-      "kind": "PENDING_NONCANONICAL_PROPOSAL",
-      "reference": "RAKL_math PR #41",
-      "effect": "consulted its derived-height/semisimplicity source audit as a hypothesis-generating proposal, not canonical authority"
-    }
+  "action_trace": [
+    "read current RAKL v3 semantic authority without mutating the frozen application execution pin",
+    "compile canonical BSD analytic context plus parallel Selmer/discrete memory and scoped root-bridge audit tool",
+    "run bounded current-primary-source hypothesis-strength audit across complex, anticyclotomic p-adic, and Selmer coordinates",
+    "classify the result as a local-to-global relation gap and preserve competing diagnoses without theorem invention",
+    "record rich method telemetry, seven-axis saturation, and a Self-RAKL process hypothesis"
   ],
-  "operators_and_motifs": [
-    {
-      "id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
-      "status": "SELECTED",
-      "reason": "the live obstruction is whether exact root-critical order survives a representation/change-of-variable bridge"
-    },
-    {
-      "id": "PRIMARY_SOURCE_HYPOTHESIS_STRENGTH_AUDIT",
-      "status": "SELECTED",
-      "reason": "classify every proposed bridge by whether it imports Selmer-rank, main-conjecture, p-adic-BSD, or height-nondegeneracy strength"
-    },
-    {
-      "id": "CONTRASTIVE_NEAR_MISS",
-      "status": "SELECTED",
-      "reason": "compare exact p-primary/discrete arithmetic reconstructions and rank-one anticyclotomic advances that still do not close the complex-rank-two bridge"
-    },
-    {
-      "id": "NEW_INVARIANT_INVENTION",
-      "status": "REJECTED",
-      "reason": "relation/path axes are not saturated enough to justify a new arithmetic invariant before the faithfulness bridge is isolated"
-    },
-    {
-      "id": "NUMERICAL_RANK_TWO_CALIBRATION",
-      "status": "REJECTED_FOR_AUTHORITY",
-      "reason": "curve computations could falsify an overgeneralization but cannot prove the universal complex-to-J-order bridge"
-    }
-  ],
-  "search_policy_choice": {
-    "policy": "MAX_EPISTEMIC_CONTRACTION_BY_BRIDGE_AUDIT",
-    "why": "existing local machinery is already strong on both complex and p-adic/arithmetic sides; the smallest unresolved cut is the relation/gluing edge between their order/regulator coordinates"
-  },
-  "observations": [
-    {
-      "id": "OBS-BSD-V3-R1-1",
-      "statement": "Castella-Hsieh-style interpolation and functional-equation input separate positive/parity information from an exact upper bound on anticyclotomic J-order."
-    },
-    {
-      "id": "OBS-BSD-V3-R1-2",
-      "statement": "Derived-height and anticyclotomic main-conjecture machinery controls p-adic/Iwasawa leading data at substantial arithmetic strength; the audited statements do not turn bare complex analytic rank two into maximal height nondegeneracy."
-    },
-    {
-      "id": "OBS-BSD-V3-R1-3",
-      "statement": "Kim-Pollack-style exact p-primary Selmer reconstruction from discrete data is a strong near-miss because it is explicitly not an arbitrary-rank complex analytic-order theorem."
-    },
-    {
-      "id": "OBS-BSD-V3-R1-4",
-      "statement": "Recent anticyclotomic Euler-system/diagonal-cycle advances located in the bounded freshness scan remain rank-one or assume Selmer/Iwasawa hypotheses and do not close the target rank-two bridge."
-    },
-    {
-      "id": "OBS-BSD-V3-R1-5",
-      "statement": "The open PR #41 mixes a conceptual framework upgrade with the application's frozen execution pin, and its exact-head CI consequently fails on pin/provenance invariants; semantic framework authority and execution dependency identity are separate coordinates."
-    }
-  ],
-  "verification_performed": [
-    "read current RAKL main v3 experience/API/evaluation contracts",
-    "read current RAKL_math BSD root, active context, dual-memory records, and pending analytic route",
-    "fresh bounded primary-source search through 2025-2026 anticyclotomic/Selmer/Euler-system literature",
-    "inspected PR #41 exact-head CI logs: 219 passed / 5 failed, with pin/provenance and whitespace failures separated from mathematics"
-  ],
-  "outcome": "PARTIAL_SUCCESS",
-  "mathematical_result_scope": "SOURCE_BOUND_ROUTE_REFINEMENT_NO_THEOREM",
-  "gluing_assessment": {
-    "classification": "LOCAL_TO_GLOBAL_RELATION_GAP",
-    "local_sections": [
-      "complex analytic s-order information",
-      "anticyclotomic J-order / derived-height filtration information",
-      "p-primary Selmer/discrete reconstruction information"
-    ],
-    "missing_interface": "a non-circular theorem preserving the root-critical rank/order coordinate across the complex-to-anticyclotomic/arithmetic bridge under assumptions weaker than BSD-strength arithmetic input",
-    "grants_solution_authority": false
-  },
+  "reported_outcome": "PARTIAL_SUCCESS",
   "residual_signature": [
-    "complex-to-anticyclotomic order/regulator faithfulness remains unproved in the audited source set",
-    "derived-height nondegeneracy / Iwasawa semisimplicity is an exposed candidate bridge coordinate but is not derived from complex analytic rank two",
-    "local strong results do not glue to the BSD rank statement without a new relation theorem",
-    "application execution pin remains intentionally distinct from current framework semantic authority"
+    "no audited non-circular theorem transports exact complex analytic rank two to the required anticyclotomic regulator/height nondegeneracy or J-order upper bound",
+    "local complex, p-adic, and Selmer successes do not yet glue through a verified root-preserving interface",
+    "semantic framework authority and frozen execution dependency identity remain separate process coordinates"
   ],
-  "failure_partition": {
-    "mathematical": [
-      "missing complex-s to anticyclotomic-J leading-order/regulator preservation theorem"
-    ],
-    "representation": [
-      "treating s-order and J-order as one scalar would hide the live coordinate mismatch"
-    ],
-    "gluing": [
-      "strong local complex, p-adic, and Selmer statements lack a verified root-preserving interface"
-    ],
-    "retrieval": [],
-    "source_provenance": [
-      "bounded search found no source closing the bridge; absence is not a nonexistence claim"
-    ],
-    "verification_tooling": [
-      "PR #41 execution-pin mutation breaks historical provenance tests and diff-check"
-    ]
-  },
-  "saturation_vector": {
-    "KNOWLEDGE": {
-      "state": "OPEN",
-      "note": "fresh source discovery remains possible"
+  "source_bindings": [
+    {
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "commit_sha": "ff8cafad46bba0214ad55ae449d3da3ac872d068",
+      "tree_sha": "39c4ea13faebd328a8af28d9aec9be6e6b34fc3f",
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_V3_METHOD_TELEMETRY_20260811.json",
+      "git_blob_sha": "e829f102744c3f5cbe81eec6430fbf005d47d4c9",
+      "content_sha256": "c7aa1de9097c3d6b87ac387c8de45aedcd23153fa6e1613be08f80f45f66c238"
     },
-    "OPERATOR": {
-      "state": "LOCALLY_FLAT",
-      "note": "functional equation, interpolation, main-conjecture, and discrete-reconstruction families do not by themselves close the bridge"
+    {
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "commit_sha": "ff8cafad46bba0214ad55ae449d3da3ac872d068",
+      "tree_sha": "39c4ea13faebd328a8af28d9aec9be6e6b34fc3f",
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_V3_COMPLEX_ANTICYCLOTOMIC_BRIDGE_AUDIT_20260811.md",
+      "git_blob_sha": "2ba6610260b2e0484a6a7e1e9be9ea98a35c0c1b",
+      "content_sha256": "598b8ff92d6f65a260ce8b328f9b361cad629488feb3d284a2905f87e514fbe1"
     },
-    "EXPERIENCE_PATTERN": {
-      "state": "OPEN",
-      "note": "surrogate/root-coordinate failures are recurring but need more prospective episodes"
-    },
-    "OBSTRUCTION": {
-      "state": "REOPENED",
-      "note": "obstruction sharpened from theta upper bound to complex-anticyclotomic faithfulness/nondegeneracy"
-    },
-    "RELATION": {
-      "state": "REOPENED",
-      "note": "the missing relation is now the primary active coordinate"
-    },
-    "PATH": {
-      "state": "REOPENED",
-      "note": "next path should test independent derivation of regulator/height nondegeneracy or an exact complex-to-J comparison"
-    },
-    "META_METHOD": {
-      "state": "REOPENED",
-      "note": "semantic framework authority versus frozen execution pin needs explicit telemetry/governance separation"
+    {
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "commit_sha": "ff8cafad46bba0214ad55ae449d3da3ac872d068",
+      "tree_sha": "39c4ea13faebd328a8af28d9aec9be6e6b34fc3f",
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/08_reviews/RAKL_METHOD_CASE_STUDY_BSD_ANALYTIC_20260811.md",
+      "git_blob_sha": "b2e9b059fcfc1994266ab08a1ca40bc9512b7b55",
+      "content_sha256": "eb5ab736d449fd1ec97db08482c474c41ff9968978a669b05db319d39e614bce"
     }
-  },
-  "novelty_classification": {
-    "class": "UNRESOLVED",
-    "reason": "v3 structural novelty classes are assigned to verified solutions; this episode is a route diagnostic, not a verified solution"
-  },
-  "effort_proxy": {
-    "primary_source_families_checked": 7,
-    "canonical_application_artifacts_consulted": 4,
-    "pending_noncanonical_branches_consulted": 1,
-    "ci_run_logs_inspected": 1
-  },
-  "next_action": "freeze a fresh strict BSD-A1a1b child only after resolving the parent/CI lineage; its first discriminator should ask whether any source theorem derives anticyclotomic derived-height/regulator nondegeneracy or an exact J-order upper bound from complex analytic rank two without importing the desired arithmetic conclusion",
-  "recorded_at_utc": "2026-08-11T10:54:52Z",
-  "evidence_pointers": [
-    "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_THETA_ORDER_CONTEXT_FIBER_20260811.json",
-    "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD-S001c1_RESEARCH_MEMORY_REVIEW_20260811.json",
-    "research/real_math/millennium/cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json",
-    "RAKL_math PR #41 and GitHub Actions run 31481324706",
-    "Castella-Hsieh, arXiv:1809.09066 / Forum Math. Sigma 10 (2022)",
-    "Howard, arXiv:1202.6343",
-    "Castella-Hsu-Kundu-Lee-Liu, arXiv:2308.10474",
-    "Bertolini-Longo-Venerucci, arXiv:2306.17784",
-    "Kim-Pollack, arXiv:2505.09121",
-    "Marannino, arXiv:2507.22755",
-    "Shii, arXiv:2503.09034"
   ],
-  "artifact_hash": "sha256:d25761653b6648822164f8a3963c36e58ab9396f4c3035230f97af1f56b92d55"
+  "authority_contract": {
+    "effective_authority": "PROPOSAL_ONLY",
+    "allowed_effect": "SEARCH_PRIORITY_ONLY",
+    "grants_tool_authority": false,
+    "grants_proof_authority": false,
+    "grants_gluing_authority": false,
+    "grants_theorem_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false
+  },
+  "recorded_at_utc": "2026-08-11T11:13:53Z",
+  "artifact_hash": "sha256:1ea12f3f8b1cc959017aae1f7c4050f1723fbd76880025f701a250d2f3447577"
 }
