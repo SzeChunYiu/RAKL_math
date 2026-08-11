@@ -39,6 +39,9 @@ FINAL_VALIDATION = (
 POSTMERGE_VALIDATION = (
     BASE / "05_oracles/NS_B1a_C001_PR51_POSTMERGE_INVARIANCE_20260811.json"
 )
+DIFF_SCOPE_VALIDATION = (
+    BASE / "05_oracles/NS_B1a_C001_PR55_DIFF_SCOPE_CORRECTION_20260811.json"
+)
 FRAMEWORK = ROOT / "framework/RAKL"
 RETROSPECTIVE_AUTHORITY = (
     "RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / "
@@ -90,6 +93,82 @@ def _normalized_repository(value: str) -> str:
     if value.startswith("git@github.com:"):
         value = "https://github.com/" + value.removeprefix("git@github.com:")
     return value
+
+
+def _registered_ns_whitespace_scope_errors(
+    receipt: dict,
+    *,
+    repository: Path = ROOT,
+    live_main_ref: str = "origin/main",
+) -> tuple[str, ...]:
+    """Validate only the immutable PR51 delta, never an arbitrary descendant diff."""
+
+    def git(*args: str, check: bool = True) -> subprocess.CompletedProcess[str]:
+        return subprocess.run(
+            ["git", "-C", str(repository), *args],
+            check=check,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+
+    errors: list[str] = []
+    integration_base = receipt["integration_base"]["commit"]
+    repaired_pr_head = receipt["repaired_pr_head"]["commit"]
+    post_merge = receipt["post_merge"]["commit"]
+    context = receipt["attribute_context"]
+    snapshot_path = context["snapshot_path"]
+    expected_hard_breaks = context.get(
+        "expected_historical_base_hard_break_count", 3
+    )
+
+    for role, commit in (
+        ("integration base", integration_base),
+        ("repaired PR head", repaired_pr_head),
+        ("post-merge", post_merge),
+    ):
+        if git("cat-file", "-e", f"{commit}^{{commit}}", check=False).returncode != 0:
+            errors.append(f"missing whitespace-scope commit: {role}")
+
+    if errors:
+        return tuple(errors)
+
+    if git(
+        "merge-base", "--is-ancestor", post_merge, live_main_ref, check=False
+    ).returncode != 0:
+        errors.append("live main does not descend from registered whitespace-policy merge")
+
+    historical = git(
+        f"--attr-source={integration_base}",
+        "diff",
+        "--check",
+        f"{integration_base}...{repaired_pr_head}",
+        check=False,
+    )
+    historical_diagnostics = [
+        line
+        for line in historical.stdout.splitlines()
+        if line and not line.startswith("+")
+    ]
+    if historical.returncode == 0:
+        errors.append("registered historical snapshot hard breaks unexpectedly absent")
+    elif (
+        len(historical_diagnostics) != expected_hard_breaks
+        or not all(line.startswith(f"{snapshot_path}:") for line in historical_diagnostics)
+    ):
+        errors.append("registered historical whitespace failures changed scope")
+
+    repaired = git(
+        f"--attr-source={post_merge}",
+        "diff",
+        "--check",
+        f"{integration_base}...{repaired_pr_head}",
+        check=False,
+    )
+    if repaired.returncode != 0:
+        errors.append("registered NS delta whitespace defect")
+
+    return tuple(errors)
 
 
 def _final_provenance_errors(
@@ -331,6 +410,7 @@ def _postmerge_invariance_errors(receipt: dict) -> tuple[str, ...]:
         ).stdout.strip()
         if not postmerge_attr.endswith(context["post_merge_attribute"]):
             errors.append("post-merge attribute mismatch")
+    errors.extend(_registered_ns_whitespace_scope_errors(receipt))
     return tuple(errors)
 
 
@@ -628,7 +708,7 @@ def test_whitespace_policy_preserves_only_the_immutable_snapshot_exception() -> 
     assert current_main_attr.endswith("whitespace: -trailing-space")
     assert base_attr.endswith("whitespace: unspecified")
 
-    assert _git("diff", "--check", "origin/main...HEAD", check=False).returncode == 0
+    assert _registered_ns_whitespace_scope_errors(postmerge) == ()
     base_context = _git(
         f"--attr-source={integration_base}",
         "diff",
@@ -654,6 +734,147 @@ def test_whitespace_policy_preserves_only_the_immutable_snapshot_exception() -> 
         "EXPECTED_CONTEXTUAL_FAILURE_IMMUTABLE_SNAPSHOT_TRAILING_WHITESPACE"
     )
     assert receipt_context["context_free_clean_claim"] is False
+
+
+def test_registered_ns_whitespace_scope_ignores_foreign_future_descendant_but_rejects_registered_defect(
+    tmp_path: Path,
+) -> None:
+    repository = tmp_path / "synthetic-repository"
+    repository.mkdir()
+
+    def git(*args: str, check: bool = True) -> subprocess.CompletedProcess[str]:
+        return subprocess.run(
+            ["git", "-C", str(repository), *args],
+            check=check,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+
+    def commit(message: str) -> str:
+        git("add", "-A")
+        git("commit", "-q", "-m", message)
+        return git("rev-parse", "HEAD").stdout.strip()
+
+    git("init", "-q")
+    git("config", "user.name", "RAKL assurance test")
+    git("config", "user.email", "assurance@example.invalid")
+    (repository / "README.md").write_text("base\n", encoding="utf-8")
+    integration_base = commit("base")
+
+    snapshot_path = (
+        "research/real_math/millennium/navier_stokes/04_candidates/negative_history/"
+        "NS_B1a_C001_PR19_RESULT_SNAPSHOT_9B6B8AE.md"
+    )
+    snapshot = repository / snapshot_path
+    snapshot.parent.mkdir(parents=True)
+    snapshot.write_text("first  \nsecond  \nthird  \n", encoding="utf-8")
+    (repository / ".gitattributes").write_text(
+        f"{snapshot_path} whitespace=-trailing-space\n", encoding="utf-8"
+    )
+    repaired_pr_head = commit("registered NS repair")
+
+    foreign_path = repository / "research/foreign/receipt-bound-history.md"
+    foreign_path.parent.mkdir(parents=True)
+    foreign_path.write_text("foreign immutable bytes  \n", encoding="utf-8")
+    future_descendant = commit("unrelated future receipt history")
+    assert git(
+        "diff", "--check", f"{integration_base}...{future_descendant}", check=False
+    ).returncode != 0
+
+    receipt = {
+        "integration_base": {"commit": integration_base},
+        "repaired_pr_head": {"commit": repaired_pr_head},
+        "post_merge": {"commit": repaired_pr_head},
+        "attribute_context": {
+            "snapshot_path": snapshot_path,
+            "expected_historical_base_hard_break_count": 3,
+        },
+    }
+    assert _registered_ns_whitespace_scope_errors(
+        receipt,
+        repository=repository,
+        live_main_ref=future_descendant,
+    ) == ()
+
+    git("checkout", "-q", "-b", "defective-registered-delta", integration_base)
+    snapshot.parent.mkdir(parents=True)
+    snapshot.write_text("first  \nsecond  \nthird  \n", encoding="utf-8")
+    (repository / ".gitattributes").write_text(
+        f"{snapshot_path} whitespace=-trailing-space\n", encoding="utf-8"
+    )
+    ns_defect = repository / "research/real_math/millennium/navier_stokes/defect.md"
+    ns_defect.parent.mkdir(parents=True, exist_ok=True)
+    ns_defect.write_text("registered defect  \n", encoding="utf-8")
+    defective_head = commit("defective registered NS repair")
+    defective_receipt = copy.deepcopy(receipt)
+    defective_receipt["repaired_pr_head"]["commit"] = defective_head
+    defective_receipt["post_merge"]["commit"] = defective_head
+    assert "registered NS delta whitespace defect" in (
+        _registered_ns_whitespace_scope_errors(
+            defective_receipt,
+            repository=repository,
+            live_main_ref=defective_head,
+        )
+    )
+
+
+def test_pr55_diff_scope_successor_receipt_is_self_hashed_and_source_bound() -> None:
+    receipt = _load(DIFF_SCOPE_VALIDATION)
+    _assert_self_hash(receipt)
+    parent = _load(POSTMERGE_VALIDATION)
+
+    assert receipt["framework_pin"] == (
+        "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
+    )
+    assert receipt["parent_receipt"]["artifact_hash"] == parent["artifact_hash"]
+    assert receipt["registered_ns_scope"] == {
+        "integration_base": parent["integration_base"]["commit"],
+        "repaired_pr_head": parent["repaired_pr_head"]["commit"],
+        "post_merge": parent["post_merge"]["commit"],
+    }
+    assert receipt["bounded_root_cause"] == (
+        "PR55 made a historical NS invariant depend on git diff --check "
+        "origin/main...HEAD, so unrelated future receipt-bound whitespace outside the "
+        "registered PR51 delta could fail NS assurance"
+    )
+
+    source = receipt["correction_test_source"]
+    assert _git("rev-parse", f'{source["commit"]}^{{tree}}').stdout.strip() == source[
+        "tree"
+    ]
+    source_object = f'{source["commit"]}:{source["path"]}'
+    assert _git("rev-parse", source_object).stdout.strip() == source["git_blob_sha"]
+    raw = _git_bytes("show", "--no-textconv", "--no-ext-diff", source_object).stdout
+    assert "sha256:" + hashlib.sha256(raw).hexdigest() == source["raw_sha256"]
+
+    reproduction = receipt["future_descendant_reproduction"]
+    assert reproduction["application_commit"] == (
+        "14ec86f656fe14218beeb7808da51890de306477"
+    )
+    assert reproduction["old_assertion_exit_code"] == 2
+    assert len(reproduction["diagnostics"]) == 3
+    assert all("p_vs_np" in value for value in reproduction["diagnostics"])
+    assert receipt["validation"] == {
+        "validation_commit": "7688b544438bb098158f8ea470df35faa4d54d13",
+        "validation_tree": "6f9b781243774ba12c0894fc5dc4eeab8319cb53",
+        "integrated_main": "d7f75d6aeb6b04a9586b5e684875460ab42ae0f8",
+        "focused_command": (
+            "python tools/run_application_tests.py --framework framework/RAKL -- "
+            "tests/math_applications/"
+            "test_navier_stokes_ns_b1a_c001_pressure_tail.py -vv"
+        ),
+        "focused_passed": 14,
+        "full_command": (
+            "python tools/run_application_tests.py --framework framework/RAKL -- -vv"
+        ),
+        "full_passed": 223,
+    }
+    assert receipt["authority"] == (
+        "DIFF_SCOPE_CORRECTION / ASSURANCE_ONLY / "
+        "NO_NAVIER_STOKES_ROOT_EVIDENCE / NO_P_VS_NP_ROOT_EVIDENCE / "
+        "ROOT_AUTHORITY_NONE"
+    )
 
 
 def test_pr51_postmerge_receipt_binds_immutable_integration_semantics() -> None:
