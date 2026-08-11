@@ -1,0 +1,219 @@
+{
+  "record_type": "RAKL_CYCLE_METRICS",
+  "schema_version": "rakl-cycle-metrics-v3-proposal-shadow-r3",
+  "cycle_id": "NS-B1a3b1a1-R3-C001",
+  "atom_id": "NS-B1a3b1a1",
+  "framework": {
+    "method": "RAKL Verified Discovery Method",
+    "version": "3.0.0",
+    "method_spec_version": "2026-08-07.3",
+    "git_sha": "bf94d16847971069912501e9a63f0e97a1e3e159",
+    "source_of_truth": "SzeChunYiu/RAKL main read before mathematical candidate work"
+  },
+  "rakl_math": {
+    "base_sha": "350861b1c2755033893068e5519b8b06a6315aa6",
+    "semantic_head_sha": "9eb82327a0f48fa5cdaf71beba866782303ba7f1",
+    "branch": "research/navier-ns-b1a3b1a1-r3-packet-multiplicity",
+    "pre_state_fingerprint": "git-tree:c779c3bb98a24a70054571b9c63a46673c711cec",
+    "post_state_fingerprint": "git-tree:778f88831cd692e46f043a5bd82731232d1dd304",
+    "post_state_fingerprint_scope": "semantic materialization checkpoint after candidate, shadow memory, closed trace and case study, before the metrology receipt itself; receipt-only metadata is excluded to avoid self-reference"
+  },
+  "active_atom_and_fibre": {
+    "problem_signature": "whole-space 3D incompressible Navier-Stokes; test whether same-slab finite-I plus uniformly controlled scale-critical velocity can force uniform-in-time global vorticity L^{3/2,infinity} amplitude",
+    "fibre_snapshot_hash": "sha256:5fcac58aaeec6abba3faf07d37ec7e94b9fbc5a180763082afa2d881aa07cdaf",
+    "pre_action_packet_hash": "sha256:635ebc376d7d502ff47553a0979e1a7385322ec86b96d46cfa45dbb5ad0189c0",
+    "closed_trace_tail_hash": "sha256:d9291e1592814216199b5d02c6489704b5e2e8336304a27e501a0fdacacb448a"
+  },
+  "canonical_method_specs_surfaces_invoked": [
+    "proposal_hygiene.retrieval.query_and_register",
+    "proposal_hygiene.memory.bind_packet",
+    "proposal_hygiene.trace.open_trace",
+    "proposal_hygiene.context.freeze_math_context_fibre",
+    "proposal_hygiene.review.open_expert_cell",
+    "proposal_hygiene.candidate.open_candidate",
+    "proposal_hygiene.source.bind_source",
+    "proposal_hygiene.source_audit.run",
+    "proposal_hygiene.analogue.record_transfer",
+    "proposal_hygiene.saturation.audit",
+    "proposal_hygiene.method_basis.audit",
+    "proposal_hygiene.adversarial.run",
+    "verification.structured.run"
+  ],
+  "memory_retrieval": {
+    "total_retrieved_count": 9,
+    "selected_count": 7,
+    "rejected_count": 2,
+    "episode_memory": {
+      "retrieved_count": 1,
+      "ids": [
+        "NS-B1a3b1-C001-R2"
+      ],
+      "selected_ids": [
+        "NS-B1a3b1-C001-R2"
+      ],
+      "rejected_ids": []
+    },
+    "failure_memory": {
+      "retrieved_count": 6,
+      "ids": [
+        "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION",
+        "F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY",
+        "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+        "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+        "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+        "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"
+      ],
+      "selected_ids": [
+        "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION",
+        "F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY",
+        "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+        "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH"
+      ],
+      "rejected_ids": [
+        "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+        "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"
+      ]
+    },
+    "tool_memory": {
+      "retrieved_count": 0,
+      "ids": [],
+      "selected_ids": [],
+      "rejected_ids": []
+    },
+    "motif_memory": {
+      "retrieved_count": 0,
+      "ids": [],
+      "selected_ids": [],
+      "rejected_ids": []
+    },
+    "other_memory": {
+      "retrieved_count": 2,
+      "ids": [
+        "AB-TYPEI-ANCIENT",
+        "GRUJIC-2026-LOG-DEPLETION-v2"
+      ],
+      "selected_ids": [
+        "AB-TYPEI-ANCIENT",
+        "GRUJIC-2026-LOG-DEPLETION-v2"
+      ],
+      "rejected_ids": []
+    },
+    "missed_memory": "CANNOT_MEASURE: no exhaustive relevance-labelled retrieval universe is frozen",
+    "cross_millennium": {
+      "queried": false,
+      "count": 0,
+      "reason": "same-context discriminator required no cross-problem transfer; no DifferenceWitness-supported cross-Millennium query was needed"
+    }
+  },
+  "outcome": {
+    "status": "SCOPED_FALSIFIER_VERIFIED",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "residual_before": "UNKNOWN whether same-slab finite-I plus critical L3 velocity alone can force uniform global weak-L3/2 vorticity amplitude",
+    "residual_after": "universal same-slab producer implication PRUNED; history/frequency/tightness/profile-sensitive producer OPEN; local-to-global/ancient gluing OPEN; Type-II/root residuals unchanged",
+    "local_failure_category": "LOCAL_MATHEMATICAL_PRODUCER_INTERFACE / DERIVATIVE_ENDPOINT / GLOBAL_DISTRIBUTION_MULTIPLICITY",
+    "gluing_failure_category": "SEPARATE_OPEN_RESIDUAL; no new gluing failure minted"
+  },
+  "retained_semantic_novelty_counts": {
+    "KNOWLEDGE": 1,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 1,
+    "OBSTRUCTION": 1,
+    "RELATION": 1,
+    "PATH": 1,
+    "META_METHOD": 0,
+    "counting_policy": "semantic retained deltas only; files, commits, issues, prose and proposal labels are not counted as learning"
+  },
+  "saturation": {
+    "axes_reopened": [
+      "motif",
+      "failure",
+      "path"
+    ],
+    "axes_flattened": [
+      "motif",
+      "failure",
+      "operator",
+      "context",
+      "retrieval",
+      "method_basis"
+    ],
+    "transition_notes": {
+      "motif": "reopened for exact packet-multiplicity stress, then flattened after decisive falsifier",
+      "failure": "reopened universal amplitude producer, then flattened/pruned for same-slab contract",
+      "path": "reopened toward history/frequency anti-multiplicity producer; remains open",
+      "operator": "flattened; standard counterexample/source-composition basis sufficed",
+      "context": "flattened; no context expansion required",
+      "retrieval": "flattened; exact/same-fibre memory was sufficient",
+      "method_basis": "flattened; no new method family required"
+    }
+  },
+  "resource_proxies": {
+    "model_tokens": "CANNOT_MEASURE: automation runtime does not expose exact model-token telemetry",
+    "context_tokens": "CANNOT_MEASURE: automation runtime does not expose exact context-token telemetry",
+    "retrieval_calls_total": "CANNOT_MEASURE: transcript compaction prevents reconstruction of exact run-wide retrieval-call count",
+    "tool_calls_total": "CANNOT_MEASURE: transcript compaction prevents reconstruction of exact run-wide tool-call count",
+    "elapsed_wall_time": "CANNOT_MEASURE: the effective tool-work start time is not exposed reliably enough for an exact elapsed value",
+    "known_transient_tool_failures": 1,
+    "known_transient_tool_failure_ids": [
+      "GitHub.create_file TRACE initial attempt: SSL_CERTIFICATE_VERIFY_FAILED; immediate retry succeeded"
+    ],
+    "analytic_effort_proxy": {
+      "explicit_families_constructed": 1,
+      "load_bearing_inequality_groups_verified": 4,
+      "positive_time_trace_checks": 1,
+      "difference_witness_audits": 1,
+      "same_context_expert_roles": 4
+    }
+  },
+  "new_ids": {
+    "episode_ids": [
+      "TE-NS-B1a3b1a1-R3-C001"
+    ],
+    "diagnosis_ids": [
+      "DX-NS-B1a3b1a1-R3-PACKET-MULTIPLICITY"
+    ],
+    "lesson_ids": [
+      "L-NS-B1a3b1a1-HISTORY-OR-FREQUENCY-NEEDED"
+    ],
+    "failure_ids": [
+      "F-NS-B1a3b1a1-SAMESLAB-FINITEI-TO-WL32"
+    ],
+    "obstruction_ids": [
+      "OBS-NS-PACKET-MULTIPLICITY-L3-TO-WL32"
+    ],
+    "motif_ids": [
+      "MOTIF-DERIVATIVE-ENDPOINT-MULTIPLICITY"
+    ],
+    "tool_or_operator_ids": [
+      "OP-PACKET-MULTIPLICITY-STRESS"
+    ],
+    "operator_semantic_novelty_retained": 0,
+    "operator_novelty_note": "new proposal identifier labels a standard packet counterexample operator; it is not counted as a novel retained operator"
+  },
+  "successful_reuse_ids": [
+    "NS-B1a3b1-C001-R2",
+    "AB-2019-WEAK-SERRIN-TO-TYPE-I",
+    "KATO-1984-SMALL-L3-GLOBAL",
+    "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION",
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH"
+  ],
+  "gate_provenance_ci": {
+    "authority": "PROPOSAL_SHADOW_ONLY",
+    "promotion_gate": "NOT_ENTERED",
+    "exact_statement_binding": "SCOPED_CHILD_ONLY",
+    "root_proof_dag": "OPEN",
+    "dependency_axiom_verifier_audits": "NOT_SATISFIED_FOR_ROOT",
+    "isolated_recheck": "NOT_PERFORMED",
+    "bounded_root_novelty_search": "NOT_PERFORMED",
+    "isolated_mathematical_reviews": "0/3",
+    "same_context_expert_review": "4/4 roles cross-reviewed; zero independent-review credit",
+    "provenance_status": "PRIMARY_SOURCES_BOUND; CURRENT_RAKL_MAIN_BOUND",
+    "ci_status": "PENDING_PR_AT_RECEIPT_MATERIALIZATION"
+  },
+  "rakl_action_counterfactual": {
+    "changed_action_relative_to_uncontaminated_pre_memory_preference": "CANNOT_MEASURE",
+    "reason": "the active issue #148 and its parent routing were already produced by prior RAKL cycles before this run; no uncontaminated pre-memory preference was separately elicited in this run",
+    "observable_routing_influence": "YES: selected R2 representation success and B1a3b failures explicitly suppressed representation/topology retries and selected the producer falsifier"
+  },
+  "receipt_hash": "sha256:4cf74d7ae7e6b9aae19ba73ac0823d972d9da7cdc84a3b4f6b7fefb042ab6d0e"
+}
