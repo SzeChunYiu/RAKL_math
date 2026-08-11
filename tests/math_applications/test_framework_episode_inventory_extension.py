@@ -94,6 +94,15 @@ def test_parent_receipt_and_new_episode_are_content_bound_without_rewrite() -> N
     assert _load(PARENT_RECEIPT)["artifact_hash"] == parent["receipt_artifact_hash"]
 
     source = receipt["source_binding"]
+    assert source["repository_url"] == _load(PARENT_RECEIPT)["application_repository"]["repository"]
+    assert source["current_main_at_audit"] == receipt["triggering_failure"]["head_sha"]
+    assert _git(
+        ROOT,
+        "merge-base",
+        "--is-ancestor",
+        source["introduction_commit"],
+        source["current_main_at_audit"],
+    ) == ""
     episode_path = ROOT / source["path"]
     raw = episode_path.read_bytes()
     assert _git(ROOT, "show", f'{source["introduction_commit"]}:{source["path"]}', binary=True) == raw
@@ -101,6 +110,10 @@ def test_parent_receipt_and_new_episode_are_content_bound_without_rewrite() -> N
     assert hashlib.sha256(raw).hexdigest() == source["raw_sha256"]
     assert _git(ROOT, "show", "-s", "--format=%T", source["introduction_commit"]) == source["introduction_tree"]
     assert _git(ROOT, "rev-parse", f'{source["current_main_at_audit"]}^{{tree}}') == source["current_tree"]
+    assert _git(ROOT, "rev-parse", f'{source["current_main_at_audit"]}:{source["path"]}') == source["git_blob_sha"]
+    assert _git(ROOT, "show", f'{source["current_main_at_audit"]}:{source["path"]}', binary=True) == raw
+    assert parent["merge_commit"] == "b18fcd35855d67962e28036f4a445ab24d0c4406"
+    assert len(_git(ROOT, "rev-list", "--parents", "-n", "1", parent["merge_commit"]).split()) == 3
 
 
 def test_new_episode_passes_exact_pinned_schema_runtime_and_hash_contract() -> None:
@@ -144,3 +157,32 @@ def test_triggering_main_failure_is_preserved_as_exact_repair_provenance() -> No
         "failure_test": "tests/math_applications/test_framework_pr153_hash_contract_migration.py::test_episode_inventory_is_the_exact_frozen_19_object_audit",
         "failure_reason": "new strict-valid H4d1b episode was not registered as a post-migration inventory extension",
     }
+
+
+def test_schema_rejects_noncanonical_or_mutated_identity_fields() -> None:
+    receipt = _load(RECEIPT)
+    schema = _load(SCHEMA)
+    validator = Draft202012Validator(schema, format_checker=FormatChecker())
+    mutations = []
+    for section, field in (
+        ("source_binding", "current_main_at_audit"),
+        ("source_binding", "raw_sha256"),
+        ("framework_binding", "commit"),
+    ):
+        hostile = copy.deepcopy(receipt)
+        hostile[section][field] += "\n"
+        mutations.append(hostile)
+        hostile_integer = copy.deepcopy(receipt)
+        hostile_integer[section][field] = 7
+        mutations.append(hostile_integer)
+    hostile_hash = copy.deepcopy(receipt)
+    hostile_hash["artifact_hash"] += "\r\n"
+    mutations.append(hostile_hash)
+    hostile_authority = copy.deepcopy(receipt)
+    hostile_authority["authority_contract"]["grants_framework_authority"] = True
+    mutations.append(hostile_authority)
+    hostile_classification = copy.deepcopy(receipt)
+    hostile_classification["classification"] = "ARBITRARY_EXTENSION"
+    mutations.append(hostile_classification)
+    for hostile in mutations:
+        assert list(validator.iter_errors(hostile))

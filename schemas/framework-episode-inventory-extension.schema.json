@@ -90,9 +90,9 @@
     "artifact_hash": {"$ref": "#/$defs/prefixed_sha256"}
   },
   "$defs": {
-    "git_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
-    "raw_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
-    "prefixed_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "git_sha": {"type": "string", "minLength": 40, "maxLength": 40, "pattern": "^[0-9a-f]{40}$"},
+    "raw_sha256": {"type": "string", "minLength": 64, "maxLength": 64, "pattern": "^[0-9a-f]{64}$"},
+    "prefixed_sha256": {"type": "string", "minLength": 71, "maxLength": 71, "pattern": "^sha256:[0-9a-f]{64}$"},
     "all_false_authority": {
       "type": "object", "additionalProperties": false,
       "required": ["grants_mathematical_result", "grants_proof_authority", "grants_novelty_authority", "grants_millennium_root_authority", "grants_framework_authority", "grants_review_independence"],
