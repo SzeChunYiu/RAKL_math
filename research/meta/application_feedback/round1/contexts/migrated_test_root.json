@@ -1,0 +1,19 @@
+{
+  "allowed_evidence": [
+    "exact historical test bytes and commits",
+    "isolated pytest execution against framework pin 15f1c3a",
+    "exact FileNotFoundError path"
+  ],
+  "application_source_commit": "9ffa00dcb43639607bd58eca667eb83de4627a30",
+  "authority": "APPLICATION_OBSERVATION_ONLY",
+  "context_id": "context::rakl-math-feedback::migrated-test-root-v1",
+  "framework_pin": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+  "object": "repository-root resolution in tests migrated from RAKL/tests to RAKL_math/tests/math_applications",
+  "observation_boundary": "RH-SPEC-001 migrated strict-packet regression as a concrete witnessed instance; bootstrap later corrected the same structural pattern across the suite",
+  "quantity_of_interest": "whether the unchanged parents[1] root expression resolves the application artifact root after the directory-depth change",
+  "repair_commit": "264f6ce869d726fbfa064d1e49eb0db2a38bceda",
+  "scope_limits": [
+    "repository layout migration defects only",
+    "does not assess RH mathematical content"
+  ]
+}
