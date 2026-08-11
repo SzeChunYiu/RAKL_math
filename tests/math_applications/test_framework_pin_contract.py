@@ -18,6 +18,9 @@ HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
 FINAL_SYNC_RECEIPT = (
     APPLICATION_ROOT / "receipts/framework-pin-final-integration-bd1a276-20260811.json"
 )
+CURRENT_MAIN_SYNC_RECEIPT = (
+    APPLICATION_ROOT / "receipts/framework-pin-sync-4ee5e9a-20260811.json"
+)
 
 
 def _canonical_hash(value: object) -> str:
@@ -247,3 +250,111 @@ def test_final_framework_pin_integration_receipt_has_exact_counts_and_chronology
     assert live_main_tree == integration["live_main_tree"]
     assert receipt["verification"]["tests_passed"] == 307
     assert receipt["authority"].endswith("NO_MATHEMATICAL_AUTHORITY_CHANGE")
+
+
+def test_current_main_pin_sync_receipt_is_exact_historical_and_non_authorizing() -> None:
+    receipt = json.loads(CURRENT_MAIN_SYNC_RECEIPT.read_text(encoding="utf-8"))
+    assert set(receipt) == {
+        "schema_version",
+        "receipt_id",
+        "recorded_at",
+        "framework_delta",
+        "application_pin_integration",
+        "current_gate_preservation",
+        "verification",
+        "authority_contract",
+        "artifact_hash",
+    }
+    payload = copy.deepcopy(receipt)
+    payload["artifact_hash"] = ""
+    assert receipt["artifact_hash"] == _canonical_hash(payload)
+    assert receipt["schema_version"] == "framework-pin-current-main-sync-receipt-v1"
+    assert receipt["receipt_id"] == "RAKL-MATH-FRAMEWORK-PIN-SYNC-4EE5E9A-20260811"
+    assert datetime.fromisoformat(receipt["recorded_at"]) > datetime.fromisoformat(
+        receipt["verification"]["verified_at"]
+    )
+
+    delta = receipt["framework_delta"]
+    assert delta["current_commit"] == EXPECTED_FRAMEWORK_COMMIT
+    assert delta["remote_main_at_observation"] == EXPECTED_FRAMEWORK_COMMIT
+    assert datetime.fromisoformat(delta["remote_main_observed_at"]) == datetime.fromisoformat(
+        receipt["recorded_at"]
+    )
+    current_tree = subprocess.run(
+        ["git", "-C", str(FRAMEWORK_ROOT), "rev-parse", f'{delta["current_commit"]}^{{tree}}'],
+        check=True,
+        stdout=subprocess.PIPE,
+        text=True,
+    ).stdout.strip()
+    assert current_tree == delta["current_tree"]
+    commit_count = subprocess.run(
+        [
+            "git", "-C", str(FRAMEWORK_ROOT), "rev-list", "--count",
+            f'{delta["previous_commit"]}..{delta["current_commit"]}',
+        ],
+        check=True,
+        stdout=subprocess.PIPE,
+        text=True,
+    ).stdout.strip()
+    changed_paths = subprocess.run(
+        [
+            "git", "-C", str(FRAMEWORK_ROOT), "diff", "--name-only",
+            delta["previous_commit"], delta["current_commit"],
+        ],
+        check=True,
+        stdout=subprocess.PIPE,
+        text=True,
+    ).stdout.splitlines()
+    assert int(commit_count) == delta["commits_between"] == 3
+    assert changed_paths == delta["changed_paths"]
+    assert len(changed_paths) == delta["changed_files"] == 15
+
+    integration = receipt["application_pin_integration"]
+    assert integration["pin_commit"] == receipt["verification"]["subject_commit"]
+    for field, path in (
+        ("config_blob", "config/rakl-framework-pin.json"),
+        ("gitlink_commit", "framework/RAKL"),
+        ("pin_contract_test_blob", "tests/math_applications/test_framework_pin_contract.py"),
+    ):
+        observed = subprocess.run(
+            [
+                "git", "-C", str(APPLICATION_ROOT), "rev-parse",
+                f'{integration["pin_commit"]}:{path}',
+            ],
+            check=True,
+            stdout=subprocess.PIPE,
+            text=True,
+        ).stdout.strip()
+        assert observed == integration[field]
+    assert integration["gitlink_commit"] == EXPECTED_FRAMEWORK_COMMIT
+    assert integration["historical_receipts_rewritten"] is False
+    assert integration["mathematical_lesson_artifacts_mutated"] is False
+
+    gate = receipt["current_gate_preservation"]
+    for prefix, commit in (
+        ("previous", delta["previous_commit"]),
+        ("current", delta["current_commit"]),
+    ):
+        for field, path in (
+            ("task_episode_schema_blob", gate["task_episode_schema_path"]),
+            ("experience_substrate_blob", gate["experience_substrate_path"]),
+        ):
+            observed = subprocess.run(
+                ["git", "-C", str(FRAMEWORK_ROOT), "rev-parse", f"{commit}:{path}"],
+                check=True,
+                stdout=subprocess.PIPE,
+                text=True,
+            ).stdout.strip()
+            assert observed == gate[f"{prefix}_{field}"]
+    schema_raw = subprocess.run(
+        [
+            "git", "-C", str(FRAMEWORK_ROOT), "show",
+            f'{delta["current_commit"]}:{gate["task_episode_schema_path"]}',
+        ],
+        check=True,
+        stdout=subprocess.PIPE,
+    ).stdout
+    assert "storage_admission" in json.loads(schema_raw)["required"]
+    assert gate["storage_admission_required"] is True
+    assert gate["storage_admission_gate_weakened"] is False
+    assert not any(receipt["authority_contract"].values())

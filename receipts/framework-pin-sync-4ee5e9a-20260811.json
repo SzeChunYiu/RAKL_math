@@ -1,0 +1,68 @@
+{
+  "schema_version": "framework-pin-current-main-sync-receipt-v1",
+  "receipt_id": "RAKL-MATH-FRAMEWORK-PIN-SYNC-4EE5E9A-20260811",
+  "recorded_at": "2026-08-11T19:22:59Z",
+  "framework_delta": {
+    "repository": "https://github.com/SzeChunYiu/RAKL.git",
+    "previous_commit": "21ba1dd8289237ca5af7a3c5367b70cff7e0bb71",
+    "current_commit": "4ee5e9afe77870c684b798e0ed4c9fcee62a4365",
+    "current_tree": "e1835b9fb9dbe0fffdc6f455a586190f54ba8500",
+    "remote_main_observed_at": "2026-08-11T19:22:59Z",
+    "remote_main_at_observation": "4ee5e9afe77870c684b798e0ed4c9fcee62a4365",
+    "commits_between": 3,
+    "changed_files": 15,
+    "changed_paths": [
+      "benchmarks/scientific_transition_authority/FREEZE_RECEIPT_V1.json",
+      "benchmarks/scientific_transition_authority/PROTOCOL_V1.md",
+      "benchmarks/scientific_transition_authority/fixtures/ALR-01-prediction-not-mechanism.json",
+      "benchmarks/scientific_transition_authority/fixtures/ALR-06-missing-evidence-integrity-trap.json",
+      "benchmarks/scientific_transition_authority/fixtures/ALR-07-legitimate-mechanism-upgrade.json",
+      "benchmarks/scientific_transition_authority/fixtures/MANIFEST_V1.json",
+      "publication/papers/paper-01-epistemic-mechanics/main.pdf",
+      "publication/papers/paper-02-rakl-evidence-governed-research/main.pdf",
+      "publication/papers/paper-03-directional-structural-witnesses/main.pdf",
+      "publication/papers/paper-04-verified-discovery/main.pdf",
+      "publication/papers/paper-05-experience-governed-evolution/main.pdf",
+      "research/receipts/PUBLICATION_PDF_HARVEST_20260811.json",
+      "schemas/scientific-transition-fixture-v1.schema.json",
+      "src/rakl/authority_leakage_benchmark.py",
+      "tests/test_authority_leakage_fixtures_evaluator.py"
+    ]
+  },
+  "application_pin_integration": {
+    "previous_application_head": "5047176b2596eb12275d5c8e91698a44d828abd1",
+    "pin_commit": "7d853af1965f93b99146b8f67762d3fb5779107b",
+    "pin_commit_tree": "d76d61e2bce2189e9574cf5ad500073170e48ac7",
+    "config_blob": "f992b46619b498102572529661ab5b7dece35fd6",
+    "gitlink_commit": "4ee5e9afe77870c684b798e0ed4c9fcee62a4365",
+    "pin_contract_test_blob": "6005c7fd8076a89b737a3237e07715c75696f612",
+    "historical_receipts_rewritten": false,
+    "mathematical_lesson_artifacts_mutated": false
+  },
+  "current_gate_preservation": {
+    "task_episode_schema_path": "schemas/task-episode.schema.json",
+    "previous_task_episode_schema_blob": "62ab5b250c7cc075dbac7da47e3ca3ba9e32175e",
+    "current_task_episode_schema_blob": "62ab5b250c7cc075dbac7da47e3ca3ba9e32175e",
+    "experience_substrate_path": "src/rakl/experience_substrate.py",
+    "previous_experience_substrate_blob": "bac7467472fc93ca068bcc1195f763bd2b207b58",
+    "current_experience_substrate_blob": "bac7467472fc93ca068bcc1195f763bd2b207b58",
+    "storage_admission_required": true,
+    "storage_admission_gate_weakened": false
+  },
+  "verification": {
+    "subject_commit": "7d853af1965f93b99146b8f67762d3fb5779107b",
+    "verified_at": "2026-08-11T19:22:58Z",
+    "command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_framework_pin_contract.py tests/math_applications/test_framework_pin_b6d_source_inventory_assurance.py tests/math_applications/test_cross_xm005_pr71_retrospective_assurance.py tests/math_applications/test_framework_episode_inventory_extension.py tests/math_applications/test_framework_pr153_hash_contract_migration.py tests/math_applications/test_pnp_o9d12a2a1a1b1_source_inventory_r1.py tests/math_applications/test_pnp_o9d12a2a1a1b1_source_inventory_r1_v2.py",
+    "tests_passed": 33,
+    "exit_code": 0,
+    "status": "PASS_FOCUSED_CURRENT_PIN_AND_HISTORICAL_COMPATIBILITY"
+  },
+  "authority_contract": {
+    "grants_mathematical_authority": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_framework_evolution_authority": false,
+    "grants_review_independence": false,
+    "grants_strict_latest_process_credit_to_historical_results": false
+  },
+  "artifact_hash": "sha256:d8ba709fcd1cdfd0d6de40837aea014a3e291d082b457b3beae9fd60ffa77dae"
+}
