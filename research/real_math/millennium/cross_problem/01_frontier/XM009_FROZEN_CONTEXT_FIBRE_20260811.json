@@ -1,0 +1,66 @@
+{
+  "schema_version": "XM009-FROZEN-CONTEXT-FIBRE-v1",
+  "cycle_id": "XM009-BSD-PNP-GRADED-TRACE-20260811",
+  "active_atom": "XM009-BSD-S001c1a-TO-PNP-O9d12a2a1a1e",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "sha": "0772e74e2de6f031d760a5990ecc04eff204219b",
+    "method_version": "3.0.0",
+    "skill_manifest_version": "0.6.6"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "c48293364c6bdf7e0c5d93f5e01d889008c9eb61"
+  },
+  "source_atom": {
+    "lane": "birch_swinnerton_dyer",
+    "id": "BSD-S001c1a-COMPLEX-UPPER-BOUND",
+    "evidence": "RAKL_math PR #44",
+    "source_signature": "raw scalar vanishing order is polluted by explicit correction terms and extra augmentation zeros; richer graded/derived leading data is the live representation alternative"
+  },
+  "target_atom": {
+    "lane": "p_vs_np",
+    "id": "O9d12a2a1a1e",
+    "evidence": "RAKL_math PR #128 plus main O9d12a2a1a1b metrics",
+    "target_signature": "absolute fixed-row trace richness is saturated at zero intersection cost; next coordinate must be incremental/conditional with a legal one-intersection accounting law"
+  },
+  "common_abstraction": "A cumulative scalar/absolute observable can be saturated or inflated by nuisance/free degree-zero structure; a filtration or relative/graded coordinate is tempting only if its positive-degree layer remains target-sensitive.",
+  "enabling_assumptions": [
+    "The target construction classes form a monotone filtration F_0 subseteq F_1 subseteq ... by counted intersections, with F_0 equal to free-union closure.",
+    "The proposed target observable is fixed-row trace richness (cardinality/entropy/VC-type) derived only from traces on one row A.",
+    "The transfer uses only filtration/associated-graded search control, not BSD arithmetic facts."
+  ],
+  "disanalogies": [
+    "BSD augmentation ideals are algebraic ideals with multiplicative graded pieces; PNP construction classes are families of subsets under union/intersection and need not carry an analogous module structure.",
+    "Ota extra zeros alter augmentation order; PNP free-union closure can already saturate a trace space before any counted intersection.",
+    "A nontrivial associated graded in BSD does not imply a nontrivial graded trace coordinate in PNP."
+  ],
+  "predicted_principle": "Before adopting a graded/relative invariant to remove nuisance/free structure, verify both invariance to the nuisance operations and nondegeneracy of at least one root-relevant positive-degree layer.",
+  "cheapest_falsifier": "For B=G_{N,N}, A=R_1, let T_t(A) be traces on A of objects constructible with at most t counted intersections and arbitrary free unions. Check whether T_0(A)=P(A). If yes, monotonicity forces T_t(A)=P(A) for every t, so any cumulative fixed-row trace increment relative to t=0 is identically zero.",
+  "difference_witness": "The source filtration has potentially informative higher augmentation layers, while the target fixed-row trace filtration may be completely saturated in degree zero; the falsifier distinguishes those worlds before any analogy is credited.",
+  "consulted_repository_evidence": [
+    {"id":"PNP-PR128","authority":"PENDING","pointer":"RAKL_math PR #128","use":"target routing only"},
+    {"id":"PNP-MAIN-R2-METRICS","authority":"CANONICAL","pointer":"p_vs_np/10_case_study/RAKL_CYCLE_METRICS_O9d12a2a1a1b_20260811.json","use":"prior action-change and saturation evidence"},
+    {"id":"BSD-PR44","authority":"PENDING","pointer":"RAKL_math PR #44","use":"source transfer hypothesis only"},
+    {"id":"NS-MAIN-B1a3b1-R2","authority":"CANONICAL","pointer":"navier_stokes/10_case_study/NS-B1a3b1_C001_R2_RAKL_CYCLE_METRICS_20260811.json","use":"cross-lane gluing calibration"},
+    {"id":"HODGE-PR119","authority":"PENDING","pointer":"RAKL_math PR #119","use":"rejected as representation-granularity analogue already used by XM007"},
+    {"id":"RH-PR118","authority":"PENDING","pointer":"RAKL_math PR #118","use":"rejected as universal-exception analogue already saturated in XM008 routing"},
+    {"id":"YM-PR112","authority":"PENDING","pointer":"RAKL_math PR #112","use":"rejected as source-completeness/hidden-state family already saturated by XM006/XM008"}
+  ],
+  "search_policy": {
+    "id": "XM-HIGH-INFORMATION-NONREDUNDANT-TRANSFER-v1",
+    "selected_action": "BSD->PNP filtration/nondegeneracy falsifier",
+    "selection_rule": "prefer a transfer whose cheapest falsifier can kill a live post-PR128 coordinate family before hard-graph scoring and that is not the same abstraction as XM006/XM007/XM008"
+  },
+  "expert_cell": [
+    {"role":"complexity_theory","background":"communication/circuit lower bounds and discrete-space complexity","task":"check graph-space operation accounting and scope of trace falsifier"},
+    {"role":"arithmetic_geometry","background":"Iwasawa/Mazur-Tate augmentation filtrations","task":"police the BSD source abstraction and prevent literal arithmetic transfer"},
+    {"role":"structural_transfer","background":"category/filtration analogies across domains","task":"state common abstraction and DifferenceWitness"},
+    {"role":"adversarial_falsification","background":"counterexample-first mathematical auditing","task":"attack monotonicity/nondegeneracy assumptions"},
+    {"role":"formal_assurance","background":"content hashes, chronology, gate boundaries","task":"verify v3 proposal-only bindings and no authority escalation"},
+    {"role":"metrology","background":"research-method measurement and causal attribution","task":"separate retained novelty from shadow observations and compare lanes"},
+    {"role":"source_provenance","background":"primary-literature verification","task":"verify exact source claims after pre-action freeze"}
+  ],
+  "canonical_sha256": "5d5746454dbfeafa0984fcb5276a85e1c31e2c727e62593ab932e8e684f1dff8",
+  "context_sha256": "04b2f67a2568a5847e01e6f6b99b8979126f198a07853b3ff33b6643d8fa5450"
+}
