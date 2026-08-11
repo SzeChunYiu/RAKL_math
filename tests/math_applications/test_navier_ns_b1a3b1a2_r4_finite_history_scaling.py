@@ -1,3 +1,4 @@
+import hashlib
 import json
 from pathlib import Path
 
@@ -10,6 +11,29 @@ def _load(rel):
     return json.loads((NS / rel).read_text())
 
 
+def _episode_content_hash(ep):
+    payload = {
+        "episode_id": ep["episode_id"],
+        "task_id": ep["task_id"],
+        "atom_id": ep["atom_id"],
+        "context_hash": ep["context_hash"],
+        "problem_signature": ep["problem_signature"],
+        "fibre_snapshot_hash": ep["fibre_snapshot_hash"],
+        "operator_ids": ep["operator_ids"],
+        "action_trace": ep["action_trace"],
+        "observation_ids": ep["observation_ids"],
+        "verification_ids": ep["verification_ids"],
+        "outcome": ep["outcome"],
+        "residual_signature": ep["residual_signature"],
+        "evidence_pointers": ep["evidence_pointers"],
+        "timestamp": ep["timestamp"],
+        "cost": ep["cost"],
+        "storage_admission": ep["storage_admission"],
+    }
+    raw = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest()
+
+
 def test_r4_finite_history_scope_and_nonpromotion():
     episode = _load("07_memory/NS-B1a3b1a2_TASK_EPISODE_R4_20260811.json")
     delta = _load("07_memory/NS-B1a3b1a2_EXPERIENCE_DELTA_R4_20260811.json")
@@ -17,6 +41,8 @@ def test_r4_finite_history_scope_and_nonpromotion():
 
     assert episode["atom_id"] == "NS-B1a3b1a2"
     assert episode["authority"] == "PROPOSAL_SHADOW_ONLY"
+    assert episode["storage_admission"] == "PROPOSAL_SHADOW_STORED"
+    assert episode["artifact_hash"] == _episode_content_hash(episode)
     assert episode["outcome"] == "SCOPED_SOLVED_ROUTE_PRUNED_FIXED_FINITE_HISTORY"
     assert episode["residual_signature"] == "ANCIENT_INFINITE_HISTORY_OR_SCALE_RELATIVE_TIGHTNESS_STILL_OPEN"
     assert episode["independent_review_credit"] == "0/3"
