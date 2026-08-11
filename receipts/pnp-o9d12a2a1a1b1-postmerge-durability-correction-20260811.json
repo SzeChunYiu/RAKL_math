@@ -1,0 +1,37 @@
+{
+  "schema_version": "rakl-math-pnp-postmerge-durability-correction-v1",
+  "receipt_id": "RAKL-MATH-PNP-O9d12a2a1a1b1-POSTMERGE-DURABILITY-CORRECTION-20260811",
+  "recorded_at": "2026-08-11T17:29:07Z",
+  "failed_run": {
+    "run_id": 31517498431,
+    "merge_head": "88eb41a8038498295d23bd77810e9a7e9ae96e50",
+    "result": "FAIL",
+    "failed": 2,
+    "passed": 455,
+    "reason": "V4/V5 freeze-time tests treated the expected post-merge origin/main advance as a present-freeze PASS requirement."
+  },
+  "root_cause": {
+    "level": "R0_SOURCE_VERSION_ACCESS",
+    "classification": "HISTORICAL_FREEZE_TEST_NOT_DURABLE_AFTER_OWN_MERGE"
+  },
+  "repair": {
+    "durable_relation": "base/tree/ancestry/gitlink remain PASS",
+    "current_freeze_relation": "PASS only while origin/main equals frozen base; otherwise exact ORIGIN_MAIN_MOVED_BEFORE_FREEZE is expected",
+    "historical_receipts_modified": false,
+    "protected_checks_weakened": false
+  },
+  "verification": {
+    "focused_pnp_tests_passed": 14,
+    "exact_application_suite_passed": 457
+  },
+  "authority_contract": {
+    "candidate_proposed": false,
+    "mathematical_result": false,
+    "proof_authority": false,
+    "novelty_authority": false,
+    "independent_peer_review": false,
+    "p_vs_np_authority": false,
+    "framework_promotion_authority": false
+  },
+  "artifact_hash": "sha256:6b5c1ca35a7fef39de207326ebee1a713964a779ea36e8729e1021d24d02d105"
+}

@@ -332,9 +332,16 @@ def test_pnp_o9d12a2a1a1b1_pre_candidate_v5_schemas_reject_type_length_case_newl
 def test_pnp_o9d12a2a1a1b1_pre_candidate_v5_git_audit_executes_and_mutations_fail_closed() -> None:
     module = runner_module()
     source = valid_machine_fixture(module)["source_binding"]
-    assert module.audit_git_state(source, require_current_origin=True) == {
-        "verdict": "PASS", "checked_relations": 12, "current_origin_main_at_freeze": True, "worktree_framework_head_checked": True
+    assert module.audit_git_state(source, require_current_origin=False) == {
+        "verdict": "PASS", "checked_relations": 12, "current_origin_main_at_freeze": False, "worktree_framework_head_checked": True
     }
+    current_audit = module.audit_git_state(source, require_current_origin=True)
+    if module.git("rev-parse", "refs/remotes/origin/main") == module.BASE_COMMIT:
+        assert current_audit == {
+            "verdict": "PASS", "checked_relations": 12, "current_origin_main_at_freeze": True, "worktree_framework_head_checked": True
+        }
+    else:
+        assert current_audit == {"verdict": "FAIL", "reason": "ORIGIN_MAIN_MOVED_BEFORE_FREEZE"}
     mutations = [
         ("application_base_commit", "0" * 40), ("application_base_tree", "0" * 40),
         ("latest_main_at_freeze", "0" * 40), ("subject_tree", "0" * 40), ("framework_pin", "0" * 40),
