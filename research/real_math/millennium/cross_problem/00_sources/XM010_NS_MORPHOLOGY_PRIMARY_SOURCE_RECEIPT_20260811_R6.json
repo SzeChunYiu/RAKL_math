@@ -1,0 +1,47 @@
+{
+  "schema_version": "xm010-primary-source-receipt-v1",
+  "cycle_id": "XM010-PNP-NS-MORPHOLOGY-CONGRUENCE-20260811-R6",
+  "authority": "PRIMARY_SOURCE_SCOPE_ONLY",
+  "retrieved_at_utc": "2026-08-11T19:12:46Z",
+  "sources": [
+    {
+      "id": "arXiv:2607.08866v2",
+      "authors": "Zoran Grujic",
+      "title": "Logarithmic Depletion of Vortex Stretching and Singularity Evasion in the 3D Navier-Stokes Equations",
+      "version_date": "2026-07-13",
+      "selectors": [
+        "arXiv current-version record",
+        "HTML Definition 2.1",
+        "HTML Lorentz-space definition"
+      ],
+      "bound_claims": [
+        "The selected consumer is explicitly restricted to a critical point singularity centered at one spatial point with vorticity magnitude locally O(|x|^-2).",
+        "The paper factors the critical profile as omega=Phi |x|^-2 with bounded shape factor Phi.",
+        "A stated structural consequence is that, for large lambda, the vorticity superlevel set A_lambda(t) is contained in one ball of radius R <= C lambda^-1/2 with C independent of time.",
+        "The paper defines the L^{p,infinity} Lorentz norm using decreasing rearrangement."
+      ],
+      "role": "TARGET_MORPHOLOGY_AND_AMPLITUDE_CONSUMER"
+    },
+    {
+      "id": "arXiv:1811.00502",
+      "authors": "Dallas Albritton; Tobias Barker",
+      "title": "On local Type I singularities of the Navier-Stokes equations and Liouville theorems",
+      "selectors": [
+        "Theorem 1.1",
+        "equations (1.1)-(1.6) defining A,C,D,E,I"
+      ],
+      "bound_claims": [
+        "Type I suitable-weak singularity existence is equivalent to existence of a nontrivial mild bounded ancient solution with finite I.",
+        "I is the supremum of the scale-invariant A+C+D+E functionals over parabolic subcylinders.",
+        "The theorem is equation-specific; it does not by itself state the one-center critical-profile morphology consumed by Grujic v2."
+      ],
+      "role": "PRODUCER_STATE_SPACE_AND_PRIOR_NS_ROUTE"
+    }
+  ],
+  "scope_guard": [
+    "No claim that the current cross-problem hostile fields solve Navier-Stokes.",
+    "No claim that Grujic v2 morphology follows from finite I.",
+    "No claim beyond the cited current primary-source surfaces."
+  ],
+  "artifact_payload_sha256": "8e789b57787ed239eac387e8084da775a1162265c5ad8dce606662b5f3157b73"
+}
