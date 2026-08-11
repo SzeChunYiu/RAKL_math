@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rakl-math.invalid/schemas/lesson-proposal-v0.schema.json",
+  "title": "RAKL_math quarantined lesson proposal",
+  "description": "A support-and-contradiction-linked search-priority advisory, never a research tool or authority object.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "artifact_type",
+    "proposal_id",
+    "status",
+    "lesson_kind",
+    "trigger_signature",
+    "context_scope",
+    "advisory_action",
+    "expected_search_effect",
+    "boundaries",
+    "supporting_episode_proposal_ids",
+    "contradicting_episode_proposal_ids",
+    "falsifier",
+    "validation_obligations",
+    "memory_precedence",
+    "authority_contract",
+    "recorded_at_utc",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "lesson-proposal-v0"},
+    "artifact_type": {"const": "LESSON_PROPOSAL"},
+    "proposal_id": {"type": "string", "pattern": "^lesson-proposal::[A-Za-z0-9_.:-]+$"},
+    "status": {"const": "PROPOSAL_ONLY"},
+    "lesson_kind": {"enum": ["ROUTING", "DECOMPOSITION", "REPRESENTATION", "META_METHOD"]},
+    "trigger_signature": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "context_scope": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "advisory_action": {"type": "string", "minLength": 1},
+    "expected_search_effect": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "boundaries": {
+      "type": "array",
+      "minItems": 5,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "supporting_episode_proposal_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^episode-proposal::"}
+    },
+    "contradicting_episode_proposal_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^episode-proposal::"}
+    },
+    "falsifier": {"type": "string", "minLength": 1},
+    "validation_obligations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "memory_precedence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["framework_commit", "ordered_steps"],
+      "properties": {
+        "framework_commit": {"const": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"},
+        "ordered_steps": {
+          "const": [
+            "QUERY_CANONICAL_RESEARCH_TOOL_INVENTORY",
+            "QUERY_CANONICAL_FAILURE_LATTICE",
+            "FREEZE_EXPERIENCE_MEMORY_REVIEW",
+            "LOAD_QUARANTINED_EPISODE_AND_LESSON_PROPOSALS",
+            "APPLY_CAPPED_SEARCH_PRIORITY_ADVISORY",
+            "RECORD_NEXT_STEP_PROPOSED"
+          ]
+        }
+      }
+    },
+    "authority_contract": {"$ref": "#/$defs/authorityContract"},
+    "recorded_at_utc": {"type": "string", "format": "date-time"},
+    "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "authorityContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "effective_authority",
+        "allowed_effect",
+        "maximum_absolute_priority_delta",
+        "may_change_candidate_eligibility",
+        "may_override_canonical_memory",
+        "may_suppress_failure_warning",
+        "grants_tool_authority",
+        "grants_proof_authority",
+        "grants_gluing_authority",
+        "grants_theorem_authority",
+        "grants_framework_authority",
+        "grants_review_independence"
+      ],
+      "properties": {
+        "effective_authority": {"const": "PROPOSAL_ONLY"},
+        "allowed_effect": {"const": "SEARCH_PRIORITY_ONLY"},
+        "maximum_absolute_priority_delta": {"const": 0.1},
+        "may_change_candidate_eligibility": {"const": false},
+        "may_override_canonical_memory": {"const": false},
+        "may_suppress_failure_warning": {"const": false},
+        "grants_tool_authority": {"const": false},
+        "grants_proof_authority": {"const": false},
+        "grants_gluing_authority": {"const": false},
+        "grants_theorem_authority": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false}
+      }
+    }
+  }
+}
