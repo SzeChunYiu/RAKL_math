@@ -1,0 +1,28 @@
+{
+  "schema_version": "bsd-v3-failure-shadow-v1",
+  "artifact_type": "FAILURE_EXPERIENCE_SHADOW",
+  "failure_id": "F-BSD-A1A1-COMPLEX-HIGHER-GZ-TARGET-CELL-GAP-R4",
+  "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "episode_id": "EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4",
+  "authority": "OBSERVED_ONLY_PROPOSAL_SHADOW",
+  "context_hash": "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d",
+  "method_family": "EXACT_COMPLEX_HIGHER_DERIVATIVE_BRIDGE_SEARCH",
+  "falsifier": "Reject each apparent higher-Gross-Zagier bridge if derivative coordinate is p-adic rather than complex, complex derivative order is one rather than two, arithmetic geometry is function-field/Shtuka rather than number-field, or theorem imports rank/Selmer/Sha strength.",
+  "observed_result": "The bounded primary-source set produced adjacent-cell near-matches but no exact target-cell theorem.",
+  "diagnoses": [
+    {"id":"D-BSD-A1A1-HIGHER-GZ-ONTOLOGY-MISMATCH-R4","status":"SUPPORTED_STATIC_DIAGNOSIS","scope":"search/representation ontology","claim":"'higher' conflates derivative order, weight/cycle codimension, and p-adic deformation order"},
+    {"id":"D-BSD-A1A1-TARGET-CELL-THEOREM-ABSENT","status":"NOT_ESTABLISHED","scope":"literature-wide","claim":"No such theorem exists","reason":"bounded search lacks a coverage-complete universe"}
+  ],
+  "selected_diagnosis_id": "D-BSD-A1A1-HIGHER-GZ-ONTOLOGY-MISMATCH-R4",
+  "broken_assumptions": ["same word 'higher' does not imply same derivative coordinate/order","function-field arithmetic-intersection geometry does not automatically transfer to number fields","number-field first-derivative higher-cycle formulas do not imply a rank-two second-derivative formula","p-adic second derivatives do not identify complex s-second derivatives"],
+  "failure_separation": {"local_mathematical":"no exact target-cell theorem located; no candidate theorem was falsified and no impossibility was proved","local_to_global_gluing":"function-field higher-derivative relation and number-field plectic/Selmer arrows cannot be glued without a number-field complex-derivative carrier and a same-theory arithmetic-faithfulness comparison"},
+  "prior_failure_links": [
+    {"id":"F-BSD-A1A1-PLECTIC-NONVANISHING-RELATION-GAP-V3-RETROSPECTIVE","relation":"SAME_ROOT_RELATION_DIFFERENT_REPRESENTATION","effect":"changed routing toward direct complex higher-derivative carrier search"},
+    {"id":"F-XM001-POINTWISE-GAP-COLLAPSE","relation":"SCOPED_ANALOGY_WARNING_ONLY","effect":"required explicit coordinate-preservation check"}
+  ],
+  "obstruction_lesson_separation": {"new_obstruction_id":null,"obstruction_reason":"The target-cell gap sharpens the already registered complex-to-arithmetic relation obstruction rather than proving a new obstruction family.","new_lesson_id":null,"lesson_reason":"Ontology normalization is retained as route knowledge in this cycle but is not promoted to a reusable framework lesson without fresh reuse/validation."},
+  "residual_signature": "NUMBER_FIELD_WEIGHT2_COMPLEX_DERIVATIVE_ORDER2_TO_ROOT_FAITHFUL_ARITHMETIC_OBJECT",
+  "next_action": "query only the normalized target cell and exact comparison theorems; require a coverage receipt before any nonexistence claim",
+  "recorded_at_utc": "2026-08-11T18:26:10Z",
+  "artifact_hash": "sha256:5b8d4ef94df6534418c2b1eb0cba98d16e220dbeaf609052c135a4b96df99e2b"
+}
