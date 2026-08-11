@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "C025-PARALLEL-SYNTHESIS-20260811",
+  "candidate_id": "C025",
+  "atom_id": "O9d12a2a1a",
+  "synthesis_target": {
+    "repository": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "base_branch": "research/pnp-c025-joint-signature-20260811",
+    "base_head": "75c7cf1c55760b4ce74fbaabc1c6c87d59098c76",
+    "framework_authority_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
+  },
+  "chronology": {
+    "strict_parent_trace": "TRACE-O9d12a2a1a-STRICT-MIGRATION-REPAIRED-20260811",
+    "base_candidate_event": "O9d12a2a1a-E08",
+    "pre_result_registration_commit": "03a4cb9a0bce32374d79210d8b712670c11626a7",
+    "pre_result_registration_artifact_hash": "sha256:39378a50357fd3807d1ee9bcfbdec79e7cf4e5f379d256cfc28d3bf0cb2ce286",
+    "assurance_result_event": "O9d12a2a1a-PA-E03",
+    "synthesis_review_event": "O9d12a2a1a-E12"
+  },
+  "artifact_bindings": {
+    "pre_result_registration": {
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/C025_joint_binary_signature_calibration_preregistration.json",
+      "file_sha256": "eaadb5c39b438dbdee0f35cf6728ff5d067b04cde81835013cbfd084a7a68af2"
+    },
+    "canonical_negative_history": {
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_joint_signature_canonical_scope.md",
+      "file_sha256": "83d1cc7abf8da4cbd959893e99c084f778e1190f7b9433fc509a00e7d8c1aae9"
+    },
+    "assurance_addendum": {
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_full_semifilter_assurance_addendum.md",
+      "file_sha256": "b8571e58b6e0cb5485b49b1f1fdec30d3eb11c1107dc2f07ad50c53d488728d5"
+    },
+    "assurance_executable": {
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/joint_binary_signature_calibration.py",
+      "file_sha256": "55bb5708f0d492ed162d7f9a6aa4be90a3283302cef522d3007a3a9bd32a717b"
+    },
+    "assurance_result_receipt": {
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json",
+      "file_sha256": "23285e5ed3d36680a11a05ad7d04f1836595f59460d03945c39e7db26d51f60f"
+    },
+    "failure_memory": {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/C025_FAILURE_EXPERIENCE_DELTA_20260811.json",
+      "file_sha256": "4bb25167f2e66c1374204b5b638cf366f5f6d1202cec5526de5ab58db64d93e9"
+    },
+    "tool_memory": {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/C025_RESEARCH_TOOL_DELTA_20260811.json",
+      "file_sha256": "979e07b0ee52758272abacbc4bd74bd9296cd6fa4df6bad6ad5b909e658276f7"
+    },
+    "review": {
+      "path": "research/real_math/millennium/p_vs_np/08_reviews/SAME_CONTEXT_RESULT_REVIEW_C025_20260811.md",
+      "file_sha256": "a639ad232a074ed80cc64d9a5e34f0d0ffdc3683292a28aec4ec8687a7d887c6"
+    },
+    "trace_continuation": {
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a_C025_TRACE_CONTINUATION_20260811.json",
+      "file_sha256": "80dc6b087eafc40dd076dd1ce5f90302281428820823c79048c98c477aececc2"
+    },
+    "parallel_assurance_trace": {
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a_C025_PARALLEL_ASSURANCE_TRACE_20260811.json",
+      "file_sha256": "96353a5b28b201cabc8d8e16b10a373d11344bee4c8aeaceca226d9aa17037b8"
+    }
+  },
+  "result": {
+    "assurance_receipt_artifact_hash": "sha256:fcbdcdcb6a182705253b1cd0779316814c9791ceef549fc3f848023023a476eb",
+    "verdict": "PASS_SCOPED_CALIBRATION_WITH_CAPACITY_NO_GO",
+    "full_semifilter_counts": {
+      "2": 4,
+      "3": 18,
+      "4": 166
+    },
+    "ordered_cut_family_counts": {
+      "2": 5,
+      "3": 73,
+      "4": 273
+    },
+    "direct_vs_signature_mismatches": 0,
+    "constructive_and_low_order_cases": [
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      16,
+      17
+    ],
+    "route_effect": "PRESERVE_C009_BACKED_FIRST_ORDER_CANONICAL_COLLAPSE"
+  },
+  "identity_reconciliation": {
+    "canonical_candidate_id": "C025",
+    "canonical_failure_id": "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",
+    "canonical_tool_id": "T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION",
+    "parallel_provisional_failure_id": {
+      "id": "F-C025-FIRST-ORDER-CAPACITY-CEILING",
+      "disposition": "NOT_MINTED_ASSIMILATED_AS_SCOPED_EVIDENCE"
+    },
+    "parallel_provisional_tool_id": {
+      "id": "T-PNP-JOINT-SIGNATURE-CALIBRATION",
+      "disposition": "NOT_MINTED_ASSIMILATED_AS_EXECUTABLE_ASSURANCE"
+    },
+    "supersession_action": "NONE_NO_ACCEPTED_DUPLICATE_ID",
+    "file_policy": "BASE_NEGATIVE_HISTORY_FILES_PRESERVED_AND_EXTENDED; ASSURANCE_FILES_USE_DISTINCT_NAMES"
+  },
+  "method_lesson": {
+    "lesson_id": "ML-PNP-C025-REPAIR-THEN-CAPACITY-AUDIT",
+    "status": "PROPOSAL_ONLY_PENDING_CROSS_PROBLEM_RECURRENCE_AND_FRAMEWORK_ASSURANCE",
+    "framework_transport": "APPLICATION_FEEDBACK_BUNDLE_REQUIRED; MAXIMUM_IMPORT_AUTHORITY_QUARANTINED_PROPOSAL",
+    "transport_limit": "single P-vs-NP lineage; no independent cross-problem recurrence"
+  },
+  "claim_scope": {
+    "conditional_normalized_G_NEQ_full_semifilter_equivalence": "EXACT_LOCAL_ASSURANCE",
+    "source_normalization_beyond_canonical_G_NEQ": "NOT_ESTABLISHED",
+    "higher_order_closure_state": "NOT_TESTED",
+    "independent_review": "ABSENT",
+    "p_vs_np_root": "NO_AUTHORITY"
+  },
+  "authority": "SYNTHESIS_RECEIPT / MACHINE_READABLE_CONTENT_BINDING / SAME_CONTEXT_ONLY / COMPUTATION_IS_NOT_PROOF / NO_NOVELTY_CLAIM / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:03d8d14e029265ec4ba5949837e4a530a2fb462bed99ad31a736579230af1a48"
+}
