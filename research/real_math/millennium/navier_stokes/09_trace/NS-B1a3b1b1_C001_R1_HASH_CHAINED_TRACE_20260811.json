@@ -1,0 +1,86 @@
+{
+  "schema_version": "hash-chained-trace-v3-proposal-shadow-r1",
+  "atom_id": "NS-B1a3b1b1",
+  "records": [
+    {
+      "stage": "FIBRE_SNAPSHOT",
+      "prev_hash": "GENESIS",
+      "payload": {
+        "atom": "NS-B1a3b1b1",
+        "fibre_hash": "sha256:a9825cb4c0cef189694a6257e4366fb4959f3d5cba3b9200afa802b20c569f4a",
+        "selected_memory_ids": [
+          "EP-NS-B1a3b1b-C001-R1-20260811",
+          "F-NS-B1a3b1b-AMPLITUDE-DOES-NOT-SELECT-ONE-CORE-MORPHOLOGY",
+          "O-NS-B1a3b1b-ONE-CENTER-MORPHOLOGY-PRODUCER",
+          "F-NS-B1a3-PROFILE-LEAKAGE",
+          "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+          "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+        ]
+      },
+      "record_hash": "sha256:05fefac772587fe24ee439aaaf3ec49147d2ba257ba3385d5c1e23451bbf46fb"
+    },
+    {
+      "stage": "PRE_ACTION",
+      "prev_hash": "sha256:05fefac772587fe24ee439aaaf3ec49147d2ba257ba3385d5c1e23451bbf46fb",
+      "payload": {
+        "control_issue": "RAKL_math#153",
+        "policy": "context_lift_review + counterexample_harnessing",
+        "predeclared_success": "finite-cover restricted Lorentz bound with N^(2/3) loss and eventual absorption",
+        "predeclared_failure": "nonlocal one-center dependence or invalid quantifier scaling",
+        "chronology": "idea arose during bounded scoping before issue; no prospective hypothesis-generation credit"
+      },
+      "record_hash": "sha256:8fd6c9d94ca9c7441c194eceae74b26b4503f6769f79f2ac244b988df4667f79"
+    },
+    {
+      "stage": "PRE_CANDIDATE",
+      "prev_hash": "sha256:8fd6c9d94ca9c7441c194eceae74b26b4503f6769f79f2ac244b988df4667f79",
+      "payload": {
+        "operators": [
+          "finite-cover-context-lift",
+          "distribution-function-union-bound",
+          "translation-covariance-audit",
+          "DifferenceWitness",
+          "counterexample-first-N-scaling"
+        ],
+        "primary_source_selectors": [
+          "Grujic v2 Definition 2.1",
+          "Grujic v2 Theorem 4.1",
+          "Grujic v2 equations (23)-(25)",
+          "Barker 2111.14776v2",
+          "Albritton-Barker 1811.00502v2"
+        ],
+        "verification_plan": [
+          "prove weak-L3/2 finite-union bound from distributions",
+          "verify translation covariance of localized theorem proof",
+          "check equations 23-25 consume only restricted alpha norm",
+          "separate producer and gluing residuals"
+        ]
+      },
+      "record_hash": "sha256:467324b081739e0f789a2b706c1c6ce9a0c9cde8e26d97d60cfc77121940ea7d"
+    },
+    {
+      "stage": "RESULT",
+      "prev_hash": "sha256:467324b081739e0f789a2b706c1c6ce9a0c9cde8e26d97d60cfc77121940ea7d",
+      "payload": {
+        "outcome": "PARTIAL_SUCCESS_SCOPED_CONTEXT_LIFT",
+        "observations": [
+          "for each translated ball, the proof of Theorem 4.1 supplies C0/|log R| with center-independent constant under unchanged global norms",
+          "distribution union gives N^(1/p) loss; p=3/2 gives N^(2/3)",
+          "fixed N0 and R_lambda<=C lambda^-1/2 give O(N0^(2/3)/log lambda), eventually absorbable in equations (24)-(25)"
+        ],
+        "residual": [
+          "finite-I -> bounded finite-center cover unproved",
+          "finite-I -> global vorticity weak-L3/2 unproved",
+          "finite-I -> global log-BMO direction unproved",
+          "ancient/pre-singularity gluing unbound",
+          "Type-II open"
+        ],
+        "local_math": "positive scoped consumer lemma",
+        "local_to_global_gluing": "OPEN"
+      },
+      "record_hash": "sha256:b32b9274c4b344ab2d0c80ba8eb0c68d76c83cc6e8955740afd6793ae5463efc"
+    }
+  ],
+  "chain_head": "sha256:b32b9274c4b344ab2d0c80ba8eb0c68d76c83cc6e8955740afd6793ae5463efc",
+  "note": "Hashes are over canonical stage records before insertion of each record_hash; proposal/shadow trace only."
+}
