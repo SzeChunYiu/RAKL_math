@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/pnp-mathematical-experience-boundary.schema.json",
+  "title": "P-vs-NP mathematical versus operational experience boundary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "boundary_id", "recorded_at", "object", "source_assessment", "canonical_math_memory", "retained_mathematical_lessons", "excluded_operational_events", "next_inventory_contract", "authority_contract", "artifact_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "boundary_id": {"const": "PNP-MATHEMATICAL-EXPERIENCE-BOUNDARY-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "object": {"const": "classification of P-vs-NP research lessons by mathematical versus operational content"},
+    "source_assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "artifact_hash", "packet_status"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "packet_status": {"const": "QUARANTINED_EXTERNAL_PROPOSAL"}
+      }
+    },
+    "canonical_math_memory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tool_snapshot", "failure_snapshot", "status"],
+      "properties": {
+        "tool_snapshot": {"type": "string", "minLength": 1},
+        "failure_snapshot": {"type": "string", "minLength": 1},
+        "status": {"const": "ALREADY_MATHEMATICAL_NO_REWRITE_REQUIRED"}
+      }
+    },
+    "retained_mathematical_lessons": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["lesson_id", "mathematical_content", "authority", "promotion", "evidence"],
+        "properties": {
+          "lesson_id": {"type": "string", "minLength": 1},
+          "mathematical_content": {"type": "string", "minLength": 1},
+          "authority": {"enum": ["VERIFIED_BOUNDED_COUNTEREXAMPLE", "DESK_CHECK_ONLY", "RETROSPECTIVE_TARGET_EXPOSED_EXACT_REPLAY", "PROPOSAL_ONLY_MECHANISM_DIAGNOSIS", "CONDITIONAL_DESK_CHECK_ONLY"]},
+          "promotion": {"enum": ["BOUNDED_FAILURE_EXPERIENCE_ELIGIBLE", "QUARANTINED_NOT_CANONICAL"]},
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["path", "raw_sha256", "artifact_hash"],
+              "properties": {
+                "path": {"type": "string", "minLength": 1},
+                "raw_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+                "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "excluded_operational_events": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["event_id", "classification", "destination"],
+        "properties": {
+          "event_id": {"type": "string", "minLength": 1},
+          "classification": {"const": "OPERATIONAL_ASSURANCE_NOT_MATHEMATICAL_LESSON"},
+          "destination": {"enum": ["process_assurance_ledger", "compute_execution_ledger", "dependency_sync_receipt"]}
+        }
+      }
+    },
+    "next_inventory_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action", "required_fields", "candidate_generation_allowed"],
+      "properties": {
+        "action": {"const": "SOURCE_NATIVE_T_RULE_THEOREM_INVENTORY"},
+        "required_fields": {
+          "const": ["exact_statement", "quantifier_order", "assumptions", "scope_and_restriction_class", "dependencies", "non_guarantees", "counterexamples", "shared_cover_fusion_interface"]
+        },
+        "candidate_generation_allowed": {"const": false}
+      }
+    },
+    "authority_contract": {
+      "const": {
+        "grants_proof_authority": false,
+        "grants_theorem_authority": false,
+        "grants_novelty_authority": false,
+        "grants_p_vs_np_root_authority": false,
+        "grants_framework_evolution_authority": false
+      }
+    },
+    "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}
