@@ -1,0 +1,35 @@
+atom:
+  id: NS-R001d
+  parent: NS-R001b
+  title: "Projected advection/depletion bridge"
+  status: STATIC_SNAPSHOT_ROUTE_REFUTED_DYNAMIC_CHILD_OPENED
+  objective: "Determine whether Miller's scale-invariant projected strain remainder can be controlled by exact finite-energy Navier-Stokes evolution rather than by static energy or local geometry."
+
+candidate:
+  id: NS-R001d-C001
+  statement: "A finite kinetic-energy-only function uniformly bounds Q(u)=||R||_2/||-Delta S||_2 over all smooth rapidly decaying divergence-free initial data."
+  status: REFUTED_WITHIN_REGISTERED_SCOPE
+  falsifier: "05_falsifiers/NS_R001D_C001_EXACT_GAUSSIAN_FALSIFIER_20260811.md"
+  failure_id: F-NS-R001D-C001-STATIC-REMAINDER-RATIO
+  exact_result: "At fixed ||u||_2^2=(3/2)pi^(3/2), an explicit Gaussian curl seed concentrated by u_lambda=lambda^(3/2)u(lambda x) satisfies Q(u_lambda)>=512sqrt(6)/938223 * lambda^(1/2), so Q is unbounded across the family."
+  scope:
+    - "initial-data snapshot only"
+    - "does not refute t>0 or time-integrated actual-solution estimates"
+    - "does not produce a singular Navier-Stokes solution"
+    - "no novelty or root authority"
+
+child:
+  id: NS-R001d1
+  title: "Positive-time projected-remainder depletion"
+  status: CONTEXT_REQUIRED_BEFORE_CANDIDATE
+  question: "Can actual positive-time finite-energy Navier-Stokes evolution generate a scale-critical depletion or time-integrability property for Miller's projected remainder that is absent at the initial snapshot?"
+  first_discriminator: "Separate generic heat-semigroup smoothing from genuinely nonlinear advection/pressure depletion using a source-bound positive-time or time-integrated quantity before proposing a theorem."
+  required_pre_candidate_actions:
+    - "freeze a fresh MathContextFiber for t>0/time-integrated actual-solution control"
+    - "query the success-tool inventory and include F-NS-R001D-C001 as a scoped warning with a DifferenceWitness"
+    - "run a role-separated expert cell with PDE, harmonic-analysis/projection, semigroup smoothing, adversarial scaling, formal and novelty lenses"
+    - "freeze a new hash-chained pre-candidate trace"
+
+root:
+  status: OPEN_NO_SOLUTION_CERTIFICATE
+  note: "A route-specific negative result does not prove or disprove any Clay alternative."

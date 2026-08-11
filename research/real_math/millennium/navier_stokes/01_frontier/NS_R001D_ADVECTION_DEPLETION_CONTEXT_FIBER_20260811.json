@@ -1,0 +1,168 @@
+{
+  "atom_id": "NS-R001d",
+  "object_context": "Can the scale-invariant strain-formulation remainder identified by Miller be controlled by the joint effect of exact Navier-Stokes evolution and finite-energy/global localization, rather than by a static energy or local-geometry inequality?",
+  "structural_coordinates": [
+    "3D incompressible Navier-Stokes on R^3, positive Clay regularity lane with smooth rapidly decaying divergence-free initial data",
+    "strain S=nabla_sym u and vorticity omega=curl u; the strain-space projection P_st is nonlocal and order zero",
+    "define R=P_st((u·nabla)S+S^2+(3/4)omega⊗omega), the perturbation away from Miller's globally regular strain-vorticity interaction model",
+    "Miller's blowup criterion requires limsup ||R||_2/||-Delta S||_2 >= 1 at any finite maximal time for H^3 mild solutions",
+    "under true Navier-Stokes scaling u_lambda=lambda u(lambda x,lambda^2 t), both ||R||_2 and ||-Delta S||_2 scale as lambda^(5/2), so their ratio is scale invariant",
+    "parent A1 rejects energy-only critical control on arbitrary histories; parent A2/A3 rejects local pointwise geometry unless exact evolution and finite-energy localization are used jointly",
+    "the Clay energy bound is L_t^infinity L_x^2 plus integrated H^1 dissipation; it does not statically control higher derivatives at t=0",
+    "smooth rapidly decaying divergence-free fields are admissible initial data for local smooth Navier-Stokes evolution, so a snapshot inequality claimed from kinetic energy alone must hold on that entire initial-data class",
+    "advection is L2-neutral in the strain energy identity but can alter higher derivative/frequency structure; any useful depletion mechanism may therefore need a trajectory or time-integrated formulation",
+    "pressure/projection and Biot-Savart couplings remain nonlocal; a pointwise or unprojected cancellation is not automatically a bound on R"
+  ],
+  "equivalent_formulations": [
+    "derive from finite-energy Navier-Stokes dynamics an eventual bound ||R(t)||_2 <= (1-delta)||-Delta S(t)||_2 with delta>0 before any singular time",
+    "find a scale-invariant time-integrated version of Miller's perturbation criterion whose finiteness follows from the energy inequality and exact dynamics",
+    "prove that viscosity plus self-advection moves strain into a regime where the projected nonlinear remainder is dissipatively dominated",
+    "falsify any proposed snapshot estimate Q(u)=||R(u)||_2/||-Delta S(u)||_2 <= F(||u||_2) on the full smooth rapidly decaying divergence-free initial-data class"
+  ],
+  "solved_analogues": [
+    "Miller's strain-vorticity interaction model, globally regular for all L2 strain data because its H1 identity closes after the exact strain-vorticity orthogonality",
+    "2D incompressible Navier-Stokes, where vortex stretching is absent and enstrophy/dissipation estimates close globally",
+    "passive-scalar advection-diffusion in shear flows, where advection can accelerate dissipation by rearranging spatial structure even though advection itself is energy-neutral"
+  ],
+  "near_solved_analogues": [
+    "Miller 2026 perturbative strain criteria for full 3D Navier-Stokes using the projected advection-plus-quadratic remainder",
+    "Constantin-Fefferman nonlocal geometric depletion criteria",
+    "critical Serrin/strain-eigenvalue conditional regularity criteria that close once an external scale-critical quantity is controlled"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Miller strain-vorticity interaction model and perturbative full-Navier-Stokes criteria",
+      "method": "measure the full strain dynamics as a perturbation R of a globally regular model and compare R against viscous H2 strain dissipation",
+      "shared_structure": [
+        "same strain constraint space and projection P_st",
+        "same vorticity reconstructed nonlocally from strain",
+        "same Navier-Stokes scaling for S, R and -Delta S"
+      ],
+      "required_assumptions": [
+        "actual mild Navier-Stokes solution with sufficient H3 regularity on its maximal interval",
+        "quantitative control of the projected remainder R relative to -Delta S or of the corresponding time-integrated Sobolev ratio"
+      ],
+      "disanalogies": [
+        "Miller's theorem is conditional and does not derive smallness of R from finite kinetic energy",
+        "global regularity of the model equation does not imply the full equation remains perturbatively close to it"
+      ],
+      "repair_question": "Can exact finite-energy Navier-Stokes evolution force the perturbation ratio into the regularizing regime, and if not at each snapshot, can it do so after time integration or positive-time smoothing?",
+      "source_anchors": [
+        "Evan Miller, arXiv:2407.02691v2 (2026), Theorems 1.8-1.9 and Theorem 1.3"
+      ]
+    },
+    {
+      "source_context": "enhanced dissipation for passive scalars advected by shear flows",
+      "method": "use advection-driven rearrangement/mixing to move energy into gradients on which diffusion acts more strongly, producing faster decay than diffusion alone",
+      "shared_structure": [
+        "advection is neutral in the basic L2 energy pairing",
+        "dissipation acts through spatial derivatives",
+        "trajectory-level rearrangement can matter even when instantaneous energy size does not"
+      ],
+      "required_assumptions": [
+        "a flow geometry or trajectory mechanism that quantitatively mixes the transported quantity",
+        "a diffusion operator whose action can be coupled to that mixing estimate"
+      ],
+      "disanalogies": [
+        "Navier-Stokes self-advection is dynamically coupled to the transported strain rather than prescribed",
+        "strain has quadratic production terms and a nonlocal projection/pressure structure absent from a passive scalar",
+        "there is no fixed shear profile or known spectral gap supplying an enhanced-dissipation rate"
+      ],
+      "repair_question": "Is there a self-consistent, scale-invariant Navier-Stokes analogue of mixing-enhanced dissipation that controls a time-integrated projected strain remainder rather than a static snapshot ratio?",
+      "source_anchors": [
+        "Gardner, Liss, Mattingly, arXiv:2410.05657 (2024)"
+      ]
+    },
+    {
+      "source_context": "2D incompressible Navier-Stokes",
+      "method": "close enstrophy estimates because the vorticity equation has no vortex-stretching production term",
+      "shared_structure": [
+        "viscous incompressible transport",
+        "energy and enstrophy identities",
+        "advection is skew in the basic L2 pairing"
+      ],
+      "required_assumptions": [
+        "two spatial dimensions so vortex stretching is exactly absent"
+      ],
+      "disanalogies": [
+        "3D strain self-amplification and vortex stretching are genuine quadratic production mechanisms",
+        "the 3D strain projection is nonlocal and no exact analogue of the 2D closure is known"
+      ],
+      "repair_question": "Which exact 3D projected interaction, if any, can play the role of a dynamically generated substitute for the missing 2D cancellation?",
+      "source_anchors": [
+        "standard 2D Navier-Stokes enstrophy identity; used only as solved structural analogue"
+      ]
+    },
+    {
+      "source_context": "parent NS-R001 and NS-R001b adversarial scaling/geometry screens",
+      "method": "before theorem search, concentrate admissible structures at fixed low-order energy to test whether the proposed critical coordinate is genuinely generated by dynamics",
+      "shared_structure": [
+        "same finite-energy Clay initial-data class",
+        "same scale mismatch between kinetic energy and higher critical structure",
+        "same requirement that the repair exploit more than a static descriptive coordinate"
+      ],
+      "required_assumptions": [
+        "the proposed first bridge is a snapshot inequality based only on finite kinetic energy, incompressibility, decay and the displayed coordinate"
+      ],
+      "disanalogies": [
+        "NS-R001d uses Miller's nonlocal projected remainder rather than generic velocity norms or local alignment",
+        "an initial-data falsifier cannot refute a positive-time or time-integrated estimate that uses actual Navier-Stokes evolution"
+      ],
+      "repair_question": "Does the Miller remainder ratio escape the parent concentration falsifiers already at t=0, or does fixed-energy smooth initial-data concentration make it arbitrarily large?",
+      "source_anchors": [
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001_ENERGY_CRITICAL_ATLAS_20260811.md",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001B_STRAIN_VORTICITY_ATLAS_20260811.md"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "conditional smallness of Miller's projected remainder is not an a priori consequence of the Leray energy inequality",
+    "a static initial-data screen cannot refute a genuinely trajectory-based positive-time depletion estimate",
+    "passive-scalar enhanced dissipation does not transfer without a self-consistent mixing mechanism for the nonlinear strain system",
+    "P_st is nonlocal, so cancellation of unprojected terms or pointwise geometry is not enough",
+    "the energy-preserving concentration used for the falsifier is not a Navier-Stokes scaling symmetry and is used only to generate admissible initial data"
+  ],
+  "source_anchors": [
+    "Clay Mathematics Institute, Charles Fefferman official Navier-Stokes problem description",
+    "Evan Miller, arXiv:2407.02691v2; Pure Appl. Analysis 8 (2026), 247-270",
+    "Gardner, Liss, Mattingly, arXiv:2410.05657",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS_R001B_STRAIN_VORTICITY_ATLAS_20260811.md"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "advection-diffusion / mixing-enhanced dissipation",
+      "source_situation": "A divergence-free shear can leave the scalar L2 energy pairing unchanged while repeatedly rearranging the scalar so diffusion acts on steeper gradients and dissipates it faster.",
+      "common_abstraction": [
+        "transport is neutral in a coarse energy budget",
+        "transport changes derivative/frequency structure",
+        "dissipation acts more strongly after that rearrangement",
+        "the useful statement is trajectory-level rather than a snapshot bound from coarse energy"
+      ],
+      "source_to_target_mapping": [
+        "passive transport -> Navier-Stokes advection of strain",
+        "scalar gradient creation -> redistribution of strain derivatives/frequencies",
+        "molecular diffusion -> viscous -Delta S dissipation",
+        "enhanced decay criterion -> time-integrated dominance of viscous strain dissipation over the projected nonlinear remainder"
+      ],
+      "shared_constraints": [
+        "the proposed target quantity must respect Navier-Stokes scaling",
+        "the mechanism must be causal and use actual evolution",
+        "coarse L2 energy neutrality alone cannot certify the derivative-level effect"
+      ],
+      "disanalogies": [
+        "the Navier-Stokes velocity transports and is generated by the same state",
+        "strain has quadratic self-amplification and vorticity production terms",
+        "P_st and pressure introduce nonlocal singular-integral structure",
+        "no prescribed shear or fixed enhanced-dissipation timescale is available"
+      ],
+      "proposed_principle": "Before searching for a pointwise remainder-smallness theorem, test whether fixed kinetic energy can control Miller's dimensionless remainder ratio at one snapshot; if not, restrict the live analogy to time-integrated or positive-time depletion generated by the equation.",
+      "validation_obligation": "Construct an explicit smooth rapidly decaying divergence-free initial datum with nonzero projected-remainder pairing and apply an energy-preserving spatial concentration. If the normalized remainder ratio has a positive concentration exponent, reject all energy-only snapshot bounds for this coordinate.",
+      "provenance_note": "Proposal-only structural analogy; it supplies no Navier-Stokes inequality or theorem authority."
+    }
+  ],
+  "analogy_scan_notes": "The enhanced-dissipation bridge is retained only to distinguish snapshot control from trajectory-generated derivative control; the first validation obligation is an exact static concentration screen.",
+  "frozen_at": "2026-08-11T07:58:20+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:b846a739651692306c82255b1e7f76cd13347b4c00bc3f61e2ea28d3c7bb711f"
+}
