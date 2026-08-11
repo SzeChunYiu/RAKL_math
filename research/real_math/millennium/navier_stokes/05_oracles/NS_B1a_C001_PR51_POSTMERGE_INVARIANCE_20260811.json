@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "validation_id": "VALIDATE-NS-B1a-C001-PR51-POSTMERGE-INVARIANCE-20260811",
+  "recorded_at": "2026-08-11T09:54:05Z",
+  "atom_id": "NS-B1a",
+  "historical_identity": "NS-B1a-C001",
+  "source_repository": "https://github.com/SzeChunYiu/RAKL_math.git",
+  "framework_pin": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+  "historical_receipt": {
+    "path": "research/real_math/millennium/navier_stokes/05_oracles/NS_B1a_C001_FINAL_HEAD_INTEGRATION_VALIDATION_20260811.json",
+    "raw_sha256": "sha256:419e5ed80fab51c9e08ac1566bd178dca554e7d2a67189ae175360f3130a2ea3",
+    "artifact_hash": "sha256:2139eb1f4e63fd9ac94fb1ae41c158bfed584ddacee0c78ef3ac8bf8b534818c",
+    "registered_field_name": "current_main",
+    "postmerge_interpretation": "IMMUTABLE_INTEGRATION_BASE_NOT_MOVING_LIVE_MAIN"
+  },
+  "integration_base": {
+    "commit": "29d566f7860240f22d634664c51e8583e50a3c5b",
+    "tree": "58fec902d5cc5bda62b5aca38f98e80b2ea4003d"
+  },
+  "repaired_pr_head": {
+    "commit": "85dd7838964daa238ab17790accf7b69b3cf2bb3",
+    "tree": "21d7f0b6bd5665df2df704ea88681076c849d0ac"
+  },
+  "post_merge": {
+    "commit": "5d2977892f6fe726e1c983e5f50c55869ecc18e1",
+    "tree": "21d7f0b6bd5665df2df704ea88681076c849d0ac",
+    "parents": [
+      "29d566f7860240f22d634664c51e8583e50a3c5b",
+      "85dd7838964daa238ab17790accf7b69b3cf2bb3"
+    ]
+  },
+  "ancestry_requirements": [
+    {
+      "role": "repaired head reaches merge",
+      "ancestor": "85dd7838964daa238ab17790accf7b69b3cf2bb3",
+      "descendant": "5d2977892f6fe726e1c983e5f50c55869ecc18e1"
+    },
+    {
+      "role": "integration base reaches merge",
+      "ancestor": "29d566f7860240f22d634664c51e8583e50a3c5b",
+      "descendant": "5d2977892f6fe726e1c983e5f50c55869ecc18e1"
+    }
+  ],
+  "corrective_test_source": {
+    "commit": "4f876933bad3c584afcd1d7d712d818e2b5a09aa",
+    "tree": "ff8c39d32b90acaeca438b86731b876b2e62a437",
+    "path": "tests/math_applications/test_navier_stokes_ns_b1a_c001_pressure_tail.py",
+    "git_blob_sha": "eb49d0fe02c648d1546ee8008c1877ed11a74f85",
+    "raw_sha256": "sha256:73e84da51abd02a7e2714c130122ae9b17142d42484fcd7154b4afa425a736f7",
+    "byte_mode": "GIT_SHOW_NO_TEXTCONV_NO_EXT_DIFF_BINARY_STDOUT"
+  },
+  "live_main_contract": {
+    "rule": "REGISTERED_POST_MERGE_MUST_BE_ANCESTOR_OF_ORIGIN_MAIN",
+    "moving_head_equality_required": false,
+    "reason": "a historical validation receipt binds its integration base and merge; it must not be rewritten whenever main advances"
+  },
+  "attribute_context": {
+    "snapshot_path": "research/real_math/millennium/navier_stokes/04_candidates/negative_history/NS_B1a_C001_PR19_RESULT_SNAPSHOT_9B6B8AE.md",
+    "policy": "whitespace=-trailing-space",
+    "integration_base_attribute": "whitespace: unspecified",
+    "post_merge_attribute": "whitespace: -trailing-space",
+    "historical_base_context_command": "git --attr-source=29d566f7860240f22d634664c51e8583e50a3c5b diff --check 29d566f7860240f22d634664c51e8583e50a3c5b...85dd7838964daa238ab17790accf7b69b3cf2bb3",
+    "historical_base_context_result": "EXPECTED_THREE_IMMUTABLE_SNAPSHOT_HARD_BREAKS",
+    "post_merge_context_command": "git --attr-source=5d2977892f6fe726e1c983e5f50c55869ecc18e1 diff --check 29d566f7860240f22d634664c51e8583e50a3c5b...85dd7838964daa238ab17790accf7b69b3cf2bb3",
+    "post_merge_context_result": "CLEAN",
+    "current_main_contract": "ORIGIN_MAIN_DESCENDS_FROM_POST_MERGE_AND_RETAINS_NARROW_POLICY"
+  },
+  "postmerge_failure_observation": {
+    "application_commit": "5d2977892f6fe726e1c983e5f50c55869ecc18e1",
+    "focused_result": "8 passed, 2 failed",
+    "failures": [
+      "historical receipt current_main was incorrectly compared to moving origin/main",
+      "registered integration-base attribute was incorrectly assumed to remain the live origin/main attribute after policy merge"
+    ],
+    "bounded_root_cause": "tests conflated immutable integration identity with moving live-main identity and conflated registered-base attribute context with post-merge attribute context"
+  },
+  "tdd": {
+    "initial_postmerge_red": "8 passed, 2 failed",
+    "corrective_gate_red": "7 passed, 5 failed",
+    "green_target": "immutable integration receipt plus descendant and attribute-transition checks"
+  },
+  "validation": {
+    "focused_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_navier_stokes_ns_b1a_c001_pressure_tail.py -q",
+    "focused_passed": 12,
+    "full_command": "python tools/run_application_tests.py --framework framework/RAKL",
+    "full_passed": 219,
+    "diff_check_command": "git diff --check origin/main...HEAD",
+    "diff_check_result": "CLEAN"
+  },
+  "interpretation": [
+    "historical receipt bytes remain unchanged",
+    "integration_base names the frozen pre-merge main rather than moving origin/main",
+    "post-merge main and descendants must retain the exact-path whitespace policy",
+    "the immutable snapshot remains byte-identical negative history",
+    "no scientific, theorem, candidate, novelty, Navier-Stokes, or Clay authority is created"
+  ],
+  "authority": "POSTMERGE_INVARIANCE_CORRECTION / ASSURANCE_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:030ec7dc34b2698cc293be8c3846d0c85b908286fe9b14fb9fb478e794e37192"
+}
