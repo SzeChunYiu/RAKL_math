@@ -1,0 +1,38 @@
+{
+  "schema_version": "rakl-v3-task-episode-shadow-v1",
+  "authority": "PROPOSAL_SHADOW_EPISODE_ONLY",
+  "episode_id": "EP-NS-B1a2-CRITICAL-BLOB-PACKING-20260811",
+  "task_id": "NS-B1a2-C001",
+  "atom_id": "NS-B1a2",
+  "context_hash": "sha256:6a7c8981dcb27f9b06b93e32901b33445d54978f236edeb51a921de5ae93f2bc",
+  "problem_signature": ["Type-I Navier-Stokes","critical L3 concentration","finite kinetic energy","critical-core multiplicity","global L3 tail tightness"],
+  "fibre_snapshot_hash": "sha256:13ad46ec61e481a8893c0b29852499d711059aee1e8a1b421b9a3e5c95fa9e33",
+  "operator_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT","critical-scaling-audit","disjoint-core-energy-count","divergence-free-packing-falsifier"],
+  "action_trace": [
+    "read current RAKL main and v3 authority/runtime surfaces",
+    "freeze NS-B1a2 context before candidate",
+    "freeze success/failure memory review and target DifferenceWitness",
+    "freeze seven-role same-context expert review",
+    "freeze hash-chained pre-candidate trace",
+    "derive per-core kinetic-energy lower cost under favorable pointwise Type-I amplitude",
+    "sum over disjoint critical cores",
+    "construct scale-correct smooth divergence-free packed snapshots",
+    "record supported scoped failure and open dynamics-specific residual"
+  ],
+  "observation_ids": ["OBS-NS-B1a2-ENERGY-COUNT-LAMBDA-INVERSE","OBS-NS-B1a2-PACKING-SHARP-SCALING"],
+  "verification_ids": ["VERIFY-NS-B1a2-SCALING","VERIFY-NS-B1a2-DISJOINT-SUM","VERIFY-NS-B1a2-DIVERGENCE-FREE-SCALING"],
+  "outcome": "PARTIAL_SUCCESS",
+  "residual_signature": ["finite L2 energy does not bound L3-critical core count uniformly in scale","need dynamics-specific compactness/coherence/no-recrossing or different Liouville trigger"],
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a2_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a2_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "research/real_math/millennium/navier_stokes/08_reviews/NS-B1a2_EXPERT_CONTEXT_REVIEW_20260811.md",
+    "research/real_math/millennium/navier_stokes/09_trace/NS-B1a2_PRE_CANDIDATE_TRACE_20260811.json",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a2_C001_CRITICAL_BLOB_PACKING_AUDIT_20260811.md",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a2_C001_FAILURE_EXPERIENCE_DELTA_20260811.json"
+  ],
+  "artifact_hash": "sha256:65a15bcbd89cad0aee67c5cf278d9d1fc2c082096e14f7622169c365710bc349",
+  "timestamp": "2026-08-11T12:41:00+00:00",
+  "cost": 0.0,
+  "cost_note": "Exact token/tool/wall-time accounting is not exposed by the automation harness; cost=0 is not interpreted as zero actual resource use. See RAKL_CYCLE_METRICS for CANNOT_MEASURE fields."
+}
