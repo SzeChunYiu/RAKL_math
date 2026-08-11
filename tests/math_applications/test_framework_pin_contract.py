@@ -13,7 +13,7 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "28a8a6d2e6fd2b346f46bd0530106e1a3aaee292"
+EXPECTED_FRAMEWORK_COMMIT = "66a287c484c4780890e11f660f5cafa03bf60c43"
 HISTORICAL_F224_FRAMEWORK_COMMIT = "f224d91d9fbd2844a89921ca4a30b77a7954ecd2"
 HISTORICAL_4EE_FRAMEWORK_COMMIT = "4ee5e9afe77870c684b798e0ed4c9fcee62a4365"
 HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
@@ -78,8 +78,8 @@ def test_machine_readable_framework_pin_is_valid_and_loaded_exactly() -> None:
     ).stdout
     assert framework_status == ""
     assert pin["authority"] == (
-        "Dependency synchronization to exact clean RAKL origin/main 28a8a6d2e6fd2b346f46bd0530106e1a3aaee292 observed 2026-08-11; "
-        "mathematical/core workflow blobs are unchanged from the prior application pin while the v3 scientific-authority overlay is newer; "
+        "Dependency synchronization to exact clean RAKL origin/main 66a287c484c4780890e11f660f5cafa03bf60c43 observed 2026-08-11; "
+        "mathematical/core workflow blobs remain unchanged while newer scientific-authority and current-work-coverage overlays are included; "
         "no proof, research, review-independence, or method-evolution authority"
     )
 
