@@ -1,0 +1,111 @@
+{
+  "packet_type": "MATH_CONTEXT_FIBER_SHADOW_V3",
+  "atom_id": "RH-ANA-003",
+  "parent_atom_id": "RH-ANA-002",
+  "root_issue": 3,
+  "framework_sha": "a521d577724dfedb3123e22cdbac457bce4e22f7",
+  "application_base_sha": "49edbefcb3bd4bab24b154ac509ed933e8d817dc",
+  "object_context": "Candidate-free analytic child seeking the first exact prime/archimedean cancellation, height-to-index, or uniform-tail coordinate in an arithmetic/explicit-formula representation of the Li coefficients. The goal of this packet is not a positivity candidate, but a prospective source-bound discriminator that can show which classes of finite-height, zero-density, prime-truncation, mollifier/resonance, or growth estimates are even structurally capable of controlling all-index Li positivity.",
+  "structural_coordinates": [
+    "RH is equivalent to lambda_n >= 0 for every positive integer n, so the target has an all-index uniformity coordinate.",
+    "RH-ANA-001 already records that finite Li-prefix positivity is an unsafe global surrogate.",
+    "RH-ANA-002 records that a manifestly positive Suzuki norm does not transport positivity without an RH-coupled faithfulness identity.",
+    "Exact arithmetic/explicit-formula representations mix finite-place and archimedean contributions through signed/binomial transforms and regularized limits.",
+    "A single off-critical zero can be root-critical even if an estimate says off-critical zeros are sparse; density and exclusion are distinct coordinates.",
+    "Any finite-height or finite-prime statement must expose an explicit theorem connecting the truncation scale to the Li index n.",
+    "All interchanges of limits, regularized sums, binomial transforms, and archimedean terms are load-bearing.",
+    "The active discriminator is allowed to prune routes but may not assert a new RH theorem or a new inequality candidate."
+  ],
+  "equivalent_or_nearby_formulations": [
+    "Li criterion: lambda_n >= 0 for all n >= 1.",
+    "Weil positivity on the full licensed test family.",
+    "Bombieri-Lagarias arithmetic/explicit-formula representations of Li coefficients.",
+    "Lagarias/Voros asymptotic dichotomy between RH-compatible n log n growth and off-line exponential/non-tempered contributions."
+  ],
+  "solved_or_near_solved_analogues": [
+    {
+      "context": "finite-height zero-free information versus bounded-index Li inequalities",
+      "method": "make the scale-transfer window explicit instead of extrapolating finite evidence to all indices",
+      "enabling_assumption": "a theorem quantitatively binding zero-height information to an index range",
+      "disanalogy": "RH requires an unbounded index range and exclusion of every off-line zero"
+    },
+    {
+      "context": "oscillatory binomial transforms of positive input sequences",
+      "method": "audit transform sign and cancellation rather than infer positivity from positive inputs",
+      "enabling_assumption": "exact transform identity with controlled coefficients",
+      "disanalogy": "the zeta inputs and regularization are arithmetic and root-coupled"
+    },
+    {
+      "context": "rare-event versus worst-case certification",
+      "method": "stress-test average/density control with one adversarial surviving defect",
+      "enabling_assumption": "one defect has a non-negligible target contribution",
+      "disanalogy": "the RH contribution has complex phase and symmetry, so pointwise sign requires exact analysis"
+    }
+  ],
+  "method_transfer_matrix": [
+    {
+      "family": "explicit-formula dependency localization",
+      "retained": true,
+      "reason": "directly preserves the actual Li sequence, finite/archimedean split, and regularization",
+      "validation_obligation": "bind every displayed term to a primary source and preserve the source's summation/limit order"
+    },
+    {
+      "family": "zero-density/zero-free transfer",
+      "retained": true,
+      "reason": "high-information only if it yields an explicit n-versus-height or remainder theorem",
+      "validation_obligation": "test a one-off-line-zero hostile world; density-only language cannot substitute for exclusion"
+    },
+    {
+      "family": "mollifier/resonance",
+      "retained": false,
+      "reason": "no current memory witness shows a direct map from a mollified moment/resonance estimate to the exact all-n Li finite-place residual; using it now risks representation drift",
+      "repair_question": "what exact target residual would the mollifier or resonator bound, with which uniformity in n?"
+    },
+    {
+      "family": "finite prime truncation",
+      "retained": false,
+      "reason": "repeats the finite-surrogate failure unless a prospective uniform tail theorem is independently available",
+      "repair_question": "what theorem certifies the tail uniformly in n?"
+    },
+    {
+      "family": "Lagarias-Voros growth-class exclusion",
+      "retained": true,
+      "reason": "useful contrastive route because one global bound could cover infinitely many indices",
+      "validation_obligation": "separate known unconditional bounds from RH-conditional or root-equivalent bounds"
+    }
+  ],
+  "cross_domain_analogy": {
+    "source": "rare-event safety certification / worst-case fault analysis",
+    "common_abstraction": "an aggregate or density statement may look favorable while one surviving defect controls the worst-case target",
+    "mapping": [
+      "rare fault -> one off-critical zero",
+      "aggregate fault rate -> zero-density estimate",
+      "worst-case system failure -> all-index Li obstruction",
+      "fault amplification with horizon -> exponential-in-n zero contribution envelope"
+    ],
+    "disanalogies": [
+      "zero contributions are complex and can phase-cancel",
+      "functional-equation symmetry constrains defect quartets",
+      "the analogy gives no quantitative zeta theorem"
+    ],
+    "validation_obligation": "derive the target-side amplification from the exact Li summand and preserve zero symmetries; use the analogy only to design a falsifier"
+  },
+  "source_anchors_from_existing_fibre": [
+    "X.-J. Li, J. Number Theory 65 (1997), 325-333.",
+    "E. Bombieri and J. C. Lagarias, J. Number Theory 77 (1999), 274-287.",
+    "J. C. Lagarias, Ann. Inst. Fourier 57 (2007), 1689-1740, arXiv:math/0404394.",
+    "A. Voros, Math. Phys. Anal. Geom. 9 (2006), 53-63, arXiv:math/0506326.",
+    "M. Suzuki, J. Number Theory 252 (2023), 177-194, arXiv:2301.05779."
+  ],
+  "prospective_next_action": {
+    "action_id": "RH-ANA-003-INDEX-HEIGHT-CANCELLATION-AUDIT-R1",
+    "description": "After this packet is frozen, re-open primary Lagarias/Voros/Bombieri-Lagarias sources and extract the strongest exact theorem binding finite zero-height or finite-place information to the Li index. Then stress-test density-only and finite-truncation reasoning with the exact modulus of one Li zero summand. Record only source-bound route-pruning/localization.",
+    "candidate_generation": false,
+    "expected_discriminator": "Either expose a strictly weaker uniform residual coordinate, or show only that the audited finite-height/density/truncation families do not yet bridge to all n."
+  },
+  "chronology_note": "Prior source scouting during this autonomous run is treated as background only. Scientific credit for the registered discriminator begins only after this packet, memory review, expert review, and seven-event pre-candidate trace are frozen; no mathematical candidate has been proposed.",
+  "frozen_at": "2026-08-11T11:26:00+00:00",
+  "first_candidate_at": null,
+  "authority": "STRICT_PRE_CANDIDATE_SHADOW / SEARCH_CONTROL_ONLY / NO_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE",
+  "packet_hash": "sha256:156df74ce368255b5b85065b49775ff6516ff24956388cc6dbf2b4988b4c154b"
+}
