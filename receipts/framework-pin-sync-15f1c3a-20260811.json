@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "RAKL-MATH-FRAMEWORK-PIN-SYNC-15f1c3a-20260811",
+  "recorded_at": "2026-08-11T08:12:41+00:00",
+  "application_base_commit": "f479e007e4a63e379188d7a16d08f30416c1cd4b",
+  "framework_repository": "https://github.com/SzeChunYiu/RAKL.git",
+  "previous_framework_commit": "7853ec0c4ff8f862359835bca1af1d934bfbd887",
+  "current_framework_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+  "framework_commits_between": 23,
+  "framework_changed_files": 348,
+  "material_framework_changes": [
+    "mathematical applications moved to RAKL_math",
+    "proposal-only application feedback import boundary added",
+    "publication-only changes present but not evaluated as mathematical evidence"
+  ],
+  "verification": {
+    "command": "python tools/run_application_tests.py --framework framework/RAKL",
+    "tests_passed": 166,
+    "exit_code": 0,
+    "pin_equals_gitlink": true,
+    "framework_authority_paths_clean": true
+  },
+  "verdict": "PASS_APPLICATION_CONFORMANCE_ON_EXACT_FRAMEWORK_PIN",
+  "non_guarantees": [
+    "does not validate a Millennium claim",
+    "does not make same-context review independent",
+    "does not promote imported application feedback",
+    "does not establish framework research completeness"
+  ],
+  "authority": "DEPENDENCY_SYNC_AND_EXECUTABLE_CONFORMANCE_ONLY / NO_MATHEMATICAL_AUTHORITY_CHANGE",
+  "artifact_hash": "sha256:ea1ff5d1b45869d1b9aa38c8f0c2dc7fe54607f56af84ae73426c368eb441f76"
+}
