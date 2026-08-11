@@ -1,0 +1,52 @@
+{
+  "target_atom_id": "RH-ANA-003",
+  "target_context_hash": "sha256:3fd541de561c2509aa46687bb3792ec7c73b5d4ca5b44e7b9c3becfe46262d66",
+  "tool_inventory_snapshot_hash": "sha256:31eae3f5fad986e582d9d92bdc867a09c669d1b25f6f58f8ade006f5ba33dc56",
+  "failure_lattice_snapshot_hash": "sha256:ed5eb01313f78bf756a83489df198c990651e4bdf8742e17f91ab6d8444ba0c8",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "Lagarias finite-place/incomplete-Li localization",
+    "zero-density or zero-count control of the incomplete-Li remainder",
+    "one-radial-outlier hostile calibration",
+    "direct regularized prime-side cancellation/remainder theorem",
+    "Lagarias-Voros global growth-class exclusion"
+  ],
+  "relevant_tool_ids": [
+    "T-RH-LI-PREFIX-QUARTET-CALIBRATION",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "relevant_failure_ids": [
+    "F-RH-ANA-001-FINITE-LI-PREFIX",
+    "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE"
+  ],
+  "selected_tool_ids": [
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+    "T-RH-LI-PREFIX-QUARTET-CALIBRATION"
+  ],
+  "tool_applicability_notes": [
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT applies because the proposed surrogate is aggregate zero counting/density or a finite prime truncation, while the root-useful conclusion is a uniform all-n finite-place/incomplete-Li bound. DifferenceWitness: the target bridge is a power-sum/radial-outlier implication, not a continuum limit. The cheapest check is to preserve the count premise while planting one symmetry-compatible radial outlier and ask whether the power-sum bound survives.",
+    "T-RH-LI-PREFIX-QUARTET-CALIBRATION is reused only as an exact regression against finite-index reasoning. DifferenceWitness: RH-ANA-003 does not claim a finite prefix proves RH; it asks whether a purported uniform tail/density theorem genuinely rules out the same delayed off-line mechanism. Exact quartet algebra is a hostile logic test, not zeta evidence."
+  ],
+  "failure_reuse_notes": [
+    "F-RH-ANA-001-FINITE-LI-PREFIX rules out treating any finite prime/zero/Li computation as the missing all-index theorem unless a new uniform bridge is separately proved.",
+    "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE warns against relabeling a root-equivalent condition as a positive surrogate. Any proposed weighted radial bound must be audited for whether it already excludes every off-critical zero and is therefore RH-equivalent.",
+    "Neither failure blacklists explicit-formula, density, mollifier, resonance, or growth methods. They constrain the authority of finite surrogates and require a DifferenceWitness when those methods are reused."
+  ],
+  "unresolved_warnings": [
+    "Lagarias' strongest incomplete-Li error control in the cited section has RH-sensitive inputs; do not cite it as an unconditional proof bridge.",
+    "A density theorem that allows even one fixed off-line zero can remain compatible with the usual zero-counting law while failing a power-sum bound.",
+    "A direct prime-side estimate may exploit cancellation unavailable in a zero-density abstraction; route-pruning density alone must not be overgeneralized to all explicit-formula methods.",
+    "Palojarvi gives zero-free-region/Li detection results, not an RH proof; constants and hypotheses must remain source-bound.",
+    "Any new inequality proposed after this review must be frozen as a candidate and counterexample-tested before theorem search."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_TOOL_SNAPSHOT_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_001_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_POSTAUDIT_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "Jeffrey C. Lagarias, arXiv:math/0404394v4",
+    "Neea Palojarvi, arXiv:1807.01506"
+  ],
+  "artifact_hash": "sha256:bb275752677f6f9fc1ab10292fb1fd35facc50ed9dcc5e03fbfa6e5fd0423de8"
+}
