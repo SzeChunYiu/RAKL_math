@@ -1,0 +1,72 @@
+{
+  "tool_snapshot": {
+    "snapshot_id": "XM002-T",
+    "tools": [
+      {
+        "tool_id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+        "authority": "VERIFIED_LOCAL",
+        "source": "XM001_RESEARCH_TOOL_DELTA_20260811.json"
+      },
+      {
+        "tool_id": "T-HODGE-SOURCE-BEARING-DECOMPOSITION-SCREEN",
+        "authority": "VERIFIED_LOCAL",
+        "source": "HM1a_RESEARCH_TOOL_DELTA_20260811.json"
+      }
+    ]
+  },
+  "failure_snapshot": {
+    "snapshot_id": "XM002-F",
+    "experiences": [
+      {
+        "failure_id": "F-XM001-POINTWISE-GAP-COLLAPSE",
+        "diagnosis_status": "SUPPORTED",
+        "source": "XM001_FAILURE_EXPERIENCE_DELTA_20260811.json"
+      },
+      {
+        "failure_id": "F-HM1a-OPEN-ROOT-LIKE-PIECE",
+        "diagnosis_status": "SUPPORTED",
+        "source": "HM1a_FAILURE_EXPERIENCE_DELTA_20260811.json"
+      }
+    ]
+  },
+  "memory_review": {
+    "target_atom_id": "XM-SURFACE-SHIFT-002",
+    "target_context_hash": "sha256:e0c6709ce599338d7c57044b1f5261383bd84543e48d94eece8848db2d99ae73",
+    "tool_inventory_snapshot_hash": "sha256:e073a30772ab20e0bbacc96227bef11c7ab3f1601e0d827497f995946259e6fa",
+    "failure_lattice_snapshot_hash": "sha256:ccade53b82530e979afa7ba952b3ccfd83fa08328cf6c4e82cd08cb27f3c5370",
+    "tool_query_status": "MATCHES_FOUND",
+    "failure_query_status": "MATCHES_FOUND",
+    "candidate_method_families": [
+      "root-bridge stability audit",
+      "surface-shift transfer validation"
+    ],
+    "relevant_tool_ids": [
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "T-HODGE-SOURCE-BEARING-DECOMPOSITION-SCREEN"
+    ],
+    "relevant_failure_ids": [
+      "F-XM001-POINTWISE-GAP-COLLAPSE",
+      "F-HM1a-OPEN-ROOT-LIKE-PIECE"
+    ],
+    "selected_tool_ids": [
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "tool_applicability_notes": [
+      "T-XM applies only to the diagnostic skeleton; Hodge-local tool supplies target fields."
+    ],
+    "failure_reuse_notes": [
+      "F-XM001 transfers only a root-preservation warning; F-HM1a supplies target evidence and an explicit disanalogy."
+    ],
+    "unresolved_warnings": [
+      "abstract direct-sum countermodel is not geometric",
+      "one surface shift is not universal maturity"
+    ],
+    "evidence_pointers": [
+      "research/real_math/millennium/cross_problem/04_candidates/XM002_hodge_surface_shift_transfer_audit.md",
+      "research/real_math/millennium/cross_problem/07_memory/XM002_MEMORY_PACKET_20260811.json",
+      "Arapura arXiv:2103.05038"
+    ],
+    "artifact_hash": "sha256:bcf409c2ba44fb1083ba39bf1bc2b5ea9e14efae18966284a375d551383b1890"
+  },
+  "packet_hash": "sha256:4e5f33162201bdf2916834682ffc739e31170bbd1812af7adf4c01520e8e1168"
+}
