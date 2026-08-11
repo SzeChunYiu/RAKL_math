@@ -13,7 +13,7 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "63d69f6e1b4c0ce6f84fe9b8841e97d57c854374"
+EXPECTED_FRAMEWORK_COMMIT = "91f182a3e7ad7ba670babbec5f49a1304da2d933"
 HISTORICAL_F224_FRAMEWORK_COMMIT = "f224d91d9fbd2844a89921ca4a30b77a7954ecd2"
 HISTORICAL_4EE_FRAMEWORK_COMMIT = "4ee5e9afe77870c684b798e0ed4c9fcee62a4365"
 HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
@@ -78,7 +78,7 @@ def test_machine_readable_framework_pin_is_valid_and_loaded_exactly() -> None:
     ).stdout
     assert framework_status == ""
     assert pin["authority"] == (
-        "Dependency synchronization to exact clean RAKL origin/main 63d69f6e1b4c0ce6f84fe9b8841e97d57c854374 observed 2026-08-11; "
+        "Dependency synchronization to exact clean RAKL origin/main 91f182a3e7ad7ba670babbec5f49a1304da2d933 observed 2026-08-12; "
         "mathematical/core workflow and C041 gate APIs are unchanged from 66a287c while later non-mathematical overlays are included; "
         "no proof, research, review-independence, or method-evolution authority"
     )
