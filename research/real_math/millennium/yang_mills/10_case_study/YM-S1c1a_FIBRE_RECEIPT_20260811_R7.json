@@ -1,0 +1,87 @@
+{
+  "schema": "RAKL_math.math_context_fibre_shadow.v1",
+  "authority": "PROPOSAL_SHADOW_FROZEN_CONTEXT_ROOT_AUTHORITY_NONE",
+  "cycle_id": "YM-S1c1a-AFIR-GLUING-20260811-R7",
+  "active_atom": "YM-S1c1a",
+  "atom_signature": "YM-S1c1a-AF-IR-SUMMABLE-DIFFERENCE-SCALE-ORIENTATION-SAME-THEORY-GLUING",
+  "root": {
+    "repo_issue": "SzeChunYiu/RAKL_math#5",
+    "state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "framework": {
+    "repo": "SzeChunYiu/RAKL",
+    "current_main_sha_at_freeze": "193a3602caa5bb878ae9ddb0482e1943585b1385",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "governed_surface_drift_from_last_full_inspection": "NONE_ON_V3_METHOD_SURFACES; compare 2b439beb..193a3602 changed Paper2/publication docs only"
+  },
+  "application": {
+    "repo": "SzeChunYiu/RAKL_math",
+    "base_sha": "55f1b786396f0f29ee4edd7e80b0b0023b34e90f",
+    "base_tree": "7ba4a2dc8d223192d46a684f1e2c9dc53583cf0c",
+    "prospective_child_issue": "#166"
+  },
+  "problem_contract": {
+    "root_contract": "For every compact simple gauge group, construct a non-trivial 4D quantum Yang-Mills theory at Clay axiomatic strength and prove a finite positive mass gap above the vacuum with required continuum/short-distance behavior.",
+    "local_question": "Does the Section-10 asymptotically-free route actually glue to the strong-coupling gapped continuum family through a quantitatively vanishing AF/IR difference, with one consistent physical RG scale orientation?",
+    "success_branches": [
+      "SOURCE_SCALE_AND_SUMMABILITY_REPAIRED: bind one scale convention plus a summable/vanishing AF-IR comparison in the same OS theory.",
+      "PARTIAL_REPAIR_GLUING_BLOCKED: weak-bare-coupling entry is source-bound but the equality/gluing estimate remains insufficient.",
+      "SOURCE_LOCAL_INCONSISTENCY_SCOPED: identify an exact displayed contradiction/inference failure without claiming route impossibility.",
+      "BLOCKED_UNKNOWN: primary theorem detail is insufficient."
+    ],
+    "falsifiers": [
+      "g_k ~ c/sqrt(k) implies g_k^2 ~ c^2/k, hence sum g_k^2 diverges.",
+      "D_{k+1} <= D_k + epsilon_k with summable nonnegative epsilon does not imply D_k -> 0; D_k=1, epsilon_k=0 is a control.",
+      "x_k <= theta*x_{k-1}+c/k with 0<theta<1 does not imply x in l1; the equality recurrence with x_0>=0 is an admissible non-summable hostile control.",
+      "mu_{k+1}/mu_k=b^-1 with negative continuum beta sign has opposite physical orientation to a decreasing g_k; reindexing must be explicit."
+    ]
+  },
+  "actual_fibre_consulted": {
+    "application_memory_selected": [
+      "RAKL_math#69 YM-S1c1 bare-coupling escape",
+      "RAKL_math#92 YM-E2b gap-normalization/scale warning",
+      "RAKL_math PR#158 YM-E2a1 strict cumulative defect-margin audit"
+    ],
+    "application_memory_retrieved_rejected": [
+      {"id": "RAKL_math#109", "why": "source-family completeness already stored; duplicate failure family"},
+      {"id": "RAKL_math#126", "why": "OS semigroup/varying-Hilbert repair already open; not the smallest fresh atom"},
+      {"id": "RAKL_math#133", "why": "OS quotient descent already isolated"},
+      {"id": "RAKL_math#138", "why": "generic tightness+clustering implication route already exercised/saturated"},
+      {"id": "RAKL_math#159 / PR#161", "why": "recent FRD source-binding lane already exercised; source axis locally saturated there"}
+    ],
+    "historical_migration_provenance_used_as_authority": false,
+    "cross_millennium_memory_queried": false,
+    "cross_millennium_reason": "No cross-problem transfer was needed for the selected atom; avoid irrelevant applicability risk."
+  },
+  "source_snapshot": [
+    {
+      "id": "Faizal-Shabir arXiv:2606.19362v1",
+      "date": "2026-06-09",
+      "selectors": ["§10.1 Lemma 10.5", "§10.2 eqs. (10.55)-(10.59)", "Lemma 10.6", "Theorem 10.7 eqs. (10.63)-(10.76)", "Theorem 10.8 eqs. (10.77)-(10.81)", "§9.1 Theorem 9.3 as possible repair surface"],
+      "provenance": "primary author preprint; exact equation audit"
+    },
+    {
+      "id": "Fortschritte der Physik 74(4) e70097 / DOI 10.1002/prop.70097",
+      "date": "2026-04-20",
+      "selectors": ["publisher metadata/abstract only"],
+      "provenance": "published primary article metadata; exact full-text equation audit unavailable in this run"
+    }
+  ],
+  "analogues": {
+    "solved": [
+      "l1 stability/telescoping: finite cumulative error bounds bounded drift but equality of limits requires vanishing initial/tail difference or a contraction",
+      "asymptotic series test: c/k is not summable"
+    ],
+    "near_solved": ["RAKL_math PR#158: strict relative defect budget distinguishes summability from sufficient margin"],
+    "disanalogies": [
+      "PR#158 concerns persistence of a positive gap under one-sided loss; this atom concerns equality of two continuum trajectories.",
+      "Section 9 scheme-universality parameters are not automatically identical to two running AF/IR trajectory states; applicability must be typed.",
+      "A local scale reindexing can repair notation but cannot by itself prove same-theory continuum equality."
+    ]
+  },
+  "frozen_at": "2026-08-11T20:36:07Z",
+  "fibre_snapshot_hash": "d6672f16fef8b31e0c419a90eeb0b02f42ce71a56f97092d4cd46fc0fff6a09b",
+  "hash_scope": "sha256 of canonical JSON before hash fields; proposal fingerprint, not protected RAKL state_identity_hash"
+}
