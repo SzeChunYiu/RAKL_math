@@ -1,0 +1,517 @@
+{
+  "schema_version": "1.0.0",
+  "inventory_id": "PNP-O9d12a2a1a1b1-COORDINATE-INVENTORY-R2-20260811",
+  "recorded_at": "2026-08-11T20:34:00Z",
+  "atom_id": "O9d12a2a1a1b1",
+  "object": {
+    "target": "non-trivial A subset Gamma",
+    "base": "nonempty B subset P(Gamma)",
+    "witness": "one shared integral m-pair cover of every unrestricted full semi-filter obligation above A relative to B",
+    "root_quantity": "rho(A,B)",
+    "root_status": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE"
+  },
+  "qoi": "Does the frozen bounded primary-source universe already contain a distinct noncircular coordinate Q with a universal cover-to-Q upper bound and a sufficient explicit-target lower bound forcing rho=omega(log N)?",
+  "pre_action_binding": {
+    "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_COORDINATE_INVENTORY_R2_PRE_ACTION_20260811.json",
+    "raw_sha256": "sha256:b63ff5df4feaa9e19a7a4eadb0817cf9789fc127d0af62491744f79e9737e1f3",
+    "canonical_sha256": "sha256:114a122822a49575bea1daa17c6f570624005925f288e23e9403a1556ee64467",
+    "application_commit": "b7b9300a7a40e918a6e49bfc3e5e87a949148a5e",
+    "framework_commit": "242a39348291141d635a752b9e078fabdab011ea",
+    "frozen_before_result": true
+  },
+  "verdict_policy": {
+    "admissible_match_requirements": [
+      "distinct from rho, D_cap and D_cap_cyclic",
+      "Q(A,B)<=f(m) for every legal shared integral m-pair full cover",
+      "integrality, common-resource multiplexing and unrestricted full noncanonical obligations preserved",
+      "target-relative or invariant under free union closure of B",
+      "explicit frozen target family has Q(A_N,B_N)>=g(N)",
+      "exact composition proves f_inverse(g(N))=omega(log N)"
+    ],
+    "outcome_map": {
+      "ADMISSIBLE_MATCH": "SUCCESS",
+      "EXHAUSTIVE_NO_ADMISSIBLE_COORDINATE": "FAILURE",
+      "SOURCE_OR_TRANSLATION_INCOMPLETE": "BLOCKED"
+    }
+  },
+  "source_universe": [
+    {
+      "source_id": "ECCC-TR25-033-2025",
+      "content_status": "FULL_PRIMARY_CONTENT_INSPECTED",
+      "raw_sha256": "sha256:3f7d98691f3ac28208df6e8669d860c45b6068781dd77c737eb1e780641fbea7"
+    },
+    {
+      "source_id": "KARCHMER-1993",
+      "content_status": "METADATA_ONLY_PRIMARY_CONTENT_UNAVAILABLE",
+      "doi": "10.1109/SCT.1993.336535"
+    },
+    {
+      "source_id": "WIGDERSON-1995",
+      "content_status": "PRIMARY_CONTENT_UNAVAILABLE_INSUFFICIENT_IDENTITY",
+      "identity": "Lectures on the fusion method and derandomization, Technical Report, 1995"
+    },
+    {
+      "source_id": "NAKAYAMA-MARUOKA-1995",
+      "content_status": "METADATA_ONLY_PRIMARY_CONTENT_UNAVAILABLE",
+      "doi": "10.1006/inco.1995.1083"
+    },
+    {
+      "source_id": "RAZBOROV-1989",
+      "content_status": "FULL_PRIMARY_CONTENT_INSPECTED",
+      "raw_sha256": "sha256:a829725a0b7a70d78ed9ba8cf26fd15d58c7a12270443610c2391f5768b40706"
+    },
+    {
+      "source_id": "WIGDERSON-1993",
+      "content_status": "FULL_PRIMARY_CONTENT_INSPECTED",
+      "raw_sha256": "sha256:69893dfc288a89c2b7243b11ec0851ed73cbdda004e0046257bdbe439082e1d7"
+    }
+  ],
+  "coordinate_rows": [
+    {
+      "row_id": "R2-C01-ECCC-T24-D-CAP",
+      "coordinate": {
+        "name": "acyclic discrete intersection complexity",
+        "symbol": "D_cap(A|B)",
+        "distinct_from_frozen_root_quantities": false,
+        "distinctness_reason": "D_cap was explicitly excluded by the frozen R2 discriminator even though it is not equal to rho."
+      },
+      "source_anchors": [
+        "ECCC TR25-033, Theorem 24, Claims 26-27, equations (6)-(8)",
+        "ECCC TR25-033, Corollary 17 and Corollary 35 (Karchmer 1993 ancestry)"
+      ],
+      "primary_content_status": "MODERN_PRIMARY_INSPECTED_KARCHMER_ANCESTRAL_PRIMARY_UNAVAILABLE",
+      "domain_and_quantifiers": "For every non-trivial A and nonempty B, with r=rho(A,B), every legal shared integral m-pair full cover has r<=m and D_cap(A|B)<=r^2<=m^2.",
+      "construction_side": {
+        "status": "PASS_KNOWN_BOUND_BUT_FROZEN_EXCLUDED",
+        "statement": "D_cap(A|B) <= rho(A,B)^2 <= m^2",
+        "f_of_m": "m^2",
+        "extra_parameter_dependence": []
+      },
+      "target_side": {
+        "status": "PASS_EXPLICIT_RESTRICTED_MONOTONE_TARGET_WITH_ANCESTRY_GAP",
+        "target_family": "monotone 3-CLIQUE on n-vertex graphs",
+        "statement": "D_cap >= D_cap_cyclic = rho = Omega(n^3/(log n)^4) in the reported monotone specialization",
+        "reason": "The target is explicit and the rate is strong, but Karchmer 1993 primary theorem content is unavailable and no transfer to unrestricted nonmonotone circuits is supplied."
+      },
+      "implication_composition": {
+        "derived_root_bound": "rho >= sqrt(D_cap) >= Omega(n^(3/2)/(log n)^2) in the reported monotone specialization",
+        "sufficient_for_omega_log_N": true,
+        "scale_calculation": "Within the restricted monotone target, the polynomial lower bound composes through D_cap<=rho^2 to a superlogarithmic rho bound; this remains a known/frozen-excluded coordinate and restricted-model result with blocked primary ancestry."
+      },
+      "restriction_transport_audit": "PASS_EXACT_FULL_SEMIFILTER_OBJECT",
+      "quotient_and_free_base_audit": "NOT_PROVED",
+      "cheap_target_controls": [
+        "G_NEQ remains only logarithmic in the inspected calibration",
+        "monotone 3-CLIQUE does not transfer to unrestricted nonmonotone circuit complexity"
+      ],
+      "difference_witness": {
+        "source_to_target_map": "Use the same Lambda in the source closure recurrence.",
+        "preserved_conditions": [
+          "integrality",
+          "one shared pair family",
+          "full noncanonical semi-filter obligations",
+          "multiplexed reuse"
+        ],
+        "changed_or_broken_conditions": [
+          "coordinate prospectively excluded as already known",
+          "Karchmer 1993 primary theorem unavailable",
+          "monotone-to-unrestricted circuit transfer absent",
+          "free-base invariance not proved beyond the specialization"
+        ],
+        "implication_direction": "D_cap<=rho^2 and Cor35 supplies D_cap>=rho=Omega(n^3/log^4 n) in the monotone specialization; unrestricted transfer is not established",
+        "cheapest_falsifier_or_repair_test": "Inspect Karchmer primary theorem and prove exact statement alignment; then separately test any proposed monotone-to-unrestricted bridge."
+      },
+      "verdict": "REJECT_FROZEN_EXCLUDED_KNOWN_COORDINATE_WITH_RESTRICTED_MODEL_AND_PRIMARY_ANCESTRY_GAP",
+      "authority": "SOURCE_BOUND_ROW_CLASSIFICATION_ONLY"
+    },
+    {
+      "row_id": "R2-C02-ECCC-T30-D-CYCLIC",
+      "coordinate": {
+        "name": "convergent cyclic discrete intersection complexity",
+        "symbol": "D_cap_cyclic(A|B)",
+        "distinct_from_frozen_root_quantities": false,
+        "distinctness_reason": "Theorem 30 proves D_cap_cyclic(A|B)=rho(A,B)."
+      },
+      "source_anchors": [
+        "ECCC TR25-033, Theorem 30, Claims 31-34"
+      ],
+      "primary_content_status": "FULL_PRIMARY_CONTENT_INSPECTED",
+      "domain_and_quantifiers": "For every non-trivial A and nonempty B, D_cap_cyclic(A|B)=rho(A,B)<=m for every legal shared integral m-pair cover.",
+      "construction_side": {
+        "status": "PASS_IDENTITY",
+        "statement": "D_cap_cyclic(A|B)=rho(A,B)<=m",
+        "f_of_m": "m",
+        "extra_parameter_dependence": []
+      },
+      "target_side": {
+        "status": "CIRCULAR",
+        "target_family": null,
+        "statement": "Any lower bound on D_cap_cyclic is exactly a lower bound on rho.",
+        "reason": "No independent coordinate is obtained."
+      },
+      "implication_composition": {
+        "derived_root_bound": "identity only",
+        "sufficient_for_omega_log_N": false,
+        "scale_calculation": "The conclusion restates the desired rho lower bound rather than deriving it from an independent target property."
+      },
+      "restriction_transport_audit": "PASS_EXACT_FULL_SEMIFILTER_OBJECT",
+      "quotient_and_free_base_audit": "NOT_AN_INDEPENDENT_CONTROL",
+      "cheap_target_controls": [],
+      "difference_witness": {
+        "source_to_target_map": "Map optimal covers to convergent cyclic systems and conversely.",
+        "preserved_conditions": [
+          "same A,B",
+          "integral pairs",
+          "full obligations",
+          "shared cyclic reuse"
+        ],
+        "changed_or_broken_conditions": [
+          "coordinate equals rho",
+          "syntactic renaming is not a certificate"
+        ],
+        "implication_direction": "D_cap_cyclic=rho<=m",
+        "cheapest_falsifier_or_repair_test": "Require a Q with a definition and target lower bound not obtained by first computing/reconstructing rho."
+      },
+      "verdict": "REJECT_CIRCULAR_ROOT_EQUIVALENT",
+      "authority": "SOURCE_BOUND_ROW_CLASSIFICATION_ONLY"
+    },
+    {
+      "row_id": "R2-C03-ECCC-T37-DESCRIPTION",
+      "coordinate": {
+        "name": "cover-induced incidence description length",
+        "symbol": "L_desc(A;B,Lambda)",
+        "distinct_from_frozen_root_quantities": "NOT_A_TARGET_COORDINATE_AS_STATED",
+        "distinctness_reason": "The source accounting is attached to a particular cover witness Lambda; no source-backed target-only minimization Q(A,B) distinct from rho was inspected."
+      },
+      "source_anchors": [
+        "ECCC TR25-033, Proposition 36 and Theorem 37"
+      ],
+      "primary_content_status": "FULL_PRIMARY_CONTENT_INSPECTED",
+      "domain_and_quantifiers": "For the random bipartite graph specialization with row/column generators, a t-pair cover yields an O(t(|B|+t))-bit description and random incompressibility yields rho=Theta(N) almost surely.",
+      "construction_side": {
+        "status": "FAIL_WITNESS_DEPENDENT_AND_EXTRA_PARAMETER",
+        "statement": "L_desc = O(m(|B|+m))",
+        "f_of_m": null,
+        "extra_parameter_dependence": [
+          "|B|"
+        ]
+      },
+      "target_side": {
+        "status": "FAIL_EXPLICIT_TARGET",
+        "target_family": "random bipartite graph",
+        "statement": "Omega(N^2) description lower bound almost surely",
+        "reason": "Random typicality/existence is not a proved lower bound for an explicit frozen family."
+      },
+      "implication_composition": {
+        "derived_root_bound": "random-specialization rho=Theta(N)",
+        "sufficient_for_omega_log_N": false,
+        "scale_calculation": "The source result is strong for random targets but supplies no explicit family and no parameter-free Q<=f(m)."
+      },
+      "restriction_transport_audit": "PASS_ONLY_IN_RANDOM_GRAPH_SPECIALIZATION",
+      "quotient_and_free_base_audit": "NOT_PROVED",
+      "cheap_target_controls": [
+        "ordinary short description does not imply hard full-cover structure"
+      ],
+      "difference_witness": {
+        "source_to_target_map": "Encode the source cover incidence data for the specialized graph.",
+        "preserved_conditions": [
+          "integral shared cover",
+          "full obligations in the specialization"
+        ],
+        "changed_or_broken_conditions": [
+          "random rather than explicit target",
+          "|B| dependence",
+          "incompressibility is external to cover mechanics",
+          "L_desc(A;B,Lambda) is witness-dependent rather than a target-only Q(A,B)"
+        ],
+        "implication_direction": "description upper bound plus random target lower bound implies a random-target rho lower bound",
+        "cheapest_falsifier_or_repair_test": "Freeze an explicit family before evaluation and prove a source-bound description lower bound with the exact inverse-rate calculation."
+      },
+      "verdict": "NO_MATCH_NOT_TARGET_COORDINATE_EXPLICIT_TARGET_AND_PARAMETER_DEPENDENCE_GAP",
+      "authority": "SOURCE_BOUND_ROW_CLASSIFICATION_ONLY"
+    },
+    {
+      "row_id": "R2-C04-RAZ89-WIG93-PAIRED-PROGRAMS",
+      "coordinate": {
+        "name": "model-paired operator-program or circuit size",
+        "symbol": "s_Delta(f)",
+        "distinct_from_frozen_root_quantities": true,
+        "distinctness_reason": "Program/circuit size is a separate source-defined resource inside each registered legitimate-model/cover pairing."
+      },
+      "source_anchors": [
+        "Razborov 1989, Claim 2.5 and Theorems 2.6-2.7",
+        "Wigderson 1993, Meta-Theorem, Meta-Converse and model/cover table"
+      ],
+      "primary_content_status": "FULL_PRIMARY_CONTENT_INSPECTED",
+      "domain_and_quantifiers": "Razborov gives a cubic reconstruction relation inside an f-dependent legitimate model; Wigderson gives rho_Gamma(f)<=s_Delta(f)<=rho_Gamma(f)^C with C<=4 inside each explicitly paired model, cover class and input definition.",
+      "construction_side": {
+        "status": "PASS_ONLY_INSIDE_PAIRED_RESTRICTED_MODELS",
+        "statement": "s_Delta(f)<=rho_Gamma(f)^C with C<=4, and Razborov gives O((t+n0)^3) reconstruction in its selected model",
+        "f_of_m": "m^C only after exact model pairing; Razborov also has literal-pair overhead n0",
+        "extra_parameter_dependence": [
+          "model/cover row",
+          "input definition",
+          "functional class",
+          "n0 overhead in Razborov"
+        ]
+      },
+      "target_side": {
+        "status": "FAIL_FULL_MODEL_EXPLICIT_TARGET_BRIDGE",
+        "target_family": null,
+        "statement": null,
+        "reason": "No inspected theorem translates every unrestricted Definition-21 full cover to one paired source model and supplies the required explicit unrestricted target lower bound."
+      },
+      "implication_composition": {
+        "derived_root_bound": null,
+        "sufficient_for_omega_log_N": false,
+        "scale_calculation": "Polynomial reconstruction is mathematically valid only within each source pairing; deleting the row restrictions changes the object, and importing an explicit unrestricted circuit lower bound would assume the root-facing difficulty."
+      },
+      "restriction_transport_audit": "FAIL_NO_EXACT_TRANSLATION_TO_EVERY_DEFINITION_21_FULL_COVER",
+      "quotient_and_free_base_audit": "NOT_PROVED",
+      "cheap_target_controls": [
+        "target-dependent models can encode structure unavailable in the fixed full-semi-filter object"
+      ],
+      "difference_witness": {
+        "source_to_target_map": "Map pair covers to operator programs only after selecting the exact Razborov/Wigderson functional class, cover universe, input definition and legitimate model.",
+        "preserved_conditions": [
+          "integral cover count",
+          "one source-paired cover family",
+          "polynomial reconstruction inside the paired row"
+        ],
+        "changed_or_broken_conditions": [
+          "functional class varies",
+          "cover universe varies",
+          "input definition varies",
+          "target-dependent model or n0 overhead",
+          "no identity with unrestricted Definition-21 full semi-filters"
+        ],
+        "implication_direction": "rho_Gamma<=s_Delta<=rho_Gamma^C within a paired row; no theorem establishes s_full<=f(rho_full) for the frozen unrestricted object",
+        "cheapest_falsifier_or_repair_test": "Choose one exact paired row and prove a two-way assumption-preserving translation to the full Definition-21 object before importing its target bound."
+      },
+      "verdict": "NO_MATCH_MODEL_TRANSLATION_AND_EXPLICIT_TARGET_GAP",
+      "authority": "PRIMARY_SOURCE_STATEMENTS_INSPECTED_PAIRED_SCOPE_ONLY"
+    },
+    {
+      "row_id": "R2-C05-ECCC-T45-SEMIULTRAFILTER",
+      "coordinate": {
+        "name": "semi-ultrafilter cover / conondeterministic complexity",
+        "symbol": "rho_ultra(A,B)",
+        "distinct_from_frozen_root_quantities": true,
+        "distinctness_reason": "rho_ultra minimizes over a reduced obligation class and therefore need not equal full rho."
+      },
+      "source_anchors": [
+        "ECCC TR25-033, Definitions 44 and 46, Theorem 45, Proposition 47-Lemma 48-Corollary 49",
+        "Karchmer 1993 DOI 10.1109/SCT.1993.336535"
+      ],
+      "primary_content_status": "MODERN_PRIMARY_INSPECTED_ANCESTRAL_PRIMARY_UNAVAILABLE",
+      "domain_and_quantifiers": "For Boolean f, rho_ultra is constant-factor equivalent to conondeterministic intersection complexity; for G_NEQ with N=2^n the inspected chain gives rho_ultra=n=log N.",
+      "construction_side": {
+        "status": "PASS_ONE_WAY_REDUCED_OBLIGATIONS",
+        "statement": "rho_ultra(A,B) <= rho(A,B) <= m",
+        "f_of_m": "m",
+        "extra_parameter_dependence": []
+      },
+      "target_side": {
+        "status": "FAIL_REQUIRED_SCALE",
+        "target_family": "G_NEQ / NEQ",
+        "statement": "rho_ultra=log N",
+        "reason": "The explicit lower bound meets only the logarithmic boundary, not omega(log N)."
+      },
+      "implication_composition": {
+        "derived_root_bound": "rho>=rho_ultra=log N on the inspected target",
+        "sufficient_for_omega_log_N": false,
+        "scale_calculation": "The useful inequality direction is correct, but the known explicit target has no superlogarithmic separation."
+      },
+      "restriction_transport_audit": "REDUCED_OBLIGATIONS_WITH_USEFUL_LOWER_BOUND_POLARITY",
+      "quotient_and_free_base_audit": "TARGET_SPECIFIC_ONLY",
+      "cheap_target_controls": [
+        "G_NEQ exact logarithmic calibration"
+      ],
+      "difference_witness": {
+        "source_to_target_map": "Replace all full semi-filter obligations by the semi-ultrafilter subclass.",
+        "preserved_conditions": [
+          "integral pair cover",
+          "same above relation",
+          "rho_ultra<=rho polarity"
+        ],
+        "changed_or_broken_conditions": [
+          "obligation class smaller",
+          "different nondeterministic/conondeterministic model",
+          "ancestral primary content unavailable"
+        ],
+        "implication_direction": "rho_ultra<=rho<=m, so a superlogarithmic explicit rho_ultra lower bound would transfer",
+        "cheapest_falsifier_or_repair_test": "Find and source-check an explicit family with rho_ultra=omega(log N); first verify Karchmer quantifiers and constants."
+      },
+      "verdict": "NO_MATCH_EXPLICIT_SCALE_WITH_PRIMARY_ANCESTRY_GAP",
+      "authority": "MODERN_SOURCE_SCOPE_ONLY_ANCESTRAL_CANNOT_CHECK"
+    },
+    {
+      "row_id": "R2-C06-WIG95-BRANCHING-RESTRICTION",
+      "coordinate": {
+        "name": "generator-derived-operand branching cover coordinate",
+        "symbol": "rho_branch(A,B)",
+        "distinct_from_frozen_root_quantities": true,
+        "distinctness_reason": "The cited restriction changes the legal pair class."
+      },
+      "source_anchors": [
+        "ECCC TR25-033, Definition-21 discussion citing Wigderson 1995",
+        "Avi Wigderson, Lectures on the fusion method and derandomization, Technical Report, 1995"
+      ],
+      "primary_content_status": "REQUIRED_PRIMARY_CONTENT_UNAVAILABLE",
+      "domain_and_quantifiers": "The modern source says requiring at least one operand of each pair to be a generator intersection characterizes branching models; exact 1995 theorem text and quantifiers were not inspectable.",
+      "construction_side": {
+        "status": "FAIL_WRONG_AUTOMATIC_DIRECTION",
+        "statement": "No theorem shows an arbitrary unrestricted m-pair cover converts to a restricted branching cover of f(m) pairs.",
+        "f_of_m": null,
+        "extra_parameter_dependence": [
+          "generator-derived operand restriction"
+        ]
+      },
+      "target_side": {
+        "status": "CANNOT_CHECK",
+        "target_family": null,
+        "statement": null,
+        "reason": "Primary theorem content is unavailable."
+      },
+      "implication_composition": {
+        "derived_root_bound": null,
+        "sufficient_for_omega_log_N": false,
+        "scale_calculation": "Because W_branch is a subset of W_full, rho_full<=rho_branch; a lower bound on rho_branch does not imply a lower bound on rho_full without a reverse bridge."
+      },
+      "restriction_transport_audit": "FAIL_RESTRICTED_PAIR_CLASS",
+      "quotient_and_free_base_audit": "CANNOT_CHECK",
+      "cheap_target_controls": [],
+      "difference_witness": {
+        "source_to_target_map": "Restrict every legal pair so at least one operand is generator-derived.",
+        "preserved_conditions": [
+          "pair preservation semantics",
+          "above-obligation concept"
+        ],
+        "changed_or_broken_conditions": [
+          "legal pair class strictly smaller",
+          "computational model changes",
+          "primary statement unavailable"
+        ],
+        "implication_direction": "W_branch subset W_full implies rho_full<=rho_branch, the wrong direction for direct lower-bound transfer",
+        "cheapest_falsifier_or_repair_test": "Obtain the primary text, freeze exact quantifiers, and prove rho_branch<=g(rho_full) or a direct full-model theorem."
+      },
+      "verdict": "CANNOT_CHECK_PRIMARY_AND_RESTRICTED_PAIR_CLASS",
+      "authority": "SECONDARY_RESTRICTION_WARNING_ONLY"
+    },
+    {
+      "row_id": "R2-C07-NM95-LOOP-APPROXIMATION",
+      "coordinate": {
+        "name": "loop-circuit legitimate-model functional cover",
+        "symbol": "rho_NM95(f,M)",
+        "distinct_from_frozen_root_quantities": "CANNOT_CHECK",
+        "distinctness_reason": "The modern source reports a more general functional/model class, but the primary definition was unavailable."
+      },
+      "source_anchors": [
+        "Nakayama and Maruoka, Loop Circuits and Their Relation to Razborov approximation model, Information and Computation 119(2), DOI 10.1006/inco.1995.1083",
+        "ECCC TR25-033 introduction and Section 3.4 scope discussion"
+      ],
+      "primary_content_status": "REQUIRED_PRIMARY_CONTENT_UNAVAILABLE",
+      "domain_and_quantifiers": "The modern source describes NM95 as using general functionals, Boolean circuit complexity and legitimate models with a constant-factor characterization; exact primary hypotheses and theorem statement were not inspectable.",
+      "construction_side": {
+        "status": "CANNOT_CHECK_MODEL_ALIGNMENT",
+        "statement": null,
+        "f_of_m": null,
+        "extra_parameter_dependence": [
+          "functional class",
+          "legitimate model",
+          "Boolean versus intersection complexity"
+        ]
+      },
+      "target_side": {
+        "status": "CANNOT_CHECK",
+        "target_family": null,
+        "statement": null,
+        "reason": "No primary source-bound explicit-target statement was inspected."
+      },
+      "implication_composition": {
+        "derived_root_bound": null,
+        "sufficient_for_omega_log_N": false,
+        "scale_calculation": "No exact source-to-target translation or inverse composition is available."
+      },
+      "restriction_transport_audit": "FAIL_OR_UNKNOWN_DIFFERENT_FUNCTIONAL_MODEL",
+      "quotient_and_free_base_audit": "CANNOT_CHECK",
+      "cheap_target_controls": [],
+      "difference_witness": {
+        "source_to_target_map": "Compare NM95 legitimate models and general functionals to monotone full semi-filters.",
+        "preserved_conditions": [
+          "fusion/approximation ancestry only"
+        ],
+        "changed_or_broken_conditions": [
+          "functional class differs",
+          "complexity target differs",
+          "legitimate-model assumptions differ",
+          "primary theorem unavailable"
+        ],
+        "implication_direction": "NM95 result does not imply an exact full-semi-filter coordinate theorem without a checked translation",
+        "cheapest_falsifier_or_repair_test": "Obtain the primary article and audit its exact functional class, constants, and transfer direction."
+      },
+      "verdict": "CANNOT_CHECK_PRIMARY_AND_MODEL_CLASS_ALIGNMENT",
+      "authority": "MODERN_SECONDARY_SCOPE_WARNING_ONLY"
+    }
+  ],
+  "carried_forward_inspected_nonmatches": [
+    {
+      "family": "Razborov 1989 and Wigderson 1993 model-paired program/circuit coordinates",
+      "status": "MATERIALIZED_AS_R2-C04_WITH_PRIMARY_HASH_BINDING",
+      "evidence": "R1 inventory V2 rows RAZ89-C25-T26-T27 and WIG93-META-THEOREM-CONVERSE"
+    },
+    {
+      "family": "trace/partition/entropy/VC/rank/discrepancy potentials",
+      "status": "NO_INSPECTED_COMPLETE_SOURCE_ROW",
+      "residual": "free-base quotient, terminal-target forcing, and cyclic transport obligations remain open; PRs 113, 128 and 154 are nonauthoritative hostile warnings only"
+    }
+  ],
+  "source_completeness_cut": {
+    "missing_primary_sources": [
+      "KARCHMER-1993",
+      "WIGDERSON-1995",
+      "NAKAYAMA-MARUOKA-1995"
+    ],
+    "bounded_no_match_allowed": false,
+    "reason": "Uninspected theorem families prevent an exhaustive theorem-absence or no-coordinate conclusion; this is an evidence boundary, not a mathematical impossibility result."
+  },
+  "overall_result": {
+    "outcome_branch": "BLOCKED",
+    "verdict": "CANNOT_CHECK_REQUIRED_PRIMARY_ANCESTRY_AND_NO_ADMISSIBLE_MATCH_IN_INSPECTED_ROWS",
+    "candidate_generation_allowed": false,
+    "candidate_generated": false,
+    "inspected_row_admissible_match_count": 0,
+    "exhaustive_no_match_claimed": false,
+    "root_status": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE"
+  },
+  "mathematical_residual": "Find a source-bound distinct coordinate with Q<=f(rho), a frozen explicit-family lower bound Q>=g(N), and a proved inverse-rate composition f_inverse(g(N))=omega(log N), while preserving unrestricted full semi-filter semantics and free-base controls.",
+  "next_reopen_triggers": [
+    "inspect exact primary theorem text for any blocked ancestry source",
+    "obtain an assumption-preserving restricted-to-full reverse bridge",
+    "prove a strong explicit-target lower bound for the useful semi-ultrafilter polarity",
+    "open a fresh child context before inventing any new coordinate"
+  ],
+  "operational_assurance_metadata": {
+    "excluded_from_mathematical_experience": true,
+    "framework_frozen_commit": "242a39348291141d635a752b9e078fabdab011ea",
+    "latest_framework_main_observed": "c6e6c5e445721250484d6c7757cc458452a6e44a",
+    "latest_diff_from_frozen_math_core": "NO_MATHEMATICAL_OR_CORE_FILES_CHANGED; publication PDFs and one publication receipt only",
+    "excluded_categories": [
+      "Git branch or PR movement",
+      "CI execution and test counts",
+      "artifact hashes and timestamps",
+      "HTTP status and download mechanics",
+      "schema conformance and cycle telemetry"
+    ]
+  },
+  "review_authority": "PENDING_SAME_CONTEXT_INTERNAL_HOSTILE_MATHEMATICAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "authority_contract": {
+    "grants_proof_authority": false,
+    "grants_new_theorem_authority": false,
+    "grants_novelty_authority": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_framework_evolution_authority": false,
+    "grants_review_independence": false
+  },
+  "artifact_hash": "sha256:a4139b8e8781d0affd27ed91aaa70fd8e814d99521d8819a5cdbcf59a3916c76"
+}

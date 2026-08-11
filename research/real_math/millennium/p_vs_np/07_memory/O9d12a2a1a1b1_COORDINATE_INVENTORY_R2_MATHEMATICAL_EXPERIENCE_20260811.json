@@ -1,0 +1,274 @@
+{
+  "schema_version": "1.0.0",
+  "ledger_id": "PNP-O9d12a2a1a1b1-R2-MATHEMATICAL-EXPERIENCE-20260811",
+  "recorded_at": "2026-08-11T20:34:30Z",
+  "atom_id": "O9d12a2a1a1b1",
+  "object": "mathematical lessons from the R2 coordinate inventory and bounded C034-C040 fractional sibling evidence",
+  "admission_rule": {
+    "required_fields": [
+      "typed_mathematical_statement_or_failure",
+      "quantifiers_or_scope",
+      "mathematical_evidence",
+      "broken_assumptions",
+      "falsifier_or_next_discriminator",
+      "non_guarantees",
+      "local_vs_gluing_status"
+    ],
+    "excluded_if_supported_only_by": [
+      "Git/PR/branch state",
+      "CI or test counts",
+      "hashes or timestamps",
+      "HTTP/download mechanics",
+      "schema conformance",
+      "connector or solver-runtime events",
+      "cycle telemetry"
+    ]
+  },
+  "source_result": {
+    "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_COORDINATE_INVENTORY_R2_RESULT_20260811.json",
+    "artifact_hash": "sha256:a4139b8e8781d0affd27ed91aaa70fd8e814d99521d8819a5cdbcf59a3916c76"
+  },
+  "experiences": [
+    {
+      "experience_id": "PNP-R2-POLARITY-COMPOSITION",
+      "kind": "MATHEMATICAL_TRANSFER_RULE",
+      "typed_mathematical_statement_or_failure": "Q(A,B)<=f(m) and Q(A_N,B_N)>=g(N) imply only m>=f^{-1}(g(N)); the root-facing gate additionally requires f^{-1}(g(N))=omega(log N).",
+      "quantifiers_or_scope": "For every legal m-pair cover in the exact source model and one explicit frozen target family.",
+      "mathematical_evidence": [
+        "R2-C01-ECCC-T24-D-CAP",
+        "R2-C03-ECCC-T37-DESCRIPTION"
+      ],
+      "broken_assumptions": [
+        "A lower bound Q=omega(log N) was treated as sufficient without composing with f^{-1}."
+      ],
+      "competing_diagnoses": [
+        "target bound too weak",
+        "construction exponent too large",
+        "parameter dependence prevents inversion"
+      ],
+      "bounded_diagnosis": "Exact rate composition, not the slogan superlogarithmic-Q, controls usefulness.",
+      "falsifier_or_next_discriminator": "Write f and g explicitly per row and calculate f^{-1}(g(N)) before retaining the coordinate.",
+      "non_guarantees": [
+        "Does not prove that no useful coordinate exists."
+      ],
+      "local_vs_gluing_status": "LOCAL_INEQUALITY_KNOWN_GLOBAL_ROOT_GLUE_OPEN"
+    },
+    {
+      "experience_id": "PNP-R2-CIRCULARITY",
+      "kind": "MATHEMATICAL_ROUTE_PRUNING",
+      "typed_mathematical_statement_or_failure": "D_cap_cyclic(A|B)=rho(A,B), so a lower bound on D_cap_cyclic is the desired rho lower bound itself, not an independent target certificate.",
+      "quantifiers_or_scope": "All non-trivial A and nonempty B under ECCC Theorem 30.",
+      "mathematical_evidence": [
+        "R2-C02-ECCC-T30-D-CYCLIC"
+      ],
+      "broken_assumptions": [
+        "Syntactic renaming was treated as a distinct coordinate."
+      ],
+      "competing_diagnoses": [
+        "definitional identity",
+        "polynomial equivalence",
+        "target-dependent reconstruction"
+      ],
+      "bounded_diagnosis": "This exact coordinate is definitionally/root-equivalent and fails the frozen distinctness gate.",
+      "falsifier_or_next_discriminator": "Exhibit a Q defined without computing rho and prove both inequalities independently.",
+      "non_guarantees": [
+        "Does not rule out a substantively new proof in the cyclic representation."
+      ],
+      "local_vs_gluing_status": "LOCAL_IDENTITY_SOLVED_INDEPENDENT_ROOT_GLUE_ABSENT"
+    },
+    {
+      "experience_id": "PNP-R2-EXPLICIT-TARGET-CUT",
+      "kind": "MATHEMATICAL_EXPLICITNESS_WARNING",
+      "typed_mathematical_statement_or_failure": "Random-target incompressibility yields typical/existential lower bounds but does not supply the required lower bound for a pre-frozen explicit family A_N.",
+      "quantifiers_or_scope": "ECCC Theorem 37 random bipartite graph specialization.",
+      "mathematical_evidence": [
+        "R2-C03-ECCC-T37-DESCRIPTION"
+      ],
+      "broken_assumptions": [
+        "Existence or almost-sure hardness was substituted for explicitness."
+      ],
+      "competing_diagnoses": [
+        "no explicit construction",
+        "explicit family exists but lower bound unknown",
+        "description coordinate misses the explicit family"
+      ],
+      "bounded_diagnosis": "The inspected source closes only the random-target specialization.",
+      "falsifier_or_next_discriminator": "Name A_N before evaluation and prove Q(A_N,B_N)>=g(N) in the source model.",
+      "non_guarantees": [
+        "Negative literature search is not a novelty or impossibility proof."
+      ],
+      "local_vs_gluing_status": "RANDOM_SPECIALIZATION_CLOSED_EXPLICIT_FAMILY_GLUE_OPEN"
+    },
+    {
+      "experience_id": "PNP-R2-RESTRICTED-PAIR-POLARITY",
+      "kind": "MATHEMATICAL_MODEL_TRANSFER_WARNING",
+      "typed_mathematical_statement_or_failure": "If W_restricted is a subset of W_full, then rho_full<=rho_restricted; therefore a restricted branching-model lower bound does not directly lower-bound the easier unrestricted full-cover optimum.",
+      "quantifiers_or_scope": "Any minimization problem whose legal witness family is narrowed while obligations are fixed.",
+      "mathematical_evidence": [
+        "R2-C06-WIG95-BRANCHING-RESTRICTION"
+      ],
+      "broken_assumptions": [
+        "The feasible-set inclusion inequality was reversed."
+      ],
+      "competing_diagnoses": [
+        "pair-class restriction",
+        "obligation-class restriction",
+        "different computational target"
+      ],
+      "bounded_diagnosis": "The automatic transfer direction is wrong; a reverse conversion theorem is required.",
+      "falsifier_or_next_discriminator": "Prove rho_restricted<=g(rho_full) with preserved assumptions, or lower-bound rho_full directly.",
+      "non_guarantees": [
+        "A restricted method is not globally blacklisted."
+      ],
+      "local_vs_gluing_status": "RESTRICTED_RESULT_POSSIBLE_UNRESTRICTED_GLUE_OPEN"
+    },
+    {
+      "experience_id": "PNP-R2-MODEL-PAIRED-TRANSLATION",
+      "kind": "MATHEMATICAL_MODEL_TRANSFER_WARNING",
+      "typed_mathematical_statement_or_failure": "Razborov and Wigderson polynomial cover-to-program reconstructions are exact only inside their registered target-dependent or model-paired functional, cover and input classes; deleting the row restrictions changes the mathematical object.",
+      "quantifiers_or_scope": "Razborov 1989 Claim 2.5/Theorems 2.6-2.7 and Wigderson 1993 Meta-Theorem/Meta-Converse.",
+      "mathematical_evidence": [
+        "R2-C04-RAZ89-WIG93-PAIRED-PROGRAMS"
+      ],
+      "broken_assumptions": [
+        "A model-paired converse was treated as a theorem for every unrestricted Definition-21 full cover."
+      ],
+      "competing_diagnoses": [
+        "functional class mismatch",
+        "cover universe mismatch",
+        "target-dependent model",
+        "literal-pair overhead"
+      ],
+      "bounded_diagnosis": "The polynomial reconstruction is source-correct in paired scope; the full-model translation is absent.",
+      "falsifier_or_next_discriminator": "Select one exact source row and prove a two-way assumption-preserving translation before importing any target lower bound.",
+      "non_guarantees": [
+        "Does not show that no such translation can exist."
+      ],
+      "local_vs_gluing_status": "PAIRED_SOURCE_THEOREM_KNOWN_FULL_MODEL_GLUE_OPEN"
+    },
+    {
+      "experience_id": "PNP-R2-REDUCED-OBLIGATION-POLARITY",
+      "kind": "MATHEMATICAL_MODEL_TRANSFER_OPPORTUNITY",
+      "typed_mathematical_statement_or_failure": "Because semi-ultrafilters are a subclass of full semi-filter obligations, rho_ultra<=rho; this direction is potentially useful, but the inspected explicit G_NEQ calibration gives only rho_ultra=log N.",
+      "quantifiers_or_scope": "ECCC Definitions 44-46 and Proposition 47-Corollary 49.",
+      "mathematical_evidence": [
+        "R2-C05-ECCC-T45-SEMIULTRAFILTER"
+      ],
+      "broken_assumptions": [
+        "A logarithmic boundary value was treated as a superlogarithmic separation."
+      ],
+      "competing_diagnoses": [
+        "coordinate too weak",
+        "target too cheap",
+        "stronger explicit target not yet found"
+      ],
+      "bounded_diagnosis": "Polarity survives, required scale does not.",
+      "falsifier_or_next_discriminator": "Find a source-bound explicit family with rho_ultra=omega(log N) and replay cheap targets.",
+      "non_guarantees": [
+        "Does not show semi-ultrafilter complexity is globally weak."
+      ],
+      "local_vs_gluing_status": "POLARITY_GLUE_AVAILABLE_TARGET_SCALE_OPEN"
+    },
+    {
+      "experience_id": "PNP-R2-FREE-BASE-AND-TARGET-FORCING",
+      "kind": "MATHEMATICAL_INVARIANCE_WARNING",
+      "typed_mathematical_statement_or_failure": "A coordinate charged to intersection work must be target-relative or invariant/minimized under zero-cost free-union closure of B, and operation-wise Lipschitzness must be supplemented by a theorem that the terminal target forces large accumulated potential.",
+      "quantifiers_or_scope": "Any proposed trace, entropy, VC, rank, discrepancy or partition coordinate for the full-cover/cyclic lane.",
+      "mathematical_evidence": [
+        "RAKL_math PR 113 warning only",
+        "RAKL_math PR 128 warning only",
+        "RAKL_math PR 154 warning only"
+      ],
+      "broken_assumptions": [
+        "absolute base richness can grow for free",
+        "one cyclic gate need not equal one immutable added set",
+        "large trace does not force terminal target hardness"
+      ],
+      "competing_diagnoses": [
+        "coordinate measures base expressivity",
+        "coordinate is terminal-target blind",
+        "cyclic reuse invalidates gatewise accounting"
+      ],
+      "bounded_diagnosis": "The unmerged controls are hostile warnings only; the required invariance and target-forcing lemmas remain open.",
+      "falsifier_or_next_discriminator": "Test free-union quotient invariance, zero-cost shattering, terminal-target forcing and cyclic transport before any candidate promotion.",
+      "non_guarantees": [
+        "Unmerged warnings have no theorem authority and do not prove a universal no-go result."
+      ],
+      "local_vs_gluing_status": "HOSTILE_CONTROLS_IDENTIFIED_FORMAL_GLUE_OPEN"
+    },
+    {
+      "experience_id": "PNP-C034-C040-PRESERVATION-VERSUS-AUGMENTATION",
+      "kind": "BOUNDED_SIBLING_MATHEMATICAL_EXPERIENCE",
+      "typed_mathematical_statement_or_failure": "Recursive fractional amplification has independent obligations: preserve old feasible dual mass and create new feasible dual mass whose cumulative increment provably diverges; conditional cylinder persistence addresses only the first.",
+      "quantifiers_or_scope": "The quarantined C034-C040 fractional full-cover sibling; only the C037 finite drop and reconstructed C034b U8 value currently have exact replay authority.",
+      "mathematical_evidence": [
+        {
+          "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_MATHEMATICAL_EXPERIENCE_BOUNDARY_20260811.json",
+          "raw_sha256": "sha256:cc629cf87c047a761d4c97180b82f4287c10dd7227a29535e6fdc31a4950381e",
+          "artifact_hash": "sha256:dd92f096463dec6fe4b299fedd026fdc3c17c25df33c7e4471e5576f7292f7de"
+        },
+        {
+          "path": "research/real_math/millennium/p_vs_np/05_falsification/C037_EXTERNAL_LEDGER_REPLAY_RECEIPT_20260811.json",
+          "raw_sha256": "sha256:602864258fc774724ce2cf50617834e95f93cf60ee34d792cb007157b8ba7514",
+          "artifact_hash": "sha256:e0dce5f8dd47c48d7f98e5886019b15f4053c078dcb5399caae3bb05a28be2f8",
+          "authority": "VERIFIED_BOUNDED_COUNTEREXAMPLE"
+        },
+        {
+          "path": "research/real_math/millennium/p_vs_np/05_falsification/C034B_U8_RETROSPECTIVE_REPLAY_V2_CORRECTION_20260811.json",
+          "raw_sha256": "sha256:32e19eb8b4bd0331e29a5b39ddf119c673b990d83996b62d6eed1c5cad314cd0",
+          "artifact_hash": "sha256:746b4780cc4908b1afedb300ab9f08914a44b14bedd4dab37dbcf106fb90f2c9",
+          "authority": "RETROSPECTIVE_TARGET_EXPOSED_EXACT_REPLAY"
+        }
+      ],
+      "broken_assumptions": [
+        "ground-set inclusion was treated as constraint inclusion",
+        "finite positive increments were treated as evidence of unbounded growth"
+      ],
+      "competing_diagnoses": [
+        "generator relevance drift",
+        "zero augmentation mass",
+        "positive but summable increments"
+      ],
+      "bounded_diagnosis": "C037 proves arbitrary extension nonmonotonicity; C038 is conditional desk-check only; U9/U10/U11 reported certificates remain CANNOT_CHECK.",
+      "falsifier_or_next_discriminator": "For a fresh C041, prove relevance persistence, L_{k+1}>=L_k+delta_k, divergence of sum delta_k, explicitness, and meaningful input-size rate.",
+      "non_guarantees": [
+        "Does not certify the reported C039-C040 chain or imply unbounded rho_frac."
+      ],
+      "local_vs_gluing_status": "FINITE_COUNTEREXAMPLE_VERIFIED_UNIFORM_RECURRENCE_OPEN"
+    }
+  ],
+  "evidence_completeness_block": {
+    "status": "CANNOT_CHECK",
+    "missing_primary_statement_families": [
+      "KARCHMER-1993",
+      "WIGDERSON-1995",
+      "NAKAYAMA-MARUOKA-1995"
+    ],
+    "classification": "SOURCE_GOVERNANCE_ASSURANCE_NOT_MATHEMATICAL_LESSON",
+    "mathematical_effect": "prevents exhaustive no-coordinate conclusion"
+  },
+  "excluded_operational_events": [
+    "framework pins or drift",
+    "Git branches, PRs and merge state",
+    "CI/test execution",
+    "hash and timestamp checks",
+    "HTTP response codes and retrieval mechanics",
+    "worker hangs, solver stalls and connector errors",
+    "schema/telemetry conformance"
+  ],
+  "framework_feedback": {
+    "status": "QUARANTINED_PROPOSAL_ONLY",
+    "lesson": "RAKL mathematical-application feedback should admit typed mathematical operations, failures, scope, polarity and falsifiers while routing operational assurance to a separate ledger.",
+    "new_framework_delta_warranted": false,
+    "reason": "Current RAKL v3 and the existing mathematical-experience boundary already encode this separation; this round supplies application evidence, not fresh assurance for a framework change."
+  },
+  "authority_contract": {
+    "grants_proof_authority": false,
+    "grants_theorem_authority": false,
+    "grants_novelty_authority": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_framework_evolution_authority": false,
+    "grants_review_independence": false
+  },
+  "artifact_hash": "sha256:4a8655ac596101a07d4d0dd5d9021112114b148f2ebeae93123395cbc323881b"
+}
