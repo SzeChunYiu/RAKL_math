@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PROPOSAL_SHADOW_CONTEXT_REFINEMENT",
+  "atom_id": "O9d12a2a1b-C041S1",
+  "parent_atom_id": "O9d12a2a1b",
+  "root_goal": "P != NP",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "object": "The frozen C041-FX-SAT-ONE-SIDED-v1 decoder and complement extension, restricted to locating the first canonical MAGIC-coded unsatisfiable formula that actually changes U_{n+1}, and exposing its exact incidence geometry before any new LP or recurrence claim.",
+  "qoi": "What is the first old level n at which the MAGIC long-form decoder contributes an UNSAT complement point beyond the all-zero short contradiction, and what graph-realizable incidence pattern is created there?",
+  "problem_signature": [
+    "frozen MAGIC prefix 11100101 and Elias-gamma decoder",
+    "complement point iff decoded old-new cross word is UNSAT",
+    "distinguish syntactic parser reachability from semantic predicate activation",
+    "counterexample-first symbolic screen before any larger residual LP",
+    "no augmentation, recurrence, circuit, novelty, or root inference from activation geometry alone"
+  ],
+  "actual_fibre_consulted": [
+    {"path": "research/real_math/millennium/p_vs_np/00_problem_contract/canonical_statement.md", "role": "exact root binding"},
+    {"path": "research/real_math/millennium/p_vs_np/00_problem_contract/success_contract.yaml", "role": "fail-closed success gate"},
+    {"path": "research/real_math/millennium/p_vs_np/02_problem_dag/O9d12a2a1b_C041_ATOMIZATION_20260811.json", "role": "parent atomization"},
+    {"path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C041_MATH_CONTEXT_FIBER_20260811.json", "packet_hash": "sha256:70e3a8014330040d06d54d3e9b688b2dfe35ff5552f7bdd2396bde2cfd48770e", "role": "frozen parent MathContextFiber"},
+    {"path": "research/real_math/millennium/p_vs_np/04_candidates/C041_FX_SAT_ONE_SIDED_FREEZE_20260812.md", "role": "frozen decoder/rule and discriminator order"},
+    {"path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041_RESEARCH_MEMORY_REVIEW_20260811.json", "artifact_hash": "sha256:71f981949b0ee298561ef0ef7677fe8afc693b131897580d529c51678b4a8143", "role": "bound tool/failure memory"},
+    {"path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041_ZERO_AUGMENTATION_FAILURE_DELTA_20260812.json", "role": "first-step zero-augmentation episode-derived failure"},
+    {"path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C041_FINAL_TRACE_20260812.json", "role": "negative-history and frozen next-step chronology"}
+  ],
+  "structural_coordinates": [
+    "canonical encoding length is controlled by MAGIC + gamma(v) + gamma(m) + 3m(1+bitlength(v)) plus even-parity pad",
+    "MAGIC syntax is reachable before MAGIC-coded UNSAT need be reachable",
+    "the all-zero short contradiction is a separate decoder branch and must not count as semantic activation of the MAGIC branch",
+    "new complement geometry is measured in the bipartite incidence graph of U_n before any semi-filter or residual-LP inference",
+    "candidate rule and decoder are immutable during this cycle"
+  ],
+  "analogues_and_disanalogies": {
+    "selected": [
+      {"id": "F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION", "use": "forces a symbolic first-MAGIC structural attack before expensive enumeration", "difference": "n=2→3 exercises only the all-zero short branch and has no asymptotic MAGIC authority"},
+      {"id": "F-C037-ARBITRARY-EXTENSION-NONMONOTONE", "use": "requires relevance to be re-audited after any true semantic extension", "difference": "the present atom only locates the first new complement geometry; it does not yet assert relevance persistence"},
+      {"id": "EP-PNP-O9d12a2a1b-C041A-ODD-SLICE-20260811", "use": "pure copying can preserve the parent exactly while creating zero new capacity, so new semantic off-slice structure must be identified first", "difference": "odd-slice copy is not the frozen SAT-coded one-sided rule"}
+    ],
+    "retrieved_but_rejected": [
+      {"id": "F-C024-FRACTIONAL-INTEGRALITY-GAP", "reason": "important later correlation warning, but it does not determine the first decoder-semantic activation level"},
+      {"id": "F-C041-DECLARED-VARIABLE-WITNESS-BLOWUP", "reason": "verifier representation defect already repaired; unrelated to whether MAGIC formulas are UNSAT"},
+      {"id": "XM014", "reason": "typed parameter-binding guard is already satisfied by the frozen size/decoder coordinates and does not discriminate activation"}
+    ],
+    "cross_millennium": "NOT_QUERIED: a viable same-domain SEARCH route exists; current v3 invention-last policy forbids bypassing it with JUMP/LIFT."
+  },
+  "verification_plan": [
+    "derive a lower bound on canonical encoding length by v,m",
+    "exhaust the v=1,m=1 one-clause sign patterns",
+    "exhaust the v=1,m=2 two-clause sign patterns",
+    "bind exact row/column coordinates of every minimal MAGIC-coded UNSAT word",
+    "audit local-vs-global/gluing boundary"
+  ],
+  "chronology": {
+    "framework_read_before_math": true,
+    "parent_fibre_frozen_before_math": true,
+    "child_refinement_materialized_after_derivation": true,
+    "strict_child_context_first_discovery_credit": false,
+    "reason": "The existing frozen parent MathContextFiber governed the derivation, but this narrower child refinement was persisted after the activation calculation; the cycle therefore preserves proposal/shadow evidence without claiming strict child-fibre chronology."
+  },
+  "framework_source_of_truth": {
+    "current_main_sha": "992eda867588378fafb1f8b8997c8ecc725f88ad",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "v3_semantic_shortcut_introduced_at": "62df980514cc60d63f99b810c3664b68d9a5a565",
+    "latest_delta_from_semantic_shortcut": "992eda... adds paper-2 ORACLE research artifacts only; compare shows no v3 core/method_specs/semantic-shortcut files changed."
+  },
+  "primary_source_boundary": {
+    "source": "Cavalar–Oliveira, Boolean Circuit Complexity and Two-Dimensional Cover Problems, ECCC TR25-033 (2025)",
+    "use": "Definitions 18–21 and the graph-cover object remain the source boundary for later semi-filter/cover claims; this activation theorem itself is about the frozen application decoder.",
+    "pdf_sha256": "3f7d98691f3ac28208df6e8669d860c45b6068781dd77c737eb1e780641fbea7"
+  },
+  "frozen_at": "2026-08-11T23:16:46Z",
+  "fibre_snapshot_hash": "3a51421a496b4bf68d7bb2b604c772adf6cf852eb74b2a1e0edc8bf5b42278af",
+  "artifact_hash": "sha256:3a51421a496b4bf68d7bb2b604c772adf6cf852eb74b2a1e0edc8bf5b42278af"
+}
