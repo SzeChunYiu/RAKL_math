@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rakl-math.invalid/schemas/experience-episode-proposal-v0.schema.json",
+  "title": "RAKL_math quarantined experience episode proposal",
+  "description": "Application-local shadow record. Validation never grants scientific or reusable-method authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "artifact_type",
+    "proposal_id",
+    "status",
+    "source_role",
+    "task_id",
+    "atom_id",
+    "context_hash",
+    "problem_signature",
+    "action_trace",
+    "reported_outcome",
+    "residual_signature",
+    "source_bindings",
+    "authority_contract",
+    "recorded_at_utc",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "experience-episode-proposal-v0"},
+    "artifact_type": {"const": "EXPERIENCE_EPISODE_PROPOSAL"},
+    "proposal_id": {"type": "string", "pattern": "^episode-proposal::[A-Za-z0-9_.:-]+$"},
+    "status": {"const": "PROPOSAL_ONLY"},
+    "source_role": {"enum": ["SUPPORT", "CONTRADICTION"]},
+    "task_id": {"type": "string", "minLength": 1},
+    "atom_id": {"type": "string", "minLength": 1},
+    "context_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "problem_signature": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "action_trace": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "reported_outcome": {
+      "enum": ["SUCCESS", "PARTIAL_SUCCESS", "FAILURE", "BLOCKED", "UNKNOWN"]
+    },
+    "residual_signature": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "source_bindings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/sourceBinding"}
+    },
+    "authority_contract": {"$ref": "#/$defs/authorityContract"},
+    "recorded_at_utc": {"type": "string", "format": "date-time"},
+    "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "reported_outcome": {
+            "enum": ["PARTIAL_SUCCESS", "FAILURE", "BLOCKED", "UNKNOWN"]
+          }
+        }
+      },
+      "then": {"properties": {"residual_signature": {"minItems": 1}}}
+    }
+  ],
+  "$defs": {
+    "sourceBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository_url",
+        "commit_sha",
+        "tree_sha",
+        "path",
+        "git_blob_sha",
+        "content_sha256"
+      ],
+      "properties": {
+        "repository_url": {"type": "string", "pattern": "^https://github\\.com/"},
+        "commit_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "tree_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "path": {"type": "string", "minLength": 1},
+        "git_blob_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "authorityContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "effective_authority",
+        "allowed_effect",
+        "grants_tool_authority",
+        "grants_proof_authority",
+        "grants_gluing_authority",
+        "grants_theorem_authority",
+        "grants_framework_authority",
+        "grants_review_independence"
+      ],
+      "properties": {
+        "effective_authority": {"const": "PROPOSAL_ONLY"},
+        "allowed_effect": {"const": "SEARCH_PRIORITY_ONLY"},
+        "grants_tool_authority": {"const": false},
+        "grants_proof_authority": {"const": false},
+        "grants_gluing_authority": {"const": false},
+        "grants_theorem_authority": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false}
+      }
+    }
+  }
+}

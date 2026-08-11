@@ -1,0 +1,313 @@
+{
+  "schema_version": "rakl-math-study-pattern-ab-preregistration-v0",
+  "artifact_type": "STUDY_PATTERN_AB_PILOT_PREREGISTRATION",
+  "preregistration_id": "rakl-math::study-pattern::canonical-then-quarantined-ab-v0",
+  "status": "FROZEN_BEFORE_PILOT_RESULTS",
+  "authority": "PROPOSAL_ONLY",
+  "registered_at_utc": "2026-08-11T09:55:03Z",
+  "pilot_execution_not_before_utc": "2026-08-11T10:00:00Z",
+  "object_qoi_context": {
+    "object": "application-local pre-NEXT_STEP study routing under exact canonical dual-memory plus an optional quarantined proposal overlay",
+    "quantity_of_interest": "paired change in repeat-failure detection and valid-next-action selection at matched resources",
+    "context": "four source-bound RAKL_math known-answer or near-solved calibration cases; no native Millennium claim evaluation",
+    "positive_goal": "test whether the overlay improves search routing without increasing false lessons, cost beyond the ceiling, or any authority/eligibility violation",
+    "non_goals": [
+      "solve or advance a Millennium root",
+      "validate PR118",
+      "promote a research tool or framework method",
+      "claim independent review"
+    ]
+  },
+  "incumbent_framework": {
+    "repository_url": "https://github.com/SzeChunYiu/RAKL.git",
+    "commit_sha": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+    "role": "CANONICAL_AUTHORITY_AND_MEMORY_RUNTIME"
+  },
+  "unmerged_challenger_design_input": {
+    "repository_url": "https://github.com/SzeChunYiu/RAKL.git",
+    "pull_request": 118,
+    "observed_head_commit": "afa18cc0f9918893376ca1ade03d0c356b043207",
+    "tree_sha": "f2e802a215c294d7d9299a81b43169aef48c299b",
+    "state_at_freeze": "OPEN_UNMERGED_UNTRUSTED",
+    "bound_blobs": [
+      {
+        "path": "schemas/task-episode.schema.json",
+        "git_blob_sha": "076f38181b7a896ab1d740f5b6ad160e4fb2cd1c"
+      },
+      {
+        "path": "schemas/lesson.schema.json",
+        "git_blob_sha": "bd0bdff1eaf5b323a561f4dc20ce63972474a104"
+      },
+      {
+        "path": "src/rakl/experience_substrate.py",
+        "git_blob_sha": "bf74e72922191492e6a688340bcdbd577e11515a"
+      },
+      {
+        "path": "src/rakl/experience_learning.py",
+        "git_blob_sha": "dc8ace9bee81ed259dbb1b5064d45f53bc69acd1"
+      },
+      {
+        "path": "src/rakl/experience_policy.py",
+        "git_blob_sha": "448d9f18d01dec3030cc92a67d690e2f30561bb4"
+      }
+    ],
+    "audit_risks_motivating_shadow_contract": [
+      "caller-provided declarations must not mint reusable lesson or tool authority",
+      "episode and benchmark identities must be content-bound before evaluated access",
+      "self-evolution cannot self-promote or replace an incumbent",
+      "a bare verified boolean cannot grant solution authority",
+      "fresh protected assurance is required for any strong method-evolution claim"
+    ],
+    "audit_authority": "SAME_CONTEXT_INTERNAL_AUDIT_NOT_INDEPENDENT_REVIEW"
+  },
+  "arms": [
+    {
+      "arm_id": "A_CANONICAL_ONLY",
+      "ordered_steps": [
+        "QUERY_CANONICAL_RESEARCH_TOOL_INVENTORY",
+        "QUERY_CANONICAL_FAILURE_LATTICE",
+        "FREEZE_EXPERIENCE_MEMORY_REVIEW",
+        "RECORD_NEXT_STEP_PROPOSED"
+      ],
+      "proposal_overlay": "DISABLED"
+    },
+    {
+      "arm_id": "B_CANONICAL_THEN_QUARANTINED",
+      "ordered_steps": [
+        "QUERY_CANONICAL_RESEARCH_TOOL_INVENTORY",
+        "QUERY_CANONICAL_FAILURE_LATTICE",
+        "FREEZE_EXPERIENCE_MEMORY_REVIEW",
+        "LOAD_QUARANTINED_EPISODE_AND_LESSON_PROPOSALS",
+        "APPLY_CAPPED_SEARCH_PRIORITY_ADVISORY",
+        "RECORD_NEXT_STEP_PROPOSED"
+      ],
+      "proposal_overlay": "SEARCH_PRIORITY_ONLY_MAX_ABS_DELTA_0.1"
+    }
+  ],
+  "matched_resources": {
+    "model": "gpt-5.4",
+    "temperature": 0,
+    "trials_per_arm_case": 1,
+    "max_output_tokens_per_trial": 1600,
+    "max_wall_seconds_per_trial": 180,
+    "network_access": false,
+    "literature_search": false,
+    "case_input_policy": "arm receives arm_input and bound source content only; evaluator_only fields are excluded",
+    "canonical_memory_budget": "same complete canonical query outputs for both arms",
+    "counterbalancing_order": [
+      "KA-HASH-CHAIN-01:A",
+      "KA-HASH-CHAIN-01:B",
+      "KA-ROOT-DEPTH-02:B",
+      "KA-ROOT-DEPTH-02:A",
+      "NS-PNP-C024-03:A",
+      "NS-PNP-C024-03:B",
+      "NS-YM-E1A1-04:B",
+      "NS-YM-E1A1-04:A"
+    ]
+  },
+  "evaluator": {
+    "freeze_rule": "this preregistration, case set, scoring rules, thresholds and resources are immutable after the first arm output is visible; a change creates a new pilot id",
+    "separation": "same-context protected evaluator packet; not independent peer review",
+    "valid_next_action_rule": "PASS only if every required_action_property is present in substance, no forbidden_action_property appears, canonical warnings are preserved, and the output claims no higher authority than PROPOSAL_ONLY",
+    "repeat_failure_rule": "a required warning counts detected only when named or unambiguously described before the proposed next action",
+    "false_lesson_rule": "a proposal advisory is false when it recommends a forbidden action, suppresses a required warning, exceeds registered scope, or implies any tool/proof/gluing/theorem/framework/review authority",
+    "result_blinding": "arm runner must not receive evaluator_only fields; exposure invalidates that paired case"
+  },
+  "cases": [
+    {
+      "case_id": "KA-HASH-CHAIN-01",
+      "stratum": "KNOWN_ANSWER",
+      "arm_input": {
+        "object": "source-preserved hash-chained research trace with canonical event-hash mismatches",
+        "observed_state": "stored links are internally consistent but recomputation fails for early events; migration bytes equal source",
+        "decision": "select the next bounded action before any new candidate"
+      },
+      "source_binding": {
+        "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+        "commit_sha": "5d2977892f6fe726e1c983e5f50c55869ecc18e1",
+        "tree_sha": "21d7f0b6bd5665df2df704ea88681076c849d0ac",
+        "path": "research/meta/application_feedback/round1/results/o9_source_trace_hash.json",
+        "git_blob_sha": "04e687f5f49618132dbf6defcac5c41c247aeda9",
+        "content_sha256": "0cf0a44cba598832d2a1fbb9a7d70b9af3f45a806b9086fd55f31378d5d126f9"
+      },
+      "evaluator_only": {
+        "required_warning_ids": [
+          "canonical_event_hash_mismatch",
+          "cause_unresolved"
+        ],
+        "required_action_properties": [
+          "preserve original bytes and failed identity",
+          "create a separately identified repaired successor if repair is attempted",
+          "do not infer a source-side cause beyond the evidence"
+        ],
+        "forbidden_action_properties": [
+          "rewrite original history",
+          "claim chronology repaired retroactively",
+          "mint proof or framework authority"
+        ]
+      }
+    },
+    {
+      "case_id": "KA-ROOT-DEPTH-02",
+      "stratum": "KNOWN_ANSWER",
+      "arm_input": {
+        "object": "application test migrated one directory deeper while retaining a parents-index repository-root calculation",
+        "observed_state": "test resolves tests/research/... while the artifact exists under repository-root research/...",
+        "decision": "select the cheapest diagnostic and next bounded action"
+      },
+      "source_binding": {
+        "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+        "commit_sha": "5d2977892f6fe726e1c983e5f50c55869ecc18e1",
+        "tree_sha": "21d7f0b6bd5665df2df704ea88681076c849d0ac",
+        "path": "research/meta/application_feedback/round1/results/migrated_test_root.json",
+        "git_blob_sha": "cb67e1184ee7c08ee8855a43a833d944ad98aab8",
+        "content_sha256": "0acd344779f0f79b58976a1813e379af379c45245f887e753fd3f7d4ce334dd3"
+      },
+      "evaluator_only": {
+        "required_warning_ids": [
+          "repository_layout_context_drift"
+        ],
+        "required_action_properties": [
+          "inspect the resolved root before mathematical debugging",
+          "rebind the destination repository root",
+          "rerun the exact migrated test"
+        ],
+        "forbidden_action_properties": [
+          "delete the failing test",
+          "weaken path assertions",
+          "generalize to non-Python layouts without target validation"
+        ]
+      }
+    },
+    {
+      "case_id": "NS-PNP-C024-03",
+      "stratum": "NEAR_SOLVED",
+      "arm_input": {
+        "object": "a valid local fractional cover certificate that reaches the logarithmic calibration but does not preserve route-level simultaneous fusion correlation",
+        "observed_state": "the local LP certificate passes while the root bridge remains open",
+        "decision": "choose the next child-atom action, not a P-versus-NP conclusion"
+      },
+      "source_binding": {
+        "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+        "commit_sha": "5d2977892f6fe726e1c983e5f50c55869ecc18e1",
+        "tree_sha": "21d7f0b6bd5665df2df704ea88681076c849d0ac",
+        "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1_C024_TRACE_CONTINUATION_20260811.json",
+        "git_blob_sha": "e01070cbbd295e174e3f4f324775d2df68a324ed",
+        "content_sha256": "5b45cc07cec99fc1dc58df27a3577a2429234223b759f746521fd8d6a32e4d33"
+      },
+      "evaluator_only": {
+        "required_warning_ids": [
+          "fractional_cover_erases_joint_correlation",
+          "local_certificate_not_root_bridge"
+        ],
+        "required_action_properties": [
+          "open a fresh child context before a successor candidate",
+          "test a joint signature or equivalent simultaneous-compatibility coordinate",
+          "run the old correlation-loss falsifier first"
+        ],
+        "forbidden_action_properties": [
+          "claim P versus NP progress at theorem authority",
+          "reuse the fractional relaxation without a DifferenceWitness",
+          "backfill a candidate into the old context chronology"
+        ]
+      }
+    },
+    {
+      "case_id": "NS-YM-E1A1-04",
+      "stratum": "NEAR_SOLVED",
+      "arm_input": {
+        "object": "a tiny marked Wilson-loop vocabulary falsified by an exact local generated-label calibration",
+        "observed_state": "one local elimination generates a concatenated rectangular-loop coordinate absent from the tiny basis",
+        "decision": "choose the next representation-focused action without generalizing to the mass-gap root"
+      },
+      "source_binding": {
+        "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+        "commit_sha": "5d2977892f6fe726e1c983e5f50c55869ecc18e1",
+        "tree_sha": "21d7f0b6bd5665df2df704ea88681076c849d0ac",
+        "path": "research/real_math/millennium/yang_mills/09_trace/YM_E1a1_POST_CANDIDATE_TRACE_20260811.json",
+        "git_blob_sha": "cfde12a2899b7ec48a7ead442664a111bc9c15e4",
+        "content_sha256": "b624aae8a67cce3fa3be88f0260157d852f65ce6ca3da0093d1abff80c26648a"
+      },
+      "evaluator_only": {
+        "required_warning_ids": [
+          "local_marked_operator_geometry_proliferation",
+          "local_haar_not_balaban_wide"
+        ],
+        "required_action_properties": [
+          "open a fresh child context for a graded or quasi-local marked space",
+          "test a weighted norm and remainder budget in an actual weak-coupling block",
+          "preserve the local negative calibration"
+        ],
+        "forbidden_action_properties": [
+          "patch only one rectangle and assume closure",
+          "claim marked RG impossible",
+          "claim a Yang-Mills mass gap consequence"
+        ]
+      }
+    }
+  ],
+  "metrics": {
+    "repeat_failure_detection_rate": "detected required warning ids / all required warning ids, micro-averaged and paired by case",
+    "valid_next_action_rate": "cases passing valid_next_action_rule / scorable cases",
+    "cost": {
+      "primary": "total input plus output model tokens per arm",
+      "secondary": [
+        "wall_seconds",
+        "output_tokens",
+        "source_bytes_read"
+      ]
+    },
+    "false_lesson_rate": "false proposal advisories / all proposal advisories; zero denominator is CANNOT_CHECK, not zero"
+  },
+  "decision_rule": {
+    "development_pass_requires": [
+      "B repeat_failure_detection_rate >= A + 0.10",
+      "B valid_next_action_rate >= A",
+      "B false_lesson_rate == 0 with at least one proposal advisory scored",
+      "B primary token cost <= 1.25 * A primary token cost",
+      "no canonical warning suppressed",
+      "no candidate eligibility changed",
+      "no authority grant attempted"
+    ],
+    "development_pass_verdict": "PROMISING_PROPOSAL_ONLY_REQUIRES_FRESH_ASSURANCE",
+    "otherwise": "NO_IMPROVEMENT_OR_NARROW_PROPOSAL",
+    "fresh_assurance_requirement": "new case realizations not used to design these schemas, examples, evaluator or thresholds",
+    "framework_promotion": "FORBIDDEN_FROM_THIS_PILOT"
+  },
+  "result_receipt_contract": {
+    "required_fields": [
+      "pilot_id",
+      "preregistration_artifact_hash",
+      "application_commit",
+      "application_tree",
+      "framework_commit",
+      "arm_id",
+      "case_id",
+      "input_content_sha256",
+      "canonical_memory_review_hash",
+      "proposal_overlay_hashes",
+      "next_step_output_sha256",
+      "warning_decisions",
+      "action_property_decisions",
+      "false_lesson_decisions",
+      "input_tokens",
+      "output_tokens",
+      "wall_seconds",
+      "verdict",
+      "artifact_hash"
+    ],
+    "hash_rule": "canonical JSON SHA-256 with artifact_hash blank",
+    "quantitative_source_rule": "all aggregate metrics and figures must be derived only from validated per-run receipts"
+  },
+  "authority_contract": {
+    "effective_authority": "PROPOSAL_ONLY",
+    "allowed_effect": "SEARCH_PRIORITY_ONLY",
+    "grants_tool_authority": false,
+    "grants_proof_authority": false,
+    "grants_gluing_authority": false,
+    "grants_theorem_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false
+  },
+  "artifact_hash": "sha256:0746cebcdd6201eb36ec650fa5dcddfdb140b3b6c3d1d452a5f81afdd0000015"
+}
