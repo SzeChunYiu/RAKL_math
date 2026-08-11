@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/xm005-source-version-receipt.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "recorded_at",
+    "retrieval",
+    "sources",
+    "chronology_correction",
+    "scope",
+    "non_guarantees",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "receipt_id": {
+      "const": "XM005-EXACT-ARXIV-SOURCE-VERSIONS-20260811"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "retrieval": {
+      "type": "object",
+      "minProperties": 4
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "base_id",
+          "versioned_id",
+          "versioned_abs_url",
+          "versioned_pdf_url",
+          "title",
+          "published",
+          "updated",
+          "authors",
+          "abstract",
+          "primary_category",
+          "pdf_sha256",
+          "pdf_size_bytes",
+          "source_check"
+        ]
+      }
+    },
+    "chronology_correction": {
+      "type": "object",
+      "required": [
+        "historical_claim",
+        "official_version",
+        "official_published",
+        "official_updated",
+        "verdict"
+      ]
+    },
+    "scope": {
+      "const": "VERSIONED_SOURCE_METADATA_PDF_DIGESTS_AND_EXACT_LOCATORS_ONLY"
+    },
+    "non_guarantees": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "artifact_hash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  }
+}

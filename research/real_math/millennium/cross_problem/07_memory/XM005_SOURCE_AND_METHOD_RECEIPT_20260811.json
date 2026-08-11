@@ -1,0 +1,32 @@
+{
+  "receipt_type": "XM005_SOURCE_AND_METHOD_RECEIPT_V0",
+  "framework_commit": "decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8",
+  "application_base": "5d6bdc6f566921f51a375fdc2e8035123cf4830c",
+  "target": "RAKL_math#65 / NS-B2a",
+  "primary_sources": [
+    {
+      "id": "arXiv:2606.29468v1",
+      "date": "2026-06-28",
+      "claim_used": "Seregin Theorem 3.1 produces a nontrivial ancient Euler limit with scale-weighted energy/pressure/gradient control and local energy inequality."
+    },
+    {
+      "id": "arXiv:2008.09345",
+      "manuscript_date": "2026-03-22",
+      "claim_used": "Abe constructs classical axisymmetric traveling-wave Euler vortex rings; the moving-frame velocity vanishes at spatial infinity and vorticity is compactly supported."
+    },
+    {
+      "id": "arXiv:2201.08232v4",
+      "date": "2023-12-05",
+      "claim_used": "Cao et al. treat global steady vortex rings as traveling-wave Euler solutions with kinetic-energy/impulse variational structure."
+    }
+  ],
+  "derived_check": {
+    "name": "world_tube_occupancy",
+    "statement": "For c != 0 and h >= 0 in L1(R^3), integral_{-a^2}^0 integral_{B(a)} h(x+c*tau) dx d tau <= (2a/|c|)||h||_1.",
+    "method": "Fubini plus line-through-ball occupancy length <= 2a/|c|."
+  },
+  "result": "Centered backward local smallness plus the displayed F=1 local/spacetime budget is not by itself a faithful global-triviality surrogate under noncompact translation; an exact no-incoming-energy/tightness/recentering bridge remains necessary.",
+  "scope_boundary": "No specific cited vortex ring is claimed to satisfy every exact global integrability/local-energy hypothesis of Seregin Theorem 3.1; that stronger counterexample claim remains open.",
+  "cross_lane_pattern": "locally meaningful surrogate/local result != root-critical quantity until a separate preservation/gluing interface is proved",
+  "authority": "RESEARCH_CONTROL_ONLY / PROPOSAL_ONLY / NO_THEOREM / NO_ROOT_AUTHORITY"
+}
