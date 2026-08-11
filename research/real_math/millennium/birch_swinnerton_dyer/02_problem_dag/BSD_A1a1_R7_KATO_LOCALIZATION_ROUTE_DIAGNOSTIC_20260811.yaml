@@ -1,0 +1,46 @@
+schema_version: bsd-r7-route-diagnostic-v1
+cycle_id: BSD-A1a1-KATO-LOCALIZATION-REENTRY-20260811-R7
+authority: PROPOSAL_SHADOW_ROUTE_DIAGNOSTIC_NO_ROOT_AUTHORITY
+active_atom: BSD-A1a1-THETA-ORDER-COMPARISON
+fibre_snapshot_hash: sha256:788ae31fb787de32f0ab9b4a6e715c0a3092db5332e562dd1481ca29ed324375
+root_state: OPEN_NO_SOLUTION_CERTIFICATE
+route_before:
+  - exact_complex_analytic_rank_two
+  - good_ordinary_generalized_Kato_nonvanishing
+  - Selmer_information
+  - full_BSD_glue
+source_bound_theorem_cell:
+  forward: kappa_nonzero_implies_Selmer_dimension_two
+  converse_given_dimension_two: kappa_nonzero_iff_loc_p_nonzero
+  strict_kernel: nonzero_kappa_spans_ker_loc_p
+route_after:
+  - exact_complex_analytic_rank_two
+  - MISSING_Selmer_dimension_two_plus_transverse_loc_p_nonzero
+  - generalized_Kato_nonvanishing
+  - Selmer_information
+  - MISSING_Mordell_Weil_Sha_regulator_Tamagawa_torsion_complex_leading_term_glue
+reentry_edge:
+  target_prior_child: BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE
+  classification: ROUTE_REENTRY_REFINEMENT
+  explanation: The R6 successor representation does not bypass the prior localization child; the source theorem makes the needed localization direction transverse to the generalized Kato class itself.
+local_vs_global:
+  local_mathematical_result: SOURCE_BOUND_THEOREM_CELL_COMPOSITION_VERIFIED
+  local_mathematical_failure: false
+  local_to_global_gluing_failure: true
+  global_obligations_open:
+    - Mordell_Weil_rank
+    - Sha_finiteness_and_order
+    - regulator
+    - Tamagawa_and_other_local_factors
+    - torsion
+    - real_period
+    - complex_leading_term
+coordinate_faithfulness:
+  complex_s_order: PRESERVED
+  p_adic_Hida_anticyclotomic_orders: NOT_SUBSTITUTED
+  extra_trivial_zeros: UNTOUCHED
+saturation:
+  reopened: [KNOWLEDGE, RELATION, PATH]
+  proposal_shadow_reopened_not_retained: [OBSTRUCTION]
+  flattened: [OPERATOR, EXPERIENCE_PATTERN, META_METHOD]
+next_discriminator: Search only for a number-field theorem deriving Selmer dimension two plus a transverse nonzero localization from exact complex analytic rank two without importing algebraic rank, Selmer rank, p-adic BSD, equivalent main-conjecture strength, or regulator nondegeneracy.
