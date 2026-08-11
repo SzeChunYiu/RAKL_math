@@ -1,0 +1,51 @@
+atom_id: RH-ANA-004b
+parent_atom_id: RH-ANA-004a
+root_issue: 3
+status: CONTEXT_REQUIRED
+root_authority: NONE
+
+question: >-
+  Starting from the exact finite-X Abel representation of Coffey's S_Lambda,
+  combine a current finite-height Riemann-von Mangoldt explicit formula with
+  the L_{n-1}^{(2)} Laguerre kernel and derive a fully justified X,T,n
+  decomposition. Quantify the Abel boundary, floor(x)-x term, finite zero-mode
+  contribution and transformed explicit-formula remainder without destroying
+  cancellation. Determine whether any non-root-equivalent parameter window
+  yields a useful uniform discriminator.
+
+opened_by:
+  result: PARTIAL_SUCCESS_REPRESENTATION_LOCALIZATION_AND_DECOMPOSITION_REPAIR
+  task_episode_id: EP-RH-ANA-004a-PRIME-ERROR-KERNEL-20260811-R3
+  diagnosis_id: D-RH-ANA-004a-GLOBAL-SLAMBDA-BOUND-ROOT-SCALE
+  obstruction_id: O-RH-ANA-004a-TRUNCATED-LAGUERRE-ERROR-TRANSPORT
+  failures:
+    - F-RH-ANA-004a-GLOBAL-POLYNOMIAL-BOUND-AS-CHILD
+    - F-RH-ANA-004a-FIXED-X-FEJER-TO-PRIME-SUM
+
+known_boundary:
+  - Coffey's S_Lambda is exactly a signed prime-power sum with a Laguerre kernel.
+  - Finite Abel summation rewrites it through A(x)=floor(x)-psi(x) and L_{n-1}^{(2)}.
+  - For fixed n the global boundary vanishes under a quantitative PNT error.
+  - The Laplace transform of L_{n-1}^{(2)} is n+1-s+s(1-1/s)^(n+1).
+  - A single zero mode rho therefore produces n/rho+1-(1-1/rho)^(-n); its exponential modulus boundary is Re(rho)=1/2.
+  - Coffey's global polynomial-growth target for the oscillatory S_Lambda component is RH-sufficient/root-scale, so it is not accepted as a weaker child contract.
+  - Current Johnston--Cully-Hugill arXiv:2402.04272 gives a finite-height explicit formula with an explicit pointwise remainder but no theorem transporting that remainder through this n-dependent Laguerre functional.
+
+candidate_generation_gate:
+  allowed: false
+  reason: >-
+    Freeze a fresh current-work-bound MathContextFiber and exact finite-X/T
+    source packet before proposing an inequality, asymptotic, mollifier,
+    resonance mechanism or positivity candidate. Any use of fixed-x Laguerre
+    asymptotics must include a uniform x/tail theorem, and any zero-density or
+    zero-free input must pass a single-exception DifferenceWitness.
+
+next_pre_candidate_discriminators:
+  - Write the exact finite-X Abel identity including the boundary and floor(x)-x term.
+  - Insert the current truncated explicit formula only in its stated x,T range and preserve the actual remainder function E(x,T); do not replace E by a signed model.
+  - Bound the remainder contribution only after writing it as an integral functional; if absolute values are used, record the resulting loss explicitly.
+  - Derive finite-upper-limit zero-mode integrals or rigorous incomplete-Laplace bounds rather than silently taking X=infinity.
+  - Audit whether any choice X=X(n), T=T(n) gives a useful window without assuming zero exclusion or a global S_Lambda polynomial bound.
+  - Compare Dunster--Gil--Segura uniform Laguerre asymptotics with the exact arithmetic tail requirements and reject fixed-x Fejer summation without uniform gluing.
+
+authority: STRICT_CHILD_RESIDUAL_ONLY / NO_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE
