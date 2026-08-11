@@ -1,0 +1,32 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "H4d1d-C001-PRE-ACTION-FIBRE-20260811",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "9852e9bac82c96a1d4b09ac13e7f482ce2be0b4d",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "63b8856ba5f1ebd104297908d8f1e38135869121",
+  "task_id": "RATIONAL-HODGE-DEFORMATION-VERIFIED-DISCOVERY",
+  "atom_id": "H4d1d",
+  "context_hash": "sha256:24f78f3580190ecccce883c710e5da7e6f847747c676c33c71941c1fe50fe07c",
+  "fibre_snapshot_hash": "sha256:78b1e04603492c987861de84201210ca52d851b9ec72ab89256270177d35130a",
+  "operator_ids": ["OP-H4D1D-UNRESTRICTED-DOMINATION-TARGET-EQUIVALENCE-AUDIT"],
+  "selected_retrievals": [
+    {"retrieval_id":"H4d1d-REDUCED-BRANCH-PROPER-WITNESS-DOMINATION","authority":"PENDING","payload_hash":"5547e7a7313505ce905c58f0f1fda503f1fd8f19ffc5baef0f27a3a21e98a3af"},
+    {"retrieval_id":"H4d1c-C001-REDUCED-BRANCH-DOMINATION-BOUNDARY","authority":"PENDING","payload_hash":"2ad56aaa784775a13453f1d8446c43d7114848c8ed993d161cee4bb61cd9fb57"},
+    {"retrieval_id":"H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE","authority":"CANONICAL","payload_hash":"8925f83f6f0a7f2536b26408569c178147dd47f2b5e830b18747fb7d17262396"},
+    {"retrieval_id":"H4d1d-RESEARCH-MEMORY-REVIEW-20260811","authority":"NONCANONICAL","payload_hash":"8e9a23f6f85558f00b49bb5455d2d0eb87849f989ff6432c3ae668694a18bdfd"},
+    {"retrieval_id":"SRC-CDK-ALG-GEOM-9402009","authority":"UNSPECIFIED","payload_hash":"194fc7e927814a1cfa100fef2841ac970962ad9fdb5251208a9a9c28c46c173d"},
+    {"retrieval_id":"SRC-STACKS-0DPH","authority":"UNSPECIFIED","payload_hash":"86a416732cea1c04d4076eaa7243d9dcd9a482368402d2c636b16b9e308d90f2"},
+    {"retrieval_id":"SRC-STACKS-0H4Z","authority":"UNSPECIFIED","payload_hash":"07b08e0b46ebf1c26fdb9b86a7e2826866663de70e7a99a43819cd6032c0e169"}
+  ],
+  "rejected_retrievals": [
+    {"retrieval_id":"XM007_STATE_PROJECTION_CONGRUENCE","rejection_reason":"cross-Millennium representation analogy only; DifferenceWitness does not preserve Hilbert properness, algebraic irreducibility or cycle-class semantics"},
+    {"retrieval_id":"KLOOSTERMAN_SPECIAL_FLAG_HILBERT","rejection_reason":"special-family positive control does not supply a general domination mechanism and is unnecessary for the countability discriminator"},
+    {"retrieval_id":"DETECTOR_ONLY_VANISHING_REPAIR","rejection_reason":"saturated prior failure family; does not produce an exact algebraic witness"}
+  ],
+  "predeclared_discriminator": "Verification-only, with candidate generation explicitly retrospective: under the frozen local algebraic hypotheses, attempt both implications between (A) pointwise exact rational algebraicity of α_s for every complex point s of irreducible T_red and (B) existence of one fixed finite Hilbert/coefficient datum and one proper exact-class connected/irreducible witness stratum whose image dominates T_red. For A→B, require a countable family of proper fixed-data witness strata, exact flat-class constancy on each selected stratum, closed images, and the theorem that an irreducible variety over C is not a countable union of proper closed subvarieties. For B→A, require exact class preservation and surjectivity on points. Select TARGET_EQUIVALENT only if both directions are justified. Falsify by exhibiting a frozen assumption under which A holds but no fixed-data proper exact-class stratum dominates, or by showing that exact-class strata fail to be countably/properly parameterized.",
+  "allowed_outcome_branches": ["TARGET_EQUIVALENT_UNDER_FROZEN_HYPOTHESES","UNRESTRICTED_DOMINATION_ADDS_INDEPENDENT_CONTENT","CANNOT_CHECK"],
+  "frozen_at_utc": "2026-08-11T16:14:27+00:00",
+  "sequence_index": 1,
+  "receipt_canonical_sha256": "1a7c804e24a4a9f11c13722bb2cee7648fb1e6bec8ccae5807c4f852f6d6f04c"
+}
