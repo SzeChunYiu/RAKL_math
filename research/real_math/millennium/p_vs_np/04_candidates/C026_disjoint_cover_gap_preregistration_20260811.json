@@ -1,0 +1,70 @@
+{
+  "candidate_id": "C026",
+  "atom_id": "O9d12a2a1a1",
+  "candidate_kind": "FINITE_EXACT_REPRESENTATION_NECESSITY_DIAGNOSTIC",
+  "authority": "PREREGISTERED_DIAGNOSTIC_ONLY/NO_THEOREM_AUTHORITY/NO_NOVELTY_CLAIM/ROOT_AUTHORITY_NONE",
+  "definition": {
+    "rho": "exact full Cavalar-Oliveira semi-filter cover number using all pairs (E,H)",
+    "rho_disj": "the same exact full semi-filter obligation universe, but pair candidates are restricted to E intersection H = emptyset",
+    "strict_gap": "rho_disj > rho"
+  },
+  "scientific_question": "Does allowing nonempty pair intersections strictly reduce exact full-cover cardinality on any graph in a fresh frozen tiny universe, thereby certifying finite operational power that cannot be removed by choosing an equally small all-disjoint cover?",
+  "scope": {
+    "ambient": "4x4 bipartite graphs",
+    "complement_size": 5,
+    "population_size": 4368,
+    "sample_count": 64,
+    "sample_seed": "C026-FRESH-M5-20260811-v1",
+    "sample_rule": "For every 5-edge complement, form canonical sorted-edge string u,v;..., hash SHA256(seed + '|' + canonical_string), sort ascending by digest, take the 64 lowest digests.",
+    "sample_manifest_sha256": "47b3502c6075d99027c609fbecbc1a637d6650a6c2ba3462cc825fb28337a831",
+    "sample_set_id": "C026-FRESH-M5-20260811-v1"
+  },
+  "chronology": {
+    "context_hash": "sha256:b955ea913e2aed2f6e67844c2d1b8412b4e75a0161de73681d70c6c66f9cd110",
+    "memory_review_hash": "sha256:91e2d2a45222f11150be414a38f8a1e11e9736106c089fdb439d72ffa638844e",
+    "pre_candidate_trace_last_event_hash": "sha256:50e0aa6f32451d03fe752a7cbf7cf6a9e63c5a382236808b95b7d6bb17a9a9a6",
+    "contaminated_prior_task": "4x4 complements with 1<=|U|<=4 were privately inspected before evaluator freeze and are RETROSPECTIVE_CALIBRATION_ONLY",
+    "fresh_task_status": "The registered |U|=5 hash sample has not been evaluated before this preregistration.",
+    "frozen_at": "2026-08-11T12:42:00+00:00"
+  },
+  "evaluator": {
+    "path": "research/real_math/millennium/p_vs_np/05_falsification/disjoint_cover_gap_census.py",
+    "evaluator_sha256": "9e94e2d5641964404d8aaa5f61f06bc6919a30818ac4848c955b66a961bdc336",
+    "git_blob_sha": "7ea17cf6eb1627643badc0ed2af1ea08f8e9afe1",
+    "frozen_evaluator_commit": "712e619b18151f540d1c51f70b470728af15156c",
+    "historical_oracle_path": "research/real_math/millennium/p_vs_np/05_falsification/full_cover_oracle.py",
+    "historical_oracle_git_blob_sha": "2a516b166fe2c01e0f478a73aa60e4b8bb48b6b3",
+    "semantic_delta": "same relevant semi-filters and Definition-20 predicate; rho_disj rejects candidate pairs with nonempty E&H before mask construction"
+  },
+  "controls": [
+    "C008 negative control must return rho=2 and rho_disj=2",
+    "restriction monotonicity must hold for every row: rho_disj >= rho",
+    "sample manifest reconstructed by evaluator must match the frozen SHA256",
+    "all rows and nulls are retained; stopping after first gap is forbidden"
+  ],
+  "outcome_schema": {
+    "graph_count": 64,
+    "strict_gap_count": "integer >=0",
+    "first_strict_gap": "first sample-order gap row or null",
+    "distribution": "counts of rho->rho_disj pairs",
+    "rows": "all 64 exact sample rows",
+    "output_sha256": "SHA256 of canonical output before adding output_sha256"
+  },
+  "decision_branches": {
+    "positive": "If strict_gap_count>0, retain the first frozen-order witness as finite calibration and open a child atom for a representation-invariant characterization of non-disjoint advantage. Immediately attack amplification with C010/C016.",
+    "null": "If strict_gap_count=0, record a bounded null only. Do not infer a global disjointization theorem. Lower priority of witness-specific closure-depth ideas and search for richer full-obligation correlations.",
+    "invalid": "If control, manifest, monotonicity, chronology or evaluator binding fails, classify as tooling/provenance failure and grant no mathematical evidence."
+  },
+  "predictions": [
+    "No directional prediction is used for promotion; either branch is informative.",
+    "The C008 negative control is expected to pass from existing C010 evidence."
+  ],
+  "promotion_blockers": [
+    "finite computation is not asymptotic proof",
+    "no novelty search",
+    "no theorem-prover artifact",
+    "no isolated independent mathematical review",
+    "no superlog full-cover lower bound",
+    "no P-versus-NP root certificate"
+  ]
+}
