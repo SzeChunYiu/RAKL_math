@@ -1,0 +1,61 @@
+{
+  "schema_version": "method-telemetry-v1",
+  "telemetry_id": "MT-XM009-BSD-PNP-GRADED-TRACE-20260811",
+  "episode_id": "EP-XM009-BSD-PNP-GRADED-TRACE-20260811",
+  "episode_artifact_hash": "ef65bd7550b308744ad5dd12bd7ee52deb275c19204fb9fb1b2f7b42d7cf6348",
+  "fibre_snapshot_hash": "5d5746454dbfeafa0984fcb5276a85e1c31e2c727e62593ab932e8e684f1dff8",
+  "public_trace_event_id": "XM009-E05-DIAGNOSIS-DISTILLED",
+  "failure_class": "REPRESENTATION",
+  "gluing_status": "LOCAL_ONLY",
+  "next_action_id": "PNP-POST-XM009-JOINT-GLOBAL-NONDEGENERACY-PRECHECK",
+  "claim_boundary": "The fixed-row cumulative trace filtration is saturated at zero counted intersections; this prunes that representation only and does not lower-bound circuit complexity or refute other conditional, joint, or global potentials.",
+  "consulted_fibre_items": [
+    {"item_id":"XM009-FROZEN-CONTEXT-FIBRE","item_hash":"5d5746454dbfeafa0984fcb5276a85e1c31e2c727e62593ab932e8e684f1dff8"},
+    {"item_id":"PNP-O9d12a2a1a1d-METRICS","item_hash":"ce8f9592e85e7f3cfcc45beb4e296c575de40a546ad3d81c73ccd1e562044e6b"},
+    {"item_id":"HODGE-H4d1c-FIBRE","item_hash":"bb9ab10535524c7a6292a28dce2b00a5a134cdf625b78a274a475570f4f0eea6"},
+    {"item_id":"YM-E4a-FIBRE","item_hash":"f948cce69ea6296ca3e4ebc7113c26e3789fa61ffb19585e9ca36b6ad91457aa"},
+    {"item_id":"NS-B1a3b1-R2-FIBRE","item_hash":"0c9d8dd85e7dc09ea19bd94fb74aea31f415977bb6a54fc8afc69d3aa66f47f7"}
+  ],
+  "routing_influences": [
+    {"kind":"PRIOR_FAILURE","reference_id":"F-O9D12A2A1A1D-ZERO-COST-BASE-RICHNESS-SHATTERING","effect_on_routing":"Made post-quotient nondegeneracy the first target-side test before inventing a new lower-bound formula.","evidence_pointer":"RAKL_math PR #128"},
+    {"kind":"PRIOR_EPISODE","reference_id":"EP-NS-B1a3b1-C001-R2-20260811","effect_on_routing":"Reinforced separating a local representation check from the later producer/global gluing obligation.","evidence_pointer":"navier_stokes/10_case_study/NS-B1a3b1_C001_R2_RAKL_CYCLE_METRICS_20260811.json"},
+    {"kind":"PRIOR_EPISODE","reference_id":"EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3","effect_on_routing":"Kept richer representation changes in scope while requiring the new target representation to expose a root-facing nondegenerate coordinate.","evidence_pointer":"birch_swinnerton_dyer/07_memory/BSD_A1a1_RAKL_CYCLE_METRICS_20260811_R3.json"}
+  ],
+  "rejected_candidates": [
+    {"candidate_id":"HODGE-PR119-TRANSFER","rejection_reason":"Representation-granularity transfer was already exercised by XM007 and would add less incremental information than testing a live PNP successor coordinate.","evidence_pointer":"RAKL_math PR #119"},
+    {"candidate_id":"RH-PR118-TRANSFER","rejection_reason":"The rarity-versus-universal-exception abstraction had already been recognized during XM008 routing and was treated as saturated for this observer turn.","evidence_pointer":"RAKL_math PR #118"},
+    {"candidate_id":"YM-PR112-TRANSFER","rejection_reason":"The source-completeness hidden-state family already has direct successful reuse and recent XM006/XM008 coverage.","evidence_pointer":"RAKL_math PR #112"}
+  ],
+  "considered_alternatives": [
+    {"alternative_id":"LITERAL-BSD-AUGMENTATION-ALGEBRA-IMPORT","kind":"operator","not_selected_because":"The target set-construction filtration has no justified augmentation-ideal module structure; only the filtration nondegeneracy test transfers."},
+    {"alternative_id":"PNP-HARD-GRAPH-SCORING-FIRST","kind":"search_action","not_selected_because":"A zero-cost saturation falsifier can invalidate the fixed-row coordinate family before expensive hard-instance scoring."}
+  ],
+  "search_policy_decision": {
+    "policy_id": "XM-HIGH-INFORMATION-NONREDUNDANT-TRANSFER",
+    "policy_version": "1",
+    "selected_action_id": "XM009-FIXED-ROW-DEGREE-ZERO-NONDEGENERACY-TEST",
+    "selection_rule": "Prefer a live cross-lane transfer with a predeclared falsifier that can prune a target representation before hard-instance scoring and is not redundant with XM006-XM008.",
+    "expected_discriminator": "If the zero-intersection fixed-row trace is already the full power set, every cumulative positive-degree trace increment vanishes and the associated-graded analogy fails on that representation."
+  },
+  "saturation_axis_deltas": [],
+  "reopened_axis_ids": [],
+  "structural_novelty": null,
+  "child_atom_id": null,
+  "coverage_receipt_id": null,
+  "coverage_receipt_hash": null,
+  "failure_evidence_pointers": ["cross_problem/04_candidates/XM009_BSD_PNP_GRADED_TRACE_FALSIFIER_20260811.md"],
+  "evidence_pointers": [
+    "cross_problem/01_frontier/XM009_FROZEN_CONTEXT_FIBRE_20260811.json",
+    "cross_problem/09_trace/XM009_PRE_ACTION_FIBRE_RECEIPT_20260811.json",
+    "cross_problem/10_study_pattern/XM009_TASK_EPISODE_20260811.json.shadow",
+    "Cavalar-Oliveira ECCC TR25-033",
+    "Ota arXiv:1509.00682"
+  ],
+  "artifact_hash": "5d71b7a8b2306ebb86c671d7e67e3381e946a992285fbbe5d0a6fdd75e6cf70a",
+  "contains_private_reasoning_transcript": false,
+  "grants_chain_of_thought_disclosure": false,
+  "grants_theorem_authority": false,
+  "grants_tool_promotion": false,
+  "grants_gluing_authority": false,
+  "grants_review_independence": false
+}
