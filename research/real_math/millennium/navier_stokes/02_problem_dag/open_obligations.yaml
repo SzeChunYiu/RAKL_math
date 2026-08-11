@@ -18,7 +18,7 @@ active_route:
 atoms:
   NS-B1:
     title: "Type-I blow-up to rigidity-ready ancient class"
-    status: FIRST_CHILD_CALIBRATION_COMPLETE_SECOND_CHILD_OPENED
+    status: TWO_ROUTE_PRUNING_CHILDREN_COMPLETE_THIRD_CHILD_OPENED
     objective: "Assuming a Type-I singularity, identify the exact rescaled ancient class and the smallest inherited property needed for a valid Liouville contradiction."
     source_backed_edges:
       - "Type-I singularity <-> nontrivial mild bounded ancient solution with registered Type-I decay (Albritton–Barker, Theorem 1.1, arXiv:1811.00502)"
@@ -35,32 +35,49 @@ atoms:
         status: RETROSPECTIVE_ANALYTIC_SHELL_CALIBRATION
         statement: "Under the time-slice critical Morrey energy bound mu(B(x,r))<=M r, the absolute far-field quadratic pressure contribution decays as O(M R^-2) and the first kernel-gradient contribution as O(M R^-3)."
         authority: "RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE"
-        chronology: "PR19 exact identity, calculation, and result first appeared together in 9b6b8ae; no backfilled preregistration."
         route_consequence: "Use only to deprioritize raw instantaneous pressure-divergence search; pressure-aware temporal/local/coherent routes remain live."
         evidence: "01_frontier/NS-B1a_C001_PRESSURE_TAIL_LOCALIZATION_20260811.md"
+      - id: NS-B1a1-C001
+        status: SOURCE_BOUND_ROUTE_PRUNING
+        statement: "The standard finite-I local-energy ledger is scale-neutral after normalization; finite physical O(R) or O(R^2) costs can remain summable through infinite dyadic descent."
+        authority: "SCOPED_ANALYTIC_ROUTE_PRUNING / NO_NAVIER_STOKES_COUNTEREXAMPLE / ROOT_AUTHORITY_NONE"
+        route_consequence: "Retire naive shell-budget summation as a scale-termination proof family; require a genuine scale-symmetry breaker."
+        evidence: "01_frontier/NS-B1a1_C001_SCALE_CHARGE_AUDIT_20260811.md"
+      - id: NS-B1a2-C001
+        status: SOURCE_BOUND_ROUTE_PRUNING
+        statement: "Even with finite kinetic energy E0 and the favorable extra pointwise Type-I amplitude M/lambda, N disjoint L3-critical cores satisfy only N<=M E0/(gamma^3 lambda); smooth divergence-free packed snapshots attain bounded L2 with N~lambda^-1 and global L3~lambda^-1/3."
+        authority: "SCOPED_ANALYTIC_ROUTE_PRUNING / FUNCTIONAL_CALIBRATION / NO_NAVIER_STOKES_COUNTEREXAMPLE / ROOT_AUTHORITY_NONE"
+        route_consequence: "Retire finite kinetic energy as a standalone scale-independent critical-core quantization currency; move to dynamics-specific compactness/coherence/no-recrossing."
+        evidence: "01_frontier/NS-B1a2_C001_CRITICAL_BLOB_PACKING_AUDIT_20260811.md"
     open_children:
       NS-B1a:
         title: "Dynamics-specific Type-I trace/tail bridge"
         question: "For a mild bounded ancient 3D Navier–Stokes solution with I<infinity, what weakest equation-specific inherited property yields either a backward sequence uniformly bounded in global L3 or another source-valid Liouville trigger?"
-        status: RETROSPECTIVE_SEARCH_CONTROL_RESIDUAL_OPENED
-        exact_gap: "Local parabolic Type-I control does not by itself provide global spatial tail tightness; the retrospective NS-B1a-C001 shell arithmetic only deprioritizes raw instantaneous far-field pressure divergence under the available critical Morrey energy control."
-        retrospective_calibration:
-          id: NS-B1a-C001
-          authority: "RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE"
-          implication: "analytic-shell summability changes search priority only; it supplies no candidate or root evidence"
-          chronology_audit: "04_candidates/negative_history/NS_B1a_C001_PR19_CHRONOLOGY_AUDIT_20260811.json"
-          failure_memory: "F-NS-B1a-C001-PRESSURE-SUMMABILITY"
+        status: TWO_ROUTE_PRUNING_CHILDREN_COMPLETE_THIRD_CHILD_CONTEXT_REQUIRED
+        completed_children:
+          NS-B1a1:
+            title: "Pressure-aware temporal shell-flux anti-replication"
+            result: "Standard normalized local-energy bookkeeping is scale-neutral and gives no automatic summable/well-founded descendant charge."
+            failure_memory: "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER"
+          NS-B1a2:
+            title: "Finite-energy critical-core quantization"
+            result: "Finite kinetic energy costs only O(lambda) per L3-critical core and permits an O(lambda^-1) core-count bound even under favorable pointwise Type-I amplitude."
+            failure_memory: "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"
         next_child:
-          id: NS-B1a1
-          title: "Pressure-aware temporal shell-flux anti-replication"
-          question: "Does the time-integrated local-energy balance across expanding dyadic shells yield a scale-decaying, telescoping, or summable quantity that prevents persistent replicated critical mass without assuming global L3 or orbit compactness?"
+          id: NS-B1a3
+          title: "Dynamics-specific critical compactness/coherence bridge"
+          question: "What property inherited by every relevant Type-I ancient limit prevents the multi-core/tail-escape pattern permitted by finite kinetic energy and either yields a backward global-L3 sequence or activates another source-valid Liouville theorem?"
           status: CONTEXT_REQUIRED_BEFORE_CANDIDATE
-          first_hostile_check: "Determine whether the registered A,C,D,E bounds charge only O(1) per dyadic scale, which would still diverge when summed without an additional decay/smallness mechanism."
+          candidate_families:
+            - "minimal/critical-element compactness in a genuinely critical global topology"
+            - "vorticity-direction coherence or geometric depletion"
+            - "pressure-aware temporal cancellation or no-recrossing"
+            - "alternative source-valid Liouville trigger"
           required_pre_candidate_actions:
-            - "freeze a new MathContextFiber separating instantaneous pressure localization from temporal shell-flux accumulation"
-            - "refresh success-tool/failure memory and include F-NS-B1a-C001-PRESSURE-SUMMABILITY only at SUPPORTED scoped authority"
-            - "run a six-role expert cell with dedicated local-energy and pressure-time-integration lenses"
-            - "freeze a new hash-chained pre-candidate trace before any NS-B1a1 candidate"
+            - "freeze fresh MathContextFiber with explicit critical topology or coherence coordinate"
+            - "refresh success/failure memory including F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER and F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"
+            - "preserve disagreement between compactness and geometry routes in same-context expert review"
+            - "freeze hash-chained pre-candidate trace before any mathematical candidate"
       NS-B1b:
         question: "Does the rescaled orbit fall into fixed, periodic, or genuinely nonperiodic ancient behavior?"
         status: OPEN
@@ -82,7 +99,10 @@ nonpromotion_rules:
   - "boundedness of one scale-invariant quantity is not an unproved implication to another"
   - "a norm-only functional counterexample is not a counterexample to a dynamics-specific Navier–Stokes theorem"
   - "instantaneous pressure-tail summability is not global velocity-tail tightness"
+  - "scale-neutral local-energy bookkeeping is not a global anti-replication certificate"
+  - "finite kinetic energy is not a scale-independent L3-critical profile count"
+  - "a divergence-free packed snapshot is not a Navier–Stokes counterexample"
   - "retrospective analytic calibration is search control only and cannot be renamed preregistered candidate evidence"
-  - "failure of raw pressure divergence does not blacklist pressure-aware temporal/local/coherent mechanisms"
+  - "failure of one absolute budget route does not blacklist dynamics-specific compactness, coherence, pressure or geometry"
   - "computation is not proof"
   - "same-context review is not independent review"
