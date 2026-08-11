@@ -1,0 +1,48 @@
+{
+  "target_atom_id": "RH-ANA-003",
+  "target_context_hash": "sha256:cf1aba3880a0deef2e0c6f14e5e5a4e51c41cf15db15bce9b4dc3188fa3cbdc9",
+  "tool_inventory_snapshot_hash": "sha256:dc30fe3cfc891f3054d2310104c23f9ecfc822916747b6cbb8ba14f91ab90187",
+  "failure_lattice_snapshot_hash": "sha256:0d172135daa1538e4ca7b03fe7dff6d2f7474adadfe12525ef111bd1a3632532",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "Lagarias finite-place binomial collapse to a single Laguerre kernel",
+    "pointwise PNT-error magnitude envelope transported through the exact kernel",
+    "signed/correlation control of the PNT error against growing Li kernels",
+    "Lagarias-Voros all-index growth-class exclusion",
+    "mollifier/resonance or explicit-formula smoothing only if it supplies an exact DifferenceWitness against the finite-surrogate failure"
+  ],
+  "relevant_tool_ids": [
+    "T-RH-LI-PREFIX-QUARTET-CALIBRATION"
+  ],
+  "relevant_failure_ids": [
+    "F-RH-ANA-001-FINITE-LI-PREFIX",
+    "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE"
+  ],
+  "selected_tool_ids": [
+    "T-RH-LI-PREFIX-QUARTET-CALIBRATION"
+  ],
+  "tool_applicability_notes": [
+    "T-RH-LI-PREFIX-QUARTET-CALIBRATION is applicable only as a regression warning: no finite n-range numerical transform calculation may be treated as global evidence. The present action is an exact source algebra and envelope-level method stress test, not another finite-prefix certificate.",
+    "No reusable tool currently proves a one-sided uniform PNT-error transform estimate. NO tool authority is projected beyond the calibration role."
+  ],
+  "failure_reuse_notes": [
+    "F-RH-ANA-001-FINITE-LI-PREFIX directly blocks promotion of any finite-prime or finite-n computation without a separate all-index remainder theorem.",
+    "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE motivates the rotation from a manifestly positive norm surrogate to an exact arithmetic residual. DifferenceWitness: RH-ANA-003 uses the exact finite-place prime/background term and PNT error E(x), not Suzuki's model-space norm; the old norm-faithfulness falsifier does not settle this route.",
+    "The cheapest repeat-failure test is to ask whether a proposed PNT estimate actually controls the n-dependent signed transform one-sidedly and uniformly, rather than merely supplying another positive/magnitude surrogate."
+  ],
+  "unresolved_warnings": [
+    "The Laguerre-kernel transform is an exact re-expression, not independent progress unless it exposes a strictly weaker bound.",
+    "Current PNT bounds are magnitude bounds. It remains unproved in this cycle whether their induced triangle-inequality majorant is quantitatively too large for every large n.",
+    "Any added signed/correlation hypothesis could itself be RH-equivalent; strict weakness must be audited.",
+    "Mollifier/resonance techniques must connect to this exact transform or a different exact root bridge before they receive routing credit."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003_PNT_ERROR_TRANSFORM_20260811.md",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_001_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_001_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_POSTAUDIT_FAILURE_EXPERIENCE_LATTICE_20260811.json"
+  ],
+  "artifact_hash": "sha256:d3946bf7c7617f1581f6e9f9556573e308127372f027f79f0aee72f6b69338eb"
+}
