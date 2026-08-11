@@ -1,0 +1,19 @@
+{
+  "lesson_id": "L-PNP-CYCLIC-JOIN-ELIMINATION-BEFORE-INVARIANT",
+  "kind": "REPRESENTATION",
+  "authority": "CANDIDATE_ONLY_NOT_RETAINED",
+  "supporting_episode_ids": ["PNP-O9d12a2a1a1d-JOIN-ELIMINATION-R1-20260811"],
+  "trigger_signature": ["cyclic intersection complexity","uncounted union topology","presentation-sensitive candidate coordinate"],
+  "context_scope": ["finite Cavalar-Oliveira Section 2.5 cyclic syntactic sequences","intersection-count cost model"],
+  "diagnosis": "Pure-union topology is representation slack: for fixed counted-intersection outputs, each union node is exactly the reachability-union of generators and counted outputs that feed it.",
+  "action": "Eliminate/canonicalize all union-only nodes before inventing a lower-bound coordinate; define future candidates on the reduced k-meet system or prove invariance under this elimination.",
+  "expected_effects": ["prevents charging zero-cost union presentation detail","shrinks representation search space","keeps shared-operation accounting explicit"],
+  "boundaries": ["does not lower-bound k","does not transfer to cost models where union is counted","does not imply a circuit lower bound or P!=NP","same-context verification only"],
+  "falsifier": "A finite source-valid cyclic syntactic sequence whose least-fixed-point output changes under OR-reachability elimination.",
+  "validation_obligations": ["independent mathematical review if promoted","formal/source statement audit if used in a theorem chain","check compatibility with any future Phi definition"],
+  "local_obstruction_closed": "O-PNP-UNCOUNTED-JOIN-TOPOLOGY-PRESENTATION-SLACK",
+  "remaining_gluing_obstruction": "F-O9D12A2A1A1D-NO-K-MEET-PHI-BOUND",
+  "novelty_class_shadow": "representation",
+  "retained_semantic_novelty": false,
+  "reason_not_retained": "No protected lesson-retention/promotion gate ran; proposal/shadow files and local success do not count as learning."
+}
