@@ -593,4 +593,13 @@ def test_current_main_integration_receipt_binds_non_circular_git_history() -> No
     ]
     prior_bytes = _git("show", f'{prior["commit"]}:{prior["path"]}').stdout
     assert "sha256:" + hashlib.sha256(prior_bytes).hexdigest() == prior["raw_sha256"]
+
+    reviewed = receipt["reviewed_checkpoint"]
+    assert reviewed["commit"] == prior["commit"]
+    assert _git("rev-parse", f'{reviewed["commit"]}^{{tree}}').stdout.decode().strip() == reviewed[
+        "tree"
+    ]
+    assert reviewed["integration_receipt_at_checkpoint"] == prior
+    assert reviewed["reported_c025_technical_blockers"] == 0
+    assert "NOT_INDEPENDENT_PEER_REVIEW" in reviewed["review_authority"]
     assert receipt["scope"]["p_vs_np_root"] == "NO_AUTHORITY"
