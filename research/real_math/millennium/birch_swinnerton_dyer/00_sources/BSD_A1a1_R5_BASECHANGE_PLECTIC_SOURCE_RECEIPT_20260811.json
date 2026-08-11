@@ -1,0 +1,142 @@
+{
+  "schema_version": "bsd-r5-source-receipt-v1",
+  "artifact_type": "PRIMARY_SOURCE_SCOPE_RECEIPT",
+  "cycle_id": "BSD-A1a1-BASECHANGE-PLECTIC-20260811-R5",
+  "authority": "SOURCE_BOUND_BOUNDED_SEARCH_NO_NONEXISTENCE_CLAIM",
+  "search_chronology": {
+    "durable_fibre_freeze_commit": "0c87fcdf33c4755d07cd26affe2e7fcebc7981a4",
+    "prospective_expert_review_commit": "ca22f08b98eaffc6d7bbee58a039f6ab30602c3b",
+    "prospective_search_executed_after_review_commit": true,
+    "prefreeze_scouting_credit": "MOTIVATING_ONLY_NO_PROSPECTIVE_DISCOVERY_CREDIT",
+    "search_scope": "bounded current primary-source search; not literature-complete"
+  },
+  "sources": [
+    {
+      "id": "Nelson-IMRN-2022-Quadratic-Hecke-Sums",
+      "authors": "Paul D. Nelson",
+      "title": "Quadratic Hecke Sums and Mass Equidistribution",
+      "journal": "International Mathematics Research Notices 2022(17), 13659–13701",
+      "publication_date": "2021-05-27 online / 2022 volume",
+      "selectors": [
+        "Proposition 3.1, lines 444-484 in current publisher HTML",
+        "quadratic base change equation (4.2), lines 485-497"
+      ],
+      "classified_claim": "Proposition 3.1 applies Friedberg–Hoffstein Theorem B to produce infinitely many quadratic characters with a nonzero central twist while imposing finite local quadratic-character behavior; the proof reduces to sign compatibility. The paper explicitly says negative D could be used. Equation (4.2) gives L(pi_D,s)=L(pi,s)L(pi tensor chi_D,s).",
+      "route_role": "LOCAL_PRESCRIPTION_EVIDENCE_AND_EXACT_BASECHANGE_FACTORIZATION",
+      "limitations": "The article's quaternionic/automorphic setup is not identical to the Fornea–Gehrmann plectic setup; it does not itself verify every plectic local/residual hypothesis for arbitrary E."
+    },
+    {
+      "id": "Friedberg-Hoffstein-Annals-1995",
+      "authors": "Solomon Friedberg; Jeffrey Hoffstein",
+      "title": "Nonvanishing theorems for automorphic L-functions on GL(2)",
+      "journal": "Annals of Mathematics 142(2), 385–423",
+      "publication_date": "1995-09",
+      "selectors": [
+        "official Annals article metadata",
+        "Theorem B as invoked explicitly in Nelson Proposition 3.1"
+      ],
+      "classified_claim": "Primary original nonvanishing source behind the finite-local-prescription application. Exact theorem text was not available in the current official-page parser, so the scoped theorem-use is bound through the later primary paper's explicit application rather than reconstructed from memory.",
+      "route_role": "ORIGINAL_NONVANISHING_THEOREM_SOURCE",
+      "limitations": "Do not infer unparsed hypotheses beyond what the source-bound application establishes."
+    },
+    {
+      "id": "arXiv:2311.03100v2",
+      "authors": "Michele Fornea; Lennart Gehrmann",
+      "title": "Iwasawa theory and mock plectic points",
+      "selectors": [
+        "Introduction lines 41-60",
+        "Theorem 1.1 lines 61-73",
+        "Example 1.5 lines 84-88",
+        "Section 2.1 lines 91-121"
+      ],
+      "classified_claim": "The plectic setup takes an imaginary quadratic K with p inert, N unramified, N^- the inert part of N/p square-free with even number of prime factors, and residual hypotheses. Nonvanishing Q_K together with L(E/K,1)=0 is an input to the p-Selmer conclusion; Q_K nonvanishing is not deduced from complex analytic rank. Example 1.5 exhibits a rank-two-over-Q triple with mixed inert/split local pattern, but is only an example.",
+      "route_role": "EXACT_PLECTIC_TARGET_TYPING_AND_DOWNSTREAM_ONE_WAY_THEOREM",
+      "limitations": "Does not prove complex second derivative => Q_K != 0; does not prove full Mordell–Weil/Sha/leading-term BSD."
+    },
+    {
+      "id": "arXiv:2603.28327",
+      "authors": "Michele Fornea",
+      "title": "Plectic Heegner classes",
+      "publication_date": "2026-03-30",
+      "selectors": [
+        "abstract/current arXiv HTML",
+        "construction/comparison sections as audited in R3"
+      ],
+      "classified_claim": "Constructs partially global plectic Heegner classes recovering plectic Heegner points and mock plectic invariants through localization/projection. Higher-rank arithmetic significance remains outside the theorem needed here.",
+      "route_role": "CURRENT_RICHER_PLECTIC_REPRESENTATION",
+      "limitations": "No theorem in the bounded audit derives root-faithful plectic nonvanishing from the complex s-second derivative."
+    },
+    {
+      "id": "arXiv:2202.12573-current",
+      "authors": "Víctor Hernández; Santiago Molina",
+      "title": "Plectic points and Hida-Rankin p-adic L-functions",
+      "selectors": [
+        "current arXiv abstract"
+      ],
+      "classified_claim": "Provides a p-adic Gross–Zagier formula computing higher derivatives of Hida–Rankin p-adic L-functions in terms of plectic points.",
+      "route_role": "DOWNSTREAM_NEAR_MATCH_P_ADIC_DERIVATIVE",
+      "limitations": "The derivative coordinate is p-adic/Hida–Rankin, not the complex s derivative of L(E/K,s). The regulator interpretation in higher rank is conjectural in the source framing."
+    },
+    {
+      "id": "arXiv:2107.01838-current",
+      "authors": "Víctor Hernández Barrios; Santiago Molina Blanco",
+      "title": "Exceptional zero formulas for anticyclotomic p-adic L-functions",
+      "selectors": [
+        "current arXiv abstract"
+      ],
+      "classified_claim": "Relates r-th derivatives of anticyclotomic p-adic L-functions to plectic points and Tate periods in an exceptional-zero setting.",
+      "route_role": "DOWNSTREAM_NEAR_MATCH_P_ADIC_DERIVATIVE",
+      "limitations": "Again a p-adic derivative coordinate, not the complex s-second derivative."
+    }
+  ],
+  "exact_local_derivation": {
+    "assumptions": [
+      "E/Q is an elliptic curve with ord_{s=1} L(E,s)=2",
+      "K/Q is quadratic with character chi_K and E^K is the quadratic twist",
+      "quadratic base change factorization L(E/K,s)=L(E,s)L(E^K,s) at the compatible L-function normalization",
+      "L(E^K,1) != 0"
+    ],
+    "conclusions": [
+      "ord_{s=1} L(E/K,s)=2",
+      "L''(E/K,1)=L''(E,1)*L(E^K,1) != 0"
+    ],
+    "proof_note": "Because exact order two gives L(E,1)=L'(E,1)=0 and L''(E,1)!=0, differentiating the source-bound product twice leaves only L''(E,1)L(E^K,1) at s=1.",
+    "scope": "stored-factorization + elementary Taylor composition; no new deep theorem"
+  },
+  "local_condition_compatibility_audit": {
+    "positive_evidence": [
+      "Friedberg–Hoffstein as explicitly applied by Nelson allows finite local quadratic-character prescriptions subject to a compatible global root sign.",
+      "Nelson notes negative discriminants are equally possible in that application.",
+      "Fornea–Gehrmann requires an even number of inert N^- primes, giving epsilon(E/K)=+1 rather than an immediate parity contradiction."
+    ],
+    "unclosed_binding": [
+      "The exact Fornea–Gehrmann pattern p inert / conductor primes split or inert as required must be instantiated simultaneously with central twist nonvanishing for the target E.",
+      "Residual surjectivity and ramification hypotheses in Fornea–Gehrmann depend on E,p,N^- and are not supplied merely by selecting K.",
+      "The bounded audit did not source-bind a single theorem stated exactly as 'for every analytic-rank-two E/Q satisfying a plectic-eligible prime condition, choose an admissible imaginary K with L(E^K,1)!=0'."
+    ],
+    "verdict": "STRONG_FINITE_LOCAL_PRESCRIPTION_EVIDENCE_BUT_EXACT_PLECTIC_ADMISSIBILITY_BINDING_REMAINS_OPEN"
+  },
+  "downstream_bridge_audit": {
+    "searched_cell": "complex s-second derivative of L(E/K,s) -> nonzero plectic/mock-plectic/global arithmetic object",
+    "result": "NO_EXACT_TARGET_CELL_THEOREM_LOCATED_IN_BOUNDED_SEARCH",
+    "nonexistence_claim": false,
+    "near_matches_rejected": [
+      "Q_K != 0 -> p-Selmer rank 2 (wrong direction for nonvanishing generation)",
+      "higher Hida–Rankin p-adic derivatives -> plectic points (wrong analytic coordinate)",
+      "anticyclotomic p-adic exceptional-zero derivatives -> plectic points (wrong analytic coordinate)",
+      "plectic Heegner class construction/comparison without proved complex-rank nonvanishing significance"
+    ]
+  },
+  "root_scope_guard": {
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "not_proved": [
+      "analytic rank two -> Mordell–Weil rank two over Q",
+      "Sha finiteness/order",
+      "real regulator identity",
+      "Tamagawa/local-factor and torsion contribution",
+      "arbitrary-rank BSD",
+      "full complex leading-term formula"
+    ]
+  },
+  "artifact_hash": "sha256:c6fd0024b0b097a0dde8b9dd42a19fe2c4f71814fcd4cb64555790de6181c4c9"
+}
