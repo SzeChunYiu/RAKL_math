@@ -1,0 +1,73 @@
+{
+  "schema_version": "bsd-r4-source-receipt-v1",
+  "artifact_type": "PRIMARY_SOURCE_SCOPE_RECEIPT",
+  "cycle_id": "BSD-A1a1-COMPLEX-HIGHER-GZ-20260811-R4",
+  "authority": "SOURCE_BOUND_BOUNDED_SEARCH_NO_NONEXISTENCE_CLAIM",
+  "search_chronology": {
+    "preaction_commit": "8b7d561641c1374ac56088c582b8282cdcd8e01e",
+    "prospective_search_executed_after_preaction_commit": true,
+    "search_scope": "bounded primary-source web search; not literature-complete"
+  },
+  "sources": [
+    {
+      "id": "arXiv:1809.09066",
+      "authors": "Francesc Castella; Ming-Lun Hsieh",
+      "title": "On the non-vanishing of generalized Kato classes for elliptic curves of rank 2",
+      "current_manuscript_date": "2026-03-22",
+      "retrieved": "2026-08-11",
+      "selectors": ["HTML lines 39-55", "HTML lines 83-104", "HTML lines 113-161", "HTML lines 185-200"],
+      "classified_claim": "The paper explicitly replaces the analytic rank-two condition in its motivating question by an algebraic counterpart; Darmon-Rotger's equivalence including analytic rank two is stated as a conjecture, with rank=2 iff analytic order=2 identified as BSD rank two. Theorem A relates generalized-Kato nonvanishing to a strict Selmer condition, and Corollary B obtains nonvanishing only after assuming Mordell-Weil rank two and finite p-primary Sha.",
+      "route_role": "NUMBER_FIELD_TARGET_NEAR_MISS_ARITHMETIC_INPUT"
+    },
+    {
+      "id": "arXiv:1512.02683",
+      "authors": "Zhiwei Yun; Wei Zhang",
+      "title": "Shtukas and the Taylor expansion of L-functions",
+      "version_scope": "function fields; even r",
+      "retrieved": "2026-08-11",
+      "selectors": ["arXiv abstract"],
+      "classified_claim": "For an unramified cuspidal PGL2 representation over a function field, the r-th central derivative of a quadratic base-change L-function is identified with the self-intersection of the corresponding Heegner-Drinfeld cycle.",
+      "route_role": "SOLVED_HIGHER_COMPLEX_DERIVATIVE_ANALOGUE_FUNCTION_FIELD"
+    },
+    {
+      "id": "arXiv:2408.04375",
+      "authors": "David T.-B. G. Lilienfeldt; Ari Shnidman",
+      "title": "Derivatives of Rankin-Selberg L-functions and heights of generalized Heegner cycles",
+      "retrieved": "2026-08-11",
+      "selectors": ["arXiv abstract"],
+      "classified_claim": "A number-field central derivative of a Rankin-Selberg L-function is expressed by a Beilinson-Bloch height of a generalized Heegner cycle in higher weight. This is a first-central-derivative/higher-cycle result, not a second complex derivative rank-two theorem for E/Q.",
+      "route_role": "NUMBER_FIELD_HIGHER_WEIGHT_FIRST_DERIVATIVE_NEAR_MISS"
+    },
+    {
+      "id": "arXiv:2603.15795v1",
+      "authors": "Tuoping Du; Zhifeng Peng",
+      "title": "On the central derivatives of l-functions and modularity of heenger cycles",
+      "retrieved": "2026-08-11",
+      "selectors": ["arXiv abstract"],
+      "classified_claim": "The source gives an arithmetic intersection/global-height formula for a central L-derivative in higher weights. Its located statement concerns the derivative in the singular/first-derivative Gross-Zagier-Zhang direction, not an E/Q rank-two second-complex-derivative bridge.",
+      "route_role": "NUMBER_FIELD_HIGHER_WEIGHT_FIRST_DERIVATIVE_NEAR_MISS"
+    },
+    {
+      "id": "arXiv:1409.8584",
+      "authors": "Isao Ishikawa",
+      "title": "Integrals on p-adic upper half planes and Hida families over totally real fields",
+      "retrieved": "2026-08-11",
+      "selectors": ["HTML lines 24-35"],
+      "classified_claim": "Theorem 1.1 expresses a second derivative of a two-variable p-adic L-function along the Hida-family weight coordinate in terms of a squared p-adic logarithm of a global point. The second derivative is p-adic/family-directional, not the complex s-second derivative.",
+      "route_role": "SECOND_DERIVATIVE_COORDINATE_NEAR_MISS_P_ADIC"
+    }
+  ],
+  "ontology_normalization": {
+    "term": "higher Gross-Zagier",
+    "distinct_axes": [
+      {"axis": "COMPLEX_DERIVATIVE_ORDER", "example": "arXiv:1512.02683", "target_match": "structural but function-field only"},
+      {"axis": "WEIGHT_OR_CYCLE_CODIMENSION", "examples": ["arXiv:2408.04375", "arXiv:2603.15795v1"], "target_match": "number-field but first central derivative"},
+      {"axis": "P_ADIC_DEFORMATION_DERIVATIVE_ORDER", "example": "arXiv:1409.8584", "target_match": "second derivative but wrong analytic coordinate"}
+    ],
+    "target_cell": "NUMBER_FIELD + WEIGHT_TWO_ELLIPTIC_CURVE + COMPLEX_S_DERIVATIVE_ORDER_TWO + ROOT_FAITHFUL_ARITHMETIC_OUTPUT"
+  },
+  "bounded_search_result": "NO_TARGET_CELL_THEOREM_LOCATED",
+  "nonexistence_claim": false,
+  "recorded_at_utc": "2026-08-11T18:25:00Z",
+  "artifact_hash": "sha256:91033e0c5a7bd1fc5bbc276c76a8c1b191debe8231b6c24ab55a5dee3ae84ce0"
+}
