@@ -160,6 +160,7 @@ def test_pr111_trace_failure_is_preserved_without_rewriting_history() -> None:
         check=True,
         capture_output=True,
     ).stdout
+    assert raw == (ROOT / TRACE_PATH).read_bytes()
     assert hashlib.sha256(raw).hexdigest() == TRACE_RAW_SHA256
 
 
