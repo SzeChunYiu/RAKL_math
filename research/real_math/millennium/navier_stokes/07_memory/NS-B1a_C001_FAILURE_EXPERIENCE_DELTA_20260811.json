@@ -1,0 +1,73 @@
+{
+  "experience": {
+    "failure_id": "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+    "atom_id": "NS-B1a",
+    "candidate_id": "NS-B1a-C001",
+    "context_packet_hash": "sha256:d0acf9ae066132883a893e669c09f5969f5e40281c558913b61c8ac0fcc2902d",
+    "research_trace_event_id": "NS-B1a-E10",
+    "method_family": "instantaneous pressure-divergence anti-replication from finite Type-I critical Morrey energy control",
+    "failure_mode": "far-field Calderon-Zygmund pressure accumulation is absolutely summable under the available time-slice Morrey growth",
+    "residual_signature": [
+      "pressure stress tail outside radius R is O(M R^-2)",
+      "pressure-kernel gradient tail is O(M R^-3)",
+      "global L3 tail tightness is not obtained",
+      "the missing anti-replication coordinate must use temporal/coherent dynamics rather than raw instantaneous far-field divergence"
+    ],
+    "broken_assumptions": [
+      "infinitely replicated distant critical packets would necessarily force divergent instantaneous nonlocal pressure",
+      "nonlocality alone upgrades local Type-I control to a global tail bound"
+    ],
+    "scope_conditions": [
+      "whole-space 3D pressure quadratic far-field represented by the Newtonian Hessian Calderon-Zygmund kernel outside a fixed radius",
+      "fixed time slice satisfying sup_{x,r} r^-1 integral_{B(x,r)} |v|^2 <= M",
+      "absolute far-field stress and first kernel-gradient contributions only",
+      "does not cover the singular local pressure term, harmonic normalization, time-integrated pressure work, local-energy flux, sign/coherence effects, or unique-continuation arguments"
+    ],
+    "competing_diagnoses": [
+      "pressure anti-replication may act through time-integrated local-energy flux rather than instantaneous tail divergence",
+      "a local/harmonic pressure component or pressure-velocity coherence may be load-bearing even though the absolute far field is summable",
+      "diffusion/advection rather than pressure may supply the dynamics-specific tail mechanism",
+      "finite I may simply be too weak to force any global tail trigger without an additional minimality or compactness property"
+    ],
+    "selected_diagnosis": "The Type-I A/Morrey energy bound itself makes the instantaneous quadratic pressure far field summable, so raw pressure divergence is not the missing local-to-global bridge; the next discriminating coordinate is temporal/coherent dynamics.",
+    "diagnosis_status": "SUPPORTED",
+    "evidence_pointers": [
+      "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a_C001_PRESSURE_TAIL_LOCALIZATION_20260811.md",
+      "research/real_math/millennium/navier_stokes/09_trace/NS-B1a_C001_TRACE_CONTINUATION_20260811.json",
+      "research/real_math/millennium/navier_stokes/08_reviews/SAME_CONTEXT_REVIEW_NS-B1a_C001_RESULT_20260811.md",
+      "Albritton-Barker arXiv:1811.00502",
+      "Bradshaw-Tsai arXiv:2001.11526"
+    ],
+    "falsifier_or_attempt": "Dyadic-shell worst-case absolute accumulation under mu(B(x,r))<=M r: use |K(z)|<=c0|z|^-3 and |grad K(z)|<=c1|z|^-4 with no cancellation, compact support, or finite-packet assumption.",
+    "observed_result": "The shell sums are geometric: pressure tail <= (8/3)c0 M R^-2 and kernel-gradient tail <= (16/7)c1 M R^-3. The narrower instantaneous-pressure-divergence mechanism is therefore rejected within this registered scope.",
+    "local_repair_attempts": [
+      "test the pressure-gradient kernel as well as pressure; it is even more summable",
+      "retain pressure-aware temporal/local-energy mechanisms as live rather than globally blacklisting pressure",
+      "open NS-B1a1 for time-integrated shell-flux accumulation"
+    ],
+    "timestamp": "2026-08-11T08:09:10+00:00",
+    "artifact_hash": "sha256:8020ad5ba3cf94daf2819b7fa2634a6133aee5a7f9ab98cb725a069e0b0c6054"
+  },
+  "links": [
+    {
+      "source_id": "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+      "target_id": "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+      "relation": "SHARES_RESIDUAL_WITH",
+      "rationale": "Both episodes show that locally valid bounded contributions can remain globally non-discriminating; in NS-B1a the pressure kernel actually makes distant accumulation summable, so the shared lesson is only an abstraction-level local-to-global warning, not a transferable theorem.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/07_memory/NS-B1a_RESEARCH_MEMORY_REVIEW_20260811.json",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a_C001_PRESSURE_TAIL_LOCALIZATION_20260811.md"
+      ]
+    },
+    {
+      "source_id": "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+      "target_id": "NS-B1a1",
+      "relation": "MOTIVATES_META_ATOM",
+      "rationale": "Instantaneous pressure divergence is pruned, so the next atom must test a temporal/coherent pressure-aware shell-flux mechanism rather than repeat the same spatial-tail representation.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/09_trace/NS-B1a_C001_TRACE_CONTINUATION_20260811.json",
+        "research/real_math/millennium/navier_stokes/08_reviews/SAME_CONTEXT_REVIEW_NS-B1a_C001_RESULT_20260811.md"
+      ]
+    }
+  ]
+}
