@@ -1,0 +1,53 @@
+{
+  "schema_version": "xm014-diagnosis-v1",
+  "cycle_id": "XM014-BSD-PNP-PARAMETER-BINDING-20260812",
+  "episode_id": "EP-XM014-BSD-PNP-PARAMETER-BINDING-20260812",
+  "diagnosis_id": "D-XM014-PNP-TARGET-ALREADY-PARAMETER-NORMALIZED",
+  "failure_id": "F-XM014-NEW-OBSTRUCTION-HYPOTHESIS-DUPLICATES-STORED-GUARD",
+  "episode_outcome": "PARTIAL_SUCCESS",
+  "diagnosis": "The cross-problem audit operation is valid and applicable, but the proposed target obstruction is not new: C041 and existing PNP memory already separate the relevant coordinates and root class before scoring/transference.",
+  "failure_category": [
+    "REPRESENTATION",
+    "META_POLICY_DUPLICATE_SUPPRESSION"
+  ],
+  "mathematical_failure": false,
+  "retrieval_failure": false,
+  "decomposition_failure": false,
+  "gluing_failure": false,
+  "source_failure": false,
+  "provenance_failure": false,
+  "verification_failure": false,
+  "tooling_failure": false,
+  "reusable_obstruction_created": false,
+  "new_lesson_created": false,
+  "new_tool_created": false,
+  "new_motif_created": false,
+  "reused_ids": [
+    "MOTIF-ROOT-CRITICAL-COORDINATE-BEFORE-SCORE",
+    "R2-COORDINATE-INVENTORY-RESULT",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+    "EP-BSD-A1A1-BKS-RANK-INDEX-20260812-R8"
+  ],
+  "rejected_as_duplicate": [
+    "O-XM014-SOURCE-PARAMETER-SEMANTIC-BINDING",
+    "M-XM014-THEOREM-INDEX-PROVENANCE"
+  ],
+  "lesson_reuse": {
+    "status": "REUSE_EXISTING_PATTERN_NO_NEW_LESSON",
+    "statement": "Before instantiating a theorem/certificate or score from a target coordinate, bind the source-defined parameter semantics and require a typed bridge for any reparameterization.",
+    "scope": "search-control/transfer-validation only; no mathematical authority"
+  },
+  "framework_improvement_hypothesis": {
+    "target_module": [
+      "src/rakl/method_specs.py::ontology_terminology_normalization",
+      "src/rakl/method_specs.py::mathematical_context_translation"
+    ],
+    "hypothesis": "A proposal-only TheoremParameterBindingReceipt could make source-parameter identity, target parameter, bridge witness, preserved/non-preserved consumers, and DifferenceWitness explicit before cross-context theorem instantiation.",
+    "expected_benefit": "Earlier rejection of analytic/algebraic-rank, scale/input-size, endpoint/reference and similar semantic rebindings before candidate generation.",
+    "possible_regression": "Could over-block legitimate reparameterizations whose equivalence is routine but not encoded in the new receipt.",
+    "cheapest_prospective_discriminator": "Matched set of valid and invalid reparameterization transfers; compare false-accept/false-reject rates with the existing generic normalization surfaces versus the explicit receipt.",
+    "issue_opened": false,
+    "why_no_issue": "Current v3 method_specs already requires typed identity/equivalence witnesses for normalization, and this cycle found successful existing application-level guard reuse rather than a framework failure."
+  },
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}
