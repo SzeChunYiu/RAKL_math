@@ -1,0 +1,124 @@
+{
+  "atom_id": "NS-B2a",
+  "parent_atom_id": "NS-B1",
+  "context_kind": "orthogonal_type_II_child",
+  "object_context": "Type-II blow-up classification lane for the unforced whole-space 3D incompressible Navier–Stokes Clay (A) route. Bind Seregin arXiv:2606.29468v1, Theorem 3.1, in the F=1 branch where the singular blow-up scaling has viscosity coefficient f(lambda)->0 and a nontrivial ancient Euler limit is extracted. The target is not a Navier–Stokes backward-uniqueness argument: identify an inherited far-field/no-incoming-energy condition from the original suitable weak Navier–Stokes sequence, prove that it passes to the Euler limit, and combine it with Seregin's scale-invariant bound (3.5), local-energy inequality, and backward expanding-ball smallness to force the ancient Euler limit to vanish, contradicting source nontriviality (3.8).",
+  "exact_success_contract": "From only hypotheses inherited under Seregin Theorem 3.1 in the F=1 Type-II branch, identify/prove a source-backed tail/no-incoming-flux condition inherited from the original suitable weak Navier–Stokes solutions that passes to the Euler limit and, together with (3.5), the local-energy inequality, and backward expanding-ball smallness, forces u≡0.",
+  "structural_coordinates": [
+    "original object: suitable weak 3D incompressible Navier–Stokes solution near a Type-II singularity",
+    "rescaling: x=lambda*y, t=lambda^2*f(lambda)*tau, v^lambda=lambda*f(lambda)*v, q^lambda=lambda^2*f(lambda)^2*q",
+    "rescaled viscosity coefficient equals f(lambda) and tends to zero in the registered branch",
+    "limit PDE: incompressible Euler, not Navier–Stokes",
+    "source extraction is local; compactness does not by itself give global spatial tightness",
+    "pressure is nonlocal and only local/normalized convergence is source-backed",
+    "source class carries Seregin's local scale-invariant estimate (3.5), local-energy inequality and a nontriviality lower bound (3.8)",
+    "backward expanding-ball smallness can be derived retrospectively from (3.5), but gives only local-in-space decay along selected backward times",
+    "translation/dilation escape and profile leakage remain possible without a far-field inheritance theorem",
+    "Euler has no viscous backward-uniqueness mechanism available from the standard Navier–Stokes critical regularity route"
+  ],
+  "equivalent_formulations": [
+    "No-incoming-energy form: show that every Seregin F=1 Euler blow-up profile inherits a quantitative condition excluding critical energy entering any fixed region from spatial infinity as tau increases from -infinity.",
+    "Tail-tightness form: show enough uniform spatial tightness of the approximating rescaled Navier–Stokes sequence to pass a global decay/tightness property to the ancient Euler limit.",
+    "Rigidity form: prove a Liouville theorem for ancient Euler solutions in exactly the Seregin (3.5)+local-energy+backward-smallness class, with no extra unproved global decay assumption."
+  ],
+  "solved_or_source_backed_contexts": [
+    "Seregin arXiv:2606.29468v1 Theorem 3.1 gives the registered Type-II-to-ancient-Euler extraction and nontriviality in its stated branch.",
+    "Type-I ancient Navier–Stokes Liouville/backward-uniqueness mechanisms exist under stronger global critical assumptions, but they are comparison contexts only."
+  ],
+  "near_solved_contexts": [
+    "Ancient Euler Liouville theorems under stronger decay/integrability assumptions: potentially relevant only after exact assumption matching.",
+    "Concentration-compactness/critical-element arguments: relevant only if a source-valid minimal quantity and stability theory control the noncompact symmetries of this local Type-II class.",
+    "Localized energy-flux arguments: potentially relevant if pressure tails and flux across expanding shells can be made summable without importing global energy."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Navier–Stokes backward uniqueness / critical L3 rigidity",
+      "method": "propagate a zero terminal profile backward using parabolic unique continuation",
+      "required_assumptions": [
+        "viscous/parabolic limiting equation with the theorem's coefficient and integrability hypotheses"
+      ],
+      "disanalogies": [
+        "registered limit equation is Euler because f(lambda)->0",
+        "the parabolic operator degenerates in the limit"
+      ],
+      "status": "REJECTED_FOR_THIS_CONTEXT",
+      "repair_question": "What Euler-native rigidity principle can replace the lost parabolic unique continuation?"
+    },
+    {
+      "source_context": "concentration compactness / minimal critical element",
+      "method": "upgrade local convergence to almost-periodicity modulo symmetries and eliminate the critical element",
+      "required_assumptions": [
+        "critical global control with profile decomposition",
+        "stability/decoupling",
+        "a minimal blow-up threshold"
+      ],
+      "disanalogies": [
+        "Seregin (3.5) is local scale-invariant control, not a frozen global critical norm",
+        "no minimality theorem for this class has been source-bound"
+      ],
+      "status": "PROPOSAL_ONLY",
+      "repair_question": "Can a target-specific minimality quantity be inherited without assuming the desired far-field tightness?"
+    },
+    {
+      "source_context": "localized energy flux / shell accounting",
+      "method": "use cutoffs, pressure decomposition and flux control on expanding balls",
+      "required_assumptions": [
+        "quantitative pressure tail control",
+        "summable flux over expanding shells",
+        "uniformity under the Type-II rescaling"
+      ],
+      "disanalogies": [
+        "Euler pressure remains nonlocal",
+        "local energy bounds allow mass/energy outside expanding balls",
+        "source extraction is local"
+      ],
+      "status": "MOST_RELEVANT_OPEN_TRANSFER",
+      "repair_question": "Can the original suitable weak Navier–Stokes sequence supply a no-incoming-flux estimate that survives the zero-viscosity blow-up limit?"
+    }
+  ],
+  "structural_analogy_scan": [
+    {
+      "target": "Type-I ancient Navier–Stokes",
+      "shared": "ancient nontrivial blow-up profile and scale-invariant local estimates",
+      "disanalogy": "viscosity survives in Type-I but vanishes in this Type-II branch",
+      "transfer": "classification logic only; not backward uniqueness"
+    },
+    {
+      "target": "self-similar/rotated/damped blow-up profiles",
+      "shared": "renormalized ancient profile and rigidity goal",
+      "disanalogy": "Seregin branch need not be self-similar or periodic",
+      "transfer": "do not assume orbit compactness"
+    },
+    {
+      "target": "steady compactly supported Euler fields",
+      "shared": "nontrivial ancient Euler solutions with excellent spatial support",
+      "disanalogy": "nonzero steady compactly supported fields violate the F=1 gradient spacetime growth bound (3.5)",
+      "transfer": "adversarial falsifier rejected, but records need to audit time-length growth"
+    }
+  ],
+  "forbidden_shortcuts": [
+    "do not import Navier–Stokes backward uniqueness into the Euler limit",
+    "do not infer global energy, global Lp decay or far-field tightness from local compactness",
+    "do not treat local pressure convergence as global pressure-tail control",
+    "do not assume self-similarity, periodicity or almost-periodicity of the ancient limit",
+    "do not convert the retrospective backward-smallness calculation into preregistered candidate credit",
+    "do not infer the Clay root from eliminating only this source branch"
+  ],
+  "locked_source_boundaries": [
+    "primary fresh source: Vladimir Seregin, arXiv:2606.29468v1 (submitted 2026-06-30), exact Theorem 3.1 / equations (3.5), (3.8)",
+    "Gavrilov compactly supported steady Euler construction is adversarial comparison only",
+    "Type-I Navier–Stokes literature is method-transfer comparison only and cannot supply missing Euler hypotheses"
+  ],
+  "chronology": {
+    "observational_source_read_before_freeze": true,
+    "retrospective_backward_smallness_derived_before_context_freeze": true,
+    "retrospective_backward_smallness_strict_credit": "ZERO",
+    "first_theorem_candidate_at": null
+  },
+  "framework_authority_sha": "a151d5612709ea0f95c3ea232630f246f722739a",
+  "app_base_sha": "7548c3c9a30c63e18956aefb68674d523acfe937",
+  "issue": "https://github.com/SzeChunYiu/RAKL_math/issues/65",
+  "root_authority": "NONE",
+  "frozen_at": "2026-08-11T10:36:30+00:00",
+  "packet_hash": "sha256:a480d04f46ad09b5db95a45fb85d35edfcfc2e8afa22e3fc41fa73ee4ed191f9"
+}
