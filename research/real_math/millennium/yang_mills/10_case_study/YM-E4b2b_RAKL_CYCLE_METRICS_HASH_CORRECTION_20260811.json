@@ -1,0 +1,23 @@
+{
+  "RAKL_CYCLE_METRICS_CORRECTION": {
+    "cycle_id": "YM-E4b2b-CYCLE-20260811T181746Z",
+    "authority": "MEASUREMENT_ONLY_PROPOSAL_SHADOW",
+    "supersedes_field": "RAKL_CYCLE_METRICS.artifact_payload_hash",
+    "superseded_value": "0609160745470f0a0d63e3f7ea5618b593cc05c66cbd2c8bbccd612ddceae69e",
+    "reason": "The first value was computed from an intermediate in-memory telemetry object that still contained a prior derived payload-hash field. It is therefore not the intended non-circular hash of the committed semantic telemetry payload.",
+    "canonicalization": "UTF-8 JSON with sorted keys and separators (',', ':'), after removing RAKL_CYCLE_METRICS.artifact_payload_hash and RAKL_CYCLE_METRICS.task_episode_content_hash from the telemetry object.",
+    "corrected_non_circular_payload_sha256": "8ec0fb71528a76f576f1cd009a42c560219329989e6dd21135a3b0df364dc47b",
+    "task_episode_content_hash_status": "UNCHANGED: 490effa3cccec887bbc4ed1e25a07f96dc213ae3295274e00678be92c663bbb4",
+    "semantic_effect": "NONE",
+    "retained_semantic_novelty": {
+      "KNOWLEDGE": 0,
+      "OPERATOR": 0,
+      "EXPERIENCE_PATTERN": 0,
+      "OBSTRUCTION": 0,
+      "RELATION": 0,
+      "PATH": 0,
+      "META_METHOD": 0
+    },
+    "negative_history": "Preserved append-only rather than silently rewriting the original metrics record."
+  }
+}
