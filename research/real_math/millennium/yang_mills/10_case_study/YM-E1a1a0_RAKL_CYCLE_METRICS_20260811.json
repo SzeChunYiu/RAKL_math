@@ -1,0 +1,124 @@
+{
+  "receipt_id": "YM-E1a1a0-RAKL-CYCLE-METRICS-20260811T1204Z",
+  "authority": "PROPOSAL_SHADOW_METROLOGY_ONLY",
+  "rakl": {
+    "method_label": "v3",
+    "method_version": "CANNOT_MEASURE:no_canonical_RAKL_VERSION.json_on_current_main",
+    "git_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "authority_hardening": "PR#121 merged at current main"
+  },
+  "rakl_math": {
+    "base_sha": "8a608f340d47b4b6ae612275b0595faf6b804432",
+    "cycle_branch": "research/yang-mills-yme1a1a0-source-acquisition-metrics-20260811",
+    "pre_state_fingerprint": "CANNOT_MEASURE:no_materialized_RAKLV3State_in_connector_runtime",
+    "post_state_fingerprint": "CANNOT_MEASURE:no_materialized_RAKLV3State_in_connector_runtime",
+    "framework_pin_sha": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+    "current_framework_lag_from_pin_commits": 113
+  },
+  "atom_id": "YM-E1a1a0",
+  "context_hash": "sha256:f9404d230586967ab018d4d6537676dba58637e953e462fe0b8f52c662825b5a",
+  "fibre_snapshot_hash": "CANNOT_MEASURE:no_compiled_ProblemFibre_snapshot_emitted_by_connector_runtime",
+  "canonical_process_surfaces": [
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "gap_discovery",
+    "memory",
+    "review",
+    "saturation_stopping"
+  ],
+  "memory": {
+    "relevant_tool_ids": [],
+    "relevant_failure_ids": [
+      "F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE",
+      "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE"
+    ],
+    "retrieved_canonical_artifact_ids": [
+      "YM_E1a1a_CONTEXT_FIBER_20260811",
+      "YM_E1a1a_ACTUAL_BLOCK_SOURCE_CONTRACT_20260811",
+      "YM_E1a1a_RESEARCH_MEMORY_REVIEW_20260811",
+      "YM_E1a1a_PRE_CANDIDATE_TRACE_20260811",
+      "YM_E1a1a0_PRIMARY_SOURCE_RETRIEVAL_20260811"
+    ],
+    "selected_ids": [
+      "YM_E1a1a0_PRIMARY_SOURCE_RETRIEVAL_20260811"
+    ],
+    "rejected_ids": [],
+    "late_retrieval_count": 1,
+    "redundant_external_search_detected": true
+  },
+  "external_source_search": {
+    "web_tool_invocations_observed": 4,
+    "search_queries_observed": 8,
+    "publisher_page_opens_observed": 1,
+    "new_primary_fulltext_retrieved": false,
+    "new_semantic_source_fact_after_deduplication": false
+  },
+  "outcome": "BLOCKED",
+  "residual_before": [
+    "obtain exact primary full text for Balaban DOI 10.1007/BF01211042 or HUTMP-83-B147",
+    "extract B1-B3 exact definitions/hypotheses",
+    "do not instantiate candidate while B0-B11 contain UNKNOWN"
+  ],
+  "residual_after": [
+    "unchanged: obtain exact content-bearing primary full text for DOI 10.1007/BF01211042 or HUTMP-83-B147",
+    "unchanged: extract B1-B3 with page/equation anchors",
+    "do not repeat metadata-only DOI/HUTMP retrieval before checking canonical source-retrieval memory"
+  ],
+  "retained_semantic_novelty": {
+    "KNOWLEDGE": 0,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 0,
+    "OBSTRUCTION": 0,
+    "RELATION": 0,
+    "PATH": 0,
+    "META_METHOD": 0
+  },
+  "saturation": {
+    "reopened_axes": [],
+    "flattened_axes": [],
+    "interpretation": "zero retained semantic novelty in this cycle; the episode supplies additional evidence for an already-known retrieval-coverage pattern but does not create a new pattern"
+  },
+  "resource_proxies": {
+    "model_input_tokens": "CANNOT_MEASURE:runtime_does_not_expose_per-cycle_model_token_accounting",
+    "model_output_tokens": "CANNOT_MEASURE:runtime_does_not_expose_per-cycle_model_token_accounting",
+    "compiled_context_tokens": "CANNOT_MEASURE:no_problem_fibre_token_receipt_emitted",
+    "github_read_calls": "CANNOT_MEASURE:aggregate_connector_counter_not_exposed",
+    "github_write_calls_before_receipt": 1,
+    "external_retrieval_calls": 4,
+    "tool_calls_total": "CANNOT_MEASURE:aggregate_tool_counter_not_exposed",
+    "wall_time_ms": "CANNOT_MEASURE:runtime_does_not_expose_a_stable_scientific_wall_clock"
+  },
+  "new_records": {
+    "episode_ids": [
+      "YM-E1a1a0-EP-RETRIEVAL-20260811T1204Z"
+    ],
+    "lesson_ids": [],
+    "failure_ids": [],
+    "tool_ids": [],
+    "obstruction_ids": [],
+    "motif_ids": [],
+    "successful_reuse_ids": []
+  },
+  "gate_provenance_ci": {
+    "candidate_generation": "BLOCKED",
+    "mathematical_candidate_generated": false,
+    "failure_experience_minted": false,
+    "same_context_review_credit": "NOT_INDEPENDENT_REVIEW",
+    "current_rakl_main_read": true,
+    "current_rakl_authority_hardening_read": true,
+    "application_framework_pin_current": false,
+    "exact_head_application_ci": "NOT_RUN_YET",
+    "root_authority": "NONE"
+  },
+  "rakl_changed_action_counterfactual": "CANNOT_MEASURE:no_pre-memory/pre-gate_action_preference_was_prospectively_frozen",
+  "process_finding": {
+    "type": "RETRIEVAL_PROCESS_INEFFICIENCY",
+    "description": "a canonical source-retrieval artifact containing the HUTMP identity and access boundary existed on current main but was read only after redundant external retrieval",
+    "existing_framework_issue": "SzeChunYiu/RAKL#119",
+    "new_framework_issue_opened": false
+  },
+  "timestamp": "2026-08-11T12:04:00+00:00",
+  "artifact_hash": "sha256:6b15c3ce85c99e099ace9e09bec88aa9d7d9e4051fb35f9f87cc348aeb888d68",
+  "artifact_hash_basis": "sha256(canonical JSON of receipt before adding artifact_hash fields)"
+}
