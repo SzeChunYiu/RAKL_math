@@ -1,0 +1,45 @@
+schema_version: "1.0.0"
+root_issue: "SzeChunYiu/RAKL_math#5"
+root_state: OPEN_NO_SOLUTION_CERTIFICATE
+parent_atom: YM-E1a1
+candidate_id: YM-E1a1-C001
+candidate_title: local Haar concatenation leakage
+candidate_scope:
+  gauge_group: "SU(N), N>=3"
+  operation: "normalized Haar integration over one shared oppositely oriented plaquette link"
+  expansion_point: "first local interaction tangent at t=0"
+  claim: "a tiny marked vocabulary omitting the concatenated rectangle/equivalent coordinate is not exactly closed"
+result:
+  state: EXACT_LOCAL_NEGATIVE_CALIBRATION
+  root_authority: NONE
+  novelty_authority: NONE
+  failure_id: F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE
+  diagnosis_authority: SUPPORTED
+  exact_identity: "F'_0(A,B)=Tr(AB)/(2N)"
+  evidence:
+    - research/real_math/millennium/yang_mills/04_candidates/YM_E1a1_C001_LOCAL_HAAR_CONCATENATION_LEAKAGE_20260811.md
+    - tests/math_applications/test_yang_mills_yme1a1_haar_leakage.py
+    - research/real_math/millennium/yang_mills/09_trace/YM_E1a1_POST_CANDIDATE_TRACE_20260811.json
+child_atom:
+  id: YM-E1a1a
+  state: CONTEXT_REQUIRED_BEFORE_CANDIDATE
+  question: >-
+    Define a minimally widened graded/quasi-local gauge-invariant marked space carrying
+    contour geometry, representation/multi-loop labels, support/reflection-buffer
+    coordinates and a weighted complexity norm; then test one actual weak-coupling
+    Balaban-style block for controlled mixing plus typed remainder and a scale-explicit
+    one-step norm bound.
+  required_next_gates:
+    - MathContextFiber
+    - method-transfer matrix and analogy scan
+    - same-context expert cell
+    - dual success/failure ResearchMemoryReview
+    - hash-chained strict pre-candidate trace
+blocked_promotions:
+  - general marked-RG impossibility
+  - Balaban weak-coupling obstruction
+  - continuum existence/non-existence
+  - OS reconstruction
+  - correlation decay
+  - mass gap
+  - novelty
