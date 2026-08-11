@@ -13,7 +13,8 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "0f1f9f6072f878a745c5a5d549d8b07db7e46961"
+EXPECTED_FRAMEWORK_COMMIT = "f224d91d9fbd2844a89921ca4a30b77a7954ecd2"
+HISTORICAL_4EE_FRAMEWORK_COMMIT = "4ee5e9afe77870c684b798e0ed4c9fcee62a4365"
 HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
 FINAL_SYNC_RECEIPT = (
     APPLICATION_ROOT / "receipts/framework-pin-final-integration-bd1a276-20260811.json"
@@ -73,7 +74,7 @@ def test_machine_readable_framework_pin_is_valid_and_loaded_exactly() -> None:
     ).stdout
     assert framework_status == ""
     assert pin["authority"] == (
-        "Dependency synchronization to exact clean RAKL origin/main 0f1f9f6072f878a745c5a5d549d8b07db7e46961 observed 2026-08-11; "
+        "Dependency synchronization to exact clean RAKL origin/main f224d91d9fbd2844a89921ca4a30b77a7954ecd2 observed 2026-08-11; "
         "no proof, research, review-independence, or method-evolution authority"
     )
 
@@ -275,8 +276,8 @@ def test_current_main_pin_sync_receipt_is_exact_historical_and_non_authorizing()
     )
 
     delta = receipt["framework_delta"]
-    assert delta["current_commit"] == EXPECTED_FRAMEWORK_COMMIT
-    assert delta["remote_main_at_observation"] == EXPECTED_FRAMEWORK_COMMIT
+    assert delta["current_commit"] == HISTORICAL_4EE_FRAMEWORK_COMMIT
+    assert delta["remote_main_at_observation"] == HISTORICAL_4EE_FRAMEWORK_COMMIT
     assert datetime.fromisoformat(delta["remote_main_observed_at"]) == datetime.fromisoformat(
         receipt["recorded_at"]
     )
@@ -326,7 +327,7 @@ def test_current_main_pin_sync_receipt_is_exact_historical_and_non_authorizing()
             text=True,
         ).stdout.strip()
         assert observed == integration[field]
-    assert integration["gitlink_commit"] == EXPECTED_FRAMEWORK_COMMIT
+    assert integration["gitlink_commit"] == HISTORICAL_4EE_FRAMEWORK_COMMIT
     assert integration["historical_receipts_rewritten"] is False
     assert integration["mathematical_lesson_artifacts_mutated"] is False
 
