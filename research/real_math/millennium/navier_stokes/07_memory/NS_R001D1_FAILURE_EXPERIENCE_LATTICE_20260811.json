@@ -1,0 +1,36 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-NS-R001-A1-ENERGY-CRITICALITY",
+      "atom_id": "NS-R001",
+      "method_family": "energy-only critical interpolation",
+      "diagnosis_status": "SUPPORTED",
+      "failure_mode": "fixed Leray energy permits divergent critical norms on arbitrary smooth divergence-free histories",
+      "difference_witness": "NS-R001d1 uses genuine semigroup time evolution; reuse only the concentration/scaling warning."
+    },
+    {
+      "failure_id": "F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP",
+      "atom_id": "NS-R001b",
+      "method_family": "local strain/vorticity geometry alone",
+      "diagnosis_status": "SUPPORTED",
+      "failure_mode": "local alignment omits the joint exact-dynamics plus finite-energy/global-localization regime",
+      "difference_witness": "NS-R001d1 uses no alignment criterion; reuse only the warning against descriptive coordinates without the needed dynamics."
+    },
+    {
+      "failure_id": "F-NS-R001D-C001-STATIC-REMAINDER-RATIO",
+      "atom_id": "NS-R001d",
+      "method_family": "static energy control of Miller projected remainder",
+      "diagnosis_status": "SUPPORTED",
+      "failure_mode": "fixed-energy initial-data concentration makes the critical projected-remainder ratio unbounded",
+      "difference_witness": "NS-R001d1 advances to positive-time linear evolution; a negative result cannot blacklist nonlinear depletion or refined critical spaces."
+    }
+  ],
+  "links": [
+    {
+      "source_id": "F-NS-R001D-C001-STATIC-REMAINDER-RATIO",
+      "target_id": "F-NS-R001-A1-ENERGY-CRITICALITY",
+      "relation": "SHARES_BROKEN_ASSUMPTION_WITH",
+      "rationale": "both reject static energy-only critical closure"
+    }
+  ]
+}
