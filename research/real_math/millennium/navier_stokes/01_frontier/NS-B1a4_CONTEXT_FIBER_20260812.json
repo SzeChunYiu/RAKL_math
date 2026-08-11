@@ -1,0 +1,130 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow",
+  "atom_id": "NS-B1a4",
+  "parent_atom_id": "NS-B1a3",
+  "problem_signature": [
+    "3D incompressible unforced whole-space Navier-Stokes",
+    "Type-I blow-up-classification / finite Albritton-Barker I",
+    "signed temporal local-energy / no-recrossing discriminator",
+    "pressure localization separated from signed flux",
+    "proposal-shadow only; Type-II and root remain open"
+  ],
+  "object_context": "Audit whether the existing unsigned finite-I magnitude ledger A+C+D+E plus the standard suitable local-energy inequality and pressure localization can by itself imply a one-sided signed local-energy/no-recrossing law at nested scales. This is a route discriminator, not a theorem candidate for the Clay root.",
+  "root_contract": {
+    "source": "research/real_math/millennium/navier_stokes/00_problem_contract/canonical_statement.md",
+    "accepted_root_outcomes": [
+      "Clay A",
+      "Clay B",
+      "Clay C",
+      "Clay D"
+    ],
+    "current_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "nonpromotion": "A local sign-route result is nonterminal and cannot close Type-I, Type-II, or the root."
+  },
+  "structural_coordinates": [
+    "u_lambda(x,t)=lambda u(lambda x,lambda^2 t), p_lambda=lambda^2 p(lambda x,lambda^2 t)",
+    "finite I is built from nonnegative magnitudes A,C,D,E and does not itself retain flux orientation",
+    "the suitable local-energy inequality contains a negative dissipation term but cutoff transport/pressure work has no fixed sign",
+    "local energy in a fixed/nested region can change by boundary transport/diffusive influx even when pressure vanishes",
+    "instantaneous far-field quadratic pressure tails are already registered as absolutely summable under the available Morrey-energy control",
+    "standard absolute local-energy shell bookkeeping is already registered as scale-neutral after normalization",
+    "local signed control must be kept distinct from global tail tightness, ancient-state gluing, and backward-uniqueness hypotheses",
+    "noncompact translation/dilation and far-field leakage remain global assembly risks even if a local signed lemma were found"
+  ],
+  "equivalent_formulations": [
+    "one-sided local kinetic-energy monotonicity on a nested cylinder",
+    "signed scale-to-scale flux preventing repeated threshold recrossings",
+    "a finite-variation or monotone defect that turns recurrent critical-scale visits into a bounded event count",
+    "a trajectory/coherence observable whose sign is not erased by A,C,D,E"
+  ],
+  "solved_or_near_solved_analogues": [
+    {
+      "id": "AN-NS-B1a4-GLOBAL-ENERGY",
+      "source_context": "smooth decaying NSE/Leray-Hopf global energy balance",
+      "method": "global integration removes spatial boundary flux, leaving viscous dissipation with a definite sign",
+      "shared_structure": "kinetic-energy identity with viscosity",
+      "required_assumptions": [
+        "global spatial integration or boundary conditions that kill boundary flux"
+      ],
+      "disanalogies": [
+        "active target is local/nested-scale energy; boundary/cutoff flux is load-bearing"
+      ],
+      "repair_question": "Can finite-I dynamics control the signed boundary flux strongly enough to recover a one-sided local law?"
+    },
+    {
+      "id": "AN-NS-B1a4-AXISYM-MAXPRINCIPLE",
+      "source_context": "axisymmetric special-structure Navier-Stokes",
+      "method": "use a scalar maximum-principle coordinate available after symmetry reduction",
+      "shared_structure": "dynamics-specific sign/ordering can defeat scale-critical recurrence",
+      "required_assumptions": [
+        "axisymmetry and the exact scalar reduced equation"
+      ],
+      "disanalogies": [
+        "general 3D finite-I class has no registered scalar maximum-principle variable"
+      ],
+      "repair_question": "Is there a source-valid general-3D signed observable, rather than an unsigned norm ledger?"
+    }
+  ],
+  "method_transfer_matrix": [
+    {
+      "source": "global energy dissipation",
+      "transfer": "seek a local signed energy/flux quantity",
+      "status": "PARTIAL_STRUCTURAL_ANALOGY_ONLY",
+      "broken_assumption": "spatial boundary terms do not vanish locally",
+      "falsifier": "an exact pressure-free NSE solution with increasing energy inside a fixed ball"
+    },
+    {
+      "source": "Albritton-Barker local-energy/Type-I framework arXiv:1811.00502v2",
+      "transfer": "use finite A,C,D,E and local energy inequality",
+      "status": "SOURCE_MATCHED_BUT_SIGN_UNPROVED",
+      "broken_assumption": "A,C,D,E record magnitudes, not orientation/correlation of cutoff flux",
+      "falsifier": "show the same local ledger class admits exact NSE local-energy increase from nonpressure boundary influx"
+    },
+    {
+      "source": "Pineau-Vicol arXiv:2607.09619v2 self-similar/near-self-similar rigidity",
+      "transfer": "use self-similar-time control as a no-recrossing surrogate",
+      "status": "REJECTED_DIRECT_TRANSFER",
+      "broken_assumption": "requires exact/near symmetry and stronger pointwise/pressure hypotheses not supplied by finite I",
+      "falsifier": "finite-I source class does not produce those hypotheses"
+    }
+  ],
+  "cross_domain_analogy": {
+    "source_situation": "an account ledger that records only absolute transaction sizes",
+    "common_abstraction": "unsigned magnitude bounds do not determine the sign of net flow",
+    "mapping": {
+      "transaction magnitude": "A,C,D,E bounds",
+      "credit/debit sign": "local energy flux orientation",
+      "account balance": "localized kinetic energy"
+    },
+    "shared_constraints": [
+      "bounded event magnitudes may coexist with repeated sign changes"
+    ],
+    "disanalogies": [
+      "NSE fluxes obey PDE structure and may have cancellations absent from an arbitrary ledger"
+    ],
+    "candidate_principle": "a no-recrossing theorem needs a signed/correlated trajectory coordinate beyond unsigned magnitudes unless PDE structure proves the sign",
+    "validation_obligation": "verify on an exact NSE solution that local energy may increase even with p=0; then keep global finite-I DifferenceWitness explicit"
+  },
+  "source_anchors": [
+    "Dallas Albritton and Tobias Barker, arXiv:1811.00502v2 / J. Math. Fluid Mech. 21 (2019) 43",
+    "Pineau and Vicol, arXiv:2607.09619v2 (2026), transfer-near-miss only",
+    "current RAKL_math issue #173 prospective verification target"
+  ],
+  "current_literature_search_boundary": {
+    "queries": [
+      "Navier-Stokes local energy monotonicity no recrossing suitable weak solutions signed flux 3D",
+      "Navier-Stokes local kinetic energy monotonicity suitable weak solution pressure flux",
+      "Navier-Stokes Type I ancient solution local energy monotonicity pressure 2025 2026"
+    ],
+    "result": "NO_DIRECT_SOURCE_MATCH_FOUND_WITHIN_BOUNDED_SEARCH",
+    "scope_warning": "This is not a completeness or novelty certificate."
+  },
+  "active_obstruction": "The existing finite-I/local-energy apparatus supplies magnitude control and dissipation but no demonstrated sign for the cutoff boundary transport/pressure flux needed to prevent temporal or scale recrossing.",
+  "smallest_repair_question": "Does exact NSE dynamics plus the already registered finite-I magnitude data force a sign/coherence relation for local boundary flux, or must the route introduce a new signed/correlation/trajectory observable?",
+  "falsifier": "Use the already preregistered issue-#173 pressure-free shear calibration to test the local/magnitude-only inference. It may prune only that inference; it cannot refute a theorem requiring global finite I or ancient finite-energy state.",
+  "authority": "PROPOSAL_SHADOW_CONTEXT_ONLY",
+  "framework_sha": "2f722d42db240538e1bdec146aebc7e9d5eeb8a6",
+  "application_base_sha": "a7301f0f0e2cab2750ac6e923efe18b5750b5af6",
+  "frozen_at": "2026-08-11T22:47:08Z",
+  "packet_hash": "sha256:4f4201800bdb64d85704ed43c5acb44bb0a3edc4772df2a0477f4ad989c0f83a"
+}
