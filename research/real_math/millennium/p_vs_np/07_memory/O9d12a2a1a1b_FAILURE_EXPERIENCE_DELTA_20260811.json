@@ -1,0 +1,68 @@
+{
+  "experience": {
+    "failure_id": "F-O9D12A2A1A1B-GLOBAL-ROW-RICHNESS-MULTIPLEXED",
+    "atom_id": "O9d12a2a1a1b",
+    "candidate_id": "NO_CANDIDATE_COVER_NEIGHBORHOOD_QUOTIENT_AUDIT",
+    "context_packet_hash": "sha256:eea19518e2925dfd8fbd6335e1053519c388a1cf76cd84172625956ebf2a1478",
+    "research_trace_event_id": "O9d12a2a1a1b-R02",
+    "method_family": "raw exact pair-neighborhood quotient richness / row-count or entropy potential",
+    "failure_mode": "complete global pair-cover incidence distinguishes many noncanonical semi-filters, but one legal pair can cover exponentially many exact quotient rows, so representation richness has no bounded per-pair accumulation law",
+    "residual_signature": [
+      "complete pair-cover neighborhood is injective on relevant G_NEQ semi-filters",
+      "for one fixed edge, at least 2^(N-2) distinct exact quotient rows are covered by the same singleton pair",
+      "for N=2^n, exact rho(G_NEQ)=n despite at least 2^(2^n-2) fixed-edge exact rows",
+      "raw quotient count/entropy therefore overstates root-facing cover cost"
+    ],
+    "broken_assumptions": ["semantics-preserving global row distinctions would accumulate approximately one-for-one with selected pair/fusion cost"],
+    "scope_conditions": [
+      "G_NEQ cover graph under Cavalar-Oliveira Definitions 18-21",
+      "raw class count, antichain count, row entropy or additive row-wise scores without a separate multiplexing normalization",
+      "does not rule out integral correlation objects with a proved bounded legal-pair budget"
+    ],
+    "competing_diagnoses": [
+      "pair-neighborhood quotient collapses all noncanonical rows to canonical signatures",
+      "global rows remain distinct and their count lower-bounds rho",
+      "global rows remain distinct but are massively multiplexed by legal pairs",
+      "only finite-enumeration artifact"
+    ],
+    "selected_diagnosis": "global rows remain exactly distinguishable, but raw richness is massively multiplexed by the cover relation and therefore cannot serve as a bounded additive lower-bound potential",
+    "diagnosis_status": "SUPPORTED",
+    "evidence_pointers": [
+      "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b_COVER_NEIGHBORHOOD_QUOTIENT_AUDIT_20260811.md",
+      "research/real_math/millennium/p_vs_np/05_falsification/cover_neighborhood_quotient_gneq.py",
+      "Cavalar-Oliveira 2025 Proposition 40"
+    ],
+    "falsifier_or_attempt": "quotient exact semi-filter rows by full legal-pair neighborhoods, then test quotient growth and one-pair column capacity on known logarithmic G_NEQ before proposing any scalar score",
+    "observed_result": "the quotient is injective on relevant G_NEQ semi-filters; at fixed edge one singleton pair covers every row while the row family has at least 2^(N-2) members; raw global row richness is therefore a free/multiplexed coordinate",
+    "local_repair_attempts": [
+      "reject raw quotient-class count and entropy",
+      "retain exact incidence quotient only as semantics",
+      "open a fresh multiplexing-resistant integral hitting-structure atom rather than normalizing ad hoc by capacity"
+    ],
+    "timestamp": "2026-08-11T13:10:00+00:00",
+    "artifact_hash": "sha256:fa38ddf9f2acddec2b1949691cbc93a63d62dac3bad2f9cbaad882f52616266f"
+  },
+  "links": [
+    {
+      "source_id": "F-O9D12A2A1A1B-GLOBAL-ROW-RICHNESS-MULTIPLEXED",
+      "target_id": "F-C010-MULTIPLEXING",
+      "relation": "INSTANCE_OF",
+      "rationale": "The fixed-edge singleton pair discharges exponentially many exact row obligations, providing a source-exact instance of the previously registered multiplexing warning.",
+      "evidence_pointers": ["research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b_COVER_NEIGHBORHOOD_QUOTIENT_AUDIT_20260811.md"]
+    },
+    {
+      "source_id": "F-O9D12A2A1A1B-GLOBAL-ROW-RICHNESS-MULTIPLEXED",
+      "target_id": "F-C023-SCALAR-COLLAPSE",
+      "relation": "SHARES_BROKEN_ASSUMPTION_WITH",
+      "rationale": "Both failures show that a rich or large representation can be root-cheap unless a legal action budget proves that the quantity cannot be created or discharged for free.",
+      "evidence_pointers": ["research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b_COVER_NEIGHBORHOOD_QUOTIENT_AUDIT_20260811.md"]
+    },
+    {
+      "source_id": "F-O9D12A2A1A1B-GLOBAL-ROW-RICHNESS-MULTIPLEXED",
+      "target_id": "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+      "relation": "TRANSFER_WARNING_FOR",
+      "rationale": "A repair based only on dividing row mass by broad pair capacity risks becoming a fractional packing surrogate; C024 already warns that such relaxations can erase the required joint integrality.",
+      "evidence_pointers": ["research/real_math/millennium/p_vs_np/07_memory/C024_FAILURE_EXPERIENCE_DELTA_20260811.json"]
+    }
+  ]
+}
