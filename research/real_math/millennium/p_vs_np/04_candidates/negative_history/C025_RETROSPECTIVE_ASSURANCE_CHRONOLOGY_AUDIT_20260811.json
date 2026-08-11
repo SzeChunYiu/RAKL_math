@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "C025-RETROSPECTIVE-ASSURANCE-CHRONOLOGY-AUDIT-20260811",
+  "candidate_id": "C025",
+  "atom_id": "O9d12a2a1a",
+  "recorded_at": "2026-08-11T08:49:00Z",
+  "registration": {
+    "commit": "03a4cb9a0bce32374d79210d8b712670c11626a7",
+    "tree": "f4c44796dcd2c0b4da64210bcb3be60cfebf9020",
+    "path": "research/real_math/millennium/p_vs_np/04_candidates/C025_joint_binary_signature_calibration_preregistration.json",
+    "git_blob_sha": "d7a63efe1a3fe8d90303298700279dc1d861a49c",
+    "artifact_hash": "sha256:39378a50357fd3807d1ee9bcfbdec79e7cf4e5f379d256cfc28d3bf0cb2ce286",
+    "scope": "CASE_PLAN_PREDICTIONS_FALSIFIERS_AND_EXECUTABLE_PATH_ONLY",
+    "evaluator_present_at_commit": false,
+    "evaluator_bytes_or_hash_frozen": false
+  },
+  "result_source": {
+    "commit": "1bfad13d82548fe61f70cd9f18828fe0240c8556",
+    "tree": "4d5b09d7e5920d9436db32cd13bb5da8eeeceda6",
+    "parent": "85a7d609e066eae261c0e0d3c960ee4df6e814d3",
+    "executable_path": "research/real_math/millennium/p_vs_np/05_falsification/joint_binary_signature_calibration.py",
+    "executable_git_blob_sha": "558ae5ef007d40cc24b4c0ab5f9f9f7a1fe64f43",
+    "executable_raw_sha256": "sha256:55bb5708f0d492ed162d7f9a6aa4be90a3283302cef522d3007a3a9bd32a717b",
+    "receipt_path": "research/real_math/millennium/p_vs_np/05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json",
+    "receipt_git_blob_sha": "76ad9407f44dde325c80794b4962da364ebc12bd",
+    "receipt_raw_sha256": "sha256:23285e5ed3d36680a11a05ad7d04f1836595f59460d03945c39e7db26d51f60f",
+    "receipt_artifact_hash": "sha256:fcbdcdcb6a182705253b1cd0779316814c9791ceef549fc3f848023023a476eb"
+  },
+  "ancestry": {
+    "merge_base": "f479e007e4a63e379188d7a16d08f30416c1cd4b",
+    "registration_is_ancestor_of_result": false,
+    "result_is_ancestor_of_integration_head": false,
+    "interpretation": "the same registration blob exists in both divergent lineages, but Git ancestry does not establish that commit 03a4cb9 governed execution at result commit 1bfad13"
+  },
+  "bounded_finding": "The exact cases, predictions, falsifiers and executable path were selected before the recorded output, but evaluator bytes/hash were absent at the registration commit. The output is retained only as retrospectively reproducible executable assurance, not strict preregistered evaluator evidence.",
+  "disposition": "RETROSPECTIVE_EXECUTABLE_ASSURANCE / CASE_PLAN_PRIOR_SELECTED / EVALUATOR_IDENTITY_NOT_PRE_RESULT_FROZEN / NO_P_VS_NP_AUTHORITY",
+  "artifact_hash": "sha256:18e71545b1553d38b9ac1602384609f8b0e03bae7e350f5f0b4c5c8cea0d3118"
+}

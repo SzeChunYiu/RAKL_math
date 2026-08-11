@@ -97,7 +97,7 @@ A parallel assurance lane was reconciled into the C025 negative-history lineage 
 
 ### Stronger local check
 
-The C025 object and falsifiers were machine-frozen before the assurance output in artifact `sha256:39378a50357fd3807d1ee9bcfbdec79e7cf4e5f379d256cfc28d3bf0cb2ce286`, preserved through commit `03a4cb9a0bce32374d79210d8b712670c11626a7`. Receipt `sha256:fcbdcdcb6a182705253b1cd0779316814c9791ceef549fc3f848023023a476eb` is self-hashing and binds the exact preregistration and executable files.
+The C025 object, cases, predictions and falsifiers were selected in artifact `sha256:39378a50357fd3807d1ee9bcfbdec79e7cf4e5f379d256cfc28d3bf0cb2ce286` at commit `03a4cb9a0bce32374d79210d8b712670c11626a7`. The evaluator bytes/hash were not present there. Result commit `1bfad13d82548fe61f70cd9f18828fe0240c8556` is on a divergent lineage and is the first bound source for executable `sha256:55bb5708...` and self-hashing receipt `sha256:fcbdcdcb...`. The result is therefore retained as retrospectively reproducible assurance, not strict preregistered-evaluator evidence.
 
 Unlike the original compact regression, the assurance enumerates the source preservation definition over every full semi-filter for `N<=4`. It reports semi-filter counts `4,18,166`, ordered cut-family counts `5,73,273`, and zero direct/signature mismatches. The power-of-two and boundary constructions through `N=17` also pass.
 
@@ -113,8 +113,10 @@ The broad “all polynomial-trace binary-signature certificates are logarithmica
 - retained failure: `F-C025-FIRST-ORDER-CANONICAL-COLLAPSE`;
 - retained tool: `T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION`;
 - provisional parallel capacity failure/tool names: not minted and not silently overwritten;
-- supersession: none, because no duplicate identity was accepted in the target branch.
+- immutable parent failure/tool artifacts: preserved byte-for-byte from target head `2b264d50`;
+- later result evidence: attached through versioned addendum `C025-POSTRESULT-ASSURANCE-ADDENDUM-v1`, not backdated into the parents;
+- supersession: the earlier backfilled strict-preregistration implication is superseded by the chronology audit, while the mathematical parent identities remain unchanged.
 
 The method lesson “repair the parent failure, then separately audit the repaired representation's capacity/scope” is retained only as `PROPOSAL_ONLY_PENDING_CROSS_PROBLEM_RECURRENCE_AND_FRAMEWORK_ASSURANCE`. Under RAKL `15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3`, crossing into the framework requires the application-feedback bundle/import-receipt boundary and yields at most `QUARANTINED_PROPOSAL`. No framework registry or failure lattice is mutated here.
 
-**Addendum verdict:** `ACCEPT_STRONGER_SCOPED_ASSURANCE / PRESERVE_NEGATIVE_HISTORY / NOT_INDEPENDENT / ROOT_AUTHORITY_NONE`.
+**Addendum verdict:** `ACCEPT_RETROSPECTIVE_SCOPED_ASSURANCE / PRESERVE_NEGATIVE_HISTORY / NOT_INDEPENDENT / ROOT_AUTHORITY_NONE`.

@@ -1,134 +1,108 @@
 {
-  "trace_id": "TRACE-O9d12a2a1a-C025-PARALLEL-ASSURANCE-20260811",
-  "fork_kind": "PARALLEL_ASSURANCE_FORK_RECONCILED_IN_CANONICAL_C025_E12",
+  "trace_id": "TRACE-O9d12a2a1a-C025-RETROSPECTIVE-ASSURANCE-20260811",
+  "fork_kind": "RETROSPECTIVE_ASSIMILATION_SUPERSEDES_BACKFILLED_PARALLEL_ASSURANCE_IMPLICATION",
   "parent_trace_id": "TRACE-O9d12a2a1a-STRICT-MIGRATION-REPAIRED-20260811",
   "parent_terminal_hash": "sha256:720c38501a583617d54269824e27691d0499cd5f2ead6b338cf13f90fad74190",
+  "source_lineage": {
+    "registration_commit": "03a4cb9a0bce32374d79210d8b712670c11626a7",
+    "result_commit": "1bfad13d82548fe61f70cd9f18828fe0240c8556",
+    "chronology_audit_hash": "sha256:18e71545b1553d38b9ac1602384609f8b0e03bae7e350f5f0b4c5c8cea0d3118",
+    "strict_preregistration_authority": false
+  },
   "entries": [
     {
-      "event_id": "O9d12a2a1a-PA-E01",
+      "event_id": "O9d12a2a1a-PA-R01",
       "atom_id": "O9d12a2a1a",
-      "event_type": "CANDIDATE_PROPOSED",
-      "timestamp": "2026-08-11T08:05:50Z",
-      "state_summary": "A parallel assurance lane independently observes that the repaired strict packet passes the mathematical context, memory, and trace gates and freezes the same C025 normalized G_NEQ object before its evaluated output.",
-      "action_summary": "Content-freeze object, QoI, scope, predictions, falsifiers, exact cases, executable path, and authority ceiling for a direct full-semi-filter regression and capacity audit.",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-11T08:49:10Z",
+      "state_summary": "The divergent C025 assurance result is assimilated after a Git chronology audit. Its cases were prior-selected, but evaluator bytes/hash were not frozen before output.",
+      "action_summary": "Retain the exact enumeration receipt only as retrospective executable assurance and bind the original source commit/tree/blobs.",
       "evidence_pointers": [
-        "research/real_math/millennium/p_vs_np/04_candidates/C025_joint_binary_signature_calibration_preregistration.json",
-        "commit:03a4cb9a0bce32374d79210d8b712670c11626a7",
-        "framework-at-freeze:55d4cb0a83f271d3263fbe48f99b173119c732d2"
+        "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_RETROSPECTIVE_ASSURANCE_CHRONOLOGY_AUDIT_20260811.json",
+        "sha256:18e71545b1553d38b9ac1602384609f8b0e03bae7e350f5f0b4c5c8cea0d3118",
+        "git:1bfad13d82548fe61f70cd9f18828fe0240c8556"
       ],
       "alternatives_considered": [
-        "run compact signature checks without a receipt",
-        "generalize G_NEQ normalization to arbitrary targets"
+        "claim strict preregistration",
+        "discard reproducible output"
       ],
-      "decision_rationale": "The lane remains conditional on normalized G_NEQ and adds a source-definition implementation discriminator without changing the candidate identity.",
+      "decision_rationale": "Preserve reproducible mathematics and exact negative chronology without manufacturing evaluator freezing.",
       "outputs": [
-        "candidate:C025",
-        "registration:sha256:39378a50357fd3807d1ee9bcfbdec79e7cf4e5f379d256cfc28d3bf0cb2ce286"
-      ],
-      "uncertainties": [
-        "whether direct full-semi-filter preservation matches injectivity"
-      ],
-      "residuals": [],
-      "next_steps": [
-        "run only the frozen assurance cases"
-      ],
-      "artifact_hash": "sha256:61ead54fb8060122c3ea668ae71bcf39a15f284809ff923176d3770e2f823748",
-      "previous_event_hash": "sha256:720c38501a583617d54269824e27691d0499cd5f2ead6b338cf13f90fad74190"
-    },
-    {
-      "event_id": "O9d12a2a1a-PA-E02",
-      "atom_id": "O9d12a2a1a",
-      "event_type": "FALSIFIER_RUN",
-      "timestamp": "2026-08-11T08:13:49Z",
-      "state_summary": "The parallel C025 assurance registration is frozen in an ancestor commit and the evaluator code is fixed.",
-      "action_summary": "Enumerate every full semi-filter and ordered normalized cut family for N<=4; run exact construction and k-1 collision cases through N=17; emit a self-hashing receipt.",
-      "evidence_pointers": [
-        "research/real_math/millennium/p_vs_np/05_falsification/joint_binary_signature_calibration.py",
-        "research/real_math/millennium/p_vs_np/05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json"
-      ],
-      "alternatives_considered": [
-        "post-result threshold changes",
-        "signature-only tautology check"
-      ],
-      "decision_rationale": "Direct source-definition enumeration is the cheapest independent implementation attack within the frozen representation.",
-      "outputs": [
-        "receipt:sha256:fcbdcdcb6a182705253b1cd0779316814c9791ceef549fc3f848023023a476eb"
+        "authority:RETROSPECTIVE_EXECUTABLE_ASSURANCE",
+        "preregistered_evaluator:false",
+        "root_authority:NONE"
       ],
       "uncertainties": [
         "finite enumeration is not proof"
       ],
-      "residuals": [],
-      "next_steps": [
-        "compare frozen outcomes and retain nulls/failures"
-      ],
-      "artifact_hash": "sha256:f7bb0522559453eecbe87f0d15c1008e2aadec41ad674de889bde1e193a81fd7",
-      "previous_event_hash": "sha256:61ead54fb8060122c3ea668ae71bcf39a15f284809ff923176d3770e2f823748"
-    },
-    {
-      "event_id": "O9d12a2a1a-PA-E03",
-      "atom_id": "O9d12a2a1a",
-      "event_type": "RESULT_RECORDED",
-      "timestamp": "2026-08-11T08:13:50Z",
-      "state_summary": "All registered local assurance checks pass; the cardinality-only first-order capacity audit remains logarithmically capped.",
-      "action_summary": "Record 4/18/166 full semi-filters, 5/73/273 ordered cut families, zero direct/signature mismatches, and successful boundary cases through N=17 without upgrading computation to proof.",
-      "evidence_pointers": [
-        "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_full_semifilter_assurance_addendum.md",
-        "research/real_math/millennium/p_vs_np/05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json"
-      ],
-      "alternatives_considered": [
-        "mint a distinct C025 success",
-        "claim a universal signature no-go"
-      ],
-      "decision_rationale": "The result is compatible with canonical C025 negative history and strengthens only conditional normalized-family assurance.",
-      "outputs": [
-        "verdict:PASS_SCOPED_CALIBRATION_WITH_CAPACITY_NO_GO",
-        "full_semifilter_mismatches_N_le_4:0",
-        "root_authority:NONE"
-      ],
-      "uncertainties": [
-        "higher-order closure state remains untested"
-      ],
       "residuals": [
-        "first-order cardinality/scope ceiling"
+        "strict evaluator chronology failed"
       ],
       "next_steps": [
-        "synthesize with canonical C009-backed route diagnosis"
+        "preserve parent failure/tool identities and add a versioned post-result addendum"
       ],
-      "artifact_hash": "sha256:e4c44f3516c5859db6541c9c3344d3c066e4bee537822e61e397c23d1f51bdba",
-      "previous_event_hash": "sha256:f7bb0522559453eecbe87f0d15c1008e2aadec41ad674de889bde1e193a81fd7"
+      "artifact_hash": "sha256:8b9d6d177fbe9b58eb0181bdce6581751955c63aab62b43e488dbabb92db2ad2",
+      "previous_event_hash": "sha256:720c38501a583617d54269824e27691d0499cd5f2ead6b338cf13f90fad74190"
     },
     {
-      "event_id": "O9d12a2a1a-PA-E04",
+      "event_id": "O9d12a2a1a-PA-R02",
       "atom_id": "O9d12a2a1a",
-      "event_type": "REVIEWED",
-      "timestamp": "2026-08-11T08:14:07Z",
-      "state_summary": "Parallel same-context review accepts the receipt only at scoped assurance authority and identifies a compatible method lesson candidate.",
-      "action_summary": "Preserve non-authority, absence of independent review, and proposal-only framework transport; defer identity reconciliation to the canonical C025 synthesis.",
+      "event_type": "EXPERIENCE_MEMORY_REVIEW",
+      "timestamp": "2026-08-11T08:50:10Z",
+      "state_summary": "Original C025 failure and tool artifacts remain byte-identical to target branch head 2b264d50; later evidence is stored in a versioned addendum.",
+      "action_summary": "Record the counts and method lesson without rewriting the earlier timestamped identities.",
       "evidence_pointers": [
-        "research/real_math/millennium/p_vs_np/08_reviews/SAME_CONTEXT_RESULT_REVIEW_C025_20260811.md",
-        "research/real_math/millennium/p_vs_np/07_memory/C025_FAILURE_EXPERIENCE_DELTA_20260811.json"
+        "research/real_math/millennium/p_vs_np/07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json",
+        "sha256:f1e01ed92594fa7524fda1e15318770124d65732083e43f1be36ccc5d4999fa1"
       ],
-      "alternatives_considered": [
-        "call the review independent",
-        "promote the method lesson directly"
-      ],
-      "decision_rationale": "One application lineage cannot authorize a framework delta, and the receipt does not alter mathematical scope.",
+      "alternatives_considered": [],
+      "decision_rationale": "Preserve reproducible mathematics and exact negative chronology without manufacturing evaluator freezing.",
       "outputs": [
-        "review:ACCEPT_SCOPED_ASSURANCE",
-        "method_lesson:PROPOSAL_ONLY",
-        "independent_review:ABSENT"
+        "parent_failure_preserved:sha256:1ad323128652a32e1e1441339a94dba970374029d321acd951ea3afc442a3223",
+        "parent_tool_preserved:sha256:bff3cc8c347f3ad4b007775d69abadffd408b8db2b3863990baf7b5c76d87475",
+        "addendum:sha256:f1e01ed92594fa7524fda1e15318770124d65732083e43f1be36ccc5d4999fa1"
       ],
       "uncertainties": [
         "cross-problem recurrence absent"
       ],
       "residuals": [
-        "canonical identity reconciliation pending"
+        "higher-order closure remains untested"
       ],
       "next_steps": [
-        "assimilate into the canonical C025 lineage without duplicate IDs"
+        "freeze a fresh successor evaluator before execution"
       ],
-      "artifact_hash": "sha256:fda1aba82656398f00102160a2aedc314289c8fc70289f59ccc0c4e23f481c02",
-      "previous_event_hash": "sha256:e4c44f3516c5859db6541c9c3344d3c066e4bee537822e61e397c23d1f51bdba"
+      "artifact_hash": "sha256:75298240397dc00cfb8d1a6b1e14b31bbecce516f7674d9b7b41cea4e736203c",
+      "previous_event_hash": "sha256:8b9d6d177fbe9b58eb0181bdce6581751955c63aab62b43e488dbabb92db2ad2"
+    },
+    {
+      "event_id": "O9d12a2a1a-PA-R03",
+      "atom_id": "O9d12a2a1a",
+      "event_type": "REVIEWED",
+      "timestamp": "2026-08-11T08:51:10Z",
+      "state_summary": "Same-context review accepts only retrospective scoped assurance and rejects P-vs-NP, novelty, preregistration and independent-review authority.",
+      "action_summary": "Keep the capacity result as route-pruning evidence; require a new generation for any strict assurance claim.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/08_reviews/SAME_CONTEXT_RESULT_REVIEW_C025_20260811.md",
+        "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_RETROSPECTIVE_ASSURANCE_CHRONOLOGY_AUDIT_20260811.json"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "Preserve reproducible mathematics and exact negative chronology without manufacturing evaluator freezing.",
+      "outputs": [
+        "review:ACCEPT_RETROSPECTIVE_SCOPED_ASSURANCE",
+        "independent_review:ABSENT",
+        "root_authority:NONE"
+      ],
+      "uncertainties": [
+        "independent mathematical review absent"
+      ],
+      "residuals": [
+        "fresh higher-order child context required"
+      ],
+      "next_steps": [
+        "regenerate synthesis receipt against exact live integration identities"
+      ],
+      "artifact_hash": "sha256:e782495468698d79f7b87871d80e6204bba7a278e26eb72f8ac04f2285762232",
+      "previous_event_hash": "sha256:75298240397dc00cfb8d1a6b1e14b31bbecce516f7674d9b7b41cea4e736203c"
     }
   ]
 }

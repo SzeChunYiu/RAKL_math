@@ -2,10 +2,17 @@
 
 **Synthesis role:** This is an assurance addendum to `C025_joint_signature_canonical_scope.md`, not a second candidate and not a competing failure/tool identity. The negative-history framing and C009-based route pruning remain canonical.
 
-**Atom:** `O9d12a2a1a`  
-**Frozen candidate:** `sha256:39378a50357fd3807d1ee9bcfbdec79e7cf4e5f379d256cfc28d3bf0cb2ce286`  
-**Machine receipt:** `sha256:fcbdcdcb6a182705253b1cd0779316814c9791ceef549fc3f848023023a476eb`  
-**Authority:** `ASSURANCE_ADDENDUM / EXACT_LOCAL_REPRESENTATION_CALIBRATION / PROOF_DRAFT / NO_NOVELTY_CLAIM / ROOT_AUTHORITY_NONE`
+**Atom:** `O9d12a2a1a`
+**Prior-selected case-plan artifact:** `sha256:39378a50357fd3807d1ee9bcfbdec79e7cf4e5f379d256cfc28d3bf0cb2ce286`
+**Machine receipt:** `sha256:fcbdcdcb6a182705253b1cd0779316814c9791ceef549fc3f848023023a476eb`
+**Authority:** `ASSURANCE_ADDENDUM / RETROSPECTIVE_EXECUTABLE_ASSURANCE / PROOF_DRAFT / NO_NOVELTY_CLAIM / ROOT_AUTHORITY_NONE`
+
+The case plan, predictions and falsifiers were committed before the recorded
+output, but the evaluator file and its content hash were absent from that
+commit.  Moreover, the registration commit `03a4cb9` and result commit
+`1bfad13` lie on divergent descendants of `f479e00`.  The exact counts below
+are reproducible, but this execution is **not** strict preregistered-evaluator
+evidence.  The machine-readable chronology audit preserves that failure.
 
 ## Registered object and scope
 
@@ -76,9 +83,9 @@ The same proof shows why this repair is not a primary super-logarithmic route by
 
 This is not a theorem that all generator-signature lifts have logarithmic cover complexity. Realizability constraints could make coordinates weaker, and higher-order closure state could contain information not representable by labels in a binary codebook. Those possibilities are outside C025.
 
-## Executable counterexample-first result
+## Retrospectively reproducible counterexample-first result
 
-The frozen executable:
+The exact result executable, first repository-visible with the output:
 
 - exhaustively enumerated ordered cut families for `2<=N<=4` and found minima `1,2,2`, matching `ceil(log2 N)`;
 - checked direct cut separation against signature inequality for every enumerated family in that range;

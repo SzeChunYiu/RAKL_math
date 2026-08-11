@@ -13,6 +13,11 @@ BASE = ROOT / "research/real_math/millennium/p_vs_np"
 ORACLE = BASE / "05_falsification/joint_binary_signature_calibration.py"
 PREREG = BASE / "04_candidates/C025_joint_binary_signature_calibration_preregistration.json"
 RECEIPT = BASE / "05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json"
+CHRONOLOGY_AUDIT = (
+    BASE
+    / "04_candidates/negative_history/C025_RETROSPECTIVE_ASSURANCE_CHRONOLOGY_AUDIT_20260811.json"
+)
+POSTRESULT_ADDENDUM = BASE / "07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json"
 
 
 def _canonical_hash(value: object) -> str:
@@ -32,7 +37,7 @@ def _load_module():
     return module
 
 
-def test_c025_preregistration_precedes_and_binds_the_evaluation() -> None:
+def test_c025_case_plan_precedes_result_but_does_not_freeze_evaluator_identity() -> None:
     prereg = json.loads(PREREG.read_text(encoding="utf-8"))
     payload = copy.deepcopy(prereg)
     payload["artifact_hash"] = ""
@@ -52,6 +57,22 @@ def test_c025_preregistration_precedes_and_binds_the_evaluation() -> None:
     assert receipt["bindings"]["preregistration_file_sha256"] == _file_hash(PREREG)
     assert receipt["bindings"]["executable_file_sha256"] == _file_hash(ORACLE)
     assert receipt["evaluated_at"] > prereg["frozen_at"]
+
+    audit = json.loads(CHRONOLOGY_AUDIT.read_text(encoding="utf-8"))
+    audit_payload = copy.deepcopy(audit)
+    audit_payload["artifact_hash"] = ""
+    assert audit["artifact_hash"] == _canonical_hash(audit_payload)
+    assert audit["registration"]["commit"] == (
+        "03a4cb9a0bce32374d79210d8b712670c11626a7"
+    )
+    assert audit["registration"]["evaluator_present_at_commit"] is False
+    assert audit["registration"]["evaluator_bytes_or_hash_frozen"] is False
+    assert audit["result_source"]["commit"] == (
+        "1bfad13d82548fe61f70cd9f18828fe0240c8556"
+    )
+    assert audit["ancestry"]["registration_is_ancestor_of_result"] is False
+    assert audit["ancestry"]["result_is_ancestor_of_integration_head"] is False
+    assert "RETROSPECTIVE_EXECUTABLE_ASSURANCE" in audit["disposition"]
 
 
 def test_joint_cut_coverage_is_exactly_signature_inequality_on_small_worlds() -> None:
@@ -162,16 +183,19 @@ def test_c025_success_failure_and_method_lesson_are_scoped_and_content_bound() -
     )
     assert validate_failure_experience(failure) == ()
     assert failure.diagnosis_status is FailureDiagnosisStatus.SUPPORTED
-    assert raw_failure["next_discriminator"]
     assert any("higher-order" in item for item in raw_failure["scope_conditions"])
 
-    lesson = failure_bundle["reusable_method_lesson_candidate"]
-    lesson_payload = copy.deepcopy(lesson)
-    lesson_payload["artifact_hash"] = ""
-    assert lesson["artifact_hash"] == _canonical_hash(lesson_payload)
+    addendum = json.loads(POSTRESULT_ADDENDUM.read_text(encoding="utf-8"))
+    addendum_payload = copy.deepcopy(addendum)
+    addendum_payload["artifact_hash"] = ""
+    assert addendum["artifact_hash"] == _canonical_hash(addendum_payload)
+    assert addendum["lineage"]["immutable_parent_failure_artifact_hash"] == (
+        raw_failure["artifact_hash"]
+    )
+    lesson = addendum["method_lesson_candidate"]
     assert lesson["status"].startswith("PROPOSAL_ONLY")
     assert "not independently recurrent" in lesson["transport_scope"]
-    assert any("CANNOT_CHECK" in item for item in lesson["framework_validation_obligations"])
+    assert any("CANNOT_CHECK" in item for item in lesson["validation_obligations"])
 
     raw_tool = json.loads(
         (BASE / "07_memory/C025_RESEARCH_TOOL_DELTA_20260811.json").read_text(
@@ -206,17 +230,8 @@ def test_c025_success_failure_and_method_lesson_are_scoped_and_content_bound() -
     assert validate_research_tool(tool) == ()
     assert tool.authority is ResearchToolAuthority.VERIFIED_LOCAL
     assert tool.known_failure_ids == ("F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",)
-    failure_reconciliation = failure_bundle["identity_reconciliation"]
-    assert failure_reconciliation["canonical_failure_id"] == failure.failure_id
-    assert failure_reconciliation["parallel_id_disposition"].startswith("NOT_MINTED")
-    tool_bundle = json.loads(
-        (BASE / "07_memory/C025_RESEARCH_TOOL_DELTA_20260811.json").read_text(
-            encoding="utf-8"
-        )
-    )
-    assert tool_bundle["identity_reconciliation"]["canonical_tool_id"] == tool.tool_id
-    assert tool_bundle["identity_reconciliation"]["parallel_id_disposition"].startswith(
-        "NOT_MINTED"
+    assert addendum["lineage"]["immutable_parent_tool_artifact_hash"] == (
+        tool.artifact_hash
     )
 
 
@@ -294,7 +309,7 @@ def test_c025_trace_continuation_is_hash_chained_and_never_promotes_root() -> No
 
 
 
-def test_parallel_assurance_fork_preserves_pre_result_chronology() -> None:
+def test_parallel_assurance_trace_is_retrospective_and_preserves_failed_chronology() -> None:
     parent = json.loads(
         (
             BASE
@@ -316,20 +331,24 @@ def test_parallel_assurance_fork_preserves_pre_result_chronology() -> None:
         assert raw["artifact_hash"] == _canonical_hash(payload)
         previous = raw["artifact_hash"]
     assert [raw["event_type"] for raw in fork["entries"]] == [
-        "CANDIDATE_PROPOSED",
-        "FALSIFIER_RUN",
         "RESULT_RECORDED",
+        "EXPERIENCE_MEMORY_REVIEW",
         "REVIEWED",
     ]
-    assert fork["entries"][0]["timestamp"] < json.loads(
-        RECEIPT.read_text(encoding="utf-8")
-    )["evaluated_at"]
+    assert all(
+        raw["event_type"] not in {"CANDIDATE_PROPOSED", "FALSIFIER_RUN", "PROMOTED"}
+        for raw in fork["entries"]
+    )
+    assert fork["source_lineage"]["strict_preregistration_authority"] is False
+    assert fork["source_lineage"]["result_commit"] == (
+        "1bfad13d82548fe61f70cd9f18828fe0240c8556"
+    )
     canonical = json.loads(
         (BASE / "09_trace/O9d12a2a1a_C025_TRACE_CONTINUATION_20260811.json").read_text(
             encoding="utf-8"
         )
     )
-    assert "parallel_trace:RECONCILED_PRESERVED" in canonical["entries"][-1]["outputs"]
+    assert "parallel_trace:RETROSPECTIVE_RECONCILED" in canonical["entries"][-1]["outputs"]
 
 def test_synthesis_receipt_explicitly_reconciles_parallel_lineage() -> None:
     receipt_path = BASE / "05_falsification/C025_SYNTHESIS_RECEIPT_20260811.json"
@@ -337,8 +356,22 @@ def test_synthesis_receipt_explicitly_reconciles_parallel_lineage() -> None:
     payload = copy.deepcopy(synthesis)
     payload["artifact_hash"] = ""
     assert synthesis["artifact_hash"] == _canonical_hash(payload)
-    assert synthesis["chronology"]["pre_result_registration_commit"] == (
+    assert synthesis["chronology"]["pre_result_case_plan_commit"] == (
         "03a4cb9a0bce32374d79210d8b712670c11626a7"
+    )
+    assert synthesis["chronology"]["original_result_commit"] == (
+        "1bfad13d82548fe61f70cd9f18828fe0240c8556"
+    )
+    assert synthesis["chronology"]["registration_is_ancestor_of_result"] is False
+    assert synthesis["chronology"]["evaluator_identity_pre_result_frozen"] is False
+    assert synthesis["synthesis_target"]["target_branch_head_at_repair"] == (
+        "2b264d50b0bb224bfab62e7503656bc92d933b68"
+    )
+    assert synthesis["synthesis_target"]["live_main_at_repair"] == (
+        "b8f3467959f2f44a2cf686d9c005071739284dc8"
+    )
+    assert synthesis["synthesis_target"]["integration_commit_after_live_main_merge"] == (
+        "a423518794d7bbbfabfcf59ff14804491629b544"
     )
     for binding in synthesis["artifact_bindings"].values():
         path = ROOT / binding["path"]
@@ -353,7 +386,16 @@ def test_synthesis_receipt_explicitly_reconciles_parallel_lineage() -> None:
     assert identities["parallel_provisional_tool_id"]["disposition"].startswith(
         "NOT_MINTED"
     )
-    assert identities["supersession_action"] == "NONE_NO_ACCEPTED_DUPLICATE_ID"
+    assert identities["canonical_failure_artifact_hash_preserved"] == (
+        "sha256:1ad323128652a32e1e1441339a94dba970374029d321acd951ea3afc442a3223"
+    )
+    assert identities["canonical_tool_artifact_hash_preserved"] == (
+        "sha256:bff3cc8c347f3ad4b007775d69abadffd408b8db2b3863990baf7b5c76d87475"
+    )
+    assert identities["postresult_addendum_id"] == "C025-POSTRESULT-ASSURANCE-ADDENDUM-v1"
+    assert "BACKFILLED_STRICT_PREREGISTRATION_IMPLICATION_SUPERSEDED" in (
+        identities["supersession_action"]
+    )
     assert synthesis["claim_scope"]["p_vs_np_root"] == "NO_AUTHORITY"
     assert synthesis["method_lesson"]["framework_transport"].endswith(
         "QUARANTINED_PROPOSAL"

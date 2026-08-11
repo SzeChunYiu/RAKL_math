@@ -1,26 +1,45 @@
 {
-  "schema_version": "1.0.0",
-  "receipt_id": "C025-PARALLEL-SYNTHESIS-20260811",
+  "schema_version": "1.1.0",
+  "receipt_id": "C025-RETROSPECTIVE-SYNTHESIS-20260811",
   "candidate_id": "C025",
   "atom_id": "O9d12a2a1a",
   "synthesis_target": {
     "repository": "https://github.com/SzeChunYiu/RAKL_math.git",
-    "base_branch": "research/pnp-c025-joint-signature-20260811",
-    "base_head": "75c7cf1c55760b4ce74fbaabc1c6c87d59098c76",
+    "target_branch": "research/pnp-c025-joint-signature-20260811",
+    "target_branch_head_at_repair": "2b264d50b0bb224bfab62e7503656bc92d933b68",
+    "live_main_at_repair": "b8f3467959f2f44a2cf686d9c005071739284dc8",
+    "integration_commit_after_live_main_merge": "a423518794d7bbbfabfcf59ff14804491629b544",
     "framework_authority_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
   },
   "chronology": {
-    "strict_parent_trace": "TRACE-O9d12a2a1a-STRICT-MIGRATION-REPAIRED-20260811",
-    "base_candidate_event": "O9d12a2a1a-E08",
-    "pre_result_registration_commit": "03a4cb9a0bce32374d79210d8b712670c11626a7",
-    "pre_result_registration_artifact_hash": "sha256:39378a50357fd3807d1ee9bcfbdec79e7cf4e5f379d256cfc28d3bf0cb2ce286",
-    "assurance_result_event": "O9d12a2a1a-PA-E03",
-    "synthesis_review_event": "O9d12a2a1a-E12"
+    "pre_result_case_plan_commit": "03a4cb9a0bce32374d79210d8b712670c11626a7",
+    "case_plan_artifact_hash": "sha256:39378a50357fd3807d1ee9bcfbdec79e7cf4e5f379d256cfc28d3bf0cb2ce286",
+    "original_result_commit": "1bfad13d82548fe61f70cd9f18828fe0240c8556",
+    "registration_is_ancestor_of_result": false,
+    "evaluator_present_at_registration": false,
+    "evaluator_identity_pre_result_frozen": false,
+    "authority": "RETROSPECTIVE_EXECUTABLE_ASSURANCE_CASE_PLAN_PRIOR_SELECTED"
+  },
+  "source_result_provenance": {
+    "commit": "1bfad13d82548fe61f70cd9f18828fe0240c8556",
+    "tree": "4d5b09d7e5920d9436db32cd13bb5da8eeeceda6",
+    "parent": "85a7d609e066eae261c0e0d3c960ee4df6e814d3",
+    "executable_path": "research/real_math/millennium/p_vs_np/05_falsification/joint_binary_signature_calibration.py",
+    "executable_git_blob_sha": "558ae5ef007d40cc24b4c0ab5f9f9f7a1fe64f43",
+    "executable_raw_sha256": "sha256:55bb5708f0d492ed162d7f9a6aa4be90a3283302cef522d3007a3a9bd32a717b",
+    "receipt_path": "research/real_math/millennium/p_vs_np/05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json",
+    "receipt_git_blob_sha": "76ad9407f44dde325c80794b4962da364ebc12bd",
+    "receipt_raw_sha256": "sha256:23285e5ed3d36680a11a05ad7d04f1836595f59460d03945c39e7db26d51f60f",
+    "receipt_artifact_hash": "sha256:fcbdcdcb6a182705253b1cd0779316814c9791ceef549fc3f848023023a476eb"
   },
   "artifact_bindings": {
-    "pre_result_registration": {
+    "pre_result_case_plan": {
       "path": "research/real_math/millennium/p_vs_np/04_candidates/C025_joint_binary_signature_calibration_preregistration.json",
       "file_sha256": "eaadb5c39b438dbdee0f35cf6728ff5d067b04cde81835013cbfd084a7a68af2"
+    },
+    "chronology_audit": {
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_RETROSPECTIVE_ASSURANCE_CHRONOLOGY_AUDIT_20260811.json",
+      "file_sha256": "b8ae0c74aca2b1c46f064e6359276974727f7877c6481a8da3498a13e9c54572"
     },
     "canonical_negative_history": {
       "path": "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_joint_signature_canonical_scope.md",
@@ -28,7 +47,7 @@
     },
     "assurance_addendum": {
       "path": "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_full_semifilter_assurance_addendum.md",
-      "file_sha256": "b8571e58b6e0cb5485b49b1f1fdec30d3eb11c1107dc2f07ad50c53d488728d5"
+      "file_sha256": "3a4932af581a42dbf5f549f904a8d28dd922614f01152043af4fa40caa9225dc"
     },
     "assurance_executable": {
       "path": "research/real_math/millennium/p_vs_np/05_falsification/joint_binary_signature_calibration.py",
@@ -38,30 +57,34 @@
       "path": "research/real_math/millennium/p_vs_np/05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json",
       "file_sha256": "23285e5ed3d36680a11a05ad7d04f1836595f59460d03945c39e7db26d51f60f"
     },
-    "failure_memory": {
+    "canonical_failure_memory": {
       "path": "research/real_math/millennium/p_vs_np/07_memory/C025_FAILURE_EXPERIENCE_DELTA_20260811.json",
-      "file_sha256": "4bb25167f2e66c1374204b5b638cf366f5f6d1202cec5526de5ab58db64d93e9"
+      "file_sha256": "abe60d4fa88a4c7728bb520e4b0e0f12deb3d81d1b15889c1656f859c4d4f0f6"
     },
-    "tool_memory": {
+    "canonical_tool_memory": {
       "path": "research/real_math/millennium/p_vs_np/07_memory/C025_RESEARCH_TOOL_DELTA_20260811.json",
-      "file_sha256": "979e07b0ee52758272abacbc4bd74bd9296cd6fa4df6bad6ad5b909e658276f7"
+      "file_sha256": "7fbc49f5c1327cb9956a89c72d4e2f52a5957b51711b562fdfc12269a5bcce08"
+    },
+    "postresult_addendum": {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json",
+      "file_sha256": "639cf7138adce1d22e67fc8c2a56cdca280e7cc0e087683a3fbce02a34a7e858"
     },
     "review": {
       "path": "research/real_math/millennium/p_vs_np/08_reviews/SAME_CONTEXT_RESULT_REVIEW_C025_20260811.md",
-      "file_sha256": "a639ad232a074ed80cc64d9a5e34f0d0ffdc3683292a28aec4ec8687a7d887c6"
+      "file_sha256": "32c04d34b763d43aaf6e1122e0a2e755163ae31b2d09e6eec4112c25656f8e87"
     },
     "trace_continuation": {
       "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a_C025_TRACE_CONTINUATION_20260811.json",
-      "file_sha256": "80dc6b087eafc40dd076dd1ce5f90302281428820823c79048c98c477aececc2"
+      "file_sha256": "606e99c7bc80d3e5e6eedbc5963a211c073238bac0dd647c2e61394952fa5d49"
     },
-    "parallel_assurance_trace": {
+    "retrospective_assurance_trace": {
       "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a_C025_PARALLEL_ASSURANCE_TRACE_20260811.json",
-      "file_sha256": "96353a5b28b201cabc8d8e16b10a373d11344bee4c8aeaceca226d9aa17037b8"
+      "file_sha256": "89d26fdc7781378acb6ae5f108831aadcc6cd4a9dc94094c4ec339b4c201f259"
     }
   },
   "result": {
     "assurance_receipt_artifact_hash": "sha256:fcbdcdcb6a182705253b1cd0779316814c9791ceef549fc3f848023023a476eb",
-    "verdict": "PASS_SCOPED_CALIBRATION_WITH_CAPACITY_NO_GO",
+    "verdict": "PASS_RETROSPECTIVE_SCOPED_CALIBRATION_WITH_CAPACITY_NO_GO",
     "full_semifilter_counts": {
       "2": 4,
       "3": 18,
@@ -88,17 +111,20 @@
   "identity_reconciliation": {
     "canonical_candidate_id": "C025",
     "canonical_failure_id": "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",
+    "canonical_failure_artifact_hash_preserved": "sha256:1ad323128652a32e1e1441339a94dba970374029d321acd951ea3afc442a3223",
     "canonical_tool_id": "T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION",
+    "canonical_tool_artifact_hash_preserved": "sha256:bff3cc8c347f3ad4b007775d69abadffd408b8db2b3863990baf7b5c76d87475",
+    "postresult_addendum_id": "C025-POSTRESULT-ASSURANCE-ADDENDUM-v1",
+    "postresult_addendum_hash": "sha256:f1e01ed92594fa7524fda1e15318770124d65732083e43f1be36ccc5d4999fa1",
     "parallel_provisional_failure_id": {
       "id": "F-C025-FIRST-ORDER-CAPACITY-CEILING",
-      "disposition": "NOT_MINTED_ASSIMILATED_AS_SCOPED_EVIDENCE"
+      "disposition": "NOT_MINTED"
     },
     "parallel_provisional_tool_id": {
       "id": "T-PNP-JOINT-SIGNATURE-CALIBRATION",
-      "disposition": "NOT_MINTED_ASSIMILATED_AS_EXECUTABLE_ASSURANCE"
+      "disposition": "NOT_MINTED"
     },
-    "supersession_action": "NONE_NO_ACCEPTED_DUPLICATE_ID",
-    "file_policy": "BASE_NEGATIVE_HISTORY_FILES_PRESERVED_AND_EXTENDED; ASSURANCE_FILES_USE_DISTINCT_NAMES"
+    "supersession_action": "BACKFILLED_STRICT_PREREGISTRATION_IMPLICATION_SUPERSEDED; ORIGINAL_FAILURE_AND_TOOL_IDENTITIES_PRESERVED"
   },
   "method_lesson": {
     "lesson_id": "ML-PNP-C025-REPAIR-THEN-CAPACITY-AUDIT",
@@ -107,12 +133,13 @@
     "transport_limit": "single P-vs-NP lineage; no independent cross-problem recurrence"
   },
   "claim_scope": {
-    "conditional_normalized_G_NEQ_full_semifilter_equivalence": "EXACT_LOCAL_ASSURANCE",
+    "conditional_normalized_G_NEQ_full_semifilter_equivalence": "RETROSPECTIVELY_REPRODUCIBLE_LOCAL_ASSURANCE",
     "source_normalization_beyond_canonical_G_NEQ": "NOT_ESTABLISHED",
     "higher_order_closure_state": "NOT_TESTED",
+    "strict_preregistered_evaluator": "ABSENT",
     "independent_review": "ABSENT",
     "p_vs_np_root": "NO_AUTHORITY"
   },
-  "authority": "SYNTHESIS_RECEIPT / MACHINE_READABLE_CONTENT_BINDING / SAME_CONTEXT_ONLY / COMPUTATION_IS_NOT_PROOF / NO_NOVELTY_CLAIM / ROOT_AUTHORITY_NONE",
-  "artifact_hash": "sha256:03d8d14e029265ec4ba5949837e4a530a2fb462bed99ad31a736579230af1a48"
+  "authority": "SYNTHESIS_RECEIPT / RETROSPECTIVE_EXECUTABLE_ASSURANCE / MACHINE_READABLE_CONTENT_BINDING / SAME_CONTEXT_ONLY / COMPUTATION_IS_NOT_PROOF / NO_NOVELTY_CLAIM / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:1518fedb142898bffb5a5ae395094175f558cca53ad75f7fdf85c7ec92c02750"
 }
