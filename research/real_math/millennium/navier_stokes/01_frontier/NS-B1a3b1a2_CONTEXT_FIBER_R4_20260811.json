@@ -1,0 +1,90 @@
+{
+  "analogues": [
+    {
+      "disanalogy": "finite-I ancient class is not globally small L3",
+      "id": "KATO-L3-SMALL-DATA",
+      "role": "solved analogue",
+      "transfer": "critical small L3 exact NSE dynamics"
+    },
+    {
+      "disanalogy": "prior calibration was functional/scalar-I, not this exact long-history derivative-output claim",
+      "id": "NS-B1a3-I-PROFILE-DECOUPLING",
+      "role": "same-context negative analogue",
+      "transfer": "separated profiles expose noncompact multiplicity"
+    },
+    {
+      "disanalogy": "requires exact global critical state space absent from finite-I producer",
+      "id": "GKP-CRITICAL-PROFILE",
+      "role": "near-solved analogue",
+      "transfer": "translation/profile decoupling in critical spaces"
+    },
+    {
+      "disanalogy": "pre-singularity geometric consumer is not an ancient Liouville theorem",
+      "id": "NS-B1a3b1-R2-GRUJIC-CONSUMER",
+      "role": "consumer interface",
+      "transfer": "global weak-L3/2 amplitude is a separate exact consumer coordinate"
+    }
+  ],
+  "application_base_sha": "55f1b786396f0f29ee4edd7e80b0b0023b34e90f",
+  "atom_id": "NS-B1a3b1a2",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "candidate_route": {
+    "policy": "counterexample_first / rotate away from temporal-edge high-frequency family",
+    "proposal": "test separated low-frequency multi-profile multiplicity over a full normalized backward window, using exact small-data NSE and translation separation; if exact nonlinear decoupling cannot be verified, fall back to source-bound interior smoothing versus global-tail interface audit",
+    "why_high_information": "the prior high-frequency separator can be killed by interior parabolic smoothing; a separated multiplicity test isolates whether history fixes derivative scale but still fails to fix global profile count/tail mass"
+  },
+  "counterexample_first_falsifiers": [
+    "If a fixed normalized history window plus uniform critical velocity control yields a source-valid global weak-L3/2 vorticity estimate, reject the multiplicity route.",
+    "If exact nonlinear evolution at t=0 cannot retain N separated vorticity regions with amplitude proportional to N^-1/3 under any separation schedule, classify the proposed hostile family as unverified.",
+    "If uniform finite-I bounds require constants growing with N or separation, the construction fails.",
+    "If only local derivative lower bounds are obtained but the global Lorentz lower bound uses an invalid distribution-function aggregation, reject the result.",
+    "If the argument relies on a non-NSE sum of translated solutions rather than an exact NSE solution plus proved stability/decoupling, reject it."
+  ],
+  "cycle_id": "NS-B1a3b1a2-C001-R4-HISTORY-MULTIPLICITY-20260811",
+  "fibre_snapshot_hash": "sha256:ebc9be6691477dc67ccb9f96d35a88b92ae4f405fb943eaaefcf04cb97db4d36",
+  "framework": {
+    "git_sha": "2b439beb3bd532a6d38d1c0ce30168d8fbc74dcc",
+    "method": "RAKL v3 Verified Discovery / proposal-shadow experience substrate",
+    "method_version": "3.0.0",
+    "package_version": "0.1.0"
+  },
+  "frozen_history_coordinate": {
+    "failure_scope": "an exact-NSE family surviving the full normalized window while global weak-L3/2 vorticity amplitude diverges; fixed-window failure does not by itself refute genuinely ancient/infinite-history mechanisms",
+    "normalization": "one parabolic time unit at unit target spatial scale; under u_lambda(x,t)=lambda u(lambda x,lambda^2 t), history length transforms by lambda^-2, so all comparisons must state the spatial/time normalization explicitly",
+    "normalized_backward_window": [
+      -1,
+      0
+    ],
+    "observation_time": 0,
+    "success_scope": "a bound uniform over exact NSE solutions on the normalized window with the exact registered producer inputs"
+  },
+  "interfaces_to_audit": [
+    "exact NSE existence on full [-1,0] window",
+    "uniform finite-I / critical velocity ledger",
+    "positive lower bound for vorticity on N separated regions at t=0",
+    "nonlinear cross-profile interaction under large translations",
+    "weak-L^{3/2} distribution-function lower bound",
+    "pressure nonlocality and far-field leakage separately from local smoothing",
+    "translation/dilation noncompactness and profile leakage",
+    "weak/strong convergence needed by any blow-up-limit transfer",
+    "pre-singularity versus ancient state-space mismatch",
+    "backward uniqueness hypotheses only after terminal/global data exist"
+  ],
+  "issue_id": "RAKL_math#164",
+  "nonpromotion": [
+    "finite-window obstruction is not an ancient-solution obstruction",
+    "amplitude production is not morphology or log-BMO direction production",
+    "Type-I route progress does not close Type-II",
+    "computation is not proof",
+    "same-context review is not independent review"
+  ],
+  "parent_atom_id": "NS-B1a3b1a1",
+  "problem_signature": "Whole-space 3D incompressible NSE. Test whether a quantified finite backward-history interval plus the registered finite-I/critical-velocity producer signature controls global weak-L^{3/2} vorticity amplitude, without smuggling in global tail tightness, one-core morphology, phase regularity, or ancient-Liouville hypotheses.",
+  "root_contract": {
+    "independent_mathematical_reviews": "0/3",
+    "root_authority": "NONE",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "target": "Clay statement (A) positive-regularity lane; root alternatives unchanged"
+  },
+  "schema_version": "math-context-fiber-v3-proposal-shadow-r4"
+}
