@@ -29,7 +29,7 @@ from rakl.research_trace import (
     audit_pre_candidate_trace,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "research/real_math/millennium/navier_stokes"
 
 
@@ -196,7 +196,10 @@ def test_ns_b1_sparse_tail_calibration_is_fail_closed_in_scope() -> None:
     matrix = (BASE / "01_frontier/NS-B1_TYPE_I_IMPLICATION_MATRIX_20260811.md").read_text(
         encoding="utf-8"
     )
-    assert "not a Navier–Stokes counterexample" in matrix
+    assert "deliberately **not** a Navier–Stokes counterexample" in matrix
     assert "no purely functional embedding" in matrix
     assert "NS-B1a" in matrix
-    assert "CHILD_CONTEXT_REQUIRED_BEFORE_CANDIDATE" not in matrix or "fresh child context" in matrix
+    assert (
+        "CHILD_CONTEXT_REQUIRED_BEFORE_CANDIDATE" not in matrix
+        or "fresh child context" in matrix
+    )

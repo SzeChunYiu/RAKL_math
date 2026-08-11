@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TRACE = (
     ROOT
     / "research/real_math/millennium/navier_stokes/09_trace/NS_R001_PRE_CANDIDATE_TRACE_20260811.json"

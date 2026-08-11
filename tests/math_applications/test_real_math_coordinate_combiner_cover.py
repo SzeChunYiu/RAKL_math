@@ -8,7 +8,7 @@ import pytest
 
 
 MODULE_PATH = (
-    Path(__file__).resolve().parents[1]
+    Path(__file__).resolve().parents[2]
     / "research"
     / "real_math"
     / "millennium"

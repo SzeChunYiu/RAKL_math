@@ -31,7 +31,7 @@ from rakl.research_trace import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "research/real_math/millennium/navier_stokes"
 
 
@@ -245,6 +245,6 @@ def test_geometry_failure_delta_is_scoped_and_hash_bound() -> None:
     assert artifact_hash == _canonical_hash(payload)
     assert experience["diagnosis_status"] == "SUPPORTED"
     assert experience["research_trace_event_id"] == "NS-R001b-E009"
-    assert "finite-energy/global localization" in experience["selected_diagnosis"]
+    assert "global finite-energy/localization" in experience["selected_diagnosis"]
     assert any(link["relation"] == "SHARES_BROKEN_ASSUMPTION_WITH" for link in delta["links"])
     assert any(link["relation"] == "MOTIVATES_META_ATOM" for link in delta["links"])
