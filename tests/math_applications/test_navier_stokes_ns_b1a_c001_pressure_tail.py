@@ -99,7 +99,11 @@ def _final_provenance_errors(receipt: dict) -> tuple[str, ...]:
         errors.append("origin mismatch")
 
     commit_subjects = {
+        "source PR base": receipt["source_pull_request"]["base"],
+        "source PR head": receipt["source_pull_request"]["head"],
+        "source PR merge": receipt["source_pull_request"]["merge"],
         "repair source": receipt["repair_source"],
+        "prior integration": receipt["prior_integration_commit"],
         "current main": receipt["current_main"],
         "integration": receipt["integration_commit"],
     }
@@ -114,6 +118,12 @@ def _final_provenance_errors(receipt: dict) -> tuple[str, ...]:
             continue
         if _git("rev-parse", f"{commit}^{{tree}}").stdout.strip() != subject["tree"]:
             errors.append(f"tree mismatch: {role}")
+        if "parents" in subject:
+            observed_parents = _git(
+                "show", "-s", "--format=%P", commit
+            ).stdout.split()
+            if observed_parents != subject["parents"]:
+                errors.append(f"parent mismatch: {role}")
 
     integration = receipt["integration_commit"]
     if available.get("integration"):
@@ -164,8 +174,14 @@ def _final_provenance_errors(receipt: dict) -> tuple[str, ...]:
         snapshot = ROOT / binding["preserved_snapshot_path"]
         if not snapshot.is_file():
             errors.append(f"missing preserved snapshot: {role}")
-        elif snapshot.read_bytes() != raw:
-            errors.append(f"preserved snapshot mismatch: {role}")
+        else:
+            snapshot_raw = snapshot.read_bytes()
+            if snapshot_raw != raw:
+                errors.append(f"preserved snapshot mismatch: {role}")
+            if "sha256:" + hashlib.sha256(snapshot_raw).hexdigest() != binding[
+                "preserved_snapshot_raw_sha256"
+            ]:
+                errors.append(f"preserved snapshot hash mismatch: {role}")
 
     for role, subject in receipt["live_subjects"].items():
         path = ROOT / subject["path"]
@@ -390,7 +406,7 @@ def test_final_integration_validation_is_self_hashed_and_exactly_scoped() -> Non
         "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
     )
     assert receipt["validation"]["focused_passed"] == 10
-    assert receipt["validation"]["full_passed"] == 209
+    assert receipt["validation"]["full_passed"] == 215
     assert receipt["validation"]["diff_check_result"] == "CLEAN"
     assert receipt["authority"] == (
         "FINAL_HEAD_INTEGRATION_VALIDATION / RETROSPECTIVE_ANALYTIC_CALIBRATION / "
@@ -436,7 +452,9 @@ def test_final_integration_git_provenance_planted_worlds_fail_closed() -> None:
     assert "origin mismatch" in _final_provenance_errors(forged_origin)
 
     broken_ancestry = copy.deepcopy(receipt)
-    broken_ancestry["ancestry_requirements"][0]["ancestor"] = "HEAD"
+    broken_ancestry["ancestry_requirements"][0]["descendant"] = receipt[
+        "source_pull_request"
+    ]["base"]["commit"]
     assert "ancestry mismatch: repair source reaches integration" in (
         _final_provenance_errors(broken_ancestry)
     )
