@@ -1,0 +1,52 @@
+{
+  "target_atom_id": "RH-ANA-003",
+  "target_context_hash": "sha256:3e442a6ad2b6dbc2143266f146fbea5008759a07f4f827eeba2e6ee269ff7795",
+  "tool_inventory_snapshot_hash": "sha256:b955d0dd9e04adbfde0b67eb3aa6af1216bc2afa758854d878a8faaae7dbbdf6",
+  "failure_lattice_snapshot_hash": "sha256:postaudit-rh-ana-002-bound-at-6557b1b25fa839fe71aba8047c958d5da892edd8",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "exact cancellation-preserving arithmetic resummation",
+    "eta/Laurent binomial transform localization",
+    "zero-free-region Li calibration",
+    "Lagarias-Voros all-index growth-class exclusion"
+  ],
+  "relevant_tool_ids": [
+    "T-RH-LI-PREFIX-QUARTET-CALIBRATION",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "relevant_failure_ids": [
+    "F-RH-ANA-001-FINITE-LI-PREFIX",
+    "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE"
+  ],
+  "selected_tool_ids": [
+    "T-RH-LI-PREFIX-QUARTET-CALIBRATION",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "tool_applicability_notes": [
+    "T-RH-LI-PREFIX-QUARTET-CALIBRATION remains a regression warning: no finite n prefix or finite prime truncation is accepted as an all-index surrogate.",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT applies only as a process tool: preserve the exact bridge from an arithmetic surrogate/decomposition to the root coordinate and attack the weakest failure of faithfulness before invention.",
+    "New Coffey odd-integer resummation is retrieved knowledge, not promoted as a reusable RAKL tool in this cycle."
+  ],
+  "failure_reuse_notes": [
+    "F-RH-ANA-001-FINITE-LI-PREFIX blocks repeating longer finite Li checks as the main action.",
+    "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE blocks another positive-surrogate/norm reformulation without a new DifferenceWitness.",
+    "The current representation materially differs: it is an exact arithmetic decomposition in which one signed binomial family is source-proved to resum nonnegatively; this justifies a new localization audit rather than retrying the norm route."
+  ],
+  "unresolved_warnings": [
+    "S1(n)>=0 is already known from Coffey and must not be presented as new mathematics.",
+    "The affine term and eta/Laurent binomial transform remain sign-sensitive; positivity of S1(n) does not imply lambda_n>=0.",
+    "Odd-integer resummation is not prime-by-prime positivity.",
+    "Any coefficientwise absolute bound on the original alternating zeta-value family discards exact cancellation and is a poor candidate unless it is proved lossless enough for the target.",
+    "Any future eta_j conjecture or numerical pattern remains proposal-only until an unconditional all-n theorem is proved."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_POSTAUDIT_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003_CONTEXT_FIBER_20260811.json",
+    "Mark W. Coffey, arXiv:math-ph/0505052 / DOI 10.1007/s11040-005-7584-9",
+    "Francis C. S. Brown, DOI 10.1016/j.jnt.2004.07.016",
+    "Pedro Freitas, DOI 10.1112/S0024610706022599"
+  ],
+  "artifact_hash": "sha256:5c3e9e465a1224a99a22d24e564dda09e14c701c5cd2d153c9b4eab203cbf86d"
+}
