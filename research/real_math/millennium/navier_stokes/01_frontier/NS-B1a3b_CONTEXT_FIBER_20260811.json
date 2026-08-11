@@ -1,0 +1,88 @@
+{
+  "atom_id": "NS-B1a3b",
+  "object_context": "Test whether a vorticity-direction/geometric-depletion criterion can be transported through the existing finite-I Type-I blow-up compactness package, without assuming a new derivative-compactness or nondegeneracy estimate.",
+  "structural_coordinates": [
+    "3D incompressible Navier-Stokes on R^3; root remains the Clay global-regularity/breakdown alternative",
+    "Type-I blow-up rescaling u_r(x,t)=r u(x0+r x,t0+r^2 t), p_r=r^2 p, omega_r=r^2 omega; normalized direction xi=omega/|omega| is defined only where omega is nonzero",
+    "the registered Albritton-Barker compactness interface supplies local strong L3 velocity convergence and local weak L3/2 pressure convergence; local energy control supplies bounded first-derivative energy but not strong curl convergence in the stored source signature",
+    "Constantin-Fefferman-type geometric depletion uses coherence of vorticity direction as an input hypothesis for actual solutions; the parent geometry cycle already showed pointwise alignment alone is insufficient",
+    "direction is a derivative quotient: u -> curl u loses one derivative and omega -> omega/|omega| is unstable near zeros/non-strong convergence",
+    "pressure is nonlocal but is not the primary obstruction in this child; the first gate is stability of the geometric observable under the available compactness topology",
+    "finite kinetic/local energy and scale-neutral shell budgets have already failed as standalone critical regularity bridges"
+  ],
+  "equivalent_formulations": [
+    "Does strong local L3 compactness of velocity plus the stored local-energy bounds force compactness of normalized vorticity direction on high-vorticity sets?",
+    "Can a conditional vorticity-direction regularity theorem be applied to the ancient limit using only the currently registered Type-I blow-up convergence modes?",
+    "Is a new derivative-compactness/nondegeneracy witness required before geometric coherence can be glued from approximating solutions to the ancient limit?"
+  ],
+  "solved_analogues": [
+    "Transport of observables continuous in the strong topology in which a compactness theorem converges",
+    "2D incompressible Navier-Stokes, where vortex stretching is absent and no vorticity-direction depletion mechanism is needed"
+  ],
+  "near_solved_analogues": [
+    "Constantin-Fefferman vorticity-direction geometric regularity criterion",
+    "Albritton-Barker local Type-I compactness and persistence of singularities",
+    "Miller strain/vorticity conditional regularity criteria"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Constantin-Fefferman geometric depletion",
+      "method": "use coherence of vorticity direction to weaken the nonlocal vortex-stretching interaction and obtain regularity under explicit solution-side hypotheses",
+      "shared_structure": ["same 3D vorticity equation", "same Biot-Savart/Riesz nonlocal strain-vorticity coupling", "same target of suppressing dangerous vortex stretching"],
+      "required_assumptions": ["actual Navier-Stokes solution", "a quantitative vorticity-direction coherence hypothesis in the source theorem's scope", "enough regularity/nonlocal control to execute the theorem"],
+      "disanalogies": ["finite I does not itself register a direction-coherence modulus", "the existing compactness output is on velocity/pressure and does not state strong vorticity-direction convergence", "xi is undefined at omega=0 and unstable without nondegeneracy"],
+      "repair_question": "What exact derivative-compactness and high-vorticity nondegeneracy statement is sufficient to transport the source geometric hypothesis through the Type-I blow-up limit?",
+      "source_anchors": ["Constantin-Fefferman, Indiana Univ. Math. J. 42 (1993), DOI 10.1512/iumj.1993.42.42034", "research/real_math/millennium/navier_stokes/01_frontier/NS_R001B_GEOMETRY_SOURCE_PACKET_20260811.md"]
+    },
+    {
+      "source_context": "Albritton-Barker Type-I ancient compactness",
+      "method": "rescale a Type-I singularity, extract a nontrivial mild bounded ancient solution by local compactness, and preserve a singular core",
+      "shared_structure": ["same Type-I finite-I lane", "same blow-up rescaling", "same ancient-limit object targeted by a later rigidity criterion"],
+      "required_assumptions": ["uniform finite Type-I quantity I", "suitable weak solution compactness hypotheses", "source-valid persistence-of-singularity hypotheses"],
+      "disanalogies": ["the recorded convergence is strong L3_loc for velocity, not strong curl convergence", "local pressure compactness does not repair derivative loss in xi", "a later geometry theorem consumes an observable not certified by the compactness output"],
+      "repair_question": "Can exact PDE structure upgrade the stored local velocity compactness to a topology in which vorticity direction is stable on the relevant high-vorticity region?",
+      "source_anchors": ["research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3_C001_CRITICAL_COMPACTNESS_RIGIDITY_INTERFACE_20260811.md"]
+    },
+    {
+      "source_context": "NS-R001b paired geometry calibration",
+      "method": "counterexample-first separation of local geometry from the joint exact-dynamics plus finite-energy/global-localization class",
+      "shared_structure": ["same vorticity/strain geometry lane", "same requirement that a geometric route survive hostile calibrations before theorem search"],
+      "required_assumptions": ["calibration is used only to falsify an abstract inference, not as a Navier-Stokes counterexample"],
+      "disanalogies": ["the new child tests transfer stability of normalized vorticity direction, not sufficiency of pointwise strain-vorticity alignment"],
+      "repair_question": "Can a compactly supported divergence-free high-frequency sequence preserve the stored velocity/energy compactness data while destroying direction compactness?",
+      "source_anchors": ["research/real_math/millennium/navier_stokes/07_memory/NS_R001B_GEOMETRY_FAILURE_DELTA_20260811.json"]
+    }
+  ],
+  "explicit_disanalogies": [
+    "conditional geometric regularity criteria cannot be promoted to an a priori estimate from finite I",
+    "strong convergence of velocity in L3 does not imply strong convergence of one spatial derivative",
+    "bounded H1-type energy gives weak compactness of derivatives, not stability of a normalized derivative direction",
+    "a functional-topology falsifier is not an exact Navier-Stokes singular trajectory",
+    "local geometry transfer and local-to-global tail tightness are separate obligations"
+  ],
+  "source_anchors": [
+    "research/real_math/millennium/navier_stokes/00_problem_contract/success_contract.yaml",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3_C001_CRITICAL_COMPACTNESS_RIGIDITY_INTERFACE_20260811.md",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS_R001B_GEOMETRY_SOURCE_PACKET_20260811.md",
+    "research/real_math/millennium/navier_stokes/07_memory/NS_R001B_GEOMETRY_FAILURE_DELTA_20260811.json",
+    "Constantin-Fefferman, Indiana Univ. Math. J. 42 (1993), DOI 10.1512/iumj.1993.42.42034"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "signal processing / measurement pipeline",
+      "source_situation": "A sequence can converge strongly in a low-pass signal metric while its differentiated phase/orientation oscillates arbitrarily fast; a downstream phase-normalization observable is not continuous in the upstream topology.",
+      "common_abstraction": ["upstream convergence topology is weaker than the topology required by a downstream observable", "differentiation amplifies high-frequency perturbations", "normalization is unstable near small magnitude"],
+      "source_to_target_mapping": ["signal -> velocity field u", "differentiated phase/orientation -> vorticity direction xi", "low-pass strong metric -> local L3 velocity compactness", "downstream observable contract -> geometric regularity criterion"],
+      "shared_constraints": ["the transfer test concerns continuity/stability of an observable", "the falsifier may be nonphysical if it is used only to disprove an abstract topological implication"],
+      "disanalogies": ["Navier-Stokes sequences obey PDE constraints absent in generic signal sequences", "the analogy supplies no PDE estimate or theorem authority"],
+      "proposed_principle": "Before gluing a geometric rigidity criterion to a compactness theorem, verify that the criterion's observable is stable in the exact convergence topology, including derivative and nonvanishing requirements.",
+      "validation_obligation": "Construct an explicit smooth compactly supported divergence-free sequence converging strongly in local L3 with uniformly bounded first-derivative energy whose vorticity direction oscillates at frequency n on a fixed core; scope the conclusion to topology sufficiency only.",
+      "provenance_note": "Proposal-generation bridge only; zero theorem authority."
+    }
+  ],
+  "analogy_scan_notes": "Retained only because it yields a concrete derivative/normalization falsifier rather than a metaphor.",
+  "frozen_at": "2026-08-11T15:07:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:91eb597a06cb3f8ee7ccd4d2e617a16d137b3b200bccfa4ca0d3fb2d3cd33e75"
+}
