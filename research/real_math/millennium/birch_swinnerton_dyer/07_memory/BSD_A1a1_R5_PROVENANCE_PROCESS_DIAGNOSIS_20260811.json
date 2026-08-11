@@ -1,0 +1,34 @@
+{
+  "schema_version": "bsd-r5-process-diagnosis-v1",
+  "artifact_type": "PROCESS_DIAGNOSIS_PROPOSAL_SHADOW",
+  "diagnosis_id": "D-BSD-A1A1-R5-PROTECTED-ARTIFACT-WRITESET",
+  "cycle_id": "BSD-A1a1-BASECHANGE-PLECTIC-20260811-R5",
+  "source_episode_id": "EP-BSD-A1A1-BASECHANGE-PLECTIC-20260811-R5",
+  "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "context_hash": "sha256:0738fbeff600a8025d89c0d0c215272768e23133d2291e0cbb29734d08f1ecf2",
+  "observations": [
+    "The first PR workflow on head 022af7ee80059c6daae5dd0d158583146f6da5c6 failed exactly one assurance test while 458 tests passed.",
+    "The failing assurance test required all seven PR83 protected artifacts to remain byte-identical and detected that R5 had overwritten BSD_A1a1_CURRENT_2026_ROUTE_DIAGNOSTIC.yaml.",
+    "The mathematical R5 artifacts were not identified by that failure as mathematically invalid; the failure was an application provenance/write-set violation.",
+    "Reverting the protected file byte-identically and storing the R5 route as a new delta artifact removed the failure; a subsequent exact-head workflow passed 459 tests."
+  ],
+  "diagnosis": "The cycle's initial write-set incorrectly treated a previously provenance-bound current-route artifact as mutable application state. The correct storage pattern is append-only/delta evidence for a new cycle when prior assurance receipts bind original bytes.",
+  "failure_category": [
+    "PROVENANCE",
+    "TOOLING",
+    "META_POLICY"
+  ],
+  "mathematical_failure": false,
+  "gluing_failure": false,
+  "verification_role": "CI gate correctly falsified the unsafe storage action before merge.",
+  "prior_matching_failure_link": "NO_MATCH_LOCATED_IN_BOUNDED_MEMORY_SEARCH; not a completeness claim",
+  "repair": [
+    "restore BSD_A1a1_CURRENT_2026_ROUTE_DIAGNOSTIC.yaml byte-identically to the protected PR83 artifact",
+    "write BSD_A1a1_R5_BASECHANGE_PLECTIC_ROUTE_DIAGNOSTIC_20260811.yaml as an additive R5 delta",
+    "retarget the R5 tests to the additive route delta while asserting the protected artifact remains unchanged"
+  ],
+  "learning_authority": "OBSERVED_PROCESS_DIAGNOSIS_ONLY; no protected lesson/meta-method promotion",
+  "next_action": "Use immutable-artifact/write-set preflight before future application writes when earlier assurance receipts bind file bytes.",
+  "timestamp_utc": "2026-08-11T19:28:00Z",
+  "artifact_hash": "sha256:9594846fa768f8f99b944099dc369f827c4821a4be9ffd825fdb6cc1f7fa2fbc"
+}
