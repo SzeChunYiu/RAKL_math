@@ -1,0 +1,69 @@
+{
+  "schema_version": "xm-hash-chained-trace-v1",
+  "cycle_id": "XM009-BSD-PNP-GRADED-TRACE-20260811",
+  "hash_rule": "sha256(canonical JSON of each event before event_hash; sort_keys=true,separators=(',',':'),UTF-8), with previous_event_hash included",
+  "events": [
+    {
+      "event_id": "XM009-E01-PRE-ACTION-FROZEN",
+      "sequence": 1,
+      "event_type": "PRE_ACTION_FROZEN",
+      "previous_event_hash": "GENESIS",
+      "subject": "Prospective BSD-to-PNP transfer, DifferenceWitness, and cheapest falsifier bound before mathematical calculation.",
+      "evidence_pointers": ["commit:bf96903907a38d5bfeb07b3a9ecebbe90c6a75a6","cross_problem/01_frontier/XM009_FROZEN_CONTEXT_FIBRE_20260811.json","cross_problem/09_trace/XM009_PRE_ACTION_FIBRE_RECEIPT_20260811.json"],
+      "observations": ["framework_subject=0772e74e2de6f031d760a5990ecc04eff204219b","application_base=c48293364c6bdf7e0c5d93f5e01d889008c9eb61"],
+      "event_hash": "be92ab397c324d489f42245ca6af83b729fc8a7fd59574cbd80f65344522c466"
+    },
+    {
+      "event_id": "XM009-E02-FALSIFIER-EXECUTED",
+      "sequence": 2,
+      "event_type": "FALSIFIER_EXECUTED",
+      "previous_event_hash": "be92ab397c324d489f42245ca6af83b729fc8a7fd59574cbd80f65344522c466",
+      "subject": "Primary-source semantics checked and fixed-row degree-zero trace falsifier executed.",
+      "evidence_pointers": ["commit:2ae751d63eb91eeafb95947f46ed204a21d4190f","Cavalar-Oliveira ECCC TR25-033","Ota arXiv:1509.00682","cross_problem/04_candidates/XM009_BSD_PNP_GRADED_TRACE_FALSIFIER_20260811.md"],
+      "observations": ["T_0(R_1)=P(R_1)","monotonicity implies T_t(R_1)=P(R_1) for all t","fixed-row cumulative baseline-subtracted trace coordinates vanish"],
+      "event_hash": "4e4aa50813239786864c82885ebf0c6b48ba9e4e4bda1e93ab1fe8326de3e419"
+    },
+    {
+      "event_id": "XM009-E03-EPISODE-RECORDED",
+      "sequence": 3,
+      "event_type": "EPISODE_RECORDED",
+      "previous_event_hash": "4e4aa50813239786864c82885ebf0c6b48ba9e4e4bda1e93ab1fe8326de3e419",
+      "subject": "Immutable proposal/shadow TaskEpisode materialized using the current v3 TaskEpisode content-hash contract.",
+      "evidence_pointers": ["commit:310f9290544e35d5cadbae4e5bdfd74101359fde","cross_problem/10_study_pattern/XM009_TASK_EPISODE_20260811.json.shadow"],
+      "observations": ["episode_artifact_hash=ef65bd7550b308744ad5dd12bd7ee52deb275c19204fb9fb1b2f7b42d7cf6348"],
+      "event_hash": "8d5fb27271644095e2877736e5e2bd5c08a599b3759cc6cf334d440951c49aed"
+    },
+    {
+      "event_id": "XM009-E04-METHOD-TELEMETRY-BOUND",
+      "sequence": 4,
+      "event_type": "METHOD_TELEMETRY_BOUND",
+      "previous_event_hash": "8d5fb27271644095e2877736e5e2bd5c08a599b3759cc6cf334d440951c49aed",
+      "subject": "Separate method-telemetry-v1 object bound to episode id, episode hash, and fibre hash.",
+      "evidence_pointers": ["commit:669fcea3b54a747de1a6d2c58ffd7afe1595599c","cross_problem/10_study_pattern/XM009_METHOD_TELEMETRY_20260811.json.shadow"],
+      "observations": ["telemetry_artifact_hash=5d71b7a8b2306ebb86c671d7e67e3381e946a992285fbbe5d0a6fdd75e6cf70a","failure_class=REPRESENTATION","gluing_status=LOCAL_ONLY"],
+      "event_hash": "fa4a89cba90828ec394366aed5b42763e8459f29017c692acb7ab4eef0f53f09"
+    },
+    {
+      "event_id": "XM009-E05-DIAGNOSIS-DISTILLED",
+      "sequence": 5,
+      "event_type": "DIAGNOSIS_DISTILLED",
+      "previous_event_hash": "fa4a89cba90828ec394366aed5b42763e8459f29017c692acb7ab4eef0f53f09",
+      "subject": "Episode interpretation split into diagnosis, scoped obstruction, and candidate lesson without changing episode evidence.",
+      "evidence_pointers": ["commit:3d95c7febf7446f59df192e79c946e3a9ad17656","commit:a6289dc8934efa40377fefcbfc83ead7849aaeaf","commit:92c0d17fdeec5143906b7c7187cbcb10082131f8"],
+      "observations": ["diagnosis=D-XM009-PNP-FIXED-ROW-GRADED-DEGENERACY","obstruction=O-XM009-PNP-FIXED-ROW-POSITIVE-DEGREE-DEGENERACY","lesson=L-XM009-QUOTIENT-REQUIRES-POSITIVE-DEGREE-NONDEGENERACY"],
+      "event_hash": "de02787ca86dbf4f874c2718cefa3231709041e2ea343f6042e175c1c3af43b5"
+    },
+    {
+      "event_id": "XM009-E06-SAME-CONTEXT-REVIEWED",
+      "sequence": 6,
+      "event_type": "SAME_CONTEXT_REVIEWED",
+      "previous_event_hash": "de02787ca86dbf4f874c2718cefa3231709041e2ea343f6042e175c1c3af43b5",
+      "subject": "Seven-role same-context expert cell reviewed mathematics, transfer scope, provenance, assurance, and metrology.",
+      "evidence_pointers": ["commit:0d7a59cffcacd6a3a44cad25f67609f23d5d6733","cross_problem/08_reviews/XM009_SAME_CONTEXT_EXPERT_REVIEW_20260811.md"],
+      "observations": ["isolated_review_credit=0","root_authority=NONE","protected_promotion=NONE"],
+      "event_hash": "fb5601e165297c56e1d5967e6d3108ee30c3acde31aaee942f9ccedca19a530f"
+    }
+  ],
+  "terminal_event_hash": "fb5601e165297c56e1d5967e6d3108ee30c3acde31aaee942f9ccedca19a530f",
+  "authority": "PUBLIC_PROPOSAL_TRACE_ONLY"
+}
