@@ -1,13 +1,18 @@
 # H4d1a same-context expert review — branch-reachable obstruction envelopes
 
-Date: 2026-08-11  
-Framework authority: `SzeChunYiu/RAKL@15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3`  
-Root control: `SzeChunYiu/RAKL_math#6`  
+Date: 2026-08-11
+Framework authority at packet freeze: `SzeChunYiu/RAKL@15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3`
+Current-run framework check: `SzeChunYiu/RAKL@b4be08e0df4b099f6d5eb1dce191c85063e71c21`; the mathematical-research context, assurance, runtime, memory, trace, metacognition and breakthrough-control files used by this packet are unchanged from the pinned versions.
+Root control: `SzeChunYiu/RAKL_math#6`
 Review authority: `SAME_CONTEXT_ROLE_SEPARATED / NOT_INDEPENDENT_REVIEW`
+
+## Packet-repair provenance
+
+Exact-head application CI exposed two packet-quality defects before any candidate was generated: a scope regression asserted an exact phrase not present in this review, and Markdown hard-break whitespace violated the application-wide whitespace policy. This repair removes trailing whitespace, states the intended `root initial algebraicity` boundary verbatim, and updates the special-family source references so the withdrawn `arXiv:2211.11405` is provenance only. Git history preserves the pre-repair bytes. No theorem, candidate, novelty claim, expert vote, or Hodge-root authority changes.
 
 ## Atom under review
 
-`H4d1a`: for a smooth projective family, a fixed Hodge-locus branch `T`, and an already algebraic chosen central witness, determine whether the obstructions generated specifically by lifting that witness along `T` lie in an independently constructed envelope `B_{T,m}` on which the Hodge/semiregularity detector is faithful. This is a witness-propagation atom. It does not address initial algebraicity of an arbitrary rational Hodge class.
+`H4d1a`: for a smooth projective family, a fixed Hodge-locus branch `T`, and an already algebraic chosen central witness, determine whether the obstructions generated specifically by lifting that witness along `T` lie in an independently constructed envelope `B_{T,m}` on which the Hodge/semiregularity detector is faithful. This is a witness-propagation atom. It does not address root initial algebraicity of an arbitrary rational Hodge class.
 
 The expert cell reviewed the frozen H4d1a context, the parent detector-kernel failure, the dual-memory review, and the primary sources in the source packet/addendum. The roles below are analytical lenses sharing the same evidence, not independent mathematicians.
 
@@ -57,9 +62,9 @@ The expert cell reviewed the frozen H4d1a context, the parent detector-kernel fa
 
 **Background:** hypersurface Hodge loci, flag-Hilbert calculations, explicit algebraic-cycle families, computational algebraic geometry as non-proof calibration.
 
-**Evidence inspected:** Kloosterman arXiv:2104.14845; Movasati arXiv:2211.11405; parent positive/hostile controls.
+**Evidence inspected:** Kloosterman arXiv:2104.14845; Movasati arXiv:1902.00831 for the rigid chosen-cycle boundary calibration; Movasati arXiv:2502.19988 for current Hodge-locus/leaf-scheme context; the withdrawn arXiv:2211.11405 only as provenance; parent positive/hostile controls.
 
-**Finding:** Kloosterman gives a valuable positive special-family control where geometric and Hodge loci are compared through explicit tangent/dimension calculations. Movasati supplies the opposite search pressure: examples are investigated where Hodge deformation appears larger than algebraic-cycle deformation. Together they justify a contrastive calibration before theorem invention.
+**Finding:** Kloosterman gives a valuable positive special-family control where geometric and Hodge loci are compared through explicit tangent/dimension calculations. Movasati's rigid chosen-cycle setup supplies the opposite boundary pressure: the selected witness can be rigid inside a chosen deformation family even when the associated Hodge-locus directions are nonzero. This supports a contrastive calibration but does not supply a coupled nonzero branch-envelope theorem.
 
 **Strongest objection:** a zero branch envelope is a logically strict weakening of full semiregularity but may simply be a decoupled/vacuous case. It is not evidence for a useful higher-codimension mechanism.
 
@@ -71,7 +76,7 @@ The expert cell reviewed the frozen H4d1a context, the parent detector-kernel fa
 
 **Background:** counterexample-first research design, degeneration/boundary cases, coefficient and category mismatch auditing.
 
-**Evidence inspected:** H4d1 hostile detector-kernel calibration; current context disanalogies; Movasati hostile source; formal/global separation.
+**Evidence inspected:** H4d1 hostile detector-kernel calibration; current context disanalogies; Movasati hostile/boundary source; formal/global separation.
 
 **Finding:** the main route risks are: (i) defining relevance after success; (ii) confusing Hodge-locus tangent space with witness tangent image; (iii) treating `B=0` as mechanism progress; (iv) using first-order equality as all-order lifting; (v) forgetting algebraization/monodromy/global continuation; and (vi) silently shifting from rational cycles to a single effective cycle.
 
@@ -87,7 +92,7 @@ The expert cell reviewed the frozen H4d1a context, the parent detector-kernel fa
 
 **Evidence inspected:** current RAKL mathematical-research workflow, H4d1a context and memory hashes, source addendum, parent trace.
 
-**Finding:** candidate generation is still blocked until this review and a seven-event hash-chained H4d1a trace pass the executable RAKL gates. The best next action is not a theorem statement but a bounded source-domain calibration with explicit result branches.
+**Finding:** candidate generation is blocked unless this review and a seven-event hash-chained H4d1a trace pass the executable RAKL gates. The best next action is not a theorem statement but a bounded source-domain calibration with explicit result branches.
 
 **Strongest objection:** a prose phrase such as “semiregularity restricted to relevant obstructions” would be an obstruction renaming, not a mathematical candidate. A future candidate must bind an independently defined deformation functor/map and exact source/target objects.
 
