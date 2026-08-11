@@ -1,0 +1,55 @@
+{
+  "schema_version": "same-context-expert-cell-v3-proposal-shadow",
+  "atom_id": "NS-B1a4",
+  "context_hash": "sha256:49764dd1f412e50e0aebb0740a88eec46c3e3370c868f961710f876c78850439",
+  "independent_review_credit": "0/3",
+  "roles": [
+    {
+      "id": "E1",
+      "background": "3D Navier-Stokes suitable weak solutions, Type-I blow-up compactness and ancient solutions",
+      "finding": "The exact target must distinguish the pre-singularity producer, finite-I ancient limit, and any downstream Liouville consumer. A local pressure/flux observation cannot be promoted to global L3 or backward uniqueness."
+    },
+    {
+      "id": "E2",
+      "background": "pressure decomposition, Calderon-Zygmund/local Leray projection and local-energy inequalities",
+      "finding": "D is a magnitude of pressure oscillation; the local-energy flux is a signed pressure-velocity/transport correlation. Bounding magnitudes does not encode temporal sign. Harmonic/nonlocal pressure remains a separate gluing coordinate."
+    },
+    {
+      "id": "E3",
+      "background": "critical scaling, concentration compactness and rigidity",
+      "finding": "A viable no-recrossing observable must be dimensionless/scale-compatible and survive translation/dilation. A proposed signed flux must also be shown to have one-sided temporal control, not merely be defined."
+    },
+    {
+      "id": "E4",
+      "background": "adversarial exact-PDE calibration and counterexample-first falsification",
+      "finding": "Pressure-free shear heat flow is an exact smooth NSE calibration showing local energy can enter a ball with p=0. It refutes pressure-alone local one-sidedness only; infinite global energy/finite-I mismatch is an explicit DifferenceWitness."
+    },
+    {
+      "id": "E5",
+      "background": "RAKL v3 authority, metrology and research assurance",
+      "finding": "Prior experience changes route priority only. Episode, diagnosis, failure, obstruction and lesson must remain distinct; shadow TaskEpisode cannot enter canonical inventory or grant promotion."
+    }
+  ],
+  "discussion": [
+    {
+      "topic": "Is this a duplicate of B1a1?",
+      "consensus": "B1a1 already proves scale-neutrality of absolute local-energy bookkeeping. The new discriminator may retain only a narrower relation: pressure magnitude is not itself the missing no-recrossing coordinate; the missing object must be a signed transport/pressure correlation or another dynamics-specific state. Do not count B1a1 again as novelty."
+    },
+    {
+      "topic": "Can the shear calibration refute finite-I no-recrossing?",
+      "consensus": "No. Its role is a local-PDE falsifier of pressure-alone/local-identity monotonicity. The finite-I/ancient theorem possibility remains open."
+    },
+    {
+      "topic": "What gluing obligations remain?",
+      "consensus": "Any signed local coordinate must be proved uniform across scale/center, stable under local convergence, compatible with harmonic pressure/far field, and sufficient for a source-valid ancient/global rigidity theorem."
+    },
+    {
+      "topic": "What route should be next if the ledger fails?",
+      "consensus": "Formulate a source-invariant signed flux/correlation candidate only if it gains a one-sided estimate from exact NSE dynamics. Otherwise rotate to another source-valid Liouville trigger. Do not return to saturated geometry/amplitude work while those branches are active."
+    }
+  ],
+  "preverification_verdict": "PROCEED_WITH_SCOPED_SIGN_REPRESENTATION_FALSIFIER",
+  "authority": "SAME_CONTEXT_INTERNAL_ONLY_NO_INDEPENDENT_REVIEW",
+  "frozen_at": "2026-08-11T21:17:00+00:00",
+  "artifact_hash": "sha256:498898b9127f5284b353f7132cf0c5d38e3bcea04a27d95eefd2f156e87f2828"
+}
