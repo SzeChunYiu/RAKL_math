@@ -1,0 +1,144 @@
+{
+  "schema_version": "rakl-v3-shadow-task-episode-v1",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "episode": {
+    "episode_id": "YM-E3A-EP-INVARIANT-BALL-REPAIR-20260811T1614Z",
+    "task_id": "YANG_MILLS_VERIFIED_DISCOVERY_ROOT_5",
+    "atom_id": "YM-E3a",
+    "context_hash": "sha256:97f8475b86180fb0e3eb747b519e385053863baffc5ce46bb19472609f24f24a",
+    "problem_signature": "Repair and source-bind the nonlinear weak-coupling recurrence used in Faizal–Shabir Appendix A / Theorem A.9 without leaving its source-stated small-ball domain; keep all continuum/OS/mass-gap gluing residuals separate.",
+    "fibre_snapshot_hash": "sha256:97f8475b86180fb0e3eb747b519e385053863baffc5ce46bb19472609f24f24a",
+    "operator_ids": [
+      "OP-COUNTEREXAMPLE-FIRST",
+      "OP-INVARIANT-BALL-INDUCTION",
+      "OP-DISCRETE-VARIATION-OF-CONSTANTS",
+      "OP-ZERO-FLOOR-CONTRACTION",
+      "OP-SOURCE-BOUND-TRANSFER",
+      "OP-LOCAL-GLOBAL-GLUING-STOP"
+    ],
+    "action_trace": [
+      "Read current RAKL main and v3 experience/method surfaces.",
+      "Read exact Yang–Mills root issue #5 and fresh atom issue #93.",
+      "Retrieve proposal-only prior TaskEpisode from PR #97 as search guidance, not authority.",
+      "Rotate away from the saturated YM-E1a1a0 source-acquisition family into YM-E3a.",
+      "Inspect primary Faizal–Shabir Appendix A claims and local recurrence domain.",
+      "Falsify the literal no-smallness Lemma A.10 by an equality-recurrence counterexample.",
+      "Prove an invariant-ball lemma with q=rho+C*r_star and a strict zero-floor contraction bound.",
+      "Run same-context seven-role expert cell and executable arithmetic/property checks.",
+      "Refuse source/root promotion because source constants, noncircular entry, theorem propagation and continuum/OS/gluing remain open."
+    ],
+    "observation_ids": [
+      "OBS-YM-E3A-A10-LITERAL-COUNTEREXAMPLE",
+      "OBS-YM-E3A-A59-POSITIVE-FLOOR",
+      "OBS-YM-E3A-LOCAL-Q-STRICT-CONTRACTION"
+    ],
+    "verification_ids": [
+      "VER-YM-E3A-ARITHMETIC-COUNTEREXAMPLE",
+      "VER-YM-E3A-INVARIANT-INDUCTION",
+      "VER-YM-E3A-PYTEST-PROPOSAL",
+      "VER-YM-E3A-SAME-CONTEXT-EXPERT-CELL"
+    ],
+    "outcome": "LOCAL_REPAIR_VERIFIED_CONDITIONALLY_SOURCE_BOUND_ROOT_OPEN",
+    "residual_signature": {
+      "local_mathematical": [
+        "Exact source binding of rho, C and local polymer radius r0.",
+        "Noncircular proof that the bare-coupling/entry-scale step reaches r_star.",
+        "Propagation of the repaired estimate through exact Theorem A.9 and any AF/universality claim."
+      ],
+      "local_to_global_gluing": [
+        "Nontrivial continuum Euclidean measure construction.",
+        "Gauge-invariance/gauge-fixing compatibility.",
+        "Reflection positivity under all relevant limits.",
+        "Finite/infinite-volume and continuum-limit uniformity and interchange.",
+        "OS reconstruction and spectral identification in the same limit theory.",
+        "Correlation decay to strictly positive physical Hamiltonian mass gap.",
+        "Official all-compact-simple-group root generality."
+      ]
+    },
+    "evidence_pointers": [
+      "RAKL_math issue #5",
+      "RAKL_math issue #93",
+      "arXiv:2606.19362v1 Appendix A (Theorem A.9, A.53, Lemma A.10, A.59)",
+      "research/real_math/millennium/yang_mills/04_candidates/YM-E3A_INVARIANT_BALL_RECURRENCE_REPAIR_20260811.md",
+      "tests/math_applications/test_ym_e3a_invariant_ball_recurrence.py",
+      "research/real_math/millennium/yang_mills/09_trace/YM-E3A_V3_TRACE_20260811.jsonl"
+    ],
+    "artifact_hash": "git_blob_sha1:e3281128e12857c31e8909bacdfee25d9994e182",
+    "timestamp": "2026-08-11T16:14:00Z",
+    "cost": {
+      "model_tokens": "CANNOT_MEASURE: harness did not expose per-run model token accounting",
+      "context_tokens": "CANNOT_MEASURE: harness did not expose exact per-run context token accounting",
+      "wall_time": "CANNOT_MEASURE: no monotonic run timer exposed to the research process",
+      "tool_calls_total": "CANNOT_MEASURE: complete connector/web call ledger was not exposed after context compaction",
+      "observable_verification_calls": 3
+    }
+  },
+  "routing_policy": {
+    "choice": "Rotate from saturated source-acquisition family to the freshest exact source-bound proof obstruction with cheap hostile falsifiers.",
+    "changed_by_prior_experience": [
+      {
+        "id": "YM-E2E3-EP-FS-PROOF-AUDIT-R2-20260811T1304Z",
+        "effect": "exposed A.10 contraction defect and opened issue #93"
+      },
+      {
+        "id": "YM-E1a1a0-family",
+        "effect": "saturation evidence lowered expected value of another Bałaban source-retrieval pass"
+      }
+    ],
+    "retrieved_but_rejected": [
+      {
+        "id": "YM-E1a1a0-family",
+        "why": "saturated external-source blocker, not the active recurrence obstruction"
+      },
+      {
+        "id": "YM-S1a2-family",
+        "why": "spectral/OS gluing atom, downstream and different context"
+      },
+      {
+        "id": "YM-E2a-family",
+        "why": "defect-budget sibling, not needed for current falsifier"
+      },
+      {
+        "id": "YM-E2b-family",
+        "why": "gap-transport sibling, not needed for current falsifier"
+      }
+    ],
+    "missed_prior_experience": "CANNOT_MEASURE: complete memory-coverage enumerator unavailable"
+  },
+  "episode_to_diagnosis": [
+    {
+      "diagnosis_id": "D-YM-E3A-MISSING-INVARIANT-BALL-SMALLNESS",
+      "status": "PROPOSAL_DIAGNOSIS",
+      "basis": "literal recurrence counterexample plus source-local domain restriction"
+    },
+    {
+      "diagnosis_id": "D-YM-E3A-A59-NONZERO-FLOOR-NOT-DECAY",
+      "status": "PROPOSAL_DIAGNOSIS",
+      "basis": "the A.59-form upper bound tends to a positive floor for positive C,r"
+    }
+  ],
+  "diagnosis_to_obstruction_or_lesson": {
+    "obstruction_proposals": [
+      {
+        "id": "F-YM-E3A-A10-LITERAL-FALSE-NO-SMALLNESS",
+        "status": "OBSERVED_PROPOSAL_NOT_PROMOTED",
+        "scope": "literal scalar lemma only"
+      }
+    ],
+    "lesson_proposals": [],
+    "note": "Episode, diagnosis, and reusable obstruction/lesson remain distinct. No proposal is granted authority merely by storage."
+  },
+  "motifs_tried": [
+    "counterexample-first falsification",
+    "invariant region before recurrence unrolling",
+    "strict contraction factor to remove positive asymptotic floor",
+    "source-domain transfer check",
+    "local-versus-global gluing firewall"
+  ],
+  "novelty_class": {
+    "classification": "COMPOSITIONAL",
+    "defensibility": "The invariant-ball direction already existed in issue #93; this cycle adds an explicit literal counterexample, a complete scoped proof, and zero-floor decay separation without claiming mathematical breakthrough novelty."
+  },
+  "trace_root_hash": "sha256:f3d25673b830f49e8306324e136bbbb3974ed31c4bbd58ff1e0205cc0879a59c",
+  "authority_decision": "NO_PROMOTION / ROOT_OPEN / SAME_CONTEXT_REVIEW_NOT_INDEPENDENT"
+}
