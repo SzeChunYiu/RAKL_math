@@ -1,0 +1,50 @@
+{
+  "atom_id": "NS-B1a3b1a2",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "cycle_id": "NS-B1a3b1a2-C001-R4-HISTORY-MULTIPLICITY-20260811",
+  "diagnosis": {
+    "category": "REPRESENTATION_AND_SCALING",
+    "id": "DX-NS-B1a3b1a2-R4-001",
+    "statement": "A fixed finite backward-history length is dimensional rather than coercive for this critical producer/consumer pair: exact Navier-Stokes parabolic scaling maps the positive-time critical-vorticity separator to any prescribed finite history H while preserving finite I and the weak-L^{3/2} endpoint norm."
+  },
+  "episode_link": "EP-NS-B1a3b1a2-R4-001",
+  "failure": {
+    "category": "LOCAL_MATHEMATICAL_PRODUCER_FAILURE",
+    "id": "F-NS-B1a3b1a2-FIXED-FINITE-HISTORY-NONCOERCIVE",
+    "scope": "Exact smooth whole-space Navier-Stokes solutions on any fixed finite interval [-H,0]. Does not cover genuine ancient solutions on (-infinity,0).",
+    "statement": "Uniform finite I on a fixed finite backward window does not imply a uniform global L^{3/2,infinity} vorticity-amplitude bound at the endpoint."
+  },
+  "gluing_residuals": [
+    {
+      "category": "LOCAL_TO_GLOBAL_SOURCE_CLASS_GLUING",
+      "id": "G-NS-B1a3b1a2-FINITE-TO-ANCIENT-HISTORY",
+      "statement": "Scaling maps finite intervals to finite intervals and does not manufacture a mild bounded ancient solution on (-infinity,0)."
+    },
+    {
+      "category": "GLOBAL_TAIL_PROFILE_GLUING",
+      "id": "G-NS-B1a3b1a2-LOCAL-DERIVATIVE-TO-GLOBAL-LORENTZ",
+      "statement": "Any positive interior smoothing lemma remains distinct from a global weak-L^{3/2} vorticity-amplitude theorem without a scale-relative tail/profile-multiplicity certificate."
+    }
+  ],
+  "lesson": {
+    "authority": "CANDIDATE_ONLY_SEARCH_PRIORITY",
+    "id": "L-NS-B1a3b1a2-SYMMETRY-NORMALIZE-PROPOSED-REGULARIZERS",
+    "statement": "Before investing in a proposed finite length/time regularizer for a critical estimate, test whether an exact problem symmetry normalizes that coordinate away while transporting a verified hostile family."
+  },
+  "motif": {
+    "authority": "PROPOSAL_SHADOW_VERIFIED_LOCAL_PATTERN",
+    "id": "M-NS-CRITICAL-FAILURE-SCALING-LIFT",
+    "statement": "Critical failure scaling lift: if producer and consumer signatures are both invariant under a symmetry, a hostile example at one finite scale can be transported to every finite normalization of the symmetry-dependent coordinate."
+  },
+  "obstruction": {
+    "id": "O-NS-B1a3b1a2-FINITE-HISTORY-SCALING-LIFT",
+    "statement": "A successful history-based producer must use a scale-invariant coordinate not removable by finite parabolic rescaling: genuine ancient/backward-sequence structure or an additional scale-relative compactness, frequency, spatial-tail, or profile-tighness certificate."
+  },
+  "prior_failures_linked": [
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+    "F-NS-B1a3b1a1-SAME-SLAB-DERIVATIVE-AMPLITUDE-PRODUCER"
+  ],
+  "schema_version": "experience-delta-v3-proposal-shadow-r4",
+  "separation_invariant": "episode != diagnosis != failure != obstruction != lesson; the lesson is not promoted and experience changes search priority only"
+}
