@@ -1,0 +1,83 @@
+{
+  "schema_version": "RAKL_CYCLE_METRICS-post-ci-v1-proposal-shadow",
+  "cycle_id": "NS-B1a3b-VORTICITY-GEOMETRY-INHERITANCE-20260811",
+  "parent_metrics_path": "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a3b_C001_RAKL_CYCLE_METRICS_20260811.json",
+  "framework": {
+    "method": "RAKL v3 Verified Discovery / proposal-shadow experience substrate",
+    "package_version": "0.1.0",
+    "git_sha": "9027cc6beab7e935d714bbdf8e902b89b50caaa8"
+  },
+  "research_content_head": "ca665c1df97a17313f59893e634e49228d250a7c",
+  "pull_request": 120,
+  "merge_commit": "57e3a4d2c5821ea33121dfe6276e0ced07c9fbc7",
+  "initial_ci": {
+    "head_sha": "6b2fdd69c9aef75f9a1e142342054db0f83f7efa",
+    "workflow_run_id": 31509368419,
+    "job_id": 93838984374,
+    "conclusion": "FAILURE",
+    "tests": {
+      "passed": 423,
+      "failed": 1
+    },
+    "failure_category": "TOOLING_APPLICATION_INVENTORY_INTEGRATION",
+    "failure_signature": "The framework PR153 compatibility test discovers top-level episode_id in research JSON as canonical episode-inventory candidates. Two non-episode diagnostic containers and one proposal/shadow TaskEpisode were therefore outside the frozen/validated inventory set.",
+    "mathematical_effect": "NONE"
+  },
+  "correction": {
+    "diagnosis_container": "renamed top-level episode_id to source_episode_id",
+    "failure_delta_container": "renamed top-level episode_id to source_episode_id",
+    "task_episode": "preserved the unchanged strict-hash proposal/shadow TaskEpisode payload as NS-B1a3b_C001_V3_TASK_EPISODE_20260811.json.shadow, keeping it outside canonical episode-inventory discovery until a protected registration gate explicitly admits it",
+    "task_episode_artifact_hash_unchanged": "8833f4f19cf44e6ace53da181a9d5f8a808422d8fb775bc07bb612bd1beb8db4",
+    "authority_effect": "NONE_PROPOSAL_SHADOW_ONLY"
+  },
+  "final_exact_head_ci": {
+    "head_sha": "ca665c1df97a17313f59893e634e49228d250a7c",
+    "pull_request_merge_test_sha": "6d7aac464b2ed03c3c1123243d125b00d0f072ef",
+    "workflow_run_id": 31509924650,
+    "job_id": 93840865939,
+    "conclusion": "SUCCESS",
+    "tests": {
+      "passed": 424,
+      "failed": 0,
+      "elapsed_seconds": 14.30
+    },
+    "exact_framework_pin_verified": "9027cc6beab7e935d714bbdf8e902b89b50caaa8"
+  },
+  "gate_provenance_status": {
+    "application_pr_merged": true,
+    "merged_at_commit": "57e3a4d2c5821ea33121dfe6276e0ced07c9fbc7",
+    "pre_action_binding": "PROSPECTIVE_BINDING_VERIFIED",
+    "task_episode_authority": "PROPOSAL_SHADOW_NOT_CANONICAL_INVENTORY",
+    "lesson_authority": "CANDIDATE_ONLY",
+    "root_promotion_gate": "BLOCKED",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "genuinely_isolated_mathematical_reviews": "0/3"
+  },
+  "post_ci_method_case_study": {
+    "what_failed": "application inventory representation/tooling, not mathematics, retrieval, decomposition, or source verification",
+    "what_worked": "CI falsified an invalid representation choice before merge; retaining proposal/shadow episode evidence outside canonical inventory restored the exact pinned suite without changing the mathematical result or the TaskEpisode content hash",
+    "v3_feature_helped": "the authority boundary made it correct to keep the episode proposal/shadow rather than forcing canonical inventory admission",
+    "v3_or_application_feature_missing": "no first-class prospective sidecar/registration convention distinguishes new proposal TaskEpisode evidence from the frozen canonical episode inventory scanner",
+    "framework_improvement_hypothesis": "Define an explicit proposal/shadow TaskEpisode sidecar convention or registration gate so application CI does not infer canonical inventory intent merely from a top-level episode_id. Treat this as a hypothesis from one observed integration failure, not a framework defect claim."
+  },
+  "retained_semantic_novelty_from_ci_correction": {
+    "KNOWLEDGE": 0,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 0,
+    "OBSTRUCTION": 0,
+    "RELATION": 0,
+    "PATH": 0,
+    "META_METHOD": 0
+  },
+  "axes_reopened_from_ci_correction": [],
+  "axes_flattened_from_ci_correction": [],
+  "resource_proxies": {
+    "ci_runs": 2,
+    "ci_jobs": 2,
+    "first_suite_tests": 424,
+    "second_suite_tests": 424,
+    "tokens_or_context": "CANNOT_MEASURE: automation harness exposes no exact token counter",
+    "aggregate_connector_calls": "CANNOT_MEASURE: connector layer exposes no complete cycle-wide counter"
+  },
+  "learning_policy": "The CI correction is assurance/tooling state only. File, commit, PR, and prose growth are not counted as learning, and all seven semantic novelty deltas for this correction are explicit zeroes."
+}
