@@ -1,0 +1,104 @@
+{
+  "schema_version": "hash-chained-research-trace-v1-proposal-shadow",
+  "atom_id": "NS-B1a3b",
+  "framework_sha": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+  "application_base_sha": "111a3f95c72b0a418f968708bd3eda77ef98bccf",
+  "events": [
+    {
+      "sequence_index": 0,
+      "event_type": "ATOMIZED",
+      "payload": {
+        "atom_id": "NS-B1a3b",
+        "parent": "NS-B1a3",
+        "root": "NS0",
+        "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+      },
+      "prev_event_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "event_hash": "sha256:7dd58eb7183c29029340019896290067fb4365408331b53c80e55c4e36e47c7c"
+    },
+    {
+      "sequence_index": 1,
+      "event_type": "CONTEXT_FROZEN",
+      "payload": {
+        "fibre_snapshot_hash": "sha256:5abea6153d4a3801a8f6637e6dc0e5aafeecefc438981052c5c9b082136818e4",
+        "context_file": "01_frontier/NS-B1a3b_CONTEXT_FIBER_20260811.json"
+      },
+      "prev_event_hash": "7dd58eb7183c29029340019896290067fb4365408331b53c80e55c4e36e47c7c",
+      "event_hash": "sha256:f037f2e7e57c51a20ae05a9e47f1ff286d860197672b2353174628308037a61d"
+    },
+    {
+      "sequence_index": 2,
+      "event_type": "ANALOGY_SCAN",
+      "payload": {
+        "selected": [
+          "CF/BB vorticity-direction coherence",
+          "Giga-Miura half-space geometry"
+        ],
+        "disanalogies": [
+          "local positive-eigenframe alignment",
+          "stationary self-similarity",
+          "boundary problem"
+        ]
+      },
+      "prev_event_hash": "f037f2e7e57c51a20ae05a9e47f1ff286d860197672b2353174628308037a61d",
+      "event_hash": "sha256:780e2dd32a614ed564f55c2ad20cac3f7618ff1f2bd0654182050454f1a5d09a"
+    },
+    {
+      "sequence_index": 3,
+      "event_type": "METHOD_TRANSFER_REVIEW",
+      "payload": {
+        "selected": [
+          "GM-THM1.1",
+          "GM-COR2.6",
+          "GM-PROP2.1",
+          "GM-PROP2.2",
+          "GM-LEMMA2.3"
+        ],
+        "transfer_rule": "bind exact theorem input/output; do not assume finite-I -> coherence"
+      },
+      "prev_event_hash": "780e2dd32a614ed564f55c2ad20cac3f7618ff1f2bd0654182050454f1a5d09a",
+      "event_hash": "sha256:6598d21a8ba2a12712786681506212a35f40f7b3dc6bcf56d674cc641820cde2"
+    },
+    {
+      "sequence_index": 4,
+      "event_type": "EXPERT_CONTEXT_REVIEW",
+      "payload": {
+        "file": "05_reviews/NS-B1a3b_EXPERT_CONTEXT_REVIEW_20260811.md",
+        "review_status": "SAME_CONTEXT_NOT_INDEPENDENT"
+      },
+      "prev_event_hash": "6598d21a8ba2a12712786681506212a35f40f7b3dc6bcf56d674cc641820cde2",
+      "event_hash": "sha256:be729008175a06c5f3e0261ddb329e6ca5e12e97034b331980bafed97a8bc000"
+    },
+    {
+      "sequence_index": 5,
+      "event_type": "EXPERIENCE_MEMORY_REVIEW",
+      "payload": {
+        "file": "07_memory/NS-B1a3b_RESEARCH_MEMORY_REVIEW_20260811.json",
+        "selected_failures": [
+          "F-NS-R001B-LOCAL-ALIGNMENT-NONSUFFICIENCY",
+          "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+          "F-NS-B1a3-UNCONTROLLED-FAR-FIELD"
+        ]
+      },
+      "prev_event_hash": "be729008175a06c5f3e0261ddb329e6ca5e12e97034b331980bafed97a8bc000",
+      "event_hash": "sha256:9aa817635e0a304873d10e57fc349e34444495a50879a75fd4da30eab401cc26"
+    },
+    {
+      "sequence_index": 6,
+      "event_type": "NEXT_STEP_PROPOSED",
+      "payload": {
+        "operator_ids": [
+          "source-signature-interface-audit",
+          "parabolic-scaling-audit",
+          "geometric-rigidity-audit",
+          "contrapositive-classification"
+        ],
+        "predeclared_discriminator": "Accept only a source-valid conditional Type-I geometric rigidity/classification result unless finite-I itself supplies the directional hypothesis; otherwise block on the exact mismatched interface."
+      },
+      "prev_event_hash": "9aa817635e0a304873d10e57fc349e34444495a50879a75fd4da30eab401cc26",
+      "event_hash": "sha256:31e329432e282e304feade437ab46352dae20488d4d6e7a9f49287d74ae1f2be"
+    }
+  ],
+  "final_event_hash": "sha256:31e329432e282e304feade437ab46352dae20488d4d6e7a9f49287d74ae1f2be",
+  "candidate_events_present": false
+}
