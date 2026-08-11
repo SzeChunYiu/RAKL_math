@@ -1,0 +1,82 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "YM-E4b2b-PRE-ACTION-20260811T180732Z",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "812e9cf18345ef430f0a4cc3ff78f93d7f18ed22",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "812addd25a7f34d3c6272143e21d5d7db34539aa",
+  "task_id": "RAKL-VD-YM-SPECTRAL-20260811-R2",
+  "atom_id": "YM-E4b2b",
+  "context_hash": "8d68972fe321047aa6baa8f001651233469bf60586553d9940046eda620025db",
+  "fibre_snapshot_hash": "66e22da0aa0ec1ef260efc37ac5a243a1c38c2e4593f7f20ef5562bd60ac9ba4",
+  "operator_ids": [
+    "process:counterexample-first-v1",
+    "decomposition",
+    "routing",
+    "source_selection_reliability",
+    "claim_extraction",
+    "mathematical_context_translation",
+    "contextual_theory_gluing",
+    "gap_discovery",
+    "experiment_query_selection",
+    "memory",
+    "review",
+    "saturation_stopping"
+  ],
+  "selected_retrievals": [
+    {
+      "retrieval_id": "SzeChunYiu/RAKL@812e9cf18345ef430f0a4cc3ff78f93d7f18ed22",
+      "authority": "CANONICAL",
+      "payload_hash": "2f2a314e774819e7935b3d2b8e9dc34955905afcb20d8577d104f842d94b1a8b"
+    },
+    {
+      "retrieval_id": "RAKL_math#138 / YM-E4b2b",
+      "authority": "CANONICAL",
+      "payload_hash": "15c0199edd0f55affa3f2a4ec12b3911c207ec27e0bcd4f576b59b601cf397c1"
+    },
+    {
+      "retrieval_id": "RAKL_math#133 / YM-E4b2",
+      "authority": "CANONICAL",
+      "payload_hash": "266c60a6e8b6c2f2061ffa6b03a5b407210c8d374b069e38b8dbd11af2de7165"
+    },
+    {
+      "retrieval_id": "RAKL_math PR#135 / YM-E4b2a",
+      "authority": "PENDING",
+      "payload_hash": "c68af59959d22062e9743cb7933b8f514920ac72c013bb7b1c746a12c20c5403"
+    },
+    {
+      "retrieval_id": "arXiv:2606.19362v1 Appendix D (D.5) and Section 7",
+      "authority": "CANONICAL",
+      "payload_hash": "587c5df9625f7ab6efcc4678fadc3799d492f835e4fd055e4a3e9675c8be053e"
+    }
+  ],
+  "rejected_retrievals": [
+    {
+      "retrieval_id": "RAKL_math#92 / YM-E2b",
+      "rejection_reason": "fixed-physical-time normalization is downstream of the D.5 derivation interface"
+    },
+    {
+      "retrieval_id": "RAKL_math#109 / YM-E4a",
+      "rejection_reason": "source-family completeness is downstream and does not imply cross-regulator relative form domination"
+    },
+    {
+      "retrieval_id": "RAKL_math PR#62 / YM-S1a1-C001",
+      "rejection_reason": "fixed-Hilbert spectral exclusion lemma cannot establish varying-regulator OS-form domination"
+    },
+    {
+      "retrieval_id": "cross-Millennium memory",
+      "rejection_reason": "not queried: exact-theory Yang-Mills/source evidence supplies a closer applicability match; no DifferenceWitness justified farther transfer"
+    }
+  ],
+  "predeclared_discriminator": "Verify or falsify the generic implication RP + common positive-time algebra + tightness/weak convergence + pointwise OS-form convergence + regulator-uniform exponential clustering => regulator-uniform D.5 relative domination. Counterexample path is admissible only if the probability family genuinely satisfies every antecedent; a bare PSD-form family is rejected. A falsification may narrow the source-facing route but cannot refute a stronger Yang-Mills-specific estimate.",
+  "allowed_outcome_branches": [
+    "SUCCESS",
+    "PARTIAL_SUCCESS",
+    "FAILURE",
+    "BLOCKED",
+    "UNKNOWN"
+  ],
+  "frozen_at_utc": "2026-08-11T18:07:32Z",
+  "sequence_index": 0,
+  "receipt_canonical_sha256": "1eed5f083fa5be599f38277d1f116cc9065bbcc808deb02801cbf25b046b3231"
+}
