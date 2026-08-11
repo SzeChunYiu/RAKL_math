@@ -1,0 +1,39 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "PNP-O9d12a2a1a1d-PRE-ACTION-VERIFY-R1-20260811",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "e5cefe3dbdf78089a39e77f2de4d88aaade9f148",
+  "task_id": "millennium-p-vs-np:verify-join-elimination-normal-form",
+  "atom_id": "O9d12a2a1a1d",
+  "context_hash": "sha256:a1ced8bf6aa84513176749025da4d4ff0f60cd85161399788a81e2aa39cb1359",
+  "fibre_snapshot_hash": "sha256:a1ced8bf6aa84513176749025da4d4ff0f60cd85161399788a81e2aa39cb1359",
+  "operator_ids": [
+    "OP-JOIN-SCC-ELIMINATION",
+    "OP-COUNTEREXAMPLE-FIRST",
+    "OP-SOURCE-SEMANTICS-RECHECK"
+  ],
+  "selected_retrievals": [
+    {"retrieval_id":"O9d12a2a1a1d-CONTEXT-FIBRE","authority":"NONCANONICAL","payload_hash":"a1ced8bf6aa84513176749025da4d4ff0f60cd85161399788a81e2aa39cb1359"},
+    {"retrieval_id":"O9d12a2a1a1d-SOURCE-PACKET","authority":"NONCANONICAL","payload_hash":"656195cc6b4f07556b905f8707e0d62ebbd9395523509a1632741858235e7b7d"},
+    {"retrieval_id":"O9d12a2a1a1b-PARENT-CONTEXT","authority":"CANONICAL","payload_hash":"912f028b6ca1c52f700dace9fa315448e3ed6a7d52d8b1ee04f0e11d66a1f398"},
+    {"retrieval_id":"PNP-O9d12a2a1a1b-MEMORY-20260811-R2","authority":"CANONICAL","payload_hash":"0c211e7a69f327bb38368a2efb964be8a17a6ed66f1014e6ff2c4aa844afec90"},
+    {"retrieval_id":"RAKL-CYCLE-METRICS-PNP-O9d12a2a1a1b-R2-20260811","authority":"CANONICAL","payload_hash":"65e634c823a0dcd8117a97797257adef9ba26ed05285ce3961177b6d15f7218b"}
+  ],
+  "rejected_retrievals": [
+    {"retrieval_id":"PR113-FREE-UNION-QUOTIENT","rejection_reason":"pending non-main artifact; used only as search-priority evidence, not authority"},
+    {"retrieval_id":"ECCC-TR26-118-RANGE-AVOIDANCE","rejection_reason":"no applicability/DifferenceWitness to cyclic set-system normalization"},
+    {"retrieval_id":"CROSS-MILLENNIUM-IMPORT","rejection_reason":"no justified applicability witness for the exact local atom"}
+  ],
+  "predeclared_discriminator": "Attempt OR-only SCC/reachability elimination and compare least-fixed-point semantics on the frozen hostile worlds; any finite mismatch refutes the normal form.",
+  "allowed_outcome_branches": [
+    "VERIFIED_LOCAL_REPRESENTATION_NORMAL_FORM",
+    "REFUTED_BY_HOSTILE_WORLD",
+    "CANNOT_CHECK_SOURCE_OR_SEMANTICS",
+    "PARTIAL_SUCCESS_WITH_RESIDUAL"
+  ],
+  "frozen_at_utc": "2026-08-11T15:34:47Z",
+  "sequence_index": 1,
+  "receipt_canonical_sha256": "88df72fdde1852416199e266ba950a7269af17aee65dadf170cd599250aabce6"
+}
