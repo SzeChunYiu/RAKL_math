@@ -1,0 +1,52 @@
+name: RH spectral assurance
+
+on:
+  pull_request:
+    paths:
+      - 'research/real_math/millennium/riemann_hypothesis/**'
+      - 'tests/math_applications/test_rh_spec_*.py'
+      - '.github/workflows/rh-spectral-assurance.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  strict-packet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout mathematical application head
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout current RAKL framework main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 https://github.com/SzeChunYiu/RAKL.git /tmp/rakl-framework
+          echo "RAKL_FRAMEWORK_SHA=$(git -C /tmp/rakl-framework rev-parse HEAD)" | tee -a "$GITHUB_ENV"
+
+      - name: Install exact framework checkout and test runner
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install -e '/tmp/rakl-framework[test]'
+          python -m pip install pytest
+
+      - name: Show exact assurance subjects
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "application_head=$(git rev-parse HEAD)"
+          echo "framework_head=$RAKL_FRAMEWORK_SHA"
+
+      - name: Run RH spectral strict assurance regressions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pytest -q \
+            tests/math_applications/test_rh_spec_001_strict_packet.py \
+            tests/math_applications/test_rh_spec_001_bridge_matrix.py \
+            tests/math_applications/test_rh_spec_002_strict_packet.py
