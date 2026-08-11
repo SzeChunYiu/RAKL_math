@@ -1,0 +1,180 @@
+{
+  "schema_version": "bsd-v3-case-study-episode-v1",
+  "artifact_type": "TASK_EPISODE_SHADOW",
+  "episode_id": "EP-BSD-A1A1-CURRENT-2026-FRONTIER-20260811-R2",
+  "task_id": "RAKL-VERIFIED-DISCOVERY-BSD-ANALYTIC",
+  "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "authority": "PROPOSAL_SHADOW_SEARCH_PRIORITY_ONLY",
+  "framework_semantic_authority": {
+    "repository": "https://github.com/SzeChunYiu/RAKL.git",
+    "commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "method_version": "CANNOT_MEASURE",
+    "method_version_reason": "current RAKL main has no RAKL_VERSION.json machine-readable method manifest"
+  },
+  "application_cycle_base": {
+    "repository": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "commit": "8a608f340d47b4b6ae612275b0595faf6b804432"
+  },
+  "execution_dependency_pin": {
+    "repository": "https://github.com/SzeChunYiu/RAKL.git",
+    "commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
+  },
+  "context_hash": "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d",
+  "problem_signature": [
+    "Birch and Swinnerton-Dyer conjecture",
+    "exact complex analytic rank two",
+    "anticyclotomic T/J-adic order",
+    "derived p-adic regulator/height nondegeneracy",
+    "local-to-global root-coordinate preservation"
+  ],
+  "fibre_contents_consulted": [
+    {
+      "kind": "CONTEXT",
+      "id": "BSD_A1a1_THETA_ORDER_CONTEXT_FIBER_20260811",
+      "effect": "kept complex s-order and anticyclotomic T/J-order distinct"
+    },
+    {
+      "kind": "MEMORY",
+      "id": "BSD_A1a1_RESEARCH_MEMORY_REVIEW_20260811",
+      "effect": "selected root-bridge stability audit and prior failure warning"
+    },
+    {
+      "kind": "TOOL",
+      "id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "effect": "redirected search to preservation/gluing relation"
+    },
+    {
+      "kind": "FAILURE_WARNING",
+      "id": "F-XM001-POINTWISE-GAP-COLLAPSE",
+      "effect": "used as scoped bridge warning only"
+    },
+    {
+      "kind": "PARALLEL_NEAR_MISS",
+      "id": "BSD-S001c1-KURIHARA-TAYLOR-COMPARISON",
+      "effect": "showed exact p-primary arithmetic does not identify complex analytic order"
+    },
+    {
+      "kind": "NONCANONICAL_PROPOSAL",
+      "id": "RAKL_math-PR-41",
+      "effect": "consulted derived-height/semisimplicity route as unmerged hypothesis only"
+    }
+  ],
+  "operators_and_motifs": [
+    {
+      "id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "status": "SELECTED"
+    },
+    {
+      "id": "PRIMARY_SOURCE_HYPOTHESIS_STRENGTH_AUDIT",
+      "status": "SELECTED"
+    },
+    {
+      "id": "CONTRASTIVE_NEAR_MISS",
+      "status": "SELECTED"
+    },
+    {
+      "id": "CONTEXTUAL_THEORY_GLUING_AUDIT",
+      "status": "SELECTED"
+    },
+    {
+      "id": "NEW_SCALAR_INVARIANT_INVENTION",
+      "status": "REJECTED"
+    },
+    {
+      "id": "NUMERICAL_RANK_TWO_CALIBRATION_AS_AUTHORITY",
+      "status": "REJECTED"
+    }
+  ],
+  "search_policy_choice": {
+    "policy": "MAX_EPISTEMIC_CONTRACTION_BY_CURRENT_FRONTIER_RELATION_AUDIT",
+    "why": "existing local machinery is strong; the smallest live cut is exact cross-direction preservation from complex s-order to anticyclotomic order/regulator"
+  },
+  "primary_source_observations": [
+    {
+      "id": "OBS-BSD-R2-2608",
+      "source": "arXiv:2608.06879",
+      "statement": "new integral anticyclotomic Iwasawa main conjecture for CM elliptic curves at ramified primes expands p-adic local machinery but remains in anticyclotomic twist coordinates and special arithmetic scope"
+    },
+    {
+      "id": "OBS-BSD-R2-2603",
+      "source": "arXiv:2603.22483",
+      "statement": "new anticyclotomic main-conjecture result is for modular forms of even weight at least 4, so it is not the weight-two elliptic-curve bridge and does not resolve the s-versus-character direction mismatch"
+    },
+    {
+      "id": "OBS-BSD-R2-CASTELLA-HSIEH",
+      "source": "arXiv:1809.09066",
+      "statement": "rank-two generalized-Kato leading-term machinery uses anticyclotomic order/height data but does not derive the exact order from bare complex analytic rank two"
+    },
+    {
+      "id": "OBS-BSD-R2-KIM",
+      "source": "arXiv:2203.12161",
+      "statement": "higher Gross-Zagier/Selmer machinery gives strong arbitrary-rank arithmetic structure but not the universal exact complex-rank-two to anticyclotomic-order theorem"
+    }
+  ],
+  "verification_performed": [
+    "read current RAKL main exact commit and authority-hardening PR state",
+    "read current RAKL_math main, BSD root issue, README, open obligations, frozen context and memory review",
+    "verified current primary arXiv records for 2608.06879, 2603.22483, 1809.09066 and 2203.12161",
+    "inspected open BSD analytic PR #76 and confirmed its exact-head pinned application workflow succeeded",
+    "kept PR #41 unmerged mathematics noncanonical"
+  ],
+  "outcome": "PARTIAL_SUCCESS",
+  "mathematical_result_scope": "SOURCE_BOUND_ROUTE_REFINEMENT_NO_THEOREM",
+  "failure_partition": {
+    "mathematical": [
+      "missing exact complex-s to anticyclotomic-T/J order or regulator preservation theorem"
+    ],
+    "representation": [
+      "complex s-order and anticyclotomic character order remain distinct coordinates"
+    ],
+    "gluing": [
+      "local complex, p-adic and Selmer results lack a verified root-preserving interface"
+    ],
+    "retrieval": [],
+    "source_provenance": [
+      "current 2026 source scan adds near-solved contexts but no target-scope bridge"
+    ],
+    "verification_tooling": [
+      "semantic framework authority differs from frozen execution dependency pin; no migration is performed in this cycle"
+    ]
+  },
+  "residual_before": [
+    "find a non-circular theorem carrying exact complex analytic rank two to exact anticyclotomic theta order or regulator/height nondegeneracy"
+  ],
+  "residual_after": [
+    "same root relation gap remains after latest August 2026 source audit",
+    "new CM/ramified-prime main-conjecture result is a near-solved p-adic context with explicit target disanalogies",
+    "next discriminator is an exact cross-direction leading-term theorem or a logical-strength obstruction showing root-strength arithmetic input is unavoidable for the proposed route"
+  ],
+  "saturation_vector": {
+    "KNOWLEDGE": "REOPENED_BY_CURRENT_SOURCE",
+    "OPERATOR": "LOCALLY_FLAT_ONLY",
+    "EXPERIENCE_PATTERN": "OPEN",
+    "OBSTRUCTION": "OPEN_EXISTING",
+    "RELATION": "REOPENED_BY_CURRENT_SOURCE_DISANALOGY",
+    "PATH": "OPEN_EXISTING",
+    "META_METHOD": "OPEN_EXISTING"
+  },
+  "novelty_classification": {
+    "class": "UNRESOLVED",
+    "reason": "problem-novelty classification applies to verified solutions; this is a route diagnostic"
+  },
+  "next_action": "do not generate a theorem candidate; search only for exact complex-to-anticyclotomic leading-term/order transport or source-valid strength obstruction, then rotate representation/path if absent",
+  "new_authority_objects": {
+    "lessons_promoted": [],
+    "tools_promoted": [],
+    "mathematical_candidates": [],
+    "root_promotions": []
+  },
+  "evidence_pointers": [
+    "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_THETA_ORDER_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_CURRENT_2026_ANTICYCLOTOMIC_FRONTIER_AUDIT.md",
+    "arXiv:2608.06879",
+    "arXiv:2603.22483",
+    "arXiv:1809.09066",
+    "arXiv:2203.12161"
+  ],
+  "recorded_at_utc": "2026-08-11T11:55:00Z",
+  "artifact_hash": "sha256:d3a31982e0e62a0554e369d13a89cfc5a32ecb896718f2d2c034f210bf94f3a9"
+}
