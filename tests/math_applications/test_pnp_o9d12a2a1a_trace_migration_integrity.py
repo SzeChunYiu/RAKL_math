@@ -5,6 +5,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from jsonschema import Draft202012Validator, FormatChecker
+
 
 ROOT = Path(__file__).resolve().parents[2]
 TRACE_DIR = ROOT / "research/real_math/millennium/p_vs_np/09_trace"
@@ -14,6 +16,7 @@ REPAIRED = (
     / "O9d12a2a1a_PRE_CANDIDATE_TRACE_MIGRATION_REPAIRED_20260811.json"
 )
 RECEIPT = ROOT / "migration/O9d12a2a1a_TRACE_INTEGRITY_REPAIR_RECEIPT_20260811.json"
+SCHEMA = ROOT / "schemas/migration-integrity-repair-receipt.schema.json"
 
 
 def _canonical_hash(value: object) -> str:
@@ -34,6 +37,10 @@ def _event_hash(event: dict) -> str:
 def test_receipt_preserves_the_source_failure_and_is_self_hashing() -> None:
     receipt = json.loads(RECEIPT.read_text(encoding="utf-8"))
     original = json.loads(ORIGINAL.read_text(encoding="utf-8"))
+
+    schema = json.loads(SCHEMA.read_text(encoding="utf-8"))
+    Draft202012Validator.check_schema(schema)
+    Draft202012Validator(schema, format_checker=FormatChecker()).validate(receipt)
 
     receipt_for_hash = copy.deepcopy(receipt)
     receipt_for_hash["artifact_hash"] = ""
