@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rakl.local/schemas/pnp-c034-c040-external-ledger-assessment.schema.json",
+  "title": "P-vs-NP C034-C040 external ledger assessment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "assessment_id", "recorded_at", "object", "qoi",
+    "framework_authority", "source_ledger", "packet_status",
+    "bundle_completeness", "desk_checks", "claim_assessments",
+    "repository_relationship", "review_authority", "authority_contract",
+    "next_required_actions", "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "assessment_id": {"const": "PNP-C034-C040-EXTERNAL-LEDGER-ASSESSMENT-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "object": {"type": "string", "minLength": 1},
+    "qoi": {"type": "string", "minLength": 1},
+    "framework_authority": {
+      "type": "object", "additionalProperties": false,
+      "required": ["repository", "commit", "application_gitlink"],
+      "properties": {
+        "repository": {"const": "https://github.com/SzeChunYiu/RAKL.git"},
+        "commit": {"const": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"},
+        "application_gitlink": {"const": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"}
+      }
+    },
+    "source_ledger": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "source_commit", "git_blob_sha", "sha256", "size_bytes", "line_count", "carriage_return_count", "reported_origin", "origin_verification"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "source_commit": {"pattern": "^[0-9a-f]{40}$"},
+        "git_blob_sha": {"pattern": "^[0-9a-f]{40}$"},
+        "sha256": {"pattern": "^sha256:[0-9a-f]{64}$"},
+        "size_bytes": {"const": 15639},
+        "line_count": {"const": 549},
+        "carriage_return_count": {"const": 5},
+        "reported_origin": {"type": "string", "minLength": 1},
+        "origin_verification": {"const": "NOT_INDEPENDENTLY_VERIFIED"}
+      }
+    },
+    "packet_status": {"const": "QUARANTINED_EXTERNAL_PROPOSAL"},
+    "bundle_completeness": {
+      "type": "object", "additionalProperties": false,
+      "required": ["present_artifact_count", "missing_artifact_count", "present_artifacts", "missing_named_artifacts", "verdict"],
+      "properties": {
+        "present_artifact_count": {"const": 1},
+        "missing_artifact_count": {"const": 26},
+        "present_artifacts": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "missing_named_artifacts": {"type": "array", "minItems": 26, "maxItems": 26, "uniqueItems": true, "items": {"type": "string"}},
+        "verdict": {"const": "INCOMPLETE_MISSING_ALL_NAMED_CERTIFICATES_VERIFIERS_AND_PROCESS_ARTIFACTS"}
+      }
+    },
+    "desk_checks": {
+      "type": "object", "additionalProperties": false,
+      "required": ["full_union_argument", "witness_persistence_argument", "rule_counts", "reported_increments", "rendering_defect", "c037_replay_receipt"],
+      "properties": {
+        "full_union_argument": {"type": "string", "minLength": 1},
+        "witness_persistence_argument": {"type": "string", "minLength": 1},
+        "rule_counts": {
+          "type": "array", "minItems": 4, "maxItems": 4,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["m", "all_rules", "full_union_rules"],
+            "properties": {"m": {"type": "integer"}, "all_rules": {"type": "integer"}, "full_union_rules": {"type": "integer"}}
+          }
+        },
+        "reported_increments": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "string"}},
+        "rendering_defect": {"type": "string", "minLength": 1},
+        "c037_replay_receipt": {"type": "string", "minLength": 1}
+      }
+    },
+    "claim_assessments": {
+      "type": "array", "minItems": 9, "uniqueItems": true,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["claim_id", "claim", "verdict", "authority", "evidence", "residual"],
+        "properties": {
+          "claim_id": {"type": "string", "minLength": 1},
+          "claim": {"type": "string", "minLength": 1},
+          "verdict": {
+            "enum": [
+              "DESK_CHECK_PASS_PROOF_AUTHORITY_NONE",
+              "CONDITIONAL_DESK_CHECK_PASS_STATEMENT_BINDING_MISSING",
+              "INDEPENDENT_FINITE_REPLAY_PASS",
+              "ARITHMETIC_RECOMPUTATION_PASS",
+              "CANNOT_CHECK_MISSING_CERTIFICATE_AND_RECEIPT",
+              "CANNOT_CHECK_MISSING_PROCESS_ARTIFACTS",
+              "NOVELTY_UNRESOLVED"
+            ]
+          },
+          "authority": {"type": "string", "minLength": 1},
+          "evidence": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "residual": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "repository_relationship": {
+      "type": "object", "additionalProperties": false,
+      "required": ["current_main_authority", "c024_relationship", "pr49_relationship", "canonical_status"],
+      "properties": {
+        "current_main_authority": {"type": "string", "minLength": 1},
+        "c024_relationship": {"type": "string", "minLength": 1},
+        "pr49_relationship": {"type": "string", "minLength": 1},
+        "canonical_status": {"const": "NOT_CANONICAL_NOT_PROMOTED"}
+      }
+    },
+    "review_authority": {"const": "SAME_CONTEXT_INTERNAL_ASSURANCE_NOT_INDEPENDENT_PEER_REVIEW"},
+    "authority_contract": {
+      "type": "object", "additionalProperties": false,
+      "required": ["grants_proof_authority", "grants_p_vs_np_root_authority", "grants_theorem_authority", "grants_novelty_authority", "grants_framework_authority", "grants_review_independence", "grants_strict_rakl_process_credit", "may_promote_reported_certificates"],
+      "properties": {
+        "grants_proof_authority": {"const": false},
+        "grants_p_vs_np_root_authority": {"const": false},
+        "grants_theorem_authority": {"const": false},
+        "grants_novelty_authority": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false},
+        "grants_strict_rakl_process_credit": {"const": false},
+        "may_promote_reported_certificates": {"const": false}
+      }
+    },
+    "next_required_actions": {"type": "array", "minItems": 5, "items": {"type": "string", "minLength": 1}},
+    "artifact_hash": {"pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}

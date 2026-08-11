@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "PNP-C037-EXTERNAL-LEDGER-EXACT-REPLAY-20260811",
+  "recorded_at": "2026-08-11T13:50:00Z",
+  "method": "complete full-union rule enumeration plus exact rational primal-dual certificate checking",
+  "oracle_path": "research/real_math/millennium/p_vs_np/05_falsification/full_cover_oracle.py",
+  "instances": [
+    {
+      "instance_id": "C037-PARENT-U",
+      "ambient_bipartition": "3x3",
+      "complement_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "complement_edge_count": 4,
+      "relevant_semifilter_count": 19,
+      "full_union_pair_count": 25,
+      "primal_support": [
+        {
+          "e_mask": 3,
+          "h_mask": 12,
+          "e_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "h_edges": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "weight": "1/2"
+        },
+        {
+          "e_mask": 5,
+          "h_mask": 10,
+          "e_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "h_edges": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "weight": "1/2"
+        },
+        {
+          "e_mask": 9,
+          "h_mask": 14,
+          "e_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "h_edges": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "weight": "1/2"
+        }
+      ],
+      "dual_support": [
+        {
+          "minimal_masks": [
+            1,
+            4
+          ],
+          "minimal_edge_sets": [
+            [
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                2,
+                1
+              ]
+            ]
+          ],
+          "weight": "1/2"
+        },
+        {
+          "minimal_masks": [
+            1,
+            6,
+            10
+          ],
+          "minimal_edge_sets": [
+            [
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            [
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          ],
+          "weight": "1/2"
+        },
+        {
+          "minimal_masks": [
+            2,
+            4
+          ],
+          "minimal_edge_sets": [
+            [
+              [
+                1,
+                2
+              ]
+            ],
+            [
+              [
+                2,
+                1
+              ]
+            ]
+          ],
+          "weight": "1/2"
+        }
+      ],
+      "minimum_primal_coverage": "1",
+      "maximum_dual_rule_load": "1",
+      "primal_total": "3/2",
+      "dual_total": "3/2",
+      "exact_optimum": "3/2",
+      "primal_feasible": true,
+      "dual_feasible": true
+    },
+    {
+      "instance_id": "C037-CHILD-U-PRIME",
+      "ambient_bipartition": "3x3",
+      "complement_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "complement_edge_count": 5,
+      "relevant_semifilter_count": 141,
+      "full_union_pair_count": 90,
+      "primal_support": [
+        {
+          "e_mask": 1,
+          "h_mask": 30,
+          "e_edges": [
+            [
+              0,
+              0
+            ]
+          ],
+          "h_edges": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "weight": "1"
+        }
+      ],
+      "dual_support": [
+        {
+          "minimal_masks": [
+            1,
+            14,
+            22,
+            24
+          ],
+          "minimal_edge_sets": [
+            [
+              [
+                0,
+                0
+              ]
+            ],
+            [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            [
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ]
+          ],
+          "weight": "1"
+        }
+      ],
+      "minimum_primal_coverage": "1",
+      "maximum_dual_rule_load": "1",
+      "primal_total": "1",
+      "dual_total": "1",
+      "exact_optimum": "1",
+      "primal_feasible": true,
+      "dual_feasible": true
+    }
+  ],
+  "strict_drop": "1/2",
+  "authority_contract": {
+    "finite_computational_replay_only": true,
+    "grants_asymptotic_authority": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_novelty_authority": false,
+    "grants_review_independence": false
+  },
+  "artifact_hash": "sha256:7d73d2d1fe206c69b7814fca00d6818cd1f03f8a55fb7c9e31a38666f73a6ca4"
+}
