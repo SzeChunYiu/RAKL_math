@@ -1,0 +1,51 @@
+schema_version: bsd-r8-route-diagnostic-v1
+cycle_id: BSD-A1a1-CURRENT-RANK2-CLAIM-PARITY-AUDIT-20260812-R8
+authority: PROPOSAL_SHADOW_ROUTE_DIAGNOSTIC_NO_ROOT_AUTHORITY
+active_atom: BSD-A1a1-THETA-ORDER-COMPARISON
+fibre_snapshot_hash: sha256:6d2e1fc36ff8863db99e826fc5f6f9609a1b5c8733968dfb1fa88207e5cb8b2e
+root_state: OPEN_NO_SOLUTION_CERTIFICATE
+route_before:
+  - exact_complex_analytic_rank_two
+  - CURRENT_2026_CLAIM_definite_anticyclotomic_Iwasawa_bridge
+  - algebraic_rank_two_and_finite_Sha
+  - full_BSD_glue
+source_bound_falsifier:
+  claimant_hypothesis: every ell_dividing_N splits_in_K
+  derived_character_value: epsilon_N_equals_plus_one
+  Howard_root_sign: sign_E_over_K_equals_minus_epsilon_N_equals_minus_one
+  Howard_vertex: INDEFINITE
+  claimant_vertex: DEFINITE
+  verdict: CONTRADICTION_AT_BASE_SIGN_PARTITION
+quaternion_check:
+  all_split_implies_N_minus: 1
+  finite_inert_prime_count: 0
+  base_vertex: INDEFINITE
+  one_auxiliary_inert_prime_effect: TOGGLES_TO_DEFINITE
+  claimant_direction: REVERSED
+cross_checks:
+  Nguyen_arXiv_2510_12890: INDEFINITE_rank_one_anticyclotomic_object
+  CGLS_arXiv_2008_02571: all_split_Heegner_hypothesis_rank_one_anticyclotomic_Selmer
+route_after:
+  - exact_complex_analytic_rank_two
+  - CURRENT_WANG_ROUTE_PRUNED_SOURCE_SPECIFIC_SIGN_PARITY_CONTRADICTION
+  - MISSING_general_verified_analytic_to_arithmetic_rank_two_bridge
+  - MISSING_Mordell_Weil_Sha_regulator_Tamagawa_torsion_complex_leading_term_glue
+failure_classification:
+  mathematical: CLAIMED_COMPOSITION_FAILS
+  source: FOUNDATIONAL_SOURCE_LOCAL_SIGN_CONTRADICTION
+  representation: DEFINITE_INDEFINITE_VERTEX_SWAPPED
+  gluing: DOWNSTREAM_IWASAWA_CHAIN_CANNOT_GLUE_TO_INCOHERENT_BASE_VERTEX
+  retrieval: BOUNDED_CURRENT_SEARCH_NOT_COMPLETE
+  verification: PRIMARY_SOURCE_CROSS_CHECK_COMPLETED_NO_ROOT_CANDIDATE
+local_vs_global:
+  local_mathematical_failure: true
+  local_failure_scope: audited_current_proof_claim_only
+  local_to_global_gluing_failure: true
+  global_BSD_status: OPEN
+novelty_class:
+  primary: compositional
+  secondary: [ontology, transfer]
+saturation:
+  reopened: [KNOWLEDGE, OBSTRUCTION, RELATION, PATH]
+  flattened: [OPERATOR, EXPERIENCE_PATTERN, META_METHOD]
+next_discriminator: Search for a source-valid number-field analytic-rank-two bridge only after excluding the refuted current claim; do not continue auditing its downstream chain unless a corrected version repairs the root-sign/quaternion partition and rebinds every dependent theorem.
