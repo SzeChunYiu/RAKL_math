@@ -1,0 +1,126 @@
+{
+  "context_id": "NS-B1a2-CONTEXT-20260811",
+  "atom_id": "NS-B1a2",
+  "parent_atom_id": "NS-B1a1",
+  "root_id": "NS0",
+  "authority": "FROZEN_PRE_CANDIDATE_CONTEXT / PROPOSAL_ONLY / ROOT_AUTHORITY_NONE",
+  "framework_current_main": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+  "framework_pin_observed": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+  "rakl_math_base": "8a608f340d47b4b6ae612275b0595faf6b804432",
+  "exact_atomic_obstruction": "Determine whether finite Type-I local scale-invariant control plus renormalized-orbit compactness/averaging can force one late self-similar time slice with quantitatively small scaling-generator drift, sufficient to activate a source-valid near-self-similarity regularity criterion; test the compactness-to-small-drift inference before proposing any theorem.",
+  "structural_coordinates": [
+    "3D incompressible Navier-Stokes",
+    "mild bounded ancient solution in the Albritton-Barker finite-I Type-I class",
+    "self-similar coordinates y=x/sqrt(-t), s=-log(-t)",
+    "local scale-invariant A,C,D,E control",
+    "criticality and translation/dilation noncompactness",
+    "renormalized-orbit dynamics rather than fixed-profile assumption",
+    "Pineau-Vicol one-slice self-similar-time derivative criterion",
+    "pointwise Type-I and fixed-annulus pressure prerequisites of that criterion",
+    "periodic/RDSS and rotating/RSS near-miss orbit classes",
+    "local-to-global bridge from compactness to rigidity trigger"
+  ],
+  "equivalent_or_related_formulations": [
+    "Pineau-Vicol condition (1.17) is the self-similar-time derivative bound on U at one late similarity time",
+    "weaker Pineau-Vicol Remark 1.11 uses Gaussian-weighted L1 smallness of |partial_s U|",
+    "Albritton-Barker Liouville trigger uses a backward sequence of globally L3-bounded times, a distinct route",
+    "DSS/RDSS correspond to periodic-in-self-similar-time profiles and are not fixed points"
+  ],
+  "solved_or_near_solved_contexts": [
+    {
+      "context": "exact/rotated self-similarity with pointwise Type-I decay",
+      "method": "weighted-L2 enstrophy/Bernoulli analysis",
+      "enabling_assumptions": "exact RSS ansatz and pointwise Type-I decay; Pineau-Vicol v2 excludes sufficiently small or large rotation parameter, not all rotated profiles"
+    },
+    {
+      "context": "RDSS with extreme rotation parameter and scaling factor sufficiently close to 1",
+      "method": "time-periodic profile estimates plus weighted-L2 control",
+      "enabling_assumptions": "exact RDSS periodicity and small self-similar period in the allowed parameter regimes"
+    },
+    {
+      "context": "local approximate self-similarity",
+      "method": "Pineau-Vicol Theorem 1.9 / Remark 1.11",
+      "enabling_assumptions": "local pointwise Type-I velocity upper bound, fixed-annulus pressure bound, and one sufficiently late slice with small self-similar-time derivative"
+    },
+    {
+      "context": "mild ancient solutions with global L3 bound along backward sequence",
+      "method": "Albritton-Barker Liouville theorem",
+      "enabling_assumptions": "global L3 control at a backward sequence of times"
+    }
+  ],
+  "method_transfer_matrix": [
+    {
+      "source": "compact or precompact dynamical orbit",
+      "target": "one-slice small self-similar-time derivative",
+      "shared_structure": "bounded recurrent trajectory in renormalized state space",
+      "broken_assumption": "compactness alone supplies no gradient-flow/Lyapunov structure and does not force instantaneous drift to become small",
+      "smallest_repair_question": "What additional finite-variation, monotone, no-recurrence or dissipative defect is inherited from the Type-I Navier-Stokes class?"
+    },
+    {
+      "source": "time averaging of a bounded renormalized trajectory",
+      "target": "near-stationary profile",
+      "shared_structure": "long-time averages make average vector increment small",
+      "broken_assumption": "cancellation in vector increments does not bound the average norm of partial_s U or a single-time norm; nonlinear averaging also generates fluctuation/Reynolds-stress terms",
+      "smallest_repair_question": "Can one control total variation or fluctuations strongly enough to convert average cancellation into pointwise-in-time generator smallness?"
+    },
+    {
+      "source": "Pineau-Vicol near-self-similar regularity criterion",
+      "target": "finite-I Albritton-Barker ancient class",
+      "shared_structure": "Type-I scaling and self-similar time",
+      "broken_assumption": "finite A,C,D,E does not itself provide the theorem's pointwise Type-I bound, fixed-annulus L-infinity pressure bound, or one-slice generator smallness",
+      "smallest_repair_question": "Which of these hypotheses can be inherited or replaced under the exact finite-I class without circularly assuming regularity?"
+    }
+  ],
+  "cross_domain_analogy_scan": [
+    {
+      "source_domain": "dynamical systems",
+      "source_object": "uniform rotation z(s)=(cos s,sin s) on the unit circle",
+      "common_abstraction": "precompact recurrent orbit",
+      "mapping": "renormalized Navier-Stokes orbit ↔ state trajectory; partial_s U ↔ velocity along the orbit",
+      "shared_constraints": "bounded state and precompact range",
+      "disanalogy": "circle rotation is not a Navier-Stokes solution and supplies no PDE information",
+      "transferable_principle": "precompactness alone cannot imply a sequence of small instantaneous drift norms",
+      "falsifiable_validation": "compute |z'(s)|=1 for every s while the orbit is compact"
+    },
+    {
+      "source_domain": "gradient flows",
+      "source_object": "trajectory with coercive Lyapunov functional and finite total dissipation",
+      "common_abstraction": "long-time trajectory with a finite monotone budget",
+      "mapping": "dissipation integral ↔ proposed self-similar-time drift defect",
+      "shared_constraints": "would convert finite total variation/dissipation into liminf small drift",
+      "disanalogy": "no such Lyapunov quantity is currently inherited from finite-I Navier-Stokes",
+      "transferable_principle": "a genuine sign-controlled finite budget, not compactness alone, is the missing structural coordinate",
+      "falsifiable_validation": "derive or refute a source-valid monotone identity under the exact Type-I class"
+    }
+  ],
+  "source_anchors": [
+    {
+      "id": "AB-1811.00502",
+      "url": "https://arxiv.org/abs/1811.00502",
+      "checked": "2026-08-11",
+      "role": "Type-I ancient-class equivalence and backward-sequence L3 Liouville trigger"
+    },
+    {
+      "id": "PV-2607.09619v2",
+      "url": "https://arxiv.org/html/2607.09619v2",
+      "checked": "2026-08-11",
+      "role": "RSS/RDSS scenario matrix and one-slice approximate-self-similarity regularity criterion"
+    },
+    {
+      "id": "BP-1812.09115",
+      "url": "https://arxiv.org/abs/1812.09115",
+      "checked": "2026-08-11",
+      "role": "critical-norm concentration calibration near Type-I singularities"
+    }
+  ],
+  "pre_candidate_falsifier": "Before proposing any Navier-Stokes theorem, test whether precompactness, boundedness or long-time averaging alone logically forces a late time with small norm of partial_s U. Reject the route if a compact recurrent trajectory and nonlinear averaging obstruction defeat that inference.",
+  "candidate_generation_allowed": false,
+  "pre_candidate_actions": [
+    "freeze ResearchMemoryReview including NS-B1a1-C001 failure",
+    "run same-context expert cell with explicit compactness/pressure/dynamical-systems objections",
+    "freeze hash-chained seven-event trace",
+    "execute only the preregistered compactness-to-drift hostile audit"
+  ],
+  "frozen_at": "2026-08-11T12:05:00+00:00",
+  "artifact_hash": "sha256:93f1d63d36fe43910713623d0c385e799506530fbb02790706ca8c824a076fe5"
+}
