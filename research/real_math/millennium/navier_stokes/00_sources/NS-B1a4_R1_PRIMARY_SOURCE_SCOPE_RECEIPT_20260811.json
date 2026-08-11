@@ -1,0 +1,43 @@
+{
+  "schema_version": "ns-b1a4-primary-source-scope-r1-v1",
+  "cycle_id": "NS-B1a4-SIGNED-NORECROSSING-20260811-R1",
+  "authority": "SOURCE_BOUND_PROPOSAL_SHADOW_NO_ROOT_AUTHORITY",
+  "framework_subject": {
+    "rakl_main_sha": "91f182a3e7ad7ba670babbec5f49a1304da2d933",
+    "method_version": "3.0.0"
+  },
+  "application_subject": {
+    "base_sha": "9c2cebe8d5a2b1381af5a40cbea86a6826e7210a",
+    "fibre_snapshot_hash": "sha256:cf88fa50537b9dfc8df4cc2052c69710fe08963e27463fcb5692187e4fbd3205"
+  },
+  "sources": [
+    {
+      "id": "arXiv:1811.00502",
+      "authors": ["Dallas Albritton", "Tobias Barker"],
+      "title": "On local Type I singularities of the Navier-Stokes equations and Liouville theorems",
+      "current_rendering_date_displayed": "2026-03-22",
+      "retrieved_at_utc": "2026-08-11T22:03:25Z",
+      "selectors": [
+        "Theorem 1.1",
+        "equations (1.1)-(1.5)",
+        "Definition 2.1 and equation (2.3)",
+        "Lemma 2.2",
+        "pressure decomposition equations (2.10)-(2.13)",
+        "Theorem 1.2"
+      ],
+      "claims_used": [
+        "Type-I singular suitable solutions are equivalent, in the paper's formulation, to existence of a nontrivial mild bounded ancient solution with finite I.",
+        "A,C,D,E are nonnegative scale-invariant local magnitudes and I is their supremum over parabolic balls.",
+        "Suitable weak solutions obey the local-energy inequality with the signed cutoff terms involving (partial_t+Delta)zeta and (|v|^2+2q)v dot grad zeta.",
+        "The local pressure can be decomposed into a Calderon-Zygmund part from localized v tensor v plus a harmonic remainder.",
+        "The separate global-L3 backward-sequence Liouville theorem requires a stronger trajectory/global hypothesis than local finite-I bookkeeping."
+      ]
+    }
+  ],
+  "direct_calculation_not_literature_claim": "The pressure-free shear and recrossing witness in C001 are verified directly from the Navier-Stokes equation and smooth local-energy identity; no source is cited for that calculation.",
+  "source_family_completeness": "BOUNDED_PRIMARY_SOURCE_BINDING_FOR_ACTIVE_INTERFACE_NOT_LITERATURE_COMPLETE",
+  "negative_history_preserved": [
+    "No source was interpreted as proving finite-I itself supplies a sign/no-recrossing law.",
+    "No current 2026 theorem was found or claimed to close the global finite-I ancient no-return residual in this cycle."
+  ]
+}
