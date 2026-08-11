@@ -1,0 +1,46 @@
+{
+  "atom_id": "O9d12a2a1a1c",
+  "parent_atom_id": "O9d12a2a1a1b",
+  "status": "OPEN_SOURCE_NORMALIZATION_AUDIT",
+  "root_authority": "NONE",
+  "objective": "Before scoring any shared t-rule/base-incidence property, quotient the generator presentation by operations that are free for cyclic intersection complexity and determine the exact admissibility condition this imposes on candidate lower-bound coordinates.",
+  "problem_signature": [
+    "P-vs-NP via explicit graph cover complexity",
+    "Cavalar-Oliveira cover complexity rho(A,B)",
+    "cyclic intersection complexity Dcyc_cap",
+    "generator-family union closure",
+    "presentation-invariant lower-bound coordinates"
+  ],
+  "frozen_framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "sha": "a41a24b0061aa7e19d43732bf878ee5902465d23",
+    "package_version": "0.1.0",
+    "method_version": "CANNOT_MEASURE: current main contains no RAKL_VERSION.json"
+  },
+  "frozen_application_base": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+  "fibre_contents_actually_consulted": [
+    "research/real_math/millennium/p_vs_np/00_problem_contract/canonical_statement.md",
+    "research/real_math/millennium/p_vs_np/00_problem_contract/success_contract.yaml",
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b_SOURCE_PACKET_20260811.md",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "Cavalar-Oliveira ECCC TR25-033, Section 2.5 and Theorem 30"
+  ],
+  "structural_analogue": {
+    "source": "quotienting a presentation by cost-zero operations before defining a complexity potential",
+    "transfer_assumption": "union gates contribute zero to Dcyc_cap by definition",
+    "difference_witness": "generator-family presentation can change dramatically under finite union closure while the counted intersection cost does not",
+    "disanalogy": "this is not an invariance under adding arbitrary intersections or arbitrary new semantic generators"
+  },
+  "hostile_controls": [
+    "F-C010-MULTIPLEXING",
+    "F-C021-CHEAP-ADJACENCY",
+    "F-C023-SCALAR-COLLAPSE",
+    "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+    "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",
+    "F-O9D12A2A1A1B-FIXED-LAMBDA-GLOBAL-STATE-FACTORIZATION"
+  ],
+  "candidate_generation": "BLOCKED_PENDING_FREE_OPERATION_QUOTIENT",
+  "fibre_snapshot_hash": "sha256:f9822c371fbb99364b2225bfad885e1cdf70cd0007f22b9e9a0a8e54872974c0",
+  "authority": "PROPOSAL_SHADOW_SEARCH_PRIORITY_ONLY"
+}
