@@ -1,0 +1,25 @@
+{
+  "schema_version": "rakl-math-prospective-atom-v1",
+  "artifact_type": "PROPOSAL_SHADOW_ATOMIZATION",
+  "atom_id": "O9d12a2a1a1b1-R2",
+  "parent_atom_id": "O9d12a2a1a1b1",
+  "root_problem": "P versus NP under standard definitions",
+  "exact_question": "Can lower bounds proved in a source-restricted witness/model family (Wigderson-1995 branching restriction or a monotone-circuit analogue) transfer in the direction needed to lower-bound the full Definition-21 cover complexity rho(A,B), without an independently proved reverse bridge?",
+  "smallest_high_information_obstruction": "transfer-polarity under witness/model inclusion",
+  "success_contract": [
+    "prove or falsify the direct transfer implication from restricted-family lower bound to full-rho lower bound",
+    "preserve exact full Definition-21 witness class and root contract",
+    "separate a local transfer theorem from global P-vs-NP gluing"
+  ],
+  "counterexample_first_falsifier": "If admissible restricted witnesses form a subset of full witnesses, compare the two minima before importing any restricted-model lower bound. A wrong-direction inequality immediately rejects direct transfer.",
+  "prohibited_claims": [
+    "restricted-model lower bound implies P != NP without a lifting theorem",
+    "monotone lower bound is an unrestricted lower bound",
+    "branching-restricted cover lower bound is a lower bound on unrestricted rho",
+    "same-context review is independent review"
+  ],
+  "framework_pin": "fc8253046fd216cd42d2e253874f54a735f7d52a",
+  "application_base_sha": "350861b1c2755033893068e5519b8b06a6315aa6",
+  "recorded_at": "2026-08-11T20:03:36Z",
+  "authority": "PROPOSAL_SHADOW_ONLY_NO_ROOT_AUTHORITY"
+}
