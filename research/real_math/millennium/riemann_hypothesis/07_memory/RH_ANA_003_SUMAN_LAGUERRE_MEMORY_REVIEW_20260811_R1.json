@@ -1,0 +1,31 @@
+{
+  "record_type": "DUAL_MEMORY_REVIEW_SHADOW_V3",
+  "atom_id": "RH-ANA-003::SUMAN-LAGUERRE-UNIFORMITY-AUDIT",
+  "fibre_snapshot_hash": "c58abb3ef34cdf028fac60fc6ea17d68d75d56b4bfe1367921944ceb6954868c",
+  "retrieved": {
+    "tools": ["T-RH-LI-PREFIX-QUARTET-CALIBRATION", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+    "failures": ["F-RH-ANA-001-FINITE-LI-PREFIX", "F-XM001-POINTWISE-GAP-COLLAPSE"],
+    "episodes": ["EP-RH-ANA-002-SUZUKI-FAITHFULNESS-20260811"],
+    "unmerged_experience": ["RAKL_math#80 RH-ANA-003 incomplete-Li/index-height audit", "RAKL_math#118 RH-ANA-003 aggregate-density exception audit"],
+    "motifs": ["local/surrogate success requires a separate root-faithfulness or uniformity bridge"]
+  },
+  "selected": [
+    {"id":"T-XM-ROOT-BRIDGE-STABILITY-AUDIT","reason":"directly tests the local-asymptotic -> global-integral/all-n bridge; DifferenceWitness recorded in context."},
+    {"id":"F-RH-ANA-001-FINITE-LI-PREFIX","reason":"kept as a boundary warning against finite evidence, not executed as the current falsifier."},
+    {"id":"RAKL_math#118","reason":"selected only as negative-history routing input: aggregate zero-density family is saturated for this exact universal-bridge question."}
+  ],
+  "rejected": [
+    {"id":"T-RH-LI-PREFIX-QUARTET-CALIBRATION","reason":"not decision-relevant to a proof whose asserted step is a global asymptotic estimate rather than finite prefix positivity."},
+    {"id":"RAKL_math#80","reason":"useful unmerged provenance but its index-height localization does not verify the 2026 preprint's Laguerre/Bernoulli manipulations; not authority."},
+    {"id":"MOLLIFIER_RESONANCE_MEMORY","reason":"no target-residual mapping; would reopen representation drift."}
+  ],
+  "missed_later_found": [],
+  "routing_change": {
+    "changed_action": true,
+    "counterfactual_pre_memory_pre_gate": "derive or optimize a new Laguerre-prime inequality from the 2026 representation",
+    "post_memory_action": "audit the current claimed proof's uniformity and asymptotic-series steps before inventing a new inequality",
+    "causal_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT", "F-RH-ANA-001-FINITE-LI-PREFIX", "RAKL_math#118"]
+  },
+  "authority": "SEARCH_PRIORITY_ONLY / EXPERIENCE_NOT_AUTHORITY",
+  "artifact_hash": "6643d36a84192be8473733a6122ee9a476b27565401f6e608b37321d589d2e20"
+}

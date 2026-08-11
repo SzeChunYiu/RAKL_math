@@ -1,0 +1,73 @@
+{
+  "packet_type": "MATH_CONTEXT_FIBER_SHADOW_V3",
+  "authority": "PROPOSAL_SHADOW / SAME_CONTEXT / NO_ROOT_AUTHORITY",
+  "framework": {
+    "repo": "SzeChunYiu/RAKL",
+    "sha": "787c7e00af2a5877ccb715bc807ec14f52974e9c",
+    "method_version": "3.0.0",
+    "software_version": "0.1.0"
+  },
+  "application": {
+    "repo": "SzeChunYiu/RAKL_math",
+    "base_sha": "dc83b72201cb58844b2bdc76117e4dcb9190211d",
+    "branch": "rakl/rh-ana003-suman-laguerre-audit-20260811-r1"
+  },
+  "root_binding": "Every nontrivial zero rho of zeta(s) satisfies Re(rho)=1/2.",
+  "atom_id": "RH-ANA-003::SUMAN-LAGUERRE-UNIFORMITY-AUDIT",
+  "parent_atom_id": "RH-ANA-003",
+  "problem_signature": [
+    "Audit a current 2026 claimed Li-coefficient asymptotic proof at its first load-bearing transform/uniformity steps.",
+    "Separate fixed-x Laguerre asymptotics from uniform control on the unbounded prime/Chebyshev integration domain.",
+    "Separate finite Euler-Maclaurin asymptotics from an ordinary convergent infinite Bernoulli series.",
+    "No numerical or source-surrogate conclusion can promote the RH root."
+  ],
+  "actual_fibre": {
+    "schema": "rh-fibre-snapshot-v1",
+    "atom": "RH-ANA-003::SUMAN-LAGUERRE-UNIFORMITY-AUDIT",
+    "consulted_items": [
+      {"item_id":"RAKL_VERSION","item_hash":"gitblob:7363c88f4b19638299968e5e0ee3a93c3d567121"},
+      {"item_id":"RAKL_METHOD_SPECS","item_hash":"gitblob:3f629c4dd0ef55aedf14206b2be3df19875988b7"},
+      {"item_id":"RAKL_V3_MANIFEST","item_hash":"gitblob:799195610e5502a2ea65e3c8772520ba0899cffd"},
+      {"item_id":"RAKL_TASK_EPISODE_SCHEMA","item_hash":"gitblob:aed1055565062a6adefe24eb48331e314d01adec"},
+      {"item_id":"RAKL_EXPERIENCE_SUBSTRATE","item_hash":"gitblob:814aa24788d796b9cec7e35b6373b5d5e7ffbc77"},
+      {"item_id":"RH_ROOT_CANONICAL","item_hash":"gitblob:73c819da51c773989fbbc90a6bba1fe4a284024d"},
+      {"item_id":"RH_SUCCESS_CONTRACT","item_hash":"gitblob:1c778c7f284a6b4b8648470efaf15d12872e44f9"},
+      {"item_id":"RH_ANA_003_DAG","item_hash":"gitblob:bbda1d9e41299bddbdc9b6b3a91de573864b826b"},
+      {"item_id":"RH_ANA_002_MEMORY_REVIEW","item_hash":"gitblob:599e29278123c40d901d4e6996d68890b36290b2"},
+      {"item_id":"T_RH_LI_PREFIX_QUARTET","item_hash":"gitblob:652c7dd109e57d20f5cb47a0db8dd246eb1e5c1d"},
+      {"item_id":"T_XM_ROOT_BRIDGE_STABILITY","item_hash":"gitblob:12a77d4e9cf3b5704432ec4d9b6c84c5ad7fd967"},
+      {"item_id":"PRIMARY_SUMAN_2026","item_hash":"doi:10.13140/RG.2.2.10579.03362"},
+      {"item_id":"PRIMARY_KHALSA_2026","item_hash":"doi:10.5281/zenodo.18726797"},
+      {"item_id":"PRIMARY_BOMBIERI_LAGARIAS_1999","item_hash":"doi:10.1006/jnth.1999.2392"},
+      {"item_id":"PRIMARY_VOROS_2006","item_hash":"arxiv:math/0506326"},
+      {"item_id":"LAGUERRE_ASYMPTOTIC_REFERENCE","item_hash":"dlmf:18.15.14"},
+      {"item_id":"BERNOULLI_ASYMPTOTIC_REFERENCE","item_hash":"dlmf:24.11.1"}
+    ]
+  },
+  "fibre_snapshot_hash": "c58abb3ef34cdf028fac60fc6ea17d68d75d56b4bfe1367921944ceb6954868c",
+  "equivalents_and_analogues": [
+    {"id":"LI_CRITERION","status":"EXACT_EQUIVALENCE","boundary":"lambda_n >= 0 for all n, not finite prefixes."},
+    {"id":"VOROS_ASYMPTOTIC_DICHOTOMY","status":"EXACT_ROOT_EQUIVALENT_ASYMPTOTIC","boundary":"must actually prove the required asymptotic; assuming it is circular."},
+    {"id":"KHALSA_2026_LAGUERRE_REDUCTION","status":"NEARBY_REPRESENTATION","boundary":"the preprint explicitly leaves a uniform exponential-cancellation estimate open and does not claim RH proof."},
+    {"id":"XM_ROOT_BRIDGE","status":"STRUCTURAL_ANALOGY_ONLY","boundary":"target DifferenceWitness: here the missing bridge is uniform asymptotic/integration control, not a lattice or continuum normalization limit."}
+  ],
+  "methods_considered": [
+    {"id":"OP-LAGUERRE-UNIFORMITY-AUDIT","selected":true},
+    {"id":"OP-BERNOULLI-TERM-TEST","selected":true},
+    {"id":"T-XM-ROOT-BRIDGE-STABILITY-AUDIT","selected":true},
+    {"id":"T-RH-LI-PREFIX-QUARTET-CALIBRATION","selected":false,"reason":"finite-prefix falsifier does not target an all-n asymptotic proof."},
+    {"id":"ZD-ZEROFREE-AGGREGATE","selected":false,"reason":"open PR #118 already saturates this route-local inference; rotate away from aggregate exception counting."},
+    {"id":"MOLLIFIER-RESONANCE","selected":false,"reason":"no exact map to the audited proof step; representation drift risk."}
+  ],
+  "registered_falsifiers": [
+    "F1: Check whether the Laguerre asymptotic used to derive the x in [2,infinity) integral estimate is uniform on that domain; compact-only uniformity is insufficient.",
+    "F2: For the Bernoulli correction written as an infinite k-series, check the term test using factorial Bernoulli growth; if terms fail to tend to zero for fixed n, the ordinary infinite series is invalid.",
+    "F3: If an asymptotic-series interpretation is intended, demand finite truncation plus a remainder bound before taking n->infinity."
+  ],
+  "chronology": {
+    "status": "RETROSPECTIVE_SOURCE_SCOUTING_THEN_FROZEN_REPLICATION",
+    "note": "Preliminary source inspection preceded repository persistence. No prospective novelty or candidate credit is claimed. This frozen packet governs only the subsequent replication/verification checks and all output remains proposal/shadow."
+  },
+  "frozen_at": "2026-08-11T17:34:08Z",
+  "packet_hash": "b765624badba9ac971690d4ae31d91bb2ac0e6019e289a24095a2039118fc941"
+}
