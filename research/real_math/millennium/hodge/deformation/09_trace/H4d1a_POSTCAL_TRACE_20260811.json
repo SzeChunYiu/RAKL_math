@@ -1,0 +1,116 @@
+{
+  "trace_id": "TRACE-H4d1a-POSTCAL-V3-20260811",
+  "predecessor_trace_id": "TRACE-H4d1a-STRICT-20260811",
+  "predecessor_event_hash": "sha256:4035a5ee15fc2f1faa1d925f57648ba0cb76301219aa8bc913836f7063b7651f",
+  "entries": [
+    {
+      "event_id": "H4d1a-E08",
+      "atom_id": "H4d1a",
+      "event_type": "FALSIFIER_RUN",
+      "timestamp": "2026-08-11T10:55:10+00:00",
+      "state_summary": "The authorized source-bound calibration tests whether Hodge-branch directions alone determine a useful chosen-witness reachable obstruction envelope B_{T,1}.",
+      "action_summary": "Contrast semiregular/complete-intersection positive controls with a hostile source where the Hodge locus moves while the originally selected algebraic witness family is rigid.",
+      "evidence_pointers": [
+        "research/real_math/millennium/hodge/deformation/03_routes/H4d1a_B_T1_REACHABILITY_CALIBRATION_20260811.md",
+        "https://arxiv.org/abs/2009.01651",
+        "https://arxiv.org/abs/2104.14845v2",
+        "https://arxiv.org/abs/1902.00831v2",
+        "https://arxiv.org/abs/2602.13951v2"
+      ],
+      "alternatives_considered": [
+        "infer witness mobility directly from Hodge-locus mobility",
+        "retry full semiregularity as the general target",
+        "construct witness reachability explicitly before detector testing"
+      ],
+      "decision_rationale": "The hostile control has maximum partition value because it directly tests whether class persistence and persistence of the chosen witness are the same research coordinate.",
+      "outputs": [
+        "positive_control:Nishinou_semiregular_relative_deformation",
+        "positive_control:Kloosterman_complete_intersection",
+        "hostile_control:Movasati_rigid_selected_witness_positive_dimensional_Hodge_locus"
+      ],
+      "uncertainties": [
+        "the source contrast does not by itself compute an obstruction group for every witness formalism"
+      ],
+      "residuals": [
+        "a source-defined witness-moduli projection is still needed to compute chosen-witness reachability"
+      ],
+      "next_steps": [
+        "record the source-bound calibration result without theorem authority"
+      ],
+      "artifact_hash": "sha256:469e815140d40d4925e160b8d55d0c9603899ce1e25677d8322d8567a58b3f69",
+      "previous_event_hash": "sha256:4035a5ee15fc2f1faa1d925f57648ba0cb76301219aa8bc913836f7063b7651f"
+    },
+    {
+      "event_id": "H4d1a-E09",
+      "atom_id": "H4d1a",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-11T10:55:20+00:00",
+      "state_summary": "The calibration finds source-valid positive controls for Hodge-to-witness deformation but no certified proper nonzero branch-reachable envelope. A hostile source shows Hodge-class mobility can coexist with rigidity of the chosen witness family.",
+      "action_summary": "Record SOURCE_INSUFFICIENT_FOR_PROPER_ENVELOPE and isolate class persistence versus chosen-witness persistence as a representation/bridge distinction.",
+      "evidence_pointers": [
+        "research/real_math/millennium/hodge/deformation/03_routes/H4d1a_B_T1_REACHABILITY_CALIBRATION_20260811.md",
+        "research/real_math/millennium/hodge/deformation/07_memory/H4d1a_V3_TASK_EPISODE_20260811.json"
+      ],
+      "alternatives_considered": [
+        "classify the hostile control as a Hodge-conjecture failure",
+        "treat the strong positive controls as a general theorem template",
+        "preserve the result as a scoped representation/gluing diagnosis"
+      ],
+      "decision_rationale": "The sources distinguish the Hodge-class coordinate from identity and deformation of a selected algebraic witness; no source justifies collapsing them.",
+      "outputs": [
+        "verdict:SOURCE_INSUFFICIENT_FOR_PROPER_ENVELOPE",
+        "failure_observation:F-H4D1A-CLASS-WITNESS-PERSISTENCE-GAP:OBSERVED_ONLY",
+        "root_authority:NONE"
+      ],
+      "uncertainties": [
+        "a different witness category may yield a proper nonzero reachable envelope"
+      ],
+      "residuals": [
+        "chosen witness category and projection to the Hodge branch are not yet frozen",
+        "higher Artin-order stability remains open"
+      ],
+      "next_steps": [
+        "open a fresh witness-moduli projection representation child"
+      ],
+      "artifact_hash": "sha256:8762dac3e5149283c73c491414b05ecc17c873b21f16b8527df2d61193bd0901",
+      "previous_event_hash": "sha256:469e815140d40d4925e160b8d55d0c9603899ce1e25677d8322d8567a58b3f69"
+    },
+    {
+      "event_id": "H4d1a-E10",
+      "atom_id": "H4d1a",
+      "event_type": "RESIDUAL_OPENED",
+      "timestamp": "2026-08-11T10:55:30+00:00",
+      "state_summary": "The active residual is no longer detector faithfulness on an implicitly defined relevant subspace; it is construction of an explicit witness-moduli projection whose relative tangent/obstruction image can define reachability before success is observed.",
+      "action_summary": "Open H4d1a1-WITNESS-MODULI-PROJECTION as a fresh representation child and keep the new failure observation at OBSERVED_ONLY authority.",
+      "evidence_pointers": [
+        "research/real_math/millennium/hodge/deformation/03_routes/H4d1a_B_T1_REACHABILITY_CALIBRATION_20260811.md",
+        "research/real_math/millennium/hodge/deformation/08_reviews/H4d1a_RAKL_METHOD_CASE_STUDY_20260811.md"
+      ],
+      "alternatives_considered": [
+        "invent an all-order branch-restricted semiregularity theorem",
+        "declare source search saturated",
+        "refine representation around witness identity/projection first"
+      ],
+      "decision_rationale": "The calibration reopens RELATION, PATH, OBSTRUCTION and EXPERIENCE_PATTERN axes; operator invention is not justified because existing contrastive/source-bound operators succeeded.",
+      "outputs": [
+        "child:H4d1a1-WITNESS-MODULI-PROJECTION",
+        "saturation_reopened:RELATION,PATH,OBSTRUCTION,EXPERIENCE_PATTERN",
+        "candidate_status:NONE"
+      ],
+      "uncertainties": [
+        "the appropriate witness category may differ across codimension and source family"
+      ],
+      "residuals": [
+        "freeze witness category and pi:W->S before the next discriminator",
+        "separate same-witness persistence from replacement by another representative of the same Hodge class"
+      ],
+      "next_steps": [
+        "freeze fresh H4d1a1 MathContextFiber",
+        "compile a v3 problem fibre with explicit witness identity/interface keys",
+        "run prospective source-bound projection calibration"
+      ],
+      "artifact_hash": "sha256:aa609fbcee261c55a46668e67534e0cdf71d3cb49738372372174bd70ce22afc",
+      "previous_event_hash": "sha256:8762dac3e5149283c73c491414b05ecc17c873b21f16b8527df2d61193bd0901"
+    }
+  ]
+}
