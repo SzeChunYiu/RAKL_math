@@ -1,7 +1,7 @@
 atom_id: RH-ANA-003b
 parent_atom_id: RH-ANA-003a
 root_issue: 3
-status: CONTEXT_REQUIRED
+status: PARTIAL_SUCCESS_ROUTE_PRUNING
 root_authority: NONE
 
 question: >-
@@ -22,28 +22,45 @@ opened_by:
   trace_event_id: RH-ANA-003a-E11
   task_episode_id: EP-RH-ANA-003a-MAGNITUDE-TRANSPORT-20260811-R2
 
+resolved_in_r3:
+  result_artifact: 01_frontier/RH_ANA_003b_ROOT_COUPLING_FALSIFIER_20260811_R3.md
+  outcome: PARTIAL_SUCCESS_ROUTE_PRUNING
+  derived_relation: lambda_n-S_Lambda(n)=(n/2)log(n)+O(n)
+  route_lemma: >-
+    Under Coffey's exact S_Lambda definition, RH is equivalent to the
+    existence of a polynomial bound on the full S_Lambda(n). This is a
+    source-compositional obligation-strength classification, not a new RH
+    theorem or novelty claim.
+  failure_ids:
+    - F-RH-ANA-003b-FULL-SLAMBDA-POLYNOMIAL-SMALLNESS-ROOT-COUPLED
+    - F-RH-ANA-003b-PRIME-REMAINDER-AS-WEAKER-BRIDGE
+  diagnosis_id: D-RH-ANA-003b-TAME-COMPLEMENT-RETAINS-ROOT-MODE
+  obstruction_id: O-RH-ANA-003b-FULL-REMAINDER-ROOT-COUPLING
+  lesson_id: L-RH-ANA-003b-AUDIT-OBLIGATION-STRENGTH-BEFORE-BOUND
+  motif_id: M-RH-ANA-ROOT-SENSITIVE-REMAINDER
+  task_episode_id: EP-RH-ANA-003b-ROOT-COUPLING-20260811-R3
+  successor_atom: RH-ANA-003c
+
 known_boundary:
-  - Coffey's exact eta representation places an n-dependent signed binomial transform in lambda_n.
-  - The eta Laurent expansion has radius 3, but Cauchy coefficient magnitudes propagated by triangle inequality give an exponential envelope for every fixed r<3.
-  - At the nearest-singularity scale, an alternating geometric contribution has bounded exact binomial transform but exponential absolute envelope; therefore cancellation is load-bearing.
-  - Coffey arXiv:0706.0343 gives a cancellation-aware S_2=S_gamma+S_Lambda decomposition and proves S_gamma=O(n), so the full representation route is not retired.
-  - No bound for S_Lambda strong enough for every-index Li positivity is established by the parent cycle.
+  - Coffey 0706.0343v2 gives S_2=S_gamma+S_Lambda and proves S_gamma=O(n).
+  - Coffey math-ph/0505052v1 gives lambda_n=S_2+S_1+an explicit linear term, with S_1=(n/2)log(n)+O(n).
+  - Thus lambda_n-S_Lambda(n)=(n/2)log(n)+O(n) unconditionally.
+  - Voros math/0506326v2 gives tempered n log n Li growth under RH and exponentially growing two-sign oscillations if RH is false.
+  - Hence any global two-sided polynomial bound on the full S_Lambda is RH-equivalent and is not a strictly weaker child obligation.
+  - One-sided or proper localized prime/Laguerre subcomponent bounds remain unclassified.
 
 candidate_generation_gate:
   allowed: false
   reason: >-
-    RH-ANA-003b is a fresh representation child. Before proposing any bound,
-    recurrence, mollifier, resonance construction, explicit-formula
-    deformation, or positivity mechanism, freeze a fresh MathContextFiber,
-    exact source definitions of S_Lambda and neighboring decompositions,
-    analogues/disanalogies, same-context expert cell, dual memory review and
-    hash-chained pre-candidate trace under current RAKL main.
+    The full-S_Lambda polynomial-smallness family is flattened as a weaker
+    bridge because it is root-coupled. All successor candidate generation now
+    belongs to RH-ANA-003c and requires a fresh fibre/memory/expert/trace
+    packet under current RAKL main.
 
 next_pre_candidate_discriminators:
-  - Reconstruct Coffey's exact S_gamma and S_Lambda definitions and all unconditional bounds from the primary source.
-  - Identify whether S_Lambda is a genuinely prime-side signed transform or merely a relabeling of the original eta obstruction.
-  - Compare any available unconditional S_Lambda bound with the explicit main/archimedean scale required for lambda_n>=0 for all n.
-  - Falsify termwise absolute or finite-prefix variants before any source expansion.
-  - Query mollifier/resonance or zero-density memory only with a DifferenceWitness showing how average information can control the exact signed component.
+  - Work only on proper source-bound decompositions of S_Lambda whose local obligations do not already imply full polynomial boundedness.
+  - Preserve Laguerre-kernel sign/correlation and audit convergence plus n-uniformity before gluing.
+  - Require DifferenceWitnesses for zero-density, mollifier/resonance, finite-prefix, and absolute-majorant transfers.
+  - Keep local prime-window estimates separate from global reassembly and all-index Li positivity.
 
-authority: STRICT_CHILD_RESIDUAL_ONLY / NO_SUCCESSOR_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE
+authority: SOURCE_BOUND_ROUTE_DIAGNOSTIC / PROPOSAL_SHADOW_ONLY / ROOT_AUTHORITY_NONE
