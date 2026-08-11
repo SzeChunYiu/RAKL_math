@@ -1,0 +1,32 @@
+{
+  "active_issue": "SzeChunYiu/RAKL_math#177",
+  "atom_id": "YM-S1c1a2",
+  "authority": "proposal/shadow only",
+  "base_commit": "3cfc8a3b2ff6d981351d2f15421c8cc08048f74b",
+  "decision_question": "Does Appendix F actually provide an admissible endpoint-preserving interpolation between the AF and IR blocking schemes on the same SU(N) gauge/OS theory, strong enough to support the vanishing comparison demanded by issue #177?",
+  "falsifiers": [
+    "Displayed reflection-positivity identity F.72 must be the correct quadratic-form expansion for a convexly interpolated blocking.",
+    "If B denotes the nonlinear SU(N)-valued configuration block map used earlier, pointwise convex interpolation must remain in its codomain or be accompanied by a proved admissible retraction.",
+    "If B instead denotes an induced kernel/operator, a typed realization theorem must bind the interpolated object back to an admissible gauge-covariant blocking of the same theory.",
+    "Any repair must preserve endpoint data, reflection positivity, gauge covariance, locality/finite-range properties, and the uniformities required by the continuum limit."
+  ],
+  "fibre_hash_sha256": "4e5f3c6fbc723a7784ed96d1439154ce3ec9f729b5c4a686d3ce00ac4c19fed8",
+  "frozen_context": {
+    "lane": "Euclidean measure -> gauge-invariant OS reconstruction -> same-theory AF/IR identification -> positive physical gap",
+    "numerics_policy": "Calibration/falsification only; no root proof credit.",
+    "required_same_theory_bindings": [
+      "same gauge-invariant OS source algebra",
+      "same reflection-positive quotient/Hilbert space",
+      "same continuum subsequence/regulator limit",
+      "same physical-time normalization",
+      "volume/lattice-spacing/regulator-uniform comparison sufficient to pass the limit"
+    ],
+    "source_policy": "Missing primary mathematical detail is BLOCKED/UNKNOWN and is not reconstructed from memory.",
+    "theory": "4D pure SU(N) Yang-Mills, constructive continuum QFT"
+  },
+  "problem_signature": "YM-S1c1a2-AFIR-ENDPOINT-PRESERVING-VANISHING-UV-ALIGNMENT",
+  "residual_before": "RES-YM-S1c1a2-ENDPOINT-PRESERVING-VANISHING-AFIR-ANCHOR-OR-STRICT-CONTRACTION-SAME-OS-THEORY",
+  "root_issue": "SzeChunYiu/RAKL_math#5",
+  "root_promotion_gate": "No promotion absent exact root statement binding, closed proof DAG, dependency/axiom/verifier audits, isolated recheck, bounded novelty search, and three genuinely isolated mathematical reviews.",
+  "schema": "RAKL_V3_PROBLEM_FIBRE_RECEIPT"
+}
