@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "PNP-C042-STRUCTURAL-QUOTIENT-HOSTILE-REVIEW-20260812",
+  "review_type": "SAME_CONTEXT_HOSTILE_MATHEMATICAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "object": "Exact four- and five-type quotients and finite two-pair cover witnesses for G9 and G13",
+  "verdict": "ACCEPT_AFTER_EXPLICIT_PROOF_ADDED",
+  "blocking_concerns_resolved": [
+    "receipt booleans and enumeration were replaced as truth authority by analytic class maps and explicit pair arguments",
+    "truncated receipt vertex lists were replaced by full class formulas",
+    "exact quotient value two received an explicit three-semi-filter lower-bound proof"
+  ],
+  "exact_blowup_maps": {
+    "G9": {
+      "left_classes": [
+        "{0}",
+        "{1}",
+        "{2}",
+        "[512]\\{0,1,2}"
+      ],
+      "right_classes": [
+        "{0,4,8,16,32,64,128,256}",
+        "{1}",
+        "{2}",
+        "remainder"
+      ],
+      "quotient_complement": [
+        "a=(0,0)",
+        "b=(1,2)",
+        "c=(2,1)",
+        "d=(2,2)"
+      ]
+    },
+    "G13": {
+      "left_classes": [
+        "{0}",
+        "{1}",
+        "{2}",
+        "remainder",
+        "{3674}"
+      ],
+      "right_classes": [
+        "{0,4,8,...,4096}",
+        "{1}",
+        "{2}",
+        "remainder",
+        "{5503,8149}"
+      ],
+      "quotient_complement": [
+        "a=(0,0)",
+        "b=(1,2)",
+        "c=(2,1)",
+        "d=(2,2)",
+        "e=(4,4)"
+      ]
+    }
+  },
+  "explicit_pair_proofs": {
+    "G9": {
+      "pairs": [
+        [
+          "{a}",
+          "{b,d}"
+        ],
+        [
+          "{a,b}",
+          "{c,d}"
+        ]
+      ],
+      "covered_nonempty_star_graph_edges": [
+        [
+          "(0,2)",
+          "(1,0)"
+        ],
+        [
+          "(0,1)",
+          "(1,1)",
+          "(2,0)"
+        ]
+      ]
+    },
+    "G13": {
+      "pairs": [
+        [
+          "{a,b}",
+          "{c,e}"
+        ],
+        [
+          "{b,c,d}",
+          "{a,e}"
+        ]
+      ],
+      "covered_nonempty_star_graph_edges": [
+        [
+          "(0,1)",
+          "(0,4)",
+          "(1,1)",
+          "(1,4)",
+          "(4,0)"
+        ],
+        [
+          "(0,2)",
+          "(1,0)",
+          "(2,0)",
+          "(2,4)",
+          "(4,1)",
+          "(4,2)"
+        ]
+      ]
+    }
+  },
+  "one_pair_lower_bound": "The relevant semi-filters with singleton minimals {a},{b}; {a},{c}; and {b},{c} cannot all be covered by one pair: orienting the first forces a in E, b in H, then the second forces c in H and c not in E, leaving E outside the third.",
+  "conclusion": [
+    "rho(Q9)=2",
+    "rho(Q13)=2",
+    "rho(G9)<=2 by C013 lift",
+    "rho(G13)<=2 by C013 lift"
+  ],
+  "authority": {
+    "C013_status": "proof-draft authority, not formal or independent review",
+    "independent_peer_review": false,
+    "grants_uniform_quotient_bound": false,
+    "grants_recurrence_or_circuit_lower_bound": false,
+    "grants_p_vs_np_authority": false
+  },
+  "artifact_hash": "sha256:c9b76ebc4fb4f68de96183d40ec6702badcbc2059584f8ab8ab0cae002eafef8"
+}

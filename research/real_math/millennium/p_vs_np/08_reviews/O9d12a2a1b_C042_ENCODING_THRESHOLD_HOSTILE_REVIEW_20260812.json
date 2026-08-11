@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "PNP-C042-ENCODING-THRESHOLD-HOSTILE-REVIEW-20260812",
+  "review_type": "SAME_CONTEXT_HOSTILE_MATHEMATICAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "object": "Frozen C041 MAGIC/gamma/fixed-width 3CNF decoder activation thresholds used by C042",
+  "verdict": "ACCEPT_WITH_SCOPE_CLARIFICATIONS",
+  "blocking_concerns": [],
+  "accepted_proof_obligations": [
+    "gamma length is 2 floor(log2 t)+1 for positive t and the payload has 3m(1+bit_length(v)) bits",
+    "L0>=16 with equality only at v=m=1, and the sole nonempty clause is satisfiable",
+    "canonical UNSAT implies m>=2, so L0>=24 with equality only at v=1,m=2",
+    "at v=1 a mixed-sign clause is tautological and constant-sign clauses are x and not-x, yielding exactly two opposing ordered payloads",
+    "the raw equality lengths 16 and 24 are even, so padding does not change them",
+    "the half-word split is a bijection between 2n-bit words and [2^n]^2"
+  ],
+  "required_scope_clarifications": [
+    "length 24 is first canonical MAGIC long-form UNSAT, not first UNSAT decoder word",
+    "the threshold is decoder-specific and assumes repeated literals are allowed",
+    "the special all-zero short-code contradiction is separate; malformed nonzero words decode to tautology",
+    "parent-to-child indices are n=4 to U5, n=8 to U9, and n=12 to U13"
+  ],
+  "minimum_unsat_words": [
+    "111001011010010101111111",
+    "111001011010111111010101"
+  ],
+  "authority": {
+    "computation_is_proof": false,
+    "independent_peer_review": false,
+    "grants_later_level_or_root_authority": false
+  },
+  "artifact_hash": "sha256:2f97f15aaf7d1ace7b0e0891f99fc255f42745c67d833d7179ffbf0d9d2afa03"
+}
