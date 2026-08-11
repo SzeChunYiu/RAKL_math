@@ -1,0 +1,71 @@
+{
+  "schema_version": "rakl-v3-shadow-trace-v1",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "atom_id": "YM-E4c",
+  "hash_rule": "sha256(canonical JSON of {prev,event_id,event,payload} with sorted keys and compact separators)",
+  "events": [
+    {
+      "event_id": "YM-E4c-E001",
+      "event": "FIBRE_BOUND",
+      "payload": {
+        "contract": "RAKL_math#141",
+        "fibre_hash": "sha256:29ce4b6423fd90604b6effc5d686ac9aaf7dcc6399455a0efe17c9bd41cd1de1",
+        "authority": "PROPOSAL_SHADOW"
+      },
+      "prev_hash": "GENESIS",
+      "event_hash": "sha256:b5fdc24a6886125666ecc8ad6fe40f86b4c1263af27b96127adc08d3d8e5cb8e"
+    },
+    {
+      "event_id": "YM-E4c-E002",
+      "event": "MEMORY_REVIEWED",
+      "payload": {
+        "selected": ["YM-E4c-ISSUE141", "YM-E1a1a0-EP-SOURCE-20260811T1424Z", "RAKL_math-PR103-YM-E1a1a0", "RAKL_math-PR116-YM-E1a1a0"],
+        "rejected": ["F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE", "YM-E4b2-ISSUE133", "YM-E4b2b-PR140", "YM-E4b-ISSUE126", "YM-E2b-ISSUE92", "YM-E3a-ISSUE93"]
+      },
+      "prev_hash": "sha256:b5fdc24a6886125666ecc8ad6fe40f86b4c1263af27b96127adc08d3d8e5cb8e",
+      "event_hash": "sha256:fe179727201f2957c681413a0626090e1b04ab9ef801c351f55eafeca21c3247"
+    },
+    {
+      "event_id": "YM-E4c-E003",
+      "event": "SOURCE_REPAIR_PROBED",
+      "payload": {
+        "source": "arXiv:2606.19362v1",
+        "equations": ["4.36", "4.42", "4.46", "4.47", "4.49", "4.50"],
+        "screenshot_status": "CANNOT_CHECK_CACHE_MISS"
+      },
+      "prev_hash": "sha256:fe179727201f2957c681413a0626090e1b04ab9ef801c351f55eafeca21c3247",
+      "event_hash": "sha256:96e56975d6a7a179d7623262a31f5ebb57400f01098eb327a019707d9a1cae1c"
+    },
+    {
+      "event_id": "YM-E4c-E004",
+      "event": "FALSIFIER_RUN",
+      "payload": {
+        "normalization": "FAILS_AS_WRITTEN_AK_MINUS4_TIMES_AK",
+        "arbitrary_rotation_domain": "UNBOUND_FOR_GENERIC_O4"
+      },
+      "prev_hash": "sha256:96e56975d6a7a179d7623262a31f5ebb57400f01098eb327a019707d9a1cae1c",
+      "event_hash": "sha256:598c6ca9d069e27367691a55a2366f7fa91c5625a74213f1295ac7057e660715"
+    },
+    {
+      "event_id": "YM-E4c-E005",
+      "event": "RESULT_RECORDED",
+      "payload": {
+        "outcome": "SCOPED_SOURCE_PROOF_FAILURE",
+        "new_failure_id": "F-YM-E4C-ARBITRARY-O4-LATTICE-ACTION-UNBOUND",
+        "new_obstruction_shadow": "O-YM-E4C-O4-ACTION-DOMAIN-GLUING"
+      },
+      "prev_hash": "sha256:598c6ca9d069e27367691a55a2366f7fa91c5625a74213f1295ac7057e660715",
+      "event_hash": "sha256:97dcb5e483ce65283cf9dd8d5105796c106574d599958427b31d4da163b9cc31"
+    },
+    {
+      "event_id": "YM-E4c-E006",
+      "event": "RESIDUAL_OPENED",
+      "payload": {
+        "residual_after": ["R1_O4_RESTORATION_RIEMANN_SUM_NORMALIZATION", "R2_ARBITRARY_O4_LATTICE_ACTION_TYPECHECK_CONFIRMED_UNBOUND", "R3_SAME_LIMITING_SCHWINGER_FAMILY_OS1_GLUING"]
+      },
+      "prev_hash": "sha256:97dcb5e483ce65283cf9dd8d5105796c106574d599958427b31d4da163b9cc31",
+      "event_hash": "sha256:c13636267119059d4215f2387d0656d60dd1cf3d43b68ed4f52c561bf9509c5e"
+    }
+  ],
+  "terminal_hash": "sha256:c13636267119059d4215f2387d0656d60dd1cf3d43b68ed4f52c561bf9509c5e"
+}
