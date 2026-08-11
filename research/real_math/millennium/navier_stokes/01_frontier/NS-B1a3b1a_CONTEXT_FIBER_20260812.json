@@ -1,0 +1,65 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow",
+  "atom_id": "NS-B1a3b1a",
+  "parent_atom_id": "NS-B1a3b1",
+  "object_context": "Whole-space Type-I 3D incompressible Navier-Stokes producer/consumer-interface child toward Clay statement (A). Before attempting a finite-I -> global Lorentz/log-BMO producer estimate, audit whether those two outputs actually close the exact source-family signature of the selected Grujic v2 consumer. Type-II and root promotion are out of scope.",
+  "root_contract": {
+    "root_id": "NS0",
+    "accepted_terminal_outcomes": ["Clay A", "Clay B", "Clay C", "Clay D"],
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "active_route": "Clay A / Type-I classification",
+    "independent_mathematical_reviews": "0/3"
+  },
+  "active_success_contract": {
+    "pre_audit_wording": "Produce uniform-in-time global bmo_{1/|log r|} vorticity-direction and L^{3/2,infinity} vorticity certificates from finite I without assuming derivative regularity, tail tightness, or desired geometry.",
+    "consumer_invocation_target": "Grujic v2 Theorem 4.1 / Theorem 7.4",
+    "audit_question": "Would success on the pre-audit wording bind every hypothesis of the chosen consumer?"
+  },
+  "actual_fibre_consulted": [
+    {"id":"RAKL-V3-MANIFEST-CURRENT","ref":"SzeChunYiu/RAKL docs/RAKL_V3_IMPLEMENTATION_MANIFEST.md","sha":"3e3ab453e6a3dd4bc8c0a9fa85e6327b363aeb17"},
+    {"id":"RAKL-METHOD-SPECS-CURRENT","ref":"SzeChunYiu/RAKL src/rakl/method_specs.py","sha":"3e3ab453e6a3dd4bc8c0a9fa85e6327b363aeb17"},
+    {"id":"RAKL-TASK-EPISODE-SCHEMA-CURRENT","ref":"SzeChunYiu/RAKL schemas/task-episode.schema.json","sha":"3e3ab453e6a3dd4bc8c0a9fa85e6327b363aeb17"},
+    {"id":"NS-ROOT-DAG","ref":"research/real_math/millennium/navier_stokes/02_problem_dag/open_obligations.yaml","app_base_sha":"a7301f0f0e2cab2750ac6e923efe18b5750b5af6"},
+    {"id":"NS-B1a3b1-DELTA","ref":"research/real_math/millennium/navier_stokes/02_problem_dag/NS_B1a3b1_C001_R2_DELTA_20260811.yaml"},
+    {"id":"NS-B1a3b1-FIBRE-R2","ref":"research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3b1_CONTEXT_FIBER_R2_20260811.json","context_hash":"sha256:86321f8f12444616c9d8bdcbb02ede3384ebfcd6687f599a0cc6b9ff90e6d949"},
+    {"id":"NS-B1a3b1-MEMORY-R2","ref":"research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b1_RESEARCH_MEMORY_REVIEW_R2_20260811.json"},
+    {"id":"NS-B1a3b1-DIAGNOSIS-R2","ref":"research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b1_C001_R2_FAILURE_DIAGNOSIS_20260811.json"},
+    {"id":"NS-B1a3b1-LESSON-R2","ref":"research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b1_C001_R2_OBSTRUCTION_LESSON_20260811.json"},
+    {"id":"EP-NS-B1a3b1-C001-R2-20260811","ref":"research/real_math/millennium/navier_stokes/10_case_study/NS-B1a3b1_C001_R2_V3_TASK_EPISODE_20260811.json.shadow","artifact_hash":"5f44964eaec1fd5624af01b3a5180c5f268510a0487055a8b1b536f55fd4ce35"},
+    {"id":"AB-TYPEI-ANCIENT","ref":"Albritton-Barker, arXiv:1811.00502v2 / J. Math. Fluid Mech. 2019"},
+    {"id":"GRUJIC-2026-LOG-DEPLETION-v2","ref":"Grujic, arXiv:2607.08866v2, 13 Jul 2026"}
+  ],
+  "structural_coordinates": [
+    "Albritton-Barker finite I is the supremum over parabolic cylinders of A+C+D+E, with E a scale-normalized spacetime integral of |grad u|^2.",
+    "Grujic v2 Definition 2.1 factors the critical concentration profile as omega=Phi |x|^{-2} and assumes Phi is scale-invariant or log-periodic at the core with |grad Phi| <= C|x|^{-1} uniformly in time.",
+    "Grujic v2 Theorem 4.1 assumes that full critical concentration profile uniformly near the first possible singular time, plus global uniform weak-L^{3/2} vorticity and global uniform log-weighted BMO vorticity direction.",
+    "Grujic v2 Theorem 7.4 carries the same critical concentration profile into a pre-singularity analyticity/escape-time argument.",
+    "For the factorization Phi=|x|^2 omega, grad Phi=2x omega+|x|^2 grad omega, so the shape-gradient condition is a vorticity-derivative-level input; this identity alone does not show finite I cannot dynamically imply it.",
+    "A producer result supplying only global weak-L^{3/2} omega and global log-BMO xi would therefore leave the critical-profile/shape-gradient hypothesis unbound.",
+    "Local mathematical failure and local-to-global/source-signature failure must remain separately typed."
+  ],
+  "near_solved_analogues": [
+    {"id":"AB-TYPEI-ANCIENT","role":"producer class / local Type-I compactness"},
+    {"id":"GRUJIC-2026-LOG-DEPLETION-v2","role":"conditional consumer"},
+    {"id":"EP-NS-B1a3b1-C001-R2-20260811","role":"previous representation-transport success plus global/state-space mismatch"}
+  ],
+  "transfer_assumptions_and_disanalogies": [
+    {"edge":"finite-I -> Grujic consumer","shared":"scale-critical Type-I/vorticity setting","difference_witness":"AB I is a local-energy/partial-regularity package; Grujic's selected theorem additionally binds a specific point-profile/shape-gradient class, global time-slice Lorentz amplitude, global phase regularity, and first-singular-time state space."},
+    {"edge":"shape factor gradient -> finite-I E term","shared":"both involve spatial derivatives","difference_witness":"E controls first derivatives of velocity in scaled spacetime L2; grad Phi contains grad omega, hence second derivatives of velocity, pointwise/weighted in space and uniformly in time. No implication is authorized."}
+  ],
+  "counterexample_first_falsifiers": [
+    "Hypothetically grant the child both requested norm outputs. If Grujic Definition 2.1's critical-profile/shape-gradient hypothesis remains unbound, the intended theorem invocation still fails; this falsifies the child success contract as sufficient.",
+    "Reject any argument that identifies finite I's E term with a bound on grad omega or grad Phi without a separate derivative estimate.",
+    "Reject any use of Theorem 7.4 as ancient-solution rigidity because its source state is pre-singularity, analytic, and escape-time based."
+  ],
+  "same_context_expert_cell": [
+    {"role":"PDE/epsilon-regularity specialist","background":"suitable weak solutions, local energy inequality, CKN-type regularity, Type-I blow-up","delegation":"compare exact finite-I contents to candidate producer outputs; audit scaling and derivative order."},
+    {"role":"harmonic-analysis/vorticity specialist","background":"Calderon-Zygmund, Lorentz/BMO, Biot-Savart commutators, vorticity geometry","delegation":"audit Grujic norm/profile hypotheses and derivative loss in Phi/xi representations."},
+    {"role":"concentration-compactness specialist","background":"critical topology, blow-up limits, profile/tail escape","delegation":"separate local compactness from global all-center/time-slice hypotheses and test gluing."},
+    {"role":"source/verifier specialist","background":"theorem-signature binding, provenance, dependency and gate audits","delegation":"bind Definition 2.1, Theorem 4.1 and Theorem 7.4 exactly; test success-contract completeness."}
+  ],
+  "framework": {"method":"RAKL v3 Verified Discovery proposal/shadow","version":"3.0.0","package_version":"1.2.0","method_spec_version":"3.0","git_sha":"3e3ab453e6a3dd4bc8c0a9fa85e6327b363aeb17"},
+  "application_base_sha": "a7301f0f0e2cab2750ac6e923efe18b5750b5af6",
+  "authority": "PROPOSAL_SHADOW_SEARCH_ROUTING_ONLY",
+  "packet_hash": "sha256:decd36dc90f6fc12b0895410942baf84177d9245279452b1b845ae92cbf2a2d7"
+}
