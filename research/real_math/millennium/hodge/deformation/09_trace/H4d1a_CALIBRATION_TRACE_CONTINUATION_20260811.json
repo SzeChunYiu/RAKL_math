@@ -1,0 +1,111 @@
+{
+  "trace_id": "TRACE-H4d1a-CONTINUATION-20260811",
+  "parent_trace_id": "TRACE-H4d1a-STRICT-20260811",
+  "parent_final_event_hash": "sha256:4035a5ee15fc2f1faa1d925f57648ba0cb76301219aa8bc913836f7063b7651f",
+  "entries": [
+    {
+      "event_id": "H4d1a-E08",
+      "atom_id": "H4d1a",
+      "event_type": "FALSIFIER_RUN",
+      "timestamp": "2026-08-11T11:56:00+00:00",
+      "state_summary": "Exact-head pre-candidate gates passed. The planned branch-envelope calibration was stress-tested first against the parent compatibility equation between Hodge persistence, the branch-relative geometric obstruction, and the same semiregularity/Hodge detector.",
+      "action_summary": "Let delta_1 map first-order branch directions to the geometric obstruction object and sigma be the detector used by the parent route. With B_{T,1}=im(delta_1|T_{s0}T), test whether the simultaneously requested conditions sigma(delta_1(v))=0 for Hodge-preserving v and injectivity of sigma on a nonzero B_{T,1} can coexist.",
+      "evidence_pointers": [
+        "research/real_math/millennium/hodge/deformation/03_routes/H4d1_WITNESS_PROJECTION_CALIBRATION_20260811.md",
+        "research/real_math/millennium/hodge/deformation/01_frontier/H4d1a_CONTEXT_FIBER_20260811.json",
+        "research/real_math/millennium/hodge/deformation/07_memory/H4d1a_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+        "https://arxiv.org/abs/2009.01651",
+        "https://arxiv.org/abs/1112.6001"
+      ],
+      "alternatives_considered": [
+        "interpret the rigid Movasati witness control as a zero obstruction envelope",
+        "continue searching for a proper nonzero kernel-free envelope",
+        "check the defining compatibility equation before source-specific classification"
+      ],
+      "decision_rationale": "The parent failure already states that Hodge persistence sends the actual branch-relative obstruction into the detector kernel. The cheapest discriminator is therefore algebraic: determine whether branch restriction can make the same detector faithful on a nonzero image at all.",
+      "outputs": [
+        "falsifier:first_order_branch_detector_compatibility_check"
+      ],
+      "uncertainties": [
+        "the exact obstruction object and detector vary by witness category; the result is scoped to a fixed linear first-order obstruction map and the same detector whose vanishing is implied by Hodge persistence"
+      ],
+      "residuals": [
+        "whether a nonzero branch envelope can avoid the same detector kernel"
+      ],
+      "next_steps": [
+        "record the scoped linear no-go result and revise the route representation"
+      ],
+      "artifact_hash": "sha256:acaa9ef4791043d9f0a33045be350c81c9c379a0001f59642c567a437d143aa3",
+      "previous_event_hash": "sha256:4035a5ee15fc2f1faa1d925f57648ba0cb76301219aa8bc913836f7063b7651f"
+    },
+    {
+      "event_id": "H4d1a-E09",
+      "atom_id": "H4d1a",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-11T11:56:20+00:00",
+      "state_summary": "The first-order proper-nonzero/kernel-free branch of H4d1a is incompatible with the packet's own same-detector compatibility equation.",
+      "action_summary": "Record the scoped no-go: if sigma(delta_1(v))=0 for every v in the Hodge-branch tangent and B_{T,1}=delta_1(T_{s0}T), then B_{T,1} is contained in ker(sigma). Hence sigma restricted to B_{T,1} is injective only if B_{T,1}=0. A nonzero branch-generated envelope cannot repair the parent detector-kernel gap by restricting the same detector.",
+      "evidence_pointers": [
+        "sha256:acaa9ef4791043d9f0a33045be350c81c9c379a0001f59642c567a437d143aa3",
+        "research/real_math/millennium/hodge/deformation/03_routes/H4d1a_BRANCH_DETECTOR_COMPATIBILITY_NOGO_20260811.md",
+        "research/real_math/millennium/hodge/deformation/03_routes/H4d1_WITNESS_PROJECTION_CALIBRATION_20260811.md"
+      ],
+      "alternatives_considered": [
+        "PROPER_NONZERO_AND_KERNEL_FREE",
+        "PROPER_NONZERO_KERNEL_HIT",
+        "ZERO"
+      ],
+      "decision_rationale": "The conclusion is elementary linear algebra once the exact source/target maps are typed; it is a route-pruning result, not a Hodge theorem.",
+      "outputs": [
+        "verdict:FIRST_ORDER_SAME_DETECTOR_PROPER_NONZERO_NOGO",
+        "failure:F-H4D1A-SAME-DETECTOR-BRANCH-NOGO",
+        "novelty_class:RAKL_TRIVIAL"
+      ],
+      "uncertainties": [
+        "a different independently justified detector, a different obstruction object, or nonlinear higher-order structure is not ruled out"
+      ],
+      "residuals": [
+        "the valid same-detector first-order route must prove B_{T,1}=0 directly rather than seek detector injectivity on a nonzero B_{T,1}"
+      ],
+      "next_steps": [
+        "open H4d1b as a first-order branch-obstruction-annihilation child; keep higher Artin order, algebraization and globalization separate"
+      ],
+      "artifact_hash": "sha256:0f8b4a7643ee1755efdd02bd46281fb53395eea1a1c289a9e429afeba1cab1bf",
+      "previous_event_hash": "sha256:acaa9ef4791043d9f0a33045be350c81c9c379a0001f59642c567a437d143aa3"
+    },
+    {
+      "event_id": "H4d1a-E10",
+      "atom_id": "H4d1b",
+      "event_type": "RESIDUAL_OPENED",
+      "timestamp": "2026-08-11T11:56:40+00:00",
+      "state_summary": "H4d1a's intended nonzero restricted-faithfulness mechanism is pruned at first order for the same Hodge/semiregularity detector. The remaining productive question is whether branch geometry forces the branch-relative obstruction map itself to vanish.",
+      "action_summary": "Open H4d1b: for a fixed algebraic witness and Hodge branch T, construct a source-bound witness deformation map whose first-order obstruction delta_1 satisfies delta_1|T_{s0}T=0 by independently verifiable geometry, without assuming full semiregularity or the desired lift; then freeze a separate higher-Artin-order child before any formal lifting claim.",
+      "evidence_pointers": [
+        "sha256:0f8b4a7643ee1755efdd02bd46281fb53395eea1a1c289a9e429afeba1cab1bf",
+        "research/real_math/millennium/hodge/deformation/03_routes/H4d1a_BRANCH_DETECTOR_COMPATIBILITY_NOGO_20260811.md"
+      ],
+      "alternatives_considered": [
+        "search for a different independent detector not forced to vanish on Hodge-branch obstructions",
+        "quotient away the detector kernel after the fact",
+        "prove the branch obstruction map itself vanishes"
+      ],
+      "decision_rationale": "Quotienting the known kernel would erase the obstruction rather than prove it zero. Direct branch-obstruction annihilation is the smallest non-circular same-detector repair.",
+      "outputs": [
+        "residual:H4d1b_FIRST_ORDER_BRANCH_OBSTRUCTION_ANNIHILATION"
+      ],
+      "uncertainties": [
+        "special-family tangent equality may not persist to higher Artin orders",
+        "formal lifting still does not imply algebraization or global continuation"
+      ],
+      "residuals": [
+        "find a nontrivial source family where Hodge-branch directions are independently contained in the chosen witness deformation image",
+        "test second-order stability separately"
+      ],
+      "next_steps": [
+        "freeze H4d1b context before proposing any new mathematical criterion"
+      ],
+      "artifact_hash": "sha256:ad45384089660f2a605dbebd045fa2d896d4729c07e91fe14e8eda4f2477949d",
+      "previous_event_hash": "sha256:0f8b4a7643ee1755efdd02bd46281fb53395eea1a1c289a9e429afeba1cab1bf"
+    }
+  ]
+}
