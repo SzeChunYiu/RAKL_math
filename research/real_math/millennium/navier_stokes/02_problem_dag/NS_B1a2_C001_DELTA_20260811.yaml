@@ -1,0 +1,37 @@
+atom_id: NS-B1a2
+parent_atom_id: NS-B1a1
+root_id: NS0
+status: ROUTE_PRUNED_SCOPED
+authority: NO_NEW_NAVIER_STOKES_THEOREM / ROOT_AUTHORITY_NONE
+result_id: NS-B1a2-C001
+result: >-
+  Precompactness, bounded recurrence, or long-time vector averaging of a
+  renormalized orbit does not by itself force a late time with small
+  self-similar-time derivative norm. Nonlinear time averaging also leaves a
+  fluctuation/Reynolds-stress term.
+supported_scope:
+  - compactness-only bridge to one-slice generator smallness
+  - vector-average cancellation without total-variation control
+  - averaged-profile shortcut to stationary Leray equation without fluctuation control
+not_supported:
+  - finite-I Navier-Stokes orbits are precompact
+  - all concentration-compactness routes fail
+  - no Lyapunov or finite-variation defect exists
+  - Type-I singularities are excluded
+linked_open_interface:
+  issue: 56
+  reason: >-
+    Pineau-Vicol Theorem 1.9 additionally requires pointwise Type-I velocity
+    control and a fixed-annulus pressure bound; those inheritance questions
+    overlap NS-B1b1 and must not be duplicated here.
+next_atom:
+  atom_id: NS-B1a3
+  obstruction: >-
+    Identify the weakest sign-controlled or finite-variation self-similar-time
+    defect inherited from the finite-I Type-I ancient class that forces liminf
+    one-slice generator smallness, or falsify the selected defect and rotate to
+    an orthogonal source-valid Liouville trigger.
+evidence:
+  - research/real_math/millennium/navier_stokes/01_frontier/NS-B1a2_C001_SELF_SIMILAR_TIME_DRIFT_AUDIT_20260811.md
+  - research/real_math/millennium/navier_stokes/07_memory/NS-B1a2_C001_FAILURE_EXPERIENCE_DELTA_20260811.json
+  - research/real_math/millennium/navier_stokes/09_trace/NS-B1a2_C001_TRACE_CONTINUATION_20260811.json
