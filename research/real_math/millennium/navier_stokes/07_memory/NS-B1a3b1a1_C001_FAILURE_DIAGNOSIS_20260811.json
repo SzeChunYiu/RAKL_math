@@ -1,0 +1,36 @@
+{
+  "artifact_hash": "sha256:6c89be702ae382054e0a4210755f752e39d388b886dc5114ec63d1a1b2e960dd",
+  "atom_id": "NS-B1a3b1a1",
+  "authority": "DIAGNOSTIC_PROPOSAL_SHADOW_ONLY",
+  "causal_diagnosis": [
+    "finite I controls scale-invariant spacetime energy/cubic/pressure/dissipation quantities but not a uniform-time endpoint derivative trace",
+    "critical scaling is shared by velocity L3 and vorticity weak-L3/2, but one derivative/frequency coordinate is missing",
+    "smooth high-frequency exact Navier-Stokes data can keep velocity L3 uniformly small while the vorticity endpoint grows linearly in frequency"
+  ],
+  "context_hash": "sha256:4cd98526f19d3f178538f1f2bc0478ee5ec5d78f97af42bbc6630c4434b52fd1",
+  "cycle_id": "NS-B1a3b1a1-C001-CRITICAL-VORTICITY-PRODUCER-20260811",
+  "difference_witnesses": [
+    "calibration is globally regular small-data dynamics rather than a candidate singular orbit",
+    "large derivative trace is inherited from high-frequency initial data; singular-time one-sided history may add structure",
+    "Grujic critical-profile and log-BMO phase assumptions are absent"
+  ],
+  "episode_id": "EP-NS-B1a3b1a1-C001-20260811",
+  "failed_claim": "Uniform finite-I / same-slab critical velocity control alone yields a universal global L^infinity_t L^{3/2,infinity}_x vorticity bound.",
+  "failure_category": "LOCAL_MATHEMATICAL_PRODUCER_INTERFACE",
+  "failure_id": "F-NS-B1a3b1a1-FINITE-I-NO-CRITICAL-VORTICITY-TRACE",
+  "not_causes": [
+    "pressure divergence (pressure is controlled for the finite-I certificate and disappears after curl)",
+    "dimensional/scaling mismatch (both norms are critical)",
+    "vorticity-direction zero normalization (amplitude-only atom)",
+    "local-to-global far-field gluing (still separate and open)"
+  ],
+  "residual": "Only producer mechanisms adding explicit frequency/history/trace/profile information remain; global/far-field and state-space gluing remain independently open.",
+  "schema_version": "failure-spec-v3-proposal-shadow",
+  "verification_evidence": [
+    "analytic curl identity from vector potential",
+    "exact positive-measure weak-Lorentz lower bound",
+    "Kato small-L3 global solution theorem",
+    "Albritton-Barker weak-Serrin/critical velocity -> finite-I interface",
+    "classical positive-time continuity for each smooth datum"
+  ]
+}
