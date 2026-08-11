@@ -1,0 +1,158 @@
+{
+  "actual_fibre_consulted": {
+    "analogues": [
+      "standard OS reconstruction: positive-time translations induce a contraction semigroup on the OS Hilbert space",
+      "varying-Hilbert-space spectral convergence with an explicit convergence/identification structure"
+    ],
+    "application_memory_rejected": [
+      "YM-E1a1a0",
+      "RAKL_math#92",
+      "RAKL_math#93",
+      "RAKL_math#69"
+    ],
+    "application_memory_selected": [
+      "RAKL_math#5",
+      "RAKL_math#109 / F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE",
+      "RAKL_math PR#62 / YM-S1a1-C001",
+      "RAKL_math#88",
+      "RAKL_math PR#97"
+    ],
+    "disanalogies": [
+      "ordinary strong-resolvent convergence on one fixed Hilbert space does not automatically apply to regulator-dependent OS quotient Hilbert spaces",
+      "matching cylinder-function labels across cutoffs is not itself an exact isometric identification of OS quotient classes",
+      "single-source clustering is not source-family completeness"
+    ],
+    "falsifiers": [
+      "reflection/translation algebra produces separated OS arguments rather than invariance of the OS norm under positive-time translation",
+      "the unit sphere of an infinite-dimensional Hilbert space has no finite delta-net for delta<1",
+      "weak operator convergence plus uniform boundedness need not imply strong operator convergence",
+      "because 0 belongs to [0,m), E([0,m)) Omega = Omega, not 0"
+    ],
+    "gauge_scope": "gauge-invariant positive-time observables and the physical OS quotient; no gauge-fixing-dependent identification is assumed",
+    "limit_scope": "finite/infinite volume and regulator/continuum limits must be bound explicitly; no limit interchange or uniformity is assumed without proof",
+    "primary_sources": [
+      "Faizal-Shabir arXiv:2606.19362v1 / DOI 10.1002/prop.70097, Theorems 8.2-8.5 and Appendix E E.1-E.4",
+      "Osterwalder-Schrader 1973 DOI 10.1007/BF01645738",
+      "Osterwalder-Schrader 1975 DOI 10.1007/BF01608978",
+      "Osterwalder-Seiler 1978 DOI 10.1016/0003-4916(78)90039-8",
+      "Kuwae-Shioya 2003 DOI 10.4310/CAG.2003.v11.n4.a1"
+    ],
+    "success_contract": [
+      "construct the correct OS contraction semigroup and generator in the same continuum physical Hilbert space",
+      "specify and verify regulator-to-continuum identification/convergence maps compatible with OS null spaces and gauge invariance",
+      "derive strong semigroup/resolvent convergence or an equivalent varying-Hilbert-space theorem from source-valid hypotheses",
+      "show vacuum and positive spectral-gap information survive the same-theory continuum limit with required uniformity",
+      "keep source-family density/completeness as a separate obligation reused from #109",
+      "audit volume and regulator limit interchange explicitly"
+    ]
+  },
+  "application": {
+    "base_sha": "f54becbed3b74d0fdb2002a2e5a49326cf0294dd",
+    "prospective_repair_issue": 126,
+    "repo": "SzeChunYiu/RAKL_math",
+    "root_issue": 5
+  },
+  "atom": {
+    "id": "YM-E4b",
+    "question": "Can the claimed continuum gap transfer be rebuilt with the correct reflection-positive OS contraction semigroup and a valid varying-Hilbert-space identification/convergence structure sufficient to carry regulated semigroup/resolvent/gap information into the same continuum physical OS Hilbert space, without silently assuming exact isometries across changing OS null quotients?",
+    "signature": "YM-E4b-FS-OS-CONTINUUM-IDENTIFICATION-STRONG-CONVERGENCE"
+  },
+  "authority": "FROZEN_PROSPECTIVE_REPAIR_CONTEXT / PROPOSAL_SHADOW_ONLY / ROOT_AUTHORITY_NONE",
+  "candidate_generation_policy": "No theorem candidate is authorized by the retrospective observations. This fibre freezes only the prospective repair question; missing primary mathematical detail blocks any reconstruction from memory.",
+  "context_hash": "d1fb170c91b657986f809e9fdb6e68047f127d966077066be239ea893c57a2b9",
+  "context_id": "YM-E4b-CONTEXT-20260811T1643Z",
+  "fibre_snapshot_hash": "18236d2c608b0f87e91b3508e2e839ddb0143e8c789e78abd55aa6fc2791d5db",
+  "framework": {
+    "git_sha": "fe47a12c4bad8253658baaf37e1300cab15d0823",
+    "method": "RAKL Method",
+    "method_version": "3.0",
+    "release_version": "v3.0.0",
+    "repo": "SzeChunYiu/RAKL"
+  },
+  "local_vs_gluing_obligations": {
+    "local_source_proof": [
+      "E.1 displayed OS isometry identity",
+      "E.2 finite-delta-net weak-to-strong upgrade",
+      "E.4 vacuum endpoint projection"
+    ],
+    "local_to_global_gluing": [
+      "asymptotic versus exact regulator-to-continuum isometry",
+      "consistent identification-map direction/domain/codomain",
+      "compatibility with gauge-invariant OS null quotients",
+      "valid varying-Hilbert strong semigroup/resolvent convergence",
+      "volume/regulator uniformity and limit interchange",
+      "same-theory transport of vacuum and positive gap"
+    ]
+  },
+  "root_contract": {
+    "contract": "For every compact simple gauge group, construct a non-trivial 4D quantum Yang-Mills theory satisfying the official Clay axiomatic-strength requirements and prove a finite positive mass gap above the vacuum, with required continuum/short-distance behavior.",
+    "id": "RAKL_math#5",
+    "state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "same_context_expert_cell": [
+    {
+      "background": "axiomatic and constructive Euclidean QFT; reflection positivity and OS reconstruction",
+      "delegation": "check reflection/translation algebra, quotient well-definedness, contraction versus isometry, generator",
+      "role": "Constructive QFT / OS reconstruction"
+    },
+    {
+      "background": "operator semigroups, strong-resolvent convergence, spectral convergence on varying Hilbert spaces",
+      "delegation": "audit E.2/8.4 convergence logic and Kuwae-Shioya-type applicability",
+      "role": "Functional analysis / spectral convergence"
+    },
+    {
+      "background": "gauge-invariant observables, physical Hilbert quotients, source cyclicity",
+      "delegation": "audit regulator-dependent null spaces, physical source maps, and separation from #109",
+      "role": "Gauge-theory physical-state algebra"
+    },
+    {
+      "background": "constructive RG, thermodynamic and continuum limits",
+      "delegation": "audit uniformity, limit interchange, continuum state/spectral identification",
+      "role": "RG / continuum-limit analysis"
+    },
+    {
+      "background": "functional-analysis counterexamples and mathematical-physics proof auditing",
+      "delegation": "run cheap hostile controls for isometry, finite nets, weak/strong convergence, endpoint projections",
+      "role": "Adversarial verification"
+    },
+    {
+      "background": "experience-governed routing, authority gates and research telemetry",
+      "delegation": "preserve chronology, memory selection/rejection, trace, saturation and non-promotion",
+      "role": "RAKL v3 assurance / metrology"
+    }
+  ],
+  "structural_coordinates": [
+    "4D Yang-Mills constructive continuum QFT",
+    "Euclidean gauge-invariant Schwinger functionals",
+    "reflection positivity and OS quotient Hilbert spaces",
+    "positive-time contraction semigroup / Hamiltonian",
+    "regulator-dependent Hilbert spaces and null spaces",
+    "finite/infinite-volume and regulator/continuum limits",
+    "uniform positive spectral separation",
+    "source-family completeness as separate obligation",
+    "same-theory gluing across regulator and continuum"
+  ],
+  "transfer_assumptions": [
+    {
+      "difference_witness": "Appendix E.1 writes an isometry identity that changes relative time separation and is not supplied by Euclidean invariance",
+      "required": "prove the positive-time maps descend to a self-adjoint contraction semigroup on the exact physical OS quotient",
+      "shared": "reflection-positive Euclidean functional and positive-time translations",
+      "source": "standard OS reconstruction",
+      "target": "Faizal-Shabir continuum reconstruction"
+    },
+    {
+      "difference_witness": "OS spaces arise as regulator-dependent positive-time quotients with gauge/null-space structure; applicability is not automatic",
+      "required": "provide a convergence structure/identification maps satisfying the analogue theorem's hypotheses",
+      "shared": "operators/forms/semigroups living on changing Hilbert spaces",
+      "source": "Kuwae-Shioya spectral convergence on varying Hilbert spaces",
+      "target": "regulator-dependent OS Hilbert spaces"
+    },
+    {
+      "difference_witness": "#109 shows fixed-source decay is insufficient and source completeness remains separate",
+      "required": "bind the controlled sources densely to the same continuum OS excited space",
+      "shared": "dense physical source family plus one common decay rate",
+      "source": "YM-S1a1-C001 dense common-rate lemma",
+      "target": "continuum physical Hamiltonian gap"
+    }
+  ]
+}
