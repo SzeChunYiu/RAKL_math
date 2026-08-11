@@ -7,12 +7,6 @@ from pathlib import Path
 import subprocess
 
 from jsonschema import Draft202012Validator, FormatChecker
-from rakl.experience_substrate import (
-    EpisodeOutcome,
-    TaskEpisode,
-    episode_content_bytes,
-    validate_episode,
-)
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -77,22 +71,31 @@ def _schema_at(commit: str, name: str) -> dict:
     return value
 
 
-def _episode(value: dict) -> TaskEpisode:
-    return TaskEpisode(
-        episode_id=value["episode_id"], task_id=value["task_id"],
-        atom_id=value["atom_id"], context_hash=value["context_hash"],
-        problem_signature=tuple(value["problem_signature"]),
-        fibre_snapshot_hash=value["fibre_snapshot_hash"],
-        operator_ids=tuple(value["operator_ids"]),
-        action_trace=tuple(value["action_trace"]),
-        observation_ids=tuple(value["observation_ids"]),
-        verification_ids=tuple(value["verification_ids"]),
-        outcome=EpisodeOutcome(value["outcome"]),
-        residual_signature=tuple(value["residual_signature"]),
-        evidence_pointers=tuple(value["evidence_pointers"]),
-        artifact_hash=value["artifact_hash"], timestamp=value["timestamp"],
-        cost=value["cost"],
+def _historical_episode_content_bytes(value: dict) -> bytes:
+    """Reproduce the exact TaskEpisode identity contract at framework 9027cc6."""
+
+    fields = (
+        "episode_id", "task_id", "atom_id", "context_hash",
+        "problem_signature", "fibre_snapshot_hash", "operator_ids",
+        "action_trace", "observation_ids", "verification_ids", "outcome",
+        "residual_signature", "evidence_pointers", "timestamp", "cost",
     )
+    payload = {field: value[field] for field in fields}
+    return json.dumps(
+        payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False
+    ).encode("utf-8")
+
+
+def _assert_current_schema_rejects_historical_episode(value: dict) -> None:
+    schema = _load(FRAMEWORK / "schemas/task-episode.schema.json")
+    assert "storage_admission" in schema["required"]
+    assert "storage_admission" not in value
+    errors = list(
+        Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(value)
+    )
+    assert len(errors) == 1
+    assert errors[0].validator == "required"
+    assert errors[0].message == "'storage_admission' is a required property"
 
 
 def _pointer(document: dict, pointer: str) -> dict:
@@ -181,9 +184,9 @@ def _validated_inventory_extension_paths() -> set[str]:
         Draft202012Validator(
             strict_schema, format_checker=FormatChecker()
         ).validate(value)
-        episode = _episode(value)
-        digest = hashlib.sha256(episode_content_bytes(episode)).hexdigest()
-        assert validate_episode(episode) == ()
+        digest = hashlib.sha256(_historical_episode_content_bytes(value)).hexdigest()
+        assert digest == value["artifact_hash"]
+        _assert_current_schema_rejects_historical_episode(value)
         assert receipt["runtime_binding"]["stored_hash"] == value["artifact_hash"]
         assert receipt["runtime_binding"]["computed_runtime_digest"] == digest
         paths.add(source["path"])
@@ -395,9 +398,8 @@ def test_episode_inventory_is_the_exact_frozen_19_object_audit() -> None:
                 "error_count": len(errors),
             }
         if item["computed_runtime_digest"] is not None:
-            runtime = _episode(value)
             assert item["computed_runtime_digest"] == hashlib.sha256(
-                episode_content_bytes(runtime)
+                _historical_episode_content_bytes(value)
             ).hexdigest()
         for correction_path in item["prior_correction_paths"]:
             assert _git(ROOT, "cat-file", "-e", f"{INVENTORY_COMMIT}:{correction_path}") == ""
@@ -453,9 +455,8 @@ def test_five_successors_change_only_hash_identity_and_pass_strict_runtime() -> 
         assert successor["artifact_hash"] == item["successor_raw_digest"]
         assert inventory_crosslinks[item["successor_path"]] == item["successor_raw_digest"]
         Draft202012Validator(strict_schema, format_checker=FormatChecker()).validate(successor)
-        runtime = _episode(successor)
-        assert validate_episode(runtime) == ()
-        assert hashlib.sha256(episode_content_bytes(runtime)).hexdigest() == item["successor_raw_digest"]
+        assert hashlib.sha256(_historical_episode_content_bytes(successor)).hexdigest() == item["successor_raw_digest"]
+        _assert_current_schema_rejects_historical_episode(successor)
         assert item["successor_blob"] == _git(
             ROOT, "rev-parse", f'{item["successor_commit"]}:{item["successor_path"]}'
         )

@@ -80,34 +80,41 @@ def _framework_path() -> None:
         sys.path.insert(0, value)
 
 
-def _episode_runtime(value: dict):
-    _framework_path()
-    from rakl.experience_substrate import EpisodeOutcome, TaskEpisode
+def _historical_episode_content_bytes(value: dict) -> bytes:
+    """Reproduce the exact TaskEpisode identity contract at ``FRAMEWORK_COMMIT``."""
 
-    return TaskEpisode(
-        value["episode_id"], value["task_id"], value["atom_id"], value["context_hash"],
-        tuple(value["problem_signature"]), value["fibre_snapshot_hash"], tuple(value["operator_ids"]),
-        tuple(value["action_trace"]), tuple(value["observation_ids"]), tuple(value["verification_ids"]),
-        EpisodeOutcome(value["outcome"]), tuple(value["residual_signature"]), tuple(value["evidence_pointers"]),
-        value["artifact_hash"], value["timestamp"], value["cost"],
+    fields = (
+        "episode_id", "task_id", "atom_id", "context_hash",
+        "problem_signature", "fibre_snapshot_hash", "operator_ids",
+        "action_trace", "observation_ids", "verification_ids", "outcome",
+        "residual_signature", "evidence_pointers", "timestamp", "cost",
+    )
+    payload = {field: value[field] for field in fields}
+    return json.dumps(
+        payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False
+    ).encode("utf-8")
+
+
+def _assert_current_schema_rejects_historical_episode(value: dict) -> None:
+    errors = list(_validator(FRAMEWORK / "schemas/task-episode.schema.json").iter_errors(value))
+    assert "storage_admission" not in value
+    assert any(
+        error.validator == "required"
+        and error.message == "'storage_admission' is a required property"
+        for error in errors
     )
 
 
 def _application_episode_assurance_reasons(value: dict) -> tuple[str, ...]:
     """Close bd1's length-gated TaskEpisode digest-verification bypass."""
 
-    _framework_path()
-    from rakl.experience_substrate import episode_content_bytes, validate_episode
-
     claimed = value.get("artifact_hash")
     if not isinstance(claimed, str) or re.fullmatch(r"[0-9a-f]{64}", claimed) is None:
         return ("application:episode_artifact_hash_not_raw_64_hex",)
-    runtime = _episode_runtime(value)
     reasons: list[str] = []
-    if hashlib.sha256(episode_content_bytes(runtime)).hexdigest() != claimed:
+    if hashlib.sha256(_historical_episode_content_bytes(value)).hexdigest() != claimed:
         reasons.append("application:episode_artifact_hash_mismatch")
-    reasons.extend(f"framework:{reason}" for reason in validate_episode(runtime))
-    return tuple(dict.fromkeys(reasons))
+    return tuple(reasons)
 
 
 def test_pr71_is_open_historical_head_not_a_fake_merge_and_all_bytes_are_preserved() -> None:
@@ -204,9 +211,11 @@ def test_exact_bd1_framework_schema_and_runtime_blobs_are_pinned() -> None:
 
 def test_canonical_retrospective_episode_hash_schema_runtime_and_manifest_are_exact() -> None:
     episode = _load(EPISODE)
-    _validator(FRAMEWORK / "schemas/task-episode.schema.json").validate(episode)
+    _framework_validator_at(FRAMEWORK_COMMIT, "task-episode.schema.json").validate(episode)
     assert re.fullmatch(r"[0-9a-f]{64}", episode["artifact_hash"])
     assert _application_episode_assurance_reasons(episode) == ()
+    assert hashlib.sha256(_historical_episode_content_bytes(episode)).hexdigest() == episode["artifact_hash"]
+    _assert_current_schema_rejects_historical_episode(episode)
     manifest = _load(ASSURANCE)["historical_evidence_manifest"]
     encoded = []
     for item in manifest["entries"]:
@@ -214,12 +223,6 @@ def test_canonical_retrospective_episode_hash_schema_runtime_and_manifest_are_ex
         encoded.append(f'{item["path"]}@git:{item["source_commit"]}@blob:{item["git_blob_sha"]}')
     observed = "sha256:" + hashlib.sha256(json.dumps(encoded, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
     assert observed == manifest["artifact_hash"] == episode["fibre_snapshot_hash"]
-
-    _framework_path()
-    from rakl.experience_substrate import validate_episode
-    runtime = _episode_runtime(episode)
-    assert validate_episode(runtime) == ()
-
 
 @pytest.mark.parametrize(
     ("mutation", "expected_reason"),

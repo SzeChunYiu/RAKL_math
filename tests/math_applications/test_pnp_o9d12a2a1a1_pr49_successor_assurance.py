@@ -10,7 +10,7 @@ import subprocess
 import pytest
 from jsonschema import Draft202012Validator, FormatChecker, ValidationError
 
-from rakl.experience_substrate import EpisodeOutcome, TaskEpisode, episode_content_bytes, validate_episode
+from rakl.experience_substrate import EpisodeOutcome, TaskEpisode, validate_episode
 from rakl.failure_lattice import (
     FailureDiagnosisStatus,
     FailureExperience,
@@ -37,6 +37,7 @@ PR_HEAD_TREE = "0f50d7d987a82bf01ea9542336976c479604beaf"
 INTEGRATION_BASE = "0fddc66a70a1f89b5aada81b63678fd66da589eb"
 INTEGRATION_MERGE = "f44e7b59373cbe6885d551b12b1e29898f381133"
 FRAMEWORK = "bd1a2768f0f474ff44ffa25243241f94bfaf6466"
+HISTORICAL_EXPERIENCE_RUNTIME_BLOB = "4d7044bd4825c2d058c6a95ee63cea703c3234f3"
 CONTEXT_HASH = "sha256:0c2a46839a95a7af6cfa2cff1a8257432ec397865e10515c84f8004719818ad7"
 
 CORRECTION = PNP / "10_case_study/O9d12a2a1a1_PR49_SUCCESSOR_ASSURANCE_CORRECTION_20260811.json"
@@ -89,6 +90,76 @@ def _validate(value: dict, schema_path: Path) -> None:
     schema = _load(schema_path)
     Draft202012Validator.check_schema(schema)
     Draft202012Validator(schema, format_checker=FormatChecker()).validate(value)
+
+
+def _framework_schema_at(commit: str, schema_name: str) -> dict:
+    raw = _git(
+        "-C", str(ROOT / "framework/RAKL"), "show", f"{commit}:schemas/{schema_name}"
+    )
+    assert isinstance(raw, str)
+    value = json.loads(raw)
+    assert isinstance(value, dict)
+    return value
+
+
+def _historical_episode_content_bytes(episode: TaskEpisode) -> bytes:
+    """Exact TaskEpisode identity payload used by the recorded bd1a276 runtime."""
+
+    return json.dumps(
+        {
+            "episode_id": episode.episode_id,
+            "task_id": episode.task_id,
+            "atom_id": episode.atom_id,
+            "context_hash": episode.context_hash,
+            "problem_signature": list(episode.problem_signature),
+            "fibre_snapshot_hash": episode.fibre_snapshot_hash,
+            "operator_ids": list(episode.operator_ids),
+            "action_trace": list(episode.action_trace),
+            "observation_ids": list(episode.observation_ids),
+            "verification_ids": list(episode.verification_ids),
+            "outcome": episode.outcome.value,
+            "residual_signature": list(episode.residual_signature),
+            "evidence_pointers": list(episode.evidence_pointers),
+            "timestamp": episode.timestamp,
+            "cost": episode.cost,
+        },
+        sort_keys=True,
+        separators=(",", ":"),
+        ensure_ascii=False,
+    ).encode("utf-8")
+
+
+def _historical_validate_episode(episode: TaskEpisode) -> tuple[str, ...]:
+    """Reproduce validate_episode at the immutable recorded framework commit."""
+
+    reasons: list[str] = []
+    for name in (
+        "episode_id", "task_id", "atom_id", "context_hash",
+        "fibre_snapshot_hash", "artifact_hash",
+    ):
+        if not getattr(episode, name):
+            reasons.append(f"episode:{name}_missing")
+    try:
+        _parse_time(episode.timestamp)
+    except (AssertionError, ValueError):
+        reasons.append("episode:timestamp_missing_or_invalid")
+    if not episode.problem_signature:
+        reasons.append("episode:problem_signature_missing")
+    if not episode.action_trace:
+        reasons.append("episode:action_trace_missing")
+    if not episode.evidence_pointers:
+        reasons.append("episode:evidence_pointers_missing")
+    if (
+        episode.outcome
+        in {EpisodeOutcome.FAILURE, EpisodeOutcome.PARTIAL_SUCCESS, EpisodeOutcome.BLOCKED}
+        and not episode.residual_signature
+    ):
+        reasons.append("episode:residual_signature_required_for_non_success")
+    if len(episode.artifact_hash) == 64 and hashlib.sha256(
+        _historical_episode_content_bytes(episode)
+    ).hexdigest() != episode.artifact_hash:
+        reasons.append("episode:artifact_hash_mismatch")
+    return tuple(reasons)
 
 
 def _trace_entry(item: dict) -> ResearchTraceEntry:
@@ -159,7 +230,7 @@ def test_historical_schema_defects_reproduce_exactly_against_bd1a276() -> None:
     ]
     recorded = {item["subject"]: item for item in receipt["schema_audit"]["findings"]}
     for path, schema_name, label in cases:
-        schema = _load(ROOT / "framework/RAKL/schemas" / schema_name)
+        schema = _framework_schema_at(FRAMEWORK, schema_name)
         errors = sorted(
             Draft202012Validator(schema).iter_errors(_load(path)),
             key=lambda error: (list(map(str, error.absolute_path)), error.message),
@@ -240,7 +311,10 @@ def test_canonical_combined_trace_is_exact_schema_valid_hash_chained_runtime() -
     pre = _load(PRETRACE)
     continuation = _load(CONTINUATION)
     canonical = _load(TRACE)
-    _validate(canonical, ROOT / "framework/RAKL/schemas/math-research-trace.schema.json")
+    Draft202012Validator(
+        _framework_schema_at(FRAMEWORK, "math-research-trace.schema.json"),
+        format_checker=FormatChecker(),
+    ).validate(canonical)
     assert canonical["entries"] == pre["entries"] + continuation["entries"]
     previous = ""
     entries = []
@@ -258,7 +332,10 @@ def test_canonical_combined_trace_is_exact_schema_valid_hash_chained_runtime() -
 
 def test_canonical_failure_lattice_repairs_runtime_without_inventing_candidate() -> None:
     raw = _load(LATTICE)
-    _validate(raw, ROOT / "framework/RAKL/schemas/failure-experience-lattice.schema.json")
+    Draft202012Validator(
+        _framework_schema_at(FRAMEWORK, "failure-experience-lattice.schema.json"),
+        format_checker=FormatChecker(),
+    ).validate(raw)
     parent = _load(PARENT_LATTICE)
     assert raw["experiences"][:-1] == parent["experiences"]
     new = raw["experiences"][-1]
@@ -293,7 +370,14 @@ def test_retrospective_episode_and_correction_narrow_authority_and_close_child()
     correction = _load(CORRECTION)
     episode = _load(EPISODE)
     _validate(correction, SCHEMA)
-    _validate(episode, ROOT / "framework/RAKL/schemas/task-episode.schema.json")
+    recorded_episode_schema = _framework_schema_at(FRAMEWORK, "task-episode.schema.json")
+    Draft202012Validator(
+        recorded_episode_schema, format_checker=FormatChecker()
+    ).validate(episode)
+    assert _git(
+        "-C", str(ROOT / "framework/RAKL"), "rev-parse",
+        f"{FRAMEWORK}:src/rakl/experience_substrate.py",
+    ) == HISTORICAL_EXPERIENCE_RUNTIME_BLOB
     assert correction["artifact_hash"] == _canonical_hash(correction)
     episode_object = TaskEpisode(
         episode_id=episode["episode_id"], task_id=episode["task_id"],
@@ -311,9 +395,18 @@ def test_retrospective_episode_and_correction_narrow_authority_and_close_child()
         cost=episode["cost"],
     )
     assert episode["artifact_hash"] == hashlib.sha256(
-        episode_content_bytes(episode_object)
+        _historical_episode_content_bytes(episode_object)
     ).hexdigest()
-    assert validate_episode(episode_object) == ()
+    assert _historical_validate_episode(episode_object) == ()
+    # Prospective b724b75 storage admission remains fail closed: historical
+    # bytes are not silently reinterpreted as a current canonical episode.
+    live_errors = list(Draft202012Validator(
+        _load(ROOT / "framework/RAKL/schemas/task-episode.schema.json")
+    ).iter_errors(episode))
+    assert [error.message for error in live_errors] == [
+        "'storage_admission' is a required property"
+    ]
+    assert validate_episode(episode_object) == ("episode:artifact_hash_mismatch",)
     assert correction["correction"]["strict_discovery_credit"] == "NO_STRICT_DISCOVERY_CREDIT"
     assert correction["correction"]["repairs_original_chronology"] is False
     assert correction["prospective_gate"]["atom_id"] == "O9d12a2a1a1a"
