@@ -1,0 +1,42 @@
+schema_version: bsd-r6-route-diagnostic-v1
+artifact_type: SHADOW_ROUTE_DIAGNOSTIC_DELTA
+atom_id: BSD-A1a1-THETA-ORDER-COMPARISON
+cycle_id: BSD-A1a1-PLECTIC-APPLICABILITY-20260811-R6
+authority: SOURCE_BOUND_ROUTE_REFINEMENT_PROPOSAL_SHADOW
+residual_before:
+  - PLECTIC_ENTRY_APPLICABILITY_FOR_ARBITRARY_E
+  - AUXILIARY_K_EXACT_PLECTIC_LOCAL_RESIDUAL_COMPATIBILITY_PLUS_NONVANISHING
+  - E_OVER_K_COMPLEX_SECOND_DERIVATIVE_TO_PLECTIC_NONVANISHING
+  - PLETIC_SELMER_TO_E_OVER_Q_MORDELL_WEIL_REGULATOR_SHA_TAMAGAWA_TORSION_GLUING
+episode_observation:
+  - Fornea 2026 gives epsilon(A/E)=(-1)^(|S|+1) for incoherent S.
+  - For F=Q, an incoherent S has at most one prime.
+  - Thus the sign +1 branch relevant to exact order two forces S={p}, not S=empty.
+  - In the S={p} mock-plectic comparison the source uses split/non-split multiplicative reduction at p; Fornea-Gehrmann explicitly assumes multiplicative reduction at p.
+diagnosis:
+  id: D-BSD-A1A1-R6-INTRINSIC-PLECTIC-ENTRY
+  type: MIXED_PRECONDITION_DECOMPOSITION
+  statement: The audited even-sign F=Q mock-plectic path has an E-intrinsic entry coordinate that cannot be supplied by auxiliary K-selection.
+obstruction_shadow:
+  id: O-BSD-A1A1-R6-INTRINSIC-PLECTIC-ENTRY-INTERFACE
+  scope: AUDITED_FORNEA_FORNEA_GEHRMANN_ROUTE_ONLY
+  promoted: false
+local_mathematical_status:
+  r5_complex_basechange_relation: PRESERVED
+  new_deep_theorem: NONE
+local_to_global_gluing:
+  status: FAIL
+  reason: A valid local E/Q -> E/K complex-order transport does not compose with the audited plectic theorem family until the intrinsic multiplicative-reduction entry interface is satisfied.
+retrieval_effect:
+  selected:
+    - EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3
+    - EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4
+    - EP-BSD-A1A1-BASECHANGE-PLECTIC-20260811-R5
+    - F-BSD-A1A1-R5-AUXILIARY-K-EXACT-SCOPE-GAP
+    - T-XM-ROOT-BRIDGE-STABILITY-AUDIT
+  changed_routing: true
+  change: Replaced another auxiliary-K optimization/search with an intrinsic route-entry type check before source-family composition.
+next_action:
+  primary: Rotate arbitrary-E representation search toward number-field weight-two carriers that do not require the audited multiplicative entry interface; good-ordinary generalised Kato classes are a scoped near-match, but their nonvanishing from complex analytic rank two remains unproved in the audited source.
+  falsifier: Seek a primary theorem deriving nonzero root-faithful class/regulator information directly from exact complex rank two without assuming Selmer rank two, Mordell-Weil rank two, p-adic BSD, or an equivalent arithmetic-strength input.
+root_state: OPEN_NO_SOLUTION_CERTIFICATE

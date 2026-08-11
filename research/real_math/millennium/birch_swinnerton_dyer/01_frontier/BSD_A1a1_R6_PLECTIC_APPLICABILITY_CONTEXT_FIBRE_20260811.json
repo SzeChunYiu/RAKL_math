@@ -1,0 +1,117 @@
+{
+  "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "object_context": "Rank-two BSD analytic/arithmetic bridge over Q, restricted in this cycle to whether the current F=Q plectic/mock-plectic route is structurally applicable to an arbitrary elliptic curve E/Q before auxiliary imaginary-quadratic-field selection.",
+  "structural_coordinates": [
+    "root input is exact complex ord_{s=1} L(E,s)=2 for an arbitrary elliptic curve E/Q",
+    "plectic route is over an imaginary quadratic K/Q and must preserve the complex s-coordinate when base-changing",
+    "intrinsic coordinates of E (conductor primes and reduction type) are not selectable by choosing K",
+    "auxiliary coordinates (split/inert behavior in K and complementary twist nonvanishing) are selectable only within source hypotheses",
+    "Fornea-Gehrmann mock-plectic setup uses a prime p inert in K where E has multiplicative reduction",
+    "Fornea 2026 F=Q plectic Heegner specialization with incoherent S has |S|<=1 and mock-plectic comparison at S={p}",
+    "downstream nonvanishing of plectic/mock-plectic objects is distinct from their construction and from Selmer/rank conclusions",
+    "Mordell-Weil rank, Sha, regulator, Tamagawa/local factors, torsion, and refined complex leading term remain separate global gluing coordinates"
+  ],
+  "equivalent_formulations": [
+    "route applicability = existence of an intrinsic E-level entry interface plus auxiliary K-level local data satisfying the plectic source hypotheses",
+    "before searching for K, partition plectic hypotheses into E-intrinsic versus K-selectable coordinates",
+    "a proof path for arbitrary E/Q cannot rely solely on a theorem whose hypotheses require an E-intrinsic feature not guaranteed by the root contract"
+  ],
+  "solved_analogues": [
+    "R5 proposal/shadow local composition: if L(E/K,s)=L(E,s)L(E^K,s), ord_{s=1}L(E,s)=2, and L(E^K,1)!=0, then ord_{s=1}L(E/K,s)=2 with L''(E/K,1)=L''(E,1)L(E^K,1)",
+    "Fornea-Gehrmann source theorem: under its stated plectic setup, L(E/K,1)=0 plus nonzero mock plectic invariant Q_K gives a p-Selmer rank conclusion"
+  ],
+  "near_solved_analogues": [
+    "Fornea 2026 constructs plectic Heegner classes and compares the F=Q S={p} specialization to mock plectic invariants, but higher-rank arithmetic nonvanishing significance is conjectural",
+    "Friedberg-Hoffstein finite-local quadratic-twist nonvanishing evidence can address some K-selectable conditions but cannot change E's reduction type"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "R5 base-change local bridge and finite-local twist selection",
+      "method": "separate intrinsic object coordinates from auxiliary-data coordinates before attempting a local-prescription theorem",
+      "shared_structure": [
+        "both routes use an auxiliary quadratic field to transport complex analytic information",
+        "both have mixed hypotheses: some on E,p,N and some on K"
+      ],
+      "required_assumptions": [
+        "source hypotheses can be parsed into E-intrinsic and K-selectable parts",
+        "the current plectic theorem statements are applied only inside their published scope"
+      ],
+      "disanalogies": [
+        "R5 verified a conditional product identity but did not establish arbitrary-E plectic theorem applicability",
+        "finite-local character prescription chooses K; it does not create a multiplicative bad prime of E"
+      ],
+      "repair_question": "Does the F=Q even-sign plectic/mock-plectic route require an E-intrinsic multiplicative prime before any auxiliary K can be chosen, and if so must the route be scoped to that subclass rather than treated as arbitrary-E?",
+      "source_anchors": [
+        "arXiv:2311.03100v2",
+        "arXiv:2603.28327",
+        "EP-BSD-A1A1-BASECHANGE-PLECTIC-20260811-R5"
+      ]
+    },
+    {
+      "source_context": "Yun-Zhang higher complex derivative/intersection theorem over function fields",
+      "method": "retain the derivative-order carrier pattern while refusing theorem transport across a changed arithmetic geometry",
+      "shared_structure": [
+        "higher complex central derivative is represented by a higher arithmetic intersection object",
+        "the desired number-field route also needs a root-faithful arithmetic carrier of complex derivative order two"
+      ],
+      "required_assumptions": [
+        "the analogy is used for representation search only",
+        "target-domain number-field hypotheses must be independently sourced"
+      ],
+      "disanalogies": [
+        "function fields use shtukas/Frobenius/Heegner-Drinfeld cycles",
+        "BSD target is an elliptic curve over Q with archimedean, Sha, regulator, torsion and Tamagawa data"
+      ],
+      "repair_question": "If the plectic route is intrinsically subclass-restricted, is there another number-field weight-two complex-second-derivative carrier not tied to that reduction-type interface?",
+      "source_anchors": [
+        "arXiv:1512.02683",
+        "EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "a theorem for elliptic curves with multiplicative reduction at a designated p is not automatically a theorem for arbitrary elliptic curves over Q",
+    "inert/split behavior of a prime in K is selectable by K; multiplicative versus good/additive reduction of E at that prime is intrinsic to E",
+    "construction/comparison of a plectic class is not proof of its nonvanishing from complex analytic rank two",
+    "p-adic/Hida or anticyclotomic derivative order is not the complex s-derivative order",
+    "same-context expert review is not independent mathematical review"
+  ],
+  "source_anchors": [
+    "Clay/Wiles BSD root statement as frozen in RAKL_math issue #7",
+    "arXiv:2311.03100v2 Fornea-Gehrmann",
+    "arXiv:2603.28327 Fornea",
+    "arXiv:1512.02683 Yun-Zhang",
+    "RAKL_math PR #150 / EP-BSD-A1A1-BASECHANGE-PLECTIC-20260811-R5"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "engineering interface/type-checking",
+      "source_situation": "An adapter can remap an available port's signalling but cannot create a physical port that the source device does not possess.",
+      "common_abstraction": [
+        "separate intrinsic source capabilities from selectable adapter parameters",
+        "validate entry-interface existence before optimizing downstream transport"
+      ],
+      "source_to_target_mapping": [
+        "source-device physical port -> E-intrinsic reduction-type/conductor interface",
+        "adapter wiring -> split/inert choices made through K",
+        "transport protocol -> plectic construction and downstream arithmetic theorem"
+      ],
+      "shared_constraints": [
+        "downstream transport is unavailable if the required source-side interface is absent",
+        "auxiliary choices can only act on coordinates they control"
+      ],
+      "disanalogies": [
+        "elliptic-curve reduction types are arithmetic invariants, not engineered hardware",
+        "a different mathematical representation may bypass the current plectic interface even when this route cannot"
+      ],
+      "proposed_principle": "Type-check theorem-entry hypotheses into intrinsic and auxiliary coordinates before spending search budget on auxiliary-field selection.",
+      "validation_obligation": "Read the exact F=Q plectic source hypotheses and verify whether the even-sign/mock-plectic specialization truly requires multiplicative reduction of E at an inert bad prime; reject the analogy if the published theorem permits an arbitrary-E entry route.",
+      "provenance_note": "Analogy is proposal-only and supplies no mathematical authority."
+    }
+  ],
+  "analogy_scan_notes": "The retained engineering analogy only controls search order: test intrinsic theorem applicability before auxiliary-field optimization.",
+  "frozen_at": "2026-08-11T19:34:30+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:5ba3279d73bed3a4dfbb4d7cd6f10a9f5e6680473890d9d93311fb194feb1dae"
+}

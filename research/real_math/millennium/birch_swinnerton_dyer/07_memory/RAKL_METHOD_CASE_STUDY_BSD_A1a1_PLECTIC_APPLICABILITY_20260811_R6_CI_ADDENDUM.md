@@ -1,0 +1,11 @@
+# RAKL_METHOD_CASE_STUDY — BSD A1a1 R6 CI/provenance addendum
+
+The first exact-head application workflow (`run 31531363370`, job `93911914825`) returned **475 passed, 2 failed**. Neither failure was mathematical.
+
+The first failure was a framework-execution-pin contract mismatch. R6 had correctly re-read current semantic RAKL authority at `bf94d16847971069912501e9a63f0e97a1e3e159`, but it then tried to make the application submodule/pin follow that head inside the research branch. The protected application contract still binds execution to `f224d91d9fbd2844a89921ca4a30b77a7954ecd2`. The repair was to restore the protected execution pin rather than editing or weakening the gate. Current `bf94d168...` remains the semantic source of truth after a drift audit showing no change to the v3 TaskEpisode/saturation/method-spec surfaces used by this cycle.
+
+The second failure was a representation/tooling collision in the application inventory audit. The R6 diagnosis and obstruction records used top-level `episode_id` only as a backlink. A protected inventory auditor intentionally treats any JSON object with that key as a candidate episode container, so those non-episode records appeared as unregistered episodes. The repair was to rename the backlinks to `episode_pointer`, recompute their content hashes, and update the downstream trace evidence hash. Episode, diagnosis, failure and obstruction remain separate objects.
+
+These failures are recorded as `F-BSD-A1A1-R6-FRAMEWORK-PIN-CONTRACT-SYNC-ATTEMPT` and `F-BSD-A1A1-R6-EPISODE-ID-INVENTORY-COLLISION`, diagnosed by `D-BSD-A1A1-R6-CI-CONTRACT-AND-INVENTORY-REPAIR`, and linked to the prior process-family warning `F-BSD-A1A1-R5-PROTECTED-ARTIFACT-MUTATION-ATTEMPT`. The linkage is procedural: both cycles reinforce that research output must adapt to protected authority/provenance contracts rather than mutating those contracts to make a branch pass.
+
+Failure taxonomy for this addendum is `tooling / provenance / representation / meta-policy`; mathematical failure is `false`, local-to-global mathematical gluing status is unchanged, and retained seven-axis semantic novelty is unchanged. No process repair is counted as new mathematical learning or as a promoted framework lesson.
