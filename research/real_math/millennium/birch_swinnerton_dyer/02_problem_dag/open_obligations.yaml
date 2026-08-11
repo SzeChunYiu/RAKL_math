@@ -2,7 +2,7 @@ root: BSD
 authority: OPEN_NO_SOLUTION_CERTIFICATE
 control_issue: 7
 active_atom: BSD-S001c1-KURIHARA-TAYLOR-COMPARISON
-analytic_active_atom: BSD-A1a1-THETA-ORDER-COMPARISON
+analytic_active_atom: BSD-A1a1b-HIGHER-EVEN-ORDER-EXCLUSION
 nodes:
   - id: BSD-RANK
     statement: "ord_{s=1} L(E,s) = rank E(Q) for every elliptic curve E/Q"
@@ -23,13 +23,24 @@ nodes:
     result: "Castella-Hsieh factorization/reciprocity/derived-height machinery makes anticyclotomic theta order and localization separate load-bearing coordinates; interpolation supplies positive theta order but not exact order two from complex analytic rank two"
   - id: BSD-A1a1-THETA-ORDER-COMPARISON
     parent: [BSD-A1a-KATO-NONVANISHING-BRIDGE]
-    statement: "find an exact noncircular theorem comparing ord_{s=1} L(E,s)=2 with ord_T Theta_{f/K}=2 for admissible auxiliary data, without importing positive Mordell-Weil rank, Selmer dimension, BSD or equivalent-strength arithmetic input"
-    state: PRE_CANDIDATE_CONTEXT_FROZEN
+    statement: "compare ord_{s=1} L(E,s)=2 with ord_J Theta_{f/K}=2 for admissible auxiliary data without importing positive Mordell-Weil rank, Selmer dimension, BSD or equivalent-strength arithmetic input"
+    state: VERIFIED_LOCAL_PARITY_LOWER_BOUND_PENDING_CI
+    children: [BSD-A1a1b-HIGHER-EVEN-ORDER-EXCLUSION]
+    result: "BSD-A1a1-C001: Chida-Hsieh inversion functional equation with sign +1 forces ord_J Theta_{f/K} to be even; Castella-Hsieh nonvanishing and interpolation give ord_J Theta>0, hence ord_J Theta>=2 in the registered setup"
     warnings:
+      - "this does not prove ord_J Theta=2"
       - "T is an anticyclotomic character coordinate, not the complex s variable"
-      - "Castella-Hsieh Theorem 2.3 plus L(E/K,1)=0 yields only ord_T Theta>0 in the source"
-      - "an Iwasawa main conjecture must be strength-audited before use as a complex-to-p-adic bridge"
-    next: "bounded primary-source search for exact s-to-T leading-term/order comparison theorems, classified by logical strength"
+      - "no Mordell-Weil, Selmer-dimension, Sha, regulator or root BSD authority follows"
+      - "no novelty claim is made for the parity deduction"
+      - "exact-head application CI must pass before VERIFIED_LOCAL promotion"
+  - id: BSD-A1a1b-HIGHER-EVEN-ORDER-EXCLUSION
+    parent: [BSD-A1a1-THETA-ORDER-COMPARISON]
+    statement: "under exact complex analytic rank two and admissible auxiliary data, exclude ord_J Theta_{f/K}>=4 without assuming positive Mordell-Weil rank, Selmer dimension two, p-adic BSD, an equivalent-strength main conjecture or maximal p-adic-height nondegeneracy"
+    state: OPEN_CONTEXT_REQUIRED
+    warnings:
+      - "the parity lemma supplies a lower bound, not the required upper bound"
+      - "derived-height and Iwasawa formulations tie excess vanishing to arithmetic semisimplicity/nondegeneracy, so any such input must be strength-audited"
+    next: "freeze fresh context, method-transfer matrix, expert cell, dual-memory review and pre-candidate trace before any candidate"
   - id: BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE
     parent: [BSD-A1a-KATO-NONVANISHING-BRIDGE]
     statement: "remove or justify the positive-rational-rank/nonzero-localization input used downstream to force generalised-Kato nonvanishing"
