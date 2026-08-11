@@ -1,0 +1,36 @@
+{
+  "schema_version": "pnp-source-completeness-diagnosis-r2-v1",
+  "diagnosis_id": "DIAG-PNP-O9d12a2a1a1b1-SOURCE-ACCESS-R2-20260811",
+  "atom_id": "O9d12a2a1a1b1",
+  "episode_lineage": [
+    "PNP-O9d12a2a1a1b1-SOURCE-INVENTORY-R1-20260811",
+    "PNP-O9d12a2a1a1b1-SOURCE-ACCESS-R2-20260811"
+  ],
+  "episode_is_not_diagnosis": true,
+  "failure_category": "SOURCE",
+  "diagnosis": "The active obstruction is not a failed mathematical lemma. It is a repeated primary-source completeness block: the frozen discriminator requires theorem-family completeness across two cited ancestry papers whose full primary texts remain inaccessible to the present retrieval runtime. Negative inference from abstracts would violate the source gate.",
+  "repeated_process_failure_links": [
+    {
+      "prior": "R1-SOURCE-COMPLETENESS-BLOCK",
+      "current": "R2-SOURCE-COMPLETENESS-BLOCK",
+      "same_signature": true
+    },
+    {
+      "prior": "R1-TELEMETRY-INCOMPLETE-NO-RAKL_CYCLE_METRICS",
+      "current": "R2-METRICS-REQUIRED",
+      "same_signature": false,
+      "note": "R2 repairs the prior process omission without retroactively upgrading R1."
+    }
+  ],
+  "local_failure": "NONE_NOT_REACHED",
+  "gluing_failure": "NONE_NOT_REACHED",
+  "verification": [
+    "Exact DOI/title searches repeated.",
+    "Primary publisher/author-style endpoints preferred over aggregators.",
+    "ScienceDirect full page/direct PDF access not obtainable in runtime despite Open archive metadata.",
+    "Karchmer exact DOI/reprint identity found but full primary pages not obtainable.",
+    "No mathematical candidate was generated."
+  ],
+  "falsifier": "Any exact full primary copy showing a discriminator-matching theorem would overturn the negative source-completeness route; therefore CANNOT_CHECK is mandatory until full text is inspected.",
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}
