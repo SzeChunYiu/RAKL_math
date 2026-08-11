@@ -85,7 +85,18 @@
       "required": ["path", "pointer", "classification", "source_commit", "git_blob_sha", "file_sha256", "stored_hash", "computed_runtime_digest", "old_schema_verdict", "new_schema_verdict", "prior_correction_paths", "successor_path", "successor_hash", "historical_bytes_preserved", "authority"],
       "properties": {
         "path": {"type": "string", "minLength": 1}, "pointer": {"const": "/"},
-        "classification": {"type": "string", "minLength": 1},
+        "classification": {"enum": [
+          "HISTORICAL_SUPERSEDED_HASH_INVALID",
+          "CURRENT_SUCCESSOR_HASH_INVALID",
+          "IMMUTABLE_NONCANONICAL_SHADOW",
+          "CURRENT_VALID_RAW_EXACT",
+          "NON_TASK_EPISODE_CONTAINER_WITH_EPISODE_ID",
+          "IMMUTABLE_NONCANONICAL_ORIGINAL_SUPERSEDED",
+          "IMMUTABLE_NONCANONICAL_INCOMPLETE_TELEMETRY",
+          "IMMUTABLE_NONCANONICAL_RICH_TASK_EPISODE_RECORD",
+          "CURRENT_HASH_INVALID",
+          "IMMUTABLE_APPLICATION_EXTENDED_PROPOSAL_NOT_CORE_TASK_EPISODE"
+        ]},
         "source_commit": {"$ref": "#/$defs/git_sha"}, "git_blob_sha": {"$ref": "#/$defs/git_sha"},
         "file_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
         "stored_hash": {"$ref": "#/$defs/nullable_hash"}, "computed_runtime_digest": {"$ref": "#/$defs/nullable_hash"},
