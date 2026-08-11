@@ -1,0 +1,30 @@
+schema_version: bsd-v3-route-diagnostic-v0
+artifact_type: SHADOW_ROUTE_DIAGNOSTIC
+parent_atom_id: BSD-A1a1-THETA-ORDER-COMPARISON
+status: OBSERVED_ROUTE_GAP
+authority:
+  effective: PROPOSAL_SHADOW_SEARCH_PRIORITY_ONLY
+  mathematical_candidate: false
+  theorem: false
+  root: false
+relation_gap:
+  local_sections:
+    - complex analytic s-order
+    - anticyclotomic J-order and derived-height depth
+    - p-primary Selmer/discrete reconstruction
+  missing_interface: >-
+    A non-circular theorem preserving the BSD root-critical rank/order coordinate
+    from exact complex analytic rank two into the anticyclotomic regulator/height
+    or exact J-order layer, followed by the exact global arithmetic bridge.
+active_axes:
+  obstruction: REOPENED
+  relation: REOPENED
+  path: REOPENED
+next_step_policy: >-
+  Do not generate a child theorem candidate from this retrospective route audit.
+  After parent/CI lineage is clean, freeze a fresh strict child context before
+  testing an exact complex-to-anticyclotomic comparison or independently derived
+  height/regulator nondegeneracy statement.
+source_episode_id: EP-BSD-A1A1-V3-BRIDGE-AUDIT-20260811-R1
+failure_observation_id: F-BSD-A1A1-V3-COMPLEX-ANTICYCLOTOMIC-FAITHFULNESS-GAP
+case_study: research/real_math/millennium/birch_swinnerton_dyer/08_reviews/RAKL_METHOD_CASE_STUDY_BSD_ANALYTIC_20260811.md
