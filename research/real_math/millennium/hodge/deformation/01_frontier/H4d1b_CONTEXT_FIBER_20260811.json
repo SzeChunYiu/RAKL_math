@@ -1,0 +1,81 @@
+{
+  "atom_id": "H4d1b",
+  "object_context": "Child of H4d1a after the verified first-order same-detector no-go. Fix a smooth projective family f:X->S, s0 in S, a local Hodge-locus branch T through s0 for a flat rational Hodge class alpha, and a fixed central algebraic witness z0 represented by a selected point w0 of a coefficient-safe local witness space W_alpha with projection pi:W_alpha->S and pi(w0)=s0. Determine whether the first-order branch-relative obstruction delta_{1,w0} vanishes on T_{s0}T from source-specific pointed witness geometry. This atom does not address initial algebraicity, higher-Artin lifting, algebraization, or global continuation.",
+  "structural_coordinates": [
+    "root coefficients remain rational; a selected witness may be a signed rational cycle encoded by finite coefficient-safe local Hilbert/Chow branches",
+    "the Hodge locus T is base-space data for alpha and does not itself select a witness point in a fiber",
+    "the selected witness is pointed data w0 over s0; replacing w0 by another witness changes the deformation problem",
+    "existential geometric coverage of T by the projection image is logically distinct from a local lifting branch through w0",
+    "first-order pointed liftability is controlled by im(d pi_w0), or by an equivalent source-bound tangent/obstruction interface when that interface is proved",
+    "the H4d1a same-detector nonzero-envelope route is retired inside its registered first-order scope",
+    "any passage from a base-image statement to selected-witness lifting needs local pointed geometry such as tangent dominance, smoothness/formal smoothness, or another source-specific theorem",
+    "first-order tangent dominance is not higher-Artin formal lifting; formal lifting is not algebraization; algebraization is not monodromy-safe global continuation",
+    "special complete-intersection/divisor controls cannot be generalized to arbitrary codimension or signed rational combinations without a transfer witness"
+  ],
+  "equivalent_formulations": [
+    "prove delta_{1,w0}|_{T_{s0}T}=0 in a source-bound tangent-obstruction sequence",
+    "prove T_{s0}T subseteq im(d pi_w0) for the exact selected witness point w0 when delta_1 is the associated cokernel obstruction",
+    "construct a local witness branch or formally smooth pointed morphism through w0 whose image contains the germ of T",
+    "separate 'for nearby s there exists some witness over s' from 'the fixed w0 extends through the infinitesimal direction at s0'"
+  ],
+  "solved_analogues": [
+    "Nishinou's semiregular-map setting: under the source hypotheses a fixed central map deforms relatively iff its cycle class remains Hodge; this is a pointed chosen-witness positive control",
+    "codimension-one Picard/divisor deformation, where the witness category has stronger representability and obstruction control"
+  ],
+  "near_solved_analogues": [
+    "Kloosterman's complete-intersection hypersurface setting: the Hodge locus is smooth at the central hypersurface and the proof explicitly compares its tangent ideal with flag-Hilbert geometry; this is the main source-bound H4d1b calibration candidate",
+    "Pridham's global reduced obstruction theory: a legitimate alternate obstruction representation, but not automatic pointed branch lifting for arbitrary cycles"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Kloosterman flag-Hilbert versus Hodge-locus comparison for complete-intersection cycles on hypersurfaces",
+      "method": "write Y=sum_i P_i Q_i, identify the Hodge tangent ideal, and compare it with first-order variations of the selected flag (Y,Z)",
+      "shared_structure": ["a selected geometric witness point maps to the deformation base", "a Hodge-locus germ lives in the same base", "explicit tangent equations can test whether every Hodge direction is induced by deforming the selected witness"],
+      "required_assumptions": ["the complete-intersection/hypersurface and degree hypotheses hold", "the selected flag point (Y,Z) is the witness under study", "the tangent-image equality is derived from the exact source equations rather than from image containment alone"],
+      "disanalogies": ["the rational Hodge root permits arbitrary codimension and signed rational combinations", "the explicit ideal presentation P_i,Q_i is special and has no automatic analogue for a general witness"],
+      "repair_question": "Does Kloosterman's explicit ideal calculation certify im(d pi_(Y,Z)) = T_Y NL([Z]_prim) at the selected flag point, giving a source-bound direct first-order vanishing control without using detector injectivity as the inference step?",
+      "source_anchors": ["https://arxiv.org/abs/2104.14845"]
+    },
+    {
+      "source_context": "Nishinou relative deformation of semiregular maps with divisor image",
+      "method": "bind the obstruction to the fixed central map and use semiregularity plus Hodge persistence to obtain relative deformation of that same map",
+      "shared_structure": ["fixed central witness", "ambient directions create a geometric lifting obstruction", "Hodge persistence is compared with pointed obstruction vanishing"],
+      "required_assumptions": ["Nishinou's semiregularity and source-category hypotheses", "the Hodge class is the one carried by the fixed map", "scope is not enlarged beyond the theorem"],
+      "disanalogies": ["semiregularity is the strong detector condition H4d1b is trying not to assume generally", "the main setup concerns maps with divisor image rather than arbitrary rational cycles"],
+      "repair_question": "Can explicit witness-incidence geometry certify the pointed tangent inclusion without assuming full semiregularity?",
+      "source_anchors": ["https://arxiv.org/abs/2009.01651"]
+    },
+    {
+      "source_context": "Pridham derived semiregularity and reduced obstruction theory",
+      "method": "change/reduce the obstruction object through a source-defined derived morphism rather than post-hoc quotienting the detector kernel",
+      "shared_structure": ["typed geometric obstruction data", "cohomological maps can annihilate obstructions", "a reduced obstruction theory can be fixed functorially"],
+      "required_assumptions": ["the derived moduli functor applies to the chosen witness category", "the reduced object is fixed before the lifting conclusion", "compatibility with T and w0 is separately proved"],
+      "disanalogies": ["reduced obstruction theory alone does not prove T_{s0}T subseteq im(d pi_w0)", "quotienting by the old detector kernel after H4d1a would erase rather than solve the registered obstruction"],
+      "repair_question": "Can a source-defined reduced object give a non-circular pointed lifting criterion with an auditable map back to the original witness problem?",
+      "source_anchors": ["https://arxiv.org/abs/1112.6001"]
+    }
+  ],
+  "explicit_disanalogies": [
+    "Hodge-locus membership is not witness existence, and witness existence is not automatically deformation of the selected witness",
+    "image coverage of a morphism does not generally imply surjectivity of its differential at a selected point",
+    "smoothness of the Hodge locus does not imply smoothness/formal smoothness of the witness projection",
+    "first-order tangent inclusion does not prove higher-Artin lifting",
+    "formal lifting does not supply algebraization or global continuation",
+    "the previous same-detector impossibility cannot be bypassed by renaming a quotient obstruction object"
+  ],
+  "source_anchors": [
+    "https://github.com/SzeChunYiu/RAKL_math/issues/6",
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1_WITNESS_PROJECTION_CALIBRATION_20260811.md",
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1a_BRANCH_DETECTOR_COMPATIBILITY_NOGO_20260811.md",
+    "research/real_math/millennium/hodge/deformation/07_memory/H4d1a_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "https://arxiv.org/abs/2104.14845",
+    "https://arxiv.org/abs/2009.01651",
+    "https://arxiv.org/abs/1112.6001"
+  ],
+  "analogy_scan_status": "NO_SAFE_BRIDGE_FOUND",
+  "cross_domain_analogies": [],
+  "analogy_scan_notes": "Routing/reachability, session-continuity, and local-lifting analogies were scanned. None was retained because the active distinction is already exactly expressed by pointed morphism geometry: projection-image coverage versus differential/formal lifting at one selected point. An everyday analogy would add no new falsifiable obligation.",
+  "frozen_at": "2026-08-11T14:10:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:b0f3d0219b116654adc5da4bc401a8ef01bfd2612bf88d132ffda06b67a940a0"
+}
