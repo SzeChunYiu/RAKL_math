@@ -1,0 +1,63 @@
+{
+  "action_trace": [
+    "21bab82073797323a8a4c0ec2dc09ad150600736c513597efbb9fa8cd099981c",
+    "b1a52f8e1fa4f4fcac3bba07e084125503511402434191717709dcc563611d87",
+    "f6ac4363599d05fb942a09442df1c128904798e888915a85d0f355bd4bf304cf",
+    "f62ee7a14d882d6e1580955d6fd1754c9f19b7a7de071f3a28101a94b3f30fb8",
+    "54b692567f7db40d311a93e4a3a8c257856ca508a21e196585093aed9494a3ba",
+    "e7b7b2d917e4a2e2c8e8801e9b8f026497ef7c1412035ba4d97e7268f56807fb",
+    "f4ac74180af690ff00eb3668a4e0fa2c850c08a20d3237568fb1c63c408cbb90",
+    "4ad9a2f45af63c3d020a8e4687853442d0a3eceef8bd3aa09f4fbe942c74506a",
+    "a41e5b5315d60803695a2971e167a60f10bd4bc01f2c8c00da5e077dc418c830",
+    "21854b4013782ddcfee49d713cc20d4f9f6adef0835d1db8cc0bf53a2e90882f",
+    "74d0538e2e7d50357b32975700ea34a948b21ac654d33927ca688e4512f32c22",
+    "891c46bd32e4d9c452897406f246c6d9db88d401a2cd0d62acfe3ce01356c4e7",
+    "ca8b653d4fc8771b64d84c4bb112bf2f0a8731e10dc5422dcd29355dfd8de3fe"
+  ],
+  "artifact_hash": "7e45e0a0fdb01b9041334b3805d9d61d7f8440cd46b7c28aa478b9da26a4cbed",
+  "atom_id": "NS-B1a4",
+  "context_hash": "acfb51eae1499ab1bd355871efd7371ca1774cd2692ddb1646afdc0ae603da41",
+  "cost": 0.0,
+  "episode_id": "EP-NS-B1a4-C001-R1-20260812",
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a4_CONTEXT_FIBER_R1_20260812.json",
+    "research/real_math/millennium/navier_stokes/04_candidates/NS-B1a4_C001_PRESSUREZERO_RECROSSING_CALIBRATION_20260812.md",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a4_DUAL_MEMORY_REVIEW_R1_20260812.json",
+    "research/real_math/millennium/navier_stokes/08_reviews/NS-B1a4_EXPERT_POSTCHECK_R1_20260812.json",
+    "research/real_math/millennium/navier_stokes/09_trace/NS-B1a4_TRACE_R1_20260812.jsonl",
+    "https://arxiv.org/abs/1811.00502",
+    "https://arxiv.org/abs/2607.09619v2"
+  ],
+  "fibre_snapshot_hash": "acfb51eae1499ab1bd355871efd7371ca1774cd2692ddb1646afdc0ae603da41",
+  "observation_ids": [
+    "OBS-NS-B1a4-P0-EXACT-SHEAR",
+    "OBS-NS-B1a4-LOCAL-ENERGY-INCREASE",
+    "OBS-NS-B1a4-GLOBAL-A-DIVERGENCE"
+  ],
+  "operator_ids": [
+    "COUNTEREXAMPLE_FIRST",
+    "EXACT_NSE_HEAT_SHEAR",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "outcome": "PARTIAL_SUCCESS",
+  "problem_signature": [
+    "finite-I magnitude ledger A+C+D+E",
+    "standard local-energy balance plus pressure localization",
+    "one-sided signed temporal/no-recrossing law",
+    "generic local-balance sign versus finite-I-specific ancient structure"
+  ],
+  "residual_signature": [
+    "FINITE_I_SPECIFIC_SIGNED_TRAJECTORY_OR_NEW_SIGNED_OBSERVABLE_REQUIRED",
+    "LOCAL_TO_GLOBAL_FINITE_I_ANCIENT_GLUE_UNRESOLVED"
+  ],
+  "storage_admission": "PROPOSAL_SHADOW_STORED",
+  "task_id": "navier_stokes_millennium",
+  "timestamp": "2026-08-11T23:10:00Z",
+  "verification_ids": [
+    "VER-NS-B1a4-HEAT-EQUATION-IDENTITY",
+    "VER-NS-B1a4-STRICT-SIGN-INEQUALITY",
+    "VER-NS-B1a4-CONVECTION-PRESSURE-ZERO",
+    "VER-NS-B1a4-FINITE-I-DIFFERENCE-WITNESS",
+    "VER-NS-B1a4-SAME-CONTEXT-POSTCHECK"
+  ]
+}
