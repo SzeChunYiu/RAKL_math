@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rakl-math.invalid/schemas/hodge-source-rebinding-receipt.schema.json",
+  "title": "Hodge source-authority rebinding receipt",
+  "description": "Versioned evidence that quarantines a withdrawn source and binds the active claim surface to its current superseding primary source.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "atom_id",
+    "recorded_at",
+    "withdrawn_source",
+    "current_source",
+    "authority_rebinding",
+    "claim_scope",
+    "evidence_pointers",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"const": "H4d1a-PRIDHAM-SOURCE-REBINDING-20260811"},
+    "atom_id": {"const": "H4d1a"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "withdrawn_source": {"$ref": "#/$defs/withdrawnSource"},
+    "current_source": {"$ref": "#/$defs/currentSource"},
+    "authority_rebinding": {"$ref": "#/$defs/authorityRebinding"},
+    "claim_scope": {"$ref": "#/$defs/nonEmptyStrings"},
+    "evidence_pointers": {"$ref": "#/$defs/nonEmptyStrings"},
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "nonEmptyStrings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "withdrawnSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "arxiv_id",
+        "title",
+        "status",
+        "url",
+        "retrieval_url",
+        "withdrawal_reason",
+        "superseded_by",
+        "retrieved_at",
+        "retrieved_content_sha256"
+      ],
+      "properties": {
+        "arxiv_id": {"const": "1112.6001v4"},
+        "title": {"const": "Semiregularity via derived deformation theory"},
+        "status": {"const": "WITHDRAWN"},
+        "url": {"const": "https://arxiv.org/abs/1112.6001"},
+        "retrieval_url": {"const": "https://arxiv.org/abs/1112.6001"},
+        "withdrawal_reason": {"type": "string", "minLength": 1},
+        "superseded_by": {"const": "1208.3111v4"},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "retrieved_content_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "currentSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "arxiv_id",
+        "title",
+        "author",
+        "status",
+        "url",
+        "retrieval_url",
+        "supersedes",
+        "source_comment",
+        "retrieved_at",
+        "retrieved_content_sha256"
+      ],
+      "properties": {
+        "arxiv_id": {"const": "1208.3111v4"},
+        "title": {"const": "Semiregularity as a consequence of Goodwillie's theorem"},
+        "author": {"const": "J. P. Pridham"},
+        "status": {"const": "CURRENT"},
+        "url": {"const": "https://arxiv.org/abs/1208.3111v4"},
+        "retrieval_url": {"const": "https://export.arxiv.org/api/query?id_list=1208.3111"},
+        "supersedes": {"const": "1112.6001v4"},
+        "source_comment": {"type": "string", "minLength": 1},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "retrieved_content_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "authorityRebinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "active_primary_source",
+        "historical_source_authority",
+        "retrospective_claim_expansion_allowed",
+        "effect"
+      ],
+      "properties": {
+        "active_primary_source": {"const": "1208.3111v4"},
+        "historical_source_authority": {"const": "QUARANTINED_WITHDRAWN_PROVENANCE_ONLY"},
+        "retrospective_claim_expansion_allowed": {"const": false},
+        "effect": {"const": "SOURCE_VERSION_CORRECTION_ONLY"}
+      }
+    }
+  }
+}
