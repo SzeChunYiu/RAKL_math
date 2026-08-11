@@ -1,0 +1,49 @@
+{
+  "target_atom_id": "NS-B1b1",
+  "target_context_hash": "sha256:2d62451fec625e6ee71e9ae9f300c5da1f82597b26933ce60e267030313d4f22",
+  "tool_inventory_snapshot_hash": "gitblob:432bf0832c58738bf421a42262f8443fbc943fcb",
+  "failure_lattice_snapshot_hash": "gitblob:bb79c237dbfca5d38ab08807446640f1eb672e39",
+  "tool_query_status": "NO_RELEVANT_MATCH",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "Pineau–Vicol weighted-enstrophy localization under finite-I hypotheses",
+    "one-slice near-stationary extraction in self-similar time",
+    "critical-element / concentration-compactness transfer from global L3 or critical Besov",
+    "Albritton–Barker compactness plus established Liouville trigger",
+    "signed local-energy or monotonicity-based anti-recurrence"
+  ],
+  "relevant_tool_ids": [],
+  "relevant_failure_ids": [
+    "F-C023-SCALAR-COLLAPSE",
+    "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+    "F-NS-B1a1-ABSOLUTE-LOCAL-ENERGY-SCALE-CURRENCY"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "The registered global tool inventory still has no independently verified PDE-specific tool whose preconditions witness a direct transfer to finite-I Navier–Stokes blow-up classification.",
+    "Positive source patterns were nevertheless reviewed directly: Albritton–Barker compactness/persistence, Gallagher–Koch–Planchon critical elements, and Pineau–Vicol weighted enstrophy. They remain source methods, not registered success-tool authority for this atom."
+  ],
+  "failure_reuse_notes": [
+    "F-C023-SCALAR-COLLAPSE is reused only as a warning that one critical scalar bound can erase orbit-class information; applicability here is witnessed by the distinction between fixed, periodic/RDSS, and general renormalized trajectories sharing Type-I scaling.",
+    "F-NS-B1a-C001-PRESSURE-SUMMABILITY applies to attempts that reconstruct global pressure control from unsummed far-field shells; it does not blacklist Pineau–Vicol's separately assumed fixed-annulus pressure L-infinity bound.",
+    "F-NS-B1a1-ABSOLUTE-LOCAL-ENERGY-SCALE-CURRENCY applies because a near-stationary-slice extraction cannot be justified by summing absolute critical shell costs across infinitely many scales. Signed/telescoping or genuinely monotone controls remain live."
+  ],
+  "unresolved_warnings": [
+    "Pineau–Vicol v2 is a new primary-source input and must be cited by exact version/date; v1 lacked the local Theorem 1.9 result.",
+    "No implication finite I -> pointwise Type-I velocity bound is source-bound.",
+    "No implication pressure D -> fixed-annulus L-infinity pressure is source-bound.",
+    "Strong L3_loc / weak L^(3/2)_loc compactness does not by itself produce a selected time slice with small self-similar generator.",
+    "Compactness or recurrence does not imply near-stationarity in the presence of rotations or periodic/RDSS dynamics.",
+    "Backward uniqueness cannot be invoked until exact terminal, integrability, and far-field hypotheses are proved."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1_TYPE_I_IMPLICATION_MATRIX_20260811.md",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a_C001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "PR #54 research/real_math/millennium/navier_stokes/07_memory/NS-B1a1_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "Pineau–Vicol arXiv:2607.09619v2",
+    "Albritton–Barker arXiv:1811.00502",
+    "Gallagher–Koch–Planchon arXiv:1012.0145"
+  ],
+  "artifact_hash": "sha256:0d9947fd7b0ba56b8c439260ae3c2076e4d4cb8eff2ffdc053637dc2a70c67ac"
+}
