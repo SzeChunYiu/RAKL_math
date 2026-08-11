@@ -1,0 +1,43 @@
+{
+  "target_atom_id": "NS-R001d",
+  "target_context_hash": "sha256:b846a739651692306c82255b1e7f76cd13347b4c00bc3f61e2ea28d3c7bb711f",
+  "tool_inventory_snapshot_hash": "sha256:fe2f3b4ef49492d81cb350fb689bf9f9dff6cfd1817d72d6ff9fe3350e3d5e6a",
+  "failure_lattice_snapshot_hash": "sha256:e565a0e108042c22308caf4d89caf5bb9f42a7ef9756d28bc214d3e9f95056e7",
+  "tool_query_status": "NO_RELEVANT_MATCH",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "Miller projected-remainder snapshot smallness",
+    "time-integrated projected-remainder depletion",
+    "positive-time smoothing plus critical rescaling",
+    "frequency-local or pressure-mediated cancellation",
+    "mixing/enhanced-dissipation-style trajectory control"
+  ],
+  "relevant_tool_ids": [],
+  "relevant_failure_ids": [
+    "F-NS-R001-A1-ENERGY-CRITICALITY",
+    "F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "No promoted RAKL success tool has a validated applicability witness for the NS-R001d projected-remainder bridge."
+  ],
+  "failure_reuse_notes": [
+    "DifferenceWitness for F-NS-R001-A1-ENERGY-CRITICALITY: NS-R001d adds Miller's exact strain-space projected advection-plus-quadratic remainder, which A1 did not test; however a snapshot estimate based only on kinetic energy is still exposed to fixed-energy spatial concentration. Cheapest repeat-failure test: evaluate the remainder on one explicit Schwartz divergence-free seed and rescale it with amplitude lambda^(3/2).",
+    "DifferenceWitness for F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP: NS-R001d replaces pointwise alignment by a nonlocal projected trajectory-motivated quantity. This repairs the local-geometry coordinate but not the snapshot-versus-dynamics gap. Cheapest repeat-failure test: use admissible initial data, not arbitrary histories, and determine whether the dimensionless remainder ratio grows under energy-preserving concentration.",
+    "Neither prior failure is a verified impossibility; they are scoped warnings and do not block time-integrated or positive-time Navier-Stokes depletion mechanisms."
+  ],
+  "unresolved_warnings": [
+    "A static initial-data falsifier can reject an energy-only snapshot bound but cannot reject an estimate that starts at t>0 and uses actual Navier-Stokes smoothing.",
+    "The energy-preserving concentration lambda^(3/2)v(lambda x) is not the Navier-Stokes solution symmetry; it is used only to vary admissible initial data at fixed kinetic energy.",
+    "The strain-space projection P_st is nonlocal; the falsifier must bind its conclusion through projection self-adjointness or an exact projected computation, not through an unprojected norm surrogate.",
+    "Smallness of the Miller ratio is sufficient only in the theorem's exact regularity setting and is not itself known to follow from finite energy."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/07_memory/NS_R001_RESEARCH_TOOL_INVENTORY_20260811.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS_R001D_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS_R001D_ADVECTION_DEPLETION_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS_R001B_STRAIN_VORTICITY_ATLAS_20260811.md",
+    "RAKL_math issue #4"
+  ],
+  "artifact_hash": "sha256:71063a2b8249886ddd05fbf7e160f15a27c6c9e9abb93d8d3b43e9bacf08b9da"
+}
