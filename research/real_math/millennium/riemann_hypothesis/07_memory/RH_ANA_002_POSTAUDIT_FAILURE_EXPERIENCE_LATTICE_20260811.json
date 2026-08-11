@@ -1,0 +1,51 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE",
+      "atom_id": "RH-ANA-002",
+      "candidate_id": "METHOD-FAMILY:SUZUKI-LI-NORM-FAITHFULNESS",
+      "context_packet_hash": "sha256:300b787769442af040d944e0b52db106881844a9238c021e8804c7f382660742",
+      "research_trace_event_id": "RH-ANA-002-E08",
+      "method_family": "manifestly positive norm surrogate transported to all-index Li positivity through exact faithfulness",
+      "failure_mode": "the audited primary-source dependency chain reaches the RH-equivalent model-space/inner-function coordinate before positivity of the unconditional L2 norm is transported to the exact Li coefficients; no strictly weaker source-proved defect identity was exposed",
+      "residual_signature": [
+        "unconditional G_n in L2 yields only P_n >= 0",
+        "orthonormal model-space expansion used for the norm identity is RH-conditional",
+        "the all-n equality P_n=lambda_n is RH-equivalent",
+        "source section 4.1 leaves the unconditional relation unresolved and points to xi+xi' zero structure as an obstacle"
+      ],
+      "broken_assumptions": [
+        "manifest positivity of P_n is informative about lambda_n before an independently proved faithfulness theorem",
+        "Suzuki Proposition 2.1 or Proposition 2.2 already contains a weaker unconditional defect identity sufficient for Li positivity",
+        "Parseval/model-space transport can be imported unconditionally from the RH proof"
+      ],
+      "scope_conditions": [
+        "the specific Suzuki norm/model-space route as represented in arXiv:2301.05779 / JNT 252 (2023)",
+        "claims that rely only on the source-proved unconditional Proposition 2.1/2.2 layer plus the norm's nonnegativity",
+        "this record does not claim that no other analytic norm identity, deformation, or later theorem can expose a weaker bridge"
+      ],
+      "competing_diagnoses": [
+        "the route is genuinely root-equivalent at its first positivity-transport step, so further notation-level norm reformulations are saturated",
+        "a weaker unconditional relation may exist but is not explicit in Suzuki's audited proof and would require new mathematics around xi+xi' zeros or non-orthogonal expansions",
+        "the useful coordinate may lie outside the norm representation, for example in Bombieri-Lagarias prime/archimedean cancellation or a global Li-growth exclusion theorem"
+      ],
+      "selected_diagnosis": "",
+      "diagnosis_status": "OBSERVED_ONLY",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_002_LI_NORM_FAITHFULNESS_MATRIX_20260811.md",
+        "research/real_math/millennium/riemann_hypothesis/08_reviews/SAME_CONTEXT_REVIEW_RH_ANA_002_FAITHFULNESS_RESULT_20260811.md",
+        "Masatoshi Suzuki, arXiv:2301.05779, Theorem 1.1, Propositions 2.1, 2.2, 3.1, 3.2 and Section 4.1"
+      ],
+      "falsifier_or_attempt": "dependency-classify the exact source proof and search the unconditional layer for an exact defect/sign/orthogonality subidentity before the RH-equivalent model-space step",
+      "observed_result": "Propositions 2.1 and 2.2 supply an unconditional explicit-formula identity and L2 object, but the theorem's norm-to-Li transport uses Proposition 3.2 under RH after Proposition 3.1's RH-equivalent inner-function condition; Section 4.1 does not supply an unconditional replacement",
+      "local_repair_attempts": [
+        "do not pursue D_n=0 as a renamed RH target",
+        "rotate to a fresh context for the exact prime/archimedean cancellation and all-n uniform-tail coordinate",
+        "retain xi+xi' zero structure only as a source-identified obstacle, not as a new theorem claim"
+      ],
+      "timestamp": "2026-08-11T10:43:00+00:00",
+      "artifact_hash": "sha256:a1fefd3134adbcd53cc277b1508c21ffa8b4a6eedb5548f0c4d04f2f9fac21e9"
+    }
+  ],
+  "links": []
+}
