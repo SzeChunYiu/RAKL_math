@@ -18,6 +18,12 @@ BASE = (
 PINNED_FRAMEWORK = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
 SOURCE_COMMIT = "e05613ae4a86f8fbdc842bb51a51e41d5150d1fc"
 SOURCE_TREE = "dcd5a558a38190ff9d28eb22484587a4f5b18851"
+PRIOR_CHECKPOINT = "fbc8c663402e497fcb7d908f47c8d6cf57ed78b7"
+PRIOR_TREE = "e6c7fa2cf0c908c185ba233bacd5e20666241b38"
+MAIN_SNAPSHOT = "5d6bdc6f566921f51a375fdc2e8035123cf4830c"
+MAIN_TREE = "63c64c242edcf0357010f613c19d9aa713cbbb18"
+INTEGRATION_MERGE = "1a36a43fdefdc2e1f76e17d24a3d41c2e59cc8dc"
+INTEGRATION_TREE = "0e9302f034a323bea6e7d515a97a0e0115b74301"
 MEMORY_FIRST_ORDER = [
     "QUERY_CANONICAL_RESEARCH_TOOL_INVENTORY",
     "QUERY_CANONICAL_FAILURE_LATTICE",
@@ -277,3 +283,89 @@ def test_all_embedded_source_bindings_resolve_at_the_exact_application_commit() 
             capture_output=True,
         ).stdout
         assert hashlib.sha256(source_bytes).hexdigest() == binding["content_sha256"]
+
+
+def test_main_integration_receipt_binds_exact_history_without_changing_pilot() -> None:
+    receipt = _load("STUDY_PATTERN_MAIN_INTEGRATION_RECEIPT_20260811.json")
+    assert receipt["artifact_hash"] == _canonical_hash(receipt)
+    assert receipt["status"] == "PROPOSAL_ONLY_INTEGRATION_PROVENANCE"
+    assert receipt["framework_authority_commit"] == PINNED_FRAMEWORK
+
+    assert receipt["prior_branch_checkpoint"] == {
+        "commit": PRIOR_CHECKPOINT,
+        "tree": PRIOR_TREE,
+    }
+    assert receipt["current_main_snapshot"] == {
+        "commit": MAIN_SNAPSHOT,
+        "tree": MAIN_TREE,
+    }
+    merge = receipt["integration_merge"]
+    assert merge["commit"] == INTEGRATION_MERGE
+    assert merge["tree"] == INTEGRATION_TREE
+    assert merge["parents"] == [PRIOR_CHECKPOINT, MAIN_SNAPSHOT]
+    assert merge["first_parent_proposal_checkpoint"] == PRIOR_CHECKPOINT
+    assert merge["second_parent_live_main"] == MAIN_SNAPSHOT
+    assert merge["strategy"] == "ort"
+
+    for commit, tree in (
+        (PRIOR_CHECKPOINT, PRIOR_TREE),
+        (MAIN_SNAPSHOT, MAIN_TREE),
+        (INTEGRATION_MERGE, INTEGRATION_TREE),
+    ):
+        assert _git("cat-file", "-t", commit) == "commit"
+        assert _git("rev-parse", f"{commit}^{{tree}}") == tree
+    assert _git("show", "-s", "--format=%P", INTEGRATION_MERGE).split() == [
+        PRIOR_CHECKPOINT,
+        MAIN_SNAPSHOT,
+    ]
+    for ancestor in (SOURCE_COMMIT, PRIOR_CHECKPOINT, MAIN_SNAPSHOT):
+        assert (
+            subprocess.run(
+                ["git", "-C", str(ROOT), "merge-base", "--is-ancestor", ancestor, INTEGRATION_MERGE],
+                check=False,
+            ).returncode
+            == 0
+        )
+
+    frozen = receipt["frozen_source"]
+    assert frozen["commit"] == SOURCE_COMMIT
+    assert frozen["tree"] == SOURCE_TREE
+    binding = frozen["source_binding_receipt"]
+    assert binding["commit"] == PRIOR_CHECKPOINT
+    assert binding["tree"] == PRIOR_TREE
+    assert _git("rev-parse", f"{binding['commit']}:{binding['path']}") == (
+        binding["git_blob_sha"]
+    )
+    historical_bytes = subprocess.run(
+        ["git", "-C", str(ROOT), "show", f"{binding['commit']}:{binding['path']}"],
+        check=True,
+        capture_output=True,
+    ).stdout
+    assert "sha256:" + hashlib.sha256(historical_bytes).hexdigest() == (
+        binding["raw_sha256"]
+    )
+    source_receipt = json.loads(historical_bytes)
+    assert source_receipt["artifact_hash"] == binding["artifact_hash"]
+    assert source_receipt == _load("STUDY_PATTERN_SOURCE_BINDING_RECEIPT_20260811.json")
+    for source_binding in source_receipt["bindings"]:
+        current_bytes = (ROOT / source_binding["path"]).read_bytes()
+        source_bytes = subprocess.run(
+            ["git", "-C", str(ROOT), "show", f"{SOURCE_COMMIT}:{source_binding['path']}"],
+            check=True,
+            capture_output=True,
+        ).stdout
+        assert current_bytes == source_bytes
+
+    assert receipt["chronology"] == {
+        "source_and_preregistration_remain_frozen_at_commit": SOURCE_COMMIT,
+        "source_binding_receipt_remains_non_circular": True,
+        "integration_receipt_created_after_history_merge": True,
+        "pilot_protocol_changed_by_integration": False,
+        "pilot_executed": False,
+        "pilot_results_accessed": False,
+        "result_receipt_created": False,
+    }
+    assert not list(BASE.glob("*RESULT_RECEIPT*.json"))
+    _assert_frozen_authority(
+        receipt["authority_contract"], allowed_effect="INTEGRATION_PROVENANCE_ONLY"
+    )
