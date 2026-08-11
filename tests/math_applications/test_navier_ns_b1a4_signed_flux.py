@@ -5,8 +5,11 @@ import json
 import math
 from pathlib import Path
 
+from jsonschema import Draft202012Validator, FormatChecker
+
 ROOT = Path(__file__).resolve().parents[2]
 NS = ROOT / "research/real_math/millennium/navier_stokes"
+FRAMEWORK_TASK_EPISODE_SCHEMA = ROOT / "framework/RAKL/schemas/task-episode.schema.json"
 
 CONTEXT = NS / "01_frontier/NS-B1a4_CONTEXT_FIBER_20260812.json"
 MEMORY = NS / "07_memory/NS-B1a4_RESEARCH_MEMORY_REVIEW_20260812.json"
@@ -39,6 +42,24 @@ def _trace_hash(trace: dict) -> str:
     return "sha256:" + hashlib.sha256(raw).hexdigest()
 
 
+def _episode_identity_hash(episode: dict) -> str:
+    payload = dict(episode)
+    payload.pop("artifact_hash")
+    raw = json.dumps(
+        payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False
+    ).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest()
+
+
+def _envelope_hash(envelope: dict) -> str:
+    payload = dict(envelope)
+    payload.pop("envelope_hash")
+    raw = json.dumps(
+        payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False
+    ).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest()
+
+
 def test_ns_b1a4_exact_pressure_free_shear_calibration():
     # Analytic proof lives in the research artifact. This is only a deterministic
     # calibration/regression check; computation is not theorem authority.
@@ -65,7 +86,7 @@ def test_ns_b1a4_exact_pressure_free_shear_calibration():
     assert energy_derivative > 0.0
 
 
-def test_ns_b1a4_hash_chained_trace_and_episode_scope():
+def test_ns_b1a4_hash_chained_trace_and_v3_shadow_episode_scope():
     pre = _load(PRE_TRACE)
     prev = None
     for event in pre["events"]:
@@ -85,10 +106,19 @@ def test_ns_b1a4_hash_chained_trace_and_episode_scope():
     assert post["terminal_event_hash"] == prev
     assert post["artifact_hash"] == _trace_hash(post)
 
-    episode = _load(EPISODE)
-    assert episode["authority"] == "PROPOSAL_SHADOW_EPISODE_ONLY"
-    assert episode["outcome"] == "PARTIAL_SUCCESS_ROUTE_PRUNING"
-    assert "no strict RAKL candidate-generation credit" in episode["candidate_chronology"]
+    envelope = _load(EPISODE)
+    assert "episode_id" not in envelope  # do not claim historical canonical inventory admission
+    assert envelope["authority"] == "PROPOSAL_SHADOW_EPISODE_ONLY"
+    assert envelope["envelope_hash"] == _envelope_hash(envelope)
+
+    episode = envelope["task_episode_shadow_payload"]
+    schema = _load(FRAMEWORK_TASK_EPISODE_SCHEMA)
+    Draft202012Validator.check_schema(schema)
+    Draft202012Validator(schema, format_checker=FormatChecker()).validate(episode)
+    assert episode["artifact_hash"] == _episode_identity_hash(episode)
+    assert episode["outcome"] == "PARTIAL_SUCCESS"
+    assert episode["storage_admission"] == "PROPOSAL_SHADOW_STORED"
+    assert "no strict RAKL candidate-generation credit" in envelope["shadow_extensions"]["candidate_chronology"]
 
 
 def test_ns_b1a4_local_failure_is_not_global_gluing_or_root_promotion():
@@ -98,6 +128,8 @@ def test_ns_b1a4_local_failure_is_not_global_gluing_or_root_promotion():
     result = RESULT.read_text()
     dag = DAG.read_text()
 
+    assert diagnosis["source_episode_id"] == "EP-NS-B1a4-C001-SIGNED-FLUX-20260812"
+    assert failure["source_episode_id"] == "EP-NS-B1a4-C001-SIGNED-FLUX-20260812"
     assert diagnosis["local_math_failure"] is True
     assert diagnosis["local_to_global_gluing_failure"] is False
     assert failure["local_to_global_gluing"] == "NO_NEW_GLUING_FAILURE"
