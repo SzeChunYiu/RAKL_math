@@ -1,0 +1,48 @@
+atom_id: RH-ANA-003
+parent_atom_id: RH-ANA-002
+root_issue: 3
+status: CONTEXT_REQUIRED
+root_authority: NONE
+
+question: >-
+  In an exact zeta-specific arithmetic/explicit-formula representation of the
+  Li coefficients, identify and falsify the weakest prime/archimedean
+  cancellation or tail mechanism whose unconditional control is genuinely
+  uniform in the coefficient index n and would advance all-index positivity,
+  without replacing RH by an equivalent zero-location, Weil-positivity, or
+  Li-growth assumption.
+
+opened_by:
+  result: NO_STRICTLY_WEAKER_BRIDGE_EXPOSED_IN_AUDITED_SUZUKI_SOURCE
+  failure_id: F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE
+  trace_event_id: RH-ANA-002-E09
+  task_episode_id: EP-RH-ANA-002-SUZUKI-FAITHFULNESS-20260811
+
+known_boundary:
+  - Suzuki's unconditional G_n in L2 yields a manifestly nonnegative norm but does not by itself transport positivity to lambda_n.
+  - The audited Suzuki proof reaches RH-conditional/RH-equivalent model-space structure at the norm-to-Li transport step.
+  - This is a source-bounded route diagnostic, not a theorem that no weaker norm bridge can exist.
+  - RH-ANA-001 already rejects finite Li-prefix positivity as a global surrogate.
+  - Any finite prime truncation, termwise-positive decomposition, or computed prefix is non-authoritative until a rigorous all-n remainder/tail theorem is proved.
+  - Exact regularization, sum/interchange order, archimedean terms, binomial weights and cancellation must be preserved.
+
+candidate_generation_gate:
+  allowed: false
+  reason: >-
+    RH-ANA-003 is a new representation child opened after the Suzuki
+    faithfulness audit. Before proposing any new inequality, decomposition,
+    recurrence, mollifier, resonance construction, tail theorem or positivity
+    mechanism, freeze a fresh MathContextFiber, equivalent and near-solved
+    analogues, method-transfer assumptions/disanalogies, cross-domain
+    structural analogy, same-context expert cell, dual success/failure memory
+    review and hash-chained pre-candidate trace under the current RAKL main.
+
+next_pre_candidate_discriminators:
+  - Reconstruct the exact Bombieri-Lagarias arithmetic formula for lambda_n from primary sources and separate prime/Laurent, zeta-value and archimedean pieces without changing regularization.
+  - Locate the first family of n-dependent binomial/cancellation terms for which known unconditional bounds lose the sign or required uniformity.
+  - Compare any prime-side truncation with a hostile planted-cancellation model before treating finite numerical behavior as informative.
+  - Audit whether zero-free/zero-density estimates can control the required remainder at all n without silently strengthening to an RH-equivalent bound.
+  - Keep the Lagarias-Voros growth-class route as a contrastive alternative and state the minimum unconditional growth threshold needed to exclude an off-line zero contribution.
+  - Query mollifier/resonance and explicit-formula tool memory only after applicability and DifferenceWitness checks against the finite-surrogate and faithfulness failures.
+
+authority: STRICT_CHILD_RESIDUAL_ONLY / NO_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE
