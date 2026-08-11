@@ -1,0 +1,158 @@
+{
+  "atom_id": "O9d12a2a1a1",
+  "object_context": "Fresh strict child of C025. Re-represent unrestricted Cavalar-Oliveira cover preservation as an exact least-closure problem on arbitrary subsets of U, rather than canonical/original-generator signatures: selected fusion pairs act as binary meet rules, semi-filter upward closure supplies monotone superset rules, and a target witness survives exactly when a non-trivial preserving closure remains. The research goal is to determine whether this higher-order noncanonical closure state exposes a fusion-bounded coordinate that can escape C009/C025 canonical compression while surviving C010 multiplexing and C021 cheap-target ceilings.",
+  "structural_coordinates": [
+    "Cavalar-Oliveira semi-filters are non-empty upward-closed families of subsets of U that exclude the empty set",
+    "being above a target element a forces every generator trace B intersect U with a in B into the semi-filter",
+    "preserving a selected pair (E,H) is the conditional closure rule E,H in F implies E intersect H in F",
+    "the natural exact state candidate is the least family containing the above-witness seeds and U and closed under supersets plus the selected intersection rules",
+    "unlike C025 joint signatures, this state can contain arbitrary noncanonical subsets produced recursively by several fusion rules",
+    "cover complexity minimizes the number of selected pair rules that destroy every surviving semi-filter above every target witness",
+    "the source Fusion Problem Pi_R is itself a monotone binary-rule fixed-point computation and is realized by a cyclic monotone circuit with one AND gate per rule",
+    "the full powerset closure is exponentially large and therefore a representation, not yet a lower-bound invariant",
+    "shared rules can service many witnesses and derivations, so derivation size, depth or information cannot be assumed additive; C010 multiplexing is an immediate hostile control",
+    "any eventual explicit hard target remains subject to the C021 adjacency-circuit upper ceiling even if the closure representation is exact"
+  ],
+  "equivalent_formulations": [
+    "implicit Horn-style system with propositions X_S for S subseteq U, unary implications X_S -> X_T for S subseteq T, and one binary implication X_E and X_H -> X_(E intersect H) for each selected fusion pair",
+    "least fixed-point closure of target-witness generator traces under upward closure and the selected binary meet rules, with X_empty as the forbidden state",
+    "directed hypergraph reachability where unary superset arcs and binary fusion hyperedges propagate membership until either the empty set is reached or a non-trivial fixed point survives",
+    "proof/pebbling view in which each derived subset has a derivation DAG from generator traces and selected fusion rules, while the same rule may be reused across many target witnesses",
+    "search for a quotient statistic of the exact closure system whose increase or destruction per legal fusion is bounded but whose target value can exceed logarithmic scale"
+  ],
+  "solved_analogues": [
+    "Cavalar-Oliveira 2025 Fusion Problem Pi_R: a finite set of binary rules (a,b,c) is evaluated by monotone fixed-point propagation and can be implemented by a cyclic monotone Boolean circuit with one fan-in-two AND gate per rule",
+    "Dowling-Gallier 1984 propositional Horn satisfiability: explicit Horn implications admit forward/data-flow style propagation to a fixed point in linear time in the explicit formula size"
+  ],
+  "near_solved_analogues": [
+    "Jain-Klauck 2010 partition bound: global consistency LPs can be strictly stronger than simpler local rectangle/corruption or discrepancy-style bounds in randomized communication complexity, but this is a different model",
+    "Chlamtac-Friggstad-Georgiou 2012 set-cover lift-and-project analysis: generic consistency hierarchies can retain logarithmic gaps, warning that higher-order variables alone do not guarantee route progress"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Cavalar-Oliveira 2025 Fusion Problem Pi_R and cyclic discrete complexity",
+      "method": "Encode a family of binary fusion rules as a monotone fixed-point propagation system; treat the recursively generated state, rather than first-order labels on original generators, as the object to calibrate.",
+      "shared_structure": [
+        "both systems use a finite set of binary rules whose consequences accumulate monotonically",
+        "a rule can be reused after its output is produced and can participate in later rules",
+        "cyclic/fixed-point semantics are load-bearing rather than an acyclic one-shot sequence"
+      ],
+      "required_assumptions": [
+        "each selected cover pair (E,H) is represented only by the legal consequence E intersect H",
+        "upward closure and above-witness generator obligations are included explicitly in the closure semantics",
+        "the closure is evaluated on finite U so the least fixed point exists"
+      ],
+      "disanalogies": [
+        "Pi_R has an arbitrary finite rule alphabet whereas cover preservation has an exponentially large subset universe with implicit upward rules",
+        "cover complexity quantifies over every target witness and minimizes the selected pair set, rather than evaluating one fixed rule system",
+        "an exact fixed-point representation by itself gives no super-logarithmic lower bound"
+      ],
+      "repair_question": "Can the least preserving closure be frozen as an exact calibration interface, and which quotient of its noncanonical derivation structure survives global rule reuse with a bounded per-fusion budget?",
+      "source_anchors": [
+        "Cavalar-Oliveira, Boolean Circuit Complexity and Two-Dimensional Cover Problems, arXiv:2503.14117, Section 2.5 Fusion Problem Pi_R and Section 3.1 Definitions 18-21"
+      ]
+    },
+    {
+      "source_context": "propositional Horn implication systems and forward chaining",
+      "method": "Treat target-witness generator traces as initial facts and repeatedly fire monotone implications until a least fixed point is reached; interpret derivation of a forbidden fact as failure of a preserving model.",
+      "shared_structure": [
+        "facts only accumulate",
+        "binary antecedent rules fire when both prerequisites are present",
+        "least-model/fixed-point semantics separate semantic existence from a concrete derivation"
+      ],
+      "required_assumptions": [
+        "the subset propositions and implications exactly encode the semi-filter definition rather than a relaxation",
+        "non-emptiness is handled explicitly, for example by including U in the seed family",
+        "no algorithmic complexity claim is inferred from an exponentially large implicit Horn vocabulary"
+      ],
+      "disanalogies": [
+        "standard Horn-SAT input lists its variables and clauses explicitly, while the cover system contains one potential proposition per subset of U and implicit upward implications",
+        "the optimization target is the minimum selected fusion-rule family, not satisfiability of one given Horn formula",
+        "the 1984 algorithmic complexity bound does not transfer to the implicit exponential representation"
+      ],
+      "repair_question": "Does an exact least-closure equivalence hold with the intended seed/non-emptiness convention, and can small-instance calibrations expose derivation features that are not already canonical signatures?",
+      "source_anchors": [
+        "Dowling and Gallier, Linear-time algorithms for testing the satisfiability of propositional Horn formulae, Journal of Logic Programming 1(3), 1984, DOI 10.1016/0743-1066(84)90014-1"
+      ]
+    },
+    {
+      "source_context": "global-consistency lower-bound relaxations in communication complexity and set cover",
+      "method": "Use stronger joint consistency only as a discriminator for what information was missing from a local relaxation, then immediately test whether the strengthened state still admits logarithmic compression or generic integrality gaps.",
+      "shared_structure": [
+        "C024 showed a sound local LP can lose root-critical simultaneous consistency",
+        "C025 restored one joint coordinate but collapsed to a previously logarithmic representation class",
+        "higher-order consistency is useful only if it targets a witnessed structural residual"
+      ],
+      "required_assumptions": [
+        "every imported consistency coordinate has a precise semi-filter/closure meaning",
+        "a target-domain bounded fusion law is proved separately"
+      ],
+      "disanalogies": [
+        "partition bounds concern randomized communication complexity and do not imply deterministic graph-cover lower bounds",
+        "generic lift-and-project hierarchy rank does not encode the bespoke semi-filter closure law automatically"
+      ],
+      "repair_question": "Which closure-derived coordinate is specific to recursive noncanonical semi-filter generation rather than merely another generic set-cover hierarchy level?",
+      "source_anchors": [
+        "Jain and Klauck, The Partition Bound for Classical Communication Complexity and Query Complexity, arXiv:0910.4266",
+        "Chlamtac, Friggstad, and Georgiou, Understanding Set Cover: Sub-exponential Time Approximations and Lift-and-Project Methods, arXiv:1204.5489"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "an exact Horn/closure re-representation is not itself a new lower bound or a novelty claim",
+    "recursive noncanonical closure is strictly richer than original-generator signatures but may still be globally multiplexable",
+    "derivation depth, number of derived subsets, closure width and entropy are not automatically fusion-bounded",
+    "Horn-SAT tractability for explicit formulas says nothing about the optimization hardness of an exponentially implicit subset system",
+    "generic proof-complexity, pebbling, communication or hierarchy lower bounds require a separate target-specific bridge",
+    "random graphs demonstrate large full-cover values non-explicitly, but do not supply the explicit family needed for circuit consequences",
+    "cross-Millennium representation failures are warnings only; no theorem from another problem is imported"
+  ],
+  "source_anchors": [
+    "research/real_math/millennium/p_vs_np/02_problem_dag/C025_delta.yaml",
+    "research/real_math/millennium/p_vs_np/07_memory/C025_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "research/real_math/millennium/p_vs_np/07_memory/C025_RESEARCH_TOOL_DELTA_20260811.json",
+    "research/real_math/millennium/p_vs_np/03_routes/R004_C009_ROUTE_DELTA_20260810.md",
+    "research/real_math/millennium/p_vs_np/03_routes/R004_C010_ROUTE_DELTA_20260810.md",
+    "research/real_math/millennium/p_vs_np/03_routes/R004_C021_ROUTE_DELTA_20260811.md",
+    "Cavalar-Oliveira 2025, arXiv:2503.14117, Sections 2.5 and 3.1",
+    "Dowling-Gallier 1984, DOI 10.1016/0743-1066(84)90014-1",
+    "Jain-Klauck 2010, arXiv:0910.4266",
+    "Chlamtac-Friggstad-Georgiou 2012, arXiv:1204.5489"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "software build/dependency propagation",
+      "source_situation": "A build system starts with available artifacts and repeatedly applies shared dependency rules; a downstream artifact can be produced only when all prerequisites of a rule are present, and the same rule/output may be reused by many later targets.",
+      "common_abstraction": [
+        "monotone accumulation of state",
+        "binary prerequisite rules",
+        "recursive reuse of derived objects",
+        "global sharing can defeat naive additive accounting"
+      ],
+      "source_to_target_mapping": [
+        "available artifact -> subset already present in the preserving closure",
+        "binary build rule -> selected fusion pair (E,H) producing E intersect H",
+        "dependency closure -> least upward/intersection closure",
+        "forbidden failed build state -> derivation of the empty set",
+        "shared compiled artifact -> C010-style rule/output multiplexing across many obligations"
+      ],
+      "shared_constraints": [
+        "once derived, an object can be reused without paying its production logic again inside the closure state",
+        "the order of rule firing should not change the least fixed point"
+      ],
+      "disanalogies": [
+        "real build systems do not have the semi-filter upward-closure axiom",
+        "cover complexity minimizes selected fusion rules across adversarial target witnesses rather than scheduling a fixed dependency graph",
+        "the analogy does not justify any quantitative lower bound"
+      ],
+      "proposed_principle": "Model the exact noncanonical closure first, then charge only structural features that cannot be globally reused or multiplexed across many witness derivations.",
+      "validation_obligation": "After the strict gate passes, prove or refute the exact least-closure/semi-filter equivalence on finite instances and run C008/G_NEQ/C010 hostile calibrations showing whether recursive derived subsets add information beyond C025 while still exposing shared-rule multiplexing.",
+      "provenance_note": "Proposal-only structural analogy; it creates no graph-cover or P-versus-NP authority."
+    }
+  ],
+  "analogy_scan_notes": "Scanned source-internal cyclic fusion, Horn/data-flow closure, global-consistency communication bounds, lift-and-project set cover, and everyday dependency propagation. Retained the closure/dependency bridge because it maps to exact source rules and has immediate C010/C025 falsifiers.",
+  "frozen_at": "2026-08-11T08:29:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:3fcb62f36f4bc3044569bbac47738bfa5c0aafa13813346089dd4a1f4a54b901"
+}
