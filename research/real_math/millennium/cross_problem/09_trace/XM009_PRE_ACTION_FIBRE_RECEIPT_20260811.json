@@ -1,0 +1,34 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "XM009-PRE-ACTION-20260811-R1",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "0772e74e2de6f031d760a5990ecc04eff204219b",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "05cbdfe77071d9f25182f53888ff2d5fa8c22dcd",
+  "task_id": "XM009-BSD-PNP-GRADED-TRACE-20260811",
+  "atom_id": "XM009-BSD-S001c1a-TO-PNP-O9d12a2a1a1e",
+  "context_hash": "04b2f67a2568a5847e01e6f6b99b8979126f198a07853b3ff33b6643d8fa5450",
+  "fibre_snapshot_hash": "5d5746454dbfeafa0984fcb5276a85e1c31e2c727e62593ab932e8e684f1dff8",
+  "operator_ids": [
+    "OP-XM-FILTRATION-NONDEGENERACY-AUDIT",
+    "OP-XM-DIFFERENCE-WITNESS",
+    "OP-XM-COUNTEREXAMPLE-FIRST"
+  ],
+  "selected_retrievals": [
+    {"retrieval_id":"PNP-MAIN-R2-METRICS","authority":"CANONICAL","payload_hash":"e7d12335bab37aeab168aafeb0c57afa3ce0c64b563527647b6692e051fd780d"},
+    {"retrieval_id":"PNP-PR128","authority":"PENDING","payload_hash":"0e424c777b19c7a3b9398efac82d8feccbbf5cadad4751147160bc6a7185a5e9"},
+    {"retrieval_id":"BSD-PR44","authority":"PENDING","payload_hash":"d092fcf103dfc41731fa5c74c231dc4641cef0961c1948be0dca99e3062ed258"},
+    {"retrieval_id":"NS-MAIN-B1a3b1-R2","authority":"CANONICAL","payload_hash":"0403257ede7d3d54c2752b24d93451025ac65b12775b85f3aa427090dae350bd"}
+  ],
+  "rejected_retrievals": [
+    {"retrieval_id":"HODGE-PR119","rejection_reason":"representation-granularity family already exercised by XM007; lower incremental information for this cycle"},
+    {"retrieval_id":"RH-PR118","rejection_reason":"rarity-versus-universal-exception family already rejected as redundant during XM008 routing"},
+    {"retrieval_id":"YM-PR112","rejection_reason":"hidden-state/source-completeness family already has successful reuse and XM006/XM008 coverage"}
+  ],
+  "predeclared_discriminator": "Check whether zero-cost free-union closure already yields the full fixed-row trace power set. If yes, monotonicity forces every cumulative fixed-row trace increment after quotienting the zero-cost baseline to vanish, refuting that coordinate family without refuting all incremental/conditional potentials.",
+  "allowed_outcome_branches": ["SUCCESS","PARTIAL_SUCCESS","FAILURE","BLOCKED"],
+  "frozen_at_utc": "2026-08-11T17:29:16Z",
+  "sequence_index": 1,
+  "receipt_canonical_sha256": "56d788e0abc26ac1b3474668e6e054f5b8bf15dbd0a78d36d831eeb6812e5c9a",
+  "authority": "PROPOSAL_ONLY_NO_THEOREM_TOOL_GLUING_OR_REVIEW_AUTHORITY"
+}
