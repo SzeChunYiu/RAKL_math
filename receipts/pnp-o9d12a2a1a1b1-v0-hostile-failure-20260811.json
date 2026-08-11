@@ -1,0 +1,101 @@
+{
+  "schema_version": "rakl-math-pnp-pre-candidate-v0-correction-v1",
+  "artifact_type": "HOSTILE_REVIEW_FAILURE_AND_PROSPECTIVE_SUPERSESSION",
+  "receipt_id": "RAKL-MATH-PNP-O9d12a2a1a1b1-V0-HOSTILE-FAILURE-20260811",
+  "atom_id": "O9d12a2a1a1b1",
+  "recorded_at": "2026-08-11T15:43:32Z",
+  "application_base_reviewed": "5a8c6bb2f297a536e1b0d1c8b0aa8e66cd1e3720",
+  "failed_packet_bindings": [
+    {
+      "path": "receipts/pnp-o9d12a2a1a1b1-pre-candidate-gate-20260811.json",
+      "raw_sha256": "dea3df8b3ce48d8bc62c31c975d906e8b44485bb1dd029a59612ee4f83176a91"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_MATH_CONTEXT_FIBER_20260811.json",
+      "raw_sha256": "ea64fd45418834fb485598062be149b391497659f17263770cd8fecb4063d230"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_SOURCE_AND_TRANSFER_PACKET_20260811.md",
+      "raw_sha256": "0c3c689ec0e94fcd08d137a07340974ee226d4125eabfac75d9c9f96e88a652c"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_TOOL_SNAPSHOT_20260811.json",
+      "raw_sha256": "4a6e65eaa8b05e9c75a7f2e80003a94f3ab5f8c36666e5be0c872c1c2c58cf77"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_FAILURE_SNAPSHOT_20260811.json",
+      "raw_sha256": "264e7c44edeed45283519bf12802e6b9131f4f6dfde59af673b39fa9f39f6df7"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_RESEARCH_MEMORY_REVIEW_20260811.json",
+      "raw_sha256": "0f0c5d137c8707cd1cd42dc2fe04a63e6d7a63d4daffa2a8e29cc1f1088ffaff"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/08_reviews/SAME_CONTEXT_EXPERT_REVIEW_O9d12a2a1a1b1_PRE_CANDIDATE_20260811.json",
+      "raw_sha256": "22f2e1505bc647a119498a14ed0ea40252af4692f119d29a0e7eea85bf5363c6"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_PRE_CANDIDATE_TRACE_20260811.json",
+      "raw_sha256": "ce62208c4d19686ffb218e6aeb9496ee67a6c860f70c678716cc6a0d563b5721"
+    },
+    {
+      "path": "schemas/pnp-o9d12a2a1a1b1-pre-candidate-gate.schema.json",
+      "raw_sha256": "67f6ecc8fec00b16de67a6f8c08ead20f289c19be17bb3e0a99c412b1318e5b7"
+    },
+    {
+      "path": "tests/math_applications/test_pnp_o9d12a2a1a1b1_pre_candidate.py",
+      "raw_sha256": "11bbeee922aea923264105058d38f0d4e297275593b7a9ea52217e029d5d31e5"
+    }
+  ],
+  "failed_status": "REJECTED_PRE_CANDIDATE_AUTHORIZATION",
+  "blocking_findings": [
+    {
+      "id": "V0-CHRONOLOGY-FUTURE-HASH",
+      "root_cause": "The expert artifact embedded the child memory-review hash even though the public trace freezes expert review before memory review; the source synthesis also used the context freeze timestamp while summarizing later artifacts.",
+      "repair": "Freeze V2 atomization, context, expert review, memory review, trace, and synthesis in real prospective order; expert review must state child memory is not yet frozen."
+    },
+    {
+      "id": "V0-ATOMIZATION-ORDER",
+      "root_cause": "The V0 context frozen_at preceded the V0 ATOMIZED trace event and the runtime lacked a cross-artifact chronology check.",
+      "repair": "Create a separate V2 atomization receipt first, then freeze the V2 context, and add an executable time-order assertion."
+    },
+    {
+      "id": "V0-NONCANONICAL-FAILURE-SNAPSHOT",
+      "root_cause": "The seventh selected parent warning was a legacy proposal-shadow delta that does not conform to or reconstruct under the current FailureExperience lattice contract.",
+      "repair": "Keep it as a raw-bound noncanonical warning outside the canonical V2 failure snapshot; schema-validate and runtime-reconstruct every V2 canonical experience/link."
+    },
+    {
+      "id": "V0-RECEIPT-SCHEMA-UNDERCONSTRAINED",
+      "root_cause": "SHA/OID fields lacked exact string/length constraints and arrays allowed duplicate artifact or test identities.",
+      "repair": "Use exact min/max length plus lowercase-hex patterns, exact ordered path/kind and run identities, and hostile integer/LF/CRLF/duplicate/omission mutations."
+    },
+    {
+      "id": "V0-CANDIDATE-BOUNDARY",
+      "root_cause": "The third method-transfer row used prospective imperative wording that could be read as a mathematical method candidate.",
+      "repair": "State only the retrospective Theorem-22 proof method, its assumptions, mismatch, and a source-search repair question."
+    },
+    {
+      "id": "V0-MOVED-MAIN",
+      "root_cause": "The V0 receipt was frozen at application base 1d248204 after origin/main moved.",
+      "repair": "Re-freeze V2 only after integrating exact repaired origin/main 5a8c6bb2."
+    }
+  ],
+  "self_rakl_observation": {
+    "status": "APPLICATION_PROCESS_REPAIR_ONLY",
+    "lesson": "Per-artifact validators are insufficient when authority depends on cross-artifact chronology, runtime reconstructability, and set uniqueness.",
+    "framework_promotion": "NONE",
+    "proposed_validation": "Accumulate repeated cross-lane evidence before proposing a framework change; V2 adds local executable guards without weakening any evaluator."
+  },
+  "authority_contract": {
+    "candidate_generation_allowed": false,
+    "candidate_proposed": false,
+    "mathematical_result": false,
+    "proof_authority": false,
+    "novelty_authority": false,
+    "independent_peer_review": false,
+    "p_vs_np_authority": false,
+    "framework_promotion_authority": false
+  },
+  "superseded_by": "PROSPECTIVE_O9d12a2a1a1b1_V2_PACKET_PENDING",
+  "artifact_hash": "sha256:a93d8b9f353065cc58e9b048f3eed6d1900cc7a8557567230ab017a7b72b3587"
+}

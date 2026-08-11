@@ -1,0 +1,115 @@
+{
+  "schema_version": "rakl-math-pnp-pre-candidate-v2-correction-v1",
+  "artifact_type": "HOSTILE_REVIEW_FAILURE_AND_PROSPECTIVE_V3_SUPERSESSION",
+  "receipt_id": "RAKL-MATH-PNP-O9d12a2a1a1b1-V2-HOSTILE-FAILURE-20260811",
+  "atom_id": "O9d12a2a1a1b1",
+  "recorded_at": "2026-08-11T16:00:47Z",
+  "application_base_reviewed": "5a8c6bb2f297a536e1b0d1c8b0aa8e66cd1e3720",
+  "v2_bindings": [
+    {
+      "path": "research/real_math/millennium/p_vs_np/02_problem_dag/O9d12a2a1a1b1_ATOMIZATION_V2_20260811.json",
+      "raw_sha256": "2f752e59a19e29328466eb77fb34257a889d41260173ae8aee25d01795e72337"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_MATH_CONTEXT_FIBER_V2_20260811.json",
+      "raw_sha256": "8784031b7e9cd88af0538fac596f48b8ba017e8425fe01460bd7113375972096"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_SOURCE_AND_TRANSFER_PACKET_V2_20260811.md",
+      "raw_sha256": "e6bb3effcdca0cc73e7e5ffabf8686a28ce48bc05bdc1c3bdcba19902ff9cb16"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_TOOL_SNAPSHOT_V2_20260811.json",
+      "raw_sha256": "4a6e65eaa8b05e9c75a7f2e80003a94f3ab5f8c36666e5be0c872c1c2c58cf77"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_FAILURE_SNAPSHOT_V2_20260811.json",
+      "raw_sha256": "45dc2c3c96485c5c578b1d7a082f8dfb660a1edccc1c417c0f203ded7a2f3e67"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_NONCANONICAL_PARENT_WARNING_V2_20260811.json",
+      "raw_sha256": "fdcd15a01a1eaa4abaaa0a081a267a9150e40a4b373f00d20b61e853ffeccbd5"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_RESEARCH_MEMORY_REVIEW_V2_20260811.json",
+      "raw_sha256": "1524b903a33412015ce247ff45cf44eba0c7b3321fe78afa23f429448054b95a"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_MEMORY_FREEZE_V2_20260811.json",
+      "raw_sha256": "e2d280c5c05ed8558c9941f47608992f3782c4d7ec52984f92899e7274269a59"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/08_reviews/SAME_CONTEXT_EXPERT_REVIEW_O9d12a2a1a1b1_PRE_CANDIDATE_V2_20260811.json",
+      "raw_sha256": "99f55465c16a68b050203c8c3263c772a6df9b647e56911115cedd5f990fdbc4"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_PRE_CANDIDATE_TRACE_V2_20260811.json",
+      "raw_sha256": "1e2fe1db104f2219b14edbd66dc63317a4d0bcc274d0f4890860dfc2c37b0e9c"
+    },
+    {
+      "path": "receipts/pnp-o9d12a2a1a1b1-pre-candidate-gate-v2-20260811.json",
+      "raw_sha256": "99f978fea8b4f3888e275db60501515d9ae385223ee00018643e147c1d8bc919"
+    },
+    {
+      "path": "schemas/pnp-o9d12a2a1a1b1-pre-candidate-gate-v2.schema.json",
+      "raw_sha256": "2b4fa574e661820ce02b309215ecf79be8f922a110a9c60a90e39256aaac13a2"
+    },
+    {
+      "path": "tests/math_applications/test_pnp_o9d12a2a1a1b1_pre_candidate_v2.py",
+      "raw_sha256": "b3265e0329053bc491ff8295d392b4e4780e52f3ea79e8084b1f1a5bfca120ef"
+    }
+  ],
+  "v2_status": "REJECTED_PRE_CANDIDATE_AUTHORIZATION",
+  "blocking_findings": [
+    {
+      "id": "V2-NARRATIVE-COUNT",
+      "observation": "Source synthesis and trace described seven failures even though the exact memory plane contains six canonical FailureExperiences plus one separately noncanonical proposal-shadow warning.",
+      "repair": "V3 states the two classes separately everywhere."
+    },
+    {
+      "id": "V2-ASSURANCE-IDENTITY-OMISSION",
+      "observation": "The gate receipt did not raw-bind the V2 schema and test identities used to interpret/verify it.",
+      "repair": "V3 receipt binds every evidence, schema, test, runner, machine-run receipt, and raw log identity."
+    },
+    {
+      "id": "V2-GIT-BINDING-NOT-EXECUTED",
+      "observation": "The test literal-checked application base/framework pin but did not execute base ancestry, current-main-at-freeze, gitlink, and framework HEAD relations.",
+      "repair": "V3 adds a fail-closed executable Git-binding audit and hostile mutations."
+    },
+    {
+      "id": "V2-CALLER-SUPPLIED-TEST-COUNTS",
+      "observation": "Receipt test counts were manually embedded without a retained machine run receipt and raw output-log identity.",
+      "repair": "V3 assurance runner executes the exact commands, preserves raw logs, parses results, hashes inputs/logs, and emits a self-hashed machine receipt."
+    },
+    {
+      "id": "V2-SOURCE-RETRIEVAL-NOT-BOUND",
+      "observation": "The primary PDF hash was stated but no repository raw artifact/retrieval receipt was bound.",
+      "repair": "V3 includes the exact retrieved ECCC PDF plus a machine-readable retrieval receipt and validates raw bytes."
+    }
+  ],
+  "retained_passes": [
+    "prospective atomization-before-context chronology",
+    "current-schema context/memory/trace runtime gates",
+    "candidate-free role-separated expert review",
+    "six-record canonical failure-lattice reconstruction",
+    "noncanonical parent-warning separation",
+    "plan_math_research candidate_generation_allowed true with no candidate used"
+  ],
+  "self_rakl_observation": {
+    "status": "APPLICATION_ASSURANCE_REPAIR_ONLY",
+    "lesson": "A semantically correct gate still fails publication-grade audit when evidence-class counts, evaluator identities, Git relations, or run receipts are not exact.",
+    "framework_promotion": "NONE"
+  },
+  "authority_contract": {
+    "candidate_generation_allowed": false,
+    "candidate_proposed": false,
+    "mathematical_result": false,
+    "proof_authority": false,
+    "novelty_authority": false,
+    "independent_peer_review": false,
+    "p_vs_np_authority": false,
+    "framework_promotion_authority": false
+  },
+  "superseded_by": "PROSPECTIVE_O9d12a2a1a1b1_V3_PACKET_PENDING",
+  "artifact_hash": "sha256:d17fb400a116409fd5b02ec9f7b2acce59f7184e6bb4108ca51b5014b5166a50"
+}
