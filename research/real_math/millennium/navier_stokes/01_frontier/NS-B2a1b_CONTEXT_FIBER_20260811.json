@@ -1,0 +1,106 @@
+{
+  "schema_version": "math-context-fiber-v1",
+  "atom_id": "NS-B2a1b",
+  "parent_atom_id": "NS-B2a1",
+  "object_context": "Prospective child of the Type-II F(a)=1 ancient-Euler route. Audit whether the signed local-energy-flux strategy is actually licensed by the inherited Euler solution class. The working hypothesis that a local-energy inequality may carry a nonnegative defect is treated as pre-existing calibration, not as a prospective result. The consequential action is to determine from primary sources whether the exact inherited regularity forces local energy equality, leaves an explicit defect, or supplies a normalized defect/tail estimate strong enough for large-radius telescoping.",
+  "root_binding": "Clay Navier–Stokes statement (A) remains OPEN_NO_SOLUTION_CERTIFICATE. Even complete closure of this signed-flux interface would address only one Type-II subroute and would not close the root.",
+  "structural_coordinates": [
+    "Type-II Euler scaling from a suitable weak Navier-Stokes sequence",
+    "ancient weak Euler limit on R^3×(-∞,0)",
+    "F(a)=1 scale-critical local energy/pressure/gradient bounds",
+    "local energy inequality versus local energy equality",
+    "distributional local energy defect / anomalous dissipation",
+    "signed kinetic-plus-pressure flux through spacetime cutoffs",
+    "large-radius normalization at kinetic-energy scale O(R)",
+    "possible defect mass in Q(R) and annuli",
+    "fixed-radius compactness versus global tail control",
+    "pressure localization and noncompact translation/profile leakage",
+    "energy-conservation regularity criteria and exact hypothesis inheritance",
+    "Euler rigidity interface"
+  ],
+  "equivalent_formulations": [
+    "Energy-defect formulation: determine whether the inherited weak Euler pair has zero local energy defect, or only a nonnegative distributional defect permitted by the local energy inequality.",
+    "Cutoff-balance formulation: write the signed local-energy balance against compactly supported spacetime cutoffs and keep every defect term explicit rather than silently using equality.",
+    "Normalized-defect formulation: if a defect measure exists, determine whether its mass has a source-backed large-radius estimate strong enough to vanish after the normalization required by the F(a)=1 route.",
+    "Telescoping formulation: a signed flux argument is admissible only after all local-energy-equality/defect and pressure-boundary terms are source-bound and stable under the relevant limits."
+  ],
+  "solved_analogues": [
+    "Smooth Euler solutions satisfy the classical local energy equality; this is a calibration regime, not the regularity currently established for the Seregin limit.",
+    "Onsager-type energy-conservation results give equality under additional regularity hypotheses; applicability to the exact inherited local class must be audited rather than assumed."
+  ],
+  "near_solved_analogues": [
+    "Seregin 2026 supplies a local energy inequality for the ancient Euler limit and scale-critical bounds, but the parent NS-B2a1 audit did not bind a large-radius tail theorem.",
+    "Duchon-Robert/Onsager-type defect formalisms separate weak Euler solutions from local energy conservation; the exact source-to-target hypothesis match is the present discriminator."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Classical/local energy equality for sufficiently regular Euler solutions",
+      "method": "Convert the weak Euler equation into an exact local kinetic-energy balance and telescope signed flux through cutoffs.",
+      "shared_structure": ["same Euler equation", "same kinetic-energy density", "same pressure-work flux"],
+      "required_assumptions": ["regularity sufficient to justify the local product/commutator limit", "pressure integrability compatible with the local balance"],
+      "disanalogies": ["the Seregin limit is obtained by compactness from suitable weak Navier-Stokes and is only explicitly stated with a local energy inequality", "global energy conservation is not automatically the same as local energy equality"],
+      "repair_question": "Do the exact inherited bounds imply one primary-source local energy equality criterion, with all space/time exponents and locality assumptions matched?",
+      "source_anchors": ["Constantin-E-Titi 1994 energy-conservation criterion; exact applicability to be audited prospectively"]
+    },
+    {
+      "source_context": "Local anomalous-dissipation / energy-defect formalism for weak Euler",
+      "method": "Represent failure of local energy equality by a distributional defect and track it explicitly in localized balances.",
+      "shared_structure": ["weak Euler equation", "local kinetic energy balance", "signed flux", "possible defect under weak convergence"],
+      "required_assumptions": ["distributional products well-defined at the regularity under study", "sign or measure structure justified from the inherited local energy inequality"],
+      "disanalogies": ["defect-formalism existence does not imply the Seregin limit has nonzero defect", "rough convex-integration examples need not belong to the Seregin class"],
+      "repair_question": "What defect object is rigorously defined in the exact Seregin class, what sign/measure property follows, and what radius growth is source-controlled?",
+      "source_anchors": ["Duchon-Robert 2000 local energy dissipation formalism; exact target match to be audited prospectively"]
+    },
+    {
+      "source_context": "Parent NS-B2a1 fixed-cylinder versus tail inheritance obstruction",
+      "method": "Keep local-to-global quantifier order explicit and test the weakest missing interface before downstream rigidity.",
+      "shared_structure": ["same F(a)=1 ancient Euler limit", "same large-radius target", "same pressure/noncompactness concerns"],
+      "required_assumptions": ["parent PR #91 remains proposal/stacked evidence until integrated", "no retrospective result receives prospective credit"],
+      "disanalogies": ["the present child concerns signed energy balance/defect, not nonnegative annular tightness alone"],
+      "repair_question": "Can signed balance genuinely bypass nonnegative tail tightness, or does a defect term recreate the missing global coordinate?",
+      "source_anchors": ["SzeChunYiu/RAKL_math PR #91 stacked parent evidence"]
+    }
+  ],
+  "explicit_disanalogies": [
+    "A local energy inequality cannot be rewritten as equality without proving the defect vanishes.",
+    "Global total-energy conservation, when available, does not by itself imply the exact local cutoff identity needed here.",
+    "Onsager or commutator criteria outside the inherited exponent/locality class cannot be imported by analogy.",
+    "Rough dissipative Euler examples calibrate logical possibility only and are not counterexamples in the Seregin class.",
+    "Parabolic Navier-Stokes backward uniqueness is irrelevant to the extracted Euler equation.",
+    "Signed cancellation cannot erase a nonnegative defect term by notation."
+  ],
+  "source_anchors": [
+    "Fefferman, Clay Navier-Stokes official problem description",
+    "Gregory Seregin, arXiv:2606.29468v1, Theorem 3.1 and local energy inequality (3.7)",
+    "Constantin, E and Titi, Comm. Math. Phys. 165 (1994), Onsager energy conservation criterion",
+    "Duchon and Robert, Nonlinearity 13 (2000), local inertial energy dissipation formalism",
+    "SzeChunYiu/RAKL_math PR #91 as stacked parent process evidence"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED_WITHOUT_AUTHORITY",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "conservation laws / numerical finite-volume methods",
+      "source_situation": "A signed boundary flux telescopes exactly only when interior production/dissipation terms are explicitly included; dropping an interior source produces a false conservation law.",
+      "common_abstraction": ["local balance law", "boundary flux", "interior defect/source", "telescoping over nested regions"],
+      "source_to_target_mapping": ["cell energy -> local kinetic energy", "boundary numerical flux -> Euler kinetic-plus-pressure flux", "interior production -> local energy defect"],
+      "shared_constraints": ["signed boundary terms can cancel", "interior nonnegative production need not cancel", "global conclusion depends on both"],
+      "disanalogies": ["the target is a distributional PDE limit, not a discretized conservation scheme", "analogy supplies no theorem or regularity criterion"],
+      "proposed_principle": "Before using signed-flux telescoping, expose every interior defect term and prove it vanishes or is quantitatively controlled.",
+      "validation_obligation": "Derive the exact distributional local-energy balance from source-backed assumptions and audit the defect term in the Seregin class.",
+      "provenance_note": "Proposal-only structural bridge."
+    }
+  ],
+  "analogy_scan_notes": "Surface metaphors were rejected; the retained finite-volume analogy is used only to force explicit accounting of interior defects.",
+  "candidate_generation_allowed": false,
+  "pre_candidate_actions": [
+    "freeze this context",
+    "freeze dual-memory review",
+    "freeze same-context expert review",
+    "freeze hash-chained trace through NEXT_STEP_PROPOSED",
+    "freeze application-side pre-action fibre receipt",
+    "execute LOCAL_ENERGY_DEFECT_CRITERION_AUDIT only after the receipt is committed"
+  ],
+  "frozen_at": "2026-08-11T12:54:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:60800c31320de83fe7388a85e7ae647b6a190e287c59712a4738c633ffddbbb3"
+}
