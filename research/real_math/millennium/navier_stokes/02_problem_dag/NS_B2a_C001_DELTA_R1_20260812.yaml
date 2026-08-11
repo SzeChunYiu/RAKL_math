@@ -1,0 +1,54 @@
+atom_id: NS-B2a
+parent_atom_id: NS-B2
+candidate_id: NS-B2a-C001-R1
+status: TRANSFER_BLOCKED_SCOPED_F1_CUTOFF_SCALE_NEUTRAL
+root_status: OPEN_NO_SOLUTION_CERTIFICATE
+authority: PROPOSAL_SHADOW_NO_ROOT_AUTHORITY
+result: >-
+  For the F(a)=1 ancient-Euler state produced in Seregin arXiv:2606.29468v1
+  Theorem 3.1, the standard absolute large-radius local-energy cutoff route is
+  scale critical: the temporal cutoff, cubic flux, and pressure-work estimates
+  are O(R), not o(1), under the exact source ledger. Fixed-radius compactness
+  therefore does not by itself glue to a vanishing global flux/tail statement.
+local_math_status: SOURCE_THEOREM_NOT_REFUTED_NO_LOCAL_EULER_CONTRADICTION
+local_representation_status: F1_ABSOLUTE_CUTOFF_NO_DECAY_VERIFIED
+local_to_global_gluing_status: BLOCKED_FIXED_RADIUS_TO_GLOBAL_TAIL
+state_space_status: EULER_LIMIT_BOUND_NS_BACKWARD_UNIQUENESS_INAPPLICABLE
+pressure_status: LOCAL_SCALE_CRITICAL_CONTROL_NO_ANNULAR_TAIL_CERTIFICATE
+noncompact_symmetry_status: TRANSLATION_DILATION_PROFILE_LEAKAGE_OPEN
+pruned_or_closed_subroutes:
+  - direct_absolute_F1_cutoff_errors_vanish_at_infinity
+  - use_Gavrilov_compact_support_steady_Euler_as_direct_F1_counterexample
+  - import_Navier_Stokes_backward_uniqueness_at_Euler_limit
+live_routes:
+  - source_valid_annular_energy_pressure_flux_tightness
+  - no_incoming_flux_or_cancellation_certificate
+  - exact_Euler_rigidity_theorem_consuming_only_3_5_to_3_8
+next_children:
+  - id: NS-B2a1
+    issue: 198
+    title: Bind annular flux/tail tightness through Seregin Euler scaling
+    status: OPEN_PROPOSAL_SHADOW
+failure_ids:
+  - F-NS-B2a-F1-ABSOLUTE-CUTOFF-NO-DECAY
+  - G-NS-B2a-FIXED-R-TO-GLOBAL-FLUX-TIGHTNESS
+diagnosis_id: D-NS-B2a-SCALE-CRITICAL-FLUX-NO-DECAY
+obstruction_ids:
+  - O-NS-B2a-NO-INCOMING-FLUX-CERTIFICATE
+lesson_ids:
+  - L-NS-B2a-QUANTIFIER-ORDER-BEFORE-EULER-RIGIDITY
+motif_ids:
+  - M-NS-SCALE-NEUTRAL-BOUNDARY-FLUX-ASSEMBLY
+successful_reuse_ids:
+  - F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER
+  - F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH
+  - F-NS-B1a3-UNCONTROLLED-FAR-FIELD
+  - T-XM-ROOT-BRIDGE-STABILITY-AUDIT
+novelty_class: transfer
+novel_structure_rank: 0
+nonpromotion:
+  - route pruning is not an Euler Liouville theorem
+  - source-interface diagnosis is not a Navier-Stokes root result
+  - same-context expert review is not independent review
+  - Type-I lanes and other Type-II scenarios remain open
+  - root remains open
