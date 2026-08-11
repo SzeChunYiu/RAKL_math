@@ -1,7 +1,8 @@
 {
   "schema_version": "xm006-transfer-mapping-v1",
-  "status": "FROZEN_BEFORE_TARGET_FALSIFIER / RESEARCH_CONTROL_ONLY",
-  "frozen_at": "2026-08-11T12:13:00Z",
+  "status": "RETROSPECTIVE_TRANSFER_MAPPING / NO_PRE_ACTION_OR_PRE_CANDIDATE_CREDIT / RESEARCH_CONTROL_ONLY",
+  "recorded_at": "2026-08-11T12:13:00Z",
+  "chronology_note": "The elementary diagonal sequence was derived and numerically sanity-checked before this Git artifact was frozen. This file therefore records a retrospective transfer mapping and must not be represented as a preregistered falsifier. The result remains usable for search-priority learning and for designing a fresh future benchmark.",
   "framework_authority": {
     "repository": "SzeChunYiu/RAKL",
     "main_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
@@ -17,11 +18,13 @@
   "source_atom": {
     "id": "NS-B1a1",
     "failure_id": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+    "process_authority": "RETROSPECTIVE_METHOD_EVIDENCE_ONLY_PENDING_ISSUE_134_SUCCESSOR",
     "evidence": [
       "RAKL_math main merge 8a608f340d47b4b6ae612275b0595faf6b804432",
-      "research/real_math/millennium/navier_stokes/07_memory/NS-B1a1_C001_FAILURE_EXPERIENCE_DELTA_20260811.json"
+      "research/real_math/millennium/navier_stokes/07_memory/NS-B1a1_C001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+      "RAKL issue #134 post-merge contract-coverage audit"
     ],
-    "source_observation": "A scale-neutral O(1) local-energy ledger at each dyadic scale does not imply a summable or well-founded total charge over an infinite descendant chain. The failure is local-to-global/gluing rather than a failure of each local estimate."
+    "source_observation": "A scale-neutral O(1) local-energy ledger at each dyadic scale does not imply a summable or well-founded total charge over an infinite descendant chain. The narrow mathematical route-pruning observation is retained; issue #134 separately blocks strict context-first process credit for the merged artifact bundle until a canonical successor is created."
   },
   "target_atom": {
     "id": "YM-S1a2 / source-family-uniformity interface",
@@ -64,16 +67,17 @@
       "replace per-scale summability by target-specific uniformity over the admissible source family"
     ],
     "prior_falsifier_escape_reason": "The NS O(1)-per-scale calculation does not itself test YM source-family asymptotics; only the quantifier-order audit operation transfers.",
-    "cheapest_repeat_failure_test": "Construct bounded numbers m_n^(k)=q^max(n-k,0), 0<q<1. For every fixed k, (m_n^(k))^(1/n)->q, while the diagonal k=n has m_n^(n)=1 and nth root 1. If the target inference accepts pointwise fixed-source rates as uniform moving-source decay, this planted world must be rejected by a valid uniformity gate.",
+    "cheapest_repeat_failure_test": "Construct bounded numbers m_n^(k)=q^max(n-k,0), 0<q<1. For every fixed k, (m_n^(k))^(1/n)->q, while the diagonal k=n has m_n^(n)=1 and nth root 1. A future prospective uniformity gate should reject the inference from pointwise fixed-source rates to diagonal moving-source decay.",
     "evidence_pointers": ["RAKL_math main NS-B1a1 failure artifact", "RAKL_math PR #46", "RAKL_math PR #79"]
   },
-  "predicted_transferable_principle": "Before a fixed-object asymptotic certificate is used along a changing object/source/scale family, make the quantifier order explicit and require a uniform family bound, a controlled growth modulus, or a proved compactness/equicontinuity handoff. Do not infer diagonal control from pointwise limits.",
-  "frozen_target_falsifier": {
+  "retrospectively_observed_principle": "Before a fixed-object asymptotic certificate is used along a changing object/source/scale family, make the quantifier order explicit and require a uniform family bound, a controlled growth modulus, or a proved compactness/equicontinuity handoff. Do not infer diagonal control from pointwise limits.",
+  "retrospective_target_falsifier": {
     "q_range": "0<q<1",
     "family": "m(n,k)=q^max(n-k,0)",
-    "fixed_k_prediction": "lim_{n->infinity} m(n,k)^(1/n)=q",
-    "diagonal_prediction": "m(n,n)=1 and m(n,n)^(1/n)=1 for all n",
-    "decision_rule": "If both identities hold, the implication fixed-source common asymptotic rate => diagonal moving-source rate is refuted without extra uniformity."
+    "fixed_k_result": "lim_{n->infinity} m(n,k)^(1/n)=q for every fixed k",
+    "diagonal_result": "m(n,n)=1 and m(n,n)^(1/n)=1 for all n",
+    "uniform_result": "sup_k m(n,k)=1 for every n",
+    "decision": "Pointwise common asymptotic rate does not imply uniform/diagonal moving-family rate."
   },
-  "authority": "FROZEN_TRANSFER_PROPOSAL / DIFFERENCE_WITNESS / NO_YANG_MILLS_THEOREM / NO_MILLENNIUM_AUTHORITY / NO_FRAMEWORK_PROMOTION"
+  "authority": "RETROSPECTIVE_TRANSFER_CALIBRATION / SEARCH_PRIORITY_ONLY / NO_YANG_MILLS_THEOREM / NO_MILLENNIUM_AUTHORITY / NO_FRAMEWORK_PROMOTION"
 }
