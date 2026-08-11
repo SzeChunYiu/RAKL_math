@@ -1,0 +1,56 @@
+{
+  "schema_version": "research-memory-review-v1",
+  "target_atom_id": "NS-B2a1b",
+  "target_context_hash": "sha256:60800c31320de83fe7388a85e7ae647b6a190e287c59712a4738c633ffddbbb3",
+  "framework_source": {"repository": "SzeChunYiu/RAKL", "commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"},
+  "application_source": {"repository": "SzeChunYiu/RAKL_math", "current_main": "6557b1b25fa839fe71aba8047c958d5da892edd8", "stacked_parent_commit": "b7aad40051409c2e6f47bf277cfda79a6da28c96", "parent_pr": 91},
+  "candidate_method_families_searched": [
+    "local energy equality criterion audit",
+    "distributional local energy defect / anomalous dissipation ledger",
+    "signed kinetic-pressure flux telescoping",
+    "normalized defect-tail control",
+    "prelimit annular tightness/recentering",
+    "generic Euler rigidity"
+  ],
+  "relevant_tool_ids": [],
+  "tool_query_status": "NO_PROMOTED_TARGET_SPECIFIC_TOOL_MATCH",
+  "relevant_failure_or_warning_ids": [
+    "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE@PR91_STACKED_PARENT",
+    "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY@PR72_NONCANONICAL",
+    "XM005-MOVING-CORE-ESCAPE@PR71_NONCANONICAL",
+    "F-NS-B1a-C001-PRESSURE-SUMMABILITY"
+  ],
+  "selected_memory": [
+    {"id": "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE@PR91_STACKED_PARENT", "status": "STACKED_PARENT_PROPOSAL_ONLY", "use": "Defines the upstream fixed-radius-versus-large-radius interface; this child tests whether signed flux bypasses it or reintroduces an interior defect."},
+    {"id": "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY@PR72_NONCANONICAL", "status": "PENDING_NONCANONICAL_WARNING_ONLY", "use": "Warns that baseline F=1 absolute cutoff terms are scale-critical; does not decide signed cancellation or defect."},
+    {"id": "XM005-MOVING-CORE-ESCAPE@PR71_NONCANONICAL", "status": "PENDING_NONCANONICAL_HOSTILE_CALIBRATION_ONLY", "use": "Keeps translation/profile escape visible when interpreting large-radius flux."},
+    {"id": "F-NS-B1a-C001-PRESSURE-SUMMABILITY", "status": "CANONICAL_SCOPED_WARNING", "use": "Prevents pressure-tail accumulation from being treated as automatically summable."}
+  ],
+  "rejected_memory": [
+    {"id": "ASSUME_LOCAL_ENERGY_EQUALITY", "reason": "The source statement inherited by the parent explicitly uses a local energy inequality; equality requires a separate theorem."},
+    {"id": "GENERIC_ONSAGER_IMPORT", "reason": "Energy-conservation criteria must match exact local space/time regularity and pressure hypotheses before reuse."},
+    {"id": "PARABOLIC_NS_BACKWARD_UNIQUENESS", "reason": "Wrong equation after Euler scaling."},
+    {"id": "ROUGH_DISSIPATIVE_EULER_AS_TARGET_COUNTEREXAMPLE", "reason": "Rough Euler examples are not shown to belong to the Seregin F=1 class and can only calibrate logical possibilities."}
+  ],
+  "difference_witness_notes": [
+    "The parent tail obstruction and this signed-flux child share the same ancient Euler limit and global radius target, but this child changes the proposed bridge from nonnegative tail tightness to a signed balance law.",
+    "The key new coordinate is whether an interior local-energy defect survives; a successful signed route must restore equality or control the defect rather than merely rename the missing tail information.",
+    "All PR71/72/91 evidence is used at its actual noncanonical/stacked authority and cannot mint a reusable tool."
+  ],
+  "unresolved_warnings": [
+    "Parent PR #91 is open/draft and not canonical application main.",
+    "Current RAKL_math main 6557b1b25fa839fe71aba8047c958d5da892edd8 pins current RAKL bd1a2768f0f474ff44ffa25243241f94bfaf6466, but this stacked branch descends from PR #91 before that pin synchronization; no exact-pin CI claim is available for this child until refreshed and tested.",
+    "No primary-source energy-equality theorem has yet been audited against the exact inherited Seregin regularity.",
+    "No source-backed normalized local-energy-defect tail estimate has yet been identified.",
+    "The pre-existing defect hypothesis receives no prospective novelty credit."
+  ],
+  "evidence_pointers": [
+    "SzeChunYiu/RAKL_math#65",
+    "SzeChunYiu/RAKL_math#91",
+    "SzeChunYiu/RAKL_math#72",
+    "SzeChunYiu/RAKL_math#71",
+    "SzeChunYiu/RAKL@bd1a2768f0f474ff44ffa25243241f94bfaf6466/AGENTS.md"
+  ],
+  "frozen_at": "2026-08-11T12:54:00+00:00",
+  "artifact_hash": "sha256:9960e25684e49ceb132f0643a989ff053b20df6033672e25c5d4f86ca46285be"
+}
