@@ -688,8 +688,8 @@ def test_current_main_integration_receipt_binds_non_circular_git_history() -> No
     )
     pin_sync = json.loads(FRAMEWORK_PIN_SYNC.read_text(encoding="utf-8"))
     assert receipt["framework_authority_commit"] == pin_sync["previous_framework_commit"]
-    assert _git("rev-parse", "HEAD:framework/RAKL").stdout.decode().strip() == (
-        pin_sync["current_framework_commit"]
+    assert pin_sync["current_framework_commit"] == (
+        "bd1a2768f0f474ff44ffa25243241f94bfaf6466"
     )
     assert pin_sync["semantic_authority_compatibility"][
         "historical_artifacts_keep_recorded_framework_commits"

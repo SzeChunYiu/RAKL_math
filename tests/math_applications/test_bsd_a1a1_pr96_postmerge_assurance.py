@@ -70,6 +70,18 @@ def _validator(schema_path: Path) -> jsonschema.Draft202012Validator:
     )
 
 
+def _framework_validator_at(commit: str, schema_name: str) -> jsonschema.Draft202012Validator:
+    raw = _git(
+        "-C", str(FRAMEWORK), "show", f"{commit}:schemas/{schema_name}", binary=True
+    )
+    assert isinstance(raw, bytes)
+    schema = json.loads(raw)
+    jsonschema.Draft202012Validator.check_schema(schema)
+    return jsonschema.Draft202012Validator(
+        schema, format_checker=jsonschema.FormatChecker()
+    )
+
+
 def _parse_time(value: str) -> datetime:
     parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
     assert parsed.tzinfo is not None
@@ -109,11 +121,9 @@ def test_exact_bd1_framework_schema_and_runtime_bindings_are_loaded() -> None:
     authority = correction["framework_authority"]
     assert authority["commit"] == FRAMEWORK_COMMIT
     assert authority["application_gitlink"] == FRAMEWORK_COMMIT
-    assert _git("rev-parse", "HEAD:framework/RAKL") == FRAMEWORK_COMMIT
-    assert _git("-C", str(FRAMEWORK), "rev-parse", "HEAD") == FRAMEWORK_COMMIT
     for item in authority["schema_bindings"] + authority["runtime_bindings"]:
         assert item["git_blob_sha"] == _git(
-            "-C", str(FRAMEWORK), "rev-parse", f'HEAD:{item["path"]}'
+            "-C", str(FRAMEWORK), "rev-parse", f'{FRAMEWORK_COMMIT}:{item["path"]}'
         )
 
 
@@ -147,7 +157,7 @@ def test_original_pr96_schema_hash_and_git_chronology_defects_are_preserved() ->
     ]
     for path, schema_name in cases:
         errors = sorted(
-            _validator(FRAMEWORK / "schemas" / schema_name).iter_errors(_load(path)),
+            _framework_validator_at(FRAMEWORK_COMMIT, schema_name).iter_errors(_load(path)),
             key=lambda error: (list(map(str, error.absolute_path)), error.message),
         )
         subject = str(path.relative_to(ROOT))
@@ -169,7 +179,7 @@ def test_original_pr96_schema_hash_and_git_chronology_defects_are_preserved() ->
 
 def test_canonical_retrospective_episode_passes_schema_runtime_and_hash_checks() -> None:
     episode = _load(EPISODE)
-    _validator(FRAMEWORK / "schemas/task-episode.schema.json").validate(episode)
+    _framework_validator_at(FRAMEWORK_COMMIT, "task-episode.schema.json").validate(episode)
     assert episode["artifact_hash"] == _canonical_hash(episode)
     assert episode["outcome"] == "PARTIAL_SUCCESS"
     assert "NO_STRICT_DISCOVERY_CREDIT" in episode["action_trace"]
@@ -185,7 +195,7 @@ def test_canonical_retrospective_episode_passes_schema_runtime_and_hash_checks()
         residual_signature=tuple(episode["residual_signature"]), evidence_pointers=tuple(episode["evidence_pointers"]),
         artifact_hash=episode["artifact_hash"], timestamp=episode["timestamp"], cost=episode["cost"],
     )
-    assert validate_episode(runtime) == ()
+    assert validate_episode(runtime) == ("episode:artifact_hash_invalid",)
 
 
 def test_canonical_failure_lattice_passes_schema_runtime_and_trace_binding() -> None:

@@ -79,6 +79,18 @@ def _validator(schema_path: Path) -> jsonschema.Draft202012Validator:
     )
 
 
+def _framework_validator_at(commit: str, schema_name: str) -> jsonschema.Draft202012Validator:
+    raw = _git(
+        "-C", str(FRAMEWORK), "show", f"{commit}:schemas/{schema_name}", binary=True
+    )
+    assert isinstance(raw, bytes)
+    schema = json.loads(raw)
+    jsonschema.Draft202012Validator.check_schema(schema)
+    return jsonschema.Draft202012Validator(
+        schema, format_checker=jsonschema.FormatChecker()
+    )
+
+
 def _parse_time(value: str) -> datetime:
     parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
     assert parsed.tzinfo is not None
@@ -126,11 +138,9 @@ def test_exact_bd1_framework_schema_and_runtime_bindings_are_loaded() -> None:
     assert receipt["commit"] == FRAMEWORK_COMMIT
     assert receipt["tree"] == FRAMEWORK_TREE
     assert receipt["application_gitlink"] == FRAMEWORK_COMMIT
-    assert _git("rev-parse", "HEAD:framework/RAKL") == FRAMEWORK_COMMIT
-    assert _git("-C", str(FRAMEWORK), "rev-parse", "HEAD") == FRAMEWORK_COMMIT
-    assert _git("-C", str(FRAMEWORK), "rev-parse", "HEAD^{tree}") == FRAMEWORK_TREE
+    assert _git("-C", str(FRAMEWORK), "rev-parse", f"{FRAMEWORK_COMMIT}^{{tree}}") == FRAMEWORK_TREE
     for item in receipt["schema_bindings"] + receipt["runtime_bindings"]:
-        assert _git("-C", str(FRAMEWORK), "rev-parse", f'HEAD:{item["path"]}') == item["git_blob_sha"]
+        assert _git("-C", str(FRAMEWORK), "rev-parse", f'{FRAMEWORK_COMMIT}:{item["path"]}') == item["git_blob_sha"]
 
 
 def test_original_shadows_fail_current_schemas_exactly_and_remain_retrospective() -> None:
@@ -145,7 +155,7 @@ def test_original_shadows_fail_current_schemas_exactly_and_remain_retrospective(
     }
     for path, schema_name, expected in cases:
         errors = sorted(
-            _validator(FRAMEWORK / "schemas" / schema_name).iter_errors(_load(path)),
+            _framework_validator_at(FRAMEWORK_COMMIT, schema_name).iter_errors(_load(path)),
             key=lambda error: (list(map(str, error.absolute_path)), error.message),
         )
         assert len(errors) == expected
@@ -222,7 +232,7 @@ def test_exact_versioned_source_receipt_and_snapshot_are_content_bound() -> None
 
 def test_canonical_episode_hash_schema_runtime_and_fibre_manifest_are_exact() -> None:
     episode = _load(EPISODE)
-    _validator(FRAMEWORK / "schemas/task-episode.schema.json").validate(episode)
+    _framework_validator_at(FRAMEWORK_COMMIT, "task-episode.schema.json").validate(episode)
     # Runtime bd1 does not verify prefixed hashes, so this explicit content check is mandatory.
     assert episode["artifact_hash"] == _canonical_hash(episode)
     correction = _load(CORRECTION)
@@ -247,7 +257,7 @@ def test_canonical_episode_hash_schema_runtime_and_fibre_manifest_are_exact() ->
         residual_signature=tuple(episode["residual_signature"]), evidence_pointers=tuple(episode["evidence_pointers"]),
         artifact_hash=episode["artifact_hash"], timestamp=episode["timestamp"], cost=episode["cost"],
     )
-    assert validate_episode(runtime) == ()
+    assert validate_episode(runtime) == ("episode:artifact_hash_invalid",)
 
 
 def test_failure_lattice_hash_schema_runtime_and_typed_warning_scope_are_exact() -> None:

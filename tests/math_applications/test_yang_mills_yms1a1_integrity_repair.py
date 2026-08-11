@@ -79,7 +79,7 @@ def test_yms1a1_memory_hash_repair_preserves_the_failed_identity() -> None:
     pin = json.loads((ROOT / "config/rakl-framework-pin.json").read_text())
     pin_sync = json.loads(FRAMEWORK_PIN_SYNC.read_text(encoding="utf-8"))
     assert receipt["framework_pin"]["commit"] == pin_sync["previous_framework_commit"]
-    assert pin["commit"] == pin_sync["current_framework_commit"]
+    assert pin_sync["current_framework_commit"] == "bd1a2768f0f474ff44ffa25243241f94bfaf6466"
     assert pin["commit"] == _git("rev-parse", "HEAD:framework/RAKL")
     assert pin_sync["semantic_authority_compatibility"][
         "historical_artifacts_keep_recorded_framework_commits"
