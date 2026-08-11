@@ -1,0 +1,45 @@
+{
+  "schema_version": "rakl-math-problem-dag-delta-v1",
+  "cycle_id": "PNP-O9d12a2a1b-C041A-ODD-SLICE-COPY-20260811",
+  "parent_atom_id": "O9d12a2a1b",
+  "child_atom": {
+    "atom_id": "O9d12a2a1b-C041A",
+    "goal": "Evaluate one uniform odd-slice copy extension against the frozen C041 relevance, feasibility, augmentation, recurrence, rate and root interfaces.",
+    "status": "SOLVED_PROPOSAL_SHADOW_NEGATIVE_FOR_SELECTED_RULE",
+    "novelty_class_shadow": ["REPRESENTATION_NOVEL", "COMPOSITIONAL"],
+    "protected_novelty_authority": "NONE"
+  },
+  "closed_local_edges": [
+    "odd-slice copy preserves old relevance",
+    "odd-slice copy preserves full cover-graph incidence",
+    "odd-slice copy preserves fractional dual feasibility",
+    "odd-slice copy has exact zero augmentation"
+  ],
+  "opened_child_residual": {
+    "atom_id": "O9d12a2a1b-C041B",
+    "goal": "Construct or falsify a source-compatible non-copy extension that preserves lifted old dual feasibility and creates a graph-realizable new relevant semi-filter avoiding all saturated lifted-pair neighborhoods.",
+    "status": "OPEN_CONTEXT_REQUIRED",
+    "admission_conditions": [
+      "fresh frozen context/fibre",
+      "exact rule identity before evaluation",
+      "C037 DifferenceWitness retained",
+      "saturated-pair neighborhoods defined from a complete lifted dual",
+      "source-domain and poly(2^n) explicitness checks",
+      "no recurrence/rate claim until positive local augmentation is proved"
+    ]
+  },
+  "parent_status": "OPEN",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "local_to_global_gluing": {
+    "status": "OPEN",
+    "residual_id": "GLUE-PNP-C041A-LOCAL-TRANSPORT-TO-DIVERGENT-ROOT-RATE",
+    "missing": [
+      "positive graph-realizable augmentation",
+      "uniform iteration",
+      "divergence",
+      "root-relevant circuit rate",
+      "NP verifier or lower-bound-preserving NP reduction",
+      "closed root proof DAG and three independent reviews"
+    ]
+  }
+}
