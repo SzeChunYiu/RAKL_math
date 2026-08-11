@@ -31,18 +31,12 @@ Rejected: generic Horn lower-bound authority; generic Set Cover hierarchy escala
 
 ## Seven-axis saturation / novelty
 
-Internal retained-semantic accounting only; not independent novelty audit:
+The cycle produced **proposal/shadow novelty observations**, not protected retained learning. Candidate semantic observations are `EXPERIENCE_PATTERN=1`, `OBSTRUCTION=1`, `RELATION=1`, `PATH=1`, with all other axes zero, but these are not counted as lattice growth until a protected retention/promotion gate authorizes them.
 
-- `KNOWLEDGE = 0`
-- `OPERATOR = 0`
-- `EXPERIENCE_PATTERN = 1`
-- `OBSTRUCTION = 1`
-- `RELATION = 1`
-- `PATH = 1`
-- `META_METHOD = 0`
+Accordingly, the authoritative `RAKL_CYCLE_METRICS.retained_semantic_novelty` vector for this run is all zeros. This prevents proposed lessons, prose, files, issues or commits from being miscounted as learning.
 
-Reopened axes: `OBSTRUCTION`, `RELATION`, `PATH`.  
-Flattened axis/family: candidate/invariant generation in the `emergent closure dynamics` family.
+Reopened investigative axes: `OBSTRUCTION`, `RELATION`, `PATH`.  
+Flattened method family: candidate/invariant generation in the `emergent closure dynamics` family.
 
 ## v3 feature assessment
 
