@@ -45,8 +45,8 @@ def canonical_hash(value: dict, field: str = "artifact_hash") -> str:
 
 
 def runner_module():
-    path = ROOT / "tools/run_pnp_o9d12a2a1a1b1_pre_candidate_v3.py"
-    spec = importlib.util.spec_from_file_location("pnp_o9_v3_runner", path)
+    path = ROOT / "tools/run_pnp_o9d12a2a1a1b1_pre_candidate_v4.py"
+    spec = importlib.util.spec_from_file_location("pnp_o9_v4_runner", path)
     assert spec and spec.loader
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -116,7 +116,7 @@ def trace_value(raw: dict) -> MathResearchTrace:
     return MathResearchTrace(trace_id=raw["trace_id"], entries=tuple(entries))
 
 
-def test_pnp_o9d12a2a1a1b1_pre_candidate_v3_runtime_fibre_and_pre_action_are_exact() -> None:
+def test_pnp_o9d12a2a1a1b1_pre_candidate_v4_runtime_fibre_and_pre_action_are_exact() -> None:
     context_raw = load(PNP / "01_frontier/O9d12a2a1a1b1_MATH_CONTEXT_FIBER_V2_20260811.json")
     memory_raw = load(PNP / "07_memory/O9d12a2a1a1b1_RESEARCH_MEMORY_REVIEW_V2_20260811.json")
     tools_raw = load(PNP / "07_memory/O9d12a2a1a1b1_TOOL_SNAPSHOT_V2_20260811.json")
@@ -214,12 +214,12 @@ def valid_machine_fixture(module) -> dict:
     }
     bindings = [{"path": p, "kind": k, "commit": module.BASE_COMMIT, "git_blob_sha": z40, "raw_sha256": z64, "size_bytes": 1} for p, k in module.TESTED_INPUTS]
     def run(scope, command, log):
-        return {"scope": scope, "command": command, "environment": dict(module.EXACT_ENVIRONMENT), "started_at": "2026-08-11T16:30:00Z", "duration_seconds": 1.0,
+        return {"scope": scope, "command": command, "environment": dict(module.EXACT_ENVIRONMENT), "started_at": "2026-08-11T16:30:00Z", "ended_at": "2026-08-11T16:30:01Z", "duration_seconds": 1.0,
                 "exit_code": 0, "result": "PASS", "passed": 1, "failed": 0, "skipped": 0, "log_path": log, "log_sha256": z64, "log_size_bytes": 1}
     return {
-        "schema_version": "rakl-math-pnp-machine-run-v3", "receipt_id": "RAKL-MATH-PNP-O9d12a2a1a1b1-MACHINE-RUN-V3-20260811", "atom_id": ATOM,
-        "recorded_at": "2026-08-11T16:30:00Z", "source_binding": source, "input_bindings": bindings,
-        "runs": [run("FOCUSED_V3_GATE_PRE_RECEIPT", module.FOCUSED_COMMAND, module.FOCUSED_LOG_PATH), run("EXACT_APPLICATION_SUITE_PRE_RECEIPT", module.FULL_COMMAND, module.FULL_LOG_PATH)],
+        "schema_version": "rakl-math-pnp-machine-run-v4", "receipt_id": "RAKL-MATH-PNP-O9d12a2a1a1b1-MACHINE-RUN-V4-20260811", "atom_id": ATOM,
+        "recorded_at": "2026-08-11T16:30:02Z", "source_binding": source, "input_bindings": bindings,
+        "runs": [run("FOCUSED_V4_GATE_PRE_RECEIPT", module.FOCUSED_COMMAND, module.FOCUSED_LOG_PATH), run("EXACT_APPLICATION_SUITE_PRE_RECEIPT", module.FULL_COMMAND, module.FULL_LOG_PATH)],
         "all_required_runs_passed": True,
         "authority_contract": {k: False for k in ("mathematical_result", "proof_authority", "novelty_authority", "independent_peer_review", "p_vs_np_authority", "framework_promotion_authority")},
         "artifact_hash": p64,
@@ -229,14 +229,20 @@ def valid_machine_fixture(module) -> dict:
 def valid_gate_fixture(module, machine: dict) -> dict:
     z64, p64 = "a" * 64, "sha256:" + "a" * 64
     artifacts = [{"path": p, "kind": k, "raw_sha256": z64, "size_bytes": 1} for p, k in module.TESTED_INPUTS + module.ENVELOPE_OUTPUTS]
-    gate_pass = {"verdict": "PASS", "reasons": ["runtime_reconstructed_in_focused_v3_test"]}
+    gate_pass = {"verdict": "PASS", "reasons": ["runtime_reconstructed_in_focused_v4_test"]}
     return {
-        "schema_version": "rakl-math-pnp-pre-candidate-gate-v3", "receipt_id": "RAKL-MATH-PNP-O9d12a2a1a1b1-PRE-CANDIDATE-GATE-V3-20260811", "atom_id": ATOM,
+        "schema_version": "rakl-math-pnp-pre-candidate-gate-v4", "receipt_id": "RAKL-MATH-PNP-O9d12a2a1a1b1-PRE-CANDIDATE-GATE-V4-20260811", "atom_id": ATOM,
         "status": "PROSPECTIVE_PROCESS_GATES_PASS_PRE_ACTION_FIBRE_FROZEN_NO_MATHEMATICAL_CANDIDATE", "recorded_at": "2026-08-11T16:31:00Z",
         "source_binding": copy.deepcopy(machine["source_binding"]),
         "primary_source_binding": {"path": module.TESTED_INPUTS[12][0], "url": "https://eccc.weizmann.ac.il/report/2025/033/download/", "raw_sha256": module.PRIMARY_SOURCE_SHA256, "retrieval_receipt_path": module.TESTED_INPUTS[13][0]},
         "supersession": {"v0_status": "REJECTED_PRE_CANDIDATE_AUTHORIZATION", "v0_correction_path": module.TESTED_INPUTS[0][0], "v0_correction_hash": p64,
-                           "v2_status": "REJECTED_PRE_CANDIDATE_AUTHORIZATION", "v2_correction_path": module.TESTED_INPUTS[1][0], "v2_correction_hash": p64, "historical_bytes_modified": False},
+                           "original_v0_gate_path": module.TESTED_INPUTS[16][0], "original_v0_gate_raw_sha256": z64, "original_v0_gate_artifact_hash": p64,
+                           "v2_status": "REJECTED_PRE_CANDIDATE_AUTHORIZATION", "v2_correction_path": module.TESTED_INPUTS[1][0], "v2_correction_hash": p64,
+                           "original_v2_gate_path": module.TESTED_INPUTS[17][0], "original_v2_gate_raw_sha256": z64, "original_v2_gate_artifact_hash": p64,
+                           "v3_status": "HISTORICAL_PASS_AT_OWN_FREEZE_SUPERSEDED_FOR_CURRENT_MAIN",
+                           "prior_v3_machine_path": module.TESTED_INPUTS[20][0], "prior_v3_machine_raw_sha256": z64, "prior_v3_machine_artifact_hash": p64,
+                           "prior_v3_gate_path": module.TESTED_INPUTS[21][0], "prior_v3_gate_raw_sha256": z64, "prior_v3_gate_artifact_hash": p64,
+                           "historical_bytes_modified": False},
         "artifacts": artifacts,
         "runtime_gate": {"context_packet_hash": p64, "memory_review_hash": p64, "expert_review_hash": p64, "trace_terminal_hash": p64,
                          "context_gate": gate_pass, "memory_gate": gate_pass, "trace_gate": gate_pass,
@@ -250,7 +256,7 @@ def valid_gate_fixture(module, machine: dict) -> dict:
     }
 
 
-def test_pnp_o9d12a2a1a1b1_pre_candidate_v3_schemas_reject_type_length_case_newline_duplicates_and_omissions() -> None:
+def test_pnp_o9d12a2a1a1b1_pre_candidate_v4_schemas_reject_type_length_case_newline_duplicates_and_omissions() -> None:
     module = runner_module()
     machine = valid_machine_fixture(module)
     gate = valid_gate_fixture(module, machine)
@@ -280,6 +286,10 @@ def test_pnp_o9d12a2a1a1b1_pre_candidate_v3_schemas_reject_type_length_case_newl
         for value in hostile_values(machine["runs"][run_index]["log_sha256"]):
             bad = copy.deepcopy(machine); bad["runs"][run_index]["log_sha256"] = value
             assert list(machine_validator.iter_errors(bad))
+        bad = copy.deepcopy(machine); del bad["runs"][run_index]["ended_at"]
+        assert list(machine_validator.iter_errors(bad))
+        bad = copy.deepcopy(machine); bad["runs"][run_index]["ended_at"] = "not-a-date"
+        assert list(machine_validator.iter_errors(bad))
     duplicate = copy.deepcopy(machine); duplicate["input_bindings"][1] = copy.deepcopy(duplicate["input_bindings"][0])
     assert list(machine_validator.iter_errors(duplicate))
     duplicate_run = copy.deepcopy(machine); duplicate_run["runs"][1] = copy.deepcopy(duplicate_run["runs"][0])
@@ -295,28 +305,27 @@ def test_pnp_o9d12a2a1a1b1_pre_candidate_v3_schemas_reject_type_length_case_newl
         for value in hostile_values(gate["runtime_gate"][key]):
             bad = copy.deepcopy(gate); bad["runtime_gate"][key] = value
             assert list(gate_validator.iter_errors(bad))
+    for key in (
+        "original_v0_gate_raw_sha256", "original_v0_gate_artifact_hash",
+        "original_v2_gate_raw_sha256", "original_v2_gate_artifact_hash",
+        "prior_v3_machine_raw_sha256", "prior_v3_machine_artifact_hash",
+        "prior_v3_gate_raw_sha256", "prior_v3_gate_artifact_hash",
+    ):
+        for value in hostile_values(gate["supersession"][key]):
+            bad = copy.deepcopy(gate); bad["supersession"][key] = value
+            assert list(gate_validator.iter_errors(bad))
     duplicate_gate = copy.deepcopy(gate); duplicate_gate["artifacts"][1] = copy.deepcopy(duplicate_gate["artifacts"][0])
     assert list(gate_validator.iter_errors(duplicate_gate))
     omitted_gate = copy.deepcopy(gate); omitted_gate["artifacts"].pop()
     assert list(gate_validator.iter_errors(omitted_gate))
 
 
-def test_pnp_o9d12a2a1a1b1_pre_candidate_v3_git_audit_executes_and_mutations_fail_closed() -> None:
+def test_pnp_o9d12a2a1a1b1_pre_candidate_v4_git_audit_executes_and_mutations_fail_closed() -> None:
     module = runner_module()
     source = valid_machine_fixture(module)["source_binding"]
-    # V3 remains a historical PASS at its own freeze.  After main moves, the
-    # durable ancestry/gitlink audit must still pass while a *new* current
-    # freeze correctly fails closed and requires a versioned successor.
-    assert module.audit_git_state(source, require_current_origin=False) == {
-        "verdict": "PASS", "checked_relations": 12, "current_origin_main_at_freeze": False, "worktree_framework_head_checked": True
+    assert module.audit_git_state(source, require_current_origin=True) == {
+        "verdict": "PASS", "checked_relations": 12, "current_origin_main_at_freeze": True, "worktree_framework_head_checked": True
     }
-    current_audit = module.audit_git_state(source, require_current_origin=True)
-    if module.git("rev-parse", "refs/remotes/origin/main") == module.BASE_COMMIT:
-        assert current_audit == {
-            "verdict": "PASS", "checked_relations": 12, "current_origin_main_at_freeze": True, "worktree_framework_head_checked": True
-        }
-    else:
-        assert current_audit == {"verdict": "FAIL", "reason": "ORIGIN_MAIN_MOVED_BEFORE_FREEZE"}
     mutations = [
         ("application_base_commit", "0" * 40), ("application_base_tree", "0" * 40),
         ("latest_main_at_freeze", "0" * 40), ("subject_tree", "0" * 40), ("framework_pin", "0" * 40),
@@ -331,7 +340,27 @@ def test_pnp_o9d12a2a1a1b1_pre_candidate_v3_git_audit_executes_and_mutations_fai
     assert module.audit_git_state(malformed)["verdict"] == "FAIL"
 
 
-def test_pnp_o9d12a2a1a1b1_pre_candidate_v3_machine_and_gate_receipts_when_present_are_raw_bound() -> None:
+def test_pnp_o9d12a2a1a1b1_pre_candidate_v4_historical_supersession_is_direct_and_exact() -> None:
+    module = runner_module()
+    audit = module.audit_historical_supersession()
+    assert audit["verdict"] == "PASS"
+    assert audit["checked_documents"] == 6
+    assert audit["checked_schemas"] == 4
+    assert audit["checked_v3_historical_inputs"] == 20
+    for document_index in (0, 1, 16, 17, 20, 21):
+        document = load(module.TESTED_INPUTS[document_index][0])
+        assert document["artifact_hash"] == canonical_hash(document)
+    v0_failure = load(module.TESTED_INPUTS[0][0])
+    v2_failure = load(module.TESTED_INPUTS[1][0])
+    v0_path, v2_path = module.TESTED_INPUTS[16][0], module.TESTED_INPUTS[17][0]
+    v0_rows = [row for row in v0_failure["failed_packet_bindings"] if row["path"] == v0_path]
+    v2_rows = [row for row in v2_failure["v2_bindings"] if row["path"] == v2_path]
+    assert len(v0_rows) == len(v2_rows) == 1
+    assert v0_rows[0]["raw_sha256"] == hashlib.sha256((ROOT / v0_path).read_bytes()).hexdigest()
+    assert v2_rows[0]["raw_sha256"] == hashlib.sha256((ROOT / v2_path).read_bytes()).hexdigest()
+
+
+def test_pnp_o9d12a2a1a1b1_pre_candidate_v4_machine_and_gate_receipts_when_present_are_raw_bound() -> None:
     module = runner_module()
     machine_path = ROOT / module.MACHINE_RECEIPT_PATH
     gate_path = ROOT / module.GATE_RECEIPT_PATH
@@ -342,18 +371,14 @@ def test_pnp_o9d12a2a1a1b1_pre_candidate_v3_machine_and_gate_receipts_when_prese
     module.validate_document(machine, module.MACHINE_SCHEMA_PATH)
     assert machine["artifact_hash"] == canonical_hash(machine)
     assert module.audit_git_state(machine["source_binding"], require_current_origin=False)["verdict"] == "PASS"
-    # The current V3 test is a durability successor; replay historical input
-    # bytes from the recorded subject rather than requiring today's worktree to
-    # equal the frozen V3 subject forever.
-    subject = machine["source_binding"]["subject_commit"]
-    historical_inputs: dict[str, bytes] = {}
-    for binding in machine["input_bindings"]:
-        raw = module.git("show", f"{subject}:{binding['path']}", binary=True)
-        assert isinstance(raw, bytes)
-        historical_inputs[binding["path"]] = raw
-        assert hashlib.sha256(raw).hexdigest() == binding["raw_sha256"]
-        assert len(raw) == binding["size_bytes"]
-        assert module.git("rev-parse", f"{subject}:{binding['path']}") == binding["git_blob_sha"]
+    assert module.audit_input_bindings(machine) == {"verdict": "PASS", "checked_bindings": len(module.TESTED_INPUTS)}
+    assert module.audit_machine_semantics(machine)["verdict"] == "PASS"
+    impossible_time = copy.deepcopy(machine)
+    impossible_time["runs"][0]["ended_at"] = "2099-01-01T00:00:00Z"
+    assert module.audit_machine_semantics(impossible_time)["verdict"] == "FAIL"
+    false_count = copy.deepcopy(machine)
+    false_count["runs"][0]["passed"] += 1
+    assert module.audit_machine_semantics(false_count)["verdict"] == "FAIL"
     for run in machine["runs"]:
         raw = (ROOT / run["log_path"]).read_bytes()
         assert hashlib.sha256(raw).hexdigest() == run["log_sha256"]
@@ -370,7 +395,23 @@ def test_pnp_o9d12a2a1a1b1_pre_candidate_v3_machine_and_gate_receipts_when_prese
     assert len({item["path"] for item in gate["artifacts"]}) == len(module.TESTED_INPUTS + module.ENVELOPE_OUTPUTS)
     assert len({item["kind"] for item in gate["artifacts"]}) == len(module.TESTED_INPUTS + module.ENVELOPE_OUTPUTS)
     for item in gate["artifacts"]:
-        raw = historical_inputs.get(item["path"], (ROOT / item["path"]).read_bytes())
+        raw = (ROOT / item["path"]).read_bytes()
         assert hashlib.sha256(raw).hexdigest() == item["raw_sha256"]
         assert len(raw) == item["size_bytes"]
     assert all(value is False for value in gate["authority_contract"].values())
+    assert module.audit_gate_bindings(gate, machine)["verdict"] == "PASS"
+
+    def wrong_hash(value: str) -> str:
+        prefix = "sha256:" if value.startswith("sha256:") else ""
+        replacement = prefix + "0" * (len(value) - len(prefix))
+        return replacement if replacement != value else prefix + "1" * (len(value) - len(prefix))
+
+    semantic_mutations: list[dict] = []
+    bad = copy.deepcopy(gate); bad["source_binding"]["subject_commit"] = "0" * 40; semantic_mutations.append(bad)
+    bad = copy.deepcopy(gate); bad["runtime_gate"]["context_packet_hash"] = wrong_hash(bad["runtime_gate"]["context_packet_hash"]); semantic_mutations.append(bad)
+    bad = copy.deepcopy(gate); bad["supersession"]["original_v0_gate_raw_sha256"] = wrong_hash(bad["supersession"]["original_v0_gate_raw_sha256"]); semantic_mutations.append(bad)
+    bad = copy.deepcopy(gate); bad["machine_run"]["raw_sha256"] = wrong_hash(bad["machine_run"]["raw_sha256"]); semantic_mutations.append(bad)
+    bad = copy.deepcopy(gate); bad["recorded_at"] = "2000-01-01T00:00:00Z"; semantic_mutations.append(bad)
+    for bad in semantic_mutations:
+        module.validate_document(bad, module.GATE_SCHEMA_PATH)
+        assert module.audit_gate_bindings(bad, machine)["verdict"] == "FAIL"
