@@ -4,7 +4,8 @@
 **Initial observation base:** `RAKL_math@8a608f340d47b4b6ae612275b0595faf6b804432`  
 **Successor integration base:** `RAKL_math@8bc7a9cf17adf347e5be13ab61a08a690dda895e`  
 **Current framework inspected first:** `RAKL@bd1a2768f0f474ff44ffa25243241f94bfaf6466`  
-**Authority:** `RETROSPECTIVE_CROSS_DOMAIN_CALIBRATION / SEARCH_CONTROL_ONLY / NO_MILLENNIUM_ROOT_AUTHORITY / NO_FRAMEWORK_PROMOTION`
+**Authority:** `RETROSPECTIVE_CROSS_DOMAIN_CALIBRATION / SEARCH_CONTROL_ONLY / NO_MILLENNIUM_ROOT_AUTHORITY / NO_FRAMEWORK_PROMOTION`  
+**Root authority: unchanged.**
 
 ## Chronology boundary
 
