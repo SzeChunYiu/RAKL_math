@@ -34,13 +34,13 @@ def test_pointwise_common_rate_does_not_imply_diagonal_rate() -> None:
         return q ** max(n - k, 0)
 
     for k in (1, 2, 5, 10):
-        # Exact family identity for the fixed-source tail.
+        # Exact family identity for a finite fixed-source tail.
         for n in (k + 1, k + 7, k + 50):
             assert m(n, k) == q ** (n - k)
-        # The nth-root rate approaches the same q for every fixed k.
-        n = 100_000
-        fixed_root = math.exp(math.log(m(n, k)) / n)
-        assert abs(fixed_root - q) < 1e-4
+        # Evaluate the equivalent logarithmic expression to avoid floating underflow.
+        n = 1_000_000
+        fixed_root = math.exp(((n - k) / n) * math.log(q))
+        assert abs(fixed_root - q) < 1e-5
 
     # A moving source can defeat the pointwise conclusion completely.
     for n in (1, 2, 5, 10, 100, 1000):
