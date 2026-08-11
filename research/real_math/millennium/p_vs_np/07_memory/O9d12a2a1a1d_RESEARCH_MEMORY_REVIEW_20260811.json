@@ -1,0 +1,46 @@
+{
+  "review_id": "PNP-O9d12a2a1a1d-MEMORY-20260811-R1",
+  "atom_id": "O9d12a2a1a1d",
+  "fibre_snapshot_hash": "sha256:a1ced8bf6aa84513176749025da4d4ff0f60cd85161399788a81e2aa39cb1359",
+  "coverage": "BOUNDED_NOT_EXHAUSTIVE",
+  "retrieved_selected": [
+    {"id":"PNP-O9d12a2a1a1b-GLOBAL-FACTORIZATION-R2-20260811","kind":"episode","authority":"CURRENT_MAIN_PROPOSAL_SHADOW","effect":"changed routing from later-dynamics scores to shared-rule/base representation before scoring"},
+    {"id":"F-O9D12A2A1A1B-FIXED-LAMBDA-GLOBAL-STATE-FACTORIZATION","kind":"failure_obstruction","authority":"CURRENT_MAIN_PROPOSAL_SHADOW","effect":"rejects treating later closure dynamics as a fresh witness coordinate under fixed Lambda"},
+    {"id":"F-C010-MULTIPLEXING","kind":"failure","authority":"SCOPED_WARNING","effect":"requires accounting compatible with shared/free operations"},
+    {"id":"F-C021-CHEAP-ADJACENCY","kind":"failure","authority":"SCOPED_WARNING","effect":"requires cheap/zero target controls before target scoring"},
+    {"id":"F-C023-SCALAR-COLLAPSE","kind":"failure","authority":"SCOPED_WARNING","effect":"blocks scalar-score-first search without a legal per-operation bound"},
+    {"id":"F-C024-FRACTIONAL-INTEGRALITY-GAP","kind":"failure","authority":"SCOPED_WARNING","effect":"requires exact integral/source-native semantics"},
+    {"id":"F-C025-FIRST-ORDER-CANONICAL-COLLAPSE","kind":"failure","authority":"SUPPORTED_SCOPED","effect":"favours canonicalization/quotienting over richer presentation-sensitive signatures"},
+    {"id":"PR113-FREE-UNION-QUOTIENT","kind":"pending_success_episode","authority":"PENDING_SEARCH_PRIORITY_ONLY","effect":"routes to eliminating all uncounted union structure before invariant search; not used as mathematical authority"}
+  ],
+  "retrieved_rejected": [
+    {"id":"ECCC-TR26-118-RANGE-AVOIDANCE","reason":"current primary frontier result but no applicability map/DifferenceWitness to the cyclic set-system normalization"},
+    {"id":"GENERIC-HORN-LOWER-BOUND-TRANSFER","reason":"monotone propagation analogy does not preserve cover/intersection complexity and is unnecessary for the exact local semantics"},
+    {"id":"GENERIC-SET-COVER-HIERARCHY-TRANSFER","reason":"repeats a saturated representation family without a new bound on counted cyclic intersections"},
+    {"id":"CROSS-MILLENNIUM-IMPORT","reason":"not queried: same-domain exact source plus current PNP memory suffices; no justified cross-problem applicability witness"}
+  ],
+  "prior_episode_routing_effect": {
+    "pre_memory_pre_gate_preference": "propose a quotient-respecting scalar Phi immediately",
+    "post_memory_choice": "first verify an exact union-gate elimination normal form",
+    "rakl_changed_action": true,
+    "why": "global-factorization failure plus scalar-collapse/multiplexing history and pending free-union evidence make representation normalization the cheaper discriminator"
+  },
+  "local_vs_gluing": {
+    "local_mathematical_failure_memory": ["F-C023-SCALAR-COLLAPSE","F-C025-FIRST-ORDER-CANONICAL-COLLAPSE"],
+    "local_to_global_gluing_failure_memory": ["F-O9D12A2A1A1B-FIXED-LAMBDA-GLOBAL-STATE-FACTORIZATION"],
+    "note": "Even a successful normal form does not provide Phi<=f(k), an explicit hard graph, or a root bridge."
+  },
+  "saturation_axes_before": {
+    "KNOWLEDGE":"FLAT_FOR_CURRENT_SOURCE_FAMILY",
+    "OPERATOR":"FLAT_SCORE_FIRST",
+    "EXPERIENCE_PATTERN":"ACTIVE",
+    "OBSTRUCTION":"REOPENED_BY_PRIOR_CYCLE",
+    "RELATION":"REOPENED_BY_PRIOR_CYCLE",
+    "PATH":"REOPENED_BY_PRIOR_CYCLE",
+    "META_METHOD":"FLAT"
+  },
+  "axis_reopened_this_routing": ["RELATION"],
+  "selected_policy": "ZERO_COST_STRUCTURE_ELIMINATION_BEFORE_LOWER_BOUND_COORDINATE",
+  "cross_millennium_query": "NOT_RUN_NO_APPLICABILITY_WITNESS",
+  "authority": "PROPOSAL_SHADOW_SEARCH_PRIORITY_ONLY"
+}
