@@ -1,0 +1,233 @@
+{
+  "schema_version": "rakl-math-verified-discovery-source-recovery-shadow-v1",
+  "cycle_id": "PNP-O9d12a2a1a1b1-R2-SRC1-WIG95-SOURCE-RECOVERY-20260811",
+  "recorded_at": "2026-08-11T22:14:31Z",
+  "atom_id": "O9d12a2a1a1b1-R2-SRC1",
+  "fibre_snapshot_hash": "sha256:a134a6b759da6f8accec1a3a87954acc46421462e0fa333bff026ab1d9544ccd",
+  "chronology": {
+    "strict_pre_action_fibre_credit": false,
+    "reason": "The Wig95 identity/legacy pointer was seen before the persisted fibre was written. The post-freeze source verification was replayed against the frozen fibre, but chronology is not rewritten and no result-blind/pre-candidate novelty credit is claimed."
+  },
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "git_sha": "91f182a3e7ad7ba670babbec5f49a1304da2d933",
+    "method_version": "3.0.0",
+    "current_main_core_status": "INSPECTED_V3_AND_RECHECKED; latest one-commit drift from the inspected core predecessor affected Paper-2/Paper-5 benchmark/documentation surfaces only."
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "9c2cebe8d5a2b1381af5a40cbea86a6826e7210a",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "exact_question": "Can the required Wigderson 1995 primary theorem text be recovered in this bounded pass, and if so does its exact statement support an assumption-preserving reverse comparison useful for unrestricted full Definition-21 cover complexity?",
+  "source_recovery": [
+    {
+      "source_id": "ECCC-TR25-033-2025",
+      "source_type": "PRIMARY_CURRENT_TECHNICAL_REPORT",
+      "url": "https://eccc.weizmann.ac.il/report/2025/033/",
+      "pdf_url": "https://eccc.weizmann.ac.il/report/2025/033/download",
+      "verification": "POST_FREEZE_REPLAY_INSPECTED_PDF_AND_SCREENSHOTS",
+      "exact_relevant_scope": "Definition 21 defines full cover complexity over arbitrary pairs of subsets of U. The following scope note says that imposing the extra condition that every pair has at least one set equal to a generator intersected with U yields characterizations of branching models, citing Wig95 and mentioning branching programs.",
+      "non_guarantee": "The scope note does not itself state an inequality rho_branch <= g(rho_full), a simulation cost, or theorem quantifiers from Wig95.",
+      "page_evidence": [
+        "PDF p13 (tool pageno 12): Definition 21 and scope note",
+        "PDF p25 (tool pageno 24): bibliography entry [Wig95]"
+      ]
+    },
+    {
+      "source_id": "ECCC-LECTURE-NOTES-POINTERS",
+      "source_type": "AUTHORITATIVE_ECCC_INDEX_POINTER",
+      "url": "https://eccc.weizmann.ac.il/static/pointers/lecture_notes/",
+      "verification": "POST_FREEZE_REPLAY_INSPECTED_LINES_86_90",
+      "identity_recovered": "A. Wigderson, Lectures on the Fusion Method and Derandomization",
+      "legacy_location": "anonymous FTP host ftp.cs.mcgill.ca, file /pub/tech-reports/library/reports/95/TR95.2.ps.gz",
+      "result": "PRIMARY_IDENTITY_AND_LEGACY_LOCATION_RECOVERED; PRIMARY_REPORT_BYTES_NOT_RECOVERED",
+      "non_guarantee": "An index pointer is not the primary theorem text and earns no theorem-transfer authority."
+    },
+    {
+      "source_id": "MCGILL-PRIMARY-SEARCH",
+      "source_type": "BOUNDED_RECOVERY_PROBES",
+      "queries": [
+        "site:cs.mcgill.ca exact title",
+        "site:mcgill.ca SOCS-95.2 Wigderson",
+        "exact TR95.2.ps.gz path/search"
+      ],
+      "result": "NO_CURRENT_INDEXED_PRIMARY_BYTES_RECOVERED_IN_BOUNDED_SEARCH",
+      "interpretation": "CANNOT_CHECK; this is not evidence that no copy exists."
+    },
+    {
+      "source_id": "ARCHIVE-RECOVERY-SEARCH",
+      "source_type": "BOUNDED_ARCHIVE_PROBES",
+      "queries": [
+        "site:web.archive.org TR95.2.ps.gz Wigderson",
+        "site:archive.org exact title"
+      ],
+      "result": "NO_PRIMARY_BYTES_RECOVERED_IN_BOUNDED_SEARCH",
+      "interpretation": "CANNOT_CHECK; archive nonexistence is not claimed."
+    }
+  ],
+  "source_family_completeness": {
+    "status": "INCOMPLETE",
+    "current_main_required_ancestry_context": "Canonical R2 coordinate inventory already records Wig95, Karchmer 1993 and Nakayama-Maruoka 1995 as uninspected/blocked primary ancestry families.",
+    "this_atom_delta": "Wig95 bibliographic identity and exact legacy McGill path are better localized, but relevant primary theorem bytes remain uninspected.",
+    "theorem_imported_from_wig95": false
+  },
+  "difference_witness": {
+    "consumer": "unrestricted full Definition-21 rho(A,B), whose legal pair family is unrestricted in the modern definition",
+    "candidate_source_scope": "branching-model restriction described by the modern source as requiring in every pair at least one operand to be a generator intersected with U",
+    "preserved": [
+      "same target/base notation only at the modern scope-note level"
+    ],
+    "broken_or_unverified": [
+      "exact Wig95 theorem hypotheses and object definition",
+      "whether the Wig95 characterization uses exactly the modern semi-filter cover",
+      "simulation constants/polynomial losses",
+      "direction and quantifiers of any comparison to the unrestricted full witness family",
+      "explicit reverse comparison rho_restricted <= g(rho_full)"
+    ],
+    "admission_decision": "REJECT_THEOREM_TRANSFER_UNTIL_PRIMARY_TEXT_AND_EXACT_MAP_ARE_INSPECTED"
+  },
+  "structural_analogues": [
+    {
+      "analogue": "ECCC-TR25-033 primary recovery plus R1 Razborov-1989/Wigderson-1993 recovery",
+      "shared_structure": "fusion/discrete-complexity source family with a theorem-level model/cover interface",
+      "disanalogy": "for these analogues primary theorem bytes were inspectable; Wig95 remains pointer-only in this pass",
+      "transfer_assumption": "bibliographic identity plus primary bytes and exact statement are all required before theorem transfer"
+    }
+  ],
+  "prior_experience_routing": {
+    "changed_routing": [
+      {
+        "id": "R2-COORDINATE-INVENTORY-RESULT",
+        "authority": "CURRENT_MAIN",
+        "effect": "prioritized source completion rather than candidate invention because no admissible complete coordinate was found in inspected rows."
+      },
+      {
+        "id": "R1-NEXT-STEP",
+        "authority": "CURRENT_MAIN",
+        "effect": "required prospective Wig95 scope addition and distinct noncircular coordinate after T24/T30 match."
+      },
+      {
+        "id": "PNP-RESTRICTION-CLASS-NONTRANSFER",
+        "authority": "CURRENT_MAIN_MATH_EXPERIENCE",
+        "effect": "forced an exact source/model map before any branching lower-bound transfer."
+      },
+      {
+        "id": "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",
+        "authority": "CURRENT_MAIN_FAILURE",
+        "effect": "kept restricted obligation families separate from full noncanonical obligations."
+      },
+      {
+        "id": "RAKL_math#162",
+        "authority": "UNMERGED_CURRENT_WORK_SHADOW",
+        "effect": "prevented duplication of the already-attempted feasible-set polarity lemma and isolated Wig95 primary-text recovery as a smaller nonduplicative obstruction."
+      }
+    ],
+    "retrieved_but_rejected": [
+      {
+        "id": "T-PNP-FRACTIONAL-SEMIFILTER-PACKING",
+        "why": "wrong atom; F-C024 blocks direct integral transfer"
+      },
+      {
+        "id": "T-PNP-UPPER-FIRST",
+        "why": "candidate-scoring route premature before source completion"
+      },
+      {
+        "id": "T-PNP-EXTREMAL-CALIBRATION",
+        "why": "candidate falsification route premature before source completion"
+      },
+      {
+        "id": "T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION",
+        "why": "known-answer calibration cannot recover source theorem text"
+      },
+      {
+        "id": "RAKL_math#154",
+        "why": "sibling incremental-trace/cyclic-gluing route"
+      },
+      {
+        "id": "RAKL_math#128",
+        "why": "absolute trace route already pruned by zero-cost shattering"
+      }
+    ],
+    "missed_prior_experience_later_found": [
+      {
+        "id": "R2-COORDINATE-INVENTORY-RESULT",
+        "note": "It was discovered after the first source lookup in this runtime. This chronology defect is preserved; its discovery reinforced source completion but cannot retroactively make the first lookup prospectively frozen."
+      }
+    ]
+  },
+  "same_context_expert_cell_findings": [
+    {
+      "role": "source/provenance archivist",
+      "finding": "ECCC authoritative index preserves exact title and legacy McGill FTP host/path; report bytes were not recovered."
+    },
+    {
+      "role": "fusion-method complexity theorist",
+      "finding": "Definition-21 scope note is a characterization pointer only; it does not itself state the needed reverse comparison."
+    },
+    {
+      "role": "model-transfer specialist",
+      "finding": "full versus generator-derived restricted pair families remain a DifferenceWitness boundary; exact Wig95 hypotheses/maps are unverified."
+    },
+    {
+      "role": "adversarial falsifier",
+      "finding": "deriving rho_restricted <= g(rho_full) from citation language alone fails source/verification admission before mathematics is reached."
+    },
+    {
+      "role": "provenance/metrology verifier",
+      "finding": "same-context role separation gives 0 independent-review credit; source pointers/repository writes generate no protected novelty."
+    }
+  ],
+  "verification": {
+    "counterexample_first_falsifier": "Any proposed Wig95-based reverse bridge is rejected if its evidence is only the modern citation/scope note or a bibliographic pointer rather than inspected primary theorem text with an exact DifferenceWitness.",
+    "primary_source_checks": [
+      "TR25-033 PDF p13 and p25 post-freeze screenshot replay",
+      "ECCC lecture-notes pointer lines 86-90 post-freeze replay"
+    ],
+    "bounded_recovery_search": "McGill/index and archive probes repeated after fibre freeze; no primary report bytes recovered.",
+    "computation_used_as_proof": false,
+    "independent_mathematical_review_count": 0,
+    "same_context_review_only": true
+  },
+  "outcome": "BLOCKED",
+  "local_mathematical_status": "NO_MATHEMATICAL_SUBPROBLEM_SOLVED",
+  "novelty_class": "NOT_APPLICABLE_NO_MATHEMATICAL_SUBPROBLEM_SOLVED",
+  "local_mathematical_failure": null,
+  "local_to_global_gluing_failure": {
+    "status": "OPEN_SOURCE_GATED",
+    "diagnosis_id": "D-PNP-R2-WIG95-PRIMARY-BYTES-NOT-RECOVERED",
+    "failure_id": "F-PNP-R2-WIG95-PRIMARY-SOURCE-UNAVAILABLE-BOUNDED-SEARCH",
+    "obstruction_id": "O-PNP-R2-WIG95-PRIMARY-THEOREM-TEXT-MISSING",
+    "statement": "The modern source identifies a branching restriction and points to Wig95, but theorem text/quantifiers remain uninspected. Therefore no restricted-model characterization or reverse bridge may be glued to the unrestricted full cover object."
+  },
+  "residual_signature_before": [
+    "R2_REQUIRED_PRIMARY_ANCESTRY_INCOMPLETE",
+    "WIG95_PRIMARY_IDENTITY_CONTENT_INSUFFICIENT",
+    "NO_ADMISSIBLE_DISTINCT_FULL_MODEL_EXPLICIT_TARGET_COORDINATE"
+  ],
+  "residual_signature_after": [
+    "WIG95_EXACT_TITLE_AND_LEGACY_MCGILL_PATH_RECOVERED",
+    "WIG95_PRIMARY_THEOREM_TEXT_CANNOT_CHECK",
+    "RESTRICTED_TO_FULL_REVERSE_BRIDGE_NOT_ADMITTED",
+    "OTHER_R2_PRIMARY_ANCESTRY_GAPS_REMAIN",
+    "NO_ADMISSIBLE_DISTINCT_FULL_MODEL_EXPLICIT_TARGET_COORDINATE",
+    "PNP_ROOT_OPEN_NO_SOLUTION_CERTIFICATE"
+  ],
+  "saturation": {
+    "reopened_axes": [
+      "KNOWLEDGE",
+      "RELATION",
+      "PATH"
+    ],
+    "KNOWLEDGE": "REOPENED_BY_PRIMARY_THEOREM_TEXT_RESIDUAL",
+    "OPERATOR": "NO_RETAINED_NOVELTY_NOT_DECLARED_FLAT",
+    "EXPERIENCE_PATTERN": "NO_RETAINED_NOVELTY_NOT_DECLARED_FLAT",
+    "OBSTRUCTION": "RESIDUAL_ACTIVE_NOT_DECLARED_GLOBALLY_FLAT",
+    "RELATION": "REOPENED_BY_UNVERIFIED_RESTRICTED_FULL_MODEL_MAP",
+    "PATH": "REOPENED_BETWEEN_SOURCE_RECOVERY_AND_DIRECT_FULL_MODEL_ROUTE",
+    "META_METHOD": "NO_RETAINED_NOVELTY_NOT_DECLARED_FLAT"
+  },
+  "next_action": "Do not retry the already-run transfer-polarity lemma. Either recover Wig95 primary bytes through a provenance-preserving library/archive route and inspect exact theorem quantifiers, or, after a bounded source-recovery budget is exhausted, rotate to a prospective direct full-Definition-21 child atom with the existing polarity/quotient/target-forcing/rate-composition falsifiers.",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "authority": "PROPOSAL_SHADOW_SOURCE_DIAGNOSTIC_ONLY_NO_THEOREM_IMPORT_NO_NOVELTY_AUTHORITY_NO_ROOT_AUTHORITY"
+}
