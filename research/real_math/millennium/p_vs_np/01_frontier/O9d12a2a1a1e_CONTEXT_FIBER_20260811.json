@@ -1,0 +1,37 @@
+{
+  "atom_id": "O9d12a2a1a1e",
+  "parent_atom_id": "O9d12a2a1a1d",
+  "objective": "Test a base-normalized target-trace entropy potential for an exact one-added-set/one-acyclic-intersection marginal bound, then audit transport to cyclic intersection complexity and target-value gluing.",
+  "problem_signature": [
+    "P-vs-NP via graph/two-dimensional cover complexity",
+    "finite set systems with union free and intersections charged",
+    "base-normalized trace entropy on target A",
+    "one-intersection marginal accounting",
+    "cyclic fixed-point transport and explicit-target gluing separated"
+  ],
+  "framework_sha": "f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
+  "application_main_sha": "47f56df0492339097a651d40b6c7289c4e2d4034",
+  "consulted": [
+    {"item_id":"PNP_ROOT_CONTRACT","item_hash":"f1641b6213b5278c3ed74372def9e2efc2cdbcb2"},
+    {"item_id":"PNP_SUCCESS_CONTRACT","item_hash":"57c0ab17c1281d59a41b352e9c2e107793c5592e"},
+    {"item_id":"PNP_PARENT_PR128_HEAD","item_hash":"ede7a19d8110e90a60e66d18f95237cfbbd4d1b4"},
+    {"item_id":"PNP_O9d12a2a1a1d_CONTEXT","item_hash":"87e8c8c58dfd9a59c22d2659fb55ac9575da0abd"},
+    {"item_id":"PNP_O9d12a2a1a1d_RESULT","item_hash":"5ec86a916e2f59fa4025f3e231b20270f463550b"},
+    {"item_id":"PNP_O9d12a2a1a1d_DAG","item_hash":"9214a31883d148174b4c9176abf38476a26586d5"},
+    {"item_id":"PNP_O9d12a2a1a1d_MEMORY","item_hash":"e8425dd6ad6a645435cc1279718a9b696f508fd3"},
+    {"item_id":"RAKL_VERSION_MANIFEST","item_hash":"7363c88f4b19638299968e5e0ee3a93c3d567121"},
+    {"item_id":"RAKL_V3_EXPERIENCE_SUBSTRATE","item_hash":"37e15792c2bf3a6fb2648cd2fa2de0c8bcbd5d7d"},
+    {"item_id":"RAKL_METHOD_SPECS","item_hash":"CANNOT_MEASURE: connector response did not expose blob SHA; content read at exact RAKL main SHA"},
+    {"item_id":"ECCC_TR25_033","item_hash":"SOURCE-2025-033-20250318"}
+  ],
+  "status": "FROZEN_PRE_CANDIDATE",
+  "root_authority": "NONE",
+  "fibre_snapshot_hash": "sha256:f8930c257c123659a217e678a4f59b61ba9cad477dd5a0b1ed59fa789e22dcd9",
+  "frozen_at": "2026-08-11T19:32:27Z",
+  "search_policy": "COUNTEREXAMPLE_FIRST_THEN_PROVE_SMALLEST_ONE_STEP_ACCOUNTING_LEMMA",
+  "analogue_disanalogue": [
+    {"analogue":"add-one-generator entropy bound for finite union closures","transfer_assumption":"free union closure is the uncharged substrate","disanalogy":"a cyclic syntactic intersection coordinate is a least-fixed-point object, not an immutable added set"},
+    {"analogue":"Cavalar-Oliveira Corollary 17 acyclic/cyclic comparison","transfer_assumption":"same discrete-complexity model and source definitions","disanalogy":"quadratic comparison does not give a direct per-cyclic-gate marginal theorem"}
+  ],
+  "authority": "PROPOSAL_SHADOW_PRE_CANDIDATE_ONLY"
+}
