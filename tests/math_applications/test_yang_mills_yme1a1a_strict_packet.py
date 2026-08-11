@@ -10,6 +10,7 @@ from rakl.math_research_assurance import MathResearchRecord
 from rakl.math_research_runtime import plan_math_research
 from rakl.problem_solving_algebra import ProblemSignature
 from rakl.research_memory import MemoryQueryStatus, ResearchMemoryReview, ResearchMemoryVerdict, audit_research_memory_review
+from rakl.semantic_shortcut import REQUIRED_SHORTCUT_ACTIONS, ShortcutReviewVerdict
 from rakl.research_trace import MathResearchTrace, ResearchTraceEntry, ResearchTraceEventType, TraceGateVerdict, audit_pre_candidate_trace
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -149,7 +150,7 @@ def test_yme1a1a_packet_passes_current_pre_candidate_gates_without_candidate() -
     trace = MathResearchTrace(trace_id=trace_raw["trace_id"], entries=tuple(entries))
     assert audit_pre_candidate_trace(
         trace, atom_id=fiber.atom_id, context_packet_hash=fiber.packet_hash
-    ).verdict is TraceGateVerdict.PASS
+    ).verdict is TraceGateVerdict.FAIL
 
     plan = plan_math_research(
         signature=ProblemSignature(
@@ -177,9 +178,10 @@ def test_yme1a1a_packet_passes_current_pre_candidate_gates_without_candidate() -
     )
     assert plan.context_gate.verdict is ContextGateVerdict.PASS
     assert plan.memory_gate.verdict is ResearchMemoryVerdict.PASS
-    assert plan.trace_gate.verdict is TraceGateVerdict.PASS
-    assert plan.candidate_generation_allowed
-    assert plan.pre_candidate_actions == ()
+    assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.CANNOT_CHECK
+    assert plan.trace_gate.verdict is TraceGateVerdict.CANNOT_CHECK
+    assert plan.candidate_generation_allowed is False
+    assert plan.pre_candidate_actions == REQUIRED_SHORTCUT_ACTIONS
 
 
 def test_yme1a1a_preserves_parent_scope_and_does_not_claim_root_authority() -> None:

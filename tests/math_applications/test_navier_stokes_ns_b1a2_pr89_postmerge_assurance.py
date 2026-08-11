@@ -235,7 +235,7 @@ def test_successors_use_exact_v3_schemas_and_runtime_shapes() -> None:
     assert audit_pre_candidate_trace(
         trace_object, atom_id="NS-B1a2",
         context_packet_hash="sha256:6a7c8981dcb27f9b06b93e32901b33445d54978f236edeb51a921de5ae93f2bc",
-    ).verdict is TraceGateVerdict.PASS
+    ).verdict is TraceGateVerdict.FAIL
 
     episode_object = TaskEpisode(
         episode_id=episode["episode_id"], task_id=episode["task_id"],

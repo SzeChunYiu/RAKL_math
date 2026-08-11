@@ -119,7 +119,7 @@ def test_rh_spec_002_trace_completes_pre_candidate_chronology_without_candidate(
             atom_id="RH-SPEC-002",
             context_packet_hash=context["packet_hash"],
         ).verdict
-        is TraceGateVerdict.PASS
+        is TraceGateVerdict.FAIL
     )
     assert all(
         entry.event_type is not ResearchTraceEventType.CANDIDATE_PROPOSED

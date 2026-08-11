@@ -10,6 +10,7 @@ from rakl.math_research_assurance import MathResearchRecord
 from rakl.math_research_runtime import plan_math_research
 from rakl.problem_solving_algebra import ProblemSignature
 from rakl.research_memory import MemoryQueryStatus, ResearchMemoryReview, ResearchMemoryVerdict, audit_research_memory_review
+from rakl.semantic_shortcut import REQUIRED_SHORTCUT_ACTIONS, ShortcutReviewVerdict
 from rakl.research_trace import MathResearchTrace, ResearchTraceEntry, ResearchTraceEventType, TraceGateVerdict, audit_pre_candidate_trace
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -77,13 +78,14 @@ def test_yme1a1_packet_passes_current_pre_candidate_gates_without_candidate() ->
         entries.append(ResearchTraceEntry(event_id=raw["event_id"], atom_id=raw["atom_id"], event_type=ResearchTraceEventType(raw["event_type"]), timestamp=raw["timestamp"], state_summary=raw["state_summary"], action_summary=raw["action_summary"], evidence_pointers=tuple(raw["evidence_pointers"]), alternatives_considered=tuple(raw.get("alternatives_considered", ())), decision_rationale=raw.get("decision_rationale", ""), outputs=tuple(raw.get("outputs", ())), uncertainties=tuple(raw.get("uncertainties", ())), residuals=tuple(raw.get("residuals", ())), next_steps=tuple(raw.get("next_steps", ())), artifact_hash=raw["artifact_hash"], previous_event_hash=raw.get("previous_event_hash", "")))
     assert all(e.event_type is not ResearchTraceEventType.CANDIDATE_PROPOSED for e in entries)
     trace = MathResearchTrace(trace_id=trace_raw["trace_id"], entries=tuple(entries))
-    assert audit_pre_candidate_trace(trace, atom_id=fiber.atom_id, context_packet_hash=fiber.packet_hash).verdict is TraceGateVerdict.PASS
+    assert audit_pre_candidate_trace(trace, atom_id=fiber.atom_id, context_packet_hash=fiber.packet_hash).verdict is TraceGateVerdict.FAIL
 
     plan = plan_math_research(
         signature=ProblemSignature(objects=("one-step 4D pure Yang-Mills RG block", "gauge-invariant source tangent", "marked observable/source state"), relations=("RG blocking", "source differentiation", "operator mixing", "reflection-support transport"), domain="constructive quantum field theory / lattice Yang-Mills renormalization group", goal_type="classify one-step marked source closure before multiscale iteration"),
         record=MathResearchRecord(claim_id=fiber.atom_id), context_fiber=fiber, memory_review=memory, research_trace=trace)
     assert plan.context_gate.verdict is ContextGateVerdict.PASS
     assert plan.memory_gate.verdict is ResearchMemoryVerdict.PASS
-    assert plan.trace_gate.verdict is TraceGateVerdict.PASS
-    assert plan.candidate_generation_allowed
-    assert plan.pre_candidate_actions == ()
+    assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.CANNOT_CHECK
+    assert plan.trace_gate.verdict is TraceGateVerdict.CANNOT_CHECK
+    assert plan.candidate_generation_allowed is False
+    assert plan.pre_candidate_actions == REQUIRED_SHORTCUT_ACTIONS

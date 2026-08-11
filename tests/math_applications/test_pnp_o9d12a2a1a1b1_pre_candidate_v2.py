@@ -6,6 +6,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import subprocess
 
 import jsonschema
 
@@ -16,12 +17,14 @@ from rakl.math_research_runtime import plan_math_research
 from rakl.problem_solving_algebra import ProblemSignature
 from rakl.research_memory import MemoryQueryStatus, ResearchMemoryReview, ResearchMemoryVerdict, audit_research_memory_review
 from rakl.research_tool_inventory import ResearchTool, ResearchToolAuthority, validate_research_tool
+from rakl.semantic_shortcut import REQUIRED_SHORTCUT_ACTIONS, ShortcutReviewVerdict
 from rakl.research_trace import MathResearchTrace, ResearchTraceEntry, ResearchTraceEventType, TraceGateVerdict, audit_pre_candidate_trace
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "research/real_math/millennium/p_vs_np"
 SCHEMAS = ROOT / "framework/RAKL/schemas"
 ATOM = "O9d12a2a1a1b1"
+V0_GATE_COMMIT = "df1e100c44bb0b40929688cb3a240f9404288a98"
 
 
 def load(path: Path) -> dict:
@@ -47,7 +50,21 @@ def test_v2_gate_is_prospective_schema_valid_runtime_reconstructed_and_candidate
     correction = load(ROOT / "receipts/pnp-o9d12a2a1a1b1-v0-hostile-failure-20260811.json")
     assert correction["artifact_hash"] == canonical_hash(correction, "artifact_hash")
     for binding in correction["failed_packet_bindings"]:
-        assert hashlib.sha256((ROOT / binding["path"]).read_bytes()).hexdigest() == binding["raw_sha256"]
+        if binding["path"] == "tests/math_applications/test_pnp_o9d12a2a1a1b1_pre_candidate.py":
+            bound_bytes = subprocess.run(
+                [
+                    "git",
+                    "-C",
+                    str(ROOT),
+                    "show",
+                    f"{V0_GATE_COMMIT}:{binding['path']}",
+                ],
+                check=True,
+                stdout=subprocess.PIPE,
+            ).stdout
+        else:
+            bound_bytes = (ROOT / binding["path"]).read_bytes()
+        assert hashlib.sha256(bound_bytes).hexdigest() == binding["raw_sha256"]
     assert correction["failed_status"] == "REJECTED_PRE_CANDIDATE_AUTHORIZATION"
     assert correction["authority_contract"]["candidate_generation_allowed"] is False
 
@@ -170,7 +187,7 @@ def test_v2_gate_is_prospective_schema_valid_runtime_reconstructed_and_candidate
     assert all(parsed(entries[i].timestamp) <= parsed(entries[i + 1].timestamp) for i in range(6))
     assert all(e.event_type is not ResearchTraceEventType.CANDIDATE_PROPOSED for e in entries)
     trace = MathResearchTrace(trace_id=trace_raw["trace_id"], entries=tuple(entries))
-    assert audit_pre_candidate_trace(trace, atom_id=ATOM, context_packet_hash=fiber.packet_hash).verdict is TraceGateVerdict.PASS
+    assert audit_pre_candidate_trace(trace, atom_id=ATOM, context_packet_hash=fiber.packet_hash).verdict is TraceGateVerdict.FAIL
 
     plan = plan_math_research(
         signature=ProblemSignature(
@@ -183,9 +200,10 @@ def test_v2_gate_is_prospective_schema_valid_runtime_reconstructed_and_candidate
     )
     assert plan.context_gate.verdict is ContextGateVerdict.PASS
     assert plan.memory_gate.verdict is ResearchMemoryVerdict.PASS
-    assert plan.trace_gate.verdict is TraceGateVerdict.PASS
-    assert plan.candidate_generation_allowed is True
-    assert plan.pre_candidate_actions == ()
+    assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.CANNOT_CHECK
+    assert plan.trace_gate.verdict is TraceGateVerdict.CANNOT_CHECK
+    assert plan.candidate_generation_allowed is False
+    assert plan.pre_candidate_actions == REQUIRED_SHORTCUT_ACTIONS
     assert entries[-1].outputs == ("next_action:SOURCE_NATIVE_T_RULE_THEOREM_INVENTORY", "candidate_identity:none", "root_authority:none")
 
     synthesis = (
