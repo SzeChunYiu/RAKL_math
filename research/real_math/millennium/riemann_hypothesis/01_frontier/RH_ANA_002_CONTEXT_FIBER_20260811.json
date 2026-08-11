@@ -1,0 +1,186 @@
+{
+  "atom_id": "RH-ANA-002",
+  "object_context": "Strict analytic child of RH-ANA-001. The prior exact quartet calibration showed that finite Li-prefix positivity can miss an off-critical defect. RH-ANA-002 therefore asks whether a genuinely zeta-specific all-index mechanism exists that is not merely a positive surrogate. The active obstruction is the identity/faithfulness bridge between unconditional analytic objects built from xi and the exact Li coefficients: in particular, Suzuki constructs concrete G_n in L2(R) unconditionally, while the equality lambda_n=(2pi)^(-1)||G_n||_2^2 for every n is itself equivalent to RH. Before inventing any new inequality, isolate the weakest non-circular defect/faithfulness statement that could turn an unconditional positive object or prime-side formula into all-n Li positivity.",
+  "structural_coordinates": [
+    "Li's criterion is universal in the coefficient index: lambda_n >= 0 is required for every positive integer n",
+    "RH-ANA-001 established that a long finite positive Li prefix is not a logically sufficient surrogate for the all-index condition even under the familiar conjugation and functional-equation symmetries",
+    "Bombieri-Lagarias identify Li coefficients with values of the Weil explicit-formula quadratic/distributional machinery on a specific family g_n, but positivity of the relevant Weil functional is itself root-coupled",
+    "Suzuki defines concrete functions G_n from xi and xi'/xi; the restriction G_n|R is bounded, real-analytic and L2 unconditionally",
+    "Suzuki's exact norm identity lambda_n=(2pi)^(-1)||G_n||_2^2 for all n is necessary and sufficient for RH, so positivity of the norm becomes useful only after an exact identity/faithfulness bridge is independently established",
+    "the arithmetic formula for lambda_n contains binomially weighted eta_j, archimedean constants and zeta(j) terms with cancellations rather than manifest termwise positivity",
+    "Lagarias relates generalized Li coefficients to Weil's quadratic functional and studies unconditional versus RH-conditional asymptotics",
+    "Voros' asymptotic dichotomy says RH corresponds to tempered n(A log n+B)-type behavior whereas failure produces non-tempered oscillatory behavior; using this as a proof route still requires an unconditional global growth bound strong enough to exclude the off-line regime",
+    "any norm, probability, operator, prime sum or finite computation used as a positivity surrogate must be connected to lambda_n by an exact theorem with all convergence, normalization and all-n quantifiers audited",
+    "a bridge theorem that is equivalent to RH but merely restates lambda_n>=0 under a new positive object has no localization gain unless it exposes a strictly weaker independently falsifiable sub-obligation",
+    "recent numerical/operator realizations of Weil-type objects may calibrate representations but cannot supply all-n Li positivity or arithmetic faithfulness without a proved exact bridge",
+    "the analytic lane remains distinct from the spectral/operator lane; operator language is admitted here only when it sharpens the analytic identity/defect obligation"
+  ],
+  "equivalent_formulations": [
+    "every nontrivial zero rho of zeta satisfies Re(rho)=1/2",
+    "lambda_n >= 0 for every positive integer n in Li's criterion",
+    "the relevant Weil quadratic/distributional positivity holds on the full registered test class",
+    "for Suzuki's concrete G_n, lambda_n=(2pi)^(-1)||G_n||_2^2 for every positive integer n",
+    "the defect D_n:=(2pi)^(-1)||G_n||_2^2-lambda_n vanishes for every positive integer n",
+    "in the Li-coordinate asymptotic formulation, the coefficient sequence has the RH-compatible tempered asymptotic rather than the off-line non-tempered oscillatory regime"
+  ],
+  "solved_analogues": [
+    "Parseval-Plancherel theory: positivity of an L2 norm transports to the original quadratic quantity only after an exact independently proved isometry/identity with the correct normalization",
+    "Riemann-hypothesis theorems for zeta functions over finite fields, where a genuine geometric/cohomological realization supplies the load-bearing positivity/spectral constraint rather than merely naming a positive surrogate"
+  ],
+  "near_solved_analogues": [
+    "Suzuki's concrete Li-norm formulation: G_n belongs to L2(R) unconditionally, while the exact norm identity for all n is equivalent to RH",
+    "Bombieri-Lagarias and Lagarias Li/Weil formulas, which give exact arithmetic/explicit-formula representations but do not make all-index positivity unconditional",
+    "Voros' RH versus non-RH asymptotic dichotomy for Li coefficients, which localizes a growth-class distinction but does not provide the required unconditional bound"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Suzuki's model-space/norm formulation of Li coefficients",
+      "method": "separate existence and positivity of the concrete L2 object from the exact identity that transports that positivity to lambda_n; define the identity defect as the object to audit rather than treating the norm representation itself as progress",
+      "shared_structure": [
+        "the same actual Riemann xi function and Li coefficients are used",
+        "the target quantity is a signed scalar sequence while the surrogate is a manifestly nonnegative norm",
+        "an exact equality would immediately transport positivity"
+      ],
+      "required_assumptions": [
+        "use Suzuki's exact definitions of H_n and G_n and the stated zero-sum/convergence conventions",
+        "distinguish unconditional propositions about G_n from Theorem 1.1's RH-equivalent all-n identity",
+        "any proposed defect formula or inequality must be proved without assuming RH, Li positivity, Weil positivity, or an equivalent zero-location statement"
+      ],
+      "disanalogies": [
+        "the existence of G_n in L2 does not by itself imply the norm equals lambda_n",
+        "under RH the model-space structure becomes stronger, so importing model-space orthogonality unconditionally risks circularity",
+        "an identity valid only assuming RH cannot be used as the missing proof bridge"
+      ],
+      "repair_question": "Can the difference D_n=(2pi)^(-1)||G_n||_2^2-lambda_n be expressed unconditionally in a source-bound form whose vanishing or one-sided control reduces to a strictly weaker, independently falsifiable zeta-specific obligation?",
+      "source_anchors": [
+        "Masatoshi Suzuki, Li coefficients as norms of functions in a model space, J. Number Theory 252 (2023), 177-194, arXiv:2301.05779",
+        "Enrico Bombieri and Jeffrey C. Lagarias, Complements to Li's Criterion for the Riemann Hypothesis, J. Number Theory 77 (1999), 274-287"
+      ]
+    },
+    {
+      "source_context": "Bombieri-Lagarias arithmetic/Weil formulas for Li coefficients",
+      "method": "audit the exact prime/archimedean arithmetic representation for a decomposition into controlled main terms plus a named cancellation/tail residual, rather than assuming termwise positivity",
+      "shared_structure": [
+        "the formula is exact for the actual zeta function rather than a synthetic zero model",
+        "the all-index Li sequence is retained",
+        "prime-power and archimedean information appear explicitly"
+      ],
+      "required_assumptions": [
+        "respect the stated regularization/order of zero sums and explicit-formula test conditions",
+        "control all binomially weighted terms uniformly in n",
+        "freeze any truncation and prove its tail sign/error before using finite arithmetic data"
+      ],
+      "disanalogies": [
+        "the arithmetic formula contains alternating/binomial cancellations and is not a sum of manifestly positive prime contributions",
+        "bounding each term separately may lose the cancellation needed at large n",
+        "a finite prime truncation is another finite surrogate unless a uniform tail theorem is proved"
+      ],
+      "repair_question": "Which exact cancellation/tail term is the first root-sensitive coordinate in the arithmetic formula for lambda_n, and can it be bounded uniformly in n without importing an RH-equivalent estimate?",
+      "source_anchors": [
+        "Enrico Bombieri and Jeffrey C. Lagarias, Complements to Li's Criterion for the Riemann Hypothesis, J. Number Theory 77 (1999), 274-287",
+        "Masatoshi Suzuki, arXiv:2301.05779, equation (1.9) and the explicit-formula derivation"
+      ]
+    },
+    {
+      "source_context": "Lagarias and Voros asymptotic analysis of Li coefficients",
+      "method": "replace direct sign-by-sign control with a global growth-class exclusion: search for an unconditional bound strong enough to rule out the non-tempered oscillations forced by an off-critical zero",
+      "shared_structure": [
+        "the object is the same all-index Li sequence",
+        "an off-critical zero changes the large-n qualitative behavior",
+        "a uniform asymptotic/growth theorem could simultaneously control infinitely many indices"
+      ],
+      "required_assumptions": [
+        "the proposed growth bound must hold unconditionally for the actual zeta Li coefficients",
+        "the implication from the bound to exclusion of off-critical zeros must preserve multiplicities and limiting conventions",
+        "the bound must be genuinely stronger than known unconditional estimates rather than an RH-equivalent restatement"
+      ],
+      "disanalogies": [
+        "asymptotic classification does not itself provide the required unconditional bound",
+        "a bound proved only after assuming RH is circular",
+        "eventual average growth may not imply pointwise nonnegativity of every lambda_n unless the exact equivalence is separately proved"
+      ],
+      "repair_question": "What is the weakest unconditional global growth/regularity condition on {lambda_n} that rules out the known off-line non-tempered regime, and is that condition strictly weaker than RH in available theory?",
+      "source_anchors": [
+        "Jeffrey C. Lagarias, Li Coefficients for Automorphic L-Functions, Ann. Inst. Fourier 57 (2007), 1689-1740, arXiv:math/0404394",
+        "Andre Voros, Sharpenings of Li's criterion for the Riemann Hypothesis, Math. Phys. Anal. Geom. 9 (2006), 53-63, arXiv:math/0506326"
+      ]
+    },
+    {
+      "source_context": "Parseval/Plancherel and exact energy identities in harmonic analysis",
+      "method": "treat a positive norm as a certificate only after the source-to-target transform is proved to be an exact isometry or after an explicit defect term is controlled",
+      "shared_structure": [
+        "manifestly nonnegative Hilbert-space energy",
+        "a target scalar/quadratic quantity whose sign would follow from exact faithfulness",
+        "normalization and completeness are load-bearing"
+      ],
+      "required_assumptions": [
+        "an exact target-specific map between the analytic object and the norm",
+        "no hidden projection onto an RH-valid subspace",
+        "all residual/defect terms are explicit and controlled"
+      ],
+      "disanalogies": [
+        "ordinary Fourier transforms have an independently proved isometry theorem; the RH Li-norm identity is precisely the root-coupled statement",
+        "there is no license to infer an isometry from matching formulas or numerical agreement",
+        "model-space membership used in Suzuki's proof is conditional on RH"
+      ],
+      "repair_question": "Can the RH norm representation be reorganized into an unconditional Parseval-type identity plus an explicit defect whose sign/vanishing has a cheaper independent characterization?",
+      "source_anchors": [
+        "Masatoshi Suzuki, arXiv:2301.05779",
+        "standard Parseval-Plancherel theorem used only as a solved structural analogue, not as evidence for RH"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "a positive norm is not evidence for Li positivity until the exact equality/faithfulness bridge is proved",
+    "the Suzuki all-n norm identity is RH-equivalent and therefore cannot be imported as an unconditional lemma",
+    "a finite Li prefix or finite numerical/operator discretization remains a surrogate and is already warned by F-RH-ANA-001-FINITE-LI-PREFIX",
+    "the cross-Millennium root-bridge audit transfers only the diagnostic pattern; the Yang-Mills continuum scaling mechanism is mathematically different from an analytic identity defect",
+    "prime-side exactness does not imply termwise positivity because the arithmetic formulas contain cancellation and regularization",
+    "growth-class asymptotics can re-express the root obstruction without yielding a cheaper unconditional theorem",
+    "recent unreviewed RH proof claims are frontier objects to falsify, not authoritative premises"
+  ],
+  "source_anchors": [
+    "Xian-Jin Li, The Positivity of a Sequence of Numbers and the Riemann Hypothesis, J. Number Theory 65 (1997), 325-333, DOI 10.1006/jnth.1997.2137",
+    "Enrico Bombieri and Jeffrey C. Lagarias, Complements to Li's Criterion for the Riemann Hypothesis, J. Number Theory 77 (1999), 274-287, DOI 10.1006/jnth.1999.2392",
+    "Jeffrey C. Lagarias, Li Coefficients for Automorphic L-Functions, Ann. Inst. Fourier 57 (2007), 1689-1740, arXiv:math/0404394",
+    "Andre Voros, Sharpenings of Li's criterion for the Riemann Hypothesis, Math. Phys. Anal. Geom. 9 (2006), 53-63, arXiv:math/0506326",
+    "Masatoshi Suzuki, Li coefficients as norms of functions in a model space, J. Number Theory 252 (2023), 177-194, arXiv:2301.05779",
+    "Taebong Kim et al., A Numerical Realization of Suzuki's Weil-Quadratic-Form Operator, arXiv:2607.24830 (2026), used only as a current numerical/frontier calibration source"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "engineering/signal-processing / harmonic-analysis calibration",
+      "source_situation": "A sensor or transform produces a manifestly nonnegative energy norm, but that energy certifies the original signal quantity only after an exact calibration/isometry is proved; otherwise an unmeasured leakage term can carry the discrepancy.",
+      "common_abstraction": [
+        "positive surrogate observable",
+        "root-critical target quantity",
+        "faithfulness/calibration map between them",
+        "hidden defect or leakage if the map is not exact"
+      ],
+      "source_to_target_mapping": [
+        "measured energy norm -> (2pi)^(-1)||G_n||_2^2",
+        "original calibrated quantity -> Li coefficient lambda_n",
+        "isometry/calibration theorem -> exact all-n norm identity",
+        "sensor leakage/calibration defect -> D_n=(2pi)^(-1)||G_n||_2^2-lambda_n"
+      ],
+      "shared_constraints": [
+        "normalization must be exact",
+        "the map must be faithful on the full required family, not a selected finite subset",
+        "a positive surrogate cannot certify the target if an uncontrolled defect remains"
+      ],
+      "disanalogies": [
+        "engineering calibration laws can be independently measured or derived, while here the desired all-n identity is itself RH-equivalent",
+        "G_n depends nonlinearly on xi and xi', not on a simple linear measurement channel",
+        "the analogy gives only a search decomposition and no theorem about D_n"
+      ],
+      "proposed_principle": "Treat identity/faithfulness as a separate atomic proof obligation. Before searching for another positive norm or probability representation, expose the exact defect between the positive surrogate and lambda_n and ask whether that defect has a non-circular zeta-specific characterization.",
+      "validation_obligation": "Derive any D_n representation from unconditional identities with exact convergence and normalization; demonstrate on hostile controls that surrogate positivity can coexist with a nonzero defect; do not use RH, Li positivity, Weil positivity, model-space membership conditional on RH, or finite numerical agreement to force the defect to vanish.",
+      "provenance_note": "Proposal-only structural bridge inspired by Parseval/calibration logic. It creates no RH or method authority."
+    }
+  ],
+  "analogy_scan_notes": "Scanned finite-field geometric positivity, Li/Weil explicit formulas, model-space norm identities, growth-class asymptotics, Parseval/isometry arguments, error-correcting/checksum metaphors, and finite-prefix diagnostics. Rejected checksum metaphors as too close to the already-understood finite-prefix failure. Retained the calibration/isometry-defect analogy because it identifies a new load-bearing coordinate: exact faithfulness between a positive surrogate and the Li coefficient.",
+  "frozen_at": "2026-08-11T08:32:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:300b787769442af040d944e0b52db106881844a9238c021e8804c7f382660742"
+}
