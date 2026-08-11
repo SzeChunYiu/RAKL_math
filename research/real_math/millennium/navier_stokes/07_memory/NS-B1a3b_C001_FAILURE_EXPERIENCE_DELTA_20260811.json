@@ -1,0 +1,70 @@
+{
+  "schema_version": "failure-experience-delta-v3-proposal-shadow",
+  "atom_id": "NS-B1a3b",
+  "episode_id": "EP-NS-B1a3b-VORTICITY-GEOMETRY-INTERFACE-20260811",
+  "episode_observation": {
+    "what_happened": "The finite-I Type-I ancient extraction is source-valid in its local suitable-weak topology, but the selected Giga–Miura vorticity-direction rigidity method is proved in a stronger L-infinity self-similar Type-I mild state space and uses locally uniform derivative/vorticity compactness to pass the normalized vorticity direction.",
+    "authority": "OBSERVED_SOURCE_INTERFACE_MISMATCH_ONLY"
+  },
+  "diagnoses": [
+    {
+      "diagnosis_id": "D-NS-B1a3b-C001-TYPEI-STATE-SPACE",
+      "status": "SUPPORTED_BY_EXACT_SOURCE_SIGNATURES",
+      "statement": "The weak AB finite-I Type-I class and Giga–Miura's L-infinity self-similar Type-I mild class are not interchangeable; the selected sources supply the implication from the stronger L-infinity-type control to weak finite I, not the reverse bridge needed for direct transfer."
+    },
+    {
+      "diagnosis_id": "D-NS-B1a3b-C001-DIRECTION-NONCLOSURE",
+      "status": "SUPPORTED_TOPOLOGICAL_CALIBRATION",
+      "statement": "The normalized derivative observable curl(u)/|curl(u)| is not sequentially closed by strong local L3 velocity convergence plus bounded/weak first-derivative control alone; the explicit high-frequency divergence-free calibration witnesses this topology gap."
+    },
+    {
+      "diagnosis_id": "D-NS-B1a3b-C001-GM-SUBCLASS-VALID",
+      "status": "SUPPORTED_SOURCE_TRANSFER_BOUNDARY",
+      "statement": "Giga–Miura remains a valid solved analogue in its stronger state space because their rescaling supplies the derivative/vorticity compactness consumed by their geometry-to-rigidity passage."
+    }
+  ],
+  "competing_diagnoses_not_promoted": [
+    "All geometric-depletion methods fail for finite-I ancient solutions — rejected as unsupported overgeneralization.",
+    "The normalized-vorticity defect is an actual Navier–Stokes oscillatory solution — rejected; the calibration is functional-analytic only.",
+    "The missing bridge is only a pressure problem — rejected as incomplete; state-space and derivative-observable closure fail before pressure becomes load-bearing in this child."
+  ],
+  "scoped_failures": [
+    {
+      "failure_id": "F-NS-B1a3b-TYPE-I-STATE-SPACE-MISMATCH",
+      "category": "TRANSFER_STATE_SPACE",
+      "statement": "AB finite I is not the registered Giga–Miura L-infinity self-similar Type-I hypothesis, so direct theorem transfer lacks an implication certificate.",
+      "scope_limit": "Does not prove that a future Navier–Stokes estimate cannot derive the stronger state space or another theorem-matched geometric class."
+    },
+    {
+      "failure_id": "F-NS-B1a3b-VORTICITY-DIRECTION-NONCLOSURE",
+      "category": "LIMIT_PASSAGE_NONLINEAR_OBSERVABLE",
+      "statement": "The AB local velocity/energy compactness statement does not by topology alone pass normalized vorticity direction.",
+      "scope_limit": "Does not refute stronger parabolic regularity, dynamics-specific compactness, or alternate geometric defect observables."
+    }
+  ],
+  "reusable_obstructions": [
+    {
+      "obstruction_id": "O-NS-B1a3b-TYPE-I-STATE-SPACE",
+      "status": "PROPOSAL_ONLY_REUSABLE_OBSTRUCTION",
+      "statement": "Normalize the exact Type-I state space before composing blow-up and rigidity theorems; shared nomenclature is not a bridge.",
+      "derived_from_diagnosis_ids": ["D-NS-B1a3b-C001-TYPEI-STATE-SPACE"]
+    },
+    {
+      "obstruction_id": "O-NS-B1a3b-DIRECTION-COMPACTNESS",
+      "status": "PROPOSAL_ONLY_REUSABLE_OBSTRUCTION",
+      "statement": "Before a geometry-based rigidity transfer, prove sequential closure of the exact normalized derivative observable under the producer compactness topology or upgrade that topology.",
+      "derived_from_diagnosis_ids": ["D-NS-B1a3b-C001-DIRECTION-NONCLOSURE"]
+    }
+  ],
+  "lesson_proposal": {
+    "lesson_id": "L-NS-B1a3b-CHECK-STATE-SPACE-AND-OBSERVABLE-CLOSURE",
+    "authority": "PROPOSED_NOT_CONSOLIDATED",
+    "statement": "A theorem composition must match both the state-space hypothesis and the closure of every nonlinear observable used by the consumer theorem; normalized derivative fields require an explicit closure or regularity-upgrade certificate."
+  },
+  "falsifier": "A primary-source theorem deriving the Giga–Miura L-infinity Type-I/derivative-compactness package from AB finite I, or an exact finite-I-controlled geometric observable that is closed under AB compactness and sufficient for ancient rigidity, overturns the corresponding route-pruning obstruction.",
+  "local_math_failure": false,
+  "local_to_global_gluing_failure": false,
+  "state_space_transfer_failure": true,
+  "nonlinear_observable_closure_failure": true,
+  "root_authority": "NONE"
+}
