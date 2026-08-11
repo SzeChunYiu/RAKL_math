@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib.util
 import math
 from pathlib import Path
+import sys
 
 
 MODULE_PATH = (
@@ -17,6 +18,7 @@ MODULE_PATH = (
 SPEC = importlib.util.spec_from_file_location("pnp_c026_closure_cascade", MODULE_PATH)
 assert SPEC is not None and SPEC.loader is not None
 c026 = importlib.util.module_from_spec(SPEC)
+sys.modules[SPEC.name] = c026
 SPEC.loader.exec_module(c026)
 
 
