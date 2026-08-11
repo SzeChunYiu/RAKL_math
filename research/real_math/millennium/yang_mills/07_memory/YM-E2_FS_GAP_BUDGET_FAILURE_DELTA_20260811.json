@@ -1,0 +1,55 @@
+{
+  "schema_version": "rakl-v3-shadow-failure-experience-v0",
+  "artifact_type": "FAILURE_EXPERIENCE_SHADOW",
+  "failure_id": "F-YM-E2-SUMMABLE-DEFECT-POSITIVE-GAP-BUDGET",
+  "episode_id": "YM-E2-FS-GAP-BUDGET-EP001",
+  "atom_id": "YM-E2-FS-GAP-BUDGET-AUDIT",
+  "status": "OBSERVED_ONLY",
+  "diagnosis_authority": "SUPPORTED_SOURCE_ROUTE_DIAGNOSTIC",
+  "failure_mode": "summability_without_relative_budget_control",
+  "scope": "Faizal-Shabir 2026 gap-persistence argument as audited; not a theorem that no repair exists and not a refutation of all constructive Yang-Mills routes",
+  "evidence": [
+    "Theorem 11.1 states sum epsilon_k < infinity while concluding a strictly positive limiting spectral gap.",
+    "Corollary D.5 states sum epsilon_k < infinity but writes delta_*:=delta_0-sum epsilon_k >0.",
+    "The proof explicitly invokes the stronger inequality sum epsilon_k < delta_0.",
+    "Proposition 5.5 proves geometric summability epsilon_k <= C theta^k but the bounded audit did not find a theorem binding C/(1-theta)<delta_0."
+  ],
+  "difference_witness": {
+    "near_miss": "delta_0=1, epsilon=(0.6,0.6,0,...)",
+    "shared_properties": [
+      "epsilon_k >= 0",
+      "sum epsilon_k < infinity",
+      "one-step lower bound Delta_{k+1} >= Delta_k-epsilon_k"
+    ],
+    "missing_property": "sum epsilon_k < delta_0",
+    "consequence": "telescoping lower bound gives no positive gap"
+  },
+  "residual_obligations": [
+    "prove sum epsilon_k < delta_0 from the concrete RG construction with explicit dependence on block factor/coupling",
+    "or state the relative budget as an additional hypothesis and propagate it through Theorem 11.1",
+    "audit uniformity in volume and continuum path"
+  ],
+  "links": [
+    {
+      "relation": "SHARES_STRUCTURAL_PATTERN_WITH",
+      "target": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "note": "local admissibility/summability does not preserve root-critical positive gap without a quantitative bridge"
+    },
+    {
+      "relation": "DISTINCT_FROM",
+      "target": "F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE"
+    },
+    {
+      "relation": "DISTINCT_FROM",
+      "target": "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE"
+    }
+  ],
+  "authority_contract": {
+    "search_priority_only": true,
+    "grants_theorem_authority": false,
+    "grants_root_authority": false,
+    "grants_framework_authority": false
+  },
+  "recorded_at_utc": "2026-08-11T11:10:00Z",
+  "artifact_hash": "sha256:b1bcc712b7fcaeb167420e105d66561617d4cbe483e7eca97a76a7fa14813238"
+}
