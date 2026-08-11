@@ -1,0 +1,60 @@
+{
+  "schema_version": "rakl-math-same-context-expert-review-v1",
+  "cycle_id": "PNP-O9d12a2a1b-C041A-ODD-SLICE-COPY-20260811",
+  "review_scope": "Internal same-context adversarial review of the local odd-slice rule, its cover-graph isomorphism proof, residual-slack lemma and authority boundaries.",
+  "independent_mathematical_review_credit": 0,
+  "roles": [
+    {
+      "role": "fusion/cover-complexity theorist",
+      "finding": "PASS_LOCAL",
+      "check": "Off-slice edges have an empty row or column trace into U', hence cannot witness relevance; odd-odd traces are exact images of parent traces. This yields a bijection of relevant semi-filters and pair coverage."
+    },
+    {
+      "role": "LP-duality specialist",
+      "finding": "PASS_LOCAL",
+      "check": "Cover-graph isomorphism preserves the fractional LP exactly. The general slice lift gives old-dual feasibility, and the one-coordinate augmentation iff all covering pairs have positive slack is valid because the pair universe is finite."
+    },
+    {
+      "role": "adversarial combinatorialist",
+      "finding": "PASS_WITH_SCOPE",
+      "check": "C037 is not contradicted: it is a different extension geometry. The exact DifferenceWitness is persistence failure there versus persistence-with-zero-augmentation here. Do not generalize from one copy rule to all slice-preserving extensions."
+    },
+    {
+      "role": "circuit-transfer specialist",
+      "finding": "PASS_AUTHORITY_BOUNDARY",
+      "check": "The result is local to cover complexity. It provides no positive growth, no superpolynomial Boolean lower bound, no NP verifier and no lower-bound-preserving NP reduction."
+    },
+    {
+      "role": "formal assurance/metrology verifier",
+      "finding": "PASS_SHADOW_ONLY",
+      "check": "Episode, diagnosis, scoped failure, obstruction, candidate lesson and gluing residual are separate. Retained protected novelty is zero. The concrete rule predates the persisted child fibre, so strict discovery credit is denied rather than backfilled."
+    }
+  ],
+  "hostile_questions": [
+    {
+      "question": "Could an off-slice edge still be relevant because the other generator trace is nonempty?",
+      "answer": "No. Relevance above an edge requires both generator traces in the semi-filter; one empty trace is enough to force the forbidden empty set."
+    },
+    {
+      "question": "Does rho_frac(child)>=rho_frac(parent) under the general slice condition already imply positive growth?",
+      "answer": "No. Equality is possible; C041A is an exact equality witness."
+    },
+    {
+      "question": "Does one slack-avoiding fresh filter prove a useful asymptotic recurrence?",
+      "answer": "No. It gives only one positive finite augmentation coordinate; uniform graph realizability, iteration, quantitative lower bounds and divergence remain separate."
+    },
+    {
+      "question": "Can the local explicit family be placed in NP from poly(2^n) graph membership?",
+      "answer": "No. The frozen context records this only as an E-language local family; an NP verifier/reduction bridge remains open."
+    }
+  ],
+  "blocking_uncertainties": [
+    "No non-copy graph-realizable extension with a slack-avoiding fresh relevant semi-filter has been proved.",
+    "No quantitative lower bound on fresh slack is known.",
+    "No uniform iteration/divergence theorem is known.",
+    "No root-facing NP bridge is known.",
+    "No independent mathematical review has occurred."
+  ],
+  "review_verdict": "LOCAL_NEGATIVE_RESULT_AND_RESIDUAL_REFINEMENT_CLEARED_FOR_PROPOSAL_SHADOW_STORAGE_ONLY",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+}
