@@ -1,0 +1,58 @@
+{
+  "failure_id": "F-H4D1C-FIXED-WITNESS-QUANTIFIER-OVERCONSTRAINT",
+  "atom_id": "H4d1c",
+  "candidate_id": "H4d1c-C001-SOURCE-FAMILY-QUANTIFIER-AUDIT",
+  "supporting_episode_id": "H4d1c-C001-SOURCE-FAMILY-QUANTIFIER-AUDIT",
+  "context_packet_hash": "sha256:d14063df85554d01272e8751dbc96e23c0b54983eb02b42945d8cefc4030ca5f",
+  "method_family": "fixed-witness Hodge-to-incidence tangent-surjectivity",
+  "failure_mode": "As a source-complete diagnostic, requiring dπ to be surjective at one preselected central witness strengthens the existential witness quantifiers. Its failure does not by itself imply failure of source-component dominance, source-family coverage, or pointwise algebraicity on the branch.",
+  "selected_diagnosis": "The route representation conflates a sufficient fixed-witness infinitesimal condition with a complete diagnostic for an existence statement over all admissible algebraic representatives/source components.",
+  "diagnosis_status": "VERIFIED_SCOPED_REPRESENTATION_NON_EQUIVALENCE",
+  "broken_assumptions": [
+    "a root-relevant local algebraicity obligation may be tested negatively by one arbitrary chosen central witness",
+    "dominance/source coverage of a witness family forces tangent surjectivity at a selected special source point",
+    "direction-wise existence of witnesses automatically glues to one compatible higher-order component or formal family"
+  ],
+  "competing_diagnoses": [
+    "in a special family there may exist a distinguished witness/component for which fixed-witness surjectivity is exactly the useful sufficient theorem target",
+    "a bounded proper finite-type source-family theorem could convert fiberwise existence into component-level geometry, but no such general theorem is present in the frozen H4d1c fibre",
+    "class-level K0/Chow deformation may be a better representation, but algebraization then becomes an explicit separate obstruction"
+  ],
+  "scope_conditions": [
+    "rational smooth-projective complex scope",
+    "central algebraicity assumed",
+    "fixed local Hodge branch",
+    "first-order source-projection audit only",
+    "q(t)=t^2 is a representation DifferenceWitness, not a Hodge counterexample",
+    "no theorem about existence of algebraic cycles on arbitrary neighboring fibers"
+  ],
+  "falsifier_or_attempt": "Falsify the diagnosis by proving from the already frozen H4d1c assumptions, without adding source-family boundedness/canonical-representative hypotheses, that branch-relevant algebraicity requires the selected w0 to lift every first-order direction; or show that every source-complete branch family necessarily has dπ surjective at that selected w0.",
+  "observed_result": "The abstract morphism q(t)=t^2 is dominant/surjective over C but has dq_0=0, separating branch/source coverage from central tangent surjectivity. Independently, the quantifier forms ∃w0∀v and ∀v∃w_v are not equivalent. Thus a failed fixed-witness tangent test cannot be promoted to source-complete failure.",
+  "local_repair_attempts": [
+    "downgrade negative H4d1c fixed-witness evidence to fixed-source scope only",
+    "open a source-family-complete child that types admissible representatives and boundedness/quasi-compactness",
+    "track compatible component choice/higher-Artin lifting as gluing rather than local mathematical failure"
+  ],
+  "local_failure_signature": "REPRESENTATION/DECOMPOSITION: fixed-witness first-order diagnostic is insufficiently source-complete for negative inference.",
+  "gluing_failure_signature": "LOCAL_TO_GLOBAL/FORMAL: even source-family directional or pointwise coverage does not furnish one compatible Artin tower, component choice, monodromy control, or algebraization.",
+  "links": [
+    {
+      "target_id": "F-H4D1B-DIRECT-VANISHING-NO-COMPLEXITY-REDUCTION",
+      "relation": "SUCCESSOR_DIAGNOSIS_OF",
+      "reason": "H4d1b normalized direct obstruction vanishing to fixed-witness tangent surjectivity; this cycle audits the remaining target's quantifier completeness."
+    },
+    {
+      "target_id": "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO",
+      "relation": "ROUTING_CONSTRAINT_REUSED",
+      "reason": "same-detector nonzero-envelope repairs remain retired; no return to that saturated family."
+    }
+  ],
+  "evidence_pointers": [
+    "H4d1c-C001-SOURCE-FAMILY-QUANTIFIER-AUDIT",
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1b_FIRST_ORDER_TANGENT_OBSTRUCTION_EQUIVALENCE_20260811.md",
+    "https://arxiv.org/abs/1310.1773",
+    "https://arxiv.org/abs/2104.14845"
+  ],
+  "timestamp": "2026-08-11T21:37:32Z",
+  "artifact_hash": "sha256:5c16f4b4a3ed6ab1f32eb9f34f7c86b53ef47749485440bb21636b02de1c09f9"
+}
