@@ -1,0 +1,58 @@
+{
+  "atom_id": "H4d1c1-FORMAL-EFFECTIVITY-SPLIT",
+  "authority": "PROPOSAL_SHADOW_CONTEXT_FROZEN",
+  "root_scope": "Rational Hodge Conjecture for smooth projective complex varieties: every rational (p,p) class is a rational linear combination of algebraic cycle classes.",
+  "object_context": "Let f:X->S be a smooth projective family of complex varieties, s0 in S, and alpha a flat rational Hodge class already algebraic on X_s0 by a fixed finite signed rational witness z0. Fix one algebraic irreducible local Hodge-locus branch T through s0. This atom isolates only the effectivity/algebraization step after a compatible all-Artin-order tower of exact witness components has been constructed over the completed local ring A=O^_T,s0.",
+  "quantity_of_interest": "Whether compatible formal closed-subscheme witness towers over Spec(A/m^n) algebraize over Spec(A), and exactly which residuals remain before pointwise variational algebraicity on an actual branch neighborhood.",
+  "structural_coordinates": [
+    "A is a Noetherian complete local ring obtained from an algebraic finite-type Hodge-branch model; algebraicity of the Hodge locus is source-bound to Cattani-Deligne-Kaplan.",
+    "X_A := X x_T Spec(A) is separated and of finite type (indeed projective in the application).",
+    "The central rational witness is represented after denominator clearing as z0=(1/N) sum_i n_i [Z_i,1] with fixed finite integer coefficient vector.",
+    "For every indexed component i, an all-order candidate is a compatible cartesian tower Z_i,n -> X_n over A/m^n; compatibility, not merely existence at each order, is mandatory.",
+    "Grothendieck existence/effectivity over the completion is distinct from descent from Spec(A) to a henselian/etale/Zariski neighborhood in T.",
+    "Formal effectivity is distinct from cohomology-class identity, flatness in the exact Hilbert/Chow category, branch domination, monodromy, degeneration, and root initial algebraicity."
+  ],
+  "equivalent_formulations": [
+    "FORMAL_EFFECTIVITY question: from compatible Z_i,n closed in X_n with Z_i,1 proper, obtain Z_i closed in X_A reducing to Z_i,n for all n.",
+    "SIGNED_WITNESS effectivity: perform the previous construction componentwise while retaining N and the integer coefficient vector (n_i).",
+    "RESIDUAL_SPLIT: after formal effectivity, separately test exact-category flatness/class preservation and descent from the completed local base to an actual branch neighborhood."
+  ],
+  "solved_analogues": [
+    "Grothendieck existence/algebraization for compatible closed subschemes over a complete Noetherian base (Stacks Project, Cohomology of Schemes, Lemma 30.28.1 / tag 0898).",
+    "Grothendieck existence for finitely presented flat modules with proper support (Stacks Project, More on Flatness, Theorem 38.28.9 / tag 0CTK), retained only as a boundary/source for flatness rather than silently identifying modules with closed-subscheme witnesses."
+  ],
+  "near_solved_analogues": [
+    "Artin approximation/algebraization can approximate or descend formal objects under additional hypotheses; no exact neighborhood-descent theorem is imported into this atom.",
+    "H4d1d shadow route in PR #119: proper witness-incidence domination of a reduced Hodge branch; retrieved as proposal/shadow routing evidence only."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Grothendieck existence for closed subschemes over a complete Noetherian ring",
+      "method": "Treat an all-order compatible witness tower as a formal closed subscheme and apply the exact effectivity theorem componentwise.",
+      "shared_structure": ["complete Noetherian local base", "separated finite-type ambient scheme", "compatible cartesian closed-subscheme thickenings", "proper special fibre"],
+      "required_assumptions": ["compatibility at every order", "closed-subscheme witness components", "properness of special-fibre components", "fixed finite signed coefficient indexing"],
+      "disanalogies": ["the theorem yields effectivity over the completion, not automatic descent to an open Hodge-branch neighborhood", "it does not certify the Gauss-Manin class equals alpha", "it does not by itself certify exact Hilbert/Chow flatness after algebraization", "it assumes the all-order tower that the deformation problem must still construct"],
+      "repair_question": "Can the remaining Hodge deformation route focus on constructing a compatible exact-category tower and a separate completion-to-neighborhood descent certificate, rather than carrying an undifferentiated algebraization residual?"
+    }
+  ],
+  "explicit_disanalogies": [
+    "The root Hodge conjecture asks initial algebraicity; this atom assumes a central algebraic witness.",
+    "Independent lifts at each Artin order do not constitute a compatible inverse system and cannot trigger the theorem.",
+    "An algebraized closed subscheme over Spec(A) is not yet a family over a Zariski or etale neighborhood containing nearby complex fibres of T.",
+    "A componentwise effectivity theorem does not solve component switching or monodromy when the chosen signed decomposition is not preserved.",
+    "Reduced-branch pointwise algebraicity and full nonreduced scheme-theoretic lifting are different targets."
+  ],
+  "source_anchors": [
+    "https://arxiv.org/abs/alg-geom/9402009",
+    "https://stacks.math.columbia.edu/tag/0898",
+    "https://stacks.math.columbia.edu/tag/0CTK",
+    "https://stacks.math.columbia.edu/tag/07XA",
+    "research/real_math/millennium/hodge/deformation/07_memory/H4d1c_OBSTRUCTION_REGISTER_20260811.json",
+    "proposal-shadow:PR#119:H4d1d-REDUCED-BRANCH-PROPER-WITNESS-DOMINATION"
+  ],
+  "analogy_scan_status": "NO_SAFE_CROSS_DOMAIN_BRIDGE_FOUND",
+  "analogy_scan_notes": "Nonmathematical formal-to-concrete analogies were rejected because they do not preserve completion, proper support, closed-subscheme effectivity, rational coefficients, or Hodge-local-system interfaces.",
+  "pre_memory_action_preference": "CONTINUE_H4D1C_TANGENT_SURJECTIVITY_MECHANISM",
+  "frozen_at": "2026-08-11T18:31:00Z",
+  "packet_hash": "sha256:d6acff4efd897f643cb8f859d9d257d532bcdffe42bdb31a8479af273189c7f0"
+}
