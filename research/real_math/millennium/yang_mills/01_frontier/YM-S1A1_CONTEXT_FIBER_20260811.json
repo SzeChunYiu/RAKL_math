@@ -1,0 +1,154 @@
+{
+  "atom_id": "YM-S1a1",
+  "object_context": "Fixed-cutoff/infinite-volume spectral-visibility bridge for the Yang–Mills spectral lane: determine the weakest exact hypotheses under which a common exponential Euclidean-time covariance rate on a gauge-invariant source family whose vacuum-generated states are dense/cyclic in the physical excited-state Hilbert space forces the full positive transfer-matrix spectrum above the vacuum below a common one-step ratio q<1, hence a positive Hamiltonian gap in lattice units. This child repairs the hidden-state failure F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE; it does not address weak-coupling RG transport, a->0 physical scaling, or continuum existence.",
+  "structural_coordinates": [
+    "Work inside one reflection-positive lattice Yang–Mills/infinite-volume Euclidean theory for which a positive self-adjoint one-step transfer matrix T and vacuum Omega are already legitimately reconstructed; no stochastic Langevin generator may substitute for T.",
+    "For a centered time-zero gauge-invariant source f, the target bridge requires an exact identification of its Euclidean time-translation covariance with a transfer-matrix moment <psi_f,T^n psi_f> (up to a fixed support-separation offset that is negligible in nth-root asymptotics).",
+    "The prior YM-S1a calibration proves that a common rate on a non-dense source-generated sector can miss the true first excitation; source density/cyclicity is therefore a load-bearing hypothesis rather than a cosmetic strengthening.",
+    "For a positive self-adjoint contraction T, each vector psi has a positive spectral measure mu_psi and <psi,T^n psi>=integral lambda^n dmu_psi(lambda); nth-root asymptotics constrain the supremum of the spectral support seen by psi.",
+    "If a dense subset D of Omega-perp has spectral support contained in [0,q] for one q<1, closedness of the spectral projection E_T([0,q])H upgrades sourcewise exclusion to the whole excited-state Hilbert space.",
+    "Shen-Zhu-Zhu Corollary 1.6 gives, in its explicit strong-coupling regime, one exponential distance exponent c_N shared across smooth cylinder functions, while the prefactor depends on support sizes and function norms; fixed multiplicative prefactors disappear under nth-root asymptotics.",
+    "The SZZ theorem is stated for covariance under the infinite-volume Euclidean lattice measure and distance between supports; using it as a transfer-matrix bound requires a separate time-direction/reflection-positivity binding and a proof that translating a fixed source n time steps gives support distance n+O(1).",
+    "Gauge-invariant spin-network/Peter-Weyl constructions provide fixed-graph orthonormal/spanning families for compact gauge groups, but fixed-graph kinematic completeness is not automatically density of the exact source class in the infinite-volume Osterwalder-Schrader physical Hilbert space.",
+    "The source class used for density must lie inside, or be approximable by, the smooth cylinder class to which the common-rate correlation theorem applies; a complete basis outside the controlled regularity class would not close the bridge.",
+    "Even a successful fixed-cutoff strong-coupling transfer-gap theorem leaves G5 RG transport, G6 physical lattice-spacing scaling and G7 continuum spectral identification open; an O(1) lattice-unit exponent at fixed strong coupling is not the Clay continuum mass gap."
+  ],
+  "equivalent_formulations": [
+    "Spectral-support formulation: find q<1 and a dense D subset Omega-perp such that every psi in D has spectral measure supported in [0,q]; conclude Spec(T|Omega-perp) subset [0,q].",
+    "Moment formulation: for one q<1 and dense D subset Omega-perp, prove limsup_{n->infinity}<psi,T^n psi>^(1/n) <= q for every nonzero psi in D, with T positive; conclude the same full spectral exclusion.",
+    "Euclidean-source formulation: prove one exponential time-separation rate m>0 for a gauge-invariant local source class whose reconstructed vectors are dense in Omega-perp, while allowing source-dependent finite prefactors; identify q=e^{-m}.",
+    "Hamiltonian formulation at unit lattice spacing: with T=e^{-H} and vacuum energy zero, prove Spec(H|Omega-perp) subset [m,infinity) from the dense-source common-rate condition."
+  ],
+  "solved_analogues": [
+    "The exact three-state YM-S1a calibration becomes a solved positive/negative known-answer pair after adding the missing source B: with sources spanning both excited eigenvectors, the slowest visible rate equals the true transfer gap.",
+    "Standard spectral calculus for a positive self-adjoint contraction converts vector moments <psi,T^n psi> into moments of positive spectral measures and identifies their exponential rate with the top of the spectral support."
+  ],
+  "near_solved_analogues": [
+    "Baez 1994 and Burgio et al. 1999 construct spin-network/physical gauge-invariant bases for compact-group gauge theories at fixed graph/lattice, supplying a kinematic model for the density side but not the required infinite-volume OS/source-class binding.",
+    "Shen-Zhu-Zhu 2022/2023 prove a common exponential covariance exponent for smooth cylinder functions in an explicit infinite-volume strong-coupling lattice Yang–Mills regime, supplying the rate side but not by itself the transfer-matrix/density identification."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Positive self-adjoint spectral theorem / exact three-state YM-S1a calibration",
+      "method": "Replace finite-family decay comparisons by spectral-measure support exclusion: use nth-root moments to bound the top of each source vector's spectral support, then use closed spectral projections plus density to upgrade to the full excited spectrum.",
+      "shared_structure": [
+        "positive self-adjoint transfer evolution",
+        "source vectors generate positive spectral measures",
+        "the desired gap is a global exclusion of spectral support near the vacuum eigenvalue"
+      ],
+      "required_assumptions": [
+        "T is the actual positive self-adjoint physical transfer matrix, normalized with vacuum eigenvalue one",
+        "the moment/covariance identity is exact for the source vectors",
+        "the controlled source vectors are dense in Omega-perp",
+        "one common q<1 bounds the sourcewise nth-root rates"
+      ],
+      "disanalogies": [
+        "the three-state calibration is finite-dimensional and diagonal, while lattice gauge Hilbert spaces are infinite-dimensional and gauge constrained",
+        "spectral calculus alone does not prove that a concrete Euclidean covariance theorem applies to a dense physical source class"
+      ],
+      "repair_question": "Can the SZZ smooth-cylinder common exponent and a concrete gauge-invariant dense source family be bound to the same Osterwalder-Seiler transfer matrix so the abstract density lemma applies?",
+      "source_anchors": [
+        "YM-S1A_SOURCE_VISIBILITY_CALIBRATION_20260811.md",
+        "K. Osterwalder and E. Seiler, Annals of Physics 110 (1978), DOI:10.1016/0003-4916(78)90039-8"
+      ]
+    },
+    {
+      "source_context": "Shen-Zhu-Zhu strong-coupling infinite-volume lattice Yang–Mills",
+      "method": "Exploit the fact that Corollary 1.6 uses a common exponential distance exponent c_N across smooth cylinder functions while allowing function/support-dependent finite prefactors; for fixed source shapes translated in Euclidean time, test whether nth-root asymptotics yield one source-independent transfer ratio q=e^{-c_N}.",
+      "shared_structure": [
+        "same infinite-volume lattice Gibbs measure",
+        "local/smooth cylinder observables",
+        "exponential suppression with support separation",
+        "strong-coupling constants explicit in N,d,beta through K_S"
+      ],
+      "required_assumptions": [
+        "the chosen time-translation pair remains in C_cyl^infty with disjoint supports for large n",
+        "support distance grows as n+O(1) in the transfer direction",
+        "the covariance is exactly a reconstructed transfer-matrix moment for centered gauge-invariant sources",
+        "the common exponent c_N is positive under Assumption 1.1"
+      ],
+      "disanalogies": [
+        "the paper's Poincare/log-Sobolev operator is the Langevin generator, not the physical Hamiltonian",
+        "the stated covariance theorem is Euclidean/geometric and does not itself establish source density in the physical Hilbert space",
+        "the strong-coupling regime is not the weak-bare-coupling continuum trajectory"
+      ],
+      "repair_question": "After fixing one Euclidean time direction, does OS reflection positivity identify the SZZ covariance of translated gauge-invariant smooth cylinder sources with positive transfer moments strongly enough to retain c_N in nth-root asymptotics?",
+      "source_anchors": [
+        "H. Shen, R. Zhu, X. Zhu, arXiv:2204.12737; Commun. Math. Phys. 400 (2023)",
+        "K. Osterwalder and E. Seiler, Annals of Physics 110 (1978), DOI:10.1016/0003-4916(78)90039-8"
+      ]
+    },
+    {
+      "source_context": "Spin-network / compact-group physical Hilbert-space bases",
+      "method": "Use Peter-Weyl/spin-network states as an explicit gauge-invariant completeness coordinate, then intersect that kinematic basis with the smooth finite-edge cylinder class controlled by the correlation theorem.",
+      "shared_structure": [
+        "compact gauge group",
+        "gauge-invariant functions of finitely many edge holonomies",
+        "orthogonal decomposition by irreducible representations/intertwiners"
+      ],
+      "required_assumptions": [
+        "the basis functions are smooth cylinder functions for the compact group",
+        "their corresponding positive-time source vectors survive the OS null quotient",
+        "the union over finite supports is dense in the target physical excited-state Hilbert space, not merely in a kinematic L2 space"
+      ],
+      "disanalogies": [
+        "Baez's generalized-connection Hilbert space and Burgio et al.'s Hamiltonian finite-lattice physical Hilbert space are not automatically the identical infinite-volume OS Hilbert space used by the SZZ measure",
+        "kinematic basis completeness supplies no correlation rate"
+      ],
+      "repair_question": "Which explicit gauge-invariant spin-network/cylinder subclass is simultaneously dense after OS reconstruction and covered by the SZZ common-rate estimate?",
+      "source_anchors": [
+        "J. C. Baez, Spin Network States in Gauge Theory, arXiv:gr-qc/9411007",
+        "G. Burgio et al., The basis of the physical Hilbert space of lattice gauge theories, arXiv:hep-lat/9906036"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "A common Euclidean covariance exponent is not a Hamiltonian spectral gap until the reflection-positive transfer-moment identity is bound to the same theory.",
+    "Fixed-graph or finite-lattice spin-network completeness is not automatically infinite-volume OS Hilbert-space density.",
+    "A source-dependent prefactor is not itself fatal to an asymptotic rate, but a source-dependent exponent would be.",
+    "A dense source family does not help if the correlation theorem does not cover that family.",
+    "A fixed strong-coupling lattice-unit gap is not a physical continuum mass gap and does not solve RG transport or a->0 scaling."
+  ],
+  "source_anchors": [
+    "A. Jaffe and E. Witten, Quantum Yang-Mills Theory, Clay Millennium problem description",
+    "K. Osterwalder and E. Seiler, Gauge field theories on a lattice, Annals of Physics 110 (1978), DOI:10.1016/0003-4916(78)90039-8",
+    "H. Shen, R. Zhu, X. Zhu, A stochastic analysis approach to lattice Yang-Mills at strong coupling, arXiv:2204.12737; Commun. Math. Phys. 400 (2023)",
+    "J. C. Baez, Spin Network States in Gauge Theory, arXiv:gr-qc/9411007",
+    "G. Burgio, R. De Pietri, H. A. Morales-Tecotl, L. F. Urrutia, J. D. Vergara, The basis of the physical Hilbert space of lattice gauge theories, arXiv:hep-lat/9906036"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "ordinary sensor coverage / hidden-room monitoring",
+      "source_situation": "Several sensors can all report rapidly decaying activity while an uninstrumented room contains the slowest persistent mode; once every independent room/mode is covered, a common decay ceiling across all sensor channels can certify a global persistence ceiling.",
+      "common_abstraction": [
+        "local measurements see only the modes in their generated observation subspace",
+        "global exclusion needs observation coverage plus one common quantitative rate",
+        "finite channel-dependent gains do not change asymptotic exponential rates"
+      ],
+      "source_to_target_mapping": [
+        "sensor channel -> gauge-invariant source vector",
+        "uninstrumented room -> spectrally invisible low-energy state",
+        "complete sensor coverage -> dense/cyclic source family",
+        "common decay ceiling -> common q<1 bound on source spectral support"
+      ],
+      "shared_constraints": [
+        "missing coverage permits a hidden slow mode",
+        "coverage alone without a common quantitative rate is insufficient",
+        "common rate on incomplete coverage is insufficient"
+      ],
+      "disanalogies": [
+        "finite rooms/sensors are not an infinite-dimensional gauge-constrained Hilbert space",
+        "ordinary sensor readings need not be positive spectral moments",
+        "the analogy says nothing about RG or continuum limits"
+      ],
+      "proposed_principle": "Separate spectral-gap certification into observability/density and a common asymptotic rate; only their conjunction can support global exclusion.",
+      "validation_obligation": "Prove the conjunction in the exact positive transfer-matrix spectral calculus and verify that the chosen Yang-Mills source class satisfies both hypotheses; the previous three-state hidden-mode example must fail the density hypothesis.",
+      "provenance_note": "Everyday structural analogy used only to compress the already-identified hidden-state failure; no theorem authority."
+    }
+  ],
+  "analogy_scan_notes": "Scanned operator spectral theory, lattice gauge bases, strong-coupling correlation methods, control/observability language and ordinary sensor coverage. Retained only the coverage/common-rate abstraction because it has an exact target-domain spectral-measure validation obligation.",
+  "frozen_at": "2026-08-11T08:02:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:082ddb6131aa0316cbdd17248d762af6bc036caed877a2acce42087f1c940e3a"
+}

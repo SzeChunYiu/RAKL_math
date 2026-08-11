@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/packet-binding-repair-receipt.schema.json",
+  "title": "RAKL Math packet binding repair receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "recorded_at",
+    "application_repository",
+    "framework_pin",
+    "atom_id",
+    "observed_failures",
+    "artifacts",
+    "lineage",
+    "repairs",
+    "chronology",
+    "evidence_pointers",
+    "authority",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"type": "string", "minLength": 1},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "application_repository": {"$ref": "#/$defs/repositoryCommit"},
+    "framework_pin": {"$ref": "#/$defs/frameworkPin"},
+    "atom_id": {"const": "YM-S1a1"},
+    "observed_failures": {
+      "type": "array",
+      "prefixItems": [
+        {"const": "STALE_EVIDENCE_POINTER"},
+        {"const": "FAIL_DEPENDENCY_BINDING"},
+        {"const": "FAIL_REVIEW_BINDING"}
+      ],
+      "items": false,
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["old_failure", "live_failure", "old_memory", "live_memory", "old_trace", "pre_review_trace", "live_trace", "old_review", "live_review"],
+      "properties": {
+        "old_failure": {"$ref": "#/$defs/artifactRef"},
+        "live_failure": {"$ref": "#/$defs/artifactRef"},
+        "old_memory": {"$ref": "#/$defs/artifactRef"},
+        "live_memory": {"$ref": "#/$defs/artifactRef"},
+        "old_trace": {"$ref": "#/$defs/artifactRef"},
+        "pre_review_trace": {"$ref": "#/$defs/artifactRef"},
+        "live_trace": {"$ref": "#/$defs/artifactRef"},
+        "old_review": {"$ref": "#/$defs/artifactRef"},
+        "live_review": {"$ref": "#/$defs/artifactRef"}
+      }
+    },
+    "lineage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["supersedes_trace_id", "pre_review_trace_id", "repaired_trace_id", "old_memory_hash", "live_memory_hash", "old_review_file_sha256", "live_review_file_sha256"],
+      "properties": {
+        "supersedes_trace_id": {"type": "string", "minLength": 1},
+        "pre_review_trace_id": {"type": "string", "minLength": 1},
+        "repaired_trace_id": {"type": "string", "minLength": 1},
+        "old_memory_hash": {"$ref": "#/$defs/sha256"},
+        "live_memory_hash": {"$ref": "#/$defs/sha256"},
+        "old_review_file_sha256": {"$ref": "#/$defs/sha256"},
+        "live_review_file_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "repairs": {"$ref": "#/$defs/nonEmptyStrings"},
+    "chronology": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["base_repair_commit", "superseding_trace_frozen_at", "candidate_events_present"],
+      "properties": {
+        "base_repair_commit": {"$ref": "#/$defs/sha1"},
+        "superseding_trace_frozen_at": {"type": "string", "format": "date-time"},
+        "candidate_events_present": {"const": false}
+      }
+    },
+    "evidence_pointers": {"$ref": "#/$defs/nonEmptyStrings"},
+    "authority": {"type": "string", "minLength": 1},
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha1": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "nonEmptyStrings": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "repositoryCommit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "base_commit"],
+      "properties": {"url": {"type": "string", "format": "uri"}, "base_commit": {"$ref": "#/$defs/sha1"}}
+    },
+    "frameworkPin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "commit"],
+      "properties": {"url": {"type": "string", "format": "uri"}, "commit": {"$ref": "#/$defs/sha1"}}
+    },
+    "artifactRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "file_sha256"],
+      "properties": {"path": {"type": "string", "minLength": 1}, "file_sha256": {"$ref": "#/$defs/sha256"}}
+    }
+  }
+}
