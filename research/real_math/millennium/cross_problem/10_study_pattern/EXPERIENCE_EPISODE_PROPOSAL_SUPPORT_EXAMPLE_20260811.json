@@ -1,0 +1,63 @@
+{
+  "schema_version": "experience-episode-proposal-v0",
+  "artifact_type": "EXPERIENCE_EPISODE_PROPOSAL",
+  "proposal_id": "episode-proposal::exact-pin-local-support-v0",
+  "status": "PROPOSAL_ONLY",
+  "source_role": "SUPPORT",
+  "task_id": "meta::application-feedback::exact-framework-pin-runner",
+  "atom_id": "meta::execution-authority::framework-pin",
+  "context_hash": "sha256:b67461fc2238a686ab3356f05a6beb6cb02e5742089da96386e915a10e71825b",
+  "problem_signature": [
+    "split application/framework repositories",
+    "exact dependency identity",
+    "dirty executable authority surface"
+  ],
+  "action_trace": [
+    "verify gitlink, config, framework HEAD and origin before import",
+    "reject dirty enumerated authority paths",
+    "run the complete application suite only after the exact-pin gate"
+  ],
+  "reported_outcome": "PARTIAL_SUCCESS",
+  "residual_signature": [
+    "verified only in the source Python/Git/submodule layout",
+    "fresh matched transfer assurance is absent"
+  ],
+  "source_bindings": [
+    {
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "commit_sha": "590b96278bb0bd4c89bc5db4bfe265061c52846a",
+      "tree_sha": "09981798985a0c075200afb97c9db3beece782c4",
+      "path": "research/meta/application_feedback/round1/results/exact_framework_pin_runner.json",
+      "git_blob_sha": "4d4aad846972154207720478ac478abbb809ea37",
+      "content_sha256": "2caf9e01c299b3ff5c214d845a78486c21775782d1a5266fa4a625e530cf125a"
+    },
+    {
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "commit_sha": "590b96278bb0bd4c89bc5db4bfe265061c52846a",
+      "tree_sha": "09981798985a0c075200afb97c9db3beece782c4",
+      "path": "research/meta/application_feedback/round1/traces/exact_framework_pin_runner.json",
+      "git_blob_sha": "6ef049bf0e8e79b6445e080557e2817042a59cff",
+      "content_sha256": "f08931c1602cbd49db0c5bb651642ed002f3a568ea935d617c092ba2ee490f11"
+    },
+    {
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "commit_sha": "590b96278bb0bd4c89bc5db4bfe265061c52846a",
+      "tree_sha": "09981798985a0c075200afb97c9db3beece782c4",
+      "path": "research/meta/application_feedback/round1/contexts/exact_framework_pin_runner.json",
+      "git_blob_sha": "496a3fa10fa8f2c46142a46e5e7e08fe0214119b",
+      "content_sha256": "b67461fc2238a686ab3356f05a6beb6cb02e5742089da96386e915a10e71825b"
+    }
+  ],
+  "authority_contract": {
+    "effective_authority": "PROPOSAL_ONLY",
+    "allowed_effect": "SEARCH_PRIORITY_ONLY",
+    "grants_tool_authority": false,
+    "grants_proof_authority": false,
+    "grants_gluing_authority": false,
+    "grants_theorem_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false
+  },
+  "recorded_at_utc": "2026-08-11T09:55:00Z",
+  "artifact_hash": "sha256:13877005272d8bd096aa7f42a01e759aa66509e6197bff6908459aea0653a413"
+}
