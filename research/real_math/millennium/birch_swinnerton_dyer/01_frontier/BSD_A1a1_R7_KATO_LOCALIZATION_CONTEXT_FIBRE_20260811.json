@@ -1,0 +1,100 @@
+{
+  "schema_version": "bsd-a1a1-r7-fibre-v1",
+  "artifact_type": "FROZEN_MATH_CONTEXT_FIBRE_PROPOSAL_SHADOW",
+  "cycle_id": "BSD-A1a1-KATO-LOCALIZATION-REENTRY-20260811-R7",
+  "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "route_local_signature": "GENERALIZED_KATO_GOOD_ORDINARY_NONVANISHING_AND_LOCALIZATION_REENTRY",
+  "root_contract": [
+    "For every elliptic curve E/Q, ord_{s=1} L(E,s)=rank E(Q).",
+    "Refined leading-term work separately binds real period, regulator, Tamagawa/local factors, torsion, and Sha finiteness/order.",
+    "No rank-zero/rank-one, one-prime, p-adic, or special-field theorem is promoted to arbitrary-rank complex BSD."
+  ],
+  "object_context": "Exact complex analytic rank two over Q; test whether the good-ordinary generalized-Kato representation proposed after R6 yields an analytic-only route to a nonzero arithmetic class, rather than re-importing Selmer dimension or localization/rank input.",
+  "structural_coordinates": [
+    "root input: exact complex ord_{s=1} L(E,s)=2",
+    "candidate carrier: generalized Kato class kappa_p(E) at p>3 of good ordinary reduction",
+    "source direction: nonzero kappa_p(E) implies two-dimensional p-adic Selmer group under stated hypotheses",
+    "source converse is conditioned by the localization map at p and therefore must be audited for circular arithmetic input",
+    "complex s-coordinate must not be replaced by Hida/anticyclotomic/p-adic derivative order",
+    "localization nonvanishing, p-adic height/regulator nondegeneracy, Mordell-Weil rank, Sha, Tamagawa/local factors, torsion, and complex leading term are distinct coordinates",
+    "same-context expert review and repository CI give no independent mathematical review credit"
+  ],
+  "solved_or_near_solved_analogues": [
+    "R6: the audited F=Q even-sign mock-plectic route is subclass-restricted by an E-intrinsic multiplicative-reduction entry condition; it suggested good-ordinary generalized Kato classes as a successor representation only.",
+    "R5: exact complex order two transports from E/Q to E/K when a complementary quadratic twist is nonzero, but plectic nonvanishing remains open.",
+    "Earlier BSD decomposition recorded a distinct localization/positive-rank bridge rather than allowing generalized-Kato nonvanishing to be inferred from interpolation alone."
+  ],
+  "transfer_assumptions": [
+    "Castella's generalized-Kato theorem is used only at its exact good-ordinary/source hypotheses.",
+    "A theorem with arithmetic premises such as Selmer dimension two, nonzero localization, Mordell-Weil rank, p-adic regulator nondegeneracy, or BSD-strength input cannot close the analytic-to-arithmetic root arrow unless those premises are independently derived from weaker analytic data.",
+    "Derived p-adic height or p-adic L-function formulas may identify a useful coordinate but do not equal the complex s-derivative without a source-bound bridge."
+  ],
+  "explicit_disanalogies": [
+    "good ordinary reduction at p differs from the multiplicative p interface in the R6 plectic theorem family",
+    "nonzero generalized Kato class is an arithmetic cohomology statement, not the complex second derivative itself",
+    "p-adic height/regulator nondegeneracy is not automatically implied by nonzero complex second derivative",
+    "Selmer dimension two is not the same as Mordell-Weil rank two unless Sha/local exact-sequence obligations are separately controlled",
+    "rank-two specialized results do not prove arbitrary-rank BSD"
+  ],
+  "counterexample_first_falsifiers": [
+    "If the converse kappa_p(E)!=0 requires dim Sel=2, classify use of that premise as root-strength arithmetic re-entry rather than analytic closure.",
+    "If the converse requires loc_p != 0, test whether any cited theorem derives loc_p !=0 from complex analytic rank two without assuming positive algebraic rank, Selmer rank two, p-adic BSD, or regulator nondegeneracy.",
+    "Reject p-adic/Hida/anticyclotomic derivative formulas as the missing bridge unless an explicit complex-to-p-adic comparison theorem preserves the exact target coordinate.",
+    "Reject one-prime p-primary conclusions as the full BSD leading term."
+  ],
+  "actual_fibre_contents_consulted_before_freeze": [
+    "RAKL@2b439beb3bd532a6d38d1c0ce30168d8fbc74dcc current main; v3 TaskEpisode/fibre/saturation/metrology/method_specs core already inspected at 242a393 and diff-audited unchanged through current main",
+    "RAKL_VERSION.json method 3.0.0, package 0.1.0",
+    "RAKL_math issue #7 exact root contract",
+    "EP-BSD-A1A1-PLECTIC-APPLICABILITY-20260811-R6 and R6 metrics successor",
+    "EP-BSD-A1A1-BASECHANGE-PLECTIC-20260811-R5 and R5 metrics successor",
+    "issue #7 historical localization child BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE",
+    "prefreeze scouting: Castella arXiv:2312.01481 and Castella-Hsieh arXiv:1809.09066; motivating only, no prospective discovery credit"
+  ],
+  "memory_routing": {
+    "retrieved_selected": [
+      "EP-BSD-A1A1-PLECTIC-APPLICABILITY-20260811-R6",
+      "EP-BSD-A1A1-BASECHANGE-PLECTIC-20260811-R5",
+      "EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE"
+    ],
+    "retrieved_rejected": [
+      "REPEAT_PLECTIC_AUXILIARY_K_OPTIMIZATION",
+      "REPEAT_SCALAR_THETA_ORDER_SCAN",
+      "BSD-S001c1-KURIHARA-TAYLOR-COMPARISON",
+      "YUN-ZHANG-FUNCTION-FIELD-HIGHER-DERIVATIVE-ANALOGUE"
+    ],
+    "missed_relevant_memory": "CANNOT_MEASURE: no coverage-complete memory universe or recall denominator exists"
+  },
+  "decision_policy": "Counterexample-first theorem-cell audit. Because R6 ruled the audited plectic route subclass-restricted and explicitly nominated good-ordinary generalized Kato classes, inspect the exact forward/converse theorem and search only for an analytic-rank-two source of the converse's localization/regulator premises. Rotate if the route re-enters a previously recorded arithmetic prerequisite.",
+  "planned_process_surfaces": [
+    "memory",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "ontology_terminology_normalization",
+    "mathematical_context_translation",
+    "equivalence_similarity",
+    "contextual_theory_gluing",
+    "contradiction_diagnosis",
+    "gap_discovery",
+    "experiment_query_selection",
+    "synthesis",
+    "review",
+    "saturation_stopping"
+  ],
+  "saturation_pre_state": {
+    "KNOWLEDGE": "REOPENED_BY_R6_SUCCESSOR_REPRESENTATION",
+    "OPERATOR": "FLATTENED",
+    "EXPERIENCE_PATTERN": "FLATTENED",
+    "OBSTRUCTION": "REOPENED_ROUTE_INTERFACE_ONLY",
+    "RELATION": "REOPENED",
+    "PATH": "REOPENED",
+    "META_METHOD": "FLATTENED"
+  },
+  "frozen_at": "2026-08-11T20:29:00Z",
+  "authority": "PROPOSAL_SHADOW_FROZEN_CONTEXT_NO_ROOT_AUTHORITY",
+  "packet_hash": "sha256:788ae31fb787de32f0ab9b4a6e715c0a3092db5332e562dd1481ca29ed324375"
+}
