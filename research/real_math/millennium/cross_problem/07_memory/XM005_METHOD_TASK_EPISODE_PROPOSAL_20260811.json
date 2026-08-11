@@ -1,118 +1,44 @@
 {
-  "schema_version": "rakl-math-method-episode-proposal-v0",
-  "artifact_type": "METHOD_TASK_EPISODE_PROPOSAL",
-  "proposal_id": "episode-proposal::XM005-moving-core-rigidity-20260811",
+  "schema_version": "experience-episode-proposal-v0",
+  "artifact_type": "EXPERIENCE_EPISODE_PROPOSAL",
+  "proposal_id": "episode-proposal::XM005-moving-core-rigidity-v0",
   "status": "PROPOSAL_ONLY",
-  "framework_commit": "decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8",
-  "application_base": "5d6bdc6f566921f51a375fdc2e8035123cf4830c",
-  "task_id": "cross-millennium::XM005",
+  "source_role": "CONTRADICTION",
+  "task_id": "cross-millennium::XM005-moving-core-rigidity",
   "atom_id": "XM-MOVING-CORE-RIGIDITY-005",
-  "target_atom_id": "NS-B2a",
+  "context_hash": "sha256:97140726c846578b96a5b31d484d94520691c618918a0d6ddba1d38b36011737",
   "problem_signature": [
-    "ancient Euler limit from Type-II Navier-Stokes scaling",
+    "ancient Euler Type-II blow-up limit",
     "centered backward local smallness",
-    "far-field tightness / no-incoming-energy",
-    "noncompact translation symmetry",
-    "local-to-global rigidity interface"
+    "noncompact translation escape",
+    "far-field tightness / no-incoming-energy bridge"
   ],
-  "fibre_snapshot": {
-    "knowledge": [
-      "Seregin arXiv:2606.29468v1 Theorem 3.1",
-      "Abe arXiv:2008.09345 traveling Euler vortex rings",
-      "Cao-Qin-Yu-Zhan-Zou arXiv:2201.08232v4 steady vortex rings"
-    ],
-    "success_tools_selected": [
-      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
-    ],
-    "failures_selected": [
-      "F-XM001-POINTWISE-GAP-COLLAPSE as abstract warning only",
-      "F-NS-B1b1-PV-DIRECT-INTERFACE-MISMATCH",
-      "moving-center/profile-leakage/far-field warnings from NS lane"
-    ],
-    "retrieved_but_rejected": [
-      "literal cross-domain source mathematics",
-      "parabolic Navier-Stokes backward uniqueness for an Euler limit",
-      "Gavrilov compactly supported steady Euler as direct Seregin-class counterexample"
-    ]
-  },
-  "operator_ids": [
-    "DEPENDENCY_FIRST_SOURCE_AUDIT",
-    "ROOT_BRIDGE_STABILITY_AUDIT",
-    "ADVERSARIAL_MOVING_CORE_CALIBRATION",
-    "DIFFERENCE_WITNESS_TRANSFER"
-  ],
-  "search_policy_choice": "Choose the cheapest hostile world that can falsify the implication centered local decay -> global Euler triviality before inventing a new rigidity theorem.",
   "action_trace": [
-    "read current RAKL v3 framework",
-    "read current RAKL_math main and six-lane state",
-    "bind Seregin's ancient Euler output and exact authority boundary",
-    "bind primary-source existence of translating Euler vortex structures",
-    "derive world-tube occupancy lemma",
-    "test Seregin F=1 scale-budget compatibility conditionally on explicit profile integrability",
-    "test backward expanding-ball escape under noncompact translation",
-    "preserve stronger exact-counterexample claim as unresolved",
-    "record cross-lane method case study and framework hypothesis"
+    "bind current Seregin Theorem 3.1 Euler-limit interface",
+    "bind primary-source traveling Euler vortex structures",
+    "derive world-tube occupancy bound for translating integrable densities",
+    "test centered expanding-ball smallness against moving-core escape",
+    "scope the result as a conditional hostile calibration rather than an exact Seregin-class counterexample"
   ],
-  "verification": [
-    "primary-source arXiv version checks",
-    "elementary Fubini/line-occupancy derivation",
-    "scope audit distinguishing conditional hostile calibration from exact Seregin-class counterexample",
-    "seven-role same-context expert audit"
-  ],
-  "outcome": "PARTIAL_SUCCESS",
+  "reported_outcome": "PARTIAL_SUCCESS",
   "residual_signature": [
-    "exact traveling profile satisfying every Seregin F=1 integrability/local-energy component not yet source-bound",
-    "Navier-Stokes ancestry must supply no-incoming-energy/far-field tightness/recentering or an equivalent global control",
-    "Euler rigidity theorem in the exact inherited class remains open"
+    "source-bind a specific traveling Euler profile to every exact F=1 Seregin budget and local-energy hypothesis",
+    "or prove a Navier-Stokes-ancestry tightness/no-incoming-flux/recentering theorem excluding moving cores",
+    "Euler rigidity in the exact inherited class remains open"
   ],
-  "failure_classification": [
-    "BRIDGE_GLUING",
-    "NONCOMPACT_REPRESENTATION"
-  ],
-  "saturation_update": {
-    "KNOWLEDGE": "not identified as the active bottleneck",
-    "OPERATOR": "no evidence of saturation or need for a new primitive",
-    "EXPERIENCE_PATTERN": "surrogate-to-root interface failure reinforced across domains",
-    "OBSTRUCTION": "reopened/sharpened: moving-core escape",
-    "RELATION": "reopened: local decay to global rigidity edge",
-    "PATH": "reopened: no-incoming-energy/tightness route",
-    "META_METHOD": "reopened: root-coordinate preservation receipt benchmark"
-  },
-  "novelty_classification": "UNRESOLVED",
-  "novelty_note": "No mathematical novelty claim. Research-control action is transfer of an existing audit operation.",
-  "cost_proxy": {
-    "primary_sources_deep_read": 3,
-    "cross_lane_states_compared": 7,
-    "new_mathematical_candidates_generated": 0,
-    "hostile_calibrations_executed": 1
-  },
-  "evidence_bindings": [
+  "source_bindings": [
     {
-      "repo": "SzeChunYiu/RAKL_math",
-      "ref": "research/cross-xm005-moving-core-case-study-20260811",
-      "path": "research/real_math/millennium/cross_problem/04_candidates/XM005_MOVING_CORE_RIGIDITY_CALIBRATION_20260811.md",
-      "git_blob_sha": "1bc056fa7ea6172bbcad46759edc11bc54d7c301"
-    },
-    {
-      "repo": "SzeChunYiu/RAKL_math",
-      "ref": "research/cross-xm005-moving-core-case-study-20260811",
-      "path": "research/real_math/millennium/cross_problem/07_memory/RAKL_METHOD_CASE_STUDY_20260811_R1.md",
-      "git_blob_sha": "26fb3bf3a109f60dd8efcfdd6938e58e590375e0"
-    },
-    {
-      "repo": "SzeChunYiu/RAKL",
-      "ref": "decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8",
-      "path": "docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md"
-    },
-    {
-      "repo": "SzeChunYiu/RAKL",
-      "ref": "decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8",
-      "path": "docs/RAKL_V3_EVALUATION.md"
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "commit_sha": "0c59960d31c1d752005476507ef6dbdb80938e48",
+      "tree_sha": "a67a57d5a5fd289340b2884859cc0cf63364c813",
+      "path": "research/real_math/millennium/cross_problem/07_memory/XM005_SOURCE_AND_METHOD_RECEIPT_20260811.json",
+      "git_blob_sha": "20eff9295791e86def20024b030e539057d50e58",
+      "content_sha256": "5ef7c80695b1a77bd22790a08c73299162b570262e07da3a4b9bed49eee14065"
     }
   ],
   "authority_contract": {
     "effective_authority": "PROPOSAL_ONLY",
-    "allowed_effect": "SEARCH_PRIORITY_AND_SELF_RAKL_HYPOTHESIS_ONLY",
+    "allowed_effect": "SEARCH_PRIORITY_ONLY",
     "grants_tool_authority": false,
     "grants_proof_authority": false,
     "grants_gluing_authority": false,
@@ -120,6 +46,6 @@
     "grants_framework_authority": false,
     "grants_review_independence": false
   },
-  "next_action": "Prospectively test a RootCoordinatePreservationReceipt on fresh atoms and source-bind an exact moving-core Euler profile before any stronger NS-B2a counterexample claim.",
-  "payload_sha256": "5bffd8a877c78fe79c4146c201b3c446fb4d66eece68554be1aad125fff5e253"
+  "recorded_at_utc": "2026-08-11T11:09:34Z",
+  "artifact_hash": "sha256:3c3f0fd9aad2eeff248e769c972e03d7aa7cc9de8ebcb38c7aca900cc58ed76f"
 }
