@@ -1,0 +1,243 @@
+{
+  "trace_id": "TRACE-RH-SPEC-002a-OPEN-20260811",
+  "entries": [
+    {
+      "event_id": "RH-SPEC-002a-E01",
+      "atom_id": "RH-SPEC-002a",
+      "event_type": "ATOMIZED",
+      "timestamp": "2026-08-11T08:13:00+00:00",
+      "state_summary": "Parent RH-SPEC-002 route calibration removed generic convergence ambiguity and opened a source-side determinant/ground-state compactness residual.",
+      "action_summary": "Refine the child atom to the CCM lambda-stage bridge: actual semilocal Weil ground state xi_lambda versus a source-defined scalar multiple of the explicit prolate proxy k_lambda in a norm strong enough for root-relevant complex transform convergence.",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.json",
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_002A_SOURCE_PACKET_20260811.md"
+      ],
+      "alternatives_considered": [
+        "repeat generic operator construction search",
+        "attack all finite-N and lambda cutoffs in one atom",
+        "separate the lambda-stage ground-state/proxy bridge and leave finite-N and simple/even as explicit siblings"
+      ],
+      "decision_rationale": "The source already proves the proxy transform limit and explicitly names proxy-to-ground-state approximation as a missing step; splitting it from finite-N transport reduces theorem debt and exposes a falsifiable norm coordinate.",
+      "outputs": [
+        "atom_id:RH-SPEC-002a",
+        "status:PRE_CANDIDATE"
+      ],
+      "uncertainties": [
+        "the QW/prolate relation may not yield a direct perturbative norm estimate"
+      ],
+      "residuals": [
+        "simple/even QW_lambda ground-state hypothesis remains sibling",
+        "fixed-lambda finite-N determinant/eigenvector transport remains sibling"
+      ],
+      "next_steps": [
+        "freeze a source-bound MathContextFiber"
+      ],
+      "artifact_hash": "sha256:db62d8b18471df2752099b2ef00277d106a0a7dce2489accb306acfdade492b7",
+      "previous_event_hash": ""
+    },
+    {
+      "event_id": "RH-SPEC-002a-E02",
+      "atom_id": "RH-SPEC-002a",
+      "event_type": "CONTEXT_FROZEN",
+      "timestamp": "2026-08-11T08:14:00+00:00",
+      "state_summary": "The child context is frozen around the source-defined ground-state/proxy bridge with minimal root-relevant transform domain |Im z|<1/2.",
+      "action_summary": "Bind structural coordinates, solved/near-solved analogues, source anchors, explicit disanalogies, sibling dependencies, normalization constraints, and packet hash.",
+      "evidence_pointers": [
+        "sha256:a96f3f0360c2127a0e5542d5d799961e878492d94c476a78db675f0e90e35932",
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_002A_SOURCE_PACKET_20260811.md"
+      ],
+      "alternatives_considered": [
+        "retain full-plane local-uniform convergence from the parent positive control",
+        "freeze only numerical state overlap",
+        "use the source-supported critical substrip and exact state-vector/transform obligations"
+      ],
+      "decision_rationale": "CCM state that convergence on closed substrips of |Im z|<1/2 suffices for their RH route, so full-plane convergence would impose unnecessary theorem debt.",
+      "outputs": [
+        "context_hash:sha256:a96f3f0360c2127a0e5542d5d799961e878492d94c476a78db675f0e90e35932"
+      ],
+      "uncertainties": [
+        "the minimal source-side function norm is not yet known"
+      ],
+      "residuals": [
+        "need method-transfer and analogy audit"
+      ],
+      "next_steps": [
+        "audit safe structural analogies and transfers"
+      ],
+      "artifact_hash": "sha256:508fc610f299fe5ae975ee946b7aa18f7c1ad28145535b13100d3ab2bcc5e3e6",
+      "previous_event_hash": "sha256:db62d8b18471df2752099b2ef00277d106a0a7dce2489accb306acfdade492b7"
+    },
+    {
+      "event_id": "RH-SPEC-002a-E03",
+      "atom_id": "RH-SPEC-002a",
+      "event_type": "ANALOGY_SCAN",
+      "timestamp": "2026-08-11T08:15:00+00:00",
+      "state_summary": "Cross-domain scan retained a principal-eigenspace stability analogy only at proposal authority.",
+      "action_summary": "Map nearly degenerate eigenspace instability to the xi_lambda versus k_lambda comparison and require an exact target-side separation/rigidity validation before transfer.",
+      "evidence_pointers": [
+        "sha256:a96f3f0360c2127a0e5542d5d799961e878492d94c476a78db675f0e90e35932",
+        "research/real_math/millennium/riemann_hypothesis/08_reviews/RH_SPEC_002A_PRE_CANDIDATE_REVIEW_20260811.md"
+      ],
+      "alternatives_considered": [
+        "numerical model-reduction analogy",
+        "black-box Davis-Kahan/Kato theorem import",
+        "principal-state stability analogy with explicit disanalogies and source-specific validation obligation"
+      ],
+      "decision_rationale": "The retained analogy identifies a potentially missing spectral-separation coordinate without asserting that QW_lambda is a small-norm perturbation of the prolate operator.",
+      "outputs": [
+        "analogy_status:BRIDGES_RETAINED",
+        "proposal:expose_spectral_separation_coordinate"
+      ],
+      "uncertainties": [
+        "the actual QW/prolate relationship may use trace/form rigidity rather than operator perturbation"
+      ],
+      "residuals": [
+        "need exact method-transfer dispositions"
+      ],
+      "next_steps": [
+        "review transform-continuity, eigenspace-stability and source-specific trace transfers"
+      ],
+      "artifact_hash": "sha256:9d1f6600ae6ba47c0b9a8b530191534400750af08ba2d15dc18f62e092c57598",
+      "previous_event_hash": "sha256:508fc610f299fe5ae975ee946b7aa18f7c1ad28145535b13100d3ab2bcc5e3e6"
+    },
+    {
+      "event_id": "RH-SPEC-002a-E04",
+      "atom_id": "RH-SPEC-002a",
+      "event_type": "METHOD_TRANSFER_REVIEW",
+      "timestamp": "2026-08-11T08:16:00+00:00",
+      "state_summary": "Three transfer families were audited: domain-local Hurwitz transport, quantitative lowest-eigenspace stability, and weighted Fourier/Mellin transform continuity.",
+      "action_summary": "Retain Hurwitz as a target-side scoped tool; retain eigenspace stability and weighted transform continuity only as validation obligations whose exact source hypotheses must be derived.",
+      "evidence_pointers": [
+        "sha256:a96f3f0360c2127a0e5542d5d799961e878492d94c476a78db675f0e90e35932",
+        "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json"
+      ],
+      "alternatives_considered": [
+        "treat unweighted L2 state proximity as sufficient",
+        "treat qualitative simplicity as enough for perturbation",
+        "require exact strip-weighted transform control and quantitative separation/rigidity"
+      ],
+      "decision_rationale": "The child must control the downstream complex transform, not a convenient proxy norm; generic perturbation results are admissible only after their QW_lambda hypotheses are constructed.",
+      "outputs": [
+        "transfer:Hurwitz=SELECTED_SCOPED",
+        "transfer:eigenspace_stability=PROPOSAL_ONLY",
+        "transfer:weighted_transform=PROPOSAL_ONLY"
+      ],
+      "uncertainties": [
+        "endpoint behavior under the arithmetic E map may demand a different norm"
+      ],
+      "residuals": [
+        "same-context expert challenge required"
+      ],
+      "next_steps": [
+        "run six-role expert-context review"
+      ],
+      "artifact_hash": "sha256:d0ba8c7691637ff933295571d2364b695c42b3ba3247b1dd7eafcc50923b36c2",
+      "previous_event_hash": "sha256:9d1f6600ae6ba47c0b9a8b530191534400750af08ba2d15dc18f62e092c57598"
+    },
+    {
+      "event_id": "RH-SPEC-002a-E05",
+      "atom_id": "RH-SPEC-002a",
+      "event_type": "EXPERT_CONTEXT_REVIEW",
+      "timestamp": "2026-08-11T08:17:00+00:00",
+      "state_summary": "Six same-context roles accepted the sharper child representation but unanimously blocked theorem candidate generation before norm-and-gap calibrations.",
+      "action_summary": "Review root mapping, operator stability, complex transform topology, prolate source scope, hostile counterexamples, and novelty/authority boundaries.",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/08_reviews/RH_SPEC_002A_PRE_CANDIDATE_REVIEW_20260811.md",
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_002A_SOURCE_PACKET_20260811.md"
+      ],
+      "alternatives_considered": [
+        "immediately conjecture xi_lambda-c_lambda k_lambda weighted convergence",
+        "immediately apply a generic eigenvector perturbation theorem",
+        "calibrate the two implication channels before source-specific candidate search"
+      ],
+      "decision_rationale": "Both candidate-looking moves would currently hide a load-bearing coordinate: transform-controlling norm for the first and quantitative separation/source operator comparison for the second.",
+      "outputs": [
+        "cell_vote:PROCEED_TO_NORM_AND_GAP_CALIBRATION_ONLY",
+        "independence:NO"
+      ],
+      "uncertainties": [
+        "a source-specific trace identity could bypass generic perturbation structure"
+      ],
+      "residuals": [
+        "dual-memory review must bind post-calibration snapshots"
+      ],
+      "next_steps": [
+        "query and bind success/failure memory"
+      ],
+      "artifact_hash": "sha256:978c7e46c2c00a6cffb2200b03a805bca024f4ea145128e0c96b7d18c7a28f03",
+      "previous_event_hash": "sha256:d0ba8c7691637ff933295571d2364b695c42b3ba3247b1dd7eafcc50923b36c2"
+    },
+    {
+      "event_id": "RH-SPEC-002a-E06",
+      "atom_id": "RH-SPEC-002a",
+      "event_type": "EXPERIENCE_MEMORY_REVIEW",
+      "timestamp": "2026-08-11T08:18:00+00:00",
+      "state_summary": "The child is bound to the RH-SPEC-002 post-calibration tool and failure snapshots; all four parent failures are retained as scoped warnings.",
+      "action_summary": "Select only the domain-local Hurwitz transport tool for target-side reuse, record DifferenceWitnesses, and freeze small-gap/growing-domain repeat-failure regressions.",
+      "evidence_pointers": [
+        "sha256:0a4e3ebe361d48ad7d656c981fb5329969162146af7c4452ac9ecdbccfda1c60",
+        "sha256:4d9d12edf6c340c903fa93573326fe282d61ea14bc56a5adeb13f4e46d4c341e",
+        "sha256:5b886e957a45b31324ceba659a2f8cba2f40f411e5b49452feb3cc35e6dbc3e5"
+      ],
+      "alternatives_considered": [
+        "ignore parent failures because the child is source-specific",
+        "treat all parent failures as blacklists",
+        "reuse failures as conditional warnings and select only the exactly applicable target-side tool"
+      ],
+      "decision_rationale": "The child differs from the generic parent calibration, but its proposed implication channels can still repeat the same information-loss families; warnings are therefore relevant while impossibility authority is not.",
+      "outputs": [
+        "memory_review_hash:sha256:0a4e3ebe361d48ad7d656c981fb5329969162146af7c4452ac9ecdbccfda1c60",
+        "selected_tool:T-RH-SPEC-HURWITZ-DOMAIN-ZERO-TRANSPORT"
+      ],
+      "uncertainties": [
+        "no verified source-specific QW/prolate alignment tool exists yet"
+      ],
+      "residuals": [
+        "choose a pre-candidate discriminator with high partition power"
+      ],
+      "next_steps": [
+        "propose norm-and-gap calibration as the next action"
+      ],
+      "artifact_hash": "sha256:1aaa028bdc1c2f9ba4ff2f2059e818e87840346764df63c6bd8c3d2ac0183d3b",
+      "previous_event_hash": "sha256:978c7e46c2c00a6cffb2200b03a805bca024f4ea145128e0c96b7d18c7a28f03"
+    },
+    {
+      "event_id": "RH-SPEC-002a-E07",
+      "atom_id": "RH-SPEC-002a",
+      "event_type": "NEXT_STEP_PROPOSED",
+      "timestamp": "2026-08-11T08:19:00+00:00",
+      "state_summary": "Strict pre-candidate evidence favors a calibration step rather than a source-specific RH theorem candidate.",
+      "action_summary": "Next, construct a bounded norm-and-gap calibration: (A) prove the exact substrip-weighted transform continuity inequality under the frozen Fourier/Mellin convention; (B) build a growing-domain example showing unweighted L2 alone can fail; (C) build a nearly degenerate 2x2 self-adjoint example showing residual-to-eigenvector inference needs separation. Only then decide which source-side QW/prolate lemma is worth proposing.",
+      "evidence_pointers": [
+        "sha256:a96f3f0360c2127a0e5542d5d799961e878492d94c476a78db675f0e90e35932",
+        "sha256:0a4e3ebe361d48ad7d656c981fb5329969162146af7c4452ac9ecdbccfda1c60",
+        "research/real_math/millennium/riemann_hypothesis/08_reviews/RH_SPEC_002A_PRE_CANDIDATE_REVIEW_20260811.md"
+      ],
+      "alternatives_considered": [
+        "generate a weighted-L1 convergence conjecture now",
+        "generate a QW/prolate perturbation lemma now",
+        "execute known-answer norm-and-gap calibrations first",
+        "abandon the spectral route immediately"
+      ],
+      "decision_rationale": "The calibrations have the highest expected epistemic contraction at low theorem debt: they separate two precise implication failures before expensive target-specific proof search, while the source already makes the proxy bridge the relevant frontier.",
+      "outputs": [
+        "next_action:RH-SPEC-002a-NORM-AND-GAP-CALIBRATION",
+        "candidate_generation_request:NO_THEOREM_CANDIDATE_YET"
+      ],
+      "uncertainties": [
+        "the calibration may show a different source norm or rigidity coordinate is needed"
+      ],
+      "residuals": [
+        "no source-side xi_lambda-to-k_lambda convergence theorem",
+        "no simple/even QW_lambda theorem",
+        "no fixed-lambda finite-N global transport theorem"
+      ],
+      "next_steps": [
+        "run strict packet regression against current RAKL framework",
+        "if green, execute only the registered calibration before theorem candidate generation"
+      ],
+      "artifact_hash": "sha256:27323d7d832a43ef6a388754467e2aa372214d22b6f727fc7572207e9f05d813",
+      "previous_event_hash": "sha256:1aaa028bdc1c2f9ba4ff2f2059e818e87840346764df63c6bd8c3d2ac0183d3b"
+    }
+  ]
+}
