@@ -1,0 +1,57 @@
+{
+  "schema_version": "v3-shadow-failure-v0",
+  "artifact_type": "FAILURE_EXPERIENCE_PROPOSAL",
+  "status": "SUPPORTED_SCOPED_DIAGNOSIS",
+  "failure_id": "F-NS-B2a1-LOCAL-CONVERGENCE-TAIL-NONTRANSFER",
+  "atom_id": "NS-B2a1",
+  "candidate_id": "NS-B2a1-C001",
+  "context_snapshot_hash": "sha256:46107a3521175794ea4dadece4101723a57bf6af8dc9e8680a3c47d31c70902e",
+  "research_trace_event_id": "NS-B2a1-E10",
+  "method_family": "fixed-cylinder compactness -> global tail/no-incoming-energy handoff -> ancient Euler rigidity",
+  "failure_mode": "Local convergence on every fixed cylinder, even to a nonzero limit and with uniformly bounded local scale-normalized quantities, does not imply uniform global tail tightness; a second divergence-free packet can escape to spatial infinity.",
+  "residual_signature": [
+    "derive uniform-in-k tail/annular modulus from actual Seregin prelimit sequence",
+    "or derive content-bound recentering/profile compactness preserving source nontriviality",
+    "or derive signed/telescoping flux handoff with justified order of limits",
+    "then bind exact Euler rigidity theorem",
+    "pressure normalization remains separate"
+  ],
+  "broken_assumptions": ["implicit interchange of k->infinity local limit with R->infinity tail limit", "implicit belief that a nonzero centered local limit excludes additional profile leakage"],
+  "scope_conditions": [
+    "route-level inference from local topology/boundedness alone",
+    "calibration fields are smooth divergence-free but are not claimed to solve Euler/Navier-Stokes",
+    "does not rule out extra PDE structure, uniform tightness, recentering, signed flux, or local Euler Liouville mechanisms"
+  ],
+  "competing_diagnoses": [
+    "actual Seregin prelimit PDE estimates may produce the missing uniform tail modulus",
+    "a concentration-compactness/minimality construction may recover compactness modulo translation",
+    "a signed flux identity may avoid absolute tail tightness",
+    "a genuinely local Euler Liouville theorem may close without global tail data"
+  ],
+  "selected_diagnosis": "The current fixed-cylinder compactness certificate is insufficient for the global tail handoff because uniformity in the expanding-radius parameter is a separate, unproved coordinate.",
+  "diagnosis_status": "SUPPORTED",
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1_C001_LOCAL_TO_TAIL_QUANTIFIER_AUDIT_20260811.md",
+    "research/real_math/millennium/navier_stokes/08_reviews/NS_B2A1_C001_POSTRESULT_REVIEW_20260811.md",
+    "Gregory Seregin arXiv:2606.29468v1"
+  ],
+  "falsifier_or_attempt": "two-packet divergence-free escape calibration with fixed nonzero core and translated second packet",
+  "observed_result": "The sequence converges exactly on every fixed compact set to the nonzero fixed core while sup_k tail mass remains bounded below at every sufficiently large radius.",
+  "local_repair_attempts": [
+    "open NS-B2a2 to derive uniform prelimit annular/tail tightness or content-bound recentering",
+    "defer pressure-tail transfer until velocity/energy tightness is source-bound",
+    "keep Euler rigidity downstream until the handoff is established"
+  ],
+  "authority_contract": {
+    "effective_authority": "PROPOSAL_ONLY_SCOPED_ROUTE_DIAGNOSIS",
+    "allowed_effect": "SEARCH_PRIORITY_AND_RESIDUAL_LOCALIZATION_ONLY",
+    "grants_tool_authority": false,
+    "grants_proof_authority": false,
+    "grants_gluing_authority": false,
+    "grants_theorem_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false
+  },
+  "timestamp": "2026-08-11T12:16:00Z",
+  "artifact_hash": "sha256:ba7c903f4684ad88303530a185fbeb36f4ce99b4d79aa9a058bf30ceabfbc6b7"
+}
