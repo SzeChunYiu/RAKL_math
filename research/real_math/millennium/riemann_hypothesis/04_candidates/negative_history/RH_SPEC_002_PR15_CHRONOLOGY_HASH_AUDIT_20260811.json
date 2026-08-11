@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "AUDIT-RH-SPEC-002-PR15-CHRONOLOGY-20260811",
+  "atom_id": "RH-SPEC-002",
+  "source_repository": "https://github.com/SzeChunYiu/RAKL_math",
+  "source_pull_request": 15,
+  "source_branch": "research/rh-spec002-limit-calibration-20260811",
+  "source_head": "7f45008de9ad394ea8926a41b02195bdbce96773",
+  "source_base_at_audit": "f479e007e4a63e379188d7a16d08f30416c1cd4b",
+  "replacement_base": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+  "replacement_framework_pin": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+  "preserved_source_identity": {
+    "calibration_id": "RH-SPEC-002-LIMIT-STABILITY-CAL001",
+    "original_result_commit": "c48f2df2a69df7dc3e4e91ca9a7e27e3ce370f61",
+    "original_result_commit_time": "2026-08-11T07:52:10+00:00",
+    "original_trace_commit": "b22e345e830e6d6da804c6da901a83e9b420b483",
+    "original_trace_commit_time": "2026-08-11T07:53:40+00:00",
+    "original_receipt_hash_after_later_rebinding": "sha256:f0afecf25babb9b0be9461d727df15369a71ffe2d7670fc06519268ad80c88c0",
+    "prior_selected_action_event": "RH-SPEC-002-E07",
+    "prior_selected_action_hash": "sha256:6afa4c78f9ac563a863531ca4e3518bf32202c84ced4465110fc53c2f1d73b9c"
+  },
+  "chronology_observation": {
+    "observed": "the exact result artifact was committed before the continuation that asserted CANDIDATE_PROPOSED with an earlier event timestamp",
+    "bounded_interpretation": "E07 had selected a broad hostile limit-stability calibration before result access, but no committed exact case/evaluator identity has been found before c48f2df; therefore exact preregistration and frozen-candidate chronology cannot be claimed",
+    "superseded_implication": "the PR15 continuation implication that RH-SPEC-002-LIMIT-STABILITY-CAL001 was demonstrably frozen before evaluation",
+    "not_invalidated": "the standard Hurwitz implication and explicit operator/entire-function counterexamples remain independently checkable known-answer mathematics"
+  },
+  "hash_failure_observation": {
+    "file": "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json",
+    "stored_tool_hash": "sha256:8ecd455336244c702b88a6816691dee95ad191fa04bc2f66ed6cc86519e92ae8",
+    "canonical_tool_hash_at_pr15_head": "sha256:4a1a006cc17b564d9ff6ea6c56bb6fc7e2ead01273a5995423e455fe1b66d487",
+    "focused_test_result": "10 passed, 1 failed",
+    "full_pin_runner_result": "172 passed, 1 failed",
+    "audit_framework_pin": "7853ec0c4ff8f862359835bca1af1d934bfbd887"
+  },
+  "assimilation_rule": "preserve the five known-answer cases under their original calibration identity but downgrade authority to retrospective search-control; do not merge with the distinct locally preregistered 11-case CAL-RH-SPEC-002-LIMIT-STABILITY-001 lineage",
+  "disposition": "PR15_BLOCKED_AND_SUPERSEDED_BY_REPLACEMENT / RETROSPECTIVE_ASSIMILATION_ONLY / NO_BACKFILLED_PREREGISTRATION",
+  "authority": "CHRONOLOGY_AND_HASH_AUDIT / NEGATIVE_HISTORY / NO_RH_EVIDENCE / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:117313f7b46a16510945bc912e9039ddb15c62b559525cb010afce899b9eaac1",
+  "historical_payload_snapshot": {
+    "path": "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_SPEC_002_PR15_TOOL_INVENTORY_SNAPSHOT_7F45008.json",
+    "source_commit": "7f45008de9ad394ea8926a41b02195bdbce96773",
+    "source_git_blob": "15bf4ace71fc0a9375eaaa8502a21643eb56c517",
+    "raw_file_sha256": "sha256:05fc62e91b5fd014cbc3b3c803c0ff4d7609b981066059b98e39813e10530d8d",
+    "tool_id": "T-RH-SPEC-HURWITZ-DOMAIN-ZERO-TRANSPORT",
+    "stored_tool_hash": "sha256:8ecd455336244c702b88a6816691dee95ad191fa04bc2f66ed6cc86519e92ae8",
+    "recomputed_canonical_tool_hash": "sha256:4a1a006cc17b564d9ff6ea6c56bb6fc7e2ead01273a5995423e455fe1b66d487",
+    "canonicalization": "blank artifact_hash, then JSON sorted keys with compact separators and UTF-8"
+  }
+}
