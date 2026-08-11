@@ -1,0 +1,68 @@
+{
+  "schema_version": "research-memory-review-v3-proposal-shadow",
+  "target_atom_id": "NS-B1a3b",
+  "target_context_hash": "sha256:91eb597a06cb3f8ee7ccd4d2e617a16d137b3b200bccfa4ca0d3fb2d3cd33e75",
+  "bound_rakl_math_base_sha": "b18fcd35855d67962e28036f4a445ab24d0c4406",
+  "candidate_method_families": [
+    "vorticity-direction coherence / Constantin-Fefferman geometric depletion",
+    "Type-I ancient compactness / persistence of singularities",
+    "strong-vorticity or orientation compactness on high-vorticity sets",
+    "strain-vorticity conditional criteria",
+    "counterexample-first topology audit"
+  ],
+  "success_memory": {
+    "tool_inventory_query": "queried scoped Navier-Stokes success-tool inventory plus previously reused cross-problem process tools",
+    "retrieved_ids": ["CF-VORTICITY-DIRECTION-COHERENCE", "AB-COMPACT", "MILLER-STRAIN-VORTICITY-CRITERIA", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+    "selected_ids": ["CF-VORTICITY-DIRECTION-COHERENCE", "AB-COMPACT", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+    "rejected_or_deferred": [
+      {"id": "MILLER-STRAIN-VORTICITY-CRITERIA", "reason": "conditional criterion retained as a sibling route but does not answer stability of normalized vorticity direction under the current compactness topology"},
+      {"id": "NS_R001_RESEARCH_TOOL_INVENTORY", "reason": "registered Navier-Stokes inventory is empty; no promoted geometry tool can be reused as theorem authority"}
+    ]
+  },
+  "failure_memory": {
+    "retrieved_ids": [
+      "F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "F-NS-B1a3-PROFILE-LEAKAGE",
+      "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION",
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "F-NS-B1a-C001-PRESSURE-SUMMABILITY"
+    ],
+    "selected_ids": [
+      "F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"
+    ],
+    "rejected_or_deferred": [
+      {"id": "F-NS-B1a3-PROFILE-LEAKAGE", "reason": "important later for global rigidity but the current child is a local derivative-observable transfer gate"},
+      {"id": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER", "reason": "already prunes shell-budget descent; not the load-bearing geometry transfer mismatch"},
+      {"id": "F-NS-B1a-C001-PRESSURE-SUMMABILITY", "reason": "pressure-tail summability remains relevant downstream but does not repair derivative/normalization continuity"}
+    ],
+    "routing_effects": [
+      "The R001b failure blocks reusing pointwise alignment as a surrogate for nonlocal direction coherence.",
+      "The B1a3 interface failure makes producer/consumer topology compatibility a mandatory precondition before importing another rigidity criterion.",
+      "The B1a2 failure blocks treating finite energy as a hidden critical-core quantizer that could supply the missing geometry indirectly.",
+      "Together these records move priority from inventing another scalar or alignment criterion to the cheapest stability falsifier for the actual direction observable."
+    ]
+  },
+  "retrieved_but_rejected_routes": [
+    {"route": "assume Constantin-Fefferman coherence is inherited because xi is amplitude-scale invariant", "reason": "scale covariance does not imply compactness/stability under the available convergence modes"},
+    {"route": "replace direction coherence by positive-eigenframe pointwise alignment", "reason": "same failure family as F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP"},
+    {"route": "infer derivative compactness from strong L3 velocity convergence", "reason": "one-derivative map is not continuous in that topology; requires a falsifier before any use"},
+    {"route": "invoke pressure localization to control xi", "reason": "pressure compactness is not a strong-curl or nonvanishing estimate"}
+  ],
+  "missed_memory_audit": {
+    "status": "CANNOT_MEASURE",
+    "reason": "no exhaustive relevance-labeled universe is frozen for every RAKL_math record and external theorem; absence of additional relevant memory is not asserted"
+  },
+  "prior_success_or_failure_that_changed_routing": [
+    "F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP",
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "pre_memory_preference": "open a new vorticity-direction coherence estimate or directly test a Constantin-Fefferman-type rigidity condition on the Type-I ancient limit",
+  "post_memory_preference": "first falsify or certify continuity of the normalized-vorticity observable in the exact Type-I compactness topology",
+  "selected_next_action": "Run the explicit curl-of-small-vector-potential oscillation test. Verify divergence-free, compact support, strong L3 velocity decay, uniform gradient-energy bound and rapidly rotating order-one vorticity direction on a fixed core. Scope any failure to topology/gluing only.",
+  "authority": "PROPOSAL_SHADOW_SEARCH_ROUTING_ONLY"
+}
