@@ -1,0 +1,80 @@
+{
+  "schema_note": "proposal/shadow TaskEpisode-style record aligned to current RAKL v3 experience_substrate.TaskEpisode; extra telemetry fields below carry application-only evidence and no protected authority",
+  "episode_id": "PNP-O9d12a2a1a1d-JOIN-ELIMINATION-R1-20260811",
+  "task_id": "millennium-p-vs-np:verify-join-elimination-normal-form",
+  "atom_id": "O9d12a2a1a1d",
+  "context_hash": "sha256:a1ced8bf6aa84513176749025da4d4ff0f60cd85161399788a81e2aa39cb1359",
+  "problem_signature": [
+    "P-vs-NP via explicit graph cover complexity",
+    "cyclic intersection complexity Dcyc_cap",
+    "join-elimination of uncounted union nodes",
+    "least-fixed-point semantics"
+  ],
+  "fibre_snapshot_hash": "sha256:a1ced8bf6aa84513176749025da4d4ff0f60cd85161399788a81e2aa39cb1359",
+  "operator_ids": ["OP-JOIN-SCC-ELIMINATION","OP-COUNTEREXAMPLE-FIRST","OP-SOURCE-SEMANTICS-RECHECK"],
+  "action_trace": [
+    "freeze exact verification target and hostile worlds",
+    "derive OR-only reachability least solution J(Y) for fixed counted-node assignment Y",
+    "eliminate union variables and compare least full/reduced solutions by two-way lifting/projection",
+    "check converse expansion with exactly k intersections",
+    "run bounded exhaustive hostile-world calibration"
+  ],
+  "observation_ids": ["OBS-OR-SCC-REACHABILITY-LFP","OBS-FULL-REDUCED-SOLUTION-CORRESPONDENCE","OBS-BOUND-CALIBRATION-126042-ZERO-MISMATCH"],
+  "verification_ids": ["V-ECCC-TR25-033-SECTION2.5-LEMMA16-COR17-THEOREM30","V-DIRECT-LEAST-FIXED-POINT-PROOF","V-BOUNDED-EXHAUSTIVE-ENUMERATION"],
+  "outcome": "PARTIAL_SUCCESS",
+  "residual_signature": ["LOCAL_REPRESENTATION_NORMAL_FORM_VERIFIED_SAME_CONTEXT","NO_QUOTIENT_RESPECTING_PHI_BOUND","NO_EXPLICIT_SUPERLOG_GRAPH","ROOT_GLUE_OPEN"],
+  "evidence_pointers": [
+    "pre_action_receipt:88df72fdde1852416199e266ba950a7269af17aee65dadf170cd599250aabce6",
+    "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1a1d_JOIN_ELIMINATION_NORMAL_FORM_20260811.md",
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1d_SOURCE_PACKET_20260811.md",
+    "tests/math_applications/test_pnp_o9d12a2a1a1d_join_elimination.py",
+    "https://eccc.weizmann.ac.il/report/2025/033/"
+  ],
+  "artifact_hash": "762bc55575b23f917e1b317e89f991194316567bed07d721a5fa35ed7fcc9841",
+  "timestamp": "2026-08-11T15:36:23Z",
+  "cost": 0.0,
+  "cost_effort_proxy": {
+    "monetary_cost": "CANNOT_MEASURE: runtime exposes no monetary ledger",
+    "model_context_tokens": "CANNOT_MEASURE: runtime exposes no authoritative token counter",
+    "finite_systems_checked": 126042,
+    "proof_style": "direct least-fixed-point elimination plus counterexample-first finite calibration"
+  },
+  "fibre_contents_actually_consulted": [
+    "current RAKL v3 API, pre_action_receipt.py, experience_substrate.py, method_specs.py, metrology contract, core mathematical-research workflow",
+    "current RAKL_math problem/success contracts, parent O9d12a2a1a1b context/global-factorization delta/memory/metrics",
+    "draft PR #113 at downgraded pending authority",
+    "Cavalar-Oliveira ECCC TR25-033 report and PDF Sections 2.5, 3.3-3.4 / Lemma 16, Corollary 17, Theorems 24 and 30"
+  ],
+  "search_policy": "ZERO_COST_STRUCTURE_ELIMINATION_BEFORE_LOWER_BOUND_COORDINATE",
+  "motifs_tried": ["MOTIF-ROOT-CRITICAL-COORDINATE-BEFORE-SCORE","MOTIF-COLLAPSE-ZERO-COST-SCC-BEFORE-MEASURE"],
+  "episode_to_diagnosis": "Uncounted union topology is representation slack: at the least fixed point it is exactly the reachability closure of generators and counted intersection outputs.",
+  "diagnosis_to_reusable_obstruction_lesson": {
+    "lesson_id": "L-PNP-CYCLIC-JOIN-ELIMINATION-BEFORE-INVARIANT",
+    "authority": "CANDIDATE_ONLY_NOT_RETAINED",
+    "lesson": "For Dcyc_cap lower-bound search, canonicalize away all pure-union nodes before defining presentation-sensitive coordinates; future Phi candidates must live on or be invariant under the reduced counted-meet normal form.",
+    "falsifier": "a cyclic syntactic sequence whose least-fixed-point target changes under OR-reachability elimination"
+  },
+  "prior_routing": {
+    "changed_by": ["PNP-O9d12a2a1a1b-GLOBAL-FACTORIZATION-R2-20260811","F-C023-SCALAR-COLLAPSE","F-C025-FIRST-ORDER-CANONICAL-COLLAPSE","PR113-FREE-UNION-QUOTIENT (PENDING_ONLY)"],
+    "retrieved_but_rejected": ["ECCC-TR26-118-RANGE-AVOIDANCE","GENERIC-HORN-LOWER-BOUND-TRANSFER","GENERIC-SET-COVER-HIERARCHY-TRANSFER","CROSS-MILLENNIUM-IMPORT"],
+    "rejection_reason_summary": "no exact applicability/DifferenceWitness to the local cyclic normalization or repeated saturated representation family"
+  },
+  "failure_typing": {
+    "local_mathematical_failure": "NONE_OBSERVED_FOR_NORMAL_FORM",
+    "local_to_global_gluing_failure": "OPEN: no Phi<=f(k) plus explicit super-log target plus root bridge",
+    "retrieval_failure": "NONE_MATERIAL",
+    "chronology_failure": "candidate proposal predates v3 receipt; discovery credit retrospective, verification action prospectively bound"
+  },
+  "saturation_axes_after": {
+    "KNOWLEDGE": "FLAT_FOR_CURRENT_SOURCE_FAMILY",
+    "OPERATOR": "FLAT_SCORE_FIRST",
+    "EXPERIENCE_PATTERN": "ACTIVE",
+    "OBSTRUCTION": "ACTIVE",
+    "RELATION": "REOPENED_BY_JOIN_ELIMINATION_NORMAL_FORM",
+    "PATH": "ACTIVE_REDUCED_TO_K_MEET_NORMAL_FORM",
+    "META_METHOD": "FLAT"
+  },
+  "novelty_class_shadow": "representation",
+  "retained_semantic_novelty": "NONE_NO_PROTECTED_RETENTION_GATE",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+}
