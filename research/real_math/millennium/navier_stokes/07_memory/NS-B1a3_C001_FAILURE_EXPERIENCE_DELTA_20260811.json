@@ -1,0 +1,47 @@
+{
+  "schema_version": "failure-experience-delta-v3-proposal-shadow",
+  "atom_id": "NS-B1a3",
+  "episode_id": "EP-NS-B1a3-CRITICAL-COMPACTNESS-INTERFACE-20260811",
+  "episode_observation": {
+    "what_happened": "The source-valid local Type-I blow-up passage reaches a nontrivial mild bounded ancient solution with local strong L3 velocity compactness and local weak L3/2 pressure compactness, but the selected critical-element and global-L3 rigidity methods require a separately supplied global critical topology/tightness condition.",
+    "authority": "OBSERVED_SOURCE_INTERFACE_MISMATCH_ONLY"
+  },
+  "diagnoses": [
+    {
+      "diagnosis_id": "D-NS-B1a3-C001-LOCAL-GLOBAL-TYPE-MISMATCH",
+      "status": "SUPPORTED_BY_EXACT_SOURCE_SIGNATURES",
+      "statement": "The compactness-stage output type is local, while the selected rigidity-stage input type is global; direct gluing is unlicensed without a new global tightness/state-space certificate."
+    },
+    {
+      "diagnosis_id": "D-NS-B1a3-C001-NONCOMPACT-SYMMETRY-LEAKAGE",
+      "status": "SUPPORTED_TOPOLOGICAL_CALIBRATION",
+      "statement": "Translation/dilation loss of compactness can preserve every fixed compact-set limit while critical mass escapes, so local convergence cannot serve as a proxy for global critical compactness."
+    },
+    {
+      "diagnosis_id": "D-NS-B1a3-C001-UC-PRECONDITION-GAP",
+      "status": "SUPPORTED_INTERFACE_AUDIT",
+      "statement": "Backward-uniqueness language does not discharge theorem-specific terminal/exterior/regularity hypotheses for the exact ancient limit."
+    }
+  ],
+  "scoped_failures": [
+    {"failure_id": "F-NS-B1a3-PROFILE-LEAKAGE", "category": "GLUING_REPRESENTATION", "statement": "Local strong convergence leaves translated/dilated profiles uncontrolled globally.", "scope_limit": "Does not say a Navier-Stokes profile decomposition cannot control them after a global critical topology is supplied."},
+    {"failure_id": "F-NS-B1a3-UNCONTROLLED-FAR-FIELD", "category": "GLUING_FAR_FIELD", "statement": "Local pressure/velocity compactness does not certify the global tail required by the selected global rigidity route.", "scope_limit": "Does not refute dynamics-specific far-field estimates."},
+    {"failure_id": "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH", "category": "GLUING_INTERFACE", "statement": "Finite I plus local suitable compactness is not the same data type as a backward global-L3 sequence or precompact global critical orbit.", "scope_limit": "Missing implication is an open obligation, not proven impossible."},
+    {"failure_id": "F-NS-B1a3-UNIQUE-CONTINUATION-HYPOTHESIS-GAP", "category": "VERIFICATION_UNIQUE_CONTINUATION", "statement": "Backward uniqueness is blocked until the exact theorem hypotheses are bound to the ancient limit.", "scope_limit": "Does not dispute the source theorem."},
+    {"failure_id": "F-NS-B1a3-EQUATION-CHANGE-MISMATCH", "category": "TRANSFER_EQUATION", "statement": "Stationary Leray-profile Liouville theorems cannot be transferred to arbitrary time-dependent ancient solutions without proving the self-similar reduction.", "scope_limit": "Exact self-similar subclasses remain covered by their source theorems."}
+  ],
+  "reusable_obstruction": {
+    "obstruction_id": "O-NS-B1a3-GLOBAL-CRITICAL-TIGHTNESS-INTERFACE",
+    "status": "PROPOSAL_ONLY_REUSABLE_OBSTRUCTION",
+    "statement": "Before any minimal-critical-element or backward-global-L3 rigidity route, construct a source-valid global critical state/tightness certificate and verify pressure/far-field and symmetry compatibility.",
+    "derived_from_diagnosis_ids": ["D-NS-B1a3-C001-LOCAL-GLOBAL-TYPE-MISMATCH", "D-NS-B1a3-C001-NONCOMPACT-SYMMETRY-LEAKAGE", "D-NS-B1a3-C001-UC-PRECONDITION-GAP"]
+  },
+  "lesson_proposal": {
+    "lesson_id": "L-NS-B1a3-LOCAL-COMPACTNESS-IS-NOT-GLOBAL-RIGIDITY",
+    "authority": "PROPOSED_NOT_CONSOLIDATED",
+    "statement": "When a blow-up argument produces only local compactness, treat global critical tightness as a distinct gluing obligation rather than silently inheriting it from a rigidity theorem's input class."
+  },
+  "local_math_failure": false,
+  "local_to_global_gluing_failure": true,
+  "root_authority": "NONE"
+}

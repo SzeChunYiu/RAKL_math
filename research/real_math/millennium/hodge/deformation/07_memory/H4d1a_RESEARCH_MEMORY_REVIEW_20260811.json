@@ -1,0 +1,49 @@
+{
+  "target_atom_id": "H4d1a",
+  "target_context_hash": "sha256:2a89d1bae5c4c675ec36ace29277fc885307226ceb13a0e6d09a09b72f52e35d",
+  "tool_inventory_snapshot_hash": "sha256:fe2f3b4ef49492d81cb350fb689bf9f9dff6cfd1817d72d6ff9fe3350e3d5e6a",
+  "failure_lattice_snapshot_hash": "sha256:3c9c68231fe7252f1212e3579a6d283f7f45e2359ddc1ed68200201fadfd1ddc",
+  "tool_query_status": "NO_RELEVANT_MATCH",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "branch-reachable obstruction subspace/envelope",
+    "semiregularity/reduced-obstruction restriction",
+    "flag-Hilbert versus Hodge-locus tangent comparison",
+    "Artin-order recursive obstruction-envelope stability",
+    "strict-weaker non-semiregular calibration",
+    "derived/perfect-complex obstruction object for higher codimension"
+  ],
+  "relevant_tool_ids": [],
+  "relevant_failure_ids": [
+    "F-H4D1-DETECTOR-KERNEL-GAP"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "No currently promoted ResearchTool in the inspected Hodge deformation lane has an explicit authority record whose preconditions cover H4d1a; parent calibration insights are retained as evidence rather than silently promoted to reusable tools.",
+    "Cross-Millennium tools from unrelated domains were not imported without an applicability witness."
+  ],
+  "failure_reuse_notes": [
+    "F-H4D1-DETECTOR-KERNEL-GAP directly motivates H4d1a: any proposed restricted detector must define the branch-generated envelope before desired vanishing is known.",
+    "DifferenceWitness for retrying semiregularity-style inference: the target changes from the full obstruction space to an independently computed branch-reachable envelope; the cheapest old-failure regression is to test whether the envelope intersects the known detector kernel.",
+    "A zero envelope is allowed only as a strict-weaker boundary calibration and must not be promoted as a coupled lifting mechanism."
+  ],
+  "unresolved_warnings": [
+    "H4d1a remains conditional on an already algebraic central witness and cannot address initial existence.",
+    "First-order branch images can enlarge at higher Artin order.",
+    "The chosen obstruction object may depend on witness category and codimension.",
+    "A proper envelope defined using actual successful lifts would be circular.",
+    "Even all-order formal lifting leaves algebraization, monodromy and global continuation open.",
+    "A strict-weaker example with B=0 may be mathematically valid but research-weak; a coupled nonzero proper envelope is the next meaningful discriminator."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1_WITNESS_PROJECTION_CALIBRATION_20260811.md",
+    "research/real_math/millennium/hodge/deformation/09_trace/H4d1_CALIBRATION_TRACE_CONTINUATION_20260811.json",
+    "research/real_math/millennium/hodge/deformation/07_memory/H4d1a_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "https://arxiv.org/abs/math/9912245",
+    "https://arxiv.org/abs/1112.6001",
+    "https://arxiv.org/abs/2009.01651",
+    "https://arxiv.org/abs/2104.14845",
+    "https://arxiv.org/abs/2602.13951"
+  ],
+  "artifact_hash": "sha256:b52d91fb4b35ce704a1878957d9526715284b81e3dc17038bae497c0c35aec45"
+}

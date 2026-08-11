@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "research/real_math/millennium/yang_mills"
 RECEIPT = BASE / "08_reviews/YM-S1A1_PACKET_PROVENANCE_ASSURANCE_20260811.json"
 SCHEMA = ROOT / "schemas/packet-provenance-assurance-receipt.schema.json"
+FRAMEWORK_PIN_SYNC = ROOT / "receipts/framework-pin-sync-bd1a276-20260811.json"
 
 
 def _canonical_hash(value: object) -> str:
@@ -77,10 +78,13 @@ def test_yms1a1_packet_artifacts_have_executable_git_provenance() -> None:
         "HEAD",
     )
     pin = json.loads((ROOT / "config/rakl-framework-pin.json").read_text())
-    assert receipt["framework_pin"]["commit"] == pin["commit"]
-    assert receipt["framework_pin"]["commit"] == _git(
-        "rev-parse", "HEAD:framework/RAKL"
-    )
+    pin_sync = json.loads(FRAMEWORK_PIN_SYNC.read_text(encoding="utf-8"))
+    assert receipt["framework_pin"]["commit"] == pin_sync["previous_framework_commit"]
+    assert pin["commit"] == pin_sync["current_framework_commit"]
+    assert pin["commit"] == _git("rev-parse", "HEAD:framework/RAKL")
+    assert pin_sync["semantic_authority_compatibility"][
+        "historical_receipts_or_outputs_rewritten"
+    ] is False
     assert receipt["assurance_worlds"] == [
         {"world": "VALID_BOUND_SOURCE", "expected": "PASS", "observed": "PASS"},
         {

@@ -1,0 +1,29 @@
+{
+  "schema_version": "hash-chained-math-trace-v3-proposal-shadow",
+  "atom_id": "NS-B1a3",
+  "candidate_id": "NS-B1a3-C001",
+  "continues_from": "sha256:1c9e6db062fe90397da5378d9ce51edf92499c31f46655d570c09527ff7badc6",
+  "events": [
+    {
+      "event_id": "NS-B1a3-E4",
+      "kind": "INTERFACE_AUDIT_OUTCOME",
+      "candidate_id": "NS-B1a3-C001",
+      "outcome": "PARTIAL_SUCCESS",
+      "failure_category": "LOCAL_TO_GLOBAL_GLUING_INTERFACE",
+      "result_commit_sha": "60ff2b38d9eab6b43abb40c45240b99cb608ca18",
+      "prev_event_hash": "sha256:1c9e6db062fe90397da5378d9ce51edf92499c31f46655d570c09527ff7badc6",
+      "event_hash": "sha256:d5f7cf1018681a705b160aa6d89c085280f49193f68db61b99004e98702b1d7e"
+    },
+    {
+      "event_id": "NS-B1a3-E5",
+      "kind": "RESIDUAL_REATOMIZATION",
+      "new_obstruction_id": "O-NS-B1a3-GLOBAL-CRITICAL-TIGHTNESS-INTERFACE",
+      "next_children": ["NS-B1a3a", "NS-B1a3b"],
+      "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "prev_event_hash": "sha256:d5f7cf1018681a705b160aa6d89c085280f49193f68db61b99004e98702b1d7e",
+      "event_hash": "sha256:84a49c402f6329723828bf848452f336b300cb82fa4c35f9618be60edf5001b6"
+    }
+  ],
+  "final_event_hash": "sha256:84a49c402f6329723828bf848452f336b300cb82fa4c35f9618be60edf5001b6",
+  "authority": "PROPOSAL_SHADOW_TRACE_ONLY"
+}

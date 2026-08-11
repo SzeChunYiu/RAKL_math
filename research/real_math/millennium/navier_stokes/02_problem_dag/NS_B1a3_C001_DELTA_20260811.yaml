@@ -1,0 +1,49 @@
+atom_id: NS-B1a3
+parent_atom_id: NS-B1a
+candidate_id: NS-B1a3-C001
+status: SOURCE_BOUND_INTERFACE_ROUTE_PRUNING
+root_status: OPEN_NO_SOLUTION_CERTIFICATE
+authority: PROPOSAL_SHADOW_NO_ROOT_AUTHORITY
+result: >-
+  The registered Type-I compactness package reaches local strong L3 velocity
+  convergence, local weak L3/2 pressure convergence and a nontrivial mild bounded
+  ancient solution with finite I, but the selected critical-element/global-L3
+  rigidity packages require a separately proved global critical topology or
+  backward global-L3 sequence. Direct gluing is therefore blocked.
+local_math_status: ACCEPTED_WITHIN_SOURCE_HYPOTHESES
+local_to_global_gluing_status: BLOCKED_MISSING_GLOBAL_CRITICAL_TIGHTNESS
+pruned_or_deferred_routes:
+  - minimal_critical_element_before_global_critical_space_is_constructed
+  - direct_backward_uniqueness_without_theorem_specific_hypothesis_ledger
+  - stationary_self_similar_liouville_for_general_ancient_trajectory
+live_routes:
+  - global_critical_tightness_state_space_certificate
+  - vorticity_direction_geometric_depletion
+  - pressure_temporal_coherence_no_recrossing
+  - alternate_source_valid_liouville_trigger
+next_children:
+  - id: NS-B1a3a
+    title: Global critical tightness/state-space certificate
+    question: >-
+      Can finite-I Navier-Stokes dynamics, with no reuse of the pruned scale-neutral
+      energy/shell arguments, produce a uniformly bounded global critical topology
+      or backward global-L3 sequence with pressure/far-field compatibility?
+    status: CONTEXT_REQUIRED
+  - id: NS-B1a3b
+    title: Vorticity-direction/geometric depletion inheritance
+    question: >-
+      What exact scale-critical coherence/depletion property is inherited by every
+      relevant finite-I ancient limit and has a matching source-valid rigidity or
+      regularity theorem?
+    status: CONTEXT_REQUIRED
+failure_ids:
+  - F-NS-B1a3-PROFILE-LEAKAGE
+  - F-NS-B1a3-UNCONTROLLED-FAR-FIELD
+  - F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH
+  - F-NS-B1a3-UNIQUE-CONTINUATION-HYPOTHESIS-GAP
+  - F-NS-B1a3-EQUATION-CHANGE-MISMATCH
+nonpromotion:
+  - Type-I route pruning is not Type-I exclusion
+  - Type-I exclusion would not close Type-II
+  - local compactness is not global critical tightness
+  - same-context expert review is not independent review

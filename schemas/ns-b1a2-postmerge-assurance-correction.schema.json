@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/ns-b1a2-postmerge-assurance-correction.schema.json",
+  "title": "NS-B1a2 PR89 post-merge assurance correction",
+  "description": "Immutable v3 successor receipt. It preserves PR89, records strict-process defects, and cannot grant retroactive discovery or Navier-Stokes authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "receipt_id", "recorded_at", "application_repository",
+    "framework_authority", "preserved_artifacts", "schema_audit",
+    "chronology_audit", "successors", "correction", "prospective_gate",
+    "authority_contract", "evidence_pointers", "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"type": "string", "minLength": 1},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "application_repository": {
+      "type": "object", "additionalProperties": false,
+      "required": ["url", "pre_pr_base_commit", "pr_head_commit", "pr_head_tree", "merge_commit", "merge_tree", "merge_parents"],
+      "properties": {
+        "url": {"type": "string", "format": "uri"},
+        "pre_pr_base_commit": {"$ref": "#/$defs/sha1"},
+        "pr_head_commit": {"$ref": "#/$defs/sha1"},
+        "pr_head_tree": {"$ref": "#/$defs/sha1"},
+        "merge_commit": {"$ref": "#/$defs/sha1"},
+        "merge_tree": {"$ref": "#/$defs/sha1"},
+        "merge_parents": {"type": "array", "prefixItems": [{"$ref": "#/$defs/sha1"}, {"$ref": "#/$defs/sha1"}], "items": false, "minItems": 2, "maxItems": 2}
+      }
+    },
+    "framework_authority": {
+      "type": "object", "additionalProperties": false,
+      "required": ["url", "historical_application_pin", "current_main_commit", "current_main_tree", "schema_bindings"],
+      "properties": {
+        "url": {"type": "string", "format": "uri"},
+        "historical_application_pin": {"$ref": "#/$defs/sha1"},
+        "current_main_commit": {"const": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"},
+        "current_main_tree": {"$ref": "#/$defs/sha1"},
+        "schema_bindings": {"type": "array", "minItems": 5, "items": {"$ref": "#/$defs/schemaBinding"}}
+      }
+    },
+    "preserved_artifacts": {"type": "array", "minItems": 13, "maxItems": 13, "items": {"$ref": "#/$defs/preservedArtifact"}},
+    "schema_audit": {
+      "type": "object", "additionalProperties": false,
+      "required": ["error_counts", "strict_process_verdict", "findings"],
+      "properties": {
+        "error_counts": {
+          "const": {"context": 15, "memory_review": 5, "pretrace": 2, "continuation": 2, "task_episode": 1, "failure_lattice": 2}
+        },
+        "strict_process_verdict": {"const": "INVALID_NO_RETROACTIVE_REPAIR"},
+        "findings": {"type": "array", "minItems": 6, "maxItems": 6, "items": {"$ref": "#/$defs/schemaFinding"}}
+      }
+    },
+    "chronology_audit": {"type": "array", "minItems": 5, "maxItems": 5, "items": {"$ref": "#/$defs/chronologyFinding"}},
+    "successors": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"$ref": "#/$defs/successor"}},
+    "correction": {
+      "type": "object", "additionalProperties": false,
+      "required": ["classification", "strict_discovery_credit", "originals_preserved", "repairs_original_chronology", "mathematical_result_retained", "prospective_child_atom"],
+      "properties": {
+        "classification": {"const": "RETROSPECTIVE_ROUTE_PRUNING"},
+        "strict_discovery_credit": {"const": "NO_STRICT_DISCOVERY_CREDIT"},
+        "originals_preserved": {"const": true},
+        "repairs_original_chronology": {"const": false},
+        "mathematical_result_retained": {"const": "SCOPED_FUNCTIONAL_CRITICAL_CORE_PACKING_CALIBRATION"},
+        "prospective_child_atom": {"const": "NS-B1a3"}
+      }
+    },
+    "prospective_gate": {
+      "type": "object", "additionalProperties": false,
+      "required": ["atom_id", "candidate_generation_allowed", "required_before_candidate", "missing_evidence_fails_closed"],
+      "properties": {
+        "atom_id": {"const": "NS-B1a3"},
+        "candidate_generation_allowed": {"const": false},
+        "required_before_candidate": {"type": "array", "minItems": 4, "items": {"type": "string", "minLength": 1}},
+        "missing_evidence_fails_closed": {"const": true}
+      }
+    },
+    "authority_contract": {
+      "type": "object", "additionalProperties": false,
+      "required": ["effective_authority", "grants_strict_discovery_credit", "grants_proof_authority", "grants_root_authority", "grants_theorem_authority", "grants_novelty_authority", "grants_framework_authority", "grants_review_independence", "may_backfill_chronology"],
+      "properties": {
+        "effective_authority": {"const": "RETROSPECTIVE_ROUTE_PRUNING_ONLY"},
+        "grants_strict_discovery_credit": {"const": false},
+        "grants_proof_authority": {"const": false},
+        "grants_root_authority": {"const": false},
+        "grants_theorem_authority": {"const": false},
+        "grants_novelty_authority": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false},
+        "may_backfill_chronology": {"const": false}
+      }
+    },
+    "evidence_pointers": {"$ref": "#/$defs/nonEmptyStrings"},
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha1": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "nonEmptyStrings": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "schemaBinding": {
+      "type": "object", "additionalProperties": false, "required": ["path", "git_blob_sha"],
+      "properties": {"path": {"type": "string", "minLength": 1}, "git_blob_sha": {"$ref": "#/$defs/sha1"}}
+    },
+    "preservedArtifact": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "git_blob_sha", "content_sha256", "introduced_commit", "introduced_commit_time"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1}, "git_blob_sha": {"$ref": "#/$defs/sha1"},
+        "content_sha256": {"$ref": "#/$defs/sha256"}, "introduced_commit": {"$ref": "#/$defs/sha1"},
+        "introduced_commit_time": {"type": "string", "format": "date-time"}
+      }
+    },
+    "schemaFinding": {
+      "type": "object", "additionalProperties": false, "required": ["subject", "schema_path", "error_count", "violations"],
+      "properties": {
+        "subject": {"type": "string", "minLength": 1}, "schema_path": {"type": "string", "minLength": 1},
+        "error_count": {"type": "integer", "minimum": 1}, "violations": {"$ref": "#/$defs/nonEmptyStrings"}
+      }
+    },
+    "chronologyFinding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["subject", "claimed_timestamp", "introducing_commit", "introducing_commit_time", "future_offset_seconds"],
+      "properties": {
+        "subject": {"type": "string", "minLength": 1}, "claimed_timestamp": {"type": "string", "format": "date-time"},
+        "introducing_commit": {"$ref": "#/$defs/sha1"}, "introducing_commit_time": {"type": "string", "format": "date-time"},
+        "future_offset_seconds": {"type": "integer", "minimum": 1}
+      }
+    },
+    "successor": {
+      "type": "object", "additionalProperties": false, "required": ["kind", "path", "artifact_hash", "authority"],
+      "properties": {
+        "kind": {"type": "string", "minLength": 1}, "path": {"type": "string", "minLength": 1},
+        "artifact_hash": {"$ref": "#/$defs/sha256"}, "authority": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

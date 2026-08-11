@@ -37,6 +37,7 @@ OLD_REVIEW = (
 LIVE_REVIEW = BASE / "08_reviews/YM-S1A1_PRE_CANDIDATE_REVIEW_20260811.md"
 RECEIPT = BASE / "08_reviews/YM-S1A1_PACKET_BINDING_REPAIR_RECEIPT_20260811.json"
 SCHEMA = ROOT / "schemas/packet-binding-repair-receipt.schema.json"
+FRAMEWORK_PIN_SYNC = ROOT / "receipts/framework-pin-sync-bd1a276-20260811.json"
 
 
 def _canonical_hash(value: object) -> str:
@@ -92,10 +93,13 @@ def test_yms1a1_packet_binding_repair_preserves_and_supersedes() -> None:
         "HEAD",
     )
     pin = json.loads((ROOT / "config/rakl-framework-pin.json").read_text())
-    assert receipt["framework_pin"]["commit"] == pin["commit"]
-    assert receipt["framework_pin"]["commit"] == _git(
-        "rev-parse", "HEAD:framework/RAKL"
-    )
+    pin_sync = json.loads(FRAMEWORK_PIN_SYNC.read_text(encoding="utf-8"))
+    assert receipt["framework_pin"]["commit"] == pin_sync["previous_framework_commit"]
+    assert pin["commit"] == pin_sync["current_framework_commit"]
+    assert pin["commit"] == _git("rev-parse", "HEAD:framework/RAKL")
+    assert pin_sync["semantic_authority_compatibility"][
+        "historical_receipts_or_outputs_rewritten"
+    ] is False
 
     stale_pointer = "tests/test_yang_mills_yms1a_source_visibility.py"
     live_pointer = (

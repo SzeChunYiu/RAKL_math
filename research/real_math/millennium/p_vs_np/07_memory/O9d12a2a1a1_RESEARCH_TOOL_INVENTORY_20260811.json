@@ -1,0 +1,48 @@
+{
+  "tools": [
+    {
+      "tool_id": "T-PNP-UPPER-FIRST",
+      "name": "Upper-bound-first target screening",
+      "kind": "route_screening",
+      "abstraction": "Before investing in a lower-bound invariant or hard target, derive the strongest explicit construction/adjacency implementation available and use it as a ceiling on the target complexity.",
+      "source_atom_id": "R004/O9d6-O9d12a",
+      "source_candidate_id": "C014+C021",
+      "source_result_ids": ["C014", "C021"],
+      "source_context_hash": "legacy:pre-strict-context:R004-C014-C021",
+      "authority": "VERIFIED_LOCAL",
+      "preconditions": ["target family is explicit enough to admit a concrete cover/intersection or adjacency construction", "the upper construction is stated in the same unrestricted cover/intersection model as the intended lower bound"],
+      "structural_signature": ["explicit target family", "unrestricted cover complexity", "cheap adjacency or decomposition may dominate apparent combinatorial hardness", "upper construction can falsify an entire lower-bound target family"],
+      "operation": "derive an explicit cover/intersection program or compile the adjacency predicate before lower-bound search; reject the target if the resulting ceiling contradicts the desired asymptotic lower bound",
+      "guaranteed_effects": ["within the proved construction scope, supplies an auditable upper ceiling that any lower-bound candidate must respect", "can retire target families whose explicit implementation is already too cheap"],
+      "non_guarantees": ["does not prove any lower bound", "does not show that every explicit family is easy", "does not establish P versus NP"],
+      "validation_obligations": ["verify that the construction uses legal operations in the exact target model", "check asymptotic translation between input bit length and side size", "counterexample-test finite instances when executable"],
+      "evidence_pointers": ["research/real_math/millennium/p_vs_np/03_routes/R004_C014_ROUTE_DELTA_20260811.md", "research/real_math/millennium/p_vs_np/03_routes/R004_C021_ROUTE_DELTA_20260811.md"],
+      "known_failure_ids": [],
+      "successful_reuse_ids": ["C015", "C020", "C021"],
+      "proof_backing": [],
+      "artifact_hash": "sha256:ee201cabca934c89a7840c1b4580fe1efc39774c5c70102cca02686804f23f47"
+    },
+    {
+      "tool_id": "T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION",
+      "name": "G_NEQ joint-signature calibration",
+      "kind": "calibration_and_route_pruning",
+      "abstraction": "After source-justified normalization of the G_NEQ canonical covering pairs to common partitions, encode each diagonal witness by its membership signature; covering all canonical unequal-pair filters is equivalent to injectivity of these signatures.",
+      "source_atom_id": "O9d12a2a1a",
+      "source_candidate_id": "C025",
+      "source_result_ids": ["C025-L1", "C025-L2"],
+      "source_context_hash": "sha256:daa6e99832bd994ff5b081b861521f7465ef37b468d274eb08c93e0001358b89",
+      "authority": "VERIFIED_LOCAL",
+      "preconditions": ["target is the G_NEQ canonical semi-filter calibration from Cavalar-Oliveira Proposition 40", "Claim 41 applies to the singleton complement fibres", "Lemmas 42-43 justify replacing each relevant pair by a partition without losing canonical coverage"],
+      "structural_signature": ["one common integral family of binary partitions", "diagonal singleton generator witnesses", "canonical unequal-pair obligations", "joint signature injectivity"],
+      "operation": "map each diagonal witness to its joint membership signature under the normalized pair family; require injectivity and use N<=2^k as the exact canonical calibration floor",
+      "guaranteed_effects": ["detects whether a proposed joint-consistency repair recovers the exact log2 N canonical G_NEQ benchmark", "distinguishes C024-style independence failure from a later representation-scope failure"],
+      "non_guarantees": ["does not normalize arbitrary full semi-filters", "does not bound every mathematical function of a signature matrix", "does not produce a super-log full-cover lower bound", "does not establish novelty or P versus NP"],
+      "validation_obligations": ["bind every normalization step to Claim 41/Lemmas 42-43 and the G_NEQ canonical family", "verify the induced signatures are injective exactly when all canonical F_(u,v) are covered", "after passing calibration, check whether the retained state has any noncanonical full-semi-filter content before target evaluation"],
+      "evidence_pointers": ["research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_joint_signature_canonical_scope.md", "Cavalar-Oliveira 2025 Proposition 40, Claim 41, Lemmas 42-43", "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C009_universal_canonical_matching_ceiling.md"],
+      "known_failure_ids": ["F-C025-FIRST-ORDER-CANONICAL-COLLAPSE"],
+      "successful_reuse_ids": [],
+      "proof_backing": [],
+      "artifact_hash": "sha256:bff3cc8c347f3ad4b007775d69abadffd408b8db2b3863990baf7b5c76d87475"
+    }
+  ]
+}

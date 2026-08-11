@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "YM-S1A1-C001-V2-STRICT-CHRONOLOGY-INVALIDATION-20260811",
+  "atom_id": "YM-S1a1-C001c1",
+  "recorded_at": "2026-08-11T11:54:04+00:00",
+  "trigger": "POST_V2_CURRENT_RAKL_CHRONOLOGY_AUDIT",
+  "historical_bindings": {
+    "v1": {
+      "path": "research/real_math/millennium/yang_mills/04_candidates/YM-S1A1_C001_DENSE_SOURCE_COMMON_RATE_SPECTRAL_EXCLUSION_20260811.md",
+      "file_sha256": "sha256:a8b6081ac1333468fc05fa98ad2d456f89d2ea934250517af265f803e8408f9b",
+      "candidate_id": "YM-S1A1-C001-DENSE-SOURCE-COMMON-RATE-SPECTRAL-EXCLUSION"
+    },
+    "v2": {
+      "path": "research/real_math/millennium/yang_mills/04_candidates/YM-S1A1_C001_V2_DENSE_SOURCE_COMMON_RATE_SPECTRAL_EXCLUSION_20260811.md",
+      "file_sha256": "sha256:7cd5b6cf8070aa792c3793e55f332f139953897180ec792f2f893113df680bf9",
+      "candidate_id": "YM-S1A1-C001-V2-DENSE-SOURCE-COMMON-RATE-SPECTRAL-EXCLUSION"
+    },
+    "correction_receipt": {
+      "path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_C001_V1_TO_V2_REVIEW_CORRECTION_20260811.json",
+      "file_sha256": "sha256:d27cf75729f21948f77c4d6e57979d1925e8a86227bb914fe36dcee90fae051d",
+      "artifact_hash": "sha256:6b0ca36953f096e16822447b67daf00f86741b6563b364a9f599ee472ccf2e7b"
+    },
+    "correction_trace": {
+      "path": "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_C001_V2_CORRECTION_TRACE_20260811.json",
+      "file_sha256": "sha256:18617d819f0a86a9104a5196e66d87f2d3d1a2b135aba2690ae1a9c791e1cb6b",
+      "trace_id": "TRACE-YM-S1A1-C001-V2-CORRECTION-20260811",
+      "final_event_hash": "sha256:aa54344cc82adca5fb3a925b8111f6fa514a7c4523b30dc94204304bbe88173d"
+    },
+    "correction_review": {
+      "path": "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_C001_V2_Q_ZERO_BOUNDARY_REVIEW_20260811.md",
+      "file_sha256": "sha256:10482d041c37146db48260085343f58a196e3f41892b18e768ff9da917f482b1"
+    }
+  },
+  "chronology_audit": {
+    "observed_sequence": [
+      "YM-S1A1-E013:REVIEWED",
+      "YM-S1A1-E014:RESIDUAL_OPENED",
+      "YM-S1A1-E015:CANDIDATE_PROPOSED"
+    ],
+    "missing_before_v2_candidate": [
+      "failure-lattice registration of F-YM-S1A1-C001-QZERO-LOGARITHM-DOMAIN",
+      "fresh dual ResearchMemoryReview containing the new failure",
+      "EXPERIENCE_MEMORY_REVIEW event bound to that fresh review"
+    ],
+    "strict_trace_valid_for_v2_successor_discovery": false,
+    "historical_trace_bytes_preserved": true,
+    "finding": "The v2 correction is mathematically reviewable but its existing correction trace cannot receive strict successor-discovery credit because it proposed v2 before registering and querying the newly observed material v1 failure."
+  },
+  "classification": {
+    "v2_correction": "RETROSPECTIVE_EXTERNAL_REVIEW_CORRECTION",
+    "strict_successor_discovery_credit": "NONE",
+    "mathematical_truth_effect": "UNCHANGED_POSITIVE_Q_LOCAL_DERIVATION",
+    "future_gate_effect": "FUTURE_CANDIDATES_ONLY",
+    "independent_review": false,
+    "novelty_authority": "NONE",
+    "root_authority": "NONE"
+  },
+  "artifact_hash": "sha256:c341ec21ff72828ef9e62be729a95b13e2f8ffdd9e146cc830347e6596795d7e"
+}

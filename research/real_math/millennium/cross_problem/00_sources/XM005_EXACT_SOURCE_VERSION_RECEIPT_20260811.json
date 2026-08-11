@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "XM005-EXACT-ARXIV-SOURCE-VERSIONS-20260811",
+  "recorded_at": "2026-08-11T13:32:11Z",
+  "retrieval": {
+    "api_url": "https://export.arxiv.org/api/query?id_list=2606.29468,2008.09345,2201.08232",
+    "snapshot_path": "research/real_math/millennium/cross_problem/00_sources/XM005_ARXIV_SOURCE_SNAPSHOT_20260811.xml",
+    "snapshot_sha256": "sha256:24dd718e7ea1d2d5a24ceacd4443ef7d9d2a866a262cc631f3629143c0d09504",
+    "snapshot_size_bytes": 5484
+  },
+  "sources": [
+    {
+      "base_id": "2008.09345",
+      "versioned_id": "2008.09345v1",
+      "versioned_abs_url": "https://arxiv.org/abs/2008.09345v1",
+      "versioned_pdf_url": "https://arxiv.org/pdf/2008.09345v1",
+      "title": "Existence of vortex rings in Beltrami flows",
+      "published": "2020-08-21T07:36:26Z",
+      "updated": "2020-08-21T07:36:26Z",
+      "authors": [
+        "Ken Abe"
+      ],
+      "abstract": "We construct traveling wave solutions to the 3d Euler equations by axisymmetric Beltrami fields with a non-constant proportionality factor. They form a vortex ring with nested invariant tori consisting of level sets of the proportionality factor.",
+      "primary_category": "math.AP",
+      "pdf_sha256": "sha256:bb80bf8ad304c42dfabb0b3866a9f129e31bef9725bb3c632b107973b1f1d01b",
+      "pdf_size_bytes": 256595,
+      "source_check": {
+        "status": "SUPPORTED_BY_VERSIONED_PDF_LOCATOR",
+        "pdf_page": 4,
+        "locator": "Theorem 1.1 and paragraph immediately following",
+        "bounded_claim": "Theorem 1.1 constructs axisymmetric steady Euler fields with compactly supported vorticity on a solid torus; the following paragraph identifies these vortex rings as traveling-wave solutions of the 3d Euler equations.",
+        "normalized_quote": "For any u_infinity != 0, there exist axisymmetric solutions ... such that curl u is compactly supported on a solid torus ... Vortex rings in Theorem 1.1 are traveling wave solutions to the 3d Euler equations."
+      }
+    },
+    {
+      "base_id": "2201.08232",
+      "versioned_id": "2201.08232v4",
+      "versioned_abs_url": "https://arxiv.org/abs/2201.08232v4",
+      "versioned_pdf_url": "https://arxiv.org/pdf/2201.08232v4",
+      "title": "Existence, uniqueness and stability of steady vortex rings of small cross-section",
+      "published": "2022-01-20T15:39:18Z",
+      "updated": "2023-12-05T15:31:16Z",
+      "authors": [
+        "Daomin Cao",
+        "Guolin Qin",
+        "Weilin Yu",
+        "Weicheng Zhan",
+        "Changjun Zou"
+      ],
+      "abstract": "This paper is concerned with steady vortex rings in an ideal fluid of uniform density, which are special global axi-symmetric solutions of the three-dimensional incompressible Euler equation. We systematically establish the existence, uniqueness and nonlinear orbital stability of steady vortex rings of small cross-section for which the potential vorticity is constant throughout the core. The latter two answer a long-standing question since the pioneering work of Fraenkel and Berger \\cite{BF1} (Acta Math., 1974). To achieve our goal, we rescale the Stokes stream function of vortex ring by its cross-section radius, and expand it at the well-known Rankine vortex using Taylor's formula, where the estimates for coefficients are obtained by a decomposition according to Green's function and local Pohozaev identities. The main observations are: The stream function is even and has a translational invariance in $z$-direction; the zero point for the $r$-coefficient of linear term in its expansion determines the asymptotic location of vortex ring, which appears as the condition to eliminate the degenerate direction in Lyapunov-Schmidt reduction argument for existence; the non-vanishing condition of the second order $r$-coefficient at foresaid zero point is verified as one of the essential factors for uniqueness, while the negativity means that these vortex rings maximizes the functional composed of kinetic energy and impulse. By applying the Arnol'd's dual variational principle together with the uniqueness result, we are finally able to prove the nonlinear orbital stability of thin vortex rings. This result gives a large class of stable vortex rings supported on topological tori, which is different from Hill's spherical vortex discussed by Choi \\cite{Choi20} (Comm. Pure Appl. Math., 2023).",
+      "primary_category": "math.AP",
+      "pdf_sha256": "sha256:1c432136e5546299c7d47e86d21d14e231369347fb086da58b03607127a19156",
+      "pdf_size_bytes": 765445,
+      "source_check": {
+        "status": "SUPPORTED_BY_VERSIONED_PDF_LOCATOR",
+        "pdf_page": 1,
+        "locator": "Abstract; existence theorem appears on PDF page 6",
+        "bounded_claim": "The abstract identifies steady vortex rings as global axisymmetric solutions of the three-dimensional incompressible Euler equation and describes kinetic-energy/impulse variational structure; Theorem 1.1 gives an existence family.",
+        "normalized_quote": "steady vortex rings ... are special global axi-symmetric solutions of the three-dimensional incompressible Euler equation ... these vortex rings maximizes the functional composed of kinetic energy and impulse."
+      }
+    },
+    {
+      "base_id": "2606.29468",
+      "versioned_id": "2606.29468v1",
+      "versioned_abs_url": "https://arxiv.org/abs/2606.29468v1",
+      "versioned_pdf_url": "https://arxiv.org/pdf/2606.29468v1",
+      "title": "On potential Type II blowups for the Navier-Stokes equations",
+      "published": "2026-06-28T15:55:26Z",
+      "updated": "2026-06-28T15:55:26Z",
+      "authors": [
+        "Gregory Seregin"
+      ],
+      "abstract": "In the present note, certain scenarios of potential Type II blowups of solutions to the Navier-Stokes equations are considered on the local level. They generalise particular scenarios described in the previous papers of the author. The main features of the approach, adopted in the note, are a zoom based on the Euler scaling and Liouville type theorems for the Euler equations in classes motived by a particular scenario of the Type II blowup.",
+      "primary_category": "math.AP",
+      "pdf_sha256": "sha256:3f895b24c995a2a664578b5e43efe5cae313e745fdceeaad8b3d6a00987436fd",
+      "pdf_size_bytes": 286905,
+      "source_check": {
+        "status": "SUPPORTED_BY_VERSIONED_PDF_LOCATOR",
+        "pdf_page": 9,
+        "locator": "Theorem 3.1, equations (3.5)-(3.8)",
+        "bounded_claim": "Theorem 3.1 constructs a nontrivial ancient Euler pair with the displayed scale-weighted bound and local energy inequality under its stated Navier-Stokes hypotheses.",
+        "normalized_quote": "Then, there are two functions u and p defined in Q- = R^3 x (-infinity,0), with the following properties ... the local energy inequality ... the function u is non-trivial."
+      }
+    }
+  ],
+  "chronology_correction": {
+    "historical_claim": "Abe current manuscript dated 22 March 2026",
+    "official_version": "2008.09345v1",
+    "official_published": "2020-08-21T07:36:26Z",
+    "official_updated": "2020-08-21T07:36:26Z",
+    "verdict": "HISTORICAL_FRESHNESS_PHRASE_UNSUPPORTED_USE_OFFICIAL_V1_DATE"
+  },
+  "scope": "VERSIONED_SOURCE_METADATA_PDF_DIGESTS_AND_EXACT_LOCATORS_ONLY",
+  "non_guarantees": [
+    "does not prove the conditional XM005 traveling profile satisfies the complete Seregin class",
+    "does not turn the hostile calibration into a Navier-Stokes candidate or counterexample",
+    "does not supply strict discovery chronology",
+    "same-context source checking is not independent peer review"
+  ],
+  "artifact_hash": "sha256:e4b2f57f8438a467cc7d258e21f47919d6cf670f34ebcb03481bb5c44e6bf000"
+}

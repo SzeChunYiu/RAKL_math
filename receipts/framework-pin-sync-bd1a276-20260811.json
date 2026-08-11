@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "RAKL-MATH-FRAMEWORK-PIN-SYNC-bd1a276-20260811",
+  "recorded_at": "2026-08-11T11:55:00Z",
+  "application_base_commit": "8a608f340d47b4b6ae612275b0595faf6b804432",
+  "framework_repository": "https://github.com/SzeChunYiu/RAKL.git",
+  "previous_framework_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+  "previous_framework_tree": "a228d33ce2fc6ef33c6c98aed98620bb5bcc3b42",
+  "current_framework_commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+  "current_framework_tree": "b0f14dc300e20eb74a69f946e06343af1683ca16",
+  "framework_commits_between": 113,
+  "framework_changed_files": 638,
+  "framework_merge_lineage": {
+    "v3_substrate_pr118_merge": "a151d5612709ea0f95c3ea232630f246f722739a",
+    "v3_authority_hardening_pr121_merge": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "pr121_merge_parents": [
+      "337807625a60ba821e123f39d05f085fd9b0a5fa",
+      "7c310c13e74de7abdd8b23180c18363f09cf178c"
+    ]
+  },
+  "historical_pin_receipt_binding": {
+    "application_commit": "8a608f340d47b4b6ae612275b0595faf6b804432",
+    "path": "receipts/framework-pin-sync-15f1c3a-20260811.json",
+    "git_blob_sha": "aa2f409afdd09f52a5c08fd0ecc10bf2b5cf62fe",
+    "raw_sha256": "sha256:3b3f499cce29cf8d98a1de8eec1099089b065b862e2a4247075d63e35f7b9b74",
+    "artifact_hash": "sha256:ea1ff5d1b45869d1b9aa38c8f0c2dc7fe54607f56af84ae73426c368eb441f76"
+  },
+  "material_framework_changes": [
+    "RAKL v3 recursive experience substrate added as a proposal-governed implementation overlay",
+    "v3 reusable lesson tool local-section benchmark and Self-RAKL authority transitions hardened with exact protected receipts",
+    "publication changes are present in framework history but are not application evidence or mathematical progress"
+  ],
+  "semantic_authority_compatibility": {
+    "historical_artifacts_keep_recorded_framework_commits": true,
+    "historical_receipts_or_outputs_rewritten": false,
+    "new_execution_pin_applies_prospectively": true,
+    "frozen_preregistrations_reinterpreted_under_new_pin": false,
+    "dependency_sync_mints_mathematical_authority": false,
+    "same_context_review_becomes_independent": false,
+    "boundary": "SEMANTIC_AUTHORITY_REMAINS_ARTIFACT_LOCAL_WHILE_EXECUTION_PIN_ADVANCES_PROSPECTIVELY"
+  },
+  "verification": {
+    "command": "python tools/run_application_tests.py --framework framework/RAKL",
+    "tests_passed": 302,
+    "exit_code": 0,
+    "pin_equals_gitlink": true,
+    "framework_authority_paths_clean": true,
+    "status": "PASS_EXACT_APPLICATION_SUITE"
+  },
+  "verdict": "PASS_APPLICATION_CONFORMANCE_ON_EXACT_FRAMEWORK_PIN",
+  "non_guarantees": [
+    "does not validate a Millennium claim",
+    "does not rewrite or upgrade historical framework bindings",
+    "does not make same-context review independent",
+    "does not establish empirical RAKL superiority",
+    "does not automatically promote a lesson research tool or framework variant"
+  ],
+  "authority": "DEPENDENCY_SYNC_AND_EXECUTABLE_CONFORMANCE_ONLY / NO_MATHEMATICAL_AUTHORITY_CHANGE",
+  "artifact_hash": "sha256:f1aff8a13e9b6c0901d24485efb993a5cf9bdee1c68d421d056c038bc79b697d",
+  "pin_staging_commit": "67df037d3a4f000d6c1a267e965ced603e73b4f5",
+  "initial_exact_suite": {
+    "command": "python tools/run_application_tests.py --framework framework/RAKL",
+    "result": "5 failed, 255 passed",
+    "exit_code": 1,
+    "diagnosis": "historical semantic-authority receipts were incorrectly required by tests to equal the moving execution pin",
+    "failed_tests": [
+      "test_framework_pin_contract.py::test_machine_readable_framework_pin_is_valid_and_loaded_exactly",
+      "test_pnp_c025_joint_binary_signature_assurance.py::test_current_main_integration_receipt_binds_non_circular_git_history",
+      "test_yang_mills_yms1a1_git_provenance.py::test_yms1a1_packet_artifacts_have_executable_git_provenance",
+      "test_yang_mills_yms1a1_integrity_repair.py::test_yms1a1_memory_hash_repair_preserves_the_failed_identity",
+      "test_yang_mills_yms1a1_packet_binding_repair.py::test_yms1a1_packet_binding_repair_preserves_and_supersedes"
+    ]
+  },
+  "compatibility_migration": {
+    "scope": "TEST_ASSERTION_SEMANTICS_ONLY",
+    "historical_artifact_files_changed": [],
+    "historical_artifact_hashes_changed": [],
+    "protected_evaluators_weakened": false,
+    "repair": "tests now distinguish immutable artifact-local framework authority from the prospective live execution pin and bind both through this receipt",
+    "test_files_updated": [
+      "tests/math_applications/test_framework_pin_contract.py",
+      "tests/math_applications/test_pnp_c025_joint_binary_signature_assurance.py",
+      "tests/math_applications/test_yang_mills_yms1a1_git_provenance.py",
+      "tests/math_applications/test_yang_mills_yms1a1_integrity_repair.py",
+      "tests/math_applications/test_yang_mills_yms1a1_packet_binding_repair.py"
+    ]
+  },
+  "integration_refresh": {
+    "refreshed_at": "2026-08-11T12:31:18Z",
+    "pre_refresh_pr_head": "bfc9bc1c63cc0e8fffa583afef3b02f0e8085792",
+    "merged_live_main_commit": "2ddb51359292fd9638116b488ffff9a04397446b",
+    "merged_live_main_tree": "bc69a20f525cb74d547bb42055bf263ffc073110",
+    "local_integration_merge_commit": "02aa447d8eb77b0d274465e1928968d7ed480b63",
+    "prerequisite_merges": {
+      "pr79_merge": "d13bb40fab2448f983a73f5964ab2d3fd2db489c",
+      "pr84_merge": "2ddb51359292fd9638116b488ffff9a04397446b"
+    },
+    "historical_artifact_files_changed": [],
+    "integration_scope": "LIVE_MAIN_REFRESH_AND_DEPENDENCY_COMPATIBILITY_ONLY",
+    "exact_suite_after_refresh": {
+      "command": "python tools/run_application_tests.py --framework framework/RAKL",
+      "tests_passed": 302,
+      "exit_code": 0,
+      "status": "PASS_EXACT_APPLICATION_SUITE_AFTER_LIVE_MAIN_REFRESH"
+    }
+  }
+}

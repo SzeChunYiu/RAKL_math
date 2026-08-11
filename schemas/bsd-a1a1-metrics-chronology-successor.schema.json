@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/bsd-a1a1-metrics-chronology-successor.schema.json",
+  "title": "BSD A1a1 metrics chronology successor",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "artifact_type", "cycle_id", "authority", "supersedes", "corrected_chronology", "carried_forward_measurements", "measurement_status", "correction_scope", "non_guarantees", "artifact_hash"],
+  "properties": {
+    "schema_version": {"const": "rakl-cycle-metrics-v1-successor"},
+    "artifact_type": {"const": "RAKL_CYCLE_METRICS_CHRONOLOGY_SUCCESSOR"},
+    "cycle_id": {"const": "BSD-A1a1-CURRENT-2026-FRONTIER-20260811-R3-RETROSPECTIVE"},
+    "authority": {"const": "MEASUREMENT_CORRECTION_ONLY_NO_PROMOTION_AUTHORITY"},
+    "supersedes": {
+      "type": "object", "additionalProperties": false,
+      "required": ["cycle_id", "path", "source_commit", "git_blob_sha", "raw_sha256", "artifact_hash", "preserved_immutable", "known_defect"],
+      "properties": {
+        "cycle_id": {"const": "BSD-A1a1-CURRENT-2026-FRONTIER-20260811-R2"},
+        "path": {"type": "string", "minLength": 1},
+        "source_commit": {"$ref": "#/$defs/gitSha"},
+        "git_blob_sha": {"$ref": "#/$defs/gitSha"},
+        "raw_sha256": {"$ref": "#/$defs/sha256"},
+        "artifact_hash": {"$ref": "#/$defs/sha256"},
+        "preserved_immutable": {"const": true},
+        "known_defect": {"type": "string", "minLength": 1}
+      }
+    },
+    "corrected_chronology": {
+      "type": "object", "additionalProperties": false,
+      "required": ["scientific_subject_sha", "scientific_subject_commit_time", "pr83_merge_commit", "pr83_merge_commit_time", "source_receipt_commit", "source_receipt_commit_time", "recorded_at_utc", "status"],
+      "properties": {
+        "scientific_subject_sha": {"const": "584fb3b75dd9772eab54a6e54e226d79d49039a6"},
+        "scientific_subject_commit_time": {"type": "string", "format": "date-time"},
+        "pr83_merge_commit": {"const": "8bc7a9cf17adf347e5be13ab61a08a690dda895e"},
+        "pr83_merge_commit_time": {"type": "string", "format": "date-time"},
+        "source_receipt_commit": {"$ref": "#/$defs/gitSha"},
+        "source_receipt_commit_time": {"type": "string", "format": "date-time"},
+        "recorded_at_utc": {"type": "string", "format": "date-time"},
+        "status": {"const": "VALID_SUCCESSOR_AFTER_ALL_BOUND_HISTORICAL_FACTS"}
+      }
+    },
+    "carried_forward_measurements": {"type": "object", "minProperties": 7},
+    "measurement_status": {"const": "RETAINED_UNCHANGED_NOT_REMEASURED"},
+    "correction_scope": {"type": "array", "minItems": 3, "items": {"type": "string", "minLength": 1}},
+    "non_guarantees": {"type": "array", "minItems": 4, "items": {"type": "string", "minLength": 1}},
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "gitSha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}

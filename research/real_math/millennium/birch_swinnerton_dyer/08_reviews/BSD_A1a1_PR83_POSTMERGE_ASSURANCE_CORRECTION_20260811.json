@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "BSD-A1a1-PR83-POSTMERGE-ASSURANCE-CORRECTION-20260811",
+  "recorded_at": "2026-08-11T13:05:00Z",
+  "application_repository": {
+    "url": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "pre_pr_base_commit": "50c703f3f0c518bba1b48fb17e51b03d53ed02c3",
+    "pr_head_commit": "7ead1aff9b517e6537aff9269130374246eb2761",
+    "pr_head_tree": "356ca0204743fb23c946959f5348f762d69fdfb0",
+    "merge_commit": "8bc7a9cf17adf347e5be13ab61a08a690dda895e",
+    "merge_tree": "356ca0204743fb23c946959f5348f762d69fdfb0",
+    "merge_parents": [
+      "50c703f3f0c518bba1b48fb17e51b03d53ed02c3",
+      "7ead1aff9b517e6537aff9269130374246eb2761"
+    ]
+  },
+  "framework_authority": {
+    "url": "https://github.com/SzeChunYiu/RAKL.git",
+    "commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "tree": "b0f14dc300e20eb74a69f946e06343af1683ca16",
+    "application_gitlink": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "schema_bindings": [
+      {
+        "path": "schemas/task-episode.schema.json",
+        "git_blob_sha": "076f38181b7a896ab1d740f5b6ad160e4fb2cd1c"
+      },
+      {
+        "path": "schemas/failure-experience-lattice.schema.json",
+        "git_blob_sha": "c007e33ec016bfab91d8688880bc18ce2192b031"
+      },
+      {
+        "path": "schemas/math-research-trace.schema.json",
+        "git_blob_sha": "700e9fd81fe7cf6e7ee956fcef05fd2006ff310d"
+      }
+    ],
+    "runtime_bindings": [
+      {
+        "path": "src/rakl/experience_substrate.py",
+        "git_blob_sha": "4d7044bd4825c2d058c6a95ee63cea703c3234f3"
+      },
+      {
+        "path": "src/rakl/failure_lattice.py",
+        "git_blob_sha": "0655210c1ed4778c056eec77d3a7e4a607c1e9e4"
+      },
+      {
+        "path": "src/rakl/research_trace.py",
+        "git_blob_sha": "a2f18bc1e1ab3c523a93679a7483a4cfaf359975"
+      }
+    ]
+  },
+  "preserved_pr83_artifacts": [
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_CURRENT_2026_ANTICYCLOTOMIC_FRONTIER_AUDIT.md",
+      "git_blob_sha": "37e66c07d6c335f5c20ba920b987c98145e15d40",
+      "content_sha256": "sha256:4ae6ce7409ee6a4ea3ee32cd18be2f932885090b4c1c108c2ee814fc5e121252",
+      "introduced_commit": "c1d3af961932c8bfabc7a15b55f5ff9989c59581",
+      "introduced_commit_time": "2026-08-11T14:04:28+02:00"
+    },
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/02_problem_dag/BSD_A1a1_CURRENT_2026_ROUTE_DIAGNOSTIC.yaml",
+      "git_blob_sha": "f79814e1f79186cc640f07b61b3af2c785c5f382",
+      "content_sha256": "sha256:8c0aa064e1911e5f7216d985a78ea4f3aacfa5a4bd15f97874536e1a4c060beb",
+      "introduced_commit": "03cee4edca00c278722637f4c9dd3d2f48aef0e7",
+      "introduced_commit_time": "2026-08-11T14:04:48+02:00"
+    },
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_TASK_EPISODE_SHADOW.json",
+      "git_blob_sha": "1bc8a7343c8302d3fb52187ef401b90f60951e66",
+      "content_sha256": "sha256:4d540dd52cc4765df1bd85f4ba401ca71faba587bd5c43b10ad248d714a92504",
+      "introduced_commit": "0aa8daec9ea4c1a8875540acbb682ab79b957025",
+      "introduced_commit_time": "2026-08-11T14:05:59+02:00"
+    },
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_FAILURE_SHADOW.json",
+      "git_blob_sha": "1530e167654fe572ecaf046725e515955c5a2357",
+      "content_sha256": "sha256:d2b9c4e2e7082d1c35c4829577e046012d987f5ec900c5bdf9eda4f980728b26",
+      "introduced_commit": "3b5e414539008c8894f3d00672597cffa517131b",
+      "introduced_commit_time": "2026-08-11T14:06:35+02:00"
+    },
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/08_reviews/RAKL_METHOD_CASE_STUDY_BSD_A1a1_CURRENT_2026.md",
+      "git_blob_sha": "7e2d9a2c3319c5fe265c717377e38dfc6411f329",
+      "content_sha256": "sha256:f8391da6b5d0f64a4b35e916a6bc4a481ebfbbc5565f9d79e810538b71176c3d",
+      "introduced_commit": "ff4e0d8b4b94eac1f72de3d8e8adb16a199f5c66",
+      "introduced_commit_time": "2026-08-11T14:07:11+02:00"
+    },
+    {
+      "path": "tests/math_applications/test_bsd_a1a1_current_2026_cycle.py",
+      "git_blob_sha": "11ad82b7c0118c5e1861b3dd33c3168c7922bb3f",
+      "content_sha256": "sha256:3416fd11803194b6c3473458369bf3c8600c408c4d99327ed2da4960a470eed5",
+      "introduced_commit": "584fb3b75dd9772eab54a6e54e226d79d49039a6",
+      "introduced_commit_time": "2026-08-11T14:07:48+02:00"
+    },
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_RAKL_CYCLE_METRICS_20260811_R2.json",
+      "git_blob_sha": "e9938075408455dcdb75c40cadd6cf7a638a3ae2",
+      "content_sha256": "sha256:62684ee867baa6514718ca0041029db3ddb0cd9e13b2d5dc756a5e12f07765bd",
+      "introduced_commit": "7ead1aff9b517e6537aff9269130374246eb2761",
+      "introduced_commit_time": "2026-08-11T14:10:04+02:00"
+    }
+  ],
+  "schema_runtime_audit": {
+    "shadow_task_episode_error_count": 9,
+    "shadow_failure_lattice_error_count": 3,
+    "findings": [
+      {
+        "subject": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_TASK_EPISODE_SHADOW.json",
+        "schema_path": "schemas/task-episode.schema.json",
+        "error_count": 9,
+        "violations": [
+          "/: 'action_trace' is a required property",
+          "/: 'cost' is a required property",
+          "/: 'fibre_snapshot_hash' is a required property",
+          "/: 'observation_ids' is a required property",
+          "/: 'operator_ids' is a required property",
+          "/: 'residual_signature' is a required property",
+          "/: 'timestamp' is a required property",
+          "/: 'verification_ids' is a required property",
+          "/: Additional properties are not allowed ('application_cycle_base', 'artifact_type', 'authority', 'execution_dependency_pin', 'failure_partition', 'fibre_contents_consulted', 'framework_semantic_authority', 'mathematical_result_scope', 'new_authority_objects', 'next_action', 'novelty_classification', 'operators_and_motifs', 'primary_source_observations', 'recorded_at_utc', 'residual_after', 'residual_before', 'saturation_vector', 'schema_version', 'search_policy_choice', 'verification_performed' were unexpected)"
+        ]
+      },
+      {
+        "subject": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_FAILURE_SHADOW.json",
+        "schema_path": "schemas/failure-experience-lattice.schema.json",
+        "error_count": 3,
+        "violations": [
+          "/: 'experiences' is a required property",
+          "/: 'links' is a required property",
+          "/: Additional properties are not allowed ('allowed_effect', 'artifact_hash', 'artifact_type', 'atom_id', 'authority', 'broken_or_unproved_assumptions', 'competing_diagnoses', 'diagnosis_status', 'evidence_pointers', 'failure_id', 'failure_mode', 'falsifier_or_attempt', 'observed_result', 'observed_scope', 'promotion_blockers', 'recorded_at_utc', 'residual_signature', 'reusable_lesson_status', 'schema_version', 'selected_bounded_diagnosis', 'source_episode_id', 'source_specific_disanalogies' were unexpected)"
+        ]
+      }
+    ],
+    "canonical_task_episode_schema": "PASS",
+    "canonical_task_episode_runtime": "PASS",
+    "canonical_failure_lattice_schema": "PASS",
+    "canonical_failure_lattice_runtime": "PASS",
+    "canonical_trace_schema": "PASS",
+    "canonical_trace_runtime": "PASS",
+    "canonical_pre_candidate_trace_runtime": "PASS",
+    "candidate_event_count": 0,
+    "strict_process_classification": "RETROSPECTIVE_NO_STRICT_DISCOVERY_CREDIT"
+  },
+  "chronology_audit": [
+    {
+      "subject": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_TASK_EPISODE_SHADOW.json",
+      "claimed_timestamp": "2026-08-11T11:55:00Z",
+      "bound_commit": "0aa8daec9ea4c1a8875540acbb682ab79b957025",
+      "bound_commit_time": "2026-08-11T14:05:59+02:00",
+      "future_offset_seconds": 659
+    },
+    {
+      "subject": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_FAILURE_SHADOW.json",
+      "claimed_timestamp": "2026-08-11T11:55:00Z",
+      "bound_commit": "3b5e414539008c8894f3d00672597cffa517131b",
+      "bound_commit_time": "2026-08-11T14:06:35+02:00",
+      "future_offset_seconds": 695
+    },
+    {
+      "subject": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_RAKL_CYCLE_METRICS_20260811_R2.json::scientific_subject_sha",
+      "claimed_timestamp": "2026-08-11T11:58:00Z",
+      "bound_commit": "584fb3b75dd9772eab54a6e54e226d79d49039a6",
+      "bound_commit_time": "2026-08-11T14:07:48+02:00",
+      "future_offset_seconds": 588
+    },
+    {
+      "subject": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_RAKL_CYCLE_METRICS_20260811_R2.json::introducing_commit",
+      "claimed_timestamp": "2026-08-11T11:58:00Z",
+      "bound_commit": "7ead1aff9b517e6537aff9269130374246eb2761",
+      "bound_commit_time": "2026-08-11T14:10:04+02:00",
+      "future_offset_seconds": 724
+    }
+  ],
+  "source_version_binding": {
+    "path": "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a1_CURRENT_2026_SOURCE_RECEIPT_V1_20260811.json",
+    "source_commit": "434436b1a08f46bc7df6b75c4aa342476dc0799f",
+    "git_blob_sha": "3fe4c5d319e32504117e970e9190d1ff92419866",
+    "raw_sha256": "sha256:f6df29d422c5cc5298f41448b7cbec7a2a8fb49799b0d1dfcaaebd913262c321",
+    "artifact_hash": "sha256:dabde00e3b4218212e5e98da50d19c9cc6b48a8b2ed9a8083957dd236be780dc",
+    "snapshot": {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a1_ARXIV_SOURCE_SNAPSHOT_20260811.xml",
+      "git_blob_sha": "7a592440d3bac584ac80c907c26822c11148ac7e",
+      "raw_sha256": "sha256:e1dae76cb41dd09f61e076129c431abd7e0222fdb23c6ce3d49daaccaf83f84d",
+      "size_bytes": 8256
+    },
+    "versions": [
+      "1809.09066v4",
+      "2203.12161v7",
+      "2603.22483v2",
+      "2608.06879v1"
+    ]
+  },
+  "fibre_snapshot_manifest": {
+    "entries": [
+      {
+        "path": "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_THETA_ORDER_CONTEXT_FIBER_20260811.json",
+        "source_commit": "8bc7a9cf17adf347e5be13ab61a08a690dda895e",
+        "git_blob_sha": "58bfe3f766aef8513ded35ae265f3cfe00385347"
+      },
+      {
+        "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_RESEARCH_MEMORY_REVIEW_20260811.json",
+        "source_commit": "8bc7a9cf17adf347e5be13ab61a08a690dda895e",
+        "git_blob_sha": "06bf902dee0c2377c2923d093fce9aa1fc5df457"
+      },
+      {
+        "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "source_commit": "8bc7a9cf17adf347e5be13ab61a08a690dda895e",
+        "git_blob_sha": "25d746a9a6fef020494df6328e343a62860da2d9"
+      },
+      {
+        "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+        "source_commit": "8bc7a9cf17adf347e5be13ab61a08a690dda895e",
+        "git_blob_sha": "f6f0aabd54ce6fd289116ab582e18e1595875412"
+      },
+      {
+        "path": "research/real_math/millennium/birch_swinnerton_dyer/09_trace/BSD_A1a1_PRE_CANDIDATE_TRACE_20260811.json",
+        "source_commit": "8bc7a9cf17adf347e5be13ab61a08a690dda895e",
+        "git_blob_sha": "98a48ae54531dde366d710b1bbcedafd46aac36d"
+      }
+    ],
+    "encoding": "ordered JSON array of path@git:commit@blob:sha strings serialized with sorted keys and compact separators",
+    "artifact_hash": "sha256:2381ff03aefaf8e1a3203d786aabf5d9c678e8552a10cc631c29c077f2a08a55"
+  },
+  "successors": [
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_TASK_EPISODE_CANONICAL_RETROSPECTIVE_V2_20260811.json",
+      "source_commit": "89ad0b01854bcd622a4cdb6001694b442869ffb6",
+      "git_blob_sha": "b29a30b5148c77f29db3daacba8cb75b61ec1869",
+      "raw_sha256": "sha256:574201836cf5a442795beede7a8314fd81c5365aac78fefdbf562bf231eeb5b5",
+      "artifact_hash": "sha256:bb98893433b8b71e5f63eddcdfcaad59279aaa3a261b5851fb487f9bf5b82d59",
+      "kind": "CANONICAL_TASK_EPISODE"
+    },
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_FAILURE_EXPERIENCE_LATTICE_V3_RETROSPECTIVE_20260811.json",
+      "source_commit": "89ad0b01854bcd622a4cdb6001694b442869ffb6",
+      "git_blob_sha": "08d4ed098c2552224cdcd09b6ed33694f19b01cc",
+      "raw_sha256": "sha256:b30917878406f7f274c15fc8523a7e0712b747e138b99f81d19e1c8df96e2df8",
+      "artifact_hash": "",
+      "kind": "CANONICAL_FAILURE_LATTICE"
+    },
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/09_trace/BSD_A1a1_RESEARCH_TRACE_RETROSPECTIVE_SUCCESSOR_20260811.json",
+      "source_commit": "0e337640c4e5d3cb6fddfa3c1d01cfc7705bccae",
+      "git_blob_sha": "c768f074ca9791ddbeb50fff074d7724760be462",
+      "raw_sha256": "sha256:df4a0ea5c5c3578d2fb5594713666403ea5ca3dd3105306e3d7f845e37850254",
+      "artifact_hash": "sha256:aa91b5d47d9807f0978cce920df136d032ba8bc39bb3e2a962660e9331b2436f",
+      "kind": "CANONICAL_FULL_TRACE",
+      "final_event_hash": "sha256:aa91b5d47d9807f0978cce920df136d032ba8bc39bb3e2a962660e9331b2436f"
+    },
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_RAKL_CYCLE_METRICS_20260811_R3_RETROSPECTIVE_SUCCESSOR.json",
+      "source_commit": "0e337640c4e5d3cb6fddfa3c1d01cfc7705bccae",
+      "git_blob_sha": "564af2337a7d9751eb0f071a9b33416ed4953640",
+      "raw_sha256": "sha256:d56a525bbe400afacbecb1d4639a14f08370d779478528583574eece88e0ad7e",
+      "artifact_hash": "sha256:1995f21405bbc4de4f563a8e3925ff37b3dd52908772e162013f3f965d8e1d55",
+      "kind": "METRICS_CHRONOLOGY_SUCCESSOR"
+    }
+  ],
+  "intermediate_successor_lineage": [
+    "first canonical episode and V2 failure lattice remain immutable but are superseded by stronger exact-trace bindings and narrower source language",
+    "R2 metrics remain immutable; R3 changes chronology only and does not remeasure carried values"
+  ],
+  "correction": {
+    "classification": "RETROSPECTIVE_SOURCE_BOUND_ROUTE_PRUNING",
+    "strict_discovery_credit": "NO_STRICT_DISCOVERY_CREDIT",
+    "root_authority": "ROOT_AUTHORITY_NONE",
+    "originals_preserved": true,
+    "repairs_original_chronology": false,
+    "mathematical_candidate_generated": false,
+    "next_candidate_gate": "FRESH_CONTEXT_MEMORY_TRACE_AND_DISCRIMINATOR_REQUIRED"
+  },
+  "authority_contract": {
+    "effective_authority": "RETROSPECTIVE_NEGATIVE_HISTORY_AND_SOURCE_SCOPE_ONLY",
+    "grants_strict_discovery_credit": false,
+    "grants_proof_authority": false,
+    "grants_root_authority": false,
+    "grants_theorem_authority": false,
+    "grants_novelty_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false,
+    "may_backfill_chronology": false,
+    "may_suppress_failure_warning": false
+  },
+  "non_guarantees": [
+    "does not prove or disprove BSD",
+    "does not establish literature-wide absence of a bridge theorem",
+    "does not promote a reusable research tool or framework method",
+    "does not make same-context assurance independent review"
+  ],
+  "artifact_hash": "sha256:27658dcc1dfe5dd583617eabc05c4e49059c2badc27056f58afeff6a4d9feaa8"
+}
