@@ -13,7 +13,7 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "4b6818b9dc179b522fa8fdd8ee16cd98856b331e"
+EXPECTED_FRAMEWORK_COMMIT = "242a39348291141d635a752b9e078fabdab011ea"
 HISTORICAL_F224_FRAMEWORK_COMMIT = "f224d91d9fbd2844a89921ca4a30b77a7954ecd2"
 HISTORICAL_4EE_FRAMEWORK_COMMIT = "4ee5e9afe77870c684b798e0ed4c9fcee62a4365"
 HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
@@ -78,7 +78,7 @@ def test_machine_readable_framework_pin_is_valid_and_loaded_exactly() -> None:
     ).stdout
     assert framework_status == ""
     assert pin["authority"] == (
-        "Dependency synchronization to exact RAKL origin/main 4b6818b9dc179b522fa8fdd8ee16cd98856b331e observed 2026-08-11; "
+        "Dependency synchronization to exact RAKL origin/main 242a39348291141d635a752b9e078fabdab011ea observed 2026-08-11; "
         "upstream full-suite status remains separately audited and grants no proof, research, review-independence, or method-evolution authority"
     )
 
