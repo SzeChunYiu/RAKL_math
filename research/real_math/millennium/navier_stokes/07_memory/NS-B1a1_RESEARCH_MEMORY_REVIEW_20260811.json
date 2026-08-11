@@ -1,0 +1,48 @@
+{
+  "target_atom_id": "NS-B1a1",
+  "target_context_hash": "sha256:40c18e9e9975e6f7f972168c8701370c52fe06c567d51b3cc4517c1de4666141",
+  "tool_inventory_snapshot_hash": "sha256:9bf365a1313cb3f47eab2bba280dd4899a23573f28d3bb2de436978d6d0735f0",
+  "failure_lattice_snapshot_hash": "sha256:8aaef990b332d9ae43a31db6fd45b78dcaf2646f264e7cd1084eb946ad853a0f",
+  "tool_query_status": "NO_RELEVANT_MATCH",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "absolute local-energy shell accounting",
+    "signed/telescoping local-energy increment",
+    "annular renewal/no-core-recycling",
+    "minimal-element almost-periodicity modulo translation/dilation",
+    "backward-uniqueness or L3-sequence rigidity bridge"
+  ],
+  "relevant_tool_ids": [],
+  "relevant_failure_ids": [
+    "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+    "NS-B1a1-SRC001-TERMINAL-SCALE-TRANSFER-BLOCKED"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "No current main ResearchTool has preconditions matching a finite-I mild bounded ancient Navier-Stokes solution together with a scale-descendant termination theorem.",
+    "The cross-Millennium root-bridge audit is useful only as research-control structure and is not imported as PDE mathematics.",
+    "Published local-energy, compactness and backward-uniqueness arguments remain source methods, not promoted RAKL tools."
+  ],
+  "failure_reuse_notes": [
+    "F-NS-B1a-C001-PRESSURE-SUMMABILITY applies directly to this target only for the instantaneous absolute far-field pressure subterm: it blocks reusing raw nonlocal pressure divergence as the missing scale currency, while signed/time-integrated pressure work remains live.",
+    "The Shahmurov terminal-scale audit applies directly as a provenance warning: a strictly smaller physical scale is not a well-founded exit on the dyadic chain, so NS-B1a1 must prove a finite charge or another rigidity coordinate rather than assume a minimal scale.",
+    "DifferenceWitness: the present atom is not another source-order audit; it tests the genuine Navier-Stokes local-energy balance and exact scale homogeneity. A negative result here is therefore new target-specific evidence, not literal transfer from the prior logical failure."
+  ],
+  "unresolved_warnings": [
+    "Absolute scale-critical estimates can be uniformly bounded and still accumulate over infinitely many scale descents.",
+    "Disjoint annuli do not automatically create a finite critical budget because normalization changes with scale and nested core content can be reused.",
+    "A moving center or translated profile can evade a fixed-shell charging rule.",
+    "Pressure normalization and harmonic/far-field pieces must remain explicit.",
+    "Backward uniqueness remains unavailable until its global terminal/far-field hypotheses are actually generated.",
+    "No candidate should be proposed before the seven-event pre-candidate trace is complete."
+  ],
+  "evidence_pointers": [
+    "RAKL@15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3:src/rakl/math_context.py",
+    "RAKL@15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3:src/rakl/research_memory.py",
+    "RAKL@15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3:src/rakl/research_trace.py",
+    "RAKL_math@02cf72656e9da055ae9c3af173ca2207e03b3872:research/real_math/millennium/navier_stokes/07_memory/NS-B1a_C001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "RAKL_math#43",
+    "Albritton-Barker arXiv:1811.00502"
+  ],
+  "artifact_hash": "sha256:df92460dc72f34205ce8eb703c56e1efb1440f95ba935d70e74330d1cfa9aa25"
+}
