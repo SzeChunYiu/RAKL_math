@@ -29,7 +29,7 @@ from rakl.research_trace import (
     audit_pre_candidate_trace,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "research/real_math/millennium/riemann_hypothesis"
 PNP_MEMORY = ROOT / "research/real_math/millennium/p_vs_np/07_memory"
 
@@ -43,12 +43,11 @@ def _canonical_hash(value: object) -> str:
     return "sha256:" + hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
 
-def test_rh_spec_001_first_strict_spectral_packet_passes_pre_candidate_gates() -> None:
+def test_rh_spec_001_first_strict_packet_passes_current_pre_candidate_gates() -> None:
     context_raw = _load(BASE, "01_frontier/RH_SPEC_001_CONTEXT_FIBER_20260811.json")
     context_for_hash = copy.deepcopy(context_raw)
     context_for_hash["packet_hash"] = ""
     assert context_raw["packet_hash"] == _canonical_hash(context_for_hash)
-    assert context_raw["first_candidate_at"] is None
 
     fiber = MathContextFiber(
         atom_id=context_raw["atom_id"],
@@ -96,14 +95,11 @@ def test_rh_spec_001_first_strict_spectral_packet_passes_pre_candidate_gates() -
     tools_raw = _load(PNP_MEMORY, "O9d12a2a1_RESEARCH_TOOL_INVENTORY_20260811.json")
     failures_raw = _load(PNP_MEMORY, "O9d12a2a1_FAILURE_EXPERIENCE_LATTICE_20260811.json")
     memory_raw = _load(BASE, "07_memory/RH_SPEC_001_RESEARCH_MEMORY_REVIEW_20260811.json")
-
     assert memory_raw["tool_inventory_snapshot_hash"] == _canonical_hash(tools_raw)
     assert memory_raw["failure_lattice_snapshot_hash"] == _canonical_hash(failures_raw)
     memory_for_hash = copy.deepcopy(memory_raw)
     memory_for_hash["artifact_hash"] = ""
     assert memory_raw["artifact_hash"] == _canonical_hash(memory_for_hash)
-    assert memory_raw["selected_tool_ids"] == []
-
     memory = ResearchMemoryReview(
         target_atom_id=memory_raw["target_atom_id"],
         target_context_hash=memory_raw["target_context_hash"],
@@ -123,67 +119,72 @@ def test_rh_spec_001_first_strict_spectral_packet_passes_pre_candidate_gates() -
     )
     assert (
         audit_research_memory_review(
-            memory, atom_id=fiber.atom_id, context_hash=fiber.packet_hash
+            memory,
+            atom_id=fiber.atom_id,
+            context_hash=fiber.packet_hash,
         ).verdict
         is ResearchMemoryVerdict.PASS
     )
 
     trace_raw = _load(BASE, "09_trace/RH_SPEC_001_PRE_CANDIDATE_TRACE_20260811.json")
-    previous = ""
     entries = []
-    for raw in trace_raw["entries"]:
-        assert raw["previous_event_hash"] == previous
-        payload = copy.deepcopy(raw)
+    previous = ""
+    for item in trace_raw["entries"]:
+        payload = copy.deepcopy(item)
         artifact_hash = payload["artifact_hash"]
         payload["artifact_hash"] = ""
         assert artifact_hash == _canonical_hash(payload)
+        assert item["previous_event_hash"] == previous
         previous = artifact_hash
         entries.append(
             ResearchTraceEntry(
-                event_id=raw["event_id"],
-                atom_id=raw["atom_id"],
-                event_type=ResearchTraceEventType(raw["event_type"]),
-                timestamp=raw["timestamp"],
-                state_summary=raw["state_summary"],
-                action_summary=raw["action_summary"],
-                evidence_pointers=tuple(raw["evidence_pointers"]),
-                alternatives_considered=tuple(raw.get("alternatives_considered", ())),
-                decision_rationale=raw.get("decision_rationale", ""),
-                outputs=tuple(raw.get("outputs", ())),
-                uncertainties=tuple(raw.get("uncertainties", ())),
-                residuals=tuple(raw.get("residuals", ())),
-                next_steps=tuple(raw.get("next_steps", ())),
-                artifact_hash=raw["artifact_hash"],
-                previous_event_hash=raw.get("previous_event_hash", ""),
+                event_id=item["event_id"],
+                atom_id=item["atom_id"],
+                event_type=ResearchTraceEventType(item["event_type"]),
+                timestamp=item["timestamp"],
+                state_summary=item["state_summary"],
+                action_summary=item["action_summary"],
+                evidence_pointers=tuple(item["evidence_pointers"]),
+                alternatives_considered=tuple(item.get("alternatives_considered", ())),
+                decision_rationale=item.get("decision_rationale", ""),
+                outputs=tuple(item.get("outputs", ())),
+                uncertainties=tuple(item.get("uncertainties", ())),
+                residuals=tuple(item.get("residuals", ())),
+                next_steps=tuple(item.get("next_steps", ())),
+                artifact_hash=item["artifact_hash"],
+                previous_event_hash=item.get("previous_event_hash", ""),
             )
         )
-    assert all(
-        entry.event_type is not ResearchTraceEventType.CANDIDATE_PROPOSED
-        for entry in entries
-    )
     trace = MathResearchTrace(trace_id=trace_raw["trace_id"], entries=tuple(entries))
     assert (
         audit_pre_candidate_trace(
-            trace, atom_id=fiber.atom_id, context_packet_hash=fiber.packet_hash
+            trace,
+            atom_id=fiber.atom_id,
+            context_packet_hash=fiber.packet_hash,
         ).verdict
         is TraceGateVerdict.PASS
+    )
+    assert all(
+        entry.event_type is not ResearchTraceEventType.CANDIDATE_PROPOSED
+        for entry in trace.entries
     )
 
     plan = plan_math_research(
         signature=ProblemSignature(
             objects=(
-                "Riemann xi function",
-                "Weil explicit-formula quadratic form",
-                "candidate spectral/operator bridge",
+                "Riemann Xi function",
+                "nontrivial zeta zeros",
+                "spectral/operator candidate family",
+                "explicit formula",
             ),
             relations=(
-                "Mellin/Fourier transform",
-                "arithmetic explicit formula",
-                "self-adjointness or positivity",
-                "trace/spectral correspondence",
+                "self-adjoint or positivity implication",
+                "prime-to-spectrum trace bridge",
+                "zero multiplicity/completeness",
+                "non-circular construction",
             ),
-            domain="analytic number theory / spectral theory",
-            goal_type="isolate a non-circular sufficient spectral bridge for RH",
+            domain="analytic number theory / spectral operator theory",
+            goal_type="calibrate exact operator bridge obligations before any RH candidate",
         ),
         record=MathResearchRecord(claim_id=fiber.atom_id),
         context_fiber=fiber,

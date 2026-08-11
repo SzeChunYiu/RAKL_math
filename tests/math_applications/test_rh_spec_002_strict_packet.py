@@ -30,7 +30,7 @@ from rakl.research_trace import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "research/real_math/millennium/riemann_hypothesis"
 PNP_MEMORY = ROOT / "research/real_math/millennium/p_vs_np/07_memory"
 
