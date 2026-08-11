@@ -1,8 +1,8 @@
 # XM007 — state-projection congruence audit from P-vs-NP to Hodge witness reachability
 
-**Application base:** `RAKL_math@6557b1b25fa839fe71aba8047c958d5da892edd8`  
-**Framework inspected first:** `RAKL@bd1a2768f0f474ff44ffa25243241f94bfaf6466`  
-**Framework execution pin on application main:** `bd1a2768f0f474ff44ffa25243241f94bfaf6466`  
+**Application base:** `RAKL_math@6557b1b25fa839fe71aba8047c958d5da892edd8`
+**Framework inspected first:** `RAKL@bd1a2768f0f474ff44ffa25243241f94bfaf6466`
+**Framework execution pin on application main:** `bd1a2768f0f474ff44ffa25243241f94bfaf6466`
 **Authority:** `SEARCH_CONTROL_ONLY / NO_HODGE_THEOREM / NO_PNP_LOWER_BOUND / NO_FRAMEWORK_PROMOTION / SAME_CONTEXT_INTERNAL_REVIEW`
 
 ## Question
