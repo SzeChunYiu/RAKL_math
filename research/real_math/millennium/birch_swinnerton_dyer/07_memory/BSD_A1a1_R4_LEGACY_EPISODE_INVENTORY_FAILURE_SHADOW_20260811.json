@@ -1,0 +1,21 @@
+{
+  "schema_version": "bsd-v3-process-failure-shadow-v1",
+  "artifact_type": "PROCESS_FAILURE_EXPERIENCE_SHADOW",
+  "failure_id": "F-BSD-A1A1-LEGACY-EPISODE-INVENTORY-SCANNER-COLLISION-R4",
+  "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "episode_lineage_id": "EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4",
+  "authority": "OBSERVED_ONLY_NO_FRAMEWORK_AUTHORITY",
+  "category": ["VERIFICATION_TOOLING", "META_POLICY_COMPATIBILITY"],
+  "trigger": "Pinned RAKL_math application suite scanned every research/*.json object with top-level episode_id against a historical frozen episode inventory and rejected newly written proposal/shadow records.",
+  "observed_ci": "workflow 31522995303 on PR #142 head 9dbbaca7561b7841623145009db67c23d714fb9d: 1 failed, 458 passed; sole failure test_episode_inventory_is_the_exact_frozen_19_object_audit; extra paths were the R4 extended TaskEpisode shadow and failure shadow.",
+  "diagnosis": "The stale application pin predates current RAKL content-bound TaskEpisode storage/admission separation. The legacy scanner conflates a JSON key/path discovery heuristic with canonical inventory membership.",
+  "repair": "Do not weaken or modify the frozen inventory gate. Preserve an exact current-schema TaskEpisode as a proposal-shadow companion plus a content-bound PROPOSAL_SHADOW_STORED admission receipt; store these companions in non-.json evidence containers so the legacy JSON heuristic is not used as authority, and remove top-level episode_id from non-TaskEpisode extended/failure JSON records. Current authority remains determined by content/hash/storage status, not filename.",
+  "current_framework_feature_used": "SzeChunYiu/RAKL@3299072b410ac9136548dfd103e846fc7656c31e: task-episode storage_admission and episode_admission.py separation between PROPOSAL_SHADOW_STORED and CANONICAL_INVENTORY_ADMITTED.",
+  "protected_authority_granted": false,
+  "mathematical_effect": "NONE",
+  "learning_effect": "No EXPERIENCE_PATTERN or META_METHOD novelty is counted from this one repair; raw CI/repository activity is not learning.",
+  "prior_process_links": ["R3 stale execution-pin warning in EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3"],
+  "next_action": "Keep shadow/current-schema evidence content-bound; synchronize the application framework pin only through the dedicated application-pin process, not inside this BSD research PR.",
+  "recorded_at_utc": "2026-08-11T18:36:00Z",
+  "artifact_hash": "sha256:35a74796b53174770edfda6cd6a31f1a9157d09bf2c7c4aceb3b70a5df51d4e4"
+}
