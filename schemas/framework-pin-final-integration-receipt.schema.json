@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/framework-pin-final-integration-receipt.schema.json",
+  "title": "Framework Pin Final Integration Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "receipt_id", "recorded_at", "predecessor_receipt",
+    "application_integration", "framework_delta", "chronology", "verification",
+    "supersession_scope", "non_guarantees", "authority", "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"type": "string", "minLength": 1},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "predecessor_receipt": {
+      "type": "object", "additionalProperties": false,
+      "required": ["commit", "path", "git_blob_sha", "raw_sha256", "artifact_hash", "preserved_immutable", "known_defects"],
+      "properties": {
+        "commit": {"$ref": "#/$defs/gitSha"},
+        "path": {"type": "string", "minLength": 1},
+        "git_blob_sha": {"$ref": "#/$defs/gitSha"},
+        "raw_sha256": {"$ref": "#/$defs/sha256"},
+        "artifact_hash": {"$ref": "#/$defs/sha256"},
+        "preserved_immutable": {"const": true},
+        "known_defects": {
+          "type": "array", "minItems": 2,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "application_integration": {
+      "type": "object", "additionalProperties": false,
+      "required": ["pre_refresh_pr_head", "live_main_commit", "live_main_tree", "local_integration_merge_commit", "prerequisite_merges", "historical_artifact_files_changed"],
+      "properties": {
+        "pre_refresh_pr_head": {"$ref": "#/$defs/gitSha"},
+        "live_main_commit": {"$ref": "#/$defs/gitSha"},
+        "live_main_tree": {"$ref": "#/$defs/gitSha"},
+        "local_integration_merge_commit": {"$ref": "#/$defs/gitSha"},
+        "prerequisite_merges": {
+          "type": "object", "additionalProperties": false,
+          "required": ["pr79_merge", "pr84_merge"],
+          "properties": {
+            "pr79_merge": {"$ref": "#/$defs/gitSha"},
+            "pr84_merge": {"$ref": "#/$defs/gitSha"}
+          }
+        },
+        "historical_artifact_files_changed": {
+          "type": "array", "maxItems": 0
+        }
+      }
+    },
+    "framework_delta": {
+      "type": "object", "additionalProperties": false,
+      "required": ["previous_commit", "current_commit", "previous_tree", "current_tree", "commits_between", "changed_files", "commit_count_command", "changed_file_count_command"],
+      "properties": {
+        "previous_commit": {"$ref": "#/$defs/gitSha"},
+        "current_commit": {"$ref": "#/$defs/gitSha"},
+        "previous_tree": {"$ref": "#/$defs/gitSha"},
+        "current_tree": {"$ref": "#/$defs/gitSha"},
+        "commits_between": {"const": 113},
+        "changed_files": {"const": 635},
+        "commit_count_command": {"type": "string", "minLength": 1},
+        "changed_file_count_command": {"type": "string", "minLength": 1}
+      }
+    },
+    "chronology": {
+      "type": "object", "additionalProperties": false,
+      "required": ["integration_merge_created_at", "verification_completed_at", "final_receipt_frozen_after_verification"],
+      "properties": {
+        "integration_merge_created_at": {"type": "string", "format": "date-time"},
+        "verification_completed_at": {"type": "string", "format": "date-time"},
+        "final_receipt_frozen_after_verification": {"const": true}
+      }
+    },
+    "verification": {
+      "type": "object", "additionalProperties": false,
+      "required": ["subject_commit", "command", "tests_passed", "exit_code", "github_check", "pin_equals_gitlink", "framework_authority_paths_clean", "status"],
+      "properties": {
+        "subject_commit": {"$ref": "#/$defs/gitSha"},
+        "command": {"const": "python tools/run_application_tests.py --framework framework/RAKL"},
+        "tests_passed": {"const": 302},
+        "exit_code": {"const": 0},
+        "github_check": {
+          "type": "object", "additionalProperties": false,
+          "required": ["name", "conclusion", "completed_at", "url"],
+          "properties": {
+            "name": {"const": "application-tests"},
+            "conclusion": {"const": "SUCCESS"},
+            "completed_at": {"type": "string", "format": "date-time"},
+            "url": {"type": "string", "format": "uri"}
+          }
+        },
+        "pin_equals_gitlink": {"const": true},
+        "framework_authority_paths_clean": {"const": true},
+        "status": {"const": "PASS_EXACT_APPLICATION_SUITE_ON_INTEGRATED_BASE"}
+      }
+    },
+    "supersession_scope": {
+      "type": "object", "additionalProperties": false,
+      "required": ["effect", "predecessor_rewritten", "historical_framework_bindings_reinterpreted"],
+      "properties": {
+        "effect": {"const": "FINAL_INTEGRATION_PROVENANCE_ONLY"},
+        "predecessor_rewritten": {"const": false},
+        "historical_framework_bindings_reinterpreted": {"const": false}
+      }
+    },
+    "non_guarantees": {
+      "type": "array", "minItems": 3,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "authority": {"const": "DEPENDENCY_SYNC_AND_EXECUTABLE_CONFORMANCE_ONLY / NO_MATHEMATICAL_AUTHORITY_CHANGE"},
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "gitSha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}
