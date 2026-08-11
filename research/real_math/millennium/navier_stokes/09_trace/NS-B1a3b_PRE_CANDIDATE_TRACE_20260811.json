@@ -1,0 +1,85 @@
+{
+  "schema_version": "math-research-trace-v3-proposal-shadow",
+  "atom_id": "NS-B1a3b",
+  "candidate_id": "NS-B1a3b-C001",
+  "parent_trace_anchor": "git:b18fcd35855d67962e28036f4a445ab24d0c4406",
+  "events": [
+    {
+      "event_id": "NS-B1a3b-E0",
+      "kind": "ATOMIZED",
+      "payload": {
+        "atom_id": "NS-B1a3b",
+        "parent_atom_id": "NS-B1a3",
+        "problem_signature": ["Type-I finite-I ancient compactness", "vorticity-direction geometric depletion", "transport stability of xi=curl(u)/|curl(u)|"]
+      },
+      "previous_event_hash": "git:b18fcd35855d67962e28036f4a445ab24d0c4406",
+      "artifact_hash": "sha256:aa2c908fb1e95708277df078bd5b8a3d7b551d37d5e1779df213355d12e3dd83"
+    },
+    {
+      "event_id": "NS-B1a3b-E1",
+      "kind": "CONTEXT_FROZEN",
+      "payload": {
+        "context_hash": "sha256:91eb597a06cb3f8ee7ccd4d2e617a16d137b3b200bccfa4ca0d3fb2d3cd33e75",
+        "context_path": "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3b_CONTEXT_FIBER_20260811.json"
+      },
+      "previous_event_hash": "sha256:aa2c908fb1e95708277df078bd5b8a3d7b551d37d5e1779df213355d12e3dd83",
+      "artifact_hash": "sha256:5414ded3ea4b8eaf6f3a5cc7fef5aec7fc608ce56905b56b0447376ea1367594"
+    },
+    {
+      "event_id": "NS-B1a3b-E2",
+      "kind": "ANALOGY_SCAN",
+      "payload": {"status": "BRIDGES_RETAINED", "bridge": "signal-processing differentiated-orientation stability", "authority": "proposal_only"},
+      "previous_event_hash": "sha256:5414ded3ea4b8eaf6f3a5cc7fef5aec7fc608ce56905b56b0447376ea1367594",
+      "artifact_hash": "sha256:ec46555a38bd335378e6cbc824ee08b0cdac572683bb4b20c62a3d7887b5d847"
+    },
+    {
+      "event_id": "NS-B1a3b-E3",
+      "kind": "METHOD_TRANSFER_REVIEW",
+      "payload": {
+        "retained": ["CF-VORTICITY-DIRECTION-COHERENCE", "AB-COMPACT", "NS-R001b counterexample-first calibration"],
+        "minimum_repair": "strong-vorticity/orientation compactness plus high-vorticity nondegeneracy or an exact PDE stability theorem"
+      },
+      "previous_event_hash": "sha256:ec46555a38bd335378e6cbc824ee08b0cdac572683bb4b20c62a3d7887b5d847",
+      "artifact_hash": "sha256:cd86a41d6dd0822c095fb33581e544a36610f11b1f1dd18e9c241f5a698fef0c"
+    },
+    {
+      "event_id": "NS-B1a3b-E4",
+      "kind": "EXPERT_CONTEXT_REVIEW",
+      "payload": {
+        "review_path": "research/real_math/millennium/navier_stokes/08_reviews/NS-B1a3b_EXPERT_CONTEXT_REVIEW_20260811.md",
+        "verdict": "PROCEED_COUNTEREXAMPLE_FIRST_INTERFACE_TEST",
+        "independence": "same_context_only"
+      },
+      "previous_event_hash": "sha256:cd86a41d6dd0822c095fb33581e544a36610f11b1f1dd18e9c241f5a698fef0c",
+      "artifact_hash": "sha256:a8232db1ced458e555bbf9bc74f6b56c4a876cc9efb79ff0168918c1aad9c4bf"
+    },
+    {
+      "event_id": "NS-B1a3b-E5",
+      "kind": "EXPERIENCE_MEMORY_REVIEW",
+      "payload": {
+        "memory_path": "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b_RESEARCH_MEMORY_REVIEW_20260811.json",
+        "selected_success": ["CF-VORTICITY-DIRECTION-COHERENCE", "AB-COMPACT", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+        "selected_failures": ["F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP", "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH", "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"]
+      },
+      "previous_event_hash": "sha256:a8232db1ced458e555bbf9bc74f6b56c4a876cc9efb79ff0168918c1aad9c4bf",
+      "artifact_hash": "sha256:a25938bc5eaa10e0b0656a393ad35a8ab58eecb6748ba1ff82bec81cde09aaca"
+    },
+    {
+      "event_id": "NS-B1a3b-E6",
+      "kind": "NEXT_STEP_PROPOSED",
+      "payload": {
+        "candidate_id": "NS-B1a3b-C001",
+        "action": "test whether stored local velocity compactness plus bounded first-derivative energy transports vorticity direction",
+        "falsifier": "curl of n^-2 cutoff vector potential with rotating phase",
+        "alternatives_rejected": ["direct new coherence estimate", "pointwise alignment proxy", "pressure-first route"],
+        "expected_discriminator": "either explicit oscillatory sequence passes all topology controls and defeats xi compactness, or the construction violates a load-bearing compactness/PDE constraint that identifies the missing restriction"
+      },
+      "previous_event_hash": "sha256:a25938bc5eaa10e0b0656a393ad35a8ab58eecb6748ba1ff82bec81cde09aaca",
+      "artifact_hash": "sha256:6560dd9a88cfb75241aee94843a96548b68026f0ba3db684473ccab92789273a"
+    }
+  ],
+  "final_event_hash": "sha256:6560dd9a88cfb75241aee94843a96548b68026f0ba3db684473ccab92789273a",
+  "candidate_generation_allowed": true,
+  "root_promotion_allowed": false,
+  "authority": "PROPOSAL_SHADOW_TRACE_ONLY"
+}
