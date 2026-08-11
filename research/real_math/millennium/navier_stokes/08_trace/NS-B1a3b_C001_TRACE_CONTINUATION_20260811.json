@@ -1,0 +1,112 @@
+{
+  "schema_version": "hash-chained-research-trace-continuation-v1-proposal-shadow",
+  "atom_id": "NS-B1a3b",
+  "starts_from_event_hash": "sha256:31e329432e282e304feade437ab46352dae20488d4d6e7a9f49287d74ae1f2be",
+  "events": [
+    {
+      "sequence_index": 7,
+      "event_type": "CANDIDATE_CONSTRUCTED",
+      "payload": {
+        "candidate_id": "NS-B1a3b-C001",
+        "claim_type": "source-derived Type-I blow-up classification",
+        "criterion": "for fixed d, finite integral ||grad zeta||_infty^2 dt excludes Type-I blow-up"
+      },
+      "prev_event_hash": "31e329432e282e304feade437ab46352dae20488d4d6e7a9f49287d74ae1f2be",
+      "event_hash": "sha256:51eb8ac419834fc516f5168dcab554cf120f48f9941196cde5f4c0dd06d73a94"
+    },
+    {
+      "sequence_index": 8,
+      "event_type": "FALSIFIER_APPLIED",
+      "payload": {
+        "checks": [
+          "whole-space Type-I mild signature",
+          "threshold transport",
+          "direction only off vorticity zeros",
+          "nontrivial limiting vorticity",
+          "2D Liouville hypotheses",
+          "no hidden global L3/backward uniqueness",
+          "finite-I inheritance not assumed"
+        ]
+      },
+      "prev_event_hash": "51eb8ac419834fc516f5168dcab554cf120f48f9941196cde5f4c0dd06d73a94",
+      "event_hash": "sha256:2e25573db10e2f97c87f2341fa95df0fe9a40403202e64104117604cb31cf09c"
+    },
+    {
+      "sequence_index": 9,
+      "event_type": "RESULT_OBSERVED",
+      "payload": {
+        "outcome": "PARTIAL_SUCCESS",
+        "result": "Type-I blow-up implies critical directional-gradient divergence for every d>0 and loss of any uniform spatial modulus on every high-vorticity threshold",
+        "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+      },
+      "prev_event_hash": "2e25573db10e2f97c87f2341fa95df0fe9a40403202e64104117604cb31cf09c",
+      "event_hash": "sha256:aca4ca9bb8730b51983e948eeead5c60effb71daf8b85930fa42ec81890327b4"
+    },
+    {
+      "sequence_index": 10,
+      "event_type": "RESIDUAL_RECORDED",
+      "payload": {
+        "residual": [
+          "finite-I -> GM geometry remains unproved",
+          "NS-B1a3b1 directional angular-cascade classification",
+          "Type-II unchanged"
+        ]
+      },
+      "prev_event_hash": "aca4ca9bb8730b51983e948eeead5c60effb71daf8b85930fa42ec81890327b4",
+      "event_hash": "sha256:0559284463cb9fbb82d2c53d3193c903b74986737171086136c68833c5033282"
+    },
+    {
+      "sequence_index": 11,
+      "event_type": "FAILURE_EXPERIENCE_RECORDED",
+      "payload": {
+        "failure_id": "F-NS-B1a3b-DIRECTIONAL-INHERITANCE-UNPROVED",
+        "diagnosis_status": "OBSERVED_ONLY",
+        "obstruction_id": "O-NS-B1a3b-DIRECTIONAL-INHERITANCE-INTERFACE",
+        "obstruction_status": "PROPOSAL_ONLY"
+      },
+      "prev_event_hash": "0559284463cb9fbb82d2c53d3193c903b74986737171086136c68833c5033282",
+      "event_hash": "sha256:336692c05cce7883df20e7e9f57a05a8712e8ef85662ac918bb987ce9a260496"
+    },
+    {
+      "sequence_index": 12,
+      "event_type": "SATURATION_RECORDED",
+      "payload": {
+        "retained_axes": {
+          "KNOWLEDGE": 1,
+          "OPERATOR": 0,
+          "EXPERIENCE_PATTERN": 0,
+          "OBSTRUCTION": 0,
+          "RELATION": 1,
+          "PATH": 1,
+          "META_METHOD": 0
+        },
+        "reopened": [
+          "KNOWLEDGE",
+          "RELATION",
+          "PATH"
+        ],
+        "flattened": [
+          "OPERATOR",
+          "EXPERIENCE_PATTERN",
+          "OBSTRUCTION",
+          "META_METHOD"
+        ]
+      },
+      "prev_event_hash": "336692c05cce7883df20e7e9f57a05a8712e8ef85662ac918bb987ce9a260496",
+      "event_hash": "sha256:425f3727d243ba857fd9d9f2a8f59968093198148328e14ffadfc1e9b73a8061"
+    },
+    {
+      "sequence_index": 13,
+      "event_type": "ROOT_GATE_CHECKED",
+      "payload": {
+        "root_authority": "NONE",
+        "review_independence": "NOT_INDEPENDENT",
+        "type_I_status": "CLASSIFIED_NOT_EXCLUDED",
+        "type_II_status": "UNTOUCHED"
+      },
+      "prev_event_hash": "425f3727d243ba857fd9d9f2a8f59968093198148328e14ffadfc1e9b73a8061",
+      "event_hash": "sha256:46a16b936fa146724bbb094a2c45d94c75b7c4feae9eec4a32363372e62bb79d"
+    }
+  ],
+  "final_event_hash": "sha256:46a16b936fa146724bbb094a2c45d94c75b7c4feae9eec4a32363372e62bb79d"
+}
