@@ -1,0 +1,71 @@
+{
+  "schema": "RAKL_v3_shadow_experience_bundle",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "task_episode": {
+    "record_type": "TaskEpisode",
+    "mode": "proposal_shadow",
+    "episode_id": "EP-RH-ANA-003-PRIME-TAIL-20260811",
+    "problem_signature": "RH-ANA-003|EXACT_ARITHMETIC_LI_PRIME_ARCHIMEDEAN_UNIFORM_TAIL",
+    "active_atom": "RH-ANA-003",
+    "fibre_hash": "sha256:2b9b258dab05571249e0af3886f5975700f73d42767b50069d778b2ef5b2581b",
+    "fibre_contents_consulted": ["00_problem_contract/canonical_statement.md","02_problem_dag/RH_ANA_003.yaml","07_memory/RH_ANA_002_RESEARCH_MEMORY_REVIEW_20260811.json","GitHub issue #3 negative history","Bombieri-Lagarias 1999 Theorem 2 / explicit formula","Guth-Maynard 2026 zero-density theorem","Conrey-Farmer-Kwan-Lin-Turnage-Butterbaugh short-mollifier theorem","Voros 2006 Li-growth contrast"],
+    "methods_operators_motifs": ["Bombieri-Lagarias exact arithmetic explicit formula","renormalized-prime-tail subtraction identity","Guth-Maynard zero-density contrast","short-mollifier positive-proportion contrast","Voros Li-growth contrast","single-exception hostile model","alternating-binomial remainder hostile model"],
+    "retrieved_experience": {
+      "success_ids": [],
+      "failure_ids": ["F-RH-ANA-001-FINITE-LI-PREFIX","F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE","F-XM001-POINTWISE-GAP-COLLAPSE"],
+      "tool_ids": ["T-RH-LI-PREFIX-QUARTET-CALIBRATION","T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+      "episode_ids": ["EP-RH-ANA-002-SUZUKI-FAITHFULNESS-20260811"],
+      "selected_ids": ["F-RH-ANA-001-FINITE-LI-PREFIX","F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE","T-RH-LI-PREFIX-QUARTET-CALIBRATION"],
+      "rejected_ids": [{"id":"T-XM-ROOT-BRIDGE-STABILITY-AUDIT","reason":"retained only as an audit pattern; DifferenceWitness separates cutoff-limit stability from exact arithmetic tail control"},{"id":"F-XM001-POINTWISE-GAP-COLLAPSE","reason":"structural warning only; no RH theorem authority"}],
+      "missed_later_found": []
+    },
+    "decision_policy": {
+      "pre_memory_preference": "zero-density + mollifier hybrid to squeeze exceptional off-line zeros",
+      "post_memory_route": "exact Bombieri-Lagarias arithmetic formula + sparse-exception falsifier + binomial-tail audit",
+      "reason": "RH-ANA-001 and RH-ANA-002 already diagnose finite-prefix and surrogate-faithfulness globalization losses; rotate to the registered exact arithmetic residual.",
+      "candidate_generation": "proposal-only; no breakthrough authority"
+    },
+    "observations": [
+      "Bombieri-Lagarias Theorem 2 expresses lambda_n through an alternating binomial transform of renormalized prime-power limits plus exact zeta(j)/archimedean corrections; a finite prime sum is not the theorem.",
+      "With C_j(X)=sum_{m<=X} Lambda(m)(log m)^(j-1)/m-(log X)^j/j and R_j(X)=C_j-C_j(X), the cutoff error is Delta_n(X)=-sum_{j=1}^n (-1)^(j-1) binom(n,j) R_j(X)/(j-1)!. Thus root-relevant truncation control must be aggregate and uniform over j<=n and n.",
+      "For fixed sigma<1, Guth-Maynard's exponent 30(1-sigma)/13 is positive, so its density upper bound is logically compatible with any fixed finite exceptional set and cannot alone eliminate one off-line zero.",
+      "A positive-proportion/density-one critical-line result likewise does not exclude finitely many exceptions without an integrality-tight or pointwise bridge; the short-mollifier theorem is positive-proportion, not an all-zero theorem.",
+      "Voros gives a contrastive RH-false Li-growth signature, but a proof still needs an unconditional global growth exclusion."
+    ],
+    "verification": [
+      {"id":"V-RH-ANA-003-01","type":"algebraic_source_bound","performed":"subtract exact Bombieri-Lagarias formula from its cutoff substitution; non-prime terms cancel","result":"PASS_LOCAL"},
+      {"id":"V-RH-ANA-003-02","type":"logical_countermodel","performed":"fixed K exceptional zeros remain compatible with T^{a+o(1)} when a>0","result":"PASS_LOCAL"},
+      {"id":"V-RH-ANA-003-03","type":"source_provenance","performed":"primary statements checked; Bombieri-Lagarias PDF theorem pages visually inspected","result":"PASS_SOURCE_BOUND"}
+    ],
+    "outcome": "PARTIAL_PROGRESS_DIAGNOSTIC_ONLY",
+    "residual_before": "Unknown exact all-n prime/archimedean cancellation or tail mechanism beneath RH-ANA-003.",
+    "residual_after": "Need a source-valid per-zero amplification/integrality-tight exclusion or a signed aggregate renormalized-tail bound uniform in n and j<=n; average density/proportion and fixed-j/fixed-cutoff estimates do not close the root bridge.",
+    "failure_category": {"local_mathematical_failure":"NONE","local_to_global_gluing_failure":"PRIMARY","secondary":["representation","verification"],"not_failure":["source","provenance","tooling"]},
+    "cost_effort_proxy": {"pdf_screenshot_pages":3,"exact_tokens":"CANNOT_MEASURE: runtime exposes no exact token/context counter","aggregate_connector_calls":"CANNOT_MEASURE: no reliable aggregate call ledger survives runtime compaction"},
+    "next_action": "Open RH-ANA-003a as proposal-only PER_ZERO_AMPLIFIER_OR_UNIFORM_TAIL discriminator.",
+    "novelty_class": "compositional",
+    "authority": "PROPOSAL_SHADOW_ONLY",
+    "artifact_hash": "sha256:5595d402f3038ff433ac3b733529a08d166ce17644f8b989831a7b786f12f0e8"
+  },
+  "diagnosis": {
+    "diagnosis_id": "DX-RH-ANA-003-20260811",
+    "episode_id": "EP-RH-ANA-003-PRIME-TAIL-20260811",
+    "claim": "The active analytic route currently fails at exact globalization, not at the locally verified density, mollifier, or arithmetic identities: averaged exceptional-set control does not imply zero exceptions, and finite/fixed-j prime control is unstable under the all-index alternating-binomial transform without a uniform signed tail theorem.",
+    "typed_failures": ["F-RH-ANA-003-SPARSE-EXCEPTION-GLUING","F-RH-ANA-003-BINOMIAL-TAIL-GLUING"],
+    "route_effect": "rotate from generic tightening of averaged estimates toward a per-zero/integrality-tight bridge or exact uniform-tail discriminator",
+    "artifact_hash": "sha256:03c6b0f5121cd4f9e88408596ddd8096accc0d40b324bf5b6bd09785da6a8ef1"
+  },
+  "obstructions": [
+    {"obstruction_id":"O-RH-ANA-003-SPARSE-EXCEPTION-BLINDNESS","kind":"local_to_global_gluing","statement":"Any bound whose permitted exceptional count tends to infinity with height remains compatible with a fixed finite off-line exceptional set; an exact RH bridge must reach zero exceptions.","artifact_hash":"sha256:3e09291e5d8610c06c5d2982bf842a7932299ed680663a588bc568a91a5c687a"},
+    {"obstruction_id":"O-RH-ANA-003-BINOMIAL-TAIL-UNIFORMITY","kind":"local_to_global_gluing","statement":"Fixed-j convergence of Bombieri-Lagarias renormalized prime tails does not control their n-dependent alternating-binomial aggregate; root relevance requires signed aggregate uniformity across j<=n and n.","artifact_hash":"sha256:ba0ee76f682e12d3efa7106c53f46bb205d7cb11a79a1cac49ecddcd2f44dac0"}
+  ],
+  "lessons": [
+    {"lesson_id":"L-RH-ANA-003-SPARSE-EXCEPTION-BRIDGE","status":"PROPOSED_ONLY","content":"Average zero-density or positive-proportion theorems do not eliminate a fixed finite exceptional set; an exact-root route must add a per-zero, integrality-tight, or equivalent exception-elimination bridge."},
+    {"lesson_id":"L-RH-ANA-003-BINOMIAL-TAIL-BRIDGE","status":"PROPOSED_ONLY","content":"Finite prime truncation is root-relevant only with signed aggregate control of the renormalized remainders uniform across j<=n and n; fixed-j convergence is insufficient."}
+  ],
+  "repeated_process_failure_link": {
+    "pattern_id": "XP-RH-LOCAL-TO-GLOBAL-EXACTNESS-20260811",
+    "linked_failures": ["F-RH-ANA-001-FINITE-LI-PREFIX","F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE","F-RH-ANA-003-SPARSE-EXCEPTION-GLUING","F-RH-ANA-003-BINOMIAL-TAIL-GLUING"],
+    "diagnosis": "Locally valid finite, surrogate, average, or truncated objects repeatedly lose the exact root-critical coordinate at globalization."
+  }
+}
