@@ -1,0 +1,196 @@
+{
+  "schema_version": "rakl-cycle-metrics-v1",
+  "receipt_id": "YM-E1a1a0-RAKL-CYCLE-METRICS-20260811T1505Z",
+  "atom_id": "YM-E1a1a0",
+  "task_episode_id": "YM-E1a1a0-EP-SOURCE-20260811T1505Z",
+  "rakl": {
+    "repository": "SzeChunYiu/RAKL",
+    "git_sha": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "method_version_source": "RAKL_VERSION.json",
+    "application_framework_pin": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "pin_lag_to_current_main_commits_at_pre_action": 37,
+    "usage_mode": "CURRENT_MAIN_READ_DIRECTLY / PROPOSAL_SHADOW / APPLICATION_PIN_UNCHANGED",
+    "runtime_import_status": "CANNOT_MEASURE: connector/runtime did not provide a locally importable checkout of current RAKL; v3 contracts were replayed against the exact current-main source and schema instead of claiming a live RAKLV3State instance."
+  },
+  "rakl_math": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+    "head": "01dfb365db998c3b9c4ee7e0952574d3a0f1abce",
+    "head_semantics": "state-bearing cycle head after pre-action receipt, TaskEpisode, case study and trace; this metrics file is written by a later telemetry-only commit and therefore cannot self-bind its own final commit SHA"
+  },
+  "state_fingerprints": {
+    "v3_runtime_pre": "CANNOT_MEASURE: no live RAKLV3State instance was materialized in this connector-only runtime",
+    "v3_runtime_post": "CANNOT_MEASURE: no live RAKLV3State instance was materialized in this connector-only runtime",
+    "application_semantic_pre": "f8eb5d3ce556498910d89d78761d28fc65ecea74c05b78cbfb2543622cd0e839",
+    "application_semantic_post": "f8eb5d3ce556498910d89d78761d28fc65ecea74c05b78cbfb2543622cd0e839",
+    "application_semantic_hash_basis": "sha256 canonical JSON of context hash, root status, atom, candidate gate, B1-B3 residual, selected child-memory IDs, and promoted tool IDs",
+    "repo_pre_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+    "repo_post_state_commit": "01dfb365db998c3b9c4ee7e0952574d3a0f1abce"
+  },
+  "atom_and_fibre": {
+    "context_packet_hash": "f9404d230586967ab018d4d6537676dba58637e953e462fe0b8f52c662825b5a",
+    "fibre_snapshot_hash": "83ece3a1666448c72571fa066624c353c0ad8ef777918b27aaa4656d01466505",
+    "fibre_manifest_path": "research/real_math/millennium/yang_mills/10_case_study/YM-E1a1a0_PRE_ACTION_FIBRE_MANIFEST_20260811T1502Z.json",
+    "pre_action_receipt_hash": "d0310672a9926efd2fda728b573e35277f5c3556e1fb47dff8ccbef3a5b79e5e",
+    "pre_action_receipt_schema": "pre-action-fibre-receipt-v1",
+    "pre_action_binding_shadow_audit": "PROSPECTIVE_BOUND_CONDITIONS_SATISFIED",
+    "shadow_audit_basis": [
+      "receipt hash recomputed from exact receipt content",
+      "TaskEpisode pointer equals pre_action_receipt:<receipt hash>",
+      "task_id/atom_id/context_hash/fibre_snapshot_hash/operator_ids match",
+      "episode timestamp strictly follows receipt frozen_at_utc"
+    ],
+    "runtime_audit_helper_invocation": "CANNOT_MEASURE: current RAKL Python module was not importable locally"
+  },
+  "canonical_method_specs_process_surfaces": [
+    "memory",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "gap_discovery",
+    "review",
+    "saturation_stopping",
+    "prompting_context_policy"
+  ],
+  "concrete_operator_ids": [
+    "memory_first_primary_source_acquisition",
+    "exact_primary_content_probe"
+  ],
+  "memory": {
+    "registered_retrieved_ids": [
+      "YM_E1a1a0_PRIMARY_SOURCE_RETRIEVAL_20260811",
+      "YM_E1a1a_RESEARCH_MEMORY_REVIEW_20260811",
+      "F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE",
+      "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE"
+    ],
+    "retrieved_count": 4,
+    "selected_ids": [
+      "YM_E1a1a0_PRIMARY_SOURCE_RETRIEVAL_20260811",
+      "YM_E1a1a_RESEARCH_MEMORY_REVIEW_20260811",
+      "F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE",
+      "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE"
+    ],
+    "selected_count": 4,
+    "rejected_ids": [],
+    "rejected_count": 0,
+    "missed_relevant_ids_within_registered_child_memory_universe": [],
+    "missed_relevant_count_within_registered_child_memory_universe": 0,
+    "global_missed_relevant_count": "CANNOT_MEASURE: pre-action receipt does not certify retrieval-universe coverage"
+  },
+  "source_retrieval": {
+    "selected_authority_records_in_fibre": 9,
+    "external_web_search_queries_after_pre_action_receipt": 12,
+    "direct_web_open_probes_after_receipt": 2,
+    "result_items_inspected_total": "CANNOT_MEASURE: search result payloads are truncated/aggregated by the web runtime",
+    "content_bearing_primary_copy_acquired": false,
+    "rejected_as_mathematical_substitutes": [
+      "Springer subscription-preview article page",
+      "Springer direct-PDF route redirecting to subscription preview",
+      "Rutgers DOI-only open/VoR record",
+      "INSPIRE HUTMP-83-B147 bibliographic record",
+      "secondary/reference-only search results"
+    ]
+  },
+  "outcome": "BLOCKED",
+  "failure_category": "SOURCE_CONTEXT_COVERAGE_BLOCK",
+  "residual_before": [
+    "B1_FINE_COARSE_GEOMETRY",
+    "B2_GAUGE_AVERAGING_MAP",
+    "B3_REGULARITY_DOMAIN"
+  ],
+  "residual_after": [
+    "B1_FINE_COARSE_GEOMETRY",
+    "B2_GAUGE_AVERAGING_MAP",
+    "B3_REGULARITY_DOMAIN"
+  ],
+  "retained_novelty": {
+    "KNOWLEDGE": 0,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 0,
+    "OBSTRUCTION": 0,
+    "RELATION": 0,
+    "PATH": 0,
+    "META_METHOD": 0
+  },
+  "saturation": {
+    "growth_axes_with_zero_delta": [
+      "KNOWLEDGE",
+      "OPERATOR",
+      "EXPERIENCE_PATTERN",
+      "OBSTRUCTION",
+      "RELATION",
+      "PATH",
+      "META_METHOD"
+    ],
+    "axes_reopened": [],
+    "axes_flattened_for_this_cycle": [
+      "KNOWLEDGE",
+      "OPERATOR",
+      "EXPERIENCE_PATTERN",
+      "OBSTRUCTION",
+      "RELATION",
+      "PATH",
+      "META_METHOD"
+    ],
+    "global_saturation_status": "NOT_SATURATED: unresolved primary-source data requirement remains and B1-B3 are still live residuals",
+    "novelty_class": "NO_RETAINED_SEMANTIC_NOVELTY / PROCESS-METROLOGY-EVIDENCE_ONLY"
+  },
+  "resources": {
+    "observable_model_tokens": "CANNOT_MEASURE: runtime does not expose authoritative prompt/completion token counters",
+    "observable_context_window": "CANNOT_MEASURE: runtime does not expose authoritative compiled-context token count",
+    "fibre_manifest_bytes": 6748,
+    "pre_action_receipt_bytes": 3226,
+    "task_episode_bytes": 3722,
+    "external_probe_elapsed_seconds": 167,
+    "external_probe_elapsed_basis": "receipt frozen_at_utc 2026-08-11T15:02:38Z to TaskEpisode timestamp 2026-08-11T15:05:25Z",
+    "all_tool_calls_total": "CANNOT_MEASURE: no authoritative aggregate tool-call meter is exposed across the automation execution",
+    "monetary_cost": 0.0,
+    "monetary_cost_interpretation": "schema-compatible observed cost only; provider billing not exposed"
+  },
+  "new_record_ids": {
+    "episodes": [
+      "YM-E1a1a0-EP-SOURCE-20260811T1505Z"
+    ],
+    "lessons": [],
+    "failures": [],
+    "tools": [],
+    "obstructions": [],
+    "motifs": [],
+    "traces": [
+      "YM-E1a1a0-RTR-20260811T1505Z"
+    ],
+    "pre_action_receipts": [
+      "YM-E1a1a0-PRE-ACTION-20260811T1502Z"
+    ]
+  },
+  "successful_reuses": [
+    "YM_E1a1a0_PRIMARY_SOURCE_RETRIEVAL_20260811",
+    "YM_E1a1a_RESEARCH_MEMORY_REVIEW_20260811",
+    "F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE",
+    "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE"
+  ],
+  "gate_provenance_ci": {
+    "root_promotion_gate": "BLOCKED",
+    "candidate_generation_gate": "BLOCKED_BY_B1_B2_B3_UNKNOWN",
+    "root_contract_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "provenance_status": "PASS_FOR_PROPOSAL_SHADOW: exact repo commits, content hashes, pre-action chronology, and source authority boundary recorded",
+    "pre_action_binding_status": "PROSPECTIVE_BOUND_CONDITIONS_SATISFIED_IN_SHADOW_REPLAY",
+    "independent_review_credit": 0,
+    "same_context_expert_cell_count": 7,
+    "ci_status_at_metrics_write": "PENDING_NOT_YET_PR_TRIGGERED",
+    "ci_exact_head": "CANNOT_MEASURE_AT_METRICS_WRITE"
+  },
+  "rakl_action_preference_effect": {
+    "changed_observable_pre_memory_pre_gate_action_preference": false,
+    "observation": "The immediately preceding YM source cycle had already moved to memory-first retrieval before web search. Current v3 changed chronology/provenance measurability by binding that preference prospectively, not the scientific action preference itself.",
+    "causal_effect": "NOT_IDENTIFIED: no matched no-RAKL counterfactual"
+  },
+  "framework_improvement_hypothesis": "Pair pre-action fibre receipts with explicit retrieval-coverage receipts and matched baselines so chronology compliance, memory coverage, and causal action-selection benefit can be measured separately.",
+  "raw_repository_growth_is_learning": false,
+  "authority": "METROLOGY_RECEIPT / PROPOSAL_SHADOW / NO_THEOREM / NO_PROMOTION",
+  "artifact_hash": "b4efcc231d75b62e8bc102165ebfa7eff00b8982aa88e092cca7ec400e5a1e2d"
+}
