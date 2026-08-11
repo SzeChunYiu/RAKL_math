@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import copy
+from datetime import datetime
 import hashlib
 import json
 from pathlib import Path
 import subprocess
 
-from jsonschema import Draft202012Validator, FormatChecker
+import pytest
+from jsonschema import Draft202012Validator, FormatChecker, ValidationError
 from rakl.experience_substrate import EpisodeOutcome, TaskEpisode, validate_episode
 from rakl.failure_lattice import (
     FailureDiagnosisStatus,
@@ -36,6 +38,12 @@ EPISODE = NS / "10_case_study/NS-B1a2_C001_TASK_EPISODE_CANONICAL_20260811.json"
 TRACE = NS / "09_trace/NS-B1a2_C001_TRACE_COMBINED_CANONICAL_20260811.json"
 LATTICE = NS / "07_memory/NS-B1a2_C001_FAILURE_LATTICE_CANONICAL_20260811.json"
 SCHEMA = ROOT / "schemas/ns-b1a2-postmerge-assurance-correction.schema.json"
+ORIGINAL_CONTEXT = NS / "01_frontier/NS-B1a2_CONTEXT_FIBER_20260811.json"
+ORIGINAL_MEMORY = NS / "07_memory/NS-B1a2_RESEARCH_MEMORY_REVIEW_20260811.json"
+ORIGINAL_PRETRACE = NS / "09_trace/NS-B1a2_PRE_CANDIDATE_TRACE_20260811.json"
+ORIGINAL_CONTINUATION = NS / "09_trace/NS-B1a2_C001_TRACE_CONTINUATION_20260811.json"
+ORIGINAL_EPISODE = NS / "10_case_study/NS-B1a2_C001_V3_TASK_EPISODE_20260811.json"
+ORIGINAL_FAILURE = NS / "07_memory/NS-B1a2_C001_FAILURE_EXPERIENCE_DELTA_20260811.json"
 
 
 def _load(path: Path) -> dict:
@@ -63,6 +71,12 @@ def _validate(value: dict, schema: Path) -> None:
     raw = _load(schema)
     Draft202012Validator.check_schema(raw)
     Draft202012Validator(raw, format_checker=FormatChecker()).validate(value)
+
+
+def _parse_time(value: str) -> datetime:
+    parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    assert parsed.tzinfo is not None
+    return parsed
 
 
 def test_pr89_original_merge_bytes_are_immutable() -> None:
@@ -179,6 +193,51 @@ def test_successors_use_exact_v3_schemas_and_runtime_shapes() -> None:
     ]
     assert state.links == ()
 
+    previous = ""
+    for item in trace["entries"]:
+        assert item["previous_event_hash"] == previous
+        assert item["artifact_hash"] == _canonical_hash(item)
+        previous = item["artifact_hash"]
+
+
+def test_original_schema_defects_reproduce_against_exact_bd1a276() -> None:
+    receipt = _load(CORRECTION)
+    cases = [
+        (ORIGINAL_CONTEXT, "math-context-fiber.schema.json", "context"),
+        (ORIGINAL_MEMORY, "research-memory-review.schema.json", "memory_review"),
+        (ORIGINAL_PRETRACE, "math-research-trace.schema.json", "pretrace"),
+        (ORIGINAL_CONTINUATION, "math-research-trace.schema.json", "continuation"),
+        (ORIGINAL_EPISODE, "task-episode.schema.json", "task_episode"),
+        (ORIGINAL_FAILURE, "failure-experience-lattice.schema.json", "failure_lattice"),
+    ]
+    recorded = {item["subject"]: item for item in receipt["schema_audit"]["findings"]}
+    for path, schema_name, label in cases:
+        schema = _load(ROOT / "framework/RAKL/schemas" / schema_name)
+        errors = sorted(
+            Draft202012Validator(schema).iter_errors(_load(path)),
+            key=lambda error: (list(map(str, error.absolute_path)), error.message),
+        )
+        subject = str(path.relative_to(ROOT))
+        assert len(errors) == receipt["schema_audit"]["error_counts"][label]
+        assert recorded[subject]["violations"] == [
+            (("/" + "/".join(map(str, error.absolute_path))) if error.absolute_path else "/")
+            + ": " + error.message
+            for error in errors
+        ]
+
+
+def test_combined_trace_preserves_historical_event_identity_without_backfilling() -> None:
+    pre = _load(ORIGINAL_PRETRACE)["events"]
+    continuation = _load(ORIGINAL_CONTINUATION)["events"]
+    canonical = _load(TRACE)["entries"]
+    original = pre + continuation
+    assert len(canonical) == len(original) == 11
+    assert [item["event_id"] for item in canonical] == [item["event_id"] for item in original]
+    assert [item["event_type"] for item in canonical] == [item["event_type"] for item in original]
+    assert [item["timestamp"] for item in canonical] == [item["timestamp"] for item in original]
+    assert all("Retrospective canonical rendering" in item["state_summary"] for item in canonical)
+    assert _load(CORRECTION)["correction"]["repairs_original_chronology"] is False
+
 
 def test_historical_schema_and_git_chronology_fail_closed() -> None:
     receipt = _load(CORRECTION)
@@ -198,4 +257,35 @@ def test_historical_schema_and_git_chronology_fail_closed() -> None:
         "research/real_math/millennium/navier_stokes/07_memory/NS-B1a2_C001_FAILURE_EXPERIENCE_DELTA_20260811.json::F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION",
         "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a2_C001_V3_TASK_EPISODE_20260811.json",
     }
-    assert all(item["future_offset_seconds"] > 0 for item in receipt["chronology_audit"])
+    for item in receipt["chronology_audit"]:
+        commit_time = _parse_time(_git("show", "-s", "--format=%cI", item["introducing_commit"]))
+        claimed = _parse_time(item["claimed_timestamp"])
+        assert claimed > commit_time
+        assert int((claimed - commit_time).total_seconds()) == item["future_offset_seconds"]
+
+
+@pytest.mark.parametrize(
+    ("section", "field", "value"),
+    [
+        ("authority_contract", "grants_strict_discovery_credit", True),
+        ("authority_contract", "grants_root_authority", True),
+        ("authority_contract", "grants_theorem_authority", True),
+        ("authority_contract", "grants_review_independence", True),
+        ("authority_contract", "may_backfill_chronology", True),
+        ("prospective_gate", "candidate_generation_allowed", True),
+    ],
+)
+def test_hostile_authority_escalation_is_rejected(
+    section: str, field: str, value: object
+) -> None:
+    forged = copy.deepcopy(_load(CORRECTION))
+    forged[section][field] = value
+    schema = _load(SCHEMA)
+    with pytest.raises(ValidationError):
+        Draft202012Validator(schema).validate(forged)
+
+
+def test_ns_b1a3_has_no_candidate_before_fresh_v3_packet() -> None:
+    candidate_dir = NS / "04_candidates"
+    candidates = list(candidate_dir.glob("*NS-B1a3*")) if candidate_dir.exists() else []
+    assert candidates == []
