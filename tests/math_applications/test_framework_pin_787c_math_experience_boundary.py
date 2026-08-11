@@ -91,6 +91,12 @@ def test_pnp_experience_boundary_keeps_only_mathematical_lessons_in_math_memory(
         item["event_id"] for item in boundary["excluded_operational_events"]
     }
     assert mathematical_ids.isdisjoint(operational_ids)
+    by_lesson = {
+        item["lesson_id"]: item for item in boundary["retained_mathematical_lessons"]
+    }
+    assert by_lesson["C034B-FINITE-CEILING-OVERGENERALIZATION"]["authority"] == (
+        "RETROSPECTIVE_TARGET_EXPOSED_EXACT_REPLAY"
+    )
     assert operational_ids == {
         "F-C034-PROCESS-GATE-DELAY",
         "F-C035-BATCH-WORKER-HANG",

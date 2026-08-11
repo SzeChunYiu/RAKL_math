@@ -40,7 +40,7 @@
         "properties": {
           "lesson_id": {"type": "string", "minLength": 1},
           "mathematical_content": {"type": "string", "minLength": 1},
-          "authority": {"enum": ["VERIFIED_BOUNDED_COUNTEREXAMPLE", "DESK_CHECK_ONLY", "PROPOSAL_ONLY_MISSING_CERTIFICATE", "PROPOSAL_ONLY_MECHANISM_DIAGNOSIS", "CONDITIONAL_DESK_CHECK_ONLY"]},
+          "authority": {"enum": ["VERIFIED_BOUNDED_COUNTEREXAMPLE", "DESK_CHECK_ONLY", "RETROSPECTIVE_TARGET_EXPOSED_EXACT_REPLAY", "PROPOSAL_ONLY_MECHANISM_DIAGNOSIS", "CONDITIONAL_DESK_CHECK_ONLY"]},
           "promotion": {"enum": ["BOUNDED_FAILURE_EXPERIENCE_ELIGIBLE", "QUARANTINED_NOT_CANONICAL"]}
         }
       }
