@@ -30,98 +30,38 @@
     {
       "source_context": "Coffey's arithmetic decomposition of the Li coefficients",
       "method": "Perform exact resummation before applying inequalities, isolate the known-positive zeta-value/binomial component, and move the sign audit to the remaining eta/Laurent coordinate.",
-      "shared_structure": [
-        "same actual zeta/Li coefficients",
-        "all-index quantifier preserved",
-        "alternating binomial cancellation is explicit"
-      ],
-      "required_assumptions": [
-        "use the exact arithmetic formula and sign convention",
-        "justify interchange using finite j-sum and absolutely convergent q-series for j>=2",
-        "do not infer anything about the eta-binomial term from positivity of S1(n)"
-      ],
-      "disanalogies": [
-        "odd integers in S1(n) are not a prime decomposition",
-        "positivity of S1(n) does not imply positivity of lambda_n",
-        "Coffey's later eta conjectures are not used as premises"
-      ],
+      "shared_structure": ["same actual zeta/Li coefficients", "all-index quantifier preserved", "alternating binomial cancellation is explicit"],
+      "required_assumptions": ["use the exact arithmetic formula and sign convention", "justify interchange using finite j-sum and absolutely convergent q-series for j>=2", "do not infer anything about the eta-binomial term from positivity of S1(n)"],
+      "disanalogies": ["odd integers in S1(n) are not a prime decomposition", "positivity of S1(n) does not imply positivity of lambda_n", "Coffey's later eta conjectures are not used as premises"],
       "repair_question": "Can the eta/Laurent binomial transform be reorganized into an exact source-bound representation with a uniform all-n bound that is strictly weaker than RH and preserves cancellation?",
-      "source_anchors": [
-        "Mark W. Coffey, Toward Verification of the Riemann Hypothesis: Application of the Li Criterion, Math. Phys. Anal. Geom. 8 (2005), 211-255, DOI 10.1007/s11040-005-7584-9, arXiv:math-ph/0505052",
-        "Enrico Bombieri and Jeffrey C. Lagarias, Complements to Li's Criterion for the Riemann Hypothesis, J. Number Theory 77 (1999), 274-287, DOI 10.1006/jnth.1999.2392"
-      ]
+      "source_anchors": ["Mark W. Coffey, Toward Verification of the Riemann Hypothesis: Application of the Li Criterion, Math. Phys. Anal. Geom. 8 (2005), 211-255, DOI 10.1007/s11040-005-7584-9, arXiv:math-ph/0505052", "Enrico Bombieri and Jeffrey C. Lagarias, Complements to Li's Criterion for the Riemann Hypothesis, J. Number Theory 77 (1999), 274-287, DOI 10.1006/jnth.1999.2392"]
     },
     {
       "source_context": "Brown/Freitas zero-free-region Li criteria",
       "method": "Use partial Li inequalities only to calibrate bounded zero-free information and reject any promotion of finite-index positivity to the root.",
-      "shared_structure": [
-        "Li-derived inequalities",
-        "zero-free-region consequences",
-        "finite-versus-all-index distinction"
-      ],
-      "required_assumptions": [
-        "retain the exact theorem scope",
-        "do not extrapolate finite N to all n"
-      ],
-      "disanalogies": [
-        "bounded zero-free regions are weaker than RH",
-        "modified Li-type functions need not equal the standard lambda_n away from their calibration point"
-      ],
+      "shared_structure": ["Li-derived inequalities", "zero-free-region consequences", "finite-versus-all-index distinction"],
+      "required_assumptions": ["retain the exact theorem scope", "do not extrapolate finite N to all n"],
+      "disanalogies": ["bounded zero-free regions are weaker than RH", "modified Li-type functions need not equal the standard lambda_n away from their calibration point"],
       "repair_question": "Does a proposed eta-binomial bound yield genuinely expanding zero-free control, and if so what all-n threshold would be needed to reach the critical line?",
-      "source_anchors": [
-        "Francis C. S. Brown, Li's criterion and zero-free regions of L-functions, J. Number Theory 111 (2005), 1-32, DOI 10.1016/j.jnt.2004.07.016",
-        "Pedro Freitas, A Li-Type Criterion for Zero-Free Half-Planes of Riemann's Zeta Function, JLMS 73 (2006), 399-414, DOI 10.1112/S0024610706022599"
-      ]
+      "source_anchors": ["Francis C. S. Brown, Li's criterion and zero-free regions of L-functions, J. Number Theory 111 (2005), 1-32, DOI 10.1016/j.jnt.2004.07.016", "Pedro Freitas, A Li-Type Criterion for Zero-Free Half-Planes of Riemann's Zeta Function, JLMS 73 (2006), 399-414, DOI 10.1112/S0024610706022599"]
     }
   ],
-  "explicit_disanalogies": [
-    "S1(n)>=0 is a known source result and not new mathematics.",
-    "S1(n)>=0 does not control the eta/Laurent binomial transform.",
-    "Odd-integer resummation is not prime-by-prime positivity.",
-    "Finite computations or finite Li positivity remain non-authoritative for RH.",
-    "Coefficientwise absolute bounds can erase the exact cancellation exposed by the resummation.",
-    "Same-context expert review is not independent mathematical review."
-  ],
-  "source_anchors": [
-    "Xian-Jin Li, J. Number Theory 65 (1997), 325-333, DOI 10.1006/jnth.1997.2137",
-    "Enrico Bombieri and Jeffrey C. Lagarias, J. Number Theory 77 (1999), 274-287, DOI 10.1006/jnth.1999.2392",
-    "Mark W. Coffey, Math. Phys. Anal. Geom. 8 (2005), 211-255, DOI 10.1007/s11040-005-7584-9, arXiv:math-ph/0505052",
-    "Francis C. S. Brown, J. Number Theory 111 (2005), 1-32, DOI 10.1016/j.jnt.2004.07.016",
-    "Pedro Freitas, JLMS 73 (2006), 399-414, DOI 10.1112/S0024610706022599",
-    "Jeffrey C. Lagarias, Ann. Inst. Fourier 57 (2007), 1689-1740, arXiv:math/0404394",
-    "Andre Voros, Math. Phys. Anal. Geom. 9 (2006), 53-63, arXiv:math/0506326"
-  ],
+  "explicit_disanalogies": ["S1(n)>=0 is a known source result and not new mathematics.", "S1(n)>=0 does not control the eta/Laurent binomial transform.", "Odd-integer resummation is not prime-by-prime positivity.", "Finite computations or finite Li positivity remain non-authoritative for RH.", "Coefficientwise absolute bounds can erase the exact cancellation exposed by the resummation.", "Same-context expert review is not independent mathematical review."],
+  "source_anchors": ["Xian-Jin Li, J. Number Theory 65 (1997), 325-333, DOI 10.1006/jnth.1997.2137", "Enrico Bombieri and Jeffrey C. Lagarias, J. Number Theory 77 (1999), 274-287, DOI 10.1006/jnth.1999.2392", "Mark W. Coffey, Math. Phys. Anal. Geom. 8 (2005), 211-255, DOI 10.1007/s11040-005-7584-9, arXiv:math-ph/0505052", "Francis C. S. Brown, J. Number Theory 111 (2005), 1-32, DOI 10.1016/j.jnt.2004.07.016", "Pedro Freitas, JLMS 73 (2006), 399-414, DOI 10.1112/S0024610706022599", "Jeffrey C. Lagarias, Ann. Inst. Fourier 57 (2007), 1689-1740, arXiv:math/0404394", "Andre Voros, Math. Phys. Anal. Geom. 9 (2006), 53-63, arXiv:math/0506326"],
   "analogy_scan_status": "BRIDGES_RETAINED",
-  "cross_domain_analogies": [
-    {
-      "source_kind": "numerical-analysis / signal-processing",
-      "source_situation": "A signed oscillatory representation can look uncontrolled term by term even when an exact transform exposes a stable positive remainder; taking absolute values before the transform destroys the cancellation that carries the useful structure.",
-      "common_abstraction": [
-        "oscillatory signed representation",
-        "exact cancellation-preserving transform",
-        "post-transform sign structure"
-      ],
-      "source_to_target_mapping": [
-        "oscillatory coefficients -> (-1)^j binomial zeta-value terms",
-        "exact transform -> sum over odd q",
-        "positive remainder -> (1-1/q)^n-1+n/q"
-      ],
-      "shared_constraints": [
-        "exact identity required",
-        "summation/interchange must be justified",
-        "post-transform sign must be proved"
-      ],
-      "disanalogies": [
-        "the target is an exact arithmetic identity, not noisy numerical data",
-        "the analogy gives no bound on eta_j and no RH authority"
-      ],
-      "proposed_principle": "Before bounding a cancellation-heavy arithmetic expression, search for an exact representation in which the preserved cancellation is explicit; bound only the residual that remains sign-sensitive.",
-      "validation_obligation": "Verify the identity algebraically and source-bind it; run hostile checks showing that termwise absolute values lose the known cancellation; do not transfer any sign claim to the eta/Laurent term.",
-      "provenance_note": "Proposal-only search heuristic; no theorem authority."
-    }
-  ],
+  "cross_domain_analogies": [{
+    "source_kind": "numerical-analysis / signal-processing",
+    "source_situation": "A signed oscillatory representation can look uncontrolled term by term even when an exact transform exposes a stable positive remainder; taking absolute values before the transform destroys the cancellation that carries the useful structure.",
+    "common_abstraction": ["oscillatory signed representation", "exact cancellation-preserving transform", "post-transform sign structure"],
+    "source_to_target_mapping": ["oscillatory coefficients -> (-1)^j binomial zeta-value terms", "exact transform -> sum over odd q", "positive remainder -> (1-1/q)^n-1+n/q"],
+    "shared_constraints": ["exact identity required", "summation/interchange must be justified", "post-transform sign must be proved"],
+    "disanalogies": ["the target is an exact arithmetic identity, not noisy numerical data", "the analogy gives no bound on eta_j and no RH authority"],
+    "proposed_principle": "Before bounding a cancellation-heavy arithmetic expression, search for an exact representation in which the preserved cancellation is explicit; bound only the residual that remains sign-sensitive.",
+    "validation_obligation": "Verify the identity algebraically and source-bind it; run hostile checks showing that termwise absolute values lose the known cancellation; do not transfer any sign claim to the eta/Laurent term.",
+    "provenance_note": "Proposal-only search heuristic; no theorem authority."
+  }],
   "analogy_scan_notes": "Retained only the cancellation-preserving transform analogy. Rejected generic 'positive energy' analogies because RH-ANA-002 already saturated that pattern.",
   "frozen_at": "2026-08-11T12:57:58+00:00",
   "first_candidate_at": "2026-08-11T12:58:20+00:00",
-  "packet_hash": "sha256:3e442a6ad2b6dbc2143266f146fbea5008759a07f4f827eeba2e6ee269ff7795"
+  "packet_hash": "sha256:4a8252d33f662292ce6d766edb70487bdb91bfcce404780e4322e19b2011ae76"
 }
