@@ -856,16 +856,19 @@ def test_pr55_diff_scope_successor_receipt_is_self_hashed_and_source_bound() -> 
     assert len(reproduction["diagnostics"]) == 3
     assert all("p_vs_np" in value for value in reproduction["diagnostics"])
     assert receipt["validation"] == {
+        "validation_commit": "7688b544438bb098158f8ea470df35faa4d54d13",
+        "validation_tree": "6f9b781243774ba12c0894fc5dc4eeab8319cb53",
+        "integrated_main": "d7f75d6aeb6b04a9586b5e684875460ab42ae0f8",
         "focused_command": (
             "python tools/run_application_tests.py --framework framework/RAKL -- "
             "tests/math_applications/"
             "test_navier_stokes_ns_b1a_c001_pressure_tail.py -vv"
         ),
-        "focused_passed": 13,
+        "focused_passed": 14,
         "full_command": (
             "python tools/run_application_tests.py --framework framework/RAKL -- -vv"
         ),
-        "full_passed": 220,
+        "full_passed": 223,
     }
     assert receipt["authority"] == (
         "DIFF_SCOPE_CORRECTION / ASSURANCE_ONLY / "
