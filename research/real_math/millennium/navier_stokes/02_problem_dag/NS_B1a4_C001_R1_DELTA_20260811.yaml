@@ -1,0 +1,58 @@
+schema_version: ns-b1a4-dag-delta-r1-v1
+cycle_id: NS-B1a4-SIGNED-NORECROSSING-20260811-R1
+authority: PROPOSAL_SHADOW_ONLY
+root:
+  id: NS0
+  status: OPEN_NO_SOLUTION_CERTIFICATE
+  promotion: NOT_ELIGIBLE
+active_atom:
+  id: NS-B1a4
+  parent_lane: NS-B1
+  control_issue: 173
+  frozen_fibre_hash: sha256:cf88fa50537b9dfc8df4cc2052c69710fe08963e27463fcb5692187e4fbd3205
+  question: >-
+    Can finite-I magnitude bookkeeping A+C+D+E plus the standard local-energy
+    inequality and pressure localization, without a new signed/global trajectory
+    coordinate, intrinsically yield one-sided temporal/no-recrossing behavior?
+outcome:
+  code: EXISTING_LEDGER_SIGN_INSUFFICIENT_ROUTE_PRUNING
+  status: SCOPED_PARTIAL_SUCCESS_NO_ROOT_CANDIDATE
+  novelty_class: representation
+closed_local_edge:
+  from: FINITE_LOCAL_UNSIGNED_LEDGER_PLUS_STANDARD_LOCAL_ENERGY_AND_PRESSURE_LOCALIZATION
+  to: UNIVERSAL_INTRINSIC_ONE_SIDED_LOCAL_ENERGY_NORECROSSING
+  reason: >-
+    Exact smooth pressure-free Navier-Stokes shear has finite local A,C,E, D=0,
+    zero integrated convective cutoff flux for a product cutoff, yet localized
+    kinetic energy rises, falls, and crosses an intermediate level twice.
+local_mathematical_failure:
+  id: F-NS-B1a4-UNSIGNED-LOCAL-ENERGY-NO-RECROSSING
+  category: REPRESENTATION_SIGN_INFORMATION
+local_to_global_gluing_residuals:
+  - id: G-NS-B1a4-LOCAL-SIGN-TO-GLOBAL-FINITE-I-ANCIENT
+    status: OPEN
+    statement: >-
+      The hostile shear is not a global finite-I mild bounded ancient solution;
+      stronger global/trajectory structure could still orient the actual Type-I source class.
+  - id: G-NS-B1a4-SIGNED-OBSERVABLE-TO-LIOUVILLE-CONSUMER
+    status: OPEN
+    statement: >-
+      No scale-normalized signed/global observable has yet been proved compact and
+      glued to a source-valid Liouville or epsilon-regularity consumer.
+next_atom_policy:
+  rotate_away_from:
+    - instantaneous_pressure_tail_divergence
+    - absolute_local_energy_scale_charge_summation
+    - repeated_unsigned_A_C_D_E_estimates
+  require_one_of:
+    - explicit_scale_normalized_signed_flux_or_correlation_coordinate
+    - genuinely_ancient_global_no_return_coordinate
+  first_check: same_equation_counterexample_and_symmetry_ablation_before_proof_search
+root_gate_notes:
+  exact_statement_binding: ROOT_BOUND_BUT_NO_ROOT_CANDIDATE
+  closed_proof_dag: NO
+  dependency_axiom_verifier_audits: NOT_APPLICABLE_NO_ROOT_CANDIDATE
+  isolated_recheck: NOT_PERFORMED_AS_ROOT_RECHECK
+  bounded_novelty_search: LOCAL_SOURCE_BOUND_ONLY
+  isolated_mathematical_reviews: 0/3
+  same_context_expert_cell: 6_roles_completed_no_independent_credit
