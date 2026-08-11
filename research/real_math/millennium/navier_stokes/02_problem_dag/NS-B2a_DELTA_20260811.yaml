@@ -1,0 +1,59 @@
+{
+  "atom_id": "NS-B2a",
+  "parent_atom_id": "NS-B1",
+  "goal": "Eliminate the registered Seregin F=1 Type-II branch by a source-valid ancient-Euler rigidity contradiction without importing Type-I assumptions.",
+  "framework_authority_sha": "a151d5612709ea0f95c3ea232630f246f722739a",
+  "app_base_sha": "7548c3c9a30c63e18956aefb68674d523acfe937",
+  "root_authority": "NONE",
+  "obligations": [
+    {
+      "id": "NS-B2a-O1",
+      "name": "SOURCE_BIND",
+      "status": "PASS",
+      "evidence": "Seregin arXiv:2606.29468v1 Theorem 3.1 / (3.5) / (3.8) bound in source audit"
+    },
+    {
+      "id": "NS-B2a-O2",
+      "name": "LIMIT_PASSAGE_AUDIT",
+      "status": "PASS_WITH_SCOPE",
+      "evidence": "local velocity/pressure compactness and Euler passage only; no global tail conclusion"
+    },
+    {
+      "id": "NS-B2a-O3",
+      "name": "PRESSURE_FAR_FIELD_INHERITANCE",
+      "status": "OPEN",
+      "needs": "pressure-aware no-incoming-energy or far-field-tightness estimate on the rescaled suitable weak Navier–Stokes sequence, stable as viscosity coefficient f(lambda)->0"
+    },
+    {
+      "id": "NS-B2a-O4",
+      "name": "BACKWARD_EXPANDING_BALL_SMALLNESS",
+      "status": "RETROSPECTIVE_DIAGNOSTIC_PASS",
+      "strict_candidate_credit": "ZERO",
+      "evidence": "averaging + Sobolev–Poincare consequence of source (3.5)"
+    },
+    {
+      "id": "NS-B2a-O5",
+      "name": "EULER_RIGIDITY_THEOREM",
+      "status": "OPEN",
+      "needs": "Liouville/rigidity theorem for the exact inherited Seregin F=1 ancient Euler class plus O3, with no extra unproved global decay/integrability assumptions"
+    },
+    {
+      "id": "NS-B2a-O6",
+      "name": "NONTRIVIALITY_CONTRADICTION",
+      "status": "BLOCKED",
+      "blocked_by": [
+        "NS-B2a-O3",
+        "NS-B2a-O5"
+      ],
+      "needs": "combine source nontriviality (3.8) with O5 triviality after all limit hypotheses are verified"
+    }
+  ],
+  "failure_normalization": [
+    "NONCOMPACT_SYMMETRY_PROFILE_LEAKAGE",
+    "UNCONTROLLED_FAR_FIELD",
+    "UNIQUE_CONTINUATION_HYPOTHESIS_FAILURE",
+    "LOCAL_DEPLETION_NOT_GLOBAL_CONTROL",
+    "PRESSURE_TAIL_NOT_LOCALIZED",
+    "METHOD_TRANSFER_NS_TO_EULER_INVALID"
+  ]
+}
