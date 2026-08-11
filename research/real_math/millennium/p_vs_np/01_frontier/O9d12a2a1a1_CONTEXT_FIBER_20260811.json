@@ -1,0 +1,146 @@
+{
+  "atom_id": "O9d12a2a1a1",
+  "parent_atom_id": "O9d12a2a1a",
+  "object_context": "Determine whether nonempty pair intersections provide essential source-native power for full Cavalar-Oliveira semi-filter cover complexity beyond all-disjoint pair covers, before introducing any higher-order closure/fusion-depth invariant.",
+  "problem_signature": [
+    "full/noncanonical semi-filter cover complexity",
+    "pair preservation E,H in F => E intersection H in F",
+    "representation invariance across equivalent optimal cover witnesses",
+    "bounded per-pair/fusion accounting",
+    "canonical first-order signature lane already logarithmically capped"
+  ],
+  "structural_coordinates": [
+    "C008 proves rho_can=1<rho=2 on one 3x3 graph, so noncanonical semi-filters contain information absent from canonical witnesses",
+    "C010 gives an optimal two-pair disjoint generator-separating cover for that same C008 graph, so C008 does not show that nonempty intersections or ancestry of a chosen cover program are essential",
+    "C024 shows a source-native one-pair fractional budget but loses integral cross-pair correlation",
+    "C025 restores integral joint consistency on normalized G_NEQ but returns to a canonical first-order signature class with logarithmic capacity",
+    "C016 shows fixed finite-state aggregation with fixed local symbol cost yields O(log N) full cover complexity even for dense globally correlated families",
+    "the next representation must be defined from source obligations or equivalence classes of valid covers, not from arbitrary syntax of one witness",
+    "any finite calibration must distinguish unrestricted full-cover power from disjoint-pair cover power before asymptotic lower-bound search"
+  ],
+  "equivalent_formulations": [
+    "compare unrestricted full cover number rho with the minimum cover number rho_disj obtained when every selected pair (E,H) satisfies E intersection H=emptyset",
+    "ask whether every optimal full-cover family can be replaced, without increasing cardinality, by an all-disjoint family",
+    "search for a finite graph whose full-cover optimum strictly improves when non-disjoint pairs are allowed",
+    "treat absence of a small gap as route-pruning evidence, not a theorem that no gap exists asymptotically"
+  ],
+  "solved_analogues": [
+    "C008 exact 3x3 canonical/full separation",
+    "C010 optimal disjoint cover for C008 and block-sum multiplexing ceiling",
+    "C025 exact normalized G_NEQ joint-signature calibration",
+    "C016 finite-state aggregation ceiling"
+  ],
+  "near_solved_analogues": [
+    "restricted-family set cover: compare optimum over all covering sets with optimum over a structurally restricted admissible subfamily",
+    "fractional-cover versus integral-cover gaps in communication complexity",
+    "lift-and-project consistency hierarchies for set cover, used only as a warning that extra consistency need not remove logarithmic gaps"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "C008 plus C010",
+      "method": "test representation invariance by comparing the unrestricted optimum with an optimum restricted to all-disjoint pair witnesses",
+      "shared_structure": [
+        "both optimize finite pair families against exactly the same full semi-filter obligation universe",
+        "disjoint pairs are source-valid and immediately refute preservation whenever both sides belong to a semi-filter",
+        "a strict optimum gap would certify that nonempty intersections are operationally useful rather than an artifact of one chosen proof"
+      ],
+      "required_assumptions": [
+        "the restricted optimum is computed against the exact source Definition 20 preservation predicate",
+        "the same graph and full relevant semi-filter universe are used in both optima"
+      ],
+      "disanalogies": [
+        "rho_disj>rho would establish essential non-disjoint pair power only for that finite object, not an asymptotic lower bound",
+        "rho_disj=rho on small objects would not prove global eliminability of non-disjoint pairs"
+      ],
+      "repair_question": "Is there any small full-cover instance on which non-disjoint pairs strictly reduce the exact cover cardinality?",
+      "source_anchors": [
+        "research/real_math/millennium/p_vs_np/04_candidates/C008_canonical_full_cover_separation_gadget.md",
+        "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C010_fixed_gadget_block_sum_ceiling.md"
+      ]
+    },
+    {
+      "source_context": "C024 and C025",
+      "method": "use a known calibration failure and its repair to require that any new coordinate recover missing correlation without collapsing back into a previously capped representation class",
+      "shared_structure": [
+        "both concern the same cover graph and simultaneous choice of pair vertices",
+        "local validity is insufficient if global compatibility or capacity collapses"
+      ],
+      "required_assumptions": [
+        "the new diagnostic remains source-native and uses full semi-filter obligations"
+      ],
+      "disanalogies": [
+        "binary signatures are special to normalized G_NEQ and original-generator separation",
+        "non-disjoint pair utility concerns the full semi-filter universe and does not inherit G_NEQ normalization"
+      ],
+      "repair_question": "If non-disjoint pairs are essential somewhere, what invariant of their intersection structure survives changes among equivalent optimal covers?",
+      "source_anchors": [
+        "research/real_math/millennium/p_vs_np/04_candidates/C024_fractional_semifilter_packing.md",
+        "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_full_semifilter_assurance_addendum.md"
+      ]
+    },
+    {
+      "source_context": "C016 finite-state aggregation ceiling",
+      "method": "apply an upper-bound/compression adversary before investing in a richer state representation",
+      "shared_structure": [
+        "a superficially high-order relation can remain easy when its operational state compresses to bounded width",
+        "the candidate representation should be tested for an alternate simpler witness"
+      ],
+      "required_assumptions": [
+        "the compression theorem's fixed local-cost/fixed-state hypotheses are checked before applying it"
+      ],
+      "disanalogies": [
+        "an essential non-disjoint finite witness alone says nothing about growth of minimum aggregation state"
+      ],
+      "repair_question": "Can any surviving non-disjoint advantage be amplified without fixed-state or multiplexing compression?",
+      "source_anchors": [
+        "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C016_finite_state_aggregation_cover_ceiling.md"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "noncanonical full-cover difficulty is not the same as essential nonempty-intersection difficulty",
+    "the existence of one non-disjoint optimal witness does not imply every optimum needs non-disjoint pairs",
+    "a finite restricted-vs-unrestricted optimum gap is not an asymptotic circuit lower bound",
+    "no small gap is not a global no-go theorem",
+    "generic set-cover hierarchy results do not establish semi-filter-cover hierarchy behavior"
+  ],
+  "cross_domain_analogies": [
+    {
+      "source_kind": "algorithm/program equivalence and provenance",
+      "source_situation": "Two programs can compute the same function while using different intermediate variables; a property of one program's temporary variable is not a property of the function unless it is invariant across equivalent implementations.",
+      "common_abstraction": [
+        "target authority belongs to an object-level behavior rather than one witness syntax",
+        "multiple witnesses can realize the same optimum",
+        "intermediate structure is useful only if it survives or is forced across equivalent witnesses"
+      ],
+      "source_to_target_mapping": [
+        "program output behavior -> covering the same full semi-filter universe",
+        "program implementation -> selected pair family",
+        "temporary variable/intermediate -> nonempty intersection or derived closure element in one cover witness",
+        "implementation-invariant property -> strict advantage over every all-disjoint optimal witness"
+      ],
+      "shared_constraints": [
+        "same target obligations and same objective cardinality must be held fixed"
+      ],
+      "disanalogies": [
+        "cover pairs are mathematical sets under a source preservation law, not executable instructions",
+        "a strict disjoint-cover gap certifies necessity of non-disjoint pair power only at the finite instance and cardinality objective"
+      ],
+      "proposed_principle": "Before promoting closure-depth or ancestry as a state coordinate, prove that the target behavior cannot be achieved equally well by a representation that removes that intermediate structure.",
+      "validation_obligation": "Freeze an exact restricted-vs-unrestricted cover oracle and search a bounded graph universe for rho_disj>rho; record nulls and exact search boundary."
+    }
+  ],
+  "analogy_scan_status": "BRIDGE_RETAINED_WITH_FINITE_FALSIFIER",
+  "source_anchors": [
+    "Cavalar and Oliveira, Boolean Circuit Complexity and Two-Dimensional Cover Problems, ECCC TR25-033 (2025), Definitions 18-21, Theorem 30, Proposition 40",
+    "Karchmer, Kushilevitz and Nisan, Fractional Covers and Communication Complexity, SIAM J. Discrete Math. 8(1), 1995",
+    "Chlamtac, Friggstad and Georgiou, Understanding Set Cover: Sub-exponential Time Approximations and Lift-and-Project Methods, arXiv:1204.5489",
+    "research/real_math/millennium/p_vs_np/02_problem_dag/C025_delta.yaml"
+  ],
+  "framework_subject": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+  "application_base_subject": "4838969ecc18a091da79a059b58b8568634289b7",
+  "retrospective_calibration_note": "C010 already proves that C008 admits an optimal disjoint two-pair cover. A private exploratory reimplementation of the existing exact oracle was not used as prospective evidence and is not included in the strict discovery claim; the registered next action below must be frozen before its evaluated output.",
+  "frozen_at": "2026-08-11T12:31:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:b955ea913e2aed2f6e67844c2d1b8412b4e75a0161de73681d70c6c66f9cd110"
+}
