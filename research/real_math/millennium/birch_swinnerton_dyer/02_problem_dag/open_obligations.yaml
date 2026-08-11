@@ -1,7 +1,7 @@
 root: BSD
 authority: OPEN_NO_SOLUTION_CERTIFICATE
-control_issue: 90
-active_atom: BSD-S001c
+control_issue: 7
+active_atom: BSD-S001c1-KURIHARA-TAYLOR-COMPARISON
 nodes:
   - id: BSD-RANK
     statement: "ord_{s=1} L(E,s) = rank E(Q) for every elliptic curve E/Q"
@@ -27,7 +27,20 @@ nodes:
     result: "Burns-Kurihara-Sano arXiv:1910.07404 already supplies an exterior/determinant-line and Bockstein-regulator interface through the Generalized Perrin-Riou Conjecture; determinant invention is therefore not the live first obstruction"
   - id: BSD-S001c
     statement: "audit whether an independent, non-BSD-assuming comparison can identify the algebraic/p-adic Kato-zeta determinant/Bockstein object with the complex leading-term object strongly enough to force arbitrary-rank analytic-rank equality and the required BSD leading data"
-    state: NEXT
+    state: SOURCE_BOUND_REFINED
+    children:
+      - BSD-S001c1-KURIHARA-TAYLOR-COMPARISON
+    result: "Kim-Pollack arXiv:2505.09121 supplies an independently defined discrete Kurihara-order invariant that exactly determines p-primary Selmer corank/module structure under source hypotheses; the highest-information surviving root coordinate is therefore the comparison between this discrete order and the complex Taylor order"
     warnings:
       - "in Burns-Kurihara-Sano arXiv:1910.07404 the canonical eta^BSD is defined using the complex leading term, so that formulation cannot itself be used as an independent reconstruction of the complex BSD term"
       - "equivalences or consequences that assume BSD_p, BSD, an Iwasawa main conjecture, Sha finiteness, or other root-level input must preserve those assumptions explicitly"
+  - id: BSD-S001c1-KURIHARA-TAYLOR-COMPARISON
+    parent: [BSD-S001c]
+    statement: "determine whether the independently defined Kim-Pollack Kurihara order, or a source-equivalent Kato/Kolyvagin discrete invariant, can be compared to ord_{s=1}L(E,s) in arbitrary rank without assuming BSD/analytic-rank equality; otherwise isolate the smallest missing comparison edge"
+    state: STRICT_PRE_CANDIDATE_CONTEXT_FROZEN
+    result: "source audit separates exact discrete Selmer reconstruction from the unbound complex Taylor-order coordinate; no comparison candidate has yet been generated"
+    warnings:
+      - "Kim-Pollack corank Sel = ord(Kurihara) is an arithmetic equality, not the Clay analytic-rank equality"
+      - "Kurihara nonvanishing is weaker than exact order comparison"
+      - "localized Iwasawa main-conjecture input must not be silently promoted to a complex analytic-rank theorem"
+      - "bounded source search does not establish nonexistence or novelty"

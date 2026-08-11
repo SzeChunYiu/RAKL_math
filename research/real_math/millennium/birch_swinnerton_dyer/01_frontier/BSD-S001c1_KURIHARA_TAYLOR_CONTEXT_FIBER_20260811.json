@@ -1,0 +1,152 @@
+{
+  "atom_id": "BSD-S001c1-KURIHARA-TAYLOR-COMPARISON",
+  "object_context": "Child obstruction of BSD-S001c: determine whether an independently defined discrete Kato/Kurihara order invariant that controls arbitrary-rank p-primary Selmer structure can be compared, without assuming BSD or analytic-rank equality, to the order of vanishing of the complex Hasse-Weil L-function at s=1 strongly enough to close the BSD rank bridge.",
+  "structural_coordinates": [
+    "the Clay root coordinate is the complex order ord_{s=1} L(E,s), not a Selmer corank, p-adic order, or discrete modular-symbol order",
+    "Kim-Pollack's Kurihara numbers are explicitly built from modular symbols and Kolyvagin derivatives of special L-values and define an independently arithmetic/discrete order invariant",
+    "under nonvanishing and large-image hypotheses, Kim-Pollack Main Theorem I identifies Bloch-Kato Selmer corank with the Kurihara order invariant and determines the full p-primary module structure",
+    "Kim-Pollack explicitly describe the Kurihara construction as a discrete analogue/correspondence to BSD and state that the structural formula is insensitive to analytic rank; this is not an arbitrary-rank theorem equating the discrete order to the complex Taylor order",
+    "Kim-Pollack Main Theorem II supplies Kurihara nonvanishing from analytic rank zero, analytic rank one plus extra hypotheses, localized Iwasawa main conjecture, or good-ordinary hypotheses, but nonvanishing alone does not identify the exact discrete order with arbitrary complex analytic rank",
+    "Burns-Kurihara-Sano provide a higher-rank Darmon/Bockstein interface, but their canonical eta^BSD uses the complex leading term in its definition, so that formulation cannot independently reconstruct the same complex leading term",
+    "Kato's Euler-system/Iwasawa theory can bound or determine p-primary Selmer information under exact hypotheses; p-primary arithmetic output and the complex Taylor order remain distinct coordinates until a comparison theorem is supplied",
+    "Selmer corank still requires the exact Mordell-Weil/Sha interpretation before it becomes algebraic rank, and the refined BSD leading coefficient additionally requires real period, Neron-Tate regulator, Tamagawa/local factors, torsion, and global Sha",
+    "fixed-p theorems may be exact at p while leaving other-primary and archimedean factors as separate root obligations",
+    "a theorem or conjecture localized at the augmentation ideal must be audited for whether its hypotheses already encode arithmetic rank information equivalent in strength to the intended conclusion"
+  ],
+  "equivalent_formulations": [
+    "prove or source an arbitrary-rank equality ord(Kurihara collection)=ord_{s=1}L(E,s) under hypotheses not containing BSD or analytic-rank equality",
+    "find two source-bound inequalities between the Kurihara order and complex analytic order which, together with parity or another independently proved constraint, force equality",
+    "identify an explicit reciprocity/leading-term comparison from complex Taylor data to the independently defined Kato/Kurihara discrete derivative object with a nonvanishing-preserving and order-preserving map",
+    "build an implication graph and isolate the earliest edge where current theorems replace complex analytic order by an Iwasawa-main-conjecture, Selmer, or localization hypothesis"
+  ],
+  "solved_analogues": [
+    "analytic rank zero and one: source theorems can connect complex nonvanishing/first derivative data to arithmetic rank under explicit hypotheses, and Kim-Pollack Main Theorem II includes rank-zero and rank-one inputs for Kurihara nonvanishing"
+  ],
+  "near_solved_analogues": [
+    "Kim-Pollack arXiv:2505.09121: exact arbitrary-rank Bloch-Kato Selmer structure from Kurihara numbers and localized Iwasawa input, explicitly formulated as a discrete BSD/Beilinson-Bloch-Kato analogue",
+    "Chan-Ho Kim arXiv:2203.12159: arbitrary-rank p-primary Selmer structure from modular-symbol/Kurihara machinery, with rank-zero p-converse, parity, and upper bounds rather than arbitrary-rank complex rank equality",
+    "Burns-Kurihara-Sano arXiv:1910.07404: arbitrary-rank order-of-vanishing part of a Generalized Perrin-Riou framework and a p-part BSD/Iwasawa connection, with the canonical eta^BSD leading-term object defined using complex BSD leading data"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Kim-Pollack discrete refined Tamagawa/BSD-type formula",
+      "method": "use Kolyvagin derivatives of modular-symbol special values to define a discrete order invariant and recover exact p-primary Selmer corank and module structure via Kato Kolyvagin systems",
+      "shared_structure": [
+        "both the complex BSD rank statement and the discrete formula attach an integer order/rank to the same modular motive",
+        "both are meant to control arithmetic Selmer/Mordell-Weil information",
+        "the Kurihara object is independently defined from modular-symbol special-value data rather than from the complex Taylor leading coefficient"
+      ],
+      "required_assumptions": [
+        "large image for the p-adic Galois representation",
+        "nonvanishing of the Kurihara collection for Main Theorem I",
+        "the exact good-ordinary/p-distinguished, rank-zero/rank-one, or localized-Iwasawa hypotheses used to establish nonvanishing in Main Theorem II"
+      ],
+      "disanalogies": [
+        "the authors explicitly say the exact Selmer formula is insensitive to analytic rank",
+        "the discrete order is presented by analogy/correspondence with a Taylor expansion rather than proved equal to the complex analytic order in arbitrary rank",
+        "p-primary Selmer corank need not equal Mordell-Weil rank without controlling the relevant Sha contribution"
+      ],
+      "repair_question": "What independent theorem compares the Kurihara order invariant with the complex Taylor order in arbitrary rank, or gives enough source-bound inequalities to force equality?",
+      "source_anchors": [
+        "Chan-Ho Kim and Robert Pollack, The refined Tamagawa number conjectures for GL_2, arXiv:2505.09121, Main Theorems I-II and Section 7",
+        "Chan-Ho Kim, The structure of Selmer groups and the Iwasawa main conjecture for elliptic curves, arXiv:2203.12159"
+      ]
+    },
+    {
+      "source_context": "Burns-Kurihara-Sano Generalized Perrin-Riou/Bockstein interface",
+      "method": "compare Darmon-type derivatives of Kato zeta elements with higher complex L-derivative data through exterior/determinant and Bockstein regulator structures",
+      "shared_structure": [
+        "arbitrary-rank order information is represented in an augmentation/exterior-power object",
+        "Kato zeta elements provide a p-adic cohomological carrier linked to Selmer theory",
+        "the desired bridge must preserve order and leading-term information"
+      ],
+      "required_assumptions": [
+        "the exact GPRC hypotheses",
+        "p-primary Sha finiteness and Galois/local hypotheses for proved order-of-vanishing statements",
+        "BSD_p or related assumptions where explicitly invoked for integrality/leading-term consequences"
+      ],
+      "disanalogies": [
+        "the finite-level eta^BSD used in the leading-term comparison is defined from the complex BSD leading term",
+        "proved order-of-vanishing of the zeta derivative is not the same as proving complex analytic-rank equality",
+        "a conjectural comparison cannot be fed back as an unconditional proof of its own complex input"
+      ],
+      "repair_question": "Is there an independently algebraic/p-adic determinant element replacing eta^BSD together with a non-BSD-assuming comparison to the complex Taylor order?",
+      "source_anchors": [
+        "David Burns, Masato Kurihara, Takamichi Sano, On derivatives of Kato's Euler system for elliptic curves, arXiv:1910.07404"
+      ]
+    },
+    {
+      "source_context": "Kato Euler-system and cyclotomic Iwasawa control",
+      "method": "use zeta elements, explicit reciprocity, and characteristic-ideal/divisibility statements to constrain Selmer groups and p-adic L-functions",
+      "shared_structure": [
+        "Kato's zeta element is upstream of both Iwasawa p-adic analytic data and Selmer control",
+        "the BSD arithmetic side is accessible through Selmer groups and Euler/Kolyvagin systems"
+      ],
+      "required_assumptions": [
+        "the exact modular-form/prime/local conditions of Kato's theorems",
+        "main-conjecture equality when exact rather than one-sided Selmer control is required"
+      ],
+      "disanalogies": [
+        "p-adic L-function order and complex L-function order are not definitionally the same",
+        "Euler-system bounds can be one-sided",
+        "a fixed p does not directly bind the global refined leading coefficient"
+      ],
+      "repair_question": "Which proved complex-to-p-adic order comparison, beyond low-rank cases, can transfer exact complex Taylor order into the Kato/Kurihara arithmetic pipeline?",
+      "source_anchors": [
+        "Kazuya Kato, p-adic Hodge theory and values of zeta functions of modular forms, Asterisque 295 (2004), 117-290"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "a discrete BSD-type formula for Selmer groups is not the Clay BSD theorem unless its discrete order is independently identified with the complex Taylor order",
+    "nonvanishing of a Kurihara collection is weaker than determining its exact order invariant",
+    "localized Iwasawa main conjecture may determine p-primary arithmetic without supplying the missing complex analytic order",
+    "an object defined using the complex leading term cannot serve as an independent reconstruction of that same leading term",
+    "one-prime exact Selmer structure does not automatically reconstruct all-prime Sha or archimedean period/regulator data",
+    "rank-zero and rank-one p-converses do not establish the arbitrary-rank comparison"
+  ],
+  "source_anchors": [
+    "RAKL_math issue #7",
+    "Andrew Wiles, The Birch and Swinnerton-Dyer Conjecture, Clay Mathematics Institute",
+    "Chan-Ho Kim and Robert Pollack, The refined Tamagawa number conjectures for GL_2, arXiv:2505.09121",
+    "Chan-Ho Kim, The structure of Selmer groups and the Iwasawa main conjecture for elliptic curves, arXiv:2203.12159",
+    "David Burns, Masato Kurihara, Takamichi Sano, On derivatives of Kato's Euler system for elliptic curves, arXiv:1910.07404",
+    "Kazuya Kato, p-adic Hodge theory and values of zeta functions of modular forms, Asterisque 295 (2004), 117-290",
+    "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD-S001c1_SOURCE_IMPLICATION_AUDIT_20260811.md"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "error-correcting/decode-interface",
+      "source_situation": "A decoder can recover an internal state exactly from a syndrome while still not identify a different external message coordinate unless a proved encoding relation binds the two; exact decoding of the projection does not establish equality with an unbound source coordinate.",
+      "common_abstraction": [
+        "one representation can determine an internal target exactly",
+        "a second representation contains the root-critical coordinate",
+        "an explicit compatibility map is required before values in the two representations can be identified"
+      ],
+      "source_to_target_mapping": [
+        "syndrome/discrete invariant -> Kurihara-number collection and its order",
+        "decoded internal state -> exact p-primary Bloch-Kato Selmer module/corank",
+        "external message coordinate -> complex Taylor order ord_{s=1}L(E,s)",
+        "encoding compatibility theorem -> non-BSD-assuming discrete-to-complex order comparison"
+      ],
+      "shared_constraints": [
+        "exact reconstruction inside one representation does not imply an unregistered cross-representation equality",
+        "the compatibility map must preserve the coordinate used in the root claim",
+        "assuming the desired equality as part of the decoder specification would be circular"
+      ],
+      "disanalogies": [
+        "Kurihara numbers and complex L-functions are arithmetic/analytic objects, not finite linear codes",
+        "the relevant comparison need not be a linear or injective map",
+        "deep motivic or reciprocity theorems may couple the representations in ways absent from coding theory"
+      ],
+      "proposed_principle": "Treat the exact Selmer reconstruction as solved internal decoding and move the research frontier to the explicit compatibility relation between the discrete order and complex Taylor order; do not spend cycles improving Selmer reconstruction unless it changes that compatibility edge.",
+      "validation_obligation": "For any proposed use of Kurihara/Kato data to prove BSD rank equality, state a source theorem whose hypotheses do not contain BSD/analytic-rank equality and whose conclusion compares the exact discrete order with ord_{s=1}L(E,s); otherwise classify the route as arithmetic-only rather than a complex BSD bridge.",
+      "provenance_note": "Proposal-only structural analogy. It supplies no arithmetic theorem authority."
+    }
+  ],
+  "analogy_scan_notes": "Scanned inverse-problem projection, measurement-chain kernels, coding/decoding compatibility, rank-one Gross-Zagier transfer, Kato Euler systems, BKS determinant/Bockstein structures, and Kim-Pollack discrete Selmer reconstruction. Retained only the decode-interface analogy because it cleanly separates exact arithmetic reconstruction from the still-unbound complex order coordinate and yields a target-specific source falsifier.",
+  "frozen_at": "2026-08-11T08:10:20+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:77fb09f9c61fbe2506daf8bd6bf9a18e8bc69a2c360cbcd7316238f07e78b58a"
+}
