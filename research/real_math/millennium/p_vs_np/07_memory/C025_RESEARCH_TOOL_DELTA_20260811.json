@@ -1,0 +1,54 @@
+{
+  "tool": {
+    "tool_id": "T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION",
+    "name": "G_NEQ joint-signature calibration",
+    "kind": "calibration_and_route_pruning",
+    "abstraction": "After source-justified normalization of the G_NEQ canonical covering pairs to common partitions, encode each diagonal witness by its membership signature; covering all canonical unequal-pair filters is equivalent to injectivity of these signatures.",
+    "source_atom_id": "O9d12a2a1a",
+    "source_candidate_id": "C025",
+    "source_result_ids": [
+      "C025-L1",
+      "C025-L2"
+    ],
+    "source_context_hash": "sha256:daa6e99832bd994ff5b081b861521f7465ef37b468d274eb08c93e0001358b89",
+    "authority": "VERIFIED_LOCAL",
+    "preconditions": [
+      "target is the G_NEQ canonical semi-filter calibration from Cavalar-Oliveira Proposition 40",
+      "Claim 41 applies to the singleton complement fibres",
+      "Lemmas 42-43 justify replacing each relevant pair by a partition without losing canonical coverage"
+    ],
+    "structural_signature": [
+      "one common integral family of binary partitions",
+      "diagonal singleton generator witnesses",
+      "canonical unequal-pair obligations",
+      "joint signature injectivity"
+    ],
+    "operation": "map each diagonal witness to its joint membership signature under the normalized pair family; require injectivity and use N<=2^k as the exact canonical calibration floor",
+    "guaranteed_effects": [
+      "detects whether a proposed joint-consistency repair recovers the exact log2 N canonical G_NEQ benchmark",
+      "distinguishes C024-style independence failure from a later representation-scope failure"
+    ],
+    "non_guarantees": [
+      "does not normalize arbitrary full semi-filters",
+      "does not bound every mathematical function of a signature matrix",
+      "does not produce a super-log full-cover lower bound",
+      "does not establish novelty or P versus NP"
+    ],
+    "validation_obligations": [
+      "bind every normalization step to Claim 41/Lemmas 42-43 and the G_NEQ canonical family",
+      "verify the induced signatures are injective exactly when all canonical F_(u,v) are covered",
+      "after passing calibration, check whether the retained state has any noncanonical full-semi-filter content before target evaluation"
+    ],
+    "evidence_pointers": [
+      "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_joint_signature_canonical_scope.md",
+      "Cavalar-Oliveira 2025 Proposition 40, Claim 41, Lemmas 42-43",
+      "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C009_universal_canonical_matching_ceiling.md"
+    ],
+    "known_failure_ids": [
+      "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE"
+    ],
+    "successful_reuse_ids": [],
+    "proof_backing": [],
+    "artifact_hash": "sha256:bff3cc8c347f3ad4b007775d69abadffd408b8db2b3863990baf7b5c76d87475"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "experience": {
+    "failure_id": "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",
+    "atom_id": "O9d12a2a1a",
+    "candidate_id": "C025",
+    "context_packet_hash": "sha256:daa6e99832bd994ff5b081b861521f7465ef37b468d274eb08c93e0001358b89",
+    "research_trace_event_id": "O9d12a2a1a-E10",
+    "method_family": "joint integral binary signatures on original G_NEQ generator witnesses",
+    "failure_mode": "joint consistency is restored, but the resulting state is exactly canonical/original-generator separation and therefore does not expose noncanonical full semi-filter closure structure",
+    "residual_signature": [
+      "G_NEQ canonical calibration rises from the C024 fractional O(1) value to exact log2 N",
+      "the proof state consists only of binary memberships of diagonal singleton witnesses in a common partition family",
+      "C009 already caps canonical cover complexity at O(log N)",
+      "no super-log full-cover lower bound or noncanonical bridge is produced"
+    ],
+    "broken_assumptions": [
+      "restoring cross-fusion compatibility at the first-order generator-signature level would leave room for a super-logarithmic full-cover certificate"
+    ],
+    "scope_conditions": [
+      "G_NEQ calibration after Claim 41/Lemmas 42-43 normalization",
+      "representations whose certified mathematical content is only canonical/original-generator binary separation",
+      "no claim about tuple signatures, closure tensors, nonbinary bounded-information coordinates, or other higher-order states"
+    ],
+    "competing_diagnoses": [
+      "the compatibility repair itself is invalid",
+      "the repair is valid but too low-order/canonical to reach full cover complexity",
+      "generic hierarchy strength is the missing ingredient",
+      "the target family rather than the representation is the only problem"
+    ],
+    "selected_diagnosis": "the compatibility repair is valid on the source calibration, but it returns to the canonical representation class and therefore lacks the noncanonical closure coordinate required for super-log full-cover progress",
+    "diagnosis_status": "SUPPORTED",
+    "evidence_pointers": [
+      "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_joint_signature_canonical_scope.md",
+      "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C009_universal_canonical_matching_ceiling.md",
+      "Cavalar-Oliveira 2025 Proposition 40, Claim 41, Lemmas 42-43"
+    ],
+    "falsifier_or_attempt": "normalize the common integral family on G_NEQ, encode each diagonal witness by its joint binary signature, require all canonical unequal pairs to be separated, then compare the resulting state class with the already-closed canonical lane",
+    "observed_result": "the joint family exactly recovers N distinct signatures and k>=log2 N, but the state contains only canonical generator-separation information; C009 therefore blocks super-log canonical progress while leaving higher-order noncanonical states open",
+    "local_repair_attempts": [
+      "retain joint-signature encoding only as a calibration tool",
+      "reject the overbroad claim that all signature-derived objects are logarithmically weak",
+      "open a fresh higher-order noncanonical closure-state child atom"
+    ],
+    "timestamp": "2026-08-11T08:08:00+00:00",
+    "artifact_hash": "sha256:1ad323128652a32e1e1441339a94dba970374029d321acd951ea3afc442a3223"
+  },
+  "links": [
+    {
+      "source_id": "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",
+      "target_id": "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+      "relation": "SHARES_RESIDUAL_WITH",
+      "rationale": "C024 lost simultaneous compatibility entirely; C025 restores compatibility but shows that a first-order repair still lacks noncanonical state content. Together they separate compatibility loss from representation-scope loss.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/04_candidates/C024_fractional_semifilter_packing.md",
+        "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_joint_signature_canonical_scope.md"
+      ]
+    },
+    {
+      "source_id": "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",
+      "target_id": "F-C023-SCALAR-COLLAPSE",
+      "relation": "SHARES_BROKEN_ASSUMPTION_WITH",
+      "rationale": "Both failures show that a mathematically valid compressed representation can discard the root-critical structure; C025 is relational rather than scalar, but still too coarse because it retains only canonical generator separation.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_joint_signature_canonical_scope.md",
+        "research/real_math/millennium/p_vs_np/03_routes/R004_C023_ROUTE_DELTA_20260811.md"
+      ]
+    },
+    {
+      "source_id": "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",
+      "target_id": "F-C010-MULTIPLEXING",
+      "relation": "TRANSFER_WARNING_FOR",
+      "rationale": "Future higher-order states must still prove a bounded fusion budget and resist global sharing/multiplexing; simply enlarging the state does not solve the accumulation problem.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_joint_signature_canonical_scope.md"
+      ]
+    }
+  ]
+}

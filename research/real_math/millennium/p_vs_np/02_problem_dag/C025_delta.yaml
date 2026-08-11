@@ -1,0 +1,88 @@
+candidate_id: C025
+claim: "After Claim 41/Lemmas 42-43 normalization on the G_NEQ canonical family, one integral family of k partition pairs induces joint binary signatures on the N diagonal witnesses; covering all canonical F_(u,v) forces the signatures to be injective, so k>=log_2 N, and standard bit cuts attain equality. This repairs C024's compatibility loss only at canonical-generator scope."
+status: SOURCE_BOUND_ROUTE_PRUNING_WITH_EXACT_CALIBRATION
+route: R004
+parent_atom: O9d12a2a1a
+root_impact: NONE
+novelty_claim: false
+
+proof_dependencies:
+  - id: C025-SOURCE-1
+    claim: "For G_NEQ, Proposition 40 gives rho_can=rho=D_intersection=log_2 N."
+    basis: "Cavalar-Oliveira 2025 Proposition 40"
+  - id: C025-SOURCE-2
+    claim: "For the G_NEQ canonical family, Claim 41 plus Lemmas 42-43 allow each covering pair to be normalized to a partition of the complement universe without losing canonical coverage."
+    basis: "Cavalar-Oliveira 2025 Claim 41 and Lemmas 42-43"
+  - id: C025-L1
+    claim: "A normalized family covering all canonical F_(u,v), u!=v, induces N distinct k-bit signatures on diagonal witnesses."
+    basis: "Claim 41 plus elementary injectivity"
+  - id: C025-L2
+    claim: "N distinct k-bit signatures imply k>=ceil(log_2 N), while coordinate cuts from n-bit labels attain n when N=2^n."
+    basis: "elementary binary counting and explicit construction"
+  - id: C025-SCOPE
+    claim: "The first-order signature state is a canonical generator-separation representation and does not encode arbitrary noncanonical semi-filter closure state."
+    basis: "definition of the candidate plus C009 canonical-route ceiling"
+
+counterexample_first:
+  executable: "tests/math_applications/test_pnp_c025_joint_signature.py"
+  hostile_scope_checks:
+    - "reject normalization outside the source-justified G_NEQ canonical family"
+    - "reject the claim that recovering log N is a new lower-bound result"
+    - "reject the overbroad claim that every possible binary-signature-derived object is O(log N)"
+    - "retain C009 only as a canonical-scope route ceiling"
+
+route_consequence:
+  retained_tool:
+    id: T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION
+    authority: VERIFIED_LOCAL
+    use: "calibrate whether a proposed correlation repair at least recovers the integral log_2 N canonical G_NEQ benchmark"
+  new_failure:
+    id: F-C025-FIRST-ORDER-CANONICAL-COLLAPSE
+    diagnosis: "restoring joint consistency only through original-generator binary separation returns to the canonical representation class already logarithmically capped by C009"
+    status: SUPPORTED
+  active_residuals:
+    - id: O9d12a2a1a1
+      target: "freeze a higher-order noncanonical semi-filter/closure-state atom with a bounded fusion budget and a witnessed difference from canonical generator separation"
+      status: OPEN_CONTEXT_REQUIRED
+    - id: O9d12a2a2
+      target: "if spectral information is retained, require a separately proved fusion-relevant structural condition"
+      status: OPEN
+    - id: O9d12a1
+      target: "sharpen the QR upper bound toward O(log p)"
+      status: ACTIVE_PARALLEL
+
+promotion_blockers:
+  - no_superlog_full_cover_lower_bound
+  - noncanonical_higher_order_state_not_yet_frozen
+  - no_machine_proof
+  - bounded_novelty_certificate_missing
+  - independent_reviews_missing
+
+meta_learning:
+  representation: "joint binary signatures correctly restore simultaneous integral compatibility on G_NEQ but preserve only canonical/original-generator separation"
+  retrieval: "C024 and C009 were retrieved before target work, preventing a generic hierarchy escalation"
+  selected_mode: "CONTRASTIVE_DISCRIMINATION + EFFECTUAL_PROBE + FIXATION_RESET"
+  falsifier_value: "the probe distinguishes compatibility loss from representation-capacity/scope loss at minimal cost"
+  lesson: "repairing a missing coordinate can simply return to a previously closed representation class; the next atom must add noncanonical closure structure, not merely more first-order consistency vocabulary"
+
+root_status: OPEN_NO_SOLUTION_CERTIFICATE
+
+synthesis_assurance:
+  pre_result_registration:
+    artifact_hash: "sha256:39378a50357fd3807d1ee9bcfbdec79e7cf4e5f379d256cfc28d3bf0cb2ce286"
+    preserved_commit: "03a4cb9a0bce32374d79210d8b712670c11626a7"
+    frozen_at: "2026-08-11T08:05:50Z"
+  machine_receipt:
+    artifact_hash: "sha256:fcbdcdcb6a182705253b1cd0779316814c9791ceef549fc3f848023023a476eb"
+    exact_full_semifilter_counts: {2: 4, 3: 18, 4: 166}
+    exact_ordered_cut_family_counts: {2: 5, 3: 73, 4: 273}
+    direct_vs_signature_mismatches: 0
+    constructive_cases: [2, 3, 4, 5, 8, 9, 16, 17]
+  scope_effect:
+    strengthens: "conditional coverage/signature equivalence for every full semi-filter once a normalized G_NEQ partition family is fixed"
+    does_not_strengthen: "source normalization beyond the G_NEQ canonical family, arbitrary targets, higher-order closure states, novelty, proof assurance, or root authority"
+  identity_reconciliation:
+    canonical_failure_id: F-C025-FIRST-ORDER-CANONICAL-COLLAPSE
+    canonical_tool_id: T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION
+    duplicate_id_action: "parallel provisional capacity IDs were not minted; their scoped evidence was assimilated into the canonical identities"
+    supersession_action: "none, because no duplicate identity was accepted in the target lineage"
