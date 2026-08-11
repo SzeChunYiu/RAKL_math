@@ -2,11 +2,11 @@
 
 **Authority:** proposal/shadow application evidence; same-context review only; no root or framework-promotion authority.
 
-**Framework/application binding.** RAKL method `3.0.0` at `38a530a52d863513db16052474b85e63fbb488cd`; RAKL_math cycle base `c48293364c6bdf7e0c5d93f5e01d889008c9eb61`. Active canonical atom: `BSD-A1a1-THETA-ORDER-COMPARISON`. Frozen context hash: `sha256:6a4d98736ba2a6adae9177441457d9fb57a39698b47890c96333a614ceeacb7f`. Fibre snapshot hash: `sha256:3586bc33f1c833658b32300327d6985db31dc71c0d19548dc4535aea170c647e`.
+**Framework/application binding.** The mathematical/source audit began against RAKL method `3.0.0` at `38a530a52d863513db16052474b85e63fbb488cd`; a close-of-cycle refresh found current `RAKL/main` at `8118b9c96cd426439a7e3c4b737d279a047e37f2`, still method `3.0.0`. The late framework delta was inspected before closure. RAKL_math cycle base is `c48293364c6bdf7e0c5d93f5e01d889008c9eb61`. Active canonical atom: `BSD-A1a1-THETA-ORDER-COMPARISON`. Frozen context hash: `sha256:6a4d98736ba2a6adae9177441457d9fb57a39698b47890c96333a614ceeacb7f`. Fibre snapshot hash: `sha256:3586bc33f1c833658b32300327d6985db31dc71c0d19548dc4535aea170c647e`.
 
 ## Research method and actual fibre
 
-The cycle used the existing BSD root issue, parent theta-order context, R3 plectic bridge audit, R3 TaskEpisode/failure/metrics/method study, current route diagnostic, neighboring PR provenance, current RAKL `RAKL_VERSION.json`, `method_specs.py`, TaskEpisode schema and `pre_action_receipt.py`, plus four primary plectic papers. The evidence bundle records each consulted item. Retrieval-universe completeness is not claimed.
+The cycle used the existing BSD root issue, parent theta-order context, R3 plectic bridge audit, R3 TaskEpisode/failure/metrics/method study, current route diagnostic, neighboring PR provenance, current RAKL `RAKL_VERSION.json`, `method_specs.py`, TaskEpisode schema and `pre_action_receipt.py`, plus four primary plectic papers. The close-of-cycle framework refresh also inspected the newly landed proposal-only `route_family_health.py`. The evidence bundle records the original mathematical fibre; the framework delta is recorded here and in cycle metrics. Retrieval-universe completeness is not claimed.
 
 The canonical `method_specs.py` surfaces used were `memory`, `routing`, `search_query_generation`, `source_selection_reliability`, `claim_extraction`, `mathematical_context_translation`, `equivalence_similarity`, `contextual_theory_gluing`, `contradiction_diagnosis`, `gap_discovery`, `experiment_query_selection`, `review`, `synthesis`, and `saturation_stopping`.
 
@@ -32,11 +32,17 @@ The episode is `EP-BSD-A1A1-PLECTIC-THRESHOLD-20260811-R4`. The diagnosis is `D-
 
 Local mathematical failure is **not** asserted: the audited construction/comparison/downstream theorems stand at their published scopes. The separate **local-to-global/root-gluing failure remains open** because no audited theorem transports the root `E/Q` complex analytic-rank-two datum to plectic nonvanishing, and auxiliary `K/Q` base-change/twist-order transport remains a separate obligation.
 
+## Current v3 route-health use
+
+The close-of-cycle RAKL delta adds proposal-only longitudinal route-family health diagnostics and an explicit root-coordinate-preservation interface. Operationally, this cycle's improvement `R4-PLECTIC-THRESHOLD-RELATION-REFINEMENT` is treated as a `SurrogateImprovement` on the plectic representation/bridge description. No `RootCoordinatePreservationInterface` establishes that this refinement preserves or advances the BSD root coordinate. Under the current `classify_surrogate_improvement` semantics, it is therefore **LOCAL_PROGRESS** with `PRESERVATION_INTERFACE_ABSENT`, not root progress. This is a search-control classification only: `route_family_health.py` explicitly carries no scientific or promotion authority, and no truth/rationality verdict is inferred.
+
+This late framework feature did not change the mathematical result; it changed the telemetry label by preventing the relation refinement from being mistaken for root progress.
+
 ## Outcome, residual, saturation and novelty
 
 Outcome: `PARTIAL_SUCCESS / ROUTE_PRUNING_AND_RELATION_REFINEMENT / NO_THEOREM`. Residual before: `complex analytic rank two -> nonzero root-faithful plectic class/point or nondegenerate regulator`. Residual after: require a proved **complex** leading-term/nonvanishing comparison in the exact weight-two `E/Q` plus auxiliary-CM setting without importing algebraic/Selmer rank two, Sha finiteness, p-adic BSD or equivalent-strength arithmetic information; separately close auxiliary-field transport; otherwise rotate away from plectic nonvanishing as the immediate bridge.
 
-Saturation axes reopened: `KNOWLEDGE`, `RELATION`. Scalar theta-order repetition remains locally flat, and the direct “plectic degree two therefore rank-two nonvanishing” route is locally flattened absent a new complex comparison theorem. Retained semantic novelty is `KNOWLEDGE=1`, `RELATION=1`, with `OPERATOR=0`, `EXPERIENCE_PATTERN=0`, `OBSTRUCTION=0`, `PATH=0`, `META_METHOD=0`. No mathematical subproblem was solved, so no solved-subproblem novelty class is assigned.
+Saturation axes reopened: `KNOWLEDGE`, `RELATION`. Scalar theta-order repetition remains locally flat, and the direct “plectic degree two therefore rank-two nonvanishing” route is locally flattened absent a new complex comparison theorem. Retained semantic novelty is `KNOWLEDGE=1`, `RELATION=1`, with `OPERATOR=0`, `EXPERIENCE_PATTERN=0`, `OBSTRUCTION=0`, `PATH=0`, `META_METHOD=0`. No mathematical subproblem was solved, so no solved-subproblem novelty class is assigned. The current route-health diagnostic agrees that this retained relation refinement is local, not root progress.
 
 ## Framework-improvement hypothesis
 
