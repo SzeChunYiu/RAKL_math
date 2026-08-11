@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rakl.local/schemas/pnp-c034b-u8-retrospective-replay.schema.json",
+  "title": "P-vs-NP C034b U8 retrospective exact replay",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "receipt_id", "recorded_at", "framework_pin",
+    "application_base_commit", "source_binding", "object_qoi_context",
+    "evaluator_contract", "certificate", "validation_worlds", "claim_update",
+    "review_authority", "authority_contract", "residuals", "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"const": "PNP-C034B-U8-RETROSPECTIVE-EXACT-REPLAY-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "framework_pin": {"const": "9027cc6beab7e935d714bbdf8e902b89b50caaa8"},
+    "application_base_commit": {"const": "1d248204b35426695419f1a5a477e49cf163d39b"},
+    "source_binding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "source_sha256", "claim_id", "prior_assessment_path", "prior_assessment_sha256", "target_exposed_before_replay", "reported_support_counts_not_reproduced", "ambient_literal_absent", "reconstruction_boundary", "certificate_support_difference"],
+      "properties": {
+        "path": {"const": "research/real_math/millennium/p_vs_np/00_sources/RAKL_PVSNP_C034_C040_EXTERNAL_LEDGER_20260811.md"},
+        "source_sha256": {"const": "sha256:3db396674e15231f7cda79964d20c252ef99f6cd9058f20aa27173376075429d"},
+        "claim_id": {"const": "C034B-U8-49/24"},
+        "prior_assessment_path": {"const": "research/real_math/millennium/p_vs_np/08_reviews/C034_C040_EXTERNAL_LEDGER_ASSESSMENT_20260811.json"},
+        "prior_assessment_sha256": {"const": "sha256:c64edcf80f2048562182c16a32d5f58416324f3a5c876a430f96902af095cae5"},
+        "target_exposed_before_replay": {"const": true},
+        "reported_support_counts_not_reproduced": {"const": true},
+        "ambient_literal_absent": {"const": true},
+        "reconstruction_boundary": {"type": "string", "minLength": 80},
+        "certificate_support_difference": {
+          "type": "object", "additionalProperties": false,
+          "required": ["ledger_reported_primal_support", "ledger_reported_dual_support", "regenerated_primal_support", "regenerated_dual_support", "interpretation"],
+          "properties": {
+            "ledger_reported_primal_support": {"const": 21},
+            "ledger_reported_dual_support": {"const": 24},
+            "regenerated_primal_support": {"const": 17},
+            "regenerated_dual_support": {"const": 20},
+            "interpretation": {"const": "DIFFERENT_MATCHING_CERTIFICATE_REPRESENTATION_NOT_ORIGINAL_CERTIFICATE_RECOVERY"}
+          }
+        }
+      }
+    },
+    "object_qoi_context": {"$ref": "#/$defs/nonemptyObject"},
+    "evaluator_contract": {"$ref": "#/$defs/nonemptyObject"},
+    "certificate": {"$ref": "#/$defs/certificate"},
+    "validation_worlds": {
+      "type": "object", "additionalProperties": false,
+      "required": ["pass", "planted_fail", "structural_cannot_check", "zero_star_padding_invariance"],
+      "properties": {
+        "pass": {"$ref": "#/$defs/passResult"},
+        "planted_fail": {
+          "type": "object", "additionalProperties": false,
+          "required": ["verdict", "falsifier", "minimum_scaled_primal_coverage", "witness"],
+          "properties": {
+            "verdict": {"const": "FAIL"},
+            "falsifier": {"const": "PLANTED_PRIMAL_WEIGHT_REDUCTION_DETECTED"},
+            "minimum_scaled_primal_coverage": {"type": "integer", "maximum": 23},
+            "witness": {"$ref": "#/$defs/separation"}
+          }
+        },
+        "structural_cannot_check": {
+          "type": "object", "additionalProperties": false,
+          "required": ["verdict", "reason"],
+          "properties": {
+            "verdict": {"const": "CANNOT_CHECK"},
+            "reason": {"const": "MISSING_AMBIENT_BIPARTITION"}
+          }
+        },
+        "zero_star_padding_invariance": {"$ref": "#/$defs/passResult"}
+      }
+    },
+    "claim_update": {
+      "type": "object", "additionalProperties": false,
+      "required": ["prior_verdict", "new_verdict", "original_missing_bundle_verdict", "root_status", "reported_external_certificate_status"],
+      "properties": {
+        "prior_verdict": {"const": "CANNOT_CHECK_MISSING_CERTIFICATE_AND_RECEIPT"},
+        "new_verdict": {"const": "RETROSPECTIVE_EXACT_REPLAY_PASS_RECONSTRUCTED_FULL_UNION_LP_SOURCE_BINDING_CONDITIONAL"},
+        "original_missing_bundle_verdict": {"const": "CANNOT_CHECK_MISSING_CERTIFICATE_AND_RECEIPT"},
+        "root_status": {"const": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE"},
+        "reported_external_certificate_status": {"const": "STILL_MISSING_NOT_REPRODUCED"}
+      }
+    },
+    "review_authority": {"const": "SAME_CONTEXT_INTERNAL_ASSURANCE_NOT_INDEPENDENT_PEER_REVIEW"},
+    "authority_contract": {
+      "type": "object", "additionalProperties": false,
+      "required": ["grants_proof_authority", "grants_p_vs_np_root_authority", "grants_theorem_authority", "grants_asymptotic_authority", "grants_novelty_authority", "grants_review_independence", "grants_strict_rakl_discovery_credit", "promotes_missing_external_certificate"],
+      "properties": {
+        "grants_proof_authority": {"const": false},
+        "grants_p_vs_np_root_authority": {"const": false},
+        "grants_theorem_authority": {"const": false},
+        "grants_asymptotic_authority": {"const": false},
+        "grants_novelty_authority": {"const": false},
+        "grants_review_independence": {"const": false},
+        "grants_strict_rakl_discovery_credit": {"const": false},
+        "promotes_missing_external_certificate": {"const": false}
+      }
+    },
+    "residuals": {"type": "array", "minItems": 3, "items": {"type": "string", "minLength": 20}},
+    "artifact_hash": {"pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "nonemptyObject": {
+      "type": "object", "minProperties": 3,
+      "additionalProperties": {"type": "string", "minLength": 1}
+    },
+    "certificate": {
+      "type": "object", "additionalProperties": false,
+      "required": ["ambient_bipartition", "ambient_binding", "complement_edges", "generator_pairs", "primal_scaled_denominator", "primal_support", "dual_support"],
+      "properties": {
+        "ambient_bipartition": {
+          "type": "object", "additionalProperties": false,
+          "required": ["left_size", "right_size"],
+          "properties": {"left_size": {"const": 4}, "right_size": {"const": 5}}
+        },
+        "ambient_binding": {"type": "string", "minLength": 20},
+        "complement_edges": {
+          "type": "array", "minItems": 8, "maxItems": 8, "uniqueItems": true,
+          "items": {"$ref": "#/$defs/maskPair"}
+        },
+        "generator_pairs": {
+          "type": "array", "minItems": 12, "maxItems": 12, "uniqueItems": true,
+          "items": {"$ref": "#/$defs/maskPair"}
+        },
+        "primal_scaled_denominator": {"const": 24},
+        "primal_support": {
+          "type": "array", "minItems": 17, "maxItems": 17,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["e_mask", "h_mask", "scaled_weight"],
+            "properties": {"e_mask": {"type": "integer"}, "h_mask": {"type": "integer"}, "scaled_weight": {"type": "integer", "minimum": 1}}
+          }
+        },
+        "dual_support": {
+          "type": "array", "minItems": 20, "maxItems": 20,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["minimal_masks", "scaled_weight"],
+            "properties": {
+              "minimal_masks": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "integer", "minimum": 1, "maximum": 255}},
+              "scaled_weight": {"type": "integer", "minimum": 1}
+            }
+          }
+        }
+      }
+    },
+    "maskPair": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "prefixItems": [{"type": "integer", "minimum": 0}, {"type": "integer", "minimum": 0}]
+    },
+    "separation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["generator_pair", "certified_floor_or_falsifier_cost", "states_explored", "tracked_mask_count", "subthreshold_witness_minimal_masks"],
+      "properties": {
+        "generator_pair": {"$ref": "#/$defs/maskPair"},
+        "certified_floor_or_falsifier_cost": {"type": "integer", "minimum": 0},
+        "states_explored": {"type": "integer", "minimum": 1},
+        "tracked_mask_count": {"const": 35},
+        "subthreshold_witness_minimal_masks": {"type": "array", "items": {"type": "integer", "minimum": 1, "maximum": 255}}
+      }
+    },
+    "passResult": {
+      "type": "object", "additionalProperties": false,
+      "required": ["verdict", "complement_edge_count", "relevant_generator_pair_count", "full_union_pair_count", "primal_support_count", "dual_support_count", "primal_total", "dual_total", "minimum_scaled_primal_coverage", "maximum_scaled_dual_load", "generator_separation_lower_bounds", "generator_separation", "tight_dual_witness_coverage", "primal_feasible", "dual_feasible", "matching_totals", "exact_optimum"],
+      "properties": {
+        "verdict": {"const": "PASS"},
+        "complement_edge_count": {"const": 8},
+        "relevant_generator_pair_count": {"const": 12},
+        "full_union_pair_count": {"const": 3025},
+        "primal_support_count": {"const": 17},
+        "dual_support_count": {"const": 20},
+        "primal_total": {"const": "49/24"},
+        "dual_total": {"const": "49/24"},
+        "minimum_scaled_primal_coverage": {"const": 24},
+        "maximum_scaled_dual_load": {"const": 24},
+        "generator_separation_lower_bounds": {"type": "array", "minItems": 12, "maxItems": 12, "items": {"type": "integer", "minimum": 24}},
+        "generator_separation": {"type": "array", "minItems": 12, "maxItems": 12, "items": {"$ref": "#/$defs/separation"}},
+        "tight_dual_witness_coverage": {"type": "array", "minItems": 20, "maxItems": 20, "items": {"type": "object"}},
+        "primal_feasible": {"const": true},
+        "dual_feasible": {"const": true},
+        "matching_totals": {"const": true},
+        "exact_optimum": {"const": "49/24"}
+      }
+    }
+  }
+}
