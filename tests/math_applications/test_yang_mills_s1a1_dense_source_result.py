@@ -10,9 +10,14 @@ EPISODE = YM / "07_memory/YM-S1A1_DENSE_SOURCE_TASK_EPISODE_20260811.json"
 SAT = YM / "07_memory/YM-S1A1_SATURATION_VECTOR_SHADOW_20260811.json"
 TRACE = YM / "09_trace/YM-S1A1_POST_CANDIDATE_TRACE_20260811.json"
 CHILD = YM / "02_problem_dag/YM-S1A2.yaml"
+V2 = YM / "04_candidates/YM-S1A1_C001_V2_DENSE_SOURCE_COMMON_RATE_SPECTRAL_EXCLUSION_20260811.md"
+CORRECTION = YM / "07_memory/YM-S1A1_C001_V1_TO_V2_REVIEW_CORRECTION_20260811.json"
+CORRECTION_TRACE = YM / "09_trace/YM-S1A1_C001_V2_CORRECTION_TRACE_20260811.json"
 
 EXPECTED_CONTEXT = "sha256:082ddb6131aa0316cbdd17248d762af6bc036caed877a2acce42087f1c940e3a"
 EXPECTED_CANDIDATE_SHA256 = "a8b6081ac1333468fc05fa98ad2d456f89d2ea934250517af265f803e8408f9b"
+EXPECTED_V2_SHA256 = "7cd5b6cf8070aa792c3793e55f332f139953897180ec792f2f893113df680bf9"
+PREVIOUS_E012_HASH = "sha256:bfa9c462a1b2d098d279814739ffcbaec1b73192ae12ebb9973399c01cda4515"
 PREVIOUS_E007_HASH = "sha256:7c93020929cde30bcc7ed92a5300f7e938064655cc24033ce0fe602c12b1edaf"
 
 
@@ -107,3 +112,46 @@ def test_new_target_binding_child_fails_closed_before_candidate() -> None:
     assert "G6 physical lattice-spacing scaling" in text
     assert "G7 continuum spectral identification" in text
     assert "ROOT_AUTHORITY_NONE" in text
+
+
+def test_v2_narrows_q_zero_boundary_without_mutating_v1() -> None:
+    assert hashlib.sha256(CANDIDATE.read_bytes()).hexdigest() == EXPECTED_CANDIDATE_SHA256
+    v2 = V2.read_bytes()
+    assert hashlib.sha256(v2).hexdigest() == EXPECTED_V2_SHA256
+    text = v2.decode("utf-8")
+    assert "with `0 < q < 1`" in text
+    assert "allowed `q=0`" in text
+    assert "ROOT_AUTHORITY_NONE" in text
+
+    receipt = json.loads(CORRECTION.read_text(encoding="utf-8"))
+    unsigned = dict(receipt)
+    observed = unsigned.pop("artifact_hash")
+    assert observed == _canonical_hash(unsigned)
+    assert receipt["v1"]["sha256"] == EXPECTED_CANDIDATE_SHA256
+    assert receipt["v2"]["sha256"] == EXPECTED_V2_SHA256
+    assert receipt["blocking_concern"]["abstract_q_zero_spectral_exclusion_refuted"] is False
+    assert receipt["independent_review"] is False
+    assert receipt["root_authority"] == "NONE"
+
+
+def test_v2_correction_trace_continues_v1_and_records_supersession() -> None:
+    trace = json.loads(CORRECTION_TRACE.read_text(encoding="utf-8"))
+    assert trace["continues_trace"] == "TRACE-YM-S1A1-POST-CANDIDATE-20260811"
+    previous = PREVIOUS_E012_HASH
+    for event in trace["entries"]:
+        assert event["previous_event_hash"] == previous
+        unsigned = dict(event)
+        observed = unsigned.pop("artifact_hash")
+        assert observed == _canonical_hash(unsigned)
+        previous = observed
+    assert [event["event_type"] for event in trace["entries"]] == [
+        "REVIEWED",
+        "RESIDUAL_OPENED",
+        "CANDIDATE_PROPOSED",
+        "FALSIFIER_RUN",
+        "RESULT_RECORDED",
+        "REVIEWED",
+    ]
+    child = CHILD.read_text(encoding="utf-8")
+    assert "candidate_id: YM-S1A1-C001-V2" in child
+    assert "supersedes_candidate_id: YM-S1A1-C001" in child
