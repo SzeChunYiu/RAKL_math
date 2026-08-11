@@ -1,0 +1,165 @@
+{
+  "schema_version": "bsd-r6-preaction-receipt-v1",
+  "artifact_type": "PROSPECTIVE_PREACTION_RECEIPT",
+  "cycle_id": "BSD-A1a1-PLECTIC-APPLICABILITY-20260811-R6",
+  "authority": "PROPOSAL_SHADOW_PREACTION_ONLY",
+  "frozen_at_utc": "2026-08-11T19:34:30Z",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "current_main_sha": "f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "manifest_version": "0.6.6",
+    "method_specs_blob_sha": "3f629c4dd0ef55aedf14206b2be3df19875988b7",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "v3_surfaces_inspected": [
+      "AGENTS.md",
+      "skills/rakl-core/SKILL.md",
+      "skills/rakl-core/manifest.yaml",
+      "skills/rakl-core/static/core/principles.md",
+      "skills/rakl-core/static/core/workflow.md",
+      "RAKL_VERSION.json",
+      "docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md",
+      "src/rakl/experience_substrate.py",
+      "src/rakl/saturation_vector.py",
+      "src/rakl/method_specs.py",
+      "schemas/math-context-fiber.schema.json",
+      "src/rakl/math_context.py"
+    ]
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "canonical_main_sha": "47f56df0492339097a651d40b6c7289c4e2d4034",
+    "working_parent_sha": "c9dc6a2a4021531970695d3775146bf6fa6605f9",
+    "working_parent_lineage": "PR #150 R5 proposal/shadow branch plus test-placement repair; PR #150 is not yet canonical main",
+    "root_issue": 7,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "active_atom": {
+    "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+    "problem_signature": [
+      "exact complex analytic rank two for arbitrary E/Q",
+      "current plectic/mock-plectic route over K/Q",
+      "separate E-intrinsic theorem-entry conditions from K-selectable local conditions",
+      "preserve complex s-coordinate",
+      "keep nonvanishing, Selmer/rank and full BSD gluing separate"
+    ],
+    "fibre_snapshot_hash": "sha256:5ba3279d73bed3a4dfbb4d7cd6f10a9f5e6680473890d9d93311fb194feb1dae",
+    "fibre_file": "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_R6_PLECTIC_APPLICABILITY_CONTEXT_FIBRE_20260811.json"
+  },
+  "fibre_contents_actually_consulted": {
+    "framework": [
+      "RAKL@f224d91 AGENTS/skill/manifest/core workflow",
+      "RAKL_VERSION.json method 3.0.0",
+      "v3 experience substrate TaskEpisode/episode-diagnosis-obstruction semantics",
+      "saturation vector seven axes",
+      "method_specs canonical surfaces and v3 owner map"
+    ],
+    "root_and_dag": [
+      "RAKL_math issue #7",
+      "00_problem/PROBLEM.md",
+      "02_problem_dag/open_obligations.yaml"
+    ],
+    "frontier_memory": [
+      "R4 higher-Gross-Zagier normalized target-cell cycle",
+      "EP-BSD-A1A1-BASECHANGE-PLECTIC-20260811-R5 from PR #150",
+      "R5 frozen context fibre and trace",
+      "R5 metrics"
+    ],
+    "verification_history": [
+      "PR #150 prior pinned application workflow success did not execute the top-level R5 test because the runner scopes pytest to tests/math_applications",
+      "R5 test was moved under tests/math_applications on the working parent before this R6 freeze; exact-head replacement CI remains to be observed"
+    ]
+  },
+  "memory_review": {
+    "retrieved_ids": [
+      "EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4",
+      "EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3",
+      "EP-BSD-A1A1-BASECHANGE-PLECTIC-20260811-R5",
+      "F-BSD-A1A1-COMPLEX-HIGHER-GZ-TARGET-CELL-GAP-R4",
+      "F-BSD-A1A1-R5-AUXILIARY-K-EXACT-SCOPE-GAP",
+      "O-BSD-A1A1-R5-AUXILIARY-K-PLECTIC-ADMISSIBILITY",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "F-XM001-POINTWISE-GAP-COLLAPSE"
+    ],
+    "selected_ids": [
+      "EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3",
+      "EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4",
+      "EP-BSD-A1A1-BASECHANGE-PLECTIC-20260811-R5",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "F-BSD-A1A1-R5-AUXILIARY-K-EXACT-SCOPE-GAP"
+    ],
+    "selected_effects": {
+      "R3": "plectic representation is richer than the locally flat scalar theta-order family but nonvanishing is unbound",
+      "R4": "preserve the exact complex derivative coordinate and reject p-adic/weight-coordinate near matches",
+      "R5": "do not treat auxiliary-field selection as closed; the conditional base-change relation is local and the plectic interface remains typed/open",
+      "bridge_stability_tool": "check interface coordinates before composing local successes",
+      "R5_failure": "turn the broad auxiliary-K residual into a precondition partition rather than another undifferentiated search"
+    },
+    "retrieved_but_rejected": [
+      {
+        "id": "BSD-S001c1-KURIHARA-TAYLOR-COMPARISON",
+        "reason": "important arbitrary-rank sibling lane but not the smallest active plectic applicability discriminator"
+      },
+      {
+        "id": "YUN-ZHANG-FUNCTION-FIELD-HIGHER-DERIVATIVE-ANALOGUE",
+        "reason": "retained only as representation analogue; theorem transfer is invalid across the number-field/function-field disanalogy"
+      },
+      {
+        "id": "REPEAT_SCALAR_THETA_ORDER_SCAN",
+        "reason": "locally saturated failure family after R3/R4"
+      },
+      {
+        "id": "IMMEDIATE_AUXILIARY_K_OPTIMIZATION",
+        "reason": "rejected until intrinsic E-level plectic theorem-entry conditions are type-checked"
+      },
+      {
+        "id": "R5_PRIOR_CI_AS_FULL_R5_VERIFICATION",
+        "reason": "rejected because the passed workflow did not include the R5 top-level regression; this is a tooling/provenance defect, not mathematical refutation"
+      }
+    ],
+    "missed_relevant_memory": "CANNOT_MEASURE: no coverage-complete cross-problem memory universe/recall denominator is materialized"
+  },
+  "decision_policy": {
+    "canonical_surfaces": [
+      "memory",
+      "routing",
+      "search_query_generation",
+      "source_selection_reliability",
+      "claim_extraction",
+      "ontology_terminology_normalization",
+      "mathematical_context_translation",
+      "equivalence_similarity",
+      "contextual_theory_gluing",
+      "contradiction_diagnosis",
+      "gap_discovery",
+      "experiment_query_selection",
+      "review",
+      "saturation_stopping"
+    ],
+    "choice": "TYPE_CHECK_INTRINSIC_E_LEVEL_PLECTIC_APPLICABILITY_BEFORE_MORE_AUXILIARY_K_SEARCH",
+    "why": "R5 left a mixed intrinsic/auxiliary hypothesis bundle; v3 fibre/memory and the bridge-stability warning make the cheapest high-information discriminator an entry-interface audit."
+  },
+  "prospective_discriminator": {
+    "question": "In the current Fornea-Gehrmann / Fornea F=Q plectic/mock-plectic route with even global sign appropriate to analytic rank two, does the published theorem/construction require an E-intrinsic multiplicative bad prime p (with p inert in K), so that choosing K cannot make the route applicable to an arbitrary E/Q lacking that interface?",
+    "falsifiers": [
+      "published F=Q theorem allows the relevant even-sign mock-plectic route with p of good or additive reduction",
+      "published construction has an S=empty or other F=Q specialization that supplies the same rank-two/even-sign downstream object without a multiplicative p",
+      "the multiplicative-reduction language is merely expository and not a theorem hypothesis",
+      "auxiliary K selection can alter the reduction type of the fixed E/Q at p (would contradict standard local typing and must be source-bound if claimed)"
+    ],
+    "allowed_outputs": [
+      "source-bound route-applicability restriction with exact scope",
+      "refutation of the suspected intrinsic restriction",
+      "CANNOT_CHECK if the primary statements do not bind the interface"
+    ],
+    "forbidden_promotions": [
+      "no claim that BSD is false/true for any curve",
+      "no claim that no plectic approach can cover arbitrary E",
+      "no claim that absence of this route proves a mathematical impossibility",
+      "no root promotion or independent-review credit"
+    ]
+  },
+  "prefreeze_scouting_credit": "MOTIVATING_ONLY_NO_PROSPECTIVE_DISCOVERY_CREDIT: preliminary source inspection occurred before this durable receipt; all consequential source claims must be reverified after this freeze.",
+  "artifact_hash": "sha256:0c8aef7b986707789453da5454ab8e2b0a07e986747f357841f4af2ed6cda503"
+}
