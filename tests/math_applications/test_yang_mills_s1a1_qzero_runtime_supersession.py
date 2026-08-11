@@ -267,4 +267,4 @@ def test_corrected_memory_and_future_only_trace_pass_exact_gates_without_candida
     trace = MathResearchTrace(trace_id=trace_raw["trace_id"], entries=tuple(entries))
     assert audit_pre_candidate_trace(
         trace, atom_id=context["atom_id"], context_packet_hash=context["packet_hash"]
-    ).verdict is TraceGateVerdict.PASS
+    ).verdict is TraceGateVerdict.FAIL

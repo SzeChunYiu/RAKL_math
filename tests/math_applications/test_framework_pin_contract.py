@@ -13,7 +13,7 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "b8f96b8c90745c6a7a6ed57bc55d90319db505f7"
+EXPECTED_FRAMEWORK_COMMIT = "43897d3afaf0038385102d5acc64793c05ec40f0"
 HISTORICAL_F224_FRAMEWORK_COMMIT = "f224d91d9fbd2844a89921ca4a30b77a7954ecd2"
 HISTORICAL_4EE_FRAMEWORK_COMMIT = "4ee5e9afe77870c684b798e0ed4c9fcee62a4365"
 HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
@@ -78,9 +78,10 @@ def test_machine_readable_framework_pin_is_valid_and_loaded_exactly() -> None:
     ).stdout
     assert framework_status == ""
     assert pin["authority"] == (
-        "Dependency synchronization to exact clean RAKL origin/main b8f96b8c90745c6a7a6ed57bc55d90319db505f7 observed 2026-08-12; "
-        "mathematical/core workflow and C041/C042 gate APIs are unchanged from 4d78fd2 while later non-mathematical overlays are included; "
-        "no proof, research, review-independence, or method-evolution authority"
+        "Dependency synchronization to exact clean RAKL origin/main 43897d3afaf0038385102d5acc64793c05ec40f0 observed 2026-08-12; "
+        "the current obstruction-transformation memory/review is a strict new-candidate gate; "
+        "historical pre-gate artifacts retain only their recorded historical authority and are not retroactively current-gate compliant; "
+        "no proof, research, review-independence, method-evolution, or mathematical-saturation authority"
     )
 
 

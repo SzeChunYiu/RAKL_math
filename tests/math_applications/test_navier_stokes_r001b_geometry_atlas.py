@@ -22,6 +22,7 @@ from rakl.research_memory import (
     ResearchMemoryVerdict,
     audit_research_memory_review,
 )
+from rakl.semantic_shortcut import REQUIRED_SHORTCUT_ACTIONS, ShortcutReviewVerdict
 from rakl.research_trace import (
     MathResearchTrace,
     ResearchTraceEntry,
@@ -224,7 +225,7 @@ def test_child_strict_packet_hashes_and_gates_pass() -> None:
         entries.append(ResearchTraceEntry(event_id=raw["event_id"], atom_id=raw["atom_id"], event_type=ResearchTraceEventType(raw["event_type"]), timestamp=raw["timestamp"], state_summary=raw["state_summary"], action_summary=raw["action_summary"], evidence_pointers=tuple(raw["evidence_pointers"]), alternatives_considered=tuple(raw.get("alternatives_considered", ())), decision_rationale=raw.get("decision_rationale", ""), outputs=tuple(raw.get("outputs", ())), uncertainties=tuple(raw.get("uncertainties", ())), residuals=tuple(raw.get("residuals", ())), next_steps=tuple(raw.get("next_steps", ())), artifact_hash=raw["artifact_hash"], previous_event_hash=raw.get("previous_event_hash", "")))
 
     research_trace = MathResearchTrace(trace_id=trace_raw["trace_id"], entries=tuple(entries))
-    assert audit_pre_candidate_trace(research_trace, atom_id=fiber.atom_id, context_packet_hash=fiber.packet_hash).verdict is TraceGateVerdict.PASS
+    assert audit_pre_candidate_trace(research_trace, atom_id=fiber.atom_id, context_packet_hash=fiber.packet_hash).verdict is TraceGateVerdict.FAIL
 
     plan = plan_math_research(
         signature=ProblemSignature(objects=("3D incompressible Navier-Stokes solution", "strain tensor", "vorticity", "finite-energy localization", "critical geometric depletion quantity"), relations=("vorticity stretching", "Navier-Stokes scaling", "Biot-Savart nonlocality", "exact advection/pressure evolution", "energy inequality"), domain="partial differential equations / mathematical fluid mechanics", goal_type="derive or falsify a geometry-based critical-control mechanism"),
@@ -232,8 +233,10 @@ def test_child_strict_packet_hashes_and_gates_pass() -> None:
     )
     assert plan.context_gate.verdict is ContextGateVerdict.PASS
     assert plan.memory_gate.verdict is ResearchMemoryVerdict.PASS
-    assert plan.trace_gate.verdict is TraceGateVerdict.PASS
-    assert plan.candidate_generation_allowed
+    assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.CANNOT_CHECK
+    assert plan.trace_gate.verdict is TraceGateVerdict.CANNOT_CHECK
+    assert plan.candidate_generation_allowed is False
+    assert plan.pre_candidate_actions == REQUIRED_SHORTCUT_ACTIONS
 
 
 def test_geometry_failure_delta_is_scoped_and_hash_bound() -> None:

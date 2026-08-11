@@ -21,6 +21,7 @@ from rakl.research_memory import (
     ResearchMemoryVerdict,
     audit_research_memory_review,
 )
+from rakl.semantic_shortcut import REQUIRED_SHORTCUT_ACTIONS, ShortcutReviewVerdict
 from rakl.research_trace import (
     MathResearchTrace,
     ResearchTraceEntry,
@@ -154,7 +155,7 @@ def test_h4d1_strict_pre_candidate_packet_passes_current_rakl_gates() -> None:
         audit_pre_candidate_trace(
             trace, atom_id=fiber.atom_id, context_packet_hash=fiber.packet_hash
         ).verdict
-        is TraceGateVerdict.PASS
+        is TraceGateVerdict.FAIL
     )
 
     plan = plan_math_research(
@@ -182,9 +183,10 @@ def test_h4d1_strict_pre_candidate_packet_passes_current_rakl_gates() -> None:
     )
     assert plan.context_gate.verdict is ContextGateVerdict.PASS
     assert plan.memory_gate.verdict is ResearchMemoryVerdict.PASS
-    assert plan.trace_gate.verdict is TraceGateVerdict.PASS
-    assert plan.candidate_generation_allowed
-    assert plan.pre_candidate_actions == ()
+    assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.CANNOT_CHECK
+    assert plan.trace_gate.verdict is TraceGateVerdict.CANNOT_CHECK
+    assert plan.candidate_generation_allowed is False
+    assert plan.pre_candidate_actions == REQUIRED_SHORTCUT_ACTIONS
 
     # This packet deliberately stops at NEXT_STEP_PROPOSED. The first concrete
     # H4d1 theorem/lemma/criterion candidate belongs to a later append-only trace.

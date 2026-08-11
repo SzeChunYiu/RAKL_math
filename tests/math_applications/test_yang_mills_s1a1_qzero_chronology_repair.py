@@ -23,6 +23,7 @@ from rakl.research_memory import (
     ResearchMemoryVerdict,
     audit_research_memory_review,
 )
+from rakl.semantic_shortcut import REQUIRED_SHORTCUT_ACTIONS, ShortcutReviewVerdict
 from rakl.research_trace import (
     MathResearchTrace,
     ResearchTraceEntry,
@@ -268,7 +269,7 @@ def test_future_only_trace_is_hash_chained_complete_and_emits_no_candidate() -> 
             atom_id=context_raw["atom_id"],
             context_packet_hash=context_raw["packet_hash"],
         ).verdict
-        is TraceGateVerdict.PASS
+        is TraceGateVerdict.FAIL
     )
 
     # The packet is a real prospective gate, but no candidate is emitted by this repair.
@@ -321,5 +322,8 @@ def test_future_only_trace_is_hash_chained_complete_and_emits_no_candidate() -> 
         memory_review=memory,
         research_trace=trace,
     )
-    assert plan.candidate_generation_allowed
+    assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.CANNOT_CHECK
+    assert plan.trace_gate.verdict is TraceGateVerdict.CANNOT_CHECK
+    assert plan.candidate_generation_allowed is False
+    assert plan.pre_candidate_actions == REQUIRED_SHORTCUT_ACTIONS
     assert all("CANDIDATE_PROPOSED" not in item for item in entries[-1].outputs)

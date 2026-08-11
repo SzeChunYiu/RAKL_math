@@ -10,6 +10,7 @@ from rakl.math_research_assurance import MathResearchRecord
 from rakl.math_research_runtime import plan_math_research
 from rakl.problem_solving_algebra import ProblemSignature
 from rakl.research_memory import MemoryQueryStatus, ResearchMemoryReview, ResearchMemoryVerdict, audit_research_memory_review
+from rakl.semantic_shortcut import REQUIRED_SHORTCUT_ACTIONS, ShortcutReviewVerdict
 from rakl.research_trace import MathResearchTrace, ResearchTraceEntry, ResearchTraceEventType, TraceGateVerdict, audit_pre_candidate_trace
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -45,10 +46,11 @@ def test_bsd_a1a1_theta_order_packet_passes_pre_candidate_gates() -> None:
         assert artifact_hash == _canonical_hash(payload); previous = artifact_hash
         entries.append(ResearchTraceEntry(event_id=raw["event_id"], atom_id=raw["atom_id"], event_type=ResearchTraceEventType(raw["event_type"]), timestamp=raw["timestamp"], state_summary=raw["state_summary"], action_summary=raw["action_summary"], evidence_pointers=tuple(raw["evidence_pointers"]), alternatives_considered=tuple(raw["alternatives_considered"]), decision_rationale=raw["decision_rationale"], outputs=tuple(raw["outputs"]), uncertainties=tuple(raw["uncertainties"]), residuals=tuple(raw["residuals"]), next_steps=tuple(raw["next_steps"]), artifact_hash=raw["artifact_hash"], previous_event_hash=raw["previous_event_hash"]))
     trace = MathResearchTrace(trace_id=trace_raw["trace_id"], entries=tuple(entries))
-    assert audit_pre_candidate_trace(trace, atom_id=fiber.atom_id, context_packet_hash=fiber.packet_hash).verdict is TraceGateVerdict.PASS
+    assert audit_pre_candidate_trace(trace, atom_id=fiber.atom_id, context_packet_hash=fiber.packet_hash).verdict is TraceGateVerdict.FAIL
     plan = plan_math_research(signature=ProblemSignature(objects=("complex elliptic-curve L-function","anticyclotomic theta element","generalised Kato class","p-adic L-function","derived p-adic height"), relations=("complex s-order two","finite-character interpolation","anticyclotomic T-order","explicit reciprocity","class nonvanishing"), domain="analytic number theory / arithmetic geometry / Iwasawa theory", goal_type="isolate a noncircular exact-order bridge from complex analytic rank two to anticyclotomic theta order"), record=MathResearchRecord(claim_id=fiber.atom_id), context_fiber=fiber, memory_review=memory, research_trace=trace)
     assert plan.context_gate.verdict is ContextGateVerdict.PASS
     assert plan.memory_gate.verdict is ResearchMemoryVerdict.PASS
-    assert plan.trace_gate.verdict is TraceGateVerdict.PASS
-    assert plan.candidate_generation_allowed
-    assert plan.pre_candidate_actions == ()
+    assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.CANNOT_CHECK
+    assert plan.trace_gate.verdict is TraceGateVerdict.CANNOT_CHECK
+    assert plan.candidate_generation_allowed is False
+    assert plan.pre_candidate_actions == REQUIRED_SHORTCUT_ACTIONS

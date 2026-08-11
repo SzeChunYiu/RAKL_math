@@ -19,6 +19,7 @@ from rakl.problem_fibre import FibreKnowledgeItem, ProblemAtom, compile_problem_
 from rakl.problem_solving_algebra import ProblemSignature
 from rakl.research_memory import MemoryQueryStatus, ResearchMemoryReview, ResearchMemoryVerdict, audit_research_memory_review
 from rakl.research_tool_inventory import ResearchTool, ResearchToolAuthority, ResearchToolInventory
+from rakl.semantic_shortcut import REQUIRED_SHORTCUT_ACTIONS, ShortcutReviewVerdict
 from rakl.research_trace import MathResearchTrace, ResearchTraceEntry, ResearchTraceEventType, TraceGateVerdict, audit_pre_candidate_trace
 
 
@@ -129,7 +130,7 @@ def test_pnp_o9d12a2a1a1b1_pre_candidate_v4_runtime_fibre_and_pre_action_are_exa
     trace = trace_value(trace_raw)
     assert audit_math_context_fiber(context).verdict is ContextGateVerdict.PASS
     assert audit_research_memory_review(memory, atom_id=ATOM, context_hash=context.packet_hash).verdict is ResearchMemoryVerdict.PASS
-    assert audit_pre_candidate_trace(trace, atom_id=ATOM, context_packet_hash=context.packet_hash).verdict is TraceGateVerdict.PASS
+    assert audit_pre_candidate_trace(trace, atom_id=ATOM, context_packet_hash=context.packet_hash).verdict is TraceGateVerdict.FAIL
     assert len(reconstruct_failure_lattice(failures_raw).experiences) == 6
     assert warning["authority"]["canonical_failure_memory"] is False
     assert [item.event_type.value for item in trace.entries] == [
@@ -147,8 +148,10 @@ def test_pnp_o9d12a2a1a1b1_pre_candidate_v4_runtime_fibre_and_pre_action_are_exa
         ),
         record=MathResearchRecord(claim_id=ATOM), context_fiber=context, memory_review=memory, research_trace=trace,
     )
-    assert plan.candidate_generation_allowed is True
-    assert plan.pre_candidate_actions == ()
+    assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.CANNOT_CHECK
+    assert plan.trace_gate.verdict is TraceGateVerdict.CANNOT_CHECK
+    assert plan.candidate_generation_allowed is False
+    assert plan.pre_candidate_actions == REQUIRED_SHORTCUT_ACTIONS
 
     source_pdf = PNP / "00_sources/ECCC_TR25_033_20250318.pdf"
     retrieval = load(PNP / "00_sources/ECCC_TR25_033_SOURCE_RETRIEVAL_RECEIPT_20260811.json")
