@@ -1,0 +1,53 @@
+{
+  "schema_version": "experience-delta-v3-proposal-shadow-ns-b1a4-r1",
+  "cycle_id": "NS-B1a4-SIGNED-NORECROSSING-20260811-R1",
+  "atom_id": "NS-B1a4",
+  "authority": "PROPOSAL_SHADOW_ONLY_SEARCH_PRIORITY_NO_THEOREM_AUTHORITY",
+  "episode_link": "EP-NS-B1a4-SIGNED-NORECROSSING-20260811-R1",
+  "diagnosis": {
+    "id": "DX-NS-B1a4-R1-UNSIGNED-REPRESENTATION",
+    "category": "REPRESENTATION_SIGN_INFORMATION",
+    "statement": "The standard local suitable-solution energy identity permits pressure-free local energy increase, decrease and recrossing, while local A+C+D+E remains finite; therefore mere unsigned magnitude bookkeeping and pressure localization do not intrinsically orient temporal local-energy flow."
+  },
+  "failure": {
+    "id": "F-NS-B1a4-UNSIGNED-LOCAL-ENERGY-NO-RECROSSING",
+    "category": "LOCAL_MATHEMATICAL_INFERENCE_FAILURE",
+    "statement": "The inference from finite local A+C+D+E plus the standard local-energy identity and pressure magnitude/localization alone to a universal one-sided local-energy/no-recrossing law is invalid.",
+    "scope": "Smooth local suitable Navier-Stokes behavior; the exact pressure-free shear is not a global finite-I mild bounded ancient solution and therefore does not falsify a theorem that essentially uses that stronger global/trajectory source class.",
+    "status": "OBSERVED_ONLY_PROPOSAL_SHADOW_WITH_EXACT_LOCAL_ANALYTIC_WITNESS"
+  },
+  "gluing_residuals": [
+    {
+      "id": "G-NS-B1a4-LOCAL-SIGN-TO-GLOBAL-FINITE-I-ANCIENT",
+      "category": "LOCAL_TO_GLOBAL_SOURCE_CLASS_GLUING",
+      "statement": "A local sign counterexample does not decide whether global finite-I mild bounded ancient dynamics imposes an extra no-return law through trajectory, tightness, compactness or minimality information."
+    },
+    {
+      "id": "G-NS-B1a4-SIGNED-OBSERVABLE-TO-LIOUVILLE-CONSUMER",
+      "category": "PRODUCER_TO_CONSUMER_GLUING",
+      "statement": "No scale-normalized signed observable has yet been defined, shown compact under the Type-I blow-up interface, and connected to a source-valid Liouville/epsilon-regularity consumer."
+    }
+  ],
+  "obstruction": {
+    "id": "O-NS-B1a4-UNSIGNED-LEDGER-NO-ORIENTATION",
+    "statement": "A no-recrossing route cannot obtain orientation merely by re-estimating the same nonnegative local A/C/D/E ledger; it needs an additional signed or genuinely global/trajectory coordinate that survives the finite-I ancient source interface.",
+    "promotion_status": "PROPOSAL_SHADOW_ONLY"
+  },
+  "lesson": {
+    "id": "L-NS-B1a4-ABLATE-SIGN-SOURCES-BEFORE-NORECROSSING",
+    "authority": "CANDIDATE_ONLY_NOT_RETAINED_AS_VERIFIED_LEARNING",
+    "kind": "REPRESENTATION",
+    "statement": "Before pursuing a no-recrossing theorem from a magnitude ledger, ablate candidate sign sources with an exact same-equation solution; if pressure-free or zero-net-convective-flux recrossing survives, introduce an explicit signed/global coordinate rather than another absolute-value estimate.",
+    "falsifier": "A source-class theorem deriving one-sidedness solely from the registered unsigned ledger and local identity, with no extra global/trajectory/sign coordinate, would overturn this routing lesson."
+  },
+  "prior_failures_linked": [
+    "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+    "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER"
+  ],
+  "prior_pointer_not_promoted": [
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH: canonical payload not found on current main during this cycle"
+  ],
+  "novelty_class": "representation",
+  "separation_invariant": "episode != diagnosis != failure != obstruction != lesson; the candidate lesson and obstruction remain proposal/shadow and experience changes search priority only",
+  "raw_repository_growth_is_learning": false
+}
