@@ -1,0 +1,103 @@
+{
+  "schema_version": "rakl-v3-shadow-task-episode-v0",
+  "artifact_type": "TASK_EPISODE_SHADOW",
+  "episode_id": "YM-E2-FS-GAP-BUDGET-EP001",
+  "status": "PROPOSAL_ONLY",
+  "authority": "SEARCH_PRIORITY_ONLY",
+  "chronology_status": "RETROSPECTIVE_RESULT_NOT_ELIGIBLE_FOR_PRE_CANDIDATE_CREDIT",
+  "framework_sha": "decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8",
+  "application_base_sha": "5d6bdc6f566921f51a375fdc2e8035123cf4830c",
+  "task_id": "yang-mills-constructive::source-claim-audit::faizal-shabir-gap-persistence",
+  "atom_id": "YM-E2-FS-GAP-BUDGET-AUDIT",
+  "problem_signature": [
+    "4D pure SU(N) Yang-Mills",
+    "reflection-positive multiscale RG",
+    "mass-gap persistence",
+    "summable additive defects",
+    "continuum OS reconstruction"
+  ],
+  "fibre_consulted": {
+    "knowledge": [
+      "RAKL_math Yang-Mills root contract issue #5",
+      "constructive-continuum README and active YM-E1a1a source-bound route",
+      "Faizal-Shabir 2026 primary article arXiv:2606.19362 / DOI 10.1002/prop.70097"
+    ],
+    "tools_selected": [
+      "counterexample-first implication audit",
+      "root-coordinate preservation / bridge audit",
+      "source-hypothesis exactness audit"
+    ],
+    "tools_retrieved_but_rejected": [
+      {
+        "item": "F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE",
+        "reason": "different failure mechanism: marked operator vocabulary leakage, not additive gap-budget preservation"
+      },
+      {
+        "item": "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE",
+        "reason": "different failure mechanism: spectral invisibility from incomplete source family"
+      }
+    ],
+    "warnings": [
+      "published full-solution claim does not inherit mathematical authority from publication status",
+      "summability and positivity of the residual budget are distinct properties",
+      "retrospective source audit cannot be backfilled as preregistered candidate evidence"
+    ]
+  },
+  "operators_tried": [
+    "SOURCE_STATEMENT_TO_PROOF_HYPOTHESIS_DIFF",
+    "TELESCOPING_DEFECT_BUDGET_CHECK",
+    "CHEAP_NUMERIC_COUNTERMODEL",
+    "ROOT_BRIDGE_STABILITY_AUDIT"
+  ],
+  "strategy_motif": "attack the load-bearing local-to-global implication before auditing downstream OS reconstruction",
+  "search_policy_choice": "maximize epistemic contraction by testing whether the stated summability hypothesis alone implies a positive residual gap",
+  "observations": [
+    "Theorem 11.1 states a positive continuum gap under one-step interlacing and only sum_k epsilon_k < infinity.",
+    "Corollary D.5 states positive fixed-tau gap persistence under Delta_0,L >= delta_0 > 0, Delta_{k+1,L} >= Delta_{k,L}-epsilon_k, and sum epsilon_k < infinity.",
+    "The proof of Corollary D.5 additionally invokes sum_k epsilon_k < delta_0.",
+    "Proposition 5.5 supplies epsilon_k <= C theta^k and hence summability, but the audited statement does not itself bind C/(1-theta) below delta_0.",
+    "Pure summability does not imply delta_0 - sum epsilon_k > 0."
+  ],
+  "verification": [
+    "primary PDF text and page screenshots inspected for Theorem 11.1, Proposition 5.5, Corollary D.5 and its proof",
+    "logical countermodel: delta_0=1, epsilon_0=0.6, epsilon_1=0.6, epsilon_k=0 afterward is nonnegative and summable but yields delta_0-sum epsilon_k=-0.2",
+    "searched source for a quantitative theorem establishing total defect budget below initial gap; bounded audit did not locate one"
+  ],
+  "outcome": "PARTIAL_SUCCESS",
+  "residual_signature": [
+    "SOURCE_THEOREM_UNSTATED_RELATIVE_DEFECT_BUDGET",
+    "need explicit proof that sum epsilon_k < delta_0 (or Hamiltonian analogue) in the concrete admissible RG construction",
+    "need constants uniform in volume and along the continuum trajectory",
+    "full Yang-Mills root remains open"
+  ],
+  "local_vs_gluing": {
+    "local_mathematics": "telescoping inequality itself is elementary and valid",
+    "gluing_failure": "local summable one-step errors are insufficient to preserve a strictly positive root-critical gap unless their total budget is quantitatively smaller than the initial gap"
+  },
+  "cost_proxy": {
+    "primary_source_pages_targeted": 4,
+    "source_search_queries": "bounded exact-term search",
+    "proof_obligation_reduction": "full 593-page claim reduced to one quantitative bridge obligation"
+  },
+  "saturation": {
+    "KNOWLEDGE": "REOPENED_BY_FRESH_2026_SOURCE",
+    "OPERATOR": "NOT_FLAT",
+    "EXPERIENCE_PATTERN": "REOPENED_BY_SURROGATE_TO_ROOT_BRIDGE_PATTERN",
+    "OBSTRUCTION": "REOPENED_BY_RELATIVE_DEFECT_BUDGET",
+    "RELATION": "REOPENED_BY_SUMMABILITY_VS_POSITIVITY_DISTINCTION",
+    "PATH": "REOPENED_TO_QUANTITATIVE_CONSTANT_AUDIT",
+    "META_METHOD": "REOPENED_BY_V3_RETROSPECTIVE_EPISODE_CAPTURE"
+  },
+  "novelty_class": "TRANSFER_NOVEL_AT_RESEARCH_CONTROL_ONLY",
+  "next_action": "Freeze a fresh pre-candidate child that audits the concrete dependence of C, theta and delta_0 on the block factor/coupling and tests whether the source proves C/(1-theta) < delta_0 uniformly.",
+  "recorded_at_utc": "2026-08-11T11:10:00Z",
+  "authority_contract": {
+    "grants_tool_authority": false,
+    "grants_proof_authority": false,
+    "grants_gluing_authority": false,
+    "grants_theorem_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false
+  },
+  "artifact_hash": "sha256:5080b790eca7f030ddc75b926925ee5a0940fae6185e9437e892c55b38b50a3e"
+}
