@@ -1,0 +1,57 @@
+schema_version: problem-dag-delta-v3-proposal-shadow-r1
+root:
+  issue: 4
+  status: OPEN_NO_SOLUTION_CERTIFICATE
+  authority: NONE
+parent_atom:
+  id: NS-B1a3b1b1
+  issue: 153
+active_atom:
+  id: NS-B1a3b1b1a
+  issue: 180
+  candidate: NS-B1a3b1b1a-C001-R1
+  outcome: PARTIAL_SUCCESS_SCOPED_TRANSFER_ROUTE_PRUNING
+  novelty_class: transfer
+verified_source_bound_observation:
+  statement: >-
+    Barker arXiv:2111.14776v2 Theorem 2/proof bounds the cardinality of the
+    terminal singular set under a backward-sequence global L^{3,infinity}
+    velocity bound via a rescaled spacetime packing/counting argument; the
+    inspected theorem/proof does not derive a preterminal vorticity-level
+    finite-center radius law R_lambda <= C lambda^{-1/2}.
+  authority: SOURCE_INTERFACE_AUDIT_NOT_IMPOSSIBILITY_THEOREM
+local_failure:
+  - F-NS-B1a3b1b1a-CARDINALITY-NOT-CRITICAL-RADIUS
+gluing_failures:
+  - G-NS-B1a3b1b1a-TERMINAL-TO-PRETERMINAL-MORPHOLOGY
+  - G-NS-B1a3b1b1a-FAR-FIELD-GLOBAL-SUPERLEVEL-COVER
+  - G-NS-B1a3b1b1a-VELOCITY-TO-VORTICITY-CONSUMER-STATE
+obstruction:
+  id: O-NS-B1a3b1b1a-MISSING-LEVEL-RADIUS-MODULUS
+motif:
+  id: M-NS-FINITE-EXCEPTIONAL-COUNT-VS-QUANTITATIVE-SCALE
+lesson_candidate:
+  id: L-NS-B1a3b1b1a-R1-CARDINALITY-IS-NOT-MORPHOLOGY-MODULUS
+  authority: NOT_PROMOTED
+pruned_route:
+  - direct_Barker_terminal_point_count_to_Grujic_critical_finite_center_morphology
+open_routes:
+  - equation_specific_preterminal_vorticity_level_radius_producer
+  - global_far_field_tail_plus_center_tracking_modulus
+  - source_compatible_consumer_using_only_terminal_finite_singularity_information
+  - vorticity_amplitude_and_direction_producers_remain_separate
+  - Type_II_untouched
+saturation_axes:
+  KNOWLEDGE: FLAT_SOURCE_THEOREM_ALREADY_KNOWN
+  OPERATOR: FLAT_NO_NEW_OPERATOR
+  EXPERIENCE_PATTERN: REOPENED_FINITE_COUNT_VS_QUANTITATIVE_SCALE
+  OBSTRUCTION: REOPENED_MISSING_LEVEL_RADIUS_MODULUS
+  RELATION: REOPENED_TERMINAL_CARDINALITY_VS_PRETERMINAL_MORPHOLOGY
+  PATH: REOPENED_QUANTITATIVE_PRODUCER_OR_CONSUMER_ROTATION
+  META_METHOD: FLAT_NO_METHOD_PROMOTION
+nonpromotion:
+  - source transfer rejection is not an NSE impossibility theorem
+  - finite terminal singular-point count is not Type-I exclusion
+  - Type II remains open
+  - same-context review is not independent review
+  - computation and CI are not proof
