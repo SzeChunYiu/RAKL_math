@@ -1,0 +1,96 @@
+{
+  "calibration_id": "RH-SPEC-002-LIMIT-STABILITY-CAL001",
+  "atom_id": "RH-SPEC-002",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "authority": "VERIFIED_KNOWN_ANSWER_LIMIT_CALIBRATION / SOURCE_BOUND_ROUTE_PRUNING / NO_RH_THEOREM / NO_NOVELTY_CLAIM / ROOT_AUTHORITY_NONE",
+  "prerequisites": {
+    "context_packet_hash": "sha256:99eb4c30af5c745c5d1f6b546fa8df0e775494c07f51fe9548c50ce81bfba224",
+    "memory_review_hash": "sha256:298a822066b1ef9ff1a6b928f9fa7e66ded0f5585d739265c70d4ccc8e915e19",
+    "pre_candidate_trace_final_hash": "sha256:6afa4c78f9ac563a863531ca4e3518bf32202c84ced4465110fc53c2f1d73b9c",
+    "framework_sha_ci": "7853ec0c4ff8f862359835bca1af1d934bfbd887",
+    "strict_packet_ci": "4 passed"
+  },
+  "cases": [
+    {
+      "id": "CAL-HURWITZ-REAL-ZERO-TRANSPORT",
+      "kind": "positive_known_theorem",
+      "statement": "If entire functions F_n have only real zeros, F_n converge locally uniformly on C to a nonzero entire function F, then F has only real zeros. Moreover, on a small disk around an isolated zero of F whose boundary is zero-free, Rouche/Hurwitz zero counting transports the total multiplicity for all sufficiently large n.",
+      "assumptions": [
+        "each F_n is entire and has no zeros off the real axis",
+        "F_n -> F locally uniformly on C",
+        "F is entire and not identically zero",
+        "for multiplicity counting, choose a compact disk whose boundary contains no zero of F"
+      ],
+      "conclusion": "A source-normalized locally-uniform determinant convergence theorem to the exact nonzero Xi function would be target-side sufficient to exclude nonreal Xi zeros; multiplicity can be controlled compact-by-compact.",
+      "limitation": "This does not prove the RH approximants converge to Xi, does not supply source-side normalization, and does not establish the finite-stage real-zero hypotheses along a cofinal family."
+    },
+    {
+      "id": "CAL-STRONG-RESOLVENT-DISAPPEARING-SPECTRUM",
+      "kind": "negative_exact_counterexample",
+      "construction": "On l2(N), let P_n be the rank-one orthogonal projection onto e_n and A_n=P_n. Then A_n -> 0 strongly. For every z off the real axis, (A_n-zI)^(-1)=(-1/z)I + (1/(1-z)+1/z)P_n, so A_n -> 0 in strong resolvent sense. Yet 1 is an eigenvalue of every A_n and is absent from the spectrum of the limit 0.",
+      "conclusion": "Strong-resolvent convergence alone does not preserve every approximant eigenvalue or complete spectral multiset.",
+      "limitation": "This does not show the specific RH approximants have disappearing spectrum; it rejects strong-resolvent convergence as a generic sufficient package."
+    },
+    {
+      "id": "CAL-GALERKIN-SPECTRAL-POLLUTION",
+      "kind": "negative_exact_counterexample",
+      "construction": "Let A on l2(N) satisfy A e_(2k-1)=-e_(2k-1), A e_(2k)=e_(2k), so sigma(A)={-1,1}. Let L_n=span{e_1,...,e_(2n-2), v_n} with v_n=(e_(2n-1)+e_(2n))/sqrt(2). The union of L_n is dense. Since A v_n=(-e_(2n-1)+e_(2n))/sqrt(2) is orthogonal to L_n, the Galerkin compression P_Ln A|_Ln has eigenvalue 0 for every n, although 0 notin sigma(A).",
+      "conclusion": "Finite-dimensional self-adjoint compressions can exhibit persistent spectral pollution in a true spectral gap.",
+      "limitation": "This is a hostile calibration for projection-style convergence packages, not evidence that a specific Weil-form approximation pollutes."
+    },
+    {
+      "id": "CAL-TWO-PARAMETER-NONCOMMUTING-LIMIT",
+      "kind": "negative_exact_counterexample",
+      "construction": "For positive integers N,lambda let A_(N,lambda) be the one-dimensional self-adjoint operator with eigenvalue N/(N+lambda). Then lim_(lambda->infty) lim_(N->infty) A_(N,lambda)=1, while lim_(N->infty) lim_(lambda->infty) A_(N,lambda)=0, and along N=lambda the value is 1/2.",
+      "conclusion": "A two-parameter approximating family has no canonical global limit without a specified cofinal net/path or a uniform theorem proving path independence.",
+      "limitation": "The example is structural only; it does not prove N/lambda noncommutation in the RH source family."
+    },
+    {
+      "id": "CAL-FINITE-ZERO-PREFIX-WITHOUT-ENTIRE-CONVERGENCE",
+      "kind": "negative_exact_counterexample",
+      "construction": "Let G_n(z)=exp(n z) product_{k=1}^n (1-z^2/k^2). Every zero is real and the zeros +/-1,...,+/-n exactly match an increasing prefix of sin(pi z)/(pi z); also G_n(0)=1 for all n. But at z=1/2, product_{k=1}^n(1-1/(4k^2)) tends to 2/pi while exp(n/2) diverges, so G_n does not converge locally uniformly to sin(pi z)/(pi z).",
+      "conclusion": "Arbitrarily long exact finite zero-prefix agreement, real-rootedness, and a one-point normalization do not determine the target entire-function limit.",
+      "limitation": "A stronger source-side normalization/growth theorem could eliminate this pathology; that is precisely an RH-SPEC-002 obligation."
+    }
+  ],
+  "package_classification": [
+    {
+      "package": "local_uniform_source_normalized_entire_determinants_to_exact_Xi",
+      "classification": "TARGET_SIDE_SUFFICIENT_BUT_SOURCE_SIDE_UNPROVED",
+      "reason": "Hurwitz/Rouche transport excludes nonreal zeros and controls multiplicity once exact nonzero Xi local-uniform convergence and finite-stage real-rootedness are independently established."
+    },
+    {
+      "package": "norm_resolvent_plus_route_specific_compactness_and_exact_arithmetic_identification",
+      "classification": "POTENTIALLY_SUFFICIENT_ROUTE_SPECIFIC",
+      "reason": "Stronger operator topology plus compactness/no-pollution and an independent determinant/trace identity may transport isolated spectrum, but the required hypotheses have not been proved for the RH approximants."
+    },
+    {
+      "package": "strong_resolvent_or_Mosco_without_extra_spectral_exactness",
+      "classification": "TOO_WEAK",
+      "reason": "Exact strong-resolvent examples allow approximant eigenvalues to disappear; generic self-adjoint projection approximations can pollute gaps."
+    },
+    {
+      "package": "finite_zero_prefix_or_counting_statistic_or_UV_asymptotics",
+      "classification": "TOO_WEAK",
+      "reason": "Exact finite zero-prefix agreement can coexist with complete failure of local-uniform entire-function convergence."
+    },
+    {
+      "package": "unspecified_joint_N_lambda_or_cutoff_limit",
+      "classification": "UNDER_SPECIFIED",
+      "reason": "Two-parameter self-adjoint families can have incompatible iterated and diagonal limits."
+    }
+  ],
+  "research_decision": {
+    "selected_next_residual": "RH-SPEC-002a-DETERMINANT-COMPACTNESS-BRIDGE",
+    "question": "For the source-defined finite/restricted RH approximants, what source-side uniform bounds and canonical normalization would imply local-uniform convergence of normalized entire determinants to Xi on every compact subset, or else decisively show that this determinant route cannot close?",
+    "why": "The calibration proves that generic strong-resolvent language, finite-prefix agreement, and unspecified joint limits are inadequate. Local-uniform entire-function convergence is the cleanest target-side sufficient package, so the next information bottleneck is source-side derivation of that convergence and normalization."
+  },
+  "source_anchors": [
+    "Alain Connes, Caterina Consani, Henri Moscovici, Zeta Spectral Triples, arXiv:2511.22755 (2025)",
+    "Alain Connes and Walter D. van Suijlekom, Quadratic Forms, Real Zeros and Echoes of the Spectral Action, arXiv:2511.23257 (2025)",
+    "Masatoshi Suzuki, Weil's quadratic form via the screw function, arXiv:2606.09096 (2026)",
+    "Michael Levitin and Eugene Shargorodsky, Spectral pollution and second order relative spectra for self-adjoint operators, arXiv:math/0212087",
+    "Mathieu Lewin and Eric Sere, Spectral Pollution and How to Avoid It, arXiv:0812.2153"
+  ],
+  "artifact_hash": "sha256:c8fb13b4b533ed0799a665428de44332716b7c68e30f92f301636b3087e47216"
+}
