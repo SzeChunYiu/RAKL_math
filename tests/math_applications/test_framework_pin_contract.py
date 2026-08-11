@@ -13,7 +13,7 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "9027cc6beab7e935d714bbdf8e902b89b50caaa8"
+EXPECTED_FRAMEWORK_COMMIT = "fe47a12c4bad8253658baaf37e1300cab15d0823"
 HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
 FINAL_SYNC_RECEIPT = (
     APPLICATION_ROOT / "receipts/framework-pin-final-integration-bd1a276-20260811.json"
@@ -62,6 +62,17 @@ def test_machine_readable_framework_pin_is_valid_and_loaded_exactly() -> None:
         text=True,
     ).stdout.strip()
     assert loaded_commit == pin["commit"]
+    framework_status = subprocess.run(
+        ["git", "-C", str(FRAMEWORK_ROOT), "status", "--porcelain"],
+        check=True,
+        stdout=subprocess.PIPE,
+        text=True,
+    ).stdout
+    assert framework_status == ""
+    assert pin["authority"] == (
+        "Dependency synchronization to exact clean RAKL origin/main merge of PR #178; "
+        "no proof, research, review-independence, or method-evolution authority"
+    )
 
 
 def test_framework_pin_sync_receipt_is_exact_and_non_authorizing() -> None:

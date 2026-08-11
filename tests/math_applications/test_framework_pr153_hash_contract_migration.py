@@ -223,9 +223,16 @@ def test_receipt_schema_hash_framework_pin_and_non_authority_are_exact() -> None
         "push_allowed": True,
     }
     pin = _load(ROOT / "config/rakl-framework-pin.json")
-    assert pin["commit"] == TARGET_FRAMEWORK
-    assert _git(ROOT, "rev-parse", "HEAD:framework/RAKL") == TARGET_FRAMEWORK
-    assert _git(FRAMEWORK, "rev-parse", "HEAD") == TARGET_FRAMEWORK
+    current_gitlink = _git(ROOT, "rev-parse", "HEAD:framework/RAKL")
+    current_framework = _git(FRAMEWORK, "rev-parse", "HEAD")
+    assert pin["commit"] == current_gitlink == current_framework
+    assert _git(
+        FRAMEWORK,
+        "merge-base",
+        "--is-ancestor",
+        TARGET_FRAMEWORK,
+        current_framework,
+    ) == ""
     assert all(value is False for value in receipt["authority_contract"].values())
 
 
