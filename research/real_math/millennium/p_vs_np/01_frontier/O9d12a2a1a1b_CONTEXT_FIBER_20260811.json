@@ -1,0 +1,86 @@
+{
+  "atom_id": "O9d12a2a1a1b",
+  "object_context": "After quotienting witness-local Theorem-24 propagation by the antecedent-membership congruence, audit the source-defined global cover-incidence object itself. Determine whether exact equivalence of semi-filters by their pair-cover neighborhoods exposes a noncanonical coordinate that survives known cheap/canonical controls before any scalar lower-bound invariant is proposed.",
+  "structural_coordinates": [
+    "Cavalar-Oliveira cover complexity rho(A,B) is the minimum number of pair vertices whose cover-graph neighborhoods hit every relevant semi-filter vertex.",
+    "The cover graph has pair vertices (E,H) with E,H subsets of U=A^c and semi-filter vertices F above some a in A; (E,H) covers F iff E,H are in F and E intersect H is not in F.",
+    "Theorem 30 exactly identifies rho(A,B) with cyclic intersection complexity, so any global cover-incidence quotient must preserve the set-cover problem rather than merely correlate with it.",
+    "O9d12a2a1a1a showed fixed-Lambda witness-local propagation is determined by the base empty-set flag plus individual E_i/H_i membership bits, pruning hidden recurrence state.",
+    "For G_NEQ, Proposition 40 gives full cover complexity equal to canonical cover complexity equal to log N; therefore any noncanonical global state that explodes on G_NEQ but does not alter the cover neighborhoods needed for the optimum is a hostile calibration, not hardness.",
+    "All-rectangle generator families can have rho=0 because a singleton generator above a target element forces the empty trace, leaving no semi-filter above that element; raw state-count measures must therefore vanish or fail closed there.",
+    "A pair-neighborhood quotient identifies semi-filters F,F' when the set of pair vertices covering F equals the set covering F'; deleting duplicate rows under this equivalence preserves the exact set-cover optimum by construction.",
+    "No count, entropy, rank, depth, width or quotient-size scalar is authorized until a bounded per-pair accounting law and hard-target bridge are proved."
+  ],
+  "equivalent_formulations": [
+    "exact bipartite cover graph Phi_{A,B} with duplicate semi-filter rows quotient-identified by identical pair neighborhoods",
+    "Boolean incidence matrix M_{F,(E,H)}=1 iff E,H in F and E∩H notin F, quotienting equal rows",
+    "minimal-antichain representation of each upward-closed nontrivial semi-filter, used only to compute exact incidence predicates",
+    "set-cover instance after exact row deduplication, whose optimum remains rho(A,B)"
+  ],
+  "solved_analogues": [
+    "Cavalar-Oliveira Definitions 18-21 define semi-filters, preservation and cover complexity exactly.",
+    "Cavalar-Oliveira Theorem 30 gives rho(A,B)=cyclic intersection complexity exactly.",
+    "Cavalar-Oliveira Proposition 40 proves rho(G_NEQ,G_N,N)=rho_can(G_NEQ,G_N,N)=log N."
+  ],
+  "near_solved_analogues": [
+    "Set Cover duplicate-row removal is semantics-preserving but does not itself yield an integrality lower bound.",
+    "Fractional-cover methods provide lower bounds on integral covers but C024 already records a target calibration where fractional structure loses the required joint integrality."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Cavalar-Oliveira 2025 cover graph",
+      "method": "Use exact pair-neighborhood equivalence as the coarsest obvious semantics-preserving quotient of the semi-filter side before inventing a statistic.",
+      "required_assumptions": ["Use the exact source definitions of semi-filter, above, preservation and cover.", "Treat row-equivalence only as set-cover preprocessing; it carries no lower-bound authority beyond preserving rho."],
+      "shared_structure": ["global incidence rather than witness-local recurrence", "one selected pair corresponds to one cover-graph column", "duplicate semi-filter rows are indistinguishable to every legal pair"],
+      "disanalogies": ["quotient size can be huge even when optimum is small", "set-cover row equivalence does not control integrality gap or multiplexing"],
+      "repair_question": "Does exact neighborhood quotienting collapse noncanonical G_NEQ semi-filters to the canonical signature picture, or does substantial global incidence survive without increasing rho?",
+      "source_anchors": ["Cavalar-Oliveira 2025, Definitions 18-21, Proposition 40, Theorem 30"]
+    },
+    {
+      "source_context": "minimal antichains of finite upsets",
+      "method": "Represent each semi-filter by its inclusion-minimal antichain only as an exact finite encoding for hostile enumeration.",
+      "required_assumptions": ["finite U", "empty set excluded from a semi-filter"],
+      "shared_structure": ["upward-closed families are determined by minimal elements", "pair coverage can be checked by subset containment against minimal elements"],
+      "disanalogies": ["antichain cardinality is representation size, not cover cost", "many antichains may share identical or highly overlapping pair neighborhoods"],
+      "repair_question": "After exact row deduplication, which antichain distinctions remain visible to pair coverage?",
+      "source_anchors": ["source Definition 18 plus elementary finite-poset upset/antichain equivalence"]
+    },
+    {
+      "source_context": "C024/C025 accumulated PNP memory",
+      "method": "Use integral-vs-fractional and canonical-signature failures as hostile controls before any global scalar is retained.",
+      "required_assumptions": ["C024/C025 are used only in their recorded scopes"],
+      "shared_structure": ["same cover/fusion route", "same requirement that one common pair family meet many obligations"],
+      "disanalogies": ["global neighborhood quotient is exact incidence semantics, while C025 signatures describe one calibrated canonical family"],
+      "repair_question": "Can the quotient expose structure not determined by canonical signatures without merely rediscovering a large but cheap set-cover instance?",
+      "source_anchors": ["F-C024-FRACTIONAL-INTEGRALITY-GAP", "T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION", "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE"]
+    }
+  ],
+  "explicit_disanalogies": [
+    "pair-neighborhood equivalence is exact but its number of classes is not a lower bound on rho",
+    "minimal-antichain richness can be combinatorially enormous while rho is logarithmic or zero",
+    "generic LP/hierarchy rank or entropy is not imported as circuit lower-bound authority",
+    "same-context finite enumeration is a regression/falsifier, not theorem proof or novelty evidence"
+  ],
+  "source_anchors": [
+    "Bruno P. Cavalar and Igor C. Oliveira, Boolean Circuit Complexity and Two-Dimensional Cover Problems, ECCC TR25-033 / ACM TOCT 17(2), 2025, DOI 10.1145/3718746",
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1a_ACTIVATION_CONGRUENCE_RETROSPECTIVE_20260811.md",
+    "research/real_math/millennium/p_vs_np/07_memory/C025_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "research/real_math/millennium/p_vs_np/07_memory/C025_RESEARCH_TOOL_DELTA_20260811.json"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED_FOR_REPRESENTATION_AUDIT_ONLY",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "database/query-engine duplicate-row elimination",
+      "common_abstraction": ["two records indistinguishable under every admissible query can be quotient-identified without changing query answers"],
+      "source_to_target_mapping": ["record -> semi-filter row", "admissible query -> legal pair coverage predicate", "duplicate row -> identical pair-cover neighborhood"],
+      "shared_constraints": ["equivalence must be defined by the full admissible predicate family", "quotient cannot create new positive answers"],
+      "disanalogies": ["database compression cost is unrelated to circuit/cover complexity", "a small quotient can still have a hard set-cover optimum and a large quotient can still have a cheap cover"],
+      "proposed_principle": "Apply exact semantics-preserving quotienting before measuring global state richness.",
+      "validation_obligation": "Enumerate finite exact G_NEQ/all-rectangle worlds, compute all pair neighborhoods, quotient equal rows, and compare quotient growth with known exact rho calibrations."
+    }
+  ],
+  "analogy_scan_notes": "Retained only exact query-equivalence/row-deduplication as a representation audit. Generic hierarchy, entropy, graph-rank and communication analogies remain hostile baselines until a target-specific bridge exists.",
+  "frozen_at": "2026-08-11T12:59:00Z",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:eea19518e2925dfd8fbd6335e1053519c388a1cf76cd84172625956ebf2a1478"
+}
