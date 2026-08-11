@@ -10,7 +10,7 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "7853ec0c4ff8f862359835bca1af1d934bfbd887"
+EXPECTED_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
 
 
 def test_machine_readable_framework_pin_is_valid_and_loaded_exactly() -> None:
