@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/bsd-a1a1-pr96-postmerge-assurance-correction.schema.json",
+  "title": "BSD A1a1 PR96 non-rewriting post-merge assurance correction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "correction_id", "recorded_at_utc", "application_repository", "framework_authority", "preserved_pr96_artifacts", "source_version_binding", "successors", "schema_runtime_audit", "chronology_audit", "fibre_snapshot_manifest", "correction", "authority_contract", "non_guarantees", "artifact_hash"],
+  "properties": {
+    "schema_version": {"const": "bsd-a1a1-pr96-postmerge-assurance-correction-v1"},
+    "correction_id": {"const": "BSD-A1a1-PR96-POSTMERGE-ASSURANCE-CORRECTION-20260811"},
+    "recorded_at_utc": {"type": "string", "format": "date-time"},
+    "application_repository": {"$ref": "#/$defs/application"},
+    "framework_authority": {"$ref": "#/$defs/framework"},
+    "preserved_pr96_artifacts": {"type": "array", "minItems": 8, "maxItems": 8, "items": {"$ref": "#/$defs/original_binding"}},
+    "source_version_binding": {"$ref": "#/$defs/successor_binding"},
+    "successors": {"type": "array", "minItems": 4, "items": {"$ref": "#/$defs/successor_binding"}},
+    "schema_runtime_audit": {
+      "type": "object", "additionalProperties": false,
+      "required": ["findings", "original_trace_hash_mismatches", "candidate_event_count", "canonical_successors_schema_valid", "canonical_successors_runtime_valid"],
+      "properties": {
+        "findings": {"type": "array", "minItems": 3, "items": {"type": "object", "required": ["subject", "schema_path", "error_count", "violations"], "additionalProperties": false, "properties": {"subject": {"type": "string"}, "schema_path": {"type": "string"}, "error_count": {"type": "integer", "minimum": 1}, "violations": {"type": "array", "minItems": 1, "items": {"type": "string"}}}}},
+        "original_trace_hash_mismatches": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "object", "required": ["event_id", "claimed", "blank_field_canonical"], "additionalProperties": false, "properties": {"event_id": {"type": "string"}, "claimed": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, "blank_field_canonical": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}}},
+        "candidate_event_count": {"const": 0},
+        "canonical_successors_schema_valid": {"const": true},
+        "canonical_successors_runtime_valid": {"const": true}
+      }
+    },
+    "chronology_audit": {"type": "array", "minItems": 4, "items": {"type": "object", "required": ["subject", "claimed_timestamp", "bound_commit", "bound_commit_time", "classification"], "additionalProperties": false, "properties": {"subject": {"type": "string"}, "claimed_timestamp": {"type": "string", "format": "date-time"}, "bound_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "bound_commit_time": {"type": "string", "format": "date-time"}, "classification": {"const": "POST_RESULT_GIT_BINDING_RETROSPECTIVE_ONLY"}}}},
+    "fibre_snapshot_manifest": {"type": "object", "required": ["entries", "artifact_hash"], "additionalProperties": false, "properties": {"entries": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["path", "source_commit", "git_blob_sha"], "additionalProperties": false, "properties": {"path": {"type": "string"}, "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "git_blob_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"}}}}, "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}},
+    "correction": {
+      "type": "object", "additionalProperties": false,
+      "required": ["classification", "strict_discovery_credit", "root_authority", "originals_preserved", "repairs_original_chronology", "mathematical_candidate_generated", "next_candidate_gate"],
+      "properties": {
+        "classification": {"const": "RETROSPECTIVE_SOURCE_BOUND_ROUTE_EVIDENCE"},
+        "strict_discovery_credit": {"const": "NO_STRICT_DISCOVERY_CREDIT"},
+        "root_authority": {"const": "ROOT_AUTHORITY_NONE"},
+        "originals_preserved": {"const": true},
+        "repairs_original_chronology": {"const": false},
+        "mathematical_candidate_generated": {"const": false},
+        "next_candidate_gate": {"const": "FRESH_CONTEXT_MEMORY_TRACE_AND_DISCRIMINATOR_REQUIRED"}
+      }
+    },
+    "authority_contract": {
+      "type": "object", "additionalProperties": false,
+      "required": ["effective_authority", "grants_strict_discovery_credit", "grants_proof_authority", "grants_root_authority", "grants_theorem_authority", "grants_novelty_authority", "grants_framework_authority", "grants_review_independence", "may_backfill_chronology", "may_suppress_failure_warning"],
+      "properties": {
+        "effective_authority": {"const": "RETROSPECTIVE_NEGATIVE_HISTORY_AND_SOURCE_SCOPE_ONLY"},
+        "grants_strict_discovery_credit": {"const": false},
+        "grants_proof_authority": {"const": false},
+        "grants_root_authority": {"const": false},
+        "grants_theorem_authority": {"const": false},
+        "grants_novelty_authority": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false},
+        "may_backfill_chronology": {"const": false},
+        "may_suppress_failure_warning": {"const": false}
+      }
+    },
+    "non_guarantees": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "application": {"type": "object", "additionalProperties": false, "required": ["url", "pre_pr_base_commit", "pr_head_commit", "merge_commit", "merge_parents"], "properties": {"url": {"const": "https://github.com/SzeChunYiu/RAKL_math.git"}, "pre_pr_base_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "pr_head_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "merge_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "merge_parents": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "string", "pattern": "^[0-9a-f]{40}$"}}}},
+    "framework": {"type": "object", "additionalProperties": false, "required": ["repository", "commit", "tree", "application_gitlink", "schema_bindings", "runtime_bindings"], "properties": {"repository": {"const": "https://github.com/SzeChunYiu/RAKL.git"}, "commit": {"const": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"}, "tree": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "application_gitlink": {"const": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"}, "schema_bindings": {"type": "array", "minItems": 3, "items": {"$ref": "#/$defs/framework_file"}}, "runtime_bindings": {"type": "array", "minItems": 3, "items": {"$ref": "#/$defs/framework_file"}}}},
+    "framework_file": {"type": "object", "additionalProperties": false, "required": ["path", "git_blob_sha"], "properties": {"path": {"type": "string"}, "git_blob_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"}}},
+    "original_binding": {"type": "object", "additionalProperties": false, "required": ["path", "introduced_commit", "introduced_commit_time", "git_blob_sha", "content_sha256"], "properties": {"path": {"type": "string"}, "introduced_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "introduced_commit_time": {"type": "string", "format": "date-time"}, "git_blob_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "content_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}},
+    "successor_binding": {"type": "object", "additionalProperties": false, "required": ["path", "source_commit", "git_blob_sha", "raw_sha256"], "properties": {"path": {"type": "string"}, "source_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "git_blob_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "raw_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}}
+  }
+}
