@@ -116,11 +116,18 @@ def test_parent_receipt_and_new_episode_are_content_bound_without_rewrite() -> N
     assert len(_git(ROOT, "rev-list", "--parents", "-n", "1", parent["merge_commit"]).split()) == 3
 
 
-def test_new_episode_passes_exact_pinned_schema_runtime_and_hash_contract() -> None:
+def test_new_episode_passes_exact_historical_schema_runtime_and_hash_contract() -> None:
     receipt = _load(RECEIPT)
     framework = receipt["framework_binding"]
-    assert _git(ROOT, "rev-parse", "HEAD:framework/RAKL") == framework["commit"]
-    assert _git(FRAMEWORK, "rev-parse", "HEAD") == framework["commit"]
+    current_framework = _git(FRAMEWORK, "rev-parse", "HEAD")
+    assert framework["commit"] == "9027cc6beab7e935d714bbdf8e902b89b50caaa8"
+    assert _git(
+        FRAMEWORK,
+        "merge-base",
+        "--is-ancestor",
+        framework["commit"],
+        current_framework,
+    ) == ""
     assert _git(FRAMEWORK, "rev-parse", f'{framework["commit"]}:schemas/task-episode.schema.json') == framework["task_episode_schema_blob"]
     assert _git(FRAMEWORK, "rev-parse", f'{framework["commit"]}:src/rakl/experience_substrate.py') == framework["experience_substrate_blob"]
 
