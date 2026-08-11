@@ -1,0 +1,47 @@
+{
+  "source_packet_id": "H4d1c1-SOURCE-PACKET-20260811",
+  "atom_id": "H4d1c1-FORMAL-EFFECTIVITY-SPLIT",
+  "authority": "PRIMARY_OR_OFFICIAL_SOURCE_BINDING_ONLY",
+  "claims": [
+    {
+      "claim_id": "SRC-CDK-HODGE-LOCUS-ALGEBRAIC",
+      "source": "Cattani-Deligne-Kaplan, On the Locus of Hodge Classes, arXiv:alg-geom/9402009 (JAMS 1995)",
+      "url": "https://arxiv.org/abs/alg-geom/9402009",
+      "source_type": "PRIMARY_RESEARCH",
+      "bound_claim": "For a family of nonsingular projective varieties over a complex algebraic base, the locus where a fixed integral Hodge class remains of type (p,p) is algebraic. The rational-class branch used here is obtained after denominator clearing.",
+      "use": "Justifies taking an algebraic finite-type local Hodge-locus model before completion."
+    },
+    {
+      "claim_id": "SRC-STACKS-0898-CLOSED-SUBSCHEME-EFFECTIVITY",
+      "source": "Stacks Project, Cohomology of Schemes, Section 30.28, Lemma 30.28.1 (tag 0898)",
+      "url": "https://stacks.math.columbia.edu/tag/0898",
+      "source_type": "OFFICIAL_REFERENCE_DOCUMENTATION",
+      "bound_claim": "Over a Noetherian ring complete with respect to an ideal, a compatible cartesian system of closed subschemes Z_n inside the thickenings X_n of a separated finite-type X, with proper special fibre, is induced by a closed subscheme Z of X proper over the complete base.",
+      "use": "Exact formal-effectivity operator for each fixed witness component."
+    },
+    {
+      "claim_id": "SRC-STACKS-0CTK-FLAT-MODULE-BOUNDARY",
+      "source": "Stacks Project, More on Flatness, Theorem 38.28.9 (tag 0CTK)",
+      "url": "https://stacks.math.columbia.edu/tag/0CTK",
+      "source_type": "OFFICIAL_REFERENCE_DOCUMENTATION",
+      "bound_claim": "Compatible finitely presented modules flat over the Artin quotients and with proper support admit a finitely presented flat algebraization with proper support.",
+      "use": "Boundary evidence that flatness has its own exact effectivity theorem; not used to silently identify a module algebraization with the chosen closed-subscheme/Hilbert witness."
+    },
+    {
+      "claim_id": "SRC-STACKS-07XA-APPROXIMATION-BOUNDARY",
+      "source": "Stacks Project, Artin's Axioms, Section 98.10 (tag 07XA)",
+      "url": "https://stacks.math.columbia.edu/tag/07XA",
+      "source_type": "OFFICIAL_REFERENCE_DOCUMENTATION",
+      "bound_claim": "Artin-style approximation concerns approximating formal objects by algebraic ones under limit-preserving hypotheses; this cycle does not infer exact Zariski-neighborhood descent from the completion merely from formal effectivity.",
+      "use": "Prevents conflating effectivity over a complete local ring with descent to an actual branch neighborhood."
+    }
+  ],
+  "negative_source_history": [
+    "No theorem in this packet proves initial algebraicity of alpha.",
+    "No theorem in this packet proves the all-order compatible witness tower exists.",
+    "No theorem in this packet proves class identity, monodromy control, or global branch domination.",
+    "No non-primary proof-of-Hodge claims found in search were admitted."
+  ],
+  "frozen_at": "2026-08-11T18:31:00Z",
+  "artifact_hash": "sha256:1559c41877c8067e765305fc73e37aab112910f8e4d8f4acd160b9cc60ad98d5"
+}
