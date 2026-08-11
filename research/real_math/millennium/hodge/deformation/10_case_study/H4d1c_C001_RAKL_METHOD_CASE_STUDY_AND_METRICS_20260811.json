@@ -1,0 +1,229 @@
+{
+  "RAKL_METHOD_CASE_STUDY": {
+    "case_study_id": "RAKL-HODGE-H4d1c-C001-20260811",
+    "active_atom": "H4d1c",
+    "problem_signature": [
+      "rational Hodge conjecture only: smooth projective complex varieties, rational (p,p) classes",
+      "fixed already-algebraic finite signed rational witness w0",
+      "fixed irreducible local Hodge branch T",
+      "branch-bound witness map pi_alpha:W_alpha->T",
+      "first-order target: d pi_alpha(T_w0 W_alpha)=T_s0 T"
+    ],
+    "actual_fibre": {
+      "context_hash": "sha256:840507d1c26dc29932ad98d38cf3dd6053c523aad504669454d3a0e80ab1ac94",
+      "fibre_snapshot_hash": "sha256:6b55dc260eea1354fd8c459d2e054834090cd5f2c2674ac8774203e3b56776cf",
+      "consulted": [
+        "issue #6 exact Hodge root contract",
+        "H4d1b_FIRST_ORDER_TANGENT_OBSTRUCTION_EQUIVALENCE_20260811.md",
+        "H4d1b_RESEARCH_MEMORY_REVIEW_20260811.json",
+        "H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE",
+        "L-H4D1B-COMPLETE-OBSTRUCTION-VANISHING-NORMALIZATION-V1",
+        "H4d1c-INDEPENDENT-HODGE-TO-WITNESS-TANGENT-SURJECTIVITY-MECHANISM",
+        "current RAKL v3 experience_substrate.py and method_specs.py",
+        "primary-source controls arXiv:2104.14845, 2312.12363, 2009.01651, 2602.13951, 1902.00831"
+      ]
+    },
+    "expert_cell": [
+      {"role":"VHS/Hodge-locus specialist","responsibility":"exact branch tangent, Hodge equations, smoothness/branch identity; rejects base-side equations as witness reachability without a bridge"},
+      {"role":"cycle/Hilbert-Chow specialist","responsibility":"exact signed rational witness category, incidence space, vertical deformations and d pi_alpha"},
+      {"role":"semiregularity/deformation specialist","responsibility":"complete-obstruction versus detector-only semantics and anti-tautology audit"},
+      {"role":"degeneration/monodromy specialist","responsibility":"separates first-order local claims from singular degeneration, component switching and higher-order transport"},
+      {"role":"adversarial special-family specialist","responsibility":"counterexample-first transfer audit; expected dimension is not accepted as tangent rank"},
+      {"role":"formal/novelty auditor","responsibility":"authority, novelty, independent-review and local-to-global separation"}
+    ],
+    "methods_operators_motifs_tried": [
+      "OP-H4D1C-TANGENT-CODIMENSION-SQUEEZE",
+      "MOTIF-FLAG-HILBERT-HODGE-TANGENT-COMPARISON",
+      "MOTIF-COUNTEREXAMPLE-FIRST-EXPECTED-DIMENSION-AUDIT",
+      "source-bound analogy with explicit disanalogies",
+      "same-context six-role adversarial review",
+      "primary-source positive/hostile calibration"
+    ],
+    "retrieved_prior_experience": {
+      "failures": ["F-H4D1-DETECTOR-KERNEL-GAP", "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO"],
+      "episodes": ["H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE"],
+      "lessons": ["L-H4D1B-COMPLETE-OBSTRUCTION-VANISHING-NORMALIZATION-V1"],
+      "tools": [],
+      "canonical_motifs": [],
+      "selected_for_routing": ["F-H4D1-DETECTOR-KERNEL-GAP", "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO", "H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE"],
+      "retrieved_but_rejected": [
+        {"id":"L-H4D1B-COMPLETE-OBSTRUCTION-VANISHING-NORMALIZATION-V1","reason":"candidate lesson can guide search but has no protected mathematical authority and cannot certify H4d1c"}
+      ],
+      "missed_prior_experience": "CANNOT_MEASURE: bounded repository retrieval cannot certify absence of a semantically equivalent unindexed episode or external analogue."
+    },
+    "which_prior_experience_changed_routing": [
+      {"id":"F-H4D1-DETECTOR-KERNEL-GAP","effect":"prevented treating Hodge/semiregularity detector vanishing as witness reachability"},
+      {"id":"F-H4D1A-SAME-DETECTOR-BRANCH-NOGO","effect":"rotated away from detector-faithfulness repair toward actual witness tangent geometry"},
+      {"id":"H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE","effect":"normalized direct complete-obstruction vanishing to tangent surjectivity, making derivative rank the correct next local target"}
+    ],
+    "decision_policy": "Counterexample-first and smallest-high-information residual: before theorem invention, put source and Hodge tangents in one ambient tangent space, derive the automatic codimension inequality, and require an independent reverse rank bound; reject detector vanishing, expected dimension and category-changing transfer as substitutes.",
+    "falsifier_verification": {
+      "formal_falsifier": "Reject if the reverse rank bound assumes surjectivity/liftability, if only detector vanishing is proved, if expected dimension replaces actual tangent rank, if signed rational witness category changes, or if special-family formulas are transferred without a DifferenceWitness.",
+      "primary_source_checks": [
+        "arXiv:2104.14845 positive special-family incidence/Hodge tangent control",
+        "arXiv:2312.12363 hostile dimension-control counterexamples",
+        "arXiv:2009.01651 positive semiregular codimension-one control",
+        "arXiv:2602.13951 base-side Hodge-locus control only",
+        "arXiv:1902.00831 computational/rigidity calibration only"
+      ],
+      "source_family_completeness": "BOUNDED_NOT_EXHAUSTIVE: enough for the scoped falsifier and controls, not a proof that no other family proves H4d1c."
+    },
+    "outcome": "PARTIAL_SUCCESS / REPRESENTATION_AND_PATH_REFINEMENT",
+    "mathematical_result_scope": "For a fixed branch-bound first-order witness map in a common ambient tangent space, im(d pi_alpha) subseteq T_s0 T gives c_W>=c_H; any independently established reverse inequality c_W<=c_H forces equality and tangent surjectivity. This is elementary linear algebra and a certificate normal form, not a new Hodge theorem.",
+    "residual": "H4d1c1-EXACT-WITNESS-INCIDENCE-RANK-BOUND",
+    "failure_category": ["LOCAL_MATHEMATICAL_OPEN", "REPRESENTATION_REFINED", "SOURCE_TRANSFER_BOUNDARY"],
+    "local_mathematical_failure": "No general source-independent proof of the exact witness-incidence derivative rank bound C3 was found or claimed.",
+    "local_to_global_gluing_failures": [
+      "higher Artin order",
+      "formal compatibility",
+      "algebraization",
+      "rational coefficient/category preservation",
+      "monodromy/component switching",
+      "singular degeneration/specialization",
+      "global continuation",
+      "root initial algebraicity"
+    ],
+    "saturation_axes": {
+      "DETECTOR_FAITHFULNESS": "FLATTENED: same-detector nonzero-envelope repair remains pruned by H4d1a",
+      "BRANCH_REACHABILITY": "REOPENED_AND_REFINED: exact source-side derivative-rank C3 is now the active local coordinate",
+      "WITNESS_LIFTING": "OPEN_BEYOND_FIRST_ORDER",
+      "ALGEBRAIZATION": "OPEN",
+      "COEFFICIENT_CATEGORY": "OPEN",
+      "MONODROMY_DEGENERATION": "OPEN",
+      "LOCAL_TO_GLOBAL_GLUING": "OPEN"
+    },
+    "novelty_class": {
+      "class": "representation",
+      "structural_rank": 0,
+      "reason": "the codimension squeeze itself is elementary; retained value is a sharper typed representation/path and obstruction, not a new primitive operator or theorem"
+    },
+    "episode_diagnosis_lesson_separation": {
+      "episode": "H4d1c-C001-TANGENT-CODIMENSION-SQUEEZE",
+      "diagnosis": "D-H4D1C-C001-RANK-BOUND-IS-LOAD-BEARING",
+      "obstruction": "H4d1c1-EXACT-WITNESS-INCIDENCE-RANK-BOUND",
+      "candidate_lesson": "L-H4D1C-TANGENT-CODIMENSION-SQUEEZE-V1",
+      "authority_note": "episode is proposal/shadow; diagnosis and candidate lesson guide search only and are not canonical learning or proof authority"
+    },
+    "repeated_process_failure_lineage": [
+      "F-H4D1-DETECTOR-KERNEL-GAP: detector compatibility is weaker than geometric lifting",
+      "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO: restricting the same detector cannot create a nonzero faithful branch envelope",
+      "H4d1b-C001: complete obstruction vanishing restates liftability while detector-only vanishing is insufficient",
+      "H4d1c-C001: expected dimension or base-side Hodge equations still cannot substitute for the exact witness-incidence derivative rank"
+    ],
+    "framework_feature_helped": [
+      "v3 TaskEpisode storage-admission separation kept experience proposal/shadow and non-authoritative",
+      "experience-guided routing preserved negative history without blacklisting routes",
+      "method_specs canonical surface ownership kept v3 operations under decomposition/routing/memory/review/gluing/saturation",
+      "explicit local-versus-gluing residual separation prevented first-order route refinement from being globalized"
+    ],
+    "framework_feature_missing_or_weak": "No protected generic certificate currently forces an application to distinguish ACTUAL_TANGENT_RANK from EXPECTED_DIMENSION or BASE_SIDE_DETECTOR_DIMENSION before a reachability claim.",
+    "framework_improvement_hypothesis": "Candidate only: add a typed TANGENT_RANK_CERTIFICATE/semantic-strength check that records ambient tangent, exact source derivative, target branch tangent, rank evidence, singular/nonreduced caveat and category fidelity; expected dimension or detector equations should fail closed as substitutes. This application case alone does not authorize a framework issue, tool or promotion."
+  },
+  "RAKL_CYCLE_METRICS": {
+    "receipt_id": "RAKL-CYCLE-METRICS-HODGE-H4d1c-C001-20260811",
+    "measurement_boundary": "research semantic state immediately before this nonsemantic metrics-receipt file is materialized",
+    "rakl_method": {
+      "package": "rakl",
+      "version": "0.1.0",
+      "current_git_sha_at_receipt": "b6d0326735bce38842832e654b704053e7f4ed73",
+      "framework_sha_at_context_freeze": "103f12cf79b9dec35e9d052e8c11973372e3eb35",
+      "method_specs_blob_current_and_freeze": "3f629c4dd0ef55aedf14206b2be3df19875988b7",
+      "experience_substrate_blob_current_and_freeze": "bac7467472fc93ca068bcc1195f763bd2b207b58",
+      "freshness_interpretation": "live RAKL main advanced after context freeze, but inspected v3 method_specs and TaskEpisode substrate bytes are identical, so no frozen mathematical context coordinate was silently backfilled"
+    },
+    "rakl_math": {
+      "base_at_cycle_start": "47f56df0492339097a651d40b6c7289c4e2d4034",
+      "main_at_metrics_measurement": "47f56df0492339097a651d40b6c7289c4e2d4034",
+      "research_head_at_metrics_measurement": "ee9d4fc2c5e5c2719bc0cab3744bfa2318a8058c",
+      "branch": "research/hodge-h4d1c-cycle-20260811-2050",
+      "metrics_materialization_commit": "CANNOT_MEASURE: a file cannot contain the Git commit that will be created by writing that same file without a self-referential fixed-point construction; the exact resulting branch head is recorded externally in the PR handoff."
+    },
+    "pre_state_fingerprint": "gitcommit:47f56df0492339097a651d40b6c7289c4e2d4034",
+    "post_state_fingerprint": "gitcommit:ee9d4fc2c5e5c2719bc0cab3744bfa2318a8058c",
+    "active_atom": "H4d1c",
+    "context_hash": "sha256:840507d1c26dc29932ad98d38cf3dd6053c523aad504669454d3a0e80ab1ac94",
+    "fibre_snapshot_hash": "sha256:6b55dc260eea1354fd8c459d2e054834090cd5f2c2674ac8774203e3b56776cf",
+    "canonical_process_surfaces_invoked": [
+      "decomposition",
+      "routing",
+      "search_query_generation",
+      "source_selection_reliability",
+      "claim_extraction",
+      "equivalence_similarity",
+      "gap_discovery",
+      "contradiction_diagnosis",
+      "memory",
+      "review",
+      "contextual_theory_gluing",
+      "saturation_stopping"
+    ],
+    "memory_retrieval": {
+      "tools_retrieved_count": 0,
+      "tool_ids_retrieved": [],
+      "failures_retrieved_count": 2,
+      "failure_ids_retrieved": ["F-H4D1-DETECTOR-KERNEL-GAP", "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO"],
+      "episodes_retrieved_count": 1,
+      "episode_ids_retrieved": ["H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE"],
+      "lessons_retrieved_count": 1,
+      "lesson_ids_retrieved": ["L-H4D1B-COMPLETE-OBSTRUCTION-VANISHING-NORMALIZATION-V1"],
+      "canonical_motifs_retrieved_count": 0,
+      "canonical_motif_ids_retrieved": [],
+      "selected_ids": ["F-H4D1-DETECTOR-KERNEL-GAP", "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO", "H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE"],
+      "rejected_ids": ["L-H4D1B-COMPLETE-OBSTRUCTION-VANISHING-NORMALIZATION-V1"],
+      "rejection_reason": "candidate lesson retained as a routing hint only; no protected mathematical authority",
+      "other_memory_retrieved": ["H4d1c-INDEPENDENT-HODGE-TO-WITNESS-TANGENT-SURJECTIVITY-MECHANISM"],
+      "missed_memory_count": "CANNOT_MEASURE: retrieval universe completeness is not certified."
+    },
+    "outcome": "PARTIAL_SUCCESS / REPRESENTATION_AND_PATH_REFINEMENT",
+    "residual_before": "H4d1c-INDEPENDENT-HODGE-TO-WITNESS-TANGENT-SURJECTIVITY-MECHANISM",
+    "residual_after": "H4d1c1-EXACT-WITNESS-INCIDENCE-RANK-BOUND plus separately open higher-order/algebraization/coefficient/monodromy/degeneration/globalization residuals",
+    "retained_semantic_novelty": {
+      "KNOWLEDGE": 0,
+      "OPERATOR": 0,
+      "EXPERIENCE_PATTERN": 0,
+      "OBSTRUCTION": 1,
+      "RELATION": 1,
+      "PATH": 1,
+      "META_METHOD": 0,
+      "counting_note": "Candidate lessons, raw files, commits, prose and unpromoted motif/operator labels are explicitly not counted as learning."
+    },
+    "saturation_axes_reopened": ["BRANCH_REACHABILITY"],
+    "saturation_axes_flattened": ["DETECTOR_FAITHFULNESS"],
+    "resource_proxies": {
+      "model_tokens": "CANNOT_MEASURE: model token accounting is not exposed to this research runtime.",
+      "context_tokens": "CANNOT_MEASURE: exact compiled-context token accounting is not exposed to this research runtime.",
+      "web_retrieval_calls_for_primary_source_phase": 4,
+      "github_connector_calls": "CANNOT_MEASURE: connector exposes individual results but no authoritative per-cycle aggregate counter, and manual reconstruction would mix discovery and execution calls.",
+      "all_tool_calls": "CANNOT_MEASURE: no authoritative aggregate tool-call counter is exposed for this cycle.",
+      "wall_time": "CANNOT_MEASURE: no persisted monotonic cycle timer was started before the first research action; do not infer from artifact timestamps."
+    },
+    "new_ids": {
+      "episode_ids": ["H4d1c-C001-TANGENT-CODIMENSION-SQUEEZE"],
+      "diagnosis_ids": ["D-H4D1C-C001-RANK-BOUND-IS-LOAD-BEARING"],
+      "failure_ids": [],
+      "tool_ids": [],
+      "obstruction_ids": ["H4d1c1-EXACT-WITNESS-INCIDENCE-RANK-BOUND"],
+      "motif_ids": [],
+      "lesson_ids": ["L-H4D1C-TANGENT-CODIMENSION-SQUEEZE-V1"],
+      "unpromoted_operator_labels_tried": ["OP-H4D1C-TANGENT-CODIMENSION-SQUEEZE"],
+      "unpromoted_motif_labels_tried": ["MOTIF-FLAG-HILBERT-HODGE-TANGENT-COMPARISON", "MOTIF-COUNTEREXAMPLE-FIRST-EXPECTED-DIMENSION-AUDIT"]
+    },
+    "successful_reuse_ids": [
+      "F-H4D1-DETECTOR-KERNEL-GAP",
+      "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO",
+      "H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE"
+    ],
+    "gate_status": {
+      "episode_storage": "PROPOSAL_SHADOW_STORED",
+      "mathematical_authority": "SOURCE_BOUND_ROUTE_CALIBRATION_ONLY",
+      "novelty_gate": "NO_THEOREM_OR_OPERATOR_NOVELTY_CLAIM",
+      "review": "SAME_CONTEXT_EXPERT_CELL_ONLY / NO_INDEPENDENT_REVIEW_CREDIT",
+      "root": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "promotion": "NOT_REQUESTED",
+      "ci_at_metrics_measurement": "NOT_RUN_YET: draft application PR has not yet been opened at this measurement boundary."
+    },
+    "provenance_status": "PRIMARY_SOURCE_IDS_RECORDED; EXACT_GIT_AND_BLOB_PINS_FOR_RAKL_V3; PRIOR_FAILURE/EPISODE_LINEAGE_RECORDED; SOURCE_FAMILY_SEARCH_BOUNDED_NOT_EXHAUSTIVE",
+    "rakl_changed_observable_pre_memory_action_preference": "CANNOT_MEASURE: no independent pre-memory/pre-gate action preference was logged before experience retrieval, so causal counterfactual attribution is not available. Experience demonstrably participated in the actual routing record but this does not establish a changed counterfactual action.",
+    "root_promotion_status": "BLOCKED/NOT_ATTEMPTED: exact proof DAG, formal/verifier/dependency/axiom audits, relevant barrier audit, isolated recheck, bounded novelty search and three genuinely isolated mathematical reviews are absent."
+  }
+}
