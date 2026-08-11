@@ -1,0 +1,109 @@
+{
+  "schema_version": "bsd-v3-case-study-episode-v1",
+  "artifact_type": "TASK_EPISODE_SHADOW",
+  "episode_id": "EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3",
+  "task_id": "RAKL-VERIFIED-DISCOVERY-BSD-ANALYTIC",
+  "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "authority": "PROPOSAL_SHADOW_SEARCH_PRIORITY_ONLY",
+  "framework_semantic_authority": {
+    "repository": "https://github.com/SzeChunYiu/RAKL.git",
+    "commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "method_version": "CANNOT_MEASURE",
+    "method_version_reason": "current RAKL main has no RAKL_VERSION.json machine-readable method manifest"
+  },
+  "application_cycle_base": {
+    "repository": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "commit": "6557b1b25fa839fe71aba8047c958d5da892edd8"
+  },
+  "execution_dependency_pin": {
+    "repository": "https://github.com/SzeChunYiu/RAKL.git",
+    "commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "note": "prospective semantic authority and execution pin are synchronized on current main; historical artifact-local framework bindings remain immutable"
+  },
+  "context_hash": "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d",
+  "problem_signature": [
+    "Birch and Swinnerton-Dyer conjecture",
+    "exact complex analytic rank two",
+    "root-faithful higher-rank arithmetic representation",
+    "plectic Heegner class or mock-plectic nonvanishing",
+    "p-adic derivative versus complex-s coordinate faithfulness",
+    "local-to-global analytic-to-arithmetic gluing"
+  ],
+  "fibre_contents_consulted": [
+    {"kind": "CONTEXT", "id": "BSD_A1a1_THETA_ORDER_CONTEXT_FIBER_20260811", "effect": "kept the canonical A1a1 root interface and prohibited coordinate conflation"},
+    {"kind": "MEMORY", "id": "BSD_A1a1_RESEARCH_MEMORY_REVIEW_20260811", "effect": "selected root-bridge stability audit and prior bridge-warning failure"},
+    {"kind": "TOOL", "id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT", "effect": "forced explicit theorem/conjecture arrows across the representation change"},
+    {"kind": "FAILURE_WARNING", "id": "F-XM001-POINTWISE-GAP-COLLAPSE", "effect": "used only as scoped warning against surrogate/root coordinate collapse"},
+    {"kind": "PRIOR_EPISODE", "id": "EP-BSD-A1A1-CURRENT-2026-FRONTIER-20260811-R2", "effect": "prevented repetition of the already-saturated scalar anticyclotomic main-conjecture scan"},
+    {"kind": "PARALLEL_NEAR_MISS", "id": "BSD-S001c1-KURIHARA-TAYLOR-COMPARISON", "effect": "retained separate discrete/p-primary versus complex-order interface warning"},
+    {"kind": "NONCANONICAL_PROPOSAL", "id": "RAKL_math-PR-41", "effect": "derived-height route consulted only as unmerged hypothesis evidence"}
+  ],
+  "operators_and_motifs": [
+    {"id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT", "status": "SELECTED"},
+    {"id": "PRIMARY_SOURCE_HYPOTHESIS_STRENGTH_AUDIT", "status": "SELECTED"},
+    {"id": "REPRESENTATION_ROTATION", "status": "SELECTED"},
+    {"id": "CONTEXTUAL_THEORY_GLUING_AUDIT", "status": "SELECTED"},
+    {"id": "THEOREM_CONJECTURE_CUT", "status": "SELECTED"},
+    {"id": "REPEAT_SCALAR_THETA_ORDER_SCAN", "status": "REJECTED"},
+    {"id": "PLECTIC_NONVANISHING_AS_ASSUMED_FACT", "status": "REJECTED"},
+    {"id": "ALLOCATE_UNRESERVED_CHILD_ATOM_ID", "status": "REJECTED"}
+  ],
+  "search_policy_choice": {
+    "policy": "MAX_EPISTEMIC_CONTRACTION_BY_REPRESENTATION_ROTATION",
+    "why": "the preceding cycle left the scalar-order relation unchanged; a richer plectic object could either repair the interface or reveal that the same missing nonvanishing theorem persists"
+  },
+  "primary_source_observations": [
+    {"id": "OBS-BSD-R3-FORNEA-2603.28327", "source": "arXiv:2603.28327", "statement": "plectic Heegner classes are constructed and compared to mock/plectic invariants, while their analytic-rank and Mordell-Weil determinant significance is formulated conjecturally"},
+    {"id": "OBS-BSD-R3-FORNEA-GEHRMANN-2311.03100", "source": "arXiv:2311.03100v2", "statement": "under stated hypotheses nonzero mock plectic invariant implies p-Selmer rank two; nonvanishing is an input rather than a consequence of analytic rank two"},
+    {"id": "OBS-BSD-R3-HERNANDEZ-MOLINA-2202.12573V2", "source": "arXiv:2202.12573v2", "statement": "p-adic Gross-Zagier formula computes higher Hida-Rankin p-adic derivatives using plectic points; regulator interpretation is conjectural and the derivative direction is p-adic"}
+  ],
+  "verification_performed": [
+    "read current RAKL main AGENTS and method_specs surfaces at exact framework commit",
+    "read current RAKL_math main, BSD root issue/workspace, A1a1 frozen context, dual-memory review and prior R2 episode",
+    "verified current primary arXiv records for 2603.28327, 2311.03100v2 and 2202.12573v2",
+    "separated Fornea 2026 construction/comparison theorems from Section 1.2 conjectures",
+    "kept open PR #41 noncanonical",
+    "checked current framework/application pin synchronization receipt",
+    "withheld new child atom allocation because current framework has an open identity-collision defect"
+  ],
+  "outcome": "PARTIAL_SUCCESS",
+  "mathematical_result_scope": "SOURCE_BOUND_REPRESENTATION_ROTATION_REFINEMENT_NO_THEOREM",
+  "failure_partition": {
+    "mathematical": ["missing theorem from complex analytic rank two to nonzero root-faithful plectic class/point or nondegenerate global regulator"],
+    "representation": ["plectic objects are richer than scalar theta order but their root-facing faithfulness/nonvanishing is not proved by construction alone"],
+    "gluing": ["proved p-adic derivative-to-plectic and plectic-nonvanishing-to-Selmer arrows do not glue because the complex-rank-to-plectic-nonvanishing arrow is missing"],
+    "retrieval": [],
+    "source_provenance": ["current primary sources distinguish theorem-level construction/downstream implications from conjectural higher-rank significance"],
+    "verification_tooling": [],
+    "meta_policy": ["new child atom human label withheld because globally unique/reserved identity is not yet a protected runtime primitive"]
+  },
+  "residual_before": ["find an exact complex-s to anticyclotomic order/regulator theorem or show the scalar path imports root-strength arithmetic information"],
+  "residual_after": [
+    "plectic representation rotation is viable as a richer near-solved context but does not itself close the root interface",
+    "the missing first arrow is complex analytic rank two to proved nonzero root-faithful plectic class/point or regulator determinant",
+    "next source discriminator is an exact complex Gross-Zagier/higher Gross-Zagier or reciprocity theorem supplying that nonvanishing without importing algebraic/Selmer rank two or equivalent strength"
+  ],
+  "saturation_vector": {
+    "KNOWLEDGE": "REOPENED_BY_PLECTIC_2026_SOURCE",
+    "OPERATOR": "LOCALLY_FLAT_FOR_CURRENT_AUDIT_OPERATORS",
+    "EXPERIENCE_PATTERN": "OPEN_EXISTING",
+    "OBSTRUCTION": "OPEN_EXISTING",
+    "RELATION": "REOPENED_BY_THEOREM_CONJECTURE_CUT",
+    "PATH": "OPEN_EXISTING_NOT_SUCCESSFUL",
+    "META_METHOD": "OPEN_EXISTING"
+  },
+  "novelty_classification": {"class": "UNRESOLVED", "reason": "no verified solution was produced; this is a source-bound representation/route diagnostic"},
+  "next_action": "do not generate a theorem candidate; audit only proved complex-to-plectic nonvanishing/leading-term bridges under exact weight-two elliptic-curve hypotheses, then rotate again if the first arrow remains conjectural",
+  "new_authority_objects": {"lessons_promoted": [], "tools_promoted": [], "mathematical_candidates": [], "root_promotions": []},
+  "evidence_pointers": [
+    "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_THETA_ORDER_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_PLECTIC_BRIDGE_AUDIT_20260811.md",
+    "research/real_math/millennium/birch_swinnerton_dyer/08_reviews/BSD_A1a1_PLECTIC_BRIDGE_EXPERT_REVIEW_20260811.md",
+    "arXiv:2603.28327",
+    "arXiv:2311.03100v2",
+    "arXiv:2202.12573v2"
+  ],
+  "recorded_at_utc": "2026-08-11T12:53:31Z",
+  "artifact_hash": "sha256:941770bc8e8f5f4bd3258a386dcb4e8656de8f6e66951efcb01af896d7affee8"
+}
