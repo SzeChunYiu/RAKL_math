@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "freeze_id": "PNP-O9d12a2a1b-C042-ACTIVATION-QUOTIENT-FREEZE-20260812",
+  "frozen_at": "2026-08-12T12:00:00Z",
+  "atom_id": "O9d12a2a1b-C042",
+  "parent_atom_id": "O9d12a2a1b",
+  "candidate_id": "C042-ACTIVATION-QUOTIENT-GATE-v1",
+  "parent_result": "F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION",
+  "application_base_commit": "3cfc8a3b2ff6d981351d2f15421c8cc08048f74b",
+  "framework_commit": "b8f96b8c90745c6a7a6ed57bc55d90319db505f7",
+  "statement": {
+    "path": "research/real_math/millennium/p_vs_np/04_candidates/C042_ACTIVATION_THRESHOLD_FREEZE_20260812.md",
+    "sha256": "826ce6d0caa07b859057ad92c9cc6987d75985bc3d3fef61d6b2033df88ab43f"
+  },
+  "evaluator": {
+    "path": "research/real_math/millennium/p_vs_np/05_falsification/c042_activation_quotient_gate.py",
+    "sha256": "3f3c49281162ad8e33d3db64577d885502b6520b3f11c66b15f3c7569d03ee70",
+    "maximum_parent_level": 12,
+    "exact_quotient_complement_bound": 5
+  },
+  "qoi": "first MAGIC-prefix, canonical-syntax, and canonical-UNSAT activation levels; exact twin quotient and finite cover upper bounds at the first syntax and first UNSAT-capable children",
+  "predictions": {
+    "magic_prefix_first_parent_level": 4,
+    "canonical_syntax_first_parent_level": 8,
+    "canonical_unsat_first_parent_level": 12,
+    "canonical_unsat_equality_parameters": {
+      "v": 1,
+      "m": 2
+    },
+    "first_syntax_cross_canonical_unsat_count": 0,
+    "first_unsat_cross_canonical_unsat_count": 2,
+    "U9_row_type_count": 4,
+    "U9_column_type_count": 4,
+    "U13_row_type_count": 5,
+    "U13_column_type_count": 5,
+    "U9_quotient_full_cover_number": "UNKNOWN",
+    "U13_quotient_full_cover_number": "UNKNOWN"
+  },
+  "controls": [
+    "F-C010-MULTIPLEXING",
+    "F-C013-QUOTIENT-COMPRESSION",
+    "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+    "F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION",
+    "F-C041-DECLARED-VARIABLE-WITNESS-BLOWUP"
+  ],
+  "outcome_branches": [
+    "PREFIX_ONLY_NO_SEMANTIC_SIGNAL",
+    "SYNTAX_ONLY_ALL_SAT",
+    "FIRST_UNSAT_COMPRESSED",
+    "FINITE_QUOTIENT_UPPER_BOUND",
+    "PROPOSED_THRESHOLD_REFUTED",
+    "CANNOT_CHECK"
+  ],
+  "chronology": {
+    "analytical_llm_and_role_proposals_are_authority": false,
+    "statement_and_evaluator_frozen_before_executable_output": true,
+    "executable_output_accessed": false,
+    "same_context_review_is_independent_peer_review": false
+  },
+  "authority_boundary": "Finite threshold and quotient theorems only. No later-level, recurrence, asymptotic, circuit, novelty, or P-versus-NP authority.",
+  "artifact_hash": "sha256:04ac4416ecc74311ab35cc49ed3d05cabe2b791c7aa9d95b8860ce252c32033e"
+}
