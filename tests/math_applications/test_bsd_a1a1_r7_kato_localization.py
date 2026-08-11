@@ -81,5 +81,5 @@ def test_r7_case_study_and_route_diagnostic_preserve_root_boundary() -> None:
     route = (BSD / "02_problem_dag/BSD_A1a1_R7_KATO_LOCALIZATION_ROUTE_DIAGNOSTIC_20260811.yaml").read_text(encoding="utf-8")
     assert "route re-entry/cycle edge" in case
     assert "state_fingerprint_v2" in case
-    assert "ROOT_STATE_OPEN_NO_SOLUTION_CERTIFICATE" in route
+    assert "root_state: OPEN_NO_SOLUTION_CERTIFICATE" in route
     assert "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE" in route
