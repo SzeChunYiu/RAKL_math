@@ -73,7 +73,43 @@
       "previous_event_hash": "sha256:6bf16e1383f9c5c52318366248719aa0123225806682cd3fc23f25d047937f7d",
       "summary": "Audit large-radius local-energy cutoff scaling under Seregin F=1, then classify local vs gluing residual. Candidate origin is preexisting issue #65.",
       "artifact_hash": "sha256:83aa5eb882bf47d315900d9adb9d3d4e8b2c8d77f51b45691c39498867044bc1"
+    },
+    {
+      "sequence": 9,
+      "event_type": "CANDIDATE_PROPOSED",
+      "atom_id": "NS-B2a",
+      "timestamp": "2026-08-11T23:15:02Z",
+      "previous_event_hash": "sha256:83aa5eb882bf47d315900d9adb9d3d4e8b2c8d77f51b45691c39498867044bc1",
+      "summary": "Execute the issue-#65 discriminator already frozen before this run: audit whether Seregin F=1 absolute large-radius cutoff errors vanish. Candidate origin is preexisting; no generation/preregistration credit is claimed.",
+      "artifact_hash": "sha256:d47272fdfbb0a9f2aba7408878fdd8a05ca89be5e16f041a6784f09b8ec6614f"
+    },
+    {
+      "sequence": 10,
+      "event_type": "FALSIFIER_RUN",
+      "atom_id": "NS-B2a",
+      "timestamp": "2026-08-11T23:15:02Z",
+      "previous_event_hash": "sha256:d47272fdfbb0a9f2aba7408878fdd8a05ca89be5e16f041a6784f09b8ec6614f",
+      "summary": "Run exact F=1 cutoff scaling, fixed-radius-to-tail quantifier audit, and Gavrilov source-signature check.",
+      "artifact_hash": "sha256:a590f8cd6eb14fa2c7fa3e58475caae39a3edbff9ef0311e4a57c3d8576814f6"
+    },
+    {
+      "sequence": 11,
+      "event_type": "RESULT_RECORDED",
+      "atom_id": "NS-B2a",
+      "timestamp": "2026-08-11T23:15:02Z",
+      "previous_event_hash": "sha256:a590f8cd6eb14fa2c7fa3e58475caae39a3edbff9ef0311e4a57c3d8576814f6",
+      "summary": "Absolute temporal/cubic/pressure cutoff estimates are O(R), not o(1); Gavrilov fails the F=1 gradient-spacetime signature; fixed-radius compactness is not tail tightness.",
+      "artifact_hash": "sha256:1bca0b0d7c852fbe820c4146734eafd9ae57d6688338c1f93b9ba7913ab4dc79"
+    },
+    {
+      "sequence": 12,
+      "event_type": "RESIDUAL_OPENED",
+      "atom_id": "NS-B2a",
+      "timestamp": "2026-08-11T23:15:02Z",
+      "previous_event_hash": "sha256:1bca0b0d7c852fbe820c4146734eafd9ae57d6688338c1f93b9ba7913ab4dc79",
+      "summary": "Open F-NS-B2a-F1-ABSOLUTE-CUTOFF-NO-DECAY, G-NS-B2a-FIXED-R-TO-GLOBAL-FLUX-TIGHTNESS and O-NS-B2a-NO-INCOMING-FLUX-CERTIFICATE; route next to issue #198 / NS-B2a1.",
+      "artifact_hash": "sha256:5e090b99f63802917474947b611f496029d2f1ddb188f189238d1590555d77d8"
     }
   ],
-  "head_hash": "sha256:83aa5eb882bf47d315900d9adb9d3d4e8b2c8d77f51b45691c39498867044bc1"
+  "head_hash": "sha256:5e090b99f63802917474947b611f496029d2f1ddb188f189238d1590555d77d8"
 }
