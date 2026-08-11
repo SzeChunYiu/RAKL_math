@@ -1,0 +1,213 @@
+{
+  "trace_id": "NS-R001D1-HEAT-BASELINE-20260811",
+  "entries": [
+    {
+      "event_id": "NS-R001d1-E001",
+      "atom_id": "NS-R001d1",
+      "event_type": "ATOMIZED",
+      "timestamp": "2026-08-11T08:55:40+00:00",
+      "state_summary": "Merged NS-R001/A1 and NS-R001b negative screens leave a live need for a trajectory-level, finite-energy, nonlocal critical coordinate; pending PR #33 independently points toward positive-time dynamics but is not yet accepted memory.",
+      "action_summary": "Open NS-R001d1 as a strict pre-candidate atom separating generic heat smoothing from genuinely nonlinear Navier-Stokes depletion.",
+      "evidence_pointers": [
+        "RAKL_math issue #4",
+        "research/real_math/millennium/navier_stokes/07_memory/NS_R001D1_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+        "RAKL_math PR #33 (provisional)"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "atom:NS-R001d1",
+        "parent_scope:merged NS-R001 and NS-R001b residuals; PR #33 provisional parallel evidence"
+      ],
+      "uncertainties": [
+        "whether the load-bearing dynamic coordinate is Duhamel endpoint integrability, pressure/advection cancellation, frequency localization, local-energy flux, or projected strain depletion"
+      ],
+      "residuals": [
+        "finite energy has not been upgraded to any established critical regularity control"
+      ],
+      "next_steps": [
+        "freeze a dynamics-versus-heat-baseline context before any new candidate"
+      ],
+      "artifact_hash": "sha256:6601acbfed1f9f95e4419e48c30cf34249227b609a3756557874644683363ec3",
+      "previous_event_hash": ""
+    },
+    {
+      "event_id": "NS-R001d1-E002",
+      "atom_id": "NS-R001d1",
+      "event_type": "CONTEXT_FROZEN",
+      "timestamp": "2026-08-11T08:55:50+00:00",
+      "state_summary": "Heat/Stokes baseline, exact mild/Duhamel feedback, critical spaces, localized smoothing, frequency-local finite-energy results and Miller projected-remainder criteria are separated with source-bound assumptions and disanalogies.",
+      "action_summary": "Freeze the NS-R001d1 MathContextFiber before candidate generation.",
+      "evidence_pointers": [
+        "sha256:a984bc0c0495297d16341169ac70eb0c7ac718b5118f3a0e07ba02aa8aa923a3",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001D1_HEAT_BASELINE_CONTEXT_FIBER_20260811.json",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001D1_HEAT_BASELINE_SOURCE_PACKET_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "sha256:a984bc0c0495297d16341169ac70eb0c7ac718b5118f3a0e07ba02aa8aa923a3"
+      ],
+      "uncertainties": [
+        "no inspected source derives the needed critical dynamic depletion from arbitrary finite energy"
+      ],
+      "residuals": [],
+      "next_steps": [],
+      "artifact_hash": "sha256:53b1c9636224351717eeced8a2f05d3e328ef133488be642ef6f0d651b375e35",
+      "previous_event_hash": "sha256:6601acbfed1f9f95e4419e48c30cf34249227b609a3756557874644683363ec3"
+    },
+    {
+      "event_id": "NS-R001d1-E003",
+      "atom_id": "NS-R001d1",
+      "event_type": "ANALOGY_SCAN",
+      "timestamp": "2026-08-11T08:56:00+00:00",
+      "state_summary": "A control/system-identification baseline-separation analogy survived the structural witness gate.",
+      "action_summary": "Retain only the proposal principle that heat/Stokes smoothing must be frozen as baseline before attributing any critical gain to nonlinear feedback.",
+      "evidence_pointers": [
+        "sha256:a984bc0c0495297d16341169ac70eb0c7ac718b5118f3a0e07ba02aa8aa923a3",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001D1_HEAT_BASELINE_CONTEXT_FIBER_20260811.json"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "retained_bridge:heat-baseline-versus-nonlinear-excess"
+      ],
+      "uncertainties": [
+        "the analogy supplies no PDE inequality or sign"
+      ],
+      "residuals": [],
+      "next_steps": [],
+      "artifact_hash": "sha256:38567e1284caa82cc12c52af2779eaf7e5b4205c4e68449e245fa0a2da3c8c83",
+      "previous_event_hash": "sha256:53b1c9636224351717eeced8a2f05d3e328ef133488be642ef6f0d651b375e35"
+    },
+    {
+      "event_id": "NS-R001d1-E004",
+      "atom_id": "NS-R001d1",
+      "event_type": "METHOD_TRANSFER_REVIEW",
+      "timestamp": "2026-08-11T08:56:10+00:00",
+      "state_summary": "Heat smoothing, Koch-Tataru critical closure, Barker-Prange localized smoothing, Cheskidov-Eguchi frequency-local finite-energy control, and Miller projected-remainder depletion are mapped with their enabling assumptions and broken assumptions.",
+      "action_summary": "Record the minimum repair question: derive a dynamics-specific critical gain from finite energy without assuming small critical data or crediting the linear heat baseline.",
+      "evidence_pointers": [
+        "sha256:a984bc0c0495297d16341169ac70eb0c7ac718b5118f3a0e07ba02aa8aa923a3",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001D1_HEAT_BASELINE_SOURCE_PACKET_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "method_transfer_matrix:frozen"
+      ],
+      "uncertainties": [
+        "a crude Duhamel endpoint may be the wrong representation; tent-space, frequency-local or strain-projected coordinates may be required"
+      ],
+      "residuals": [],
+      "next_steps": [],
+      "artifact_hash": "sha256:20a5c8dd30b4f0ef4340fac4c4e3bf1bff1b5a8a5724625576005929f39dcc66",
+      "previous_event_hash": "sha256:38567e1284caa82cc12c52af2779eaf7e5b4205c4e68449e245fa0a2da3c8c83"
+    },
+    {
+      "event_id": "NS-R001d1-E005",
+      "atom_id": "NS-R001d1",
+      "event_type": "EXPERT_CONTEXT_REVIEW",
+      "timestamp": "2026-08-11T08:56:20+00:00",
+      "state_summary": "Six role-separated same-context experts reviewed the dynamic critical-control atom; this is not independent review.",
+      "action_summary": "Select a predeclared heat-baseline/Duhamel endpoint audit as the cheapest next discriminator, but do not execute it until the strict packet passes and PR #33's provisional parent evidence is reconciled.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/08_reviews/NS_R001D1_EXPERT_CONTEXT_REVIEW_20260811.md",
+        "sha256:a984bc0c0495297d16341169ac70eb0c7ac718b5118f3a0e07ba02aa8aa923a3"
+      ],
+      "alternatives_considered": [
+        "immediate new strain-depletion theorem search",
+        "restart Barker-Prange from energy without a generated L3 hypothesis",
+        "assume frequency-local smallness then bootstrap",
+        "audit the exact heat baseline and near-diagonal Duhamel closure first"
+      ],
+      "decision_rationale": "The heat-baseline/Duhamel audit has the highest partition power: if crude semigroup plus energy already closes, the dynamic gap narrows cheaply; if it fails at an endpoint, the failure localizes the missing coordinate to temporal/frequency/cancellation structure instead of another static norm.",
+      "outputs": [
+        "recommendation:heat-baseline/Duhamel-endpoint-audit",
+        "candidate_status:NOT_GENERATED"
+      ],
+      "uncertainties": [
+        "actual Navier-Stokes trajectories may suppress hostile temporal concentration through structure invisible to scalar energy bounds",
+        "the best next representation may be tent-space/frequency-local rather than L_infinity_t L3_x"
+      ],
+      "residuals": [],
+      "next_steps": [],
+      "artifact_hash": "sha256:a709645756e45c4cbcbfbfb41d158e4498223c734a662a3642e9ba80c38d1fb4",
+      "previous_event_hash": "sha256:20a5c8dd30b4f0ef4340fac4c4e3bf1bff1b5a8a5724625576005929f39dcc66"
+    },
+    {
+      "event_id": "NS-R001d1-E006",
+      "atom_id": "NS-R001d1",
+      "event_type": "EXPERIENCE_MEMORY_REVIEW",
+      "timestamp": "2026-08-11T08:56:30+00:00",
+      "state_summary": "No promoted success tool applies; the merged A1 energy-criticality failure and NS-R001b local-geometry scope failure are relevant warnings with explicit DifferenceWitnesses. Pending PR #33 is excluded from memory authority.",
+      "action_summary": "Freeze the dual memory review and carry the two merged failures forward only at their registered supported scope.",
+      "evidence_pointers": [
+        "sha256:98440c57d6ce7d397ad841f2607e64483ec7dd537673b5e9509e90ead8b48470",
+        "sha256:fe2f3b4ef49492d81cb350fb689bf9f9dff6cfd1817d72d6ff9fe3350e3d5e6a",
+        "sha256:e417fa7195d737cf42bf1e4a63b893bc65d0481c900d454148ca742e4c482468",
+        "research/real_math/millennium/navier_stokes/07_memory/NS_R001D1_RESEARCH_MEMORY_REVIEW_20260811.json"
+      ],
+      "alternatives_considered": [
+        "ignore prior failures because the representation is dynamic",
+        "import pending PR #33 as if already merged",
+        "reuse merged failures with target-specific DifferenceWitnesses and keep PR #33 provisional"
+      ],
+      "decision_rationale": "The new atom changes the tested coordinate from static/generic structure to exact time evolution, so prior failures are warnings rather than blacklists; excluding unassured PR #33 keeps memory authority fail-closed.",
+      "outputs": [
+        "sha256:98440c57d6ce7d397ad841f2607e64483ec7dd537673b5e9509e90ead8b48470",
+        "tool_query:NO_RELEVANT_MATCH",
+        "failure_query:F-NS-R001-A1-ENERGY-CRITICALITY,F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP"
+      ],
+      "uncertainties": [
+        "Crude heat-kernel estimates can create near-diagonal time singularities; failure of one Hölder/convolution closure is a proof-architecture failure, not a Navier-Stokes counterexample.",
+        "Positive-time smoothing that is already true for the heat equation is not evidence of nonlinear depletion.",
+        "Small critical-data and frequency-local theorems assume the critical coordinate whose dynamic generation is the active obstruction.",
+        "Miller's projected-remainder criteria remain conditional until their ratio/integral is controlled from the finite-energy Clay data class.",
+        "Any future candidate must distinguish R^3 finite-energy scope from periodic or infinite-energy exact flows."
+      ],
+      "residuals": [],
+      "next_steps": [],
+      "artifact_hash": "sha256:4b3b5d9f8541df8c772026912b1e7edb8f0dc68bab417422826819d2ec81a61d",
+      "previous_event_hash": "sha256:a709645756e45c4cbcbfbfb41d158e4498223c734a662a3642e9ba80c38d1fb4"
+    },
+    {
+      "event_id": "NS-R001d1-E007",
+      "atom_id": "NS-R001d1",
+      "event_type": "NEXT_STEP_PROPOSED",
+      "timestamp": "2026-08-11T08:56:40+00:00",
+      "state_summary": "Context, method-transfer matrix, expert objections and dual memory are frozen; no NS-R001d1 mathematical candidate exists.",
+      "action_summary": "After machine-gate confirmation and parent-PR reconciliation, freeze an exact endpoint-closure candidate testing whether standard heat-kernel L2-to-L3 Duhamel estimates plus Leray energy can control the nonlinear term, with a predeclared near-diagonal temporal-concentration hostile control.",
+      "evidence_pointers": [
+        "sha256:a984bc0c0495297d16341169ac70eb0c7ac718b5118f3a0e07ba02aa8aa923a3",
+        "sha256:98440c57d6ce7d397ad841f2607e64483ec7dd537673b5e9509e90ead8b48470",
+        "research/real_math/millennium/navier_stokes/08_reviews/NS_R001D1_EXPERT_CONTEXT_REVIEW_20260811.md"
+      ],
+      "alternatives_considered": [
+        "search for a new global invariant immediately",
+        "numerical finite-time smoothing experiment",
+        "frequency-local theorem invention before baseline audit",
+        "exact scalar/semigroup endpoint audit with hostile time concentration"
+      ],
+      "decision_rationale": "This audit is cheap, exact and representation-discriminating. A negative result would not refute Navier-Stokes regularity; it would show that ordinary heat smoothing plus the energy integral cannot be the whole bridge and would justify moving to cancellation/tent-space/frequency-local or projected-strain structure.",
+      "outputs": [
+        "candidate_generation_not_used",
+        "planned_discriminator:heat-semigroup-vs-nonlinear-endpoint-closure"
+      ],
+      "uncertainties": [
+        "remote exact-head application CI is required before treating this strict packet as machine-verified",
+        "pending PR #33 may require lineage reconciliation if it merges or changes"
+      ],
+      "residuals": [
+        "dynamic critical-control gap remains open"
+      ],
+      "next_steps": [
+        "run packet/hash/schema/plan_math_research regression",
+        "reconcile PR #33 exact-head status",
+        "only then freeze and run the endpoint-closure candidate/falsifier"
+      ],
+      "artifact_hash": "sha256:a20c9b69056e861518523ae3160cb3740a6205c9775505acdea52db3cbeb1b04",
+      "previous_event_hash": "sha256:4b3b5d9f8541df8c772026912b1e7edb8f0dc68bab417422826819d2ec81a61d"
+    }
+  ]
+}
