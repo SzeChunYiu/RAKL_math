@@ -1,0 +1,49 @@
+{
+  "target_atom_id": "BSD-S001c1-KURIHARA-TAYLOR-COMPARISON",
+  "target_context_hash": "sha256:77fb09f9c61fbe2506daf8bd6bf9a18e8bc69a2c360cbcd7316238f07e78b58a",
+  "tool_inventory_snapshot_hash": "sha256:5d012f2d7bfceae275d8970bcfe04fc1cd5e1d61ec271b74931c108a129c70f5",
+  "failure_lattice_snapshot_hash": "sha256:255c5599151cd0f5670bc469434651b712519bd04d270c2f179313a8db887180",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "Kurihara-discrete-order to complex-Taylor-order comparison",
+    "Kato zeta-element explicit reciprocity and order transfer",
+    "Bockstein/determinant leading-term comparison with independently defined arithmetic element",
+    "localized Iwasawa main-conjecture implication audit",
+    "one-sided inequality plus parity/rigidity closure"
+  ],
+  "relevant_tool_ids": [
+    "T-PNP-EXTREMAL-CALIBRATION"
+  ],
+  "relevant_failure_ids": [
+    "F-C023-SCALAR-COLLAPSE"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "T-PNP-EXTREMAL-CALIBRATION remains a complexity-theory tool with no arithmetic applicability witness; it is not executed on BSD.",
+    "Its only retained meta-lesson is to calibrate a proposed root proxy against exact target authority. Here the arithmetic calibration must be source-theoretic: Kim-Pollack exactly recover Selmer structure from a discrete order while explicitly not identifying arbitrary complex analytic rank."
+  ],
+  "failure_reuse_notes": [
+    "F-C023-SCALAR-COLLAPSE remains outside BSD theorem scope. It warns that exact behavior of a compressed/proxy coordinate need not preserve a root-critical coordinate.",
+    "No BSD-local failed mathematical candidate exists for BSD-S001c1. The BKS circularity observation and the Kim-Pollack discrete/complex gap are source-bound route diagnoses, not fabricated FailureExperience records.",
+    "A BSD-local failure record should be created only after a frozen candidate comparison is actually falsified or a bounded impossibility is proved."
+  ],
+  "unresolved_warnings": [
+    "Kim-Pollack corank Sel = ord(Kurihara) is an exact arithmetic theorem under hypotheses, but arbitrary-rank ord(Kurihara)=complex analytic rank is not supplied by that statement.",
+    "Kurihara nonvanishing does not determine the exact Kurihara order.",
+    "Localized Iwasawa main-conjecture input must not be silently interpreted as a complex analytic-rank theorem.",
+    "BKS eta^BSD cannot independently reconstruct a complex leading term from which it was defined.",
+    "Selmer corank requires Sha-divisibility control before becoming Mordell-Weil rank, and the refined global leading coefficient remains a separate obligation.",
+    "The primary-source search is bounded; absence in the inspected sources is not a novelty or impossibility certificate."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD-S001_RESEARCH_TOOL_INVENTORY_20260811.json",
+    "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD-S001_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD-S001a_PROJECTION_AUDIT_20260811.md",
+    "Chan-Ho Kim and Robert Pollack, arXiv:2505.09121",
+    "Chan-Ho Kim, arXiv:2203.12159",
+    "Burns-Kurihara-Sano, arXiv:1910.07404",
+    "Kato, Asterisque 295 (2004)"
+  ],
+  "artifact_hash": "sha256:b4683998b238281edac5b010f70ab7a5bf3d17c3f79e8275decf73db0f6ccafb"
+}
