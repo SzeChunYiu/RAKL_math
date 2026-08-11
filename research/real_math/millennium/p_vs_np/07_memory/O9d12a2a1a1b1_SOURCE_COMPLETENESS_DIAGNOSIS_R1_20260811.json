@@ -1,0 +1,27 @@
+{
+  "schema_version": "rakl-v3-diagnosis-shadow-v1",
+  "diagnosis_id": "D-PNP-O9d12a2a1a1b1-SOURCE-COMPLETENESS-R1-20260811",
+  "episode_id": "PNP-O9d12a2a1a1b1-SOURCE-INVENTORY-R1-20260811",
+  "atom_id": "O9d12a2a1a1b1",
+  "evidence": [
+    "source_audit_sha256:63c354b664b41dc7e5254d1ffa4b402ae4e363d5dca3b123425a5f115374e1f8",
+    "pre_action_receipt:aab44dcb80dbca53adbb85cc42ff1c4a504b5e5d50e3809b7ad2aadb53faf560"
+  ],
+  "diagnosis": "The bounded source-family action cannot decide the absence branch. Three full primary families (current Cavalar-Oliveira, Razborov 1989, Wigderson 1993) yielded no matching theorem, but exact Karchmer 1993 and Nakayama-Maruoka 1995 full primary theorem inventories were not accessible. Because the predeclared discriminator makes source-family completeness a condition for NO_RELEVANT_SOURCE_BOUND, the only admissible outcome is BLOCKED.",
+  "failure_category": ["source", "retrieval"],
+  "mathematical_failure": false,
+  "representation_failure": false,
+  "decomposition_failure": false,
+  "gluing_failure": false,
+  "verification_failure": false,
+  "tooling_component": "Publisher/fulltext retrieval access prevented primary-source completeness; this is not evidence that the mathematical route fails.",
+  "repeated_process_failure_links": [],
+  "not_same_as": [
+    {
+      "id": "RAKL-MATH-PR132-POSTMERGE-DURABILITY",
+      "reason": "PR132 was a CI/historical-freeze durability meta-policy failure; this cycle is a primary-source completeness failure."
+    }
+  ],
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "retained_learning": false
+}
