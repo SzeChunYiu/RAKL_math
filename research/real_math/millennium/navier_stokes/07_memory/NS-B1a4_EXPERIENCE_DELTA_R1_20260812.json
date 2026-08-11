@@ -1,0 +1,50 @@
+{
+  "schema_version": "experience-delta-v3-proposal-shadow-r1",
+  "cycle_id": "NS-B1a4-C001-R1-SIGNED-RECROSSING-20260812",
+  "episode": {
+    "id": "EP-NS-B1a4-C001-R1-20260812",
+    "status": "PROPOSAL_SHADOW_STORED",
+    "observation": "An exact smooth pressure-free NSE shear has strictly increasing localized kinetic energy on a fixed interior interval."
+  },
+  "diagnosis": {
+    "id": "DX-NS-B1a4-C001-LOCAL-SIGN-ABSENT",
+    "authority": "SUPPORTED_SAME_CONTEXT_ONLY",
+    "statement": "The generic local-energy identity and pressure localization do not themselves impose a one-sided sign; viscous/cutoff transport can feed a localization even when pressure and convective cutoff flux vanish."
+  },
+  "failures": [
+    {
+      "id": "F-NS-B1a4-GENERIC-LEI-PRESSUREZERO-NO-MONOTONICITY",
+      "kind": "LOCAL_MATHEMATICAL_ROUTE_FAILURE",
+      "authority": "OBSERVED_ONLY_TO_SUPPORTED_SAME_CONTEXT",
+      "scope": "generic exact smooth/local-suitable NSE local-energy/pressure-only monotonicity",
+      "not_claimed": "finite-I ancient no-recrossing impossibility"
+    },
+    {
+      "id": "G-NS-B1a4-LOCAL-SHEAR-TO-FINITE-I-ANCIENT",
+      "kind": "LOCAL_TO_GLOBAL_GLUING_RESIDUAL",
+      "authority": "OPEN",
+      "scope": "hostile shear has infinite global energy and A(r)~r, hence cannot be transferred to the Albritton-Barker finite-I ancient class"
+    }
+  ],
+  "obstruction": {
+    "id": "O-NS-B1a4-MAGNITUDE-LEDGER-MISSING-SIGNED-TEMPORAL-COORDINATE",
+    "authority": "CANDIDATE_OBSTRUCTION_SEARCH_PRIORITY_ONLY",
+    "statement": "A+C+D+E are nonnegative magnitude coordinates; the generic local balance supplies no intrinsic signed/no-return coordinate. Any positive route must exploit a specifically finite-I global/trajectory theorem or introduce a separately verified signed observable."
+  },
+  "candidate_lesson": {
+    "id": "L-NS-B1a4-PRESSURE-ZERO-RECROSSING-CALIBRATION",
+    "authority": "CANDIDATE",
+    "supporting_episode_ids": ["EP-NS-B1a4-C001-R1-20260812"],
+    "trigger": "proposal of local pressure magnitude/coherence as a universal no-recrossing source",
+    "action": "first test an exact p=0 shear/local-energy calibration; if recrossing survives, require a finite-I-specific signed coordinate rather than more pressure magnitude bounds",
+    "falsifier": "a source-valid theorem deriving the required sign directly from finite-I plus the standard ledger would supersede this routing lesson in that scope",
+    "boundary": "does not blacklist pressure-dependent finite-I theorems or pressure-coupled signed fluxes"
+  },
+  "motif": {
+    "id": "M-NS-LOCAL-ENERGY-RECROSSING-P0-SHEAR",
+    "authority": "PROPOSAL_SHADOW_PATTERN",
+    "statement": "exact PDE simplification can isolate a suspected sign source by setting pressure and nonlinearity to zero while preserving local boundary transport"
+  },
+  "novelty_class": "representation",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+}
