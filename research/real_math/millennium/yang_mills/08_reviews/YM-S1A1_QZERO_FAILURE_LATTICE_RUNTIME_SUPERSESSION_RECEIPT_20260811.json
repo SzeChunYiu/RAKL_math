@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "YM-S1A1-QZERO-FAILURE-LATTICE-RUNTIME-SUPERSESSION-20260811",
+  "atom_id": "YM-S1a1-C001c1",
+  "recorded_at": "2026-08-11T12:08:38+00:00",
+  "finding_classification": "QUARANTINED_APPLICATION_FEEDBACK_HYPOTHESIS",
+  "predecessor": {
+    "path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_FAILURE_EXPERIENCE_LATTICE_QZERO_SUCCESSOR_20260811.json",
+    "file_sha256": "sha256:59a1060dfb3ce759d2f4fdc9e0b511f9a1cfb36ebf2ac2951cc3e5193a645af4",
+    "schema_result": "PASS",
+    "runtime_result": "FAIL",
+    "immutable": true
+  },
+  "successor": {
+    "path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_FAILURE_EXPERIENCE_LATTICE_QZERO_RUNTIME_CONFORMANT_V2_20260811.json",
+    "file_sha256": "sha256:9fc5ba9e43e113ee59a28009810eeb7fd12c88b40fc7e7250d005c05013d6aad",
+    "schema_result": "PASS",
+    "runtime_result": "PASS",
+    "immutable": true,
+    "failure_lattice_snapshot_hash": "sha256:c0bccaab7840d77133e6e83fff042dacd37c3e1fa4a859e244257e3de3a55738"
+  },
+  "superseded_derivatives": [
+    {
+      "predecessor_path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_C001C1_FUTURE_CORRECTION_RESEARCH_MEMORY_REVIEW_20260811.json",
+      "predecessor_file_sha256": "sha256:2ad0a35442024e28987fcc91ae17c6777ded8884261094288fe5581111004138",
+      "successor_path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_C001C1_RUNTIME_CONFORMANT_V2_RESEARCH_MEMORY_REVIEW_20260811.json",
+      "status": "PRESERVED_BYTES_SUPERSEDED_FOR_FUTURE_USE",
+      "successor_file_sha256": "sha256:070c9242db2afd5103efe9a1dd0493b230adea60b385cb73b1aa1b37aafdf40e"
+    },
+    {
+      "predecessor_path": "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_C001C1_FUTURE_CORRECTION_PRE_CANDIDATE_TRACE_20260811.json",
+      "predecessor_file_sha256": "sha256:2e4c5a63c1d904296790b598d645e5b02bd3edd61a2f3b30edcc6d2bbdc10517",
+      "successor_path": "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_C001C1_RUNTIME_CONFORMANT_V2_PRE_CANDIDATE_TRACE_20260811.json",
+      "status": "PRESERVED_BYTES_SUPERSEDED_FOR_FUTURE_USE",
+      "successor_file_sha256": "sha256:fa26819e97cf202b5a74df4b9a1b47fcd40066a5b99d3e4e186d7ccbde482d03"
+    }
+  ],
+  "runtime_reproduction": {
+    "framework_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+    "api": "rakl.failure_lattice.add_failure_experience/add_failure_link",
+    "predecessor_result": "REJECTED",
+    "predecessor_error": "failure links require existing source and target experiences",
+    "successor_result": "ACCEPTED",
+    "bounded_finding": "The predecessor link targets a candidate id absent from the registered FailureExperience set. The successor preserves both experiences, records no typed relation between their materially different failure mechanisms, and keeps candidate resolution in its dedicated correction receipt."
+  },
+  "candidate_resolution": {
+    "correction_receipt_path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_C001_V1_TO_V2_REVIEW_CORRECTION_20260811.json",
+    "recorded_only_in_correction_receipt": true,
+    "failure_to_candidate_link_present": false,
+    "note": "V2 positive-q correction scope remains recorded in the correction receipt; FailureLink is not a general candidate-resolution graph."
+  },
+  "authority": {
+    "application_feedback": "PROPOSAL_ONLY_LOCAL_RUNTIME_REPRODUCTION",
+    "framework_promotion": "NONE",
+    "mathematical_truth_effect": "NONE",
+    "independent_review": false,
+    "novelty_authority": "NONE",
+    "root_authority": "NONE"
+  },
+  "artifact_hash": "sha256:b20bddbb76f809a8164352a00e6939dd2412e6010e1689b5e2a9db8855cee8c6"
+}
