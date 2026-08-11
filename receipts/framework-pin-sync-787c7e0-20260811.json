@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "RAKL-MATH-FRAMEWORK-PIN-SYNC-787c7e0-20260811",
+  "recorded_at": "2026-08-11T17:40:39Z",
+  "framework_delta": {
+    "previous_commit": "fe47a12c4bad8253658baaf37e1300cab15d0823",
+    "current_commit": "787c7e00af2a5877ccb715bc807ec14f52974e9c",
+    "previous_tree": "d701daa0edff05b6f937fe5bdd5c37c06c543bb0",
+    "current_tree": "3047f39eee221d82e261d4567bf87e3cdb76166b",
+    "commits_between": 11,
+    "changed_files": 36,
+    "fresh_origin_main": "787c7e00af2a5877ccb715bc807ec14f52974e9c"
+  },
+  "application_base": {
+    "origin_main": "dc83b72201cb58844b2bdc76117e4dcb9190211d",
+    "branch_base": "dc83b72201cb58844b2bdc76117e4dcb9190211d",
+    "main_moved_before_round": false
+  },
+  "compatibility_review": {
+    "mandatory_math_gate_files_changed": false,
+    "pre_action_outcome_enum_compatible": true,
+    "new_surfaces_authority": "PROPOSAL_ONLY_OR_NON_AUTHORIZING",
+    "historical_artifacts_rewritten": false
+  },
+  "initial_verification": {
+    "subject_commit": "f5ec71348a692f0107b713edbfd1c92ea2c4b8ef",
+    "tests_passed": 453,
+    "tests_failed": 6,
+    "exit_code": 1,
+    "status": "FAIL_HISTORICAL_AUDIT_COUPLED_TO_LIVE_PIN",
+    "failure_scope": "OPERATIONAL_ASSURANCE_ONLY_NO_MATHEMATICAL_RESULT"
+  },
+  "prospective_repair": {
+    "historical_pin_source": "SUBJECT_COMMIT_CONFIG",
+    "historical_framework_check": "PINNED_COMMIT_OBJECT_EXISTS_NOT_CURRENT_WORKTREE_HEAD_EQUALITY",
+    "live_freeze_check": "CURRENT_ORIGIN_AND_CURRENT_PIN_REMAIN_FAIL_CLOSED",
+    "historical_receipts_rewritten": false,
+    "mathematical_memory_mutated": false
+  },
+  "mathematical_experience_boundary": {
+    "mathematical_memory_types": [
+      "TaskEpisode",
+      "Lesson",
+      "ResearchTool",
+      "FailureExperience",
+      "DifferenceWitness",
+      "ResearchMemoryReview"
+    ],
+    "operational_assurance_types": [
+      "git_state",
+      "ci_execution",
+      "artifact_hashing",
+      "timestamp_chronology",
+      "environment_portability"
+    ],
+    "policy": "OPERATIONAL_ASSURANCE_MUST_NOT_BE_PROMOTED_AS_MATHEMATICAL_EXPERIENCE"
+  },
+  "verification": {
+    "subject_commit": "21412bea172a4b57183625cc2bd99a662b0ee8b8",
+    "verified_at": "2026-08-11T17:48:08Z",
+    "command": "python tools/run_application_tests.py --framework framework/RAKL",
+    "tests_passed": 459,
+    "exit_code": 0,
+    "pin_equals_gitlink": true,
+    "framework_authority_paths_clean": true,
+    "status": "PASS_EXACT_APPLICATION_SUITE"
+  },
+  "authority_contract": {
+    "grants_mathematical_authority": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_framework_evolution_authority": false,
+    "grants_review_independence": false
+  },
+  "artifact_hash": "sha256:f2ce1e264354e061f4eebbbe964268e67d2fda72a14c5ed10b6c6ad83fbf0918"
+}

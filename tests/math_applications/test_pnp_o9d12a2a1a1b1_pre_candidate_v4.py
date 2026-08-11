@@ -324,7 +324,7 @@ def test_pnp_o9d12a2a1a1b1_pre_candidate_v4_git_audit_executes_and_mutations_fai
     module = runner_module()
     source = valid_machine_fixture(module)["source_binding"]
     assert module.audit_git_state(source, require_current_origin=False) == {
-        "verdict": "PASS", "checked_relations": 12, "current_origin_main_at_freeze": False, "worktree_framework_head_checked": True
+        "verdict": "PASS", "checked_relations": 12, "current_origin_main_at_freeze": False, "worktree_framework_head_checked": False
     }
     current_audit = module.audit_git_state(source, require_current_origin=True)
     if module.git("rev-parse", "refs/remotes/origin/main") == module.BASE_COMMIT:
