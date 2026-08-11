@@ -25,11 +25,18 @@ def _hash_without_artifact_hash(obj):
     return "sha256:" + hashlib.sha256(raw).hexdigest()
 
 
+def _assert_hash(label, obj):
+    stored = obj["artifact_hash"]
+    computed = _hash_without_artifact_hash(obj)
+    if stored != computed:
+        print(f"::error title=R4 hash mismatch::{label} stored={stored} computed={computed}")
+    assert stored == computed
+
+
 def test_r4_artifact_hashes_and_fibre_binding():
     expected_fibre = "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d"
     for path in (PRE, SOURCE, EPISODE, FAILURE, METRICS):
-        data = _load(path)
-        assert data["artifact_hash"] == _hash_without_artifact_hash(data)
+        _assert_hash(path.name, _load(path))
 
     assert _load(PRE)["fibre_snapshot_hash"] == expected_fibre
     assert _load(EPISODE)["context_hash"] == expected_fibre
@@ -40,13 +47,17 @@ def test_r4_artifact_hashes_and_fibre_binding():
 def test_r4_trace_chain_is_contiguous_and_hash_valid():
     pre = _load(PRETRACE)
     result = _load(RESULTTRACE)
+    if result["base_last_event_hash"] != pre["entries"][-1]["artifact_hash"]:
+        print(f"::error title=R4 trace base mismatch::result_base={result['base_last_event_hash']} pre_last={pre['entries'][-1]['artifact_hash']}")
     assert result["base_last_event_hash"] == pre["entries"][-1]["artifact_hash"]
 
     events = pre["entries"] + result["entries"]
     previous = pre["base_last_event_hash"]
     for event in events:
+        if event["previous_event_hash"] != previous:
+            print(f"::error title=R4 trace predecessor mismatch::{event['event_id']} stored_prev={event['previous_event_hash']} expected_prev={previous}")
         assert event["previous_event_hash"] == previous
-        assert event["artifact_hash"] == _hash_without_artifact_hash(event)
+        _assert_hash(event["event_id"], event)
         previous = event["artifact_hash"]
 
 
