@@ -1,0 +1,45 @@
+{
+  "failure_id": "F-NS-B1a3-I-MAX-DECOUPLING-NONADDITIVE-CURRENCY",
+  "atom_id": "NS-B1a3",
+  "candidate_id": "NS-B1a3-C001-I-PROFILE-MAX-DECOUPLING",
+  "context_packet_hash": "sha256:cf40b3c12f1c0b699a994d00c3242e75218e23361bc9579bd17353d64fa58a6e",
+  "research_trace_event_id": "NS-B1a3-E10",
+  "method_family": "scalar-I minimal critical element / profile compactness",
+  "failure_mode": "finite local-supremum Type-I functional is asymptotically max-decoupled under large spatial profile separation",
+  "residual_signature": [
+    "scalar I does not impose a strict additive/subadditive penalty on separated profile multiplicity",
+    "PDE-specific no-dichotomy or additional global critical topology remains required"
+  ],
+  "broken_assumptions": [
+    "scale invariance alone is enough for critical-element transfer",
+    "minimizing scalar I automatically excludes spatial dichotomy"
+  ],
+  "scope_conditions": [
+    "smooth compactly supported divergence-free spacetime test packets",
+    "large spatial translation separation",
+    "q=0 functional calibration",
+    "no claim about actual Navier-Stokes superposition or ancient solutions"
+  ],
+  "competing_diagnoses": [
+    "critical-element route itself is impossible",
+    "only the scalar I currency lacks no-dichotomy information",
+    "actual PDE pressure/evolution may restore no-splitting",
+    "a different global critical or coherence coordinate may restore compactness"
+  ],
+  "selected_diagnosis": "only the scalar I currency lacks a strict profile-multiplicity penalty; PDE-specific and richer-topology routes remain live",
+  "diagnosis_status": "SUPPORTED",
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3_C001_I_PROFILE_MAX_DECOUPLING_20260811.md",
+    "research/real_math/millennium/navier_stokes/08_reviews/NS-B1a3_C001_RESULT_REVIEW_20260811.md",
+    "research/real_math/millennium/navier_stokes/09_trace/NS-B1a3_C001_TRACE_CONTINUATION_20260811.json"
+  ],
+  "falsifier_or_attempt": "two fixed compact divergence-free spacetime packets separated by L; classify cylinders by one-support versus both-support intersection",
+  "observed_result": "I(v1+T_L v2,0) tends to max(I(v1,0),I(v2,0)); both-support cylinders contribute only O(L^-1)+O(L^-2)",
+  "artifact_hash": "sha256:83537ea4b4b8918183b1071d9771000248b2db937ca93de3aaae4a0126bfc18a",
+  "timestamp": "2026-08-11T13:08:00+00:00",
+  "local_repair_attempts": [
+    "retain critical-element route only with an additional global critical/tightness coordinate or PDE-specific no-splitting theorem",
+    "retain vorticity-direction coherence/geometric depletion",
+    "retain alternative source-valid Liouville triggers"
+  ]
+}
