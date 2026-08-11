@@ -36,12 +36,26 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["lesson_id", "mathematical_content", "authority", "promotion"],
+        "required": ["lesson_id", "mathematical_content", "authority", "promotion", "evidence"],
         "properties": {
           "lesson_id": {"type": "string", "minLength": 1},
           "mathematical_content": {"type": "string", "minLength": 1},
           "authority": {"enum": ["VERIFIED_BOUNDED_COUNTEREXAMPLE", "DESK_CHECK_ONLY", "RETROSPECTIVE_TARGET_EXPOSED_EXACT_REPLAY", "PROPOSAL_ONLY_MECHANISM_DIAGNOSIS", "CONDITIONAL_DESK_CHECK_ONLY"]},
-          "promotion": {"enum": ["BOUNDED_FAILURE_EXPERIENCE_ELIGIBLE", "QUARANTINED_NOT_CANONICAL"]}
+          "promotion": {"enum": ["BOUNDED_FAILURE_EXPERIENCE_ELIGIBLE", "QUARANTINED_NOT_CANONICAL"]},
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["path", "raw_sha256", "artifact_hash"],
+              "properties": {
+                "path": {"type": "string", "minLength": 1},
+                "raw_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+                "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+              }
+            }
+          }
         }
       }
     },

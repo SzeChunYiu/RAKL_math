@@ -97,6 +97,27 @@ def test_pnp_experience_boundary_keeps_only_mathematical_lessons_in_math_memory(
     assert by_lesson["C034B-FINITE-CEILING-OVERGENERALIZATION"]["authority"] == (
         "RETROSPECTIVE_TARGET_EXPOSED_EXACT_REPLAY"
     )
+    for lesson in boundary["retained_mathematical_lessons"]:
+        for evidence in lesson["evidence"]:
+            evidence_path = ROOT / evidence["path"]
+            raw = evidence_path.read_bytes()
+            assert evidence["raw_sha256"] == "sha256:" + hashlib.sha256(raw).hexdigest()
+            evidence_value = json.loads(raw)
+            assert evidence["artifact_hash"] == evidence_value["artifact_hash"]
+
+    c034b_evidence = by_lesson["C034B-FINITE-CEILING-OVERGENERALIZATION"][
+        "evidence"
+    ][0]
+    c034b_receipt = _load(ROOT / c034b_evidence["path"])
+    assert c034b_receipt["claim_update"] == {
+        "v1_receipt_status": "SUPERSEDED_BY_V2_CORRECTION_FAILED_HISTORY_RETAINED",
+        "reconstructed_finite_lp_status": (
+            "RETROSPECTIVE_EXACT_REPLAY_PASS_SOURCE_AND_CHRONOLOGY_BOUND"
+        ),
+        "reported_external_certificate_status": "STILL_MISSING_NOT_REPRODUCED",
+        "reported_external_support_counts_status": "UNVERIFIED_21_PRIMAL_24_DUAL",
+        "root_status": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE",
+    }
     assert operational_ids == {
         "F-C034-PROCESS-GATE-DELAY",
         "F-C035-BATCH-WORKER-HANG",
