@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 
 import jsonschema
+import rakl
 
 from rakl.math_context import (
     ContextGateVerdict,
@@ -31,7 +32,8 @@ from rakl.research_trace import (
     audit_pre_candidate_trace,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
+FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
 BASE = ROOT / "research/real_math/millennium/hodge_conjecture"
 
 
@@ -98,11 +100,17 @@ def test_hm1a_strict_packet_passes_current_pre_candidate_gates() -> None:
     memory_raw = _load("07_memory/HM1a_RESEARCH_MEMORY_REVIEW_20260811.json")
 
     jsonschema.Draft202012Validator(
-        json.loads((ROOT / "schemas/research-tool-inventory.schema.json").read_text()),
+        json.loads(
+            (FRAMEWORK_ROOT / "schemas/research-tool-inventory.schema.json").read_text()
+        ),
         format_checker=jsonschema.FormatChecker(),
     ).validate(tools_raw)
     jsonschema.Draft202012Validator(
-        json.loads((ROOT / "schemas/failure-experience-lattice.schema.json").read_text()),
+        json.loads(
+            (
+                FRAMEWORK_ROOT / "schemas/failure-experience-lattice.schema.json"
+            ).read_text()
+        ),
         format_checker=jsonschema.FormatChecker(),
     ).validate(failures_raw)
 

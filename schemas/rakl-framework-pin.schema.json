@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/rakl-framework-pin.schema.json",
+  "title": "RAKL framework pin",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "repository",
+    "commit",
+    "pinned_at",
+    "authority",
+    "update_policy"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "repository": {"const": "https://github.com/SzeChunYiu/RAKL.git"},
+    "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "pinned_at": {"type": "string", "format": "date"},
+    "authority": {"type": "string", "minLength": 1},
+    "update_policy": {"type": "string", "minLength": 1}
+  }
+}
+
