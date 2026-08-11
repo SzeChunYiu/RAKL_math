@@ -1,0 +1,56 @@
+atom_id: XM-ROOT-BRIDGE-REUSE-002
+parent_atom_id: XM-ROOT-BRIDGE-001
+kind: cross_problem_reuse_audit
+status: VERIFIED_SCOPED_REUSE
+question: >-
+  Does the merged BSD-A1a1 use of T-XM-ROOT-BRIDGE-STABILITY-AUDIT satisfy
+  the registered DifferenceWitness, applicability, target-falsifier, and
+  route-pruning obligations strongly enough to justify conditional reuse?
+source_tool_id: T-XM-ROOT-BRIDGE-STABILITY-AUDIT
+source_target:
+  problem: Yang-Mills existence and mass gap
+  atom: YM-S1
+  mechanism: cutoff/physical-normalization preservation
+second_target:
+  problem: Birch and Swinnerton-Dyer
+  atom: BSD-A1a1-THETA-ORDER-COMPARISON
+  mechanism: complex-s to anticyclotomic-T exact-order preservation
+  reuse_id: BSD-A1a1-XM001-ROOT-BRIDGE-REUSE
+result:
+  verdict: SUCCESSFUL_SCOPED_SECOND_DOMAIN_REUSE
+  authority_before: VERIFIED_LOCAL
+  authority_after: CONDITIONALLY_REUSABLE
+  proof_authority: NONE
+  novelty_authority: NONE
+  millennium_root_authority: NONE
+  effects:
+    - split BSD-A1a-KATO-NONVANISHING-BRIDGE into theta-order and localization/rank residuals
+    - stopped downstream theorem invention before an upstream representation-faithfulness bridge was identified
+  non_guarantees:
+    - no literal source mathematics transfers across domains
+    - no universal local-to-global obstruction is asserted
+    - no desired BSD theta-order comparison is disproved
+    - no Yang-Mills, BSD, or other Millennium root status changes
+expertise_chunk_candidate:
+  chunk_id: E-XM-ROOT-CRITICAL-COORDINATE-AUDIT-001
+  maturity: CANDIDATE_NEEDS_SURFACE_SHIFTED_TRANSFER_TEST
+  deep_cues:
+    - valid local/surrogate coordinate plus a distinct next root-critical coordinate
+    - unproved lift/limit/normalization/realization/completeness/representation-preservation map
+    - search effort accumulating downstream of the missing bridge
+  next_test: >-
+    On a third mathematically different lane, test prompt-independent retrieval from
+    deep structural cues before broad archive rereading, then run a fresh DifferenceWitness
+    and target-specific falsifier.
+affected_problem_dags:
+  - research/real_math/millennium/birch_swinnerton_dyer/02_problem_dag/open_obligations.yaml
+  - research/real_math/millennium/yang_mills/02_problem_dag
+cross_memory:
+  promoted_inventory: research/real_math/millennium/cross_problem/07_memory/XM002_TOOL_INVENTORY_PROMOTION_20260811.json
+  audit: research/real_math/millennium/cross_problem/04_candidates/XM002_second_domain_reuse_audit.md
+  review: research/real_math/millennium/cross_problem/08_reviews/XM002_EXPERT_REUSE_REVIEW_20260811.md
+  trace: research/real_math/millennium/cross_problem/09_trace/XM002_REUSE_TRACE_20260811.json
+framework_feedback:
+  issue: SzeChunYiu/RAKL#116
+  authority: FRAMEWORK_DEFECT_REPORT_ONLY
+next_atom: XM-ROOT-BRIDGE-TRANSFER-003
