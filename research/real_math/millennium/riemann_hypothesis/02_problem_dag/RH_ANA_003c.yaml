@@ -1,0 +1,53 @@
+atom_id: RH-ANA-003c
+parent_atom_id: RH-ANA-003b
+root_issue: 3
+status: CONTEXT_REQUIRED
+root_authority: NONE
+
+question: >-
+  Construct or source-bind a decomposition of Coffey's S_Lambda(n), or an
+  equivalent finite-place object, into a local prime/kernel component and an
+  explicit root-sensitive remainder such that the proposed local estimate has
+  a DifferenceWitness establishing strictly weaker-than-RH strength.
+
+opened_by:
+  outcome: PARTIAL_SUCCESS_DECOMPOSITION_PRUNING
+  episode_id: EP-RH-ANA-003b-ROOT-STRENGTH-AUDIT-20260811-R3
+  diagnosis_id: D-RH-ANA-003b-ROOT-STRENGTH-COLLAPSE
+  obstruction_id: O-RH-ANA-003b-NONCIRCULAR-PRIME-DECOMPOSITION
+  failure_ids:
+    - F-RH-ANA-003b-WHOLE-SLAMBDA-SUBEXP-ROOT-STRENGTH
+    - F-RH-ANA-003b-SLAMBDA-BOUND-AS-SUPPORT-LEMMA
+
+known_boundary:
+  - Coffey's identities give lambda_n = S_Lambda(n) + (n/2) log n + O(n).
+  - Lagarias records polynomial Li growth under RH and an exponential-size incomplete-Li alternative when RH fails, including the Riemann-zeta case.
+  - Therefore whole-component S_Lambda(n)=exp(o(n)) is root-strength, not a safely weaker supporting lemma.
+  - The previous magnitude-only route was already pruned because absolute majorization destroys cancellation.
+  - No theorem has been proved for a strictly smaller prime/kernel component.
+
+candidate_generation_gate:
+  allowed: false
+  reason: >-
+    Freeze a fresh MathContextFiber, source-bind the proposed decomposition and
+    remainder, retrieve relevant success/failure experience, run the six-role
+    same-context expert cell, preserve a hash-chained pre-candidate trace, and
+    establish a lemma-strength DifferenceWitness before proposing any estimate.
+
+required_difference_witness:
+  local_target_must_not_alone_imply:
+    - whole S_Lambda(n)=exp(o(n))
+    - lambda_n=exp(o(n))
+    - lambda_n>=0 for all n
+    - exclusion of every off-critical-line zeta zero
+    - the exact RH root
+  root_sensitive_remainder: MUST_REMAIN_EXPLICIT
+
+next_pre_candidate_discriminators:
+  - Re-express the Laguerre kernel against prime powers / integer background without discarding conditional convergence or cancellation.
+  - Identify a source-proved truncation, smoothing, dyadic, Mellin, or explicit-formula split whose local bound is genuinely sub-root.
+  - Test whether the remainder re-imports the complete zero set or an RH-equivalent estimate.
+  - Reject finite-prefix, termwise-absolute, zero-density-only, and whole-component subexponential variants before source expansion.
+  - Query cross-Millennium memory only at operation level under a fresh DifferenceWitness.
+
+authority: STRICT_CHILD_RESIDUAL_ONLY / NO_SUCCESSOR_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE
