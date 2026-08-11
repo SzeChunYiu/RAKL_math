@@ -1,0 +1,152 @@
+{
+  "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "object_context": "Child of BSD-A1a-KATO-NONVANISHING-BRIDGE. For an elliptic curve E/Q with exact complex analytic rank two, determine whether current source-bound theorems can force ord_T Theta_{f/K}=2 for an admissible anticyclotomic theta element without assuming positive Mordell-Weil rank, Selmer dimension two, BSD, or an Iwasawa/p-adic BSD statement of equivalent arithmetic strength.",
+  "structural_coordinates": [
+    "the root input ord_{s=1} L(E,s)=2 is a vanishing-order statement in the complex spectral variable s",
+    "Theta_{f/K}(T) is a one-variable anticyclotomic p-adic theta element with T defined by a topological generator of Gamma_infinity; ord_T is a character-deformation order at T=0",
+    "Castella-Hsieh Theorem 2.3 interpolates central values L(f/K tensor chi epsilon_zeta,1) at finite-order anticyclotomic characters zeta, so T varies character and not the complex variable s",
+    "under the Castella-Hsieh hypotheses L(E/K,1)=0 implies only ord_T Theta_{f/K}>0 from interpolation; the source does not infer ord_T=2 from complex analytic rank two",
+    "Castella-Hsieh Theorem B requires ord_T Theta_{f/K}=2 and rank_Z E(Q)>0 to conclude generalized-Kato nonvanishing, so it cannot itself provide an analytic-rank-two-to-arithmetic-rank bridge without circularity",
+    "the triple-product p-adic L-function factorization isolates Theta_{f/K} times explicitly nonzero auxiliary factors once auxiliary nonvanishing hypotheses hold",
+    "the Coleman/explicit-reciprocity law transports Theta_{f/K} into the localization of the big diagonal-cycle/generalized-Kato system, but nonzero transport still depends on the exact theta leading term and local map",
+    "the root-bridge stability tool is relevant only as a diagnostic: a root-critical coordinate must be shown to survive a change of representation rather than assumed to do so",
+    "the target is a theorem comparing two different deformation directions, not a numerical verification of theta order on selected rank-two curves",
+    "any admissible K, p, chi selection theorem must be separated from the theta-order comparison itself"
+  ],
+  "equivalent_formulations": [
+    "find a theorem whose hypotheses follow from exact complex analytic rank two plus explicit admissibility conditions and whose conclusion is ord_T Theta_{f/K}=2",
+    "identify an exact comparison formula linking the first nonzero complex s-derivative of L(E,s) at order two to the first nonzero anticyclotomic T-coefficient of Theta_{f/K}",
+    "prove that the existing interpolation formula plus known nonvanishing/functional-equation input determines only positive T-order and isolate the extra theorem needed for exact T-order two",
+    "classify any Iwasawa-main-conjecture or p-adic-BSD input that determines ord_T Theta by whether it imports Selmer/Mordell-Weil information equivalent to the desired BSD bridge"
+  ],
+  "solved_analogues": [
+    "rank one Gross-Zagier: a complex central derivative is related to the Neron-Tate height of a canonical Heegner point under exact hypotheses",
+    "finite-order interpolation of anticyclotomic theta elements: Castella-Hsieh Theorem 2.3 identifies theta values at anticyclotomic characters with central Rankin-Selberg values"
+  ],
+  "near_solved_analogues": [
+    "Castella-Hsieh Theorem 5.3 gives the leading theta term against anticyclotomic derived p-adic heights once r=ord_T Theta is known",
+    "Castella-Hsieh Theorem B converts ord_T Theta=2 into generalized-Kato nonvanishing only after assuming positive Mordell-Weil rank",
+    "Castella 2023/2026 relates generalized-Kato nonvanishing to two-dimensional p-adic Selmer structure and shows the converse requires nonzero localization"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Castella-Hsieh anticyclotomic interpolation theorem",
+      "method": "evaluate a p-adic theta element at finite-order anticyclotomic characters and identify the squared value with a normalized complex central Rankin-Selberg value",
+      "shared_structure": [
+        "both sides encode central L-value information for the same modular/anticyclotomic family",
+        "the trivial character detects central vanishing"
+      ],
+      "required_assumptions": [
+        "p and the relevant levels/discriminants satisfy the prime-to conditions",
+        "p splits in K",
+        "N^- is a squarefree product of an odd number of primes",
+        "the stated residual ramification condition",
+        "the exact ring-class character setup"
+      ],
+      "disanalogies": [
+        "T parametrizes anticyclotomic characters whereas s is the complex L-function variable",
+        "value interpolation at finite-order characters does not by itself identify derivatives in the T direction",
+        "complex analytic rank two for L(E,s) is not the same datum as character-direction order for Theta_{f/K}"
+      ],
+      "repair_question": "What additional source theorem identifies the exact T-adic leading order from the complex s-adic order, rather than only showing Theta(0)=0?",
+      "source_anchors": [
+        "Castella-Hsieh, Forum Math. Sigma 10 (2022), Theorem 2.3, DOI 10.1017/fms.2021.85"
+      ]
+    },
+    {
+      "source_context": "Castella-Hsieh generalized-Kato nonvanishing criterion",
+      "method": "use ord_T Theta_{f/K}=2 together with derived p-adic heights and localization to force a nonzero generalized Kato class",
+      "shared_structure": [
+        "theta leading order is the p-adic analytic discriminator immediately upstream of generalized-Kato nonvanishing",
+        "derived heights encode the first nonzero anticyclotomic term"
+      ],
+      "required_assumptions": [
+        "all Theorem A hypotheses",
+        "rank_Z E(Q)>0 for Theorem B",
+        "ord_T Theta_{f/K}=2"
+      ],
+      "disanalogies": [
+        "positive Mordell-Weil rank is downstream arithmetic information not supplied by the bare analytic-rank-two premise",
+        "the criterion consumes the theta-order statement rather than proving it",
+        "the p-adic derived-height output is not the complex BSD leading term"
+      ],
+      "repair_question": "Can theta order two be proved before and independently of positive Mordell-Weil rank/localization, or must this route remain conditional?",
+      "source_anchors": [
+        "Castella-Hsieh, Forum Math. Sigma 10 (2022), Theorem B and Theorem 5.3, DOI 10.1017/fms.2021.85"
+      ]
+    },
+    {
+      "source_context": "RAKL cross-Millennium root-bridge stability audit",
+      "method": "separate a valid surrogate coordinate from the root coordinate and demand an explicit preservation theorem before transfer",
+      "shared_structure": [
+        "a locally valid representation carries only part of the root-critical information",
+        "the target conclusion depends on a nontrivial bridge between differently normalized or parameterized objects"
+      ],
+      "required_assumptions": [
+        "the source and target coordinates are explicitly defined",
+        "a target-specific DifferenceWitness is supplied",
+        "the calibration is treated as an inference-form audit rather than a theorem about the target theory"
+      ],
+      "disanalogies": [
+        "the source failure concerned continuum normalization in Yang-Mills whereas the BSD target concerns different analytic deformation variables",
+        "no literal limiting sequence or spectral-gap argument transfers",
+        "the cross-problem tool supplies only an audit procedure"
+      ],
+      "repair_question": "Does the cited BSD theorem actually preserve exact vanishing order across the s-to-T representation change, and if not what is the weakest missing comparison statement?",
+      "source_anchors": [
+        "research/real_math/millennium/cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json",
+        "research/real_math/millennium/cross_problem/07_memory/XM001_FAILURE_EXPERIENCE_DELTA_20260811.json"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "ord_{s=1} and ord_T are derivatives/orders in different variables and cannot be identified by notation",
+    "finite-character interpolation constrains function values on a p-adic character family; it does not automatically identify the T-adic Taylor order at the trivial character",
+    "Theorem B assumes positive rational rank and therefore cannot be used as an unconditional analytic-to-arithmetic bridge",
+    "a numerical computation of ord_T Theta=2 for curves already known to have algebraic rank two is calibration, not a proof from analytic rank two",
+    "an Iwasawa main conjecture can determine theta/Selmer characteristic data only at the logical strength actually proved and may import arithmetic information independent of complex analytic rank",
+    "auxiliary nonvanishing selection and the theta-order comparison are separate obligations"
+  ],
+  "source_anchors": [
+    "Clay Mathematics Institute, official Birch and Swinnerton-Dyer problem description by Andrew Wiles",
+    "Castella-Hsieh, Forum Math. Sigma 10 (2022), Theorems 2.3, B, 5.3 and Appendix, DOI 10.1017/fms.2021.85",
+    "Castella, Nonvanishing of generalised Kato classes and Iwasawa main conjectures, arXiv:2312.01481",
+    "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a_COMPLEX_TO_KATO_IMPLICATION_GRAPH_20260811.md",
+    "RAKL framework main observed at 55d4cb0a83f271d3263fbe48f99b173119c732d2"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "multivariable-calibration / tomography",
+      "source_situation": "Knowing how strongly a signal vanishes when scanned along one coordinate does not determine its vanishing order along a transverse coordinate unless a calibrated relation between the scan directions is available.",
+      "common_abstraction": [
+        "one object is observed through two deformation coordinates",
+        "order-of-vanishing is coordinate-direction specific",
+        "a transfer theorem is required to preserve exact order across coordinates"
+      ],
+      "source_to_target_mapping": [
+        "first scan direction -> complex variable s near 1",
+        "second scan direction -> anticyclotomic character coordinate T near 0",
+        "signal -> the relevant complex/p-adic L-data",
+        "calibration relation -> an exact comparison/reciprocity theorem controlling leading terms"
+      ],
+      "shared_constraints": [
+        "zero value at the common base point is weaker than equality of vanishing order",
+        "higher-order information can be lost under projection to values",
+        "a directional comparison must be proved rather than inferred from shared central values"
+      ],
+      "disanalogies": [
+        "the arithmetic objects are not a single smooth real multivariable function",
+        "p-adic and complex analytic geometries differ",
+        "auxiliary characters and local Euler factors enter the arithmetic interpolation"
+      ],
+      "proposed_principle": "Treat complex s-order and anticyclotomic T-order as independent coordinates until a source theorem binds their leading terms.",
+      "validation_obligation": "For every proposed s-to-T bridge, state the exact theorem, its domain and hypotheses, the coefficient/leading-term identity it proves, and a counterexample or kernel mode showing what would fail without that theorem.",
+      "provenance_note": "Proposal-only structural analogy; no BSD theorem authority."
+    }
+  ],
+  "analogy_scan_notes": "The exact interpolation formula and the source's own conclusion r>0 were contrasted with Theorem B's stronger input r=2. The retained analogy is used only to prevent coordinate conflation. A generic bivariate calibration such as F(s,T)=(s-1)^2+T^4 shows that order two along s does not determine order two along T without extra structure; this is an inference-form calibration, not a model of the arithmetic L-functions.",
+  "frozen_at": "2026-08-11T07:57:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d"
+}
