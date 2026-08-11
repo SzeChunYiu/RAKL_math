@@ -1,0 +1,83 @@
+{
+  "schema_version": "rakl-cycle-metrics-v1-proposal-shadow",
+  "cycle_id": "NS-B1a3-I-PROFILE-DECOUPLING-20260811",
+  "authority": "PROPOSAL_SHADOW_TELEMETRY_ONLY",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "current_main_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "method_version": {"value":"CANNOT_MEASURE","reason":"current RAKL main does not expose a canonical RAKL_VERSION.json method-state manifest"},
+    "application_framework_pin_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "pin_status": "FRESH_EXACT_CURRENT_MAIN",
+    "authority_hardening_observed": "PR #121 merged; application final-integration receipt reports 307 tests passed on exact pin"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "main_sha_at_cycle_start": "6557b1b25fa839fe71aba8047c958d5da892edd8",
+    "research_branch": "research/ns-b1a3-profile-decoupling-20260811",
+    "pre_cycle_branch_sha": "6557b1b25fa839fe71aba8047c958d5da892edd8",
+    "scientific_result_head_before_metrics_receipt": "36e6273831f35d322d2e5494999871c64e8babe5"
+  },
+  "state": {
+    "pre_state_fingerprint": {"value":"CANNOT_MEASURE","reason":"this RAKL_math lane preserves proposal/shadow v3 artifacts but does not materialize one canonical RAKLV3State object"},
+    "post_state_fingerprint": {"value":"CANNOT_MEASURE","reason":"same as pre-state; Git commit identity is reported separately and is not substituted for a v3 state fingerprint"},
+    "atom_id": "NS-B1a3",
+    "fibre_snapshot_hash": "sha256:8f5eae16c60c19e5b61c7d99530ef8be3cf0db8d4b3a88ea819de63389737a13",
+    "pre_candidate_final_event_hash": "sha256:a6897f9451401e01df187982edd5859e8db41e0c4eab5801af497649ce7dd37b",
+    "post_result_final_event_hash": "sha256:55c3ef62a39b258f752b9605648f6c8dfb63f324aa13de04bc227968a0414bf0"
+  },
+  "process_surfaces_invoked": ["decomposition","mathematical_context_translation","equivalence_similarity","gap_discovery","experiment_query_selection","memory","review","saturation_stopping","generator_transport"],
+  "memory": {
+    "relevant_tools_retrieved_count": 1,
+    "relevant_tool_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+    "selected_tool_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+    "relevant_failures_retrieved_count": 5,
+    "relevant_failure_ids": ["F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER","F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION","F-NS-B1a-C001-PRESSURE-SUMMABILITY","SOURCE-GAP-2606.07875-TERMINAL-SCALE","F-C024-FRACTIONAL-INTEGRALITY-GAP"],
+    "selected_failure_ids": ["F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER","F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION","F-NS-B1a-C001-PRESSURE-SUMMABILITY","SOURCE-GAP-2606.07875-TERMINAL-SCALE"],
+    "rejected_or_deferred_items": ["repeat finite-energy core count","repeat normalized shell ledger","repeat raw pressure-tail divergence","import flux-hull terminality shortcut","apply Kenig-Koch/Gallagher-Koch-Planchon critical-element machinery unchanged without a target profile-geometry witness"]
+  },
+  "outcome": {
+    "status": "PARTIAL_SUCCESS",
+    "category": "ROUTE_PRUNING_CALIBRATION",
+    "result_id": "NS-B1a3-C001-I-PROFILE-MAX-DECOUPLING",
+    "result_summary": "For two fixed smooth compactly supported divergence-free spacetime packets with q=0, spatially separating the second by L gives I(v1+T_L v2,0) -> max(I(v1,0),I(v2,0)); both-support cylinders contribute only O(L^-1)+O(L^-2). Scalar finite-I control therefore supplies no strict asymptotic profile-multiplicity penalty by itself.",
+    "novelty_class": "TRANSFER_NOVEL",
+    "novel_structure_rank": 0,
+    "literature_novelty_claim": false
+  },
+  "residual": {
+    "before": ["critical-element compactness remained a candidate scale-symmetry breaker","unknown whether finite I itself supplies no-dichotomy/profile-counting geometry"],
+    "after": ["scalar-I minimality pruned as an automatic no-dichotomy mechanism","NS-B1a4: require PDE-specific profile no-splitting or an additional global critical/coherence coordinate","vorticity geometry, pressure/evolution interaction and alternative Liouville routes remain live"]
+  },
+  "retained_semantic_novelty": {"KNOWLEDGE":1,"OPERATOR":0,"EXPERIENCE_PATTERN":1,"OBSTRUCTION":1,"RELATION":1,"PATH":1,"META_METHOD":0},
+  "saturation": {"axes_reopened":["OBSTRUCTION","RELATION","PATH"],"axes_flattened":[],"absolute_saturation_claim":false},
+  "resources": {
+    "model_input_tokens":{"value":"CANNOT_MEASURE","reason":"automation harness does not expose exact per-cycle model-token accounting"},
+    "model_output_tokens":{"value":"CANNOT_MEASURE","reason":"automation harness does not expose exact per-cycle model-token accounting"},
+    "context_tokens":{"value":"CANNOT_MEASURE","reason":"automation harness does not expose compiled-context token count"},
+    "external_primary_source_retrieval_calls_observed":3,
+    "github_connector_calls":{"value":"CANNOT_MEASURE","reason":"connector runtime does not expose an aggregate per-cycle counter"},
+    "wall_time_ms":{"value":"CANNOT_MEASURE","reason":"no exact end-to-end research-cycle timer is exposed to the artifact"}
+  },
+  "new_records": {
+    "episode_ids": ["EP-NS-B1a3-I-PROFILE-DECOUPLING-20260811"],
+    "lesson_ids": [],
+    "failure_ids": ["F-NS-B1a3-I-MAX-DECOUPLING-NONADDITIVE-CURRENCY"],
+    "tool_ids": [],
+    "obstruction_or_residual_ids": ["NS-B1a4"],
+    "motif_ids": [],
+    "successful_reuse_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT@NS-B1a3"]
+  },
+  "gates": {
+    "pre_candidate_chronology": "PASS: context -> memory -> expert review -> trace committed before candidate/result",
+    "pre_candidate_exact_head_sha": "a5998e1849fe643148f2d3ecf1f4cad9c5e6e334",
+    "current_result_head_ci": "PENDING_AFTER_WRITE",
+    "independent_review": false,
+    "root_authority": "NONE",
+    "provenance_note": "The q=0 separated packets are a hostile functional calibration and are not represented as Navier-Stokes solutions or as a general impossibility result for concentration compactness."
+  },
+  "rakl_action_attribution": {
+    "did_rakl_change_action": "OBSERVED_ROUTING_CHANGE_NOT_CAUSAL_ATTRIBUTION",
+    "evidence": "The stored B1a1/B1a2 failures removed shell-budget and kinetic-energy currencies; the pressure and source-gap memories prevented two further retries; the root-bridge stability audit converted the next action from theorem invention to an explicit profile-geometry transfer test.",
+    "causal_limit": "No matched model-only, reset, or sham-memory arm was frozen for this exact episode, so Paper-5 causal attribution is not available."
+  }
+}
