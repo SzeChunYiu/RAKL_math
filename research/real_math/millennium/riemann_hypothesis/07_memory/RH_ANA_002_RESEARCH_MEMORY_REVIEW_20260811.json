@@ -1,0 +1,44 @@
+{
+  "target_atom_id": "RH-ANA-002",
+  "target_context_hash": "sha256:e18ec3c2a81fb33d9b3d12c927da9778f899e64fef8edaa067224904df60e796",
+  "tool_inventory_snapshot_hash": "sha256:b955d0dd9e04adbfde0b67eb3aa6af1216bc2afa758854d878a8faaae7dbbdf6",
+  "failure_lattice_snapshot_hash": "sha256:e91dcc2d04ac17296255e84f676e09fd52e1b6c3fc6c2be26d5210461d606a4a",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "finite-place Li residual cancellation and growth classification",
+    "finite Li inequalities -> quantitative zero-free regions",
+    "parameterized Li-type zero-free half-plane criteria",
+    "prime-side regularized coefficient estimates",
+    "graded zero-free-region improvement rather than direct all-n positivity"
+  ],
+  "relevant_tool_ids": ["T-RH-LI-PREFIX-QUARTET-CALIBRATION", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+  "relevant_failure_ids": ["F-RH-ANA-001-FINITE-LI-PREFIX", "F-XM001-POINTWISE-GAP-COLLAPSE"],
+  "selected_tool_ids": ["T-RH-LI-PREFIX-QUARTET-CALIBRATION", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+  "tool_applicability_notes": [
+    "T-RH-LI-PREFIX-QUARTET-CALIBRATION directly applies to any RH-ANA-002 proposal that tries to turn a finite Li horizon into a global certificate. It remains a logic falsifier only and does not model the zeta arithmetic.",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT is reused with an explicit DifferenceWitness: source surrogate=positive finite-cutoff Yang-Mills gap and source root bridge=continuum physical normalization; target surrogate=finite Li/partial prime-side control and target root bridge=all-index positivity / all-zero critical-line placement. Shared abstraction is failure of a local/finite surrogate to preserve the root-critical coordinate. The source mathematics, units, and limit mechanism do not transfer.",
+    "For RH-ANA-002 the root-bridge audit is used first to classify a proposed all-n finite-place growth bound by implication strength. Lagarias' incomplete-Li relation makes a polynomial all-n finite-place bound root-strength, so that target is rejected as a supposedly cheap child lemma before candidate generation."
+  ],
+  "failure_reuse_notes": [
+    "F-RH-ANA-001-FINITE-LI-PREFIX is directly relevant: the missing coordinate is infinite uniformity, so any new finite computation must be translated only into the zero-free region it rigorously licenses.",
+    "F-XM001-POINTWISE-GAP-COLLAPSE transfers only as an audit warning. The RH DifferenceWitness is that the lost coordinate is all-index/global zero control rather than continuum scaling. It cannot block a zeta-specific theorem that explicitly proves the missing uniform bridge."
+  ],
+  "unresolved_warnings": [
+    "The source-derived route classification is not a new theorem or novelty claim.",
+    "Brown's detailed constants/lemmas should not be reused without checking later corrections; this cycle uses only the primary abstract-level finite-prefix/zero-free-region relation.",
+    "The finite-place prime expressions are regularized; absolute-value or termwise sign estimates can destroy the cancellation that defines the coefficient.",
+    "A bound that is uniform for every n may already be equivalent to RH even if written entirely with primes, so implication-strength audit must precede proof search.",
+    "Current explicit zero-free regions near Re(s)=1 provide a partial benchmark, not a path to Re(s)=1/2 by extrapolation."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_TOOL_SNAPSHOT_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_FAILURE_SNAPSHOT_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_001_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_001_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "research/real_math/millennium/cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json",
+    "research/real_math/millennium/cross_problem/07_memory/XM001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_002_CONTEXT_FIBER_20260811.json"
+  ],
+  "artifact_hash": "sha256:b9da64d541d54371e2b8c311ab1c9cc80a16c646b5afd1e6ba2ae5355b8ce8e0"
+}
