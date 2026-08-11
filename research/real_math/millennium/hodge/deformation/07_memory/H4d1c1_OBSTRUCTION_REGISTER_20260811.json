@@ -1,0 +1,29 @@
+{
+  "obstruction_id": "H4d1c1-SOURCE-FAMILY-COMPLETE-LOCAL-ALGEBRAICITY-BRIDGE",
+  "parent_atom_id": "H4d1c",
+  "opened_from_episode_id": "H4d1c-C001-SOURCE-FAMILY-QUANTIFIER-AUDIT",
+  "type": "SOURCE_FAMILY_COMPLETENESS_AND_GLUING",
+  "statement": "Replace negative inference from one fixed witness by an exact admissible source-family interface. Define a coefficient/category-safe family of algebraic-cycle/Chow/K0 representatives realizing α and determine conditions under which Hodge-branch directions or points are reached by some source while preserving enough boundedness/properness/component control to support compatible higher-order lifting. Do not infer one fixed witness, one component, or algebraization without a separate bridge.",
+  "first_order_quantifier_profile": {
+    "fixed_witness_target": "exists w0 such that for every v in T_s0 T there exists a tangent lift at w0",
+    "source_family_directional_target": "for every v in T_s0 T there exists an admissible w_v over s0 and a tangent lift at w_v",
+    "warning": "the first target implies the second; the converse is an unsupported quantifier swap without extra source structure"
+  },
+  "required_subobligations": [
+    "admissible representative category for finite signed rational cycles or a justified rational Chow/K0 replacement",
+    "source-family completeness: no relevant representative/component is silently excluded",
+    "boundedness/quasi-compactness/properness or another mechanism controlling infinitely many source components",
+    "difference between tangent reachability, source-component dominance, and pointwise fiber nonemptiness",
+    "higher-Artin compatible component choice rather than direction-wise unrelated witnesses",
+    "algebraization from formal/class-level data",
+    "monodromy/component switching and singular degeneration"
+  ],
+  "positive_controls": [
+    "Kloosterman special complete-intersection hypersurface family: explicit fixed flag-Hilbert geometry",
+    "Bloch–Esnault–Kerz: rational K0 formal deformation under stated Chow–Künneth hypotheses, with algebraization explicitly separate"
+  ],
+  "falsifier": "A proposed closure fails if it only proves a detector vanishes, only handles one arbitrary fixed witness and then draws source-complete negative conclusions, loses rational signed coefficients, uses an infinite union of source images without a boundedness/gluing argument, or treats formal K0 lifting as algebraization.",
+  "authority": "OPEN_RESIDUAL_ONLY / PROPOSAL_SHADOW",
+  "timestamp": "2026-08-11T21:37:32Z",
+  "artifact_hash": "sha256:d559dfd2516d28d2770148f888927a4d8a4d6a1ac0b77c118ee042bf82f71832"
+}
