@@ -1,0 +1,156 @@
+{
+  "atom_id": "RH-ANA-003",
+  "object_context": "Strict analytic child of RH-ANA-002. The active object is the exact finite-prime contribution S_f(n) in the arithmetic Li-coefficient identity λ_n=S_∞(n)-S_f(n)+1. The cycle asks whether currently unconditional prime-number-theorem information yields a genuinely uniform-in-n one-sided control of the prime/archimedean cancellation, without substituting an RH-equivalent zero-location, Li-growth, Weil-positivity, or finite-prefix assumption.",
+  "structural_coordinates": [
+    "all-index quantifier: any useful bridge must control every positive integer n rather than a computed prefix",
+    "Lagarias/Bombieri-Lagarias arithmetic formula is exact but highly regularized and cancellation-sensitive",
+    "for the trivial representation S_f(n)=Σ_{j=1}^n(-1)^{j-1} C(n,j)η_{j-1}, and the alternating signs cancel those in the prime-sum definition of η_{j-1}",
+    "the resulting prime weight is K_n(t)=Σ_{j=1}^n C(n,j)t^{j-1}/(j-1)!=L_{n-1}^{(1)}(-t), with positive coefficients for t≥0",
+    "the regularizing counterterm is L_n(-log N)-1=∫_1^N K_n(log x)dx/x",
+    "with ψ(x)=Σ_{m≤x}Λ(m) and E(x)=ψ(x)-x, the finite-place term is an exact regularized Stieltjes transform of dE",
+    "for fixed n, unconditional PNT error bounds are sufficient to kill the upper boundary term in integration by parts, yielding a signed transform of E(e^t)/e^t against W_n(t)=K_n(t)-K_n'(t)",
+    "current zero-free/zero-density technology supplies strong two-sided magnitude bounds for E(x), but a proof of Li positivity requires a one-sided or sufficiently small uniform-in-n transform bound",
+    "triangle-inequality use of a symmetric pointwise PNT-error envelope discards the arithmetic sign/correlation structure that may be load-bearing for the growing-degree kernels",
+    "numerical small-n behavior is calibration only and does not close the all-index residual",
+    "the exact transform is a localization of the existing cancellation obstruction, not a theorem that no explicit-formula/zero-density route can work"
+  ],
+  "equivalent_formulations": [
+    "RH: every nontrivial zero ρ of ζ has Re(ρ)=1/2",
+    "Li criterion: λ_n≥0 for every n≥1",
+    "arithmetic Li criterion: S_f(n)≤S_∞(n)+1 for every n≥1",
+    "prime-error transform form: after exact regularization and fixed-n integration by parts, the signed transform of E(e^t)/e^t against W_n(t) must satisfy the corresponding all-n upper bound"
+  ],
+  "solved_analogues": [
+    "fixed-degree Stieltjes transforms under the prime number theorem: for each fixed polynomial kernel, standard PNT error decay controls the boundary at infinity and gives a convergent error transform",
+    "exact background-subtraction identities in quadrature/explicit-formula settings, where a discrete measure minus its continuous reference measure is tested against a known kernel"
+  ],
+  "near_solved_analogues": [
+    "Bombieri-Lagarias/Lagarias arithmetic formulas for Li coefficients, which expose finite and archimedean places exactly but do not supply unconditional all-index positivity",
+    "modern zero-density plus zero-free-region results for ψ(x)-x, which give near-optimal pointwise magnitude decay but do not by themselves encode the signed correlation with the n-dependent Li kernel",
+    "Lagarias-Voros growth-class criteria, which replace sign-by-sign control with an all-index asymptotic exclusion but still require a root-strength uniform estimate"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Lagarias arithmetic formula for the trivial representation combined with the η_j prime-sum regularization",
+      "method": "collapse the binomially weighted Laurent coefficients before bounding them, exposing one exact Laguerre kernel and its continuous counterterm rather than bounding η_j term by term",
+      "shared_structure": [
+        "same zeta function and same λ_n",
+        "same regularization and all-index quantifier",
+        "finite-place information becomes a single signed linear functional"
+      ],
+      "required_assumptions": [
+        "retain Lagarias' exact sign/index conventions",
+        "justify the fixed-n boundary limit using an unconditional PNT estimate",
+        "do not interchange n→∞ with the N→∞ regularization without a separate theorem"
+      ],
+      "disanalogies": [
+        "an algebraic kernel re-expression does not improve the mathematical authority of λ_n",
+        "large-n uniformity remains completely open",
+        "a positive kernel does not make the signed prime-minus-background transform positive"
+      ],
+      "repair_question": "Can the signed PNT-error transform against W_n be bounded one-sidedly and uniformly in n at a scale below S_∞(n)-n+1 using information strictly weaker than RH?",
+      "source_anchors": [
+        "Jeffrey C. Lagarias, arXiv:math/0404394v4, §4, equations (4.11)-(4.13) and η_j definition"
+      ]
+    },
+    {
+      "source_context": "Modern zero-free-region plus zero-density estimates for the prime number theorem",
+      "method": "translate the best available pointwise bound on |ψ(x)-x|/x into a registered majorant for the exact Li error-transform and test whether sign-blind domination can plausibly meet the all-n Li scale before inventing a stronger theorem",
+      "shared_structure": [
+        "same Chebyshev ψ(x) entering the exact finite-prime term",
+        "unconditional estimates with explicit asymptotic decay",
+        "candidate bound can be checked without assuming RH"
+      ],
+      "required_assumptions": [
+        "use a current primary-source PNT bound",
+        "separate pointwise magnitude information from signed/correlation information",
+        "treat any numerical majorant comparison as calibration unless an analytic uniform theorem is supplied"
+      ],
+      "disanalogies": [
+        "PNT estimates are optimized for x→∞ at fixed observable, whereas W_n changes with n",
+        "a symmetric error envelope contains no phase information",
+        "improving constants in a magnitude bound need not repair the growing-kernel cancellation problem"
+      ],
+      "repair_question": "Does the induced absolute-majorant bound remain below the archimedean Li scale uniformly in n; if not, what additional signed/correlation statistic of E is minimally required?",
+      "source_anchors": [
+        "Daniel R. Johnston, arXiv:2411.13791",
+        "Chiara Bellotti, arXiv:2508.02041"
+      ]
+    },
+    {
+      "source_context": "High-order filtering / background subtraction in numerical analysis and signal processing",
+      "method": "treat a growing-order kernel acting on a signed residual as a conditioning problem: separate norm/magnitude control from phase/correlation control and stress-test a pointwise envelope with adversarial sign alignment",
+      "shared_structure": [
+        "discrete signal minus reference background",
+        "growing-order linear functional",
+        "pointwise amplitude bound can lose cancellation"
+      ],
+      "required_assumptions": [
+        "analogy is proposal-only",
+        "the adversarial residual is not asserted to be a possible arithmetic ψ(x)-x",
+        "target conclusion must be re-established with zeta-specific constraints"
+      ],
+      "disanalogies": [
+        "the PNT error is a highly structured arithmetic function, not arbitrary bounded noise",
+        "kernel regularization and prime-power jumps have no direct engineering analogue",
+        "adversarial alignment only falsifies a proof strategy that uses the envelope alone"
+      ],
+      "repair_question": "Which zeta-specific constraint beyond |E(x)| is needed to prevent hostile alignment with W_n?",
+      "source_anchors": [
+        "structural analogy only; no theorem authority transferred"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "the exact Laguerre transform is a re-expression of known arithmetic formulas and is not a new RH theorem",
+    "a pointwise PNT error bound is two-sided magnitude information and cannot be silently promoted to a one-sided transform estimate",
+    "hostile envelope-alignment models are method stress tests, not models of actual prime distribution",
+    "finite computations of λ_n, S_f(n), or the transform do not address the all-index quantifier",
+    "the prior Suzuki norm obstruction and the current PNT-error transform obstruction share a faithfulness/cancellation pattern but are mathematically distinct",
+    "an all-n bound as strong as the required Li inequality could itself be RH-equivalent; strict weakness must be audited before any promotion"
+  ],
+  "source_anchors": [
+    "Jeffrey C. Lagarias, Li Coefficients for Automorphic L-Functions, arXiv:math/0404394v4, Ann. Inst. Fourier 57 (2007)",
+    "Daniel R. Johnston, Zero-density estimates and the optimality of the error term in the prime number theorem, arXiv:2411.13791",
+    "Chiara Bellotti, A new zero-density estimate for ζ(s) and the error term in the Prime Number Theorem, arXiv:2508.02041",
+    "research/real_math/millennium/riemann_hypothesis/02_problem_dag/RH_ANA_003.yaml",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_RESEARCH_MEMORY_REVIEW_20260811.json"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "numerical-analysis/signal-processing",
+      "source_situation": "A growing-order filter is applied to a signed residual after subtracting a reference background. A pointwise amplitude envelope can certify convergence for each fixed filter while becoming uninformative about the sign or magnitude of the family as filter order grows.",
+      "common_abstraction": [
+        "signed residual",
+        "growing-order kernel",
+        "background subtraction",
+        "uniform-family control",
+        "cancellation lost under absolute values"
+      ],
+      "source_to_target_mapping": [
+        "residual signal -> E(x)=ψ(x)-x",
+        "filter -> W_n(log x)",
+        "filter order -> Li index n",
+        "background subtraction -> prime sum minus continuous counterterm"
+      ],
+      "shared_constraints": [
+        "fixed-member convergence is weaker than family-uniform control",
+        "absolute-value bounds discard phase/correlation",
+        "the target is a signed scalar functional"
+      ],
+      "disanalogies": [
+        "E is arithmetic and highly constrained rather than arbitrary noise",
+        "the target kernel comes from exact Li regularization",
+        "engineering conditioning estimates carry no RH authority"
+      ],
+      "proposed_principle": "Before spending effort on sharper pointwise PNT constants, test the induced family operator bound and identify whether missing sign/correlation information, rather than magnitude, is the true residual.",
+      "validation_obligation": "Derive the exact target transform from primary-source formulas; use hostile envelope alignment only to falsify envelope-only reasoning; any positive target claim must use zeta-specific evidence and an all-n proof.",
+      "provenance_note": "Proposal-only analogy used to choose a discriminator; it mints no mathematical authority."
+    }
+  ],
+  "analogy_scan_notes": "Scanned fixed-kernel PNT transforms, orthogonal-polynomial kernels, background-subtraction/conditioning, high-order moments, and finite-prefix calibration. Retained only the growing-order filter analogy because it identifies a falsifiable method-level distinction between magnitude information and signed/correlation information.",
+  "frozen_at": "2026-08-11T13:39:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:cf1aba3880a0deef2e0c6f14e5e5a4e51c41cf15db15bce9b4dc3188fa3cbdc9"
+}
