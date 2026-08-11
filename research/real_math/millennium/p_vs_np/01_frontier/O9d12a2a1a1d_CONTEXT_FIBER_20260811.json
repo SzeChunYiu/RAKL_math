@@ -1,0 +1,77 @@
+{
+  "atom_id": "O9d12a2a1a1d",
+  "parent_atom_id": "O9d12a2a1a1b",
+  "status": "OPEN_VERIFICATION_OF_REPRESENTATION_NORMAL_FORM",
+  "root_authority": "NONE",
+  "objective": "Verify a union-gate elimination normal form for finite cyclic discrete-complexity syntactic sequences before any quotient-respecting lower-bound scalar is proposed.",
+  "problem_signature": [
+    "P-vs-NP via explicit graph cover complexity",
+    "Cavalar-Oliveira cyclic intersection complexity",
+    "finite union/intersection monotone fixed-point systems",
+    "k counted intersection gates",
+    "free-union quotient / presentation normalization"
+  ],
+  "frozen_inputs": {
+    "framework_sha": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+    "application_base_sha": "111a3f95c72b0a418f968708bd3eda77ef98bccf",
+    "parent_atom": "research/real_math/millennium/p_vs_np/02_problem_dag/O9d12a2a1a1b_GLOBAL_FACTORIZATION_DELTA_20260811.yaml",
+    "source_packet": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1d_SOURCE_PACKET_20260811.md",
+    "source_packet_sha256": "656195cc6b4f07556b905f8707e0d62ebbd9395523509a1632741858235e7b7d"
+  },
+  "structural_coordinates": [
+    "finite ground set Gamma and finite non-empty generator family B",
+    "cyclic gates start at empty and update monotonically by union/intersection",
+    "only intersection gates are counted by Dcyc_cap",
+    "OR-only paths may be cyclic and may carry outputs of counted intersections back to counted inputs",
+    "least-fixed-point semantics, not topological evaluation, is authoritative"
+  ],
+  "solved_near_solved_analogues": [
+    {
+      "id": "ECCC-TR25-033-COR17",
+      "status": "SELECTED_PRIMARY",
+      "method": "unfold cyclic evaluation; added update unions are free for intersection complexity",
+      "transfer_assumption": "same least-fixed-point cyclic set semantics and same counted operation",
+      "disanalogy": "Corollary 17 gives a quadratic acyclic simulation, not the proposed exact k-node core normal form"
+    },
+    {
+      "id": "PR113-FREE-UNION-QUOTIENT",
+      "status": "SELECTED_PENDING_SEARCH_PRIORITY_ONLY",
+      "method": "quotient generator presentation by finite union closure",
+      "transfer_assumption": "union is uncounted in Dcyc_cap",
+      "disanalogy": "draft PR is non-main, retrospective, and only treats constants from union closure, not elimination of all internal union nodes"
+    },
+    {
+      "id": "GENERIC-BOOLEAN-OR-SCC-REACHABILITY",
+      "status": "SELECTED_ANALOGY_ONLY",
+      "method": "collapse monotone OR-only SCCs to reachability closure of external inputs",
+      "transfer_assumption": "OR equations compute least reachability closure pointwise",
+      "disanalogy": "must be re-proved under set-valued synchronous semantics and when AND outputs feed OR SCCs"
+    }
+  ],
+  "cross_domain_analogy": {
+    "source": "data-flow graph with free copy/merge nodes and costly combine nodes",
+    "common_abstraction": "contract zero-cost propagation SCCs while retaining costly combine vertices",
+    "mapping": "OR-only nodes -> free propagation/merge; intersection gates -> counted combine nodes; generators -> fixed sources",
+    "shared_constraints": "finite monotone least-fixed-point propagation",
+    "disanalogies": "ordinary data-flow cost does not imply cover-complexity lower bounds; only the graph contraction idea transfers",
+    "falsifiable_obligation": "construct OR-reachability expressions and check equality of every counted input/final output at every fixed point"
+  },
+  "hostile_controls": [
+    "F-C010-MULTIPLEXING",
+    "F-C021-CHEAP-ADJACENCY",
+    "F-C023-SCALAR-COLLAPSE",
+    "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+    "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",
+    "F-O9D12A2A1A1B-FIXED-LAMBDA-GLOBAL-STATE-FACTORIZATION",
+    "PR113-free-union-quotient-pending"
+  ],
+  "local_vs_gluing": {
+    "local_target": "representation equivalence of cyclic systems after OR-node elimination",
+    "local_failure_if_false": "an OR/AND feedback pattern changes least-fixed-point semantics under contraction",
+    "gluing_residual_if_true": "still need a quotient-respecting Phi with Phi<=f(k) and explicit super-log target value; no root bridge closes"
+  },
+  "candidate_chronology": "RETROSPECTIVE_PROPOSAL_BEFORE_V3_PRE_ACTION_RECEIPT; only the verification action may receive prospective-binding credit",
+  "candidate_generation": "REPRESENTATION_CANDIDATE_ALREADY_FROZEN_FOR_VERIFICATION; NO_LOWER_BOUND_CANDIDATE",
+  "frozen_at": "2026-08-11T15:31:40Z",
+  "fibre_snapshot_hash": "sha256:a1ced8bf6aa84513176749025da4d4ff0f60cd85161399788a81e2aa39cb1359"
+}
