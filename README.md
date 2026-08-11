@@ -9,6 +9,18 @@
 
 Mathematical research in this repository must treat the current `main` of `SzeChunYiu/RAKL` as the framework source of truth. A local research artifact never overrides or weakens a framework gate.
 
+## Framework submodule
+
+`framework/RAKL` is a Git submodule pointing back to `SzeChunYiu/RAKL`. It gives application sessions a local framework checkout while preserving the repository boundary.
+
+The gitlink is a reproducibility pin, **not** a guarantee that the framework is current. At the beginning of an active research cycle, compare the submodule commit with current `SzeChunYiu/RAKL/main`. If they differ, use/fetch the current framework `main` for authority before applying assurance or discovery rules. A submodule-pointer update is dependency synchronization, not mathematical evidence.
+
+Typical clone setup:
+
+```bash
+git clone --recurse-submodules https://github.com/SzeChunYiu/RAKL_math.git
+```
+
 ## Initial portfolio
 
 The active portfolio is the six unsolved Millennium Prize Problems:
@@ -28,4 +40,4 @@ This repository is a research workspace, not a certificate of solved open proble
 
 ## Migration provenance
 
-The application workspace is being migrated from `SzeChunYiu/RAKL/research/real_math` and active mathematical-research branches. The original Git history remains available in `SzeChunYiu/RAKL`; migrated snapshots retain source repository/ref provenance so chronology is not silently rewritten.
+The application workspace was migrated from `SzeChunYiu/RAKL/research/real_math` and active mathematical-research branches. The original Git history remains available in `SzeChunYiu/RAKL`; migrated snapshots retain source repository/ref provenance so chronology is not silently rewritten.
