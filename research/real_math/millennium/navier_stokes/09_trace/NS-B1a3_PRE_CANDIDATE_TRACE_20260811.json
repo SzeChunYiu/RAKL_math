@@ -1,0 +1,43 @@
+{
+  "schema_version": "hash-chained-math-trace-v3-proposal-shadow",
+  "atom_id": "NS-B1a3",
+  "candidate_id": "NS-B1a3-C001",
+  "parent_trace_anchor": "gitblob:86c71e3255a0be200e4a1d1989ddf25bf9749d33",
+  "events": [
+    {
+      "event_id": "NS-B1a3-E0",
+      "kind": "ATOM_FROZEN",
+      "payload_hash": "sha256:51ba9496bd858e161d295c7678708a32384bdd4e2f7a594b77d05aa7a39824e0",
+      "prev_event_hash": "gitblob:86c71e3255a0be200e4a1d1989ddf25bf9749d33",
+      "event_hash": "sha256:222c8233d3bc4f21759577012369ee516cae51832ae9249321754b3341bee840"
+    },
+    {
+      "event_id": "NS-B1a3-E1",
+      "kind": "MEMORY_BOUND",
+      "selected_ids": ["AB-COMPACT", "AB-THM1.2", "GKP-CRIT-ELEM", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT", "F-NS-B1a-C001-PRESSURE-SUMMABILITY", "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER", "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"],
+      "prev_event_hash": "sha256:222c8233d3bc4f21759577012369ee516cae51832ae9249321754b3341bee840",
+      "event_hash": "sha256:d67db79f7c738c9da8bbf07f19a054eaf55aa9e134d579a73dccc1f0f03b68b8"
+    },
+    {
+      "event_id": "NS-B1a3-E2",
+      "kind": "EXPERT_CELL_REVIEW",
+      "verdict": "PROCEED_INTERFACE_AUDIT_ONLY",
+      "prev_event_hash": "sha256:d67db79f7c738c9da8bbf07f19a054eaf55aa9e134d579a73dccc1f0f03b68b8",
+      "event_hash": "sha256:f99c9a9c393489cec057b7f7092f731f64086aa967fc160ab62561f896c28d9e"
+    },
+    {
+      "event_id": "NS-B1a3-E3",
+      "kind": "CANDIDATE_GATE",
+      "candidate_id": "NS-B1a3-C001",
+      "verdict": "PASS_SCOPED_INTERFACE_AUDIT",
+      "root_authority": "NONE",
+      "prev_event_hash": "sha256:f99c9a9c393489cec057b7f7092f731f64086aa967fc160ab62561f896c28d9e",
+      "event_hash": "sha256:1c9e6db062fe90397da5378d9ce51edf92499c31f46655d570c09527ff7badc6"
+    }
+  ],
+  "final_event_hash": "sha256:1c9e6db062fe90397da5378d9ce51edf92499c31f46655d570c09527ff7badc6",
+  "chronology": "context -> dual memory -> same-context expert cell -> trace gate -> scoped candidate",
+  "candidate_generation_allowed": true,
+  "root_promotion_allowed": false,
+  "authority": "PROPOSAL_SHADOW_TRACE_ONLY"
+}
