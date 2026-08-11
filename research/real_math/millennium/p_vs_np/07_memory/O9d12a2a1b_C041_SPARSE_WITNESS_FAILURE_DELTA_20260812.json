@@ -1,0 +1,64 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-C041-DECLARED-VARIABLE-WITNESS-BLOWUP",
+      "atom_id": "O9d12a2a1b",
+      "candidate_id": "C041-FX-SAT-ONE-SIDED-v1-BRIDGE-PROOF",
+      "context_packet_hash": "sha256:70e3a8014330040d06d54d3e9b688b2dfe35ff5552f7bdd2396bde2cfd48770e",
+      "research_trace_event_id": "O9d12a2a1b-C041-E12",
+      "method_family": "succinct-formula NP verification and exhaustive complement decision",
+      "failure_mode": "a succinctly declared variable universe makes the naive full assignment exponentially longer than the formula word and makes enumeration over all declared variables doubly exponential",
+      "residual_signature": [
+        "valid O(t)-bit canonical words can declare v=2^t variables",
+        "only x_1 need occur in the decoded clauses",
+        "the frozen helper requires a witness tuple of length v",
+        "the frozen helper enumerates 2^v full assignments",
+        "the advertised polynomial NP verifier and 2^{O(n)} explicit decider are therefore false for those helpers"
+      ],
+      "broken_assumptions": [
+        "declared variable count was treated as polynomially bounded by its binary encoding length",
+        "a full assignment was treated as a polynomially balanced witness for a sparse formula"
+      ],
+      "scope_conditions": [
+        "the frozen full-v helper relations in C041_fx_sat_one_sided.py",
+        "canonical formulas permitting unused declared variables",
+        "binary gamma coding of the declared variable count"
+      ],
+      "competing_diagnoses": [
+        "reject every formula with an unused declared variable",
+        "renumber or normalize all formulas before decoding",
+        "retain the semantic language and verify only the variables occurring in literal slots"
+      ],
+      "selected_diagnosis": "The complexity defect is caused by measuring assignments over the declared universe rather than the occurring-variable support. Since at most 3m variables occur and the payload lies in the input word, sparse-support witnesses and search repair the bounds without changing the language.",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C041_FX_SAT_BRIDGE_PROOF_REVIEW_20260812.json",
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C041_FX_SAT_ZERO_HOSTILE_REVIEW_20260812.json",
+        "research/real_math/millennium/p_vs_np/04_candidates/C041_FX_SAT_SPARSE_BRIDGE_REPAIR_20260812.md",
+        "research/real_math/millennium/p_vs_np/05_falsification/c041_sparse_bridge_repair.py"
+      ],
+      "falsifier_or_attempt": "Declare v=2^t but use clauses mentioning only x_1; compare direct word length with the frozen helper witness length and assignment enumeration count.",
+      "observed_result": "The word has length O(t), the frozen witness has length 2^t, and the frozen exhaustive loop has 2^(2^t) assignments. Restricting to occurring variables gives at most 3m=O(n) witness bits and 2^{O(n)} search.",
+      "local_repair_attempts": [
+        "define the direct language explicitly",
+        "supply one truth bit per occurring variable in sorted order",
+        "enumerate assignments only on occurring-variable support",
+        "retain the exact SAT-to-old-new reduction and require follow-up proof review"
+      ],
+      "timestamp": "2026-08-12T11:05:00Z",
+      "artifact_hash": "sha256:ac2020918e0e075e3c36695dba4c0b2c2aedeaa89b82be56d2ec46f370b47268"
+    }
+  ],
+  "links": [
+    {
+      "source_id": "F-C041-DECLARED-VARIABLE-WITNESS-BLOWUP",
+      "target_id": "F-C041-POLYTIME-EXPLICITNESS-SUPERPOLY-CONTRADICTION",
+      "relation": "SHARES_BROKEN_ASSUMPTION_WITH",
+      "rationale": "Both failures arise from confusing the graph side length M_n with the direct Boolean input length and failing to audit which quantities are binary encoded versus explicitly written.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/04_candidates/C041_FX_SAT_SPARSE_BRIDGE_REPAIR_20260812.md",
+        "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C041_SIZE_RATE_CONTRACT_20260811.json"
+      ]
+    }
+  ]
+}

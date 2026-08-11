@@ -1,0 +1,75 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION",
+      "atom_id": "O9d12a2a1b",
+      "candidate_id": "C041-FX-SAT-ONE-SIDED-v1",
+      "context_packet_hash": "sha256:70e3a8014330040d06d54d3e9b688b2dfe35ff5552f7bdd2396bde2cfd48770e",
+      "research_trace_event_id": "O9d12a2a1b-C041-E10",
+      "method_family": "relevance-preserving recursive fractional dual amplification",
+      "failure_mode": "all supported cylinder lifts remain feasible but saturated child pairs cover the entire child relevance class, leaving exact residual augmentation zero",
+      "residual_signature": [
+        "square seed rho_frac equals 3/2",
+        "3 of 3 positive parent supports retain relevant cylinder lifts",
+        "maximum lifted child-pair load equals 1",
+        "787 child-relevant semi-filters",
+        "two zero-capacity full-union pairs cover all 787 child-relevant semi-filters",
+        "exact residual augmentation delta_2^*=0"
+      ],
+      "broken_assumptions": [
+        "relevance persistence was treated as evidence that fresh dual capacity would remain",
+        "new relevant filters were treated as if at least one could receive positive mass independently of already saturated legal pairs"
+      ],
+      "scope_conditions": [
+        "frozen n=2 to n=3 transition of C041-FX-SAT-ONE-SIDED-v1",
+        "the exact lifted parent dual weights are retained",
+        "the all-zero short contradiction branch rather than the magic-coded SAT slice",
+        "complete child semi-filter and full-union-pair universe with five complement points"
+      ],
+      "competing_diagnoses": [
+        "the short-code/seed regime is exceptional and later magic-coded layers behave differently",
+        "saturation of two covering child pairs is the exact proximate obstruction to additive residual mass",
+        "the plain fractional relaxation again erases a correlation needed for accumulation",
+        "one-sided layers admit a general multiplexing or quotient cover"
+      ],
+      "selected_diagnosis": "The exact local obstruction is a residual covering-dual certificate supported on two already saturated full-union pairs; this proves zero additive augmentation for the frozen first step. It does not identify a unique global cause or determine later levels.",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/05_falsification/C041_FX_SAT_EXACT_GATE_RECEIPT_20260812.json",
+        "research/real_math/millennium/p_vs_np/04_candidates/C041_FX_SAT_ONE_SIDED_RESULT_20260812.md",
+        "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C041_FX_SAT_CANDIDATE_FREEZE_20260812.json"
+      ],
+      "falsifier_or_attempt": "Fix the lifted parent weights, enumerate the complete five-point child relevance and full-union pair classes, and certify the residual packing optimum by matching exact rational primal and covering-dual values.",
+      "observed_result": "All three parent supports persist, but two zero-capacity pairs cover every child-relevant semi-filter, so the exact residual optimum is zero.",
+      "local_repair_attempts": [
+        "do not alter the short decoder after observing the zero",
+        "run a first-magic-level symbolic quotient and multiplexing-cover attack before expensive enumeration",
+        "separate failure of the fixed-mass additive recurrence from the unknown reoptimized child optimum"
+      ],
+      "timestamp": "2026-08-12T10:45:00Z",
+      "artifact_hash": "sha256:debd85670f0b47554a789e6262c4e791b7486945ccb4f7bdd32247a351030475"
+    }
+  ],
+  "links": [
+    {
+      "source_id": "F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION",
+      "target_id": "F-C037-ARBITRARY-EXTENSION-NONMONOTONE",
+      "relation": "TRANSFER_WARNING_FOR",
+      "rationale": "C037 required relevance to be checked before augmentation. The selected rule passes that warning on this step, then exposes zero residual capacity, proving that persistence and augmentation are distinct obligations.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/05_falsification/C041_FX_SAT_EXACT_GATE_RECEIPT_20260812.json",
+        "research/real_math/millennium/p_vs_np/05_falsification/C037_CYLINDER_RELEVANCE_REPLAY_RECEIPT_20260811.json"
+      ]
+    },
+    {
+      "source_id": "F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION",
+      "target_id": "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+      "relation": "SHARES_RESIDUAL_WITH",
+      "rationale": "Both warn that legal-pair reuse can saturate a plain fractional relaxation without preserving the correlation needed for accumulation; the shared cause remains a hypothesis outside the exact registered instances.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/05_falsification/C041_FX_SAT_EXACT_GATE_RECEIPT_20260812.json",
+        "research/real_math/millennium/p_vs_np/07_memory/C024_FAILURE_EXPERIENCE_DELTA_20260811.json"
+      ]
+    }
+  ]
+}

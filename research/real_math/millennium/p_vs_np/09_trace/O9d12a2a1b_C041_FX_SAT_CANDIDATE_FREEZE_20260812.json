@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "freeze_id": "PNP-O9d12a2a1b-C041-FX-SAT-ONE-SIDED-FREEZE-20260812",
+  "frozen_at": "2026-08-12T10:30:00Z",
+  "atom_id": "O9d12a2a1b",
+  "candidate_id": "C041-FX-SAT-ONE-SIDED-v1",
+  "application_base_commit": "a7301f0f0e2cab2750ac6e923efe18b5750b5af6",
+  "framework_commit": "bfa2d65987ba5d3e46db1196ef56d1432f115f99",
+  "candidate_definition": {
+    "path": "research/real_math/millennium/p_vs_np/04_candidates/C041_FX_SAT_ONE_SIDED_FREEZE_20260812.md",
+    "sha256": "fd26c40abc3ea0291f2967e488c1674515c74c4a0d70b87875f4d8b9497802f8"
+  },
+  "candidate_code": {
+    "path": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+    "sha256": "c0caca2fe7244c3d847de8b59473cec72132ec04ad3e9fab668f5cd95a2bd75a"
+  },
+  "evaluator": {
+    "path": "research/real_math/millennium/p_vs_np/05_falsification/c041_exact_extension_gate.py",
+    "sha256": "364531ad6a9889378daed194cfdf7c419ba8785ea8727e27e72a4f9c154d2a1c",
+    "maximum_child_complement_edges": 5,
+    "complete_universe": "all relevant semi-filters and all C034a full-union incomparable pairs for the supplied child"
+  },
+  "exact_rule": {
+    "domain": "n>=2, M_n=2^n, U_n subset [M_n]^2, G_n=[M_n]^2 minus U_n",
+    "seed": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "recurrence": "U_(n+1)=U_n union {(r,M_n+c): Dec(bin_n(r)||bin_n(c)) is UNSAT}",
+    "new_old_complement": "empty",
+    "new_new_complement": "empty",
+    "decoder": "all-zero even word -> fixed contradictory 3CNF; MAGIC 11100101 plus gamma(v), gamma(m), three fixed-width signed literals per clause and optional one-zero parity pad -> decoded 3CNF; every other word -> fixed tautology"
+  },
+  "pre_output_mathematical_claims": [
+    {
+      "claim_id": "C041-LEMMA-EMPTY-FIBRE",
+      "status": "PROPOSED_FOR_EXACT_RECHECK",
+      "statement": "Adding only empty complement-star rows and columns preserves the relevant semi-filter family."
+    },
+    {
+      "claim_id": "C041-LEMMA-NO-OLD-EDGE-DELETION",
+      "status": "PROPOSED_FOR_HOSTILE_PROOF_REVIEW",
+      "statement": "If old graph edges remain and child stars restrict to parent stars, every parent-relevant semi-filter has a relevant cylinder lift at its old witness, and C038 preserves supported dual feasibility."
+    },
+    {
+      "claim_id": "C041-LEMMA-NP-COMPLETE-GRAPH",
+      "status": "PROPOSED_NOT_PROMOTED",
+      "statement": "The associated recursive graph language is in NP and receives a linear-overhead many-one reduction from 3SAT through the old-new slice."
+    }
+  ],
+  "prior_failure_controls": [
+    "F-C010-MULTIPLEXING",
+    "F-C013-QUOTIENT-BLOWUP",
+    "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+    "F-C037-ARBITRARY-EXTENSION-NONMONOTONE",
+    "F-C041-POLYTIME-EXPLICITNESS-SUPERPOLY-CONTRADICTION"
+  ],
+  "predictions_frozen_before_native_output": {
+    "n2_to_n3_source_domain": "PASS_EXPECTED",
+    "n2_to_n3_child_complement_count": 5,
+    "seed_certificate": "3/2 EXPECTED BUT MUST BE EXACTLY RECHECKED IN THE 4x4 AMBIENT SQUARE",
+    "supported_relevance": "PASS_EXPECTED FROM NO-OLD-EDGE-DELETION LEMMA",
+    "lifted_feasibility": "PASS_EXPECTED FROM C038 PROJECTION",
+    "residual_augmentation": "UNKNOWN",
+    "first_magic_level_structure": "UNKNOWN; REQUIRE QUOTIENT AND SMALL-COVER FALSIFIERS"
+  },
+  "native_execution_order": [
+    "seed exact recheck",
+    "supported cylinder relevance",
+    "lifted pair loads",
+    "exact residual augmentation primal-dual equality",
+    "one-sided multiplexing and quotient/twin attack",
+    "first-magic-level structural screen"
+  ],
+  "allowed_outcomes": [
+    "SOURCE_DOMAIN_FAILURE",
+    "DECODER_BRIDGE_FAILURE",
+    "RELEVANCE_FAILURE",
+    "LIFTED_FEASIBILITY_FAILURE",
+    "ZERO_AUGMENTATION",
+    "POSITIVE_FINITE_AUGMENTATION",
+    "CANNOT_CHECK",
+    "RECURRENCE_BOUND_INSUFFICIENT"
+  ],
+  "small_gate_scope": "The n=2 to n=3 gate exercises the all-zero short contradiction, not the magic-coded asymptotic SAT slice. It is conformance-only and cannot support a recurrence or asymptotic claim.",
+  "rate_falsifier": "A superlogarithmic checkpoint requires (L_0+sum_{i<n}d(i))/n -> infinity; finite positive increments do not imply this limit.",
+  "root_boundary": "The NP-completeness bridge is proposal-only until proof review. Even if it survives, P versus NP requires an a_n^{omega(1)} circuit lower bound. Root remains OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE.",
+  "chronology": {
+    "candidate_and_evaluator_frozen_before_native_output": true,
+    "native_output_accessed": false,
+    "no_post_result_threshold_rescue": true
+  },
+  "mathematical_saturation_policy": {
+    "credit": "proved lemmas, exact counterexamples, broken assumptions, transfer conditions and proof/falsifier discriminators only",
+    "zero_credit": "Git, CI, hashes, schemas, implementation, solver status and runtime"
+  },
+  "artifact_hash": "sha256:a73197557c186e819e6f25179adf3743b51df923f031fc73d57be9aeef9081b0"
+}
