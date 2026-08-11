@@ -1,0 +1,119 @@
+{
+  "atom_id": "O9d12a2a1b-C043",
+  "object_context": "The first post-C042 semantic batch in the frozen one-sided decoder, viewed as prefix/suffix residual languages whose equality is exactly new-band twin equivalence and whose accumulated old bands may add or merge types.",
+  "structural_coordinates": [
+    "canonical even length L(v,m) with gamma lengths, literal width and optional zero padding",
+    "parent level n and child complement U_{n+1}",
+    "equal split of a 2n-bit canonical word into row prefix p and suffix s",
+    "completion residual R_{n,p}={s: decode(p||s) is canonical MAGIC UNSAT}",
+    "old-band versus new-band complement support",
+    "exact row and column complement neighborhoods and twin classes",
+    "type-class rectangle count min(t_row,t_column) and upper-bound polarity"
+  ],
+  "equivalent_formulations": [
+    "distinct nonempty prefix completion residuals are distinct new-band complement row stars",
+    "distinct suffix acceptance sets are distinct new-band complement column stars",
+    "twin quotient classes are Myhill-Nerode-style residual classes for the fixed finite split, without any regular-language claim",
+    "a row-type partition gives an explicit intersection-rectangle cover of the associated graph"
+  ],
+  "solved_analogues": [
+    "C042 exact classification of the first canonical UNSAT layer at n=12 and its five-type G13 quotient",
+    "C013 exact twin-quotient cover lift for nonuniform graph blow-ups",
+    "one-variable CNF classification into positive unit, negative unit and tautological mixed-sign clauses"
+  ],
+  "near_solved_analogues": [
+    "finite automata and one-way communication residual equivalence classify rows by accepting suffix languages but do not imply cover lower bounds"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "C042 G9/G13 finite activation and quotient result",
+      "method": "separate syntax activation from obstruction capability, then classify exact neighborhood types before expensive evaluation",
+      "shared_structure": [
+        "the same frozen decoder and equal word split",
+        "canonical UNSAT words add old-to-new complement edges",
+        "identical completion languages produce identical complement stars"
+      ],
+      "required_assumptions": [
+        "decoder identity and polarity remain frozen",
+        "old accumulated bands are included before declaring full twins",
+        "the type-class cover is applied as an upper bound only"
+      ],
+      "disanalogies": [
+        "C042 canonical UNSAT occupied one header row; C043 begins only when a later payload prefix may split rows",
+        "C042 quotient values do not determine the later quotient cover number"
+      ],
+      "repair_question": "At the first later multi-row semantic batch, how many prefix and suffix residual classes remain after exact equality and old-band accumulation?",
+      "source_anchors": [
+        "research/real_math/millennium/p_vs_np/04_candidates/C042_ACTIVATION_QUOTIENT_RESULT_20260812.md",
+        "research/real_math/millennium/p_vs_np/05_falsification/C042_ACTIVATION_QUOTIENT_RECEIPT_20260812.json"
+      ]
+    },
+    {
+      "source_context": "C013 twin-quotient lift and elementary type-class rectangles",
+      "method": "quotient vertices by exact complement neighborhoods and lift an explicit quotient/type-class cover",
+      "shared_structure": [
+        "finite bipartite associated graphs",
+        "surjective row and column class maps",
+        "adjacency constant on every class product"
+      ],
+      "required_assumptions": [
+        "every class is nonempty",
+        "class membership is proved from full neighborhoods rather than truncated samples",
+        "the registered full-semi-filter cover lift applies"
+      ],
+      "disanalogies": [
+        "the new quotient may have more edges and a larger cover than the C042 quotients",
+        "a finite small quotient does not give a uniform asymptotic bound"
+      ],
+      "repair_question": "Does the first row-splitting layer still have only constantly many exact row/column types, making a cheap upper construction decisive?",
+      "source_anchors": [
+        "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C013_quotient_blowup_ceiling.md",
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C042_STRUCTURAL_QUOTIENT_HOSTILE_REVIEW_20260812.json"
+      ]
+    },
+    {
+      "source_context": "Myhill-Nerode residuals and one-way communication matrix row equivalence",
+      "method": "compare prefixes through equality of their accepting suffix sets",
+      "shared_structure": [
+        "fixed language and fixed split",
+        "prefixes as rows",
+        "suffixes as columns",
+        "acceptance matrix neighborhoods"
+      ],
+      "required_assumptions": [
+        "the language and split are exact",
+        "residual equality is proved extensionally",
+        "only finite type classification is transferred"
+      ],
+      "disanalogies": [
+        "UNSAT is not asserted regular",
+        "communication or automaton state complexity does not imply the RAKL cover lower bound",
+        "accumulated recursive bands are absent from the abstract language matrix"
+      ],
+      "repair_question": "Can residual-language equality classify the new band, and can old-band accounting then promote it to a full U_n twin statement?",
+      "source_anchors": [
+        "Myhill-Nerode finite residual equivalence principle",
+        "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "finite residual counts do not determine later levels",
+    "growth in row types alone is irrelevant because the cover upper bound uses the smaller side",
+    "type growth is not a cover lower bound and may still be defeated by multiplexed or compiled covers",
+    "the all-zero short contradiction is not canonical MAGIC activation",
+    "changing padding, gamma coding, literal width or the decoder would define a new family rather than repair this one"
+  ],
+  "source_anchors": [
+    "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+    "research/real_math/millennium/p_vs_np/04_candidates/C042_ACTIVATION_QUOTIENT_RESULT_20260812.md",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C042_ACTIVATION_QUOTIENT_FAILURE_DELTA_20260812.json",
+    "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C013_quotient_blowup_ceiling.md"
+  ],
+  "analogy_scan_status": "NO_SAFE_BRIDGE_FOUND",
+  "cross_domain_analogies": [],
+  "analogy_scan_notes": "Finite automata, communication matrices, caching and database quotienting were scanned. Only the exact same-domain residual/twin equivalence survives; external analogies add no cover or asymptotic authority.",
+  "frozen_at": "2026-08-12T14:02:00Z",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:fff65cd0b2cc08bf7aaa1923fb0088ae8eca4dbd844b927eb2f6f05b56479ae8"
+}

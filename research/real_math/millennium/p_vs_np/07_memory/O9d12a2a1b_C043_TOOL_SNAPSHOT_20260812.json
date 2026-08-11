@@ -1,0 +1,60 @@
+{
+  "tools": [
+    {
+      "tool_id": "T-PNP-EXACT-NEIGHBORHOOD-TYPE-UPPER-BOUND",
+      "name": "Exact neighborhood-type quotient upper construction",
+      "kind": "upper_bound_falsifier",
+      "abstraction": "Partition each bipartite side by exact complement-neighborhood equality. When the class maps are surjective and adjacency is constant on class products, type-class graph rectangles and the registered quotient lift give rho(G)<=D_intersection(G)<=min(t_row,t_column).",
+      "source_atom_id": "O9d12a2a1b-C042",
+      "source_candidate_id": "C042-ACTIVATION-QUOTIENT-GATE-v1",
+      "source_result_ids": [
+        "PNP-C042-ACTIVATION-QUOTIENT-GATE-20260812",
+        "PNP-C042-QUOTIENT-PAIR-WITNESSES-20260812"
+      ],
+      "source_context_hash": "sha256:04ac4416ecc74311ab35cc49ed3d05cabe2b791c7aa9d95b8860ce252c32033e",
+      "authority": "CONDITIONALLY_REUSABLE",
+      "preconditions": [
+        "finite bipartite associated graph with exact full complement neighborhoods",
+        "surjective nonempty row and column type classes",
+        "adjacency constant on every class product",
+        "registered quotient/type-class cover upper-bound direction applies"
+      ],
+      "structural_signature": [
+        "many ambient vertices share identical complement stars",
+        "target quantity admits a cover lifted from exact quotient classes",
+        "small min(row types,column types) can falsify superlogarithmic growth at the tested level"
+      ],
+      "operation": "prove exact row and column neighborhood equivalence classes, form the quotient, then lift the smaller type-class rectangle cover or an explicit quotient cover",
+      "guaranteed_effects": [
+        "a proved type classification yields the finite upper bound rho(G)<=min(t_row,t_column)",
+        "an explicit smaller quotient cover can improve that finite upper bound"
+      ],
+      "non_guarantees": [
+        "does not give a lower bound",
+        "does not bound later levels without a uniform type-growth theorem",
+        "does not imply recurrence, circuit lower bounds, novelty or P versus NP",
+        "worked at G9/G13 does not mean every encoded family stays quotient-cheap"
+      ],
+      "validation_obligations": [
+        "prove full neighborhood equality rather than sample equality",
+        "account for accumulated old bands and fallback edges",
+        "check both row and column types",
+        "preserve complement/associated-graph polarity and quotient-lift assumptions"
+      ],
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/04_candidates/C042_ACTIVATION_QUOTIENT_RESULT_20260812.md",
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C042_STRUCTURAL_QUOTIENT_HOSTILE_REVIEW_20260812.json",
+        "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C013_quotient_blowup_ceiling.md"
+      ],
+      "known_failure_ids": [
+        "F-C042-FIRST-UNSAT-QUOTIENT-COMPRESSION"
+      ],
+      "successful_reuse_ids": [],
+      "proof_backing": [
+        "C013 scoped quotient lift",
+        "C042 explicit type-class and two-pair proofs"
+      ],
+      "artifact_hash": "sha256:d6a64a5be6f1fab9f84fa9e0fc052ed5206243c799742d916cefa1a4df896d32"
+    }
+  ]
+}

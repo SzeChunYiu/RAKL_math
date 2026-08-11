@@ -1,0 +1,152 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION",
+      "atom_id": "O9d12a2a1b",
+      "candidate_id": "C041-FX-SAT-ONE-SIDED-v1",
+      "context_packet_hash": "sha256:70e3a8014330040d06d54d3e9b688b2dfe35ff5552f7bdd2396bde2cfd48770e",
+      "research_trace_event_id": "O9d12a2a1b-C041-E10",
+      "method_family": "relevance-preserving recursive fractional dual amplification",
+      "failure_mode": "all supported cylinder lifts remain feasible but saturated child pairs cover the entire child relevance class, leaving exact residual augmentation zero",
+      "residual_signature": [
+        "square seed rho_frac equals 3/2",
+        "3 of 3 positive parent supports retain relevant cylinder lifts",
+        "maximum lifted child-pair load equals 1",
+        "787 child-relevant semi-filters",
+        "two zero-capacity full-union pairs cover all 787 child-relevant semi-filters",
+        "exact residual augmentation delta_2^*=0"
+      ],
+      "broken_assumptions": [
+        "relevance persistence was treated as evidence that fresh dual capacity would remain",
+        "new relevant filters were treated as if at least one could receive positive mass independently of already saturated legal pairs"
+      ],
+      "scope_conditions": [
+        "frozen n=2 to n=3 transition of C041-FX-SAT-ONE-SIDED-v1",
+        "the exact lifted parent dual weights are retained",
+        "the all-zero short contradiction branch rather than the magic-coded SAT slice",
+        "complete child semi-filter and full-union-pair universe with five complement points"
+      ],
+      "competing_diagnoses": [
+        "the short-code/seed regime is exceptional and later magic-coded layers behave differently",
+        "saturation of two covering child pairs is the exact proximate obstruction to additive residual mass",
+        "the plain fractional relaxation again erases a correlation needed for accumulation",
+        "one-sided layers admit a general multiplexing or quotient cover"
+      ],
+      "selected_diagnosis": "The exact local obstruction is a residual covering-dual certificate supported on two already saturated full-union pairs; this proves zero additive augmentation for the frozen first step. It does not identify a unique global cause or determine later levels.",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/05_falsification/C041_FX_SAT_EXACT_GATE_RECEIPT_20260812.json",
+        "research/real_math/millennium/p_vs_np/04_candidates/C041_FX_SAT_ONE_SIDED_RESULT_20260812.md",
+        "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C041_FX_SAT_CANDIDATE_FREEZE_20260812.json"
+      ],
+      "falsifier_or_attempt": "Fix the lifted parent weights, enumerate the complete five-point child relevance and full-union pair classes, and certify the residual packing optimum by matching exact rational primal and covering-dual values.",
+      "observed_result": "All three parent supports persist, but two zero-capacity pairs cover every child-relevant semi-filter, so the exact residual optimum is zero.",
+      "local_repair_attempts": [
+        "do not alter the short decoder after observing the zero",
+        "run a first-magic-level symbolic quotient and multiplexing-cover attack before expensive enumeration",
+        "separate failure of the fixed-mass additive recurrence from the unknown reoptimized child optimum"
+      ],
+      "timestamp": "2026-08-12T10:45:00Z",
+      "artifact_hash": "sha256:debd85670f0b47554a789e6262c4e791b7486945ccb4f7bdd32247a351030475"
+    },
+    {
+      "failure_id": "F-C042-SYNTAX-ACTIVATION-NO-UNSAT-SIGNAL",
+      "atom_id": "O9d12a2a1b-C042",
+      "candidate_id": "C042-ACTIVATION-QUOTIENT-GATE-v1",
+      "context_packet_hash": "sha256:04ac4416ecc74311ab35cc49ed3d05cabe2b791c7aa9d95b8860ce252c32033e",
+      "research_trace_event_id": "O9d12a2a1b-C042-E02",
+      "method_family": "first-valid-syntax structural signal gate",
+      "failure_mode": "the decoder accepts canonical syntax before the syntax can express any UNSAT instance",
+      "residual_signature": [
+        "MAGIC prefix fits at word length 8 but is malformed",
+        "canonical syntax begins at word length 16 with v=m=1",
+        "all one-clause formulas are satisfiable",
+        "canonical UNSAT begins only at word length 24 with v=1,m=2"
+      ],
+      "broken_assumptions": [
+        "parser activation was treated as activation of the mathematical obstruction",
+        "the first syntactically valid level was treated as the first semantically discriminating level"
+      ],
+      "scope_conditions": [
+        "the frozen C041 MAGIC/gamma/fixed-width 3CNF decoder",
+        "canonical long-form branch separated from the all-zero fallback"
+      ],
+      "competing_diagnoses": [
+        "MAGIC prefix length controls activation",
+        "valid formula syntax controls activation",
+        "minimum obstruction-capable formula size controls activation"
+      ],
+      "selected_diagnosis": "The load-bearing gate is semantic obstruction capability, not prefix fit or parser validity. UNSAT requires at least two clauses, forcing the exact length-24 threshold.",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/04_candidates/C042_ACTIVATION_QUOTIENT_RESULT_20260812.md",
+        "research/real_math/millennium/p_vs_np/05_falsification/C042_ACTIVATION_QUOTIENT_RECEIPT_20260812.json"
+      ],
+      "falsifier_or_attempt": "derive the minimum even canonical length under the necessary condition m>=2 for UNSAT and classify all equality cases",
+      "observed_result": "syntax begins at parent level 8 but canonical UNSAT begins only at parent level 12",
+      "local_repair_attempts": [
+        "replace first-valid-syntax gates by first-obstruction-capable gates",
+        "retain prefix, syntax and semantic thresholds as separate coordinates"
+      ],
+      "timestamp": "2026-08-12T12:15:00Z",
+      "artifact_hash": "sha256:eddfd43d1e629357944adc8c190da8f3ab70a390d09430146ddc8e346151449a"
+    },
+    {
+      "failure_id": "F-C042-FIRST-UNSAT-QUOTIENT-COMPRESSION",
+      "atom_id": "O9d12a2a1b-C042",
+      "candidate_id": "C042-ACTIVATION-QUOTIENT-GATE-v1",
+      "context_packet_hash": "sha256:04ac4416ecc74311ab35cc49ed3d05cabe2b791c7aa9d95b8860ce252c32033e",
+      "research_trace_event_id": "O9d12a2a1b-C042-E03",
+      "method_family": "SAT-dependent one-sided cross-layer amplification",
+      "failure_mode": "the first canonical UNSAT signal is confined to one header row and adds only one twin type, leaving a constant quotient cover",
+      "residual_signature": [
+        "W_12 has exactly three points including the all-zero fallback",
+        "two canonical UNSAT points share row 3674",
+        "G_13 has five row and five column types",
+        "the five-type quotient has exact full-cover number 2",
+        "rho(G_13)<=2 by quotient lift"
+      ],
+      "broken_assumptions": [
+        "NP-hard semantic content was treated as evidence of large unrestricted cover complexity",
+        "the first genuine UNSAT slice was expected to escape twin/quotient compression"
+      ],
+      "scope_conditions": [
+        "the exact frozen family only through G_13",
+        "first canonical UNSAT parameter pair v=1,m=2",
+        "full unrestricted cover model with C013 quotient lifting"
+      ],
+      "competing_diagnoses": [
+        "the first semantic slice is too small but later levels generate many types",
+        "fixed header placement causes one-row concentration",
+        "a compiled or multiplexed cover may remain small even after type growth"
+      ],
+      "selected_diagnosis": "At the first UNSAT-capable level, fixed header placement concentrates every canonical obstruction into one row; exact twin compression reduces the full graph to a five-type quotient with a two-pair cover. Later levels remain unknown.",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/05_falsification/C042_ACTIVATION_QUOTIENT_RECEIPT_20260812.json",
+        "research/real_math/millennium/p_vs_np/05_falsification/C042_QUOTIENT_PAIR_WITNESS_RECEIPT_20260812.json",
+        "research/real_math/millennium/p_vs_np/04_candidates/C042_ACTIVATION_QUOTIENT_RESULT_20260812.md"
+      ],
+      "falsifier_or_attempt": "classify exact row and column complement neighborhoods, form the twin quotient, and cover every quotient-relevant semi-filter with two explicit legal pairs",
+      "observed_result": "G_9 and G_13 both lift from quotients of exact full-cover number 2, so neither early level supplies cover-growth signal",
+      "local_repair_attempts": [
+        "track neighborhood-type growth before any later LP",
+        "reject expensive evaluation whenever the smaller type count already gives an O(log N) source-valid upper bound"
+      ],
+      "timestamp": "2026-08-12T12:17:00Z",
+      "artifact_hash": "sha256:eb8ac26d36d8ac38140f1448cd9c9d2f51094132cf69a3cbf36a84ee4d4e0ade"
+    }
+  ],
+  "links": [
+    {
+      "source_id": "F-C042-FIRST-UNSAT-QUOTIENT-COMPRESSION",
+      "target_id": "F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION",
+      "relation": "SHARES_RESIDUAL_WITH",
+      "rationale": "Both exact finite failures show that locally new/relevant semantic objects can remain globally coverable by reused legal pairs or few quotient types; this is a conditional warning, not a common asymptotic cause.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/05_falsification/C041_FX_SAT_EXACT_GATE_RECEIPT_20260812.json",
+        "research/real_math/millennium/p_vs_np/05_falsification/C042_QUOTIENT_PAIR_WITNESS_RECEIPT_20260812.json"
+      ]
+    }
+  ]
+}

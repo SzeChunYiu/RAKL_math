@@ -1,0 +1,46 @@
+{
+  "target_atom_id": "O9d12a2a1b-C043",
+  "target_context_hash": "sha256:fff65cd0b2cc08bf7aaa1923fb0088ae8eca4dbd844b927eb2f6f05b56479ae8",
+  "tool_inventory_snapshot_hash": "sha256:a30dd02053ad7be79a0ca04378ebb345e9cb5032f1d0d41a670f9f94ca702e16",
+  "failure_lattice_snapshot_hash": "sha256:b8ce3a7ecc03266b2c0260eced329d138d8561e6035a5b487b4402813cdca4e1",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "exact canonical-length classification",
+    "one-variable ordered-clause UNSAT classification",
+    "prefix/suffix residual-language equivalence",
+    "exact twin quotient and type-class rectangle upper bound",
+    "uniform residual-class growth recurrence"
+  ],
+  "relevant_tool_ids": [
+    "T-PNP-EXACT-NEIGHBORHOOD-TYPE-UPPER-BOUND"
+  ],
+  "relevant_failure_ids": [
+    "F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION",
+    "F-C042-SYNTAX-ACTIVATION-NO-UNSAT-SIGNAL",
+    "F-C042-FIRST-UNSAT-QUOTIENT-COMPRESSION"
+  ],
+  "selected_tool_ids": [
+    "T-PNP-EXACT-NEIGHBORHOOD-TYPE-UPPER-BOUND"
+  ],
+  "tool_applicability_notes": [
+    "Applicable with target validation: the target is the same frozen decoder and full associated-graph cover model, but the first multi-row semantic batch requires a fresh exact type proof and old-band collision check."
+  ],
+  "failure_reuse_notes": [
+    "C042 reuse is DIFFERENCE_WITNESSED only by the structural coordinate being tested: multiple active row labels may now occur. The old quotient-compression falsifier must run first.",
+    "C041 warns that persistence/newness does not imply fresh cover capacity; no LP or positive recurrence is authorized by a finite type split.",
+    "The syntax-versus-obstruction lesson requires length and equality-case proof before inspecting the next batch."
+  ],
+  "unresolved_warnings": [
+    "No uniform theorem controls residual-class growth at later levels.",
+    "A larger quotient can still have a constant multiplexed cover.",
+    "Finite type growth has no circuit or P-versus-NP authority.",
+    "Same-context review is not independent peer review."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C043_TOOL_SNAPSHOT_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C043_FAILURE_LATTICE_SNAPSHOT_20260812.json",
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C043_MATH_CONTEXT_FIBER_20260812.json"
+  ],
+  "artifact_hash": "sha256:b9cf97081bff92e197d265eb1bda5de2a6ddbda6225f3bc1162554b0164f9fdb"
+}

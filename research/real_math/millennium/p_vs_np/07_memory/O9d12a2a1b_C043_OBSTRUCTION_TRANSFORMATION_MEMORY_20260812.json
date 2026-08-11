@@ -1,0 +1,90 @@
+{
+  "memory_id": "OTM-PNP-C043-20260812",
+  "source_universe": [
+    "RAKL_math PNP C013 quotient history",
+    "RAKL_math PNP C041-C042 frozen decoder history",
+    "finite residual-equivalence same-domain analogues"
+  ],
+  "episodes": [
+    {
+      "episode_id": "E-PNP-C042-EXACT-NEIGHBORHOOD-QUOTIENT",
+      "source_domain": "mathematics",
+      "source_context": "C042 exact G9/G13 semantic activation and twin-quotient collapse",
+      "source_obstruction": {
+        "obstruction_id": "OBS-PNP-C042-QUOTIENT-COLLAPSE",
+        "domain": "mathematics",
+        "roles": [
+          "encoded word",
+          "row label",
+          "complement neighborhood",
+          "cover certificate"
+        ],
+        "relations": [
+          "word splits into row prefix and suffix",
+          "row label indexes a complement star",
+          "identical stars define quotient types"
+        ],
+        "constraints": [
+          "exact frozen decoder",
+          "finite parent level",
+          "associated graph polarity"
+        ],
+        "failure_mechanisms": [
+          "early semantic signal can remain concentrated in few neighborhood types"
+        ],
+        "invariants_to_preserve": [
+          "exact decoder language",
+          "complement/graph polarity",
+          "cover lift direction"
+        ],
+        "desired_transition": [
+          "locate first multiple-row UNSAT layer",
+          "expose exact row-type count",
+          "produce source-valid upper bound before lower-bound search"
+        ],
+        "forbidden_losses": [
+          "finite quotient extrapolated to asymptotic"
+        ]
+      },
+      "transformation_name": "exact neighborhood quotient before lower-bound search",
+      "operation": "partition both sides by full complement-neighborhood equality, prove block constancy and lift a quotient/type-class cover",
+      "preconditions": [
+        "exact quotient classes have constant adjacency on each class product",
+        "class maps are surjective and all classes nonempty",
+        "the full associated-graph cover lifts from the quotient in the upper-bound direction"
+      ],
+      "resulting_relations": [
+        "locate first multiple-row UNSAT layer",
+        "expose exact row-type count",
+        "produce source-valid upper bound before lower-bound search"
+      ],
+      "preserved_invariants": [
+        "exact decoder language",
+        "complement/graph polarity",
+        "cover lift direction"
+      ],
+      "relaxed_or_broken_constraints": [],
+      "known_breakpoints": [
+        "adjacency varies inside a proposed class",
+        "an asserted type omits accumulated old-band neighbors",
+        "later quotient size or cover growth is uncontrolled"
+      ],
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/04_candidates/C042_ACTIVATION_QUOTIENT_RESULT_20260812.md",
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C042_STRUCTURAL_QUOTIENT_HOSTILE_REVIEW_20260812.json"
+      ],
+      "authority": "VERIFIED_LOCAL",
+      "artifact_hash": "sha256:9686dcda77b4245b18d07683ed559375b52f695e6f12e0b18c95fb21811765b7",
+      "lineage_ids": [
+        "C013",
+        "C042"
+      ]
+    }
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C043_MATH_CONTEXT_FIBER_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C043_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "research/real_math/millennium/p_vs_np/04_candidates/C042_ACTIVATION_QUOTIENT_RESULT_20260812.md"
+  ],
+  "snapshot_hash": "eebdc88774cea55aeab57efdc8a5079abe35846c73880ff8a3b1ed85d5224b2a"
+}
