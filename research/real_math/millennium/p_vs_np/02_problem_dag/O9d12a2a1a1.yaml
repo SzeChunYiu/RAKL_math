@@ -1,0 +1,33 @@
+atom_id: O9d12a2a1a1
+parent_atom_id: O9d12a2a1a
+opened_by: C025
+status: INTERFACE_AUDIT_NEGATIVE_REATOMIZE_REQUIRED
+root_authority: NONE
+objective: >-
+  Classify the source-defined minimal preservation closure G_w(Lambda) as a
+  higher-order noncanonical state before proposing any lower-bound invariant.
+difference_witness_required:
+  from: F-C025-FIRST-ORDER-CANONICAL-COLLAPSE
+  criterion: >-
+    Exhibit source-exact cases with identical C025-level generator-signature
+    information but different derived closure activation, then test whether the
+    difference survives fusion-reuse and cheap-target controls.
+interface_audit_result:
+  result_id: O9d12a2a1a1-L1
+  verdict: NO_DERIVED_DIFFERENCEWITNESS_WITHIN_NORMALIZED_GNEQ
+  reason: >-
+    Under the only exact C025 signature scope, every normalized pair is a
+    partition, so E_i intersect H_i is empty and source closure activation is
+    exactly coordinatewise XOR of the two endpoint signatures.
+  raw_base_difference_warning: >-
+    Different singleton generator identities can change the base closure under
+    signature collisions, but this is not a derived-intersection coordinate.
+  failure_id: F-O9D12A2A1A1-PARTITION-CLOSURE-COLLAPSE
+hostile_controls:
+  F-C010-MULTIPLEXING: NOT_REACHED_NO_DIFFERENCEWITNESS
+  F-C021-CHEAP-ADJACENCY: NOT_REACHED_NO_TARGET
+  F-C023-SCALAR-COLLAPSE: NOT_APPLICABLE_NO_SCORE
+  F-C024-FRACTIONAL-INTEGRALITY-GAP: INHERITED
+next_action: OPEN_CHILD_O9d12a2a1a1a_WITH_FRESH_CONTEXT
+candidate_generation: BLOCKED
+root_status: OPEN_NO_SOLUTION_CERTIFICATE
