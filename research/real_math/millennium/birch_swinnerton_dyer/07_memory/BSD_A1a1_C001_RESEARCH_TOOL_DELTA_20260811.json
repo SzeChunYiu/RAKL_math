@@ -1,0 +1,60 @@
+{
+  "tools": [
+    {
+      "tool_id": "T-BSD-ANTICYCLOTOMIC-FUNCTIONAL-EQUATION-PARITY",
+      "name": "Anticyclotomic theta functional-equation parity screen",
+      "kind": "source_bound_iwasawa_parity_lemma",
+      "abstraction": "For a nonzero one-variable Iwasawa element whose inversion functional equation has sign epsilon and a multiplicative group-like factor of augmentation one, pass to the first nonzero augmentation-graded piece: inversion contributes (-1)^r, so the vanishing-order parity must match epsilon when 2 is invertible.",
+      "source_atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "source_candidate_id": "BSD-A1a1-C001",
+      "source_result_ids": [
+        "BSD-A1a1-C001-FUNCTIONAL-EQUATION-PARITY"
+      ],
+      "source_context_hash": "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d",
+      "authority": "VERIFIED_LOCAL",
+      "preconditions": [
+        "one-variable Iwasawa algebra Lambda=O[[Gamma]] with Gamma isomorphic to Z_p and augmentation ideal J",
+        "2 is a unit in O",
+        "Theta is nonzero with finite r=ord_J Theta",
+        "the involution is induced by gamma -> gamma^{-1}",
+        "Theta^* = epsilon * Theta * u with epsilon in {+1,-1} and u congruent to 1 modulo J"
+      ],
+      "structural_signature": [
+        "exact vanishing order is measured in powers of the augmentation ideal",
+        "a functional equation relates inversion of the same element to itself times a sign and augmentation-one unit",
+        "the first graded piece is torsion-free enough that multiplication by 2 cannot kill a nonzero leading class"
+      ],
+      "operation": "Take the nonzero class of Theta in J^r/J^(r+1). Replace the inversion by multiplication by (-1)^r on the graded piece and replace u by 1. Conclude (-1)^r=epsilon. In the BSD source instantiation epsilon=+1, hence r is even; combine separately with source-proved r>0.",
+      "guaranteed_effects": [
+        "rules out the parity opposite to the functional-equation sign within the registered algebraic scope",
+        "for the Castella-Hsieh trivial-character theta element with root sign +1 and good p>3, upgrades r>0 to r>=2"
+      ],
+      "non_guarantees": [
+        "does not prove r=2",
+        "does not bound r from above",
+        "does not prove Mordell-Weil rank, Selmer dimension, Sha finiteness, regulator nonvanishing or any BSD leading-term identity",
+        "does not apply when the functional-equation normalization/sign or augmentation-one factor is not established",
+        "does not establish novelty"
+      ],
+      "validation_obligations": [
+        "bind the exact functional equation and its normalization to the same theta element whose augmentation order is measured",
+        "verify the group-like/unit factor has augmentation one",
+        "verify 2 is invertible and Theta is nonzero",
+        "separate parity from exact-order and arithmetic-rank conclusions",
+        "rerun the sign-minus-one, p=2 and zero-element hostile controls before reuse in a changed context"
+      ],
+      "evidence_pointers": [
+        "Chida-Hsieh, arXiv:1204.2427, Theorem B / Theorem 4.8",
+        "Castella-Hsieh, Forum Math. Sigma 10 (2022), Section 5.3, DOI 10.1017/fms.2021.85",
+        "research/real_math/millennium/birch_swinnerton_dyer/04_candidates/BSD_A1a1_C001_FUNCTIONAL_EQUATION_PARITY_20260811.md",
+        "tests/math_applications/test_bsd_a1a1_c001_functional_equation_parity.py"
+      ],
+      "known_failure_ids": [],
+      "successful_reuse_ids": [],
+      "proof_backing": [
+        "source_bound_associated_graded_derivation"
+      ],
+      "artifact_hash": "sha256:9cc80b546e2f2179882f24dea61de61963ca5900e14f54349248af4425c6b2d8"
+    }
+  ]
+}
