@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/migration-integrity-repair-receipt.schema.json",
+  "title": "RAKL Math migration integrity repair receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "recorded_at",
+    "application_repository",
+    "framework_pin",
+    "source_provenance",
+    "subject",
+    "observed_result",
+    "residual_signature",
+    "diagnosis",
+    "repair",
+    "evidence_pointers",
+    "failure_lattice_relations",
+    "next_discriminator",
+    "reusable_lesson_candidate",
+    "authority",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"type": "string", "minLength": 1},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "application_repository": {"$ref": "#/$defs/repositoryCommit"},
+    "framework_pin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "commit"],
+      "properties": {
+        "url": {"type": "string", "format": "uri"},
+        "commit": {"$ref": "#/$defs/sha1"}
+      }
+    },
+    "source_provenance": {"type": "object"},
+    "subject": {"type": "object"},
+    "observed_result": {"type": "object"},
+    "residual_signature": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "diagnosis": {"type": "object"},
+    "repair": {"type": "object"},
+    "evidence_pointers": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "failure_lattice_relations": {"type": "array", "items": {"type": "object"}},
+    "next_discriminator": {"type": "string", "minLength": 1},
+    "reusable_lesson_candidate": {"type": "object"},
+    "authority": {"type": "string", "minLength": 1},
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha1": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "repositoryCommit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "base_commit"],
+      "properties": {
+        "url": {"type": "string", "format": "uri"},
+        "base_commit": {"$ref": "#/$defs/sha1"}
+      }
+    }
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "RAKL-MATH-MIGRATION-INTEGRITY-O9d12a2a1a-TRACE-20260811",
+  "recorded_at": "2026-08-11T07:42:40+00:00",
+  "application_repository": {
+    "url": "https://github.com/SzeChunYiu/RAKL_math",
+    "base_commit": "7fbe7eaeda92644e9e5a2305534eb99ff15bf356"
+  },
+  "framework_pin": {
+    "url": "https://github.com/SzeChunYiu/RAKL",
+    "commit": "7853ec0c4ff8f862359835bca1af1d934bfbd887"
+  },
+  "source_provenance": {
+    "repository_url": "https://github.com/SzeChunYiu/RAKL",
+    "source_ref": "research/pnp-o9d12a2a1a-joint-consistency-context-20260811",
+    "source_commit": "901307e4fb75e92f2ed3a547dcc696533ae52f2e",
+    "source_path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a_PRE_CANDIDATE_TRACE_20260811.json",
+    "source_file_sha256": "sha256:4842f757e095af3981e9261f76316983ca18c938ef4ba5f9f3d17f251e292094",
+    "migration_byte_preservation": "VERIFIED_EQUAL_TO_SOURCE_COMMIT"
+  },
+  "subject": {
+    "atom_id": "O9d12a2a1a",
+    "context_packet_hash": "sha256:daa6e99832bd994ff5b081b861521f7465ef37b468d274eb08c93e0001358b89",
+    "candidate_identity": null,
+    "original_trace_id": "TRACE-O9d12a2a1a-STRICT-20260811"
+  },
+  "observed_result": {
+    "status": "FAIL_HASH_INTEGRITY",
+    "event_audit": [
+      {
+        "event_id": "O9d12a2a1a-E01",
+        "stored_artifact_hash": "sha256:d30178927d02b5696798b598920394819484a2f9f8a9ff5c8825f32b36f3f5f9",
+        "computed_canonical_hash": "sha256:e02c92a7ab419d01e31d7ea5189e07d004c11c46546cebc1e29ca8a9fbb9e898",
+        "artifact_hash_valid": false,
+        "previous_link_valid": true
+      },
+      {
+        "event_id": "O9d12a2a1a-E02",
+        "stored_artifact_hash": "sha256:e99c00852d8bb879111a042a8e3f6938c16788c002421000378360aebc05e05d",
+        "computed_canonical_hash": "sha256:5642e6b24f0f5138061c6e1da7250d31e45f637dab32088c601ad2ba33a4cd47",
+        "artifact_hash_valid": false,
+        "previous_link_valid": true
+      },
+      {
+        "event_id": "O9d12a2a1a-E03",
+        "stored_artifact_hash": "sha256:20098b2b5d84eaf46042205d8f560b1b0265f74ec1b080ca831bfc3d048def62",
+        "computed_canonical_hash": "sha256:be2109dd042f45140a5ba3bab180113f5d97ceec5ea40c13e96cb96714c8b15a",
+        "artifact_hash_valid": false,
+        "previous_link_valid": true
+      },
+      {
+        "event_id": "O9d12a2a1a-E04",
+        "stored_artifact_hash": "sha256:782fa94ef1af09327aa6df77f811033219134b8b7d35cb66e2d54634463b7913",
+        "computed_canonical_hash": "sha256:d9cc6bfabe0d04ca65f274cc0844319d3ba1b16335098ead192a9e7c0b01c0f5",
+        "artifact_hash_valid": false,
+        "previous_link_valid": true
+      },
+      {
+        "event_id": "O9d12a2a1a-E05",
+        "stored_artifact_hash": "sha256:316e6e0c73d6b30f2eec29dd1a0459b42d3b3686bab48205a89961169676ac67",
+        "computed_canonical_hash": "sha256:b21a527610f5acc16b26db68eb925d66a2fd2622ad7be18f6600be12e952f282",
+        "artifact_hash_valid": false,
+        "previous_link_valid": true
+      },
+      {
+        "event_id": "O9d12a2a1a-E06",
+        "stored_artifact_hash": "sha256:998766c10ee91223aa8a743459a58b444ea88dce8ca4fb13f3a88c3e119cdf1a",
+        "computed_canonical_hash": "sha256:d8aa4ea3a6a3edf07b5628e0f3e8199569b41bbf6fcff784491121c5cf7d6c9d",
+        "artifact_hash_valid": false,
+        "previous_link_valid": true
+      },
+      {
+        "event_id": "O9d12a2a1a-E07",
+        "stored_artifact_hash": "sha256:720c38501a583617d54269824e27691d0499cd5f2ead6b338cf13f90fad74190",
+        "computed_canonical_hash": "sha256:720c38501a583617d54269824e27691d0499cd5f2ead6b338cf13f90fad74190",
+        "artifact_hash_valid": true,
+        "previous_link_valid": true
+      }
+    ],
+    "invalid_event_ids": [
+      "O9d12a2a1a-E01",
+      "O9d12a2a1a-E02",
+      "O9d12a2a1a-E03",
+      "O9d12a2a1a-E04",
+      "O9d12a2a1a-E05",
+      "O9d12a2a1a-E06"
+    ],
+    "valid_event_ids": [
+      "O9d12a2a1a-E07"
+    ],
+    "stored_chain_links_valid": true
+  },
+  "residual_signature": [
+    "artifact_hash_mismatch",
+    "stored_hash_chain_links_preserved",
+    "semantic_event_order_preserved"
+  ],
+  "diagnosis": {
+    "status": "BOUNDED_UNRESOLVED_CAUSE",
+    "ruled_out": [
+      "RAKL_math migration byte mutation"
+    ],
+    "competing_diagnoses": [
+      "source event payloads changed after E01-E06 hashes were frozen",
+      "E01-E06 hashes were computed using a noncanonical payload/serializer",
+      "source packet was assembled from semantically similar but hash-incompatible trace generations"
+    ],
+    "broken_assumption": "stored artifact_hash equals the current canonical JSON hash of the exact event payload with artifact_hash blank",
+    "scope": "O9d12a2a1a migrated pre-candidate trace only; no mathematical proposition or candidate was evaluated"
+  },
+  "repair": {
+    "method": "COPY_SEMANTICS_RECOMPUTE_CANONICAL_HASH_CHAIN_AS_NEW_TRACE_ID",
+    "original_preserved": true,
+    "repaired_path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a_PRE_CANDIDATE_TRACE_MIGRATION_REPAIRED_20260811.json",
+    "repaired_file_sha256": "sha256:816a08928a81d81dfe615935e3cd1da9ef185144525322b277d21012009643d0",
+    "repaired_trace_id": "TRACE-O9d12a2a1a-STRICT-MIGRATION-REPAIRED-20260811",
+    "supersedes_for_executable_gate_only": "TRACE-O9d12a2a1a-STRICT-20260811",
+    "semantic_fields_changed": [],
+    "identity_fields_changed": [
+      "trace_id",
+      "entries[*].artifact_hash",
+      "entries[*].previous_event_hash"
+    ]
+  },
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a_PRE_CANDIDATE_TRACE_20260811.json",
+    "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a_PRE_CANDIDATE_TRACE_MIGRATION_REPAIRED_20260811.json",
+    "migration/RAKL_FINAL_SOURCE_OVERLAY_PROVENANCE.md",
+    "tests/math_applications/test_pnp_o9d12a2a1a_trace_migration_integrity.py"
+  ],
+  "failure_lattice_relations": [
+    {
+      "relation": "PREVENTS",
+      "target": "strict_pre_candidate_trace_gate_until_superseded"
+    },
+    {
+      "relation": "INFORMS",
+      "target": "cross_repository_feedback_bundle_hash_validation"
+    }
+  ],
+  "next_discriminator": "Run the current pinned RAKL audit_pre_candidate_trace on the repaired trace while separately asserting the original trace remains hash-invalid and byte-identical to its recorded source.",
+  "reusable_lesson_candidate": {
+    "status": "PROPOSAL_ONLY_PENDING_CROSS_PROBLEM_RECURRENCE_AND_FRAMEWORK_ASSURANCE",
+    "preconditions": [
+      "cross-repository artifact migration",
+      "canonical hash-chained receipts"
+    ],
+    "guaranteed_effects": [
+      "byte equality distinguishes migration mutation from source-integrity failure",
+      "superseding identities preserve negative history while restoring executable auditability"
+    ],
+    "non_guarantees": [
+      "does not identify the exact source-side mutation cause",
+      "does not validate mathematical content",
+      "does not authorize theorem or novelty claims"
+    ],
+    "known_failures": [
+      "in-place rehashing erases the failed identity",
+      "accepting stored links alone misses canonically invalid event payloads"
+    ],
+    "target_validation_obligations": [
+      "known-answer valid bundle passes",
+      "planted payload/hash mutation fails",
+      "structurally unverifiable source binding returns CANNOT_CHECK"
+    ]
+  },
+  "authority": "MIGRATION_INTEGRITY_REPAIR_ONLY / ORIGINAL_NEGATIVE_HISTORY_PRESERVED / NO_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:68b3ae8ab49aecf7295d7982409ed8f0df3e281b24286e423137ffd08c474b3c"
+}
