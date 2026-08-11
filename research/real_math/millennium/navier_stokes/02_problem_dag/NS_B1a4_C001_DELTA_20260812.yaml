@@ -1,0 +1,53 @@
+schema_version: navier-stokes-dag-delta-v3-proposal-shadow
+date: 2026-08-12
+framework_sha: 2f722d42db240538e1bdec146aebc7e9d5eeb8a6
+application_base_sha: a7301f0f0e2cab2750ac6e923efe18b5750b5af6
+parent_atom: NS-B1a4
+completed_calibration:
+  id: NS-B1a4-C001
+  outcome: EXISTING_LEDGER_SIGN_INSUFFICIENT_ROUTE_PRUNING
+  authority: LOCAL_ROUTE_PRUNING_ONLY
+  statement: >-
+    The existing unsigned finite-I-type local magnitude ledger, standard local-energy
+    identity, and pressure localization do not by themselves force nonpositive
+    fixed-region local kinetic-energy derivative; an exact smooth p=0 NSE shear
+    has strictly increasing energy in every fixed ball.
+  failure_id: F-NS-B1a4-UNSIGNED-LOCAL-ENERGY-NO-SIGN
+  obstruction_id: O-NS-B1a4-SIGNED-FLUX-COORDINATE
+  difference_witness: >-
+    The calibration is not globally finite energy, not globally bounded, and not a
+    finite-I mild bounded ancient target; no global finite-I theorem is refuted.
+opened_atoms:
+  - id: NS-B1a4a
+    title: source-valid signed flux/correlation trajectory coordinate
+    status: OPEN
+    goal: >-
+      Identify or derive a dimensionless signed/correlated local-energy transfer
+      observable in the same whole-space finite-I Type-I class that can control
+      repeated threshold recrossings without relying on unsigned A+C+D+E alone.
+    exact_interfaces:
+      - scaling: must be invariant or have an explicitly controlled scaling law
+      - local_energy: derive from the exact NSE/local-energy identity, not a proxy equation
+      - pressure: separate local Calderon-Zygmund, harmonic, and far-field contributions
+      - compactness: state whether the observable survives the registered local strong-L3/weak-pressure limit
+      - moving_centers: control translation/dilation or explicitly bind a profile-adapted center
+      - gluing: do not infer ancient/global rigidity until the consumer theorem input is matched
+    counterexample_first:
+      - recover the p=0 shear calibration and explain why the new observable escapes it
+      - test sign reversal/recrossing under exact smooth shear superpositions on bounded cylinders
+      - reject any candidate whose sign comes only from absolute magnitude estimates
+    success_contract:
+      - exact observable and units/scaling frozen
+      - source-valid evolution/variation inequality proved
+      - a quantitative no-recrossing consequence proved in its exact scope
+      - DifferenceWitness and far-field/interface audit pass
+    non_success:
+      - another O(I) absolute shell bound
+      - pressure magnitude/localization without a signed correlation
+      - numerics-only evidence
+      - local lemma silently promoted to global ancient rigidity
+unchanged_open:
+  - NS-B1a3a
+  - Type-II lane
+  - Clay root
+root_status: OPEN_NO_SOLUTION_CERTIFICATE
