@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "RAKL-MATH-TASK-EPISODE-INVENTORY-EXTENSION-H4D1B-20260811",
+  "recorded_at": "2026-08-11T15:24:37Z",
+  "object": "post-PR114 TaskEpisode inventory extension for the exact H4d1b application episode",
+  "qoi": "Can the new episode be registered without rewriting the frozen 19-object migration receipt, and does it satisfy the exact pinned TaskEpisode schema/runtime/hash contract?",
+  "parent_inventory": {
+    "receipt_path": "receipts/framework-pr153-hash-contract-migration-20260811.json",
+    "receipt_artifact_hash": "sha256:a607a86135e4acbfeb551af86e8dd10febfeb0a3d461daf53c4862339e5c0f77",
+    "receipt_blob_at_merge": "92135fdc9db0f37679fa5656e7052c7e02e00ec3",
+    "receipt_file_sha256": "sha256:4f431762422e5746966ea55ab2b1da3d9c9c60ce263aebfa688a44dc5e629594",
+    "merge_commit": "b18fcd35855d67962e28036f4a445ab24d0c4406",
+    "frozen_episode_count": 19
+  },
+  "source_binding": {
+    "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "current_main_at_audit": "111a3f95c72b0a418f968708bd3eda77ef98bccf",
+    "current_tree": "e440395e0b1f757fa432c11d80c881afbaa0e26a",
+    "introduction_commit": "b4af3fa49a572dd0fc3bd45d6ff09135f7065c17",
+    "introduction_tree": "bf085a49375e40fb20d52accbb1767c9c6f454af",
+    "path": "research/real_math/millennium/hodge/deformation/07_memory/H4d1b_C001_TASK_EPISODE_20260811.json",
+    "git_blob_sha": "f740d2116f694f3058c2cd85c3bb8a74f8f6bce1",
+    "raw_sha256": "b1a03d026e77b98283cdc7aee4637405929dcabc442d7927ef621eb8630d8658"
+  },
+  "framework_binding": {
+    "commit": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+    "task_episode_schema_blob": "aed1055565062a6adefe24eb48331e314d01adec",
+    "experience_substrate_blob": "814aa24788d796b9cec7e35b6373b5d5e7ffbc77"
+  },
+  "classification": "POST_MIGRATION_CURRENT_VALID_RAW_EXACT",
+  "runtime_binding": {
+    "stored_hash": "8925f83f6f0a7f2536b26408569c178147dd47f2b5e830b18747fb7d17262396",
+    "computed_runtime_digest": "8925f83f6f0a7f2536b26408569c178147dd47f2b5e830b18747fb7d17262396",
+    "schema_verdict": "PASS",
+    "runtime_verdict": "PASS",
+    "runtime_reasons": []
+  },
+  "triggering_failure": {
+    "run_id": 31506541609,
+    "head_sha": "111a3f95c72b0a418f968708bd3eda77ef98bccf",
+    "passed": 418,
+    "failed": 1,
+    "failure_test": "tests/math_applications/test_framework_pr153_hash_contract_migration.py::test_episode_inventory_is_the_exact_frozen_19_object_audit",
+    "failure_reason": "new strict-valid H4d1b episode was not registered as a post-migration inventory extension"
+  },
+  "disposition": {
+    "parent_receipt_modified": false,
+    "source_episode_modified": false,
+    "extension_registered": true,
+    "main_ci_repair_required": true
+  },
+  "authority_contract": {
+    "grants_mathematical_result": false,
+    "grants_proof_authority": false,
+    "grants_novelty_authority": false,
+    "grants_millennium_root_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false
+  },
+  "evidence_pointers": [
+    "receipts/framework-pr153-hash-contract-migration-20260811.json",
+    "research/real_math/millennium/hodge/deformation/07_memory/H4d1b_C001_TASK_EPISODE_20260811.json",
+    "https://github.com/SzeChunYiu/RAKL_math/actions/runs/31506541609",
+    "tests/math_applications/test_framework_episode_inventory_extension.py"
+  ],
+  "artifact_hash": "sha256:5e39ced6010ed4d8800b8cb34585184389956d68d194fdea533588aba2eb9351"
+}

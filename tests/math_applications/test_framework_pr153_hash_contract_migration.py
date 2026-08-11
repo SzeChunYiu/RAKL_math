@@ -19,6 +19,12 @@ ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK = ROOT / "framework/RAKL"
 RECEIPT = ROOT / "receipts/framework-pr153-hash-contract-migration-20260811.json"
 SCHEMA = ROOT / "schemas/framework-pr153-hash-contract-migration.schema.json"
+INVENTORY_EXTENSION_REGISTRY = (
+    (
+        ROOT / "receipts/framework-episode-inventory-extension-h4d1b-20260811.json",
+        ROOT / "schemas/framework-episode-inventory-extension.schema.json",
+    ),
+)
 OLD_FRAMEWORK = "bd1a2768f0f474ff44ffa25243241f94bfaf6466"
 TARGET_FRAMEWORK = "9027cc6beab7e935d714bbdf8e902b89b50caaa8"
 PROVISIONAL_FRAMEWORK = "3d4dde94ed8d6be04641b96ecf89389de55b61ce"
@@ -84,6 +90,93 @@ def _pointer(document: dict, pointer: str) -> dict:
         value = value[token]
     assert isinstance(value, dict)
     return value
+
+
+def _validated_inventory_extension_paths() -> set[str]:
+    paths: set[str] = set()
+    strict_schema = _schema_at(TARGET_FRAMEWORK, "task-episode.schema.json")
+    for receipt_path, schema_path in INVENTORY_EXTENSION_REGISTRY:
+        receipt = _load(receipt_path)
+        schema = _load(schema_path)
+        Draft202012Validator.check_schema(schema)
+        Draft202012Validator(
+            schema, format_checker=FormatChecker()
+        ).validate(receipt)
+        assert receipt["artifact_hash"] == _canonical_hash(receipt)
+        assert all(value is False for value in receipt["authority_contract"].values())
+
+        parent = receipt["parent_inventory"]
+        assert parent["merge_commit"] == "b18fcd35855d67962e28036f4a445ab24d0c4406"
+        parent_line = _git(ROOT, "rev-list", "--parents", "-n", "1", parent["merge_commit"])
+        assert isinstance(parent_line, str) and len(parent_line.split()) == 3
+        parent_raw = _git(
+            ROOT,
+            "show",
+            f'{parent["merge_commit"]}:{parent["receipt_path"]}',
+            binary=True,
+        )
+        assert isinstance(parent_raw, bytes)
+        assert parent["receipt_blob_at_merge"] == _git(
+            ROOT, "rev-parse", f'{parent["merge_commit"]}:{parent["receipt_path"]}'
+        )
+        assert parent["receipt_file_sha256"] == "sha256:" + hashlib.sha256(parent_raw).hexdigest()
+        assert json.loads(parent_raw)["artifact_hash"] == parent["receipt_artifact_hash"]
+
+        source = receipt["source_binding"]
+        failure = receipt["triggering_failure"]
+        assert source["repository_url"] == "https://github.com/SzeChunYiu/RAKL_math.git"
+        assert source["repository_url"] == _load(RECEIPT)["application_repository"]["repository"]
+        assert source["current_main_at_audit"] == failure["head_sha"]
+        assert _git(
+            ROOT,
+            "merge-base",
+            "--is-ancestor",
+            source["introduction_commit"],
+            source["current_main_at_audit"],
+        ) == ""
+        assert source["introduction_tree"] == _git(
+            ROOT, "rev-parse", f'{source["introduction_commit"]}^{{tree}}'
+        )
+        assert source["current_tree"] == _git(
+            ROOT, "rev-parse", f'{source["current_main_at_audit"]}^{{tree}}'
+        )
+        intro_blob = _git(
+            ROOT, "rev-parse", f'{source["introduction_commit"]}:{source["path"]}'
+        )
+        current_blob = _git(
+            ROOT, "rev-parse", f'{source["current_main_at_audit"]}:{source["path"]}'
+        )
+        assert intro_blob == current_blob == source["git_blob_sha"]
+        raw = _git(
+            ROOT,
+            "show",
+            f'{source["current_main_at_audit"]}:{source["path"]}',
+            binary=True,
+        )
+        assert isinstance(raw, bytes)
+        assert raw == (ROOT / source["path"]).read_bytes()
+        assert hashlib.sha256(raw).hexdigest() == source["raw_sha256"]
+
+        framework = receipt["framework_binding"]
+        assert framework["commit"] == TARGET_FRAMEWORK
+        assert framework["task_episode_schema_blob"] == _git(
+            FRAMEWORK, "rev-parse", f'{TARGET_FRAMEWORK}:schemas/task-episode.schema.json'
+        )
+        assert framework["experience_substrate_blob"] == _git(
+            FRAMEWORK, "rev-parse", f'{TARGET_FRAMEWORK}:src/rakl/experience_substrate.py'
+        )
+        value = json.loads(raw)
+        Draft202012Validator(
+            strict_schema, format_checker=FormatChecker()
+        ).validate(value)
+        episode = _episode(value)
+        digest = hashlib.sha256(episode_content_bytes(episode)).hexdigest()
+        assert validate_episode(episode) == ()
+        assert receipt["runtime_binding"]["stored_hash"] == value["artifact_hash"]
+        assert receipt["runtime_binding"]["computed_runtime_digest"] == digest
+        paths.add(source["path"])
+    assert len(paths) == len(INVENTORY_EXTENSION_REGISTRY)
+    return paths
 
 
 def test_receipt_schema_hash_framework_pin_and_non_authority_are_exact() -> None:
@@ -188,7 +281,8 @@ def test_episode_inventory_is_the_exact_frozen_19_object_audit() -> None:
         if isinstance(value, dict) and "episode_id" in value:
             discovered.add(str(path.relative_to(ROOT)))
     successor_paths = {item["successor_path"] for item in receipt["successor_bindings"]}
-    assert discovered == expected_paths | successor_paths
+    extension_paths = _validated_inventory_extension_paths()
+    assert discovered == expected_paths | successor_paths | extension_paths
     old_schema = _schema_at(OLD_FRAMEWORK, "task-episode.schema.json")
     new_schema = _schema_at(TARGET_FRAMEWORK, "task-episode.schema.json")
     for item in inventory:
