@@ -1,0 +1,64 @@
+{
+  "episode_id": "EP-NS-B1a3b-GM-GEOMETRIC-CLASSIFICATION-20260811",
+  "task_id": "NS-B1a3b-GM-GEOMETRIC-CLASSIFICATION-20260811",
+  "atom_id": "NS-B1a3b",
+  "context_hash": "sha256:5abea6153d4a3801a8f6637e6dc0e5aafeecefc438981052c5c9b082136818e4",
+  "problem_signature": [
+    "whole-space 3D incompressible Navier-Stokes",
+    "hypothetical Type-I mild blow-up",
+    "scale-critical vorticity-direction coherence on high-vorticity sets",
+    "exact blow-up compactness -> 2D rigidity interface"
+  ],
+  "fibre_snapshot_hash": "sha256:5abea6153d4a3801a8f6637e6dc0e5aafeecefc438981052c5c9b082136818e4",
+  "operator_ids": [
+    "source-signature-interface-audit",
+    "parabolic-scaling-audit",
+    "geometric-rigidity-audit",
+    "contrapositive-classification"
+  ],
+  "action_trace": [
+    "read current RAKL main and freeze v3 context",
+    "retrieve GM Type-I continuous-alignment theorem and scaling-critical grad-zeta corollary",
+    "audit maximum-normalized rescaling and local-uniform velocity/vorticity compactness",
+    "audit high-vorticity threshold transport and direction passage away from zeros",
+    "audit nontriviality of limiting vorticity",
+    "audit constant-direction 3D-to-2D reduction and bounded ancient Liouville step",
+    "derive contrapositive critical-divergence classification",
+    "check finite-I-to-directional-coherence inheritance and retain it as open residual"
+  ],
+  "observation_ids": [
+    "OBS-NS-B1a3b-GM-SCALE-CRITICAL-DIRECTIONAL-CRITERION",
+    "OBS-NS-B1a3b-TYPE-I-CRITICAL-DIVERGENCE-CONTRAPOSITIVE",
+    "OBS-NS-B1a3b-LOCAL-UNIFORM-DIRECTION-PASSAGE",
+    "OBS-NS-B1a3b-FAR-FIELD-NONLOADBEARING",
+    "OBS-NS-B1a3b-FINITE-I-DIRECTION-INHERITANCE-OPEN"
+  ],
+  "verification_ids": [
+    "GM-THM1.1",
+    "GM-PROP2.1",
+    "GM-PROP2.2",
+    "GM-LEMMA2.3",
+    "GM-COR2.6",
+    "GM-REM2.8",
+    "VERIFY-NS-B1a3b-SCALING-THRESHOLD-COVARIANCE",
+    "VERIFY-NS-B1a3b-ROOT-NONPROMOTION"
+  ],
+  "outcome": "PARTIAL_SUCCESS",
+  "residual_signature": [
+    "finite-I does not yet have a proved implication to GM continuous alignment or finite critical grad-zeta integral",
+    "NS-B1a3b1: classify or exclude Type-I-compatible directional-critical angular cascades",
+    "Type-II NS-B2 unchanged"
+  ],
+  "evidence_pointers": [
+    "pre_action_receipt:3b7de31711ce27d4b195fcd146ee5d2794005fc08d8ec62a31629be490e2d748",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3b_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3b_SOURCE_PACKET_20260811.md",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3b_C001_TYPE_I_DIRECTIONAL_CRITICALITY_20260811.md",
+    "research/real_math/millennium/navier_stokes/05_reviews/NS-B1a3b_EXPERT_CONTEXT_REVIEW_20260811.md",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "https://eprints.lib.hokudai.ac.jp/repo/huscap/all/69763/re956.pdf"
+  ],
+  "timestamp": "2026-08-11T15:40:04.717147Z",
+  "cost": 0.0,
+  "artifact_hash": "57547ad622060cb75a038bdcef23895de95ab62a19870769e3c5b4e3fe0abfb3"
+}
