@@ -1,0 +1,19 @@
+{
+  "schema_version": "bsd-obstruction-shadow-v1",
+  "artifact_type": "OBSTRUCTION_SHADOW",
+  "obstruction_id": "O-BSD-A1A1-SELMER-TO-MW-SHA-FAITHFULNESS-R5",
+  "episode_id": "EP-BSD-A1A1-KOLYVAGIN-SELMER-CARRIER-20260811-R5",
+  "authority": "PROPOSAL_SHADOW_OBSTRUCTION_NO_ROOT_AUTHORITY",
+  "obstruction_kind": "LOCAL_TO_GLOBAL_ROOT_FAITHFULNESS_GLUING",
+  "statement": "A lower bound on the Z_p-corank of Sel_{p^infinity}(E/Q) does not imply the same lower bound on rank E(Q), because the p-primary Tate-Shafarevich group can contribute to Selmer corank. Root-faithful extraction requires Sha(E/Q)[p^infinity] finiteness/corank zero or another theorem eliminating the same kernel.",
+  "source_witness": "Jetchev-Lauter-Stein, arXiv:0707.0032v1, Introduction and Corollary 3.5 context.",
+  "not_a_local_failure": "This obstruction is downstream of the scoped Kolyvagin-to-Selmer relation and must be tracked separately from failure to find the direct complex-second-derivative arithmetic object.",
+  "repair_obligations": [
+    "prove Sha[p^infinity] corank zero/finiteness from strictly weaker input than BSD rank",
+    "or construct two independent global Mordell-Weil points directly from the carrier",
+    "then separately obtain a compatible rank upper bound and full leading-term factors"
+  ],
+  "lesson_promotion": "NONE",
+  "timestamp": "2026-08-11T18:41:00Z",
+  "artifact_hash": "sha256:da9c525ccc19d334712b70673231114ddb8ef2101a943e4c78441cd3b3d32901"
+}
