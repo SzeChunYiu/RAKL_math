@@ -48,3 +48,11 @@ hash-chain fields.
 
 Machine receipt:
 `migration/O9d12a2a1a_TRACE_INTEGRITY_REPAIR_RECEIPT_20260811.json`.
+
+## C025 joint-signature checkpoint
+
+`C025` completed the cheapest gate for child atom `O9d12a2a1a` under frozen chronology. In normalized `G_NEQ` cut families, simultaneous full-semi-filter coverage is exactly injectivity of the joint binary generator signatures, giving `ceil(log2 N)` coordinates. Exact source-definition enumeration for `N<=4` found no mismatch, and registered constructions through `N=17` passed.
+
+The same result is negative at the route level: a **cardinality-only** first-order binary-signature argument on `M` distinguished traces is exhausted at `ceil(log2 M)`. This does not rule out realizability-sensitive bounds or higher-order semi-filter closure state. The next child `O9d12a2a1a1` is pre-candidate and must receive a fresh strict context before work continues.
+
+Authority remains `OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE`. The C025 review is same-context, not independent review.

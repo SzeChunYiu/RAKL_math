@@ -1,0 +1,58 @@
+{
+  "tool": {
+    "tool_id": "T-PNP-JOINT-SIGNATURE-CALIBRATION",
+    "name": "Joint binary-signature benchmark calibration",
+    "kind": "correlation_repair_calibration",
+    "abstraction": "Represent one simultaneously selected family of normalized binary decisions by the joint signatures it induces on a frozen witness universe; use injectivity to audit whether the family restores global consistency, then measure the representation capacity separately.",
+    "source_atom_id": "O9d12a2a1a",
+    "source_candidate_id": "C025",
+    "source_result_ids": [
+      "C025-L1",
+      "C025-C1",
+      "C025-JOINT-SIGNATURE-CALIBRATION-20260811"
+    ],
+    "source_context_hash": "sha256:daa6e99832bd994ff5b081b861521f7465ef37b468d274eb08c93e0001358b89",
+    "authority": "VERIFIED_LOCAL",
+    "preconditions": [
+      "the benchmark admits a proved normalization to shared complementary binary cuts",
+      "the witness obligations are exactly pairwise separation of a frozen finite generator set",
+      "every selected pair contributes one globally shared binary coordinate"
+    ],
+    "structural_signature": [
+      "simultaneous integral decisions",
+      "joint binary signatures",
+      "pairwise witness separation",
+      "known exact logarithmic benchmark",
+      "capacity audit after repair"
+    ],
+    "operation": "map selected normalized cuts to joint witness signatures; prove the coverage/injectivity equivalence; run exact small-world counterexample search; compare minimum code length with the known benchmark and immediately audit the 2^k capacity ceiling",
+    "guaranteed_effects": [
+      "within the registered normalized G_NEQ scope, determines exactly whether a cut family covers all unequal-edge semi-filters",
+      "within that scope, constructs an optimal family of ceil(log2 N) cuts and rejects every smaller family",
+      "separates benchmark repair from capacity-only route sufficiency"
+    ],
+    "non_guarantees": [
+      "does not normalize arbitrary full semi-filter cover pairs to complementary cuts",
+      "does not bound realizability-sensitive signature systems on other graphs",
+      "does not evaluate higher-order tuple, intersection, or closure signatures",
+      "does not provide a super-logarithmic lower bound, novelty certificate, or P-versus-NP result"
+    ],
+    "validation_obligations": [
+      "prove the target-specific normalization before reuse",
+      "bind the witness universe and coverage/signature equivalence before counting states",
+      "run direct-versus-signature exact regression on small worlds",
+      "audit capacity and transport limits separately from calibration success"
+    ],
+    "evidence_pointers": [
+      "research/real_math/millennium/p_vs_np/04_candidates/C025_joint_binary_signature_calibration.md",
+      "research/real_math/millennium/p_vs_np/04_candidates/C025_joint_binary_signature_calibration_preregistration.json",
+      "research/real_math/millennium/p_vs_np/05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json"
+    ],
+    "known_failure_ids": [
+      "F-C025-FIRST-ORDER-CAPACITY-CEILING"
+    ],
+    "successful_reuse_ids": [],
+    "proof_backing": [],
+    "artifact_hash": "sha256:22de9492d0be576745986488daaabf2f4c291aad5bdeafe5091adc78bd6fc82d"
+  }
+}

@@ -1,0 +1,63 @@
+candidate_id: C025
+atom_id: O9d12a2a1a
+claim: "For normalized complementary cut families on G_NEQ, simultaneous coverage is equivalent to injective joint binary label signatures, so the exact minimum is ceil(log2 N); the cardinality-only first-order capacity argument is exhausted at logarithmic order."
+status: VERIFIED_LOCAL_REPRESENTATION_WITH_SCOPED_ROUTE_FAILURE
+route: R004
+root_impact: NONE
+novelty_claim: false
+
+chronology:
+  preregistration_artifact_hash: "sha256:39378a50357fd3807d1ee9bcfbdec79e7cf4e5f379d256cfc28d3bf0cb2ce286"
+  preregistration_commit: "03a4cb9a0bce32374d79210d8b712670c11626a7"
+  result_receipt_artifact_hash: "sha256:fcbdcdcb6a182705253b1cd0779316814c9791ceef549fc3f848023023a476eb"
+
+proof_dependencies:
+  - id: C025-L1
+    claim: "A normalized cut separates unequal labels u,v iff their corresponding signature bits differ."
+    basis: "definition of the cut-induced signature"
+  - id: C025-L2
+    claim: "One separating cut covers every semi-filter above (u,v) in G_NEQ."
+    basis: "the semi-filter contains both diagonal generator singletons; upward closure includes opposite cut sides; their intersection is empty"
+  - id: C025-L3
+    claim: "If two labels have equal joint signatures, their canonical semi-filter preserves every selected cut pair."
+    basis: "both generators lie on the same side of each complementary cut"
+  - id: C025-L4
+    claim: "N injective binary words of length k exist iff N<=2^k."
+    basis: "elementary pigeonhole lower bound plus binary-encoding construction"
+
+counterexample_first:
+  executable: "research/real_math/millennium/p_vs_np/05_falsification/joint_binary_signature_calibration.py"
+  receipt: "research/real_math/millennium/p_vs_np/05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json"
+  exact_exhaustive_scope: "ordered normalized cut families for 2<=N<=4"
+  development_cases: [2, 3, 4, 5, 8, 9, 16, 17]
+  authority: "exact finite regression evidence; computation is not proof"
+
+route_consequence:
+  retained_tool:
+    id: T-PNP-JOINT-SIGNATURE-CALIBRATION
+    authority: VERIFIED_LOCAL
+    use: "test whether a proposed correlation repair restores simultaneous separation on a known normalized benchmark"
+  new_failure:
+    id: F-C025-FIRST-ORDER-CAPACITY-CEILING
+    diagnosis: "cardinality-only binary signatures on M distinguished first-order traces contain at most 2^k states and cannot by themselves force more than ceil(log2 M) coordinates"
+    status: SUPPORTED_WITHIN_SCOPE
+  active_residuals:
+    - id: O9d12a2a1a1
+      target: "freeze an exact higher-order semi-filter closure state and prove its per-fusion budget and capacity boundary before target evaluation"
+      status: OPEN_PRE_CANDIDATE
+
+promotion_blockers:
+  - G_NEQ_normalization_is_target_specific
+  - arbitrary_full_semifilter_scope_not_tested
+  - higher_order_closure_state_not_defined
+  - theorem_prover_formalization_absent
+  - bounded_novelty_certificate_missing
+  - independent_reviews_missing
+
+meta_learning:
+  lesson_candidate: "Pair every representation repair with an immediate capacity audit; passing the old failure benchmark establishes repair, not route sufficiency."
+  scope: "one P-vs-NP representation lineage C023-C025"
+  transport_limit: "not yet independently recurrent across problems; framework promotion requires a frozen cross-problem meta-evaluator and fresh assurance"
+  status: PROPOSAL_ONLY
+
+root_status: OPEN_NO_SOLUTION_CERTIFICATE

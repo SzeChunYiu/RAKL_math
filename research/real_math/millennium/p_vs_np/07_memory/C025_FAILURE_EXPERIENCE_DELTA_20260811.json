@@ -1,0 +1,113 @@
+{
+  "experience": {
+    "failure_id": "F-C025-FIRST-ORDER-CAPACITY-CEILING",
+    "atom_id": "O9d12a2a1a",
+    "candidate_id": "C025",
+    "context_packet_hash": "sha256:daa6e99832bd994ff5b081b861521f7465ef37b468d274eb08c93e0001358b89",
+    "research_trace_event_id": "O9d12a2a1a-E10",
+    "method_family": "cardinality-only first-order joint binary-signature lower bound",
+    "failure_mode": "the repair restores G_NEQ integrality but its cardinality-only state count saturates at logarithmic order",
+    "residual_signature": [
+      "normalized G_NEQ calibration recovers ceil(log2 N)",
+      "k binary coordinates distinguish at most 2^k first-order trace identities",
+      "polynomially many distinguished traces yield only an O(log N) capacity count",
+      "higher-order semi-filter closure state remains untested"
+    ],
+    "broken_assumptions": [
+      "restoring simultaneous correlation with first-order joint signatures might by itself leave room for a super-logarithmic cardinality lower bound"
+    ],
+    "scope_conditions": [
+      "normalized complementary cut families on the diagonal complement universe of G_NEQ",
+      "the lower-bound argument uses only cardinality of binary signatures on a fixed set of M distinguished first-order traces",
+      "no claim is made about realizability constraints or higher-order tuple/intersection/closure signatures"
+    ],
+    "competing_diagnoses": [
+      "joint correlation was not restored",
+      "the G_NEQ calibration is too special to diagnose arbitrary full-cover structure",
+      "the distinguished first-order witness universe is too low-order even though joint correlation is restored",
+      "binary coordinate capacity is adequate but target-specific realizability constraints could still force more coordinates"
+    ],
+    "selected_diagnosis": "within the registered capacity-only representation, joint correlation is restored exactly on G_NEQ but a state-count argument over M first-order binary signatures is exhausted at ceil(log2 M); this does not diagnose higher-order or realizability-sensitive successors",
+    "diagnosis_status": "SUPPORTED",
+    "evidence_pointers": [
+      "research/real_math/millennium/p_vs_np/04_candidates/C025_joint_binary_signature_calibration.md",
+      "research/real_math/millennium/p_vs_np/04_candidates/C025_joint_binary_signature_calibration_preregistration.json",
+      "research/real_math/millennium/p_vs_np/05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json"
+    ],
+    "falsifier_or_attempt": "after requiring exact G_NEQ recovery, apply the 2^k joint-state pigeonhole ceiling at k=ceil(log2 N)-1 and audit whether the cardinality-only representation can support a super-log lower-bound route",
+    "observed_result": "all registered G_NEQ cases recover the exact logarithmic gate and every low-order case forces a collision; the elementary all-N capacity count caps the cardinality-only first-order argument at ceil(log2 M)",
+    "local_repair_attempts": [
+      "retain joint signatures as a scoped benchmark calibration tool",
+      "retire only cardinality-only first-order capacity as the primary super-log route",
+      "open a fresh child context for higher-order semi-filter closure state rather than silently escalating hierarchy order"
+    ],
+    "next_discriminator": "Define a minimum higher-order closure signature with an exact semi-filter preservation map, then freeze and test both its one-fusion budget and its state-capacity ceiling before any hard-target evaluation.",
+    "timestamp": "2026-08-11T08:09:36Z",
+    "artifact_hash": "sha256:f09d09a87ba84e8ec24cd39d7a20d49da4a4a7f2fe60659c9c76aae2175be29f"
+  },
+  "links": [
+    {
+      "source_id": "F-C025-FIRST-ORDER-CAPACITY-CEILING",
+      "target_id": "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+      "relation": "SHARES_RESIDUAL_WITH",
+      "rationale": "C025 is the scoped successor residual after C024: it restores simultaneous integral correlation on normalized G_NEQ but shows that the repaired first-order state still lacks super-logarithmic cardinality capacity.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json",
+        "research/real_math/millennium/p_vs_np/07_memory/C024_FAILURE_EXPERIENCE_DELTA_20260811.json"
+      ]
+    },
+    {
+      "source_id": "F-C025-FIRST-ORDER-CAPACITY-CEILING",
+      "target_id": "F-C023-SCALAR-COLLAPSE",
+      "relation": "SHARES_RESIDUAL_WITH",
+      "rationale": "Both reject a representation as route-sufficient after a cheap extremal/capacity audit, but C025 concerns first-order joint states rather than a scalar statistic.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json",
+        "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C023_spectral_ratio_unrestricted_cover_no_go.md"
+      ]
+    }
+  ],
+  "reusable_method_lesson_candidate": {
+    "lesson_id": "ML-PNP-C025-REPAIR-THEN-CAPACITY-AUDIT",
+    "source_atom_id": "O9d12a2a1a",
+    "source_candidate_id": "C025",
+    "status": "PROPOSAL_ONLY_PENDING_CROSS_PROBLEM_RECURRENCE_AND_FRAMEWORK_ASSURANCE",
+    "observation": "A representation repair can exactly remove the parent failure on its benchmark yet remain route-insufficient because the repaired representation has a separately provable capacity ceiling.",
+    "candidate_framework_delta": "After a candidate claims to restore a missing structural coordinate, require two separate gates: old-failure regression and a capacity/expressivity audit of the repaired representation before target-first promotion.",
+    "preconditions": [
+      "a parent failure has an exact cheap regression benchmark",
+      "the successor representation exposes a finite or mathematically bounded state/capacity object",
+      "repair success and route sufficiency are distinct QoIs"
+    ],
+    "guaranteed_effects_if_validated": [
+      "prevents benchmark repair from being conflated with route sufficiency",
+      "can retire low-capacity representations before expensive target search",
+      "preserves the repair as a scoped tool even when the broader route fails"
+    ],
+    "non_guarantees": [
+      "does not show that every useful representation has a simple capacity measure",
+      "does not diagnose the correct higher-order successor",
+      "does not establish any mathematical root claim",
+      "does not authorize a RAKL framework change from one application lineage"
+    ],
+    "known_failures_and_limits": [
+      "a capacity bound on unconstrained signatures does not rule out stronger realizability-sensitive lower bounds",
+      "higher-order closure state may not admit the same capacity accounting",
+      "C023-C025 recurrence is within one P-vs-NP route and is not independent cross-problem recurrence"
+    ],
+    "transport_scope": "Candidate applies only when a repaired representation has a well-defined capacity object and a frozen old-failure benchmark; it is not independently recurrent, and transport to other Millennium problems is untested.",
+    "framework_validation_obligations": [
+      "freeze a meta-evaluator before implementing the framework delta",
+      "known-answer world where repair and capacity audit both pass",
+      "planted world where the old failure is repaired but a low capacity ceiling forces FAIL",
+      "structural world without a checkable capacity object returns CANNOT_CHECK rather than forced FAIL",
+      "fresh assurance on a problem/application lineage not used to design C025"
+    ],
+    "evidence_pointers": [
+      "research/real_math/millennium/p_vs_np/04_candidates/C025_joint_binary_signature_calibration.md",
+      "research/real_math/millennium/p_vs_np/05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json",
+      "research/real_math/millennium/p_vs_np/07_memory/C024_FAILURE_EXPERIENCE_DELTA_20260811.json"
+    ],
+    "artifact_hash": "sha256:9a8475af48badb2ec6f5c9e3d3c45a08873bcc13a393049ee62e7e35d80d2ac7"
+  }
+}
