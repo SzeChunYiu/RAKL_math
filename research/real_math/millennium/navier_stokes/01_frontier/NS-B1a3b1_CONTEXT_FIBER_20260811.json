@@ -1,0 +1,130 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow",
+  "atom_id": "NS-B1a3b1",
+  "parent_atom_id": "NS-B1a3b",
+  "object_context": "Whole-space Type-I Navier-Stokes blow-up-classification child for Clay statement (A). Bind the exact scaling and producer/consumer interfaces for Grujic arXiv:2607.08866v2: whether the logarithmically weighted vorticity-direction bmo condition is stable under parabolic zoom-in, and which separate amplitude/far-field/pre-singularity hypotheses still block transfer from the Albritton-Barker finite-I class. This is a source/interface audit, not a new regularity theorem; Type-II is outside this atom.",
+  "structural_coordinates": [
+    "unforced whole-space 3D incompressible Navier-Stokes with viscosity normalized to 1",
+    "parabolic zoom x=x0+r y, t=t0+r^2 s with 0<r<=1; vorticity direction is dimensionless wherever vorticity is nonzero",
+    "Grujic v2 defines bmo_phi with phi(rho)=1/|log rho|, an L-infinity term, and a supremum over all centers and 0<rho<1/2",
+    "Grujic Definition 2.1 additionally assumes a critical-point profile omega=Phi|x|^-2 with scale-invariant or log-periodic core shape and |grad Phi| controlled at critical order",
+    "Grujic Theorem 7.4 assumes uniform-in-time critical concentration, in particular global spatial L^{3/2,infinity} vorticity, plus uniform-in-time bmo_phi direction regularity",
+    "the localized commutator proof separates near field from far field; the far-field estimate invokes the global L^{3/2,infinity} vorticity norm",
+    "Albritton-Barker finite I and its local compactness do not supply the normalized-vorticity bmo condition or the global critical vorticity profile",
+    "merged NS-B1a3b already falsifies topology-only inheritance of a direction modulus through one derivative plus normalization; this child does not retry that family",
+    "merged NS-B1a3 records global-tail/profile-leakage and local-to-global interface failures; they are reused only where the Grujic far-field signature genuinely matches",
+    "Grujic Theorem 7.4 is a pre-singularity regularity criterion for a unique spatially analytic solution near a first possible singular time, not an ancient-solution Liouville theorem",
+    "backward uniqueness is not needed if the source theorem applies directly and cannot manufacture its missing geometry or global vorticity concentration"
+  ],
+  "equivalent_formulations": [
+    "zoom-stability formulation: compare the bmo_phi seminorm of xi_r(y)=xi(x0+r y) to that of xi",
+    "producer-consumer formulation: Albritton-Barker finite-I output -> [missing geometry/amplitude certificate] -> Grujic Theorem 7.4 input",
+    "pre-extraction formulation: derive the Grujic hypotheses on the original solution near T* and apply its regularity conclusion directly, without ancient-limit gluing",
+    "commutator formulation: local logarithmic direction oscillation suppresses the singular near-field stretching term, while global weak-L^{3/2} vorticity controls the far-field strain"
+  ],
+  "solved_analogues": [
+    "Grujic arXiv:2607.08866v2 Theorem 7.4: critical-point concentration plus uniform bmo_{1/|log r|} vorticity direction implies the first possible singular time is regular.",
+    "Grujic arXiv:2607.08866v2 Theorem 4.1: localized logarithmic commutator smoothing under the source profile and direction hypotheses.",
+    "Albritton-Barker arXiv:1811.00502: Type-I singularity/ancient-solution correspondence and local compactness in the registered finite-I framework."
+  ],
+  "near_solved_analogues": [
+    "Merged NS-B1a3b: topology-only vorticity-direction inheritance is blocked by derivative loss and normalization instability.",
+    "Barker-Prange arXiv:1906.08225: nearby Type-I plus alignment criterion in a different domain/hypothesis package.",
+    "Pineau-Vicol arXiv:2607.09619v2: weighted-L2 symmetry-locked Type-I rigidity, retained as a different consumer family rather than merged into this atom."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Grujic arXiv:2607.08866v2 log-weighted BMO direction condition",
+      "method": "transport a conditional geometric regularity certificate through parabolic zoom by exact transformation of mean oscillation",
+      "shared_structure": [
+        "dimensionless vorticity direction under Navier-Stokes scaling",
+        "balls map to balls under spatial dilation",
+        "single-logarithmic weight is explicitly scale indexed"
+      ],
+      "required_assumptions": [
+        "the source direction field is defined/extended in the theorem's sense",
+        "uniform source bmo_phi control for every center and radius below 1/2",
+        "zoom factor 0<r<=1",
+        "uniformity in the relevant source time interval"
+      ],
+      "disanalogies": [
+        "finite I does not imply the source bmo_phi hypothesis",
+        "normalization at vorticity zeros remains a separate endpoint issue",
+        "zoom-stability of an assumed property is not generation of that property"
+      ],
+      "repair_question": "If bmo_phi is zoom-stable, can any equation-specific finite-I estimate generate it without importing a derivative modulus already ruled out by NS-B1a3b?",
+      "source_anchors": [
+        "Grujic arXiv:2607.08866v2 eq. (2), Theorems 4.1 and 7.4",
+        "merged NS-B1a3b"
+      ]
+    },
+    {
+      "source_context": "Grujic near-field/far-field commutator split",
+      "method": "use local BMO oscillation for near-field commutator and global critical Lorentz vorticity for far-field strain",
+      "shared_structure": [
+        "vortex stretching is nonlocal through Biot-Savart/strain",
+        "critical homogeneity of vorticity is L^{3/2,infinity}",
+        "local geometric cancellation can coexist with global amplitude dependence"
+      ],
+      "required_assumptions": [
+        "global spatial L^{3/2,infinity} vorticity bound uniformly in time",
+        "critical-point superlevel geometry",
+        "source-valid harmonic-analysis estimates"
+      ],
+      "disanalogies": [
+        "Albritton-Barker finite I is local velocity/pressure/dissipation control rather than a global vorticity Lorentz norm",
+        "local strong velocity convergence does not yield global vorticity-tail tightness"
+      ],
+      "repair_question": "Can the far-field term be localized or replaced by a source-valid tail certificate inherited from finite I, without recreating the global-tightness gap already isolated in NS-B1a3?",
+      "source_anchors": [
+        "Grujic arXiv:2607.08866v2 Section 4, especially the far-field estimate",
+        "merged NS-B1a3"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "conditional scaling preservation is not producer-side inheritance",
+    "a pre-singularity regularity theorem is not an ancient Euler/Navier-Stokes Liouville theorem",
+    "local log-BMO geometry does not by itself remove the source theorem's global weak-L^{3/2} vorticity input",
+    "finite-I velocity topology and critical-point vorticity profile are different representations",
+    "pending application PRs and fresh preprints cannot self-promote root authority"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "signal analysis / phase-amplitude separation",
+      "source_situation": "A normalization may make phase dimensionless and stable under zoom while amplitude/tail control remains a separate channel.",
+      "common_abstraction": [
+        "dimensionless phase coordinate",
+        "separate amplitude channel",
+        "scale transformation preserves one channel but not the other"
+      ],
+      "source_to_target_mapping": [
+        "phase -> vorticity direction xi",
+        "amplitude -> |omega| and its global Lorentz tail",
+        "zoom -> Navier-Stokes blow-up dilation"
+      ],
+      "shared_constraints": [
+        "preserving phase regularity cannot infer amplitude integrability",
+        "normalization has an endpoint at zero amplitude"
+      ],
+      "disanalogies": [
+        "Navier-Stokes phase and amplitude are dynamically coupled by a nonlinear PDE; signal decomposition alone supplies no PDE estimate"
+      ],
+      "proposed_principle": "Audit geometry and amplitude as separate certificates under scaling rather than treating 'vorticity control' as one undifferentiated condition.",
+      "validation_obligation": "Verify from the exact Grujic formulas that the bmo_phi condition has favorable zoom behavior while the far-field proof separately uses global L^{3/2,infinity} vorticity.",
+      "provenance_note": "structural proposal analogy only; no mathematical authority"
+    }
+  ],
+  "source_anchors": [
+    "Zoran Grujic, arXiv:2607.08866v2, 13 July 2026, Definition 2.1, equation (2), Section 4, Theorem 7.4",
+    "Dallas Albritton and Tobias Barker, arXiv:1811.00502",
+    "RAKL_math main NS-B1a3b_C001_VORTICITY_DIRECTION_INHERITANCE_AUDIT_20260811.md",
+    "RAKL_math main NS-B1a3_C001_CRITICAL_COMPACTNESS_RIGIDITY_INTERFACE_20260811.md",
+    "RAKL current main 9852e9bac82c96a1d4b09ac13e7f482ce2be0b4d"
+  ],
+  "analogy_scan_notes": "Retain only the phase/amplitude separation abstraction because it yields two independently falsifiable target obligations: weighted-BMO scaling and global Lorentz far-field dependence.",
+  "frozen_at": "2026-08-11T16:06:00Z",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:82b6b4e847e205cd82614a1695cc92566477e2b2e36b633e279f240291865110"
+}
