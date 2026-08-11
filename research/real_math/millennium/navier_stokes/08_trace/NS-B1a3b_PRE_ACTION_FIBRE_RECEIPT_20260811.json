@@ -1,0 +1,70 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "PAFR-NS-B1a3b-GM-GEOMETRY-20260811",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "9e05490ea9fd1f3843c6266081baeb5e392ab940",
+  "task_id": "NS-B1a3b-GM-GEOMETRIC-CLASSIFICATION-20260811",
+  "atom_id": "NS-B1a3b",
+  "context_hash": "sha256:5abea6153d4a3801a8f6637e6dc0e5aafeecefc438981052c5c9b082136818e4",
+  "fibre_snapshot_hash": "sha256:5abea6153d4a3801a8f6637e6dc0e5aafeecefc438981052c5c9b082136818e4",
+  "operator_ids": [
+    "source-signature-interface-audit",
+    "parabolic-scaling-audit",
+    "geometric-rigidity-audit",
+    "contrapositive-classification"
+  ],
+  "selected_retrievals": [
+    {
+      "retrieval_id": "GM-PRIMARY-SOURCE-SELECTORS",
+      "authority": "CANONICAL",
+      "payload_hash": "82ae4104945f0843aed578759235f3e3f81d03df77b38c71e70d85da825b6a69"
+    },
+    {
+      "retrieval_id": "AB-THM1.1-SELECTOR",
+      "authority": "CANONICAL",
+      "payload_hash": "cae176256c28245aa8fc94fcec0e9b4d9d0953f4912427bbae09c32689ab4d45"
+    },
+    {
+      "retrieval_id": "NS-B1a3b-MEMORY-REVIEW",
+      "authority": "PENDING",
+      "payload_hash": "c18ff4f4b972da8d2e90001778b6db856762e0794974fb4eb261546f7454ef93"
+    },
+    {
+      "retrieval_id": "NS-B1a3b-EXPERT-REVIEW",
+      "authority": "PENDING",
+      "payload_hash": "f738e434df098bc1551952515514a73f97e54553ddab897becfe34ac2f06224d"
+    },
+    {
+      "retrieval_id": "NS-B1a3b-PRE-CANDIDATE-TRACE",
+      "authority": "PENDING",
+      "payload_hash": "3291b0afbcd899ddc98b72254cd239051382a5a3039e92375face4b5403a1448"
+    }
+  ],
+  "rejected_retrievals": [
+    {
+      "retrieval_id": "ESS-L3",
+      "rejection_reason": "not needed by selected geometric 2D-Liouville route"
+    },
+    {
+      "retrieval_id": "exact-self-similar-Liouville",
+      "rejection_reason": "generic Type-I ancient limit is not assumed stationary"
+    },
+    {
+      "retrieval_id": "NS-R001b-local-positive-alignment",
+      "rejection_reason": "not equivalent to nonlocal vorticity-direction coherence"
+    }
+  ],
+  "predeclared_discriminator": "Accept a source-valid conditional Type-I geometric rigidity/classification milestone only if the exact Giga-Miura limit passage, nontriviality, high-vorticity threshold transport and 2D Liouville interfaces all bind. Do not infer finite-I -> directional coherence without a separate proof. If blow-up remains possible, quantify the exact negation of the scale-critical criterion and retain it as residual classification, not root evidence.",
+  "allowed_outcome_branches": [
+    "SUCCESS",
+    "PARTIAL_SUCCESS",
+    "FAILURE",
+    "BLOCKED",
+    "UNKNOWN"
+  ],
+  "frozen_at_utc": "2026-08-11T15:37:52.195083Z",
+  "sequence_index": 0,
+  "receipt_canonical_sha256": "3b7de31711ce27d4b195fcd146ee5d2794005fc08d8ec62a31629be490e2d748"
+}
