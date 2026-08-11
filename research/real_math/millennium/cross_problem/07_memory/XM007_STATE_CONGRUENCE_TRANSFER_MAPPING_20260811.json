@@ -1,0 +1,125 @@
+{
+  "schema_version": "rakl-cross-transfer-mapping-v1",
+  "transfer_id": "XM007",
+  "title": "STATE_PROJECTION_CONGRUENCE_AUDIT_FROM_PNP_TO_HODGE_WITNESS_REACHABILITY",
+  "status": "PROSPECTIVE_TARGET_FALSIFIER_SPECIFICATION_SOURCE_CALIBRATION_RETROSPECTIVE",
+  "authority": "SEARCH_CONTROL_ONLY_NO_HODGE_THEOREM_NO_PNP_LOWER_BOUND_NO_FRAMEWORK_PROMOTION",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "main_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "6557b1b25fa839fe71aba8047c958d5da892edd8"
+  },
+  "source_atom": {
+    "problem": "P_VS_NP",
+    "atom_id": "O9d12a2a1a1a",
+    "source_pr": 78,
+    "source_head": "ce3a6dfc2af3c5c3e7fc93616e3fd774097e4d9b",
+    "source_result": "For fixed Lambda, the refined projection consisting of the base empty-set flag and membership bits for every E_i and H_i is a congruence for rule activation; a coarser both-antecedents-present vector is not.",
+    "process_authority": "RETROSPECTIVE_LOCAL_SEMANTIC_CALIBRATION_ONLY_SOURCE_PR_HAS_OPEN_PROCESS_BLOCKERS"
+  },
+  "target_atom": {
+    "problem": "HODGE",
+    "atom_id": "H4d1a1-WITNESS-MODULI-PROJECTION",
+    "target_pr": 77,
+    "target_head": "641bfc3bf25edc390e5b950c9e18087142510aeb",
+    "canonicality": "OPEN_STACKED_TARGET_NOT_CURRENT_MAIN_AUTHORITY",
+    "target_residual": "Freeze a source-controlled witness moduli/deformation object W, projection pi:W->S, representative identity/replacement semantics, and relative tangent/obstruction geometry before another detector-faithfulness test."
+  },
+  "common_abstraction": {
+    "name": "projection-as-state requires transition/reachability congruence",
+    "formal_statement": "For transition system (X, ->) and projection pi:X->Y, any claim that downstream reachability/property is determined solely by pi requires pi-equivalent source states to be indistinguishable by the registered downstream outcome. A pair with equal pi but different registered reachability/outcomes falsifies state sufficiency.",
+    "transferred_operation": "Before scoring or optimizing a compressed research representation, search for a collision pair with equal projected state but different downstream reachable sets or target outcome."
+  },
+  "enabling_assumptions": [
+    "a proposed compressed state/projection is explicitly defined",
+    "the downstream transition/reachability relation or target predicate is explicitly defined",
+    "source-valid examples can be compared under the same projection and target scope"
+  ],
+  "disanalogies": [
+    "PNP source is a finite monotone Boolean activation/closure system with fixed Lambda and an exactly enumerable recurrence.",
+    "Hodge target is geometric deformation/moduli with infinitesimal, formal and algebraic lifting distinctions, replacement witnesses, and source-specific semiregularity hypotheses.",
+    "No Boolean recurrence, circuit lower bound, or PNP theorem transfers to Hodge; only the state-sufficiency/congruence audit operation transfers."
+  ],
+  "primary_source_anchors": [
+    {
+      "id": "Cavalar-Oliveira-TR25-033",
+      "type": "ECCC_PRIMARY_REPORT",
+      "url": "https://eccc.weizmann.ac.il/report/2025/033/",
+      "scope": "source discrete-complexity/fusion framework; XM007 uses the application-derived fixed-Lambda congruence only as local calibration"
+    },
+    {
+      "id": "Nishinou-2009.01651",
+      "type": "ARXIV_PRIMARY",
+      "url": "https://arxiv.org/abs/2009.01651",
+      "scope": "positive Hodge calibration: under semiregularity, relative deformation of divisor maps iff the image cycle class remains Hodge"
+    },
+    {
+      "id": "Kloosterman-2104.14845",
+      "type": "ARXIV_PRIMARY",
+      "url": "https://arxiv.org/abs/2104.14845",
+      "scope": "positive Hodge calibration: variational Hodge conjecture for complete-intersection cycles on hypersurfaces"
+    },
+    {
+      "id": "Movasati-1902.00831",
+      "type": "ARXIV_PRIMARY",
+      "url": "https://arxiv.org/abs/1902.00831",
+      "scope": "hostile Hodge calibration: selected linear-cycle witness triple is rigid while specified Hodge loci can be smooth/reduced and positive-dimensional"
+    }
+  ],
+  "target_prediction": {
+    "principle": "A Hodge witness representation should not be treated as sufficient state for witness deformation/reachability until its projection is congruent for the registered lifting/deformation outcome, or a source theorem supplies sufficiency under explicit hypotheses.",
+    "positive_controls": [
+      "Nishinou semiregular relative-divisor setting",
+      "Kloosterman complete-intersection hypersurface setting"
+    ],
+    "hostile_control": "Movasati cubic setting warns that Hodge-locus motion need not be motion of the originally selected witness."
+  },
+  "cheapest_target_falsifier": {
+    "precondition": "H4d1a1 first freezes W, pi, exact projected coordinates, and a binary/typed downstream witness-lift or deformation outcome.",
+    "test": "Find two source-valid witness states w1,w2 (or admissible local deformation states) with pi(w1)=pi(w2) but different tangent/obstruction data or different registered witness-lift reachability. One such collision falsifies pi as sufficient state for that downstream outcome.",
+    "pass_branch": "If no collision is found in bounded source families and a theorem proves congruence/sufficiency under explicit hypotheses, retain pi for the next detector-faithfulness test.",
+    "fail_branch": "If a collision exists, refine the state with representative identity, replacement-witness class, tangent/obstruction data, or another source-defined coordinate.",
+    "cannot_check_branch": "If W/pi/outcome are not frozen or source evidence cannot distinguish reachability, record CANNOT_CHECK rather than infer sufficiency."
+  },
+  "difference_witness": {
+    "prior_failure_ids": [
+      "F-H4D1A-CLASS-WITNESS-PERSISTENCE-GAP"
+    ],
+    "changed_structural_coordinates": [
+      "finite monotone Boolean recurrence -> geometric deformation/moduli",
+      "fixed finite antecedent bits -> witness identity/replacement and tangent-obstruction geometry",
+      "exactly enumerable reachability -> source/theorem-bound deformation reachability"
+    ],
+    "restored_or_replaced_assumptions": [
+      "replace source-specific Boolean transition law by target-specific deformation/lifting relation",
+      "require target-defined W and pi before applying the audit"
+    ],
+    "prior_falsifier_escape_reason": "The PNP congruence theorem does not assert Hodge sufficiency; it supplies only the falsification pattern. A Hodge projection may survive if semiregularity or another source theorem makes it congruent.",
+    "cheapest_repeat_failure_test": "equal-projection/different-reachability collision under the frozen Hodge witness state",
+    "evidence_pointers": [
+      "RAKL_math PR #78",
+      "RAKL_math PR #77",
+      "ECCC TR25-033",
+      "arXiv:2009.01651",
+      "arXiv:2104.14845",
+      "arXiv:1902.00831"
+    ]
+  },
+  "chronology": {
+    "source_calibration": "RETROSPECTIVE",
+    "target_test": "PROSPECTIVE_SPECIFICATION_ONLY_NOT_EXECUTED",
+    "reason": "The target W/pi has not yet been frozen in a canonical current-main Hodge packet. XM007 specifies the discriminator before target execution but does not claim a Hodge result."
+  },
+  "framework_feedback": {
+    "existing_owner": "SzeChunYiu/RAKL#124",
+    "new_issue_opened": false,
+    "refinement": "Add state_projection_congruence / equal-state-different-outcome hostile worlds to the root-coordinate-preservation benchmark family.",
+    "possible_benefit": "Reject compressed states that erase downstream reachability distinctions before expensive candidate search.",
+    "possible_regression": "Overhead and false rejection when a coarse projection is sufficient only under a theorem/hypothesis not represented in the test packet.",
+    "cheapest_framework_discriminator": "Frozen benchmark with projection pairs containing true congruences, planted collisions, and hypothesis-qualified congruences; score false accept, false reject, and extra-cost."
+  },
+  "artifact_hash": "sha256:0df291142e6b20d6c6a34129e7db9c489bdcf58249a86c58ba88ea2dbc0b0abc"
+}
