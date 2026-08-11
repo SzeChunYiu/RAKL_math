@@ -74,7 +74,7 @@ def test_framework_pin_sync_receipt_is_exact_and_non_authorizing() -> None:
     assert receipt["current_framework_commit"] == EXPECTED_FRAMEWORK_COMMIT
     assert receipt["verification"] == {
         "command": "python tools/run_application_tests.py --framework framework/RAKL",
-        "tests_passed": 260,
+        "tests_passed": 302,
         "exit_code": 0,
         "pin_equals_gitlink": True,
         "framework_authority_paths_clean": True,
@@ -86,6 +86,31 @@ def test_framework_pin_sync_receipt_is_exact_and_non_authorizing() -> None:
     assert compatibility["historical_artifacts_keep_recorded_framework_commits"] is True
     assert compatibility["historical_receipts_or_outputs_rewritten"] is False
     assert compatibility["new_execution_pin_applies_prospectively"] is True
+
+    refresh = receipt["integration_refresh"]
+    assert refresh["pre_refresh_pr_head"] == (
+        "bfc9bc1c63cc0e8fffa583afef3b02f0e8085792"
+    )
+    assert refresh["merged_live_main_commit"] == (
+        "2ddb51359292fd9638116b488ffff9a04397446b"
+    )
+    assert refresh["merged_live_main_tree"] == (
+        "bc69a20f525cb74d547bb42055bf263ffc073110"
+    )
+    assert refresh["local_integration_merge_commit"] == (
+        "02aa447d8eb77b0d274465e1928968d7ed480b63"
+    )
+    assert refresh["prerequisite_merges"] == {
+        "pr79_merge": "d13bb40fab2448f983a73f5964ab2d3fd2db489c",
+        "pr84_merge": "2ddb51359292fd9638116b488ffff9a04397446b",
+    }
+    assert refresh["historical_artifact_files_changed"] == []
+    assert refresh["exact_suite_after_refresh"] == {
+        "command": "python tools/run_application_tests.py --framework framework/RAKL",
+        "tests_passed": 302,
+        "exit_code": 0,
+        "status": "PASS_EXACT_APPLICATION_SUITE_AFTER_LIVE_MAIN_REFRESH",
+    }
 
     historical_binding = receipt["historical_pin_receipt_binding"]
     historical_bytes = subprocess.run(

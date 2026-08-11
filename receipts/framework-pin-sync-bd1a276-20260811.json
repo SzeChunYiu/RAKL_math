@@ -41,7 +41,7 @@
   },
   "verification": {
     "command": "python tools/run_application_tests.py --framework framework/RAKL",
-    "tests_passed": 260,
+    "tests_passed": 302,
     "exit_code": 0,
     "pin_equals_gitlink": true,
     "framework_authority_paths_clean": true,
@@ -56,7 +56,7 @@
     "does not automatically promote a lesson research tool or framework variant"
   ],
   "authority": "DEPENDENCY_SYNC_AND_EXECUTABLE_CONFORMANCE_ONLY / NO_MATHEMATICAL_AUTHORITY_CHANGE",
-  "artifact_hash": "sha256:4fc89f31c10206b2c55464fa836c595b32f1c84d3bddb1f17fbd0d55f6df7778",
+  "artifact_hash": "sha256:f1aff8a13e9b6c0901d24485efb993a5cf9bdee1c68d421d056c038bc79b697d",
   "pin_staging_commit": "67df037d3a4f000d6c1a267e965ced603e73b4f5",
   "initial_exact_suite": {
     "command": "python tools/run_application_tests.py --framework framework/RAKL",
@@ -84,5 +84,24 @@
       "tests/math_applications/test_yang_mills_yms1a1_integrity_repair.py",
       "tests/math_applications/test_yang_mills_yms1a1_packet_binding_repair.py"
     ]
+  },
+  "integration_refresh": {
+    "refreshed_at": "2026-08-11T12:31:18Z",
+    "pre_refresh_pr_head": "bfc9bc1c63cc0e8fffa583afef3b02f0e8085792",
+    "merged_live_main_commit": "2ddb51359292fd9638116b488ffff9a04397446b",
+    "merged_live_main_tree": "bc69a20f525cb74d547bb42055bf263ffc073110",
+    "local_integration_merge_commit": "02aa447d8eb77b0d274465e1928968d7ed480b63",
+    "prerequisite_merges": {
+      "pr79_merge": "d13bb40fab2448f983a73f5964ab2d3fd2db489c",
+      "pr84_merge": "2ddb51359292fd9638116b488ffff9a04397446b"
+    },
+    "historical_artifact_files_changed": [],
+    "integration_scope": "LIVE_MAIN_REFRESH_AND_DEPENDENCY_COMPATIBILITY_ONLY",
+    "exact_suite_after_refresh": {
+      "command": "python tools/run_application_tests.py --framework framework/RAKL",
+      "tests_passed": 302,
+      "exit_code": 0,
+      "status": "PASS_EXACT_APPLICATION_SUITE_AFTER_LIVE_MAIN_REFRESH"
+    }
   }
 }
