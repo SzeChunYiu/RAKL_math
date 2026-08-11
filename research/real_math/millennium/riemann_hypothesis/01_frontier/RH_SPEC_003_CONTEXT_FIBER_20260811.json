@@ -1,0 +1,154 @@
+{
+  "atom_id": "RH-SPEC-003",
+  "object_context": "Necessary trace-legitimacy filter for any successful exact compact-resolvent Hilbert–Pólya realization of the Riemann zeros: assuming a self-adjoint operator H has discrete spectrum whose nonzero eigenvalues, with the declared one-sided or two-sided convention and exact algebraic multiplicities, match all nontrivial zeta-zero ordinates up to a finite perturbation, determine the sharp Schatten threshold of (I+H^2)^(-alpha/2) from zero counting alone. This atom is a no-go/filter, not a construction of H and not an RH proof.",
+  "structural_coordinates": [
+    "exact RH binding is the canonical statement that every nontrivial zero rho of zeta has Re(rho)=1/2; this atom supplies only a necessary condition on a hypothetical exact spectral realization",
+    "H must be densely defined self-adjoint on a specified Hilbert space; compact resolvent (or an explicitly equivalent purely discrete finite-multiplicity spectral hypothesis) is assumed only for the Schatten calculation",
+    "spectral completeness and multiplicity matching are load-bearing: the eigenvalue counting function must agree with the Riemann zero counting function up to a fixed finite error and an explicitly declared factor from +/- duplication",
+    "von Mangoldt zero counting gives N(T)=T/(2*pi)*log(T/(2*pi))-T/(2*pi)+O(log T), hence N(T) is asymptotic to (T/(2*pi))*log T",
+    "for A_alpha=(I+H^2)^(-alpha/2), membership A_alpha in S_p is equivalent to summability of (1+lambda_n^2)^(-alpha*p/2) over spectral multiplicity",
+    "ordinary trace legitimacy is distinct from distributional, zeta-regularized, heat-kernel, relative, or other renormalized trace identities",
+    "the counting asymptotic alone carries no prime-side weights, phases, test-function class, or explicit-formula normalization, so prime matching cannot be inferred",
+    "finite-zero agreement and random-matrix/GUE statistics are calibration only and cannot establish completeness, multiplicity, self-adjointness, or trace legitimacy",
+    "finite spectral perturbations and the choice of one-sided versus +/- symmetric enumeration alter only finitely many terms or a constant factor and therefore do not alter the Schatten threshold"
+  ],
+  "equivalent_formulations": [
+    "write dN for the zero-counting Stieltjes measure and determine convergence of integral_1^infinity (1+t^2)^(-alpha*p/2) dN(t)",
+    "using N(T) asymptotic T log T, determine the critical exponent q for sum_n (1+lambda_n^2)^(-q/2)",
+    "falsify any compact-resolvent HP route whose proposed ordinary trace requires (H-i)^(-1) or (I+H^2)^(-1/2) to be trace class",
+    "separate the admissible stronger-smoothing/regularized trace routes from the inadmissible first-order ordinary-trace route without claiming a spectral construction"
+  ],
+  "solved_analogues": [
+    "Toy counting law N_toy(T)=floor(T log(e+T)): direct integral comparison gives sum (1+lambda_n^2)^(-q/2)<infinity exactly for q>1, exhibiting the same threshold without arithmetic content.",
+    "For a positive sequence with N(T) asymptotic C*T^d, Stieltjes integration gives the familiar counting-to-Schatten threshold q>d; RH zero counting behaves like spectral dimension one with an extra logarithm, so the endpoint q=1 still diverges."
+  ],
+  "near_solved_analogues": [
+    "Classical Weyl-law arguments convert eigenvalue counting growth into heat-trace and resolvent-power summability, but they do not identify arithmetic prime weights.",
+    "Spectral-triple summability uses singular-value growth to define a metric dimension; the RH counting law suggests a weak-L1 endpoint rather than trace class, but no noncommutative-geometric construction is assumed here."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Weyl-law / spectral-zeta summability for discrete self-adjoint spectra",
+      "method": "transfer counting growth to Schatten membership by Stieltjes summation (or dyadic shell comparison) of a monotone spectral weight",
+      "shared_structure": [
+        "discrete spectrum with finite multiplicities",
+        "monotone counting function",
+        "Schatten membership reduces to singular-value p-summability through functional calculus"
+      ],
+      "required_assumptions": [
+        "H is self-adjoint so the Borel functional calculus defines (I+H^2)^(-alpha/2)",
+        "the target spectrum is complete with finite multiplicities under a fixed enumeration convention",
+        "the counting asymptotic is applied to the same multiset whose singular values enter the Schatten sum"
+      ],
+      "disanalogies": [
+        "the Riemann counting law has a T log T factor rather than a pure power Weyl law",
+        "counting data alone do not provide a local geometric operator, a domain, or a prime-orbit trace formula"
+      ],
+      "repair_question": "Can a proposed exact HP model satisfy its desired trace formula using smoothing strictly stronger than first order, or a rigorously defined regularized/distributional trace, without silently invoking an ordinary trace that the zero count forbids?",
+      "source_anchors": [
+        "H. von Mangoldt, Zur Verteilung der Nullstellen der Riemannschen Funktion xi(t), Mathematische Annalen 60 (1905), 1-19, DOI:10.1007/BF01447494"
+      ]
+    },
+    {
+      "source_context": "Riemann explicit-formula / trace-formula analogy",
+      "method": "treat the zero side as spectral data only after the operator trace/distribution pairing is defined, then separately match the prime-power side with the exact test-function class and normalization",
+      "shared_structure": [
+        "spectral sums over zero ordinates",
+        "arithmetic sums over prime powers",
+        "test-function-dependent distributional identities"
+      ],
+      "required_assumptions": [
+        "the proposed operator expression exists in the claimed trace sense for the chosen test functions",
+        "prime weights and multiplicities are derived from the operator/dynamical model rather than inserted from the zeta explicit formula",
+        "any regularization is specified before matching and shown compatible with both sides"
+      ],
+      "disanalogies": [
+        "a zero-counting asymptotic is much weaker than an explicit formula",
+        "an ordinary Hilbert-space trace and a distributional trace formula are not interchangeable",
+        "periodic-orbit/quantum-chaos analogies do not supply arithmetic prime matching or self-adjointness"
+      ],
+      "repair_question": "For the exact operator family under test, what is the weakest legitimate trace/distribution class that both exists analytically and reproduces prime-power weights without importing them circularly?",
+      "source_anchors": [
+        "research/real_math/millennium/riemann_hypothesis/00_problem_contract/canonical_statement.md",
+        "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json"
+      ]
+    },
+    {
+      "source_context": "de Branges / canonical-system spectral representations",
+      "method": "use the threshold only as a post-construction falsifier once a concrete canonical system or self-adjoint realization has an explicit domain, boundary conditions, completeness and zero multiplicities",
+      "shared_structure": [
+        "self-adjoint spectral realization can yield real discrete spectra",
+        "entire-function zeros can be encoded by canonical-system data",
+        "spectral multiplicity and boundary conditions are explicit obligations"
+      ],
+      "required_assumptions": [
+        "a concrete canonical system has already been constructed independently of RH",
+        "its self-adjoint operator and domain are proved, not inferred from desired zero reality",
+        "the entire-function identification with Xi is proved without assuming the target zero set"
+      ],
+      "disanalogies": [
+        "not every canonical system has compact resolvent or the exact RH counting law",
+        "de Branges positivity statements can be equivalent to RH and therefore cannot be used as an independent premise",
+        "the Schatten threshold does not establish positivity, prime matching, or the Xi representation"
+      ],
+      "repair_question": "Does the concrete canonical-system realization have the exact counting/multiplicity law and a non-circular Xi identification, and if so is its proposed trace notion compatible with the forced non-trace-class endpoint?",
+      "source_anchors": [
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_001_DEBRANGES_POSITIVITY_SOURCE_ADDENDUM_20260811.md",
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_001_OPERATOR_BRIDGE_MATRIX_20260811.json"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "a necessary Schatten obstruction does not construct a Hilbert–Pólya operator",
+    "compact-resolvent models are not representative of noncompact/continuous-spectrum Connes-type trace-formula frameworks",
+    "trace-class failure at first-order smoothing does not forbid heat traces, higher resolvent powers, relative traces, Dixmier/weak traces, zeta regularization, or distributional trace formulas when independently justified",
+    "self-adjointness forces real eigenvalues but identifying those eigenvalues with all zeta-zero ordinates is the hard completeness/non-circularity bridge",
+    "zero counting does not imply prime matching, positivity of Weil/de Branges forms, or the de Bruijn–Newman inequality",
+    "random-matrix statistics concern correlations after unfolding and cannot replace exact spectral identity or multiplicity",
+    "finite numerical agreement cannot repair a missing domain, trace-class, limit, or representation theorem"
+  ],
+  "source_anchors": [
+    "research/real_math/millennium/riemann_hypothesis/00_problem_contract/canonical_statement.md",
+    "research/real_math/millennium/riemann_hypothesis/00_problem_contract/success_contract.yaml",
+    "H. von Mangoldt, Mathematische Annalen 60 (1905), 1-19, DOI:10.1007/BF01447494",
+    "RAKL framework main:15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+    "RAKL_math base main:d8e4b392c1d21b5a2bc832fc47a038b37490afa3",
+    "RAKL_math issue:#10",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "spectral geometry / metric dimension",
+      "source_situation": "For compact geometric spectral problems, eigenvalue counting controls which inverse powers of an operator are trace class; the endpoint identifies an effective spectral dimension and may require weak or regularized traces.",
+      "common_abstraction": [
+        "counting-function growth fixes singular-value summability thresholds",
+        "endpoint divergence is a structural obstruction rather than a finite-size numerical defect",
+        "stronger smoothing can restore ordinary trace class"
+      ],
+      "source_to_target_mapping": [
+        "geometric eigenvalue count -> Riemann zero count under an exact HP completeness hypothesis",
+        "inverse elliptic operator -> (I+H^2)^(-1/2) or resolvent-scale smoothing",
+        "spectral dimension endpoint -> q=1 logarithmically divergent RH endpoint"
+      ],
+      "shared_constraints": [
+        "multiplicities must be included consistently",
+        "the trace class must be specified before writing a trace",
+        "finite perturbations do not change the critical exponent"
+      ],
+      "disanalogies": [
+        "no manifold/local differential operator is known or assumed for RH",
+        "prime weights and the zeta explicit formula are not consequences of spectral dimension",
+        "continuous-spectrum/noncompact models may require different trace technology"
+      ],
+      "proposed_principle": "Before searching for a trace formula, infer the cheapest summability class forced by the target counting law and reject operator families whose claimed ordinary trace requires more summability than the target can have.",
+      "validation_obligation": "For RH-SPEC-003, prove the threshold directly from von Mangoldt counting and exhibit explicit exemptions (higher smoothing and regularized/distributional traces); do not infer any RH conclusion.",
+      "provenance_note": "Proposal generator only; no arithmetic or operator-existence theorem is imported from spectral geometry."
+    }
+  ],
+  "analogy_scan_notes": "Scanned spectral geometry, trace formulas, de Branges/canonical systems, de Bruijn–Newman flow and random-matrix/quantum-chaos analogies. Retained only the count-to-summability bridge because it yields a cheap exact falsifier with explicit scope; statistical and flow analogies remain calibration/non-authoritative.",
+  "frozen_at": "2026-08-11T09:18:43+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:90a186d8e391a32b0aaa061f3c9cd42ad009633caa0232f190562e894769d529"
+}

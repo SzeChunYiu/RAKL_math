@@ -1,0 +1,46 @@
+{
+  "target_atom_id": "RH-SPEC-003",
+  "target_context_hash": "sha256:90a186d8e391a32b0aaa061f3c9cd42ad009633caa0232f190562e894769d529",
+  "tool_inventory_snapshot_hash": "gitblob-sha1:1fbddfa683711068897b63032cf3068f8237fb2d",
+  "failure_lattice_snapshot_hash": "gitblob-sha1:f9a0219e6b574d3dd1d88b65a02d5f30479d2870",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "Stieltjes/dyadic count-to-Schatten threshold from von Mangoldt zero counting",
+    "ordinary-trace first-order resolvent falsifier",
+    "higher-smoothing or rigorously regularized trace exemption audit"
+  ],
+  "relevant_tool_ids": [
+    "T-RH-SPEC-HURWITZ-DOMAIN-ZERO-TRANSPORT"
+  ],
+  "relevant_failure_ids": [
+    "F-RH-SPEC-002-STRONG-RESOLVENT-INCOMPLETE",
+    "F-RH-SPEC-002-FINITE-ZERO-PREFIX",
+    "F-RH-SPEC-002-PR15-CHRONOLOGY"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "T-RH-SPEC-HURWITZ-DOMAIN-ZERO-TRANSPORT is relevant downstream only if a determinant/entire-function construction is later proposed. It is deliberately not selected here because RH-SPEC-003 assumes the exact spectral multiset only to derive a necessary summability condition; no source-to-Xi limit is being proved."
+  ],
+  "failure_reuse_notes": [
+    "F-RH-SPEC-002-STRONG-RESOLVENT-INCOMPLETE transfers as a completeness warning: generic operator convergence cannot justify replacing the frozen exact eigenvalue-counting assumption. DifferenceWitness: RH-SPEC-003 proves only a conditional no-go once exact completeness/multiplicity are separately assumed.",
+    "F-RH-SPEC-002-FINITE-ZERO-PREFIX applies directly to numerical/operator calibration: matching any finite zero prefix cannot establish the asymptotic counting multiset or trace legitimacy. DifferenceWitness: the intended threshold uses the proven global zero-counting asymptotic rather than finite data.",
+    "F-RH-SPEC-002-PR15-CHRONOLOGY requires the exact threshold evaluator and exemptions to be frozen in repository history before any candidate proof/result. This packet therefore records no CANDIDATE_PROPOSED event."
+  ],
+  "unresolved_warnings": [
+    "The atom is conditional on exact compact-resolvent spectral completeness/multiplicity and therefore cannot by itself advance the existential Hilbert–Pólya bridge.",
+    "The endpoint exclusion is only for ordinary trace class; zeta/Dixmier/relative/distributional traces require separate definitions and convergence proofs rather than being rejected by this atom.",
+    "Zero counting contains no prime-power weights, so a trace formula can still fail prime matching even when its analytic trace notion is legitimate.",
+    "A noncompact or continuous-spectrum model can evade the compact-resolvent summability statement and must be analyzed in its own representation.",
+    "de Branges/canonical-system positivity can be RH-equivalent; it cannot be imported as an independent positivity certificate without a non-circularity audit.",
+    "de Bruijn–Newman flow and random-matrix phenomena are proposal/calibration signals only for this atom."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_003_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_003_TRACE_CLASS_THRESHOLD_PRECONTEXT_20260811.md",
+    "H. von Mangoldt, Mathematische Annalen 60 (1905), 1-19, DOI:10.1007/BF01447494"
+  ],
+  "artifact_hash": "sha256:0c09897f902f6334ec0a8056472c7a5577b71697951a26bad4ffea10a3eff7a4"
+}
