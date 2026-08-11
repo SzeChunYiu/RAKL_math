@@ -1,0 +1,51 @@
+{
+  "failure_id": "F-RH-ANA-003-GLOBAL-DENSITY-NOT-EXCLUSION",
+  "episode_id": "EP-RH-ANA-003-DENSITY-THRESHOLD-20260811",
+  "atom_id": "RH-ANA-003",
+  "method_family": "current cumulative zero-density plus near-one zero-free region plus finite-height verification as a standalone RH tail closure",
+  "failure_categories": {
+    "primary": "math",
+    "secondary": "representation"
+  },
+  "failure_mode": "The selected source bounds control abundance or a shrinking near-one region but do not force zero occupancy in every fixed half-strip Re(s)>=sigma>1/2 above the verified height.",
+  "broken_assumptions": [
+    "a sufficiently small positive zero-density exponent can by itself exclude all tail zeros",
+    "a cumulative O(1) or vanishing-density conclusion is automatically an emptiness theorem",
+    "a zero-free boundary converging to Re(s)=1 eventually covers every fixed sigma>1/2 half-strip",
+    "finite rigorous verification can carry authority into an unproved infinite tail"
+  ],
+  "scope_conditions": [
+    "classical Riemann zeta",
+    "selected current Guth-Maynard 2026 density estimate",
+    "selected Bellotti explicit log-free density estimate",
+    "selected Mossinghoff-Trudgian-Yang explicit zero-free region",
+    "Platt-Trudgian verification through 3e12",
+    "no additional local zero detector, positivity theorem, zero repulsion, or weighted explicit-formula exclusion mechanism"
+  ],
+  "competing_diagnoses": [
+    "the route fails only because constants are not optimized enough",
+    "the route fails because cumulative density is the wrong representation for exact occupancy unless it crosses an integer <1 threshold",
+    "a qualitatively different zero-detection or weighted explicit-formula mechanism could still use density information successfully"
+  ],
+  "selected_diagnosis": "The standalone route fails at an authority-changing threshold, not merely at numerical sharpness: current cumulative bounds leave integer occupancy >=1 logically admissible, while the zero-free region covers only a shrinking neighborhood of Re(s)=1 and the verified prefix is finite.",
+  "diagnosis_status": "SUPPORTED",
+  "falsifier_or_attempt": "Freeze the exact local-count criterion M_sigma,k<1, then test each selected theorem's conclusion against it; use a one-defect monotone count only as a countermodel to the inference form, not as a zeta model.",
+  "observed_result": "No selected source theorem forces every local tail count below one for every fixed sigma>1/2. Guth-Maynard has a positive T exponent for fixed sigma<1; Bellotti has positive explicit bounds in its range; the explicit zero-free boundary tends to 1; finite verification stops at 3e12.",
+  "residual_after": [
+    "derive a local exclusion theorem or contradiction from a single hypothetical off-line zero",
+    "or prove an exact weighted prime/archimedean tail inequality with all transforms, convergence and signs audited",
+    "do not spend a new cycle solely decreasing a still-positive cumulative density exponent without a DifferenceWitness to the occupancy threshold"
+  ],
+  "obstruction_id": "B-RH-ANA-003-DENSITY-OCCUPANCY-THRESHOLD",
+  "lesson_id": "L-RH-ANA-003-COUNT-THRESHOLD-v1",
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_ANA_003_ZERO_DENSITY_TO_EXCLUSION_NO_GO_20260811.md",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003_DENSITY_TASK_EPISODE_20260811.json",
+    "SRC-GM-2026",
+    "SRC-BELLOTTI-ZD-2024",
+    "SRC-MTY-ZFR",
+    "SRC-PT-VERIFY"
+  ],
+  "timestamp": "2026-08-11T16:16:00+00:00",
+  "artifact_hash": "c0806e18b4cad513817c83127d302b3d98d2820aba7d2cfe67589612b3e971ee"
+}
