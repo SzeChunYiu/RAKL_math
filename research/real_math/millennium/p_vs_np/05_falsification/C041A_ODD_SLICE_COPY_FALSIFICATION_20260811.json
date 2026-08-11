@@ -1,0 +1,84 @@
+{
+  "schema_version": "rakl-math-c041a-falsification-v1",
+  "cycle_id": "PNP-O9d12a2a1b-C041A-ODD-SLICE-COPY-20260811",
+  "atom_id": "O9d12a2a1b-C041A",
+  "rule_id": "C041A-ODD-SLICE-COPY",
+  "rule": {
+    "parent_size": "M",
+    "child_size": "2M",
+    "injection": "i(u,v)=(2u-1,2v-1)",
+    "child_complement": "U'=i(U)",
+    "child_graph": "G'=[2M]^2\\U'"
+  },
+  "predeclared_world_tests": [
+    {
+      "world": "RELEVANCE_FAILURE",
+      "verdict": "FALSIFIED_FOR_THIS_RULE",
+      "reason": "Every parent relevant semi-filter maps bijectively to a child relevant semi-filter on the odd-odd slice."
+    },
+    {
+      "world": "LIFTED_FEASIBILITY_FAILURE",
+      "verdict": "FALSIFIED_FOR_THIS_RULE",
+      "reason": "The full cover graph is isomorphic, so every parent fractional dual certificate transports with identical pair loads."
+    },
+    {
+      "world": "ZERO_AUGMENTATION",
+      "verdict": "PROVED_FOR_THIS_RULE",
+      "reason": "No child edge with an even coordinate can support a relevant semi-filter because the corresponding generator trace is empty; all relevant child cover objects are copies of parent objects. Therefore integral and fractional cover optima are exactly unchanged."
+    },
+    {
+      "world": "RECURRENCE_BOUND_INSUFFICIENT",
+      "verdict": "TRIGGERED",
+      "reason": "The exact one-step increment is zero, so this rule cannot yield a positive divergent lower-bound recurrence. This is not an upper bound on the optimum under other rules."
+    },
+    {
+      "world": "RATE_FAILURE",
+      "verdict": "NOT_INFERRED_GLOBALLY",
+      "reason": "The selected copy-only rule has no growth, but no upper bound is proved for the parent atom's unrestricted rule universe."
+    },
+    {
+      "world": "SOURCE_DOMAIN_FAILURE",
+      "verdict": "NOT_TRIGGERED_LOCALLY",
+      "reason": "M -> 2M preserves the square power-of-two family when M is a power of two."
+    },
+    {
+      "world": "EXPLICITNESS_FAILURE",
+      "verdict": "NOT_TRIGGERED_LOCALLY",
+      "reason": "Child complement membership is an odd-coordinate check plus one parent membership query; the inherited local uniformity remains poly(M)=poly(2^n). This does not establish NP membership."
+    }
+  ],
+  "difference_witness": {
+    "prior_failure_id": "F-C037-ARBITRARY-EXTENSION-NONMONOTONE",
+    "shared_coordinate": "transport old fractional-dual support across a graph-complement extension",
+    "difference": "C037 changes the same-scale complement so one of three positive parent supports loses relevance. C041A embeds the complete old complement as an isolated odd-odd slice, so relevance and old dual feasibility are exact, yet no genuinely new relevant child semi-filter exists and augmentation is exactly zero.",
+    "consequence": "PERSISTENCE and AUGMENTATION are independent obligations; success on the former cannot be used as evidence for the latter."
+  },
+  "residual_slack_criterion": {
+    "statement": "For lifted old dual y with pair load ell(p)<=1, a fresh mass epsilon>0 on one new relevant semi-filter K is feasible iff every pair p covering K satisfies ell(p)<1.",
+    "status": "EXACT_FINITE_LOCAL_LEMMA_PROPOSAL_SHADOW",
+    "next_falsifier": "Any future extension rule must exhibit an off-slice relevant semi-filter K outside the coverage neighborhoods of all saturated lifted pairs; one saturated covering pair kills one-coordinate augmentation immediately."
+  },
+  "verification": {
+    "proof_artifact": "research/real_math/millennium/p_vs_np/04_candidates/C041A_ODD_SLICE_COPY_RULE.md",
+    "primary_source_pdf_sha256": "3f7d98691f3ac28208df6e8669d860c45b6068781dd77c737eb1e780641fbea7",
+    "finite_computation_role": "CALIBRATION_ONLY",
+    "same_context_review_role": "INTERNAL_ASSURANCE_ONLY"
+  },
+  "outcome": "FAILURE",
+  "failure_signature": [
+    "ZERO_AUGMENTATION",
+    "COPY_ONLY_COVER_GRAPH_ISOMORPHISM",
+    "NO_POSITIVE_RECURRENCE_FROM_SELECTED_RULE"
+  ],
+  "local_mathematical_failure": true,
+  "local_to_global_gluing_failure": false,
+  "gluing_residuals_remaining": [
+    "positive augmentation under a non-copy extension",
+    "divergent recurrence",
+    "root-relevant rate",
+    "graph-to-Boolean checkpoint strengthening",
+    "NP verifier or lower-bound-preserving NP reduction"
+  ],
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "independent_review_credit": "0/3"
+}
