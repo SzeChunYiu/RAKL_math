@@ -1,0 +1,49 @@
+{
+  "schema_version": "rakl-proposal-shadow-hash-correction-v1",
+  "atom_id": "H4d1d0",
+  "authority": "TOOLING_CORRECTION_ONLY / NO_MATHEMATICAL_AUTHORITY",
+  "source_result_commit": "1ea0eba7040d20c95724d6061920249bd617b863",
+  "source_result_blob_sha": "64a0fe2c077ab130722792dd8147c970b1baa9fc",
+  "source_path": "research/real_math/millennium/hodge/deformation/07_memory/H4d1d0_RESULT_EPISODE_DIAGNOSIS_LESSON_20260811.json",
+  "reason": "The result packet was manually serialized through the GitHub connector with five stale per-record artifact_hash strings even though the TaskEpisode hash was correct. Git history is preserved; this overlay records the exact deterministic replacements rather than pretending the frozen commit was valid.",
+  "replacements": [
+    {
+      "json_pointer": "/result/artifact_hash",
+      "incorrect": "sha256:04f60bdff0e70a1276bfaa1ef31673823d52285813e95c46e782e3d5039b7b9b",
+      "correct": "sha256:a68a2aa31199c07165ad1930e179f45e91aac53dab752e0d2c4dcd974b7bdf07"
+    },
+    {
+      "json_pointer": "/diagnosis/artifact_hash",
+      "incorrect": "sha256:a52593f92e2be93f11e53f1949342a866d02b2b4111966266a41617392498265",
+      "correct": "sha256:c92d9b17dd59f1af4090bf09fa4e517519ffab9f5cb215508d6db8e5cf308de4"
+    },
+    {
+      "json_pointer": "/failure_experience/artifact_hash",
+      "incorrect": "sha256:594784673603279371b1d9e9ad3814a7c2a097801caeaecf7bad5cac45af84a7",
+      "correct": "sha256:7f37d23ac2b3e8615753cbefd6140e5797a138891b1a96bf4763163a958dae20"
+    },
+    {
+      "json_pointer": "/lesson/artifact_hash",
+      "incorrect": "sha256:714fcb9478f414f16b65986b38166d8d4fbb02cb830a4e2202f110b290ea5e1c",
+      "correct": "sha256:4dd32b7c9dcb68f36aee74d3d30b028bf9ed89bf19b43fc3cf74f6bfec3442af"
+    },
+    {
+      "json_pointer": "/successor_obstruction/artifact_hash",
+      "incorrect": "sha256:fb937581097272622228385321081491097198740476366480f073c5e6e49f27",
+      "correct": "sha256:62be7da985d41e25ebea7138d8c09ebbea9b0b4683cc41d2d8858384a9ced68f"
+    }
+  ],
+  "task_episode_artifact_hash_status": {
+    "value": "VALID_AS_WRITTEN",
+    "hash": "sha256:4fc0b5511b400b79e129cdfe66c78ee4ff96f4c185495009600755e655abf4e1"
+  },
+  "corrected_packet_hash_after_replacements": "sha256:5d5143ff2f70bd7a374149e5436970ad115359311fd11beccbf979e84e5bca6e",
+  "tooling_failure": {
+    "failure_id": "F-H4D1D0-MANUAL-HASH-COPY-MISMATCH",
+    "category": "TOOLING_SERIALIZATION",
+    "diagnosis": "Large connector write was assembled manually after canonical hashes were computed; five per-record hash strings did not match the computed values.",
+    "repair": "Preserve the bad commit as negative history, publish an exact correction overlay, and add a regression that reconstructs canonical hashes before any authority can be inferred.",
+    "repeat_link": "NO_PRIOR_LINKED_OCCURRENCE_FOUND_IN_THIS_CYCLE; do not classify as a repeated process failure until another episode shares the same signature."
+  },
+  "timestamp": "2026-08-11T18:32:00+00:00"
+}
