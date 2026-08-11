@@ -1,0 +1,183 @@
+{
+  "atom_id": "RH-SPEC-002a",
+  "object_context": "Source-side determinant compactness/ground-state identification obstruction for the Riemann Hypothesis spectral lane. Starting from the Connes–Consani–Moscovici finite/restricted Weil-form construction, determine whether the actual lowest eigenfunction of QW_lambda (and its finite truncations) can be identified with the prolate-wave proxy strongly enough, under a source-defined normalization and cofinal cutoff regime, to force locally uniform convergence of the corresponding Fourier transforms/regularized determinants to the exact Riemann Xi function on a root-relevant domain. The atom explicitly separates ground-state simplicity/evenness, finite-N truncation convergence, prolate-to-Weil eigenvector stability, analytic transform control, normalization, and joint-limit order.",
+  "structural_coordinates": [
+    "CCM Theorem 5.10 gives a self-adjoint finite/restricted operator and an entire regularized determinant proportional to the Fourier transform of the lowest truncated Weil-form eigenvector, conditional on that eigenvalue being simple with an even eigenvector",
+    "CCM Section 7 proves the Fourier transform of the prolate proxy k_lambda converges to Xi uniformly on closed substrips of |Im z|<1/2, but Section 8 states that proving k_lambda approximates a scalar multiple of the true lowest Weil-form eigenfunction xi_lambda is still missing",
+    "small Rayleigh value or small proxy discrepancy alone does not identify an eigenvector unless a quantitative spectral-separation/conditioning coordinate is controlled",
+    "the relevant source-side stability quantity can be organized as a residual-to-gap problem: approximate-eigenvector residual or Rayleigh excess must be compared with the spectral gap separating the ground state from the next mode",
+    "finite-dimensional truncation N and physical/arithmetic cutoff lambda are different approximation coordinates; the cofinal regime and order/path independence must be explicit",
+    "the normalization delta_N(xi)=1 or xi_lambda(lambda)=1 is load-bearing because determinant convergence is only meaningful up to zero-free factors unless a canonical normalization is fixed",
+    "Fourier/Mellin transform convergence on a strip requires weighted physical-space control strong enough for compact-uniform analytic convergence, not merely L2 closeness on expanding intervals",
+    "the target-side Hurwitz/Rouche step is already understood conditionally; this atom is source-side and must not count target-side zero transport as evidence for the missing source estimate",
+    "simple/even ground-state existence, gap positivity, proxy residual control, truncation convergence, and Xi identification are non-compensatory obligations",
+    "numerical agreement of low eigenvalues or proxy profiles can guide falsifiers but cannot replace a uniform source-side theorem"
+  ],
+  "equivalent_formulations": [
+    "prove a source-side bound dist(normalized k_lambda, span{xi_lambda}) -> 0 with a rate strong enough to imply locally uniform convergence of Fourier transforms on each closed substrip |Im z|<=1/2-delta",
+    "prove a quantitative approximate-ground-state theorem for QW_lambda in which a computable residual or Rayleigh excess for k_lambda divided by the actual ground-state spectral gap tends to zero",
+    "prove fixed-lambda convergence of normalized lowest eigenvectors xi_(lambda,N) to xi_lambda as N->infinity, then prove lambda->infinity convergence of xi_lambda to the prolate/Riemann proxy in a weighted topology that controls analytic transforms",
+    "falsify the determinant route by showing that the natural proxy can have vanishing Rayleigh excess while the relevant ground-state gap collapses too quickly, so eigenvector identification does not follow",
+    "replace direct eigenvector comparison by a source-defined compactness-plus-uniqueness argument: every normalized subsequential ground-state limit satisfies a characterization whose unique solution is the prolate/Riemann proxy"
+  ],
+  "solved_analogues": [
+    "Davis–Kahan/Kato-type perturbation and approximate-eigenvector estimates for isolated self-adjoint eigenvalues: eigenvector/subspace stability is controlled by perturbation or residual size relative to spectral separation",
+    "Rayleigh–Ritz/Galerkin convergence for isolated ground states of closed lower-bounded forms when the approximation spaces form a suitable core and the target eigenvalue remains isolated",
+    "Hurwitz/Rouche compact-uniform zero transport once the source-normalized analytic convergence and nonzero target have already been proved"
+  ],
+  "near_solved_analogues": [
+    "Connes–Consani–Moscovici 2025: finite/restricted self-adjoint/real-zero determinant mechanism is rigorous under simple-even hypotheses; Section 7 proves the prolate proxy transform tends to Xi; Section 8 leaves true Weil-ground-state identification open",
+    "Connes–van Suijlekom 2025: general lower-bounded self-adjoint quadratic-form mechanism generating entire functions with only real zeros under a simple isolated even ground state, but not the zeta-specific global identification",
+    "prolate time-frequency concentration theory: the relevant low prolate modes have strong asymptotic localization and explicit spectral separation information, but QW_lambda is not the prolate operator and the transfer needs a theorem relating their ground-state geometries"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "isolated-eigenvalue perturbation theory / Davis–Kahan–Kato stability",
+      "method": "convert proxy closeness from a qualitative numerical observation into a residual-over-gap certificate: define a normalized proxy v_lambda in the QW_lambda form/operator domain, compute its Rayleigh quotient or operator residual, and compare that error with a proved lower bound on the gap from the lowest eigenvalue to the rest of the relevant parity sector",
+      "shared_structure": [
+        "self-adjoint lower-bounded operator or form",
+        "distinguished lowest eigenspace",
+        "candidate approximate eigenvector",
+        "need to control eigenspace angle rather than only eigenvalue"
+      ],
+      "required_assumptions": [
+        "QW_lambda has a self-adjoint operator realization on a specified domain or an equivalent form-theoretic residual statement",
+        "the lowest eigenvalue is isolated in the relevant even sector",
+        "the proxy normalization is nondegenerate",
+        "a quantitative residual/Rayleigh excess and a lower bound for the next spectral separation are available"
+      ],
+      "disanalogies": [
+        "QW_lambda depends on lambda and contains arithmetic prime/archimedean terms rather than being a fixed compact matrix perturbation",
+        "the desired estimate must survive lambda->infinity and cannot assume the very simplicity/gap statement still open in the source",
+        "small eigenvalue size is not itself a lower bound on the spectral gap"
+      ],
+      "repair_question": "Can one define a source-computable residual or Rayleigh excess for the CCM prolate proxy and prove that its ratio to the even-sector ground-state gap tends to zero without assuming RH or importing zeta-zero locations?",
+      "source_anchors": [
+        "Tosio Kato, Perturbation Theory for Linear Operators",
+        "Alain Connes, Caterina Consani, Henri Moscovici, Zeta Spectral Triples, arXiv:2511.22755v1, Sections 7-8"
+      ]
+    },
+    {
+      "source_context": "Rayleigh–Ritz/Galerkin convergence of isolated ground states",
+      "method": "separate the finite-N problem from the lambda-limit: first prove form-core convergence and isolated-ground-state convergence xi_(lambda,N)->xi_lambda at fixed lambda with normalization control, then address lambda->infinity",
+      "shared_structure": [
+        "nested finite-dimensional spaces E_N",
+        "restriction QW_lambda^N of a lower-bounded closed form",
+        "lowest eigenpair used to define the finite determinant"
+      ],
+      "required_assumptions": [
+        "E_N is a form core or otherwise gives the required variational convergence",
+        "the target ground eigenvalue is isolated/simple in the chosen sector",
+        "normalization delta_N(xi_(lambda,N)) is compatible with the limiting boundary evaluation and does not approach zero",
+        "constants are tracked before taking lambda->infinity"
+      ],
+      "disanalogies": [
+        "the boundary-evaluation normalization itself changes with N through the Dirichlet kernel",
+        "fixed-lambda Galerkin convergence does not provide estimates uniform in lambda",
+        "spectral pollution issues differ at the bottom of a lower-bounded spectrum but normalization and gap collapse can still obstruct eigenvector convergence"
+      ],
+      "repair_question": "Which fixed-lambda form-core and spectral-gap hypotheses are already provable for QW_lambda, and what quantitative dependence on lambda is needed before composing with the outer limit?",
+      "source_anchors": [
+        "Alain Connes, Caterina Consani, Henri Moscovici, arXiv:2511.22755v1, Sections 3 and 5",
+        "Tosio Kato, Perturbation Theory for Linear Operators"
+      ]
+    },
+    {
+      "source_context": "normal-family/Paley–Wiener style analytic-transform control",
+      "method": "translate a weighted source-space approximation into compact-uniform Fourier/Mellin convergence on a frozen strip, tracking the expanding support and exponential weights explicitly",
+      "shared_structure": [
+        "compactly supported or rapidly decaying source functions",
+        "entire/Fourier transforms",
+        "target convergence required uniformly on compact complex sets or closed substrips"
+      ],
+      "required_assumptions": [
+        "a normalization fixed independently of target zeros",
+        "weighted L1 or pointwise/source estimates strong enough to dominate u^{-iz} uniformly on each closed substrip",
+        "tail control as lambda grows",
+        "nonzero target identification"
+      ],
+      "disanalogies": [
+        "plain L2 convergence on expanding intervals does not automatically control transforms off the real axis",
+        "the CCM proxy k_lambda already has a transform theorem; the missing estimate is between k_lambda and the actual Weil ground state"
+      ],
+      "repair_question": "What is the weakest weighted norm on xi_lambda-c_lambda k_lambda that directly yields the compact-uniform strip convergence needed by the retained Hurwitz tool?",
+      "source_anchors": [
+        "Alain Connes, Caterina Consani, Henri Moscovici, arXiv:2511.22755v1, Lemma 7.3 and Section 8"
+      ]
+    },
+    {
+      "source_context": "conditioning in inverse problems and mode identification",
+      "method": "treat ground-state identification as a stability/conditioning problem: a small forward residual is informative only relative to the inverse stability constant, here represented by spectral separation",
+      "shared_structure": [
+        "latent state inferred from small residual",
+        "non-uniqueness or near-degeneracy can make inverse identification unstable",
+        "condition number controls conversion of residual size into state error"
+      ],
+      "required_assumptions": [
+        "the abstraction is used only to design the discriminator",
+        "the target-domain stability constant is proved from QW_lambda rather than borrowed from engineering",
+        "a hostile nearly-degenerate self-adjoint model is included"
+      ],
+      "disanalogies": [
+        "no experimental noise model or probabilistic estimator is present in RH",
+        "the spectral gap is a theorem-level arithmetic/operator quantity, not a tunable engineering condition number"
+      ],
+      "repair_question": "Does every proposed proxy-identification argument expose an explicit stability denominator, and does it fail correctly on a nearly degenerate two-mode calibration?",
+      "source_anchors": [
+        "standard self-adjoint perturbation theory",
+        "RAKL_math RH-SPEC-002 failure memory"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "the prolate operator and the Weil quadratic-form operator are not identified; shared near-minimizing behavior or similar small eigenvalues does not make their eigenvectors equal",
+    "a tiny lowest Weil eigenvalue does not imply a large or uniform gap above it",
+    "fixed-lambda convergence in N does not justify a joint N,lambda limit without a frozen cofinal regime or uniform estimates",
+    "L2 or pointwise proxy closeness on an expanding interval is not automatically compact-uniform convergence of Fourier transforms in a complex strip",
+    "the conditionally reusable Hurwitz tool solves only target-side zero transport and cannot manufacture the source-side determinant convergence",
+    "de Branges/canonical-system positivity is not imported unless an actual Hermite–Biehler/canonical-system object is constructed from the source family with all hypotheses proved",
+    "random-matrix/GUE agreement and numerical low-zero accuracy do not constrain the zero-free normalization factor or prove eigenvector stability",
+    "an eigenvector perturbation theorem cannot be applied by assuming the ground-state gap whose existence/uniformity is itself part of the open obstruction"
+  ],
+  "source_anchors": [
+    "SzeChunYiu/RAKL_math issue #3 and merged RH-SPEC-002 retrospective calibration",
+    "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.md",
+    "Alain Connes, Caterina Consani, Henri Moscovici, Zeta Spectral Triples, arXiv:2511.22755v1 (2025), Theorem 5.10, Section 7, Section 8",
+    "Alain Connes and Walter D. van Suijlekom, Quadratic Forms, Real Zeros and Echoes of the Spectral Action, Commun. Math. Phys. 406:312 (2025), arXiv:2511.23257",
+    "Tosio Kato, Perturbation Theory for Linear Operators"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "engineering inverse-problem / modal-identification conditioning",
+      "source_situation": "A model output can fit observations with tiny residual while the inferred latent mode remains unstable when two modes are nearly degenerate; state identification requires residual size to be small relative to a stability/conditioning scale.",
+      "common_abstraction": [
+        "small forward residual versus latent-state identification",
+        "near degeneracy destroys stable inversion",
+        "a denominator/conditioning coordinate is load-bearing"
+      ],
+      "source_to_target_mapping": [
+        "forward residual -> QW_lambda approximate-eigenvector residual or Rayleigh excess of k_lambda",
+        "latent mode -> true lowest even Weil-form eigenvector xi_lambda",
+        "conditioning scale -> spectral gap above the ground state",
+        "stable estimator -> source-side eigenvector identification theorem"
+      ],
+      "shared_constraints": [
+        "the residual and stability scale must be independently defined",
+        "the same norm/space must be used for numerator and denominator",
+        "a nearly-degenerate hostile control must be rejected"
+      ],
+      "disanalogies": [
+        "RH has no measurement noise or statistical estimator",
+        "the QW_lambda gap and domain properties are arithmetic/operator theorems, not empirical calibration parameters"
+      ],
+      "proposed_principle": "Do not use small proxy error, small energy, or visual/numerical profile agreement as ground-state identification unless the argument exposes and controls the relevant spectral conditioning denominator.",
+      "validation_obligation": "Freeze a two-mode self-adjoint near-degeneracy negative control and require any proposed QW_lambda proxy certificate to fail when residual/Rayleigh error tends to zero no faster than the ground-state gap; then prove the corresponding numerator and gap bounds for the actual source family.",
+      "provenance_note": "Proposal-only structural analogy; no engineering theorem is transferred as RH authority."
+    }
+  ],
+  "analogy_scan_notes": "Scanned isolated-eigenvalue perturbation, Galerkin ground-state convergence, analytic normal-family control, de Branges/canonical systems, and engineering modal-identification conditioning. Retained only transfers with explicit source-side validation obligations; de Branges was kept as a non-transfer warning because no source Hermite–Biehler system is presently constructed.",
+  "frozen_at": "2026-08-11T08:53:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:43cb9593fd79ded84f03aa6c70508c5e81be7a073517c64fb0325e2b088a125a"
+}

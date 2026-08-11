@@ -1,0 +1,228 @@
+{
+  "trace_id": "TRACE-RH-SPEC-002A-OPEN-20260811",
+  "entries": [
+    {
+      "event_id": "RH-SPEC-002a-E01",
+      "atom_id": "RH-SPEC-002a",
+      "event_type": "ATOMIZED",
+      "timestamp": "2026-08-11T08:52:00+00:00",
+      "state_summary": "The retrospective RH-SPEC-002 calibration leaves a source-side residual: generic spectral topology has been pruned, but the actual CCM route still lacks a theorem connecting the true lowest Weil-form eigenfunction to the prolate proxy whose transform is known to approach Xi.",
+      "action_summary": "Open RH-SPEC-002a as the determinant-compactness/ground-state-identification child, explicitly separating simple-evenness, finite-N convergence, proxy-to-ground-state stability, transform control, normalization, and limit order.",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.md",
+        "Alain Connes, Caterina Consani, Henri Moscovici, arXiv:2511.22755v1, Sections 7-8"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "atom:RH-SPEC-002a",
+        "parent:RH-SPEC-002"
+      ],
+      "uncertainties": [
+        "whether QW_lambda has a quantitatively isolated even ground state uniformly enough for the outer limit"
+      ],
+      "residuals": [
+        "fresh context/memory/review/trace required before any source-side theorem candidate"
+      ],
+      "next_steps": [
+        "freeze source-bound MathContextFiber"
+      ],
+      "artifact_hash": "sha256:de9e1b30fef112117b9838be1bc27686cca0f5242d188411909707ce3996a872",
+      "previous_event_hash": ""
+    },
+    {
+      "event_id": "RH-SPEC-002a-E02",
+      "atom_id": "RH-SPEC-002a",
+      "event_type": "CONTEXT_FROZEN",
+      "timestamp": "2026-08-11T08:54:00+00:00",
+      "state_summary": "The atom is represented as a conditioning/stability bridge rather than a vague determinant limit: small proxy error can identify the true ground state only with explicit spectral separation and normalization, followed by weighted analytic-transform control.",
+      "action_summary": "Freeze the RH-SPEC-002a MathContextFiber and source packet before candidate generation.",
+      "evidence_pointers": [
+        "sha256:43cb9593fd79ded84f03aa6c70508c5e81be7a073517c64fb0325e2b088a125a",
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_002A_CONTEXT_FIBER_20260811.json",
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_002A_SOURCE_PACKET_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "sha256:43cb9593fd79ded84f03aa6c70508c5e81be7a073517c64fb0325e2b088a125a"
+      ],
+      "uncertainties": [
+        "exact source-computable residual and gap lower bound are not yet known"
+      ],
+      "residuals": [
+        "no mathematical candidate exists"
+      ],
+      "next_steps": [
+        "run structural analogy scan"
+      ],
+      "artifact_hash": "sha256:a9e4f062ec37b3c10e84d74789409c92eac98fc188cfbed30efad4f386deafeb",
+      "previous_event_hash": "sha256:de9e1b30fef112117b9838be1bc27686cca0f5242d188411909707ce3996a872"
+    },
+    {
+      "event_id": "RH-SPEC-002a-E03",
+      "atom_id": "RH-SPEC-002a",
+      "event_type": "ANALOGY_SCAN",
+      "timestamp": "2026-08-11T08:55:00+00:00",
+      "state_summary": "Cross-domain scan retained a conditioning analogy from modal identification/inverse problems: a small residual does not determine a latent mode under near-degeneracy; the stability denominator is load-bearing.",
+      "action_summary": "Retain only the residual-versus-conditioning abstraction and reject surface analogies that do not expose a QW_lambda validation obligation.",
+      "evidence_pointers": [
+        "sha256:43cb9593fd79ded84f03aa6c70508c5e81be7a073517c64fb0325e2b088a125a",
+        "Tosio Kato, Perturbation Theory for Linear Operators"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "retained_bridge:residual_vs_spectral_conditioning"
+      ],
+      "uncertainties": [
+        "engineering conditioning is not itself RH mathematics"
+      ],
+      "residuals": [
+        "need a target-domain two-mode hostile control"
+      ],
+      "next_steps": [
+        "review method transfers"
+      ],
+      "artifact_hash": "sha256:1babf383ef46a6df2d2c4cc4886c747c6c1a7e3f7a429f4dde8d3e0d17643e03",
+      "previous_event_hash": "sha256:a9e4f062ec37b3c10e84d74789409c92eac98fc188cfbed30efad4f386deafeb"
+    },
+    {
+      "event_id": "RH-SPEC-002a-E04",
+      "atom_id": "RH-SPEC-002a",
+      "event_type": "METHOD_TRANSFER_REVIEW",
+      "timestamp": "2026-08-11T08:56:00+00:00",
+      "state_summary": "Four transfer families are now separated: isolated-eigenvalue residual/gap stability, fixed-lambda Rayleigh-Ritz convergence, weighted transform convergence, and conditioning-based hostile calibration.",
+      "action_summary": "Record each method's assumptions, disanalogies, and smallest repair question; do not transfer de Branges or random-matrix conclusions without source objects satisfying their hypotheses.",
+      "evidence_pointers": [
+        "sha256:43cb9593fd79ded84f03aa6c70508c5e81be7a073517c64fb0325e2b088a125a",
+        "Alain Connes, Caterina Consani, Henri Moscovici, arXiv:2511.22755v1",
+        "Tosio Kato, Perturbation Theory for Linear Operators"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "method_transfer_matrix:RH-SPEC-002a:frozen"
+      ],
+      "uncertainties": [
+        "whether a QW_lambda operator-domain residual for k_lambda is well-defined in the required domain"
+      ],
+      "residuals": [
+        "simple-evenness and gap control remain separate"
+      ],
+      "next_steps": [
+        "run same-context expert cell"
+      ],
+      "artifact_hash": "sha256:7ff3e2af2204995bb622e1e1389a3e2c940fe9a7c5bb67405f74faca7f3f2369",
+      "previous_event_hash": "sha256:1babf383ef46a6df2d2c4cc4886c747c6c1a7e3f7a429f4dde8d3e0d17643e03"
+    },
+    {
+      "event_id": "RH-SPEC-002a-E05",
+      "atom_id": "RH-SPEC-002a",
+      "event_type": "EXPERT_CONTEXT_REVIEW",
+      "timestamp": "2026-08-11T08:57:00+00:00",
+      "state_summary": "A six-role same-context cell reviewed arithmetic source fidelity, self-adjoint perturbation, prolate/Weil comparison, adversarial near-degeneracy, formal assurance, and novelty/research value.",
+      "action_summary": "Reject immediate determinant-convergence or eigenvector-closeness claims. Select a pre-candidate discriminator that first asks whether the prolate proxy admits a source-defined residual-over-ground-gap certificate and whether the finite-N/outer-lambda limits can be separated cleanly.",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/08_reviews/SAME_CONTEXT_REVIEW_RH_SPEC_002A_PRE_CANDIDATE_20260811.md",
+        "sha256:43cb9593fd79ded84f03aa6c70508c5e81be7a073517c64fb0325e2b088a125a"
+      ],
+      "alternatives_considered": [
+        "assert k_lambda is close because the numerical profiles agree",
+        "use the tiny lowest eigenvalue as a proxy for spectral separation",
+        "jump directly to a de Branges positivity candidate",
+        "freeze a gap-normalized residual calibration before theorem invention"
+      ],
+      "decision_rationale": "The residual-over-gap discriminator has high partition power: if the gap collapses too fast, a whole class of proxy-identification arguments fails; if a uniform or rate-controlled separation survives, standard isolated-eigenspace tools become legitimately applicable without yet asserting RH.",
+      "outputs": [
+        "mode:CONTRASTIVE_DISCRIMINATION",
+        "mode:EFFECTUAL_PROBE",
+        "recommendation:pre_candidate_gap_residual_calibration"
+      ],
+      "uncertainties": [
+        "actual QW_lambda gap behavior is unknown"
+      ],
+      "residuals": [
+        "no candidate generated"
+      ],
+      "next_steps": [
+        "query dual memory"
+      ],
+      "artifact_hash": "sha256:c627fd23d0971989c64398368818dfa8c901dd36bb1db0b39f772ef0d17aaa9f",
+      "previous_event_hash": "sha256:7ff3e2af2204995bb622e1e1389a3e2c940fe9a7c5bb67405f74faca7f3f2369"
+    },
+    {
+      "event_id": "RH-SPEC-002a-E06",
+      "atom_id": "RH-SPEC-002a",
+      "event_type": "EXPERIENCE_MEMORY_REVIEW",
+      "timestamp": "2026-08-11T08:58:00+00:00",
+      "state_summary": "RH-specific post-calibration memory now contains a conditionally reusable Hurwitz target-side tool and explicit failures for strong-resolvent incompleteness, Galerkin pollution, joint-limit ambiguity, finite-zero-prefix overreach, and chronology failure.",
+      "action_summary": "Freeze a memory review bound to exact Git blob identities of the current RH tool and failure snapshots. Select Hurwitz only as the downstream endpoint; use the failures as warnings and regressions, not impossibility claims.",
+      "evidence_pointers": [
+        "sha256:421cf41c886331a61ab3b021b49758a356620916d54031e86f9cc8bc40abef19",
+        "gitblob-sha1:1fbddfa683711068897b63032cf3068f8237fb2d",
+        "gitblob-sha1:f9a0219e6b574d3dd1d88b65a02d5f30479d2870",
+        "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002A_RESEARCH_MEMORY_REVIEW_20260811.json"
+      ],
+      "alternatives_considered": [
+        "ignore retrospective memory because it has no root authority",
+        "treat Hurwitz as if it supplied source convergence",
+        "use the memory only to define source-side applicability obligations and hostile regressions"
+      ],
+      "decision_rationale": "The existing memory sharply separates target-side zero transport from the missing source-side convergence. This prevents repeating finite-zero and generic-operator-topology dead ends while preserving the prolate/ground-state route as an open target-specific question.",
+      "outputs": [
+        "selected_tool:T-RH-SPEC-HURWITZ-DOMAIN-ZERO-TRANSPORT",
+        "relevant_failures:5"
+      ],
+      "uncertainties": [
+        "failure records are SUPPORTED warnings, not verified impossibilities"
+      ],
+      "residuals": [
+        "source residual remains open"
+      ],
+      "next_steps": [
+        "freeze the next pre-candidate action"
+      ],
+      "artifact_hash": "sha256:73168a9c85bb5fa72223ef53a0584ae678837ee54a173a627eda1760337e8395",
+      "previous_event_hash": "sha256:c627fd23d0971989c64398368818dfa8c901dd36bb1db0b39f772ef0d17aaa9f"
+    },
+    {
+      "event_id": "RH-SPEC-002a-E07",
+      "atom_id": "RH-SPEC-002a",
+      "event_type": "NEXT_STEP_PROPOSED",
+      "timestamp": "2026-08-11T08:59:00+00:00",
+      "state_summary": "RH-SPEC-002a now has frozen source context, structural analogy, method-transfer matrix, same-context expert review, and dual memory review. Candidate generation may be considered only after machine audit of this packet.",
+      "action_summary": "After the strict packet passes, build a candidate-independent GAP-RESIDUAL CALIBRATION contract before any RH theorem candidate: (i) define the relevant even-sector ground gap g_lambda and a source-computable proxy residual/Rayleigh excess r_lambda; (ii) plant a nearly-degenerate two-mode negative control where r_lambda->0 but r_lambda/g_lambda does not; (iii) freeze fixed-lambda N->infinity and outer lambda->infinity order; (iv) only then ask whether the actual QW_lambda/prolate data support r_lambda/g_lambda->0 in a weighted norm sufficient for compact-uniform transform convergence.",
+      "evidence_pointers": [
+        "sha256:43cb9593fd79ded84f03aa6c70508c5e81be7a073517c64fb0325e2b088a125a",
+        "sha256:421cf41c886331a61ab3b021b49758a356620916d54031e86f9cc8bc40abef19",
+        "research/real_math/millennium/riemann_hypothesis/08_reviews/SAME_CONTEXT_REVIEW_RH_SPEC_002A_PRE_CANDIDATE_20260811.md"
+      ],
+      "alternatives_considered": [
+        "prove simplicity/evenness immediately without a discriminator",
+        "fit a scalar normalization using known zeta zeros",
+        "use numerical eigenvalue accuracy as a convergence surrogate",
+        "first calibrate the stability denominator and source-space-to-transform bridge"
+      ],
+      "decision_rationale": "This action maximizes epistemic contraction without inventing a theorem prematurely: it can falsify the proxy-identification mechanism at the level of conditioning, or expose the exact quantitative inequalities that a subsequent candidate must prove.",
+      "outputs": [
+        "next_action:RH-SPEC-002A-GAP-RESIDUAL-CALIBRATION",
+        "candidate_generation:deferred_until_packet_audit"
+      ],
+      "uncertainties": [
+        "the exact operator-domain residual and best gap coordinate remain to be defined after audit"
+      ],
+      "residuals": [
+        "root remains OPEN_NO_SOLUTION_CERTIFICATE",
+        "no novelty claim",
+        "no theorem candidate"
+      ],
+      "next_steps": [
+        "run strict packet test",
+        "if PASS, freeze the exact calibration evaluator before evaluating source quantities"
+      ],
+      "artifact_hash": "sha256:3d682f6fc5dbb06b9d71e1af8cc0578dc94909f33ed6fac47741eccb5e1e9833",
+      "previous_event_hash": "sha256:73168a9c85bb5fa72223ef53a0584ae678837ee54a173a627eda1760337e8395"
+    }
+  ]
+}

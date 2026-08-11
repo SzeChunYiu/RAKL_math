@@ -1,0 +1,54 @@
+atom_id: RH-SPEC-002a
+parent_atom_id: RH-SPEC-002
+root: RIEMANN_HYPOTHESIS
+status: PRE_CANDIDATE_STRICT_PACKET
+claim_authority: ROOT_AUTHORITY_NONE
+object: >-
+  Source-side ground-state identification and determinant compactness bridge for the
+  Connes-Consani-Moscovici spectral route.
+selected_obstruction: PROXY_STABILITY
+obligations:
+  - id: RH-SPEC-002a.1
+    name: GS_SIMPLE_EVEN
+    state: OPEN
+    statement: >-
+      Prove or legitimately replace the simple/even lowest-eigenstate hypothesis for
+      QW_lambda on the intended cofinal family.
+  - id: RH-SPEC-002a.2
+    name: N_TRUNCATION
+    state: OPEN
+    statement: >-
+      At fixed lambda, justify convergence of normalized lowest eigenvectors of
+      QW_lambda^N to the corresponding QW_lambda ground state, with boundary
+      normalization compatibility.
+  - id: RH-SPEC-002a.3
+    name: PROXY_STABILITY
+    state: ACTIVE
+    statement: >-
+      Determine whether the prolate proxy admits a source-defined quantitative
+      residual/variational certificate whose error is small relative to the
+      relevant ground-state spectral separation, or replace this by another
+      source-side uniqueness/compactness mechanism.
+  - id: RH-SPEC-002a.4
+    name: TRANSFORM_CONTROL
+    state: OPEN
+    statement: >-
+      Convert source-space ground-state/proxy control into locally uniform
+      Fourier/Mellin convergence on a frozen root-relevant complex domain.
+  - id: RH-SPEC-002a.5
+    name: NORMALIZATION
+    state: OPEN
+    statement: >-
+      Freeze a source-defined scalar/phase normalization independently of known zeta
+      zeros and rule out uncontrolled zero-free factors.
+  - id: RH-SPEC-002a.6
+    name: COFINAL_LIMIT
+    state: OPEN
+    statement: >-
+      Freeze the N and lambda limit order/cofinal net or prove the uniformity needed
+      for path independence.
+next_discriminator: RH-SPEC-002A-GAP-RESIDUAL-CALIBRATION
+candidate_generation: >-
+  Deferred until context, memory and trace audits pass and the exact calibration
+  evaluator is frozen before evaluated source quantities are inspected.
+root_status: OPEN_NO_SOLUTION_CERTIFICATE
