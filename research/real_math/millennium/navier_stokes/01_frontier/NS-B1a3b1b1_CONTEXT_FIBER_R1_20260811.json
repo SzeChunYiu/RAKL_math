@@ -1,0 +1,87 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow-r1",
+  "atom_id": "NS-B1a3b1b1",
+  "parent_atom_id": "NS-B1a3b1b",
+  "control_issue": "RAKL_math#153",
+  "root_contract": {
+    "root_id": "NS0",
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "accepted_terminal_outcomes": ["Clay A", "Clay B", "Clay C", "Clay D"],
+    "independent_mathematical_reviews": "0/3",
+    "root_promotion_authority": "NONE"
+  },
+  "object_context": "Whole-space 3D incompressible Navier-Stokes Type-I regularity lane. Test a consumer-side context lift: replace Grujic-v2 one-center high-vorticity containment by a uniformly bounded finite-center cover, without changing the global Lorentz and log-BMO hypotheses.",
+  "active_problem_signature": {
+    "producer": "Albritton-Barker finite-I Type-I singularity/ancient class; producer obligations remain separate",
+    "consumer": "Grujic arXiv:2607.08866v2 Definition 2.1, Theorem 4.1, equations (23)-(25)",
+    "candidate_lift": "A_lambda(t) subset union_{j<=N} B(x_j(t),R_lambda), N<=N0, R_lambda<=C lambda^-1/2",
+    "target": "restricted stretching norm <= C0 N0^(2/3)/|log R_lambda| and eventual viscous absorption",
+    "falsifier": "disjoint equal-strength pieces force N^(2/3) weak-L3/2 union loss; reject N-independent constant and audit N(lambda)"
+  },
+  "fibre_contents_actually_consulted": [
+    "RAKL_VERSION.json@f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
+    "src/rakl/method_specs.py@f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
+    "ARCHITECTURE.md@f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
+    "RAKL_math main@47f56df0492339097a651d40b6c7289c4e2d4034",
+    "RAKL_math stacked parent@e0bcf0fd99a5587d303a9fd407f89d5505b1beb4",
+    "RAKL_math#145",
+    "RAKL_math PR#149",
+    "RAKL_math PR#131",
+    "RAKL_math#153",
+    "Grujic arXiv:2607.08866v2 Definition 2.1",
+    "Grujic arXiv:2607.08866v2 Theorem 4.1",
+    "Grujic arXiv:2607.08866v2 equations (23)-(25)",
+    "Barker arXiv:2111.14776v2 abstract/main theorem",
+    "Albritton-Barker arXiv:1811.00502v2 abstract/Theorem 1.1"
+  ],
+  "selected_prior_experience": [
+    "EP-NS-B1a3b1b-C001-R1-20260811",
+    "F-NS-B1a3b1b-AMPLITUDE-DOES-NOT-SELECT-ONE-CORE-MORPHOLOGY",
+    "O-NS-B1a3b1b-ONE-CENTER-MORPHOLOGY-PRODUCER",
+    "F-NS-B1a3-PROFILE-LEAKAGE",
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "near_solved_analogue": {
+    "id": "BARKER-2111.14776-v2",
+    "use": "structural analogue only: finitely many singular points under a global velocity L^{3,infinity} bound",
+    "difference_witness": [
+      "Barker assumes a global velocity L^{3,infinity} scale-invariant bound, stronger/different from local finite-I",
+      "terminal singular points are not pre-singularity high-vorticity super-level covers",
+      "velocity state is not vorticity morphology",
+      "no global vorticity log-BMO direction output is supplied"
+    ]
+  },
+  "transfer_assumptions": [
+    "Grujic Theorem 4.1 proof is translation-covariant because its balls, BMO definition, Calderon-Zygmund kernel and global Lorentz norms translate together",
+    "only the localized ball estimate is copied to finitely many translated balls; no producer theorem is transferred"
+  ],
+  "disanalogies": [
+    "finite-center consumer lift does not show finite-I produces such a cover",
+    "ancient-solution and pre-singularity state spaces remain distinct",
+    "global Lorentz amplitude and log-BMO direction are unchanged assumptions"
+  ],
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "cycle_start_git_sha": "f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
+    "incumbent_method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "manifest": "RAKL_VERSION.json",
+    "method_specs": "src/rakl/method_specs.py",
+    "authority": "v3 proposal/shadow; experience changes routing priority only"
+  },
+  "post_cycle_framework_freshness": {
+    "observed_main_sha": "4771576204b1b7fca5279a7245f0e144dca3436b",
+    "drift_from_cycle_start_commits": 15,
+    "semantic_framework_diff": "NONE_OBSERVED_IN_RAKL_VERSION.json/src/rakl/method_specs.py/ARCHITECTURE.md; compare listed only paper/experiment artifacts",
+    "action": "No mathematical reroute required; preserve cycle-start source-of-truth SHA and final drift receipt."
+  },
+  "application_state": {
+    "canonical_main_observed": "47f56df0492339097a651d40b6c7289c4e2d4034",
+    "stacked_parent_sha": "e0bcf0fd99a5587d303a9fd407f89d5505b1beb4",
+    "cycle_branch": "rakl/ns-b1a3b1b1-finite-center-lift"
+  },
+  "frozen_at_utc": "2026-08-11T19:36:00Z",
+  "fibre_snapshot_hash": "sha256:a9825cb4c0cef189694a6257e4366fb4959f3d5cba3b9200afa802b20c569f4a"
+}

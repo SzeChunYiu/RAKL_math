@@ -1,0 +1,62 @@
+{
+  "episode_id": "EP-NS-B1a3b1b1-C001-R1-20260811",
+  "task_id": "NS-B1a3b1b1-C001-R1",
+  "atom_id": "NS-B1a3b1b1",
+  "problem_signature": [
+    "Grujic-v2 localized commutator consumer",
+    "one-center morphology",
+    "finite-center cover",
+    "weak-L3/2 union scaling",
+    "Type-I producer residual"
+  ],
+  "fibre_snapshot_hash": "sha256:a9825cb4c0cef189694a6257e4366fb4959f3d5cba3b9200afa802b20c569f4a",
+  "operator_ids": [
+    "CL-NS-B1a3b1b1-GRUJIC-FINITE-CENTER-R1",
+    "counterexample-harness-N-multiplicity",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "motifs": [
+    "relax-consumer-before-strengthening-producer",
+    "finite-union-QoI-preservation"
+  ],
+  "search_policy": "experience-conditioned route rotation + source-signature type check + counterexample-first",
+  "observations": [
+    "Theorem 4.1 local ball estimate is translation-covariant under unchanged global norms",
+    "weak-L3/2 union loss is N^(2/3)",
+    "equations (23)-(25) require small restricted alpha norm, not center uniqueness"
+  ],
+  "verification": [
+    "current primary arXiv v2 source checked",
+    "distribution-function proof",
+    "quantifier-order falsifier for N",
+    "same-context six-role expert cell",
+    "DifferenceWitness against Barker 2111.14776"
+  ],
+  "outcome": "PARTIAL_SUCCESS_SCOPED_CONTEXT_LIFT",
+  "residual_signature": [
+    "PDE bounded-multiplicity cover producer absent",
+    "global weak-L3/2 vorticity producer absent",
+    "global log-BMO direction producer absent",
+    "ancient/pre-singularity bridge absent",
+    "Type-II open"
+  ],
+  "failure_category": {
+    "local_mathematical": "NONE_FOR_SCOPED_LEMMA",
+    "local_to_global_gluing": "OPEN_PRODUCER_AND_STATE_SPACE_GLUE"
+  },
+  "cost_effort_proxy": {
+    "value": 1.0,
+    "meaning": "one bounded atomic cycle; not wall-time or token count"
+  },
+  "next_action": "Source-search equation-specific bounded-multiplicity concentration/finite-singular-point results compatible with the finite-I class, with DifferenceWitness; otherwise rotate consumer.",
+  "storage_admission": "PROPOSAL_SHADOW_STORED",
+  "novelty_class": "REPRESENTATION_NOVEL_SHADOW",
+  "successful_reuse_ids": [
+    "EP-NS-B1a3b1b-C001-R1-20260811",
+    "O-NS-B1a3b1b-ONE-CENTER-MORPHOLOGY-PRODUCER",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "independent_review_credit": "0/3",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}
