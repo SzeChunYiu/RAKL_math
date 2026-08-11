@@ -72,7 +72,7 @@ def test_primary_source_controls_and_hodge_nonclaim_are_explicit() -> None:
     }
     text = AUDIT.read_text(encoding="utf-8")
     assert "not a transfer of P-vs-NP mathematics" in text
-    assert "does not yet instantiate the exact future `pi` collision" in text
+    assert "does not provide the exact equal-`pi` collision" in text
     assert "No Millennium root status changes" in text
 
 
