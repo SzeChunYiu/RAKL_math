@@ -41,6 +41,6 @@ def test_failure_scope_is_source_route_only() -> None:
 
 def test_audit_names_exact_repair_obligation() -> None:
     text = AUDIT.read_text()
-    assert "sum epsilon_k < delta_0" in text
+    assert "sum_k epsilon_k < delta_0" in text
     assert "C/(1-theta) < delta_0" in text
     assert "No RAKL framework mutation is authorized by this single episode." in text
