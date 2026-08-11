@@ -1,0 +1,243 @@
+{
+  "trace_id": "TRACE-RH-ANA-003-DENSITY-20260811",
+  "framework": {
+    "method_version": "3.0.0",
+    "current_main_sha": "9df550debdd97fc5ed5ab264221aee3d258954ff",
+    "method_manifest_evidence_cutoff_sha": "0cea6cc39a3cf67ef7ecff3fff9a704944c32ab8",
+    "method_specs_blob_sha": "3f629c4dd0ef55aedf14206b2be3df19875988b7",
+    "application_framework_pin_sha": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+    "pin_status": "STALE_BY_ONE_COMMIT; current RAKL main was read directly and newer rules were applied; pin was not altered in this application research branch"
+  },
+  "pre_action_receipt": {
+    "schema_version": "pre-action-fibre-receipt-v1",
+    "receipt_id": "PAR-RH-ANA-003-DENSITY-20260811-01",
+    "framework_repository": "SzeChunYiu/RAKL",
+    "framework_commit": "9df550debdd97fc5ed5ab264221aee3d258954ff",
+    "application_repository": "SzeChunYiu/RAKL_math",
+    "application_commit": "5a8c6bb2f297a536e1b0d1c8b0aa8e66cd1e3720",
+    "task_id": "TASK-RH-ANA-003-DENSITY-THRESHOLD-20260811",
+    "atom_id": "RH-ANA-003",
+    "context_hash": "31e2fc6491b0b61f8e7b7b96c668592b860b37166dc84e12cb488b3a19bb985d",
+    "fibre_snapshot_hash": "31e2fc6491b0b61f8e7b7b96c668592b860b37166dc84e12cb488b3a19bb985d",
+    "operator_ids": [
+      "decomposition",
+      "routing",
+      "search_query_generation",
+      "source_selection_reliability",
+      "claim_extraction",
+      "equivalence_similarity",
+      "gap_discovery",
+      "experiment_query_selection",
+      "memory",
+      "review",
+      "prompting_context_policy"
+    ],
+    "selected_retrievals": [
+      {
+        "retrieval_id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+        "authority": "CANONICAL",
+        "payload_hash": "fa7c52385880128d6114b0d71f37f362dd382c1d91141e43497685b047c46a77"
+      },
+      {
+        "retrieval_id": "F-RH-ANA-001-FINITE-LI-PREFIX",
+        "authority": "CANONICAL",
+        "payload_hash": "61097eaff7c1355cca0b2a7a180432a4e441c800b630ea010afca02333ce8c45"
+      },
+      {
+        "retrieval_id": "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE",
+        "authority": "CANONICAL",
+        "payload_hash": "a1fefd3134adbcd53cc277b1508c21ffa8b4a6eedb5548f0c4d04f2f9fac21e9"
+      }
+    ],
+    "rejected_retrievals": [
+      {
+        "retrieval_id": "T-RH-LI-PREFIX-QUARTET-CALIBRATION",
+        "rejection_reason": "Finite-prefix falsifier remains regression-relevant but does not test the infinite-height density-to-exclusion bridge selected for this action."
+      }
+    ],
+    "predeclared_discriminator": "Derive the minimal integer-count condition by which a finite verified height plus a zero-density/zero-free tail bound can imply no off-critical zero; then test current selected primary-source bounds for whether they force the exact local tail count below 1 on every tail block for every fixed sigma>1/2, without any RH-equivalent premise.",
+    "allowed_outcome_branches": [
+      "PASS_STRICTLY_WEAKER_TAIL_EXCLUSION_FOUND",
+      "REFUTED_CURRENT_DENSITY_STANDALONE_CLOSURE",
+      "BLOCKED_SOURCE_RANGE_OR_CONSTANTS",
+      "CANNOT_CHECK"
+    ],
+    "frozen_at_utc": "2026-08-11T16:04:00+00:00",
+    "sequence_index": 0,
+    "receipt_canonical_sha256": "ef4ceea2dd867fd33ba2e95d1f2e0981edfcf0b093cb07a0c36c201b962ebefb"
+  },
+  "shadow_task_episode": {
+    "episode_id": "EP-RH-ANA-003-DENSITY-THRESHOLD-20260811",
+    "atom_id": "RH-ANA-003",
+    "status": "PROPOSAL_SHADOW / OUTCOME_PENDING",
+    "context_hash": "sha256:31e2fc6491b0b61f8e7b7b96c668592b860b37166dc84e12cb488b3a19bb985d",
+    "operator_ids": [
+      "gap_discovery",
+      "experiment_query_selection",
+      "contradiction_diagnosis"
+    ],
+    "predeclared_falsifier": "Any selected bound that does not force the exact relevant integer tail count below 1 on every required block fails as a standalone exclusion certificate, regardless of how small its positive density exponent is.",
+    "evidence_pointers": [
+      "pre_action_receipt:ef4ceea2dd867fd33ba2e95d1f2e0981edfcf0b093cb07a0c36c201b962ebefb",
+      "SRC-GM-2026",
+      "SRC-BELLOTTI-ZD-2024",
+      "SRC-MTY-ZFR",
+      "SRC-PT-VERIFY"
+    ],
+    "authority": "PROPOSAL_ONLY"
+  },
+  "RAKL_METHOD_CASE_STUDY": {
+    "phase": "PRE_ACTION_FROZEN",
+    "active_atom_problem_signature": "RH-ANA-003 / exact zeta RH / density-to-exclusion tail coordinate",
+    "fibre_contents_actually_consulted": [
+      "exact RH canonical/success contracts",
+      "RH-ANA-003 DAG child contract",
+      "RH-ANA-002 context and post-audit failure",
+      "RH-ANA-001 finite-prefix failure",
+      "current RAKL v3 core/workflow/metrology/pre-action receipt/method_specs",
+      "Guth-Maynard 2026",
+      "Bellotti 2024 explicit log-free density",
+      "Mossinghoff-Trudgian-Yang explicit zero-free region",
+      "Platt-Trudgian rigorous finite verification"
+    ],
+    "operators_motifs_tried": [
+      "root-bridge stability audit",
+      "integer-count <1 discriminator",
+      "finite-prefix plus infinite-tail decomposition",
+      "density-versus-exclusion contrast",
+      "same-context role-separated adversarial review"
+    ],
+    "prior_successes_failures_retrieved": {
+      "selected": [
+        "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+        "F-RH-ANA-001-FINITE-LI-PREFIX",
+        "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE"
+      ],
+      "rejected_for_active_action": [
+        "T-RH-LI-PREFIX-QUARTET-CALIBRATION"
+      ],
+      "later_found_missed": [],
+      "retrieval_completeness": "CANNOT_MEASURE: no proven complete retrieval universe"
+    },
+    "search_policy_choice": "falsifier-first conversion threshold before candidate/inquality invention",
+    "falsifier_verification": "PREDECLARED; pending execution",
+    "outcome": "PENDING",
+    "residual": "Can current source-bound zero-density/zero-free information exclude even one off-critical tail zero for every fixed sigma>1/2?",
+    "failure_category": "PENDING",
+    "seven_saturation_axes": {
+      "KNOWLEDGE": "REOPENED: current 2026 density frontier added",
+      "OPERATOR": "OPEN: density-to-exclusion conversion test",
+      "EXPERIENCE_PATTERN": "ACTIVE: finite-surrogate/root-bridge failures selected",
+      "OBSTRUCTION": "OPEN: occupancy threshold not yet source-tested",
+      "RELATION": "OPEN: density to explicit-formula tail relation unresolved",
+      "PATH": "OPEN: standalone density path under test",
+      "META_METHOD": "FLAT_PENDING_RESULT"
+    },
+    "defensible_novelty_class": "PENDING_RESULT; at most scoped obstruction/process evidence",
+    "framework_improvement_hypothesis": "If this cycle confirms that exponent improvements can repeatedly consume search despite an unchanged integer-occupancy threshold, RAKL routing may benefit from a typed 'semantic target threshold' field that distinguishes metric optimization from authority-changing threshold crossing. No framework promotion is warranted from one case."
+  },
+  "entries": [
+    {
+      "event_id": "RH-ANA-003-E01",
+      "atom_id": "RH-ANA-003",
+      "event_type": "ROOT_AND_ATOM_BOUND",
+      "timestamp": "2026-08-11T15:55:00+00:00",
+      "state_summary": "Exact RH root remains open; RH-ANA-003 is already registered as a strict child of the ANA002 faithfulness failure.",
+      "action_summary": "Bind this cycle to the existing RH-ANA-003 zero-density/explicit-formula discriminator rather than opening a neighboring surrogate.",
+      "evidence_pointers": ["blob:73c819da51c773989fbbc90a6bba1fe4a284024d","blob:1c778c7f284a6b4b8648470efaf15d12872e44f9","blob:bbda1d9e41299bddbdc9b6b3a91de573864b826b","RAKL-main:9df550debdd97fc5ed5ab264221aee3d258954ff"],
+      "alternatives_considered": [],
+      "decision_rationale": "The existing DAG atom exactly names the zero-free/zero-density remainder audit and forbids candidate generation until the context packet is frozen.",
+      "outputs": ["root_status:OPEN_NO_SOLUTION_CERTIFICATE","active_atom:RH-ANA-003"],
+      "uncertainties": ["No root-level proof obligation is closed."],
+      "residuals": ["Can any available analytic tail estimate certify zero occupancy rather than small density?"],
+      "next_steps": ["freeze fresh MathContextFiber"],
+      "previous_event_hash": "",
+      "artifact_hash": "sha256:3b5181293a9483df290a0311932213752fe78649e924e8dcb5319f30694d94bb"
+    },
+    {
+      "event_id": "RH-ANA-003-E02",
+      "atom_id": "RH-ANA-003",
+      "event_type": "CONTEXT_FROZEN",
+      "timestamp": "2026-08-11T15:59:30+00:00",
+      "state_summary": "The frozen fibre distinguishes cumulative density, local tail occupancy, near-one zero-free exclusion and finite-height verification.",
+      "action_summary": "Freeze exact object/QoI/scope, primary-source roles, equivalents, near analogues, transfer assumptions/disanalogies and hostile controls before a candidate.",
+      "evidence_pointers": ["sha256:31e2fc6491b0b61f8e7b7b96c668592b860b37166dc84e12cb488b3a19bb985d","research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003_CONTEXT_FIBER_20260811.json","research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003_PRIMARY_SOURCE_PACKET_20260811.md"],
+      "alternatives_considered": [],
+      "decision_rationale": "This representation exposes the missing logical conversion as an integer-count threshold rather than an exponent-optimization problem.",
+      "outputs": ["sha256:31e2fc6491b0b61f8e7b7b96c668592b860b37166dc84e12cb488b3a19bb985d","representation:ZERO_DENSITY_TO_LOCAL_EXCLUSION"],
+      "uncertainties": ["A distinct mollifier/zero-detection theorem might escape the standalone density obstruction."],
+      "residuals": ["No current source has yet been tested against a predeclared <1 local-count criterion."],
+      "next_steps": ["run same-context expert cell"],
+      "previous_event_hash": "sha256:3b5181293a9483df290a0311932213752fe78649e924e8dcb5319f30694d94bb",
+      "artifact_hash": "sha256:65cc5950c6be0cb3ae54b0c51ba669fab07730c54526102c1a63db5b247654d3"
+    },
+    {
+      "event_id": "RH-ANA-003-E03",
+      "atom_id": "RH-ANA-003",
+      "event_type": "EQUIVALENCE_AND_TRANSFER_REVIEW",
+      "timestamp": "2026-08-11T16:00:00+00:00",
+      "state_summary": "Finite verification plus zero-free/density bounds are near-solutions on different regions, but none is silently equivalent to RH.",
+      "action_summary": "Retain the rare-defect-to-zero-defect analogy only as search structure; require a DifferenceWitness and exact count region for any transfer.",
+      "evidence_pointers": ["sha256:31e2fc6491b0b61f8e7b7b96c668592b860b37166dc84e12cb488b3a19bb985d","SRC-GM-2026","SRC-BELLOTTI-ZD-2024","SRC-MTY-ZFR","SRC-PT-VERIFY"],
+      "alternatives_considered": ["Treat Density Hypothesis as RH-equivalent","Treat a shrinking zero-free region as a fixed half-strip","Treat finite-height verification as evidence for the tail"],
+      "decision_rationale": "Primary literature itself distinguishes density hypotheses from RH; exact root equivalence is preserved only by zero occupancy for every fixed sigma>1/2.",
+      "outputs": ["transfer:integer_count_<1_threshold","rejected_transfer:density_is_zero"],
+      "uncertainties": ["Potential weighted explicit-formula transforms remain untested."],
+      "residuals": ["Need expert discrimination between exponent improvement and occupancy exclusion."],
+      "next_steps": ["same-context expert cell"],
+      "previous_event_hash": "sha256:65cc5950c6be0cb3ae54b0c51ba669fab07730c54526102c1a63db5b247654d3",
+      "artifact_hash": "sha256:8631024658244162ee5e0cf6c3b003111b7e9d21b53a2ae74f28b645f6bb4f67"
+    },
+    {
+      "event_id": "RH-ANA-003-E04",
+      "atom_id": "RH-ANA-003",
+      "event_type": "EXPERT_CONTEXT_REVIEW",
+      "timestamp": "2026-08-11T16:01:00+00:00",
+      "state_summary": "Four role-separated experts reviewed zero-density/zero-free, mollifier/resonance, explicit-formula positivity, and proof/provenance coordinates.",
+      "action_summary": "Select a falsifier-first density-to-exclusion conversion audit; do not invent a new positivity inequality or extend numerics.",
+      "evidence_pointers": ["research/real_math/millennium/riemann_hypothesis/08_reviews/SAME_CONTEXT_REVIEW_RH_ANA_003_PRE_CANDIDATE_20260811.md","sha256:31e2fc6491b0b61f8e7b7b96c668592b860b37166dc84e12cb488b3a19bb985d"],
+      "alternatives_considered": ["search for a better density exponent","extend zero computation","invent prime-term positivity","derive a local count threshold first"],
+      "decision_rationale": "The local-count threshold has maximum partition power: if current estimates cannot even cross integer occupancy <1, the standalone combination is eliminated without spending search on saturated exponent variants.",
+      "outputs": ["search_policy:FALSIFIER_FIRST","same_context_review:NOT_INDEPENDENT"],
+      "uncertainties": ["Could a qualitatively new zero detector make one off-line zero impossible?"],
+      "residuals": ["Standalone density route not yet falsified; threshold test pending."],
+      "next_steps": ["query dual memory"],
+      "previous_event_hash": "sha256:8631024658244162ee5e0cf6c3b003111b7e9d21b53a2ae74f28b645f6bb4f67",
+      "artifact_hash": "sha256:cf9e30f0769700b724a44d55a345091765535e0796fc4829126510e9d24bf78d"
+    },
+    {
+      "event_id": "RH-ANA-003-E05",
+      "atom_id": "RH-ANA-003",
+      "event_type": "EXPERIENCE_MEMORY_REVIEW",
+      "timestamp": "2026-08-11T16:03:00+00:00",
+      "state_summary": "Dual memory returned two success-derived tools and two typed RH failures. The active action selected the root-bridge audit and both uniformity/faithfulness failures; the finite Li-prefix tool was rejected for this action.",
+      "action_summary": "Use experience only to choose the discriminator and avoid saturated finite-surrogate variants.",
+      "evidence_pointers": ["research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003_RESEARCH_MEMORY_REVIEW_20260811.json","T-XM-ROOT-BRIDGE-STABILITY-AUDIT","F-RH-ANA-001-FINITE-LI-PREFIX","F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE"],
+      "alternatives_considered": ["reuse finite Li-prefix calibration as the main probe","ignore prior failures and optimize the density exponent","reuse the root-bridge audit with a target-specific DifferenceWitness"],
+      "decision_rationale": "Memory changes action choice but supplies no mathematical premise.",
+      "outputs": ["retrieved:4","selected:3","rejected:1","action_changed_by_RAKL:true"],
+      "uncertainties": ["Retrieval-universe completeness cannot be certified from GitHub search."],
+      "residuals": ["Exact density-to-exclusion obstruction still requires fresh derivation from source theorem shapes."],
+      "next_steps": ["freeze prospective pre-action receipt"],
+      "previous_event_hash": "sha256:cf9e30f0769700b724a44d55a345091765535e0796fc4829126510e9d24bf78d",
+      "artifact_hash": "sha256:74ae0e8e2947ffbc0f3903b950ac1c83434acd05afdf72dc019fe6c368af2a04"
+    },
+    {
+      "event_id": "RH-ANA-003-E06",
+      "atom_id": "RH-ANA-003",
+      "event_type": "PRE_ACTION_RECEIPT_FROZEN",
+      "timestamp": "2026-08-11T16:04:00+00:00",
+      "state_summary": "Root, fibre, expert review, dual memory, selected operators and falsifier are frozen before executing the density-to-exclusion test.",
+      "action_summary": "Commit a proposal/shadow pre-action receipt with the exact discriminator and allowed outcome branches.",
+      "evidence_pointers": ["pre_action_receipt:ef4ceea2dd867fd33ba2e95d1f2e0981edfcf0b093cb07a0c36c201b962ebefb","sha256:31e2fc6491b0b61f8e7b7b96c668592b860b37166dc84e12cb488b3a19bb985d","RAKL-method_specs:3f629c4dd0ef55aedf14206b2be3df19875988b7"],
+      "alternatives_considered": ["post-hoc choose a more favorable discriminator after seeing source-bound arithmetic","execute the frozen integer-count threshold test"],
+      "decision_rationale": "Prospective chronology is preserved at the artifact level; automatic runtime binding cannot be executed locally, so formal binding verification remains CANNOT_MEASURE until the outcome episode is written and checked by the RAKL implementation.",
+      "outputs": ["receipt_sha256:ef4ceea2dd867fd33ba2e95d1f2e0981edfcf0b093cb07a0c36c201b962ebefb","candidate_gate:OPEN_FOR_FROZEN_DISCRIMINATOR_ONLY"],
+      "uncertainties": ["Connector-only environment cannot run the canonical pre_action_receipt Python checker against the GitHub branch.","No completeness claim for retrieval universe."],
+      "residuals": ["Determine whether current selected bounds satisfy a tail local-count <1 condition."],
+      "next_steps": ["execute frozen discriminator; record outcome TaskEpisode separately from diagnosis and obstruction"],
+      "previous_event_hash": "sha256:74ae0e8e2947ffbc0f3903b950ac1c83434acd05afdf72dc019fe6c368af2a04",
+      "artifact_hash": "sha256:beb24f6634f269aecec946efc78540f8c30bbf66a2d23ed3df486049f4d37d94"
+    }
+  ]
+}
