@@ -1,0 +1,101 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow",
+  "atom_id": "NS-B1a3b",
+  "parent_atom_id": "NS-B1a3",
+  "problem_signature": [
+    "3D incompressible unforced Navier-Stokes in R^3",
+    "hypothetical Type-I finite-time singularity / finite-I mild bounded ancient limit",
+    "orthogonal geometric blow-up-classification lane",
+    "identify an exact scale-critical vorticity-direction condition with source-valid rigidity and audit whether Type-I alone inherits it"
+  ],
+  "root_contract": {
+    "root_id": "NS0",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "active_clay_route": "NS-A",
+    "nonpromotion": [
+      "Type-I classification is not Type-I exclusion",
+      "Type-I exclusion is not root regularity while NS-B2 Type-II remains open"
+    ]
+  },
+  "framework_pin": {
+    "repository": "SzeChunYiu/RAKL",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "git_sha": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+    "v3_operational_mode": "proposal/shadow; evidence-gated; no self-promotion"
+  },
+  "application_base": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "main_sha": "111a3f95c72b0a418f968708bd3eda77ef98bccf"
+  },
+  "source_bound_knowledge": [
+    {
+      "id": "AB-THM1.1",
+      "role": "Type-I singularity -> nontrivial mild bounded ancient solution with finite registered I; preserves target object class"
+    },
+    {
+      "id": "GM-THM1.1",
+      "role": "whole-space Type-I mild + uniform spatial modulus of vorticity direction on one high-vorticity superlevel set -> no blow-up"
+    },
+    {
+      "id": "GM-COR2.6",
+      "role": "whole-space Type-I mild + integral_{-1}^0 ||grad zeta||_{L-infinity(Omega_d(t))}^2 dt < infinity -> no blow-up; source states this assumption is scaling invariant"
+    },
+    {
+      "id": "GM-BLOWUP",
+      "role": "maximum-normalized blow-up, local-uniform velocity/vorticity compactness, nonzero limiting vorticity, constant-direction reduction to bounded ancient 2D flow"
+    },
+    {
+      "id": "KNSS-2D-LIOUVILLE",
+      "role": "bounded ancient 2D flow rigidity reference; Giga-Miura also give a direct maximum-principle proof"
+    }
+  ],
+  "analogues": [
+    {
+      "id": "CF/BB-DIRECTION",
+      "preserved": "geometric depletion controls vortex stretching via direction coherence",
+      "nonpreserved": "classical Lipschitz/1/2-Holder assumptions are stronger and are not the Type-I-specific scale-critical criterion selected here"
+    },
+    {
+      "id": "GM-HALFSPACE",
+      "preserved": "blow-up + alignment -> lower-dimensional rigidity",
+      "nonpreserved": "boundary pressure/Stokes compactness and boundary vorticity conditions are absent in whole-space R^3"
+    }
+  ],
+  "disanalogies": [
+    "local positive-eigenframe strain/vorticity alignment is not nonlocal vorticity-direction coherence",
+    "stationary Leray self-similar profile Liouville is not the general ancient-trajectory theorem used here",
+    "backward uniqueness is not the rigidity operator in this lane",
+    "local strong L3 compactness/global-L3 tightness obstruction from NS-B1a3a is not required by the Giga-Miura whole-space geometric blow-up route"
+  ],
+  "audit_coordinates": [
+    "parabolic scaling and high-vorticity threshold transport",
+    "strong/weak convergence sufficient for vorticity direction",
+    "pressure/mild-solution normalization",
+    "far-field loss",
+    "translation/dilation symmetries",
+    "vorticity zeros and direction undefined",
+    "nontriviality of the blow-up vorticity",
+    "2D reduction and Liouville hypotheses",
+    "equation-class changes",
+    "Type-II residual"
+  ],
+  "candidate_method_families": [
+    "Giga-Miura scale-critical vorticity-direction integral",
+    "uniform-continuity continuous-alignment blow-up criterion",
+    "advection-mediated geometric depletion",
+    "local-vorticity-direction coherence criteria"
+  ],
+  "expert_cell_roles": [
+    "Type-I/ancient-limit specialist",
+    "vorticity-geometry/depletion specialist",
+    "blow-up compactness/local-energy-pressure specialist",
+    "2D Liouville/rigidity specialist",
+    "adversarial scaling/interface specialist",
+    "RAKL formal-methods/provenance specialist"
+  ],
+  "frozen_pre_candidate": true,
+  "candidate_claims_present": false,
+  "hash_basis": "sha256 of canonical JSON for this object with fibre_snapshot_hash omitted",
+  "fibre_snapshot_hash": "sha256:5abea6153d4a3801a8f6637e6dc0e5aafeecefc438981052c5c9b082136818e4"
+}
