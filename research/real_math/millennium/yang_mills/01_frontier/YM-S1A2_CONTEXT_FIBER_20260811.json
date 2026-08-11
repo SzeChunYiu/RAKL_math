@@ -1,0 +1,91 @@
+{
+  "atom_id": "YM-S1a2",
+  "object_context": "In one exact infinite-volume Wilson lattice Yang-Mills theory at fixed lattice spacing and strong positive coupling, determine whether the SZZ common exponential covariance exponent for smooth cylinder functions can be bound through reflection positivity/Osterwalder-Schrader reconstruction to the positive physical transfer operator on a dense centered gauge-invariant source set, yielding a fixed-cutoff physical transfer spectral gap. This atom explicitly excludes RG transport, a->0 continuum scaling, continuum existence, and the Clay root.",
+  "structural_coordinates": [
+    "Wilson lattice Yang-Mills Gibbs measure on Z^d with compact gauge group SU(N) or SO(N)",
+    "positive coupling beta in the SZZ strong-coupling regime",
+    "infinite-volume local weak limit measure mu_N,beta",
+    "reflection positivity on gauge-invariant positive-time cylinder algebra",
+    "OS Hilbert space as null quotient/completion of positive-time local observables",
+    "one-step Euclidean time translation represented by physical transfer operator T",
+    "centered source vectors spanning/dense in Omega-perp",
+    "SZZ source-independent covariance exponent c_N>0 with source-dependent finite prefactors",
+    "support distance under n-step time translation grows n+O(1)",
+    "fixed lattice spacing a and no continuum/RG transport"
+  ],
+  "equivalent_formulations": [
+    "For every centered gauge-invariant positive-time smooth cylinder F, show <psi_F,T^n psi_F> has limsup nth-root <= exp(-c_N), with the source vectors dense in the excited OS Hilbert space.",
+    "Show the SZZ covariance bound plus OS reflection/translation identity satisfies the hypotheses of YM-S1A1-C001-v2 with a common q=exp(-c_N)<1.",
+    "At fixed a, establish Spec(T|Omega-perp) subset [0,exp(-c_N)] and hence a lattice Hamiltonian gap at least c_N/a, while keeping G5-G7 open."
+  ],
+  "solved_analogues": [
+    "Luescher 1977 constructs a self-adjoint strictly positive transfer matrix for Wilson lattice gauge theory at finite lattice cutoff and reconstructs Euclidean expectations as transfer-matrix Schwinger functions.",
+    "Osterwalder-Seiler 1978 verify physical positivity and a positive self-adjoint transfer matrix for lattice gauge theories and establish strongly coupled infinite-volume lattice Yang-Mills results.",
+    "YM-S1a1-C001-v2 proves the abstract dense-source common-rate positive-transfer spectral exclusion lemma."
+  ],
+  "near_solved_analogues": [
+    "Shen-Zhu-Zhu 2023 prove a common exponential covariance exponent for all smooth cylinder functions of the unique strong-coupling infinite-volume lattice Yang-Mills measure, but phrase the result as Euclidean exponential clustering rather than an explicit OS transfer-spectrum theorem."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Luescher 1977 finite-volume Wilson lattice gauge theory",
+      "method": "OS-positive-time Hilbert construction and positive transfer-matrix reconstruction",
+      "shared_structure": ["gauge-invariant positive-time observable algebra", "Euclidean time translation", "positive self-adjoint transfer matrix", "T=exp(-aH) at lattice spacing a"],
+      "required_assumptions": ["the same Wilson action/sign convention and positive coupling", "reflection positivity survives to the exact infinite-volume measure used by SZZ", "time-translation acts as the same transfer semigroup after the infinite-volume OS completion"],
+      "disanalogies": ["Luescher's explicit construction uses finite spatial/momentum and time cutoffs", "the target source is SZZ's unique infinite-volume measure", "the Clay continuum theory is not being constructed"],
+      "repair_question": "Can reflection positivity and the transfer-moment identity be passed to the SZZ infinite-volume local weak limit for fixed local gauge-invariant cylinder observables?",
+      "source_anchors": ["M. Luescher, Commun. Math. Phys. 54 (1977) 283-292, DOI 10.1007/BF01614090, especially OS construction and Propositions 1-2"]
+    },
+    {
+      "source_context": "Shen-Zhu-Zhu 2023 infinite-volume strong-coupling lattice Yang-Mills",
+      "method": "uniform exponential covariance decay over smooth cylinder observables",
+      "shared_structure": ["same Wilson lattice variables", "unique infinite-volume Gibbs measure", "arbitrary smooth cylinder functions", "single exponent c_N depending on K_S,N,d rather than source identity"],
+      "required_assumptions": ["beta is in Assumption 1.1 and beta>=0 for the reflection-positive Wilson route", "reflected and translated centered sources remain smooth cylinders", "their edge-support distance is n+O(1) under time translation"],
+      "disanalogies": ["SZZ use stochastic-analysis/Langevin methods and do not themselves identify their c_N with the physical Hamiltonian spectrum", "their group scope is SO(N) and SU(N), not every compact simple group", "the result is fixed lattice spacing and strong coupling"],
+      "repair_question": "Does the exact OS moment identity turn Corollary 1.6 into the common-q hypothesis of YM-S1a1-C001-v2 on a dense excited source family?",
+      "source_anchors": ["H. Shen, R. Zhu, X. Zhu, Commun. Math. Phys. 400 (2023), arXiv:2204.12737, Theorem 1.2 and Corollary 1.6"]
+    },
+    {
+      "source_context": "Local weak limits of reflection-positive lattice measures",
+      "method": "pass each fixed local nonnegative OS quadratic form to the weak limit",
+      "shared_structure": ["reflection-positive quantity is expectation of a bounded continuous local cylinder function", "finite-volume measures converge locally/weakly to the target measure"],
+      "required_assumptions": ["the reflection plane and local source are fixed before volume tends to infinity", "finite-volume Wilson measures satisfy the same reflection positivity inequality", "periodic boundary geometry is chosen large enough not to intersect the fixed local support"],
+      "disanalogies": ["this only preserves local reflection-positivity inequalities; it does not by itself prove continuum OS axioms", "no uniform-in-a statement follows"],
+      "repair_question": "Can the limiting argument be written with exact source scope and no dependence on an unproved infinite-volume transfer-matrix limit?",
+      "source_anchors": ["Osterwalder-Seiler 1978 physical positivity; SZZ Theorem 1.2 finite-volume measures converge to the unique infinite-volume measure"]
+    }
+  ],
+  "explicit_disanalogies": [
+    "Euclidean exponential clustering is not automatically the Clay continuum mass gap without reflection-positive transfer-spectrum identification.",
+    "A strong-coupling fixed-a gap does not survive a->0 unless a dimensionful lower bound is uniform/scales correctly.",
+    "SU(N)/SO(N) strong-coupling coverage is narrower than the official all-compact-simple-group root.",
+    "The Langevin generator Poincare gap is not the physical Hamiltonian gap.",
+    "Finite-volume transfer positivity is not by itself an infinite-volume same-theory source-density statement.",
+    "Wilson-loop area law/confinement is not substituted for full excited-spectrum control."
+  ],
+  "source_anchors": [
+    "Clay/Jaffe-Witten Yang-Mills official problem statement",
+    "K. Osterwalder and E. Seiler, Ann. Phys. 110 (1978) 440-471, DOI 10.1016/0003-4916(78)90039-8",
+    "M. Luescher, Commun. Math. Phys. 54 (1977) 283-292, DOI 10.1007/BF01614090",
+    "H. Shen, R. Zhu, X. Zhu, Commun. Math. Phys. 400 (2023), arXiv:2204.12737",
+    "YM-S1A1-C001-v2 and its retained hidden-source failure F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "control/estimation",
+      "source_situation": "A stable measured output can miss an unobservable slow internal mode; observability plus a uniform decay rate over a dense detecting family is needed for a global spectral conclusion.",
+      "common_abstraction": ["hidden modes", "source/detector completeness", "uniform rate versus sourcewise rate"],
+      "source_to_target_mapping": ["detectors -> gauge-invariant OS source vectors", "unobservable slow mode -> low-energy excitation orthogonal to source span", "uniform output decay -> common SZZ exponent"],
+      "shared_constraints": ["global conclusion fails under incomplete observability", "a source-independent rate is load-bearing"],
+      "disanalogies": ["RAKL target is a self-adjoint transfer spectrum, not a finite-dimensional state-space model", "analogy supplies no Yang-Mills theorem authority"],
+      "proposed_principle": "Treat source density and common-rate uniformity as separate obligations before converting correlator decay into a full spectral gap.",
+      "validation_obligation": "Prove the OS source images are dense and the exact reflected time-translation covariance is the transfer moment in the same SZZ measure.",
+      "provenance_note": "structural analogy only; mathematical authority comes from source-bound OS/transfer results and the abstract spectral lemma"
+    }
+  ],
+  "analogy_scan_notes": "One cross-domain observability analogy survives only as a search heuristic; no analogy supplies theorem authority.",
+  "frozen_at": "2026-08-11T12:09:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:89ee3e1d735f6b3e5be46a2acfa1914da01ac3dce52227f2d83cf9d3832f7144"
+}
