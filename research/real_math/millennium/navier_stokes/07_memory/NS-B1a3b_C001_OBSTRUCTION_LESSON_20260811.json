@@ -1,0 +1,64 @@
+{
+  "schema_version": "obstruction-lesson-v3-proposal-shadow",
+  "obstruction": {
+    "obstruction_id": "O-NS-B1a3b-GEOMETRY-INHERITANCE-INTERFACE",
+    "scope": "finite-I Type-I producer -> vorticity-geometry consumer",
+    "statement": "A source-matched equation-specific estimate is required to control the consumer geometry uniformly through rescaling; the registered compactness topology alone cannot supply it.",
+    "supporting_episode_ids": [
+      "EP-NS-B1a3b-C001-20260811"
+    ],
+    "diagnosis_ids": [
+      "D-NS-B1a3b-C001-GEOMETRY-INHERITANCE"
+    ],
+    "status": "OPEN_SCOPED_OBSTRUCTION"
+  },
+  "lesson": {
+    "lesson_id": "L-NS-B1a3b-PRODUCER-COMPACTNESS-DOES-NOT-TRANSFER-VORTICITY-DIRECTION@CANDIDATE",
+    "kind": "REPRESENTATION",
+    "trigger_signature": [
+      "consumer theorem requires normalized-vorticity direction modulus or derivative-sensitive geometry",
+      "producer stage supplies strong local velocity convergence plus only natural weak derivative control",
+      "candidate transfer crosses curl and omega/|omega| normalization"
+    ],
+    "context_scope": [
+      "whole-space 3D Navier-Stokes finite-I Type-I blow-up/ancient route",
+      "compactness-topology-only inheritance claims",
+      "conditional vorticity-geometry theorem transfer"
+    ],
+    "action": "Before routing to a vorticity-geometry consumer theorem, require an equation-specific scale-matched geometry-inheritance certificate; otherwise route to a different representation or sibling mechanism.",
+    "expected_effects": [
+      "prevent circular derivative bootstrap",
+      "prevent consumer theorem inputs from being mistaken for producer outputs",
+      "force explicit high-vorticity-set and normalization handling",
+      "separate local representation failure from local-to-global gluing failure"
+    ],
+    "boundaries": [
+      "does not prove finite I cannot imply geometry by additional Navier-Stokes dynamics",
+      "does not invalidate conditional vorticity regularity criteria",
+      "does not transfer half-space results to whole space without DifferenceWitness",
+      "does not address Type-II"
+    ],
+    "supporting_episode_ids": [
+      "EP-NS-B1a3b-C001-20260811"
+    ],
+    "contradicting_episode_ids": [],
+    "falsifier": "Produce an exact source-valid or newly verified estimate from the finite-I hypotheses that uniformly controls a named consumer-ready scale-critical vorticity-geometric functional through the blow-up sequence and limit, including zeros/high-vorticity-set handling.",
+    "authority": "CANDIDATE",
+    "validation_obligations": [
+      "prospective pre-action binding validation",
+      "independent mathematical review before any authority upgrade",
+      "test at least one positive case where derivative-sensitive inheritance is actually source-licensed",
+      "DifferenceWitness for domain and Type-I hypothesis of any transferred theorem"
+    ],
+    "evidence_pointers": [
+      "episode:EP-NS-B1a3b-C001-20260811",
+      "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b_C001_FAILURE_DIAGNOSIS_20260811.json",
+      "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3b_C001_VORTICITY_DIRECTION_INHERITANCE_AUDIT_20260811.md"
+    ],
+    "parent_lesson_id": null,
+    "authority_attestation_id": null,
+    "authority_subject_hash": null,
+    "authority_evidence_packet_hash": null,
+    "artifact_hash": "3a94818db9e168e892e3b73d35db9a552ad266c96c27834bd15ab52ae38d2da5"
+  }
+}

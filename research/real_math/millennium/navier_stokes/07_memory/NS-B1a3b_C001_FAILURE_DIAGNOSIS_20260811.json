@@ -1,0 +1,48 @@
+{
+  "schema_version": "failure-diagnosis-v3-proposal-shadow",
+  "diagnosis_id": "D-NS-B1a3b-C001-GEOMETRY-INHERITANCE",
+  "source_episode_id": "EP-NS-B1a3b-C001-20260811",
+  "atom_id": "NS-B1a3b",
+  "candidate_id": "NS-B1a3b-C001",
+  "outcome": "PARTIAL_SUCCESS",
+  "failure_category": "LOCAL_MATHEMATICAL_REPRESENTATION_INTERFACE",
+  "local_mathematical_failure": {
+    "status": "CONFIRMED_FOR_TOPOLOGY_ONLY_INFERENCE",
+    "causes": [
+      "one-derivative loss from strong velocity compactness to vorticity",
+      "weak derivative convergence does not preserve vorticity angles",
+      "normalization omega/|omega| is unstable at zeros",
+      "source consumer theorems require separately stated geometry"
+    ],
+    "falsifier_evidence": "w_n=(0,n^-1 sin(n x1),0) has w_n->0 strongly in L3 and bounded grad L2 but normalized curl direction flips on O(1/n) scales"
+  },
+  "local_to_global_gluing_failure": {
+    "status": "NO_NEW_FAILURE_IN_THIS_CHILD",
+    "separate_prior_failure_id": "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "reason": "B1a3b fails before globalization, at the local representation/inheritance interface"
+  },
+  "transfer_failures": [
+    {
+      "id": "F-NS-B1a3b-DOMAIN-TYPEI-DIFFERENCE-WITNESS",
+      "cause": "Barker-Prange is half-space/no-slip ODE-Type-I and assumes alignment; target is whole-space finite-I"
+    },
+    {
+      "id": "F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY",
+      "cause": "consumer geometry is not a continuous output of the registered producer topology"
+    }
+  ],
+  "not_diagnosed_as": [
+    "failure of Constantin-Fefferman/Miller/Barker-Prange conditional regularity mathematics",
+    "proof that finite I can never imply geometry by additional equation-specific estimates",
+    "Type-I singularity exclusion",
+    "Type-II statement",
+    "root-level Navier-Stokes result"
+  ],
+  "pressure_audit": "pressure is removed by curl; remaining nonlocality is strain/Biot-Savart, so prior pressure-summability failure was retrieved but rejected as the active local diagnosis",
+  "circular_bootstrap_signature": "finite I -> weak grad u -> assumed regular xi -> depleted stretching -> strong grad u; missing second arrow cannot be assumed",
+  "evidence_pointers": [
+    "pre_action_receipt:61b972c4c14c1e91588515bd032dc79243901fe8e408b9fd6181192e0c53280a",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3b_C001_VORTICITY_DIRECTION_INHERITANCE_AUDIT_20260811.md"
+  ],
+  "authority": "PROPOSAL_SHADOW_DIAGNOSIS_ONLY"
+}

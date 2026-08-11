@@ -1,0 +1,41 @@
+{
+  "schema_version": "failure-experience-delta-v3-proposal-shadow",
+  "atom_id": "NS-B1a3b",
+  "source_episode_id": "EP-NS-B1a3b-C001-20260811",
+  "diagnosis_id": "D-NS-B1a3b-C001-GEOMETRY-INHERITANCE",
+  "failure_records": [
+    {
+      "failure_id": "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION",
+      "scope": "local representation",
+      "cause": "strong local velocity convergence and bounded/weak first-derivative control do not give a vorticity-direction modulus",
+      "transfer_status": "OBSERVED_ONLY_APPLICABILITY_REQUIRED"
+    },
+    {
+      "failure_id": "F-NS-B1a3b-NORMALIZATION-ZERO-INSTABILITY",
+      "scope": "normalized vorticity representation",
+      "cause": "omega/|omega| is undefined at zeros and unstable near zero; high-vorticity subsets must be carried explicitly",
+      "transfer_status": "OBSERVED_ONLY_APPLICABILITY_REQUIRED"
+    },
+    {
+      "failure_id": "F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY",
+      "scope": "finite-I compactness -> geometry consumer",
+      "cause": "selected conditional criteria consume geometry not supplied by the registered compactness topology",
+      "transfer_status": "OBSERVED_ONLY_APPLICABILITY_REQUIRED"
+    },
+    {
+      "failure_id": "F-NS-B1a3b-DOMAIN-TYPEI-DIFFERENCE-WITNESS",
+      "scope": "Barker-Prange analogue transfer",
+      "cause": "half-space/no-slip/ODE-Type-I plus assumed alignment differs from whole-space finite-I target",
+      "transfer_status": "CONTEXT_DIFFERENCE_NOT_MATHEMATICAL_REFUTATION"
+    }
+  ],
+  "repeated_process_failure_link": {
+    "prior_ids": [
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH"
+    ],
+    "shared_pattern": "producer output type weaker than selected consumer theorem input type",
+    "difference_witness": "B1a3 obstruction is global critical tail/tightness; B1a3b obstruction is local derivative/normalization geometry. Do not merge mathematical failures."
+  },
+  "local_to_global_gluing": "NO_NEW_GLUING_FAILURE",
+  "authority": "PROPOSAL_SHADOW_FAILURE_MEMORY_ONLY"
+}

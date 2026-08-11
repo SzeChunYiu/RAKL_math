@@ -1,0 +1,110 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow",
+  "atom_id": "NS-B1a3b",
+  "parent_atom_id": "NS-B1a3",
+  "object_context": "Whole-space Type-I Navier-Stokes blow-up-classification child for Clay statement (A). Test whether an exact scale-critical vorticity-direction/geometric-depletion property is inherited from the already registered Albritton-Barker finite-I ancient class strongly enough to activate a source-matched regularity or rigidity theorem. This is an inheritance/interface audit, not a new regularity theorem; Type-II remains out of scope.",
+  "structural_coordinates": [
+    "unforced whole-space 3D incompressible Navier-Stokes; viscosity normalized to 1",
+    "parabolic scaling u_lambda(x,t)=lambda u(lambda x,lambda^2 t), p_lambda=lambda^2 p(lambda x,lambda^2 t), omega_lambda=lambda^2 omega(lambda x,lambda^2 t)",
+    "vorticity direction xi=omega/|omega| is dimensionless where omega is nonzero, but spatial C^alpha seminorms scale like lambda^alpha and xi is undefined at vorticity zeros",
+    "Albritton-Barker finite I is local scale-invariant velocity/pressure/gradient control and yields a nontrivial mild bounded ancient solution in the Type-I class; it is not itself a vorticity-direction modulus",
+    "registered compactness gives strong local L3 convergence of velocity and weak local L3/2 pressure convergence; the local energy component also supplies only weak derivative compactness at the natural level",
+    "strong L3_loc velocity convergence plus bounded local gradient energy does not continuously transfer normalized curl direction because curl costs one derivative and normalization is unstable at zeros",
+    "taking curl removes pressure from the evolution equation, but nonlocality remains through the Biot-Savart/strain singular-integral relation entering vortex stretching",
+    "geometric criteria in the literature impose additional conditions on vorticity direction, projected vorticity, or high-vorticity superlevel geometry; the active question is inheritance of such a condition, not whether those conditional criteria are valid",
+    "Barker-Prange Type-I alignment is a half-space/no-slip and ODE-Type-I theorem; its geometry hypothesis is separately assumed and its domain/Type-I notion cannot be silently identified with the whole-space finite-I class",
+    "recent logarithmic-depletion work is treated as a primary preprint search analogue only; its extra concentration and direction-space assumptions cannot bear theorem authority in this cycle",
+    "Type-II singularities require a separate normalization/classification mechanism and are not addressed by finite-I inheritance"
+  ],
+  "target_interface": {
+    "input": "a relevant finite-I Type-I blow-up sequence/ancient limit in the registered whole-space class",
+    "desired_output": "a uniform scale-critical vorticity-direction or geometric-depletion certificate G that survives the blow-up limit and exactly matches a primary-source regularity/Liouville theorem",
+    "audit_question": "Do the currently registered finite-I estimates and compactness topology themselves control any such G without adding an unproved derivative/normalization assumption?"
+  },
+  "solved_analogues": [
+    {
+      "id": "CF-1993-VORTICITY-DIRECTION",
+      "source": "Constantin-Fefferman, Indiana Univ. Math. J. 42 (1993), 775-789",
+      "fact": "whole-space geometric regularity via control of vorticity direction; conditional criterion, not an inheritance theorem"
+    },
+    {
+      "id": "MILLER-2020-ANISOTROPIC-VORTICITY",
+      "source": "Evan Miller, arXiv:2002.02152",
+      "fact": "regularity from scale-critical L4_t L2_x control of vorticity projected onto a varying plane, with bounded gradient of the plane normal"
+    },
+    {
+      "id": "BARKER-PRANGE-2019-TYPEI-ALIGNMENT",
+      "source": "Tobias Barker and Christophe Prange, arXiv:1906.08225",
+      "fact": "half-space/no-slip ODE-Type-I regularity when vorticity direction is uniformly continuous on high-vorticity subsets of shrinking parabolic regions"
+    }
+  ],
+  "near_solved_analogues": [
+    {
+      "id": "AB-TYPEI-ANCIENT",
+      "source": "Dallas Albritton and Tobias Barker, arXiv:1811.00502",
+      "fact": "local Type-I singularities correspond to nontrivial mild bounded ancient solutions with the registered Type-I condition; local compactness does not state vorticity-direction inheritance"
+    },
+    {
+      "id": "GRUJIC-2026-LOG-DEPLETION",
+      "source": "Zoran Grujic, arXiv:2607.08866",
+      "fact": "July 2026 preprint proposes singularity evasion under weak-L3/2 vorticity concentration plus logarithmically weighted local BMO control of vorticity direction; retained only as proposal/shadow search analogue"
+    }
+  ],
+  "method_transfers": [
+    {
+      "method": "vorticity-direction coherence / vortex-stretching depletion",
+      "required_assumptions": [
+        "uniform geometric control on xi on the source theorem's high-vorticity set",
+        "source-matched spatial/time scaling and domain",
+        "sufficient vorticity magnitude/integrability hypotheses"
+      ],
+      "target_disanalogies": [
+        "finite I controls velocity/pressure/local gradient budgets rather than a modulus of normalized vorticity",
+        "weak derivative compactness does not preserve angles of curl",
+        "xi is singular at omega=0"
+      ],
+      "transfer_status": "BLOCKED_PENDING_GEOMETRY_INHERITANCE_CERTIFICATE"
+    },
+    {
+      "method": "half-space Type-I alignment blow-up rigidity",
+      "required_assumptions": [
+        "half-space with no-slip boundary",
+        "ODE Type-I velocity rate",
+        "uniform continuity of vorticity direction on specified high-vorticity subsets"
+      ],
+      "target_disanalogies": [
+        "target is whole space",
+        "active Type-I quantity is Albritton-Barker finite I, not merely the ODE rate",
+        "alignment is an extra hypothesis in the source theorem"
+      ],
+      "transfer_status": "ANALOGUE_ONLY_DIFFERENCE_WITNESS_REQUIRED"
+    },
+    {
+      "method": "anisotropic projected-vorticity criterion",
+      "required_assumptions": [
+        "scale-critical projected-vorticity bound",
+        "bounded spatial gradient of the varying plane normal"
+      ],
+      "target_disanalogies": [
+        "no preferred plane field or its gradient is supplied by finite I",
+        "deriving the plane field from xi reintroduces normalized-vorticity regularity"
+      ],
+      "transfer_status": "BLOCKED_PENDING_NEW_GEOMETRIC_ESTIMATE"
+    }
+  ],
+  "counterexample_first_calibration": {
+    "model": "On a fixed local periodic box, w_n(x)=(0,n^{-1} sin(n x_1),0) is divergence free, w_n->0 strongly in L3, and ||grad w_n||_L2 stays O(1), while curl w_n=(0,0,cos(n x_1)) has rapidly flipping normalized direction away from its zeros.",
+    "scope": "functional-analytic topology calibration only; not asserted to solve Navier-Stokes and not a PDE counterexample",
+    "purpose": "falsify any purely topological inference from strong local velocity convergence plus natural weak gradient control to a uniform modulus of vorticity direction"
+  },
+  "source_anchors": [
+    "Dallas Albritton and Tobias Barker, arXiv:1811.00502",
+    "Peter Constantin and Charles Fefferman, Indiana Univ. Math. J. 42 (1993), 775-789",
+    "Tobias Barker and Christophe Prange, arXiv:1906.08225",
+    "Evan Miller, arXiv:2002.02152",
+    "Zoran Grujic, arXiv:2607.08866 (preprint; proposal/shadow search use only)"
+  ],
+  "frozen_at": "2026-08-11T15:32:00Z",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:864b444da3b0ef1b0a0e396ea89011fbad691cbbe35e88b78ec3613756ef92ca"
+}
