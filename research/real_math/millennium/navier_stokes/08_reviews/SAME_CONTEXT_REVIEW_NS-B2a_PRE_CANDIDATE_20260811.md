@@ -1,6 +1,6 @@
 # Same-context expert review — NS-B2a pre-candidate gate
 
-Frozen context packet: `sha256:380b1d94d836a6079c43fd01123683e8d282caca05ff6956c7582760579cefa4`  
+Frozen context packet: `sha256:155e0ab728aeea2b6f05617c1e834bdb7023dac901f3730c5d8a10ea847e8017`  
 Framework authority: `SzeChunYiu/RAKL@a151d5612709ea0f95c3ea232630f246f722739a`  
 Application base: `SzeChunYiu/RAKL_math@7548c3c9a30c63e18956aefb68674d523acfe937`
 
