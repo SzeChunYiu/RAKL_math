@@ -1,0 +1,58 @@
+schema_note: RAKL-v3-TaskEpisode-style-shadow
+shadow_task_episode_id: PNP-O9d12a2a1a1d-ZERO-COST-SHATTERING-R4-20260811
+task_id: pnp-verified-discovery-zero-cost-shattering-r4
+atom_id: O9d12a2a1a1d
+context_hash: 08a8ad551a455583846300a066c33a768ace4a5701e06a47bdf7a2106eb76a71
+problem_signature:
+  - P-vs-NP via graph/two-dimensional cover complexity
+  - graph generator family G_{N,N} of rows and columns
+  - cyclic intersection complexity counts intersections only
+  - free-union/base-trace quotient-respecting statistics
+  - zero-cost target A=R_1
+fibre_snapshot_hash: 08a8ad551a455583846300a066c33a768ace4a5701e06a47bdf7a2106eb76a71
+operator_ids:
+  - OP-ZERO-COST-HOSTILE-CONTROL
+  - OP-QUOTIENT-INVARIANCE-REGRESSION
+  - OP-SHATTERING-CONSTRUCTION
+  - OP-SOURCE-BOUND-EXACTNESS
+  - T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION
+action_trace:
+  - Freeze graph-space atom before candidate scoring.
+  - Retrieve current-main failure/tool memory and unmerged PR113 as search-priority-only shadow evidence.
+  - Choose the cheapest quotient-respecting base-richness candidate: trace-family cardinality/VC dimension on A.
+  - Falsify at intersection cost zero using A=R_1 and unions of columns.
+  - Separate local candidate failure from the still-open root-facing gluing obligation.
+observation_ids:
+  - OBS-TRACE-POWERSET
+  - OBS-ZERO-CYCLIC-INTERSECTION-COST
+  - OBS-ABSOLUTE-BASE-RICHNESS-NOT-T-BOUNDED
+verification_ids:
+  - VER-ECCC-TR25-033-SECTION2.5
+  - VER-ECCC-TR25-033-THEOREM3
+  - VER-EXACT-ROW-COLUMN-SHATTERING-PROOF
+  - VER-SAME-CONTEXT-7-ROLE-REVIEW
+  - VER-ROOT-SUCCESS-CONTRACT-AUDIT
+outcome: PARTIAL_SUCCESS
+residual_signature:
+  - Need a target-relative or incremental statistic that quotients zero-cost base richness.
+  - Need a universal per-intersection accounting theorem Phi<=f(t) in the exact graph lane.
+  - Need an explicit graph with super-logarithmic Phi and a valid root bridge.
+evidence_pointers:
+  - research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1d_ZERO_COST_SHATTERING_20260811.md
+  - research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1d_RESEARCH_MEMORY_REVIEW_20260811.json
+  - ECCC-TR25-033
+prospective_core_task_episode_content_hash: 933a525491129776729d31a248c7bfe21c5517c796f6fffa4268308c1c300b65
+timestamp: 2026-08-11T17:10:00Z
+cost_proxy: 1.0
+authority: PROPOSAL_SHADOW_ONLY
+inventory_gate_status: BLOCKED_FROM_CORE_TASK_EPISODE_REGISTRATION
+inventory_gate_reason: >-
+  The pinned RAKL_math PR153 migration test maintains a protected frozen inventory and its
+  registered extension mechanism does not yet cover this new application episode. The first CI
+  attempt proved that writing a new top-level episode_id JSON object would violate that gate.
+  This YAML shadow preserves the evidence without claiming core TaskEpisode registration or
+  changing the protected inventory test.
+grants_theorem_authority: false
+grants_tool_promotion: false
+grants_gluing_authority: false
+grants_review_independence: false
