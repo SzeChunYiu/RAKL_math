@@ -1,0 +1,69 @@
+{
+  "atom_id": "NS-B2a",
+  "framework_authority_sha": "a151d5612709ea0f95c3ea232630f246f722739a",
+  "app_base_sha": "7548c3c9a30c63e18956aefb68674d523acfe937",
+  "success_memory": [
+    {
+      "memory": "Fresh source binding can change the limiting PDE class before rigidity work begins.",
+      "applicability": "DIRECT",
+      "effect": "Seregin Type-II branch produces an Euler rather than Navier–Stokes limit; method choice must follow the limit equation."
+    },
+    {
+      "memory": "Pressure-tail auditing from NS-B1a is reusable as an assurance discipline, not as a theorem.",
+      "applicability": "TARGET_SPECIFIC_DISCIPLINE_ONLY",
+      "effect": "Every localized energy/far-field proposal must track local and harmonic/nonlocal pressure pieces separately."
+    },
+    {
+      "memory": "Source scale-invariant bounds can yield backward-sequence calibration estimates by averaging.",
+      "applicability": "DIRECT_BUT_RETROSPECTIVE",
+      "effect": "Produces local L6/L3 smallness on fixed balls along times tending to minus infinity; zero candidate credit."
+    }
+  ],
+  "failure_memory": [
+    {
+      "failure": "NONCOMPACT_SYMMETRY_PROFILE_LEAKAGE",
+      "applicability": "DIRECT",
+      "guard": "local compactness cannot be cited as global tail tightness"
+    },
+    {
+      "failure": "UNCONTROLLED_FAR_FIELD",
+      "applicability": "DIRECT",
+      "guard": "require a quantitative inherited tail/no-incoming-flux statement before rigidity"
+    },
+    {
+      "failure": "UNIQUE_CONTINUATION_HYPOTHESIS_FAILURE",
+      "applicability": "DIRECT",
+      "guard": "veto Navier–Stokes backward uniqueness once the limiting PDE is Euler"
+    },
+    {
+      "failure": "LOCAL_DEPLETION_NOT_GLOBAL_CONTROL",
+      "applicability": "DIRECT",
+      "guard": "vorticity/coherence or energy depletion must include transport/far-field closure"
+    },
+    {
+      "failure": "PRESSURE_TAIL_NOT_LOCALIZED",
+      "applicability": "DIRECT",
+      "guard": "local pressure convergence does not control harmonic/far-field pressure flux"
+    },
+    {
+      "failure": "FALSE_ADVERSARIAL_COUNTEREXAMPLE",
+      "applicability": "DIRECT",
+      "guard": "check every proposed Euler falsifier against the time-length growth in Seregin (3.5); steady compact support fails this test"
+    }
+  ],
+  "cross_millennium_sharing": [
+    {
+      "item": "local-to-global leakage warning",
+      "shareable": true,
+      "authority": "STRUCTURAL_WARNING_ONLY",
+      "target_specific_requirement": "must identify the actual noncompact symmetry and norm/flux coordinate in the target PDE"
+    },
+    {
+      "item": "pressure-tail failure",
+      "shareable": false,
+      "reason": "Navier–Stokes/Euler-specific nonlocal pressure structure; no cross-lane theorem authority"
+    }
+  ],
+  "review_status": "DUAL_SUCCESS_FAILURE_MEMORY_REVIEW_COMPLETE",
+  "root_authority": "NONE"
+}
