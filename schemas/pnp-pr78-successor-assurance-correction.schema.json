@@ -1,0 +1,248 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/pnp-pr78-successor-assurance-correction.schema.json",
+  "title": "P-vs-NP PR78 successor assurance correction",
+  "description": "Immutable retrospective integration successor for PR78. It preserves historical bytes, records chronology and binding defects, quarantines method lessons as proposals, and cannot grant P-vs-NP or framework authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "receipt_id", "recorded_at", "application_repository",
+    "framework_authority", "preserved_artifacts", "shadow_audit", "framework_gap_audit",
+    "chronology_audit", "successors", "correction", "prospective_gate",
+    "authority_contract", "evidence_pointers", "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"const": "PNP-PR78-O9d12a2a1a1a-SUCCESSOR-ASSURANCE-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "application_repository": {"$ref": "#/$defs/applicationRepository"},
+    "framework_authority": {"$ref": "#/$defs/frameworkAuthority"},
+    "preserved_artifacts": {
+      "type": "array", "minItems": 6, "maxItems": 6,
+      "items": {"$ref": "#/$defs/preservedArtifact"}
+    },
+    "shadow_audit": {"$ref": "#/$defs/shadowAudit"},
+    "framework_gap_audit": {"$ref": "#/$defs/frameworkGapAudit"},
+    "chronology_audit": {"$ref": "#/$defs/chronologyAudit"},
+    "successors": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "prefixItems": [
+        {"$ref": "#/$defs/embeddedSuccessor"},
+        {"$ref": "#/$defs/fileSuccessor"}
+      ],
+      "items": false
+    },
+    "correction": {"$ref": "#/$defs/correction"},
+    "prospective_gate": {"$ref": "#/$defs/prospectiveGate"},
+    "authority_contract": {"$ref": "#/$defs/authorityContract"},
+    "evidence_pointers": {"$ref": "#/$defs/nonEmptyStrings"},
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha1": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "nonEmptyStrings": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "applicationRepository": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "url", "pr_number", "pr_state_at_audit", "pr_base_commit",
+        "pr_head_commit", "pr_head_tree", "integration_base_commit",
+        "integration_merge_commit", "integration_merge_tree", "integration_merge_parents"
+      ],
+      "properties": {
+        "url": {"const": "https://github.com/SzeChunYiu/RAKL_math.git"},
+        "pr_number": {"const": 78},
+        "pr_state_at_audit": {"const": "OPEN_DRAFT_UNMERGED_AT_AUDIT"},
+        "pr_base_commit": {"const": "3ccdcc51aa312af8b8288ff7cf6f4a681966d1fd"},
+        "pr_head_commit": {"const": "ce3a6dfc2af3c5c3e7fc93616e3fd774097e4d9b"},
+        "pr_head_tree": {"const": "d70575ff2ad8d4c6277eac6fedbe050676b24d7a"},
+        "integration_base_commit": {"const": "24194bba4c88cc4be19dad03d59bfa79599d5ee9"},
+        "integration_merge_commit": {"const": "ac205c8b50f3db4ea2d8f186b81c99acb3c0142f"},
+        "integration_merge_tree": {"const": "4951b59a962ff248f937aafa1c85ca9645ca6dcf"},
+        "integration_merge_parents": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "prefixItems": [
+            {"const": "24194bba4c88cc4be19dad03d59bfa79599d5ee9"},
+            {"const": "ce3a6dfc2af3c5c3e7fc93616e3fd774097e4d9b"}
+          ],
+          "items": false
+        }
+      }
+    },
+    "frameworkAuthority": {
+      "type": "object", "additionalProperties": false,
+      "required": ["url", "commit", "submodule_path", "binding"],
+      "properties": {
+        "url": {"const": "https://github.com/SzeChunYiu/RAKL.git"},
+        "commit": {"const": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"},
+        "submodule_path": {"const": "framework/RAKL"},
+        "binding": {"const": "EXACT_PINNED_APPLICATION_AUTHORITY"}
+      }
+    },
+    "preservedArtifact": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "path", "introduced_commit", "introduced_commit_time",
+        "git_blob_sha", "content_sha256"
+      ],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "introduced_commit": {"$ref": "#/$defs/sha1"},
+        "introduced_commit_time": {"type": "string", "format": "date-time"},
+        "git_blob_sha": {"$ref": "#/$defs/sha1"},
+        "content_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "bindingFinding": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "path", "recorded_git_blob_sha", "actual_git_blob_sha",
+        "recorded_content_sha256", "actual_content_sha256", "binding_valid"
+      ],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "recorded_git_blob_sha": {"$ref": "#/$defs/sha1"},
+        "actual_git_blob_sha": {"$ref": "#/$defs/sha1"},
+        "recorded_content_sha256": {"$ref": "#/$defs/sha256"},
+        "actual_content_sha256": {"$ref": "#/$defs/sha256"},
+        "binding_valid": {"type": "boolean"}
+      }
+    },
+    "shadowAudit": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "task_episode_schema", "task_episode_schema_error_count",
+        "task_episode_schema_verdict", "lesson_runtime_disposition",
+        "source_binding_findings", "verdict"
+      ],
+      "properties": {
+        "task_episode_schema": {"const": "framework/RAKL/schemas/task-episode.schema.json@bd1a2768f0f474ff44ffa25243241f94bfaf6466"},
+        "task_episode_schema_error_count": {"const": 9},
+        "task_episode_schema_verdict": {"const": "NONCANONICAL_SHADOW_OBJECT"},
+        "lesson_runtime_disposition": {"const": "NO_CANONICAL_LESSON_PROMOTION_ATTEMPTED"},
+        "source_binding_findings": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": {"$ref": "#/$defs/bindingFinding"}
+        },
+        "verdict": {"const": "PRESERVE_SHADOWS_AS_PROPOSAL_ONLY_NEGATIVE_PROCESS_HISTORY"}
+      }
+    },
+    "frameworkGapAudit": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "gap_id", "framework_commit", "historical_episode_path",
+        "historical_recorded_hash", "historical_runtime_content_digest",
+        "historical_validate_episode_result", "root_cause", "disposition",
+        "grants_framework_change_authority"
+      ],
+      "properties": {
+        "gap_id": {"const": "FG-BD1A276-TASK-EPISODE-PREFIXED-HASH-BYPASS"},
+        "framework_commit": {"const": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"},
+        "historical_episode_path": {"type": "string", "minLength": 1},
+        "historical_recorded_hash": {"$ref": "#/$defs/sha256"},
+        "historical_runtime_content_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "historical_validate_episode_result": {"type": "array", "maxItems": 0},
+        "root_cause": {"type": "string", "minLength": 1},
+        "disposition": {"const": "PRESERVE_HISTORY_AND_USE_RAW_64_HEX_RUNTIME_HASH_FOR_SUCCESSOR"},
+        "grants_framework_change_authority": {"const": false}
+      }
+    },
+    "futureClaim": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "pointer", "timestamp", "introduced_commit_time", "future_by_seconds"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "pointer": {"type": "string", "minLength": 1},
+        "timestamp": {"type": "string", "format": "date-time"},
+        "introduced_commit_time": {"type": "string", "format": "date-time"},
+        "future_by_seconds": {"const": 18}
+      }
+    },
+    "chronologyAudit": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "checked_json_artifact_count", "checked_timestamp_count",
+        "future_dated_claim_count", "future_dated_claims", "verdict"
+      ],
+      "properties": {
+        "checked_json_artifact_count": {"const": 2},
+        "checked_timestamp_count": {"const": 2},
+        "future_dated_claim_count": {"const": 1},
+        "future_dated_claims": {
+          "type": "array", "minItems": 1, "maxItems": 1,
+          "items": {"$ref": "#/$defs/futureClaim"}
+        },
+        "verdict": {"const": "ONE_HISTORICAL_FUTURE_DATED_SHADOW_TIMESTAMP_PRESERVED"}
+      }
+    },
+    "successorBase": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "path", "hash_mode", "artifact_hash"],
+      "properties": {
+        "kind": {"type": "string", "minLength": 1},
+        "path": {"type": "string", "minLength": 1},
+        "hash_mode": {"type": "string"},
+        "artifact_hash": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "embeddedSuccessor": {
+      "allOf": [
+        {"$ref": "#/$defs/successorBase"},
+        {"properties": {"kind": {"const": "CANONICAL_RETROSPECTIVE_TASK_EPISODE"}, "hash_mode": {"const": "EMBEDDED_SELF_HASH"}}}
+      ]
+    },
+    "fileSuccessor": {
+      "allOf": [
+        {"$ref": "#/$defs/successorBase"},
+        {"properties": {"kind": {"const": "FAIL_CLOSED_CORRECTION_SCHEMA"}, "hash_mode": {"const": "FILE_SHA256"}}}
+      ]
+    },
+    "correction": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "historical_bytes_mutated", "repairs_original_chronology",
+        "strict_discovery_credit", "lesson_disposition", "retained_local_result"
+      ],
+      "properties": {
+        "historical_bytes_mutated": {"const": false},
+        "repairs_original_chronology": {"const": false},
+        "strict_discovery_credit": {"const": "NO_STRICT_DISCOVERY_CREDIT"},
+        "lesson_disposition": {"const": "QUARANTINED_PROPOSAL_ONLY"},
+        "retained_local_result": {"const": "FIXED_LAMBDA_ANTECEDENT_MEMBERSHIP_CONGRUENCE"}
+      }
+    },
+    "prospectiveGate": {
+      "type": "object", "additionalProperties": false,
+      "required": ["atom_id", "candidate_generation_allowed", "required_before_candidate"],
+      "properties": {
+        "atom_id": {"const": "O9d12a2a1a1b"},
+        "candidate_generation_allowed": {"const": false},
+        "required_before_candidate": {"$ref": "#/$defs/nonEmptyStrings"}
+      }
+    },
+    "authorityContract": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "effective_authority", "grants_strict_discovery_credit",
+        "grants_proof_authority", "grants_p_vs_np_root_authority",
+        "grants_theorem_authority", "grants_novelty_authority",
+        "grants_framework_authority", "grants_review_independence",
+        "may_backfill_chronology"
+      ],
+      "properties": {
+        "effective_authority": {"const": "RETROSPECTIVE_SCOPED_ROUTE_PRUNING_ONLY"},
+        "grants_strict_discovery_credit": {"const": false},
+        "grants_proof_authority": {"const": false},
+        "grants_p_vs_np_root_authority": {"const": false},
+        "grants_theorem_authority": {"const": false},
+        "grants_novelty_authority": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false},
+        "may_backfill_chronology": {"const": false}
+      }
+    }
+  }
+}

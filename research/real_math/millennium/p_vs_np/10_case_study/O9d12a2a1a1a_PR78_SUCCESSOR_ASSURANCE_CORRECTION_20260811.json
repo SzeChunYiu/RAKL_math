@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "PNP-PR78-O9d12a2a1a1a-SUCCESSOR-ASSURANCE-20260811",
+  "recorded_at": "2026-08-11T13:55:00Z",
+  "application_repository": {
+    "url": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "pr_number": 78,
+    "pr_state_at_audit": "OPEN_DRAFT_UNMERGED_AT_AUDIT",
+    "pr_base_commit": "3ccdcc51aa312af8b8288ff7cf6f4a681966d1fd",
+    "pr_head_commit": "ce3a6dfc2af3c5c3e7fc93616e3fd774097e4d9b",
+    "pr_head_tree": "d70575ff2ad8d4c6277eac6fedbe050676b24d7a",
+    "integration_base_commit": "24194bba4c88cc4be19dad03d59bfa79599d5ee9",
+    "integration_merge_commit": "ac205c8b50f3db4ea2d8f186b81c99acb3c0142f",
+    "integration_merge_tree": "4951b59a962ff248f937aafa1c85ca9645ca6dcf",
+    "integration_merge_parents": [
+      "24194bba4c88cc4be19dad03d59bfa79599d5ee9",
+      "ce3a6dfc2af3c5c3e7fc93616e3fd774097e4d9b"
+    ]
+  },
+  "framework_authority": {
+    "url": "https://github.com/SzeChunYiu/RAKL.git",
+    "commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "submodule_path": "framework/RAKL",
+    "binding": "EXACT_PINNED_APPLICATION_AUTHORITY"
+  },
+  "preserved_artifacts": [
+    {
+      "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1a_ACTIVATION_CONGRUENCE_RETROSPECTIVE_20260811.md",
+      "introduced_commit": "ed868f56a949bc032ba4c8021d0e2392c96b8689",
+      "introduced_commit_time": "2026-08-11T13:06:12+02:00",
+      "git_blob_sha": "776ec8858465343fa5f0ee69b368ebabef464156",
+      "content_sha256": "sha256:1d1a8083b9bf4f3f93a9237b91a8bc2e1104c9dbbed6f932728b9ccb3ff9cc8d"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/02_problem_dag/O9d12a2a1a1b.yaml",
+      "introduced_commit": "ce3a6dfc2af3c5c3e7fc93616e3fd774097e4d9b",
+      "introduced_commit_time": "2026-08-11T13:10:50+02:00",
+      "git_blob_sha": "12219db78c84aa582bfc23dd3bccea4d94857ce2",
+      "content_sha256": "sha256:807dcad722633beb1633487802b2af0e11912bc52ebd573ed5a40b3cbedfaf85"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1a_LESSON_PROPOSAL_SHADOW_20260811.json",
+      "introduced_commit": "c1a1d0a8f308de81a4c2692df2a64dfaf07bb14f",
+      "introduced_commit_time": "2026-08-11T13:09:42+02:00",
+      "git_blob_sha": "42843de308235e6716d66430d29caa826257d315",
+      "content_sha256": "sha256:02bfe59fca978e7626bf165a3449f403ecaacac79e01662bc191104daf17e1d3"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1a1a_RAKL_METHOD_CASE_STUDY_20260811.md",
+      "introduced_commit": "454d3c2c2e17aee4476506e9136f489f5978be55",
+      "introduced_commit_time": "2026-08-11T13:10:28+02:00",
+      "git_blob_sha": "1aa5c5ea4e16a74c9c0fca02b2a70aa9cd7082ac",
+      "content_sha256": "sha256:0fe4bb681460d7479e6a39a57a69f3472a0af494155fa0eb25a726148b8361b6"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1a_V3_TASK_EPISODE_SHADOW_20260811.json",
+      "introduced_commit": "a02d2a528390f61fcb5185cee4f3cfb84c432e28",
+      "introduced_commit_time": "2026-08-11T13:09:06+02:00",
+      "git_blob_sha": "89424db076daa1b1ff69a952604090953a1e4b6e",
+      "content_sha256": "sha256:e4ddca2d66fa527f8e30c63b73180b7816a2a72eae193f636292d68eb6996922"
+    },
+    {
+      "path": "tests/math_applications/test_pnp_o9d12a2a1a1a_activation_congruence.py",
+      "introduced_commit": "7e0a448ae620bb1ed16b080550d63fbf70e9831d",
+      "introduced_commit_time": "2026-08-11T13:06:59+02:00",
+      "git_blob_sha": "6011ec192cbe2b3016ab3a83378b941a079b032e",
+      "content_sha256": "sha256:dc0bdfeec550bfc88c80880f110a874d95cfa91ddff704138ae44c011da58fea"
+    }
+  ],
+  "shadow_audit": {
+    "task_episode_schema": "framework/RAKL/schemas/task-episode.schema.json@bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "task_episode_schema_error_count": 9,
+    "task_episode_schema_verdict": "NONCANONICAL_SHADOW_OBJECT",
+    "lesson_runtime_disposition": "NO_CANONICAL_LESSON_PROMOTION_ATTEMPTED",
+    "source_binding_findings": [
+      {
+        "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1a_ACTIVATION_CONGRUENCE_RETROSPECTIVE_20260811.md",
+        "recorded_git_blob_sha": "776ec8858465343fa5f0ee69b368ebabef464156",
+        "actual_git_blob_sha": "776ec8858465343fa5f0ee69b368ebabef464156",
+        "recorded_content_sha256": "sha256:0a40cb88f433bedde6e1f463b4668ec867f59c382f060efcb275a3acee0a2432",
+        "actual_content_sha256": "sha256:1d1a8083b9bf4f3f93a9237b91a8bc2e1104c9dbbed6f932728b9ccb3ff9cc8d",
+        "binding_valid": false
+      },
+      {
+        "path": "tests/math_applications/test_pnp_o9d12a2a1a1a_activation_congruence.py",
+        "recorded_git_blob_sha": "6011ec192cbe2b3016ab3a83378b941a079b032e",
+        "actual_git_blob_sha": "6011ec192cbe2b3016ab3a83378b941a079b032e",
+        "recorded_content_sha256": "sha256:dc0bdfeec550bfc88c80880f110a874d95cfa91ddff704138ae44c011da58fea",
+        "actual_content_sha256": "sha256:dc0bdfeec550bfc88c80880f110a874d95cfa91ddff704138ae44c011da58fea",
+        "binding_valid": true
+      }
+    ],
+    "verdict": "PRESERVE_SHADOWS_AS_PROPOSAL_ONLY_NEGATIVE_PROCESS_HISTORY"
+  },
+  "framework_gap_audit": {
+    "gap_id": "FG-BD1A276-TASK-EPISODE-PREFIXED-HASH-BYPASS",
+    "framework_commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "historical_episode_path": "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_TASK_EPISODE_CANONICAL_20260811.json",
+    "historical_recorded_hash": "sha256:7428096611ba3368002ca129291cccd96dc8e743b8148d4f60a25abc6b8f6fee",
+    "historical_runtime_content_digest": "aa0a0a4a04e90d9b641cb9e302cc91fb4797e84bab37b11f8f747c07766e017e",
+    "historical_validate_episode_result": [],
+    "root_cause": "validate_episode verifies content only when artifact_hash length equals 64 while task-episode.schema.json accepts any nonempty string",
+    "disposition": "PRESERVE_HISTORY_AND_USE_RAW_64_HEX_RUNTIME_HASH_FOR_SUCCESSOR",
+    "grants_framework_change_authority": false
+  },
+  "chronology_audit": {
+    "checked_json_artifact_count": 2,
+    "checked_timestamp_count": 2,
+    "future_dated_claim_count": 1,
+    "future_dated_claims": [
+      {
+        "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1a_LESSON_PROPOSAL_SHADOW_20260811.json",
+        "pointer": "/recorded_at_utc",
+        "timestamp": "2026-08-11T11:10:00Z",
+        "introduced_commit_time": "2026-08-11T13:09:42+02:00",
+        "future_by_seconds": 18
+      }
+    ],
+    "verdict": "ONE_HISTORICAL_FUTURE_DATED_SHADOW_TIMESTAMP_PRESERVED"
+  },
+  "successors": [
+    {
+      "kind": "CANONICAL_RETROSPECTIVE_TASK_EPISODE",
+      "path": "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1a_TASK_EPISODE_CANONICAL_20260811.json",
+      "hash_mode": "EMBEDDED_SELF_HASH",
+      "artifact_hash": "sha256:74722b36067bd90187d73a1edee6cf868eb05eabb208dccbb2d07e80b758d352"
+    },
+    {
+      "kind": "FAIL_CLOSED_CORRECTION_SCHEMA",
+      "path": "schemas/pnp-pr78-successor-assurance-correction.schema.json",
+      "hash_mode": "FILE_SHA256",
+      "artifact_hash": "sha256:b5069ac315f8b33c5454b3b49e20f0e64f59c52ead30f7ce6804133b1e0f0cc1"
+    }
+  ],
+  "correction": {
+    "historical_bytes_mutated": false,
+    "repairs_original_chronology": false,
+    "strict_discovery_credit": "NO_STRICT_DISCOVERY_CREDIT",
+    "lesson_disposition": "QUARANTINED_PROPOSAL_ONLY",
+    "retained_local_result": "FIXED_LAMBDA_ANTECEDENT_MEMBERSHIP_CONGRUENCE"
+  },
+  "prospective_gate": {
+    "atom_id": "O9d12a2a1a1b",
+    "candidate_generation_allowed": false,
+    "required_before_candidate": [
+      "freeze fresh O9d12a2a1a1b MathContextFiber and method-transfer matrix",
+      "query scoped success inventory and global failure lattice then freeze ResearchMemoryReview",
+      "run same-context role-separated expert cell without claiming independent review",
+      "freeze seven-event hash-chained pre-candidate trace in required order",
+      "call plan_math_research and require candidate_generation_allowed true"
+    ]
+  },
+  "authority_contract": {
+    "effective_authority": "RETROSPECTIVE_SCOPED_ROUTE_PRUNING_ONLY",
+    "grants_strict_discovery_credit": false,
+    "grants_proof_authority": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_theorem_authority": false,
+    "grants_novelty_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false,
+    "may_backfill_chronology": false
+  },
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1a_TASK_EPISODE_CANONICAL_20260811.json",
+    "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_PR104_TASK_EPISODE_HASH_CORRECTION_20260811.json",
+    "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1a_V3_TASK_EPISODE_SHADOW_20260811.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1a_LESSON_PROPOSAL_SHADOW_20260811.json",
+    "git:ce3a6dfc2af3c5c3e7fc93616e3fd774097e4d9b",
+    "git:ac205c8b50f3db4ea2d8f186b81c99acb3c0142f"
+  ],
+  "artifact_hash": "sha256:4238922203f46153fdecb8fc4dc0d66ab55cc37699b037f75c3da7de095c8f0a"
+}
