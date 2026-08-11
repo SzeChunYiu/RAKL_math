@@ -1,0 +1,50 @@
+{
+  "target_atom_id": "RH-ANA-002",
+  "target_context_hash": "sha256:300b787769442af040d944e0b52db106881844a9238c021e8804c7f382660742",
+  "tool_inventory_snapshot_hash": "sha256:b955d0dd9e04adbfde0b67eb3aa6af1216bc2afa758854d878a8faaae7dbbdf6",
+  "failure_lattice_snapshot_hash": "sha256:476d28bde185c690046ea7ef7f49005a0540b4f9ec4b5453462a5afc51421ff3",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "Suzuki Li-norm identity/defect localization",
+    "Bombieri-Lagarias prime/archimedean signed decomposition with uniform tail control",
+    "Lagarias-Voros all-index growth-class exclusion",
+    "Weil quadratic-functional positive-core plus density/continuity bridge"
+  ],
+  "relevant_tool_ids": [
+    "T-RH-LI-PREFIX-QUARTET-CALIBRATION",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "relevant_failure_ids": [
+    "F-RH-ANA-001-FINITE-LI-PREFIX",
+    "F-XM001-POINTWISE-GAP-COLLAPSE"
+  ],
+  "selected_tool_ids": [
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "tool_applicability_notes": [
+    "T-RH-LI-PREFIX-QUARTET-CALIBRATION remains applicable as a regression against any future finite-index Li/numerical surrogate, but the immediate RH-ANA-002 action is source/identity localization rather than another finite-prefix test.",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT applies at the abstraction level: Suzuki supplies an unconditional positive surrogate object ||G_n||^2 while the root-relevant conclusion requires an exact faithfulness identity to lambda_n. DifferenceWitness: unlike XM001's continuum-normalization limit, RH-ANA-002 is an exact analytic identity/defect bridge with no lattice-spacing limit. The source counterexample is not transferred. The cheapest target-specific check is source-bound: verify G_n in L2 unconditionally and separately verify that equality lambda_n=(2pi)^(-1)||G_n||^2 for all n is itself equivalent to RH."
+  ],
+  "failure_reuse_notes": [
+    "F-RH-ANA-001-FINITE-LI-PREFIX directly applies: extending a finite Li prefix without an all-n theorem repeats the diagnosed loss of the infinite-uniformity coordinate and is therefore low-information unless a DifferenceWitness supplies a new uniform mechanism.",
+    "F-XM001-POINTWISE-GAP-COLLAPSE is only a structural warning. Shared broken assumption: positivity/success of a surrogate need not survive the root-critical bridge. DifferenceWitness: the target defect is analytic faithfulness rather than cutoff scaling, so the YM adversarial sequence has no theorem authority for RH; only the root-bridge audit procedure is reused."
+  ],
+  "unresolved_warnings": [
+    "Suzuki's all-n norm identity must not be imported as an unconditional lemma; doing so would be circular because the paper states it as RH-equivalent.",
+    "An unconditional formula for D_n may still be just another RH-equivalent reformulation; localization value requires a strictly weaker independently falsifiable sub-obligation.",
+    "The arithmetic Li formula is highly cancellative; termwise or finite-prime positivity is not authorized without a uniform remainder theorem.",
+    "Growth-class control may be nearly root-strength; any proposed O(n log n)-type bound must be checked against known unconditional results before candidate generation.",
+    "Recent preprints/working papers claiming RH or new positivity equivalences are frontier hypotheses only until proof-critical steps are independently verified."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_001_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_001_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "research/real_math/millennium/cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json",
+    "research/real_math/millennium/cross_problem/07_memory/XM001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "Masatoshi Suzuki, arXiv:2301.05779, Theorem 1.1 and Propositions 2.1-2.2",
+    "Jeffrey C. Lagarias, arXiv:math/0404394",
+    "Andre Voros, arXiv:math/0506326"
+  ],
+  "artifact_hash": "sha256:19319a5689d075d908625579433484d920472ab9ce02effe8f068d73627797d3"
+}
