@@ -1,0 +1,80 @@
+{
+  "schema_version": "math-research-trace-v1",
+  "trace_id": "NS-B2a1b-PREACTION-20260811",
+  "framework_source": {"repository": "SzeChunYiu/RAKL", "commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"},
+  "application_base": {"repository": "SzeChunYiu/RAKL_math", "stacked_parent_commit": "b7aad40051409c2e6f47bf277cfda79a6da28c96", "current_main_observed": "6557b1b25fa839fe71aba8047c958d5da892edd8"},
+  "events": [
+    {
+      "event_id": "NS-B2a1b-01-ATOMIZED",
+      "event_type": "ATOMIZED",
+      "atom_id": "NS-B2a1b",
+      "timestamp": "2026-08-11T12:54:00+00:00",
+      "previous_event_hash": null,
+      "payload": {"parent": "NS-B2a1", "obstruction": "Audit whether the signed Euler local-energy-flux route is licensed by local energy equality in the inherited F=1 class, or whether an explicit local energy defect remains."},
+      "artifact_hash": "sha256:cd29c06f00fed658f441fd792fb8c6f66d07a2d09cf09dfc12e56955c370fc40"
+    },
+    {
+      "event_id": "NS-B2a1b-02-CONTEXT_FROZEN",
+      "event_type": "CONTEXT_FROZEN",
+      "atom_id": "NS-B2a1b",
+      "timestamp": "2026-08-11T12:54:00+00:00",
+      "previous_event_hash": "sha256:cd29c06f00fed658f441fd792fb8c6f66d07a2d09cf09dfc12e56955c370fc40",
+      "payload": {"context_hash": "sha256:60800c31320de83fe7388a85e7ae647b6a190e287c59712a4738c633ffddbbb3", "path": "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1b_CONTEXT_FIBER_20260811.json", "retrospective_hypothesis_boundary": "The possibility of a local-energy defect was noticed before freeze; only the later applicability audit may receive prospective credit."},
+      "artifact_hash": "sha256:89fb514dc3cae231f0fb6c81b3358b20f6ee148431806841b074572395daab37"
+    },
+    {
+      "event_id": "NS-B2a1b-03-ANALOGY_SCAN",
+      "event_type": "ANALOGY_SCAN",
+      "atom_id": "NS-B2a1b",
+      "timestamp": "2026-08-11T12:54:00+00:00",
+      "previous_event_hash": "sha256:89fb514dc3cae231f0fb6c81b3358b20f6ee148431806841b074572395daab37",
+      "payload": {"status": "BRIDGES_RETAINED_WITHOUT_AUTHORITY", "retained": ["finite-volume conservation ledger with interior source/defect"], "rejected": ["surface telescoping metaphors without defect accounting"]},
+      "artifact_hash": "sha256:a145739c18c83b0d57593e2e1f092f3da6b0fb11ca049211542120b8603c1bf0"
+    },
+    {
+      "event_id": "NS-B2a1b-04-METHOD_TRANSFER_REVIEW",
+      "event_type": "METHOD_TRANSFER_REVIEW",
+      "atom_id": "NS-B2a1b",
+      "timestamp": "2026-08-11T12:54:00+00:00",
+      "previous_event_hash": "sha256:a145739c18c83b0d57593e2e1f092f3da6b0fb11ca049211542120b8603c1bf0",
+      "payload": {"source_routes": ["classical local Euler energy equality", "Onsager/commutator energy conservation", "Duchon-Robert local defect formalism", "parent B2a1 tail inheritance audit"], "key_mismatch": "signed boundary flux telescopes only after the exact local equality/defect semantics and large-radius defect control are source-bound"},
+      "artifact_hash": "sha256:8d43b817c3c7021aab4c1322fc105dbcc8d93a8cc7d203040d24e4e48cf6b45c"
+    },
+    {
+      "event_id": "NS-B2a1b-05-EXPERT_CONTEXT_REVIEW",
+      "event_type": "EXPERT_CONTEXT_REVIEW",
+      "atom_id": "NS-B2a1b",
+      "timestamp": "2026-08-11T12:54:00+00:00",
+      "previous_event_hash": "sha256:8d43b817c3c7021aab4c1322fc105dbcc8d93a8cc7d203040d24e4e48cf6b45c",
+      "payload": {"review_path": "research/real_math/millennium/navier_stokes/08_reviews/NS_B2A1B_EXPERT_CONTEXT_REVIEW_20260811.md", "review_sha256": "sha256:6d8a14711ebb5ee97bf382b34c64dfc005ef0cbb50943c60088f65ebe9520f3c", "independent_review_credit": false},
+      "artifact_hash": "sha256:2748d19af72aa2663e9102106926151a186642d494d2b1a5ce24b870f08cc1af"
+    },
+    {
+      "event_id": "NS-B2a1b-06-EXPERIENCE_MEMORY_REVIEW",
+      "event_type": "EXPERIENCE_MEMORY_REVIEW",
+      "atom_id": "NS-B2a1b",
+      "timestamp": "2026-08-11T12:54:00+00:00",
+      "previous_event_hash": "sha256:2748d19af72aa2663e9102106926151a186642d494d2b1a5ce24b870f08cc1af",
+      "payload": {"memory_review_hash": "sha256:9960e25684e49ceb132f0643a989ff053b20df6033672e25c5d4f86ca46285be", "path": "research/real_math/millennium/navier_stokes/07_memory/NS_B2A1B_RESEARCH_MEMORY_REVIEW_20260811.json"},
+      "artifact_hash": "sha256:e67b87e160542898534c1214e4c52bd46969d5440d77696d1161232f12de05ba"
+    },
+    {
+      "event_id": "NS-B2a1b-07-NEXT_STEP_PROPOSED",
+      "event_type": "NEXT_STEP_PROPOSED",
+      "atom_id": "NS-B2a1b",
+      "timestamp": "2026-08-11T12:54:00+00:00",
+      "previous_event_hash": "sha256:e67b87e160542898534c1214e4c52bd46969d5440d77696d1161232f12de05ba",
+      "payload": {
+        "action": "LOCAL_ENERGY_DEFECT_CRITERION_AUDIT",
+        "alternatives": ["PRELIMIT_ANNULAR_TIGHTNESS", "SIGNED_FLUX_TELESCOPING_WITHOUT_EQUALITY", "EULER_LIOUVILLE_MATCHING"],
+        "selection_rationale": "The signed-flux branch is upstream-blocked until the exact local energy equality/defect semantics are established. A primary-source criterion audit can either remove the defect or expose a precise additional global obligation.",
+        "predeclared_outcome_branches": {"A": "INHERITED_REGULARITY_FORCES_LOCAL_ENERGY_EQUALITY", "B": "LOCAL_ENERGY_INEQUALITY_ONLY", "C": "DEFECT_PRESENT_OR_UNRESOLVED_BUT_NORMALIZED_TAIL_CONTROL_INHERITED", "D": "CANNOT_CHECK_ENERGY_EQUALITY_CRITERION"},
+        "expected_discriminator": "Exact hypothesis-by-hypothesis match between Seregin's inherited weak Euler class and a primary-source local energy equality/defect theorem; if equality is unavailable, derive only the defect bookkeeping licensed by the local inequality."
+      },
+      "artifact_hash": "sha256:5386329fab9326a9c6cdd16654e2213ebf03aa7388de74fc8454f92a814c7585"
+    }
+  ],
+  "candidate_generation_allowed": false,
+  "authority": "PRE_CANDIDATE_DECISION_RECORD_ONLY",
+  "trace_hash": "sha256:e9f146b072a510a9a5b78058c000372a99ce6a66ce9e0f1034da5df72d091d3b"
+}
