@@ -1,7 +1,8 @@
 root: BSD
 authority: OPEN_NO_SOLUTION_CERTIFICATE
-control_issue: 90
-active_atom: BSD-S001c
+control_issue: 7
+active_atom: BSD-S001c1-KURIHARA-TAYLOR-COMPARISON
+analytic_active_atom: BSD-A1a1-THETA-ORDER-COMPARISON
 nodes:
   - id: BSD-RANK
     statement: "ord_{s=1} L(E,s) = rank E(Q) for every elliptic curve E/Q"
@@ -9,14 +10,36 @@ nodes:
   - id: BSD-LEADING
     statement: "refined complex BSD leading-term identity with regulator, period, local factors, torsion and Sha"
     state: OPEN
+  - id: BSD-A1-RANK2-BRIDGE
+    parent: [BSD-RANK, BSD-LEADING]
+    statement: "for exact complex analytic rank two, isolate a noncircular higher-rank arithmetic witness and the remaining bridges to Mordell-Weil rank, Sha control, regulator and the full leading term"
+    state: SOURCE_BOUND_REFINED
+    children: [BSD-A1a-KATO-NONVANISHING-BRIDGE]
+  - id: BSD-A1a-KATO-NONVANISHING-BRIDGE
+    parent: [BSD-A1-RANK2-BRIDGE]
+    statement: "isolate the weakest source-bound path from exact complex analytic rank two to nonzero generalised Kato class without assuming Selmer dimension two, positive Mordell-Weil rank, BSD or equivalent-strength main-conjecture input"
+    state: REFINED_BY_IMPLICATION_GRAPH
+    children: [BSD-A1a1-THETA-ORDER-COMPARISON, BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE]
+    result: "Castella-Hsieh factorization/reciprocity/derived-height machinery makes anticyclotomic theta order and localization separate load-bearing coordinates; interpolation supplies positive theta order but not exact order two from complex analytic rank two"
+  - id: BSD-A1a1-THETA-ORDER-COMPARISON
+    parent: [BSD-A1a-KATO-NONVANISHING-BRIDGE]
+    statement: "find an exact noncircular theorem comparing ord_{s=1} L(E,s)=2 with ord_T Theta_{f/K}=2 for admissible auxiliary data, without importing positive Mordell-Weil rank, Selmer dimension, BSD or equivalent-strength arithmetic input"
+    state: PRE_CANDIDATE_CONTEXT_FROZEN
+    warnings:
+      - "T is an anticyclotomic character coordinate, not the complex s variable"
+      - "Castella-Hsieh Theorem 2.3 plus L(E/K,1)=0 yields only ord_T Theta>0 in the source"
+      - "an Iwasawa main conjecture must be strength-audited before use as a complex-to-p-adic bridge"
+    next: "bounded primary-source search for exact s-to-T leading-term/order comparison theorems, classified by logical strength"
+  - id: BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE
+    parent: [BSD-A1a-KATO-NONVANISHING-BRIDGE]
+    statement: "remove or justify the positive-rational-rank/nonzero-localization input used downstream to force generalised-Kato nonvanishing"
+    state: OPEN_DEFERRED
+    warnings: ["assuming rank E(Q)>0 is downstream arithmetic information and cannot prove the root analytic-to-arithmetic direction"]
   - id: BSD-S001
     parent: [BSD-RANK, BSD-LEADING]
     statement: "identify the minimal comparison object/identity connecting arbitrary-rank p-primary Selmer/Iwasawa structure to complex analytic rank and the global leading term"
     state: SOURCE_BOUND_REFINED
-    children:
-      - BSD-S001a
-      - BSD-S001b
-      - BSD-S001c
+    children: [BSD-S001a, BSD-S001b, BSD-S001c]
   - id: BSD-S001a
     statement: "audit projection sufficiency: what global coordinates are directly present in fixed-p Selmer/Iwasawa output and which require additional comparison input?"
     state: SOURCE_BOUND_AUDIT_COMPLETE
@@ -27,7 +50,20 @@ nodes:
     result: "Burns-Kurihara-Sano arXiv:1910.07404 already supplies an exterior/determinant-line and Bockstein-regulator interface through the Generalized Perrin-Riou Conjecture; determinant invention is therefore not the live first obstruction"
   - id: BSD-S001c
     statement: "audit whether an independent, non-BSD-assuming comparison can identify the algebraic/p-adic Kato-zeta determinant/Bockstein object with the complex leading-term object strongly enough to force arbitrary-rank analytic-rank equality and the required BSD leading data"
-    state: NEXT
+    state: SOURCE_BOUND_REFINED
+    children: [BSD-S001c1-KURIHARA-TAYLOR-COMPARISON]
+    result: "Kim-Pollack arXiv:2505.09121 supplies an independently defined discrete Kurihara-order invariant that exactly determines p-primary Selmer corank/module structure under source hypotheses; the highest-information surviving root coordinate is therefore the comparison between this discrete order and the complex Taylor order"
     warnings:
       - "in Burns-Kurihara-Sano arXiv:1910.07404 the canonical eta^BSD is defined using the complex leading term, so that formulation cannot itself be used as an independent reconstruction of the complex BSD term"
       - "equivalences or consequences that assume BSD_p, BSD, an Iwasawa main conjecture, Sha finiteness, or other root-level input must preserve those assumptions explicitly"
+  - id: BSD-S001c1-KURIHARA-TAYLOR-COMPARISON
+    parent: [BSD-S001c]
+    statement: "determine whether the independently defined Kim-Pollack Kurihara order, or a source-equivalent Kato/Kolyvagin discrete invariant, can be compared to ord_{s=1}L(E,s) in arbitrary rank without assuming BSD/analytic-rank equality; otherwise isolate the smallest missing comparison edge"
+    state: STRICT_PRE_CANDIDATE_CONTEXT_FROZEN
+    result: "source audit separates exact discrete Selmer reconstruction from the unbound complex Taylor-order coordinate; no comparison candidate has yet been generated"
+    warnings:
+      - "Kim-Pollack corank Sel = ord(Kurihara) is an arithmetic equality, not the Clay analytic-rank equality"
+      - "Kurihara nonvanishing is weaker than exact order comparison"
+      - "localized Iwasawa main-conjecture input must not be silently promoted to a complex analytic-rank theorem"
+      - "bounded source search does not establish nonexistence or novelty"
+    next: "machine-audit the strict packet, then run the bounded primary-source discrete-to-complex order comparison search before any candidate invention"

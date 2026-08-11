@@ -44,4 +44,5 @@ def test_c025_trace_continues_exact_repaired_parent_chain() -> None:
         "FALSIFIER_RUN",
         "RESULT_RECORDED",
         "RESIDUAL_OPENED",
+        "REVIEWED",
     ]

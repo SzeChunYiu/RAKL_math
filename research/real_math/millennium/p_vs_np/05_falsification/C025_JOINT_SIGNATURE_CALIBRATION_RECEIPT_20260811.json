@@ -1,0 +1,249 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "C025-JOINT-SIGNATURE-CALIBRATION-20260811",
+  "candidate_id": "C025",
+  "atom_id": "O9d12a2a1a",
+  "evaluated_at": "2026-08-11T08:13:49Z",
+  "bindings": {
+    "preregistration_artifact_hash": "sha256:39378a50357fd3807d1ee9bcfbdec79e7cf4e5f379d256cfc28d3bf0cb2ce286",
+    "preregistration_file_sha256": "sha256:eaadb5c39b438dbdee0f35cf6728ff5d067b04cde81835013cbfd084a7a68af2",
+    "executable_file_sha256": "sha256:55bb5708f0d492ed162d7f9a6aa4be90a3283302cef522d3007a3a9bd32a717b",
+    "context_packet_hash": "sha256:daa6e99832bd994ff5b081b861521f7465ef37b468d274eb08c93e0001358b89",
+    "rakl_math_base_commit": "f479e007e4a63e379188d7a16d08f30416c1cd4b",
+    "framework_authority_commit": "55d4cb0a83f271d3263fbe48f99b173119c732d2"
+  },
+  "model": {
+    "object": "normalized complementary cuts on the diagonal complement of G_NEQ",
+    "coverage_equivalence": "unequal pair separated iff its two joint binary signatures differ",
+    "capacity_law": "k binary coordinates admit at most 2^k distinct first-order signatures"
+  },
+  "case_results": [
+    {
+      "N": 2,
+      "required_bits": 1,
+      "capacity_at_required_bits": 2,
+      "constructive_cut_masks": [
+        2
+      ],
+      "constructive_distinct_signature_count": 2,
+      "unequal_ordered_pairs_total": 2,
+      "unequal_ordered_pairs_separated": 2,
+      "calibration_pass": true,
+      "low_order_bits": 0,
+      "low_order_capacity": 1,
+      "low_order_collision_forced": true
+    },
+    {
+      "N": 3,
+      "required_bits": 2,
+      "capacity_at_required_bits": 4,
+      "constructive_cut_masks": [
+        2,
+        4
+      ],
+      "constructive_distinct_signature_count": 3,
+      "unequal_ordered_pairs_total": 6,
+      "unequal_ordered_pairs_separated": 6,
+      "calibration_pass": true,
+      "low_order_bits": 1,
+      "low_order_capacity": 2,
+      "low_order_collision_forced": true
+    },
+    {
+      "N": 4,
+      "required_bits": 2,
+      "capacity_at_required_bits": 4,
+      "constructive_cut_masks": [
+        10,
+        12
+      ],
+      "constructive_distinct_signature_count": 4,
+      "unequal_ordered_pairs_total": 12,
+      "unequal_ordered_pairs_separated": 12,
+      "calibration_pass": true,
+      "low_order_bits": 1,
+      "low_order_capacity": 2,
+      "low_order_collision_forced": true
+    },
+    {
+      "N": 5,
+      "required_bits": 3,
+      "capacity_at_required_bits": 8,
+      "constructive_cut_masks": [
+        10,
+        12,
+        16
+      ],
+      "constructive_distinct_signature_count": 5,
+      "unequal_ordered_pairs_total": 20,
+      "unequal_ordered_pairs_separated": 20,
+      "calibration_pass": true,
+      "low_order_bits": 2,
+      "low_order_capacity": 4,
+      "low_order_collision_forced": true
+    },
+    {
+      "N": 8,
+      "required_bits": 3,
+      "capacity_at_required_bits": 8,
+      "constructive_cut_masks": [
+        170,
+        204,
+        240
+      ],
+      "constructive_distinct_signature_count": 8,
+      "unequal_ordered_pairs_total": 56,
+      "unequal_ordered_pairs_separated": 56,
+      "calibration_pass": true,
+      "low_order_bits": 2,
+      "low_order_capacity": 4,
+      "low_order_collision_forced": true
+    },
+    {
+      "N": 9,
+      "required_bits": 4,
+      "capacity_at_required_bits": 16,
+      "constructive_cut_masks": [
+        170,
+        204,
+        240,
+        256
+      ],
+      "constructive_distinct_signature_count": 9,
+      "unequal_ordered_pairs_total": 72,
+      "unequal_ordered_pairs_separated": 72,
+      "calibration_pass": true,
+      "low_order_bits": 3,
+      "low_order_capacity": 8,
+      "low_order_collision_forced": true
+    },
+    {
+      "N": 16,
+      "required_bits": 4,
+      "capacity_at_required_bits": 16,
+      "constructive_cut_masks": [
+        43690,
+        52428,
+        61680,
+        65280
+      ],
+      "constructive_distinct_signature_count": 16,
+      "unequal_ordered_pairs_total": 240,
+      "unequal_ordered_pairs_separated": 240,
+      "calibration_pass": true,
+      "low_order_bits": 3,
+      "low_order_capacity": 8,
+      "low_order_collision_forced": true
+    },
+    {
+      "N": 17,
+      "required_bits": 5,
+      "capacity_at_required_bits": 32,
+      "constructive_cut_masks": [
+        43690,
+        52428,
+        61680,
+        65280,
+        65536
+      ],
+      "constructive_distinct_signature_count": 17,
+      "unequal_ordered_pairs_total": 272,
+      "unequal_ordered_pairs_separated": 272,
+      "calibration_pass": true,
+      "low_order_bits": 4,
+      "low_order_capacity": 16,
+      "low_order_collision_forced": true
+    }
+  ],
+  "exhaustive_counterexample_search": {
+    "N_max": 4,
+    "ordered_cut_families": true,
+    "results": [
+      {
+        "N": 2,
+        "exhaustive_minimum_bits": 1,
+        "predicted_minimum_bits": 1
+      },
+      {
+        "N": 3,
+        "exhaustive_minimum_bits": 2,
+        "predicted_minimum_bits": 2
+      },
+      {
+        "N": 4,
+        "exhaustive_minimum_bits": 2,
+        "predicted_minimum_bits": 2
+      }
+    ],
+    "matches_frozen_prediction": true,
+    "authority": "EXACT_FINITE_SEARCH_ONLY"
+  },
+  "full_semifilter_definition_regression": {
+    "N_max": 4,
+    "results": [
+      {
+        "N": 2,
+        "semifilter_count": 4,
+        "ordered_cut_families_checked": 5,
+        "direct_vs_signature_mismatches": 0,
+        "equivalence_pass": true
+      },
+      {
+        "N": 3,
+        "semifilter_count": 18,
+        "ordered_cut_families_checked": 73,
+        "direct_vs_signature_mismatches": 0,
+        "equivalence_pass": true
+      },
+      {
+        "N": 4,
+        "semifilter_count": 166,
+        "ordered_cut_families_checked": 273,
+        "direct_vs_signature_mismatches": 0,
+        "equivalence_pass": true
+      }
+    ],
+    "all_equivalent": true,
+    "authority": "EXACT_FINITE_SOURCE-DEFINITION_REGRESSION_ONLY"
+  },
+  "frozen_falsifier_outcomes": [
+    {
+      "id": "C025-F1",
+      "outcome": "NOT_TRIGGERED"
+    },
+    {
+      "id": "C025-F2",
+      "outcome": "NOT_TRIGGERED"
+    },
+    {
+      "id": "C025-F3",
+      "outcome": "NOT_TRIGGERED",
+      "evidence": "exhaustive source-definition full-semi-filter/signature equivalence regression N<=4"
+    },
+    {
+      "id": "C025-F4",
+      "outcome": "NOT_TRIGGERED",
+      "evidence": "exact cardinality 2^k"
+    }
+  ],
+  "capacity_falsifier": {
+    "observed_result": "FIRST_ORDER_CARDINALITY_ONLY_ARGUMENT_LOGARITHMICALLY_CAPPED",
+    "route_effect": "REJECT_AS_SUPERLOG_PRIMARY_ROUTE_WITHIN_FROZEN_SCOPE",
+    "residual_signature": [
+      "joint integrality recovered on G_NEQ",
+      "first-order cardinality-only state capacity saturates at ceil(log2 M)",
+      "higher-order semi-filter closure coordinate remains untested"
+    ],
+    "diagnosis_status": "SUPPORTED_WITHIN_REGISTERED_REPRESENTATION_SCOPE"
+  },
+  "claim_scope": {
+    "normalized_G_NEQ_joint_signatures": "EXACT_LOCAL_CALIBRATION",
+    "capacity_only_first_order_argument": "LOGARITHMIC_CEILING",
+    "arbitrary_full_cover_targets": "NOT_TESTED",
+    "higher_order_closure_signatures": "NOT_TESTED",
+    "p_vs_np": "NO_AUTHORITY"
+  },
+  "verdict": "PASS_SCOPED_CALIBRATION_WITH_CAPACITY_NO_GO",
+  "authority": "EXACT_LOCAL_REPRESENTATION_CALIBRATION / FINITE_ENUMERATION_SUPPORT / COMPUTATION_IS_NOT_PROOF / SAME_CONTEXT_REVIEW_NOT_INDEPENDENT / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:fcbdcdcb6a182705253b1cd0779316814c9791ceef549fc3f848023023a476eb"
+}

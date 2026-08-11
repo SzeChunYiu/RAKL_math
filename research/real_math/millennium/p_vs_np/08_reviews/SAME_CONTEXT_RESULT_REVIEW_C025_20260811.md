@@ -90,3 +90,33 @@ C025 is retained as a **local calibration success plus route-level failure**:
 5. the next active child is `O9d12a2a1a1`, but candidate generation there is blocked until a fresh strict context/memory/trace packet is frozen.
 
 Root status remains `OPEN_NO_SOLUTION_CERTIFICATE`.
+
+## Synthesis review addendum — receipt and application-learning boundary
+
+A parallel assurance lane was reconciled into the C025 negative-history lineage rather than opened as a competing candidate.
+
+### Stronger local check
+
+The C025 object, cases, predictions and falsifiers were selected in artifact `sha256:39378a50357fd3807d1ee9bcfbdec79e7cf4e5f379d256cfc28d3bf0cb2ce286` at commit `03a4cb9a0bce32374d79210d8b712670c11626a7`. The evaluator bytes/hash were not present there. Result commit `1bfad13d82548fe61f70cd9f18828fe0240c8556` is on a divergent lineage and is the first bound source for executable `sha256:55bb5708...` and self-hashing receipt `sha256:fcbdcdcb...`. The result is therefore retained as retrospectively reproducible assurance, not strict preregistered-evaluator evidence.
+
+Unlike the original compact regression, the assurance enumerates the source preservation definition over every full semi-filter for `N<=4`. It reports semi-filter counts `4,18,166`, ordered cut-family counts `5,73,273`, and zero direct/signature mismatches. The power-of-two and boundary constructions through `N=17` also pass.
+
+### Scope reconciliation
+
+This proves no new normalization theorem. Claim 41/Lemmas 42–43 remain invoked only for the `G_NEQ` canonical source family. The stronger conditional statement is: **once a normalized partition family is fixed on `G_NEQ`, signature injectivity agrees with coverage of every full semi-filter above the unequal edges.** It does not permit arbitrary full-cover pairs or other graphs to be normalized.
+
+The broad “all polynomial-trace binary-signature certificates are logarithmically weak” sentence remains rejected. The only additional ceiling retained is cardinality-only first-order state counting. The route-level failure continues to rest on the precisely scoped C009 fact that canonical/original-generator separation is universally logarithmically capped.
+
+### Identity and learning reconciliation
+
+- retained candidate: `C025` in negative history;
+- retained failure: `F-C025-FIRST-ORDER-CANONICAL-COLLAPSE`;
+- retained tool: `T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION`;
+- provisional parallel capacity failure/tool names: not minted and not silently overwritten;
+- immutable parent failure/tool artifacts: preserved byte-for-byte from target head `2b264d50`;
+- later result evidence: attached through versioned addendum `C025-POSTRESULT-ASSURANCE-ADDENDUM-v1`, not backdated into the parents;
+- supersession: the earlier backfilled strict-preregistration implication is superseded by the chronology audit, while the mathematical parent identities remain unchanged.
+
+The method lesson “repair the parent failure, then separately audit the repaired representation's capacity/scope” is retained only as `PROPOSAL_ONLY_PENDING_CROSS_PROBLEM_RECURRENCE_AND_FRAMEWORK_ASSURANCE`. Under RAKL `15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3`, crossing into the framework requires the application-feedback bundle/import-receipt boundary and yields at most `QUARANTINED_PROPOSAL`. No framework registry or failure lattice is mutated here.
+
+**Addendum verdict:** `ACCEPT_RETROSPECTIVE_SCOPED_ASSURANCE / PRESERVE_NEGATIVE_HISTORY / NOT_INDEPENDENT / ROOT_AUTHORITY_NONE`.

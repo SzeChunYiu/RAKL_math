@@ -1,0 +1,174 @@
+{
+  "atom_id": "YM-E1a1",
+  "object_context": "Child of YM-E1a for RAKL_math issue #5: determine whether one exact Balaban-style renormalization-group blocking step for four-dimensional pure lattice Yang–Mills can carry a deliberately small finite family of positive-half-space gauge-invariant source insertions through an explicit marked/source sector with controlled operator mixing, bounded support enlargement, reflection-compatible placement, and source-derivative estimates that do not already incur ultraviolet-depth-dependent loss.",
+  "structural_coordinates": [
+    "the underlying unmarked object is one exact gauge-covariant lattice RG blocking step in four-dimensional pure non-Abelian Yang–Mills",
+    "the mark is a finite source vector coupled only to gauge-invariant cutoff observables; derivatives at zero source encode connected insertions rather than a new physical interaction",
+    "one-step exact differentiation gives a transport identity, but useful closure additionally requires a controlled representation of the resulting coarse observable/source dependence",
+    "operator/source mixing can enlarge the marked basis even when the unmarked effective density remains in a controlled RG class",
+    "Wilson-loop and loop-cylinder insertions are bounded and exactly gauge invariant at fixed cutoff, but blocking can change contour geometry and generate multi-loop or extended-support terms",
+    "reflection positivity is a property of a positive-half-space algebra and reflected quadratic forms; an RG block or source support that straddles the reflection plane can invalidate naive positivity transport",
+    "finite source closure is only a calibration target and must not be confused with a separating continuum observable algebra or spectral completeness",
+    "scale-neutral one-step constants are necessary but not sufficient for multiscale summability; any per-step loss must be tracked against the asymptotically-free running coupling and number of RG steps",
+    "continuum existence, non-triviality, OS reconstruction, infinite-volume passage, correlation decay and mass gap remain downstream obligations"
+  ],
+  "equivalent_formulations": [
+    "differentiate a normalized source-dependent block integral at J=0 and ask whether the conditional expectation of each fine observable belongs to a controlled coarse marked-observable class with an explicit remainder bound",
+    "construct a one-step source-mixing matrix plus controlled irrelevant remainder for a finite gauge-invariant observable family, with support and norm budgets bound independently of total ultraviolet depth",
+    "show that the tangent map of the RG transformation in selected gauge-invariant source directions is a bounded map between explicitly defined marked Banach spaces, with a reflection-compatible source cone on supported observables",
+    "falsify finite marked closure by exhibiting unavoidable operator-basis or support proliferation after one exact blocking step"
+  ],
+  "solved_analogues": [
+    "Osterwalder–Seiler 1978 fixed-cutoff Wilson lattice gauge theory: reflection positivity and positive transfer-matrix structure for the regulator-level theory",
+    "Brydges–Fröhlich–Seiler 1979 constructive lattice gauge/Higgs analysis: gauge invariance and Osterwalder–Schrader positivity can be controlled uniformly in lattice spacing in lower-dimensional/superrenormalizable gauge settings"
+  ],
+  "near_solved_analogues": [
+    "Balaban 1987–1989 four-dimensional pure lattice gauge RG: localized effective actions, coupling renormalization, cluster expansions and large-field control for the unmarked theory, without a source-insertion closure theorem sufficient for continuum observable construction",
+    "Magnen–Rivasseau–Sénéor 1993 pure SU(2) YM4 with fixed infrared cutoff and no ultraviolet cutoff: rigorous Schwinger-function construction in a regularized axial gauge with nonperturbative restoration of Slavnov identities, but not the full Clay theory",
+    "Brandt–Neri–Sato 1981 perturbative Wilson-loop renormalization: loop insertions close only after geometry-dependent renormalization data including cusp/intersection structure"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Balaban one-step lattice gauge renormalization group",
+      "method": "differentiate the exact block transformation in a finite set of source directions and represent the source tangent/remainder in a marked norm built on the same localization and small/large-field decomposition as the unmarked RG",
+      "shared_structure": [
+        "same four-dimensional pure lattice gauge setting and asymptotically-free ultraviolet trajectory",
+        "same exact scale-by-scale block transformation and localized effective-density machinery",
+        "same need for estimates uniform across an increasing number of ultraviolet steps"
+      ],
+      "required_assumptions": [
+        "source differentiation is justified under the finite-cutoff block integral",
+        "generated insertions admit a localized gauge-invariant expansion compatible with the unmarked polymer/cluster organization",
+        "mixing and support growth can be bounded in a norm whose one-step constant does not accumulate catastrophically"
+      ],
+      "disanalogies": [
+        "Balaban's unmarked stability does not itself control tangent directions corresponding to observable insertions",
+        "marked insertions can introduce new local/nonlocal structures, mixing coefficients and support growth absent from the normalization sector"
+      ],
+      "repair_question": "For the smallest Wilson-loop/cylinder source family, what exact marked state space makes the differentiated one-step map closed up to a quantitatively controlled remainder, and what is the first generated term that violates that space if no such closure holds?",
+      "source_anchors": [
+        "T. Balaban, Renormalization group approach to lattice gauge field theories I, Commun. Math. Phys. 109 (1987) 249–301, DOI:10.1007/BF01215223",
+        "T. Balaban, Renormalization group approach to lattice gauge field theories II, Commun. Math. Phys. 116 (1988) 1–22, DOI:10.1007/BF01239022",
+        "T. Balaban, Convergent renormalization expansions for lattice gauge theories, Commun. Math. Phys. 119 (1988) 243–285, DOI:10.1007/BF01217741"
+      ]
+    },
+    {
+      "source_context": "Osterwalder–Seiler fixed-cutoff reflection positivity",
+      "method": "align the reflection plane and block decomposition, restrict calibration sources to a buffered positive-half-space algebra, and require any proposed source-mixing/support map to preserve a finite reflected Gram-cone test before multiscale iteration",
+      "shared_structure": [
+        "same Wilson regulator and compact gauge group",
+        "same gauge-invariant positive-half-space observables",
+        "reflection positivity is expressible as finite quadratic-form inequalities at each cutoff"
+      ],
+      "required_assumptions": [
+        "the RG blocking kernel and source embedding respect the chosen reflection geometry",
+        "coarse representatives of supported sources remain in the positive-half-space algebra or have a quantitatively controlled buffer that never crosses the reflection plane"
+      ],
+      "disanalogies": [
+        "fixed-cutoff positivity does not imply that an arbitrary coarse-graining map preserves the positive-half-space support algebra",
+        "source renormalization/mixing may create extended terms not covered by the original reflected observable set"
+      ],
+      "repair_question": "Can the first marked RG calibration be arranged on blocks strictly separated from the reflection plane so that reflected Gram positivity is an exact finite-cutoff invariant, or does unavoidable support leakage appear after one step?",
+      "source_anchors": [
+        "K. Osterwalder and E. Seiler, Gauge field theories on a lattice, Ann. Phys. 110 (1978) 440–471, DOI:10.1016/0003-4916(78)90039-8"
+      ]
+    },
+    {
+      "source_context": "Brandt–Neri–Sato Wilson-loop renormalization",
+      "method": "treat loop geometry and its renormalization labels as part of the marked state rather than assuming a single scalar source coefficient follows a contour unchanged under blocking",
+      "shared_structure": [
+        "gauge-invariant loop observables are the selected fixed-cutoff calibration sources",
+        "renormalization of loop observables depends on local geometric singularities and intersections"
+      ],
+      "required_assumptions": [
+        "the block/refinement map supplies a consistent physical-contour identification",
+        "the marked basis records enough contour and intersection data for generated loop structures to be represented or quantitatively remainder-controlled"
+      ],
+      "disanalogies": [
+        "the source result is perturbative continuum loop renormalization rather than a nonperturbative exact lattice RG closure theorem",
+        "one RG block can generate multi-loop/polymer structures beyond a single loop renormalization matrix"
+      ],
+      "repair_question": "What minimum geometry/multi-loop labels must be added before one-step Wilson-source transport ceases to leak outside the registered marked basis?",
+      "source_anchors": [
+        "R. A. Brandt, F. Neri, M.-a. Sato, Renormalization of loop functions for all loops, Phys. Rev. D 24 (1981) 879, DOI:10.1103/PhysRevD.24.879"
+      ]
+    },
+    {
+      "source_context": "Magnen–Rivasseau–Sénéor YM4 with an infrared cutoff",
+      "method": "use source/Schwinger-function control and nonperturbative gauge-identity restoration as a contrastive model for keeping observable information explicit through ultraviolet removal",
+      "shared_structure": [
+        "four-dimensional pure non-Abelian Yang–Mills ultraviolet problem",
+        "Schwinger functions rather than partition-function bounds are the observable target",
+        "gauge invariance must survive or return after regulator-dependent intermediate representations"
+      ],
+      "required_assumptions": [
+        "the lattice RG source sector has an analogue of the controlled counterterm/gauge-identity bookkeeping used in the axial-gauge construction",
+        "fixed-infrared-cutoff source control can be translated only as a local ultraviolet lesson, not as a full-volume theorem"
+      ],
+      "disanalogies": [
+        "the construction is SU(2), fixed infrared cutoff and trivial topological sector in a regularized axial gauge",
+        "the target marked Balaban step uses compact lattice variables and a different multiscale representation"
+      ],
+      "repair_question": "Which source-sector bookkeeping principle survives the representation change: explicit counterterm/mixing closure with a finite-cutoff gauge-identity check, or does the lattice RG generate a qualitatively different uncontrolled source algebra?",
+      "source_anchors": [
+        "J. Magnen, V. Rivasseau, R. Sénéor, Construction of YM4 with an infrared cutoff, Commun. Math. Phys. 155 (1993) 325–383, DOI:10.1007/BF02097397"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "an exact source derivative identity is not a source-closure theorem",
+    "finite-dimensional closure for one hand-picked source family is not a separating observable algebra",
+    "one-step boundedness is not multiscale uniformity",
+    "reflection positivity of the underlying Wilson measure is not automatic positivity preservation under arbitrary source mixing or support enlargement",
+    "perturbative loop renormalizability does not prove nonperturbative marked RG closure",
+    "fixed-infrared-cutoff SU(2) ultraviolet construction does not supply arbitrary compact simple gauge group, infinite-volume, or mass-gap closure",
+    "the sibling spectral source-visibility failure warns that restricted source families can miss physical states; this child uses a finite family only as a closure calibration and makes no spectral-completeness claim"
+  ],
+  "source_anchors": [
+    "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf",
+    "DOI:10.1007/BF01215223",
+    "DOI:10.1007/BF01239022",
+    "DOI:10.1007/BF01217741",
+    "DOI:10.1016/0003-4916(78)90039-8",
+    "DOI:10.1016/0003-4916(79)90098-8",
+    "DOI:10.1103/PhysRevD.24.879",
+    "DOI:10.1007/BF02097397",
+    "RAKL framework main:55d4cb0a83f271d3263fbe48f99b173119c732d2",
+    "RAKL_math issue:#5"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "software compiler instrumentation / abstract interpretation",
+      "source_situation": "A compiler pass can preserve the uninstrumented program semantics while an attached finite instrumentation vocabulary explodes into new data-flow facts, aliases or dependencies; useful instrumentation therefore needs an explicit transfer function, a closure domain and a widening/error budget.",
+      "common_abstraction": [
+        "a base transformation can be stable while marked observables are not closed under it",
+        "a finite mark vocabulary may proliferate under one transformation",
+        "support/dependency growth and approximation error must be budgeted before repeated composition"
+      ],
+      "source_to_target_mapping": [
+        "compiler pass -> one RG blocking step",
+        "instrumented variables/data-flow facts -> gauge-invariant source insertions",
+        "abstract domain -> marked observable/source Banach space",
+        "alias/dependency growth -> operator mixing and support enlargement",
+        "widening/error budget -> controlled irrelevant remainder and one-step norm loss"
+      ],
+      "shared_constraints": [
+        "the marked state must be transported explicitly rather than inferred after the base transformation",
+        "closure must be tested after one step before iterating many steps",
+        "unbounded vocabulary/support growth makes repeated composition unusable"
+      ],
+      "disanalogies": [
+        "compiler instrumentation is discrete and deterministic, while RG integrates fluctuating gauge degrees of freedom",
+        "Yang–Mills insertions carry ultraviolet singularities, gauge geometry and reflection-positivity constraints with no software analogue"
+      ],
+      "proposed_principle": "Before attempting multiscale marked RG, define the smallest marked source space and measure one-step basis/support/norm growth; if exact finite closure fails, widen only to the minimal graded/quasi-local space justified by the observed leakage.",
+      "validation_obligation": "For a finite Wilson-loop/cylinder source family, derive the exact finite-cutoff source derivative after one registered blocking step and either express it in the proposed marked space with explicit remainder/support/norm bounds or exhibit the first generated term that violates closure.",
+      "provenance_note": "Proposal compressor only; no gauge-theory statement follows from the software analogy."
+    }
+  ],
+  "analogy_scan_notes": "Scanned compiler instrumentation/data-flow closure, renormalization of composite operators, block-spin observables, control-state augmentation and ordinary bookkeeping workflows. Retained only the marked-state closure analogy because it predicts a concrete one-step closure-or-leakage test without supplying any mathematical authority.",
+  "frozen_at": "2026-08-11T07:57:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:95fe4879b25e9319e2de43ae287b467b86138752e66fd6dfa380e3a810d59802"
+}

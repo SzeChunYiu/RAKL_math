@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.2.0",
+  "validation_id": "VALIDATE-NS-B1a-C001-FINAL-HEAD-INTEGRATION-20260811",
+  "recorded_at": "2026-08-11T09:43:23Z",
+  "atom_id": "NS-B1a",
+  "historical_identity": "NS-B1a-C001",
+  "source_repository": "https://github.com/SzeChunYiu/RAKL_math.git",
+  "source_pull_request": {
+    "number": 19,
+    "base": {
+      "commit": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+      "tree": "37c4d5bf50bf2015a4b09f28aafc501a9d20ba87"
+    },
+    "head": {
+      "commit": "144ea3a9ce27b6bb68fa20d39428d54637c43f7b",
+      "tree": "a8b3c09c94f53b84767de5cc211a6167dd51a1d7"
+    },
+    "merge": {
+      "commit": "0ad7991d8b4f05792d6d43b6e36128ef4b7eada9",
+      "tree": "41c97c81da4058b94293ab27b27a52e7e7415e33",
+      "parents": [
+        "f8156cc5a9991b13e7ff74d02ac1bb35f9008b7d",
+        "144ea3a9ce27b6bb68fa20d39428d54637c43f7b"
+      ]
+    }
+  },
+  "framework_pin": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+  "repair_source": {
+    "commit": "16ea2517fb3614deed62438a6735530a0a9c9c08",
+    "tree": "ca7bd929a82836d016c520e5a63decb35e9560c5"
+  },
+  "prior_integration_commit": {
+    "commit": "cf476a3970153e3ce0d7038524fa52be5d54f177",
+    "tree": "85e2799f7f95e9b8b2b93345f840c7c001aa4518",
+    "parents": [
+      "7418fda3a2d76e4c64a9f847470c3d171a947ea3",
+      "7f5771d5e47742debec5f4af0a29e937b9aeedf6"
+    ]
+  },
+  "current_main": {
+    "commit": "29d566f7860240f22d634664c51e8583e50a3c5b",
+    "tree": "58fec902d5cc5bda62b5aca38f98e80b2ea4003d"
+  },
+  "merge_base": "7f5771d5e47742debec5f4af0a29e937b9aeedf6",
+  "integration_commit": {
+    "commit": "4888a4602ca143fbf0689e1a4d56422a73267cf0",
+    "tree": "e46389bc5bcbd66c86de2f6369ba5ef227851720",
+    "parents": [
+      "16ea2517fb3614deed62438a6735530a0a9c9c08",
+      "29d566f7860240f22d634664c51e8583e50a3c5b"
+    ],
+    "first_parent_with_repair_source": "16ea2517fb3614deed62438a6735530a0a9c9c08",
+    "second_parent_current_main": "29d566f7860240f22d634664c51e8583e50a3c5b",
+    "strategy": "ort"
+  },
+  "ancestry_requirements": [
+    {
+      "role": "repair source reaches integration",
+      "ancestor": "16ea2517fb3614deed62438a6735530a0a9c9c08",
+      "descendant": "4888a4602ca143fbf0689e1a4d56422a73267cf0"
+    },
+    {
+      "role": "prior integration reaches final integration",
+      "ancestor": "cf476a3970153e3ce0d7038524fa52be5d54f177",
+      "descendant": "4888a4602ca143fbf0689e1a4d56422a73267cf0"
+    },
+    {
+      "role": "current main reaches integration",
+      "ancestor": "29d566f7860240f22d634664c51e8583e50a3c5b",
+      "descendant": "4888a4602ca143fbf0689e1a4d56422a73267cf0"
+    },
+    {
+      "role": "PR19 head reaches PR19 merge",
+      "ancestor": "144ea3a9ce27b6bb68fa20d39428d54637c43f7b",
+      "descendant": "0ad7991d8b4f05792d6d43b6e36128ef4b7eada9"
+    },
+    {
+      "role": "PR19 merge reaches repair source",
+      "ancestor": "0ad7991d8b4f05792d6d43b6e36128ef4b7eada9",
+      "descendant": "6e73d024ec9dcc9a8bfbfb34a159a23ab7c8579e"
+    },
+    {
+      "role": "original result reaches PR19 head",
+      "ancestor": "9b6b8ae4c84fc3c1b579b4db8e3fe6726b6244c0",
+      "descendant": "144ea3a9ce27b6bb68fa20d39428d54637c43f7b"
+    },
+    {
+      "role": "original trace reaches PR19 head",
+      "ancestor": "070b5cc620368862aa3b10414af7c986ce341601",
+      "descendant": "144ea3a9ce27b6bb68fa20d39428d54637c43f7b"
+    },
+    {
+      "role": "original result precedes later trace",
+      "ancestor": "9b6b8ae4c84fc3c1b579b4db8e3fe6726b6244c0",
+      "descendant": "070b5cc620368862aa3b10414af7c986ce341601"
+    }
+  ],
+  "historical_bindings": [
+    {
+      "role": "original result",
+      "commit": "9b6b8ae4c84fc3c1b579b4db8e3fe6726b6244c0",
+      "tree": "9872fed7c29e50491c9c8d6ac1e5276e7cb77416",
+      "source_path": "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a_C001_PRESSURE_TAIL_LOCALIZATION_20260811.md",
+      "git_blob_sha": "0348843b64f16b0c0e107a563893c15a9076e3fa",
+      "raw_sha256": "sha256:cbba8a4f90ccb189de0a8affd0682db400e0f0e39bad4b9259aad9cfc24f1da5",
+      "byte_mode": "GIT_SHOW_NO_TEXTCONV_NO_EXT_DIFF_BINARY_STDOUT",
+      "preserved_snapshot_path": "research/real_math/millennium/navier_stokes/04_candidates/negative_history/NS_B1a_C001_PR19_RESULT_SNAPSHOT_9B6B8AE.md",
+      "preserved_snapshot_raw_sha256": "sha256:cbba8a4f90ccb189de0a8affd0682db400e0f0e39bad4b9259aad9cfc24f1da5"
+    },
+    {
+      "role": "original trace",
+      "commit": "070b5cc620368862aa3b10414af7c986ce341601",
+      "tree": "26ecf8bf3fb70ebeaa51217a424d476cfbc027fa",
+      "source_path": "research/real_math/millennium/navier_stokes/09_trace/NS-B1a_C001_TRACE_CONTINUATION_20260811.json",
+      "git_blob_sha": "45bfbbf5fad822117fd4e92f7850fde84709c99e",
+      "raw_sha256": "sha256:ff353360726367858259f03294316a56f58c2f38408b07d75c7bafc24f22f653",
+      "byte_mode": "GIT_SHOW_NO_TEXTCONV_NO_EXT_DIFF_BINARY_STDOUT",
+      "preserved_snapshot_path": "research/real_math/millennium/navier_stokes/04_candidates/negative_history/NS_B1a_C001_PR19_TRACE_SNAPSHOT_070B5CC.json",
+      "preserved_snapshot_raw_sha256": "sha256:ff353360726367858259f03294316a56f58c2f38408b07d75c7bafc24f22f653"
+    }
+  ],
+  "live_subjects": {
+    "retrospective_result": {
+      "path": "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a_C001_PRESSURE_TAIL_LOCALIZATION_20260811.md",
+      "raw_sha256": "sha256:2c0e2189ecc710a3a45809bfe7de8bc4ee86992492445c0d2f635dccd58b9dfa",
+      "semantic_hash_kind": "RAW_ONLY",
+      "semantic_hash": ""
+    },
+    "same_context_review": {
+      "path": "research/real_math/millennium/navier_stokes/08_reviews/SAME_CONTEXT_REVIEW_NS-B1a_C001_RESULT_20260811.md",
+      "raw_sha256": "sha256:06873da6da213377d892b0fe540add3e287053e383283991a23564059065d3a8",
+      "semantic_hash_kind": "RAW_ONLY",
+      "semantic_hash": ""
+    },
+    "chronology_audit": {
+      "path": "research/real_math/millennium/navier_stokes/04_candidates/negative_history/NS_B1a_C001_PR19_CHRONOLOGY_AUDIT_20260811.json",
+      "raw_sha256": "sha256:e6d9676a64df4f2ac3bb1d0d2cde025faedf8b6b49ab4a040bcfaecfab0ee0c4",
+      "semantic_hash_kind": "SELF_HASH",
+      "semantic_hash": "sha256:e324b2948be5158efccee7835452002faa884b056954ccf139f813fe5e19eb1d"
+    },
+    "analytic_failure": {
+      "path": "research/real_math/millennium/navier_stokes/07_memory/NS-B1a_C001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+      "raw_sha256": "sha256:5c5f81138b113dafc3df0e4fa7c4bddd81e89beb3d246798ec99a084e691e652",
+      "semantic_hash_kind": "NESTED_EXPERIENCE_SELF_HASH",
+      "semantic_hash": "sha256:cb319a5124e14a1730f88e51a827c4a1d64377325ce4bad086ffcb13fe7d1636"
+    },
+    "assurance_failure": {
+      "path": "research/real_math/millennium/navier_stokes/07_memory/NS_B1a_C001_PR19_ASSURANCE_FAILURE_DELTA_20260811.json",
+      "raw_sha256": "sha256:dd0f40c35d5ec9a0f615b0769bf268a804b412de563d84d777c1ea8cf869b3a5",
+      "semantic_hash_kind": "NESTED_EXPERIENCE_SELF_HASH",
+      "semantic_hash": "sha256:368aea074728360f841f1f69c66326b801651fcb65ca43487da714811b94ceb3"
+    },
+    "final_trace": {
+      "path": "research/real_math/millennium/navier_stokes/09_trace/NS-B1a_C001_TRACE_CONTINUATION_20260811.json",
+      "raw_sha256": "sha256:7fc66a7b0005843d62c6371dfcabd195f9351a6e1c4badc412af9ffef52e330e",
+      "semantic_hash_kind": "FINAL_TRACE_EVENT_HASH",
+      "semantic_hash": "sha256:742f55e56d2a3183153a0115aede6568972b3a5c3b7f53ddd4ae334761b91e1b"
+    },
+    "prior_validation": {
+      "path": "research/real_math/millennium/navier_stokes/05_oracles/NS_B1a_C001_RETROSPECTIVE_VALIDATION_20260811.json",
+      "raw_sha256": "sha256:fdd644edeafb90c99fecc8cc642d9543a2e22994df52ed6d2d442956b6996650",
+      "semantic_hash_kind": "SELF_HASH",
+      "semantic_hash": "sha256:3d6ec7a8d2b1f2941d337e432f33f0f95a6430fb22fc7dce54120cbd031d0af6"
+    },
+    "problem_dag": {
+      "path": "research/real_math/millennium/navier_stokes/02_problem_dag/open_obligations.yaml",
+      "raw_sha256": "sha256:f89a0104e5d495e3c38c152fba9d3e4959b908ad72ff266f2eda2dac1c0242a8",
+      "semantic_hash_kind": "RAW_ONLY",
+      "semantic_hash": ""
+    },
+    "lane_readme": {
+      "path": "research/real_math/millennium/navier_stokes/README.md",
+      "raw_sha256": "sha256:7a7f8a1d5696536a561689b02464b306e4d4397b008bbbe330665d55ac003269",
+      "semantic_hash_kind": "RAW_ONLY",
+      "semantic_hash": ""
+    },
+    "whitespace_policy": {
+      "path": ".gitattributes",
+      "raw_sha256": "sha256:a13757e1bb2f5776c9dc55277c6b4b028788340f3684f1bc0b58918a64b81dcb",
+      "semantic_hash_kind": "RAW_ONLY",
+      "semantic_hash": ""
+    },
+    "exact_test": {
+      "path": "tests/math_applications/test_navier_stokes_ns_b1a_c001_pressure_tail.py",
+      "raw_sha256": "sha256:63df9f735c981e95ab36b69e76bd15f07394f5d979e3161f724802413df4278c",
+      "semantic_hash_kind": "RAW_ONLY",
+      "semantic_hash": ""
+    }
+  },
+  "executable_git_contract": {
+    "operations": [
+      "remote get-url --all origin",
+      "cat-file -e <commit>^{commit}",
+      "rev-parse <commit>^{tree}",
+      "show -s --format=%P <merge>",
+      "merge-base <repair> <main>",
+      "merge-base --is-ancestor <ancestor> <descendant>",
+      "cat-file -e <commit>:<path>",
+      "rev-parse <commit>:<path>",
+      "show --no-textconv --no-ext-diff <commit>:<path> in binary stdout mode"
+    ],
+    "planted_worlds": [
+      "MISSING_COMMIT",
+      "FORGED_TREE",
+      "MISSING_PATH",
+      "FORGED_BLOB",
+      "FORGED_RAW_HASH",
+      "FORGED_ORIGIN",
+      "BROKEN_ANCESTRY"
+    ],
+    "missing_evidence_policy": "FAIL_CLOSED"
+  },
+  "validation": {
+    "focused_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_navier_stokes_ns_b1a_c001_pressure_tail.py -q",
+    "focused_passed": 10,
+    "full_command": "python tools/run_application_tests.py --framework framework/RAKL",
+    "full_passed": 217,
+    "diff_check_command": "git diff --check origin/main...HEAD",
+    "diff_check_result": "CLEAN_IN_EXACT_HEAD_WORKTREE_CONTEXT",
+    "diff_check_context": {
+      "snapshot_path": "research/real_math/millennium/navier_stokes/04_candidates/negative_history/NS_B1a_C001_PR19_RESULT_SNAPSHOT_9B6B8AE.md",
+      "policy": "whitespace=-trailing-space",
+      "default_exact_head_worktree_command": "git diff --check origin/main...HEAD",
+      "default_exact_head_worktree_result": "CLEAN",
+      "explicit_head_attribute_source_command": "git --attr-source=HEAD diff --check origin/main...HEAD",
+      "explicit_head_attribute_source_result": "CLEAN",
+      "explicit_base_attribute_source_command": "git --attr-source=origin/main diff --check origin/main...HEAD",
+      "explicit_base_attribute_source_result": "EXPECTED_CONTEXTUAL_FAILURE_IMMUTABLE_SNAPSHOT_TRAILING_WHITESPACE",
+      "base_attribute_observation": "whitespace: unspecified",
+      "head_attribute_observation": "whitespace: -trailing-space",
+      "context_free_clean_claim": false,
+      "interpretation": "Before this branch is merged, a neutral base worktree reads attributes from base and therefore reports the preserved snapshot hard breaks. The exact-head worktree and explicit HEAD attribute source apply the narrow snapshot exemption and pass. No live file is exempted."
+    }
+  },
+  "interpretation": [
+    "Git provenance and mutation checks validate auditability only",
+    "historical snapshot bytes are immutable negative history",
+    "same-context review is not independent review or peer review",
+    "no candidate, theorem, novelty, Navier-Stokes, or Clay root authority is created",
+    "diff-check cleanliness is attribute-context dependent before the narrow policy lands on main"
+  ],
+  "authority": "FINAL_HEAD_INTEGRATION_VALIDATION / RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:2139eb1f4e63fd9ac94fb1ae41c158bfed584ddacee0c78ef3ac8bf8b534818c"
+}

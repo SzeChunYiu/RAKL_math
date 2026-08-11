@@ -1,0 +1,176 @@
+{
+  "atom_id": "YM-E1a1a",
+  "object_context": "Child of accepted YM-E1a1-C001 under RAKL_math issue #5: determine whether one actual weak-coupling Balaban-style four-dimensional pure lattice Yang-Mills renormalization-group block admits a quantitatively controlled tangent map on a graded/quasi-local gauge-invariant marked observable space, with operator/geometry mixing, polymer localization, reflection-buffer support, running-coupling dependence, source-degree growth and small/large-field compatibility all explicit.",
+  "structural_coordinates": [
+    "the parent exact local Haar calibration proved only that a tiny finite single-contour vocabulary is not closed; it does not prove failure of graded or quasi-local marked closure for the actual weak-coupling block",
+    "the target transformation is one Balaban-style weak-coupling RG block organized around coarse variables/background fields and localized small-field effective actions, not an isolated Haar link integral",
+    "mark coordinates must retain contour or graph geometry, representation complexity, connected-component count and source degree rather than only scalar loop values",
+    "polymer/support localization is independent of algebraic expressibility: a generated mark can belong to the vocabulary yet violate the spatial decay needed by the RG induction",
+    "positive-half-space reflection support requires an explicit buffer; fixed-cutoff reflection positivity does not imply that blocking preserves the source algebra",
+    "one-step coefficients and norms must expose dependence on the running weak coupling g_k and block factor L; finite constants are insufficient if their iteration is not summable",
+    "higher source derivatives may have combinatorial growth that is absent at first order and must be represented by a degree hierarchy",
+    "the small-field marked sector must have a typed counterpart through the large-field R operation rather than silently dropping or leaving marks uncontrolled",
+    "closure and stability of a marked space do not imply non-triviality, state separation, OS reconstruction, infinite-volume existence, correlation decay or a mass gap"
+  ],
+  "equivalent_formulations": [
+    "differentiate one exact weak-coupling source-coupled Balaban block at zero source and decompose the resulting coarse insertion into a registered graded localized marked basis plus a quantitatively typed remainder",
+    "construct or falsify a bounded tangent map between source-marked Banach/polymer spaces whose one-step norm multiplier has explicit g_k, L, support and source-degree dependence",
+    "show that one-block generated marks preserve a quantified positive-half-space buffer and Balaban-compatible localization, or exhibit the first leakage coordinate",
+    "separate five result branches after one block: controlled graded closure, localization leakage, reflection leakage, ultraviolet-scaling loss, or large-field incompatibility"
+  ],
+  "solved_analogues": [
+    "Osterwalder-Seiler 1978 fixed-cutoff Wilson lattice gauge theory gives reflection positivity/transfer-matrix structure at the regulator level",
+    "lower-dimensional constructive lattice gauge/Higgs models control continuum-limit observables under stronger/superrenormalizable conditions"
+  ],
+  "near_solved_analogues": [
+    "Balaban 1985-1989 lattice gauge RG controls background fields, localized small-field effective actions, cluster expansions and large-field R-operation bounds for the unmarked theory",
+    "the accepted YM-E1a1-C001 exact local Haar calibration identifies concrete geometry proliferation but is outside the target weak-coupling Balaban block",
+    "Magnen-Rivasseau-Seneor 1993 construct four-dimensional SU(2) Yang-Mills Schwinger functions with an infrared cutoff in a regularized axial-gauge framework, leaving the full Clay problem open"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Balaban four-dimensional small-field RG and background-field construction",
+      "method": "differentiate the actual one-step block in gauge-invariant source directions and organize generated insertions using the same coarse/background-field and localized polymer structure as the unmarked effective action",
+      "shared_structure": [
+        "same four-dimensional pure non-Abelian lattice gauge setting",
+        "same weak-coupling ultraviolet trajectory and block transformation",
+        "same localized effective-action/cluster-expansion architecture"
+      ],
+      "required_assumptions": [
+        "source differentiation is justified under the finite-cutoff block integral",
+        "generated marked terms can be localized in a representation compatible with the base RG induction",
+        "marked estimates can be expressed with explicit dependence on g_k and L"
+      ],
+      "disanalogies": [
+        "the published unmarked induction does not by itself control tangent directions or observable insertions",
+        "marks can proliferate in geometry, representation and source degree even when the effective density stays inside its inductive class"
+      ],
+      "repair_question": "What is the smallest graded marked polymer/loop state and norm for which one actual weak-coupling block gives an exact decomposition plus a remainder whose localization and g_k/L dependence can be audited?",
+      "source_anchors": [
+        "DOI:10.1007/BF01229381",
+        "DOI:10.1007/BF01215223",
+        "DOI:10.1007/BF01239022"
+      ]
+    },
+    {
+      "source_context": "Balaban large-field R operation",
+      "method": "treat marked observables as first-class data through the small/large-field decomposition and require a typed marked analogue of localization/exponentiation/bounds on large-field regions",
+      "shared_structure": [
+        "same four-dimensional lattice gauge measure and multiscale decomposition",
+        "large-field regions are unavoidable in full-measure control",
+        "iteration requires compatibility of all sectors with the inductive bookkeeping"
+      ],
+      "required_assumptions": [
+        "a marked decomposition can be defined on the large-field regions handled by the R operation",
+        "its coefficients/support can be bounded without erasing the source insertion"
+      ],
+      "disanalogies": [
+        "the large-field papers establish properties of the unmarked R operation, not a marked observable theorem",
+        "a source insertion can localize on or couple across exceptional regions in ways absent from normalization control"
+      ],
+      "repair_question": "Can a selected positive-half-space source mark be transported through one large-field R-operation cell with a bound compatible with the small-field marked norm, or is the mark lost/unbounded there?",
+      "source_anchors": [
+        "DOI:10.1007/BF01257412",
+        "DOI:10.1007/BF01238433"
+      ]
+    },
+    {
+      "source_context": "Osterwalder-Seiler fixed-cutoff reflection positivity",
+      "method": "freeze a reflection plane and source buffer, align the block geometry with it, and require one-step generated support to remain in the registered positive-half-space algebra before using reflected Gram positivity",
+      "shared_structure": [
+        "compact Wilson lattice gauge regulator",
+        "gauge-invariant positive-half-space observables",
+        "reflection positivity is an exact finite-cutoff quadratic-form property"
+      ],
+      "required_assumptions": [
+        "blocking kernel and coarse-cell geometry respect the chosen reflection",
+        "source support enlargement can be bounded relative to the reflection plane"
+      ],
+      "disanalogies": [
+        "fixed-cutoff positivity does not prove arbitrary RG maps preserve the positive-half-space algebra",
+        "operator mixing can create extended terms whose support crosses the reflection plane"
+      ],
+      "repair_question": "What minimum source-to-plane buffer is invariant under one chosen block, and does the actual generated marked support satisfy it?",
+      "source_anchors": [
+        "DOI:10.1016/0003-4916(78)90039-8"
+      ]
+    },
+    {
+      "source_context": "accepted YM-E1a1-C001 local Haar geometry leakage",
+      "method": "carry contour/representation/multi-loop complexity as a graded coordinate and use the exact local failure as a targeted warning against finite scalar/single-contour closure",
+      "shared_structure": [
+        "gauge-invariant Wilson-loop-type source marks",
+        "gauge integration can create composite/concatenated geometry",
+        "source compression can omit a load-bearing coordinate"
+      ],
+      "required_assumptions": [
+        "the local failure is reused only inside its registered scope as a falsifier design cue",
+        "the weak-coupling block is analyzed independently rather than assumed to reproduce the Haar coefficient"
+      ],
+      "disanalogies": [
+        "the accepted failure is a local normalized Haar elimination, not Balaban's weak-coupling background-field block",
+        "a graded/quasi-local space can absorb the local rectangle and therefore changes the representation under test"
+      ],
+      "repair_question": "Does one actual weak-coupling block generate complexity that escapes the proposed grade, or was the parent failure repaired by explicitly recording geometry/support complexity?",
+      "source_anchors": [
+        "RAKL_math merge:6a9907ff8e277f1c5c9347379134e471f1811027",
+        "research/real_math/millennium/yang_mills/07_memory/YM_E1a1_C001_FAILURE_EXPERIENCE_DELTA_20260811.json"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "unmarked ultraviolet stability is not a marked observable-closure theorem",
+    "a local Haar leakage theorem is not a weak-coupling Balaban impossibility theorem",
+    "graded one-step closure is not multiscale summability",
+    "small-field marked control is not full-measure control without a large-field counterpart",
+    "fixed-cutoff reflection positivity is not automatic positivity preservation under blocking",
+    "a stable marked source algebra need not be separating or non-trivial in the continuum",
+    "observable control is not OS reconstruction and OS reconstruction is not a mass-gap theorem"
+  ],
+  "source_anchors": [
+    "https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf",
+    "DOI:10.1007/BF01229381",
+    "DOI:10.1007/BF01215223",
+    "DOI:10.1007/BF01239022",
+    "DOI:10.1007/BF01257412",
+    "DOI:10.1007/BF01238433",
+    "RAKL framework main:15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+    "RAKL_math parent merge:6a9907ff8e277f1c5c9347379134e471f1811027",
+    "RAKL_math issue:#5"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "typed compiler intermediate representations / static analysis",
+      "source_situation": "A stable base compiler pass can cause instrumentation facts to proliferate in type, dependency and support; a useful analysis therefore uses a graded abstract domain with explicit transfer, widening/error and compositionality budgets rather than pretending a tiny mark vocabulary is closed.",
+      "common_abstraction": [
+        "base transformation stability does not imply marked-state closure",
+        "new mark types/dependencies can be generated under one transformation",
+        "repeated composition requires a weighted complexity budget rather than only finite one-step output"
+      ],
+      "source_to_target_mapping": [
+        "compiler pass -> one weak-coupling RG block",
+        "instrumentation/analysis facts -> gauge-invariant source marks",
+        "graded abstract domain -> graded localized polymer/loop marked space",
+        "dependency spread -> operator mixing and support enlargement",
+        "composition budget -> g_k/L-dependent one-step norm and multiscale summability"
+      ],
+      "shared_constraints": [
+        "marks must be transported explicitly with the base transformation",
+        "closure and cost must be tested after one step before iteration",
+        "an omitted coordinate can make a compressed representation falsely appear stable"
+      ],
+      "disanalogies": [
+        "RG integrates fluctuating gauge fields whereas compiler passes are deterministic",
+        "Yang-Mills marks have ultraviolet singularity, gauge covariance, reflection positivity and measure-theoretic constraints absent from software analysis"
+      ],
+      "proposed_principle": "Use the parent leakage to choose a graded marked state, then test one actual weak-coupling block for the first coordinate whose complexity/support/norm escapes the grade before attempting multiscale iteration.",
+      "validation_obligation": "For one explicitly defined weak-coupling Balaban-style block and a buffered gauge-invariant source insertion, derive or source-bind the one-step marked decomposition and either prove the registered grade/localization/norm bounds or exhibit the first generated term that violates one of M1-M7.",
+      "provenance_note": "Proposal compressor only; no gauge-theory theorem follows from the compiler analogy."
+    }
+  ],
+  "analogy_scan_notes": "Scanned marked transformations in compiler/static-analysis systems, composite-operator RG, polymer expansions and bookkeeping workflows. Retained only the graded mark-transport analogy because it predicts a falsifiable one-block leakage test and does not supply mathematical authority.",
+  "frozen_at": "2026-08-11T09:06:20+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:f9404d230586967ab018d4d6537676dba58637e953e462fe0b8f52c662825b5a"
+}

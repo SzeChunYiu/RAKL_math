@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.5.0",
+  "receipt_id": "C025-CURRENT-MAIN-INTEGRATION-20260811",
+  "candidate_id": "C025",
+  "atom_id": "O9d12a2a1a",
+  "recorded_at": "2026-08-11T10:20:39Z",
+  "repository": "https://github.com/SzeChunYiu/RAKL_math.git",
+  "framework_authority_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+  "assurance_source": {
+    "commit": "c52460ca974bc31bf14d729dc308f93ac062d997",
+    "synthesis_receipt": {
+      "commit": "c52460ca974bc31bf14d729dc308f93ac062d997",
+      "tree": "690ed011bc9e612bd0ee698a7c95ff5d485d251d",
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/C025_SYNTHESIS_RECEIPT_20260811.json",
+      "git_blob_sha": "2a02f1c4e7e81ad9555431adbff83315630a8977",
+      "raw_sha256": "sha256:7f348ddedeec3af40fe352173d83e07c68a92948bf311af68c6cf6bcc4f9d7f7"
+    },
+    "receipt_bytes_equal_after_main_merge": true,
+    "focused_exact_result": "11 passed",
+    "full_exact_result": "192 passed"
+  },
+  "documentation_successor": {
+    "commit": "60bd1c0e86313a3b2228a83d0a273a36c7d5cc14",
+    "tree": "58769974b65c8a5372e970a3eef0e02e8bd2feda"
+  },
+  "durable_ancestors": {
+    "assurance_source_commit": "c52460ca974bc31bf14d729dc308f93ac062d997",
+    "documentation_successor_commit": "60bd1c0e86313a3b2228a83d0a273a36c7d5cc14",
+    "current_main_snapshot": "0ad7991d8b4f05792d6d43b6e36128ef4b7eada9",
+    "provenance_only_result_merge": "73f6c779aa5481cd68808c01448949c322f608f8",
+    "original_result_commit": "1bfad13d82548fe61f70cd9f18828fe0240c8556",
+    "prior_integration_receipt_commit": "e8c142f2167dd36a4e16227f80446f2a1db71283",
+    "latest_current_main_snapshot": "7548c3c9a30c63e18956aefb68674d523acfe937",
+    "prior_current_main_snapshot": "aa1b8920bfeba08cfcd7d8c4ea39fb00cf969267",
+    "reviewed_checkpoint_commit": "131627af6375cb90fc564f6126349f766e46e7b4",
+    "prior_feedback_hardening_main_snapshot": "02cf72656e9da055ae9c3af173ca2207e03b3872",
+    "predecessor_checkpoint_commit": "e8727447580c5a51733a3851cedee3f8507f77eb",
+    "prior_latest_current_main_snapshot": "7f5771d5e47742debec5f4af0a29e937b9aeedf6",
+    "previous_predecessor_checkpoint_commit": "378c46cced0d9e996958e1d4d6e5fa5f235d8d9b",
+    "preceding_current_main_snapshot": "29d566f7860240f22d634664c51e8583e50a3c5b",
+    "preceding_receipt_checkpoint_commit": "8d2e5ab04dab9cc5ba5226f5ee97650b1c56cb3e"
+  },
+  "scope": {
+    "integration_effect": "MERGED_CORRECTED_CURRENT_MAIN_7548C3C_AFTER_VERSIONED_C025_CHECKPOINT; C025_ASSURANCE_BYTES_AND_REVIEWED_CHECKPOINT_PRESERVED",
+    "strict_preregistered_evaluator": "ABSENT",
+    "independent_review": "ABSENT",
+    "p_vs_np_root": "NO_AUTHORITY"
+  },
+  "authority": "INTEGRATION_PROVENANCE_ONLY / RETROSPECTIVE_EXECUTABLE_ASSURANCE_UNCHANGED / COMPUTATION_IS_NOT_PROOF / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:0b58afce2e8b82f6a890a745c51c59f64014a319422f70fc02c1442edfbe733f",
+  "previous_main_integration": {
+    "main_snapshot": {
+      "commit": "0ad7991d8b4f05792d6d43b6e36128ef4b7eada9",
+      "tree": "41c97c81da4058b94293ab27b27a52e7e7415e33"
+    },
+    "integration_merge": {
+      "commit": "631222022119dde85e7bc677155f56752260f3ce",
+      "tree": "056cbdf90422ee418ba7788ecaaba4b59d7fb7f0",
+      "parents": [
+        "60bd1c0e86313a3b2228a83d0a273a36c7d5cc14",
+        "0ad7991d8b4f05792d6d43b6e36128ef4b7eada9"
+      ],
+      "first_parent": "60bd1c0e86313a3b2228a83d0a273a36c7d5cc14",
+      "second_parent_current_main": "0ad7991d8b4f05792d6d43b6e36128ef4b7eada9",
+      "strategy": "ort"
+    },
+    "verification": {
+      "framework_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+      "focused_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_pnp_c025_joint_binary_signature_assurance.py tests/math_applications/test_pnp_c025_trace_continuation.py",
+      "focused_result": "13 passed",
+      "full_command": "python tools/run_application_tests.py --framework framework/RAKL",
+      "full_result": "206 passed"
+    }
+  },
+  "prior_receipt_binding": {
+    "commit": "e8727447580c5a51733a3851cedee3f8507f77eb",
+    "tree": "3dccae9cae16735a76e6fd3b241bc67b2673d40d",
+    "path": "research/real_math/millennium/p_vs_np/05_falsification/C025_CURRENT_MAIN_INTEGRATION_RECEIPT_20260811.json",
+    "git_blob_sha": "33ab43b690309a768d6f1ebe590a33cb945feddc",
+    "raw_sha256": "sha256:ee869cb09a354c6b45ec3d35d3dff6501894d99bd16b6cf2384c981d243cfc1d"
+  },
+  "current_main_snapshot": {
+    "commit": "7548c3c9a30c63e18956aefb68674d523acfe937",
+    "tree": "bcdeb832e9eb1db1e7c239b4e68891f608847acd"
+  },
+  "integration_merge": {
+    "commit": "b2d64b8f79933e92b99bfbdd9044bd11e3d437d1",
+    "tree": "b4aaa36d737509cdda97f626a591693453b6e563",
+    "parents": [
+      "e8727447580c5a51733a3851cedee3f8507f77eb",
+      "7548c3c9a30c63e18956aefb68674d523acfe937"
+    ],
+    "first_parent_predecessor_checkpoint": "e8727447580c5a51733a3851cedee3f8507f77eb",
+    "second_parent_current_main": "7548c3c9a30c63e18956aefb68674d523acfe937",
+    "strategy": "ort"
+  },
+  "previous_reviewed_main_integration": {
+    "prior_receipt_binding": {
+      "commit": "e8c142f2167dd36a4e16227f80446f2a1db71283",
+      "tree": "084ccb75adc0f4be38464ac16f9397cf2603cdff",
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/C025_CURRENT_MAIN_INTEGRATION_RECEIPT_20260811.json",
+      "git_blob_sha": "05b8c0ea78c1e56c323850d2bfd3ac15593fd49c",
+      "raw_sha256": "sha256:eb3f167923b60e6a07e166d0af79fee619f25928e44f9870344acc6ec69d5807"
+    },
+    "main_snapshot": {
+      "commit": "aa1b8920bfeba08cfcd7d8c4ea39fb00cf969267",
+      "tree": "047ee7c7c2bc45102b899b557606b807d0f475cf"
+    },
+    "integration_merge": {
+      "commit": "afe9d8c96c8784217d1eba54117df489467fc858",
+      "tree": "ae3e91fe5bfbb445767136e66a9b59d50494db26",
+      "parents": [
+        "e8c142f2167dd36a4e16227f80446f2a1db71283",
+        "aa1b8920bfeba08cfcd7d8c4ea39fb00cf969267"
+      ],
+      "first_parent_with_prior_receipt": "e8c142f2167dd36a4e16227f80446f2a1db71283",
+      "second_parent_current_main": "aa1b8920bfeba08cfcd7d8c4ea39fb00cf969267",
+      "strategy": "ort"
+    },
+    "verification": {
+      "framework_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+      "application_main_snapshot": "aa1b8920bfeba08cfcd7d8c4ea39fb00cf969267",
+      "focused_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_pnp_c025_joint_binary_signature_assurance.py tests/math_applications/test_pnp_c025_trace_continuation.py",
+      "focused_result": "13 passed",
+      "full_command": "python tools/run_application_tests.py --framework framework/RAKL",
+      "full_result": "215 passed"
+    }
+  },
+  "reviewed_checkpoint": {
+    "commit": "131627af6375cb90fc564f6126349f766e46e7b4",
+    "tree": "2acb20258468bc26475dc549adba5b49edaeb0b3",
+    "review_authority": "SAME_CONTEXT_TECHNICAL_REVIEW_ONLY_NOT_INDEPENDENT_PEER_REVIEW",
+    "reported_c025_technical_blockers": 0,
+    "integration_receipt_at_checkpoint": {
+      "commit": "131627af6375cb90fc564f6126349f766e46e7b4",
+      "tree": "2acb20258468bc26475dc549adba5b49edaeb0b3",
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/C025_CURRENT_MAIN_INTEGRATION_RECEIPT_20260811.json",
+      "git_blob_sha": "afda0065f66328b762d3abb3d62502f5b6ad183e",
+      "raw_sha256": "sha256:e7821e37b35a1f10a3c97970d8276305630533559c8c02098fab41a6774c5164"
+    }
+  },
+  "previous_feedback_hardening_integration": {
+    "prior_receipt_binding": {
+      "commit": "131627af6375cb90fc564f6126349f766e46e7b4",
+      "tree": "2acb20258468bc26475dc549adba5b49edaeb0b3",
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/C025_CURRENT_MAIN_INTEGRATION_RECEIPT_20260811.json",
+      "git_blob_sha": "afda0065f66328b762d3abb3d62502f5b6ad183e",
+      "raw_sha256": "sha256:e7821e37b35a1f10a3c97970d8276305630533559c8c02098fab41a6774c5164"
+    },
+    "main_snapshot": {
+      "commit": "02cf72656e9da055ae9c3af173ca2207e03b3872",
+      "tree": "26fd117d92e1490da2e03a252ded4a32a158423f"
+    },
+    "integration_merge": {
+      "commit": "eed300e86df1d15bf03a496649c51f03586a3ba3",
+      "tree": "cad3f96b7bf36fa15df295db93b0e82c4b3dd080",
+      "parents": [
+        "131627af6375cb90fc564f6126349f766e46e7b4",
+        "02cf72656e9da055ae9c3af173ca2207e03b3872"
+      ],
+      "first_parent_reviewed_checkpoint": "131627af6375cb90fc564f6126349f766e46e7b4",
+      "second_parent_current_main": "02cf72656e9da055ae9c3af173ca2207e03b3872",
+      "strategy": "ort"
+    },
+    "verification": {
+      "framework_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+      "reviewed_checkpoint_commit": "131627af6375cb90fc564f6126349f766e46e7b4",
+      "application_main_snapshot": "02cf72656e9da055ae9c3af173ca2207e03b3872",
+      "integration_merge_commit": "eed300e86df1d15bf03a496649c51f03586a3ba3",
+      "focused_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_pnp_c025_joint_binary_signature_assurance.py tests/math_applications/test_pnp_c025_trace_continuation.py",
+      "focused_result": "13 passed",
+      "full_command": "python tools/run_application_tests.py --framework framework/RAKL",
+      "full_result": "222 passed"
+    }
+  },
+  "predecessor_checkpoint": {
+    "commit": "e8727447580c5a51733a3851cedee3f8507f77eb",
+    "tree": "3dccae9cae16735a76e6fd3b241bc67b2673d40d",
+    "integration_receipt_at_checkpoint": {
+      "commit": "e8727447580c5a51733a3851cedee3f8507f77eb",
+      "tree": "3dccae9cae16735a76e6fd3b241bc67b2673d40d",
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/C025_CURRENT_MAIN_INTEGRATION_RECEIPT_20260811.json",
+      "git_blob_sha": "33ab43b690309a768d6f1ebe590a33cb945feddc",
+      "raw_sha256": "sha256:ee869cb09a354c6b45ec3d35d3dff6501894d99bd16b6cf2384c981d243cfc1d"
+    },
+    "authority": "INTEGRATION_CHECKPOINT_ONLY / RETROSPECTIVE_C025_AUTHORITY_UNCHANGED"
+  },
+  "post_integration_verification": {
+    "framework_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+    "predecessor_checkpoint_commit": "e8727447580c5a51733a3851cedee3f8507f77eb",
+    "application_main_snapshot": "7548c3c9a30c63e18956aefb68674d523acfe937",
+    "integration_merge_commit": "b2d64b8f79933e92b99bfbdd9044bd11e3d437d1",
+    "focused_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_pnp_c025_joint_binary_signature_assurance.py tests/math_applications/test_pnp_c025_trace_continuation.py",
+    "focused_result": "13 passed",
+    "strict_workflow_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_ci_framework_pin.py tests/math_applications/test_rh_spec_001_strict_packet.py tests/math_applications/test_rh_spec_001_bridge_matrix.py tests/math_applications/test_rh_spec_002_strict_packet.py tests/math_applications/test_rh_spec_002_limit_calibration.py",
+    "strict_workflow_result": "13 passed",
+    "full_command": "python tools/run_application_tests.py --framework framework/RAKL",
+    "full_result": "240 passed"
+  },
+  "receipt_revision": "v6-current-main-7548c3c",
+  "previous_pinned_ci_integration": {
+    "receipt_binding": {
+      "commit": "e8727447580c5a51733a3851cedee3f8507f77eb",
+      "tree": "3dccae9cae16735a76e6fd3b241bc67b2673d40d",
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/C025_CURRENT_MAIN_INTEGRATION_RECEIPT_20260811.json",
+      "git_blob_sha": "33ab43b690309a768d6f1ebe590a33cb945feddc",
+      "raw_sha256": "sha256:ee869cb09a354c6b45ec3d35d3dff6501894d99bd16b6cf2384c981d243cfc1d"
+    },
+    "main_snapshot": {
+      "commit": "29d566f7860240f22d634664c51e8583e50a3c5b",
+      "tree": "58fec902d5cc5bda62b5aca38f98e80b2ea4003d"
+    },
+    "integration_merge": {
+      "commit": "d9527a0d7c328a5487156264af321021907d3bec",
+      "tree": "14df68995c1c654a31a5f1873bdc4f23548c261a",
+      "parents": [
+        "8d2e5ab04dab9cc5ba5226f5ee97650b1c56cb3e",
+        "29d566f7860240f22d634664c51e8583e50a3c5b"
+      ],
+      "first_parent_predecessor_checkpoint": "8d2e5ab04dab9cc5ba5226f5ee97650b1c56cb3e",
+      "second_parent_current_main": "29d566f7860240f22d634664c51e8583e50a3c5b",
+      "strategy": "ort"
+    },
+    "verification": {
+      "framework_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+      "predecessor_checkpoint_commit": "8d2e5ab04dab9cc5ba5226f5ee97650b1c56cb3e",
+      "application_main_snapshot": "29d566f7860240f22d634664c51e8583e50a3c5b",
+      "integration_merge_commit": "d9527a0d7c328a5487156264af321021907d3bec",
+      "focused_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_pnp_c025_joint_binary_signature_assurance.py tests/math_applications/test_pnp_c025_trace_continuation.py",
+      "focused_result": "13 passed",
+      "strict_workflow_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_ci_framework_pin.py tests/math_applications/test_rh_spec_001_strict_packet.py tests/math_applications/test_rh_spec_001_bridge_matrix.py tests/math_applications/test_rh_spec_002_strict_packet.py tests/math_applications/test_rh_spec_002_limit_calibration.py",
+      "strict_workflow_result": "13 passed",
+      "full_command": "python tools/run_application_tests.py --framework framework/RAKL",
+      "full_result": "229 passed"
+    },
+    "authority": "HISTORICAL_INTEGRATION_PROVENANCE_ONLY / C025_AUTHORITY_UNCHANGED"
+  }
+}
