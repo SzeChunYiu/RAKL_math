@@ -1,0 +1,61 @@
+{
+  "target_atom_id": "NS-B1a3b",
+  "target_context_hash": "sha256:6dd7969ddde37ed9384dc40064927cdda8b1ba78a536791b21aa06298dbf0900",
+  "tool_inventory_snapshot_hash": "CANNOT_MEASURE:no_single_canonical_tool_inventory_snapshot_was_materialized_for_this_NS_lane",
+  "failure_lattice_snapshot_hash": "gitblob:f459261341587ede26be1e596e38ab5fdd713527",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "vorticity-direction coherence / geometric depletion",
+    "finite-I ancient compactness / local suitable-weak limit",
+    "two-dimensional ancient Liouville rigidity",
+    "topological closure test for normalized vorticity",
+    "recent logarithmic vorticity-depletion criteria"
+  ],
+  "relevant_tool_ids": [
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+    "AB-THM1.1",
+    "AB-COMPACT",
+    "GM-TYPEI-GEOMETRY",
+    "GM-2D-LIOUVILLE"
+  ],
+  "relevant_failure_ids": [
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "F-NS-B1a3-PROFILE-LEAKAGE",
+    "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+    "F-NS-B1a3-UNIQUE-CONTINUATION-HYPOTHESIS-GAP",
+    "F-NS-B1a3-EQUATION-CHANGE-MISMATCH",
+    "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"
+  ],
+  "selected_tool_ids": [
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+    "AB-COMPACT",
+    "GM-TYPEI-GEOMETRY",
+    "GM-2D-LIOUVILLE"
+  ],
+  "tool_applicability_notes": [
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT applies as a process tool: bind producer and consumer hypotheses before composing.",
+    "AB-COMPACT applies only to the finite-I suitable-weak extraction topology; it does not guarantee normalized-curl compactness.",
+    "GM-TYPEI-GEOMETRY is selected as a solved analogue, not a direct operator on the AB finite-I class, because its Type-I hypothesis is the stronger L-infinity self-similar rate.",
+    "GM-2D-LIOUVILLE is usable only after spatially constant vorticity direction is actually inherited by the ancient limit."
+  ],
+  "failure_reuse_notes": [
+    "NS-B1a3 local/global tail failures remain scoped and do not blacklist geometry; geometry is intentionally orthogonal.",
+    "NS-B1a2 energy nonquantization keeps scalar energy-counting deprioritized.",
+    "Previously identified equation-change and unique-continuation failures remain active safeguards against substituting stationary/self-similar or backward-uniqueness theorems for the actual ancient class."
+  ],
+  "unresolved_warnings": [
+    "No source-bound implication finite I => local L-infinity Type-I rate has been established in this lane.",
+    "AB compactness does not on its face close zeta=curl u/|curl u|; a separate vorticity compactness/defect interface is required.",
+    "Grujic 2607.08866 has additional critical-point/Lorentz concentration hypotheses and is a recent preprint, so it is near-solved analogue evidence only.",
+    "Type-II classification is outside scope."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3b_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3_C001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "Albritton–Barker arXiv:1811.00502",
+    "Giga–Miura DOI 10.14943/84103"
+  ],
+  "artifact_hash": "sha256:5ce01f8a245a77de187da95e64edbd9159688eeee89fc697b2d982011518452f"
+}
