@@ -15,14 +15,17 @@ def _json(path: Path):
 def test_r9_frozen_fibre_and_exact_taskepisode_shadow_are_bound() -> None:
     fibre = _json(BSD / "01_frontier/BSD_A1a1_R9_HIGHER_RANK_ES_CONTEXT_FIBRE_20260812.json")
     wrapper = _json(BSD / "07_memory/BSD_A1a1_R9_CURRENT_V3_TASK_EPISODE_SHADOW_20260812.taskepisode")
+    metrics = _json(BSD / "07_memory/BSD_A1a1_RAKL_CYCLE_METRICS_20260812_R9.json")
     episode = wrapper["taskepisode"]
 
     assert fibre["atom_id"] == "BSD-A1a1-THETA-ORDER-COMPARISON"
     assert fibre["packet_hash"] == "sha256:add723b4c6bed16e57583a6ec0f890f269d360d872765a0c0a7a2d7ee367e956"
-    assert episode["fibre_snapshot_hash"] == fibre["packet_hash"].removeprefix("sha256:")
+    assert episode["fibre_snapshot_hash"] == fibre["packet_hash"] == metrics["active_atom"]["fibre_snapshot_hash"]
+    assert episode["operator_ids"] == metrics["canonical_process_surfaces_invoked"]
     assert episode["storage_admission"] == "PROPOSAL_SHADOW_STORED"
     assert episode["outcome"] == "PARTIAL_SUCCESS"
-    assert episode["artifact_hash"] == "c273ca5bf2bd6cad146f7e01176cf86f0e46351cb31cdf5eb3c270fee60ec998"
+    assert episode["artifact_hash"] == "4bbededb9c3577e97e200234d70d149296ecafc181715626b5463c8c2f73c66f"
+    assert wrapper["telemetry_extension"]["failure_category"] == ["representation", "contextual_theory_gluing"]
     assert wrapper["authority"] == "PROPOSAL_SHADOW_NO_SCIENTIFIC_AUTHORITY"
 
 
@@ -37,6 +40,8 @@ def test_r9_episode_diagnosis_failure_obstruction_are_distinct_and_nonpromoted()
     assert diagnosis["episode_pointer"] == failure["episode_pointer"] == obstruction["episode_pointer"]
     assert diagnosis["local_mathematical_failure"] is False
     assert diagnosis["local_to_global_gluing_failure"] is True
+    assert diagnosis["source_scope_failure"] is False
+    assert failure["category"] == ["representation", "contextual_theory_gluing"]
     assert failure["retained_as_learning"] is False
     assert obstruction["retained_novelty_OBSTRUCTION"] == 0
     assert obstruction["promotion_status"] == "PROPOSAL_SHADOW_ONLY"
