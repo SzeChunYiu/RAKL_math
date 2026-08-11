@@ -18,7 +18,7 @@ active_route:
 atoms:
   NS-B1:
     title: "Type-I blow-up to rigidity-ready ancient class"
-    status: TWO_ROUTE_PRUNING_CHILDREN_COMPLETE_THIRD_CHILD_OPENED
+    status: THREE_ROUTE_PRUNING_CHILDREN_COMPLETE_FOURTH_CHILD_OPENED
     objective: "Assuming a Type-I singularity, identify the exact rescaled ancient class and the smallest inherited property needed for a valid Liouville contradiction."
     source_backed_edges:
       - "Type-I singularity <-> nontrivial mild bounded ancient solution with registered Type-I decay (Albritton–Barker, Theorem 1.1, arXiv:1811.00502)"
@@ -49,11 +49,17 @@ atoms:
         authority: "SCOPED_ANALYTIC_ROUTE_PRUNING / FUNCTIONAL_CALIBRATION / NO_NAVIER_STOKES_COUNTEREXAMPLE / ROOT_AUTHORITY_NONE"
         route_consequence: "Retire finite kinetic energy as a standalone scale-independent critical-core quantization currency; move to dynamics-specific compactness/coherence/no-recrossing."
         evidence: "01_frontier/NS-B1a2_C001_CRITICAL_BLOB_PACKING_AUDIT_20260811.md"
+      - id: NS-B1a3-C001
+        status: SOURCE_BOUND_ROUTE_PRUNING
+        statement: "For two fixed smooth compactly supported divergence-free spacetime packets with q=0, translating one by distance L gives I(v1+T_L v2,0) -> max(I(v1,0),I(v2,0)); cylinders seeing both profiles contribute only O(L^-1)+O(L^-2)."
+        authority: "SCOPED_FUNCTIONAL_ROUTE_PRUNING / NO_NAVIER_STOKES_COUNTEREXAMPLE / NO_PROFILE_DECOMPOSITION_IMPOSSIBILITY / ROOT_AUTHORITY_NONE"
+        route_consequence: "Retire scalar-I minimization as an automatic no-dichotomy/profile-counting mechanism; require an additional global critical/tightness coordinate or PDE-specific no-splitting/coherence theorem."
+        evidence: "01_frontier/NS-B1a3_C001_I_PROFILE_MAX_DECOUPLING_20260811.md"
     open_children:
       NS-B1a:
         title: "Dynamics-specific Type-I trace/tail bridge"
         question: "For a mild bounded ancient 3D Navier–Stokes solution with I<infinity, what weakest equation-specific inherited property yields either a backward sequence uniformly bounded in global L3 or another source-valid Liouville trigger?"
-        status: TWO_ROUTE_PRUNING_CHILDREN_COMPLETE_THIRD_CHILD_CONTEXT_REQUIRED
+        status: THREE_ROUTE_PRUNING_CHILDREN_COMPLETE_FOURTH_CHILD_CONTEXT_REQUIRED
         completed_children:
           NS-B1a1:
             title: "Pressure-aware temporal shell-flux anti-replication"
@@ -63,20 +69,25 @@ atoms:
             title: "Finite-energy critical-core quantization"
             result: "Finite kinetic energy costs only O(lambda) per L3-critical core and permits an O(lambda^-1) core-count bound even under favorable pointwise Type-I amplitude."
             failure_memory: "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"
+          NS-B1a3:
+            title: "Scalar-I critical-element profile geometry"
+            result: "Finite I is asymptotically max-decoupled under large translation separation of fixed compact divergence-free test profiles, so scalar I alone does not penalize profile multiplicity."
+            failure_memory: "F-NS-B1a3-I-MAX-DECOUPLING-NONADDITIVE-CURRENCY"
         next_child:
-          id: NS-B1a3
-          title: "Dynamics-specific critical compactness/coherence bridge"
-          question: "What property inherited by every relevant Type-I ancient limit prevents the multi-core/tail-escape pattern permitted by finite kinetic energy and either yields a backward global-L3 sequence or activates another source-valid Liouville theorem?"
+          id: NS-B1a4
+          title: "PDE-specific profile no-dichotomy / coherence bridge"
+          question: "What property inherited by every finite-I Type-I ancient Navier–Stokes solution prevents large-translation profile splitting despite scalar-I max-decoupling and activates a global-critical compactness theorem, a backward global-L3 sequence, or another source-valid Liouville theorem?"
           status: CONTEXT_REQUIRED_BEFORE_CANDIDATE
           candidate_families:
-            - "minimal/critical-element compactness in a genuinely critical global topology"
-            - "vorticity-direction coherence or geometric depletion"
-            - "pressure-aware temporal cancellation or no-recrossing"
-            - "alternative source-valid Liouville trigger"
+            - "a genuinely global critical topology inherited from Type-I dynamics with a target-specific profile theorem"
+            - "nonlinear pressure/evolution interaction that forbids persistent spatial dichotomy"
+            - "vorticity-direction coherence or geometric depletion with an explicit Liouville/regularity handoff"
+            - "alternative source-valid Liouville trigger that bypasses global profile compactness"
           required_pre_candidate_actions:
-            - "freeze fresh MathContextFiber with explicit critical topology or coherence coordinate"
-            - "refresh success/failure memory including F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER and F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"
-            - "preserve disagreement between compactness and geometry routes in same-context expert review"
+            - "freeze fresh MathContextFiber centered on one explicit PDE no-dichotomy/coherence coordinate"
+            - "refresh success/failure memory including F-NS-B1a3-I-MAX-DECOUPLING-NONADDITIVE-CURRENCY"
+            - "preserve compactness-versus-vorticity-route disagreement in same-context expert review"
+            - "identify the cheapest PDE-valid hostile world; do not reuse non-solution packet superposition as a PDE counterexample"
             - "freeze hash-chained pre-candidate trace before any mathematical candidate"
       NS-B1b:
         question: "Does the rescaled orbit fall into fixed, periodic, or genuinely nonperiodic ancient behavior?"
@@ -102,7 +113,8 @@ nonpromotion_rules:
   - "scale-neutral local-energy bookkeeping is not a global anti-replication certificate"
   - "finite kinetic energy is not a scale-independent L3-critical profile count"
   - "a divergence-free packed snapshot is not a Navier–Stokes counterexample"
+  - "scalar finite-I max-decoupling on test packets is not a counterexample to PDE-specific concentration compactness"
   - "retrospective analytic calibration is search control only and cannot be renamed preregistered candidate evidence"
-  - "failure of one absolute budget route does not blacklist dynamics-specific compactness, coherence, pressure or geometry"
+  - "failure of one absolute budget or scalar-profile route does not blacklist dynamics-specific compactness, coherence, pressure or geometry"
   - "computation is not proof"
   - "same-context review is not independent review"
