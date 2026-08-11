@@ -1,0 +1,51 @@
+{
+  "target_atom_id": "YM-S1a2",
+  "target_context_hash": "sha256:89ee3e1d735f6b3e5be46a2acfa1914da01ac3dce52227f2d83cf9d3832f7144",
+  "tool_inventory_snapshot_hash": "sha256:fe2f3b4ef49492d81cb350fb689bf9f9dff6cfd1817d72d6ff9fe3350e3d5e6a",
+  "failure_lattice_snapshot_hash": "github-blob-sha1:10867b8de4efcec4f8eca4abc3854e327a9d4dab",
+  "tool_query_status": "NO_RELEVANT_MATCH",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "reflection-positivity preservation under local weak limits",
+    "OS positive-time quotient/completion and centered-source density",
+    "Euclidean covariance to physical transfer-moment binding",
+    "SZZ common-exponent to common-q spectral exclusion",
+    "two-step transfer fallback if one-step positivity cannot be source-bound"
+  ],
+  "relevant_tool_ids": [],
+  "relevant_failure_ids": [
+    "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE",
+    "F-YM-S1A1-C001-QZERO-LOGARITHM-DOMAIN"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "No promoted RAKL ResearchTool is needed for the target mathematics. The prior YM-S1a1 local spectral lemma is a scoped mathematical result/candidate artifact, not silently relabeled as a reusable framework tool.",
+    "The cross-domain observability analogy may guide the audit but supplies no mathematical authority."
+  ],
+  "failure_reuse_notes": [
+    "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE remains load-bearing: full-gap inference fails if the OS source images are not dense/cyclic. YM-S1a2 must prove density from the positive-time algebra/OS construction rather than assume it.",
+    "F-YM-S1A1-C001-QZERO-LOGARITHM-DOMAIN is reviewed but does not apply if SZZ supplies c_N>0, since q=exp(-c_N) lies strictly in (0,1). The v2 positive-q domain is mandatory.",
+    "Neither failure is a blacklist against covariance methods; both define exact preconditions for safe reuse of the abstract spectral lemma."
+  ],
+  "unresolved_warnings": [
+    "SZZ Corollary 1.6 is a Euclidean covariance statement and does not itself state the OS transfer-spectrum identification used by YM-S1a1-C001-v2.",
+    "Reflection positivity must be shown for the exact positive-beta infinite-volume SZZ measure, not inferred from the Langevin Poincare inequality.",
+    "The OS time-shift/transfer identity must use the same centered gauge-invariant positive-time smooth cylinder sources and correct reflection/support geometry.",
+    "The SZZ strong-coupling group scope is SU(N)/SO(N) and fixed lattice spacing; G5 RG transport, G6 physical a-scaling, G7 continuum spectral identification and the Clay root remain open.",
+    "If only a self-adjoint contraction, rather than a positive transfer operator, can be source-bound in infinite volume, the one-step logarithmic Hamiltonian conclusion needs a separate repair or an explicitly scoped two-step formulation.",
+    "The preliminary YM-S1A2 memory review was frozen before expert review and is not credited in the strict pre-candidate chronology; this V2 successor is the bound EXPERIENCE_MEMORY_REVIEW artifact.",
+    "The current RAKL_math submodule/pin is stale relative to RAKL@bd1a2768; current-main semantics govern research, but exact-current-framework integration authority remains pending pin sync and full suite."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/01_frontier/YM-S1A2_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_FAILURE_EXPERIENCE_LATTICE_QZERO_SUCCESSOR_20260811.json",
+    "research/real_math/millennium/yang_mills/04_candidates/YM-S1A1_C001_V2_DENSE_SOURCE_COMMON_RATE_SPECTRAL_EXCLUSION_20260811.md",
+    "M. Luescher, DOI 10.1007/BF01614090, OS construction and Propositions 1-2",
+    "K. Osterwalder and E. Seiler, DOI 10.1016/0003-4916(78)90039-8",
+    "H. Shen, R. Zhu, X. Zhu, arXiv:2204.12737, Theorem 1.2 and Corollary 1.6",
+    "SzeChunYiu/RAKL@bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "research/real_math/millennium/yang_mills/08_reviews/YM-S1A2_PRE_CANDIDATE_REVIEW_20260811.md",
+    "research/real_math/millennium/yang_mills/03_sources/YM-S1A2_OS_SZZ_SOURCE_MATRIX_20260811.md"
+  ],
+  "artifact_hash": "sha256:327dc5a1c3de324c8ac823fecac2b8ba49213e8db3cc109785acce17331805e0"
+}
