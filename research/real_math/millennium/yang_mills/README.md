@@ -37,21 +37,29 @@ Its non-candidate observable-interface calibration is complete. The retained arc
 - **Wilson-loop / loop-cylinder observables** as the fixed-cutoff reflection-positive gauge-invariant core probe, with continuum loop renormalization still explicit;
 - **positive-flow-time gauge-invariant composites** only as UV-regular diagnostic/non-triviality probes until separate reflection-support and `t -> 0` locality bridges are proved.
 
-### Active constructive atom — `YM-E1a1`
+### `YM-E1a1` — one-step marked RG closure calibration
 
-`YM-E1a1` asks whether one exact Balaban-style 4D pure-gauge RG blocking step can carry a deliberately small positive-half-space gauge-invariant source family through a marked/source sector with explicit mixing, bounded support enlargement and a source-derivative norm loss that does not already depend catastrophically on total ultraviolet depth.
+The strict `YM-E1a1` pre-candidate packet is merged and passed the current executable RAKL gate. The atom freezes a marked one-step closure contract with five independent outputs: exact source derivative, generated labels, buffered support growth, mixing plus typed remainder, and one-step marked norm loss.
 
-A fresh strict pre-candidate packet is frozen on the current research branch. It imports the sibling failure `F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE` only as a scope warning: a finite source family may calibrate one-step closure but cannot be promoted to state/spectral completeness without a separate density/cyclicity theorem.
+Candidate `YM-E1a1-C001` performs the cheapest generated-label hostile test. For `SU(N)`, `N>=3`, exact one-link Haar integration between two oppositely oriented adjacent plaquette factors gives
 
-The registered next action is to freeze a **marked one-step closure contract** with five outputs:
+`F'_0(A,B) = Tr(AB)/(2N)`.
 
-1. exact finite-cutoff source-derivative transport identity;
-2. generated operator/source labels;
-3. support enlargement relative to a buffered reflection half-space;
-4. mixing matrix plus typed remainder;
-5. one-step marked norm-loss coordinate.
+The generated `Tr(AB)` coordinate is the concatenated rectangular loop. A planted `SU(3)` permutation-matrix witness keeps the separate scalar traces fixed while changing `Tr(AB)`, so a deliberately tiny marked vocabulary that omits the concatenated contour/equivalent coordinate is **not exactly closed** under this registered local elimination tangent.
 
-Only after that contract is frozen may the lane generate the narrowest closure-or-leakage candidate. Exact finite closure, graded/quasi-local closure with controlled remainder, and a negative proliferation result remain distinct branches.
+Authority is deliberately narrow: `EXACT_LOCAL_NEGATIVE_CALIBRATION / NO_NOVELTY_CLAIM / ROOT_AUTHORITY_NONE`. The failure diagnosis remains `SUPPORTED`, not a Balaban-wide impossibility. The result does not test the full weak-coupling block, reflection-support transport, marked norm control, continuum existence, OS reconstruction, correlation decay, or the mass gap.
+
+### Active constructive child — `YM-E1a1a`
+
+The exact local failure changes the representation problem. Rather than patching one contour at a time, the next atom asks for a minimally widened **graded/quasi-local gauge-invariant marked space** carrying:
+
+- contour geometry and representation/multi-loop labels;
+- support and reflection-buffer coordinates;
+- a complexity/decay weight;
+- a typed irrelevant remainder;
+- an actual weak-coupling Balaban one-step mixing and norm-loss discriminator.
+
+`YM-E1a1a` is `CONTEXT_REQUIRED_BEFORE_CANDIDATE`. It must receive a fresh MathContextFiber, method-transfer/analogy scan, same-context expert cell, dual-memory review and hash-chained pre-candidate trace before any new candidate is generated.
 
 ## Current spectral atom
 
