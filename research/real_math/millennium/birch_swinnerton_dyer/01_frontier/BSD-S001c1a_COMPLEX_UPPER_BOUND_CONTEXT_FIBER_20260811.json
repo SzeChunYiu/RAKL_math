@@ -1,0 +1,150 @@
+{
+  "atom_id": "BSD-S001c1a-COMPLEX-UPPER-BOUND",
+  "object_context": "Child obstruction of BSD-S001c1: after exact p-primary Selmer reconstruction from independently defined Kurihara/modular-symbol data, determine whether a normalized discrete or Mazur-Tate augmentation order admits a non-circular upper bound by the complex Taylor order ord_{s=1} L(E,s), or an equivalent direct comparison, without assuming BSD, algebraic-rank equality, Sha finiteness strong enough to encode the conclusion, or an equivalent root-strength conjecture.",
+  "structural_coordinates": [
+    "the root coordinate is the complex Taylor order at s=1; exact p-primary Selmer corank and augmentation/discrete orders are separate coordinates",
+    "Kim-Pollack provide exact p-primary Selmer structure from Kurihara data under source hypotheses, but the inspected statement is explicitly insensitive to analytic rank",
+    "Mazur-Tate order-of-vanishing statements are naturally indexed by Mordell-Weil rank and augmentation ideals; this supplies arithmetic divisibility information rather than an arbitrary-rank complex-order upper bound",
+    "Burns-Kurihara-Sano connect Kato derivatives, Mazur-Tate elements and higher complex derivatives, but arbitrary-rank leading-term implications must be audited for algebraic-rank, BSD, Sha, main-conjecture or generalized Perrin-Riou inputs",
+    "a one-sided lower/divisibility statement cannot force exact equality without an independent upper bound, rigidity, non-extra-vanishing criterion, or second inequality",
+    "trivial-zero and local Euler-factor corrections can change p-adic/augmentation vanishing and must be normalized explicitly before comparing orders",
+    "fixed-p arithmetic exactness does not reconstruct all-prime Sha or archimedean period/regulator factors of refined BSD",
+    "a representation defined using the desired complex leading term is not independent evidence for that leading term"
+  ],
+  "equivalent_formulations": [
+    "source or prove ord_discrete <= ord_{s=1}L(E,s) after explicit normalization, while a separate source theorem supplies the reverse inequality",
+    "source or prove direct equality between an independently defined Kurihara/Mazur-Tate order and the complex Taylor order under non-root assumptions",
+    "identify and remove all structural extra-vanishing terms so that the normalized augmentation order is rigidly determined by the complex Taylor order",
+    "prove that no chosen discrete representation can support a universal exact-order comparison under the intended scope, thereby forcing a representation change"
+  ],
+  "solved_analogues": [
+    "analytic rank zero and one, where Gross-Zagier/Kolyvagin/Kato-style pipelines and modern zeta-element results provide strong complex-to-arithmetic comparisons under explicit hypotheses"
+  ],
+  "near_solved_analogues": [
+    "Kazuto Ota, arXiv:1509.00682: Mazur-Tate order-of-vanishing/divisibility from Mordell-Weil rank via Kato Euler-system derivatives",
+    "Burns-Kurihara-Sano, arXiv:1910.07404: generalized Perrin-Riou/Kato-derivative framework, arbitrary-rank order-of-vanishing component under hypotheses, and p-part BSD/Iwasawa connections",
+    "Burns-Kurihara-Sano, arXiv:2103.11535: Mazur-Tate reinterpretation and unconditional positive-rank evidence, with general-rank implication directions requiring exact hypothesis audit",
+    "Kim-Pollack, arXiv:2505.09121: exact Selmer rank/module structure from independently defined Kurihara data, deliberately not an arbitrary-rank complex analytic-order theorem"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Mazur-Tate/Kato Euler-system divisibility",
+      "method": "use Kato derivatives to force augmentation-ideal divisibility/order lower bounds indexed by algebraic arithmetic data",
+      "shared_structure": [
+        "both discrete and complex sides encode an order of vanishing",
+        "augmentation filtration gives a graded order coordinate",
+        "Kato classes link modular-symbol data to Selmer arithmetic"
+      ],
+      "required_assumptions": [
+        "exact local/reduction and residual hypotheses of the chosen theorem",
+        "normalization of Euler/trivial-zero factors",
+        "independently established arithmetic-rank input when the theorem is indexed by Mordell-Weil rank"
+      ],
+      "disanalogies": [
+        "the theorem's order variable may be algebraic rank rather than complex analytic rank",
+        "divisibility/lower bound does not give the missing upper bound",
+        "local correction terms may add vanishing"
+      ],
+      "repair_question": "Can the same independently defined object be given a source-bound complex-order upper bound after all correction terms are made explicit?",
+      "source_anchors": [
+        "Kazuto Ota, arXiv:1509.00682",
+        "Burns-Kurihara-Sano, arXiv:2103.11535"
+      ]
+    },
+    {
+      "source_context": "Generalized Perrin-Riou/Bockstein comparison",
+      "method": "compare derivatives of Kato zeta elements with higher complex L-derivative data through determinant/Bockstein structures",
+      "shared_structure": [
+        "both sides have a graded order/leading term",
+        "Kato zeta elements are upstream arithmetic carriers",
+        "a comparison theorem could in principle preserve order"
+      ],
+      "required_assumptions": [
+        "exact GPRC/BSD/Sha/Iwasawa hypotheses for the invoked implication",
+        "independent definition of any arithmetic leading-term element used backwards"
+      ],
+      "disanalogies": [
+        "some leading-term formulations encode complex BSD data in the arithmetic element",
+        "proved arbitrary-rank order statements may be indexed by algebraic rank",
+        "conjectural equivalences cannot be promoted to unconditional root bridges"
+      ],
+      "repair_question": "Is there a proved implication with independently defined input whose conclusion bounds or identifies the complex Taylor order without importing the desired rank equality?",
+      "source_anchors": [
+        "Burns-Kurihara-Sano, arXiv:1910.07404",
+        "Burns-Kurihara-Sano, arXiv:2103.11535"
+      ]
+    },
+    {
+      "source_context": "Kim-Pollack exact discrete Selmer reconstruction",
+      "method": "recover exact p-primary Selmer corank/module structure from Kurihara-number data",
+      "shared_structure": [
+        "the discrete order and complex Taylor order are integer-valued invariants attached to the same modular motive",
+        "the discrete order has exact arithmetic meaning",
+        "the desired theorem needs a compatibility map between representations"
+      ],
+      "required_assumptions": [
+        "large-image and nonvanishing/localized-Iwasawa hypotheses as stated by Kim-Pollack"
+      ],
+      "disanalogies": [
+        "exact arithmetic reconstruction is explicitly insensitive to analytic rank",
+        "nonvanishing is weaker than exact order",
+        "Selmer corank is not automatically Mordell-Weil rank when Sha contributes"
+      ],
+      "repair_question": "What additional non-circular comparison controls the discrete order from above by the complex Taylor order?",
+      "source_anchors": [
+        "Chan-Ho Kim and Robert Pollack, arXiv:2505.09121",
+        "Chan-Ho Kim, arXiv:2203.12159"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "algebraic rank, p-primary Selmer corank, augmentation order, p-adic L-order and complex analytic order are not interchangeable without source theorems",
+    "a lower-bound/divisibility theorem is not an equality theorem",
+    "an arbitrary-rank theorem assuming BSD or equivalent root-strength input cannot prove BSD by reversal",
+    "fixed-p exactness does not supply all-prime and archimedean refined leading-term data",
+    "low-rank p-converse results do not establish arbitrary-rank complex/discrete equality"
+  ],
+  "source_anchors": [
+    "RAKL_math issue #7",
+    "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD-S001c1_BOUNDED_SOURCE_COMPARISON_20260811.md",
+    "Chan-Ho Kim and Robert Pollack, arXiv:2505.09121",
+    "Kazuto Ota, arXiv:1509.00682",
+    "David Burns, Masato Kurihara, Takamichi Sano, arXiv:1910.07404",
+    "David Burns, Masato Kurihara, Takamichi Sano, arXiv:2103.11535"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "measurement/calibration chain",
+      "source_situation": "A sensor can have a rigorously calibrated lower response to a latent quantity while saturation or nuisance gain prevents an upper calibration; exact recovery requires either a second bound or an independent no-saturation certificate.",
+      "common_abstraction": [
+        "one representation gives a one-sided constraint",
+        "the target needs equality of two coordinates",
+        "uncontrolled additional response can mimic higher order"
+      ],
+      "source_to_target_mapping": [
+        "sensor response -> discrete/augmentation order",
+        "latent quantity -> complex Taylor order",
+        "lower calibration -> arithmetic divisibility/order lower bound",
+        "no-saturation certificate -> non-extra-vanishing or complex-order upper bound"
+      ],
+      "shared_constraints": [
+        "one-sided calibration cannot identify equality",
+        "nuisance contributions must be explicitly normalized",
+        "the missing direction should be attacked directly"
+      ],
+      "disanalogies": [
+        "arithmetic vanishing is not a physical sensor response",
+        "extra vanishing can arise from algebraic/local structures rather than noise",
+        "the comparison theorem may be motivic rather than metric"
+      ],
+      "proposed_principle": "Treat the missing upper-bound direction as its own atom and test correction/extra-vanishing mechanisms before inventing another Selmer invariant.",
+      "validation_obligation": "Any retained BSD route must provide an independently sourced theorem or proof obligation controlling the normalized discrete order from above by the complex Taylor order, or explicitly demonstrate why such control cannot hold for that representation.",
+      "provenance_note": "Proposal-only analogy; zero theorem authority."
+    }
+  ],
+  "analogy_scan_notes": "Scanned decoding compatibility, filtration order, sensor saturation, rank-one p-converse calibration, Mazur-Tate augmentation filtrations, Kato/Bockstein interfaces, and Kurihara discrete Selmer reconstruction. Retained only the one-sided-calibration analogy because it exposes the missing implication direction without importing mathematical authority.",
+  "frozen_at": "2026-08-11T09:02:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:a2ea384d3f59ad0933b06a75dc8bf62780473113aea02e6eadc14ec4a5e7d2c5"
+}
