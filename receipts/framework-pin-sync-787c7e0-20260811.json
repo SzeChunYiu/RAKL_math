@@ -56,12 +56,14 @@
     "policy": "OPERATIONAL_ASSURANCE_MUST_NOT_BE_PROMOTED_AS_MATHEMATICAL_EXPERIENCE"
   },
   "verification": {
+    "subject_commit": "21412bea172a4b57183625cc2bd99a662b0ee8b8",
+    "verified_at": "2026-08-11T17:48:08Z",
     "command": "python tools/run_application_tests.py --framework framework/RAKL",
-    "tests_passed": 0,
-    "exit_code": null,
+    "tests_passed": 459,
+    "exit_code": 0,
     "pin_equals_gitlink": true,
     "framework_authority_paths_clean": true,
-    "status": "PENDING_INITIAL_EXACT_SUITE"
+    "status": "PASS_EXACT_APPLICATION_SUITE"
   },
   "authority_contract": {
     "grants_mathematical_authority": false,
@@ -69,5 +71,5 @@
     "grants_framework_evolution_authority": false,
     "grants_review_independence": false
   },
-  "artifact_hash": "sha256:e20de740505756b1f83f8c271bd893e4dda4611697c0a8062510004ea487f111"
+  "artifact_hash": "sha256:f2ce1e264354e061f4eebbbe964268e67d2fda72a14c5ed10b6c6ad83fbf0918"
 }

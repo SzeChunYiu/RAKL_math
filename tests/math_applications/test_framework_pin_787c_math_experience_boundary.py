@@ -59,9 +59,15 @@ def test_787c_pin_sync_receipt_is_exact_and_non_authorizing() -> None:
 
     assert receipt["compatibility_review"]["historical_artifacts_rewritten"] is False
     assert not any(receipt["authority_contract"].values())
-    assert receipt["verification"]["status"] in {
-        "PENDING_INITIAL_EXACT_SUITE",
-        "PASS_EXACT_APPLICATION_SUITE",
+    assert receipt["verification"] == {
+        "subject_commit": "21412bea172a4b57183625cc2bd99a662b0ee8b8",
+        "verified_at": "2026-08-11T17:48:08Z",
+        "command": "python tools/run_application_tests.py --framework framework/RAKL",
+        "tests_passed": 459,
+        "exit_code": 0,
+        "pin_equals_gitlink": True,
+        "framework_authority_paths_clean": True,
+        "status": "PASS_EXACT_APPLICATION_SUITE",
     }
 
 

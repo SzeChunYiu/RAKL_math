@@ -99,8 +99,10 @@
     "verification": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["command", "tests_passed", "exit_code", "pin_equals_gitlink", "framework_authority_paths_clean", "status"],
+      "required": ["subject_commit", "verified_at", "command", "tests_passed", "exit_code", "pin_equals_gitlink", "framework_authority_paths_clean", "status"],
       "properties": {
+        "subject_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "verified_at": {"type": ["string", "null"], "format": "date-time"},
         "command": {"const": "python tools/run_application_tests.py --framework framework/RAKL"},
         "tests_passed": {"type": "integer", "minimum": 0},
         "exit_code": {"type": ["integer", "null"]},
