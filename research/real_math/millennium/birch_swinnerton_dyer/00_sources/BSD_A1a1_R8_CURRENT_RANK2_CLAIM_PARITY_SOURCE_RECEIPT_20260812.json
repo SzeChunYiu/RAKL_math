@@ -1,0 +1,51 @@
+{
+  "schema_version": "bsd-a1a1-r8-source-receipt-v1",
+  "cycle_id": "BSD-A1a1-CURRENT-RANK2-CLAIM-PARITY-AUDIT-20260812-R8",
+  "authority": "SOURCE_RECEIPT_ONLY_NO_THEOREM_OR_ROOT_AUTHORITY",
+  "access_date": "2026-08-12",
+  "claim_under_audit": {
+    "title": "The Birch and Swinnerton-Dyer Conjecture for Analytic Rank Two: A Complete Proof via Definite Anticyclotomic Iwasawa Theory",
+    "author": "Wang Xiong",
+    "locator": "doi:10.13140/RG.2.2.14539.86569",
+    "public_url": "https://www.researchgate.net/publication/401385931_The_Birch_and_Swinnerton-Dyer_Conjecture_for_Analytic_Rank_Two_A_Complete_Proof_via_Definite_Anticyclotomic_Iwasawa_Theory",
+    "source_qualification": "AUTHOR_UPLOADED_PREPRINT_NOT_PEER_REVIEWED",
+    "bounded_search_note": "No arXiv copy or later independently reviewed version was located in the bounded current search; this is not a completeness claim.",
+    "selectors_checked": [
+      "Definition 6.1: (K1)-(K4), especially every ell|N splits in K and claimed epsilon(E/K)=+1 definite",
+      "Proposition 6.3: claimed implication from the Heegner/all-split condition to epsilon(E/K)=+1",
+      "Section 6.4 table: claimed N^- parity versus definite/indefinite quaternion algebra and root sign",
+      "level-raising discussion where one inert auxiliary prime is used to move between claimed vertices"
+    ]
+  },
+  "primary_cross_checks": [
+    {
+      "id": "HOWARD-BIPARTITE-EULER-SYSTEMS",
+      "locator": "arXiv:1202.6353",
+      "url": "https://arxiv.org/abs/1202.6353",
+      "claim_checked": "For an elliptic curve over Q and imaginary quadratic K with quadratic character epsilon, the sign of L(E/K,s) is -epsilon(N); epsilon(N)=-1 is the definite case and epsilon(N)=+1 is the indefinite case."
+    },
+    {
+      "id": "NGUYEN-ANTICYCLOTOMIC-CONGRUENCES",
+      "locator": "arXiv:2510.12890",
+      "url": "https://arxiv.org/abs/2510.12890",
+      "claim_checked": "The relevant anticyclotomic theorem cell is explicitly indefinite and its Selmer dual has Lambda-rank one, with lambda-comparison hypotheses stated separately."
+    },
+    {
+      "id": "CGLS-ANTICYCLOTOMIC-MAIN-CONJECTURE",
+      "locator": "arXiv:2008.02571",
+      "url": "https://arxiv.org/abs/2008.02571",
+      "claim_checked": "Under the Heegner hypothesis that every conductor prime splits in K, the anticyclotomic Selmer object is rank one over the Iwasawa algebra rather than the torsion/definite object asserted by the audited claim."
+    }
+  ],
+  "source_bound_result": {
+    "status": "CLAIM_ROUTE_REFUTED_AT_FOUNDATIONAL_SIGN_PARTITION",
+    "derivation": [
+      "If every ell|N splits in K, then epsilon(ell)=+1 for every conductor prime and hence epsilon(N)=+1.",
+      "Howard's sign formula gives epsilon(E/K)=-epsilon(N)=-1, i.e. the indefinite vertex.",
+      "Therefore the audited preprint's all-split hypothesis cannot simultaneously imply sign +1/definite as asserted in Proposition 6.3 and the Section 6.4 table.",
+      "Equivalently, N^-=1 has zero inert conductor primes; the associated quaternion algebra is indefinite at infinity, while adding one inert level-raising prime toggles to the definite vertex rather than the reverse."
+    ],
+    "scope": "This refutes the audited proof route/certificate as written. It does not refute BSD, prove nonexistence of another rank-two proof, or establish a literature-wide negative result."
+  },
+  "negative_history_preserved": true
+}
