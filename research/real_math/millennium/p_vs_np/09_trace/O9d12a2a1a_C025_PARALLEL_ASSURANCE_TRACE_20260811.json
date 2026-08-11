@@ -106,6 +106,45 @@
       ],
       "artifact_hash": "sha256:9d66b33eddc73d065d144c4aed96a2296ab89c19aa143e69260c9f3df3dada59",
       "previous_event_hash": "sha256:22fd85cd372b5135a72db12180740e68ca47a11c63b73b5cebd812a5499c86af"
+    },
+    {
+      "event_id": "O9d12a2a1a-PA-R04",
+      "atom_id": "O9d12a2a1a",
+      "event_type": "REVIEWED",
+      "timestamp": "2026-08-11T10:35:00Z",
+      "state_summary": "Independent exact-head review found that c52460c changed addendum v1 bytes without changing its identity. Canonical v1 bytes are restored and the provenance-bearing facts are issued as explicit v2.",
+      "action_summary": "Preserve both historical revisions, supersede the same-identity mutation, and bind all later synthesis to v2 without changing retrospective mathematical authority.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json",
+        "sha256:f1e01ed92594fa7524fda1e15318770124d65732083e43f1be36ccc5d4999fa1",
+        "research/real_math/millennium/p_vs_np/07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_V2_20260811.json",
+        "sha256:0f4bac861dae927cddb09de3090e1e931adb8d16dd59222a9f726cdcd2d60b30",
+        "git:37778fb4a345900efc47fb4198024f7e23806c1b",
+        "git:c52460ca974bc31bf14d729dc308f93ac062d997"
+      ],
+      "alternatives_considered": [
+        "retain mutated bytes under v1 identity",
+        "delete the later provenance facts"
+      ],
+      "decision_rationale": "A versioned successor preserves chronology and evidence while avoiding silent same-identity mutation.",
+      "outputs": [
+        "canonical_v1_preserved:sha256:f1e01ed92594fa7524fda1e15318770124d65732083e43f1be36ccc5d4999fa1",
+        "addendum_v2:sha256:0f4bac861dae927cddb09de3090e1e931adb8d16dd59222a9f726cdcd2d60b30",
+        "same_identity_v1_mutation:SUPERSEDED_PRESERVED_NEGATIVE_HISTORY",
+        "independent_review:REPAIR_REQUEST_ONLY_NOT_PEER_REVIEW",
+        "root_authority:NONE"
+      ],
+      "uncertainties": [
+        "independent mathematical review remains absent"
+      ],
+      "residuals": [
+        "higher-order closure remains untested"
+      ],
+      "next_steps": [
+        "bind synthesis v2 and rerun exact pinned assurance"
+      ],
+      "artifact_hash": "sha256:947693d86ee031e41d60c4f9cbefd0e1fcfd4a610b91affb86134cb81d21e672",
+      "previous_event_hash": "sha256:9d66b33eddc73d065d144c4aed96a2296ab89c19aa143e69260c9f3df3dada59"
     }
   ]
 }
