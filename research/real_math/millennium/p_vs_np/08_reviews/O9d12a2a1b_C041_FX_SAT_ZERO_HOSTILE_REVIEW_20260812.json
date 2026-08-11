@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "PNP-O9d12a2a1b-C041-FX-SAT-ZERO-HOSTILE-REVIEW-20260812",
+  "recorded_at": "2026-08-12T11:02:00Z",
+  "atom_id": "O9d12a2a1b",
+  "candidate_id": "C041-FX-SAT-ONE-SIDED-v1",
+  "review_authority": "SAME_CONTEXT_INTERNAL_HOSTILE_MATHEMATICAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "reviewed_artifacts": [
+    {
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/C041_FX_SAT_ONE_SIDED_FREEZE_20260812.md",
+      "raw_sha256": "sha256:fd26c40abc3ea0291f2967e488c1674515c74c4a0d70b87875f4d8b9497802f8"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+      "raw_sha256": "sha256:c0caca2fe7244c3d847de8b59473cec72132ec04ad3e9fab668f5cd95a2bd75a"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/c041_exact_extension_gate.py",
+      "raw_sha256": "sha256:364531ad6a9889378daed194cfdf7c419ba8785ea8727e27e72a4f9c154d2a1c"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/C041_FX_SAT_EXACT_GATE_RECEIPT_20260812.json",
+      "raw_sha256": "sha256:8b2bb49dd505eb5ed8952cfb03206c94d3fb595711506a11c3fac05c21e99f35",
+      "artifact_hash": "sha256:7e68011c82e4289d61d1674146d130060a1c8693d6500bd4550c29db379ffb1b"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C041_FX_SAT_CANDIDATE_FREEZE_20260812.json",
+      "raw_sha256": "sha256:b16a8f390523bbef6216ff2f093d8dc66ed59819a4150f6850fc2da2746718b5",
+      "artifact_hash": "sha256:a73197557c186e819e6f25179adf3743b51df923f031fc73d57be9aeef9081b0"
+    }
+  ],
+  "mathematical_reconstruction": {
+    "child_ground_set_order": [
+      "u0=(0,0)",
+      "u1=(0,4)",
+      "u2=(1,2)",
+      "u3=(2,1)",
+      "u4=(2,2)"
+    ],
+    "nonempty_row_stars": {
+      "R0": [
+        "u0",
+        "u1"
+      ],
+      "R1": [
+        "u2"
+      ],
+      "R2": [
+        "u3",
+        "u4"
+      ]
+    },
+    "nonempty_column_stars": {
+      "C0": [
+        "u0"
+      ],
+      "C1": [
+        "u3"
+      ],
+      "C2": [
+        "u2",
+        "u4"
+      ],
+      "C4": [
+        "u1"
+      ]
+    },
+    "relevant_graph_generator_pairs": [
+      [
+        "R0",
+        "C1"
+      ],
+      [
+        "R0",
+        "C2"
+      ],
+      [
+        "R1",
+        "C0"
+      ],
+      [
+        "R1",
+        "C1"
+      ],
+      [
+        "R1",
+        "C4"
+      ],
+      [
+        "R2",
+        "C0"
+      ],
+      [
+        "R2",
+        "C4"
+      ]
+    ],
+    "saturated_cover_pairs": [
+      {
+        "pair": [
+          [
+            "u0",
+            "u1"
+          ],
+          [
+            "u2",
+            "u3",
+            "u4"
+          ]
+        ],
+        "receipt_masks": [
+          3,
+          28
+        ],
+        "lifted_load": "1"
+      },
+      {
+        "pair": [
+          [
+            "u0",
+            "u2"
+          ],
+          [
+            "u1",
+            "u3",
+            "u4"
+          ]
+        ],
+        "receipt_masks": [
+          5,
+          26
+        ],
+        "lifted_load": "1"
+      }
+    ]
+  },
+  "lemma_assessments": [
+    {
+      "claim_id": "C041-LEMMA-EMPTY-FIBRE",
+      "verdict": "VALID",
+      "finding": "Keeping U fixed while enlarging the ambient square preserves every old graph-edge relevance witness. Any graph edge incident with a fresh row or column has at least one empty complement star, and a semi-filter cannot contain the empty set, so it creates no new relevance witness.",
+      "seed_application": "The fourth row and fourth column are empty U-stars, so the 3x3 and 4x4 seed relevance families agree. The recorded feasible cover and feasible packing have equal value 3/2, which certifies the registered seed optimum within the complete pair model."
+    },
+    {
+      "claim_id": "C041-LEMMA-NO-OLD-EDGE-DELETION",
+      "verdict": "VALID_AFTER_NARROWING_THE_WORDING",
+      "finding": "For an old witness edge (r,c), it is enough that this old graph edge remains and that the child r-row and c-column stars restrict to their parent stars. Cylinder membership then equals parent membership. If a cylinder lift fails to preserve a child full-union pair, its projections cover the parent ground set and must be incomparable, so parent pair-load feasibility bounds the lifted load.",
+      "wording_defect": "The phrase 'every child row/column star restricts to its parent star' is undefined for fresh vertices and is stronger than needed. State the hypothesis only for old-coordinate stars at retained old witness edges.",
+      "registered_instance": "The one-sided rule leaves the old-old block unchanged, and the receipt directly exhibits relevance witnesses for all three positive parent supports and maximum lifted load 1."
+    },
+    {
+      "claim_id": "C041-LEMMA-NP-COMPLETE-GRAPH",
+      "verdict": "BLOCKED_AS_WRITTEN_REPAIR_APPEARS_AVAILABLE",
+      "np_hardness_assessment": "The proposed reduction has the correct polarity: a canonical formula word x=x_L||x_R maps to the old-new query (0||x_L,1||x_R), which is a graph edge exactly when Dec(x) is satisfiable. Its output length is |x|+2, conditional on a fixed polynomial-time standard-to-canonical 3CNF encoding.",
+      "np_membership_defect": "The displayed verifier relation is not polynomially balanced. The decoder permits a declared variable count v exponentially larger than the word length, while assignment_satisfies requires a tuple of length exactly v.",
+      "exact_counterfamily": "Let v=2^t, m=1, and use the clause (x1 OR x1 OR x1). Its valid magic encoding has length 5t+16 plus at most one parity bit, but the displayed witness has length v=2^t. The displayed exhaustive search also examines 2^v assignments, so it is not the claimed 2^{O(n)} procedure on these inputs.",
+      "repair_obligation": "Define a sparse certificate only on variables that actually occur, and search only the at most three-times-clause-count occurring variables. Then prove polynomial balance and verification through the old-old recursion, and separately prove 2^{O(n)} deterministic membership using the occurring-variable support. Until this is frozen and reviewed, NP-completeness remains proposal-only rather than established."
+    }
+  ],
+  "lp_polarity_audit": {
+    "original_orientation": "The graph-cover primal minimizes weight on legal pairs; its packing dual maximizes weight on relevant semi-filters subject to every pair load being at most 1.",
+    "residual_orientation": "The gate fixes the lifted filter-packing vector y_up and maximizes an additional nonnegative filter vector z under capacities c_p=1-load_p(y_up). The residual covering dual puts nonnegative weights lambda_p on pairs, covers each child-relevant semi-filter to weight at least 1, and minimizes sum_p c_p lambda_p.",
+    "polarity_verdict": "CORRECT",
+    "direct_zero_certificate": "The pairs (3,28) and (5,26) both have c_p=0. Every possible nonempty row-star/column-star graph witness listed in this review forces an upward-closed semi-filter to contain both sides of at least one of these two disjoint pairs. Thus weights 1 and 1 on the two residual covering-dual coordinates cover every relevant semi-filter at objective 0. Since z=0 is packing-feasible, the residual optimum is exactly 0.",
+    "terminology_warning": "The seed section calls the pair-cover program primal, while the residual section calls the filter-packing program primal. The mathematics is consistent, but future artifacts should name variables and min/max directions explicitly to avoid a false polarity swap."
+  },
+  "zero_augmentation_scope": {
+    "proved": [
+      "for the frozen n=2 to n=3 child and the displayed lifted parent packing weights, no coordinatewise nonnegative addition of child-relevant semi-filter mass is feasible with positive total",
+      "all three displayed supported cylinders remain relevant and jointly feasible",
+      "relevance persistence and lifted feasibility are logically insufficient for positive residual capacity"
+    ],
+    "refuted": [
+      "positive additive augmentation of the displayed lifted 3/2 certificate at the frozen first transition"
+    ],
+    "not_refuted_or_not_established": [
+      "the reoptimized child packing optimum being greater than 3/2, because reoptimization may first reduce or redistribute lifted coordinates",
+      "positive additive augmentation from a different optimal parent packing, if another parent optimum exists",
+      "positive augmentation at later levels",
+      "any property of the first magic-coded SAT slice",
+      "a uniform recurrence or asymptotic amplification theorem",
+      "bounded fractional complexity of the whole family",
+      "the repaired NP-completeness claim",
+      "a circuit lower bound or P versus NP"
+    ],
+    "small_gate_boundary": "The n=2 to n=3 gate adds only the all-zero short-code contradiction. The shortest canonical magic form has length 16, so this gate contains no magic-coded SAT instance."
+  },
+  "strongest_objections": [
+    {
+      "objection_id": "FIXED-LIFT-VERSUS-CHILD-OPTIMUM",
+      "severity": "BLOCKING_FOR_ANY_BROADER_OPTIMUM_CLAIM",
+      "finding": "Residual zero is a tangent-cone statement at one fixed lifted certificate, not an upper bound on the full child packing optimum."
+    },
+    {
+      "objection_id": "EXPONENTIAL-DECLARED-VARIABLE-COUNT",
+      "severity": "BLOCKING_FOR_NP_COMPLETENESS_PROMOTION",
+      "finding": "Gamma-coded v can be exponential in the direct input length, so the supplied full-assignment witness is not polynomially bounded and the supplied exhaustive routine is double-exponential on a valid input family."
+    },
+    {
+      "objection_id": "FRESH-STAR-PARENT-WORDING",
+      "severity": "NONBLOCKING_AFTER_STATEMENT_NARROWING",
+      "finding": "Cylinder relevance needs restriction equality only for old stars at a retained old witness; fresh vertices do not have parent stars."
+    },
+    {
+      "objection_id": "UNEVALUATED-MAGIC-SLICE",
+      "severity": "BLOCKING_FOR_UNIFORM_OR_ASYMPTOTIC_INTERPRETATION",
+      "finding": "The receipt does not exercise the magic-coded branch or the later quotient/multiplexing attacks from the frozen evaluation order."
+    }
+  ],
+  "blocking_concerns": {
+    "for_exact_seed_embedding_and_fixed_mass_zero_result": [],
+    "for_np_completeness_promotion": [
+      "replace the full-v witness with a polynomially bounded sparse satisfying assignment witness",
+      "prove the verifier through every recursive branch",
+      "replace exhaustive search over v declared variables with support-restricted search and re-establish the stated 2^{O(n)} bound"
+    ],
+    "for_any_recurrence_or_root_claim": [
+      "determine or bound the reoptimized child optimum rather than only the fixed-certificate residual cone",
+      "analyze the first magic-coded level and prove a uniform recurrence with the required rate",
+      "prove an a_n^{omega(1)} circuit lower bound after the NP-language bridge is actually established"
+    ]
+  },
+  "mathematical_lessons_retained": [
+    "Empty-star ambient enlargement preserves relevance because no semi-filter contains the empty set.",
+    "Retained old witnesses plus exact star restriction preserve cylinder relevance; pair projection then preserves supported packing feasibility.",
+    "Feasible inherited mass can saturate a tiny pair cover of the entire new relevance class, leaving zero coordinatewise additive capacity.",
+    "Zero residual augmentation at a fixed packing is strictly weaker than equality of reoptimized optima.",
+    "A succinctly declared variable universe can make a naive full assignment exponentially longer than the formula word; NP witnesses must be polynomially balanced, normally by restricting to occurring variables."
+  ],
+  "operational_assurance_excluded": "Git state, hashes, schemas, implementation mechanics, test counts, solver status, and runtime receive zero mathematical-saturation credit.",
+  "verdict": "ACCEPT_NARROW_FIXED_MASS_ZERO_AUGMENTATION; REQUIRE_SCOPE_WORDING; BLOCK_NP_COMPLETENESS_PROMOTION_PENDING_SPARSE_WITNESS_REPAIR",
+  "root_status": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE",
+  "authority_contract": {
+    "grants_exact_registered_seed_embedding_result": true,
+    "grants_exact_fixed_certificate_residual_zero": true,
+    "grants_reoptimized_child_optimum": false,
+    "grants_uniform_recurrence": false,
+    "grants_np_completeness": false,
+    "grants_circuit_lower_bound": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_novelty_authority": false,
+    "grants_review_independence": false
+  },
+  "artifact_hash": "sha256:10c080fbe19da09226edc90ac4eb3f0eb5218af78117590e8e1255ed9b098c31"
+}

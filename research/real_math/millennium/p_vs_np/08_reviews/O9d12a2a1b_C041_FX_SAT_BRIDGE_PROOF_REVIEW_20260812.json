@@ -1,0 +1,227 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "PNP-O9d12a2a1b-C041-FX-SAT-BRIDGE-PROOF-REVIEW-20260812",
+  "recorded_at": "2026-08-12T11:00:00Z",
+  "atom_id": "O9d12a2a1b",
+  "candidate_id": "C041-FX-SAT-ONE-SIDED-v1",
+  "review_authority": "SAME_CONTEXT_ROLE_SEPARATED_INTERNAL_MATHEMATICAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "scope": {
+    "candidate_statement": "research/real_math/millennium/p_vs_np/04_candidates/C041_FX_SAT_ONE_SIDED_FREEZE_20260812.md",
+    "candidate_code_specification": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+    "source_bound_transfer_statement": "research/real_math/millennium/p_vs_np/00_sources/RAKL_PVSNP_C034_C040_EXTERNAL_LEDGER_20260811.md#7-c038-the-correct-witness-persistence-transfer-theorem",
+    "question": "Audit Lemmas A-C, the decoder/SAT bridge, the NP witness and runtime bounds, the reduction direction and overhead, and the cylinder-projection hypotheses.",
+    "excluded_from_mathematical_credit": [
+      "Git state",
+      "CI and tests",
+      "hash or schema validity",
+      "implementation and runtime status as assurance facts"
+    ]
+  },
+  "direct_language_binding_required": {
+    "definition": "L_G={y in {0,1}^{2n}: n>=2, y=pq with |p|=|q|=n, and (int(p),int(q)) is in G_n}. Odd-length words and even words of length below four are outside L_G.",
+    "reason": "The frozen prose alternates between a level/row/column tuple and a direct predicate. NP-completeness is a property of one encoded language, so the input representation and the fact that n is inferred from |y| must be explicit.",
+    "input_length": "For y in {0,1}^{2n}, the complexity input length is a_n=2n, while the graph side is M_n=2^n. Polynomial in M_n is exponential, not polynomial, in a_n."
+  },
+  "roles": [
+    {
+      "role": "domain_theory_lead",
+      "finding": "Lemma A is a direct consequence of the source relevance definition, and Lemma B is a valid conditional cylinder theorem once its inclusions and old-witness hypotheses are stated exactly. These claims concern fractional full-semi-filter dual mass, not an integral cover or circuit lower bound.",
+      "strongest_objection": "The symbol L_n is undefined and could be mistaken for an integral or root-level quantity.",
+      "required_correction": "Replace L_n by either rho_frac(G_n) or the explicitly named total of a fixed feasible parent dual. State that the theorem gives no positive augmentation and no integral monotonicity."
+    },
+    {
+      "role": "analogy_method_transfer_lead",
+      "finding": "The old-new SAT slice is a correctly polarized bridge: UNSAT words are inserted into U and therefore SAT words remain in G. The wrapper adds one leading block bit on each side and does not reverse the reduction.",
+      "strongest_objection": "Calling the encoding overhead linear without fixing the source 3CNF representation leaves a representation gap.",
+      "required_correction": "Bind 3SAT to fixed-width binary literal identifiers (or first renumber variables) and state the exact encoding-length bound before claiming linear overhead."
+    },
+    {
+      "role": "adversarial_falsification_lead",
+      "finding": "The supplied full-assignment verifier and exhaustive solver have an exact sparse-variable counterfamily. A valid word may declare exponentially many variables while mentioning only one, because the decoder does not require every declared variable to occur.",
+      "strongest_objection": "The code-labelled polynomial NP verifier requires a tuple of length v, and is_satisfiable enumerates 2^v assignments although v can be exponential in the graph-label length.",
+      "required_correction": "Verify and enumerate only the distinct variables that occur in the decoded clauses, or change the canonical syntax to reject unused variables. The sparse-occurrence repair preserves the current language and is the smaller correction."
+    },
+    {
+      "role": "formal_methods_lead",
+      "finding": "The apparent optional-padding ambiguity is not an actual ambiguity on the declared even-word domain: the initial even-length check permits the unpadded form exactly when its length is even and the zero-padded form exactly when its unpadded length is odd.",
+      "strongest_objection": "The prose and the len-in-{expected_end,expected_end+1} code do not state that parity is the discriminator, so a future decoder change could accidentally admit two spellings.",
+      "required_correction": "Define h=MAGIC||gamma(v)||gamma(m)||payload and recognize h when |h| is even, otherwise recognize h0; reject every other suffix. Assert the parsing cursor ends at |h| before discarding the unique pad."
+    },
+    {
+      "role": "novelty_research_value_lead",
+      "finding": "The useful mathematical content is a precise persistence theorem plus a standard NP-hardness embedding. Neither supplies novelty, asymptotic amplification, or a circuit lower bound.",
+      "strongest_objection": "Describing the NP bridge as repairing the root boundary before the verifier proof is corrected overstates the current artifact.",
+      "required_correction": "Mark the NP-completeness statement proof-blocked in the frozen artifact, while retaining the already-correct NP-hardness direction and the sparse-verifier repair obligation."
+    }
+  ],
+  "lemma_assessments": [
+    {
+      "lemma": "A",
+      "title": "empty-fibre ambient enlargement",
+      "verdict": "PROVED_GIVEN_THE_SOURCE_RELEVANCE_DEFINITION_AND_PRIOR_C037_EQUALITY",
+      "exact_hypotheses": [
+        "U is embedded unchanged as the same complement ground set in a larger ambient bipartite square.",
+        "Every newly introduced row and column has empty U-star.",
+        "A semi-filter is nonempty, upward closed, and excludes the empty set.",
+        "Relevance requires a graph edge whose complement row-star and column-star both belong to the semi-filter."
+      ],
+      "proof_audit": "Every old graph edge and both of its U-stars are unchanged, so every old relevance witness remains. Any graph edge incident to a new row or new column has at least one empty complement star. Since the empty set is in no semi-filter, such an edge witnesses no relevant semi-filter. Hence the relevant semi-filter family is exactly unchanged. The legal-pair ground set is also unchanged, so the fractional primal and dual LPs are identical.",
+      "application": "For the unchanged four-edge C037 parent U embedded from the 3x3 ambient square into the 4x4 seed square, rho_frac remains exactly 3/2 if the registered C037 equality is accepted. A fresh computation is useful assurance but is not a missing mathematical premise.",
+      "required_text_correction": "Replace 'may be transported ... subject to exact recheck' by the exact theorem conclusion, while retaining the recheck as assurance rather than proof authority.",
+      "evidence_locations": [
+        "C041_FX_SAT_ONE_SIDED_FREEZE_20260812.md:39-47",
+        "full_cover_oracle.py:89-108"
+      ]
+    },
+    {
+      "lemma": "B",
+      "title": "no-old-edge-deletion cylinder persistence",
+      "verdict": "PROVED_AFTER_HYPOTHESIS_PRECISION; APPLIES_TO_THE_FROZEN_RULE",
+      "exact_hypotheses": [
+        "There is a fixed inclusion U subseteq U' and cylinder lift Fhat={S' subseteq U': S' intersect U is in F}.",
+        "For each parent support semi-filter F, choose a parent relevance witness (r,c) in G that remains an edge of G'.",
+        "For that old r and c, R'_r intersect U=R_r and C'_c intersect U=C_c. It is unnecessary to speak of parent stars for genuinely new vertices.",
+        "The parent weights form a feasible fractional dual over all legal pairs, or over the C034a-complete full-union representative class with the domination reduction explicitly invoked."
+      ],
+      "proof_audit": "Because R'_r intersect U=R_r and C'_c intersect U=C_c, membership of both child stars in Fhat is equivalent to membership of the parent stars in F; thus Fhat is relevant at the retained edge (r,c). For a child pair (E',H'), set E=E' intersect U and H=H' intersect U. It covers Fhat exactly when (E,H) covers F. If this happens then E,H are nonempty and incomparable: E,H are in F, whereas E intersect H is not; emptiness or either containment would contradict these memberships. Hence every nonzero child-pair load is the load of a legal parent pair and is at most one.",
+      "rule_check": "The recurrence adds only old-new complement points. The old-old complement block is exactly U_n, so old graph edges are retained. For every old row and old column, restriction of the child star to U_n equals the parent star. Therefore every parent relevant semi-filter, not only one displayed support, has a relevant cylinder lift.",
+      "conclusion": "Any feasible parent fractional dual lifts with the same total mass. In particular rho_frac(G_(n+1))>=rho_frac(G_n) by lifting an optimal finite parent dual. This proves persistence only; it does not prove a strict increment, a divergent recurrence, integral-cover monotonicity, or circuit complexity.",
+      "required_text_correction": "State old-vertex star restriction rather than 'every child row/column star', define the ground-set inclusion and cylinder, and replace undefined L_n by rho_frac(G_n) or an explicitly named certificate total.",
+      "evidence_locations": [
+        "C041_FX_SAT_ONE_SIDED_FREEZE_20260812.md:49-61",
+        "RAKL_PVSNP_C034_C040_EXTERNAL_LEDGER_20260811.md:section 7"
+      ]
+    },
+    {
+      "lemma": "C",
+      "title": "NP-complete associated graph language",
+      "verdict": "NOT_PROVED_BY_THE_FROZEN_PROSE_OR_CODE; NP_HARDNESS_IS_CORRECT_AND_A_LANGUAGE_PRESERVING_NP_REPAIR_IS_AVAILABLE",
+      "padding_audit": {
+        "verdict": "NO_TWO_CANONICAL_SPELLINGS_ON_THE_EVEN_INPUT_DOMAIN",
+        "analysis": "Let h be the unpadded magic/header/payload word. The decoder first rejects every odd-length input. If |h| is even, only h can reach the canonical branch because h0 is odd. If |h| is odd, h is rejected and only h0 can reach the canonical branch. Counts and fixed literal width determine |h|, and the pad must be zero.",
+        "correction": "State this iff-parity rule explicitly and check cursor==|h|. Do not describe the zero as freely optional."
+      },
+      "runtime_counterexamples": [
+        {
+          "purpose": "refute the claimed 2^{O(n)} runtime of the supplied exhaustive solver",
+          "family": "For t>=1, declare v=2^t and use m=2 with clauses (x_1,x_1,x_1) and (not x_1,not x_1,not x_1). All other declared variables are unused.",
+          "encoding_size": "width=t+1; the unpadded encoding length is 8+(2t+1)+3+6(t+2)=8t+24 bits, so the graph level is linear in t.",
+          "failure": "The formula is unsatisfiable, and is_satisfiable enumerates all 2^v=2^(2^t) full assignments. This is not 2^{O(n)} and not polynomial in M_n=2^n."
+        },
+        {
+          "purpose": "refute polynomial witness size for graph_edge_has_np_witness",
+          "family": "For t>=1, declare v=2^t and use the satisfiable single clause (x_1,x_1,x_1), leaving all other variables unused.",
+          "encoding_size": "The encoding has O(t) bits.",
+          "failure": "assignment_satisfies requires len(assignment)=v, so every accepted code witness has 2^t bits although the direct graph query has O(t) bits. The function is therefore not a polynomially bounded NP verifier relation."
+        }
+      ],
+      "minimal_language_preserving_repair": {
+        "verifier": "For a canonical decoded formula, let W be the set of variable identifiers actually occurring in its 3m literal slots. Supply one truth bit for each member of W, or one bit per occurrence together with equality checks for repeated identifiers. Verify all clauses using this sparse assignment. Malformed-to-tautology words use a constant witness; the all-zero contradiction has no witness.",
+        "witness_bound": "There are at most 3m occurrences, and the entire literal payload lies inside the 2(n-1)-bit cross word. Thus the witness length and all consistency/clause checks are polynomial, indeed linear or quadratic under the two simple encodings, in the direct input length 2n.",
+        "complement_decision_bound": "For the slower explicit complement predicate, enumerate only assignments to W. Since |W|<=3m=O(n), exhaustive search takes 2^{O(n)}=poly(M_n). This repairs the stated graph-side explicitness bound without changing Dec, U_n, G_n, or the SAT reduction.",
+        "code_obligation": "Replace full length-v tuple semantics in assignment_satisfies, is_satisfiable, and graph_edge_has_np_witness by sparse occurring-variable semantics, or separately implement and prove the sparse verifier/decider. The current docstring 'Polynomial verifier relation' is false for the current function."
+      },
+      "reduction_audit": {
+        "verdict": "CORRECT_DIRECTION_AND_EXACT_ADDITIVE_TWO_BIT_WRAPPER_AFTER_REPRESENTATION_BINDING",
+        "proof": "For x=Enc(phi) of even length 2k, write x=x_L x_R with k-bit halves. Output y=(0 x_L)(1 x_R), a 2(k+1)-bit direct query at level k+1. Its row lies in the old half and its column lies in the new half. The recurrence decodes exactly cross_word(k,row,column-2^k)=x and inserts the point into U_(k+1) iff Dec(x) is UNSAT. Therefore y is in L_G iff phi is satisfiable. The mapping is from 3SAT to L_G, not the reverse, and |y|=|x|+2.",
+        "overhead_condition": "For fixed-width binary literal identifiers, |Enc(phi)|=8+|gamma(v)|+|gamma(m)|+3m(1+bit_length(v))+epsilon with epsilon in {0,1}; this is linear in that standard explicit representation. If the source uses arbitrary variable names, renumber first and account for that polynomial preprocessing.",
+        "status": "This proves NP-hardness of L_G once the direct-language definition and source representation are stated. It does not by itself prove membership in NP."
+      },
+      "final_status": "The language itself appears to be in NP by the complete sparse-occurrence verifier argument above, so the theorem is repairable without changing the candidate family. However the frozen artifact has not proved it with its advertised code relation. Do not label Lemma C proved or say that the E-only boundary is repaired until the direct language, sparse verifier, and representation-bound reduction proof replace the current text and code claim.",
+      "evidence_locations": [
+        "C041_FX_SAT_ONE_SIDED_FREEZE_20260812.md:63-76",
+        "C041_fx_sat_one_sided.py:70-129",
+        "C041_fx_sat_one_sided.py:132-148",
+        "C041_fx_sat_one_sided.py:158-207"
+      ]
+    }
+  ],
+  "claim_status_summary": {
+    "proved": [
+      "Lemma A under the exact unchanged-ground-set and empty-new-star hypotheses, including exact preservation of the relevant family and fractional LP.",
+      "Lemma B as a conditional fractional-dual cylinder theorem, and its applicability to the frozen one-sided recurrence.",
+      "The 3SAT-to-associated-graph reduction direction and the identity |output|=|canonical_formula_encoding|+2, after input-representation binding."
+    ],
+    "not_yet_proved_in_the_frozen_artifact": [
+      "That graph_edge_has_np_witness is a polynomial NP verifier.",
+      "That the supplied is_satisfiable implementation decides U_n in 2^{O(n)} time.",
+      "The full NP-completeness label for the direct language, pending insertion of the sparse-occurrence verifier proof and an explicit language definition."
+    ],
+    "not_claimed_and_not_implied": [
+      "positive residual augmentation",
+      "a uniform strict recurrence",
+      "superlogarithmic fractional or integral cover complexity",
+      "a circuit lower bound",
+      "P not equal to NP",
+      "novelty"
+    ]
+  },
+  "blocking_corrections_before_result_interpretation": [
+    "Define L_G as one direct binary language and bind n to half the input length.",
+    "Replace the full declared-variable assignment with sparse occurring-variable witnesses and sparse exhaustive search, or enforce a canonical no-unused-variable rule consistently in encoder and decoder.",
+    "State padding as mandatory iff the unpadded canonical word has odd length.",
+    "State the source 3CNF encoding and exact output-size formula for the reduction.",
+    "Tighten Lemma B to old relevance-witness vertices and define rho_frac rather than L_n.",
+    "Retain NP-completeness as proposed until these mathematical corrections are incorporated and reviewed."
+  ],
+  "strongest_objection": "The present code can require an exponentially long satisfying assignment and can spend doubly exponential time on O(n)-bit canonical formulas with exponentially many declared but unused variables. Consequently the advertised verifier and explicitness runtime are false even though a sparse-occurrence repair can prove the intended language theorem.",
+  "disagreement": "The domain and transfer lenses accept Lemmas A-B as exact mathematics after notation repair. The adversarial and formal lenses reject promotion of Lemma C in its frozen form. All roles agree that the reduction polarity is correct and that a sparse-occurrence verifier is the cheapest language-preserving repair.",
+  "recommendation": "ACCEPT_LEMMAS_A_B_WITH_PRECISE_SCOPE; RETURN_LEMMA_C_FOR_MATHEMATICAL_REPAIR_BEFORE_ANY_NP_COMPLETE_OR_ROOT_COORDINATE_CLAIM",
+  "root_status": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE",
+  "artifact_hash": "sha256:56e11c34c69ceea818cfdd65ccb69c2f6810b9a21b10befad3938a40897fb86d",
+  "repair_addendum_20260812": {
+    "recorded_at": "2026-08-12T11:10:00Z",
+    "authority": "SAME_CONTEXT_BOUNDED_MATHEMATICAL_RECHECK_NOT_INDEPENDENT_PEER_REVIEW",
+    "reviewed_repair": {
+      "proof": "research/real_math/millennium/p_vs_np/04_candidates/C041_FX_SAT_SPARSE_BRIDGE_REPAIR_20260812.md",
+      "executable_specification": "research/real_math/millennium/p_vs_np/05_falsification/c041_sparse_bridge_repair.py"
+    },
+    "original_objections_preserved": [
+      "The frozen full-declared-variable graph_edge_has_np_witness function is not polynomially balanced.",
+      "The frozen full-declared-variable is_satisfiable function is not a 2^{O(n)} explicit complement decider.",
+      "Those functions remain invalid as the displayed proof even though a new alternative algorithm can decide the same semantic predicates."
+    ],
+    "semantic_language_preservation": {
+      "verdict": "PROVED_NO_CHANGE_TO_DECODER_COMPLEMENT_FAMILY_OR_GRAPH_LANGUAGE",
+      "proof": "For every decoded formula phi, let W be its occurring-variable set. Restricting any satisfying full assignment on [v] to W gives a satisfying sparse assignment. Conversely, any satisfying assignment on W extends arbitrarily to the unused variables in [v]\\W and remains satisfying because no clause reads those variables. Therefore sparse_is_satisfiable(phi) iff the frozen semantic is_satisfiable(phi). Replacing only the decision procedure leaves Dec, s_n, U_n, G_n, and L_G extensionally unchanged.",
+      "code_binding": "The repair imports the frozen Formula3CNF, decoder, cross_word, seed, and level rule, and defines alternative verifier/decider functions without changing the candidate module.",
+      "scope": "This is an extensional mathematical equivalence claim, not evidence of cover growth or a post-result threshold change."
+    },
+    "np_membership_recheck": {
+      "verdict": "BLOCKER_RESOLVED",
+      "proof": "On an old-new query the witness contains one bit for each variable in W, ordered increasingly. The verifier reconstructs W from the decoded literal slots and checks every clause. On the canonical branch, the number of occurring variables is at most the number 3m of literal slots, and those slots occupy the input payload, so |W|=O(k). The two fixed decoder branches have |W|=1. Old-old recursion shortens both labels until the first non-old-old case; the other cases and the seed are deterministic. Witness length and verification time are polynomial in the direct input length.",
+      "minor_nonblocking_text_correction": "The displayed inequality 3m<=2k should be scoped to the canonical magic branch. It need not hold for the fixed all-zero contradiction at the smallest cross length, but that branch has |W|=1 and therefore satisfies the required O(k) bound directly.",
+      "direct_language": "The repair now defines L_G as the union over even lengths 2n with n>=2 and infers the level from half the input length, closing the tuple-versus-language ambiguity."
+    },
+    "explicit_complement_recheck": {
+      "verdict": "BLOCKER_RESOLVED",
+      "proof": "At the unique old-new case reached along an old-old recursion, enumerate only the 2^{|W|} sparse assignments. For the canonical branch |W|=O(k), and for either fixed decoder branch |W|=1. Decoding, support reconstruction, and clause checking are polynomial in k, so the total is 2^{O(k)}. Recursion depth is O(n) and reaches at most one formula-bearing branch, giving 2^{O(n)}=poly(M_n).",
+      "nonimplication": "This graph-side explicitness remains exponential in the direct input length and does not itself put the complement predicate in P."
+    },
+    "np_hardness_and_completeness_recheck": {
+      "verdict": "BLOCKER_RESOLVED_UNDER_THE_STATED_FIXED_WIDTH_3CNF_SOURCE_ENCODING",
+      "proof": "After polynomial-time variable renumbering, Enc(phi) has length linear in the fixed-width literal representation. For x=x_Lx_R of even length 2k, y=(0x_L)(1x_R) is a level-(k+1) old-new query whose cross word is exactly x. Because the recurrence places precisely UNSAT cross words in U, y is in L_G iff phi is satisfiable. The map has the correct direction 3SAT<=_m^p L_G and |y|=|x|+2. Together with the repaired NP verifier, this proves the narrowly bound NP-completeness statement.",
+      "padding": "The repair states the unique parity convention: use h when |h| is even and h0 when |h| is odd. This matches the frozen decoder on its even cross-word domain and changes no decoded word."
+    },
+    "final_blocker_status": {
+      "np_membership": "RESOLVED_BY_LANGUAGE_PRESERVING_SPARSE_SUPPORT_PROOF",
+      "two_to_O_n_explicitness": "RESOLVED_BY_LANGUAGE_PRESERVING_SPARSE_SUPPORT_DECIDER",
+      "reduction_direction": "RESOLVED_CORRECT_3SAT_TO_L_G",
+      "linear_overhead": "RESOLVED_FOR_THE_EXPLICITLY_BOUND_FIXED_WIDTH_SOURCE_REPRESENTATION",
+      "decoder_padding": "RESOLVED_UNIQUE_ON_EVEN_CROSS_WORD_DOMAIN",
+      "candidate_changed": false,
+      "remaining_bridge_blockers": [],
+      "remaining_global_obligations": [
+        "The zero-augmentation result remains unchanged.",
+        "No strict recurrence or asymptotic cover lower bound is proved.",
+        "No circuit lower bound is proved.",
+        "No novelty or P-versus-NP conclusion is authorized."
+      ]
+    },
+    "addendum_recommendation": "ACCEPT_THE_SPARSE_SUPPORT_REPAIR_AS_A_COMPLETE_MATHEMATICAL_REPAIR_OF_THE_NP_MEMBERSHIP_AND_2_TO_O_N_EXPLICITNESS_BLOCKERS; RETAIN_THE_ORIGINAL_FULL_ASSIGNMENT_COUNTEREXAMPLES_AS_FAILURE_LESSONS",
+    "evidence_locations": [
+      "C041_FX_SAT_SPARSE_BRIDGE_REPAIR_20260812.md:1-99",
+      "c041_sparse_bridge_repair.py:24-99"
+    ]
+  }
+}

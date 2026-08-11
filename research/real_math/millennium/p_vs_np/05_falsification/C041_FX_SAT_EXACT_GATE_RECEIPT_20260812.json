@@ -1,0 +1,1342 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "PNP-C041-FX-SAT-ONE-SIDED-EXACT-GATE-20260812",
+  "candidate_id": "C041-FX-SAT-ONE-SIDED-v1",
+  "freeze_id": "PNP-O9d12a2a1b-C041-FX-SAT-ONE-SIDED-FREEZE-20260812",
+  "freeze_artifact_hash": "sha256:a73197557c186e819e6f25179adf3743b51df923f031fc73d57be9aeef9081b0",
+  "freeze_commit": "4627ae32e2d3660a86cc12d327592577adc25e5f",
+  "candidate_sha256": "c0caca2fe7244c3d847de8b59473cec72132ec04ad3e9fab668f5cd95a2bd75a",
+  "evaluator_sha256": "364531ad6a9889378daed194cfdf7c419ba8785ea8727e27e72a4f9c154d2a1c",
+  "evaluated_transition": "n=2 to n=3",
+  "parent_side": 4,
+  "child_side": 8,
+  "parent_complement": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "child_complement": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "added_complement": [
+    [
+      0,
+      4
+    ]
+  ],
+  "seed_exact_recheck": {
+    "original_ambient_side": 3,
+    "square_seed_ambient_side": 4,
+    "original_relevant_semifilter_count": 19,
+    "square_seed_relevant_semifilter_count": 19,
+    "relevant_semifilter_families_equal": true,
+    "minimum_primal_coverage": {
+      "numerator": 1,
+      "denominator": 1
+    },
+    "maximum_dual_pair_load": {
+      "numerator": 1,
+      "denominator": 1
+    },
+    "primal_total": {
+      "numerator": 3,
+      "denominator": 2
+    },
+    "dual_total": {
+      "numerator": 3,
+      "denominator": 2
+    },
+    "exact_optimum": {
+      "numerator": 3,
+      "denominator": 2
+    },
+    "mathematical_claim": "Empty-fibre square embedding preserves this seed's relevant semi-filter family and exact fractional optimum 3/2."
+  },
+  "finite_gate": {
+    "status": "FAIL",
+    "mathematical_outcome": "FAIL_ZERO_AUGMENTATION",
+    "mathematical_claim": "The supported cylinder remains dual-feasible, but the exact residual augmentation optimum is zero for this finite extension.",
+    "parent_dual_total": {
+      "numerator": 3,
+      "denominator": 2
+    },
+    "maximum_parent_pair_load": {
+      "numerator": 1,
+      "denominator": 1
+    },
+    "maximum_lifted_pair_load": {
+      "numerator": 1,
+      "denominator": 1
+    },
+    "child_certificate_total": {
+      "numerator": 3,
+      "denominator": 2
+    },
+    "summary": {
+      "positive_parent_support": 3,
+      "relevant_cylinder_lifts": 3,
+      "irrelevant_cylinder_lifts": 0
+    },
+    "cylinder_lifts": [
+      {
+        "parent_minimal_masks": [
+          1,
+          4
+        ],
+        "child_minimal_masks": [
+          1,
+          8
+        ],
+        "weight": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "relevant": true,
+        "relevance_witnesses": [
+          {
+            "graph_edge": [
+              0,
+              1
+            ],
+            "row_mask": 3,
+            "column_mask": 8
+          },
+          {
+            "graph_edge": [
+              2,
+              0
+            ],
+            "row_mask": 24,
+            "column_mask": 1
+          }
+        ]
+      },
+      {
+        "parent_minimal_masks": [
+          1,
+          6,
+          10
+        ],
+        "child_minimal_masks": [
+          1,
+          12,
+          20
+        ],
+        "weight": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "relevant": true,
+        "relevance_witnesses": [
+          {
+            "graph_edge": [
+              0,
+              2
+            ],
+            "row_mask": 3,
+            "column_mask": 20
+          }
+        ]
+      },
+      {
+        "parent_minimal_masks": [
+          2,
+          4
+        ],
+        "child_minimal_masks": [
+          4,
+          8
+        ],
+        "weight": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "relevant": true,
+        "relevance_witnesses": [
+          {
+            "graph_edge": [
+              1,
+              1
+            ],
+            "row_mask": 4,
+            "column_mask": 8
+          }
+        ]
+      }
+    ],
+    "lost_lifts": [],
+    "lifted_pair_loads": [
+      {
+        "e_mask": 1,
+        "h_mask": 30,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 2,
+        "h_mask": 29,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 3,
+        "h_mask": 28,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 3,
+        "h_mask": 29,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 3,
+        "h_mask": 30,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 4,
+        "h_mask": 27,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 5,
+        "h_mask": 26,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 5,
+        "h_mask": 27,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 5,
+        "h_mask": 30,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 6,
+        "h_mask": 25,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 6,
+        "h_mask": 27,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 6,
+        "h_mask": 29,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 7,
+        "h_mask": 24,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 7,
+        "h_mask": 25,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 7,
+        "h_mask": 26,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 7,
+        "h_mask": 27,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 7,
+        "h_mask": 28,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 7,
+        "h_mask": 29,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 7,
+        "h_mask": 30,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 8,
+        "h_mask": 23,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 9,
+        "h_mask": 22,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 9,
+        "h_mask": 23,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 9,
+        "h_mask": 30,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 10,
+        "h_mask": 21,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 10,
+        "h_mask": 23,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 10,
+        "h_mask": 29,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 11,
+        "h_mask": 20,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 11,
+        "h_mask": 21,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 11,
+        "h_mask": 22,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 11,
+        "h_mask": 23,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 11,
+        "h_mask": 28,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 11,
+        "h_mask": 29,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 11,
+        "h_mask": 30,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 12,
+        "h_mask": 19,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 12,
+        "h_mask": 23,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 12,
+        "h_mask": 27,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 13,
+        "h_mask": 18,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 13,
+        "h_mask": 19,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 13,
+        "h_mask": 22,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 13,
+        "h_mask": 23,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 13,
+        "h_mask": 26,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 13,
+        "h_mask": 27,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 13,
+        "h_mask": 30,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 14,
+        "h_mask": 17,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 14,
+        "h_mask": 19,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 14,
+        "h_mask": 21,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 14,
+        "h_mask": 23,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 14,
+        "h_mask": 25,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 14,
+        "h_mask": 27,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 14,
+        "h_mask": 29,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 16,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 17,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 18,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 19,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 20,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 21,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 22,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 23,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 24,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 25,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 26,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 27,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 28,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 29,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 15,
+        "h_mask": 30,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 17,
+        "h_mask": 30,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 18,
+        "h_mask": 29,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 19,
+        "h_mask": 28,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 19,
+        "h_mask": 29,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 19,
+        "h_mask": 30,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 20,
+        "h_mask": 27,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 21,
+        "h_mask": 26,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 21,
+        "h_mask": 27,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 21,
+        "h_mask": 30,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 22,
+        "h_mask": 25,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 22,
+        "h_mask": 27,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 22,
+        "h_mask": 29,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 23,
+        "h_mask": 24,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 23,
+        "h_mask": 25,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 23,
+        "h_mask": 26,
+        "load": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 0,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 23,
+        "h_mask": 27,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 23,
+        "h_mask": 28,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 23,
+        "h_mask": 29,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 23,
+        "h_mask": 30,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 25,
+        "h_mask": 30,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 26,
+        "h_mask": 29,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 27,
+        "h_mask": 28,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 27,
+        "h_mask": 29,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      },
+      {
+        "e_mask": 27,
+        "h_mask": 30,
+        "load": {
+          "numerator": 1,
+          "denominator": 2
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 2
+        }
+      },
+      {
+        "e_mask": 29,
+        "h_mask": 30,
+        "load": {
+          "numerator": 0,
+          "denominator": 1
+        },
+        "residual_capacity": {
+          "numerator": 1,
+          "denominator": 1
+        }
+      }
+    ],
+    "residual_augmentation": {
+      "exact_optimum": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "primal_total": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "dual_total": {
+        "numerator": 0,
+        "denominator": 1
+      },
+      "primal_feasible": true,
+      "dual_feasible": true,
+      "augmentation_support": [],
+      "cover_certificate_support": [
+        {
+          "e_mask": 3,
+          "h_mask": 28,
+          "weight": {
+            "numerator": 1,
+            "denominator": 1
+          }
+        },
+        {
+          "e_mask": 5,
+          "h_mask": 26,
+          "weight": {
+            "numerator": 1,
+            "denominator": 1
+          }
+        }
+      ],
+      "complete_child_filter_count": 787,
+      "undominated_filter_count": 787
+    },
+    "authority": {
+      "mathematical_content": "exact finite zero-augmentation certificate",
+      "assurance_only": "implementation, serialization, and tests",
+      "grants_uniform_rule_authority": false,
+      "grants_asymptotic_authority": false,
+      "grants_novelty_authority": false,
+      "grants_p_vs_np_authority": false,
+      "mathematical_saturation_credit": false
+    }
+  },
+  "scope": {
+    "short_decoder_branch_only": true,
+    "magic_coded_sat_slice_evaluated": false,
+    "grants_uniform_recurrence": false,
+    "grants_asymptotic_authority": false,
+    "grants_novelty_authority": false,
+    "grants_p_vs_np_authority": false
+  },
+  "mathematical_saturation_policy": {
+    "credit": "exact seed equality, exact finite relevance/load/augmentation result, and any supported mathematical counterexample",
+    "zero_credit": "Git, CI, hashes, schemas, implementation, solver status and runtime"
+  },
+  "artifact_hash": "sha256:7e68011c82e4289d61d1674146d130060a1c8693d6500bd4550c29db379ffb1b"
+}
