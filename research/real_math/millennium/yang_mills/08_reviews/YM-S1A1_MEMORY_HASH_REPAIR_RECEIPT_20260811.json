@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "RAKL-MATH-YM-S1A1-MEMORY-HASH-REPAIR-20260811",
+  "recorded_at": "2026-08-11T08:27:48+00:00",
+  "application_repository": {
+    "url": "https://github.com/SzeChunYiu/RAKL_math",
+    "base_commit": "2891feff3f7c51137d98ce2ba61595fb38884de8"
+  },
+  "framework_pin": {
+    "url": "https://github.com/SzeChunYiu/RAKL",
+    "commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
+  },
+  "subject": {
+    "atom_id": "YM-S1A1",
+    "artifact_kind": "ResearchMemoryReview",
+    "source_commit": "8d3843c1e625c7bfb2ef5079c32f549a2f40fcb6",
+    "source_path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "source_git_blob": "43bf0d70207f22d4f4e10c107b9bb111772bf43d"
+  },
+  "observed_result": {
+    "status": "FAIL_HASH_INTEGRITY",
+    "stored_artifact_hash": "sha256:9e8e0176a607b4ac63d1231d4b936f9751a0b3e77d1b50bc353eafde98b53279",
+    "computed_canonical_hash": "sha256:cba10c36f5a6567749a080179e8ded8ba7d62a09f3cedd1fbf40604c8475e065",
+    "invalid_file_sha256": "sha256:6b5c6ff7a1863b9b8a436b001f7ca14cacbb4b2d61ee50c446d282549c6fc26c"
+  },
+  "diagnosis": {
+    "root_cause_level": "R1_SCHEMA_PARSER_UNITS_TRANSFORMATION",
+    "status": "BOUNDED_UNRESOLVED_CAUSE",
+    "broken_assumption": "The stored artifact_hash equals the canonical JSON hash of the exact memory-review payload with artifact_hash blank.",
+    "scope": "YM-S1A1 pre-candidate memory-review integrity only; no candidate, mathematical proposition, theorem, or Millennium root was evaluated."
+  },
+  "repair": {
+    "method": "PRESERVE_INVALID_COPY_AND_RECOMPUTE_CANONICAL_HASH_ONLY",
+    "original_preserved": true,
+    "invalid_path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_HASH_INVALID_20260811.json",
+    "repaired_path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_HASH_REPAIRED_20260811.json",
+    "repaired_file_sha256": "sha256:24cc85194d0e848680def8be3588d580b8922824c0612800beee41a9bf27f042",
+    "semantic_fields_changed": [],
+    "identity_fields_changed": [
+      "artifact_hash"
+    ]
+  },
+  "reusable_lesson_candidate": {
+    "status": "PROPOSAL_ONLY_PENDING_CROSS_PROBLEM_RECURRENCE_AND_FRAMEWORK_ASSURANCE",
+    "preconditions": [
+      "canonical self-hashed application artifact",
+      "stored hash fails current exact verifier"
+    ],
+    "guaranteed_effects": [
+      "failed identity remains inspectable",
+      "repaired identity is executable under the current canonical verifier"
+    ],
+    "non_guarantees": [
+      "does not validate mathematical content",
+      "does not establish theorem truth or novelty",
+      "does not identify the historical writer or exact mutation step"
+    ],
+    "known_failures": [
+      "silent in-place rehashing erases negative history",
+      "accepting a stale stored hash weakens the protected integrity gate"
+    ],
+    "target_validation_obligations": [
+      "valid known-answer artifact passes",
+      "planted payload mutation fails",
+      "missing source identity fails closed"
+    ]
+  },
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_HASH_INVALID_20260811.json",
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_HASH_REPAIRED_20260811.json",
+    "tests/math_applications/test_yang_mills_yms1a1_integrity_repair.py",
+    "tests/math_applications/test_yang_mills_yms1a1_strict_packet.py"
+  ],
+  "authority": "ARTIFACT_INTEGRITY_REPAIR_ONLY / ORIGINAL_NEGATIVE_HISTORY_PRESERVED / NO_MATHEMATICAL_RESULT / NO_THEOREM / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:0400e1655ac1fc35c43c095da5c482267f6a074aa60d35870b8568e07d63e362"
+}

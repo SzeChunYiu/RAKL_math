@@ -1,0 +1,42 @@
+{
+  "target_atom_id": "YM-S1a1",
+  "target_context_hash": "sha256:082ddb6131aa0316cbdd17248d762af6bc036caed877a2acce42087f1c940e3a",
+  "tool_inventory_snapshot_hash": "sha256:fe2f3b4ef49492d81cb350fb689bf9f9dff6cfd1817d72d6ff9fe3350e3d5e6a",
+  "failure_lattice_snapshot_hash": "sha256:52a30497572c1d73c67bf7783ab14d9c6a0390100bbd80930ec5f61ee6545b3a",
+  "tool_query_status": "NO_RELEVANT_MATCH",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "dense-source spectral-measure support exclusion",
+    "reflection-positive temporal covariance to transfer-moment binding",
+    "spin-network/cylinder source-density bridge",
+    "common-exponent strong-coupling clustering"
+  ],
+  "relevant_tool_ids": [],
+  "relevant_failure_ids": [
+    "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "No promoted success-derived RAKL tool has the exact positive-transfer-matrix/dense-source preconditions of this child atom; primary spectral and lattice methods remain source-bound method-transfer rows rather than being relabeled as RAKL tools."
+  ],
+  "failure_reuse_notes": [
+    "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE is directly relevant: it refutes full-gap inference from a non-dense source family.",
+    "DifferenceWitness for the next move: YM-S1a1 explicitly adds density/cyclicity of the source-generated states and demands one common q<1. The old three-state falsifier no longer satisfies the new density hypothesis; enlarging the source family by B with B Omega=e1 is the cheapest regression showing that the repaired hypothesis detects the hidden state.",
+    "The failure remains a warning, not an impossibility theorem against correlation methods; the repair must still prove target-specific OS transfer binding and source density."
+  ],
+  "unresolved_warnings": [
+    "SZZ Corollary 1.6 is an infinite-volume Euclidean covariance bound; it must not be silently identified with a physical transfer-matrix moment.",
+    "Fixed-graph spin-network completeness must not be silently promoted to density in the exact infinite-volume OS physical Hilbert space.",
+    "The support distance under Euclidean time translation must be shown to grow as n+O(1) in the chosen lattice metric.",
+    "Even successful fixed-cutoff spectral exclusion leaves RG transport, physical a-scaling and continuum reconstruction open."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/01_frontier/YM-S1A_SOURCE_VISIBILITY_CALIBRATION_20260811.md",
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1A_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "research/real_math/millennium/yang_mills/01_frontier/YM-S1A1_CONTEXT_FIBER_20260811.json",
+    "H. Shen, R. Zhu, X. Zhu, arXiv:2204.12737, Corollary 1.6",
+    "J. C. Baez, arXiv:gr-qc/9411007",
+    "G. Burgio et al., arXiv:hep-lat/9906036"
+  ],
+  "artifact_hash": "sha256:cba10c36f5a6567749a080179e8ded8ba7d62a09f3cedd1fbf40604c8475e065"
+}
