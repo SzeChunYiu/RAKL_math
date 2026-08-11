@@ -1,0 +1,24 @@
+{
+  "schema_version": "failure-experience-v3-proposal-shadow-r1",
+  "failure_id": "F-NS-B1a3b1b1a-CARDINALITY-NOT-CRITICAL-RADIUS",
+  "atom_id": "NS-B1a3b1b1a",
+  "candidate_id": "NS-B1a3b1b1a-C001-R1",
+  "episode_id": "EP-NS-B1a3b1b1a-C001-R1-20260812",
+  "diagnosis_id": "D-NS-B1a3b1b1a-CARDINALITY-VS-MODULUS-R1",
+  "method_family": "source-theorem transfer / exceptional-set localization / quantitative morphology gluing",
+  "failure_mode": "SOURCE_THEOREM_CONTROLS_TERMINAL_CARDINALITY_NOT_TARGET_CRITICAL_RADIUS_MODULUS",
+  "residual_signature": ["terminal_vs_preterminal_quantifier", "cardinality_vs_quantitative_modulus", "velocity_to_vorticity_derivative_state", "noncompact_far_field", "producer_consumer_interface"],
+  "broken_assumptions": ["finite singular-point count encodes a lambda-dependent cover radius", "terminal local regularity automatically gives a uniform global preterminal super-level cover"],
+  "falsifier": "search source theorem/proof for dist(A_lambda(t),Sigma)<=C lambda^-1/2 or equivalent quantitative vorticity-level radius estimate",
+  "observed_result": "no such estimate occurs in the inspected Theorem 2 proof; the proof scale sqrt(-s_n) is selected from time and terminal-point separation and is used for a spacetime packing/counting argument",
+  "scope_conditions": ["Barker arXiv:2111.14776v2 Theorem 2/proof", "direct transfer to issue #180 target"],
+  "local_repair_attempts": ["tested whether CKN epsilon-regularity supplied the missing exponent; rejected because it is used as a fixed rescaled spacetime-mass lower bound", "kept far-field/global tail as a separate gluing residual rather than silently localizing globally"],
+  "typed_links": [
+    {"type": "SHARES_RESIDUAL_WITH", "target": "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH"},
+    {"type": "SHARES_RESIDUAL_WITH", "target": "F-NS-B1a3-UNCONTROLLED-FAR-FIELD"},
+    {"type": "TRANSFER_WARNING_FOR", "target": "NS-B1a3b1b1-finite-center-consumer"},
+    {"type": "SHARES_BROKEN_ASSUMPTION_WITH", "target": "F-NS-B1a3b1b-AMPLITUDE-DOES-NOT-SELECT-ONE-CORE-MORPHOLOGY"}
+  ],
+  "status": "OBSERVED_SUPPORTED_SCOPED_PROPOSAL_SHADOW",
+  "authority": "SEARCH_PRIORITY_ONLY_NO_THEOREM_AUTHORITY"
+}
