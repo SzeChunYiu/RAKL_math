@@ -13,7 +13,7 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "b724b75c71f37956b6188584ce32e3c554ea2d6d"
+EXPECTED_FRAMEWORK_COMMIT = "b6d0326735bce38842832e654b704053e7f4ed73"
 HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
 FINAL_SYNC_RECEIPT = (
     APPLICATION_ROOT / "receipts/framework-pin-final-integration-bd1a276-20260811.json"
@@ -70,7 +70,7 @@ def test_machine_readable_framework_pin_is_valid_and_loaded_exactly() -> None:
     ).stdout
     assert framework_status == ""
     assert pin["authority"] == (
-        "Dependency synchronization to exact clean RAKL origin/main b724b75c71f37956b6188584ce32e3c554ea2d6d observed 2026-08-11; "
+        "Dependency synchronization to exact clean RAKL origin/main b6d0326735bce38842832e654b704053e7f4ed73 observed 2026-08-11; "
         "no proof, research, review-independence, or method-evolution authority"
     )
 
