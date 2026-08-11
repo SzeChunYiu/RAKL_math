@@ -1,0 +1,140 @@
+{
+  "schema_version": "rakl-v3-shadow-fibre-v1",
+  "status": "FROZEN_SHADOW_CONTEXT_NO_AUTHORITY",
+  "active_atom": "YM-E3a",
+  "problem_signature": "Repair and source-bind the nonlinear weak-coupling recurrence used in Faizal–Shabir Appendix A / Theorem A.9 without using the recurrence outside its stated small-ball domain, then audit what remains before any continuum/OS/mass-gap gluing.",
+  "root_binding": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "issue": 5,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "statement": "For every compact simple gauge group, construct a non-trivial 4D quantum Yang–Mills theory satisfying the official Clay axiomatic-strength requirements and prove a finite positive mass gap above the vacuum, with required continuum/short-distance behavior."
+  },
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "main_sha": "fe47a12c4bad8253658baaf37e1300cab15d0823",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "v3_surfaces_consulted": [
+      "docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md",
+      "src/rakl/method_specs.py",
+      "skills/rakl-core/SKILL.md",
+      "skills/rakl-core/static/core/workflow.md",
+      "skills/rakl-core/static/core/principles.md"
+    ],
+    "application_pin_observed": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+    "pin_note": "Application pin is older than current framework main; this cycle uses current-main v3 operationally in shadow/proposal mode only and does not assert compiled/runtime equivalence or modify the pin."
+  },
+  "application_base": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "main_sha": "3bde3ba4a1576243bbd81cdd1392fe46344696fc"
+  },
+  "actual_fibre": {
+    "canonical_problem_surfaces": [
+      "RAKL_math issue #5 official Yang–Mills root contract",
+      "RAKL_math issue #93 YM-E3a prospective repair contract",
+      "current RAKL v3 experience substrate and method_specs process surfaces",
+      "RAKL_math config/rakl-framework-pin.json at base",
+      "Faizal–Shabir arXiv:2606.19362v1 Appendix A: Theorem A.9, equations A.53/A.59, Lemma A.10",
+      "proposal-only PR #97 TaskEpisode YM-E2E3-EP-FS-PROOF-AUDIT-R2-20260811T1304Z",
+      "recent YM-E1a1a0 source-retrieval family as saturation/routing evidence",
+      "YM-S1a2 spectral/gluing family as rejected different-context residual"
+    ],
+    "primary_source_claims_consulted": [
+      "Theorem A.9 states a uniform weak-coupling/polymer-norm contraction estimate with constants rho,C,r.",
+      "Step 1 writes a map Phi' = L Phi + Q(Phi,Phi), with ||L||<=rho and a quadratic estimate only when ||Phi||<=r.",
+      "Step 2 says sufficiently large entry scale / narrowed compact bare-coupling interval can make the entry norm as small as desired.",
+      "Step 3 reduces to x_{n+1}<=rho x_n + C x_n^2 in the small ball.",
+      "Lemma A.10 is printed without a smallness/invariant-ball condition and its induction invokes an impossible positive-r condition.",
+      "A.59 has a positive additive floor C r^2/(1-rho), so that displayed bound alone does not imply convergence to zero."
+    ],
+    "memory_selected": [
+      {
+        "id": "ISSUE-93-YM-E3a",
+        "authority": "canonical application issue",
+        "reason": "exact active prospective success contract"
+      },
+      {
+        "id": "YM-E2E3-EP-FS-PROOF-AUDIT-R2-20260811T1304Z",
+        "authority": "proposal/shadow only",
+        "reason": "prior failure diagnosis routes directly to recurrence repair; no epistemic authority"
+      },
+      {
+        "id": "ISSUE-5-YM-ROOT",
+        "authority": "canonical application root",
+        "reason": "exact statement and closure gates"
+      }
+    ],
+    "memory_retrieved_rejected": [
+      {
+        "id": "YM-E1a1a0-family",
+        "reason": "recently saturated primary-source acquisition family; different local obstruction and low expected information this cycle"
+      },
+      {
+        "id": "YM-S1a2-family",
+        "reason": "spectral/OS Hilbert-space gluing residual; not needed to falsify or repair the scalar recurrence"
+      },
+      {
+        "id": "YM-E2a-family",
+        "reason": "defect-budget sibling; downstream/different atom"
+      },
+      {
+        "id": "YM-E2b-family",
+        "reason": "variable-a to fixed-time transport sibling; different atom"
+      }
+    ],
+    "missed_prior_experience": [
+      {
+        "id": "CANNOT_MEASURE",
+        "reason": "No complete memory-coverage enumerator was exposed in this connector run; absence from retrieved fibre is not evidence of absence."
+      }
+    ],
+    "cross_millennium_memory": {
+      "queries": 0,
+      "reason": "Not needed after same-problem exact failure episode and source-bound atom were available; therefore no transfer/DifferenceWitness claim was made."
+    }
+  },
+  "expert_cell": [
+    {
+      "role": "nonlinear discrete-dynamics specialist",
+      "background": "invariant regions, Riccati-type recurrences, stability estimates",
+      "delegation": "derive minimal sufficient smallness and hostile counterexamples"
+    },
+    {
+      "role": "constructive RG/polymer specialist",
+      "background": "polymer norms, local RG maps, domain-of-validity bookkeeping",
+      "delegation": "check that scalar recurrence is used only inside the source small ball"
+    },
+    {
+      "role": "constructive QFT/OS specialist",
+      "background": "Euclidean measures, reflection positivity, OS reconstruction, infinite-volume/continuum limits",
+      "delegation": "separate local recurrence repair from continuum/physical-gap gluing"
+    },
+    {
+      "role": "asymptotic-freedom specialist",
+      "background": "weak-coupling RG and beta-function interpretation",
+      "delegation": "separate norm contraction from perturbative AF identification"
+    },
+    {
+      "role": "adversarial proof auditor",
+      "background": "counterexample-first theorem falsification",
+      "delegation": "attack literal Lemma A.10 and candidate hypotheses"
+    },
+    {
+      "role": "formal-assurance specialist",
+      "background": "inductive invariants and executable property checks",
+      "delegation": "verify algebra and deterministic test cases"
+    },
+    {
+      "role": "source/novelty auditor",
+      "background": "primary-source provenance and novelty discipline",
+      "delegation": "bind every source claim and prevent root/novelty overclaim"
+    }
+  ],
+  "independent_review_credit": false,
+  "freeze_chronology": {
+    "scope": "Frozen before repository candidate serialization and executable verification.",
+    "caveat": "The issue #93 already contained the invariant-ball repair direction before this run, and same-run source inspection occurred before this serialized freeze. Therefore no pre-insight/preregistered discovery credit is claimed; this is a shadow verification/repair cycle."
+  },
+  "fibre_snapshot_hash": "sha256:97f8475b86180fb0e3eb747b519e385053863baffc5ce46bb19472609f24f24a"
+}
