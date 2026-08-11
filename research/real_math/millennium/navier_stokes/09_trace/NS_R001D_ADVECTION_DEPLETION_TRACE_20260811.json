@@ -1,0 +1,206 @@
+{
+  "trace_id": "NS-R001D-ADVECTION-DEPLETION-20260811",
+  "entries": [
+    {
+      "event_id": "NS-R001d-E001",
+      "atom_id": "NS-R001d",
+      "event_type": "ATOMIZED",
+      "timestamp": "2026-08-11T08:24:00+00:00",
+      "state_summary": "Parent NS-R001 energy-criticality and NS-R001b geometry screens leave one Clay-relevant intersection open: exact finite-energy Navier-Stokes evolution may generate critical depletion unavailable to static fields.",
+      "action_summary": "Open child NS-R001d around Miller's projected strain remainder as a scale-invariant candidate coordinate, without proposing a theorem.",
+      "evidence_pointers": [
+        "RAKL_math issue #4",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001_ENERGY_CRITICAL_ATLAS_20260811.md",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001B_STRAIN_VORTICITY_ATLAS_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "atom:NS-R001d",
+        "parent_failures:F-NS-R001-A1-ENERGY-CRITICALITY,F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP"
+      ],
+      "uncertainties": [],
+      "residuals": [
+        "finite-energy exact-evolution structure has not been converted into a critical a priori bound"
+      ],
+      "next_steps": [
+        "freeze a source-bound MathContextFiber before any candidate"
+      ],
+      "artifact_hash": "sha256:bedf84804660c6c249d1c7d1ac86cef65d9083bdedfffd32831437f0968c7f5b",
+      "previous_event_hash": ""
+    },
+    {
+      "event_id": "NS-R001d-E002",
+      "atom_id": "NS-R001d",
+      "event_type": "CONTEXT_FROZEN",
+      "timestamp": "2026-08-11T08:24:05+00:00",
+      "state_summary": "The projected remainder R, exact Navier-Stokes scaling, Miller model/criterion, finite-energy boundary, and snapshot-versus-trajectory distinction are frozen.",
+      "action_summary": "Freeze the NS-R001d MathContextFiber and source packet before any candidate.",
+      "evidence_pointers": [
+        "sha256:b846a739651692306c82255b1e7f76cd13347b4c00bc3f61e2ea28d3c7bb711f",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001D_ADVECTION_DEPLETION_CONTEXT_FIBER_20260811.json",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001D_ADVECTION_DEPLETION_SOURCE_PACKET_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "sha256:b846a739651692306c82255b1e7f76cd13347b4c00bc3f61e2ea28d3c7bb711f"
+      ],
+      "uncertainties": [
+        "Miller's criterion is conditional; no source derives remainder smallness from finite kinetic energy."
+      ],
+      "residuals": [],
+      "next_steps": [],
+      "artifact_hash": "sha256:2b92bd11ab6359943de1a73a27dffb5c9d95cabd64872942784dd418c0019c9b",
+      "previous_event_hash": "sha256:bedf84804660c6c249d1c7d1ac86cef65d9083bdedfffd32831437f0968c7f5b"
+    },
+    {
+      "event_id": "NS-R001d-E003",
+      "atom_id": "NS-R001d",
+      "event_type": "ANALOGY_SCAN",
+      "timestamp": "2026-08-11T08:24:10+00:00",
+      "state_summary": "A passive-scalar enhanced-dissipation analogy survives only as a proposal that energy-neutral transport may alter derivative structure along trajectories.",
+      "action_summary": "Retain the analogy solely to distinguish static energy control from trajectory-generated derivative depletion.",
+      "evidence_pointers": [
+        "sha256:b846a739651692306c82255b1e7f76cd13347b4c00bc3f61e2ea28d3c7bb711f",
+        "Gardner-Liss-Mattingly arXiv:2410.05657"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "retained_bridge:trajectory_derivative_redistribution"
+      ],
+      "uncertainties": [
+        "self-advection, quadratic strain production and nonlocal P_st are decisive disanalogies; the analogy supplies no Navier-Stokes inequality."
+      ],
+      "residuals": [],
+      "next_steps": [],
+      "artifact_hash": "sha256:5e70511723d62bf70d60d4e2cf8a193f199031429d39c21cdead5d6278d4bc02",
+      "previous_event_hash": "sha256:2b92bd11ab6359943de1a73a27dffb5c9d95cabd64872942784dd418c0019c9b"
+    },
+    {
+      "event_id": "NS-R001d-E004",
+      "atom_id": "NS-R001d",
+      "event_type": "METHOD_TRANSFER_REVIEW",
+      "timestamp": "2026-08-11T08:24:15+00:00",
+      "state_summary": "Miller's globally regular strain-vorticity model, 2D enstrophy closure, enhanced dissipation and the parent adversarial screens are mapped with enabling assumptions and broken assumptions.",
+      "action_summary": "Select the minimum repair question: before invoking dynamics, determine whether finite kinetic energy can statically bound the scale-invariant remainder ratio Q.",
+      "evidence_pointers": [
+        "sha256:b846a739651692306c82255b1e7f76cd13347b4c00bc3f61e2ea28d3c7bb711f",
+        "Evan Miller arXiv:2407.02691v2",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS_R001D_ADVECTION_DEPLETION_SOURCE_PACKET_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "method_transfer_matrix:frozen"
+      ],
+      "uncertainties": [
+        "a negative snapshot result cannot rule out positive-time or time-integrated dynamics."
+      ],
+      "residuals": [],
+      "next_steps": [],
+      "artifact_hash": "sha256:db3e02bb91a6da282b2f29a7ab0caf75e01beeccfb566e18fdedcda2676c034d",
+      "previous_event_hash": "sha256:5e70511723d62bf70d60d4e2cf8a193f199031429d39c21cdead5d6278d4bc02"
+    },
+    {
+      "event_id": "NS-R001d-E005",
+      "atom_id": "NS-R001d",
+      "event_type": "EXPERT_CONTEXT_REVIEW",
+      "timestamp": "2026-08-11T08:24:20+00:00",
+      "state_summary": "Six role-separated same-context lenses reviewed criticality, projection/nonlocality, scaling falsification, dynamics transfer, assurance and novelty.",
+      "action_summary": "Accept an exact fixed-energy initial-data falsifier and block theorem search until the weaker snapshot bridge is tested.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/08_reviews/NS_R001D_EXPERT_CONTEXT_REVIEW_20260811.md",
+        "sha256:b846a739651692306c82255b1e7f76cd13347b4c00bc3f61e2ea28d3c7bb711f"
+      ],
+      "alternatives_considered": [
+        "propose a direct Q<1 theorem",
+        "jump immediately to a time-integrated criterion",
+        "open a frequency-local pressure route",
+        "run an exact fixed-energy snapshot falsifier"
+      ],
+      "decision_rationale": "The fixed-energy screen has the highest partition power per cost: if it fails, static energy-to-Miller control is pruned and any surviving route must genuinely use evolution.",
+      "outputs": [
+        "recommendation:exact_gaussian_snapshot_concentration_screen"
+      ],
+      "uncertainties": [
+        "the nonlocal projection must be bound exactly through strain-space orthogonality",
+        "actual positive-time depletion remains untested."
+      ],
+      "residuals": [],
+      "next_steps": [],
+      "artifact_hash": "sha256:43db3ebc0219dc446bf7db150b512e0b7508da5e30565a3a5d24709708c63938",
+      "previous_event_hash": "sha256:db3e02bb91a6da282b2f29a7ab0caf75e01beeccfb566e18fdedcda2676c034d"
+    },
+    {
+      "event_id": "NS-R001d-E006",
+      "atom_id": "NS-R001d",
+      "event_type": "EXPERIENCE_MEMORY_REVIEW",
+      "timestamp": "2026-08-11T08:24:25+00:00",
+      "state_summary": "No promoted success tool has a validated applicability witness; the two parent static failures are relevant scoped warnings with DifferenceWitnesses.",
+      "action_summary": "Freeze dual memory and reuse the parent concentration logic only after explicitly accounting for the new projected-remainder coordinate.",
+      "evidence_pointers": [
+        "sha256:71063a2b8249886ddd05fbf7e160f15a27c6c9e9abb93d8d3b43e9bacf08b9da",
+        "sha256:fe2f3b4ef49492d81cb350fb689bf9f9dff6cfd1817d72d6ff9fe3350e3d5e6a",
+        "sha256:e565a0e108042c22308caf4d89caf5bb9f42a7ef9756d28bc214d3e9f95056e7",
+        "research/real_math/millennium/navier_stokes/07_memory/NS_R001D_RESEARCH_MEMORY_REVIEW_20260811.json"
+      ],
+      "alternatives_considered": [
+        "ignore parent failures because the coordinate is new",
+        "treat A1 as a universal blacklist",
+        "reuse the concentration falsifier with a DifferenceWitness"
+      ],
+      "decision_rationale": "The new nonlocal coordinate repairs the tested representation but not the snapshot-versus-dynamics gap; repeating the cheapest old-failure test is warranted.",
+      "outputs": [
+        "sha256:71063a2b8249886ddd05fbf7e160f15a27c6c9e9abb93d8d3b43e9bacf08b9da",
+        "tool_query:NO_RELEVANT_MATCH",
+        "failure_query:F-NS-R001-A1-ENERGY-CRITICALITY,F-NS-R001B-LOCAL-GEOMETRY-SCOPE-GAP"
+      ],
+      "uncertainties": [
+        "the energy-preserving concentration is a family of admissible initial data, not one Navier-Stokes trajectory",
+        "P_st must be handled through an exact projection identity."
+      ],
+      "residuals": [],
+      "next_steps": [],
+      "artifact_hash": "sha256:6c81d1ce1475d2002715b0805b48f4d0f968518a3705f43b25ed7f82542de354",
+      "previous_event_hash": "sha256:43db3ebc0219dc446bf7db150b512e0b7508da5e30565a3a5d24709708c63938"
+    },
+    {
+      "event_id": "NS-R001d-E007",
+      "atom_id": "NS-R001d",
+      "event_type": "NEXT_STEP_PROPOSED",
+      "timestamp": "2026-08-11T08:24:30+00:00",
+      "state_summary": "Context, transfer map, expert objections and dual memory are frozen before candidate generation.",
+      "action_summary": "Test fixed-energy snapshot control of Q with an exact Gaussian vector-potential seed and an energy-preserving concentration family.",
+      "evidence_pointers": [
+        "sha256:b846a739651692306c82255b1e7f76cd13347b4c00bc3f61e2ea28d3c7bb711f",
+        "sha256:71063a2b8249886ddd05fbf7e160f15a27c6c9e9abb93d8d3b43e9bacf08b9da",
+        "research/real_math/millennium/navier_stokes/08_reviews/NS_R001D_EXPERT_CONTEXT_REVIEW_20260811.md"
+      ],
+      "alternatives_considered": [
+        "direct proof search",
+        "numerical turbulence experiment",
+        "positive-time smoothing before ruling out static control",
+        "exact Gaussian fixed-energy falsifier"
+      ],
+      "decision_rationale": "The Gaussian seed permits exact rational Gaussian-moment arithmetic and projection binding; the scaling family cleanly distinguishes a static energy bridge from a genuinely dynamic one.",
+      "outputs": [
+        "candidate_generation_allowed_only_after_trace_audit"
+      ],
+      "uncertainties": [
+        "even a decisive negative result will not refute any t>0 or time-integrated actual-solution estimate"
+      ],
+      "residuals": [
+        "global regularity remains open"
+      ],
+      "next_steps": [
+        "freeze the exact snapshot hypothesis as candidate NS-R001d-C001",
+        "execute exact Gaussian moment and scaling checks",
+        "if refuted, open a positive-time/time-integrated child atom with fresh context"
+      ],
+      "artifact_hash": "sha256:193472a4c4d2bf005240f5298fc9572baff8eafac9027ba168ba6624be5f7838",
+      "previous_event_hash": "sha256:6c81d1ce1475d2002715b0805b48f4d0f968518a3705f43b25ed7f82542de354"
+    }
+  ]
+}
