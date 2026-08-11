@@ -1,0 +1,73 @@
+{
+  "schema_version": "root-coordinate-preservation-receipt-v1",
+  "receipt_id": "RCP-XM009-BSD-PLECTIC-PRODUCER-R5",
+  "root_claim_id": "BSD-A1a1-COMPLEX-RANK2-PLECTIC-BRIDGE",
+  "root_coordinate": "COMPLEX_ANALYTIC_RANK_TWO_TO_NONZERO_ROOT_FAITHFUL_PLECTIC_WITNESS",
+  "surrogate_coordinate": "PLECTIC_OR_HEEGNER_WITNESS_CONSTRUCTIBLE",
+  "bridge_edges": [
+    {
+      "edge_id": "RCP-XM009-E1-CONSTRUCTION-TO-NONVANISHING",
+      "source_coordinate": "PLECTIC_OR_HEEGNER_WITNESS_CONSTRUCTIBLE",
+      "target_coordinate": "NONZERO_ROOT_FAITHFUL_PLECTIC_WITNESS",
+      "interface_map": "construction/availability of the plectic object must be upgraded to nonvanishing of the same root-faithful witness",
+      "proof_status": "UNPROVED",
+      "enabling_assumptions": [
+        "same plectic object and auxiliary arithmetic scope as the downstream consumer theorem"
+      ]
+    },
+    {
+      "edge_id": "RCP-XM009-E2-NONVANISHING-TO-COMPLEX-RANK2-PRODUCER",
+      "source_coordinate": "NONZERO_ROOT_FAITHFUL_PLECTIC_WITNESS",
+      "target_coordinate": "COMPLEX_ANALYTIC_RANK_TWO_TO_NONZERO_ROOT_FAITHFUL_PLECTIC_WITNESS",
+      "interface_map": "the witness nonvanishing must be produced from the exact complex analytic-rank-two datum, not assumed or inferred from a converse",
+      "proof_status": "UNPROVED",
+      "enabling_assumptions": [
+        "proved complex-to-p-adic or higher Gross-Zagier/explicit-reciprocity bridge at the required elliptic-curve scope"
+      ]
+    }
+  ],
+  "obligations": [
+    {
+      "obligation_id": "RCP-XM009-O1-EXACT-PRODUCER",
+      "description": "derive nonzero root-faithful plectic/global witness from exact complex analytic rank two",
+      "non_compensatory": true,
+      "discharged_by_surrogate_evidence_only": false
+    },
+    {
+      "obligation_id": "RCP-XM009-O2-SAME-WITNESS",
+      "description": "bind the produced witness to the same object consumed by the downstream Selmer/arithmetic theorem under all auxiliary hypotheses",
+      "non_compensatory": true,
+      "discharged_by_surrogate_evidence_only": false
+    }
+  ],
+  "known_disanalogies": [
+    "rank-one classical Heegner specialization has Gross-Zagier/Kolyvagin producer control while higher-rank plectic significance in the audited family is not thereby proved",
+    "p-adic derivative identities do not identify the complex s-derivative order without a separate comparison theorem",
+    "nonzero plectic witness implies a Selmer conclusion in a theorem direction that cannot be reversed"
+  ],
+  "source_authority": "ESTABLISHED",
+  "target_authority": "PROPOSAL_ONLY",
+  "cheapest_hostile_world": "the plectic/Heegner witness is constructible in both rank-one and higher-rank settings, but only the rank-one scope carries the audited analytic-rank-to-nonzero-witness producer theorem",
+  "registered_observations": [
+    {
+      "state_id": "XM009-RANK1-HEEGNER-POSITIVE-CONTROL",
+      "projected_state": "PLECTIC_OR_HEEGNER_WITNESS_CONSTRUCTIBLE",
+      "registered_downstream_outcome": "ANALYTIC_RANK_TO_NONZERO_WITNESS_PRODUCER_ESTABLISHED_IN_RANK1_SCOPE"
+    },
+    {
+      "state_id": "XM009-RANK2-PLECTIC-AUDITED-CONTROL",
+      "projected_state": "PLECTIC_OR_HEEGNER_WITNESS_CONSTRUCTIBLE",
+      "registered_downstream_outcome": "COMPLEX_ANALYTIC_RANK2_TO_NONZERO_PLECTIC_WITNESS_PRODUCER_UNPROVED_IN_BOUNDED_AUDITED_SCOPE"
+    }
+  ],
+  "reverification_triggers": [
+    "a primary theorem is found with complex analytic rank exactly two as input and nonzero same plectic/global witness as conclusion",
+    "the downstream consumer changes to a different witness object or auxiliary arithmetic scope",
+    "a proved complex/p-adic comparison closes RCP-XM009-E2"
+  ],
+  "prior_failure_ids": [
+    "F-BSD-A1A1-PLECTIC-NONVANISHING-RELATION-GAP",
+    "F-XM001-POINTWISE-GAP-COLLAPSE"
+  ],
+  "receipt_canonical_sha256": "f24ea6beca68422133510049c93c9b0deae7b39c4dd86f48094a69a78bfc8540"
+}
