@@ -1,0 +1,146 @@
+{
+  "schema": "RAKL-v3-shadow-MathContextFiber",
+  "root_contract": {
+    "problem": "Riemann Hypothesis",
+    "exact_statement": "Every nontrivial zero rho of zeta(s) has Re(rho)=1/2.",
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "success_requires": [
+      "exact RH statement binding",
+      "closed proof DAG",
+      "dependency/axiom/verifier audits",
+      "relevant barrier audit",
+      "isolated recheck where supported",
+      "bounded novelty search",
+      "three genuinely isolated mathematical reviews"
+    ]
+  },
+  "framework": {
+    "method_version": "3.0.0",
+    "rakl_main_sha": "a2db16d56d03d16c4e7b9dc8684263d8661b89fc",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "v3_features_used": [
+      "ProblemAtom/ProblemFibre semantics",
+      "TaskEpisode proposal-shadow storage semantics",
+      "seven-axis SaturationVector",
+      "state_fingerprint_v2 awareness",
+      "scientific-authority noninterference boundary"
+    ],
+    "authority_note": "No scientific authority transition invoked; record_task_episode/experience-guided routing is authority-inert under current v3 transition ownership."
+  },
+  "application": {
+    "rakl_math_main_base": "55f1b786396f0f29ee4edd7e80b0b0023b34e90f",
+    "predecessor_shadow_pr": 147,
+    "predecessor_shadow_head": "8550ec822f23f79f197ea486b03dcd544d77c4fc",
+    "predecessor_final_trace_hash": "sha256:a45f41ceeb2fc8d7dd607f4d4cc0637ee6b79aaeef32f6beeebd3e683bb24b20",
+    "framework_pin": "f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
+    "framework_pin_lag_commits": 48
+  },
+  "problem_atom": {
+    "atom_id": "RH-ANA-003b",
+    "goal": "Before seeking a whole-component bound, determine whether unconditional subexponential control of Coffey's S_Lambda(n) is actually a strictly weaker supporting lemma or already RH-strength.",
+    "problem_signature": [
+      "RH",
+      "Li-arithmetic",
+      "Coffey-SLambda",
+      "whole-component-root-strength-audit",
+      "all-n"
+    ],
+    "structural_coordinates": [
+      "Li coefficients",
+      "S2=S_gamma+S_Lambda",
+      "von Mangoldt Laguerre series",
+      "polynomial remainder",
+      "false-RH exponential alternative",
+      "root-strength implication"
+    ],
+    "desired_effects": [
+      "falsify circular child atom",
+      "separate local versus gluing failure",
+      "open strictly weaker successor if needed"
+    ]
+  },
+  "success_contract": {
+    "route_local_success": "Either certify with primary-source logic that a whole-S_Lambda bound is strictly weaker than RH, or prove that the proposed asymptotic target already carries root strength and re-atomize before further bound search.",
+    "forbidden_promotions": [
+      "No RH theorem from source recombination alone",
+      "No Li-sign theorem",
+      "No mathematical novelty claim",
+      "No independent-review credit from same-context expert roles",
+      "No scientific-authority transition"
+    ]
+  },
+  "actual_fibre_consulted": {
+    "knowledge": [
+      "Coffey math-ph/0505052 Theorem 1; Theorem 2 and its stated upper bound",
+      "Coffey 0706.0343v2 Proposition 2",
+      "Lagarias math/0404394v4 Theorem 1.1 and false-RH paragraph"
+    ],
+    "episodes": [
+      "EP-RH-ANA-003a-MAGNITUDE-TRANSPORT-20260811-R2",
+      "EP-RH-ANA-003-TRIANGULAR-UNIFORMITY-20260811"
+    ],
+    "failures": [
+      "F-RH-ANA-003a-TERM-WISE-ABSOLUTE-MAJORANT",
+      "F-RH-ANA-003a-MAGNITUDE-TO-LI-SIGN",
+      "F-RH-ANA-003-FIXED-N-TO-ALL-N",
+      "F-RH-ANA-003-ZERO-DENSITY-NONVANISH",
+      "F-XM001-POINTWISE-GAP-COLLAPSE"
+    ],
+    "tools": [
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "T-RH-LI-PREFIX-QUARTET-CALIBRATION"
+    ],
+    "motifs": [
+      "M-RH-ANA-CANCELLATION-BEFORE-MAJORANT",
+      "M-RH-ANA-FIXED-PARAMETER-TO-ALL-INDEX-QUANTIFIER"
+    ]
+  },
+  "analogues_disanalogies": [
+    {
+      "analogue": "Bombieri-Lagarias / Lagarias false-RH exponential Li behavior",
+      "preserved_structure": "an off-line zero creates exponential-scale Li behavior",
+      "difference": "used only as a root-strength discriminator, not as a construction of the missing prime bound"
+    },
+    {
+      "analogue": "Yang-Mills root-bridge stability audit",
+      "preserved_structure": "a locally phrased support certificate may silently have root-level force through an exact bridge",
+      "difference": "no spectral, lattice, continuum, or Yang-Mills mathematics transfers; only the audit operation is reused"
+    }
+  ],
+  "expert_cell": [
+    {
+      "id": "E-ANT",
+      "background": "analytic number theory; zeta, Li criteria, explicit formulas",
+      "role": "bind exact Li identities and RH implication"
+    },
+    {
+      "id": "E-PRIME",
+      "background": "prime number theory; von Mangoldt and finite-place sums",
+      "role": "audit S_Lambda source definition and cancellation structure"
+    },
+    {
+      "id": "E-ASYM",
+      "background": "asymptotic and complex analysis",
+      "role": "separate polynomial/subexponential/exponential scales"
+    },
+    {
+      "id": "E-FALS",
+      "background": "adversarial mathematical falsification",
+      "role": "test whether proposed child lemma is circular/root-strength"
+    },
+    {
+      "id": "E-VERIFY",
+      "background": "formal proof structure and dependency auditing",
+      "role": "separate source theorem, algebraic derivation, implication, and gluing"
+    },
+    {
+      "id": "E-RAKL",
+      "background": "RAKL v3 provenance, experience, saturation and metrology",
+      "role": "enforce proposal/shadow authority and telemetry"
+    }
+  ],
+  "source_cutoff": "Primary-source technical claims checked 2026-08-11; bounded later-literature search performed; non-primary claimed proofs rejected as authority.",
+  "proposal_authority": "SHADOW_ONLY",
+  "fibre_snapshot_hash": "sha256:79ebeb3951a78ff17dca4aa1cf1ce1a33a092f6c8d00d82125f515d45c01f027",
+  "hash_scope": "canonical JSON before insertion of fibre_snapshot_hash/hash_scope"
+}
