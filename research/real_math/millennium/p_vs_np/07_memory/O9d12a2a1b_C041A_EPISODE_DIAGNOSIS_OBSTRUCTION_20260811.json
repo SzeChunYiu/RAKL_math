@@ -1,0 +1,158 @@
+{
+  "schema_version": "rakl-math-v3-experience-separation-v1",
+  "cycle_id": "PNP-O9d12a2a1b-C041A-ODD-SLICE-COPY-20260811",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "episode": {
+    "id": "EP-PNP-O9d12a2a1b-C041A-ODD-SLICE-20260811",
+    "fact": "The selected odd-slice copy rule preserves the complete cover graph exactly and therefore produces zero integral and fractional cover augmentation.",
+    "outcome": "FAILURE",
+    "residual_signature": [
+      "ZERO_AUGMENTATION",
+      "NO_POSITIVE_RECURRENCE_FROM_SELECTED_RULE"
+    ],
+    "authority_effect": "SEARCH_PRIORITY_ONLY"
+  },
+  "diagnosis": {
+    "id": "DX-PNP-C041A-ZERO-AUGMENTATION-20260811",
+    "episode_id": "EP-PNP-O9d12a2a1b-C041A-ODD-SLICE-20260811",
+    "category": "MATHEMATICAL_LOCAL",
+    "diagnosis": "The rule solves the old-support transport problem too strongly: every relevant child cover object is an isomorphic copy of a parent object. There is no new relevant semi-filter on which fresh dual mass could live. The failure is not retrieval, source, verification, tooling, representation identity, or local-to-global gluing; it is a local mathematical zero-augmentation result for this operator family.",
+    "confidence": "PROOF_BOUND_PROPOSAL_SHADOW"
+  },
+  "failure": {
+    "id": "F-C041A-COPY-ONLY-COVER-GRAPH-ISOMORPHISM",
+    "diagnosis_id": "DX-PNP-C041A-ZERO-AUGMENTATION-20260811",
+    "scope": "Uniform complement-extension rules whose child complement is exactly an isolated relabeled copy of the parent complement and adds no off-slice complement points.",
+    "negative_history": "Do not retry pure copy/relabelling extensions as amplification candidates. Isomorphic preservation can prove transport while forcing zero growth.",
+    "repeat_links": [
+      {
+        "prior_id": "F-C037-ARBITRARY-EXTENSION-NONMONOTONE",
+        "relation": "DIFFERENCE_WITNESS",
+        "note": "C037 loses relevance; C041A preserves relevance but still fails by zero augmentation."
+      },
+      {
+        "prior_id": "C041-CONTEXT-WARNING-PERSISTENCE-NOT-AUGMENTATION",
+        "relation": "CONFIRMS_PREDECLARED_SEPARATION",
+        "note": "The parent context explicitly warned that persistence creates no new mass. C041A supplies an exact operator-level witness."
+      }
+    ]
+  },
+  "obstruction": {
+    "id": "O-PNP-C041A-SATURATED-NEIGHBORHOOD-AUGMENTATION",
+    "derived_from": [
+      "EP-PNP-O9d12a2a1b-C041A-ODD-SLICE-20260811",
+      "DX-PNP-C041A-ZERO-AUGMENTATION-20260811",
+      "T-PNP-FRACTIONAL-SEMIFILTER-PACKING"
+    ],
+    "statement": "After transporting old dual mass, positive fresh mass on a new relevant semi-filter K is impossible whenever at least one saturated lifted pair covers K. A one-coordinate augmentation exists exactly when K avoids all saturated-pair coverage neighborhoods.",
+    "scope": "Finite child cover graph, fixed lifted old dual, one-coordinate fresh augmentation.",
+    "authority": "PROPOSAL_SHADOW_EXACT_LOCAL_LEMMA",
+    "not_claimed": [
+      "existence of such K for a graph-realizable uniform extension",
+      "multi-coordinate augmentation characterization",
+      "divergent recurrence",
+      "root circuit lower bound"
+    ]
+  },
+  "lesson_candidate": {
+    "id": "L-PNP-C041A-PERSISTENCE-NOT-AUGMENTATION",
+    "status": "CANDIDATE_ONLY_NOT_PROMOTED",
+    "lesson": "For recursive dual-amplification searches, separate old-certificate transport from residual-capacity creation. After proving transport, compile saturated old constraints and demand a fresh witness that avoids them before spending effort on recurrence/rate analysis.",
+    "episode_support": [
+      "EP-PNP-O9d12a2a1b-C041A-ODD-SLICE-20260811"
+    ],
+    "transfer_status": "UNVERIFIED"
+  },
+  "motif_candidate": {
+    "id": "M-PNP-SLICE-TRANSPORT-THEN-SLACK-AVOIDANCE",
+    "status": "CANDIDATE_ONLY_NOT_PROMOTED",
+    "sequence": [
+      "freeze a source-compatible embedding",
+      "prove old relevance/dual transport",
+      "compute or characterize saturated constraints",
+      "seek a graph-realizable fresh witness outside saturated neighborhoods",
+      "only then test recurrence and rate"
+    ]
+  },
+  "experience_routing": {
+    "prior_success_or_failure_that_changed_route": [
+      {
+        "id": "F-C037-ARBITRARY-EXTENSION-NONMONOTONE",
+        "effect": "Changed the operator choice from arbitrary extension to a slice-preserving rule with exact relevance control."
+      },
+      {
+        "id": "T-PNP-FRACTIONAL-SEMIFILTER-PACKING",
+        "effect": "Changed verification from heuristic cover growth to exact dual load transport and residual slack."
+      },
+      {
+        "id": "C041-PRE-ACTION-DISCRIMINATOR",
+        "effect": "Forced ZERO_AUGMENTATION to be treated as a terminal mathematical failure world for the selected rule rather than patched post hoc."
+      },
+      {
+        "id": "RAKL_math#179",
+        "effect": "Live current-work source recovery caused route rotation away from Wig95 duplication."
+      },
+      {
+        "id": "RAKL_math#162",
+        "effect": "Live current-work transfer-polarity audit caused route rotation away from restricted/full duplication."
+      }
+    ],
+    "retrieved_but_rejected": [
+      {
+        "id": "C038-AS-AUGMENTATION-THEOREM",
+        "why": "Wrong authority and wrong implication: persistence is not augmentation."
+      },
+      {
+        "id": "EXTERNAL-U9-U10-U11-RECURRENCE",
+        "why": "Missing exact certificates; finite reported values cannot authorize recurrence."
+      },
+      {
+        "id": "ABSOLUTE-TRACE-RICHNESS",
+        "why": "Saturated failure family from zero-cost shattering."
+      },
+      {
+        "id": "INCREMENTAL-TRACE-LIPSCHITZNESS",
+        "why": "Sibling route with known gluing defect; does not decide the C041 residual-capacity atom."
+      }
+    ],
+    "known_missed_prior_experience": [],
+    "exhaustive_miss_count": "CANNOT_MEASURE: open-world repository and literature coverage is not exhaustively enumerable from the connector session."
+  },
+  "local_vs_gluing": {
+    "local_mathematical_status": "SOLVED_PROPOSAL_SHADOW_NEGATIVE_FOR_SELECTED_RULE",
+    "local_failure_id": "F-C041A-COPY-ONLY-COVER-GRAPH-ISOMORPHISM",
+    "gluing_status": "OPEN_NOT_A_FAILURE_OF_THE_LOCAL_PROOF",
+    "gluing_residual_id": "GLUE-PNP-C041A-LOCAL-TRANSPORT-TO-DIVERGENT-ROOT-RATE",
+    "gluing_residuals": [
+      "construct graph-realizable off-slice residual capacity",
+      "iterate with a uniform positive lower bound",
+      "prove divergence and root-relevant rate",
+      "preserve source graph/Boolean transfer",
+      "supply NP membership or lower-bound-preserving NP reduction"
+    ]
+  },
+  "saturation_observation": {
+    "protected_state_mutated": false,
+    "retained_semantic_novelty": {
+      "KNOWLEDGE": 0,
+      "OPERATOR": 0,
+      "EXPERIENCE_PATTERN": 0,
+      "OBSTRUCTION": 0,
+      "RELATION": 0,
+      "PATH": 0,
+      "META_METHOD": 0
+    },
+    "shadow_axes_reopened": [
+      "OBSTRUCTION",
+      "PATH"
+    ],
+    "why_reopened": "The exact zero-augmentation witness and saturated-neighborhood residual identify a new child discriminator, but no protected saturation state is updated before admission/promotion gates.",
+    "axes_flattened": [],
+    "local_family_flattened": "PURE_COPY_OR_RELABEL_EXTENSION"
+  },
+  "novelty_class_shadow": [
+    "REPRESENTATION_NOVEL",
+    "COMPOSITIONAL"
+  ],
+  "novelty_authority": "NONE"
+}
