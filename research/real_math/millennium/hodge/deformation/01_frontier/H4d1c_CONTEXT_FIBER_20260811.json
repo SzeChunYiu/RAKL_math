@@ -1,0 +1,62 @@
+{
+  "atom_id": "H4d1c",
+  "cycle_id": "H4d1c-C001-MARKED-UNMARKED-INCIDENCE-20260811",
+  "authority": "PROPOSAL_SHADOW_CONTEXT_ONLY",
+  "root_scope": "Rational Hodge Conjecture for smooth projective complex varieties; no integral/generalized/Tate substitution.",
+  "parent": "H4d1b",
+  "problem_signature": "After H4d1b normalized complete first-order obstruction vanishing to tangent surjectivity for a fixed chosen witness, determine whether fixed-witness tangent surjectivity is actually necessary for class propagation, or whether a class-constrained unmarked incidence image can dominate the Hodge branch while witnesses switch.",
+  "frozen_objects": {
+    "family": "f:X->S smooth projective complex",
+    "base_point": "s0 in S",
+    "class": "flat rational alpha, type (p,p) along fixed irreducible local Hodge branch T through s0",
+    "central_witness": "one finite signed rational witness z0 for alpha at s0, with coefficient vector preserved only on the marked route",
+    "marked_incidence": "pi_marked: W_{alpha,z0}->T, local branch through z0",
+    "unmarked_incidence": "pi_unmarked: W_alpha^class->T, union/stack/local finite collection of coefficient-safe witness components constrained to realize alpha"
+  },
+  "success_contract": [
+    "MARKED route: prove d pi_marked at z0 is onto T_s0 T, then separately higher-order/formal/algebraization/global continuation.",
+    "UNMARKED route: prove a class-constrained incidence image contains the relevant Hodge-branch germ (or another source-bound statement that yields an algebraic representative of alpha_s at each nearby s), without silently asserting deformation of z0.",
+    "For rational signed cycles, the unmarked incidence must retain a finite coefficient-safe witness category or otherwise prove exact equality of the realized rational class to alpha_s.",
+    "No first-order image/dimension statement may be promoted to all-order lifting without a fresh higher-order check."
+  ],
+  "adversarial_controls": [
+    "Map A1->A1, x↦x^2: image is all of A1 over C, but d pi_0=0; unpointed image dominance does not imply marked tangent surjectivity.",
+    "Disjoint-union incidence: one rigid marked point over s0 plus a different component dominating T; existence of some nearby witness does not deform the chosen z0.",
+    "Nonreduced Hodge loci: tangent agreement can fail to control higher-order branch structure.",
+    "Witness switching can lose the exact rational class unless class/coefficient constraints are built into the incidence object."
+  ],
+  "solved_or_nearsolved_controls": [
+    {
+      "id": "KLOOSTERMAN-CI-HYPERSURFACE",
+      "source": "Remke Kloosterman, arXiv:2104.14845v2 (2021), Theorem 4.14 and Proposition 3.2",
+      "usable_fact": "For complete-intersection cycles in smooth hypersurfaces in projective space, the local Hodge locus is smooth and its irreducible component coincides with the unpointed locus of hypersurfaces containing a complete intersection of the fixed multidegree.",
+      "disanalogy": "The theorem identifies a geometric image locus; it does not state that the originally marked Z deforms along every Hodge direction. Its flag-Hilbert proof contains additional tangent/fiber information but the marked surjectivity implication requires a separate pointwise smoothness/rank audit."
+    },
+    {
+      "id": "BRUZZO-MONTOYA-TORIC",
+      "source": "Bruzzo–Montoya, European J. Math. 9 (2023) 108, Theorem 5.4; arXiv:2203.00664 provenance",
+      "usable_fact": "Under Macaulay-type and degree hypotheses, the local Noether-Lefschetz locus is an irreducible component of the projection of a flag Hilbert scheme, and the Hodge class deforms algebraically iff it remains Hodge.",
+      "disanalogy": "This is a class-existence/unpointed incidence statement in a special toric setting, not a general smooth-projective fixed-witness deformation theorem."
+    }
+  ],
+  "memory_policy": {
+    "selected_prior_ids": [
+      "H4d1b-C001",
+      "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO",
+      "F-H4D1-DETECTOR-KERNEL-GAP"
+    ],
+    "rejected_duplicate": "The cycle's pre-memory idea to type complete obstruction vs detector was rejected as already stored in H4d1b.",
+    "cross_millennium": "No cross-Millennium item used; no applicability-preserving match was needed for this representation audit."
+  },
+  "saturation_pre": {
+    "KNOWLEDGE": "flat",
+    "OPERATOR": "flat",
+    "EXPERIENCE_PATTERN": "reopened by duplicate-detection routing",
+    "OBSTRUCTION": "reopened",
+    "RELATION": "reopened",
+    "PATH": "reopened",
+    "META_METHOD": "flat"
+  },
+  "frozen_at": "2026-08-11T19:43:53Z",
+  "fibre_snapshot_hash": "sha256:b3cd5b334cfe24a8cd95081b4828802b362e3e11d9505b09bd11c0b15de080c7"
+}
