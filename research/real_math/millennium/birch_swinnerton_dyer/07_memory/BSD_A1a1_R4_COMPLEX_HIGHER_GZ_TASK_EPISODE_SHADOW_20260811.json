@@ -1,60 +1,84 @@
 {
-  "schema_version": "bsd-v3-case-study-episode-v1",
-  "artifact_type": "TASK_EPISODE_SHADOW",
-  "episode_id": "EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4",
+  "schema_version": "bsd-v3-case-study-episode-v2",
+  "artifact_type": "TASK_EPISODE_EXTENDED_SHADOW_CASE_STUDY",
+  "shadow_episode_id": "EP-BSD-A1A1-COMPLEX-HIGHER-GZ-20260811-R4",
+  "strict_task_episode_companion": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R4_CURRENT_V3_TASK_EPISODE_SHADOW_20260811.taskepisode",
+  "shadow_admission_companion": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R4_CURRENT_V3_EPISODE_ADMISSION_20260811.episodeadmission",
   "task_id": "RAKL-VERIFIED-DISCOVERY-BSD-ANALYTIC",
   "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
   "authority": "PROPOSAL_SHADOW_SEARCH_PRIORITY_ONLY",
   "framework": {
     "preaction_semantic_sha": "eca9697cdd86cf97890815ece8d5776bbb294c3f",
-    "latest_observed_sha": "559e4b1dbbd209818f88ded0933e4d7b256b9011",
+    "latest_observed_sha": "3299072b410ac9136548dfd103e846fc7656c31e",
     "method_version": "3.0.0",
     "execution_dependency_pin": "787c7e00af2a5877ccb715bc807ec14f52974e9c",
-    "framework_drift_classification": "POST_FREEZE_NON_METHOD_SEMANTIC_DRIFT; compare eca9697..559e4b1 shows no changes to method_specs/version/math-research workflow/experience substrate"
+    "framework_drift_classification": "POST_SEARCH_CURRENT_V3_EVOLUTION: current main adds explicit TaskEpisode storage/admission separation and related v3 machinery. Preaction chronology remains bound to eca9697; current semantics are adopted for shadow storage only and cannot grant protected authority."
   },
   "application_base_sha": "812addd25a7f34d3c6272143e21d5d7db34539aa",
   "context_hash": "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d",
-  "problem_signature": ["Birch and Swinnerton-Dyer rank-two analytic-to-arithmetic bridge", "complex s-derivative order two", "higher Gross-Zagier terminology disambiguation", "number-field versus function-field arithmetic intersection", "p-adic derivative coordinate faithfulness", "Mordell-Weil/regulator/Sha gluing"],
+  "problem_signature": [
+    "Birch and Swinnerton-Dyer rank-two analytic-to-arithmetic bridge",
+    "complex s-derivative order two",
+    "higher Gross-Zagier terminology disambiguation",
+    "number-field versus function-field arithmetic intersection",
+    "p-adic derivative coordinate faithfulness",
+    "Mordell-Weil/regulator/Sha gluing"
+  ],
   "fibre_contents_consulted": [
-    {"kind":"CONTEXT","id":"BSD_A1a1_THETA_ORDER_CONTEXT_FIBER_20260811","effect":"kept complex-s and p-adic/T coordinates distinct"},
-    {"kind":"MEMORY","id":"BSD_A1a1_RESEARCH_MEMORY_REVIEW_20260811","effect":"selected root-bridge audit and warnings"},
-    {"kind":"PRIOR_EPISODE","id":"EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3","effect":"prevented another plectic/scalar accumulation pass and set exact complex-to-plectic discriminator"},
-    {"kind":"PRIOR_FAILURE","id":"F-BSD-A1A1-PLECTIC-NONVANISHING-RELATION-GAP-V3-RETROSPECTIVE","effect":"required first-arrow closure before downstream Selmer theorems count"},
-    {"kind":"TOOL","id":"T-XM-ROOT-BRIDGE-STABILITY-AUDIT","effect":"forced coordinate-preservation and same-theory gluing checks"},
-    {"kind":"FAILURE_WARNING","id":"F-XM001-POINTWISE-GAP-COLLAPSE","effect":"warning only against surrogate/root collapse"},
-    {"kind":"NONCANONICAL_PROPOSAL","id":"RAKL_math-PR-41","effect":"consulted as noncanonical derived-height route evidence only"}
+    {"kind": "CONTEXT", "id": "BSD_A1a1_THETA_ORDER_CONTEXT_FIBER_20260811", "effect": "kept complex-s and p-adic/T coordinates distinct"},
+    {"kind": "MEMORY", "id": "BSD_A1a1_RESEARCH_MEMORY_REVIEW_20260811", "effect": "selected root-bridge audit and warnings"},
+    {"kind": "PRIOR_EPISODE", "id": "EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3", "effect": "prevented another plectic/scalar accumulation pass and set exact complex-to-plectic discriminator"},
+    {"kind": "PRIOR_FAILURE", "id": "F-BSD-A1A1-PLECTIC-NONVANISHING-RELATION-GAP-V3-RETROSPECTIVE", "effect": "required first-arrow closure before downstream Selmer theorems count"},
+    {"kind": "TOOL", "id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT", "effect": "successfully reused as a scoped coordinate-preservation and same-theory gluing diagnostic"},
+    {"kind": "FAILURE_WARNING", "id": "F-XM001-POINTWISE-GAP-COLLAPSE", "effect": "warning only against surrogate/root collapse"},
+    {"kind": "NONCANONICAL_PROPOSAL", "id": "RAKL_math-PR-41", "effect": "consulted as noncanonical derived-height route evidence only"}
   ],
   "operators_and_motifs": [
-    {"id":"memory","status":"INVOKED"},{"id":"routing","status":"INVOKED"},{"id":"search_query_generation","status":"INVOKED"},{"id":"source_selection_reliability","status":"INVOKED"},{"id":"claim_extraction","status":"INVOKED"},{"id":"ontology_terminology_normalization","status":"INVOKED"},{"id":"mathematical_context_translation","status":"INVOKED"},{"id":"equivalence_similarity","status":"INVOKED"},{"id":"contextual_theory_gluing","status":"INVOKED"},{"id":"contradiction_diagnosis","status":"INVOKED"},{"id":"gap_discovery","status":"INVOKED"},{"id":"experiment_query_selection","status":"INVOKED"},{"id":"synthesis","status":"INVOKED"},{"id":"review","status":"INVOKED"},{"id":"saturation_stopping","status":"INVOKED"},{"id":"REPEAT_SCALAR_THETA_ORDER_SCAN","status":"REJECTED"},{"id":"TREAT_P_ADIC_SECOND_DERIVATIVE_AS_COMPLEX_SECOND_DERIVATIVE","status":"REJECTED"},{"id":"TRANSFER_FUNCTION_FIELD_SHTUKA_IDENTITY_AS_NUMBER_FIELD_THEOREM","status":"REJECTED"}
+    {"id": "memory", "status": "INVOKED"}, {"id": "routing", "status": "INVOKED"}, {"id": "search_query_generation", "status": "INVOKED"}, {"id": "source_selection_reliability", "status": "INVOKED"}, {"id": "claim_extraction", "status": "INVOKED"}, {"id": "ontology_terminology_normalization", "status": "INVOKED"}, {"id": "mathematical_context_translation", "status": "INVOKED"}, {"id": "equivalence_similarity", "status": "INVOKED"}, {"id": "contextual_theory_gluing", "status": "INVOKED"}, {"id": "contradiction_diagnosis", "status": "INVOKED"}, {"id": "gap_discovery", "status": "INVOKED"}, {"id": "experiment_query_selection", "status": "INVOKED"}, {"id": "synthesis", "status": "INVOKED"}, {"id": "review", "status": "INVOKED"}, {"id": "saturation_stopping", "status": "INVOKED"},
+    {"id": "REPEAT_SCALAR_THETA_ORDER_SCAN", "status": "REJECTED"},
+    {"id": "TREAT_P_ADIC_DERIVATIVE_AS_COMPLEX_S_DERIVATIVE", "status": "REJECTED"},
+    {"id": "TRANSFER_FUNCTION_FIELD_SHTUKA_IDENTITY_AS_NUMBER_FIELD_THEOREM", "status": "REJECTED"}
   ],
-  "search_policy_choice": {"policy":"COUNTEREXAMPLE_FIRST_EXACT_COMPLEX_DERIVATIVE_BRIDGE_SEARCH","why":"prior plectic cycle left first relation open; exact derivative-coordinate and theorem-strength classification maximizes information gain"},
+  "search_policy_choice": {"policy": "COUNTEREXAMPLE_FIRST_EXACT_COMPLEX_DERIVATIVE_BRIDGE_SEARCH", "why": "prior plectic cycle left first relation open; exact derivative-coordinate and theorem-strength classification maximizes information gain"},
   "observations": [
-    {"id":"OBS-BSD-R4-CASTELLA-HSIEH-2026","source":"arXiv:1809.09066 current manuscript dated 2026-03-22","statement":"target-near generalized-Kato theorem uses algebraic/strict-Selmer input; analytic-rank-two equivalence remains in Darmon-Rotger conjecture, and Corollary B assumes rank two plus finite p-primary Sha"},
-    {"id":"OBS-BSD-R4-YUN-ZHANG","source":"arXiv:1512.02683","statement":"function-field r-th complex central derivative equals Heegner-Drinfeld self-intersection, supplying a solved higher-derivative structural analogue"},
-    {"id":"OBS-BSD-R4-LILIENFELDT-SHNIDMAN","source":"arXiv:2408.04375","statement":"number-field higher-cycle/higher-weight formula concerns a central first derivative, not complex derivative order two for E/Q"},
-    {"id":"OBS-BSD-R4-DU-PENG","source":"arXiv:2603.15795v1","statement":"current higher-weight arithmetic-intersection result is central-derivative Gross-Zagier-Zhang type, not the rank-two E/Q second-complex-derivative cell"},
-    {"id":"OBS-BSD-R4-ISHIKAWA","source":"arXiv:1409.8584","statement":"second derivative formula is for a two-variable p-adic L-function/Hida coordinate, not complex s"}
+    {"id": "OBS-BSD-R4-CASTELLA-HSIEH-2026", "source": "arXiv:1809.09066 current manuscript dated 2026-03-22", "statement": "target-near generalized-Kato theorem uses algebraic/strict-Selmer input; analytic-rank-two equivalence remains conjectural, and Corollary B assumes rank two plus finite p-primary Sha"},
+    {"id": "OBS-BSD-R4-YUN-ZHANG", "source": "arXiv:1512.02683", "statement": "function-field r-th complex central derivative equals Heegner-Drinfeld self-intersection, supplying a solved higher-derivative structural analogue"},
+    {"id": "OBS-BSD-R4-LILIENFELDT-SHNIDMAN", "source": "arXiv:2408.04375", "statement": "number-field higher-cycle/higher-weight formula concerns a central first derivative, not complex derivative order two for E/Q"},
+    {"id": "OBS-BSD-R4-DU-PENG", "source": "arXiv:2603.15795v1", "statement": "higher-weight arithmetic-intersection result is central-derivative Gross-Zagier-Zhang type, not the rank-two E/Q second-complex-derivative cell"},
+    {"id": "OBS-BSD-R4-ISHIKAWA", "source": "arXiv:1409.8584", "statement": "second derivative formula is for a two-variable p-adic L-function/Hida coordinate, not complex s"}
   ],
-  "verification_performed": ["preaction discriminator and six-role review committed before bounded prospective search","primary-source-only technical search and exact arXiv scope checks","current Castella-Hsieh manuscript theorem/conjecture/Corollary B selectors checked","function-field versus number-field DifferenceWitness recorded","p-adic versus complex derivative coordinate checked explicitly","latest RAKL main re-read after search and framework drift compared against preaction semantic subject"],
+  "verification_performed": [
+    "preaction discriminator and six-role review committed before bounded prospective search",
+    "primary-source-only technical search and exact source-scope checks",
+    "current Castella-Hsieh theorem/conjecture/Corollary B selectors checked",
+    "function-field versus number-field DifferenceWitness recorded",
+    "p-adic versus complex derivative coordinate checked explicitly",
+    "current RAKL main re-read after search; current TaskEpisode admission semantics inspected and adopted for proposal-shadow storage"
+  ],
   "outcome": "PARTIAL_SUCCESS",
   "mathematical_result_scope": "SOURCE_BOUND_ONTOLOGY_AND_REPRESENTATION_ROUTE_REFINEMENT_NO_THEOREM",
-  "diagnosis": {"id":"D-BSD-A1A1-HIGHER-GZ-ONTOLOGY-MISMATCH-R4","status":"SUPPORTED_STATIC_DIAGNOSIS","summary":"The search term 'higher Gross-Zagier' conflates derivative order, weight/cycle codimension, and p-adic deformation order; located near-matches occupy adjacent cells rather than the exact target cell."},
+  "diagnosis": {"id": "D-BSD-A1A1-HIGHER-GZ-ONTOLOGY-MISMATCH-R4", "status": "SUPPORTED_STATIC_DIAGNOSIS", "summary": "The search term 'higher Gross-Zagier' conflates derivative order, weight/cycle codimension, and p-adic deformation order; located near-matches occupy adjacent cells rather than the exact target cell."},
   "failure_partition": {
     "mathematical": ["no exact target-cell number-field theorem located in bounded source set; no impossibility claim"],
     "representation": ["higher-weight first derivative and p-adic second derivative are not faithful representations of complex second derivative order"],
     "gluing": ["function-field r-th derivative/intersection identity lacks a number-field transfer; any future target-cell object still needs same-theory Mordell-Weil/regulator/Sha/local-factor gluing"],
     "retrieval": ["literature completeness cannot be certified; coverage universe not frozen"],
     "source_provenance": [],
-    "verification_tooling": [],
-    "meta_policy": ["application execution pin is stale but current framework was read directly; no gate weakening"]
+    "verification_tooling": ["legacy pinned application inventory scanner initially treated new proposal/shadow JSON records as frozen canonical-inventory additions; repaired without weakening the gate by using current content-bound shadow episode/admission companions and keeping non-TaskEpisode extended records out of the legacy episode-id heuristic"],
+    "meta_policy": ["application execution pin is stale; current framework was read directly and shadow-storage semantics adopted; no protected authority granted"]
   },
   "residual_before": ["complex analytic rank two -> proved nonzero root-faithful plectic/global object or regulator"],
-  "residual_after": ["normalize higher-Gross-Zagier queries by derivative order, weight/cycle codimension and p-adic deformation coordinate","target cell: number field + weight-two elliptic curve + complex s-derivative order two + root-faithful arithmetic output","seek target-cell theorem or exact comparison from existing plectic/generalized-Kato objects to such a complex higher-derivative arithmetic carrier","after any local bridge, separately close Mordell-Weil/regulator/Sha/Tamagawa/torsion gluing"],
-  "saturation_axes": {"retrieval_novelty":"REOPENED","tool_output_novelty":"FLATTENED","counterexample_pressure":"REOPENED","decomposition_yield":"REOPENED","expert_review_novelty":"REOPENED","method_novelty":"FLATTENED","transfer_novelty":"REOPENED"},
-  "novelty_classification": {"solved_route_diagnostic":"ontology","transfer_support":true,"bsd_mathematical_subproblem":"NOT_SOLVED"},
+  "residual_after": [
+    "normalize higher-Gross-Zagier queries by derivative order, weight/cycle codimension and p-adic deformation coordinate",
+    "target cell: number field + weight-two elliptic curve + complex s-derivative order two + root-faithful arithmetic output",
+    "seek target-cell theorem or exact comparison from existing plectic/generalized-Kato objects to such a complex higher-derivative arithmetic carrier",
+    "after any local bridge, separately close Mordell-Weil/regulator/Sha/Tamagawa/torsion gluing"
+  ],
+  "saturation_axes": {"retrieval_novelty": "REOPENED", "tool_output_novelty": "FLATTENED", "counterexample_pressure": "REOPENED", "decomposition_yield": "REOPENED", "expert_review_novelty": "REOPENED", "method_novelty": "FLATTENED", "transfer_novelty": "REOPENED"},
+  "novelty_classification": {"solved_route_diagnostic": "ontology", "transfer_support": true, "bsd_mathematical_subproblem": "NOT_SOLVED"},
   "next_action": "search only the normalized target cell or a source theorem comparing an existing plectic/generalized-Kato object with a complex higher-derivative arithmetic carrier; do not broaden via p-adic or higher-weight homonyms",
-  "new_authority_objects": {"lessons_promoted":[],"tools_promoted":[],"mathematical_candidates":[],"root_promotions":[]},
-  "successful_reuse_ids": [],
+  "new_authority_objects": {"lessons_promoted": [], "tools_promoted": [], "mathematical_candidates": [], "root_promotions": []},
+  "successful_reuse_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
   "recorded_at_utc": "2026-08-11T18:26:00Z",
-  "artifact_hash": "sha256:f685784a5ad38f5b77dc5eaaa21745b3b24db902c70c62302338d7d61456099d"
+  "artifact_hash": "sha256:7f00058e7a22d7e01a42154c2a2f39ca4180903feb1a3f67dbeecd9aba54c5fc"
 }
