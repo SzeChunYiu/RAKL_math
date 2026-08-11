@@ -9,7 +9,9 @@
     "target_branch_head_at_repair": "2b264d50b0bb224bfab62e7503656bc92d933b68",
     "live_main_at_repair": "b8f3467959f2f44a2cf686d9c005071739284dc8",
     "integration_commit_after_live_main_merge": "a423518794d7bbbfabfcf59ff14804491629b544",
-    "framework_authority_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
+    "framework_authority_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+    "provenance_merge_commit": "73f6c779aa5481cd68808c01448949c322f608f8",
+    "integration_anchor_commit": "73f6c779aa5481cd68808c01448949c322f608f8"
   },
   "chronology": {
     "pre_result_case_plan_commit": "03a4cb9a0bce32374d79210d8b712670c11626a7",
@@ -18,7 +20,9 @@
     "registration_is_ancestor_of_result": false,
     "evaluator_present_at_registration": false,
     "evaluator_identity_pre_result_frozen": false,
-    "authority": "RETROSPECTIVE_EXECUTABLE_ASSURANCE_CASE_PLAN_PRIOR_SELECTED"
+    "authority": "RETROSPECTIVE_EXECUTABLE_ASSURANCE_CASE_PLAN_PRIOR_SELECTED",
+    "result_is_durable_ancestor_of_integration_anchor": true,
+    "provenance_merge_commit": "73f6c779aa5481cd68808c01448949c322f608f8"
   },
   "source_result_provenance": {
     "commit": "1bfad13d82548fe61f70cd9f18828fe0240c8556",
@@ -39,7 +43,7 @@
     },
     "chronology_audit": {
       "path": "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_RETROSPECTIVE_ASSURANCE_CHRONOLOGY_AUDIT_20260811.json",
-      "file_sha256": "b8ae0c74aca2b1c46f064e6359276974727f7877c6481a8da3498a13e9c54572"
+      "file_sha256": "cac1476ebbe94aa376eb56b31ffa76019e1b67fb61f6abf6d26de1ae45db818b"
     },
     "canonical_negative_history": {
       "path": "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_joint_signature_canonical_scope.md",
@@ -67,7 +71,7 @@
     },
     "postresult_addendum": {
       "path": "research/real_math/millennium/p_vs_np/07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json",
-      "file_sha256": "639cf7138adce1d22e67fc8c2a56cdca280e7cc0e087683a3fbce02a34a7e858"
+      "file_sha256": "07d4a18432328ce9cda9874f10d8ccd3782c919f04de29a6e268bf24457c1c97"
     },
     "review": {
       "path": "research/real_math/millennium/p_vs_np/08_reviews/SAME_CONTEXT_RESULT_REVIEW_C025_20260811.md",
@@ -75,11 +79,11 @@
     },
     "trace_continuation": {
       "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a_C025_TRACE_CONTINUATION_20260811.json",
-      "file_sha256": "606e99c7bc80d3e5e6eedbc5963a211c073238bac0dd647c2e61394952fa5d49"
+      "file_sha256": "39ea623de6ff8f661a7d0a62e39322d416e2853281340a6be51cbb0005967d6e"
     },
     "retrospective_assurance_trace": {
       "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a_C025_PARALLEL_ASSURANCE_TRACE_20260811.json",
-      "file_sha256": "89d26fdc7781378acb6ae5f108831aadcc6cd4a9dc94094c4ec339b4c201f259"
+      "file_sha256": "9ccef91dccbaa65b0b448a46a2cbf1e85b29d769f7abe0f1acf2a651793ad8a2"
     }
   },
   "result": {
@@ -115,7 +119,7 @@
     "canonical_tool_id": "T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION",
     "canonical_tool_artifact_hash_preserved": "sha256:bff3cc8c347f3ad4b007775d69abadffd408b8db2b3863990baf7b5c76d87475",
     "postresult_addendum_id": "C025-POSTRESULT-ASSURANCE-ADDENDUM-v1",
-    "postresult_addendum_hash": "sha256:f1e01ed92594fa7524fda1e15318770124d65732083e43f1be36ccc5d4999fa1",
+    "postresult_addendum_hash": "sha256:7cf5cc38f0f94fe4b6cd6c19a662f8cef456724482c1119bfe1e32dcd3c7b460",
     "parallel_provisional_failure_id": {
       "id": "F-C025-FIRST-ORDER-CAPACITY-CEILING",
       "disposition": "NOT_MINTED"
@@ -141,5 +145,67 @@
     "p_vs_np_root": "NO_AUTHORITY"
   },
   "authority": "SYNTHESIS_RECEIPT / RETROSPECTIVE_EXECUTABLE_ASSURANCE / MACHINE_READABLE_CONTENT_BINDING / SAME_CONTEXT_ONLY / COMPUTATION_IS_NOT_PROOF / NO_NOVELTY_CLAIM / ROOT_AUTHORITY_NONE",
-  "artifact_hash": "sha256:1518fedb142898bffb5a5ae395094175f558cca53ad75f7fdf85c7ec92c02750"
+  "artifact_hash": "sha256:489a6d1dceeaf4e335105518750f9d9ab920a1c4b9d0fa47a8df8e4142dc34ec",
+  "git_provenance": {
+    "repository": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "integration_anchor_commit": "73f6c779aa5481cd68808c01448949c322f608f8",
+    "provenance_merge": {
+      "commit": "73f6c779aa5481cd68808c01448949c322f608f8",
+      "parents": [
+        "37778fb4a345900efc47fb4198024f7e23806c1b",
+        "1bfad13d82548fe61f70cd9f18828fe0240c8556"
+      ],
+      "tree": "aa4d680e8d60571803f7921ef225f3adbf097d48",
+      "first_parent_tree": "aa4d680e8d60571803f7921ef225f3adbf097d48",
+      "strategy": "ours",
+      "tree_equals_first_parent": true,
+      "authority": "PROVENANCE_ONLY_NO_RESULT_TREE_IMPORT"
+    },
+    "required_ancestors": {
+      "result_commit": "1bfad13d82548fe61f70cd9f18828fe0240c8556",
+      "target_branch_head": "2b264d50b0bb224bfab62e7503656bc92d933b68",
+      "live_main_at_repair": "b8f3467959f2f44a2cf686d9c005071739284dc8",
+      "prior_main_integration_merge": "a423518794d7bbbfabfcf59ff14804491629b544"
+    },
+    "historical_blob_bindings": {
+      "pre_result_case_plan": {
+        "commit": "03a4cb9a0bce32374d79210d8b712670c11626a7",
+        "tree": "f4c44796dcd2c0b4da64210bcb3be60cfebf9020",
+        "path": "research/real_math/millennium/p_vs_np/04_candidates/C025_joint_binary_signature_calibration_preregistration.json",
+        "git_blob_sha": "d7a63efe1a3fe8d90303298700279dc1d861a49c",
+        "raw_sha256": "sha256:eaadb5c39b438dbdee0f35cf6728ff5d067b04cde81835013cbfd084a7a68af2"
+      },
+      "result_executable": {
+        "commit": "1bfad13d82548fe61f70cd9f18828fe0240c8556",
+        "tree": "4d5b09d7e5920d9436db32cd13bb5da8eeeceda6",
+        "path": "research/real_math/millennium/p_vs_np/05_falsification/joint_binary_signature_calibration.py",
+        "git_blob_sha": "558ae5ef007d40cc24b4c0ab5f9f9f7a1fe64f43",
+        "raw_sha256": "sha256:55bb5708f0d492ed162d7f9a6aa4be90a3283302cef522d3007a3a9bd32a717b"
+      },
+      "result_receipt": {
+        "commit": "1bfad13d82548fe61f70cd9f18828fe0240c8556",
+        "tree": "4d5b09d7e5920d9436db32cd13bb5da8eeeceda6",
+        "path": "research/real_math/millennium/p_vs_np/05_falsification/C025_JOINT_SIGNATURE_CALIBRATION_RECEIPT_20260811.json",
+        "git_blob_sha": "76ad9407f44dde325c80794b4962da364ebc12bd",
+        "raw_sha256": "sha256:23285e5ed3d36680a11a05ad7d04f1836595f59460d03945c39e7db26d51f60f"
+      }
+    },
+    "canonical_target_preservation": {
+      "failure_memory": {
+        "source_commit": "2b264d50b0bb224bfab62e7503656bc92d933b68",
+        "path": "research/real_math/millennium/p_vs_np/07_memory/C025_FAILURE_EXPERIENCE_DELTA_20260811.json",
+        "git_blob_sha": "1268231dec2d339485c7c349b8abda935bdd3c98",
+        "raw_sha256": "sha256:abe60d4fa88a4c7728bb520e4b0e0f12deb3d81d1b15889c1656f859c4d4f0f6",
+        "byte_equal_at_finalization": true
+      },
+      "tool_memory": {
+        "source_commit": "2b264d50b0bb224bfab62e7503656bc92d933b68",
+        "path": "research/real_math/millennium/p_vs_np/07_memory/C025_RESEARCH_TOOL_DELTA_20260811.json",
+        "git_blob_sha": "23b4aaf67f667c7805ff5eda21d2f84eaaf11637",
+        "raw_sha256": "sha256:7fbc49f5c1327cb9956a89c72d4e2f52a5957b51711b562fdfc12269a5bcce08",
+        "byte_equal_at_finalization": true
+      }
+    },
+    "validation_contract": "CAT_FILE_COMMIT + REV_PARSE_TREE_PATH_BLOB + GIT_SHOW_RAW_SHA256 + MERGE_BASE_ANCESTRY + EXACT_CANONICAL_BYTE_EQUALITY"
+  }
 }

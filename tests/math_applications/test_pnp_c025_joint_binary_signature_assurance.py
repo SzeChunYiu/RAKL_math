@@ -6,6 +6,7 @@ import importlib.util
 import json
 import math
 from pathlib import Path
+import subprocess
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -18,6 +19,7 @@ CHRONOLOGY_AUDIT = (
     / "04_candidates/negative_history/C025_RETROSPECTIVE_ASSURANCE_CHRONOLOGY_AUDIT_20260811.json"
 )
 POSTRESULT_ADDENDUM = BASE / "07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json"
+SYNTHESIS_RECEIPT = BASE / "05_falsification/C025_SYNTHESIS_RECEIPT_20260811.json"
 
 
 def _canonical_hash(value: object) -> str:
@@ -35,6 +37,95 @@ def _load_module():
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
+
+
+def _git(*args: str, check: bool = True) -> subprocess.CompletedProcess[bytes]:
+    return subprocess.run(
+        ["git", *args],
+        cwd=ROOT,
+        check=check,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+
+
+def _git_provenance_errors(receipt: dict[str, object]) -> tuple[str, ...]:
+    provenance = receipt["git_provenance"]
+    assert isinstance(provenance, dict)
+    errors: list[str] = []
+
+    anchor = provenance["integration_anchor_commit"]
+    assert isinstance(anchor, str)
+    if _git("cat-file", "-e", f"{anchor}^{{commit}}", check=False).returncode != 0:
+        errors.append("integration anchor commit is missing")
+        return tuple(errors)
+
+    merge = provenance["provenance_merge"]
+    assert isinstance(merge, dict)
+    merge_commit = merge["commit"]
+    assert isinstance(merge_commit, str)
+    if _git("cat-file", "-e", f"{merge_commit}^{{commit}}", check=False).returncode != 0:
+        errors.append("provenance merge commit is missing")
+    else:
+        observed_tree = _git("rev-parse", f"{merge_commit}^{{tree}}").stdout.decode().strip()
+        if observed_tree != merge["tree"]:
+            errors.append("provenance merge tree mismatch")
+        observed_parents = _git("show", "-s", "--format=%P", merge_commit).stdout.decode().split()
+        if observed_parents != merge["parents"]:
+            errors.append("provenance merge parents mismatch")
+        first_parent_tree = _git("rev-parse", f"{merge_commit}^1^{{tree}}").stdout.decode().strip()
+        if first_parent_tree != merge["first_parent_tree"]:
+            errors.append("provenance first-parent tree mismatch")
+        if observed_tree != first_parent_tree:
+            errors.append("provenance merge imported result-tree content")
+
+    required = provenance["required_ancestors"]
+    assert isinstance(required, dict)
+    for role, commit in required.items():
+        assert isinstance(role, str) and isinstance(commit, str)
+        if _git("cat-file", "-e", f"{commit}^{{commit}}", check=False).returncode != 0:
+            errors.append(f"required ancestor commit missing: {role}")
+            continue
+        if _git("merge-base", "--is-ancestor", commit, anchor, check=False).returncode != 0:
+            errors.append(f"required ancestor not durable: {role}")
+
+    bindings = provenance["historical_blob_bindings"]
+    assert isinstance(bindings, dict)
+    for role, binding in bindings.items():
+        assert isinstance(role, str) and isinstance(binding, dict)
+        commit = binding["commit"]
+        path = binding["path"]
+        assert isinstance(commit, str) and isinstance(path, str)
+        if _git("cat-file", "-e", f"{commit}^{{commit}}", check=False).returncode != 0:
+            errors.append(f"historical commit missing: {role}")
+            continue
+        tree = _git("rev-parse", f"{commit}^{{tree}}").stdout.decode().strip()
+        if tree != binding["tree"]:
+            errors.append(f"historical tree mismatch: {role}")
+        blob_probe = _git("rev-parse", f"{commit}:{path}", check=False)
+        if blob_probe.returncode != 0:
+            errors.append(f"historical path missing: {role}")
+            continue
+        if blob_probe.stdout.decode().strip() != binding["git_blob_sha"]:
+            errors.append(f"historical blob mismatch: {role}")
+        raw = _git("show", f"{commit}:{path}").stdout
+        if "sha256:" + hashlib.sha256(raw).hexdigest() != binding["raw_sha256"]:
+            errors.append(f"historical raw hash mismatch: {role}")
+
+    preservation = provenance["canonical_target_preservation"]
+    assert isinstance(preservation, dict)
+    for role, binding in preservation.items():
+        assert isinstance(role, str) and isinstance(binding, dict)
+        source = _git("show", f'{binding["source_commit"]}:{binding["path"]}').stdout
+        current = (ROOT / binding["path"]).read_bytes()
+        if source != current:
+            errors.append(f"canonical target bytes changed: {role}")
+        if "sha256:" + hashlib.sha256(current).hexdigest() != binding["raw_sha256"]:
+            errors.append(f"canonical target raw hash mismatch: {role}")
+        blob = _git("rev-parse", f'{binding["source_commit"]}:{binding["path"]}').stdout.decode().strip()
+        if blob != binding["git_blob_sha"]:
+            errors.append(f"canonical target blob mismatch: {role}")
+    return tuple(errors)
 
 
 def test_c025_case_plan_precedes_result_but_does_not_freeze_evaluator_identity() -> None:
@@ -71,7 +162,7 @@ def test_c025_case_plan_precedes_result_but_does_not_freeze_evaluator_identity()
         "1bfad13d82548fe61f70cd9f18828fe0240c8556"
     )
     assert audit["ancestry"]["registration_is_ancestor_of_result"] is False
-    assert audit["ancestry"]["result_is_ancestor_of_integration_head"] is False
+    assert audit["ancestry"]["result_is_ancestor_of_integration_head"] is True
     assert "RETROSPECTIVE_EXECUTABLE_ASSURANCE" in audit["disposition"]
 
 
@@ -351,8 +442,7 @@ def test_parallel_assurance_trace_is_retrospective_and_preserves_failed_chronolo
     assert "parallel_trace:RETROSPECTIVE_RECONCILED" in canonical["entries"][-1]["outputs"]
 
 def test_synthesis_receipt_explicitly_reconciles_parallel_lineage() -> None:
-    receipt_path = BASE / "05_falsification/C025_SYNTHESIS_RECEIPT_20260811.json"
-    synthesis = json.loads(receipt_path.read_text(encoding="utf-8"))
+    synthesis = json.loads(SYNTHESIS_RECEIPT.read_text(encoding="utf-8"))
     payload = copy.deepcopy(synthesis)
     payload["artifact_hash"] = ""
     assert synthesis["artifact_hash"] == _canonical_hash(payload)
@@ -399,4 +489,43 @@ def test_synthesis_receipt_explicitly_reconciles_parallel_lineage() -> None:
     assert synthesis["claim_scope"]["p_vs_np_root"] == "NO_AUTHORITY"
     assert synthesis["method_lesson"]["framework_transport"].endswith(
         "QUARANTINED_PROPOSAL"
+    )
+
+
+def test_synthesis_receipt_git_provenance_is_executable_and_durable() -> None:
+    synthesis = json.loads(SYNTHESIS_RECEIPT.read_text(encoding="utf-8"))
+    assert _git_provenance_errors(synthesis) == ()
+
+
+def test_synthesis_receipt_git_provenance_planted_failures_fail_closed() -> None:
+    synthesis = json.loads(SYNTHESIS_RECEIPT.read_text(encoding="utf-8"))
+
+    missing_commit = copy.deepcopy(synthesis)
+    missing_commit["git_provenance"]["required_ancestors"]["result_commit"] = "0" * 40
+    assert "required ancestor commit missing: result_commit" in _git_provenance_errors(
+        missing_commit
+    )
+
+    missing_path = copy.deepcopy(synthesis)
+    missing_path["git_provenance"]["historical_blob_bindings"]["result_executable"][
+        "path"
+    ] = "research/real_math/millennium/p_vs_np/05_falsification/DOES_NOT_EXIST.py"
+    assert "historical path missing: result_executable" in _git_provenance_errors(
+        missing_path
+    )
+
+    forged_blob = copy.deepcopy(synthesis)
+    forged_blob["git_provenance"]["historical_blob_bindings"]["result_receipt"][
+        "git_blob_sha"
+    ] = "f" * 40
+    assert "historical blob mismatch: result_receipt" in _git_provenance_errors(
+        forged_blob
+    )
+
+    forged_hash = copy.deepcopy(synthesis)
+    forged_hash["git_provenance"]["canonical_target_preservation"]["failure_memory"][
+        "raw_sha256"
+    ] = "sha256:" + "f" * 64
+    assert "canonical target raw hash mismatch: failure_memory" in _git_provenance_errors(
+        forged_hash
     )
