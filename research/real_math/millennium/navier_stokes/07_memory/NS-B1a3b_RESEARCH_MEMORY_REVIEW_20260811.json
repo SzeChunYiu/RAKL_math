@@ -1,0 +1,101 @@
+{
+  "schema_version": "research-memory-review-v3-proposal-shadow",
+  "target_atom_id": "NS-B1a3b",
+  "target_context_hash": "sha256:864b444da3b0ef1b0a0e396ea89011fbad691cbbe35e88b78ec3613756ef92ca",
+  "bound_rakl_math_base_sha": "111a3f95c72b0a418f968708bd3eda77ef98bccf",
+  "candidate_method_families": [
+    "whole-space vorticity-direction coherence / vortex-stretching depletion",
+    "anisotropic projected-vorticity critical criteria",
+    "Type-I blow-up plus vorticity alignment compactness",
+    "logarithmic BMO direction depletion on high-vorticity sets"
+  ],
+  "success_memory": {
+    "retrieved_ids": [
+      "AB-TYPEI-ANCIENT",
+      "CF-1993-VORTICITY-DIRECTION",
+      "BARKER-PRANGE-2019-TYPEI-ALIGNMENT",
+      "MILLER-2020-ANISOTROPIC-VORTICITY",
+      "GRUJIC-2026-LOG-DEPLETION",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "selected_ids": [
+      "AB-TYPEI-ANCIENT",
+      "CF-1993-VORTICITY-DIRECTION",
+      "BARKER-PRANGE-2019-TYPEI-ALIGNMENT",
+      "MILLER-2020-ANISOTROPIC-VORTICITY",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "rejected_or_deferred": [
+      {
+        "id": "GRUJIC-2026-LOG-DEPLETION",
+        "reason": "fresh July 2026 preprint with additional concentration and logarithmic-direction assumptions; retained as proposal/shadow search analogue only, not theorem authority"
+      },
+      {
+        "id": "VASSEUR-2007-VELOCITY-DIRECTION",
+        "reason": "object mismatch: direction of velocity rather than vorticity; no DifferenceWitness converts its criterion to the active vorticity-inheritance interface"
+      },
+      {
+        "id": "GIGA-HSU-MAEKAWA-HALFSPACE",
+        "reason": "boundary/domain-specific analogue; Barker-Prange is the closer Type-I-alignment comparator for this atom"
+      }
+    ]
+  },
+  "failure_memory": {
+    "retrieved_ids": [
+      "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION",
+      "F-NS-B1a3-PROFILE-LEAKAGE",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "F-NS-B1a3-EQUATION-CHANGE-MISMATCH"
+    ],
+    "selected_ids": [
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "F-NS-B1a3-EQUATION-CHANGE-MISMATCH"
+    ],
+    "rejected_or_deferred": [
+      {
+        "id": "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+        "reason": "pressure cancels after taking curl; retain only the broader nonlocality warning, not the pressure-tail mechanism itself"
+      },
+      {
+        "id": "F-NS-B1a3-PROFILE-LEAKAGE",
+        "reason": "global tail/profile leakage is not the first discriminator here; the active interface is local derivative/normalization continuity"
+      }
+    ],
+    "routing_effects": [
+      "B1a1 and B1a2 block another attempt to manufacture a scale breaker from scalar energy bookkeeping.",
+      "B1a3 blocks importing a consumer theorem whose input topology is stronger than the producer stage; apply the same producer/consumer signature check to vorticity geometry.",
+      "The equation-change mismatch blocks treating self-similar or boundary-specific geometry theorems as generic ancient-solution rigidity.",
+      "These failures change priority from proving a new alignment criterion to first testing whether any alignment functional is inherited by the finite-I compactness topology."
+    ]
+  },
+  "retrieved_but_rejected_routes": [
+    {
+      "route": "derive vorticity-direction Holder continuity from local L3 velocity compactness",
+      "reason": "curl costs one derivative and normalized direction is not continuous under weak derivative convergence"
+    },
+    {
+      "route": "reuse half-space ODE-Type-I alignment theorem as whole-space finite-I theorem",
+      "reason": "domain, boundary condition and Type-I hypothesis differ; DifferenceWitness fails exact-context transfer"
+    },
+    {
+      "route": "replace geometry by another scalar energy packing estimate",
+      "reason": "repeats B1a1/B1a2 obstruction families"
+    },
+    {
+      "route": "treat pressure-tail obstruction as the active issue",
+      "reason": "curl eliminates pressure from the vorticity equation; remaining nonlocality is the strain/Biot-Savart operator"
+    }
+  ],
+  "missed_memory_audit": {
+    "status": "CANNOT_MEASURE",
+    "reason": "no exhaustive relevance-labeled retrieval universe was frozen; current RAKL issue #119-style coverage is not automatically wired into this application lane"
+  },
+  "pre_memory_preference": "select the closest Type-I+alignment theorem and attempt to transfer its regularity mechanism directly to the finite-I ancient class",
+  "post_memory_preference": "run a derivative-sensitive inheritance falsifier before any geometric theorem transfer; require exact domain/Type-I DifferenceWitness and a producer-consumer topology certificate",
+  "selected_next_action": "Counterexample-first audit: test whether strong local L3 velocity convergence plus the finite-I local gradient-energy control can preserve any uniform vorticity-direction modulus. Use an explicit divergence-free oscillatory calibration, then verify primary-source geometry criteria are additional hypotheses rather than outputs of finite-I compactness.",
+  "authority": "PROPOSAL_SHADOW_SEARCH_ROUTING_ONLY"
+}
