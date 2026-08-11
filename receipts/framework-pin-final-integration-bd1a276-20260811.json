@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "RAKL-MATH-FRAMEWORK-PIN-FINAL-INTEGRATION-bd1a276-20260811",
+  "recorded_at": "2026-08-11T12:45:30Z",
+  "predecessor_receipt": {
+    "commit": "a5e21d0261ae55e7a7c8628e4f7fe838d012e81a",
+    "path": "receipts/framework-pin-sync-bd1a276-20260811.json",
+    "git_blob_sha": "2f168ca27a425c07e4b353d87b1270602dd2f2d3",
+    "raw_sha256": "sha256:b8da40accc1950c16a0ae261544ead7af0bd81887e77f1a5e5d4f387ea05a052",
+    "artifact_hash": "sha256:f1aff8a13e9b6c0901d24485efb993a5cf9bdee1c68d421d056c038bc79b697d",
+    "preserved_immutable": true,
+    "known_defects": [
+      "recorded_at predates the integration_refresh merge and verification facts later inserted into the pushed predecessor",
+      "framework_changed_files records 638 although exact Git name-only delta contains 635 paths"
+    ]
+  },
+  "application_integration": {
+    "initial_pre_refresh_pr_head": "bfc9bc1c63cc0e8fffa583afef3b02f0e8085792",
+    "prior_verified_pr_head": "a5e21d0261ae55e7a7c8628e4f7fe838d012e81a",
+    "pre_refresh_pr_head": "ee69c0418290f52ae932b8da79c27ae182618adf",
+    "live_main_commit": "48d1153c3b5fa749b1a6fd84212befb9e39daabe",
+    "live_main_tree": "dc467172b96b06a9108d45879bf7f272665fa224",
+    "local_integration_merge_commit": "ad7743f2f3513737ed8b1ee6671f6071a0097a01",
+    "prerequisite_merges": {
+      "pr79_merge": "d13bb40fab2448f983a73f5964ab2d3fd2db489c",
+      "pr84_merge": "2ddb51359292fd9638116b488ffff9a04397446b",
+      "ns_b1a2_merge": "48d1153c3b5fa749b1a6fd84212befb9e39daabe"
+    },
+    "historical_artifact_files_changed": []
+  },
+  "framework_delta": {
+    "previous_commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+    "current_commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "previous_tree": "a228d33ce2fc6ef33c6c98aed98620bb5bcc3b42",
+    "current_tree": "b0f14dc300e20eb74a69f946e06343af1683ca16",
+    "commits_between": 113,
+    "changed_files": 635,
+    "commit_count_command": "git -C framework/RAKL rev-list --count 15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3..bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "changed_file_count_command": "git -C framework/RAKL diff --name-only 15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3 bd1a2768f0f474ff44ffa25243241f94bfaf6466"
+  },
+  "chronology": {
+    "integration_merge_created_at": "2026-08-11T12:44:03Z",
+    "verification_observed_complete_at": "2026-08-11T12:44:41Z",
+    "final_receipt_frozen_after_verification": true
+  },
+  "verification": {
+    "subject_commit": "ad7743f2f3513737ed8b1ee6671f6071a0097a01",
+    "command": "python tools/run_application_tests.py --framework framework/RAKL",
+    "tests_passed": 307,
+    "exit_code": 0,
+    "pin_equals_gitlink": true,
+    "framework_authority_paths_clean": true,
+    "status": "PASS_EXACT_APPLICATION_SUITE_ON_INTEGRATED_BASE"
+  },
+  "supersession_scope": {
+    "effect": "FINAL_INTEGRATION_PROVENANCE_ONLY",
+    "predecessor_rewritten": false,
+    "historical_framework_bindings_reinterpreted": false
+  },
+  "non_guarantees": [
+    "does not validate any Millennium claim",
+    "does not rewrite or upgrade historical artifact-local framework bindings",
+    "does not make same-context review independent",
+    "does not establish empirical RAKL superiority"
+  ],
+  "authority": "DEPENDENCY_SYNC_AND_EXECUTABLE_CONFORMANCE_ONLY / NO_MATHEMATICAL_AUTHORITY_CHANGE",
+  "artifact_hash": "sha256:f1ee35dcff4368302c9fb1940eae975f1fd03c19665f3c89966b07b8645864be"
+}
