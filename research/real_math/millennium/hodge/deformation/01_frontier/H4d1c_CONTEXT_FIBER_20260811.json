@@ -1,0 +1,98 @@
+{
+  "atom_id": "H4d1c",
+  "cycle_id": "H4d1c-C001-SOURCE-FAMILY-QUANTIFIER-AUDIT",
+  "object_context": "Within the rational Hodge deformation lane, fix a smooth projective complex family f:X→S, s0∈S, a flat rational class α that is algebraic on X_s0, and one irreducible local Hodge-locus branch T through s0. H4d1c had opened a source-specific mechanism forcing tangent surjectivity for one chosen witness w0 in one witness-incidence source. This audit asks whether failure/success of that fixed-witness first-order test has the same quantifiers as the source-complete local algebraicity obligation, before searching for a new theorem.",
+  "exact_scope": [
+    "rational cohomology and smooth projective complex varieties only",
+    "central algebraicity is assumed for this propagation atom; root initial algebraicity is not addressed",
+    "one local Hodge-locus branch T is fixed",
+    "first-order witness deformation, source-component dominance, pointwise algebraicity, higher-Artin compatibility and algebraization are typed as different obligations",
+    "signed rational cycle bookkeeping cannot be replaced silently by one effective Hilbert point"
+  ],
+  "problem_signature": [
+    "fixed witness w0 versus existential source-family quantifiers",
+    "dπ_w0:T_w0 W→T_s0 T as a first-order fixed-witness diagnostic",
+    "all admissible algebraic representatives/source components for α",
+    "branch pointwise algebraicity versus compatible witness family",
+    "separate local representation failure from higher-order/gluing/algebraization failure"
+  ],
+  "fibre_contents_actually_consulted": [
+    "H4d1b_CONTEXT_FIBER_20260811.json",
+    "H4d1b_FIRST_ORDER_TANGENT_OBSTRUCTION_EQUIVALENCE_20260811.md",
+    "H4d1b_C001_TASK_EPISODE_20260811.json",
+    "H4d1b_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "H4d1b_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "H4d1c_OBSTRUCTION_REGISTER_20260811.json",
+    "H4d1a_BRANCH_DETECTOR_COMPATIBILITY_NOGO_20260811.md",
+    "Bloch–Esnault–Kerz, arXiv:1310.1773",
+    "Kloosterman, arXiv:2104.14845",
+    "Stacks Project Tag 07YG"
+  ],
+  "retrieved_experience": {
+    "selected_failure_ids": [
+      "F-H4D1-DETECTOR-KERNEL-GAP",
+      "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO",
+      "F-H4D1B-DIRECT-VANISHING-NO-COMPLEXITY-REDUCTION"
+    ],
+    "selected_episode_ids": [
+      "H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE"
+    ],
+    "selected_tool_ids": [],
+    "rejected_or_deferred": [
+      {
+        "item": "Kloosterman complete-intersection hypersurface success",
+        "reason": "retained as a special-family positive control only; its explicit flag-Hilbert dimension/smoothness identities are not a transfer witness for arbitrary smooth-projective rational cycles"
+      },
+      {
+        "item": "Nishinou semiregular relative deformation success as carried in the parent fibre",
+        "reason": "category/semiregularity hypotheses are not present in H4d1c; no general transfer"
+      },
+      {
+        "item": "cross-Millennium memories",
+        "reason": "not queried because no structural applicability/DifferenceWitness was needed for this quantifier audit"
+      }
+    ]
+  },
+  "adversarial_boundary_cases": [
+    "Abstract source-projection toy model q:A^1→A^1, q(t)=t^2 at 0: q is dominant/surjective on complex points but dq_0=0, so branch/source coverage does not imply tangent surjectivity at a selected central source point. This is a representation DifferenceWitness only, not a Hodge example.",
+    "Quantifier guard: fixed-witness surjectivity has an ∃w0∀v shape, whereas source-complete directional existence can have ∀v∃w_v; the converse quantifier swap requires extra source-family structure.",
+    "Even directional source-family coverage does not give one compatible Artin tower or algebraization; component switching and formal compatibility are gluing residuals."
+  ],
+  "primary_source_controls": [
+    {
+      "source": "Bloch–Esnault–Kerz, arXiv:1310.1773",
+      "use": "class-level formal K0 deformation under stated Chow–Künneth hypotheses; explicitly preserves algebraization as a separate problem",
+      "non_transfer": "does not prove general Hodge, does not identify a fixed geometric support, and does not solve algebraization"
+    },
+    {
+      "source": "Kloosterman, arXiv:2104.14845",
+      "use": "special-family control where fixed flag-Hilbert geometry can establish a variational Hodge result",
+      "non_transfer": "hypersurface/complete-intersection calculations are special"
+    },
+    {
+      "source": "Stacks Project Tag 07YG",
+      "use": "typing control for complete obstruction semantics: lift exists iff obstruction vanishes",
+      "non_transfer": "general obstruction-theory definition, not a Hodge-cycle theorem"
+    }
+  ],
+  "decision_policy": "Counterexample-first representation and quantifier audit before theorem invention. Reuse the H4d1a/H4d1b failures to forbid same-detector and direct-vanishing aliases; then test whether the surviving fixed-witness tangent target is source-family complete.",
+  "falsifier": "Reject the proposed representation correction if the exact Hodge propagation contract actually requires one preselected central witness to lift in every direction, or if source completeness can be proved from the existing frozen H4d1c assumptions without any additional representative/component/boundedness/gluing hypothesis.",
+  "operators_motifs_tried": [
+    "OP-H4D1C-QUANTIFIER-PROFILE-AUDIT",
+    "OP-H4D1C-SOURCE-COVERAGE-VS-TANGENT-DIFFERENCE-WITNESS",
+    "MOTIF-COUNTEREXAMPLE-FIRST",
+    "MOTIF-LOCAL-VS-GLUING-SEPARATION"
+  ],
+  "downstream_gates": [
+    "source-family boundedness/quasi-compactness or another exact completeness mechanism",
+    "coefficient/category preservation",
+    "higher Artin compatible lifting",
+    "algebraization",
+    "monodromy/component switching",
+    "singular degeneration",
+    "global continuation",
+    "root initial algebraicity"
+  ],
+  "frozen_at": "2026-08-11T21:37:32Z",
+  "packet_hash": "sha256:d14063df85554d01272e8751dbc96e23c0b54983eb02b42945d8cefc4030ca5f"
+}
