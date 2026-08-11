@@ -13,7 +13,7 @@ from rakl.research_trace import (
     audit_research_trace,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "research/real_math/millennium/hodge/deformation/09_trace"
 
 

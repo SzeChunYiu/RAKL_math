@@ -8,6 +8,7 @@ import math
 from pathlib import Path
 
 import jsonschema
+import rakl
 
 from rakl.research_trace import (
     MathResearchTrace,
@@ -18,7 +19,8 @@ from rakl.research_trace import (
     audit_research_trace,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
+FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
 BASE = ROOT / "research/real_math/millennium/yang_mills"
 CONTEXT_HASH = "sha256:561518a9b62025454014828057a4ad657707f673f9e98b5fb27aceaf8d00f03e"
 
@@ -70,7 +72,7 @@ def test_yms1a_failure_delta_is_content_bound_and_schema_valid() -> None:
     assert artifact_hash == _canonical_hash(payload)
 
     schema = json.loads(
-        (ROOT / "schemas/failure-experience-lattice.schema.json").read_text(
+        (FRAMEWORK_ROOT / "schemas/failure-experience-lattice.schema.json").read_text(
             encoding="utf-8"
         )
     )
