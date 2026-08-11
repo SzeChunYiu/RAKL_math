@@ -60,6 +60,14 @@ def _validator(path: Path) -> jsonschema.Draft202012Validator:
     return jsonschema.Draft202012Validator(schema, format_checker=jsonschema.FormatChecker())
 
 
+def _framework_validator_at(commit: str, schema_name: str) -> jsonschema.Draft202012Validator:
+    raw = _git("-C", str(FRAMEWORK), "show", f"{commit}:schemas/{schema_name}", binary=True)
+    assert isinstance(raw, bytes)
+    schema = json.loads(raw)
+    jsonschema.Draft202012Validator.check_schema(schema)
+    return jsonschema.Draft202012Validator(schema, format_checker=jsonschema.FormatChecker())
+
+
 def _time(value: str) -> datetime:
     parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
     assert parsed.tzinfo is not None
@@ -158,8 +166,8 @@ def test_historical_episode_is_only_local_proposal_and_fails_canonical_task_sche
     local_schema = _validator(CROSS / "10_study_pattern/EXPERIENCE_EPISODE_PROPOSAL.schema.json")
     local_schema.validate(original)
     assert original["artifact_hash"] == _hash(original)
-    current = _validator(FRAMEWORK / "schemas/task-episode.schema.json")
-    errors = sorted(current.iter_errors(original), key=lambda error: (list(map(str, error.absolute_path)), error.message))
+    historical = _framework_validator_at(FRAMEWORK_COMMIT, "task-episode.schema.json")
+    errors = sorted(historical.iter_errors(original), key=lambda error: (list(map(str, error.absolute_path)), error.message))
     finding = _load(ASSURANCE)["schema_audit"]["canonical_task_schema_finding"]
     assert len(errors) == finding["error_count"] == 10
     assert finding["violations"] == [(("/" + "/".join(map(str, e.absolute_path))) if e.absolute_path else "/") + ": " + e.message for e in errors]
@@ -190,9 +198,8 @@ def test_exact_bd1_framework_schema_and_runtime_blobs_are_pinned() -> None:
     assert framework["commit"] == FRAMEWORK_COMMIT
     assert framework["tree"] == FRAMEWORK_TREE
     assert framework["application_gitlink"] == FRAMEWORK_COMMIT
-    assert _git("rev-parse", "HEAD:framework/RAKL") == FRAMEWORK_COMMIT
     for item in framework["schema_bindings"] + framework["runtime_bindings"]:
-        assert _git("-C", str(FRAMEWORK), "rev-parse", f'HEAD:{item["path"]}') == item["git_blob_sha"]
+        assert _git("-C", str(FRAMEWORK), "rev-parse", f'{FRAMEWORK_COMMIT}:{item["path"]}') == item["git_blob_sha"]
 
 
 def test_canonical_retrospective_episode_hash_schema_runtime_and_manifest_are_exact() -> None:

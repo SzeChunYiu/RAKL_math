@@ -9,7 +9,7 @@ import subprocess
 
 import pytest
 from jsonschema import Draft202012Validator, FormatChecker, ValidationError
-from rakl.experience_substrate import EpisodeOutcome, TaskEpisode, validate_episode
+from rakl.experience_substrate import EpisodeOutcome, TaskEpisode, episode_content_bytes, validate_episode
 from rakl.failure_lattice import (
     FailureDiagnosisStatus,
     FailureExperience,
@@ -34,7 +34,7 @@ MERGE_TREE = "dc467172b96b06a9108d45879bf7f272665fa224"
 FRAMEWORK = "bd1a2768f0f474ff44ffa25243241f94bfaf6466"
 
 CORRECTION = NS / "10_case_study/NS-B1a2_C001_POSTMERGE_ASSURANCE_CORRECTION_20260811.json"
-EPISODE = NS / "10_case_study/NS-B1a2_C001_TASK_EPISODE_CANONICAL_20260811.json"
+EPISODE = NS / "10_case_study/NS-B1a2_C001_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_V2_20260811.json"
 TRACE = NS / "09_trace/NS-B1a2_C001_TRACE_COMBINED_CANONICAL_20260811.json"
 LATTICE = NS / "07_memory/NS-B1a2_C001_FAILURE_LATTICE_CANONICAL_20260811.json"
 SCHEMA = ROOT / "schemas/ns-b1a2-postmerge-assurance-correction.schema.json"
@@ -71,6 +71,16 @@ def _validate(value: dict, schema: Path) -> None:
     raw = _load(schema)
     Draft202012Validator.check_schema(raw)
     Draft202012Validator(raw, format_checker=FormatChecker()).validate(value)
+
+
+def _framework_schema_at(commit: str, schema_name: str) -> dict:
+    raw = _git(
+        "-C", str(ROOT / "framework/RAKL"), "show", f"{commit}:schemas/{schema_name}"
+    )
+    assert isinstance(raw, str)
+    value = json.loads(raw)
+    assert isinstance(value, dict)
+    return value
 
 
 def _parse_time(value: str) -> datetime:
@@ -113,7 +123,6 @@ def test_successors_use_exact_v3_schemas_and_runtime_shapes() -> None:
     _validate(trace, ROOT / "framework/RAKL/schemas/math-research-trace.schema.json")
     _validate(lattice, ROOT / "framework/RAKL/schemas/failure-experience-lattice.schema.json")
     assert correction["artifact_hash"] == _canonical_hash(correction)
-    assert episode["artifact_hash"] == _canonical_hash(episode)
     assert all(item["artifact_hash"] == _canonical_hash(item) for item in lattice["experiences"])
     assert correction["framework_authority"]["current_main_commit"] == FRAMEWORK
     assert correction["correction"]["strict_discovery_credit"] == "NO_STRICT_DISCOVERY_CREDIT"
@@ -173,6 +182,9 @@ def test_successors_use_exact_v3_schemas_and_runtime_shapes() -> None:
         artifact_hash=episode["artifact_hash"], timestamp=episode["timestamp"],
         cost=episode["cost"],
     )
+    assert episode["artifact_hash"] == hashlib.sha256(
+        episode_content_bytes(episode_object)
+    ).hexdigest()
     assert validate_episode(episode_object) == ()
 
     state = FailureExperienceLattice()
@@ -222,7 +234,7 @@ def test_original_schema_defects_reproduce_against_exact_bd1a276() -> None:
     ]
     recorded = {item["subject"]: item for item in receipt["schema_audit"]["findings"]}
     for path, schema_name, label in cases:
-        schema = _load(ROOT / "framework/RAKL/schemas" / schema_name)
+        schema = _framework_schema_at(FRAMEWORK, schema_name)
         errors = sorted(
             Draft202012Validator(schema).iter_errors(_load(path)),
             key=lambda error: (list(map(str, error.absolute_path)), error.message),

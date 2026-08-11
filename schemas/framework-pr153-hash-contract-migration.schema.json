@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/framework-pr153-hash-contract-migration.schema.json",
+  "title": "RAKL framework PR153 hash-contract migration receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "receipt_id", "recorded_at", "application_repository",
+    "framework_transition", "episode_inventory", "lesson_like_inventory",
+    "successor_bindings", "historical_schema_policy", "pin_migration",
+    "authority_contract", "evidence_pointers", "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"const": "RAKL-MATH-FRAMEWORK-PR153-HASH-CONTRACT-MIGRATION-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "application_repository": {
+      "type": "object", "additionalProperties": false,
+      "required": ["repository", "inventory_commit", "inventory_tree", "migration_base", "successor_commit"],
+      "properties": {
+        "repository": {"const": "https://github.com/SzeChunYiu/RAKL_math.git"},
+        "inventory_commit": {"$ref": "#/$defs/git_sha"},
+        "inventory_tree": {"$ref": "#/$defs/git_sha"},
+        "migration_base": {"$ref": "#/$defs/git_sha"},
+        "successor_commit": {"$ref": "#/$defs/git_sha"}
+      }
+    },
+    "framework_transition": {
+      "type": "object", "additionalProperties": false,
+      "required": ["previous_commit", "target_commit", "target_tree", "pr_number", "status", "changed_blob_bindings"],
+      "properties": {
+        "previous_commit": {"$ref": "#/$defs/git_sha"},
+        "target_commit": {"$ref": "#/$defs/git_sha"},
+        "target_tree": {"$ref": "#/$defs/git_sha"},
+        "pr_number": {"const": 153},
+        "status": {"enum": ["PROVISIONAL_OPEN_HEAD", "MERGED_FRAMEWORK_MAIN"]},
+        "changed_blob_bindings": {"type": "array", "minItems": 3, "items": {"$ref": "#/$defs/blob_transition"}}
+      }
+    },
+    "episode_inventory": {"type": "array", "minItems": 18, "maxItems": 18, "items": {"$ref": "#/$defs/episode_entry"}},
+    "lesson_like_inventory": {"type": "array", "minItems": 8, "maxItems": 8, "items": {"$ref": "#/$defs/lesson_entry"}},
+    "successor_bindings": {"type": "array", "minItems": 5, "maxItems": 5, "items": {"$ref": "#/$defs/successor"}},
+    "historical_schema_policy": {"$ref": "#/$defs/all_true_policy"},
+    "pin_migration": {
+      "type": "object", "additionalProperties": false,
+      "required": ["previous_commit", "provisional_target_commit", "final_merged_commit", "exact_application_suite_status", "push_allowed"],
+      "properties": {
+        "previous_commit": {"$ref": "#/$defs/git_sha"},
+        "provisional_target_commit": {"type": ["string", "null"], "pattern": "^[0-9a-f]{40}$"},
+        "final_merged_commit": {"type": ["string", "null"], "pattern": "^[0-9a-f]{40}$"},
+        "exact_application_suite_status": {"type": "string", "minLength": 1},
+        "push_allowed": {"type": "boolean"}
+      }
+    },
+    "authority_contract": {
+      "type": "object", "additionalProperties": false,
+      "required": ["grants_new_mathematical_result", "grants_proof_authority", "grants_millennium_root_authority", "grants_theorem_authority", "grants_novelty_authority", "grants_framework_authority", "grants_review_independence", "rewrites_historical_artifacts"],
+      "properties": {
+        "grants_new_mathematical_result": {"const": false},
+        "grants_proof_authority": {"const": false},
+        "grants_millennium_root_authority": {"const": false},
+        "grants_theorem_authority": {"const": false},
+        "grants_novelty_authority": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false},
+        "rewrites_historical_artifacts": {"const": false}
+      }
+    },
+    "evidence_pointers": {"type": "array", "minItems": 4, "items": {"type": "string", "minLength": 1}},
+    "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "git_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "nullable_hash": {"type": ["string", "null"], "minLength": 1},
+    "schema_verdict": {
+      "type": "object", "additionalProperties": false, "required": ["verdict", "error_count"],
+      "properties": {"verdict": {"enum": ["PASS", "FAIL"]}, "error_count": {"type": "integer", "minimum": 0}}
+    },
+    "blob_transition": {
+      "type": "object", "additionalProperties": false, "required": ["path", "previous_blob", "target_blob"],
+      "properties": {"path": {"type": "string", "minLength": 1}, "previous_blob": {"$ref": "#/$defs/git_sha"}, "target_blob": {"$ref": "#/$defs/git_sha"}}
+    },
+    "episode_entry": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "pointer", "classification", "source_commit", "git_blob_sha", "file_sha256", "stored_hash", "computed_runtime_digest", "old_schema_verdict", "new_schema_verdict", "prior_correction_paths", "successor_path", "successor_hash", "historical_bytes_preserved", "authority"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1}, "pointer": {"const": "/"},
+        "classification": {"type": "string", "minLength": 1},
+        "source_commit": {"$ref": "#/$defs/git_sha"}, "git_blob_sha": {"$ref": "#/$defs/git_sha"},
+        "file_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "stored_hash": {"$ref": "#/$defs/nullable_hash"}, "computed_runtime_digest": {"$ref": "#/$defs/nullable_hash"},
+        "old_schema_verdict": {"$ref": "#/$defs/schema_verdict"}, "new_schema_verdict": {"$ref": "#/$defs/schema_verdict"},
+        "prior_correction_paths": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "successor_path": {"type": ["string", "null"], "minLength": 1}, "successor_hash": {"$ref": "#/$defs/nullable_hash"},
+        "historical_bytes_preserved": {"const": true}, "authority": {"const": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"}
+      }
+    },
+    "lesson_entry": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "pointer", "classification", "source_commit", "git_blob_sha", "file_sha256", "stored_hash", "why_not_framework_lesson", "missing_framework_lesson_fields", "authority"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1}, "pointer": {"type": "string", "minLength": 1},
+        "classification": {"const": "NOT_FRAMEWORK_LESSON_PROPOSAL_ONLY"},
+        "source_commit": {"$ref": "#/$defs/git_sha"}, "git_blob_sha": {"$ref": "#/$defs/git_sha"},
+        "file_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, "stored_hash": {"$ref": "#/$defs/nullable_hash"},
+        "why_not_framework_lesson": {"type": "string", "minLength": 1},
+        "missing_framework_lesson_fields": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "authority": {"const": "PROPOSAL_ONLY"}
+      }
+    },
+    "successor": {
+      "type": "object", "additionalProperties": false,
+      "required": ["parent_path", "parent_source_commit", "parent_blob", "parent_stored_hash", "successor_path", "successor_commit", "successor_blob", "successor_file_sha256", "successor_raw_digest", "supersession_reason", "semantic_payload_changed", "authority_changed"],
+      "properties": {
+        "parent_path": {"type": "string", "minLength": 1}, "parent_source_commit": {"$ref": "#/$defs/git_sha"}, "parent_blob": {"$ref": "#/$defs/git_sha"}, "parent_stored_hash": {"type": "string", "minLength": 1},
+        "successor_path": {"type": "string", "minLength": 1}, "successor_commit": {"$ref": "#/$defs/git_sha"}, "successor_blob": {"$ref": "#/$defs/git_sha"}, "successor_file_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, "successor_raw_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "supersession_reason": {"const": "PR153_HASH_CONTRACT_ONLY"}, "semantic_payload_changed": {"const": false}, "authority_changed": {"const": false}
+      }
+    },
+    "all_true_policy": {
+      "type": "object", "additionalProperties": false,
+      "required": ["historical_evaluations_use_exact_recorded_framework_commit", "historical_bytes_rewritten", "current_validation_applies_prospectively", "missing_or_nonconforming_objects_fail_closed"],
+      "properties": {
+        "historical_evaluations_use_exact_recorded_framework_commit": {"const": true},
+        "historical_bytes_rewritten": {"const": false},
+        "current_validation_applies_prospectively": {"const": true},
+        "missing_or_nonconforming_objects_fail_closed": {"const": true}
+      }
+    }
+  }
+}

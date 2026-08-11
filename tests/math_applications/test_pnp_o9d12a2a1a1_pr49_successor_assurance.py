@@ -10,7 +10,7 @@ import subprocess
 import pytest
 from jsonschema import Draft202012Validator, FormatChecker, ValidationError
 
-from rakl.experience_substrate import EpisodeOutcome, TaskEpisode, validate_episode
+from rakl.experience_substrate import EpisodeOutcome, TaskEpisode, episode_content_bytes, validate_episode
 from rakl.failure_lattice import (
     FailureDiagnosisStatus,
     FailureExperience,
@@ -40,7 +40,7 @@ FRAMEWORK = "bd1a2768f0f474ff44ffa25243241f94bfaf6466"
 CONTEXT_HASH = "sha256:0c2a46839a95a7af6cfa2cff1a8257432ec397865e10515c84f8004719818ad7"
 
 CORRECTION = PNP / "10_case_study/O9d12a2a1a1_PR49_SUCCESSOR_ASSURANCE_CORRECTION_20260811.json"
-EPISODE = PNP / "10_case_study/O9d12a2a1a1_TASK_EPISODE_CANONICAL_20260811.json"
+EPISODE = PNP / "10_case_study/O9d12a2a1a1_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_20260811.json"
 TRACE = PNP / "09_trace/O9d12a2a1a1_TRACE_COMBINED_CANONICAL_20260811.json"
 LATTICE = PNP / "07_memory/O9d12a2a1a1_FAILURE_LATTICE_CANONICAL_20260811.json"
 SCHEMA = ROOT / "schemas/pnp-pr49-successor-assurance-correction.schema.json"
@@ -295,7 +295,6 @@ def test_retrospective_episode_and_correction_narrow_authority_and_close_child()
     _validate(correction, SCHEMA)
     _validate(episode, ROOT / "framework/RAKL/schemas/task-episode.schema.json")
     assert correction["artifact_hash"] == _canonical_hash(correction)
-    assert episode["artifact_hash"] == _canonical_hash(episode)
     episode_object = TaskEpisode(
         episode_id=episode["episode_id"], task_id=episode["task_id"],
         atom_id=episode["atom_id"], context_hash=episode["context_hash"],
@@ -311,6 +310,9 @@ def test_retrospective_episode_and_correction_narrow_authority_and_close_child()
         artifact_hash=episode["artifact_hash"], timestamp=episode["timestamp"],
         cost=episode["cost"],
     )
+    assert episode["artifact_hash"] == hashlib.sha256(
+        episode_content_bytes(episode_object)
+    ).hexdigest()
     assert validate_episode(episode_object) == ()
     assert correction["correction"]["strict_discovery_credit"] == "NO_STRICT_DISCOVERY_CREDIT"
     assert correction["correction"]["repairs_original_chronology"] is False

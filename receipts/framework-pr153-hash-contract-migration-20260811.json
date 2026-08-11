@@ -1,0 +1,765 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "RAKL-MATH-FRAMEWORK-PR153-HASH-CONTRACT-MIGRATION-20260811",
+  "recorded_at": "2026-08-11T14:45:07.350608Z",
+  "application_repository": {
+    "repository": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "inventory_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+    "inventory_tree": "fb1b9fc53ccb82e1e6b559451517867aaf2b5b55",
+    "migration_base": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+    "successor_commit": "3bdd4718d3091661d9a7b007cb4bafe706650d5b"
+  },
+  "framework_transition": {
+    "previous_commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "target_commit": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+    "target_tree": "a1e0c220408ce2be646f4f37fd6709daf331d359",
+    "pr_number": 153,
+    "status": "MERGED_FRAMEWORK_MAIN",
+    "changed_blob_bindings": [
+      {
+        "path": "schemas/task-episode.schema.json",
+        "previous_blob": "076f38181b7a896ab1d740f5b6ad160e4fb2cd1c",
+        "target_blob": "aed1055565062a6adefe24eb48331e314d01adec"
+      },
+      {
+        "path": "schemas/lesson.schema.json",
+        "previous_blob": "bd0bdff1eaf5b323a561f4dc20ce63972474a104",
+        "target_blob": "1f8de817f83f7faadb02b0306ae3476c73922742"
+      },
+      {
+        "path": "src/rakl/experience_substrate.py",
+        "previous_blob": "4d7044bd4825c2d058c6a95ee63cea703c3234f3",
+        "target_blob": "814aa24788d796b9cec7e35b6373b5d5e7ffbc77"
+      }
+    ]
+  },
+  "episode_inventory": [
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_TASK_EPISODE_CANONICAL_RETROSPECTIVE_20260811.json",
+      "pointer": "/",
+      "classification": "HISTORICAL_SUPERSEDED_HASH_INVALID",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "4db8e2ef56a23158cf3efde7016ddc6f9dffd556",
+      "file_sha256": "sha256:42602b6eee97e86a229dc27625d732aa4cb86b658a100ef7eb006c67ca2b6cbe",
+      "stored_hash": "sha256:5cd0ff6be191104ca5ed20adc8eb2968f604ec5ba70900f78e7b959a068dae17",
+      "computed_runtime_digest": "d7feb6add55416711d4d7e27e5f10f6a4e8dd81cf040b968ec6d730a63432807",
+      "old_schema_verdict": {
+        "verdict": "PASS",
+        "error_count": 0
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 2
+      },
+      "prior_correction_paths": [
+        "research/real_math/millennium/birch_swinnerton_dyer/08_reviews/BSD_A1a1_PR83_POSTMERGE_ASSURANCE_CORRECTION_20260811.json"
+      ],
+      "successor_path": null,
+      "successor_hash": null,
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_TASK_EPISODE_CANONICAL_RETROSPECTIVE_V2_20260811.json",
+      "pointer": "/",
+      "classification": "CURRENT_SUCCESSOR_HASH_INVALID",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "b29a30b5148c77f29db3daacba8cb75b61ec1869",
+      "file_sha256": "sha256:574201836cf5a442795beede7a8314fd81c5365aac78fefdbf562bf231eeb5b5",
+      "stored_hash": "sha256:bb98893433b8b71e5f63eddcdfcaad59279aaa3a261b5851fb487f9bf5b82d59",
+      "computed_runtime_digest": "739810624ada5182b932e3b0d17b4acf429a483a136e99ebc93cd8b51d0ff310",
+      "old_schema_verdict": {
+        "verdict": "PASS",
+        "error_count": 0
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 2
+      },
+      "prior_correction_paths": [
+        "research/real_math/millennium/birch_swinnerton_dyer/08_reviews/BSD_A1a1_PR83_POSTMERGE_ASSURANCE_CORRECTION_20260811.json"
+      ],
+      "successor_path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_V3_20260811.json",
+      "successor_hash": "739810624ada5182b932e3b0d17b4acf429a483a136e99ebc93cd8b51d0ff310",
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_TASK_EPISODE_SHADOW.json",
+      "pointer": "/",
+      "classification": "IMMUTABLE_NONCANONICAL_SHADOW",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "1bc8a7343c8302d3fb52187ef401b90f60951e66",
+      "file_sha256": "sha256:4d540dd52cc4765df1bd85f4ba401ca71faba587bd5c43b10ad248d714a92504",
+      "stored_hash": "sha256:d3a31982e0e62a0554e369d13a89cfc5a32ecb896718f2d2c034f210bf94f3a9",
+      "computed_runtime_digest": null,
+      "old_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 9
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 11
+      },
+      "prior_correction_paths": [],
+      "successor_path": null,
+      "successor_hash": null,
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_PLECTIC_TASK_EPISODE_CANONICAL_RETROSPECTIVE_20260811.json",
+      "pointer": "/",
+      "classification": "CURRENT_SUCCESSOR_HASH_INVALID",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "24f0ac40ca80e093dbae98b956cdb637bce39ef6",
+      "file_sha256": "sha256:941cbfd0c7ce92ad45aceb5af59d777c84690d4135e6d2f4919d57b9caa19752",
+      "stored_hash": "sha256:c84e5b7a07755a95a16431eedd0591cb481686f5228c4cc1adc40ef88d2ad66e",
+      "computed_runtime_digest": "eac326b757026bf4007f868c93a62f34f6738e29ea3575c5c26d968b393da95c",
+      "old_schema_verdict": {
+        "verdict": "PASS",
+        "error_count": 0
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 2
+      },
+      "prior_correction_paths": [
+        "research/real_math/millennium/birch_swinnerton_dyer/08_reviews/BSD_A1a1_PR96_POSTMERGE_ASSURANCE_CORRECTION_20260811.json"
+      ],
+      "successor_path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_PLECTIC_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_V2_20260811.json",
+      "successor_hash": "eac326b757026bf4007f868c93a62f34f6738e29ea3575c5c26d968b393da95c",
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_PLECTIC_TASK_EPISODE_SHADOW_20260811_R3.json",
+      "pointer": "/",
+      "classification": "IMMUTABLE_NONCANONICAL_SHADOW",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "382dd4aa1b42782f264574f75b5b8f272bf7e593",
+      "file_sha256": "sha256:a8e579810c00ca9e04697d45c9e88c75b0885b8d03f77f447339cc42cadf20ee",
+      "stored_hash": "sha256:941770bc8e8f5f4bd3258a386dcb4e8656de8f6e66951efcb01af896d7affee8",
+      "computed_runtime_digest": null,
+      "old_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 9
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 11
+      },
+      "prior_correction_paths": [],
+      "successor_path": null,
+      "successor_hash": null,
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/cross_problem/07_memory/XM005_RETROSPECTIVE_TASK_EPISODE_20260811.json",
+      "pointer": "/",
+      "classification": "CURRENT_VALID_RAW_EXACT",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "3f4d77b3c39c6cfe1893005296378e81e5f9aa33",
+      "file_sha256": "sha256:2011513559a968fe2204f9653b78d2dd98e1cdfcf179f2282e2d1415f821e24d",
+      "stored_hash": "9de2c924f13f41d9c09cce9cce26994241d8280c84c9e7050007077b7cc7f64b",
+      "computed_runtime_digest": "9de2c924f13f41d9c09cce9cce26994241d8280c84c9e7050007077b7cc7f64b",
+      "old_schema_verdict": {
+        "verdict": "PASS",
+        "error_count": 0
+      },
+      "new_schema_verdict": {
+        "verdict": "PASS",
+        "error_count": 0
+      },
+      "prior_correction_paths": [
+        "research/real_math/millennium/cross_problem/08_reviews/XM005_PR71_OPEN_HEAD_RETROSPECTIVE_ASSURANCE_20260811.json"
+      ],
+      "successor_path": null,
+      "successor_hash": null,
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3_C001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+      "pointer": "/",
+      "classification": "NON_TASK_EPISODE_CONTAINER_WITH_EPISODE_ID",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "f459261341587ede26be1e596e38ab5fdd713527",
+      "file_sha256": "sha256:73288a8f7327fe7e59627e7acd25982b523cc04d9ddff97897c0cf2e4b5a4489",
+      "stored_hash": null,
+      "computed_runtime_digest": null,
+      "old_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 15
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 15
+      },
+      "prior_correction_paths": [],
+      "successor_path": null,
+      "successor_hash": null,
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a1_C001_TASK_EPISODE_CANONICAL_20260811.json",
+      "pointer": "/",
+      "classification": "CURRENT_SUCCESSOR_HASH_INVALID",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "775b84c858ad026edd491e272d15411ed9842fa5",
+      "file_sha256": "sha256:cb4caeb5019cbc2e9022619992dc407c58de281fa7c5651b1769b248ddfe3239",
+      "stored_hash": "sha256:ba4907346b4a5971a41b13d3b9917cca08881d19e836c8ce5439dbe287e5bd55",
+      "computed_runtime_digest": "0c71cf1a9f51389634b7a951f0a79f591b01e485ea106240dda54dea7f4e17b6",
+      "old_schema_verdict": {
+        "verdict": "PASS",
+        "error_count": 0
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 2
+      },
+      "prior_correction_paths": [
+        "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a1_C001_POSTMERGE_ASSURANCE_CORRECTION_20260811.json"
+      ],
+      "successor_path": "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a1_C001_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_V2_20260811.json",
+      "successor_hash": "0c71cf1a9f51389634b7a951f0a79f591b01e485ea106240dda54dea7f4e17b6",
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a1_C001_V3_TASK_EPISODE_20260811.json",
+      "pointer": "/",
+      "classification": "IMMUTABLE_NONCANONICAL_ORIGINAL_SUPERSEDED",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "cf25bcf4c28fa5b5041a52f96a331091f7ec271f",
+      "file_sha256": "sha256:21c214f07f0d42b837fd89ded779e6f5ec26c96246eaca9d04da7a3a6e910741",
+      "stored_hash": "sha256:95665dca8ac410fffaca11cb70f2ebe04d8005893bb7f19c07e35d35a4b8b329",
+      "computed_runtime_digest": "5131ab6a8d71f965eb151bc9cb5cd7cad8c8746205ffb42f70c361e7e8702618",
+      "old_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 1
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 3
+      },
+      "prior_correction_paths": [],
+      "successor_path": null,
+      "successor_hash": null,
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a2_C001_TASK_EPISODE_CANONICAL_20260811.json",
+      "pointer": "/",
+      "classification": "CURRENT_SUCCESSOR_HASH_INVALID",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "aab16ab5c1f0a03db4c66e682d5934b90000bf33",
+      "file_sha256": "sha256:91512c14e74c98771c280244ae40c853aac8695ab137e81387314c847d866c16",
+      "stored_hash": "sha256:5e2e0b71ecb3bba2ce6bd7e4d162869e167ef2d87317f8d73c5fd91e86886104",
+      "computed_runtime_digest": "5ad891912107c2b25645c1da5aff399d061c4f74bf8a813ff778869e9903c6d0",
+      "old_schema_verdict": {
+        "verdict": "PASS",
+        "error_count": 0
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 2
+      },
+      "prior_correction_paths": [
+        "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a2_C001_POSTMERGE_ASSURANCE_CORRECTION_20260811.json"
+      ],
+      "successor_path": "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a2_C001_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_V2_20260811.json",
+      "successor_hash": "5ad891912107c2b25645c1da5aff399d061c4f74bf8a813ff778869e9903c6d0",
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a2_C001_V3_TASK_EPISODE_20260811.json",
+      "pointer": "/",
+      "classification": "IMMUTABLE_NONCANONICAL_ORIGINAL_SUPERSEDED",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "53c479538ba411759ec11f76a12cc7e3d46764cc",
+      "file_sha256": "sha256:68764d7447b64baabb7c184a87704e314c69dba24eb9a2593a1fa9435299f8f4",
+      "stored_hash": "sha256:65a15bcbd89cad0aee67c5cf278d9d1fc2c082096e14f7622169c365710bc349",
+      "computed_runtime_digest": "ba075acaf0d0ab8c0fe7992024800dad23660d9ba030615c7f066ecd0ab68d35",
+      "old_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 1
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 3
+      },
+      "prior_correction_paths": [],
+      "successor_path": null,
+      "successor_hash": null,
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a3_C001_V3_TASK_EPISODE_20260811.json",
+      "pointer": "/",
+      "classification": "IMMUTABLE_NONCANONICAL_INCOMPLETE_TELEMETRY",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "9afad1e8ecee2d4826d80457a319907e23e95ed6",
+      "file_sha256": "sha256:bbb76032704d30c32b83a09109e2fff65ff169210f2ca9d61c27ac8d4569b939",
+      "stored_hash": null,
+      "computed_runtime_digest": null,
+      "old_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 4
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 4
+      },
+      "prior_correction_paths": [],
+      "successor_path": null,
+      "successor_hash": null,
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1a_V3_TASK_EPISODE_SHADOW_20260811.json",
+      "pointer": "/",
+      "classification": "IMMUTABLE_NONCANONICAL_SHADOW",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "89424db076daa1b1ff69a952604090953a1e4b6e",
+      "file_sha256": "sha256:e4ddca2d66fa527f8e30c63b73180b7816a2a72eae193f636292d68eb6996922",
+      "stored_hash": "sha256:8125160658c5b0354b16b3c26096e994e74e8a5319f79f8266e33d70ee528588",
+      "computed_runtime_digest": null,
+      "old_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 9
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 11
+      },
+      "prior_correction_paths": [],
+      "successor_path": null,
+      "successor_hash": null,
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_TASK_EPISODE_CANONICAL_20260811.json",
+      "pointer": "/",
+      "classification": "HISTORICAL_SUPERSEDED_HASH_INVALID",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "c3da1e0be0e1569c0b5853fde77406dbd93eb516",
+      "file_sha256": "sha256:cd94129442a2e8b82116f60dd68806775ac7ca0dfd7b98478b116a0649825d7b",
+      "stored_hash": "sha256:7428096611ba3368002ca129291cccd96dc8e743b8148d4f60a25abc6b8f6fee",
+      "computed_runtime_digest": "aa0a0a4a04e90d9b641cb9e302cc91fb4797e84bab37b11f8f747c07766e017e",
+      "old_schema_verdict": {
+        "verdict": "PASS",
+        "error_count": 0
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 2
+      },
+      "prior_correction_paths": [
+        "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_PR104_TASK_EPISODE_HASH_CORRECTION_20260811.json"
+      ],
+      "successor_path": "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_20260811.json",
+      "successor_hash": "aa0a0a4a04e90d9b641cb9e302cc91fb4797e84bab37b11f8f747c07766e017e",
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_20260811.json",
+      "pointer": "/",
+      "classification": "CURRENT_VALID_RAW_EXACT",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "6753fc9f0bc611a2a3747f455f0db21ecc940d1d",
+      "file_sha256": "sha256:bd06e306b2d3f286b1d799ad6cfcfca4778e5c75ff3a5e16077d593fccba3e6f",
+      "stored_hash": "aa0a0a4a04e90d9b641cb9e302cc91fb4797e84bab37b11f8f747c07766e017e",
+      "computed_runtime_digest": "aa0a0a4a04e90d9b641cb9e302cc91fb4797e84bab37b11f8f747c07766e017e",
+      "old_schema_verdict": {
+        "verdict": "PASS",
+        "error_count": 0
+      },
+      "new_schema_verdict": {
+        "verdict": "PASS",
+        "error_count": 0
+      },
+      "prior_correction_paths": [
+        "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1_PR104_TASK_EPISODE_HASH_CORRECTION_20260811.json"
+      ],
+      "successor_path": null,
+      "successor_hash": null,
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1a_TASK_EPISODE_CANONICAL_20260811.json",
+      "pointer": "/",
+      "classification": "CURRENT_VALID_RAW_EXACT",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "ca92fcdd5851faac816e530b54fa23bd8bb1e7f4",
+      "file_sha256": "sha256:183f06ff5415cf8c4530cebcae369189546d3401529d717d8ab151dc9f6c550b",
+      "stored_hash": "74722b36067bd90187d73a1edee6cf868eb05eabb208dccbb2d07e80b758d352",
+      "computed_runtime_digest": "74722b36067bd90187d73a1edee6cf868eb05eabb208dccbb2d07e80b758d352",
+      "old_schema_verdict": {
+        "verdict": "PASS",
+        "error_count": 0
+      },
+      "new_schema_verdict": {
+        "verdict": "PASS",
+        "error_count": 0
+      },
+      "prior_correction_paths": [
+        "research/real_math/millennium/p_vs_np/10_case_study/O9d12a2a1a1a_PR78_SUCCESSOR_ASSURANCE_CORRECTION_20260811.json"
+      ],
+      "successor_path": null,
+      "successor_hash": null,
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_SUZUKI_FAITHFULNESS_TASK_EPISODE_20260811.json",
+      "pointer": "/",
+      "classification": "CURRENT_HASH_INVALID",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "b515d32115aa9fa24cd88afec16aa75577188ea4",
+      "file_sha256": "sha256:0cee58c94a1cbd0da02f1423d77e9d15ddd7bceec898424acb51f2efe55655bd",
+      "stored_hash": "sha256:3a1978d939947a84627310c4fcc29d9c0b4484206c6c41b839bc7f635183c948",
+      "computed_runtime_digest": "3a1978d939947a84627310c4fcc29d9c0b4484206c6c41b839bc7f635183c948",
+      "old_schema_verdict": {
+        "verdict": "PASS",
+        "error_count": 0
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 2
+      },
+      "prior_correction_paths": [],
+      "successor_path": "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_SUZUKI_FAITHFULNESS_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_V2_20260811.json",
+      "successor_hash": "3a1978d939947a84627310c4fcc29d9c0b4484206c6c41b839bc7f635183c948",
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_DENSE_SOURCE_TASK_EPISODE_20260811.json",
+      "pointer": "/",
+      "classification": "IMMUTABLE_APPLICATION_EXTENDED_PROPOSAL_NOT_CORE_TASK_EPISODE",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "b641d7aebf364bacdf8d3b27e0e762a01f8537b2",
+      "file_sha256": "sha256:174e16de90ef140d2b73b99b11fc8c64dae362b450d43b6881af6dee6335c37e",
+      "stored_hash": "sha256:9fb1fd2ba7b01283195fc7bb1716596bb34c43bb9f2fe1edd0904c4d661cb4bb",
+      "computed_runtime_digest": "e1b5c76ef513f654e6cfeffb97df1f980aa515ba0e7eca4c4d1c1d4a3612b039",
+      "old_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 1
+      },
+      "new_schema_verdict": {
+        "verdict": "FAIL",
+        "error_count": 3
+      },
+      "prior_correction_paths": [],
+      "successor_path": null,
+      "successor_hash": null,
+      "historical_bytes_preserved": true,
+      "authority": "PROPOSAL_OR_RECORDED_APPLICATION_STATE_ONLY"
+    }
+  ],
+  "lesson_like_inventory": [
+    {
+      "path": "research/real_math/millennium/cross_problem/10_study_pattern/LESSON_PROPOSAL_EXAMPLE_20260811.json",
+      "pointer": "/",
+      "classification": "NOT_FRAMEWORK_LESSON_PROPOSAL_ONLY",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "aad926db2da16b75ef83e24781e88b282ca117d4",
+      "file_sha256": "sha256:e0e0b6475062134b11f5c6ee6f020cd480d4b27de7b7677a7164929e481b0391",
+      "stored_hash": "sha256:a4241fd0c2820ef71f18d96086f53e977b18b03530c1d02d7ffaebac709a53d9",
+      "why_not_framework_lesson": "object does not satisfy the complete framework Lesson field contract",
+      "missing_framework_lesson_fields": [
+        "action",
+        "authority",
+        "contradicting_episode_ids",
+        "evidence_pointers",
+        "expected_effects",
+        "kind",
+        "lesson_id",
+        "supporting_episode_ids"
+      ],
+      "authority": "PROPOSAL_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3_C001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+      "pointer": "/lesson_proposal",
+      "classification": "NOT_FRAMEWORK_LESSON_PROPOSAL_ONLY",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "f459261341587ede26be1e596e38ab5fdd713527",
+      "file_sha256": "sha256:73288a8f7327fe7e59627e7acd25982b523cc04d9ddff97897c0cf2e4b5a4489",
+      "stored_hash": null,
+      "why_not_framework_lesson": "object does not satisfy the complete framework Lesson field contract",
+      "missing_framework_lesson_fields": [
+        "action",
+        "artifact_hash",
+        "boundaries",
+        "context_scope",
+        "contradicting_episode_ids",
+        "evidence_pointers",
+        "expected_effects",
+        "falsifier",
+        "kind",
+        "supporting_episode_ids",
+        "trigger_signature",
+        "validation_obligations"
+      ],
+      "authority": "PROPOSAL_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/C025_SYNTHESIS_RECEIPT_20260811.json",
+      "pointer": "/method_lesson",
+      "classification": "NOT_FRAMEWORK_LESSON_PROPOSAL_ONLY",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "2a02f1c4e7e81ad9555431adbff83315630a8977",
+      "file_sha256": "sha256:7f348ddedeec3af40fe352173d83e07c68a92948bf311af68c6cf6bcc4f9d7f7",
+      "stored_hash": null,
+      "why_not_framework_lesson": "object does not satisfy the complete framework Lesson field contract",
+      "missing_framework_lesson_fields": [
+        "action",
+        "artifact_hash",
+        "authority",
+        "boundaries",
+        "context_scope",
+        "contradicting_episode_ids",
+        "evidence_pointers",
+        "expected_effects",
+        "falsifier",
+        "kind",
+        "supporting_episode_ids",
+        "trigger_signature",
+        "validation_obligations"
+      ],
+      "authority": "PROPOSAL_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/C025_SYNTHESIS_RECEIPT_V2_20260811.json",
+      "pointer": "/method_lesson",
+      "classification": "NOT_FRAMEWORK_LESSON_PROPOSAL_ONLY",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "22941f37f38bfa4b4e3bdcda1ab505289d09545b",
+      "file_sha256": "sha256:1ca54e751b045d3362ee07d902ef28b5e1b12c93a34c39db155e78f50bf06001",
+      "stored_hash": null,
+      "why_not_framework_lesson": "object does not satisfy the complete framework Lesson field contract",
+      "missing_framework_lesson_fields": [
+        "action",
+        "artifact_hash",
+        "authority",
+        "boundaries",
+        "context_scope",
+        "contradicting_episode_ids",
+        "evidence_pointers",
+        "expected_effects",
+        "falsifier",
+        "kind",
+        "supporting_episode_ids",
+        "trigger_signature",
+        "validation_obligations"
+      ],
+      "authority": "PROPOSAL_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json",
+      "pointer": "/method_lesson_candidate",
+      "classification": "NOT_FRAMEWORK_LESSON_PROPOSAL_ONLY",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "93d3811fcb207ffe7c7113fbe1b5fc291053c30b",
+      "file_sha256": "sha256:639cf7138adce1d22e67fc8c2a56cdca280e7cc0e087683a3fbce02a34a7e858",
+      "stored_hash": null,
+      "why_not_framework_lesson": "object does not satisfy the complete framework Lesson field contract",
+      "missing_framework_lesson_fields": [
+        "action",
+        "artifact_hash",
+        "authority",
+        "boundaries",
+        "context_scope",
+        "contradicting_episode_ids",
+        "evidence_pointers",
+        "expected_effects",
+        "falsifier",
+        "kind",
+        "supporting_episode_ids",
+        "trigger_signature"
+      ],
+      "authority": "PROPOSAL_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_V2_20260811.json",
+      "pointer": "/method_lesson_candidate",
+      "classification": "NOT_FRAMEWORK_LESSON_PROPOSAL_ONLY",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "629d05930b514d141541de39814098e9b1e50a8d",
+      "file_sha256": "sha256:a918d57657847c7d76c90f823a93d0aa146aa34af0f208e2a1150796f7a192b3",
+      "stored_hash": null,
+      "why_not_framework_lesson": "object does not satisfy the complete framework Lesson field contract",
+      "missing_framework_lesson_fields": [
+        "action",
+        "artifact_hash",
+        "authority",
+        "boundaries",
+        "context_scope",
+        "contradicting_episode_ids",
+        "evidence_pointers",
+        "expected_effects",
+        "falsifier",
+        "kind",
+        "supporting_episode_ids",
+        "trigger_signature"
+      ],
+      "authority": "PROPOSAL_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1a_LESSON_PROPOSAL_SHADOW_20260811.json",
+      "pointer": "/",
+      "classification": "NOT_FRAMEWORK_LESSON_PROPOSAL_ONLY",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "42843de308235e6716d66430d29caa826257d315",
+      "file_sha256": "sha256:02bfe59fca978e7626bf165a3449f403ecaacac79e01662bc191104daf17e1d3",
+      "stored_hash": "sha256:f7a9c0848eb6ddc413bcd3ff14e3efbd88059c1f6667d81ac6df7306f7e35ec8",
+      "why_not_framework_lesson": "object does not satisfy the complete framework Lesson field contract",
+      "missing_framework_lesson_fields": [
+        "action",
+        "authority",
+        "contradicting_episode_ids",
+        "evidence_pointers",
+        "expected_effects",
+        "kind",
+        "lesson_id",
+        "supporting_episode_ids"
+      ],
+      "authority": "PROPOSAL_ONLY"
+    },
+    {
+      "path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_DENSE_SOURCE_TASK_EPISODE_20260811.json",
+      "pointer": "/reusable_lesson_proposal",
+      "classification": "NOT_FRAMEWORK_LESSON_PROPOSAL_ONLY",
+      "source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "git_blob_sha": "b641d7aebf364bacdf8d3b27e0e762a01f8537b2",
+      "file_sha256": "sha256:174e16de90ef140d2b73b99b11fc8c64dae362b450d43b6881af6dee6335c37e",
+      "stored_hash": null,
+      "why_not_framework_lesson": "object does not satisfy the complete framework Lesson field contract",
+      "missing_framework_lesson_fields": [
+        "artifact_hash",
+        "context_scope",
+        "contradicting_episode_ids",
+        "evidence_pointers",
+        "expected_effects",
+        "falsifier",
+        "supporting_episode_ids",
+        "validation_obligations"
+      ],
+      "authority": "PROPOSAL_ONLY"
+    }
+  ],
+  "successor_bindings": [
+    {
+      "parent_path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_TASK_EPISODE_CANONICAL_RETROSPECTIVE_V2_20260811.json",
+      "parent_source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "parent_blob": "b29a30b5148c77f29db3daacba8cb75b61ec1869",
+      "parent_stored_hash": "sha256:bb98893433b8b71e5f63eddcdfcaad59279aaa3a261b5851fb487f9bf5b82d59",
+      "successor_path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_V3_20260811.json",
+      "successor_commit": "3bdd4718d3091661d9a7b007cb4bafe706650d5b",
+      "successor_blob": "41336313044e351e38c52a8afe1cf67c5f7f9b63",
+      "successor_file_sha256": "sha256:163f449ec31e815c8b105cecbd5003427e4c7ae767225d9254fd20c9f9187213",
+      "successor_raw_digest": "739810624ada5182b932e3b0d17b4acf429a483a136e99ebc93cd8b51d0ff310",
+      "supersession_reason": "PR153_HASH_CONTRACT_ONLY",
+      "semantic_payload_changed": false,
+      "authority_changed": false
+    },
+    {
+      "parent_path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_PLECTIC_TASK_EPISODE_CANONICAL_RETROSPECTIVE_20260811.json",
+      "parent_source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "parent_blob": "24f0ac40ca80e093dbae98b956cdb637bce39ef6",
+      "parent_stored_hash": "sha256:c84e5b7a07755a95a16431eedd0591cb481686f5228c4cc1adc40ef88d2ad66e",
+      "successor_path": "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_PLECTIC_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_V2_20260811.json",
+      "successor_commit": "3bdd4718d3091661d9a7b007cb4bafe706650d5b",
+      "successor_blob": "709cccd4abd50965c10700e7bec90d54d904346a",
+      "successor_file_sha256": "sha256:a3efdf651e7f1b42b03f866b1cf2bb28164a18fdf9dc57937df84ab6e31eea25",
+      "successor_raw_digest": "eac326b757026bf4007f868c93a62f34f6738e29ea3575c5c26d968b393da95c",
+      "supersession_reason": "PR153_HASH_CONTRACT_ONLY",
+      "semantic_payload_changed": false,
+      "authority_changed": false
+    },
+    {
+      "parent_path": "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a1_C001_TASK_EPISODE_CANONICAL_20260811.json",
+      "parent_source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "parent_blob": "775b84c858ad026edd491e272d15411ed9842fa5",
+      "parent_stored_hash": "sha256:ba4907346b4a5971a41b13d3b9917cca08881d19e836c8ce5439dbe287e5bd55",
+      "successor_path": "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a1_C001_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_V2_20260811.json",
+      "successor_commit": "3bdd4718d3091661d9a7b007cb4bafe706650d5b",
+      "successor_blob": "f53be339ca3a1d609ed3377d0ea4d4bf6826ae37",
+      "successor_file_sha256": "sha256:9841a5c56cfbab19dd0cd1eac1e816fea3b1ae0d0089abee43eaf334fd2b1170",
+      "successor_raw_digest": "0c71cf1a9f51389634b7a951f0a79f591b01e485ea106240dda54dea7f4e17b6",
+      "supersession_reason": "PR153_HASH_CONTRACT_ONLY",
+      "semantic_payload_changed": false,
+      "authority_changed": false
+    },
+    {
+      "parent_path": "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a2_C001_TASK_EPISODE_CANONICAL_20260811.json",
+      "parent_source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "parent_blob": "aab16ab5c1f0a03db4c66e682d5934b90000bf33",
+      "parent_stored_hash": "sha256:5e2e0b71ecb3bba2ce6bd7e4d162869e167ef2d87317f8d73c5fd91e86886104",
+      "successor_path": "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a2_C001_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_V2_20260811.json",
+      "successor_commit": "3bdd4718d3091661d9a7b007cb4bafe706650d5b",
+      "successor_blob": "c62dcf872ef1d0d2bce93d4384fffe10cf2fdea6",
+      "successor_file_sha256": "sha256:4cae1aea566d3cad03c64aa98fa82b8eb3545934d6874f7571fcffcced47e2f7",
+      "successor_raw_digest": "5ad891912107c2b25645c1da5aff399d061c4f74bf8a813ff778869e9903c6d0",
+      "supersession_reason": "PR153_HASH_CONTRACT_ONLY",
+      "semantic_payload_changed": false,
+      "authority_changed": false
+    },
+    {
+      "parent_path": "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_SUZUKI_FAITHFULNESS_TASK_EPISODE_20260811.json",
+      "parent_source_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "parent_blob": "b515d32115aa9fa24cd88afec16aa75577188ea4",
+      "parent_stored_hash": "sha256:3a1978d939947a84627310c4fcc29d9c0b4484206c6c41b839bc7f635183c948",
+      "successor_path": "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_SUZUKI_FAITHFULNESS_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_V2_20260811.json",
+      "successor_commit": "3bdd4718d3091661d9a7b007cb4bafe706650d5b",
+      "successor_blob": "48932277a85b733501ac2811dfc13a34f9fe8afe",
+      "successor_file_sha256": "sha256:15b6bf538fad0b835aaab5ef6394f927d86086ff52dc977d855f2b50bcadfb7d",
+      "successor_raw_digest": "3a1978d939947a84627310c4fcc29d9c0b4484206c6c41b839bc7f635183c948",
+      "supersession_reason": "PR153_HASH_CONTRACT_ONLY",
+      "semantic_payload_changed": false,
+      "authority_changed": false
+    }
+  ],
+  "historical_schema_policy": {
+    "historical_evaluations_use_exact_recorded_framework_commit": true,
+    "historical_bytes_rewritten": false,
+    "current_validation_applies_prospectively": true,
+    "missing_or_nonconforming_objects_fail_closed": true
+  },
+  "pin_migration": {
+    "previous_commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "provisional_target_commit": "3d4dde94ed8d6be04641b96ecf89389de55b61ce",
+    "final_merged_commit": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+    "exact_application_suite_status": "PENDING_FINAL_EXACT_APPLICATION_SUITE",
+    "push_allowed": false
+  },
+  "authority_contract": {
+    "grants_new_mathematical_result": false,
+    "grants_proof_authority": false,
+    "grants_millennium_root_authority": false,
+    "grants_theorem_authority": false,
+    "grants_novelty_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false,
+    "rewrites_historical_artifacts": false
+  },
+  "evidence_pointers": [
+    "git:bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+    "git:3bdd4718d3091661d9a7b007cb4bafe706650d5b",
+    "framework-git:bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "framework-git:9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+    "command:python tools/run_application_tests.py --framework framework/RAKL -> 19 failed, 394 passed (pre-migration RED)"
+  ],
+  "artifact_hash": "sha256:e725f2610e2e5cfc43d53ac8383bb421b373545637b3ab409f1c020cd1cf54e3"
+}

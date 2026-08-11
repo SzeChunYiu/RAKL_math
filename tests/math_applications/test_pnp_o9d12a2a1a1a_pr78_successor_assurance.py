@@ -21,6 +21,7 @@ from rakl.experience_substrate import (
 
 ROOT = Path(__file__).resolve().parents[2]
 PNP = ROOT / "research/real_math/millennium/p_vs_np"
+FRAMEWORK_ROOT = ROOT / "framework/RAKL"
 PR_BASE = "3ccdcc51aa312af8b8288ff7cf6f4a681966d1fd"
 PR_HEAD = "ce3a6dfc2af3c5c3e7fc93616e3fd774097e4d9b"
 PR_HEAD_TREE = "d70575ff2ad8d4c6277eac6fedbe050676b24d7a"
@@ -83,6 +84,14 @@ def _validate(value: dict, schema_path: Path) -> None:
     Draft202012Validator(schema, format_checker=FormatChecker()).validate(value)
 
 
+def _framework_schema_at(commit: str, schema_name: str) -> dict:
+    raw = _git("-C", str(FRAMEWORK_ROOT), "show", f"{commit}:schemas/{schema_name}")
+    assert isinstance(raw, str)
+    value = json.loads(raw)
+    assert isinstance(value, dict)
+    return value
+
+
 def _episode(value: dict) -> TaskEpisode:
     return TaskEpisode(
         episode_id=value["episode_id"], task_id=value["task_id"],
@@ -121,7 +130,7 @@ def test_shadow_objects_are_explicitly_noncanonical_and_proposal_only() -> None:
     receipt = _load(CORRECTION)
     shadow = _load(SHADOW)
     lesson = _load(LESSON)
-    task_schema = _load(ROOT / "framework/RAKL/schemas/task-episode.schema.json")
+    task_schema = _framework_schema_at(FRAMEWORK, "task-episode.schema.json")
     shadow_errors = list(Draft202012Validator(task_schema).iter_errors(shadow))
     assert len(shadow_errors) == receipt["shadow_audit"]["task_episode_schema_error_count"]
     assert len(shadow_errors) > 0
@@ -179,7 +188,7 @@ def test_merged_pr104_prefixed_hash_bypass_is_preserved_and_recorded() -> None:
     actual_digest = hashlib.sha256(episode_content_bytes(historical)).hexdigest()
     assert len(historical.artifact_hash) == 71
     assert historical.artifact_hash != "sha256:" + actual_digest
-    assert validate_episode(historical) == ()
+    assert validate_episode(historical) == ("episode:artifact_hash_invalid",)
     assert receipt["framework_gap_audit"] == {
         "gap_id": "FG-BD1A276-TASK-EPISODE-PREFIXED-HASH-BYPASS",
         "framework_commit": FRAMEWORK,
@@ -307,8 +316,8 @@ def test_hostile_authority_escalation_is_schema_rejected(
 
 def test_framework_and_successor_hash_bindings_are_exact() -> None:
     correction = _load(CORRECTION)
-    assert _git("rev-parse", "HEAD:framework/RAKL") == FRAMEWORK
     assert correction["framework_authority"]["commit"] == FRAMEWORK
+    assert _git("-C", str(FRAMEWORK_ROOT), "cat-file", "-e", f"{FRAMEWORK}^{{commit}}") == ""
     for item in correction["successors"]:
         path = ROOT / item["path"]
         if item["hash_mode"] == "EMBEDDED_SELF_HASH":
