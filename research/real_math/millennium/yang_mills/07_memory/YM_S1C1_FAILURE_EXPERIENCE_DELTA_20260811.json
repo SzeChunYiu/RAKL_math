@@ -1,0 +1,39 @@
+{
+  "failure_id": "F-YM-S1C1-FIXED-REFERENCE-BARE-COUPLING-ESCAPE",
+  "atom_id": "YM-S1c1",
+  "source_episode_proposal_id": "episode-proposal::ym-s1c1-af-bare-coupling-audit-20260811",
+  "diagnosis_status": "OBSERVED_ONLY",
+  "authority": "PROPOSAL_SHADOW_SEARCH_PRIORITY_ONLY",
+  "method_family": "fixed-reference implicit-function tuning -> asymptotically-free Wilson bare trajectory",
+  "failure_mode": "the audited theorem tunes beta_K into an exponentially shrinking neighborhood of one fixed finite beta_* while downstream prose attributes an asymptotically-free bare trajectory to that theorem",
+  "residual_signature": [
+    "fixed-reference beta_K approaches beta_* rather than escaping a fixed compact bare-coupling domain",
+    "moving-domain/uniform-estimate theorem for a genuine Wilson bare trajectory remains source-unbound",
+    "operational renormalized-coupling decay is a distinct coordinate from microscopic Wilson beta",
+    "G5-G7 local sections still lack a verified continuum gluing interface"
+  ],
+  "broken_assumptions": [
+    "entry into a contraction ball near one fixed bare coupling is enough to bind the Wilson bare trajectory required for the continuum claim",
+    "renormalized-coupling decay after entry can substitute for a missing microscopic bare-parameter map",
+    "uniform estimates on one compact beta interval automatically extend to a moving beta domain"
+  ],
+  "scope_conditions": [
+    "Faizal-Shabir arXiv:2606.19362v1 Theorem 5.4 and its downstream attribution in Corollary 5.6 / Theorem 5.7",
+    "the fixed-reference beta_* and compact-I proof as displayed",
+    "does not claim nonexistence of another asymptotically-free trajectory theorem or repair"
+  ],
+  "competing_diagnoses": [
+    "a moving beta_*(K) was intended but the required moving-domain estimates are not displayed",
+    "a different bare-coupling coordinate was intended but no explicit conversion to the Wilson beta was bound",
+    "another theorem elsewhere may repair the bridge"
+  ],
+  "selected_diagnosis": "",
+  "falsifier_or_attempt": "take K -> infinity in the displayed delta_K and beta_K interval and compare that limiting behavior with the downstream bare-trajectory attribution",
+  "observed_result": "delta_K is O(rho^K), so the displayed beta_K sequence converges to the fixed beta_* used in the proof",
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/03_sources/YM_S1C1_FAIZAL_SHABIR_AF_ENTRY_AUDIT_20260811.md",
+    "RAKL_math issue #69",
+    "arXiv:2606.19362v1, Theorem 5.4, Corollary 5.6, Theorem 5.7 and Appendix A.9"
+  ],
+  "timestamp": "2026-08-11T11:16:00Z"
+}
