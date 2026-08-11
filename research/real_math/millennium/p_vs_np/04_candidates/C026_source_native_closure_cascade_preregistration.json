@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "candidate_id": "C026",
+  "atom_id": "O9d12a2a1a1",
+  "candidate_kind": "SCOPED_NEGATIVE_ROUTE_PRUNING / CLOSURE_CASCADE",
+  "frozen_at": "2026-08-11T12:12:00+00:00",
+  "chronology": {
+    "context_hash": "sha256:c9399f1ca3809c6eee6a9cab12184e6a7f27763ea88fc406b6696b3cd09b422b",
+    "expert_review_hash": "sha256:f0f2d74682dd62b28a6df54ec40a4af6aa71fe6165e624ea8c14f434ff7f288f",
+    "memory_review_hash": "sha256:fb7466e23ed700b8e60cd170267167936346c7e96722eadab63b8cbed69c61c4",
+    "pre_candidate_trace_hash": "sha256:3ab915bfe10b74b36ddf73ee4b71cbfd00da4d90b00185cca6579cf2f6484972",
+    "next_step_event_hash": "sha256:8dfbf6ad60aa82c2abb07ad195c353152144e19c3d6b98631672bf436e22939e",
+    "candidate_generation_allowed": true
+  },
+  "statement": {
+    "scope": "finite discrete spaces compatible with the source semi-filter/preservation definitions; not claimed for graph row/column generator geometry",
+    "family": "For m>=3 let U=[m], Γ=U∪{w}, A={w}, generators B_i=(U\\{i})∪{w}, D_i=U\\{i}, and C_j=U\\{1,...,j}. Let Λ_old={(C_j,D_{j+1}): 2<=j<=m-1}. Add p=(D_1,D_2).",
+    "claim": "The least upward-closed family above w preserving Λ_old has exactly {U,D_1,...,D_m}, excludes empty, and all old rules are dormant. After adding p, preservation forces C_2,C_3,...,C_m=empty in sequence. Consequently the least closure becomes P(U), its cardinality jumps from m+1 to 2^m, and at least m-1 intersection-rule conclusions become newly forced.",
+    "method_consequence": "Raw closure cardinality, log closure cardinality, raw newly-forced-intersection count, and raw propagation depth cannot be universal O(1)-marginal per-new-pair potentials over all source-compatible finite discrete spaces."
+  },
+  "proof_plan": [
+    "Above w requires every D_i because w belongs to every B_i.",
+    "Upward closure of all co-singletons D_i contains only U and the D_i.",
+    "For j>=2, C_j has size <=m-2 and is a proper subset of each relevant co-singleton, so C_j is absent initially; Λ_old is therefore preserved vacuously.",
+    "Adding p forces C_2=D_1∩D_2.",
+    "Inductively, if C_j is forced then old pair (C_j,D_{j+1}) forces C_{j+1}=C_j∩D_{j+1}.",
+    "At j=m-1 this forces C_m=empty. Upward closure of empty is all P(U)."
+  ],
+  "frozen_predictions": [
+    {"id":"C026-P1","statement":"Before p, least closure has cardinality m+1 and excludes empty for every m>=3."},
+    {"id":"C026-P2","statement":"Before p, no old rule fires because C_2 is absent."},
+    {"id":"C026-P3","statement":"After p, the forced intersection chain has m-1 conclusions C_2,...,C_m and ends at empty."},
+    {"id":"C026-P4","statement":"After p, least closure cardinality is 2^m."},
+    {"id":"C026-P5","statement":"The one-pair marginal jump in raw closure cardinality and raw propagation count is unbounded with m."}
+  ],
+  "frozen_falsifiers": [
+    {"id":"C026-F1","condition":"For any tested m>=3, old closure contains empty or has cardinality other than m+1.","effect":"REJECT_CONSTRUCTION"},
+    {"id":"C026-F2","condition":"Any old rule fires before p.","effect":"REJECT_DORMANCY"},
+    {"id":"C026-F3","condition":"After p, some C_j in the claimed chain is not forced.","effect":"REJECT_CASCADE"},
+    {"id":"C026-F4","condition":"After p, empty is not forced or closure cardinality is not 2^m.","effect":"REJECT_AMPLIFICATION"},
+    {"id":"C026-F5","condition":"The construction violates the source definitions of semi-filter, above-w base requirements, or preservation pairs.","effect":"REJECT_SOURCE_COMPATIBILITY"}
+  ],
+  "non_claims": [
+    "no P versus NP theorem",
+    "no super-log graph cover lower bound",
+    "no novelty claim for Horn/closure cascades",
+    "no claim that every closure-aware potential fails",
+    "no claim that the cascade family is realizable by row/column generators of an explicit graph",
+    "no claim that quotient/amortized charges cannot have O(1) marginal cost"
+  ],
+  "authority": "FROZEN_CANDIDATE / PROPOSAL_ONLY_UNTIL_DERIVATION_AND_FALSIFIER / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:0f13981ea64a6c291ebe3d1f2c2d66a78b0139ef54b9b49358f5954fe16dc99b"
+}
