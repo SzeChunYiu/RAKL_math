@@ -1,0 +1,32 @@
+{
+  "atom_id": "H4d1c-a",
+  "parent_obstruction_id": "H4d1c-INDEPENDENT-HODGE-TO-WITNESS-TANGENT-SURJECTIVITY-MECHANISM",
+  "question": "Can H4d1c safely reduce an exact finite signed rational witness z0=sum_i q_i[Z_i] to separate componentwise positive variational-Hodge/liftability mechanisms using only tangency of the total rational class alpha along one Hodge branch?",
+  "scope": [
+    "smooth projective complex family; rational cohomology; already algebraic chosen finite signed rational central witness",
+    "first-order only; fixed irreducible local Hodge-locus branch for the total class alpha",
+    "coefficient-preserving selected component bookkeeping; no claim that a product of Hilbert/Chow branches is a global fine moduli space",
+    "test only logical sufficiency of componentwise transfer; no root initial algebraicity, higher Artin lifting, algebraization, monodromy, singular degeneration or global continuation"
+  ],
+  "objects": {
+    "V": "tangent space of the base at s0 restricted to the chosen local chart",
+    "h_i": "linearized Hodge-variation condition for the component class [Z_i], with values embedded in a common linear Hodge-obstruction target Q",
+    "h_alpha": "sum_i q_i h_i, the linearized Hodge condition for alpha=sum_i q_i[Z_i]"
+  },
+  "candidate_transfer": "From h_alpha(v)=0 infer h_i(v)=0 for every selected component, then apply source-specific componentwise witness-liftability mechanisms and intersect their reachable base directions.",
+  "precommitted_falsifier": "Exhibit a finite-dimensional linear interface satisfying h_alpha(v)=0 for a nonzero v while some h_i(v) is nonzero. Such an interface refutes the transfer from total-class tangency to componentwise Hodge persistence unless an additional no-cancellation/joint-detection hypothesis is present.",
+  "positive_controls": [
+    "codimension-one Picard/Lefschetz-(1,1), where denominator-cleared total divisor data can be represented by a single line-bundle class rather than requiring componentwise Hodge persistence",
+    "Kloosterman complete-intersection hypersurface theorem, where source-specific flag-Hilbert geometry directly compares the Hodge locus to an actual witness locus for the chosen cycle"
+  ],
+  "transfer_disanalogies": [
+    "higher-codimension rational signed witnesses generally lack Picard-style single-object representability",
+    "total-class Hodge tangency is linear in cohomology and can cancel across selected component contributions",
+    "componentwise positive theorems have hypotheses on each component class, not merely on their weighted sum",
+    "first-order no-cancellation would still leave higher-order and gluing obligations open"
+  ],
+  "actual_fibre_manifest_hash": "sha256:60169557434d4455e0ec6a43febb5e2296ecd0fd4576ae52e628d9a24157ef8a",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "frozen_at": "2026-08-12T00:57:34+02:00",
+  "packet_hash": "sha256:82a1d346a7a70f6a564732375f40887f8318889dbb547d4c226b3aa2d78b7a67"
+}
