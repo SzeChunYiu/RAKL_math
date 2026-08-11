@@ -1,0 +1,92 @@
+{
+  "schema_version": "research-memory-review-v3-proposal-shadow",
+  "target_atom_id": "NS-B1a3b",
+  "target_context_hash": "sha256:5abea6153d4a3801a8f6637e6dc0e5aafeecefc438981052c5c9b082136818e4",
+  "bound_rakl_math_base_sha": "111a3f95c72b0a418f968708bd3eda77ef98bccf",
+  "candidate_method_families": [
+    "Giga-Miura scale-critical vorticity-direction integral",
+    "uniform-continuity continuous alignment",
+    "advection-mediated depletion",
+    "localized geometric depletion"
+  ],
+  "success_memory": {
+    "retrieved_ids": [
+      "GM-THM1.1",
+      "GM-COR2.6",
+      "GM-PROP2.1",
+      "GM-PROP2.2",
+      "GM-LEMMA2.3",
+      "AB-THM1.1",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "selected_ids": [
+      "GM-THM1.1",
+      "GM-COR2.6",
+      "GM-PROP2.1",
+      "GM-PROP2.2",
+      "GM-LEMMA2.3",
+      "AB-THM1.1",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "rejected_or_deferred": [
+      {
+        "id": "ESS-L3",
+        "reason": "backward uniqueness/global-L3 is not needed by the selected geometric rigidity route"
+      },
+      {
+        "id": "exact-self-similar-Liouville",
+        "reason": "Giga-Miura treats a generic maximum-normalized bounded ancient limit; no stationary profile equation is assumed"
+      },
+      {
+        "id": "CF/BB-Holder-direction",
+        "reason": "valid analogue but strictly stronger than the selected Type-I-specific continuous-alignment/scaling-critical criterion"
+      }
+    ]
+  },
+  "failure_memory": {
+    "retrieved_ids": [
+      "F-NS-R001-A1-ENERGY-CRITICALITY",
+      "F-NS-R001B-LOCAL-ALIGNMENT-NONSUFFICIENCY",
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "F-NS-B1a3-UNCONTROLLED-FAR-FIELD"
+    ],
+    "selected_ids": [
+      "F-NS-R001B-LOCAL-ALIGNMENT-NONSUFFICIENCY",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "F-NS-B1a3-UNCONTROLLED-FAR-FIELD"
+    ],
+    "routing_effects": [
+      "Do not mistake pointwise positive-eigenframe alignment for nonlocal direction coherence.",
+      "Prefer a rigidity theorem whose input is local/high-vorticity geometry and bounded mildness rather than re-entering the missing global-L3 topology.",
+      "Audit whether the chosen source genuinely tolerates infinite energy/far-field loss before treating pressure/tail leakage as resolved."
+    ]
+  },
+  "retrieved_but_rejected_routes": [
+    {
+      "route": "repeat local strain-alignment calibration",
+      "reason": "already tested by NS-R001b and not the same property as direction coherence"
+    },
+    {
+      "route": "repeat shell/energy budget",
+      "reason": "already pruned and orthogonal to this geometric lane"
+    },
+    {
+      "route": "derive global L3 before geometry",
+      "reason": "unnecessary if a source-valid geometric Type-I rigidity interface exists"
+    },
+    {
+      "route": "invoke backward uniqueness",
+      "reason": "not used by Giga-Miura's 2D Liouville rigidity"
+    }
+  ],
+  "missed_memory_audit": {
+    "status": "CANNOT_MEASURE",
+    "reason": "no exhaustive relevance-labelled universe over all RAKL_math memories was frozen; retrieval coverage is not claimed"
+  },
+  "pre_memory_preference": "search for a new vorticity-coherence theorem or invent a depletion quantity",
+  "post_memory_preference": "first audit Giga-Miura's existing Type-I continuous-alignment and scaling-invariant grad-zeta criterion as an exact producer/consumer interface, then classify the negation if Type-I blow-up persists",
+  "selected_next_action": "Execute a source-signature blow-up/rigidity audit of GM Theorem 1.1 and Corollary 2.6 against the registered Type-I object. Falsify silent inheritance: accept only a conditional rigidity/classification result unless finite-I itself supplies the directional hypothesis.",
+  "authority": "PROPOSAL_SHADOW_SEARCH_ROUTING_ONLY"
+}
