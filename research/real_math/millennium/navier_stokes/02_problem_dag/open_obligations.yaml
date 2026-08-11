@@ -2,7 +2,10 @@ root:
   id: NS0
   statement: "Solve one exact official Clay Navier–Stokes outcome (A), (B), (C), or (D)"
   status: OPEN_NO_SOLUTION_CERTIFICATE
-  control_issue: 83
+  control_issue: 4
+  migration_provenance:
+    - "SzeChunYiu/RAKL#83 (historical blow-up control surface)"
+    - "SzeChunYiu/RAKL#88 (historical Navier–Stokes control surface)"
 
 active_route:
   id: NS-A
@@ -15,7 +18,7 @@ active_route:
 atoms:
   NS-B1:
     title: "Type-I blow-up to rigidity-ready ancient class"
-    status: SOURCE_MATRIX_COMPLETE_CHILD_ATOM_OPENED
+    status: FIRST_CHILD_CALIBRATION_COMPLETE_SECOND_CHILD_OPENED
     objective: "Assuming a Type-I singularity, identify the exact rescaled ancient class and the smallest inherited property needed for a valid Liouville contradiction."
     source_backed_edges:
       - "Type-I singularity <-> nontrivial mild bounded ancient solution with registered Type-I decay (Albritton–Barker, Theorem 1.1, arXiv:1811.00502)"
@@ -28,17 +31,33 @@ atoms:
         statement: "Finite Albritton–Barker I does not, as a pure functional inequality on arbitrary smooth bounded divergence-free fields, force any globally L3-bounded time slice."
         scope: "Not a Navier–Stokes counterexample; it only blocks norm-definition/interpolation-only proofs of the dynamic bridge."
         evidence: "01_frontier/NS-B1_TYPE_I_IMPLICATION_MATRIX_20260811.md"
+      - id: NS-B1a-C001
+        status: VERIFIED_LOCAL_PRESSURE_TAIL_CALIBRATION
+        statement: "Under the time-slice critical Morrey energy bound mu(B(x,r))<=M r, the absolute far-field quadratic pressure contribution decays as O(M R^-2) and the first kernel-gradient contribution as O(M R^-3)."
+        route_consequence: "Reject only the raw instantaneous pressure-divergence anti-replication mechanism; pressure-aware temporal/local/coherent routes remain live."
+        evidence: "01_frontier/NS-B1a_C001_PRESSURE_TAIL_LOCALIZATION_20260811.md"
     open_children:
       NS-B1a:
         title: "Dynamics-specific Type-I trace/tail bridge"
         question: "For a mild bounded ancient 3D Navier–Stokes solution with I<infinity, what weakest equation-specific inherited property yields either a backward sequence uniformly bounded in global L3 or another source-valid Liouville trigger?"
-        status: CHILD_CONTEXT_REQUIRED_BEFORE_CANDIDATE
-        exact_gap: "Local parabolic Type-I control does not by itself provide global spatial tail tightness; the missing step must use Navier–Stokes dynamics or an equally strong inherited structure."
-        next_pre_candidate_actions:
-          - "freeze child MathContextFiber separating local cylinder control, global tails, pressure relation, mild ancient representation and orbit class"
-          - "query success-tool and failure lattices, including NS-B1-FUNC-001 only as a scoped method warning"
-          - "run six-role child expert cell with a dedicated pressure/far-field lens"
-          - "freeze child hash-chained trace before any theorem candidate"
+        status: C001_CALIBRATED_RESIDUAL_OPENED
+        exact_gap: "Local parabolic Type-I control does not by itself provide global spatial tail tightness; NS-B1a-C001 additionally shows that raw instantaneous far-field pressure divergence cannot supply the missing bridge under the available critical Morrey energy control."
+        verified_result:
+          id: NS-B1a-C001
+          authority: "VERIFIED_LOCAL_ANALYTIC_CALIBRATION / NO_NOVELTY / ROOT_AUTHORITY_NONE"
+          implication: "instantaneous pressure far-field summability shifts the search to temporal/coherent dynamics"
+          failure_memory: "F-NS-B1a-C001-PRESSURE-SUMMABILITY"
+        next_child:
+          id: NS-B1a1
+          title: "Pressure-aware temporal shell-flux anti-replication"
+          question: "Does the time-integrated local-energy balance across expanding dyadic shells yield a scale-decaying, telescoping, or summable quantity that prevents persistent replicated critical mass without assuming global L3 or orbit compactness?"
+          status: CONTEXT_REQUIRED_BEFORE_CANDIDATE
+          first_hostile_check: "Determine whether the registered A,C,D,E bounds charge only O(1) per dyadic scale, which would still diverge when summed without an additional decay/smallness mechanism."
+          required_pre_candidate_actions:
+            - "freeze a new MathContextFiber separating instantaneous pressure localization from temporal shell-flux accumulation"
+            - "refresh success-tool/failure memory and include F-NS-B1a-C001-PRESSURE-SUMMABILITY only at SUPPORTED scoped authority"
+            - "run a six-role expert cell with dedicated local-energy and pressure-time-integration lenses"
+            - "freeze a new hash-chained pre-candidate trace before any NS-B1a1 candidate"
       NS-B1b:
         question: "Does the rescaled orbit fall into fixed, periodic, or genuinely nonperiodic ancient behavior?"
         status: OPEN
@@ -59,5 +78,7 @@ nonpromotion_rules:
   - "Type-I exclusion is not root regularity while Type-II remains"
   - "boundedness of one scale-invariant quantity is not an unproved implication to another"
   - "a norm-only functional counterexample is not a counterexample to a dynamics-specific Navier–Stokes theorem"
+  - "instantaneous pressure-tail summability is not global velocity-tail tightness"
+  - "failure of raw pressure divergence does not blacklist pressure-aware temporal/local/coherent mechanisms"
   - "computation is not proof"
   - "same-context review is not independent review"
