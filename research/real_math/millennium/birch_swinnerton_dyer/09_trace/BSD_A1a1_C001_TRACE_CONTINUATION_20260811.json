@@ -1,0 +1,144 @@
+{
+  "trace_id": "TRACE-BSD-A1a1-C001-CONTINUATION-20260811",
+  "parent_trace_id": "TRACE-BSD-A1a1-STRICT-20260811",
+  "entries": [
+    {
+      "event_id": "BSD-A1a1-E08",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "CANDIDATE_PROPOSED",
+      "timestamp": "2026-08-11T08:31:00+00:00",
+      "state_summary": "The strict BSD-A1a1 context, memory review and seven-event pre-candidate trace are already merged and executable; the bounded primary-source search exposed an overlooked functional-equation parity constraint on the theta augmentation order.",
+      "action_summary": "Propose BSD-A1a1-C001: under the exact good-ordinary/root-sign/source hypotheses, the Chida-Hsieh theta functional equation forces ord_J Theta_{f/K} to be even; combined with the source-proved positive order this gives ord_J Theta_{f/K} >= 2.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_THETA_ORDER_CONTEXT_FIBER_20260811.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_RESEARCH_MEMORY_REVIEW_20260811.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/09_trace/BSD_A1a1_PRE_CANDIDATE_TRACE_20260811.json",
+        "Chida-Hsieh, arXiv:1204.2427, Theorem B / Theorem 4.8",
+        "Castella-Hsieh, Forum Math. Sigma 10 (2022), Section 5.3, DOI 10.1017/fms.2021.85"
+      ],
+      "alternatives_considered": [
+        "continue searching only for a direct s-to-T exact-order theorem",
+        "import a p-adic BSD/main-conjecture exact-order statement",
+        "derive only the functional-equation parity consequence before attempting exactness"
+      ],
+      "decision_rationale": "The parity consequence uses a source theorem already inside the frozen method family, adds no root-strength arithmetic assumption, and has a decisive associated-graded proof; it therefore has higher information value than another broad search iteration.",
+      "outputs": [
+        "candidate_id:BSD-A1a1-C001",
+        "authority_requested:SOURCE_BOUND_DERIVED_LOCAL_LEMMA"
+      ],
+      "uncertainties": [
+        "the corollary may be known or implicit in the anticyclotomic literature; no novelty authority is requested",
+        "exact order two still requires excluding orders 4,6,..."
+      ],
+      "residuals": [
+        "exact order two is not established"
+      ],
+      "next_steps": [
+        "run sign, p=2, zero-theta, unit-factor and associated-graded falsifiers"
+      ],
+      "artifact_hash": "sha256:ddd4aa2a5832f8ac9173ef050ab304c3a7e1ff9f3a3e5ca869a368b2728ea371",
+      "previous_event_hash": "sha256:878564f38d9a1b30fc23e70cae1012b07d8edb8e765a58907d1423dbd769c0a8"
+    },
+    {
+      "event_id": "BSD-A1a1-E09",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "FALSIFIER_RUN",
+      "timestamp": "2026-08-11T08:31:20+00:00",
+      "state_summary": "BSD-A1a1-C001 is a one-variable Iwasawa-algebra parity claim, so the cheapest hostile tests are cases that change the functional-equation sign, coefficient characteristic, theta nonvanishing, or augmentation-one unit hypothesis.",
+      "action_summary": "Stress-test the candidate against sign -1, p=2, Theta=0, a unit with nonunit augmentation, and the exact involution T -> (1+T)^(-1)-1 on J^r/J^(r+1).",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/04_candidates/BSD_A1a1_C001_FUNCTIONAL_EQUATION_PARITY_20260811.md",
+        "Chida-Hsieh, arXiv:1204.2427, Theorem B / Theorem 4.8",
+        "Castella-Hsieh 2022, Section 5.3"
+      ],
+      "alternatives_considered": [
+        "treat the functional equation as equality without inspecting the leading graded piece",
+        "test only selected numerical elliptic curves"
+      ],
+      "decision_rationale": "The hostile cases isolate every load-bearing hypothesis of the short proof and distinguish a theorem about sign +1 from a false sign-independent parity statement.",
+      "outputs": [
+        "sign_minus_one:forces_odd_parity_not_even",
+        "p_equals_2:parity_argument_not_certifying",
+        "theta_zero:order_not_finite",
+        "augmentation_one_group_unit:passes",
+        "star_on_gr_J_r:multiplies_by_(-1)^r"
+      ],
+      "uncertainties": [
+        "the source normalization of the exact theta element must match the cited functional equation; the proof is scoped to the trivial-character one-variable element"
+      ],
+      "residuals": [],
+      "next_steps": [
+        "record the exact source-scoped result and remaining higher-even-order residual"
+      ],
+      "artifact_hash": "sha256:3cc2aa399ab57facde830aa9f0b8d4baa5873e9db5dcc7684140c94b3970b025",
+      "previous_event_hash": "sha256:ddd4aa2a5832f8ac9173ef050ab304c3a7e1ff9f3a3e5ca869a368b2728ea371"
+    },
+    {
+      "event_id": "BSD-A1a1-E10",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-11T08:31:40+00:00",
+      "state_summary": "The hostile audit preserves the candidate exactly in the intended source scope and refutes every attempted overgeneralization.",
+      "action_summary": "Record BSD-A1a1-C001 as a source-bound derived local lemma: for the trivial-character anticyclotomic theta element in the Castella-Hsieh setup with E root number +1 and p>3 good ordinary, r=ord_J Theta is even; since the source already proves r>0 and Theta nonzero, r>=2.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/04_candidates/BSD_A1a1_C001_FUNCTIONAL_EQUATION_PARITY_20260811.md",
+        "research/real_math/millennium/birch_swinnerton_dyer/08_reviews/SAME_CONTEXT_REVIEW_BSD_A1a1_C001_RESULT_20260811.md",
+        "tests/math_applications/test_bsd_a1a1_c001_functional_equation_parity.py"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "On the associated graded, inversion acts by (-1)^r, the group-like factor has augmentation one, and the functional-equation sign is +1 in the registered root-sign/good-prime setting; p>3 makes 2 a unit. Therefore odd r is impossible. Castella-Hsieh supplies finite r and r>0.",
+      "outputs": [
+        "result:VERIFIED_LOCAL_PENDING_EXACT_HEAD_CI",
+        "consequence:ord_J_Theta>=2",
+        "non_consequence:ord_J_Theta=2",
+        "novelty:NO_CLAIM"
+      ],
+      "uncertainties": [
+        "literature novelty/equivalence is intentionally unresolved",
+        "no arithmetic implication to Mordell-Weil rank is created"
+      ],
+      "residuals": [
+        "higher even theta order remains possible"
+      ],
+      "next_steps": [
+        "open a fresh residual focused on excluding r>=4 without root-strength arithmetic input"
+      ],
+      "artifact_hash": "sha256:92be2c25d2479ec6777d7b66e7c1b1b9c5aac154514f5a79dc0e5a5ec486365d",
+      "previous_event_hash": "sha256:3cc2aa399ab57facde830aa9f0b8d4baa5873e9db5dcc7684140c94b3970b025"
+    },
+    {
+      "event_id": "BSD-A1a1-E11",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "RESIDUAL_OPENED",
+      "timestamp": "2026-08-11T08:32:00+00:00",
+      "state_summary": "The direct theta-order problem is strictly sharper after C001: positive order is no longer the live uncertainty; only excess even vanishing beyond two remains.",
+      "action_summary": "Open BSD-A1a1b-HIGHER-EVEN-ORDER-EXCLUSION: determine whether any source-bound analytic/automorphic mechanism can rule out ord_J Theta_{f/K}>=4 under exact complex analytic rank two and admissible auxiliary data without assuming positive Mordell-Weil rank, Selmer dimension two, p-adic BSD, a main conjecture at equivalent strength, or maximal p-adic-height nondegeneracy.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/04_candidates/BSD_A1a1_C001_FUNCTIONAL_EQUATION_PARITY_20260811.md",
+        "research/real_math/millennium/birch_swinnerton_dyer/02_problem_dag/open_obligations.yaml"
+      ],
+      "alternatives_considered": [
+        "keep the old generic s-to-T exact-order search unchanged",
+        "switch immediately to localization/positive-rank",
+        "factor exactness into parity lower bound plus higher-even-order exclusion"
+      ],
+      "decision_rationale": "The parity lemma removes all odd orders without arithmetic-rank input. The remaining question is now an upper-bound/nondegeneracy problem, which is structurally different and must receive a fresh context packet before candidate generation.",
+      "outputs": [
+        "child_atom:BSD-A1a1b-HIGHER-EVEN-ORDER-EXCLUSION",
+        "child_state:OPEN_CONTEXT_REQUIRED",
+        "root_authority:NONE"
+      ],
+      "uncertainties": [
+        "existing p-adic BSD formulations may characterize the residual using Selmer ranks and derived-height nondegeneracy, but importing those conditions must be strength-audited"
+      ],
+      "residuals": [
+        "exclude r>=4 noncircularly or classify the residual as arithmetic-strength/root-like"
+      ],
+      "next_steps": [
+        "freeze a fresh MathContextFiber, memory review, expert cell and pre-candidate trace for BSD-A1a1b"
+      ],
+      "artifact_hash": "sha256:9c56b3e789f7381943df872192198aad37b26e7f1504713202bfb9d14ce55ede",
+      "previous_event_hash": "sha256:92be2c25d2479ec6777d7b66e7c1b1b9c5aac154514f5a79dc0e5a5ec486365d"
+    }
+  ]
+}
