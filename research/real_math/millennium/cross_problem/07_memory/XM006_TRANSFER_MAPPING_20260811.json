@@ -1,0 +1,78 @@
+{
+  "schema_version": "xm006-transfer-mapping-v1",
+  "status": "FROZEN_BEFORE_TARGET_FALSIFIER / RESEARCH_CONTROL_ONLY",
+  "frozen_at": "2026-08-11T12:13:00Z",
+  "framework_authority": {
+    "repository": "SzeChunYiu/RAKL",
+    "main_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "method_version": "CANNOT_MEASURE: current RAKL main has no canonical RAKL_VERSION.json",
+    "v3_authority_note": "Current main includes merged PR #121 protected-content authority hardening. This XM006 artifact grants no framework or mathematical authority."
+  },
+  "application_base": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "main_sha": "8a608f340d47b4b6ae612275b0595faf6b804432",
+    "framework_submodule_sha": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+    "freshness_note": "The reproducibility pin is stale relative to current RAKL main; current-main rules were read directly. RAKL_math PR #82 separately handles dependency synchronization."
+  },
+  "source_atom": {
+    "id": "NS-B1a1",
+    "evidence": [
+      "RAKL_math main merge 8a608f340d47b4b6ae612275b0595faf6b804432",
+      "RAKL_math PR #81"
+    ],
+    "source_observation": "A scale-neutral O(1) local-energy ledger at each dyadic scale does not imply a summable or well-founded total charge over an infinite descendant chain. The failure is local-to-global/gluing rather than a failure of each local estimate."
+  },
+  "target_atom": {
+    "id": "YM-S1a2 / source-family-uniformity interface",
+    "evidence": [
+      "RAKL_math PR #46",
+      "RAKL_math PR #79"
+    ],
+    "target_question": "Can a fixed-source asymptotic covariance/moment rate be used when the source itself changes with RG scale, support, separation, or reconstruction stage, without a uniform source-family handoff?"
+  },
+  "selected_reusable_operation": {
+    "id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+    "authority_used": "VERIFIED_LOCAL_AT_CURRENT_MERGED_CROSS_PROBLEM_STATE",
+    "note": "Open PR #30 proposes a higher authority after BSD reuse, but XM006 deliberately does not consume unmerged promotion state."
+  },
+  "common_abstraction": [
+    "A family of individually valid local or pointwise asymptotic certificates is indexed by an auxiliary object.",
+    "The root-facing application follows a sequence in which that auxiliary object changes with scale/index.",
+    "Pointwise-in-object control does not by itself imply uniform or diagonal control over the changing family.",
+    "A separate quantifier-order/uniformity interface is required before local success can be glued into the root-facing path."
+  ],
+  "enabling_assumptions": [
+    "The target research route genuinely needs a source family that can vary with scale/support/RG stage rather than one fixed source forever.",
+    "The available theorem or calibration is pointwise or fixed-source in at least one load-bearing coordinate.",
+    "The root-facing conclusion requires a common bound/rate or a verified compactness/equicontinuity argument along the moving source sequence."
+  ],
+  "disanalogies": [
+    "NS-B1a1 concerns accumulation across physical dyadic scales in a PDE local-energy argument.",
+    "YM-S1a2 concerns source-family/support and spectral/covariance transport in lattice/OS/RG constructions.",
+    "No Navier-Stokes estimate, fluid equation, or scale charge is transferred to Yang-Mills.",
+    "The target falsifier is an abstract sequence model; it is not asserted to be realized by actual Yang-Mills observables."
+  ],
+  "difference_witness": {
+    "prior_failure_ids": ["F-NS-B1a1-SCALE-NEUTRAL-CHARGE"],
+    "changed_structural_coordinates": [
+      "additive scale accumulation -> diagonal source-family selection",
+      "physical radius index -> source/support/RG-family index",
+      "summability obligation -> uniform asymptotic-rate obligation"
+    ],
+    "restored_or_replaced_assumptions": [
+      "replace per-scale summability by target-specific uniformity over the admissible source family"
+    ],
+    "prior_falsifier_escape_reason": "The NS O(1)-per-scale calculation does not itself test YM source-family asymptotics; only the quantifier-order audit operation transfers.",
+    "cheapest_repeat_failure_test": "Construct bounded numbers m_n^(k)=q^max(n-k,0), 0<q<1. For every fixed k, (m_n^(k))^(1/n)->q, while the diagonal k=n has m_n^(n)=1 and nth root 1. If the target inference accepts pointwise fixed-source rates as uniform moving-source decay, this planted world must be rejected by a valid uniformity gate.",
+    "evidence_pointers": ["RAKL_math PR #81", "RAKL_math PR #46", "RAKL_math PR #79"]
+  },
+  "predicted_transferable_principle": "Before a fixed-object asymptotic certificate is used along a changing object/source/scale family, make the quantifier order explicit and require a uniform family bound, a controlled growth modulus, or a proved compactness/equicontinuity handoff. Do not infer diagonal control from pointwise limits.",
+  "frozen_target_falsifier": {
+    "q_range": "0<q<1",
+    "family": "m(n,k)=q^max(n-k,0)",
+    "fixed_k_prediction": "lim_{n->infinity} m(n,k)^(1/n)=q",
+    "diagonal_prediction": "m(n,n)=1 and m(n,n)^(1/n)=1 for all n",
+    "decision_rule": "If both identities hold, the implication fixed-source common asymptotic rate => diagonal moving-source rate is refuted without extra uniformity."
+  },
+  "authority": "FROZEN_TRANSFER_PROPOSAL / DIFFERENCE_WITNESS / NO_YANG_MILLS_THEOREM / NO_MILLENNIUM_AUTHORITY / NO_FRAMEWORK_PROMOTION"
+}
