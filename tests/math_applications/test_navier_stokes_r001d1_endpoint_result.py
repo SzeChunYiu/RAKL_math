@@ -37,7 +37,7 @@ def test_predeclared_endpoint_pulse_refutes_finite_l2_to_pointwise_coefficient()
         assert math.isclose(norm_sq, 1.0, rel_tol=0.0, abs_tol=1e-15)
         values.append(j_value)
     assert values == sorted(values)
-    assert values[-1] > values[0] * 8
+    assert math.isclose(values[-1] / values[0], 8.0, abs_tol=1e-12)
 
 
 def test_energy_line_exponent_deficits_are_exactly_the_registered_route_warning() -> None:
