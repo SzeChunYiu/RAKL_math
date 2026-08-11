@@ -1,0 +1,81 @@
+{
+  "schema_version": "failure-diagnosis-v3-proposal-shadow-r3",
+  "diagnosis_id": "DX-NS-B1a3b1a1-R3-PACKET-MULTIPLICITY",
+  "episode_id": "TE-NS-B1a3b1a1-R3-C001",
+  "atom_id": "NS-B1a3b1a1",
+  "observations": [
+    {
+      "id": "OBS-NS-R3-PACKETS-L3-FIXED",
+      "finding": "N disjoint velocity packets with amplitude N^{-1/3} keep the L3 norm fixed."
+    },
+    {
+      "id": "OBS-NS-R3-WL32-GROWS",
+      "finding": "The corresponding derivative superlevel distribution yields weak-L3/2 vorticity lower bound proportional to N^{1/3}."
+    },
+    {
+      "id": "OBS-NS-R3-FINITEI-UNIFORM",
+      "finding": "A common L-infinity_t L3_x bound controls A,C,D,E uniformly on normalized same-slab subcylinders."
+    },
+    {
+      "id": "OBS-NS-R3-POSITIVE-TIME",
+      "finding": "For each fixed N, smooth trace continuity preserves the vorticity lower bound at some strictly positive time."
+    },
+    {
+      "id": "OBS-NS-R3-DIFFERENCE-WITNESS",
+      "finding": "The constructed solutions are smooth small-data solutions, unlike a first-singular-time or nontrivial ancient blow-up object."
+    }
+  ],
+  "competing_diagnoses": [
+    {
+      "hypothesis": "finite-I plus critical L3 velocity universally controls global weak-L3/2 vorticity on the same slab",
+      "status": "REJECTED",
+      "verification": "exact packet-multiplicity family"
+    },
+    {
+      "hypothesis": "failure is caused by pressure nonlocality",
+      "status": "REJECTED_AS_ACTIVE_CAUSE",
+      "verification": "pressure is uniformly controlled in L3/2 by Riesz transforms of u tensor u; curl removes pressure from vorticity equation"
+    },
+    {
+      "hypothesis": "failure is a scaling mismatch",
+      "status": "REJECTED",
+      "verification": "both L3 velocity and weak-L3/2 vorticity are scaling-critical"
+    },
+    {
+      "hypothesis": "failure is a derivative/global-distribution multiplicity mismatch",
+      "status": "SUPPORTED",
+      "verification": "packet-count exponents N^{-1/3} and N^{2/3} leave N^{1/3} growth"
+    },
+    {
+      "hypothesis": "the family refutes history-sensitive first-singular-time producer mechanisms",
+      "status": "REJECTED_BY_DIFFERENCE_WITNESS",
+      "verification": "smooth small-data solutions do not carry first-singular-time nonregularity, one-sided history, ancient persistence, or profile constraints"
+    }
+  ],
+  "failure_category": [
+    "LOCAL_MATHEMATICAL_PRODUCER_INTERFACE",
+    "DERIVATIVE_ENDPOINT",
+    "GLOBAL_DISTRIBUTION_MULTIPLICITY"
+  ],
+  "local_mathematical_failure": "CONFIRMED_SCOPED_UNIVERSAL_PRODUCER_FAILURE",
+  "local_to_global_gluing_failure": "SEPARATE_OPEN_RESIDUAL; not the cause of the packet falsifier and not discharged by it",
+  "repeated_process_links": [
+    {
+      "prior": "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION",
+      "relation": "same one-derivative producer/consumer gap",
+      "difference": "prior failure concerns direction/normalization topology; current failure concerns global critical amplitude and packet multiplicity"
+    },
+    {
+      "prior": "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "relation": "consumer requires global state beyond local compactness",
+      "difference": "current counterexample already fails before ancient/gluing transfer, at the same-slab producer edge"
+    },
+    {
+      "prior": "NS-B1a3b1-C001-R2",
+      "relation": "successful representation transport moved the obstruction upstream",
+      "difference": "R2 proved zoom stability; R3 falsifies a universal producer implication"
+    }
+  ],
+  "authority": "DIAGNOSIS_PROPOSAL_SHADOW_NO_THEOREM_AUTHORITY",
+  "artifact_hash": "sha256:17e1f608b40b233503538f5d5e5d9986927797b134de3f48b0e25856ef65bac6"
+}
