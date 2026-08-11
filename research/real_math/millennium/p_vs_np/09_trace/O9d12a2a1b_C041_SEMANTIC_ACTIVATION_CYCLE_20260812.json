@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "cycle_id": "PNP-C041S1-20260812",
+  "status": "PROPOSAL_SHADOW_ONLY",
+  "framework": {
+    "rakl_method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "rakl_main_sha": "992eda867588378fafb1f8b8997c8ecc725f88ad",
+    "v3_semantic_shortcut_merge_sha": "62df980514cc60d63f99b810c3664b68d9a5a565"
+  },
+  "application": {
+    "rakl_math_base": "3cfc8a3b2ff6d981351d2f15421c8cc08048f74b",
+    "rakl_math_head": "52717dfe62c791959ec097614972b2c870d9f931",
+    "head_semantics": "exact branch head after substantive cycle artifacts/tests, before this receipt commit",
+    "atom_id": "O9d12a2a1b-C041S1",
+    "fibre_snapshot_hash": "3a51421a496b4bf68d7bb2b604c772adf6cf852eb74b2a1e0edc8bf5b42278af",
+    "task_episode_id": "EP-PNP-C041S1-SEMANTIC-ACTIVATION-20260812",
+    "task_episode_artifact_hash": "cbf3a3bb9f45e6bf5cb4ffdf28d65b8a34fd9e4655b77e5b011ecb6cb8a12726"
+  },
+  "expert_cell": [
+    {"role": "complexity/combinatorial-cover expert", "background": "communication/circuit complexity and semi-filter cover formulations", "delegation": "audit complement-versus-associated-graph polarity and prevent incidence facts from being promoted to rho facts", "verdict": "ACCEPT local decoder geometry; BLOCK any cover-growth inference."},
+    {"role": "encoding/SAT expert", "background": "CNF encodings, self-delimiting codes, NP reductions", "delegation": "derive minimum canonical lengths and characterize all minimal UNSAT formulas", "verdict": "ACCEPT n=8 syntax-only and n=12 first semantic MAGIC activation with exactly two formulas."},
+    {"role": "LP/polyhedral expert", "background": "fractional packing/cover duality and residual-capacity certificates", "delegation": "test whether the new two-star implies fresh dual capacity", "verdict": "NO: incidence alone does not determine relevant-semi-filter coverage or slack; keep augmentation OPEN."},
+    {"role": "barrier/gluing/proof-audit expert", "background": "complexity barriers, reduction auditing, local-to-global proof DAGs", "delegation": "audit what glues from decoder geometry to recurrence/circuit/root", "verdict": "Only the local activation subproblem closes; recurrence, rho-to-circuit rate and root glue remain OPEN."},
+    {"role": "RAKL v3 provenance/metrology expert", "background": "typed experience substrate, authority separation, telemetry and protected gates", "delegation": "enforce SEARCH-first memory use, episode→diagnosis→lesson separation, shadow-only authority and exact metrology fields", "verdict": "Use proposal/shadow TaskEpisode; protected novelty remains zero; PATH reopens for the corrected discriminator."}
+  ],
+  "trace": [
+    {"event_id": "C041S1-E01", "atom_id": "O9d12a2a1b-C041S1", "event_type": "FRAMEWORK_V3_INSPECTED", "timestamp": "2026-08-11T23:16:46Z", "summary": "Current RAKL main inspected; v3 TaskEpisode and SEARCH/JUMP/GLUE/LIFT semantic-shortcut contracts applied.", "evidence_pointers": ["RAKL@992eda867588378fafb1f8b8997c8ecc725f88ad:docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md", "RAKL@992eda867588378fafb1f8b8997c8ecc725f88ad:schemas/task-episode.schema.json", "RAKL@992eda867588378fafb1f8b8997c8ecc725f88ad:schemas/obstruction-transformation-review.schema.json"], "previous_event_hash": "", "artifact_hash": "887be8c3f73106596e0902d3c48355431259af5943c609278dd9c3e396ca66bb"},
+    {"event_id": "C041S1-E02", "atom_id": "O9d12a2a1b-C041S1", "event_type": "FIBRE_AND_MEMORY_BOUND", "timestamp": "2026-08-11T23:16:46Z", "summary": "Exact root, parent fibre, candidate freeze and same-domain negative history consulted; child refinement is proposal/shadow.", "evidence_pointers": ["research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C041_MATH_CONTEXT_FIBER_20260811.json", "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041_ZERO_AUGMENTATION_FAILURE_DELTA_20260812.json"], "previous_event_hash": "887be8c3f73106596e0902d3c48355431259af5943c609278dd9c3e396ca66bb", "artifact_hash": "30b6b0f5638cd9d3329710910d7f30a35ce49382495d0f39d98ca576fefb0fd6"},
+    {"event_id": "C041S1-E03", "atom_id": "O9d12a2a1b-C041S1", "event_type": "OBSTRUCTION_TRANSFORMATION_REVIEW", "timestamp": "2026-08-11T23:16:46Z", "summary": "SEARCH selected; direct same-domain experience changed routing; JUMP/GLUE/LIFT not run.", "evidence_pointers": ["research/real_math/millennium/p_vs_np/03_routes/O9d12a2a1b_C041_SEMANTIC_SHORTCUT_REVIEW_20260812.json"], "previous_event_hash": "30b6b0f5638cd9d3329710910d7f30a35ce49382495d0f39d98ca576fefb0fd6", "artifact_hash": "ae44b20291e04ce107053eaa482bfe8e79ed6431e6fa52964477c8f0438ad8d0"},
+    {"event_id": "C041S1-E04", "atom_id": "O9d12a2a1b-C041S1", "event_type": "FALSIFIER_RUN", "timestamp": "2026-08-11T23:16:46Z", "summary": "Length/sign-pattern falsifier distinguishes n=8 syntax reachability from n=12 predicate-changing MAGIC activation.", "evidence_pointers": ["research/real_math/millennium/p_vs_np/04_candidates/C041_SEMANTIC_ACTIVATION_RESULT_20260812.md"], "previous_event_hash": "ae44b20291e04ce107053eaa482bfe8e79ed6431e6fa52964477c8f0438ad8d0", "artifact_hash": "dbca96ccb24f10026ba90aabebf5439b6a794eb9b6b0681cc4202e4dce5436a2"},
+    {"event_id": "C041S1-E05", "atom_id": "O9d12a2a1b-C041S1", "event_type": "EXPERT_CONTEXT_REVIEW", "timestamp": "2026-08-11T23:16:46Z", "summary": "Five same-context roles accept the local correction and block all augmentation/root promotion.", "evidence_pointers": ["research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C041_SEMANTIC_ACTIVATION_CYCLE_20260812.json"], "previous_event_hash": "dbca96ccb24f10026ba90aabebf5439b6a794eb9b6b0681cc4202e4dce5436a2", "artifact_hash": "fc1ccdfc6289baf032e9d093d4906aeddce48eb5e3cac3a904e9b8575b939439"},
+    {"event_id": "C041S1-E06", "atom_id": "O9d12a2a1b-C041S1", "event_type": "RESULT_RECORDED", "timestamp": "2026-08-11T23:16:46Z", "summary": "Local representation subproblem solved proposal/shadow; next path is n=12 symbolic quotient/multiplexing/relevance/slack audit.", "evidence_pointers": ["research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C041_SEMANTIC_ACTIVATION_TASK_EPISODE_SHADOW_20260812.json"], "previous_event_hash": "fc1ccdfc6289baf032e9d093d4906aeddce48eb5e3cac3a904e9b8575b939439", "artifact_hash": "cd7ab0c8f3a26f1dc6f86b334ab6482ffcb8555b1225ea595be46a9886b8972a"}
+  ],
+  "episode_diagnosis_lesson": {"episode": "EP-PNP-C041S1-SEMANTIC-ACTIVATION-20260812", "diagnosis": "D-C041-SYNTACTIC-MAGIC-NOT-SEMANTIC-ACTIVATION", "failure": "F-C041-SYNTACTIC-MAGIC-NOT-SEMANTIC-ACTIVATION", "lesson_candidate": "L-C041-PREDICATE-CHANGE-BEFORE-SCALE-DISCRIMINATOR-v1", "authority": "proposal/shadow episode; local diagnosis; candidate lesson; no protected reuse/promotion"},
+  "local_vs_gluing": {"local": "semantic activation subproblem solved: syntax n=8, first MAGIC-coded UNSAT n=12, exactly two same-row points", "gluing": "OPEN: no relevance/slack/cover recurrence/circuit/root theorem"},
+  "next_action": "Symbolically attack n=12->13 with one-sided neighbourhood quotient, multiplexing/compiled cover, cylinder relevance, and saturated lifted-pair-neighbourhood tests before any full residual LP.",
+  "RAKL_METHOD_CASE_STUDY": {
+    "method": ["exact contract/fibre binding", "v3 SEARCH-first obstruction review", "counterexample-first encoding falsifier", "five-role expert cell", "local/global boundary audit"],
+    "worked": ["same-domain zero-augmentation history rotated away from another large LP", "syntax-vs-semantics distinction found the first predicate-changing level", "expert cell blocked invalid incidence->cover inference"],
+    "failed": ["prior 'first-magic-level' wording conflated parser reachability with semantic change", "child refinement persisted after derivation, so strict child-fibre chronology credit denied"],
+    "failure_category": ["DECOMPOSITION", "REPRESENTATION", "META_POLICY_CHRONOLOGY"],
+    "retrieved_selected": ["F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION", "F-C037-ARBITRARY-EXTENSION-NONMONOTONE", "EP-PNP-O9d12a2a1b-C041A-ODD-SLICE-20260811"],
+    "retrieved_rejected": [["F-C024-FRACTIONAL-INTEGRALITY-GAP", "later LP correlation warning, not activation discriminator"], ["F-C041-DECLARED-VARIABLE-WITNESS-BLOWUP", "repaired verifier issue, not UNSAT geometry"], ["XM014", "parameter-binding guard already satisfied"]],
+    "missed_prior_experience": "CANNOT_MEASURE: no complete recall denominator/cross-problem coverage receipt is exposed.",
+    "decision_policy": "SEARCH first; JUMP/GLUE/LIFT not run because viable same-domain route exists; choose cheapest routing-changing falsifier.",
+    "verification": "closed-form length proof; complete 8 one-clause and 64 two-clause sign cases; exact coordinate arithmetic; finite Python calibration",
+    "outcome": "PARTIAL_SUCCESS_LOCAL_REPRESENTATION_CORRECTION",
+    "residual": "n=12->13 quotient/multiplexing/relevance/slack behavior open",
+    "saturation_axes": {"reopened": ["PATH"], "protected_retained_novelty_all_axes_zero": true},
+    "novelty_class": {"solved_subproblem": "representation", "authority": "proposal/shadow classification only"},
+    "v3_helped": ["TaskEpisode evidence root", "episode->diagnosis->lesson separation", "SEARCH/JUMP/GLUE/LIFT routing", "failure memory as search prior", "local-to-global separation"],
+    "v3_missing": ["typed discriminator activation semantics", "canonical state materialization via connector", "complete token/tool/time ledger"],
+    "framework_improvement_hypothesis": "Add discriminator activation_kind={SYNTAX_REACHABLE,SEMANTIC_STATE_CHANGE,AUTHORITY_RELEVANT} and fail closed when a semantics-defined candidate is screened only at syntax reachability without justification.",
+    "repeated_process_failure_link": [{"prior": "F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION", "current": "F-C041-SYNTACTIC-MAGIC-NOT-SEMANTIC-ACTIVATION", "relation": "WEAKER_PREREQUISITE_NOT_TARGET_ACTIVATION"}]
+  },
+  "RAKL_CYCLE_METRICS": {
+    "rakl_method_version": "3.0.0",
+    "rakl_software_package_version": "0.1.0",
+    "rakl_git_sha": "992eda867588378fafb1f8b8997c8ecc725f88ad",
+    "rakl_math_base": "3cfc8a3b2ff6d981351d2f15421c8cc08048f74b",
+    "rakl_math_head": "52717dfe62c791959ec097614972b2c870d9f931",
+    "pre_state_fingerprint": {"value": "CANNOT_MEASURE", "reason": "no canonical RAKLV3State materialization exposed through connector"},
+    "post_state_fingerprint": {"value": "CANNOT_MEASURE", "reason": "no canonical RAKLV3State materialization exposed through connector"},
+    "active_atom": "O9d12a2a1b-C041S1",
+    "fibre_snapshot_hash": "3a51421a496b4bf68d7bb2b604c772adf6cf852eb74b2a1e0edc8bf5b42278af",
+    "canonical_process_surfaces_invoked": ["decomposition", "routing", "search_query_generation", "source_selection_reliability", "claim_extraction", "equivalence_similarity", "contextual_theory_gluing", "contradiction_diagnosis", "gap_discovery", "memory", "review", "saturation_stopping", "prompting_context_policy"],
+    "retrieved": {
+      "tools": {"count": 1, "ids": ["T-PNP-FRACTIONAL-SEMIFILTER-PACKING"], "selected": [], "rejected": ["T-PNP-FRACTIONAL-SEMIFILTER-PACKING"]},
+      "failures": {"count": 4, "ids": ["F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION", "F-C037-ARBITRARY-EXTENSION-NONMONOTONE", "F-C024-FRACTIONAL-INTEGRALITY-GAP", "F-C041-DECLARED-VARIABLE-WITNESS-BLOWUP"], "selected": ["F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION", "F-C037-ARBITRARY-EXTENSION-NONMONOTONE"], "rejected": ["F-C024-FRACTIONAL-INTEGRALITY-GAP", "F-C041-DECLARED-VARIABLE-WITNESS-BLOWUP"]},
+      "episodes": {"count": 1, "ids": ["EP-PNP-O9d12a2a1b-C041A-ODD-SLICE-20260811"], "selected": ["EP-PNP-O9d12a2a1b-C041A-ODD-SLICE-20260811"], "rejected": []},
+      "motifs": {"count": 1, "ids": ["XM014"], "selected": [], "rejected": ["XM014"]},
+      "other_memory": {"count": 1, "ids": ["PNP-O9d12a2a1b-C041-RESEARCH-MEMORY-REVIEW-20260811"], "selected": ["PNP-O9d12a2a1b-C041-RESEARCH-MEMORY-REVIEW-20260811"], "rejected": []}
+    },
+    "outcome": "PARTIAL_SUCCESS_LOCAL_DISCRIMINATOR_SOLVED_ROOT_OPEN",
+    "residual_before": ["generic first-MAGIC screen without syntax/semantics distinction", "first semantic MAGIC complement geometry unknown"],
+    "residual_after": ["first semantic MAGIC activation n=12 with two same-row points", "quotient/multiplexing/relevance/slack open", "no recurrence/root bridge"],
+    "retained_semantic_novelty": {"KNOWLEDGE": 0, "OPERATOR": 0, "EXPERIENCE_PATTERN": 0, "OBSTRUCTION": 0, "RELATION": 0, "PATH": 0, "META_METHOD": 0},
+    "saturation_axes": {"reopened": ["PATH"], "flattened": ["OPERATOR"]},
+    "resources": {"model_input_tokens": "CANNOT_MEASURE: runtime does not expose exact count", "model_output_tokens": "CANNOT_MEASURE: runtime does not expose exact count", "context_tokens": "CANNOT_MEASURE: runtime does not expose exact count", "retrieval_calls": "CANNOT_MEASURE: compacted transcript has no complete machine-readable ledger", "tool_calls": "CANNOT_MEASURE: compacted transcript has no complete machine-readable ledger", "wall_time": "CANNOT_MEASURE: no trusted run-start monotonic clock exposed", "finite_calibration_cases": {"one_clause": 8, "two_clause_ordered_pairs": 64}, "local_checkout_test": "FAILED_TOOLING: container could not resolve github.com"},
+    "new_ids": {"episode": ["EP-PNP-C041S1-SEMANTIC-ACTIVATION-20260812"], "lesson": ["L-C041-PREDICATE-CHANGE-BEFORE-SCALE-DISCRIMINATOR-v1"], "failure": ["F-C041-SYNTACTIC-MAGIC-NOT-SEMANTIC-ACTIVATION"], "tool": [], "obstruction": ["O-C041-SYNTACTIC-VS-SEMANTIC-ACTIVATION"], "motif": []},
+    "successful_reuse_ids": ["F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION", "F-C037-ARBITRARY-EXTENSION-NONMONOTONE", "EP-PNP-O9d12a2a1b-C041A-ODD-SLICE-20260811"],
+    "gate_provenance_ci": {"root": "OPEN_NO_SOLUTION_CERTIFICATE", "episode_storage": "PROPOSAL_SHADOW_STORED", "independent_reviews": "0/3", "formal_verifier": "NOT_RUN", "novelty_gate": "NOT_RUN_NO_PROMOTION", "provenance": "current RAKL/main and RAKL_math/main read; primary cover source boundary preserved", "ci": "NOT_RUN; local checkout blocked by DNS; finite calibration passed independently"},
+    "rakl_changed_action": {"value": true, "basis": "redirected generic first-MAGIC screen at syntax n=8 to first predicate-changing n=12 structural attack before LP"}
+  },
+  "tooling_failure": {"id": "TOOLFAIL-PNP-C041S1-LOCAL-CHECKOUT-DNS", "category": "TOOLING", "impact": "no local branch pytest/CI claim; mathematical calibration only"},
+  "recorded_at": "2026-08-11T23:16:46Z",
+  "artifact_hash": "sha256:95e0c41626607312a3fd5e48323ada14a91a630f74373cef1e2cfce215e1c136"
+}
