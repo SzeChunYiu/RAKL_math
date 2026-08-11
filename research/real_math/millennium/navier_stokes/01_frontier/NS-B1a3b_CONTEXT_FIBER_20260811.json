@@ -1,0 +1,97 @@
+{
+  "atom_id": "NS-B1a3b",
+  "object_context": "Orthogonal Type-I blow-up-classification child: audit whether vorticity-direction/geometric-depletion criteria can be inherited by the Albritton–Barker finite-I ancient class without silently strengthening the Type-I state space or compactness topology. Type-II remains outside this child.",
+  "structural_coordinates": [
+    "unforced whole-space 3D incompressible Navier–Stokes with viscosity normalized to 1",
+    "parabolic scaling u_lambda(x,t)=lambda u(lambda x,lambda^2 t), omega_lambda=lambda^2 omega(lambda x,lambda^2 t), so zeta=omega/|omega| is scale-invariant where omega is nonzero",
+    "Albritton–Barker Type-I uses local scale-invariant I=sup(A+C+D+E); their Theorem 1.1 yields a nontrivial mild bounded ancient solution with finite I",
+    "Albritton–Barker local compactness supplies strong L3_loc velocity convergence and weak L3/2_loc pressure convergence, with only weak derivative control at the suitable-weak level",
+    "Giga–Miura Type-I mild solution instead assumes the pointwise self-similar L-infinity rate ||u||_infty(t)<=C0(-t)^(-1/2)",
+    "Giga–Miura continuous vorticity-direction alignment on high-vorticity sets becomes spatially constant in the blow-up limit because their L-infinity mild rescaling yields locally uniform derivative/vorticity compactness",
+    "Albritton–Barker explicitly list the L-infinity self-similar rate as a stronger Type-I quantity implying their weak finite-I notion; boundedness of one popular Type-I quantity is not generally known to imply the others",
+    "the map u -> curl(u)/|curl(u)| is nonlinear and singular at zero; strong L3_loc velocity convergence plus weak H1_loc-type control does not by itself give compactness of vorticity directions",
+    "pressure localization/far field remains a separate interface from vorticity geometry; this child does not repair NS-B1a3 global critical tightness",
+    "exact self-similar profile theorems remain equation-class specific; this child concerns time-dependent ancient limits, not stationary Leray profiles",
+    "recent Grujic arXiv:2607.08866 is a geometric-depletion near-analogue but its stated critical-point/L^{3/2,infinity} vorticity concentration and logarithmic BMO-direction hypotheses are additional state-space assumptions, not consequences of finite I established here"
+  ],
+  "equivalent_formulations": [
+    "geometry inheritance question = closure of a scale-critical vorticity-direction condition under the actual finite-I blow-up extraction topology",
+    "state-space transfer question = does AB finite-I imply the stronger local L-infinity Type-I rate used by Giga–Miura, or another theorem-matched geometric class?",
+    "rigidity question = can an inherited geometric condition force a nontrivial ancient limit into a lower-dimensional/Liouville class without unproved convergence of normalized vorticity?"
+  ],
+  "solved_analogues": [
+    "Giga–Miura Theorem 1.1: for whole-space type-I mild solutions with ||u||_infty<=C0(-t)^(-1/2), uniform continuity of vorticity direction on high-vorticity sets excludes blow-up",
+    "Giga–Miura Proposition 2.2/Corollary 2.4: under their blow-up compactness, alignment collapses the ancient vorticity direction to a spatially constant direction and the resulting two-dimensional bounded ancient flow is rigid"
+  ],
+  "near_solved_analogues": [
+    "Giga–Miura Theorem 2.10: local suitable-weak criterion still assumes a local L-infinity Type-I rate and uses a compactness theorem yielding locally uniform rescaled convergence",
+    "Grujic arXiv:2607.08866: proposed logarithmic vorticity-direction depletion criterion in a critical-point/Lorentz concentration class; useful as a geometry analogue but not a finite-I inheritance theorem"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Giga–Miura whole-space type-I mild blow-up",
+      "method": "rescale at maximum velocity, use derivative compactness, pass vorticity-direction coherence to the ancient limit, reduce to a two-dimensional Liouville contradiction",
+      "shared_structure": [
+        "same Navier–Stokes parabolic scaling and ancient-limit strategy",
+        "same objective of converting Type-I blow-up into rigidity of a bounded ancient solution",
+        "vorticity direction is invariant under positive scalar rescaling away from zero"
+      ],
+      "required_assumptions": [
+        "mild solution with pointwise L-infinity self-similar Type-I rate",
+        "uniform modulus (or registered relaxation) of vorticity direction on high-vorticity sets",
+        "locally uniform compactness of rescaled velocity derivatives/vorticity so normalized directions pass on compact subsets of nonzero limiting vorticity"
+      ],
+      "disanalogies": [
+        "AB finite-I is a weaker local energy/pressure cylinder condition and does not supply the Giga–Miura L-infinity rate by any source-bound implication used here",
+        "AB suitable compactness is strong L3_loc for velocity and weak L3/2_loc for pressure; it does not itself supply locally uniform vorticity convergence",
+        "normalization by |omega| is unstable near zeros under weak derivative convergence"
+      ],
+      "repair_question": "Can one derive from finite I a theorem-matched geometric quantity that is sequentially closed under the AB extraction topology, without first proving the stronger L-infinity Type-I rate?",
+      "source_anchors": [
+        "Albritton–Barker arXiv:1811.00502, Theorem 1.1 and equations (1.1)-(1.6), discussion of (c_infinity)",
+        "Giga–Miura Hokkaido Preprint 956 / DOI 10.14943/84103, Theorem 1.1, Proposition 2.2, Theorem 2.10"
+      ]
+    },
+    {
+      "source_context": "critical geometric-depletion criteria based on vorticity direction/regions of intense vorticity",
+      "method": "replace scalar critical norm control by geometric depletion of vortex stretching and a rigidity/regularity implication",
+      "shared_structure": [
+        "scale-sensitive description of blow-up geometry rather than global kinetic-energy counting",
+        "targets the vortex-stretching term, an equation-specific mechanism orthogonal to the pruned scalar-energy lanes"
+      ],
+      "required_assumptions": [
+        "an exactly stated geometric regularity quantity with scaling and domain specified",
+        "a proof that the quantity is available/inherited on the target finite-I blow-up sequence",
+        "a closure theorem through the actual weak/strong convergence used in extraction"
+      ],
+      "disanalogies": [
+        "known criteria generally impose geometric regularity/concentration hypotheses not shown to follow from finite I",
+        "recent logarithmic-depletion work is stated for a narrower critical-point/Lorentz concentration class and remains a preprint source"
+      ],
+      "repair_question": "Identify a geometric defect functional whose boundedness follows from finite I or from an independent dynamics estimate and is lower-semicontinuous/closed under AB compactness.",
+      "source_anchors": [
+        "Giga–Miura DOI 10.14943/84103",
+        "Grujic arXiv:2607.08866"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "the phrase 'Type I' denotes materially different registered hypotheses in AB and Giga–Miura",
+    "velocity compactness does not automatically imply compactness of normalized vorticity directions",
+    "geometry criteria may exclude a subclass without classifying every finite-I ancient solution",
+    "Type-II blow-up is not reached by a Type-I geometric criterion",
+    "local geometry does not by itself solve the independent global-tail/pressure interface from NS-B1a3a"
+  ],
+  "source_anchors": [
+    "Albritton–Barker, arXiv:1811.00502",
+    "Giga–Miura, Hokkaido University Preprint Series 956, DOI 10.14943/84103",
+    "Grujic, arXiv:2607.08866",
+    "RAKL_math NS-B1a3 prior compactness/rigidity interface audit"
+  ],
+  "analogy_scan_status": "NO_SAFE_BRIDGE_FOUND",
+  "cross_domain_analogies": [],
+  "analogy_scan_notes": "Scanned local-to-global assembly, gauge/normalized-field compactness, and defect-measure analogies. They support a proposal heuristic—require closure of the exact normalized observable under the extraction topology—but none licenses a Navier–Stokes theorem, so no cross-domain bridge is retained.",
+  "frozen_at": "2026-08-11T15:06:30Z",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:6dd7969ddde37ed9384dc40064927cdda8b1ba78a536791b21aa06298dbf0900"
+}
