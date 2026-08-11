@@ -1,0 +1,30 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "NS-B1a3b1-C001-PRE-ACTION-FIBRE-RECEIPT-20260811",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "9852e9bac82c96a1d4b09ac13e7f482ce2be0b4d",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "e45e9a23651556b7bff4eb839d6ad069d003a74f",
+  "task_id": "NAVIER-STOKES-VERIFIED-DISCOVERY",
+  "atom_id": "NS-B1a3b1",
+  "context_hash": "sha256:82b6b4e847e205cd82614a1695cc92566477e2b2e36b633e279f240291865110",
+  "fibre_snapshot_hash": "sha256:d16039bc07a81f5890644af9fbb407cbbc6271747e2bc065c84810e20d910627",
+  "operator_ids": ["OP-NS-LOG-BMO-ZOOM-STABILITY-AUDIT", "OP-NS-GRUJIC-CONSUMER-SIGNATURE-GLUING-AUDIT"],
+  "selected_retrievals": [
+    {"retrieval_id": "NS-B1a3b1_RESEARCH_MEMORY_REVIEW_20260811", "authority": "NONCANONICAL", "payload_hash": "a2d1cefc9fe70685b733102990a59afa978ce0f51ffdaf2d9f14080047e279d6"},
+    {"retrieval_id": "GRUJIC-2026-LOG-DEPLETION-v2-SOURCE-SIGNATURE", "authority": "NONCANONICAL", "payload_hash": "553ad31acae8605458f7616f7be0c0655d03f617144da19ba37f6f5f91ec61b6"},
+    {"retrieval_id": "AB-TYPEI-ANCIENT-SOURCE-SIGNATURE", "authority": "NONCANONICAL", "payload_hash": "bb3747493e4ecb81cfab6621345982061d6071689ed3fe78100bb8fb6b56e4b9"}
+  ],
+  "rejected_retrievals": [
+    {"retrieval_id": "BARKER-PRANGE-2019-TYPEI-ALIGNMENT", "rejection_reason": "different domain and continuity consumer; not the selected single-log discriminator"},
+    {"retrieval_id": "MILLER-2020-ANISOTROPIC-VORTICITY", "rejection_reason": "different plane-field representation and derivative-control interface"},
+    {"retrieval_id": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER", "rejection_reason": "saturated scalar-budget family; current atom tests phase/amplitude geometry"},
+    {"retrieval_id": "PR60-NS-B1b1-PV-V2", "rejection_reason": "pending/noncanonical application route; may inform comparison but cannot bear authority"},
+    {"retrieval_id": "cross-Millennium mathematical memory", "rejection_reason": "no target-specific applicability/DifferenceWitness; only registered meta-level interface audit motif reused"}
+  ],
+  "predeclared_discriminator": "For phi(rho)=1/|log rho| and zoom factor 0<r<=1, verify from the exact definition that mean oscillation of xi_r(y)=xi(x0+r y) on B_rho maps to that of xi on B_{r rho}, and determine whether phi(r rho)/phi(rho)<=1 for every 0<rho<1/2 while the L-infinity term and time-uniformity remain controlled. Falsify the transfer if any mapped ball exits the source radius range, the weight ratio reverses, normalization at omega=0 invalidates the source object, or source-uniform time control is lost. Independently verify from Grujic v2 that the far-field commutator estimate uses global L^{3/2,infinity} vorticity and that Theorem 7.4 is a pre-singularity regularity theorem; scaling stability alone must not be promoted into finite-I inheritance or an ancient-solution Liouville theorem.",
+  "allowed_outcome_branches": ["SUCCESS", "PARTIAL_SUCCESS", "FAILURE", "BLOCKED", "UNKNOWN"],
+  "frozen_at_utc": "2026-08-11T16:13:00Z",
+  "sequence_index": 1,
+  "receipt_canonical_sha256": "d1529a31651a32754dd8a335854b3964a8a236d3023d18b6f6b1530ae0cefa0c"
+}
