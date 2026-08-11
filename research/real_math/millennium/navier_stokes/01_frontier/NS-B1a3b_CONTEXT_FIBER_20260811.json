@@ -1,0 +1,101 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow",
+  "atom_id": "NS-B1a3b",
+  "parent_atom_id": "NS-B1a3",
+  "object_context": "Type-I Navier–Stokes vorticity-geometry child. Determine whether the finite-I ancient class itself supplies any scale-critical vorticity-direction coherence sufficient for a published geometric depletion/regularity trigger, without importing a regularity property not inherited from the blow-up limit. Type-II remains out of scope.",
+  "root_binding": {
+    "root_id": "NS0",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "official_target": "Clay statement (A) positive regularity lane",
+    "nonpromotion": "Closing this atom would not close Type-II or the Clay root."
+  },
+  "structural_coordinates": [
+    "unforced whole-space 3D incompressible Navier–Stokes; viscosity normalized to 1",
+    "parabolic scaling u_lambda(x,t)=lambda u(lambda x,lambda^2 t), omega_lambda=lambda^2 omega(lambda x,lambda^2 t)",
+    "finite Albritton–Barker I is a local scale-invariant A+C+D+E cylinder bound and yields a nontrivial mild bounded ancient Type-I limit under source hypotheses",
+    "vorticity direction xi=omega/|omega| is meaningful only on nonzero-vorticity/high-vorticity regions",
+    "direction regularity differentiates a normalized first derivative of u and may require information beyond finite-I first-derivative energy control",
+    "Giga–Miura Type-I nonblowup uses uniform continuity of vorticity direction near large vorticity",
+    "Grujic arXiv:2607.08866v2 proposes a weaker local bmo_{1/|log r|} direction hypothesis but for an additional critical-point concentration scenario",
+    "local compactness and finite I do not automatically bind global/tail topology; prior NS-B1a3 gluing failure remains active",
+    "pressure is nonlocal but the present first discriminator is kinematic/geometric; any PDE inheritance claim must later restore pressure/evolution compatibility",
+    "functional calibrations are not Navier–Stokes counterexamples and cannot refute an equation-specific smoothing/coherence theorem"
+  ],
+  "target_interface": {
+    "input": "nontrivial mild bounded ancient Navier–Stokes solution with finite I arising from a hypothetical Type-I singularity",
+    "desired_output": "an exact, scale-appropriate vorticity-direction coherence property matching a source-valid geometric regularity theorem",
+    "candidate_output_families": [
+      "uniform continuity/coherence on high-vorticity regions (Giga–Miura calibration)",
+      "log-weighted bmo_{1/|log r|} coherence plus any extra concentration hypotheses required by the selected theorem",
+      "another geometric depletion quantity with explicitly proved inheritance"
+    ],
+    "audit_question": "Can any such direction-coherence condition be obtained from the finite-I information class alone, or must it be a genuinely dynamics-specific new inheritance theorem?"
+  },
+  "solved_analogues": [
+    {
+      "id": "GM-2011-TYPEI-DIRECTION",
+      "source": "Giga–Miura, Comm. Math. Phys. 303 (2011), DOI 10.1007/s00220-011-1197-x; HUPSM 956",
+      "fact": "under a Type-I restriction, uniform continuity of vorticity direction where vorticity is large rules out blow-up"
+    },
+    {
+      "id": "AB-TYPEI-ANCIENT",
+      "source": "Albritton–Barker, arXiv:1811.00502",
+      "fact": "Type-I singularity is equivalent to a nontrivial mild bounded ancient solution with registered Type-I decay"
+    }
+  ],
+  "near_solved_analogues": [
+    {
+      "id": "GRUJIC-2607.08866v2",
+      "source": "arXiv:2607.08866v2",
+      "fact": "for a critical-point concentration profile, local xi in L_infinity_t bmo_{1/|log r|} is used to obtain logarithmic vortex-stretching depletion and singularity evasion"
+    },
+    {
+      "id": "NS-B1a3-C001",
+      "source": "RAKL_math merged PR #110 / NS_B1a3_C001_DELTA_20260811.yaml",
+      "fact": "finite-I local compactness does not itself supply a global critical rigidity topology"
+    }
+  ],
+  "method_transfers": [
+    {
+      "method": "vorticity-direction geometric depletion",
+      "source_context": "Type-I/high-vorticity geometric regularity criteria",
+      "required_assumptions": [
+        "direction field coherence in the exact theorem's norm/modulus",
+        "high-vorticity localization/threshold conditions",
+        "all scenario-specific concentration assumptions",
+        "time-uniform control where required"
+      ],
+      "target_disanalogies": [
+        "finite I controls local scale-invariant velocity/pressure quantities but no registered modulus of the normalized curl direction",
+        "zeros of vorticity make normalization singular",
+        "new 2026 bmo criterion is stated for a narrower critical-point concentration profile, not every finite-I ancient solution"
+      ],
+      "transfer_status": "BLOCKED_PENDING_INHERITANCE_OR_HOSTILE_CALIBRATION"
+    },
+    {
+      "method": "finite-I functional implication",
+      "source_context": "a priori estimate from A+C+D+E only",
+      "required_assumptions": [
+        "uniform consequence for every smooth divergence-free test field in the retained information class would be necessary for a purely functional proof"
+      ],
+      "target_disanalogies": [
+        "actual Navier–Stokes dynamics may impose additional coherence unavailable to arbitrary divergence-free fields"
+      ],
+      "transfer_status": "HOSTILE_TEST_AUTHORIZED_ONLY_AS_ROUTE_PRUNING"
+    }
+  ],
+  "pre_candidate_falsifiers": [
+    "search for a smooth compactly supported divergence-free high-frequency family with uniformly bounded finite-I functional ledger but increasingly oscillatory nonzero vorticity direction on an interior ball",
+    "audit scaling/units of A,C,D,E for that family and avoid any claim that it solves Navier–Stokes",
+    "test both uniform-continuity modulus and log-weighted bmo mean-oscillation coordinates",
+    "if the functional implication fails, preserve the equation-specific geometric-inheritance route rather than globally rejecting vorticity geometry"
+  ],
+  "source_anchors": [
+    "Albritton–Barker, arXiv:1811.00502",
+    "Giga–Miura, Comm. Math. Phys. 303 (2011), DOI 10.1007/s00220-011-1197-x / HUPSM 956",
+    "Grujic, arXiv:2607.08866v2 (2026-07-13)"
+  ],
+  "frozen_at": "2026-08-11T14:31:00Z",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:ed24b30e6c8b6e6682584c516ca1f2e2e0b30ecc1fca2f738d808c176e7d59e4"
+}
