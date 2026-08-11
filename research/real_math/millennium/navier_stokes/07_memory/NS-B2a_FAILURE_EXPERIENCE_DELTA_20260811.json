@@ -1,0 +1,31 @@
+{
+  "atom_id": "NS-B2a",
+  "normalized_new_or_confirmed_failures": [
+    {
+      "code": "NS2A-F001",
+      "class": "UNIQUE_CONTINUATION_HYPOTHESIS_FAILURE",
+      "trigger": "rescaled viscosity f(lambda)->0; limit equation is Euler",
+      "repair": "bind an Euler-native rigidity theorem to exact inherited hypotheses"
+    },
+    {
+      "code": "NS2A-F002",
+      "class": "UNCONTROLLED_FAR_FIELD",
+      "trigger": "local compactness and scale-invariant cylinder bounds permit mass/energy outside fixed regions",
+      "repair": "prove pressure-aware no-incoming-flux/tail tightness on approximants and pass it to the limit"
+    },
+    {
+      "code": "NS2A-F003",
+      "class": "NONCOMPACT_SYMMETRY_PROFILE_LEAKAGE",
+      "trigger": "translation/dilation escape under local convergence",
+      "repair": "source-valid global tightness or minimality theorem; cannot be assumed"
+    },
+    {
+      "code": "NS2A-F004",
+      "class": "FALSE_ADVERSARIAL_COUNTEREXAMPLE",
+      "trigger": "steady compactly supported Euler seems to defeat rigidity but violates the F=1 gradient spacetime growth bound",
+      "repair": "audit candidate falsifiers against every source scale term before classifying theorem status"
+    }
+  ],
+  "new_failure_authority": "DIAGNOSTIC_ONLY",
+  "root_authority": "NONE"
+}
