@@ -1,0 +1,110 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE",
+      "atom_id": "YM-E1a1",
+      "candidate_id": "YM-E1a1-C001",
+      "context_packet_hash": "sha256:95fe4879b25e9319e2de43ae287b467b86138752e66fd6dfa380e3a810d59802",
+      "research_trace_event_id": "YM-E1a1-E010",
+      "method_family": "exact finite scalar/single-contour source closure under local SU(N) Haar elimination",
+      "failure_mode": "a shared-link integration tangent between adjacent plaquette factors generates the concatenated rectangular Wilson-loop coordinate outside a marked vocabulary that omits that geometry",
+      "residual_signature": [
+        "for SU(N), N>=3, normalized Haar orthogonality gives integral Tr(AU) Tr(U^dagger B) dU = Tr(AB)/N",
+        "center invariance kills integral Tr(AU) Tr(B^dagger U) dU for N>=3",
+        "therefore F'_0(A,B)=Tr(AB)/(2N) for F_t defined with exp(t Re Tr(U^dagger B))",
+        "for SU(3), A=P and B=P versus B=P^2 keep Tr(A)=Tr(B)=0 while Tr(AB) changes from 0 to 3, so the generated rectangle coordinate is not determined by the separate scalar traces"
+      ],
+      "broken_assumptions": [
+        "a deliberately tiny finite fundamental-plaquette/single-contour mark vocabulary remains exactly closed under local gauge integration",
+        "the geometry of a Wilson-loop mark can be compressed to an unchanged scalar coefficient through blocking/elimination"
+      ],
+      "scope_conditions": [
+        "gauge group SU(N) with N>=3",
+        "normalized Haar integration over one shared link",
+        "two adjacent oriented plaquette factors in which the shared link appears with opposite orientation",
+        "first tangent at t=0 of a local interaction exp(t Re Tr(U^dagger B))",
+        "marked source vocabulary omits the concatenated rectangle loop or an equivalent coordinate capable of representing Tr(AB)"
+      ],
+      "competing_diagnoses": [
+        "genuine operator/geometry mixing under local gauge integration forces the concatenated contour into the marked state",
+        "the observed leakage is a strong-coupling/local-Haar feature whose coefficient or organization may differ in the weak-coupling Balaban RG regime, limiting transfer but not the exact local identity",
+        "a full block transformation may reorganize or cancel some local generated terms, so the local result cannot be promoted to a Balaban-wide impossibility without a block-specific derivation"
+      ],
+      "selected_diagnosis": "within the registered local Haar scope, the marked representation is too small: exact gauge integration generates a new concatenated-loop geometry that is not recoverable from the omitted scalar/single-contour coordinates; the broader method-level diagnosis remains scoped and is not promoted to a Balaban-wide impossibility",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/04_candidates/YM_E1a1_C001_LOCAL_HAAR_CONCATENATION_LEAKAGE_20260811.md",
+        "tests/math_applications/test_yang_mills_yme1a1_haar_leakage.py",
+        "research/real_math/millennium/yang_mills/03_sources/YM_E1a1_SOURCE_ADDENDUM_HAAR_20260811.md",
+        "R. A. Brandt, F. Neri, M.-a. Sato, Phys. Rev. D 24 (1981) 879, DOI:10.1103/PhysRevD.24.879",
+        "M. Creutz, J. Math. Phys. 19 (1978) 2043, DOI:10.1063/1.523581"
+      ],
+      "falsifier_or_attempt": "evaluate the exact one-link Haar contraction for adjacent plaquette source/action factors and use an SU(3) permutation-matrix pair as a planted witness against reconstruction of Tr(AB) from the separate scalar traces",
+      "observed_result": "the exact derivative contains Tr(AB)/(2N), and the SU(3) witness changes this generated coordinate while holding the separate traces fixed; exact closure of the tiny registered vocabulary is therefore false",
+      "local_repair_attempts": [
+        "add concatenated-contour and geometry labels rather than patching only scalar coefficients",
+        "prefer a graded/quasi-local marked loop/polymer or spin-network space with an explicit weighted support/complexity norm and typed irrelevant remainder",
+        "test the actual weak-coupling Balaban block before transferring the local impossibility beyond its registered scope",
+        "carry reflection-half-space buffer coordinates explicitly so support growth and positivity are audited separately"
+      ],
+      "timestamp": "2026-08-11T08:25:00+00:00",
+      "artifact_hash": "sha256:67ed53e303746e483a20304e2d1c25be07b0223d16a8f42c36474ffeeb2897a7"
+    },
+    {
+      "failure_id": "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE",
+      "atom_id": "YM-S1a",
+      "candidate_id": "YM-S1A-CAL-RESTRICTED-SOURCE",
+      "context_packet_hash": "sha256:561518a9b62025454014828057a4ad657707f673f9e98b5fb27aceaf8d00f03e",
+      "research_trace_event_id": "YM-S1-E009",
+      "method_family": "infer the full transfer-matrix spectral gap from exponential decay of a restricted source family",
+      "failure_mode": "the source-generated sector can be spectrally blind to a lower-energy excitation",
+      "residual_signature": [
+        "T=diag(1,1/2,1/4) is positive self-adjoint with true first excited ratio 1/2",
+        "the tested source satisfies A Omega=e2 and has exact correlator C_A(n)=(1/4)^n",
+        "the source-visible decay rate log 4 is strictly larger than the true full gap log 2"
+      ],
+      "broken_assumptions": [
+        "fast decay of the tested correlators certifies that no lower-energy state exists outside their generated cyclic subspace"
+      ],
+      "scope_conditions": [
+        "positive self-adjoint transfer matrices",
+        "source families whose vacuum-generated span has not been proved dense/cyclic in the physical excited-state space"
+      ],
+      "competing_diagnoses": [
+        "the decay-to-gap inference is valid only within the tested source-generated spectral subspace",
+        "a kinematically complete source basis repairs visibility but still requires a common uniform decay rate over that complete family",
+        "Yang-Mills-specific gauge constraints could alter which source family is physically natural but do not repair the abstract logical gap by themselves"
+      ],
+      "selected_diagnosis": "loss of spectral visibility: a non-dense source-generated sector can omit the true first excitation, so restricted-source clustering does not determine the full transfer gap",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/01_frontier/YM-S1A_SOURCE_VISIBILITY_CALIBRATION_20260811.md",
+        "tests/test_yang_mills_yms1a_source_visibility.py",
+        "Osterwalder-Seiler 1978 DOI 10.1016/0003-4916(78)90039-8",
+        "Baez 1996 DOI 10.1006/aima.1996.0012",
+        "Burgio et al. 2000 DOI 10.1016/S0550-3213(99)00533-7"
+      ],
+      "falsifier_or_attempt": "use an exact three-state positive transfer matrix and a vacuum source orthogonal to the lower excited state",
+      "observed_result": "the tested correlator decays exactly as 4^{-n} even though an orthogonal state with transfer eigenvalue 1/2 gives the smaller full spectral gap log 2",
+      "local_repair_attempts": [
+        "split G4 into G4a kinematic source completeness and G4b a common decay-rate theorem over a complete/dense source family",
+        "bind later lattice Yang-Mills arguments to an explicit fixed-lattice gauge-invariant basis before inferring a full gap",
+        "do not import continuum local-algebra cyclicity before continuum Yang-Mills existence is established"
+      ],
+      "timestamp": "2026-08-11T06:57:20+00:00",
+      "artifact_hash": "sha256:b3c97940ca4361ec3bee2738b1a41bcd6637f7fed657de1f4f18d7c6a61f3b6a"
+    }
+  ],
+  "links": [
+    {
+      "source_id": "F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE",
+      "target_id": "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE",
+      "relation": "SHARES_BROKEN_ASSUMPTION_WITH",
+      "rationale": "Both warn that an aggressively compressed finite source representation can omit a load-bearing coordinate, but one is local geometry/operator proliferation and the other spectral invisibility; neither is a global blacklist.",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/07_memory/YM_E1a1_C001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1A_FAILURE_EXPERIENCE_DELTA_20260811.json"
+      ]
+    }
+  ]
+}

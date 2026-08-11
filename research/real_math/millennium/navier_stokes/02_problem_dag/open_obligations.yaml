@@ -32,20 +32,23 @@ atoms:
         scope: "Not a Navier–Stokes counterexample; it only blocks norm-definition/interpolation-only proofs of the dynamic bridge."
         evidence: "01_frontier/NS-B1_TYPE_I_IMPLICATION_MATRIX_20260811.md"
       - id: NS-B1a-C001
-        status: VERIFIED_LOCAL_PRESSURE_TAIL_CALIBRATION
+        status: RETROSPECTIVE_ANALYTIC_SHELL_CALIBRATION
         statement: "Under the time-slice critical Morrey energy bound mu(B(x,r))<=M r, the absolute far-field quadratic pressure contribution decays as O(M R^-2) and the first kernel-gradient contribution as O(M R^-3)."
-        route_consequence: "Reject only the raw instantaneous pressure-divergence anti-replication mechanism; pressure-aware temporal/local/coherent routes remain live."
+        authority: "RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE"
+        chronology: "PR19 exact identity, calculation, and result first appeared together in 9b6b8ae; no backfilled preregistration."
+        route_consequence: "Use only to deprioritize raw instantaneous pressure-divergence search; pressure-aware temporal/local/coherent routes remain live."
         evidence: "01_frontier/NS-B1a_C001_PRESSURE_TAIL_LOCALIZATION_20260811.md"
     open_children:
       NS-B1a:
         title: "Dynamics-specific Type-I trace/tail bridge"
         question: "For a mild bounded ancient 3D Navier–Stokes solution with I<infinity, what weakest equation-specific inherited property yields either a backward sequence uniformly bounded in global L3 or another source-valid Liouville trigger?"
-        status: C001_CALIBRATED_RESIDUAL_OPENED
-        exact_gap: "Local parabolic Type-I control does not by itself provide global spatial tail tightness; NS-B1a-C001 additionally shows that raw instantaneous far-field pressure divergence cannot supply the missing bridge under the available critical Morrey energy control."
-        verified_result:
+        status: RETROSPECTIVE_SEARCH_CONTROL_RESIDUAL_OPENED
+        exact_gap: "Local parabolic Type-I control does not by itself provide global spatial tail tightness; the retrospective NS-B1a-C001 shell arithmetic only deprioritizes raw instantaneous far-field pressure divergence under the available critical Morrey energy control."
+        retrospective_calibration:
           id: NS-B1a-C001
-          authority: "VERIFIED_LOCAL_ANALYTIC_CALIBRATION / NO_NOVELTY / ROOT_AUTHORITY_NONE"
-          implication: "instantaneous pressure far-field summability shifts the search to temporal/coherent dynamics"
+          authority: "RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE"
+          implication: "analytic-shell summability changes search priority only; it supplies no candidate or root evidence"
+          chronology_audit: "04_candidates/negative_history/NS_B1a_C001_PR19_CHRONOLOGY_AUDIT_20260811.json"
           failure_memory: "F-NS-B1a-C001-PRESSURE-SUMMABILITY"
         next_child:
           id: NS-B1a1
@@ -79,6 +82,7 @@ nonpromotion_rules:
   - "boundedness of one scale-invariant quantity is not an unproved implication to another"
   - "a norm-only functional counterexample is not a counterexample to a dynamics-specific Navier–Stokes theorem"
   - "instantaneous pressure-tail summability is not global velocity-tail tightness"
+  - "retrospective analytic calibration is search control only and cannot be renamed preregistered candidate evidence"
   - "failure of raw pressure divergence does not blacklist pressure-aware temporal/local/coherent mechanisms"
   - "computation is not proof"
   - "same-context review is not independent review"

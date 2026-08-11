@@ -1,20 +1,15 @@
-# NS-B1a-C001 — retrospective critical-Morrey pressure-tail calibration
+# NS-B1a-C001 — critical-Morrey pressure-tail localization
 
-**Atom:** `NS-B1a` — dynamics-specific Type-I trace/tail bridge
+**Atom:** `NS-B1a` — dynamics-specific Type-I trace/tail bridge  
+**Candidate:** `NS-B1a-C001`  
+**Authority:** `SOURCE_BOUND_DERIVED_CALIBRATION / VERIFIED_LOCAL_ANALYTIC_STEP_IF_RECHECKED / NO_NOVELTY_CLAIM / ROOT_AUTHORITY_NONE`  
+**Targeted mechanism:** raw instantaneous far-field pressure divergence as an anti-replication mechanism.
 
-**Historical PR #19 identity:** `NS-B1a-C001`
+## Why this candidate is allowed now
 
-**Authority:** `RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE`
+The strict `NS-B1a` context, analogy/method-transfer review, six-role same-context expert review, dual-memory review and seven-event pre-candidate trace were frozen before this candidate. The migrated application regression reconstructs those artifacts and passes `plan_math_research`.
 
-**Retrospective subject:** raw instantaneous far-field pressure divergence as an anti-replication mechanism.
-
-## Chronology and assurance boundary
-
-PR #19 first committed this document at `9b6b8ae4c84fc3c1b579b4db8e3fe6726b6244c0`. That same file already contained the exact identity `NS-B1a-C001`, the analytic shell calculation, and its interpreted result. No repository-visible exact evaluator or candidate identity predates that commit. The continuation that later asserted `CANDIDATE_PROPOSED` was introduced only at `070b5cc620368862aa3b10414af7c986ce341601`.
-
-The earlier strict context and `NEXT_STEP_PROPOSED` event selected only a broad PDE-consistent sparse-tail discriminator and explicitly left the candidate identity unopened. Later event timestamps cannot repair the missing immutable freeze. The original PR #19 payload is preserved as negative history under `04_candidates/negative_history/`, and the machine chronology receipt binds the source commits, paths, blobs, hashes, and ancestry.
-
-Accordingly, the material below is retained only as an independently recheckable **retrospective analytic shell calculation**. It has `SEARCH_CONTROL_ONLY` authority. It is not preregistered candidate evidence, not a verified discovery step, and no chronology is backfilled.
+The application submodule is pinned to `RAKL@7853ec0c4ff8f862359835bca1af1d934bfbd887`. At candidate time, current framework main is `RAKL@55d4cb0a83f271d3263fbe48f99b173119c732d2`. The intervening framework-repository commits implement the framework/application split; the comparison contains no changes to the mathematical-research runtime, context/memory/trace schemas, or pre-candidate gate used by this atom. This is a freshness audit, not theorem evidence.
 
 ## Source boundary
 
@@ -26,7 +21,7 @@ Load-bearing sources:
 
 No novelty claim is made. The estimate below is a standard dyadic Calderón–Zygmund/Morrey calculation specialized as a route discriminator.
 
-## Retrospectively evaluated question
+## Frozen question
 
 The parent calibration showed that local Type-I functionals can remain bounded on an arbitrary divergence-free sparse bump train while every time slice has infinite global `L^3`. That example is not a Navier–Stokes solution.
 
@@ -34,7 +29,7 @@ The first dynamics-specific question was therefore:
 
 > Could the nonlocal pressure coupling itself prohibit infinitely replicated distant packets because their instantaneous pressure contribution necessarily diverges?
 
-This retrospective calculation evaluates that mechanism as search control before any future universal Type-I-to-`L^3` theorem attempt.
+This candidate tests that mechanism before attempting a universal Type-I-to-`L^3` theorem.
 
 ## Exact local statement
 
@@ -161,15 +156,15 @@ The quantity
 
 is invariant under the Navier–Stokes scaling. The pressure-tail bound scales like `R^{-2}`, matching pressure, and the kernel-gradient bound scales like `R^{-3}`. No dimensional mismatch is introduced.
 
-## Analytic result and scoped route implication
+## Falsifier result
 
-The retrospectively evaluated mechanism was:
+The attempted mechanism was:
 
 > infinitely replicated distant critical packets should force divergent instantaneous nonlocal pressure, thereby ruling out the sparse-tail scenario.
 
 The worst-case sign-free dyadic sum **converges geometrically** under the exact critical Morrey energy growth already available from `A`.
 
-Therefore the *raw pressure-divergence anti-replication mechanism* is unsuitable as a search route inside this analytic-shell scope.
+Therefore the proposed *raw pressure-divergence anti-replication mechanism* fails inside this registered scope.
 
 This does **not** construct a Navier–Stokes sparse-tail solution. It only shows that the available Type-I Morrey energy bound is already strong enough to make the distant quadratic pressure stress absolutely summable, so mere nonlocality/divergence cannot be the missing bridge.
 
@@ -197,7 +192,7 @@ The first pre-candidate audit for `NS-B1a1` must explicitly test the hostile pos
 
 ## Non-promotion boundary
 
-This retrospective calibration is not:
+This result is not:
 
 - `I<∞ -> L^3` along a backward sequence;
 - a Liouville theorem;
@@ -206,4 +201,4 @@ This retrospective calibration is not:
 - a Clay solution;
 - a novelty certificate.
 
-It is only a bounded analytic-shell route-pruning calculation and a sharper search residual.
+It is a bounded route-pruning calculation and a sharper residual.

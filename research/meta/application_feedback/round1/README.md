@@ -29,6 +29,15 @@ application split without promoting any lesson into RAKL:
 Each item binds its source payload, result, trace and context to exact paths,
 Git blobs and raw SHA-256 values at the producer commit. The bundle is
 self-hashing and the builder reconstructs it in a detached producer checkout.
+The builder also checks that every trace names the bound result and context,
+that its strict-UTC observation time does not postdate the producer commit, and
+that producer commit `590b962` remains an ancestor of the checked-out history.
+
+The feedback importer is loaded only after a clean, correct-origin framework
+object source has produced a separate detached checkout at exact historical
+framework commit `15f1c3a`. The current application framework pin may advance
+without changing this historical receipt; it is not used as the import
+authority merely because it is the current submodule `HEAD`.
 
 `QUARANTINED_PROPOSAL` means transport and chronology bindings passed. It does
 not mean a diagnosis, tool, or framework change is correct, reusable, novel, or
@@ -59,3 +68,7 @@ python tools/build_application_feedback_round1.py \
 python tools/run_application_tests.py --framework framework/RAKL
 ```
 
+Full Git history is required because the transport artifacts are in the child
+of producer commit `590b962`. PR #24 was merged with merge commit `96d52e1`, so
+the producer remains reachable from `main`; squash or rebase integration would
+not have preserved that exact chronology.

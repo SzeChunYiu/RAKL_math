@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "AUDIT-NS-B1a-C001-PR19-CHRONOLOGY-20260811",
+  "atom_id": "NS-B1a",
+  "source_repository": "https://github.com/SzeChunYiu/RAKL_math",
+  "source_pull_request": 19,
+  "source_branch": "research/navier-b1a-pressure-tail-20260811",
+  "source_head": "144ea3a9ce27b6bb68fa20d39428d54637c43f7b",
+  "source_merge_commit": "0ad7991d8b4f05792d6d43b6e36128ef4b7eada9",
+  "source_merge_first_parent": "f8156cc5a9991b13e7ff74d02ac1bb35f9008b7d",
+  "source_pr_base": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+  "replacement_base": "0ad7991d8b4f05792d6d43b6e36128ef4b7eada9",
+  "replacement_framework_pin": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+  "preserved_source_identity": {
+    "historical_identity": "NS-B1a-C001",
+    "original_result_commit": "9b6b8ae4c84fc3c1b579b4db8e3fe6726b6244c0",
+    "original_result_commit_time": "2026-08-11T08:11:02+00:00",
+    "original_result_path": "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a_C001_PRESSURE_TAIL_LOCALIZATION_20260811.md",
+    "original_trace_commit": "070b5cc620368862aa3b10414af7c986ce341601",
+    "original_trace_commit_time": "2026-08-11T08:12:36+00:00",
+    "original_trace_path": "research/real_math/millennium/navier_stokes/09_trace/NS-B1a_C001_TRACE_CONTINUATION_20260811.json",
+    "prior_selected_action_event": "NS-B1a-E07",
+    "prior_selected_action_hash": "sha256:fbb162164cc9f88cf8049cb6d1d69502700c5ee59d0e10510984d0a044336f0a"
+  },
+  "chronology_observation": {
+    "observed": "the exact identity, analytic shell calculation, and interpreted result first appeared together in commit 9b6b8ae; the trace asserting CANDIDATE_PROPOSED appeared later in 070b5cc",
+    "exact_candidate_before_result": false,
+    "immutable_evaluator_before_result": false,
+    "bounded_interpretation": "E07 selected a broad PDE-consistent sparse-tail discriminator but explicitly left candidate identity unopened; no committed exact evaluator or candidate identity has been found before 9b6b8ae",
+    "superseded_implication": "PR19 wording that NS-B1a-C001 was frozen before evaluation and its continuation could carry candidate-authoritative chronology",
+    "not_invalidated": "the dyadic Calderon-Zygmund/Morrey shell arithmetic remains independently recheckable as a scoped analytic calculation"
+  },
+  "source_artifacts": [
+    {
+      "path": "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a_C001_PRESSURE_TAIL_LOCALIZATION_20260811.md",
+      "source_commit": "144ea3a9ce27b6bb68fa20d39428d54637c43f7b",
+      "source_git_blob": "0348843b64f16b0c0e107a563893c15a9076e3fa",
+      "raw_file_sha256": "sha256:cbba8a4f90ccb189de0a8affd0682db400e0f0e39bad4b9259aad9cfc24f1da5",
+      "first_pr19_commit": "9b6b8ae4c84fc3c1b579b4db8e3fe6726b6244c0",
+      "introduction_status": "ADDED_IN_PR19"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/08_reviews/SAME_CONTEXT_REVIEW_NS-B1a_C001_RESULT_20260811.md",
+      "source_commit": "144ea3a9ce27b6bb68fa20d39428d54637c43f7b",
+      "source_git_blob": "7f0c1ff33d14107e6dd48e4d40f757fa97facc6d",
+      "raw_file_sha256": "sha256:0b38ffeaf62c3cfae8e9e7e520055e863b701187a4ce07240fb2555d4af2d9bc",
+      "first_pr19_commit": "aaabd5f5ea6735a0a4d758087f42c0b867ce56df",
+      "introduction_status": "ADDED_IN_PR19"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/07_memory/NS-B1a_C001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+      "source_commit": "144ea3a9ce27b6bb68fa20d39428d54637c43f7b",
+      "source_git_blob": "51c9a0f7b8bb4244994084d856ed4b1bbd06e3b9",
+      "raw_file_sha256": "sha256:a22ad31f38032f39307902d813cc38b34620ba08238f731f8a663a5694ec0e39",
+      "first_pr19_commit": "ccecf86a3f102940cb705d432c18e61ccf625297",
+      "introduction_status": "ADDED_IN_PR19"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/09_trace/NS-B1a_C001_TRACE_CONTINUATION_20260811.json",
+      "source_commit": "144ea3a9ce27b6bb68fa20d39428d54637c43f7b",
+      "source_git_blob": "45bfbbf5fad822117fd4e92f7850fde84709c99e",
+      "raw_file_sha256": "sha256:ff353360726367858259f03294316a56f58c2f38408b07d75c7bafc24f22f653",
+      "first_pr19_commit": "070b5cc620368862aa3b10414af7c986ce341601",
+      "introduction_status": "ADDED_IN_PR19"
+    },
+    {
+      "path": "tests/math_applications/test_navier_stokes_ns_b1a_c001_pressure_tail.py",
+      "source_commit": "144ea3a9ce27b6bb68fa20d39428d54637c43f7b",
+      "source_git_blob": "52a441ecd9220c2c8fecc5639683f1ab3788c0d7",
+      "raw_file_sha256": "sha256:d284d25ea0f1c718902905c12e0f4fb95cd2af83399d3851ee767acb17d8be56",
+      "first_pr19_commit": "5bb169f3efe1249c0e056649328af233936f8a4d",
+      "introduction_status": "ADDED_IN_PR19"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/02_problem_dag/open_obligations.yaml",
+      "source_commit": "144ea3a9ce27b6bb68fa20d39428d54637c43f7b",
+      "source_git_blob": "f349e4d6ddbf14a9c522db3ffb1c2f2185fe70a3",
+      "raw_file_sha256": "sha256:bfcacd146fec63a94e0d5ab960e813cb30d6268ed447544a2e6aefdc5d1a4b40",
+      "first_pr19_commit": null,
+      "introduction_status": "PREEXISTING_MODIFIED_IN_PR19"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/README.md",
+      "source_commit": "144ea3a9ce27b6bb68fa20d39428d54637c43f7b",
+      "source_git_blob": "8ab50740616d2170d12344bbc2fcb80e0883bb66",
+      "raw_file_sha256": "sha256:85b7731da525e150235db7d8e3386683395bf40fb40fd83045870dbdd65bafd7",
+      "first_pr19_commit": null,
+      "introduction_status": "PREEXISTING_MODIFIED_IN_PR19"
+    }
+  ],
+  "historical_snapshots": [
+    {
+      "snapshot_role": "ORIGINAL_RESULT_AND_CANDIDATE_SAME_FILE",
+      "path": "research/real_math/millennium/navier_stokes/04_candidates/negative_history/NS_B1a_C001_PR19_RESULT_SNAPSHOT_9B6B8AE.md",
+      "source_commit": "9b6b8ae4c84fc3c1b579b4db8e3fe6726b6244c0",
+      "source_git_blob": "0348843b64f16b0c0e107a563893c15a9076e3fa",
+      "raw_file_sha256": "sha256:cbba8a4f90ccb189de0a8affd0682db400e0f0e39bad4b9259aad9cfc24f1da5"
+    },
+    {
+      "snapshot_role": "LATER_BACKFILLED_TRACE",
+      "path": "research/real_math/millennium/navier_stokes/04_candidates/negative_history/NS_B1a_C001_PR19_TRACE_SNAPSHOT_070B5CC.json",
+      "source_commit": "070b5cc620368862aa3b10414af7c986ce341601",
+      "source_git_blob": "45bfbbf5fad822117fd4e92f7850fde84709c99e",
+      "raw_file_sha256": "sha256:ff353360726367858259f03294316a56f58c2f38408b07d75c7bafc24f22f653"
+    }
+  ],
+  "assimilation_rule": "preserve the analytic shell calculation only as RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY; do not backfill preregistration, candidate authority, Navier-Stokes root evidence, novelty, or theorem authority",
+  "disposition": "PR19_MERGED_THEN_AUTHORITY_SUPERSEDED / RETROSPECTIVE_ANALYTIC_CALIBRATION_ONLY / NO_BACKFILLED_PREREGISTRATION",
+  "authority": "CHRONOLOGY_AUDIT / NEGATIVE_HISTORY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:e324b2948be5158efccee7835452002faa884b056954ccf139f813fe5e19eb1d"
+}
