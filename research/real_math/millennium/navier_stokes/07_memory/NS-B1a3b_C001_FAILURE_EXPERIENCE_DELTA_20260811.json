@@ -1,0 +1,71 @@
+{
+  "schema_version": "failure-experience-delta-v3-proposal-shadow",
+  "atom_id": "NS-B1a3b",
+  "candidate_id": "NS-B1a3b-C001-FINITE-I-TO-DIRECTION-COHERENCE",
+  "episode_id": "EP-NS-B1a3b-FINITE-I-DIRECTION-COHERENCE-20260811",
+  "authority": "PROPOSAL_SHADOW / SEARCH_CONTROL_ONLY",
+  "episode_outcome": "PARTIAL_SUCCESS",
+  "diagnoses": [
+    {
+      "failure_id": "F-NS-B1a3b-FINITE-I-DIRECTION-COHERENCE-DERIVATIVE-GAP",
+      "category": "LOCAL_FUNCTIONAL_A_PRIORI_ESTIMATE_FAILURE",
+      "diagnosis_status": "SUPPORTED_SCOPED_DIAGNOSIS_PROPOSAL_SHADOW",
+      "observation": "uniformly finite A+C+D+E smooth divergence-free packets have direction oscillation frequency N and no uniform continuity or bmo_{1/|log r|} bound",
+      "structural_cause": "finite I controls first-derivative velocity energy, whereas spatial coherence of xi=omega/|omega| depends on grad omega/|omega| and therefore one extra derivative plus a normalization denominator",
+      "competing_diagnoses": [
+        "pressure nonlocality alone",
+        "tail leakage alone",
+        "vorticity zeros alone",
+        "endpoint Lorentz failure alone"
+      ],
+      "rejected_competing_diagnoses": [
+        "pressure nonlocality is not needed for the hostile family; the failure already occurs on a nonzero-vorticity core at the functional level",
+        "tail leakage is absent from the local core discriminator",
+        "vorticity zeros are absent on B_2 where |omega|=1",
+        "the obstruction already appears at the modulus/mean-oscillation coordinate before a Lorentz endpoint estimate"
+      ],
+      "scope_conditions": [
+        "functional implication from finite-I A+C+D+E information only",
+        "smooth compactly supported divergence-free test packets",
+        "not required to solve Navier–Stokes"
+      ],
+      "local_to_global_gluing": false,
+      "obstruction_id": "O-NS-B1a3b-DIRECTION-INHERITANCE-DERIVATIVE-GAP"
+    },
+    {
+      "failure_id": "F-NS-B1a3b-GM-TYPEI-HYPOTHESIS-MISMATCH",
+      "category": "SOURCE_TRANSFER_INTERFACE",
+      "diagnosis_status": "SOURCE_BOUND_DIFFERENCE_WITNESS",
+      "observation": "Giga–Miura Theorem 1.1 uses a pointwise L-infinity self-similar Type-I growth condition on the original near-blow-up mild solution and a common modulus on high-vorticity sets",
+      "structural_cause": "the current finite-I ancient input is not silently identical to the Giga–Miura hypothesis package",
+      "scope_conditions": [
+        "direct transfer only"
+      ],
+      "local_to_global_gluing": true,
+      "obstruction_id": "O-NS-B1a3b-GEOMETRIC-TRIGGER-HYPOTHESIS-GLUING"
+    },
+    {
+      "failure_id": "F-NS-B1a3b-GRUJIC-CRITICAL-POINT-INHERITANCE-GAP",
+      "category": "SOURCE_TRANSFER_INTERFACE",
+      "diagnosis_status": "SOURCE_BOUND_DIFFERENCE_WITNESS",
+      "observation": "Grujic arXiv:2607.08866v2 assumes critical-point vorticity concentration and time-uniform weighted-BMO direction regularity",
+      "structural_cause": "neither the critical-point concentration scenario nor the weighted-BMO direction hypothesis is inherited from generic finite I by the current source contract",
+      "scope_conditions": [
+        "direct transfer from finite-I ancient class to the 2026 preprint trigger"
+      ],
+      "local_to_global_gluing": true,
+      "obstruction_id": "O-NS-B1a3b-GEOMETRIC-TRIGGER-HYPOTHESIS-GLUING"
+    }
+  ],
+  "lesson_consolidation": {
+    "promoted_lesson_ids": [],
+    "proposed_lesson_id": "L-NS-B1a3b-FINITE-I-IS-NOT-DIRECTION-COHERENCE@PROPOSED_NOT_CONSOLIDATED",
+    "reason": "one scoped hostile family and source audit are enough for routing but no protected lesson-consolidation/retention gate was executed"
+  },
+  "next_action": "NS-B1a3b1: use actual ancient NSE dynamics to search for a theorem-matched geometric depletion/coherence quantity; do not try to derive xi coherence from finite I alone.",
+  "evidence_pointers": [
+    "01_frontier/NS-B1a3b_C001_VORTICITY_DIRECTION_INHERITANCE_AUDIT_20260811.md",
+    "03_source_audits/NS-B1a3b_VORTICITY_GEOMETRY_SOURCE_AUDIT_20260811.md"
+  ],
+  "packet_hash": "sha256:effba6ed9e63b7990da69cf767ce8f064282b38aec9ef108e1b4d921eef2c488"
+}
