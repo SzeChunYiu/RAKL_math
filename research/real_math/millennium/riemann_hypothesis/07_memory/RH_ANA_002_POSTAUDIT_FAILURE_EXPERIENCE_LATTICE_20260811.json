@@ -1,0 +1,104 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-RH-ANA-001-FINITE-LI-PREFIX",
+      "atom_id": "RH-ANA-001",
+      "candidate_id": "METHOD-FAMILY:FINITE-LI-PREFIX-CERTIFICATE",
+      "context_packet_hash": "sha256:e353da364bb2b40c42dac648187e2159cbb223b528a9a849365cbd85e9321cfe",
+      "research_trace_event_id": "RH-ANA-001-E09",
+      "method_family": "finite-prefix Li positivity as a global RH certificate",
+      "failure_mode": "arbitrarily informative-looking finite sign prefixes can miss off-critical symmetric zero data outside the effective detection range",
+      "residual_signature": [
+        "finite coordinate projection does not control the all-n positivity criterion",
+        "off-critical symmetry can remain invisible to hundreds of initial Li transforms",
+        "a global proof needs a zeta-specific uniformity mechanism rather than a finite cutoff"
+      ],
+      "broken_assumptions": [
+        "a sufficiently long verified finite prefix is representative of all Li coefficients",
+        "functional-equation and conjugation symmetry alone force early negativity when an off-critical zero exists"
+      ],
+      "scope_conditions": [
+        "synthetic finite multisets closed under rho->conj(rho) and rho->1-rho",
+        "logic that promotes positivity of only finitely many Li transforms without an additional uniform theorem"
+      ],
+      "competing_diagnoses": [
+        "the failure is merely an artifact of using an arbitrary multiset rather than actual zeta zeros",
+        "high imaginary part delays detection while the all-n criterion remains valid",
+        "the real missing coordinate is zeta-specific arithmetic structure capable of controlling every n"
+      ],
+      "selected_diagnosis": "finite-prefix positivity loses the infinite-uniformity coordinate; the quartet calibration localizes, but does not solve, the need for a zeta-specific all-n mechanism",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_001_LI_PREFIX_CALIBRATION_20260811.json",
+        "research/real_math/millennium/riemann_hypothesis/05_oracles/li_prefix_quartet_calibration.py",
+        "Xian-Jin Li, Journal of Number Theory 65 (1997), 325-333, DOI 10.1006/jnth.1997.2137",
+        "Enrico Bombieri and Jeffrey C. Lagarias, Journal of Number Theory 77 (1999), 274-287, DOI 10.1006/jnth.1999.2392"
+      ],
+      "falsifier_or_attempt": "evaluate the Li transform exactly on Q={rho,conj(rho),1-rho,1-conj(rho)} with rho=1/4+100i using rational arithmetic through n=627",
+      "observed_result": "Lambda_n(Q)>0 for every 1<=n<=626, while Lambda_627(Q)<0 exactly",
+      "local_repair_attempts": [
+        "open RH-ANA-002 to demand a theorem genuinely uniform in coefficient index n",
+        "require any future finite computation to state the missing tail/uniformity bridge explicitly"
+      ],
+      "timestamp": "2026-08-11T06:59:00+00:00",
+      "artifact_hash": "sha256:61097eaff7c1355cca0b2a7a180432a4e441c800b630ea010afca02333ce8c45"
+    },
+    {
+      "failure_id": "F-RH-ANA-002-SUZUKI-NORM-FAITHFULNESS-SOURCE-BOUNDARY",
+      "atom_id": "RH-ANA-002",
+      "candidate_id": "METHOD-FAMILY:SUZUKI-NORM-FAITHFULNESS-BRIDGE",
+      "context_packet_hash": "sha256:300b787769442af040d944e0b52db106881844a9238c021e8804c7f382660742",
+      "research_trace_event_id": "RH-ANA-002-E09",
+      "method_family": "Suzuki Li-norm positive surrogate to all-index Li positivity through a source-local faithfulness bridge",
+      "failure_mode": "within the registered Suzuki 2023 source boundary, unconditional existence and positivity of the L2 norm do not supply the equality to lambda_n; the proof of that equality passes through RH-coupled model-space structure, and no strictly weaker source-supplied D_n identity/sign bridge was found",
+      "residual_signature": [
+        "positive analytic surrogate does not by itself transport sign to lambda_n",
+        "the known all-n norm equality is root-equivalent rather than a cheaper propagation theorem",
+        "future progress needs a different representation or a genuinely new unconditional defect decomposition"
+      ],
+      "broken_assumptions": [
+        "unconditional L2 membership of G_n is enough to infer positivity of lambda_n",
+        "model-space innerness and orthonormal-basis structure used in the norm calculation can be imported without RH"
+      ],
+      "scope_conditions": [
+        "source-bound audit of Masatoshi Suzuki, arXiv:2301.05779v2, especially Theorem 1.1 and Propositions 2.1, 2.2, 3.1, 3.2",
+        "claims only that the inspected source route exposes no strictly weaker all-index faithfulness bridge; it does not prove no such decomposition exists elsewhere",
+        "does not block Weil/prime-side, zero-density, mollifier/resonance, or asymptotic-growth routes"
+      ],
+      "competing_diagnoses": [
+        "the Suzuki norm representation is intrinsically root-coupled and admits no cheaper exact bridge",
+        "a useful unconditional D_n decomposition exists but is absent from the inspected source boundary",
+        "the missing coordinate is better exposed in a scale-localized Weil/prime-side or growth representation rather than the norm identity"
+      ],
+      "selected_diagnosis": "",
+      "diagnosis_status": "OBSERVED_ONLY",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_LI_NORM_AUDIT_TASK_EPISODE_20260811.json",
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_002_LI_NORM_FAITHFULNESS_MATRIX_20260811.md",
+        "Masatoshi Suzuki, arXiv:2301.05779v2, Theorem 1.1 and Propositions 2.1, 2.2, 3.1, 3.2",
+        "Masatoshi Suzuki, arXiv:2606.09096 (2026), current representation-rotation source"
+      ],
+      "falsifier_or_attempt": "execute the preregistered source-dependency matrix and search the unconditional Suzuki 2023 layer for an exact D_n identity, one-sided sign theorem, orthogonality relation, or source term that is strictly weaker than the all-n RH-equivalent norm equality",
+      "observed_result": "G_n is unconditionally L2 and Proposition 2.1 is unconditional; the model-space/Hermite-Biehler bridge and Proposition 3.2 are RH-coupled, while Theorem 1.1 makes the all-n norm equality equivalent to RH. No strictly weaker D_n bridge was located inside the registered source boundary.",
+      "local_repair_attempts": [
+        "do not invent another norm-positivity equivalent under the same frozen representation",
+        "rotate only after fresh context/memory/trace gates to the current Weil/screw-function or prime-side representation",
+        "retain RH-ANA-001 finite-prefix failure as a separate all-index warning rather than repeating finite computations"
+      ],
+      "timestamp": "2026-08-11T10:17:00+00:00",
+      "artifact_hash": "sha256:e7992fcb1e369c4832cfcdac23e2353027382e11e5957205061112ab230b549e"
+    }
+  ],
+  "links": [
+    {
+      "source_id": "F-RH-ANA-002-SUZUKI-NORM-FAITHFULNESS-SOURCE-BOUNDARY",
+      "target_id": "F-RH-ANA-001-FINITE-LI-PREFIX",
+      "relation": "SHARES_RESIDUAL_WITH",
+      "rationale": "Both failures preserve the same all-index residual, but their lost coordinates differ: RH-ANA-001 loses the tail by finite projection, whereas RH-ANA-002 retains all indices but loses the target-sign coordinate at the positive-surrogate faithfulness bridge. This is a structural relation, not a causal identification.",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_ANA_001_FINITE_LI_PREFIX_NO_GO_20260811.md",
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_ANA_002_LI_NORM_SOURCE_BOUNDARY_20260811.md"
+      ]
+    }
+  ]
+}
