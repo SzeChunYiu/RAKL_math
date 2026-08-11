@@ -1,0 +1,134 @@
+{
+  "atom_id": "NS-B2a1",
+  "parent_atom_id": "NS-B2a",
+  "root_id": "NS0",
+  "authority": "PRE_CANDIDATE_CONTEXT_ONLY / NO_THEOREM_CANDIDATE / ROOT_AUTHORITY_NONE",
+  "object_context": "In Seregin's Theorem 3.1 F(a)=1 Type-II branch, determine whether the local compactness used to extract a nontrivial ancient Euler limit can transfer any far-field/no-incoming-energy statement from the Navier-Stokes prelimit. Isolate the exact quantifier-order and recentering/tightness obligation before proposing an Euler rigidity theorem.",
+  "problem_signature": [
+    "3D incompressible Navier-Stokes potential Type-II blowup",
+    "Euler scaling with vanishing viscosity",
+    "ancient Euler limit",
+    "local strong/weak convergence on every fixed parabolic cylinder",
+    "noncompact spatial translations and profile leakage",
+    "far-field/no-incoming-energy tail inheritance",
+    "pressure normalization",
+    "local-to-global rigidity gluing"
+  ],
+  "structural_coordinates": [
+    "Seregin extraction supplies convergence only on each fixed Q(a): strong L_{3nu}, weak-* L_{2,infty}, weak gradient L2",
+    "the target tail statement quantifies R -> infinity and therefore lives outside any one fixed Q(a)",
+    "local convergence k -> infinity at fixed R and uniform tail tightness sup_k Tail_k(R) -> 0 as R -> infinity are distinct quantifier orders",
+    "translation is noncompact and can move a bounded coherent packet outside every fixed centered ball while preserving global mass/energy",
+    "F(a)=1 local energy/pressure/gradient bounds are scale critical and do not themselves supply positive-power decay at large a",
+    "the limiting equation is Euler, so viscous Navier-Stokes backward uniqueness is not inherited",
+    "pressure is only locally controlled and any global pressure-tail statement requires a consistent normalization/decomposition",
+    "nontriviality is source-bound on a fixed unit-scale spacetime quantity and must not be erased by recentering"
+  ],
+  "equivalent_formulations": [
+    "Uniform-tail form: seek lim_{R->infinity} sup_k Tail(v^lambda_k,q^lambda_k;R)=0 for a source-defined nonnegative tail functional strong enough to pass to the Euler limit.",
+    "Quantifier-order form: identify conditions under which lim_{R->infinity} limsup_{k->infinity} Tail_k(R)=0 may be exchanged with the local k->infinity compactness used by the source.",
+    "Recentering form: either prove the concentration center remains o(R) relative to the expanding observation scale or work modulo translations with an explicit center trajectory and show no mass/flux is lost.",
+    "Signed-flux form: replace absolute tail tightness by a source-inherited signed/telescoping flux potential whose boundary contribution vanishes along a justified sequence of radii/times.",
+    "Gluing form: Seregin local ancient-Euler section -> tail/recentering certificate -> exact Euler Liouville theorem -> contradiction with source nontriviality."
+  ],
+  "solved_analogues": [
+    {
+      "context": "Local convergence versus tightness for translated compactly supported functions/measures",
+      "method": "A fixed compact profile translated to |x_k|->infinity converges to zero locally while preserving its global norm; uniform tightness is exactly the missing global compactness coordinate.",
+      "enabling_assumptions": ["translation of a fixed integrable/finite-energy profile", "local topology tests only bounded regions"],
+      "shared_structure": ["local convergence cannot see mass escaping to spatial infinity", "global norm/tail is not continuous under local convergence alone"],
+      "disanalogies": ["the calibration profile need not solve Euler or arise from Seregin's blowup sequence", "it falsifies an inference from topology, not the target PDE theorem"],
+      "repair_question": "What source-specific estimate prevents the actual rescaled Navier-Stokes sequence from realizing the same escape topology?"
+    },
+    {
+      "context": "Concentration-compactness / critical-element methods",
+      "method": "Recover compactness modulo noncompact symmetries and then apply rigidity.",
+      "enabling_assumptions": ["a critical/minimal object or profile decomposition", "control of translation/dilation parameters", "decoupling/tightness strong enough for the target functional"],
+      "shared_structure": ["translation/dilation can defeat naive compactness", "rigidity becomes meaningful only after orbit tightness or symmetry quotienting"],
+      "disanalogies": ["NS-B2a1 has no established minimal Type-II Euler critical element", "Seregin's theorem gives a source-specific local extraction rather than a pre-existing almost-periodic orbit"],
+      "repair_question": "Can the source sequence furnish a center/tail modulus without importing an unproved minimal-element theory?"
+    }
+  ],
+  "near_solved_analogues": [
+    {
+      "context": "Seregin axisymmetric strengthened branch",
+      "method": "Additional symmetry/regularity plus an explicit decay condition is used before passing a spatial cutoff to infinity in a conservation-law argument.",
+      "enabling_assumptions": ["axisymmetry/swirl-free structure and extra derivative bounds", "an additional source condition making the cutoff-error vanish"],
+      "shared_structure": ["a global conservation/rigidity passage needs more than local bounds"],
+      "disanalogies": ["general NS-B2a F=1 branch lacks those symmetry and decay hypotheses"],
+      "repair_question": "What is the weakest general, source-inherited replacement for that large-scale cutoff control?"
+    }
+  ],
+  "method_transfers": [
+    {
+      "tool_id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "authority": "VERIFIED_LOCAL",
+      "source_context": "cross-Millennium root-bridge stability audit",
+      "mapping": {
+        "surrogate": "local convergence and fixed-radius ancient-Euler bounds",
+        "surrogate_certificate": "Seregin's fixed-Q(a) compactness/extraction and Theorem 3.1 local estimates",
+        "root_object": "global no-incoming-energy/tail condition needed by an Euler rigidity closure",
+        "bridge_map": "pass prelimit annular/tail information through k->infinity and then R->infinity",
+        "preservation_property": "uniform tightness/recentering or an equivalent signed-flux handoff with justified order of limits"
+      },
+      "difference_witness": {
+        "changed_structural_coordinates": ["vanishing-viscosity Navier-Stokes-to-Euler limit", "expanding spatial annuli", "noncompact translation symmetry", "local pressure normalization", "two noncommuting limits k->infinity and R->infinity"],
+        "restored_or_replaced_assumptions": ["the hostile family need only falsify a compactness inference, not solve Euler", "any retained bridge must be proved from the actual Seregin prelimit class"],
+        "cheapest_repeat_failure_test": "translate a smooth compactly supported divergence-free profile to infinity and verify local convergence with preserved global norm/tail, then compare the quantifiers with Seregin's fixed-Q(a) convergence"
+      }
+    }
+  ],
+  "cross_domain_analogy_scan": [
+    {
+      "domain": "analysis/probability",
+      "analogy": "weak/local convergence without tightness loses mass at infinity",
+      "common_abstraction": "observation on every bounded window does not control globally escaping state",
+      "source_to_target_mapping": "bounded test sets -> fixed Q(a); escaping probability mass -> translating velocity/energy packet; tightness -> uniform far-field modulus",
+      "shared_constraints": ["noncompact ambient space", "local observation topology", "global conclusion depends on tails"],
+      "disanalogies": ["Euler/NS has PDE, incompressibility, pressure, scaling and energy constraints absent in abstract measures"],
+      "transferable_principle": "require a uniform tightness certificate or work modulo the noncompact symmetry before making a global inference",
+      "validation_obligation": "derive the certificate from the exact rescaled suitable-weak sequence, not from analogy"
+    },
+    {
+      "domain": "ordinary tracking",
+      "analogy": "a fixed camera can see an object disappear even when the object persists by moving out of frame",
+      "common_abstraction": "centered local disappearance is not object disappearance under translation",
+      "source_to_target_mapping": "camera frame -> centered expanding ball; moving object -> coherent packet; tracking/recentering -> concentration-center control",
+      "shared_constraints": ["observation window grows more slowly than an allowed center trajectory"],
+      "disanalogies": ["no conservation law or PDE authority transfers from the everyday analogy"],
+      "transferable_principle": "separate disappearance from escape before using local smallness as rigidity evidence",
+      "validation_obligation": "test exact Seregin-class scaling and source-inherited center/tail information"
+    }
+  ],
+  "explicit_disanalogies": [
+    "A translated bump is not an Euler or Navier-Stokes counterexample.",
+    "The pending XM005 moving-core calibration is proposal-only and cannot supply theorem authority.",
+    "The pending PR72 F=1 cutoff result is retrospective proposal-only and cannot be treated as canonical main evidence.",
+    "Uniform absolute tail tightness is sufficient for one handoff but may be stronger than necessary; signed telescoping or recentered compactness remain alternative bridges.",
+    "Local pressure convergence does not automatically define a global pressure tail because pressure normalization and nonlocal harmonic pieces must be fixed.",
+    "Excluding this Type-II source scenario would not solve all Type-II blowup scenarios or the Clay root."
+  ],
+  "counterexample_first_falsifier": "Before proposing an Euler Liouville theorem, test the exact topological implication 'fixed-cylinder convergence + uniform scale-critical local bounds -> inherited global tail/no-incoming-energy condition' against translating compactly supported divergence-free packets. If it fails, localize the next obligation to a uniform tail/recentering certificate and do not optimize further local estimates.",
+  "expert_cell_roles": ["Type-II/local-energy PDE lead", "concentration-compactness and quantifier-order lead", "pressure/far-field localization lead", "Euler rigidity/unique-continuation lead", "vorticity/geometric-depletion lead", "adversarial construction lead", "formal assurance/novelty lead"],
+  "framework_binding": {
+    "rakl_current_main": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "rakl_method_version": "CANNOT_MEASURE: current main has no canonical RAKL_VERSION.json",
+    "rakl_v3_authority_hardening": "PR121 merged at current main; internal conformance only, not independent review",
+    "rakl_math_base": "50c703f3f0c518bba1b48fb17e51b03d53ed02c3",
+    "current_main_read_directly": true,
+    "v3_surfaces_inspected": ["AGENTS.md", "src/rakl/method_specs.py", "current PR121 authority-hardening merge metadata"]
+  },
+  "source_anchors": [
+    "Clay/Fefferman canonical statement mirrored at research/real_math/millennium/navier_stokes/00_problem_contract/canonical_statement.md",
+    "Gregory Seregin, arXiv:2606.29468v1, especially fixed-Q(a) convergence in the proof of Theorem 2.1 and Theorem 3.1 equations (3.5)-(3.8)",
+    "SzeChunYiu/RAKL_math issue #65",
+    "pending PR72 exact head 33b01df7ca7dd2d3a23ddf7cb92813efeeddeb87 (proposal-only retrospective F=1 cutoff calibration)",
+    "pending PR71 exact head 260f971b72a1caa9d186fa00e29b0878b5b6a01c (proposal-only moving-core hostile calibration)",
+    "research/real_math/millennium/cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json@blob:12a77d4e9cf3b5704432ec4d9b6c84c5ad7fd967"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED_WITH_EXPLICIT_DISANALOGIES",
+  "candidate_generation_allowed": false,
+  "first_candidate_at": null,
+  "frozen_at": "2026-08-11T12:08:00+00:00",
+  "packet_hash": "sha256:46107a3521175794ea4dadece4101723a57bf6af8dc9e8680a3c47d31c70902e"
+}
