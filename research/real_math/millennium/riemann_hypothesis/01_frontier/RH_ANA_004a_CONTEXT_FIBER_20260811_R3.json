@@ -1,61 +1,20 @@
 {
-  "schema": "RAKL-v3-shadow-MathContextFiber",
-  "cycle_id": "RH-ANA-004A-PRIME-ERROR-KERNEL-20260811-R3",
-  "atom_id": "RH-ANA-004a",
-  "parent_atom_id": "RH-ANA-004",
-  "reconciles_prior_atom": "RH-ANA-003b",
-  "problem_signature": ["Riemann Hypothesis", "Li coefficients", "Coffey S2=S_gamma+S_Lambda", "von Mangoldt/prime-error representation", "Laguerre transform", "truncated explicit formula", "all-index uniformity", "root-equivalence strength audit"],
-  "root_contract": {
-    "statement": "Every nontrivial zero rho of zeta(s) has Re(rho)=1/2.",
-    "status": "OPEN_NO_SOLUTION_CERTIFICATE",
-    "success_contract_path": "research/real_math/millennium/riemann_hypothesis/00_problem_contract/success_contract.yaml"
-  },
-  "active_atom": {
-    "question": "After reconciling RH-ANA-004 from PR #118 with RH-ANA-003b from PR #147, determine whether Coffey's remaining S_Lambda prime component admits a cancellation-preserving prime-error/Laguerre representation, and test whether the tempting global polynomial-bound child is already root-sufficient. If so, re-atomize to the smallest finite/truncated uniformity discriminator.",
-    "residual_before": "RH-ANA-004 + RH-ANA-003b: isolate an exceptional-zero-sensitive, cancellation-preserving prime/archimedean sub-obligation genuinely weaker than RH.",
-    "candidate_generation": "BLOCKED; representation diagnostic and root-strength falsification only."
-  },
-  "actual_fibre_consulted": [
-    "RAKL@bb30835f41dd5e02a427c3e53be6914732d66fd2/RAKL_VERSION.json",
-    "RAKL@bb30835f41dd5e02a427c3e53be6914732d66fd2/docs/RAKL_V3_IMPLEMENTATION_MANIFEST.md",
-    "RAKL@bb30835f41dd5e02a427c3e53be6914732d66fd2/src/rakl/method_specs.py",
-    "RAKL@d830c56c146b6f44174e49612b8a8119c3ae2ec2 current-work-coverage implementation/schema",
-    "RAKL_math main@b36058f8a90efe7d377df45feed15d4ec91e042c root contract files",
-    "RAKL_math#80 RH-ANA-003 incomplete-Li height-scale route history",
-    "RAKL_math#118 RH-ANA-003 density-exception audit and RH-ANA-004 child",
-    "RAKL_math#147 RH-ANA-003/003a cancellation-preservation cycle and RH-ANA-003b child",
-    "RAKL_math#160 XM011 current-work coverage diagnosis",
-    "07_memory/RH_ANA_004a_CURRENT_WORK_COVERAGE_20260811_R3.json",
-    "Coffey arXiv:0706.0343v2, Proposition 1/2, equations (12),(14)-(17), and discussion of S_Lambda/S_2Lambda",
-    "Coffey arXiv:math-ph/0505052v1, Theorem 1 exact Li/eta representation",
-    "Johnston--Cully-Hugill arXiv:2402.04272, version dated 2026-03-22, Theorem 1.2 truncated Riemann-von Mangoldt formula",
-    "Dunster--Gil--Segura arXiv:1705.01190, uniform Laguerre asymptotics"
-  ],
-  "equivalent_or_root_sufficient_analogues": [
-    {"id":"A-RH-LI","statement":"lambda_n >= 0 for every n is RH-equivalent.","use":"root binding only","disanalogy":"equivalence cannot be used as a weaker child lemma."},
-    {"id":"A-RH-SLAMBDA-GROWTH","statement":"Coffey states RH is equivalent to S_Lambda having linear/sublinear growth and gives polynomial growth of the oscillatory S_2Lambda as a sufficient condition for RH.","use":"root-strength audit of the proposed child success contract","disanalogy":"source statements are sufficient/equivalent endpoints, not unconditional input."}
-  ],
-  "near_solved_analogues": [
-    {"id":"A-RH-INCOMPLETE-LI-HEIGHT","source":"RAKL_math#80","transfer_assumption":"finite-height/index windows can calibrate truncation scale","difference_witness":"does not give all-index uniformity and must not be promoted to root."},
-    {"id":"A-LAGUERRE-UNIFORM-ASYMPTOTICS","source":"arXiv:1705.01190","transfer_assumption":"uniform large-n Laguerre asymptotics may control the special-function kernel on explicit x-regimes","difference_witness":"uniform polynomial asymptotics do not control the arithmetically weighted infinite prime sum or preserve cancellation by themselves."},
-    {"id":"A-TRUNCATED-RVM","source":"arXiv:2402.04272","transfer_assumption":"a current explicit truncated formula with stated x,T range/error can be used as a finite-scale source family","difference_witness":"its pointwise x-error must be transformed through the n-dependent Laguerre kernel; the source supplies no such all-n transformed bound."}
-  ],
-  "structural_analogy": {
-    "source": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
-    "shared_structure": "a valid local/truncated certificate must be transported through a root-facing transform whose stability is not automatic",
-    "difference_witness": "no Yang-Mills/spectral mathematics transfers; only the proposal-only bridge-audit operation transfers to an arithmetic Laguerre transform."
-  },
-  "expert_cell": [
-    {"role":"analytic-number-theory lead","background":"zeta explicit formulas, PNT error, Abel summation","task":"source-bind S_Lambda and audit boundary terms/convergence."},
-    {"role":"Li/positivity specialist","background":"Li coefficients, Bombieri-Lagarias/Weil criteria","task":"audit whether a proposed S_Lambda/S_2Lambda growth contract is already RH-sufficient."},
-    {"role":"special-functions lead","background":"Laguerre identities, Laplace transforms, uniform asymptotics","task":"verify derivative/Laplace kernels and block fixed-x Fejer-to-infinite-sum gluing."},
-    {"role":"explicit-formula/zero-density lead","background":"truncated Riemann-von Mangoldt, zero-density/zero-free methods","task":"bind current truncation error and separate single-zero calibration from a full zero-sum theorem."},
-    {"role":"adversarial proof auditor","background":"uniform asymptotics, counterexample-first falsification","task":"check signs, floor(x)-psi(x), boundary limits, and the cheapest root-strength falsifier."},
-    {"role":"RAKL v3 provenance/metrology lead","background":"TaskEpisode, CurrentWorkCoverageReceipt, saturation and promotion gates","task":"reconcile live work, keep episode/diagnosis/obstruction/lesson distinct, meter the cycle and block authority escalation."}
-  ],
-  "counterfactual_pre_current_work_pre_memory_preference": "Continue RH-ANA-003b directly by searching for the strongest unconditional global bound on Coffey's S_Lambda.",
-  "search_policy": "CURRENT_WORK_BOUND first; reconcile #118 RH-ANA-004 with #147 RH-ANA-003b; root-strength-audit the global-bound success contract before expanding bound literature; then derive only source-bound representation diagnostics and rotate to finite/truncated transform uniformity if the global contract is root-scale.",
-  "proposal_authority": "SHADOW_ONLY",
-  "fibre_snapshot_hash": "sha256:dc66937ea0362e2e36140d05cb3051038216dd96a0e491238c4234e260ff8b71",
-  "hash_scope": "canonical JSON of this record with fibre_snapshot_hash empty"
+  "schema":"RAKL-v3-shadow-MathContextFiber",
+  "cycle_id":"RH-ANA-004A-PRIME-ERROR-KERNEL-20260811-R3",
+  "atom_id":"RH-ANA-004a",
+  "parent_atom_id":"RH-ANA-004",
+  "reconciles_prior_atom":"RH-ANA-003b",
+  "problem_signature":["Riemann Hypothesis","Li coefficients","Coffey S2=S_gamma+S_Lambda","von Mangoldt/prime-error representation","Laguerre transform","truncated explicit formula","all-index uniformity","root-equivalence strength audit"],
+  "root_contract":{"statement":"Every nontrivial zero rho of zeta(s) has Re(rho)=1/2.","status":"OPEN_NO_SOLUTION_CERTIFICATE","success_contract_path":"research/real_math/millennium/riemann_hypothesis/00_problem_contract/success_contract.yaml"},
+  "active_atom":{"question":"After reconciling RH-ANA-004 from PR #118 with RH-ANA-003b from PR #147, determine whether Coffey's remaining S_Lambda prime component admits a cancellation-preserving prime-error/Laguerre representation, and test whether a tempting global polynomial-bound child is already root-sufficient. If so, re-atomize to the smallest finite/truncated uniformity discriminator.","residual_before":"RH-ANA-004 + RH-ANA-003b: isolate an exceptional-zero-sensitive, cancellation-preserving prime/archimedean sub-obligation genuinely weaker than RH.","candidate_generation":"BLOCKED; representation diagnostic and root-strength falsification only."},
+  "actual_fibre_consulted":["RAKL@bb30835f41dd5e02a427c3e53be6914732d66fd2/RAKL_VERSION.json","RAKL@bb30835f41dd5e02a427c3e53be6914732d66fd2/docs/RAKL_V3_IMPLEMENTATION_MANIFEST.md","RAKL@bb30835f41dd5e02a427c3e53be6914732d66fd2/src/rakl/method_specs.py","RAKL@d830c56c146b6f44174e49612b8a8119c3ae2ec2 current-work-coverage implementation/schema","RAKL_math main@b36058f8a90efe7d377df45feed15d4ec91e042c root contract files","RAKL_math#80","RAKL_math#118","RAKL_math#147","RAKL_math#160","07_memory/RH_ANA_004a_CURRENT_WORK_COVERAGE_20260811_R3.json","Coffey arXiv:0706.0343v2 Proposition 1/2 and discussion","Coffey arXiv:math-ph/0505052v1 Theorem 1","Johnston--Cully-Hugill arXiv:2402.04272 version dated 2026-03-22 Theorem 1.2","Dunster--Gil--Segura arXiv:1705.01190"],
+  "analogues":[{"id":"A-RH-LI","type":"equivalent","use":"root binding only","disanalogy":"equivalence supplies no weaker child lemma"},{"id":"A-RH-SLAMBDA-GROWTH","type":"root-sufficient/equivalent endpoint","use":"child-contract strength audit","disanalogy":"not unconditional input"},{"id":"A-RH-INCOMPLETE-LI-HEIGHT","type":"near-solved","source":"RAKL_math#80","difference_witness":"finite height/index does not give all-index uniformity"},{"id":"A-LAGUERRE-UNIFORM-ASYMPTOTICS","type":"near-solved","source":"arXiv:1705.01190","difference_witness":"kernel asymptotics alone do not control the arithmetic infinite sum or its cancellation"},{"id":"A-TRUNCATED-RVM","type":"near-solved","source":"arXiv:2402.04272","difference_witness":"pointwise x,T error still needs n-dependent Laguerre transport"}],
+  "structural_analogy":{"source":"T-XM-ROOT-BRIDGE-STABILITY-AUDIT","shared_structure":"local/truncated control must survive a nontrivial root-facing transform","difference_witness":"only the bridge-audit operation transfers; no source-domain mathematics transfers"},
+  "expert_cell":[{"role":"analytic-number-theory lead","background":"zeta explicit formulas, PNT error, Abel summation","task":"source-bind S_Lambda and audit boundaries/convergence"},{"role":"Li/positivity specialist","background":"Li/Bombieri-Lagarias/Weil criteria","task":"audit root-strength of S_Lambda/S_2Lambda growth contracts"},{"role":"special-functions lead","background":"Laguerre identities, Laplace transforms, uniform asymptotics","task":"verify kernels and block fixed-x-to-infinite-sum gluing"},{"role":"explicit-formula/zero-density lead","background":"truncated Riemann-von Mangoldt and density/free methods","task":"bind current truncation error and separate single-zero calibration from full zero-sum theorem"},{"role":"adversarial proof auditor","background":"uniform asymptotics and counterexample-first falsification","task":"check signs, floor(x)-psi(x), boundaries and root-strength falsifier"},{"role":"RAKL v3 provenance/metrology lead","background":"TaskEpisode, CurrentWorkCoverageReceipt, saturation and promotion gates","task":"reconcile live work, meter the cycle and block authority escalation"}],
+  "counterfactual_pre_current_work_pre_memory_preference":"Continue RH-ANA-003b directly by searching for the strongest unconditional global bound on Coffey's S_Lambda.",
+  "search_policy":"CURRENT_WORK_BOUND first; reconcile #118 RH-ANA-004 with #147 RH-ANA-003b; root-strength-audit the global-bound success contract before expanding bound literature; preserve signed cancellation; rotate to finite/truncated transform uniformity if the global contract is root-scale.",
+  "snapshot_payload":{"atom_id":"RH-ANA-004a","parent_atom_id":"RH-ANA-004","reconciles_prior_atom":"RH-ANA-003b","root_status":"OPEN_NO_SOLUTION_CERTIFICATE","consulted_work_ids":["issue:3","issue:10","pr:40","pr:53","pr:80","pr:95","pr:118","pr:125","pr:147","pr:151","pr:160"],"consulted_primary_sources":["arXiv:0706.0343v2","arXiv:math-ph/0505052v1","arXiv:2402.04272@2026-03-22","arXiv:1705.01190"],"selected_experience_ids":["EP-RH-ANA-003-DENSITY-EXCEPTION-20260811","EP-RH-ANA-003a-MAGNITUDE-TRANSPORT-20260811-R2","EP-XM011-CURRENT-WORK-COVERAGE-20260811-R7","L-RH-ANA-003a-PRESERVE-SIGNED-TRANSFORM-BEFORE-MAGNITUDE-BOUND","T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],"expert_roles":["analytic-number-theory lead","Li/positivity specialist","special-functions lead","explicit-formula/zero-density lead","adversarial proof auditor","RAKL v3 provenance/metrology lead"],"search_policy_id":"CURRENT_WORK_BOUND__ROOT_STRENGTH_AUDIT__SIGNED_TRANSFORM__TRUNCATION_FIRST"},
+  "fibre_snapshot_hash":"sha256:0a01b3e5c91c98896ec9ec5c336be9f097d15cdcf1ff7a0e72512dc7ecba1dab",
+  "hash_scope":"canonical JSON of snapshot_payload only",
+  "proposal_authority":"SHADOW_ONLY"
 }
