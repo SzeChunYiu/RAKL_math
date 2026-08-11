@@ -1,0 +1,49 @@
+{
+  "target_atom_id": "HM1b",
+  "target_context_hash": "sha256:d5454334c5e5d7cf2e5c6d1c6a378a0a168a992344019d9c3310089d69c500a3",
+  "tool_inventory_snapshot_hash": "sha256:b816230d030e489d1605d14b26bcdb6338c818931ab3bf71937d4485efbd3d5f",
+  "failure_lattice_snapshot_hash": "sha256:122f5adb1cbafccb7b43f958b02821dbdcab810e1b7535e51539e6a050d1fbbd",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "algebraic correspondence generator closure",
+    "K3/hyperkahler Hodge-isometry algebraization",
+    "explicit moduli/universal-kernel source construction",
+    "Prym/Jacobian geometric cycle generation",
+    "motivated/absolute-Hodge algebraization audit",
+    "source transfer to abelian varieties with source-Hodge closure audit",
+    "Hodge-empty complementary substructure",
+    "source-bearing filtration with generator coverage"
+  ],
+  "relevant_tool_ids": ["T-HODGE-SOURCE-BEARING-DECOMPOSITION-SCREEN"],
+  "relevant_failure_ids": ["F-HM1a-OPEN-ROOT-LIKE-PIECE"],
+  "selected_tool_ids": ["T-HODGE-SOURCE-BEARING-DECOMPOSITION-SCREEN"],
+  "tool_applicability_notes": [
+    "T-HODGE-SOURCE-BEARING-DECOMPOSITION-SCREEN applies directly: HM1b introduces source families/correspondences and must expose source classes, maps, discharge reasons, assembly and alpha reconstruction.",
+    "DifferenceWitness from HM1a to HM1b: HM1a decomposed filtered/source pieces; HM1b adds an algebraic-generator-closure coordinate. The local screen remains applicable because target coverage and source algebraicity are exactly the critical discharge conditions.",
+    "The current cross-Millennium XM001 root-bridge tool/failure were inspected as global memory, but no additional target-specific mathematical transfer beyond the already-internalized bridge-audit warning was selected for this atom."
+  ],
+  "failure_reuse_notes": [
+    "F-HM1a-OPEN-ROOT-LIKE-PIECE is the primary local warning: an exact span/decomposition is not epistemic contraction if a critical generator/source/coverage statement is root-equivalent.",
+    "Cross-Millennium XM001 was inspected only as an abstract bridge warning; its Yang-Mills scaling mechanism is not imported into HM1b.",
+    "A future HM1b failure should be recorded separately only after a concrete generator-coverage route is tested."
+  ],
+  "unresolved_warnings": [
+    "algebraicity of restricted Hodge isometries is far weaker than algebraicity of arbitrary Hodge classes",
+    "an algebraic correspondence to a source variety may relocate rather than solve the source Hodge problem",
+    "motivated or absolute-Hodge generators can silently enlarge the source category",
+    "coverage of a selected Hodge subspace does not imply coverage of Hdg^p(X)",
+    "a claimed Hodge-empty complement requires an exact rational Hodge proof, not genericity heuristics",
+    "the current RAKL_math submodule pin 7853ec0 predates current RAKL/main 55d4cb0 by the framework/application split commit; current RAKL/main was read and no mathematical gate weakening is permitted"
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/hodge_conjecture/08_reviews/HM1a_SOURCE_BEARING_DECOMPOSITION_CALIBRATION_20260811.md",
+    "research/real_math/millennium/hodge_conjecture/07_memory/HM1a_RESEARCH_TOOL_DELTA_20260811.json",
+    "research/real_math/millennium/hodge_conjecture/07_memory/HM1a_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "Nikolay Buskin, arXiv:1510.02852",
+    "Eyal Markman, arXiv:2204.00516",
+    "Deepam Patel and Yilong Zhang, arXiv:2506.13729",
+    "Ljudmila Kamenova and Abhinav Kumar, arXiv:2607.09622"
+  ],
+  "artifact_hash": "sha256:73fb6c619975e0ba0a9f60231daa6498b514b4289d0d57a8f1186fd82f61ce70"
+}
