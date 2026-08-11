@@ -1,0 +1,200 @@
+{
+  "record_type": "RAKL_CYCLE_METRICS",
+  "schema_version": "rakl-cycle-metrics-v3-proposal-shadow-r1",
+  "cycle_id": "NS-B1a3b1b1-C001-R1-20260811",
+  "authority": "PROPOSAL_SHADOW_METROLOGY_ONLY",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "rakl_core_version": "3.0.0-alpha3",
+    "method_version": "1.3",
+    "method_spec": "RAKL_METHOD.md",
+    "method_spec_sha256": "4449722996c0596291bc78bb35097d10d6e2bc9369d4eecc4c041726f2de3104",
+    "git_sha": "f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
+    "current_main_verified_before_math": true
+  },
+  "application_state": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "canonical_main_observed_at_cycle_start": "47f56df0492339097a651d40b6c7289c4e2d4034",
+    "stacked_parent_pr": 149,
+    "stacked_parent_sha": "e0bcf0fd99a5587d303a9fd407f89d5505b1beb4",
+    "cycle_branch": "rakl/ns-b1a3b1b1-finite-center-lift",
+    "cycle_evidence_head_before_metrics_receipt": "102c06438971c31aaba39c45071798d321c1d766",
+    "exact_post_receipt_branch_head_inside_self_receipt": "CANNOT_MEASURE",
+    "post_receipt_head_reason": "The commit containing this receipt changes the branch head, so an exact self-contained final head would be self-referential. The exact PR/branch head is observable externally after receipt commit."
+  },
+  "state_fingerprints": {
+    "pre_state_fingerprint": "sha256:ffc63197b7ca62ded4a52cc937d372ec328e1bc8f875bd3c9887092a124a6620",
+    "pre_state_definition": "canonical JSON over framework SHA, canonical main, stacked parent, atom, issue and selected prior-memory IDs",
+    "post_evidence_state_fingerprint_before_metrics_receipt": "sha256:53111c29a108075be68db88a89db8af8f273b70251354e68203930d4a09a32b9",
+    "post_state_definition": "canonical JSON over framework/main/stacked parent, exact evidence head before metrics receipt, atom and retained semantic IDs",
+    "whole_repository_content_fingerprint": "CANNOT_MEASURE",
+    "whole_repository_content_fingerprint_reason": "No complete repository checkout/materialized tree was available in the automation runtime; commit SHAs and bounded state fingerprints are used instead."
+  },
+  "atom": {
+    "id": "NS-B1a3b1b1",
+    "control_issue": "RAKL_math#153",
+    "problem_signature": "finite-center lift of Grujic-v2 localized logarithmic commutator/De Giorgi consumer",
+    "fibre_snapshot_hash": "sha256:a9825cb4c0cef189694a6257e4366fb4959f3d5cba3b9200afa802b20c569f4a"
+  },
+  "canonical_process_surfaces_invoked": [
+    "problem_ingestion",
+    "structured_atomization",
+    "context_freeze",
+    "near_solved_search",
+    "transfer_check",
+    "analogy_search",
+    "candidate_generation",
+    "falsification",
+    "scoped_proof_validation",
+    "failure_memory_search",
+    "context_lift_review",
+    "ordered_gate_planning",
+    "counterexample_harnessing",
+    "retrieval_orchestration",
+    "trace_capture"
+  ],
+  "memory_retrieval": {
+    "retrieved_total": 9,
+    "retrieved_episode_ids": [
+      "EP-NS-B1a3b1b-C001-R1-20260811",
+      "PR131/EP-NS-B1a3b1a-C001-R1-20260811"
+    ],
+    "retrieved_failure_ids": [
+      "F-NS-B1a3b1b-AMPLITUDE-DOES-NOT-SELECT-ONE-CORE-MORPHOLOGY",
+      "F-NS-B1a3-PROFILE-LEAKAGE",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION",
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER"
+    ],
+    "retrieved_obstruction_ids": [
+      "O-NS-B1a3b1b-ONE-CENTER-MORPHOLOGY-PRODUCER"
+    ],
+    "retrieved_tool_ids": [
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "retrieved_motif_ids": [],
+    "selected_ids": [
+      "EP-NS-B1a3b1b-C001-R1-20260811",
+      "F-NS-B1a3b1b-AMPLITUDE-DOES-NOT-SELECT-ONE-CORE-MORPHOLOGY",
+      "O-NS-B1a3b1b-ONE-CENTER-MORPHOLOGY-PRODUCER",
+      "F-NS-B1a3-PROFILE-LEAKAGE",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "selected_count": 6,
+    "rejected_ids": [
+      "PR131/EP-NS-B1a3b1a-C001-R1-20260811",
+      "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION",
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER"
+    ],
+    "rejected_count": 3,
+    "missed_relevant_memory": "CANNOT_MEASURE",
+    "missed_reason": "No exhaustive relevance-labelled retrieval universe exists for this atom."
+  },
+  "decision_policy": {
+    "policy": "experience-conditioned route rotation + source-signature type check + context-lift review + counterexample-first multiplicity audit",
+    "chosen_action": "test finite-center preservation of the restricted Lorentz consumer before attempting a PDE unique-core theorem",
+    "rakl_changed_action_relative_to_frozen_pre_memory_preference": "CANNOT_MEASURE",
+    "counterfactual_reason": "No prospective pre-memory/pre-gate action ranking was frozen before bounded scoping. Prior experience clearly affected routing priority, but causal action-change attribution is not observable."
+  },
+  "outcome": "PARTIAL_SUCCESS_SCOPED_CONTEXT_LIFT",
+  "residual_before": [
+    "selected consumer appeared to require an equation-specific unique one-center morphology producer",
+    "global weak-L3/2 vorticity producer open",
+    "global log-BMO direction producer open",
+    "ancient/pre-singularity and far-field gluing open",
+    "Type-II open"
+  ],
+  "residual_after": [
+    "unique-center requirement narrowed at equations (23)-(25) to a bounded-multiplicity O(lambda^-1/2) cover producer",
+    "finite-I -> bounded-multiplicity cover remains unproved",
+    "global weak-L3/2 vorticity producer remains unproved",
+    "global log-BMO direction producer remains unproved",
+    "ancient/pre-singularity and far-field gluing remain open",
+    "Type-II remains open"
+  ],
+  "failure_categories": {
+    "local_mathematical": "NONE_FOR_SCOPED_LEMMA",
+    "retrieval": "NONE_OBSERVED",
+    "decomposition": "NONE_OBSERVED; exact downstream QoI isolated",
+    "representation": "PREVIOUS_ONE_CENTER_REPRESENTATION_OVERCONSTRAINED_FOR_SCOPED_QOI_AND_NOW_RELAXED",
+    "verification": "SCOPED_ANALYTIC_VERIFICATION_COMPLETE; ROOT VERIFICATION NOT APPLICABLE",
+    "tooling": "NONE_OBSERVED",
+    "source": "OPEN_PRODUCER_SOURCE_GAP",
+    "local_to_global_gluing": "OPEN_PRODUCER_STATE_SPACE_FAR_FIELD_GLUE",
+    "meta_policy": "NONE_OBSERVED"
+  },
+  "retained_semantic_novelty": {
+    "KNOWLEDGE": 1,
+    "OPERATOR": 1,
+    "EXPERIENCE_PATTERN": 0,
+    "OBSTRUCTION": 1,
+    "RELATION": 1,
+    "PATH": 1,
+    "META_METHOD": 0,
+    "counting_note": "Counts refer only to retained locally verified semantic changes in the proposal/shadow case-study state. Raw files, commits, issues, prose, the proposed lesson and unverified motif language are not counted as learning. EXPERIENCE_PATTERN remains zero because one successful cycle does not establish a repeated reusable pattern."
+  },
+  "saturation": {
+    "KNOWLEDGE": "REOPENED",
+    "OPERATOR": "REOPENED",
+    "EXPERIENCE_PATTERN": "REOPENED_FOR_OBSERVATION_BUT_NO_RETAINED_PATTERN_COUNT",
+    "OBSTRUCTION": "REOPENED_AND_NARROWED",
+    "RELATION": "REOPENED",
+    "PATH": "REOPENED",
+    "META_METHOD": "FLATTENED"
+  },
+  "new_ids": {
+    "episode_ids": ["EP-NS-B1a3b1b1-C001-R1-20260811"],
+    "diagnosis_ids": ["D-NS-B1a3b1b1-ONE-CENTER-IS-STRONGER-THAN-LOCAL-CONSUMER-NEEDS"],
+    "lesson_ids": ["L-NS-B1a3b1b1-RELAX-CONSUMER-BEFORE-PROVING-UNIQUE-CORE"],
+    "failure_ids": [],
+    "tool_ids": [],
+    "context_lift_ids": ["CL-NS-B1a3b1b1-GRUJIC-FINITE-CENTER-R1"],
+    "obstruction_ids": ["O-NS-B1a3b1b1-BOUNDED-MULTIPLICITY-COVER-PRODUCER"],
+    "motif_ids": [],
+    "successful_reuse_ids": [
+      "EP-NS-B1a3b1b-C001-R1-20260811",
+      "O-NS-B1a3b1b-ONE-CENTER-MORPHOLOGY-PRODUCER",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ]
+  },
+  "novelty_class": "REPRESENTATION_NOVEL_SHADOW",
+  "resource_proxies": {
+    "model_tokens": "CANNOT_MEASURE",
+    "model_tokens_reason": "Automation runtime exposes no authoritative model-token counter to the agent.",
+    "context_tokens": "CANNOT_MEASURE",
+    "context_tokens_reason": "Automation runtime exposes no authoritative context-token counter to the agent.",
+    "retrieval_call_count": "CANNOT_MEASURE",
+    "retrieval_call_count_reason": "No authoritative aggregate call counter is exposed across connector/web retrieval and context compaction.",
+    "tool_call_count": "CANNOT_MEASURE",
+    "tool_call_count_reason": "No authoritative aggregate tool-call counter is exposed across the entire consequential cycle.",
+    "wall_time_seconds": "CANNOT_MEASURE",
+    "wall_time_reason": "The automation runtime does not expose a trustworthy end-to-end cycle timer to the research record.",
+    "elapsed_run_proxy": {"atomic_cycles": 1, "cost_effort_proxy": 1.0, "meaning": "one bounded atomic research cycle; not time or token usage"}
+  },
+  "gate_provenance_ci": {
+    "root_gate": "NOT_ELIGIBLE_FOR_PROMOTION",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "exact_statement_binding": "SCOPED_CHILD_ONLY",
+    "closed_root_proof_dag": false,
+    "dependency_axiom_verifier_root_audits": false,
+    "isolated_recheck": false,
+    "bounded_root_novelty_search": false,
+    "independent_mathematical_reviews": "0/3",
+    "same_context_expert_cell": "6 roles; 0 independent review credit",
+    "framework_provenance": "CURRENT RAKL main f224d91d9fbd2844a89921ca4a30b77a7954ecd2 read before mathematical work",
+    "application_provenance": "stacked on PR #149 head e0bcf0fd99a5587d303a9fd407f89d5505b1beb4 while canonical main remained 47f56df0492339097a651d40b6c7289c4e2d4034",
+    "primary_source_provenance": [
+      "Grujic arXiv:2607.08866v2 current HTML, Definition 2.1, Theorem 4.1, equations (23)-(25)",
+      "Albritton-Barker arXiv:1811.00502v2",
+      "Barker arXiv:2111.14776v2 with DifferenceWitness"
+    ],
+    "ci_status_at_receipt_write": "NOT_YET_TRIGGERED_FOR_FINAL_RECEIPT_COMMIT",
+    "ci_authority": "artifact assurance only; computation/CI is not proof"
+  },
+  "repeated_process_failure_links": [
+    "F-NS-B1a3-PROFILE-LEAKAGE",
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH"
+  ],
+  "framework_improvement_hypothesis": "No framework defect opened. Benchmark-only hypothesis: typed context-lift telemetry may benefit from a canonical quantitative loss_function field; current proposal/shadow records are sufficient for this cycle without gate changes."
+}
