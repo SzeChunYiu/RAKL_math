@@ -1,0 +1,64 @@
+schema_version: navier-stokes-dag-delta-v1-proposal-shadow
+atom_id: NS-B1a3b
+parent_atom_id: NS-B1a3
+cycle_id: NS-B1a3b-C001
+outcome: SOURCE_DERIVED_TYPE_I_GEOMETRIC_CLASSIFICATION
+root_status: OPEN_NO_SOLUTION_CERTIFICATE
+root_authority: NONE
+
+retained_edges:
+  - id: GM-COR2.6-CRITICAL-DIRECTION
+    status: SOURCE_PROVED
+    producer: whole-space Type-I mild solution on R^3 x (-1,0)
+    condition: for some fixed d>0, integral_{-1}^0 ||grad zeta||_{L-infinity(Omega_d(t))}^2 dt < infinity
+    conclusion: no blow-up at t=0
+    scale_status: SCALE_INVARIANT_WITH_THRESHOLD_COVARIANCE
+    source: Giga-Miura Corollary 2.6 and Remark 2.8
+  - id: NS-B1a3b-C001-CONTRAPOSITIVE
+    status: EXACT_SOURCE_DERIVED_RELATION
+    premise: hypothetical whole-space Type-I mild blow-up at t=0
+    conclusion: for every fixed d>0, integral_{-1}^0 ||grad zeta||_{L-infinity(Omega_d(t))}^2 dt = infinity
+  - id: GM-THM1.1-CONTINUOUS-ALIGNMENT
+    status: SOURCE_PROVED
+    premise: Type-I mild plus one uniform spatial modulus for zeta on Omega_d(t), uniformly in t, for some d>0
+    conclusion: no blow-up at t=0
+  - id: NS-B1a3b-C001-CONTINUITY-CONTRAPOSITIVE
+    status: EXACT_SOURCE_DERIVED_RELATION
+    premise: hypothetical Type-I mild blow-up
+    conclusion: for every fixed d>0 no uniform-in-time spatial modulus of zeta is available on Omega_d(t)
+
+exact_limit_interface:
+  normalization: M_k=||u(t_k)||_infinity; lambda_k=M_k^{-1}; u_k=lambda_k*u(x_k+lambda_k*x,t_k+lambda_k^2*t)
+  convergence: local-uniform u_k and omega_k after parabolic derivative bounds; mildness via weak-star convergence of u_k tensor u_k in L-infinity
+  vorticity_direction: passed only on compact subsets of {omega != 0}
+  threshold_transport: positive rescaled vorticity lower bound eventually implies original |omega|>d because omega_k=lambda_k^2 omega
+  nontriviality: Giga-Miura Proposition 2.1
+  rigidity: constant direction -> exact 2D reduction -> bounded ancient 2D Liouville
+  pressure: bound through whole-space mild formulation; no local pressure decomposition consumed
+  far_field: no finite-energy/decay assumption consumed
+  backward_uniqueness: NOT_USED
+  stationary_self_similar_equation: NOT_USED
+
+inheritance_status:
+  finite_I_to_GM_continuous_alignment: OPEN_UNPROVED
+  finite_I_to_finite_critical_grad_zeta_integral: OPEN_UNPROVED
+  obstruction_id: O-NS-B1a3b-DIRECTIONAL-INHERITANCE-INTERFACE
+  obstruction_authority: PROPOSAL_ONLY_NOT_ROOT_CAUSE
+
+new_child:
+  id: NS-B1a3b1
+  status: CONTEXT_REQUIRED_BEFORE_CANDIDATE
+  question: Determine whether registered finite-I Type-I dynamics enforce any quantitative deficit below the Giga-Miura directional-critical divergence class, or else source-bound/classify compatible self-similar-scale angular cascades without assuming a singular trajectory exists.
+
+scoped_experience:
+  profile_leakage: NOT_LOAD_BEARING
+  uncontrolled_far_field: BYPASSED_WITH_EXACT_SOURCE_SCOPE
+  interface_mismatch: REOPENED_AT_FINITE_I_TO_DIRECTION_GEOMETRY
+  unique_continuation_failure: NOT_LOAD_BEARING
+  equation_change_mismatch: AVOIDED_BY_EXACT_DIMENSION_REDUCTION
+
+nonpromotion:
+  - source-derived classification is not Type-I exclusion
+  - Type-I exclusion would still not settle Type-II
+  - same-context review is not independent
+  - no Clay root certificate is created
