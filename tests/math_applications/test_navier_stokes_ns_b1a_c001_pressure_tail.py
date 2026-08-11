@@ -36,6 +36,9 @@ VALIDATION = BASE / "05_oracles/NS_B1a_C001_RETROSPECTIVE_VALIDATION_20260811.js
 FINAL_VALIDATION = (
     BASE / "05_oracles/NS_B1a_C001_FINAL_HEAD_INTEGRATION_VALIDATION_20260811.json"
 )
+POSTMERGE_VALIDATION = (
+    BASE / "05_oracles/NS_B1a_C001_PR51_POSTMERGE_INVARIANCE_20260811.json"
+)
 FRAMEWORK = ROOT / "framework/RAKL"
 RETROSPECTIVE_AUTHORITY = (
     "RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / "
@@ -89,7 +92,9 @@ def _normalized_repository(value: str) -> str:
     return value
 
 
-def _final_provenance_errors(receipt: dict) -> tuple[str, ...]:
+def _final_provenance_errors(
+    receipt: dict, *, live_subject_commit: str | None = None
+) -> tuple[str, ...]:
     errors: list[str] = []
     origins = {
         _normalized_repository(value)
@@ -185,13 +190,24 @@ def _final_provenance_errors(receipt: dict) -> tuple[str, ...]:
 
     for role, subject in receipt["live_subjects"].items():
         path = ROOT / subject["path"]
-        if not path.is_file():
-            errors.append(f"missing live subject: {role}")
-            continue
-        if _raw_sha256(path) != subject["raw_sha256"]:
+        if live_subject_commit is None:
+            if not path.is_file():
+                errors.append(f"missing live subject: {role}")
+                continue
+            raw_bytes = path.read_bytes()
+        else:
+            source_object = f'{live_subject_commit}:{subject["path"]}'
+            probe = _git_bytes("cat-file", "-e", source_object, check=False)
+            if probe.returncode != 0:
+                errors.append(f"missing historical live subject: {role}")
+                continue
+            raw_bytes = _git_bytes(
+                "show", "--no-textconv", "--no-ext-diff", source_object
+            ).stdout
+        if "sha256:" + hashlib.sha256(raw_bytes).hexdigest() != subject["raw_sha256"]:
             errors.append(f"live raw hash mismatch: {role}")
         if subject["semantic_hash_kind"] == "SELF_HASH":
-            value = _load(path)
+            value = json.loads(raw_bytes.decode("utf-8"))
             try:
                 _assert_self_hash(value)
             except AssertionError:
@@ -199,7 +215,7 @@ def _final_provenance_errors(receipt: dict) -> tuple[str, ...]:
             if value["artifact_hash"] != subject["semantic_hash"]:
                 errors.append(f"live semantic hash mismatch: {role}")
         elif subject["semantic_hash_kind"] == "NESTED_EXPERIENCE_SELF_HASH":
-            value = _load(path)["experience"]
+            value = json.loads(raw_bytes.decode("utf-8"))["experience"]
             try:
                 _assert_self_hash(value)
             except AssertionError:
@@ -207,11 +223,114 @@ def _final_provenance_errors(receipt: dict) -> tuple[str, ...]:
             if value["artifact_hash"] != subject["semantic_hash"]:
                 errors.append(f"live semantic hash mismatch: {role}")
         elif subject["semantic_hash_kind"] == "FINAL_TRACE_EVENT_HASH":
-            value = _load(path)["entries"][-1]["artifact_hash"]
+            value = json.loads(raw_bytes.decode("utf-8"))["entries"][-1][
+                "artifact_hash"
+            ]
             if value != subject["semantic_hash"]:
                 errors.append(f"live semantic hash mismatch: {role}")
         elif subject["semantic_hash_kind"] != "RAW_ONLY":
             errors.append(f"unknown semantic hash kind: {role}")
+    return tuple(errors)
+
+
+def _postmerge_invariance_errors(receipt: dict) -> tuple[str, ...]:
+    errors: list[str] = []
+    available: dict[str, bool] = {}
+    for role in ("integration_base", "repaired_pr_head", "post_merge"):
+        subject = receipt[role]
+        commit = subject["commit"]
+        available[role] = (
+            _git("cat-file", "-e", f"{commit}^{{commit}}", check=False).returncode == 0
+        )
+        if not available[role]:
+            errors.append(f"missing commit: {role}")
+            continue
+        if _git("rev-parse", f"{commit}^{{tree}}").stdout.strip() != subject["tree"]:
+            errors.append(f"tree mismatch: {role}")
+        if "parents" in subject:
+            parents = _git("show", "-s", "--format=%P", commit).stdout.split()
+            if parents != subject["parents"]:
+                errors.append(f"parent mismatch: {role}")
+
+    for requirement in receipt["ancestry_requirements"]:
+        if _git(
+            "merge-base",
+            "--is-ancestor",
+            requirement["ancestor"],
+            requirement["descendant"],
+            check=False,
+        ).returncode != 0:
+            errors.append(f'ancestry mismatch: {requirement["role"]}')
+
+    current_main = _git("rev-parse", "origin/main").stdout.strip()
+    if _git(
+        "merge-base",
+        "--is-ancestor",
+        receipt["post_merge"]["commit"],
+        current_main,
+        check=False,
+    ).returncode != 0:
+        errors.append("live main does not descend from registered post-merge commit")
+
+    corrective = receipt["corrective_test_source"]
+    corrective_commit = corrective["commit"]
+    corrective_path = corrective["path"]
+    if _git(
+        "cat-file", "-e", f"{corrective_commit}^{{commit}}", check=False
+    ).returncode != 0:
+        errors.append("missing corrective test source commit")
+    else:
+        if _git("rev-parse", f"{corrective_commit}^{{tree}}").stdout.strip() != corrective[
+            "tree"
+        ]:
+            errors.append("corrective test source tree mismatch")
+        source_object = f"{corrective_commit}:{corrective_path}"
+        if _git("cat-file", "-e", source_object, check=False).returncode != 0:
+            errors.append("missing corrective test source path")
+        else:
+            if _git("rev-parse", source_object).stdout.strip() != corrective["git_blob_sha"]:
+                errors.append("corrective test source blob mismatch")
+            raw = _git_bytes(
+                "show", "--no-textconv", "--no-ext-diff", source_object
+            ).stdout
+            if "sha256:" + hashlib.sha256(raw).hexdigest() != corrective["raw_sha256"]:
+                errors.append("corrective test source raw hash mismatch")
+
+    prior = receipt["historical_receipt"]
+    prior_path = ROOT / prior["path"]
+    if not prior_path.is_file():
+        errors.append("missing historical receipt")
+    else:
+        if _raw_sha256(prior_path) != prior["raw_sha256"]:
+            errors.append("historical receipt raw hash mismatch")
+        value = _load(prior_path)
+        if value["artifact_hash"] != prior["artifact_hash"]:
+            errors.append("historical receipt artifact hash mismatch")
+        if value["current_main"]["commit"] != receipt["integration_base"]["commit"]:
+            errors.append("historical receipt integration-base mismatch")
+
+    context = receipt["attribute_context"]
+    snapshot_path = context["snapshot_path"]
+    if available["integration_base"]:
+        registered_attr = _git(
+            f'--attr-source={receipt["integration_base"]["commit"]}',
+            "check-attr",
+            "whitespace",
+            "--",
+            snapshot_path,
+        ).stdout.strip()
+        if not registered_attr.endswith(context["integration_base_attribute"]):
+            errors.append("integration-base attribute mismatch")
+    if available["post_merge"]:
+        postmerge_attr = _git(
+            f'--attr-source={receipt["post_merge"]["commit"]}',
+            "check-attr",
+            "whitespace",
+            "--",
+            snapshot_path,
+        ).stdout.strip()
+        if not postmerge_attr.endswith(context["post_merge_attribute"]):
+            errors.append("post-merge attribute mismatch")
     return tuple(errors)
 
 
@@ -401,10 +520,10 @@ def test_review_dag_readme_and_validation_preserve_the_authority_boundary() -> N
 
 def test_final_integration_validation_is_self_hashed_and_exactly_scoped() -> None:
     receipt = _load(FINAL_VALIDATION)
+    postmerge = _load(POSTMERGE_VALIDATION)
     _assert_self_hash(receipt)
-    assert receipt["current_main"]["commit"] == _git(
-        "rev-parse", "origin/main"
-    ).stdout.strip()
+    assert receipt["current_main"]["commit"] == postmerge["integration_base"]["commit"]
+    assert postmerge["historical_receipt"]["artifact_hash"] == receipt["artifact_hash"]
     assert receipt["framework_pin"] == (
         "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
     )
@@ -420,48 +539,61 @@ def test_final_integration_validation_is_self_hashed_and_exactly_scoped() -> Non
 
 
 def test_final_integration_git_provenance_is_executable_and_complete() -> None:
-    assert _final_provenance_errors(_load(FINAL_VALIDATION)) == ()
+    postmerge = _load(POSTMERGE_VALIDATION)
+    assert _final_provenance_errors(
+        _load(FINAL_VALIDATION),
+        live_subject_commit=postmerge["repaired_pr_head"]["commit"],
+    ) == ()
 
 
 def test_final_integration_git_provenance_planted_worlds_fail_closed() -> None:
     receipt = _load(FINAL_VALIDATION)
+    source_commit = _load(POSTMERGE_VALIDATION)["repaired_pr_head"]["commit"]
 
     missing = copy.deepcopy(receipt)
     missing["repair_source"]["commit"] = "0" * 40
-    assert "missing commit: repair source" in _final_provenance_errors(missing)
+    assert "missing commit: repair source" in _final_provenance_errors(
+        missing, live_subject_commit=source_commit
+    )
 
     forged_tree = copy.deepcopy(receipt)
     forged_tree["current_main"]["tree"] = "f" * 40
-    assert "tree mismatch: current main" in _final_provenance_errors(forged_tree)
+    assert "tree mismatch: current main" in _final_provenance_errors(
+        forged_tree, live_subject_commit=source_commit
+    )
 
     missing_path = copy.deepcopy(receipt)
     missing_path["historical_bindings"][0]["source_path"] += ".missing"
     assert "missing historical path: original result" in _final_provenance_errors(
-        missing_path
+        missing_path, live_subject_commit=source_commit
     )
 
     forged_blob = copy.deepcopy(receipt)
     forged_blob["historical_bindings"][0]["git_blob_sha"] = "f" * 40
     assert "historical blob mismatch: original result" in _final_provenance_errors(
-        forged_blob
+        forged_blob, live_subject_commit=source_commit
     )
 
     forged_raw = copy.deepcopy(receipt)
     forged_raw["historical_bindings"][1]["raw_sha256"] = "sha256:" + "f" * 64
     assert "historical raw hash mismatch: original trace" in _final_provenance_errors(
-        forged_raw
+        forged_raw, live_subject_commit=source_commit
     )
 
     forged_origin = copy.deepcopy(receipt)
     forged_origin["source_repository"] = "https://github.com/example/not-rakl-math"
-    assert "origin mismatch" in _final_provenance_errors(forged_origin)
+    assert "origin mismatch" in _final_provenance_errors(
+        forged_origin, live_subject_commit=source_commit
+    )
 
     broken_ancestry = copy.deepcopy(receipt)
     broken_ancestry["ancestry_requirements"][0]["descendant"] = receipt[
         "source_pull_request"
     ]["base"]["commit"]
     assert "ancestry mismatch: repair source reaches integration" in (
-        _final_provenance_errors(broken_ancestry)
+        _final_provenance_errors(
+            broken_ancestry, live_subject_commit=source_commit
+        )
     )
 
 
@@ -476,31 +608,44 @@ def test_whitespace_policy_preserves_only_the_immutable_snapshot_exception() -> 
         f"{snapshot_path} whitespace=-trailing-space"
     ]
 
+    postmerge = _load(POSTMERGE_VALIDATION)
+    integration_base = postmerge["integration_base"]["commit"]
+    repaired_pr_head = postmerge["repaired_pr_head"]["commit"]
+    post_merge = postmerge["post_merge"]["commit"]
+
     default_attr = _git("check-attr", "whitespace", "--", snapshot_path).stdout.strip()
-    head_attr = _git(
-        "--attr-source=HEAD", "check-attr", "whitespace", "--", snapshot_path
+    current_main_attr = _git(
+        "--attr-source=origin/main", "check-attr", "whitespace", "--", snapshot_path
     ).stdout.strip()
     base_attr = _git(
-        "--attr-source=origin/main",
+        f"--attr-source={integration_base}",
         "check-attr",
         "whitespace",
         "--",
         snapshot_path,
     ).stdout.strip()
     assert default_attr.endswith("whitespace: -trailing-space")
-    assert head_attr.endswith("whitespace: -trailing-space")
+    assert current_main_attr.endswith("whitespace: -trailing-space")
     assert base_attr.endswith("whitespace: unspecified")
 
     assert _git("diff", "--check", "origin/main...HEAD", check=False).returncode == 0
     base_context = _git(
-        "--attr-source=origin/main",
+        f"--attr-source={integration_base}",
         "diff",
         "--check",
-        "origin/main...HEAD",
+        f"{integration_base}...{repaired_pr_head}",
         check=False,
     )
     assert base_context.returncode != 0
     assert base_context.stdout.count(f"{snapshot_path}:") == 3
+    postmerge_context = _git(
+        f"--attr-source={post_merge}",
+        "diff",
+        "--check",
+        f"{integration_base}...{repaired_pr_head}",
+        check=False,
+    )
+    assert postmerge_context.returncode == 0
 
     receipt_context = _load(FINAL_VALIDATION)["validation"]["diff_check_context"]
     assert receipt_context["default_exact_head_worktree_result"] == "CLEAN"
@@ -509,3 +654,63 @@ def test_whitespace_policy_preserves_only_the_immutable_snapshot_exception() -> 
         "EXPECTED_CONTEXTUAL_FAILURE_IMMUTABLE_SNAPSHOT_TRAILING_WHITESPACE"
     )
     assert receipt_context["context_free_clean_claim"] is False
+
+
+def test_pr51_postmerge_receipt_binds_immutable_integration_semantics() -> None:
+    receipt = _load(POSTMERGE_VALIDATION)
+    _assert_self_hash(receipt)
+    assert _postmerge_invariance_errors(receipt) == ()
+    assert receipt["post_merge"]["parents"] == [
+        receipt["integration_base"]["commit"],
+        receipt["repaired_pr_head"]["commit"],
+    ]
+    assert receipt["validation"]["focused_passed"] == 12
+    assert receipt["validation"]["full_passed"] == 219
+    assert receipt["framework_pin"] == (
+        "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
+    )
+    assert receipt["authority"].endswith(
+        "NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE"
+    )
+
+
+def test_pr51_postmerge_planted_worlds_fail_closed() -> None:
+    receipt = _load(POSTMERGE_VALIDATION)
+
+    missing = copy.deepcopy(receipt)
+    missing["integration_base"]["commit"] = "0" * 40
+    assert "missing commit: integration_base" in _postmerge_invariance_errors(missing)
+
+    forged_tree = copy.deepcopy(receipt)
+    forged_tree["repaired_pr_head"]["tree"] = "f" * 40
+    assert "tree mismatch: repaired_pr_head" in _postmerge_invariance_errors(
+        forged_tree
+    )
+
+    forged_parents = copy.deepcopy(receipt)
+    forged_parents["post_merge"]["parents"] = list(
+        reversed(forged_parents["post_merge"]["parents"])
+    )
+    assert "parent mismatch: post_merge" in _postmerge_invariance_errors(
+        forged_parents
+    )
+
+    broken_ancestry = copy.deepcopy(receipt)
+    broken_ancestry["ancestry_requirements"][0]["descendant"] = receipt[
+        "integration_base"
+    ]["commit"]
+    assert "ancestry mismatch: repaired head reaches merge" in (
+        _postmerge_invariance_errors(broken_ancestry)
+    )
+
+    forged_receipt = copy.deepcopy(receipt)
+    forged_receipt["historical_receipt"]["raw_sha256"] = "sha256:" + "f" * 64
+    assert "historical receipt raw hash mismatch" in _postmerge_invariance_errors(
+        forged_receipt
+    )
+
+    forged_test_blob = copy.deepcopy(receipt)
+    forged_test_blob["corrective_test_source"]["git_blob_sha"] = "f" * 40
+    assert "corrective test source blob mismatch" in _postmerge_invariance_errors(
+        forged_test_blob
+    )
