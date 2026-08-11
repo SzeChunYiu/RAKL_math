@@ -1,0 +1,204 @@
+{
+  "atom_id": "RH-ANA-002",
+  "object_context": "Post-calibration analytic Riemann-Hypothesis child atom. RH-ANA-001 proved only a criterion-falsifier fact: long finite Li-positive prefixes can miss off-critical symmetric data. RH-ANA-002 therefore localizes the genuinely zeta-specific all-index obstruction. Before inventing any inequality, compare the arithmetic Li decomposition, finite-prefix/zero-free-region theorems, and current zeta zero-free methods to determine which proposed prime-side uniform bound is strictly weaker than RH and which merely restates the root in asymptotic form. No mathematical candidate exists yet.",
+  "structural_coordinates": [
+    "Li positivity is an exact all-index RH criterion; the finite-prefix surrogate has already failed as a global certificate on an exact symmetric multiset calibration",
+    "for the zeta specialization the arithmetic explicit formula separates each Li coefficient into an archimedean contribution, a finite-place contribution, and the pole term",
+    "Lagarias gives the archimedean contribution unconditionally with dominant growth one-half n log n plus a linear term and bounded remainder",
+    "Lagarias identifies the finite-place contribution unconditionally with an incomplete Li coefficient using zeros up to height sqrt(n), up to O(sqrt(n) log n)",
+    "under RH the incomplete Li coefficient is O(sqrt(n) log n), whereas if RH fails Lagarias states that it is sometimes exponentially large in n",
+    "therefore a uniform polynomial-growth theorem for the full finite-place contribution would be root-strength rather than a cheap intermediate target",
+    "if RH is known only up to height T, Lagarias' small-finite-place bound propagates only to a finite n-range of order T^2/(log T)^2; finite verification remains finite",
+    "Brown proves a quantitative two-way relation between finitely many Li inequalities and zero-free regions, so finite Li information naturally licenses partial exclusion geometry rather than the full critical-line conclusion",
+    "Freitas supplies Li-type criteria parameterized by zero-free half-planes/strips, providing a second source for a graded implication ladder rather than a binary finite-prefix/root jump",
+    "the zeta finite-place formula contains regularized prime sums; the subtraction/cutoff cancellation is proof-critical and forbids naive termwise positivity or absolute-value domination",
+    "current explicit zeta zero-free regions near Re(s)=1 are genuine zeta-specific input but remain far weaker than RH and therefore serve as partial-control calibration rather than a root bridge",
+    "the desired child target must be graded: stronger than currently known partial zero exclusion but demonstrably weaker than an all-n polynomial bound that would already force RH"
+  ],
+  "equivalent_formulations": [
+    "every nontrivial zero rho of zeta(s) has Re(rho)=1/2",
+    "all Li coefficients lambda_n for the Riemann xi-function are nonnegative",
+    "Weil positivity on the full registered test class",
+    "absence of any off-critical zero whose Li transform produces the exponential-growth behavior characterized in the source literature"
+  ],
+  "solved_analogues": [
+    "finite-dimensional diagnostic systems where a finite test family certifies only an explicitly bounded exclusion region and global absence requires a uniform coverage theorem",
+    "function-field Riemann hypotheses where a geometric/cohomological mechanism supplies the global sign/spectral bound rather than extrapolation from finitely many verified coefficients"
+  ],
+  "near_solved_analogues": [
+    "Brown's finite-Li-inequality to zero-free-region implications and converse estimates",
+    "Freitas' Li-type zero-free half-plane criteria",
+    "classical and current explicit zero-free regions for the Riemann zeta function near Re(s)=1",
+    "Lagarias' finite-height-to-finite-index propagation bound for the finite-place contribution"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Lagarias arithmetic decomposition of Li coefficients for automorphic L-functions, specialized to the Riemann zeta function",
+      "method": "separate the known archimedean dominant term from the finite-place residual, then classify proposed residual bounds by implication strength before attempting them",
+      "shared_structure": [
+        "the exact target coefficients are decomposed into a dominant explicit term and a root-sensitive residual",
+        "the residual has both a prime-side arithmetic definition and an incomplete-zero representation",
+        "growth class of the residual determines whether the proposed subproblem is partial, root-strength, or merely reformulatory"
+      ],
+      "required_assumptions": [
+        "use the exact zeta specialization and the source-stated cutoff/regularization conventions",
+        "preserve the O(sqrt(n) log n) relation between the finite-place term and the incomplete Li coefficient",
+        "distinguish source-derived implication from a new theorem claim"
+      ],
+      "disanalogies": [
+        "an arithmetic formula is not automatically a cancellation theorem",
+        "the finite-place coefficients involve conditionally convergent or regularized prime expressions rather than manifestly signed summands",
+        "a polynomial all-n bound would already exclude the source-described exponential behavior under RH failure and is therefore not a cheap child lemma"
+      ],
+      "repair_question": "What quantitatively weaker, zeta-specific bound on the finite-place residual corresponds to a strictly partial zero-exclusion statement and can therefore serve as a genuine intermediate target rather than an RH-equivalent endpoint?",
+      "source_anchors": [
+        "Jeffrey C. Lagarias, Li coefficients for automorphic L-functions, Annales de l'Institut Fourier 57 (2007), DOI 10.5802/aif.2311"
+      ]
+    },
+    {
+      "source_context": "Brown finite Li inequalities and zero-free regions",
+      "method": "replace the false finite-prefix-to-root inference by a calibrated map from finite coefficient information to an explicit zero-free region",
+      "shared_structure": [
+        "finite coefficient information has a legitimate but bounded geometric consequence for zero location",
+        "increasing the coefficient horizon can strengthen an exclusion region without silently becoming the all-zero theorem",
+        "the method exposes a graded progress coordinate between finite verification and RH"
+      ],
+      "required_assumptions": [
+        "the exact function class and normalization in Brown's theorem apply",
+        "only the source-licensed zero-free region is inferred from a finite prefix",
+        "known corrections or scope caveats in subsequent literature must be checked before reusing detailed constants or lemmas"
+      ],
+      "disanalogies": [
+        "Brown's finite-prefix results do not supply all-index Li positivity",
+        "a zero-free region near the edge of the critical strip is not the critical-line statement",
+        "finite inequalities can exclude some zeros while leaving an uncontrolled interior region"
+      ],
+      "repair_question": "Can an RH-ANA-002 intermediate theorem be formulated directly as a stronger quantitative zero-exclusion region obtained from zeta-specific coefficient or prime control, with its distance from RH explicit?",
+      "source_anchors": [
+        "Francis C. S. Brown, Li's criterion and zero-free regions of L-functions, Journal of Number Theory 111 (2005), DOI 10.1016/j.jnt.2004.07.016"
+      ]
+    },
+    {
+      "source_context": "Freitas Li-type criteria for zero-free half-planes",
+      "method": "parameterize the target zero-free geometry and study coefficient inequalities at that partial target instead of optimizing an ungraded RH-equivalent criterion",
+      "shared_structure": [
+        "Li-type transforms encode zero location",
+        "a parameterized family can distinguish partial zero-free information from the full RH endpoint",
+        "oscillatory behavior remains load-bearing and must be retained"
+      ],
+      "required_assumptions": [
+        "the generalized coefficient definition and parameter range are frozen before transfer",
+        "the target region is stated exactly",
+        "no positivity condition equivalent to the desired region is counted as progress unless a cheaper independent route to it is identified"
+      ],
+      "disanalogies": [
+        "changing the coefficient family may only reparameterize zero location",
+        "the generalized functions need not preserve every arithmetic advantage of the standard zeta Li coefficients",
+        "a parameterized criterion does not itself provide new prime cancellation"
+      ],
+      "repair_question": "Which parameterized zero-free target makes the first nontrivial zeta-specific prime-side obligation both falsifiable and strictly weaker than RH?",
+      "source_anchors": [
+        "Pedro Freitas, A Li-type criterion for zero-free half-planes of Riemann's zeta function, arXiv:math/0507368"
+      ]
+    },
+    {
+      "source_context": "explicit zeta zero-free regions, including Bellotti-Trudgian-Yang 2026",
+      "method": "use unconditional zero-free geometry as a lower rung of the implication ladder and ask what additional Li/prime control would provably move the boundary",
+      "shared_structure": [
+        "same zeta function and same zero set",
+        "unconditional analytic estimates exclude explicit regions without assuming RH",
+        "the result can serve as a known-answer partial-control benchmark"
+      ],
+      "required_assumptions": [
+        "use the exact published/preprint region and height conditions",
+        "do not extrapolate an edge zero-free region toward Re(s)=1/2 without a proved mechanism",
+        "compare any proposed Li-derived region against current source bounds at matching heights"
+      ],
+      "disanalogies": [
+        "classical zero-free-region methods optimize a boundary near Re(s)=1 rather than all-zero critical-line placement",
+        "constants and height ranges do not translate automatically into Li coefficient bounds",
+        "improving a near-1 region can be mathematically valuable while remaining far from RH"
+      ],
+      "repair_question": "Can a coefficient/prime-side intermediate target be chosen whose successful bound would improve a registered zero-free region but would not already imply RH?",
+      "source_anchors": [
+        "Chiara Bellotti, Tim Trudgian, Andrew Yang, Zero-free regions inspired by work of Heath-Brown, arXiv:2603.21490 (2026)"
+      ]
+    },
+    {
+      "source_context": "RAKL cross-Millennium root-bridge stability audit",
+      "method": "before strengthening a surrogate certificate, freeze the exact surrogate-to-root implication and try to show the proposed intermediate condition is secretly root-strength",
+      "shared_structure": [
+        "a locally or finitely valid surrogate is separated from a root-critical preservation step",
+        "the missing bridge is a quantitative uniformity condition",
+        "the cheapest useful action is to classify implication strength before optimizing the surrogate"
+      ],
+      "required_assumptions": [
+        "provide a target-specific DifferenceWitness rather than importing Yang-Mills mathematics",
+        "define the RH surrogate, root object and bridge map explicitly",
+        "treat successful route pruning as research-control information, not theorem authority"
+      ],
+      "disanalogies": [
+        "the source calibration concerns lattice-spacing normalization and continuum limits in Yang-Mills",
+        "RH-ANA-002 concerns finite-index/partial-zero information versus an all-index zero-location criterion",
+        "there is no shared physical model or mathematical operator; only the bridge-audit abstraction transfers"
+      ],
+      "repair_question": "Which RH-ANA-002 candidate conditions are genuinely intermediate, and which already force the root once the exact Lagarias/Brown implications are accounted for?",
+      "source_anchors": [
+        "research/real_math/millennium/cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "prime-side representation does not make the finite-place term manifestly small because cutoff and divergent-cancellation structure are essential",
+    "a finite Li prefix gives a finite zero-free consequence, not RH",
+    "a polynomial all-n finite-place bound is not a modest strengthening of finite computations; the Lagarias asymptotic dichotomy makes it root-strength",
+    "known zero-free regions near Re(s)=1 do not directly control zeros near Re(s)=1/2",
+    "the cross-Millennium root-bridge tool transfers only an audit pattern, not Yang-Mills mathematics",
+    "finite-field global positivity has an unavailable cohomological/Frobenius mechanism and cannot be imported by analogy"
+  ],
+  "source_anchors": [
+    "Clay Mathematics Institute / Enrico Bombieri official Riemann Hypothesis problem description",
+    "Enrico Bombieri and Jeffrey C. Lagarias, Complements to Li's Criterion for the Riemann Hypothesis, JNT 77 (1999), DOI 10.1006/jnth.1999.2392",
+    "Jeffrey C. Lagarias, Li coefficients for automorphic L-functions, AIF 57 (2007), DOI 10.5802/aif.2311",
+    "Francis C. S. Brown, Li's criterion and zero-free regions of L-functions, JNT 111 (2005), DOI 10.1016/j.jnt.2004.07.016",
+    "Pedro Freitas, A Li-type criterion for zero-free half-planes of Riemann's zeta function, arXiv:math/0507368",
+    "Chiara Bellotti, Tim Trudgian, Andrew Yang, Zero-free regions inspired by work of Heath-Brown, arXiv:2603.21490 (2026)",
+    "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_ANA_001_FINITE_LI_PREFIX_NO_GO_20260811.md",
+    "research/real_math/millennium/cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "diagnostic engineering / fault detection",
+      "source_situation": "A finite battery of tests can exclude faults only inside a quantified sensitivity envelope; claiming no fault anywhere requires a coverage theorem uniform over the full latent defect space.",
+      "common_abstraction": [
+        "finite observable/test index versus an unbounded latent defect coordinate",
+        "partial certificate defines an exclusion region rather than global absence",
+        "global certification requires a uniform coverage or coercivity mechanism"
+      ],
+      "source_to_target_mapping": [
+        "test budget -> Li coefficient index horizon",
+        "latent fault coordinate -> zero height and off-critical displacement",
+        "sensitivity envelope -> zero-free region licensed by coefficient information",
+        "coverage theorem -> all-index zeta-specific control sufficient for RH"
+      ],
+      "shared_constraints": [
+        "the exclusion region must be derived, not inferred from empirical success",
+        "increasing the test budget does not license the infinite limit without uniform control",
+        "false positives/hidden defects must be represented in the calibration set"
+      ],
+      "disanalogies": [
+        "Li coefficients are global oscillatory sums with cancellation, not independent sensors",
+        "a zeta zero contributes through a complex Möbius transform and interacts with the full zero set",
+        "engineering coverage probabilities do not provide mathematical zero-exclusion authority"
+      ],
+      "proposed_principle": "Represent every finite Li or finite-prime success by the exact zero-exclusion region it certifies; reject any step that silently promotes an expanding finite envelope to global RH.",
+      "validation_obligation": "For any retained RH target, prove the exact implication from the coefficient/prime bound to a stated zero-free region using source-valid transforms and regularization, and show that the target is strictly weaker than RH before candidate search.",
+      "provenance_note": "Proposal-only structural analogy; it changes search representation but supplies no theorem authority."
+    }
+  ],
+  "analogy_scan_notes": "Scanned finite-field positivity, Li/Weil coefficient transforms, parameterized zero-free criteria, mollifier/zero-density partial results, diagnostic coverage, error-correcting syndromes and control envelopes. Retained only the diagnostic-coverage abstraction because Brown/Freitas provide a mathematical target-side analogue. Rejected error-correcting-code language as too likely to suggest nonexistent independence/orthogonality among Li coordinates.",
+  "frozen_at": "2026-08-11T08:11:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:e18ec3c2a81fb33d9b3d12c927da9778f899e64fef8edaa067224904df60e796"
+}
