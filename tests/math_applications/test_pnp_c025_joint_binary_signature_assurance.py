@@ -558,7 +558,7 @@ def test_current_main_integration_receipt_binds_non_circular_git_history() -> No
         "parents"
     ]
     assert merge["parents"] == [
-        receipt["documentation_successor"]["commit"],
+        receipt["prior_receipt_binding"]["commit"],
         receipt["current_main_snapshot"]["commit"],
     ]
 
@@ -583,4 +583,14 @@ def test_current_main_integration_receipt_binds_non_circular_git_history() -> No
     historical = _git("show", f'{binding["commit"]}:{binding["path"]}').stdout
     assert "sha256:" + hashlib.sha256(historical).hexdigest() == binding["raw_sha256"]
     assert historical == (ROOT / binding["path"]).read_bytes()
+
+    prior = receipt["prior_receipt_binding"]
+    assert _git("rev-parse", f'{prior["commit"]}^{{tree}}').stdout.decode().strip() == prior[
+        "tree"
+    ]
+    assert _git("rev-parse", f'{prior["commit"]}:{prior["path"]}').stdout.decode().strip() == prior[
+        "git_blob_sha"
+    ]
+    prior_bytes = _git("show", f'{prior["commit"]}:{prior["path"]}').stdout
+    assert "sha256:" + hashlib.sha256(prior_bytes).hexdigest() == prior["raw_sha256"]
     assert receipt["scope"]["p_vs_np_root"] == "NO_AUTHORITY"
