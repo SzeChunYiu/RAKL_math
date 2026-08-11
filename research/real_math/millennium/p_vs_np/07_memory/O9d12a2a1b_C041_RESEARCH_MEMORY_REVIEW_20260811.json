@@ -1,0 +1,58 @@
+{
+  "target_atom_id": "O9d12a2a1b",
+  "target_context_hash": "sha256:70e3a8014330040d06d54d3e9b688b2dfe35ff5552f7bdd2396bde2cfd48770e",
+  "tool_inventory_snapshot_hash": "sha256:c686e39c0a4dac1a1fa23eeb63100462e29398aaedb745501df5e3a73bfd2bcd",
+  "failure_lattice_snapshot_hash": "sha256:43c47fa8cc67ad633cf4df64bfd6ee9ee321791854f36e0402c7be428faf1e8f",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "fractional full-semi-filter dual packing",
+    "cylinder-lift relevance transport",
+    "residual dual augmentation",
+    "uniform recurrence and divergent-series analysis",
+    "input-size rate composition",
+    "uniform E-language graph construction",
+    "NP-verifier or lower-bound-preserving reduction bridge"
+  ],
+  "relevant_tool_ids": [
+    "T-PNP-FRACTIONAL-SEMIFILTER-PACKING"
+  ],
+  "relevant_failure_ids": [
+    "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+    "F-C037-ARBITRARY-EXTENSION-NONMONOTONE",
+    "F-C041-POLYTIME-EXPLICITNESS-SUPERPOLY-CONTRADICTION"
+  ],
+  "selected_tool_ids": [
+    "T-PNP-FRACTIONAL-SEMIFILTER-PACKING"
+  ],
+  "tool_applicability_notes": [
+    "Runtime ToolApplicabilityWitness verdict is APPLICABLE_WITH_VALIDATION for exact scoped dual certificates. It does not guarantee recurrence, explicitness, rate, or root closure."
+  ],
+  "failure_reuse_notes": [
+    "C024 reuse is DIFFERENCE_WITNESSED: no integrality repair is claimed and G_NEQ remains mandatory.",
+    "C037 reuse remains SAME_CONTEXT_RETRY because no extension rule or proved relevance-restoration difference exists. The exact 2-survive/1-lost cylinder replay is mandatory before any future C037 DifferenceWitness can activate.",
+    "C038 remains conditional desk-check evidence, not a theorem or tool.",
+    "U8 is retrospective target-exposed exact replay; U9/U10/U11 remain CANNOT_CHECK and cannot select a rule.",
+    "The exact direct-predicate scope combining deterministic poly(n) membership with an a_n^{omega(1)} circuit target is globally blocked by time-to-circuit simulation. The repaired local family uses poly(2^n) uniformity and retains NP membership/reduction as an open root obligation."
+  ],
+  "unresolved_warnings": [
+    "No extension rule exists yet.",
+    "C037 relevance restoration is not yet difference-witnessed.",
+    "U_n is the complement ground set; Boolean transference applies to associated G_n=[M_n]^2\\U_n and f_{G_n}.",
+    "The local f_{G_n} language is in E if the candidate algorithm exists, not known NP.",
+    "No NP verifier or lower-bound-preserving NP reduction is supplied.",
+    "A weak recurrence lower bound does not upper-bound actual L_n or rho.",
+    "Same-context review is not independent peer review."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041_TOOL_SNAPSHOT_20260811.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041_FAILURE_LATTICE_SNAPSHOT_20260811.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041_TOOL_APPLICABILITY_20260811.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041_DIFFERENCE_WITNESSES_20260811.json",
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C041_SIZE_RATE_CONTRACT_20260811.json",
+    "research/real_math/millennium/p_vs_np/05_falsification/C037_EXTERNAL_LEDGER_REPLAY_RECEIPT_20260811.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_COORDINATE_INVENTORY_R2_MATHEMATICAL_EXPERIENCE_20260811.json",
+    "research/real_math/millennium/p_vs_np/05_falsification/C037_CYLINDER_RELEVANCE_REPLAY_RECEIPT_20260811.json"
+  ],
+  "artifact_hash": "sha256:71f981949b0ee298561ef0ef7677fe8afc693b131897580d529c51678b4a8143"
+}

@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "PNP-O9d12a2a1b-C041-SIZE-RATE-20260811",
+  "frozen_at": "2026-08-11T22:21:05Z",
+  "atom_id": "O9d12a2a1b",
+  "candidate_identity": null,
+  "primary_size_coordinate": {
+    "symbol": "N_n",
+    "definition": "N_n = |R_n|+|C_n| = 2M_n",
+    "domain": "R_n=C_n=[M_n], M_n=2^n, n>=1",
+    "reason": "Counts labelled graph vertices while retaining the exact source-compatible square power-of-two domain."
+  },
+  "recurrence_contract": {
+    "mass": "L_n = sum_F y_F^(n)",
+    "increment": "L_{n+1} >= L_n + delta_n with delta_n >= d(n) >= 0",
+    "size_upper_bound": "N_n <= h(n)",
+    "composed_lower_bound": "rho(U_n) >= rho_frac(U_n) >= L_0 + sum_{i<n} d(i)"
+  },
+  "superlogarithmic_composition_gate": {
+    "required_limit": "(L_0 + sum_{i<n} d(i)) / log h(n) -> infinity",
+    "polarity": "Because N_n<=h(n), log N_n<=log h(n); this sufficient condition implies L_n/log N_n->infinity.",
+    "failure_worlds": [
+      "sum d(n)<infinity",
+      "the proved cumulative lower bound is o(log h(n))",
+      "the proved cumulative lower bound is Theta(log h(n))",
+      "h(n) is not proved"
+    ],
+    "failure_interpretation": "These worlds refute or fail the chosen recurrence proof; without an upper bound they do not prove the actual L_n or rho rate."
+  },
+  "non_guarantees": [
+    "Unbounded certificate mass in n alone is not a meaningful input-size rate.",
+    "A bounded or logarithmic chosen certificate does not upper-bound rho_frac or rho.",
+    "A superlogarithmic full-cover checkpoint is only superlinear in Boolean input length.",
+    "A superpolynomial circuit lower bound for the source E-language wrapper does not establish P != NP without NP membership or a reduction.",
+    "Finite evaluations cannot decide an asymptotic outcome."
+  ],
+  "authority_contract": {
+    "grants_recurrence_authority": false,
+    "grants_asymptotic_authority": false,
+    "grants_p_vs_np_root_authority": false
+  },
+  "artifact_hash": "sha256:e1d5053962814be9e1e1de4a16fd7dd90120c7ba99bac073c0e5692adeb0407d",
+  "family_domain": {
+    "registered_form": "U_n subset [M_n]x[M_n] is the complement ground set, M_n=2^n; G_n := [M_n]x[M_n] minus U_n is the associated graph transferred to Boolean complexity.",
+    "reason": "C024/C037 full-semi-filter relevance is defined from complement U_n, while Proposition 38/Lemma 39 transfer the associated graph G_n.",
+    "padding_policy": "No rectangular-to-square or non-power-of-two padding is assumed. Any later padding requires a separate relevance- and load-preserving theorem."
+  },
+  "common_asymptotic_domain": [
+    "n->infinity",
+    "M_n=2^n",
+    "N_n=2M_n->infinity",
+    "h(n)>=N_n and eventually h(n)>1"
+  ],
+  "explicit_graph_description": {
+    "symbol": "D_n",
+    "definition": "D_n = M_n^2 + (2 floor(log2 M_n)+1) + (2 floor(log2 M_n)+1) bits",
+    "encoding": "Elias-gamma code for each positive side size, followed by the row-major M_n by M_n adjacency table of G_n (equivalently the bitwise-negated U_n table).",
+    "proved_bounds": [
+      "N_n - 1 <= D_n",
+      "D_n <= N_n^2/4 + 4 log2(N_n) + 2",
+      "log D_n = Theta(log N_n) as n -> infinity"
+    ],
+    "role": "Description length of the graph instance, not Boolean-function input length."
+  },
+  "boolean_function_input_scale": {
+    "direct_adjacency_symbol": "a_n",
+    "direct_adjacency_definition": "a_n = 2n bits for f_{G_n}(r,c), where G_n=[M_n]^2\\U_n",
+    "source_wrapper_symbol": "b_n",
+    "source_wrapper_definition": "b_n = 2n + 1 bits for the related total Boolean function in the source remark",
+    "roles": [
+      "a_n is the direct adjacency-predicate input length",
+      "b_n is the source wrapper input length",
+      "both are Theta(log N_n)"
+    ],
+    "relations": [
+      "a_n=Theta(log N_n)",
+      "b_n=Theta(log N_n)",
+      "D_n=2^{Theta(a_n)}=2^{Theta(b_n)}"
+    ],
+    "warning": "Graph-description length D_n, direct input a_n, and wrapper input b_n are distinct coordinates."
+  },
+  "uniform_explicitness": {
+    "local_graph_family_requirement": "Given n and n-bit labels r,c, decide U_n membership uniformly in time polynomial in M_n=2^n; decide G_n membership by negation with the same bound.",
+    "local_language_consequence": "The direct graph adjacency predicate f_{G_n} is thereby in E; this does not place it in NP and does not by itself advance P versus NP.",
+    "forbidden_combination": "Do not simultaneously require deterministic polynomial time in n for the direct predicate and claim an a_n^{omega(1)} circuit lower bound; P is contained in P/poly.",
+    "root_bridge_options": [
+      "prove the direct adjacency language is in NP via a polynomial-time verifier without giving a deterministic polynomial-time decider",
+      "or exhibit a separate NP language with a lower-bound-preserving reduction to/from the graph predicate in the required direction"
+    ],
+    "forbidden_shortcut": "A target-exposed LP-selected lookup sequence with no uniform 2^{O(n)} membership algorithm is not an explicit family."
+  },
+  "frozen_certificate_route_outcomes": [
+    {
+      "outcome": "CERTIFICATE_MASS_BOUNDED",
+      "condition": "sup_n L_n < infinity"
+    },
+    {
+      "outcome": "CERTIFICATE_MASS_UNBOUNDED_SUBLOGARITHMIC",
+      "condition": "L_n -> infinity and L_n/log N_n -> 0"
+    },
+    {
+      "outcome": "CERTIFICATE_MASS_THETA_LOGARITHMIC",
+      "condition": "there exist 0<c<=C<infinity and n0 such that c log N_n <= L_n <= C log N_n for all n>=n0"
+    },
+    {
+      "outcome": "CERTIFICATE_MASS_SUPERLOGARITHMIC",
+      "condition": "L_n/log N_n -> infinity"
+    },
+    {
+      "outcome": "CERTIFICATE_MASS_IRREGULAR",
+      "condition": "sup_n L_n = infinity, while L_n/log N_n neither tends to 0 nor tends to infinity and no eventual two-sided Theta(log N_n) bounds hold"
+    }
+  ],
+  "epistemic_outcome": {
+    "outcome": "CANNOT_CHECK",
+    "condition": "The evidence does not determine a mathematical certificate-route branch.",
+    "saturation_credit": false
+  },
+  "inference_boundary": "The non-superlogarithmic branches classify only the selected feasible certificate mass L_n. They do not upper-bound rho_frac(U_n) or rho(U_n). Failure of the recurrence lower bound is RECURRENCE_BOUND_INSUFFICIENT unless an independent matching upper bound or exact formula proves an actual rate limitation.",
+  "root_rate_gate": {
+    "checkpoint": "A lower bound on rho(G_n,G_{M_n,M_n})=rho_induced_by_complement(U_n) transfers at most to a superlinear circuit checkpoint for f_{G_n} or the source wrapper.",
+    "root_required_strength": "A P-versus-NP route via circuits requires an NP language with circuit complexity a_n^{omega(1)} (or the corresponding wrapper/reduction scale), plus a proved language-membership or reduction bridge.",
+    "local_E_language_boundary": "A b_n^{omega(1)} lower bound for the uniformly 2^{O(n)}-decidable source wrapper would concern an E language, not automatically an NP language.",
+    "sufficient_family_of_limits": "For every fixed q>0, (L_0+sum_{i<n}d(i))/(log h(n))^q -> infinity is a sufficient graph-scale lower-bound rate, but it has root force only after an NP-language bridge."
+  }
+}

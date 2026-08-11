@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "witness_set_id": "PNP-O9d12a2a1b-C041-DIFFERENCE-WITNESSES-20260811",
+  "recorded_at": "2026-08-11T22:21:20Z",
+  "atom_id": "O9d12a2a1b",
+  "context_hash": "sha256:70e3a8014330040d06d54d3e9b688b2dfe35ff5552f7bdd2396bde2cfd48770e",
+  "difference_witnesses": [
+    {
+      "target_atom_id": "O9d12a2a1b",
+      "target_context_hash": "sha256:70e3a8014330040d06d54d3e9b688b2dfe35ff5552f7bdd2396bde2cfd48770e",
+      "method_family": "plain fractional set-cover / semi-filter packing relaxation",
+      "prior_failure_ids": [
+        "F-C024-FRACTIONAL-INTEGRALITY-GAP"
+      ],
+      "changed_structural_coordinates": [
+        "one-instance fractional value becomes a prospective uniform square power-of-two family",
+        "lift-plus-augmentation certificate and cumulative mass are registered objects",
+        "N_n, D_n, b_n, explicitness, and rate branches are frozen"
+      ],
+      "restored_or_replaced_assumptions": [
+        "No integrality assumption is restored; C041 asks only whether another explicit family has large fractional value, which still lower-bounds integral rho.",
+        "Universal approximation is replaced by a family-specific lower-bound claim."
+      ],
+      "prior_falsifier_escape_reason": "G_NEQ refutes universal approximation strength, not existence of an explicit family with growing fractional value.",
+      "cheapest_repeat_failure_test": "Replay G_NEQ as a no-global-repair control and search each frozen generated instance for a constant or O(log N_k) primal fractional cover.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/07_memory/C024_FAILURE_EXPERIENCE_DELTA_20260811.json",
+        "research/real_math/millennium/p_vs_np/04_candidates/C024_fractional_semifilter_packing.md",
+        "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C041_SIZE_RATE_CONTRACT_20260811.json"
+      ],
+      "witness_id": "C041-DW-C024",
+      "reuse_assessment": {
+        "verdict": "DIFFERENCE_WITNESSED",
+        "relevant_failure_ids": [
+          "F-C024-FRACTIONAL-INTEGRALITY-GAP"
+        ],
+        "reasons": [
+          "reuse_allowed_with_targeted_repeat_failure_test"
+        ]
+      },
+      "witness_status": "ACTIVE_SCOPED_DIFFERENCE_WITNESS"
+    },
+    {
+      "target_atom_id": "O9d12a2a1b",
+      "target_context_hash": "sha256:70e3a8014330040d06d54d3e9b688b2dfe35ff5552f7bdd2396bde2cfd48770e",
+      "method_family": "graph-extension monotonicity for fractional full-cover value",
+      "prior_failure_ids": [
+        "F-C037-ARBITRARY-EXTENSION-NONMONOTONE"
+      ],
+      "changed_structural_coordinates": [
+        "REQUIRED FUTURE CHANGE: freeze a rule that is not an arbitrary incident extension",
+        "REQUIRED FUTURE CHANGE: prove supported cylinder relevance or an exact replacement witness",
+        "REQUIRED FUTURE CHANGE: check every child legal-pair load before augmentation"
+      ],
+      "restored_or_replaced_assumptions": [
+        "NOT YET RESTORED: old generator relevance must be proved for the selected uniform rule.",
+        "NOT YET REPLACED: ground-set inclusion needs an explicit relevance-and-load transport map."
+      ],
+      "prior_falsifier_escape_reason": "No escape is established before a rule exists. The exact C037 relevance replay is a mandatory regression test for any future rule.",
+      "cheapest_repeat_failure_test": "Apply the frozen rule to the exact C037 parent and smallest canonical parents; reject on the first unsupported lift, load above one, or zero residual augmentation.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/05_falsification/C037_CYLINDER_RELEVANCE_REPLAY_RECEIPT_20260811.json",
+        "research/real_math/millennium/p_vs_np/05_falsification/C037_EXTERNAL_LEDGER_REPLAY_RECEIPT_20260811.json",
+        "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C041_MATH_CONTEXT_FIBER_20260811.json"
+      ],
+      "witness_id": "C041-DW-C037",
+      "reuse_assessment": {
+        "verdict": "SAME_CONTEXT_RETRY",
+        "relevant_failure_ids": [
+          "F-C037-ARBITRARY-EXTENSION-NONMONOTONE"
+        ],
+        "reasons": [
+          "prior_structural_failure_exists_but_no_difference_witness_was_supplied"
+        ]
+      },
+      "witness_status": "REQUIRED_FUTURE_DIFFERENCE_WITNESS_NOT_SUPPLIED_TO_GATE"
+    }
+  ],
+  "authority_contract": {
+    "grants_theorem_authority": false,
+    "grants_candidate_authority": false,
+    "grants_p_vs_np_root_authority": false
+  },
+  "artifact_hash": "sha256:4dc9420743632fde5552fc0ca0ce8d026447f1e39ca57cc4a874100a78f4ead7"
+}
