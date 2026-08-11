@@ -548,7 +548,7 @@ def test_current_main_integration_receipt_binds_non_circular_git_history() -> No
     payload = copy.deepcopy(receipt)
     payload["artifact_hash"] = ""
     assert receipt["artifact_hash"] == _canonical_hash(payload)
-    assert receipt["receipt_revision"] == "v5-current-main-29d566f"
+    assert receipt["receipt_revision"] == "v6-current-main-7548c3c"
     assert receipt["framework_authority_commit"] == (
         "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
     )
@@ -570,9 +570,9 @@ def test_current_main_integration_receipt_binds_non_circular_git_history() -> No
         receipt["current_main_snapshot"]["commit"],
     ]
     assert receipt["current_main_snapshot"]["commit"] == (
-        "29d566f7860240f22d634664c51e8583e50a3c5b"
+        "7548c3c9a30c63e18956aefb68674d523acfe937"
     )
-    assert merge["commit"] == "d9527a0d7c328a5487156264af321021907d3bec"
+    assert merge["commit"] == "b2d64b8f79933e92b99bfbdd9044bd11e3d437d1"
 
     for role, commit in receipt["durable_ancestors"].items():
         assert (
@@ -609,12 +609,12 @@ def test_current_main_integration_receipt_binds_non_circular_git_history() -> No
     previous = receipt["previous_pinned_ci_integration"]
     assert previous["receipt_binding"] == prior
     assert previous["main_snapshot"]["commit"] == (
-        "7f5771d5e47742debec5f4af0a29e937b9aeedf6"
+        "29d566f7860240f22d634664c51e8583e50a3c5b"
     )
     assert previous["integration_merge"]["commit"] == (
-        "99a3f68d9734b1dc3862c47f0d115be81c1a3554"
+        "d9527a0d7c328a5487156264af321021907d3bec"
     )
-    assert previous["verification"]["full_result"] == "227 passed"
+    assert previous["verification"]["full_result"] == "229 passed"
 
     predecessor = receipt["predecessor_checkpoint"]
     assert predecessor["commit"] == prior["commit"]
@@ -650,5 +650,5 @@ def test_current_main_integration_receipt_binds_non_circular_git_history() -> No
     assert verification["integration_merge_commit"] == merge["commit"]
     assert verification["focused_result"] == "13 passed"
     assert verification["strict_workflow_result"] == "13 passed"
-    assert verification["full_result"] == "229 passed"
+    assert verification["full_result"] == "240 passed"
     assert receipt["scope"]["p_vs_np_root"] == "NO_AUTHORITY"
