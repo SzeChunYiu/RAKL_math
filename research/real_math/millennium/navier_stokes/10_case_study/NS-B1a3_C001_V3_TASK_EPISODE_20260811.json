@@ -1,0 +1,61 @@
+{
+  "schema_version": "rakl-v3-task-episode-shadow-v1",
+  "authority": "PROPOSAL_SHADOW_EPISODE_ONLY",
+  "episode_id": "EP-NS-B1a3-CRITICAL-COMPACTNESS-INTERFACE-20260811",
+  "task_id": "NS-B1a3-C001",
+  "atom_id": "NS-B1a3",
+  "context_hash": "sha256:51ba9496bd858e161d295c7678708a32384bdd4e2f7a594b77d05aa7a39824e0",
+  "problem_signature": ["Type-I Navier-Stokes", "mild bounded ancient limit", "local strong L3 compactness", "global critical tightness", "critical element", "profile leakage", "pressure harmonic remainder", "backward uniqueness"],
+  "fibre_contents_consulted": [
+    "canonical Clay statement/success contract",
+    "NS-B1 frozen Type-I context and source matrix",
+    "NS-B1a1 scale-neutral local-energy failure",
+    "NS-B1a2 kinetic-energy nonquantization failure",
+    "NS-B1a pressure-tail calibration",
+    "Albritton-Barker Theorems 1.1-1.2, Lemma 2.2, Proposition 2.3",
+    "Gallagher-Koch-Planchon critical-element/profile-decomposition analogue",
+    "Escauriaza-Seregin-Sverak backward-uniqueness rigidity interface",
+    "Necas-Ruzicka-Sverak/Tsai self-similar profile disanalogy"
+  ],
+  "operator_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT", "local-to-global-interface-audit", "noncompact-symmetry-falsifier", "pressure-harmonic-remainder-audit", "unique-continuation-hypothesis-ledger", "equation-change-audit"],
+  "motifs_tried": ["compactness-rigidity", "minimal-critical-element", "counterexample-first-gluing", "profile-leakage-adversary", "same-context-expert-cell"],
+  "decision_policy": "Previous B1a1/B1a2 failures removed scalar shell/energy budgets from priority. Before inventing a minimal critical element, test the prerequisite map from finite-I local compactness to the global critical topology demanded by the selected rigidity methods. Prefer a cheap exact interface falsifier over theorem invention.",
+  "action_trace": [
+    "read current RAKL main at 0cea6cc39a3cf67ef7ecff3fff9a704944c32ab8 and inspect rakl.v3 plus method_specs surfaces",
+    "read current RAKL_math main and Navier-Stokes root/success contract/DAG/memory/trace artifacts",
+    "freeze NS-B1a3 MathContextFiber before candidate",
+    "bind dual success/failure memory and record rejected routes",
+    "run six-role same-context expert cell and preserve compactness-vs-geometry disagreement",
+    "freeze hash-chained pre-candidate trace",
+    "bind exact source output/input topologies for local compactness and global rigidity",
+    "falsify local-to-global inference with translation/profile leakage and pressure-harmonic remainder controls",
+    "audit backward-uniqueness and self-similar equation-change hypotheses",
+    "record gluing obstruction separately from successful local mathematics"
+  ],
+  "observations": [
+    "AB local compactness gives strong L3_loc velocity convergence and weak L3/2_loc pressure convergence, not global L3 convergence",
+    "AB Theorem 1.2 requires uniform global L3 control along a backward time sequence",
+    "critical-element/profile decomposition presupposes a bounded global critical-space sequence",
+    "translation/dilation escape is invisible to convergence on fixed compact subsets",
+    "localized pressure control leaves a harmonic/far-field remainder outside a global identification theorem",
+    "stationary Leray-profile rigidity concerns a changed equation/class and does not classify arbitrary ancient trajectories"
+  ],
+  "verification_ids": ["VERIFY-NS-B1a3-AB-TOPOLOGY", "VERIFY-NS-B1a3-GLOBAL-L3-TRIGGER", "VERIFY-NS-B1a3-TRANSLATION-ESCAPE", "VERIFY-NS-B1a3-PRESSURE-DECOMPOSITION", "VERIFY-NS-B1a3-UC-HYPOTHESIS-BLOCK", "VERIFY-NS-B1a3-EQUATION-CLASS"],
+  "falsifier": "Any source-valid theorem/derivation proving every relevant finite-I ancient solution has a backward uniformly bounded global L3 sequence, or precompactness modulo symmetries in a specified global critical topology sufficient for the selected rigidity theorem, overturns this route-pruning result.",
+  "outcome": "PARTIAL_SUCCESS",
+  "failure_category": "LOCAL_TO_GLOBAL_GLUING_INTERFACE",
+  "residual_signature": ["construct a global critical tightness/state-space certificate before minimal critical-element logic", "or pursue an orthogonal dynamics-specific inherited property such as vorticity-direction/geometric depletion", "Type-II remains open"],
+  "novelty_class": "UNRESOLVED",
+  "novelty_note": "The root/subproblem is not solved, so v3 problem_novelty does not license a solved-subproblem novelty classification. The cycle retains scoped obstruction/relation novelty only in RAKL_CYCLE_METRICS.",
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "research/real_math/millennium/navier_stokes/08_reviews/NS-B1a3_EXPERT_CONTEXT_REVIEW_20260811.md",
+    "research/real_math/millennium/navier_stokes/09_trace/NS-B1a3_PRE_CANDIDATE_TRACE_20260811.json",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3_C001_CRITICAL_COMPACTNESS_RIGIDITY_INTERFACE_20260811.md",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3_C001_FAILURE_EXPERIENCE_DELTA_20260811.json"
+  ],
+  "timestamp": "2026-08-11T13:56:00Z",
+  "cost": 0.0,
+  "cost_note": "Sentinel only: exact normalized v3 resource cost is CANNOT_MEASURE because no canonical RAKLV3State/cost registry is materialized by this application cycle; see RAKL_CYCLE_METRICS."
+}

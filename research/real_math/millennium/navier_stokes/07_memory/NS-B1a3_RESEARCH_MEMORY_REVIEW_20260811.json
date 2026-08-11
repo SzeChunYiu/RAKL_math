@@ -1,0 +1,57 @@
+{
+  "schema_version": "research-memory-review-v3-proposal-shadow",
+  "target_atom_id": "NS-B1a3",
+  "target_context_hash": "sha256:51ba9496bd858e161d295c7678708a32384bdd4e2f7a594b77d05aa7a39824e0",
+  "bound_rakl_math_base_sha": "24194bba4c88cc4be19dad03d59bfa79599d5ee9",
+  "candidate_method_families": [
+    "global critical tightness / critical-element compactness modulo translation-dilation",
+    "vorticity-direction coherence / geometric depletion",
+    "pressure-aware temporal cancellation / no-recrossing",
+    "exact alternate Liouville trigger"
+  ],
+  "success_memory": {
+    "retrieved_ids": ["AB-THM1.1", "AB-COMPACT", "AB-THM1.2", "GKP-CRIT-ELEM", "ESS-L3", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+    "selected_ids": ["AB-COMPACT", "AB-THM1.2", "GKP-CRIT-ELEM", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+    "rejected_or_deferred": [
+      {"id": "ESS-L3", "reason": "retained as rigidity reference but deferred as direct route until its terminal/exterior/vorticity hypotheses are bound to the exact ancient limit"},
+      {"id": "exact-self-similar-Liouville", "reason": "generic Type-I ancient solutions are not stationary Leray profiles"}
+    ]
+  },
+  "failure_memory": {
+    "retrieved_ids": [
+      "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION",
+      "SOURCE-GAP-2606.07875-TERMINAL-SCALE"
+    ],
+    "selected_ids": [
+      "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"
+    ],
+    "routing_effects": [
+      "Pressure-tail summability already prunes raw instantaneous absolute far-field divergence as the bridge.",
+      "Scale-neutral local-energy bookkeeping already prunes shell-budget descent as a well-founded scale breaker.",
+      "Finite energy already fails as a scale-independent critical-core count, so the next compactness audit must ask for a genuinely global critical topology rather than repackaging L2 energy.",
+      "These failures move priority from another scalar budget to the local-compactness/global-rigidity interface itself."
+    ]
+  },
+  "retrieved_but_rejected_routes": [
+    {"route": "repeat finite-I shell flux accounting", "reason": "same failure family as F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER"},
+    {"route": "derive global L3 from finite kinetic energy plus pointwise Type-I amplitude", "reason": "same failure family as F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"},
+    {"route": "infer global tail control from localized pressure decay", "reason": "pressure localization is not velocity-tail tightness; F-NS-B1a-C001-PRESSURE-SUMMABILITY"},
+    {"route": "apply stationary self-similar Liouville theorem", "reason": "equation/trajectory-class mismatch"}
+  ],
+  "missed_memory_audit": {
+    "status": "CANNOT_MEASURE",
+    "reason": "no exhaustive relevance-labeled universe is frozen for all RAKL_math and cross-Millennium records; absence of additional relevant memory is not asserted"
+  },
+  "cross_millennium_memory": {
+    "queried": false,
+    "reason": "the active obstruction is already source-exact within the Navier–Stokes lane; no DifferenceWitness justifies importing a cross-problem mathematical result. Only the pre-existing process tool T-XM-ROOT-BRIDGE-STABILITY-AUDIT is reused as a meta-level audit tool."
+  },
+  "pre_memory_preference": "after B1a2, test compactness/coherence/no-recrossing; naive preference was to start with a critical-element construction",
+  "post_memory_preference": "audit the prerequisite global critical topology/tightness interface before attempting a minimal-element construction",
+  "selected_next_action": "Run a source-bound local-compactness/global-rigidity interface audit. Falsify any inference from finite I plus local strong convergence to a global critical compactness class using translation/profile leakage and pressure-harmonic remainder controls.",
+  "authority": "PROPOSAL_SHADOW_SEARCH_ROUTING_ONLY"
+}

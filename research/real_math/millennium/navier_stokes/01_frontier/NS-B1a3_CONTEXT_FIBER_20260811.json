@@ -1,0 +1,74 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow",
+  "atom_id": "NS-B1a3",
+  "parent_atom_id": "NS-B1a",
+  "object_context": "Type-I blow-up-classification child for Clay statement (A). Audit whether dynamics-specific critical compactness/minimal-element logic can bridge Albritton–Barker finite-I ancient limits to an exact Liouville/backward-uniqueness trigger without importing a global critical topology that finite I has not supplied. Type-II is out of scope and remains open.",
+  "structural_coordinates": [
+    "unforced whole-space 3D incompressible Navier–Stokes; nu normalized to 1",
+    "parabolic scaling u_lambda(x,t)=lambda u(lambda x,lambda^2 t), p_lambda=lambda^2 p(lambda x,lambda^2 t)",
+    "Albritton–Barker Type-I quantity I=sup over parabolic cylinders of A+C+D+E; finite I is local scale-invariant control, not a registered global critical Banach norm",
+    "blow-up extraction yields a nontrivial mild bounded ancient solution with I<infinity under the source theorem",
+    "suitable-weak compactness gives local strong L3 velocity convergence and local weak L3/2 pressure convergence after subsequence extraction",
+    "pressure localization splits pressure into a localized Calderon-Zygmund term plus a harmonic remainder; the latter carries nonlocal/far-field information",
+    "global Liouville trigger in Albritton–Barker Theorem 1.2 requires a backward sequence with uniformly bounded global L3 norms",
+    "critical-element/profile-decomposition methods require a bounded sequence in a specified global critical topology and control loss of compactness by translations/dilations inside that topology",
+    "space translation and dilation are noncompact symmetries; tail escape/profile leakage can preserve all fixed compact-set limits while changing global critical mass",
+    "backward-uniqueness routes require exact hypotheses on the limiting solution/vorticity and cannot be invoked from local suitable convergence alone",
+    "exact backward self-similar substitution changes the PDE to the Leray stationary equation with drift/dilation; a general ancient solution satisfies the original time-dependent Navier–Stokes system",
+    "Type-II singularities need a different normalization/classification mechanism because the Type-I I<infinity class is unavailable"
+  ],
+  "target_interface": {
+    "input": "hypothetical Type-I singular suitable weak solution near (x*,T*)",
+    "local_limit_output": "nontrivial mild bounded ancient solution v on R^3 x (-infinity,0) with I<infinity",
+    "desired_rigidity_input": "either sup_k ||v(t_k)||_L3(R3)<infinity for t_k->-infinity, or another exactly matched global rigidity hypothesis",
+    "audit_question": "Does the local compactness/nontriviality package itself supply the global critical tightness needed by minimal-element/profile or backward-uniqueness rigidity?"
+  },
+  "solved_analogues": [
+    {"id": "AB-THM1.2", "source": "Albritton–Barker, arXiv:1811.00502, Theorem 1.2", "fact": "a mild ancient solution with uniformly bounded global L3 norm along a backward sequence is zero"},
+    {"id": "GKP-CRIT-ELEM", "source": "Gallagher–Koch–Planchon, arXiv:1012.0145 / Math. Ann. 355 (2013)", "fact": "critical-element/profile-decomposition machinery proves the L-infinity_t L3_x criterion and constructs minimal singular data under a global critical-space framework"},
+    {"id": "ESS-L3", "source": "Escauriaza–Seregin–Sverak, Russian Math. Surveys 58 (2003)", "fact": "critical L-infinity_t L3_x regularity is established via backward-uniqueness machinery"}
+  ],
+  "near_solved_analogues": [
+    {"id": "AB-THM1.1", "source": "Albritton–Barker, arXiv:1811.00502, Theorem 1.1", "fact": "Type-I singularity is equivalent to existence of a nontrivial mild bounded ancient solution with finite I; this supplies the ancient class but not Theorem-1.2's global L3 sequence"},
+    {"id": "AB-COMPACT", "source": "Albritton–Barker, arXiv:1811.00502, Lemma 2.2 and Proposition 2.3", "fact": "bounded local L3 velocity and L3/2 pressure yield local strong/weak compactness and persistence of singularities"}
+  ],
+  "method_transfers": [
+    {
+      "method": "critical element / profile decomposition",
+      "source_context": "global critical L3 or critical Besov solution sequences",
+      "required_assumptions": ["uniform bound in an explicitly named global critical topology", "profile decomposition compatible with translation/dilation", "stability/orthogonality sufficient to pass nonlinear evolution", "a minimality functional whose infimum is positive and achieved modulo symmetries"],
+      "target_disanalogies": ["finite I is a local cylinder supremum and does not itself bind the global L3 tail", "local strong L3 convergence on compact sets does not preclude translated/dilated profiles escaping to infinity", "pressure harmonic remainders are not encoded by a velocity-only local compactness statement"],
+      "transfer_status": "BLOCKED_PENDING_GLOBAL_CRITICAL_TIGHTNESS_CERTIFICATE"
+    },
+    {
+      "method": "backward uniqueness / unique continuation",
+      "source_context": "critical L3 regularity/ancient-solution rigidity",
+      "required_assumptions": ["exact terminal-time/decay or global critical hypotheses of the selected theorem", "sufficient regularity of vorticity/coefficient fields on the domain where unique continuation is applied", "global/exterior control needed to propagate vanishing"],
+      "target_disanalogies": ["finite I plus local convergence does not automatically provide the required global terminal/exterior conditions", "nontrivial ancient limit need not vanish at t=0 unless a separate blow-up normalization/decay argument proves it"],
+      "transfer_status": "BLOCKED_UNTIL_THEOREM_HYPOTHESES_BOUND"
+    },
+    {
+      "method": "self-similar profile Liouville theorem",
+      "source_context": "exact backward self-similar solutions",
+      "required_assumptions": ["exact self-similar representation and profile hypotheses"],
+      "target_disanalogies": ["general Type-I ancient trajectories are time-dependent", "self-similar variables introduce drift/dilation terms and a stationary Leray equation"],
+      "transfer_status": "REJECTED_AS_GENERIC_TYPE_I_RIGIDITY"
+    }
+  ],
+  "adversarial_constructions": [
+    "translation escape: a bounded global critical profile translated to |x_n|->infinity converges strongly to zero on every fixed compact set while retaining global norm",
+    "multi-profile leakage: orthogonal translation/dilation parameters can preserve local compactness of the selected core while other profiles carry critical mass",
+    "harmonic-pressure remainder: localized Calderon-Zygmund pressure convergence does not determine the global harmonic/far-field component",
+    "equation mismatch: a theorem for stationary Leray profiles cannot be applied to arbitrary original-equation ancient solutions"
+  ],
+  "source_anchors": [
+    "Dallas Albritton and Tobias Barker, arXiv:1811.00502, especially Theorems 1.1–1.2, Lemma 2.2, Proposition 2.3",
+    "Isabelle Gallagher, Gabriel S. Koch, Fabrice Planchon, arXiv:1012.0145 / Math. Ann. 355 (2013)",
+    "L. Escauriaza, G. Seregin, V. Sverak, Russian Math. Surveys 58 (2003)",
+    "J. Necas, M. Ruzicka, V. Sverak, Acta Math. 176 (1996)",
+    "Tai-Peng Tsai, Arch. Ration. Mech. Anal. 143 (1998)"
+  ],
+  "frozen_at": "2026-08-11T13:56:00Z",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:51ba9496bd858e161d295c7678708a32384bdd4e2f7a594b77d05aa7a39824e0"
+}

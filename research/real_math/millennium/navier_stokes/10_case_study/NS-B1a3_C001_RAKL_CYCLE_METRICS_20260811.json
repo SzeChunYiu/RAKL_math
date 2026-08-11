@@ -1,0 +1,147 @@
+{
+  "schema_version": "rakl-cycle-metrics-v1-proposal-shadow",
+  "cycle_id": "NS-B1a3-CRITICAL-COMPACTNESS-INTERFACE-20260811",
+  "authority": "PROPOSAL_SHADOW_TELEMETRY_ONLY",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "rakl_package_version": "0.1.0",
+    "architecture": "RAKL v3 stable public facade",
+    "dedicated_method_semver": {"value": "CANNOT_MEASURE", "reason": "current main exposes package version 0.1.0 and a v3 facade but no separate machine-readable RAKL method semantic-version marker"},
+    "current_main_sha_read_before_math": "0cea6cc39a3cf67ef7ecff3fff9a704944c32ab8",
+    "v3_facade_blob_sha": "3f8038ddeea34aebd48a26a9cdbf250250d5b437",
+    "method_specs_surface_source": "src/rakl/method_specs.py on RAKL main at 0cea6cc39a3cf67ef7ecff3fff9a704944c32ab8"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_main_sha": "24194bba4c88cc4be19dad03d59bfa79599d5ee9",
+    "research_branch": "research/ns-b1a3-critical-compactness-interface-20260811",
+    "cycle_material_head_before_metrics_receipt": "497eaa84d3655b0221dc837925ce72df3af90ab7",
+    "repository_head_after_metrics_receipt": {"value": "CANNOT_MEASURE", "reason": "a file cannot contain the SHA of the commit that creates itself without a self-referential hash; the exact receipt commit is externally observable from Git after this write and is not substituted into the scientific state fingerprint"}
+  },
+  "state": {
+    "pre_state_fingerprint": {"value": "CANNOT_MEASURE", "reason": "this RAKL_math lane does not materialize one canonical RAKLV3State object from which rakl.v3.state_fingerprint can be computed"},
+    "post_state_fingerprint": {"value": "CANNOT_MEASURE", "reason": "same limitation as pre_state_fingerprint; Git commit identity is recorded separately and is not mislabeled as a v3 state fingerprint"},
+    "pre_repository_fingerprint": "git:24194bba4c88cc4be19dad03d59bfa79599d5ee9",
+    "post_scientific_material_fingerprint": "git:497eaa84d3655b0221dc837925ce72df3af90ab7",
+    "atom_id": "NS-B1a3",
+    "fibre_snapshot_hash": "sha256:51ba9496bd858e161d295c7678708a32384bdd4e2f7a594b77d05aa7a39824e0",
+    "pre_candidate_final_event_hash": "sha256:1c9e6db062fe90397da5378d9ce51edf92499c31f46655d570c09527ff7badc6",
+    "post_cycle_final_event_hash": "sha256:84a49c402f6329723828bf848452f336b300cb82fa4c35f9618be60edf5001b6"
+  },
+  "process_surfaces_invoked": [
+    "decomposition",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "mathematical_context_translation",
+    "equivalence_similarity",
+    "contextual_theory_gluing",
+    "contradiction_diagnosis",
+    "gap_discovery",
+    "experiment_query_selection",
+    "synthesis",
+    "memory",
+    "review",
+    "saturation_stopping",
+    "prompting_context_policy",
+    "authority_promotion"
+  ],
+  "memory": {
+    "success_tool_or_analogue_retrieved_count": 6,
+    "success_tool_or_analogue_retrieved_ids": ["AB-THM1.1", "AB-COMPACT", "AB-THM1.2", "GKP-CRIT-ELEM", "ESS-L3", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+    "success_selected_count": 4,
+    "success_selected_ids": ["AB-COMPACT", "AB-THM1.2", "GKP-CRIT-ELEM", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+    "success_rejected_or_deferred_count": 2,
+    "success_rejected_or_deferred_ids": ["ESS-L3@DIRECT_ROUTE_DEFERRED", "EXACT-SELF-SIMILAR-LIOUVILLE@GENERIC_TYPE_I_REJECTED"],
+    "failure_retrieved_count": 4,
+    "failure_retrieved_ids": ["F-NS-B1a-C001-PRESSURE-SUMMABILITY", "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER", "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION", "SOURCE-GAP-2606.07875-TERMINAL-SCALE"],
+    "failure_selected_count": 3,
+    "failure_selected_ids": ["F-NS-B1a-C001-PRESSURE-SUMMABILITY", "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER", "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"],
+    "failure_rejected_or_deferred_count": 1,
+    "failure_rejected_or_deferred_ids": ["SOURCE-GAP-2606.07875-TERMINAL-SCALE@NOT_LOAD_BEARING_FOR_THIS_INTERFACE"],
+    "retrieved_route_patterns_rejected": ["repeat finite-I shell flux accounting", "finite-energy-to-global-L3 interpolation", "global velocity-tail inference from localized pressure decay", "stationary self-similar Liouville for general ancient trajectory"],
+    "missed_relevant_memory_count": {"value": "CANNOT_MEASURE", "reason": "no exhaustive relevance-labeled memory universe was frozen"}
+  },
+  "outcome": {
+    "status": "PARTIAL_SUCCESS",
+    "category": "SOURCE_BOUND_INTERFACE_ROUTE_PRUNING",
+    "result_id": "NS-B1a3-C001-CRITICAL-COMPACTNESS-RIGIDITY-INTERFACE",
+    "result_summary": "The finite-I Type-I compactness passage is locally valid but does not by itself provide the global critical topology, tail tightness or backward global-L3 sequence consumed by the selected critical-element/global rigidity methods. The failure is local-to-global gluing, not local compactness mathematics.",
+    "novelty_class": "UNRESOLVED",
+    "novelty_class_reason": "RAKL v3 problem_novelty classifies solved verified subproblems; this child remains open."
+  },
+  "residual": {
+    "before": ["broad NS-B1a3 search over critical-element compactness, vorticity coherence, pressure/no-recrossing and alternate Liouville triggers"],
+    "after": ["NS-B1a3a: construct a source-valid global critical tightness/state-space certificate before minimal-critical-element logic", "NS-B1a3b: fresh vorticity-direction/geometric-depletion inheritance audit", "pressure/no-recrossing and alternate Liouville triggers remain live", "Type-II sibling residual unchanged"]
+  },
+  "retained_semantic_novelty": {
+    "KNOWLEDGE": 0,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 0,
+    "OBSTRUCTION": 1,
+    "RELATION": 1,
+    "PATH": 0,
+    "META_METHOD": 0
+  },
+  "retained_novelty_rationale": {
+    "OBSTRUCTION": "one exact source-bound local-output/global-input cut retained as O-NS-B1a3-GLOBAL-CRITICAL-TIGHTNESS-INTERFACE",
+    "RELATION": "one exact producer-consumer topology relation retained among AB local compactness, AB global-L3 rigidity and critical-element global-space prerequisites",
+    "zero_axes_note": "Parent fibre already contained generic warnings about far-field/profile leakage, so restating those concerns is not double-counted as new semantic learning"
+  },
+  "saturation": {
+    "axes_reopened": ["OBSTRUCTION", "RELATION"],
+    "axes_flattened_this_cycle": [],
+    "axes_with_zero_retained_novelty": ["KNOWLEDGE", "OPERATOR", "EXPERIENCE_PATTERN", "PATH", "META_METHOD"],
+    "absolute_saturation_claim": false
+  },
+  "resources": {
+    "model_input_tokens": {"value": "CANNOT_MEASURE", "reason": "automation harness does not expose exact per-cycle model token accounting"},
+    "model_output_tokens": {"value": "CANNOT_MEASURE", "reason": "automation harness does not expose exact per-cycle model token accounting"},
+    "compiled_context_tokens": {"value": "CANNOT_MEASURE", "reason": "no canonical v3 context compiler receipt was materialized for this application cycle"},
+    "web_tool_invocations_observed": 5,
+    "web_primary_source_search_queries_observed": 11,
+    "web_open_or_find_operations_observed": 6,
+    "github_connector_calls": {"value": "CANNOT_MEASURE", "reason": "the connector runtime does not expose a trustworthy aggregate call counter spanning the pre-compaction and post-compaction portions of this automation run"},
+    "elapsed_or_wall_time": {"value": "CANNOT_MEASURE", "reason": "no exact cycle timer is exposed to the research artifact"}
+  },
+  "new_records": {
+    "episode_ids": ["EP-NS-B1a3-CRITICAL-COMPACTNESS-INTERFACE-20260811"],
+    "lesson_ids": ["L-NS-B1a3-LOCAL-COMPACTNESS-IS-NOT-GLOBAL-RIGIDITY@PROPOSED_NOT_CONSOLIDATED"],
+    "failure_ids": ["F-NS-B1a3-PROFILE-LEAKAGE", "F-NS-B1a3-UNCONTROLLED-FAR-FIELD", "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH", "F-NS-B1a3-UNIQUE-CONTINUATION-HYPOTHESIS-GAP", "F-NS-B1a3-EQUATION-CHANGE-MISMATCH"],
+    "tool_ids": [],
+    "obstruction_ids": ["O-NS-B1a3-GLOBAL-CRITICAL-TIGHTNESS-INTERFACE"],
+    "motif_ids": [],
+    "successful_reuse_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT@NS-B1a3"],
+    "raw_record_growth_is_learning": false
+  },
+  "gates": {
+    "pre_candidate_chronology": "PASS",
+    "chronology_commits": {
+      "context": "0d83df1ef707ccf4fb72c4e11e6c694d36c2299c",
+      "memory": "087d983eb48a1000182ace4f54905fb35b04c66f",
+      "expert_cell": "3450f2d814f245a19899b974a9cb275922fa3891",
+      "pre_candidate_trace": "0cfaae6846c4a362e2314c8930230596edd90ad0",
+      "result": "60ff2b38d9eab6b43abb40c45240b99cb608ca18",
+      "failure_delta": "13c7dd0e08b2e83ce759e0000ddf578372217da3",
+      "dag_delta": "c60ce170060f18f7f8bc13209aa6f407901f4529",
+      "task_episode": "a24106b67805f153e308808cb157eed2d2891bc3",
+      "method_case_study": "1485326db96d501d423847d20f6a19fa1c6ba57a",
+      "trace_continuation": "497eaa84d3655b0221dc837925ce72df3af90ab7"
+    },
+    "provenance": "PASS_SOURCE_BOUND_PRIMARY_LITERATURE_IDENTIFIED; web claims were checked against primary arXiv/journal records and exact theorem interfaces are cited in the result artifact",
+    "same_context_review": "PASS_AS_SAME_CONTEXT_ONLY",
+    "independent_review": false,
+    "formal_verifier": "NOT_APPLICABLE_TO_THIS_INTERFACE_AUDIT",
+    "ci_status_at_receipt_write": "PENDING_PR_NOT_YET_OPENED",
+    "root_promotion_gate": "BLOCKED_OPEN_RESIDUALS_NO_ROOT_CERTIFICATE",
+    "root_authority": "NONE"
+  },
+  "rakl_action_attribution": {
+    "pre_memory_pre_gate_preference": "begin a minimal-critical-element/compactness construction after B1a2",
+    "post_memory_pre_gate_action": "run the prerequisite global-critical-tightness interface audit first",
+    "did_rakl_change_observable_action_preference": true,
+    "evidence": "retrieved B1a1/B1a2/pressure failures and T-XM-ROOT-BRIDGE-STABILITY-AUDIT explicitly routed away from another scalar-budget or premature minimal-element construction toward a theorem-signature gluing falsifier",
+    "causal_limit": "OBSERVED_WITHIN_RUN_ROUTING_CHANGE_ONLY; no frozen model-only or pre-memory matched arm exists for causal attribution"
+  }
+}
