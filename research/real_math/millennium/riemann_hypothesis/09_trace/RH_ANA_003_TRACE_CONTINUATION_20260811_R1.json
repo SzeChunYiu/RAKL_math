@@ -1,0 +1,55 @@
+{
+  "trace_id": "RH-ANA-003-TRACE-20260811-R1-CONTINUATION",
+  "parent_trace": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003_TRACE_20260811_R1.json",
+  "parent_final_event_hash": "sha256:65eae0bbed546592711c4bb39382ff3bc3d45762df02966798fb2d1d2d9c870c",
+  "events": [
+    {
+      "event_id": "RH-ANA-003-R1-E08",
+      "event_type": "FALSIFIER_RUN",
+      "observations": [
+        "Post-freeze primary-source audit verified Lagarias' finite-place formula and finite-height-to-index window, and Voros' positive-Z yet oscillatory Li transform.",
+        "Elementary hostile calculation established |1-1/rho|^2 = 1+(1-2 Re(rho))/|rho|^2; a left-of-line reflected zero has modulus >1."
+      ],
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003_INDEX_HEIGHT_CANCELLATION_AUDIT_20260811_R1.md"
+      ],
+      "previous_event_hash": "sha256:65eae0bbed546592711c4bb39382ff3bc3d45762df02966798fb2d1d2d9c870c",
+      "authority": "SEARCH_CONTROL_ONLY",
+      "artifact_hash": "sha256:fec417876ec160898597c84611433140d213d64f2da35d4ee76702a06689c157"
+    },
+    {
+      "event_id": "RH-ANA-003-R1-E09",
+      "event_type": "RESULT_RECORDED",
+      "observations": [
+        "PARTIAL_SUCCESS: finite-place obstruction localized to incomplete Li coefficient at height about sqrt(n); finite height T controls only a bounded n-window.",
+        "Density-only and finite-truncation closure rejected unless supplemented by an exact exclusion/cancellation/uniform-tail theorem."
+      ],
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003_TASK_EPISODE_20260811_R1.json"
+      ],
+      "previous_event_hash": "sha256:fec417876ec160898597c84611433140d213d64f2da35d4ee76702a06689c157",
+      "authority": "SEARCH_CONTROL_ONLY",
+      "artifact_hash": "sha256:9510564835536b88cdfc9c76cc4ba2ce6b23f8ac2d3b350798115047ead32614"
+    },
+    {
+      "event_id": "RH-ANA-003-R1-E10",
+      "event_type": "RESIDUAL_OPENED",
+      "observations": [
+        "Open residual: find a genuinely unconditional mechanism controlling the incomplete-Li finite-place term uniformly for all n without importing RH-equivalent zero exclusion.",
+        "Mollifier/resonance and zero-density methods may be revisited only after mapping them to this exact residual with applicability/DifferenceWitness checks."
+      ],
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003_LESSON_PROPOSAL_20260811_R1.json",
+        "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003_SATURATION_UPDATE_20260811_R1.json"
+      ],
+      "previous_event_hash": "sha256:9510564835536b88cdfc9c76cc4ba2ce6b23f8ac2d3b350798115047ead32614",
+      "authority": "SEARCH_CONTROL_ONLY",
+      "artifact_hash": "sha256:4d1788cb737a8b496e0816149914b38635ebdd6b4a1e636bfae2f0bd8f41ed0a"
+    }
+  ],
+  "final_event_hash": "sha256:4d1788cb737a8b496e0816149914b38635ebdd6b4a1e636bfae2f0bd8f41ed0a",
+  "candidate_event_present": false,
+  "promotion_event_present": false,
+  "authority": "APPEND_ONLY_RESULT_TRACE / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:576579263da50e1df4105eb32bb313ee58c762f70c956e870e9bed02efe35e56"
+}
