@@ -1,0 +1,50 @@
+{
+  "schema_version": "rakl-math-v3-experience-shadow-separation-v1",
+  "cycle_id": "PNP-O9d12a2a1a1b1-R2-RESTRICTION-POLARITY-20260811",
+  "authority": "PROPOSAL_SHADOW_ONLY_NO_CANONICAL_ADMISSION_NO_PROTECTED_PROMOTION",
+  "episode": {
+    "episode_id": "EP-PNP-O9d12a2a1a1b1-R2-RESTRICTION-POLARITY-20260811",
+    "artifact_hash": "e4d5d3043778170de8d2b765a6a740c4d9dd725b248390d45745da0491f5f5c2",
+    "role": "immutable attempted-action/outcome evidence root",
+    "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_R2_TASK_EPISODE_PROPOSAL_20260811.json"
+  },
+  "diagnosis": {
+    "diagnosis_id": "D-PNP-R2-RESTRICTED-LOWER-BOUND-WRONG-POLARITY",
+    "derived_from_episode_id": "EP-PNP-O9d12a2a1a1b1-R2-RESTRICTION-POLARITY-20260811",
+    "statement": "The rejected inference is not a false restricted theorem. It is a transfer error: minimizing over the larger full witness class gives rho_full <= rho_restricted, the opposite direction needed to pass a lower bound downward to rho_full.",
+    "category": "TRANSFER_DIAGNOSIS_NOT_MATHEMATICAL_REFUTATION"
+  },
+  "failure": {
+    "failure_id": "F-PNP-R2-DIRECT-RESTRICTED-LOWER-BOUND-TRANSFER",
+    "derived_from_diagnosis_id": "D-PNP-R2-RESTRICTED-LOWER-BOUND-WRONG-POLARITY",
+    "failure_family": ["gluing", "representation-boundary", "transfer-polarity"],
+    "local_math_failed": false,
+    "local_to_global_gluing_failed": true,
+    "falsifier": "W_res subseteq W_full implies rho_full <= rho_res",
+    "repeat_links": ["F-C025-FIRST-ORDER-CANONICAL-COLLAPSE", "RAKL_math#154-target/cyclic-gluing-warning"]
+  },
+  "obstruction": {
+    "obstruction_id": "O-PNP-R2-REVERSE-BRIDGE-MISSING",
+    "derived_from_failure_id": "F-PNP-R2-DIRECT-RESTRICTED-LOWER-BOUND-TRANSFER",
+    "statement": "To reuse a restricted-model lower bound for full Definition-21 rho, an independent reverse comparison rho_restricted <= g(rho_full) with useful explicit g, or a direct full-rho theorem, is required.",
+    "reusable_status": "PROPOSAL_OBSTRUCTION_ONLY"
+  },
+  "lesson": {
+    "lesson_id": "L-PNP-R2-RESTRICTION-POLARITY-BEFORE-LOWER-BOUND-TRANSFER",
+    "derived_from_obstruction_id": "O-PNP-R2-REVERSE-BRIDGE-MISSING",
+    "kind": "BOUNDARY",
+    "trigger_signature": ["lower bound proved in restricted model/witness class", "target consumer has larger/easier legal witness class"],
+    "action": "derive exact feasible-set/model inclusion and induced inequality direction before transfer; block lower-bound reuse unless a reverse bridge is independently established",
+    "falsifier": "produce an assumption-preserving reverse comparison or a direct full-model theorem",
+    "authority": "CANDIDATE_PROPOSAL_SHADOW_ONLY",
+    "supporting_episode_ids": ["EP-PNP-O9d12a2a1a1b1-R2-RESTRICTION-POLARITY-20260811"]
+  },
+  "motif": {
+    "motif_id": "M-PNP-RESTRICTION-POLARITY-FIRST",
+    "derived_from_lesson_id": "L-PNP-R2-RESTRICTION-POLARITY-BEFORE-LOWER-BOUND-TRANSFER",
+    "template": "restricted theorem -> type feasible-set inclusion -> derive monotonicity polarity -> require reverse bridge before lower-bound transfer",
+    "status": "PROPOSAL_MOTIF_SEARCH_GUIDANCE_ONLY"
+  },
+  "lineage_order": ["episode", "diagnosis", "failure", "obstruction", "lesson", "motif"],
+  "protected_retention": false
+}
