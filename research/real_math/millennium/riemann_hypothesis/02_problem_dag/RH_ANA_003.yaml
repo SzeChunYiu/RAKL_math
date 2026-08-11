@@ -1,7 +1,7 @@
 atom_id: RH-ANA-003
 parent_atom_id: RH-ANA-002
 root_issue: 3
-status: CONTEXT_REQUIRED
+status: OPEN_RESIDUAL_RECONTEXT_REQUIRED
 root_authority: NONE
 
 question: >-
@@ -25,24 +25,42 @@ known_boundary:
   - RH-ANA-001 already rejects finite Li-prefix positivity as a global surrogate.
   - Any finite prime truncation, termwise-positive decomposition, or computed prefix is non-authoritative until a rigorous all-n remainder/tail theorem is proved.
   - Exact regularization, sum/interchange order, archimedean terms, binomial weights and cancellation must be preserved.
+  - Lagarias' source-bound finite-place decomposition localizes the finite-place term through an incomplete Li coefficient at height about sqrt(n), plus O(sqrt(n) log n).
+  - In the same source, RH up to height T yields the corresponding RH-shaped finite-place bound only for n <= T^2/[4(log T)^2]; finite-height evidence therefore has an explicit bounded index window.
+  - Voros' positive and gently varying Z(j) coordinates still enter an oscillatory alternating/binomial transform for lambda_n, so source-coordinate positivity is not termwise Li positivity.
+  - A density or finite-height hypothesis compatible with one off-critical quartet still leaves an exponentially amplifying Li zero factor; density and zero exclusion remain distinct coordinates.
+
+r1_v3_cycle:
+  context_hash: sha256:156df74ce368255b5b85065b49775ff6516ff24956388cc6dbf2b4988b4c154b
+  episode_id: EP-RH-ANA-003-INDEX-HEIGHT-20260811-R1
+  lesson_proposal_id: L-RH-ANA-003-INDEX-HEIGHT-BOUNDARY-R1
+  outcome: PARTIAL_SUCCESS
+  scoped_novelty_class: RAKL_TRIVIAL
+  result_artifact: research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003_INDEX_HEIGHT_CANCELLATION_AUDIT_20260811_R1.md
+  method_case_study: research/real_math/millennium/riemann_hypothesis/09_trace/RAKL_METHOD_CASE_STUDY_RH_ANA_003_20260811_R1.md
+  saturation_reopened:
+    - KNOWLEDGE
+    - EXPERIENCE_PATTERN
+    - OBSTRUCTION
+    - RELATION
+    - PATH
 
 candidate_generation_gate:
   allowed: false
   reason: >-
-    RH-ANA-003 is a new representation child opened after the Suzuki
-    faithfulness audit. Before proposing any new inequality, decomposition,
-    recurrence, mollifier, resonance construction, tail theorem or positivity
-    mechanism, freeze a fresh MathContextFiber, equivalent and near-solved
-    analogues, method-transfer assumptions/disanalogies, cross-domain
-    structural analogy, same-context expert cell, dual success/failure memory
-    review and hash-chained pre-candidate trace under the current RAKL main.
+    The R1 candidate-free audit sharpened the active residual, so any materially
+    new inequality, decomposition, recurrence, mollifier, resonance construction,
+    zero-density transfer, tail theorem or positivity mechanism must re-freeze
+    the changed residual in a fresh current-framework MathContextFiber, re-run
+    dual memory and same-context review, and start a new hash-chained prospective
+    trace. The R1 packet cannot be reused to backfill authority for a later
+    candidate.
 
 next_pre_candidate_discriminators:
-  - Reconstruct the exact Bombieri-Lagarias arithmetic formula for lambda_n from primary sources and separate prime/Laurent, zeta-value and archimedean pieces without changing regularization.
-  - Locate the first family of n-dependent binomial/cancellation terms for which known unconditional bounds lose the sign or required uniformity.
-  - Compare any prime-side truncation with a hostile planted-cancellation model before treating finite numerical behavior as informative.
-  - Audit whether zero-free/zero-density estimates can control the required remainder at all n without silently strengthening to an RH-equivalent bound.
-  - Keep the Lagarias-Voros growth-class route as a contrastive alternative and state the minimum unconditional growth threshold needed to exclude an off-line zero contribution.
-  - Query mollifier/resonance and explicit-formula tool memory only after applicability and DifferenceWitness checks against the finite-surrogate and faithfulness failures.
+  - Search primary literature for unconditional estimates that act directly on the incomplete Li coefficient lambda_n(sqrt(n)) or an exactly equivalent finite-place residual, with uniformity for all n explicit.
+  - For every zero-density/zero-free theorem considered, state whether its hypothesis excludes every off-line zero or merely bounds their number, then apply the one-off-line-zero hostile falsifier.
+  - Admit mollifier/resonance machinery only after a target-specific applicability map identifies which exact incomplete-Li or finite-place quantity it controls and at what n/height scale.
+  - If no exact residual map survives, rotate to the Lagarias-Voros growth-class interface and source-audit the weakest unconditional growth condition known for the actual zeta Li coefficients.
+  - Preserve exact regularization, sum/interchange order, archimedean terms, binomial weights and cancellation in any future prime-side representation.
 
-authority: STRICT_CHILD_RESIDUAL_ONLY / NO_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE
+authority: STRICT_CHILD_RESIDUAL_ONLY / SOURCE_BOUND_ROUTE_DIAGNOSTIC / NO_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE
