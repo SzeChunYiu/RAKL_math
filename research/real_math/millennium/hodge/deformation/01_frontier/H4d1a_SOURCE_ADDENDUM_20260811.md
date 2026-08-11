@@ -25,15 +25,20 @@ R. Kloosterman, *Variational Hodge conjecture for complete intersections on hype
 
 Primary source: https://arxiv.org/abs/2104.14845
 
-### Movasati — hostile boundary: Hodge deformation can be larger than algebraic-cycle deformation
+### Movasati — hostile and zero-envelope calibration, with source-status guard
 
-H. Movasati, *On a Hodge locus*, arXiv:2211.11405, explicitly studies situations where the deformation space of the homology class of an algebraic cycle as a Hodge cycle is larger than its deformation space as an algebraic cycle, and describes a cubic-hypersurface case for further verification/computational study. This is useful here only as a hostile boundary/source-acquisition target: it reinforces that base-side Hodge directions cannot be identified with witness directions without a geometric comparison theorem. The article's computational evidence is not promoted to a Hodge theorem.
+H. Movasati, *Hodge cycles for cubic hypersurfaces*, arXiv:1902.00831, gives an explicit source domain in which a chosen pair of linear algebraic cycles is made rigid inside a selected deformation family while the corresponding Hodge locus can have positive-dimensional infinitesimal directions. This is useful as a **boundary calibration** for H4d1a: if the chosen witness is rigid in the selected family, the witness-reachable first-order envelope can be zero even when Hodge-preserving base directions are nonzero. Such a `ZERO` outcome demonstrates logical separation from full semiregularity but is deliberately treated as vacuous/boundary evidence rather than a coupled nonzero mechanism. The paper also contains higher-order/computational Hodge-locus evidence; those computations and conjectural interpretations are not promoted to theorem authority here.
 
-Primary source: https://arxiv.org/abs/2211.11405
+Primary source: https://arxiv.org/abs/1902.00831
+
+The earlier note *On a Hodge locus*, arXiv:2211.11405, was **withdrawn on 2025-02-25** and says that its material was incorporated into the newer collection *Leaf schemes and Hodge loci*, arXiv:2502.19988. The withdrawn item is retained only as provenance for the older search path and is not used as current primary authority. The successor collection is a current source for Hodge-locus/leaf-scheme context, but it does not by itself supply the required independently constructed nonsemiregular `0 < B_{T,m} < Ob_m` envelope.
+
+Current successor source: https://arxiv.org/abs/2502.19988
+Withdrawn provenance only: https://arxiv.org/abs/2211.11405
 
 ### Liu–Shen — explicit base-side Hodge equations remain base-side
 
-K. Liu and Y. Shen, *Sections of Hodge bundles II: deformation of (p,p)-classes and applications to Kähler geometry*, arXiv:2602.13951, develops an intrinsic Hodge map on Kuranishi families and an analytic/Beltrami description of Hodge loci. This may help specify the allowed directions of `T`, but it does not independently produce an algebraic-cycle witness or identify the witness obstruction image.
+K. Liu and Y. Shen, *Sections of Hodge bundles II: deformation of (p,p)-classes and applications to Kähler geometry*, arXiv:2602.13951v2 (revised 2026-07-19), develops an intrinsic Hodge map on Kuranishi families and an analytic/Beltrami description of Hodge loci. This may help specify the allowed directions of `T`, but it does not independently produce an algebraic-cycle witness or identify the witness obstruction image.
 
 Primary source: https://arxiv.org/abs/2602.13951
 
@@ -45,9 +50,10 @@ The inspected source set supports a sharper calibration interface but not a new 
 2. compute the chosen witness deformation/obstruction map independently;
 3. define `B_{T,1}` as an image/reachable subobject of that pre-existing map, not from successful lifts;
 4. classify `B_{T,1}` as full, zero, or proper nonzero;
-5. if proper, test intersection with the detector kernel;
-6. only then open a separate higher-Artin-order stability atom.
+5. use Movasati's rigid-cycle family only as a `ZERO` boundary calibration, not as evidence for the desired coupled nonzero case;
+6. if a proper nonzero envelope is found, test its intersection with the detector kernel;
+7. only then open a separate higher-Artin-order stability atom.
 
-No inspected primary source yet supplies a general coupled nonsemiregular example with `0 < B_{T,m} < Ob_m` and all-order stability. A failure to locate such a source is a source-acquisition/residual result, not permission to invent an ungrounded criterion.
+No inspected current primary source yet supplies a general coupled nonsemiregular example with `0 < B_{T,m} < Ob_m` and all-order stability. A failure to locate such a source is a source-acquisition/residual result, not permission to invent an ungrounded criterion.
 
 Authority: `PRIMARY_SOURCE_ADDENDUM / PRE_CANDIDATE_SEARCH_CONTROL / NO_THEOREM_CANDIDATE / NO_NOVELTY_CLAIM / ROOT_AUTHORITY_NONE`.
