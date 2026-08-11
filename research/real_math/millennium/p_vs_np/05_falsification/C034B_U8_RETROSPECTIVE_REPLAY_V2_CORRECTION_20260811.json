@@ -1,0 +1,481 @@
+{
+  "schema_version": "2.0.0",
+  "receipt_id": "PNP-C034B-U8-RETROSPECTIVE-EXACT-REPLAY-V2-CORRECTION-20260811",
+  "recorded_at": "2026-08-11T15:48:41Z",
+  "framework_pin": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+  "correction_base_commit": "0fee64d32a5697ac678c65b97e9d61b2700f0a23",
+  "correction_implementation": {
+    "path": "research/real_math/millennium/p_vs_np/05_falsification/c034b_u8_retrospective_v2_correction.py",
+    "raw_sha256": "sha256:c19aeb962a9b80c24eab9f7a3b38222e052692f48df35372175aaf0f918b02d1"
+  },
+  "correction_schema": {
+    "path": "schemas/pnp-c034b-u8-retrospective-v2-correction.schema.json",
+    "raw_sha256": "sha256:3ec7d745d3617e6aaa8fbbcb3fdb179e39cbdbe6854ff21057136f4cab00f71e"
+  },
+  "supersession": {
+    "supersedes_receipt_id": "PNP-C034B-U8-RETROSPECTIVE-EXACT-REPLAY-20260811",
+    "historical_bytes_preserved": true,
+    "v1_review_preserved_as_failed_history": true,
+    "blocking_reasons": [
+      "V1 recorded_at is 8078 seconds after the commit containing V1",
+      "V1 schema accepts integer and terminal-LF artifact hashes",
+      "V1 tests do not execute the application-base/source/prior-assessment Git bindings"
+    ]
+  },
+  "superseded_v1_bindings": {
+    "receipt": {
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/C034B_U8_RETROSPECTIVE_REPLAY_RECEIPT_20260811.json",
+      "commit": "b23a081eb875f6492172e6a93b2fa9bdef0deb67",
+      "git_blob_sha": "f81a8a4a01655c5d656ab4624a50dfcd8e80d830",
+      "raw_sha256": "sha256:679c834889e65b364ec9df40b5673280b7e064d7afb4247b7f7d722fc81a6ee0",
+      "artifact_hash": "sha256:90876b5870687e5657cfe6689c887866f6366fd8c05933fd6554b4e8dcc6c43b"
+    },
+    "implementation": {
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/c034b_u8_retrospective_replay.py",
+      "commit": "b23a081eb875f6492172e6a93b2fa9bdef0deb67",
+      "git_blob_sha": "431f5a611bed4f8803347c38906a76fec9665472",
+      "raw_sha256": "sha256:6305b6013909c2659c88b96eee445f625b1f7543b55a5fa22c56378e2a634ac6"
+    },
+    "schema": {
+      "path": "schemas/pnp-c034b-u8-retrospective-replay.schema.json",
+      "commit": "b23a081eb875f6492172e6a93b2fa9bdef0deb67",
+      "git_blob_sha": "e4bd8e46d09f3987fa49176e7278fe1af5c3fdfe",
+      "raw_sha256": "sha256:491c48cc0984cd7205bad0080758d7df8b85133a63bcac5676bea715b81ebbda"
+    },
+    "test": {
+      "path": "tests/math_applications/test_pnp_c034b_u8_retrospective_replay.py",
+      "commit": "b23a081eb875f6492172e6a93b2fa9bdef0deb67",
+      "git_blob_sha": "11f9aca701d06c42e843dec7496893edad5a2660",
+      "raw_sha256": "sha256:a90ae2b4ebb169ed881b319fc4637c68980086468d417802f774126eae1c22e4"
+    },
+    "review": {
+      "path": "research/real_math/millennium/p_vs_np/08_reviews/C034B_U8_RETROSPECTIVE_HOSTILE_REVIEW_20260811.md",
+      "commit": "abc704ac780b56c84faeb34cdeafd21ce96dccef",
+      "git_blob_sha": "8fa93bd911f65e6f23682dbc3a2a64648f227c28",
+      "raw_sha256": "sha256:f1486cbf1091fbfeca966927a651e7239c56ac3b6dc23569e8a97bb45f734af3"
+    }
+  },
+  "chronology_correction": {
+    "source_introduction_time": "2026-08-11T15:50:53+02:00",
+    "assessment_introduction_time": "2026-08-11T15:54:43+02:00",
+    "application_base_commit_time": "2026-08-11T17:07:02+02:00",
+    "v1_result_commit_time": "2026-08-11T17:20:22+02:00",
+    "v1_review_commit_time": "2026-08-11T17:24:44+02:00",
+    "integrated_base_commit_time": "2026-08-11T17:42:36+02:00",
+    "v1_recorded_at": "2026-08-11T17:35:00+00:00",
+    "v1_future_offset_seconds": 8078,
+    "v1_chronology_verdict": "INVALID_FUTURE_RELATIVE_TO_CONTAINING_COMMIT",
+    "v2_chronology_verdict": "REALIZABLE_AFTER_INTEGRATED_BASE"
+  },
+  "source_binding": {
+    "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "application_base_commit": "1d248204b35426695419f1a5a477e49cf163d39b",
+    "application_base_tree": "3a9a94633603a7795b684bdefd0d91c31635c6fc",
+    "source_introduction_commit": "e923f658f62c4e0eedfde090522feb7b9569c87e",
+    "source_introduction_tree": "3ae7195e633a67a69820db35a5edc80842e75f56",
+    "source_path": "research/real_math/millennium/p_vs_np/00_sources/RAKL_PVSNP_C034_C040_EXTERNAL_LEDGER_20260811.md",
+    "source_git_blob_sha": "f97f7183e61313e0e43d4a8f9b27ba8dcff64671",
+    "source_raw_sha256": "sha256:3db396674e15231f7cda79964d20c252ef99f6cd9058f20aa27173376075429d",
+    "assessment_introduction_commit": "569559e0787d09c2979cbfc2d209fc0bdaab889f",
+    "assessment_introduction_tree": "73bff7e3b9d8c6bd53ea1402b1f7f4db386f4a0b",
+    "assessment_path": "research/real_math/millennium/p_vs_np/08_reviews/C034_C040_EXTERNAL_LEDGER_ASSESSMENT_20260811.json",
+    "assessment_git_blob_sha": "7ebbbfaa75fd2744a77295a31889edc2c325b8c4",
+    "assessment_raw_sha256": "sha256:c64edcf80f2048562182c16a32d5f58416324f3a5c876a430f96902af095cae5",
+    "assessment_artifact_hash": "sha256:31c75fcccae6866eb0464dbd661b02ad0312f535de4944b2400194ce522ec14b",
+    "v1_result_commit": "b23a081eb875f6492172e6a93b2fa9bdef0deb67",
+    "integrated_base_commit": "0fee64d32a5697ac678c65b97e9d61b2700f0a23",
+    "integrated_base_tree": "5d312e9d26d28e312ffd1932b9a2ee460097c2bd",
+    "target_exposed_before_replay": true
+  },
+  "object_qoi_context": {
+    "object": "the reconstructed finite full-semi-filter fractional cover LP induced by U8",
+    "qoi": "exact optimum of that source-bound reconstructed finite evaluator",
+    "evidence_boundary": "retrospective regeneration after the target 49/24 and reported 21/24 support counts were exposed"
+  },
+  "certificate_boundary": {
+    "regenerated_primal_support": 17,
+    "regenerated_dual_support": 20,
+    "ledger_reported_primal_support": 21,
+    "ledger_reported_dual_support": 24,
+    "interpretation": "DIFFERENT_MATCHING_CERTIFICATE_REPRESENTATION_NOT_ORIGINAL_CERTIFICATE_RECOVERY"
+  },
+  "validation_worlds": {
+    "finite_replay_pass": {
+      "verdict": "PASS",
+      "complement_edge_count": 8,
+      "relevant_generator_pair_count": 12,
+      "full_union_pair_count": 3025,
+      "primal_support_count": 17,
+      "dual_support_count": 20,
+      "primal_total": "49/24",
+      "dual_total": "49/24",
+      "minimum_scaled_primal_coverage": 24,
+      "maximum_scaled_dual_load": 24,
+      "generator_separation_lower_bounds": [
+        24,
+        25,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24
+      ],
+      "generator_separation": [
+        {
+          "generator_pair": [
+            1,
+            10
+          ],
+          "certified_floor_or_falsifier_cost": 24,
+          "states_explored": 21,
+          "tracked_mask_count": 35,
+          "subthreshold_witness_minimal_masks": []
+        },
+        {
+          "generator_pair": [
+            1,
+            32
+          ],
+          "certified_floor_or_falsifier_cost": 25,
+          "states_explored": 3,
+          "tracked_mask_count": 35,
+          "subthreshold_witness_minimal_masks": []
+        },
+        {
+          "generator_pair": [
+            1,
+            68
+          ],
+          "certified_floor_or_falsifier_cost": 24,
+          "states_explored": 7,
+          "tracked_mask_count": 35,
+          "subthreshold_witness_minimal_masks": []
+        },
+        {
+          "generator_pair": [
+            1,
+            144
+          ],
+          "certified_floor_or_falsifier_cost": 24,
+          "states_explored": 13,
+          "tracked_mask_count": 35,
+          "subthreshold_witness_minimal_masks": []
+        },
+        {
+          "generator_pair": [
+            6,
+            1
+          ],
+          "certified_floor_or_falsifier_cost": 24,
+          "states_explored": 9,
+          "tracked_mask_count": 35,
+          "subthreshold_witness_minimal_masks": []
+        },
+        {
+          "generator_pair": [
+            6,
+            32
+          ],
+          "certified_floor_or_falsifier_cost": 24,
+          "states_explored": 5,
+          "tracked_mask_count": 35,
+          "subthreshold_witness_minimal_masks": []
+        },
+        {
+          "generator_pair": [
+            6,
+            144
+          ],
+          "certified_floor_or_falsifier_cost": 24,
+          "states_explored": 31,
+          "tracked_mask_count": 35,
+          "subthreshold_witness_minimal_masks": []
+        },
+        {
+          "generator_pair": [
+            24,
+            1
+          ],
+          "certified_floor_or_falsifier_cost": 24,
+          "states_explored": 17,
+          "tracked_mask_count": 35,
+          "subthreshold_witness_minimal_masks": []
+        },
+        {
+          "generator_pair": [
+            24,
+            32
+          ],
+          "certified_floor_or_falsifier_cost": 24,
+          "states_explored": 19,
+          "tracked_mask_count": 35,
+          "subthreshold_witness_minimal_masks": []
+        },
+        {
+          "generator_pair": [
+            24,
+            68
+          ],
+          "certified_floor_or_falsifier_cost": 24,
+          "states_explored": 53,
+          "tracked_mask_count": 35,
+          "subthreshold_witness_minimal_masks": []
+        },
+        {
+          "generator_pair": [
+            224,
+            1
+          ],
+          "certified_floor_or_falsifier_cost": 24,
+          "states_explored": 11,
+          "tracked_mask_count": 35,
+          "subthreshold_witness_minimal_masks": []
+        },
+        {
+          "generator_pair": [
+            224,
+            10
+          ],
+          "certified_floor_or_falsifier_cost": 24,
+          "states_explored": 25,
+          "tracked_mask_count": 35,
+          "subthreshold_witness_minimal_masks": []
+        }
+      ],
+      "tight_dual_witness_coverage": [
+        {
+          "minimal_masks": [
+            1,
+            10
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            1,
+            68
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            1,
+            144
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            6,
+            144
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            24,
+            68
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            224,
+            1
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            224,
+            10
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            4,
+            32,
+            64,
+            147
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            16,
+            32,
+            128
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            2,
+            8,
+            16
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            2,
+            4,
+            8
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            1,
+            6,
+            12
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            1,
+            18,
+            24
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            4,
+            32,
+            64
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            4,
+            48,
+            64,
+            128
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            16,
+            64,
+            128
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            1,
+            38,
+            44,
+            52,
+            68,
+            132
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            2,
+            12,
+            49,
+            52,
+            56,
+            84,
+            112,
+            144
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            8,
+            18,
+            37,
+            38,
+            52,
+            68,
+            148,
+            164
+          ],
+          "scaled_coverage": 24
+        },
+        {
+          "minimal_masks": [
+            4,
+            80,
+            144,
+            235
+          ],
+          "scaled_coverage": 24
+        }
+      ],
+      "primal_feasible": true,
+      "dual_feasible": true,
+      "matching_totals": true,
+      "exact_optimum": "49/24"
+    },
+    "finite_replay_planted_fail": {
+      "verdict": "FAIL",
+      "falsifier": "PLANTED_PRIMAL_WEIGHT_REDUCTION_DETECTED",
+      "minimum_scaled_primal_coverage": 20,
+      "witness": {
+        "generator_pair": [
+          1,
+          144
+        ],
+        "certified_floor_or_falsifier_cost": 20,
+        "states_explored": 8,
+        "tracked_mask_count": 35,
+        "subthreshold_witness_minimal_masks": [
+          1,
+          144
+        ]
+      }
+    },
+    "git_binding_pass": {
+      "verdict": "PASS",
+      "checked_relations": 14
+    },
+    "planted_fail": {
+      "verdict": "FAIL",
+      "reason": "SOURCE_RAW_SHA256_MISMATCH"
+    },
+    "structural_cannot_check": {
+      "verdict": "CANNOT_CHECK",
+      "reason": "MISSING_GIT_BINDING_FIELDS"
+    }
+  },
+  "claim_update": {
+    "v1_receipt_status": "SUPERSEDED_BY_V2_CORRECTION_FAILED_HISTORY_RETAINED",
+    "reconstructed_finite_lp_status": "RETROSPECTIVE_EXACT_REPLAY_PASS_SOURCE_AND_CHRONOLOGY_BOUND",
+    "reported_external_certificate_status": "STILL_MISSING_NOT_REPRODUCED",
+    "reported_external_support_counts_status": "UNVERIFIED_21_PRIMAL_24_DUAL",
+    "root_status": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE"
+  },
+  "review_authority": "SAME_CONTEXT_INTERNAL_CORRECTION_NOT_INDEPENDENT_PEER_REVIEW",
+  "authority_contract": {
+    "grants_proof_authority": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_theorem_authority": false,
+    "grants_asymptotic_authority": false,
+    "grants_novelty_authority": false,
+    "grants_review_independence": false,
+    "grants_strict_rakl_discovery_credit": false,
+    "promotes_missing_external_certificate": false
+  },
+  "residuals": [
+    "recover the original external 21-primal and 24-dual certificates and their verifier receipts",
+    "formally or independently assure the C034a reduction before extending beyond the reconstructed full-union LP",
+    "obtain isolated external review before stronger finite-claim promotion"
+  ],
+  "artifact_hash": "sha256:746b4780cc4908b1afedb300ab9f08914a44b14bedd4dab37dbcf106fb90f2c9"
+}

@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rakl-math.local/schemas/pnp-c034b-u8-retrospective-v2-correction.schema.json",
+  "title": "P-vs-NP C034b U8 retrospective replay V2 correction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "receipt_id", "recorded_at", "framework_pin",
+    "correction_base_commit", "correction_implementation", "correction_schema", "supersession",
+    "superseded_v1_bindings", "chronology_correction", "source_binding",
+    "object_qoi_context", "certificate_boundary", "validation_worlds",
+    "claim_update", "review_authority", "authority_contract", "residuals",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "2.0.0"},
+    "receipt_id": {"const": "PNP-C034B-U8-RETROSPECTIVE-EXACT-REPLAY-V2-CORRECTION-20260811"},
+    "recorded_at": {"const": "2026-08-11T15:48:41Z", "format": "date-time"},
+    "framework_pin": {"const": "9027cc6beab7e935d714bbdf8e902b89b50caaa8"},
+    "correction_base_commit": {"const": "0fee64d32a5697ac678c65b97e9d61b2700f0a23"},
+    "correction_implementation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "raw_sha256"],
+      "properties": {
+        "path": {"const": "research/real_math/millennium/p_vs_np/05_falsification/c034b_u8_retrospective_v2_correction.py"},
+        "raw_sha256": {"$ref": "#/$defs/prefixedSha256"}
+      }
+    },
+    "correction_schema": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "raw_sha256"],
+      "properties": {
+        "path": {"const": "schemas/pnp-c034b-u8-retrospective-v2-correction.schema.json"},
+        "raw_sha256": {"$ref": "#/$defs/prefixedSha256"}
+      }
+    },
+    "supersession": {
+      "type": "object", "additionalProperties": false,
+      "required": ["supersedes_receipt_id", "historical_bytes_preserved", "v1_review_preserved_as_failed_history", "blocking_reasons"],
+      "properties": {
+        "supersedes_receipt_id": {"const": "PNP-C034B-U8-RETROSPECTIVE-EXACT-REPLAY-20260811"},
+        "historical_bytes_preserved": {"const": true},
+        "v1_review_preserved_as_failed_history": {"const": true},
+        "blocking_reasons": {"type": "array", "minItems": 3, "maxItems": 3, "uniqueItems": true, "items": {"type": "string", "minLength": 30}}
+      }
+    },
+    "superseded_v1_bindings": {
+      "type": "object", "additionalProperties": false,
+      "required": ["receipt", "implementation", "schema", "test", "review"],
+      "properties": {
+        "receipt": {"$ref": "#/$defs/receiptBinding"},
+        "implementation": {"$ref": "#/$defs/historicalBinding"},
+        "schema": {"$ref": "#/$defs/historicalBinding"},
+        "test": {"$ref": "#/$defs/historicalBinding"},
+        "review": {"$ref": "#/$defs/historicalBinding"}
+      }
+    },
+    "chronology_correction": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "source_introduction_time", "assessment_introduction_time",
+        "application_base_commit_time", "v1_result_commit_time",
+        "v1_review_commit_time", "integrated_base_commit_time",
+        "v1_recorded_at", "v1_future_offset_seconds", "v1_chronology_verdict",
+        "v2_chronology_verdict"
+      ],
+      "properties": {
+        "source_introduction_time": {"const": "2026-08-11T15:50:53+02:00", "format": "date-time"},
+        "assessment_introduction_time": {"const": "2026-08-11T15:54:43+02:00", "format": "date-time"},
+        "application_base_commit_time": {"const": "2026-08-11T17:07:02+02:00", "format": "date-time"},
+        "v1_result_commit_time": {"const": "2026-08-11T17:20:22+02:00", "format": "date-time"},
+        "v1_review_commit_time": {"const": "2026-08-11T17:24:44+02:00", "format": "date-time"},
+        "integrated_base_commit_time": {"const": "2026-08-11T17:42:36+02:00", "format": "date-time"},
+        "v1_recorded_at": {"const": "2026-08-11T17:35:00+00:00", "format": "date-time"},
+        "v1_future_offset_seconds": {"const": 8078},
+        "v1_chronology_verdict": {"const": "INVALID_FUTURE_RELATIVE_TO_CONTAINING_COMMIT"},
+        "v2_chronology_verdict": {"const": "REALIZABLE_AFTER_INTEGRATED_BASE"}
+      }
+    },
+    "source_binding": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "repository_url", "application_base_commit", "application_base_tree",
+        "source_introduction_commit", "source_introduction_tree", "source_path",
+        "source_git_blob_sha", "source_raw_sha256",
+        "assessment_introduction_commit", "assessment_introduction_tree",
+        "assessment_path", "assessment_git_blob_sha", "assessment_raw_sha256",
+        "assessment_artifact_hash", "v1_result_commit", "integrated_base_commit",
+        "integrated_base_tree", "target_exposed_before_replay"
+      ],
+      "properties": {
+        "repository_url": {"const": "https://github.com/SzeChunYiu/RAKL_math.git"},
+        "application_base_commit": {"const": "1d248204b35426695419f1a5a477e49cf163d39b"},
+        "application_base_tree": {"const": "3a9a94633603a7795b684bdefd0d91c31635c6fc"},
+        "source_introduction_commit": {"const": "e923f658f62c4e0eedfde090522feb7b9569c87e"},
+        "source_introduction_tree": {"const": "3ae7195e633a67a69820db35a5edc80842e75f56"},
+        "source_path": {"const": "research/real_math/millennium/p_vs_np/00_sources/RAKL_PVSNP_C034_C040_EXTERNAL_LEDGER_20260811.md"},
+        "source_git_blob_sha": {"const": "f97f7183e61313e0e43d4a8f9b27ba8dcff64671"},
+        "source_raw_sha256": {"const": "sha256:3db396674e15231f7cda79964d20c252ef99f6cd9058f20aa27173376075429d"},
+        "assessment_introduction_commit": {"const": "569559e0787d09c2979cbfc2d209fc0bdaab889f"},
+        "assessment_introduction_tree": {"const": "73bff7e3b9d8c6bd53ea1402b1f7f4db386f4a0b"},
+        "assessment_path": {"const": "research/real_math/millennium/p_vs_np/08_reviews/C034_C040_EXTERNAL_LEDGER_ASSESSMENT_20260811.json"},
+        "assessment_git_blob_sha": {"const": "7ebbbfaa75fd2744a77295a31889edc2c325b8c4"},
+        "assessment_raw_sha256": {"const": "sha256:c64edcf80f2048562182c16a32d5f58416324f3a5c876a430f96902af095cae5"},
+        "assessment_artifact_hash": {"const": "sha256:31c75fcccae6866eb0464dbd661b02ad0312f535de4944b2400194ce522ec14b"},
+        "v1_result_commit": {"const": "b23a081eb875f6492172e6a93b2fa9bdef0deb67"},
+        "integrated_base_commit": {"const": "0fee64d32a5697ac678c65b97e9d61b2700f0a23"},
+        "integrated_base_tree": {"const": "5d312e9d26d28e312ffd1932b9a2ee460097c2bd"},
+        "target_exposed_before_replay": {"const": true}
+      }
+    },
+    "object_qoi_context": {"$ref": "#/$defs/stringObject"},
+    "certificate_boundary": {
+      "type": "object", "additionalProperties": false,
+      "required": ["regenerated_primal_support", "regenerated_dual_support", "ledger_reported_primal_support", "ledger_reported_dual_support", "interpretation"],
+      "properties": {
+        "regenerated_primal_support": {"const": 17},
+        "regenerated_dual_support": {"const": 20},
+        "ledger_reported_primal_support": {"const": 21},
+        "ledger_reported_dual_support": {"const": 24},
+        "interpretation": {"const": "DIFFERENT_MATCHING_CERTIFICATE_REPRESENTATION_NOT_ORIGINAL_CERTIFICATE_RECOVERY"}
+      }
+    },
+    "validation_worlds": {
+      "type": "object", "additionalProperties": false,
+      "required": ["finite_replay_pass", "finite_replay_planted_fail", "git_binding_pass", "planted_fail", "structural_cannot_check"],
+      "properties": {
+        "finite_replay_pass": {
+          "type": "object", "required": ["verdict", "exact_optimum", "primal_support_count", "dual_support_count"],
+          "properties": {"verdict": {"const": "PASS"}, "exact_optimum": {"const": "49/24"}, "primal_support_count": {"const": 17}, "dual_support_count": {"const": 20}}
+        },
+        "finite_replay_planted_fail": {"type": "object", "required": ["verdict", "falsifier"], "properties": {"verdict": {"const": "FAIL"}, "falsifier": {"const": "PLANTED_PRIMAL_WEIGHT_REDUCTION_DETECTED"}}},
+        "git_binding_pass": {"$ref": "#/$defs/gitPass"},
+        "planted_fail": {"type": "object", "additionalProperties": false, "required": ["verdict", "reason"], "properties": {"verdict": {"const": "FAIL"}, "reason": {"const": "SOURCE_RAW_SHA256_MISMATCH"}}},
+        "structural_cannot_check": {"type": "object", "additionalProperties": false, "required": ["verdict", "reason"], "properties": {"verdict": {"const": "CANNOT_CHECK"}, "reason": {"const": "MISSING_GIT_BINDING_FIELDS"}}}
+      }
+    },
+    "claim_update": {
+      "type": "object", "additionalProperties": false,
+      "required": ["v1_receipt_status", "reconstructed_finite_lp_status", "reported_external_certificate_status", "reported_external_support_counts_status", "root_status"],
+      "properties": {
+        "v1_receipt_status": {"const": "SUPERSEDED_BY_V2_CORRECTION_FAILED_HISTORY_RETAINED"},
+        "reconstructed_finite_lp_status": {"const": "RETROSPECTIVE_EXACT_REPLAY_PASS_SOURCE_AND_CHRONOLOGY_BOUND"},
+        "reported_external_certificate_status": {"const": "STILL_MISSING_NOT_REPRODUCED"},
+        "reported_external_support_counts_status": {"const": "UNVERIFIED_21_PRIMAL_24_DUAL"},
+        "root_status": {"const": "OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE"}
+      }
+    },
+    "review_authority": {"const": "SAME_CONTEXT_INTERNAL_CORRECTION_NOT_INDEPENDENT_PEER_REVIEW"},
+    "authority_contract": {
+      "type": "object", "additionalProperties": false,
+      "required": ["grants_proof_authority", "grants_p_vs_np_root_authority", "grants_theorem_authority", "grants_asymptotic_authority", "grants_novelty_authority", "grants_review_independence", "grants_strict_rakl_discovery_credit", "promotes_missing_external_certificate"],
+      "properties": {
+        "grants_proof_authority": {"const": false},
+        "grants_p_vs_np_root_authority": {"const": false},
+        "grants_theorem_authority": {"const": false},
+        "grants_asymptotic_authority": {"const": false},
+        "grants_novelty_authority": {"const": false},
+        "grants_review_independence": {"const": false},
+        "grants_strict_rakl_discovery_credit": {"const": false},
+        "promotes_missing_external_certificate": {"const": false}
+      }
+    },
+    "residuals": {"type": "array", "minItems": 3, "uniqueItems": true, "items": {"type": "string", "minLength": 30}},
+    "artifact_hash": {"$ref": "#/$defs/prefixedSha256"}
+  },
+  "$defs": {
+    "gitSha": {"type": "string", "minLength": 40, "maxLength": 40, "pattern": "^[0-9a-f]{40}$"},
+    "prefixedSha256": {"type": "string", "minLength": 71, "maxLength": 71, "pattern": "^sha256:[0-9a-f]{64}$"},
+    "historicalBinding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "commit", "git_blob_sha", "raw_sha256"],
+      "properties": {"path": {"type": "string", "minLength": 10}, "commit": {"$ref": "#/$defs/gitSha"}, "git_blob_sha": {"$ref": "#/$defs/gitSha"}, "raw_sha256": {"$ref": "#/$defs/prefixedSha256"}}
+    },
+    "receiptBinding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "commit", "git_blob_sha", "raw_sha256", "artifact_hash"],
+      "properties": {"path": {"type": "string", "minLength": 10}, "commit": {"$ref": "#/$defs/gitSha"}, "git_blob_sha": {"$ref": "#/$defs/gitSha"}, "raw_sha256": {"$ref": "#/$defs/prefixedSha256"}, "artifact_hash": {"$ref": "#/$defs/prefixedSha256"}}
+    },
+    "stringObject": {"type": "object", "minProperties": 3, "additionalProperties": {"type": "string", "minLength": 1}},
+    "gitPass": {"type": "object", "additionalProperties": false, "required": ["verdict", "checked_relations"], "properties": {"verdict": {"const": "PASS"}, "checked_relations": {"const": 14}}}
+  }
+}
