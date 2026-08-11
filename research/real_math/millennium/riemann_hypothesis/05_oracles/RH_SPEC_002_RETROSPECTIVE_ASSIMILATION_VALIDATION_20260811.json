@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "validation_id": "VALIDATE-RH-SPEC-002-RETROSPECTIVE-ASSIMILATION-20260811",
+  "atom_id": "RH-SPEC-002",
+  "application_base": "d8ac4102285c4ed1ba0fbd5d8818dc4c4731a8cc",
+  "framework_pin": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+  "subjects": {
+    "calibration_hash": "sha256:a8359d4cfaa57079f1f65b55c0be3cdb8bc6f5cda0b5ffc7806ea67b3e5b0858",
+    "chronology_audit_hash": "sha256:d16c0c2bfe8fcd52066b8d3f6a1ce345c5e5bfc5e089167d0e2d99f1e9a3ac84",
+    "failure_lattice_hash": "sha256:0e9cd4aaa8e662d7ba57155ce73f0f469f5d22a6ab7b800b36a304ccf29decc4",
+    "research_tool_inventory_hash": "sha256:66c094ad8776fa789ee551319e1089b3f6a9de865985acd3531e2bbec53c905f"
+  },
+  "focused_command": "python tools/run_application_tests.py --framework framework/RAKL -- tests/math_applications/test_rh_spec_001_strict_packet.py tests/math_applications/test_rh_spec_001_bridge_matrix.py tests/math_applications/test_rh_spec_002_strict_packet.py tests/math_applications/test_rh_spec_002_limit_calibration.py",
+  "focused_result": {
+    "exit_code": 0,
+    "passed": 10,
+    "failed": 0
+  },
+  "full_command": "python tools/run_application_tests.py --framework framework/RAKL",
+  "full_result": {
+    "exit_code": 0,
+    "passed": 175,
+    "failed": 0
+  },
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONINTMAXSTRDIGITS": "0"
+  },
+  "interpretation": [
+    "exact pin, self-hash, scope and regression checks pass for the repaired retrospective assimilation",
+    "test success does not repair PR15 chronology and creates no RH evidence",
+    "same-context hostile review is not independent review"
+  ],
+  "authority": "EXACT_LOCAL_VALIDATION_RECEIPT / NO_RH_EVIDENCE / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:9b8c02214ad8add4ddeb6f9df3650f4f042b5651430ce3a0b56dd45479d92d13"
+}

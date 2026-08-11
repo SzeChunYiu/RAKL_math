@@ -1,0 +1,314 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-RH-SPEC-002-STRONG-RESOLVENT-INCOMPLETE",
+      "atom_id": "RH-SPEC-002",
+      "candidate_id": "RETROSPECTIVE:RH-SPEC-002-LIMIT-STABILITY-CAL001",
+      "context_packet_hash": "sha256:99eb4c30af5c745c5d1f6b546fa8df0e775494c07f51fe9548c50ce81bfba224",
+      "research_trace_event_id": "RH-SPEC-002-E08",
+      "method_family": "strong-resolvent or Mosco/form convergence as a complete spectral-transport certificate",
+      "failure_mode": "approximant eigenvalues can disappear under strong-resolvent convergence, so the topology does not by itself transport the complete approximant spectrum to the limit",
+      "residual_signature": [
+        "finite/restricted self-adjoint approximants",
+        "global limiting self-adjoint operator",
+        "convergence weaker than complete spectral exactness",
+        "approximant point spectrum can escape or disappear"
+      ],
+      "broken_assumptions": [
+        "self-adjointness plus strong-resolvent convergence preserves every finite-stage eigenvalue",
+        "a generic operator topology alone identifies the complete limiting RH spectrum"
+      ],
+      "scope_conditions": [
+        "generic self-adjoint operator families where only strong-resolvent or form/Mosco convergence is proved",
+        "arguments that infer complete spectral transport without additional compactness, determinant, or no-escape structure",
+        "the exact five-case identity is retrospective and was not committed before the PR15 result"
+      ],
+      "competing_diagnoses": [
+        "the defect is specific to rank-one wandering projections and may be excluded by the RH family's extra arithmetic structure",
+        "stronger compactness or norm-resolvent hypotheses could repair the transport",
+        "an analytic determinant convergence theorem may bypass operator-spectrum transport entirely"
+      ],
+      "selected_diagnosis": "strong-resolvent convergence loses the completeness coordinate; it remains usable only when the target family supplies additional spectral-exactness structure",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.json",
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.md",
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_SPEC_002_PR15_CHRONOLOGY_HASH_AUDIT_20260811.json",
+        "sha256:d16c0c2bfe8fcd52066b8d3f6a1ce345c5e5bfc5e089167d0e2d99f1e9a3ac84"
+      ],
+      "falsifier_or_attempt": "use A_n=P_n on l2(N), with P_n the projection onto the wandering basis vector e_n, and compute the strong-resolvent limit A_n -> 0 while eigenvalue 1 disappears",
+      "observed_result": "every approximant has eigenvalue 1, but the strong-resolvent limit has spectrum {0}",
+      "local_repair_attempts": [
+        "require route-specific compactness/no-escape hypotheses before using operator convergence as a complete spectral certificate",
+        "prefer locally uniform source-normalized determinant/entire-function convergence when available",
+        "next discriminator: repeat any native or certifying use under a newly frozen exact evaluator rather than treating this retrospective record as preregistration"
+      ],
+      "timestamp": "2026-08-11T08:05:00+00:00",
+      "artifact_hash": "sha256:ccda198d59f633bd3826c92684ac0f013830046df21402b0629857c90bc6a920"
+    },
+    {
+      "failure_id": "F-RH-SPEC-002-GALERKIN-POLLUTION",
+      "atom_id": "RH-SPEC-002",
+      "candidate_id": "RETROSPECTIVE:RH-SPEC-002-LIMIT-STABILITY-CAL001",
+      "context_packet_hash": "sha256:99eb4c30af5c745c5d1f6b546fa8df0e775494c07f51fe9548c50ce81bfba224",
+      "research_trace_event_id": "RH-SPEC-002-E08",
+      "method_family": "finite-dimensional self-adjoint compression as an exact-spectrum surrogate",
+      "failure_mode": "self-adjoint Galerkin compressions can carry persistent spurious eigenvalues in a true spectral gap",
+      "residual_signature": [
+        "dense finite-dimensional approximation spaces",
+        "self-adjoint compressed operators",
+        "spurious limiting eigenvalue",
+        "missing no-pollution theorem"
+      ],
+      "broken_assumptions": [
+        "density of the approximation subspaces and finite-stage self-adjointness imply spectral exactness",
+        "stable finite eigenvalues automatically belong to the target spectrum"
+      ],
+      "scope_conditions": [
+        "projection/compression based spectral approximations without a route-specific no-pollution theorem",
+        "arguments that treat stable finite eigenvalues as root evidence without identifying the exact target operator or determinant",
+        "the exact five-case identity is retrospective and was not committed before the PR15 result"
+      ],
+      "competing_diagnoses": [
+        "the RH source family may possess structural constraints that exclude the hostile Galerkin geometry",
+        "a determinant-level formulation may be immune to this specific gap-pollution example",
+        "second-order or compactness-based spectral tests may repair some projection schemes"
+      ],
+      "selected_diagnosis": "finite self-adjointness omits a spectral-exactness coordinate; a no-pollution/completeness theorem must be proved for the actual source family",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.json",
+        "Michael Levitin and Eugene Shargorodsky, Spectral pollution and second order relative spectra for self-adjoint operators, arXiv:math/0212087",
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_SPEC_002_PR15_CHRONOLOGY_HASH_AUDIT_20260811.json",
+        "sha256:d16c0c2bfe8fcd52066b8d3f6a1ce345c5e5bfc5e089167d0e2d99f1e9a3ac84"
+      ],
+      "falsifier_or_attempt": "compress the diagonal operator with spectrum {-1,+1} to dense subspaces ending in v_n=(e_(2n-1)+e_(2n))/sqrt(2)",
+      "observed_result": "the compressed operators have the exact spurious eigenvalue 0 for every n although 0 is not in the target spectrum",
+      "local_repair_attempts": [
+        "require a route-specific no-pollution theorem or second-order/compactness condition",
+        "do not count numerical spectral stability as exact arithmetic identification",
+        "next discriminator: repeat any native or certifying use under a newly frozen exact evaluator rather than treating this retrospective record as preregistration"
+      ],
+      "timestamp": "2026-08-11T08:05:00+00:00",
+      "artifact_hash": "sha256:3978d48354a83a59c1baf3b4c4b7013b302cf19c04691fb5cb7e122824c7996d"
+    },
+    {
+      "failure_id": "F-RH-SPEC-002-JOINT-LIMIT-AMBIGUITY",
+      "atom_id": "RH-SPEC-002",
+      "candidate_id": "RETROSPECTIVE:RH-SPEC-002-LIMIT-STABILITY-CAL001",
+      "context_packet_hash": "sha256:99eb4c30af5c745c5d1f6b546fa8df0e775494c07f51fe9548c50ce81bfba224",
+      "research_trace_event_id": "RH-SPEC-002-E08",
+      "method_family": "unspecified multi-parameter cutoff limit",
+      "failure_mode": "different iterated or diagonal paths through a two-parameter family can converge to different limits",
+      "residual_signature": [
+        "more than one cutoff parameter",
+        "no frozen cofinal net or path",
+        "no uniform path-independence theorem",
+        "limit identity depends on order of removal"
+      ],
+      "broken_assumptions": [
+        "writing N,lambda -> infinity defines a unique mathematical limit without further structure",
+        "agreement along one numerical path identifies the global source limit"
+      ],
+      "scope_conditions": [
+        "multi-parameter RH approximant families whose joint limit is not defined by a cofinal net or path-independent theorem",
+        "arguments that compare finite-prime and finite-interval cutoffs without uniform cross-parameter control",
+        "the exact five-case identity is retrospective and was not committed before the PR15 result"
+      ],
+      "competing_diagnoses": [
+        "the actual RH family may possess monotonicity or uniform estimates forcing path independence",
+        "one physically/arithmetic canonical cofinal path might be sufficient if frozen before evaluation",
+        "iterating N then lambda may be legitimate if the first limit is proved uniformly enough for the second"
+      ],
+      "selected_diagnosis": "multi-cutoff convergence is under-specified until the cofinal regime and uniform/path-independence obligations are explicit",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.json",
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_SPEC_002_PR15_CHRONOLOGY_HASH_AUDIT_20260811.json",
+        "sha256:d16c0c2bfe8fcd52066b8d3f6a1ce345c5e5bfc5e089167d0e2d99f1e9a3ac84"
+      ],
+      "falsifier_or_attempt": "calibrate on the one-dimensional self-adjoint family A_(N,lambda)=N/(N+lambda)",
+      "observed_result": "the two iterated limits are 1 and 0 while the diagonal N=lambda is 1/2",
+      "local_repair_attempts": [
+        "freeze the intended order/cofinal net before source-side proof search",
+        "seek uniform estimates strong enough to prove path independence",
+        "next discriminator: repeat any native or certifying use under a newly frozen exact evaluator rather than treating this retrospective record as preregistration"
+      ],
+      "timestamp": "2026-08-11T08:05:00+00:00",
+      "artifact_hash": "sha256:abb48c09f7a4c944255c5a6e779a5c155f06d349d3339def4ee91952d7a58bb7"
+    },
+    {
+      "failure_id": "F-RH-SPEC-002-FINITE-ZERO-PREFIX",
+      "atom_id": "RH-SPEC-002",
+      "candidate_id": "RETROSPECTIVE:RH-SPEC-002-LIMIT-STABILITY-CAL001",
+      "context_packet_hash": "sha256:99eb4c30af5c745c5d1f6b546fa8df0e775494c07f51fe9548c50ce81bfba224",
+      "research_trace_event_id": "RH-SPEC-002-E08",
+      "method_family": "finite real-zero prefix agreement as an entire-function convergence certificate",
+      "failure_mode": "arbitrarily long exact real-zero prefixes plus one-point normalization can coexist with failure of locally uniform convergence to the intended entire target",
+      "residual_signature": [
+        "real-rooted finite approximants",
+        "increasing exact zero-prefix agreement",
+        "weak scalar normalization",
+        "uncontrolled zero-free exponential factor or growth"
+      ],
+      "broken_assumptions": [
+        "a long finite prefix determines the limiting entire function",
+        "matching zeros and one normalization value controls the zero-free factor in a Hadamard-type representation"
+      ],
+      "scope_conditions": [
+        "arguments based only on finitely many RH zeros, zero counts, or UV/GUE-style spectral statistics",
+        "entire-function comparisons lacking source-side growth/normalization control",
+        "the exact five-case identity is retrospective and was not committed before the PR15 result"
+      ],
+      "competing_diagnoses": [
+        "the hostile exponential factor may be excluded by a canonical determinant normalization",
+        "growth/order bounds plus sufficient normalization could repair the implication",
+        "the actual source approximants might already have a rigid functional equation or determinant formula"
+      ],
+      "selected_diagnosis": "finite zero information loses the global zero-free-factor/growth coordinate; target identification needs a canonical normalization plus locally uniform analytic control",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.json",
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_SPEC_002_PR15_CHRONOLOGY_HASH_AUDIT_20260811.json",
+        "sha256:d16c0c2bfe8fcd52066b8d3f6a1ce345c5e5bfc5e089167d0e2d99f1e9a3ac84"
+      ],
+      "falsifier_or_attempt": "use G_n(z)=exp(nz) product_(k<=n)(1-z^2/k^2), which exactly matches longer real-zero prefixes of sin(pi z)/(pi z) and satisfies G_n(0)=1",
+      "observed_result": "G_n(1/2) diverges exponentially, so no local-uniform convergence to the target occurs",
+      "local_repair_attempts": [
+        "require source-side canonical normalization and growth control",
+        "test convergence directly on compact subsets of the target holomorphic domain rather than by zero prefixes",
+        "next discriminator: repeat any native or certifying use under a newly frozen exact evaluator rather than treating this retrospective record as preregistration"
+      ],
+      "timestamp": "2026-08-11T08:05:00+00:00",
+      "artifact_hash": "sha256:175aac839939c4ccf8f6b2e6aac579d12fdb97305b499510d3848ae372df1bae"
+    },
+    {
+      "failure_id": "F-RH-SPEC-002-PR15-CHRONOLOGY",
+      "atom_id": "RH-SPEC-002",
+      "candidate_id": "PR:SzeChunYiu/RAKL_math#15@7f45008de9ad394ea8926a41b02195bdbce96773",
+      "context_packet_hash": "sha256:99eb4c30af5c745c5d1f6b546fa8df0e775494c07f51fe9548c50ce81bfba224",
+      "research_trace_event_id": "RH-SPEC-002-E09",
+      "method_family": "post-result reconstruction represented as a pre-result frozen candidate identity",
+      "failure_mode": "the exact result commit precedes the commit that first records CANDIDATE_PROPOSED, so event timestamps cannot establish evaluator/candidate freezing",
+      "residual_signature": [
+        "result commit c48f2df precedes trace commit b22e345",
+        "no committed exact five-case evaluator identity found before result",
+        "broad prior E07 action does not bind exact case set or evaluator bytes"
+      ],
+      "broken_assumptions": [
+        "an earlier timestamp inside a later-committed trace proves pre-result freezing",
+        "a broad next-action registration is equivalent to exact evaluator identity freezing"
+      ],
+      "scope_conditions": [
+        "PR15 provenance and assurance authority only",
+        "does not invalidate independently checkable mathematical content of the five standard known-answer cases",
+        "does not apply to the distinct 11-case lineage whose evaluator was actually committed before execution"
+      ],
+      "competing_diagnoses": [
+        "E07 registered enough high-level case families to justify calling the action broadly preregistered",
+        "the later trace accurately reconstructs real wall-clock events even though Git cannot verify them",
+        "only exact committed evaluator identity satisfies the strict chronology required for certifying calibration authority"
+      ],
+      "selected_diagnosis": "the cases may be retained as retrospective known-answer search control, but exact preregistration/frozen-candidate authority fails closed because the repository cannot verify it",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_SPEC_002_PR15_CHRONOLOGY_HASH_AUDIT_20260811.json",
+        "sha256:d16c0c2bfe8fcd52066b8d3f6a1ce345c5e5bfc5e089167d0e2d99f1e9a3ac84",
+        "git:c48f2df2a69df7dc3e4e91ca9a7e27e3ce370f61",
+        "git:b22e345e830e6d6da804c6da901a83e9b420b483"
+      ],
+      "falsifier_or_attempt": "order the source PR commits and search history before the result commit for an exact case/evaluator identity",
+      "observed_result": "the result artifact was the first calibration commit; the candidate-proposed continuation appeared in a later commit",
+      "local_repair_attempts": [
+        "downgrade authority to RETROSPECTIVE_KNOWN_ANSWER_CALIBRATION / SEARCH_CONTROL_ONLY",
+        "supersede the backfilled freeze implication instead of manufacturing a preregistration artifact",
+        "next discriminator: for a fresh round, commit the exact evaluator identity and expected branches before execution"
+      ],
+      "timestamp": "2026-08-11T08:30:00+00:00",
+      "artifact_hash": "sha256:3155ff7e2faf024a00730e36332c5fdaf1758fb7c6e13facda15d3ccb38bf347"
+    },
+    {
+      "failure_id": "F-RH-SPEC-002-PR15-STALE-TOOL-HASH",
+      "atom_id": "RH-SPEC-002",
+      "candidate_id": "PR:SzeChunYiu/RAKL_math#15@7f45008de9ad394ea8926a41b02195bdbce96773",
+      "context_packet_hash": "sha256:99eb4c30af5c745c5d1f6b546fa8df0e775494c07f51fe9548c50ce81bfba224",
+      "research_trace_event_id": "RH-SPEC-002-E09",
+      "method_family": "content-addressed post-calibration memory update",
+      "failure_mode": "the research tool changed without recomputing its artifact_hash, causing both focused and full exact CI to fail",
+      "residual_signature": [
+        "stored self-hash differs from canonical content hash",
+        "10 focused tests passed and 1 failed",
+        "172 full application tests passed and 1 failed"
+      ],
+      "broken_assumptions": [
+        "a schema-valid tool record is content-bound even if its hash is stale",
+        "later descriptive edits do not require receipt/hash rebinding"
+      ],
+      "scope_conditions": [
+        "PR15 head 7f45008de9ad394ea8926a41b02195bdbce96773",
+        "specific tool inventory content at the audited head",
+        "does not invalidate the underlying Hurwitz theorem"
+      ],
+      "competing_diagnoses": [
+        "the test used a different canonicalization than the writer",
+        "the artifact was edited after an initially correct hash was minted",
+        "the stored hash was copied from a prior version and not rebound"
+      ],
+      "selected_diagnosis": "the tool bytes changed after the stored hash was minted; exact canonical recomputation is required after every content edit",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_SPEC_002_PR15_CHRONOLOGY_HASH_AUDIT_20260811.json",
+        "sha256:d16c0c2bfe8fcd52066b8d3f6a1ce345c5e5bfc5e089167d0e2d99f1e9a3ac84",
+        "tests/math_applications/test_rh_spec_002_limit_calibration.py"
+      ],
+      "falsifier_or_attempt": "blank artifact_hash, canonicalize JSON with sorted compact keys, recompute SHA-256, and compare to the stored value",
+      "observed_result": "stored sha256:8ecd4553... did not equal canonical sha256:4a1a006c..., blocking exact CI",
+      "local_repair_attempts": [
+        "recompute all imported failure/tool/result hashes after provenance edits",
+        "retain a regression that recomputes every self-hash",
+        "next discriminator: mutate any hashed field in a copy and require the validator to reject it"
+      ],
+      "timestamp": "2026-08-11T08:31:00+00:00",
+      "artifact_hash": "sha256:ca0d6f4ef7971207cee1885eeb71a69c8eb24a4bd09cdd041f67f64cd86c8dc9"
+    }
+  ],
+  "links": [
+    {
+      "source_id": "F-RH-SPEC-002-STRONG-RESOLVENT-INCOMPLETE",
+      "target_id": "F-RH-SPEC-002-GALERKIN-POLLUTION",
+      "relation": "SHARES_RESIDUAL_WITH",
+      "rationale": "Both failures show that finite-stage self-adjointness plus weak/generic operator approximation does not supply complete spectral exactness.",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.json"
+      ]
+    },
+    {
+      "source_id": "F-RH-SPEC-002-FINITE-ZERO-PREFIX",
+      "target_id": "F-RH-SPEC-002-JOINT-LIMIT-AMBIGUITY",
+      "relation": "SHARES_RESIDUAL_WITH",
+      "rationale": "Both failures leave target identification uncontrolled: one through an unconstrained zero-free factor/growth coordinate, the other through an unconstrained path through cutoff space.",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.json"
+      ]
+    },
+    {
+      "source_id": "F-RH-SPEC-002-PR15-CHRONOLOGY",
+      "target_id": "F-RH-SPEC-002-PR15-STALE-TOOL-HASH",
+      "relation": "SHARES_BROKEN_ASSUMPTION_WITH",
+      "rationale": "both assurance failures came from treating narrative/event intent as sufficient without exact repository-visible content chronology and identity binding",
+      "evidence_pointers": [
+        "sha256:d16c0c2bfe8fcd52066b8d3f6a1ce345c5e5bfc5e089167d0e2d99f1e9a3ac84"
+      ]
+    },
+    {
+      "source_id": "F-RH-SPEC-002-PR15-STALE-TOOL-HASH",
+      "target_id": "F-RH-SPEC-002-FINITE-ZERO-PREFIX",
+      "relation": "SHARES_RESIDUAL_WITH",
+      "rationale": "both expose identity underdetermination: one for a mutable receipt, the other for an entire function under incomplete normalization",
+      "evidence_pointers": [
+        "sha256:d16c0c2bfe8fcd52066b8d3f6a1ce345c5e5bfc5e089167d0e2d99f1e9a3ac84",
+        "sha256:a8359d4cfaa57079f1f65b55c0be3cdb8bc6f5cda0b5ffc7806ea67b3e5b0858"
+      ]
+    }
+  ]
+}
