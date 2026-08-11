@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/packet-provenance-assurance-receipt.schema.json",
+  "title": "RAKL Math packet provenance assurance receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "recorded_at",
+    "application_repository",
+    "framework_pin",
+    "atom_id",
+    "source_commit",
+    "source_tree",
+    "bindings",
+    "assurance_worlds",
+    "evidence_pointers",
+    "authority",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"type": "string", "minLength": 1},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "application_repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "base_main_commit"],
+      "properties": {
+        "url": {"type": "string", "format": "uri"},
+        "base_main_commit": {"$ref": "#/$defs/sha1"}
+      }
+    },
+    "framework_pin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "commit"],
+      "properties": {
+        "url": {"type": "string", "format": "uri"},
+        "commit": {"$ref": "#/$defs/sha1"}
+      }
+    },
+    "atom_id": {"const": "YM-S1a1"},
+    "source_commit": {"$ref": "#/$defs/sha1"},
+    "source_tree": {"$ref": "#/$defs/sha1"},
+    "bindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["old_review", "live_review", "old_trace", "pre_review_trace", "live_trace", "packet_binding_receipt"],
+      "properties": {
+        "old_review": {"$ref": "#/$defs/binding"},
+        "live_review": {"$ref": "#/$defs/binding"},
+        "old_trace": {"$ref": "#/$defs/binding"},
+        "pre_review_trace": {"$ref": "#/$defs/binding"},
+        "live_trace": {"$ref": "#/$defs/binding"},
+        "packet_binding_receipt": {"$ref": "#/$defs/binding"}
+      }
+    },
+    "assurance_worlds": {
+      "type": "array",
+      "prefixItems": [
+        {"$ref": "#/$defs/passWorld"},
+        {"$ref": "#/$defs/failWorld"},
+        {"$ref": "#/$defs/cannotWorld"}
+      ],
+      "items": false,
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "evidence_pointers": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "authority": {"type": "string", "minLength": 1},
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha1": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "source_commit", "source_tree", "git_blob", "file_sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "source_commit": {"$ref": "#/$defs/sha1"},
+        "source_tree": {"$ref": "#/$defs/sha1"},
+        "git_blob": {"$ref": "#/$defs/sha1"},
+        "file_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "passWorld": {
+      "type": "object", "additionalProperties": false,
+      "required": ["world", "expected", "observed"],
+      "properties": {"world": {"const": "VALID_BOUND_SOURCE"}, "expected": {"const": "PASS"}, "observed": {"const": "PASS"}}
+    },
+    "failWorld": {
+      "type": "object", "additionalProperties": false,
+      "required": ["world", "expected", "observed"],
+      "properties": {"world": {"const": "WRONG_COMMIT_OR_BLOB"}, "expected": {"const": "FAIL"}, "observed": {"const": "FAIL"}}
+    },
+    "cannotWorld": {
+      "type": "object", "additionalProperties": false,
+      "required": ["world", "expected", "observed"],
+      "properties": {"world": {"const": "MISSING_SOURCE_PATH"}, "expected": {"const": "CANNOT_CHECK"}, "observed": {"const": "CANNOT_CHECK"}}
+    }
+  }
+}

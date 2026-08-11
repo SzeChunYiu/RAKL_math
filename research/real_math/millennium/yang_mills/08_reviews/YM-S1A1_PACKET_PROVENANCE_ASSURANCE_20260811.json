@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "RAKL-MATH-YM-S1A1-PACKET-PROVENANCE-ASSURANCE-20260811",
+  "recorded_at": "2026-08-11T09:00:17+00:00",
+  "application_repository": {
+    "url": "https://github.com/SzeChunYiu/RAKL_math",
+    "base_main_commit": "b8f3467959f2f44a2cf686d9c005071739284dc8"
+  },
+  "framework_pin": {
+    "url": "https://github.com/SzeChunYiu/RAKL",
+    "commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
+  },
+  "atom_id": "YM-S1a1",
+  "source_commit": "c854d7c77208a671e6a8dd6d8c22d17927cc01d6",
+  "source_tree": "8d0a11c2c0e7d19249a904a83698d52b858d4f74",
+  "bindings": {
+    "old_review": {
+      "path": "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_PRE_CANDIDATE_REVIEW_ROLE_COMBINED_20260811.md",
+      "source_commit": "c854d7c77208a671e6a8dd6d8c22d17927cc01d6",
+      "source_tree": "8d0a11c2c0e7d19249a904a83698d52b858d4f74",
+      "git_blob": "189966d5a181cc62fee28b229c4ee51b908d94dc",
+      "file_sha256": "sha256:c5f62d4e5e1b53ab673fd0f718cdeaea0c5c5bfdb0c528652a6abc274579569f"
+    },
+    "live_review": {
+      "path": "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_PRE_CANDIDATE_REVIEW_20260811.md",
+      "source_commit": "c854d7c77208a671e6a8dd6d8c22d17927cc01d6",
+      "source_tree": "8d0a11c2c0e7d19249a904a83698d52b858d4f74",
+      "git_blob": "f3d397300a4a74833342a6a4e11cbcace293a786",
+      "file_sha256": "sha256:1ab9e8687ced355cc11978897b1f5e164caf0ab48e17102e95061e0ccf01fb6d"
+    },
+    "old_trace": {
+      "path": "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_MEMORY_HASH_INVALID_20260811.json",
+      "source_commit": "c854d7c77208a671e6a8dd6d8c22d17927cc01d6",
+      "source_tree": "8d0a11c2c0e7d19249a904a83698d52b858d4f74",
+      "git_blob": "dd9f1720b1605ae47660c70b701d0050bc6b366b",
+      "file_sha256": "sha256:fb22328a040ed52c773999b588f174adda731511d73815c1d24bd5603fd19b59"
+    },
+    "pre_review_trace": {
+      "path": "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_REVIEW_BINDING_INVALID_20260811.json",
+      "source_commit": "c854d7c77208a671e6a8dd6d8c22d17927cc01d6",
+      "source_tree": "8d0a11c2c0e7d19249a904a83698d52b858d4f74",
+      "git_blob": "3d2525713cff10b95a2396f77bf7af4ef34cc836",
+      "file_sha256": "sha256:7d5c7739b03237320e87815f3cb2faf60affd588409654590459cc148dde5f6a"
+    },
+    "live_trace": {
+      "path": "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_20260811.json",
+      "source_commit": "c854d7c77208a671e6a8dd6d8c22d17927cc01d6",
+      "source_tree": "8d0a11c2c0e7d19249a904a83698d52b858d4f74",
+      "git_blob": "97965afda77a3ca97d127bbf03ea33c481c7b1e5",
+      "file_sha256": "sha256:0b83b1830364e19f33283ebe11a4bd7891b92ed2eba9a27002eea70aaf84c9f8"
+    },
+    "packet_binding_receipt": {
+      "path": "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_PACKET_BINDING_REPAIR_RECEIPT_20260811.json",
+      "source_commit": "c854d7c77208a671e6a8dd6d8c22d17927cc01d6",
+      "source_tree": "8d0a11c2c0e7d19249a904a83698d52b858d4f74",
+      "git_blob": "38da573c5fee65b1b02ed10e334cccc26aad22c6",
+      "file_sha256": "sha256:84893582f157a8b5e6af545c71881816020d6122089682f41df86dfeafd8558a"
+    }
+  },
+  "assurance_worlds": [
+    {
+      "world": "VALID_BOUND_SOURCE",
+      "expected": "PASS",
+      "observed": "PASS"
+    },
+    {
+      "world": "WRONG_COMMIT_OR_BLOB",
+      "expected": "FAIL",
+      "observed": "FAIL"
+    },
+    {
+      "world": "MISSING_SOURCE_PATH",
+      "expected": "CANNOT_CHECK",
+      "observed": "CANNOT_CHECK"
+    }
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_PRE_CANDIDATE_REVIEW_ROLE_COMBINED_20260811.md",
+    "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_PRE_CANDIDATE_REVIEW_20260811.md",
+    "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_MEMORY_HASH_INVALID_20260811.json",
+    "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_REVIEW_BINDING_INVALID_20260811.json",
+    "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_20260811.json",
+    "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_PACKET_BINDING_REPAIR_RECEIPT_20260811.json",
+    "tests/math_applications/test_yang_mills_yms1a1_git_provenance.py"
+  ],
+  "authority": "GIT_PROVENANCE_ASSURANCE_ONLY / EXACT_SOURCE_COMMIT_TREE_BLOBS / PRE_CANDIDATE / NO_MATHEMATICAL_RESULT / NO_THEOREM / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:15278ca809bfc0ce665fcbf0927c2e2f4aade3cd72d0190db537ae0f65025320"
+}
