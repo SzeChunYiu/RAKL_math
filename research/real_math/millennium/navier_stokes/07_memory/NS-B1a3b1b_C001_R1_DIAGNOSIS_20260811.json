@@ -1,0 +1,16 @@
+{
+  "schema_version": "diagnosis-v3-proposal-shadow-r1",
+  "diagnosis_id": "D-NS-B1a3b1b-CRITICAL-AMPLITUDE-MORPHOLOGY-SEPARATION-R1",
+  "episode_id": "EP-NS-B1a3b1b-C001-R1-20260811",
+  "atom_id": "NS-B1a3b1b",
+  "supported_observations": [
+    "Grujic v2 states the critical-point profile first and weak-L3/2 only as an 'in particular' consequence",
+    "the exact two-core distribution identity keeps the weak-L3/2 critical amplitude scale-uniform",
+    "the scale-matched high-vorticity set needs an enclosing radius bounded below by the fixed half-separation L"
+  ],
+  "diagnosis": "Critical Lorentz amplitude is the wrong representation for source-family uniqueness. It records distributional size but forgets the number/location of separated critical cores; therefore it cannot by itself type-check into the one-center critical-point morphology consumed by Grujic v2.",
+  "scope_boundary": "This diagnosis applies to the bare representation/norm inference only. It does not diagnose the stronger Navier-Stokes-equation-specific implication from finite I, which may use dynamics, singular-point selection or additional compactness.",
+  "failure_category": "REPRESENTATION / SOURCE_FAMILY_COMPLETENESS",
+  "local_vs_gluing": "LOCAL_REPRESENTATION_DIAGNOSIS; global recentering/far-field compatibility is recorded separately",
+  "authority": "PROPOSAL_SHADOW_DIAGNOSIS_ONLY"
+}
