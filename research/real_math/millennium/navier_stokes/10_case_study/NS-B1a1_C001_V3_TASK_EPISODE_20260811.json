@@ -1,0 +1,30 @@
+{
+  "episode_id":"NS-B1a1-C001-EP-20260811T1130Z",
+  "task_id":"navier-stokes-typeI-scale-charge-audit",
+  "atom_id":"NS-B1a1",
+  "context_hash":"sha256:2dd3659dd73036559e41fddd35b599fc1945933730d99ad2dc60d98ba28b67ce",
+  "problem_signature":["3D incompressible Navier-Stokes","mild bounded ancient solution","finite scale-invariant Type-I A+C+D+E control","local-energy inequality","nonlocal pressure","dyadic scale descent","local-to-global anti-replication","backward L3-sequence Liouville target"],
+  "fibre_snapshot_hash":"sha256:64277769788ae09237b700c0e76348193965fdcdb66bd7703650837b6d81fa54",
+  "operator_ids":["T-XM-ROOT-BRIDGE-STABILITY-AUDIT","OP-NS-STANDARD-LOCAL-ENERGY-SCALING-AUDIT"],
+  "action_trace":["read current RAKL main and v3 contracts","freeze NS-B1a1 context/memory/expert/trace gate","derive scale of standard local-energy cutoff terms from A,C,D,E","run nested-dyadic physical-currency stress test","separate forward DSS near-miss from target backward Type-I class","record route-pruning residual"],
+  "observation_ids":["OBS-LEI-LINEAR-R","OBS-LEI-CONVECTION-R","OBS-LEI-PRESSURE-R","OBS-NORMALIZED-O1","OBS-PHYSICAL-CURRENCY-GEOMETRICALLY-SUMMABLE"],
+  "verification_ids":["VERIFY-SOURCE-DEFINITIONS-AB-1811.00502","VERIFY-SCALING-EXPONENTS-PYTHON","VERIFY-PRESSURE-MEAN-DIVERGENCE-FREE","VERIFY-GEOMETRIC-SUMS","VERIFY-AUTHORITY-BOUNDARY"],
+  "outcome":"PARTIAL_SUCCESS",
+  "residual_signature":["standard finite-I local-energy ledger is scale-neutral after normalization","no positive scale decay or telescoping defect is obtained from standard absolute bookkeeping","finite physical expenditure does not make dyadic scale descent well-founded","need no-recrossing, dimensionless monotone defect, coherence/cancellation, disjoint charge, or compactness-rigidity"],
+  "evidence_pointers":["research/real_math/millennium/navier_stokes/01_frontier/NS-B1a1_CONTEXT_FIBER_20260811.json","research/real_math/millennium/navier_stokes/07_memory/NS-B1a1_RESEARCH_MEMORY_REVIEW_20260811.json","research/real_math/millennium/navier_stokes/08_reviews/NS-B1a1_EXPERT_CONTEXT_REVIEW_20260811.md","research/real_math/millennium/navier_stokes/09_trace/NS-B1a1_PRE_CANDIDATE_TRACE_20260811.json","research/real_math/millennium/navier_stokes/01_frontier/NS-B1a1_C001_SCALE_CHARGE_AUDIT_20260811.md"],
+  "timestamp":"2026-08-11T11:43:00+00:00",
+  "cost":1.0,
+  "shadow_extensions":{
+    "cost_effort_proxy":{"research_cycles":1,"primary_artifacts_consulted":9,"same_context_roles":7,"new_candidate_calibrations":1},
+    "search_policy_choice":"counterexample-first root-bridge stability audit before theorem invention",
+    "prior_experience_changed_routing":[{"id":"F-NS-B1a-C001-PRESSURE-SUMMABILITY","effect":"blocked repeat of instantaneous pressure-divergence route"},{"id":"F-C024-FRACTIONAL-INTEGRALITY-GAP","effect":"prioritized local-to-global assembly falsifier"},{"id":"SOURCE-GAP-2606.07875-TERMINAL-SCALE","effect":"blocked smallest-scale/well-founded terminality shortcut"}],
+    "retrieved_but_rejected":["Shahmurov flux-hull terminality: blocked pending repair","pure norm/interpolation I->L3: functionally calibrated as insufficient","instantaneous pressure divergence: supported negative history"],
+    "failure_category":"LOCAL_TO_GLOBAL_GLUING_FAILURE",
+    "local_mathematics_status":"standard local-energy inequality and finite-I scale bounds retained",
+    "diagnosis":"bounded scale-local certificates do not automatically assemble into a well-founded or summable descendant charge",
+    "novelty_class":{"class":"TRANSFER_NOVEL","structural_rank":0,"scope":"solved route-pruning subproblem only"},
+    "saturation_round":{"KNOWLEDGE":1,"OPERATOR":0,"EXPERIENCE_PATTERN":1,"OBSTRUCTION":1,"RELATION":1,"PATH":1,"META_METHOD":0,"reopened_axes":["OBSTRUCTION","PATH","RELATION"]},
+    "next_action":"NS-B1a2: search for a dimensionless monotone/no-recrossing defect or other dynamics-specific scale-symmetry breaker; do not repeat naive shell summation."
+  },
+  "artifact_hash":"sha256:95665dca8ac410fffaca11cb70f2ebe04d8005893bb7f19c07e35d35a4b8b329"
+}
