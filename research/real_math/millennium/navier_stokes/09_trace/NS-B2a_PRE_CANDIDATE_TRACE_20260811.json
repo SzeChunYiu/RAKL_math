@@ -1,0 +1,240 @@
+{
+  "trace_id": "TRACE-NS-B2a-PRE-CANDIDATE-20260811",
+  "framework_authority_sha": "a151d5612709ea0f95c3ea232630f246f722739a",
+  "app_base_sha": "7548c3c9a30c63e18956aefb68674d523acfe937",
+  "entries": [
+    {
+      "event_id": "NS-B2a-E01",
+      "atom_id": "NS-B2a",
+      "event_type": "ATOMIZED",
+      "timestamp": "2026-08-11T10:36:40+00:00",
+      "state_summary": "Fresh Type-II source reading separates a classification/extraction atom from the later Euler rigidity atom; a retrospective backward-smallness consequence was observed before context freeze and is not a candidate.",
+      "action_summary": "Open NS-B2a as an orthogonal Type-II child and bind the exact source/rigidity obligations without generating a theorem candidate.",
+      "evidence_pointers": [
+        "Seregin arXiv:2606.29468v1 Theorem 3.1",
+        "research/real_math/millennium/navier_stokes/02_problem_dag/NS-B2a_DELTA_20260811.yaml",
+        "https://github.com/SzeChunYiu/RAKL_math/issues/65"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "atom:NS-B2a",
+        "classification:ancient-Euler-limit",
+        "retrospective-credit:ZERO"
+      ],
+      "uncertainties": [
+        "whether a pressure-aware no-incoming-energy quantity survives the singular scaling"
+      ],
+      "residuals": [
+        "far-field inheritance and Euler rigidity remain open"
+      ],
+      "next_steps": [
+        "freeze NS-B2a context"
+      ],
+      "artifact_hash": "sha256:528549b0a2a86f101c5bc81d70be5772cd230243d62d3f8a948b02b66556329e",
+      "previous_event_hash": ""
+    },
+    {
+      "event_id": "NS-B2a-E02",
+      "atom_id": "NS-B2a",
+      "event_type": "CONTEXT_FROZEN",
+      "timestamp": "2026-08-11T10:36:50+00:00",
+      "state_summary": "The child context records the Euler limit PDE, exact source-bound local controls, noncompact symmetries, pressure/far-field distinction, forbidden Type-I transfers, and zero-credit chronology for the retrospective calibration.",
+      "action_summary": "Freeze the MathContextFiber before any future theorem candidate generation.",
+      "evidence_pointers": [
+        "sha256:a480d04f46ad09b5db95a45fb85d35edfcfc2e8afa22e3fc41fa73ee4ed191f9",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a_CONTEXT_FIBER_20260811.json"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "sha256:a480d04f46ad09b5db95a45fb85d35edfcfc2e8afa22e3fc41fa73ee4ed191f9",
+        "root-authority:NONE"
+      ],
+      "uncertainties": [
+        "exact weakest far-field quantity inherited from approximants"
+      ],
+      "residuals": [
+        "no theorem candidate"
+      ],
+      "next_steps": [
+        "complete structural analogy scan"
+      ],
+      "artifact_hash": "sha256:85a9354f20fc352c2e0f3647df8406d1aba538305068fda24ab73bb6cfe380c0",
+      "previous_event_hash": "sha256:528549b0a2a86f101c5bc81d70be5772cd230243d62d3f8a948b02b66556329e"
+    },
+    {
+      "event_id": "NS-B2a-E03",
+      "atom_id": "NS-B2a",
+      "event_type": "ANALOGY_SCAN",
+      "timestamp": "2026-08-11T10:37:00+00:00",
+      "state_summary": "Type-I ancient Navier–Stokes, self-similar profiles, critical elements, localized flux, and steady Euler constructions were compared at the level of structural coordinates.",
+      "action_summary": "Retain only mappings whose hypotheses can be checked in the Seregin F=1 Euler class; reject surface transfer from viscous rigidity.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a_CONTEXT_FIBER_20260811.json",
+        "research/real_math/millennium/navier_stokes/03_source_audits/NS-B2a_SRC001_SEREGIN_2606_29468_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "analogy:Type-I-classification-only",
+        "analogy:localized-flux-open",
+        "falsifier:steady-Euler-rejected-for-(3.5)"
+      ],
+      "uncertainties": [
+        "whether any known Euler Liouville theorem matches the exact inherited class without extra decay"
+      ],
+      "residuals": [
+        "structural similarity does not supply far-field control"
+      ],
+      "next_steps": [
+        "method-transfer review"
+      ],
+      "artifact_hash": "sha256:3120497c1523e380a42404041979fcd9f11736ae676fe9dfb41d556a39cdb50d",
+      "previous_event_hash": "sha256:85a9354f20fc352c2e0f3647df8406d1aba538305068fda24ab73bb6cfe380c0"
+    },
+    {
+      "event_id": "NS-B2a-E04",
+      "atom_id": "NS-B2a",
+      "event_type": "METHOD_TRANSFER_REVIEW",
+      "timestamp": "2026-08-11T10:37:10+00:00",
+      "state_summary": "Three method families were audited: parabolic backward uniqueness, concentration-compactness/minimality, and pressure-aware expanding-shell flux.",
+      "action_summary": "Veto backward uniqueness for the Euler limit; keep critical-element logic proposal-only; prioritize a source-inherited pressure-aware tail/flux bridge.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a_CONTEXT_FIBER_20260811.json",
+        "research/real_math/millennium/navier_stokes/03_source_audits/NS-B2a_SRC001_SEREGIN_2606_29468_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "transfer:NS-backward-uniqueness=REJECTED",
+        "transfer:minimal-element=PROPOSAL_ONLY",
+        "transfer:pressure-flux=OPEN_RELEVANT"
+      ],
+      "uncertainties": [
+        "pressure harmonic/far-field component under expanding-radius limits"
+      ],
+      "residuals": [
+        "no source-valid global tightness theorem"
+      ],
+      "next_steps": [
+        "same-context expert cell"
+      ],
+      "artifact_hash": "sha256:9c57e88aaaec45f9f7c8014b372bb27ae0247510f67471731fdc20e77ea4ac88",
+      "previous_event_hash": "sha256:3120497c1523e380a42404041979fcd9f11736ae676fe9dfb41d556a39cdb50d"
+    },
+    {
+      "event_id": "NS-B2a-E05",
+      "atom_id": "NS-B2a",
+      "event_type": "EXPERT_CONTEXT_REVIEW",
+      "timestamp": "2026-08-11T10:37:20+00:00",
+      "state_summary": "Six role-separated reviewers independently audited scaling/extraction, concentration compactness, pressure localization, rigidity, vorticity depletion, adversarial constructions, and assurance chronology.",
+      "action_summary": "Adopt the consensus bottleneck: prove a pressure-aware no-incoming-energy/far-field inheritance theorem before attempting Euler rigidity.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/08_reviews/SAME_CONTEXT_REVIEW_NS-B2a_PRE_CANDIDATE_20260811.md",
+        "sha256:a480d04f46ad09b5db95a45fb85d35edfcfc2e8afa22e3fc41fa73ee4ed191f9"
+      ],
+      "alternatives_considered": [
+        "invoke Navier–Stokes backward uniqueness",
+        "assume global finite energy or L3",
+        "force minimal critical element",
+        "force self-similar orbit",
+        "use retrospective local smallness as rigidity"
+      ],
+      "decision_rationale": "All rejected alternatives require hypotheses not inherited in the frozen source class; the far-field inheritance atom is the first point at which local extraction can be upgraded without circularity.",
+      "outputs": [
+        "consensus:LIMIT_IS_EULER",
+        "consensus:FAR_FIELD_INCOMING_FLUX_UNCONTROLLED",
+        "recommendation:NO_THEOREM_CANDIDATE"
+      ],
+      "uncertainties": [
+        "whether the original suitable weak solution supplies any scale-uniform far-field flux control",
+        "whether an Euler Liouville theorem can use exactly that control"
+      ],
+      "residuals": [
+        "O3 and O5 open"
+      ],
+      "next_steps": [
+        "dual success/failure memory review"
+      ],
+      "artifact_hash": "sha256:0b10e64c40e0a8bf10e9f7048b6af19aa5644d8c58f5207c2872393242af3fda",
+      "previous_event_hash": "sha256:9c57e88aaaec45f9f7c8014b372bb27ae0247510f67471731fdc20e77ea4ac88"
+    },
+    {
+      "event_id": "NS-B2a-E06",
+      "atom_id": "NS-B2a",
+      "event_type": "EXPERIENCE_MEMORY_REVIEW",
+      "timestamp": "2026-08-11T10:37:30+00:00",
+      "state_summary": "Success memory and failure memory were reviewed against the exact Type-II Euler context. Reusable items are source-class binding and pressure-tail audit discipline; failures include profile leakage, uncontrolled far field, unique-continuation hypothesis loss, and false falsifier classification.",
+      "action_summary": "Freeze target-specific memory guards; do not promote cross-Millennium warnings into theorem authority.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/07_memory/NS-B2a_RESEARCH_MEMORY_REVIEW_20260811.json",
+        "research/real_math/millennium/navier_stokes/07_memory/NS-B2a_FAILURE_EXPERIENCE_DELTA_20260811.json",
+        "framework:a151d5612709ea0f95c3ea232630f246f722739a"
+      ],
+      "alternatives_considered": [
+        "reuse Type-I tool literally",
+        "ignore previous pressure-tail failures",
+        "share normalized warnings only with target-specific evidence"
+      ],
+      "decision_rationale": "The PDE class and locality coordinates determine applicability; only the auditing discipline and normalized failure types survive transfer without extra mathematical assumptions.",
+      "outputs": [
+        "memory-review:DUAL_COMPLETE",
+        "guard:NO_NS_TO_EULER_BACKWARD_UNIQUENESS",
+        "guard:NO_LOCAL_TO_GLOBAL_TAIL_INFERENCE"
+      ],
+      "uncertainties": [
+        "Euler-specific verified success memory remains sparse"
+      ],
+      "residuals": [
+        "no promoted rigidity tool"
+      ],
+      "next_steps": [
+        "freeze next step"
+      ],
+      "artifact_hash": "sha256:4ec73dc4a45fba319878097205528609054b7700174062339918f2981d9026a1",
+      "previous_event_hash": "sha256:0b10e64c40e0a8bf10e9f7048b6af19aa5644d8c58f5207c2872393242af3fda"
+    },
+    {
+      "event_id": "NS-B2a-E07",
+      "atom_id": "NS-B2a",
+      "event_type": "NEXT_STEP_PROPOSED",
+      "timestamp": "2026-08-11T10:37:40+00:00",
+      "state_summary": "All current pre-candidate gates are frozen and no theorem candidate exists. The exact remaining path is O3 pressure/far-field inheritance followed by O5 Euler rigidity.",
+      "action_summary": "Formulate the weakest pressure-aware no-incoming-energy/tail functional on Seregin's rescaled Navier–Stokes approximants, prove uniformity as f(lambda)->0, and test its stability under the local limit passage.",
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/02_problem_dag/NS-B2a_DELTA_20260811.yaml",
+        "research/real_math/millennium/navier_stokes/08_reviews/SAME_CONTEXT_REVIEW_NS-B2a_PRE_CANDIDATE_20260811.md",
+        "sha256:a480d04f46ad09b5db95a45fb85d35edfcfc2e8afa22e3fc41fa73ee4ed191f9"
+      ],
+      "alternatives_considered": [
+        "state full Euler Liouville theorem immediately",
+        "search only self-similar Type-II profiles",
+        "switch back to Type-I anti-replication",
+        "first bind the approximant far-field flux coordinate"
+      ],
+      "decision_rationale": "The approximant-level flux coordinate is the earliest open assumption that can distinguish genuine inherited rigidity from an illicit global-tail assumption; it also directly audits pressure localization and profile leakage.",
+      "outputs": [
+        "next-action:PRESSURE_AWARE_FAR_FIELD_INHERITANCE",
+        "root-authority:NONE",
+        "candidate-count:0"
+      ],
+      "uncertainties": [
+        "best scale-invariant normalization of the flux functional"
+      ],
+      "residuals": [
+        "O3 OPEN",
+        "O5 OPEN",
+        "O6 BLOCKED"
+      ],
+      "next_steps": [
+        "derive candidate tail/flux functional from localized energy inequality",
+        "audit pressure decomposition uniformly in scale",
+        "run adversarial translated-packet sequences",
+        "only then consider a theorem candidate"
+      ],
+      "artifact_hash": "sha256:b8b8adbdc87f465227943c1f1734a1e88e17bf3302ab66ed6af54e9cc42c3dc8",
+      "previous_event_hash": "sha256:4ec73dc4a45fba319878097205528609054b7700174062339918f2981d9026a1"
+    }
+  ]
+}
