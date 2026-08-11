@@ -1,0 +1,158 @@
+{
+  "atom_id": "RH-ANA-003",
+  "object_context": "Fresh analytic child opened after RH-ANA-002. The active obstruction is no longer positivity of a finite Li prefix or a manifestly positive Suzuki norm. It is the first zeta-specific prime/archimedean cancellation coordinate that must be controlled uniformly in the Li index n. The immediate pre-candidate question is whether exact arithmetic/explicit-formula decompositions localize the root-sensitive part strongly enough to distinguish what unconditional archimedean asymptotics already control from what finite-place or zero-radial information remains.",
+  "structural_coordinates": [
+    "Li's criterion requires lambda_n >= 0 for every positive integer n; finite-index agreement is non-authoritative without a uniform theorem.",
+    "Bombieri-Lagarias give exact arithmetic/Guinand-Weil formulas for lambda_n; the formula contains regularized prime/Laurent data and archimedean terms with n-dependent binomial cancellation.",
+    "Lagarias' automorphic-L formulation decomposes generalized Li coefficients into an archimedean contribution, a finite-place contribution, and a pole/trivial term; the archimedean contribution has an unconditional n log n plus n asymptotic.",
+    "Lagarias relates the finite-place term to an incomplete Li coefficient cut at height comparable to sqrt(n), up to an error of order sqrt(n) log n in the registered theorem.",
+    "On RH, each zero contribution has the unit-modulus radial property needed for zero-counting to yield the corresponding incomplete-Li bound; off the line, the Li radial factor can have modulus different from one.",
+    "A single off-region zero can influence a finite interval of Li-type coefficients even when aggregate zero-count estimates remain valid; Palojarvi's tau-Li criteria make this rare-defect sensitivity explicit.",
+    "Zero-counting and zero-density statements constrain populations of zeros but do not by themselves impose the per-zero radial envelope |rho/(rho-1)|=1 or its equivalent critical-line condition.",
+    "The root-sensitive finite-place coordinate may therefore be a weighted horizontal-displacement/radial-control problem rather than a pure zero-counting problem.",
+    "Prime truncations inherit two separate hazards: conditional/regularized summation and n-dependent cancellation; finite computational positivity cannot replace a uniform remainder theorem.",
+    "The Lagarias-Voros growth dichotomy remains a contrastive global route, but any unconditional growth estimate strong enough to exclude exponential/off-line contributions must be audited for equivalence strength."
+  ],
+  "equivalent_formulations": [
+    "RH: every nontrivial zeta zero rho satisfies Re(rho)=1/2.",
+    "Li: lambda_n >= 0 for every positive integer n.",
+    "Finite-place cut: obtain an unconditional all-n bound on the finite-place/incomplete-Li term strong enough that the known archimedean main term cannot be overturned.",
+    "Radial envelope: control the contribution of zeros with |rho/(rho-1)| different from one without assuming that this modulus equals one for every zero.",
+    "Prime-side remainder: prove an exact regularized prime/archimedean decomposition with a uniform-in-n signed or absolute remainder estimate that is strictly weaker than RH."
+  ],
+  "solved_analogues": [
+    "Stable-mode counting in linear systems: a low density of unstable eigenmodes does not prevent one mode with spectral radius greater than one from dominating long-time powers; counting and radial control are different coordinates.",
+    "Parseval/exact-energy identities: a dominant positive main term yields a target sign only after the signed remainder is bounded at the same uniformity level as the target family."
+  ],
+  "near_solved_analogues": [
+    "Lagarias' generalized Li coefficient decomposition and incomplete-Li estimates localize finite-place versus archimedean contributions but the strongest small error bound uses RH-sensitive zero geometry.",
+    "Palojarvi's explicit tau-Li zero-free-region criteria quantify how finite Li-type signs detect zeros outside a radial region, illustrating that rare off-region zeros cannot be replaced by aggregate zero counts.",
+    "Voros' Li asymptotic dichotomy distinguishes RH-compatible tempered growth from off-line non-tempered oscillation but does not supply the needed unconditional zeta bound."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Lagarias, Li coefficients for automorphic L-functions",
+      "method": "separate the exact Li coefficient into archimedean and finite-place pieces, use unconditional asymptotics only where source-proved, and treat the finite-place/incomplete-Li term as the first residual rather than optimizing the total formula blindly",
+      "shared_structure": [
+        "same Li-family all-index target",
+        "exact explicit-formula decomposition",
+        "one component has a controlled deterministic main asymptotic while another contains root-sensitive zero/prime cancellation"
+      ],
+      "required_assumptions": [
+        "preserve Lagarias' summation and normalization conventions",
+        "distinguish unconditional estimates from RH-conditional estimates",
+        "bind any use of an incomplete Li cutoff to the exact cutoff/error theorem rather than heuristic truncation"
+      ],
+      "disanalogies": [
+        "the automorphic generality contains representation-specific constants not all needed for zeta",
+        "an estimate proved under RH cannot be repurposed as an unconditional route",
+        "localizing the residual does not itself bound or sign it"
+      ],
+      "repair_question": "After removing the source-proved archimedean main term, what is the weakest unconditional zeta-specific condition on the finite-place/incomplete-Li residual that is uniform in n and strictly weaker than RH?",
+      "source_anchors": [
+        "Jeffrey C. Lagarias, Li Coefficients for Automorphic L-Functions, Annales de l'Institut Fourier 57 (2007), 1689-1740, arXiv:math/0404394v4, especially Sections 4-6 and Theorem 6.1",
+        "Enrico Bombieri and Jeffrey C. Lagarias, Complements to Li's Criterion for the Riemann Hypothesis, J. Number Theory 77 (1999), 274-287, DOI 10.1006/jnth.1999.2392"
+      ]
+    },
+    {
+      "source_context": "Palojarvi explicit tau-Li zero-free-region criteria",
+      "method": "split zero contributions by radial region and test whether even a single off-region zero can defeat a coefficient bound despite acceptable global zero counts",
+      "shared_structure": [
+        "Li-type coefficients are powers of a zero-dependent radial transform",
+        "large-radius outliers can dominate an aggregate power sum",
+        "zero counting controls multiplicity but not the maximum radial amplification"
+      ],
+      "required_assumptions": [
+        "use the exact tau-Li transform and region definitions",
+        "preserve hypotheses on zero counts and computation",
+        "use the result as a structural calibration for zeta rather than importing a generalized theorem outside its scope"
+      ],
+      "disanalogies": [
+        "Palojarvi's theorems concern finite coefficient intervals and general zero-free regions, not a proof of RH",
+        "the paper's constants and class hypotheses are not automatically the sharp zeta constants needed here",
+        "detectability of an off-region zero is not a constructive prime-side cancellation theorem"
+      ],
+      "repair_question": "Can a proposed density/counting estimate exclude the radial outlier contribution required by the incomplete-Li bound, or does it leave a one-zero adversarial witness compatible with the count?",
+      "source_anchors": [
+        "Neea Palojarvi, Explicit zero-free regions and a tau-Li-type criterion, arXiv:1807.01506, especially Theorems 3.1 and 3.3 and the one-outlier discussion",
+        "P. Freitas, A Li-type criterion for zero-free half planes of Riemann's zeta function, J. London Math. Soc. 73 (2006), 399-414"
+      ]
+    },
+    {
+      "source_context": "RH-ANA-001 exact quartet calibration and RH-ANA-002 root-bridge stability audit",
+      "method": "reuse the exact hostile-control pattern: preserve the structural symmetry and aggregate statistics of the proposed surrogate while planting one root-critical off-line defect, then ask whether the proposed all-n inference survives",
+      "shared_structure": [
+        "finite or aggregate surrogate may look correct while an infinite-uniformity/root coordinate is wrong",
+        "a root-critical radial defect has an explicit algebraic transform into Li coefficients",
+        "the cheapest valid falsifier should target the inference rather than claim a zeta counterexample"
+      ],
+      "required_assumptions": [
+        "synthetic quartets are used only as known-answer logic calibrations",
+        "actual-zeta conclusions require primary-source zeta theorems",
+        "every reuse states a DifferenceWitness because RH-ANA-003 concerns density/tail control rather than finite-prefix positivity alone"
+      ],
+      "disanalogies": [
+        "the new target is a uniform remainder/density implication rather than a finite-prefix sign claim",
+        "a synthetic zero multiset need not arise from zeta",
+        "the calibration can prune an inference form but cannot establish the true zeta remainder"
+      ],
+      "repair_question": "What additional weighted zero-displacement or prime-side cancellation information must be added to zero counting so that the one-outlier hostile calibration is no longer admissible?",
+      "source_anchors": [
+        "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_001_LI_PREFIX_CALIBRATION_20260811.json",
+        "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_RESEARCH_MEMORY_REVIEW_20260811.json"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "A radial-outlier synthetic multiset is a logical calibration, not evidence that zeta has an off-critical zero.",
+    "A zero-density theorem can be valuable for many analytic estimates while still being insufficient for a Li power-sum bound that is sensitive to one radial outlier.",
+    "An exact arithmetic formula is not manifest positivity; cancellations and regularization remain load-bearing.",
+    "The unconditional archimedean asymptotic does not imply the finite-place term is small.",
+    "A bound equivalent to excluding every off-line zero is a reformulation of RH, not a strictly weaker bridge.",
+    "Finite numerical verification of zeros or Li coefficients remains calibration only."
+  ],
+  "source_anchors": [
+    "Xian-Jin Li, The Positivity of a Sequence of Numbers and the Riemann Hypothesis, J. Number Theory 65 (1997), 325-333, DOI 10.1006/jnth.1997.2137",
+    "Enrico Bombieri and Jeffrey C. Lagarias, Complements to Li's Criterion for the Riemann Hypothesis, J. Number Theory 77 (1999), 274-287, DOI 10.1006/jnth.1999.2392",
+    "Jeffrey C. Lagarias, Li Coefficients for Automorphic L-Functions, Ann. Inst. Fourier 57 (2007), 1689-1740, arXiv:math/0404394v4",
+    "Neea Palojarvi, Explicit zero-free regions and a tau-Li-type criterion, arXiv:1807.01506",
+    "Andre Voros, Sharpenings of Li's criterion for the Riemann Hypothesis, Math. Phys. Anal. Geom. 9 (2006), 53-63, arXiv:math/0506326",
+    "research/real_math/millennium/riemann_hypothesis/02_problem_dag/RH_ANA_003.yaml",
+    "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_002_POSTAUDIT_TRACE_CONTINUATION_20260811.json"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "control theory / linear dynamical systems",
+      "source_situation": "A large system may have excellent average spectral statistics and only one unstable mode. Repeated powers are eventually governed by that mode, so counting how few unstable modes exist cannot replace a bound on the spectral radius.",
+      "common_abstraction": [
+        "many individually transformed components are aggregated",
+        "power iteration amplifies components according to radial magnitude",
+        "a rare outlier may dominate an asymptotic or all-index quantity"
+      ],
+      "source_to_target_mapping": [
+        "eigenvalue radial magnitude -> |rho/(rho-1)| or the reciprocal Li radial factor",
+        "time/power index -> Li coefficient index n",
+        "unstable mode count -> off-critical zero count/density",
+        "spectral-radius control -> critical-line radial envelope"
+      ],
+      "shared_constraints": [
+        "power amplification is exponential in the iteration/index",
+        "aggregate counts alone do not bound the largest radial factor",
+        "a useful stability theorem must control the outlier coordinate or compensate it by a separately proved cancellation"
+      ],
+      "disanalogies": [
+        "Li sums contain phase, conjugation and functional-equation symmetry rather than a positive matrix norm",
+        "zeros are not freely chosen eigenvalues of a known finite-dimensional operator",
+        "the analogy provides a falsification pattern only, not a theorem about zeta"
+      ],
+      "proposed_principle": "Before using zero density as a Li-tail surrogate, isolate the maximum/weighted radial amplification and test a one-outlier world that satisfies the same count bound.",
+      "validation_obligation": "Derive the target radial factor exactly from the Li zero formula, preserve quartet symmetry, and show only that density/counting premises alone permit the hostile world; do not infer existence of such a zeta zero.",
+      "provenance_note": "Proposal-only structural analogy used to choose a hostile logical calibration; it creates no RH authority."
+    }
+  ],
+  "analogy_scan_notes": "Retained the rare-unstable-mode analogy because the shared mathematical mechanism is explicit power amplification by radial magnitude. Rejected generic 'needle in a haystack' and anomaly-detection metaphors as too weak to specify the Li transform or a falsifier.",
+  "frozen_at": "2026-08-11T12:10:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:3fd541de561c2509aa46687bb3792ec7c73b5d4ca5b44e7b9c3becfe46262d66"
+}
