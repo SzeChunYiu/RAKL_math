@@ -1,0 +1,55 @@
+{
+  "target_atom_id": "RH-SPEC-002a",
+  "target_context_hash": "sha256:43cb9593fd79ded84f03aa6c70508c5e81be7a073517c64fb0325e2b088a125a",
+  "tool_inventory_snapshot_hash": "gitblob-sha1:1fbddfa683711068897b63032cf3068f8237fb2d",
+  "failure_lattice_snapshot_hash": "gitblob-sha1:f9a0219e6b574d3dd1d88b65a02d5f30479d2870",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "residual-over-gap / Davis-Kahan-Kato ground-state identification",
+    "Rayleigh-Ritz fixed-lambda truncation convergence before outer lambda limit",
+    "weighted physical-space control implying compact-uniform Fourier convergence on a closed substrip",
+    "compactness-plus-uniqueness characterization of subsequential ground-state limits",
+    "nearly-degenerate two-mode hostile calibration of proxy-identification claims"
+  ],
+  "relevant_tool_ids": [
+    "T-RH-SPEC-HURWITZ-DOMAIN-ZERO-TRANSPORT"
+  ],
+  "relevant_failure_ids": [
+    "F-RH-SPEC-002-STRONG-RESOLVENT-INCOMPLETE",
+    "F-RH-SPEC-002-GALERKIN-POLLUTION",
+    "F-RH-SPEC-002-JOINT-LIMIT-AMBIGUITY",
+    "F-RH-SPEC-002-FINITE-ZERO-PREFIX",
+    "F-RH-SPEC-002-PR15-CHRONOLOGY"
+  ],
+  "selected_tool_ids": [
+    "T-RH-SPEC-HURWITZ-DOMAIN-ZERO-TRANSPORT"
+  ],
+  "tool_applicability_notes": [
+    "T-RH-SPEC-HURWITZ-DOMAIN-ZERO-TRANSPORT is selected only as the downstream target-side endpoint: if the actual source-normalized Fourier/determinant family is proved locally uniform on a root-relevant open domain with nonzero limit Xi and real finite-stage zeros, the tool transports zero reality/multiplicity there. It supplies none of the missing source-side ground-state or determinant convergence.",
+    "Applicability witness: RH-SPEC-002a retains the same holomorphic/real-zero structural signature as the source tool, but the current atom acts upstream. The required target-specific validation is therefore to prove a weighted xi_lambda-to-k_lambda estimate and exact normalization before invoking Hurwitz."
+  ],
+  "failure_reuse_notes": [
+    "F-RH-SPEC-002-STRONG-RESOLVENT-INCOMPLETE and F-RH-SPEC-002-GALERKIN-POLLUTION warn against replacing eigenvector/determinant identification with generic operator convergence. DifferenceWitness: RH-SPEC-002a targets the bottom isolated eigenspace and an analytic determinant, so the old pathologies are not automatic; the replacement certificate must explicitly include ground-state separation and analytic source control.",
+    "F-RH-SPEC-002-JOINT-LIMIT-AMBIGUITY applies directly to composing N->infinity with lambda->infinity. The cheapest regression is to freeze the order/cofinal path and track every estimate uniformly enough for the composition; no unspecified joint limit is allowed.",
+    "F-RH-SPEC-002-FINITE-ZERO-PREFIX blocks using the spectacular finite-zero agreement as normalization or convergence evidence. DifferenceWitness: the proposed source-side path uses independently normalized eigenfunctions and weighted transform bounds, not target-zero fitting.",
+    "F-RH-SPEC-002-PR15-CHRONOLOGY is an assurance warning: the exact RH-SPEC-002a next discriminator/evaluator must be committed before any evaluated candidate result. This packet therefore stops before candidate generation."
+  ],
+  "unresolved_warnings": [
+    "CCM Section 8 still lists simple/even ground-state structure as a missing theorem; any gap-based perturbation argument must not assume it silently",
+    "the spectral gap above the lowest QW_lambda eigenvalue may itself shrink rapidly with lambda, making tiny proxy residuals non-identifying",
+    "k_lambda is a prolate-derived proxy while xi_lambda is a QW_lambda eigenfunction; no source theorem currently equates the operators",
+    "fixed-lambda N convergence and lambda-uniform estimates are separate obligations",
+    "boundary-evaluation normalization can be unstable if the limiting eigenfunction vanishes or if delta_N compatibility is not quantitative",
+    "strip-uniform Fourier convergence requires weighted control stronger than unweighted L2 closeness on an expanding interval",
+    "the current source is a 2025 arXiv v1 strategy paper; novelty and any later revisions must be rechecked before mathematical promotion"
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_SPEC_002_LIMIT_STABILITY_CALIBRATION_20260811.md",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_002A_CONTEXT_FIBER_20260811.json",
+    "Alain Connes, Caterina Consani, Henri Moscovici, arXiv:2511.22755v1, Sections 7-8"
+  ],
+  "artifact_hash": "sha256:421cf41c886331a61ab3b021b49758a356620916d54031e86f9cc8bc40abef19"
+}
