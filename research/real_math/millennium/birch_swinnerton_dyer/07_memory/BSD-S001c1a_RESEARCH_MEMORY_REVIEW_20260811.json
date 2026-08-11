@@ -1,0 +1,48 @@
+{
+  "target_atom_id": "BSD-S001c1a-COMPLEX-UPPER-BOUND",
+  "target_context_hash": "sha256:a2ea384d3f59ad0933b06a75dc8bf62780473113aea02e6eadc14ec4a5e7d2c5",
+  "tool_inventory_snapshot_hash": "sha256:5d012f2d7bfceae275d8970bcfe04fc1cd5e1d61ec271b74931c108a129c70f5",
+  "failure_lattice_snapshot_hash": "sha256:255c5599151cd0f5670bc469434651b712519bd04d270c2f179313a8db887180",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "normalized discrete-order upper bound from complex Taylor order",
+    "two-sided Mazur-Tate/Kurihara order comparison",
+    "explicit correction-factor/no-extra-vanishing criterion",
+    "Generalized Perrin-Riou order comparison with independent arithmetic input",
+    "representation-change falsifier if universal upper bound fails"
+  ],
+  "relevant_tool_ids": [
+    "T-PNP-EXTREMAL-CALIBRATION"
+  ],
+  "relevant_failure_ids": [
+    "F-C023-SCALAR-COLLAPSE"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "No complexity-theory ResearchTool is selected for execution. T-PNP-EXTREMAL-CALIBRATION remains outside BSD theorem scope.",
+    "Only its scoped meta-warning is retained: calibrate a proposed proxy against the exact root coordinate rather than improving a representation orthogonal to the target."
+  ],
+  "failure_reuse_notes": [
+    "F-C023-SCALAR-COLLAPSE is a scope warning only: a compressed coordinate can preserve local structure while losing a root-critical coordinate.",
+    "No BSD-S001c1a failed mathematical candidate exists yet; the bounded source audit is route diagnosis, not FailureExperience.",
+    "A BSD-local failure record must wait for a frozen candidate/falsifier or a proved impossibility inside explicit scope."
+  ],
+  "unresolved_warnings": [
+    "The bounded search did not find an arbitrary-rank theorem equating independently defined discrete order with complex Taylor order; this is not a literature-wide nonexistence claim.",
+    "Mazur-Tate/Kato order results inspected are naturally indexed by arithmetic rank/divisibility and do not automatically give the missing complex-order upper bound.",
+    "General-rank leading-term implications must be audited for BSD, Sha, main-conjecture, or GPRC assumptions before use.",
+    "Trivial-zero/local Euler-factor corrections may change vanishing orders and must be normalized before comparison.",
+    "Selmer corank to Mordell-Weil rank and fixed-p to global refined BSD remain separate obligations."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD-S001_RESEARCH_TOOL_INVENTORY_20260811.json",
+    "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD-S001_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD-S001c1_BOUNDED_SOURCE_COMPARISON_20260811.md",
+    "Kazuto Ota, arXiv:1509.00682",
+    "Burns-Kurihara-Sano, arXiv:1910.07404",
+    "Burns-Kurihara-Sano, arXiv:2103.11535",
+    "Kim-Pollack, arXiv:2505.09121"
+  ],
+  "artifact_hash": "sha256:1a65df25a504801ce01b954227238664cc826867b414c3dab707150603fbaf78"
+}
