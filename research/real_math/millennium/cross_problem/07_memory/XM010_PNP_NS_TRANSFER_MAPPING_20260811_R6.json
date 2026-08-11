@@ -1,0 +1,40 @@
+{
+  "schema_version": "rakl-cross-transfer-mapping-v1",
+  "cycle_id": "XM010-PNP-NS-MORPHOLOGY-CONGRUENCE-20260811-R6",
+  "authority": "PROPOSAL_SHADOW_SEARCH_CONTROL_ONLY",
+  "source_atom": {
+    "id": "PNP-O9d12a2a1a1a",
+    "source_episode": "RAKL_math PR #78 / projection-congruence diagnostic",
+    "operation": "A compressed state/projection is admissible for downstream search only if equal projected states are congruent for the downstream outcome; one same-projection/different-outcome pair is a DifferenceWitness."
+  },
+  "target_atom": {
+    "id": "NS-B1a3b1b",
+    "issue": "RAKL_math#145",
+    "question": "Can weak-L^(3/2) amplitude information (even inside smooth compactly supported divergence-free vorticity fields) determine the one-center lambda^(-1/2) superlevel morphology required by the selected Grujic v2 consumer?"
+  },
+  "common_abstraction": "Representation sufficiency for a downstream decision/outcome: a coarse producer signature must not identify states with distinct target-critical outcomes.",
+  "enabling_assumptions": [
+    "Only a representation-level implication is tested; no equation-specific Navier-Stokes dynamics are transferred.",
+    "The target outcome uses a source-stated structural consequence of the critical profile: one-ball superlevel containment at radius C lambda^(-1/2).",
+    "The Lorentz coordinate is compared using the same L^(3/2,infinity) decreasing-rearrangement norm convention."
+  ],
+  "disanalogies": [
+    "PNP states are discrete set-system representations; NS states are smooth vector fields in R^3.",
+    "PNP downstream outcome concerns closure/reachability; NS downstream outcome concerns geometric concentration morphology.",
+    "The hostile NS fields are not suitable weak Navier-Stokes solutions and therefore cannot falsify an equation-specific finite-I implication.",
+    "Vorticity direction/log-BMO, far-field control, pre-singularity versus ancient state space, and Type-II behavior are not tested."
+  ],
+  "predicted_principle": "Before seeking an NSE theorem that maps a coarse critical amplitude signature into a geometric-depletion consumer, require a target-morphology coordinate or equation-specific rigidity that separates equal-amplitude states with incompatible core geometry.",
+  "cheapest_falsifier": "One smooth one-core field and one smooth two-core field with exactly equal L^(3/2,infinity) vorticity magnitude norm but opposite one-center high-threshold containment outcomes.",
+  "difference_witness": {
+    "projection": "pi(omega)=|| |omega| ||_{L^(3/2,infinity)} together with smooth/compact/divergence-free class tags",
+    "same_projection": "exact equality of the Lorentz norm after multiplying each of two disjoint copies by 2^(-2/3)",
+    "downstream_outcome": "Q_C,lambda(omega)=whether the lambda-superlevel set fits in one ball of radius C lambda^(-1/2)",
+    "different_outcome": "one-core Q=true; separated two-core Q=false for the same lambda_epsilon and fixed C when epsilon<1"
+  },
+  "transfer_verdict": "APPLICABLE_AS_REPRESENTATION_FALSIFIER; NO_MATHEMATICAL_THEOREM_TRANSFER",
+  "difference_witness_status": "EXECUTED_AFTER_PREACTION_RECEIPT",
+  "novelty_class_shadow": "transfer",
+  "proof_novelty": "NONE_CLAIMED",
+  "artifact_payload_sha256": "4e2996cebd0e11bbdd779e6033d80826eca00b78d55f52f485bc583f2b678fb1"
+}
