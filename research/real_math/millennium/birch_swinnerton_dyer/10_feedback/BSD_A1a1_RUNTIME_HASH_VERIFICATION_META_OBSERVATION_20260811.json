@@ -1,0 +1,21 @@
+{
+  "observation_id": "BSD-A1a1::META::PREFIXED-HASH-RUNTIME-ASSURANCE-GAP::20260811",
+  "method_surface": "experience substrate and public research trace content-integrity assurance",
+  "observation": "At RAKL bd1a276, TaskEpisode runtime hash verification is conditional on artifact_hash length 64 and therefore does not recompute the common sha256-prefixed 71-character form; failure-lattice and research-trace runtime audits likewise do not recompute each registered content digest. Application tests had to add independent blank-field digest checks before runtime reconstruction.",
+  "evidence_pointers": [
+    "BSD-A1a1-RUNTIME-HASH-ASSURANCE-RESULT-20260811",
+    "BSD-A1a1-RUNTIME-HASH-ASSURANCE-EVENT-20260811",
+    "tests/math_applications/test_bsd_a1a1_pr83_postmerge_assurance.py",
+    "research/real_math/millennium/birch_swinnerton_dyer/08_reviews/BSD_A1a1_PR83_POSTMERGE_ASSURANCE_CORRECTION_20260811.json"
+  ],
+  "candidate_framework_delta": "Proposal only: make hash encoding explicit and uniformly recompute supported digests in TaskEpisode, FailureExperience, and ResearchTraceEntry assurance paths; reject unsupported encodings fail-closed and add planted wrong-digest tests. Do not change semantics or promote from this single application observation.",
+  "validation_status": "UNVALIDATED_PROPOSAL",
+  "context_sha256": "d8d317c4e313ebc1fad3e32ba0e4828eba838707a9ea9bd8658fcc96a2534f26",
+  "result_id": "BSD-A1a1-RUNTIME-HASH-ASSURANCE-RESULT-20260811",
+  "event_id": "BSD-A1a1-RUNTIME-HASH-ASSURANCE-EVENT-20260811",
+  "non_guarantees": [
+    "not a proven framework defect across every serialization convention",
+    "not authority to mutate RAKL",
+    "requires protected evaluator and fresh assurance before promotion"
+  ]
+}
