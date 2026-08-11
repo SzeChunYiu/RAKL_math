@@ -4,7 +4,7 @@
 
 Can the Type-II branch isolated in Seregin arXiv:2606.29468v1 be eliminated by proving a **target-inherited far-field condition** and an **Euler-native rigidity theorem** for the exact ancient limit class?
 
-Context packet hash: `sha256:380b1d94d836a6079c43fd01123683e8d282caca05ff6956c7582760579cefa4`.
+Context packet hash: `sha256:155e0ab728aeea2b6f05617c1e834bdb7023dac901f3730c5d8a10ea847e8017`.
 
 ## Why this lane is orthogonal
 
