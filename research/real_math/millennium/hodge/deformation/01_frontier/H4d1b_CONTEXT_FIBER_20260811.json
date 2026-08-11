@@ -1,0 +1,80 @@
+{
+  "atom_id": "H4d1b",
+  "object_context": "Let f:X→S be a smooth projective family of complex varieties, s0∈S, and α a flat rational cohomology class that is algebraic on X_s0 via one fixed finite signed rational witness z0. Fix an irreducible local Hodge-locus branch T through s0. H4d1b asks, only at first order and only for this chosen witness/category, whether the branch-relative witness obstruction map δ1 vanishes on T_s0 T without assuming the desired lift or full semiregularity. Initial algebraicity, higher Artin lifting, algebraization, monodromy and global continuation are outside this atom.",
+  "structural_coordinates": [
+    "exact scope is rational cohomology on smooth projective complex varieties; central witness already exists",
+    "chosen witness is a finite signed rational cycle with coefficient vector preserved after denominator clearing",
+    "π:W_α→S (or →T after base restriction) denotes a chosen witness-incidence/flag-Hilbert/Chow deformation space near z0",
+    "δ1 is the standard first-order obstruction/connecting map attached to the chosen witness deformation problem; its exact domain/codomain must remain source/category bound",
+    "T_s0 T is the tangent space of one fixed local Hodge-locus branch; singular/nonreduced scheme structure can make tangent information weaker than local equality",
+    "geometric witness deformation preserves the flat cohomology class and therefore gives a base direction where α remains Hodge",
+    "first-order tangent lifting is distinct from compatible higher-order formal lifting, algebraization and branch domination",
+    "alternative detectors or obstruction objects are separate representations and may not silently inherit H4d1b conclusions"
+  ],
+  "equivalent_formulations": [
+    "δ1|_{T_s0 T}=0",
+    "every first-order Hodge-branch direction lies in the kernel of the chosen witness obstruction map",
+    "for the standard incidence deformation sequence, test whether T_s0 T is contained in im(dπ_(z0,s0))",
+    "if im(dπ) is automatically contained in T_s0 T, test whether first-order geometric and Hodge tangent directions coincide for the chosen witness branch"
+  ],
+  "solved_analogues": [
+    "codimension-one divisor/Picard variation, where Lefschetz (1,1) and line-bundle deformation give a strong positive control",
+    "semiregular codimension-one maps/cycles in Nishinou's relative deformation setting, where Hodge persistence controls the source-bound obstruction",
+    "Kloosterman's complete-intersection cycles on hypersurfaces, where flag-Hilbert geometry and Hodge-locus tangent/dimension information prove a variational Hodge result in that special family"
+  ],
+  "near_solved_analogues": [
+    "semiregularity/reduced-obstruction theories of Buchweitz–Flenner and Pridham",
+    "formal cycle-class deformation mechanisms of Bloch–Esnault–Kerz under additional structure"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "divisors and line bundles in smooth projective families",
+      "method": "identify Hodge persistence with geometric liftability using a representable witness category and exact deformation theory",
+      "shared_structure": ["a cohomological type condition constrains base directions", "a geometric witness category projects to the base", "first-order liftability can be read from the tangent/obstruction sequence"],
+      "required_assumptions": ["codimension one / Picard-type witness category", "integral/rational divisor class compatibility", "line-bundle deformation machinery"],
+      "disanalogies": ["higher-codimension cycles lack Picard representability", "a rational signed combination need not be one effective Hilbert point", "higher-order/global cycle deformation is substantially harder"],
+      "repair_question": "Which independently checkable geometric feature can replace Picard exactness for the chosen higher-codimension witness?",
+      "source_anchors": ["research/real_math/millennium/hodge/deformation/03_routes/H4d1_WITNESS_PROJECTION_CALIBRATION_20260811.md"]
+    },
+    {
+      "source_context": "Nishinou semiregular relative deformation of codimension-one maps",
+      "method": "use the source obstruction sequence plus semiregularity to convert Hodge persistence into vanishing of the geometric obstruction",
+      "shared_structure": ["fixed central algebraic witness", "relative base deformation direction", "geometric obstruction class", "Hodge persistence condition"],
+      "required_assumptions": ["source-specific semiregularity hypothesis", "the source's codimension/category assumptions", "the identified obstruction class is the one controlled by the Hodge condition"],
+      "disanalogies": ["H4d1b explicitly avoids assuming full semiregularity", "general rational higher-codimension witnesses may use different obstruction objects", "first-order vanishing does not supply all-order compatibility"],
+      "repair_question": "Can the exact first-order tangent/obstruction sequence itself reveal whether direct δ1-vanishing is merely the variational lifting condition in another representation?",
+      "source_anchors": ["https://arxiv.org/abs/2009.01651", "research/real_math/millennium/hodge/deformation/03_routes/H4d1_WITNESS_PROJECTION_CALIBRATION_20260811.md"]
+    },
+    {
+      "source_context": "Kloosterman complete-intersection cycles on hypersurfaces",
+      "method": "compare the flag-Hilbert projection with the Hodge locus by explicit tangent-space, dimension and smoothness calculations",
+      "shared_structure": ["a chosen algebraic cycle/witness varies in an incidence space", "the witness-incidence space maps to the deformation base", "the Hodge locus is a base-side condition", "tangent comparison can certify first-order geometric reachability in a special family"],
+      "required_assumptions": ["special hypersurface/complete-intersection geometry", "explicit Jacobian/Hilbert calculations", "smoothness/dimension statements available in the source family"],
+      "disanalogies": ["no general smooth-projective analogue of the explicit dimension computation is available", "tangent equality at a point need not imply higher-order or global equality", "the special result starts from an explicit algebraic witness family"],
+      "repair_question": "Does H4d1b reduce exactly to the tangent-surjectivity/equality condition that Kloosterman proves by special-family geometry, rather than offering a weaker general criterion?",
+      "source_anchors": ["https://arxiv.org/abs/2104.14845"]
+    }
+  ],
+  "explicit_disanalogies": [
+    "The root rational Hodge conjecture asks initial algebraicity for any rational Hodge class; H4d1b starts with an already algebraic central witness.",
+    "A signed rational witness requires coefficient-preserving multi-component bookkeeping; one effective Hilbert component is insufficient in general.",
+    "The tangent space of an irreducible Hodge-locus branch can fail to control nonreduced or higher-order structure.",
+    "A first-order equality cannot substitute for higher Artin lifting, formal compatibility, algebraization, monodromy or global continuation.",
+    "Kloosterman/Nishinou are special source categories and cannot be generalized by analogy alone."
+  ],
+  "source_anchors": [
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1_WITNESS_PROJECTION_CALIBRATION_20260811.md",
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1a_BRANCH_DETECTOR_COMPATIBILITY_NOGO_20260811.md",
+    "research/real_math/millennium/hodge/deformation/07_memory/H4d1a_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "https://arxiv.org/abs/2009.01651",
+    "https://arxiv.org/abs/2104.14845",
+    "https://arxiv.org/abs/math/9912245",
+    "https://arxiv.org/abs/1112.6001"
+  ],
+  "analogy_scan_status": "NO_SAFE_BRIDGE_FOUND",
+  "cross_domain_analogies": [],
+  "analogy_scan_notes": "Cross-domain/local-to-global and lifting analogies were reviewed but rejected for certification because they do not preserve the exact algebraic-cycle deformation category, rational coefficients, Hodge tangent condition, or higher-order obstruction structure. The active transfer is mathematical and source-bound.",
+  "frozen_at": "2026-08-11T15:12:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:97134ef4beac024251b7f6fd6d079208cf6f4be4246c2e7afab3bc5add8cf248"
+}

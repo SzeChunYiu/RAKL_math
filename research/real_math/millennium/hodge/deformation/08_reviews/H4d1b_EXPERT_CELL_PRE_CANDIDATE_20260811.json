@@ -1,0 +1,59 @@
+{
+  "review_id": "H4d1b-EXPERT-CELL-PRE-CANDIDATE-20260811",
+  "atom_id": "H4d1b",
+  "authority": "SAME_CONTEXT_ROLE_SEPARATED_PRE_CANDIDATE_REVIEW_ONLY",
+  "roles": [
+    {
+      "role": "VHS/Hodge-locus lead",
+      "background": "variations of Hodge structure, infinitesimal period maps, Hodge loci",
+      "delegated_check": "Check what a first-order deformation of the fixed witness implies about the base Hodge direction.",
+      "finding": "If the coefficient-preserving witness deforms with cohomology class equal to the flat α, its base direction keeps α of type (p,p), so the differential image of the witness-incidence projection is contained in the tangent space of the relevant Hodge locus/branch at the exact source scope.",
+      "objection": "At singular crossings, a witness deformation may land in the union Hodge locus without canonically selecting the same irreducible branch T; branch binding must be explicit.",
+      "recommendation": "Use only a branch-bound inclusion and do not infer local equality from tangent equality."
+    },
+    {
+      "role": "Algebraic-cycle/witness-moduli lead",
+      "background": "Hilbert and Chow spaces, flag Hilbert schemes, deformation of subschemes and signed rational cycles",
+      "delegated_check": "Check the first-order lifting interface for the chosen finite signed witness.",
+      "finding": "For the standard incidence deformation problem, first-order liftable base directions are the image of dπ. If δ1 is defined as the corresponding connecting/obstruction map, its kernel is precisely that first-order image at the registered interface.",
+      "objection": "For rational signed cycles W_α is local coefficient-preserving bookkeeping across several component spaces, not a universal fine moduli space.",
+      "recommendation": "Scope any ker(δ1)=im(dπ) statement to the exact chosen witness incidence and obstruction sequence."
+    },
+    {
+      "role": "Semiregularity/derived-obstruction lead",
+      "background": "normal-sheaf obstruction theory, semiregularity, derived deformation theory",
+      "delegated_check": "Determine whether direct δ1-vanishing is a weaker mechanism than geometric first-order liftability.",
+      "finding": "Once δ1 is the standard first-order obstruction map, δ1(v)=0 means exactly that v is first-order liftable in that deformation problem. Thus asking δ1 to vanish on all Hodge-branch directions risks restating tangent surjectivity rather than explaining it.",
+      "objection": "A different reduced obstruction object could change the representation, but then it is a fresh atom with a new compatibility theorem.",
+      "recommendation": "Run a representation-equivalence falsifier before further theorem invention."
+    },
+    {
+      "role": "Degeneration/monodromy lead",
+      "background": "degenerations, specialization, monodromy, limiting Hodge theory and algebraization boundaries",
+      "delegated_check": "Audit whether a first-order tangent result advances higher-order/global obligations.",
+      "finding": "It does not: singular degeneration, higher Artin obstructions, algebraization, monodromy/component switching and global continuation remain independent.",
+      "objection": "Tangent equality at a smooth central fiber can be destroyed by higher-order nilpotents or singular boundary behavior.",
+      "recommendation": "Do not open degeneration arguments until a non-tautological first-order geometric mechanism exists, unless they provide an independent route."
+    },
+    {
+      "role": "Adversarial formal-methods lead",
+      "background": "proof auditing, deformation-functor exactness, scheme-theoretic tangent pathologies",
+      "delegated_check": "Try to falsify the proposed equivalence before source expansion.",
+      "finding": "The equivalence survives only if δ1 is exactly the obstruction map whose zero set is the first-order liftable directions and if the Hodge branch is correctly bound. The main hostile cases are arbitrary obstruction maps, scheme-theoretic image versus differential image, branch crossings, and nonreduced structure.",
+      "objection": "Writing T_s0T=im(dπ) without these guards would overstate the source.",
+      "recommendation": "Predeclare a scoped theorem: δ1|T=0 iff T⊂kerδ1=im(dπ); add reverse inclusion only when coefficient-preserving witness deformation is branch-bound."
+    },
+    {
+      "role": "Novelty/research-value/metrology lead",
+      "background": "mathematical novelty control, research-method metrology and evidence governance",
+      "delegated_check": "Classify possible value if the equivalence is verified.",
+      "finding": "The linear equivalence itself is elementary and likely RAKL_TRIVIAL; value would be route normalization—showing H4d1b has not reduced the first-order variational lifting difficulty.",
+      "objection": "Do not count a new file/commit as learning or promote a new method/tool from one episode.",
+      "recommendation": "If verified, record route-pruning, a candidate representation lesson, and reopen the search for an independently computable tangent-equality mechanism."
+    }
+  ],
+  "consensus": "Run the exact first-order representation audit before any new criterion. Preserve branch, category, rational-coefficient, higher-order and globalization boundaries.",
+  "unresolved_disagreement": "Whether an alternative reduced obstruction object could produce a genuinely weaker computable criterion is left open; it is outside H4d1b and requires fresh context.",
+  "frozen_at": "2026-08-11T15:13:00+00:00",
+  "artifact_hash": "sha256:a54277c5b6e2cac6924708d67d14dcbfdd32ce90090d3f3cb2fd0cb6eee136a4"
+}

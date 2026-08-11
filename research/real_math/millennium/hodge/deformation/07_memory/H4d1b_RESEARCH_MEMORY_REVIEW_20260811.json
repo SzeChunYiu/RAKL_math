@@ -1,0 +1,45 @@
+{
+  "target_atom_id": "H4d1b",
+  "target_context_hash": "sha256:97134ef4beac024251b7f6fd6d079208cf6f4be4246c2e7afab3bc5add8cf248",
+  "tool_inventory_snapshot_hash": "sha256:fe2f3b4ef49492d81cb350fb689bf9f9dff6cfd1817d72d6ff9fe3350e3d5e6a",
+  "failure_lattice_snapshot_hash": "gitblob:c37b78245450acfc9b6857cfbf1ee0200cd402ac",
+  "tool_query_status": "NO_RELEVANT_MATCH",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "standard witness-incidence tangent/obstruction exact sequence",
+    "flag-Hilbert versus Hodge-locus tangent comparison",
+    "semiregularity/reduced obstruction theory",
+    "direct first-order branch obstruction annihilation",
+    "alternative detector or obstruction object",
+    "higher-Artin formal lifting",
+    "degeneration/normal-function/monodromy route"
+  ],
+  "relevant_tool_ids": [],
+  "relevant_failure_ids": ["F-H4D1-DETECTOR-KERNEL-GAP", "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO"],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "No promoted Hodge-deformation ResearchTool has authority whose preconditions cover H4d1b.",
+    "Kloosterman's flag-Hilbert/Hodge tangent method is retained as a solved-family method transfer, not promoted as a reusable general tool.",
+    "Cross-problem tools were not imported without a structural applicability witness."
+  ],
+  "failure_reuse_notes": [
+    "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO selects direct δ1-vanishing as the smallest same-detector successor but does not establish that the successor is genuinely simpler.",
+    "F-H4D1-DETECTOR-KERNEL-GAP remains a warning that base-side Hodge compatibility alone cannot certify witness lifting unless the geometric obstruction directions are independently controlled.",
+    "Difference witness: H4d1b drops detector injectivity and asks about the standard witness obstruction map itself; the repeat-failure test is whether this new condition collapses to the geometric tangent-surjectivity statement it was supposed to explain."
+  ],
+  "unresolved_warnings": [
+    "The standard identity ker(δ1)=im(dπ) must be scoped to the exact witness deformation/obstruction sequence; arbitrary obstruction theories need not present this literal linear map.",
+    "The geometric image tangent may differ from the tangent of a scheme-theoretic image at singular/nonreduced points; formulate only the first-order image statement actually justified.",
+    "A first-order result does not settle higher Artin orders, algebraization, coefficient preservation, monodromy, singular degeneration or global continuation.",
+    "H4d1b cannot address initial algebraicity because a central algebraic witness is assumed."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1_WITNESS_PROJECTION_CALIBRATION_20260811.md",
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1a_BRANCH_DETECTOR_COMPATIBILITY_NOGO_20260811.md",
+    "research/real_math/millennium/hodge/deformation/07_memory/H4d1a_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "research/real_math/millennium/hodge/deformation/07_memory/H4d1a_FAILURE_EXPERIENCE_LATTICE_COMBINED_20260811.json",
+    "https://arxiv.org/abs/2009.01651",
+    "https://arxiv.org/abs/2104.14845"
+  ],
+  "artifact_hash": "sha256:9515cc2c78fc9421ec12678edafbc586da76a7bffd109c2683e705cef8c173e1"
+}

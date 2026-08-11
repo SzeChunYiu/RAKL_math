@@ -1,0 +1,24 @@
+{
+  "experiences": [{
+    "failure_id":"F-H4D1B-DIRECT-VANISHING-NO-COMPLEXITY-REDUCTION",
+    "atom_id":"H4d1b",
+    "candidate_id":"H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE",
+    "supporting_episode_id":"H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE",
+    "context_packet_hash":"sha256:97134ef4beac024251b7f6fd6d079208cf6f4be4246c2e7afab3bc5add8cf248",
+    "method_family":"direct first-order branch obstruction annihilation",
+    "failure_mode":"As an independent research reduction, direct vanishing has a dichotomy: for a complete first-order obstruction theory it is equivalent to first-order witness liftability/tangent surjectivity, while for a detector-only obstruction it is insufficient to imply witness lifting.",
+    "residual_signature":["need independent geometry forcing first-order witness tangent surjectivity onto the Hodge branch","higher Artin lifting remains separate after any first-order success","algebraization, rational coefficient/category safety, monodromy and global continuation remain open"],
+    "broken_assumptions":["proving δ1|T=0 can be credited as a strictly simpler first-order lifting mechanism without first typing whether δ1 is complete or detector-only"],
+    "scope_conditions":["fixed already algebraic central witness","fixed local Hodge branch T","first-order deformation only","complete-obstruction fork uses zero iff lift; detector-only fork is one-sided","no claim about higher-order, algebraization, root initial algebraicity or alternate obstruction objects"],
+    "competing_diagnoses":["δ1 might be a non-complete detector, in which case vanishing could be genuinely weaker but cannot close the lifting arrow","an alternative reduced obstruction object might make a different route useful, but requires a fresh representation","special-family geometry can prove actual tangent surjectivity without relying on the obstruction restatement"],
+    "selected_diagnosis":"The H4d1b residual was under-typed: the value of direct obstruction vanishing depends on completeness semantics. After typing, it either restates the first-order target or fails to imply it.",
+    "diagnosis_status":"VERIFIED_SCOPED_REPRESENTATION_EQUIVALENCE",
+    "falsifier_or_attempt":"For the exact fixed-witness first-order incidence deformation problem, test whether the registered δ1 is the standard obstruction/connecting map with ker(δ1)=im(dπ_(z0,s0)), and whether coefficient-preserving witness deformation along the fixed branch gives im(dπ)⊆T_s0T. If so, determine whether δ1|_{T_s0T}=0 is equivalent to T_s0T⊆im(dπ), hence tangent equality. Falsify by finding a valid registered H4d1b model in which δ1 governs first-order witness lifting but ker(δ1)≠im(dπ), or a coefficient-preserving first-order witness deformation that is not tangent to the same Hodge branch.",
+    "observed_result":"For a complete obstruction theory, first-order lift exists iff δ1(v)=0, while a lift over v is exactly a tangent vector upstairs mapping to v; hence ker δ1=im dπ and δ1 vanishes on the entire Hodge-branch tangent iff dπ is surjective. If δ1 is detector-only, the implication to liftability is unavailable.",
+    "local_repair_attempts":["retire H4d1b direct vanishing as an independent first-order route","open H4d1c for independently checkable geometry forcing tangent surjectivity","type any future obstruction surface as complete versus detector-only before route-credit"],
+    "evidence_pointers":["H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE","research/real_math/millennium/hodge/deformation/03_routes/H4d1b_FIRST_ORDER_TANGENT_OBSTRUCTION_EQUIVALENCE_20260811.md","https://stacks.math.columbia.edu/tag/07YG","https://arxiv.org/abs/2009.01651","https://arxiv.org/abs/2104.14845"],
+    "timestamp":"2026-08-11T15:16:10+00:00"
+  }],
+  "links":[{"source_id":"F-H4D1B-DIRECT-VANISHING-NO-COMPLEXITY-REDUCTION","target_id":"F-H4D1A-SAME-DETECTOR-BRANCH-NOGO","relation":"SUCCESSOR_DIAGNOSIS_OF","rationale":"H4d1a opened direct vanishing as its smallest same-detector successor; H4d1b now types that successor and finds it does not independently reduce first-order liftability.","evidence_pointers":["research/real_math/millennium/hodge/deformation/03_routes/H4d1a_BRANCH_DETECTOR_COMPATIBILITY_NOGO_20260811.md"]}],
+  "artifact_hash":"sha256:f662b7d8088219f9a7f482bde78ff5118ddd89cda59a8d004ec8fc0026bd4bc6"
+}
