@@ -1,0 +1,44 @@
+{
+  "target_atom_id": "XM-ROOT-BRIDGE-002",
+  "target_context_hash": "sha256:ea55730764e7e58630e09946e58f52221b3d099aaba9e7726d7d1eeefa697b6c",
+  "tool_inventory_snapshot_hash": "sha256:76a1efe2c250c5f1440804533a02a0a4ca0f193be385f10252e7850c026e0d20",
+  "failure_lattice_snapshot_hash": "sha256:e50516b60958aaa7b7459df43d7a80d6fbc9593921da3169d82215b7519e0822",
+  "tool_query_status": "MATCHES_FOUND",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "projection-sufficiency / nullspace falsification",
+    "all-prime arithmetic reconstruction",
+    "complex-to-p-adic leading-term comparison",
+    "higher-rank determinant/exterior bridge",
+    "direct fixed-p Iwasawa-to-global-BSD inference"
+  ],
+  "relevant_tool_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+  "relevant_failure_ids": [
+    "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+    "F-XM001-POINTWISE-GAP-COLLAPSE"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT has the right structural signature for BSD-S001, but its source artifact is still on draft RAKL PR #95 rather than merged RAKL main; use it only as a proposal-level procedure in this atom.",
+    "DifferenceWitness: the common abstraction is loss of a root-critical coordinate under a weaker surrogate/projection. BSD differs because the missing coordinates are all-prime and archimedean arithmetic data, not continuum scaling or cover integrality.",
+    "The XM001 equation and Yang-Mills target do not transfer; only the instruction to explicitly test root-factorization through the weaker observation transfers."
+  ],
+  "failure_reuse_notes": [
+    "F-C024 is a merged warning that local surrogate validity can coexist with failure to preserve multi-object correlation/integrality; no LP statement transfers to BSD.",
+    "F-XM001 is a draft warning that a root-normalized quantity can vary while a finite/local surrogate stays positive; no Yang-Mills sequence transfers to BSD.",
+    "Both failures motivate testing whether the refined BSD root functional factors through the exact fixed-p observation before strengthening the observation."
+  ],
+  "unresolved_warnings": [
+    "a formal projection-nullspace witness does not show realizability by actual elliptic curves",
+    "deep arithmetic constraints may collapse the apparent kernel on the image of an exact theorem; if so that constraint must be identified and audited",
+    "the fixed-p theorem output must be frozen exactly; 'p-primary information' is too vague for a root sufficiency claim",
+    "rank equality and refined leading-term reconstruction are distinct root outputs and may require different bridges"
+  ],
+  "evidence_pointers": [
+    "SzeChunYiu/RAKL PR #95 tool/failure records",
+    "SzeChunYiu/RAKL main C024 failure record",
+    "SzeChunYiu/RAKL branch research/bsd-s001-pre-candidate-20260811 BSD-S001 context fiber",
+    "Andrew Wiles official Clay BSD problem description"
+  ],
+  "artifact_hash": "sha256:d709946bac050ac62dc2b9f5531b04e5390eccba2d655d0c72a40f64d485c408"
+}
