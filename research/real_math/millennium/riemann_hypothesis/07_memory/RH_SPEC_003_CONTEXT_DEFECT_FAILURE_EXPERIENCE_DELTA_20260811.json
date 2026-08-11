@@ -1,0 +1,46 @@
+{
+  "source_atom_id": "RH-SPEC-003",
+  "authority": "NEGATIVE_HISTORY_DELTA / SEARCH_CONTROL_ONLY / ROOT_AUTHORITY_NONE",
+  "failures": [
+    {
+      "failure_id": "F-RH-SPEC-003-WEAK-L1-ENDPOINT",
+      "failure_type": "REPRESENTATION_SCOPE / TRACE_IDEAL_MISCLASSIFICATION",
+      "summary": "For M(T)~C T log T, the naive first-order compact-resolvent smoothing has s_n~C log n/n and is neither trace class nor standard weak-L1; the frozen context's weak-L1 endpoint sentence is false.",
+      "falsifier": "Invert the target count to nu_n~n/(C log n) and evaluate n*s_n and normalized singular-value partial sums.",
+      "preserved_obligations": [
+        "operator domain",
+        "self-adjointness",
+        "compact resolvent",
+        "multiplicity/completeness",
+        "trace notion",
+        "prime matching",
+        "non-circularity"
+      ],
+      "transfer_rule": "Transfer only to target operators whose singular-value counting is proved to have the same T log T law and whose endpoint trace claim uses the same uncorrected first-order weight.",
+      "difference_witness_required": "Noncompact/continuous-spectrum, distributional/relative trace, or log-weighted targets are not covered without a target-specific ideal-membership proof.",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_SPEC_003_WEAK_L1_ENDPOINT_CONTEXT_DEFECT_20260811.md"
+      ]
+    },
+    {
+      "failure_id": "F-RH-SPEC-003-FOCUSED-CURRENT-FRAMEWORK-CI-COVERAGE",
+      "failure_type": "ASSURANCE_COVERAGE",
+      "summary": "The focused RH spectral workflow at the pre-defect head did not invoke test_rh_spec_003_strict_packet.py, so its green status did not certify the new packet against current RAKL main; the general application suite certified it only against the repository's exact framework pin.",
+      "falsifier": "Inspect .github/workflows/rh-spectral-assurance.yml and application-ci.yml, then compare their framework subjects and test selections.",
+      "preserved_obligations": [
+        "exact-head verifier subject",
+        "current-framework freshness",
+        "test selection",
+        "no silent promotion from unrelated green checks"
+      ],
+      "transfer_rule": "Transfer to any application lane only when a new strict-packet test can be omitted from a supposedly focused current-framework workflow.",
+      "difference_witness_required": "A full exact-pin application suite is still valid for its declared pinned subject; the failure is specifically the missing current-framework focused coverage claim.",
+      "evidence_pointers": [
+        ".github/workflows/rh-spectral-assurance.yml",
+        ".github/workflows/application-ci.yml"
+      ]
+    }
+  ],
+  "created_at": "2026-08-11T09:57:10+00:00",
+  "artifact_hash": "sha256:6127ba8acd6c6a2f35940c5d57bc3a101325d432f8f703398ff08adb2cc11a33"
+}
