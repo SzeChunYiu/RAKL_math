@@ -1,0 +1,89 @@
+{
+  "atom_id": "YM-S1a2",
+  "object_context": "Fixed-cutoff/infinite-volume strong-coupling source-to-transfer gluing atom: bind Shen-Zhu-Zhu smooth gauge-invariant cylinder covariance decay to the same Osterwalder-Schrader physical Hilbert space and one-step transfer operator used by the abstract YM-S1a1 dense-source spectral exclusion lemma. Close only reflection-positivity inheritance, controlled-source density, and translated-covariance/time-distance interfaces. Do not claim RG transport, continuum scaling, continuum existence, novelty, or Clay-root authority.",
+  "structural_coordinates": [
+    "SZZ finite-volume measures are Wilson plaquette Gibbs measures on SO(N) or SU(N) edge variables and converge under Assumption 1.1 to a unique infinite-volume measure.",
+    "SZZ Corollary 1.6 controls covariance for arbitrary disjoint-support smooth cylinder functions with one common exponent c_N at fixed strong-coupling parameters and source-dependent finite prefactors.",
+    "Luescher's OS construction builds the physical Hilbert space from gauge-invariant positive-time observables modulo null vectors and identifies one-step positive Euclidean-time translation with T=exp(-aH).",
+    "The SZZ Langevin/Markov generator gap is not the physical Hamiltonian gap and is excluded from the target bridge.",
+    "Finite-volume Wilson reflection positivity must be passed to the exact SZZ infinite-volume measure for the chosen reflection plane and local positive-time algebra.",
+    "The SZZ-controlled gauge-invariant smooth cylinder subalgebra must be dense in the same OS Hilbert completion; generic fixed-graph spin-network completeness is not sufficient.",
+    "Centered sources must be dense in the vacuum-orthogonal sector rather than merely dense including the vacuum.",
+    "For fixed finite source support, positive-time translation must give the exact OS transfer moment and support distance n+O_F(1) in SZZ's edge-support metric.",
+    "If S1a2 closes, the consequence is only a fixed-cutoff/infinite-volume/strong-coupling transfer spectral gap via the already-supported YM-S1a1 abstract lemma.",
+    "G5 RG transport, G6 physical lattice-spacing scaling, G7 continuum spectral identification, continuum existence/nontriviality and root assurance remain open."
+  ],
+  "equivalent_formulations": [
+    "OS-form: show the unique SZZ infinite-volume measure is reflection positive on the local positive-time gauge-invariant algebra, reconstruct T, and prove the SZZ-controlled source images are dense in Omega-perp.",
+    "Approximation-form: show gauge-invariant smooth positive-time cylinders are dense in an ordinary L2(mu) source space and that the OS seminorm is continuously controlled by L2(mu), so their OS classes are dense after quotient/completion.",
+    "Moment-form: for centered F in the controlled dense class, identify Cov_mu(F,tau_n F)=<[F],T^n[F]> and transfer SZZ's exp(-c_N d) bound to one common nth-root ceiling q<1.",
+    "Geometry-form: prove d(Lambda_F,Lambda_tau_nF)=n+O_F(1) for fixed finite support in the chosen Euclidean time direction."
+  ],
+  "solved_analogues": [
+    "YM-S1a1 abstract positive self-adjoint dense-source moment-to-spectral-support exclusion is already locally supported, with the q=0 target-facing logarithm boundary corrected in later history.",
+    "Luescher 1977 gives an explicit Wilson-lattice OS/transfer construction at finite volume from positive-time gauge-invariant observables.",
+    "SZZ prove unique infinite-volume convergence and a common exponential covariance rate over smooth cylinder functions in an explicit strong-coupling regime."
+  ],
+  "near_solved_analogues": [
+    "For finite products of compact Lie groups, smooth functions are dense in L2 of finite-dimensional probability marginals; gauge averaging is a natural route to gauge-invariant approximants, but exact OS-support and norm details remain to be proved.",
+    "Reflection positivity inequalities for fixed local observables are closed under limits of their expectations, suggesting a short finite-volume-to-infinite-volume inheritance argument once boundary/reflection conventions are aligned."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Osterwalder-Schrader positive-time reconstruction for Wilson lattice gauge theory",
+      "method": "Treat source completeness as density of the positive-time observable algebra in the reconstructed quotient/completion, not as an unrelated kinematic basis theorem.",
+      "shared_structure": ["positive-time gauge-invariant local observables", "reflection-positive seminorm", "null quotient", "one-step Euclidean time shift"],
+      "required_assumptions": ["same finite-volume Wilson measure convention", "reflection plane compatible with source supports", "infinite-volume expectation limits exist for the local products used in the OS form"],
+      "disanalogies": ["Luescher's explicit construction is finite-volume/canonical while SZZ's target measure is an infinite-volume limit", "OS algebra density does not automatically imply SZZ smooth-cylinder subclass density"],
+      "repair_question": "Can reflection positivity and one-step shift descend to the unique SZZ limit for every fixed local positive-time gauge-invariant source?"
+    },
+    {
+      "source_context": "Smooth approximation on finite compact-group coordinate sets",
+      "method": "Approximate positive-time gauge-invariant cylinder observables by smooth gauge-invariant cylinders in ordinary L2 and transfer the approximation through a bounded OS seminorm.",
+      "shared_structure": ["finite-coordinate cylinders", "compact Lie-group coordinates", "gauge averaging", "L2 approximation", "reflection-positive seminorm"],
+      "required_assumptions": ["finite-coordinate cylinders are dense in L2(mu)", "smooth functions are dense for each finite marginal", "gauge averaging preserves smoothness/support/gauge invariance", "OS seminorm is controlled by ordinary L2(mu) under reflection invariance"],
+      "disanalogies": ["ordinary L2 convergence need not imply OS convergence without the norm comparison", "centering/vacuum quotient must be handled explicitly"],
+      "repair_question": "Does the exact SZZ infinite-volume measure and reflection map provide the required L2-to-OS continuity and centered density?"
+    },
+    {
+      "source_context": "SZZ Corollary 1.6 plus fixed-source Euclidean time translation",
+      "method": "Use the common c_N exponent and fixed source-dependent prefactors to obtain one source-independent nth-root rate after proving support distance grows linearly in the time shift.",
+      "shared_structure": ["smooth cylinder sources", "infinite-volume covariance", "finite source supports", "common exponential exponent"],
+      "required_assumptions": ["translated source remains in the controlled class", "supports are disjoint for large n", "distance is n+O_F(1)", "centered covariance equals the OS transfer moment"],
+      "disanalogies": ["SZZ labels correlation decay a mass gap in statistical-mechanics language but does not by itself identify the physical transfer Hamiltonian", "fixed strong coupling does not approach the four-dimensional continuum trajectory"],
+      "repair_question": "What exact centering and offset convention makes the SZZ covariance the T^n moment of the same OS source class?"
+    }
+  ],
+  "explicit_disanalogies": [
+    "Langevin-generator Poincare/log-Sobolev gap is not the physical transfer/Hamiltonian gap.",
+    "Exponential covariance decay without source density can miss a hidden lower-energy state.",
+    "Kinematic fixed-graph basis completeness is not density in the SZZ infinite-volume OS Hilbert space.",
+    "Ordinary L2 density is not OS density without a norm-continuity witness.",
+    "A fixed-cutoff strong-coupling gap does not imply a finite positive physical continuum mass gap."
+  ],
+  "source_anchors": [
+    "research/real_math/millennium/yang_mills/00_problem_contract/ROOT_CONTRACT.md",
+    "research/real_math/millennium/yang_mills/03_sources/YM-S1A1_SOURCE_PACKET_20260811.md",
+    "research/real_math/millennium/yang_mills/03_sources/YM-S1A2_PRIMARY_SOURCE_BINDING_AUDIT_20260811.md",
+    "H. Shen, R. Zhu, X. Zhu, arXiv:2204.12737, Theorem 1.2 and Corollary 1.6",
+    "M. Luescher, DESY 76/61, Construction of a selfadjoint, strictly positive transfer matrix for euclidean lattice gauge theories",
+    "K. Osterwalder and E. Seiler, Ann. Phys. 110 (1978), DOI 10.1016/0003-4916(78)90039-8"
+  ],
+  "analogy_scan_status": "BRIDGE_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "signal-processing observability with sensor-class completion",
+      "source_situation": "A stability estimate on every smooth test signal certifies the whole state space only if those test signals are dense in the physical norm actually used by the evolution operator.",
+      "common_abstraction": ["uniform decay on a test class", "completion in a physical norm", "hidden mode if test class is not dense"],
+      "source_to_target_mapping": ["test signal -> smooth gauge-invariant cylinder source", "physical norm -> OS seminorm/completion", "evolution operator -> transfer matrix T", "hidden mode -> unobserved low-energy excitation"],
+      "shared_constraints": ["uniform rate plus density required", "wrong norm can destroy density", "finite prefactors do not alter asymptotic exponential rate"],
+      "disanalogies": ["ordinary linear signal spaces lack gauge quotient/null vectors", "analogy supplies no reflection positivity or continuum result"],
+      "proposed_principle": "Prove density in the same norm/completion in which the global spectral claim lives.",
+      "validation_obligation": "Exhibit an exact L2-to-OS density/continuity proof for the SZZ smooth gauge-invariant cylinder source class or produce a counterexample."
+    }
+  ],
+  "analogy_scan_notes": "Retained only the observability/completion abstraction because it exactly targets the prior hidden-state failure and produces a falsifiable norm-density obligation; no analogy supplies theorem authority.",
+  "frozen_at": "2026-08-11T13:02:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:13393542ca4a411c8edd39bd710538df4567e3bdc3ea3eb503f0f84020569b3d"
+}
