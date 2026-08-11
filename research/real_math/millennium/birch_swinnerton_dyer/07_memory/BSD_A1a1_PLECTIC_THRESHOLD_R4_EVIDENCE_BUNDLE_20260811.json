@@ -1,0 +1,196 @@
+{
+  "schema_version": "rakl-bsd-cycle-evidence-bundle-v1",
+  "artifact_type": "PROPOSAL_SHADOW_V3_EVIDENCE",
+  "cycle_id": "BSD-A1a1-PLECTIC-THRESHOLD-20260811-R4",
+  "authority": "PROPOSAL_SHADOW / SAME_CONTEXT_REVIEW / NO_ROOT_AUTHORITY / NO_FRAMEWORK_PROMOTION",
+  "framework": {
+    "method_version": "3.0.0",
+    "git_sha": "38a530a52d863513db16052474b85e63fbb488cd"
+  },
+  "application": {
+    "base_sha": "c48293364c6bdf7e0c5d93f5e01d889008c9eb61",
+    "branch": "research/bsd-a1a1-r4-plectic-threshold-audit-20260811"
+  },
+  "context_fiber": {
+    "cycle_id": "BSD-A1a1-PLECTIC-THRESHOLD-20260811-R4",
+    "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+    "root_contract": "For elliptic curves E/Q, ord_{s=1}L(E,s)=rank E(Q); refined leading term separately tracks period, Tamagawa/local factors, torsion, regulator, and Sha.",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "active_discriminator": "Does the current plectic rank-two architecture give a noncircular, root-faithful bridge from exact complex analytic rank two for E/Q to nonzero plectic/mock-plectic data?",
+    "typed_coordinates": {
+      "r_root": "ord_{s=1} L(E/Q,s)",
+      "r_plectic": "structural plectic degree from local-place data",
+      "r_an_aux": "analytic rank in auxiliary CM/base-change chart",
+      "plectic_nonzero": "nonvanishing of kappa or Q",
+      "r_p_aux": "p-Selmer rank in auxiliary chart",
+      "r_alg_aux": "algebraic/Mordell-Weil rank in auxiliary chart",
+      "root_arithmetic": "rank E(Q), Sha, regulator, full complex leading term"
+    },
+    "exclusions": [
+      "numerical equality r_root=r_plectic=2 is not a bridge theorem",
+      "p-adic derivatives are not complex s-derivatives without an explicit comparison theorem",
+      "no algebraic/Selmer-rank-two, Sha-finiteness, p-adic-BSD, or equivalent root-strength premise may be smuggled into the root direction",
+      "special polyquadratic/function-field cases require DifferenceWitness and transfer proof",
+      "local plectic success is separate from root gluing"
+    ],
+    "framework_subject": {
+      "method_version": "3.0.0",
+      "git_sha": "38a530a52d863513db16052474b85e63fbb488cd"
+    },
+    "application_base": "c48293364c6bdf7e0c5d93f5e01d889008c9eb61",
+    "chronology": "RETROSPECTIVE_NO_RECEIPT",
+    "frozen_at_utc": "2026-08-11T17:12:14Z",
+    "context_hash": "sha256:6a4d98736ba2a6adae9177441457d9fb57a39698b47890c96333a614ceeacb7f"
+  },
+  "fibre_snapshot": {
+    "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+    "context_hash": "sha256:6a4d98736ba2a6adae9177441457d9fb57a39698b47890c96333a614ceeacb7f",
+    "problem_signature": [
+      "BSD",
+      "E/Q",
+      "analytic-rank-two",
+      "plectic-degree",
+      "plectic-nonvanishing",
+      "p-Selmer",
+      "root-gluing"
+    ],
+    "framework_consulted": [
+      "RAKL_VERSION.json@38a530a52d863513db16052474b85e63fbb488cd",
+      "src/rakl/method_specs.py@38a530a52d863513db16052474b85e63fbb488cd",
+      "schemas/task-episode.schema.json@38a530a52d863513db16052474b85e63fbb488cd",
+      "src/rakl/pre_action_receipt.py@38a530a52d863513db16052474b85e63fbb488cd"
+    ],
+    "application_consulted": [
+      "RAKL_math issue #7",
+      "00_problem/PROBLEM.md",
+      "01_frontier/BSD_A1a1_THETA_ORDER_CONTEXT_FIBER_20260811.json",
+      "01_frontier/BSD_A1a1_PLECTIC_BRIDGE_AUDIT_20260811.md",
+      "02_problem_dag/BSD_A1a1_CURRENT_2026_ROUTE_DIAGNOSTIC.yaml",
+      "07_memory/BSD_A1a1_PLECTIC_TASK_EPISODE_SHADOW_20260811_R3.json",
+      "07_memory/BSD_A1a1_PLECTIC_FAILURE_EXPERIENCE_LATTICE_RETROSPECTIVE_20260811.json",
+      "07_memory/BSD_A1a1_RAKL_CYCLE_METRICS_20260811_R3.json",
+      "07_memory/RAKL_METHOD_CASE_STUDY_BSD_A1a1_PLECTIC_20260811_R3.md",
+      "RAKL_math PR #41",
+      "RAKL_math PR #44"
+    ],
+    "primary_sources_consulted": [
+      "arXiv:2603.28327v2",
+      "arXiv:2311.03100v2",
+      "arXiv:2202.12573v2",
+      "arXiv:2203.15998v1"
+    ],
+    "memory_selected": [
+      "EP-BSD-A1A1-PLECTIC-BRIDGE-20260811-R3",
+      "F-BSD-A1A1-PLECTIC-NONVANISHING-RELATION-GAP-V3-RETROSPECTIVE",
+      "F-XM001-POINTWISE-GAP-COLLAPSE",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "memory_rejected": {
+      "REPEAT_SCALAR_THETA_ORDER_SCAN": "R2/R3 family locally flat",
+      "HM-2202.12573-AS-COMPLEX-BRIDGE": "p-adic, not complex-s coordinate",
+      "FG-2203.15998-AS-GENERIC-EQ-TRANSFER": "polyquadratic/base-change and algebraic-rank DifferenceWitness",
+      "FUNCTION_FIELD_HIGHER_GZ_TRANSFER": "wrong setting; no transfer certificate",
+      "ALLOCATE_UNRESERVED_CHILD_ATOM": "canonical admission not authorized"
+    },
+    "memory_missed": "CANNOT_MEASURE: no coverage-complete memory-universe receipt",
+    "search_policy": "counterexample-first equality-threshold audit before new invariant generation",
+    "fibre_snapshot_hash": "sha256:3586bc33f1c833658b32300327d6985db31dc71c0d19548dc4535aea170c647e"
+  },
+  "source_family_receipt": {
+    "sources": [
+      {
+        "id": "SRC-FORNEA-2603.28327v2",
+        "version_date": "2026-04-13",
+        "checked": ["F=Q mock-plectic comparison", "Conjecture 1.9", "Conjecture 1.10"],
+        "finding": "r is a structural plectic threshold; at r_an=r, Conj.1.9 gives Selmerness rather than an analytic-rank-only nonvanishing implication; Conj.1.10 ties nonvanishing to exact algebraic rank after r_alg>=r.",
+        "status": "PRIMARY; theorem/conjecture labels preserved"
+      },
+      {
+        "id": "SRC-FG-2311.03100v2",
+        "version_date": "2024-12-02",
+        "checked": ["Theorem 1.3/abstract", "Conjecture 2.13", "Remark 2.15"],
+        "finding": "proved direction starts from mock-plectic nonvanishing and concludes p-Selmer rank 2; conjectural nonvanishing criterion is algebraic/Selmer-rank-facing.",
+        "status": "PRIMARY; downstream only"
+      },
+      {
+        "id": "SRC-HM-2202.12573v2",
+        "version_date": "2026-07-03",
+        "checked": ["current abstract/p-adic Gross-Zagier statement"],
+        "finding": "higher derivatives are Hida-Rankin p-adic L-function derivatives; not the missing complex-s bridge.",
+        "status": "PRIMARY; rejected as direct complex bridge"
+      },
+      {
+        "id": "SRC-FG-2203.15998v1",
+        "version_date": "2022-03-30",
+        "checked": ["polyquadratic algebraicity/rank analogue"],
+        "finding": "useful special analogue but not a literal generic E/Q transfer.",
+        "status": "PRIMARY; DifferenceWitness reject for root transfer"
+      }
+    ],
+    "bounded_negative_search": {"result": "NO_MATCH_IN_BOUNDED_PRIMARY_SOURCE_SEARCH", "nonexistence_claim": false}
+  },
+  "task_episode_shadow": {
+    "episode_id": "EP-BSD-A1A1-PLECTIC-THRESHOLD-20260811-R4",
+    "task_id": "BSD-A1a1-PLECTIC-THRESHOLD-20260811-R4",
+    "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+    "context_hash": "sha256:6a4d98736ba2a6adae9177441457d9fb57a39698b47890c96333a614ceeacb7f",
+    "problem_signature": ["complex-rank-two", "plectic-degree-two", "threshold-semantics", "plectic-nonvanishing", "p-Selmer", "root-coordinate-faithfulness"],
+    "fibre_snapshot_hash": "sha256:3586bc33f1c833658b32300327d6985db31dc71c0d19548dc4535aea170c647e",
+    "operator_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT", "OP-BSD-TYPED-THRESHOLD-SPLIT", "OP-BSD-THEOREM-CONJECTURE-CIRCULARITY-AUDIT"],
+    "action_trace": ["refresh framework/application", "bind root and R3 negative history", "audit Fornea equality threshold", "audit FG downstream theorem/conjecture", "DifferenceWitness p-adic/polyquadratic transfers", "seven-role same-context review", "separate local math from root gluing", "prune direct nonvanishing route pending complex leading-term bridge"],
+    "observation_ids": ["OBS-R4-PLECTIC-R-STRUCTURAL", "OBS-R4-EQUALITY-THRESHOLD-SELMERNESS", "OBS-R4-NONVANISHING-ARITHMETIC-FACING", "OBS-R4-PADIC-COMPLEX-MISMATCH"],
+    "verification_ids": ["VER-R4-PRIMARY-VERSIONS", "VER-R4-THEOREM-CONJECTURE", "VER-R4-DIFFERENCE-WITNESS", "VER-R4-ROOT-CIRCULARITY", "VER-R4-EXPERT-CELL"],
+    "outcome": "PARTIAL_SUCCESS",
+    "residual_signature": ["proved complex leading-term/nonvanishing bridge from exact E/Q analytic rank two to root-faithful plectic data without algebraic/Selmer rank assumptions", "separate K/Q base-change/twist-order transport", "otherwise rotate away from plectic nonvanishing as immediate bridge"],
+    "evidence_pointers": ["this bundle", "RAKL_METHOD_CASE_STUDY_BSD_A1a1_PLECTIC_THRESHOLD_20260811_R4.md"],
+    "timestamp": "2026-08-11T17:12:14Z",
+    "cost": 1.0,
+    "artifact_hash": "2985862d04213d1e8ee14d905a5232b664bf2239377b7b5f05eddc0aa8f8a7dd"
+  },
+  "diagnosis_shadow": {
+    "diagnosis_id": "D-BSD-A1A1-PLECTIC-THRESHOLD-COORDINATE-CONFLATION-20260811-R4",
+    "episode_id": "EP-BSD-A1A1-PLECTIC-THRESHOLD-20260811-R4",
+    "existing_obstruction": "F-BSD-A1A1-PLECTIC-NONVANISHING-RELATION-GAP-V3-RETROSPECTIVE",
+    "new_obstruction_id": null,
+    "local_mathematical_failure": "NO",
+    "local_to_global_gluing_failure": "OPEN",
+    "failure_category": ["REPRESENTATION", "LOCAL_TO_GLOBAL_GLUING", "SOURCE_QUALIFICATION"],
+    "diagnosis": ["r_plectic=2 is structural in the F=Q mock-plectic chart and does not encode r_root=2.", "Fornea Conj.1.9 at r_an=r=2 gives the threshold for Selmerness, not a nonvanishing implication from equality.", "Fornea Conj.1.10 and FG Conj.2.13 make nonvanishing algebraic/Selmer-rank-facing, so using them upstream would import root-strength arithmetic information.", "HM gives a p-adic Gross-Zagier coordinate, not the missing complex-s transport."],
+    "lesson_candidate": {"status": "PROPOSAL_ONLY_NOT_PROMOTED", "text": "type numerically matching rank/degree coordinates before transfer; equality thresholds can change logical meaning"},
+    "artifact_hash": "sha256:999d7f8341db019ae4dde35f8c11cf2ae46280d98179933555b27931581a7047"
+  },
+  "expert_cell": {
+    "credit": "SAME_CONTEXT_ONLY_NOT_INDEPENDENT",
+    "roles": [
+      {"role": "complex analytic/Gross-Zagier", "finding": "no audited proved generic complex-rank-two -> plectic-nonzero theorem; p-adic formula kept distinct"},
+      {"role": "arithmetic geometry/MW-Sha", "finding": "nonvanishing conjectures are arithmetic-facing; Sha/regulator/local factors remain separate"},
+      {"role": "Iwasawa/Euler systems", "finding": "FG theorem is nonzero Q_K -> p-Selmer rank 2, not the reverse"},
+      {"role": "plectic representation", "finding": "r_plectic is structural; numeral 2 is not root-coordinate preservation"},
+      {"role": "local-global adversary", "finding": "local construction accepted; root/auxiliary-chart gluing remains open"},
+      {"role": "formal provenance", "finding": "theorem/conjecture and source-version boundaries preserved"},
+      {"role": "novelty/metrology", "finding": "same-context only; retained K=1,R=1, other five axes 0; no framework promotion"}
+    ],
+    "consensus": "retain plectic architecture downstream only; require proved complex leading-term/nonvanishing bridge or rotate"
+  },
+  "trace": {
+    "events": [
+      {"seq": 1, "type": "FRAMEWORK", "observation": "method 3.0.0/current v3 inspected", "previous_event_hash": null, "event_hash": "sha256:fadf0f6c9a8c827bb8434b1ab700cc11b3885707319622d0626b8b6d1110faa0"},
+      {"seq": 2, "type": "MEMORY", "observation": "R3 episode/failure selected; scalar repeat rejected", "previous_event_hash": "sha256:fadf0f6c9a8c827bb8434b1ab700cc11b3885707319622d0626b8b6d1110faa0", "event_hash": "sha256:5895d534023e7e6feae973ee759f8aecae21a3519eba0d794a873216a684c896"},
+      {"seq": 3, "type": "FORNEA_THRESHOLD", "observation": "Conj.1.9 equality threshold audited", "previous_event_hash": "sha256:5895d534023e7e6feae973ee759f8aecae21a3519eba0d794a873216a684c896", "event_hash": "sha256:0d9755112228765fa8bee55c4c4d8403c6f4627152d3f16e99d236da7ee651ad"},
+      {"seq": 4, "type": "FG_DOWNSTREAM", "observation": "nonvanishing-to-Selmer theorem and arithmetic-facing conjecture audited", "previous_event_hash": "sha256:0d9755112228765fa8bee55c4c4d8403c6f4627152d3f16e99d236da7ee651ad", "event_hash": "sha256:9b168e28d1282e95c516739f616eecb4ca48d6752794c6d4d0c410c7763eb108"},
+      {"seq": 5, "type": "DIFFERENCE_WITNESS", "observation": "p-adic/polyquadratic literal transfers rejected", "previous_event_hash": "sha256:9b168e28d1282e95c516739f616eecb4ca48d6752794c6d4d0c410c7763eb108", "event_hash": "sha256:ac3d583e768a789e811d85cc11912208314ac9ccdc409f937aa05f43835689f6"},
+      {"seq": 6, "type": "EXPERT_CELL", "observation": "seven roles agree on coordinate split and gluing failure", "previous_event_hash": "sha256:ac3d583e768a789e811d85cc11912208314ac9ccdc409f937aa05f43835689f6", "event_hash": "sha256:490b17f0baa9ae5589d964e6c74bab4111f46f078260d3aedf5fd57f87330908"},
+      {"seq": 7, "type": "OUTCOME", "observation": "route pruned; complex leading-term bridge is next discriminator", "previous_event_hash": "sha256:490b17f0baa9ae5589d964e6c74bab4111f46f078260d3aedf5fd57f87330908", "event_hash": "sha256:30c0f764db611eddfb4a26adb5a29959992d8c6946bae442e32b54374df0d803"}
+    ],
+    "final_event_hash": "sha256:30c0f764db611eddfb4a26adb5a29959992d8c6946bae442e32b54374df0d803"
+  },
+  "outcome": {
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "mathematical_candidate_generated": false,
+    "solved_subproblem": false,
+    "novelty_class": "UNRESOLVED_NO_SOLVED_SUBPROBLEM_CLASS",
+    "residual_before": "complex analytic rank two -> nonzero root-faithful plectic class/point or regulator",
+    "residual_after": ["proved complex leading-term/nonvanishing bridge without root-strength arithmetic premise", "separate auxiliary K/Q transport", "otherwise rotate route"]
+  },
+  "recorded_at_utc": "2026-08-11T17:12:14Z"
+}
