@@ -11,10 +11,13 @@
   "rakl_math": {
     "base_sha": "24194bba4c88cc4be19dad03d59bfa79599d5ee9",
     "semantic_post_head_sha": "9aa7a68bd7193758ac6a40d65cf1aad6a6ac2b2d",
-    "receipt_commit_sha": "CANNOT_MEASURE: embedding the commit SHA containing this receipt is self-referential; Git commit metadata is the external attestation",
+    "first_receipt_head_sha": "7ab0defee78827b8be10af8b8a935e8e4421f42c",
+    "attestation_commit_sha": "CANNOT_MEASURE: embedding the commit SHA containing this attestation is self-referential; Git commit metadata supplies the external binding",
     "pre_state_fingerprint": "git-tree:53a0b8f46eec3dc4bbba27e0f1ca4742e000bf4b",
     "post_state_fingerprint": "git-tree:0204dd6d7c9d7cd89a1b2112ec80d2cb1c9725c0",
-    "state_fingerprint_scope": "repository tree before cycle versus semantic evidence tree after context/source/memory/episode/review/trace/case-study materialization; the metrics receipt itself is observational and excluded from semantic post state"
+    "state_fingerprint_scope": "repository tree before cycle versus semantic evidence tree after context/source/memory/episode/review/trace/case-study materialization; metrology-only commits are excluded from learning state",
+    "concurrent_main_after_cycle": "41327f39783255fa96ff83754fec6c3ee77742ab",
+    "concurrency_note": "main advanced after the frozen cycle base; PR #112 is intentionally draft and no authority depends on being latest-main mergeable"
   },
   "atom": {
     "id": "YM-E4a",
@@ -65,7 +68,12 @@
     "independent_review_count": 0,
     "same_context_review": "PASS_LOCAL_SCOPE / NO_INDEPENDENT_CREDIT",
     "provenance": "PRIMARY_SOURCE_BOUND: arXiv:2606.19362v1 exact PDF selectors plus current Clay official root status; repository source-of-truth SHAs recorded",
-    "ci_status": "PENDING_NOT_YET_REQUESTED_AT_RECEIPT_MATERIALIZATION"
+    "ci_status": "SUCCESS",
+    "ci_subject_sha": "7ab0defee78827b8be10af8b8a935e8e4421f42c",
+    "ci_workflow": "Pinned RAKL application tests",
+    "ci_run_id": 31500757251,
+    "ci_run_number": 245,
+    "ci_scope_note": "exact first-receipt branch head containing all eight cycle artifacts; this attestation-only update does not alter semantic evidence"
   },
   "rakl_changed_preference": {
     "status": "YES_OBSERVED_WITHIN_RUN",
