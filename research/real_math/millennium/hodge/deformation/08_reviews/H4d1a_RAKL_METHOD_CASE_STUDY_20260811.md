@@ -1,8 +1,8 @@
 # RAKL_METHOD_CASE_STUDY — H4d1a witness-reachability calibration
 
-**Framework:** `SzeChunYiu/RAKL@decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8`  
-**Atom:** `H4d1a`  
-**Mathematical authority:** `NO_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE`  
+**Framework:** `SzeChunYiu/RAKL@decd1a4eae2b10cfdbb98e76b5023e2a756fa7a8`
+**Atom:** `H4d1a`
+**Mathematical authority:** `NO_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE`
 **v3 learning authority:** `SHADOW / SEARCH_PRIORITY_ONLY`
 
 ## Research method used
