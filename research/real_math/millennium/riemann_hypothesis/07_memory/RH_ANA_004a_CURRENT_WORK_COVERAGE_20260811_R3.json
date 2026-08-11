@@ -1,0 +1,40 @@
+{
+  "schema_version": "current-work-coverage-v1",
+  "repository": "SzeChunYiu/RAKL_math",
+  "observed_default_branch": "main",
+  "observed_default_branch_head": "b36058f8a90efe7d377df45feed15d4ec91e042c",
+  "search_surface": [
+    "GitHub.search_issues(query='RH', repository='SzeChunYiu/RAKL_math', state='open', topn=100, sort='updated', order='desc')",
+    "GitHub.search_prs(query='RH', repository='SzeChunYiu/RAKL_math', state='open', topn=100, sort='updated', order='desc')",
+    "GitHub.search_prs(query='RH-ANA-003', repository='SzeChunYiu/RAKL_math', state='open', topn=100, sort='updated', order='desc')"
+  ],
+  "open_work_index_hash": "8e3cad3438300899aa5c2fbc7eb453ac8bb7454ea121d6ed037d0f545334c0d5",
+  "coverage_semantics": "HASHED_INDEX_TARGETED_RETRIEVAL",
+  "bound_open_work_universe": ["issue:3", "issue:10", "pr:40", "pr:53", "pr:80", "pr:95", "pr:118", "pr:125", "pr:147", "pr:151", "pr:160"],
+  "work_item_records": [
+    {"work_item_id":"issue:3","kind":"ISSUE","disposition":"INCLUDED","disposition_reason":"Exact RH root contract/control surface.","head_sha":null,"base_sha":null,"evidence_pointers":["SzeChunYiu/RAKL_math#3"]},
+    {"work_item_id":"issue:10","kind":"ISSUE","disposition":"DEFERRED","disposition_reason":"Application CI infrastructure blocker; relevant to verification authority but not the immediate analytic discriminator.","head_sha":null,"base_sha":null,"evidence_pointers":["SzeChunYiu/RAKL_math#10"]},
+    {"work_item_id":"pr:40","kind":"PULL_REQUEST","disposition":"REJECTED","disposition_reason":"RH spectral/prolate lane; no direct analytic cancellation transfer without a new DifferenceWitness.","head_sha":null,"base_sha":null,"evidence_pointers":["SzeChunYiu/RAKL_math#40"]},
+    {"work_item_id":"pr:53","kind":"PULL_REQUEST","disposition":"REJECTED","disposition_reason":"RH spectral compact-resolvent lane; route-local endpoint lesson does not supply the prime/Laguerre bridge.","head_sha":null,"base_sha":null,"evidence_pointers":["SzeChunYiu/RAKL_math#53"]},
+    {"work_item_id":"pr:80","kind":"PULL_REQUEST","disposition":"INCLUDED","disposition_reason":"Same RH-ANA-003 history; finite-height/incomplete-Li scale is a near-solved analogue and negative-history guard.","head_sha":null,"base_sha":null,"evidence_pointers":["SzeChunYiu/RAKL_math#80"]},
+    {"work_item_id":"pr:95","kind":"PULL_REQUEST","disposition":"REJECTED","disposition_reason":"Cross/Hodge state-congruence observer; no decision-relevant RH analytic operator beyond already selected bridge-audit memory.","head_sha":null,"base_sha":null,"evidence_pointers":["SzeChunYiu/RAKL_math#95"]},
+    {"work_item_id":"pr:118","kind":"PULL_REQUEST","disposition":"INCLUDED","disposition_reason":"Pre-existing same-atom RH-ANA-003 cycle; opens RH-ANA-004 and must be reconciled before routing.","head_sha":"e006d72f971ca4a8b9f62ce24bb13a617610a91e","base_sha":"5a8c6bb2f297a536e1b0d1c8b0aa8e66cd1e3720","evidence_pointers":["SzeChunYiu/RAKL_math#118"]},
+    {"work_item_id":"pr:125","kind":"PULL_REQUEST","disposition":"REJECTED","disposition_reason":"Cross-Millennium observer; no new target-local analytic discriminator beyond current-work and bridge controls already selected.","head_sha":null,"base_sha":null,"evidence_pointers":["SzeChunYiu/RAKL_math#125"]},
+    {"work_item_id":"pr:147","kind":"PULL_REQUEST","disposition":"INCLUDED","disposition_reason":"Direct predecessor cancellation-preservation route; opens RH-ANA-003b but omitted PR #118 and therefore requires reconciliation.","head_sha":"8550ec822f23f79f197ea486b03dcd544d77c4fc","base_sha":"47f56df0492339097a651d40b6c7289c4e2d4034","evidence_pointers":["SzeChunYiu/RAKL_math#147"]},
+    {"work_item_id":"pr:151","kind":"PULL_REQUEST","disposition":"REJECTED","disposition_reason":"Cross PNP->NS morphology transfer; no direct RH analytic relevance.","head_sha":null,"base_sha":null,"evidence_pointers":["SzeChunYiu/RAKL_math#151"]},
+    {"work_item_id":"pr:160","kind":"PULL_REQUEST","disposition":"INCLUDED","disposition_reason":"Process-level corroboration that #147 missed #118; current RAKL now provides CurrentWorkCoverageReceipt for this failure class.","head_sha":"cb3040819aea497c2ac0fea36fc55f23503341cf","base_sha":"350861b1c2755033893068e5519b8b06a6315aa6","evidence_pointers":["SzeChunYiu/RAKL_math#160","SzeChunYiu/RAKL@d830c56c146b6f44174e49612b8a8119c3ae2ec2"]}
+  ],
+  "route_id": "RH-ANA-004a-CURRENT-WORK-RECONCILIATION-20260811-R3",
+  "public_trace_event_id": "RH-ANA-004a-E02",
+  "claim_boundary": "Proposal-only binding of the RH-labelled open issue/PR universe returned by the exact search surfaces above; not an exhaustive repository-wide mathematical completeness or authority certificate.",
+  "evidence_pointers": ["RAKL@bb30835f41dd5e02a427c3e53be6914732d66fd2:CurrentWorkCoverageReceipt", "RAKL_math main@b36058f8a90efe7d377df45feed15d4ec91e042c", "RAKL_math#3", "RAKL_math#80", "RAKL_math#118", "RAKL_math#147", "RAKL_math#160"],
+  "receipt_canonical_sha256": "e9dc04a7dde68d87ad63e7cff9ca543ba4e37c95f0a96a901563aac6d35eec8a",
+  "grants_application_evidence_authority": false,
+  "grants_mathematical_authority": false,
+  "grants_novelty_authority": false,
+  "grants_tool_authority": false,
+  "grants_review_independence_authority": false,
+  "grants_promotion_authority": false,
+  "requires_full_pr_diff_enumeration": false,
+  "shadow_note": "Manually materialized against the current RAKL v3 schema contract; connected GitHub surface cannot execute the framework constructor/gate, so authority remains proposal/shadow."
+}
