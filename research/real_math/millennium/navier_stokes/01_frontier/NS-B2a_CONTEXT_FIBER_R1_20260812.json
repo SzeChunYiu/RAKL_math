@@ -1,0 +1,124 @@
+{
+  "atom_id": "NS-B2a",
+  "parent_atom_id": "NS-B2",
+  "root_id": "NS0",
+  "authority": "PROPOSAL_SHADOW_PRE_CANDIDATE",
+  "object_context": "For the F(a)=1 branch of Seregin arXiv:2606.29468v1 Theorem 3.1, audit whether the ancient Euler limit's scale-critical local bounds (3.5), Euler equation (3.6), local energy inequality (3.7), and nontriviality (3.8), together with the exact local convergence produced by the blow-up passage, are sufficient to close a global rigidity argument without an additional tail/no-incoming-flux certificate.",
+  "problem_signature": [
+    "3D incompressible Navier-Stokes Type-II blow-up scenario",
+    "Euler-scaling blow-up limit",
+    "ancient Euler solution on R^3 x (-infinity,0)",
+    "F(a)=1 scale-critical A/E/D-style bounds",
+    "local energy inequality",
+    "local strong/weak compactness only",
+    "far-field energy/pressure flux",
+    "noncompact translations/dilations",
+    "local-to-global rigidity"
+  ],
+  "structural_coordinates": [
+    "source equation changes from viscous Navier-Stokes to inviscid Euler in the limit",
+    "for each fixed a, Seregin records strong local L_{3nu}, weak-star L_{2,infinity}, and weak gradient L2 convergence",
+    "F(a)=1 gives sup_a [a^-1 local kinetic energy + a^-2 pressure L3/2 + a^-1 spacetime gradient L2] bounded",
+    "a standard spatial cutoff on B_R has |grad phi_R|=O(R^-1) and a parabolic temporal cutoff has |partial_t phi_R|=O(R^-2)",
+    "standard interpolation from A/E yields scale-critical spacetime L3 control of order R^2",
+    "pressure-velocity work has the same R^2 scale before the cutoff gradient",
+    "the resulting large-cutoff local-energy error is O(R), not o(1)",
+    "fixed-R convergence is not uniform tail tightness and does not justify exchanging k->infinity with R->infinity",
+    "backward uniqueness for Navier-Stokes is not an admissible Euler rigidity closure",
+    "Type-I and Type-II source classes remain separate"
+  ],
+  "equivalent_formulations": [
+    "Flux formulation: prove that the annular Euler energy/pressure flux through radius R vanishes as R->infinity.",
+    "Tightness formulation: obtain a k-uniform tail certificate on rescaled Navier-Stokes fields before passing k->infinity.",
+    "Quantifier formulation: justify an exchange or diagonalization between fixed-radius compactness and the large-radius limit.",
+    "Rigidity formulation: find an Euler Liouville theorem whose hypotheses are exactly inherited from Seregin's F=1 source class."
+  ],
+  "solved_analogues": [
+    {
+      "context": "Seregin's own subcritical F(a)=a^(alpha-1) regime with 2alpha-3>0",
+      "method": "the kinetic-energy coefficient in (3.5) forces the Euler limit to vanish",
+      "enabling_assumption": "positive decay exponent 2alpha-3>0",
+      "disanalogy": "F=1 is scale critical, so this decay is absent",
+      "repair_question": "what extra scale-breaking tail or flux coordinate replaces the missing positive exponent?"
+    },
+    {
+      "context": "Albritton-Barker Type-I ancient Liouville route",
+      "method": "global L3 control along a backward sequence activates a Liouville theorem",
+      "enabling_assumption": "global critical-state control on selected times",
+      "disanalogy": "Seregin F=1 gives local scale-critical Euler bounds, not a global L3 backward sequence",
+      "repair_question": "can a source-valid global tail/tightness statement be inherited under the Euler scaling?"
+    }
+  ],
+  "near_solved_analogues": [
+    {
+      "context": "NS-B1a1 scale-neutral local-energy ledger",
+      "method": "exact cutoff scaling audit before attempting infinite-scale assembly",
+      "shared_structure": "critical local bounds plus boundary flux must assemble into a global conclusion",
+      "difference_witness": "the target equation is Euler rather than Navier-Stokes; the viscous term disappears, but the cubic and pressure boundary flux remain scale neutral",
+      "cheapest_test": "compute the F=1 large-cutoff flux scaling directly from (3.5)"
+    },
+    {
+      "context": "Gavrilov compactly supported steady Euler flow",
+      "method": "exact nonzero Euler adversary",
+      "shared_structure": "ancient/nontrivial Euler dynamics with excellent spatial localization",
+      "disanalogy": "for nonzero steady U, R^-1 int_{-R^2}^0 int |grad U|^2 grows like R and violates (3.5) for F=1",
+      "status": "REJECT_AS_DIRECT_COUNTEREXAMPLE"
+    }
+  ],
+  "cross_domain_analogy": {
+    "source": "control-volume accounting with an unknown boundary supply",
+    "common_abstraction": "bounded inventory inside every finite window does not imply extinction if uncontrolled inflow can cross the moving boundary",
+    "mapping": {
+      "inventory": "local Euler kinetic energy",
+      "boundary_supply": "cubic plus pressure energy flux through large annuli",
+      "finite_window_certificate": "Seregin (3.5) at each fixed radius",
+      "global_target": "u identically zero"
+    },
+    "disanalogy": "fluid flux is signed and constrained by Euler, so the analogy cannot establish failure",
+    "validation_obligation": "derive the exact large-cutoff scaling and keep a positive route open if cancellation or a source-bound tail estimate appears"
+  },
+  "counterexample_first_falsifier": "Before inventing an Euler Liouville theorem, test whether the standard local-energy cutoff terms vanish at large radius under only F=1 bounds. Also test Gavrilov's compact-support steady Euler solution against (3.5) before using it as an adversary.",
+  "expert_cell_roles": [
+    "Type-II/local-energy PDE lead",
+    "Euler rigidity/Liouville lead",
+    "concentration-compactness/profile-leakage lead",
+    "pressure/localization/far-field lead",
+    "adversarial construction lead",
+    "formal-methods/statement-binding lead",
+    "novelty/research-value lead"
+  ],
+  "source_anchors": [
+    "RAKL_math issue #65",
+    "RAKL_math root issue #4",
+    "research/real_math/millennium/navier_stokes/00_problem_contract/success_contract.yaml",
+    "Gregory Seregin, arXiv:2606.29468v1, Theorem 3.1 and equations (3.5)-(3.8)",
+    "A. V. Gavrilov, arXiv:1810.08020"
+  ],
+  "framework_binding": {
+    "rakl_main_sha": "f1efc79db836f7de92ef5fa800a71c224b97f6b7",
+    "rakl_method_version": "3.0.0",
+    "rakl_software_package_version": "0.1.0",
+    "rakl_skill_manifest_version": "0.7.0",
+    "rakl_math_base": "4386f1d9f2c0df4c19017c831d16cef82b61304a",
+    "method_specs_surfaces_consulted": [
+      "decomposition",
+      "routing",
+      "search_query_generation",
+      "source_selection_reliability",
+      "claim_extraction",
+      "mathematical_context_translation",
+      "equivalence_similarity",
+      "contextual_theory_gluing",
+      "contradiction_diagnosis",
+      "gap_discovery",
+      "experiment_query_selection",
+      "memory",
+      "review",
+      "saturation_stopping",
+      "prompting_context_policy"
+    ]
+  },
+  "frozen_at": "2026-08-11T23:15:02Z",
+  "candidate_origin": "PREEXISTING_IN_ISSUE_65; NO_NEW_HYPOTHESIS_GENERATION_CREDIT",
+  "packet_hash": "sha256:42f05a5bea869d15b4c938a663385050001c4c2d15b1a2f59082ff23a0a011bc"
+}
