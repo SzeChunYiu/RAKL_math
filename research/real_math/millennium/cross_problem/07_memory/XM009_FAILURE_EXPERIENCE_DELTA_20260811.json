@@ -1,0 +1,36 @@
+{
+  "schema_version": "xm-failure-experience-delta-v1",
+  "cycle_id": "XM009-BSD-PNP-GRADED-TRACE-20260811",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "failures": [
+    {
+      "failure_id": "F-XM009-BSD-PNP-GRADED-TRACE-TRANSFER-DEGENERACY",
+      "failure_class": "REPRESENTATION",
+      "episode_id": "EP-XM009-BSD-PNP-GRADED-TRACE-20260811",
+      "signature": "A nuisance-removing graded/relative transfer is vacuous on the selected target observable because the degree-zero free layer already saturates the full fixed-row trace family.",
+      "cheapest_reproduction": "In G_{N,N}, fix R_1 and realize every subset of R_1 as the trace of a zero-intersection free union of columns; monotonicity then fixes T_t(R_1)=P(R_1) for every t.",
+      "scope_boundary": "fixed-row cumulative trace family and functions determined only by it; no statement about joint/global/conditional potentials or P versus NP",
+      "local_mathematical_failure": false,
+      "local_to_global_gluing_failure": false,
+      "evidence": ["cross_problem/04_candidates/XM009_BSD_PNP_GRADED_TRACE_FALSIFIER_20260811.md"]
+    },
+    {
+      "failure_id": "F-XM009-MANUAL-TRACE-HASH-SERIALIZATION-MISMATCH",
+      "failure_class": "VERIFICATION",
+      "episode_id": "EP-XM009-BSD-PNP-GRADED-TRACE-20260811",
+      "signature": "The first manual serialization of the public hash chain contained event hashes inconsistent with its declared canonical hash rule.",
+      "cheapest_reproduction": "Recompute each event hash from canonical JSON with the previous event hash included and compare byte-for-byte to the stored event_hash.",
+      "scope_boundary": "research-process artifact integrity only; mathematics and source conclusions unchanged",
+      "local_mathematical_failure": false,
+      "local_to_global_gluing_failure": false,
+      "recovery": "Corrected before metrology in commit 791c52d0d8b2f4af39ce693cc45d907f3c622e78; existing RAKL issue #134 already owns the broader canonical-artifact contract-coverage hypothesis.",
+      "linked_recurring_process_evidence": [
+        "NS-B1a3b1 R2 PASS_AFTER_SELF_CORRECTION after intermediate trace-hash mismatch",
+        "BSD PR #41 malformed post-candidate trace hashes caught by exact-head CI",
+        "SzeChunYiu/RAKL#134"
+      ],
+      "evidence": ["cross_problem/09_trace/XM009_HASH_CHAINED_TRACE_20260811.json"]
+    }
+  ],
+  "retention": "NONE: failures guide future search/verification only until separately governed promotion/retention gates authorize more authority"
+}
