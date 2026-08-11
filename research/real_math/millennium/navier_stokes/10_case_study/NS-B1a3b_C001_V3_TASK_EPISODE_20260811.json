@@ -1,0 +1,125 @@
+{
+  "schema_version": "rakl-v3-task-episode-shadow-v2",
+  "authority": "PROPOSAL_SHADOW_EPISODE_ONLY",
+  "canonical_episode_id": "EP-NS-B1a3b-VORTICITY-GEOMETRY-INTERFACE-20260811",
+  "canonical_episode_artifact_hash": "a51b346c323926a2932634cdf8efb86e173cee1640b1756a5f8d61509c88b0fe",
+  "task_id": "NS-B1a3b-C001",
+  "atom_id": "NS-B1a3b",
+  "context_hash": "sha256:6dd7969ddde37ed9384dc40064927cdda8b1ba78a536791b21aa06298dbf0900",
+  "problem_signature": [
+    "finite-I Type-I blow-up extraction",
+    "strong local velocity compactness",
+    "normalized vorticity direction",
+    "Giga-Miura L-infinity Type-I geometry",
+    "ancient-solution rigidity",
+    "state-space transfer",
+    "nonlinear observable closure"
+  ],
+  "actual_fibre": "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3b_CONTEXT_FIBER_20260811.json",
+  "methods_and_operators_tried": [
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+    "state-space-signature-audit",
+    "theorem-output/input topology comparison",
+    "scaling audit",
+    "normalized-vorticity closure falsifier",
+    "pressure/far-field separation",
+    "unique-continuation non-use audit",
+    "equation-class audit"
+  ],
+  "motifs_tried": [
+    "compactness-rigidity",
+    "geometric depletion",
+    "vorticity-direction coherence",
+    "counterexample-first interface auditing",
+    "same-context expert cell"
+  ],
+  "prior_successes_retrieved": [
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+    "AB-THM1.1",
+    "AB-COMPACT",
+    "GM-TYPEI-GEOMETRY",
+    "GM-2D-LIOUVILLE",
+    "GRUJIC-2607.08866@NEAR_ANALOGUE"
+  ],
+  "prior_successes_selected": [
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+    "AB-COMPACT",
+    "GM-TYPEI-GEOMETRY",
+    "GM-2D-LIOUVILLE"
+  ],
+  "prior_successes_rejected_or_deferred": [
+    "AB-THM1.1@PRODUCER_SIGNATURE_NOT_DIRECT_GEOMETRY_OPERATOR",
+    "GRUJIC-2607.08866@NARROWER_ADDITIONAL_STATE_SPACE"
+  ],
+  "prior_failures_retrieved": [
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "F-NS-B1a3-PROFILE-LEAKAGE",
+    "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+    "F-NS-B1a3-UNIQUE-CONTINUATION-HYPOTHESIS-GAP",
+    "F-NS-B1a3-EQUATION-CHANGE-MISMATCH",
+    "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"
+  ],
+  "prior_failures_selected_for_routing": [
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+    "F-NS-B1a3-UNIQUE-CONTINUATION-HYPOTHESIS-GAP",
+    "F-NS-B1a3-EQUATION-CHANGE-MISMATCH",
+    "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"
+  ],
+  "prior_failures_rejected_or_deferred": [
+    "F-NS-B1a3-PROFILE-LEAKAGE@VALID_SCOPED_WARNING_NOT_LOAD_BEARING_FOR_LOCAL_DIRECTION_CLOSURE"
+  ],
+  "missed_memory": {
+    "value": "CANNOT_MEASURE",
+    "reason": "No exhaustive relevance-labelled universe across all application and cross-problem memory was frozen."
+  },
+  "decision_policy": "Prior scalar and local/global failures move priority away from another energy budget or premature theorem import. Normalize the two Type-I state spaces, then test whether the nonlinear geometric observable consumed by the rigidity theorem is sequentially closed under the actual finite-I extraction topology. Prefer the exact cheap interface falsifier before inventing a new inequality.",
+  "falsifier": "A source-valid implication from AB finite I to the Giga-Miura L-infinity Type-I/derivative-compactness package, or an exact finite-I-controlled geometric observable closed under AB compactness and sufficient for ancient rigidity, overturns the corresponding route-pruning claim.",
+  "verification": [
+    "exact scaling of u, p, omega and zeta",
+    "AB finite-I and c_infinity implication direction",
+    "Giga-Miura L-infinity Type-I hypothesis",
+    "Giga-Miura local-uniform derivative/vorticity compactness",
+    "divergence-free high-frequency normalized-curl topology calibration",
+    "pressure/far-field separation",
+    "backward-uniqueness hypotheses not imported",
+    "stationary-Leray equation change not imported"
+  ],
+  "outcome": "PARTIAL_SUCCESS",
+  "failure_category": "STATE_SPACE_AND_NONLINEAR_OBSERVABLE_CLOSURE_INTERFACE",
+  "residual_before": [
+    "broad vorticity-direction/geometric-depletion inheritance route for the finite-I ancient class"
+  ],
+  "residual_after": [
+    "NS-B1a3b1: construct or locate a finite-I-controlled scale-critical geometric defect functional closed under the actual extraction and robust near zero vorticity",
+    "require an exactly matched ancient rigidity consumer",
+    "NS-B1a3a global critical-tail/state-space child remains open",
+    "Type-II remains open"
+  ],
+  "new_failure_ids": [
+    "F-NS-B1a3b-TYPE-I-STATE-SPACE-MISMATCH",
+    "F-NS-B1a3b-VORTICITY-DIRECTION-NONCLOSURE"
+  ],
+  "new_obstruction_ids": [
+    "O-NS-B1a3b-TYPE-I-STATE-SPACE",
+    "O-NS-B1a3b-DIRECTION-COMPACTNESS"
+  ],
+  "lesson_proposal": "L-NS-B1a3b-CHECK-STATE-SPACE-AND-OBSERVABLE-CLOSURE@PROPOSED_NOT_CONSOLIDATED",
+  "episode_diagnosis_separation": {
+    "episode": "source theorem composition attempted and direct interface did not type-check",
+    "diagnosis": "state-space mismatch plus nonlinear normalized-vorticity nonclosure under producer topology",
+    "obstruction_or_lesson": "proposal-only reusable interface obligations, never substituted for source evidence"
+  },
+  "seven_saturation_axes": {
+    "KNOWLEDGE": 0,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 0,
+    "OBSTRUCTION": 2,
+    "RELATION": 2,
+    "PATH": 1,
+    "META_METHOD": 0
+  },
+  "novelty_class": "UNRESOLVED",
+  "framework_improvement_hypothesis": "Extend a proposal-only InterfaceTypeReceipt with nonlinear observable closure: producer topology, consumer observable, singular set/normalization, exact closure theorem or regularity upgrade, and status MATCH/REQUIRES_BRIDGE/MISMATCH. Benchmark before any framework promotion.",
+  "root_authority": "NONE"
+}
