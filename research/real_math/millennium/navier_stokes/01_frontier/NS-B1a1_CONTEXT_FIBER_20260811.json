@@ -1,0 +1,119 @@
+{
+  "atom_id": "NS-B1a1",
+  "object_context": "Child atom of NS-B1a for the whole-space 3D incompressible Navier-Stokes Type-I ancient-solution branch. Let v be a mild bounded ancient solution on R^3 x (-infinity,0) with finite Albritton-Barker Type-I quantity I(v)<infinity. The parent NS-B1a-C001 calibration proves that the absolute instantaneous far-field pressure stress is already summable under inherited critical Morrey energy growth, so raw pressure divergence cannot prevent spatial replication. Determine whether the standard local-energy balance across nested dyadic parabolic scales contains a genuinely summable, telescoping, monotone, sign-coherent, or scale-decaying charge that can prevent persistent critical-mass replication and eventually activate a source-valid Liouville or rigidity theorem. The first hostile discriminator asks whether, after normalization by the natural energy scale R, the canonical absolute A,C,D,E cutoff contributions remain only O(I) at every dyadic scale.",
+  "structural_coordinates": [
+    "mild bounded ancient 3D incompressible Navier-Stokes solution on R^3 x (-infinity,0)",
+    "finite scale-invariant Albritton-Barker Type-I quantity I=sup_Q(A+C+D+E)",
+    "local energy inequality on parabolic cutoffs of spatial scale R and time scale R^2",
+    "natural kinetic-energy normalization is linear in R under Navier-Stokes scaling",
+    "A,C,D,E separately provide scale-critical local control but no registered cross-scale decay",
+    "standard cutoff derivatives scale as |partial_t phi_R|+|Delta phi_R|=O(R^-2) and |grad phi_R|=O(R^-1)",
+    "absolute instantaneous far-field pressure is summable and therefore not the missing anti-replication mechanism",
+    "a normalized O(1) charge per dyadic scale is not summable over infinitely many dynamically active scales",
+    "signed telescoping between nested scales is distinct from summing absolute per-shell bounds",
+    "translation and dilation noncompactness permit local profiles to escape under weak or local convergence",
+    "fixed, self-similar or discretely self-similar orbit structure is not implied by finite I",
+    "the audited Shahmurov v1 terminal-scale mechanism cannot supply a smallest active scale as written",
+    "backward-uniqueness routes may bypass shell summation but require separately proved weighted hypotheses",
+    "success would address only the registered Type-I branch; Type-II and the Clay root remain separate"
+  ],
+  "equivalent_formulations": [
+    "Scale-currency form: identify a controlled increment q_k between nested dyadic scales with finite total mass or a telescoping signed sum, and prove persistent replication forces a forbidden total.",
+    "Hostile calibration form: determine whether finite A,C,D,E imply only scale-invariant absolute local-energy shell budgets and therefore no l1 dyadic control.",
+    "Tail-tightness form: derive from a summable or telescoping shell currency a backward sequence with uniformly controlled global L3, activating Albritton-Barker rigidity.",
+    "Alternative-rigidity form: if no shell currency exists, isolate a backward-uniqueness, compactness or minimal-element property inherited from finite I that eliminates the same ancient class."
+  ],
+  "solved_analogues": [
+    "Caffarelli-Kohn-Nirenberg epsilon-regularity: scale-small local quantities can yield regularity or decay, showing that smallness is stronger than bounded critical control.",
+    "Albritton-Barker Theorem 1.2: a mild ancient solution uniformly bounded in global L3 along a backward sequence is identically zero once that global trace is available."
+  ],
+  "near_solved_analogues": [
+    "Bradshaw-Tsai critical-Morrey local-energy theory obtains regularity or uniqueness under suitable scale smallness, whereas finite Type-I I supplies boundedness without a smallness parameter.",
+    "Bradshaw-Tsai discretely self-similar suitable weak solutions satisfy the classical local energy inequality in a forward setting, providing an adversarial scale-recurrence calibration without being target ancient Type-I witnesses.",
+    "Lei-Yang-Yuan backward uniqueness handles Calderon-Zygmund terms by weighted estimates in a distinct rigidity setting but does not derive those weighted hypotheses from finite I."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Classical local energy inequality for suitable and local-energy Navier-Stokes solutions",
+      "method": "Insert nested parabolic cutoffs phi_R and estimate diffusion/cutoff, cubic transport, pressure-velocity and dissipation terms scale by scale; search for a sign, cancellation or telescoping identity stronger than separate absolute estimates.",
+      "shared_structure": ["same Navier-Stokes equation and pressure coupling", "same parabolic scaling R by R^2", "A,C,D,E are scale-invariant local controls"],
+      "required_assumptions": ["valid local energy inequality for the ancient class", "legitimate cutoff derivatives and pressure normalization", "justified nested-cylinder limit passages"],
+      "disanalogies": ["the local energy inequality is one-sided rather than a known monotonicity formula", "absolute estimates can erase sign or coherence", "finite I gives boundedness but not epsilon-smallness"],
+      "repair_question": "Does nested-scale subtraction or a pressure-aware annular formulation produce a signed or telescoping increment absent from the separate A,C,D,E bounds?",
+      "source_anchors": ["Caffarelli-Kohn-Nirenberg (1982)", "Albritton-Barker arXiv:1811.00502", "Bradshaw-Tsai arXiv:1907.00256"]
+    },
+    {
+      "source_context": "Bradshaw-Tsai discretely self-similar suitable weak/local-energy solutions",
+      "method": "Use exact discrete scaling as an adversarial calibration for any proposed normalized per-scale decay law.",
+      "shared_structure": ["Navier-Stokes parabolic scaling", "classical local energy inequality", "critical local behavior may recur across scales"],
+      "required_assumptions": ["use DSS only to calibrate scaling algebra", "preserve forward-versus-ancient and data-class distinctions"],
+      "disanalogies": ["the cited DSS solutions are forward, not target ancient Type-I witnesses", "DSS symmetry is an extra hypothesis not implied by finite I"],
+      "repair_question": "Which proposed shell currency forces decay on the target class without contradicting exact scale recurrence available in the broader local-energy solution landscape?",
+      "source_anchors": ["Bradshaw-Tsai arXiv:1801.08060"]
+    },
+    {
+      "source_context": "Albritton-Barker Type-I ancient reduction and backward-L3 Liouville theorem",
+      "method": "Convert an equation-specific anti-replication estimate into global L3 control along t_k to minus infinity, then invoke the source Liouville theorem.",
+      "shared_structure": ["same bounded mild ancient whole-space class", "same Type-I reduction", "vanishing contradicts the nontrivial ancient witness"],
+      "required_assumptions": ["backward sequence with uniformly bounded global L3 or another theorem-compatible global trace", "exact mild ancient hypotheses"],
+      "disanalogies": ["the source theorem assumes the global trace rather than deriving it from finite I", "local shell control and global L3 live on different locality scales"],
+      "repair_question": "Can a verified scale currency force the exact backward global trace without circularly assuming tail tightness?",
+      "source_anchors": ["Albritton-Barker arXiv:1811.00502"]
+    },
+    {
+      "source_context": "Lei-Yang-Yuan weighted backward-uniqueness estimates",
+      "method": "Treat weighted Calderon-Zygmund terms directly in a rigidity argument rather than summing absolute shell budgets.",
+      "shared_structure": ["bounded mild 3D Navier-Stokes solutions", "nonlocal Calderon-Zygmund structure", "backward rigidity is relevant to ancient exclusion"],
+      "required_assumptions": ["source-valid weighted hypotheses or a proved ancient analogue", "no hidden decay or integrability stronger than finite I"],
+      "disanalogies": ["the source theorem is a different final-data problem", "its weighted information is not presently controlled by finite I"],
+      "repair_question": "Is there a source-valid weighted quantity controlled by finite I, or does this route require an additional tail hypothesis?",
+      "source_anchors": ["Lei-Yang-Yuan arXiv:2311.02429"]
+    },
+    {
+      "source_context": "RAKL cross-Millennium root-bridge stability audit",
+      "method": "Freeze the local surrogate certificate, the desired global summability bridge, and construct the cheapest scale-recurrent calibration on which the surrogate loses the load-bearing summability coordinate.",
+      "shared_structure": ["locally valid surrogate certificate", "root conclusion requires an extra limit or assembly step", "failure localizes a missing preservation property"],
+      "required_assumptions": ["fresh target DifferenceWitness", "diagnostic used only to falsify an inference form, not to assert a target Navier-Stokes solution"],
+      "disanalogies": ["the promoted tool came from a Yang-Mills continuum calibration", "dyadic summability and lattice normalization are different mathematics"],
+      "repair_question": "Does finite I preserve an l1 or telescoping coordinate across realized dyadic scales, and if not what strengthened property must replace bare boundedness?",
+      "source_anchors": ["research/real_math/millennium/cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json"]
+    }
+  ],
+  "explicit_disanalogies": [
+    "Finite I is bounded critical control, not epsilon-smallness.",
+    "Forward DSS solutions calibrate scale recurrence but are not target ancient singular witnesses.",
+    "The local energy inequality is not already a monotonicity formula; nested subtraction has no automatic sign.",
+    "The merged pressure-tail estimate does not cover time-integrated local or harmonic pressure work.",
+    "Backward uniqueness requires its exact weighted hypotheses rather than finite-I wishful transfer.",
+    "The Shahmurov source audit supplies no smallest scale or terminating descent theorem.",
+    "The cross-Millennium diagnostic transfers an audit pattern, not Yang-Mills mathematics.",
+    "Type-I exclusion would not close Type-II or the Clay root."
+  ],
+  "source_anchors": [
+    "Albritton-Barker arXiv:1811.00502",
+    "Bradshaw-Tsai arXiv:1907.00256",
+    "Bradshaw-Tsai arXiv:1801.08060",
+    "Lei-Yang-Yuan arXiv:2311.02429",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a_C001_PRESSURE_TAIL_LOCALIZATION_20260811.md",
+    "research/real_math/millennium/navier_stokes/03_source_audits/NS-B1a1_SRC001_SHAHMUROV_2606_07875_20260811.md",
+    "issue:43:NS-B1a1"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "amortized algorithms / multilevel accounting",
+      "source_situation": "A process may spend a constant amount at every level of an unbounded hierarchy; a local O(1) bound per level does not imply finite total work unless charges telescope, levels terminate, or a potential decreases by a summable amount.",
+      "common_abstraction": ["per-level bounded cost versus global summability", "need a monotone or telescoping potential or finite active-level measure", "absolute accounting can erase cancellation"],
+      "source_to_target_mapping": ["hierarchy level -> dyadic parabolic scale", "per-level work -> normalized local-energy shell contribution", "total work -> anti-replication scale currency", "potential drop -> nested-scale signed local-energy increment"],
+      "shared_constraints": ["infinitely many levels or scales are a priori possible", "constant per-level bounds permit divergent totals", "global conclusions require an inter-level relation"],
+      "disanalogies": ["Navier-Stokes shell terms are continuous PDE integrals", "pressure nonlocality and cutoff dependence have no simple algorithmic analogue", "no target potential decrease is currently established"],
+      "proposed_principle": "Search for a scale-to-scale increment or potential identity, not another absolute O(1) shell estimate.",
+      "validation_obligation": "Derive a target-domain nested-scale identity on mild bounded ancient finite-I solutions with a finite total, telescoping, or decaying budget; reject the transfer if only separate O(I) absolute bounds remain.",
+      "provenance_note": "Proposal-only structural analogy; no theorem or method authority is imported."
+    }
+  ],
+  "analogy_scan_notes": "The retained analogy concerns only summability algebra across infinitely many levels. Turbulence-cascade stories were not retained because they add imagery without a sharper falsifiable obligation.",
+  "frozen_at": "2026-08-11T09:13:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "PLACEHOLDER"
+}
