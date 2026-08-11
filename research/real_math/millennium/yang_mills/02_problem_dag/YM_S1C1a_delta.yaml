@@ -1,0 +1,33 @@
+atom_id: YM-S1c1a
+parent_atom_id: YM-S1c1
+root_issue: 5
+control_issue: 69
+status: CONTEXT_REQUIRED
+root_authority: NONE
+opened_by:
+  episode_id: EP-YM-S1C1-AF-BARE-COUPLING-AUDIT-20260811
+  failure_id: F-YM-S1C1-FIXED-REFERENCE-BARE-COUPLING-ESCAPE
+question: >-
+  Construct or source-bind a genuine Wilson bare-coupling continuum trajectory
+  a -> beta(a) with beta(a) -> infinity and K(a) -> infinity such that the
+  exact reflection-positive RG estimates, source-family control, gap
+  step-scaling, physical-unit lower bound, and continuum OS reconstruction are
+  uniform along that moving trajectory.
+known_boundary:
+  - The audited Theorem 5.4 chooses beta_K in an O(rho^K) neighborhood of one fixed finite beta_*.
+  - That fixed-reference construction does not establish beta(a) -> infinity.
+  - Decay of an operational renormalized coupling g_R(mu) is not by itself a source-bound substitute for the Wilson bare-coupling asymptotic.
+  - Fixed-cutoff strong-coupling transfer-gap results remain separate local sections.
+candidate_generation_gate:
+  allowed: false
+  reason: >-
+    The parent discriminator was retrospective. Freeze a fresh MathContextFiber,
+    analogues/transfers/disanalogies, same-context expert cell, dual memory
+    review, problem fibre and hash-chained pre-candidate trace before proposing
+    any moving-trajectory theorem.
+first_falsifiers:
+  - reject any trajectory theorem whose beta(a) remains in one fixed compact set
+  - reject any argument that changes the beta coordinate without an explicit source-bound conversion
+  - reject uniformity statements proved only on compact beta sets if the proposed trajectory escapes those sets
+  - require physical gap units and continuum OS/spectral identification to remain explicit
+authority: STRICT_CHILD_RESIDUAL_ONLY / NO_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE
