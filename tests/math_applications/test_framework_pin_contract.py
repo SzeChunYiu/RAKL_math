@@ -13,7 +13,7 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "2d0b797228648b1332e7285fae6bc2826a2f5820"
+EXPECTED_FRAMEWORK_COMMIT = "3d4dde94ed8d6be04641b96ecf89389de55b61ce"
 HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
 FINAL_SYNC_RECEIPT = (
     APPLICATION_ROOT / "receipts/framework-pin-final-integration-bd1a276-20260811.json"
@@ -75,7 +75,7 @@ def test_framework_pin_sync_receipt_is_exact_and_non_authorizing() -> None:
     payload["artifact_hash"] = ""
     assert receipt["artifact_hash"] == _canonical_hash(payload)
     assert receipt["previous_framework_commit"] == HISTORICAL_FRAMEWORK_COMMIT
-    assert receipt["current_framework_commit"] == EXPECTED_FRAMEWORK_COMMIT
+    assert receipt["current_framework_commit"] == "bd1a2768f0f474ff44ffa25243241f94bfaf6466"
     assert receipt["verification"] == {
         "command": "python tools/run_application_tests.py --framework framework/RAKL",
         "tests_passed": 302,
