@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "RAKL-MATH-YM-S1A1-PACKET-BINDING-REPAIR-20260811",
+  "recorded_at": "2026-08-11T08:41:16+00:00",
+  "application_repository": {
+    "url": "https://github.com/SzeChunYiu/RAKL_math",
+    "base_commit": "21d349b20ff6373336974274be7752227223d478"
+  },
+  "framework_pin": {
+    "url": "https://github.com/SzeChunYiu/RAKL",
+    "commit": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
+  },
+  "atom_id": "YM-S1a1",
+  "observed_failures": [
+    "STALE_EVIDENCE_POINTER",
+    "FAIL_DEPENDENCY_BINDING"
+  ],
+  "artifacts": {
+    "old_failure": {
+      "path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_FAILURE_EXPERIENCE_LATTICE_STALE_EVIDENCE_POINTER_20260811.json",
+      "file_sha256": "sha256:176095d7629a32bb1ba71a62b36b1521362b4e91b7f802604ee1c327a9d307ee"
+    },
+    "live_failure": {
+      "path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+      "file_sha256": "sha256:ae890e65acda5a421877dcd2e53f93a1957fa57bf75c5fcce38c9de273f95ead"
+    },
+    "old_memory": {
+      "path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_HASH_REPAIRED_20260811.json",
+      "file_sha256": "sha256:24cc85194d0e848680def8be3588d580b8922824c0612800beee41a9bf27f042"
+    },
+    "live_memory": {
+      "path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_20260811.json",
+      "file_sha256": "sha256:07762ecf8811bdcb4da5f6be832817ab9e5af9571981686f03be495b1969d413"
+    },
+    "old_trace": {
+      "path": "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_MEMORY_HASH_INVALID_20260811.json",
+      "file_sha256": "sha256:fb22328a040ed52c773999b588f174adda731511d73815c1d24bd5603fd19b59"
+    },
+    "live_trace": {
+      "path": "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_20260811.json",
+      "file_sha256": "sha256:7d5c7739b03237320e87815f3cb2faf60affd588409654590459cc148dde5f6a"
+    }
+  },
+  "lineage": {
+    "supersedes_trace_id": "YM-S1A1-PRE-CANDIDATE-20260811",
+    "repaired_trace_id": "TRACE-YM-S1A1-PRE-CANDIDATE-PACKET-BINDING-REPAIRED-20260811",
+    "old_memory_hash": "sha256:cba10c36f5a6567749a080179e8ded8ba7d62a09f3cedd1fbf40604c8475e065",
+    "live_memory_hash": "sha256:24cfac6145bb262181f841f1bea09165c5e2f11e74789d4b7c7d1bb620efb038"
+  },
+  "repairs": [
+    "preserve the stale evidence-pointer failure lattice and freeze a successor with the live application-test path",
+    "preserve the first hash-repaired memory identity and freeze a successor bound to the corrected failure snapshot",
+    "preserve the stale-memory trace and freeze a successor bound to the exact live memory hash before any candidate event"
+  ],
+  "chronology": {
+    "base_repair_commit": "21d349b20ff6373336974274be7752227223d478",
+    "superseding_trace_frozen_at": "2026-08-11T08:41:15+00:00",
+    "candidate_events_present": false
+  },
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_FAILURE_EXPERIENCE_LATTICE_STALE_EVIDENCE_POINTER_20260811.json",
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_HASH_REPAIRED_20260811.json",
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_MEMORY_HASH_INVALID_20260811.json",
+    "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_20260811.json",
+    "tests/math_applications/test_yang_mills_yms1a1_packet_binding_repair.py"
+  ],
+  "authority": "PACKET_BINDING_REPAIR_ONLY / ORIGINAL_NEGATIVE_HISTORY_PRESERVED / PRE_CANDIDATE / NO_MATHEMATICAL_RESULT / NO_THEOREM / ROOT_AUTHORITY_NONE",
+  "artifact_hash": "sha256:8aae60ecd93cbba593d74591eabfe28a17005078cd82292da13cd835b071a4ba"
+}

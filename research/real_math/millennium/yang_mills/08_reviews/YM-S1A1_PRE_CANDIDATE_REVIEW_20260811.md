@@ -54,15 +54,35 @@ The cell reviewed the same frozen `YM-S1a1` context. These are role-separated an
 
 **Vote:** `ACCEPT_ONLY_WITH_COMMON_Q_AND_DENSITY`.
 
-## 6. Formal-methods / novelty lead
+## 6. Formal-methods lead
 
-**Background/role:** exact statement binding, proof obligations, prior-art/novelty scope.
+**Background/role:** exact statement binding, proof obligations, checker and dependency scope.
 
-**Finding:** the abstract statement appears to be a standard spectral-theorem consequence and should be recorded as a source-bound derived lemma/calibration, not new mathematics. Its value is decomposition: it can close the logical `G4a+G4b` implication while leaving the Yang–Mills hypotheses explicit.
+**Finding:** the abstract statement is a candidate spectral-theorem consequence whose exact quantifiers, positivity assumptions, excited-space restriction and density hypothesis must be bound before proof checking. Its value is decomposition: it can close only the logical `G4a+G4b` implication while leaving the Yang–Mills hypotheses explicit.
 
-**Strongest objection:** no novelty language and no formal proof authority until the exact statement and proof are checked.
+**Strongest objection:** no formal proof authority exists until the exact statement, dependency set and proof are separately checked.
 
-**Vote:** `ACCEPT_FOR_DERIVATION_AFTER_GATE / NO_NOVELTY_CLAIM`.
+**Vote:** `ACCEPT_FOR_DERIVATION_AFTER_GATE / NO_PROOF_AUTHORITY`.
+
+## 7. Novelty / prior-art lead
+
+**Background/role:** notation-normalized prior-art search and novelty-scope control, separate from truth assurance.
+
+**Finding:** the abstract statement appears likely to be a standard spectral-theorem consequence. This packet has not executed a bounded novelty search and therefore may use it only as a source-bound calibration/derived lemma candidate, not as new mathematics.
+
+**Strongest objection:** a proof, if later obtained, would not by itself establish novelty; structural-equivalence and stronger-parent searches remain separate obligations.
+
+**Vote:** `NO_NOVELTY_CLAIM / PRIOR_ART_FIBER_UNOPENED`.
+
+## 8. Analogy / method-transfer lead
+
+**Background/role:** explicit source-to-target mappings, disanalogies and transport falsifiers.
+
+**Finding:** the operator-theory route transfers only the implication from dense source moments with one common `q<1` to spectral support exclusion. SZZ supplies a possible common-exponent source fact, while fixed-lattice spin networks supply a possible kinematic completeness fact; neither source result supplies the exact infinite-volume OS physical-space hypotheses required by the target.
+
+**Strongest objection:** the transfer fails if support distance is not temporal distance `n+O(1)`, if Euclidean covariance is not the reconstructed transfer moment, or if fixed-lattice completeness does not survive the OS quotient and infinite-volume limit.
+
+**Vote:** `ACCEPT_TYPED_TRANSFER_QUESTION / BLOCK_TARGET_TRANSPORT_PENDING_DISANALOGY_TESTS`.
 
 ## Cell synthesis
 

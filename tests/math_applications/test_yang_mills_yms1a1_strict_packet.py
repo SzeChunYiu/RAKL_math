@@ -207,3 +207,42 @@ def test_yms1a1_difference_witness_preserves_old_hidden_state_failure() -> None:
     assert "DifferenceWitness" in notes
     assert "old three-state falsifier" in notes
     assert "density hypothesis" in notes
+
+
+def test_yms1a1_trace_binds_the_exact_live_memory_review() -> None:
+    memory = _load("07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_20260811.json")
+    trace = _load("09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_20260811.json")
+    legacy = _load(
+        "09_trace/YM-S1A1_PRE_CANDIDATE_TRACE_MEMORY_HASH_INVALID_20260811.json"
+    )
+
+    memory_event = next(
+        event for event in trace["entries"] if event["event_id"] == "YM-S1A1-E006"
+    )
+    next_step = next(
+        event for event in trace["entries"] if event["event_id"] == "YM-S1A1-E007"
+    )
+    assert memory["artifact_hash"] in memory_event["evidence_pointers"]
+    assert memory["artifact_hash"] in memory_event["outputs"]
+    assert memory["artifact_hash"] in next_step["evidence_pointers"]
+    assert trace["trace_id"] != legacy["trace_id"]
+    assert any(
+        "sha256:9e8e0176a607b4ac63d1231d4b936f9751a0b3e77d1b50bc353eafde98b53279"
+        in event["evidence_pointers"] + event["outputs"]
+        for event in legacy["entries"]
+    )
+
+
+def test_yms1a1_packet_has_role_separation_and_live_evidence_paths() -> None:
+    review = (
+        BASE / "08_reviews/YM-S1A1_PRE_CANDIDATE_REVIEW_20260811.md"
+    ).read_text(encoding="utf-8")
+    assert "## 6. Formal-methods lead" in review
+    assert "## 7. Novelty / prior-art lead" in review
+    assert "## 8. Analogy / method-transfer lead" in review
+
+    failures = _load("07_memory/YM-S1A1_FAILURE_EXPERIENCE_LATTICE_20260811.json")
+    for experience in failures["experiences"]:
+        for pointer in experience["evidence_pointers"]:
+            if pointer.startswith("tests/"):
+                assert (ROOT / pointer).is_file(), pointer

@@ -4,6 +4,7 @@ import copy
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 
 from jsonschema import Draft202012Validator, FormatChecker
 
@@ -14,7 +15,10 @@ INVALID = (
     BASE
     / "07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_HASH_INVALID_20260811.json"
 )
-REPAIRED = BASE / "07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_20260811.json"
+REPAIRED = (
+    BASE
+    / "07_memory/YM-S1A1_RESEARCH_MEMORY_REVIEW_HASH_REPAIRED_20260811.json"
+)
 RECEIPT = BASE / "08_reviews/YM-S1A1_MEMORY_HASH_REPAIR_RECEIPT_20260811.json"
 SCHEMA = ROOT / "schemas/artifact-integrity-repair-receipt.schema.json"
 
@@ -28,6 +32,34 @@ def _file_hash(path: Path) -> str:
     return "sha256:" + hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def _git(*arguments: str) -> str:
+    completed = subprocess.run(
+        ["git", "-C", str(ROOT), *arguments],
+        check=True,
+        stdout=subprocess.PIPE,
+        text=True,
+    )
+    return completed.stdout.strip()
+
+
+def _audit_exact_provenance(receipt: dict) -> None:
+    subject = receipt["subject"]
+    source_spec = f'{subject["source_commit"]}:{subject["source_path"]}'
+    if _git("rev-parse", source_spec) != subject["source_git_blob"]:
+        raise ValueError("source_commit_path_blob_mismatch")
+    if _git("hash-object", str(INVALID)) != subject["source_git_blob"]:
+        raise ValueError("invalid_copy_not_equal_to_source_blob")
+    if not receipt["repair"]["original_preserved"]:
+        raise ValueError("original_not_preserved")
+    if _git(
+        "merge-base",
+        "--is-ancestor",
+        receipt["application_repository"]["base_commit"],
+        "HEAD",
+    ):
+        raise ValueError("base_commit_not_ancestor")
+
+
 def test_yms1a1_memory_hash_repair_preserves_the_failed_identity() -> None:
     invalid = json.loads(INVALID.read_text(encoding="utf-8"))
     repaired = json.loads(REPAIRED.read_text(encoding="utf-8"))
@@ -36,6 +68,18 @@ def test_yms1a1_memory_hash_repair_preserves_the_failed_identity() -> None:
     schema = json.loads(SCHEMA.read_text(encoding="utf-8"))
     Draft202012Validator.check_schema(schema)
     Draft202012Validator(schema, format_checker=FormatChecker()).validate(receipt)
+    _audit_exact_provenance(receipt)
+
+    assert receipt["subject"]["source_path"] == str(
+        INVALID.relative_to(ROOT)
+    ).replace("_HASH_INVALID", "")
+    assert receipt["repair"]["invalid_path"] == str(INVALID.relative_to(ROOT))
+    assert receipt["repair"]["repaired_path"] == str(REPAIRED.relative_to(ROOT))
+    pin = json.loads((ROOT / "config/rakl-framework-pin.json").read_text())
+    assert receipt["framework_pin"]["commit"] == pin["commit"]
+    assert receipt["framework_pin"]["commit"] == _git(
+        "rev-parse", "HEAD:framework/RAKL"
+    )
 
     invalid_for_hash = copy.deepcopy(invalid)
     invalid_for_hash["artifact_hash"] = ""
@@ -67,3 +111,25 @@ def test_yms1a1_memory_hash_repair_preserves_the_failed_identity() -> None:
     assert receipt["artifact_hash"] == _canonical_hash(receipt_for_hash)
     assert "NO_MATHEMATICAL_RESULT" in receipt["authority"]
     assert "PROPOSAL_ONLY" in receipt["reusable_lesson_candidate"]["status"]
+
+
+def test_yms1a1_memory_hash_repair_provenance_fails_closed() -> None:
+    receipt = json.loads(RECEIPT.read_text(encoding="utf-8"))
+
+    missing_source = copy.deepcopy(receipt)
+    missing_source["subject"]["source_path"] += ".missing"
+    try:
+        _audit_exact_provenance(missing_source)
+    except (subprocess.CalledProcessError, ValueError):
+        pass
+    else:
+        raise AssertionError("missing historical source must fail closed")
+
+    forged_blob = copy.deepcopy(receipt)
+    forged_blob["subject"]["source_git_blob"] = "0" * 40
+    try:
+        _audit_exact_provenance(forged_blob)
+    except ValueError as exc:
+        assert str(exc) == "source_commit_path_blob_mismatch"
+    else:
+        raise AssertionError("forged source blob must fail closed")
