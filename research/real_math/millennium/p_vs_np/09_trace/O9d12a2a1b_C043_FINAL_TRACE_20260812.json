@@ -1,0 +1,157 @@
+{
+  "trace_id": "PNP-O9d12a2a1b-C043-FINAL-TRACE-20260812",
+  "entries": [
+    {
+      "event_id": "O9d12a2a1b-C043-R01",
+      "atom_id": "O9d12a2a1b-C043",
+      "event_type": "FALSIFIER_RUN",
+      "timestamp": "2026-08-12T15:00:00Z",
+      "state_summary": "The C043 candidate and no-LP evaluator were frozen at f5df31b before native output; all residual counts and accumulated type counts were prospective predictions.",
+      "action_summary": "Execute the exact finite length/residual/twin discriminator without changing its statement or evaluator.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C043_CANDIDATE_FREEZE_20260812.json",
+        "git:f5df31ba1828513b9a86adf5e02943c9355ce891"
+      ],
+      "alternatives_considered": [
+        "run a full quotient-cover LP",
+        "select a favorable later level after inspection",
+        "change the decoder"
+      ],
+      "decision_rationale": "The frozen residual/type gate is the cheapest direct mathematical falsifier of the claim that the first later semantic row split escapes twin compression.",
+      "outputs": [
+        "receipt_sha256:640122c54b0e7edc187405b232cbbf1bd28f3954f305d7609446f7d69ba697d2",
+        "full_cover_LP_run:false"
+      ],
+      "uncertainties": [
+        "the receipt is computational corroboration, not proof"
+      ],
+      "residuals": [],
+      "next_steps": [
+        "replace every accepted finite claim by an explicit analytic proof"
+      ],
+      "previous_event_hash": "",
+      "artifact_hash": "sha256:2582d2fe4516e060df4872d68bf168417fc3b585591cb829984e9f89daf50a0b"
+    },
+    {
+      "event_id": "O9d12a2a1b-C043-R02",
+      "atom_id": "O9d12a2a1b-C043",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-12T15:10:00Z",
+      "state_summary": "The frozen predictions survived: length 30 has 42 canonical UNSAT words across four active rows with residual sizes 17,4,4,17 and three nonempty column neighborhoods.",
+      "action_summary": "Prove the length case split, P/N/T criterion, inclusion-exclusion count, residual identities, and separating witnesses analytically.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/04_candidates/C043_FIRST_ROW_SPLIT_RESULT_20260812.md",
+        "research/real_math/millennium/p_vs_np/05_falsification/C043_FIRST_ROW_SPLIT_RECEIPT_20260812.json"
+      ],
+      "alternatives_considered": [
+        "treat enumeration as proof",
+        "credit 42 formulas or four rows as amplification"
+      ],
+      "decision_rationale": "The explicit bitlength and clause arguments establish exactly the finite semantic content while leaving cover growth to a separate test.",
+      "outputs": [
+        "length30_parameters:(1,3)",
+        "canonical_unsat_count:42",
+        "row_residual_sizes:17,4,4,17",
+        "new_row_types:3",
+        "new_column_types:3"
+      ],
+      "uncertainties": [
+        "later residual languages remain unclassified"
+      ],
+      "residuals": [
+        "whether accumulated twins still impose a small upper cover"
+      ],
+      "next_steps": [
+        "account for every old band and classify both sides of G16"
+      ],
+      "previous_event_hash": "sha256:2582d2fe4516e060df4872d68bf168417fc3b585591cb829984e9f89daf50a0b",
+      "artifact_hash": "sha256:0393b81a45b27138361f4ee260c7a5a3410c562704575ef671011516c1040fe8"
+    },
+    {
+      "event_id": "O9d12a2a1b-C043-R03",
+      "atom_id": "O9d12a2a1b-C043",
+      "event_type": "RESIDUAL_OPENED",
+      "timestamp": "2026-08-12T15:20:00Z",
+      "state_summary": "Full-history classification gives exactly eight row and eight column types; eight type-class rectangles prove rho(G16)<=8.",
+      "action_summary": "Preserve the failed amplification assumption and reopen the stronger quotient-multiplexing obstruction rather than running expensive lower-bound compute.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C043_FIRST_ROW_SPLIT_FAILURE_DELTA_20260812.json",
+        "sha256:af7bfdb0ac698e706aa86534e7a2daaf09fa55a634dce725ee2e30ac9c66f7da",
+        "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C043_POST_RESULT_TOOL_REUSE_DELTA_20260812.json"
+      ],
+      "alternatives_considered": [
+        "infer growth from semantic multiplicity",
+        "claim the eight-type upper bound is exact",
+        "extrapolate finite collapse uniformly"
+      ],
+      "decision_rationale": "Semantic row splitting is genuine but noncoercive: exact twins on both sides absorb it, and type growth alone still does not rule out a multiplexed small quotient cover.",
+      "outputs": [
+        "t_row_G16:8",
+        "t_column_G16:8",
+        "D_intersection_G16_upper:8",
+        "rho_G16_upper:8",
+        "root_authority:none"
+      ],
+      "uncertainties": [
+        "the exact quotient cover number is unknown",
+        "later type growth and quotient multiplexability are unknown"
+      ],
+      "residuals": [
+        "uniform quotient behavior",
+        "direct nonmultiplexability witness",
+        "superlogarithmic cover lower bound",
+        "circuit lower bound"
+      ],
+      "next_steps": [
+        "run two hostile mathematical reviews",
+        "freeze any successor only after the latest-framework gate"
+      ],
+      "previous_event_hash": "sha256:0393b81a45b27138361f4ee260c7a5a3410c562704575ef671011516c1040fe8",
+      "artifact_hash": "sha256:185d037a4bba7e9c31dcba272b6875ef05ba19161bb9d1f025fcaca47f66e828"
+    },
+    {
+      "event_id": "O9d12a2a1b-C043-R04",
+      "atom_id": "O9d12a2a1b-C043",
+      "event_type": "REVIEWED",
+      "timestamp": "2026-08-12T15:35:00Z",
+      "state_summary": "Two same-context hostile mathematical reviews accept the finite proofs and eight-rectangle upper bound while rejecting all optimum, uniform, asymptotic, circuit, and root overclaims.",
+      "action_summary": "Resolve padding, analytic-authority, old-band, bidirectional-twin, and polarity concerns; retain the open quotient-multiplexing residual.",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C043_LENGTH_PNT_RESIDUAL_HOSTILE_REVIEW_20260812.json",
+        "sha256:b0cdfc19878a9a950a1e2a29e2f21c5ef360b7ee0cad7a944d73ae0af632feee",
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C043_ACCUMULATED_TWINS_POLARITY_HOSTILE_REVIEW_20260812.json",
+        "sha256:647934dc51e1d6b82c3786ea87f3eb3493a618eb1ec6504db9249ce141d00684",
+        "research/real_math/millennium/p_vs_np/04_candidates/C043_FIRST_ROW_SPLIT_RESULT_20260812.md"
+      ],
+      "alternatives_considered": [
+        "call same-context review independent",
+        "grant mathematical credit to CI or receipt hashes",
+        "promote finite type splitting to asymptotic growth"
+      ],
+      "decision_rationale": "The explicit proofs settle only the registered finite claims; no review-independent or root authority is created.",
+      "outputs": [
+        "finite_length_and_residual_claims:ACCEPTED",
+        "finite_type_upper_bound:ACCEPTED",
+        "review_independence:false",
+        "software_assurance_math_credit:false",
+        "root_authority:none"
+      ],
+      "uncertainties": [
+        "no independent peer review",
+        "no formal proof receipt",
+        "no quotient optimum or recurrence"
+      ],
+      "residuals": [
+        "direct quotient nonmultiplexability discriminator",
+        "uniform cover growth",
+        "circuit lower bound"
+      ],
+      "next_steps": [
+        "merge the bounded negative mathematical round after exact CI",
+        "begin any successor from latest main and a fresh strict pre-candidate packet"
+      ],
+      "previous_event_hash": "sha256:185d037a4bba7e9c31dcba272b6875ef05ba19161bb9d1f025fcaca47f66e828",
+      "artifact_hash": "sha256:04569652139639aabbf40240686a3075156278647e775d58faaef381a2c37d3c"
+    }
+  ]
+}

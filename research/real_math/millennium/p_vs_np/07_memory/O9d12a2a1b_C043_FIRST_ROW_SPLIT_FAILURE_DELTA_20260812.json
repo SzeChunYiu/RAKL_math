@@ -1,0 +1,53 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING",
+      "atom_id": "O9d12a2a1b-C043",
+      "candidate_id": "C043-FIRST-ROW-SPLIT-RESIDUAL-v1",
+      "context_packet_hash": "sha256:fff65cd0b2cc08bf7aaa1923fb0088ae8eca4dbd844b927eb2f6f05b56479ae8",
+      "research_trace_event_id": "O9d12a2a1b-C043-R03",
+      "method_family": "semantic residual row splitting as precursor to cover amplification",
+      "failure_mode": "semantic multiplicity creates several residual rows but exact bidirectional twin compression leaves only eight accumulated types and a finite rho upper bound of eight",
+      "residual_signature": [
+        "42 canonical UNSAT words at length 30",
+        "four active prefix rows but only three distinct nonempty row residuals",
+        "three nonempty new suffix-neighborhood types",
+        "t_row(G16)=t_column(G16)=8",
+        "rho(G16)<=8 by exact type-class rectangles"
+      ],
+      "broken_assumptions": [
+        "multi-row semantic support was treated as evidence of coercive cover growth",
+        "semantic multiplicity was treated as escaping exact twin compression",
+        "one-sided residual splitting was treated as sufficient without full-history classification on both sides"
+      ],
+      "scope_conditions": [
+        "frozen C041 MAGIC/gamma/fixed-width decoder",
+        "finite accumulated graph G16 only",
+        "canonical long-form UNSAT branch with fallback accounted separately",
+        "unrestricted associated-graph cover quantity with the registered upper-bound polarity"
+      ],
+      "competing_diagnoses": [
+        "the first split is too early but later quotients may grow coercively",
+        "type counts may grow while quotient covers remain multiplexable by few legal pairs",
+        "the decoder may continue to concentrate obstruction information in bounded residual templates"
+      ],
+      "selected_diagnosis": "SUPPORTED FINITE DIAGNOSIS ONLY: the first semantic row split is real, but full-history twin compression on both sides absorbs it into three new types per side, yielding only rho(G16)<=8. No later-level diagnosis is established.",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/04_candidates/C043_FIRST_ROW_SPLIT_RESULT_20260812.md",
+        "research/real_math/millennium/p_vs_np/05_falsification/C043_FIRST_ROW_SPLIT_RECEIPT_20260812.json",
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C043_ACCUMULATED_TWINS_POLARITY_HOSTILE_REVIEW_20260812.json"
+      ],
+      "falsifier_or_attempt": "classify the exact completion residuals, then recompute all accumulated row and column twins and apply the source-valid type-class upper construction before any LP",
+      "observed_result": "the 17/4/4/17 split yields exactly three new types on each side; old five plus new three gives an eight-rectangle cover of G16",
+      "local_repair_attempts": [
+        "require exact full-history twin classification on both sides before interpreting semantic support growth",
+        "replace row-count amplification by a direct quotient-multiplexing discriminator",
+        "defer expensive lower-bound computation while a cheap constant-scale upper cover survives"
+      ],
+      "timestamp": "2026-08-12T15:20:00Z",
+      "artifact_hash": "sha256:af7bfdb0ac698e706aa86534e7a2daaf09fa55a634dce725ee2e30ac9c66f7da"
+    }
+  ],
+  "links": []
+}
