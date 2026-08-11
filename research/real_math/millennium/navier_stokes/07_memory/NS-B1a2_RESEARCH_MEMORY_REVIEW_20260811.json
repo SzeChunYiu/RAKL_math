@@ -1,0 +1,80 @@
+{
+  "memory_review_id": "NS-B1a2-MEMORY-20260811",
+  "target_atom_id": "NS-B1a2",
+  "target_context_hash": "sha256:93f1d63d36fe43910713623d0c385e799506530fbb02790706ca8c824a076fe5",
+  "bound_repository_commit": "8a608f340d47b4b6ae612275b0595faf6b804432",
+  "framework_current_main": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+  "candidate_method_families": [
+    "renormalized-orbit compactness/minimality",
+    "finite self-similar-time variation or monotone defect",
+    "one-slice scaling-generator smallness",
+    "periodic/RDSS exclusion under parameter control",
+    "critical-tail/L3-sequence Liouville trigger"
+  ],
+  "tool_query": {
+    "status": "MATCHES_FOUND",
+    "selected_tool_ids": [
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "retrieved_rejected": [
+      {
+        "id": "compactness alone -> near stationary slice",
+        "reason": "unlicensed inference; preregistered compact-orbit hostile control directly tests it"
+      },
+      {
+        "id": "long-time average of partial_s U -> pointwise small ||partial_s U||",
+        "reason": "vector cancellation does not control norm or one time slice"
+      },
+      {
+        "id": "time-averaged profile solves stationary Leray equation",
+        "reason": "nonlinear averaging generates fluctuation/Reynolds-stress terms unless fluctuations are controlled"
+      },
+      {
+        "id": "repeat normalized local-energy shell summation",
+        "reason": "F-NS-B1a1-C001-SCALE-NEUTRAL-CHARGE shows standard finite-I absolute ledger is scale-neutral after normalization"
+      }
+    ]
+  },
+  "failure_query": {
+    "status": "MATCHES_FOUND",
+    "relevant_failure_ids": [
+      "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+      "F-NS-B1a1-C001-SCALE-NEUTRAL-CHARGE",
+      "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+      "SOURCE-GAP-2606.07875-TERMINAL-SCALE"
+    ],
+    "routing_effects": [
+      "do not repeat pressure-tail divergence",
+      "do not infer a finite descendant count from scale-neutral or geometrically summable physical budgets",
+      "attack the bridge from local/compact certificates to the root rigidity trigger",
+      "do not use minimal physical scale as a well-founded rank"
+    ]
+  },
+  "tool_applicability_notes": [
+    "The root-bridge stability audit applies because the source surrogate (precompact/averaged renormalized orbit) and target quantity (one-slice generator smallness or Liouville trigger) are explicit.",
+    "Target structural coordinates differ from prior cross-domain uses, so the audit remains proposal-only and target-specific validation is mandatory."
+  ],
+  "failure_reuse_scope_notes": [
+    "NS-B1a1 failure prunes only standard absolute shell summation, not all scale-symmetry breakers.",
+    "Pineau-Vicol RDSS results are source-valid special-scenario evidence, not a theorem that every finite-I orbit is periodic or slowly drifting.",
+    "The compact-circle control is a logical counterexample to a functional implication, not a Navier-Stokes counterexample."
+  ],
+  "unresolved_warnings": [
+    "Finite Albritton-Barker I does not imply the pointwise Type-I velocity bound required by Pineau-Vicol Theorem 1.9.",
+    "The fixed-annulus L-infinity pressure hypothesis in Pineau-Vicol Theorem 1.9 is not inherited by finite I without a separate proof.",
+    "A compact orbit may have persistent nonzero drift; recurrence is not convergence.",
+    "Time averaging a nonlinear PDE does not produce the stationary PDE without controlling fluctuations.",
+    "The RAKL_math framework submodule remains pinned to 15f1c3..., while current framework authority is bd1a276...; current v3 is consulted directly and telemetry remains proposal/shadow."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1_TYPE_I_IMPLICATION_MATRIX_20260811.md",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a1_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a1_C001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a1_C001_RAKL_METHOD_CASE_STUDY_20260811.md",
+    "https://arxiv.org/html/2607.09619v2",
+    "https://arxiv.org/abs/1811.00502"
+  ],
+  "selected_next_action": "Run a compactness/averaging hostile audit: test whether bounded/precompact self-similar-time dynamics or small average vector increment can force one slice with small generator norm; separately inventory the stronger hypotheses still needed to invoke Pineau-Vicol Theorem 1.9.",
+  "frozen_at": "2026-08-11T12:05:05+00:00",
+  "artifact_hash": "sha256:55846db2ed577a688dc7786b22c11f2a9aa73b5c6c738cf33ba7b0198718a2cf"
+}
