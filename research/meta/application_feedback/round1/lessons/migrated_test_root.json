@@ -1,0 +1,65 @@
+{
+  "artifact_hash": "0acd344779f0f79b58976a1813e379af379c45245f887e753fd3f7d4ce334dd3",
+  "atom_id": "meta::repository-split::test-root-binding",
+  "broken_assumptions": [
+    "the relative depth from the test file to repository root is unchanged after migration"
+  ],
+  "candidate_framework_delta": {
+    "proposal": "make repository-migration assurance enumerate moved test locations and prove that resolved artifact roots stay within the declared destination repository",
+    "required_validation": [
+      "known-answer unchanged-layout PASS",
+      "planted extra-directory-depth FAIL",
+      "missing destination artifact CANNOT_CHECK rather than guessed rebinding",
+      "fresh non-Python migration assurance"
+    ],
+    "status": "UNVALIDATED_PROPOSAL"
+  },
+  "candidate_id": "migration-layout-assumption::parents[1]",
+  "competing_diagnoses": [
+    "artifact omitted from migration",
+    "test root points one directory too shallow",
+    "test executed from an unexpected working directory",
+    "case-sensitive path mismatch"
+  ],
+  "context_packet_hash": "b677e32e8542b0d7ba9cdc9888a14169cde35cfef89a7c7cc34613c782a4f77e",
+  "diagnosis_status": "SUPPORTED",
+  "evidence_pointers": [
+    "result::rakl-math-feedback::migrated-test-root-v1",
+    "trace-event::rakl-math-feedback::migrated-test-root-observed-v1",
+    "https://github.com/SzeChunYiu/RAKL_math.git@9ffa00dcb43639607bd58eca667eb83de4627a30:tests/math_applications/test_rh_spec_001_strict_packet.py#blob=1aa391f481994464205122a133248d9081ea4036&sha256=08410cc5f4bf99d34934668facb663510e04282f72d5894dd4dfae6f7715aa05",
+    "https://github.com/SzeChunYiu/RAKL_math.git@9ffa00dcb43639607bd58eca667eb83de4627a30:research/real_math/millennium/riemann_hypothesis/01_frontier/RH_SPEC_001_CONTEXT_FIBER_20260811.json#blob=45eb9a78f2bb00b935abc426d64cc2c723f282b9&sha256=bfe98ee1f437a2435a4a7444a0a0086aa7db5ae6e3ebcc649f8df0539faaf0d8",
+    "https://github.com/SzeChunYiu/RAKL_math.git@264f6ce869d726fbfa064d1e49eb0db2a38bceda:tests/math_applications/test_rh_spec_001_strict_packet.py#blob=c4dd334eebcc4850553c7de45e65e320806530d2&sha256=0ee80057f585d681e334af8d0383a886cf021edd1ed9f6d36718d032cb029308",
+    "https://github.com/SzeChunYiu/RAKL_math.git@6751eb1076597cfc93bdf874cf50db0d5774f4fa:change_log/2026-08-11-bootstrap.md#blob=8c99872ce1abca797f29351b87e639ad51f3e5d2&sha256=220c2a541d081ec8fb57fee794076f94fb602d10c262f3b429d1003426cc5513"
+  ],
+  "failure_id": "failure::rakl-math::migrated-test-root-v1",
+  "failure_lattice_relations": [
+    "INSTANCE_OF:repository_layout_context_drift",
+    "SHARES_BROKEN_ASSUMPTION_WITH:path_bound_migration_failures"
+  ],
+  "failure_mode": "test_root_retained_source_repository_depth",
+  "falsifier_or_attempt": "run exact migrated test at source migration commit with exact framework code and inspect resolved missing path",
+  "local_repair_attempts": [
+    "rebind ROOT from parents[1] to parents[2]",
+    "bootstrap normalized the same structural pattern across migrated application tests"
+  ],
+  "method_family": "repository-tree-migration",
+  "observed_result": "pytest failed before mathematical gates because parents[1] resolved to tests/ rather than the application repository root",
+  "research_trace_event_id": "trace-event::rakl-math-feedback::migrated-test-root-observed-v1",
+  "residual_signature": [
+    "FileNotFoundError",
+    "resolved_path_under_tests/research",
+    "artifact_exists_under_repository_root/research",
+    "test_body_not_reached"
+  ],
+  "scope_conditions": [
+    "test moved from tests/ to tests/math_applications/",
+    "ROOT derived from Path(__file__).parents index",
+    "application artifacts remained under repository-root research/"
+  ],
+  "selected_diagnosis": "test root points one directory too shallow after the test moved into tests/math_applications",
+  "timestamp": "2026-08-11T08:20:18Z",
+  "transport_limits": [
+    "witness is a Python pathlib test-root defect",
+    "other languages and build systems require their own root-resolution checks"
+  ]
+}

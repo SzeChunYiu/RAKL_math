@@ -1,0 +1,60 @@
+{
+  "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONNOUSERSITE=1 python -m pytest -q tests/test_pnp_c024_fractional_semifilter.py",
+  "does_not_establish": [
+    "that repository split is always preferable",
+    "any mathematical result"
+  ],
+  "evidence_artifacts": [
+    {
+      "commit_sha": "209a030b8ba5a1d1432fa79ff99db11d7c4769d8",
+      "git_blob_sha": "620c57bdc5c262bedf4fd76adac06835498408e5",
+      "path": "tests/test_pnp_c024_fractional_semifilter.py",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL.git",
+      "sha256": "e20f80ad44251ac308883034c1379d978a7da767d67db613030d3942a5969566"
+    },
+    {
+      "commit_sha": "209a030b8ba5a1d1432fa79ff99db11d7c4769d8",
+      "git_blob_sha": "8cf799e118ec8bcfc84a9d700b8b4ebf8c19ae62",
+      "path": "research/real_math/README.md",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL.git",
+      "sha256": "76ecb27d53aae98a25c9297fb1697f9b0c6bcdee9636132007df83fbe59276c4"
+    },
+    {
+      "commit_sha": "9ffa00dcb43639607bd58eca667eb83de4627a30",
+      "git_blob_sha": "620c57bdc5c262bedf4fd76adac06835498408e5",
+      "path": "tests/math_applications/test_pnp_c024_fractional_semifilter.py",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "e20f80ad44251ac308883034c1379d978a7da767d67db613030d3942a5969566"
+    },
+    {
+      "commit_sha": "9ffa00dcb43639607bd58eca667eb83de4627a30",
+      "git_blob_sha": "3e874f25aab5192c7e5468a7fba2f6979b283f20",
+      "path": "research/real_math/millennium/p_vs_np/07_memory/C024_RESEARCH_TOOL_DELTA_20260811.json",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "ea685cce50ad13b0423c69da68048d2783506234a1463510da108dc158be8844"
+    },
+    {
+      "commit_sha": "6751eb1076597cfc93bdf874cf50db0d5774f4fa",
+      "git_blob_sha": "2fae7dfa9e2a9754d84fcae549f268c30349cbd2",
+      "path": "AGENTS.md",
+      "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+      "sha256": "e4225bdc057c8437586e710aa6139fb6b6601ee18b547141de697ceaf9ccc469"
+    }
+  ],
+  "execution_checkout": "RAKL@209a030b8ba5a1d1432fa79ff99db11d7c4769d8",
+  "exit_code": 1,
+  "observed_missing_paths": [
+    "research/real_math/millennium/p_vs_np/07_memory/C024_RESEARCH_TOOL_DELTA_20260811.json",
+    "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1_RESEARCH_TRACE_20260811.json"
+  ],
+  "pytest_summary": "1 passed, 2 failed",
+  "resolution": "preserve the application artifacts and regressions in RAKL_math, then remove application-owned regressions from the framework suite",
+  "result_id": "result::rakl-math-feedback::framework-split-dangling-tests-v1",
+  "status": "FAIL_DANGLING_APPLICATION_REGRESSIONS_IN_FRAMEWORK",
+  "tree_observation": {
+    "application_regression_still_in_framework": true,
+    "application_test_and_artifacts_preserved_in_RAKL_math_at_9ffa00d": true,
+    "bound_application_artifacts_in_framework": false,
+    "nineteen_migrated_application_regressions_removed_from_framework_at_3527827": true
+  }
+}
