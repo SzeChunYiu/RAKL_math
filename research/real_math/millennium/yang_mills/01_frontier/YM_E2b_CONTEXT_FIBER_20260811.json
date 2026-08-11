@@ -1,0 +1,118 @@
+{
+  "schema_version": "rakl-math-context-fiber-shadow-v3",
+  "artifact_type": "MATH_CONTEXT_FIBER_SHADOW",
+  "atom_id": "YM-E2b-FIXED-TAU-SAME-THEORY-INTERFACE",
+  "authority": "PROPOSAL_SHADOW_CONTEXT_FROZEN_NO_THEOREM_AUTHORITY",
+  "framework_binding": {
+    "repository": "SzeChunYiu/RAKL",
+    "package_version": "0.1.0",
+    "git_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "v3_architecture_inspected": [
+      "src/rakl/v3.py",
+      "src/rakl/experience_substrate.py",
+      "src/rakl/method_specs.py"
+    ],
+    "note": "Package metadata exposes 0.1.0; no separate repository-wide v3 semantic-version string was located, so Git SHA is the exact framework identity."
+  },
+  "application_binding": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "24194bba4c88cc4be19dad03d59bfa79599d5ee9",
+    "yang_mills_tree_sha": "867208c5adec0f5f6e4d109e79dc1c9fe46454fc",
+    "root_issue": 5,
+    "active_issue": 92,
+    "linked_issues": [69,73]
+  },
+  "problem_signature": [
+    "finite-lattice reflection-positive transfer operators",
+    "main-text one-lattice-step time spacing a_k with a_{k+1}=b a_k",
+    "Appendix-D fixed physical time tau transfer family exp(-tau H_{k,L})",
+    "same-theory semigroup identification across time normalizations",
+    "vacuum-preserving RG embeddings/isometries",
+    "defect transport uniform in volume and lattice spacing",
+    "physical Hamiltonian spectral identification after OS reconstruction",
+    "source-family completeness remains a separate obligation"
+  ],
+  "exact_atom": {
+    "question": "Can Appendix D's fixed-physical-time transfer family be used as a same-theory replacement for the variable-lattice-time gap step-scaling in Theorem 5.4 without silently changing Hamiltonians, Hilbert spaces, RG maps, or continuum spectral coordinates?",
+    "success_contract": [
+      "bind both transfer families to the same finite-cutoff Hamiltonian H_{k,L} on explicitly identified gauge-invariant OS Hilbert spaces",
+      "prove the exact semigroup/time-normalization relation between one-step transfer and fixed-tau transfer, including non-integer tau/a_k if used",
+      "prove compatibility of the RG embedding/intertwining with that relation and convert defects without loss that destroys a-uniformity",
+      "retain a positive defect budget after composition with issue #73",
+      "show L-uniformity, continuum-path uniformity, OS-source compatibility, and physical spectral identification"
+    ],
+    "failure_contract": "If any interface is absent from the bounded source chain, record a scoped gluing/interface obstruction only; do not infer that Appendix D's local operator lemma is false and do not make a literature-wide nonexistence claim."
+  },
+  "actual_fibre_consulted": {
+    "root_contract": [
+      "research/real_math/millennium/yang_mills/README.md",
+      "research/real_math/millennium/yang_mills/01_frontier/YM-S1_GAP_TRANSPORT_OBLIGATION_MATRIX_20260811.md",
+      "SzeChunYiu/RAKL_math#5"
+    ],
+    "prior_experience": [
+      "EP-YM-S1A1-DENSE-SOURCE-GAP-20260811",
+      "SzeChunYiu/RAKL_math#69",
+      "SzeChunYiu/RAKL_math#73",
+      "SzeChunYiu/RAKL_math#92"
+    ],
+    "primary_sources": [
+      {
+        "id": "FS2026",
+        "citation": "Mir Faizal and Arshid Shabir, Reflection-Positive Construction of a Four-Dimensional SU(N) Yang-Mills Theory with Mass Gap and Confinement, arXiv:2606.19362v1 (2026-06-09).",
+        "url": "https://arxiv.org/abs/2606.19362",
+        "bound_locations": [
+          "Theorem 5.4, eqs. (5.30)-(5.37), PDF pp. 52-53",
+          "Appendix D, eqs. (D.1)-(D.5), PDF pp. 191-192",
+          "Lemma D.1 and Proposition D.2, eqs. (D.6)-(D.13), PDF pp. 192-193",
+          "Appendix C, eqs. (C.112)-(C.115), PDF p. 191"
+        ]
+      },
+      {
+        "id": "CLAY-YM",
+        "citation": "Clay Mathematics Institute, Yang-Mills & the Mass Gap / official Jaffe-Witten problem description.",
+        "url": "https://www.claymath.org/millennium/yang-mills-the-maths-gap/"
+      }
+    ]
+  },
+  "source_bound_observations": [
+    "Theorem 5.4 defines Delta_k=-(1/a_k) log ||T_k|Q_k|| for a one-step transfer T_k and uses a_{k+1}=b a_k.",
+    "Its exact inequality (5.36) contains exp(a_{k+1} Delta_k)||E_k||/a_{k+1}; the later bound exp(a_{k+1}Delta_k)<=exp(a_{k+1}) does not follow from Delta_k>=0 alone.",
+    "Appendix D instead fixes physical tau>0 and defines T_{k,L}=exp(-tau H_{k,L}), transfer gap 1-||T_{k,L}|Q||, and mass gap -tau^{-1} log(1-Delta_{k,L}).",
+    "Appendix D posits a scale-to-scale isometry Pi_{k,L} and defect E_{k,L}=T_{k+1,L}-Pi T_{k,L} Pi*, with summable norms uniform in L.",
+    "In the bounded locations inspected, no explicit theorem identifies the Appendix-D fixed-tau T_{k,L} with the main-text one-step transfer by a common H_{k,L} and exact semigroup/power relation."
+  ],
+  "operator_theoretic_coordinates": [
+    "If S_k(t)=exp(-t H_k) is already a common strongly continuous semigroup, then ||S_k(t)|Q||=exp(-t m_k) and m_k=-t^{-1}log ||S_k(t)|Q||.",
+    "If tau=n_k a_k with integer n_k and T_k=exp(-a_k H_k), then exp(-tau H_k)=T_k^{n_k}; without a common generator this is not licensed.",
+    "For contractions A,B, ||A^n-B^n|| <= n||A-B|| by telescoping; therefore converting one-step defects to fixed physical tau can amplify errors like tau/a_k unless sharper semigroup/intertwining control is proved."
+  ],
+  "analogues": [
+    {"method":"spectral mapping for a fixed self-adjoint Hamiltonian","transfer_assumption":"same H and same excited-space projection","status":"EXACT_IF_PRECONDITIONS_PROVED"},
+    {"method":"Trotter-Kato/strong-resolvent semigroup convergence","transfer_assumption":"common generator semantics and convergence hypotheses","status":"ANALOGUE_ONLY_NOT_SOURCE_BOUND_HERE"},
+    {"method":"telescoping power stability for contractions","transfer_assumption":"operators on identified spaces or exact intertwining","status":"EXACT_HOSTILE_CONTROL"}
+  ],
+  "disanalogies": [
+    "A one-lattice-step transfer family whose time increment changes with k is not automatically the same object as a fixed-physical-time semigroup family.",
+    "Vacuum-preserving isometries between scale Hilbert spaces do not by themselves identify Hamiltonian generators or logarithms.",
+    "An abstract positive-contraction interlacing lemma can be mathematically valid even when its gluing to the root theory is unproved.",
+    "Uniformity in spatial volume L does not imply uniformity in lattice spacing a_k or RG depth k.",
+    "Decay of selected Euclidean sources does not by itself imply the full physical gap; prior source-completeness obligations remain separate."
+  ],
+  "cheap_falsifiers": [
+    "Set Delta_k>1: Delta_k>=0 does not imply exp(a Delta_k)<=exp(a).",
+    "Set a_k=b^k a_0 with b>1: the sequence is not uniformly comparable to 1 for all k.",
+    "Choose positive contractions with identical numerical gaps on unrelated Hilbert spaces: matching gap numbers do not establish same-theory identity.",
+    "Use ||A^n-B^n||<=n||A-B|| with n=tau/a: an O(a^0) or merely summable one-step defect need not remain a-uniform at fixed physical time.",
+    "Allow a hidden low-energy state orthogonal to controlled sources: clustering of a restricted source family still fails to certify the full Hamiltonian gap."
+  ],
+  "residual_before": [
+    "G5 RG/coarse-graining gap transport open",
+    "G6 physical-unit lattice-spacing scaling open",
+    "G7 continuum spectral identification open",
+    "issue #73 total-defect margin not certified",
+    "issue #92 time-normalization/same-theory bridge not certified"
+  ],
+  "frozen_at": "2026-08-11T13:53:54+00:00",
+  "fibre_snapshot_hash": "sha256:eeb0f0e133f4ec63a1e86b2cddd7a6491533ab48ed72f732610bb80652861b6e",
+  "artifact_hash": "sha256:2ce8294bb247c8650021320e81b9fec8502a4dbaae9e5f13a5bd6d5502c8c6d0"
+}
