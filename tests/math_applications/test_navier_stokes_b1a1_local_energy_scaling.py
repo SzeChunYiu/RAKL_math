@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from fractions import Fraction
 from pathlib import Path
 
 from rakl.math_context import (
@@ -134,7 +135,7 @@ def test_local_energy_absolute_scale_currency_is_critical_not_decaying():
     cubic_power = -1 - 1 + 2
     # Tp: R^-1(normalize) * R^-1(grad) *
     #     (R^2 D)^(2/3) * (R^2 C)^(1/3)
-    pressure_power = -1 - 1 + (2 * 2 / 3) + (2 * 1 / 3)
+    pressure_power = Fraction(-1) - 1 + Fraction(4, 3) + Fraction(2, 3)
     assert quadratic_power == 0
     assert cubic_power == 0
     assert pressure_power == 0
