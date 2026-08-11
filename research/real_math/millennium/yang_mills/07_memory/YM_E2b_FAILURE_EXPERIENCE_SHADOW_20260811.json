@@ -1,0 +1,74 @@
+{
+  "schema_version": "rakl-v3-failure-experience-shadow-v1",
+  "artifact_type": "FAILURE_EXPERIENCE_SHADOW",
+  "failure_id": "F-YM-E2B-FIXED-TAU-SAME-THEORY-GLUING-GAP",
+  "atom_id": "YM-E2b-FIXED-TAU-SAME-THEORY-INTERFACE",
+  "candidate_id": "NO_MATHEMATICAL_CANDIDATE",
+  "context_packet_hash": "sha256:eeb0f0e133f4ec63a1e86b2cddd7a6491533ab48ed72f732610bb80652861b6e",
+  "episode_id": "EP-YM-E2B-FIXED-TAU-INTERFACE-20260811-R1",
+  "method_family": "FIXED_PHYSICAL_TIME_TRANSFER_REPLACEMENT",
+  "failure_mode": "LOCAL_TO_GLOBAL_GLUE_INTERFACE_MISMATCH",
+  "failure_category": "GLUING",
+  "diagnosis_status": "OBSERVED_ONLY_SCOPED_SOURCE_AUDIT",
+  "observed_failure_signature": [
+    "main-text transfer is one-step with scale-dependent physical time a_k",
+    "Appendix-D transfer is defined at fixed physical time tau",
+    "bounded inspected source locations do not explicitly identify both by one common H_{k,L} and exact semigroup relation",
+    "scale isometry/interlacing at fixed tau does not by itself prove compatibility with the main-text variable-step RG family",
+    "one-step-to-fixed-time defect conversion may amplify errors by tau/a_k"
+  ],
+  "broken_or_unproved_assumptions": [
+    "same symbol T across sections implies same semigroup element",
+    "vacuum-preserving scale isometry identifies Hamiltonian generators",
+    "summable one-step defects remain summable after a fixed-physical-time power conversion without an a-dependent estimate",
+    "volume-uniformity implies lattice-spacing/continuum uniformity",
+    "local transfer-gap persistence automatically yields the root physical mass gap"
+  ],
+  "local_mathematical_status": {
+    "spectral_mapping_identity": "VALID_CONDITIONALLY_ON_COMMON_H",
+    "appendix_D_abstract_interlacing": "NOT_REFUTED_BY_THIS_CYCLE",
+    "theorem_5_4_uniformization": "SOURCE_STEP_NOT_JUSTIFIED_FROM_DISPLAYED_DELTA_NONNEGATIVITY_ALONE"
+  },
+  "gluing_status": {
+    "same_theory_generator_identity": "OPEN",
+    "time_normalization_semigroup_conversion": "OPEN",
+    "rg_intertwining_common_physical_time": "OPEN",
+    "defect_conversion_a_uniformity": "OPEN",
+    "relative_gap_budget_issue_73": "OPEN",
+    "continuum_spectral_identification_G7": "OPEN"
+  },
+  "scope_conditions": [
+    "bounded to arXiv:2606.19362v1 locations Theorem 5.4, Appendix C C.112-C.115, Appendix D D.1-D.13 plus current RAKL_math issue state",
+    "not a literature-wide nonexistence claim",
+    "not a claim that Appendix D is mathematically false",
+    "not a claim that no repair exists elsewhere in the paper",
+    "not a Yang-Mills counterexample",
+    "not root authority"
+  ],
+  "competing_diagnoses": [
+    "Section 8 or Appendix E may provide a common-H/strong-resolvent bridge that repairs the interface",
+    "a fixed-tau kernel is constructed directly at every scale with a proof strong enough to bypass the main-text one-step family",
+    "the intended RG direction or scale convention differs from the literal reading and needs exact rebinding",
+    "a quantitative defect estimate of order o(a_k) or a Duhamel/generator estimate may neutralize tau/a_k amplification"
+  ],
+  "selected_diagnosis": "The currently audited fixed-tau replacement is blocked at a same-theory semigroup/RG gluing certificate, not at the abstract fixed-tau spectral lemma.",
+  "falsifier_or_verification": [
+    "Locate an exact source theorem binding T_one-step=exp(-a_k H_{k,L}) and T_fixed-tau=exp(-tau H_{k,L}) to the same H_{k,L}, with scale intertwiners and defect estimates uniform in L and along a_k->0.",
+    "If found and quantitatively compatible with issue #73, this failure diagnosis is superseded."
+  ],
+  "evidence_pointers": [
+    "arXiv:2606.19362v1 Theorem 5.4 eqs. (5.30)-(5.37)",
+    "arXiv:2606.19362v1 Appendix C eqs. (C.112)-(C.115)",
+    "arXiv:2606.19362v1 Appendix D eqs. (D.1)-(D.13)",
+    "https://github.com/SzeChunYiu/RAKL_math/issues/73",
+    "https://github.com/SzeChunYiu/RAKL_math/issues/92",
+    "research/real_math/millennium/yang_mills/01_frontier/YM_E2b_FIXED_TAU_INTERFACE_AUDIT_20260811.md"
+  ],
+  "reusable_obstruction_proposal": {
+    "obstruction_id": "OBS-YM-E2B-SAME-THEORY-SEMIGROUP-GLUE",
+    "authority": "PROPOSAL_SHADOW_ONLY",
+    "statement": "A fixed-time positive-contraction gap lemma does not transport a variable-step lattice gap to the continuum unless the two transfer families are bound to one common physical Hamiltonian/OS semigroup and the RG/defect comparison is stable under the time-normalization change.",
+    "falsifier": "an exact same-theory common-H semigroup/intertwining/defect certificate with the required uniformities"
+  },
+  "artifact_hash": "sha256:bd47b6ca983ec40d349e9e2327999acaad0f2834bd84aa36aa0ef87ba44d9d5a"
+}
