@@ -1,0 +1,47 @@
+{
+  "target_atom_id": "YM-E1a1a",
+  "target_context_hash": "sha256:f9404d230586967ab018d4d6537676dba58637e953e462fe0b8f52c662825b5a",
+  "tool_inventory_snapshot_hash": "sha256:fe2f3b4ef49492d81cb350fb689bf9f9dff6cfd1817d72d6ff9fe3350e3d5e6a",
+  "failure_lattice_snapshot_hash": "sha256:3a0466eb2f654c592351ac54f2dd603cdc87e1bcffe6a760f2e170b83e85bce5",
+  "tool_query_status": "NO_RELEVANT_MATCH",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "Balaban-compatible graded marked polymer/source tangent transport",
+    "reflection-buffer-preserving marked block transport",
+    "g_k/L-weighted quasi-local operator-mixing closure with typed remainder",
+    "small/large-field compatible source bookkeeping",
+    "one-block leakage classification before multiscale iteration"
+  ],
+  "relevant_tool_ids": [],
+  "relevant_failure_ids": [
+    "F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE",
+    "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "No promoted ResearchTool has the exact preconditions of a four-dimensional non-Abelian weak-coupling Balaban marked source tangent map. Balaban's unmarked RG results and the parent source calibration are source/context evidence, not promoted universal tools.",
+    "The process heuristic 'make generated coordinates first-class before repeated transformation' remains proposal-only and is represented in the context analogy rather than promoted to theorem/method authority."
+  ],
+  "failure_reuse_notes": [
+    "Parent DifferenceWitness: F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE proves failure only for a tiny finite scalar/single-contour vocabulary under one local normalized Haar elimination. YM-E1a1a changes both the representation (graded/quasi-local marks) and the target transformation (actual weak-coupling Balaban block). The failure therefore blocks reuse of the tiny vocabulary but does not block graded closure.",
+    "Sibling DifferenceWitness: F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE concerns inference of the full spectral gap from a non-dense source family. YM-E1a1a makes no spectral-completeness or mass-gap inference; it only tests one-block marked closure. The sibling failure remains a later warning against promoting a calibration family to a complete continuum/spectral algebra.",
+    "The two failures share the structural coordinate 'compressed source representation can omit a load-bearing coordinate' but have distinct mechanisms and authorities; they are kept separate rather than merged into a universal impossibility family."
+  ],
+  "unresolved_warnings": [
+    "The right graded state may require spin-network/character or general polymer coordinates rather than loop geometry alone.",
+    "A one-block bound can be mathematically true and still be useless if its multiplier is not summable along the asymptotically-free running coupling.",
+    "Small-field control is insufficient without a marked large-field R-operation counterpart.",
+    "Reflection positivity can only be invoked after support/buffer compatibility of the chosen block is established.",
+    "Even successful marked closure creates no continuum non-triviality, OS reconstruction or mass-gap authority."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/07_memory/YM_E1a1_C001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1A_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "research/real_math/millennium/yang_mills/03_sources/YM_E1a1a_BALABAN_WEAK_COUPLING_SOURCE_AUDIT_20260811.md",
+    "research/real_math/millennium/yang_mills/01_frontier/YM_E1a1a_CONTEXT_FIBER_20260811.json",
+    "sha256:f9404d230586967ab018d4d6537676dba58637e953e462fe0b8f52c662825b5a",
+    "RAKL framework main:15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+    "RAKL_math parent merge:6a9907ff8e277f1c5c9347379134e471f1811027"
+  ],
+  "artifact_hash": "sha256:4883bab0dd9c22650819f89d5bc1d7b13ea9624a19bfcf422a8081f5969552ca"
+}
