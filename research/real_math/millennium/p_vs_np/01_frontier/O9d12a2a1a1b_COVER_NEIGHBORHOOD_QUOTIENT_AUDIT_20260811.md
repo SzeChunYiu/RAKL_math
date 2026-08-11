@@ -1,0 +1,182 @@
+# O9d12a2a1a1b — global cover-neighborhood quotient audit
+
+**Date:** 2026-08-11  
+**Parent:** `O9d12a2a1a1a` on PR #78  
+**Framework semantics read first:** `SzeChunYiu/RAKL@bd1a2768f0f474ff44ffa25243241f94bfaf6466`  
+**Application action base:** `SzeChunYiu/RAKL_math@ce3a6dfc2af3c5c3e7fc93616e3fd774097e4d9b`  
+**Authority:** `SOURCE_BOUND_RETROSPECTIVE_ROUTE_DIAGNOSTIC / EXACT_LOCAL_SEMANTIC_LEMMAS / FINITE_REGRESSION / NO_LOWER_BOUND_CANDIDATE / ROOT_AUTHORITY_NONE`
+
+## Chronology and strict-gate boundary
+
+A fresh child packet was frozen before this candidate-free audit, but the current framework validator was not instantiated against the serialized packet before the action. A post-action audit of `MathContextFiber` semantics found that the frozen JSON used the non-canonical analogy status `BRIDGES_RETAINED_FOR_REPRESENTATION_AUDIT_ONLY` instead of `BRIDGES_RETAINED` and omitted the required `source_situation` and `provenance_note` fields in the retained `CrossDomainAnalogy` record.
+
+Under current `SzeChunYiu/RAKL@bd1a276...`, `audit_math_context_fiber` therefore fails closed. The action receives **zero strict context-first discovery credit**. No candidate was generated, and this document does not backfill or rewrite the frozen packet. The source-derived mathematical statements below may still be checked for truth, but the run is classified as retrospective route evidence for RAKL-process purposes.
+
+This is a process failure worth preserving: writing a plausible-looking context JSON is not equivalent to executing the current framework gate.
+
+## Source-bound object
+
+The primary source is Bruno P. Cavalar and Igor C. Oliveira, *Boolean Circuit Complexity and Two-Dimensional Cover Problems*, ECCC TR25-033 / ACM Transactions on Computation Theory 17(2), 2025, DOI `10.1145/3718746`.
+
+Definitions 18--21 define the relevant bipartite cover graph. Its left vertices are pairs `(E,H)` of subsets of `U=A^c`; its right vertices are semi-filters above target points; `(E,H)` covers a semi-filter `F` exactly when
+
+\[
+E,H\in F,\qquad E\cap H\notin F.
+\]
+
+The cover complexity `rho(A,B)` is the minimum number of pair vertices whose neighborhoods cover every relevant semi-filter vertex. Theorem 30 identifies this quantity exactly with cyclic intersection complexity. Proposition 40 gives the calibration
+
+\[
+\rho(G_{\mathrm{NEQ}},G_{N,N})=\rho_{\rm can}(G_{\mathrm{NEQ}},G_{N,N})=\log_2 N
+\]
+
+for `N=2^n`.
+
+The present audit asks only whether quotienting semi-filter rows by **complete pair-cover neighborhood equivalence** exposes a useful noncanonical global coordinate after witness-local recurrence was pruned in `O9d12a2a1a1a`.
+
+## Definition — exact pair-neighborhood quotient
+
+For a relevant semi-filter `F`, define
+
+\[
+\mathcal N(F)=\{(E,H):E,H\in F,\ E\cap H\notin F\}.
+\]
+
+Declare
+
+\[
+F\sim F'\iff \mathcal N(F)=\mathcal N(F').
+\]
+
+Deleting duplicate rows under this equivalence preserves the exact set-cover instance and therefore preserves `rho`. This is representation semantics only; the number of equivalence classes has no lower-bound authority by itself.
+
+## Lemma 1 — the complete neighborhood is injective on all relevant `G_NEQ` semi-filters
+
+Let the complement of `G_NEQ` be the diagonal
+
+\[
+U=\{d_1,\ldots,d_N\}.
+\]
+
+For a relevant semi-filter `F`, put
+
+\[
+I(F)=\{i:\{d_i\}\in F\}.
+\]
+
+Because `F` is above at least one unequal edge, `|I(F)|\ge 2`.
+
+Then `\mathcal N(F)` determines `F` uniquely.
+
+### Proof
+
+For distinct `i,j`, the singleton pair `({d_i},{d_j})` covers `F` iff both singletons belong to `F`, because their intersection is empty and a semi-filter excludes `emptyset`. Hence the singleton-pair part of `\mathcal N(F)` recovers exactly the vertex set `I(F)`.
+
+Now let `S\subseteq U`.
+
+- If `S` contains some `d_i` with `i\in I(F)`, upward closure forces `S\in F`.
+- If `S` is disjoint from `I(F)`, choose any `i\in I(F)`. Then
+
+  \[
+  (S,\{d_i\})\in\mathcal N(F)
+  \quad\Longleftrightarrow\quad
+  S\in F,
+  \]
+
+  because `\{d_i\}\in F`, `S\cap\{d_i\}=emptyset`, and `emptyset\notin F`.
+
+Thus every membership bit of `F` is reconstructed from `\mathcal N(F)`. Therefore `F\sim F'` implies `F=F'`. QED.
+
+### Route implication
+
+The exact semantics-preserving quotient does **not** compress away noncanonical `G_NEQ` semi-filters. Global incidence genuinely contains more row-level information than the canonical C025 signature picture.
+
+That is not yet useful for lower bounds, because the extra information can be free.
+
+## Lemma 2 — exponentially many exact quotient rows can be covered by one pair
+
+Fix one unequal edge `(u,v)`. Every semi-filter above this edge contains both singleton traces `\{d_u\}` and `\{d_v\}`. Therefore the single legal pair
+
+\[
+(\{d_u\},\{d_v\})
+\]
+
+covers **every** such semi-filter, because its intersection is empty.
+
+At the same time there are exponentially many distinct semi-filters above the fixed edge. For every subset `J` of the remaining `N-2` diagonal points, take the upward closure generated by
+
+\[
+\{d_u\},\quad \{d_v\},\quad \{\{d_j\}:j\in J\}.
+\]
+
+These are distinct semi-filters, so there are at least
+
+\[
+2^{N-2}
+\]
+
+distinct rows above one edge. By Lemma 1 they are also distinct pair-neighborhood quotient classes.
+
+More exactly, if `M(m)` denotes the number of antichains of the Boolean lattice on `m` points (the Dedekind number), the semi-filters above a fixed edge are in bijection with all antichains of nonempty subsets of the remaining `N-2` points, hence there are `M(N-2)-1` of them. The exponential lower bound above is enough for the present falsifier and avoids using any Dedekind asymptotics.
+
+Yet one pair covers the entire fixed-edge family.
+
+### Consequence
+
+Raw quotient-class count, row entropy, antichain richness, or any additive score charging each exact row independently cannot be a root-facing lower-bound potential. The source model permits extreme multiplexing: one pair can discharge exponentially many semantically distinct obligations.
+
+For `N=2^n`, Proposition 40 simultaneously gives exact full cover complexity `n`, while the fixed-edge exact row family already contains at least `2^{2^n-2}` distinct classes. Representation richness and cover cost are therefore separated by an enormous gap on the known calibration family itself.
+
+This is a direct C010-style multiplexing failure for raw global-row richness.
+
+## Finite exact regression
+
+`05_falsification/cover_neighborhood_quotient_gneq.py` enumerates every antichain representation of relevant `G_NEQ` semi-filters for `N<=4`, computes every ordered legal-pair cover neighborhood, and checks the exact quotient.
+
+| N | relevant full rows | distinct quotient rows | canonical rows | rows above fixed edge | singleton pair covers every fixed-edge row |
+|---:|---:|---:|---:|---:|:---:|
+| 2 | 1 | 1 | 1 | 1 | yes |
+| 3 | 4 | 4 | 3 | 2 | yes |
+| 4 | 17 | 17 | 6 | 5 | yes |
+
+The computation is a transcription/finite-world regression only. Lemmas 1--2 are elementary consequences of the source definitions and carry the local mathematical content.
+
+## Hostile controls
+
+- **O9d12a2a1a1a congruence warning:** `SURVIVES`. The global incidence object contains distinctions outside witness-local propagation, so the previous congruence lemma did not erase the full source object.
+- **C025 canonical ceiling:** `TRIGGERED`. Full noncanonical row richness grows beyond the canonical rows while exact `G_NEQ` cover complexity remains logarithmic.
+- **C010 multiplexing:** `TRIGGERED DECISIVELY`. One singleton pair covers the entire exponentially rich fixed-edge row family.
+- **C023 scalar collapse:** `TRIGGERED FOR RAW COUNT/ENTROPY`. Any scalar monotone in row count alone is invalidated by the calibration.
+- **C024 fractional-integrality warning:** `INHERITED`. Dividing row mass by broad pair capacity risks returning to a fractional packing relaxation already known to lose the required joint integrality.
+- **C021 cheap-target / upper-first:** `PASSED AS SEARCH CONTROL`. The representation was challenged on the known logarithmic target before any hard-target score was proposed.
+- **XM004 all-rectangle zero-cover:** `INHERITED / NOT RECOMPUTED HERE`. A singleton generator can make the relevant semi-filter side empty, so free representation mass remains a mandatory zero-cost control.
+
+No later target score is run because the first candidate family, raw quotient richness, has already failed its bounded-per-pair accounting obligation.
+
+## Same-context expert disposition after the result
+
+1. **Circuit/fusion theory:** accept Lemmas 1--2 in source scope; block any lower-bound inference.
+2. **Extremal set systems:** accept the antichain encoding and exponential fixed-edge family; reject antichain count as cost.
+3. **Set Cover/LP:** the result is a column-capacity/multiplexing warning; a normalization by capacity would need to survive C024 rather than silently becoming another fractional relaxation.
+4. **Adversarial falsification:** raw quotient size and entropy are dead on `G_NEQ`; do not spend a candidate there.
+5. **Formal methods:** finite enumeration is regression only; no machine proof or theorem promotion.
+6. **Novelty/research value:** no novelty claim. The value is exact route pruning and a sharper residual.
+7. **RAKL method observer:** the positive method pattern is `source object -> exact semantics-preserving quotient -> cheap known-answer target -> multiplexing test -> only then invariant invention`.
+
+These are role-separated same-context passes, not independent review.
+
+## Residual and next child
+
+The global source incidence survives exact row quotienting, but raw global richness is uncharged. The smallest remaining obstruction is not “find more state.” It is:
+
+> identify a source-defined **multiplexing-resistant integral global hitting structure** whose contribution under one legal pair is bounded independently of the number of rows that pair can cover, which is not merely the C024 fractional packing relaxation or C025 canonical signature coordinate, and which survives cheap/logarithmic controls before a hard-target lower-bound candidate is generated.
+
+Open `O9d12a2a1a1c — MULTIPLEXING_RESISTANT_GLOBAL_HITTING_STRUCTURE` as `OPEN_CONTEXT_REQUIRED`.
+
+Candidate generation remains blocked. The next child must freeze a fresh valid current-schema `MathContextFiber`, dual-memory review, expert review and trace and must actually execute `plan_math_research` before any candidate.
+
+## Root status
+
+`OPEN_NO_SOLUTION_CERTIFICATE`.
+
+No super-logarithmic full-cover lower bound, circuit lower bound, `P != NP` proof, novelty certificate, formal proof certificate, reusable-tool promotion, framework evolution, or independent review is created by this audit.
