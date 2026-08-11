@@ -1,0 +1,53 @@
+atom_id: RH-ANA-003d
+parent_atom_id: RH-ANA-003c
+root_issue: 3
+control_issue: 188
+status: CONTEXT_REQUIRED
+root_authority: NONE
+
+question: >-
+  Choose a source-bound increasing cutoff X(n), or an explicitly ordered shell
+  family with endpoint scale coupled to n, and identify the smallest signed-tail
+  or block obligation for Coffey's S_Lambda that preserves the natural m-order,
+  has an explicit block-tail / limit-order certificate and n-uniform Laguerre
+  control, is strictly weaker than polynomial boundedness of the full S_Lambda,
+  and changes the Li lower-bound ledger only after an exact gluing proof.
+
+opened_by:
+  outcome: REFUTED_ROUTE_LOCAL_PARTIAL_SUCCESS_REPRESENTATION_AND_GLUING
+  episode_id: EP-RH-ANA-003c-CUTOFF-GLUING-20260812-R4
+  diagnosis_id: D-RH-ANA-003c-CONDITIONAL-SOURCE-CANCELLATION
+  obstruction_id: O-RH-ANA-003c-SUMMATION-METHOD-BOUNDARY
+  local_math_failure_id: F-RH-ANA-003c-ABSOLUTE-CONVERGENCE-FALSE
+  gluing_failure_id: F-RH-ANA-003c-UNWITNESSED-WINDOW-GLUE
+
+known_boundary:
+  - For every fixed n, Coffey's natural-order S_Lambda term series converges but is not absolutely convergent.
+  - Contiguous finite shells are source-defined and telescope in increasing m-order.
+  - Order-independent infinite shell semantics do not follow automatically; a block-tail theorem or equivalent summation witness is required.
+  - A specially chosen block decomposition may still have absolutely summable block sums; this must be proved rather than inherited from termwise convergence.
+  - RH-ANA-001 forbids finite-prefix promotion without a uniform theorem.
+  - RH-ANA-003 / PR #118 forbids aggregate density/zero-free/proportion inputs alone as universal exceptional-zero extinction.
+  - RH-ANA-003a forbids cancellation-destroying absolute-majorant transport to all-index Li sign.
+  - RH-ANA-003b makes global polynomial boundedness of full Coffey S_Lambda root-coupled.
+  - XM012 rejects endpoint-anchor overtransfer into the source-defined Li target.
+
+candidate_generation_gate:
+  allowed: false
+  reason: >-
+    Freeze a fresh MathContextFiber that fixes X(n) or the ordered shell scale,
+    exact source cutoff and nested limit order; reconcile live RH work; query dual
+    experience memory; run method-transfer / structural-analogy / same-context
+    expert review; and freeze a hash-chained pre-candidate trace before proposing
+    a tail inequality, partial-summation estimate, mollifier/resonance insertion,
+    or zero-density transport.
+
+next_pre_candidate_discriminators:
+  - Bind the exact cutoff X(n) before observing an estimate and state all quantifiers in n and cutoff scale.
+  - Derive a finite Stieltjes/Abel partial-summation identity for the ordered tail, including boundary terms and the n-dependent derivative of L_{n-1}^1(log x)/x.
+  - Audit whether current prime-error, zero-density, zero-free, mollifier or resonance inputs control that exact signed tail uniformly in n rather than only on average.
+  - Run an obligation-strength test to ensure the proposed tail certificate alone does not imply polynomial boundedness of full S_Lambda.
+  - Re-run the single off-critical quartet regression after the complete local-to-global Li glue is written.
+  - Reject any argument that exchanges n -> infinity, cutoff -> infinity, shell summation, integral transforms or absolute values without an explicit compatibility witness.
+
+authority: STRICT_CHILD_RESIDUAL_ONLY / NO_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE
