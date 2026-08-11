@@ -6,8 +6,10 @@
   "source_lineage": {
     "registration_commit": "03a4cb9a0bce32374d79210d8b712670c11626a7",
     "result_commit": "1bfad13d82548fe61f70cd9f18828fe0240c8556",
-    "chronology_audit_hash": "sha256:18e71545b1553d38b9ac1602384609f8b0e03bae7e350f5f0b4c5c8cea0d3118",
-    "strict_preregistration_authority": false
+    "chronology_audit_hash": "sha256:7ccad2984ee95d49d8869263c2e7a429ec917d45ae566122872eb19123949488",
+    "strict_preregistration_authority": false,
+    "provenance_merge_commit": "73f6c779aa5481cd68808c01448949c322f608f8",
+    "result_is_durable_ancestor": true
   },
   "entries": [
     {
@@ -15,12 +17,13 @@
       "atom_id": "O9d12a2a1a",
       "event_type": "RESULT_RECORDED",
       "timestamp": "2026-08-11T08:49:10Z",
-      "state_summary": "The divergent C025 assurance result is assimilated after a Git chronology audit. Its cases were prior-selected, but evaluator bytes/hash were not frozen before output.",
+      "state_summary": "The divergent C025 assurance result is assimilated after a Git chronology audit. Its cases were prior-selected, evaluator bytes/hash were not frozen before output, and the original result commit is now preserved through an explicit provenance-only merge parent.",
       "action_summary": "Retain the exact enumeration receipt only as retrospective executable assurance and bind the original source commit/tree/blobs.",
       "evidence_pointers": [
         "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C025_RETROSPECTIVE_ASSURANCE_CHRONOLOGY_AUDIT_20260811.json",
-        "sha256:18e71545b1553d38b9ac1602384609f8b0e03bae7e350f5f0b4c5c8cea0d3118",
-        "git:1bfad13d82548fe61f70cd9f18828fe0240c8556"
+        "sha256:7ccad2984ee95d49d8869263c2e7a429ec917d45ae566122872eb19123949488",
+        "git:1bfad13d82548fe61f70cd9f18828fe0240c8556",
+        "git:73f6c779aa5481cd68808c01448949c322f608f8"
       ],
       "alternatives_considered": [
         "claim strict preregistration",
@@ -41,7 +44,7 @@
       "next_steps": [
         "preserve parent failure/tool identities and add a versioned post-result addendum"
       ],
-      "artifact_hash": "sha256:8b9d6d177fbe9b58eb0181bdce6581751955c63aab62b43e488dbabb92db2ad2",
+      "artifact_hash": "sha256:a52738c04e6225a770e4f1d569e50a9670a77b9dccd77202ab1e7958ba8386ed",
       "previous_event_hash": "sha256:720c38501a583617d54269824e27691d0499cd5f2ead6b338cf13f90fad74190"
     },
     {
@@ -53,7 +56,7 @@
       "action_summary": "Record the counts and method lesson without rewriting the earlier timestamped identities.",
       "evidence_pointers": [
         "research/real_math/millennium/p_vs_np/07_memory/C025_POSTRESULT_ASSURANCE_ADDENDUM_20260811.json",
-        "sha256:f1e01ed92594fa7524fda1e15318770124d65732083e43f1be36ccc5d4999fa1"
+        "sha256:7cf5cc38f0f94fe4b6cd6c19a662f8cef456724482c1119bfe1e32dcd3c7b460"
       ],
       "alternatives_considered": [],
       "decision_rationale": "Preserve reproducible mathematics and exact negative chronology without manufacturing evaluator freezing.",
@@ -71,8 +74,8 @@
       "next_steps": [
         "freeze a fresh successor evaluator before execution"
       ],
-      "artifact_hash": "sha256:75298240397dc00cfb8d1a6b1e14b31bbecce516f7674d9b7b41cea4e736203c",
-      "previous_event_hash": "sha256:8b9d6d177fbe9b58eb0181bdce6581751955c63aab62b43e488dbabb92db2ad2"
+      "artifact_hash": "sha256:22fd85cd372b5135a72db12180740e68ca47a11c63b73b5cebd812a5499c86af",
+      "previous_event_hash": "sha256:a52738c04e6225a770e4f1d569e50a9670a77b9dccd77202ab1e7958ba8386ed"
     },
     {
       "event_id": "O9d12a2a1a-PA-R03",
@@ -101,8 +104,8 @@
       "next_steps": [
         "regenerate synthesis receipt against exact live integration identities"
       ],
-      "artifact_hash": "sha256:e782495468698d79f7b87871d80e6204bba7a278e26eb72f8ac04f2285762232",
-      "previous_event_hash": "sha256:75298240397dc00cfb8d1a6b1e14b31bbecce516f7674d9b7b41cea4e736203c"
+      "artifact_hash": "sha256:9d66b33eddc73d065d144c4aed96a2296ab89c19aa143e69260c9f3df3dada59",
+      "previous_event_hash": "sha256:22fd85cd372b5135a72db12180740e68ca47a11c63b73b5cebd812a5499c86af"
     }
   ]
 }
