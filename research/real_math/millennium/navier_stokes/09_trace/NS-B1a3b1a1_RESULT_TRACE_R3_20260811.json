@@ -1,0 +1,115 @@
+{
+  "continues_from": "sha256:f5954682d63fe66d88bea70bf90b50b0772377e06cfaf70fc74c011d114041c8",
+  "cycle_id": "NS-B1a3b1a1-C001-R3-HIGHFREQ-PRODUCER-20260811",
+  "events": [
+    {
+      "event_hash": "sha256:1007c6a68079530c9ab39641bd65bca10a3768631b1495d885975d486b075fc0",
+      "index": 8,
+      "kind": "PRIMARY_SOURCE_CHECK",
+      "payload": {
+        "result": "source-family and consumer signatures bound; small-L3 global exact dynamics source-bound",
+        "sources": [
+          "arXiv:1811.00502v2",
+          "Kato1984 DOI:10.1007/BF01174182",
+          "arXiv:2607.08866v2"
+        ]
+      },
+      "prev_hash": "sha256:f5954682d63fe66d88bea70bf90b50b0772377e06cfaf70fc74c011d114041c8",
+      "timestamp": "2026-08-11T20:23:34Z"
+    },
+    {
+      "event_hash": "sha256:c0200d1ebc3f90f957d2ef4165e8f7c157335db5d464a26bf2aaf6a4df2276dd",
+      "index": 9,
+      "kind": "PURE_SCALING_FALSIFIED_AS_SEPARATOR",
+      "payload": {
+        "reason": "L3 velocity and L3/2-infinity vorticity are both invariant under NSE scaling"
+      },
+      "prev_hash": "sha256:1007c6a68079530c9ab39641bd65bca10a3768631b1495d885975d486b075fc0",
+      "timestamp": "2026-08-11T20:23:34Z"
+    },
+    {
+      "event_hash": "sha256:f1ef06caeadc8279b349d4dc1b0c64e43825ed4d3e69dba9ddd0128a50ed5f37",
+      "index": 10,
+      "kind": "EXACT_DATA_CONSTRUCTION_VERIFIED",
+      "payload": {
+        "checks": [
+          "divergence-free identically",
+          "uniform L3 data",
+          "vorticity ~ aN sin(Nx1) on chi=1 core"
+        ],
+        "construction": "u0^N=curl(0,0,a N^-1 chi sin(Nx1))"
+      },
+      "prev_hash": "sha256:c0200d1ebc3f90f957d2ef4165e8f7c157335db5d464a26bf2aaf6a4df2276dd",
+      "timestamp": "2026-08-11T20:23:34Z"
+    },
+    {
+      "event_hash": "sha256:79aad96adffbf06915758b6917bf3233806160c00bd7dfe2b0966862290a7f69",
+      "index": 11,
+      "kind": "POSITIVE_TIME_VERIFICATION",
+      "payload": {
+        "method": "fixed-N classical C1 trace continuity",
+        "observation": "weak-L3/2 vorticity lower bound grows at least c a N",
+        "time_choice": "0<t_N<N^-4"
+      },
+      "prev_hash": "sha256:f1ef06caeadc8279b349d4dc1b0c64e43825ed4d3e69dba9ddd0128a50ed5f37",
+      "timestamp": "2026-08-11T20:23:34Z"
+    },
+    {
+      "event_hash": "sha256:b0a3e458305a9475745ca302c3a0d97aa55b578f988ecf16184f2ff53c0dc329",
+      "index": 12,
+      "kind": "FINITE_I_VERIFICATION",
+      "payload": {
+        "inputs": [
+          "uniform global L-infinity_t L3_x",
+          "Riesz pressure L3/2",
+          "local energy cutoff"
+        ],
+        "observation": "A+C+D+E uniformly bounded independent of N; no derivative input used"
+      },
+      "prev_hash": "sha256:79aad96adffbf06915758b6917bf3233806160c00bd7dfe2b0966862290a7f69",
+      "timestamp": "2026-08-11T20:23:34Z"
+    },
+    {
+      "event_hash": "sha256:4a45fa22385659b6533a9803d60497470a62c1782190581b8089eb39e214446d",
+      "index": 13,
+      "kind": "EXPERT_CELL_POSTCHECK",
+      "payload": {
+        "consensus": "scoped same-slab producer implication false; exact PDE upgrade succeeds as route-pruning; no singular/ancient transfer",
+        "independent_credit": 0
+      },
+      "prev_hash": "sha256:b0a3e458305a9475745ca302c3a0d97aa55b578f988ecf16184f2ff53c0dc329",
+      "timestamp": "2026-08-11T20:23:34Z"
+    },
+    {
+      "event_hash": "sha256:d8ec015d487a3661b6c75c9910eb7516e7801fb42156405a0538c4d10eb79065",
+      "index": 14,
+      "kind": "OUTCOME_CLASSIFIED",
+      "payload": {
+        "gluing_residuals": [
+          "pre-singular/ancient entry",
+          "far-field tightness",
+          "Grujic morphology/direction"
+        ],
+        "local_failure": "exact same-slab amplitude producer",
+        "novelty_class": "representation",
+        "status": "PARTIAL_SUCCESS"
+      },
+      "prev_hash": "sha256:4a45fa22385659b6533a9803d60497470a62c1782190581b8089eb39e214446d",
+      "timestamp": "2026-08-11T20:23:34Z"
+    },
+    {
+      "event_hash": "sha256:ab63c88d5d9f58bfe6e12d257b8ebe86ae40283583cc0a61b6561c2a0798de88",
+      "index": 15,
+      "kind": "NEXT_ROUTE",
+      "payload": {
+        "atom": "NS-B1a3b1a2",
+        "root": "OPEN_NO_SOLUTION_CERTIFICATE",
+        "route": "add quantified backward-history/ancient coordinate before testing amplitude production"
+      },
+      "prev_hash": "sha256:d8ec015d487a3661b6c75c9910eb7516e7801fb42156405a0538c4d10eb79065",
+      "timestamp": "2026-08-11T20:23:34Z"
+    }
+  ],
+  "final_hash": "sha256:ab63c88d5d9f58bfe6e12d257b8ebe86ae40283583cc0a61b6561c2a0798de88",
+  "schema_version": "hash-chained-trace-v3-proposal-shadow"
+}
