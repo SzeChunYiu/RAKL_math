@@ -18,6 +18,18 @@ BSD issues #90/#91 appeared after the XM001 pre-candidate context was frozen; th
 
 No Millennium root status changes here. Same-context expert review is not independent review, and proposal/breakthrough mechanisms mint no theorem authority.
 
+## XM003 — Hodge third-domain transfer and retrieval coverage failure
+
+A fresh coverage audit found two facts that must remain separate.
+
+First, Hodge atom `HM1a` is a genuine third disanalogous target reuse of `T-XM-ROOT-BRIDGE-STABILITY-AUDIT` at research-control authority. Its root-critical coordinate is actual Chow-source realization plus exact assembly, not a Yang–Mills continuum gap or a BSD `s`/`T` order comparison. HM1a selected the cross-problem tool with an explicit DifferenceWitness, calibrated it on positive and hostile Hodge cases, recorded `F-HM1a-OPEN-ROOT-LIKE-PIECE`, and distilled `T-HODGE-SOURCE-BEARING-DECOMPOSITION-SCREEN`.
+
+Second, the open XM002/PR #30 reuse synthesis says Hodge remained an uncalibrated future target even though its exact base already contains that HM1a evidence. This is preserved as `F-XM002-CROSS-PROBLEM-RETRIEVAL-MISS`: cross-problem completeness/counting claims can miss relevant same-base evidence when the searched universe and per-lane coverage are not bound.
+
+Therefore the evidence now supports **three-domain transfer** of the bridge-audit operation, but it does **not** justify mature retrieval reliability for candidate expertise chunk `E-XM-ROOT-CRITICAL-COORDINATE-AUDIT-001`. A fresh prospective, surface-shifted, coverage-bound retrieval rehearsal is required. RAKL framework issue #119 tracks the separate framework child problem; no framework mutation occurs in this application workspace.
+
+See `04_candidates/XM003_HODGE_RETRIEVAL_COVERAGE_AUDIT_20260811.md` and `07_memory/XM003_FAILURE_EXPERIENCE_DELTA_20260811.json`.
+
 ## Application-to-framework learning boundary
 
 Repository-split successes and failures are cross-problem process evidence, not
