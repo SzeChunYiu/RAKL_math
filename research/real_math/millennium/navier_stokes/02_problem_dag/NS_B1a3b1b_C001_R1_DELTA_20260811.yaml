@@ -1,0 +1,33 @@
+schema_version: navier-stokes-problem-dag-delta-v3-proposal-shadow-r1
+root:
+  id: NS0
+  status: OPEN_NO_SOLUTION_CERTIFICATE
+parent:
+  id: NS-B1a3b1
+  issue: 122
+atom:
+  id: NS-B1a3b1b
+  issue: 137
+  title: "Equation-specific enstrophy time-trace bootstrap"
+  status: PARTIAL_SUCCESS_ROUTE_PRUNING
+  result: "The favorable global standard enstrophy route reduces to y'<=C y^3 plus finite integral y; the Type-I scale profile y=a(T-t)^(-1/2) is compatible for sufficiently large a, so this scalar architecture does not force a bounded or small critical time trace."
+  failure_id: F-NS-B1a3b1b-STANDARD-ENSTROPHY-ENDPOINT
+  obstruction_id: O-NS-B1a3b1b-STANDARD-ENSTROPHY-TIME-TRACE
+  local_to_global_gluing: SEPARATE_OPEN_NOT_CAUSAL_FOR_THIS_FAILURE
+  root_authority: NONE
+next_child:
+  id: NS-B1a3b1c
+  title: "Vortex-stretching scale-symmetry breaker / one-slice smallness producer"
+  status: CONTEXT_REQUIRED_BEFORE_CANDIDATE
+  question: "Which source-valid Navier-Stokes mechanism changes the scale-critical stretching closure before the y'<=C y^3 compression, or otherwise forces a sufficiently small late critical slice without assuming the desired smallness?"
+  candidate_families:
+    - "vorticity-direction alignment/coherence giving signed or subcritical stretching depletion"
+    - "finite-variation or monotone self-similar-time defect"
+    - "frequency-localized critical flux/replenishment control"
+    - "localized one-slice enstrophy producer with explicit pressure/cutoff audit"
+    - "different source-valid Liouville/regularity consumer"
+nonpromotion:
+  - "scalar ODE compatibility is not an NSE counterexample"
+  - "failure of standard enstrophy Gronwall is not failure of all enstrophy/vorticity methods"
+  - "local route pruning is not local-to-global gluing closure"
+  - "Type-I route progress is not Type-II closure or Clay root closure"
