@@ -1,0 +1,34 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "XM009-PRE-ACTION-20260811T181500Z",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "812e9cf18345ef430f0a4cc3ff78f93d7f18ed22",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "812addd25a7f34d3c6272143e21d5d7db34539aa",
+  "application_execution_pin": "787c7e00af2a5877ccb715bc807ec14f52974e9c",
+  "task_id": "MILLENNIUM-CROSS-TRANSFER-R5",
+  "atom_id": "XM009-YM-TO-PNP-DESCENT-FAITHFULNESS",
+  "context_hash": "b167be4ac6ee0d5cd1c97361668973b474acea9806c2c27eef5493ef9b6915e4",
+  "fibre_snapshot_hash": "a7869a5a10b0e1c6696d8a745678257218a3ff30522152fc1fb1e8ace2f4cb14",
+  "operator_ids": [
+    "OP-XM009-DESCENT-THEN-FAITHFULNESS",
+    "OP-XM009-TARGET-ADJOIN-TRACE-ENTROPY-FALSIFIER"
+  ],
+  "selected_retrievals": [
+    {"retrieval_id":"YM-E4b2a-R5-SOURCE","authority":"NONCANONICAL","payload_hash":"e835afb9e3ff1f4e0e2b311f63827637b22bc2dd0bced4b96987ce95367d322a"},
+    {"retrieval_id":"PNP-O9d12a2a1a1d-R4-TARGET","authority":"NONCANONICAL","payload_hash":"ce8f9592e85e7f3cfcc45beb4e296c575de40a546ad3d81c73ccd1e562044e6b"}
+  ],
+  "rejected_retrievals": [
+    {"retrieval_id":"T-XM-ROOT-BRIDGE-STABILITY-AUDIT","rejection_reason":"scope-limited: already heavily reused; this cycle tests the strictly later post-descent target-faithfulness gate"},
+    {"retrieval_id":"XM008-SOURCE-INTERFACE-PRESERVATION","rejection_reason":"different source-acquisition/interface-completeness family"},
+    {"retrieval_id":"RH-ANA-003-EXCEPTION-EXTINCTION","rejection_reason":"structural analogy retained but no PNP-specific operator beyond generic universal-claim falsification"},
+    {"retrieval_id":"H4d1c-PROPER-IMAGE-CLOSURE","rejection_reason":"no matching proper/closed-image algebraic mechanism in the PNP trace quotient"}
+  ],
+  "predeclared_discriminator": "For Phi_add(A|B)=log2|Tr_A(U(B∪{A}))|-log2|Tr_A(U(B))|, determine whether adjoining A can yield superconstant target signal; falsify if Tr_A(U(B∪{A}))=Tr_A(U(B))∪{A}.",
+  "allowed_outcome_branches": ["SUCCESS","PARTIAL_SUCCESS","FAILURE","BLOCKED","UNKNOWN"],
+  "frozen_at_utc": "2026-08-11T18:15:00+00:00",
+  "sequence_index": 2,
+  "chronology_scope": "PROSPECTIVE_FOR_POST-REBASE_REPOSITORY_FORMALIZATION_AND_REGRESSION_VERIFICATION_ONLY; hypothesis generation and earlier reasoning predate this receipt and receive no prospective discovery credit",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "receipt_content_hash": "1abc7bb8259ad6fa7daef2ff47b158278cd23ba27d581f94f9ea4f0820c53cbf"
+}
