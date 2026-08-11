@@ -12,6 +12,7 @@ EPISODE = CROSS / "07_memory/XM014_CURRENT_V3_TASK_EPISODE_SHADOW_20260812.taske
 DIAGNOSIS = CROSS / "07_memory/XM014_DIAGNOSIS_FAILURE_REUSE_SHADOW_20260812.json"
 TRACE = CROSS / "09_trace/XM014_HASH_CHAINED_TRACE_20260812.json"
 METRICS = CROSS / "10_study_pattern/RAKL_METHOD_CASE_STUDY_AND_CYCLE_METRICS_XM014_20260812.json"
+LATE_ASSURANCE = CROSS / "10_study_pattern/XM014_LATE_CURRENT_WORK_ASSURANCE_20260812.json"
 
 
 def _load(path: Path) -> dict:
@@ -79,3 +80,30 @@ def test_xm014_metrics_preserve_zeroes_and_no_authority_promotion() -> None:
     assert metrics["gate_provenance_ci_status"]["authority_promotion"] == "NOT_INVOKED"
     assert metrics["gate_provenance_ci_status"]["root_status"] == "OPEN_ALL_SIX_NO_SOLUTION_CERTIFICATE"
     assert packet["RAKL_METHOD_CASE_STUDY"]["outcome"] == "PARTIAL_SUCCESS_SUCCESSFUL_REUSE_DUPLICATE_PATTERN_SUPPRESSION_TARGET_ALREADY_NORMALIZED"
+
+
+def test_xm014_late_current_work_assurance_fails_closed_on_noncomparable_metrology() -> None:
+    assurance = _load(LATE_ASSURANCE)
+    correction = assurance["RAKL_CYCLE_METRICS_CORRECTION"]
+    ns = assurance["RAKL_METHOD_CASE_STUDY_ASSURANCE"]["current_work_updates"]["NS"]
+    assert ns["quantitative_comparison_choice"].startswith("Use PR#183")
+    assert correction["late_retrieval"]["rejected_for_quantitative_comparison"] == ["RAKL_math PR#184"]
+    assert correction["corrected_declared_latest_lane_vector_sum"] == {
+        "KNOWLEDGE": 4,
+        "OPERATOR": 0,
+        "EXPERIENCE_PATTERN": 3,
+        "OBSTRUCTION": 3,
+        "RELATION": 5,
+        "PATH": 4,
+        "META_METHOD": 0,
+    }
+    assert correction["late_assurance_retained_semantic_novelty"] == {
+        "KNOWLEDGE": 0,
+        "OPERATOR": 0,
+        "EXPERIENCE_PATTERN": 0,
+        "OBSTRUCTION": 0,
+        "RELATION": 0,
+        "PATH": 0,
+        "META_METHOD": 0,
+    }
+    assert correction["gate_provenance_ci_status"]["PR184_metrology_comparability"] == "FAIL_CLOSED_PENDING_CORRECTION"
