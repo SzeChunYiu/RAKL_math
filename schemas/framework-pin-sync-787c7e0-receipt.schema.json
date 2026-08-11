@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/framework-pin-sync-787c7e0-receipt.schema.json",
+  "title": "RAKL_math framework pin synchronization receipt for 787c7e0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "recorded_at",
+    "framework_delta",
+    "application_base",
+    "compatibility_review",
+    "mathematical_experience_boundary",
+    "verification",
+    "authority_contract",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"const": "RAKL-MATH-FRAMEWORK-PIN-SYNC-787c7e0-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "framework_delta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["previous_commit", "current_commit", "previous_tree", "current_tree", "commits_between", "changed_files", "fresh_origin_main"],
+      "properties": {
+        "previous_commit": {"const": "fe47a12c4bad8253658baaf37e1300cab15d0823"},
+        "current_commit": {"const": "787c7e00af2a5877ccb715bc807ec14f52974e9c"},
+        "previous_tree": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "current_tree": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "commits_between": {"const": 11},
+        "changed_files": {"const": 36},
+        "fresh_origin_main": {"const": "787c7e00af2a5877ccb715bc807ec14f52974e9c"}
+      }
+    },
+    "application_base": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["origin_main", "branch_base", "main_moved_before_round"],
+      "properties": {
+        "origin_main": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "branch_base": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "main_moved_before_round": {"const": false}
+      }
+    },
+    "compatibility_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mandatory_math_gate_files_changed", "pre_action_outcome_enum_compatible", "new_surfaces_authority", "historical_artifacts_rewritten"],
+      "properties": {
+        "mandatory_math_gate_files_changed": {"const": false},
+        "pre_action_outcome_enum_compatible": {"const": true},
+        "new_surfaces_authority": {"const": "PROPOSAL_ONLY_OR_NON_AUTHORIZING"},
+        "historical_artifacts_rewritten": {"const": false}
+      }
+    },
+    "mathematical_experience_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mathematical_memory_types", "operational_assurance_types", "policy"],
+      "properties": {
+        "mathematical_memory_types": {
+          "const": ["TaskEpisode", "Lesson", "ResearchTool", "FailureExperience", "DifferenceWitness", "ResearchMemoryReview"]
+        },
+        "operational_assurance_types": {
+          "const": ["git_state", "ci_execution", "artifact_hashing", "timestamp_chronology", "environment_portability"]
+        },
+        "policy": {"const": "OPERATIONAL_ASSURANCE_MUST_NOT_BE_PROMOTED_AS_MATHEMATICAL_EXPERIENCE"}
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["command", "tests_passed", "exit_code", "pin_equals_gitlink", "framework_authority_paths_clean", "status"],
+      "properties": {
+        "command": {"const": "python tools/run_application_tests.py --framework framework/RAKL"},
+        "tests_passed": {"type": "integer", "minimum": 0},
+        "exit_code": {"type": ["integer", "null"]},
+        "pin_equals_gitlink": {"type": "boolean"},
+        "framework_authority_paths_clean": {"type": "boolean"},
+        "status": {"enum": ["PENDING_INITIAL_EXACT_SUITE", "PASS_EXACT_APPLICATION_SUITE"]}
+      }
+    },
+    "authority_contract": {
+      "const": {
+        "grants_mathematical_authority": false,
+        "grants_p_vs_np_root_authority": false,
+        "grants_framework_evolution_authority": false,
+        "grants_review_independence": false
+      }
+    },
+    "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}
