@@ -1,0 +1,103 @@
+{
+  "cycle_id": "YM-E3a2-CYCLE-20260811-R4",
+  "atom_id": "YM-E3a2",
+  "atom_signature": "YM-E3a2-SAME-THEORY-FRD-RHO-C-STRICT-RADIUS-ENTRY-SOURCE-FAMILY-AUDIT",
+  "problem_signature": "4D SU(N) Yang-Mills | weak-coupling FRD/polymer RG | strict invariant-ball entry | source-family completeness | continuum-uniform gluing",
+  "framework": {
+    "repo": "SzeChunYiu/RAKL",
+    "main_sha": "f696e2e18871c40314ed683c247159053a067429",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "manifest_version": "0.6.6"
+  },
+  "application_base": {
+    "repo": "SzeChunYiu/RAKL_math",
+    "main_sha": "350861b1c2755033893068e5519b8b06a6315aa6",
+    "tree_sha": "c779c3bb98a24a70054571b9c63a46673c711cec"
+  },
+  "chronology": {
+    "status": "PROSPECTIVE_FOR_EXACT_LOCAL_REFERENCE_AND_THEOREM-SUPPORT_DISCRIMINATOR",
+    "credit_boundary": "Earlier inspection established only that Faizal-Shabir Appendix A.9 invokes 'standard FRD renormalization (cf. [3,11])' and displays a local recurrence. The identities/content of the local [3],[11] references and their exact support for the same-theory nonlinear contraction/tuning claims have NOT yet been inspected in this cycle. This receipt freezes that source-family discriminator before opening the local reference list or those source bodies."
+  },
+  "fibre": {
+    "object": "The exact primary-source support chain for the Faizal-Shabir weak-coupling FRD/polymer RG map used in Theorem A.9/Step 1-2.",
+    "qoi": [
+      "Which references are the local [3] and [11] cited for the FRD RG map in the internal paper containing Appendix A.9?",
+      "Do those exact source bodies prove, for the same 4D non-Abelian lattice gauge/polymer norm and regulator family, a scale/volume/regulator-uniform linear contraction rho<1 plus quadratic remainder bound on one explicit ball?",
+      "Do they prove a tuning/entry theorem into an arbitrarily prescribed strict sub-ball r_* < min(r0,(1-rho)/C), rather than only entry into an unspecified r?",
+      "Do they preserve the gauge/reflection-positivity and continuum trajectory interfaces used downstream?"
+    ],
+    "residual_before": [
+      "PR #157 closes only the abstract invariant-ball recurrence; same-theory FRD constants and entry remain source/gluing-blocked.",
+      "Issue #159 prospectively freezes the same-theory source-binding obligation.",
+      "Repeated metadata-only Balaban acquisition cycles are saturated and must not be repeated.",
+      "Fixed-tau defect-margin and OS-domination sibling routes have already been exercised and do not decide this weak-coupling source interface."
+    ],
+    "hostile_controls": [
+      "A Gaussian covariance finite-range decomposition is not automatically a nonlinear non-Abelian gauge polymer-RG contraction theorem.",
+      "A theorem in a different norm/regulator/gauge model is an analogue unless a DifferenceWitness closes the transfer.",
+      "Entry into r0 does not imply entry into the stricter radius needed for q=rho+C*r_*<1.",
+      "Scale/volume/lattice-spacing dependent rho or C can destroy continuum-uniform contraction.",
+      "Local contraction does not establish OS-source completeness, physical spectral identification, or continuum mass gap."
+    ]
+  },
+  "selected_fibre_contents": [
+    "RAKL current main f696e2e18871c40314ed683c247159053a067429: v3 TaskEpisode/fibre/experience-policy/saturation-vector semantics",
+    "RAKL_math issue #5 Yang-Mills root contract",
+    "RAKL_math issue #159 YM-E3a2 prospective source-gluing atom",
+    "RAKL_math issue #93 YM-E3a parent recurrence repair",
+    "RAKL_math draft PR #157 scoped invariant-ball recurrence repair and FRD source-binding residual",
+    "Faizal-Shabir arXiv:2606.19362v1 Appendix A.9 Step 1-2 and Lemma A.10"
+  ],
+  "retrieved_but_rejected": [
+    {"id": "RAKL_math PR#158 / YM-E2a1", "why": "same broad RG lane but fixed-tau defect-margin constants; already audited and does not answer weak-coupling nonlinear-map source binding"},
+    {"id": "RAKL_math PR#140 / YM-E4b2b", "why": "OS-form domination generic counterexample; downstream representation/gluing family"},
+    {"id": "RAKL_math PR#103 and PR#116 / YM-E1a1a0", "why": "repeat metadata-only Balaban acquisition is saturated; this cycle instead tests exact references actually cited at the A.9 map"},
+    {"id": "RAKL_math PR#79 / YM-S1a1", "why": "abstract fixed-cutoff dense-source spectral lemma; downstream after weak-coupling/continuum transport"},
+    {"id": "RAKL_math issue #88 / YM-S1a2", "why": "same-theory OS/source binding is important downstream but does not decide the current FRD contraction source family"}
+  ],
+  "missed_prior_experience": "CANNOT_MEASURE: GitHub/search retrieval universe is not proven complete; no claim of exhaustive memory recall.",
+  "decision_policy": "Experience-conditioned rotation: avoid saturated metadata-only and fixed-tau/OS failure families; choose the cheapest source-family completeness discriminator attached directly to issue #159.",
+  "planned_process_surfaces": [
+    "decomposition",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "mathematical_context_translation",
+    "equivalence_similarity",
+    "contextual_theory_gluing",
+    "contradiction_diagnosis",
+    "gap_discovery",
+    "experiment_query_selection",
+    "memory",
+    "review",
+    "saturation_stopping"
+  ],
+  "operators_motifs": [
+    "source-family completeness audit",
+    "exact-reference resolution",
+    "assumption-interface typing",
+    "counterexample-first disanalogy check",
+    "local-to-global gluing audit",
+    "saturation-driven route rotation"
+  ],
+  "expert_cell": [
+    {"role": "constructive lattice gauge / RG lead", "background": "rigorous multiscale lattice gauge theory, polymer norms, Balaban-style RG", "task": "audit exact model/norm/scale assumptions and whether cited sources imply the displayed nonlinear map"},
+    {"role": "finite-range decomposition lead", "background": "Gaussian covariance decompositions and rigorous RG", "task": "separate covariance FRD facts from nonlinear gauge/polymer contraction claims"},
+    {"role": "constructive QFT / reflection-positivity lead", "background": "OS reconstruction and reflection-positive lattice gauge constructions", "task": "audit whether any source transfer preserves the same reflection-positive/gauge theory used downstream"},
+    {"role": "nonlinear dynamics lead", "background": "discrete invariant regions and contraction estimates", "task": "check the strict-radius entry interface required by the repaired recurrence"},
+    {"role": "adversarial source auditor", "background": "primary-source theorem tracing and counterexample-first verification", "task": "resolve local [3],[11], reject citation-by-topic, and test exact hypothesis coverage"},
+    {"role": "formal assurance / RAKL v3 lead", "background": "proof obligation tracking, provenance, metrology and authority gates", "task": "enforce chronology, episode/diagnosis/obstruction separation, seven-axis telemetry, and no theorem/root escalation"}
+  ],
+  "falsifier": "If either cited source is only a generic covariance FRD/locality theorem or a different-theory result, or if no exact theorem supplies same-model rho,C,r0 plus strict-entry and required uniformity, classify the A.9 source chain as SOURCE_FAMILY_INCOMPLETE/BLOCKED rather than reconstructing missing hypotheses.",
+  "verification_plan": [
+    "Resolve the local reference list belonging to the internal paper that contains Appendix A.9, not an earlier concatenated reference list.",
+    "Open/screenshot the exact PDF reference page and A.9 page.",
+    "Inspect primary source bodies/official records for local [3],[11].",
+    "Map each theorem's object, norm, dimension, gauge group, scale/volume/regulator quantifiers, and conclusions to the A.9 obligations.",
+    "Record local mathematical failures separately from source/gluing failures."
+  ],
+  "next_action": "After this receipt is durable, resolve the local [3],[11] identities and inspect only those exact source families for a same-theory strict contraction/entry certificate.",
+  "fibre_snapshot_sha256": "2eac0ca8f6741caa57a0c00f9b5791e67c2a95049a174791c1291a0e5fd13697"
+}
