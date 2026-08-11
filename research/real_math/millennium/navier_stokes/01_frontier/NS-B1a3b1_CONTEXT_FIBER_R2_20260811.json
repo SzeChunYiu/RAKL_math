@@ -1,0 +1,55 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow-r2",
+  "atom_id": "NS-B1a3b1",
+  "parent_atom_id": "NS-B1a3b",
+  "issue_id": "RAKL_math#122",
+  "object_context": "Whole-space Type-I Navier-Stokes blow-up-classification child toward Clay statement (A). Resolve whether Grujic v2's log-weighted BMO vorticity-direction consumer is stable under the parabolic zoom used in blow-up analysis, while keeping separate the unsolved producer-side question whether Albritton-Barker finite-I dynamics supplies that consumer input. No Type-II or root promotion is in scope.",
+  "root_contract": {
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "accepted_terminal_outcomes": ["Clay A", "Clay B", "Clay C", "Clay D"],
+    "current_lane": "positive regularity / Type-I classification",
+    "independent_reviews": "0/3"
+  },
+  "structural_coordinates": [
+    "Navier-Stokes scaling u_r(y,s)=r u(x0+r y,t0+r^2 s), omega_r(y,s)=r^2 omega(x0+r y,t0+r^2 s), xi_r(y,s)=xi(x0+r y,t0+r^2 s) where omega is nonzero",
+    "Grujic v2 defines ||f||_{bmo_phi}=||f||_infty + sup_{x in R3,0<rho<1/2} phi(rho)^(-1) average_{B_rho(x)}|f-c_B| with phi(rho)=1/|log rho|",
+    "for 0<r<=1, mean oscillation of f_r(y)=f(x0+r y) on B_rho(y0) equals mean oscillation of f on B_{r rho}(x0+r y0)",
+    "the weight comparison is |log rho|/|log(r rho)| <= 1 for 0<r<=1 and 0<rho<1/2",
+    "global L-infinity norm is unchanged by spatial translation/dilation",
+    "global bmo_phi control quantifies over all centers; a fixed physical local region does not become global control on all rescaled centers",
+    "uniform-in-time control transports to a rescaled time interval only when that interval maps inside the original controlled interval",
+    "Grujic v2 Theorem 4.1 assumes a critical point singularity uniformly near first singular time, global L_t^infinity L_x^{3/2,infinity} vorticity, and global L_t^infinity bmo_phi vorticity direction",
+    "Grujic v2 far-field commutator terms use global Lorentz vorticity and dyadic/global phase information; the consumer is not local geometry alone",
+    "Grujic v2 Theorem 7.4 is a pre-singularity regularity theorem using escape times and spatial analyticity, not an ancient-solution Liouville theorem",
+    "xi=omega/|omega| requires an explicit convention or high-vorticity restriction at omega=0; no zero-set convention was located in the source text search",
+    "merged NS-B1a3b already falsified topology-only inheritance of a direction modulus; this child must not repeat that functional calibration as if new"
+  ],
+  "target_interface": {
+    "producer": "Albritton-Barker finite-I Type-I blow-up sequence / ancient-limit compactness package",
+    "transport": "parabolic zoom acting on the conditional bmo_{1/|log r|} phase hypothesis",
+    "consumer": "Grujic v2 logarithmic depletion and pre-singularity non-blowup theorem",
+    "active_discriminator": "Is bmo_{1/|log r|} itself lost under zoom-in, or is the genuine missing edge instead producer-side generation plus global/time/pre-singularity source matching?"
+  },
+  "solved_or_near_solved_analogues": [
+    {"id":"GRUJIC-2026-LOG-DEPLETION-v2","role":"exact consumer","source":"arXiv:2607.08866v2, 13 Jul 2026","status":"primary preprint / proposal-shadow theorem-signature evidence only"},
+    {"id":"AB-TYPEI-ANCIENT","role":"producer analogue","source":"Albritton-Barker arXiv:1811.00502","status":"source-bound producer class"},
+    {"id":"NS-B1a3b-MERGED","role":"prior failure episode","source":"RAKL_math PR #120 / current main","status":"merged scoped topology-inheritance route pruning"}
+  ],
+  "method_transfer_matrix": [
+    {"method":"exact weighted-BMO dilation identity","works_if":["0<r<=1","same global center universe or explicitly bounded target domain","uniform source bmo_phi bound"],"shared_structure":"Campanato/BMO mean oscillation transforms exactly under dilation","disanalogies":["this transports an assumed phase norm; it does not create it from finite-I velocity/pressure estimates"],"repair_question":"prove or refute non-expansion of the exact log weight under zoom"},
+    {"method":"producer-consumer signature audit","works_if":["source theorem hypotheses are bound exactly"],"shared_structure":"consumer theorem can be invoked only when producer output type matches all inputs","disanalogies":["Grujic is pre-singularity and global; Albritton-Barker route produces an ancient limit from local Type-I data"],"repair_question":"identify which global/time/state-space hypotheses are absent"},
+    {"method":"near/far-field gluing audit","works_if":["global Lorentz/far-field terms are inspected separately from local phase oscillation"],"shared_structure":"local depletion estimate contains nonlocal Biot-Savart tails","disanalogies":["curl removes pressure but not strain nonlocality"],"repair_question":"can finite-I data supply the global L^{3/2,infty} and far-field terms uniformly?"}
+  ],
+  "cross_domain_analogy_scan": {"status":"NO_SAFE_EVERYDAY_BRIDGE_RETAINED","reason":"the exact weighted-Campanato dilation identity is already the lowest-assumption structural representation; metaphor adds no discriminating mathematical content"},
+  "counterexample_first_falsifiers": [
+    "If there exist 0<r<=1 and a bounded f in bmo_phi with ||f(x0+r·)||_{bmo_phi} > ||f||_{bmo_phi}, the proposed zoom non-expansion lemma fails.",
+    "Even if zoom non-expansion holds, direct transfer to finite-I fails if any Grujic global Lorentz, phase, critical-profile, time-uniform, analyticity, or escape-time input is not produced by the registered finite-I passage.",
+    "Treating Theorem 7.4 as an ancient Liouville theorem is falsified by its explicit first-singular-time, forward analyticity and escape-time signature."
+  ],
+  "source_anchors": ["https://arxiv.org/html/2607.08866v2","https://arxiv.org/abs/1811.00502","RAKL_math current main PR #120 artifacts","RAKL_math issue #122"],
+  "framework": {"method":"RAKL v3 Verified Discovery proposal/shadow","version":"0.1.0","manifest_version":"0.6.6","git_sha":"fe47a12c4bad8253658baaf37e1300cab15d0823"},
+  "application_base_sha": "9932f136c0e1cd689fd3dcd1ab5a5497fbbe9ebc",
+  "frozen_at": "2026-08-11T16:36:00Z",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:86321f8f12444616c9d8bdcbb02ede3384ebfcd6687f599a0cc6b9ff90e6d949"
+}
