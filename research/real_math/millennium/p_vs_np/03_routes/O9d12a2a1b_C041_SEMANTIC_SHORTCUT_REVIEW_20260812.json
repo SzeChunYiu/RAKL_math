@@ -1,0 +1,27 @@
+{
+  "review_id": "PNP-C041S1-OBSTRUCTION-TRANSFORMATION-REVIEW-20260812",
+  "target_atom_id": "O9d12a2a1b-C041S1",
+  "target_context_hash": "3a51421a496b4bf68d7bb2b604c772adf6cf852eb74b2a1e0edc8bf5b42278af",
+  "research_memory_review_hash": "71f981949b0ee298561ef0ef7677fe8afc693b131897580d529c51678b4a8143",
+  "episode_memory_snapshot_hash": "79f8e8590395e48eb682ccd9d0d8a2aa61e8a8f72988d223a20ee60da1eee663",
+  "obstruction": {
+    "obstruction_id": "O-C041-SYNTACTIC-VS-SEMANTIC-ACTIVATION",
+    "domain": "P-vs-NP / frozen SAT-coded complement extension",
+    "roles": ["MAGIC parser branch", "decoded 3CNF predicate", "UNSAT complement points", "structural falsifier"],
+    "relations": ["an old-new cross pair enters U_{n+1} iff the decoded formula is UNSAT", "MAGIC branch reachability is necessary but not sufficient for new MAGIC-coded complement geometry"],
+    "constraints": ["decoder and rule are frozen", "word length is even", "gamma(v), gamma(m), literal widths follow C041 freeze", "no post-result decoder mutation"],
+    "failure_mechanisms": ["routing to the first syntactically reachable MAGIC word can test a level where every MAGIC formula is satisfiable and therefore add no semantic MAGIC point"],
+    "invariants_to_preserve": ["exact decoder semantics", "all-zero short branch remains separate", "source complement-vs-associated-graph polarity", "proposal-only authority"],
+    "desired_transition": ["locate the first level where MAGIC contributes an UNSAT point beyond the short contradiction", "expose the exact incidence geometry before LP search"],
+    "forbidden_losses": ["conflating parser reachability with UNSAT", "using finite enumeration as asymptotic proof", "claiming cover growth from incidence geometry"]
+  },
+  "direct_search_status": "MATCHES_FOUND",
+  "jump_search_status": "NOT_RUN",
+  "glue_search_status": "NOT_RUN",
+  "selected_mode": "SEARCH",
+  "direct_candidate_episode_ids": ["EP-PNP-O9d12a2a1b-C041A-ODD-SLICE-20260811"],
+  "selected_episode_ids": ["EP-PNP-O9d12a2a1b-C041A-ODD-SLICE-20260811"],
+  "unresolved_warnings": ["The selected prior episode is a routing warning, not a transformation proof for the SAT-coded rule.", "The current n=2 zero-augmentation evidence is stored as failure experience rather than a known canonical v3 TaskEpisode in this checkout.", "No cross-problem coverage receipt is available or needed because SEARCH is viable; JUMP/GLUE/LIFT are not run."],
+  "evidence_pointers": ["research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041_ZERO_AUGMENTATION_FAILURE_DELTA_20260812.json", "research/real_math/millennium/p_vs_np/04_candidates/C041_FX_SAT_ONE_SIDED_FREEZE_20260812.md", "RAKL@992eda867588378fafb1f8b8997c8ecc725f88ad:schemas/obstruction-transformation-review.schema.json", "RAKL@992eda867588378fafb1f8b8997c8ecc725f88ad:docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md"],
+  "artifact_hash": "17b06268ef55b35878d2d58e747771c297a74deea4313523a4acd9f416c6bfa6"
+}
