@@ -25,20 +25,50 @@ def _hash_without_artifact(payload: dict) -> str:
     return _canonical_hash(data)
 
 
-def test_bsd_v3_bridge_episode_is_shadow_only_and_content_bound() -> None:
-    episode = json.loads(
+def test_bsd_v3_episode_proposal_is_quarantined_and_content_bound() -> None:
+    proposal = json.loads(
         (
             BSD
             / "07_memory/BSD_A1a1_V3_BRIDGE_AUDIT_TASK_EPISODE_20260811.json"
         ).read_text(encoding="utf-8")
     )
-    assert episode["atom_id"] == "BSD-A1a1-THETA-ORDER-COMPARISON"
-    assert episode["authority"] == "PROPOSAL_SHADOW_SEARCH_PRIORITY_ONLY"
-    assert episode["outcome"] == "PARTIAL_SUCCESS"
-    assert episode["gluing_assessment"]["classification"] == "LOCAL_TO_GLOBAL_RELATION_GAP"
-    assert episode["gluing_assessment"]["grants_solution_authority"] is False
-    assert episode["novelty_classification"]["class"] == "UNRESOLVED"
-    assert set(episode["saturation_vector"]) == {
+    assert proposal["schema_version"] == "experience-episode-proposal-v0"
+    assert proposal["artifact_type"] == "EXPERIENCE_EPISODE_PROPOSAL"
+    assert proposal["status"] == "PROPOSAL_ONLY"
+    assert proposal["source_role"] == "CONTRADICTION"
+    assert proposal["reported_outcome"] == "PARTIAL_SUCCESS"
+    assert proposal["residual_signature"]
+    authority = proposal["authority_contract"]
+    assert authority["effective_authority"] == "PROPOSAL_ONLY"
+    assert authority["allowed_effect"] == "SEARCH_PRIORITY_ONLY"
+    assert not any(
+        authority[key]
+        for key in (
+            "grants_tool_authority",
+            "grants_proof_authority",
+            "grants_gluing_authority",
+            "grants_theorem_authority",
+            "grants_framework_authority",
+            "grants_review_independence",
+        )
+    )
+    assert len(proposal["source_bindings"]) == 3
+    assert proposal["artifact_hash"] == _hash_without_artifact(proposal)
+
+
+def test_rich_method_telemetry_records_v3_case_study_coordinates() -> None:
+    telemetry = json.loads(
+        (
+            BSD / "07_memory/BSD_A1a1_V3_METHOD_TELEMETRY_20260811.json"
+        ).read_text(encoding="utf-8")
+    )
+    assert telemetry["atom_id"] == "BSD-A1a1-THETA-ORDER-COMPARISON"
+    assert telemetry["authority"] == "PROPOSAL_SHADOW_SEARCH_PRIORITY_ONLY"
+    assert telemetry["outcome"] == "PARTIAL_SUCCESS"
+    assert telemetry["gluing_assessment"]["classification"] == "LOCAL_TO_GLOBAL_RELATION_GAP"
+    assert telemetry["gluing_assessment"]["grants_solution_authority"] is False
+    assert telemetry["novelty_classification"]["class"] == "UNRESOLVED"
+    assert set(telemetry["saturation_vector"]) == {
         "KNOWLEDGE",
         "OPERATOR",
         "EXPERIENCE_PATTERN",
@@ -47,7 +77,8 @@ def test_bsd_v3_bridge_episode_is_shadow_only_and_content_bound() -> None:
         "PATH",
         "META_METHOD",
     }
-    assert episode["artifact_hash"] == _hash_without_artifact(episode)
+    assert telemetry["framework_semantic_authority"]["commit"] != telemetry["execution_dependency_pin"]["commit"]
+    assert telemetry["artifact_hash"] == _hash_without_artifact(telemetry)
 
 
 def test_observed_failure_does_not_promote_a_reusable_lesson() -> None:
@@ -85,3 +116,15 @@ def test_method_case_study_separates_semantic_authority_from_execution_pin() -> 
     assert "execution_dependency_pin_ref" in text
     assert "219 passed, 5 failed" in text
     assert "Self-RAKL challenger hypothesis only" in text
+
+
+def test_route_diagnostic_does_not_open_a_child_candidate() -> None:
+    text = (
+        BSD
+        / "02_problem_dag/BSD_A1a1_V3_ROUTE_DIAGNOSTIC_20260811.yaml"
+    ).read_text(encoding="utf-8")
+    assert "status: OBSERVED_ROUTE_GAP" in text
+    assert "mathematical_candidate: false" in text
+    assert "theorem: false" in text
+    assert "root: false" in text
+    assert "freeze a fresh strict child context" in text
