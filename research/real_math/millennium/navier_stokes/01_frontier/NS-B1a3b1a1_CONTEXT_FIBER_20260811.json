@@ -1,0 +1,119 @@
+{
+  "active_discriminator": "Whether a uniform bound on finite I (or the stronger small L^3 critical velocity control used to certify finite I) can by itself force a universal uniform-in-time global L^{3/2,infinity} vorticity bound on the same forward slab.",
+  "application": {
+    "base_sha": "47f56df0492339097a651d40b6c7289c4e2d4034",
+    "repository": "SzeChunYiu/RAKL_math"
+  },
+  "atom_id": "NS-B1a3b1a1",
+  "authority": "PROPOSAL_SHADOW_ONLY_NO_ROOT_AUTHORITY",
+  "candidate_falsifier": {
+    "construction_family": "compactly supported oscillatory vector-potential data with N-independent small L^3 velocity and N-growing initial vorticity",
+    "fail_condition": "If exact small-data Navier-Stokes dynamics plus the source-bound finite-I implication do not give a uniform finite-I ledger, or if the weak-Lorentz vorticity lower bound does not persist for positive times, prune the calibration itself.",
+    "success_scope": "Refutes only a universal same-slab finite-I/critical-velocity-to-vorticity-amplitude producer bound with no extra history/frequency/profile assumptions."
+  },
+  "context_hash": "sha256:4cd98526f19d3f178538f1f2bc0478ee5ec5d78f97af42bbc6630c4434b52fd1",
+  "cycle_id": "NS-B1a3b1a1-C001-CRITICAL-VORTICITY-PRODUCER-20260811",
+  "difference_witnesses": [
+    "calibration solutions are globally regular small-data solutions, not candidate singular solutions",
+    "large vorticity is injected at the left temporal edge, not proved to arise near a first singular terminal time",
+    "Grujic critical-point profile and phase assumptions are absent",
+    "longer one-sided history, spectral/frequency envelope, no-recrossing, or singularity-persistence information may add excluded structure"
+  ],
+  "fibre_contents_consulted": {
+    "frontier": [
+      "NS-B1a3b_C001_VORTICITY_DIRECTION_INHERITANCE_AUDIT_20260811.md",
+      "NS-B1a3b1_C001_R2_LOGBMO_ZOOM_INTERFACE_AUDIT_20260811.md",
+      "NS-B1a3b1_CONTEXT_FIBER_R2_20260811.json"
+    ],
+    "memory": [
+      "NS-B1a3b1_RESEARCH_MEMORY_REVIEW_R2_20260811.json",
+      "EP-NS-B1a3b1-C001-R2-20260811",
+      "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION",
+      "F-NS-B1a3b-NORMALIZATION-ZERO-INSTABILITY",
+      "F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY",
+      "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"
+    ],
+    "primary_sources": [
+      {
+        "id": "KATO-1984-LP",
+        "source": "Tosio Kato, Math. Z. 187 (1984), 471-480, DOI 10.1007/BF01174182",
+        "use": "global small-data L^3 strong/mild solutions"
+      },
+      {
+        "id": "AB-TYPEI-ANCIENT",
+        "source": "Albritton-Barker, arXiv:1811.00502v2 / J. Math. Fluid Mech. 21 (2019) 43",
+        "use": "definition of I; weak Serrin/critical velocity control implies finite I"
+      },
+      {
+        "id": "GRUJIC-2026-LOG-DEPLETION-v2",
+        "source": "arXiv:2607.08866v2, 13 Jul 2026",
+        "use": "consumer amplitude/phase signature only"
+      }
+    ],
+    "root": [
+      "00_problem_contract/canonical_statement.md",
+      "00_problem_contract/success_contract.yaml"
+    ]
+  },
+  "framework": {
+    "git_sha": "34e0e24844dfb322eae3a5c639adc12713065f54",
+    "method_version": "3.0.0",
+    "package_version": "0.1.0",
+    "repository": "SzeChunYiu/RAKL",
+    "v3_operational_features": [
+      "TaskEpisode shadow",
+      "dual memory",
+      "DifferenceWitness",
+      "failure lattice",
+      "episode-diagnosis-lesson separation",
+      "seven-axis saturation",
+      "hash-chained trace"
+    ]
+  },
+  "frozen_at_utc": "2026-08-11T19:13:00Z",
+  "issue_id": "RAKL_math#148",
+  "method_specs_surfaces_planned": [
+    "decomposition",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "mathematical_context_translation",
+    "equivalence_similarity",
+    "contradiction_diagnosis",
+    "gap_discovery",
+    "experiment_query_selection",
+    "memory",
+    "review",
+    "synthesis",
+    "contextual_theory_gluing",
+    "saturation_stopping",
+    "prompting_context_policy",
+    "authority_promotion"
+  ],
+  "parent_atom_id": "NS-B1a3b1a",
+  "problem_signature": [
+    "whole-space R3, viscosity normalized to 1, smooth rapidly decaying divergence-free data",
+    "producer ledger: same-slab critical velocity control / Albritton-Barker finite I",
+    "consumer amplitude: global uniform-in-time vorticity L^{3/2,infinity}",
+    "counterexample-first exact Navier-Stokes calibration; no numerical theorem authority",
+    "separate local producer failure from global/far-field and pre-singularity/ancient gluing"
+  ],
+  "root_contract": {
+    "independent_reviews": "0/3",
+    "nonterminal_result": "route-pruning producer calibration",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "target": "Clay statement A, whole-space unforced 3D incompressible Navier-Stokes"
+  },
+  "schema_version": "math-context-fiber-v3-proposal-shadow",
+  "structural_coordinates": [
+    "Navier-Stokes scaling u_lambda=lambda u(lambda x,lambda^2 t), omega_lambda=lambda^2 omega(lambda x,lambda^2 t)",
+    "L^3 velocity and L^{3/2,infinity} vorticity are scale-critical but differ by one spatial derivative",
+    "finite I consists of scale-invariant local energy/cubic/pressure/dissipation spacetime quantities, not an endpoint time-trace derivative norm",
+    "a counterexample family must be exact Navier-Stokes, smooth, divergence-free, whole-space, and must keep the critical velocity/finite-I ledger uniformly controlled",
+    "temporal-edge high frequency is a DifferenceWitness from first-singular-time profile dynamics and cannot be over-transferred"
+  ]
+}
