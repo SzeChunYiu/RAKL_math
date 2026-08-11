@@ -118,4 +118,4 @@ def test_calibration_trace_continues_parent_hash_chain() -> None:
         "RESULT_RECORDED",
         "RESIDUAL_OPENED",
     ]
-    assert previous == "sha256:53bc2f8fd0a983cd747034f32270e2ba4399a6b8d1e8224adadcef25f06423bb"
+    assert previous == "sha256:10f55b3753d003e99f56ab1bbe479a938fa94495342df431807c918bef3f2779"
