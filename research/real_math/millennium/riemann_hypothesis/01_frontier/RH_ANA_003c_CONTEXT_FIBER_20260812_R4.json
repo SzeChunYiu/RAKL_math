@@ -1,0 +1,202 @@
+{
+  "schema": "RAKL-v3-shadow-MathContextFiber",
+  "atom_id": "RH-ANA-003c",
+  "cycle": "R4",
+  "root_issue": 3,
+  "control_issue": 188,
+  "problem_signature": [
+    "Riemann Hypothesis",
+    "Li coefficients",
+    "Coffey S_Lambda prime/Laguerre remainder",
+    "source cutoff and conditional cancellation",
+    "localized log-scale decomposition",
+    "all-index uniformity",
+    "prime-zero duality"
+  ],
+  "root_contract": {
+    "statement": "Every nontrivial zero rho of zeta(s) has Re(rho)=1/2.",
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "success_contract_path": "research/real_math/millennium/riemann_hypothesis/00_problem_contract/success_contract.yaml",
+    "root_promotion_requirements": [
+      "exact RH statement binding",
+      "closed proof DAG",
+      "formal/verifier/dependency/axiom audits",
+      "relevant barrier audit",
+      "isolated recheck where supported",
+      "bounded novelty search",
+      "three genuinely isolated mathematical reviews"
+    ]
+  },
+  "framework_subject": {
+    "repository": "SzeChunYiu/RAKL",
+    "current_main_sha": "b8f96b8c90745c6a7a6ed57bc55d90319db505f7",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "application_execution_pin": "4d78fd216dab0f9589a0c23f1140cdee00a33b98",
+    "pin_relation": "CURRENT_RAKL_MAIN_IS_5_COMMITS_AHEAD; compare changes are Paper2/Paper5/research benchmark/status only; audited v3 core/method surfaces unchanged in that window; executable application pin remains separately stale until synchronized."
+  },
+  "application_subject": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "cycle_base_sha": "3cfc8a3b2ff6d981351d2f15421c8cc08048f74b",
+    "branch": "research/rh-ana003c-cutoff-gluing-r4-20260812"
+  },
+  "active_atom": {
+    "question": "Before attempting a new prime-side inequality, determine whether Coffey's source-defined S_Lambda(n) can be split into proper prime/log-scale pieces with a summation convention that preserves the original cutoff, cancellation and all-n semantics; identify the smallest admissible local piece/gluing obligation that is strictly weaker than polynomial boundedness of the full remainder.",
+    "residual_before": "RH-ANA-003c: localized one-sided prime discriminator not yet source/cutoff typed.",
+    "candidate_generation": "BLOCKED until context, live-work reconciliation, dual memory, expert cell and pre-candidate trace are frozen."
+  },
+  "actual_fibre_consulted": [
+    "RAKL/main AGENTS.md",
+    "RAKL/main skills/rakl-core/SKILL.md",
+    "RAKL/main skills/rakl-core/manifest.yaml",
+    "RAKL/main skills/rakl-core/static/core/principles.md",
+    "RAKL/main skills/rakl-core/static/core/workflow.md",
+    "RAKL/main docs/RAKL_V3_IMPLEMENTATION_MANIFEST.md",
+    "RAKL/main RAKL_VERSION.json",
+    "RAKL/main src/rakl/method_specs.py",
+    "RAKL_math/main AGENTS.md",
+    "RAKL_math/main config/rakl-framework-pin.json",
+    "RAKL_math issue #3 root contract",
+    "RAKL_math issue #188 prospective RH-ANA-003c contract",
+    "RAKL_math PR #80 incomplete-Li/finite-height shadow",
+    "RAKL_math PR #118 aggregate-density exceptional-set shadow",
+    "RAKL_math PR #147 RH-ANA-003 R1-R3 shadow",
+    "RAKL_math PR #160 XM011 current-work coverage warning",
+    "RAKL_math PR #174 XM012 endpoint-anchor overtransfer falsifier",
+    "PR #147 file RH_ANA_003b_ROOT_COUPLING_FALSIFIER_20260811_R3.md",
+    "Coffey arXiv:0706.0343 primary source landing record",
+    "Coffey arXiv:math-ph/0505052 primary source landing record",
+    "Voros arXiv:math/0506326 primary source landing record",
+    "Guth-Maynard Annals of Mathematics 203 (2026), 623-675 / arXiv:2405.20552",
+    "Conrey-Farmer-Kwan-Lin-Turnage-Butterbaugh arXiv:2508.11108",
+    "Bellotti-Trudgian-Yang arXiv:2603.21490"
+  ],
+  "equivalent_formulations": [
+    {
+      "id": "A-RH-LI",
+      "statement": "RH iff lambda_n >= 0 for every positive integer n.",
+      "use": "root binding only",
+      "disanalogy": "equivalence does not provide a weaker local prime obligation."
+    },
+    {
+      "id": "A-RH-COFFEY-SL",
+      "statement": "Under Coffey normalization, lambda_n - S_Lambda(n) = (n/2) log n + O(n); global polynomial boundedness of full S_Lambda is RH-equivalent by R3 source composition.",
+      "use": "obligation-strength guard",
+      "disanalogy": "proper source-cutoff pieces can be strictly weaker only if their gluing does not reconstruct full polynomial boundedness."
+    }
+  ],
+  "near_solved_analogues": [
+    {
+      "id": "A-COND-SERIES-SYNC-CUTOFF",
+      "source_context": "conditionally convergent signed series",
+      "method": "define local blocks as differences of a single source-authorized partial-sum process; telescope only in the original order",
+      "enabling_assumptions": [
+        "source partial sums converge",
+        "block boundaries preserve source order"
+      ],
+      "shared_structure": [
+        "signed cancellation",
+        "local windows",
+        "global limit"
+      ],
+      "disanalogies": [
+        "Riemann rearrangement theorem does not by itself characterize the arithmetic zeta series",
+        "all-n kernel dependence is extra"
+      ],
+      "repair_question": "Does Coffey's S_Lambda have absolute convergence, or must every admissible window decomposition remain synchronized to the source cutoff?"
+    },
+    {
+      "id": "A-ABEL-PARTIAL-SUMMATION",
+      "source_context": "Dirichlet/prime sums with cancellation in cumulative Chebyshev error",
+      "method": "summation by parts against a smooth/finite-degree kernel",
+      "enabling_assumptions": [
+        "controlled cumulative source error",
+        "boundary terms explicit"
+      ],
+      "shared_structure": [
+        "von Mangoldt cancellation",
+        "logarithmic kernel"
+      ],
+      "disanalogies": [
+        "current zero-density/PNT information may not be uniform in n or strong enough for Li sign"
+      ],
+      "repair_question": "What n-uniform cutoff/tail modulus survives after summation by parts without becoming RH-strength?"
+    }
+  ],
+  "cross_domain_analogy_scan": [
+    {
+      "source_kind": "streaming signed ledger",
+      "source_situation": "A reconciled signed stream may have a stable cumulative balance while independently reordering debit/credit windows changes intermediate and even limiting balances unless absolute totals are summable.",
+      "common_abstraction": [
+        "cancellation-sensitive ordered aggregation",
+        "window decomposition",
+        "global reconciliation"
+      ],
+      "source_to_target_mapping": [
+        "ledger entries -> (1-Lambda(m)) L_{n-1}^1(log m)/m",
+        "reconciliation order -> source m-cutoff",
+        "independent windows -> proposed prime/log-scale pieces"
+      ],
+      "shared_constraints": [
+        "same entries",
+        "signed cancellation",
+        "global target defined by ordered accumulation"
+      ],
+      "disanalogies": [
+        "zeta arithmetic has analytic structure absent in a ledger",
+        "analogy supplies no convergence theorem"
+      ],
+      "proposed_principle": "Audit absolute convergence and summation order before treating local windows as independently estimable components.",
+      "validation_obligation": "Prove or refute absolute convergence for the exact source series and bind any retained partition to the source cutoff."
+    }
+  ],
+  "transfer_difference_witnesses": [
+    {
+      "prior": "F-RH-ANA-001 finite Li-prefix extrapolation",
+      "difference": "R4 concerns source-series decomposition at every n, not extrapolating verified finite n.",
+      "cheapest_test": "reject any piece whose usefulness is only finite n or finite prime prefix."
+    },
+    {
+      "prior": "F-RH-ANA-003-DENSITY-EXCEPTION-GAP",
+      "difference": "R4 first tests representation/summation legality, not aggregate zero rarity.",
+      "cheapest_test": "one permitted off-line quartet remains a regression falsifier after any proposed glue."
+    },
+    {
+      "prior": "R2 magnitude-majorant failure",
+      "difference": "R2 lost cancellation by absolute values in the n-dependent triangular transform; R4 tests absolute/rearrangement properties of the m-series itself.",
+      "cheapest_test": "absolute-convergence test on a positive-density subfamily with Lambda(m)=0."
+    },
+    {
+      "prior": "O-RH-ANA-003b-FULL-REMAINDER-ROOT-COUPLING",
+      "difference": "R4 seeks proper source-bound subcomponents only.",
+      "cheapest_test": "obligation-strength audit: local certificate must not imply polynomial boundedness of full S_Lambda."
+    },
+    {
+      "prior": "XM012 endpoint-anchor overtransfer",
+      "difference": "R4 retains Coffey's absolute source target and tests only cutoff-compatible decomposition; no additive target ambiguity is imported.",
+      "cheapest_test": "every local definition must telescope back to the exact source partial sum."
+    }
+  ],
+  "search_policy": "CURRENT_WORK_BOUND + source/rearrangement-legality-first + counterexample-first. Do not attempt a difficult prime-sum estimate until the exact summation convention for local pieces is typed. Rotate away from finite-prefix, aggregate-density-only, absolute-majorant, and full-remainder-polynomial families.",
+  "pre_memory_pre_gate_preference": "Attempt a localized dyadic/logarithmic window estimate for Coffey's Laguerre prime sum, likely via partial summation and modern prime-error input.",
+  "v3_operational_surfaces": [
+    "decomposition",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "equivalence_similarity",
+    "mathematical_context_translation",
+    "contextual_theory_gluing",
+    "contradiction_diagnosis",
+    "gap_discovery",
+    "memory",
+    "review",
+    "saturation_stopping",
+    "prompting_context_policy"
+  ],
+  "proposal_authority": "SHADOW_ONLY",
+  "frozen_at": "2026-08-11T23:01:35Z",
+  "fibre_snapshot_hash": "sha256:f8f65c468d80f321113e4752664a1fecd41ed9376df22f1462ff99d3fb739bed"
+}
