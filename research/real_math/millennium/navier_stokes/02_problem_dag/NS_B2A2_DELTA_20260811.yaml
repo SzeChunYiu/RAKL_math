@@ -1,0 +1,58 @@
+delta_id: NS-B2a1-C001-DELTA-20260811
+root_id: NS0
+parent_atom: NS-B2a1
+parent_issue: 65
+root_status: OPEN_NO_SOLUTION_CERTIFICATE
+
+result:
+  id: NS-B2a1-C001
+  status: SUPPORTED_SCOPED_COMPACTNESS_CALIBRATION
+  authority: PROPOSAL_ONLY_ROUTE_PRUNING
+  statement: >-
+    Fixed-cylinder local convergence plus bounded local/scale-critical quantities does not
+    imply uniform global tail tightness. A nonzero fixed divergence-free core can remain
+    in the local limit while a second divergence-free packet escapes to spatial infinity.
+  scope_boundary:
+    - not an Euler counterexample
+    - not a Navier-Stokes counterexample
+    - not an impossibility result for Seregin's actual source sequence
+    - does not reject signed flux, recentering, concentration compactness, or a local Euler Liouville theorem
+  evidence:
+    - 01_frontier/NS-B2a1_C001_LOCAL_TO_TAIL_QUANTIFIER_AUDIT_20260811.md
+    - 08_reviews/NS_B2A1_C001_POSTRESULT_REVIEW_20260811.md
+    - 07_memory/NS_B2A1_FAILURE_EXPERIENCE_20260811.json
+
+new_obstruction:
+  id: O-NS-B2a1-UNIFORM-TAIL-OR-RECENTERING
+  statement: >-
+    The Seregin Type-II route needs a source-bound uniform tail modulus, content-bound
+    compactness modulo translation/recentering, equivalent signed/telescoping flux handoff,
+    or a genuinely local Euler rigidity theorem before local compactness can support a global contradiction.
+
+next_atom:
+  id: NS-B2a2
+  title: PRELIMIT_UNIFORM_ANNULAR_TIGHTNESS_OR_RECENTERING
+  status: CONTEXT_REQUIRED_BEFORE_CANDIDATE
+  exact_question: >-
+    From the original suitable-weak Navier-Stokes hypotheses used in Seregin's F=1 Type-II
+    scaling, can one derive a uniform-in-k annular/tail modulus, or a content-bound
+    recentering/profile-compactness statement, strong enough to prevent velocity/energy/flux
+    loss at spatial infinity while preserving the source nontriviality witness?
+  first_hostile_checks:
+    - fixed local core plus one or more escaping packets
+    - explicit quantifier order: lim_R sup_k versus fixed-R k-limit
+    - translation centers not controlled by the centered blow-up normalization
+    - pressure normalization and harmonic far-field pieces
+    - hidden use of a global critical norm or almost periodicity absent from the source
+  required_pre_candidate_actions:
+    - freeze fresh NS-B2a2 MathContextFiber
+    - bind exact Seregin prelimit estimates, not only the Euler limit class
+    - refresh canonical and pending success/failure memory with authority labels
+    - run same-context PDE/compactness/pressure/rigidity/adversarial/formal expert cell
+    - freeze seven-event hash-chained trace before any candidate
+
+nonpromotion:
+  - Type-II scenario pruning is not Type-II exclusion in general
+  - Type-II exclusion is not Clay root closure
+  - same-context review is not independent review
+  - no root or theorem authority changes in this delta
