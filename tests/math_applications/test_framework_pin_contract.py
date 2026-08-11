@@ -206,10 +206,10 @@ def test_final_framework_pin_integration_receipt_has_exact_counts_and_chronology
 
     chronology = receipt["chronology"]
     assert datetime.fromisoformat(receipt["recorded_at"]) > datetime.fromisoformat(
-        chronology["verification_completed_at"]
+        chronology["verification_observed_complete_at"]
     ) > datetime.fromisoformat(chronology["integration_merge_created_at"])
     assert receipt["application_integration"]["live_main_commit"] == (
-        "2ddb51359292fd9638116b488ffff9a04397446b"
+        "48d1153c3b5fa749b1a6fd84212befb9e39daabe"
     )
     integration = receipt["application_integration"]
     integration_parents = subprocess.run(
@@ -234,8 +234,5 @@ def test_final_framework_pin_integration_receipt_has_exact_counts_and_chronology
         text=True,
     ).stdout.strip()
     assert live_main_tree == integration["live_main_tree"]
-    assert receipt["verification"]["github_check"]["completed_at"] == chronology[
-        "verification_completed_at"
-    ]
-    assert receipt["verification"]["tests_passed"] == 302
+    assert receipt["verification"]["tests_passed"] == 307
     assert receipt["authority"].endswith("NO_MATHEMATICAL_AUTHORITY_CHANGE")

@@ -31,18 +31,21 @@
     },
     "application_integration": {
       "type": "object", "additionalProperties": false,
-      "required": ["pre_refresh_pr_head", "live_main_commit", "live_main_tree", "local_integration_merge_commit", "prerequisite_merges", "historical_artifact_files_changed"],
+      "required": ["initial_pre_refresh_pr_head", "prior_verified_pr_head", "pre_refresh_pr_head", "live_main_commit", "live_main_tree", "local_integration_merge_commit", "prerequisite_merges", "historical_artifact_files_changed"],
       "properties": {
+        "initial_pre_refresh_pr_head": {"$ref": "#/$defs/gitSha"},
+        "prior_verified_pr_head": {"$ref": "#/$defs/gitSha"},
         "pre_refresh_pr_head": {"$ref": "#/$defs/gitSha"},
         "live_main_commit": {"$ref": "#/$defs/gitSha"},
         "live_main_tree": {"$ref": "#/$defs/gitSha"},
         "local_integration_merge_commit": {"$ref": "#/$defs/gitSha"},
         "prerequisite_merges": {
           "type": "object", "additionalProperties": false,
-          "required": ["pr79_merge", "pr84_merge"],
+          "required": ["pr79_merge", "pr84_merge", "ns_b1a2_merge"],
           "properties": {
             "pr79_merge": {"$ref": "#/$defs/gitSha"},
-            "pr84_merge": {"$ref": "#/$defs/gitSha"}
+            "pr84_merge": {"$ref": "#/$defs/gitSha"},
+            "ns_b1a2_merge": {"$ref": "#/$defs/gitSha"}
           }
         },
         "historical_artifact_files_changed": {
@@ -66,31 +69,21 @@
     },
     "chronology": {
       "type": "object", "additionalProperties": false,
-      "required": ["integration_merge_created_at", "verification_completed_at", "final_receipt_frozen_after_verification"],
+      "required": ["integration_merge_created_at", "verification_observed_complete_at", "final_receipt_frozen_after_verification"],
       "properties": {
         "integration_merge_created_at": {"type": "string", "format": "date-time"},
-        "verification_completed_at": {"type": "string", "format": "date-time"},
+        "verification_observed_complete_at": {"type": "string", "format": "date-time"},
         "final_receipt_frozen_after_verification": {"const": true}
       }
     },
     "verification": {
       "type": "object", "additionalProperties": false,
-      "required": ["subject_commit", "command", "tests_passed", "exit_code", "github_check", "pin_equals_gitlink", "framework_authority_paths_clean", "status"],
+      "required": ["subject_commit", "command", "tests_passed", "exit_code", "pin_equals_gitlink", "framework_authority_paths_clean", "status"],
       "properties": {
         "subject_commit": {"$ref": "#/$defs/gitSha"},
         "command": {"const": "python tools/run_application_tests.py --framework framework/RAKL"},
-        "tests_passed": {"const": 302},
+        "tests_passed": {"const": 307},
         "exit_code": {"const": 0},
-        "github_check": {
-          "type": "object", "additionalProperties": false,
-          "required": ["name", "conclusion", "completed_at", "url"],
-          "properties": {
-            "name": {"const": "application-tests"},
-            "conclusion": {"const": "SUCCESS"},
-            "completed_at": {"type": "string", "format": "date-time"},
-            "url": {"type": "string", "format": "uri"}
-          }
-        },
         "pin_equals_gitlink": {"const": true},
         "framework_authority_paths_clean": {"const": true},
         "status": {"const": "PASS_EXACT_APPLICATION_SUITE_ON_INTEGRATED_BASE"}

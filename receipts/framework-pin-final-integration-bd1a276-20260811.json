@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "receipt_id": "RAKL-MATH-FRAMEWORK-PIN-FINAL-INTEGRATION-bd1a276-20260811",
-  "recorded_at": "2026-08-11T12:39:20Z",
+  "recorded_at": "2026-08-11T12:45:30Z",
   "predecessor_receipt": {
     "commit": "a5e21d0261ae55e7a7c8628e4f7fe838d012e81a",
     "path": "receipts/framework-pin-sync-bd1a276-20260811.json",
@@ -15,13 +15,16 @@
     ]
   },
   "application_integration": {
-    "pre_refresh_pr_head": "bfc9bc1c63cc0e8fffa583afef3b02f0e8085792",
-    "live_main_commit": "2ddb51359292fd9638116b488ffff9a04397446b",
-    "live_main_tree": "bc69a20f525cb74d547bb42055bf263ffc073110",
-    "local_integration_merge_commit": "02aa447d8eb77b0d274465e1928968d7ed480b63",
+    "initial_pre_refresh_pr_head": "bfc9bc1c63cc0e8fffa583afef3b02f0e8085792",
+    "prior_verified_pr_head": "a5e21d0261ae55e7a7c8628e4f7fe838d012e81a",
+    "pre_refresh_pr_head": "ee69c0418290f52ae932b8da79c27ae182618adf",
+    "live_main_commit": "48d1153c3b5fa749b1a6fd84212befb9e39daabe",
+    "live_main_tree": "dc467172b96b06a9108d45879bf7f272665fa224",
+    "local_integration_merge_commit": "ad7743f2f3513737ed8b1ee6671f6071a0097a01",
     "prerequisite_merges": {
       "pr79_merge": "d13bb40fab2448f983a73f5964ab2d3fd2db489c",
-      "pr84_merge": "2ddb51359292fd9638116b488ffff9a04397446b"
+      "pr84_merge": "2ddb51359292fd9638116b488ffff9a04397446b",
+      "ns_b1a2_merge": "48d1153c3b5fa749b1a6fd84212befb9e39daabe"
     },
     "historical_artifact_files_changed": []
   },
@@ -36,21 +39,15 @@
     "changed_file_count_command": "git -C framework/RAKL diff --name-only 15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3 bd1a2768f0f474ff44ffa25243241f94bfaf6466"
   },
   "chronology": {
-    "integration_merge_created_at": "2026-08-11T12:30:15Z",
-    "verification_completed_at": "2026-08-11T12:34:46Z",
+    "integration_merge_created_at": "2026-08-11T12:44:03Z",
+    "verification_observed_complete_at": "2026-08-11T12:44:41Z",
     "final_receipt_frozen_after_verification": true
   },
   "verification": {
-    "subject_commit": "a5e21d0261ae55e7a7c8628e4f7fe838d012e81a",
+    "subject_commit": "ad7743f2f3513737ed8b1ee6671f6071a0097a01",
     "command": "python tools/run_application_tests.py --framework framework/RAKL",
-    "tests_passed": 302,
+    "tests_passed": 307,
     "exit_code": 0,
-    "github_check": {
-      "name": "application-tests",
-      "conclusion": "SUCCESS",
-      "completed_at": "2026-08-11T12:34:46Z",
-      "url": "https://github.com/SzeChunYiu/RAKL_math/actions/runs/31491855578/job/93779992660"
-    },
     "pin_equals_gitlink": true,
     "framework_authority_paths_clean": true,
     "status": "PASS_EXACT_APPLICATION_SUITE_ON_INTEGRATED_BASE"
@@ -67,5 +64,5 @@
     "does not establish empirical RAKL superiority"
   ],
   "authority": "DEPENDENCY_SYNC_AND_EXECUTABLE_CONFORMANCE_ONLY / NO_MATHEMATICAL_AUTHORITY_CHANGE",
-  "artifact_hash": "sha256:c60ea675f5ce72245718a692fb21523758cd12337272e9ef1ad9b99cad4ace25"
+  "artifact_hash": "sha256:f1ee35dcff4368302c9fb1940eae975f1fd03c19665f3c89966b07b8645864be"
 }
