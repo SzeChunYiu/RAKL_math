@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rakl-math.invalid/schemas/hodge-postmerge-assurance-correction.schema.json",
+  "title": "H4d1a postmerge assurance correction",
+  "description": "Immutable successor receipt for PR34 assurance defects. It preserves all historical bytes, narrows authority, and keeps H4d1b candidate-blocked.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "recorded_at",
+    "historical_git_bindings",
+    "preserved_defects",
+    "successor_artifacts",
+    "historical_episode_classification",
+    "mathematical_scope",
+    "h4d1b_gate",
+    "authority_contract",
+    "evidence_pointers",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"const": "H4d1a-C001-POSTMERGE-ASSURANCE-CORRECTION-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "historical_git_bindings": {"$ref": "#/$defs/historicalGitBindings"},
+    "preserved_defects": {
+      "type": "array",
+      "minItems": 5,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "successor_artifacts": {
+      "type": "array",
+      "minItems": 3,
+      "items": {"$ref": "#/$defs/successorArtifact"}
+    },
+    "historical_episode_classification": {"$ref": "#/$defs/episodeClassification"},
+    "mathematical_scope": {"$ref": "#/$defs/mathematicalScope"},
+    "h4d1b_gate": {"$ref": "#/$defs/h4d1bGate"},
+    "authority_contract": {"$ref": "#/$defs/authorityContract"},
+    "evidence_pointers": {"$ref": "#/$defs/nonEmptyStrings"},
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha1": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "nonEmptyStrings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "historicalGitBindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pr34_merge", "pr34_first_parent", "pr34_hodge_subtree", "framework_pin"],
+      "properties": {
+        "pr34_merge": {"const": "4838969ecc18a091da79a059b58b8568634289b7"},
+        "pr34_first_parent": {"const": "8bc7a9cf17adf347e5be13ab61a08a690dda895e"},
+        "pr34_hodge_subtree": {"const": "33613657e6f1545bafa8a56b3680b7a2bc6bf00b"},
+        "framework_pin": {"const": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"}
+      }
+    },
+    "successorArtifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "path", "authority"],
+      "properties": {
+        "kind": {
+          "enum": ["SOURCE_REBINDING", "CANONICAL_COMBINED_TRACE", "COMBINED_FAILURE_LATTICE"]
+        },
+        "path": {"type": "string", "minLength": 1},
+        "authority": {"enum": ["SOURCE_VERSION_CORRECTION_ONLY", "AUDITABLE_HISTORY_ONLY", "SCOPED_NEGATIVE_HISTORY_ONLY"]}
+      }
+    },
+    "episodeClassification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["classification", "canonical_task_episode_present", "strict_discovery_credit", "retrospective_backfill_allowed"],
+      "properties": {
+        "classification": {"const": "LEGACY_NON_V3_RETROSPECTIVE_ROUTE_PRUNING"},
+        "canonical_task_episode_present": {"const": false},
+        "strict_discovery_credit": {"const": "NONE"},
+        "retrospective_backfill_allowed": {"const": false}
+      }
+    },
+    "mathematicalScope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["retained_result", "formal_statement", "scope_conditions", "hodge_root_authority", "novelty_authority", "independent_review_authority", "higher_order_authority"],
+      "properties": {
+        "retained_result": {"const": "FIRST_ORDER_SAME_DETECTOR_PROPER_NONZERO_NOGO"},
+        "formal_statement": {"type": "string", "minLength": 1},
+        "scope_conditions": {"$ref": "#/$defs/nonEmptyStrings"},
+        "hodge_root_authority": {"const": "NONE"},
+        "novelty_authority": {"const": "NONE"},
+        "independent_review_authority": {"const": "NONE"},
+        "higher_order_authority": {"const": "NONE"}
+      }
+    },
+    "h4d1bGate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["candidate_generation_allowed", "required_before_candidate", "missing_evidence_fails_closed"],
+      "properties": {
+        "candidate_generation_allowed": {"const": false},
+        "required_before_candidate": {
+          "type": "array",
+          "prefixItems": [
+            {"const": "fresh H4d1b context fiber with current source binding"},
+            {"const": "fresh dual-memory review bound to combined failure lattice"},
+            {"const": "fresh seven-event pre-candidate trace"},
+            {"const": "role-separated same-context expert review"}
+          ],
+          "items": false,
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "missing_evidence_fails_closed": {"const": true}
+      }
+    },
+    "authorityContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["effective_authority", "historical_bytes_preserved", "repairs_historical_chronology", "grants_theorem_authority", "grants_framework_authority", "grants_review_independence"],
+      "properties": {
+        "effective_authority": {"const": "RETROSPECTIVE_SCOPED_ROUTE_PRUNING_ONLY"},
+        "historical_bytes_preserved": {"const": true},
+        "repairs_historical_chronology": {"const": false},
+        "grants_theorem_authority": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false}
+      }
+    }
+  }
+}

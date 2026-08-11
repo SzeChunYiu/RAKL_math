@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "H4d1a-C001-POSTMERGE-ASSURANCE-CORRECTION-20260811",
+  "recorded_at": "2026-08-11T13:02:59+00:00",
+  "historical_git_bindings": {
+    "pr34_merge": "4838969ecc18a091da79a059b58b8568634289b7",
+    "pr34_first_parent": "8bc7a9cf17adf347e5be13ab61a08a690dda895e",
+    "pr34_hodge_subtree": "33613657e6f1545bafa8a56b3680b7a2bc6bf00b",
+    "framework_pin": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"
+  },
+  "preserved_defects": [
+    "The historical continuation is schema-invalid because it contains non-schema parent fields.",
+    "The historical continuation is runtime-invalid as a standalone trace because its first entry has a nonempty previous_event_hash.",
+    "PR34 supplied no canonical combined post-result trace.",
+    "PR34 supplied no canonical v3 TaskEpisode despite retrospective v3 wording.",
+    "The parent and child failure experiences were not joined by an executable typed lattice link.",
+    "The withdrawn arXiv:1112.6001 source appeared as active authority rather than quarantined provenance."
+  ],
+  "successor_artifacts": [
+    {
+      "kind": "SOURCE_REBINDING",
+      "path": "research/real_math/millennium/hodge/deformation/01_frontier/H4d1a_PRIDHAM_SOURCE_REBINDING_20260811.json",
+      "authority": "SOURCE_VERSION_CORRECTION_ONLY"
+    },
+    {
+      "kind": "CANONICAL_COMBINED_TRACE",
+      "path": "research/real_math/millennium/hodge/deformation/09_trace/H4d1a_CANONICAL_COMBINED_POST_RESULT_TRACE_20260811.json",
+      "authority": "AUDITABLE_HISTORY_ONLY"
+    },
+    {
+      "kind": "COMBINED_FAILURE_LATTICE",
+      "path": "research/real_math/millennium/hodge/deformation/07_memory/H4d1a_FAILURE_EXPERIENCE_LATTICE_COMBINED_20260811.json",
+      "authority": "SCOPED_NEGATIVE_HISTORY_ONLY"
+    }
+  ],
+  "historical_episode_classification": {
+    "classification": "LEGACY_NON_V3_RETROSPECTIVE_ROUTE_PRUNING",
+    "canonical_task_episode_present": false,
+    "strict_discovery_credit": "NONE",
+    "retrospective_backfill_allowed": false
+  },
+  "mathematical_scope": {
+    "retained_result": "FIRST_ORDER_SAME_DETECTOR_PROPER_NONZERO_NOGO",
+    "formal_statement": "If B_{T,1} is contained in ker(sigma) and sigma restricted to B_{T,1} is injective, then B_{T,1}=0.",
+    "scope_conditions": [
+      "B_{T,1} is the image of fixed first-order branch directions under a linear obstruction map.",
+      "sigma is the same detector whose vanishing is implied on those branch-generated obstructions.",
+      "The conclusion is elementary route pruning inside this fixed first-order same-detector representation only."
+    ],
+    "hodge_root_authority": "NONE",
+    "novelty_authority": "NONE",
+    "independent_review_authority": "NONE",
+    "higher_order_authority": "NONE"
+  },
+  "h4d1b_gate": {
+    "candidate_generation_allowed": false,
+    "required_before_candidate": [
+      "fresh H4d1b context fiber with current source binding",
+      "fresh dual-memory review bound to combined failure lattice",
+      "fresh seven-event pre-candidate trace",
+      "role-separated same-context expert review"
+    ],
+    "missing_evidence_fails_closed": true
+  },
+  "authority_contract": {
+    "effective_authority": "RETROSPECTIVE_SCOPED_ROUTE_PRUNING_ONLY",
+    "historical_bytes_preserved": true,
+    "repairs_historical_chronology": false,
+    "grants_theorem_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false
+  },
+  "evidence_pointers": [
+    "git:4838969ecc18a091da79a059b58b8568634289b7",
+    "sha256:1c3d58c35c05024bee06f0505de102e4df12db8b0340c06a02121769d1c365f2",
+    "sha256:2a89d1bae5c4c675ec36ace29277fc885307226ceb13a0e6d09a09b72f52e35d",
+    "sha256:4035a5ee15fc2f1faa1d925f57648ba0cb76301219aa8bc913836f7063b7651f",
+    "sha256:ad45384089660f2a605dbebd045fa2d896d4729c07e91fe14e8eda4f2477949d",
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1a_BRANCH_DETECTOR_COMPATIBILITY_NOGO_20260811.md"
+  ],
+  "artifact_hash": "sha256:03e997d2f826f589e873861a7896b414d7fb3fb9ebef5d7c71c41f923b76a112"
+}
