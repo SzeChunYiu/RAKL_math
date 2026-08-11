@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/failure-lattice-runtime-supersession-receipt.schema.json",
+  "title": "Failure Lattice Runtime Supersession Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "receipt_id",
+    "atom_id",
+    "recorded_at",
+    "finding_classification",
+    "predecessor",
+    "successor",
+    "superseded_derivatives",
+    "runtime_reproduction",
+    "candidate_resolution",
+    "authority",
+    "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"type": "string", "minLength": 1},
+    "atom_id": {"type": "string", "minLength": 1},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "finding_classification": {"const": "QUARANTINED_APPLICATION_FEEDBACK_HYPOTHESIS"},
+    "predecessor": {"$ref": "#/$defs/latticeBinding"},
+    "successor": {
+      "allOf": [
+        {"$ref": "#/$defs/latticeBinding"},
+        {
+          "type": "object",
+          "required": ["failure_lattice_snapshot_hash"],
+          "properties": {
+            "failure_lattice_snapshot_hash": {"$ref": "#/$defs/sha256"}
+          }
+        }
+      ]
+    },
+    "superseded_derivatives": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["predecessor_path", "predecessor_file_sha256", "successor_path", "successor_file_sha256", "status"],
+        "properties": {
+          "predecessor_path": {"type": "string", "minLength": 1},
+          "predecessor_file_sha256": {"$ref": "#/$defs/sha256"},
+          "successor_path": {"type": "string", "minLength": 1},
+          "successor_file_sha256": {"$ref": "#/$defs/sha256"},
+          "status": {"const": "PRESERVED_BYTES_SUPERSEDED_FOR_FUTURE_USE"}
+        }
+      }
+    },
+    "runtime_reproduction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["framework_commit", "api", "predecessor_result", "predecessor_error", "successor_result", "bounded_finding"],
+      "properties": {
+        "framework_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "api": {"const": "rakl.failure_lattice.add_failure_experience/add_failure_link"},
+        "predecessor_result": {"const": "REJECTED"},
+        "predecessor_error": {"const": "failure links require existing source and target experiences"},
+        "successor_result": {"const": "ACCEPTED"},
+        "bounded_finding": {"type": "string", "minLength": 1}
+      }
+    },
+    "candidate_resolution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["correction_receipt_path", "recorded_only_in_correction_receipt", "failure_to_candidate_link_present", "note"],
+      "properties": {
+        "correction_receipt_path": {"type": "string", "minLength": 1},
+        "recorded_only_in_correction_receipt": {"const": true},
+        "failure_to_candidate_link_present": {"const": false},
+        "note": {"type": "string", "minLength": 1}
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["application_feedback", "framework_promotion", "mathematical_truth_effect", "independent_review", "novelty_authority", "root_authority"],
+      "properties": {
+        "application_feedback": {"const": "PROPOSAL_ONLY_LOCAL_RUNTIME_REPRODUCTION"},
+        "framework_promotion": {"const": "NONE"},
+        "mathematical_truth_effect": {"const": "NONE"},
+        "independent_review": {"const": false},
+        "novelty_authority": {"const": "NONE"},
+        "root_authority": {"const": "NONE"}
+      }
+    },
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "latticeBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "file_sha256", "schema_result", "runtime_result", "immutable"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "file_sha256": {"$ref": "#/$defs/sha256"},
+        "schema_result": {"enum": ["PASS", "FAIL"]},
+        "runtime_result": {"enum": ["PASS", "FAIL"]},
+        "immutable": {"type": "boolean"},
+        "failure_lattice_snapshot_hash": {"$ref": "#/$defs/sha256"}
+      }
+    }
+  }
+}

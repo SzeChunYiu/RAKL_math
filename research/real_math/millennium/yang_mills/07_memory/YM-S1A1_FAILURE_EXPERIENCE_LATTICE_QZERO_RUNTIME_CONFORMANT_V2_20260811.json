@@ -1,0 +1,98 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE",
+      "atom_id": "YM-S1a",
+      "candidate_id": "YM-S1A-CAL-RESTRICTED-SOURCE",
+      "context_packet_hash": "sha256:561518a9b62025454014828057a4ad657707f673f9e98b5fb27aceaf8d00f03e",
+      "research_trace_event_id": "YM-S1-E009",
+      "method_family": "infer the full transfer-matrix spectral gap from exponential decay of a restricted source family",
+      "failure_mode": "the source-generated sector can be spectrally blind to a lower-energy excitation",
+      "residual_signature": [
+        "T=diag(1,1/2,1/4) is positive self-adjoint with true first excited ratio 1/2",
+        "the tested source satisfies A Omega=e2 and has exact correlator C_A(n)=(1/4)^n",
+        "the source-visible decay rate log 4 is strictly larger than the true full gap log 2"
+      ],
+      "broken_assumptions": [
+        "fast decay of the tested correlators certifies that no lower-energy state exists outside their generated cyclic subspace"
+      ],
+      "scope_conditions": [
+        "positive self-adjoint transfer matrices",
+        "source families whose vacuum-generated span has not been proved dense/cyclic in the physical excited-state space"
+      ],
+      "competing_diagnoses": [
+        "the decay-to-gap inference is valid only within the tested source-generated spectral subspace",
+        "a kinematically complete source basis repairs visibility but still requires a common uniform decay rate over that complete family",
+        "Yang-Mills-specific gauge constraints could alter which source family is physically natural but do not repair the abstract logical gap by themselves"
+      ],
+      "selected_diagnosis": "loss of spectral visibility: a non-dense source-generated sector can omit the true first excitation, so restricted-source clustering does not determine the full transfer gap",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/01_frontier/YM-S1A_SOURCE_VISIBILITY_CALIBRATION_20260811.md",
+        "tests/math_applications/test_yang_mills_yms1a_source_visibility.py",
+        "Osterwalder-Seiler 1978 DOI 10.1016/0003-4916(78)90039-8",
+        "Baez 1996 DOI 10.1006/aima.1996.0012",
+        "Burgio et al. 2000 DOI 10.1016/S0550-3213(99)00533-7"
+      ],
+      "falsifier_or_attempt": "use an exact three-state positive transfer matrix and a vacuum source orthogonal to the lower excited state",
+      "observed_result": "the tested correlator decays exactly as 4^{-n} even though an orthogonal state with transfer eigenvalue 1/2 gives the smaller full spectral gap log 2",
+      "local_repair_attempts": [
+        "split G4 into G4a kinematic source completeness and G4b a common decay-rate theorem over a complete/dense source family",
+        "bind later lattice Yang-Mills arguments to an explicit fixed-lattice gauge-invariant basis before inferring a full gap",
+        "do not import continuum local-algebra cyclicity before continuum Yang-Mills existence is established"
+      ],
+      "timestamp": "2026-08-11T06:57:20+00:00",
+      "artifact_hash": "sha256:622a761738b90072fd32d9b5e469ad88976e8862e55c49ebb5ad956fdb03dd3d"
+    },
+    {
+      "failure_id": "F-YM-S1A1-C001-QZERO-LOGARITHM-DOMAIN",
+      "atom_id": "YM-S1a1",
+      "candidate_id": "YM-S1A1-C001-DENSE-SOURCE-COMMON-RATE-SPECTRAL-EXCLUSION",
+      "context_packet_hash": "sha256:082ddb6131aa0316cbdd17248d762af6bc036caed877a2acce42087f1c940e3a",
+      "research_trace_event_id": "YM-S1A1-E014",
+      "method_family": "dense-source transfer spectral exclusion followed by an ordinary real-valued Hamiltonian lower bound -(1/a)log(q)",
+      "failure_mode": "v1 admitted q=0 while stating the ordinary real expression -(1/a)log(q), which is undefined at q=0; the abstract q=0 spectral exclusion itself is not refuted",
+      "residual_signature": [
+        "LOGARITHM_DOMAIN at the target-facing Hamiltonian corollary",
+        "strict successor chronology omitted this new failure from dual memory before v2 CANDIDATE_PROPOSED",
+        "Yang–Mills target gluing and G5/G6/G7 remain open"
+      ],
+      "broken_assumptions": [
+        "the ordinary real logarithm is available at q=0",
+        "the pre-v1 memory snapshot can govern a successor after a newly observed material failure"
+      ],
+      "scope_conditions": [
+        "frozen v1 q=0 endpoint and its ordinary real Hamiltonian corollary only",
+        "positive-q spectral proof remains valid",
+        "abstract spectral exclusion at q=0 remains valid",
+        "no Yang–Mills target, novelty, formal-proof, independent-review, or root authority"
+      ],
+      "competing_diagnoses": [
+        "narrow the target-facing statement to 0<q<1",
+        "keep q=0 only under an explicit extended-real convention and separately handle nontrivial excited space",
+        "treat v2 as mathematically correct but retrospectively triggered because the failure was not in dual memory before proposal"
+      ],
+      "selected_diagnosis": "SUPPORTED local specification-domain defect in v1 plus a separate strict-successor chronology defect for v2; neither refutes the positive-q proof",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/04_candidates/YM-S1A1_C001_DENSE_SOURCE_COMMON_RATE_SPECTRAL_EXCLUSION_20260811.md",
+        "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_C001_V2_Q_ZERO_BOUNDARY_REVIEW_20260811.md",
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_C001_V1_TO_V2_REVIEW_CORRECTION_20260811.json",
+        "research/real_math/millennium/yang_mills/09_trace/YM-S1A1_C001_V2_CORRECTION_TRACE_20260811.json",
+        "trace-event:YM-S1A1-E013",
+        "trace-event:YM-S1A1-E014"
+      ],
+      "falsifier_or_attempt": "substitute q=0 into the stated ordinary real-valued expression -(1/a)log(q) and audit whether a finite real Hamiltonian bound is defined",
+      "observed_result": "the ordinary real logarithm is undefined at q=0; hostile exact-head review therefore blocked v1 as target-facing, while accepting the abstract q=0 projection statement",
+      "local_repair_attempts": [
+        "preserve v1 bytes as negative/specification history",
+        "preserve v2 bytes as a 0<q<1 retrospective external-review correction",
+        "deny v2 strict successor-discovery credit",
+        "freeze a new future-only context, dual-memory review and trace before any later candidate"
+      ],
+      "timestamp": "2026-08-11T11:41:00+00:00",
+      "artifact_hash": "sha256:c4923d1b1d77686a2559cd82e27d4f08b6cbfb1518324ff27bc4cb1018e5c786"
+    }
+  ],
+  "links": []
+}

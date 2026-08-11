@@ -1,0 +1,167 @@
+{
+  "trace_id": "TRACE-YM-S1A1-POST-CANDIDATE-20260811",
+  "continues_trace": "TRACE-YM-S1A1-PRE-CANDIDATE-REVIEW-BINDING-REPAIRED-20260811",
+  "entries": [
+    {
+      "event_id": "YM-S1A1-E008",
+      "atom_id": "YM-S1a1",
+      "event_type": "CANDIDATE_PROPOSED",
+      "timestamp": "2026-08-11T11:24:00+00:00",
+      "state_summary": "Strict child gate was already frozen through E007; candidate generation now targets only the abstract dense-source common-rate implication.",
+      "action_summary": "Propose YM-S1A1-C001 with positivity, dense excited-source span and one common q<1; keep all Yang-Mills target premises outside the conclusion.",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/04_candidates/YM-S1A1_C001_DENSE_SOURCE_COMMON_RATE_SPECTRAL_EXCLUSION_20260811.md",
+        "sha256:a8b6081ac1333468fc05fa98ad2d456f89d2ea934250517af265f803e8408f9b"
+      ],
+      "alternatives_considered": [
+        "direct SZZ-to-transfer theorem",
+        "RG transport G5",
+        "restricted-source decay variant"
+      ],
+      "decision_rationale": "The prior hidden-state failure makes density load-bearing; the abstract lemma is the cheapest discriminator before target-specific gluing.",
+      "outputs": [
+        "candidate:YM-S1A1-C001",
+        "novelty_class:PROVISIONAL_RAKL_TRIVIAL"
+      ],
+      "uncertainties": [
+        "no target-specific source density or covariance-to-transfer identity is established"
+      ],
+      "residuals": [
+        "G5",
+        "G6",
+        "G7",
+        "OS/SZZ binding"
+      ],
+      "next_steps": [
+        "run planted FAIL/PASS/nonuniform-rate worlds"
+      ],
+      "previous_event_hash": "sha256:7c93020929cde30bcc7ed92a5300f7e938064655cc24033ce0fe602c12b1edaf",
+      "artifact_hash": "sha256:89ef91b264c96b6046f72d6bc6429d62849bd2637e10256eb8c4c9d7ce6a0803"
+    },
+    {
+      "event_id": "YM-S1A1-E009",
+      "atom_id": "YM-S1a1",
+      "event_type": "FALSIFIER_RUN",
+      "timestamp": "2026-08-11T11:25:00+00:00",
+      "state_summary": "Three known-answer worlds test exactly the density and common-q quantifiers.",
+      "action_summary": "Run old hidden-state failure, complete-source success, and dense sourcewise-rate q_k->1 zero-gap hostile world.",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/04_candidates/YM-S1A1_C001_DENSE_SOURCE_COMMON_RATE_SPECTRAL_EXCLUSION_20260811.md",
+        "research/real_math/millennium/yang_mills/01_frontier/YM-S1A_SOURCE_VISIBILITY_CALIBRATION_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "The first world must fail the density hypothesis, the second must recover the exact finite gap, and the third must show that sourcewise q_psi<1 without a uniform q is insufficient.",
+      "outputs": [
+        "F1:REJECTED_BY_DENSITY",
+        "P1:EXACT_PASS_q=1/2",
+        "F2:REJECTED_NO_COMMON_q"
+      ],
+      "uncertainties": [
+        "these are exact mathematical calibrations, not a Yang-Mills numerical experiment"
+      ],
+      "residuals": [],
+      "next_steps": [
+        "same-context derivation review"
+      ],
+      "previous_event_hash": "sha256:89ef91b264c96b6046f72d6bc6429d62849bd2637e10256eb8c4c9d7ce6a0803",
+      "artifact_hash": "sha256:da41130933841b15905f19290260b18c2134e8b4e38daa164a88a54853011721"
+    },
+    {
+      "event_id": "YM-S1A1-E010",
+      "atom_id": "YM-S1a1",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-11T11:26:00+00:00",
+      "state_summary": "The spectral theorem plus closedness of spectral projections proves the abstract implication; hostile worlds confirm both load-bearing hypotheses.",
+      "action_summary": "Record local partial success without instantiating the Yang-Mills target hypotheses.",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/04_candidates/YM-S1A1_C001_DENSE_SOURCE_COMMON_RATE_SPECTRAL_EXCLUSION_20260811.md",
+        "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_C001_RESULT_REVIEW_20260811.md"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "For every source, any spectral mass above q contradicts the nth-root bound. The projection onto (q,1] then vanishes on a dense span and hence on the entire excited space.",
+      "outputs": [
+        "LOCAL_MATH_CLOSED",
+        "outcome:PARTIAL_SUCCESS",
+        "candidate_sha256:a8b6081ac1333468fc05fa98ad2d456f89d2ea934250517af265f803e8408f9b"
+      ],
+      "uncertainties": [
+        "no bounded novelty search",
+        "no formal checker receipt",
+        "same-context review is not independent"
+      ],
+      "residuals": [
+        "target-specific gluing remains open"
+      ],
+      "next_steps": [
+        "open exact gluing child"
+      ],
+      "previous_event_hash": "sha256:da41130933841b15905f19290260b18c2134e8b4e38daa164a88a54853011721",
+      "artifact_hash": "sha256:74570e7f8cdf830bd3a7dd675ee0a9eed3d66eabc4ea5eccc24ee2912b446c30"
+    },
+    {
+      "event_id": "YM-S1A1-E011",
+      "atom_id": "YM-S1a1",
+      "event_type": "RESIDUAL_OPENED",
+      "timestamp": "2026-08-11T11:27:00+00:00",
+      "state_summary": "The abstract source-visibility logic is no longer the active bottleneck. The remaining nearest obstruction is same-theory binding of Euclidean covariance, temporal translation and dense physical source vectors.",
+      "action_summary": "Open YM-S1a2 as CONTEXT_REQUIRED and classify the residual as gluing/representation-binding rather than abstract spectral mathematics.",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/02_problem_dag/YM-S1A2.yaml"
+      ],
+      "alternatives_considered": [
+        "continue refining abstract lemma",
+        "jump to G5 immediately"
+      ],
+      "decision_rationale": "Target instantiation has higher information value now that the local implication is closed; jumping to G5 would leave an avoidable unresolved source-to-spectrum interface.",
+      "outputs": [
+        "child_atom:YM-S1a2",
+        "failure_category:GLUING_REPRESENTATION_BINDING"
+      ],
+      "uncertainties": [
+        "SZZ is strong-coupling only",
+        "fixed-graph completeness may not survive infinite-volume OS reconstruction"
+      ],
+      "residuals": [
+        "G5_OPEN",
+        "G6_OPEN",
+        "G7_OPEN"
+      ],
+      "next_steps": [
+        "fresh context fibre for YM-S1a2 before any candidate"
+      ],
+      "previous_event_hash": "sha256:74570e7f8cdf830bd3a7dd675ee0a9eed3d66eabc4ea5eccc24ee2912b446c30",
+      "artifact_hash": "sha256:4bcc9d254f6717372b882a335d3b7833c8813eca9eeca3ead2592d8125993415"
+    },
+    {
+      "event_id": "YM-S1A1-E012",
+      "atom_id": "YM-S1a1",
+      "event_type": "REVIEWED",
+      "timestamp": "2026-08-11T11:28:00+00:00",
+      "state_summary": "Same-context five-lens result review accepts the local derivation, rejects novelty/root escalation, and preserves the target gluing debt.",
+      "action_summary": "Bind the result review, v3 TaskEpisode and seven-axis saturation shadow.",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_C001_RESULT_REVIEW_20260811.md",
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_DENSE_SOURCE_TASK_EPISODE_20260811.json",
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_SATURATION_VECTOR_SHADOW_20260811.json"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "Role-separated same-context review is useful for error finding but grants no independent-review credit; all v3 records remain proposal/shadow.",
+      "outputs": [
+        "task_episode:EP-YM-S1A1-DENSE-SOURCE-GAP-20260811",
+        "saturation_reopened:RELATION|PATH|KNOWLEDGE"
+      ],
+      "uncertainties": [
+        "formal and novelty authority unset"
+      ],
+      "residuals": [
+        "YM-S1a2 context required"
+      ],
+      "next_steps": [
+        "do not notify as root solution; continue spectral program"
+      ],
+      "previous_event_hash": "sha256:4bcc9d254f6717372b882a335d3b7833c8813eca9eeca3ead2592d8125993415",
+      "artifact_hash": "sha256:bfa9c462a1b2d098d279814739ffcbaec1b73192ae12ebb9973399c01cda4515"
+    }
+  ],
+  "authority": "PUBLIC_DECISION_TRACE / NO_ROOT_AUTHORITY"
+}
