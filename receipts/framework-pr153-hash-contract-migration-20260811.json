@@ -764,7 +764,7 @@
     "previous_commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
     "provisional_target_commit": "3d4dde94ed8d6be04641b96ecf89389de55b61ce",
     "final_merged_commit": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
-    "exact_application_suite_status": "PENDING_FINAL_EXACT_APPLICATION_SUITE",
+    "exact_application_suite_status": "PASS_EXACT_APPLICATION_SUITE_417_TESTS",
     "push_allowed": false
   },
   "authority_contract": {
@@ -782,7 +782,8 @@
     "git:3bdd4718d3091661d9a7b007cb4bafe706650d5b",
     "framework-git:bd1a2768f0f474ff44ffa25243241f94bfaf6466",
     "framework-git:9027cc6beab7e935d714bbdf8e902b89b50caaa8",
-    "command:python tools/run_application_tests.py --framework framework/RAKL -> 19 failed, 394 passed (pre-migration RED)"
+    "command:python tools/run_application_tests.py --framework framework/RAKL -> 19 failed, 394 passed (pre-migration RED)",
+    "command:python tools/run_application_tests.py --framework framework/RAKL -> 417 passed in 41.74s (final merged pin)"
   ],
-  "artifact_hash": "sha256:a45d7d9daf491ed6dd769c7d4af296f5bc83aa30574081092916a581665781fd"
+  "artifact_hash": "sha256:c56974deacd05b700505ca1443fcca555d3d7cb13225c708781bbe55c5b5c97b"
 }
