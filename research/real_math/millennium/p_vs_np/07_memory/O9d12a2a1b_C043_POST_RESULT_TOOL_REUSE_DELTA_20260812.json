@@ -1,0 +1,37 @@
+{
+  "tool_id": "T-PNP-EXACT-NEIGHBORHOOD-TYPE-UPPER-BOUND",
+  "name": "Exact neighborhood-type quotient upper construction",
+  "kind": "upper_bound_falsifier",
+  "source_tool_artifact_hash": "sha256:d6a64a5be6f1fab9f84fa9e0fc052ed5206243c799742d916cefa1a4df896d32",
+  "reuse_atom_id": "O9d12a2a1b-C043",
+  "reuse_candidate_id": "C043-FIRST-ROW-SPLIT-RESIDUAL-v1",
+  "reuse_status": "SUCCESSFUL_SCOPED_REUSE_WITHOUT_AUTHORITY_EXPANSION",
+  "mathematical_input": "exact full accumulated complement neighborhoods at G16, including old bands and fallback edges",
+  "validated_preconditions": [
+    "all row and column complement neighborhoods were classified exactly",
+    "the eight classes on each side are nonempty and cover the full vertex sets",
+    "adjacency is constant on every class product by neighborhood equality",
+    "the associated-graph/complement polarity is preserved",
+    "the construction is used only in the upper-bound direction"
+  ],
+  "mathematical_result": [
+    "t_row(G16)=8",
+    "t_column(G16)=8",
+    "D_intersection(G16)<=8",
+    "rho(G16)<=8"
+  ],
+  "new_scope_lesson": "Successful reuse falsifies coercive growth at G16 but does not promote a uniform tool: future reuse must again prove full-history twins on both sides and cannot infer a lower bound from type growth.",
+  "new_failure_id": "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING",
+  "authority_after_reuse": "CONDITIONALLY_REUSABLE",
+  "non_guarantees": [
+    "no exact value of D_intersection(G16) or rho(G16)",
+    "no later-level or uniform type bound",
+    "no lower bound, recurrence, circuit result, novelty, or P-versus-NP authority",
+    "software assurance does not add mathematical authority"
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/04_candidates/C043_FIRST_ROW_SPLIT_RESULT_20260812.md",
+    "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C043_ACCUMULATED_TWINS_POLARITY_HOSTILE_REVIEW_20260812.json"
+  ],
+  "artifact_hash": "sha256:3016bdd6b748fa12c596e049904bd20c7b48d8a244f879918a2fdb229c12230b"
+}

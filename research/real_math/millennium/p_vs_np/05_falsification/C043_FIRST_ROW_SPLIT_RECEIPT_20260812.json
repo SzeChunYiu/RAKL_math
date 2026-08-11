@@ -1,0 +1,680 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "PNP-C043-FIRST-ROW-SPLIT-GATE-20260812",
+  "candidate_id": "C043-FIRST-ROW-SPLIT-RESIDUAL-v1",
+  "length_formula": "L0(v,m)=8+gamma_len(v)+gamma_len(m)+3m(1+bit_length(v)); L=L0+(L0 mod 2)",
+  "length_classes": [
+    {
+      "word_length": 26,
+      "parent_level": 13,
+      "canonical_parameter_pairs": [
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "canonical_unsat_count": 0,
+      "canonical_unsat_words": []
+    },
+    {
+      "word_length": 28,
+      "parent_level": 14,
+      "canonical_parameter_pairs": [],
+      "canonical_unsat_count": 0,
+      "canonical_unsat_words": []
+    },
+    {
+      "word_length": 30,
+      "parent_level": 15,
+      "canonical_parameter_pairs": [
+        [
+          1,
+          3
+        ]
+      ],
+      "canonical_unsat_count": 42,
+      "canonical_unsat_words": [
+        "111001011011010101010101111111",
+        "111001011011010101010111111111",
+        "111001011011010101011101111111",
+        "111001011011010101011111111111",
+        "111001011011010101110101111111",
+        "111001011011010101110111111111",
+        "111001011011010101111101111111",
+        "111001011011010101111111010101",
+        "111001011011010101111111010111",
+        "111001011011010101111111011101",
+        "111001011011010101111111011111",
+        "111001011011010101111111110101",
+        "111001011011010101111111110111",
+        "111001011011010101111111111101",
+        "111001011011010101111111111111",
+        "111001011011010111010101111111",
+        "111001011011010111111111010101",
+        "111001011011011101010101111111",
+        "111001011011011101111111010101",
+        "111001011011011111010101111111",
+        "111001011011011111111111010101",
+        "111001011011110101010101111111",
+        "111001011011110101111111010101",
+        "111001011011110111010101111111",
+        "111001011011110111111111010101",
+        "111001011011111101010101111111",
+        "111001011011111101111111010101",
+        "111001011011111111010101010101",
+        "111001011011111111010101010111",
+        "111001011011111111010101011101",
+        "111001011011111111010101011111",
+        "111001011011111111010101110101",
+        "111001011011111111010101110111",
+        "111001011011111111010101111101",
+        "111001011011111111010101111111",
+        "111001011011111111010111010101",
+        "111001011011111111011101010101",
+        "111001011011111111011111010101",
+        "111001011011111111110101010101",
+        "111001011011111111110111010101",
+        "111001011011111111111101010101",
+        "111001011011111111111111010101"
+      ]
+    }
+  ],
+  "parent_15_new_band": {
+    "canonical_unsat_count": 42,
+    "active_rows": [
+      29402,
+      29403,
+      29406,
+      29407
+    ],
+    "row_residuals": [
+      {
+        "row": 29402,
+        "suffixes": [
+          21887,
+          22015,
+          22399,
+          22527,
+          23935,
+          24063,
+          24447,
+          24533,
+          24535,
+          24541,
+          24543,
+          24565,
+          24567,
+          24573,
+          24575,
+          30079,
+          32725
+        ],
+        "size": 17
+      },
+      {
+        "row": 29403,
+        "suffixes": [
+          21887,
+          24533,
+          30079,
+          32725
+        ],
+        "size": 4
+      },
+      {
+        "row": 29406,
+        "suffixes": [
+          21887,
+          24533,
+          30079,
+          32725
+        ],
+        "size": 4
+      },
+      {
+        "row": 29407,
+        "suffixes": [
+          21887,
+          24533,
+          30037,
+          30039,
+          30045,
+          30047,
+          30069,
+          30071,
+          30077,
+          30079,
+          30165,
+          30549,
+          30677,
+          32085,
+          32213,
+          32597,
+          32725
+        ],
+        "size": 17
+      }
+    ],
+    "row_residual_classes": [
+      {
+        "rows": [
+          29402
+        ],
+        "suffixes": [
+          21887,
+          22015,
+          22399,
+          22527,
+          23935,
+          24063,
+          24447,
+          24533,
+          24535,
+          24541,
+          24543,
+          24565,
+          24567,
+          24573,
+          24575,
+          30079,
+          32725
+        ],
+        "size": 17
+      },
+      {
+        "rows": [
+          29403,
+          29406
+        ],
+        "suffixes": [
+          21887,
+          24533,
+          30079,
+          32725
+        ],
+        "size": 4
+      },
+      {
+        "rows": [
+          29407
+        ],
+        "suffixes": [
+          21887,
+          24533,
+          30037,
+          30039,
+          30045,
+          30047,
+          30069,
+          30071,
+          30077,
+          30079,
+          30165,
+          30549,
+          30677,
+          32085,
+          32213,
+          32597,
+          32725
+        ],
+        "size": 17
+      }
+    ],
+    "distinct_row_residual_count": 3,
+    "suffix_neighborhood_classes": [
+      {
+        "rows": [
+          29402
+        ],
+        "suffixes": [
+          22015,
+          22399,
+          22527,
+          23935,
+          24063,
+          24447,
+          24535,
+          24541,
+          24543,
+          24565,
+          24567,
+          24573,
+          24575
+        ],
+        "suffix_count": 13
+      },
+      {
+        "rows": [
+          29402,
+          29403,
+          29406,
+          29407
+        ],
+        "suffixes": [
+          21887,
+          24533,
+          30079,
+          32725
+        ],
+        "suffix_count": 4
+      },
+      {
+        "rows": [
+          29407
+        ],
+        "suffixes": [
+          30037,
+          30039,
+          30045,
+          30047,
+          30069,
+          30071,
+          30077,
+          30165,
+          30549,
+          30677,
+          32085,
+          32213,
+          32597
+        ],
+        "suffix_count": 13
+      }
+    ],
+    "distinct_nonempty_column_neighborhood_count": 3
+  },
+  "full_accumulated_G16": {
+    "level": 16,
+    "side": 65536,
+    "complement_edge_count": 62,
+    "row_types": [
+      {
+        "type_index": 0,
+        "representative": 0,
+        "class_size": 1,
+        "vertices": [
+          0
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          0,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096,
+          8192,
+          16384,
+          32768
+        ]
+      },
+      {
+        "type_index": 1,
+        "representative": 1,
+        "class_size": 1,
+        "vertices": [
+          1
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          2
+        ]
+      },
+      {
+        "type_index": 2,
+        "representative": 2,
+        "class_size": 1,
+        "vertices": [
+          2
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          1,
+          2
+        ]
+      },
+      {
+        "type_index": 3,
+        "representative": 3,
+        "class_size": 65528,
+        "vertices": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "vertices_truncated": true,
+        "complement_neighborhood": []
+      },
+      {
+        "type_index": 4,
+        "representative": 3674,
+        "class_size": 1,
+        "vertices": [
+          3674
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          5503,
+          8149
+        ]
+      },
+      {
+        "type_index": 5,
+        "representative": 29402,
+        "class_size": 1,
+        "vertices": [
+          29402
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          54655,
+          54783,
+          55167,
+          55295,
+          56703,
+          56831,
+          57215,
+          57301,
+          57303,
+          57309,
+          57311,
+          57333,
+          57335,
+          57341,
+          57343,
+          62847,
+          65493
+        ]
+      },
+      {
+        "type_index": 6,
+        "representative": 29403,
+        "class_size": 2,
+        "vertices": [
+          29403,
+          29406
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          54655,
+          57301,
+          62847,
+          65493
+        ]
+      },
+      {
+        "type_index": 7,
+        "representative": 29407,
+        "class_size": 1,
+        "vertices": [
+          29407
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          54655,
+          57301,
+          62805,
+          62807,
+          62813,
+          62815,
+          62837,
+          62839,
+          62845,
+          62847,
+          62933,
+          63317,
+          63445,
+          64853,
+          64981,
+          65365,
+          65493
+        ]
+      }
+    ],
+    "column_types": [
+      {
+        "type_index": 0,
+        "representative": 0,
+        "class_size": 15,
+        "vertices": [
+          0,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096,
+          8192,
+          16384,
+          32768
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          0
+        ]
+      },
+      {
+        "type_index": 1,
+        "representative": 1,
+        "class_size": 1,
+        "vertices": [
+          1
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          2
+        ]
+      },
+      {
+        "type_index": 2,
+        "representative": 2,
+        "class_size": 1,
+        "vertices": [
+          2
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          1,
+          2
+        ]
+      },
+      {
+        "type_index": 3,
+        "representative": 3,
+        "class_size": 65487,
+        "vertices": [
+          3,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "vertices_truncated": true,
+        "complement_neighborhood": []
+      },
+      {
+        "type_index": 4,
+        "representative": 5503,
+        "class_size": 2,
+        "vertices": [
+          5503,
+          8149
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          3674
+        ]
+      },
+      {
+        "type_index": 5,
+        "representative": 54655,
+        "class_size": 4,
+        "vertices": [
+          54655,
+          57301,
+          62847,
+          65493
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          29402,
+          29403,
+          29406,
+          29407
+        ]
+      },
+      {
+        "type_index": 6,
+        "representative": 54783,
+        "class_size": 13,
+        "vertices": [
+          54783,
+          55167,
+          55295,
+          56703,
+          56831,
+          57215,
+          57303,
+          57309,
+          57311,
+          57333,
+          57335,
+          57341,
+          57343
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          29402
+        ]
+      },
+      {
+        "type_index": 7,
+        "representative": 62805,
+        "class_size": 13,
+        "vertices": [
+          62805,
+          62807,
+          62813,
+          62815,
+          62837,
+          62839,
+          62845,
+          62933,
+          63317,
+          63445,
+          64853,
+          64981,
+          65365
+        ],
+        "vertices_truncated": false,
+        "complement_neighborhood": [
+          29407
+        ]
+      }
+    ],
+    "row_type_count": 8,
+    "column_type_count": 8,
+    "quotient_complement": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        7,
+        5
+      ],
+      [
+        7,
+        7
+      ]
+    ],
+    "quotient_complement_edge_count": 10,
+    "type_class_rectangle_upper_bound": 8,
+    "rho_upper_bound_by_type_classes": 8
+  },
+  "scope": {
+    "proves_only_through_level": 16,
+    "runs_full_cover_LP": false,
+    "grants_quotient_cover_optimum": false,
+    "grants_uniform_type_growth": false,
+    "grants_recurrence": false,
+    "grants_circuit_lower_bound": false,
+    "grants_p_vs_np_authority": false,
+    "computation_is_proof": false
+  },
+  "artifact_hash": "sha256:640122c54b0e7edc187405b232cbbf1bd28f3954f305d7609446f7d69ba697d2"
+}

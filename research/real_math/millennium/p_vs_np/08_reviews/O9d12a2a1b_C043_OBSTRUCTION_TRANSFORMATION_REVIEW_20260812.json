@@ -1,0 +1,136 @@
+{
+  "review_id": "OTR-PNP-C043-20260812",
+  "target_atom_id": "O9d12a2a1b-C043",
+  "target_context_hash": "sha256:fff65cd0b2cc08bf7aaa1923fb0088ae8eca4dbd844b927eb2f6f05b56479ae8",
+  "research_memory_review_hash": "sha256:b9cf97081bff92e197d265eb1bda5de2a6ddbda6225f3bc1162554b0164f9fdb",
+  "episode_memory_snapshot_hash": "eebdc88774cea55aeab57efdc8a5079abe35846c73880ff8a3b1ed85d5224b2a",
+  "obstruction": {
+    "obstruction_id": "OBS-PNP-C043-FIRST-ROW-SPLIT",
+    "domain": "mathematics",
+    "roles": [
+      "encoded word",
+      "row label",
+      "complement neighborhood",
+      "cover certificate"
+    ],
+    "relations": [
+      "word splits into row prefix and suffix",
+      "row label indexes a complement star",
+      "identical stars define quotient types"
+    ],
+    "constraints": [
+      "exact frozen decoder",
+      "finite parent level",
+      "associated graph polarity"
+    ],
+    "failure_mechanisms": [
+      "early semantic signal can remain concentrated in few neighborhood types"
+    ],
+    "invariants_to_preserve": [
+      "exact decoder language",
+      "complement/graph polarity",
+      "cover lift direction"
+    ],
+    "desired_transition": [
+      "locate first multiple-row UNSAT layer",
+      "expose exact row-type count",
+      "produce source-valid upper bound before lower-bound search"
+    ],
+    "forbidden_losses": [
+      "finite quotient extrapolated to asymptotic",
+      "type growth treated as cover lower bound",
+      "decoder or protected evaluator changed after result access"
+    ]
+  },
+  "direct_search_status": "MATCHES_FOUND",
+  "jump_search_status": "NOT_RUN",
+  "glue_search_status": "NOT_RUN",
+  "selected_mode": "SEARCH",
+  "direct_candidate_episode_ids": [
+    "E-PNP-C042-EXACT-NEIGHBORHOOD-QUOTIENT"
+  ],
+  "direct_mapping_witnesses": [
+    {
+      "witness_id": "MAP-PNP-C042-TO-C043-EXACT-QUOTIENT",
+      "episode_id": "E-PNP-C042-EXACT-NEIGHBORHOOD-QUOTIENT",
+      "target_obstruction_id": "OBS-PNP-C043-FIRST-ROW-SPLIT",
+      "role_mapping": [
+        [
+          "encoded word",
+          "encoded word"
+        ],
+        [
+          "row label",
+          "row label"
+        ],
+        [
+          "complement neighborhood",
+          "complement neighborhood"
+        ],
+        [
+          "cover certificate",
+          "cover certificate"
+        ]
+      ],
+      "shared_relations": [
+        "word splits into row prefix and suffix",
+        "row label indexes a complement star",
+        "identical stars define quotient types"
+      ],
+      "shared_constraints": [
+        "exact frozen decoder",
+        "finite parent level",
+        "associated graph polarity"
+      ],
+      "precondition_mapping": [
+        [
+          "exact quotient classes have constant adjacency on each class product",
+          "define classes only after proving equality of full accumulated complement neighborhoods"
+        ],
+        [
+          "class maps are surjective and all classes nonempty",
+          "exhibit a vertex representative for every claimed row and column type"
+        ],
+        [
+          "the full associated-graph cover lifts from the quotient in the upper-bound direction",
+          "use only the registered C013/type-class upper construction for the same full associated graph"
+        ]
+      ],
+      "unmatched_source_preconditions": [],
+      "disanalogies": [
+        "C042 first UNSAT words shared one header row, whereas C043 intentionally targets the first possible multi-row batch",
+        "the C043 quotient edge set and cover number are not known from the source episode",
+        "finite residual-language terminology does not supply an asymptotic theorem"
+      ],
+      "target_validation_obligations": [
+        "derive the first later UNSAT-capable length and all equality parameters analytically",
+        "prove exact prefix and suffix completion residual classes",
+        "account for every old band and fallback edge before claiming full twins",
+        "derive only the finite type-class upper bound and rerun multiplexing/quotient falsifiers before any expensive search"
+      ],
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C043_MATH_CONTEXT_FIBER_20260812.json",
+        "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C043_OBSTRUCTION_TRANSFORMATION_MEMORY_20260812.json"
+      ],
+      "artifact_hash": "sha256:f2f37cb8179803b674bc236eb92b85720eba10f463bfdc487b8e5d3e7a0ce448"
+    }
+  ],
+  "jump_mapping_witnesses": [],
+  "glue_witness": null,
+  "selected_episode_ids": [
+    "E-PNP-C042-EXACT-NEIGHBORHOOD-QUOTIENT"
+  ],
+  "exhaustion_witness": null,
+  "missing_transformation_specification": null,
+  "unresolved_warnings": [
+    "SEARCH supplies only a candidate route; the target residual/type identities still require proof",
+    "a finite larger quotient may retain a constant cover",
+    "LIFT is not justified by one post-C042 transition"
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C043_OBSTRUCTION_TRANSFORMATION_MEMORY_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C043_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C043_MATH_CONTEXT_FIBER_20260812.json"
+  ],
+  "artifact_hash": "sha256:84aa33831875b58c7dea1f39b98b7064501a7704cc68313542f2ef714269039b"
+}

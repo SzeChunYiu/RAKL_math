@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "PNP-C043-ACCUMULATED-TWINS-POLARITY-HOSTILE-REVIEW-20260812",
+  "review_type": "SAME_CONTEXT_HOSTILE_MATHEMATICAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "object": "C043 exact accumulated G16 row/column types and type-class upper-bound polarity",
+  "verdict": "ACCEPT_FINITE_UPPER_BOUND_ONLY",
+  "blocking_concerns_resolved": [
+    "new-band types are not added to C042 counts without checking old bands and fallback edges",
+    "row and column types are both classified rather than extrapolating from one side",
+    "support separation proves noncollision with old nonempty types",
+    "the type-class construction is stated only as an upper bound and no optimum is claimed"
+  ],
+  "accepted_mathematical_claims": [
+    "the new band has three nonempty row types and three nonempty column types",
+    "fallback columns at parents 13,14,15 join the existing complement-neighborhood {0} column class",
+    "the old five types on each side persist and exactly three new types are added on each side",
+    "t_row(G16)=t_column(G16)=8",
+    "eight row-class rectangles cover G16, so D_intersection(G16)<=8 and rho(G16)<=8"
+  ],
+  "full_history_noncollision_argument": {
+    "rows": "Old nonempty row neighborhoods have old-band support (with row zero also meeting fallback column 32768); every new canonical row neighborhood is nonempty and strictly above 32768.",
+    "columns": "Old nonempty column neighborhoods use only rows 0,1,2,3674; each new canonical column neighborhood is nonempty and uses only rows 29402,29403,29406,29407.",
+    "empty_classes": "New types are nonempty and therefore cannot collide with the old empty type."
+  },
+  "polarity_check": "If N_i is a common complement star for row class C_i, then C_i x (Y\\N_i) is contained in the associated graph, and the union over all row classes equals the graph. This proves an upper cover only.",
+  "rejected_overclaims": [
+    "type count 8 is not an exact cover number",
+    "three new semantic types do not prove coercive cover growth",
+    "the ten-cell quotient complement is not a lower-bound certificate",
+    "finite G16 behavior gives no recurrence, circuit lower bound, or P-versus-NP authority"
+  ],
+  "authority": {
+    "computation_is_proof": false,
+    "independent_peer_review": false,
+    "grants_quotient_cover_optimum": false,
+    "grants_uniform_type_growth": false,
+    "grants_p_vs_np_authority": false
+  },
+  "artifact_hash": "sha256:647934dc51e1d6b82c3786ea87f3eb3493a618eb1ec6504db9249ce141d00684"
+}

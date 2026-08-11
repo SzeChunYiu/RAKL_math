@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "PNP-C043-LENGTH-PNT-RESIDUAL-HOSTILE-REVIEW-20260812",
+  "review_type": "SAME_CONTEXT_HOSTILE_MATHEMATICAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "object": "C043 length-26/28/30 classification, P/N/T obstruction count, and four prefix residual languages",
+  "verdict": "ACCEPT_AFTER_EXPLICIT_PADDING_AND_RESIDUAL_PROOF",
+  "blocking_concerns_resolved": [
+    "the parameter proof now accounts for raw odd lengths that could pad to 26, 28, or 30",
+    "the receipt enumeration is replaced as truth authority by the bitlength case split",
+    "the 42-word count is derived by inclusion-exclusion from the exact P/N/T criterion",
+    "the four residual sizes and mixed-row equality are derived analytically rather than inferred from hashes",
+    "explicit suffix witnesses separate the three residual classes"
+  ],
+  "accepted_mathematical_claims": [
+    "length 26 has exactly (4,1),(5,1),(6,1),(7,1), all one-clause and SAT",
+    "length 28 has no canonical parameter pair",
+    "length 30 has uniquely (v,m)=(1,3)",
+    "a one-variable three-clause formula is UNSAT exactly when its clause list contains both P=000 and N=111",
+    "the exact canonical UNSAT count is 8^3-2*7^3+6^3=42",
+    "the residual sizes are 17,4,4,17 and the two mixed-prefix residuals are identical",
+    "suffixes 22015, 30037, and 21887 witness positive-only, negative-only, and common acceptance"
+  ],
+  "hostile_checks": {
+    "padding_gap": "No solution of L0 in {25,26,27,28,29,30} was skipped: m=1 gives 11+5a, m>=2,a>=2 gives at least 32, and a=1 gives the even values 8+2b+6m.",
+    "criterion_biconditional": "P and N together force x and not-x; without P or without N, assign the unique variable to satisfy every non-tautological clause.",
+    "mixed_equality": "For first signs 01 or 10, clause 1 is tautological for either remaining sign, so suffix acceptance has exactly the same condition."
+  },
+  "remaining_scope_limits": [
+    "decoder-specific finite theorem only",
+    "does not generalize to distinct-literal 3CNF conventions",
+    "does not imply later residual growth or cover growth"
+  ],
+  "authority": {
+    "computation_is_proof": false,
+    "independent_peer_review": false,
+    "grants_uniform_or_asymptotic_authority": false,
+    "grants_p_vs_np_authority": false
+  },
+  "artifact_hash": "sha256:b0cdfc19878a9a950a1e2a29e2f21c5ef360b7ee0cad7a944d73ae0af632feee"
+}
