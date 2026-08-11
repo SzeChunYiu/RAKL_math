@@ -1,0 +1,41 @@
+{
+  "episode_id": "EP-NS-B2a1-TAIL-QUANTIFIER-20260811",
+  "task_id": "navier_stokes::blowup::type_ii::tail_inheritance",
+  "atom_id": "NS-B2a1",
+  "context_hash": "sha256:46107a3521175794ea4dadece4101723a57bf6af8dc9e8680a3c47d31c70902e",
+  "problem_signature": ["Type-II blowup", "Euler scaling", "fixed-cylinder local convergence", "noncompact translation", "uniform tail tightness", "local-to-global gluing"],
+  "fibre_snapshot_hash": "sha256:2478f3bfd56a80d3d3ef047512f31d690ffc972e9536a3ed9a7c56d3f2bdf457",
+  "operator_ids": ["T-XM-ROOT-BRIDGE-STABILITY-AUDIT", "CONTRASTIVE_DIFFERENCE_WITNESS", "TWO_PACKET_ESCAPE_FALSIFIER", "QUANTIFIER_ORDER_AUDIT"],
+  "action_trace": [
+    "read current RAKL main and current RAKL_math main",
+    "freeze NS-B2a1 context before candidate generation",
+    "freeze dual-memory review and use canonical root-bridge stability tool",
+    "run seven-role same-context expert review",
+    "freeze seven-event hash-chained pre-candidate trace",
+    "construct fixed-core plus escaping divergence-free packet family",
+    "prove exact local convergence to nonzero core and failure of uniform tail tightness",
+    "review result scope and open prelimit uniform-tail/recentering residual"
+  ],
+  "observation_ids": ["OBS-SEREGIN-FIXED-CYLINDER-COMPACTNESS", "OBS-TWO-PACKET-NONZERO-LOCAL-LIMIT", "OBS-UNIFORM-TAIL-NONTIGHT", "OBS-QUANTIFIER-ORDER-BRIDGE-GAP"],
+  "verification_ids": ["VERIFY-SEREGIN-PRIMARY-PDF", "VERIFY-DIVERGENCE-FREE-CURL-CONSTRUCTION", "VERIFY-LOCAL-SUPPORT-SEPARATION", "VERIFY-TAIL-LOWER-BOUND", "VERIFY-POSTRESULT-SEVEN-ROLE-REVIEW"],
+  "outcome": "PARTIAL_SUCCESS",
+  "residual_signature": [
+    "actual Seregin prelimit sequence may have additional PDE structure excluding profile leakage",
+    "uniform-in-k velocity/energy/flux tail modulus remains unproved",
+    "content-bound recentering/profile compactness remains unproved",
+    "pressure-tail normalization remains unproved",
+    "Euler rigidity theorem remains downstream"
+  ],
+  "evidence_pointers": [
+    "arXiv:2606.29468v1",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1_CONTEXT_FIBER_20260811.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "research/real_math/millennium/navier_stokes/09_trace/NS-B2a1_PRE_CANDIDATE_TRACE_20260811.json",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1_C001_LOCAL_TO_TAIL_QUANTIFIER_AUDIT_20260811.md",
+    "research/real_math/millennium/navier_stokes/08_reviews/NS_B2A1_C001_POSTRESULT_REVIEW_20260811.md"
+  ],
+  "timestamp": "2026-08-11T12:15:00Z",
+  "cost": 0.0,
+  "cost_note": "TaskEpisode cost field is not used as a measured resource metric in this cycle; see RAKL_CYCLE_METRICS.",
+  "artifact_hash": "sha256:ab276318464527029cb36056d671ca919d8ae19b88a07dbb8b43f597d77255e5"
+}
