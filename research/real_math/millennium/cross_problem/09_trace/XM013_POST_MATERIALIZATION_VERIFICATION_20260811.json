@@ -1,0 +1,60 @@
+{
+  "record_type": "RAKL_CYCLE_METRICS_POST_MATERIALIZATION_VERIFICATION",
+  "cycle_id": "XM013-DETECTOR-VISIBILITY-REUSE-20260811",
+  "authority": "PROPOSAL_SHADOW_ASSURANCE_ONLY_ZERO_SEMANTIC_NOVELTY",
+  "observed_at_utc": "2026-08-11T21:42:30Z",
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "9c2cebe8d5a2b1381af5a40cbea86a6826e7210a",
+    "pr_number": 175,
+    "head_before_this_addendum": "8b843c8d4660f3371f34ad8840a39d18e0a67029",
+    "head_tree_before_this_addendum": "6d46dde3168daf0c5222b52ea98e00ee51aa1bda",
+    "final_head_after_this_self-appending_receipt": "EXTERNALLY_BOUND_BY_PR_METADATA_AFTER_COMMIT"
+  },
+  "verification": {
+    "canonical_json_hash_contract": "VERIFIED_FROM_CURRENT_RAKL src/rakl/v3_authority.py: json.dumps(sort_keys=True,separators=(comma,colon),ensure_ascii=False).encode(utf-8)",
+    "task_episode_hash_test": "MATERIALIZED_IN_REPOSITORY_TEST; LOCAL_EXECUTION_BLOCKED_BY_NETWORK_DNS_BEFORE_CLONE",
+    "github_actions": {
+      "workflow": "Pinned RAKL application tests",
+      "run_id_before_addendum": 31539075499,
+      "head_sha": "8b843c8d4660f3371f34ad8840a39d18e0a67029",
+      "status_at_observation": "queued",
+      "conclusion_at_observation": null
+    }
+  },
+  "new_tooling_failure": {
+    "failure_id": "F-XM013-LOCAL-GIT-DNS-VERIFICATION",
+    "category": "TOOLING",
+    "command_scope": "attempted read-only clone of the XM013 branch followed by targeted pytest",
+    "observed_error": "fatal: unable to access GitHub clone URL: Could not resolve host: github.com",
+    "mathematical_effect": "NONE",
+    "provenance_effect": "NONE: repository/source reads and writes continued through the authenticated GitHub connector",
+    "verification_effect": "local pytest could not be executed; authoritative repository CI remains the verification surface",
+    "repeated_process_link": "distinct from F-XM013-CURRENT-WORK-PAYLOAD-NOT-CONTENT-BOUND; both are tooling limitations but affect different verification/coverage surfaces"
+  },
+  "retained_semantic_novelty": {
+    "KNOWLEDGE": 0,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 0,
+    "OBSTRUCTION": 0,
+    "RELATION": 0,
+    "PATH": 0,
+    "META_METHOD": 0
+  },
+  "new_ids": {
+    "failures": ["F-XM013-LOCAL-GIT-DNS-VERIFICATION"],
+    "episodes": [],
+    "lessons": [],
+    "tools": [],
+    "obstructions": [],
+    "motifs": []
+  },
+  "gate_status": {
+    "root_state": "ALL_SIX_OPEN_NO_SOLUTION_CERTIFICATE",
+    "scientific_authority_promotion": "NOT_INVOKED",
+    "independent_mathematical_reviews": 0,
+    "ci_status": "QUEUED_AT_PRE_ADDENDUM_HEAD; successor run required for final head",
+    "provenance": "UNCHANGED_PROPOSAL_SHADOW_SOURCE_BOUND"
+  },
+  "raw_repository_growth_is_learning": false
+}
