@@ -1,0 +1,29 @@
+{
+  "schema_version": "failure-diagnosis-v3-proposal-shadow",
+  "diagnosis_id": "D-NS-B1a3b1-C001-R2-LOGBMO-INTERFACE",
+  "episode_id": "EP-NS-B1a3b1-C001-R2-20260811",
+  "atom_id": "NS-B1a3b1",
+  "observations": [
+    {"id":"OBS-NS-B1a3b1-LOGBMO-ZOOM-NONEXPANSIVE","finding":"For 0<r<=1 the exact bmo_{1/|log rho|} norm is non-expansive under f(y)=f(x0+r y)."},
+    {"id":"OBS-NS-B1a3b1-GLOBAL-LORENTZ-CRITICAL","finding":"Global L^{3/2,infty} vorticity is scale invariant under the same Navier-Stokes blow-up map if already controlled."},
+    {"id":"OBS-NS-B1a3b1-GRUJIC-GLOBAL-TAIL","finding":"Grujic v2 Theorem 4.1 and its far-field proof use global weak-Lorentz vorticity and global/shell phase information uniformly in time."},
+    {"id":"OBS-NS-B1a3b1-GRUJIC-PRESINGULAR","finding":"Grujic v2 Theorem 7.4 is a first-singular-time forward-analyticity/escape-time theorem, not an ancient Liouville theorem."},
+    {"id":"OBS-NS-B1a3b1-XI-ZERO-UNBOUND","finding":"No explicit zero-vorticity direction convention was located in the inspected v2 text."}
+  ],
+  "competing_diagnoses": [
+    {"hypothesis":"log-BMO phase control is destroyed by zoom-in","status":"REJECTED","verification":"exact weighted mean-oscillation identity and |log rho|/|log(r rho)|<=1"},
+    {"hypothesis":"finite-I producer lacks the conditional geometry object","status":"SUPPORTED","verification":"successful reuse of merged NS-B1a3b producer/consumer mismatch; no new producer estimate found or assumed"},
+    {"hypothesis":"global/far-field consumer inputs create a local-to-global gluing obligation","status":"SUPPORTED","verification":"source proof explicitly uses global L^{3/2,infty} and tails"},
+    {"hypothesis":"Grujic v2 can be used directly as an ancient-solution Liouville theorem","status":"REJECTED","verification":"Theorem 7.4 signature uses first singular time, escape times, forward analyticity and harmonic measure"},
+    {"hypothesis":"zero-vorticity phase convention is harmless without binding","status":"CANNOT_CHECK","verification":"source text search did not locate a convention; do not infer one"}
+  ],
+  "failure_category": ["PRODUCER_REPRESENTATION_INPUT_ABSENT","LOCAL_TO_GLOBAL_GLUING","SOURCE_STATE_SPACE_INTERFACE","SOURCE_APPLICABILITY_WARNING"],
+  "local_mathematical_failure": "NONE_FOR_ZOOM_LEMMA",
+  "local_to_global_gluing_failure": "CONFIRMED_SEPARATE_GLOBAL_LORENTZ_AND_FAR_FIELD_INPUT",
+  "repeated_process_links": [
+    {"prior":"F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH","relation":"same producer-output/weaker-than-consumer-input pattern","difference":"B1a3 concerns global critical velocity state-space/tightness; B1a3b1 concerns global vorticity Lorentz plus phase/far-field consumer signature"},
+    {"prior":"F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY","relation":"upstream producer geometry gap reused successfully","difference":"current child proves conditional geometry transport is scale-stable rather than re-testing topology"}
+  ],
+  "authority": "DIAGNOSIS_PROPOSAL_SHADOW_NO_THEOREM_AUTHORITY",
+  "artifact_hash": "sha256:d362801516cf28b9910b961c1cdd61c47cac0719cb6eb314abb404c5d785aa3b"
+}
