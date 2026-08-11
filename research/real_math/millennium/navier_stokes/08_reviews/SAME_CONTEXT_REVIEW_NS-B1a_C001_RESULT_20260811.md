@@ -2,7 +2,8 @@
 
 **Review type:** role-separated same-context review after inspecting the PR #19 result and immutable Git history. This is **not independent review or peer review** and creates no Navier–Stokes, proof, novelty, preregistration, or root authority.
 
-**Historical identity:** `NS-B1a-C001`.  
+**Historical identity:** `NS-B1a-C001`.
+
 **Repaired authority:** `RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE`.
 
 ## 1. Provenance / chronology lead

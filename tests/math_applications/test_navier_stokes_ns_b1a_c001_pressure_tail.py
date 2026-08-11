@@ -33,6 +33,9 @@ ASSURANCE_FAILURES = (
 )
 REVIEW = BASE / "08_reviews/SAME_CONTEXT_REVIEW_NS-B1a_C001_RESULT_20260811.md"
 VALIDATION = BASE / "05_oracles/NS_B1a_C001_RETROSPECTIVE_VALIDATION_20260811.json"
+FINAL_VALIDATION = (
+    BASE / "05_oracles/NS_B1a_C001_FINAL_HEAD_INTEGRATION_VALIDATION_20260811.json"
+)
 FRAMEWORK = ROOT / "framework/RAKL"
 RETROSPECTIVE_AUTHORITY = (
     "RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / "
@@ -70,11 +73,130 @@ def _git(*args: str, check: bool = True) -> subprocess.CompletedProcess[str]:
     )
 
 
+def _git_bytes(*args: str, check: bool = True) -> subprocess.CompletedProcess[bytes]:
+    return subprocess.run(
+        ["git", "-C", str(ROOT), *args],
+        check=check,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+
+
 def _normalized_repository(value: str) -> str:
     value = value.strip().removesuffix(".git").removesuffix("/")
     if value.startswith("git@github.com:"):
         value = "https://github.com/" + value.removeprefix("git@github.com:")
     return value
+
+
+def _final_provenance_errors(receipt: dict) -> tuple[str, ...]:
+    errors: list[str] = []
+    origins = {
+        _normalized_repository(value)
+        for value in _git("remote", "get-url", "--all", "origin").stdout.splitlines()
+    }
+    if _normalized_repository(receipt["source_repository"]) not in origins:
+        errors.append("origin mismatch")
+
+    commit_subjects = {
+        "repair source": receipt["repair_source"],
+        "current main": receipt["current_main"],
+        "integration": receipt["integration_commit"],
+    }
+    available: dict[str, bool] = {}
+    for role, subject in commit_subjects.items():
+        commit = subject["commit"]
+        available[role] = (
+            _git("cat-file", "-e", f"{commit}^{{commit}}", check=False).returncode == 0
+        )
+        if not available[role]:
+            errors.append(f"missing commit: {role}")
+            continue
+        if _git("rev-parse", f"{commit}^{{tree}}").stdout.strip() != subject["tree"]:
+            errors.append(f"tree mismatch: {role}")
+
+    integration = receipt["integration_commit"]
+    if available.get("integration"):
+        parents = _git("show", "-s", "--format=%P", integration["commit"]).stdout.split()
+        if parents != integration["parents"]:
+            errors.append("integration parent mismatch")
+    if available.get("repair source") and available.get("current main"):
+        observed_base = _git(
+            "merge-base",
+            receipt["repair_source"]["commit"],
+            receipt["current_main"]["commit"],
+        ).stdout.strip()
+        if observed_base != receipt["merge_base"]:
+            errors.append("merge-base mismatch")
+
+    for requirement in receipt["ancestry_requirements"]:
+        ancestor = requirement["ancestor"]
+        descendant = requirement["descendant"]
+        if _git("cat-file", "-e", f"{ancestor}^{{commit}}", check=False).returncode != 0:
+            errors.append(f'missing ancestry commit: {requirement["role"]}')
+        elif _git(
+            "merge-base", "--is-ancestor", ancestor, descendant, check=False
+        ).returncode != 0:
+            errors.append(f'ancestry mismatch: {requirement["role"]}')
+
+    expected_byte_mode = "GIT_SHOW_NO_TEXTCONV_NO_EXT_DIFF_BINARY_STDOUT"
+    for binding in receipt["historical_bindings"]:
+        role = binding["role"]
+        commit = binding["commit"]
+        path = binding["source_path"]
+        if binding["byte_mode"] != expected_byte_mode:
+            errors.append(f"byte mode mismatch: {role}")
+        if _git("cat-file", "-e", f"{commit}^{{commit}}", check=False).returncode != 0:
+            errors.append(f"missing historical commit: {role}")
+            continue
+        if _git("rev-parse", f"{commit}^{{tree}}").stdout.strip() != binding["tree"]:
+            errors.append(f"historical tree mismatch: {role}")
+        source_object = f"{commit}:{path}"
+        if _git("cat-file", "-e", source_object, check=False).returncode != 0:
+            errors.append(f"missing historical path: {role}")
+            continue
+        if _git("rev-parse", source_object).stdout.strip() != binding["git_blob_sha"]:
+            errors.append(f"historical blob mismatch: {role}")
+        raw = _git_bytes("show", "--no-textconv", "--no-ext-diff", source_object).stdout
+        observed_raw_hash = "sha256:" + hashlib.sha256(raw).hexdigest()
+        if observed_raw_hash != binding["raw_sha256"]:
+            errors.append(f"historical raw hash mismatch: {role}")
+        snapshot = ROOT / binding["preserved_snapshot_path"]
+        if not snapshot.is_file():
+            errors.append(f"missing preserved snapshot: {role}")
+        elif snapshot.read_bytes() != raw:
+            errors.append(f"preserved snapshot mismatch: {role}")
+
+    for role, subject in receipt["live_subjects"].items():
+        path = ROOT / subject["path"]
+        if not path.is_file():
+            errors.append(f"missing live subject: {role}")
+            continue
+        if _raw_sha256(path) != subject["raw_sha256"]:
+            errors.append(f"live raw hash mismatch: {role}")
+        if subject["semantic_hash_kind"] == "SELF_HASH":
+            value = _load(path)
+            try:
+                _assert_self_hash(value)
+            except AssertionError:
+                errors.append(f"live self-hash mismatch: {role}")
+            if value["artifact_hash"] != subject["semantic_hash"]:
+                errors.append(f"live semantic hash mismatch: {role}")
+        elif subject["semantic_hash_kind"] == "NESTED_EXPERIENCE_SELF_HASH":
+            value = _load(path)["experience"]
+            try:
+                _assert_self_hash(value)
+            except AssertionError:
+                errors.append(f"live self-hash mismatch: {role}")
+            if value["artifact_hash"] != subject["semantic_hash"]:
+                errors.append(f"live semantic hash mismatch: {role}")
+        elif subject["semantic_hash_kind"] == "FINAL_TRACE_EVENT_HASH":
+            value = _load(path)["entries"][-1]["artifact_hash"]
+            if value != subject["semantic_hash"]:
+                errors.append(f"live semantic hash mismatch: {role}")
+        elif subject["semantic_hash_kind"] != "RAW_ONLY":
+            errors.append(f"unknown semantic hash kind: {role}")
+    return tuple(errors)
 
 
 def test_pressure_tail_dyadic_constants_remain_exact_but_search_control_only() -> None:
@@ -259,3 +381,72 @@ def test_review_dag_readme_and_validation_preserve_the_authority_boundary() -> N
         "EXACT_LOCAL_VALIDATION_RECEIPT / NO_NAVIER_STOKES_ROOT_EVIDENCE / "
         "ROOT_AUTHORITY_NONE"
     )
+
+
+def test_final_integration_validation_is_self_hashed_and_exactly_scoped() -> None:
+    receipt = _load(FINAL_VALIDATION)
+    _assert_self_hash(receipt)
+    assert receipt["framework_pin"] == (
+        "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
+    )
+    assert receipt["validation"]["focused_passed"] == 10
+    assert receipt["validation"]["full_passed"] == 209
+    assert receipt["validation"]["diff_check_result"] == "CLEAN"
+    assert receipt["authority"] == (
+        "FINAL_HEAD_INTEGRATION_VALIDATION / RETROSPECTIVE_ANALYTIC_CALIBRATION / "
+        "SEARCH_CONTROL_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE"
+    )
+
+
+def test_final_integration_git_provenance_is_executable_and_complete() -> None:
+    assert _final_provenance_errors(_load(FINAL_VALIDATION)) == ()
+
+
+def test_final_integration_git_provenance_planted_worlds_fail_closed() -> None:
+    receipt = _load(FINAL_VALIDATION)
+
+    missing = copy.deepcopy(receipt)
+    missing["repair_source"]["commit"] = "0" * 40
+    assert "missing commit: repair source" in _final_provenance_errors(missing)
+
+    forged_tree = copy.deepcopy(receipt)
+    forged_tree["current_main"]["tree"] = "f" * 40
+    assert "tree mismatch: current main" in _final_provenance_errors(forged_tree)
+
+    missing_path = copy.deepcopy(receipt)
+    missing_path["historical_bindings"][0]["source_path"] += ".missing"
+    assert "missing historical path: original result" in _final_provenance_errors(
+        missing_path
+    )
+
+    forged_blob = copy.deepcopy(receipt)
+    forged_blob["historical_bindings"][0]["git_blob_sha"] = "f" * 40
+    assert "historical blob mismatch: original result" in _final_provenance_errors(
+        forged_blob
+    )
+
+    forged_raw = copy.deepcopy(receipt)
+    forged_raw["historical_bindings"][1]["raw_sha256"] = "sha256:" + "f" * 64
+    assert "historical raw hash mismatch: original trace" in _final_provenance_errors(
+        forged_raw
+    )
+
+    forged_origin = copy.deepcopy(receipt)
+    forged_origin["source_repository"] = "https://github.com/example/not-rakl-math"
+    assert "origin mismatch" in _final_provenance_errors(forged_origin)
+
+    broken_ancestry = copy.deepcopy(receipt)
+    broken_ancestry["ancestry_requirements"][0]["ancestor"] = "HEAD"
+    assert "ancestry mismatch: repair source reaches integration" in (
+        _final_provenance_errors(broken_ancestry)
+    )
+
+
+def test_whitespace_policy_preserves_only_the_immutable_snapshot_exception() -> None:
+    attributes = (ROOT / ".gitattributes").read_text(encoding="utf-8").splitlines()
+    exemptions = [line for line in attributes if "whitespace=" in line]
+    assert exemptions == [
+        "research/real_math/millennium/navier_stokes/04_candidates/negative_history/"
+        "NS_B1a_C001_PR19_RESULT_SNAPSHOT_9B6B8AE.md whitespace=-trailing-space"
+    ]
+    assert _git("diff", "--check", "origin/main...HEAD", check=False).returncode == 0

@@ -1,8 +1,11 @@
 # NS-B1a-C001 — retrospective critical-Morrey pressure-tail calibration
 
-**Atom:** `NS-B1a` — dynamics-specific Type-I trace/tail bridge  
-**Historical PR #19 identity:** `NS-B1a-C001`  
-**Authority:** `RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE`  
+**Atom:** `NS-B1a` — dynamics-specific Type-I trace/tail bridge
+
+**Historical PR #19 identity:** `NS-B1a-C001`
+
+**Authority:** `RETROSPECTIVE_ANALYTIC_CALIBRATION / SEARCH_CONTROL_ONLY / NO_NAVIER_STOKES_ROOT_EVIDENCE / ROOT_AUTHORITY_NONE`
+
 **Retrospective subject:** raw instantaneous far-field pressure divergence as an anti-replication mechanism.
 
 ## Chronology and assurance boundary
