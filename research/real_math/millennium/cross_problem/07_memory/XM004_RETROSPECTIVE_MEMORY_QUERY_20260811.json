@@ -1,0 +1,53 @@
+{
+  "review_id": "XM004-RETROSPECTIVE-DUAL-MEMORY-QUERY",
+  "target_atom_id": "O9d12a2a1a1",
+  "target_context_hash": "sha256:908a53cd1104c8f7eb350c961eaada559da12070e8fb9fb1282f092190ca2102",
+  "query_timing": "POST_RESULT_RETROSPECTIVE",
+  "prospective_pre_candidate_gate_credit": false,
+  "tool_query_status": "MATCHES_FOUND",
+  "relevant_tools": [
+    {
+      "tool_id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "authority_on_current_RAKL_math_main": "VERIFIED_LOCAL",
+      "applicability": "APPLICABLE_WITH_TARGET_VALIDATION",
+      "selection": "SELECTED",
+      "note": "Only the audit operation transfers; XM004 supplies a target-specific finite cheap-target validation."
+    },
+    {
+      "tool_id": "T-PNP-FRACTIONAL-SEMIFILTER-PACKING",
+      "authority_on_current_RAKL_math_main": "VERIFIED_LOCAL",
+      "applicability": "RELATED_BUT_NOT_SELECTED",
+      "selection": "NOT_SELECTED",
+      "note": "Its exact guarantee is an LP-dual lower bound on the Cavalar-Oliveira cover graph; XM004 tests closure representation volume, not fractional packing."
+    }
+  ],
+  "failure_query_status": "MATCHES_FOUND",
+  "relevant_failures": [
+    {
+      "failure_id": "F-XM001-POINTWISE-GAP-COLLAPSE",
+      "scope_note": "Reusable warning about a locally valid surrogate failing to preserve a root-critical coordinate; Yang-Mills normalization mechanism is not imported."
+    },
+    {
+      "failure_id": "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+      "scope_note": "Target-local warning that one-step/local resource measures can lose integral correlation; distinct from free upward-closure inflation."
+    },
+    {
+      "failure_id": "PR49-bound C010/C021/C023/C025 controls",
+      "scope_note": "The active P-vs-NP child already requires multiplexing, cheap-target, scalar-collapse, and first-order projection hostile controls. XM004 sharpens the cheap-target control for raw closure volume."
+    }
+  ],
+  "unresolved_warnings": [
+    "The target atom is an open pre-candidate PR, so XM004 must not mutate its frozen chronology.",
+    "The XM004 result was derived before this retrospective cross packet was frozen.",
+    "No claim is made that productive pair-indexed ancestry/depth is a lower-bound invariant.",
+    "Open PR #30/#50 tool promotions are not canonical current-main authority."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json",
+    "research/real_math/millennium/cross_problem/07_memory/XM001_TOOL_SNAPSHOT_20260811.json",
+    "research/real_math/millennium/cross_problem/07_memory/XM001_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "research/real_math/millennium/p_vs_np/07_memory/C024_FAILURE_EXPERIENCE_DELTA_20260811.json",
+    "RAKL_math PR #49"
+  ],
+  "artifact_hash": "sha256:9dab1cf39aa9299c7791b3bc80eb4ad3f513ffb822d2efdfbb1b15fd6d35f4b8"
+}
