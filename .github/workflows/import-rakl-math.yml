@@ -1,4 +1,4 @@
-name: Import RAKL mathematical applications
+name: Final RAKL mathematical-application overlay
 
 on:
   push:
@@ -11,33 +11,34 @@ permissions:
   contents: write
 
 jobs:
-  import:
+  overlay:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
-      - name: Import current mathematical application state
+      - name: Overlay final pre-split source state
         shell: bash
         run: |
           set -euo pipefail
+          git fetch origin main
+          git checkout -B migration/rakl-final-overlay-20260811 origin/main
+
           rm -rf /tmp/rakl-source
           git clone --no-single-branch https://github.com/SzeChunYiu/RAKL.git /tmp/rakl-source
-          cd /tmp/rakl-source
-          git fetch --all --prune
-          source_main_sha="$(git rev-parse origin/main)"
+          git -C /tmp/rakl-source fetch --all --prune
+          source_main_sha="$(git -C /tmp/rakl-source rev-parse origin/main)"
 
-          cd "$GITHUB_WORKSPACE"
-          rm -rf research/real_math tests/math_applications
-          mkdir -p research tests/math_applications migration
+          mkdir -p research/real_math/millennium tests/math_applications migration
 
-          # Baseline: exact application workspace currently present on RAKL/main.
-          git -C /tmp/rakl-source archive origin/main research/real_math | tar -x -C "$GITHUB_WORKSPACE"
+          # Non-destructive overlay only: never delete destination-native research.
+          if git -C /tmp/rakl-source cat-file -e 'origin/main:research/real_math/millennium' 2>/dev/null; then
+            git -C /tmp/rakl-source archive origin/main research/real_math/millennium | tar -x -C "$GITHUB_WORKSPACE"
+          fi
 
-          # Overlay still-active mathematical research branches so work that has not
-          # yet reached RAKL/main is not lost during the repository split.
           mapfile -t branches < <(git -C /tmp/rakl-source for-each-ref --format='%(refname:short)' refs/remotes/origin/research/ \
             | sed 's#^origin/##' \
             | grep -E '(^research/(pnp|rh-|navier-stokes|yang-mills|hodge|bsd|cross-millennium))' \
@@ -46,13 +47,13 @@ jobs:
           for branch in "${branches[@]}"; do
             ref="origin/${branch}"
             case "$branch" in
-              research/pnp*) key='p_vs_np' ;;
-              research/rh-*) key='riemann' ;;
-              research/navier-stokes*) key='navier' ;;
-              research/yang-mills*) key='yang' ;;
-              research/hodge*) key='hodge' ;;
-              research/bsd*) key='bsd|birch' ;;
-              research/cross-millennium*) key='cross' ;;
+              research/pnp*) key='p_vs_np' ; pat='p_vs_np|pnp|c0[0-9][0-9]|cover|semifilter|circuit' ;;
+              research/rh-*) key='riemann' ; pat='riemann|rh_' ;;
+              research/navier-stokes*) key='navier' ; pat='navier|stokes|ns_' ;;
+              research/yang-mills*) key='yang' ; pat='yang|mills|ym_' ;;
+              research/hodge*) key='hodge' ; pat='hodge' ;;
+              research/bsd*) key='bsd|birch' ; pat='bsd|birch|selmer' ;;
+              research/cross-millennium*) key='cross' ; pat='cross_millennium|millennium_cross' ;;
               *) continue ;;
             esac
 
@@ -65,19 +66,8 @@ jobs:
               done < <(git -C /tmp/rakl-source ls-tree -d --name-only "$ref:research/real_math/millennium")
             fi
 
-            # Preserve application-specific regression tests separately. They are
-            # historical/migration evidence; RAKL remains the framework package.
             while IFS= read -r f; do
               [ -n "$f" ] || continue
-              case "$branch" in
-                research/pnp*) pat='p_vs_np|pnp|c0[0-9][0-9]|cover|semifilter|circuit' ;;
-                research/rh-*) pat='riemann|rh_' ;;
-                research/navier-stokes*) pat='navier|stokes|ns_' ;;
-                research/yang-mills*) pat='yang|mills|ym_' ;;
-                research/hodge*) pat='hodge' ;;
-                research/bsd*) pat='bsd|birch|selmer' ;;
-                research/cross-millennium*) pat='cross_millennium|millennium_cross' ;;
-              esac
               if echo "$f" | grep -Eqi "$pat"; then
                 out="tests/math_applications/${f#tests/}"
                 mkdir -p "$(dirname "$out")"
@@ -87,31 +77,31 @@ jobs:
           done
 
           {
-            echo '# Migration provenance'
+            echo '# Final pre-split source overlay provenance'
             echo
-            echo "Imported from \`SzeChunYiu/RAKL\` main commit \`$source_main_sha\`."
+            echo "Source RAKL main: \`$source_main_sha\`."
             echo
-            echo 'Active mathematical research branches inspected/overlaid:'
+            echo 'Source mathematical research branch heads overlaid:'
             for branch in "${branches[@]}"; do
               sha="$(git -C /tmp/rakl-source rev-parse "origin/$branch")"
               echo "- \`$branch\` @ \`$sha\`"
             done
             echo
-            echo 'The original Git chronology remains in the RAKL repository. This repository stores the migrated application state and all future mathematical research.'
-          } > migration/RAKL_SOURCE_PROVENANCE.md
+            echo 'This overlay is additive/non-destructive. Source branches remain in RAKL as historical provenance. Future mathematical application work belongs only in RAKL_math.'
+          } > migration/RAKL_FINAL_SOURCE_OVERLAY_PROVENANCE.md
 
           git status --short
 
-      - name: Commit imported application state
+      - name: Commit overlay to migration branch
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add research tests/math_applications migration
+          git add research/real_math/millennium tests/math_applications migration/RAKL_FINAL_SOURCE_OVERLAY_PROVENANCE.md
           if git diff --cached --quiet; then
-            echo 'No migration delta.'
+            echo 'No final source delta.'
             exit 0
           fi
-          git commit -m '[migration-sync] import mathematical application state from RAKL'
-          git push origin HEAD:main
+          git commit -m '[migration] overlay final pre-split RAKL math state'
+          git push --force-with-lease origin HEAD:refs/heads/migration/rakl-final-overlay-20260811
