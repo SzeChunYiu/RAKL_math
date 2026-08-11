@@ -1,0 +1,130 @@
+{
+  "atom_id": "H4d1b",
+  "object_context": "Child of H4d1a. Fix a smooth projective family f:X->S, a rational Hodge-locus branch T through s0, and an already algebraic central complete-intersection witness Z0 in the Kloosterman source class. Test whether the first-order geometric obstruction to lifting Z0 along every tangent direction of T vanishes by an explicit incidence/flag-Hilbert preimage construction. This is a source-bound calibration of direct first-order witness lifting, not a root initial-algebraicity argument and not an all-order deformation theorem.",
+  "structural_coordinates": [
+    "root scope remains rational Hodge classes on smooth projective complex varieties; this child starts with an already algebraic witness and cannot solve initial existence",
+    "active source class is a smooth degree-e hypersurface Y in P^{2k+1} containing a k-dimensional complete intersection Z of multidegree (d1,...,d_{k+1}) with 1<=di<e",
+    "write Z=(P1=...=P_{k+1}=0) and F=sum_i P_i Q_i for the hypersurface equation",
+    "Kloosterman identifies the tangent space to the Hodge locus at Y with the degree-e part I_e of I=(P_i,Q_i) in this source class",
+    "first-order pair deformation is an incidence/flag-Hilbert question: a base tangent deltaF lifts when deltaF=sum_i(P_i deltaQ_i+deltaP_i Q_i)",
+    "membership deltaF in I_e supplies exactly such degree-compatible coefficients deltaP_i and deltaQ_i",
+    "the direct lift argument does not use injectivity of the same semiregularity detector and therefore avoids the H4d1a same-detector no-go",
+    "the source complete-intersection cycle is semiregular; this positive control does not prove that direct branch annihilation is strictly weaker than full semiregularity",
+    "first-order dual-number lifting does not establish higher Artin-order lifting, formal algebraization, monodromy/global continuation, or arbitrary-cycle generality",
+    "a useful strict-weaker successor must exhibit nonzero Hodge-branch tangent directions with direct witness lifting while full semiregularity injectivity fails or is independently absent"
+  ],
+  "equivalent_formulations": [
+    "prove delta_1|_{T_{s0}T}=0 for the source-bound branch-to-obstruction map",
+    "prove T_{s0}T is contained in the image of the differential of the flag-Hilbert/incidence projection at (Y,Z)",
+    "for every Hodge tangent deltaF in I_e, find degree-compatible deltaP_i,deltaQ_i with deltaF=sum_i(P_i deltaQ_i+deltaP_i Q_i)",
+    "construct a dual-number pair Z_epsilon subset Y_epsilon with P_i(epsilon)=P_i+epsilon deltaP_i and F_epsilon=F+epsilon deltaF modulo epsilon^2"
+  ],
+  "solved_analogues": [
+    "Kloosterman 2021/2022 complete-intersection cycles on projective hypersurfaces, where the Hodge locus component equals the locus of hypersurfaces containing a complete intersection of the fixed multidegree and is smooth at the source point",
+    "Bruzzo-Montoya 2022 toric deformation-of-pairs setting, where under their hypotheses preservation of the (k,k) class under infinitesimal deformation is equivalent to the subvariety remaining algebraic and the Noether-Lefschetz locus is locally an irreducible Hilbert-scheme component"
+  ],
+  "near_solved_analogues": [
+    "Buchweitz-Flenner and Pridham semiregularity/reduced obstruction mechanisms, which annihilate obstruction images but do not by themselves supply the strict-weaker nonsemiregular control sought here",
+    "Movasati cubic-hypersurface examples where a selected triple may be rigid while the Hodge locus has positive dimension, a hostile control showing that Hodge tangent directions can exceed deformations of a chosen witness"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Kloosterman complete intersections on hypersurfaces in P^{2k+1}",
+      "method": "identify the Hodge tangent space as I_e for I=(P_i,Q_i), then use ideal membership as an explicit preimage under the incidence differential",
+      "shared_structure": [
+        "a fixed algebraic central witness inside a moving smooth projective hypersurface",
+        "an independently computed Hodge-preserving base tangent space",
+        "a geometric incidence space of pairs mapping to the base"
+      ],
+      "required_assumptions": [
+        "the witness has the complete-intersection form and source degree hypotheses",
+        "the tangent-space identification T_Hodge=I_e is used only at Kloosterman's stated source scope",
+        "coefficients in I_e have the degree constraints needed to interpret them as deltaP_i and deltaQ_i"
+      ],
+      "disanalogies": [
+        "arbitrary rational cycles need not admit complete-intersection generators P_i or a factorization F=sum P_iQ_i",
+        "the source cycle is semiregular, so this does not yet witness a strict weakening of semiregularity",
+        "first-order factorization does not automatically iterate through nonlinear higher Artin orders"
+      ],
+      "repair_question": "Can the same explicit incidence-preimage mechanism be found in a source-bound nonsemiregular family, or can one prove an obstruction showing why the strict-weaker calibration fails?",
+      "source_anchors": [
+        "https://arxiv.org/abs/2104.14845",
+        "https://doi.org/10.1007/s10231-022-01226-0"
+      ]
+    },
+    {
+      "source_context": "Bruzzo-Montoya deformation of pairs and Noether-Lefschetz loci in toric varieties",
+      "method": "compare the infinitesimal Hodge-preserving base locus with a suitable Hilbert/flag-Hilbert deformation locus under explicit source hypotheses",
+      "shared_structure": [
+        "pair (ambient hypersurface, complete-intersection subvariety)",
+        "cohomological Hodge-persistence condition",
+        "geometric witness deformation locus over the same base"
+      ],
+      "required_assumptions": [
+        "the toric/quasi-smooth source hypotheses and degree conditions hold",
+        "the local Hilbert-scheme component comparison is kept at source scope"
+      ],
+      "disanalogies": [
+        "the toric source is still a special complete-intersection geometry rather than arbitrary Hodge cycles",
+        "local infinitesimal equivalence does not itself solve higher-order algebraization or global continuation"
+      ],
+      "repair_question": "Which exact source hypotheses make the pair projection tangent-surjective, and which can be removed while retaining direct lifting without full semiregularity?",
+      "source_anchors": [
+        "https://arxiv.org/abs/2203.00664"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "the H4d1a no-go forbids a nonzero same-detector kernel-free envelope but does not forbid explicit geometric lifting that bypasses detector injectivity",
+    "Kloosterman's source is semiregular and therefore cannot by itself establish that H4d1b is strictly weaker than full semiregularity",
+    "the source's complete-intersection algebra cannot be transported to an arbitrary rational cycle without a witnessed representation map",
+    "first-order tangent surjectivity is weaker than all-order formal lifting",
+    "formal lifting is weaker than algebraization and global/monodromy-compatible propagation",
+    "all deformation-propagation results start from an algebraic central witness and leave the root Hodge initial-existence problem untouched"
+  ],
+  "source_anchors": [
+    "https://github.com/SzeChunYiu/RAKL_math/issues/6",
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1a_BRANCH_DETECTOR_COMPATIBILITY_NOGO_20260811.md",
+    "research/real_math/millennium/hodge/deformation/07_memory/H4d1a_FAILURE_EXPERIENCE_LATTICE_COMBINED_20260811.json",
+    "https://arxiv.org/abs/2104.14845",
+    "https://doi.org/10.1007/s10231-022-01226-0",
+    "https://arxiv.org/abs/2203.00664",
+    "https://arxiv.org/abs/math/9912245",
+    "https://arxiv.org/abs/1208.3111",
+    "https://arxiv.org/abs/1902.00831"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "control-theory/kinematic Jacobian feasibility",
+      "source_situation": "A desired infinitesimal output velocity is feasible when it lies in the image of the actuator-to-output Jacobian. An explicit preimage certifies first-order reachability without requiring an observation map to be injective on all errors.",
+      "common_abstraction": [
+        "desired base/Hodge tangent versus admissible pair-deformation tangent",
+        "incidence differential as a Jacobian",
+        "preimage construction as first-order reachability"
+      ],
+      "source_to_target_mapping": [
+        "desired output velocity -> deltaF in the Hodge tangent space",
+        "actuator coordinates -> deltaP_i and deltaQ_i",
+        "Jacobian image -> tangent image of the flag-Hilbert/incidence projection",
+        "feasible infinitesimal motion -> first-order lift of the witness"
+      ],
+      "shared_constraints": [
+        "the preimage must be constructed before declaring success",
+        "rank/image statements are local and first order",
+        "nonlinear finite motion can fail even when the Jacobian is surjective"
+      ],
+      "disanalogies": [
+        "algebraic deformation functors have obstruction theory beyond a linear Jacobian",
+        "higher Artin orders, algebraization, and monodromy have no automatic control-theory analogue"
+      ],
+      "proposed_principle": "Replace same-detector faithfulness by an independently computed incidence-preimage certificate for each allowed first-order Hodge tangent.",
+      "validation_obligation": "Verify the source tangent identity and explicit degree-compatible factorization in a published special family, then search separately for a nonsemiregular strict-weaker control and for higher-order obstruction survival.",
+      "provenance_note": "Proposal compressor only; it supplies no Hodge theorem or transfer authority."
+    }
+  ],
+  "analogy_scan_notes": "Retained only the Jacobian/image analogy because it distinguishes direct first-order geometric reachability from detector injectivity and makes the higher-order failure mode explicit.",
+  "frozen_at": "2026-08-11T13:24:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:1adeb04b277f2e53f27aa969a8de29bcf868d851e974834789891305499f272e"
+}
