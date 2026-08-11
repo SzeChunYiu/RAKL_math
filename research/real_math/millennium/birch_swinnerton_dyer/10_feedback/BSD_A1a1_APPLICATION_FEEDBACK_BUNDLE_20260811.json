@@ -1,0 +1,71 @@
+{
+  "schema_version": "application-feedback-bundle-v1",
+  "bundle_id": "github.com/SzeChunYiu/RAKL_math::BSD-A1a1-PR83-runtime-hash-assurance::20260811",
+  "bundle_canonical_sha256": "bd9393f67d0670327283d0b09dafebf1481d5200de5aeb08f394594e1233a918",
+  "producer": {
+    "repository_namespace": "github.com/SzeChunYiu/RAKL_math",
+    "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "commit_sha": "17eb26688dfb13eaaab429bd554d1a29bbf332af",
+    "tree_sha": "79794e77cc985e41bbd5fd9d603e2500cb06b5ee"
+  },
+  "framework_requirement": {
+    "repository_url": "https://github.com/SzeChunYiu/RAKL.git",
+    "commit_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "version": "bd1a276-v3"
+  },
+  "authority_envelope": {
+    "requested_authority": "HEURISTIC",
+    "proposal_only": true,
+    "inventory_mutation_allowed": false,
+    "failure_lattice_mutation_allowed": false,
+    "promotion_allowed": false
+  },
+  "previous_bundle": null,
+  "items": [
+    {
+      "item_id": "github.com/SzeChunYiu/RAKL_math::META::prefixed-hash-runtime-assurance-gap::20260811",
+      "kind": "META_OBSERVATION",
+      "source": {
+        "path": "research/real_math/millennium/birch_swinnerton_dyer/10_feedback/BSD_A1a1_RUNTIME_HASH_VERIFICATION_META_OBSERVATION_20260811.json",
+        "git_blob_sha": "daf06b6e9e14ed7e2da702e6fe0a175f32ed9ef3"
+      },
+      "payload": {
+        "observation_id": "BSD-A1a1::META::PREFIXED-HASH-RUNTIME-ASSURANCE-GAP::20260811",
+        "method_surface": "experience substrate and public research trace content-integrity assurance",
+        "observation": "At RAKL bd1a276, TaskEpisode runtime hash verification is conditional on artifact_hash length 64 and therefore does not recompute the common sha256-prefixed 71-character form; failure-lattice and research-trace runtime audits likewise do not recompute each registered content digest. Application tests had to add independent blank-field digest checks before runtime reconstruction.",
+        "evidence_pointers": [
+          "BSD-A1a1-RUNTIME-HASH-ASSURANCE-RESULT-20260811",
+          "BSD-A1a1-RUNTIME-HASH-ASSURANCE-EVENT-20260811",
+          "tests/math_applications/test_bsd_a1a1_pr83_postmerge_assurance.py",
+          "research/real_math/millennium/birch_swinnerton_dyer/08_reviews/BSD_A1a1_PR83_POSTMERGE_ASSURANCE_CORRECTION_20260811.json"
+        ],
+        "candidate_framework_delta": "Proposal only: make hash encoding explicit and uniformly recompute supported digests in TaskEpisode, FailureExperience, and ResearchTraceEntry assurance paths; reject unsupported encodings fail-closed and add planted wrong-digest tests. Do not change semantics or promote from this single application observation.",
+        "validation_status": "UNVALIDATED_PROPOSAL",
+        "context_sha256": "d8d317c4e313ebc1fad3e32ba0e4828eba838707a9ea9bd8658fcc96a2534f26",
+        "result_id": "BSD-A1a1-RUNTIME-HASH-ASSURANCE-RESULT-20260811",
+        "event_id": "BSD-A1a1-RUNTIME-HASH-ASSURANCE-EVENT-20260811",
+        "non_guarantees": [
+          "not a proven framework defect across every serialization convention",
+          "not authority to mutate RAKL",
+          "requires protected evaluator and fresh assurance before promotion"
+        ]
+      },
+      "payload_canonical_sha256": "53e118addc892f6c7cf243299247619a93354d04e23d20626cdd5a2bb5e82911",
+      "application_bindings": {
+        "result_id": "BSD-A1a1-RUNTIME-HASH-ASSURANCE-RESULT-20260811",
+        "result_path": "research/real_math/millennium/birch_swinnerton_dyer/10_feedback/BSD_A1a1_RUNTIME_HASH_VERIFICATION_META_OBSERVATION_20260811.json",
+        "result_git_blob_sha": "daf06b6e9e14ed7e2da702e6fe0a175f32ed9ef3",
+        "result_sha256": "00e19881449fd0ff8f60d309db9ab1dfe9e016be85ec817aa0d55e9c5737a267",
+        "trace_event_id": "BSD-A1a1-RUNTIME-HASH-ASSURANCE-EVENT-20260811",
+        "trace_path": "research/real_math/millennium/birch_swinnerton_dyer/10_feedback/BSD_A1a1_RUNTIME_HASH_VERIFICATION_META_OBSERVATION_20260811.json",
+        "trace_git_blob_sha": "daf06b6e9e14ed7e2da702e6fe0a175f32ed9ef3",
+        "trace_sha256": "00e19881449fd0ff8f60d309db9ab1dfe9e016be85ec817aa0d55e9c5737a267",
+        "context_path": "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_THETA_ORDER_CONTEXT_FIBER_20260811.json",
+        "context_git_blob_sha": "58bfe3f766aef8513ded35ae265f3cfe00385347",
+        "context_sha256": "d8d317c4e313ebc1fad3e32ba0e4828eba838707a9ea9bd8658fcc96a2534f26",
+        "observed_at_utc": "2026-08-11T13:10:00Z"
+      },
+      "supersedes": []
+    }
+  ]
+}

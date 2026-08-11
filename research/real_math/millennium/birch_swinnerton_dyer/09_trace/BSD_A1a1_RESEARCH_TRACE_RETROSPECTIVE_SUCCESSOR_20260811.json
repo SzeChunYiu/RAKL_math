@@ -1,0 +1,319 @@
+{
+  "trace_id": "TRACE-BSD-A1a1-PRETRACE-PLUS-RETROSPECTIVE-CORRECTION-20260811",
+  "entries": [
+    {
+      "event_id": "BSD-A1a1-E01",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "ATOMIZED",
+      "timestamp": "2026-08-11T07:56:40+00:00",
+      "state_summary": "The BSD-A1a implication graph separates generalized-Kato nonvanishing into an upstream exact theta-order comparison and a downstream localization/positive-rank bridge.",
+      "action_summary": "Open BSD-A1a1-THETA-ORDER-COMPARISON as the analytically upstream child; no theorem candidate is generated.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a_COMPLEX_TO_KATO_IMPLICATION_GRAPH_20260811.md",
+        "GitHub issue #7"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [],
+      "uncertainties": [
+        "whether a primary-source theorem outside the inspected set already compares exact complex s-order and anticyclotomic T-order noncircularly"
+      ],
+      "residuals": [
+        "complex analytic rank two does not yet source-close ord_T Theta_{f/K}=2"
+      ],
+      "next_steps": [
+        "freeze child context fiber"
+      ],
+      "artifact_hash": "sha256:715a5c4160cc4141accbce3b05f2263ffb1d45f9f486b538806c82d67f447cb9",
+      "previous_event_hash": ""
+    },
+    {
+      "event_id": "BSD-A1a1-E02",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "CONTEXT_FROZEN",
+      "timestamp": "2026-08-11T07:57:00+00:00",
+      "state_summary": "The context distinguishes complex-s order, anticyclotomic-character T-order, auxiliary-data selection, theta factorization, reciprocity, derived heights and localization.",
+      "action_summary": "Freeze the child MathContextFiber before any candidate generation.",
+      "evidence_pointers": [
+        "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d",
+        "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_THETA_ORDER_CONTEXT_FIBER_20260811.json"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [],
+      "uncertainties": [
+        "a family-specific comparison may exist under stronger Heegner/Iwasawa hypotheses"
+      ],
+      "residuals": [
+        "exact s-to-T leading-term preservation theorem not identified"
+      ],
+      "next_steps": [
+        "run analogy scan"
+      ],
+      "artifact_hash": "sha256:aa80247e4aa3dd749b3456a27461bbc152e79a04aad3ef5d172138f4169fc01c",
+      "previous_event_hash": "sha256:715a5c4160cc4141accbce3b05f2263ffb1d45f9f486b538806c82d67f447cb9"
+    },
+    {
+      "event_id": "BSD-A1a1-E03",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "ANALOGY_SCAN",
+      "timestamp": "2026-08-11T07:57:20+00:00",
+      "state_summary": "The scan compared directional vanishing order in multivariable calibration with the complex-s versus anticyclotomic-T deformation mismatch.",
+      "action_summary": "Retain the directional-calibration analogy only as a proposal/falsifier template requiring a real arithmetic comparison theorem.",
+      "evidence_pointers": [
+        "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d",
+        "Castella-Hsieh 2022 Theorem 2.3"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "retained_bridge:directional_order_requires_comparison"
+      ],
+      "uncertainties": [
+        "the arithmetic objects are not a single bivariate analytic function"
+      ],
+      "residuals": [
+        "shared central vanishing is weaker than equality of directional orders"
+      ],
+      "next_steps": [
+        "review method transfers"
+      ],
+      "artifact_hash": "sha256:50102bc0e894130379375c2b56599876a7889ae551c74ae3cde9adc862c789ad",
+      "previous_event_hash": "sha256:aa80247e4aa3dd749b3456a27461bbc152e79a04aad3ef5d172138f4169fc01c"
+    },
+    {
+      "event_id": "BSD-A1a1-E04",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "METHOD_TRANSFER_REVIEW",
+      "timestamp": "2026-08-11T07:57:40+00:00",
+      "state_summary": "The interpolation theorem, generalized-Kato theta criterion, and cross-Millennium bridge-audit tool were decomposed by enabling assumptions and disanalogies.",
+      "action_summary": "Record that Theorem 2.3 yields value interpolation/positive T-order, while Theorem B consumes T-order two plus positive rational rank; neither closes the desired s-to-T arrow.",
+      "evidence_pointers": [
+        "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d",
+        "Castella-Hsieh 2022 Theorems 2.3, B, 5.3",
+        "research/real_math/millennium/cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "method_transfer_matrix:frozen"
+      ],
+      "uncertainties": [
+        "main-conjecture formulations may control theta order but require logical-strength classification"
+      ],
+      "residuals": [
+        "need noncircular exact-order comparison"
+      ],
+      "next_steps": [
+        "run expert review"
+      ],
+      "artifact_hash": "sha256:ea1103f34c40a14687490ba548a1681fcd5cc1bb27c4af9f8a1c8cb430e2dbea",
+      "previous_event_hash": "sha256:50102bc0e894130379375c2b56599876a7889ae551c74ae3cde9adc862c789ad"
+    },
+    {
+      "event_id": "BSD-A1a1-E05",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "EXPERT_CONTEXT_REVIEW",
+      "timestamp": "2026-08-11T07:58:00+00:00",
+      "state_summary": "Six same-context roles reviewed analytic direction, Iwasawa theta order, arithmetic circularity, adversarial coordinate mismatch, formal statement binding and novelty.",
+      "action_summary": "Select a primary-source search for an exact s-to-T leading-term theorem; keep localization/positive-rank as a separate downstream residual.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/08_reviews/SAME_CONTEXT_REVIEW_BSD_A1a1_PRE_CANDIDATE_20260811.md",
+        "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d"
+      ],
+      "alternatives_considered": [
+        "infer ord_T=2 directly from interpolation and analytic rank two",
+        "use Theorem B together with assumed positive rational rank",
+        "import an anticyclotomic main conjecture without strength audit",
+        "search for an exact noncircular leading-term comparison theorem"
+      ],
+      "decision_rationale": "The exact comparison search has highest partition power: it distinguishes a true analytic bridge from a variable-conflation error or an arithmetic-strength import before any proof candidate is generated.",
+      "outputs": [
+        "mode:REFLECTIVE_RESTRUCTURE",
+        "mode:CONTRASTIVE_DISCRIMINATION",
+        "mode:EFFECTUAL_PROBE",
+        "recommendation:no_candidate_yet"
+      ],
+      "uncertainties": [
+        "a theorem may close only special families or one choice of auxiliary data"
+      ],
+      "residuals": [
+        "theta-order bridge remains open"
+      ],
+      "next_steps": [
+        "query dual experience memory"
+      ],
+      "artifact_hash": "sha256:1b867c0fd72b7466fc6f532360ddaa82df34c77fd2d7521da6da946023925330",
+      "previous_event_hash": "sha256:ea1103f34c40a14687490ba548a1681fcd5cc1bb27c4af9f8a1c8cb430e2dbea"
+    },
+    {
+      "event_id": "BSD-A1a1-E06",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "EXPERIENCE_MEMORY_REVIEW",
+      "timestamp": "2026-08-11T07:58:20+00:00",
+      "state_summary": "Cross-Millennium memory contains a scoped root-bridge stability tool and a related failure warning; both are applicable only through a fresh DifferenceWitness.",
+      "action_summary": "Select T-XM-ROOT-BRIDGE-STABILITY-AUDIT as a diagnostic and retain F-XM001 only as a warning against unproved coordinate preservation.",
+      "evidence_pointers": [
+        "sha256:3da92d710f10818886acce250bdcd61be1b801cefed3d6358a1f5dc6c463971b",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_RESEARCH_MEMORY_REVIEW_20260811.json"
+      ],
+      "alternatives_considered": [
+        "ignore cross-problem memory because the domains differ",
+        "treat the Yang-Mills failure as a universal bridge impossibility",
+        "reuse only the scoped audit procedure with target-specific validation"
+      ],
+      "decision_rationale": "The shared abstraction is bridge faithfulness, while the source mechanism is different; scoped reuse improves falsification without importing target conclusions.",
+      "outputs": [
+        "tool:T-XM-ROOT-BRIDGE-STABILITY-AUDIT:selected",
+        "failure:F-XM001-POINTWISE-GAP-COLLAPSE:warning_only"
+      ],
+      "uncertainties": [
+        "future BSD-specific experience may supersede the cross-problem diagnostic"
+      ],
+      "residuals": [
+        "no BSD-specific verified tool yet proves s-to-T order preservation"
+      ],
+      "next_steps": [
+        "freeze next action"
+      ],
+      "artifact_hash": "sha256:79eb092febbd7e45f9fadf1512d30ffee29a51b3c3278160bf251fafb38aecb5",
+      "previous_event_hash": "sha256:1b867c0fd72b7466fc6f532360ddaa82df34c77fd2d7521da6da946023925330"
+    },
+    {
+      "event_id": "BSD-A1a1-E07",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "NEXT_STEP_PROPOSED",
+      "timestamp": "2026-08-11T07:58:40+00:00",
+      "state_summary": "The child context, method transfers, expert objections and dual-memory review are frozen before any mathematical candidate.",
+      "action_summary": "Search primary literature for an exact leading-term/order comparison from complex analytic rank two to anticyclotomic theta order, classifying every result by whether it uses only analytic/admissibility input or imports localization, Selmer dimension, an Iwasawa main conjecture, BSD or equivalent arithmetic strength.",
+      "evidence_pointers": [
+        "sha256:385d587cb9ab74512adc3fed98e00df9a804c37fd327539c2cea449a97b5417d",
+        "sha256:3da92d710f10818886acce250bdcd61be1b801cefed3d6358a1f5dc6c463971b",
+        "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a_COMPLEX_TO_KATO_IMPLICATION_GRAPH_20260811.md"
+      ],
+      "alternatives_considered": [
+        "generate a direct formula conjecture for theta leading term",
+        "perform more selected-curve theta computations",
+        "attack localization first",
+        "run theorem-strength search for the exact directional-order bridge"
+      ],
+      "decision_rationale": "Theorem-strength classification directly tests whether the missing arrow is already known, genuinely open, or only available under circular arithmetic hypotheses; it avoids low-information numerical confirmation.",
+      "outputs": [
+        "next_action:primary_source_s_to_T_leading_term_search",
+        "candidate_status:NONE"
+      ],
+      "uncertainties": [
+        "bounded search may miss differently named exceptional-zero or p-adic Gross-Zagier formulations"
+      ],
+      "residuals": [
+        "BSD-A1a1 remains open; no mathematical candidate identity exists"
+      ],
+      "next_steps": [
+        "audit child context",
+        "audit child memory review",
+        "audit child trace",
+        "require plan_math_research candidate_generation_allowed before any candidate"
+      ],
+      "artifact_hash": "sha256:878564f38d9a1b30fc23e70cae1012b07d8edb8e765a58907d1423dbd769c0a8",
+      "previous_event_hash": "sha256:79eb092febbd7e45f9fadf1512d30ffee29a51b3c3278160bf251fafb38aecb5"
+    },
+    {
+      "event_id": "BSD-A1a1-E08-RETROSPECTIVE",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "RESULT_RECORDED",
+      "timestamp": "2026-08-11T12:56:34Z",
+      "state_summary": "After PR83 merged, the bounded 2026 source audit is recorded as a retrospective source result because the original material cycle did not append the result to the canonical public trace.",
+      "action_summary": "Bind the exact versioned arXiv source snapshot and preserve the original audit, shadow episode, shadow failure, and metrics bytes without granting strict discovery credit.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a1_CURRENT_2026_SOURCE_RECEIPT_V1_20260811.json@git:434436b1a08f46bc7df6b75c4aa342476dc0799f@blob:3fe4c5d319e32504117e970e9190d1ff92419866",
+        "research/real_math/millennium/birch_swinnerton_dyer/01_frontier/BSD_A1a1_CURRENT_2026_ANTICYCLOTOMIC_FRONTIER_AUDIT.md@git:8bc7a9cf17adf347e5be13ab61a08a690dda895e",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_TASK_EPISODE_SHADOW.json@git:8bc7a9cf17adf347e5be13ab61a08a690dda895e"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "RETROSPECTIVE_SOURCE_BOUND_ROUTE_REFINEMENT",
+        "candidate_status:NONE",
+        "strict_discovery_credit:NONE",
+        "arXiv_versions:2608.06879v1,2603.22483v2,1809.09066v4,2203.12161v7"
+      ],
+      "uncertainties": [
+        "the bounded source set may omit a differently named exact cross-direction theorem"
+      ],
+      "residuals": [
+        "no audited theorem transports exact complex-s order two to exact anticyclotomic T/J order at the generic weight-two elliptic-curve target"
+      ],
+      "next_steps": [
+        "preserve the relation gap as bounded failure memory",
+        "do not generate a candidate from this retrospective correction"
+      ],
+      "artifact_hash": "sha256:14797e0cde561ba9619cd4b5ceec80cce4c6661107848d528fb81531cabf46c1",
+      "previous_event_hash": "sha256:878564f38d9a1b30fc23e70cae1012b07d8edb8e765a58907d1423dbd769c0a8"
+    },
+    {
+      "event_id": "BSD-A1a1-E09-RETROSPECTIVE",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "RESIDUAL_OPENED",
+      "timestamp": "2026-08-11T12:56:35Z",
+      "state_summary": "The current-source result strengthens nearby anticyclotomic contexts but leaves the registered root-coordinate relation gap open.",
+      "action_summary": "Open only the bounded source-relation residual and register it in the canonical global failure lattice successor as an observed warning, not an impossibility.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a1_CURRENT_2026_SOURCE_RECEIPT_V1_20260811.json@git:434436b1a08f46bc7df6b75c4aa342476dc0799f@blob:3fe4c5d319e32504117e970e9190d1ff92419866",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_FAILURE_SHADOW.json"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "failure_status:OBSERVED_ONLY",
+        "candidate_status:NONE"
+      ],
+      "uncertainties": [
+        "a source outside the registered scan may close a special-case or target-scope bridge"
+      ],
+      "residuals": [
+        "exact complex-s to anticyclotomic-order preservation remains unproved in the audited source universe",
+        "derived-height or regulator nondegeneracy is not obtained from bare complex analytic rank two by the audited sources"
+      ],
+      "next_steps": [
+        "require a fresh context-memory-trace gate before any future candidate",
+        "search only under a newly frozen discriminator or rotate representation"
+      ],
+      "artifact_hash": "sha256:0ad919339c759a1adf50755802a6e6c2423f0fe2f404d3c09c7c0b910edab143",
+      "previous_event_hash": "sha256:14797e0cde561ba9619cd4b5ceec80cce4c6661107848d528fb81531cabf46c1"
+    },
+    {
+      "event_id": "BSD-A1a1-E10-RETROSPECTIVE",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "REVIEWED",
+      "timestamp": "2026-08-11T12:56:36Z",
+      "state_summary": "A same-context postmerge assurance pass checked source versions, current schemas, runtime reconstruction, Git chronology, immutable lineage, and authority scope.",
+      "action_summary": "Classify the original shadow cycle as retrospective route pruning with no strict discovery, theorem, root, novelty, framework, or independent-review authority.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a1_CURRENT_2026_SOURCE_RECEIPT_V1_20260811.json@git:434436b1a08f46bc7df6b75c4aa342476dc0799f@blob:3fe4c5d319e32504117e970e9190d1ff92419866",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_TASK_EPISODE_SHADOW.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_CURRENT_2026_FAILURE_SHADOW.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_RAKL_CYCLE_METRICS_20260811_R2.json"
+      ],
+      "alternatives_considered": [],
+      "decision_rationale": "",
+      "outputs": [
+        "same_context_review:true",
+        "independent_review:false",
+        "strict_discovery_credit:NONE",
+        "root_authority:NONE",
+        "candidate_status:NONE"
+      ],
+      "uncertainties": [
+        "the mathematical residual remains open"
+      ],
+      "residuals": [
+        "future mathematical work requires a fresh strict pre-candidate gate"
+      ],
+      "next_steps": [
+        "retain negative history and wait for a genuinely new discriminator"
+      ],
+      "artifact_hash": "sha256:aa91b5d47d9807f0978cce920df136d032ba8bc39bb3e2a962660e9331b2436f",
+      "previous_event_hash": "sha256:0ad919339c759a1adf50755802a6e6c2423f0fe2f404d3c09c7c0b910edab143"
+    }
+  ]
+}

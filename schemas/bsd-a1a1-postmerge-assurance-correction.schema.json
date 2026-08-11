@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/bsd-a1a1-postmerge-assurance-correction.schema.json",
+  "title": "BSD A1a1 PR83 postmerge assurance correction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "receipt_id", "recorded_at", "application_repository", "framework_authority", "preserved_pr83_artifacts", "schema_runtime_audit", "chronology_audit", "source_version_binding", "fibre_snapshot_manifest", "successors", "intermediate_successor_lineage", "correction", "authority_contract", "non_guarantees", "artifact_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"const": "BSD-A1a1-PR83-POSTMERGE-ASSURANCE-CORRECTION-20260811"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "application_repository": {"type": "object", "minProperties": 7},
+    "framework_authority": {"type": "object", "minProperties": 6},
+    "preserved_pr83_artifacts": {"type": "array", "minItems": 7, "maxItems": 7},
+    "schema_runtime_audit": {
+      "type": "object", "additionalProperties": false,
+      "required": ["shadow_task_episode_error_count", "shadow_failure_lattice_error_count", "findings", "canonical_task_episode_schema", "canonical_task_episode_runtime", "canonical_failure_lattice_schema", "canonical_failure_lattice_runtime", "canonical_trace_schema", "canonical_trace_runtime", "canonical_pre_candidate_trace_runtime", "candidate_event_count", "strict_process_classification"],
+      "properties": {
+        "shadow_task_episode_error_count": {"const": 9},
+        "shadow_failure_lattice_error_count": {"const": 3},
+        "findings": {"type": "array", "minItems": 2, "maxItems": 2},
+        "canonical_task_episode_schema": {"const": "PASS"},
+        "canonical_task_episode_runtime": {"const": "PASS"},
+        "canonical_failure_lattice_schema": {"const": "PASS"},
+        "canonical_failure_lattice_runtime": {"const": "PASS"},
+        "canonical_trace_schema": {"const": "PASS"},
+        "canonical_trace_runtime": {"const": "PASS"},
+        "canonical_pre_candidate_trace_runtime": {"const": "PASS"},
+        "candidate_event_count": {"const": 0},
+        "strict_process_classification": {"const": "RETROSPECTIVE_NO_STRICT_DISCOVERY_CREDIT"}
+      }
+    },
+    "chronology_audit": {"type": "array", "minItems": 4, "maxItems": 4},
+    "source_version_binding": {"type": "object", "minProperties": 7},
+    "fibre_snapshot_manifest": {"type": "object", "minProperties": 3},
+    "successors": {"type": "array", "minItems": 4, "maxItems": 4},
+    "intermediate_successor_lineage": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}},
+    "correction": {
+      "type": "object", "additionalProperties": false,
+      "required": ["classification", "strict_discovery_credit", "root_authority", "originals_preserved", "repairs_original_chronology", "mathematical_candidate_generated", "next_candidate_gate"],
+      "properties": {
+        "classification": {"const": "RETROSPECTIVE_SOURCE_BOUND_ROUTE_PRUNING"},
+        "strict_discovery_credit": {"const": "NO_STRICT_DISCOVERY_CREDIT"},
+        "root_authority": {"const": "ROOT_AUTHORITY_NONE"},
+        "originals_preserved": {"const": true},
+        "repairs_original_chronology": {"const": false},
+        "mathematical_candidate_generated": {"const": false},
+        "next_candidate_gate": {"const": "FRESH_CONTEXT_MEMORY_TRACE_AND_DISCRIMINATOR_REQUIRED"}
+      }
+    },
+    "authority_contract": {
+      "type": "object", "additionalProperties": false,
+      "required": ["effective_authority", "grants_strict_discovery_credit", "grants_proof_authority", "grants_root_authority", "grants_theorem_authority", "grants_novelty_authority", "grants_framework_authority", "grants_review_independence", "may_backfill_chronology", "may_suppress_failure_warning"],
+      "properties": {
+        "effective_authority": {"const": "RETROSPECTIVE_NEGATIVE_HISTORY_AND_SOURCE_SCOPE_ONLY"},
+        "grants_strict_discovery_credit": {"const": false},
+        "grants_proof_authority": {"const": false},
+        "grants_root_authority": {"const": false},
+        "grants_theorem_authority": {"const": false},
+        "grants_novelty_authority": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false},
+        "may_backfill_chronology": {"const": false},
+        "may_suppress_failure_warning": {"const": false}
+      }
+    },
+    "non_guarantees": {"type": "array", "minItems": 4, "items": {"type": "string", "minLength": 1}},
+    "artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}

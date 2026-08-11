@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SzeChunYiu/RAKL_math/schemas/bsd-a1a1-current-source-receipt.schema.json",
+  "title": "BSD A1a1 current source version receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "receipt_id", "recorded_at", "retrieval", "sources", "scope", "non_guarantees", "artifact_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "receipt_id": {"type": "string", "minLength": 1},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "retrieval": {
+      "type": "object", "additionalProperties": false,
+      "required": ["api_url", "snapshot_path", "snapshot_sha256", "snapshot_size_bytes"],
+      "properties": {
+        "api_url": {"type": "string", "format": "uri"},
+        "snapshot_path": {"type": "string", "minLength": 1},
+        "snapshot_sha256": {"$ref": "#/$defs/sha256"},
+        "snapshot_size_bytes": {"type": "integer", "minimum": 1}
+      }
+    },
+    "sources": {
+      "type": "array", "minItems": 4, "maxItems": 4,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["base_id", "versioned_id", "versioned_abs_url", "versioned_pdf_url", "title", "published", "updated", "authors", "abstract", "primary_category", "pdf_sha256", "pdf_size_bytes", "claim_check"],
+        "properties": {
+          "base_id": {"type": "string", "pattern": "^[0-9]{4}\\.[0-9]{5}$"},
+          "versioned_id": {"type": "string", "pattern": "^[0-9]{4}\\.[0-9]{5}v[0-9]+$"},
+          "versioned_abs_url": {"type": "string", "format": "uri"},
+          "versioned_pdf_url": {"type": "string", "format": "uri"},
+          "title": {"type": "string", "minLength": 1},
+          "published": {"type": "string", "format": "date-time"},
+          "updated": {"type": "string", "format": "date-time"},
+          "authors": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "abstract": {"type": "string", "minLength": 1},
+          "primary_category": {"type": "string", "minLength": 1},
+          "pdf_sha256": {"$ref": "#/$defs/sha256"},
+          "pdf_size_bytes": {"type": "integer", "minimum": 1},
+          "claim_check": {
+            "type": "object", "additionalProperties": false,
+            "required": ["status", "bounded_statement", "evidence_surface"],
+            "properties": {
+              "status": {"const": "SUPPORTED_BY_VERSIONED_ARXIV_METADATA"},
+              "bounded_statement": {"type": "string", "minLength": 1},
+              "evidence_surface": {"enum": ["TITLE_AND_ABSTRACT", "ABSTRACT"]}
+            }
+          }
+        }
+      }
+    },
+    "scope": {"const": "VERSIONED_SOURCE_METADATA_AND_RETRIEVED_PDF_BYTES_ONLY"},
+    "non_guarantees": {"type": "array", "minItems": 3, "items": {"type": "string", "minLength": 1}},
+    "artifact_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {"sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}
+}
