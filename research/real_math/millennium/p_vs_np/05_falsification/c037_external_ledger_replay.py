@@ -127,6 +127,8 @@ def build_receipt() -> dict:
         "recorded_at": "2026-08-11T13:50:00Z",
         "method": "complete full-union rule enumeration plus exact rational primal-dual certificate checking",
         "oracle_path": "research/real_math/millennium/p_vs_np/05_falsification/full_cover_oracle.py",
+        "oracle_git_blob_sha": "2a516b166fe2c01e0f478a73aa60e4b8bb48b6b3",
+        "oracle_sha256": "sha256:70a933ff970b2412f8019ff204748b3c7948a6d9d914c62b85c90f2eb609b75d",
         "instances": [parent, child],
         "strict_drop": "1/2",
         "authority_contract": {

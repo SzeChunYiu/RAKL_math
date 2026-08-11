@@ -50,6 +50,9 @@ def test_c037_replay_is_exact_rational_and_deterministic() -> None:
     observed = module.build_receipt()
     assert observed == _load(REPLAY_RECEIPT)
     assert observed["artifact_hash"] == _hash(observed)
+    oracle = ROOT / observed["oracle_path"]
+    assert observed["oracle_sha256"] == "sha256:" + hashlib.sha256(oracle.read_bytes()).hexdigest()
+    assert observed["oracle_git_blob_sha"] == "2a516b166fe2c01e0f478a73aa60e4b8bb48b6b3"
     parent, child = observed["instances"]
     assert (parent["relevant_semifilter_count"], parent["full_union_pair_count"]) == (19, 25)
     assert (child["relevant_semifilter_count"], child["full_union_pair_count"]) == (141, 90)
