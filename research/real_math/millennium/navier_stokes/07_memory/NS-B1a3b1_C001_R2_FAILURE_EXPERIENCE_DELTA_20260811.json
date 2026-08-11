@@ -1,0 +1,46 @@
+{
+  "schema_version": "failure-experience-delta-v3-proposal-shadow",
+  "atom_id": "NS-B1a3b1",
+  "episode_id": "EP-NS-B1a3b1-C001-R2-20260811",
+  "new_failure_experiences": [
+    {
+      "failure_id": "F-NS-B1a3b1-GLOBAL-CONSUMER-SIGNATURE-MISMATCH",
+      "observation": "Grujic v2's local depletion calculation consumes global L_t^infinity L_x^{3/2,infinity} vorticity and nonlocal far-field information in addition to local phase oscillation.",
+      "diagnosis": "registered finite-I local compactness does not itself provide the consumer's global vorticity/far-field state",
+      "category": "LOCAL_TO_GLOBAL_GLUING",
+      "scope": "direct transfer from finite-I ancient/local compactness producer to Grujic v2 Theorem 4.1 inputs",
+      "repair": "prove a global critical-vorticity/tail certificate on the same pre-singularity solution or use a consumer whose inputs are genuinely local and producer-matched",
+      "not_a_global_blacklist": true
+    },
+    {
+      "failure_id": "F-NS-B1a3b1-PRESINGULAR-ANCIENT-MISMATCH",
+      "observation": "Grujic v2 Theorem 7.4 uses a first possible singular time, forward local analyticity, escape times, and harmonic measure.",
+      "diagnosis": "the theorem's state-space/time interface is not an ancient-solution Liouville theorem",
+      "category": "SOURCE_STATE_SPACE_INTERFACE",
+      "scope": "attempt to invoke Theorem 7.4 directly on an extracted ancient solution",
+      "repair": "apply the theorem on the original pre-singularity solution after proving its assumptions, or prove a separate ancient-rigidity theorem",
+      "not_a_global_blacklist": true
+    },
+    {
+      "failure_id": "F-NS-B1a3b1-XI-ZERO-SET-CONVENTION-UNBOUND",
+      "observation": "xi=omega/|omega| is undefined at vorticity zeros and no explicit zero-set convention was located in the inspected arXiv v2 text.",
+      "diagnosis": "source applicability requires an explicit measurable extension/convention or a high-vorticity-only formulation",
+      "category": "SOURCE_APPLICABILITY_WARNING",
+      "scope": "global bmo_phi phase norm transfer",
+      "repair": "bind the source's intended convention from an authoritative version/author clarification or formulate the transfer on a set where omega is nonzero",
+      "status": "OBSERVED_ONLY_CANNOT_INFER_SOURCE_ERROR"
+    }
+  ],
+  "successful_reuse_ids": [
+    "EP-NS-B1a3b-C001-20260811",
+    "F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY",
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+    "PRE-ACTION-FIBRE-RECEIPT-v1"
+  ],
+  "rejected_as_duplicate": [
+    {"candidate_failure":"finite-I does not generate vorticity-direction regularity by topology alone","reason":"already canonical/scoped as F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY; reused rather than reminted"}
+  ],
+  "authority": "PROPOSAL_SHADOW_EXPERIENCE_ONLY"
+}
