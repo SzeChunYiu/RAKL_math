@@ -1,0 +1,152 @@
+{
+  "schema": "RAKL_math.cross_millennium_transfer.v3.proposal_shadow",
+  "cycle_id": "XM016-PNP-HODGE-AGGREGATION-LAW-DIFFERENCEWITNESS-20260812",
+  "active_atom": "XM016-PNP-C043-TO-HODGE-H4d1c-AGGREGATION-LAW",
+  "authority": "PROPOSAL_SHADOW_ONLY_NO_ROOT_OR_METHOD_PROMOTION",
+  "framework": {
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0"
+  },
+  "application_base": "e768b7da7dc48739ccb581dea0eb2cfeb8a701e7",
+  "source_atom": {
+    "lane": "P_vs_NP",
+    "atom_id": "O9d12a2a1b-C043",
+    "episode_or_result": "C043 first residual split and twin ceiling",
+    "source_ref": "RAKL_math merge PR#201 / commit 590fada40db007185e31d849a82349c4c21d75ac",
+    "fibre_hash": "sha256:fff65cd0b2cc08bf7aaa1923fb0088ae8eca4dbd844b927eb2f6f05b56479ae8",
+    "mechanism": "distinct syntactic residuals can be collapsed by exact equality of their full downstream complement neighborhoods; semantic multiplicity therefore need not increase the quotient cover construction"
+  },
+  "target_atom": {
+    "lane": "Hodge",
+    "atom_id": "H4d1c-a",
+    "episode_or_result": "H4d1c rational-coefficient cancellation boundary",
+    "source_ref": "RAKL_math PR#197 head c04c9f2a3e41f246f32458b02096fd7bb9bd9e6f",
+    "fibre_hash": "sha256:60169557434d4455e0ec6a43febb5e2296ecd0fd4576ae52e628d9a24157ef8a",
+    "mechanism": "the total Hodge-variation map is a signed rational linear combination sum_i q_i h_i, so distinct component maps can cancel even when they remain distinguishable"
+  },
+  "corroborating_atom": {
+    "lane": "Riemann_Hypothesis",
+    "atom_id": "RH-ANA-003d",
+    "source_ref": "RAKL_math PR#206 head 8306c12b0db1d65f7fbcdb1595d006d8a6e3a214",
+    "fibre_hash": "sha256:7c39ec6c7b39c5fd573a4e2d252d08c039952faf87c506a972a86d64b41cf59c",
+    "mechanism": "natural-order signed prime/Laguerre tails preserve cancellation through cumulative Abel summation; this is an ordered signed aggregation, not quotient equality"
+  },
+  "common_abstraction_tested": "Multiple upstream components may fail to produce additional downstream signal after an aggregation/projection step.",
+  "enabling_assumptions": [
+    "source and target both expose multiple upstream components feeding a downstream consumer",
+    "the proposed transfer is restricted to research-control diagnosis, not theorem content",
+    "the target aggregation law must be preserved or explicitly mapped by the DifferenceWitness"
+  ],
+  "disanalogies": [
+    "PNP C043 uses equality of full finite neighborhoods/residual languages and quotient classes",
+    "H4d1c uses a signed rational linear combination of first-order Hodge-variation maps",
+    "RH-ANA-003d uses order-sensitive signed cumulative summation with an n-dependent Laguerre kernel",
+    "PNP cover upper bounds are finite nonnegative combinatorics; Hodge tangent maps and RH arithmetic tails are linear/signed analytic objects",
+    "no circuit-complexity, Hodge, or RH theorem transfers across these mechanisms"
+  ],
+  "predicted_principle_before_falsifier": "DOWNSTREAM_MULTIPLICITY_COLLAPSE_CAN_BE_EXPLAINED_BY_TARGET_TWIN_EQUIVALENCE",
+  "cheapest_falsifier": {
+    "construction": "Use the already frozen H4d1c first-order countermodel V=Q, Q=Q, h1(v)=v, h2(v)=-v, q1=q2=1 and evaluate v=1.",
+    "test": "If Hodge cancellation were an instance of the PNP twin mechanism, the two component maps would have to be indistinguishable under the relevant downstream equivalence; instead h1(1)=1 and h2(1)=-1 are distinct while h1(1)+h2(1)=0.",
+    "result": "FALSIFIED"
+  },
+  "DifferenceWitness": {
+    "id": "DW-XM016-QUOTIENT-VS-SIGNED-CANCELLATION",
+    "source_relation": "two items are collapsed because their full downstream neighborhoods are equal",
+    "target_relation": "two distinguishable signed contributions are annihilated only after linear combination",
+    "preserved_coordinates": [
+      "multiple upstream contributors",
+      "downstream loss of naive multiplicity signal"
+    ],
+    "nonpreserved_coordinates": [
+      "aggregation law",
+      "equivalence relation",
+      "sign structure",
+      "repair condition"
+    ],
+    "conclusion": "The PNP twin-collapse mechanism is not a valid structural JUMP explanation of H4d1c coefficient cancellation. The two episodes belong to different obstruction subfamilies despite a common superficial symptom."
+  },
+  "verification": [
+    "current RAKL v3 TaskEpisode/storage-admission and semantic-shortcut architecture inspected at exact current main",
+    "PNP C043 current context and merged result inspected",
+    "H4d1c primary route artifact inspected; elementary linear countermodel rechecked",
+    "RH R5 current fibre inspected as an independent signed-cancellation comparator",
+    "primary-source scope checked against Cavalar-Oliveira ECCC TR25-033, Nishinou arXiv:2009.01651, Kloosterman arXiv:2104.14845, and Coffey source family"
+  ],
+  "outcome": "PARTIAL_SUCCESS_SUCCESSFUL_OVERTRANSFER_FALSIFICATION_STRUCTURAL_FAMILY_SPLIT",
+  "residual_before": [
+    "cross-lane observer could over-normalize all MULTIPLICITY_WITHOUT_GAIN episodes as one twin/quotient family",
+    "H4d1c joint no-cancellation/coupled-witness residual open",
+    "PNP C043 quotient-multiplexing residual open"
+  ],
+  "residual_after": [
+    "normalize quotient-collapse and signed-cancellation as distinct subfamilies unless a mapping witness preserves the aggregation law",
+    "H4d1c joint no-cancellation/coupled-witness residual unchanged",
+    "PNP C043 quotient-multiplexing residual unchanged",
+    "RH signed-order cancellation remains a corroborating comparator, not a target result"
+  ],
+  "local_vs_global": {
+    "local_mathematical_failure": false,
+    "local_mathematical_result": "elementary cross-transfer falsifier succeeds",
+    "local_to_global_gluing_failure": false,
+    "note": "No root-facing gluing was attempted in XM016."
+  },
+  "primary_sources": [
+    {
+      "id": "ECCC-TR25-033",
+      "title": "Boolean Circuit Complexity and Two-Dimensional Cover Problems",
+      "authors": "Bruno Pasqualotto Cavalar; Igor Oliveira",
+      "status": "primary source control for PNP cover interface"
+    },
+    {
+      "id": "arXiv:2009.01651",
+      "title": "Deformation of pairs and semiregularity",
+      "authors": "Takeo Nishinou",
+      "status": "positive scoped Hodge deformation control"
+    },
+    {
+      "id": "arXiv:2104.14845",
+      "title": "Variational Hodge conjecture for complete intersections on hypersurfaces in projective space",
+      "authors": "Remke Kloosterman",
+      "status": "positive special-family Hodge control"
+    },
+    {
+      "id": "arXiv:0706.0343v2",
+      "title": "Coffey prime/Laguerre source used by RH lane",
+      "authors": "Mark W. Coffey",
+      "status": "RH signed-order comparator as cited by current lane"
+    }
+  ],
+  "actual_fibre_snapshot": {
+    "framework_subject": "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0:method=3.0.0:package=0.1.0",
+    "application_base": "RAKL_math@e768b7da7dc48739ccb581dea0eb2cfeb8a701e7",
+    "framework_surfaces": [
+      "ARCHITECTURE.md",
+      "RAKL_VERSION.json",
+      "src/rakl/method_specs.py",
+      "src/rakl/experience_substrate.py",
+      "src/rakl/v3_runtime.py",
+      "src/rakl/math_research_api.py",
+      "src/rakl/semantic_shortcut.py"
+    ],
+    "lane_artifacts": [
+      "PNP PR#201 C043 context/result",
+      "RH PR#206 R5 context/metrics",
+      "NS PR#211 R2 metrics",
+      "YM PR#208 R11 case-study/metrics",
+      "Hodge PR#197 H4d1c route/metrics",
+      "BSD PR#210 R8 metrics",
+      "Cross PR#191 XM015 observer packet"
+    ],
+    "primary_source_controls": [
+      "ECCC TR25-033",
+      "arXiv:2009.01651",
+      "arXiv:2104.14845",
+      "arXiv:0706.0343v2"
+    ],
+    "search_universe_note": "Current sampled heads/merged lane artifacts only; not a coverage-complete protected memory universe."
+  },
+  "actual_fibre_snapshot_hash": "sha256:f4ecc79e5d5d77ab9681cf6a9d72432d6f52355906a8e1c69e2c90bdcf821a0e",
+  "artifact_hash": "sha256:a42905a46b80182368d4f6f18ab26c3962db58882c22d6b5bbcb380821581d7a"
+}
