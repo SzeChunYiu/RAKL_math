@@ -1,0 +1,92 @@
+{
+  "schema": "RAKL-v3-shadow-MathContextFiber",
+  "atom_id": "RH-ANA-003e",
+  "cycle": "R6",
+  "root_issue": 3,
+  "control_issue": 239,
+  "object_context": "Coffey's natural-order S_Lambda(n) split at the R5 moving cutoff X_n into moving finite prefix P_n(X_n) and ordered tail T_n(X_n), with the R5 tail used only as immutable proposal/shadow premise.",
+  "structural_coordinates": [
+    "exact identity S_Lambda(n)=P_n(X_n)+T_n(X_n) in natural source order",
+    "R5 shadow premise: T_n(X_n) is smaller than every negative power of n",
+    "two-sided absolute polynomial growth obligations in n",
+    "Coffey Li decomposition S_2=S_gamma+S_Lambda with S_gamma=O(n)",
+    "root-strength guard against disguised global S_Lambda control",
+    "DifferenceWitness requirement for any supposedly weaker moving-prefix certificate"
+  ],
+  "equivalent_formulations": [
+    "For fixed A>=0, test whether |P_n(X_n)|=O(n^A) iff |S_Lambda(n)|=O(n^A) under the R5 tail premise.",
+    "Test whether existence of any finite polynomial exponent for the moving prefix differs from existence of one for the full remainder.",
+    "Failure of a DifferenceWitness means the proposed prefix-polynomial obligation is not a weaker local intermediate."
+  ],
+  "solved_analogues": [
+    "Elementary asymptotic stability: adding a bounded or rapidly decaying sequence preserves a fixed nonnegative polynomial O(n^A) growth class."
+  ],
+  "near_solved_analogues": [
+    "R3 root-coupling classification for the full Coffey S_Lambda remainder.",
+    "R5 source-order moving-tail certificate at X_n=exp(C0 n^5 log^2(n+e))."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Asymptotic sequence analysis with an exact decomposition b_n=a_n+e_n and uniformly bounded e_n.",
+      "method": "perturbation-stability / obligation-strength audit before attempting a bound",
+      "shared_structure": ["exact additive decomposition", "same index n", "two-sided polynomial growth class", "small complementary term"],
+      "required_assumptions": ["the decomposition is exact in the same summation convention", "the complementary term is O(1), here much smaller", "the exponent A is nonnegative", "constants are uniform in n"],
+      "disanalogies": ["the target prefix is an arithmetic Laguerre sum with enormous moving cutoff", "the R5 tail premise is proposal/shadow rather than root-authoritative", "growth-class equivalence is route classification, not RH proof"],
+      "repair_question": "Does the proposed moving-prefix bound survive an explicit DifferenceWitness showing it is strictly weaker than full S_Lambda control?",
+      "source_anchors": ["elementary triangle inequality", "RAKL_math PR #206 head 6fcf503a3c4605ec5ece9f85dc26085ce62aad73", "Coffey arXiv:0706.0343v2"]
+    },
+    {
+      "source_context": "Coffey's Li-criterion decomposition and Voros's Li asymptotic alternative.",
+      "method": "bind the local obligation to the exact root-sensitive quantity before investing in estimation",
+      "shared_structure": ["all-index Li growth", "full prime/Laguerre remainder", "off-critical zeros cause non-tempered Li behavior"],
+      "required_assumptions": ["Coffey normalization is preserved", "root statement is exact", "source claims are used only within their stated scope"],
+      "disanalogies": ["Coffey's explicit discussion emphasizes linear/sublinear S_Lambda growth; arbitrary-polynomial root coupling in R3 additionally used Voros", "source asymptotics do not prove the R5 tail premise"],
+      "repair_question": "Which proper source statistic can be controlled without algebraically reconstructing a root-strength full-remainder growth condition?",
+      "source_anchors": ["Coffey arXiv:0706.0343v2", "Voros arXiv:math/0506326v2", "RAKL_math PR #147 R3"]
+    }
+  ],
+  "explicit_disanalogies": [
+    "Prefix/tail algebra does not certify the R5 tail theorem beyond its proposal/shadow authority.",
+    "A route-pruning equivalence does not establish any Li coefficient sign.",
+    "Same-context expert agreement is not independent review.",
+    "A polynomial bound on a proper statistic may be weaker only if its complement/glue is not negligible in the same root-sensitive norm."
+  ],
+  "source_anchors": [
+    "RAKL/main@43897d3afaf0038385102d5acc64793c05ec40f0",
+    "RAKL_math/main@ac8c0745be8aed791a446fd55fcf5154cac01962",
+    "RAKL_math issue #3",
+    "RAKL_math issue #239",
+    "RAKL_math draft PR #147",
+    "RAKL_math draft PR #206",
+    "Coffey arXiv:0706.0343v2",
+    "Voros arXiv:math/0506326v2"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "error-budget accounting",
+      "source_situation": "If a total quantity equals a reported component plus a uniformly negligible correction, a growth cap on the component can be equivalent to the same cap on the total rather than a genuinely local constraint.",
+      "common_abstraction": ["dominant component plus negligible remainder", "obligation-strength comparison", "local-to-global glue"],
+      "source_to_target_mapping": ["reported component -> P_n(X_n)", "negligible correction -> T_n(X_n)", "total -> S_Lambda(n)", "growth cap -> O(n^A)"],
+      "shared_constraints": ["same index", "uniform correction bound", "same two-sided norm"],
+      "disanalogies": ["arithmetic cancellation and Li/root semantics are absent in generic accounting", "analogy provides no RH authority"],
+      "proposed_principle": "Run an obligation-strength DifferenceWitness before treating a nearly-complete decomposition component as a weaker subproblem.",
+      "validation_obligation": "Prove both O(n^A) implications from the exact target decomposition and the exact R5 tail premise, or exhibit a valid target counterexample.",
+      "provenance_note": "Proposal-only structural analogy; target authority must come from elementary target algebra and primary RH sources."
+    }
+  ],
+  "analogy_scan_notes": "Retained only as search control.",
+  "actual_fibre_consulted": [
+    "current RAKL AGENTS.md, SKILL.md, manifest, core principles/workflow, mathematical-research workflow, RAKL_VERSION.json, src/rakl/method_specs.py, docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md, docs/RAKL_METROLOGY.md, semantic_shortcut.py, math_context.py, research_memory.py, research_trace.py",
+    "current RAKL_math AGENTS.md, framework pin, RH root issue #3, RH_ANA_003 problem DAG, issue #239",
+    "draft PR #147 R3 root-coupling; draft PR #195 R4 order-sensitive gluing; draft PR #206 R5 moving-tail candidate/memory/TaskEpisode",
+    "Coffey arXiv:0706.0343v2 PDF, especially Proposition 2 and discussion pp. 29-30",
+    "Voros arXiv:math/0506326v2 PDF/abstract"
+  ],
+  "framework_subject": {"method_version": "3.0.0", "rakl_version": "0.7.0", "rakl_main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0", "application_pin": "43897d3afaf0038385102d5acc64793c05ec40f0"},
+  "application_subject": {"base_sha": "ac8c0745be8aed791a446fd55fcf5154cac01962", "branch": "research/rh-ana003e-prefix-strength-r6-20260812"},
+  "frozen_at": "2026-08-12T02:16:00+00:00",
+  "first_candidate_at": null,
+  "proposal_authority": "SHADOW_ONLY",
+  "packet_hash": "sha256:b74ba6625b14b3ed16f1278543a1651a3df825b6ff2eb5133d34d442a4495296"
+}

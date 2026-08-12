@@ -1,0 +1,131 @@
+{
+  "schema": "RAKL_CYCLE_METRICS",
+  "cycle": "RH-ANA-003e-20260812-R6",
+  "rakl_method": {
+    "version": "3.0.0",
+    "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "version_source": "RAKL_VERSION.json on current RAKL main"
+  },
+  "rakl_math": {
+    "cycle_base_sha": "ac8c0745be8aed791a446fd55fcf5154cac01962",
+    "current_main_refreshed_before_candidate": "21d22075fa250e4ded412fd292b7942b87503266",
+    "pre_candidate_gate_head": "cab0ddc2602f84f95e67ae1409ac8a52810e2681",
+    "mathematical_result_head": "bf45eb896680104445870b7306200f8f3887578e",
+    "assurance_config_head": "e1286db13db62a49d13d65375208e044eaafa7ef",
+    "branch": "research/rh-ana003e-prefix-strength-r6-20260812",
+    "draft_pr": 249,
+    "note": "main advanced once during the cycle by a Navier-Stokes-only merge; RAKL framework main remained unchanged. The mathematical result head is distinguished from later metrology/CI-only commits."
+  },
+  "state_fingerprints": {
+    "pre_state_fingerprint": "sha256:7a9be2e0bc1fc24230cac9aaa35e9b5d125427d9fcadd550f96582702049f4cc",
+    "pre_state_definition": {
+      "framework_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+      "method_version": "3.0.0",
+      "rakl_math_current_main_at_candidate": "21d22075fa250e4ded412fd292b7942b87503266",
+      "pre_candidate_gate_head": "cab0ddc2602f84f95e67ae1409ac8a52810e2681",
+      "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "atom": "RH-ANA-003e",
+      "fiber_hash": "sha256:b74ba6625b14b3ed16f1278543a1651a3df825b6ff2eb5133d34d442a4495296",
+      "memory_hash": "sha256:f5bb50fd35d4c464d802a9620b2af530505fa2451ee63d6bacc7d8c50087b474",
+      "transformation_memory_hash": "17f370a392dfdbac7df8d42060a943c7397f04167de6c95c1bf9ca773b696bda",
+      "shortcut_review_hash": "sha256:c83a39b4d4d380928f88ca41d0f71ccee0be6b05c48bc61afee62f3d5bd8e7a4",
+      "focused_gate": {"run_id": 31557346464, "r6_regression_step": "success"}
+    },
+    "post_state_fingerprint": "sha256:590bfdc193d5187d289cf0e1b47b20ecdc09bd082cb5db6a1708c7e5c5581d80",
+    "post_state_definition": {
+      "framework_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+      "method_version": "3.0.0",
+      "mathematical_result_head": "bf45eb896680104445870b7306200f8f3887578e",
+      "assurance_config_head": "e1286db13db62a49d13d65375208e044eaafa7ef",
+      "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "closed_local_atom": "RH-ANA-003e-route-classification",
+      "successor_atom": "RH-ANA-003f",
+      "fiber_hash": "sha256:b74ba6625b14b3ed16f1278543a1651a3df825b6ff2eb5133d34d442a4495296",
+      "candidate_hash": "sha256:36dd90e0d0776e937f9a58e18ec1c7f5eab8fccbef8a5e0ed166e0d330cb0f0d",
+      "episode_hash": "sha256:ecda9cb70e786651d65d117e5640127a3a5d60e6593bcf9b003dbfb257e15b50",
+      "case_study_hash": "sha256:a7945b5ab8f391f1059087678ab9be0e11b4b1f1de24dd130268efeb325fa75f",
+      "result_trace_terminal_hash": "sha256:5316b22d4acbf275537af3e62d0e2f41111cb959024b6a2b5b5698c5ce01117d",
+      "focused_result_assurance": {"run_id": 31557625990, "conclusion": "success"}
+    }
+  },
+  "active_atom": {
+    "atom_id": "RH-ANA-003e",
+    "problem_signature": ["Riemann Hypothesis", "Li coefficients", "Coffey S_Lambda", "R5 moving prefix P_n(X_n)", "R5 negligible ordered tail", "obligation-strength DifferenceWitness", "two-sided polynomial growth", "Li gluing"],
+    "fibre_snapshot_hash": "sha256:b74ba6625b14b3ed16f1278543a1651a3df825b6ff2eb5133d34d442a4495296",
+    "atom_plus_fibre_snapshot_hash": "sha256:8fb701a6ecf59e8ff9e88f405ee6a2c72dc07f6b17b449c76c20e2a5b403e23c"
+  },
+  "canonical_method_specs_surfaces_invoked": ["decomposition", "routing", "source_selection_reliability", "mathematical_context_translation", "equivalence_similarity", "contextual_theory_gluing", "contradiction_diagnosis", "gap_discovery", "experiment_query_selection", "memory", "review", "saturation_stopping"],
+  "memory_retrieval": {
+    "relevant_tool_ids_count": 0,
+    "relevant_tool_ids": [],
+    "selected_failure_ids_count": 5,
+    "selected_failure_ids": ["F-RH-ANA-003-DENSITY-EXCEPTION-GAP", "F-RH-ANA-003a-MAGNITUDE-MAJORANT-CANCELLATION-LOSS", "F-RH-ANA-003b-FULL-SLAMBDA-POLYNOMIAL-SMALLNESS-ROOT-COUPLED", "F-RH-ANA-003c-UNWITNESSED-WINDOW-GLUE", "F-RH-ANA-003d-LOG-ZFR-CRUDE-LAGUERRE-ENVELOPE-FAIL"],
+    "selected_proposal_or_episode_ids_count": 3,
+    "selected_proposal_or_episode_ids": ["M-RH-ANA-ROOT-SENSITIVE-REMAINDER", "M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING", "EP-RH-ANA-003d-KV-ABEL-MOVING-TAIL-20260812-R5"],
+    "selected_transformation_episode_ids_count": 1,
+    "selected_transformation_episode_ids": ["EP-NEGLIGIBLE-PERTURBATION-PRESERVES-POLY-GROWTH"],
+    "rejected_ids_count": 4,
+    "rejected_ids": ["F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE", "zero-density-only-universal-bridge", "mollifier-resonance-first", "finite-prefix-extrapolation-as-solution"],
+    "total_explicit_ids_retrieved_in_governed_review": 12,
+    "selected_explicit_ids_count": 9,
+    "missed_ids": "CANNOT_MEASURE: no governed complete memory denominator is exposed by the connector runtime."
+  },
+  "outcome": "PARTIAL_SUCCESS_ROUTE_FAMILY_PRUNED_PREFIX_POLYBOUND_EQUIVALENT_TO_FULL_REMAINDER",
+  "residual_before": "RH-ANA-003e: determine whether moving-prefix two-sided polynomial control is genuinely weaker than full S_Lambda control and, if not, rotate.",
+  "residual_after": "RH-ANA-003f: choose a proper source-order internal prefix statistic with a positive DifferenceWitness against endpoint/full-remainder growth and an exact one-sided Li gluing obligation.",
+  "retained_semantic_novelty": {
+    "proposal_shadow": {"KNOWLEDGE": 1, "OPERATOR": 0, "EXPERIENCE_PATTERN": 1, "OBSTRUCTION": 1, "RELATION": 1, "PATH": 1, "META_METHOD": 0},
+    "protected_canonical_authority": {"KNOWLEDGE": 0, "OPERATOR": 0, "EXPERIENCE_PATTERN": 0, "OBSTRUCTION": 0, "RELATION": 0, "PATH": 0, "META_METHOD": 0},
+    "counting_rule": "Only retained semantic deltas are counted; files, prose, issues, commits, tests and proposal lessons are not learning by themselves."
+  },
+  "saturation": {
+    "reopened": ["KNOWLEDGE", "EXPERIENCE_PATTERN", "OBSTRUCTION", "RELATION", "PATH"],
+    "flattened": ["OPERATOR", "META_METHOD"],
+    "notes": {"KNOWLEDGE": "locally flat after retaining the conditional equivalence", "OBSTRUCTION": "reopened at non-congruent internal-statistic requirement", "PATH": "reopened at RH-ANA-003f"}
+  },
+  "resource_proxies": {
+    "model_tokens": "CANNOT_MEASURE: no authoritative model token counter exposed.",
+    "context_tokens": "CANNOT_MEASURE: no authoritative context token counter exposed.",
+    "aggregate_retrieval_calls": "CANNOT_MEASURE: no authoritative aggregate counter spans GitHub connector and web retrieval before/after runtime compaction.",
+    "aggregate_tool_calls": "CANNOT_MEASURE: no authoritative aggregate tool-call counter exposed.",
+    "primary_source_families_directly_rechecked": 2,
+    "focused_ci_runs_observed": 3,
+    "full_application_ci_runs_observed": 2,
+    "same_context_expert_roles": 7,
+    "independent_reviews": 0,
+    "observable_gate_failures": 1,
+    "elapsed_wall_time": "CANNOT_MEASURE: no authoritative per-cycle timer exported to the repository writer."
+  },
+  "new_ids": {
+    "episode_ids": ["EP-RH-ANA-003e-PREFIX-STRENGTH-20260812-R6"],
+    "lesson_ids": ["L-RH-ANA-003e-QUOTIENT-BEFORE-BOUND"],
+    "failure_ids": ["F-RH-ANA-003e-MOVING-PREFIX-POLYBOUND-NOT-WEAKER", "F-RH-ANA-003e-PRE-CANDIDATE-SNAPSHOT-HASH-MISMATCH"],
+    "tool_ids": [],
+    "obstruction_ids": ["O-RH-ANA-003f-NEGLIGIBLE-TAIL-QUOTIENT"],
+    "motif_ids": [],
+    "diagnosis_ids": ["D-RH-ANA-003e-NEGLIGIBLE-COMPLEMENT-COLLAPSES-STRENGTH"],
+    "candidate_ids": ["RH-ANA-003e-C001-NEGLIGIBLE-TAIL-GROWTH-QUOTIENT"],
+    "review_ids": ["REV-RH-ANA-003e-C001-R6"]
+  },
+  "successful_reuse_ids": ["EP-NEGLIGIBLE-PERTURBATION-PRESERVES-POLY-GROWTH", "M-RH-ANA-ROOT-SENSITIVE-REMAINDER", "M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING"],
+  "gate_provenance_ci": {
+    "current_rakl_main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "application_pin": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "initial_pre_candidate_gate": {"run_id": 31557196848, "head_sha": "69959025ddc8ff09f0305133fda5536433658531", "conclusion": "failure", "meaning": "failed closed on transformation-memory snapshot-hash mismatch before candidate"},
+    "repaired_pre_candidate_gate": {"run_id": 31557346464, "head_sha": "cab0ddc2602f84f95e67ae1409ac8a52810e2681", "r6_regression_step": "success", "meaning": "current-v3 pre-candidate gate passed after deterministic binding repair"},
+    "focused_result_assurance": {"run_id": 31557625990, "head_sha": "e1286db13db62a49d13d65375208e044eaafa7ef", "conclusion": "success", "meaning": "R6 pre-candidate and result regressions passed with RH strict packet"},
+    "full_application": {"run_id": 31557626072, "head_sha": "e1286db13db62a49d13d65375208e044eaafa7ef", "status_at_receipt_freeze": "in_progress", "conclusion": "CANNOT_MEASURE: workflow had not completed at receipt freeze"},
+    "root_gate": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "formal_verifier": "NOT_BOUND",
+    "independent_review_credit": 0,
+    "promotion_status": "NOT_ELIGIBLE"
+  },
+  "rakl_action_counterfactual": {
+    "observable": true,
+    "pre_memory_pre_gate_preference": "Direct PNT/partial-summation estimation of the enormous moving prefix after R5 tail closure.",
+    "chosen_action": "Obligation-strength DifferenceWitness first; prune the endpoint polynomial family algebraically before estimation.",
+    "rakl_changed_action": true,
+    "causal_memory_ids": ["F-RH-ANA-003b-FULL-SLAMBDA-POLYNOMIAL-SMALLNESS-ROOT-COUPLED", "F-RH-ANA-003c-UNWITNESSED-WINDOW-GLUE", "M-RH-ANA-ROOT-SENSITIVE-REMAINDER"]
+  },
+  "authority": "PROPOSAL_SHADOW_METROLOGY_ONLY"
+}

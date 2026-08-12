@@ -1,0 +1,20 @@
+{
+  "schema": "RAKL-v3-shadow-SameContextExpertCell",
+  "review_id": "REV-RH-ANA-003e-PRE-R6",
+  "atom_id": "RH-ANA-003e",
+  "context_hash": "sha256:b74ba6625b14b3ed16f1278543a1651a3df825b6ff2eb5133d34d442a4495296",
+  "independent_review_credit": 0,
+  "roles": [
+    {"role": "Li/explicit-formula specialist", "background": "analytic number theory; Li/Keiper coefficients and explicit formulae", "finding": "Coffey's S_Lambda is the exact root-sensitive prime/Laguerre quantity in this lane; normalization must not drift.", "atomic_gap": "Do not infer arbitrary polynomial root equivalence from Coffey alone without the already-audited R3/Voros bridge."},
+    {"role": "prime/PNT specialist", "background": "zero-free regions, PNT error terms, partial summation", "finding": "R5 tail may be treated only as a frozen shadow premise; no new PNT estimate is needed for this discriminator.", "atomic_gap": "If R5 tail is later invalidated, the equivalence audit must be rerun with the corrected remainder class."},
+    {"role": "special-functions specialist", "background": "Laguerre polynomials and asymptotic envelopes", "finding": "The present audit is representation-level and does not need sharper Laguerre estimates once the R5 tail premise is frozen.", "atomic_gap": "A proper future statistic may reopen kernel asymptotics."},
+    {"role": "summation/gluing specialist", "background": "Abel summation, conditional convergence, limit order", "finding": "The identity must use the same natural source order; prefix plus ordered tail is exact at each moving cutoff.", "atomic_gap": "No rearranged infinite-window decomposition is admitted."},
+    {"role": "adversarial falsifier", "background": "counterexample construction and asymptotic classes", "finding": "A hostile pair with prefix O(n^A) but full remainder not O(n^A) cannot exist if the complement is O(1); the converse also fails to separate.", "atomic_gap": "One-sided bounds and non-additive/proper statistics remain genuinely distinct possibilities and must get new DifferenceWitnesses."},
+    {"role": "source/provenance specialist", "background": "primary-literature audit and theorem normalization", "finding": "Coffey v2 explicitly gives S_2=S_gamma+S_Lambda, S_gamma=O(n), S_Lambda=n+S_{2Lambda}; Voros v2 records RH-tame versus RH-false non-tempered Li asymptotics.", "atomic_gap": "No literature-novelty claim is defensible for the elementary perturbation lemma or the route classification."},
+    {"role": "RAKL gate/proof auditor", "background": "v3 chronology, assurance and root promotion", "finding": "Current main/pin match at RAKL 3.0.0; all evidence here stays proposal/shadow and same-context.", "atomic_gap": "No independent review, formal verifier, closed proof DAG, or root promotion condition is met."}
+  ],
+  "consensus": "Prune the two-sided polynomial moving-prefix family before candidate estimation; under the R5 negligible-tail premise it is the same growth obligation as the full remainder. Open a child requiring a proper source statistic with a positive DifferenceWitness.",
+  "disagreements": ["Whether the next proper statistic should be one-sided, localized in prime scale, or cancellation-functional is intentionally unresolved."],
+  "authority": "SAME_CONTEXT_ONLY / ZERO_INDEPENDENT_REVIEW_CREDIT",
+  "artifact_hash": "sha256:7eb47fa9352da06488703f4267404dd47cbd7a0cbb3a8c548c9ab4f07f8581fb"
+}

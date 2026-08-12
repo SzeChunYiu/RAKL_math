@@ -1,0 +1,68 @@
+{
+  "schema": "RAKL-v3-shadow-ResearchMemoryReview",
+  "target_atom_id": "RH-ANA-003e",
+  "target_context_hash": "sha256:b74ba6625b14b3ed16f1278543a1651a3df825b6ff2eb5133d34d442a4495296",
+  "tool_inventory_snapshot_hash": "sha256:45efab95c1bc37e85902dcaf77435faed19b9274ac6ef62c662dbb71b526d7bc",
+  "failure_lattice_snapshot_hash": "sha256:195e5a43302fcc173139f67e5762db25dd04b543023ef98a5b17fc6c779e5548",
+  "tool_query_status": "NO_RELEVANT_MATCH",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "moving-prefix two-sided polynomial bound",
+    "moving-prefix one-sided bound",
+    "proper source-window statistic with non-negligible complement",
+    "mollifier/resonance transfer",
+    "zero-density/zero-free transfer",
+    "explicit-formula cancellation inequality"
+  ],
+  "relevant_tool_ids": [],
+  "relevant_failure_ids": [
+    "F-RH-ANA-003-DENSITY-EXCEPTION-GAP",
+    "F-RH-ANA-003a-MAGNITUDE-MAJORANT-CANCELLATION-LOSS",
+    "F-RH-ANA-003b-FULL-SLAMBDA-POLYNOMIAL-SMALLNESS-ROOT-COUPLED",
+    "F-RH-ANA-003c-UNWITNESSED-WINDOW-GLUE",
+    "F-RH-ANA-003d-LOG-ZFR-CRUDE-LAGUERRE-ENVELOPE-FAIL"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [],
+  "failure_reuse_notes": [
+    "R3 full-remainder polynomial control is root-strength and is the decisive obligation-strength guard.",
+    "R4 unwitnessed-window glue requires exact source-order prefix+tail semantics.",
+    "R2 cancellation loss forbids replacing the signed prefix by termwise absolute estimates without a new witness.",
+    "Density-only control remains rejected as a universal all-zero bridge.",
+    "R5 logarithmic-ZFR/crude-Laguerre failure is not the active coordinate once the tail has been locally closed."
+  ],
+  "unresolved_warnings": [
+    "R5 tail is proposal/shadow evidence from an unmerged draft PR; target conclusion must stay conditional on that premise.",
+    "No canonical ResearchTool supplies the prefix-to-Li glue.",
+    "Complete cross-problem memory denominator is not exposed; no cross-problem completeness claim is made."
+  ],
+  "evidence_pointers": ["RAKL_math PR #147", "RAKL_math PR #195", "RAKL_math PR #206", "RAKL_math issue #239", "Coffey arXiv:0706.0343v2", "Voros arXiv:math/0506326v2"],
+  "proposal_shadow_experience": {
+    "selected_ids": [
+      "F-RH-ANA-003-DENSITY-EXCEPTION-GAP",
+      "F-RH-ANA-003a-MAGNITUDE-MAJORANT-CANCELLATION-LOSS",
+      "F-RH-ANA-003b-FULL-SLAMBDA-POLYNOMIAL-SMALLNESS-ROOT-COUPLED",
+      "F-RH-ANA-003c-UNWITNESSED-WINDOW-GLUE",
+      "F-RH-ANA-003d-LOG-ZFR-CRUDE-LAGUERRE-ENVELOPE-FAIL",
+      "M-RH-ANA-ROOT-SENSITIVE-REMAINDER",
+      "M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING",
+      "EP-RH-ANA-003d-KV-ABEL-MOVING-TAIL-20260812-R5"
+    ],
+    "rejected_ids": [
+      {"id": "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE", "reason": "source-family completeness is not the same coordinate as negligible-complement growth-class equivalence; DifferenceWitness fails structural applicability"},
+      {"id": "zero-density-only-universal-bridge", "reason": "does not address the exact prefix+tail algebra and cannot exclude a sparse off-critical zero"},
+      {"id": "mollifier-resonance-first", "reason": "no direct mapping to the frozen prefix obligation-strength discriminator before algebraic route pruning"},
+      {"id": "finite-prefix-extrapolation-as-solution", "reason": "finite n verification cannot supply all-index Li positivity"}
+    ],
+    "missed_ids": "CANNOT_MEASURE: no governed complete denominator over all stored memories is exposed.",
+    "later_found_missed_ids": []
+  },
+  "decision_policy": {
+    "pre_memory_pre_gate_preference": "Attempt a direct PNT/partial-summation bound on the moving finite prefix after R5 tail closure.",
+    "post_memory_choice": "First run an obligation-strength DifferenceWitness: if polynomial prefix control is algebraically equivalent to polynomial full-remainder control under the negligible tail, prune that route before estimation.",
+    "rakl_changed_action": true,
+    "changed_by": ["F-RH-ANA-003b-FULL-SLAMBDA-POLYNOMIAL-SMALLNESS-ROOT-COUPLED", "F-RH-ANA-003c-UNWITNESSED-WINDOW-GLUE", "M-RH-ANA-ROOT-SENSITIVE-REMAINDER"]
+  },
+  "authority": "PROPOSAL_SHADOW_MEMORY_ONLY",
+  "artifact_hash": "sha256:f5bb50fd35d4c464d802a9620b2af530505fa2451ee63d6bacc7d8c50087b474"
+}

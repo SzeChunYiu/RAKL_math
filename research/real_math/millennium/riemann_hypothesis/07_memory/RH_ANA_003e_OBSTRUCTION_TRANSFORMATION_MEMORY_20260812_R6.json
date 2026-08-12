@@ -1,0 +1,35 @@
+{
+  "memory_id": "OTM-RH-ANA-003e-R6",
+  "source_universe": ["analytic number theory", "real analysis", "RH proposal/shadow experience"],
+  "episodes": [
+    {
+      "episode_id": "EP-NEGLIGIBLE-PERTURBATION-PRESERVES-POLY-GROWTH",
+      "source_domain": "analytic number theory",
+      "source_context": "Elementary sequence lemma: if b_n=a_n+e_n and e_n=O(1), then for every fixed A>=0, a_n=O(n^A) iff b_n=O(n^A).",
+      "source_obstruction": {
+        "obstruction_id": "O-ASYMPTOTIC-NEGLIGIBLE-COMPLEMENT-ROOTLOAD",
+        "domain": "analytic number theory",
+        "roles": ["primary component", "negligible remainder", "full quantity", "growth-class obligation"],
+        "relations": ["full quantity equals primary component plus negligible remainder", "polynomial boundedness is stable under adding a bounded remainder", "local certificate may reconstruct the full global obligation"],
+        "constraints": ["same index n", "two-sided absolute polynomial bound", "uniform remainder bound"],
+        "failure_mechanisms": ["local certificate may reconstruct the full global obligation"],
+        "invariants_to_preserve": ["exact additive decomposition", "same all-index quantifier", "two-sided growth class"],
+        "desired_transition": ["test local polynomial bound for equivalence with full polynomial bound"],
+        "forbidden_losses": ["changing the summation convention", "discarding the complementary remainder", "calling an equivalent obligation strictly weaker"]
+      },
+      "transformation_name": "obligation-strength audit under negligible additive perturbation",
+      "operation": "replace an estimation attempt by a bidirectional triangle-inequality test of whether the local and global growth obligations are actually distinct",
+      "preconditions": ["the decomposition b_n=a_n+e_n is exact", "e_n=O(1) uniformly in n", "A>=0 is fixed", "the same two-sided absolute-value growth notion is used on both sides"],
+      "resulting_relations": ["test local polynomial bound for equivalence with full polynomial bound"],
+      "preserved_invariants": ["exact additive decomposition", "same all-index quantifier", "two-sided growth class"],
+      "relaxed_or_broken_constraints": [],
+      "known_breakpoints": ["one-sided bounds are not automatically equivalent", "nonuniform remainder constants can invalidate transfer", "a different local statistic need not reconstruct the full quantity"],
+      "evidence_pointers": ["elementary triangle inequality", "RAKL_math PR #206 tail premise supplies e_n=o(n^-B) for every B"],
+      "authority": "PROOF_BACKED",
+      "artifact_hash": "sha256:41e70e927d626169231941091426db582dd83f9e75c7df43a54a0b7e384da369",
+      "lineage_ids": ["EP-RH-ANA-003d-KV-ABEL-MOVING-TAIL-20260812-R5"]
+    }
+  ],
+  "evidence_pointers": ["RAKL semantic_shortcut.py @ 43897d3afaf0038385102d5acc64793c05ec40f0", "RAKL_math PR #206", "RAKL_math issue #239", "elementary asymptotic sequence lemma"],
+  "snapshot_hash": "17f370a392dfdbac7df8d42060a943c7397f04167de6c95c1bf9ca773b696bda"
+}
