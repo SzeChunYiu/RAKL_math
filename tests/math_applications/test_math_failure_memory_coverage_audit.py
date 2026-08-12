@@ -28,12 +28,16 @@ def artifact_hash(value: dict) -> str:
 def test_coverage_population_and_exact_gap_are_frozen() -> None:
     audit = load()
     coverage = audit["coverage"]
-    assert coverage["failure_experiences_scanned"] == 91
-    assert coverage["files_scanned_with_experiences"] == 43
-    assert coverage["canonical_schema_complete_experiences"] == 89
+    assert coverage["failure_experiences_scanned"] == 102
+    assert coverage["files_scanned_with_experiences"] == 54
+    assert coverage["unique_failure_ids"] == 48
+    assert coverage["duplicate_rows_preserved"] == 54
+    assert coverage["canonical_schema_complete_experiences"] == 100
     assert coverage["canonical_schema_gap_experiences"] == 2
-    assert coverage["seven_field_math_complete_experiences"] == 90
+    assert coverage["unique_failure_ids_with_canonical_row"] == 46
+    assert coverage["seven_field_math_complete_experiences"] == 101
     assert coverage["seven_field_math_gap_experiences"] == 1
+    assert coverage["unique_failure_ids_with_seven_field_row"] == 47
     assert [row["failure_id"] for row in coverage["seven_field_math_gaps"]] == [LEGACY]
     assert audit["artifact_hash"] == artifact_hash(audit)
 

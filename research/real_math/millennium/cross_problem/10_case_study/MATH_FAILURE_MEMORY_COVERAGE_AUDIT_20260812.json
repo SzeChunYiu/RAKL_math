@@ -1,5 +1,5 @@
 {
-  "artifact_hash": "sha256:36d4f19fcf6806683969682b105aa851b0e2069c44bab999ff77c8d1f235b3da",
+  "artifact_hash": "sha256:8e4b338a727e954a3ae492de2db25a306878d3deba5fe3b8a30a2eb8f7267161",
   "as_of_utc": "2026-08-12T09:15:00Z",
   "audit_id": "MATH-FAILURE-MEMORY-COVERAGE-AUDIT-20260812",
   "authority_universe": {
@@ -14,13 +14,13 @@
       "the source mathematical diagnosis itself may remain under-supported"
     ],
     "falsifier": "Produce a merged, append-only canonical successor for the same failure id that supplies every seven-field ingredient and explicitly supersedes the compact snapshot entry.",
-    "observation": "90 of 91 embedded failure experiences expose the seven mathematical lesson ingredients. The sole mathematical-lesson gap is a proposal-shadow legacy P-vs-NP entry that uses an older compact vocabulary. Two entries have canonical identity/shape gaps, but the Hodge entry already contains all seven mathematical lesson coordinates.",
+    "observation": "101 of 102 embedded rows, covering 47 of 48 unique failure ids, expose the seven mathematical lesson ingredients. The sole mathematical-lesson gap is a proposal-shadow legacy P-vs-NP entry that uses an older compact vocabulary. Two entries have canonical identity/shape gaps, but the Hodge entry already contains all seven mathematical lesson coordinates.",
     "repair": "Preserve the legacy bytes; add a canonical successor/correction or explicitly exclude the proposal-shadow row from canonical failure-lattice counts. Future mathematical failures must record competing causes before selecting a diagnosis.",
     "status": "SUPPORTED_BOUNDED",
     "supported_cause": "The legacy proposal-shadow record was embedded without normalization into the canonical FailureExperience vocabulary; this is an application memory-normalization gap, not evidence that its mathematical diagnosis is true or false."
   },
   "coverage": {
-    "canonical_schema_complete_experiences": 89,
+    "canonical_schema_complete_experiences": 100,
     "canonical_schema_gap_experiences": 2,
     "canonical_schema_gaps": [
       {
@@ -41,7 +41,8 @@
           "artifact_hash"
         ],
         "missing_seven_field_lessons": [],
-        "path": "research/real_math/millennium/hodge/deformation/07_memory/H4d1b_FAILURE_EXPERIENCE_DELTA_20260811.json"
+        "path": "research/real_math/millennium/hodge/deformation/07_memory/H4d1b_FAILURE_EXPERIENCE_DELTA_20260811.json",
+        "source_shape": "experiences"
       },
       {
         "authority": "PROPOSAL_SHADOW_FAILURE_EXPERIENCE",
@@ -80,22 +81,24 @@
           "mathematical_repair",
           "proof_or_source_evidence"
         ],
-        "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_FAILURE_SNAPSHOT_20260811.json"
+        "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_FAILURE_SNAPSHOT_20260811.json",
+        "source_shape": "experiences"
       }
     ],
-    "failure_experiences_scanned": 91,
-    "files_scanned_with_experiences": 43,
+    "duplicate_rows_preserved": 54,
+    "failure_experiences_scanned": 102,
+    "files_scanned_with_experiences": 54,
     "lane_counts": {
       "birch_swinnerton_dyer": 10,
-      "cross_problem": 2,
+      "cross_problem": 3,
       "hodge": 5,
-      "hodge_conjecture": 1,
-      "navier_stokes": 5,
-      "p_vs_np": 48,
+      "hodge_conjecture": 2,
+      "navier_stokes": 10,
+      "p_vs_np": 50,
       "riemann_hypothesis": 10,
-      "yang_mills": 10
+      "yang_mills": 12
     },
-    "seven_field_math_complete_experiences": 90,
+    "seven_field_math_complete_experiences": 101,
     "seven_field_math_gap_experiences": 1,
     "seven_field_math_gaps": [
       {
@@ -109,9 +112,13 @@
           "mathematical_repair",
           "proof_or_source_evidence"
         ],
-        "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_FAILURE_SNAPSHOT_20260811.json"
+        "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_FAILURE_SNAPSHOT_20260811.json",
+        "source_shape": "experiences"
       }
-    ]
+    ],
+    "unique_failure_ids": 48,
+    "unique_failure_ids_with_canonical_row": 46,
+    "unique_failure_ids_with_seven_field_row": 47
   },
   "credit_boundary": {
     "framework_promotion": false,

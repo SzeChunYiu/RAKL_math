@@ -121,30 +121,38 @@ def lane_for(path: Path) -> str:
     return relative.parts[0]
 
 
-def collect() -> list[tuple[Path, dict]]:
-    rows: list[tuple[Path, dict]] = []
+def collect() -> list[tuple[Path, dict, str]]:
+    rows: list[tuple[Path, dict, str]] = []
     for path in sorted(MILLENNIUM.rglob("*.json")):
         try:
             value = json.loads(path.read_text(encoding="utf-8"))
         except (json.JSONDecodeError, UnicodeDecodeError):
             continue
-        experiences = value.get("experiences") if isinstance(value, dict) else None
-        if not isinstance(experiences, list):
+        if not isinstance(value, dict):
             continue
+        experiences = value.get("experiences")
+        if not isinstance(experiences, list):
+            experiences = []
         for experience in experiences:
             if isinstance(experience, dict) and is_present(experience.get("failure_id")):
-                rows.append((path, experience))
+                rows.append((path, experience, "experiences"))
+        experience = value.get("experience")
+        if isinstance(experience, dict) and is_present(experience.get("failure_id")):
+            rows.append((path, experience, "experience"))
     return rows
 
 
 def build() -> dict:
     rows = collect()
-    lane_counts = Counter(lane_for(path) for path, _ in rows)
+    lane_counts = Counter(lane_for(path) for path, _, _ in rows)
+    unique_failure_ids = {experience["failure_id"] for _, experience, _ in rows}
     canonical_gaps = []
     seven_field_gaps = []
     canonical_complete = 0
     seven_field_complete = 0
-    for path, experience in rows:
+    canonical_complete_ids: set[str] = set()
+    seven_field_complete_ids: set[str] = set()
+    for path, experience, source_shape in rows:
         missing = canonical_missing(experience)
         seven_missing = seven_field_missing(experience)
         if missing:
@@ -152,6 +160,7 @@ def build() -> dict:
                 {
                     "failure_id": experience["failure_id"],
                     "path": path.relative_to(ROOT).as_posix(),
+                    "source_shape": source_shape,
                     "authority": experience.get("authority", "UNSPECIFIED"),
                     "missing_canonical_fields": missing,
                     "missing_seven_field_lessons": seven_missing,
@@ -164,25 +173,30 @@ def build() -> dict:
             )
         else:
             canonical_complete += 1
+            canonical_complete_ids.add(experience["failure_id"])
         if seven_missing:
             seven_field_gaps.append(
                 {
                     "failure_id": experience["failure_id"],
                     "path": path.relative_to(ROOT).as_posix(),
+                    "source_shape": source_shape,
                     "authority": experience.get("authority", "UNSPECIFIED"),
                     "missing_seven_field_lessons": seven_missing,
                 }
             )
         else:
             seven_field_complete += 1
+            seven_field_complete_ids.add(experience["failure_id"])
 
-    if len(rows) != 91 or canonical_complete != 89 or seven_field_complete != 90:
+    if len(rows) != 102 or canonical_complete != 100 or seven_field_complete != 101:
         raise RuntimeError(
             "unexpected frozen audit population: "
             f"total={len(rows)} canonical={canonical_complete} seven={seven_field_complete}"
         )
     if [row["failure_id"] for row in seven_field_gaps] != [LEGACY_FAILURE]:
         raise RuntimeError("unexpected mathematical lesson coverage gap")
+    if len(unique_failure_ids) != 48 or len(seven_field_complete_ids) != 47:
+        raise RuntimeError("unexpected unique failure-id coverage")
 
     value = {
         "artifact_hash": "",
@@ -211,11 +225,15 @@ def build() -> dict:
         "seven_field_mapping": SEVEN_FIELD_MAP,
         "coverage": {
             "failure_experiences_scanned": len(rows),
-            "files_scanned_with_experiences": len({path for path, _ in rows}),
+            "files_scanned_with_experiences": len({path for path, _, _ in rows}),
+            "unique_failure_ids": len(unique_failure_ids),
+            "duplicate_rows_preserved": len(rows) - len(unique_failure_ids),
             "canonical_schema_complete_experiences": canonical_complete,
             "canonical_schema_gap_experiences": len(canonical_gaps),
+            "unique_failure_ids_with_canonical_row": len(canonical_complete_ids),
             "seven_field_math_complete_experiences": seven_field_complete,
             "seven_field_math_gap_experiences": len(seven_field_gaps),
+            "unique_failure_ids_with_seven_field_row": len(seven_field_complete_ids),
             "lane_counts": dict(sorted(lane_counts.items())),
             "canonical_schema_gaps": canonical_gaps,
             "seven_field_math_gaps": seven_field_gaps,
@@ -223,7 +241,8 @@ def build() -> dict:
         "bounded_diagnosis": {
             "status": "SUPPORTED_BOUNDED",
             "observation": (
-                "90 of 91 embedded failure experiences expose the seven mathematical lesson ingredients. "
+                "101 of 102 embedded rows, covering 47 of 48 unique failure ids, expose the seven mathematical "
+                "lesson ingredients. "
                 "The sole mathematical-lesson gap is a proposal-shadow legacy P-vs-NP entry that uses an older "
                 "compact vocabulary. Two entries have canonical identity/shape gaps, but the Hodge entry already "
                 "contains all seven mathematical lesson coordinates."
