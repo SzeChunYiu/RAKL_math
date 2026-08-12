@@ -66,6 +66,8 @@ def test_bsd_r10_lineage_metrics_and_query_count_are_consistent():
     assert "same-E/Q theorem" in fl["repair_obligation"]
     assert ls["lesson_kind"].startswith("MATHEMATICAL_RESEARCH")
     assert ls["mathematical_credit"].startswith("ZERO_UNTIL")
+    for key in ("attempted_mathematical_implication", "exact_mathematical_result", "strongest_supported_mathematical_cause", "competing_mathematical_causes", "justified_scope", "mathematical_falsifier", "resulting_mathematical_repair", "supporting_mathematics"):
+        assert ls[key]
     assert met["residual_after"] == ep["residual_signature"] == RESIDUALS
     assert met["resource_proxies"]["primary_literature_search_queries_observed"] == len(src["bounded_current_literature_search"]["queries"]) == 3
     assert all(value == 0 for value in met["retained_semantic_novelty"].values())
