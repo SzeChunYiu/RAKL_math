@@ -1,0 +1,67 @@
+{
+  "artifact_hash": "sha256:8ae5718e105f00f68c12c85e2e8e97b1bba964d765879c7cabfdd7caaccacb94",
+  "atom_id": "BSD-A1a3-CASSELSTATEDIV-CORANK-GATE",
+  "authority": {
+    "countermodel": "ELEMENTARY_GROUP_THEORETIC_PROOF",
+    "formal_proof": false,
+    "independent_review": false,
+    "novelty_claim": false,
+    "root_promotion": false,
+    "source_theorem": "STORED_PRIMARY_SOURCE"
+  },
+  "classified_branch": "PAIRING_DESCENDS_ONLY_TO_QUOTIENT_NO_DIVISIBLE_CORANK_CONTROL",
+  "cycle_id": "BSD-A1A3-CASSELSTATE-DIVISIBLE-CORANK-20260812-R16",
+  "exact_group_countermodel": {
+    "checks": [
+      "the full pairing is alternating",
+      "the induced pairing on the zero quotient is nondegenerate",
+      "corank_Zp M_div=r is arbitrary, including r=1"
+    ],
+    "conclusion": "The abstract Cassels--Tate pairing properties alone imply neither corank D=0 nor even parity of corank D.",
+    "group": "M=(Q_p/Z_p)^r for any integer r>=0",
+    "maximal_divisible_subgroup": "M_div=M",
+    "pairing": "the zero bilinear pairing M x M -> Q/Z",
+    "quotient": "M_nd=M/M_div=0",
+    "realizability_boundary": "This is a logical countermodel to the inference from pairing axioms alone; it does not assert that every r occurs as the divisible Sha corank of an elliptic curve."
+  },
+  "framework_drift_review": "a6946c..7d67a18 adds Paper3 objective artifacts and an optional objective-transfer benchmark module/tests; it is not imported by the mandatory mathematical research runtime or gates",
+  "framework_main_sha_at_result": "7d67a18a96499f5df7bf58bc6b1356d1ce1cafbf",
+  "p_primary_specialization_proof": [
+    "Sha(E) is torsion and decomposes into primary components; its maximal divisible subgroup decomposes similarly.",
+    "A bilinear Q/Z-valued pairing between p-primary and q-primary elements is zero for p different from q because its value is killed by powers of both primes.",
+    "Therefore the quotient pairing splits by prime and is nondegenerate on Sha(E)[p^infinity]/D[p^infinity], but D[p^infinity] has already been removed."
+  ],
+  "pre_result_freeze": {
+    "gate_artifact_hash": "sha256:20680c8032daf2da078c67cb6d8d54480da935ee214e4c6e8cf06337d9461f42",
+    "gate_path": "research/real_math/millennium/birch_swinnerton_dyer/09_trace/BSD_A1a3_R16_SOURCE_DISCRIMINATOR_FREEZE_20260812.json",
+    "merge_commit": "d06b0b465a619f19ce0682d8cf964e42b2ee925f"
+  },
+  "record_type": "BSD_R16_PRIMARY_SOURCE_DIRECTION_AND_LOGICAL_SUFFICIENCY_AUDIT",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "source": {
+    "arxiv_id": "math/9911267v1",
+    "authors": [
+      "Bjorn Poonen",
+      "Michael Stoll"
+    ],
+    "downloaded_at_utc": "2026-08-12T11:42:00Z",
+    "pdf_bytes": 399391,
+    "pdf_sha256": "a7f6b91f8dbc38d8c061fc8aa2c2848a1ed503cb0dbe91c5bd1a6f6ef9dff804",
+    "publication": "Annals of Mathematics 150 (1999), 1109-1149",
+    "selectors": [
+      "abstract, Annals p.1109: definition of Sha_nd and nondegenerate quotient pairing; elliptic-curve alternation",
+      "introduction, Annals pp.1110-1111: pairing on Sha(E), quotient by maximal divisible subgroup, alternation, and square-order consequence conditional on finiteness",
+      "Section 2, Annals p.1112: M_div, M_nd=M/M_div, p-primary notation, and alternating versus antisymmetric distinction",
+      "Corollary 12 remarks, Annals p.1126: recovery of Cassels alternation theorem for elliptic curves"
+    ],
+    "title": "The Cassels-Tate pairing on polarized abelian varieties",
+    "underlying_cassels_reference": "J. W. S. Cassels, Arithmetic on curves of genus 1, IV, J. reine angew. Math. 211 (1962), 95-112",
+    "url": "https://arxiv.org/pdf/math/9911267"
+  },
+  "source_bound_statements": [
+    "In general the Cassels--Tate pairing is Sha(A) x Sha(A^vee) -> Q/Z; for an elliptic curve, the canonical principal polarization identifies E with E^vee and gives the self-pairing used here.",
+    "For an elliptic curve E over a global field, the Cassels--Tate pairing on Sha(E) becomes nondegenerate after quotienting Sha(E) by its maximal divisible subgroup D.",
+    "For elliptic curves the pairing is alternating, including the 2-primary part; the source separately warns that antisymmetric alone implies alternating automatically only at odd p.",
+    "If Sha(E) is finite, alternation and nondegeneracy force its order to be a square; finiteness is a premise of this consequence, not an output of the pairing theorem."
+  ]
+}

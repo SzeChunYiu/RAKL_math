@@ -1,0 +1,50 @@
+{
+  "experiences": [
+    {
+      "artifact_hash": "sha256:aa7ac5baa9aecd05a87e5edf99bb43f5ecdf360bc8965983ec90eeed4b8f1d02",
+      "atom_id": "BSD-A1a3-CASSELSTATEDIV-CORANK-GATE",
+      "broken_assumptions": [
+        "nondegeneracy applies to the full Sha including D",
+        "alternation forces D=0 or even corank",
+        "square order consequence proves finiteness"
+      ],
+      "candidate_id": "NO_MATHEMATICAL_CANDIDATE_R16_PREDECLARED_SOURCE_DISCRIMINATOR",
+      "competing_diagnoses": [
+        "pairing forces zero divisible corank",
+        "pairing forces even divisible corank",
+        "pairing controls only Sha/D",
+        "p=2 invalidates elliptic alternation"
+      ],
+      "context_packet_hash": "sha256:4445f308448114792a28b89fed707fc8503f929cefb7899db7f1fca547c476b7",
+      "diagnosis_status": "VERIFIED_IMPOSSIBILITY",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a3_R16_CASSELSTATE_SOURCE_AUDIT_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a3_R16_SCOPED_MATHEMATICAL_LESSON_20260812.json"
+      ],
+      "failure_id": "F-BSD-R16-PAIRING-QUOTIENT-BLIND-TO-DIVISIBLE-CORANK",
+      "failure_mode": "The pairing becomes nondegenerate only after quotienting by the maximal divisible subgroup whose corank is the target.",
+      "falsifier_or_attempt": "A theorem derived solely from the frozen pairing properties that forces corank D=0 would have to exclude M=(Q_p/Z_p, zero pairing), whose quotient is zero with nondegenerate alternating induced pairing. Thus that implication is impossible without an additional hypothesis not present in the pairing properties.",
+      "local_repair_attempts": [
+        "restricted pairing by primary decomposition",
+        "separated D from Sha/D",
+        "tested r=1 and arbitrary-r divisible countermodels"
+      ],
+      "method_family": "Cassels--Tate alternating/nondegenerate pairing as a repair for p-primary divisible Sha corank slack",
+      "observed_result": "The route fails as a standalone implication: nondegeneracy is on Sha/D, where D is the maximal divisible subgroup. The theorem controls the nondivisible quotient, not corank D. The explicit divisible-group countermodel shows it implies neither D=0 nor parity of corank D.",
+      "research_trace_event_id": "BSD-R16-E10",
+      "residual_signature": [
+        "EXACT_SELMER_CORANK_TWO_TO_P_PRIMARY_SHA_FINITE_OR_INDEPENDENT_MW_RANK_TWO",
+        "PAIRING_CONTROLS_ONLY_NONDIVISIBLE_QUOTIENT"
+      ],
+      "scope_conditions": [
+        "same elliptic curve E/Q and prime p",
+        "only exact Cassels--Tate pairing properties plus R15 corank decomposition",
+        "countermodel is logical and does not assert arithmetic realizability",
+        "reuse remains allowed with independent D-control input"
+      ],
+      "selected_diagnosis": "VERIFIED_SCOPED_NONIMPLICATION: the quotient pairing is blind to D; the r=1 divisible countermodel refutes both zero and parity inferences from these axioms alone.",
+      "timestamp": "2026-08-12T11:45:00Z"
+    }
+  ],
+  "links": []
+}
