@@ -1,0 +1,119 @@
+{
+  "schema_version": "hodge-frozen-math-context-v1",
+  "atom_id": "H4d1c-c",
+  "parent_obstruction_id": "H4d1c-INDEPENDENT-HODGE-TO-WITNESS-TANGENT-SURJECTIVITY-MECHANISM",
+  "exact_root_contract": "For every smooth projective complex algebraic variety X and every p, every rational cohomology class of Hodge type (p,p) in H^{2p}(X,Q) lies in the Q-span of codimension-p algebraic cycle classes.",
+  "framework": {
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "live_main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0"
+  },
+  "rakl_math_base_sha": "05e69b5d74d7c55e6672912cf5d5ac31f373708e",
+  "rakl_math_pre_tree_fingerprint": "git-tree:d8c0108e81208584765cea85551686e61451fc48",
+  "fibre_manifest": {
+    "atom_id": "H4d1c-c",
+    "problem_signature": [
+      "rational Hodge conjecture exact scope: smooth projective complex varieties and rational (p,p)-classes",
+      "already algebraic central witness calibration only; no root initial algebraicity claim",
+      "first-order witness-representation tangent reachability",
+      "compare fixed-component factorization with a genuinely total divisor representation",
+      "positive control confined to codimension one on P^2"
+    ],
+    "exact_question": "Can a genuinely total witness representation have first-order deformation directions unavailable to the fixed-component factorization, so that the H4d1c-b fibre-product no-go is representation-local rather than an intrinsic no-go for total-witness geometry?",
+    "objects": {
+      "ambient": "P^2_C",
+      "central_cycle": "C0=V(xy)=L_x union L_y, a degree-2 divisor",
+      "fixed_component_parameter_space": "P(H^0(O(1))) x P(H^0(O(1)))",
+      "total_witness_parameter_space": "P(H^0(O(2)))",
+      "multiplication_map": "mu([l1],[l2])=[l1*l2]",
+      "test_direction": "z^2 modulo <xy>, represented by C_t=V(xy+t z^2)"
+    },
+    "falsifier": "If dmu at ([x],[y]) is surjective onto T_[xy]P(H^0(O(2))), the proposed representation escape fails in this control. Otherwise exhibit an explicit tangent class outside im(dmu) and integrate it to a genuine algebraic family.",
+    "fibre_contents_consulted": [
+      "RAKL@43897d3: RAKL_VERSION.json",
+      "RAKL@43897d3: ARCHITECTURE.md",
+      "RAKL@43897d3: src/rakl/method_specs.py",
+      "RAKL@43897d3: src/rakl/experience_substrate.py",
+      "RAKL@43897d3: src/rakl/problem_fibre.py",
+      "RAKL@43897d3: src/rakl/saturation_vector.py",
+      "RAKL@43897d3: docs/RAKL_METROLOGY.md",
+      "RAKL_math@05e69b5: config/rakl-framework-pin.json",
+      "RAKL_math@05e69b5: issue #6 root contract/status",
+      "RAKL_math@05e69b5: H4d1c obstruction register",
+      "RAKL_math@05e69b5: H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE",
+      "RAKL_math PR #197 shadow: H4d1c-C001-RATIONAL-COEFFICIENT-CANCELLATION and L-H4D1C-COEFFICIENT-JOINTNESS-V1",
+      "RAKL_math PR #226 shadow: H4d1c-C002-FIXED-COMPONENT-FIBRE-PRODUCT-NONEXPANSION and L-H4D1C-FIBRE-PRODUCT-COUPLING-NONEXPANSION-V1",
+      "Cattani-Deligne-Kaplan arXiv:alg-geom/9402009",
+      "Nishinou arXiv:2009.01651",
+      "Kloosterman arXiv:2104.14845",
+      "Bloch-Esnault-Kerz arXiv:1310.1773",
+      "Movasati arXiv:2211.11405",
+      "Liu-Shen arXiv:2602.13951"
+    ],
+    "selected_experience_ids": [
+      "H4d1c-INDEPENDENT-HODGE-TO-WITNESS-TANGENT-SURJECTIVITY-MECHANISM",
+      "H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE",
+      "H4d1c-C001-RATIONAL-COEFFICIENT-CANCELLATION",
+      "L-H4D1C-COEFFICIENT-JOINTNESS-V1",
+      "H4d1c-C002-FIXED-COMPONENT-FIBRE-PRODUCT-NONEXPANSION",
+      "L-H4D1C-FIBRE-PRODUCT-COUPLING-NONEXPANSION-V1"
+    ],
+    "rejected_experience_ids": [
+      {
+        "id": "H4d1a same-detector branch no-go family",
+        "reason": "correct negative history but not decisive for comparing fixed-factor versus total-witness tangent representations"
+      },
+      {
+        "id": "cross-Millennium global math-only saturation ledger",
+        "reason": "read only as metrology/authority audit; no DifferenceWitness licensed transfer of another Millennium problem's mathematics"
+      },
+      {
+        "id": "Liu-Shen-2602.13951-as-witness-lifting-theorem",
+        "reason": "current Hodge-bundle/Hodge-locus source is useful scope context but does not by itself furnish the algebraic witness-surjectivity interface needed here"
+      }
+    ],
+    "missed_prior_experience": "NONE_OBSERVED_WITHIN_BOUNDED_SEARCH; two most relevant recent records were unmerged proposal/shadow PR material and were recovered explicitly from PR #197 and PR #226 rather than treated as canonical memory.",
+    "positive_controls": [
+      "codimension-one degree-2 divisors on P^2, where total sections of O(2) give a single-object representation",
+      "Kloosterman complete-intersection-on-hypersurface setting as a source-specific higher-codimension positive variational control"
+    ],
+    "disanalogies": [
+      "for divisors on P^2, every degree-2 divisor has fixed cohomology class 2H and type (1,1); higher-codimension Hodge persistence is nontrivial",
+      "P(H^0(O(2))) is a complete linear system; general higher-codimension cycles are not parametrized by an analogous complete linear system",
+      "smoothing a reducible divisor changes decomposition but does not address rational-equivalence, signed coefficients, or general Chow/Hilbert obstruction theory",
+      "first-order tangent escape does not imply higher Artin lifting, algebraization, monodromy control, degeneration compatibility, or globalization"
+    ],
+    "expert_cell": [
+      {
+        "role": "algebraic-geometry/Hilbert-Chow specialist",
+        "background": "deformation theory of subschemes, linear systems, Hilbert/Chow parameter spaces",
+        "delegation": "compute and interpret dmu and the total conic tangent space"
+      },
+      {
+        "role": "VHS/Hodge-locus specialist",
+        "background": "variations of Hodge structure, Hodge loci, variational Hodge conjecture",
+        "delegation": "audit what the codimension-one control does and does not transfer to the Hodge branch"
+      },
+      {
+        "role": "deformation/obstruction specialist",
+        "background": "first-order and Artin deformation theory, obstruction maps, algebraization boundaries",
+        "delegation": "separate tangent escape from higher-order lifting and gluing"
+      },
+      {
+        "role": "adversarial proof auditor",
+        "background": "exact linear algebra, scheme-theoretic boundary cases, proof-scope auditing",
+        "delegation": "attempt the precommitted falsifier and test smoothness/integration of the missing direction"
+      },
+      {
+        "role": "RAKL v3/metrology auditor",
+        "background": "proposal/shadow experience, authority gates, saturation/metrology",
+        "delegation": "enforce episode/diagnosis/lesson separation, zero independent-review credit, and conservative learning counts"
+      }
+    ],
+    "authority": "PROPOSAL_SHADOW_ONLY"
+  },
+  "fibre_snapshot_hash": "sha256:d1cac7dce1168de8fab2617c6bf2c4ca6f9b955b8bc9e6678542a82f275815b6",
+  "frozen_at": "2026-08-12T02:37:22+00:00",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "context_hash": "sha256:57e6454b8cb5179b76260958f0ca5fb34fe80c796c98332286c0bb7420735c9e"
+}
