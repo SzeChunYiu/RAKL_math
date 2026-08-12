@@ -1,0 +1,69 @@
+{
+  "schema": "RAKL_math-shadow-math-context-fibre-v1",
+  "atom_id": "YM-S1a2c",
+  "issue": 238,
+  "problem_signature": "YM-S1a2c|SZZ thermodynamic limit -> same-measure OS reflection positivity|fixed-cutoff strong-coupling SU(N)|no transfer-moment or continuum promotion",
+  "root_issue": 5,
+  "root_contract": "For every compact simple gauge group, construct a non-trivial 4D quantum Yang-Mills theory at Clay axiomatic strength and prove a finite positive mass gap above the vacuum; fixed-cutoff/lattice-only results cannot close the root.",
+  "object_context": {
+    "group": "SU(N)",
+    "dimension": "d>1; target interest d=4",
+    "coupling": "0 < beta < 1/[16(d-1)]",
+    "lattice_spacing": "a=1 fixed",
+    "volume": "periodic finite tori Lambda_L, then L->infinity",
+    "measure": "SZZ Wilson plaquette measure mu_{Lambda_L,N,beta} and its unique infinite-volume limit mu^ym_{N,beta}",
+    "qoi": "reflection positivity of mu^ym on bounded continuous gauge-invariant positive-time cylinder algebra for a fixed lattice time reflection"
+  },
+  "success_contract": [
+    "source-bind the exact SZZ finite-volume Wilson measure and whole-sequence thermodynamic convergence",
+    "source-bind finite-volume Wilson physical/reflection positivity on compatible SU(N) periodic lattice geometry and positive coupling",
+    "choose a reflection-compatible cofinal volume subsequence without changing the limiting SZZ measure",
+    "prove the reflected quadratic functional conj(theta F)F is bounded continuous for each bounded continuous cylinder F so weak convergence passes nonnegativity",
+    "separate gauge/reflection invariance and reflection positivity from covariance-to-transfer-moment identification"
+  ],
+  "excluded_claims": [
+    "no continuum/lattice-spacing uniform mass gap",
+    "no RG/strong-to-weak transport",
+    "no automatic equality of SZZ covariance with physical transfer moments",
+    "no automatic support-distance-to-time identification",
+    "no Clay root closure"
+  ],
+  "hostile_controls": [
+    "unbounded or discontinuous test functional: weak convergence need not preserve expectation",
+    "mismatched action/sign/boundary/reflection: no same-theory glue",
+    "reflection-positive limiting measure without transfer identity: physical spectral-gap conclusion still blocked"
+  ],
+  "analogues": [
+    {"id":"AN-YM-RP-CLOSED-CONE","claim":"nonnegative expectations of a fixed bounded continuous test functional are closed under weak convergence","role":"direct functional-analytic composition"},
+    {"id":"AN-YM-WILSON-TM-LUESCHER","claim":"Wilson SU(N) lattice gauge theory has physical positivity and a selfadjoint strictly positive transfer matrix in the finite-lattice construction","role":"same-domain primary analogue"}
+  ],
+  "disanalogies": [
+    "Luescher's finite canonical construction includes a particular finite-time geometry and quark sector; only the pure gauge Wilson factor and compatible periodic gauge boundary data may be reused.",
+    "SZZ's phrase mass gap denotes exponential covariance decay and is not, by itself, the Clay/physical Hamiltonian gap.",
+    "SU(N) fixed-cutoff strong coupling is a strict subproblem of the all-compact-simple-group continuum root."
+  ],
+  "selected_prior_experience": [
+    {"id":"F-YM-S1A2-OS-SZZ-SAME-THEORY-GLUING-UNBOUND","authority":"canonical current-main FailureExperience","effect":"changed routing to same-measure witness before any spectral promotion"},
+    {"id":"PR#225/YM-S1a2b-R11","authority":"open proposal/shadow only","effect":"conditionally discharges source-density coordinate, so current atom isolates reflection positivity rather than repeating density proof"}
+  ],
+  "rejected_prior_experience": [
+    {"id":"issue#109/F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE","reason":"hidden-state/source-family failure is downstream of the present same-measure reflection-positivity coordinate and was already addressed conditionally in R11"},
+    {"id":"PR#193/EP-YM-S1c1a2-R10","reason":"RG K-coordinate/slaving obstruction is a different regulator-transport coordinate; saturated for this fixed-cutoff atom"},
+    {"id":"PR#222/XM017","reason":"cross-Millennium aggregation-law lesson does not supply a reflection-positive weak-limit theorem; DifferenceWitness: its source object is finite cover multiplexing while target object is positivity of a measure functional"}
+  ],
+  "cross_millennium_policy": "No cross-Millennium theorem transfer selected. XM017 was incidentally retrieved and DifferenceWitness-rejected; no LIFT/exhaustion claim.",
+  "expert_cell": [
+    {"role":"Constructive QFT / OS reconstruction","task":"check positivity form, null quotient, and what the limit lemma does and does not give"},
+    {"role":"Lattice gauge transfer-matrix specialist","task":"match Wilson action, coupling sign, boundary/reflection geometry, SU(N), and physical positivity source"},
+    {"role":"Gibbs/weak-limit probabilist","task":"verify topology, bounded-continuous cylinder class, cofinal subsequence, and passage of inequalities"},
+    {"role":"Spectral analyst","task":"prevent reflection positivity from being silently upgraded to a Hamiltonian gap without moment/density hypotheses"},
+    {"role":"RG/continuum specialist","task":"audit volume vs lattice-spacing uniformity and block any continuum extrapolation"},
+    {"role":"Adversarial source/provenance & RAKL assurance","task":"check exact claims, chronology, memory authority, failure separation, trace/metrology, and root gates"}
+  ],
+  "rakl_method_version": "3.0.0",
+  "rakl_git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+  "rakl_math_base": "9d7d167b5ffa398582550a0492a1e895786137d4",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "frozen_at": "2026-08-12T02:03:00Z",
+  "fibre_snapshot_hash": "sha256:68dc043ca470fb8de4aa139da86b353b32ee6d526f8a7ea264bb16883aa043aa"
+}
