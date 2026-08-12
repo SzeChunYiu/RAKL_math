@@ -1,0 +1,17 @@
+{
+  "trace_id": "TRACE-YM-E4A-FS-PROP88-20260811",
+  "atom_id": "YM-E4a",
+  "fibre_snapshot_hash": "sha256:f948cce69ea6296ca3e4ebc7113c26e3789fa61ffb19585e9ca36b6ad91457aa",
+  "hash_algorithm": "sha256(canonical-json-without-event_hash)",
+  "events": [
+    {"seq": 1, "kind": "freeze_context", "payload": {"fibre": "sha256:f948cce69ea6296ca3e4ebc7113c26e3789fa61ffb19585e9ca36b6ad91457aa"}, "prev_hash": "GENESIS", "event_hash": "sha256:f07c32fd756d79a3b01d1366724f7295af1916b240e06e69f2d8f4588a51b356"},
+    {"seq": 2, "kind": "memory_review", "payload": {"selected": ["G4", "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE", "YM-S1a1-C001"], "routing_changed": true}, "prev_hash": "sha256:f07c32fd756d79a3b01d1366724f7295af1916b240e06e69f2d8f4588a51b356", "event_hash": "sha256:8f48c1daa1b70d2f095e28f51275c49cc5efe84e7baddc4309aff554688c7df1"},
+    {"seq": 3, "kind": "claim_extraction", "payload": {"source": "arXiv:2606.19362v1", "selector": "P517 Proposition 8.8", "claim": "fixed-source decay implies full gap"}, "prev_hash": "sha256:8f48c1daa1b70d2f095e28f51275c49cc5efe84e7baddc4309aff554688c7df1", "event_hash": "sha256:0d1f7272e0b7763cdfc9d25e5d7b58c6d588a61393cea14fac01e7f8952430da"},
+    {"seq": 4, "kind": "falsifier", "payload": {"model": "diag(0,epsilon,M), A Omega=e_high", "result": "REFUTED_FIXED_SOURCE_GLOBAL_UPGRADE"}, "prev_hash": "sha256:0d1f7272e0b7763cdfc9d25e5d7b58c6d588a61393cea14fac01e7f8952430da", "event_hash": "sha256:7c763ea8642ddca3c4644ded5e9a0cf288f7a03ab1ed7667b968e3467c779b92"},
+    {"seq": 5, "kind": "internal_crosscheck", "payload": {"selectors": ["P503 Theorem 6.7/Lemma 6.8", "P207-208 Theorem E.4", "P543 Corollary C.3"], "result": "family-wide/density interface present elsewhere"}, "prev_hash": "sha256:7c763ea8642ddca3c4644ded5e9a0cf288f7a03ab1ed7667b968e3467c779b92", "event_hash": "sha256:61cff2f93bf8b123e2b37345f41906c2ffedb230a3c8678da1fea40eb694e0ce"},
+    {"seq": 6, "kind": "expert_review", "payload": {"result": "LOCAL_SOURCE_INTERFACE_DEFECT_SUPPORTED", "independence": "SAME_CONTEXT_ONLY"}, "prev_hash": "sha256:61cff2f93bf8b123e2b37345f41906c2ffedb230a3c8678da1fea40eb694e0ce", "event_hash": "sha256:137215c25fd84a1c05825c978594db17d82a4de23af7a81af6cca2c0e973b968"},
+    {"seq": 7, "kind": "outcome", "payload": {"retained_novelty": {"KNOWLEDGE": 1, "OPERATOR": 0, "EXPERIENCE_PATTERN": 0, "OBSTRUCTION": 0, "RELATION": 1, "PATH": 0, "META_METHOD": 0}, "root": "OPEN_NO_SOLUTION_CERTIFICATE"}, "prev_hash": "sha256:137215c25fd84a1c05825c978594db17d82a4de23af7a81af6cca2c0e973b968", "event_hash": "sha256:0f8b3815f1dc7b17f163c2e3455e409816f68ada3e45ed1b2be08fa761e2f7e4"}
+  ],
+  "trace_head": "sha256:0f8b3815f1dc7b17f163c2e3455e409816f68ada3e45ed1b2be08fa761e2f7e4",
+  "proposal_shadow": true
+}
