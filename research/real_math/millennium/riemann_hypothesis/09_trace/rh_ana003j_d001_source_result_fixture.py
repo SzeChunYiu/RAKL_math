@@ -33,7 +33,7 @@ APPLICATION_BASE_SHA = "b42535ea717f239ecc4402a74732bb45bbae77e1"
 FREEZE_MERGE_SHA = APPLICATION_BASE_SHA
 FREEZE_RAW_SHA256 = "9cd428ff6511796237ffc312f54cddab0e458e857e82ddb3b8baf3c125faf521"
 FREEZE_GIT_BLOB = "e3f00958c8c2e07d803baf7556bc52cbe6fe15b6"
-FRAMEWORK_LIVE_SHA = "6756ebec40b90f327d879410539f5146e188f34d"
+FRAMEWORK_LIVE_SHA = "7a95860924f73c02113d11d3837ea22eefa8cc44"
 CONTEXT_HASH = "sha256:08dc06f14c732d28d179d74ed109b0ee8f8af5efb8dce3895427c333ea3fb580"
 BELLOTTI_PDF_SHA256 = "39a39e3dbc73506cf5dfd0b8a18b24e85302d305fa3059a60abcfa6f23292568"
 DGS_PDF_SHA256 = "e93985f8ede2799f6e9f3b12dad2565228fefa0b1f662306e2caf9768d2b423c"
@@ -111,7 +111,11 @@ def source_document(root: Path) -> dict:
         "framework_observation": {
             "latest_observed_main_sha": FRAMEWORK_LIVE_SHA,
             "application_gitlink_edited": False,
-            "classification": "PAPER1_PROJECTION_ONLY_AFTER_PRIOR_PAPER3_REGISTRATION_NO_MATHEMATICAL_GATE_CHANGE",
+            "review_base_sha": "6756ebec40b90f327d879410539f5146e188f34d",
+            "changed_path_count": 28,
+            "changed_surface_summary": "TCSQ objective-transfer and semantic-quotient Paper1/Paper2 research, workflows, runtime modules, scripts, publications, and tests",
+            "protected_math_gate_paths_changed": [],
+            "classification": "TCSQ_OBJECTIVE_TRANSFER_SEMANTIC_QUOTIENT_PAPER1_PAPER2_ONLY_NO_PROTECTED_MATHEMATICAL_GATE_CHANGE",
             "grants_mathematical_authority": False,
         },
         "exact_sources": [
