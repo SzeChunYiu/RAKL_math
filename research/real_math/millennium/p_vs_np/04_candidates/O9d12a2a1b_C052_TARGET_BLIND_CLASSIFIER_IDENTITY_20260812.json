@@ -1,0 +1,127 @@
+{
+  "atom_id": "O9d12a2a1b-C052",
+  "certificate_interfaces": {
+    "cannot_check": [
+      "input_or_support_validation_failure",
+      "evidence_pointer_if_available"
+    ],
+    "escape_admissible": [
+      "support_equalities",
+      "coordinates_0_through_7",
+      "no_universal_unequal_bit_proof",
+      "not_overlap_disclaimer"
+    ],
+    "forced_conflict": [
+      "support_equalities",
+      "coordinate_j",
+      "forced_parent_bit",
+      "MAGIC_bit",
+      "all_v_indices_signs_coverage_proof"
+    ],
+    "unresolved": [
+      "support_equalities",
+      "failed_certificate_obligations"
+    ]
+  },
+  "domain": {
+    "current_variables": [
+      "a_plus",
+      "b_plus",
+      "m_plus",
+      "v_plus",
+      "current_padding"
+    ],
+    "derived_equalities": [
+      "H(a,b)=6+2a+2b",
+      "w(a)=1+a",
+      "R(a,b,m)=H(a,b)+3m*w(a)",
+      "parent_padding=R(a,b,m) mod 2 and R+parent_padding=2k",
+      "current_padding=R(a_plus,b_plus,m_plus) mod 2 and R(a_plus,b_plus,m_plus)+current_padding=2(k+1)",
+      "phi_c0=(k-H(a,b)) mod w(a)",
+      "h[0]=1 is prepended; c[0]=x[k]=h[1]",
+      "for j>=1, h[j]=x[k+j-1] and token phase=(phi_c0+j-1) mod w(a)",
+      "for 0<=j<=7, every current word has p[j]=MAGIC[j] with MAGIC=11100101"
+    ],
+    "forbidden_domain_shortcuts": [
+      "replace v by a single representative of its bit-length cell",
+      "omit literal indices or signs",
+      "choose padding rather than derive it",
+      "conflate h[0] with c[0]=h[1]",
+      "select or enumerate a new k before identity publication"
+    ],
+    "parent_variables": [
+      "k",
+      "a",
+      "b",
+      "m",
+      "v",
+      "parent_padding"
+    ],
+    "quantifiers": [
+      "k,a,b,m,a_plus,b_plus,m_plus are positive integers",
+      "2^(a-1) <= v <= 2^a-1 and b=bit_length(m)",
+      "2^(a_plus-1) <= v_plus <= 2^a_plus-1 and b_plus=bit_length(m_plus)",
+      "every legal literal variable index 1..v and each sign is covered when a parent bit is claimed forced",
+      "every legal current literal index 1..v_plus and each sign is covered when a current bit is claimed forced"
+    ],
+    "total_input_contract": "Every input is either a complete symbolic support-cell record or malformed/missing; the classifier must return exactly one declared branch."
+  },
+  "forbidden_capabilities": [
+    "decoder import or execution",
+    "SAT or UNSAT execution",
+    "overlap comparison",
+    "new-k enumeration",
+    "target-k selection"
+  ],
+  "hostile_world_contract": {
+    "expected_branch_if_certificate_valid": "ESCAPE_ADMISSIBLE",
+    "failure_if": "The classifier calls the cell FORCED_CONFLICT, omits it, or calls escape admissibility an overlap witness.",
+    "future_input_requirement": "An independently derived complete support cell and certificate showing no universally forced unequal MAGIC coordinate.",
+    "identity_only_now": true,
+    "materialization_and_execution_status": "NOT_MATERIALIZED_NOT_EXECUTED",
+    "world_id": "C052-HOSTILE-SUPPORTED-ESCAPE-CELL-v1"
+  },
+  "identity_id": "PNP-C052-TARGET-BLIND-TOTAL-SUPPORT-PHASE-CLASSIFIER-v1",
+  "identity_kind": "INERT_DATA_ONLY_CLASSIFIER_SPECIFICATION",
+  "mandatory_regression_worlds": [
+    {
+      "expected_branch": "FORCED_CONFLICT",
+      "expected_certificate": "h[3]=1 while MAGIC[3]=0",
+      "scope": "k=15 only; not an induction premise",
+      "source": "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json",
+      "world_id": "C050-k15-bounded-regression"
+    },
+    {
+      "expected_branch": "FORCED_CONFLICT",
+      "expected_certificate": "h[3]=1 while MAGIC[3]=0",
+      "scope": "k=19 retrospective verification only; not an induction premise",
+      "source": "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C051_K19_PROOF_RESULT_20260812.json",
+      "world_id": "C051-k19-bounded-regression"
+    }
+  ],
+  "non_guarantees": [
+    "no support cell, residue class, forced coordinate, or escape cell is found in this identity freeze",
+    "no classifier result, SAT/UNSAT result, decoder result, overlap result, cover bound, circuit lower bound, or P-versus-NP conclusion",
+    "no theorem, proof, novelty, independent-review, or mathematical-result credit"
+  ],
+  "object": "C041 canonical-code parent/current symbolic support cells at adjacent half-lengths, projected through the unchanged C048 label interface",
+  "qoi": "For an explicitly quantified supported cell, determine whether canonical syntax proves a universal unequal coordinate against MAGIC, proves escape admissibility from that local obstruction, remains unresolved, or cannot be checked.",
+  "schema_version": "1.0.0",
+  "status": "FROZEN_NOT_EXECUTED",
+  "total_result_algebra": {
+    "branches": {
+      "CANNOT_CHECK": "Input validity, source identity, domain membership, arithmetic, quantifier coverage, or support cannot be validated; no supported-cell semantic branch is reached.",
+      "ESCAPE_ADMISSIBLE": "Support is proved and an independently checkable certificate shows that no j in 0..7 is universally forced unequal by this local support/phase obstruction. This is not an overlap witness.",
+      "FORCED_CONFLICT": "Support is proved and a certificate gives j in 0..7 and bit q such that every legal parent realization has h[j]=q while q differs from MAGIC[j].",
+      "UNRESOLVED": "The input and support proof are valid, but neither a universal forced-conflict certificate nor an escape-admissibility certificate validates."
+    },
+    "exactly_one_branch_required": true,
+    "ordered_precedence": [
+      "CANNOT_CHECK",
+      "FORCED_CONFLICT",
+      "ESCAPE_ADMISSIBLE",
+      "UNRESOLVED"
+    ],
+    "partition_rule": "First validate the input, source identity, domain membership, arithmetic, quantifier coverage, and support proof. Failure at that stage is CANNOT_CHECK. For a valid supported cell, exactly one of FORCED_CONFLICT, ESCAPE_ADMISSIBLE, or UNRESOLVED applies according to the two decisive certificates."
+  }
+}
