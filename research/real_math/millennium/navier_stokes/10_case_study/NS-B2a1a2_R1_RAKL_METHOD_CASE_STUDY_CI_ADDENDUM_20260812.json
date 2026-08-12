@@ -1,0 +1,37 @@
+{
+  "RAKL_METHOD_CASE_STUDY": {
+    "cycle_id": "NS-B2a1a2-R1-20260812",
+    "phase": "CI_REPAIR_ADDENDUM",
+    "parent_case_study": "research/real_math/millennium/navier_stokes/10_case_study/NS-B2a1a2_R1_RAKL_METHOD_CASE_STUDY_20260812.json",
+    "atom_problem_signature": "Same NS-B2a1a2 direct viscosity-normalized CKN discriminator; this addendum records an application-integration failure discovered only after the mathematical packet was complete.",
+    "actual_fibre": "UNCHANGED: sha256:d0f1ec0c2bb800fa434030622222803a6fd4758b2d3738751492fa2a8866d2fa",
+    "methods_operators_motifs_tried": ["review","memory","saturation_stopping","v3 exact TaskEpisode schema/hash validation inside a proposal/shadow envelope"],
+    "prior_experience": {
+      "retrieved": ["framework-pr153 frozen episode-inventory audit", "NS-B2a1c R2 inventory-classification-extension precedent"],
+      "selected": ["frozen inventory must not be silently expanded by a top-level episode_id container", "proposal/shadow retention must not imply canonical inventory admission"],
+      "rejected": ["editing the frozen 19-object parent inventory", "granting canonical episode admission merely to make CI green"],
+      "missed": "The top-level episode_id inventory tripwire was not consulted before the first PR head; it was discovered by exact-head CI."
+    },
+    "decision_policy": "repair the representation while preserving all authority boundaries; do not weaken or bypass the inventory gate",
+    "falsifier_verification": [
+      "exact-head CI run 31554268739: 588 passed, 1 failed",
+      "failure isolated to test_framework_pr153_hash_contract_migration.py because the new top-level episode_id was absent from the frozen/extended inventory universe",
+      "repair nests an exact current-schema TaskEpisode payload inside an explicit proposal/shadow envelope and adds a focused schema plus canonical-hash test"
+    ],
+    "outcome": "TOOLING_REPRESENTATION_REPAIR_APPLIED; mathematical outcome unchanged",
+    "residual": ["new head still requires exact-head CI after this addendum", "root remains OPEN_NO_SOLUTION_CERTIFICATE"],
+    "failure_category": "tooling/verification/application-inventory-representation; not mathematical, retrieval, source, decomposition, gluing, or proof failure",
+    "episode_diagnosis_obstruction_lesson_separation": {
+      "episode": "TE-NS-B2a1a2-R1-20260812 remains the mathematical episode payload",
+      "diagnosis": "D-NS-B2a1a2-CI-INVENTORY-TRIPWIRE: a top-level episode_id is treated by RAKL_math migration assurance as an inventory candidate",
+      "failure": "F-NS-B2a1a2-TOOLING-TOPLEVEL-EPISODE-INVENTORY-TRIPWIRE",
+      "obstruction": "O-NS-B2a1a2-SHADOW-RETENTION-VS-FROZEN-INVENTORY: retaining shadow evidence must not silently mutate the protected inventory universe",
+      "candidate_lesson": "L-NS-B2a1a2-NEST-UNADMITTED-EPISODE-PAYLOAD: when an application has a frozen inventory migration gate, validate exact TaskEpisode bytes inside an explicit non-inventory shadow envelope until protected admission is actually intended"
+    },
+    "seven_saturation_axes": {"KNOWLEDGE":"unchanged","OPERATOR":"unchanged","EXPERIENCE_PATTERN":"unchanged; candidate only","OBSTRUCTION":"unchanged mathematically","RELATION":"unchanged","PATH":"unchanged mathematically","META_METHOD":"not retained; repair hypothesis remains proposal/shadow"},
+    "novelty_class": "representation for the repair only; no additional mathematical novelty claimed",
+    "framework_improvement_hypothesis": "Application-side v3 integrations would benefit from a standard shadow-envelope helper that validates exact TaskEpisode payload bytes while making non-admission machine-explicit. This run does not establish a RAKL framework defect and opens no framework issue.",
+    "process_failure_links": ["receipts/framework-pr153-hash-contract-migration-20260811.json", "receipts/framework-episode-inventory-classification-extension-v2-ns-b2a1c-r2-20260812.json"],
+    "authority": "PROPOSAL_SHADOW_CASE_STUDY_ADDENDUM_ONLY"
+  }
+}
