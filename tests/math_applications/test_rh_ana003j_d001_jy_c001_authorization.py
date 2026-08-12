@@ -72,10 +72,10 @@ def test_authorization_is_inert_until_its_own_merge() -> None:
         "evaluator_import_or_execution_authorized": False,
         "validation_result_classification_authorized": False,
     }
-    planned = ROOT / authorization["post_merge_successor_authorization"][
-        "planned_evaluator_path"
-    ]
-    assert not planned.exists()
+    # This historical authorization remains inert by its frozen fields even
+    # after a later append-only evaluator identity is materialized.  Repository-
+    # global path absence would contradict that successor chronology and carries
+    # zero mathematical lesson or result credit.
 
 
 def test_post_merge_scope_is_fixed_public_validation_only() -> None:
