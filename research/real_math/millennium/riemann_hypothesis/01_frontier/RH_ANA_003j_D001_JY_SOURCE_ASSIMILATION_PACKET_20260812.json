@@ -1,0 +1,149 @@
+{
+  "application_base_sha": "686a73336f00ebc9f9441c0c3f64042f5caf046f",
+  "artifact_hash": "sha256:a10fa50d1317f9ec550f92608c7e7fca18e909dbdb37fe5daf23e543c5776b54",
+  "atom_id": "RH-ANA-003j-D001-JY-SA001",
+  "authority": {
+    "independent_review_authority": false,
+    "mathematical_result_generated": false,
+    "proof_authority": false,
+    "root_solution_authority": false,
+    "software_or_governance_credit_units": 0,
+    "source_assimilation_only": true,
+    "strict_discovery_credit": false
+  },
+  "evidence_bindings": {
+    "c002_result": {
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003_ABEL_001_C002_PROOF_CHECK_RESULT_20260812.json",
+      "raw_sha256": "0d1dd6087f752307f4270ce97b1ad4f88d6809037a856c979837b85d94b91b6b"
+    },
+    "conditional_result": {
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_MODULUS_SOURCE_RESULT_20260812.json",
+      "raw_sha256": "2e9f247aa2aff699bbbd94ecb2ada4ed61d16e703172a555340f974069a7aedd"
+    },
+    "dgs_normalization": {
+      "path": "research/real_math/millennium/riemann_hypothesis/03_sources/RH_ANA_003j_D001_EXACT_SOURCE_SCOPE_AUDIT_20260812.json",
+      "raw_sha256": "46abdbad71ecd04e47f255afb18a92482a65d5374feb5d33aa57e71080a01346"
+    },
+    "failure_experience": {
+      "path": "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_D001_FAILURE_EXPERIENCE_20260812.json",
+      "raw_sha256": "97eca225bd813ede522e6a8458f572c50c808d8bb9ad5acbdaaaa27dafb56c46"
+    },
+    "mathematical_lesson": {
+      "path": "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_D001_MATHEMATICAL_LESSON_20260812.json",
+      "raw_sha256": "18b1ff51a40c2d5187516414791a840bb3624e56fb5c8d784f28269d4b31630c"
+    },
+    "source_audit": {
+      "path": "research/real_math/millennium/riemann_hypothesis/03_sources/RH_ANA_003j_D001_EXACT_SOURCE_SCOPE_AUDIT_20260812.json",
+      "raw_sha256": "46abdbad71ecd04e47f255afb18a92482a65d5374feb5d33aa57e71080a01346"
+    }
+  },
+  "frozen_firewall": {
+    "M_values_calculated": false,
+    "candidate_id": null,
+    "diagonal_comparison_attempted": false,
+    "diagonal_cutoff_constant_identity": null,
+    "epsilon_sequence_identity": null,
+    "numerical_remainder_tests_run": false
+  },
+  "invalid_mixed_source_transfers": [
+    "Calling 9.39 or 172 Bellotti's missing K_B while retaining Bellotti's exp(55A_0) factor.",
+    "Combining Johnston--Yang's numerical amplitude with Bellotti's Vinogradov--Korobov decay d without a proved domination.",
+    "Claiming Johnston--Yang extracts or repairs constants inside Bellotti's proof rather than supplies a separate theorem.",
+    "Dropping the factor (log x)^1.515 without the explicit supremum domination witness.",
+    "Using endpoint control as internal-prefix or moving-diagonal control."
+  ],
+  "normalization_binding": {
+    "application_cumulative_source": "A(x)=floor(x)-psi(x)",
+    "application_delta": "Delta(x)=|psi(x)-x|/x",
+    "exact_transfer": "|A(x)|<=|floor(x)-x|+|x-psi(x)|<=1+|psi(x)-x|",
+    "normalization_status": "EXACTLY_COMPATIBLE_AFTER_FLOOR_ERROR_ONE",
+    "source_bound_after_transfer": "For x>=2, |A(x)|<=1+9.39 x (log x)^1.515 exp(-0.8274 sqrt(log x))."
+  },
+  "object_qoi_context": {
+    "non_goals": [
+      "freeze a candidate identity",
+      "select or evaluate a result branch",
+      "calculate any value of M(n,epsilon)",
+      "run numerical natural-order remainder tests",
+      "freeze epsilon_n or a diagonal cutoff constant",
+      "claim internal-prefix control, Li positivity, novelty, independent review, or RH"
+    ],
+    "object": "The exact C002 natural-order Abel boundary-plus-tail remainder after replacing Bellotti's unexposed PNT constants by a separately sourced explicit Chebyshev-psi error theorem.",
+    "quantity_of_interest": "Whether an authoritative source exposes a numerical normalized PNT constant and validity threshold sufficient to define an explicit candidate-family envelope without yet selecting or evaluating a mathematical candidate.",
+    "scope": "Source assimilation and pre-candidate routing only for fixed n and the exact endpoint remainder."
+  },
+  "packet_id": "RH-ANA-003j-D001-JY-SOURCE-ASSIMILATION-20260812",
+  "parent_atom_id": "RH-ANA-003j",
+  "primary_source": {
+    "arxiv": "2204.01980v2 [math.NT]",
+    "authors": [
+      "Daniel R. Johnston",
+      "Andrew Yang"
+    ],
+    "doi": "10.1016/j.jmaa.2023.127460",
+    "exact_anchors": [
+      "Theorem 1.1, arXiv PDF page 2",
+      "equation (1.3), arXiv PDF page 2",
+      "Table 1, arXiv PDF page 3, row X=log 2"
+    ],
+    "exact_statement": "For every real x>=2, |psi(x)-x| <= 9.39 x (log x)^1.515 exp(-0.8274 sqrt(log x)).",
+    "exposed_constants": {
+      "amplitude": 9.39,
+      "log_power": 1.515,
+      "sqrt_log_decay": 0.8274,
+      "x_threshold": 2
+    },
+    "normalized_statement": "For every real x>=2, |psi(x)-x|/x <= 9.39 (log x)^1.515 exp(-0.8274 sqrt(log x)).",
+    "pdf_sha256": "565993a6def48b237a68a92acba604f2c42f99165e0e71e390f8e21a313b74b2",
+    "publication": "Journal of Mathematical Analysis and Applications 527(2) (2023), article 127460",
+    "title": "Some explicit estimates for the error term in the prime number theorem",
+    "url": "https://arxiv.org/pdf/2204.01980v2",
+    "version_date": "2022-04-20"
+  },
+  "prospective_candidate_families": {
+    "candidate_generation_allowed": false,
+    "candidate_identity": null,
+    "preferred_direct_jy_family": {
+      "definitions": [
+        "u=log Y, a=1.515, c=0.8274",
+        "h_(n,j)=binom(n,j+1)/j!, q_(n,j)=binom(n+1,j+2)/j!",
+        "H_n(u)=sum_(j=0)^(n-1) h_(n,j)u^j"
+      ],
+      "envelope_formula": "B_JY(n,u)=H_n(u)[exp(-u)+9.39u^1.515exp(-0.8274sqrt(u))]+sum_(j=0)^(n-1)q_(n,j)[Gamma(j+1,u)+18.78(0.8274)^(-2j-5.03)Gamma(2j+5.03,0.8274sqrt(u))].",
+      "integral_identity": "For j>=0 and u>=0, integral_u^infinity s^(j+a) exp(-c sqrt(s)) ds = 2 c^(-2j-2a-2) Gamma(2j+2a+2,c sqrt(u)); with a=1.515 this is 2 c^(-2j-5.03) Gamma(2j+5.03,c sqrt(u)).",
+      "monotonicity_floor_proposal": "U_JY(n)=max(log 2,n-1,[2(n-1+1.515)/0.8274]^2). Beyond U_JY every boundary monomial is nonincreasing and every upper incomplete-gamma tail decreases.",
+      "status": "FROZEN_AS_PREFERRED_FAMILY_ONLY_NOT_A_CANDIDATE",
+      "symbolic_modulus_family_only": "After a future candidate freeze and validation, one may define m as the least integer >=ceil(U_JY(n)) satisfying B_JY(n,m)<=epsilon/2 and M=exp(m). No M value is calculated here."
+    },
+    "selected_result_branch": null,
+    "simple_domination_cross_check_family": {
+      "chosen_constants": {
+        "effective_amplitude": 172,
+        "sqrt_log_decay": 0.4,
+        "x_threshold": 2
+      },
+      "envelope_formula": "B_JY_SIMPLE(n,u)=H_n(u)[exp(-u)+172exp(-0.4sqrt(u))]+sum_(j=0)^(n-1)q_(n,j)[Gamma(j+1,u)+344(0.4)^(-2j-2)Gamma(2j+2,0.4sqrt(u))].",
+      "monotonicity_floor_proposal": "U_JY_SIMPLE(n)=max(log 2,n-1,[2(n-1)/0.4]^2).",
+      "optimizer_guard": "The denominator is D, not 2D: 3.03 already equals 2*1.515.",
+      "rigorous_supremum": "For D=0.8274-0.4=0.4274 and v=sqrt(u), the ratio is 9.39 v^3.03 exp(-Dv). Its unique global maximum occurs at v*=3.03/D, because d/dv log(v^3.03 exp(-Dv))=3.03/v-D. The maximum is 9.39[3.03/(eD)]^3.03=171.43357721989227<172.",
+      "source_bound_after_domination": "For x>=2, |A(x)|<=1+172x exp(-0.4sqrt(log x)).",
+      "status": "FROZEN_AS_CROSS_CHECK_FAMILY_ONLY_NOT_A_CANDIDATE"
+    }
+  },
+  "record_type": "RH_ANA003J_D001_JY_PRE_CANDIDATE_SOURCE_ASSIMILATION",
+  "recorded_at_utc": "2026-08-12T14:50:00Z",
+  "schema_version": "1.0.0",
+  "source_branch_classification": {
+    "bellotti_v1": {
+      "ineffectivity_claimed": false,
+      "preserved_finding": "Bellotti arXiv:2508.02041v1 states a qualitative << bound for sufficiently large x but the acquired text does not bind its implied constant K_B or threshold x_B.",
+      "status": "EFFECTIVE_BUT_CONSTANT_AND_THRESHOLD_UNEXPOSED_IN_ACQUIRED_TEXT"
+    },
+    "global_absence_claim": false,
+    "johnston_yang_v2": {
+      "role": "new source input for a successor pre-candidate family; not a retroactive Bellotti constant extraction",
+      "status": "EXPLICIT_COMPUTABLE_SOURCE_BOUND_FOUND"
+    }
+  },
+  "status": "FROZEN_PRE_CANDIDATE_SOURCE_ASSIMILATION"
+}

@@ -1,0 +1,133 @@
+{
+  "artifact_hash": "sha256:5595f7e43c456303c548feffa9c94a11702a5c7957a9720a8946c66e9bed631a",
+  "direct_candidate_episode_ids": [
+    "EP-JOHNSTON-YANG-2204.01980V2-THM1.1"
+  ],
+  "direct_mapping_witnesses": [
+    {
+      "artifact_hash": "sha256:fb5f5b0c168b9e283a41ae6b51dd1f8d689f6c7258b6806d6c4993a2290ed1d5",
+      "disanalogies": [
+        "Johnston--Yang uses a sqrt-log exponential with log-power prefactor rather than Bellotti's Vinogradov--Korobov profile",
+        "source theorem does not mention Laguerre weights or moving n"
+      ],
+      "episode_id": "EP-JOHNSTON-YANG-2204.01980V2-THM1.1",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003j_D001_JY_SOURCE_ASSIMILATION_PACKET_20260812.json",
+        "sha256:565993a6def48b237a68a92acba604f2c42f99165e0e71e390f8e21a313b74b2"
+      ],
+      "precondition_mapping": [
+        [
+          "x>=2",
+          "future envelope domain has u=log Y>=log 2"
+        ],
+        [
+          "psi is standard Chebyshev psi",
+          "application psi is sum of von Mangoldt through x"
+        ]
+      ],
+      "role_mapping": [
+        [
+          "source normalized Chebyshev-psi error",
+          "target Delta(x)"
+        ],
+        [
+          "source x>=2 threshold",
+          "target Abel validity source floor"
+        ],
+        [
+          "source explicit decay profile",
+          "target boundary and transformed-tail integrand"
+        ]
+      ],
+      "shared_constraints": [
+        "same Chebyshev psi",
+        "real x>=2",
+        "absolute upper bound",
+        "natural-order Abel identity unchanged"
+      ],
+      "shared_relations": [
+        "absolute normalized psi error controls A(x) after an additive floor-error one"
+      ],
+      "target_obstruction_id": "OBS-RH-ANA003J-D001-MISSING-EXPLICIT-PNT-SOURCE-COORDINATES",
+      "target_validation_obligations": [
+        "freeze exact direct envelope as a later candidate",
+        "verify tail identity and monotonicity floor",
+        "test exact C002 remainder implication",
+        "preserve endpoint-only and fixed-n scope"
+      ],
+      "unmatched_source_preconditions": [],
+      "witness_id": "W-RH-ANA003J-D001-JY-DIRECT-SEARCH"
+    }
+  ],
+  "direct_search_status": "MATCHES_FOUND",
+  "episode_memory_snapshot_hash": "sha256:a10fa50d1317f9ec550f92608c7e7fca18e909dbdb37fe5daf23e543c5776b54",
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003j_D001_JY_SOURCE_ASSIMILATION_PACKET_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003j_D001_JY_MATH_CONTEXT_FIBER_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_D001_JY_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/08_reviews/RH_ANA_003j_D001_JY_EXPERT_SOURCE_ASSIMILATION_REVIEW_20260812.json"
+  ],
+  "exhaustion_witness": null,
+  "glue_search_status": "NOT_RUN",
+  "glue_witness": null,
+  "jump_mapping_witnesses": [],
+  "jump_search_status": "NOT_RUN",
+  "missing_transformation_specification": null,
+  "obstruction": {
+    "constraints": [
+      "exact source/version/hash",
+      "same psi normalization",
+      "natural order",
+      "fixed n",
+      "no candidate or result in this round"
+    ],
+    "desired_transition": [
+      "locate a primary explicit PNT theorem whose numerical bound can seed a later source-consistent Abel-envelope candidate"
+    ],
+    "domain": "analytic number theory / explicit PNT error / Abel summation",
+    "failure_mechanisms": [
+      "treating << as an exposed constant",
+      "mixing constants from different source profiles",
+      "dropping the log-power factor without domination"
+    ],
+    "forbidden_losses": [
+      "ineffectivity overclaim",
+      "mixed-source normalization",
+      "candidate backfill",
+      "software credit",
+      "downstream diagonal or RH promotion"
+    ],
+    "invariants_to_preserve": [
+      "Bellotti finding",
+      "D001 negative history",
+      "C002 object/order",
+      "endpoint-only scope",
+      "OPEN root"
+    ],
+    "obstruction_id": "OBS-RH-ANA003J-D001-MISSING-EXPLICIT-PNT-SOURCE-COORDINATES",
+    "relations": [
+      "PNT error controls A(x)",
+      "A(x) enters boundary and tail",
+      "unexposed constants block source-complete instantiation"
+    ],
+    "roles": [
+      "normalized PNT error source",
+      "explicit source constant",
+      "source validity threshold",
+      "C002 fixed-n Abel remainder"
+    ]
+  },
+  "research_memory_review_hash": "sha256:2d4e627babcf296614c118b2d608e05218ae4dc1fca718b13510043d3c5a3376",
+  "review_id": "RH-ANA-003j-D001-JY-OBSTRUCTION-REVIEW-20260812",
+  "selected_episode_ids": [
+    "EP-JOHNSTON-YANG-2204.01980V2-THM1.1"
+  ],
+  "selected_mode": "SEARCH",
+  "target_atom_id": "RH-ANA-003j-D001-JY-SA001",
+  "target_context_hash": "sha256:4d6651c08b2c05df6c89a895678248b6a71b98125da90c7ae2dac742cfb304df",
+  "unresolved_warnings": [
+    "SEARCH licenses source assimilation only; target validation obligations remain",
+    "preferred and cross-check families are not candidate identities",
+    "no result branch or modulus value exists"
+  ]
+}

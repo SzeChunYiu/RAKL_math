@@ -1,0 +1,47 @@
+{
+  "artifact_hash": "sha256:2d4e627babcf296614c118b2d608e05218ae4dc1fca718b13510043d3c5a3376",
+  "candidate_method_families": [
+    "direct Johnston--Yang source profile through C002 Abel identity",
+    "proved simple Johnston--Yang domination (172,0.4,2) as cross-check",
+    "invalid mixed Bellotti/Johnston--Yang profile"
+  ],
+  "cross_problem_coverage_receipt_hash": "",
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003j_D001_JY_SOURCE_ASSIMILATION_PACKET_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_D001_JY_PRIOR_FAILURE_ASSIMILATION_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003_ABEL_001_C002_PROOF_CHECK_RESULT_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_MODULUS_SOURCE_RESULT_20260812.json"
+  ],
+  "failure_lattice_snapshot_hash": "sha256:cf640b0d14d253493806eefdc06712560461eceae3d5378bafdbbba4279f2ec5",
+  "failure_query_status": "MATCHES_FOUND",
+  "failure_reuse_notes": [
+    "The old Bellotti finding is retained exactly as an acquired-source limitation.",
+    "Johnston--Yang is a DifferenceWitness at the source coordinate: it supplies numerical constants and x>=2 in a separate theorem.",
+    "The cheapest repeat-failure test is to reject any envelope that mixes Bellotti factors with Johnston--Yang constants."
+  ],
+  "relevant_failure_ids": [
+    "RH-ANA-003j-D001-BELLOTTI-UNEXPOSED-CONSTANTS"
+  ],
+  "relevant_tool_ids": [
+    "T-RH-C002-FIXED-N-NATURAL-ORDER-ABEL-IDENTITY",
+    "D001-CONDITIONAL-BOUNDARY-TAIL-ALGEBRA"
+  ],
+  "selected_tool_ids": [
+    "T-RH-C002-FIXED-N-NATURAL-ORDER-ABEL-IDENTITY"
+  ],
+  "target_atom_id": "RH-ANA-003j-D001-JY-SA001",
+  "target_context_hash": "sha256:4d6651c08b2c05df6c89a895678248b6a71b98125da90c7ae2dac742cfb304df",
+  "tool_applicability_notes": [
+    "C002 applies to fixed-n natural-order endpoint remainders only.",
+    "D001 coefficient and tail algebra is reusable only after replacing the whole PNT source profile consistently.",
+    "No prior tool authorizes a candidate, modulus value, moving diagonal, internal prefixes, Li positivity, or RH."
+  ],
+  "tool_inventory_snapshot_hash": "2e9f247aa2aff699bbbd94ecb2ada4ed61d16e703172a555340f974069a7aedd",
+  "tool_query_status": "MATCHES_FOUND",
+  "unresolved_warnings": [
+    "The preferred direct envelope has not been frozen as a candidate or evaluated.",
+    "No M(n,epsilon) value has been calculated.",
+    "No numerical remainder test has been run.",
+    "No moving-diagonal, prefix, complement, Li, novelty, or RH bridge is licensed."
+  ]
+}
