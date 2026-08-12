@@ -162,7 +162,7 @@ def build_documents(root: Path) -> dict[str, dict]:
     })
     episode = _seal({
         "schema_version": "1.0.0",
-        "episode_id": "PNP-C047-ORIENTATION-REPAIR-TASK-EPISODE-20260812",
+        "case_study_id": "PNP-C047-ORIENTATION-REPAIR-CASE-STUDY-20260812",
         "atom_id": "O9d12a2a1b-C047",
         "action_trace": ["froze context, dual memory, shortcut review, expert cell, and hash-chained trace before candidate", "publicly froze exact candidate and inert evaluator", "publicly froze hand certificate and narrow authorization", "executed only the inert record checker", "recorded symbolic lemma, failed repair, bounded cause, residual, and authority limits"],
         "mathematical_success": "proved a scoped interface-disjointness lemma for two orientation-only variants",
