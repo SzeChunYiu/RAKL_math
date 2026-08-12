@@ -1,0 +1,117 @@
+{
+  "artifact_hash": "sha256:cff9a3cb1964bd9bbf8ccabad7230edad48d41b60a454d86d932e4a4bbadc486",
+  "atom_id": "YM-S1a2i-K1-D001",
+  "authority": {
+    "independent_review": false,
+    "mathematical_result_credit": "SCOPED_STAGE_A_SOURCE_PREMISE_MISMATCH",
+    "proof_authority": false,
+    "retrospective_reproduction_only": true,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "strict_rakl_discovery_authority": false,
+    "target_truth": false
+  },
+  "candidate_id": "YM-S1a2i-K1-D001-C001-TWO-STAGE-SOURCE-BRIDGE",
+  "classified_branch": "STRONGER_PREMISE_MISMATCH_A",
+  "evaluator_receipt": {
+    "all_planted_worlds_match": true,
+    "evaluator_id": "YM-S1a2i-K1-D001-C001-TWO-STAGE-EVALUATOR-v1",
+    "path": "research/real_math/millennium/yang_mills/05_oracles/ym_k1_d001_c001_two_stage_evaluator.py",
+    "planted_world_results": [
+      {
+        "expected_branch": "APPLICABLE_BRIDGE",
+        "match": true,
+        "observed_branch": "APPLICABLE_BRIDGE",
+        "world_id": "WORLD-A-B-PASS-SEPARATE-CONSTANTS-EXACT-MARGIN"
+      },
+      {
+        "expected_branch": "STRONGER_PREMISE_MISMATCH_A",
+        "match": true,
+        "observed_branch": "STRONGER_PREMISE_MISMATCH_A",
+        "world_id": "WORLD-A-FAIL-CONFLATED-C-TRAP"
+      },
+      {
+        "expected_branch": "FLOW_MARGIN_FAIL_B",
+        "match": true,
+        "observed_branch": "FLOW_MARGIN_FAIL_B",
+        "world_id": "WORLD-B-FAIL-FACTOR-TWO-TRAP"
+      },
+      {
+        "expected_branch": "CANNOT_CHECK",
+        "match": true,
+        "observed_branch": "CANNOT_CHECK",
+        "world_id": "WORLD-CANNOT-CHECK-UPSTREAM-CONSTANTS"
+      }
+    ],
+    "raw_sha256": "4d096d89f2fdb038e9f26507caaf8393cb6b00cfab60ced6d5b9cfc41c7bc514"
+  },
+  "framework_sha": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+  "frozen_identity_bindings": {
+    "candidate": {
+      "application_commit": "1bf48bf755bb057d822b496fe7b4152c00e3a6bc",
+      "canonical_sha256": "sha256:e103a3399eed3440100432f8b2a5f4a96aaca9ce82dd84a2c84fa001046f4fd5",
+      "git_blob": "4e47b742d0d58d1817edb5ec323ef3b2077e0da7",
+      "path": "research/real_math/millennium/yang_mills/04_candidates/YM-S1a2i_K1_D001_C001_TWO_STAGE_SOURCE_BRIDGE_FREEZE_20260812.json",
+      "raw_sha256": "1a33810db19b2ba338cee9f43cd39ee08f5c27b136f08b2119465c5fbdc819fe"
+    },
+    "declarative_falsifier": {
+      "application_commit": "1bf48bf755bb057d822b496fe7b4152c00e3a6bc",
+      "canonical_sha256": "sha256:e69dde691acffcb5ab30db8fb55fbc82977b9c4dfbc0c19433fdfd9c9830cfa3",
+      "git_blob": "ebe416d71c8e39269480a61e84b485058d1c35fc",
+      "path": "research/real_math/millennium/yang_mills/05_oracles/YM-S1a2i_K1_D001_C001_INERT_FALSIFIER_FREEZE_20260812.json",
+      "raw_sha256": "75a1a3540a3380b51a3c5d0181c8abf07db3b88ba902eb2748728061157d01fe"
+    },
+    "evaluator_identity_freeze": {
+      "application_commit": "ff21299ae77dde937e00c5739de3c526a30736d5",
+      "canonical_sha256": "sha256:f192dce800118d6c11f3a23e89be02e6318d9f216189afb3355deb238e66ec40",
+      "git_blob": "111dbfbcfdf8c096c8498cfebeb6e15b55af958c",
+      "path": "research/real_math/millennium/yang_mills/05_oracles/YM-S1a2i_K1_D001_C001_EVALUATOR_IDENTITY_FREEZE_20260812.json",
+      "raw_sha256": "9e522565df9536a35d876f193e913a3218748326b78a7154d57baee261b8f9b2"
+    },
+    "original_authorization": {
+      "application_commit": "1bf48bf755bb057d822b496fe7b4152c00e3a6bc",
+      "canonical_sha256": "sha256:3ed1ef83e202a7d0198d9c87204294b8e12edbd9f70c330d62e4130a8cb79116",
+      "git_blob": "bfa6b5f33358204049a49b51ab5923ac538372a2",
+      "path": "research/real_math/millennium/yang_mills/09_trace/YM-S1a2i_K1_D001_C001_POSTMERGE_EVALUATION_AUTHORIZATION_20260812.json",
+      "raw_sha256": "ee54b28e35e7afbce17b142082b42c9748f6d2b9d5278b6e4547899f73d541f6"
+    },
+    "retrospective_authorization": {
+      "application_commit": "ba9749865e99acf0a9751754cdee3931225804ef",
+      "canonical_sha256": "sha256:8c0d7d89c5137e9e866ba0c7324517d55d9ad833a5836e6350b28b84a5b9d775",
+      "git_blob": "9693c6ef9414f0735318c868079e10e933b6bc21",
+      "path": "research/real_math/millennium/yang_mills/09_trace/YM-S1a2i_K1_D001_C001_RETROSPECTIVE_REPRODUCTION_AUTHORIZATION_20260812.json",
+      "raw_sha256": "4da5f21f938b59b7d050657d2d052ca1dd2d2458ac8a7db15c6f1ed6d0849bf2"
+    }
+  },
+  "not_claimed": [
+    "Lemma 40.3 is false",
+    "no reformulation can repair the domain mismatch",
+    "the full graph transform is refuted",
+    "Yang-Mills existence or mass gap is proved or refuted",
+    "same-context review is independent peer review"
+  ],
+  "record_type": "YM_K1_D001_C001_TWO_STAGE_SOURCE_BRIDGE_RESULT",
+  "result_base_sha": "2a562d3ce5c1b52afc42bddb512ed75159786359",
+  "result_scope": "Local applicability of the Section 40 K-coordinate one-step estimate to the chosen graph radius only.",
+  "run_type": "RETROSPECTIVE_REPRODUCTION_NOT_PROSPECTIVE_DISCOVERY",
+  "schema_version": "1.0.0",
+  "source_result": {
+    "artifact_hash": "sha256:862a88768302dfac705a5b137103fa371a9d89792f20b1b4e79140e0e3227d09",
+    "path": "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_K1_D001_C001_STAGE_A_SOURCE_RESULT_20260812.json"
+  },
+  "stage_a": {
+    "chosen_radius": "c_K=4*C/(1-rho)",
+    "literal_source_binding": "C_dom=C_force=C",
+    "numeric_constants_invented": false,
+    "result_reason": "With C_dom=C_force=C and 0<rho<1, c_K=4C/(1-rho)>C_dom.",
+    "source_derivation_status": "ONLY_LITERAL_CONFLATED_C_IS_JUSTIFIED",
+    "status": "FAIL",
+    "symbolic_ratio": "c_K/C_dom=4/(1-rho)>4>1"
+  },
+  "stage_b": {
+    "entered": false,
+    "g_star_selected": false,
+    "margin_result_accessed": false,
+    "reason": "Frozen branch precedence forbids Stage B after Stage-A failure."
+  },
+  "strict_rakl_discovery_chronology": false
+}

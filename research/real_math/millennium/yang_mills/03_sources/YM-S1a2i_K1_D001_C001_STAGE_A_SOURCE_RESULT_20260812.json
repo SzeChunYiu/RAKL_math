@@ -1,0 +1,117 @@
+{
+  "artifact_hash": "sha256:862a88768302dfac705a5b137103fa371a9d89792f20b1b4e79140e0e3227d09",
+  "atom_id": "YM-S1a2i-K1-D001",
+  "audit_boundary": {
+    "full_bound_tex_searched": true,
+    "primary_passages_read_in_context": [
+      "TeX 7491-7566: symbolic two-step constants and an absolute contraction ball r",
+      "TeX 7653-7681: stable-manifold hypotheses and freely chosen r under separate variables",
+      "TeX 9551-9571: complete statement and proof of Lemma 40.3",
+      "TeX 9615-9643,9665-9680,9725-9750: Theorem 40.5 constants and graph ball",
+      "TeX 11588-11625,11674-11686: cumulant/extraction inputs and qualitative Lipschitz proof",
+      "TeX 12027-12040: separate multiscale quadratic contraction estimate"
+    ],
+    "search_terms": [
+      "lem:UVR3_irrelevant_contraction",
+      "C_K^{(0)}",
+      "sec:rg_two_steps_constants",
+      "sufficiently small ball",
+      "strict contraction factor"
+    ]
+  },
+  "authority": {
+    "independent_review": false,
+    "mathematical_credit": "SCOPED_SYMBOLIC_SOURCE_APPLICABILITY_FAILURE",
+    "proof_authority": false,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "bounded_conclusion": "The Stage-A source audit is checkable in the literal quantified world exposed by Lemma 40.3: the same existential C is the admitted-radius coefficient and forcing coefficient.  The later minimum choice c_K=4C/(1-rho) lies strictly outside that displayed C g^2 domain for every 0<rho<1.  The upstream passages do not derive a separate compatible pair.  This blocks only the local K-coordinate bridge; it neither refutes Lemma 40.3 nor reaches the stable manifold or Yang-Mills mass gap.",
+  "candidate_id": "YM-S1a2i-K1-D001-C001-TWO-STAGE-SOURCE-BRIDGE",
+  "competing_mathematical_diagnoses": [
+    {
+      "diagnosis": "NOTATION_OVERLOAD_HIDES_SEPARATE_COMPATIBLE_CONSTANTS",
+      "reopen_falsifier": "Supply a derivation that names both roles and proves 4*C_force/(1-rho)<=C_dom.",
+      "status": "UNSUPPORTED_BY_BOUND_SOURCE"
+    },
+    {
+      "diagnosis": "ADJUSTABLE_ABSOLUTE_BALL_OR_NORM_RESCALING_REPAIRS_DOMAIN",
+      "reopen_falsifier": "Prove that the r-ball contains every chosen-graph input with the exact estimate; a uniform scalar norm rescaling alone cannot work because it multiplies C_dom and C_force by the same factor and preserves their ratio.",
+      "status": "NOT_MAPPED_TO_LEMMA_40_3_GRAPH_BALL"
+    },
+    {
+      "diagnosis": "LATER_SOURCE_LEMMA_PROVES_THE_MISSING_COMPARISON",
+      "reopen_falsifier": "Bind an exact passage or stronger source version proving the compatibility inequality.",
+      "status": "NOT_FOUND_IN_FULL_BOUND_TEX_SEARCH"
+    },
+    {
+      "diagnosis": "SHRINKING_G_STAR_ALONE_REPAIRS_A_PROPORTIONAL_RADIUS_MISMATCH",
+      "reason": "Both radii scale as g^2, so their coefficient ratio is independent of g_star.",
+      "status": "REFUTED_FOR_THE_DISPLAYED_C_DOM_G_SQUARED_DOMAIN"
+    }
+  ],
+  "framework_sha": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+  "lemma_40_3_quantifier_audit": {
+    "exact_tex_lines": "9554-9571",
+    "not_derived": [
+      "no formula or numerical bound for rho",
+      "no independently named C_dom and C_force",
+      "no inequality relating a later c_K to the displayed domain coefficient C"
+    ],
+    "proof_content": [
+      "bounded extraction plus multilinear cumulant bounds are cited",
+      "rescaling is said to contribute a strict contraction factor",
+      "gluing is said to be quadratic and hence O(g_k^4) on the displayed C g_k^2 domain",
+      "scale-uniformity is attributed to scale-invariant norms and finite-range covariance bounds"
+    ],
+    "quantified_statement": "exists rho in (0,1), C>0, g_star>0 such that forall admitted k,g_k,K_k, ||KF_k(u_k,K_k)||_(k+1)<=rho||K_k||_k+C g_k^4 on ||K_k||_k<=C g_k^2",
+    "same_symbol_roles": {
+      "C_dom": "C in ||K_k||_k<=C g_k^2",
+      "C_force": "the same C in +C g_k^4"
+    }
+  },
+  "record_type": "YM_K1_D001_C001_STAGE_A_SOURCE_DERIVATION_RESULT",
+  "result_base_sha": "2a562d3ce5c1b52afc42bddb512ed75159786359",
+  "run_type": "RETROSPECTIVE_REPRODUCTION_NOT_PROSPECTIVE_DISCOVERY",
+  "schema_version": "1.0.0",
+  "source_identity": {
+    "author": "Jonathan J. Wilson",
+    "authority": "PRIMARY_AUTHOR_OPEN_ARTIFACT_NOT_INDEPENDENT_PEER_REVIEW",
+    "pdf_sha256": "08013e1ce75c8b2be79c62ba61f70e30024b9bb427c465ceab7ee9266236690d",
+    "tex_sha256": "ef936e502e84b0cafabc594c9705c16c9c1df29dc95f2a6a679b6b446c526c18",
+    "zenodo_concept_doi": "10.5281/zenodo.19393831",
+    "zenodo_version_doi": "10.5281/zenodo.19393832"
+  },
+  "stage_a_derivation": {
+    "chosen_radius": "c_K=4*C_force/(1-rho)",
+    "classification": "STRONGER_PREMISE_MISMATCH_A",
+    "comparison_uses_no_numeric_constant_assignment": true,
+    "exact_symbolic_comparison": "c_K/C_dom=4/(1-rho)>4>1",
+    "literal_source_binding": "C_dom=C_force=C",
+    "rho_status": "EXISTENTIAL_WITH_0<rho<1_NOT_NUMERIC",
+    "separate_constant_derivation_status": "NOT_ESTABLISHED",
+    "stage_b_authorized_after_result": false
+  },
+  "strict_rakl_discovery_chronology": false,
+  "upstream_transfer_attempts": [
+    {
+      "available_structure": "kappa_0 and A_0 are symbolically named for ||K_1||<=kappa_0||K_0||+A_0|c_0|^2, uniformly on an undefined D_0",
+      "broken_transfer": "the source does not identify |c_k|^2 with g_k^4, D_0 with ||K||<=C_dom g^2, or A with C_force in Lemma 40.3",
+      "passage": "TeX 7510-7532"
+    },
+    {
+      "available_structure": "an absolute ball radius r and smallness epsilon_* may be chosen so a sequence-space map contracts",
+      "broken_transfer": "no proof maps that absolute r-ball and its full-state norm to the later scale-dependent c_K g^2 graph ball or to Lemma 40.3's same-C statement",
+      "passage": "TeX 7551-7566 and 7653-7681"
+    },
+    {
+      "available_structure": "cumulants converge for a sufficiently small norm, with implicit constants C and C_n; the RG Lipschitz proof is qualitative",
+      "broken_transfer": "the convergence radius and forcing coefficient are not assembled into separately justified C_dom,C_force,rho",
+      "passage": "TeX 11588-11625 and 11674-11686"
+    },
+    {
+      "available_structure": "a different estimate ||K_(k+1)||<=A||K_k||^2+B exp(-cM^2/g^2) on ||K_k||<=epsilon_*",
+      "broken_transfer": "this additive tail estimate is not mapped to rho||K||+C_force g^4 on a C_dom g^2 domain and depends on an M chosen for fixed g",
+      "passage": "TeX 12027-12040"
+    }
+  ]
+}

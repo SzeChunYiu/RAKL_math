@@ -1,0 +1,61 @@
+{
+  "artifact_hash": "sha256:9acd402032ec1b5237aa2b74afba8c175c02385f1f92aa9f8f8024ff3fa50a60",
+  "atom_id": "YM-S1a2i-K1-D001",
+  "blocking_concerns": [],
+  "candidate_id": "YM-S1a2i-K1-D001-C001-TWO-STAGE-SOURCE-BRIDGE",
+  "disagreements": [
+    "An absolute r-ball may enable a future repaired proof, but it does not repair the displayed Lemma 40.3 invocation without an explicit transfer derivation."
+  ],
+  "next_action": "Merge the scoped failure result; do not enter Stage B. Reopen only on a stronger source or explicit one-step re-derivation.",
+  "record_type": "ROLE_SEPARATED_SAME_CONTEXT_MATHEMATICAL_REVIEW",
+  "review_independence": "SAME_CONTEXT_NOT_INDEPENDENT_PEER_REVIEW",
+  "reviewed_artifacts": [
+    {
+      "artifact_hash": "sha256:862a88768302dfac705a5b137103fa371a9d89792f20b1b4e79140e0e3227d09",
+      "path": "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_K1_D001_C001_STAGE_A_SOURCE_RESULT_20260812.json"
+    },
+    {
+      "artifact_hash": "sha256:cff9a3cb1964bd9bbf8ccabad7230edad48d41b60a454d86d932e4a4bbadc486",
+      "path": "research/real_math/millennium/yang_mills/05_oracles/YM-S1a2i_K1_D001_C001_STAGE_A_RESULT_20260812.json"
+    },
+    {
+      "artifact_hash": "sha256:b0f07882ebadd0b9ac55790247fb6ad2766f9ef0e05775250f44a1b1df168758",
+      "path": "research/real_math/millennium/yang_mills/07_memory/YM-S1a2i_K1_D001_C001_STAGE_A_MATHEMATICAL_LESSON_20260812.json"
+    }
+  ],
+  "role_reviews": [
+    {
+      "resolution": "The result is limited to non-applicability of the displayed same-C theorem to the later c_K ball; it makes no maximality or impossibility claim.",
+      "role": "DOMAIN_THEORY_LEAD",
+      "strongest_objection": "The existential Lemma 40.3 constant need not be a maximal domain radius, so the calculation cannot prove that every possible reformulation fails.",
+      "verdict": "PASS_SCOPED"
+    },
+    {
+      "resolution": "That is preserved as a repair route, but the source never maps its variables, norm, and forcing term to Lemma 40.3 or proves containment of the later graph ball.",
+      "role": "ANALOGY_METHOD_TRANSFER_LEAD",
+      "strongest_objection": "The earlier absolute r-ball might support a repaired derivation after shrinking g_star.",
+      "verdict": "PASS_SCOPED"
+    },
+    {
+      "resolution": "No: shrinking g_star cancels from two g^2 radii, while scalar norm rescaling multiplies both C_dom and C_force equally and leaves 4C_force/((1-rho)C_dom) invariant.",
+      "role": "ADVERSARIAL_FALSIFICATION_LEAD",
+      "strongest_objection": "Could shrinking g_star or uniformly rescaling the K norm reverse the domain comparison?",
+      "verdict": "PASS"
+    },
+    {
+      "resolution": "Only 0<rho<1 and the exact source co-witness C are used to prove 4/(1-rho)>4>1; no numeric assignment or Stage-B access occurs.",
+      "role": "FORMAL_METHODS_LEAD",
+      "strongest_objection": "The result must not rely on unrecorded numeric constants.",
+      "verdict": "PASS_ELEMENTARY_SYMBOLIC"
+    },
+    {
+      "resolution": "No novelty is claimed; value is confined to local proof-obligation diagnosis and a reusable constant-role transfer warning.",
+      "role": "NOVELTY_RESEARCH_VALUE_LEAD",
+      "strongest_objection": "A source audit is not new mathematics or a Yang-Mills result.",
+      "verdict": "PASS_DIAGNOSTIC_VALUE_ONLY"
+    }
+  ],
+  "run_type": "RETROSPECTIVE_REPRODUCTION_NOT_PROSPECTIVE_DISCOVERY",
+  "schema_version": "1.0.0",
+  "verdict": "INTERNALLY_READY_FOR_SCOPED_STAGE_A_RESULT_PR"
+}
