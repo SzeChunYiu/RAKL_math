@@ -1,0 +1,38 @@
+{
+  "memory_id": "OTM-NS-B1a4a-R2-20260812",
+  "atom_id": "NS-B1a4a",
+  "context_hash": "sha256:19b56b70600d4f82f07f2f629ce27a193d68d097935e774c3121b7e1fb0c4d1d",
+  "source_universe": [
+    "Pineau–Vicol arXiv:2607.09619v2 Theorem 1.9 and Remarks 1.10–1.11",
+    "Albritton–Barker arXiv:1811.00502 Theorem 1.1 and definitions (1.1)–(1.5)",
+    "RAKL_math canonical B1a1/B1a3 failure experience",
+    "RAKL_math open PR #190 proposal/shadow B1a4 episode (routing only)"
+  ],
+  "episodes": [
+    {
+      "episode_id": "E-NS-PV-2026-ONE-SLICE-WEIGHTED-RIGIDITY",
+      "source_domain": "3D incompressible Navier–Stokes regularity",
+      "source_context": "local smooth solution on B1×[-1,0) under pointwise Type-I carrier and annular pressure bound",
+      "source_obstruction": {
+        "obstruction_id": "OBS-NS-PV-BERNOULLI-SIGN-FRAGILITY",
+        "roles": ["Type-I velocity carrier","pressure carrier","self-similar velocity U","self-similar-time speed ∂sU","local enstrophy","epsilon regularity"],
+        "relations": ["small one-time ∂sU feeds a weighted finite-radius Bernoulli/eigenfunction estimate","weighted estimate yields small local enstrophy","small local enstrophy propagates and feeds CKN epsilon regularity"],
+        "constraints": ["pointwise Type-I bound (1.15)","annular pressure L∞ bound (1.16)","one-time generator smallness (1.17) or weighted-L1 variant","late self-similar time threshold"],
+        "failure_mechanisms": ["Bernoulli maximum-principle/sign structure is not robust under rotated self-similarity"],
+        "invariants_to_preserve": ["same NSE","parabolic scaling","source constants dependences C_u,C_p","single-time defect semantics"],
+        "desired_transition": ["replace a missing scalar sign law with a quantitative weighted-L2 rigidity channel"],
+        "forbidden_losses": ["do not replace pointwise Type-I with finite I without proof","do not replace annular L∞ pressure with D","do not infer ∂sU smallness from compactness without a recurrence/speed estimate"]
+      },
+      "transformation_name": "one-slice scaling-generator defect -> weighted-L2 local enstrophy -> epsilon regularity",
+      "operation": "localize the weighted Bernoulli-function estimate with a principal eigenfunction, use small ∂sU at one late time to obtain small local enstrophy, propagate it, then apply CKN epsilon regularity",
+      "preconditions": ["PV-1.15-pointwise-Type-I","PV-1.16-annular-pressure-Linf","PV-1.17-or-Remark1.11-one-time-generator-smallness","smooth local solution on the punctured pre-singularity cylinder"],
+      "resulting_relations": ["regular top-center"],
+      "preserved_invariants": ["NSE scaling","locality","no reliance on a global exact self-similar ansatz"],
+      "known_breakpoints": ["missing generator-defect smallness","carrier mismatch between finite I and pointwise Type-I","pressure carrier not upgraded to annular L∞"],
+      "evidence_pointers": ["https://arxiv.org/html/2607.09619v2#S1.SS5","https://arxiv.org/abs/1811.00502"],
+      "authority": "PRIMARY_SOURCE_ESTABLISHED_TRANSFORMATION"
+    }
+  ],
+  "proposal_shadow_episode_refs": ["EP-NS-B1a4-C001-R1-20260812"],
+  "snapshot_hash": "3350d49d149db88872d4cb2d18de527ac1a14b471a048499a53f0033543d89c3"
+}

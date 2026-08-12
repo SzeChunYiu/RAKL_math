@@ -1,0 +1,55 @@
+{
+  "review_id": "OTR-NS-B1a4a-R2-20260812",
+  "target_atom_id": "NS-B1a4a",
+  "target_context_hash": "sha256:19b56b70600d4f82f07f2f629ce27a193d68d097935e774c3121b7e1fb0c4d1d",
+  "research_memory_review_hash": "sha256:508e39750312ec9c517ce19e8df013ef67f3e02a410aee58d672d3b87334e436",
+  "episode_memory_snapshot_hash": "3350d49d149db88872d4cb2d18de527ac1a14b471a048499a53f0033543d89c3",
+  "obstruction": {
+    "obstruction_id": "OBS-NS-B1a4a-MISSING-SCALING-GENERATOR-CARRIER",
+    "domain": "3D Navier–Stokes Type-I regularity",
+    "roles": ["finite-I ledger","local pre-singularity solution/ancient limit","self-similar-time speed","pressure carrier","regularity consumer"],
+    "relations": ["finite I controls scale-critical local integral quantities","Pineau–Vicol requires stronger carriers at a single late time","direct gluing would need carrier-preserving implications"],
+    "constraints": ["no hidden pointwise Type-I upgrade","no pressure L∞ upgrade without source proof","no derivative/time-trace bootstrap from E alone","no local-compactness-to-recurrence shortcut"],
+    "failure_mechanisms": ["source-input carrier mismatch","derivative loss","time-trace endpoint gap","local-to-global/state-space mismatch"],
+    "invariants_to_preserve": ["exact root finite-I semantics","NSE scaling","pressure nonlocality","proposal/shadow authority"],
+    "desired_transition": ["finite-I Type-I state -> source-valid one-time small self-similar speed -> PV weighted rigidity -> regularity"],
+    "forbidden_losses": ["weaken source theorem hypotheses","treat same-context expert review as independent","treat numerics or analogy as proof"]
+  },
+  "direct_search_status": "MATCH_FOUND_BUT_PRECONDITIONS_UNMAPPED",
+  "jump_search_status": "NO_STRICT_MATCH",
+  "glue_search_status": "INTERFACE_INCOMPLETE",
+  "lift_search_status": "FORBIDDEN_NO_CROSS_PROBLEM_COVERAGE_RECEIPT",
+  "selected_mode": "CANNOT_CHECK",
+  "direct_candidate_episode_ids": ["E-NS-PV-2026-ONE-SLICE-WEIGHTED-RIGIDITY"],
+  "direct_mapping_witnesses": [{
+    "witness_id": "MAP-NS-PV-TO-B1a4a",
+    "episode_id": "E-NS-PV-2026-ONE-SLICE-WEIGHTED-RIGIDITY",
+    "shared_relations": ["same NSE","same self-similar scaling","local top-center regularity target"],
+    "precondition_mapping": [
+      ["smooth local pre-singularity solution","available only in smooth pre-blowup formulation, not as a generic property of the ancient-limit carrier"],
+      ["pointwise Type-I bound (1.15)","NOT_MAPPED from finite I; source literature only records stronger norms as sufficient for finite I, not the reverse"],
+      ["annular pressure L∞ bound (1.16)","NOT_MAPPED from D's L^(3/2) oscillation carrier"],
+      ["one-time generator smallness (1.17)/Remark 1.11","NOT_MAPPED; finite I contains no explicit ∂t u, Δu or ∇p one-slice carrier"]
+    ],
+    "unmatched_source_preconditions": ["PV-1.15-pointwise-Type-I","PV-1.16-annular-pressure-Linf","PV-1.17-or-Remark1.11-one-time-generator-smallness"],
+    "disanalogies": ["finite-I is a weak integral Type-I notion","exact RSS/RDSS transform dynamics are absent","AB local compactness is not a small-speed/recurrence theorem"],
+    "target_validation_obligations": ["identify a source-valid stronger sublane where 1.15 and 1.16 are guaranteed","derive or falsify a one-time self-similar-speed estimate without derivative/time-trace loss","keep finite-I root implication separate from stronger Type-I subclass results"]
+  }],
+  "jump_mapping_witnesses": [],
+  "glue_witness": {
+    "source_a": "AB finite-I blow-up/ancient equivalence and local compactness",
+    "source_b": "PV one-slice weighted rigidity",
+    "status": "FAIL_INTERFACE_COVERAGE",
+    "missing_interfaces": ["pointwise Type-I carrier","annular pressure L∞ carrier","one-time self-similar-speed carrier"],
+    "local_to_global_failure": true,
+    "local_mathematical_failure": false
+  },
+  "selected_episode_ids": [],
+  "rejected_episode_ids": ["E-NS-PV-2026-ONE-SLICE-WEIGHTED-RIGIDITY"],
+  "exhaustion_witness": "Bounded Gate-C search checked SEARCH, JUMP, GLUE; LIFT was not legally available because no current cross-problem coverage receipt was present.",
+  "missing_transformation_specification": "A source-valid transformation from finite-I/local compactness to one-time small self-similar-time speed (and, for exact PV use, the stronger velocity/pressure carriers).",
+  "unresolved_warnings": ["This is not a non-implication theorem.","A stronger pointwise-Type-I sublane may legally use Pineau–Vicol if its carrier hypotheses are established.","The weaker weighted-L1 version still requires one-time ∂sU control."],
+  "decision_policy": "counterexample-first source-signature audit; fail closed on any unmatched source precondition",
+  "authority": "PROPOSAL_SHADOW_GATE_C",
+  "artifact_hash": "sha256:7fd7025aeaece8c1e196278672b695bdcaad50a04923977d698feeb9590921d2"
+}

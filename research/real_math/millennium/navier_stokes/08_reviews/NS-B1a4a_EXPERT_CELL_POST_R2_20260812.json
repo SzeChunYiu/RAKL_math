@@ -1,0 +1,19 @@
+{
+  "schema_version": "same-context-expert-postcheck-shadow-v3",
+  "review_id": "EXPERT-NS-B1a4a-POST-R2-20260812",
+  "atom_id": "NS-B1a4a",
+  "result_ref": "research/real_math/millennium/navier_stokes/03_source_audits/NS-B1a4a_PV_FINITE_I_INTERFACE_AUDIT_R2_20260812.md",
+  "member_findings": [
+    {"role":"Type-I/ancient-solution PDE lead","finding":"AB finite-I is preserved as the target; no reverse implication to PV pointwise Type-I was assumed."},
+    {"role":"Similarity-coordinate and weighted-energy analyst","finding":"PV's decisive carrier is one-time ∂sU smallness; the weaker Remark 1.11 still requires that speed carrier."},
+    {"role":"Local-energy/pressure analyst","finding":"D and PV annular L∞ pressure are distinct data types; pressure gauge/nonlocality remain explicit."},
+    {"role":"Harmonic-analysis/endpoint specialist","finding":"generator expansion exposes Δu and ∇p one-slice obligations not present in A+C+D+E."},
+    {"role":"Concentration-compactness specialist","finding":"local compactness does not itself provide small self-similar-time speed or recurrence."},
+    {"role":"Adversarial falsification specialist","finding":"source-signature falsifier fired before any positive estimate, so no unverified theorem attempt was needed."},
+    {"role":"Formal-assurance/provenance specialist","finding":"Gate C CANNOT_CHECK was respected; candidate generation remained blocked and root authority stayed none."}
+  ],
+  "consensus": "Preserve the direct-glue failure as a source/interface obstruction. Reopen PATH/RELATION/OBSTRUCTION around the specific missing coordinate one-time self-similar speed, not generic signed local energy.",
+  "independent_review_credit": 0,
+  "authority": "SAME_CONTEXT_PROPOSAL_SHADOW",
+  "artifact_hash": "sha256:fcfad554c3c5ef90869e846bc8a10e628ce9452cc81e8fab7dd10f9268949817"
+}

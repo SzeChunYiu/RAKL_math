@@ -1,0 +1,28 @@
+{
+  "schema_version": "same-context-expert-review-shadow-v3",
+  "review_id": "EXPERT-NS-B1a4a-PRE-R2-20260812",
+  "atom_id": "NS-B1a4a",
+  "context_hash": "sha256:19b56b70600d4f82f07f2f629ce27a193d68d097935e774c3121b7e1fb0c4d1d",
+  "members": [
+    {"role":"Type-I/ancient-solution PDE lead","background":"suitable weak solutions, mild bounded ancient solutions, Type-I blow-up extraction","delegation":"bind Albritton–Barker finite-I class and reject hidden strengthening to pointwise Type-I"},
+    {"role":"Similarity-coordinate and weighted-energy analyst","background":"Leray variables, RSS/DSS/RDSS, weighted L2 rigidity","delegation":"bind Pineau–Vicol Theorem 1.9, generator defect and its weaker weighted-L1 form"},
+    {"role":"Local-energy/pressure analyst","background":"local energy inequality, Calderón–Zygmund pressure, harmonic far field","delegation":"compare D pressure carrier with annular L∞ pressure hypothesis; track gauge and nonlocality"},
+    {"role":"Harmonic-analysis/endpoint specialist","background":"critical Lebesgue/Lorentz/Morrey estimates and time traces","delegation":"audit derivative loss, endpoint embeddings and whether A+C+D+E can control the one-slice generator"},
+    {"role":"Concentration-compactness specialist","background":"profile extraction, symmetry leakage, ancient limits","delegation":"separate local compactness from self-similar-time recurrence/small speed"},
+    {"role":"Adversarial falsification specialist","background":"scaling tests and hostile exact-solution calibrations","delegation":"expand generator through NSE first; reject any estimate that needs unregistered Δu, ∇p or time-trace control"},
+    {"role":"Formal-assurance/provenance specialist","background":"RAKL v3 gates, DifferenceWitness and protected authority","delegation":"enforce Gate C SEARCH/JUMP/GLUE/LIFT/CANNOT_CHECK and proposal/shadow authority"}
+  ],
+  "discussion": [
+    "PDE lead: finite I is the exact target carrier; stronger pointwise Type-I norms may imply finite I but cannot be silently reversed.",
+    "Similarity analyst: Pineau–Vicol identifies ∂_s U smallness at one late time as the decisive local symmetry-defect coordinate.",
+    "Pressure analyst: D is an L^(3/2) oscillation quantity, not the annular L∞ carrier in Theorem 1.9.",
+    "Endpoint specialist: substituting NSE into the generator exposes Δu and ∇p, so a direct estimate from A,C,D,E faces derivative/time-trace loss.",
+    "Compactness specialist: subsequential local convergence does not itself imply a small self-similar-time derivative at one late time.",
+    "Falsification specialist: test exact carrier coverage before deriving any new signed law.",
+    "Assurance specialist: if any source precondition is unmatched, direct SEARCH/GLUE must fail closed; no candidate generation."
+  ],
+  "consensus_next_action": "Run the content-bound obstruction-transformation review. Prefer same-domain SEARCH via Pineau–Vicol, but require every source precondition to map; if not, record CANNOT_CHECK and audit the missing carriers only.",
+  "independent_review_credit": 0,
+  "authority": "SAME_CONTEXT_PROPOSAL_SHADOW",
+  "artifact_hash": "sha256:0d1b14d61e5c6d05e82899ae4ba1aeaa7d83fdeccaef6f09f85468be5906e624"
+}
