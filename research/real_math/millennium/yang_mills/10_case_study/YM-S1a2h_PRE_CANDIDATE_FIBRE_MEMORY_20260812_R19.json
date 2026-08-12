@@ -1,0 +1,96 @@
+{
+  "schema_version": "ym-r19-pre-candidate-v1",
+  "cycle_id": "YM-S1a2h-R19-20260812",
+  "atom_id": "YM-S1a2h",
+  "issue": 301,
+  "signature": "YM-S1a2h-WILSON-FULL-RG-CONTRACTION-VS-RELEVANT-SPECTRAL-SPLITTING-STABLE-GRAPH-CLOSURE",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "pre_freeze_observation_boundary": [
+    "Before #301 was created, indexed primary-author text exposed Section 30.5 equation (528) choosing a full-map Lipschitz constant below one while Section 30.6 equation (534) classifies a relevant block with expansion factor above one.",
+    "That observation is retrospective for R19 and receives zero strict discovery credit; R19 freezes only the repair/source-binding discriminator."
+  ],
+  "framework": {
+    "rakl_method_version": "3.0.0",
+    "package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "git_sha": "9d61749c087994654515b2d087758f0ce0efaeb4",
+    "version_manifest_blob": "7363c88f4b19638299968e5e0ee3a93c3d567121",
+    "v3_py_blob": "280bf143fc8910d5860aaa02fbe3817a6aacfb72",
+    "method_specs_blob": "6342f2692b3fd85de3f274f9c6548c9736225691",
+    "math_workflow_blob": "6b3a72b3d842b1cde8de4dd94344b6cc7e7e7910"
+  },
+  "rakl_math": {
+    "base_sha": "3871283cfe5040801b174e25b045e05ee0228cc2",
+    "base_tree": "32405c355483aa9857d5642bc7b3f85801512539",
+    "branch": "research/ym-r19-stable-manifold-hyperbolic-20260812"
+  },
+  "exact_question": "Does Wilson 2026 provide a mathematically coherent stable-manifold construction in which expanding relevant coordinates are solved/tuned by a graph transform while only the complementary forward dynamics contracts, and does that construction quantitatively support the later Section-38 O(g^2) lambda bound and regulator slaving?",
+  "residual_before": "RES-YM-S1a2g-RELEVANT-STABLE-SPLITTING-AND-DELTA-LAMBDA-UNBOUND",
+  "memory": {
+    "retrieved_ids": ["#5", "#301", "#295", "PR#297", "#283", "PR#290", "#189", "PR#193", "#159", "PR#157", "#253", "PR#256", "PR#258", "#276", "PR#278"],
+    "selected_ids": ["#5", "#301", "#295/PR#297", "#189/PR#193", "#283/PR#290"],
+    "rejected": [
+      {"id": "#253/PR#256/PR#258", "reason": "fixed-cutoff OS/transfer lane; live/parallel and not the stable-manifold interface"},
+      {"id": "#276/PR#278", "reason": "MRS fixed-IR constructive-continuum lane; different obstruction"},
+      {"id": "#159/PR#157", "reason": "scalar invariant-ball lesson is useful only as a local falsifier; it does not supply relevant hyperbolic splitting"}
+    ],
+    "missed": "CANNOT_MEASURE — no exhaustive governed cross-problem memory-coverage certificate exposed"
+  },
+  "decision_policy": {
+    "SEARCH": "audit same-source Sections 30.5-30.7 and 38.2-38.3 plus referenced appendices before theorem invention",
+    "JUMP": "Brydges–Slade stable-manifold RG is analogue only; transfer blocked until source/target hyperbolic and gauge/OS hypotheses are mapped",
+    "GLUE": "not licensed without a typed source theorem for relevant backward/tuned coordinates and regulator-matched graph dependence",
+    "LIFT": "forbidden: no cross-problem coverage receipt",
+    "selected_route": "CANNOT_CHECK_FOR_CANDIDATE__SOURCE_ACQUISITION_ONLY"
+  },
+  "obstruction_transformation_review": {
+    "fingerprint": {
+      "roles": ["forward RG map", "expanding relevant coordinate", "contracting irrelevant coordinate", "tuned stable graph", "regulator pair"],
+      "relations": ["forward iteration", "graph invariance", "hyperbolic splitting", "counterterm matching", "cross-regulator comparison"],
+      "constraints": ["same GZ regulator norm", "O(g^2) shrinking domain", "asymptotic freedom", "uniform constants", "same gauge/OS theory"],
+      "failure_mechanisms": ["global-contraction/relevant-expansion type collision", "bounded-vs-contracting confusion", "per-regulator graph does not imply cross-regulator slaving"],
+      "desired_transition": "replace ambiguous full forward contraction by a typed graph/backward relevant contraction with quantitative invariant and regulator-Lipschitz bounds",
+      "forbidden_losses": ["do not drop lambda", "do not change regulator/theory", "do not infer OS/spectral transport from RG labels"]
+    },
+    "snapshot": "CANNOT_MEASURE — no canonical content-bound obstruction-transformation memory snapshot materialized in connector runtime",
+    "SEARCH": "NO_STRICT_VIABLE_MATCH — same-domain records are proposal/shadow guidance only",
+    "JUMP": "NO_VIABLE_MATCH — rigorous RG analogues have unmatched model/gauge/OS/relevant-sector hypotheses",
+    "GLUE": "NO_VIABLE_MATCH — no authority-bearing component set closes the typed interfaces",
+    "LIFT": "NOT_LICENSED",
+    "route": "CANNOT_CHECK"
+  },
+  "analogues": [
+    {"source": "Brydges–Slade rigorous RG stability/graph-transform literature", "shared": "explicit separation of perturbative/relevant coordinates and contractive nonperturbative coordinate", "disanalogy": "different model, Banach spaces, gauge constraints, OS structure, counterterm sector, and no Yang–Mills physical spectral transport"},
+    {"source": "#189/PR#193 slaving/normal-form failure memory", "shared": "a slaving label requires an explicit coordinate map and cancellation/intertwining estimate", "disanalogy": "Faizal–Shabir coordinate system, not Wilson GZ RG"}
+  ],
+  "expert_cell": [
+    {"background": "rigorous lattice gauge renormalization group", "role": "type the one-step map, extracted couplings, irrelevant polymer sector, and uniformity"},
+    {"background": "nonautonomous hyperbolic dynamics and invariant manifolds", "role": "test graph-transform direction, spectral splitting, inverse/backward relevant map and shrinking-domain constants"},
+    {"background": "Banach-space functional analysis", "role": "audit whether the claimed full contraction is compatible with an expanding spectral block and whether weighted norms alter the conclusion"},
+    {"background": "gauge fixing and Gribov–Zwanziger representation", "role": "check that coordinate tuning does not switch theory/gauge sector or omit auxiliary/counterterm coordinates"},
+    {"background": "Osterwalder–Schrader reconstruction and continuum limits", "role": "keep UV RG closure separate from RP/OS source, quotient, subsequence and physical spectral transport"},
+    {"background": "adversarial mathematical physics", "role": "run scalar/matrix hostile controls satisfying displayed estimates but violating claimed invariant graphs"},
+    {"background": "RAKL v3 provenance/metrology", "role": "enforce chronology, authority, episode/diagnosis separation, seven-axis novelty, CI/provenance boundaries"}
+  ],
+  "falsifiers": [
+    "Show that the Section-30.5 contraction acts only after eliminating the relevant coordinates, with exact projection/inverse definitions; otherwise an eigenvalue >1 contradicts a full forward contraction norm <1.",
+    "Give an explicit graph-transform estimate using the inverse relevant block (or Lyapunov–Perron operator) with constants that imply lambda=O(g^2) along the asymptotically-free nonautonomous trajectory.",
+    "Give a regulator-uniform Lipschitz bound for the stable graph h_R(g,K) so matched Delta g and Delta K imply Delta lambda -> 0."
+  ],
+  "canonical_method_specs_surfaces": ["decomposition", "routing", "search_query_generation", "source_selection_reliability", "claim_extraction", "ontology_terminology_normalization", "mathematical_context_translation", "equivalence_similarity", "contextual_theory_gluing", "contradiction_diagnosis", "gap_discovery", "experiment_query_selection", "memory", "review", "saturation_stopping", "prompting_context_policy", "synthesis"],
+  "pre_memory_preference": "CANNOT_MEASURE — no prospective action ranking was frozen before inherited R18 memory was read",
+  "rakl_changed_action": "YES at gate level: current workflow blocks proof-candidate invention because the content-bound transformation snapshot/transfer witness is unavailable; source acquisition and falsification are selected instead",
+  "pre_candidate_trace": [
+    {"seq": 1, "event": "ATOMIZED", "atom_id": "YM-S1a2h", "timestamp": "2026-08-12T05:00:00Z", "previous_event_hash": null, "artifact_hash": "sha256:3eeb8c80401551563e51a2d5a9c1534b144d1869f1f797b70386ed4147b788fa"},
+    {"seq": 2, "event": "CONTEXT_FROZEN", "atom_id": "YM-S1a2h", "timestamp": "2026-08-12T05:00:00Z", "previous_event_hash": "sha256:3eeb8c80401551563e51a2d5a9c1534b144d1869f1f797b70386ed4147b788fa", "artifact_hash": "sha256:8e244d88a4f565454057938e3ee8670ae601b4f52bc52804f15bc393c1d92d85"},
+    {"seq": 3, "event": "ANALOGY_SCAN", "atom_id": "YM-S1a2h", "timestamp": "2026-08-12T05:00:00Z", "previous_event_hash": "sha256:8e244d88a4f565454057938e3ee8670ae601b4f52bc52804f15bc393c1d92d85", "artifact_hash": "sha256:e245154232fa04d0411f7576a548d9d21f930fb53df1359e1889373354340fd0"},
+    {"seq": 4, "event": "METHOD_TRANSFER_REVIEW", "atom_id": "YM-S1a2h", "timestamp": "2026-08-12T05:00:00Z", "previous_event_hash": "sha256:e245154232fa04d0411f7576a548d9d21f930fb53df1359e1889373354340fd0", "artifact_hash": "sha256:6dbbb5bf8a10529619b2945727cc51631b5efcc9216130812a5c0ee91c59f666"},
+    {"seq": 5, "event": "EXPERT_CONTEXT_REVIEW", "atom_id": "YM-S1a2h", "timestamp": "2026-08-12T05:00:00Z", "previous_event_hash": "sha256:6dbbb5bf8a10529619b2945727cc51631b5efcc9216130812a5c0ee91c59f666", "artifact_hash": "sha256:97eeef52686b372f468be20a367418519462f2d8624255223096cfa3fef54b66"},
+    {"seq": 6, "event": "EXPERIENCE_MEMORY_REVIEW", "atom_id": "YM-S1a2h", "timestamp": "2026-08-12T05:00:00Z", "previous_event_hash": "sha256:97eeef52686b372f468be20a367418519462f2d8624255223096cfa3fef54b66", "artifact_hash": "sha256:dc773ad713e4f518e7950021078ba866371b766893369592394529508f041b36"},
+    {"seq": 7, "event": "OBSTRUCTION_TRANSFORMATION_REVIEW", "atom_id": "YM-S1a2h", "timestamp": "2026-08-12T05:00:00Z", "previous_event_hash": "sha256:dc773ad713e4f518e7950021078ba866371b766893369592394529508f041b36", "artifact_hash": "sha256:62eb03ed214723d4f072f333589643545fa65e27f4f486608a74caa1a66ee55f"},
+    {"seq": 8, "event": "NEXT_STEP_PROPOSED", "atom_id": "YM-S1a2h", "timestamp": "2026-08-12T05:00:00Z", "previous_event_hash": "sha256:62eb03ed214723d4f072f333589643545fa65e27f4f486608a74caa1a66ee55f", "artifact_hash": "sha256:cfd4ef6902df39177bbdb51ade5a6b3ac37223f18af54309b987c57fca9d5226"}
+  ],
+  "independent_review_credit": "0/3",
+  "frozen_at": "2026-08-12T05:00:00Z",
+  "fibre_snapshot_hash": "sha256:58a974c9b24c09c638b2819dde74db2f26a1b79943275b6d423196c3ab9d14d2"
+}
