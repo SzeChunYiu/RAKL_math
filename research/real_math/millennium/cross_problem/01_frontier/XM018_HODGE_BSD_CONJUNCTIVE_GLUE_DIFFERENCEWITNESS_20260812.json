@@ -1,0 +1,49 @@
+{
+  "cycle_id": "XM018-HODGE-BSD-CONJUNCTIVE-GLUE-20260812",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "source_atom": {
+    "lane": "Hodge",
+    "atom": "H4d1c-b",
+    "episode": "H4d1c-C002-FIXED-COMPONENT-FIBRE-PRODUCT-NONEXPANSION",
+    "claim_scope": "fixed selected witness-component fibre products at first order; base tangent image is the intersection of component images"
+  },
+  "target_atom": {
+    "lane": "Birch_Swinnerton_Dyer",
+    "atom": "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE",
+    "parent": "BSD-A1a1-THETA-ORDER-COMPARISON",
+    "target": "derive same-curve Selmer dimension two plus a nonzero transverse localization witness from exact complex analytic rank two without reimporting the target premise"
+  },
+  "common_abstraction": "CONJUNCTIVE_COMPATIBILITY_GLUE_IS_NONEXPANSIVE_FOR_A_LINEAR_DETECTOR",
+  "enabling_assumptions": [
+    "The proposed BSD repair is only an intersection/pullback/preimage of already available linearized carrier or local-condition subspaces; it introduces no new generative operator.",
+    "The target detector/localization map is linear on the compared Selmer-level representation.",
+    "Every input reachable subspace in the proposed conjunctive repair is contained in the kernel of the required transverse detector, or otherwise omits the desired detector direction."
+  ],
+  "disanalogies": [
+    "Hodge H4d1c-b is a first-order deformation/fibre-product statement; Selmer groups and localization are Galois-cohomological objects, not Hodge witness moduli.",
+    "Arithmetic sums, extension classes, connecting morphisms, derived heights, Euler-system derivatives, pairings, quotients, base change/return maps, or genuinely new cohomology classes are generative operations and are outside this transfer.",
+    "Castella arXiv:2312.01481 provides a good-ordinary generalized-Kato theorem cell; it does not say exact complex analytic rank two alone forces nonzero localization."
+  ],
+  "predicted_principle": "A repair made solely by adding compatibility constraints to existing kernel-confined carriers cannot create a missing transverse localization coordinate; escaping the obstruction requires a typed generative operation with an explicit nonzero detector effect.",
+  "cheapest_falsifier": {
+    "model": "Let V=span{k,w}, loc(k)=0, loc(w)=1. Any family of subspaces W_i contained in ker(loc)=span{k} has intersection contained in ker(loc), hence no conjunctive/fibre-product repair can produce loc != 0.",
+    "contrast": "If one instead adjoins/generated-spans a transverse vector w, span{k,w} has nonzero localization. This is a different operator family, so the nonexpansion result is scoped rather than universal.",
+    "verdict": "TRANSFER_SURVIVES_IN_SCOPED_LINEARIZED_FORM"
+  },
+  "difference_witness": {
+    "shared_language": "combine/couple multiple partial witnesses",
+    "source_operator": "fibre product / simultaneous compatibility, tangent image intersection",
+    "target_bad_mapping": "treat intersection/pullback of kernel-confined Selmer carriers as if it could create a transverse localization direction",
+    "target_escape_operator": "sum/extension/connecting map/derivative/new class with a proved detector effect",
+    "hard_boundary": "INTERSECTION_IS_NOT_GENERATION"
+  },
+  "source_provenance": [
+    "RAKL_math PR#226 H4d1c-b proposal/shadow local result",
+    "Stacks Project Tag 0BEB/0B2F for tangent/fibre-product controls",
+    "Castella, arXiv:2312.01481 for generalized Kato/Selmer/localization theorem scope",
+    "RAKL_math canonical failure F-BSD-A1A1-R8-SOURCE-FAMILY-REIMPORTS-ARITHMETIC-ENTRY"
+  ],
+  "root_status": "ALL_SIX_OPEN_NO_SOLUTION_CERTIFICATE",
+  "fibre_snapshot_hash": "sha256:11d6f535124267ab9d301b8ee48efa571f20fccabb425c6e1f2418ff68cc6185",
+  "artifact_hash": "sha256:fe42957149f07bd2630123aa0aa2716b7f90d4c1ba00317ae6252792bddc62e8"
+}
