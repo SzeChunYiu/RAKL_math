@@ -1,0 +1,45 @@
+{
+  "schema": "RAKL_math.hash_chained_trace_delta.v3.proposal_shadow",
+  "cycle_id": "XM015-YM-PNP-FULL-TARGET-CONGRUENCE-20260812",
+  "authority": "PROPOSAL_SHADOW_PROCESS_ASSURANCE_ONLY",
+  "continues_from_legacy_event_hash": "ecd3a36463090adf3eec06c22cfbc63eda009409cb2581c3360d2da311d9d305",
+  "events": [
+    {
+      "seq": 15,
+      "kind": "FRAMEWORK_DRIFT_RECHECK",
+      "payload": {
+        "from": "10c35704445216fb7595fefb10e06e8ddaf694a2",
+        "to": "992eda867588378fafb1f8b8997c8ecc725f88ad",
+        "method_version": "3.0.0",
+        "workflow_change": "semantic shortcut gate added"
+      },
+      "previous_event_hash": "ecd3a36463090adf3eec06c22cfbc63eda009409cb2581c3360d2da311d9d305",
+      "artifact_hash": "464200019ede904dea053bbed52f18855d08c5177632752abe56b0a1e5c23b46"
+    },
+    {
+      "seq": 16,
+      "kind": "OBSTRUCTION_TRANSFORMATION_REVIEW",
+      "payload": {
+        "SEARCH": "CANNOT_CHECK",
+        "JUMP": "EXPLORATORY_ONLY_SOURCE_PROPOSAL_SHADOW",
+        "GLUE": "NOT_SELECTED",
+        "LIFT": "BLOCKED",
+        "selected": "CANNOT_CHECK_STRICT / EXPLORATORY_JUMP_ALREADY_VALIDATED_ON_TARGET"
+      },
+      "previous_event_hash": "464200019ede904dea053bbed52f18855d08c5177632752abe56b0a1e5c23b46",
+      "artifact_hash": "de8efab2ed5b2ef2a0a42e398a61e4587c41295d7f389963058970bc0d20d144"
+    },
+    {
+      "seq": 17,
+      "kind": "STRICT_CURRENT_MAIN_DISCOVERY_STATUS",
+      "payload": {
+        "status": "NOT_CLAIMED",
+        "reason": "new gate merged after candidate/result; no retroactive backfill",
+        "new_candidate_after_recheck": false
+      },
+      "previous_event_hash": "de8efab2ed5b2ef2a0a42e398a61e4587c41295d7f389963058970bc0d20d144",
+      "artifact_hash": "9bf75f95fd7697ab5b7f548c078cfdac5c3d4615804a7fee8c79df2ccbf4be8b"
+    }
+  ],
+  "final_hash": "sha256:9bf75f95fd7697ab5b7f548c078cfdac5c3d4615804a7fee8c79df2ccbf4be8b"
+}

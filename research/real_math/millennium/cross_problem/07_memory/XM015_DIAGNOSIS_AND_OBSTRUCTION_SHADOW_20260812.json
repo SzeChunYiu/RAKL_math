@@ -1,0 +1,48 @@
+{
+  "schema": "RAKL_math.cross_millennium_diagnosis_obstruction.v3.proposal_shadow",
+  "cycle_id": "XM015-YM-PNP-FULL-TARGET-CONGRUENCE-20260812",
+  "episode_id": "EP-XM015-YM-PNP-FULL-TARGET-CONGRUENCE-20260812",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "episode": {
+    "what_happened": "The source-derived discriminator was executed on the smallest exact PNP child. Unlike the fixed-lift residual calculation, the target search allowed full child reoptimization and produced matching primal/dual value 3/2.",
+    "outcome": "LOCAL_EXACT_SUCCESS__FULL_REOPTIMIZED_N3_CHILD_OPTIMUM_EQUALS_PARENT_3_OVER_2"
+  },
+  "diagnosis": {
+    "diagnosis_id": "D-XM015-PNP-FIRST-STEP-FULL-REOPT-FLAT",
+    "statement": "The first C041 extension is not merely flat relative to the inherited parent weights; its entire fractional child program has the same optimum 3/2. The previously open local escape through weight redistribution is closed at this one transition.",
+    "failure_class": "LOCAL_SUCCESS_GLOBAL_GLUING_OPEN",
+    "mathematical_vs_gluing": "local mathematical subproblem solved exactly; scale-to-scale/asymptotic/root gluing remains unresolved"
+  },
+  "obstruction": {
+    "obstruction_id": "O-XM015-PNP-C041-FIRST-STEP-FULL-REOPT-FLAT",
+    "statement": "Any C041 growth proof must obtain its first positive increment after the n=2->3 transition; neither inherited-weight augmentation nor unrestricted fractional reoptimization increases the exact optimum at this step.",
+    "reuse_scope": "Only the frozen n=2->3 child and the current C041 fractional formulation.",
+    "authority": "PROPOSAL_SHADOW_NOT_CANONICALLY_ADMITTED"
+  },
+  "lesson": {
+    "status": "NO_NEW_LESSON_MINTED",
+    "reused_positive_motif": "After a constrained/frozen-subspace computation, test full-target congruence on the smallest exact target before treating the constrained result as decisive.",
+    "why_not_minted": "One cross-problem success is insufficient to promote a reusable framework lesson; existing DifferenceWitness/equivalence/gluing surfaces already express the guard."
+  },
+  "repeated_process_links": [
+    {
+      "source_id": "EP-YM-S1c1a1-R9-20260811",
+      "relation": "SUCCESSFUL_REUSE",
+      "effect": "prompted the full-target check instead of assuming the fixed-lift residual determined the reoptimized child"
+    },
+    {
+      "source_id": "PNP-C041-FX-SAT-ONE-SIDED-EXACT-GATE-20260812",
+      "relation": "TARGET_PREDECESSOR",
+      "effect": "supplied the fixed-lift zero-augmentation result and explicit reoptimization caveat"
+    }
+  ],
+  "new_ids": {
+    "episodes": ["EP-XM015-YM-PNP-FULL-TARGET-CONGRUENCE-20260812"],
+    "diagnoses": ["D-XM015-PNP-FIRST-STEP-FULL-REOPT-FLAT"],
+    "failures": [],
+    "obstructions": ["O-XM015-PNP-C041-FIRST-STEP-FULL-REOPT-FLAT"],
+    "lessons": [],
+    "tools": [],
+    "motifs": []
+  }
+}

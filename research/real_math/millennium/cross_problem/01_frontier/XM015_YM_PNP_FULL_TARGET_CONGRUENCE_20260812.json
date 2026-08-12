@@ -1,0 +1,130 @@
+{
+  "schema": "RAKL_math.cross_millennium_transfer.v3.proposal_shadow",
+  "cycle_id": "XM015-YM-PNP-FULL-TARGET-CONGRUENCE-20260812",
+  "authority": "PROPOSAL_SHADOW_ONLY_NO_ROOT_OR_METHOD_PROMOTION",
+  "recorded_at_utc": "2026-08-11T22:51:26Z",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "current_main_sha": "10c35704445216fb7595fefb10e06e8ddaf694a2",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "method_specs_blob_sha": "6342f2692b3fd85de3f274f9c6548c9736225691"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "3cfc8a3b2ff6d981351d2f15421c8cc08048f74b",
+    "base_tree_sha": "49d27fc88f59a353a09939ae5c0e6824134ae9cb",
+    "branch": "research/xm015-ym-pnp-full-reopt-20260812"
+  },
+  "active_atom": "XM015-YM-R9-TO-PNP-C041-FULL-REOPT",
+  "atom_signature": "FROZEN_SUBSPACE_RESULT_REQUIRES_FULL_TARGET_CONGRUENCE_CHECK",
+  "source_atom": {
+    "problem": "Yang-Mills existence and mass gap",
+    "atom": "YM-S1c1a1",
+    "episode": "EP-YM-S1c1a1-R9-20260811",
+    "source_pr": 178,
+    "source_result": "The displayed AF/IR identification route only yields a bounded additive discrepancy, while the Appendix-F tail-localized repair can change the fixed target endpoint when coarse coordinates are frozen. The scoped lesson is to test endpoint preservation and vanishing, not to transfer any Yang-Mills theorem.",
+    "source_primary": "arXiv:2606.19362v1, Theorem 10.8 and Appendix F.10-F.11"
+  },
+  "target_atom": {
+    "problem": "P versus NP",
+    "atom": "PNP-O9d12a2a1b / C041",
+    "target_base_commit": "3cfc8a3b2ff6d981351d2f15421c8cc08048f74b",
+    "target_prior_result": "For the exact n=2 -> n=3 extension, the lifted parent fractional certificate remains feasible and the residual augmentation optimum with inherited parent weights fixed is zero.",
+    "target_prior_residual": "The reoptimized child fractional optimum was not determined by the fixed-lift residual calculation.",
+    "target_sources": [
+      "Cavalar-Oliveira, ECCC TR25-033 (Definitions 18-21 / graph cover formulation)",
+      "RAKL_math C041_FX_SAT_EXACT_GATE_RECEIPT_20260812.json at base commit"
+    ]
+  },
+  "common_abstraction": "A calculation performed inside an inherited or frozen subspace does not determine the full target endpoint or optimum unless the restriction is congruent for the downstream outcome. Test the full target space at the smallest exact instance before routing through the restricted result.",
+  "enabling_assumptions": [
+    "the source episode explicitly distinguishes a tail/fine-coordinate repair from preservation of the original endpoint",
+    "the target prior result fixes lifted parent weights while the full child fractional program permits reoptimization of all child-relevant semi-filter weights",
+    "the n=3 child complement has five edges, so every relevant semi-filter and legal full-union pair can be checked exactly",
+    "Cavalar-Oliveira's cover formulation is used only for the finite graph-complexity object; no asymptotic circuit lower bound is inferred"
+  ],
+  "disanalogies": [
+    "Yang-Mills endpoints are regulator/RG/Schwinger-family objects; P-vs-NP target variables are finite fractional semi-filter packing/cover variables",
+    "no Yang-Mills inequality, physical theorem, or source conclusion transfers to the combinatorial target",
+    "the source failure is representation/gluing; the target discriminator is a finite exact optimization problem",
+    "a full-target equality at one child step cannot establish a recurrence, asymptotic lower bound, NP separation, or any Yang-Mills claim"
+  ],
+  "predicted_principle": "INHERITED_COORDINATE_FREEZE_DOES_NOT_DETERMINE_REOPTIMIZED_TARGET",
+  "cheapest_falsifier": "Solve the full child fractional packing/cover problem at the already-materialized n=3 child and compare its exact optimum with the parent optimum 3/2. A value above 3/2 falsifies first-step flatness after reoptimization; equality closes that local escape only.",
+  "DifferenceWitness": {
+    "source": "A tail-localized path may be short in varied fine coordinates yet fail to end at the original Theta1 when coarse coordinates are frozen.",
+    "target": "The fixed-lift residual LP can have delta*=0 while, in principle, a full child LP could improve by redistributing previously inherited weights. Therefore the fixed-lift result and the full-target optimum are not definitionally identical.",
+    "transfer_scope": "Only the discriminator 'check full target after a frozen-subspace calculation' transfers."
+  },
+  "exact_target_instance": {
+    "transition": "n=2 -> n=3",
+    "child_complement_edge_order": {
+      "u0": [0, 0],
+      "u1": [0, 4],
+      "u2": [1, 2],
+      "u3": [2, 1],
+      "u4": [2, 2]
+    },
+    "relevance_witness_row_column_masks": [[3, 8], [3, 20], [4, 1], [4, 8], [4, 2], [24, 1], [24, 2]],
+    "exact_nonempty_antichains_on_5_elements": 7579,
+    "exact_relevant_semifilters": 787,
+    "legal_unordered_incomparable_full_union_pairs": 90
+  },
+  "primal_fractional_packing_certificate": {
+    "filters": [
+      {"id": "F23", "minimal_sets": ["{u2}", "{u3}"], "weight": "1/2", "relevance_witness": "row1={u2}, col1={u3}"},
+      {"id": "F13", "minimal_sets": ["{u1}", "{u3}"], "weight": "1/2", "relevance_witness": "row0={u0,u1}, col1={u3}"},
+      {"id": "F12", "minimal_sets": ["{u1}", "{u2}"], "weight": "1/2", "relevance_witness": "row1={u2}, col4={u1}"}
+    ],
+    "feasibility_argument": "A full-union pair fails a singleton-minimal filter F_ab only if a and b are split onto opposite exclusive sides. No two-sided split can make all three pairs among u1,u2,u3 bichromatic; equivalently K3 is not bipartite. Hence any legal pair covers at most two priced filters and has load at most 1.",
+    "objective": "3/2"
+  },
+  "dual_fractional_cover_certificate": {
+    "pairs": [
+      {"id": "P1", "E": ["u0", "u1"], "H": ["u2", "u3", "u4"], "weight": "1/2", "masks": [3, 28]},
+      {"id": "P2", "E": ["u0", "u1", "u2"], "H": ["u3", "u4"], "weight": "1/2", "masks": [7, 24]},
+      {"id": "P3", "E": ["u0", "u1", "u3"], "H": ["u2", "u4"], "weight": "1/2", "masks": [11, 20]}
+    ],
+    "witness_family_coverage": {
+      "(3,8)": ["P1", "P2"],
+      "(3,20)": ["P1", "P3"],
+      "(4,1)": ["P1", "P3"],
+      "(4,8)": ["P2", "P3"],
+      "(4,2)": ["P1", "P2", "P3"],
+      "(24,1)": ["P1", "P2"],
+      "(24,2)": ["P1", "P2"]
+    },
+    "feasibility_argument": "Every relevant semi-filter contains both members of at least one listed relevance-witness pair. Upward closure then makes it fail at least two of P1,P2,P3, so it receives total dual cover weight at least 1.",
+    "objective": "3/2"
+  },
+  "verification": {
+    "analytic_certificate": "Matching feasible primal and dual objectives 3/2 prove the finite fractional optimum exactly by weak duality; no numerical optimizer is needed for the proof.",
+    "exhaustive_regression_calibration": {
+      "relevant_semifilters": 787,
+      "legal_full_union_pairs": 90,
+      "max_primal_certificate_pair_load": "1",
+      "min_dual_certificate_filter_coverage": "1"
+    },
+    "computation_role": "CALIBRATION_AND_REGRESSION_ONLY_NOT_PROOF_AUTHORITY"
+  },
+  "outcome": "LOCAL_EXACT_SUCCESS__FULL_REOPTIMIZED_N3_CHILD_OPTIMUM_EQUALS_PARENT_3_OVER_2",
+  "residual_before": "PNP_C041_N2_TO_N3_FIXED_LIFT_ZERO_BUT_FULL_REOPTIMIZED_CHILD_UNDETERMINED",
+  "residual_after": "PNP_C041_N2_TO_N3_FULL_REOPTIMIZED_CHILD_EQUALS_PARENT_3_OVER_2; FIRST_MAGIC_CODED_LEVEL_LATER_TRANSITIONS_AND_ASYMPTOTIC_RECURRENCE_OPEN",
+  "failure_separation": {
+    "target_local_mathematical_failure": false,
+    "target_local_success": true,
+    "local_to_global_gluing_failure": true,
+    "gluing_reason": "A one-step equality does not establish a scale recurrence or root-facing lower bound.",
+    "source_failure_classes": ["representation", "gluing", "source-proof"],
+    "observer_process_failure": false
+  },
+  "novelty_class": {
+    "primary": "compositional",
+    "secondary": "transfer",
+    "scope": "new proposal/shadow finite certificate assembled from the frozen C041 child geometry plus standard LP duality; no literature-novelty claim"
+  },
+  "next_action": "Rotate from the now-closed first-step reoptimization escape to the earliest magic-coded C041 extension where genuinely new child geometry appears; freeze that transition and test whether full reoptimization remains flat or creates positive gain.",
+  "frozen_fibre_hash": "sha256:cad26d6f26e7ce10d1e053869a6f470bff21dbf693c3cbc7f5ec6ccb4e93e7c7"
+}
