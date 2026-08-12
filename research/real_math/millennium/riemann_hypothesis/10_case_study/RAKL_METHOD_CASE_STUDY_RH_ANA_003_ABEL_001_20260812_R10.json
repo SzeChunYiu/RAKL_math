@@ -1,0 +1,84 @@
+{
+  "schema": "RAKL_METHOD_CASE_STUDY",
+  "case_study_id": "RAKL-METHOD-CASE-STUDY-RH-ANA-003-ABEL-001-20260812-R10",
+  "framework": {"method_version": "3.0.0", "skill_manifest_version": "0.7.0", "rakl_main_sha": "d594e6864f49ecf6dac394173082fbf0174b422e"},
+  "active_atom": {
+    "atom_id": "RH-ANA-003-ABEL-001",
+    "problem_signature": ["Riemann Hypothesis", "zeta/prime-side Li representation", "a_m=1-Lambda(m)", "A=floor-psi", "Laguerre kernel", "natural source order", "fixed n before limit", "Abel summation", "conditional convergence", "fixed-n versus all-index uniformity"],
+    "fibre_snapshot_hash": "sha256:1cefd235555778753fb0731e783ff94cd9b888b941813a5dc00b11e302362f2f"
+  },
+  "fibre_contents_actually_consulted": [
+    "CURRENT RAKL/main@d594e6864f49ecf6dac394173082fbf0174b422e: AGENTS.md; RAKL_VERSION.json; skills/rakl-core/SKILL.md; manifest.yaml; static/core/principles.md; workflows/mathematical-research.md; src/rakl/method_specs.py; src/rakl/experience_substrate.py; docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md; docs/RAKL_METROLOGY.md; task-episode and math-research-trace schemas.",
+    "CURRENT RAKL_math/main@6016dd6a87d87b18d8f5498e2537b043a8468c04: RH root issue #3 and merged PR #349 fixed-n candidate freeze packet.",
+    "Frozen MathContextFiber sha256:1cefd235555778753fb0731e783ff94cd9b888b941813a5dc00b11e302362f2f; ResearchMemoryReview sha256:9d420fe455eee0774f218f45ec17961b5895f1a7eacd318154daa678a9711551; obstruction-transformation SEARCH review sha256:0aedf20aa25cd198360de0c76cc6fbfba41c6eca7685f12bb424620e4dc4bb38; failure snapshot sha256:89873547955e2489ba792ba14dc9eea36bfc1d9bc28501e0f90e49147c739306.",
+    "Frozen candidate core sha256:19a265e1498ad67db256c2ef1315a370d2b72107618f67c54fb7b0828eac3bcc and candidate trace through CANDIDATE_PROPOSED.",
+    "Primary source: Bellotti arXiv:2508.02041v1, Theorem 1.5 and equations (1.3)-(1.4).",
+    "Cross-Millennium screen: F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE rejected because no applicability/DifferenceWitness maps spectral source visibility to this ordered Abel interface."
+  ],
+  "operators_and_motifs_tried": [
+    {"id": "E-CLASSICAL-FINITE-ABEL-SUMMATION", "role": "SEARCH transformation", "outcome": "SUCCESS_LOCAL", "authority": "standard method, target derivation checked"},
+    {"id": "BELLOTTI-ARXIV-2508.02041v1", "role": "cumulative PNT decay", "outcome": "SUFFICIENT_FIXED_N", "authority": "primary technical source"},
+    {"id": "OP-FIXED-POLYNOMIAL-GROWTH", "role": "Laguerre kernel/derivative envelope", "outcome": "SUCCESS_LOCAL", "authority": "elementary derivation"},
+    {"id": "OP-LEADING-TERM-DIVERGENCE-WITNESS", "role": "nonabsolute falsifier", "outcome": "SUCCESS_LOCAL", "authority": "elementary derivation"},
+    {"id": "M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING", "role": "prior proposal/shadow guard", "outcome": "SUCCESSFUL_REUSE_AS_WARNING", "authority": "search guidance only"}
+  ],
+  "experience_retrieval": {
+    "retrieved_or_screened_ids": ["F-RH-ANA-001-FINITE-LI-PREFIX", "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE", "E-CLASSICAL-FINITE-ABEL-SUMMATION", "M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING", "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE"],
+    "selected_ids": ["F-RH-ANA-001-FINITE-LI-PREFIX", "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE", "E-CLASSICAL-FINITE-ABEL-SUMMATION", "M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING"],
+    "rejected": [
+      {"id": "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE", "reason": "No target applicability/DifferenceWitness for the ordered Abel limit interface."},
+      {"id": "termwise-absolute-convergence", "reason": "Directly falsified by the 6k subsequence."},
+      {"id": "series-rearrangement-or-regrouping", "reason": "Conditional convergence and frozen source order make this inadmissible."},
+      {"id": "unmerged-PR316-n-uniform-rate", "reason": "Outside frozen authority and quantifier scope."}
+    ],
+    "later_found_missed_ids": [],
+    "missed_relevant_memory": "CANNOT_MEASURE: no governed complete cross-repository/cross-Millennium memory denominator is exposed by the connector."
+  },
+  "search_policy": {
+    "mode": "EXPLOIT_PROSPECTIVELY_FROZEN_CANDIDATE_WITH_COUNTEREXAMPLE_FIRST_EVALUATION",
+    "preference_before_memory_and_gate": "Resume the harder n-uniform/tail or strict-prefix analytic route immediately.",
+    "chosen_action": "First evaluate the clean current-main fixed-n source-order interface merged in PR #349 because its truth status is a dependency for later source-order constructions.",
+    "rakl_changed_action": true,
+    "breakthrough_modes": "No new candidate invention required; proposal-only breakthrough controls remained search guidance and granted no authority."
+  },
+  "falsifier_and_verification": {
+    "counterexample_first": ["endpoint sign/convention", "6k prime-power exclusion", "fixed-n quantifier leakage", "u=log t integrability"],
+    "result": "ALL_FROZEN_O1_TO_O7_PASS",
+    "primary_source": "Bellotti arXiv:2508.02041v1",
+    "formal_proof_assistant": "NOT_RUN",
+    "same_context_expert_roles": 7,
+    "independent_review_credit": 0
+  },
+  "outcome": "VERIFIED_LOCAL_FIXED_N_NATURAL_ORDER_ABEL_IDENTITY_AND_NONABSOLUTE_DIVERGENCE",
+  "residual_before": ["finite Abel endpoint identity UNEVALUATED", "Bellotti-to-boundary UNEVALUATED", "transformed improper integral UNEVALUATED", "natural-order convergence UNEVALUATED", "absolute convergence status UNEVALUATED"],
+  "residual_after": ["UNIFORM_IN_N_CONTROL_OPEN", "ALL_INDEX_LI_SIGN_GLUE_OPEN", "CONDITIONAL_CONVERGENCE_REORDERING_GUARD_ACTIVE", "TARGET_DOMAIN_STRICT_PREFIX_DIFFERENCEWITNESS_OPEN", "RH_ROOT_OPEN_NO_SOLUTION_CERTIFICATE"],
+  "failure_categories": {
+    "math": "NONE for the frozen fixed-n statement",
+    "retrieval": "CANNOT_MEASURE complete-memory recall denominator",
+    "decomposition": "fixed-n atom closes locally; all-index is explicitly separate",
+    "representation": "original series is conditional; arbitrary rearrangement/window decomposition remains forbidden",
+    "gluing": "fixed-n-to-all-index uniformity remains open",
+    "source": "Bellotti primary source bound rechecked",
+    "provenance": "candidate identity and separate evaluation authorization preserved",
+    "verification": "formal proof assistant and independent review not run",
+    "tooling": "repository CI not yet observed at artifact materialization",
+    "meta-policy": "application framework pin is stale versus current RAKL main; pinned-suite success cannot be represented as current-framework assurance"
+  },
+  "seven_saturation_axes": {
+    "KNOWLEDGE": "REOPENED_RETAINED_PROVISIONAL: fixed-n convergence and nonabsolute classification now verified locally",
+    "OPERATOR": "FLAT: no new operator",
+    "EXPERIENCE_PATTERN": "REOPENED_PROVISIONAL: source-order cumulative cancellation succeeds where termwise absolute control fails",
+    "OBSTRUCTION": "FLAT: fixed-n-to-all-index uniformity was already known as the next barrier",
+    "RELATION": "REOPENED_PROVISIONAL: exact Abel tail relation is now locally verified",
+    "PATH": "REOPENED_PROVISIONAL: source-order Abel interface is a valid local checkpoint, but no root path closes",
+    "META_METHOD": "FLAT: current v3 gates and separation worked as intended"
+  },
+  "retained_semantic_novelty_counts": {"KNOWLEDGE": 1, "OPERATOR": 0, "EXPERIENCE_PATTERN": 1, "OBSTRUCTION": 0, "RELATION": 1, "PATH": 1, "META_METHOD": 0},
+  "protected_canonical_novelty_counts": {"KNOWLEDGE": 0, "OPERATOR": 0, "EXPERIENCE_PATTERN": 0, "OBSTRUCTION": 0, "RELATION": 0, "PATH": 0, "META_METHOD": 0},
+  "defensible_novelty_class": "LOCAL_RECONSTRUCTION_AND_SOURCE_BOUND_VERIFICATION_ONLY__NO_LITERATURE_NOVELTY_CLAIM",
+  "framework_improvement_hypothesis": {"warranted": false, "status": "NO_FRAMEWORK_CHANGE_WARRANTED", "note": "Current v3 correctly kept freeze, later authorization, local truth, lesson/obstruction and root authority separate. A typed post-freeze evaluation-authorization helper could reduce application boilerplate, but this cycle supplies no framework-defect evidence."},
+  "episode_diagnosis_obstruction_lesson_separation": {"episode_id": "EP-RH-ANA-003-ABEL-001-FIXED-N-EVALUATION-20260812-R10", "diagnosis_id": "D-RH-ANA-003-ABEL-001-CUMULATIVE-CANCELLATION-SUFFICES-FIXED-N", "obstruction_id": "O-RH-ANA-003-ABEL-001-FIXED-N-TO-ALL-INDEX-UNIFORMITY", "lesson_id": "L-RH-ANA-003-ABEL-001-ABEL-BEFORE-ABSOLUTE-MAJORANT", "assertion": "distinct artifacts; no abstraction replaces the episode"},
+  "authority": "PROPOSAL_SHADOW_CASE_STUDY_ONLY",
+  "recorded_at": "2026-08-12T08:08:00Z",
+  "artifact_hash": "sha256:2db75e4b7281573bc1042c36de24c7d7d8f6bb88973eadb192c2dd7a82005d5a"
+}
