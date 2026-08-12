@@ -58,22 +58,22 @@
     }
   ],
   "application_base_sha": "9e36dd83874bfc9f8ef94a2ce2708769cc25861e",
-  "artifact_hash": "sha256:bf87028b2a9c1663ff61bb77d28de284f47fac35d01e53d246e034386a7fdc67",
+  "artifact_hash": "sha256:42625f3b5e7a51f2ccd215813e2ee2fae2d98e1eafc1e5df17d9e55b309b4e4b",
   "atom_id": "O9d12a2a1b-C048",
   "authority": "PROPOSAL_SHADOW_RETROSPECTIVE_FIBRE",
   "chronology_status": "LATE_PERSISTENCE_STRICT_PROSPECTIVE_DISCOVERY_CREDIT_DENIED",
   "explicit_disanalogies": [
     "literal transpose is not the C047 prefix-preserving mirror: it puts suffix c on the fresh row and prefix r on the old column",
-    "a shared complement column is component incidence only; it need not force an extra legal cover pair",
+    "uniform literal transpose is distinct from a one-time or nonuniform orientation switch",
     "SAT-reduction preservation is a language/interface fact, not a circuit lower bound",
-    "finite explicit collision is not a uniform recurrence or asymptotic lower bound"
+    "representation change can be mathematically null when it is conjugate by a generator-family automorphism"
   ],
   "falsifiers": [
     "find a transposed complement selector whose reconstructed word differs from the original canonical code",
     "find a satisfying formula whose proposed transposed edge is complement",
-    "invalidate either explicit UNSAT proof",
-    "invalidate x44 = 1||y42 or level/coordinate arithmetic",
-    "show the shared coordinate is not inherited into U23"
+    "show the frozen seed is not invariant under coordinate swap",
+    "find a recursive quadrant/case in the uniform literal-transpose definition not equal to the coordinate swap of C041",
+    "show coordinate swap fails to permute the row/column generator family or fails to transport semi-filter preservation"
   ],
   "fibre_id": "PNP-C048-LITERAL-TRANSPOSE-COUPLING-FIBRE-20260812",
   "framework": {
@@ -86,7 +86,7 @@
     "C045/C046R component separation and bridge absorption: coupling is necessary but may be cover-neutral"
   ],
   "object_context": "Literal matrix-transpose successor of the frozen C041 equal-split SAT/UNSAT cross-extension: keep decoder, seed and inherited old-old embedding, but place the suffix coordinate on the fresh row and the prefix coordinate on the old column.",
-  "qoi": "Does literal transpose preserve the SAT/NP reduction, and can it produce an exact backward support coupling that C046/C047 orientation-only families could not?",
+  "qoi": "Does the uniform literal transpose preserve the SAT/NP reduction while escaping the C046/C047 obstruction, or is it an exact generator-preserving representation isomorphism?",
   "recorded_at": "2026-08-12T04:02:00Z",
   "root_contract": "P versus NP root remains OPEN_NO_SOLUTION_CERTIFICATE; no local support event is a cover lower bound, circuit lower bound, novelty certificate, or root certificate.",
   "schema_version": "1.0.0",
@@ -98,7 +98,7 @@
     "equal split x||y with |x|=|y|",
     "transpose map (r,M+c) -> (M+c,r)",
     "fresh-row suffix, old-column prefix",
-    "backward coupling iff a current prefix equals an accumulated old complement column",
-    "adjacent encoding lengths 2k and 2k+2"
+    "global coordinate-swap tau(i,j)=(j,i)",
+    "test generator-family automorphism before finite cover/collision enumeration"
   ]
 }
