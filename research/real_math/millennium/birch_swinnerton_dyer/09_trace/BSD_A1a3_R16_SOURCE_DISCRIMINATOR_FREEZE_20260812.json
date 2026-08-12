@@ -1,0 +1,69 @@
+{
+  "allowed_result_branches": [
+    "FORCES_ZERO_DIVISIBLE_CORANK",
+    "PARITY_ONLY_ON_DIVISIBLE_CORANK",
+    "PAIRING_DESCENDS_ONLY_TO_QUOTIENT_NO_DIVISIBLE_CORANK_CONTROL",
+    "CANNOT_CHECK_EXACT_SOURCE_SCOPE"
+  ],
+  "application_base_sha": "b128515b4e6a25676fb36cfe2a72450e4ecccc50",
+  "artifact_hash": "sha256:20680c8032daf2da078c67cb6d8d54480da935ee214e4c6e8cf06337d9461f42",
+  "atom_id": "BSD-A1a3-CASSELSTATEDIV-CORANK-GATE",
+  "authority": {
+    "candidate_generation_allowed": false,
+    "independent_review": false,
+    "mathematical_result_credit": false,
+    "source_audit_allowed_after_public_persistence": true
+  },
+  "cycle_id": "BSD-A1A3-CASSELSTATE-DIVISIBLE-CORANK-20260812-R16",
+  "document_hashes": {
+    "context": "sha256:4445f308448114792a28b89fed707fc8503f929cefb7899db7f1fca547c476b7",
+    "memory": "sha256:5704aaaa83423cf3897ac58c71ce804b7dbf31a4266c659bc81747cd0ef52584",
+    "shortcut": "sha256:3eed5090108b77e66230049a79fe7fa06e9e69a5ce56044a498c5dd292a159b1",
+    "trace_last_event": "sha256:9a4b4009de14544684ee28af6e870b25e54d38f693bf47e5bae8fe7c06fc7036",
+    "transformation_memory": "8b0e6d7de43261abf708f9a57130d39bf5f8ba993325e048135d46d044d17ed7"
+  },
+  "framework_drift_review": "29d3824..a6946c changes only publication/empirical research scaffolds, scoreboards and related tests; protected mathematical gate surfaces unchanged",
+  "framework_main_sha": "a6946c740b50413faf0eee218cc490dd6383e9ab",
+  "frozen_question": "Does the exact Cassels--Tate pairing theorem constrain corank_Zp D for the maximal divisible subgroup D of Sha(E/Q)[p^infinity], or does it become nondegenerate only after quotienting by D?",
+  "future_result_lesson_contract": {
+    "current_status": "NO_RESULT_NO_LESSON",
+    "required_seven_fields": [
+      "attempted_mathematical_implication",
+      "exact_mathematical_result_or_failure",
+      "supported_and_competing_mathematical_causes",
+      "scope",
+      "mathematical_falsifier",
+      "repair_or_next_discriminator",
+      "proof_or_source_evidence"
+    ],
+    "zero_math_credit": [
+      "Git/branch/PR state",
+      "CI/tests",
+      "schemas/hashes/chronology",
+      "telemetry/repository growth"
+    ]
+  },
+  "gate_reports": {
+    "context": "PASS",
+    "memory": "PASS",
+    "shortcut": "CANNOT_CHECK",
+    "trace_integrity": "PASS"
+  },
+  "predeclared_falsifier": "The proposed pairing repair fails if the maximal divisible subgroup D lies in the pairing radical and nondegeneracy is asserted only on Sha/D; finite-quotient parity or square-order conclusions then cannot imply corank D=0.",
+  "record_type": "BSD_R16_RESULT_BLIND_SOURCE_DISCRIMINATOR_FREEZE",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "source_audit_obligations": [
+    "exact curve/field/polarization hypotheses",
+    "pairing domain and codomain",
+    "left and right kernels",
+    "maximal divisible subgroup identification",
+    "induced quotient pairing",
+    "odd-p versus p=2 scope",
+    "which consequences require finite Sha"
+  ],
+  "target_access": {
+    "cassels_tate_primary_source_accessed": false,
+    "result_classified": false,
+    "result_observed": false
+  }
+}

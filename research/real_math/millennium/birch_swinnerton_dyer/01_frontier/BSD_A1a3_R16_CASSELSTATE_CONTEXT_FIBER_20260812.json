@@ -1,0 +1,86 @@
+{
+  "analogy_scan_notes": "Retained only as a proposal for the radical audit; it has zero theorem authority.",
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "atom_id": "BSD-A1a3-CASSELSTATEDIV-CORANK-GATE",
+  "cross_domain_analogies": [
+    {
+      "common_abstraction": [
+        "measurement has a kernel",
+        "nondegeneracy holds only after quotient by the kernel"
+      ],
+      "disanalogies": [
+        "engineering intuition supplies no arithmetic theorem",
+        "Cassels--Tate hypotheses may alter the exact radical"
+      ],
+      "proposed_principle": "audit the radical before using nondegeneracy to constrain a hidden component",
+      "provenance_note": "proposal-only structural analogy generated before target-source access",
+      "shared_constraints": [
+        "kernel elements are invisible",
+        "quotient behavior cannot identify kernel size"
+      ],
+      "source_kind": "engineering",
+      "source_situation": "a sensor is calibrated only after quotienting out a blind-mode subspace",
+      "source_to_target_mapping": [
+        "blind mode -> divisible radical D",
+        "calibrated quotient -> Sha/D",
+        "sensor response -> pairing"
+      ],
+      "validation_obligation": "source-check the exact kernel/radical theorem and derive only its literal implication for corank D"
+    }
+  ],
+  "equivalent_formulations": [
+    "R15 rank-two conclusion is equivalent to corank_Zp Sha(E/Q)[p^infinity]=0 after exact Selmer corank two",
+    "for a cofinitely generated p-primary group, corank zero is equivalent here to finiteness",
+    "the discriminator asks whether Cassels--Tate duality controls D itself or only Sha/D"
+  ],
+  "explicit_disanalogies": [
+    "nondegenerate alternating form on a finite quotient is not a nondegenerate form on the full divisible group",
+    "square order or even finite dimension is not zero corank",
+    "assuming Sha finite would assume the target discriminator rather than prove it",
+    "p=2 alternating/antisymmetric refinements cannot be imported from odd p without exact source scope"
+  ],
+  "first_candidate_at": null,
+  "frozen_at": "2026-08-12T11:31:00Z",
+  "method_transfers": [
+    {
+      "disanalogies": [
+        "R15 has no Cassels--Tate pairing statement",
+        "a quotient pairing need not constrain its radical"
+      ],
+      "method": "separate a global group into visible Mordell--Weil and hidden divisible Sha coordinates before applying structure theorems",
+      "repair_question": "On exactly which group is the source pairing nondegenerate, and is D retained, quotiented out, or assumed zero?",
+      "required_assumptions": [
+        "usual Kummer Selmer exact sequence",
+        "cofinite generation"
+      ],
+      "shared_structure": [
+        "additive corank decomposition",
+        "same E/Q and p",
+        "one isolated slack coordinate"
+      ],
+      "source_anchors": [
+        "git:b128515b4e6a25676fb36cfe2a72450e4ecccc50:research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a2_R15_KUMMER_SHA_EXACT_RANK_RESULT_20260812.json"
+      ],
+      "source_context": "R15 Kummer--Selmer corank decomposition"
+    }
+  ],
+  "near_solved_analogues": [
+    "R15 isolates D as the unique corank slack but supplies no pairing theorem"
+  ],
+  "object_context": "For one elliptic curve E/Q and prime p in the usual p-infinity Kummer Selmer structure, R15 gives corank Sel = rank E(Q) + corank Sha(E/Q)[p^infinity].  Test whether exact Cassels--Tate pairing structure constrains the maximal divisible Sha term strongly enough to remove this slack.",
+  "packet_hash": "sha256:4445f308448114792a28b89fed707fc8503f929cefb7899db7f1fca547c476b7",
+  "solved_analogues": [
+    "finite-dimensional symplectic vector spaces have even dimension under a nondegenerate alternating form"
+  ],
+  "source_anchors": [
+    "git:b128515b4e6a25676fb36cfe2a72450e4ecccc50:research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a2_R15_KUMMER_SHA_EXACT_RANK_RESULT_20260812.json",
+    "PRIMARY_SOURCE_PENDING_BY_DESIGN: exact Cassels--Tate theorem source is target-hidden until after this freeze"
+  ],
+  "structural_coordinates": [
+    "same elliptic curve E/Q and prime p throughout",
+    "D is the maximal divisible subgroup of Sha(E/Q)[p^infinity]",
+    "the target quantity is corank_Zp D, not the order of a finite quotient",
+    "pairing domain, codomain, radical, quotient and p=2 scope are load-bearing",
+    "finite/nondegenerate alternating pairing consequences must not be transferred to D unless D survives the pairing"
+  ]
+}
