@@ -1,0 +1,86 @@
+{
+  "artifact_hash": "sha256:b03a1090e7b25222dc2377e309b8600b6e2064d6fc74f702b1f3f984d68cff5e",
+  "assumptions": [
+    "full relation transpose, not one-endpoint movement",
+    "both query endpoints swap in the reduction",
+    "unchanged C041 decoder and equal split",
+    "square ambient domain so complement commutes with transpose",
+    "exact label equality is the collision QoI"
+  ],
+  "atom_id": "O9d12a2a1b-C048",
+  "attempted_implication": "literal transposition might repair C047 by putting suffix c, rather than prefix r, on the fresh row while preserving the NP-complete graph language",
+  "candidate_id": "C048-LITERAL-TRANSPOSE-TRANSFER-CONDITION-v1",
+  "candidate_kind": "MATHEMATICAL_TRANSFER_CONDITION_LEMMA_CANDIDATE",
+  "credit_boundary": {
+    "assurance_only_zero_credit": [
+      "Git/branch/PR chronology",
+      "CI/tests",
+      "schemas/hashes/serialization",
+      "runtime/evaluator wiring"
+    ],
+    "candidate_freeze_mathematical_result_credit": false,
+    "mathematical_content": [
+      "exact transpose identity",
+      "endpoint-swapped reduction condition",
+      "row-language characterization",
+      "collision iff overlap transfer condition",
+      "falsifiers and scope"
+    ]
+  },
+  "definitions": {
+    "canonical_current_prefix_language": "P_(k+1)={first k+1 bits of canonical C041 words of length 2(k+1)}",
+    "literal_transpose": "U^T={(b,a):(a,b) in U}; hence the cross point is (M+c,r)",
+    "original_cross_complement": "(r,M+c) belongs to U iff Dec(x) is UNSAT",
+    "parent_side": "M=2^k",
+    "parent_word": "x=bin_k(r)||bin_k(c)",
+    "transposed_graph": "G^T=[2M]^2\\U^T",
+    "unsat_suffix_language": "S_k={c: exists r with Dec(bin_k(r)||bin_k(c)) canonical and UNSAT}"
+  },
+  "falsifiers": [
+    "an ordered pair changes graph membership after both coordinates and the whole complement relation are transposed",
+    "the original cross point (r,M+c) transposes to anything other than (M+c,r)",
+    "a high row outside {M+c:c in S_k}",
+    "a collision without a witness in the stated overlap language or an overlap witness without a collision",
+    "the unchanged old reduction F->(r,M+c) is claimed to target G^T"
+  ],
+  "frozen_at": "2026-08-12T04:01:00Z",
+  "non_guarantees": [
+    "no claim that the overlap language is nonempty at any level",
+    "no target enumeration or cover evaluation",
+    "no cover/circuit lower bound, novelty, or P-versus-NP authority",
+    "same-context derivation is not independent review"
+  ],
+  "predicted_mathematical_outcome": "the transpose succeeds exactly on reduction faithfulness; collision feasibility reduces to the frozen suffix-tail overlap condition and is not inferred from transposition alone",
+  "proof_obligations": [
+    "RELATION_COMPLEMENT_TRANSPOSE_IDENTITY",
+    "BOTH_ENDPOINTS_AND_REDUCTION_MAP_SWAP",
+    "SUFFIX_ROW_PROJECTION_CHARACTERIZATION",
+    "EXACT_COLLISION_IFF_OVERLAP_LANGUAGE",
+    "COLLISION_AND_REDUCTION_ARE_INDEPENDENT_NECESSARY_CONDITIONS"
+  ],
+  "schema_version": "1.0.0",
+  "source_identity": {
+    "application_base_commit": "76b783531956249160e36639dd6326fd2f5911ee",
+    "framework_commit": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "pre_candidate_freeze_commit": "f765a0cb27d4602eb41bc4a38887696c6a954707",
+    "pre_candidate_gate": {
+      "git_blob": "c95d076e2dca04d1e5aa4b81c85c6b159edcfb69",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C048_PRE_CANDIDATE_GATE_RECEIPT_20260812.json",
+      "raw_sha256": "26a9370f781fc3c95a11b2eaa7cc99161e31e8636af92a05022f1130897a1e32"
+    }
+  },
+  "statement": {
+    "part_A_reduction_faithfulness": "For every ordered query (a,b), (a,b) in G iff (b,a) in G^T. Therefore the correctly swapped reduction F -> (M+c,r) preserves x=r||c and satisfies F in SAT iff (M+c,r) in G^T whenever the original C041 reduction satisfies F in SAT iff (r,M+c) in G.",
+    "part_B_row_projection": "The high-row projection contributed by the literal-transpose cross block is exactly {M+c:c in S_k}, whose (k+1)-bit words are {1||bin_k(c):c in S_k}.",
+    "part_C_collision_condition": "A literal-transpose high row is a current canonical prefix exactly when {1||bin_k(c):c in S_k} intersects P_(k+1); equivalently some canonical UNSAT parent word r||c has suffix c equal to the final k bits of a canonical current prefix beginning with 1.",
+    "part_D_repair_verdict_rule": "Reduction faithfulness and row-label collision are separate necessary conditions. Full literal transposition with the swapped reduction map proves the former only. A collision without endpoint-swapped language equivalence is a failed repair, not success; absence of overlap also fails the repair.",
+    "scope": "all k>=2 under the exact C041 square domain, total decoder, equal split, and full relation transpose"
+  },
+  "target_access": {
+    "decoder_imported_or_executed": false,
+    "evaluator_imported_or_executed": false,
+    "finite_collision_level_selected": false,
+    "later_target_enumerated": false,
+    "later_target_result_accessed": false
+  }
+}
