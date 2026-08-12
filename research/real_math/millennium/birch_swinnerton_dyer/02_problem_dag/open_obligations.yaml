@@ -59,11 +59,12 @@ nodes:
   - id: BSD-S001c1-KURIHARA-TAYLOR-COMPARISON
     parent: [BSD-S001c]
     statement: "determine whether the independently defined Kim-Pollack Kurihara order, or a source-equivalent Kato/Kolyvagin discrete invariant, can be compared to ord_{s=1}L(E,s) in arbitrary rank without assuming BSD/analytic-rank equality; otherwise isolate the smallest missing comparison edge"
-    state: STRICT_PRE_CANDIDATE_CONTEXT_FROZEN
-    result: "source audit separates exact discrete Selmer reconstruction from the unbound complex Taylor-order coordinate; no comparison candidate has yet been generated"
+    state: SOURCE_BOUND_PARITY_REFINED_MAGNITUDE_OPEN
+    result: "R14 composes Kim's exact Kurihara-order = classical p-infinity Selmer-corank theorem cell with Dokchitser-Dokchitser p-parity to obtain ord(Kurihara) congruent to ord_{s=1}L(E,s) mod 2 in that cell. Where the canonical R9 Zhang cell overlaps and analytic rank is exactly two, ord(Kurihara) is therefore even and at least two. No source-bound magnitude bound excludes 4,6,..., so exact complex/discrete order equality remains open."
     warnings:
-      - "Kim-Pollack corank Sel = ord(Kurihara) is an arithmetic equality, not the Clay analytic-rank equality"
+      - "Kim/Kim-Pollack corank Sel = ord(Kurihara) is an arithmetic equality, not the Clay analytic-rank equality"
+      - "the new R14 relation is only modulo 2; parity is a lossy quotient and cannot distinguish integer orders 2 and 4"
       - "Kurihara nonvanishing is weaker than exact order comparison"
       - "localized Iwasawa main-conjecture input must not be silently promoted to a complex analytic-rank theorem"
-      - "bounded source search does not establish nonexistence or novelty"
-    next: "machine-audit the strict packet, then run the bounded primary-source discrete-to-complex order comparison search before any candidate invention"
+      - "bounded source search does not establish nonexistence or literature novelty"
+    next: "search for a noncircular same-coordinate magnitude inequality/equality between Kurihara order and complex Taylor order; parity can force equality only after an independent bound reduces the possible discrepancy below two; otherwise rotate to a representation preserving magnitude"
