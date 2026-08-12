@@ -6,7 +6,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "research/real_math/millennium/yang_mills"
 PACKET = BASE / "10_case_study/YM-S1a2j_RAKL_V3_CASE_STUDY_METRICS_TASK_EPISODE_20260812_R21.json"
-TRACE = BASE / "09_trace/YM-S1a2j_RESEARCH_TRACE_20260812_R21.json"
+TRACE = BASE / "09_trace/YM-S1a2j_RESEARCH_TRACE_20260812_R21_CORRECTED.json"
+ORIGINAL_TRACE = BASE / "09_trace/YM-S1a2j_RESEARCH_TRACE_20260812_R21.json"
 CANDIDATE = BASE / "04_candidates/YM-S1a2j_C001_INFINITE_VOLUME_OS_ONE_STEP_TRANSFER_20260812_R21.md"
 FIBRE = BASE / "01_frontier/YM-S1a2j_PRE_ACTION_FIBRE_20260812_R21.json"
 
@@ -87,8 +88,11 @@ def test_r21_fibre_hash_correction_is_explicit_not_silently_rewritten():
     assert "MF-YM-S1a2j-R21-FIBRE-HASH-PLACEHOLDER" in metrics["new_ids"]["failure_ids"]
 
 
-def test_r21_trace_hash_chain_replays():
+def test_r21_trace_hash_chain_replays_from_append_only_correction():
     trace = _load(TRACE)
+    assert ORIGINAL_TRACE.exists()
+    assert trace["original_trace_preserved"] is True
+    assert trace["metrology_failure_id"] == "MF-YM-S1a2j-R21-TRACE-EVENT-HASH-CHAIN"
     prev = ""
     for event in trace["events"]:
         assert event["previous_event_hash"] == prev
@@ -105,11 +109,13 @@ def test_r21_trace_hash_chain_replays():
         assert event["event_hash"] == f"sha256:{digest}"
         prev = event["event_hash"]
     assert trace["trace_final_hash"] == prev
+    assert trace["trace_final_hash"] == _load(PACKET)["RAKL_CYCLE_METRICS"]["atom_fibre"]["trace_final_hash"]
 
 
 def test_r21_candidate_proves_only_fixed_cutoff_positive_transfer_composition():
     text = CANDIDATE.read_text()
-    assert "bounded nonnegative log-convex sequence" in text
+    assert "log-convex" in text
+    assert "uniformly bounded" in text
     assert "Adjacent link RP makes this nonnegative" in text
     assert "same-theory positive self-adjoint one-step transfer contraction" in text
     assert "does **not** prove strict positivity/injectivity" in text
