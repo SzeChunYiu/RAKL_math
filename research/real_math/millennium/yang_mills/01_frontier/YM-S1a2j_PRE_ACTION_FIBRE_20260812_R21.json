@@ -1,0 +1,248 @@
+{
+  "schema_version": "rakl-math-fibre-shadow-v1",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "task_id": "YM-root-5",
+  "atom_id": "YM-S1a2j",
+  "issue": 335,
+  "signature": "YM-S1a2j-WILSON-RELEVANT-BLOCK-CONORM-INVERSE-CONTRACTION-ADAPTED-NORM",
+  "root_contract": "For every compact simple gauge group, construct a non-trivial 4D quantum Yang-Mills theory satisfying Clay-strength axiomatic requirements and prove a finite positive mass gap above the vacuum, with required continuum/short-distance behavior.",
+  "actual_fibre": {
+    "object": "Wilson 2026 Sections 30/38 relevant block inside the nonautonomous RG stable-graph/tuning construction",
+    "qoi": "whether the source supplies a quantitative backward/inverse relevant contraction in the actual graph norm, not merely relevant eigenvalue expansion",
+    "regime": "weak-coupling UV; nonautonomous RG; shrinking O(g^2) domain; gauge-fixed/GZ source coordinate",
+    "measurement": "source-bound map/norm definitions, relevant-subspace estimates, inverse/conorm constants, perturbation margins, graph metric and cross-derivative bounds",
+    "assumptions": [
+      "same Wilson manuscript/version and same RG coordinate/norm across compared statements",
+      "no import of generic stable-manifold theorem without full dichotomy/norm/domain mapping",
+      "gauge-fixed/GZ RG closure is not substituted for gauge-invariant OS/physical spectral closure",
+      "volume/lattice-spacing/regulator uniformity must be explicit when claimed"
+    ],
+    "equivalent_formulations": [
+      "uniform conorm m(A_k)>1+eta",
+      "uniform inverse bound ||A_k^{-1}||<=q<1",
+      "uniform unstable exponential dichotomy in an adapted norm with controlled norm-equivalence constants",
+      "backward relevant step in a Lyapunov-Perron/graph transform whose contraction factor is explicit"
+    ],
+    "solved_near_solved_analogues": [
+      {
+        "id": "Barreira-Silva-Valls-2008",
+        "context": "nonautonomous stable manifolds for sequences/flows in Banach spaces with nonuniform exponential dichotomy",
+        "method": "stable graph/Lyapunov-Perron construction using dichotomy estimates and sufficiently small nonlinear perturbations",
+        "enabling_assumptions": [
+          "stable/unstable splitting",
+          "growth/decay estimates",
+          "invertibility along unstable direction or equivalent backward evolution",
+          "small perturbation"
+        ],
+        "shared_structure": [
+          "nonautonomous scale index",
+          "stable/unstable directions",
+          "nonlinear perturbation of linear evolution"
+        ],
+        "disanalogies": [
+          "generic Banach dynamics, not the Wilson gauge RG map",
+          "does not supply Wilson's scale-dependent O(g^2) domain or regulator-uniform norm constants",
+          "source theorem authority does not bind the target block"
+        ],
+        "minimum_transfer_question": "does Wilson's actual relevant block satisfy a source-bound uniform inverse/dichotomy estimate in the norm used by its graph transform?"
+      },
+      {
+        "id": "Brydges-Slade-RG-IV-V-2014",
+        "context": "rigorous RG stability for weakly self-avoiding walk / phi^4-type models",
+        "method": "separate perturbative/relevant coordinates from a nonperturbative contractive coordinate with scale-dependent norms and precise remainder estimates",
+        "enabling_assumptions": [
+          "model-specific RG map",
+          "finite-range covariance decomposition",
+          "proved contraction estimates",
+          "explicit domain/norm control"
+        ],
+        "shared_structure": [
+          "scale-dependent RG",
+          "relevant/irrelevant split",
+          "critical/stable trajectory selection"
+        ],
+        "disanalogies": [
+          "different field theory/model and coordinate system",
+          "no same-theory GZ/Yang-Mills transfer",
+          "cannot supply Wilson's relevant inverse constant or OS gluing"
+        ],
+        "minimum_transfer_question": "which target-specific estimates would reproduce the relevant backward control without importing model-specific constants?"
+      }
+    ],
+    "cross_domain_scan": [
+      {
+        "domain": "control/boundary-value shooting",
+        "status": "RETAINED_PROPOSAL_ONLY",
+        "common_abstraction": "a forward-unstable coordinate can be controlled by imposing a boundary condition and solving that coordinate backward, where the inverse evolution is contractive",
+        "mapping": {
+          "unstable plant mode": "relevant RG coordinate",
+          "backward boundary-value solve": "relevant inverse/graph transform",
+          "stable plant modes": "irrelevant RG directions"
+        },
+        "shared_constraints": [
+          "forward expansion must not be mislabelled as contraction",
+          "inverse/backward operator must exist and be quantitatively stable"
+        ],
+        "disanalogies": [
+          "finite-dimensional control systems do not carry gauge, regulator, locality or OS constraints"
+        ],
+        "validation_obligation": "source-bind an actual inverse relevant evolution with q<1 in the Wilson graph norm"
+      },
+      {
+        "domain": "ordinary-human/game analogies",
+        "status": "NO_SAFE_BRIDGE_FOUND",
+        "reason": "candidate metaphors did not preserve the quantitative inverse-norm and nonautonomous-domain structure; rejected as surface resemblance"
+      }
+    ],
+    "structural_coordinates": {
+      "symmetry": "gauge/GZ source coordinate; physical gauge-invariant OS interface downstream",
+      "locality": "multiscale RG/local effective interaction; exact locality claims source-dependent",
+      "spectrum": "relevant linear block has asserted expansion >1 in prior source audit; inverse contraction is the active coordinate",
+      "composition": "forward RG step plus backward/tuned relevant coordinate plus irrelevant contraction",
+      "dimensionality": "finite-dimensional relevant/marginal block coupled to Banach irrelevant sector",
+      "monotonicity": "running g decreases; graph radius O(g^2) shrinks",
+      "uniformity": "must track k, regulator, volume and lattice-spacing scopes separately"
+    }
+  },
+  "predeclared_discriminator": {
+    "must_bind": [
+      "exact relevant subspace and block A_k (or source-equivalent notation) in Sections 30/38",
+      "norm/metric in which graph contraction is asserted",
+      "invertibility plus uniform conorm m(A_k)>1+eta or ||A_k^{-1}||<=q<1",
+      "if an adapted norm is used, uniform equivalence constants across k/regulators",
+      "perturbation margin preserving inverse contraction",
+      "entry of q into full graph-transform contraction with cross-derivative terms"
+    ],
+    "falsifier": "A source-bound theorem/proof that supplies the actual relevant block, a uniform inverse/conorm margin in the graph norm (or a uniformly equivalent adapted norm), and a complete graph contraction inequality closes this atom. A statement only about eigenvalue moduli >1 does not.",
+    "allowed_outcomes": [
+      "SUCCESS",
+      "PARTIAL_SUCCESS",
+      "FAILURE",
+      "BLOCKED",
+      "UNKNOWN"
+    ]
+  },
+  "methods_operators": [
+    "primary-source Sections 30/38 theorem/equation extraction",
+    "operator conorm/inverse-norm type check",
+    "nonnormal/Jordan counterexample-first falsification",
+    "exponential-dichotomy/stable-manifold analogue DifferenceWitness",
+    "same-theory gluing audit",
+    "current RAKL v3 fibre/memory/semantic-shortcut/saturation telemetry"
+  ],
+  "memory_snapshot": {
+    "selected": [
+      {
+        "id": "RAKL_math#5",
+        "why": "exact root contract and closure gate"
+      },
+      {
+        "id": "RAKL_math#301",
+        "why": "R19 exposed full-forward contraction versus relevant expansion"
+      },
+      {
+        "id": "RAKL_math#321/PR#328",
+        "why": "R20 sharpened residual to next-radius invariance, base inverse, and relevant backward contraction"
+      },
+      {
+        "id": "RAKL_VERSION@8db3343",
+        "why": "current method/version authority boundary"
+      },
+      {
+        "id": "RAKL_method_specs@8db3343",
+        "why": "canonical process surface names"
+      },
+      {
+        "id": "RAKL_v3_experience_substrate@8db3343",
+        "why": "TaskEpisode/fibre/gluing/saturation semantics"
+      },
+      {
+        "id": "RAKL_pre_action_receipt@8db3343",
+        "why": "prospective consequential-action binding"
+      }
+    ],
+    "rejected": [
+      {
+        "id": "RAKL_math#253",
+        "why": "fixed-cutoff SZZ OS spectral lane is downstream/orthogonal to the current relevant-block inverse discriminator"
+      },
+      {
+        "id": "RAKL_math#276",
+        "why": "MRS fixed-IR continuum lane does not test this Wilson stable-graph block"
+      },
+      {
+        "id": "RAKL_math#295",
+        "why": "broader R18 UVR3 audit is superseded for routing by the more specific R19/R20 residual, though retained as negative-history provenance"
+      }
+    ],
+    "missed": "CANNOT_MEASURE — no governed exhaustive cross-problem memory-coverage receipt is available in this run"
+  },
+  "shortcut_review": {
+    "obstruction_fingerprint": {
+      "roles": [
+        "forward expanding relevant block",
+        "backward/tuned graph coordinate",
+        "stable/irrelevant block",
+        "running base coupling"
+      ],
+      "relations": [
+        "forward expansion conflicts with full-forward contraction",
+        "graph transform requires inverse/backward control",
+        "shrinking domain couples norm margin to g evolution"
+      ],
+      "constraints": [
+        "same norm or uniformly equivalent adapted norm",
+        "same target RG map",
+        "preserve regulator/locality/gauge scope",
+        "no authority transfer from analogue"
+      ],
+      "failure_mechanisms": [
+        "eigenvalue expansion mistaken for inverse-norm contraction",
+        "nonnormality/conditioning destroys fixed-norm inverse margin",
+        "missing backward evolution",
+        "cross-derivatives erase nominal contraction"
+      ],
+      "desired_transition": "explicit q<1 relevant inverse factor integrated into a valid graph contraction",
+      "forbidden_losses": [
+        "changing theory/regulator without witness",
+        "dropping shrinking-domain requirement",
+        "treating generic theorem as target proof"
+      ]
+    },
+    "SEARCH": {
+      "status": "NO_STRICT_VIABLE_MATCH_PRE_ACTION",
+      "reason": "R19/R20 are proposal/shadow failure experiences, not a verified target-closing transformation"
+    },
+    "JUMP": {
+      "status": "PROPOSAL_ONLY_ANALOGUE",
+      "candidate": "nonautonomous exponential-dichotomy stable-manifold theory",
+      "blocker": "target dichotomy/inverse/norm hypotheses not yet source-bound"
+    },
+    "GLUE": {
+      "status": "NO_VIABLE_COMPLETE_COMPOSITION",
+      "reason": "irrelevant contraction plus asserted relevant spectral expansion do not compose to graph contraction without inverse and cross-derivative witnesses"
+    },
+    "LIFT": {
+      "status": "FORBIDDEN",
+      "reason": "SEARCH/JUMP/GLUE not boundedly exhausted under a cross-problem coverage receipt"
+    },
+    "selected_route": "JUMP_FOR_SEARCH_GUIDANCE_ONLY_THEN_PRIMARY_SOURCE_TYPE_CHECK",
+    "authority": "PROPOSAL_SHADOW_ONLY"
+  },
+  "expert_context_review": {
+    "domain_theory": "First identify the exact A_k/relevant subspace and graph norm before discussing stable-manifold transfer.",
+    "analogy_transfer": "Nonautonomous dichotomy theory is structurally close but requires explicit unstable inverse estimates and smallness hypotheses absent from the target packet so far.",
+    "adversarial_falsification": "Use a nonnormal 2x2 matrix with eigenvalues >1 but large inverse norm to block spectral-radius-to-contraction inference.",
+    "formal_methods": "The statement must bind operator, subspace, norm, k/regulator quantifiers and the contraction constant; eigenvalue language alone is under-specified.",
+    "os_continuum_gluing": "Even local closure gives zero physical mass-gap authority until same-theory OS and continuum transport are separately proved.",
+    "novelty_value": "The matrix-control fact is standard; value, if any, is source-scoped diagnosis/repair localization rather than new mathematics.",
+    "strongest_objection": "The source may use an adapted graph norm implicitly or a finite-dimensional spectral basis that restores q<1; the audit must search for that before concluding a gap.",
+    "recommendation": "Search exact Sections 30/38 definitions for a conorm/inverse/adapted-norm witness; only then consider a conditional repair lemma."
+  },
+  "framework_sha": "8db3343dfb764c9a139f9ba76f6f44c76eaf86de",
+  "application_base": "02c5fb7764116cf075d8dd5efd7b6fe835275ab9",
+  "frozen_at_utc": "2026-08-12T06:58:48Z",
+  "atom_hash": "fe0abc7e5f0f50749bacb94d9cc62b25278393016f160b4640181cc0ba31b8b9",
+  "context_hash": "e97a26324ef0540da2c030915feb136910544931cbea7b918ee878b4496da6fd",
+  "fibre_hash": "426b88321cdab9b446c7da35bd0c2c0619e66e5ad7dd4c2df5defe0637cf479b"
+}
