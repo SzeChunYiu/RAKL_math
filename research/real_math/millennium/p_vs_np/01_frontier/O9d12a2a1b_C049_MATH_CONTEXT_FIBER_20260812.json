@@ -1,0 +1,96 @@
+{
+  "analogy_scan_notes": "One proposal-only coarse-location versus fine-interface analogy survives explicit mapping and disanalogy review.",
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "atom_id": "O9d12a2a1b-C049",
+  "cross_domain_analogies": [
+    {
+      "common_abstraction": [
+        "suffix/prefix overlap",
+        "exact symbol synchronization",
+        "semantic acceptance after syntactic alignment"
+      ],
+      "disanalogies": [
+        "ordinary sequence assembly has no UNSAT predicate",
+        "the analogy supplies no theorem authority",
+        "variable-length gamma parsing must be proved exactly"
+      ],
+      "proposed_principle": "solve length and symbol synchronization before invoking the semantic UNSAT obligation",
+      "provenance_note": "proposal-only sequence-assembly analogy; no mathematical authority",
+      "shared_constraints": [
+        "overlap is position-sensitive",
+        "one mismatch refutes a proposed witness",
+        "the target object has an additional acceptance condition"
+      ],
+      "source_kind": "engineering / addressing",
+      "source_situation": "sequence assembly joins a suffix to a prefix only when every symbol in the overlap agrees",
+      "source_to_target_mapping": [
+        "source suffix -> c from a canonical UNSAT parent word",
+        "target prefix -> tail of a canonical current prefix after its leading 1",
+        "valid assembly -> exact label in H_k intersection P_(k+1)"
+      ],
+      "validation_obligation": "freeze an exact pair of code-grammar derivations and an UNSAT proof, or an exhaustive symbolic obstruction, before declaring the overlap nonempty or empty"
+    }
+  ],
+  "equivalent_formulations": [
+    "existence of canonical words x=r||c and y with x UNSAT and prefix_(k+1)(y)=1||c",
+    "nonemptiness of the synchronized suffix/prefix code-language product with an UNSAT side condition",
+    "impossibility via incompatible length/header/gamma/payload constraints"
+  ],
+  "explicit_disanalogies": [
+    "C048 proved an iff condition, not overlap existence",
+    "syntax synchronization does not prove the parent formula UNSAT",
+    "the all-zero short contradiction is not canonical and cannot witness S_k as defined",
+    "relabelled encodings and changed splits are outside this atom",
+    "an overlap result is not a cover theorem, circuit lower bound, or P-versus-NP result",
+    "computation is not proof and assurance is not mathematics"
+  ],
+  "first_candidate_at": null,
+  "frozen_at": "2026-08-12T04:19:00Z",
+  "method_transfers": [
+    {
+      "disanalogies": [
+        "canonical syntax includes variable-length gamma fields and semantic UNSAT, so a finite-state prefix/suffix analogy alone is insufficient",
+        "a syntactic overlap witness is invalid unless the parent decoded formula is actually UNSAT",
+        "overlap nonemptiness does not determine cover growth or lower bounds"
+      ],
+      "method": "compile both exact label languages into a synchronized constraint system, discharge syntax and length constraints first, and test UNSAT semantics only for a frozen surviving construction",
+      "repair_question": "Does there exist k and a canonical UNSAT word r||c such that 1||c is the prefix of a canonical word of length 2(k+1), or can the exact code grammar rule this out?",
+      "required_assumptions": [
+        "the C041 decoder and equal prefix/suffix split remain unchanged",
+        "the swapped reduction established in C048 remains fixed",
+        "the decoder grammar, MAGIC header, padding rule, and equal split remain unchanged"
+      ],
+      "shared_structure": [
+        "relations are assembled from inherited and fresh blocks",
+        "H_k contains labels 1||c from suffixes of canonical UNSAT parent words",
+        "P_(k+1) contains prefixes of canonical words two bits longer",
+        "the desired event is exact equality of a suffix-derived label and a prefix-derived label"
+      ],
+      "source_anchors": [
+        "git:9b2282b72dbca18ae1c7da92e972efe4de3a24a4:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+        "git:9b2282b72dbca18ae1c7da92e972efe4de3a24a4:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C048_LITERAL_TRANSPOSE_PROOF_CHECK_RESULT_20260812.json@blob:04e808d56f433b143dc816117328f623e41807ee"
+      ],
+      "source_context": "exact overlap of a semantic suffix language with a canonical prefix language"
+    }
+  ],
+  "near_solved_analogues": [
+    "word borders and suffix-prefix synchronization in variable-length prefix codes",
+    "product-automaton language intersection with a non-regular semantic side condition"
+  ],
+  "object_context": "Target-blind overlap atom: characterize, construct, or prove impossible H_k intersection P_(k+1), where H_k is the literal-transpose UNSAT suffix-row language and P_(k+1) is the current canonical-prefix language, while retaining the C048 endpoint-swapped reduction.",
+  "packet_hash": "sha256:0f8536262ce1be248443147a8c5aa843e5ebbffda620f469878f3141a523576a",
+  "solved_analogues": [
+    "C048 exact equivalence between literal-transpose row collision and H_k intersection P_(k+1)"
+  ],
+  "source_anchors": [
+    "git:9b2282b72dbca18ae1c7da92e972efe4de3a24a4:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+    "git:9b2282b72dbca18ae1c7da92e972efe4de3a24a4:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C048_LITERAL_TRANSPOSE_PROOF_CHECK_RESULT_20260812.json@blob:04e808d56f433b143dc816117328f623e41807ee"
+  ],
+  "structural_coordinates": [
+    "H_k={1||c: exists r, Dec(r||c) canonical UNSAT}",
+    "P_(k+1)={length-(k+1) prefixes of canonical words of length 2(k+1)}",
+    "exact overlap H_k intersection P_(k+1)",
+    "C041 MAGIC, gamma fields, payload width, optional zero padding, and equal split",
+    "C048 swapped reduction retained unchanged"
+  ]
+}
