@@ -1,0 +1,40 @@
+{
+  "record_type": "RAKL_V3_RESEARCH_MEMORY_REVIEW_SHADOW",
+  "cycle_id": "H4d1c-C009-RELATIVE-HILBERT-SMOOTHNESS-CERTIFICATE-20260812",
+  "atom_id": "H4d1c-C009",
+  "context_hash": "sha256:6e169c7d5212556fb32a02b9b6b46d38b5c150d9a1cc4de31d764690d1286e7e",
+  "success_tool_inventory": {"queried":true,"retrieved_count":0,"selected_ids":[],"status":"NO_CANONICAL_RESEARCH_TOOL_MATCH_REQUIRED"},
+  "failure_experience_lattice": {
+    "queried": true,
+    "retrieved_ids": [
+      "MATH-HODGE-C006-RAMIFICATION-POINTWISE-DIFFERENTIAL-NONIMPLICATION",
+      "MATH-HODGE-C007-SINGULAR-TANGENT-SURJECTIVITY-NONIMPLICATION",
+      "H4d1c-C001-RATIONAL-COEFFICIENT-CANCELLATION",
+      "H4d1c-C002-FIXED-COMPONENT-FIBRE-PRODUCT-NONEXPANSION",
+      "PR340/H4d1c-C008-FIXED-WITNESS-HILBERT-PROPER-SOURCE",
+      "XM023-LINEARIZATION-CONSUMER-TYPING"
+    ],
+    "selected_ids": [
+      "MATH-HODGE-C006-RAMIFICATION-POINTWISE-DIFFERENTIAL-NONIMPLICATION",
+      "MATH-HODGE-C007-SINGULAR-TANGENT-SURJECTIVITY-NONIMPLICATION",
+      "H4d1c-C001-RATIONAL-COEFFICIENT-CANCELLATION",
+      "PR340/H4d1c-C008-FIXED-WITNESS-HILBERT-PROPER-SOURCE"
+    ],
+    "rejected": [
+      {"id":"H4d1c-C002-FIXED-COMPONENT-FIBRE-PRODUCT-NONEXPANSION","reason":"Useful historical warning but not decisive for the current sufficient smoothness consumer; no claim that product creates new base directions is made."},
+      {"id":"XM023-LINEARIZATION-CONSUMER-TYPING","reason":"Cross-Millennium consumer is derivative/metric-contraction typing rather than relative embedded deformation. DifferenceWitness: map/norm derivative constraints do not supply Hilbert formal-smoothness or exact-cycle lifting authority."}
+    ],
+    "missed_count": "CANNOT_MEASURE: no complete governed cross-problem semantic coverage receipt was materialized for this cycle."
+  },
+  "obstruction_transformation_review": {
+    "route": "SEARCH",
+    "same_domain_selected": "C007 proper+smooth-at-one-point -> full image under irreducible target",
+    "transformation": "replace unsafe tangent proxy by an actual relative-smoothness producer; use stability under finite fibre products/base change",
+    "SEARCH": "VIABLE",
+    "JUMP": "NOT_NEEDED",
+    "GLUE": "NOT_NEEDED",
+    "LIFT": "NOT_ALLOWED_NOT_EXHAUSTED",
+    "target_validation": ["relative, not absolute, smoothness","properness separately bound","exact signed-Q class separately bound","irreducible marked target component"]
+  },
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}
