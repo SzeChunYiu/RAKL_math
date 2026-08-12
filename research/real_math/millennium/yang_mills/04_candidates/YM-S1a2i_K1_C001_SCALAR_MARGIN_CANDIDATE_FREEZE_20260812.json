@@ -1,0 +1,128 @@
+{
+  "allowed_result_branches": [
+    "CONDITIONAL_UNIFORM_SCALAR_SLACK_PROVED",
+    "SOURCE_UNIFORMITY_OR_NORM_ASSUMPTIONS_INSUFFICIENT",
+    "SCALAR_EXISTENCE_OR_COMPOSITION_REFUTED",
+    "CANNOT_CHECK"
+  ],
+  "artifact_hash": "sha256:702fa0ed51394e882d936ac046a162d8dcbcf89423efe4085d435a1e1f38e28d",
+  "atom_id": "YM-S1a2i-K1",
+  "authority": {
+    "mathematical_proposal": true,
+    "mathematical_result_credit": false,
+    "proof_authority": false,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "candidate_id": "YM-S1a2i-K1-C001-SYMBOLIC-NEXT-RADIUS-MARGIN",
+  "candidate_identity": {
+    "candidate_id": "YM-S1a2i-K1-C001-SYMBOLIC-NEXT-RADIUS-MARGIN",
+    "canonical_core_sha256": "sha256:5ea78a8c0440c99aea881020a030677be6fba1ea5b8cd69e3a6e6f26bab5d48f",
+    "identity_scope": "FULL_CANDIDATE_CORE_BEFORE_IDENTITY_AND_ARTIFACT_HASH"
+  },
+  "candidate_kind": "SYMBOLIC_SOURCE_SCOPED_K_NEXT_RADIUS_IMPLICATION",
+  "candidate_statement": {
+    "conditional_implication": "under the frozen source hypotheses and scalar inequalities, ||K_{k+1}||_{k+1} <= c_K g_{k+1}^2",
+    "derivation_shape_to_check_later": [
+      "g_{k+1} >= g_k L(g_k)",
+      "c_K g_{k+1}^2 >= c_K g_k^2 L(g_k)^2 when L(g_k)>=0",
+      "rho c_K g_k^2+C_K g_k^4 <= c_K g_k^2 L(g_k)^2 when M(g_k)>=0"
+    ],
+    "existence_claim": "there exists epsilon>0 such that L(g)>=0 and M(g)>=0 for every 0<g<=epsilon",
+    "lower_base_factor": "L(g)=1-b_0 g^2-C_beta g^4",
+    "scalar_margin": "M(g)=L(g)^2-rho-(C_K/c_K)g^2"
+  },
+  "explicit_exclusions": [
+    "NO_NUMERICAL_OR_SYMBOLIC_CONSTANT_VALUES_INVENTED",
+    "NO_EXPLICIT_EPSILON_OR_THRESHOLD",
+    "NO_SOURCE_CONSTANT_EVALUATION",
+    "NO_FALSIFIER_EXECUTION",
+    "NO_LAMBDA_OR_BASE_INJECTIVITY_CLAIM",
+    "NO_FULL_GRAPH_TRANSFORM_CLAIM",
+    "NO_CONTINUUM_OR_MASS_GAP_CLAIM",
+    "NO_NOVELTY_OR_INDEPENDENT_REVIEW_CLAIM"
+  ],
+  "falsifiers": {
+    "base_lower_bound": "an admissible remainder violates g_{k+1}>=g_k L(g_k)",
+    "composition": "the frozen inequalities fail to imply the exact next-radius bound for one admissible symbolic instance",
+    "scalar_existence": "the frozen sign/finite-constant assumptions do not imply any common positive epsilon with L>=0 and M>=0",
+    "scope": "any step requires lambda control, base injectivity, a full graph transform, OS reconstruction, continuum transport, or mass-gap input",
+    "source_scope": "one required constant is not source-bound uniformly in k, or the norm changes without a proved bridge"
+  },
+  "frozen_at": "2026-08-12T10:59:00Z",
+  "future_result_lesson_contract": {
+    "current_status": "NO_RESULT_NO_LESSON",
+    "operational_metadata_zero_math_credit": [
+      "Git/branch/PR state",
+      "CI/tests",
+      "schemas/hashes/chronology",
+      "telemetry/repository growth"
+    ],
+    "required_after_material_result": [
+      "attempted_mathematical_implication",
+      "exact_mathematical_result_or_failure",
+      "supported_and_competing_mathematical_causes",
+      "scope",
+      "mathematical_falsifier",
+      "repair_or_next_discriminator",
+      "proof_or_source_evidence"
+    ]
+  },
+  "proof_obligations": [
+    {
+      "id": "O1-SOURCE-UNIFORMITY",
+      "obligation": "bind exactly rho,c_K,C_K,b_0,C_beta and the same K norm uniformly in k from the acquired source",
+      "required_source_constants": [
+        "rho",
+        "c_K",
+        "C_K",
+        "b_0",
+        "C_beta"
+      ],
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O2-BASE-LOWER-BOUND",
+      "obligation": "derive g_{k+1}>=g_k L(g_k) from the exact signed remainder bound without reversing an inequality",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O3-SCALAR-EXISTENCE",
+      "obligation": "prove or refute existence of one epsilon satisfying L>=0 and M>=0; do not choose epsilon after target evaluation",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O4-NORM-AND-SCALE-SCOPE",
+      "obligation": "verify the one-step norm and every constant use exactly the source scale indices and graph-ball scope",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O5-NEXT-RADIUS-COMPOSITION",
+      "obligation": "compose O1-O4 to the smaller c_K g_{k+1}^2 radius only",
+      "status": "FROZEN_UNEVALUATED"
+    }
+  ],
+  "quantifier_order": "FOR_ALL source-bound constants satisfying the displayed signs and k-uniformity; EXISTS epsilon>0; FOR_ALL admitted k; FOR_ALL 0<g_k<=epsilon; FOR_ALL K_k in the frozen graph ball",
+  "schema_version": "1.0.0",
+  "source_bound_hypotheses_to_verify_later": [
+    "for every admitted scale k, ||K_k||_k <= c_K g_k^2",
+    "for every admitted scale k, ||K_{k+1}||_{k+1} <= rho ||K_k||_k + C_K g_k^4",
+    "g_{k+1}=g_k-b_0 g_k^3+r_k with |r_k|<=C_beta g_k^5",
+    "rho,c_K,C_K,b_0,C_beta are one finite constant family uniform in k",
+    "the K norms and one-step estimate are exactly those of the source-scoped graph ball"
+  ],
+  "symbolic_constants": {
+    "C_K": "real coefficient C_K>=0 for the source O(g_k^4) K forcing bound",
+    "C_beta": "real coefficient C_beta>=0 for |r_k|<=C_beta g_k^5",
+    "b_0": "real base-flow cubic coefficient with b_0>0",
+    "c_K": "real graph-radius coefficient with c_K>0",
+    "epsilon": "existential positive small-coupling radius; no value or formula is frozen",
+    "rho": "real source contraction factor with 0<rho<1, required uniform in k"
+  },
+  "target_access": {
+    "falsifier_imported_or_executed": false,
+    "result_accessed": false,
+    "scalar_existence_checked": false,
+    "source_uniformity_checked": false,
+    "threshold_derived_or_tested": false
+  }
+}

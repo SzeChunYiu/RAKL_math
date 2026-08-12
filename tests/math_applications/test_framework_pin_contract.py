@@ -13,7 +13,7 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "62e97d545f93ff604b2db47a7c8d41a59a1c5286"
+EXPECTED_FRAMEWORK_COMMIT = "29d382463eb353696f8ac224dd885bfb2148f55d"
 HISTORICAL_F224_FRAMEWORK_COMMIT = "f224d91d9fbd2844a89921ca4a30b77a7954ecd2"
 HISTORICAL_4EE_FRAMEWORK_COMMIT = "4ee5e9afe77870c684b798e0ed4c9fcee62a4365"
 HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
@@ -78,8 +78,9 @@ def test_machine_readable_framework_pin_is_valid_and_loaded_exactly() -> None:
     ).stdout
     assert framework_status == ""
     assert pin["authority"] == (
-        "Dependency synchronization to exact clean RAKL origin/main 62e97d545f93ff604b2db47a7c8d41a59a1c5286 observed 2026-08-12; "
-        "includes fail-closed quantifier CONDITIONAL and durable pre-scratch persistence acknowledgement fixes from 2834760 plus documentation-only successor 62e97d5; "
+        "Dependency synchronization to exact clean RAKL origin/main 29d382463eb353696f8ac224dd885bfb2148f55d observed 2026-08-12; "
+        "mathematical discovery/candidate-freeze gate code is unchanged from 62e97d545f93ff604b2db47a7c8d41a59a1c5286; structural_transport_v2 at 496edc5ead136980287ac2e72efb486691945366 is method-adjacent optional and unwired to the YM gates; later changes are publication or empirical-research artifacts; "
+        "direct successor e3ffc2ce..29d38246 changes only six Paper2 capability interface-challenger research/test files and no YM mathematical gate; "
         "historical artifacts retain recorded authority and chronology; "
         "no proof, research, review-independence, method-evolution, or mathematical-saturation authority"
     )
