@@ -1,0 +1,59 @@
+{
+  "record_type": "MATH_RESEARCH_TRACE_DELTA",
+  "trace_id": "BSD-A1a2-R14-KURIHARA-EXACT-RANK-TRACE",
+  "authority": "PROPOSAL_SHADOW",
+  "previous_merged_trace_pointer": "research/real_math/millennium/birch_swinnerton_dyer/09_trace/BSD_A1a1_R12_RESULT_TRACE_DELTA_20260812.json",
+  "pending_nonauthority_note": "R13 PR #322 is pending/nonmerged and is not used as the authoritative trace predecessor.",
+  "entries": [
+    {
+      "event_id": "BSD-A1A2-R14-E01",
+      "event_type": "FIBRE_FROZEN",
+      "atom_id": "BSD-A1a2-EXACT-SELMER-DIMENSION-KURIHARA-ORDER-BRIDGE",
+      "action_summary": "freeze exact rank-two -> discrete-order discriminator and selected/rejected prior experience",
+      "decision_rationale": "current v3 context-first gate; R11 warned that complex/discrete order mismatch is not yet a theorem",
+      "previous_event_hash": "sha256:249649b26096a20fae9f9b478a0409903d57ab09c0b30e5ea206a8ea6a7c85d3",
+      "outputs": ["R14_FIBRE_SHA256_81ac2b39..."],
+      "residuals": ["EXACT_SELMER_DIMENSION_TWO_UPPER_BOUND_OPEN"],
+      "artifact_hash": "sha256:934098ce1f8933e403f300748bc3368e2c7af68e368de85a2fa1c6900641062d"
+    },
+    {
+      "event_id": "BSD-A1A2-R14-E02",
+      "event_type": "SOURCE_AUDITED",
+      "atom_id": "BSD-A1a2-EXACT-SELMER-DIMENSION-KURIHARA-ORDER-BRIDGE",
+      "action_summary": "bind Kim-Pollack Theorem 1.1/1.2, Corollaries 1.5/1.10/1.11, Conjecture 1.6",
+      "decision_rationale": "same-domain primary source gives the strongest direct exact-rank theorem cell found in the bounded audit",
+      "previous_event_hash": "sha256:934098ce1f8933e403f300748bc3368e2c7af68e368de85a2fa1c6900641062d",
+      "outputs": ["KP-T1.1-DISCRETE-ORDER-TO-EXACT-SELMER", "KP-CONJECTURE-1.6-BBK-ORDER-COMPARISON"],
+      "residuals": ["COMPLEX_TO_KURIHARA_ORDER_CALIBRATION_UNPROVED"],
+      "artifact_hash": "sha256:7282879cf6d9619e2a08c519ff2bc94c42c97099c867b013e7fcb57b546b1cd8"
+    },
+    {
+      "event_id": "BSD-A1A2-R14-E03",
+      "event_type": "FALSIFIER_RUN",
+      "atom_id": "BSD-A1a2-EXACT-SELMER-DIMENSION-KURIHARA-ORDER-BRIDGE",
+      "action_summary": "reject parity-as-equality, low-rank<=1 transfer, numerical-witness generalization and analogy-as-theorem",
+      "decision_rationale": "counterexample-first theorem-direction checks separate valid local theorem from root-facing glue",
+      "previous_event_hash": "sha256:7282879cf6d9619e2a08c519ff2bc94c42c97099c867b013e7fcb57b546b1cd8",
+      "outputs": ["STRICT_SUCCESS_FAILS", "SCOPED_ROUTE_DECOMPOSITION_PASSES"],
+      "residuals": ["COMPLEX_ANALYTIC_ORDER_TWO_TO_KURIHARA_ORDER_TWO_IS_CONJECTURAL"],
+      "artifact_hash": "sha256:d8f1ee9cb65d1ca4646a2630e99e1d77b8be6c95769853c3587f570e63b4baab"
+    },
+    {
+      "event_id": "BSD-A1A2-R14-E04",
+      "event_type": "RESULT_RECORDED",
+      "atom_id": "BSD-A1a2-EXACT-SELMER-DIMENSION-KURIHARA-ORDER-BRIDGE",
+      "action_summary": "retain the exact discrete-order -> Selmer-corank theorem path and route next work to the named complex/discrete calibration conjecture",
+      "decision_rationale": "R14 adds a direct same-Q theorem cell but no root certificate; localization and full leading-term glue stay separate",
+      "previous_event_hash": "sha256:d8f1ee9cb65d1ca4646a2630e99e1d77b8be6c95769853c3587f570e63b4baab",
+      "outputs": ["REL-BSD-R14-KURIHARA-ORDER-TO-EXACT-SELMER", "PATH-BSD-R14-DISCRETE-EXACTNESS-DOWNSTREAM"],
+      "residuals": [
+        "COMPLEX_ANALYTIC_ORDER_TWO_TO_KURIHARA_ORDER_TWO_IS_KIM_POLLACK_CONJECTURE_1_6_NOT_THEOREM",
+        "TRANSVERSE_P_LOCALIZATION_NONZERO_OPEN_SEPARATELY",
+        "FULL_BSD_LEADING_TERM_GLUE_OPEN"
+      ],
+      "artifact_hash": "sha256:cb93c4a22e15ade4f277307afdd88100e7e4894b17c18dce83b89b8bbb61a4fc"
+    }
+  ],
+  "last_event_hash": "sha256:cb93c4a22e15ade4f277307afdd88100e7e4894b17c18dce83b89b8bbb61a4fc",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+}
