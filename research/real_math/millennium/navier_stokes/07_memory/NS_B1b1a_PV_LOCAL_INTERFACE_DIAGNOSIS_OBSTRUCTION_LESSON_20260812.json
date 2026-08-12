@@ -1,0 +1,52 @@
+{
+  "record_type": "EPISODE_DIAGNOSIS_OBSTRUCTION_LESSON",
+  "cycle_id": "NS-B1b1a-R11-PV-LOCAL-INTERFACE-20260812",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "episode_id": "E-NS-B1b1a-PV-LOCAL-INTERFACE-20260812",
+  "diagnosis": {
+    "id": "D-NS-B1b1a-PV-CONSUMER-BIFURCATION",
+    "statement": "The apparent single Pineau–Vicol local criterion contains two distinct consumer interfaces. The generator-to-enstrophy step uses annular pressure quantitatively as written, while the downstream one-slice enstrophy criterion explicitly admits suitability instead. This removes one gluing obstacle only after switching consumers."
+  },
+  "local_mathematical_failure": {
+    "id": "F-NS-B1b1a-FINITE-I-NO-EPSILON-ENSTROPHY-TRACE",
+    "category": "LOCAL_MATHEMATICAL_FAILURE",
+    "statement": "Finite I controls the time-averaged critical dissipation ledger and yields a late good-time scaled-enstrophy upper bound of order I, but no source-valid mechanism contracts that bound to the fixed PV epsilon threshold when I is arbitrary."
+  },
+  "local_to_global_or_interface_failure": {
+    "id": "F-NS-B1b1a-PV-PRODUCER-CONSUMER-GLUE",
+    "category": "LOCAL_TO_GLOBAL_OR_INTERFACE_FAILURE",
+    "statement": "The generic AB finite-I producer does not supply the pointwise local Type-I hypothesis of PV_E/PV_G. Passing through AB local compactness also loses the pressure/generator time-slice strength required by PV_G."
+  },
+  "process_failure": {
+    "id": "F-RAKL-NS-B1b1a-PRE-ACTION-RECEIPT-MISSED",
+    "category": "PROCESS_CHRONOLOGY_FAILURE",
+    "statement": "A useful pressure-removability observation was noticed before a valid v3 PreActionFibreReceipt existed. Under current RAKL pre_action_receipt semantics the episode is RETROSPECTIVE_ONLY and cannot earn prospective gate credit.",
+    "linked_repeated_process_failure": "SzeChunYiu/RAKL#123 (closed/implemented pre-action receipt gate)"
+  },
+  "obstruction": {
+    "id": "O-NS-B1b1a-POINTWISE-TYPE-I-PLUS-ENSTROPHY-DIP",
+    "statement": "To consume PV_E without stronger pressure hypotheses, the lane must first be inside the pointwise local Type-I suitable-weak subclass and then force one late scaled-enstrophy dip below θ_*²/4. Compactness or finite I alone does neither."
+  },
+  "lesson": {
+    "id": "L-NS-B1b1a-PV-ENSTROPHY-CONSUMER-BYPASSES-PRESSURE",
+    "statement": "When a regularity proof factors as generator→enstrophy→epsilon-regularity, audit the internal consumer boundary: suitability may discharge pressure at the enstrophy stage even if pressure remains load-bearing in the generator stage."
+  },
+  "motif": {
+    "id": "M-NS-LOCAL-CONSUMER-SWITCH-BYPASS-NONLOCAL-PRESSURE",
+    "scope": "same-equation local regularity interfaces; proposal/shadow only",
+    "statement": "Switch to the nearest downstream consumer whose hypotheses match the producer before trying to strengthen a nonlocal pressure interface."
+  },
+  "successful_reuse_ids": [
+    "MATH-NS-B1A3B1A2A-R6-ANCIENT-SMOOTHING-TO-FIXED-TIME-CAPACITY",
+    "F-NS-B1a3b1a2a-ANCIENT-SMOOTHING-STILL-LINEAR-PACKET-CAPACITY",
+    "L-NS-B1a3b1a2a-TEMPORAL-PERSISTENCE-CONVERTS-E-TO-PACKING"
+  ],
+  "nonclaims": [
+    "no theorem that finite I cannot imply the missing trigger by a different Navier–Stokes argument",
+    "no Type-I exclusion",
+    "no Type-II classification",
+    "no Clay-root authority",
+    "same-context expert review is 0/3 independent review credit"
+  ],
+  "artifact_hash": "sha256:b886e009f4a7603cec90acae94c02f0df76ac34fbd9748188592eaaa385b55d3"
+}
