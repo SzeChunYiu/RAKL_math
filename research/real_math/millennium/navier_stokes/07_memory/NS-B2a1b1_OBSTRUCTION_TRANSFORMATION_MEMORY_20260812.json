@@ -1,0 +1,60 @@
+{
+  "authority": "PROPOSAL_SHADOW_ROUTING_ONLY",
+  "episodes": [
+    {
+      "effect": "cutoff derivative contribution tends to zero and a conservation law is obtained",
+      "episode_id": "OT-NS-SEREGIN-SEC4-CUTOFF-CONSERVATION",
+      "forbidden_transfer": "does not authorize general-3D conservation or supply any missing precondition",
+      "obstruction": "spatial cutoff derivative term prevents passage to a global conservation law",
+      "preconditions": [
+        "axisymmetry and swirl-free",
+        "extra N_f^{s1,l1} derivative control",
+        "l1<=s1",
+        "pointwise |v(x,t)| <= c/(|x'| f(|x'|))",
+        "condition (4.4)",
+        "finite quantity at one time as in (4.5)"
+      ],
+      "source": "arXiv:2606.29468v1 Section 4, (4.1)-(4.6), Proposition 4.1",
+      "source_authority": "PRIMARY_SOURCE_CONDITIONAL_RESULT",
+      "transformation": "restrict to axisymmetric swirl-free Euler limit; control N_f^{s1,l1}; use transported omega_theta/r functional; impose cutoff-decay condition (4.4)"
+    },
+    {
+      "effect": "prioritizes signed-prelimit/cutoff bypass over another diagonal compactness attempt",
+      "episode_id": "OT-NS-B2A1A1-MOVING-RADIUS-QUANTIFIER",
+      "obstruction": "F gain exists only on radii moving to infinity while compactness is fixed-radius",
+      "preconditions": [
+        "same logarithmic scaling",
+        "no claimed moving-radius convergence"
+      ],
+      "source": "E-NS-B2a1a1-R1 / F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH",
+      "source_authority": "PROPOSAL_SHADOW_VERIFIED_ROUTING",
+      "transformation": "move the next discriminator to prelimit identities/estimates that do not require strong convergence on the moving radius"
+    },
+    {
+      "effect": "deprioritizes repeated magnitude-only shell estimates",
+      "episode_id": "OT-NS-B1A1-SCALE-NEUTRALITY",
+      "obstruction": "scale-normalized local-energy ledger carries no descendant summability",
+      "preconditions": [
+        "transfer only as a structural warning",
+        "Type-I/Type-II DifferenceWitness required"
+      ],
+      "source": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "source_authority": "PROPOSAL_SHADOW_FAILURE",
+      "transformation": "require an explicit scale-symmetry breaker or signed/finite-budget mechanism before telescoping"
+    }
+  ],
+  "schema_version": "obstruction-transformation-memory-v3-proposal-shadow",
+  "snapshot_hash": "sha256:534629acb4c2d6db1f5db66238a40e690a1adaf59dcdca9ab38fcbed2cdf29ac",
+  "source_universe": [
+    {
+      "authority": "PRIMARY_SOURCE",
+      "id": "SRC-SEREGIN-2606.29468v1",
+      "scope": "same-domain Type-II Euler scaling, especially Section 4"
+    },
+    {
+      "authority": "PROPOSAL_SHADOW_MEMORY",
+      "id": "SRC-RAKL-MATH-NS-MERGED",
+      "scope": "merged Navier-Stokes failure/success episodes through #218"
+    }
+  ]
+}
