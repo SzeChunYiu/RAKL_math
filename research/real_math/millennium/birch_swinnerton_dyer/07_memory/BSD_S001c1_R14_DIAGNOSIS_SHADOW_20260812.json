@@ -1,0 +1,22 @@
+{
+  "record_type": "DIAGNOSIS_SHADOW",
+  "diagnosis_id": "DG-BSD-S001c1-R14-PARITY-QUOTIENT-NOT-MAGNITUDE-20260812",
+  "episode_reference_id": "EP-BSD-S001c1-R14-PARITY-COMPARISON-20260812",
+  "authority": "PROPOSAL_SHADOW",
+  "status": "SUPPORTED_SOURCE_BOUND",
+  "diagnosis": "The S001c1 complex/discrete compatibility edge is not completely unstructured: after exact Kurihara-to-classical-Selmer reconstruction, unconditional p-Selmer parity gives a source-bound congruence modulo 2 with the complex analytic order. The remaining root-facing defect is magnitude, not parity. Parity is a lossy quotient of the integer-order coordinate and cannot distinguish 2 from 4.",
+  "local_mathematical_status": "SCOPED_PARITY_COMPOSITION_VALID",
+  "root_gluing_status": "OPEN",
+  "existing_obstruction_retained": "BSD-S001c1-KURIHARA-TAYLOR-COMPARISON",
+  "new_obstruction_id": null,
+  "new_lesson_id": null,
+  "reason_no_new_obstruction": "The cycle sharpens the already-open comparison obstruction from an arbitrary integer relation to a magnitude-only residual in a theorem cell; it does not establish a distinct obstruction family.",
+  "reason_no_new_lesson": "The quotient-versus-magnitude warning is already represented by the stored decode-interface/proxy-coordinate diagnosis; no protected reusable lesson is promoted from one additional instance.",
+  "repeated_failure_links": [
+    "FM-BSD-ARITHMETIC-PREMISE-REIMPORT",
+    "BSD-S001c1-KURIHARA-TAYLOR-CONTEXT",
+    "F-C023-SCALAR-COLLAPSE (scope-warning only, no arithmetic authority)"
+  ],
+  "next_discriminator": "Find a same-coordinate source-bound magnitude inequality/equality for ord_Kur versus ord_{s=1}L(E,s) whose hypotheses do not import BSD/analytic-rank equality; parity becomes decisive only if the remaining possible discrepancy is <2.",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+}
