@@ -1,0 +1,143 @@
+{
+  "receipt_id": "YM-E2E3-RAKL-CYCLE-METRICS-20260811T1304Z",
+  "schema_version": "rakl-cycle-metrics-v1",
+  "authority": "PROPOSAL_SHADOW_METROLOGY_ONLY",
+  "rakl": {
+    "method_label": "v3",
+    "method_version": "CANNOT_MEASURE:no_canonical_method_version_file_verified_on_current_main",
+    "git_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "authority_hardening": "PR#121 merged at current main"
+  },
+  "rakl_math": {
+    "base_sha": "6557b1b25fa839fe71aba8047c958d5da892edd8",
+    "cycle_branch": "research/yang-mills-faizal-shabir-proof-audit-r2-20260811",
+    "pre_state_fingerprint": "CANNOT_MEASURE:no_materialized_RAKLV3State_in_connector_runtime",
+    "post_state_fingerprint": "CANNOT_MEASURE:no_materialized_RAKLV3State_in_connector_runtime",
+    "framework_pin_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "framework_pin_current": true
+  },
+  "atom_id": "YM-E2/E3-source-proof-audit",
+  "context_hash": "CANNOT_MEASURE:retrospective_source_audit_not_frozen_as_a_strict_pre-candidate_context",
+  "fibre_snapshot_hash": "CANNOT_MEASURE:no_compiled_ProblemFibre_snapshot_emitted_by_connector_runtime",
+  "canonical_process_surfaces": [
+    "source_selection_reliability",
+    "claim_extraction",
+    "contradiction_diagnosis",
+    "gap_discovery",
+    "memory",
+    "review",
+    "saturation_stopping"
+  ],
+  "memory": {
+    "relevant_tool_ids": [],
+    "canonical_failure_ids": [],
+    "proposal_failure_ids": [
+      "F-YM-E2-SUMMABLE-DEFECT-POSITIVE-GAP-BUDGET:draft_PR75_not_merged_at_cycle_base"
+    ],
+    "retrieved_control_or_atom_ids": [
+      "SzeChunYiu/RAKL_math#5:YM-E2 handoff",
+      "SzeChunYiu/RAKL_math#73:YM-E2a",
+      "YM-E1a1a0"
+    ],
+    "selected_ids": [
+      "SzeChunYiu/RAKL_math#5:YM-E2 handoff",
+      "SzeChunYiu/RAKL_math#73:YM-E2a"
+    ],
+    "rejected_ids": [
+      "YM-E1a1a0:different_source_obstruction_family"
+    ],
+    "retrieved_count": 3,
+    "selected_count": 2,
+    "rejected_count": 1,
+    "authority_boundary": "draft PR75 failure record was read as proposal memory only; it was not treated as canonical promoted failure authority"
+  },
+  "source_audit": {
+    "primary_source": "arXiv:2606.19362v1",
+    "doi": "10.1002/prop.70097",
+    "new_source_findings": [
+      "main-text Theorem 5.4 proof uses an unsupported upper bound on exp(a_{k+1} Delta_k) and an unproved uniform bound on a geometric coarse time spacing",
+      "Appendix A Lemma A.10 closes induction with an impossible positive-r inequality and is then applied to Theorem A.9"
+    ],
+    "repair_relations": [
+      "Appendix D fixed-physical-time tau formulation avoids the main-text exp(a_{k+1} Delta_k)/a_{k+1} normalization but retains the separate relative-defect-budget obligation in issue #73",
+      "a corrected recurrence may be possible after proving an invariant small ball, but this was not proposed as a mathematical candidate in the retrospective audit"
+    ]
+  },
+  "outcome": "PARTIAL_SUCCESS",
+  "residual_before": [
+    "audit whether Faizal-Shabir positive-gap transport has a source-valid total-defect margin below the initial gap",
+    "determine whether claimed constructive continuum/asymptotic-free bridges survive exact proof audit"
+  ],
+  "residual_after": [
+    "YM-E2a #73 remains: prove relative total-defect margin under exact constants",
+    "YM-E2b #92: reconcile variable-lattice and fixed-physical-time gap transport before gap persistence can carry root authority",
+    "YM-E3a #93: repair and source-bind weak-coupling contraction before asymptotic-freedom bridge can carry root authority",
+    "root remains OPEN_NO_SOLUTION_CERTIFICATE"
+  ],
+  "retained_semantic_novelty": {
+    "KNOWLEDGE": 2,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 0,
+    "OBSTRUCTION": 2,
+    "RELATION": 1,
+    "PATH": 1,
+    "META_METHOD": 0,
+    "classification_boundary": "internal v3 metrology; overlapping axes are not summed into a scalar learning score and have not received external novelty audit"
+  },
+  "saturation": {
+    "reopened_axes": [
+      "KNOWLEDGE",
+      "OBSTRUCTION",
+      "RELATION",
+      "PATH"
+    ],
+    "flattened_axes": [],
+    "interpretation": "source audit discovered two distinct load-bearing proof obligations and one explicit normalization-repair relation"
+  },
+  "resource_proxies": {
+    "model_input_tokens": "CANNOT_MEASURE:runtime_does_not_expose_per-cycle_model_token_accounting",
+    "model_output_tokens": "CANNOT_MEASURE:runtime_does_not_expose_per-cycle_model_token_accounting",
+    "compiled_context_tokens": "CANNOT_MEASURE:no_problem_fibre_token_receipt_emitted",
+    "external_web_tool_invocations_observed": 9,
+    "github_read_calls": "CANNOT_MEASURE:aggregate_connector_counter_not_exposed",
+    "github_write_calls_before_receipt": 3,
+    "tool_calls_total": "CANNOT_MEASURE:aggregate_tool_counter_not_exposed",
+    "wall_time_ms": "CANNOT_MEASURE:runtime_does_not_expose_a_stable_scientific_wall_clock"
+  },
+  "new_records": {
+    "episode_ids": [
+      "YM-E2E3-EP-FS-PROOF-AUDIT-R2-20260811T1304Z"
+    ],
+    "lesson_ids": [],
+    "failure_ids": [],
+    "tool_ids": [],
+    "obstruction_ids": [
+      "YM-E2b#92",
+      "YM-E3a#93"
+    ],
+    "motif_ids": [],
+    "successful_reuse_ids": []
+  },
+  "gate_provenance_ci": {
+    "source_audit_chronology": "RETROSPECTIVE_observations_preceded_fresh_repair_issue_freeze",
+    "candidate_generation": "NOT_AUTHORIZED_FROM_THIS_RETROSPECTIVE_AUDIT",
+    "mathematical_candidate_generated": false,
+    "failure_experience_minted": false,
+    "same_context_review_credit": "NOT_INDEPENDENT_REVIEW",
+    "current_rakl_main_read": true,
+    "current_rakl_authority_hardening_read": true,
+    "application_framework_pin_current": true,
+    "exact_head_application_ci": "NOT_RUN_YET",
+    "root_authority": "NONE"
+  },
+  "rakl_changed_action_counterfactual": "PARTIALLY_OBSERVED:prior YM-E2 proposal/handoff memory redirected inspection toward exact gap-transport dependencies; no prospectively frozen pre-memory action ranking exists, so causal effect size is CANNOT_MEASURE",
+  "framework_improvement_hypothesis": {
+    "new_framework_issue_opened": false,
+    "reason": "no new framework-process defect established; the cycle exercises existing source-reliability, chronology, memory and fail-closed gates",
+    "paper5_value": "positive telemetry example where memory changed source-audit focus while root authority stayed unchanged"
+  },
+  "timestamp": "2026-08-11T13:04:30+00:00",
+  "episode_artifact_hash": "sha256:32dc22c7447dfb4238ffc300c1fc40fada2eaca41a44c628938d8767da0531cd",
+  "artifact_hash_basis": "sha256(canonical JSON of receipt before adding artifact_hash)",
+  "artifact_hash": "sha256:5bd9211bcf030b50e8c696c7bf192adfd25f11e9d4fa3b8b545534b2c3e90058"
+}
