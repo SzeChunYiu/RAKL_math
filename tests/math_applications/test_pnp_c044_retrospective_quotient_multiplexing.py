@@ -117,6 +117,12 @@ def test_failure_reviews_tool_and_feedback_separate_math_from_assurance() -> Non
     tool = json.loads(TOOL.read_text(encoding="utf-8"))
     assert tool["artifact_hash"] == _canonical_hash(tool)
     assert tool["authority"] == "HEURISTIC_PROPOSAL_PENDING_FRESH_REUSE_ASSURANCE"
+    assert tool["validation_obligations"] == [
+        "prove the full complement decomposition rather than infer it from samples",
+        "check all local generator fibres and pair disjointness",
+        "check all cross-component active edge orientations",
+    ]
+    assert all("framework promotion" not in item for item in tool["validation_obligations"])
 
     math_feedback = json.loads(MATH_FEEDBACK.read_text(encoding="utf-8"))
     leak_feedback = json.loads(LEAK_FEEDBACK.read_text(encoding="utf-8"))
