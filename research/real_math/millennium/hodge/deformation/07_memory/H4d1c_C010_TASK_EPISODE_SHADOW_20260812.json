@@ -1,0 +1,33 @@
+{
+  "episode_id": "H4d1c-C010-BRANCH-BASECHANGE-SMOOTHNESS-NOGO",
+  "task_id": "HODGE-DEFORMATION-VERIFIED-DISCOVERY",
+  "atom_id": "H4d1c-C010",
+  "context_hash": "sha256:bd78e3af63a1eec1c262852b544e200fb1a12673b8682242bf1e1b5db57f17f2",
+  "problem_signature": [
+    "rational Hodge conjecture on smooth projective complex varieties with Q coefficients",
+    "local consumer W_H=W x_S H -> H for one marked reduced irreducible Hodge branch",
+    "test whether ambient relative smoothness W->S is necessary for branch coverage"
+  ],
+  "fibre_snapshot_hash": "sha256:bd78e3af63a1eec1c262852b544e200fb1a12673b8682242bf1e1b5db57f17f2",
+  "operator_ids": ["routing", "mathematical_context_translation", "equivalence_similarity", "gap_discovery", "experiment_query_selection", "review", "saturation_stopping"],
+  "action_trace": [
+    "Selected same-domain SEARCH after C007/C006/C001 memory review and C009/C008 shadow reconciliation.",
+    "Set S=Spec C[x,y], H=V(x)=Spec C[y], W=H with pi the closed immersion.",
+    "Verified pi is not flat, hence not smooth, by tensoring 0->A --x--> A with A/(x).",
+    "Verified W x_S H=Spec((A/(x)) tensor_A (A/(x))) is isomorphic to H and pi_H is identity.",
+    "Concluded ambient smoothness is not necessary for branch-restricted smoothness/full image."
+  ],
+  "observation_ids": ["OBS-C010-AMBIENT-CLOSED-IMMERSION-NONSMOOTH", "OBS-C010-SELF-BASECHANGE-IDENTITY-SMOOTH", "OBS-C010-PROPERNESS-PRESERVED"],
+  "verification_ids": ["VER-C010-NONFLAT-TENSOR-TEST", "VER-C010-QUOTIENT-TENSOR-ISOMORPHISM", "VER-C010-STACKS-SMOOTH-IMPLIES-FLAT"],
+  "outcome": "PARTIAL_SUCCESS",
+  "residual_signature": ["O-H4D1C-BRANCH-RELATIVE-SMOOTHNESS-OR-DIRECT-DOMINANCE", "EXACT_SIGNED_Q_SOURCE_CONSTRUCTION_OPEN", "MONODROMY_DEGENERATION_GLOBALIZATION_OPEN", "ROOT_INITIAL_ALGEBRAICITY_OPEN"],
+  "evidence_pointers": [
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1c_C010_BRANCH_BASECHANGE_SMOOTHNESS_NOGO_20260812.md",
+    "research/real_math/millennium/hodge/deformation/00_sources/H4d1c_C010_SOURCE_RECEIPT_20260812.json",
+    "research/real_math/millennium/hodge/deformation/09_trace/H4d1c_C010_PRE_CANDIDATE_TRACE_20260812.json"
+  ],
+  "artifact_hash": "e2032cc174a84e28d3427691f8018ebfce5e21841c6cc655c5b40484450125c8",
+  "timestamp": "2026-08-12T08:05:00Z",
+  "cost": 1.0,
+  "storage_admission": "PROPOSAL_SHADOW_STORED"
+}
