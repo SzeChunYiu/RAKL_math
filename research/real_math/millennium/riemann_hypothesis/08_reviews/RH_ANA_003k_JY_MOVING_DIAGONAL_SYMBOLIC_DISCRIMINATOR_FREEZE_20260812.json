@@ -1,0 +1,84 @@
+{
+  "allowed_future_branches": [
+    {
+      "branch": "PASS_FLOOR_COMPATIBLE",
+      "condition": "The preregistered log diagonal eventually dominates ceil(U_JY(n)).",
+      "next": "Evaluate epsilon-dependent excess without changing parameters."
+    },
+    {
+      "branch": "FAIL_CURRENT_SUFFICIENT_CERTIFICATE_GROWTH",
+      "condition": "ceil(U_JY(n)) exceeds the preregistered log diagonal infinitely often/eventually.",
+      "next": "Reject this sufficient certificate for that diagonal only; do not infer actual remainder failure."
+    },
+    {
+      "branch": "PASS_FULL_DIAGONAL_COMPATIBILITY",
+      "condition": "The preregistered log diagonal log Y_n eventually dominates the full computed sufficient tilde_m_JY at the preregistered epsilon_n.",
+      "next": "Record scoped endpoint compatibility only."
+    },
+    {
+      "branch": "FAIL_EPSILON_DEPENDENT_EXCESS",
+      "condition": "The floor is compatible but tilde_m-log diagonal remains positive infinitely often/eventually.",
+      "next": "Preserve failure; consider a sharper envelope or larger prospectively frozen diagonal."
+    },
+    {
+      "branch": "CANNOT_CHECK",
+      "condition": "epsilon_n, diagonal identity, source bytes, or exact comparison proof is missing.",
+      "next": "Fail closed; do not select replacement parameters after outcome access."
+    }
+  ],
+  "artifact_hash": "sha256:96feac56f9fe39f2ccf53aae4c5eee326a9cae269d583bfc37980ad3c743e5aa",
+  "atom_id": "RH-ANA-003k-JY-MOVING-DIAGONAL",
+  "authority": {
+    "candidate": false,
+    "discriminator_specification_only": true,
+    "li_or_rh": false,
+    "mathematical_result": false
+  },
+  "candidate_identity": null,
+  "discriminator_id": "RH-ANA003K-JY-CHEAP-SYMBOLIC-SCALE-DISCRIMINATOR-20260812",
+  "evidence": [
+    "sha256:d6c53f4dbc9597cb48a4931eec20b5575a9efc8dcdb9cf8cca36529e7630d95a",
+    "sha256:534ab229ac464209c330909053a8e1d91f658fb828e3d78425a94e67757c6646",
+    {
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_JY_C001_PUBLIC_VALIDATION_RESULT_20260812.json",
+      "raw_sha256": "ee5cb68a30a234b7bf93f6988577bb22d59d41dc82e3678845c6d3dadac3a867"
+    }
+  ],
+  "execution_firewall": {
+    "C_selected": false,
+    "branch_selected": false,
+    "epsilon_n_selected": false,
+    "numerical_tests_run": false,
+    "result_recorded": false,
+    "symbolic_limit_evaluated": false
+  },
+  "planted_falsifiers": [
+    "Treat tilde_M as a necessary threshold and claim actual remainder impossibility.",
+    "Drop +1.515 from U_JY.",
+    "Treat C as n-dependent after freezing it as fixed.",
+    "Choose epsilon_n or C after inspecting a branch.",
+    "Compare M on the original scale while omitting the logarithm.",
+    "Promote endpoint compatibility to internal-prefix control, Li positivity, or RH."
+  ],
+  "schema_version": "1.0.0",
+  "status": "FROZEN_NOT_EXECUTED_NO_BRANCH_SELECTED",
+  "success_contract_for_later_candidate": [
+    "exact epsilon_n identity frozen",
+    "exact diagonal family and constants frozen",
+    "source/result hashes unchanged",
+    "branch conditions unchanged",
+    "symbolic proof before any numerical corroboration"
+  ],
+  "symbolic_probe": {
+    "epsilon_independence": "Because tilde_m_JY>=ceil(U_JY), a floor obstruction branch, if proved, is independent of epsilon_n; a floor-compatible branch still requires epsilon-dependent analysis.",
+    "future_proof_obligation": "Classify rho_C(n) using exact inequalities/standard log-power asymptotics, then compare ceil(U_JY(n)) with u_n(C); do not numerically fit a finite range.",
+    "mandatory_floor": "F_n=[2(n-1+1.515)/0.8274]^2=[2(n+0.515)/0.8274]^2.",
+    "prospective_inherited_family": "For a later freeze only: u_n(C)=C n^(5/3)log^2(n+e), with C fixed and positive.",
+    "ratio": "rho_C(n)=u_n(C)/F_n=(C(0.8274)^2/4) n^(5/3)log^2(n+e)/(n+0.515)^2."
+  },
+  "unselected_parameters": {
+    "diagonal_constant_C": null,
+    "diagonal_family": null,
+    "epsilon_sequence": null
+  }
+}

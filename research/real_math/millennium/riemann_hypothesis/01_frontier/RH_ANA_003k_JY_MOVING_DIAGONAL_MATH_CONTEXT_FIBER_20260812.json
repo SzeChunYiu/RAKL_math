@@ -1,0 +1,119 @@
+{
+  "analogy_scan_notes": "One analogy survives only as search ordering: test the mandatory floor before expensive epsilon-dependent analysis.",
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "atom_id": "RH-ANA-003k-JY-MOVING-DIAGONAL",
+  "cross_domain_analogies": [
+    {
+      "common_abstraction": [
+        "mandatory floor",
+        "moving deadline",
+        "additional tolerance cost"
+      ],
+      "disanalogies": [
+        "runtime analogy supplies no number-theoretic bound",
+        "certificate failure need not mean task failure"
+      ],
+      "proposed_principle": "test mandatory floor compatibility before optimizing tolerance-dependent excess",
+      "provenance_note": "proposal-only algorithms analogy",
+      "shared_constraints": [
+        "certificate threshold exceeds its floor",
+        "deadline varies with n"
+      ],
+      "source_kind": "scheduled timeout",
+      "source_situation": "A certified runtime begins with mandatory setup cost before input-dependent work; a deadline below setup can never validate the certificate.",
+      "source_to_target_mapping": [
+        "setup cost -> U_JY",
+        "runtime -> tilde_m",
+        "deadline -> log Y_n"
+      ],
+      "validation_obligation": "classify the exact target ratio only after freezing the diagonal contract"
+    }
+  ],
+  "equivalent_formulations": [
+    "tilde_M_JY(n,epsilon_n)<=Y_n eventually",
+    "tilde_m_JY(n,epsilon_n)<=log Y_n eventually",
+    "split comparison: ceil(U_JY(n))<=log Y_n plus epsilon-dependent excess",
+    "certificate obstruction: the proved sufficient modulus misses the diagonal",
+    "actual remainder obstruction: stronger and not implied by certificate obstruction"
+  ],
+  "explicit_disanalogies": [
+    "fixed-n modulus is not an n-uniform rate",
+    "sufficient threshold is not necessary",
+    "endpoint control is not prefix control",
+    "failure of the current certificate is not RH refutation",
+    "a symbolic C>0 is not a selected numerical cutoff"
+  ],
+  "first_candidate_at": null,
+  "frozen_at": "2026-08-12T16:20:00Z",
+  "method_transfers": [
+    {
+      "disanalogies": [
+        "sufficient modulus failure is not actual remainder failure"
+      ],
+      "method": "compare tilde_M_JY with Y_n, equivalently tilde_m_JY with log Y_n",
+      "repair_question": "Can the exact frozen log diagonal log Y_n dominate tilde_m_JY?",
+      "required_assumptions": [
+        "epsilon_n frozen",
+        "diagonal frozen",
+        "same sufficient modulus"
+      ],
+      "shared_structure": [
+        "row index",
+        "tolerance",
+        "threshold",
+        "diagonal"
+      ],
+      "source_anchors": [
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003j_MATH_CONTEXT_FIBER_20260812.json",
+        "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_JY_C001_PUBLIC_VALIDATION_RESULT_20260812.json"
+      ],
+      "source_context": "quantitative diagonal lemma"
+    },
+    {
+      "disanalogies": [
+        "epsilon-dependent threshold excess omitted",
+        "actual envelope below U not analyzed"
+      ],
+      "method": "reduce to rho_C(n) on log scale",
+      "repair_question": "Does the floor alone decide certificate incompatibility?",
+      "required_assumptions": [
+        "C fixed",
+        "n tends to infinity"
+      ],
+      "shared_structure": [
+        "positive asymptotic scales",
+        "fixed constant multiplier"
+      ],
+      "source_anchors": [
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003k_JY_MOVING_DIAGONAL_SOURCE_TRANSFER_20260812.json"
+      ],
+      "source_context": "scale-ratio test"
+    }
+  ],
+  "near_solved_analogues": [
+    "uniform Laguerre estimates below a componentwise monotonicity floor",
+    "sharper nonmonotone direct-envelope analysis",
+    "larger diagonal families under a preregistered resource contract"
+  ],
+  "object_context": "The proved fixed-n sufficient threshold tilde_M_JY(n,epsilon), its mandatory log-floor U_JY(n), a future preregistered positive tolerance sequence epsilon_n, and a future frozen moving diagonal for the Li program; determine only after a later freeze whether certificate compatibility or a growth obstruction occurs.",
+  "packet_hash": "sha256:534ab229ac464209c330909053a8e1d91f658fb828e3d78425a94e67757c6646",
+  "solved_analogues": [
+    "diagonal substitution once an explicit modulus is dominated",
+    "asymptotic comparison by quotient of positive scales"
+  ],
+  "source_anchors": [
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003k_JY_MOVING_DIAGONAL_SOURCE_TRANSFER_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_JY_C001_PUBLIC_VALIDATION_RESULT_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_D001_JY_C001_MATHEMATICAL_LESSON_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003j_MATH_CONTEXT_FIBER_20260812.json"
+  ],
+  "structural_coordinates": [
+    "outer index n",
+    "log endpoint u",
+    "tolerance epsilon",
+    "quadratic monotonicity floor",
+    "epsilon-dependent strict-search excess",
+    "fixed versus moving quantifiers",
+    "sufficient versus necessary thresholds"
+  ]
+}

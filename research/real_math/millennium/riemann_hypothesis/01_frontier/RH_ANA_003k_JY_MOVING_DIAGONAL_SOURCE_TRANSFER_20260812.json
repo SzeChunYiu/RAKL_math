@@ -1,0 +1,96 @@
+{
+  "artifact_hash": "sha256:d6c53f4dbc9597cb48a4931eec20b5575a9efc8dcdb9cf8cca36529e7630d95a",
+  "atom_id": "RH-ANA-003k-JY-MOVING-DIAGONAL",
+  "authority": {
+    "candidate": false,
+    "evaluation": false,
+    "mathematical_context_deductions": true,
+    "result": false,
+    "software_credit_units": 0
+  },
+  "base_sha": "80f8fb5e8c8417bd045cfae9c31df0a19e670eac",
+  "context_deductions_to_freeze_not_evaluate": [
+    "Writing u_n=log Y_n reduces any threshold comparison to log scale.",
+    "The potentially decisive source-independent lower constraint is tilde_m_JY>=ceil(U_JY), before epsilon-dependent growth is considered.",
+    "For symbolic comparison the critical ratio is rho_C(n)=C n^(5/3)log^2(n+e)/([2(n-1+1.515)/0.8274]^2).",
+    "A later candidate must freeze its exact diagonal/tolerance contract before classifying the asymptotic behavior of rho_C or evaluating any stronger envelope bound."
+  ],
+  "evidence_bindings": {
+    "c002_result": {
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003_ABEL_001_C002_PROOF_CHECK_RESULT_20260812.json",
+      "raw_sha256": "0d1dd6087f752307f4270ce97b1ad4f88d6809037a856c979837b85d94b91b6b"
+    },
+    "jy_lesson": {
+      "path": "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_D001_JY_C001_MATHEMATICAL_LESSON_20260812.json",
+      "raw_sha256": "606f33868f5b485eb9f383e5c1cdd8061970d7b0dd58908939f291da04fc1f90"
+    },
+    "jy_result": {
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_JY_C001_PUBLIC_VALIDATION_RESULT_20260812.json",
+      "raw_sha256": "ee5cb68a30a234b7bf93f6988577bb22d59d41dc82e3678845c6d3dadac3a867"
+    },
+    "jy_review": {
+      "path": "research/real_math/millennium/riemann_hypothesis/08_reviews/RH_ANA_003j_D001_JY_C001_SAME_CONTEXT_RESULT_REVIEW_20260812.json",
+      "raw_sha256": "a3923f8a4f5ef134e13c7af1579002bcffa3b1881fad1ac39d98a7f367969204"
+    },
+    "prior_context": {
+      "path": "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003j_MATH_CONTEXT_FIBER_20260812.json",
+      "raw_sha256": "436c642e0f9764051ee2fcf295577f5b2d8b58282ca9f99e5ffd78f7ae475e31"
+    },
+    "prior_discriminator": {
+      "path": "research/real_math/millennium/riemann_hypothesis/08_reviews/RH_ANA_003j_QUANTIFIER_COMPATIBILITY_DISCRIMINATOR_20260812.json",
+      "raw_sha256": "5c1d32e5b1ce506d265cd0fbf1a564f7a9541c71873c77014d522192caae072b"
+    },
+    "prior_memory": {
+      "path": "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_RESEARCH_MEMORY_REVIEW_20260812.json",
+      "raw_sha256": "6214b618fb1ee1333bf2a1023f239b7addb3820b773f1ba43c6a243f5eced43b"
+    }
+  },
+  "method_transfer_matrix": [
+    {
+      "disanalogies": [
+        "tilde_M is sufficient not necessary",
+        "epsilon_n is not yet frozen"
+      ],
+      "enabling_assumptions": [
+        "same error family",
+        "valid sufficient modulus",
+        "all parameter dependence explicit"
+      ],
+      "method": "compare log threshold against log diagonal under a preregistered tolerance",
+      "repair_question": "Does the inherited log diagonal log Y_n dominate the built-in U_JY floor, and if not can a separately proved sharper envelope remove that floor?",
+      "shared_structure": [
+        "two indices",
+        "row threshold",
+        "moving observation endpoint"
+      ],
+      "source_context": "diagonal substitution with a quantitative modulus"
+    },
+    {
+      "disanalogies": [
+        "scale comparison alone does not measure the actual remainder",
+        "a failed sufficient certificate is not a theorem of impossibility"
+      ],
+      "enabling_assumptions": [
+        "C is fixed independently of n",
+        "positive terms",
+        "standard logarithm asymptotics"
+      ],
+      "method": "divide competing log-scales and classify their ratio",
+      "repair_question": "Which conclusion is licensed: certificate incompatibility, sharper-envelope search, or actual remainder obstruction?",
+      "shared_structure": [
+        "quadratic scale",
+        "n^(5/3) times logarithmic correction"
+      ],
+      "source_context": "asymptotic scale separation"
+    }
+  ],
+  "packet_id": "RH-ANA-003k-JY-SOURCE-TRANSFER-20260812",
+  "record_type": "RH_ANA003K_JY_MOVING_DIAGONAL_SOURCE_AND_METHOD_TRANSFER",
+  "schema_version": "1.0.0",
+  "source_facts": [
+    "The proved direct envelope is fixed-n and valid on u>=U_JY(n)=max(log 2,n-1,[2(n-1+1.515)/0.8274]^2).",
+    "The computable sufficient tilde_m search begins at ceil(U_JY(n)); it emits no numerical values in the source result.",
+    "The frozen least M exists but its least-index computability is CANNOT_CHECK.",
+    "The earlier proposed Li-program diagonal form was Y_n=exp(C n^(5/3)log^2(n+e)) with fixed symbolic C>0; no sufficient C was proved."
+  ]
+}
