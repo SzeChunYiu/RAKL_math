@@ -1,0 +1,147 @@
+{
+  "schema_version": "rakl-task-episode-shadow-v3",
+  "record_type": "TaskEpisode",
+  "storage_status": "PROPOSAL_SHADOW_STORED_NOT_CANONICALLY_ADMITTED",
+  "authority": "SEARCH_GUIDANCE_AND_CASE_STUDY_ONLY",
+  "episode_id": "EP-XM022-HODGE-YM-DENSE-SOURCE-SPECTRAL-20260812",
+  "cycle_id": "XM022-HODGE-YM-POSTNULL-SPECTRAL-COVERAGE-20260812",
+  "atom_id": "XM022-YM-POSTNULL-DENSE-SOURCE-SPECTRAL-EXCLUSION",
+  "problem_signature_hash": "sha256:7856a270ed7563f3616e49200a44a284785de89b83818b485efd23381a8ff432",
+  "fibre_hash": "sha256:7856a270ed7563f3616e49200a44a284785de89b83818b485efd23381a8ff432",
+  "fibre_contents_actually_consulted": {
+    "current_same_domain_failure": [
+      "FM-YM-SAME-THEORY-INTERFACE-AND-DENSITY"
+    ],
+    "solved_or_scoped_analogues": [
+      "MATH-HODGE-C004-PROJECTION-KERNEL-NONIMPLICATION",
+      "MATH-NS-B2A1B2-HILL-FINITE-ENERGY-DENSITY-FALSIFIER"
+    ],
+    "prior_cross_problem_warnings": [
+      "XM006 pointwise-to-diagonal uniformity calibration",
+      "XM020 regulator-normalized gap identification warning"
+    ],
+    "current_lane_records": [
+      "PNP O9d12a2a1b-C049 frozen inert candidate",
+      "RH RH-ANA-003 prime-cancellation residual after RH-ANA-002",
+      "NS Hill finite-energy density falsifier",
+      "Hodge C004 projection-kernel counterexample",
+      "YM R13 retrospective reflection-positivity applicability audit",
+      "BSD R9 Zhang Selmer lower-bound split"
+    ]
+  },
+  "operators_motifs_tried": [
+    "SEARCH same-domain failure review",
+    "JUMP structural mapping from Hodge consumer-kernel projection",
+    "spectral-measure moment argument",
+    "hidden-mode non-dense DifferenceWitness",
+    "dense varying-rate ell2 DifferenceWitness",
+    "XM006 uniformity warning applicability falsification"
+  ],
+  "memory": {
+    "review_hash": "sha256:6ec336041c04acfd5c5dce41de61a35b93cf510be15c78821947cca61bc03e53",
+    "retrieved_ids": [
+      "FM-YM-SAME-THEORY-INTERFACE-AND-DENSITY",
+      "MATH-HODGE-C004-PROJECTION-KERNEL-NONIMPLICATION",
+      "MATH-NS-B2A1B2-HILL-FINITE-ENERGY-DENSITY-FALSIFIER",
+      "XM006-POINTWISE-TO-DIAGONAL-UNIFORMITY",
+      "XM020-NS-YM-SCALE-ALIGNED-GAP",
+      "FM-RH-SPEC-ANA-PROXY-NONFAITHFULNESS",
+      "O9d12a2a1b-C049",
+      "EP-BSD-A1A1-ZHANG-LOWER-BOUND-20260812-R9",
+      "XM-PC-NS-001-C001"
+    ],
+    "selected_ids": [
+      "FM-YM-SAME-THEORY-INTERFACE-AND-DENSITY",
+      "MATH-HODGE-C004-PROJECTION-KERNEL-NONIMPLICATION",
+      "MATH-NS-B2A1B2-HILL-FINITE-ENERGY-DENSITY-FALSIFIER",
+      "XM006-POINTWISE-TO-DIAGONAL-UNIFORMITY"
+    ],
+    "rejected_ids": [
+      "XM020-NS-YM-SCALE-ALIGNED-GAP",
+      "FM-RH-SPEC-ANA-PROXY-NONFAITHFULNESS",
+      "O9d12a2a1b-C049",
+      "EP-BSD-A1A1-ZHANG-LOWER-BOUND-20260812-R9",
+      "XM-PC-NS-001-C001"
+    ],
+    "missed": "CANNOT_MEASURE: no recall denominator"
+  },
+  "decision_policy": {
+    "route": "SEARCH_PRIMARY_WITH_JUMP_SHARPENING",
+    "why": "same-domain YM failure already identifies density/moment interfaces; Hodge C004 provides an exact quotient-image discriminator; XM006 is tested rather than imported because positive spectral moments may change the uniformity requirement",
+    "pre_memory_counterfactual": "CANNOT_MEASURE: not prospectively frozen"
+  },
+  "falsifier_and_verification": {
+    "candidate": "positive self-adjoint contraction + dense D + common q0 moment bounds implies no spectrum above q0",
+    "counterexample_first_attempt": "try hidden spectral mass above q0; spectral-measure lower bound makes this impossible for any v in dense D",
+    "difference_witness_1": "drop density: 2D hidden slow eigenvector survives",
+    "difference_witness_2": "drop common rate: ell2 diagonal r_j -> 1 with dense c00 has per-vector exponential decay but no global gap",
+    "proof": "spectral theorem argument in XM022_DENSE_SOURCE_COMMON_RATE_SPECTRAL_LEMMA_20260812.md",
+    "same_context_expert_roles": 7,
+    "independent_review_credit": "0/3",
+    "numerics": "finite-dimensional examples sanity-checked only; computation has zero proof credit"
+  },
+  "observations": [
+    "post-null density/cyclicity is mathematically decisive for excluding hidden slower modes",
+    "a common exponential rate is decisive",
+    "source-dependent finite prefactors are not an additional abstract obstruction under positive transfer moments and density",
+    "SZZ covariance-to-transfer-moment binding remains an application gluing/source obligation",
+    "fixed-cutoff spectral exclusion remains separate from lattice-spacing/continuum transport"
+  ],
+  "outcome": {
+    "status": "PARTIAL_SUCCESS_ROUTE_REFINEMENT",
+    "local_abstract_lemma": "PROVED_SAME_CONTEXT",
+    "target_yang_mills_theorem": "NOT_PROVED",
+    "root_certificate": false,
+    "novelty_claim": false,
+    "novelty_class": [
+      "compositional",
+      "transfer",
+      "representation"
+    ]
+  },
+  "residual_before": [
+    "UNCLEAR_WHETHER_SOURCE_DEPENDENT_PREFATORS_REQUIRE_UNIFORMITY_FOR_SPECTRAL_EXCLUSION",
+    "POST_NULL_DENSITY_UNBOUND",
+    "COVARIANCE_TO_TRANSFER_MOMENT_IDENTITY_UNBOUND",
+    "FIXED_CUTOFF_TO_CONTINUUM_GAP_UNBOUND"
+  ],
+  "residual_after": [
+    "BIND_SZZ_OR_OTHER_CONTROLLED_DECAY_TO_EXACT_SAME_THEORY_POSITIVE_TRANSFER_MOMENTS",
+    "PROVE_POST_NULL_DENSITY_OR_CYCLICITY_FOR_THE_SAME_CONTROLLED_SOURCE_CLASS",
+    "BIND_RECONSTRUCTED_EXCITED_SPECTRUM_TO_PHYSICAL_FIXED_CUTOFF_SECTOR",
+    "PROVE_LATTICE_SPACING_RG_CONTINUUM_TRANSPORT_AND_PHYSICAL_GAP_UNIFORMITY"
+  ],
+  "failure_category": {
+    "mathematical": "NO_LOCAL_FAILURE; ABSTRACT SUFFICIENCY LEMMA CLOSES ONE LOGICAL SUBBRIDGE",
+    "representation": "CONSUMER_MAP_AND_COMMON_RATE MUST BE EXACTLY TYPED",
+    "gluing": "TARGET_SAME_THEORY_MOMENT_AND_DENSITY_GLUE_REMAINS_OPEN",
+    "retrieval": "NO_RECALL_DENOMINATOR",
+    "decomposition": "IMPROVED: removed unnecessary UNIFORM_PREFATOR sub-obligation at abstract fixed-cutoff stage",
+    "source": "SZZ/LUESCHER/OS scope preserved; no source theorem overextended",
+    "provenance": "PUBLIC PRE-RESULT ARTIFACTS EXIST; LATENT HYPOTHESIS TIMING CANNOT_MEASURE",
+    "verification": "SAME_CONTEXT_ONLY",
+    "tooling": "NO_BLOCKING_TOOL_FAILURE",
+    "meta_policy": "XM006 warning rejected in over-broad form rather than treated as blacklist"
+  },
+  "saturation_axes": {
+    "KNOWLEDGE": "REOPENED_LOCALLY_BY_ABSTRACT_LEMMA_BUT_NO_TARGET_THEOREM",
+    "OPERATOR": "FLAT",
+    "EXPERIENCE_PATTERN": "REOPENED",
+    "OBSTRUCTION": "FLAT_DEDUP_EXISTING_YM_INTERFACE",
+    "RELATION": "REOPENED",
+    "PATH": "REOPENED_AND_NARROWED",
+    "META_METHOD": "FLAT"
+  },
+  "cost_effort_proxy": {
+    "model_tokens": "CANNOT_MEASURE: no authoritative runtime counter",
+    "context_tokens": "CANNOT_MEASURE: no authoritative runtime counter",
+    "retrieval_calls": "CANNOT_MEASURE: no frozen centralized counter",
+    "tool_calls": "CANNOT_MEASURE: no cycle-start tool ledger",
+    "wall_time": "CANNOT_MEASURE: no monotonic timer frozen",
+    "same_context_expert_roles": 7,
+    "primary_source_records_checked": 4,
+    "memory_items_explicitly_accounted": 9
+  },
+  "next_action": "On the Yang-Mills lane, attack exact same-theory covariance-to-transfer-moment identity and post-null density for one controlled source class; do not spend effort proving a uniform source prefactor unless a later interface actually requires it.",
+  "artifact_hash": "sha256:4c94deaa2ce5759777ef095e310c58d1943a1ae5127340f6f44d58a148644d46"
+}
