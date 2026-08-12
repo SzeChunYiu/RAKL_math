@@ -1,0 +1,50 @@
+{
+  "artifact_hash": "sha256:e16de945d0e3941db7060f8e3a979c779ca536396fcad43ebd40048143800df3",
+  "authority": "PRIMARY_SOURCE_BINDING_FOR_SOURCE_SUCCESS_RECONSTRUCTION_ONLY",
+  "non_guarantees": [
+    "The receipt is not an independent reproof of Perelman's theorems.",
+    "No Ricci-flow theorem transfers to Navier-Stokes without a target proof."
+  ],
+  "receipt_id": "PC-SUCCESS-PRIMARY-SOURCES-20260812",
+  "retrieval_command": "curl -L --fail https://arxiv.org/pdf/<id>; shasum -a 256",
+  "retrieved_at": "2026-08-12T09:45:00Z",
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "arxiv_id": "math/0211159v1",
+      "bound_statements": [
+        "Equation (3.4): dW/dt is the integral of a squared tensor and is nonnegative under the coupled Ricci/conjugate-heat evolution.",
+        "Theorem 4.1: a smooth Ricci flow on a closed manifold at finite singular time is not locally collapsing.",
+        "Section 4.2 corollary: bounded-curvature blow-up sequences have complete ancient kappa-noncollapsed subsequential limits."
+      ],
+      "pdf_sha256": "945e278613c45ea1ab617b28c3095783d0e68958dc0546dfcfa9b42b9674fbe1",
+      "source_id": "PERELMAN-I",
+      "title": "The entropy formula for the Ricci flow and its geometric applications",
+      "url": "https://arxiv.org/pdf/math/0211159"
+    },
+    {
+      "arxiv_id": "math/0303109v1",
+      "bound_statements": [
+        "Section 4.1 records pinching and canonical-neighborhood assumptions for the three-dimensional flow.",
+        "Sections 4.3-4.4 identify sufficiently thin horns by strong necks, cut middle two-spheres, cap, and continue the flow with discrete surgery times.",
+        "Section 5 proposition supplies time-dependent noncollapsing and canonical-neighborhood control for a global surgery solution."
+      ],
+      "pdf_sha256": "6290421ec45e459a16a5ecad86d1162eecfed9f2c2646c7b2728f0503de8f706",
+      "source_id": "PERELMAN-II",
+      "title": "Ricci flow with surgery on three-manifolds",
+      "url": "https://arxiv.org/pdf/math/0303109"
+    },
+    {
+      "arxiv_id": "math/0307245v1",
+      "bound_statements": [
+        "Theorem 1.1: if a closed oriented three-manifold has no aspherical prime factors, every surgery flow becomes extinct in finite time.",
+        "Lemma 1.2 and Sections 1.3-1.4 use a least-area disk width with a one-sided differential inequality stable through surgery.",
+        "For a homotopy sphere the extinction argument, together with the surgery analysis, yields elliptization and hence the Poincare conclusion."
+      ],
+      "pdf_sha256": "460606386f35a6b719970471a94452ecea7769e8c2caeff8820b8a483aebe0c6",
+      "source_id": "PERELMAN-III",
+      "title": "Finite extinction time for the solutions to the Ricci flow on certain three-manifolds",
+      "url": "https://arxiv.org/pdf/math/0307245"
+    }
+  ]
+}

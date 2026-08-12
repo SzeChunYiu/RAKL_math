@@ -1,0 +1,143 @@
+{
+  "artifact_hash": "sha256:fdae24f4650cb7db8c2569f8128b37d5fcaca4696088c21e1677419bf9c7bcba",
+  "direct_candidate_episode_ids": [],
+  "direct_mapping_witnesses": [],
+  "direct_search_status": "NO_VIABLE_MATCH",
+  "episode_memory_snapshot_hash": "b569c204a0d5d3aef0e859a47e8a6ecd9fbda188d4a5ebc7728957893bb458e0",
+  "evidence_pointers": [
+    "research/real_math/millennium/cross_problem/poincare_transfer/01_frontier/XM_PC_NS_001_MATH_CONTEXT_FIBER_20260812.json",
+    "research/real_math/millennium/cross_problem/poincare_transfer/07_memory/XM_PC_NS_001_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "research/real_math/millennium/cross_problem/poincare_transfer/07_memory/XM_PC_NS_001_OBSTRUCTION_TRANSFORMATION_MEMORY_20260812.json"
+  ],
+  "exhaustion_witness": null,
+  "glue_search_status": "NOT_RUN",
+  "glue_witness": null,
+  "jump_mapping_witnesses": [
+    {
+      "artifact_hash": "sha256:91fb3dc5dc8ab6c33325f0e611af6ed8df6780ad3e7b0f7d7f995eab0c8b593c",
+      "disanalogies": [
+        "Ricci entropy uses a coupled conjugate heat density; enstrophy has cubic vortex stretching",
+        "Navier-Stokes has no authorized canonical-neighborhood surgery",
+        "Poincare topology and least-area disks do not map to fluid regularity"
+      ],
+      "episode_id": "E-PC-ENTROPY-NONCOLLAPSE-CANONICAL-SURGERY-EXTINCTION",
+      "evidence_pointers": [
+        "research/real_math/millennium/poincare_conjecture/01_frontier/PC_SUCCESS_TRANSFORMATION_CHAIN_20260812.json",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a1_CONTEXT_FIBER_20260811.json"
+      ],
+      "precondition_mapping": [
+        [
+          "sign-definite source evolution identity",
+          "derive exact enstrophy identity and test its sign on frozen smooth divergence-free data"
+        ],
+        [
+          "quantitative noncollapse at singular scales",
+          "not claimed; outside this first-condition falsifier"
+        ],
+        [
+          "exhaustive high-curvature classification",
+          "not claimed; outside this first-condition falsifier"
+        ],
+        [
+          "controlled restart preserving estimates/topology",
+          "not claimed; no Navier-Stokes surgery/restart is proposed"
+        ],
+        [
+          "terminal coercive width inequality",
+          "not claimed; finite extinction has no target analogue here"
+        ]
+      ],
+      "role_mapping": [
+        [
+          "dissipative evolution",
+          "dissipative evolution"
+        ],
+        [
+          "candidate monotone functional",
+          "candidate monotone functional"
+        ],
+        [
+          "nonlinear production channel",
+          "nonlinear production channel"
+        ],
+        [
+          "singular-scale obstruction",
+          "singular-scale obstruction"
+        ]
+      ],
+      "shared_constraints": [
+        "three dimensions",
+        "smooth pre-singular regime"
+      ],
+      "shared_relations": [
+        "functional derivative equals dissipative term plus nonlinear production",
+        "source success requires sign-definite total defect",
+        "target transfer fails if admissible data make production dominate"
+      ],
+      "target_obstruction_id": "OBS-XM-PC-NS-ENSTROPHY-SIGN",
+      "target_validation_obligations": [
+        "freeze one explicit smooth periodic divergence-free vector field before algebra execution",
+        "derive the exact enstrophy derivative with stated torus normalization",
+        "prove the sign by exact Fourier/trigonometric integration",
+        "separate instantaneous no-transfer from any global-regularity claim"
+      ],
+      "unmatched_source_preconditions": [],
+      "witness_id": "MAP-PC-TO-NS-ENSTROPHY-PRECONDITION"
+    }
+  ],
+  "jump_search_status": "MATCHES_FOUND",
+  "missing_transformation_specification": null,
+  "obstruction": {
+    "constraints": [
+      "three dimensions",
+      "smooth pre-singular regime",
+      "smooth periodic divergence-free data",
+      "positive viscosity",
+      "instantaneous classical solution interval"
+    ],
+    "desired_transition": [
+      "establish the candidate functional's sign-definite monotonicity before using it for singularity control"
+    ],
+    "domain": "mathematics / nonlinear PDE",
+    "failure_mechanisms": [
+      "an uncontrolled production or collapse channel can invalidate scalar monotonicity as a singularity-control input"
+    ],
+    "forbidden_losses": [
+      "assuming away vortex stretching",
+      "using two-dimensional dynamics",
+      "claiming a Navier-Stokes solution",
+      "treating computation as proof"
+    ],
+    "invariants_to_preserve": [
+      "incompressibility",
+      "periodicity and smoothness",
+      "exact enstrophy identity",
+      "open-root authority boundary"
+    ],
+    "obstruction_id": "OBS-XM-PC-NS-ENSTROPHY-SIGN",
+    "relations": [
+      "functional derivative equals dissipative term plus nonlinear production",
+      "source success requires sign-definite total defect",
+      "target transfer fails if admissible data make production dominate"
+    ],
+    "roles": [
+      "dissipative evolution",
+      "candidate monotone functional",
+      "nonlinear production channel",
+      "singular-scale obstruction"
+    ]
+  },
+  "research_memory_review_hash": "sha256:d25230cb6c02fcb1c77bdffe2b5038632e9c10488c9db93d4c2f9223cef6e8f1",
+  "review_id": "XM-PC-NS-001-OBSTRUCTION-TRANSFORMATION-REVIEW-20260812",
+  "selected_episode_ids": [
+    "E-PC-ENTROPY-NONCOLLAPSE-CANONICAL-SURGERY-EXTINCTION"
+  ],
+  "selected_mode": "JUMP",
+  "target_atom_id": "XM-PC-NS-001",
+  "target_context_hash": "sha256:29ed9784fbccb0e16018e27cc9c934dd38fa58faab8b86af0986bc8da9283cb5",
+  "unresolved_warnings": [
+    "JUMP licenses only a target precondition falsifier.",
+    "The source theorem chain supplies no Navier-Stokes theorem authority.",
+    "The root and NS-B1a1 remain open under every result branch."
+  ]
+}
