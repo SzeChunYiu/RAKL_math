@@ -63,7 +63,7 @@ def test_global_ledger_is_content_bound_and_covers_the_full_portfolio() -> None:
     ledger = _load()
     assert ledger["artifact_hash"] == _canonical_hash(ledger)
     assert ledger["base_repository_sha"] == (
-        "21d22075fa250e4ded412fd292b7942b87503266"
+        "79e853ad56b5704348e194f1dc42a6943029c381"
     )
     assert {lane["lane_id"] for lane in ledger["lanes"]} == EXPECTED_LANES
     assert len(ledger["lanes"]) == len(EXPECTED_LANES)
@@ -173,3 +173,59 @@ def test_global_artifact_audit_distinguishes_names_from_credit() -> None:
     assert audit["rules"]["computation_alone_is_not_proof"] is True
     assert audit["rules"]["same_context_review_is_not_independent"] is True
     assert audit["rules"]["assurance_metadata_credit_units"] == 0
+
+
+def test_c046_adds_one_deduplicated_math_claim_and_zero_assurance_credit() -> None:
+    ledger = _load()
+    lanes = {lane["lane_id"]: lane for lane in ledger["lanes"]}
+    c046 = [
+        item
+        for item in lanes["p_vs_np"]["credited_items"]
+        if item["item_id"].startswith("MATH-PNP-C046-")
+    ]
+    assert c046 == [
+        {
+            "item_id": "MATH-PNP-C046-HIGH-HALF-SEPARATION",
+            "credit_type": "PROOF_OR_LEMMA",
+            "exact_claim": (
+                "For every n at least 17 in the frozen one-sided family, the complement row projection lies below "
+                "2^(n-1), while every canonical MAGIC n-bit prefix lies at or above 2^(n-1); therefore no later "
+                "canonical UNSAT prefix-row collision exists in that family."
+            ),
+            "scope": (
+                "The exact C041 one-sided recursion, inherited row labels, frozen seed complement, canonical "
+                "MAGIC=11100101 encoding, and n at least 17."
+            ),
+            "authority": "SAME_CONTEXT_HAND_DERIVATION_RECORD_CHECK_PASS",
+            "mathematical_credit": True,
+            "credit_units": 1,
+            "evidence_pointers": [
+                "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C046_HIGH_HALF_SEPARATION_PROOF_CERTIFICATE_FREEZE_20260812.json",
+                "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C046_HIGH_HALF_SEPARATION_PROOF_CHECK_RESULT_20260812.json",
+            ],
+            "non_implications": [
+                "No formal proof, independent review, novelty, cover or circuit lower bound, or P-versus-NP consequence.",
+                "The certificate-record evaluator checks obligation records and evidence pointers, not derivation semantics.",
+                "The feasibility-first application feedback remains proposal-only and creates no second credit unit.",
+            ],
+        }
+    ]
+    assert ledger["totals"]["mathematical_credit_units"] == 36
+    assert ledger["totals"]["mathematical_credit_units_by_lane"]["p_vs_np"] == 14
+    assert ledger["totals"]["mathematical_credit_units_by_type"]["PROOF_OR_LEMMA"] == 11
+
+    exclusion = next(
+        item
+        for item in ledger["excluded_provenance"]
+        if item["item_id"] == "EXCLUDED-C046-ASSURANCE-AND-CERTIFICATE-RECORD-CHECK"
+    )
+    assert exclusion["mathematical_credit"] is False
+    assert exclusion["credit_units"] == 0
+    assert all(
+        token in exclusion["reason"].lower()
+        for token in ("chronology", "tests", "hash", "record-completeness")
+    )
+    assert not any(
+        item["item_id"] == "EXCLUDED-OPEN-PR-244-NONCANONICAL-PENDING"
+        for item in ledger["excluded_provenance"]
+    )
