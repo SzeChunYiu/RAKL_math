@@ -1,0 +1,115 @@
+{
+  "schema_version": "research-memory-review-v3-proposal-shadow",
+  "target_atom_id": "NS-B1a3b",
+  "target_context_hash": "sha256:4d62297d17027481b28283c707e69e79544c3866e82e66ff559eb8071af194b7",
+  "bound_rakl_math_base_sha": "02c5fb7764116cf075d8dd5efd7b6fe835275ab9",
+  "bound_context_commit_sha": "8790a309bc59ab62015349e762f7ee9eb1dba699",
+  "candidate_method_families": [
+    "transport a fixed double-cone/high-vorticity direction restriction through Type-I blow-up compactness",
+    "use Lei-Ren-Tian great-circle range as a direct pre-limit singularity discriminator",
+    "upgrade weak derivative control to strong vorticity compactness on high-vorticity sets",
+    "replace pointwise direction by a lower-semicontinuous flux/range observable",
+    "apply stronger geometric-depletion criteria only if their extra concentration/coherence hypotheses are independently derived"
+  ],
+  "success_memory": {
+    "retrieved_ids": [
+      "LRT-THM1.1-DOUBLE-CONE",
+      "LRT-COR1.5-GREAT-CIRCLE",
+      "AB-TYPEI-ANCIENT",
+      "AB-COMPACT",
+      "GM-TYPEI-DIRECTION-CONTINUITY",
+      "GRUJIC-2607.08866-LOG-BMO-DEPLETION",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "selected_ids": [
+      "LRT-THM1.1-DOUBLE-CONE",
+      "LRT-COR1.5-GREAT-CIRCLE",
+      "AB-COMPACT",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "rejected_or_deferred": [
+      {
+        "id": "GM-TYPEI-DIRECTION-CONTINUITY",
+        "reason": "useful analogue but exact theorem hypotheses were not repinned in this cycle; in any case uniform continuity of xi is an extra hypothesis rather than an output of finite-I compactness"
+      },
+      {
+        "id": "GRUJIC-2607.08866-LOG-BMO-DEPLETION",
+        "reason": "recent orthogonal frontier route, but it requires critical L^{3/2,infinity} vorticity concentration plus weighted-BMO directional control not derived from the active fibre"
+      },
+      {
+        "id": "CONSTANTIN-FEFFERMAN/BEIRAO-BERSELLI-COHERENCE",
+        "reason": "classical family requires quantitative direction regularity; not selected until inheritance of a direction observable is established"
+      }
+    ]
+  },
+  "failure_memory": {
+    "retrieved_ids": [
+      "F-NS-B1a3-PROFILE-LEAKAGE",
+      "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "F-NS-B1a3-UNIQUE-CONTINUATION-HYPOTHESIS-GAP",
+      "F-NS-B1a3-EQUATION-CHANGE-MISMATCH",
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"
+    ],
+    "selected_ids": [
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "F-NS-B1a3-EQUATION-CHANGE-MISMATCH"
+    ],
+    "rejected_or_deferred": [
+      {
+        "id": "F-NS-B1a3-PROFILE-LEAKAGE",
+        "reason": "global symmetry leakage remains real but is not the first discriminator for a local fixed-cylinder geometry theorem"
+      },
+      {
+        "id": "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+        "reason": "Lei-Ren-Tian's selected criterion is local suitable-weak; far-field pressure/tail control is therefore not its theorem-input bottleneck"
+      },
+      {
+        "id": "F-NS-B1a3-UNIQUE-CONTINUATION-HYPOTHESIS-GAP",
+        "reason": "backward uniqueness is bypassed, not solved, in the selected geometry route"
+      },
+      {
+        "id": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+        "reason": "prevents returning to scalar shell bookkeeping but does not decide direction transport"
+      },
+      {
+        "id": "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION",
+        "reason": "prevents finite-energy critical-core counting but does not decide direction transport"
+      }
+    ],
+    "routing_effects": [
+      "Do not interpret the new geometry route as a repair of the prior global-L3 tail obstruction; it is a different local consumer.",
+      "Do not apply a geometry theorem to an ancient limit until the derivative-defined hypothesis is shown to survive the actual convergence.",
+      "Prefer a topology falsifier for vorticity-direction transport before attempting a new Liouville theorem.",
+      "If direction transport fails, test the source theorem directly on the pre-limit suitable weak solution or identify a flux observable that is stable under the available compactness."
+    ]
+  },
+  "retrieved_but_rejected_routes": [
+    {
+      "route": "infer xi_n -> xi from u_n -> u strongly in L3_loc",
+      "reason": "curl is derivative-defined and xi additionally normalizes by |omega|; this inference has no continuity under the registered topology"
+    },
+    {
+      "route": "use weak L2 gradient convergence as pointwise directional convergence",
+      "reason": "weak convergence does not control normalized vector directions or moving high-vorticity superlevel sets"
+    },
+    {
+      "route": "declare all Type-I singularities geometrically coherent after blow-up",
+      "reason": "Lei-Ren-Tian proves regularity under confinement; at a singular point their direction set must instead be large enough to meet every great circle"
+    },
+    {
+      "route": "invoke global-tail or backward-uniqueness machinery inside the local geometry proof",
+      "reason": "not required by the selected local theorem and would reintroduce already blocked interfaces"
+    }
+  ],
+  "missed_memory_audit": {
+    "status": "CANNOT_MEASURE",
+    "reason": "no exhaustive relevance-labelled universe across all Navier-Stokes and cross-problem memory was frozen"
+  },
+  "pre_memory_preference": "attempt to derive or assume a vorticity-direction coherence condition on the finite-I ancient limit and then apply a geometric rigidity theorem",
+  "post_memory_preference": "first audit whether the actual compactness topology transports any high-vorticity direction observable; in parallel, treat Lei-Ren-Tian as a direct pre-limit singularity classifier rather than an inherited ancient-state property",
+  "selected_next_action": "Run a producer-consumer transport audit. Use an explicit smooth divergence-free high-frequency sequence to falsify the bare topology implication from strong local velocity convergence to vorticity-direction convergence, then state the minimal additional transport certificate required for a valid geometric glue.",
+  "experience_authority": "SEARCH_PRIORITY_ONLY",
+  "authority": "PROPOSAL_SHADOW_SEARCH_ROUTING_ONLY"
+}
