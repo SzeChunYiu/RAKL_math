@@ -1,0 +1,129 @@
+{
+  "actual_fibre_consulted": [
+    {
+      "blob": "fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+      "id": "C041-CODE",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+      "use": "exact MAGIC/gamma/payload/padding grammar"
+    },
+    {
+      "blob": "04e808d56f433b143dc816117328f623e41807ee",
+      "id": "C048-TRANSFER",
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C048_LITERAL_TRANSPOSE_PROOF_CHECK_RESULT_20260812.json",
+      "use": "collision iff H_k intersects P_(k+1); swapped reduction"
+    },
+    {
+      "blob": "edb95840fc6818d4a22cc130171b69f68ad44454",
+      "id": "C049-FIBRE",
+      "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C049_MATH_CONTEXT_FIBER_20260812.json",
+      "use": "syntax-before-UNSAT route and disanalogies"
+    },
+    {
+      "blob": "65057f9b71f8d683ff07b07d5bba9ec514fcf96d",
+      "id": "C049-K12",
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C049_K12_PROOF_CHECK_RESULT_20260812.json",
+      "use": "k=12 fixed-bit failure; forces rederivation at later k"
+    }
+  ],
+  "application": {
+    "base_sha": "3871283cfe5040801b174e25b045e05ee0228cc2",
+    "repo": "SzeChunYiu/RAKL_math"
+  },
+  "atom_id": "O9d12a2a1b-C050",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "evaluation_authorized": "symbolic derivation and bounded calibration only after this freeze; no root/downstream target promotion",
+  "expert_cell": [
+    {
+      "role": "complexity/combinatorics",
+      "task": "audit implication from overlap to only the C048 collision interface"
+    },
+    {
+      "role": "encoding/formal-language",
+      "task": "derive exact gamma/payload/padding and bit indices"
+    },
+    {
+      "role": "lower-bound/barrier transfer",
+      "task": "block any inference from local collision to circuit lower bounds"
+    },
+    {
+      "role": "adversarial verifier",
+      "task": "seek alternative parameter/padding parses and indexing counterexamples"
+    },
+    {
+      "role": "RAKL provenance/gating",
+      "task": "enforce chronology, proposal authority, metrics, trace, root OPEN"
+    }
+  ],
+  "experience_routing": {
+    "changed_route": [
+      {
+        "effect": "choose mathematically next k=13 rather than transport the k=12 bit-4 argument or scan k blindly",
+        "id": "C049-K12"
+      }
+    ],
+    "missed": "CANNOT_MEASURE: repository-wide semantic retrieval recall is not observable from connector results",
+    "retrieved_rejected": [
+      {
+        "id": "C041A/C041B/C046R family",
+        "reason": "cover-side absorption/dual-load episodes are downstream of the current exact syntax-overlap atom; using them now would conflate representation with cover growth"
+      }
+    ],
+    "selected": [
+      "C048-TRANSFER",
+      "C049-K12"
+    ]
+  },
+  "falsifier_plan": [
+    "enumerate integer (v,m) parameter pairs compatible with total canonical lengths 26 and 28 symbolically",
+    "derive split location and required equality 1||c = prefix_14(y)",
+    "if syntax permits a witness, prove parent x UNSAT without computation-as-proof",
+    "if syntax forbids, exhibit a fixed field/bit contradiction with exact indexing"
+  ],
+  "framework": {
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "main_sha": "168c341b6d5edb53dcd25289a95649645bc5cf9f",
+    "method_version": "3.0.0",
+    "repo": "SzeChunYiu/RAKL"
+  },
+  "frozen_at": "2026-08-12T05:02:00Z",
+  "local_vs_gluing": {
+    "gluing_target": "NONE_THIS_STAGE; downstream cover/circuit bridge remains separately open",
+    "local_target": "exact k=13 language intersection"
+  },
+  "operators_motifs": [
+    "exact integer length equation",
+    "gamma-field parse",
+    "prefix/suffix synchronization",
+    "counterexample-first bit mismatch",
+    "UNSAT side-condition only after syntax survives"
+  ],
+  "preaction_payload_sha256": "e3b5a42ab07c22baf13de6eb66ce41bd5b545994ab2d8f98c4b692e65f847516",
+  "problem_signature": {
+    "parent_atom": "O9d12a2a1b-C049",
+    "qoi": "FIRST_STRICT_LATER_LAYER_OVERLAP_AT_K13",
+    "root": "P versus NP",
+    "root_issue": 2,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "statement": "Decide H_13 ∩ P_14 exactly for the frozen C041 canonical grammar and C048 swapped reduction; no k>13 inference."
+  },
+  "saturation_axes_pre": {
+    "EXPERIENCE_PATTERN": "REOPENED by strict later-k discriminator",
+    "KNOWLEDGE": "REOPENED at k=13 exact grammar",
+    "META_METHOD": "FLAT",
+    "OBSTRUCTION": "REOPENED",
+    "OPERATOR": "FLAT",
+    "PATH": "REOPENED",
+    "RELATION": "REOPENED"
+  },
+  "schema_version": "1.0.0",
+  "search_policy": {
+    "alternatives_rejected": [
+      "blind k enumeration",
+      "reuse k=12 bit-4 separation",
+      "change encoding/split",
+      "return to cover LP before overlap is decided"
+    ],
+    "choice": "SEARCH",
+    "reason": "smallest target-blind strict successor k=13; derive exact canonical length/field constraints before semantic UNSAT"
+  }
+}
