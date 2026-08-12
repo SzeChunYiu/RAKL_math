@@ -1,0 +1,63 @@
+{
+  "schema_version": "ym-r18-append-only-metrology-correction-v1",
+  "cycle_id": "YM-S1a2g-R18-20260812",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "reason": "The initial receipt compacted trace_continuation entries 10-13 and therefore did not expose every previous/artifact hash. This append-only correction supplies the complete continuation from the actual frozen fibre seq=8. It changes no mathematics, novelty counts, diagnosis, obstruction, lesson, or authority.",
+  "supersedes_fields": {
+    "RAKL_CYCLE_METRICS.trace_final_hash": "sha256:84a22967467dfe744d180e66cc355b556f6ddbf663de010c39a40a92d5c060ec"
+  },
+  "trace_continuation": [
+    {
+      "seq": 9,
+      "event": "SOURCE_CLAIM_EXTRACTED",
+      "atom_id": "YM-S1a2g",
+      "previous_event_hash": "sha256:9f68dadf5245911864850184408f6666de372a87e4056650723b42da944c2099",
+      "timestamp": "2026-08-12T04:39:52Z",
+      "artifact_hash": "sha256:928308d57392f486bdb905c45b22d2e6874de8e59975ec800a4d3faf461185e9"
+    },
+    {
+      "seq": 10,
+      "event": "COUNTEREXAMPLE_FIRST_CHECK",
+      "atom_id": "YM-S1a2g",
+      "previous_event_hash": "sha256:928308d57392f486bdb905c45b22d2e6874de8e59975ec800a4d3faf461185e9",
+      "timestamp": "2026-08-12T04:39:52Z",
+      "artifact_hash": "sha256:4b493b31bf59f98103b185fe7334f1c6298c3d700aec139531db33f91e5c76c2"
+    },
+    {
+      "seq": 11,
+      "event": "CONTRADICTION_DIAGNOSED",
+      "atom_id": "YM-S1a2g",
+      "previous_event_hash": "sha256:4b493b31bf59f98103b185fe7334f1c6298c3d700aec139531db33f91e5c76c2",
+      "timestamp": "2026-08-12T04:39:52Z",
+      "artifact_hash": "sha256:4db05e49e356b361135498678d7c2c15bd155376b46499909eb19bb96f69bf9a"
+    },
+    {
+      "seq": 12,
+      "event": "GLUING_AUDIT",
+      "atom_id": "YM-S1a2g",
+      "previous_event_hash": "sha256:4db05e49e356b361135498678d7c2c15bd155376b46499909eb19bb96f69bf9a",
+      "timestamp": "2026-08-12T04:39:52Z",
+      "artifact_hash": "sha256:7ad51630db8202377985ccebb2636642208ac47e3cb4b4facc785ad9013343b0"
+    },
+    {
+      "seq": 13,
+      "event": "EXPERT_SYNTHESIS",
+      "atom_id": "YM-S1a2g",
+      "previous_event_hash": "sha256:7ad51630db8202377985ccebb2636642208ac47e3cb4b4facc785ad9013343b0",
+      "timestamp": "2026-08-12T04:39:52Z",
+      "artifact_hash": "sha256:713fc5c283995d4a1445007727c541315bcc27798706195acd9d171d5660cdec"
+    },
+    {
+      "seq": 14,
+      "event": "OUTCOME_RECORDED",
+      "atom_id": "YM-S1a2g",
+      "previous_event_hash": "sha256:713fc5c283995d4a1445007727c541315bcc27798706195acd9d171d5660cdec",
+      "timestamp": "2026-08-12T04:39:52Z",
+      "artifact_hash": "sha256:84a22967467dfe744d180e66cc355b556f6ddbf663de010c39a40a92d5c060ec"
+    }
+  ],
+  "learning_credit": {
+    "protected_novelty_delta": {"KNOWLEDGE": 0, "OPERATOR": 0, "EXPERIENCE_PATTERN": 0, "OBSTRUCTION": 0, "RELATION": 0, "PATH": 0, "META_METHOD": 0},
+    "note": "Assurance/metrology correction only; raw repository growth is not learning."
+  }
+}
