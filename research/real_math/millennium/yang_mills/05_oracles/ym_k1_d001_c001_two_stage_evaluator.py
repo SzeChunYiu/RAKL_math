@@ -19,6 +19,7 @@ class StageADerivation(str, Enum):
 
 class StageBProof(str, Enum):
     EXACT_INTERVAL_MARGIN = "EXACT_INTERVAL_MARGIN"
+    EXACT_PREDICATE_DISPROVED = "EXACT_PREDICATE_DISPROVED"
     FACTOR_TWO_ONLY = "FACTOR_TWO_ONLY"
     INSUFFICIENT = "INSUFFICIENT"
     NOT_ENTERED = "NOT_ENTERED"
@@ -86,6 +87,13 @@ def evaluate(world: EvaluationWorld) -> EvaluationResult:
             "PASS",
             "CANNOT_CHECK",
             "Stage B cannot run before a positive g_star is separately frozen.",
+        )
+    if world.stage_b_proof is StageBProof.EXACT_PREDICATE_DISPROVED:
+        return EvaluationResult(
+            ResultBranch.FLOW_MARGIN_FAIL_B,
+            "PASS",
+            "FAIL",
+            "At least one exact full-interval Stage-B predicate was disproved.",
         )
     if world.stage_b_proof is StageBProof.FACTOR_TWO_ONLY:
         return EvaluationResult(

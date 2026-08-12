@@ -35,6 +35,11 @@ def test_evaluator_identity_and_planted_worlds_are_exact() -> None:
         "FLOW_MARGIN_FAIL_B",
         "CANNOT_CHECK",
     }
+    assert document["candidate_branch_completeness_receipt"] == {
+        "direct_exact_predicate_disproof_observed_branch": "FLOW_MARGIN_FAIL_B",
+        "expected_branch": "FLOW_MARGIN_FAIL_B",
+        "complete": True,
+    }
 
 
 def test_round_contains_no_target_result_and_grants_no_execution_authority() -> None:

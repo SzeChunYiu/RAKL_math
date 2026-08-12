@@ -54,6 +54,7 @@ def planted_world_receipt() -> list[dict[str, Any]]:
 
 def build_document() -> dict[str, Any]:
     worlds = planted_world_receipt()
+    m = module()
     document = {
         "schema_version": "1.0.0",
         "record_type": "YM_K1_D001_C001_EVALUATOR_IDENTITY_FREEZE",
@@ -71,6 +72,7 @@ def build_document() -> dict[str, Any]:
                 "Stage A routes separately derived incompatible constants to STRONGER_PREMISE_MISMATCH_A.",
                 "Stage B cannot enter without a Stage-A pass and a separately frozen positive g_star.",
                 "Stage B rejects a factor-two-only argument as FLOW_MARGIN_FAIL_B.",
+                "Stage B routes a direct disproof of either exact interval predicate to FLOW_MARGIN_FAIL_B.",
                 "APPLICABLE_BRIDGE requires Stage-A compatibility and exact full-interval Stage-B predicates.",
             ],
         },
@@ -88,6 +90,18 @@ def build_document() -> dict[str, Any]:
             "contamination_assessment": "GENERIC_BRANCH_LOGIC_PREEXISTED_RESULT_ACCESS; TARGET_EVIDENCE_AND_CLASSIFICATION_NOT_EMBEDDED",
         },
         "planted_world_receipt": worlds,
+        "candidate_branch_completeness_receipt": {
+            "direct_exact_predicate_disproof_observed_branch": m.evaluate(
+                m.EvaluationWorld(
+                    m.StageADerivation.SEPARATE_CONSTANTS,
+                    True,
+                    True,
+                    m.StageBProof.EXACT_PREDICATE_DISPROVED,
+                )
+            ).branch.value,
+            "expected_branch": "FLOW_MARGIN_FAIL_B",
+            "complete": True,
+        },
         "all_planted_worlds_match": all(row["match"] for row in worlds),
         "chronology_boundary": {
             "evaluator_was_specified_by_pr405_and_authorized_for_implementation_by_pr407": True,
