@@ -1,0 +1,66 @@
+{
+  "artifact_hash": "sha256:eea72cd33cfab1b8e0f29c08887588c1f9daab7a24cdf94d678374f6432b362d",
+  "experiences": [
+    {
+      "artifact_hash": "sha256:50596d6f20072319cdd428b55e4eeb617c95bd5216b458244ae3dfbd2aa3ca56",
+      "atom_id": "YM-S1a2i-K1-D001",
+      "broken_assumptions": [
+        "one overloaded source symbol can be split into independently adjustable constants without a derivation",
+        "shrinking g_star repairs a coefficient mismatch between two g^2-scaled radii",
+        "qualitative upstream small-ball control automatically maps to the later proportional graph ball"
+      ],
+      "candidate_id": "YM-S1a2i-K1-D001-C001-TWO-STAGE-SOURCE-BRIDGE",
+      "competing_diagnoses": [
+        "hidden compatible constants intended by notation",
+        "absolute r-ball or norm rescaling supplies an unrecorded bridge",
+        "later source theorem supplies domain containment"
+      ],
+      "context_packet_hash": "sha256:35b646d79a98d7255b0c2a9f60bfb582e1f8dbeaae3218f9c7225cd902b2aec0",
+      "diagnosis_status": "SUPPORTED_BOUNDED",
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_K1_D001_C001_STAGE_A_SOURCE_RESULT_20260812.json",
+        "sha256:0843df987c0d200d33a0410a5676caeef363dd5f198dd6d5bc43c0f64b5ae32c",
+        "research/real_math/millennium/yang_mills/05_oracles/YM-S1a2i_K1_D001_C001_STAGE_A_RESULT_20260812.json",
+        "sha256:6c124a3dee3eb6bf54e46bc759fe8778edfe228f29a4ba9460f95af88e526734",
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1a2i_K1_D001_C001_STAGE_A_MATHEMATICAL_LESSON_20260812.json",
+        "sha256:e80773989ff141cc12afd557f58bfc983d78f67c2236f6f001ac7fad4ce2fa92"
+      ],
+      "failure_id": "F-YM-K1-D001-C001-CONFLATED-CONSTANT-DOMAIN-MISMATCH",
+      "failure_mode": "the target graph radius is chosen from the forcing role of a source constant but exceeds the same constant's admitted-domain role",
+      "falsifier_or_attempt": "A source-faithful derivation of separate C_dom,C_force,rho together with 4*C_force/(1-rho)<=C_dom, or a theorem proving the one-step estimate directly on every ||K||<=c_K g^2 input for the chosen c_K, falsifies this diagnosis.",
+      "local_repair_attempts": [
+        "read the complete lemma proof rather than only the display",
+        "searched full bound TeX for separate constant derivations and later repairs",
+        "tested the literal symbolic world without inventing numeric constants",
+        "preserved alternate repair routes as reopen conditions"
+      ],
+      "method_family": "source-scoped strict contraction on a shrinking O(g^2) graph radius",
+      "observed_result": "The complete Lemma 40.3 proof provides only one existential C in both roles and no derivation of a separate compatible pair.  Under the literal source binding C_dom=C_force=C and 0<rho<1, c_K/C_dom=4/(1-rho)>4, so the chosen graph ball exceeds the displayed contraction domain.",
+      "research_trace_event_id": "YM-S1a2i-K1-D001-C001-E09",
+      "residual_signature": [
+        "EXISTENTIAL_CONSTANT_CO_WITNESS_NOT_SEPARABLE",
+        "C_DOM_EQUALS_C_FORCE_IN_DISPLAYED_SOURCE",
+        "C_K_OVER_C_DOM_EQUALS_4_OVER_1_MINUS_RHO_GREATER_THAN_ONE",
+        "STAGE_B_NOT_ENTERED"
+      ],
+      "scope_conditions": [
+        "Wilson Zenodo 10.5281/zenodo.19393832 at the bound PDF/TeX hashes",
+        "only the Section 40 K-coordinate domain inclusion",
+        "reusable warning rather than a blacklist if a future source supplies separate compatible witnesses"
+      ],
+      "selected_diagnosis": "SUPPORTED_CONFLATED_CONSTANT_DOMAIN_MISMATCH_IN_THE_DISPLAYED_SOURCE_STATEMENT",
+      "timestamp": "2026-08-12T16:15:00Z"
+    }
+  ],
+  "links": [
+    {
+      "rationale": "Stage A turns the earlier unproved domain compatibility residual into a source-bound symbolic failure for the displayed same-C statement while preserving alternate-source repair routes.",
+      "relation": "SUPERSEDES_DIAGNOSIS",
+      "source_id": "F-YM-K1-D001-C001-CONFLATED-CONSTANT-DOMAIN-MISMATCH",
+      "target_id": "F-YM-K1-D001-JOINT-DOMAIN-AND-FLOW-TRANSPORT-MISMATCH"
+    }
+  ],
+  "parent_failure_id": "F-YM-K1-D001-JOINT-DOMAIN-AND-FLOW-TRANSPORT-MISMATCH",
+  "record_type": "FAILURE_EXPERIENCE_LATTICE_DELTA",
+  "schema_version": "1.0.0"
+}

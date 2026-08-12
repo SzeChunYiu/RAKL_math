@@ -1,0 +1,51 @@
+{
+  "artifact_hash": "sha256:e80773989ff141cc12afd557f58bfc983d78f67c2236f6f001ac7fad4ce2fa92",
+  "atom_id": "YM-S1a2i-K1-D001",
+  "attempted_mathematical_implication": "Derive source-faithful C_dom,C_force,rho for Wilson Lemma 40.3 and prove that the Theorem 40.5 choice c_K=4C_force/(1-rho) satisfies c_K<=C_dom, so the one-step contraction can legally be applied on the entire chosen K graph ball.",
+  "candidate_id": "YM-S1a2i-K1-D001-C001-TWO-STAGE-SOURCE-BRIDGE",
+  "classification": "STRONGER_PREMISE_MISMATCH_A",
+  "exact_mathematical_result_or_failure": "The complete Lemma 40.3 proof provides only one existential C in both roles and no derivation of a separate compatible pair.  Under the literal source binding C_dom=C_force=C and 0<rho<1, c_K/C_dom=4/(1-rho)>4, so the chosen graph ball exceeds the displayed contraction domain.",
+  "framework_method_implication_proposal": {
+    "authority": "APPLICATION_LESSON_NOT_FRAMEWORK_PROMOTION",
+    "mathematical_research_lesson": "When transferring an estimate with existential constants, preserve co-witness structure and same-symbol role coupling.  A later proof may not treat a domain constant and a forcing constant as independently tunable unless the source derivation supplies a witness and compatibility map.",
+    "proposed_gate_question": "Are all constants used by the target theorem jointly witnessed under the source quantifiers, and does the target's parameter choice remain inside the exact source domain?",
+    "status": "QUARANTINED_PROPOSAL_ONLY"
+  },
+  "mathematical_falsifier": "A source-faithful derivation of separate C_dom,C_force,rho together with 4*C_force/(1-rho)<=C_dom, or a theorem proving the one-step estimate directly on every ||K||<=c_K g^2 input for the chosen c_K, falsifies this diagnosis.",
+  "proof_or_source_evidence": [
+    "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_K1_D001_C001_STAGE_A_SOURCE_RESULT_20260812.json",
+    "sha256:0843df987c0d200d33a0410a5676caeef363dd5f198dd6d5bc43c0f64b5ae32c",
+    "research/real_math/millennium/yang_mills/05_oracles/YM-S1a2i_K1_D001_C001_STAGE_A_RESULT_20260812.json",
+    "sha256:6c124a3dee3eb6bf54e46bc759fe8778edfe228f29a4ba9460f95af88e526734",
+    "Wilson TeX 9554-9571,9615-9643,9725-9750",
+    "Wilson upstream TeX 7491-7566,7653-7681,11588-11625,11674-11686,12027-12040"
+  ],
+  "record_type": "YM_K1_D001_C001_STAGE_A_SEVEN_FIELD_MATHEMATICAL_LESSON",
+  "repair_or_next_discriminator": "Do not enter Stage B.  Search a stronger source or reconstruct the one-step estimate with explicit domain bookkeeping; the cheapest repair must expose how the contraction domain changes when the forcing bound and norm normalization change, then re-run the frozen compatibility inequality.",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "run_type": "RETROSPECTIVE_REPRODUCTION_NOT_PROSPECTIVE_DISCOVERY",
+  "schema_version": "1.0.0",
+  "scope": "Only the Lemma 40.3/Theorem 40.5 K-coordinate domain inclusion in Wilson Zenodo version 10.5281/zenodo.19393832.  Stage B, lambda, base inversion, the full stable manifold, continuum/OS construction and mass gap are excluded.",
+  "strict_rakl_discovery_chronology": false,
+  "supported_and_competing_mathematical_causes": {
+    "cause_status": "SUPPORTED_BOUNDED_SOURCE_APPLICABILITY_DIAGNOSIS_NOT_GLOBAL_IMPOSSIBILITY",
+    "competing": [
+      "the notation suppresses two independently derived compatible constants",
+      "a rescaled norm or absolute small ball contains the chosen graph ball with the same contraction estimate",
+      "a later or stronger primary-source version supplies the missing comparison"
+    ],
+    "supported": [
+      "same-symbol coupling of the domain radius and forcing coefficient",
+      "absence of a source derivation connecting upstream absolute r/epsilon_* balls to the proportional C_dom g^2 ball",
+      "shrinking g_star cannot change the ratio of two radii both proportional to g^2",
+      "uniform scalar norm rescaling preserves C_force/C_dom and therefore preserves the mismatch"
+    ]
+  },
+  "zero_mathematical_credit": [
+    "Git/branch/PR state",
+    "CI/tests",
+    "schemas/hashes/chronology",
+    "telemetry/repository growth",
+    "file download mechanics"
+  ]
+}
