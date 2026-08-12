@@ -1,0 +1,78 @@
+{
+  "schema_version": "ns-pre-candidate-packet-v3-shadow",
+  "atom_id": "NS-B2a1c1",
+  "parent_atom_id": "NS-B2a1c",
+  "frozen_at": "2026-08-12T04:35:07Z",
+  "packet_hash": "sha256:663e72979a23265725349862397e5d8a7c2d94b75613ba062d504a7ea9a858b9",
+  "root_contract": {
+    "root": "NS0",
+    "statement": "Solve one exact official Clay Navier-Stokes outcome (A), (B), (C), or (D)",
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "authority": "NONE",
+    "independent_mathematical_reviews": "0/3"
+  },
+  "framework": {
+    "repo": "SzeChunYiu/RAKL",
+    "main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "method_version": "3.0.0",
+    "package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "skill_manifest_version": "0.7.0"
+  },
+  "application_base": {
+    "repo": "SzeChunYiu/RAKL_math",
+    "main_sha": "d5d6ce6026bfdef0a2cd6f2d57ac38ff30af8f51",
+    "tree_sha": "a904f9c9bb7b5ba1a5aacf35ccb7261c226e049f"
+  },
+  "problem_signature": "Axisymmetric Type-II Navier-Stokes Euler-scaling producer with F(a)=a^(alpha-1) versus Section-4 cutoff condition (4.4), compared to the current 2402.13229v3 pure-power condition (2.11).",
+  "qoi": "Find the exact alpha,l1 compatibility window and identify the next same-theory rigidity interface; no theorem or root promotion is sought.",
+  "fibre_contents_actually_consulted": {
+    "structural_coordinates": [
+      "F(a)=a^(alpha-1) for f(lambda)=lambda^(alpha-1)/log^gamma(e/lambda)",
+      "2alpha-3<=0 on the nontrivial-possible 2026 branch",
+      "3/s1+2/l1=4 and l1<=s1",
+      "a^(2-3l1/2)/F(a)^((l1+1)/2)->0",
+      "old parameterization alpha=2-m"
+    ],
+    "equivalent_formulations": [
+      "E(alpha,l1)=2-3l1/2-(alpha-1)(l1+1)/2<0",
+      "alpha>(5-2l1)/(l1+1)",
+      "alpha=2-m converts this to m<(4l1-3)/(l1+1)"
+    ],
+    "solved_analogue": "NS-B2a1c proved the F=1 specialization incompatible with (4.4) under the same exponent constraints.",
+    "near_solved_analogue": "Seregin 2402.13229v3 Proposition 2.2 conserves the same vorticity functional under (2.11); Proposition 2.3/Corollary 2.4 need additional ancestor time-slice controls.",
+    "negative_history": [
+      "F-NS-B2a1c-F1-AXIAL-44-EXPONENT-INCOMPATIBLE",
+      "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY",
+      "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE",
+      "NS-B2a1b2 Hill-vortex falsifier of bare local-nontriviality -> positive asymptotic-density"
+    ]
+  },
+  "method_transfer": {
+    "source": "Seregin arXiv:2402.13229v3 Section 2",
+    "method": "force the far-cutoff boundary power strictly negative, then conserve the transported omega_theta/r functional",
+    "shared_structure": ["axisymmetric swirl-free ancient Euler", "same l1,s1 relation", "same vorticity functional", "same far-cutoff mechanism"],
+    "disanalogies": [
+      "2026 source is power-log rather than pure power",
+      "2026 uses general F(a)",
+      "old Proposition 2.3 time-slice L^q hypothesis is not supplied by 2026 Theorem 3.1",
+      "conservation is not an ancient-Euler Liouville theorem"
+    ],
+    "difference_witness": "Only the cutoff exponent condition is transferred through alpha=2-m; no old exclusion theorem or terminal-time vanishing conclusion is imported."
+  },
+  "expert_cell": [
+    "Type-II scaling/PDE: bind F(alpha), nontriviality range, equation change",
+    "axisymmetric vorticity: bind transported functional and cutoff assumptions",
+    "functional analysis: derive l1 range and strict endpoints",
+    "source/provenance: pin 2606.29468v1 and current 2402.13229v3",
+    "adversarial falsifier: test F=1, equality endpoint, l1->1+, l1=5/4, alpha=3/2",
+    "gluing reviewer: separate local algebra from source-to-terminal-time and local-to-global failures",
+    "RAKL/metrology: audit episode/diagnosis/obstruction/lesson and saturation"
+  ],
+  "analogy_scan": "NO_SAFE_BRIDGE_NEEDED: exact same-domain source structure dominates; no cross-domain analogy is used as evidence.",
+  "source_anchors": [
+    "https://arxiv.org/abs/2606.29468 ; v1 ; equations (3.9)-(3.11), Section 4 (4.1)-(4.6)",
+    "https://arxiv.org/abs/2402.13229 ; v3 revised 2026-08-08 ; (1.4), (1.10), (2.11), Props. 2.2-2.3, Cor. 2.4"
+  ],
+  "authority": "PROPOSAL_SHADOW_PRE_CANDIDATE_ONLY"
+}

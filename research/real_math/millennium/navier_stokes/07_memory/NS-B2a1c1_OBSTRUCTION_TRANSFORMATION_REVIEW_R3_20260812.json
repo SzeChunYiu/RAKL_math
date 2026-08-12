@@ -1,0 +1,23 @@
+{
+  "schema_version":"obstruction-transformation-review-v1-shadow",
+  "review_id":"OTR-NS-B2a1c1-R3-20260812",
+  "target_atom_id":"NS-B2a1c1",
+  "target_context_hash":"sha256:0bb23767bf43d6d478cd702045f3697241e01d7394e3da9b800fa2ef048c6b64",
+  "research_memory_review_hash":"sha256:0be8fdb93f5b25b2c23612313c35430559954d208441e926bf6b8e0188bc5090",
+  "episode_memory_snapshot_hash":"5ad06fd26a5ba2564e2f1f933ef2fb71af88d9740541042d6c20f2bc40d27674",
+  "obstruction":{"obstruction_id":"O-NS-B2a1c1-GENERALIZED-F-CUTOFF-COMPATIBILITY","domain":"axisymmetric Type-II ancient Euler cutoff","roles":["ancient Euler state","cutoff boundary term","power exponent","vorticity functional"],"relations":["cutoff boundary term must decay at spatial infinity","power exponent controls cutoff decay"],"constraints":["axisymmetric swirl-free ancient Euler","3/s1+2/l1=4","unbounded spatial domain","preserve generalized-F source assumptions"],"failure_mechanisms":["cutoff exponent nonnegative"],"invariants_to_preserve":["same omega_theta/r functional","same Euler equation"],"desired_transition":["cutoff exponent becomes strictly negative and boundary term vanishes"],"forbidden_losses":["do not import unmatched terminal rigidity hypotheses"]},
+  "direct_search_status":"MATCHES_FOUND",
+  "jump_search_status":"NOT_RUN",
+  "glue_search_status":"NOT_RUN",
+  "selected_mode":"SEARCH",
+  "direct_candidate_episode_ids":["OTEP-NS-SEREGIN-PUREPOWER-CUTOFF-R3"],
+  "direct_mapping_witnesses":[{"witness_id":"SMW-NS-B2a1c1-PUREPOWER-TO-GENERALIZED-R3","episode_id":"OTEP-NS-SEREGIN-PUREPOWER-CUTOFF-R3","target_obstruction_id":"O-NS-B2a1c1-GENERALIZED-F-CUTOFF-COMPATIBILITY","role_mapping":[["ancient Euler state","ancient Euler state"],["cutoff boundary term","cutoff boundary term"],["power exponent","power exponent"],["vorticity functional","vorticity functional"]],"shared_relations":["cutoff boundary term must decay at spatial infinity","power exponent controls cutoff decay"],"shared_constraints":["axisymmetric swirl-free ancient Euler","3/s1+2/l1=4"],"precondition_mapping":[["axisymmetric swirl-free ancient Euler","same target equation/symmetry state"],["3/s1+2/l1=4","same target exponent relation"],["strict pure-power cutoff bound","mapped by alpha=2-m to the generalized-F exponent condition"]],"unmatched_source_preconditions":[],"disanalogies":["power-log/generalized-F and pure-power producer classes differ","terminal-time Proposition 2.3 assumptions are outside this exponent-only mapping"],"target_validation_obligations":["derive the generalized-F exponent sign exactly","check equality and F=1 endpoints","verify alpha=2-m gives current v3 (2.11)","stop before finite-g or terminal-rigidity claims"],"evidence_pointers":["Seregin arXiv:2606.29468v1","Seregin arXiv:2402.13229v3"],"artifact_hash":"sha256:c6c49e9e164bef25bb4605602df1bed5200e7a8f33e1c3eebcc5485c83fe5d58"}],
+  "jump_mapping_witnesses":[],
+  "glue_witness":null,
+  "selected_episode_ids":["OTEP-NS-SEREGIN-PUREPOWER-CUTOFF-R3"],
+  "exhaustion_witness":null,
+  "missing_transformation_specification":null,
+  "unresolved_warnings":["SEARCH licenses only candidate routing; source authority does not become target theorem authority.","Finite g(t0) and terminal-zero rigidity remain separate downstream interfaces."],
+  "evidence_pointers":["Seregin arXiv:2402.13229v3","Seregin arXiv:2606.29468v1","NS-B2a1c predecessor failure"],
+  "artifact_hash":"sha256:9a088c0fa0c84f0f65626ff453eee157c401e2894e4e00f95c1c9c9cd45fa607"
+}

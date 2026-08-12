@@ -1,0 +1,18 @@
+{
+  "schema_version":"math-context-fiber-v3-proposal-shadow-r3",
+  "atom_id":"NS-B2a1c1",
+  "object_context":"Exact source-bound compatibility audit for the generalized power-log F(a)=a^(alpha-1) Type-II ancient-Euler producer versus Seregin Section-4 cutoff condition (4.4), with no import of unmatched terminal-rigidity hypotheses.",
+  "structural_coordinates":["F(a)=a^(alpha-1) for the 2026 power-log example","nontrivial-possible branch 2alpha-3<=0","Section-4 3/s1+2/l1=4 and l1<=s1","cutoff condition a^(2-3l1/2)/F(a)^((l1+1)/2)->0","current pure-power coordinate alpha=2-m","equation after blow-up limit is Euler, not Navier-Stokes"],
+  "equivalent_formulations":["exponent sign E(alpha,l1)<0","threshold alpha>(5-2l1)/(l1+1)","pure-power bound m<(4l1-3)/(l1+1) under alpha=2-m"],
+  "solved_analogues":["NS-B2a1c: F=1 specialization is incompatible with (4.4)"],
+  "near_solved_analogues":["Seregin arXiv:2402.13229v3 Proposition 2.2: pure-power cutoff condition implies conservation of the same axisymmetric vorticity functional"],
+  "method_transfers":[{"source_context":"Seregin arXiv:2402.13229v3 Section 2 pure-power cutoff argument","method":"force the large-radius cutoff power strictly negative before using the conserved vorticity functional","shared_structure":["axisymmetric swirl-free ancient Euler","same l1,s1 relation","same large-radius cutoff mechanism","same omega_theta/r functional"],"required_assumptions":["pointwise ancestor bound used by the source cutoff estimate","finite g(t0) for the conservation proposition","strict pure-power exponent bound"],"disanalogies":["2026 producer is power-log/generalized-F rather than pure power","2024-v3 Proposition 2.3 adds an ancestor time-slice L^q hypothesis not supplied by the 2026 producer","conservation alone is not a Liouville theorem"],"repair_question":"Does only the exponent condition transfer under alpha=2-m, and what finite-g/terminal-rigidity interface remains?","source_anchors":["Seregin arXiv:2402.13229v3 (2.11), Proposition 2.2, Proposition 2.3","Seregin arXiv:2606.29468v1 (3.9)-(3.11), Section 4"]}],
+  "explicit_disanalogies":["Power-log and pure-power scaling classes are not identical.","Old Proposition 2.3 terminal-time conclusion has unmatched ancestor L^q input.","Backward-uniqueness arguments for Navier-Stokes cannot be imported after the limiting equation changes to Euler.","A local exponent compatibility result does not imply a global rigidity theorem."],
+  "source_anchors":["Seregin arXiv:2606.29468v1","Seregin arXiv:2402.13229v3","RAKL_math NS-B2a1c R2 predecessor episode"],
+  "analogy_scan_status":"NO_SAFE_BRIDGE_FOUND",
+  "cross_domain_analogies":[],
+  "analogy_scan_notes":"Exact same-domain source structure dominates. Cross-domain/everyday analogies were not retained because they would add no assumption-reducing bridge for this local exponent atom.",
+  "frozen_at":"2026-08-12T04:48:38Z",
+  "first_candidate_at":null,
+  "packet_hash":"sha256:0bb23767bf43d6d478cd702045f3697241e01d7394e3da9b800fa2ef048c6b64"
+}

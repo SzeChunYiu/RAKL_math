@@ -1,0 +1,41 @@
+{
+  "schema_version": "research-memory-review-v3-shadow",
+  "review_id": "RMR-NS-B2a1c1-20260812",
+  "target_atom_id": "NS-B2a1c1",
+  "target_context_hash": "sha256:663e72979a23265725349862397e5d8a7c2d94b75613ba062d504a7ea9a858b9",
+  "candidate_method_families": [
+    "same-domain parameter translation of Seregin axial cutoff condition",
+    "retry F=1 axial conservation",
+    "asymptotic-density/finite-energy Euler rigidity",
+    "Type-I compactness/geometric-depletion transfer"
+  ],
+  "retrieved": {
+    "tools": [],
+    "failures": [
+      {"id":"F-NS-B2a1c-F1-AXIAL-44-EXPONENT-INCOMPATIBLE","selected":true,"routing_effect":"depart from F=1 and audit the F(a) parameter coordinate"},
+      {"id":"F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY","selected":true,"routing_effect":"do not re-enter absolute F=1 cutoff-decay family"},
+      {"id":"F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE","selected":true,"routing_effect":"keep local exponent compatibility distinct from local-to-global tail inheritance"}
+    ],
+    "episodes": [
+      {"id":"TE-NS-B2a1c-R2-20260812","selected":true,"routing_effect":"reuse exact F=1 endpoint failure and consumer mismatch only as search priority"},
+      {"id":"OTEP-LIONS-LOCAL-TO-GLOBAL-TIGHTNESS-SPLIT","selected":false,"reason":"relevant to the general tail residual but unnecessary for this local exponent atom"}
+    ],
+    "motifs": [
+      {"id":"MOTIF-CONSUMER-ASYMPTOTIC-COMPATIBILITY-FIRST","selected":true,"routing_effect":"test exact consumer asymptotics before a wider rigidity search"}
+    ]
+  },
+  "rejected_or_deferred": [
+    {"id_or_family":"NS-B2a1b2 asymptotic-density bridge","reason":"Hill-vortex falsifier blocks bare local nontriviality -> positive asymptotic density without an inherited nonlinear density relation"},
+    {"id_or_family":"Type-I finite-I compactness/geometric-depletion episodes","reason":"wrong producer equation/scaling class and no DifferenceWitness repairs those Type-I assumptions to this Type-II Euler producer"},
+    {"id_or_family":"cross-Millennium memory query","reason":"not needed because an exact same-domain primary-source transformation dominates; a distant transfer would add assumption risk without reducing the atom"}
+  ],
+  "missed_prior_experience": "CANNOT_MEASURE: no exhaustive governed memory-universe coverage receipt was materialized for this cycle.",
+  "decision_policy": "SEARCH same-domain first; choose the cheapest exact source-interface falsifier; accumulated experience changes priority only and grants no authority.",
+  "observable_action_counterfactual": {
+    "pre_memory_pre_gate_preference": "retry F=1 Section-4 conservation or search a generic Euler rigidity trigger",
+    "chosen_action": "translate the generalized power-law F(a)=a^(alpha-1) cutoff condition and test whether the parameter window reopens",
+    "RAKL_changed_action": true
+  },
+  "artifact_hash": "sha256:26e03202f49226bd38d0b1fcf699216d00f5620739249fa467d6db217e8cc8a5",
+  "authority": "PROPOSAL_SHADOW_ROUTING_ONLY"
+}
