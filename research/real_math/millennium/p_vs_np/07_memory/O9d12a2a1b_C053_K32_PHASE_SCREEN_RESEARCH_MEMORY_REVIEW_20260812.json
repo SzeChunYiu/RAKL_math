@@ -1,0 +1,56 @@
+{
+  "artifact_hash": "sha256:18b0ff666d683f69ace3d4ed2033bf3bc421cc9df76b1a659083cf51daa2d9ca",
+  "candidate_method_families": [
+    "support Diophantine classification",
+    "split-coordinate phase map",
+    "fixed-header parent-token legality screen"
+  ],
+  "cross_problem_coverage_receipt_hash": "",
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+    "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C048_LITERAL_TRANSPOSE_PROOF_CERTIFICATE_FREEZE_20260812.json",
+    "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C052_K31_OVERLAP_NEGATIVE_CERTIFICATE_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C052_K31_OVERLAP_FAILURE_EXPERIENCE_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C052_K31_OVERLAP_MATHEMATICAL_LESSON_20260812.json",
+    "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_K31_OVERLAP_RESULT_RECEIPT_20260812.json",
+    "research/real_math/millennium/p_vs_np/08_reviews/C034_C040_EXTERNAL_LEDGER_ASSESSMENT_20260811.json",
+    "research/real_math/millennium/p_vs_np/05_falsification/C037_EXTERNAL_LEDGER_REPLAY_RECEIPT_20260811.json",
+    "research/real_math/millennium/p_vs_np/05_falsification/C034B_U8_RETROSPECTIVE_REPLAY_V2_CORRECTION_20260811.json"
+  ],
+  "failure_lattice_snapshot_hash": "sha256:2479da8f0c51bc678dedc7815970656b088add6db21e45a89b62c321e128b01d",
+  "failure_query_status": "MATCHES_FOUND",
+  "failure_reuse_notes": [
+    "k31 is a warning not a blacklist; k32 changes parent/current support and token phase",
+    "C037 blocks monotonic extension reasoning",
+    "missing C034-C040 certificates are not promoted"
+  ],
+  "relevant_failure_ids": [
+    "F-PNP-C052-K31-ACTUAL-OVERLAP-EMPTY-BY-SYNTAX-DICHOTOMY",
+    "F-C037-ARBITRARY-EXTENSION-NONMONOTONE",
+    "F-C034-FINITE-OVERGENERALIZATION",
+    "F-C034-C040-MISSING-CERTIFICATES"
+  ],
+  "relevant_tool_ids": [
+    "T-PNP-C048-EXACT-OVERLAP-EQUIVALENCE",
+    "MATH-PNP-C052-K31-FULL-WORD-SEPARATOR",
+    "C034B-U8-RECONSTRUCTED-FULL-UNION-LP"
+  ],
+  "selected_tool_ids": [
+    "MATH-PNP-C052-K31-FULL-WORD-SEPARATOR"
+  ],
+  "target_atom_id": "O9d12a2a1b-C053-K32-PHASE-SCREEN",
+  "target_context_hash": "sha256:3bdf33192f6850dc1da635caa24e7afb0b0133c781b400bcbe989adca273bbd4",
+  "tool_applicability_notes": [
+    "the same two separator families can be rederived at k32 only after exact phase remapping",
+    "C048 fixes the downstream QoI but is not used to infer overlap",
+    "U8 reconstruction is retained only as exact finite-method experience"
+  ],
+  "tool_inventory_snapshot_hash": "sha256:2ade461733d233e9bb976bc5016402ebe5a4b67e983d99e7207154326adf04a5",
+  "tool_query_status": "MATCHES_FOUND",
+  "unresolved_warnings": [
+    "other syntax separators may remain",
+    "phase survival does not supply a formula-bound witness",
+    "the partial (6,2)->(11,1) phase has parameter-dependent legality",
+    "no overlap candidate or evaluator is frozen"
+  ]
+}
