@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "record_authority": "PROPOSAL_SHADOW_ONLY",
+  "task_episode": {
+    "episode_id": "E-PNP-C045-G17-COUPLING-20260812",
+    "atom_id": "O9d12a2a1b-C045",
+    "problem_signature": "PNP-C045-G17-LENGTH32-COMPONENT-COUPLING-GATE",
+    "fibre_snapshot_hash": "sha256:7c96aab2cbb6bb6151aaa9ae2c34c9259d0964417ce7c9300be9e6d04573f182",
+    "fibre_actually_consulted": [
+      "00_problem_contract/canonical_statement.md",
+      "00_problem_contract/success_contract.yaml",
+      "C041_fx_sat_one_sided.py decoder and recursive complement rule",
+      "C043 exact length formula, G16 accumulated row/twin facts and quotient ceiling",
+      "C044 explicit Q16 three-pair cover, heterogeneous multiplexing lemma and component-coupling feedback",
+      "ECCC TR25-033 Definitions 18-21 and Theorem 22",
+      "RAKL 3.0.0 current method_specs.py plus core workflow/principles"
+    ],
+    "operators_and_motifs_tried": [
+      "component-coupling gate",
+      "exact Diophantine length classification L0 in {31,32}",
+      "CNF falsifying-set half-cube classification",
+      "row/column projection collision test",
+      "three-bit E/H/X star-signature representation",
+      "heterogeneous block multiplexing",
+      "finite exhaustive decoder calibration"
+    ],
+    "search_policy_choice": "RAKL v3 routing chose GLUE(C043 exact decoder/length facts, C044 component-separability obstruction) then counterexample-first test of the cheapest coupling discriminator before LP/lower-bound search.",
+    "observations": [
+      "Length 32 has only v=8..15,m=1 padded one-clause encodings plus v in {2,3},m=2 exact encodings.",
+      "Exactly ten length-32 canonical UNSAT words exist: opposite repeated units on one variable, in either clause order.",
+      "Their eight row prefixes were complement-empty in U16 and all six suffixes become fresh-half columns, so U_new is row- and column-projection disjoint from U16.",
+      "The inherited Q16 pairs have no canonical direct membership assignment on new complement cells; treating them as literally inherited without an extension rule was rejected by the frozen falsifier.",
+      "A separate local three-pair code exists for U_new; C044 multiplexing then yields a legal four-pair G17 cover."
+    ],
+    "verification_performed": [
+      "hand length-case proof including raw 31 padding",
+      "hand falsifying-set cardinality proof of the ten UNSAT formulas",
+      "exact 16/16 prefix-suffix table",
+      "row/column projection comparison against C043 accumulated support",
+      "38-cell E/H/X separator table for the new block",
+      "finite exhaustive decoder/SAT enumeration as calibration only",
+      "same-context five-role hostile review",
+      "root/bridge authority audit"
+    ],
+    "outcome": "MATERIAL_LOCAL_NEGATIVE_MILESTONE: NO_LOAD_BEARING_COUPLING_AT_G17; PROVED rho(G17)<=sigma(G17)<=4",
+    "residual_failure_signature": "FIRST_FUTURE_ROW_PROJECTION_COLLISION_NOT_LOCATED; NO_UNIFORM_RECURRENCE; NO_CIRCUIT_LOWER_BOUND; NO_ROOT_BRIDGE",
+    "cost_effort_proxy": {
+      "finite_unsat_words": 10,
+      "new_active_row_column_graph_cells_checked": 38,
+      "expert_roles": 5,
+      "exact_model_tokens": "CANNOT_MEASURE: runtime exposes no authoritative token counter",
+      "wall_time": "CANNOT_MEASURE: no authoritative cycle-start timer is exposed"
+    },
+    "next_action": "Prospectively freeze and solve the first-row-projection-collision atom: scan the exact canonical length schedule for the earliest UNSAT batch whose  n/n prefix is already in Rows(U_n), before any cover-LP search."
+  },
+  "episode_to_diagnosis": {
+    "diagnosis_id": "D-PNP-C045-FRESH-ROW-BLOCK",
+    "episode_id": "E-PNP-C045-G17-COUPLING-20260812",
+    "local_mathematical_failure": "The hypothesized first coupling event does not occur: new UNSAT prefixes are fresh relative to accumulated complement row support.",
+    "representation_issue_caught": "Literal inheritance of Q16 P1-P3 to new complement cells is undefined. The cycle did not silently assign new cells; it repaired the representation by constructing an independent local code and applying the proved block-multiplexing operator.",
+    "retrieval_failure": false,
+    "decomposition_failure": false,
+    "source_failure": false,
+    "verification_failure": false,
+    "tooling_failure": false,
+    "local_to_global_gluing_failure": "The finite G17 upper cover does not glue to any uniform asymptotic recurrence, circuit lower bound, or P!=NP bridge. This is recorded separately from the closed local G17 mathematics.",
+    "unique_cause_status": "IDENTIFIED_LOCALLY: disjoint row and column projections; global asymptotic cause remains open"
+  },
+  "reusable_obstruction_or_lesson": {
+    "obstruction_id": "O-PNP-C045-ROW-PROJECTION-COLLISION-GATE",
+    "lesson_id": "L-PNP-C045-FRESH-COLUMNS-NOT-COUPLING",
+    "statement": "For this frozen one-sided recursive family, a newly activated canonical UNSAT batch cannot couple backward merely by using fresh columns. If all of its prefix rows were complement-empty before the step, the old and new complement grounds have disjoint row and column projections and can be multiplexed as blocks. A necessary first discriminator for load-bearing coupling is a new UNSAT prefix row already in the accumulated old complement row projection.",
+    "scope": "one-sided recursive C041 decoder/family with unchanged complement polarity",
+    "non_guarantees": [
+      "row-projection collision is necessary for this coupling mechanism, not sufficient for rho growth",
+      "does not imply a uniform constant cover",
+      "does not transfer to arbitrary graph families without a DifferenceWitness",
+      "does not establish a circuit lower bound or P!=NP"
+    ]
+  },
+  "experience_routing": {
+    "selected_changed_routing": [
+      {"id":"C044-HETEROGENEOUS-MULTIPLEXING-FAILURE","effect":"replaced semantic/type counting by explicit component-coupling test"},
+      {"id":"C044-COMPONENT-COUPLING-GATE","effect":"made row/column projection collision the first cheap falsifier"},
+      {"id":"C043-FIRST-ROW-SPLIT","effect":"selected length 32/G17 as first untouched semantic batch"},
+      {"id":"C013-QUOTIENT-BLOWUP-CEILING","effect":"kept quotient/lift claims upper-bound-only"}
+    ],
+    "retrieved_rejected": [
+      {"id":"C041A-ZERO-AUGMENTATION","reason":"copy/relabelling family differs from canonical decoder activation"},
+      {"id":"C041B-TIGHT-INTERSECTION-ABSORPTION","reason":"dual saturation analysis deferred because cheaper primal block gate remained decisive"},
+      {"id":"MYHILL-NERODE-ANALOGY","reason":"accepted only for finite residual equality, rejected for cover/circuit lower-bound transfer"}
+    ],
+    "missed_prior_experience": "NONE_IDENTIFIED_IN_BOUNDED_REVIEW; cannot certify completeness of all repository history without an authoritative exhaustive memory index",
+    "cross_millennium": "NOT_QUERIED: applicability/DifferenceWitness gate found no shared exact finite cover/fibre structure warranting transfer"
+  },
+  "saturation_axes": {
+    "KNOWLEDGE": {"post":"reopened only on first future row-collision location","retained_protected_novelty":0},
+    "OPERATOR": {"post":"component-coupling gate succeeded as a falsifier; block multiplexing reused","retained_protected_novelty":0},
+    "EXPERIENCE_PATTERN": {"post":"fresh-semantic-mass-with-fresh-row remains a saturated noncoercive pattern","retained_protected_novelty":0},
+    "OBSTRUCTION": {"post":"reopened as row-projection-collision gate","retained_protected_novelty":0},
+    "RELATION": {"post":"reopened: decoder prefix collision -> complement coupling -> cover-code stress","retained_protected_novelty":0},
+    "PATH": {"post":"reopened toward earliest row-collision layer; G17 path flattened","retained_protected_novelty":0},
+    "META_METHOD": {"post":"chronology repaired prospectively this cycle","retained_protected_novelty":0}
+  },
+  "novelty_classification": {
+    "solved_subproblem":"exact G17 component-separability and four-pair upper cover",
+    "class":"compositional",
+    "secondary":"representation",
+    "defensibility":"new exact decoder classification and a three-bit local code are composed with the previously proved C044 multiplexing lemma; no ontology change or protected novelty is claimed"
+  },
+  "RAKL_METHOD_CASE_STUDY": {
+    "research_method":"prospective context freeze -> v3 obstruction-directed routing -> exact syntax atomization -> counterexample-first component gate -> local code construction -> block gluing -> hostile review -> authority audit",
+    "what_worked":[
+      "C044 failure memory materially changed routing away from type counts",
+      "v3 prompting/context policy kept the fibre restricted to exact decoder, cover semantics, and the selected obstruction",
+      "gap_discovery localized the cheapest decision-changing coordinate to old/new row-projection overlap",
+      "representation repair prevented an invalid silent extension of old P1-P3 pairs",
+      "block multiplexing converted a local three-pair code into a rigorous four-pair global upper cover"
+    ],
+    "what_failed":[
+      "the active mathematical hypothesis that G17 is the first load-bearing coupling layer was falsified",
+      "literal inherited-code testing was not well-defined on new ground until an extension representation was supplied",
+      "no uniform/asymptotic gluing theorem followed"
+    ],
+    "failure_categories": ["mathematical", "representation", "gluing"],
+    "v3_feature_helped":["decomposition","routing","gap_discovery","memory","prompting_context_policy","review","saturation_stopping","authority_promotion non-escalation"],
+    "v3_feature_missing_or_weak":"No automatic repository-backed chronology seal currently forces a fibre hash/commit to predate all candidate/result artifacts; earlier C041A/C041B late-fibre and C044 retrospective leakage had to be handled procedurally.",
+    "framework_improvement_hypothesis":"Add an optional pre-candidate attestation that records fibre hash + repository commit + evaluator hash and makes later TaskEpisode promotion mechanically CANNOT_CHECK if any result artifact predates that attestation. This would prevent repeated chronology failures without weakening mathematical gates.",
+    "repeated_process_failure_links":["C041A late child-fibre chronology denial","C041B repeated late-fibre chronology denial","C044 result-exposed-before-candidate-freeze retrospective denial"],
+    "this_cycle_process_status":"REPAIRED: C045 fibre was committed at e6d7f886416bf954e368db8edd028f4870fc7a1f before C045 mathematical derivation/result artifact"
+  }
+}
