@@ -1,0 +1,46 @@
+{
+  "schema_version": "math-research-trace-extension-v1",
+  "trace_id": "NS-B2a1-POSTACTION-20260811",
+  "extends_trace_hash": "sha256:53f686443744f018e8101dc4a2e34b130a3de434c43716d1de7e783f41b63ef9",
+  "events": [
+    {
+      "event_id": "NS-B2a1-08-FALSIFIER_RUN",
+      "event_type": "FALSIFIER_RUN",
+      "atom_id": "NS-B2a1",
+      "timestamp": "2026-08-11T12:41:00+00:00",
+      "previous_event_hash": "sha256:0f68ae170ed4e4d927339f5b7f8d26b45ca85e1974bfbf90bdd39091c005e5f8",
+      "payload": {"falsifier": "critical-shell kinematic packet", "scope": "tests logical sufficiency of fixed-cylinder convergence plus critical scale charges only; not a PDE counterexample", "result": "annular escape remains compatible with those analytic ingredients"},
+      "artifact_hash": "sha256:a94dd5ece84d381ff77ba5e81ee2f1bfafffd1056f2ca71f6842d60314eed905"
+    },
+    {
+      "event_id": "NS-B2a1-09-RESULT_RECORDED",
+      "event_type": "RESULT_RECORDED",
+      "atom_id": "NS-B2a1",
+      "timestamp": "2026-08-11T12:41:00+00:00",
+      "previous_event_hash": "sha256:a94dd5ece84d381ff77ba5e81ee2f1bfafffd1056f2ca71f6842d60314eed905",
+      "payload": {"episode_hash": "sha256:0a1238ab8f23178e786b8a35fa14599e7f3b066e68a62805e96c6f378700ea11", "outcome": "PARTIAL_SUCCESS", "predeclared_branch": "B_ONLY_LOCAL_COMPACTNESS_AND_CRITICAL_BOUNDEDNESS", "result_subject_sha": "39c6d299853550cdd2688c84c0cce246f4a783ca"},
+      "artifact_hash": "sha256:84e32f94b024cd4806962f44fab8ef9966a7851959574a9babe5e901dd4b4b15"
+    },
+    {
+      "event_id": "NS-B2a1-10-RESIDUAL_OPENED",
+      "event_type": "RESIDUAL_OPENED",
+      "atom_id": "NS-B2a1",
+      "timestamp": "2026-08-11T12:41:00+00:00",
+      "previous_event_hash": "sha256:84e32f94b024cd4806962f44fab8ef9966a7851959574a9babe5e901dd4b4b15",
+      "payload": {"obstruction_id": "O-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE", "failure_hash": "sha256:74fe2781dc22c1a5c8a206d105e25373f7d9c90c41eaef47ea996b149a49cdec", "next_children": ["NS-B2a1a_PRELIMIT_ANNULAR_TIGHTNESS", "NS-B2a1b_SIGNED_EULER_FLUX_TELESCOPING"], "candidate_generation_allowed": false},
+      "artifact_hash": "sha256:64dd1f48adb0730487efc6b7416229a60d6881a69eae921e68fdfa16782945cf"
+    },
+    {
+      "event_id": "NS-B2a1-11-REVIEWED",
+      "event_type": "REVIEWED",
+      "atom_id": "NS-B2a1",
+      "timestamp": "2026-08-11T12:41:00+00:00",
+      "previous_event_hash": "sha256:64dd1f48adb0730487efc6b7416229a60d6881a69eae921e68fdfa16782945cf",
+      "payload": {"review_path": "research/real_math/millennium/navier_stokes/08_reviews/NS_B2A1_RESULT_REVIEW_20260811.md", "independent_review_credit": false, "verdict": "SCOPED_SOURCE_BOUND_INTERFACE_DIAGNOSTIC_ACCEPTED"},
+      "artifact_hash": "sha256:fb192d37cef9d387ea48959f3469349fdbe4fcbd6670c1e26b24dd1d643c409c"
+    }
+  ],
+  "authority": "AUDITABLE_DECISION_RECORD_ONLY",
+  "candidate_generation_allowed": false,
+  "trace_hash": "sha256:54f8385a2295e0a79454938c4a2010a518877072428d8d9e3eebdd5fc4398698"
+}

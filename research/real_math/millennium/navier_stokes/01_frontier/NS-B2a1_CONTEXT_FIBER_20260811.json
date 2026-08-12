@@ -1,0 +1,107 @@
+{
+  "schema_version": "math-context-fiber-v1",
+  "atom_id": "NS-B2a1",
+  "parent_atom_id": "NS-B2a",
+  "object_context": "Prospective child of the Type-II F(a)=1 ancient-Euler route. Audit the exact source-to-limit tail interface before any Euler Liouville candidate: determine whether the Navier–Stokes blow-up sequence carries annular/tail information that is uniform in the sequence and survives the order of limits k→∞ then R→∞, or whether only fixed-radius local convergence and scale-critical boundedness are available.",
+  "root_binding": "Clay Navier–Stokes statement (A) remains OPEN_NO_SOLUTION_CERTIFICATE; excluding this one Type-II subscenario would not close the root.",
+  "structural_coordinates": [
+    "Type-II blow-up under Euler scaling",
+    "ancient Euler limit on R^3×(-∞,0)",
+    "F(a)=1 scale-critical energy/pressure/gradient bounds",
+    "strong/weak convergence on each fixed parabolic cylinder Q(a)",
+    "large-radius annular tail and no-incoming-energy control",
+    "noncommuting/unsupported double limit k→∞ then R→∞",
+    "translation and profile leakage/noncompact symmetry",
+    "pressure localization and signed pressure transport",
+    "local energy inequality",
+    "signed cancellation/telescoping versus absolute bounds",
+    "Euler Liouville/rigidity interface",
+    "source-to-limit inheritance"
+  ],
+  "equivalent_formulations": [
+    "Tail-tightness formulation: identify a nonnegative source-derived annular functional T_k(R) for which lim_{R→∞} limsup_{k→∞} T_k(R)=0, with exact normalization and pressure contribution specified.",
+    "Signed-flux formulation: if absolute annular tightness is unavailable, identify an exact signed local-energy flux identity whose boundary terms cancel/telescope in a source-justified large-radius limit.",
+    "Concentration-compactness formulation: fixed-radius local convergence controls the compact core but does not by itself exclude mass/energy transport to moving centers or infinity; a tightness/recentering/minimality witness is needed.",
+    "Rigidity-interface formulation: an Euler Liouville theorem is admissible only after every additional global hypothesis is shown to be inherited by the exact ancient limit."
+  ],
+  "solved_analogues": [
+    "Seregin's 2025/2026 Type-II note obtains Liouville conclusions only under additional scenario-specific restrictions such as self-similar-profile bounds or axisymmetric/vorticity conditions; these are calibration cases, not automatic properties of the present general F(a)=1 branch.",
+    "Concentration-compactness in critical PDE separates local compactness from global compactness by explicit tightness/modulo-symmetry controls; this is a structural analogy only."
+  ],
+  "near_solved_analogues": [
+    "Seregin 2023/2024 and 2026 extract ancient Euler limits by compactness on every fixed Q(a), but the general large-radius Euler rigidity step remains scenario-dependent.",
+    "The open PR #72 absolute-cutoff audit shows the F(a)=1 scale budget is critical and supplies only O(1) normalized absolute boundary terms; the result is noncanonical pending merge and is used only as a warning."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Seregin 2026 Theorem 3.1 Euler-scaling compactness",
+      "method": "Extract a diagonal subsequence converging on each fixed Q(a) and pass local energy/pressure/gradient bounds to an ancient Euler limit.",
+      "shared_structure": ["same Type-II scaling", "same F-weighted source bounds", "same ancient Euler target", "same nontriviality mechanism"],
+      "required_assumptions": ["suitable weak source solution", "the stated Type-II scenario", "the F-limit assumptions used in Theorem 3.1", "fixed-radius compactness estimates"],
+      "disanalogies": ["fixed-a convergence is not uniform tail tightness as a→∞", "critical F(a)=1 bounds need not decay with radius", "translation/profile escape is not excluded by centered local convergence"],
+      "repair_question": "Which exact prelimit annular quantity, if any, is uniformly small as R→∞ and stable under the k→∞ extraction?",
+      "source_anchors": ["arXiv:2606.29468v1, Theorem 3.1 and proof"]
+    },
+    {
+      "source_context": "Seregin 2025/2026 Liouville restrictions for Type-II Euler limits",
+      "method": "Close special ancient-Euler scenarios using additional self-similar, axisymmetric, derivative, or vorticity restrictions.",
+      "shared_structure": ["ancient Euler equation", "Type-II Euler scaling", "Liouville closure after extraction"],
+      "required_assumptions": ["the exact extra symmetry/regularity/vorticity hypotheses stated by the selected proposition"],
+      "disanalogies": ["the NS-B2a1 baseline does not currently inherit those additional hypotheses", "a special-profile theorem cannot classify a general ancient Euler limit"],
+      "repair_question": "Does the current F(a)=1 source route independently imply any one of the extra Liouville hypotheses, or must the route remain open?",
+      "source_anchors": ["arXiv:2507.08733v2, Sections 3–4"]
+    },
+    {
+      "source_context": "Concentration-compactness / translated-profile escape",
+      "method": "Separate local convergence from global tightness by tracking translated cores and annular mass.",
+      "shared_structure": ["noncompact spatial translation", "local convergence on bounded sets", "possible escape of a coherent core", "need for a global compactness/tightness witness"],
+      "required_assumptions": ["an explicitly defined nonnegative tail quantity or recentering rule", "uniformity in the approximating sequence"],
+      "disanalogies": ["abstract profile decompositions do not supply Euler or Navier–Stokes theorem authority", "pressure and local-energy inequalities impose additional PDE structure"],
+      "repair_question": "Can a source-derived tightness or recentering witness rule out moving-core escape without assuming the desired Euler triviality?",
+      "source_anchors": ["structural analogy; no theorem authority imported"]
+    }
+  ],
+  "explicit_disanalogies": [
+    "Parabolic Navier–Stokes backward uniqueness does not apply directly because the extracted equation is Euler.",
+    "Centered backward local smallness is not a global tail statement under translations.",
+    "Absolute critical-scale bounds cannot be silently converted into vanishing signed flux.",
+    "A Liouville theorem for self-similar or axisymmetric Euler profiles is not a theorem for every ancient Euler limit in Theorem 3.1.",
+    "A fixed-radius diagonal compactness argument does not justify interchanging k→∞ with R→∞."
+  ],
+  "source_anchors": [
+    "Fefferman, Clay Navier–Stokes official problem description",
+    "Gregory Seregin, arXiv:2606.29468v1 (2026), especially Theorem 3.1",
+    "Gregory Seregin, arXiv:2507.08733v2 (2026 revision), Sections 3–4",
+    "Gregory Seregin, arXiv:2304.04045 (2023/2024)",
+    "SzeChunYiu/RAKL_math#65",
+    "SzeChunYiu/RAKL_math#72 (noncanonical pending branch evidence only)",
+    "SzeChunYiu/RAKL_math#71 (noncanonical hostile calibration only)"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED_WITHOUT_AUTHORITY",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "functional analysis / concentration compactness",
+      "source_situation": "A sequence may converge strongly on every bounded set while mass escapes to infinity under translations.",
+      "common_abstraction": ["local compactness", "noncompact translation group", "global quantity not continuous under local topology"],
+      "source_to_target_mapping": ["bounded set -> fixed Q(a)", "translated packet -> moving Euler core", "global mass/tail -> no-incoming-energy/tightness obligation"],
+      "shared_constraints": ["the target convergence is local", "the large-radius quantity is global", "translation is an available noncompact symmetry"],
+      "disanalogies": ["Euler dynamics and pressure may constrain admissible packets", "the analogy alone does not construct a Seregin-class Euler solution"],
+      "proposed_principle": "Do not infer a global tail property from fixed-radius convergence without a uniform tightness/recentering witness.",
+      "validation_obligation": "Define the target tail functional and prove its source-level uniformity and limit stability, or record the missing bridge explicitly.",
+      "provenance_note": "Proposal-only structural bridge."
+    }
+  ],
+  "analogy_scan_notes": "Everyday camera-window analogies were rejected as adding no load-bearing content beyond the concentration-compactness formulation.",
+  "candidate_generation_allowed": false,
+  "pre_candidate_actions": [
+    "freeze this context",
+    "freeze dual-memory review",
+    "freeze same-context expert review",
+    "freeze hash-chained trace through NEXT_STEP_PROPOSED",
+    "freeze pre-action fibre receipt",
+    "execute SOURCE_TAIL_INHERITANCE_AUDIT only after the receipt is committed"
+  ],
+  "frozen_at": "2026-08-11T12:33:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:98be9901f6e091516242ed427b7d1d95f660c8e2650c506fe7ab6ed89ac22e21"
+}

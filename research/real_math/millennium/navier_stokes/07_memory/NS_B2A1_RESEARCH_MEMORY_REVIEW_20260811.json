@@ -1,0 +1,68 @@
+{
+  "schema_version": "research-memory-review-v1",
+  "target_atom_id": "NS-B2a1",
+  "target_context_hash": "sha256:98be9901f6e091516242ed427b7d1d95f660c8e2650c506fe7ab6ed89ac22e21",
+  "framework_source": {"repository": "SzeChunYiu/RAKL", "commit": "bd1a2768f0f474ff44ffa25243241f94bfaf6466"},
+  "application_source": {"repository": "SzeChunYiu/RAKL_math", "commit": "4838969ecc18a091da79a059b58b8568634289b7"},
+  "candidate_method_families_searched": [
+    "source-tail inheritance audit",
+    "signed local-energy flux/telescoping",
+    "concentration-compactness tightness/recentering",
+    "Euler Liouville theorem matching exact F=1 class",
+    "parabolic backward uniqueness"
+  ],
+  "relevant_tool_ids": [],
+  "tool_query_status": "NO_PROMOTED_TARGET_SPECIFIC_TOOL_MATCH",
+  "relevant_failure_or_warning_ids": [
+    "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+    "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY@PR72_NONCANONICAL",
+    "XM005-MOVING-CORE-ESCAPE@PR71_NONCANONICAL",
+    "RAKL#123-PRE_ACTION_FIBRE_RECEIPT"
+  ],
+  "selected_memory": [
+    {
+      "id": "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+      "status": "CANONICAL_SCOPED_WARNING",
+      "use": "Avoid repeating instantaneous far-field pressure accumulation as if it supplied global tail closure."
+    },
+    {
+      "id": "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY@PR72_NONCANONICAL",
+      "status": "PENDING_NONCANONICAL_WARNING_ONLY",
+      "use": "Motivates testing source-level tail tightness rather than another absolute cutoff estimate; carries no authority."
+    },
+    {
+      "id": "XM005-MOVING-CORE-ESCAPE@PR71_NONCANONICAL",
+      "status": "PENDING_NONCANONICAL_HOSTILE_CALIBRATION_ONLY",
+      "use": "Forces explicit treatment of translation/profile leakage; not an Euler counterexample."
+    }
+  ],
+  "rejected_memory": [
+    {
+      "id": "PARABOLIC_NS_BACKWARD_UNIQUENESS",
+      "reason": "Wrong equation at the extracted limit; Euler has no viscous backward-uniqueness operator."
+    },
+    {
+      "id": "PREMATURE_EULER_LIOUVILLE_INVENTION",
+      "reason": "The source-to-limit tail interface is not yet bound; inventing rigidity first risks renaming the same missing assumption."
+    }
+  ],
+  "difference_witness_notes": [
+    "Type-I Navier–Stokes tail failures and the present Type-II Euler limit share local-to-global pressure/tail structure but differ in equation, scaling, dissipation and admissible rigidity tools.",
+    "Pending PR71/72 records may shape search priority only; they cannot satisfy canonical failure/tool gates."
+  ],
+  "unresolved_warnings": [
+    "No canonical current-main B2a TaskEpisode/failure exists because PR72 remains open.",
+    "RAKL_math framework pin 15f1c3a... is stale relative to current RAKL main bd1a276..., so this cycle reads the current framework directly but cannot claim pin-exact application CI.",
+    "No source-backed uniform annular-tail estimate has yet been identified.",
+    "No Euler Liouville theorem has yet been matched to exactly the baseline F(a)=1 class."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B1a_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "SzeChunYiu/RAKL_math#65",
+    "SzeChunYiu/RAKL_math#71",
+    "SzeChunYiu/RAKL_math#72",
+    "SzeChunYiu/RAKL#123"
+  ],
+  "frozen_at": "2026-08-11T12:33:00+00:00",
+  "artifact_hash": "sha256:5ed2c4d02e377f386eb1c865e8334e59b8b4927bf1d25dc6f3682131d2ecf14b"
+}

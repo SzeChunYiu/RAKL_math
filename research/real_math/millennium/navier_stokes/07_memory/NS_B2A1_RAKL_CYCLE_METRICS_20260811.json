@@ -1,0 +1,106 @@
+{
+  "schema_version": "rakl-cycle-metrics-v0",
+  "artifact_type": "RAKL_CYCLE_METRICS",
+  "cycle_id": "NS-B2a1-TAIL-INHERITANCE-20260811",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "git_sha": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "method_version": "CANNOT_MEASURE:NO_CANONICAL_RAKL_VERSION_MANIFEST_ON_MAIN",
+    "authority_hardening_state": "current main includes merged v3 authority hardening"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "4838969ecc18a091da79a059b58b8568634289b7",
+    "pre_action_freeze_sha": "dbf0805599843a5c96c0d3a5942a751c393cd023",
+    "post_result_sha": "39c6d299853550cdd2688c84c0cce246f4a783ca",
+    "post_result_semantics": "exact branch commit containing source audit, TaskEpisode, failure and saturation result before metrics/review/test bookkeeping",
+    "configured_framework_pin": "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3",
+    "pin_status": "STALE_RELATIVE_TO_CURRENT_FRAMEWORK_MAIN"
+  },
+  "state_fingerprints": {
+    "pre_state": "CANNOT_MEASURE:no canonical materialized RAKLV3State exists in the application repository; exact Git and receipt hashes are used instead",
+    "post_state": "CANNOT_MEASURE:no canonical materialized RAKLV3State exists in the application repository; exact Git and receipt hashes are used instead"
+  },
+  "atom_id": "NS-B2a1",
+  "context_hash": "sha256:98be9901f6e091516242ed427b7d1d95f660c8e2650c506fe7ab6ed89ac22e21",
+  "fibre_snapshot_hash": "sha256:58168d53d2982741d635fcd2436d4bc3d1f8691b6cc9c03b28ad352a6cb6c3e6",
+  "canonical_process_surfaces_invoked": [
+    "decomposition",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "mathematical_context_translation",
+    "equivalence_similarity",
+    "contextual_theory_gluing",
+    "gap_discovery",
+    "experiment_query_selection",
+    "memory",
+    "review",
+    "saturation_stopping"
+  ],
+  "retrieval": {
+    "selected_canonical_ids": [
+      "SRC-SEREGIN-2606.29468-THM3.1",
+      "SRC-SEREGIN-2507.08733-SECTIONS3-4",
+      "SRC-SEREGIN-2304.04045",
+      "F-NS-B1a-C001-PRESSURE-SUMMABILITY"
+    ],
+    "selected_noncanonical_warning_ids": [
+      "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY@PR72",
+      "XM005-MOVING-CORE-ESCAPE@PR71"
+    ],
+    "rejected_ids": ["PARABOLIC_NS_BACKWARD_UNIQUENESS", "PREMATURE_EULER_LIOUVILLE_INVENTION"],
+    "selected_count": 6,
+    "rejected_count": 2,
+    "missed_relevant_items_discovered_post_result": 0,
+    "coverage_claim": "NO_COMPLETENESS_CLAIM"
+  },
+  "outcome": "PARTIAL_SUCCESS",
+  "residual_before": ["broad need for Euler tail tightness or signed flux before rigidity"],
+  "residual_after": [
+    "exact fixed-a versus lim_R limsup_k double-limit inheritance gap",
+    "source-level annular tightness/recentering or signed flux must be proved",
+    "generic Euler Liouville matching remains blocked"
+  ],
+  "retained_semantic_novelty": {
+    "KNOWLEDGE": 1,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 0,
+    "OBSTRUCTION": 1,
+    "RELATION": 1,
+    "PATH": 0,
+    "META_METHOD": 0
+  },
+  "saturation": {"axes_reopened": ["OBSTRUCTION", "RELATION", "PATH"], "axes_flattened": []},
+  "resource_proxies": {
+    "model_input_tokens": "CANNOT_MEASURE:runtime does not expose per-cycle model-token accounting",
+    "model_output_tokens": "CANNOT_MEASURE:runtime does not expose per-cycle model-token accounting",
+    "context_tokens": "CANNOT_MEASURE:runtime does not expose compiled context-token accounting",
+    "external_retrieval_calls": "CANNOT_MEASURE:connector does not expose one aggregate counter for the cycle",
+    "tool_calls": "CANNOT_MEASURE:connector/tool aggregate is not exposed as a receipt",
+    "primary_source_documents_inspected": 3,
+    "coarse_elapsed_seconds_from_declared_preaction_freeze": 480,
+    "elapsed_semantics": "approximate wall clock from 12:33Z pre-action freeze to 12:41Z result bookkeeping"
+  },
+  "new_objects": {
+    "episode_ids": ["EP-NS-B2a1-TAIL-INHERITANCE-20260811"],
+    "lesson_ids": [],
+    "failure_ids": ["F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE"],
+    "tool_ids": [],
+    "obstruction_ids": ["O-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE"],
+    "motif_ids": [],
+    "successful_reuse_ids": []
+  },
+  "gate_status": {
+    "candidate_generation_allowed": false,
+    "root_authority": "NONE",
+    "independent_review_credit": false,
+    "pre_action_chronology": "PRESENT_APPLICATION_SIDE_RECEIPT",
+    "framework_pin_exact_ci": "NOT_CLAIMED_PIN_IS_STALE",
+    "provenance": "PRIMARY_SOURCE_BOUND_PLUS_EXACT_GIT_SUBJECTS"
+  },
+  "rakl_changed_action_relative_to_pre_memory_pre_gate_preference": "CANNOT_MEASURE:no counterfactual pre-memory/pre-gate action ranking was frozen; this cycle does not claim causal attribution",
+  "timestamp": "2026-08-11T12:41:00+00:00",
+  "artifact_hash": "sha256:d92a8c7096419b6cfca434b80f0fd9f13498aaa092205b4604d775aca95c2ba6"
+}
