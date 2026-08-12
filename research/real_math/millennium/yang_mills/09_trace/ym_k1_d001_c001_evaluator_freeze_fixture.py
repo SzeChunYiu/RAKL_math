@@ -9,7 +9,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[5]
-PARENT_MAIN_SHA = "aa638612b920236822fc7e321c02209ef3c79bb9"
+PARENT_MAIN_SHA = "aa6386126229bdfcae57fcf10a5b46ee8e91b83b"
 FRAMEWORK_SHA = "d21592b0ff8da988deabb923fd549891ff8ad9f0"
 CANDIDATE_ID = "YM-S1a2i-K1-D001-C001-TWO-STAGE-SOURCE-BRIDGE"
 EVALUATOR = ROOT / "research/real_math/millennium/yang_mills/05_oracles/ym_k1_d001_c001_two_stage_evaluator.py"

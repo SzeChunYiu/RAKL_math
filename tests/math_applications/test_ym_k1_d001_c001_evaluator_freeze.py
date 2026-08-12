@@ -28,6 +28,7 @@ def test_evaluator_identity_and_planted_worlds_are_exact() -> None:
     evaluator = f.EVALUATOR.read_bytes()
     assert document["evaluator_identity"]["raw_sha256"] == hashlib.sha256(evaluator).hexdigest()
     assert document["all_planted_worlds_match"] is True
+    assert document["parent_main_sha"] == "aa6386126229bdfcae57fcf10a5b46ee8e91b83b"
     assert {row["observed_branch"] for row in document["planted_world_receipt"]} == {
         "APPLICABLE_BRIDGE",
         "STRONGER_PREMISE_MISMATCH_A",
