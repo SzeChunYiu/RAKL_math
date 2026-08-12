@@ -1,0 +1,69 @@
+{
+  "receipt_id": "FALSIFY-PNP-C041B-20260812",
+  "candidate": "C041B_TIGHT_INTERSECTION_ABSORPTION_LEMMA",
+  "authority": "PROPOSAL_SHADOW_VERIFICATION",
+  "verification": [
+    {
+      "id": "V-C041B-SOURCE-DEFINITIONS",
+      "method": "primary-source visual/text recheck",
+      "result": "PASS",
+      "evidence": "ECCC TR25-033 Definitions 18--21: semi-filter nonempty/upward/empty-excluding; above relation; pair preservation; full pair-side cover graph."
+    },
+    {
+      "id": "V-C041B-SET-ALGEBRA",
+      "method": "direct proof",
+      "result": "PASS",
+      "evidence": "For even-even w in an odd-odd old slice, S,T are pairwise disjoint from each other and from U0, so (S union i(A)) intersect (T union i(B)) = i(A intersect B)."
+    },
+    {
+      "id": "V-C041B-CYLINDER-PRESERVATION",
+      "method": "direct proof plus finite exhaustive calibration",
+      "result": "PASS",
+      "evidence": "Cylinder membership is exactly old-slice membership; parent and decorated child preservation predicates coincide. A two-point parent enumeration checked all 4 semi-filters x 4 A choices x 4 B choices = 64 preservation cases. The enumeration is calibration only, not proof."
+    },
+    {
+      "id": "V-C041B-TIGHT-LOAD-BLOCK",
+      "method": "dual-constraint argument",
+      "result": "PASS",
+      "evidence": "A decorated child pair from a tight parent pair has lifted old load one. If it covers K, any positive new y_K violates the <=1 constraint."
+    }
+  ],
+  "counterexample_first_boundary_checks": [
+    {
+      "world": "EMPTY_GENERATOR_TRACE",
+      "verdict": "NO_RELEVANT_K",
+      "reason": "Definition 19 would require the empty trace to lie in K, forbidden by Definition 18."
+    },
+    {
+      "world": "MIXED_PARITY_WITNESS",
+      "verdict": "SIMPLE_IDENTITY_REFUTED_OUTSIDE_SCOPE",
+      "reason": "A row or column trace can meet U0 and create cross terms in E intersect H. The candidate is restricted to even-even witnesses."
+    },
+    {
+      "world": "ALL_TIGHT_PARENT_INTERSECTIONS_IN_K",
+      "verdict": "NO_SUFFICIENCY_CLAIM",
+      "reason": "The condition avoids only the decorated images of tight parent pairs. Other saturated child pairs may still cover K."
+    },
+    {
+      "world": "TIGHT_DISJOINT_PARENT_PAIR",
+      "verdict": "ZERO_FRESH_ONE_COORDINATE_MASS_FOR_ANY_EVEN_EVEN_K",
+      "reason": "The necessary condition would require emptyset in K, impossible for a semi-filter."
+    }
+  ],
+  "mathematical_outcome": "LOCAL_LEMMA_VERIFIED_AT_PAPER_PROOF_LEVEL_NO_FORMAL_CHECKER",
+  "strict_rakl_discovery_outcome": "DENIED_CHRONOLOGY_IDEA_PREDATED_CHILD_FIBRE",
+  "root_effect": "NONE",
+  "residuals": [
+    "Determine whether parent dual certificates of interest necessarily have tight pairs with empty or otherwise restrictive intersections.",
+    "If not, characterize whether a graph-realizable K can absorb every tight parent intersection while avoiding all other saturated child pairs.",
+    "No uniform augmentation, recurrence, divergence, rate, NP bridge, or P-vs-NP certificate."
+  ],
+  "computation_is_proof": false,
+  "formal_verifier": "NONE",
+  "same_context_review_independence_credit": 0,
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/04_candidates/C041B_TIGHT_INTERSECTION_ABSORPTION_LEMMA.md",
+    "tests/math_applications/test_pnp_c041b_tight_intersection.py",
+    "https://eccc.weizmann.ac.il/report/2025/033/download"
+  ]
+}
