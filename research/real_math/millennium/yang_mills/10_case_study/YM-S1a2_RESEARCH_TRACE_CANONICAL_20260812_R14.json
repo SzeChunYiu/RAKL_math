@@ -1,0 +1,68 @@
+{
+  "schema": "RAKL_math.research_trace.v3_shadow.canonical_v2",
+  "cycle_id": "YM-S1a2-TRANSFER-GAP-20260812-R14",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "hash_rule": "hash = sha256(canonical_json({id,kind,detail,prev_hash})); canonical_json uses UTF-8, sorted keys, separators=(',',':')",
+  "chronology_git_pins": {
+    "base": "ec8a9eb5eeedaaf1d3f497a8688384256a2079e0",
+    "fibre_commit": "8422463323493c97e7a81c23ddbc81a7798ed25d",
+    "pre_candidate_trace_commit": "35f5d79d90bdcf46cb14bfa92e7f1c73e621ceae",
+    "first_candidate_commit": "f47d5342720fafbc48a389e1e6662ff4604f6fec"
+  },
+  "correction": {
+    "supersedes_internal_hash_fields_of": "YM-S1a2_RESEARCH_TRACE_20260812_R14.json",
+    "reason": "The earlier pre-candidate trace was durably committed before the candidate and remains chronology evidence, but its manually populated internal hash fields were not runtime-recomputed. This canonical trace preserves that file and replaces only hash-chain authority; zero learning credit."
+  },
+  "entries": [
+    {
+      "id": "R14-00",
+      "kind": "FRAMEWORK_READ",
+      "detail": "Read current RAKL main 43897d3afaf0038385102d5acc64793c05ec40f0 and method 3.0.0/v3 authority surfaces before candidate.",
+      "prev_hash": "GENESIS",
+      "hash": "sha256:743929ca14de246d26bca6d00e4dc472c9d625becd8276a929f88d9a41da11ed"
+    },
+    {
+      "id": "R14-01",
+      "kind": "MEMORY_RETRIEVAL",
+      "detail": "Retrieved #5, #88, #238, PR#240, PR#225, F-YM-S1A2-OS-SZZ-SAME-THEORY-GLUING-UNBOUND and adjacent lanes; selected the post-RP spectral bridge.",
+      "prev_hash": "sha256:743929ca14de246d26bca6d00e4dc472c9d625becd8276a929f88d9a41da11ed",
+      "hash": "sha256:a3851f9cdebdb6f64212d014b44b62e7ded0c4f8da6a0df23e8d26d95fba8ff2"
+    },
+    {
+      "id": "R14-02",
+      "kind": "PRIMARY_SOURCE_BINDING",
+      "detail": "Bound SZZ arXiv:2204.12737v1 Cor.1.6/4.11 and Luescher DESY 76/54 Eq.(4)-(5), one-step shift, and Proposition 2; no theorem-like candidate yet.",
+      "prev_hash": "sha256:a3851f9cdebdb6f64212d014b44b62e7ded0c4f8da6a0df23e8d26d95fba8ff2",
+      "hash": "sha256:3c2e7034de42a7a42f5525f2d83e273d80eebd12afe45a5f6c663c878aece538"
+    },
+    {
+      "id": "R14-03",
+      "kind": "PRE_CANDIDATE_FREEZE",
+      "detail": "Committed pre-candidate fibre at 8422463323493c97e7a81c23ddbc81a7798ed25d and pre-candidate trace at 35f5d79d90bdcf46cb14bfa92e7f1c73e621ceae before candidate commit.",
+      "prev_hash": "sha256:3c2e7034de42a7a42f5525f2d83e273d80eebd12afe45a5f6c663c878aece538",
+      "hash": "sha256:baa09c0b6345deb57eb3844c99c343e63a60c7d31f8d240f6b50799e990a734c"
+    },
+    {
+      "id": "R14-04",
+      "kind": "CANDIDATE_COMPOSITION",
+      "detail": "Committed proposal/shadow local proof at f47d5342720fafbc48a389e1e6662ff4604f6fec: same-measure OS shift contraction and positivity, translated diagonal covariance, support-distance growth, dense-source spectral exclusion.",
+      "prev_hash": "sha256:baa09c0b6345deb57eb3844c99c343e63a60c7d31f8d240f6b50799e990a734c",
+      "hash": "sha256:d9b8123064046e3ae9c7969f009e2f894e997107c054b8b92d3d696f313f8105"
+    },
+    {
+      "id": "R14-05",
+      "kind": "EXPERT_CELL_REVIEW",
+      "detail": "Seven same-context roles checked OS, transfer positivity, spectral measure, SZZ scope/sign, gauge invariance, continuum boundary, and provenance; independent-review credit remains 0/3.",
+      "prev_hash": "sha256:d9b8123064046e3ae9c7969f009e2f894e997107c054b8b92d3d696f313f8105",
+      "hash": "sha256:8f0866221442862ee6581cd82693533ab11b590db1b6ee9739a0b4f454b84b1a"
+    },
+    {
+      "id": "R14-06",
+      "kind": "OUTCOME",
+      "detail": "Local fixed-cutoff same-OS transfer spectral gap coordinate passes at proposal/shadow authority; residual moves to lattice-spacing-uniform RG/continuum spectral transport; root #5 unchanged.",
+      "prev_hash": "sha256:8f0866221442862ee6581cd82693533ab11b590db1b6ee9739a0b4f454b84b1a",
+      "hash": "sha256:65462a40e67b26cc73833364fd6c67e2e1d90fec90ddf6cacdc66cb7f1db9e13"
+    }
+  ],
+  "trace_final_hash": "sha256:65462a40e67b26cc73833364fd6c67e2e1d90fec90ddf6cacdc66cb7f1db9e13"
+}
