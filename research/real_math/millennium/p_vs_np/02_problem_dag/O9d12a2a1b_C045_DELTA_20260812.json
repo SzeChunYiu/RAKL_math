@@ -1,0 +1,25 @@
+{
+  "schema_version":"1.0.0",
+  "delta_id":"DAG-PNP-C045-20260812",
+  "authority":"PROPOSAL_SHADOW_ONLY",
+  "parent_atoms":["O9d12a2a1b-C043","O9d12a2a1b-C044-RETROSPECTIVE"],
+  "atom":"O9d12a2a1b-C045",
+  "statement":"At G17 / canonical length 32, test whether the first untouched UNSAT batch couples to the accumulated G16 complement strongly enough to defeat component multiplexing.",
+  "status":"LOCALLY_SOLVED_NEGATIVE",
+  "proved":[
+    "exactly ten canonical UNSAT words occur at length 32",
+    "the resulting U_new is row- and column-projection disjoint from U16",
+    "U_new has an explicit three-pair generator-separating cover",
+    "rho(G17)<=sigma(G17)<=4"
+  ],
+  "diagnosis":"G17 is not the first load-bearing coupling layer because all newly UNSAT prefix rows were previously complement-empty.",
+  "child_residuals":[
+    {
+      "id":"O9d12a2a1b-C046-PROPOSED",
+      "statement":"Locate the earliest later canonical UNSAT batch with an n/n prefix row already in Rows(U_n); only then test whether the resulting mixed old/new row fibre defeats a constant cover.",
+      "status":"OPEN_UNFROZEN_NEXT_ATOM"
+    }
+  ],
+  "local_to_global_gluing":"OPEN: no uniform recurrence, no general-circuit lower bound, and no B1/B2/B3 root bridge follows.",
+  "root_status":"OPEN_NO_SOLUTION_CERTIFICATE"
+}
