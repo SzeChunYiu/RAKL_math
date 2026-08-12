@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 import importlib.util
+import hashlib
 import json
 from pathlib import Path
+import subprocess
 import sys
 
 from rakl.math_context import ContextGateVerdict
@@ -112,3 +114,53 @@ def test_hook_receipt_and_trace_are_content_bound() -> None:
         "norm_quantifier_scope",
         "required_scope_witness",
     }
+
+
+def test_selected_retrievals_bind_declared_artifact_identities_and_git_blobs() -> None:
+    m = module()
+    docs = m.build_documents()
+    bindings = docs["retrieval_bindings"]
+    selected = {
+        row["retrieval_id"]: row["payload_hash"]
+        for row in docs["pre_action"]["selected_retrievals"]
+    }
+    by_id = {row["retrieval_id"]: row for row in bindings["bindings"]}
+
+    for retrieval_id in ("YM-R20-lesson", "global-failure-atlas"):
+        row = by_id[retrieval_id]
+        source = ROOT / row["path"]
+        raw = source.read_bytes()
+        document = json.loads(raw)
+        payload = dict(document)
+        payload["artifact_hash"] = ""
+        recomputed = m._hash(payload)
+        assert document["artifact_hash"] == recomputed
+        assert row["declared_artifact_hash"] == recomputed
+        assert row["recomputed_declared_artifact_hash"] == recomputed
+        assert row["selected_payload_sha256"] == recomputed.removeprefix("sha256:")
+        assert selected[retrieval_id] == row["selected_payload_sha256"]
+        assert row["raw_file_sha256"] == hashlib.sha256(raw).hexdigest()
+        assert row["full_canonical_document_sha256"] == m._hash(document, prefix=False)
+        blob = subprocess.run(
+            ["git", "-C", str(ROOT), "rev-parse", f"{row['application_commit']}:{row['path']}"],
+            check=True,
+            stdout=subprocess.PIPE,
+            text=True,
+        ).stdout.strip()
+        assert blob == row["git_blob"]
+
+    memory = docs["memory"]
+    assert memory["failure_lattice_snapshot_hash"] == by_id["global-failure-atlas"]["declared_artifact_hash"]
+    assert selected["YM-R20-lesson"] == m.R20_LESSON_ARTIFACT_SHA256
+    assert selected["global-failure-atlas"] == m.FAILURE_ATLAS_ARTIFACT_SHA256
+
+
+def test_repair_remains_pre_candidate_and_has_zero_mathematical_credit() -> None:
+    m = module()
+    docs = m.build_documents()
+    repair = docs["retrieval_bindings"]
+    gate = docs["gate"]
+    assert repair["supersedes"]["candidate_or_result_accessed_before_repair"] is False
+    assert repair["authority"] == "PRE_CANDIDATE_BINDING_REPAIR_ONLY_NO_MATHEMATICAL_RESULT_CREDIT"
+    assert gate["operational_candidate_materialization_allowed"] is False
+    assert gate["pre_candidate_binding_repair"]["status"] == "REPAIRED_BEFORE_CANDIDATE_OR_RESULT_ACCESS"

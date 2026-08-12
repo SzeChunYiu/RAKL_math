@@ -1,0 +1,52 @@
+{
+  "schema_version": "ym-retrieval-content-binding-v1",
+  "repair_id": "YM-S1a2i-K1-PR379-RETRIEVAL-BINDING-REPAIR-20260812",
+  "atom_id": "YM-S1a2i-K1",
+  "supersedes": {
+    "merged_pr": 379,
+    "merge_sha": "cc39c7a2553c2e20aa7103652d1429675164016b",
+    "defect": "two SelectedRetrieval values used raw-file SHA256 while their JSON sources declared artifact_hash identities",
+    "candidate_or_result_accessed_before_repair": false
+  },
+  "selected_hash_rule": "When a JSON memory artifact declares artifact_hash, SelectedRetrieval.payload_hash and the corresponding memory snapshot hash use that declared content identity without the sha256: prefix. Raw and full-canonical hashes remain separate byte/document checks.",
+  "bindings": [
+    {
+      "retrieval_id": "YM-R20-lesson",
+      "application_commit": "b7ca6ac51fa8319b559e95402c47959c626f284a",
+      "path": "research/real_math/millennium/yang_mills/07_memory/YM-S1a2i_R20_MATHEMATICAL_LESSON_20260812.json",
+      "git_blob": "463c5a0022c78ac4d6551c225f37ae4efb103242",
+      "selected_payload_hash_semantics": "DECLARED_ARTIFACT_HASH_WITHOUT_SHA256_PREFIX",
+      "selected_payload_sha256": "18c39a9a7ea90fede4fb3672d1e777886fea7e88e094f453bb8fada799018a73",
+      "declared_artifact_hash": "sha256:18c39a9a7ea90fede4fb3672d1e777886fea7e88e094f453bb8fada799018a73",
+      "recomputed_declared_artifact_hash": "sha256:18c39a9a7ea90fede4fb3672d1e777886fea7e88e094f453bb8fada799018a73",
+      "full_canonical_document_sha256": "5293dd7098d00a662fd37690f5d67d7c69cd50f039eaf5e76b372a963c908fad",
+      "raw_file_sha256": "69ccccf3766bd6f2cca79ea9c02dff6a524a590f9f3c50b6723030b365d0378f"
+    },
+    {
+      "retrieval_id": "global-failure-atlas",
+      "application_commit": "b7ca6ac51fa8319b559e95402c47959c626f284a",
+      "path": "research/real_math/millennium/cross_problem/07_memory/GLOBAL_MATHEMATICAL_FAILURE_CAUSE_ATLAS_BSD_R15_SUCCESSOR_20260812.json",
+      "git_blob": "dbfe7d1d9f82c894bb68f1c988bbb26318c0416f",
+      "selected_payload_hash_semantics": "DECLARED_ARTIFACT_HASH_WITHOUT_SHA256_PREFIX",
+      "selected_payload_sha256": "db809b89815e0ca6a58eaa915e531bcd52d127f5449469dd087f349763f69d11",
+      "declared_artifact_hash": "sha256:db809b89815e0ca6a58eaa915e531bcd52d127f5449469dd087f349763f69d11",
+      "recomputed_declared_artifact_hash": "sha256:db809b89815e0ca6a58eaa915e531bcd52d127f5449469dd087f349763f69d11",
+      "full_canonical_document_sha256": "9c8a689f95e4d1b35e3f577be5ee06f36ede6dc8a4b3be3e5eb39663120d3f77",
+      "raw_file_sha256": "395608d8decec9643c6226d16b59538b0c41eec9c090f538815f7794d16d7249"
+    },
+    {
+      "retrieval_id": "YM-S1A1-research-tool-inventory",
+      "application_commit": "b7ca6ac51fa8319b559e95402c47959c626f284a",
+      "path": "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_TOOL_INVENTORY_20260811.json",
+      "git_blob": "bcd83b24d5bf28134d3ec2586386cc5dbd1b46e8",
+      "selected_payload_hash_semantics": "RAW_FILE_SHA256_NO_DECLARED_ARTIFACT_HASH",
+      "selected_payload_sha256": "e392651dfa64976a1586a25fe709f37f2606914a0d3f043a5b0a2865834992f0",
+      "declared_artifact_hash": null,
+      "recomputed_declared_artifact_hash": null,
+      "full_canonical_document_sha256": "fe2f3b4ef49492d81cb350fb689bf9f9dff6cfd1817d72d6ff9fe3350e3d5e6a",
+      "raw_file_sha256": "e392651dfa64976a1586a25fe709f37f2606914a0d3f043a5b0a2865834992f0"
+    }
+  ],
+  "authority": "PRE_CANDIDATE_BINDING_REPAIR_ONLY_NO_MATHEMATICAL_RESULT_CREDIT",
+  "artifact_hash": "sha256:255cd2903814f05fe3fd0d6b1b6bef02b87b86a2c25562df0844686a95bcbbd5"
+}
