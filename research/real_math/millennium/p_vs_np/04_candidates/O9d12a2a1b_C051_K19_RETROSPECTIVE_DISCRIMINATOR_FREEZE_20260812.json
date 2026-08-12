@@ -1,0 +1,113 @@
+{
+  "artifact_hash": "sha256:17cd59fa427b03b6e3cb27a3dee18043414f27792fa405b7a030353a8f3ac285",
+  "atom_id": "O9d12a2a1b-C051",
+  "authority": "RETROSPECTIVE_ONLY_FOR_SUPPORT_SELECTION__PROSPECTIVE_FOR_SHARED_BITS_AND_UNSAT",
+  "candidate_id": "C051-K19-RETROSPECTIVE-SUPPORT-DISCRIMINATOR-v1",
+  "candidate_identity": {
+    "candidate_core_sha256": "sha256:96f28f710882cbc51042f2a04f41ab6d992f8b2587134fa60db186a0ee9f12a3",
+    "candidate_id": "C051-K19-RETROSPECTIVE-SUPPORT-DISCRIMINATOR-v1"
+  },
+  "credit": {
+    "assurance_credit": 0,
+    "candidate_freeze_result_credit": 0,
+    "support_selection_discovery_credit": 0
+  },
+  "discriminator": {
+    "allowed_results": [
+      "EXACT_OVERLAP_WITNESS",
+      "SCOPED_OVERLAP_IMPOSSIBILITY",
+      "BOUNDED_NO_MATCH_ONLY",
+      "CANNOT_CHECK"
+    ],
+    "negative_certificate": "exhaust the one parent and four current parameter regimes and prove a forced unequal coordinate or contradiction in every product branch.",
+    "operation_order": [
+      "derive exact field offsets for the sole length-38 parent regime",
+      "derive exact field offsets for all four length-40 current regimes",
+      "compare h=1||suffix_19(x) with prefix_20(y) coordinate by coordinate",
+      "if any forced mismatch covers all branches, return SCOPED_OVERLAP_IMPOSSIBILITY",
+      "otherwise require explicit canonical x,y and independently prove x UNSAT before returning EXACT_OVERLAP_WITNESS"
+    ],
+    "positive_certificate": "canonical length-38 x=r||c with Dec(x) UNSAT; canonical length-40 y; prefix_20(y)=1||c exactly; C048 swapped reduction retained.",
+    "predicted_result": null
+  },
+  "falsifiers": {
+    "impossibility": [
+      "one canonical length-38 UNSAT x and canonical length-40 y with prefix_20(y)=1||suffix_19(x)",
+      "one omitted grammar-product branch"
+    ],
+    "positive": [
+      "one unequal shared bit",
+      "noncanonical parse",
+      "one satisfying assignment of the claimed UNSAT parent"
+    ],
+    "support": [
+      "a positive (v,m) outside the frozen regimes with encoded length 38 or 40",
+      "incorrect raw or padded length arithmetic"
+    ]
+  },
+  "frozen_at": "2026-08-12T09:48:30Z",
+  "object": "Exact classification of H_19 intersection P_20 under the unchanged C041 grammar and C048 swapped reduction.",
+  "preexposed_support_input": {
+    "current_length_40_regime": {
+      "encoded_length": 40,
+      "m": 2,
+      "padding": false,
+      "raw_length": 40,
+      "v_values": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "mathematical_credit": 0,
+    "parent_length_38_regime": {
+      "encoded_length": 38,
+      "m": 4,
+      "padding": false,
+      "raw_length": 38,
+      "v": 1
+    },
+    "status": "KNOWN_BEFORE_CONTEXT_FREEZE_NOT_STRICT_DISCOVERY"
+  },
+  "proof_obligations": [
+    "PARENT_LENGTH_38_PARAMETER_EXHAUSTION",
+    "CURRENT_LENGTH_40_PARAMETER_EXHAUSTION",
+    "EXACT_PARENT_AND_CURRENT_FIELD_OFFSETS",
+    "ALL_20_SHARED_COORDINATES_ACCOUNTED_FOR",
+    "PARENT_UNSAT_PROVED_IF_SYNTAX_SURVIVES",
+    "C048_SWAPPED_REDUCTION_PRESERVED",
+    "K19_SCOPE_ONLY"
+  ],
+  "qoi": "EXACT_H19_INTERSECTION_P20_CLASSIFICATION",
+  "result_firewall": {
+    "allowed_now": [
+      "freeze these exact regimes, obligations, falsifiers, and inert evaluator"
+    ],
+    "forbidden_now": [
+      "derive any shared coordinate",
+      "construct or solve a parent formula",
+      "state or predict the intersection result",
+      "claim strict discovery for support selection"
+    ]
+  },
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "source_binding": {
+    "application_base": "f55355f003a25e13a8a24c65c92d525f0c8e430b",
+    "correction": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C051_SUPPORT_CONTAMINATION_CORRECTION_20260812.json",
+    "live_framework_main": "9da0f4d331e9ae61f1309b3a006d7a3c67fa217c"
+  },
+  "support_derivation_to_be_checked_not_discovered": {
+    "current_exhaustion": "E(v,m)=40 iff m=2 and bit_length(v)=3, hence v in {4,5,6,7}.",
+    "length_formula": "R(v,m)=8+(2 bit_length(v)-1)+(2 bit_length(m)-1)+3m(1+bit_length(v)); E=R+(R mod 2)",
+    "parent_exhaustion": "E(v,m)=38 iff (v,m)=(1,4) among positive canonical parameters."
+  },
+  "target_access": {
+    "field_offsets_derived": false,
+    "intersection_determined": false,
+    "parent_formula_constructed": false,
+    "shared_bits_compared": false,
+    "unsat_evaluated": false
+  }
+}
