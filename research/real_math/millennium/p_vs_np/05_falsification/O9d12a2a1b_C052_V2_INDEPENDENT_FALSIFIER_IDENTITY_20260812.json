@@ -1,0 +1,42 @@
+{
+  "atom_id": "O9d12a2a1b-C052-V2",
+  "context_hash": "sha256:44a48e559f7b58aa83ee85c99be3a748052e2483612fb8429ca7244d69018f6d",
+  "falsification_conditions": [
+    "any escape witness outside H_k",
+    "any ambient-syntax substitution for semantic membership",
+    "any omitted coordinate, v, index, sign, formula bytes, or proof binding",
+    "any reuse of consumed k=20 as fresh hidden validation",
+    "any raw agreement described as independent peer review"
+  ],
+  "future_outcomes": [
+    "CLASSIFIER_SURVIVES",
+    "CLASSIFIER_FALSIFIED",
+    "UNRESOLVED",
+    "CANNOT_CHECK"
+  ],
+  "identity_id": "PNP-C052-INDEPENDENT-UNSAT-AWARE-HOSTILE-FALSIFIER-v2",
+  "identity_kind": "INERT_DATA_ONLY_FALSIFIER_SPECIFICATION",
+  "independence_boundary": {
+    "classifier_certificate_reuse_allowed": false,
+    "classifier_import_allowed": false,
+    "future_implementation_status": "ABSENT_UNTIL_POST_MERGE_AUTHORIZATION",
+    "same_context_review_is_independent_peer_review": false
+  },
+  "independent_checks": [
+    "recompute exact adjacent support and derived padding",
+    "recompute h[0] versus h[1]=c[0] indexing and token phase",
+    "validate every escape witness is canonical, has the registered length, and is UNSAT",
+    "recompute formula truth or verify the bound symbolic contradiction without classifier imports",
+    "verify coordinate-specific H_k witnesses match MAGIC and claimed variability stays inside H_k",
+    "reject ambient-only variation using the planted semantic-subset trap",
+    "reproduce C050 and C051 only as bounded forced-conflict regressions",
+    "validate fresh hostile branch without overlap inference"
+  ],
+  "non_guarantees": [
+    "not executed",
+    "not independent peer review",
+    "no mathematical-result authority"
+  ],
+  "schema_version": "2.0.0",
+  "status": "FROZEN_NOT_EXECUTED"
+}

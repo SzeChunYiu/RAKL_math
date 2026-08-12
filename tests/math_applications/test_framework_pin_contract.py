@@ -13,7 +13,7 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "7a95860924f73c02113d11d3837ea22eefa8cc44"
+EXPECTED_FRAMEWORK_COMMIT = "d21592b0ff8da988deabb923fd549891ff8ad9f0"
 HISTORICAL_F224_FRAMEWORK_COMMIT = "f224d91d9fbd2844a89921ca4a30b77a7954ecd2"
 HISTORICAL_4EE_FRAMEWORK_COMMIT = "4ee5e9afe77870c684b798e0ed4c9fcee62a4365"
 HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
@@ -78,10 +78,9 @@ def test_machine_readable_framework_pin_is_valid_and_loaded_exactly() -> None:
     ).stdout
     assert framework_status == ""
     assert pin["authority"] == (
-        "Dependency synchronization to exact clean RAKL origin/main 7a95860924f73c02113d11d3837ea22eefa8cc44 observed 2026-08-12; "
-        "6756ebe..7a95860 adds optional objective-transfer and task-conditioned semantic-quotient research surfaces but changes no protected mathematical gate and wires neither module into C052; "
-        "the frozen C052 identity bytes remain unchanged; historical artifacts retain recorded authority and chronology; "
-        "no proof, research result, review-independence, method-evolution, or mathematical-saturation authority"
+        "Dependency synchronization to exact clean RAKL origin/main d21592b0ff8da988deabb923fd549891ff8ad9f0 observed 2026-08-12; "
+        "7a95860..d21592b adds Paper2 robustness research workflows plus an optional structural-routing benchmark but changes no protected mathematical gate and is not wired into C052; "
+        "historical artifacts retain recorded authority and chronology; no proof, research result, review-independence, method-evolution, or mathematical-saturation authority"
     )
 
 
