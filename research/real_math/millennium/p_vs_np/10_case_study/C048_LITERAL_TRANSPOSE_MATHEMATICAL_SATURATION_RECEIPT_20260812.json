@@ -1,0 +1,40 @@
+{
+  "artifact_hash": "sha256:ccab1bbd2920770968e2dc58020ac692ae9c2812e41c191da974a0a50d616c51",
+  "atom_id": "O9d12a2a1b-C048",
+  "attempted_implication": "literal transposition should preserve the graph-language reduction while changing the row interface from prefix-as-row to suffix-as-row",
+  "candidate_id": "C048-LITERAL-TRANSPOSE-TRANSFER-CONDITION-v1",
+  "exact_result": {
+    "overall_repair": "NOT_ESTABLISHED: no overlap witness or nonemptiness theorem was frozen or checked.",
+    "success": "For the full square relation transpose, graph membership is exactly equivariant under swapping both query endpoints; hence the C041 3SAT reduction remains correctly directed after changing (r,M+c) to (M+c,r).",
+    "transfer_condition": "Literal-transpose high cross rows are exactly 1||c for UNSAT suffixes c, and exact collision with a current canonical prefix occurs iff this row language intersects P_(k+1)."
+  },
+  "failure_or_success_cause": {
+    "competing_causes_rejected": [
+      "coarse high-half occupancy alone supplies equality",
+      "the old unswapped reduction remains valid by default",
+      "record completeness proves overlap nonemptiness"
+    ],
+    "supported_bounded_cause": "transpose is a bijective relation symmetry, whereas collision depends on decoder-specific suffix/prefix synchronization not supplied by that symmetry"
+  },
+  "falsifier": "A pair violating G^T=tau(G), a transposed decoded high row outside 1||S_k, or a label collision not equivalent to the frozen overlap refutes the corresponding lemma.",
+  "lesson_authority": "PROPOSAL_ONLY_APPLICATION_LESSON_REQUIRES_FRESH_SELF_RAKL_ASSURANCE",
+  "mathematical_credit": {
+    "ci_schema_hash_chronology_runtime": 0,
+    "collision_iff_overlap_transfer_condition": true,
+    "endpoint_swapped_reduction_lemma": true,
+    "relation_transpose_equivariance_lemma": true,
+    "suffix_row_projection_characterization": true
+  },
+  "proposal_only_rakl_lesson": "When an ordered-relation repair changes coordinates, prove semantic equivariance of the transported query and exact congruence of the desired label interface as separate obligations. A pass on one is not a pass on the other.",
+  "repair_condition": "Construct and freeze a target-blind canonical UNSAT word whose suffix is the tail of a current canonical prefix, or prove such overlap impossible; then separately retain the swapped reduction map.",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "round_kind": "BOUNDED_MATHEMATICAL_TRANSFER_SATURATION",
+  "same_context_not_independent": true,
+  "schema_version": "1.0.0",
+  "scope": [
+    "exact C041 square relation and equal split",
+    "full recursive transpose with both endpoints swapped",
+    "all k>=2 for identities/equivalences",
+    "no overlap existence, target enumeration, cover/lower-bound, novelty, or root claim"
+  ]
+}
