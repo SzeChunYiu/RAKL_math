@@ -1,0 +1,95 @@
+{
+  "atom_id": "YM-S1a2i-K1",
+  "object_context": "Determine only whether the source-scoped irrelevant K-coordinate estimate can be made invariant under the next, slightly smaller, O(g^2) graph radius.",
+  "structural_coordinates": [
+    "one-step irrelevant contraction factor rho strictly between zero and one",
+    "higher-order K forcing of order g_k^4",
+    "base flow g_{k+1}=g_k-b_0 g_k^3 plus a value remainder of order g_k^5",
+    "target K radius c_K g_{k+1}^2 rather than c_K g_k^2",
+    "constants must be uniform in the scale index k on one small-coupling interval",
+    "relevant lambda coordinate, base injectivity and continuum gluing are excluded",
+    "root status OPEN_NO_SOLUTION_CERTIFICATE"
+  ],
+  "equivalent_formulations": [
+    "Invariant-region form: compare the contracted-and-forced K bound with the next graph radius.",
+    "Margin form: determine whether the O(g^2) contraction slack dominates the O(g^4) radius shrink and forcing uniformly for small g.",
+    "Quantifier form: ask for one epsilon and source constants valid for every scale k and every 0<g_k<=epsilon."
+  ],
+  "solved_analogues": [
+    "Elementary invariant-interval lemma: a fixed strict contraction plus a higher-order perturbation preserves a sufficiently small ball of fixed radius scale.",
+    "Stable-coordinate graph transforms spend a uniform linear contraction margin against nonlinear higher-order forcing."
+  ],
+  "near_solved_analogues": [
+    "YM R20 identifies rho<1 plus O(g^4) forcing as a plausible but unproved repair of the K-coordinate shrinking-radius step.",
+    "Standard hyperbolic graph transforms close stable coordinates separately from inverse treatment of relevant coordinates."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Small invariant balls under strict contraction and quadratic perturbation",
+      "method": "Make the contraction slack explicit, bound the perturbation relative to it, and solve one smallness inequality before composing other coordinates.",
+      "shared_structure": [
+        "fixed strict contraction",
+        "higher-order forcing",
+        "small parameter",
+        "invariant target ball"
+      ],
+      "required_assumptions": [
+        "uniform contraction margin",
+        "uniform forcing constant",
+        "positive lower control on the next radius"
+      ],
+      "disanalogies": [
+        "the target radius itself changes with g",
+        "the Yang-Mills norm is scale dependent",
+        "source text availability is bounded"
+      ],
+      "repair_question": "Do the exact source-scoped constants and base lower bound suffice for one uniform small-coupling K-coordinate next-radius inequality?",
+      "source_anchors": [
+        "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_R20_SOURCE_AUDIT.md"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "K-coordinate invariance is not full graph-transform contraction.",
+    "A value bound for the base remainder is not a derivative or injectivity theorem.",
+    "Closing a UV coordinate gives no OS reconstruction, continuum nontriviality or mass gap.",
+    "The source PDF remains unavailable for visual verification; target use is bounded to acquired indexed primary-author text."
+  ],
+  "source_anchors": [
+    "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_R20_SOURCE_AUDIT.md",
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1a2i_R20_MATHEMATICAL_LESSON_20260812.json",
+    "research/real_math/millennium/cross_problem/07_memory/GLOBAL_MATHEMATICAL_FAILURE_CAUSE_ATLAS_BSD_R15_SUCCESSOR_20260812.json",
+    "RAKL@62e97d545f93ff604b2db47a7c8d41a59a1c5286"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "capacity control",
+      "source_situation": "A store compresses inventory by a fixed fraction each cycle while the allowed warehouse shrinks only by a higher-order amount and receives a smaller-order replenishment.",
+      "common_abstraction": [
+        "strict fractional slack",
+        "smaller target",
+        "higher-order disturbance"
+      ],
+      "source_to_target_mapping": [
+        "compression -> rho contraction",
+        "warehouse radius -> c_K g^2",
+        "replenishment -> O(g^4) forcing"
+      ],
+      "shared_constraints": [
+        "one uniform slack must dominate both shrinkage and disturbance"
+      ],
+      "disanalogies": [
+        "inventory has no Banach norm or RG scale dependence",
+        "analogy supplies no theorem authority"
+      ],
+      "proposed_principle": "Budget every loss against an explicit slack before declaring the smaller target invariant.",
+      "validation_obligation": "Prove or refute the exact scalar inequality from the source-scoped bounds with all quantifiers and constants exposed.",
+      "provenance_note": "Proposal generator only."
+    }
+  ],
+  "analogy_scan_notes": "No additional everyday bridge was retained because it added no structural coordinate beyond explicit slack accounting.",
+  "frozen_at": "2026-08-12T10:28:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:62b283503fa2f62349dea2b2bb8f67dc65e1b1d944cec01cbd5df8e0bed806ae"
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "PRE-YM-S1a2i-K1-20260812",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "62e97d545f93ff604b2db47a7c8d41a59a1c5286",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "b7ca6ac51fa8319b559e95402c47959c626f284a",
+  "task_id": "YM-root-5",
+  "atom_id": "YM-S1a2i-K1",
+  "context_hash": "sha256:62b283503fa2f62349dea2b2bb8f67dc65e1b1d944cec01cbd5df8e0bed806ae",
+  "fibre_snapshot_hash": "sha256:62b283503fa2f62349dea2b2bb8f67dc65e1b1d944cec01cbd5df8e0bed806ae",
+  "operator_ids": [
+    "SOURCE_SCOPED_SCALAR_INVARIANT_REGION_DISCRIMINATOR"
+  ],
+  "selected_retrievals": [
+    {
+      "retrieval_id": "RAKL/main@62e97d54",
+      "authority": "CANONICAL",
+      "payload_hash": "d05e7e19bb57e43f1fbffb2ccc5bbe8745caa34f8b032fd62e32a08595fc4a89"
+    },
+    {
+      "retrieval_id": "YM-R20-lesson",
+      "authority": "CANONICAL",
+      "payload_hash": "69ccccf3766bd6f2cca79ea9c02dff6a524a590f9f3c50b6723030b365d0378f"
+    },
+    {
+      "retrieval_id": "global-failure-atlas",
+      "authority": "CANONICAL",
+      "payload_hash": "395608d8decec9643c6226d16b59538b0c41eec9c090f538815f7794d16d7249"
+    }
+  ],
+  "rejected_retrievals": [
+    {
+      "retrieval_id": "Navier-Stokes-B2a1a3",
+      "rejection_reason": "requires new PDE tail input rather than the selected cheap scalar discriminator"
+    },
+    {
+      "retrieval_id": "Hodge-C008",
+      "rejection_reason": "requires target incidence geometry not present on merged main"
+    },
+    {
+      "retrieval_id": "BSD-Sha-finiteness",
+      "rejection_reason": "deep arithmetic input and no cheap merged-main discriminator"
+    }
+  ],
+  "predeclared_discriminator": "Using only source-bound k-uniform constants, decide whether strict irrelevant contraction plus higher-order forcing fits the next O(g_{k+1}^2) K radius on one predeclared small-coupling interval; otherwise return ASSUMPTIONS_INSUFFICIENT or CANNOT_CHECK.",
+  "allowed_outcome_branches": [
+    "SUCCESS",
+    "PARTIAL_SUCCESS",
+    "FAILURE",
+    "BLOCKED",
+    "UNKNOWN"
+  ],
+  "frozen_at_utc": "2026-08-12T10:29:00Z",
+  "sequence_index": 21,
+  "receipt_canonical_sha256": "a1d76c5a5878726cd807df7663fcc57ee87011d68fddb2ac6adfdb797224144c"
+}
