@@ -1,0 +1,71 @@
+{
+  "artifact_hash": "sha256:9ac1469fb88b8f5c45a4d208ea653de8285c1cd917d4d5dc521b569408391517",
+  "authoritative_framework_sha": "a6946c740b50413faf0eee218cc490dd6383e9ab",
+  "authority": {
+    "independent_review_credit": 0,
+    "mathematical_result_credit": 0,
+    "process_rebinding_only": true,
+    "proof_authority": false
+  },
+  "binding_canonical_sha256": "b68da79ac7d5d5533edddfd27c60c03ab8c461fe3106d9bd24a0fa83c22e45a7",
+  "binding_id": "PNP-C052-FRAMEWORK-SUBJECT-REBIND-A6946C7-20260812",
+  "evidence_pointers": [
+    "git:a6946c740b50413faf0eee218cc490dd6383e9ab:RAKL_VERSION.json",
+    "git:a6946c740b50413faf0eee218cc490dd6383e9ab:skills/rakl-core/workflows/mathematical-research.md",
+    "git:a6946c740b50413faf0eee218cc490dd6383e9ab:src/rakl/structural_transport_v2.py@sha256:f8b03ab9965f04400fac2d74c8c533e2354046025887b6aefd8b79968cf99e87",
+    "git:a6946c740b50413faf0eee218cc490dd6383e9ab:src/rakl/quantifier_compatibility.py@sha256:cbbf7c125a505f4914a2253e75e5a809c67fb74e8193cc31d19ab3019938accc",
+    "git:a6946c740b50413faf0eee218cc490dd6383e9ab:schemas/quantifier-compatibility-witness-v1.schema.json@sha256:2874ab098fd28941c1e001abdb90b2a164d0af6fe282bbcbdf68bdb38403917f",
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C052_MATH_CONTEXT_FIBER_20260812.json"
+  ],
+  "frozen_at_utc": "2026-08-12T11:18:00Z",
+  "intervening_surface_classification": {
+    "post_496_to_current_core_method_diff": [],
+    "post_496_to_current_scope": "publication, empirical research, scoreboards, capability freezes, and paper tests only",
+    "predecessor_to_current_diff": {
+      "classification": "NON_CORE_PUBLICATION_RESEARCH_SCOREBOARD_AND_TEST_ONLY",
+      "deletions": 18,
+      "insertions": 374,
+      "paths": [
+        "research/STRONGEST_VERSION_CAMPAIGN_SCOREBOARD_20260812.json",
+        "research/STRONGEST_VERSION_CAMPAIGN_SCOREBOARD_20260812.md",
+        "research/paper1_adversarial_epistemic_benchmark_v1/COMPARATOR_MODELS.md",
+        "research/paper1_adversarial_epistemic_benchmark_v1/DESIGN_FREEZE.json",
+        "research/paper1_adversarial_epistemic_benchmark_v1/EPISODE_FAMILIES.md",
+        "research/paper1_adversarial_epistemic_benchmark_v1/METRICS.md",
+        "research/paper1_adversarial_epistemic_benchmark_v1/PROTOCOL.md",
+        "research/paper1_adversarial_epistemic_benchmark_v1/README.md",
+        "research/paper2_nearest_work_2026/AUDIT_STATUS.json",
+        "research/paper2_nearest_work_2026/BIBLIOGRAPHY_PATCH.tex",
+        "research/paper2_nearest_work_2026/CLAIM_MATRIX.md",
+        "research/paper2_nearest_work_2026/COMPARATOR_REQUIREMENTS.md",
+        "research/paper2_nearest_work_2026/MANUSCRIPT_DIFF_PLAN.md",
+        "research/paper2_nearest_work_2026/NOVELTY_THREAT_RANKING.md",
+        "research/paper2_nearest_work_2026/README.md",
+        "research/paper2_nmi_flagship_gate_v1/DESIGN_GATE_FREEZE.json",
+        "research/paper2_nmi_flagship_gate_v1/README.md",
+        "tests/test_paper1_adversarial_epistemic_scaffold.py",
+        "tests/test_paper2_nearest_work_2026_scaffold.py"
+      ],
+      "protected_math_gate_paths_changed": []
+    },
+    "previous_active_framework_sha": "29d382463eb353696f8ac224dd885bfb2148f55d",
+    "protected_added_at_496edc": [
+      "src/rakl/structural_transport_v2.py"
+    ],
+    "unchanged_quantifier_runtime_sha256": "cbbf7c125a505f4914a2253e75e5a809c67fb74e8193cc31d19ab3019938accc",
+    "unchanged_quantifier_schema_sha256": "2874ab098fd28941c1e001abdb90b2a164d0af6fe282bbcbdf68bdb38403917f"
+  },
+  "pre_candidate_packet_hash": "9d40561c8b60531e1b424dc0daa66f308a000e76154d36295c91836004dce125",
+  "rebind_chronology": {
+    "candidate_or_falsifier_identity_existed_at_rebind": false,
+    "current_rebind_frozen_after_framework_tip_observation": true,
+    "historical_context_binding_preserved_not_rewritten": true,
+    "historical_context_framework_binding_sha": "62e97d545f93ff604b2db47a7c8d41a59a1c5286",
+    "historical_identity_only_license_status_before_revalidation": "STALE_FOR_ANY_FUTURE_CLASSIFIER_FREEZE",
+    "historical_identity_only_license_superseded_by": "PNP-C052-POSTMERGE-FRAMEWORK-REVALIDATION-A6946C7-20260812",
+    "historical_preaction_application_pin": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+    "historical_preaction_pin_is_provenance_only": true
+  },
+  "rebind_reason": "The historical 62e97d context binding remains chronologically valid, but 496edc added the protected structural_transport_v2 runtime.  Rebind the unchanged mathematical packet to current a6946c7 before any later candidate identity; do not backdate or overwrite history.",
+  "schema_version": "framework-candidate-freeze-binding-v1"
+}
