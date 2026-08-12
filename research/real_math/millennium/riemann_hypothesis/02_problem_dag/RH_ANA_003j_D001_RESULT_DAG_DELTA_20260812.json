@@ -1,0 +1,40 @@
+{
+  "artifact_hash": "sha256:0c41b265d4d105b7491cd993d9069e335d0f0ce6fb83fe6319dff44dae369cc4",
+  "atom_id": "RH-ANA-003j",
+  "next_discriminator": "Before revisiting epsilon_n or Y_n, freeze one authoritative explicit PNT bound with a numerical constant and validity range, or perform a separately frozen line-by-line constant extraction from Bellotti's proof including H, O, and every << dependency. Then substitute those exact values into the already derived conditional envelope and test source-complete modulus materialization.",
+  "nodes": [
+    {
+      "node_id": "LEM-RH-ANA003j-D001-EXACT-LAGUERRE-COEFFICIENT-LEDGER",
+      "pointer": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_MODULUS_SOURCE_RESULT_20260812.json",
+      "scope": "finite generalized-Laguerre normalization for every integer n>=1",
+      "status": "PROVED_SAME_CONTEXT_HAND_DERIVATION"
+    },
+    {
+      "node_id": "LEM-RH-ANA003j-D001-CONDITIONAL-BOUNDARY-TAIL-MODULUS",
+      "pointer": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_MODULUS_SOURCE_RESULT_20260812.json",
+      "scope": "fixed n, natural order, direct nonintegral identity extended to every real endpoint by step constancy, explicit Bellotti placeholders K_B,x_B",
+      "status": "PROVED_CONDITIONAL_ON_VALID_K_B_AND_X_B"
+    },
+    {
+      "node_id": "OBL-RH-ANA003j-D001-SOURCE-COMPLETE-K_B-X_B",
+      "pointer": "research/real_math/millennium/riemann_hypothesis/03_sources/RH_ANA_003j_D001_EXACT_SOURCE_SCOPE_AUDIT_20260812.json",
+      "status": "OPEN_NOT_EXPOSED_BY_ACQUIRED_BELLOTTI_V1"
+    },
+    {
+      "depends_on": [
+        "LEM-RH-ANA003j-D001-EXACT-LAGUERRE-COEFFICIENT-LEDGER",
+        "LEM-RH-ANA003j-D001-CONDITIONAL-BOUNDARY-TAIL-MODULUS",
+        "OBL-RH-ANA003j-D001-SOURCE-COMPLETE-K_B-X_B"
+      ],
+      "node_id": "CLAIM-RH-ANA003j-D001-EXPLICIT-SOURCE-DERIVED-MODULUS",
+      "status": "NOT_ESTABLISHED_NOT_REFUTED_GLOBALLY"
+    },
+    {
+      "node_id": "CLAIM-RH-ANA003j-DIAGONAL-COMPATIBILITY",
+      "status": "NOT_AUTHORIZED_EPSILON_N_AND_NUMERICAL_C_UNFROZEN"
+    }
+  ],
+  "record_type": "RH_ANA003J_D001_RESULT_DAG_DELTA",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "selected_result_branch": "QUALITATIVE_OR_INEFFECTIVE_SOURCE_ONLY_NO_EXPLICIT_MODULUS"
+}

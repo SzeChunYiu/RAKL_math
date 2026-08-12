@@ -1,0 +1,103 @@
+{
+  "artifact_hash": "sha256:b18482a5a4c027275b108ef0e092983143c50d46fe67b4d80143cce74b2ed4b1",
+  "atom_id": "RH-ANA-003j",
+  "branch_precision": "The selected disjunct is QUALITATIVE/UNEXPOSED, not a proof of ineffectivity: the acquired v1 theorem uses << and sufficiently-large x without binding K_B or x_B. The finite Laguerre coordinates and a conditional envelope are derivable, but the frozen source-complete explicit modulus is not.",
+  "discriminator_id": "RH-ANA-003j-D001-C002-EXPLICIT-BOUNDARY-TAIL-MODULUS-SOURCE-AUDIT",
+  "exact_sources": [
+    {
+      "authorized_use": "exact natural-order boundary-plus-tail identity for each fixed n; no n-uniform or quantitative modulus authority",
+      "observed_statement": "For fixed n and nonintegral X, the tail is -A(X)b_n(X)-integral_X^infinity A(t)b_n'(t)dt.",
+      "paths": [
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_ANA_003_ABEL_001_C002_FIXED_N_ABEL_CANDIDATE_FREEZE_20260812.json",
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_ANA_003_ABEL_001_C002_HAND_PROOF_CERTIFICATE_FREEZE_20260812.json",
+        "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003_ABEL_001_C002_PROOF_CHECK_RESULT_20260812.json"
+      ],
+      "source_id": "C002-FIXED-N-NATURAL-ORDER-ABEL"
+    },
+    {
+      "anchors": [
+        "Theorem 1.5, page 3",
+        "proof of Theorem 1.5, pages 14-15",
+        "equations (1.3), (1.4), and (5.2)"
+      ],
+      "citation": "Chiara Bellotti, A new zero-density estimate for zeta(s) and the error term in the prime number theorem, arXiv:2508.02041v1",
+      "exact_scope_observed": [
+        "Theorem 1.5 states Delta(x) << exp(55 A_0) exp(-omega(x)).",
+        "Equation (1.4) gives omega(x)=d(log x)^(3/5)/(log log x)^(1/5), with d=(5^6 A_0^3/(2^2 3^4))^(1/5).",
+        "The proof begins 'Let x be sufficiently large', introduces an 'absolute large positive constant' H, and retains O and << constants through (5.2).",
+        "The introduction says the zero-density results can be made fully explicit, but the paper focuses on the theoretical aspect; it does not materialize a numerical Theorem-1.5 implied constant and validity threshold."
+      ],
+      "exposed_constants": [
+        "A_0 symbol",
+        "d as an explicit function of A_0",
+        "factor exp(55 A_0)"
+      ],
+      "global_source_absence_claimed": false,
+      "ineffectivity_claimed": false,
+      "pdf_sha256": "39a39e3dbc73506cf5dfd0b8a18b24e85302d305fa3059a60abcfa6f23292568",
+      "source_id": "BELLOTTI-2508.02041v1",
+      "unexposed_required_constants": [
+        "a numerical or otherwise explicitly bound absolute implied constant K_B for Theorem 1.5",
+        "an explicit sufficiently-large-x threshold x_B on which the theorem bound holds"
+      ],
+      "url": "https://arxiv.org/pdf/2508.02041v1"
+    },
+    {
+      "anchor": "equation (1.1), page 2",
+      "authorized_use": "exact finite Laguerre normalization only; no asymptotic remainder imported",
+      "citation": "T. M. Dunster, A. Gil, and J. Segura, Uniform asymptotic expansions for Laguerre polynomials and related confluent hypergeometric functions, arXiv:1705.01190v1",
+      "pdf_sha256": "e93985f8ede2799f6e9f3b12dad2565228fefa0b1f662306e2caf9768d2b423c",
+      "source_id": "DUNSTER-GIL-SEGURA-1705.01190v1",
+      "specialization": "L_(n-1)^(1)(u)=sum_(j=0)^(n-1) (-1)^j binom(n,j+1) u^j/j!",
+      "url": "https://arxiv.org/pdf/1705.01190v1"
+    }
+  ],
+  "framework_observation": {
+    "application_gitlink_edited": false,
+    "classification": "PAPER1_PROJECTION_ONLY_AFTER_PRIOR_PAPER3_REGISTRATION_NO_MATHEMATICAL_GATE_CHANGE",
+    "grants_mathematical_authority": false,
+    "latest_observed_main_sha": "6756ebec40b90f327d879410539f5146e188f34d"
+  },
+  "freeze_binding": {
+    "access_after_public_freeze": true,
+    "git_blob": "e3f00958c8c2e07d803baf7556bc52cbe6fe15b6",
+    "path": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003j_MODULUS_SOURCE_DISCRIMINATOR_FREEZE_20260812.json",
+    "public_merge_sha": "b42535ea717f239ecc4402a74732bb45bbae77e1",
+    "raw_sha256": "9cd428ff6511796237ffc312f54cddab0e458e857e82ddb3b8baf3c125faf521"
+  },
+  "other_branches": {
+    "ACQUIRED_SOURCE_SCOPE_INSUFFICIENT_FOR_ONE_OR_MORE_REQUIRED_CONSTANTS": "SECONDARY_DIAGNOSIS_SUBSUMED_BY_SELECTED_QUALITATIVE_UNEXPOSED_BRANCH",
+    "CANNOT_CHECK_EXACT_SOURCE_SCOPE": "NOT_SELECTED_EXACT_V1_PDFS_WERE_RETRIEVED_AND_HASH_MATCHED",
+    "EXPLICIT_SOURCE_DERIVED_MODULUS_MATERIALIZED": "NOT_SELECTED_MISSING_K_B_AND_X_B",
+    "SOURCE_STATEMENT_OR_NORMALIZATION_MISMATCH": "NOT_SELECTED_BOTH_BOUND_AND_NORMALIZATION_ARE_PRESENT"
+  },
+  "record_type": "RH_ANA003J_D001_EXACT_ACQUIRED_SOURCE_SCOPE_AUDIT",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "selected_result_branch": "QUALITATIVE_OR_INEFFECTIVE_SOURCE_ONLY_NO_EXPLICIT_MODULUS",
+  "source_obligation_results": [
+    {
+      "obligation": "Bellotti absolute implied constant and dependency scope",
+      "status": "NOT_EXPLICITLY_EXPOSED_BY_ACQUIRED_V1"
+    },
+    {
+      "obligation": "Bellotti sufficiently-large-x threshold and dependency scope",
+      "status": "NOT_EXPLICITLY_EXPOSED_BY_ACQUIRED_V1"
+    },
+    {
+      "obligation": "exact coefficient norm for L_(n-1)^(1)",
+      "status": "DERIVABLE_AS_FINITE_EXPRESSION_IN_N"
+    },
+    {
+      "obligation": "exact coefficient norm for (L_(n-1)^(1))'-L_(n-1)^(1)",
+      "status": "DERIVABLE_AS_FINITE_EXPRESSION_IN_N"
+    },
+    {
+      "obligation": "quantitative boundary and transformed-tail bound",
+      "status": "DERIVABLE_CONDITIONALLY_ON_K_B_AND_X_B"
+    },
+    {
+      "obligation": "forall-Y modulus validity",
+      "status": "DERIVABLE_CONDITIONALLY_ON_K_B_AND_X_B"
+    }
+  ]
+}
