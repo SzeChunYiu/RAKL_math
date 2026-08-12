@@ -1,0 +1,29 @@
+{
+  "record_type": "ObstructionTransformationReviewShadow",
+  "authority": "PROPOSAL_SHADOW_ROUTING_ONLY",
+  "atom_id": "H4d1c-C010",
+  "context_hash": "sha256:bd78e3af63a1eec1c262852b544e200fb1a12673b8682242bf1e1b5db57f17f2",
+  "obstruction_fingerprint": {
+    "roles": ["ambient deformation base S", "target Hodge branch H", "witness incidence W", "branch-restricted incidence W_H"],
+    "relations": ["H->S branch inclusion", "W_H=W x_S H", "consumer W_H->H"],
+    "constraints": ["exact signed-Q class identity", "smooth/projective root scope", "properness separate", "no componentwise substitution"],
+    "failure_mechanism": "a sufficient property on the ambient map may be stronger than the property needed after restriction to the actual consumer subbase",
+    "invariants_to_preserve": ["exact class", "target branch identity", "properness obligation", "root coefficient/category"],
+    "desired_transition": "replace ambient-necessity search with branch-relative smoothness or direct-image discriminator",
+    "forbidden_losses": ["no theorem authority", "no weakening exact-class/properness", "no ignoring monodromy/singular degeneration"]
+  },
+  "routes": {
+    "SEARCH": {
+      "status": "SELECTED",
+      "episodes_or_sources": ["MATH-HODGE-C007-SINGULAR-TANGENT-SURJECTIVITY-NONIMPLICATION", "STACKS-01V4"],
+      "preconditions_accounted": ["consumer target explicitly H", "base change W_H defined", "scope is algebraic-geometry hostile world, not arbitrary Hodge theorem"],
+      "validation_obligation": "construct an exact hostile algebraic map and verify ambient nonsmoothness plus branch-restricted smoothness/full image"
+    },
+    "JUMP": {"status": "NO_VIABLE_MATCH_NEEDED", "reason": "same-domain discriminator exists"},
+    "GLUE": {"status": "NOT_SELECTED", "reason": "single same-domain hostile world is decisive for necessity"},
+    "LIFT": {"status": "BLOCKED", "reason": "SEARCH not exhausted and no missing-transformation claim is justified"},
+    "CANNOT_CHECK": {"status": "NO", "reason": "exact algebraic discriminator is available"}
+  },
+  "selected_next_action": "RUN_BRANCH_BASECHANGE_HOSTILE_COUNTEREXAMPLE",
+  "frozen_at_utc": "2026-08-12T07:55:00Z"
+}
