@@ -1,0 +1,16 @@
+{
+  "schema":"RAKL-v3-shadow-FailureExperience",
+  "failure_id":"F-RH-ANA-003d-LOG-ZFR-CRUDE-LAGUERRE-ENVELOPE-FAIL",
+  "episode_id":"EP-RH-ANA-003d-KV-ABEL-MOVING-TAIL-20260812-R5",
+  "atom_id":"RH-ANA-003d",
+  "method_family":"2026 explicit logarithmic zero-free region -> Ingham omega -> crude coefficientwise Laguerre envelope",
+  "failure_mode":"For nu(t)=c/log t, omega(x)=2sqrt(c log x); combined with |L_{n-1}^{(1)}(v)|<=n exp(2sqrt(nv)), the boundary majorant has exponent 2(sqrt(n)-sqrt(c))sqrt(v), so the majorant does not decay when n>c.",
+  "category":["mathematical","operator","representation"],
+  "scope_conditions":["uses only the logarithmic zero-free scale through the standard omega optimization","uses the same crude coefficientwise Laguerre envelope as the R5 discriminator","does not rule out sharper Laguerre asymptotics, different transforms, or other uses of the 2026 zero-free theorem"],
+  "residual_signature":"LOG_ZFR_DECAY_EXPONENT_TOO_WEAK_FOR_CRUDE_ALL_N_LAGUERRE_ENVELOPE",
+  "competing_diagnoses":["The zero-free input is genuinely too weak for this representation.","The crude Laguerre envelope loses oscillatory cancellation and is the real bottleneck.","A different cumulative transform could change the exponent competition."],
+  "selected_diagnosis":"ROUTE_FAMILY_FAIL_ONLY; CAUSAL RESPONSIBILITY BETWEEN INPUT STRENGTH AND ENVELOPE SHARPNESS NOT IDENTIFIED",
+  "reusable_warning":"Do not chase constants in a logarithmic-zero-free + exp(2sqrt(nv)) majorant before checking exponent dominance.",
+  "authority":"PROPOSAL_SHADOW_FAILURE_ONLY",
+  "artifact_hash":"sha256:ac7d8f0915707615195bf214432969d052807079f5c23e0d9f86b66564f52b34"
+}
