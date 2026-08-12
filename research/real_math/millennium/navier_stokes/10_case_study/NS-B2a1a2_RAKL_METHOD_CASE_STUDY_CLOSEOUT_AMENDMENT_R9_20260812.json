@@ -1,0 +1,48 @@
+{
+  "record_type": "RAKL_METHOD_CASE_STUDY_CLOSEOUT_AMENDMENT",
+  "cycle_id": "NS-B2A1A2-VISCOSITY-NORMALIZATION-R9-20260812",
+  "amends": "NS-B2a1a2_RAKL_METHOD_CASE_STUDY_R9_20260812.json",
+  "reason": "Pinned application CI exposed a repository-inventory representation failure after the mathematical case study was written. This amendment keeps mathematical and process diagnoses separate and updates final semantic metrology.",
+  "mathematical_outcome_unchanged": "DIRECT_CKN_BRIDGE_ESTIMATE_INSUFFICIENT",
+  "process_episode": {
+    "event": "Pinned application suite run #605 failed 1/560 tests after all mathematical artifacts were present.",
+    "observation": "The frozen exact-19 JSON episode inventory test discovered two unexpected JSON objects because the new TaskEpisode used a .json extension and the diagnosis record also exposed a top-level episode_id key.",
+    "verification": "Decoded GitHub Actions job logs identified the sole failure as test_framework_pr153_hash_contract_migration.py::test_episode_inventory_is_the_exact_frozen_19_object_audit; 559 tests passed."
+  },
+  "process_diagnosis": {
+    "id": "D-NS-B2a1a2-CI-EPISODE-INVENTORY-COLLISION-R9",
+    "category": "REPRESENTATION_AND_CI_INTEGRATION",
+    "statement": "A proposal/shadow episode record was semantically valid for the cycle but represented as JSON inside an application repository whose migration assurance intentionally treats top-level episode_id in JSON as governed inventory membership. The diagnosis JSON also accidentally matched that detector."
+  },
+  "process_failure": {
+    "id": "F-NS-B2a1a2-PROCESS-EPISODE-INVENTORY-COLLISION",
+    "scope": "application repository representation/CI only; no mathematical statement or source binding failed",
+    "repair": [
+      "move the proposal/shadow TaskEpisode payload to the established .taskepisode extension",
+      "remove top-level episode_id from the non-episode diagnosis record, replacing it with source_episode_ref",
+      "update deterministic local assurance to read the .taskepisode record",
+      "rerun the full pinned application suite"
+    ],
+    "reusable_lesson": "Before adding TaskEpisode-style application artifacts, audit repository-wide inventory detectors and extension contracts. A semantically distinct diagnosis record must not accidentally satisfy the syntactic TaskEpisode detector."
+  },
+  "episode_diagnosis_obstruction_lesson_separation": "The CI process episode and diagnosis are not merged into the mathematical obstruction O-NS-B2a1a2-VISCOSITY-NORMALIZATION-GAIN-DEFICIT. They remain a separate process failure/lesson and have no theorem authority.",
+  "framework_vs_application": {
+    "framework_defect": "NONE_DEMONSTRATED",
+    "application_process_error": true,
+    "why": "The exact-inventory assurance test correctly rejected an unregistered JSON representation. The repair uses the already-established .taskepisode convention rather than changing RAKL framework semantics.",
+    "framework_improvement_hypothesis": "NONE_WARRANTED: the failure was caught by existing assurance. A future convenience linter for top-level episode_id / extension collisions could reduce iteration cost, but this run does not establish a framework defect requiring isolated RAKL work."
+  },
+  "final_retained_semantic_novelty_after_process_repair": {
+    "KNOWLEDGE": 1,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 1,
+    "OBSTRUCTION": 1,
+    "RELATION": 1,
+    "PATH": 1,
+    "META_METHOD": 1
+  },
+  "axes_reopened_final": ["KNOWLEDGE","EXPERIENCE_PATTERN","OBSTRUCTION","RELATION","PATH","META_METHOD"],
+  "axes_flattened_final": ["OPERATOR"],
+  "novelty_class": {"mathematics":"representation","process":"representation","literature_novelty_claim":false,"structural_rank":0},
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}
