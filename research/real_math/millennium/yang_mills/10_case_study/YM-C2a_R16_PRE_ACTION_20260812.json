@@ -1,0 +1,96 @@
+{
+  "actual_fibre": {
+    "assumptions_evidence_cutoff": "sources acquired after issue #276 freeze; missing primary detail => BLOCKED/CANNOT_CHECK",
+    "object": "MRS fixed-IR-cutoff UV-removed SU(2) continuum Schwinger family",
+    "observation_model": "primary mathematical source text; theorem/definition/page selectors; no reconstruction from memory",
+    "population_scale_regime_time": "4D pure SU(2); trivial topological sector; fixed IR cutoff; UV cutoff removed; continuum Schwinger functions",
+    "qoi": "same-theory IR removal + OS positivity/reconstruction + positive physical mass-gap applicability"
+  },
+  "atom": {
+    "id": "YM-C2a",
+    "issue": 276,
+    "question": "Can the MRS 1993 UV-removed, fixed-IR-cutoff SU(2) construction be source-bound to an OS-positive IR-removed continuum state and physical mass-gap lane without theory/gauge/subsequence switching?",
+    "signature": "YM-C2a-MRS-UV-REMOVED-IR-CUTOFF-OS-POSITIVITY-IR-REMOVAL-SAME-THEORY"
+  },
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "cycle_id": "YM-C2a-R16-20260812",
+  "decision_policy": [
+    "primary theorem binding before invention",
+    "fixed IR cutoff != IR removed",
+    "Slavnov identities != OS positivity unless source proves equivalence",
+    "SU(2)/trivial sector != all compact simple groups",
+    "source-scoped absence/unavailability => CANNOT_CHECK rather than negative theorem"
+  ],
+  "expert_cell": [
+    {"role": "constructive gauge-QFT/renormalization", "task": "exact MRS UV-removal theorem scope"},
+    {"role": "OS reconstruction", "task": "reflection positivity and positive-time source algebra"},
+    {"role": "rigorous RG/infrared", "task": "IR cutoff uniformity/removal and limit interchange"},
+    {"role": "gauge/Slavnov", "task": "gauge fixing, counterterms, Slavnov vs physical gauge invariance"},
+    {"role": "functional analysis/Schwinger distributions", "task": "topology, covariance, nontriviality"},
+    {"role": "spectral/mass-gap", "task": "clustering/spectrum/physical normalization"},
+    {"role": "adversarial provenance/RAKL metrology", "task": "chronology, memory, novelty, authority"}
+  ],
+  "falsifiers": [
+    "paper explicitly fixes IR cutoff with no uniform removal theorem",
+    "no same-family reflection-positivity/OS theorem located",
+    "gauge-fixed Schwinger construction has no typed map to gauge-invariant OS source algebra",
+    "mass-gap/clustering language absent or only regulator-dependent",
+    "group/topology scope narrower than root"
+  ],
+  "fibre_hash": "sha256:601765f96435bf505bc8f38d54363bda29bd54316f0acfed1e09f6a0ba77140a",
+  "independent_review_credit": "0/3",
+  "memory": {
+    "missed": "CANNOT_MEASURE — no exhaustive governed live-work/memory coverage certificate",
+    "rejected_ids": ["#253/PR#256/PR#258", "#103/#116", "#141"],
+    "retrieved_ids": ["#5", "#220", "#205", "#126", "#133", "#269", "PR#273", "#253", "PR#256", "PR#258", "#103", "#116", "#141"],
+    "routing_effect": "avoid duplicate fixed-cutoff SZZ and repeated metadata-only/local-defect lanes; test a distinct primary constructive-continuum UV-removal source",
+    "selected_ids": ["#5", "#220", "#205", "#126/#133", "#269/PR#273"]
+  },
+  "methods_operators_motifs_to_try": [
+    "claim_extraction",
+    "source_selection_reliability",
+    "ontology_terminology_normalization",
+    "mathematical_context_translation",
+    "equivalence_similarity/DifferenceWitness",
+    "contextual_theory_gluing",
+    "contradiction_diagnosis",
+    "gap_discovery",
+    "memory",
+    "review",
+    "saturation_stopping",
+    "prompting_context_policy"
+  ],
+  "observation_boundary": {
+    "prospective_after_freeze": [
+      "exact theorem/scope extraction",
+      "OS/reflection-positivity search",
+      "IR-cutoff-uniformity/removal search",
+      "gauge/Slavnov-vs-physical-state typing",
+      "clustering/mass-gap search"
+    ],
+    "retrospective_before_freeze": [
+      "bibliographic/abstract discovery that MRS 1993 constructs SU(2) YM4 Schwinger functions at fixed IR cutoff with no UV cutoff",
+      "abstract mentions trivial topological sector, regularized axial gauge/field-dependent gauges, counterterms and nonperturbative Slavnov identities"
+    ]
+  },
+  "pre_action_payload_hash": "sha256:23b0f38fbd4759386a0d1a13d960331aa98345c3f232cc3ebdd01d6db0e5c79f",
+  "rakl": {
+    "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "method_specs_blob": "6342f2692b3fd85de3f274f9c6548c9736225691",
+    "method_version": "3.0.0",
+    "package_version": "0.1.0",
+    "v3_py_blob": "280bf143fc8910d5860aaa02fbe3817a6aacfb72"
+  },
+  "rakl_math_base": "9e36dd83874bfc9f8ef94a2ce2708769cc25861e",
+  "root_issue": 5,
+  "saturation_axes_pre": {
+    "EXPERIENCE_PATTERN": "FLAT",
+    "KNOWLEDGE": "OPEN",
+    "META_METHOD": "FLAT",
+    "OBSTRUCTION": "OPEN",
+    "OPERATOR": "FLAT",
+    "PATH": "OPEN",
+    "RELATION": "OPEN"
+  },
+  "schema": "rakl-v3-proposal-shadow-pre-action-v1"
+}
