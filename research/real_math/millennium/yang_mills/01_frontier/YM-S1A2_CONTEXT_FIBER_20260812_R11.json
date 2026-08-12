@@ -1,0 +1,59 @@
+{
+  "atom_id": "YM-S1a2",
+  "subatom_id": "YM-S1a2b-OS-SOURCE-DENSITY",
+  "problem_signature": "YM-S1a2|same-theory OS/SZZ transfer bridge|witness-iv source density after OS null quotient|fixed-cutoff infinite-volume strong coupling",
+  "object_context": "Conditional local closure of the source-family density coordinate in the fixed-cutoff strong-coupling spectral bridge. Work in one infinite-volume lattice gauge measure mu which is both gauge invariant and reflection positive for a fixed Euclidean time reflection. Determine whether centered smooth gauge-invariant positive-time cylinder sources are dense in the OS excited-state Hilbert space after the null quotient. This does not identify the SZZ measure with the physical reflection-positive measure, does not prove covariance=transfer moments, and does not address a->0/RG/continuum transport.",
+  "structural_coordinates": [
+    "Q_+=G^{E_+} with compact Lie G and countable positive-time edge set E_+; positive-time cylinder functions depend on finitely many edge variables.",
+    "A_+ is the smooth gauge-invariant positive-time cylinder algebra; the OS Hilbert space is the completion of A_+/N for the reflection-positive sesquilinear form.",
+    "The same probability measure mu must supply both the L2 topology used for density and the OS reflection form; cross-measure density transfer is forbidden.",
+    "Gauge averaging is over the finite product of compact gauge groups at vertices incident to the finite source support; it preserves finite support and smoothness.",
+    "The OS seminorm must be L2-continuous: ||[F]||_OS^2=mu(conj(theta F)F)<=||theta F||_2||F||_2=||F||_2^2 when mu is reflection invariant.",
+    "Centering by mu(F) preserves cylinder smoothness and gauge invariance and lands orthogonal to Omega=[1].",
+    "Dense span, not cyclicity, is the exact hypothesis needed by YM-S1a1_C001_V2 for global spectral support exclusion.",
+    "SZZ Corollary 1.6 controls all smooth cylinder functions with one source-independent exponential distance exponent in a fixed strong-coupling infinite-volume theory, but calls this Euclidean covariance decay a mass gap; physical transfer identification remains separate.",
+    "Fixed lattice-scale volume uniformity is not lattice-spacing/continuum uniformity."
+  ],
+  "equivalent_formulations": [
+    "Show q(A_+^0) is dense in Omega^perp, where A_+^0={F in A_+: mu(F)=0} and q is the OS quotient map.",
+    "Show every OS vector orthogonal to the vacuum is an OS-norm limit of centered smooth gauge-invariant positive-time cylinder source vectors."
+  ],
+  "solved_analogues": [
+    "Continuous cylinder functions are uniformly dense in C(G^{E_+}) for compact metrizable product configuration spaces.",
+    "Smooth functions are dense in continuous functions on each finite compact Lie-group product G^n.",
+    "Compact-group averaging is an L2 contraction and projection onto the invariant subspace when the measure is invariant."
+  ],
+  "near_solved_analogues": [
+    "YM-S1a1 dense-source spectral exclusion candidate: density plus a common transfer-moment rate would exclude hidden slow states.",
+    "SZZ smooth-cylinder covariance class is broad enough that regularity need not force a small finite source family."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Functional analysis on compact product spaces",
+      "method": "Build L2 density by continuous cylinders -> smooth finite-coordinate cylinders, project to gauge invariants, then use an explicit OS-seminorm <= L2-norm inequality to transfer density through the null quotient.",
+      "shared_structure": ["compact product configuration space", "Borel probability measure", "finite-coordinate smooth functions", "quotient completion"],
+      "required_assumptions": ["same mu in L2 and OS form", "reflection invariance and positivity", "gauge invariance of mu", "compact gauge group"],
+      "disanalogies": ["ordinary L2 density does not by itself imply density in an unrelated quotient norm", "kinematic density does not identify the transfer matrix"],
+      "repair_question": "Can current source literature bind SZZ mu to the same reflection-positive OS measure and transfer operator so this local density lemma can actually glue?"
+    }
+  ],
+  "explicit_disanalogies": [
+    "The local density lemma is conditional and does not prove SZZ's infinite-volume measure inherits the reflection-positive OS reconstruction required here.",
+    "No equality between SZZ covariance and a physical transfer-matrix moment is established.",
+    "No support-distance-to-Euclidean-time conversion is established.",
+    "No lattice-spacing-uniform physical lower bound or continuum spectral identification is established."
+  ],
+  "source_anchors": [
+    "H. Shen, R. Zhu, X. Zhu, A stochastic analysis approach to lattice Yang-Mills at strong coupling, arXiv:2204.12737, especially (1.8) and Cor. 1.6; checked 2026-08-12.",
+    "K. Osterwalder and E. Seiler, Gauge field theories on a lattice, Annals of Physics 110 (1978), DOI:10.1016/0003-4916(78)90039-8.",
+    "A. Jaffe and E. Witten, Quantum Yang-Mills Theory, Clay Millennium problem description."
+  ],
+  "analogy_scan_status": "LOCAL_DIRECT_ARGUMENT_PREFERRED",
+  "cross_domain_analogies": [],
+  "frozen_at": "2026-08-12T01:12:00Z",
+  "first_candidate_at": null,
+  "framework_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+  "rakl_method_version": "3.0.0",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "packet_hash": "sha256:2cdec713047a8d134abc96cfc82d33ed6da9ad7d9fb20a2a2969f1dc20218071"
+}
