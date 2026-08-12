@@ -1,0 +1,60 @@
+{
+  "record_type": "NS_R7_EXPERIENCE_DELTA",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "episode_ref": "TE-NS-B1a3b1a2b-R7-20260812",
+  "diagnosis": {
+    "id": "D-NS-B1a3b1a2b-R7-CRITICAL-SCALE-SPARSITY",
+    "derived_from_episode": "TE-NS-B1a3b1a2b-R7-20260812",
+    "statement": "The all-center O(R) packet-capacity law contains genuine large-scale volumetric vorticity sparsity, but after normalization at R=a*Omega^(-1/2) the available volume-fraction bound is C I/[a^2 min(a^2,1/chi)], chi=||partial_t omega||_infinity/Omega^2. Finite I and ancient smoothing provide finiteness but not the small dimensionless control needed for O(1) critical-scale sparsity; audited existing consumers also have mismatched input types.",
+    "local_mathematics": "SUCCESS",
+    "local_to_global_gluing": "OPEN"
+  },
+  "failure": {
+    "id": "F-NS-B1a3b1a2b-DIRECT-GEOMETRIC-CONSUMER-GLUE",
+    "derived_from_diagnosis": "D-NS-B1a3b1a2b-R7-CRITICAL-SCALE-SPARSITY",
+    "category": "LOCAL_TO_GLOBAL_CONSUMER_INTERFACE",
+    "attempted_implication": "finite-I ancient NSE packet capacity => existing geometric regularity theorem",
+    "supported_failure": "The currently registered producer does not source-bind an exact existing consumer: Albritton-Bradshaw requires velocity-Lp sparsity data, Grujic 2011 uses local 1D sparseness, Grujic 2026 requires critical Lorentz vorticity plus direction control upstream, and GKP requires a global critical function space.",
+    "nonclaims": [
+      "No theorem says a finite-I ancient NSE state actually saturates the bad I,chi regime.",
+      "No impossibility of geometric regularity routes is proved.",
+      "No Type-I singularity is constructed or excluded."
+    ]
+  },
+  "obstruction": {
+    "id": "O-NS-B1a3b1a2b-CRITICAL-SCALE-TEMPORAL-COHERENCE-OR-CONSUMER-TYPE",
+    "derived_from_failure": "F-NS-B1a3b1a2b-DIRECT-GEOMETRIC-CONSUMER-GLUE",
+    "statement": "A successful route must either control a scale-aligned dimensionless temporal/cascade coordinate such as I*chi, provide a valid volume-to-exact-consumer transformation preserving center/time quantifiers, or identify an alternate same-theory consumer that directly accepts finite-I capacity geometry.",
+    "reopened_axes": ["OBSTRUCTION", "RELATION", "PATH"]
+  },
+  "candidate_lesson": {
+    "id": "L-NS-B1a3b1a2b-NORMALIZE-GROWTH-LAW-AT-CONSUMER-SCALE",
+    "derived_from_obstruction": "O-NS-B1a3b1a2b-CRITICAL-SCALE-TEMPORAL-COHERENCE-OR-CONSUMER-TYPE",
+    "status": "PROPOSAL_SHADOW_CANDIDATE_NOT_PROMOTED",
+    "statement": "After deriving an all-center growth/capacity law, normalize it at the downstream consumer's critical physical scale, expose every surviving dimensionless factor, and type-check geometry/state/time inputs before composing to a regularity theorem. Large-scale sparsity alone is not consumer-scale identification."
+  },
+  "motif": {
+    "id": "M-NS-DIMENSIONLESS-SCALE-OVERHEAD-BEFORE-GEOMETRIC-GLUE",
+    "status": "PROPOSAL_SHADOW",
+    "pattern": "A source-valid local-to-large-scale estimate becomes non-identifying after normalization because a bounded-but-not-small scale-invariant coordinate survives, and the intended consumer has a stricter input type.",
+    "linked_prior_failures": [
+      "PR311:R6_LINEAR_PACKET_CAPACITY",
+      "PR230:DIRECT_CKN_PARABOLIC_NORMALIZATION_INSUFFICIENCY",
+      "PR218:MOVING_RADIUS_COMPACTNESS_MISMATCH"
+    ],
+    "difference_witness_required_on_transfer": true
+  },
+  "tool_candidate": {
+    "id": "T-NS-CRITICAL-SCALE-CAPACITY-DISCRIMINATOR-R7",
+    "status": "PROPOSAL_SHADOW_CANDIDATE_NOT_FRAMEWORK_TOOL",
+    "inputs": ["all-center measure-growth law", "target threshold", "critical length", "temporal persistence scale", "consumer signature"],
+    "outputs": ["dimensionless volume-fraction formula", "surviving scale factors", "consumer-type mismatch list"],
+    "promotion_authority": "NONE"
+  },
+  "successful_reuse_ids": [
+    "PR311:R6_LINEAR_PACKET_CAPACITY",
+    "PR310:REPRESENTATION_ONLY_LEDGER_TAIL",
+    "SRC:AB2110_SPARSENESS_SCALING"
+  ],
+  "next_atom": "NS-B1a3b1a2c"
+}
