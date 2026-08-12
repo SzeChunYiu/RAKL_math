@@ -1,0 +1,288 @@
+{
+  "episodes": [
+    {
+      "artifact_hash": "sha256:ffa2326133e00ecf4a4756c5e5e6df000ee611f84ade17ed77c95109f6b5fa12",
+      "authority": "PROPOSAL_ONLY",
+      "episode_id": "E-ANALYSIS-POINTWISE-TO-DIAGONAL-BY-MODULUS",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003j_MATH_CONTEXT_FIBER_20260812.json",
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003j_SOURCE_METHOD_TRANSFER_PACKET_20260812.json"
+      ],
+      "known_breakpoints": [
+        "bare pointwise convergence supplies no growth bound for M",
+        "full uniform convergence is not necessary but an uncontrolled row-wise threshold is insufficient",
+        "the transformation grants endpoint control only"
+      ],
+      "lineage_ids": [],
+      "operation": "choose a proved threshold M(n,epsilon) for every row and verify that the proposed diagonal satisfies M(n,epsilon_n)<=Y_n eventually",
+      "preconditions": [
+        "the source and target use the same two-parameter error family",
+        "M(n,epsilon) is derived with every n-dependent constant explicit",
+        "the exact positive sequence epsilon_n is preregistered before evaluation and the eventual comparison is proved for that sequence and Y_n"
+      ],
+      "preserved_invariants": [
+        "exact x_{n,m}, R_n, S_n, and Y_n definitions plus the explicit not-yet-frozen epsilon_n scope",
+        "natural order",
+        "fixed-n versus moving-n quantifier distinction",
+        "endpoint versus internal-prefix distinction",
+        "source authority and OPEN_NO_SOLUTION_CERTIFICATE"
+      ],
+      "relaxed_or_broken_constraints": [],
+      "resulting_relations": [
+        "the moving diagonal lies in the row-wise validity region",
+        "E(n,Y_n)<epsilon_n eventually"
+      ],
+      "source_context": "doubly indexed error family with row-wise limits",
+      "source_domain": "real analysis / uniform convergence",
+      "source_obstruction": {
+        "constraints": [
+          "exact Coffey normalization",
+          "natural integer order without regrouping",
+          "C is fixed with C>0 and Y_n=exp(C n^(5/3) log^2(n+e)) is frozen as a proposed diagonal, not proved sufficient",
+          "epsilon_n is a symbolic positive tolerance and is not frozen until a later candidate/result round preregisters its exact sequence",
+          "no unregistered uniform constants",
+          "no target evaluation in this round"
+        ],
+        "desired_transition": [
+          "replace bare pointwise convergence by a proved quantitative modulus whose n-dependence is explicit and whose threshold is eventually dominated by Y_n at epsilon_n"
+        ],
+        "domain": "analytic number theory / uniform asymptotics / quantifier logic",
+        "failure_mechanisms": [
+          "interchanging forall n with the asymptotic threshold without a modulus",
+          "inferring diagonal validity only from Y_n tending to infinity",
+          "hiding n-dependence in Abel or Laguerre constants",
+          "promoting endpoint control to all-prefix control",
+          "using complement control as internal-prefix control"
+        ],
+        "forbidden_losses": [
+          "silent quantifier exchange",
+          "unproved uniform constants",
+          "reordering or regrouping",
+          "endpoint-to-prefix promotion",
+          "complement-to-internal promotion",
+          "process receipt promoted to mathematical evidence",
+          "LIFT without bounded SEARCH/JUMP/GLUE exhaustion"
+        ],
+        "invariants_to_preserve": [
+          "exact x_{n,m}, R_n, S_n, and Y_n definitions plus the explicit not-yet-frozen epsilon_n scope",
+          "natural order",
+          "fixed-n versus moving-n quantifier distinction",
+          "endpoint versus internal-prefix distinction",
+          "source authority and OPEN_NO_SOLUTION_CERTIFICATE"
+        ],
+        "obstruction_id": "OBS-RH-ANA-003j-POINTWISE-DIAGONAL-QUANTIFIERS",
+        "relations": [
+          "C002 first fixes n and only then lets Y tend to infinity",
+          "row-wise convergence permits the threshold to depend arbitrarily on n and epsilon",
+          "diagonal substitution evaluates row n at Y=Y_n",
+          "endpoint transfer requires Y_n to dominate a proved threshold at epsilon_n eventually",
+          "all-prefix control requires a separate maximal estimate over M<=Y_n",
+          "endpoint-to-target transfer requires the exact complement at the same n and cutoff"
+        ],
+        "roles": [
+          "fixed row index n",
+          "tail parameter Y",
+          "row-wise threshold M(n,epsilon)",
+          "moving cutoff Y_n",
+          "tolerance epsilon_n",
+          "endpoint R_n(Y_n)",
+          "internal prefixes R_n(M) for M<=Y_n",
+          "target S_n and exact endpoint complement"
+        ]
+      },
+      "transformation_name": "EXPOSE_MODULUS_AND_COMPARE_DIAGONAL"
+    },
+    {
+      "artifact_hash": "sha256:05f7e7517903d7c1eb246b06dccbb11c58ababb588051e4531896a9553bc838d",
+      "authority": "PROPOSAL_ONLY",
+      "episode_id": "E-ANALYSIS-DOMINATION-TO-UNIFORM-TAIL",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003j_MATH_CONTEXT_FIBER_20260812.json"
+      ],
+      "known_breakpoints": [
+        "C002 has constants C_n without a registered growth bound",
+        "the polynomial degree grows with n",
+        "no target majorant has been proved"
+      ],
+      "lineage_ids": [],
+      "operation": "bound the Abel boundary and tail-integral representation by an explicit family whose tail at Y_n is at most epsilon_n",
+      "preconditions": [
+        "a common or n-controlled majorant exists",
+        "Laguerre degree growth and all constants are explicit",
+        "the majorant tail estimate is valid at the frozen moving cutoff"
+      ],
+      "preserved_invariants": [
+        "exact x_{n,m}, R_n, S_n, and Y_n definitions plus the explicit not-yet-frozen epsilon_n scope",
+        "natural order",
+        "fixed-n versus moving-n quantifier distinction",
+        "endpoint versus internal-prefix distinction",
+        "source authority and OPEN_NO_SOLUTION_CERTIFICATE"
+      ],
+      "relaxed_or_broken_constraints": [],
+      "resulting_relations": [
+        "a quantitative endpoint modulus follows from the majorant"
+      ],
+      "source_context": "family of tail integrals controlled by a common or quantitative majorant",
+      "source_domain": "measure theory / asymptotic analysis",
+      "source_obstruction": {
+        "constraints": [
+          "exact Coffey normalization",
+          "natural integer order without regrouping",
+          "C is fixed with C>0 and Y_n=exp(C n^(5/3) log^2(n+e)) is frozen as a proposed diagonal, not proved sufficient",
+          "epsilon_n is a symbolic positive tolerance and is not frozen until a later candidate/result round preregisters its exact sequence",
+          "no unregistered uniform constants",
+          "no target evaluation in this round"
+        ],
+        "desired_transition": [
+          "replace bare pointwise convergence by a proved quantitative modulus whose n-dependence is explicit and whose threshold is eventually dominated by Y_n at epsilon_n"
+        ],
+        "domain": "analytic number theory / uniform asymptotics / quantifier logic",
+        "failure_mechanisms": [
+          "interchanging forall n with the asymptotic threshold without a modulus",
+          "inferring diagonal validity only from Y_n tending to infinity",
+          "hiding n-dependence in Abel or Laguerre constants",
+          "promoting endpoint control to all-prefix control",
+          "using complement control as internal-prefix control"
+        ],
+        "forbidden_losses": [
+          "silent quantifier exchange",
+          "unproved uniform constants",
+          "reordering or regrouping",
+          "endpoint-to-prefix promotion",
+          "complement-to-internal promotion",
+          "process receipt promoted to mathematical evidence",
+          "LIFT without bounded SEARCH/JUMP/GLUE exhaustion"
+        ],
+        "invariants_to_preserve": [
+          "exact x_{n,m}, R_n, S_n, and Y_n definitions plus the explicit not-yet-frozen epsilon_n scope",
+          "natural order",
+          "fixed-n versus moving-n quantifier distinction",
+          "endpoint versus internal-prefix distinction",
+          "source authority and OPEN_NO_SOLUTION_CERTIFICATE"
+        ],
+        "obstruction_id": "OBS-RH-ANA-003j-POINTWISE-DIAGONAL-QUANTIFIERS",
+        "relations": [
+          "C002 first fixes n and only then lets Y tend to infinity",
+          "row-wise convergence permits the threshold to depend arbitrarily on n and epsilon",
+          "diagonal substitution evaluates row n at Y=Y_n",
+          "endpoint transfer requires Y_n to dominate a proved threshold at epsilon_n eventually",
+          "all-prefix control requires a separate maximal estimate over M<=Y_n",
+          "endpoint-to-target transfer requires the exact complement at the same n and cutoff"
+        ],
+        "roles": [
+          "fixed row index n",
+          "tail parameter Y",
+          "row-wise threshold M(n,epsilon)",
+          "moving cutoff Y_n",
+          "tolerance epsilon_n",
+          "endpoint R_n(Y_n)",
+          "internal prefixes R_n(M) for M<=Y_n",
+          "target S_n and exact endpoint complement"
+        ]
+      },
+      "transformation_name": "DOMINATE_BOUNDARY_AND_TAIL_UNIFORMLY"
+    },
+    {
+      "artifact_hash": "sha256:5462ea9e5e84defdcbe33e6df443c020c313c50de66620257664e10a7c756475",
+      "authority": "PROPOSAL_ONLY",
+      "episode_id": "E-CROSSDOMAIN-TIMEOUT-BOUND-PROPOSAL",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003j_MATH_CONTEXT_FIBER_20260812.json"
+      ],
+      "known_breakpoints": [
+        "the target remainder is analytic rather than algorithmic",
+        "the analogy supplies no number-theoretic modulus"
+      ],
+      "lineage_ids": [],
+      "operation": "derive an input-dependent runtime bound and compare it with the scheduled timeout",
+      "preconditions": [
+        "the relevant runtime measure is known",
+        "the bound is valid uniformly over the promised input class",
+        "the scheduled timeout dominates the bound"
+      ],
+      "preserved_invariants": [
+        "exact x_{n,m}, R_n, S_n, and Y_n definitions plus the explicit not-yet-frozen epsilon_n scope",
+        "natural order",
+        "fixed-n versus moving-n quantifier distinction",
+        "endpoint versus internal-prefix distinction",
+        "source authority and OPEN_NO_SOLUTION_CERTIFICATE"
+      ],
+      "relaxed_or_broken_constraints": [],
+      "resulting_relations": [
+        "scheduled completion follows after the comparison"
+      ],
+      "source_context": "per-input termination versus an input-dependent timeout schedule",
+      "source_domain": "algorithms / resource scheduling",
+      "source_obstruction": {
+        "constraints": [
+          "exact Coffey normalization",
+          "natural integer order without regrouping",
+          "C is fixed with C>0 and Y_n=exp(C n^(5/3) log^2(n+e)) is frozen as a proposed diagonal, not proved sufficient",
+          "epsilon_n is a symbolic positive tolerance and is not frozen until a later candidate/result round preregisters its exact sequence",
+          "no unregistered uniform constants",
+          "no target evaluation in this round"
+        ],
+        "desired_transition": [
+          "replace bare pointwise convergence by a proved quantitative modulus whose n-dependence is explicit and whose threshold is eventually dominated by Y_n at epsilon_n"
+        ],
+        "domain": "analytic number theory / uniform asymptotics / quantifier logic",
+        "failure_mechanisms": [
+          "interchanging forall n with the asymptotic threshold without a modulus",
+          "inferring diagonal validity only from Y_n tending to infinity",
+          "hiding n-dependence in Abel or Laguerre constants",
+          "promoting endpoint control to all-prefix control",
+          "using complement control as internal-prefix control"
+        ],
+        "forbidden_losses": [
+          "silent quantifier exchange",
+          "unproved uniform constants",
+          "reordering or regrouping",
+          "endpoint-to-prefix promotion",
+          "complement-to-internal promotion",
+          "process receipt promoted to mathematical evidence",
+          "LIFT without bounded SEARCH/JUMP/GLUE exhaustion"
+        ],
+        "invariants_to_preserve": [
+          "exact x_{n,m}, R_n, S_n, and Y_n definitions plus the explicit not-yet-frozen epsilon_n scope",
+          "natural order",
+          "fixed-n versus moving-n quantifier distinction",
+          "endpoint versus internal-prefix distinction",
+          "source authority and OPEN_NO_SOLUTION_CERTIFICATE"
+        ],
+        "obstruction_id": "OBS-RH-ANA-003j-POINTWISE-DIAGONAL-QUANTIFIERS",
+        "relations": [
+          "C002 first fixes n and only then lets Y tend to infinity",
+          "row-wise convergence permits the threshold to depend arbitrarily on n and epsilon",
+          "diagonal substitution evaluates row n at Y=Y_n",
+          "endpoint transfer requires Y_n to dominate a proved threshold at epsilon_n eventually",
+          "all-prefix control requires a separate maximal estimate over M<=Y_n",
+          "endpoint-to-target transfer requires the exact complement at the same n and cutoff"
+        ],
+        "roles": [
+          "fixed row index n",
+          "tail parameter Y",
+          "row-wise threshold M(n,epsilon)",
+          "moving cutoff Y_n",
+          "tolerance epsilon_n",
+          "endpoint R_n(Y_n)",
+          "internal prefixes R_n(M) for M<=Y_n",
+          "target S_n and exact endpoint complement"
+        ]
+      },
+      "transformation_name": "BOUND_HIDDEN_RUNTIME_BEFORE_TIMEOUT_TRANSFER"
+    }
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003j_SOURCE_METHOD_TRANSFER_PACKET_20260812.json"
+  ],
+  "memory_id": "RH-ANA-003j-TRANSFORMATION-MEMORY-20260812",
+  "snapshot_hash": "24bcdacb6a2b523d51c7f354f2c48763c4409fef62e0b20f8531932bbb9e5bf3",
+  "source_universe": [
+    "merged RH C002 fixed-n natural-order proof surface",
+    "ANA-003i context and failure warnings",
+    "elementary pointwise/uniform/diagonal convergence contexts",
+    "dominated-convergence and uniform-asymptotic method contexts",
+    "bounded fleet-stabilization and algorithmic-timeout analogy scan"
+  ]
+}

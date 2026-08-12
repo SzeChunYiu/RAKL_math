@@ -1,0 +1,105 @@
+{
+  "bridge_edges": [
+    {
+      "edge_id": "RH003j-B1",
+      "enabling_assumptions": [
+        "quantitative Abel remainder",
+        "explicit n-dependence",
+        "diagonal comparison"
+      ],
+      "interface_map": "requires a proved modulus M(n,epsilon) and eventual comparison M(n,epsilon_n)<=Y_n",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "fixed-n natural-order Abel limit",
+      "target_coordinate": "moving-diagonal endpoint rate"
+    },
+    {
+      "edge_id": "RH003j-B2",
+      "enabling_assumptions": [
+        "prefix norm or maximal functional",
+        "uniform prefix estimate"
+      ],
+      "interface_map": "requires a separate maximal/internal-prefix inequality; one endpoint cannot supply it",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "moving-diagonal endpoint rate",
+      "target_coordinate": "control of every internal prefix M<=Y_n"
+    },
+    {
+      "edge_id": "RH003j-B3",
+      "enabling_assumptions": [
+        "moving complement theorem",
+        "all-index sign bridge",
+        "Li criterion"
+      ],
+      "interface_map": "requires the exact complement premise, Coffey/Li ledger, and all-index implication",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "endpoint and exact complement control",
+      "target_coordinate": "S_n sign information, Li positivity, and RH"
+    }
+  ],
+  "cheapest_hostile_world": "e_n(Y)=1_{Y<=Y_n}: each fixed row is eventually zero, but the moving diagonal remains one",
+  "known_disanalogies": [
+    "pointwise convergence is not diagonal convergence",
+    "diagonal-compatible control is not full n-uniform convergence",
+    "endpoint control is not internal-prefix control",
+    "fixed-n Abel convergence is not Li positivity"
+  ],
+  "obligations": [
+    {
+      "description": "derive a quantitative fixed-row modulus with explicit n-dependence",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "RH003j-O1"
+    },
+    {
+      "description": "prove M(n,epsilon_n)<=Y_n eventually",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "RH003j-O2"
+    },
+    {
+      "description": "separate endpoint from all-prefix control",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "RH003j-O3"
+    },
+    {
+      "description": "preserve exact complement and Li/RH bridge obligations",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "RH003j-O4"
+    }
+  ],
+  "prior_failure_ids": [
+    "F-RH-ANA-003e-MOVING-PREFIX-POLYBOUND-NOT-WEAKER",
+    "F-RH-ANA-003f-STRICT-CUT-SUFFIX-GLUE",
+    "F-RH-ANA-003f-PATH-WITNESS-NOT-ARITHMETIC",
+    "F-RH-ANA-003g-COMPLEMENT-FIRST-WEAKENING-FAIL",
+    "R9-STRICT-PREFIX-ARITHMETIC-ATTAINABILITY-OBSTRUCTION"
+  ],
+  "receipt_canonical_sha256": "51536377949089370bd30bbc7fd3a49366e3c4534dd1651f20c5882752ec9108",
+  "receipt_id": "RH-ANA-003j-ROOT-PRESERVATION-20260812",
+  "registered_observations": [
+    {
+      "projected_state": "fixed-n natural-order identity and convergence recorded",
+      "registered_downstream_outcome": "moving diagonal open",
+      "state_id": "C002"
+    },
+    {
+      "projected_state": "quantifier discriminator frozen; no branch evaluated",
+      "registered_downstream_outcome": "root open",
+      "state_id": "RH003j-pre"
+    }
+  ],
+  "reverification_triggers": [
+    "the positive sequence epsilon_n is first frozen or later changes",
+    "Y_n changes",
+    "a quantitative modulus or constant bound is proposed",
+    "endpoint control is promoted to prefix or Li/RH control"
+  ],
+  "root_claim_id": "RH-ANA-003j",
+  "root_coordinate": "every nontrivial zero of zeta has real part one half",
+  "schema_version": "root-coordinate-preservation-receipt-v1",
+  "source_authority": "PROPOSAL_ONLY",
+  "surrogate_coordinate": "moving-endpoint and internal-prefix control for the natural-order Abel rows",
+  "target_authority": "PROPOSAL_ONLY"
+}
