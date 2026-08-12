@@ -169,11 +169,12 @@ It does not.  For heterogeneous block-diagonal complements, the local cover
 cost accumulates by a **maximum**, not a sum, plus only logarithmic component
 separation.
 
-The transfer condition is exact: the ceiling applies only when complement
-components have disjoint ground sets, there are no cross-component complement
-cells, every local family is disjoint generator-separating, and the target uses
-the same full-cover polarity.  A single cross-component complement cell can
-change endpoint fibres and falsify the construction.
+The transfer condition is exact: for \(t\ge1\), the ceiling applies only when
+complement components have disjoint cell grounds and pairwise disjoint row and
+column projections, there are no cross-component complement cells, every local
+family is disjoint generator-separating, and the target uses the same full-cover
+polarity. A single cross-component complement cell can change endpoint fibres
+and falsify the construction.
 
 The next fresh strict atom must use an untouched target and ask when later
 canonical layers first introduce load-bearing cross-component complement
