@@ -1,0 +1,92 @@
+{
+  "episodes": [
+    {
+      "artifact_hash": "sha256:ad5866967de0a14e46f50257181a3e38a9ceec65dd6d31f5258968bd7b342de5",
+      "authority": "PROOF_BACKED",
+      "episode_id": "E-PNP-C048-LITERAL-TRANSPOSE-TWO-INTERFACE-AUDIT",
+      "evidence_pointers": [
+        "git:9e36dd83874bfc9f8ef94a2ce2708769cc25861e:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1"
+      ],
+      "known_breakpoints": [
+        "the decoder changes",
+        "the split becomes unequal or overlapping",
+        "only one endpoint is moved",
+        "the old reduction map is retained after transposition",
+        "a coordinate relabelling is introduced"
+      ],
+      "lineage_ids": [],
+      "operation": "transpose the exact decoded ordered pair, then audit both suffix-row interface congruence and endpoint-swapped SAT-reduction faithfulness",
+      "preconditions": [
+        "recursive support clauses are exhaustive",
+        "decoder output branches are exhaustive",
+        "the transpose swaps both endpoints without relabelling",
+        "the graph-language reduction is rewritten with the same endpoint swap"
+      ],
+      "preserved_invariants": [
+        "correctly directed polynomial 3SAT reduction",
+        "canonical/fallback separation",
+        "target blindness",
+        "root authority boundary"
+      ],
+      "relaxed_or_broken_constraints": [],
+      "resulting_relations": [
+        "decide whether literal transpose restores exact canonical row coupling while preserving the graph-language interface"
+      ],
+      "source_context": "C047 fine-interface failure plus the exact C041 ordered-pair decoder",
+      "source_domain": "mathematics",
+      "source_obstruction": {
+        "constraints": [
+          "unchanged decoder and equal split",
+          "suffix coordinate becomes the semantic fresh row",
+          "only literal transposition may change",
+          "target results remain unaccessed"
+        ],
+        "desired_transition": [
+          "decide whether literal transpose restores exact canonical row coupling while preserving the graph-language interface"
+        ],
+        "domain": "mathematics",
+        "failure_mechanisms": [
+          "a suffix need not carry MAGIC, and endpoint swapping may invalidate an unrevised reduction map"
+        ],
+        "forbidden_losses": [
+          "target-result leakage",
+          "silent decoder or label-map change",
+          "promoting feasibility to root authority"
+        ],
+        "invariants_to_preserve": [
+          "correctly directed polynomial 3SAT reduction",
+          "canonical/fallback separation",
+          "target blindness",
+          "root authority boundary"
+        ],
+        "obstruction_id": "OBS-SOURCE-TRANSPOSE-BOTH-ENDPOINTS-THEN-AUDIT",
+        "relations": [
+          "literal transposition sends suffix c to fresh row 1||c and prefix r to old column r",
+          "the decoder classifies non-tautological words into all-zero and MAGIC forms",
+          "a collision requires exact binary equality between a generated row and a current canonical prefix"
+        ],
+        "roles": [
+          "decoded prefixes",
+          "decoded suffixes",
+          "literal-transpose fresh rows",
+          "canonical current prefixes",
+          "graph-language reduction"
+        ]
+      },
+      "transformation_name": "LITERAL_TRANSPOSE_THEN_INTERFACE_AND_REDUCTION_AUDIT"
+    }
+  ],
+  "evidence_pointers": [
+    "git:9e36dd83874bfc9f8ef94a2ce2708769cc25861e:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+    "gitblob:850737df2b015378d8735a1ea03cfea27aefb3e1"
+  ],
+  "memory_id": "PNP-C048-OBSTRUCTION-TRANSFORMATION-MEMORY-20260812",
+  "snapshot_hash": "4aea47abac6abac86bb6f622289871d4bf4d76574d50bba33b00fc2a30cad5b3",
+  "source_universe": [
+    "C041 frozen recursive definition",
+    "C045 coupling failure",
+    "C046 partition result",
+    "C047 fine-interface result",
+    "transpose of ordered relations"
+  ]
+}
