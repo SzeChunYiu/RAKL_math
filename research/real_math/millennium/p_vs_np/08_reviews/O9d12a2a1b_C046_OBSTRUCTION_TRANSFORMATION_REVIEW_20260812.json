@@ -1,0 +1,133 @@
+{
+  "artifact_hash": "sha256:ab20741eb21cccc92ea87d2987a1a70a5fe1d124e41daffa04765103f865d59e",
+  "direct_candidate_episode_ids": [
+    "E-PNP-C046-PARTITION-INVARIANT-BEFORE-TARGET-SCAN"
+  ],
+  "direct_mapping_witnesses": [
+    {
+      "artifact_hash": "sha256:7f5827ce785150afac57522e4e9cd8c9946a618dc4b945f6bc1757d805df980e",
+      "disanalogies": [
+        "the route can conclude NONE rather than provide a finite target",
+        "no cover consequence follows"
+      ],
+      "episode_id": "E-PNP-C046-PARTITION-INVARIANT-BEFORE-TARGET-SCAN",
+      "evidence_pointers": [
+        "git:ac8c0745be8aed791a446fd55fcf5154cac01962:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1"
+      ],
+      "precondition_mapping": [
+        [
+          "recursive support clauses are exhaustive",
+          "prove recursive quadrants exhaust every support case"
+        ],
+        [
+          "fixed prefix determines a partition cell",
+          "prove MAGIC begins with one for every canonical word"
+        ],
+        [
+          "coordinate embedding preserves the partition",
+          "prove inherited row indices remain in the lower half"
+        ]
+      ],
+      "role_mapping": [
+        [
+          "recursively inherited support",
+          "recursively inherited support"
+        ],
+        [
+          "canonical prefix rows",
+          "canonical prefix rows"
+        ],
+        [
+          "candidate collision level",
+          "candidate collision level"
+        ],
+        [
+          "partition invariant",
+          "partition invariant"
+        ]
+      ],
+      "shared_constraints": [
+        "unchanged one-sided recursion",
+        "fixed MAGIC canonical prefix",
+        "target results remain unaccessed"
+      ],
+      "shared_relations": [
+        "recursive clauses constrain support projection by binary half",
+        "fixed leading bits constrain canonical prefixes by binary half",
+        "a collision requires the two projections to intersect"
+      ],
+      "target_obstruction_id": "OBS-PNP-C046-LEAST-CANONICAL-ROW-COLLISION",
+      "target_validation_obligations": [
+        "prove the support containment by induction",
+        "prove the canonical prefix containment arithmetically",
+        "check the level-2 base case",
+        "fail if any recursive quadrant or prefix condition differs"
+      ],
+      "unmatched_source_preconditions": [],
+      "witness_id": "MAP-PNP-C046-PARTITION-INVARIANT"
+    }
+  ],
+  "direct_search_status": "MATCHES_FOUND",
+  "episode_memory_snapshot_hash": "c9528927c15f1c5fb270eb973beb16181e8a2470a9c6e8aaa305c5d01f8a5ef1",
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C046_MATH_CONTEXT_FIBER_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C046_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C046_OBSTRUCTION_TRANSFORMATION_MEMORY_20260812.json"
+  ],
+  "exhaustion_witness": null,
+  "glue_search_status": "NOT_RUN",
+  "glue_witness": null,
+  "jump_mapping_witnesses": [],
+  "jump_search_status": "NOT_RUN",
+  "missing_transformation_specification": null,
+  "obstruction": {
+    "constraints": [
+      "unchanged one-sided recursion",
+      "fixed MAGIC canonical prefix",
+      "target results remain unaccessed"
+    ],
+    "desired_transition": [
+      "replace unbounded finite target scan with family-wide feasibility decision"
+    ],
+    "domain": "mathematics",
+    "failure_mechanisms": [
+      "desired collision property may be globally forbidden by invariant partition"
+    ],
+    "forbidden_losses": [
+      "target-result leakage",
+      "changing the recursive family",
+      "promoting feasibility to root authority"
+    ],
+    "invariants_to_preserve": [
+      "exact source definition",
+      "canonical/fallback separation",
+      "target blindness",
+      "root authority boundary"
+    ],
+    "obstruction_id": "OBS-PNP-C046-LEAST-CANONICAL-ROW-COLLISION",
+    "relations": [
+      "recursive clauses constrain support projection by binary half",
+      "fixed leading bits constrain canonical prefixes by binary half",
+      "a collision requires the two projections to intersect"
+    ],
+    "roles": [
+      "recursively inherited support",
+      "canonical prefix rows",
+      "candidate collision level",
+      "partition invariant"
+    ]
+  },
+  "research_memory_review_hash": "sha256:b7c639fee09473da96f2db222f034e129db7bcccdde17315d7e28578fe5e9617",
+  "review_id": "PNP-C046-OBSTRUCTION-TRANSFORMATION-REVIEW-20260812",
+  "selected_episode_ids": [
+    "E-PNP-C046-PARTITION-INVARIANT-BEFORE-TARGET-SCAN"
+  ],
+  "selected_mode": "SEARCH",
+  "target_atom_id": "O9d12a2a1b-C046",
+  "target_context_hash": "sha256:5bf0ce5cb8045f0d21360663db0c5c41001f23c708b1d8b67f9fdc85bbc3729b",
+  "unresolved_warnings": [
+    "route selection is proposal-only",
+    "target theorem truth remains unchecked",
+    "root remains open"
+  ]
+}

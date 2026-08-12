@@ -1,0 +1,42 @@
+{
+  "artifact_hash": "sha256:b7c639fee09473da96f2db222f034e129db7bcccdde17315d7e28578fe5e9617",
+  "candidate_method_families": [
+    "finite level-by-level canonical enumeration",
+    "recursive row-projection invariant",
+    "fixed-prefix binary partition lemma",
+    "target quotient and cover search"
+  ],
+  "cross_problem_coverage_receipt_hash": "",
+  "evidence_pointers": [
+    "git:ac8c0745be8aed791a446fd55fcf5154cac01962:research/real_math/millennium/p_vs_np/10_feedback/C045_ROW_PROJECTION_COLLISION_MATHEMATICAL_LESSON_20260812.json@blob:294cacf54775741e4b916ceed271ec7c6becfe74",
+    "git:ac8c0745be8aed791a446fd55fcf5154cac01962:research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C045_U17_COUPLING_FAILURE_DELTA_20260812.json@blob:12a8099833c27218550855bb37614e8cfb8b1274"
+  ],
+  "failure_lattice_snapshot_hash": "gitblob:12a8099833c27218550855bb37614e8cfb8b1274+gitref:C043-first-row-split",
+  "failure_query_status": "MATCHES_FOUND",
+  "failure_reuse_notes": [
+    "C045 warns that fresh-half columns cannot repair row-projection disjointness.",
+    "C043 warns that semantic multiplicity is not the requested collision or cover growth."
+  ],
+  "relevant_failure_ids": [
+    "F-C045-U17-PROJECTION-DISJOINT",
+    "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING"
+  ],
+  "relevant_tool_ids": [
+    "T-PNP-PARTITION-INVARIANT-FEASIBILITY-FIRST"
+  ],
+  "selected_tool_ids": [
+    "T-PNP-PARTITION-INVARIANT-FEASIBILITY-FIRST"
+  ],
+  "target_atom_id": "O9d12a2a1b-C046",
+  "target_context_hash": "sha256:5bf0ce5cb8045f0d21360663db0c5c41001f23c708b1d8b67f9fdc85bbc3729b",
+  "tool_applicability_notes": [
+    "Applicable only to the unchanged one-sided recursion and fixed leading-bit canonical encoding; validate both containments inductively."
+  ],
+  "tool_inventory_snapshot_hash": "gitblob:294cacf54775741e4b916ceed271ec7c6becfe74",
+  "tool_query_status": "MATCHES_FOUND",
+  "unresolved_warnings": [
+    "No later target result has been accessed.",
+    "The family-wide conclusion is not available until a candidate is frozen and checked.",
+    "Same-context review is not independent peer review."
+  ]
+}
