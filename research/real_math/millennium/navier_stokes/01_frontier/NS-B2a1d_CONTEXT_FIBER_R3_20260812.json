@@ -1,0 +1,89 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow-r3",
+  "atom_id": "NS-B2a1d",
+  "parent_atom_id": "NS-B2a1",
+  "issue": "RAKL_math#213",
+  "object_context": "Counterexample-first verification of whether an explicit translating Hill spherical vortex supplies a nonzero ancient Euler pair in the displayed F(a)=1 Euler-side Seregin Theorem-3.1 class, thereby testing whether centered backward local smallness plus (3.5)-(3.7) can imply global Euler triviality without a no-incoming-flux/tightness control.",
+  "problem_signature": [
+    "3D incompressible Euler ancient solution on R^3 x (-infinity,0)",
+    "Seregin Theorem 3.1 F(a)=1 scale-weighted kinetic/pressure/gradient budget (3.5)",
+    "Euler distributional equation (3.6) and local energy inequality (3.7)",
+    "nonzero translating coherent vortex profile",
+    "centered backward expanding-ball/local-window escape under noncompact translation",
+    "separate producer ancestry/tail inheritance from Euler-side rigidity"
+  ],
+  "structural_coordinates": [
+    "physical velocity decays at spatial infinity",
+    "nonzero translation speed c",
+    "V in L2(R^3)",
+    "grad V in L2(R^3)",
+    "normalized pressure Q in L^(3/2)(R^3)",
+    "local boundedness/Lipschitz regularity for local-energy equality",
+    "world-tube occupancy O(a) across a parabolic cylinder of duration a^2",
+    "noncompact translation/profile leakage",
+    "equation change Navier-Stokes -> Euler",
+    "source-to-limit ancestry remains a separate gluing coordinate",
+    "root authority NONE"
+  ],
+  "equivalent_formulations": [
+    "Rigidity falsifier: produce a nonzero ancient Euler solution satisfying the displayed F=1 bounds and local-energy class while centered backward local norms vanish.",
+    "Occupancy formulation: prove translation turns the spacetime H1 charge in Q(a) from a naive O(a^2) time budget into O(a) occupancy.",
+    "Far-field formulation: the observation ball grows like O(sqrt(|tau|)) while a nonzero-speed coherent core escapes like O(|tau|).",
+    "Gluing formulation: distinguish membership in the Euler-side state class from being in the image of Seregin's Navier-Stokes blow-up extraction."
+  ],
+  "solved_analogues": [
+    "Choi arXiv:2011.06808v2 gives the explicit Hill spherical vortex, vanishing physical velocity at infinity, compactly supported vorticity and nonzero traveling speed.",
+    "Abe arXiv:2008.09345 describes traveling Euler waves and records Hill's spherical vortex as the explicit Hicks-Moffatt limiting case.",
+    "Lions concentration-compactness supplies the source-verified structural lesson that local compactness can coexist with translation escape unless tightness/modulo-symmetry is controlled."
+  ],
+  "near_solved_analogues": [
+    "XM-MOVING-CORE-RIGIDITY-005 / PR #71 proves the world-tube occupancy lemma and conditionally calibrates Seregin's F=1 budget, but explicitly leaves exact L2/H1/L^(3/2)/local-energy source binding open.",
+    "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE / PR #91 shows fixed-cylinder convergence does not imply the needed lim_R limsup_k tail statement.",
+    "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY / PR #72 shows absolute cutoff estimates are scale-critical in F=1.",
+    "F-NS-B2a1c-F1-AXIAL-44-EXPONENT-INCOMPATIBLE / #203 prunes the specialized Section-4 cutoff consumer."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Lions concentration-compactness / translation loss of compactness",
+      "method": "Test the global conclusion against an explicit translating profile before inventing a rigidity theorem.",
+      "shared_structure": ["unbounded domain", "local observations", "translation noncompactness", "global conclusion needs tightness"],
+      "required_assumptions": ["exact target state class is frozen", "explicit source/target DifferenceWitness", "translation is not silently quotiented out"],
+      "disanalogies": ["target object is a PDE-constrained ancient Euler solution with pressure and local energy", "concentration-compactness does not supply Euler dynamics"],
+      "repair_question": "Does an explicit traveling Euler vortex actually satisfy every displayed F=1 Euler-side Seregin hypothesis used by the proposed rigidity implication?",
+      "source_anchors": ["P.-L. Lions 1984 concentration-compactness", "Choi arXiv:2011.06808v2", "Seregin arXiv:2606.29468v1"]
+    },
+    {
+      "source_context": "XM005 moving-core hostile calibration",
+      "method": "Reuse the exact occupancy lemma as search-priority guidance, then close its deliberately conditional integrability/local-energy assumptions with a primary-source explicit profile.",
+      "shared_structure": ["same NS-B2a target", "same moving-center failure mechanism", "same F=1 scale factors"],
+      "required_assumptions": ["XM005 remains proposal/search-priority only", "all profile regularity and pressure facts must be independently verified"],
+      "disanalogies": ["XM005 did not establish an exact counterexample inside the Euler-side class", "current child must bind the explicit Hill profile and pressure"],
+      "repair_question": "Can Hill's explicit profile discharge XM005's conditional L2/H1/L^(3/2)/local-energy residual?",
+      "source_anchors": ["RAKL_math PR #71", "Choi arXiv:2011.06808v2", "Abe arXiv:2008.09345"]
+    }
+  ],
+  "explicit_disanalogies": [
+    "An Euler traveling vortex satisfying (3.5)-(3.7) is not thereby a Navier-Stokes blow-up limit from Seregin's extraction.",
+    "The source nontriviality threshold (3.8) is ancestry-specific; this child proves nonzero Euler-side state and may scale the Hill family, but does not identify the original blow-up epsilon_0.",
+    "Hill's axisymmetry/no-swirl is an additional property of the adversary, not a hypothesis inferred for the general Type-II branch.",
+    "Navier-Stokes backward uniqueness is inadmissible after the limit equation changes to Euler.",
+    "Prior failure episodes guide priority only and do not establish impossibility."
+  ],
+  "source_snapshots": {
+    "SEREGIN-2606.29468v1": {"kind":"primary_source_identity_snapshot","arxiv":"2606.29468v1","title":"On potential Type II blowups for the Navier-Stokes equations","author":"Gregory Seregin","date":"2026-06-28","anchors":["Theorem 3.1","(3.5)","(3.6)","(3.7)","(3.8)","F(a)=1 example"],"verification":"arXiv PDF visually inspected in this run"},
+    "CHOI-2011.06808v2": {"kind":"primary_source_identity_snapshot","arxiv":"2011.06808v2","title":"Stability of Hill's spherical vortex","author":"Kyudong Choi","date":"2022-01-24","anchors":["(1.1)-(1.4)","steady vortex rings §2.3","Hill stream function (2.10) vicinity","W=2/15"],"verification":"arXiv PDF visually inspected in this run"},
+    "ABE-2008.09345": {"kind":"primary_source_identity_snapshot","arxiv":"2008.09345","title":"Existence of vortex rings in Beltrami flows","author":"Ken Abe","date":"2020-08-21 arXiv; published 2022","anchors":["traveling-wave representation","Hicks-Moffatt §2.2","Hill limiting case"],"verification":"arXiv PDF visually inspected in this run"}
+  },
+  "source_anchors": ["Seregin arXiv:2606.29468v1 (28 Jun 2026), Theorem 3.1 and F(a)=1 example", "Choi arXiv:2011.06808v2 (24 Jan 2022), §§1.1,2.3,2.4", "Abe arXiv:2008.09345, traveling-wave representation and §2.2 Hill limiting case", "RAKL_math#65", "#198", "#213", "RAKL_math PR #71", "#72", "#91", "RAKL_math#203", "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0"],
+  "analogy_scan_status": "BRIDGES_RETAINED_WITH_DIFFERENCE_WITNESS",
+  "cross_domain_analogies": [{"source_kind":"functional analysis / concentration compactness","source_situation":"Translation can move mass out of every centered bounded observation while preserving a global nonzero object.","common_abstraction":["local observation","noncompact symmetry","global nontrivial object","missing tightness coordinate"],"source_to_target_mapping":["bounded observation -> centered Euler cylinders/balls","translation defect -> traveling vortex core","tightness -> no-incoming-flux/recentering/global tail control"],"shared_constraints":["local smallness must not be equated with global triviality without symmetry/tail control"],"disanalogies":["Euler dynamics and pressure must be verified explicitly","source analogy alone has no theorem authority"],"proposed_principle":"Run an exact traveling-solution falsifier before any centered-local-smallness rigidity closure.","validation_obligation":"Verify Hill profile regularity, pressure integrability, all three F=1 terms, local energy, and backward escape from primary-source formulas.","provenance_note":"JUMP routing only; target proof remains independent."}],
+  "analogy_scan_notes": "Everyday analogies rejected as non-load-bearing. Cross-Millennium XM005 is retained only as proposal/search-priority experience; strict transformation authority is sourced from a verified local-to-global/tightness structural episode.",
+  "frozen_at": "2026-08-12T00:32:10+00:00",
+  "framework_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+  "application_base_sha": "e768b7da7dc48739ccb581dea0eb2cfeb8a701e7",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "actual_fibre": ["RAKL v3 mathematical-research workflow, method_specs, experience substrate and pre_action_receipt at 43897d3afaf0038385102d5acc64793c05ec40f0", "RAKL_math root #4; Type-II parent #65; active tail parent #198; frozen child #213", "XM-MOVING-CORE-RIGIDITY-005 / PR #71", "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY / PR #72", "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE / PR #91", "F-NS-B2a1c-F1-AXIAL-44-EXPONENT-INCOMPATIBLE / #203", "OTEP-LIONS-LOCAL-TO-GLOBAL-TIGHTNESS-SPLIT", "Seregin 2606.29468v1; Choi 2011.06808v2; Abe 2008.09345 primary sources"],
+  "pre_memory_pre_gate_preference": "Continue directly with NS-B2a1a prelimit annular-tightness search after B2a1c route pruning.",
+  "packet_hash": "sha256:b3366bd99adad2863f9ed0d8c383749dc5d9a90c01b1538f2d51f00cfdc90f1b",
+  "fibre_snapshot_hash": "sha256:b3366bd99adad2863f9ed0d8c383749dc5d9a90c01b1538f2d51f00cfdc90f1b"
+}
