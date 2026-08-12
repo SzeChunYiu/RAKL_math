@@ -1,0 +1,136 @@
+{
+  "artifact_hash": "sha256:b3e6f9b7cf1348a4c0d11ab843bed0f0af7717e53c18f082745a2b407f932f51",
+  "authority": {
+    "formal": false,
+    "independent": false,
+    "novelty": false,
+    "root": "OPEN",
+    "same_context_hand_proof": true
+  },
+  "candidate_artifact_hash": "sha256:47bf8d99a7c5620b8ab8f2e3fadfb762125df921bed4b65fe2ddb56f4733c5e1",
+  "candidate_core_sha256": "sha256:c869e4726c36551b69f10407dd482f30d83f2b2a8129c5364ac2c08eda4c1d43",
+  "candidate_id": "C050-K15-TARGET-BLIND-SELECTOR-DISCRIMINATOR-v1",
+  "certificate_id": "PNP-C050-K15-HAND-PROOF-CERTIFICATE-20260812",
+  "credit": {
+    "ci_schema_hash_runtime": 0,
+    "computation_alone": 0,
+    "mathematical": [
+      "length-30 parent parameter forcing",
+      "length-32 branch exhaustion",
+      "fixed bit-3 separation",
+      "explicit UNSAT nonvacuity and bounded scope"
+    ],
+    "software_process": 0
+  },
+  "falsifiers": [
+    "a canonical UNSAT length-30 parent outside v=1,m=3",
+    "a canonical length-32 current word outside the two frozen branch families",
+    "an H_15 label with zero-based bit 3 equal to 0",
+    "a P_16 prefix with zero-based bit 3 equal to 1",
+    "one exact common label",
+    "a hidden encoding, split, or swapped-reduction change"
+  ],
+  "frozen_at": "2026-08-12T07:02:03Z",
+  "obligations": [
+    {
+      "obligation_id": "PARENT_LENGTH_30_PARAMETER_EXHAUSTION",
+      "parameters": {
+        "m": 3,
+        "padding": false,
+        "raw_length": 30,
+        "v": 1
+      },
+      "proof": "Write a=bit_length(v), b=bit_length(m). The raw canonical length is R=6+2a+2b+3m(1+a), and the encoded length is E=R+(R mod 2). UNSAT requires m>=2. For v=1, m=2 gives E=24, m=3 gives R=E=30, and m>=4 gives E>=38. For v>=2, m=2 already gives E>=32, and larger m only increases the length. Hence canonical UNSAT length 30 uniquely forces v=1,m=3 with no padding.",
+      "status": "PROVED"
+    },
+    {
+      "branches": [
+        {
+          "m": 2,
+          "padding": false,
+          "raw_length": 32,
+          "v_values": [
+            2,
+            3
+          ]
+        },
+        {
+          "encoded_length": 32,
+          "m": 1,
+          "padding": true,
+          "raw_length": 31,
+          "v_values": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        }
+      ],
+      "obligation_id": "CURRENT_LENGTH_32_PARAMETER_BRANCH_EXHAUSTION",
+      "proof": "For m=1, R=11+5a, so E=32 exactly when a=4: v=8,...,15, R=31 and one zero pad. For m=2, R=16+8a, so E=32 exactly when a=2: v in {2,3}, R=32 and no pad. For m=3, a=1 gives E=30 while a>=2 gives E>=42. For m>=4 the minimum is R=38 at v=1,m=4. These cases exhaust every positive v,m.",
+      "status": "PROVED"
+    },
+    {
+      "obligation_id": "EXACT_CANONICAL_PARENT_PARSE",
+      "proof": "At v=1,m=3 the header is MAGIC||gamma(1)||gamma(3)=11100101||1||011, of length 12. Each of nine literals is sign||1, so the 18-bit payload gives total length 30 with no padding. The equal split after bit 14 lies three payload bits after the header. Thus the suffix begins at x[15], the variable-code bit of the second literal, and x[17], the variable-code bit of the third literal, is fixed to 1.",
+      "status": "PROVED"
+    },
+    {
+      "all_frozen_branches_covered": true,
+      "noncanonical_and_total_decoder_fallbacks_excluded": true,
+      "obligation_id": "EXACT_CANONICAL_CURRENT_PARSE",
+      "proof": "By the frozen definition, P_16 contains prefixes only of canonical long-form words; malformed-to-tautology words and the all-zero short contradiction are not members of this prefix language. Each frozen length-32 branch admits canonical words by choosing in-range variable indices. In the unpadded v in {2,3},m=2 branches, the header length is 14 and the 16-bit prefix extends two bits into the payload. In the padded v=8,...,15,m=1 branches, the header itself has length 16. In every branch the prefix starts with the unchanged eight-bit MAGIC word 11100101.",
+      "status": "PROVED"
+    },
+    {
+      "conclusion": "H_15 intersection P_16 is empty.",
+      "h15_fixed_bit": 1,
+      "indexing": "ZERO_BASED",
+      "obligation_id": "EXACT_1C_EQUALS_PREFIX16_BITWISE",
+      "p16_fixed_bit": 0,
+      "proof": "For every h=1||c in H_15, h[3]=x[17]=1. For every p in P_16, p begins MAGIC=11100101, so p[3]=MAGIC[3]=0. Hence exact equality h=p is impossible.",
+      "separating_coordinate": 3,
+      "status": "PROVED"
+    },
+    {
+      "obligation_id": "PARENT_UNSAT_PROOF_INDEPENDENT_OF_SYNTAX",
+      "proof": "The explicit formula (z OR z OR z) AND (not-z OR not-z OR not-z) AND (z OR z OR z) is UNSAT: the first clause forces z=true while the second forces z=false. This proves H_15 is syntactically and semantically nonvacuous, but the separation itself applies to every canonical UNSAT parent because its fixed bit follows from v=1 syntax.",
+      "status": "PROVED"
+    },
+    {
+      "obligation_id": "SWAPPED_REDUCTION_PRESERVED",
+      "proof": "No decoder, split, label, relation, or coordinate map changes. For x=r||c, the transposed query remains (2^15+c,r), exactly the C048 endpoint-swapped reduction.",
+      "status": "PROVED"
+    },
+    {
+      "obligation_id": "BOUNDED_SCOPE_ONLY",
+      "proof": "The argument uses the unique length-30 parent field alignment and proves only H_15 intersection P_16 is empty. It makes no statement for another k, for a changed grammar/split, for cover growth, or for P versus NP.",
+      "status": "PROVED"
+    }
+  ],
+  "proof_kind": "HAND_SYMBOLIC_EXHAUSTIVE_FIELD_CONTRADICTION",
+  "schema_version": "1.0.0",
+  "scope": [
+    "k=15 only",
+    "exact C041 canonical long-form grammar and equal split; total-decoder malformed/all-zero fallback branches are outside H_15 and P_16 by definition",
+    "all frozen length-32 branches",
+    "C048 swapped reduction retained",
+    "no other k, cover/lower-bound, novelty, or root result"
+  ],
+  "scoped_conclusion_if_records_validate": "H_15 intersection P_16 is empty under the exact C041 grammar, equal split, and retained C048 swapped reduction.",
+  "source_side_nonvacuity_witness": {
+    "c": "101111111010101",
+    "formula": "(z OR z OR z) AND (not-z OR not-z OR not-z) AND (z OR z OR z)",
+    "h_1c": "1101111111010101",
+    "header": "111001011011",
+    "payload": "010101111111010101",
+    "r": "111001011011010",
+    "unsat_proof": "The first clause requires z=true and the second clause requires z=false; therefore no assignment satisfies their conjunction, regardless of the redundant third clause.",
+    "word_x": "111001011011010101111111010101"
+  }
+}
