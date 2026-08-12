@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "PNP-C046R-EXPERT-CELL-20260812",
+  "atom_id": "O9d12a2a1b-C046R",
+  "authority": "SAME_CONTEXT_ADVERSARIAL_REVIEW_ONLY",
+  "independent_review_credit": 0,
+  "experts": [
+    {
+      "role": "cover-semantics auditor",
+      "background": "set-theoretic fusion, semi-filters, graph cover complexity",
+      "task": "Check that each separating pair is legal under Cavalar--Oliveira Definitions 18--21 and that empty generator traces are handled correctly.",
+      "finding": "PASS_LOCAL: disjoint fibre-containment is sufficient for a pair to cover an above semi-filter; cells with an empty required generator trace admit no above semi-filter. No lower-bound inference is licensed."
+    },
+    {
+      "role": "combinatorial-code specialist",
+      "background": "binary separating codes, biclique/rectangle decompositions, finite incidence structures",
+      "task": "Check the EEE assignment of the fallback edge and all four case classes.",
+      "finding": "PASS_LOCAL: row 0 remains EEE after adding f to all E sides; every other active old row class has an H coordinate; pair 4 separates old/MAGIC and fallback/MAGIC obligations."
+    },
+    {
+      "role": "decoder/recursion auditor",
+      "background": "exact recursive graph definitions and SAT encoding branches",
+      "task": "Check the support premise inherited from PR243 and ensure the MAGIC local block remains disjoint from fallback endpoints.",
+      "finding": "PASS_LOCAL: all-zero word gives exactly f=(0,65536); canonical MAGIC rows are high-half nonzero labels and canonical MAGIC columns differ from the fallback column. The ten-edge local classification is not altered by f."
+    },
+    {
+      "role": "hostile falsifier",
+      "background": "counterexample search and proof-gap auditing",
+      "task": "Try to exhibit a relevant active row/column cell not separated by the four repaired pairs.",
+      "finding": "NO_COUNTEREXAMPLE_IN_BOUND_WITNESS: bounded exact quotient enumeration checked 189 active non-complement cells and found a separating coordinate for each. This is calibration only; the hand case proof remains authoritative for the local claim."
+    },
+    {
+      "role": "local-to-global/barrier auditor",
+      "background": "circuit lower-bound transfers, proof DAGs, barrier and scope auditing",
+      "task": "Check whether the local repair changes any asymptotic or root-level authority.",
+      "finding": "BLOCK_GLOBAL: the cycle proves only rho(G17)<=4. No uniform fallback-neutrality theorem, no rho lower bound, no cover-growth recurrence, no general-circuit lower bound, and no P-versus-NP bridge are supplied."
+    }
+  ],
+  "consensus": "ACCEPT_LOCAL_PROPOSAL_SHADOW_REPAIR; REJECT_ANY_PROMOTION_OR_ASYMPTOTIC_INFERENCE",
+  "local_mathematical_failure": "NONE after repaired proof",
+  "local_to_global_gluing_failure": "OPEN: finite upper witness has no recurrence/lower-bound/root implication",
+  "review_independence_note": "All roles were instantiated in one research context and share evidence lineage. This is explicitly not one of the three genuinely isolated mathematical reviews required by the root gate."
+}
