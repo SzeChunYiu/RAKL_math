@@ -1,0 +1,72 @@
+{
+  "record_type": "TASK_EPISODE_STYLE_SHADOW",
+  "schema_version": "RAKL_V3_TASK_EPISODE_PROPOSAL_SHADOW_v1",
+  "episode_id": "E-NS-B1b1a-PV-LOCAL-INTERFACE-20260812",
+  "task_id": "NAVIER_STOKES_MILLENNIUM_BLOWUP_CLASSIFICATION",
+  "atom_id": "NS-B1b1a",
+  "context_hash": "sha256:065ed097b42f082e1de058d802f44cf78c1c258e7b6bf3605f4c73c67ec82bcf",
+  "problem_signature": "For a 3D Navier–Stokes Type-I singularity, determine whether Pineau–Vicol v2 gives a local rigidity consumer compatible with the Albritton–Barker finite-I/suitable-weak producer, and identify the exact remaining one-slice or limit-passage theorem.",
+  "fibre_snapshot_hash": "sha256:cc5cc289fad4abb6265e433fead6b23e06b7af1a8e044d8188efdfa20284cd54",
+  "operator_ids": [
+    "SEARCH:PRIMARY_SOURCE_NATIVE_CONSUMER_SPLIT",
+    "GLUE:FINITE_I_TO_ONE_SLICE_ENSTROPHY",
+    "FALSIFY:COMPACT_ORBIT_TO_SMALL_GENERATOR",
+    "AUDIT:LOCAL_LIMIT_PASSAGE"
+  ],
+  "motif_ids": [
+    "M-NS-LOCAL-CONSUMER-SWITCH-BYPASS-NONLOCAL-PRESSURE"
+  ],
+  "action_trace": [
+    "read current RAKL v3 framework/assurance/metrology/method_specs and current RAKL_math Navier–Stokes state",
+    "retrieve Pineau–Vicol v2 and source-bound Albritton–Barker interfaces",
+    "separate PV_G generator consumer from PV_E enstrophy consumer",
+    "verify footnote-27 suitability alternative at PV_E",
+    "audit PV_G proof to locate quantitative annular-pressure use",
+    "derive finite-I good-time enstrophy upper bound and singular-subclass I lower bound",
+    "run compact-periodic-orbit adversarial witness against compactness→small-generator",
+    "audit AB local convergence / pressure localization / backward-uniqueness / equation scope"
+  ],
+  "observations": [
+    "PV_E can use suitable weak + pointwise Type-I without annular L∞ pressure.",
+    "PV_G as written still uses annular pressure quantitatively before the generator controls enstrophy.",
+    "finite I yields scaled enstrophy <=8R**I at some late scale-comparable time, not an epsilon dip for arbitrary I.",
+    "precompact recurrence alone does not force generator decay."
+  ],
+  "verification_ids": [
+    "PV-T1.9-R1.10-R1.11-v2",
+    "PV-P9.5-FOOTNOTE27-v2",
+    "PV-9.17-9.25-PRESSURE-USE-v2",
+    "AB-PR110-LOCAL-COMPACTNESS-SOURCE-BOUND",
+    "DIRECT-FINITE-I-AVERAGING-CHECK",
+    "ABSTRACT-PERIODIC-ORBIT-DIFFERENCE-WITNESS"
+  ],
+  "outcome": "PV_LOCAL_CONSUMER_BIFURCATION_VERIFIED__ENSTROPHY_PATH_REMOVES_PRESSURE_BUT_FINITE_I_GLUE_REMAINS_BLOCKED",
+  "residual_signature": "POINTWISE_TYPE_I_PLUS_ONE_SLICE_EPSILON_ENSTROPHY_DIP_NOT_SUPPLIED_BY_GENERIC_FINITE_I; GENERATOR_PATH_ALSO_REQUIRES_STRONGER_PRESSURE_OR_NEW_PRESSURE_ARGUMENT",
+  "failure_categories": [
+    "LOCAL_MATHEMATICAL_FAILURE",
+    "LOCAL_TO_GLOBAL_OR_INTERFACE_FAILURE",
+    "PROCESS_CHRONOLOGY_FAILURE"
+  ],
+  "chronology": {
+    "current_framework_feature": "PreActionFibreReceipt + fail-closed consequential-operator gate",
+    "pre_action_receipt_status": "RETROSPECTIVE_NO_VALID_PREDECESSOR_RECEIPT",
+    "derived_status": "RETROSPECTIVE_ONLY",
+    "reason": "pressure-removability possibility was noticed during source scoping before issue #359 and before a valid content-hashed pre-action receipt; no backfill is claimed",
+    "future_search_priority_admissible": true,
+    "prospective_gate_credit": false
+  },
+  "evidence_pointers": [
+    "RAKL_math issue #359",
+    "PV arXiv:2607.09619v2 Theorem 1.9 / Remarks 1.10-1.11 / Proposition 9.5 footnote 27 / equations (9.17)-(9.25)",
+    "RAKL_math PR #110 critical compactness-rigidity interface audit",
+    "RAKL_math R6 ancient smoothing/capacity source receipt"
+  ],
+  "cost": {
+    "tokens_context": "CANNOT_MEASURE: runtime exposes no authoritative token/context meter",
+    "wall_time": "CANNOT_MEASURE: no trusted cycle start/stop receipt",
+    "numerical_experiments": 0,
+    "same_context_expert_roles": 7
+  },
+  "timestamp_utc": "2026-08-12T08:13:05Z",
+  "artifact_hash": "sha256:d3735f00fbcccd2e1139963d6bcc81ce61feeaa445c73014b4cb8c75a562fb25"
+}
