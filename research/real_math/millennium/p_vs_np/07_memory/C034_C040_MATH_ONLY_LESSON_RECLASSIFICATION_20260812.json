@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0.0",
+  "reclassification_id": "PNP-C034-C040-MATH-ONLY-LESSON-RECLASSIFICATION-20260812",
+  "object": "The failure-learning and conceptual-correction claims in the user-supplied C034-C040 fractional full-cover ledger, separated into mathematical content and operational provenance.",
+  "quantity_of_interest": "Which unique claims carry scoped mathematical-learning content under current RAKL math-only credit rules, and which retained records receive zero mathematical credit?",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "source_boundary": {
+    "external_ledger_path": "research/real_math/millennium/p_vs_np/00_sources/RAKL_PVSNP_C034_C040_EXTERNAL_LEDGER_20260811.md",
+    "assessment_path": "research/real_math/millennium/p_vs_np/08_reviews/C034_C040_EXTERNAL_LEDGER_ASSESSMENT_20260811.json",
+    "u8_v2_receipt_path": "research/real_math/millennium/p_vs_np/05_falsification/C034B_U8_RETROSPECTIVE_REPLAY_V2_CORRECTION_20260811.json",
+    "c037_receipt_path": "research/real_math/millennium/p_vs_np/05_falsification/C037_EXTERNAL_LEDGER_REPLAY_RECEIPT_20260811.json",
+    "authority_boundary_path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C053_C034_C040_AUTHORITY_BOUNDARY_20260812.json",
+    "review_authority": "SAME_CONTEXT_MATH_ONLY_RECLASSIFICATION_NOT_INDEPENDENT_REVIEW"
+  },
+  "classification_contract": {
+    "mathematical_credit_unit": "One unique scoped mathematical implication/result with all seven fields and proof or source evidence.",
+    "zero_credit_inputs": [
+      "Git/branch/commit/PR/merge state",
+      "CI/tests/runtime/solver behavior alone",
+      "schemas/serialization/hashes/chronology/path handling",
+      "same-context review or novelty assertion"
+    ],
+    "computation_is_proof": false,
+    "same_context_review_is_independent_review": false,
+    "deduplication_rule": "Repeated source, receipt, review, trace, failure, or lesson renderings of the same scoped mathematical implication count once."
+  },
+  "mathematical_lessons": [
+    {
+      "lesson_id": "MATH-PNP-C034A-FULL-UNION-DOMINATION",
+      "credit_units": 1,
+      "authority": "SOURCE_BOUND_HAND_PROOF_DESK_CHECKED_PROOF_AUTHORITY_NONE",
+      "seven_field_mathematical_lesson": {
+        "attempted_mathematical_implication": "The fractional and integral full-cover problems may restrict without loss to incomparable fusion pairs whose union is the whole ground set.",
+        "exact_result_or_failure": "For a legal pair (E,H) on U, partition M=U\\(E union H) as M_E disjoint_union M_H and set E_prime=E union M_E, H_prime=H union M_H. Then E_prime union H_prime=U, E_prime intersect H_prime=E intersect H, incomparability is preserved, and every upward-closed semi-filter covered by (E,H) is also covered by (E_prime,H_prime).",
+        "supported_and_competing_mathematical_causes": "Supported cause: upward closure preserves membership when E and H are enlarged, while assigning each missing coordinate to only one side preserves the intersection and the old exclusive elements preserve incomparability. Competing failure modes are a cover class that is not upward closed, extra legality constraints not preserved by enlargement, or a source definition different from the desk-checked definition.",
+        "scope": "Finite ground sets, the source ledger definition of legal incomparable fusion pairs, upward-closed semi-filters, and coverage determined by E,H in F but E intersect H not in F.",
+        "mathematical_falsifier": "A legal source pair for which every full-union extension either changes E intersect H, destroys incomparability, or fails to cover a semi-filter previously covered under the exact registered definitions.",
+        "repair_or_next_mathematical_move": "Bind the exact source definitions and statement identity, then obtain formal or isolated proof review before theorem promotion; use the reduction only inside that bound definition universe.",
+        "proof_or_source_evidence": "The displayed construction and proof in C034a of the preserved external ledger; the assessment classifies it DESK_CHECK_PASS_PROOF_AUTHORITY_NONE. The argument is reproduced algebraically above rather than inferred from tests."
+      }
+    },
+    {
+      "lesson_id": "MATH-PNP-C034B-FINITE-CEILING-REFUTATION",
+      "credit_units": 1,
+      "authority": "EXACT_FINITE_SOURCE_BOUND_CERTIFICATE_REPLAY_NOT_ASYMPTOTIC_PROOF",
+      "seven_field_mathematical_lesson": {
+        "attempted_mathematical_implication": "The observed values through seven complement edges suggested a universal graph-realizable ceiling rho_frac at most 2.",
+        "exact_result_or_failure": "For the exact source-bound reconstructed U8 finite evaluator, matching exact rational primal and dual certificates have total 49/24, hence this evaluator has optimum 49/24>2. The regenerated supports differ from the missing original supports, so this is retrospective reconstruction rather than original-certificate recovery.",
+        "supported_and_competing_mathematical_causes": "Supported cause: graph realizability and the previously observed small instances do not impose a constant-two ceiling on this fractional LP. Competing explanations retained at the authority boundary are a mismatch between the reconstructed evaluator and an unstated intended source definition, or a broader theorem with additional hypotheses not present in the frozen U8 object.",
+        "scope": "Only the reconstructed finite full-semi-filter fractional cover LP induced by the displayed U8 and the exact evaluator bound in the v2 correction receipt; no asymptotic family, novelty, integral-cover, circuit, or P-versus-NP conclusion.",
+        "mathematical_falsifier": "An exact primal infeasibility, exact dual infeasibility, unequal primal and dual totals, a missed registered constraint with load above one or coverage below one, or a demonstrated statement/evaluator mismatch that removes this U8 instance from the claimed class.",
+        "repair_or_next_mathematical_move": "Replace finite extrapolation by a uniform recurrence or obstruction theorem. Treat U8 as a bounded counterexample to the ceiling only, and test any successor claim against exact relevance and transfer conditions.",
+        "proof_or_source_evidence": "C034B_U8_RETROSPECTIVE_REPLAY_V2_CORRECTION_20260811.json records exact rational primal/dual totals 49/24 with all registered finite constraints checked, while explicitly marking retrospective target exposure and different certificate support. The receipt corroborates this finite mathematical counterexample but does not create an asymptotic proof."
+      }
+    },
+    {
+      "lesson_id": "MATH-PNP-C037-ARBITRARY-EXTENSION-NONMONOTONE",
+      "credit_units": 1,
+      "authority": "EXACT_FINITE_RATIONAL_COUNTEREXAMPLE_REPLAY",
+      "seven_field_mathematical_lesson": {
+        "attempted_mathematical_implication": "Ground-set inclusion U subset U_prime by one complement edge was conjectured to imply rho_frac(U_prime) at least rho_frac(U).",
+        "exact_result_or_failure": "For U={(0,0),(1,2),(2,1),(2,2)} and U_prime=U union {(1,1)}, exact finite primal-dual receipts give rho_frac(U)=3/2 and rho_frac(U_prime)=1, a strict decrease of 1/2.",
+        "supported_and_competing_mathematical_causes": "Supported cause: the incident added edge changes row/column generators, so cylinder-lifted old semi-filters need not remain relevant and old dual constraints can disappear. Competing causes checked by the receipt include finite LP optimization error and an unmatched primal/dual bound; broader source-definition mismatch remains outside the receipt.",
+        "scope": "The exact two displayed finite bipartite-complement instances and registered full-union finite evaluator. It refutes arbitrary one-edge monotonicity, not every restricted extension theorem.",
+        "mathematical_falsifier": "Failure of exact feasibility for either displayed primal or dual certificate, unequal matching totals, an incorrect U subset U_prime relation, or a source-bound definition change under which the displayed finite evaluator no longer represents rho_frac.",
+        "repair_or_next_mathematical_move": "Condition monotonic transport on relevance persistence of the supported lifted witnesses, and test that premise before using any extension as an amplification step.",
+        "proof_or_source_evidence": "C037_EXTERNAL_LEDGER_REPLAY_RECEIPT_20260811.json gives matching exact rational primal and dual certificates for 3/2 and 1 and exhaustively checks the registered full-union finite rule spaces."
+      }
+    },
+    {
+      "lesson_id": "MATH-PNP-C038-WITNESS-PERSISTENCE-TRANSFER",
+      "credit_units": 1,
+      "authority": "CONDITIONAL_SOURCE_BOUND_HAND_PROOF_STATEMENT_BINDING_MISSING",
+      "seven_field_mathematical_lesson": {
+        "attempted_mathematical_implication": "A parent dual certificate should transfer to a larger ground set when its supported semi-filter witnesses remain mathematically relevant after cylinder lifting.",
+        "exact_result_or_failure": "If each cylinder lift F_hat={S_prime subset U_prime : S_prime intersect U belongs to F} in the support of a parent feasible dual remains relevant in the child, then the same weights are child dual-feasible and the child optimum is at least the parent certified mass.",
+        "supported_and_competing_mathematical_causes": "Supported cause: cylinder membership of E_prime, H_prime, and E_prime intersect H_prime is exactly membership of their projections E,H,E intersect H; every child load is therefore an old legal-rule load or zero. Competing failure modes are loss of lifted relevance, an underdefined child legal-pair space, or a projection that does not preserve the registered coverage predicate.",
+        "scope": "Finite U subset U_prime, the source ledger cylinder lift, a fixed supported feasible parent dual, and the explicit premise that every supported lift is child-relevant. No unconditional extension monotonicity or strict improvement.",
+        "mathematical_falsifier": "A child legal pair whose load under the lifted weights exceeds one despite every supported lift satisfying the registered relevance premise, or a concrete failure of one of the three cylinder-membership equivalences under the exact bound definitions.",
+        "repair_or_next_mathematical_move": "Recover and bind the exact relevance and legal-pair definitions, formally or independently review the projection argument, and construct extensions for which support persistence is proved uniformly.",
+        "proof_or_source_evidence": "The C038 source proof explicitly derives the three cylinder-membership equivalences and the projected-load bound; the assessment verdict is CONDITIONAL_DESK_CHECK_PASS_STATEMENT_BINDING_MISSING."
+      }
+    },
+    {
+      "lesson_id": "MATH-PNP-C038-C040-PERSISTENCE-NOT-STRICT-AMPLIFICATION",
+      "credit_units": 1,
+      "authority": "SCOPED_LOGICAL_CONSEQUENCE_AND_OPEN_RESIDUAL",
+      "seven_field_mathematical_lesson": {
+        "attempted_mathematical_implication": "Preserving a parent dual certificate under extension might by itself establish a recursively strict amplification chain.",
+        "exact_result_or_failure": "The persistence lemma yields only rho_frac(child) at least the preserved parent mass. It supplies no positive gap. A strict recursive step therefore requires a separate child lower bound strictly exceeding that mass; the three reported finite increases do not prove that such gaps continue uniformly, and their named original certificates are missing from the supplied bundle.",
+        "supported_and_competing_mathematical_causes": "Supported cause: feasibility transports the old objective value but contains no inequality forcing additional objective mass. Competing routes to strictness include reoptimization to a different child dual, an additive feasible augmentation, or a structural lower-bound argument; none follows from persistence alone.",
+        "scope": "The C038 conditional transfer mechanism and the reported C039-C040 finite chain. This is a boundary on what the transfer lemma implies, not a claim that uniform strict amplification is impossible.",
+        "mathematical_falsifier": "A derivation from the persistence hypotheses alone that forces a uniform positive child-parent gap for every admitted extension, or a hidden hypothesis in the exact theorem statement that already supplies such a gap.",
+        "repair_or_next_mathematical_move": "Construct a uniform relevance-preserving extension together with an independently proved positive cumulative dual-mass recurrence, or prove a mathematical obstruction to every such recurrence.",
+        "proof_or_source_evidence": "The conclusion of the C038 displayed theorem is non-strict, while the external ledger itself states the active residual as a separate positive cumulative dual-mass recurrence. The assessment leaves C035/C036/C040 certificate claims CANNOT_CHECK, so the reported finite chain cannot be used as certified recurrence evidence."
+      }
+    }
+  ],
+  "operational_provenance_zero_credit": [
+    {
+      "source_id": "F-C034-PROCESS-GATE-DELAY",
+      "classification": "NO_MATHEMATICAL_LESSON",
+      "credit_units": 0,
+      "reason": "Chronology, schema materialization, and process-compliance separation are assurance facts, not a mathematical implication."
+    },
+    {
+      "source_id": "F-C035-BATCH-WORKER-HANG",
+      "classification": "NO_MATHEMATICAL_LESSON",
+      "credit_units": 0,
+      "reason": "A solver worker hang and checkpoint fallback concern execution reliability only; missing output is not a mathematical result."
+    },
+    {
+      "source_id": "F-C040-FULL-DUAL-LP-STALL",
+      "classification": "NO_MATHEMATICAL_LESSON",
+      "credit_units": 0,
+      "reason": "Solver stalling and constraint-generation performance are computational provenance. They receive no mathematical credit absent a separately proved mathematical implication."
+    },
+    {
+      "source_id": "C037-C040-STRICT-V3-CHRONOLOGY",
+      "classification": "NO_MATHEMATICAL_LESSON",
+      "credit_units": 0,
+      "reason": "Frozen-context and hash-chain chronology can support discovery-process claims only and cannot create mathematical truth or learning credit."
+    }
+  ],
+  "synthesis": {
+    "unique_scoped_mathematical_credit_units": 5,
+    "operational_items_retained_at_zero_credit": 4,
+    "central_mathematical_correction": "Extension arguments must separate relevance-preserving transport of an old dual certificate from a separate proof of strict new lower-bound mass; arbitrary inclusion supplies neither.",
+    "root_impact": "NONE",
+    "framework_promotion_authority": false,
+    "novelty_authority": false,
+    "independent_review_authority": false
+  },
+  "nonclaims": [
+    "This reclassification creates no new P-versus-NP theorem, asymptotic lower bound, circuit lower bound, or root-solution certificate.",
+    "It does not recover the missing C035, C036, C039, or C040 original certificates.",
+    "It is not independent mathematical review and does not establish novelty.",
+    "Artifact hashes, tests, Git state, and CI receive zero mathematical-learning credit."
+  ],
+  "artifact_hash": "sha256:d8d7ef947f6a7a7e79332f9872d2fc3a01a89848d30ce12c1c35432ee59de924"
+}
