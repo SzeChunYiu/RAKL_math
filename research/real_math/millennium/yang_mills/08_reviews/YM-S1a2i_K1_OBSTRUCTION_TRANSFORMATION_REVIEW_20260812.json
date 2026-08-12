@@ -1,0 +1,128 @@
+{
+  "review_id": "OTR-YM-S1a2i-K1-20260812",
+  "target_atom_id": "YM-S1a2i-K1",
+  "target_context_hash": "sha256:62b283503fa2f62349dea2b2bb8f67dc65e1b1d944cec01cbd5df8e0bed806ae",
+  "research_memory_review_hash": "sha256:bb736aaeb95ee9c0421711b706aceb036ef3bd34d51ee0afb853110966cd9161",
+  "episode_memory_snapshot_hash": "2833d766a01581954d35cf99dda77f5ec2ec8eb8c4811c8ed6702c09720321ba",
+  "obstruction": {
+    "obstruction_id": "O-YM-R20-K-NEXT-RADIUS",
+    "domain": "Yang-Mills nonautonomous RG invariant-region analysis",
+    "roles": [
+      "current K radius",
+      "rho contraction",
+      "O(g^4) forcing",
+      "small coupling"
+    ],
+    "relations": [
+      "contraction creates leading-order slack",
+      "forcing is asymptotically smaller than slack",
+      "radius shrink is also higher order"
+    ],
+    "constraints": [
+      "uniform contraction below one",
+      "uniform forcing coefficient",
+      "source constants uniform in k",
+      "next radius requires lower base-flow control"
+    ],
+    "failure_mechanisms": [
+      "forcing exceeds unused slack",
+      "old radius substituted for smaller next radius"
+    ],
+    "invariants_to_preserve": [
+      "nonnegative radius",
+      "uniform quantifiers",
+      "scale-index uniformity",
+      "same K norm and source theory",
+      "open root authority"
+    ],
+    "desired_transition": [
+      "a sufficiently small ball maps into itself"
+    ],
+    "forbidden_losses": [
+      "post-result threshold selection",
+      "claiming full graph contraction"
+    ]
+  },
+  "direct_search_status": "NO_VIABLE_MATCH",
+  "jump_search_status": "MATCHES_FOUND",
+  "glue_search_status": "NOT_RUN",
+  "selected_mode": "JUMP",
+  "direct_candidate_episode_ids": [],
+  "direct_mapping_witnesses": [],
+  "jump_mapping_witnesses": [
+    {
+      "witness_id": "SMW-YM-R20K1-ELEMENTARY-MARGIN",
+      "episode_id": "OTEP-ELEMENTARY-STRICT-CONTRACTION-SMALL-BALL",
+      "target_obstruction_id": "O-YM-R20-K-NEXT-RADIUS",
+      "role_mapping": [
+        [
+          "current radius",
+          "current K radius"
+        ],
+        [
+          "strict contraction",
+          "rho contraction"
+        ],
+        [
+          "higher-order forcing",
+          "O(g^4) forcing"
+        ],
+        [
+          "small parameter",
+          "small coupling"
+        ]
+      ],
+      "shared_relations": [
+        "contraction creates leading-order slack",
+        "forcing is asymptotically smaller than slack"
+      ],
+      "shared_constraints": [
+        "uniform contraction below one",
+        "uniform forcing coefficient"
+      ],
+      "precondition_mapping": [
+        [
+          "contraction factor strictly below one",
+          "R20 records rho<1"
+        ],
+        [
+          "forcing coefficient uniform",
+          "must be checked from the source-scoped bound"
+        ],
+        [
+          "positive radius coefficient",
+          "c_K>0 in the graph ball"
+        ]
+      ],
+      "unmatched_source_preconditions": [],
+      "disanalogies": [
+        "the target radius shrinks with g_{k+1}",
+        "the target uses a scale-dependent polymer norm"
+      ],
+      "target_validation_obligations": [
+        "use a lower bound for g_{k+1}",
+        "keep every constant uniform in k",
+        "freeze threshold before testing",
+        "exclude all non-K conclusions"
+      ],
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_R20_SOURCE_AUDIT.md"
+      ],
+      "artifact_hash": "sha256:9c4713cc5cbd9ac2a51496996223920af05b4da00ba3b60ae05f5907ed84f21b"
+    }
+  ],
+  "glue_witness": null,
+  "selected_episode_ids": [
+    "OTEP-ELEMENTARY-STRICT-CONTRACTION-SMALL-BALL"
+  ],
+  "exhaustion_witness": null,
+  "missing_transformation_specification": null,
+  "unresolved_warnings": [
+    "SEARCH selects a validation operation, not a theorem.",
+    "The moving-radius disanalogy is the entire target discriminator."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1a2i_K1_OBSTRUCTION_TRANSFORMATION_MEMORY_20260812.json"
+  ],
+  "artifact_hash": "sha256:8cab58ae7f5206930c0699c8eec470f07765ec848af8bb2367d2ca4c0f31554b"
+}

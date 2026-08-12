@@ -1,0 +1,43 @@
+{
+  "selection_id": "CROSS-MILLENNIUM-NONPNP-NONRH-20260812-K1",
+  "application_base_sha": "b7ca6ac51fa8319b559e95402c47959c626f284a",
+  "framework_sha": "62e97d545f93ff604b2db47a7c8d41a59a1c5286",
+  "selection_rule": "Highest expected mathematical information per cheapest exact discriminator on merged main; pending PRs, CI, Git, schemas and repository growth carry zero mathematical weight.",
+  "lanes": [
+    {
+      "lane": "navier_stokes",
+      "active_residual": "derive a source-valid uniform intermediate-annulus tail modulus",
+      "cost": "requires new PDE ancestry/tail input",
+      "selection": "DEFER"
+    },
+    {
+      "lane": "hodge",
+      "active_residual": "bind smoothness/properness to the exact witness-incidence morphism",
+      "cost": "requires constructing the target incidence geometry, not only an abstract proxy",
+      "selection": "DEFER"
+    },
+    {
+      "lane": "birch_swinnerton_dyer",
+      "active_residual": "control Sha[p-infinity] corank after Selmer corank two",
+      "cost": "deep arithmetic input; no cheap source-valid discriminator currently frozen",
+      "selection": "DEFER"
+    },
+    {
+      "lane": "poincare",
+      "active_residual": "no unsolved Clay root; only transfer/metamethod study remains",
+      "cost": "cannot outrank an open root-facing mathematical obstruction",
+      "selection": "DEFER"
+    },
+    {
+      "lane": "yang_mills",
+      "active_residual": "decide whether strict irrelevant contraction can pay the O(g^4) shrink of an O(g^2) graph radius",
+      "cost": "one scalar invariant-region discriminator using already source-bound equations",
+      "selection": "SELECT"
+    }
+  ],
+  "selected_atom": "YM-S1a2i-K1",
+  "rationale": "R20 explicitly left K-coordinate irreparability unsupported. Resolving this single coordinate separates a repairable stable block from the still-open relevant inverse/base-map obstructions without importing any continuum or mass-gap claim.",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "mathematical_credit": 0,
+  "artifact_hash": "sha256:f4d48d336ffe540ffdb6f056b0ffc0ec5d3f0e9f43e299d4c72fbd6bbaa1908f"
+}

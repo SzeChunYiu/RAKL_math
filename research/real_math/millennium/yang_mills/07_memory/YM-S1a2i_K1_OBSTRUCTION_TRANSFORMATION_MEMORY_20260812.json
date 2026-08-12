@@ -1,0 +1,75 @@
+{
+  "memory_id": "OTM-YM-S1a2i-K1-20260812",
+  "source_universe": [
+    "elementary invariant-region analysis",
+    "merged R20 source-scoped failure record"
+  ],
+  "episodes": [
+    {
+      "episode_id": "OTEP-ELEMENTARY-STRICT-CONTRACTION-SMALL-BALL",
+      "source_domain": "elementary invariant-region analysis",
+      "source_context": "Fixed-radius strict contraction with a quadratic-in-radius perturbation",
+      "source_obstruction": {
+        "obstruction_id": "O-ELEMENTARY-STRICT-CONTRACTION-HIGHER-ORDER-FORCING",
+        "domain": "elementary invariant-region analysis",
+        "roles": [
+          "current radius",
+          "strict contraction",
+          "higher-order forcing",
+          "small parameter"
+        ],
+        "relations": [
+          "contraction creates leading-order slack",
+          "forcing is asymptotically smaller than slack"
+        ],
+        "constraints": [
+          "uniform contraction below one",
+          "uniform forcing coefficient"
+        ],
+        "failure_mechanisms": [
+          "forcing exceeds unused slack"
+        ],
+        "invariants_to_preserve": [
+          "nonnegative radius",
+          "uniform quantifiers"
+        ],
+        "desired_transition": [
+          "a sufficiently small ball maps into itself"
+        ],
+        "forbidden_losses": [
+          "post-result threshold selection"
+        ]
+      },
+      "transformation_name": "spend_contraction_margin_against_higher_order_forcing",
+      "operation": "Separate leading contraction slack from higher-order forcing and freeze the smallness threshold before evaluation.",
+      "preconditions": [
+        "contraction factor strictly below one",
+        "forcing coefficient uniform",
+        "positive radius coefficient"
+      ],
+      "resulting_relations": [
+        "a sufficiently small ball maps into itself"
+      ],
+      "preserved_invariants": [
+        "uniform quantifiers",
+        "nonnegative radius"
+      ],
+      "relaxed_or_broken_constraints": [],
+      "known_breakpoints": [
+        "contraction approaches one without uniform margin",
+        "forcing is not higher order",
+        "target radius changes without lower control"
+      ],
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_R20_SOURCE_AUDIT.md"
+      ],
+      "authority": "PROOF_BACKED",
+      "artifact_hash": "sha256:9340739d2e7be6e3d8a85f5752fe8fa08b26f58688a497b8e68b825ca37e1cd0",
+      "lineage_ids": []
+    }
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1a2i_K1_RESEARCH_MEMORY_REVIEW_20260812.json"
+  ],
+  "snapshot_hash": "2833d766a01581954d35cf99dda77f5ec2ec8eb8c4811c8ed6702c09720321ba"
+}
