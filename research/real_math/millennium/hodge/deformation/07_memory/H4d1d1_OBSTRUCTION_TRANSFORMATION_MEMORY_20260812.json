@@ -1,0 +1,54 @@
+{
+  "memory_id": "OTM-H4D1D1-20260812",
+  "source_universe": [
+    "Stacks Project Chow Homology tags 02R3, 02RF, 02S0",
+    "Stacks Project Relative Cycles tags 0H4M, 0H4P, 0H4Z",
+    "current Hodge application shadow work #100,#119,#143,#146,#197 used only for target boundaries"
+  ],
+  "episodes": [{
+    "episode_id": "OT-CHOW-FINITE-COVER-DEGREE-NORMALIZED-PUSHFORWARD-02RF",
+    "source_domain": "algebraic-cycle deformation/descent",
+    "source_context": "Stacks Project Chow Homology 42.12, 42.15.2 and 42.20: proper pushforward on cycles/Chow groups and f_*f^*=d for finite locally free degree-d maps.",
+    "source_obstruction": {
+      "obstruction_id": "SRC-CHOW-FINITE-SHEETS-NO-PREFERRED-SECTION",
+      "domain": "algebraic-cycle deformation/descent",
+      "roles": ["finite cover source", "base target", "cycle on the cover"],
+      "relations": ["finite sheets have no canonical preferred sheet but admit a degree-weighted aggregate on the base"],
+      "constraints": ["finite locally free cover of constant degree over the active open", "proper pushforward is defined on the cycle", "rational coefficients are allowed for degree normalization"],
+      "failure_mechanisms": ["a single global section is unavailable because witness sheets can permute"],
+      "invariants_to_preserve": ["algebraicity of cycles", "codimension under finite relative dimension zero", "rational equivalence under proper pushforward"],
+      "desired_transition": ["replace single-section dependence by a base algebraic cycle obtained from finite-sheet aggregation"],
+      "forbidden_losses": ["replace algebraic cycles by a weaker motivated or cohomological category"]
+    },
+    "transformation_name": "DEGREE_NORMALIZED_PROPER_PUSHFORWARD",
+    "operation": "Push the finite-cover cycle to the base by proper pushforward and, over Q, normalize by the cover degree when comparing with a pulled-back base class.",
+    "preconditions": [
+      "the cover is finite locally free of positive constant degree d on the active open",
+      "the upstairs object is an algebraic cycle of the required codimension",
+      "proper pushforward is taken along the induced proper finite map to the base family",
+      "rational coefficients are available if normalization by 1/d is used"
+    ],
+    "resulting_relations": ["replace single-section dependence by a base algebraic cycle obtained from finite-sheet aggregation"],
+    "preserved_invariants": ["algebraicity of cycles", "codimension under finite relative dimension zero", "rational equivalence under proper pushforward"],
+    "relaxed_or_broken_constraints": [],
+    "known_breakpoints": [
+      "positive-dimensional generic fibres do not have a single finite degree without a separate multisection construction",
+      "integral coefficients do not permit unconditional division by d",
+      "wrong or sheet-dependent cohomology classes can average to the wrong class",
+      "ramified/nonflat boundary requires separate audit"
+    ],
+    "evidence_pointers": ["https://stacks.math.columbia.edu/tag/02R3", "https://stacks.math.columbia.edu/tag/02RF", "https://stacks.math.columbia.edu/tag/02S0"],
+    "authority": "SOURCE_EVENT_VERIFIED",
+    "artifact_hash": "5c4749df3d9a66c6f08cb9605b435c1e88ad0a2c9aa0a1ff282f986ff1259596",
+    "lineage_ids": []
+  }],
+  "evidence_pointers": [
+    "https://stacks.math.columbia.edu/tag/02R3",
+    "https://stacks.math.columbia.edu/tag/02RF",
+    "https://stacks.math.columbia.edu/tag/02S0",
+    "https://stacks.math.columbia.edu/tag/0H4M",
+    "https://stacks.math.columbia.edu/tag/0H4P",
+    "https://stacks.math.columbia.edu/tag/0H4Z"
+  ],
+  "snapshot_hash": "4ee8e3bb144f437762cd278ff5d62016fe13a99a80ac7eefcc607e45652c506d"
+}
