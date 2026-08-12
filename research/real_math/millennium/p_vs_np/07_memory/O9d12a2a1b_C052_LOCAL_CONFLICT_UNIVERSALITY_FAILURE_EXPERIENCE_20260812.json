@@ -1,0 +1,62 @@
+{
+  "artifact_hash": "sha256:cece73c9aab3701ca229cb1e17cb20e9ea734c1cfa503d63eb8351553377bff7",
+  "atom_id": "O9d12a2a1b-C052",
+  "attempted_implication": "The C050 and C051 forced bit-3 conflicts might express a universal local forced-MAGIC obstruction over supported adjacent cells.",
+  "authority": "SCOPED_SAME_CONTEXT_FAILURE_DIAGNOSIS_NOT_GLOBAL_IMPOSSIBILITY",
+  "broken_assumptions": [
+    "two fixed a=1 regressions cannot be extrapolated across token widths",
+    "absence of local forced coordinate is only escape from that obstruction"
+  ],
+  "candidate_id": "PNP-C052-K20-UNSAT-AWARE-LOCAL-ESCAPE-HAND-PROOF-20260812",
+  "competing_diagnoses": [
+    "H_20 witness family is not canonical",
+    "the repeated-unit pair is satisfiable",
+    "one v/index/sign case is omitted",
+    "h indexing crosses the wrong token positions",
+    "absence of local conflict proves intersection"
+  ],
+  "context_packet_hash": "sha256:9d40561c8b60531e1b424dc0daa66f308a000e76154d36295c91836004dce125",
+  "diagnosis_status": "SUPPORTED_BOUNDED_NOT_UNIQUE_GLOBAL_CAUSE",
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C052_K20_UNSAT_AWARE_LOCAL_ESCAPE_HAND_PROOF_20260812.json",
+    "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C052_V1_CONTROLLED_SEMANTIC_FALSIFICATION_20260812.json"
+  ],
+  "failure_id": "F-PNP-C052-LOCAL-FORCED-CONFLICT-UNIVERSALITY-REFUTED",
+  "failure_mode": "bounded a=1 conflicts do not transport to the a=3 semantic parent cell",
+  "falsifier_or_attempt": "Construct explicit UNSAT parents in the k=20 a=3,m=2 cell that attain both values at each payload coordinate h[1..7].",
+  "local_repair_attempts": [
+    "explicit all-v/all-index/both-order UNSAT witness family",
+    "truth-table check of every opposite-unit witness"
+  ],
+  "method_family": "support-phase local forced-bit obstruction extrapolation",
+  "observed_result": "A 44-member family of opposite repeated-unit-clause formulas lies in H_20 and attains both 0 and 1 at every h[1..7]; h[0]=1 matches MAGIC[0]. Thus no coordinate 0..7 is universally fixed unequal to MAGIC.",
+  "research_trace_event_id": "O9d12a2a1b-C052-E13",
+  "residual_signature": [
+    "finite-regression-to-parametric transport failure",
+    "token-width change a=1 to a=3",
+    "semantic UNSAT-preserving counterfamily",
+    "local obstruction absent without an intersection witness"
+  ],
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "scope_conditions": [
+    "k=20 parent a=3,m=2 semantic set H_20",
+    "coordinates h[0..7] only",
+    "retrospective proof after result access",
+    "no intersection, cover, circuit, or root claim"
+  ],
+  "selected_diagnosis": "SUPPORTED_BOUNDED: width-4 tokens and the complete legal index set {1,2,4} allow explicit UNSAT-preserving variation of every encountered index-bit phase; opposite clause orders vary the sign phases.",
+  "timestamp": "2026-08-12T13:10:00Z",
+  "typed_relations": [
+    {
+      "relation": "SAME_METHOD_FAMILY_AS",
+      "target_failure_id": "F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC",
+      "witness": "C050 is a valid a=1 conflict; k20 shows its mechanism is not universal across token widths."
+    },
+    {
+      "relation": "SAME_METHOD_FAMILY_AS",
+      "target_failure_id": "F-PNP-C051-K19-FIXED-VARIABLE-BIT-VERSUS-MAGIC",
+      "witness": "C051 is another valid a=1 conflict; repeated fixed cases do not survive the explicit a=3 semantic counterfamily."
+    }
+  ]
+}
