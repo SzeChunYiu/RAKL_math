@@ -1,0 +1,52 @@
+{
+  "schema_version": "same-context-expert-postcheck-v3-r6",
+  "cycle_id": "NS-B1a3b1a2a-R6-ANCIENT-SMOOTHING-GLOBAL-LORENTZ-20260812",
+  "authority": "SAME_CONTEXT_PROPOSAL_SHADOW_ZERO_INDEPENDENT_REVIEW_CREDIT",
+  "consensus": "ANCIENT_LOCAL_SMOOTHING_BOUND / GLOBAL_LORENTZ_GLUE_OPEN_QUANTIFIED_LINEAR_CAPACITY",
+  "reviews": [
+    {
+      "role": "bounded-ancient/mild-solution analyst",
+      "finding": "PASS_SCOPED",
+      "reason": "KNSS Proposition 4.1 gives the scale-correct short-time L-infinity smoothing estimate. Ancient mildness supplies arbitrarily early mild Cauchy intervals, and semigroup splitting at an interior time licenses restart. Choosing elapsed time c M^{-2} yields uniform-in-time derivative bounds.",
+      "objection_preserved": "The local lemma alone says nothing about whole-space tail multiplicity."
+    },
+    {
+      "role": "Type-I/Albritton-Barker analyst",
+      "finding": "PASS_SCOPED",
+      "reason": "The E-coordinate is exactly a backward-cylinder R^{-1} integral of |nabla u|^2 and I is the supremum of A+C+D+E over sub-cylinders. The packing estimate uses only an allowed consequence of E and does not import global L3.",
+      "objection_preserved": "No claim that finite I alone controls a global vorticity norm."
+    },
+    {
+      "role": "Lorentz/Morrey harmonic analyst",
+      "finding": "BLOCK_GLOBAL_PROMOTION",
+      "reason": "For fixed lambda and large R, the derived measure bound grows as R lambda^{-3}; weak-L^{3/2} requires a radius-free global distribution estimate. Sending R to infinity is invalid.",
+      "objection_preserved": "A new tail/profile-count coordinate is mathematically load-bearing."
+    },
+    {
+      "role": "concentration-compactness analyst",
+      "finding": "BLOCK_GLOBAL_PROMOTION",
+      "reason": "The linearly replicated smooth packet near-miss shows magnitude bookkeeping is compatible with O(R) spatial multiplicity at a time slice. Noncompact translations are therefore still an unresolved coordinate.",
+      "objection_preserved": "The near-miss is not an NSE solution and cannot falsify equation-specific ancient compactness."
+    },
+    {
+      "role": "vorticity/geometric-depletion analyst",
+      "finding": "BLOCK_CONSUMER_TRANSFER",
+      "reason": "Even a future global weak-L^{3/2} amplitude bound would not supply Grujic-v2's one-center critical profile, shape-factor gradient control, or log-weighted BMO vorticity direction.",
+      "objection_preserved": "Amplitude, morphology and direction remain distinct producer obligations."
+    },
+    {
+      "role": "pressure/nonlocality analyst",
+      "finding": "PASS_LOCAL_BLOCK_GLOBAL",
+      "reason": "Pressure need not enter the mild local-smoothing estimate, but any future global contraction may require D, harmonic pressure and far-field information. The cycle did not erase that coordinate.",
+      "objection_preserved": "P=0 in the hostile near-miss is bookkeeping only because the pair is not asserted to solve NSE."
+    },
+    {
+      "role": "adversarial verifier/metrology analyst",
+      "finding": "PASS_PROPOSAL_SHADOW_ONLY",
+      "reason": "Scaling exponents, units, temporal persistence and quantifier order were checked; the counterexample has an explicit non-NSE DifferenceWitness; root remains open and review credit remains 0/3.",
+      "objection_preserved": "Canonical runtime/schema admission and CI must remain separate from mathematical reasoning and cannot mint theorem authority."
+    }
+  ],
+  "independent_mathematical_review_credit": "0/3",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+}
