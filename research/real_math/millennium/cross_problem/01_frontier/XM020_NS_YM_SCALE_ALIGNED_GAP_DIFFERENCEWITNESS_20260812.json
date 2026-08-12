@@ -1,0 +1,75 @@
+{
+  "application_subject": {
+    "branch": "research/cross-xm020-ns-ym-scale-gap-20260812",
+    "rakl_math_base": "45db03f76b8aee94e7f3e40c6633c347f372a809",
+    "rakl_math_base_tree": "3863b9fa9a18613da28a0c34a4ca42509ebd5312"
+  },
+  "artifact_hash": "sha256:0fc432c557bcaa9ca44388399da66796bd765d0ae956117bfb458c0ec0fe020b",
+  "authority": "PROPOSAL_SHADOW_ONLY_NO_ROOT_NO_FRAMEWORK_AUTHORITY",
+  "cheapest_falsifier": {
+    "challenge": "Can positivity delta_latt(a)>0 for every a force liminf_{a->0} delta_latt(a)/a>0?",
+    "difference_worlds": [
+      {"delta_latt":"a","fixed_scale_property":"delta_latt(a)>0 for every a>0","id":"WORLD-A","physical_coordinate":"delta_latt/a = 1"},
+      {"delta_latt":"a^2","fixed_scale_property":"delta_latt(a)>0 for every a>0","id":"WORLD-B","physical_coordinate":"delta_latt/a = a -> 0"}
+    ],
+    "verdict": "DIFFERENCE_WITNESS_EXISTS__QUALITATIVE_FIXED_SCALE_POSITIVITY_IS_NONIDENTIFYING",
+    "verification": "Both worlds satisfy exactly the qualitative fixed-scale positivity premise, while their continuum physical coordinates have different lower-limit outcomes."
+  },
+  "common_abstraction": "FIXED_SCALE_POSITIVITY_OR_CONTROL_IS_NONIDENTIFYING_FOR_A_SCALE_DEPENDENT_PHYSICAL_QOI_WITHOUT_A_SCALE_ALIGNED_MODULUS",
+  "difference_witness": {
+    "changed_target_coordinate": "liminf_{a->0} delta_latt(a)/a",
+    "preserved_coordinates": ["positive regulated/lattice spectral coordinate at every a>0","same qualitative fixed-cutoff statement"],
+    "repair_needed": ["a quantitative same-theory bound delta_latt(a) >= m0*a (up to a controlled error) with m0>0, or","a fixed-physical-time semigroup/contraction gap uniform in regulator with a valid varying-Hilbert-space/OS limit handoff"],
+    "status": "EXPLICIT_SCALE_NORMALIZATION_DIFFERENCE_WITNESS",
+    "world_A": "1",
+    "world_B": "0"
+  },
+  "disanalogies": [
+    "The Navier-Stokes source obstruction concerns spatial mass escaping to a sequence-dependent radius; the Yang-Mills target concerns spectral/time normalization across changing lattice spacing and potentially changing Hilbert spaces.",
+    "The NS escaping bump is an exact functional counterexample to a bare compactness inference; the Yang-Mills two-sequence control below is only an algebraic non-identification witness, not a Yang-Mills counterexample or a statement that an actual lattice gap scales like a^2.",
+    "Yang-Mills additionally requires same-theory OS quotient/semigroup identification, RG/asymptotic-freedom transport, continuum existence/nontriviality, and source completeness.",
+    "A fixed-physical-time transfer family can bypass the one-step delta_latt/a representation if its same-theory identification and uniform contraction are proved."
+  ],
+  "enabling_assumptions": [
+    "For each regulator/lattice spacing a>0, a fixed-cutoff transfer spectral coordinate delta_latt(a)>0 is defined in lattice-time units.",
+    "The target physical energy coordinate for one-step time spacing a is Delta_phys(a)=delta_latt(a)/a, equivalently delta_latt(a)=-log(lambda_2(T_a)) when the same one-step transfer interpretation is valid.",
+    "The continuum/root-facing handoff requires a positive lower bound or equivalent fixed-physical-time contraction in one same-theory continuum OS/Hamiltonian limit, not merely positivity at every fixed a.",
+    "The transfer tests only the information content of qualitative fixed-a positivity; it does not assume the open Yang-Mills OS/RG/continuum interfaces are already closed."
+  ],
+  "failure_class": ["representation","gluing","decomposition"],
+  "fibre_snapshot": {
+    "application": {"base_sha":"45db03f76b8aee94e7f3e40c6633c347f372a809","base_tree":"3863b9fa9a18613da28a0c34a4ca42509ebd5312","consulted":["GLOBAL_MATHEMATICAL_FAILURE_CAUSE_ATLAS_20260812.json at main lineage","merged PR #245 NS-B2a1a2 escaping-bump falsifier","open PR #256 YM-S1a2d reflected-form common-rate result","open issue #92 YM-E2b variable-lattice/fixed-physical-time gap transport","open issue #253 YM-S1a2d OS time-shift/SZZ support geometry","open PR #249 RH-ANA-003e obligation-strength packet","open PR #250 H4d1c-c total-witness conic calibration","open PR #241 BSD R9 CM theorem-cell audit","merged PR #244 PNP C046 high-half separation","merged PR #257 Poincare success-transfer gate","cross observer XM015-XM019 records where available"],"repo":"SzeChunYiu/RAKL_math"},
+    "cross_memory_scope": {"coverage_complete":false,"coverage_note":"No protected coverage-complete cross-Millennium recall universe was materialized; misses cannot be given a governed denominator.","selected_candidate_family":"CROSS-IDENTIFICATION-LOSS"},
+    "framework": {"consulted":["RAKL_VERSION.json","docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md","src/rakl/method_specs.py","src/rakl/episode_admission.py","RAKL issue #395"],"main_sha":"43897d3afaf0038385102d5acc64793c05ec40f0","method_version":"3.0.0","package_version":"0.1.0","repo":"SzeChunYiu/RAKL"},
+    "primary_sources": [
+      {"citation":"Hao Shen, Rongchan Zhu, Xiangchan Zhu, A stochastic analysis approach to lattice Yang--Mills at strong coupling, arXiv:2204.12737; CMP 400 (2023).","consulted_claim":"strong-coupling infinite-volume lattice Yang-Mills has exponential correlation decay/common positive lattice-scale rate in the stated regime; this remains a lattice result.","id":"SZZ-arXiv-2204.12737"},
+      {"citation":"M. Lüscher, Construction of a selfadjoint, strictly positive transfer matrix for Euclidean lattice gauge theories, Commun. Math. Phys. 54 (1977), 283-292, DOI 10.1007/BF01614090.","consulted_claim":"Wilson lattice gauge theory admits a physical transfer-matrix/Hamiltonian framework at fixed lattice spacing; the target physical-energy normalization must keep the time spacing explicit.","id":"LUSCHER-CMP54-1977"},
+      {"citation":"Clay Mathematics Institute, Yang-Mills Existence and Mass Gap official problem description by Arthur Jaffe and Edward Witten.","consulted_claim":"the root is a continuum four-dimensional quantum Yang-Mills existence plus positive mass-gap problem, not a fixed-cutoff lattice clustering statement.","id":"CLAY-JAFFE-WITTEN-YM"}
+    ]
+  },
+  "fibre_snapshot_hash": "sha256:6081d712578453378a0124ce833cdc9373b56900fca941eeebd8f6b7885fdf4e",
+  "framework_subject": {"method_version":"3.0.0","rakl_main_sha":"43897d3afaf0038385102d5acc64793c05ec40f0","software_package_version":"0.1.0"},
+  "local_mathematical_failure": false,
+  "local_to_global_gluing_failure": true,
+  "memory_transfer": {
+    "missed": "CANNOT_MEASURE: no protected coverage-complete cross-Millennium recall universe/denominator is materialized.",
+    "rejected_ids": ["XM019-PNP-RH-NEGLIGIBLE-COMPLEMENT-CONGRUENCE-20260812","XM018-CONJUNCTIVE-GLUE-NONEXPANSION","XM017-TYPE-COVER-VS-SPECTRAL-AGGREGATION","H4d1c-C003-TOTAL-WITNESS-CONIC-ESCAPE","F-BSD-A1A1-R8-SOURCE-FAMILY-REIMPORTS-ARITHMETIC-ENTRY","E-PC-ENTROPY-NONCOLLAPSE-CANONICAL-SURGERY-EXTINCTION"],
+    "rejected_reasons": {"E-PC-ENTROPY-NONCOLLAPSE-CANONICAL-SURGERY-EXTINCTION":"The newly merged solved Poincare success chain is useful for monotonicity-first target tests, but no Ricci-flow success operation preserves this Yang-Mills scale-normalization target.","F-BSD-A1A1-R8-SOURCE-FAMILY-REIMPORTS-ARITHMETIC-ENTRY":"Premise reimport is not the present failure mechanism.","H4d1c-C003-TOTAL-WITNESS-CONIC-ESCAPE":"Changing witness representation can reopen tangent directions, but supplies no quantitative lattice-to-physical scale modulus.","XM017-TYPE-COVER-VS-SPECTRAL-AGGREGATION":"Its spectral hidden-state warning remains relevant to source completeness, but the present atom deliberately isolates regulator-scale identification first.","XM018-CONJUNCTIVE-GLUE-NONEXPANSION":"Intersection-versus-generation polarity does not determine the a-dependent physical gap normalization.","XM019-PNP-RH-NEGLIGIBLE-COMPLEMENT-CONGRUENCE-20260812":"Additive negligible-complement congruence is not the load-bearing scale-normalization map."},
+    "selected_ids": ["CROSS-IDENTIFICATION-LOSS","FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE","NS-B2a1a2-C001-ESCAPING-BUMP","YM-E2b","YM-S1a2d-R14","FM-YM-SAME-THEORY-INTERFACE-AND-DENSITY"]
+  },
+  "novelty_class": {"literature":"NOT_CLAIMED","protected":"NONE","rakl":["transfer","representation","compositional","stored"]},
+  "outcome": "PARTIAL_SUCCESS_SUCCESSFUL_TRANSFER_REUSE__QUALITATIVE_FIXED_SCALE_GAP_NONIDENTIFYING_FOR_CONTINUUM_PHYSICAL_GAP",
+  "predicted_principle": "QUALITATIVE_FIXED_LATTICE_GAP_CANNOT_CERTIFY_POSITIVE_CONTINUUM_PHYSICAL_GAP_WITHOUT_SCALE_ALIGNED_RATE",
+  "primary_source_provenance": [
+    {"citation":"Hao Shen, Rongchan Zhu, Xiangchan Zhu, A stochastic analysis approach to lattice Yang--Mills at strong coupling, arXiv:2204.12737; CMP 400 (2023).","consulted_claim":"strong-coupling infinite-volume lattice Yang-Mills has exponential correlation decay/common positive lattice-scale rate in the stated regime; this remains a lattice result.","id":"SZZ-arXiv-2204.12737"},
+    {"citation":"M. Lüscher, Construction of a selfadjoint, strictly positive transfer matrix for Euclidean lattice gauge theories, Commun. Math. Phys. 54 (1977), 283-292, DOI 10.1007/BF01614090.","consulted_claim":"Wilson lattice gauge theory admits a physical transfer-matrix/Hamiltonian framework at fixed lattice spacing; the target physical-energy normalization must keep the time spacing explicit.","id":"LUSCHER-CMP54-1977"},
+    {"citation":"Clay Mathematics Institute, Yang-Mills Existence and Mass Gap official problem description by Arthur Jaffe and Edward Witten.","consulted_claim":"the root is a continuum four-dimensional quantum Yang-Mills existence plus positive mass-gap problem, not a fixed-cutoff lattice clustering statement.","id":"CLAY-JAFFE-WITTEN-YM"}
+  ],
+  "residual_after": "Prioritize a same-theory scale-aligned certificate: a regulator-uniform fixed-physical-time contraction/gap or an equivalent quantitative delta_latt(a)/a lower bound, then separately discharge OS quotient/convergence, RG/AF, source completeness and continuum existence/nontriviality.",
+  "residual_before": "YM fixed-cutoff strong-coupling Euclidean/OS interfaces have local proposal/shadow progress, while lattice-spacing/RG/continuum physical-gap transport remains open.",
+  "schema": "RAKL_math.cross_millennium_transfer.v3.proposal_shadow",
+  "source_atom": {"atom_id":"NS-B2a1a2","experience_id":"NS-B2a1a2-C001-ESCAPING-BUMP","failure_id":"FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE","lane":"Navier_Stokes","scoped_source_principle":"Control at every fixed observer/scale does not identify a sequence-dependent target quantity unless a scale-aligned tightness/rate modulus is supplied."},
+  "target_atom": {"atom_id":"YM-E2b","current_target_controls":["RAKL_math issue #92 YM-E2b","RAKL_math issue #253 YM-S1a2d","RAKL_math PR #256 YM-S1a2d R14"],"lane":"Yang_Mills","signature":"VARIABLE_LATTICE_TO_FIXED_PHYSICAL_TIME_GAP_TRANSPORT"},
+  "target_calculation": {"conditional_route_implication":"A new fixed-cutoff positive rate, by itself, is not a high-information successor to the current Yang-Mills continuum-gap residual; the next useful discriminator must bind scale-uniform physical-time information and same-theory continuum identification.","existing_target_alignment":"This transfer independently lands on the scale-normalization hazard already frozen in YM-E2b/#92 and YM-S1a2d/#253, so it is successful memory reuse/route confirmation rather than new Yang-Mills mathematics.","non_implications":["No claim is made that the actual Yang-Mills lattice gap scales like a or a^2.","No fixed-cutoff SZZ result is weakened or promoted.","No continuum Yang-Mills theory or physical Hamiltonian gap is constructed.","No proof or disproof of the Yang-Mills Millennium problem is claimed."],"nonidentification_statement":"The map delta_latt(.) -> [delta_latt(a)>0 for every a] forgets the first-order-in-a lower-bound coordinate needed by delta_latt(a)/a."},
+  "transfer_id": "XM020-NS-YM-SCALE-ALIGNED-GAP-IDENTIFICATION-20260812"
+}
