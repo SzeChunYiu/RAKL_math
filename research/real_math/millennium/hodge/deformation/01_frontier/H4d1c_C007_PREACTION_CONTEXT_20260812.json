@@ -1,0 +1,60 @@
+{
+  "schema_version": "hodge-frozen-math-context-v3-shadow",
+  "atom_id": "H4d1c-g",
+  "cycle_id": "H4d1c-C007-GENERIC-RANK-COVERAGE-AUDIT",
+  "exact_root_contract": "For every smooth projective complex algebraic variety X and every codimension p, every rational Hodge class of type (p,p) in H^{2p}(X,Q) lies in the Q-span of codimension-p algebraic cycle classes.",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "framework": {
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "live_main_sha": "bd6b0e3edeb2b94b3f31b17e111c7a278f461f96",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "canonical_surfaces": ["decomposition", "routing", "search_query_generation", "source_selection_reliability", "claim_extraction", "equivalence_similarity", "mathematical_context_translation", "contextual_theory_gluing", "gap_discovery", "memory", "review", "saturation_stopping", "prompting_context_policy"]
+  },
+  "application": {
+    "base_sha": "bbad57cddd6bee7397b2b31bd1d1552c40c07247",
+    "pre_tree_fingerprint": "git-tree:2da17f4cf14f06c7a950d74b57aa8528aa185eb6",
+    "execution_pin_observed": "bd6b0e3edeb2b94b3f31b17e111c7a278f461f96"
+  },
+  "problem_signature": [
+    "rational Hodge conjecture; smooth projective complex; rational coefficients",
+    "conditional local propagation from an already algebraic central signed-Q witness",
+    "consumer is actual same-class witness-incidence image in one reduced irreducible Hodge-locus branch",
+    "C004: source tangent enlargement may be vertical",
+    "C005 shadow: closed top-dimensional exact-class image would cover a reduced irreducible branch",
+    "C006 shadow: selected-point differential surjectivity is not necessary because of ramification",
+    "fresh discriminator: whether a full-rank differential at some appropriately smooth point is a sufficient operational certificate for branch coverage under properness/irreducibility"
+  ],
+  "exact_question": "For a proper algebraic witness-incidence morphism pi:W->H into one reduced irreducible complex Hodge-locus component, what minimal smoothness/component hypotheses make the existence of at least one full-rank differential d pi_w a sufficient certificate that the actual image covers H, without treating selected-point rank as necessary?",
+  "success_contract": "Either give a source-bound sufficient certificate with explicit smoothness/properness/component/exact-class hypotheses, or produce a counterexample showing an omitted hypothesis. Scope is local/one Hodge component only; no root algebraicity or higher-order/algebraization/global claim.",
+  "falsifier": "Seek a proper morphism to a reduced irreducible complex target, with a smooth source point mapping to a smooth target point and surjective differential there, but whose image is a proper subset of the target; if impossible, isolate exactly which theorem blocks it. Separately test dropping properness, irreducibility, source smoothness, and target smoothness.",
+  "scope_exclusions": ["no initial algebraicity claim", "no claim selected central witness deforms", "no higher-Artin/formal lifting", "no algebraization/effectivity", "no monodromy/global continuation", "no componentwise replacement for a coupled signed-Q witness", "no independent-review credit"],
+  "fibre_contents_consulted": [
+    "RAKL@bd6b0e3edeb2b94b3f31b17e111c7a278f461f96: RAKL_VERSION.json",
+    "RAKL@bd6b0e3edeb2b94b3f31b17e111c7a278f461f96: docs/RAKL_V3_API.md",
+    "RAKL@bd6b0e3edeb2b94b3f31b17e111c7a278f461f96: src/rakl/method_specs.py",
+    "RAKL@bd6b0e3edeb2b94b3f31b17e111c7a278f461f96: skills/rakl-core/workflows/mathematical-research.md",
+    "RAKL@bd6b0e3edeb2b94b3f31b17e111c7a278f461f96: src/rakl/math_research_runtime.py",
+    "RAKL@bd6b0e3edeb2b94b3f31b17e111c7a278f461f96: research/obstruction_transformation_corpus_v1/MEMORY_SNAPSHOT.json (15 episodes; sparse/non-complete)",
+    "RAKL_math@bbad57cddd6bee7397b2b31bd1d1552c40c07247: issue #6 exact root contract/status",
+    "RAKL_math@bbad57cddd6bee7397b2b31bd1d1552c40c07247: merged C004 projection-faithfulness route",
+    "RAKL_math open draft #287 C005 closed-topdim certificate (shadow guidance only)",
+    "RAKL_math open draft #314 C006 ramification proxy no-go (shadow guidance only)"
+  ],
+  "analogue_transfer": [
+    {"source": "merged C004", "shared_structure": "consumer projection/image rather than source representation controls progress", "disanalogy": "C007 tests a sufficient image certificate rather than source-enlargement nonimplication", "use": "selected routing warning"},
+    {"source": "open C006 shadow", "shared_structure": "selected-point differential can under-report actual image through ramification", "disanalogy": "proposal-only; cannot supply theorem authority; C007 asks for a sufficient point that may differ from the selected witness", "use": "selected routing warning"},
+    {"source": "Kloosterman flag-Hilbert special family", "shared_structure": "proper flag incidence projects to a genuinely varying ambient family", "disanalogy": "special complete-intersection hypersurface family; no arbitrary rational-Hodge transfer", "use": "positive source-family calibration to verify after freeze"}
+  ],
+  "expert_cell": [
+    {"role": "VHS/Hodge-locus lead", "background": "polarized VHS, Hodge loci, local systems", "delegation": "bind one reduced irreducible Hodge component and flag marking/monodromy limits"},
+    {"role": "Hilbert/Chow incidence lead", "background": "relative Hilbert/Chow and proper incidence maps", "delegation": "audit properness, component selection, exact-class witness semantics"},
+    {"role": "local algebraic-geometry lead", "background": "smooth morphisms, tangent maps, dimension theory", "delegation": "test full-rank differential sufficiency and singular boundary cases"},
+    {"role": "cycle/coefficient lead", "background": "rational algebraic cycles and cycle class maps", "delegation": "prevent componentwise/effective-cycle substitution for a signed-Q witness"},
+    {"role": "deformation/formal lead", "background": "Artin/formal deformation and algebraization", "delegation": "separate reduced image coverage from all-order lifting/effectivity"},
+    {"role": "adversarial verifier", "background": "counterexamples and theorem-hypothesis auditing", "delegation": "attack each omitted hypothesis before accepting a certificate"},
+    {"role": "RAKL/metrology lead", "background": "v3 gates, episode authority, saturation and trace", "delegation": "enforce proposal/shadow chronology, memory accounting, and zero root authority"}
+  ],
+  "context_hash": "sha256:fc182b59f48d065789f1bd40c8bd3777e7c7b24869bed694c0286ae1e3285a48",
+  "fibre_snapshot_hash": "sha256:c7234a1edab2f07126375fc7e49e2be778857ba86fff0ee558103e787df6fa2f"
+}
