@@ -1,0 +1,88 @@
+{
+  "schema_version": "ym-r17-pre-candidate-v1",
+  "cycle_id": "YM-S1a2f-R17-20260812",
+  "atom_id": "YM-S1a2f",
+  "issue": 283,
+  "problem_signature": [
+    "exact Yang-Mills Clay root remains open",
+    "SZZ fixed-cutoff strong-coupling microscopic domain is disjoint from the asymptotically-free bare-coupling tail under R15 convention map",
+    "live fixed-cutoff OS/transfer spectral work exists in PR #256/#258 and must not be duplicated",
+    "active discriminator is rigorous weak-UV to strong-effective-scale RG transport with same-theory OS/spectral and physical-time normalization"
+  ],
+  "exact_question": "Does an examined rigorous lattice Yang-Mills RG theorem carry a weak microscopic Wilson theory on an a->0 asymptotically-free trajectory into a controlled strong effective regime while preserving a source-bound same-theory observable/OS/transfer relation and a uniform positive physical mass normalization?",
+  "residual_before": "RES-YM-S1a2e-RIGOROUS-RG-WEAK-TO-STRONG-SAME-THEORY-SPECTRAL-AND-PHYSICAL-SCALING-UNBOUND",
+  "framework": {
+    "rakl_method_version": "3.0.0",
+    "package_version": "0.1.0",
+    "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "authority": "PROPOSAL_SHADOW_ONLY"
+  },
+  "rakl_math": {
+    "base_sha": "48c88e4f099806bbc50d55d010e558f833d82a49",
+    "pre_tree_fingerprint": "git-tree:d8e24b5df1064ac2aca1cc817d5af6db494a97ab"
+  },
+  "fibre_contents_consulted": [
+    "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: RAKL_VERSION.json",
+    "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: ARCHITECTURE.md",
+    "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: src/rakl/method_specs.py",
+    "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: src/rakl/experience_substrate.py",
+    "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: src/rakl/saturation_vector.py",
+    "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: src/rakl/problem_novelty.py",
+    "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: skills/rakl-core/workflows/mathematical-research.md",
+    "RAKL_math@48c88e4f099806bbc50d55d010e558f833d82a49: root issue #5",
+    "RAKL_math issue #269 / draft PR #273 (R15 physical-scaling/domain mismatch)",
+    "RAKL_math draft PR #256 and #258 (live fixed-cutoff OS/transfer spectral route)",
+    "RAKL_math draft PR #225 (conditional OS source density)",
+    "RAKL_math draft PR #278 (MRS constructive continuum applicability boundary)",
+    "RAKL_math draft PR #268 (scale-normalization DifferenceWitness)",
+    "RAKL_math issue #283 prospective atom"
+  ],
+  "selected_experience_ids": [
+    "YM-S1a2e-R15-PR273",
+    "YM-S1a2d-R14-PR256",
+    "YM-R14-LIVE-COLLISION-PR258",
+    "YM-S1A2-OS-SOURCE-DENSITY-PR225",
+    "XM020-NS-YM-SCALE-ALIGNED-GAP-PR268"
+  ],
+  "rejected_experience": [
+    {"id":"YM-R14-FIXED-CUTOFF-OS-TRANSFER-PR256-PR258","reason":"live same-context work already attacks this fibre; duplicating it violates rotation away from saturated/live families"},
+    {"id":"YM-C2a-MRS-PR278","reason":"constructive-continuum fixed-IR-cutoff lane is useful disanalogy but not the active spectral/RG discriminator"},
+    {"id":"FAIZAL-SHABIR-INTERPOLATION-TELESCOPE-FAMILY","reason":"prior repeated source/gluing failures; current atom asks rigorous RG applicability rather than another unbound interpolation argument"}
+  ],
+  "pre_memory_preference": "strengthen the fixed-cutoff covariance/OS-to-transfer spectral bridge",
+  "post_memory_route": "audit rigorous lattice-gauge RG weak-to-strong regime crossing and same-theory physical spectral transport",
+  "rakl_changed_action": true,
+  "method_policy": {
+    "search": "same-domain rigorous lattice gauge RG primary theorems first",
+    "jump": "only if a structurally matched non-gauge RG theorem supplies an explicit DifferenceWitness-compatible mapping; otherwise reject",
+    "glue": "only with explicit interfaces covering RG regime, OS/spectral observable, and physical normalization",
+    "lift": "forbidden without bounded SEARCH/JUMP/GLUE exhaustion plus coverage receipt",
+    "current_route": "SEARCH",
+    "authority": "proposal/shadow; source authority does not transfer automatically"
+  },
+  "canonical_process_surfaces_planned": [
+    "decomposition","routing","search_query_generation","source_selection_reliability","claim_extraction","mathematical_context_translation","equivalence_similarity","contextual_theory_gluing","contradiction_diagnosis","gap_discovery","memory","review","saturation_stopping","prompting_context_policy"
+  ],
+  "analogues": [
+    {"source":"rigorous block-spin/constructive RG","shared":"iterated effective actions with controlled remainders","disanalogy":"scalar/fermionic models need not preserve gauge constraints, reflection positivity, or the Yang-Mills transfer observable"},
+    {"source":"fixed-cutoff SZZ strong-coupling spectral route","shared":"same Wilson gauge theory at a fixed regulator","disanalogy":"the theorem domain is strong microscopic coupling while the continuum bare trajectory is weak"}
+  ],
+  "falsifier": "Find a primary rigorous lattice Yang-Mills theorem that, under exact matched Wilson conventions, starts on the weak asymptotically-free cutoff trajectory, reaches the needed strong effective scale with regulator-uniform control, and explicitly transports the same gauge-invariant OS/transfer spectral observable with physical-time normalization. Any missing coordinate leaves the atom open.",
+  "expert_cell": [
+    "rigorous lattice gauge RG specialist","OS/transfer-Hamiltonian spectral specialist","asymptotic-freedom and coupling-normalization specialist","constructive probability/Gibbs-limit specialist","adversarial mathematical physicist","primary-source/provenance auditor","RAKL v3 metrology/authority auditor"
+  ],
+  "independent_review_credit": "0/3",
+  "frozen_at": "2026-08-12T04:10:26Z",
+  "fibre_snapshot_hash": "sha256:c680e5932d6fcb9eed9f3776727b8db78155acc5757287d52a33fe8fef7039f0",
+  "pre_candidate_trace": [
+    {"seq":1,"event":"ATOMIZED","atom_id":"YM-S1a2f","previous_event_hash":null,"timestamp":"2026-08-12T04:10:26Z","artifact_hash":"sha256:f7ef3ae0ab8bf12d4b1ef520c89ce19c94c3ee65b3f59b453d09ad9894a80dbb"},
+    {"seq":2,"event":"CONTEXT_FROZEN","atom_id":"YM-S1a2f","previous_event_hash":"sha256:f7ef3ae0ab8bf12d4b1ef520c89ce19c94c3ee65b3f59b453d09ad9894a80dbb","timestamp":"2026-08-12T04:10:26Z","artifact_hash":"sha256:f11358ae76eff739ba80378ffbc1ff8522f7c81aadfe888a25afb52a1d6b2a44"},
+    {"seq":3,"event":"ANALOGY_SCAN","atom_id":"YM-S1a2f","previous_event_hash":"sha256:f11358ae76eff739ba80378ffbc1ff8522f7c81aadfe888a25afb52a1d6b2a44","timestamp":"2026-08-12T04:10:26Z","artifact_hash":"sha256:d1ea42cea183d9a49126773ac640b7c9ab9db2d5be78334001bc146e56cc3dfb"},
+    {"seq":4,"event":"METHOD_TRANSFER_REVIEW","atom_id":"YM-S1a2f","previous_event_hash":"sha256:d1ea42cea183d9a49126773ac640b7c9ab9db2d5be78334001bc146e56cc3dfb","timestamp":"2026-08-12T04:10:26Z","artifact_hash":"sha256:af4b6159ef70a147d2618ed0fc86347b3a4786d7cb7631ea04278d9075e25053"},
+    {"seq":5,"event":"EXPERT_CONTEXT_REVIEW","atom_id":"YM-S1a2f","previous_event_hash":"sha256:af4b6159ef70a147d2618ed0fc86347b3a4786d7cb7631ea04278d9075e25053","timestamp":"2026-08-12T04:10:26Z","artifact_hash":"sha256:12dc4919e2e301d32d9ec0a554625ff25a06fd8e3c6998e4538d8b10f1191d1d"},
+    {"seq":6,"event":"EXPERIENCE_MEMORY_REVIEW","atom_id":"YM-S1a2f","previous_event_hash":"sha256:12dc4919e2e301d32d9ec0a554625ff25a06fd8e3c6998e4538d8b10f1191d1d","timestamp":"2026-08-12T04:10:26Z","artifact_hash":"sha256:d2c2680aee7186c23b703a44deab46f9c8255a4ba2ff2f47dc7a90f31c74bcc0"},
+    {"seq":7,"event":"OBSTRUCTION_TRANSFORMATION_REVIEW","atom_id":"YM-S1a2f","previous_event_hash":"sha256:d2c2680aee7186c23b703a44deab46f9c8255a4ba2ff2f47dc7a90f31c74bcc0","timestamp":"2026-08-12T04:10:26Z","artifact_hash":"sha256:8e386edde421e84158c2060d55714138df521607a4f3ec742a69086ea9a90765"},
+    {"seq":8,"event":"NEXT_STEP_PROPOSED","atom_id":"YM-S1a2f","previous_event_hash":"sha256:8e386edde421e84158c2060d55714138df521607a4f3ec742a69086ea9a90765","timestamp":"2026-08-12T04:10:26Z","artifact_hash":"sha256:253996f84c6a72db322033563ebe7aac47cc2f5d5b46ecf52e63858bcf8d529b"}
+  ],
+  "artifact_hash": "sha256:ae6cc3ce02f6039d164435b8fe55d4fd8164ac72331e3d804401cb31aec42fc9"
+}
