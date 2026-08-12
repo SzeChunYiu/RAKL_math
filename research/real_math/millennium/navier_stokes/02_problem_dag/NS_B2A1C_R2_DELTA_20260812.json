@@ -1,0 +1,24 @@
+{
+  "schema_version": "problem-dag-delta-v3-shadow-r2",
+  "root": "NS0",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "root_authority": "NONE",
+  "independent_mathematical_reviews": "0/3",
+  "parent": "NS-B2a1",
+  "atom": "NS-B2a1c",
+  "atom_status": "SCOPED_ROUTE_PRUNED",
+  "solved_subproblem": "Under Seregin Section-4 exponent constraints and F(a)=1, condition (4.4) is algebraically impossible; this prunes only that specialized consumer transfer.",
+  "novelty_class": "transfer",
+  "closed_edge": "GENERAL_F1_THEOREM3_1_STATE -> SECTION4_CONDITION_4_4_CONSERVATION_LAW",
+  "open_edges": [
+    {"atom":"NS-B2a1a","goal":"PRELIMIT_ANNULAR_TIGHTNESS: derive a source-defined annular/tail quantity with lim_R limsup_k control through Euler scaling."},
+    {"atom":"NS-B2a1b","goal":"SIGNED_EULER_FLUX_TELESCOPING: derive a signed cancellation/telescoping law with source-valid pressure and far-field interfaces."},
+    {"atom":"NS-B2a1-global","goal":"After a producer is available, bind an exact-compatible ancient Euler rigidity theorem and audit all additional hypotheses."}
+  ],
+  "separate_failures": {
+    "local_source_consumer_failure": "F-NS-B2a1c-F1-AXIAL-44-EXPONENT-INCOMPATIBLE",
+    "local_absolute_flux_failure": "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY",
+    "local_to_global_gluing_failure": "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE"
+  },
+  "root_nonpromotion_reason": "No global regularity proof, no exclusion of the full Type-II class, no closed proof DAG, no formal/verifier/dependency/axiom closure, no isolated recheck, no bounded root novelty search, and no three isolated mathematical reviews."
+}
