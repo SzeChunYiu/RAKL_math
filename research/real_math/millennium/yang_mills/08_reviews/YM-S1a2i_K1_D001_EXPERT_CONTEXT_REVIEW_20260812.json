@@ -1,0 +1,54 @@
+{
+  "record_type": "YM_K1_D001_ROLE_SEPARATED_SAME_CONTEXT_EXPERT_REVIEW",
+  "review_id": "REVIEW-YM-S1a2i-K1-D001-20260812",
+  "atom_id": "YM-S1a2i-K1-D001",
+  "target_context_hash": "sha256:35b646d79a98d7255b0c2a9f60bfb582e1f8dbeaae3218f9c7225cd902b2aec0",
+  "review_independence": "ROLE_SEPARATED_SAME_CONTEXT_NOT_INDEPENDENT_PEER_REVIEW",
+  "roles": [
+    {
+      "role": "domain_theory_lead",
+      "finding": "Wilson Lemmas 40.3-40.4 expose scale-indexed transport and nominal k-uniform constants, but Lemma 40.3's admitted K radius is not shown to contain Theorem 40.5's chosen c_K graph ball.",
+      "strongest_objection": "The same symbol C is used for domain radius and forcing in the lemma, while the later minimum c_K=4C/(1-rho) is strictly larger than C; splitting the symbol post hoc is not allowed."
+    },
+    {
+      "role": "analogy_method_transfer_lead",
+      "finding": "The prior abstract scalar-margin method transfers only conditionally.",
+      "strongest_objection": "Its enabling precondition is estimate validity on the whole input ball; that is exactly the unresolved source premise, so the method cannot yet be composed."
+    },
+    {
+      "role": "adversarial_falsification_lead",
+      "finding": "The displayed factor-two step is arithmetically insufficient: ((1+rho)/2)*2=1+rho>1.",
+      "strongest_objection": "Any closure argument must replace the coarse factor two by a sharp enough ratio or the exact L(g)^2 margin."
+    },
+    {
+      "role": "formal_methods_lead",
+      "finding": "The exact proof obligations are domain inclusion c_K<=C_dom followed by L(g)^2>=rho+(C_force/c_K)g^2 with L(g)>=0.",
+      "strongest_objection": "Neither obligation may be marked discharged by naming constants, a big-O statement, or a source theorem label."
+    },
+    {
+      "role": "novelty_research_value_lead",
+      "finding": "The retained value is a precise source-applicability diagnosis and cheapest discriminator, not a new Yang-Mills theorem.",
+      "strongest_objection": "No source audit of one K-coordinate passage can support novelty, stable-manifold closure, continuum construction or mass-gap authority."
+    }
+  ],
+  "disagreements": [
+    "The source text calls the Section 40 treatment fully closed, while the passage-level implication audit finds two local obligations not discharged by the displayed inequalities."
+  ],
+  "strongest_overall_objection": "Even perfect scalar algebra is inapplicable until the source one-step estimate is proved on the selected graph ball; after that, the factor-two comparison still needs a sharper scalar margin.",
+  "unresolved_uncertainties": [
+    "The upstream proof may contain separately controllable C_dom and C_force, but the audited passage chain does not expose their compatibility.",
+    "A later source version or independent derivation may repair either local gap."
+  ],
+  "classification": "STRONGER_PREMISE_MISMATCH",
+  "recommendation": "Block candidate generation. Audit Lemma 40.3 upstream constants and test 4C_force/(1-rho)<=C_dom; only on a pass should a later, separately frozen scalar-margin evaluation occur.",
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_K1_D001_WILSON_SOURCE_APPLICABILITY_AUDIT_20260812.json",
+    "sha256:6b50b477bbf914715c000f6fbd28346e7b733a4af4174598395fea3e79b7a71a",
+    "research/real_math/millennium/yang_mills/01_frontier/YM-S1a2i_K1_D001_CONTEXT_FIBER_20260812.json"
+  ],
+  "future_candidate_identity": null,
+  "candidate_generation_allowed": false,
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "reviewed_at_utc": "2026-08-12T15:14:00Z",
+  "artifact_hash": "sha256:1889a57776e0e050d9b31e3efb79d8d31ef1b9c4b4182b4bd655f33e32031668"
+}

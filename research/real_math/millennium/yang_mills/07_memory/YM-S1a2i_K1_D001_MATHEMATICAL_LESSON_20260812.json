@@ -1,0 +1,62 @@
+{
+  "record_type": "YM_K1_D001_SEVEN_FIELD_MATHEMATICAL_LESSON",
+  "atom_id": "YM-S1a2i-K1-D001",
+  "historical_candidate_id": "YM-S1a2i-K1-C001-SYMBOLIC-NEXT-RADIUS-MARGIN",
+  "classification": "STRONGER_PREMISE_MISMATCH",
+  "attempted_mathematical_implication": "Use Wilson's nominally k-uniform rho,C_K^(0),b_0,C_beta and k-to-k+1 norm estimate on the Theorem 40.5 graph ball to invoke the historical scalar lemma and prove ||K_{k+1}||_{k+1}<=c_K g_{k+1}^2.",
+  "exact_mathematical_result_or_failure": "The primary source now binds the named constants and exact scale transport, superseding the source-exposure gap. It does not prove that Lemma 40.3's admitted radius C_dom contains the chosen c_K radius, and its displayed factor-two flow comparison yields at best coefficient 1+rho at scale k+1 rather than one. Exact target applicability therefore remains unproved; this is not a refutation.",
+  "supported_and_competing_mathematical_causes": {
+    "supported": [
+      {
+        "gap_id": "A-DOMAIN-RADIUS-COMPATIBILITY",
+        "cause": "The one-step estimate is stated only on C_dom g^2, while c_K is selected from C_force and rho without a proved c_K<=C_dom relation.",
+        "falsifier": "Prove c_K<=C_dom or contraction on the chosen c_K ball."
+      },
+      {
+        "gap_id": "B-FACTOR-TWO-FLOW-COMPARISON",
+        "cause": "The proof's two inequalities compose to coefficient 1+rho, not one.",
+        "falsifier": "Prove g_k^2/g_{k+1}^2<=2/(1+rho), or after Gap A passes prove the exact L(g)^2 margin."
+      }
+    ],
+    "competing": [
+      {
+        "cause": "The constants or scale-indexed norms are unavailable.",
+        "status": "REFUTED_BY_PINNED_PRIMARY_SOURCE_PASSAGES"
+      },
+      {
+        "cause": "The abstract scalar margin is impossible near zero.",
+        "status": "NOT_SUPPORTED_BY_HISTORICAL_C001_CONTINUITY_RESULT"
+      },
+      {
+        "cause": "An upstream proof separates C_dom and C_force compatibly.",
+        "status": "OPEN_CHEAPEST_DISCRIMINATOR"
+      },
+      {
+        "cause": "The full Yang-Mills mass-gap programme is refuted.",
+        "status": "UNSUPPORTED_SCOPE_LEAP"
+      }
+    ]
+  },
+  "scope": "Only the Section 40 irrelevant K-coordinate invariant-region passage chain in Wilson Zenodo version 10.5281/zenodo.19393832. Excludes lambda, base inversion, full graph transform, continuum limit, OS reconstruction and mass gap.",
+  "mathematical_falsifier": "Gap A is falsified by a source-faithful compatibility proof for the chosen graph ball. Gap B is independently falsified by a sharp enough flow-ratio proof or the exact scalar margin after Gap A passes. Neither falsifier is executed here.",
+  "repair_or_next_discriminator": "First derive separately justified C_dom and C_force from the upstream Lemma 40.3 proof, without reinterpreting its displayed C, and freeze the test 4C_force/(1-rho)<=C_dom. Only if it passes, in a later candidate/result round freeze an interval and test L(g)^2>=rho+(C_force/c_K)g^2 with L(g)=1-b_0g^2-C_beta g^4 and L(g)>=0.",
+  "proof_or_source_evidence": [
+    "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_K1_D001_WILSON_SOURCE_APPLICABILITY_AUDIT_20260812.json",
+    "sha256:6b50b477bbf914715c000f6fbd28346e7b733a4af4174598395fea3e79b7a71a",
+    "Wilson PDF pp.141,145-148,172; equations (566)-(586); Lemmas 40.3-40.4; Theorem 40.5; Definition A.15.3",
+    "Wilson TeX lines 9279-9291,9554-9584,9595-9680,9725-9750,11481-11499",
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1a2i_K1_D001_FAILURE_EXPERIENCE_20260812.json",
+    "sha256:8bbb6bf36833ddb7fd1329b5aabafbcf43f40cd34e32db6ecdfe04c6c4fda934"
+  ],
+  "zero_mathematical_credit": [
+    "Git/branch/PR state",
+    "CI/tests",
+    "schemas/hashes/chronology",
+    "telemetry/repository growth",
+    "file download mechanics"
+  ],
+  "future_candidate_identity": null,
+  "candidate_generation_allowed": false,
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "artifact_hash": "sha256:fc2e70bbc15e6088111185fa8b13550acf96f9aa7170c9d6bea51663d2972db8"
+}

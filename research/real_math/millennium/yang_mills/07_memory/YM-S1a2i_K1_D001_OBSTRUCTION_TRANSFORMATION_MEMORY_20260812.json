@@ -1,0 +1,87 @@
+{
+  "memory_id": "OTM-YM-S1a2i-K1-D001-20260812",
+  "source_universe": [
+    "historical C001 abstract result on RAKL_math main",
+    "Wilson Zenodo version DOI 10.5281/zenodo.19393832",
+    "current K1 failure lattice"
+  ],
+  "episodes": [
+    {
+      "episode_id": "EP-YM-K1-C001-ABSTRACT-SCALAR-MARGIN",
+      "source_domain": "elementary invariant-region analysis",
+      "source_context": "Historical C001 abstract scalar implication for one fixed admissible constant family",
+      "source_obstruction": {
+        "obstruction_id": "OBS-ABSTRACT-SHRINKING-RADIUS",
+        "domain": "elementary invariant-region analysis",
+        "roles": [
+          "contracted state",
+          "higher-order forcing",
+          "shrinking target radius"
+        ],
+        "relations": [
+          "upper state bound must be no larger than target lower radius"
+        ],
+        "constraints": [
+          "estimate valid on full input ball",
+          "fixed finite constants",
+          "nonnegative lower flow factor"
+        ],
+        "failure_mechanisms": [
+          "domain exclusion",
+          "insufficient multiplicative margin"
+        ],
+        "invariants_to_preserve": [
+          "quantifier order",
+          "constant identity",
+          "input domain"
+        ],
+        "desired_transition": [
+          "replace qualitative monotonicity with exact scalar comparison"
+        ],
+        "forbidden_losses": [
+          "post-result radius change",
+          "assumption invention"
+        ]
+      },
+      "transformation_name": "exact lower-radius scalar comparison",
+      "operation": "Given an estimate valid on the whole input ball, compare rho+(C_force/c_K)g^2 directly with L(g)^2 instead of relying on monotonicity direction.",
+      "preconditions": [
+        "the one-step estimate is proved on the full c_K g^2 input ball",
+        "rho,c_K,C_force,b_0,C_beta are one jointly applicable k-uniform family",
+        "L(g)>=0 on a frozen interval"
+      ],
+      "resulting_relations": [
+        "a verified scalar margin implies the K upper bound fits the next lower radius"
+      ],
+      "preserved_invariants": [
+        "k-to-k+1 norm transport",
+        "source constants",
+        "graph radius"
+      ],
+      "relaxed_or_broken_constraints": [
+        "qualitative old-radius comparison is replaced by an exact coefficient inequality"
+      ],
+      "known_breakpoints": [
+        "c_K>C_dom",
+        "constants not jointly uniform",
+        "scalar margin not frozen or checked"
+      ],
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/05_oracles/YM-S1a2i_K1_C001_RESULT_20260812.json",
+        "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_K1_D001_WILSON_SOURCE_APPLICABILITY_AUDIT_20260812.json",
+        "sha256:6b50b477bbf914715c000f6fbd28346e7b733a4af4174598395fea3e79b7a71a"
+      ],
+      "authority": "VERIFIED_LOCAL",
+      "artifact_hash": "sha256:5681a1e16382abc7408dd990588dbe9bd5071ab72a7f9de74a29e22557f878c8",
+      "lineage_ids": [
+        "YM-S1a2i-K1-C001-SYMBOLIC-NEXT-RADIUS-MARGIN"
+      ]
+    }
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_K1_D001_WILSON_SOURCE_APPLICABILITY_AUDIT_20260812.json",
+    "research/real_math/millennium/yang_mills/05_oracles/YM-S1a2i_K1_C001_RESULT_20260812.json",
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1a2i_K1_D001_FAILURE_EXPERIENCE_20260812.json"
+  ],
+  "snapshot_hash": "sha256:74ee94bc7ecf7f6dc1693e50b773d4164edbce68bd80bc8b591ad43af274156f"
+}

@@ -1,0 +1,100 @@
+{
+  "atom_id": "YM-S1a2i-K1-D001",
+  "object_context": "Diagnose whether Wilson's source-uniform one-step K estimate is jointly applicable on the exact c_K g^2 graph ball and whether its displayed flow comparison proves transport to c_K g_{k+1}^2; do not generate a new proof candidate.",
+  "structural_coordinates": [
+    "Lemma-domain radius C_dom for ||K_k||_k<=C_dom g_k^2",
+    "forcing coefficient C_force in rho||K_k||_k+C_force g_k^4",
+    "strict contraction 0<rho<1",
+    "chosen graph radius c_K>=4C_force/(1-rho)",
+    "scale-indexed transport from ||.||_k to ||.||_{k+1}",
+    "base lower factor L(g)=1-b_0g^2-C_beta g^4",
+    "joint applicability must hold uniformly in k before scalar composition",
+    "root status OPEN_NO_SOLUTION_CERTIFICATE"
+  ],
+  "equivalent_formulations": [
+    "Domain inclusion form: require c_K<=C_dom before applying Lemma 40.3 on the full graph ball.",
+    "Minimum-radius compatibility form: require 4C_force/(1-rho)<=C_dom for the source's explicit minimum c_K choice.",
+    "Exact transport form: require L(g)^2>=rho+(C_force/c_K)g^2 after domain compatibility is established.",
+    "Failure-of-displayed-comparison form: ((1+rho)/2)*2=1+rho>1 does not close the next-radius bound."
+  ],
+  "solved_analogues": [
+    "The prior C001 abstract scalar lemma closes a shrinking O(g^2) radius for a fixed admissible constant family when its estimate is valid on the whole input ball."
+  ],
+  "near_solved_analogues": [
+    "Wilson Lemma 40.3 and Theorem 40.5 expose the needed scale transport and constants but leave domain-radius compatibility and the exact flow-ratio margin unproved in the cited passage chain."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Prior C001 abstract shrinking-radius scalar lemma",
+      "method": "First verify the source estimate on the entire proposed input ball; only then compare the contracted-plus-forced coefficient with a rigorous lower bound for the next radius.",
+      "shared_structure": [
+        "strict contraction rho",
+        "higher-order forcing C_force g^4",
+        "O(g^2) input and target radii",
+        "base-flow lower factor L(g)"
+      ],
+      "required_assumptions": [
+        "C_dom and C_force are separately justified without reinterpreting a source symbol",
+        "c_K<=C_dom",
+        "all constants apply jointly and uniformly in k",
+        "L(g)>=0 and L(g)^2>=rho+(C_force/c_K)g^2 on a frozen interval"
+      ],
+      "disanalogies": [
+        "the abstract lemma begins with an estimate already valid on the full ball, while the source statement does not show that inclusion",
+        "the source proof uses a factor-two comparison rather than the exact scalar margin"
+      ],
+      "repair_question": "Does an upstream derivation produce separately justified C_dom,C_force satisfying 4C_force/(1-rho)<=C_dom before any scalar-margin candidate is frozen?",
+      "source_anchors": [
+        "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_K1_D001_WILSON_SOURCE_APPLICABILITY_AUDIT_20260812.json",
+        "research/real_math/millennium/yang_mills/05_oracles/YM-S1a2i_K1_C001_RESULT_20260812.json"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "A source statement verified to exist is not thereby mathematically applicable to a larger domain.",
+    "Nominal uniformity of each symbol is not joint uniform applicability on the exact graph ball.",
+    "A locally valid K-coordinate repair would not establish lambda closure, a stable manifold, continuum construction or mass gap.",
+    "This pre-candidate source audit does not assign values to C_dom or C_force and does not execute the scalar lemma."
+  ],
+  "source_anchors": [
+    "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_K1_D001_WILSON_SOURCE_APPLICABILITY_AUDIT_20260812.json",
+    "sha256:6b50b477bbf914715c000f6fbd28346e7b733a4af4174598395fea3e79b7a71a",
+    "10.5281/zenodo.19393832",
+    "10.5281/zenodo.19393831",
+    "RAKL_math@334c3cf0a405906fe14b07067d6d7f73b6170d4f",
+    "RAKL@d21592b0ff8da988deabb923fd549891ff8ad9f0"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "capacity-control contract",
+      "source_situation": "A controller guarantee is certified only up to an input capacity C_dom, while a downstream planner chooses a larger operating capacity from a separate disturbance budget.",
+      "common_abstraction": [
+        "local guarantee domain",
+        "downstream chosen operating radius",
+        "disturbance-versus-slack budget"
+      ],
+      "source_to_target_mapping": [
+        "certified capacity -> C_dom g^2",
+        "planned capacity -> c_K g^2",
+        "disturbance budget -> C_force g^4",
+        "compression -> rho"
+      ],
+      "shared_constraints": [
+        "the operating set must lie inside the certified set before the guarantee can be invoked",
+        "a later shrink factor must be compared quantitatively rather than by monotonicity direction alone"
+      ],
+      "disanalogies": [
+        "ordinary capacity has no scale-indexed Banach norm",
+        "the analogy supplies no theorem or source authority"
+      ],
+      "proposed_principle": "Check domain inclusion before spending contraction slack; then compare the exact multiplicative margins.",
+      "validation_obligation": "Derive source-faithful C_dom,C_force and test 4C_force/(1-rho)<=C_dom; only after a pass, freeze and test the exact L(g)^2 margin.",
+      "provenance_note": "Proposal-only analogy; it does not validate either inequality."
+    }
+  ],
+  "analogy_scan_notes": "The retained bridge contributes only the domain-inclusion ordering rule; no analogy is treated as mathematical evidence.",
+  "frozen_at": "2026-08-12T15:10:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:35b646d79a98d7255b0c2a9f60bfb582e1f8dbeaae3218f9c7225cd902b2aec0"
+}

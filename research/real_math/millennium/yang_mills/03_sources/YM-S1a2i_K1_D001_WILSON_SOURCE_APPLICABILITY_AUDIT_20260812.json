@@ -1,0 +1,187 @@
+{
+  "record_type": "YM_K1_D001_PRIMARY_AUTHOR_SOURCE_APPLICABILITY_AUDIT",
+  "atom_id": "YM-S1a2i-K1-D001",
+  "parent_atom_id": "YM-S1a2i-K1",
+  "application_base_sha": "334c3cf0a405906fe14b07067d6d7f73b6170d4f",
+  "framework_sha": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+  "source_identity": {
+    "author": "Jonathan J. Wilson",
+    "title": "RIGOROUS CONSTRUCTION OF FOUR-DIMENSIONAL YANG–MILLS QUANTUM FIELD THEORY VIA GRIBOV–ZWANZIGER QUANTIZATION AND RENORMALIZATION GROUP ANALYSIS: MEASURE-THEORETIC FOUNDATIONS, SPECTRAL PROPERTIES, AND THE MASS GAP",
+    "publication_date": "2026-04-03",
+    "zenodo_version_doi": "10.5281/zenodo.19393832",
+    "zenodo_concept_doi": "10.5281/zenodo.19393831",
+    "zenodo_record_id": "19393832",
+    "record_api": "https://zenodo.org/api/records/19393832",
+    "authority": "PRIMARY_AUTHOR_OPEN_ARTIFACT_NOT_INDEPENDENT_PEER_REVIEW"
+  },
+  "source_files": [
+    {
+      "filename": "4D GZ-Yang-Mills.pdf",
+      "download_url": "https://zenodo.org/api/records/19393832/files/4D%20GZ-Yang-Mills.pdf/content",
+      "bytes": 1861857,
+      "sha256": "08013e1ce75c8b2be79c62ba61f70e30024b9bb427c465ceab7ee9266236690d"
+    },
+    {
+      "filename": "GZYM_submission_final.tex",
+      "download_url": "https://zenodo.org/api/records/19393832/files/GZYM_submission_final.tex/content",
+      "bytes": 787459,
+      "sha256": "ef936e502e84b0cafabc594c9705c16c9c1df29dc95f2a6a679b6b446c526c18"
+    }
+  ],
+  "passage_bindings": [
+    {
+      "passage_id": "WILSON-40.1-BETA",
+      "pdf_pages": [
+        141
+      ],
+      "pdf_equations": [
+        "(566)",
+        "(567)"
+      ],
+      "tex_lines": [
+        9279,
+        9291
+      ],
+      "exact_scope": "Theorem 40.1 states g_{k+1}=g_k-b_0 g_k^3+r_k, b_0>0, |r_k|<=C_beta g_k^5, with all constants uniform in volume.",
+      "mathematical_use": "Supplies the beta-flow form and volume uniformity; k-uniformity is supplied explicitly by Lemma 40.4 below."
+    },
+    {
+      "passage_id": "WILSON-40.3-K-CONTRACTION",
+      "pdf_pages": [
+        145,
+        146
+      ],
+      "pdf_equations": [
+        "(579)"
+      ],
+      "tex_lines": [
+        9554,
+        9571
+      ],
+      "exact_scope": "Lemma 40.3 states the k-to-k+1 estimate only for 0<g_k<=g_star and ||K_k||_k<=C g_k^2: ||KF_k(u_k,K_k)||_{k+1}<=rho||K_k||_k+C g_k^4. It states local Lipschitz constants are bounded uniformly in k on this domain, and the proof attributes k-uniformity to scale-invariant norms and finite-range bounds on C_k.",
+      "mathematical_use": "Exposes genuine scale transport and nominal k-uniformity, but the displayed C simultaneously denotes the admissible radius and forcing coefficient."
+    },
+    {
+      "passage_id": "WILSON-40.4-UNIFORM-RELEVANT-UPDATE",
+      "pdf_pages": [
+        146
+      ],
+      "pdf_equations": [
+        "(580)",
+        "(581)"
+      ],
+      "tex_lines": [
+        9573,
+        9584
+      ],
+      "exact_scope": "Lemma 40.4 repeats the beta flow and states its update constants are uniform in k on the same small domain.",
+      "mathematical_use": "Binds b_0 and C_beta into the k-uniform one-step packet, subject to the stated domain."
+    },
+    {
+      "passage_id": "WILSON-40.5-GRAPH-DOMAIN-AND-CONSTANT-CHOICE",
+      "pdf_pages": [
+        146,
+        147,
+        148
+      ],
+      "pdf_equations": [
+        "(582)",
+        "(583)",
+        "(584)",
+        "(585)"
+      ],
+      "tex_lines": [
+        9595,
+        9662
+      ],
+      "exact_scope": "Theorem 40.5 defines D_k using ||K||_k<=c_K g^2, fixes rho,C_K^(0),C_beta from Lemmas 40.3-40.4, requires c_K>=4 C_K^(0)/(1-rho), and says these choices are independent of k and volume. Equation (585) uses the same scale-indexed norms in the graph space.",
+      "mathematical_use": "Binds nominal c_K uniformity and exact graph-ball notation, but does not prove that the Lemma 40.3 domain contains this chosen graph ball."
+    },
+    {
+      "passage_id": "WILSON-40.5-FACTOR-TWO-TRANSPORT",
+      "pdf_pages": [
+        147
+      ],
+      "pdf_equations": [
+        "(586)"
+      ],
+      "tex_lines": [
+        9665,
+        9680
+      ],
+      "exact_scope": "The proof obtains ||K_{k+1}||_{k+1}<=((1+rho)/2)c_K g_k^2, proves only g_k^2<=2g_{k+1}^2, and then asserts ||K_{k+1}||_{k+1}<=c_K g_{k+1}^2.",
+      "mathematical_use": "The two displayed inequalities compose only to (1+rho)c_K g_{k+1}^2; because rho>0, they do not imply equation (586)."
+    },
+    {
+      "passage_id": "WILSON-40.5-EXPLICIT-CK",
+      "pdf_pages": [
+        148
+      ],
+      "pdf_equations": [
+        "post-(587) parameter assignment"
+      ],
+      "tex_lines": [
+        9725,
+        9750
+      ],
+      "exact_scope": "The proof explicitly chooses c_K=4 C_K^(0)/(1-rho) and says C_K^(0) and rho are determined in Lemma 40.3.",
+      "mathematical_use": "Makes the missing comparison between the chosen c_K and Lemma 40.3's admissible radius load-bearing."
+    },
+    {
+      "passage_id": "WILSON-A.15-POLYMER-NORM",
+      "pdf_pages": [
+        172
+      ],
+      "pdf_equations": [
+        "Definition A.15.3"
+      ],
+      "tex_lines": [
+        11481,
+        11499
+      ],
+      "exact_scope": "Defines scale-k polymer activities and ||K_k||_k as a supremum over scale-k polymers with e^{mu|X|_k}, field-domain and derivative weights ell_k^{|alpha|+4}.",
+      "mathematical_use": "Confirms that the displayed one-step estimate genuinely transports from the k norm to the k+1 norm used by the graph ball."
+    }
+  ],
+  "uniformity_assessment": {
+    "rho": "NAMED_K_UNIFORM_ON_LEMMA_40_3_STATED_DOMAIN",
+    "C_force": "NAMED_K_UNIFORM_ON_LEMMA_40_3_STATED_DOMAIN_BUT_NOT_SEPARATED_FROM_DOMAIN_RADIUS_IN_THE_DISPLAYED_STATEMENT",
+    "b_0": "NAMED_POSITIVE_FLOW_COEFFICIENT_IN_THEOREM_40_1_AND_LEMMA_40_4",
+    "C_beta": "NAMED_K_UNIFORM_REMAINDER_CONSTANT_IN_LEMMA_40_4",
+    "c_K": "CHOSEN_INDEPENDENT_OF_K_AND_VOLUME_IN_THEOREM_40_5",
+    "norm_transport": "EXPLICIT_K_TO_K_PLUS_1_SCALE_INDEXED_NORM",
+    "joint_exact_graph_ball_applicability": "NOT_ESTABLISHED"
+  },
+  "supported_gaps": [
+    {
+      "gap_id": "A-DOMAIN-RADIUS-COMPATIBILITY",
+      "observation": "Lemma 40.3 proves its estimate only on ||K||_k<=C_dom g^2. Theorem 40.5 chooses c_K>=4C_force/(1-rho), but supplies no proof that c_K<=C_dom and no theorem allowing an arbitrary prescribed c_K after shrinking g_star.",
+      "no_reinterpretation_rule": "The displayed Lemma 40.3 uses one symbol C for domain radius and forcing. This audit does not reinterpret that C as two independently adjustable constants; a future upstream proof audit must derive and name C_dom and C_force separately.",
+      "displayed_same_C_consequence": "If the displayed C is used for both roles, the minimum later choice is c_K=4C/(1-rho)>C because 0<rho<1, so the later graph ball is outside the stated Lemma 40.3 domain.",
+      "falsifier": "A source theorem or derivation proving c_K<=C_dom, or proving the one-step contraction on every ||K||_k<=c_K g^2 for the chosen c_K, falsifies this diagnosis."
+    },
+    {
+      "gap_id": "B-FACTOR-TWO-FLOW-COMPARISON",
+      "observation": "Theorem 40.5 combines an upper bound ((1+rho)/2)c_K g_k^2 with only g_k^2<=2g_{k+1}^2. These imply at best (1+rho)c_K g_{k+1}^2, not c_K g_{k+1}^2.",
+      "falsifier": "A proved ratio g_k^2/g_{k+1}^2<=2/(1+rho), or the exact lower-flow scalar margin L(g)^2>=rho+(C_force/c_K)g^2 on the frozen interval, falsifies this diagnosis."
+    }
+  ],
+  "classification": "STRONGER_PREMISE_MISMATCH",
+  "supersession": {
+    "prior_failure_id": "F-YM-K1-C001-SOURCE-UNIFORMITY-NORM-BRIDGE-UNBOUND",
+    "prior_source_exposure_diagnosis": "SUPERSEDED_BY_OPEN_PRIMARY_SOURCE",
+    "preserved_residual": "Exact joint applicability of the one-step estimate to the chosen graph ball remains unproved, now for two source-bound mathematical reasons rather than source inaccessibility."
+  },
+  "cheapest_future_discriminator": {
+    "stage_1": "Audit the upstream proof of Lemma 40.3 without changing its meaning and derive separately justified C_dom and C_force.",
+    "stage_1_test": "4*C_force/(1-rho) <= C_dom",
+    "stage_2_only_if_stage_1_passes": "On a separately frozen coupling interval, test L(g)^2>=rho+(C_force/c_K)g^2 with L(g)=1-b_0 g^2-C_beta g^4 and L(g)>=0.",
+    "not_executed_here": true
+  },
+  "bounded_conclusion": "The primary source now exposes nominal k-uniform constants and exact k-to-k+1 norm notation, so source exposure is no longer the gap. The source passages audited here do not establish their joint applicability over the chosen c_K g^2 graph ball, and the displayed factor-two comparison does not establish the next-radius inequality. This is neither a refutation of the scalar lemma nor a proof or refutation of Yang-Mills mass gap.",
+  "future_candidate_identity": null,
+  "candidate_generation_allowed": false,
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "audited_at_utc": "2026-08-12T15:00:00Z",
+  "artifact_hash": "sha256:6b50b477bbf914715c000f6fbd28346e7b733a4af4174598395fea3e79b7a71a"
+}
