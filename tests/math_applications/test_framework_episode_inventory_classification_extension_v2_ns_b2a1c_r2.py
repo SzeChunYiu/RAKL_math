@@ -118,7 +118,15 @@ def test_all_three_paths_are_byte_exact_and_classified_under_the_pinned_current_
     assert git(ROOT, "rev-parse", f'{audit["current_main_at_audit"]}^{{tree}}') == audit["current_tree"]
     assert git(FRAMEWORK, "rev-parse", f'{audit["framework_commit"]}:schemas/task-episode.schema.json') == audit["task_episode_schema_blob"]
     assert git(FRAMEWORK, "rev-parse", f'{audit["framework_commit"]}:src/rakl/experience_substrate.py') == audit["experience_substrate_blob"]
-    assert git(FRAMEWORK, "rev-parse", "HEAD") == audit["framework_commit"]
+    # This is a frozen historical audit.  A later execution pin may advance
+    # while retaining the exact historical schema/runtime blobs checked above.
+    assert git(
+        FRAMEWORK,
+        "merge-base",
+        "--is-ancestor",
+        audit["framework_commit"],
+        "HEAD",
+    ) == ""
 
     strict_schema_raw = git(
         FRAMEWORK,

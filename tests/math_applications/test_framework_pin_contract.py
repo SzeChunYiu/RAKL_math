@@ -13,7 +13,7 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "43897d3afaf0038385102d5acc64793c05ec40f0"
+EXPECTED_FRAMEWORK_COMMIT = "bd6b0e3edeb2b94b3f31b17e111c7a278f461f96"
 HISTORICAL_F224_FRAMEWORK_COMMIT = "f224d91d9fbd2844a89921ca4a30b77a7954ecd2"
 HISTORICAL_4EE_FRAMEWORK_COMMIT = "4ee5e9afe77870c684b798e0ed4c9fcee62a4365"
 HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
@@ -78,9 +78,9 @@ def test_machine_readable_framework_pin_is_valid_and_loaded_exactly() -> None:
     ).stdout
     assert framework_status == ""
     assert pin["authority"] == (
-        "Dependency synchronization to exact clean RAKL origin/main 43897d3afaf0038385102d5acc64793c05ec40f0 observed 2026-08-12; "
-        "the current obstruction-transformation memory/review is a strict new-candidate gate; "
-        "historical pre-gate artifacts retain only their recorded historical authority and are not retroactively current-gate compliant; "
+        "Dependency synchronization to exact clean RAKL origin/main bd6b0e3edeb2b94b3f31b17e111c7a278f461f96 observed 2026-08-12; "
+        "new candidate-freeze revalidation, memory-reference resolution, episode-admission, obstruction-corpus, and proposal-only compatibility surfaces apply prospectively; "
+        "historical artifacts retain recorded authority and chronology; "
         "no proof, research, review-independence, method-evolution, or mathematical-saturation authority"
     )
 
