@@ -7,12 +7,17 @@ BSD = ROOT / "research" / "real_math" / "millennium" / "birch_swinnerton_dyer"
 M = BSD / "07_memory"
 S = BSD / "00_sources" / "BSD_A1a1_R8_SOURCE_FAMILY_AUDIT_20260812.json"
 EP = M / "BSD_A1a1_R8_CURRENT_V3_TASK_EPISODE_SHADOW_20260812.taskepisode"
+POST_EP = M / "BSD_A1a1_R8_POSTDRIFT_V3_TASK_EPISODE_SHADOW_20260812.taskepisode"
 DIAG = M / "BSD_A1a1_R8_DIAGNOSIS_SHADOW_20260812.json"
 FAIL = M / "BSD_A1a1_R8_SOURCE_FAMILY_FAILURE_SHADOW_20260812.json"
 REVIEW = M / "BSD_A1a1_R8_OBSTRUCTION_TRANSFORMATION_REVIEW_20260812.json"
+POST_REVIEW = M / "BSD_A1a1_R8_POSTDRIFT_OBSTRUCTION_TRANSFORMATION_LIFT_REVIEW_20260812.json"
+COVERAGE = M / "BSD_A1a1_R8_CROSS_PROBLEM_COVERAGE_RECEIPT_20260812.json"
 METRICS = M / "BSD_A1a1_RAKL_CYCLE_METRICS_20260812_R8.json"
+SUCCESSOR_METRICS = M / "BSD_A1a1_RAKL_CYCLE_METRICS_SUCCESSOR_20260812_R8.json"
 TRACE = BSD / "09_trace" / "BSD_A1a1_R8_RESULT_TRACE_DELTA_20260812.json"
 CASE = M / "RAKL_METHOD_CASE_STUDY_BSD_A1a1_SEMANTIC_SHORTCUT_20260812_R8.md"
+POST_CASE = M / "RAKL_METHOD_CASE_STUDY_BSD_A1a1_SEMANTIC_SHORTCUT_20260812_R8_POSTDRIFT_ADDENDUM.md"
 
 
 def load(path):
@@ -26,14 +31,39 @@ def canonical_hash(obj):
     return "sha256:" + hashlib.sha256(raw).hexdigest()
 
 
+def task_episode_hash(obj):
+    payload = {
+        "episode_id": obj["episode_id"],
+        "task_id": obj["task_id"],
+        "atom_id": obj["atom_id"],
+        "context_hash": obj["context_hash"],
+        "problem_signature": obj["problem_signature"],
+        "fibre_snapshot_hash": obj["fibre_snapshot_hash"],
+        "operator_ids": obj["operator_ids"],
+        "action_trace": obj["action_trace"],
+        "observation_ids": obj["observation_ids"],
+        "verification_ids": obj["verification_ids"],
+        "outcome": obj["outcome"],
+        "residual_signature": obj["residual_signature"],
+        "evidence_pointers": obj["evidence_pointers"],
+        "timestamp": obj["timestamp"],
+        "cost": obj["cost"],
+        "storage_admission": obj["storage_admission"],
+    }
+    raw = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode()
+    return hashlib.sha256(raw).hexdigest()
+
+
 def test_r8_packet_exists_and_metrics_hash_is_valid():
-    for path in [S, EP, DIAG, FAIL, REVIEW, METRICS, TRACE, CASE]:
+    for path in [S, EP, POST_EP, DIAG, FAIL, REVIEW, POST_REVIEW, COVERAGE, METRICS, SUCCESSOR_METRICS, TRACE, CASE, POST_CASE]:
         assert path.exists(), path
     metrics = load(METRICS)
+    successor = load(SUCCESSOR_METRICS)
     assert metrics["artifact_hash"] == canonical_hash(metrics)
+    assert successor["artifact_hash"] == canonical_hash(successor)
 
 
-def test_semantic_shortcut_is_fail_closed_without_lift_authority():
+def test_semantic_shortcut_is_fail_closed_without_lift_authority_at_initial_sample():
     review_packet = load(REVIEW)
     review = review_packet["review"]
     memory = review_packet["transformation_memory"]
@@ -54,13 +84,43 @@ def test_semantic_shortcut_is_fail_closed_without_lift_authority():
     assert "no cross-problem coverage receipt" in " ".join(review["unresolved_warnings"])
 
 
+def test_postdrift_review_only_lifts_to_missing_transformation_spec():
+    review = load(POST_REVIEW)
+    coverage = load(COVERAGE)
+    assert review["selected_mode"] == "LIFT"
+    assert review["direct_search_status"] == "NO_VIABLE_MATCH"
+    assert review["jump_search_status"] == "NO_VIABLE_MATCH"
+    assert review["glue_search_status"] == "NO_VIABLE_MATCH"
+    assert review["selected_episode_ids"] == []
+    assert review["audit_expectation"]["candidate_route_ready"] is True
+    assert review["missing_transformation_specification"]["spec_id"] == "MTS-BSD-A1A2-R8-COMPLEX-TO-ARITHMETIC-ENTRY-20260812"
+    assert review["authority"] == "PROPOSAL_SHADOW_LIFT_SPEC_ONLY"
+    assert coverage["typed_episode_ids"] == [
+        "E-PNP-C042-EXACT-NEIGHBORHOOD-QUOTIENT",
+        "OTEP-LIONS-LOCAL-TO-GLOBAL-TIGHTNESS-SPLIT",
+    ]
+    assert coverage["strict_route_candidates_after_current_v3_relational_query"] == []
+    assert "not evidence that no mathematical transformation exists" in coverage["coverage_limitations"]
+
+
+def test_postdrift_task_episode_hash_and_shadow_authority_are_exact():
+    episode = load(POST_EP)
+    assert episode["artifact_hash"] == task_episode_hash(episode)
+    assert episode["storage_admission"] == "PROPOSAL_SHADOW_STORED"
+    assert episode["outcome"] == "PARTIAL_SUCCESS"
+    assert episode["residual_signature"][-1] == "MISSING_TRANSFORMATION_SPEC_FROZEN_NO_MATHEMATICAL_CANDIDATE"
+    assert "semantic_shortcut:ObstructionTransformationReview" in episode["operator_ids"]
+
+
 def test_episode_diagnosis_failure_and_obstruction_remain_distinct():
     episode = load(EP)
     diagnosis = load(DIAG)
     failure = load(FAIL)
     assert episode["episode_id"] == "EP-BSD-A1A1-SEMANTIC-SHORTCUT-SOURCE-FAMILY-20260812-R8"
-    assert diagnosis["episode_id"] == episode["episode_id"]
-    assert failure["episode_id"] == episode["episode_id"]
+    assert diagnosis["episode_reference_id"] == episode["episode_id"]
+    assert failure["episode_reference_id"] == episode["episode_id"]
+    assert "episode_id" not in diagnosis
+    assert "episode_id" not in failure
     assert failure["diagnosis_id"] == diagnosis["diagnosis_id"]
     assert diagnosis["existing_obstruction_reused"] == "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE"
     assert diagnosis["new_obstruction_promoted"] is False
@@ -82,7 +142,7 @@ def test_source_family_audit_does_not_reverse_premises():
 
 def test_metrics_cover_all_seven_axes_and_no_authority_promotion():
     metrics = load(METRICS)
-    assert metrics["retained_semantic_novelty"] == {
+    expected = {
         "KNOWLEDGE": 1,
         "OPERATOR": 0,
         "EXPERIENCE_PATTERN": 1,
@@ -91,7 +151,8 @@ def test_metrics_cover_all_seven_axes_and_no_authority_promotion():
         "PATH": 0,
         "META_METHOD": 0,
     }
-    assert set(metrics["saturation_axes"]) == set(metrics["retained_semantic_novelty"])
+    assert metrics["retained_semantic_novelty"] == expected
+    assert set(metrics["saturation_axes"]) == set(expected)
     assert metrics["raw_repository_growth_is_learning"] is False
     assert metrics["outcome"]["candidate_generated"] is False
     assert metrics["gates"]["root_state"] == "OPEN_NO_SOLUTION_CERTIFICATE"
@@ -99,6 +160,39 @@ def test_metrics_cover_all_seven_axes_and_no_authority_promotion():
     assert metrics["gates"]["scientific_authority_promotion"] == "NOT_INVOKED"
     assert metrics["gates"]["lift_gate"] == "BLOCKED_NO_CROSS_PROBLEM_COVERAGE_RECEIPT"
     assert metrics["rakl_action_effect"]["changed_observable_pre_memory_pre_gate_preference"].startswith("CANNOT_MEASURE")
+
+
+def test_successor_metrics_are_longitudinal_not_double_counted_learning():
+    successor = load(SUCCESSOR_METRICS)
+    assert successor["framework"]["method_version"] == "3.0.0"
+    assert successor["framework"]["exact_current_main_sha_at_successor_sample"] == "43897d3afaf0038385102d5acc64793c05ec40f0"
+    assert successor["application"]["frozen_cycle_base_sha"] == "9074c257e4fd3179c56ffdedc859efc972cd1c88"
+    assert successor["active_atom"]["fibre_snapshot_hash"] == "sha256:1169325f3cc17acc2094488809bc13ebba796a54aa51bcbc132690c98e1987c9"
+    assert successor["retained_semantic_novelty"] == {
+        "KNOWLEDGE": 1,
+        "OPERATOR": 0,
+        "EXPERIENCE_PATTERN": 1,
+        "OBSTRUCTION": 0,
+        "RELATION": 1,
+        "PATH": 0,
+        "META_METHOD": 0,
+    }
+    assert successor["retained_semantic_novelty_increment_since_initial_metrics"] == {
+        "KNOWLEDGE": 0,
+        "OPERATOR": 0,
+        "EXPERIENCE_PATTERN": 0,
+        "OBSTRUCTION": 0,
+        "RELATION": 0,
+        "PATH": 0,
+        "META_METHOD": 0,
+    }
+    assert successor["v3_operational_surface"]["successor_selected_mode"] == "LIFT"
+    assert successor["v3_operational_surface"]["mathematical_candidate_generated"] is False
+    assert successor["outcome"]["root_certificate_generated"] is False
+    assert successor["gates"]["independent_mathematical_review_credit"] == 0
+    assert successor["gates"]["scientific_authority_promotion"] == "NOT_INVOKED"
+    assert successor["rakl_action_effect"]["changed_observable_pre_memory_pre_gate_preference"].startswith("CANNOT_MEASURE")
+    assert successor["raw_repository_growth_is_learning"] is False
 
 
 def test_trace_extends_r7_hash_chain_and_stays_open():
