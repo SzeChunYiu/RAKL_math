@@ -1,0 +1,35 @@
+{
+  "artifact_hash": "sha256:78d1053f91fa8b62c1a81f7d8ce970eeab54528103a85abe30c059c72c99124e",
+  "atom_id": "O9d12a2a1b-C052",
+  "classifier_raw_sha256": "sha256:d9310cc4b4ff2823cadf0d2004869988b64f5857a7fc9b3ed0a14b9c0bf52e58",
+  "effect_on_frozen_c052_identities": "NONE_BYTES_RECOMPUTED_UNCHANGED",
+  "evidence": [
+    "git-fetch:SzeChunYiu/RAKL:origin/main:7a95860924f73c02113d11d3837ea22eefa8cc44",
+    "git-diff:6756ebec40b90f327d879410539f5146e188f34d..7a95860924f73c02113d11d3837ea22eefa8cc44"
+  ],
+  "falsifier_raw_sha256": "sha256:b9264f04603224227a20b2a6208294913d95313868ce446b22bb4bc634d0c6ac",
+  "grants_mathematical_authority": false,
+  "intervening_diff": {
+    "classification": "TCSQ and objective-transfer research, workflow, manuscript, source, and test additions",
+    "deletions": 0,
+    "files_changed": 28,
+    "insertions": 3472
+  },
+  "mathematical_result_credit": 0,
+  "new_modules": [
+    "src/rakl/objective_transfer_robustness.py",
+    "src/rakl/semantic_quotient.py",
+    "src/rakl/semantic_quotient_memory.py",
+    "src/rakl/semantic_quotient_reconstruction.py",
+    "src/rakl/semantic_quotient_runtime.py"
+  ],
+  "new_modules_wired_into_c052_gate": false,
+  "observation_id": "PNP-C052-FRAMEWORK-REVALIDATION-7A95860-20260812",
+  "observed_at_utc": "2026-08-12T12:44:27Z",
+  "observed_current_main_sha": "7a95860924f73c02113d11d3837ea22eefa8cc44",
+  "operational_effect": "ADOPT_LATEST_FRAMEWORK_PIN_WITHOUT_ALTERING_FROZEN_C052_IDENTITIES_OR_EVALUATOR",
+  "prior_framework_sha": "6756ebec40b90f327d879410539f5146e188f34d",
+  "protected_mathematical_gate_files_changed": [],
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "framework-subject-revalidation-observation-v1"
+}

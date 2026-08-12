@@ -1,0 +1,91 @@
+{
+  "artifact_hash": "sha256:84f97eb48491f8f653c3fb46e5dc8c14622721f84c44ce5f0c9b6e07a914a023",
+  "atom_id": "O9d12a2a1b-C052",
+  "authority": "EVALUATION_PROCESS_AUTHORIZATION_ONLY_NOT_A_MATHEMATICAL_RESULT",
+  "authorization_id": "PNP-C052-CLASSIFIER-EVALUATION-AUTHORIZATION-20260812",
+  "authorized_actions": [
+    "materialize exactly one independently selected controlled hostile supported escape cell under the frozen bounded rule",
+    "implement the classifier from the frozen classifier identity",
+    "implement a byte-distinct falsifier without importing the classifier or reusing classifier certificates",
+    "execute C050 then C051 then hostile controlled worlds",
+    "only after all controlled worlds pass, decide whether a separately frozen native parametric evaluation is authorized"
+  ],
+  "chronology_at_freeze": {
+    "classifier_implementation_exists": false,
+    "decoder_sat_overlap_executed": false,
+    "falsifier_implementation_exists": false,
+    "hostile_cell_materialized": false,
+    "native_parametric_evaluation_executed": false,
+    "regressions_executed": false
+  },
+  "forbidden_capabilities": [
+    "decoder import or execution",
+    "SAT or UNSAT execution",
+    "overlap comparison",
+    "native target-k selection before controlled-world pass"
+  ],
+  "framework_revalidation": {
+    "artifact_hash": "sha256:78d1053f91fa8b62c1a81f7d8ce970eeab54528103a85abe30c059c72c99124e",
+    "observed_main": "7a95860924f73c02113d11d3837ea22eefa8cc44",
+    "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_FRAMEWORK_REVALIDATION_7A95860_20260812.json"
+  },
+  "frozen_at_utc": "2026-08-12T12:44:27Z",
+  "hostile_world_selection": {
+    "bounded_domain": {
+      "a": [
+        1,
+        8
+      ],
+      "a_plus": [
+        1,
+        8
+      ],
+      "k": [
+        8,
+        128
+      ],
+      "m": [
+        2,
+        32
+      ],
+      "m_plus": [
+        1,
+        32
+      ]
+    },
+    "derived_coordinates": [
+      "b=bit_length(m)",
+      "b_plus=bit_length(m_plus)",
+      "padding=R mod 2",
+      "padding_plus=R_plus mod 2"
+    ],
+    "eligibility": [
+      "E(a,b,m)=2k",
+      "E(a_plus,b_plus,m_plus)=2(k+1)",
+      "h[0] and h[1]=c[0] kept distinct",
+      "all h[1] through h[7] lie in the parent literal payload",
+      "complete all-v, all-index, both-sign audit proves no universally forced unequal coordinate against MAGIC[0:8]"
+    ],
+    "native_target_status": "CONTROLLED_HOSTILE_WORLD_NOT_A_NATIVE_TARGET",
+    "no_overlap_inference": true,
+    "ordering": "LEXICOGRAPHIC_ASCENDING",
+    "selection_rule_id": "INDEPENDENT-SYMBOLIC-SUPPORT-SOLVER-WITH-NO-FORCED-MAGIC-CONFLICT-v1",
+    "world_id": "C052-HOSTILE-SUPPORTED-ESCAPE-CELL-v1"
+  },
+  "identities": {
+    "classifier_raw_sha256": "sha256:d9310cc4b4ff2823cadf0d2004869988b64f5857a7fc9b3ed0a14b9c0bf52e58",
+    "falsifier_raw_sha256": "sha256:b9264f04603224227a20b2a6208294913d95313868ce446b22bb4bc634d0c6ac"
+  },
+  "identity_public_merge": "3ebde341484e6781796229d3b2328def257deae0",
+  "mandatory_execution_order": [
+    "C050-k15-bounded-regression",
+    "C051-k19-bounded-regression",
+    "C052-HOSTILE-SUPPORTED-ESCAPE-CELL-v1",
+    "NATIVE_PARAMETRIC_EVALUATION_ONLY_AFTER_SEPARATE_GATE"
+  ],
+  "mathematical_result_credit": 0,
+  "native_parametric_evaluation_gate": "BLOCKED_UNLESS_ALL_THREE_CONTROLLED_WORLDS_PASS",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "same_context_review_is_independent_peer_review": false,
+  "schema_version": "1.0.0"
+}
