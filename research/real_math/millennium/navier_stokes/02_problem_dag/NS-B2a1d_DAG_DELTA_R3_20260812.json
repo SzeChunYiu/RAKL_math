@@ -1,0 +1,26 @@
+{
+  "schema_version": "problem-dag-delta-v3-shadow-r3",
+  "root": "NS0",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "parent_atom": "NS-B2a1",
+  "atom": "NS-B2a1d",
+  "atom_status": "SCOPED_EULER_RIGIDITY_FALSIFIER_VERIFIED",
+  "result": "An explicit translating Hill spherical vortex satisfies the displayed Seregin F(a)=1 Euler-side (3.5)-(3.7) state and remains nonzero while centered backward local norms vanish. Therefore centered-local smallness alone cannot close global Euler rigidity in this class.",
+  "closed_edges": [
+    {"from":"F=1 Euler-side state + centered backward local smallness","to":"u identically zero","status":"PRUNED_BY_EXACT_HILL_ADVERSARY","scope":"no producer-specific no-incoming/tightness/recentering coordinate"},
+    {"from":"XM-MOVING-CORE-RIGIDITY-005 conditional hostile calibration","to":"exact source-bound Euler-side adversary","status":"CONDITIONAL_RESIDUAL_CLOSED","authority":"proposal/shadow application result"}
+  ],
+  "still_open_edges": [
+    {"id":"O-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE","question":"Does the original Navier-Stokes blow-up ancestry imply a lim_R limsup_k annular/tail/no-incoming certificate?"},
+    {"id":"O-NS-B2a1d-PRODUCER-MUST-EXCLUDE-TRANSLATING-INCOMING-CORE","question":"Can the producer-specific certificate be shown to charge or exclude a moving coherent core such as Hill's vortex?"},
+    {"id":"NS-B2a1b","question":"Can a signed Euler flux/telescoping law close only after being tested against the Hill translating-core adversary?"},
+    {"id":"NS-B2","question":"Type-II blowup class remains unexcluded."},
+    {"id":"NS0","question":"Clay root remains open."}
+  ],
+  "next_priority": [
+    "NS-B2a1a — PRELIMIT_ANNULAR_TIGHTNESS, now with the Hill moving-core world as a mandatory falsifier",
+    "NS-B2a1b — SIGNED_EULER_FLUX_TELESCOPING only if the identity explicitly controls translation/incoming flux"
+  ],
+  "rotated_away_from": ["absolute cutoff decay family","specialized Section-4 F=1 axial consumer","generic centered-local Euler Liouville family","Navier-Stokes backward uniqueness after Euler limit"],
+  "authority": "PROPOSAL_SHADOW_DAG_DELTA / ROOT_AUTHORITY_NONE"
+}

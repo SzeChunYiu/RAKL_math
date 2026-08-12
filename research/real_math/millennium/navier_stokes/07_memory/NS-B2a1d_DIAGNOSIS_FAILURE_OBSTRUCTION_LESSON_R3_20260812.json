@@ -1,0 +1,38 @@
+{
+  "schema_version": "episode-diagnosis-obstruction-lesson-v3-shadow-r3",
+  "atom": "NS-B2a1d",
+  "episode": {
+    "id": "TE-NS-B2a1d-R3-20260812",
+    "artifact_hash": "8823f39a79e2337b130251522696eb83338addd680d7ca79af59b8fb9eb7b1dd",
+    "outcome": "PARTIAL_SUCCESS",
+    "observation": "The explicit translating Hill spherical vortex satisfies the displayed Seregin F(a)=1 Euler-side scale budget, Euler equation and local-energy interface while centered backward local norms vanish by translation escape."
+  },
+  "diagnosis": {
+    "id": "D-NS-B2a1d-R3-TRANSLATION-NONRIGIDITY",
+    "category": ["mathematical","representation","noncompact_symmetry","rigidity_interface"],
+    "statement": "Centered backward local smallness is not a faithful coordinate for global Euler triviality in the displayed F=1 state class because noncompact translation can move a permanently nonzero coherent core outside every centered O(sqrt(|tau|)) window.",
+    "evidence": ["exact Hill stream function and velocity decay","world-tube occupancy lemma","F=1 (3.5) verification","backward escape estimate"]
+  },
+  "failure": {
+    "id": "F-NS-B2a1d-F1-CENTERED-LOCAL-RIGIDITY-NONCOMPACT-TRANSLATION",
+    "scope": "Any proposed Euler rigidity implication whose load-bearing hypotheses are only Seregin's displayed F(a)=1 (3.5)-(3.7), nonzero state, and centered backward local smallness, with no producer-specific no-incoming/tightness/recentering hypothesis.",
+    "failure_mode": "EXACT_COUNTEREXAMPLE_TO_SCOPED_IMPLICATION",
+    "does_not_show": ["Seregin Theorem 3.1 is false","Hill vortex is a Navier-Stokes blow-up limit","Type-II blowup exists","all Euler Liouville approaches fail"],
+    "separate_from_gluing_failure": "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE"
+  },
+  "obstruction": {
+    "id": "O-NS-B2a1d-PRODUCER-MUST-EXCLUDE-TRANSLATING-INCOMING-CORE",
+    "statement": "A viable source-to-rigidity bridge must prove an inherited global coordinate that charges or excludes a translating incoming coherent core; fixed-center local decay alone cannot do so.",
+    "minimum_repairs": ["prelimit annular/tail tightness with lim_R limsup_k quantifiers","no-incoming-energy/flux certificate stable under the Euler limit","recentring/modulo-translation control tied to source nontriviality","signed flux law explicitly checked on the Hill traveling adversary"]
+  },
+  "candidate_lesson": {
+    "id": "LC-NS-B2a1d-R3-EXCLUDE-MOVING-CORE-BEFORE-EULER-RIGIDITY",
+    "authority": "PROPOSAL_SHADOW_CANDIDATE_ONLY",
+    "statement": "Before using centered backward local decay as an ancient-Euler rigidity trigger on an unbounded domain, test an exact translating coherent solution in the same norm/energy class; if it survives, require a source-inherited no-incoming/tightness/modulo-symmetry coordinate.",
+    "supporting_episode_ids": ["TE-NS-B2a1d-R3-20260812","XM-MOVING-CORE-RIGIDITY-005"],
+    "falsifier": "Find a proof that the exact source ancestry already supplies a translation-excluding invariant, or an error in the Hill F=1 interface verification.",
+    "counts_as_retained_experience_pattern": false
+  },
+  "novelty_class": "representation",
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}
