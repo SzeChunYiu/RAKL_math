@@ -1,0 +1,211 @@
+{
+  "schema_version": "proposal-shadow-pre-candidate-v3-r6",
+  "cycle_id": "NS-B1a3b1a2a-R6-ANCIENT-SMOOTHING-GLOBAL-LORENTZ-20260812",
+  "atom_id": "NS-B1a3b1a2a-R6",
+  "parent_atom_id": "NS-B1a3b1a2a",
+  "root_issue": "RAKL_math#4",
+  "authority": "PROPOSAL_SHADOW_PRE_CANDIDATE",
+  "framework_source_of_truth": {
+    "repository": "SzeChunYiu/RAKL",
+    "main_sha_read_before_math": "8274f51b3c56145b4300435cea0d401c47313756",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "version_manifest_evidence_cutoff_main_sha": "0cea6cc39a3cf67ef7ecff3fff9a704944c32ab8",
+    "v3_architecture_inspected": [
+      "docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md",
+      "skills/rakl-core/workflows/mathematical-research.md",
+      "src/rakl/method_specs.py",
+      "docs/RAKL_METROLOGY.md",
+      "RAKL_VERSION.json"
+    ]
+  },
+  "rakl_math_base": "3871283cfe5040801b174e25b045e05ee0228cc2",
+  "pre_state_fingerprint": "sha256:7908e4fda38cd6e902240bc9e9bdf894fe6e244cc15a99e06f1dfd7926c624e3",
+  "atom_fibre_snapshot_hash": "sha256:9fedacb434823f8ab3f3c0cb924968644378c74d096d79158588381d16e886f5",
+  "root_contract": {
+    "statement": "3D incompressible Navier-Stokes existence and smoothness Millennium problem",
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "promotion_requirements": [
+      "exact statement binding",
+      "closed proof DAG",
+      "dependency/axiom/verifier audits",
+      "isolated recheck where supported",
+      "bounded novelty search",
+      "three genuinely isolated mathematical reviews"
+    ],
+    "independent_review_credit": "0/3"
+  },
+  "actual_fibre": {
+    "problem_signature": "For a nontrivial whole-space 3D incompressible mild bounded ancient Navier-Stokes solution with finite Albritton-Barker I=A+C+D+E, determine whether ancient mildness plus global boundedness yields a uniform-in-time pointwise vorticity/derivative bound, and whether that local bound plus finite I can produce a uniform global weak-L^{3/2} vorticity bound without extra tail/multiplicity/frequency structure.",
+    "producer": [
+      "mild bounded ancient NSE on R^3 x (-infinity,0)",
+      "finite Albritton-Barker I=A+C+D+E",
+      "global velocity bound M=||u||_infinity<infinity"
+    ],
+    "consumer": [
+      "uniform-in-time pointwise vorticity/higher-derivative bounds",
+      "uniform global weak-L^{3/2} vorticity amplitude"
+    ],
+    "separate_gluing_coordinates": [
+      "local derivative smoothing versus global spatial tail/multiplicity",
+      "finite-I local scale-critical ledger versus whole-space Lorentz norm",
+      "vorticity amplitude versus Grujic morphology/direction",
+      "pressure/far-field terms kept separate from local smoothing"
+    ],
+    "primary_source_targets": [
+      "Koch-Nadirashvili-Seregin-Sverak bounded ancient/mild estimates",
+      "Albritton-Barker finite-I ancient class",
+      "Grujic v2 consumer signature"
+    ]
+  },
+  "analogues_and_disanalogies": [
+    {
+      "analogue": "critical-element/profile compactness in a globally controlled critical state space",
+      "shared_structure": "separate local compactness from global orbit/tail compactness",
+      "disanalogy": "finite Albritton-Barker I is local/scale-critical and does not itself supply a global critical state space",
+      "validation": "any global Lorentz conclusion must remove all observation-radius/tail dependence"
+    },
+    {
+      "analogue": "finite-history smoothing",
+      "shared_structure": "history can remove temporal-edge derivative spikes",
+      "disanalogy": "every fixed finite history length is dilation-normalizable and is not genuine ancientness",
+      "validation": "restart must be licensed at arbitrary intermediate ancient times"
+    },
+    {
+      "analogue": "Grujic geometric-depletion consumer",
+      "shared_structure": "global weak-L^{3/2} vorticity is one consumer coordinate",
+      "disanalogy": "consumer also needs critical-profile morphology and log-weighted BMO direction",
+      "validation": "no amplitude-only result may be promoted to the full consumer interface"
+    }
+  ],
+  "expert_cell": [
+    {
+      "role": "bounded-ancient/mild-solution analyst",
+      "background": "mild Navier-Stokes, semigroup smoothing, ancient solutions",
+      "delegation": "bind restart and derivative estimates at intermediate ancient times",
+      "pre_candidate_objection": "global boundedness is dimensional; constants and restart interval must be explicit"
+    },
+    {
+      "role": "Type-I/Albritton-Barker analyst",
+      "background": "Type-I blow-up compactness and ancient-solution criteria",
+      "delegation": "bind finite-I producer state and exact scale-invariant quantities",
+      "pre_candidate_objection": "do not import global L3 or tail tightness not supplied by finite I"
+    },
+    {
+      "role": "Lorentz/Morrey harmonic analyst",
+      "background": "weak-Lp, Morrey estimates, distribution-function bounds",
+      "delegation": "test whether pointwise vorticity plus finite-I can yield global weak-L^{3/2}",
+      "pre_candidate_objection": "local L2/pointwise bounds may retain radius dependence or allow infinitely many separated packets"
+    },
+    {
+      "role": "concentration-compactness analyst",
+      "background": "translations, dilations, profile leakage",
+      "delegation": "audit spatial multiplicity and noncompact tail escape",
+      "pre_candidate_objection": "ancientness removes a temporal edge but not automatically spatial noncompactness"
+    },
+    {
+      "role": "vorticity/geometric-depletion analyst",
+      "background": "vorticity criteria and geometric regularity",
+      "delegation": "keep amplitude separate from morphology/direction consumers",
+      "pre_candidate_objection": "pointwise amplitude control does not imply one-center critical morphology or direction regularity"
+    },
+    {
+      "role": "pressure/nonlocality analyst",
+      "background": "Calderon-Zygmund pressure and local-energy decompositions",
+      "delegation": "audit whether any claimed global step silently uses far-field pressure control",
+      "pre_candidate_objection": "pressure is downstream for local mild smoothing but load-bearing for global finite-I gluing"
+    },
+    {
+      "role": "adversarial verifier/metrology analyst",
+      "background": "counterexample-first proof audit and RAKL authority boundaries",
+      "delegation": "enforce falsifiers, trace chronology, novelty accounting and root nonpromotion",
+      "pre_candidate_objection": "same-context review earns zero independent-review credit"
+    }
+  ],
+  "dual_memory_review": {
+    "retrieved_success_or_successful_route_ids": [
+      "PR165-NS-B1a3b1a1-R3-SAME-SLAB-EXACT-NSE-SEPARATOR",
+      "PR170-NS-B1a3b1a2-R4-SCALING-LIFT-SHADOW",
+      "M-NS-CRITICAL-FAILURE-SCALING-LIFT"
+    ],
+    "retrieved_failure_or_obstruction_ids": [
+      "F-NS-B1a3b1a2-FIXED-FINITE-HISTORY-NONCOERCIVE",
+      "G-NS-B1a3b1a2-LOCAL-DERIVATIVE-TO-GLOBAL-LORENTZ",
+      "F-NS-B1a3b1a1-SAME-SLAB-DERIVATIVE-AMPLITUDE-PRODUCER",
+      "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH"
+    ],
+    "selected_ids": [
+      "PR170-NS-B1a3b1a2-R4-SCALING-LIFT-SHADOW",
+      "F-NS-B1a3b1a2-FIXED-FINITE-HISTORY-NONCOERCIVE",
+      "G-NS-B1a3b1a2-LOCAL-DERIVATIVE-TO-GLOBAL-LORENTZ",
+      "F-NS-B1a3-UNCONTROLLED-FAR-FIELD"
+    ],
+    "rejected": [
+      {"id": "NS-B2a-TYPEII-EULER", "why": "different limiting equation and Type-II lane"},
+      {"id": "F-NS-B2a1a2-DIRECT-CKN-LEDGER-INSUFFICIENT", "why": "viscosity-normalized Type-II epsilon-regularity lane"},
+      {"id": "F-NS-B2a1b2-FINITE-ENERGY-KERNEL-NONIDENTIFYING-DENSITY", "why": "Euler asymptotic-density observable, not ancient NSE derivative smoothing"},
+      {"id": "XM-PC-NS-001-C001-ENSTROPHY-SIGN", "why": "instantaneous periodic enstrophy transfer, not global Lorentz gluing"}
+    ],
+    "missed": "CANNOT_MEASURE: no complete denominator for all relevant canonical/proposal historical memory is exposed through the connector.",
+    "routing_effect": "Prior R3/R4 failures prohibit retrying finite-history or same-slab derivative-control arguments; they prioritize a genuine ancient restart theorem followed immediately by a separate global-tail coercivity test."
+  },
+  "obstruction_transformation_review": {
+    "fingerprint": {
+      "roles": ["temporal-edge derivative obstruction", "ancient mild restart", "local derivative bound", "global critical Lorentz consumer", "spatial tail/multiplicity"],
+      "relation": "ancientness may break temporal-edge derivative blowup, but local smoothing may fail to identify global critical amplitude",
+      "constraints": ["Navier-Stokes scaling", "finite I", "whole-space noncompactness", "no hidden global L3"],
+      "failure_mechanisms": ["temporal edge", "spatial multiplicity", "tail leakage", "consumer signature incompleteness"],
+      "desired_transition": "source-valid uniform local smoothing and then either a radius-free global Lorentz bound or a precise obstruction",
+      "forbidden_losses": ["replace ancient class by finite interval", "assume tail compactness", "infer morphology/direction from amplitude"]
+    },
+    "SEARCH": {
+      "status": "SELECTED",
+      "source_episode_family": "same-domain bounded-mild smoothing / semigroup restart",
+      "preconditions_to_verify": ["mild formula from intermediate times", "fixed positive restart depth", "derivative estimate with explicit M scaling"],
+      "target_validation": ["uniform-in-time pointwise vorticity bound", "separate global Lorentz stress test"]
+    },
+    "JUMP": {"status": "DEFERRED", "reason": "same-domain SEARCH is viable and cheaper"},
+    "GLUE": {"status": "DEFERRED", "reason": "first test whether the SEARCH output itself crosses the global Lorentz interface"},
+    "LIFT": {"status": "NOT_LICENSED", "reason": "SEARCH not exhausted"},
+    "selected_route": "SEARCH"
+  },
+  "decision_policy": "Counterexample-first after source-valid local smoothing: if the only route from pointwise vorticity plus finite I to global weak-L^{3/2} retains an observation-radius factor or admits arbitrary separated-packet multiplicity, classify the global step as local-to-global gluing failure rather than iterate stronger local estimates.",
+  "falsifiers": [
+    "If the ancient mild definition does not license restart from arbitrary intermediate times, fail the local smoothing interface.",
+    "If derivative constants cannot be made uniform in time from fixed restart depth depending only on M, fail the uniform smoothing claim.",
+    "If global Lorentz estimates retain radius or tail dependence, fail the global critical-amplitude claim.",
+    "If a multiplicity construction is only a non-solution model, scope it to representation failure and do not refute NSE+finite-I.",
+    "If consumer morphology/direction inputs remain unproduced, do not claim the Grujic-v2 endgame is licensed."
+  ],
+  "canonical_method_specs_surfaces_invoked": [
+    "decomposition",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "mathematical_context_translation",
+    "equivalence_similarity",
+    "contextual_theory_gluing",
+    "contradiction_diagnosis",
+    "gap_discovery",
+    "experiment_query_selection",
+    "memory",
+    "review",
+    "saturation_stopping",
+    "prompting_context_policy"
+  ],
+  "research_trace": [
+    {"seq": 1, "event": "ATOMIZED", "previous_event_hash": null, "artifact_hash": "sha256:0840052b3e6cfe2116ebbac1e28bd80c1422681621fe24c716756f53af59437c"},
+    {"seq": 2, "event": "CONTEXT_FROZEN", "previous_event_hash": "sha256:0840052b3e6cfe2116ebbac1e28bd80c1422681621fe24c716756f53af59437c", "artifact_hash": "sha256:9d488390f98407339f0f47fc84111bb651ae2409833de90024fd222d91196957"},
+    {"seq": 3, "event": "ANALOGY_SCAN", "previous_event_hash": "sha256:9d488390f98407339f0f47fc84111bb651ae2409833de90024fd222d91196957", "artifact_hash": "sha256:f5030b883b5d783d301de94584e79070f2a83b6efb21f082ab5868977bd7e66f"},
+    {"seq": 4, "event": "METHOD_TRANSFER_REVIEW", "previous_event_hash": "sha256:f5030b883b5d783d301de94584e79070f2a83b6efb21f082ab5868977bd7e66f", "artifact_hash": "sha256:1be3fc402c5c218d321be379b367dcf1b2c027e975b89b3fd6467dfc73ce9fe6"},
+    {"seq": 5, "event": "EXPERT_CONTEXT_REVIEW", "previous_event_hash": "sha256:1be3fc402c5c218d321be379b367dcf1b2c027e975b89b3fd6467dfc73ce9fe6", "artifact_hash": "sha256:6fa210bc93a3d32ac37ba0de190cf5f90896d2d155ec172156bd650ce35ca41c"},
+    {"seq": 6, "event": "EXPERIENCE_MEMORY_REVIEW", "previous_event_hash": "sha256:6fa210bc93a3d32ac37ba0de190cf5f90896d2d155ec172156bd650ce35ca41c", "artifact_hash": "sha256:f899cffe95a6dcdeded3ac4a232ffe04a86f523a8c243e98ce5f73439b6658fc"},
+    {"seq": 7, "event": "OBSTRUCTION_TRANSFORMATION_REVIEW", "previous_event_hash": "sha256:f899cffe95a6dcdeded3ac4a232ffe04a86f523a8c243e98ce5f73439b6658fc", "artifact_hash": "sha256:aa0237a8f803ab311c8a70db339c817fc2a997042dd915f817822f1a9b28bbe2"},
+    {"seq": 8, "event": "NEXT_STEP_PROPOSED", "previous_event_hash": "sha256:aa0237a8f803ab311c8a70db339c817fc2a997042dd915f817822f1a9b28bbe2", "artifact_hash": "sha256:f7c48a90086ca377d80727786f18637e3f49bf2ffd509f2f5e20ddc55ff2d286"}
+  ],
+  "candidate_generation_allowed": true,
+  "chronology_note": "This packet was committed on a fresh branch from the exact frozen RAKL_math base before source-bound R6 mathematical verification. Proposal/shadow only; no protected gate authority is claimed."
+}
