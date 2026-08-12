@@ -1,0 +1,174 @@
+{
+  "artifact_hash": "sha256:8e4b338a727e954a3ae492de2db25a306878d3deba5fe3b8a30a2eb8f7267161",
+  "as_of_utc": "2026-08-12T09:15:00Z",
+  "audit_id": "MATH-FAILURE-MEMORY-COVERAGE-AUDIT-20260812",
+  "authority_universe": {
+    "application_repository_sha": "a060514e894ec6566b01bb4c89a8aa806ef0048c",
+    "framework_live_sha": "9da0f4d331e9ae61f1309b3a006d7a3c67fa217c",
+    "pending_or_open_pr_material_counted": false
+  },
+  "bounded_diagnosis": {
+    "competing_causes": [
+      "the compact entry was intentionally noncanonical because its authority is proposal-shadow",
+      "a canonical successor exists elsewhere but was not linked into this snapshot",
+      "the source mathematical diagnosis itself may remain under-supported"
+    ],
+    "falsifier": "Produce a merged, append-only canonical successor for the same failure id that supplies every seven-field ingredient and explicitly supersedes the compact snapshot entry.",
+    "observation": "101 of 102 embedded rows, covering 47 of 48 unique failure ids, expose the seven mathematical lesson ingredients. The sole mathematical-lesson gap is a proposal-shadow legacy P-vs-NP entry that uses an older compact vocabulary. Two entries have canonical identity/shape gaps, but the Hodge entry already contains all seven mathematical lesson coordinates.",
+    "repair": "Preserve the legacy bytes; add a canonical successor/correction or explicitly exclude the proposal-shadow row from canonical failure-lattice counts. Future mathematical failures must record competing causes before selecting a diagnosis.",
+    "status": "SUPPORTED_BOUNDED",
+    "supported_cause": "The legacy proposal-shadow record was embedded without normalization into the canonical FailureExperience vocabulary; this is an application memory-normalization gap, not evidence that its mathematical diagnosis is true or false."
+  },
+  "coverage": {
+    "canonical_schema_complete_experiences": 100,
+    "canonical_schema_gap_experiences": 2,
+    "canonical_schema_gaps": [
+      {
+        "authority": "UNSPECIFIED",
+        "existing_mathematical_content": {
+          "failure_mode": "As an independent research reduction, direct vanishing has a dichotomy: for a complete first-order obstruction theory it is equivalent to first-order witness liftability/tangent surjectivity, while for a detector-only obstruction it is insufficient to imply witness lifting.",
+          "scope_conditions": [
+            "fixed already algebraic central witness",
+            "fixed local Hodge branch T",
+            "first-order deformation only",
+            "complete-obstruction fork uses zero iff lift; detector-only fork is one-sided",
+            "no claim about higher-order, algebraization, root initial algebraicity or alternate obstruction objects"
+          ]
+        },
+        "failure_id": "F-H4D1B-DIRECT-VANISHING-NO-COMPLEXITY-REDUCTION",
+        "missing_canonical_fields": [
+          "research_trace_event_id",
+          "artifact_hash"
+        ],
+        "missing_seven_field_lessons": [],
+        "path": "research/real_math/millennium/hodge/deformation/07_memory/H4d1b_FAILURE_EXPERIENCE_DELTA_20260811.json",
+        "source_shape": "experiences"
+      },
+      {
+        "authority": "PROPOSAL_SHADOW_FAILURE_EXPERIENCE",
+        "existing_mathematical_content": {
+          "diagnosis": "SUPPORTED_EXACT_LOCAL_SEMANTICS",
+          "failure_mode": "A global score is proposed as though later closure stages create an independent cross-witness hardness coordinate, but for fixed Lambda the source equations factor pointwise through each witness's full base state and the shared rule/inclusion system.",
+          "repair": "factor any proposed global closure statistic through the exact recurrence; isolate a property of the shared t-rule/base-incidence system and prove a legal bound in terms of t before target scoring",
+          "scope_conditions": [
+            "fixed integral pair family Lambda",
+            "source-defined Omega and equations (6)-(8)",
+            "claims about distinctions created only by later closure dynamics"
+          ]
+        },
+        "failure_id": "F-O9D12A2A1A1B-FIXED-LAMBDA-GLOBAL-STATE-FACTORIZATION",
+        "missing_canonical_fields": [
+          "candidate_id",
+          "context_packet_hash",
+          "research_trace_event_id",
+          "method_family",
+          "residual_signature",
+          "broken_assumptions",
+          "competing_diagnoses",
+          "selected_diagnosis",
+          "diagnosis_status",
+          "evidence_pointers",
+          "falsifier_or_attempt",
+          "observed_result",
+          "local_repair_attempts",
+          "timestamp"
+        ],
+        "missing_seven_field_lessons": [
+          "attempted_mathematical_implication",
+          "exact_result_or_failure",
+          "supported_and_competing_causes",
+          "mathematical_falsifier",
+          "mathematical_repair",
+          "proof_or_source_evidence"
+        ],
+        "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_FAILURE_SNAPSHOT_20260811.json",
+        "source_shape": "experiences"
+      }
+    ],
+    "duplicate_rows_preserved": 54,
+    "failure_experiences_scanned": 102,
+    "files_scanned_with_experiences": 54,
+    "lane_counts": {
+      "birch_swinnerton_dyer": 10,
+      "cross_problem": 3,
+      "hodge": 5,
+      "hodge_conjecture": 2,
+      "navier_stokes": 10,
+      "p_vs_np": 50,
+      "riemann_hypothesis": 10,
+      "yang_mills": 12
+    },
+    "seven_field_math_complete_experiences": 101,
+    "seven_field_math_gap_experiences": 1,
+    "seven_field_math_gaps": [
+      {
+        "authority": "PROPOSAL_SHADOW_FAILURE_EXPERIENCE",
+        "failure_id": "F-O9D12A2A1A1B-FIXED-LAMBDA-GLOBAL-STATE-FACTORIZATION",
+        "missing_seven_field_lessons": [
+          "attempted_mathematical_implication",
+          "exact_result_or_failure",
+          "supported_and_competing_causes",
+          "mathematical_falsifier",
+          "mathematical_repair",
+          "proof_or_source_evidence"
+        ],
+        "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_FAILURE_SNAPSHOT_20260811.json",
+        "source_shape": "experiences"
+      }
+    ],
+    "unique_failure_ids": 48,
+    "unique_failure_ids_with_canonical_row": 46,
+    "unique_failure_ids_with_seven_field_row": 47
+  },
+  "credit_boundary": {
+    "framework_promotion": false,
+    "independent_review": false,
+    "mathematical_credit_units": 0,
+    "statement": "This coverage audit improves failure-memory completeness only. Git, CI, schemas, hashes, chronology, counts, and the audit itself create no mathematical result."
+  },
+  "framework_owner_audit": {
+    "existing_owners": [
+      "src/rakl/failure_lattice.py::FailureExperience",
+      "src/rakl/challenge_learning.py::ChallengeLearningCase",
+      "research/SELF_RAKL_RESEARCH_042.md::FailureCauseDAG",
+      "skills/rakl-core/workflows/failure-diagnosis.md"
+    ],
+    "fresh_assurance_required": true,
+    "narrowing_of_prior_proposal": "The global atlas proposal to add a mathematical failure-cause compiler is not yet evidence for a new RAKL operator: the current framework already owns competing diagnosis, failure-cause atoms, discriminating challenges, and next-action routing. The evidenced gap is application-side normalization and activation on mathematical cases.",
+    "new_method_surface_justified": false,
+    "next_framework_discriminator": "Freeze matched mathematical failure cases with hidden gold causes and compare incumbent routing against an application adapter on cause attribution, repeat-failure avoidance, viable-route preservation, and correct CANNOT_CHECK behavior.",
+    "promotion_state": "NO_FRAMEWORK_DELTA_PROPOSED_OR_PROMOTED",
+    "verdict": "EXISTING_METHOD_SURFACE_APPLICATION_ROUTING_GAP"
+  },
+  "object": "Application-local mathematical failure experience across P versus NP and the Millennium lanes",
+  "quantity_of_interest": "Whether every registered failure experience exposes the seven mathematical lesson fields needed to diagnose why a mathematical implication failed and select a falsifiable repair",
+  "root_status": "ALL_UNSOLVED_ROOTS_OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "seven_field_mapping": {
+    "attempted_mathematical_implication": [
+      "method_family",
+      "broken_assumptions"
+    ],
+    "exact_result_or_failure": [
+      "failure_mode",
+      "observed_result"
+    ],
+    "mathematical_falsifier": [
+      "falsifier_or_attempt"
+    ],
+    "mathematical_repair": [
+      "local_repair_attempts"
+    ],
+    "proof_or_source_evidence": [
+      "evidence_pointers"
+    ],
+    "scope": [
+      "scope_conditions"
+    ],
+    "supported_and_competing_causes": [
+      "competing_diagnoses",
+      "selected_diagnosis",
+      "diagnosis_status"
+    ]
+  }
+}
