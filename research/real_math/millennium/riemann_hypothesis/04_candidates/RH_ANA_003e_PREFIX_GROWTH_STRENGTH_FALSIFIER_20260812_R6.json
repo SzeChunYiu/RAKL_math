@@ -1,0 +1,38 @@
+{
+  "schema": "RAKL-v3-shadow-MathematicalCandidate",
+  "candidate_id": "RH-ANA-003e-C001-NEGLIGIBLE-TAIL-GROWTH-QUOTIENT",
+  "atom_id": "RH-ANA-003e",
+  "cycle": "R6",
+  "root_issue": 3,
+  "control_issue": 239,
+  "context_fibre_hash": "sha256:b74ba6625b14b3ed16f1278543a1651a3df825b6ff2eb5133d34d442a4495296",
+  "framework_subject": {"method_version": "3.0.0", "rakl_main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0"},
+  "application_subject": {"cycle_base_sha": "ac8c0745be8aed791a446fd55fcf5154cac01962", "current_main_at_candidate": "21d22075fa250e4ded412fd292b7942b87503266", "pre_candidate_gate_head": "cab0ddc2602f84f95e67ae1409ac8a52810e2681"},
+  "gate_basis": {"focused_current_v3_run_id": 31557346464, "focused_current_v3_regression_step": "success", "focused_test": "tests/math_applications/test_rh_ana003e_r6_pre_candidate.py", "full_application_run_id": 31557346564, "full_application_status_at_candidate": "in_progress", "authority_effect": "focused strict gate licenses proposal/shadow candidate materialization only; CI is not mathematical authority"},
+  "premises": [
+    {"id": "R5-SHADOW-TAIL", "statement": "At the R5 moving cutoff X_n, S_Lambda(n)=P_n(X_n)+T_n(X_n) in natural source order and T_n(X_n)=O(n^{-B}) for every fixed B>0.", "authority": "imported proposal/shadow evidence from PR #206; no root authority"},
+    {"id": "R3-SHADOW-ROOT-COUPLING", "statement": "The existing R3 source-compositional audit classifies existence of a polynomial bound on the full S_Lambda as RH-equivalent in this lane.", "authority": "proposal/shadow route classification only; used for strength labeling, not theorem authority"}
+  ],
+  "statement": {
+    "fixed_exponent_equivalence": "Conditional on R5-SHADOW-TAIL, for every fixed A>=0, P_n(X_n)=O(n^A) iff S_Lambda(n)=O(n^A).",
+    "existential_polynomial_equivalence": "Conditional on R5-SHADOW-TAIL, there exists A>=0 with P_n(X_n)=O(n^A) iff there exists A>=0 with S_Lambda(n)=O(n^A).",
+    "normalized_quotient": "More generally, for any positive scale g_n with |T_n(X_n)|/g_n -> 0, (S_Lambda(n)-P_n(X_n))/g_n -> 0 and ||S_Lambda(n)|-|P_n(X_n)||/g_n -> 0.",
+    "route_consequence": "Therefore two-sided polynomial control of the moving endpoint prefix is not a strictly weaker intermediate than the full-remainder polynomial obligation under the R5 tail premise.",
+    "root_scope": "Using the already-recorded R3 shadow classification only as a strength guard, the moving-prefix polynomial family is root-coupled; this result itself is not an RH proof."
+  },
+  "proof": [
+    "R5 gives T_n=O(n^{-B}) for every B>0; in particular T_n=O(1).",
+    "If |P_n|<=C n^A eventually, then |S_Lambda(n)|<=|P_n|+|T_n|<=C n^A+C_T=O(n^A) because A>=0.",
+    "If |S_Lambda(n)|<=C n^A eventually, then |P_n|<=|S_Lambda(n)|+|T_n|=O(n^A).",
+    "Taking the union over fixed A>=0 gives existential-polynomial equivalence.",
+    "For any g_n>0 with |T_n|/g_n->0, exact additivity gives |S_Lambda-P_n|/g_n->0; reverse triangle inequality gives ||S_Lambda|-|P_n||/g_n<=|T_n|/g_n->0."
+  ],
+  "difference_witness": {"registered_hostile_pair": "prefix polynomially bounded while full remainder is not, or conversely, under the exact R5 tail premise", "outcome": "IMPOSSIBLE under the stated premise by the bidirectional triangle inequality", "interpretation": "FAILS the required separation witness; reject this local-obligation family."},
+  "negative_scope": ["Does not cover one-sided inequalities, signs, phase/cancellation functionals, or internal prefix excursions.", "Does not validate the R5 tail beyond its shadow status.", "Does not prove the R3 route-strength classification independently.", "Does not prove any Li coefficient nonnegative.", "Does not claim literature novelty."],
+  "primary_sources": [{"id": "Coffey-arXiv-0706.0343v2", "use": "exact S_2=S_gamma+S_Lambda decomposition and S_Lambda Laguerre series"}, {"id": "Voros-arXiv-math-0506326v2", "use": "contrastive RH-true tame versus RH-false non-tempered Li asymptotics; strength guard context"}],
+  "local_to_global": {"local_status": "SOLVED_ROUTE_CLASSIFICATION_CONDITIONAL_ON_R5_SHADOW", "gluing_status": "OPEN", "gluing_failure": "Endpoint prefix polynomial control collapses back to the full root-sensitive growth class; no Li-sign glue gained.", "successor_atom": "RH-ANA-003f — ORDERED_PREFIX_INTERNAL_STATISTIC_DIFFERENCEWITNESS"},
+  "verification": {"same_context_expert_roles": 7, "independent_mathematical_reviews": 0, "formal_proof_assistant": "NOT_BOUND", "numerics": "NOT_USED", "falsifier": "bidirectional hostile-pair DifferenceWitness discharged algebraically", "focused_current_v3_gate": "PASS at run 31557346464 on exact gate head cab0ddc2602f84f95e67ae1409ac8a52810e2681"},
+  "novelty": {"defensible_classes": ["compositional", "representation"], "literature_novelty_claim": "NONE", "root_novelty_claim": "NONE"},
+  "authority": "PROPOSAL_SHADOW_ROUTE_PRUNING_ONLY / NO_RH_THEOREM / NO_ROOT_AUTHORITY",
+  "artifact_hash": "sha256:36dd90e0d0776e937f9a58e18ec1c7f5eab8fccbef8a5e0ed166e0d330cb0f0d"
+}
