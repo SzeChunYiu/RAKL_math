@@ -1,0 +1,89 @@
+{
+  "schema": "rakl-v3-pre-action-shadow-v1",
+  "cycle_id": "YM-S1a2j-R22-20260812",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "git_sha": "44058e21e16b085b421638fadad5086e31472f0f",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "v3_blob": "f4798b362611e0aaaaecbfd5b9e3fe5c41427362",
+    "method_specs_blob": "26a90bf748d3b4969fc61c1f5666380eacfd7e3f",
+    "pre_action_receipt_blob": "4378b1e4d141acc3e0764c305e130977c01fd23a"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "frozen_base": "d65014c9a4dfa251ed9453addb3ac87815ab949a",
+    "issue": 335,
+    "root_issue": 5
+  },
+  "atom": "YM-S1a2j",
+  "signature": "YM-S1a2j-WILSON-RELEVANT-BLOCK-CONORM-INVERSE-CONTRACTION-ADAPTED-NORM",
+  "actual_fibre": {
+    "target": "Wilson Sections 30/38 weak-UV stable-graph relevant block",
+    "success_contract": [
+      "bind exact relevant subspace/block and graph norm",
+      "bind invertibility plus uniform conorm m(A_k)>1+eta or ||A_k^-1||<=q<1",
+      "or uniformly equivalent adapted norm with explicit equivalence constants",
+      "bind perturbation robustness and cross-derivative graph-metric margin",
+      "keep base-map inversion, shrinking-domain invariance, regulator slaving, OS/continuum transport separate"
+    ],
+    "predeclared_discriminator": "Does the primary source provide a uniform lower bound on every relevant direction (conorm/inverse contraction) in the actual graph norm, rather than only an operator-norm/eigenvalue-style expansion statement?",
+    "allowed_outcomes": [
+      "LOCAL_SUCCESS",
+      "PARTIAL_SUCCESS",
+      "FAILURE",
+      "BLOCKED",
+      "CANNOT_CHECK"
+    ]
+  },
+  "operators_methods": [
+    "PRIMARY_SOURCE_SECTION30_38_STATEMENT_BINDING",
+    "OPERATOR_NORM_VS_CONORM_TYPE_CHECK",
+    "HOSTILE_FINITE_DIMENSIONAL_CONTROLS",
+    "BOUNDED_REPAIR_TERM_SEARCH",
+    "ANALOGUE_DISANALOGUE_EXPONENTIAL_DICHOTOMY",
+    "DUAL_MEMORY_ROUTING",
+    "SAME_CONTEXT_EXPERT_CELL"
+  ],
+  "selected_memory_ids": [
+    "#5",
+    "#335",
+    "#321/PR#328",
+    "#301/PR#308",
+    "#295/PR#297"
+  ],
+  "rejected_memory_ids": [
+    "#330/PR#337 identity-collision SZZ lane",
+    "#269/PR#273 fixed-cutoff-to-continuum scaling lane",
+    "#276/PR#278 MRS UV/IR/OS lane",
+    "#220/PR#223 tightness lane",
+    "#205/PR#208 nontriviality lane"
+  ],
+  "missed_memory": "CANNOT_MEASURE — no exhaustive governed cross-problem retrieval-universe coverage certificate",
+  "decision_policy": [
+    "exact source typing before theorem transfer",
+    "operator norm lower bound is not treated as conorm",
+    "generic stable-manifold experience guides search only",
+    "missing primary repair detail => CANNOT_CHECK/BLOCKED",
+    "no local RG result may discharge gauge-invariant OS or continuum/root obligations"
+  ],
+  "falsifiers": [
+    "primary text explicitly supplies m(A_k)>=1+eta or ||A_k^-1||<=q<1 in the graph norm",
+    "primary text supplies an equivalent adapted norm with uniform equivalence constants and a quantitative graph contraction",
+    "primary text shows the displayed ||L_k|rel|| lower bound denotes a different quantity/map than ordinary operator norm"
+  ],
+  "expert_cell": [
+    "rigorous lattice-gauge/RG",
+    "nonautonomous invariant manifolds",
+    "Banach/operator theory",
+    "adversarial falsification",
+    "formal assurance/source binding",
+    "OS/continuum gluing",
+    "novelty/metrology"
+  ],
+  "frozen_at_utc": "2026-08-12T07:25:00Z",
+  "strict_pre_memory_counterfactual": "CANNOT_MEASURE — issue #335 already contains memory-shaped prospective routing; no pre-memory ranking receipt exists",
+  "fibre_hash": "sha256:de33771fd889964532ed1e7df8585a3a6dfda0b59523b8a47f8dbcc417bba0a8"
+}
