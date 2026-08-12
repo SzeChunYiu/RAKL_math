@@ -1,0 +1,47 @@
+{
+  "review_id": "EXPERT-PNP-C041B-20260812",
+  "authority": "SAME_CONTEXT_PROPOSAL_ONLY_NOT_INDEPENDENT_REVIEW",
+  "target_atom_id": "O9d12a2a1b-C041B",
+  "context_hash": "sha256:ff67df4831b0028a2df6335ea7088ecca81ff9542477acef87faee9772d2b836",
+  "roles": [
+    {
+      "role": "domain/theory lead",
+      "background": "discrete complexity, semi-filter cover graphs, fusion lower bounds",
+      "delegated_check": "Bind every set operation to Definitions 18--21 and audit the even-even graph-edge hypotheses.",
+      "finding": "For an even-even child graph edge, the row and column complement traces are required members of any relevant semi-filter and are disjoint from the old odd-odd slice. The proof must not silently extend to mixed-parity edges."
+    },
+    {
+      "role": "analogy/method-transfer lead",
+      "background": "LP duality, residual-capacity arguments, structural transfer",
+      "delegated_check": "Test whether C024 load slack and C041A projection effects can be composed without importing C024's integrality overclaim.",
+      "finding": "The safe transfer is local: use pair load/tightness from C024 and old-slice projection from C041A. Do not claim an integral approximation or recurrence."
+    },
+    {
+      "role": "adversarial falsification lead",
+      "background": "finite combinatorics, hostile boundary cases, counterexample design",
+      "delegated_check": "Attack emptiness, mixed parity, cross terms, and sufficiency overclaims before accepting the local lemma.",
+      "finding": "If either child generator trace is empty, no semi-filter can be above the edge. Mixed parity introduces old/new cross terms. The proposed parent-intersection condition can only be necessary because unrelated saturated child pairs may still cover K."
+    },
+    {
+      "role": "formal-methods lead",
+      "background": "statement binding, exact quantifiers, proof DAG and checker trust boundaries",
+      "delegated_check": "Separate the set-theoretic identity, cylinder-load identity, and augmentation corollary into explicit proof obligations.",
+      "finding": "Required obligations are: cylinder lift is a semi-filter; relevance of lifted old filters; decorated-pair intersection identity; preservation equivalence under projection; tight-load obstruction; empty-intersection corollary. No proof-assistant certificate is available."
+    },
+    {
+      "role": "novelty/research-value lead",
+      "background": "circuit-lower-bound barriers, prior-art risk, information-gain routing",
+      "delegated_check": "Assess whether the result materially narrows the amplification search without being mistaken for a root advance.",
+      "finding": "The useful contribution is an obstruction compression from child saturated-neighbourhood search to parent tight intersections for one parity class. Treat as compositional/representation-level local progress only; external novelty and root value remain unverified."
+    }
+  ],
+  "discussion_synthesis": {
+    "agreement": "Verify the decorated-pair/cylinder-load identity first because it is the cheapest exact discriminator and can rule out broad off-slice witness strategies when a tight disjoint parent pair exists.",
+    "strongest_objection": "The criterion is conditional and necessary only. Without proving a structural property of the parent tight-pair intersection family, it does not construct an amplifying rule or establish any recurrence.",
+    "unresolved_uncertainty": "Whether useful parent dual certificates necessarily have, or can be chosen to avoid, tight pairs with small/empty intersections.",
+    "recommended_next_action": "Truth-check the local decorated-pair lemma under exact Definition-18--21 semantics, record its boundary conditions, then prospectively freeze the child question about the intersection family of tight parent constraints."
+  },
+  "independent_review_credit": "0/3",
+  "artifact_hash": "sha256:67f1561abafdfd0b5b0297bf305eeee896328ca4d71d4b2693946076a6c3c57c",
+  "recorded_at": "2026-08-12T00:31:20Z"
+}
