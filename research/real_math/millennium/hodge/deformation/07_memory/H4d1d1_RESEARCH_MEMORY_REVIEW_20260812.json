@@ -1,0 +1,52 @@
+{
+  "target_atom_id": "H4d1d1",
+  "target_context_hash": "sha256:4d9f15276fe9e9f02f67402355d64d06d8dcf138348b891178a65c80b0d5f793",
+  "tool_inventory_snapshot_hash": "sha256:9ea47778256806acfc9ba00cf284e4448f0fc8b32e41dff3e84c6e1b3380a11e",
+  "failure_lattice_snapshot_hash": "sha256:0e0fba6c20c4970014d7bd45c9fd6654086727c1169ae7783aaae73dc9cc9d15",
+  "tool_query_status": "NO_RELEVANT_MATCH",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "degree-normalized proper pushforward / finite-cover trace",
+    "single-section witness continuation",
+    "first-order tangent-surjectivity",
+    "all-Artin exact witness tower",
+    "specialization across branch boundary",
+    "correspondence/source relocation"
+  ],
+  "relevant_tool_ids": [],
+  "relevant_failure_ids": [
+    "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO",
+    "F-H4D1A-CLASS-WITNESS-PERSISTENCE-GAP",
+    "F-H4D1B-FIRST-ORDER-NOT-FORMAL",
+    "F-H4D1C-CURRENT-PR-COVERAGE-MISS",
+    "H4d1c-C001-RATIONAL-COEFFICIENT-CANCELLATION"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [
+    "No protected/current scoped ResearchTool was found that certifies finite-cover exact-class descent for H4d1d1.",
+    "Stacks pushforward results are primary-source mathematical controls, not RAKL tool promotion.",
+    "Cross-Millennium tools were not imported without a bound applicability witness."
+  ],
+  "failure_reuse_notes": [
+    "F-H4D1B-FIRST-ORDER-NOT-FORMAL changed routing by rejecting a duplicate attempt to treat tangent/first-order data as an all-order descent certificate.",
+    "F-H4D1C-CURRENT-PR-COVERAGE-MISS changed routing by forcing the current open-Hodge work query before selecting H4d1d1.",
+    "H4d1c-C001-RATIONAL-COEFFICIENT-CANCELLATION changed routing by requiring exact total-class bookkeeping and rejecting componentwise inference from the signed rational witness.",
+    "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO was retrieved but rejected as not decision-relevant because H4d1d1 does not reuse detector injectivity.",
+    "F-H4D1A-CLASS-WITNESS-PERSISTENCE-GAP was retrieved but not selected as a blocker because H4d1d1 explicitly permits witness replacement across sheets rather than persistence of one chosen witness."
+  ],
+  "unresolved_warnings": [
+    "A finite-cover trace route is useful only after an exact-class witness family over a finite cover is independently obtained.",
+    "Rational coefficients permit degree normalization; the same move is not an integral result.",
+    "Generic finite-cover descent does not settle ramification, singular branch boundary, completion-to-neighbourhood descent, or root initial algebraicity.",
+    "The bounded current-work query is not a complete cross-problem memory census."
+  ],
+  "evidence_pointers": [
+    "https://github.com/SzeChunYiu/RAKL_math/pull/100",
+    "https://github.com/SzeChunYiu/RAKL_math/pull/119",
+    "https://github.com/SzeChunYiu/RAKL_math/pull/143",
+    "https://github.com/SzeChunYiu/RAKL_math/pull/146",
+    "https://github.com/SzeChunYiu/RAKL_math/pull/197",
+    "sha256-fibre:d582c382a39e84dd48c3be36f7f9aa11adea27110e5f69bbe45074d8d7c6fc6a"
+  ],
+  "artifact_hash": "sha256:14838ac77bc8b09f62635a9f7ae88c38d52aaf7261099a5123a44ffa227a2337"
+}
