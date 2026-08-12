@@ -1,0 +1,93 @@
+{
+  "artifact_hash": "sha256:62b5bc3fbedcf35462dcfb6a0c11ddbada12077b9eef99d7ff701b721d42b12c",
+  "authority": {
+    "independent_review": false,
+    "machine_formal": false,
+    "novelty": false,
+    "riemann_hypothesis": false,
+    "root": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "same_context_hand_proof": true
+  },
+  "candidate_core_sha256": "sha256:b9bd54e72850dbc31b2fba344d978ee3660f0004bf81fb237347f0eb8b5ab3ab",
+  "candidate_id": "RH-ANA-003-ABEL-001-C002-FIXED-N-NATURAL-ORDER-ABEL",
+  "candidate_raw_sha256": "7eb1e7e369dde0b6532ceae005f62fabf37e83abe2dd7cd663d1cd60137189a8",
+  "certificate_id": "RH-ANA-003-ABEL-001-C002-HAND-PROOF-CERTIFICATE-20260812",
+  "credit": {
+    "git_ci_schema_hash_runtime": 0,
+    "mathematical": [
+      "O1-O7 hand derivation as one fixed-n Abel convergence/nonabsolute unit"
+    ],
+    "software_process": 0
+  },
+  "explicit_exclusions": [
+    "NO_N_UNIFORMITY",
+    "NO_REORDERING_OR_REGROUPING",
+    "NO_PR316_RATE",
+    "NO_LI_POSITIVITY",
+    "NO_RH_CLAIM",
+    "NO_NOVELTY",
+    "NO_INDEPENDENT_REVIEW",
+    "NO_GLOBAL_LEDGER_UPDATE"
+  ],
+  "falsifiers": [
+    "a nonintegral endpoint example contradicting O1",
+    "an exact Laguerre coefficient contradicting O2 or O7",
+    "Bellotti v1 equations (1.3)-(1.4) or Theorem 1.5 do not support O3",
+    "one fixed n for which either O4 or O5 fails",
+    "one m=6k that is a prime power",
+    "any proof step requires n-uniformity, reordering, PR316, Li positivity, or RH"
+  ],
+  "frozen_at": "2026-08-12T08:04:00Z",
+  "obligations": [
+    {
+      "obligation_id": "O1-FINITE-ABEL-ENDPOINTS",
+      "proof": "Let A(t)=sum_{m<=t}a_m, a right-continuous step function. For nonintegral 1<=X<Y, sum_{X<m<=Y}a_m b_n(m)=integral_(X,Y] b_n dA. Stieltjes integration by parts gives A(Y)b_n(Y)-A(X)b_n(X)-integral_X^Y A(t)b_n'(t)dt. Nonintegrality removes endpoint jumps, and the half-open convention is exactly X<m<=Y.",
+      "status": "PROVED_IN_FROZEN_HAND_CERTIFICATE"
+    },
+    {
+      "obligation_id": "O2-KERNEL-DERIVATIVE",
+      "proof": "Put P_n(u)=L_{n-1}^{(1)}(u). Chain and product rules give b_n'(t)=t^(-2)(P_n'(log t)-P_n(log t)). P_n'-P_n is a degree-(n-1) polynomial with leading coefficient (-1)^n/(n-1)!. If C_n is the sum of the absolute values of its coefficients, then |P_n'(u)-P_n(u)|<=C_n(1+u^(n-1)) for u>=0, because every u^j with 0<=j<=n-1 is at most 1+u^(n-1). Thus the frozen derivative bound holds for all t>=1, with n fixed before C_n and the t-limit.",
+      "status": "PROVED_IN_FROZEN_HAND_CERTIFICATE"
+    },
+    {
+      "obligation_id": "O3-BELLOTTI-TO-A",
+      "proof": "Bellotti v1 defines Delta(x)=|psi(x)-x|/x and omega(x)=d(log x)^(3/5)/(log log x)^(1/5), d=(5^6 A_0^3/(2^2*3^4))^(1/5)>0, and Theorem 1.5 gives Delta(x)<<exp(55A_0)exp(-omega(x)). Hence for some C and all sufficiently large x, |A(x)|=|floor(x)-psi(x)|<=|floor(x)-x|+|x-psi(x)|<=1+C x exp(-omega(x)).",
+      "status": "PROVED_IN_FROZEN_HAND_CERTIFICATE"
+    },
+    {
+      "obligation_id": "O4-FIXED-N-BOUNDARY",
+      "proof": "For fixed n, |P_n(log Y)|<=D_n(1+(log Y)^(n-1)). Combining O3 with b_n(Y)=P_n(log Y)/Y bounds |A(Y)b_n(Y)| by D_n(1+(log Y)^(n-1))/Y plus CD_n(1+(log Y)^(n-1))exp(-omega(Y)). The first term tends to zero. For u=log Y, omega(Y)=d u^(3/5)/(log u)^(1/5), which dominates every constant multiple of log u; therefore the second term also tends to zero.",
+      "status": "PROVED_IN_FROZEN_HAND_CERTIFICATE"
+    },
+    {
+      "obligation_id": "O5-FIXED-N-INTEGRAL",
+      "proof": "O2-O3 bound |A(t)b_n'(t)| by C_n(1+(log t)^(n-1))/t^2 plus CC_n(1+(log t)^(n-1))exp(-omega(t))/t for all sufficiently large t. The first term is integrable. In the second set u=log t: it becomes a constant times integral (1+u^(n-1))exp(-d u^(3/5)/(log u)^(1/5))du, which converges because its exponent is at least d u^(1/2) eventually. The finite initial interval is harmless.",
+      "status": "PROVED_IN_FROZEN_HAND_CERTIFICATE"
+    },
+    {
+      "obligation_id": "O6-NATURAL-ORDER-LIMIT",
+      "proof": "Apply O1 for each nonintegral Y and let Y tend to infinity through the original upper cutoff. O4 removes A(Y)b_n(Y), and O5 permits the improper-integral limit, giving lim_{Y->infinity}sum_{X<m<=Y}a_m b_n(m)=-A(X)b_n(X)-integral_X^infinity A(t)b_n'(t)dt. No term is permuted, regrouped, or made n-uniform.",
+      "status": "PROVED_IN_FROZEN_HAND_CERTIFICATE"
+    },
+    {
+      "obligation_id": "O7-NONABSOLUTE-WITNESS",
+      "proof": "For every k>=1, 6k has distinct prime divisors 2 and 3, so it is not a prime power; hence Lambda(6k)=0 and |a_(6k)|=1. Since P_n has degree n-1 and leading coefficient (-1)^(n-1)/(n-1)!, for fixed n there are c_n>0 and K_n such that |b_n(6k)|>=c_n(log k)^(n-1)/k for k>=K_n (with P_1=1 for n=1). This positive subseries diverges by comparison with the harmonic series, so sum_m |a_m b_n(m)| diverges.",
+      "status": "PROVED_IN_FROZEN_HAND_CERTIFICATE"
+    }
+  ],
+  "proof_input_raw_sha256": "c6dff171471e30276136564207c127f21ea1b69daf3f131c8d78c449a9c21923",
+  "proof_kind": "SOURCE_BOUND_SAME_CONTEXT_HAND_PROOF",
+  "schema_version": "1.0.0",
+  "scoped_conclusion_if_certificate_checks": "For every fixed integer n>=1 and every nonintegral X>=1, the frozen natural-order Abel tail identity holds and the corresponding original term series is not absolutely convergent.",
+  "source_evidence": {
+    "bellotti": {
+      "equation_1_3": "Delta(x)=|psi(x)-x|/x",
+      "equation_1_4": "omega(x)=d(log x)^(3/5)/(log log x)^(1/5)",
+      "retrieved_html_sha256": "2b57101a941e31c033ae2510efe8f4b3e81f22f025cd857fcb53d8ce77f3e634",
+      "source": "Bellotti, arXiv:2508.02041v1",
+      "theorem_1_5": "Delta(x)<<exp(55A_0)exp(-omega(x))"
+    },
+    "classical_identity": "finite Stieltjes/Abel summation with half-open nonintegral endpoints",
+    "laguerre_normalization": "L_{n-1}^{(1)}(u)=sum_{j=0}^{n-1}(-1)^j binom(n,j+1)u^j/j!"
+  }
+}

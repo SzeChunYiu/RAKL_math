@@ -1,0 +1,35 @@
+{
+  "application": {
+    "candidate_public_merge": "301f6f9db54784d250a49c4a5766384df31989dd",
+    "proof_input_commit": "fbe8cf586129ad84965eb4368880a7aa19cdc37a",
+    "repository": "SzeChunYiu/RAKL_math",
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "artifact_hash": "sha256:4fc695945576e0bbc14be6dc09d182b57ce1c76a0bdd7529d224a00a29d64187",
+  "authority": "SAME_CONTEXT_SCOPED_MATHEMATICS_NO_RH_ROOT_AUTHORITY",
+  "credit_type": "SCOPED_PROOF_OR_LEMMA",
+  "deduplication": {
+    "assurance_metadata_mathematical_credit": 0,
+    "global_ledger_updated": false,
+    "independent_review_credit": 0,
+    "literature_novelty_claim": false,
+    "new_scoped_mathematical_unit_count": 1
+  },
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_ANA_003_ABEL_001_C002_HAND_PROOF_CERTIFICATE_FREEZE_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003_ABEL_001_C002_PROOF_CHECK_RESULT_20260812.json"
+  ],
+  "mathematical_unit_count": 1,
+  "record_type": "SCOPED_MATHEMATICAL_LESSON",
+  "schema_version": "1.0.0",
+  "seven_field_math_lesson": {
+    "attempted_implication": "For fixed n, Bellotti's cumulative prime-number-theorem error estimate and exact finite Abel summation should yield a natural-order tail identity for a_m=1-Lambda(m), b_n(m)=L_{n-1}^{(1)}(log m)/m, while the original term series remains nonabsolute.",
+    "exact_result_or_failure": "The implication is proved in the frozen fixed-n scope: the half-open finite identity has the stated signs; the boundary vanishes; the transformed integral converges absolutely; the natural-order limit exists; and the m=6k subseries proves that sum_m |a_m b_n(m)| diverges, including n=1.",
+    "falsifier": "A counterexample to the exact finite endpoint identity; a Laguerre normalization making P'-P exceed the fixed-n bound; failure of the cited Bellotti source statements; divergence of the transformed absolute integral for one fixed n; a prime power of the form 6k; or convergence of the positive comparison subseries refutes the corresponding scoped conclusion.",
+    "mathematical_repair": "Future use must carry the exact half-open endpoint convention, explicit absolute derivative bound, fixed-n quantifier order, Bellotti source regime, and natural-order limit. Any n-uniform or reordered statement is a new atom requiring its own proof rather than an extrapolation from this lemma.",
+    "proof_and_source_evidence": "Classical Stieltjes/Abel summation; the explicit generalized Laguerre polynomial normalization and leading coefficient; Bellotti arXiv:2508.02041v1 equations (1.3)-(1.4) and Theorem 1.5; stretched-exponential integrability after u=log t; and the elementary fact that every 6k has distinct prime divisors 2 and 3. The record checker, Git, CI, hashes, schemas, and chronology receive zero mathematical credit.",
+    "scope": "Every fixed integer n>=1 and nonintegral X>=1, original integer order only. Constants may depend on n. No n-uniformity, reordering/regrouping, PR316 rate, Li positivity, novelty, independent review, or RH authority.",
+    "supported_and_competing_causes": "Supported mathematics: if P has fixed degree then P'-P retains controlled polynomial growth, and Bellotti's stretched-exponential decay dominates it after u=log t; separately, the composite progression 6k removes von Mangoldt support while retaining a harmonic-times-log-polynomial kernel. Endpoint-sign error, derivative degree loss, insufficient Bellotti decay, prime-power contamination of 6k, and an exceptional n=1 case are rejected."
+  },
+  "unit_id": "MATH-RH-ABEL-C002-FIXED-N-NATURAL-ORDER-NONABSOLUTE"
+}
