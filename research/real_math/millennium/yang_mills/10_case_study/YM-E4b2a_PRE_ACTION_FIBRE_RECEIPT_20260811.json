@@ -1,0 +1,42 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "YM-E4b2a-PRE-ACTION-20260811T174111Z",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "787c7e00af2a5877ccb715bc807ec14f52974e9c",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "7978b1cb7e782eea87213a3f5b43c0dc143c2014",
+  "task_id": "YM-VERIFIED-DISCOVERY-SPECTRAL-LATTICE-RG",
+  "atom_id": "YM-E4b2a",
+  "context_hash": "8a08239ea57dbc3244388d2ac1ecd7152e9206c755a5d20024c938c2073db426",
+  "fibre_snapshot_hash": "de9667b809f78318ad2a852576e9f94091a5602cbfd5355d582421731619db17",
+  "operator_ids": [
+    "decomposition",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "mathematical_context_translation",
+    "equivalence_similarity",
+    "contextual_theory_gluing",
+    "gap_discovery",
+    "memory",
+    "review",
+    "saturation_stopping"
+  ],
+  "selected_retrievals": [
+    {"retrieval_id": "RAKL_math#133 / YM-E4b2", "authority": "CANONICAL", "payload_hash": "6ccee4bbf6b75ad25f3a0968a18102f6ecdb16ab88d761cd6e8ed31462ab61b7"},
+    {"retrieval_id": "arXiv:2606.19362v1 Appendix D D.5", "authority": "CANONICAL", "payload_hash": "fed2bef4fafac723aa7aa89d5fb0cd3cebf83ba006282703d84cead4e30b60b2"},
+    {"retrieval_id": "RAKL_math PR#130 / YM-E4b1", "authority": "PENDING", "payload_hash": "b4a38263715aaaef3745aa7971d3b14e34f123ed0e613d375663bb7334319b4c"},
+    {"retrieval_id": "SzeChunYiu/RAKL current v3", "authority": "CANONICAL", "payload_hash": "42ade2e74725d6605df6e4bbf634d5069bb3d303a995edf6c85c536ccc89da46"}
+  ],
+  "rejected_retrievals": [
+    {"retrieval_id": "RAKL_math#92 / YM-E2b", "rejection_reason": "physical-time normalization is downstream once the varying-Hilbert map exists; it does not derive D.5"},
+    {"retrieval_id": "RAKL_math#109 / F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE", "rejection_reason": "source-family completeness is downstream of the same-theory Hilbert comparison interface"},
+    {"retrieval_id": "RAKL_math PR#62 / YM-S1a1-C001", "rejection_reason": "fixed-Hilbert spectral exclusion is not evidence for cross-regulator OS-form domination"}
+  ],
+  "predeclared_discriminator": "Search the current primary source arXiv:2606.19362v1 for a prior theorem/estimate whose proved hypotheses imply Appendix-D equation (D.5), sup_k Q_k(F,F) <= M Q_infty(F,F), on the same common A+, regulator sequence, thermodynamic/continuum limits and subsequence. Distinguish exact multiplicative domination/null inclusion from pointwise convergence, uniform moment/tightness bounds, clustering, and additive regulator-equivalence estimates. Outcome is PARTIAL_SUCCESS only if the source-facing obligation is materially narrowed without proving full source binding; SUCCESS requires an exact source-bound derivation of D.5 or an equivalent null-inclusion plus uniform extension theorem.",
+  "allowed_outcome_branches": ["SUCCESS", "PARTIAL_SUCCESS", "FAILURE", "BLOCKED", "UNKNOWN"],
+  "frozen_at_utc": "2026-08-11T17:41:11Z",
+  "sequence_index": 4,
+  "receipt_canonical_sha256": "dd0730ee6f92a88b2efba83473f89ac32bb216e6d5815bc2a524d08df8015500"
+}
