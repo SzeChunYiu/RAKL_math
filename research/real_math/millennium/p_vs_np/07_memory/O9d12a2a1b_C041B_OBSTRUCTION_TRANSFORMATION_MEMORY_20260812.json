@@ -1,0 +1,70 @@
+{
+  "memory_id": "OTM-PNP-C041B-20260812",
+  "source_universe": [
+    "RAKL_math C024 exact local dual result",
+    "RAKL_math C037 exact relevance-loss result",
+    "RAKL_math C041A exact odd-slice zero-augmentation result",
+    "ECCC TR25-033 Definitions 18-21"
+  ],
+  "episodes": [
+    {
+      "episode_id": "OT-PNP-C024-DUALIZE-COVER-20260812",
+      "source_domain": "complexity-theory/two-dimensional-cover",
+      "source_context": "C024 fractional relaxation of the Cavalar-Oliveira Definition-21 cover graph.",
+      "source_obstruction": {
+        "obstruction_id": "O-PNP-C024-PAIR-COST-AGGREGATION",
+        "domain": "complexity-theory",
+        "roles": ["relevant semi-filters", "covering pairs", "feasible dual mass"],
+        "relations": ["pair covers filter iff preservation fails", "pair load is sum of covered dual weights"],
+        "constraints": ["all pair loads <= 1", "dual weights nonnegative"],
+        "failure_mechanisms": ["integral cover choice is globally correlated"],
+        "invariants_to_preserve": ["exact full-cover semantics", "dual feasibility"],
+        "desired_transition": ["expose local residual slack on each pair"],
+        "forbidden_losses": ["do not infer integral approximation quality"]
+      },
+      "transformation_name": "fractional-cover-dualization",
+      "operation": "Replace an integral cover lower-bound search by a feasible weighting on relevant filters and pair-load inequalities.",
+      "preconditions": ["finite exact cover graph", "complete pair side", "complete relevant-filter side"],
+      "resulting_relations": ["dual mass lower-bounds fractional cover and integral cover", "each pair carries an explicit load <=1"],
+      "preserved_invariants": ["Definition-21 coverage incidence", "sound lower-bound polarity"],
+      "known_breakpoints": ["G_NEQ has an unbounded logarithmic integrality gap", "local slack does not imply recursive amplification"],
+      "evidence_pointers": ["research/real_math/millennium/p_vs_np/04_candidates/C024_fractional_semifilter_packing.md"],
+      "authority": "SOURCE_EVENT_VERIFIED",
+      "artifact_hash": "f62e2c87b757ac8cf1602f0523ad4aa6889df469",
+      "lineage_ids": ["T-PNP-FRACTIONAL-SEMIFILTER-PACKING", "F-C024-FRACTIONAL-INTEGRALITY-GAP"]
+    },
+    {
+      "episode_id": "OT-PNP-C041A-SLICE-PROJECT-20260812",
+      "source_domain": "complexity-theory/two-dimensional-cover",
+      "source_context": "C041A odd-slice copy extension under the full Definition-21 cover object.",
+      "source_obstruction": {
+        "obstruction_id": "O-PNP-C041A-RELEVANCE-TRANSPORT",
+        "domain": "complexity-theory",
+        "roles": ["parent complement", "child complement", "relevant semi-filters", "pair incidence"],
+        "relations": ["old objects embed on odd-odd slice", "relevance depends on row/column traces"],
+        "constraints": ["old relevant support must persist", "pair loads must remain feasible"],
+        "failure_mechanisms": ["arbitrary extension can destroy relevance", "pure copy can preserve everything but create zero new capacity"],
+        "invariants_to_preserve": ["source-exact relevance", "old dual feasibility"],
+        "desired_transition": ["make old/new incidence projection explicit"],
+        "forbidden_losses": ["do not equate persistence with augmentation"]
+      },
+      "transformation_name": "odd-slice-projection",
+      "operation": "Embed the old complement on an isolated parity slice and project child subset membership back to the old slice.",
+      "preconditions": ["old complement occupies exactly the odd-odd slice positions assigned to it", "projection/cylinder membership is defined by old-slice intersection"],
+      "resulting_relations": ["pure-copy relevant filters and pair incidences are exact parent images", "old pair load can be read through projection"],
+      "preserved_invariants": ["old relevance in the pure-copy world", "old dual feasibility"],
+      "known_breakpoints": ["pure copy yields ZERO_AUGMENTATION", "off-slice additions require fresh relevance and cross-term checks"],
+      "evidence_pointers": ["research/real_math/millennium/p_vs_np/04_candidates/C041A_ODD_SLICE_COPY_RULE.md", "research/real_math/millennium/p_vs_np/05_falsification/C041A_ODD_SLICE_COPY_FALSIFICATION_20260811.json"],
+      "authority": "SOURCE_EVENT_VERIFIED",
+      "artifact_hash": "3f8cc9f680449b4aea843218fe40d03167911594",
+      "lineage_ids": ["EP-PNP-O9d12a2a1b-C041A-ODD-SLICE-20260811", "F-C041A-COPY-ONLY-COVER-GRAPH-ISOMORPHISM"]
+    }
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/04_candidates/C024_fractional_semifilter_packing.md",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041A_EPISODE_DIAGNOSIS_OBSTRUCTION_20260811.json",
+    "https://eccc.weizmann.ac.il/report/2025/033/"
+  ],
+  "snapshot_hash": "sha256:ae9ac87669e82cc0377b02eca725033918083e919ce621ef95ddd3304b96a649",
+  "storage_authority_note": "Proposal/shadow transformation memory only. SOURCE_EVENT_VERIFIED identifies the source event's local verification status; it does not promote the episode, tool, theorem, target transport, or RAKL authority."
+}
