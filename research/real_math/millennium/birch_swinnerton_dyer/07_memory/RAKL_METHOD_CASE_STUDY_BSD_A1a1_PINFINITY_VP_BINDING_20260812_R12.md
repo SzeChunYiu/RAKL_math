@@ -1,0 +1,60 @@
+# RAKL_METHOD_CASE_STUDY — BSD A1a1 R12 p-infinity/Vp coefficient binding
+
+**Cycle:** `BSD-A1a1-PINFINITY-VP-BINDING-20260812-R12`  
+**Authority:** `PROPOSAL_SHADOW_ONLY`  
+**Root:** `OPEN_NO_SOLUTION_CERTIFICATE`  
+**Cycle-gate framework freeze:** RAKL method `3.0.0` at `9d61749c087994654515b2d087758f0ce0efaeb4`  
+**Current-main reconciliation observed before metrology:** RAKL method `3.0.0` at `2fecf79859d8c378d6b6e1d556e8293b13952815`  
+**Application causal base:** `3871283cfe5040801b174e25b045e05ee0228cc2`
+
+## Atom, signature, and frozen fibre
+
+The active atom remained `BSD-A1a1-THETA-ORDER-COMPARISON`, with the smallest selected child obligation `PINFINITY_SELMER_TO_VP_SELMER_EXACT_COORDINATE_BINDING_OPEN`. The exact problem signature was: same elliptic curve `E/Q`; same technical prime `p` as the already merged Wei Zhang R9 theorem cell; exact complex analytic rank two gives only `corank_Zp Sel_{p^infinity}(E/Q) >= 2` under Zhang's hypotheses; test whether this lower bound transports exactly to the characteristic-zero Bloch--Kato/`V_pE` Selmer coordinate without importing exact Selmer rank, algebraic rank, Sha finiteness, a main conjecture, transverse localization, or BSD leading-term information.
+
+The prospective fibre was frozen before the formal R12 candidate/result. The actual fibre consulted comprised the BSD root contract; the R9 Zhang lower-bound source audit and credited transfer; R10 Katz-axis coordinate-faithfulness warning; R11 structural higher-Gross--Zagier/Kurihara route pruning; the R8 cross-Millennium transformation memory; current RAKL v3 `method_specs.py`, `v3.py`, `math_research_api.py`, and mathematical-research workflow; Kim arXiv:2109.12344v3; Skinner, *Annals of Mathematics* 191 (2020), Section 2.2; and Cesnavicius arXiv:1301.4724 as a representation-consistency cross-check. Fibre snapshot: `sha256:f1cd498b05c1d2dfca66f7f45b8c4a8cedf9b2c33c21b3001527c9f4a12afd0f`.
+
+## Expert cell and delegation
+
+Seven same-context roles were run, with `0/3` independent mathematical-review credit. The analytic-BSD/automorphic role froze the exact R9 input and prohibited rank-two converse overclaim; the Selmer/Galois-cohomology role checked classical Kummer versus Bloch--Kato local conditions; the Iwasawa/Euler-system role audited hidden main-conjecture, nonvanishing, and arithmetic premises; the p-adic-representation role checked `T_pE subset V_pE`, `V_pE/T_pE = E[p^infinity]`, maximal-divisible image, and corank; the adversarial role tested strict/full Selmer substitution, positive-corank quotient, and curve/prime mismatch; the local-to-global/gluing role kept coefficient conversion separate from transverse localization and full BSD glue; and the formal/novelty/provenance role restricted the result to stored/compositional/representation reuse with no new-mathematics or independent-review claim.
+
+## Experience and semantic-shortcut routing
+
+The application memory review retrieved R9, R10, and R11 episodes; two BSD failure records (`F-BSD-A1A1-R8-SOURCE-FAMILY-REIMPORTS-ARITHMETIC-ENTRY` and `F-BSD-A1A1-R10-NAIVE-KATZ-INTERPOLATION-NOT-ORDER-TRANSPORT`); the `CROSS-REPRESENTATION-RELOCATION` pattern; `T-XM-ROOT-BRIDGE-STABILITY-AUDIT`; and two cross-Millennium transformation episodes. R9/R10/R11 materially changed routing: instead of another Heegner/Kolyvagin/p-adic carrier rotation, the cycle selected the already exposed coefficient-coordinate mismatch as the cheapest root-relevant discriminator. R10's coordinate-faithfulness warning forced an exact comparison witness rather than analogy; R11's route-pruning result prevented repeating the structural higher-Gross--Zagier/Kurihara family.
+
+`E-PNP-C042-EXACT-NEIGHBORHOOD-QUOTIENT` was retrieved but rejected because finite adjacency-quotient roles, constraints, and effects do not map to Selmer coefficient systems. `OTEP-LIONS-LOCAL-TO-GLOBAL-TIGHTNESS-SPLIT` was retrieved but rejected as a strict mathematical transfer because spatial escape/tightness is not a `T -> V -> V/T` coefficient comparison; it remained useful only as a discipline for keeping local coefficient validity separate from root-facing gluing. Repeating the structural higher-Gross--Zagier/Kurihara carrier was rejected because R11 had already saturated that route. Missed relevant memory is `CANNOT_MEASURE` because no recall-complete denominator exists.
+
+The v3 obstruction-transform review used invention-last routing. `SEARCH` found a same-domain transformation: identify the classical local Kummer condition with the image of the Bloch--Kato `H_f^1` condition and identify the characteristic-zero global Selmer image with the maximal divisible subgroup of the torsion Selmer group. `JUMP` was not selected because a viable same-domain route existed; `GLUE` was unnecessary for the local coefficient lemma; `LIFT` was blocked as unnecessary. The pre-candidate trace froze `ATOMIZED -> CONTEXT_FROZEN -> ANALOGY_SCAN -> METHOD_TRANSFER_REVIEW -> EXPERT_CONTEXT_REVIEW -> EXPERIENCE_MEMORY_REVIEW -> OBSTRUCTION_TRANSFORMATION_REVIEW -> NEXT_STEP_PROPOSED` before candidate/result materialization.
+
+A later current-framework recheck found RAKL main had advanced to `2fecf79859d8c378d6b6e1d556e8293b13952815`, adding a provenance-bound 15-episode obstruction--transformation corpus and canonical shadow-hash helpers. That corpus was consulted as current-main v3 state. None of its 15 episodes supplied a strict BSD coefficient route: the two `VERIFIED_LOCAL` episodes concern RAKL empirical gate/terminal behavior, one is `SUPERSEDED`, and the remaining structural exemplars are `PROPOSAL_ONLY`; their roles/preconditions/effects fail a BSD DifferenceWitness. Because the R12 same-domain SEARCH route had already been source-bound, the corpus did not change the mathematical action. The historical pre-candidate freeze was not rewritten after framework drift.
+
+## Methods/operators/motifs tried
+
+Canonical process surfaces actually exercised were `decomposition`, `routing`, `search_query_generation`, `source_selection_reliability`, `claim_extraction`, `ontology_terminology_normalization`, `mathematical_context_translation`, `equivalence_similarity`, `contextual_theory_gluing`, `contradiction_diagnosis`, `gap_discovery`, `memory`, `synthesis`, `review`, `saturation_stopping`, and `prompting_context_policy`. The explicit research operators were source-bound exact-sequence comparison, local-condition identity checking, maximal-divisible-subgroup comparison, DifferenceWitness rejection, and counterexample-first coordinate falsification. No strategy motif was promoted or counted as learned. The decision policy was `INVENTION_LAST_SEARCH_SAME_DOMAIN_COEFFICIENT_EXACT_SEQUENCE`.
+
+## Falsifier and verification
+
+The cheapest hostile tests were: a classical/Bloch--Kato local-condition mismatch; a positive-corank quotient beyond the characteristic-zero image; a positive-dimensional kernel that changes corank versus dimension; a different `E`, `p`, or Selmer structure; or a hidden algebraic-rank/Sha/main-conjecture/localization premise. Kim's primary arXiv text gives the same-curve torsion and `V` Selmer definitions and the compact-kernel/cokernel comparison induced by `0 -> T -> V -> V/T -> 0`; Skinner's primary Annals text independently identifies the Kummer local condition as the Bloch--Kato image and the global characteristic-zero Selmer image as the maximal divisible subgroup of the torsion Selmer group. Cesnavicius was used only as a consistency cross-check that the p-infinity Selmer object is controlled by the p-adic Tate module. Mandatory PDF visual screenshot attempts for the Kim and Skinner theorem pages returned backend `Cache miss`, so visual verification is `CANNOT_CHECK`; parsed primary-PDF text and exact source selectors were used instead. This is a tooling/verification limitation, not mathematical counterevidence.
+
+## Outcome and residual
+
+The scoped source-bound result is
+
+`corank_Zp Sel_{p^infinity}(E/Q) = dim_Qp Sel(Q,V_pE) = dim_Qp H_f^1(Q,V_pE)`
+
+for the usual elliptic-curve Kummer/Bloch--Kato Selmer structures. The proof uses the exact coefficient sequence and maximal-divisible subgroup description; no Sha-finiteness premise is needed for this corank/dimension identity. Composing only with the already credited R9 Zhang theorem cell yields the application consequence that, under every R9/Zhang hypothesis, exact complex analytic rank two implies `dim_Qp H_f^1(Q,V_pE) >= 2`.
+
+This closes `PINFINITY_SELMER_TO_VP_SELMER_EXACT_COORDINATE_BINDING_OPEN` and nothing stronger. The residual becomes `SELMER_VP_DIMENSION_LOWER_BOUND_TO_EXACT_DIMENSION2_UPPER_BOUND`, `TRANSVERSE_P_LOCALIZATION_NONZERO`, and `MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_PERIOD_COMPLEX_LEADING_TERM_GLUE_OPEN`. The local coefficient comparison succeeded; the root-facing local-to-global/arithmetic gluing remains open. No new obstruction, lesson, tool, motif, protected authority, or root certificate is created.
+
+## Episode -> diagnosis -> obstruction/lesson separation
+
+Episode `EP-BSD-A1A1-R12-PINFINITY-VP-BINDING-20260812` records what was consulted, tried, observed, checked, and the resulting residual. Diagnosis `DG-BSD-A1A1-R12-COEFFICIENT-BINDING-CLOSED` interprets the result: the p-infinity/`V_p` mismatch was a representation-coordinate issue, not an independent arithmetic obstruction, for the usual Selmer structure. The existing root-facing obstruction `BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE` remains active; no new obstruction is promoted. No lesson is promoted because a single scoped coefficient success does not establish a general method law. Prior R10/R11 representation-relocation failures remain negative history and are not erased by this success.
+
+## Novelty and saturation
+
+The defensible RAKL novelty class is `stored`, with secondary `compositional` and `representation`: the mathematics is source-bound and the new value is closing an explicit application coordinate by composing already known structures. No literature novelty is claimed. Retained application semantic novelty is `KNOWLEDGE=1, OPERATOR=0, EXPERIENCE_PATTERN=0, OBSTRUCTION=0, RELATION=1, PATH=1, META_METHOD=0`. `KNOWLEDGE`, `RELATION`, and `PATH` reopened; `OPERATOR`, `EXPERIENCE_PATTERN`, `OBSTRUCTION`, and `META_METHOD` remained flat. Raw repository growth, tests, hashes, commits, and this case-study prose are not counted as learning.
+
+## What worked, what failed, and framework hypothesis
+
+What worked was v3's exact fibre/coordinate discipline plus SEARCH-before-JUMP/LIFT: it converted a vaguely named representation mismatch into a small source-checkable exact-sequence question, then reused R9 only after the coefficient identity had been separately validated. The main mathematical failure remains the absence of an exact upper-bound/equality or transverse-localization theorem from complex analytic rank two; the main gluing failure remains the path from one-prime Selmer information to Mordell--Weil/Sha/regulator/Tamagawa/torsion/period complex leading-term data. Retrieval/decomposition succeeded in this cycle. Verification was partially tooling-limited by PDF screenshot cache misses. No source failure or formal-verifier failure occurred because no new theorem proof was claimed.
+
+The most concrete proposal-only framework improvement is to add typed `coefficient_carrier` and `Selmer_structure` metadata to mathematical context translation/claim extraction, with an explicit `T -> V -> V/T` and local-condition propagation witness before corank/dimension claims compose across coefficient categories. The new current-main canonical shadow-hash helper should also be used prospectively in future cycles rather than retroactively rewriting frozen historical hashes. The newly added obstruction--transformation corpus improves provenance/coverage accounting, but this cycle exposes a missing domain-specific capability: exact arithmetic coefficient/local-condition transformations are not yet represented as reusable verified episodes. No framework issue or promotion is opened from this single observation.
