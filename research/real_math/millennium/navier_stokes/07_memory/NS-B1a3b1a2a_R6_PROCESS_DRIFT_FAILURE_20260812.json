@@ -1,0 +1,30 @@
+{
+  "schema_version": "process-failure-v3-proposal-shadow-r6",
+  "id": "F-NS-B1a3b1a2a-R6-PROCESS-MIDRUN-FRAMEWORK-SUBJECT-GATE-DRIFT",
+  "cycle_id": "NS-B1a3b1a2a-R6-ANCIENT-SMOOTHING-GLOBAL-LORENTZ-20260812",
+  "authority": "PROPOSAL_SHADOW_PROCESS_EVIDENCE",
+  "category": "TOOLING_FRAMEWORK_VERSION_DRIFT",
+  "observation": {
+    "framework_sha_read_before_mathematics": "8274f51b3c56145b4300435cea0d401c47313756",
+    "framework_sha_observed_at_closeout": "2fecf79859d8c378d6b6e1d556e8293b13952815",
+    "method_version_before_after": "3.0.0",
+    "compare_status": "closeout head is 9 commits ahead",
+    "protected_relevant_changes": [
+      "skills/rakl-core/workflows/mathematical-research.md",
+      "src/rakl/math_research_runtime.py",
+      "src/rakl/v3_runtime.py",
+      "src/rakl/episode_admission.py"
+    ],
+    "new_gate": "Framework-subject gate (issue #385) revalidates authoritative RAKL/main immediately before candidate materialization and fails closed on protected method/gate/schema/runtime drift."
+  },
+  "difference_witness": {
+    "versus_F_NS_B1a4_PROCESS_MIDRUN_RAKL_GATEC_DRIFT": "The earlier failure concerned a new Gate-C obstruction-transformation requirement. This recurrence concerns a newly wired framework-subject revalidation gate that is specifically designed to detect midrun protected-surface drift.",
+    "versus_F_NS_B2a1a1_PROCESS_TRACE_SCHEMA_NONCONFORMANCE": "That failure concerned trace schema validation after materialization; this one concerns framework subject identity changing between freeze and materialization/closeout."
+  },
+  "authority_effect": "No strict latest-current-main discovery-procedure credit is claimed for R6 candidate materialization. Mathematical content remains proposal/shadow and may guide later search only.",
+  "repair": "Next cycle must prospectively bind and revalidate the new framework-subject gate immediately before candidate materialization. If the connector cannot execute it, record CANNOT_EXECUTE and fail closed before candidate generation rather than backfilling.",
+  "repeated_process_failure_links": [
+    "F-NS-B1a4-PROCESS-MIDRUN-RAKL-GATEC-DRIFT",
+    "F-NS-B2a1a1-PROCESS-TRACE-SCHEMA-NONCONFORMANCE"
+  ]
+}
