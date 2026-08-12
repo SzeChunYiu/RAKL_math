@@ -1,1 +1,125 @@
-{"schema_version":"research-trace-continuation-shadow-v3","atom_id":"NS-B1a5","base_anchor":{"rakl_math_base":"3871283cfe5040801b174e25b045e05ee0228cc2","issue":304,"rakl_main":"1b866dc5aafc7e952f4de5acaa75bd3f7b71048e","anchor_hash":"sha256:39278bbed774b0687f520f0ca1bbd4456f24be9e11028af028e691c18a006977"},"events":[{"event_id":"T0","type":"FRAMEWORK_BIND","payload":{"rakl_main":"1b866dc5aafc7e952f4de5acaa75bd3f7b71048e","method_version":"3.0.0","feature":"realization-domain DifferenceWitness"},"prev_event_hash":"sha256:39278bbed774b0687f520f0ca1bbd4456f24be9e11028af028e691c18a006977","event_hash":"sha256:0d370a53f6159cf8cf21cd14b3fde1d24bf0aafcab8e70c942defd1a0f11f599"},{"event_id":"T1","type":"FIBRE_FREEZE","payload":{"issue":304,"context_hash":"sha256:9b7a50d5be7de046e3a7d75b32c46e9facc6ba3a3ca4b44f36f00de7cf3e313d","chronology_credit":"NO prospective hypothesis-generation credit"},"prev_event_hash":"sha256:0d370a53f6159cf8cf21cd14b3fde1d24bf0aafcab8e70c942defd1a0f11f599","event_hash":"sha256:bf5340fc908c1f19c7019157b20aaea33c1da54d760231a63f86bbb9c92a0291"},{"event_id":"T2","type":"MEMORY_ROUTE","payload":{"retrieved":"selected/rejected inventory preserved in TaskEpisode","selected":["F-NS-B1a3-UNCONTROLLED-FAR-FIELD","F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH"],"shadow_priority_only":["PR#288"]},"prev_event_hash":"sha256:bf5340fc908c1f19c7019157b20aaea33c1da54d760231a63f86bbb9c92a0291","event_hash":"sha256:a38dd6d0ed4b5bdd8c3250ea865dfe61e4a18c650a638d7b2ad382c978c08ead"},{"event_id":"T3","type":"SOURCE_BIND","payload":{"AB":"arXiv:1811.00502 current 2026-03-22","PV":"arXiv:2607.09619v2 2026-08-06"},"prev_event_hash":"sha256:a38dd6d0ed4b5bdd8c3250ea865dfe61e4a18c650a638d7b2ad382c978c08ead","event_hash":"sha256:fd817dd93fd6da1ef6664d38b122d389d621f1ff4b80d9be8473331ad1398a0a"},{"event_id":"T4","type":"FALSIFIER_VERIFY","payload":{"candidate_hash":"sha256:ad8c43b3b07037c203b7d387c20d582b59bd4c6aa7c5b70a93c3193f32a35a15","result":"uniform A,C,D,E; infinite slice L3"},"prev_event_hash":"sha256:fd817dd93fd6da1ef6664d38b122d389d621f1ff4b80d9be8473331ad1398a0a","event_hash":"sha256:4cbbb82d41a1229aec53feb77be3ceadcb3892b0af1c20a2e5e7f3b84e285463"},{"event_id":"T5","type":"TARGET_DOMAIN_AUDIT","payload":{"result":"not NSE; zero-before-activation plus nonzero later","local_energy":"not licensed"},"prev_event_hash":"sha256:4cbbb82d41a1229aec53feb77be3ceadcb3892b0af1c20a2e5e7f3b84e285463","event_hash":"sha256:5f3269bd042416567534353a9cd37c36d210347519b47cf5598666052e9e76ad"},{"event_id":"T6","type":"V3_DIFFERENCE_WITNESS_GATE","payload":{"domain":"AMBIENT_REPRESENTATION","verdict":"REPRESENTATION_ONLY","may_weaken_target_obligation":false},"prev_event_hash":"sha256:5f3269bd042416567534353a9cd37c36d210347519b47cf5598666052e9e76ad","event_hash":"sha256:df366edb98eef8c94974ac21ad3cd7d8add1e861a2cf80a35aad19633a2de51d"},{"event_id":"T7","type":"EXPERT_POSTCHECK","payload":{"consensus":"SCOPED_AMBIENT_FALSIFIER_VALID_REPRESENTATION_ONLY","independent_credit":"0/3"},"prev_event_hash":"sha256:df366edb98eef8c94974ac21ad3cd7d8add1e861a2cf80a35aad19633a2de51d","event_hash":"sha256:b8e36fae6a5486d29467dde015618b10c2acd358a4c4aa9d8314985f29ca8dad"},{"event_id":"T8","type":"OUTCOME","payload":{"outcome":"AMBIENT_LEDGER_SLICE_TAIL_FALSIFIER_VALID_REPRESENTATION_ONLY","residual":"TARGET_DOMAIN_NSE_TAIL_BRIDGE_OPEN","root":"OPEN_NO_SOLUTION_CERTIFICATE"},"prev_event_hash":"sha256:b8e36fae6a5486d29467dde015618b10c2acd358a4c4aa9d8314985f29ca8dad","event_hash":"sha256:d3a76ea3968ad567d609b31108ffc53d0950f41194ea51a995a201bddcd33215"}],"head_hash":"sha256:d3a76ea3968ad567d609b31108ffc53d0950f41194ea51a995a201bddcd33215","authority":"PROPOSAL_SHADOW"}
+{
+  "schema_version": "research-trace-continuation-shadow-v3",
+  "atom_id": "NS-B1a5",
+  "base_anchor": {
+    "rakl_math_base": "3871283cfe5040801b174e25b045e05ee0228cc2",
+    "issue": 304,
+    "rakl_main": "1b866dc5aafc7e952f4de5acaa75bd3f7b71048e",
+    "anchor_hash": "sha256:1adc385d1104e6fd5fccdb20a85a8f8a505ce832dd1d3de23937334eb88865b0"
+  },
+  "events": [
+    {
+      "event_id": "T0",
+      "type": "FRAMEWORK_BIND",
+      "payload": {
+        "rakl_main": "1b866dc5aafc7e952f4de5acaa75bd3f7b71048e",
+        "method_version": "3.0.0",
+        "feature": "RealizationDomain + assess_obligation_strength_claim"
+      },
+      "prev_event_hash": "sha256:1adc385d1104e6fd5fccdb20a85a8f8a505ce832dd1d3de23937334eb88865b0",
+      "event_hash": "sha256:9b62e4381ebcf2a773f0965a7a588c6e653afc1947dc1f5237ccb59ec5d2c1ec"
+    },
+    {
+      "event_id": "T1",
+      "type": "FIBRE_FREEZE",
+      "payload": {
+        "issue": 304,
+        "context_hash": "sha256:9b7a50d5be7de046e3a7d75b32c46e9facc6ba3a3ca4b44f36f00de7cf3e313d",
+        "chronology_credit": "NO prospective hypothesis-generation credit"
+      },
+      "prev_event_hash": "sha256:9b62e4381ebcf2a773f0965a7a588c6e653afc1947dc1f5237ccb59ec5d2c1ec",
+      "event_hash": "sha256:f2b03a69106723478493ec2472001701b99ecade7374527e27117e75485b1b82"
+    },
+    {
+      "event_id": "T2",
+      "type": "MEMORY_ROUTE",
+      "payload": {
+        "retrieved_ids": [
+          "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+          "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+          "SHADOW-PR288-SAME-TIME-FAR-L3-TAIL",
+          "EP-NS-B1a4a-PV-INTERFACE-R2-20260812",
+          "NS-B1a3b-geometry-family",
+          "NS-B2-TypeII-family"
+        ],
+        "selected_ids": [
+          "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+          "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH"
+        ],
+        "shadow_priority_only": [
+          "SHADOW-PR288-SAME-TIME-FAR-L3-TAIL"
+        ]
+      },
+      "prev_event_hash": "sha256:f2b03a69106723478493ec2472001701b99ecade7374527e27117e75485b1b82",
+      "event_hash": "sha256:f84be2b3447213adaa7a70b248d0326d68593e7e24ef58aee8965955599c37b3"
+    },
+    {
+      "event_id": "T3",
+      "type": "SOURCE_BIND",
+      "payload": {
+        "AB": "arXiv:1811.00502 current snapshot 2026-03-22",
+        "PV": "arXiv:2607.09619v2 2026-08-06"
+      },
+      "prev_event_hash": "sha256:f84be2b3447213adaa7a70b248d0326d68593e7e24ef58aee8965955599c37b3",
+      "event_hash": "sha256:54835c8f8ff74dacac8f089543f1bfb5e40105e78f5a0dcefa4c6b5ff66bb18b"
+    },
+    {
+      "event_id": "T4",
+      "type": "FALSIFIER_VERIFY",
+      "payload": {
+        "candidate_path": "research/real_math/millennium/navier_stokes/04_candidates/NS-B1a5_PACKET_TRAIN_LEDGER_FALSIFIER_20260812.md",
+        "result": "uniform A,C,D,E; infinite slice L3",
+        "verification": "analytic small/large-r envelope + disjoint-support sum"
+      },
+      "prev_event_hash": "sha256:54835c8f8ff74dacac8f089543f1bfb5e40105e78f5a0dcefa4c6b5ff66bb18b",
+      "event_hash": "sha256:c163ab1f762c516b4336734c3618fefab305a4b46565ca12e8ce14f6c814a1a4"
+    },
+    {
+      "event_id": "T5",
+      "type": "TARGET_DOMAIN_AUDIT",
+      "payload": {
+        "result": "not NSE; zero-before-activation plus nonzero later",
+        "local_energy": "not licensed",
+        "pressure": "p=0 only fills D ledger slot"
+      },
+      "prev_event_hash": "sha256:c163ab1f762c516b4336734c3618fefab305a4b46565ca12e8ce14f6c814a1a4",
+      "event_hash": "sha256:3778d0e984ffdb85566b05866960312e765fbc53b51943d9f16aafd9601ddfa4"
+    },
+    {
+      "event_id": "T6",
+      "type": "V3_DIFFERENCE_WITNESS_GATE",
+      "payload": {
+        "domain": "AMBIENT_REPRESENTATION",
+        "surface": "assess_obligation_strength_claim",
+        "verdict": "REPRESENTATION_ONLY",
+        "may_weaken_target_obligation": false
+      },
+      "prev_event_hash": "sha256:3778d0e984ffdb85566b05866960312e765fbc53b51943d9f16aafd9601ddfa4",
+      "event_hash": "sha256:ddc711d9fedeee4382e03f425271d078eac9ada64cb9b00c48cf6394dd9b1e62"
+    },
+    {
+      "event_id": "T7",
+      "type": "EXPERT_POSTCHECK",
+      "payload": {
+        "expert_path": "research/real_math/millennium/navier_stokes/08_reviews/NS-B1a5_EXPERT_CELL_20260812.json",
+        "consensus": "SCOPED_AMBIENT_FALSIFIER_VALID_REPRESENTATION_ONLY",
+        "independent_credit": "0/3"
+      },
+      "prev_event_hash": "sha256:ddc711d9fedeee4382e03f425271d078eac9ada64cb9b00c48cf6394dd9b1e62",
+      "event_hash": "sha256:02b46af78e2360cec70ff65f0e6ede728fa521956edfcb88146d7e45977714a9"
+    },
+    {
+      "event_id": "T8",
+      "type": "OUTCOME",
+      "payload": {
+        "outcome": "AMBIENT_LEDGER_SLICE_TAIL_FALSIFIER_VALID_REPRESENTATION_ONLY",
+        "residual": "TARGET_DOMAIN_NSE_TAIL_BRIDGE_OPEN",
+        "root": "OPEN_NO_SOLUTION_CERTIFICATE"
+      },
+      "prev_event_hash": "sha256:02b46af78e2360cec70ff65f0e6ede728fa521956edfcb88146d7e45977714a9",
+      "event_hash": "sha256:443d38ab77cb82a9e588e9ecdc2f850e57f73818064e6f28f7acad74aa864536"
+    }
+  ],
+  "head_hash": "sha256:443d38ab77cb82a9e588e9ecdc2f850e57f73818064e6f28f7acad74aa864536",
+  "authority": "PROPOSAL_SHADOW"
+}
