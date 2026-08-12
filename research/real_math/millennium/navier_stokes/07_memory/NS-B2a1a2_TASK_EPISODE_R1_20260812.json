@@ -1,88 +1,57 @@
 {
-  "episode_id": "TE-NS-B2a1a2-R1-20260812",
-  "task_id": "Navier-Blowup-RAKL-Math",
-  "atom_id": "NS-B2a1a2",
-  "problem_signature": [
-    "objects: Seregin prelimit scaled fields V,P with viscosity nu=f(lambda), weighted ledger (2.9), and standard unit-viscosity CKN carriers A/E/C",
-    "relations: F_lambda(a)=f(lambda a)/f(lambda), F<=nu^-1, and exact unit-viscosity coefficient matching",
-    "goal: decide whether (2.9) alone can force a unit-viscosity epsilon-regularity quantity small on a lawful target cylinder"
-  ],
-  "fibre_snapshot_hash": "sha256:d0f1ec0c2bb800fa434030622222803a6fd4758b2d3738751492fa2a8866d2fa",
-  "retrieved_memory": {
-    "failures": [
-      {"id":"F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY","selected":true,"effect":"kept absolute cutoff decay family deprioritized"},
-      {"id":"F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE","selected":true,"effect":"kept local estimate failure separate from global tail/gluing"},
-      {"id":"F-NS-B2a1c-F1-AXIAL-44-EXPONENT-INCOMPATIBLE","selected":false,"reason":"same Type-II producer but a different specialized Euler consumer; retained only as a source-interface warning"}
+  "schema_version": "rakl-v3-task-episode-shadow-envelope-v1",
+  "record_kind": "TASK_EPISODE_PROPOSAL_SHADOW_ENVELOPE",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "inventory_disposition": "NOT_CANONICAL_INVENTORY_ADMITTED: the exact current-schema TaskEpisode payload is nested so this research-cycle shadow record does not mutate the frozen global episode inventory without protected admission.",
+  "task_episode": {
+    "episode_id": "TE-NS-B2a1a2-R1-20260812",
+    "task_id": "Navier-Blowup-RAKL-Math",
+    "atom_id": "NS-B2a1a2",
+    "context_hash": "sha256:d0f1ec0c2bb800fa434030622222803a6fd4758b2d3738751492fa2a8866d2fa",
+    "problem_signature": [
+      "Seregin prelimit fields V,P have viscosity nu=f(lambda), weighted ledger (2.9), and target unit-viscosity CKN carriers A/E/C.",
+      "Decide whether the source ledger alone can force epsilon smallness after exact coefficient and cylinder normalization, without importing moving-radius or Euler-rigidity glue."
     ],
-    "shadow_open_pr_experience": [
-      {"id":"RAKL_math-PR218-NS-B2a1a1","selected":true,"authority":"routing only","effect":"motivated exact quantification of the viscosity/moving-radius cost"},
-      {"id":"RAKL_math-PR219-HILL-ADVERSARY","selected":true,"authority":"falsifier only","effect":"kept moving incoming-core leakage as an orthogonal hostile case"}
+    "fibre_snapshot_hash": "sha256:d0f1ec0c2bb800fa434030622222803a6fd4758b2d3738751492fa2a8866d2fa",
+    "operator_ids": ["decomposition","routing:LIFT","source_selection_reliability","claim_extraction","mathematical_context_translation","equivalence_similarity","contextual_theory_gluing","contradiction_diagnosis","memory","review","saturation_stopping"],
+    "action_trace": [
+      "Bound RAKL 3.0.1 @43897d3afaf0038385102d5acc64793c05ec40f0 and RAKL_math base 4c33934030f98ba81a77b419d2317a1b31173fdc; froze NS-B2a1a2 fibre d0f1ec0c....",
+      "Selected prior failures F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY and F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE, partial-success TE-NS-B2a1c-R2-20260812, motif MOTIF-CONSUMER-ASYMPTOTIC-COMPATIBILITY-FIRST, and shadow PR218/PR219; rejected the specialized B2a1c consumer failure, Type-I family, unlicensed cross-Millennium transfer, and NSE backward-uniqueness transfer to the Euler limit; memory completeness CANNOT_MEASURE.",
+      "Bound Seregin arXiv:2606.29468v1; solved affine unit-viscosity matching c=alpha/nu, beta=alpha^2/nu and lawful target radius r<=a sqrt(nu)/alpha; transported A/E/C/D certificates.",
+      "Counterexample-first endpoint F<=nu^-1 leaves nu^-1/2 floors in derived A/E upper-bound certificates; this is estimate insufficiency only, not lower bounds on the true carriers.",
+      "Separated local normalization failure from moving-radius compactness, pressure/far-field, noncompact symmetry, producer-ancestry and Euler-rigidity gluing residuals; seven-role same-context review gives 0/3 independent-review credit; direct LIFT flattened and root left OPEN."
     ],
-    "motifs": [
-      {"id":"MOTIF-CONSUMER-ASYMPTOTIC-COMPATIBILITY-FIRST","selected":true,"effect":"check the target theorem's exact normalization domain before attempting theorem glue"}
+    "observation_ids": ["OBS-NS-B2a1a2-SCALED-VISCOSITY-NU","OBS-NS-B2a1a2-UNIT-NORMALIZATION","OBS-NS-B2a1a2-MAX-CYLINDER","OBS-NS-B2a1a2-A-E-D-EXPONENTS","OBS-NS-B2a1a2-F-MAX-NU-INVERSE","OBS-NS-B2a1a2-NU-HALF-CERTIFICATE-FLOOR"],
+    "verification_ids": ["VER-NS-B2a1a2-PRIMARY-SEREGIN-PDF","VER-NS-B2a1a2-GENERAL-ALPHA-COEFFICIENT-MATCH","VER-NS-B2a1a2-PRESSURE-D-SCALING","VER-NS-B2a1a2-BEST-F-ENDPOINT-FALSIFIER","VER-NS-B2a1a2-SEVEN-ROLE-SAME-CONTEXT-POSTCHECK"],
+    "outcome": "PARTIAL_SUCCESS",
+    "residual_signature": [
+      "Direct unit-viscosity CKN smallness is not certified from (2.9) alone by this affine normalization route.",
+      "Variable-viscosity/moving-radius compactness, far-field/pressure, producer ancestry, noncompact symmetries and Euler rigidity remain open.",
+      "Root OPEN_NO_SOLUTION_CERTIFICATE; independent mathematical reviews 0/3."
     ],
-    "rejected_families": [
-      {"id":"Type-I finite-I vorticity/critical-element family","reason":"different blow-up normalization and producer equation; not load-bearing for this variable-viscosity exponent audit"},
-      {"id":"cross-Millennium memory","reason":"same-source exact scaling algebra was cheaper; no applicability/DifferenceWitness packet justified a transfer"},
-      {"id":"Euler backward-uniqueness consumer","reason":"equation mismatch: Theorem 3.1 limit is Euler, not unit-viscosity Navier-Stokes"}
+    "evidence_pointers": [
+      "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1a2_CONTEXT_FIBER_R1_20260812.json",
+      "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1a2_C001_VISCOSITY_CKN_NORMALIZATION_AUDIT_R1_20260812.md",
+      "research/real_math/millennium/navier_stokes/08_reviews/NS-B2a1a2_EXPERT_CONTEXT_REVIEW_R1_20260812.json",
+      "research/real_math/millennium/navier_stokes/09_trace/NS-B2a1a2_TRACE_R1_20260812.json",
+      "research/real_math/millennium/navier_stokes/10_case_study/NS-B2a1a2_R1_RAKL_METHOD_CASE_STUDY_20260812.json",
+      "research/real_math/millennium/navier_stokes/10_case_study/NS-B2a1a2_R1_RAKL_CYCLE_METRICS_20260812.json",
+      "RAKL_math#227",
+      "Seregin arXiv:2606.29468v1"
     ],
-    "missed": "CANNOT_MEASURE: no governed exhaustive memory-universe coverage receipt exists for this run."
+    "artifact_hash": "602f2506cc2295f4e8efd3e118b4e1d38dcd71c65ffb28e9abca3e67a63fba44",
+    "timestamp": "2026-08-12T01:37:00Z",
+    "cost": 6.0,
+    "storage_admission": "PROPOSAL_SHADOW_STORED"
   },
-  "operators_and_policy": [
-    "decomposition: isolate normalization cost from moving-radius/global-tail gluing",
-    "routing:LIFT: test the unit-viscosity normalization path selected by issue #227",
-    "source_selection_reliability and claim_extraction: bind Seregin (1.1),(1.7),(2.2),(2.7),(2.9)",
-    "equivalence_similarity: classify all affine alpha/beta/c normalizations and verify alpha-invariant costs",
-    "mathematical_context_translation: translate weighted A_F/E_F/D_F to standard A/E/C/D",
-    "contextual_theory_gluing: require target unit-parabolic cylinder containment before importing epsilon regularity",
-    "contradiction_diagnosis/counterexample-first: maximize F under F<=nu^-1 and test the most favorable certificate",
-    "review/saturation_stopping: stop the direct-LIFT family after invariant nu-loss survives the best F"
-  ],
-  "observations": [
-    "OBS-NS-B2a1a2-SCALED-VISCOSITY-NU",
-    "OBS-NS-B2a1a2-UNIT-NORMALIZATION-c-alpha-over-nu",
-    "OBS-NS-B2a1a2-MAX-CYLINDER-r-a-sqrt-nu-over-alpha",
-    "OBS-NS-B2a1a2-A-E-D-EXPONENTS",
-    "OBS-NS-B2a1a2-F-MAX-NU-INVERSE",
-    "OBS-NS-B2a1a2-NU-HALF-CERTIFICATE-FLOOR"
-  ],
-  "verification": [
-    "VER-NS-B2a1a2-PRIMARY-SEREGIN-PDF",
-    "VER-NS-B2a1a2-GENERAL-ALPHA-COEFFICIENT-MATCH",
-    "VER-NS-B2a1a2-PRESSURE-D-SCALING",
-    "VER-NS-B2a1a2-BEST-F-ENDPOINT-FALSIFIER",
-    "VER-NS-B2a1a2-SEVEN-ROLE-SAME-CONTEXT-POSTCHECK"
-  ],
-  "outcome": "PARTIAL_SUCCESS / DIRECT_CKN_BRIDGE_ESTIMATE_INSUFFICIENT",
-  "residual_signature": [
-    "direct unit-viscosity CKN smallness cannot be certified from (2.9) alone by this lawful normalization architecture",
-    "variable-viscosity/moving-radius compactness remains open",
-    "pressure/far-field and noncompact symmetry leakage remain open gluing coordinates",
-    "prelimit signed/no-incoming-flux and moving-core producer ancestry remain open",
-    "Euler-side rigidity/unique-continuation remains unbound",
-    "root OPEN_NO_SOLUTION_CERTIFICATE; 0/3 independent mathematical reviews"
-  ],
-  "cost_effort_proxy": {"value":6.0,"definition":"six verification blocks: framework/app audit; source binding; coefficient matching; A/E/C/D transport; best-F falsifier; expert/scope review"},
   "episode_diagnosis_obstruction_lesson": {
     "episode": "TE-NS-B2a1a2-R1-20260812",
-    "diagnosis": {"id":"D-NS-B2a1a2-UNIT-VISCOSITY-ASPECT-LOSS","text":"The target unit-parabolic cylinder shrinks by sqrt(nu) relative to the controlled source parabolic scale, and amplitude/time normalization adds invariant negative powers of nu."},
-    "failure": {"id":"F-NS-B2a1a2-DIRECT-CKN-NORMALIZATION-ESTIMATE-INSUFFICIENT","text":"The direct upper certificates from (2.9) cannot be forced below epsilon as nu->0, even at maximal F."},
-    "obstruction": {"id":"O-NS-B2a1a2-F-GAIN-CANNOT-BEAT-NU-ASPECT-COST","text":"F<=nu^-1 leaves at least a nu^-1/2 floor in the derived A/E upper-bound expressions."},
-    "candidate_lesson": {"id":"L-NS-B2a1a2-QUANTIFY-NORMALIZATION-COST-BEFORE-EPSILON-LIFT","authority":"proposal/shadow","text":"Before lifting a variable-coefficient/scaled state into a critical theorem, solve coefficient matching and target-domain geometry exactly; compare every source gain against the induced aspect-ratio cost."},
-    "candidate_motif": {"id":"MOTIF-NORMALIZATION-COST-BEFORE-EPSILON-LIFT","authority":"proposal/shadow"}
+    "diagnosis": "D-NS-B2a1a2-UNIT-VISCOSITY-ASPECT-LOSS",
+    "failure": "F-NS-B2a1a2-DIRECT-CKN-NORMALIZATION-ESTIMATE-INSUFFICIENT",
+    "obstruction": "O-NS-B2a1a2-F-GAIN-CANNOT-BEAT-NU-ASPECT-COST",
+    "candidate_lesson": "L-NS-B2a1a2-QUANTIFY-NORMALIZATION-COST-BEFORE-EPSILON-LIFT",
+    "candidate_motif": "MOTIF-NORMALIZATION-COST-BEFORE-EPSILON-LIFT"
   },
-  "local_vs_gluing_failure": {
-    "local_mathematical_or_representation_failure":"F-NS-B2a1a2-DIRECT-CKN-NORMALIZATION-ESTIMATE-INSUFFICIENT",
-    "separate_local_to_global_gluing_failures":["F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE","moving-radius compactness/rate gap","moving-core producer ancestry/far-field leakage"],
-    "no_conflation": true
-  },
-  "novelty_class": "representation",
-  "evidence_pointers": [
-    "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1a2_C001_VISCOSITY_CKN_NORMALIZATION_AUDIT_R1_20260812.md",
-    "audit blob 8488eb6060eb9d892587a9de7a5e0793b56b4222",
-    "RAKL_math#227",
-    "Seregin arXiv:2606.29468v1"
-  ],
-  "storage_admission": "PROPOSAL_SHADOW_STORED",
-  "authority": "PROPOSAL_SHADOW_ONLY"
+  "local_to_global_gluing_failures_separate": ["F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE","moving-radius compactness/rate gap","pressure/far-field and moving-core producer ancestry leakage"],
+  "novelty_class": "representation"
 }
