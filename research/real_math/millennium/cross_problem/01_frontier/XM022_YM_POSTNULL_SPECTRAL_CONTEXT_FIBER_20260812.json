@@ -1,0 +1,135 @@
+{
+  "schema_version": "rakl-math-context-fiber-shadow-v3",
+  "record_type": "MathContextFiber",
+  "authority": "PROPOSAL_SHADOW_SEARCH_CONTROL_ONLY",
+  "cycle_id": "XM022-HODGE-YM-POSTNULL-SPECTRAL-COVERAGE-20260812",
+  "atom_id": "XM022-YM-POSTNULL-DENSE-SOURCE-SPECTRAL-EXCLUSION",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "method_version": "3.0.0",
+    "package_version": "0.1.0",
+    "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "frozen_base_main_sha": "17208e34bdd55f12c02d9709eab26381f7b479da"
+  },
+  "problem_signature": [
+    "Yang-Mills fixed-cutoff spectral lane after reflection-positivity sub-interface",
+    "same-theory covariance-to-transfer-moment identification remains open",
+    "post-null-quotient source density/cyclicity remains open",
+    "common exponential source-correlation rate must not be confused with full spectral exclusion before exact OS binding",
+    "lattice-spacing/continuum physical mass-gap transport remains separate"
+  ],
+  "active_obstruction": "Determine the exact abstract sufficiency boundary for converting a common exponential moment rate on an OS-reconstructed source family into exclusion of slower excited transfer-matrix modes.",
+  "decomposition": [
+    "BIND_EXACT_POSITIVE_SELFADJOINT_TRANSFER_OPERATOR_ON_EXCITED_SPACE",
+    "BIND_SOURCE_TO_OS_QUOTIENT_VECTOR_MAP",
+    "TEST_POST_NULL_DENSITY_OR_CYCLICITY",
+    "TEST_COMMON_RATE_MOMENT_BOUND",
+    "SEPARATE_FIXED_CUTOFF_SPECTRAL_EXCLUSION_FROM_PHYSICAL_CONTINUUM_GAP"
+  ],
+  "fibre_contents_actually_consulted": {
+    "current_same_domain_failure": [
+      "FM-YM-SAME-THEORY-INTERFACE-AND-DENSITY"
+    ],
+    "solved_or_scoped_analogues": [
+      "MATH-HODGE-C004-PROJECTION-KERNEL-NONIMPLICATION",
+      "MATH-NS-B2A1B2-HILL-FINITE-ENERGY-DENSITY-FALSIFIER"
+    ],
+    "prior_cross_problem_warnings": [
+      "XM006 pointwise-to-diagonal uniformity calibration",
+      "XM020 regulator-normalized gap identification warning"
+    ],
+    "current_lane_records": [
+      "PNP O9d12a2a1b-C049 frozen inert candidate",
+      "RH RH-ANA-003 prime-cancellation residual after RH-ANA-002",
+      "NS Hill finite-energy density falsifier",
+      "Hodge C004 projection-kernel counterexample",
+      "YM R13 retrospective reflection-positivity applicability audit",
+      "BSD R9 Zhang Selmer lower-bound split"
+    ]
+  },
+  "structural_analogy": {
+    "source_atom": "H4d1c-C004 / MATH-HODGE-C004-PROJECTION-KERNEL-NONIMPLICATION",
+    "target_atom": "YM-S1a2 / FM-YM-SAME-THEORY-INTERFACE-AND-DENSITY",
+    "common_abstraction": "Source-side enlargement does not imply downstream coverage when the consumer map has a kernel; progress is measured in the target image/quotient, not source dimension.",
+    "source_to_target_role_mapping": {
+      "Hodge source tangent A subset B": "Yang-Mills controlled Euclidean source class A subset B",
+      "projection p to Hodge-base tangent": "OS quotient/reconstruction map q to excited Hilbert space",
+      "p(B)/p(A) target-image gain": "closure(q(B))/closure(q(A)) spectral-source coverage gain",
+      "unseen Hodge-base direction": "hidden slower excited spectral subspace"
+    },
+    "enabling_assumptions": [
+      "an exact same-theory positive self-adjoint transfer operator T is reconstructed on an excited Hilbert space",
+      "controlled Euclidean sources map to well-defined quotient vectors q(F)",
+      "the correlation quantity under discussion equals or bounds positive moments <q(F),T^n q(F)> at integer time separations",
+      "the exponential rate q0 in (0,1) is common to the source family, while finite prefactors may depend on the source"
+    ],
+    "disanalogies": [
+      "Hodge C004 is finite-dimensional linearized algebraic geometry; OS reconstruction is infinite-dimensional functional analysis",
+      "NS Hill concerns a large-scale energy observable rather than a quotient Hilbert-space source map",
+      "SZZ support-distance covariance decay is not automatically an OS transfer-moment statement",
+      "fixed-lattice transfer spectral exclusion is not the Clay continuum physical mass-gap statement"
+    ],
+    "predicted_principle": "If the post-null source image is dense in the excited Hilbert space and every source vector has a common-q0 positive moment bound, source-dependent finite prefactors should suffice to exclude spectrum above q0; a uniform prefactor is not separately necessary at this abstract stage.",
+    "cheapest_falsifier": "Try to construct a positive self-adjoint contraction T with a dense source set D such that each v in D obeys <v,T^n v> <= C_v q0^n for a common q0<1, yet T has spectral mass in (q0,1]. If impossible by the spectral theorem, freeze the exact proof and isolate which target assumptions remain unbound.",
+    "difference_witness": {
+      "valid_transfer_world": "positive self-adjoint T + dense post-null image + common rate q0",
+      "invalid_nearby_worlds": [
+        "source image is not dense: a hidden slow eigenvector can be orthogonal to all controlled sources",
+        "rate q_v depends on the source and approaches 1 along a dense sequence",
+        "observed covariance is not the transfer moment of the same theory",
+        "continuum normalization is inferred from fixed-cutoff q0 without lattice-spacing control"
+      ]
+    }
+  },
+  "primary_source_provenance": [
+    {
+      "id": "SZZ-ARXIV-2204.12737",
+      "kind": "PRIMARY",
+      "claim_scope": "strong-coupling lattice Yang-Mills infinite-volume uniqueness/functional inequalities/exponential correlation decay; not continuum Clay mass gap",
+      "url": "https://arxiv.org/abs/2204.12737"
+    },
+    {
+      "id": "LUESCHER-DESY-76-054",
+      "kind": "PRIMARY",
+      "claim_scope": "positive transfer-matrix construction for Wilson lattice gauge theory; fixed lattice",
+      "doi": "10.1007/BF01614090",
+      "url": "https://bib-pubdb1.desy.de/record/396349"
+    },
+    {
+      "id": "OSTERWALDER-SCHRADER-1973",
+      "kind": "PRIMARY",
+      "claim_scope": "Euclidean Green-function reconstruction axioms",
+      "doi": "10.1007/BF01645738"
+    },
+    {
+      "id": "OSTERWALDER-SCHRADER-II-1975",
+      "kind": "PRIMARY",
+      "claim_scope": "corrected/extended Euclidean reconstruction conditions",
+      "doi": "10.1007/BF01608978"
+    }
+  ],
+  "success_contract": {
+    "scoped_success": "Prove or refute the abstract dense-source/common-rate spectral-exclusion implication with exact assumptions and preserve a target-side DifferenceWitness.",
+    "not_success": [
+      "proving SZZ decay is already an OS transfer-moment estimate",
+      "proving source completeness in the SZZ theory",
+      "proving a fixed-cutoff physical Hamiltonian mass gap",
+      "proving any lattice-spacing-uniform or continuum Yang-Mills statement",
+      "root closure or novelty certification"
+    ]
+  },
+  "saturation_pre_state": {
+    "KNOWLEDGE": "FLAT_FOR_TARGET_ACTUAL_YM_THEOREM",
+    "OPERATOR": "FLAT",
+    "EXPERIENCE_PATTERN": "REOPENED_BY_HODGE_C004_AND_NS_HILL_CROSS_LANE_COMPARISON",
+    "OBSTRUCTION": "EXISTING_YM_INTERFACE_OBSTRUCTION_ACTIVE",
+    "RELATION": "REOPENED_FOR_EXACT_ABSTRACT_SUFFICIENCY_BOUNDARY",
+    "PATH": "REOPENED_TO_POST_NULL_DENSITY_PLUS_POSITIVE_MOMENT_LEMMA",
+    "META_METHOD": "FLAT"
+  },
+  "chronology_note": "This fibre is frozen before any result-capable repository artifact for XM022. The runtime cannot independently certify when an unpersisted latent hypothesis first occurred, so strict context-first discovery credit is not asserted solely from Git chronology.",
+  "artifact_hash": "sha256:7856a270ed7563f3616e49200a44a284785de89b83818b485efd23381a8ff432"
+}
