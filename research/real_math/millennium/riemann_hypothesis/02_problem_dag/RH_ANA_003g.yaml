@@ -1,0 +1,48 @@
+atom_id: RH-ANA-003g
+parent_atom_id: RH-ANA-003f
+root_issue: 3
+control_issue: 265
+status: RESULT_PROPOSAL_SHADOW_ROUTE_PRUNED
+root_authority: NONE
+
+question: >-
+  For Coffey's natural-source-order prime/Laguerre path, determine before any
+  new asymptotic estimate whether a strict-cut running negative excursion
+  Q_n(Y_n), together with an unconditional exact complement certificate
+  D_n(Y_n), is genuinely weaker than the root-sensitive one-sided endpoint
+  coordinate, or whether sufficiently small D_n makes Y_n an effective endpoint.
+
+result:
+  candidate_id: RH-ANA-003g-C001-EFFECTIVE-ENDPOINT-DICHOTOMY
+  statement: >-
+    For the frozen definitions, (-S_n)_+ <= Q_n(Y)+D_n(Y). Therefore a
+    sufficiently small exact complement makes Q_n-control sufficient for the
+    same one-sided endpoint downside at essentially the same scale; the
+    complement theorem itself does not supply the missing strict-reduction
+    witness.
+  local_math: CLOSED_PROPOSAL_SHADOW
+  gluing_without_complement: OPEN
+  target_domain_strict_reduction: NOT_ESTABLISHED
+  root_status: OPEN_NO_SOLUTION_CERTIFICATE
+
+current_v3:
+  method_version: 3.0.0
+  rakl_main_sha: 5dc0627f039e8f3e1cdcb7e05cd7603860afc554
+  framework_pin_sha: 5dc0627f039e8f3e1cdcb7e05cd7603860afc554
+  difference_witness_gate: R7 ambient hostile path -> REPRESENTATION_ONLY
+  framework_candidate_freeze: CURRENT_UNCHANGED
+  focused_pre_candidate_ci: PASS / run 31568035366
+  independent_review_credit: 0
+
+failure_memory:
+  - F-RH-ANA-003g-COMPLEMENT-FIRST-WEAKENING-FAIL
+  - F-RH-ANA-003g-AMBIENT-WITNESS-CURRENT-V3-REPRESENTATION-ONLY
+
+successor_policy: >-
+  Do not repeat a strict-cut running-negative-excursion/complement-first variant
+  without a new target-domain structural witness. Freeze a non-extremal,
+  source-bound cancellation statistic with TARGET_DOMAIN or
+  TRANSFERRED_WITH_WITNESS realization before estimation, or rotate to a
+  different analytic-number-theory lane.
+
+authority: PROPOSAL_SHADOW_MATHEMATICAL_RESULT_ONLY / NO_RH_THEOREM / ROOT_AUTHORITY_NONE
