@@ -1,0 +1,75 @@
+{
+  "experience": {
+    "failure_id": "F-NS-B1b1-PV-DIRECT-INTERFACE-MISMATCH",
+    "atom_id": "NS-B1b1",
+    "candidate_id": null,
+    "context_packet_hash": "sha256:2d62451fec625e6ee71e9ae9f300c5da1f82597b26933ce60e267030313d4f22",
+    "research_trace_event_id": "NS-B1b1-E09",
+    "method_family": "direct transfer of Pineau–Vicol v2 RSS/RDSS/local near-self-similar rigidity to the Albritton–Barker finite-I Type-I class",
+    "failure_mode": "the source rigidity hypotheses are not inherited from finite local A,C,D,E control or from the known local compactness passage",
+    "residual_signature": [
+      "exact RSS/RDSS symmetry is not forced by finite I",
+      "pointwise Type-I velocity control is not source-derived from finite I",
+      "fixed-annulus pressure L-infinity control is not supplied by D or weak pressure compactness",
+      "no one-slice smallness of the self-similar generator follows from strong L3_loc velocity compactness",
+      "local compactness does not prevent far-field/profile leakage or moving-center noncompactness"
+    ],
+    "broken_assumptions": [
+      "critical integral Type-I control can be substituted for Pineau–Vicol's pointwise Type-I hypothesis without reproving the weighted estimates",
+      "weak L^(3/2)_loc pressure convergence can pass an L-infinity annular hypothesis",
+      "bounded/compact renormalized dynamics must contain a near-stationary time slice",
+      "a Liouville theorem for exact symmetry-locked profiles applies to general finite-I ancient orbits"
+    ],
+    "scope_conditions": [
+      "direct, unmodified application of Pineau–Vicol arXiv:2607.09619v2 Theorems 1.4, 1.7, or 1.9",
+      "target hypothesis is Albritton–Barker finite I / suitable Type-I singularity rather than global pointwise Type-I decay",
+      "only currently source-bound Albritton–Barker compactness/persistence is used",
+      "no additional monotonicity, generator-dissipation estimate, profile decomposition, or far-field tightness theorem is assumed"
+    ],
+    "competing_diagnoses": [
+      "Pineau–Vicol's weighted-enstrophy proof may admit a new finite-I/local-energy localization that removes the pointwise and annular L-infinity assumptions",
+      "a signed/monotone self-similar-time quantity may force a late near-stationary slice",
+      "a genuinely source-valid critical-element theorem for finite I may supply tightness/almost periodicity, but none is currently bound",
+      "the Albritton–Barker global-L3-sequence Liouville route may bypass near-self-similarity entirely"
+    ],
+    "selected_diagnosis": "The 2026 Pineau–Vicol results materially shrink symmetry-locked Type-I scenarios and expose a strong local one-slice rigidity trigger, but finite I currently lacks the exact pointwise/pressure/generator hypotheses needed to activate that trigger. The first transferable target is therefore a finite-I localization audit of the weighted-enstrophy mechanism, not an assertion that Type-I dynamics become self-similar.",
+    "diagnosis_status": "SUPPORTED",
+    "evidence_pointers": [
+      "Pineau–Vicol arXiv:2607.09619v2 Theorems 1.4, 1.7, 1.9 and Remark 1.11",
+      "Albritton–Barker arXiv:1811.00502",
+      "Gallagher–Koch–Planchon arXiv:1012.0145",
+      "research/real_math/millennium/navier_stokes/01_frontier/NS-B1_TYPE_I_IMPLICATION_MATRIX_20260811.md",
+      "issue #56"
+    ],
+    "falsifier_or_attempt": "For each Pineau–Vicol theorem hypothesis, mark whether it is an exact consequence of finite I, Albritton–Barker local compactness, or singularity persistence. Challenge every missing edge with moving-center, periodic/RDSS, pressure-topology, and far-field adversaries.",
+    "observed_result": "No complete hypothesis inheritance chain exists. The new local Theorem 1.9 is closest to the target but still requires stronger pointwise velocity, annular pressure, and one-slice generator controls.",
+    "local_repair_attempts": [
+      "use the weaker Gaussian-weighted L1 generator condition from Pineau–Vicol Remark 1.11 instead of L-infinity generator smallness",
+      "separate pressure localization from far-field pressure summation",
+      "compare global critical-element methods only after explicitly listing profile-decoupling/tightness assumptions"
+    ],
+    "timestamp": "2026-08-11T10:09:00+00:00",
+    "artifact_hash": "sha256:7ab4080a623264e123c6211c244ea8c19d3b160069248c44e70aa30ccc4c3799"
+  },
+  "links": [
+    {
+      "source_id": "F-NS-B1b1-PV-DIRECT-INTERFACE-MISMATCH",
+      "target_id": "F-NS-B1a1-ABSOLUTE-LOCAL-ENERGY-SCALE-CURRENCY",
+      "relation": "ORTHOGONAL_REFINEMENT",
+      "rationale": "The shell-currency failure rejects absolute multiscale budget termination. This issue independently rejects a direct rigidity-theorem transfer; both leave signed/monotone anti-recurrence controls live.",
+      "evidence_pointers": [
+        "PR #54 NS-B1a1_FAILURE_EXPERIENCE_DELTA_20260811.json"
+      ]
+    },
+    {
+      "source_id": "F-NS-B1b1-PV-DIRECT-INTERFACE-MISMATCH",
+      "target_id": "NS-B1b1a",
+      "relation": "MOTIVATES_META_ATOM",
+      "rationale": "Audit whether Pineau–Vicol's local weighted-enstrophy criterion can be reproved under finite A,C,D,E plus suitable-weak pressure hypotheses before seeking a generator-slice extraction theorem.",
+      "evidence_pointers": [
+        "issue #56",
+        "Pineau–Vicol arXiv:2607.09619v2 Section 9"
+      ]
+    }
+  ]
+}

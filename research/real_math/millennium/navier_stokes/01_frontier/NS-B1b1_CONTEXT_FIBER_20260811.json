@@ -1,0 +1,165 @@
+{
+  "atom_id": "NS-B1b1",
+  "object_context": "Source-bound classification of backward rotated self-similar (RSS), discretely self-similar (DSS/RDSS), and one-slice approximately self-similar Type-I Navier–Stokes scenarios using Pineau–Vicol arXiv:2607.09619v2, followed by a target-specific transfer audit from the Albritton–Barker finite-I Type-I singularity/ancient-solution class. This is pre-candidate route discrimination only.",
+  "structural_coordinates": [
+    "original smooth pre-singularity solution versus nontrivial mild bounded ancient blow-up limit",
+    "Albritton–Barker local scale-invariant A,C,D,E control versus Pineau–Vicol pointwise Type-I velocity control",
+    "pressure D in L^(3/2) modulo spatial means versus fixed-annulus L^infinity pressure control",
+    "exact RSS/DSS/RDSS symmetry versus a general renormalized ancient trajectory",
+    "one-slice smallness of the self-similar generator partial_s U versus spacetime compactness without derivative smallness",
+    "strong L^3_loc velocity convergence and weak L^(3/2)_loc pressure convergence versus time-slice and far-field inheritance",
+    "weighted local enstrophy depletion versus uncontrolled vorticity stretching in the general finite-I class",
+    "translation/dilation/rotation noncompactness, moving centers, profile leakage, and recurrence"
+  ],
+  "equivalent_formulations": [
+    "Direct local-interface formulation: exclude a Type-I singular point by verifying all hypotheses of Pineau–Vicol Theorem 1.9 on a rescaled unit cylinder.",
+    "Symmetry-locked formulation: classify whether a rescaled orbit is exact RSS/RDSS and then apply Theorems 1.4/1.7 in their stated parameter regimes.",
+    "Renormalized-flow formulation: extract one late self-similar time with quantitatively small scaling generator in the Gaussian-weighted metric of Remark 1.11, then invoke a source-valid local rigidity criterion.",
+    "Compactness-rigidity formulation: pass a singular rescaling sequence to a nontrivial finite-I ancient solution while preserving pressure/nontriviality, then prove an additional property that activates an established Liouville theorem."
+  ],
+  "solved_analogues": [
+    "Pineau–Vicol arXiv:2607.09619v2 Theorem 1.4: global pointwise Type-I RSS is trivial for sufficiently small or sufficiently large rotation parameter.",
+    "Pineau–Vicol arXiv:2607.09619v2 Theorem 1.7: global pointwise Type-I RDSS is trivial for extreme rotation with lambda sufficiently close to 1 in the exact stated regimes.",
+    "Pineau–Vicol arXiv:2607.09619v2 Theorem 1.9 and Remark 1.11: local pointwise Type-I plus fixed-annulus pressure control and one near-stationary self-similar slice implies regularity.",
+    "Albritton–Barker arXiv:1811.00502 Theorem 1.2: a mild ancient solution with a backward sequence uniformly bounded in global L^3 is zero.",
+    "Gallagher–Koch–Planchon arXiv:1012.0145: global critical-space profile decomposition/critical-element machinery yields minimal blow-up data in L^3/critical Besov settings."
+  ],
+  "near_solved_analogues": [
+    "Chae–Wolf DSS Liouville theorem for discrete similarity factor sufficiently close to 1 under global Type-I bounds, as restated by Pineau–Vicol Theorem 1.6.",
+    "Escauriaza–Seregin–Šverák critical L^infinity_t L^3_x regularity/backward-uniqueness route.",
+    "Kenig–Koch concentration-compactness and rigidity in critical H^(1/2), where a global critical norm and profile decomposition provide compactness structure absent from finite local I."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Pineau–Vicol arXiv:2607.09619v2 local near-self-similarity criterion",
+      "method": "Gaussian/adjoint-weighted L^2 vorticity-enstrophy estimate, propagation of small local enstrophy, then CKN epsilon regularity",
+      "shared_structure": [
+        "parabolic scaling and self-similar coordinates",
+        "local Type-I blow-up geometry",
+        "vorticity stretching is the nonlinear obstruction",
+        "pressure must be localized rather than ignored"
+      ],
+      "required_assumptions": [
+        "smooth solution on B_1 x [-1,0)",
+        "pointwise Type-I velocity bound |u| <= C/(sqrt(-t)+|x|)",
+        "fixed-annulus L^infinity pressure bound",
+        "one late time with small self-similar generator, or the Gaussian-weighted L^1 substitute in Remark 1.11"
+      ],
+      "disanalogies": [
+        "finite Albritton–Barker I supplies critical integral control, not the pointwise velocity bound",
+        "D controls L^(3/2) pressure oscillation, not the required annular L^infinity norm",
+        "Albritton–Barker compactness gives no one-slice smallness of partial_s U",
+        "the finite-I ancient limit is already a bounded smooth ancient solution, so regularity of its endpoint is not the needed Liouville conclusion"
+      ],
+      "repair_question": "Can the weighted-enstrophy argument be localized/reproved with only finite A,C,D,E and a source-valid weak pressure hypothesis, leaving one-slice generator smallness as the sole new trigger?",
+      "source_anchors": [
+        "Pineau–Vicol arXiv:2607.09619v2 Theorem 1.9, Remark 1.11, Sections 9.1–9.3",
+        "Albritton–Barker arXiv:1811.00502 definitions (1.1)–(1.5), compactness lemma, persistence proposition"
+      ]
+    },
+    {
+      "source_context": "Gallagher–Koch–Planchon / Kenig–Koch critical-element Navier–Stokes theory",
+      "method": "minimize a global critical blow-up threshold, profile-decompose minimizing sequences, then obtain a compact critical element modulo symmetries",
+      "shared_structure": [
+        "scale-critical blow-up obstruction",
+        "noncompact dilation/translation symmetry",
+        "compactness-rigidity endgame",
+        "need to prevent profile leakage"
+      ],
+      "required_assumptions": [
+        "a global critical Banach/quasi-Banach norm with a well-posed threshold",
+        "profile decomposition compatible with Navier–Stokes evolution",
+        "norm/energy decoupling sufficient to isolate one minimal profile",
+        "global tail control modulo symmetries"
+      ],
+      "disanalogies": [
+        "I is a supremum of local cylinder functionals rather than a global L^3/Besov norm",
+        "no profile-decoupling or Palais–Smale theorem is source-bound for finite I",
+        "spatially separated/moving profiles can leak outside every fixed compact set",
+        "pressure harmonic/far-field pieces do not have an established orthogonality law for I"
+      ],
+      "repair_question": "Is there any source-valid compactness/tightness functional for the finite-I class that prevents multiple spatial/scale profiles or moving-center leakage without assuming the desired rigidity?",
+      "source_anchors": [
+        "Gallagher–Koch–Planchon arXiv:1012.0145",
+        "Kenig–Koch arXiv:0908.3349",
+        "RAKL_math NS-B1_TYPE_I_IMPLICATION_MATRIX_20260811.md"
+      ]
+    },
+    {
+      "source_context": "Albritton–Barker finite-I ancient-solution equivalence and L^3-sequence Liouville theorem",
+      "method": "singular rescaling to a nontrivial ancient solution, local compactness/persistence, then activate a Liouville theorem with an additional critical trace property",
+      "shared_structure": [
+        "Type-I scale invariance",
+        "ancient blow-up limits",
+        "strong local velocity compactness",
+        "nontriviality persistence through epsilon regularity"
+      ],
+      "required_assumptions": [
+        "uniform local L^3 velocity and L^(3/2) pressure bounds for compactness",
+        "suitable/local-energy structure",
+        "additional backward global L^3 sequence for Theorem 1.2"
+      ],
+      "disanalogies": [
+        "finite I does not imply a global L^3 backward sequence",
+        "local compactness does not control far-field mass",
+        "weak pressure convergence does not pass Pineau–Vicol's annular L^infinity pressure hypothesis",
+        "nontriviality persistence does not imply self-similar or near-stationary orbit structure"
+      ],
+      "repair_question": "Can one extract either a global L^3 backward sequence or a one-slice near-stationary renormalized profile from finite-I dynamics without a new monotonicity/tightness theorem?",
+      "source_anchors": [
+        "Albritton–Barker arXiv:1811.00502 Theorems 1.1–1.2, compactness lemma, persistence proposition",
+        "RAKL_math NS-B1_TYPE_I_IMPLICATION_MATRIX_20260811.md"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "Exact RSS/RDSS is a fixed/periodic symmetry constraint and is not forced by a Type-I bound.",
+    "Pineau–Vicol's pointwise Type-I hypothesis is not interchangeable with finite local A,C,D,E.",
+    "The fixed-annulus pressure L^infinity bound is stronger and topologically different from weak L^(3/2)_loc pressure control modulo means.",
+    "A compact or recurrent renormalized orbit need not contain times at which its time derivative is small; periodic/rotating trajectories are the canonical hostile case.",
+    "Local strong L^3 convergence does not imply far-field tightness or global L^3 convergence.",
+    "Backward uniqueness remains downstream of exact terminal/decay hypotheses and cannot manufacture the missing near-stationary slice."
+  ],
+  "source_anchors": [
+    "Pineau–Vicol, arXiv:2607.09619v2 (2026-08-06), Theorems 1.4, 1.7, 1.9 and Remark 1.11",
+    "Albritton–Barker, arXiv:1811.00502, Theorems 1.1–1.2, compactness and persistence results",
+    "Gallagher–Koch–Planchon, arXiv:1012.0145",
+    "Kenig–Koch, arXiv:0908.3349",
+    "Escauriaza–Seregin–Šverák, 2003 L^infinity_t L^3_x/backward uniqueness",
+    "RAKL_math issue #56 and NS-B1_TYPE_I_IMPLICATION_MATRIX_20260811.md",
+    "RAKL current main 60a38728d0ebace2fa2312bcad81d1d3f9df757c; mathematical-research gate semantics unchanged from application pin 15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "mathematical dynamics / gradient-flow energy-dissipation principle",
+      "source_situation": "When a trajectory has an integrable nonnegative dissipation that controls its time derivative, averaging forces a sequence of late times with small derivative.",
+      "common_abstraction": [
+        "renormalized evolution on a critical state space",
+        "desire to extract a near-stationary time slice",
+        "bounded global budget would convert long-time evolution into small derivative events"
+      ],
+      "source_to_target_mapping": [
+        "dissipation density -> a hypothetical nonnegative functional controlling the self-similar generator partial_s U",
+        "late-time small derivative -> Pineau–Vicol one-slice near-self-similarity trigger",
+        "finite total dissipation -> proposed anti-recurrence/no-recycling currency across self-similar time"
+      ],
+      "shared_constraints": [
+        "scale-critical dynamics",
+        "need a quantitative rather than qualitative recurrence statement"
+      ],
+      "disanalogies": [
+        "no monotone Lyapunov functional or integrable derivative budget is source-bound for general 3D Navier–Stokes self-similar flow",
+        "local-energy absolute terms are scale-critical and PR #54 already shows they do not provide a finite dyadic scale currency",
+        "periodic/RDSS motion can have bounded orbit with derivative bounded away from zero"
+      ],
+      "proposed_principle": "Search only for a source-derived signed/monotone quantity that quantitatively controls the self-similar generator; do not infer near-stationarity from compactness or boundedness alone.",
+      "validation_obligation": "Exhibit a nonnegative or signed-telescoping quantity whose evolution yields an integrable bound on the required weighted norm of partial_s U, or reject the analogy for this atom.",
+      "provenance_note": "Proposal-generation analogy only; creates no Navier–Stokes theorem or transfer authority."
+    }
+  ],
+  "analogy_scan_notes": "One guarded bridge retained: an energy-dissipation extraction pattern suggests the exact missing coordinate, but current Navier–Stokes sources do not provide the needed Lyapunov/dissipation control. The hostile RDSS/rotating case prevents compactness-alone inference.",
+  "frozen_at": "2026-08-11T10:01:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:2d62451fec625e6ee71e9ae9f300c5da1f82597b26933ce60e267030313d4f22"
+}
