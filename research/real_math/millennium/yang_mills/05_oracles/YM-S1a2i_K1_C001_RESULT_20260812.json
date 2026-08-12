@@ -1,0 +1,65 @@
+{
+  "abstract_scalar_proposition": {
+    "authority": "ELEMENTARY_ABSTRACT_PROOF_NOT_FORMALIZED",
+    "conditional_composition_proof": [
+      "From g_{k+1}=g_k-b_0 g_k^3+r_k and |r_k|<=C_beta g_k^5, r_k>=-C_beta g_k^5, hence g_{k+1}>=g_k L(g_k).",
+      "If L(g_k)>=0 and g_k>0, then g_{k+1}>=g_k L(g_k)>=0 and therefore g_{k+1}^2>=g_k^2 L(g_k)^2.",
+      "If M(g_k)>=0, then rho c_K g_k^2+C_K g_k^4<=c_K g_k^2 L(g_k)^2<=c_K g_{k+1}^2.",
+      "Thus the K-ball and one-step estimate imply ||K_{k+1}||_{k+1}<=c_K g_{k+1}^2 only conditionally on the exact O1/O4 source and norm hypotheses."
+    ],
+    "definitions": [
+      "L(g)=1-b_0 g^2-C_beta g^4",
+      "M(g)=L(g)^2-rho-(C_K/c_K)g^2"
+    ],
+    "existence_neighborhood_proof": [
+      "L and M are polynomials, hence continuous at g=0.",
+      "L(0)=1, so choose delta_L>0 such that |g|<delta_L implies |L(g)-1|<1/2 and therefore L(g)>1/2.",
+      "M(0)=1-rho>0, so choose delta_M>0 such that |g|<delta_M implies |M(g)-(1-rho)|<(1-rho)/2 and therefore M(g)>(1-rho)/2.",
+      "Choose epsilon=(1/2) min(delta_L,delta_M)>0. Then 0<g<=epsilon implies both strict inequalities, hence L(g)>=0 and M(g)>=0."
+    ],
+    "statement": "For fixed finite real constants 0<rho<1, c_K>0, C_K>=0, b_0>0 and C_beta>=0, there exists epsilon>0 such that L(g)>=0 and M(g)>=0 for every 0<g<=epsilon.",
+    "target_application_authority": "NONE_WITHOUT_O1_AND_O4"
+  },
+  "artifact_hash": "sha256:fdb67f533bc35574f13335622406a731a67f6459806dc008186cbf877bf35312",
+  "atom_id": "YM-S1a2i-K1",
+  "authorized_order_execution": [
+    {
+      "obligation": "O1-SOURCE-UNIFORMITY",
+      "result": "NOT_DISCHARGED_BY_ACQUIRED_EVIDENCE"
+    },
+    {
+      "obligation": "O4-NORM-AND-SCALE-SCOPE",
+      "result": "NOT_DISCHARGED_BY_ACQUIRED_EVIDENCE"
+    },
+    {
+      "obligation": "O2/O3/O5 target application",
+      "result": "NOT_REACHED_AFTER_FAIL_CLOSED_SOURCE_BRANCH"
+    },
+    {
+      "obligation": "FROZEN-FALSIFIER",
+      "result": "NOT_IMPORTED_NOT_EXECUTED_AFTER_EARLIER_SOURCE_BRANCH"
+    }
+  ],
+  "candidate_artifact_hash": "sha256:702fa0ed51394e882d936ac046a162d8dcbcf89423efe4085d435a1e1f38e28d",
+  "candidate_core_sha256": "sha256:5ea78a8c0440c99aea881020a030677be6fba1ea5b8cd69e3a6e6f26bab5d48f",
+  "candidate_freeze_merge": "eea2fe72f0c06de3612589be0103d0fff5812a87",
+  "candidate_id": "YM-S1a2i-K1-C001-SYMBOLIC-NEXT-RADIUS-MARGIN",
+  "candidate_truth_status": "TARGET_APPLICATION_NOT_ESTABLISHED_NOT_REFUTED",
+  "classified_branch": "SOURCE_UNIFORMITY_OR_NORM_ASSUMPTIONS_INSUFFICIENT",
+  "forbidden_scope_preserved": [
+    "lambda-coordinate repair",
+    "base-map injectivity or full graph transform",
+    "Osterwalder--Schrader reconstruction",
+    "continuum transport",
+    "mass-gap conclusion"
+  ],
+  "formal_proof": false,
+  "independent_review": false,
+  "mathematical_result_credit": "SCOPED_SOURCE_SUFFICIENCY_FAILURE_PLUS_ELEMENTARY_ABSTRACT_LEMMA_ONLY",
+  "novelty_claim": false,
+  "post_freeze_authorization_merge": "cd8ca21bf0cb4b493a374d619d0f3ea5008cf018",
+  "record_type": "YM_K1_C001_SOURCE_FIRST_RESULT",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "separation_of_results": "The abstract scalar proposition is proved for any fixed admissible finite constants. The Yang--Mills target implication is neither established nor refuted because the acquired source evidence does not discharge the antecedent source/norm hypotheses.",
+  "source_wide_status": "UNKNOWN_OUTSIDE_ACQUIRED_INDEXED_TEXT"
+}
