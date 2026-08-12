@@ -1,0 +1,111 @@
+{
+  "schema_version": "hodge-frozen-math-context-v1",
+  "atom_id": "H4d1c-d",
+  "parent_obstruction_id": "H4d1c-INDEPENDENT-HODGE-TO-WITNESS-TANGENT-SURJECTIVITY-MECHANISM",
+  "exact_root_contract": "For every smooth projective complex algebraic variety X and every codimension p, every rational Hodge class of type (p,p) in H^{2p}(X,Q) lies in the Q-span of codimension-p algebraic cycle classes.",
+  "framework": {
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "live_main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0"
+  },
+  "rakl_math_base_sha": "ec8a9eb5eeedaaf1d3f497a8688384256a2079e0",
+  "rakl_math_pre_tree_fingerprint": "git-tree:d210364e7d3985fff499c8da84ccaa530af4a881",
+  "fibre_manifest": {
+    "atom_id": "H4d1c-d",
+    "problem_signature": [
+      "rational Hodge conjecture exact smooth-projective/rational scope",
+      "conditional propagation from an already algebraic signed rational central witness",
+      "first-order branch reachability is the image of dπ_alpha:T_w W_alpha -> T_s T",
+      "open workstate C003 exhibits internal total-witness tangent escape in a fixed P2 conic control",
+      "test whether internal tangent enlargement implies Hodge-base image enlargement"
+    ],
+    "exact_question": "Does a strict enlargement of total-witness internal tangent space over fixed-component factorization certify any enlargement of the image in the Hodge-locus base, hence reopen H4d1c branch reachability?",
+    "falsifier": "If strict source-tangent enlargement forces strict image enlargement under every admissible witness projection to the Hodge branch, the proposed projection-faithfulness no-go fails. Otherwise exhibit an exact linear countermodel and audit the C003 conic control against the root-aligned base map.",
+    "fibre_contents_consulted": [
+      "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: RAKL_VERSION.json",
+      "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: ARCHITECTURE.md",
+      "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: src/rakl/method_specs.py",
+      "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: src/rakl/experience_substrate.py",
+      "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: src/rakl/saturation_vector.py",
+      "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0: issue #6 exact root contract/status",
+      "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0: config/rakl-framework-pin.json",
+      "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0: H4d1_HANDOFF_20260811.md",
+      "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0: H4d1_WITNESS_PROJECTION_CALIBRATION_20260811.md",
+      "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0: H4d1c_OBSTRUCTION_REGISTER_20260811.json",
+      "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0: H4d1b_C001_TASK_EPISODE_20260811.json",
+      "RAKL_math PR #197 proposal/shadow H4d1c-C001 rational-coefficient cancellation",
+      "RAKL_math PR #226 proposal/shadow H4d1c-C002 fixed-component fibre-product non-expansion",
+      "RAKL_math PR #250 proposal/shadow H4d1c-C003 total-witness conic tangent escape (exact head add0cb2c7be0c54cd29a199dabde699efe61bb92; CI success)",
+      "Kloosterman arXiv:2104.14845",
+      "Nishinou arXiv:2009.01651",
+      "Movasati arXiv:2211.11405",
+      "Liu-Shen arXiv:2602.13951"
+    ],
+    "selected_experience_ids": [
+      "H4d1_WITNESS_PROJECTION_CALIBRATION_20260811",
+      "H4d1c-INDEPENDENT-HODGE-TO-WITNESS-TANGENT-SURJECTIVITY-MECHANISM",
+      "H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE",
+      "H4d1c-C002-FIXED-COMPONENT-FIBRE-PRODUCT-NONEXPANSION",
+      "H4d1c-C003-TOTAL-WITNESS-CONIC-TANGENT-ESCAPE"
+    ],
+    "rejected_experience_ids": [
+      {
+        "id": "H4d1a same-detector branch no-go family",
+        "reason": "valid negative history but the active discriminator concerns projection to the base after witness-space enlargement, not detector injectivity"
+      },
+      {
+        "id": "Liu-Shen-2602.13951-as-algebraic-witness-lifting-theorem",
+        "reason": "current Hodge-bundle/Hodge-locus context does not supply the required cycle-incidence projection surjectivity"
+      },
+      {
+        "id": "cross-Millennium projection analogies",
+        "reason": "no cross-problem transfer is needed; the exact same-context H4d1 projection interface already supplies the discriminator"
+      }
+    ],
+    "missed_prior_experience": "NONE_OBSERVED_BY_THIS_CYCLE_WITHIN_BOUNDED_SEARCH. However, the enumerated C003 fibre in open PR #250 does not list the canonical current-main H4d1_WITNESS_PROJECTION_CALIBRATION_20260811.md, whose base-map distinction is decision-relevant; this is recorded as a workstate retrieval/routing caution, not as mathematical refutation of C003.",
+    "operators_motifs_tried": [
+      "counterexample-first linear projection test",
+      "same-context structural relation audit: internal tangent versus target/base image",
+      "positive-source control via flag-Hilbert projection in Kloosterman",
+      "coefficient/category guard",
+      "downstream higher-order/algebraization/monodromy/gluing separation"
+    ],
+    "expert_cell": [
+      {
+        "role": "Hodge/VHS lead",
+        "background": "variations of Hodge structure and Hodge loci",
+        "delegation": "bind the target tangent to the Hodge-locus base rather than the witness parameter itself"
+      },
+      {
+        "role": "Hilbert/Chow deformation lead",
+        "background": "Hilbert/Chow spaces and deformation of subschemes",
+        "delegation": "separate internal witness tangent enlargement from the differential of the incidence projection"
+      },
+      {
+        "role": "flag-incidence geometry lead",
+        "background": "flag Hilbert schemes and complete-intersection incidence",
+        "delegation": "audit Kloosterman as a source-family positive control where the witness space actually projects to the varying ambient hypersurface base"
+      },
+      {
+        "role": "obstruction/formal lead",
+        "background": "Artin deformation and algebraization boundaries",
+        "delegation": "ensure first-order projection success is not conflated with higher-order lifting or algebraization"
+      },
+      {
+        "role": "coefficient/category lead",
+        "background": "algebraic cycles with rational coefficients and realization maps",
+        "delegation": "preserve signed rational witness semantics and reject effective-cycle substitution"
+      },
+      {
+        "role": "adversarial verification/RAKL lead",
+        "background": "proof-gap falsification, v3 experience authority and metrology",
+        "delegation": "run the cheapest countermodel, classify failure type, and enforce shadow-only authority and zero independent-review credit"
+      }
+    ],
+    "authority": "PROPOSAL_SHADOW_ONLY"
+  },
+  "fibre_snapshot_hash": "sha256:2f930c58e98ed89b8e52485ab52260760b86bc72bf7a8a9164dcbb34b8883c3b",
+  "frozen_at": "2026-08-12T03:08:42Z",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "context_hash": "sha256:71efd5d7f147b0904309fd297217ba6f30bdbcaa9c762c0408b16c6b8b50cda1"
+}
