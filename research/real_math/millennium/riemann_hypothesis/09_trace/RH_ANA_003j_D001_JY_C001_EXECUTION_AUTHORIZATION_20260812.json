@@ -1,0 +1,90 @@
+{
+  "artifact_hash": "sha256:74a46f4ac7101292452ae6e3c12e311c15f5b95ec60f22ed3f49677278809bc2",
+  "authority": {
+    "mathematical_lesson": false,
+    "mathematical_result": false,
+    "operational_authorization_only": true,
+    "proof": false,
+    "software_or_governance_credit_units": 0
+  },
+  "authorization_id": "RH-ANA-003j-D001-JY-C001-EXACT-EXECUTION-AUTHORIZATION-20260812",
+  "candidate_id": "RH-ANA-003j-D001-JY-C001-DIRECT-ENVELOPE",
+  "chronology": {
+    "authorization_commit_sha": null,
+    "authorization_merge_sha": null,
+    "base_is_evaluator_identity_merge": true,
+    "base_sha": "6425952ad6e7a079adad0a68e93b90fe8b8f9a47",
+    "evaluator_imported_or_executed": false,
+    "present_on_active_main": false,
+    "result_accessed": false
+  },
+  "current_round": {
+    "allowed_action": "COMMIT_AND_MERGE_AUTHORIZATION_ONLY",
+    "evaluator_import_or_execution_authorized": false,
+    "result_classification_authorized": false
+  },
+  "exact_bindings": {
+    "candidate": {
+      "path": "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_ANA_003j_D001_JY_C001_DIRECT_ENVELOPE_CANDIDATE_FREEZE_20260812.json",
+      "raw_sha256": "ba83993220dd2b587330bbee7000f7e50c7a7fad3ee50c0c7051b9f1a7b7a885"
+    },
+    "dependency_contract": {
+      "path": "requirements-test.txt",
+      "raw_sha256": "2fd4159c5094a92d7d31b611c275eee49908132b015d8ce3e940ce49829dba22"
+    },
+    "evaluator": {
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/rh_ana003j_d001_jy_c001_evaluator.py",
+      "raw_sha256": "55c73c2975924683ed537d394af75475022a6703a7a63c9d3a7c46bfeac31267"
+    },
+    "evaluator_identity": {
+      "artifact_hash": "sha256:da6fead2da96c2fd570aeb432d19904f601e9659f3000555083f748ae0775524",
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_JY_C001_EVALUATOR_IDENTITY_FREEZE_20260812.json",
+      "raw_sha256": "93cc82fa7f03effd3be2f589932d95752fedf763bc765074e683d028d5287799"
+    },
+    "falsifier": {
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_JY_C001_FALSIFIER_FREEZE_20260812.json",
+      "raw_sha256": "7e59f54cbde76bd3b1149ff7b03e6c101c6ee63146a71f13c5d271d773d629bb"
+    },
+    "prior_authorization": {
+      "path": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003j_D001_JY_C001_EVALUATION_AUTHORIZATION_20260812.json",
+      "raw_sha256": "99a224ceca4ecced628fd998f0ec2306744b79b283110d7b6d7a767ab8cee4c0"
+    },
+    "public_inputs": {
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_JY_C001_PUBLIC_VALIDATION_INPUTS_20260812.json",
+      "raw_sha256": "fd0f8f73abf53b54a004ec8ff8bfb9da1592b92cf625cad7c01a31f077b6d7a4"
+    }
+  },
+  "forbidden": [
+    "numerical B_JY, m_JY, or M_JY values",
+    "numerical natural-order remainder tests",
+    "epsilon_n selection",
+    "diagonal cutoff C selection",
+    "moving-diagonal or internal-prefix comparison",
+    "candidate/falsifier/public-input mutation",
+    "novelty, independent-review, Li-positivity, or RH claim"
+  ],
+  "frozen_at_utc": "2026-08-12T15:40:00Z",
+  "post_merge_authorization": {
+    "activation_condition": "A successor result round must bind this authorization raw SHA-256 and its exact active-main merge SHA before importing or executing the evaluator.",
+    "allowed_evaluator_raw_sha256": "55c73c2975924683ed537d394af75475022a6703a7a63c9d3a7c46bfeac31267",
+    "evaluator_import_and_execution_authorized": true,
+    "fixed_public_validation_authorized": true,
+    "high_precision_corroboration_authorized": true,
+    "materialize_exact_computable_symbolic_M_algorithm_authorized": true,
+    "planted_world_validation_authorized": true,
+    "precision_dps": 100,
+    "relative_tolerance": "1e-70",
+    "symbolic_derivation_receipt_authorized": true
+  },
+  "record_type": "RH_ANA003J_D001_JY_C001_EXACT_EXECUTION_AUTHORIZATION",
+  "result_requirements": [
+    "Separate the exact substitution proof from direct-quadrature-versus-gammainc numerical corroboration.",
+    "Prove coefficient identities exactly and monotonicity only on u>=U_JY(n), retaining +1.515.",
+    "Handle integer endpoints with Y*=Y+1/2 and the direction B(log Y*)<=B(log Y).",
+    "Explain strict remainder <epsilon from the frozen B<=epsilon/2 definition and all-real threshold.",
+    "Materialize the exact computable least-integer-search algorithm for m_JY and M_JY without evaluating any numerical M value.",
+    "Record a seven-field mathematical lesson; Git, CI, schemas, hashes, and serialization receive zero mathematical lesson credit."
+  ],
+  "schema_version": "1.0.0",
+  "status": "FROZEN_INERT_UNTIL_THIS_AUTHORIZATION_IS_MERGED_TO_ACTIVE_MAIN"
+}
