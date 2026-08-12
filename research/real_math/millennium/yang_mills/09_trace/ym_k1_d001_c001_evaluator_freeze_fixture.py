@@ -9,7 +9,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[5]
-PARENT_MAIN_SHA = "6d191b91d2201e28ba2a505dad7b5a9515e54605"
+PARENT_MAIN_SHA = "aa638612b920236822fc7e321c02209ef3c79bb9"
 FRAMEWORK_SHA = "d21592b0ff8da988deabb923fd549891ff8ad9f0"
 CANDIDATE_ID = "YM-S1a2i-K1-D001-C001-TWO-STAGE-SOURCE-BRIDGE"
 EVALUATOR = ROOT / "research/real_math/millennium/yang_mills/05_oracles/ym_k1_d001_c001_two_stage_evaluator.py"
@@ -74,6 +74,19 @@ def build_document() -> dict[str, Any]:
                 "APPLICABLE_BRIDGE requires Stage-A compatibility and exact full-interval Stage-B predicates.",
             ],
         },
+        "prospective_specification_binding": {
+            "candidate_path": "research/real_math/millennium/yang_mills/04_candidates/YM-S1a2i_K1_D001_C001_TWO_STAGE_SOURCE_BRIDGE_FREEZE_20260812.json",
+            "candidate_core_sha256": "sha256:fb50ccd8ca6079c7827d812fc6d3b2cf5136cc2196ed0fb3aba9da525bdfb71e",
+            "declarative_falsifier_path": "research/real_math/millennium/yang_mills/05_oracles/YM-S1a2i_K1_D001_C001_INERT_FALSIFIER_FREEZE_20260812.json",
+            "declarative_falsifier_core_sha256": "sha256:a0d1f2c25d7c836a047b670cc536f919497b0a7f967e3e77b4d82da22875abb5",
+            "authorization_path": "research/real_math/millennium/yang_mills/09_trace/YM-S1a2i_K1_D001_C001_POSTMERGE_EVALUATION_AUTHORIZATION_20260812.json",
+            "authorization_artifact_hash": "sha256:9793a66cc131483dd25bf05fa1cd1f7d06476f6847eaf80b471b8816698861e7",
+            "prospectively_frozen_conflated_c_branch": (
+                "The PR405 candidate and declarative world froze C_dom=C_force=C, 0<rho<1, "
+                "c_K=4C/(1-rho)>C and branch STRONGER_PREMISE_MISMATCH_A before the later local source audit."
+            ),
+            "contamination_assessment": "GENERIC_BRANCH_LOGIC_PREEXISTED_RESULT_ACCESS; TARGET_EVIDENCE_AND_CLASSIFICATION_NOT_EMBEDDED",
+        },
         "planted_world_receipt": worlds,
         "all_planted_worlds_match": all(row["match"] for row in worlds),
         "chronology_boundary": {
@@ -81,10 +94,12 @@ def build_document() -> dict[str, Any]:
             "evaluator_bytes_publicly_frozen_before_any_future_authorized_execution": True,
             "prior_local_unpublished_result_commit": "25c0271d6a0f379cad4dab3c2a4be56d732f5a00",
             "prior_local_result_access_preceded_public_evaluator_byte_freeze": True,
+            "prior_local_source_audit_executed": True,
             "strict_rakl_discovery_chronology_for_prior_generation": False,
             "future_reproduction_must_be_labeled_retrospective_not_prospective_discovery": True,
         },
         "current_round_state": {
+            "scope": "THIS_PUBLISHED_EVALUATOR_FREEZE_ROUND_ONLY",
             "source_audit_executed": False,
             "target_stage_a_evaluated": False,
             "target_stage_b_evaluated": False,

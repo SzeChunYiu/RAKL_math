@@ -1,7 +1,7 @@
 {
   "all_planted_worlds_match": true,
   "allowed_next_action": "Merge evaluator identity without target evaluation; then freeze a separate retrospective-reproduction authorization bound to these bytes.",
-  "artifact_hash": "sha256:067fdaf01adaa0e0a97e3877a2997afcc4f6c9e9112b968b19140db597814404",
+  "artifact_hash": "sha256:4069ff6c98470828b021d495918acb0a611abec5b97b962a1fdd4c14721ad162",
   "authority": {
     "evaluator_identity_frozen": true,
     "grants_independent_review": false,
@@ -17,11 +17,13 @@
     "evaluator_was_specified_by_pr405_and_authorized_for_implementation_by_pr407": true,
     "future_reproduction_must_be_labeled_retrospective_not_prospective_discovery": true,
     "prior_local_result_access_preceded_public_evaluator_byte_freeze": true,
+    "prior_local_source_audit_executed": true,
     "prior_local_unpublished_result_commit": "25c0271d6a0f379cad4dab3c2a4be56d732f5a00",
     "strict_rakl_discovery_chronology_for_prior_generation": false
   },
   "current_round_state": {
     "g_star_selected": false,
+    "scope": "THIS_PUBLISHED_EVALUATOR_FREEZE_ROUND_ONLY",
     "source_audit_executed": false,
     "target_result_recorded": false,
     "target_stage_a_evaluated": false,
@@ -42,7 +44,7 @@
   },
   "framework_sha": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
   "freeze_id": "YM-S1a2i-K1-D001-C001-EVALUATOR-IDENTITY-FREEZE-20260812",
-  "parent_main_sha": "6d191b91d2201e28ba2a505dad7b5a9515e54605",
+  "parent_main_sha": "aa638612b920236822fc7e321c02209ef3c79bb9",
   "planted_world_receipt": [
     {
       "expected_branch": "APPLICABLE_BRIDGE",
@@ -69,6 +71,16 @@
       "world_id": "WORLD-CANNOT-CHECK-UPSTREAM-CONSTANTS"
     }
   ],
+  "prospective_specification_binding": {
+    "authorization_artifact_hash": "sha256:9793a66cc131483dd25bf05fa1cd1f7d06476f6847eaf80b471b8816698861e7",
+    "authorization_path": "research/real_math/millennium/yang_mills/09_trace/YM-S1a2i_K1_D001_C001_POSTMERGE_EVALUATION_AUTHORIZATION_20260812.json",
+    "candidate_core_sha256": "sha256:fb50ccd8ca6079c7827d812fc6d3b2cf5136cc2196ed0fb3aba9da525bdfb71e",
+    "candidate_path": "research/real_math/millennium/yang_mills/04_candidates/YM-S1a2i_K1_D001_C001_TWO_STAGE_SOURCE_BRIDGE_FREEZE_20260812.json",
+    "contamination_assessment": "GENERIC_BRANCH_LOGIC_PREEXISTED_RESULT_ACCESS; TARGET_EVIDENCE_AND_CLASSIFICATION_NOT_EMBEDDED",
+    "declarative_falsifier_core_sha256": "sha256:a0d1f2c25d7c836a047b670cc536f919497b0a7f967e3e77b4d82da22875abb5",
+    "declarative_falsifier_path": "research/real_math/millennium/yang_mills/05_oracles/YM-S1a2i_K1_D001_C001_INERT_FALSIFIER_FREEZE_20260812.json",
+    "prospectively_frozen_conflated_c_branch": "The PR405 candidate and declarative world froze C_dom=C_force=C, 0<rho<1, c_K=4C/(1-rho)>C and branch STRONGER_PREMISE_MISMATCH_A before the later local source audit."
+  },
   "record_type": "YM_K1_D001_C001_EVALUATOR_IDENTITY_FREEZE",
   "schema_version": "1.0.0"
 }
