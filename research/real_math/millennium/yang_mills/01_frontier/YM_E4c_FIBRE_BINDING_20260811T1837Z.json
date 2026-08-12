@@ -1,0 +1,72 @@
+{
+  "schema_version": "ym-v3-fibre-binding-v1",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "atom_id": "YM-E4c",
+  "signature": "YM-E4c-FS-O4-RIEMANN-SUM-NORMALIZATION",
+  "chronology": {
+    "durable_prospective_contract": "RAKL_math#141",
+    "contract_frozen_at": "2026-08-11T18:22:26Z",
+    "note": "Issue #141 predates this cycle's primary-source repair probe. This file serializes that already-frozen contract after execution and does not backfill an earlier file-level pre-action receipt."
+  },
+  "framework": {
+    "rakl_method_version": "3.0.0",
+    "rakl_main_sha": "3299072b410ac9136548dfd103e846fc7656c31e",
+    "rakl_software_package_version": "0.1.0",
+    "rakl_constitution_epoch": "v3-authority-hardening-20260811",
+    "application_framework_pin": "787c7e00af2a5877ccb715bc807ec14f52974e9c",
+    "adoption_mode": "CURRENT_MAIN_READ_DIRECTLY_PROPOSAL_SHADOW"
+  },
+  "application": {
+    "rakl_math_base_sha": "812addd25a7f34d3c6272143e21d5d7db34539aa",
+    "rakl_math_base_tree": "a91d0a08925690b85e1046bfef1729911d76e351",
+    "root_contract_blob_sha": "1b09055d655a28375b894a9a94b63ad54fa3abc1",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "problem_signature": [
+    "repair or falsify the written O(4)-restoration bridge in Faizal-Shabir Proposition 4.6 without reconstructing missing definitions from memory",
+    "audit the a_k scaling in equations (4.42), (4.46)-(4.51)",
+    "type-check the arbitrary g in O(4) action on a hypercubic-lattice gauge configuration before using finite-cutoff measure invariance",
+    "preserve the same gauge-invariant Schwinger family, reflection-positive construction and continuum subsequence when gluing any local repair into OS1"
+  ],
+  "actual_fibre": {
+    "primary_source": "Mir Faizal and Arshid Shabir, arXiv:2606.19362v1, 9 June 2026",
+    "primary_source_url": "https://arxiv.org/pdf/2606.19362",
+    "source_surfaces_consulted": [
+      "PDF p.82, Section 7.2 finite-hypercubic-to-O(4) sentence",
+      "PDF pp.484-487, Lemma 4.5 and Proposition 4.6",
+      "PDF p.511, lattice field/configuration-space definition",
+      "PDF p.5, standing hypercubic bond/configuration-space definition"
+    ],
+    "equations_consulted": ["4.31", "4.33", "4.36", "4.42", "4.46", "4.47", "4.48", "4.49", "4.50", "4.51"],
+    "success_contract_source": "RAKL_math#141",
+    "same_context_roles": [
+      "constructive-QFT/OS reconstruction",
+      "lattice gauge geometry and RG scaling",
+      "functional analysis and continuum symmetry",
+      "gauge-covariant observable representation",
+      "adversarial source verification",
+      "RAKL-v3 assurance/metrology"
+    ]
+  },
+  "analogues_and_disanalogies": {
+    "analogue": "standard hypercubic lattice actions are exactly invariant under lattice automorphisms and can recover larger Euclidean symmetry only through a proved continuum-restoration argument",
+    "disanalogies": [
+      "exact invariance under the finite hypercubic subgroup is not invariance under arbitrary O(4)",
+      "a continuum rotation of test functions is not automatically an action on link variables indexed by hypercubic bonds",
+      "local exponential decay does not by itself supply the missing a_k^4 normalization or define an off-lattice rotated gauge configuration",
+      "an O(4)-restoration estimate is an OS1 gluing lemma, not a mass-gap theorem"
+    ]
+  },
+  "residual_before": [
+    "R1_O4_RESTORATION_RIEMANN_SUM_NORMALIZATION",
+    "R2_ARBITRARY_O4_LATTICE_ACTION_TYPECHECK",
+    "R3_SAME_LIMITING_SCHWINGER_FAMILY_OS1_GLUING"
+  ],
+  "falsifiers": [
+    "combine the literal factors in (4.47) and (4.49); if no compensating a_k^4/cancellation is source-bound, (4.50) does not follow",
+    "choose g in O(4) outside the hypercubic lattice automorphism group; if g^{-1} dot A is not defined on the same link configuration space, (4.36)-(4.37) are not type-checked",
+    "reject any repair that changes regulator, gauge quotient, observable family or continuum subsequence without an explicit same-theory comparison"
+  ],
+  "fibre_manifest_hash": "sha256:29ce4b6423fd90604b6effc5d686ac9aaf7dcc6399455a0efe17c9bd41cd1de1",
+  "fibre_manifest_hash_basis": "sha256(canonical JSON of the compact manifest recorded in the cycle metrics; this serialization contains explanatory fields beyond that compact basis)"
+}
