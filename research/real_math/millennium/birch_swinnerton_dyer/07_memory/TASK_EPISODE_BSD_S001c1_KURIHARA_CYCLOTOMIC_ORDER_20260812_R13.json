@@ -1,0 +1,164 @@
+{
+  "schema_version": "shadow-task-episode-v3-bsd-r13",
+  "record_type": "TaskEpisode",
+  "episode_id": "EP-BSD-S001C1-R13-KURIHARA-CYCLOTOMIC-ORDER-AUDIT-20260812",
+  "cycle_id": "BSD-S001c1-KURIHARA-CYCLOTOMIC-ORDER-AUDIT-20260812-R13",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "framework": {
+    "method": "Research Audit Kernel Lattice v3",
+    "version": "3.0.0",
+    "git_sha": "44058e21e16b085b421638fadad5086e31472f0f"
+  },
+  "application": {
+    "base_sha": "58de5548d337d4ea3c83b5fcde6ed5c6aee3f2e0",
+    "base_tree_sha": "39b36449e1a55d95182264498792c3479e17adbd"
+  },
+  "atom": {
+    "id": "BSD-S001c1-KURIHARA-TAYLOR-COMPARISON",
+    "signature": [
+      "complex analytic rank exactly two",
+      "discrete Kurihara order versus p-primary Selmer corank",
+      "cyclotomic p-adic L-function order as a possible upper-bound carrier",
+      "forbid circular BSD/analytic-rank equality/p-adic BSD/Sha-finiteness/height-nondegeneracy imports"
+    ],
+    "fibre_snapshot_hash": "sha256:64ad8c7c676e2fb959cb36573efcb8b3ca530a764521a2f1711c8e01c2df9932"
+  },
+  "fibre_consulted": [
+    "RAKL_VERSION.json and src/rakl/method_specs.py at framework main",
+    "RAKL_math open_obligations.yaml at application base",
+    "RAKL_math R12 metrology and method case study",
+    "RAKL_math current BSD route diagnostic",
+    "Chan-Ho Kim, arXiv:2203.12159v6, Theorem 1.9 / Corollaries 1.13-1.14 / Section 1.9 comparison",
+    "bounded current primary-literature search for exact complex-to-discrete or complex-to-cyclotomic order comparison"
+  ],
+  "memory": {
+    "retrieved_ids": [
+      "EP-BSD-A1A1-R12-PINFINITY-VP-BINDING-20260812",
+      "DG-BSD-A1A1-R12-COEFFICIENT-BINDING-CLOSED",
+      "BSD-S001c1-KURIHARA-TAYLOR-COMPARISON",
+      "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE",
+      "BSD-A1a1-THETA-ORDER-COMPARISON"
+    ],
+    "selected_ids": [
+      "EP-BSD-A1A1-R12-PINFINITY-VP-BINDING-20260812",
+      "DG-BSD-A1A1-R12-COEFFICIENT-BINDING-CLOSED",
+      "BSD-S001c1-KURIHARA-TAYLOR-COMPARISON"
+    ],
+    "rejected_or_deferred": [
+      {
+        "id": "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE",
+        "reason": "current DAG marks it deferred; S001c1 is the active higher-information global comparison atom"
+      },
+      {
+        "id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+        "reason": "repeat anticyclotomic scalar-order scan is locally saturated and does not address the active discrete/global order coordinate"
+      }
+    ],
+    "missed_relevant": "CANNOT_MEASURE: no recall-complete denominator exists"
+  },
+  "methods": {
+    "canonical_process_surfaces": [
+      "decomposition",
+      "routing",
+      "search_query_generation",
+      "source_selection_reliability",
+      "claim_extraction",
+      "ontology_terminology_normalization",
+      "mathematical_context_translation",
+      "equivalence_similarity",
+      "contextual_theory_gluing",
+      "contradiction_diagnosis",
+      "gap_discovery",
+      "memory",
+      "synthesis",
+      "review",
+      "saturation_stopping",
+      "prompting_context_policy"
+    ],
+    "v3_search_modes": {
+      "SEARCH": "SELECTED: same-domain primary-source theorem/status audit",
+      "JUMP": "REJECTED: same-domain sources already expose the relevant coordinate cut",
+      "GLUE": "ATTEMPTED_AND_BLOCKED: complex s-order cannot be glued to cyclotomic X-order or discrete Kurihara order without a translation theorem; full BSD leading-term glue separately open",
+      "LIFT": "NOT_ENTERED: no candidate invention justified after source-bound obstruction localization"
+    },
+    "operators": [
+      "exact-variable binding",
+      "theorem-hypothesis audit",
+      "DifferenceWitness",
+      "counterexample-first shortcut falsification",
+      "local-to-global theorem-chain cut",
+      "negative-history preserving route selection"
+    ],
+    "motifs_tried": [
+      "three-coordinate order comparison",
+      "invention-last same-domain search"
+    ]
+  },
+  "decision_policy": "INVENTION_LAST__ACTIVE_DAG_ATOM_FIRST__EXACT_VARIABLE_BINDING",
+  "observations": [
+    "Kim's discrete Kurihara invariant exactly determines Selmer corank under source hypotheses when finite.",
+    "The direct complex relation retained in the application layer is parity, not exact arbitrary-rank order equality.",
+    "Kato's standard one-sided upper-bound route uses the cyclotomic p-adic L-function order, not the complex s-order.",
+    "No bounded primary-source hit supplied r_C=2 => r_K=2 or r_C=2 => r_p<=2 without root-strength assumptions."
+  ],
+  "falsifier": {
+    "test": "inspect the analytic variable and assumptions in the claimed upper-bound route",
+    "result": "DIRECT_COMPLEX_UPPER_BOUND_SHORTCUT_REFUTED_AS_SOURCE_BINDING",
+    "why": "the source-bound inequality terminates at the cyclotomic p-adic vanishing order; a complex-to-cyclotomic comparison is still missing"
+  },
+  "verification": {
+    "primary_source": "arXiv:2203.12159v6",
+    "pdf_pages_visually_checked": 2,
+    "numerics_used_as_proof": false,
+    "same_context_expert_roles": 7,
+    "independent_review_credit": "0/3",
+    "formal_verifier": "NOT_APPLICABLE: no new theorem proof claimed"
+  },
+  "outcome": {
+    "status": "SOURCE_BOUND_THREE_ORDER_COORDINATE_CUT__ROOT_OPEN",
+    "novelty_class": "representation",
+    "secondary_novelty_class": "compositional relation diagnosis",
+    "new_mathematics_claimed": false,
+    "root_certificate": false
+  },
+  "residual_before": [
+    "KURIHARA_OR_EQUIVALENT_DISCRETE_ORDER_TO_COMPLEX_TAYLOR_ORDER_OPEN",
+    "TRANSVERSE_P_LOCALIZATION_NONZERO",
+    "FULL_BSD_LEADING_TERM_GLUE_OPEN"
+  ],
+  "residual_after": [
+    "COMPLEX_TAYLOR_ORDER_TO_DISCRETE_KURIHARA_ORDER_EXACT_COMPARISON_OPEN",
+    "COMPLEX_S_ORDER_2_TO_CYCLOTOMIC_PADIC_X_ORDER_LE2_OPEN",
+    "TRANSVERSE_P_LOCALIZATION_NONZERO_DEFERRED",
+    "FULL_BSD_LEADING_TERM_GLUE_OPEN"
+  ],
+  "failure_category": {
+    "local_mathematical": "NO: local discrete-to-Selmer theorem cell survives",
+    "retrieval": "NO_LOAD_BEARING_FAILURE: bounded search found the decisive source, but search non-hit is not nonexistence",
+    "decomposition": "NO",
+    "representation": "YES: three nonidentical order coordinates",
+    "gluing": "YES: missing complex-to-cyclotomic/discrete translation and full leading-term composition",
+    "source": "NO",
+    "verification": "NO: load-bearing PDF pages visually checked",
+    "tooling": "NO_CONSEQUENTIAL_FAILURE",
+    "meta_policy": "YES: action-prior calibration cannot receive causal credit because pre-memory prior and rebound current fibre do not share an exact fibre hash"
+  },
+  "saturation": {
+    "KNOWLEDGE": "REOPENED",
+    "OPERATOR": "FLATTENED",
+    "EXPERIENCE_PATTERN": "FLATTENED",
+    "OBSTRUCTION": "FLATTENED_EXISTING_OBSTRUCTION_SHARPENED",
+    "RELATION": "REOPENED",
+    "PATH": "FLATTENED",
+    "META_METHOD": "FLATTENED"
+  },
+  "cost_effort_proxy": {
+    "model_tokens": "CANNOT_MEASURE: runtime exposes no authoritative per-cycle counter",
+    "tool_calls": "CANNOT_MEASURE: no prospective centralized tool-call counter frozen",
+    "retrieval_calls": "CANNOT_MEASURE: no prospective centralized retrieval counter frozen",
+    "wall_time": "CANNOT_MEASURE: no monotonic run timer frozen",
+    "primary_pdf_visual_pages": 2
+  },
+  "next_action": "Search specifically for a primary theorem comparing complex Taylor order with either discrete Kurihara order or cyclotomic p-adic order under non-root-strength hypotheses; otherwise preserve the obstruction and rotate only after bounded source-family saturation."
+}
