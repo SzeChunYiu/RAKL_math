@@ -1,0 +1,85 @@
+{
+  "bridge_edges": [
+    {
+      "edge_id": "C049-B1",
+      "enabling_assumptions": [
+        "overlap witness",
+        "swapped reduction retained",
+        "legal cover polarity"
+      ],
+      "interface_map": "one exact row collision with a faithful swapped reduction is only a precondition for testing one coupling mechanism",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "overlap nonemptiness",
+      "target_coordinate": "cover obstruction"
+    },
+    {
+      "edge_id": "C049-B2",
+      "enabling_assumptions": [
+        "uniformity",
+        "explicitness",
+        "source theorem alignment"
+      ],
+      "interface_map": "requires uniform superlogarithmic lower bound and exact complexity bridge",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "cover obstruction",
+      "target_coordinate": "P versus NP"
+    }
+  ],
+  "cheapest_hostile_world": "syntax aligns exactly but every surviving parent formula is satisfiable",
+  "known_disanalogies": [
+    "overlap classification is not root progress",
+    "one collision is not cover growth",
+    "failure at bounded k does not prove global impossibility"
+  ],
+  "obligations": [
+    {
+      "description": "construct or rule out H_k intersection P_(k+1)",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "C049-O1"
+    },
+    {
+      "description": "supply a cover lower-bound mechanism",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "C049-O2"
+    },
+    {
+      "description": "discharge asymptotic and complexity bridge",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "C049-O3"
+    }
+  ],
+  "prior_failure_ids": [
+    "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT",
+    "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING"
+  ],
+  "receipt_canonical_sha256": "6fe4fd870888198b04e107292b11ca9f72d28143171f3506c1857e25cb0b0821",
+  "receipt_id": "PNP-C049-ROOT-COORDINATE-PRESERVATION-20260812",
+  "registered_observations": [
+    {
+      "projected_state": "collision-iff-overlap",
+      "registered_downstream_outcome": "overlap existence not classified",
+      "state_id": "C048"
+    },
+    {
+      "projected_state": "overlap-unresolved",
+      "registered_downstream_outcome": "root open",
+      "state_id": "C049-pre"
+    }
+  ],
+  "reverification_triggers": [
+    "decoder or padding changes",
+    "split changes",
+    "the reduction map changes",
+    "a bounded miss is generalized",
+    "a new witness family is proposed"
+  ],
+  "root_claim_id": "O9d12a2a1b-C049",
+  "root_coordinate": "explicit superlogarithmic full-cover family with circuit and P-versus-NP bridge",
+  "schema_version": "root-coordinate-preservation-receipt-v1",
+  "source_authority": "PROPOSAL_ONLY",
+  "surrogate_coordinate": "whether H_k intersects P_(k+1) for the exact C041 canonical grammar and UNSAT suffix condition",
+  "target_authority": "PROPOSAL_ONLY"
+}
