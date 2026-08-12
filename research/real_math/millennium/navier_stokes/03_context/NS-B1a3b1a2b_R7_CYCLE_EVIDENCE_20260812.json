@@ -1,0 +1,90 @@
+{
+  "schema_version": "proposal-shadow-rakl-v3-cycle-evidence-r7",
+  "cycle_id": "NS-B1a3b1a2b-R7-SUMMATION-TAIL-20260812",
+  "atom_id": "NS-B1a3b1a2b-R7",
+  "parent_atom_id": "NS-B1a3b1a2b",
+  "authority": "PROPOSAL_SHADOW_ROUTING_GLUING_ONLY",
+  "root": {"issue": "RAKL_math#4", "status": "OPEN_NO_SOLUTION_CERTIFICATE", "proof_dag_closed": false, "independent_mathematical_reviews": "0/3", "root_promotion_attempted": false},
+  "framework_source_of_truth": {"repository": "SzeChunYiu/RAKL", "main_sha_read_before_math": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554", "method_version": "3.0.0", "software_package_version": "0.1.0", "constitution_epoch": "v3-authority-hardening-20260811", "version_manifest_evidence_cutoff_main_sha": "0cea6cc39a3cf67ef7ecff3fff9a704944c32ab8", "inspected": ["docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md", "skills/rakl-core/workflows/mathematical-research.md", "src/rakl/math_research_runtime.py", "src/rakl/method_specs.py", "src/rakl/summation_compatibility.py", "RAKL_VERSION.json"]},
+  "rakl_math_base": "451d9506d365f06eb314323523ba123edd3ffb32",
+  "framework_pin_at_base": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+  "pre_state_fingerprint": "sha256:d4dff87d6795cb447f9b3c87ae4b95c54198402294e7db9bd11d4756f67cd681",
+  "post_semantic_fingerprint": "sha256:9f1e7652364ad617a534a34b927770472691075b2b86ea81eff2dd75bc13df7f",
+  "atom_fibre_snapshot_hash": "sha256:22f01b3ab6dbc9ce636aa24ca68fd2f1f171593c72e48fcfcb2768ddc1cf1d6a",
+  "actual_fibre": {
+    "problem_signature": "For a whole-space mild bounded ancient 3D Navier-Stokes solution with finite Albritton-Barker I=A+C+D+E, determine the exact summation/tail condition needed to glue radius-indexed fixed-time vorticity superlevel estimates into a global weak-L^{3/2} bound, and audit whether the registered finite-I source or near-solved critical-element analogues supply that condition.",
+    "producer": ["mild bounded ancient NSE on R^3 x (-infinity,0)", "finite Albritton-Barker I=sup_Q(A+C+D+E)", "R6 source-valid ancient smoothing and fixed-time packing bound m_lambda(R)<=C I M^4 R lambda^-3"],
+    "consumer": ["global weak-L^{3/2} vorticity amplitude", "no observation-radius dependence after B_R increases to R^3"],
+    "structural_coordinates": ["monotone exhaustion", "annular tail summability", "critical scaling", "local Morrey versus global integrability", "pressure/far-field rescue coordinate", "translation/dilation/profile noncompactness"],
+    "success_contract": "Produce a source-valid radius-uniform distribution estimate with lambda^(-3/2) scaling, or a source-valid summable annular tail/tightness theorem implying it.",
+    "failure_contract": "Any route whose only cumulative B_R estimate retains an unbounded radius envelope is insufficient by itself for the global Lorentz consumer."
+  },
+  "analogues_disanalogies": [
+    {"source": "Albritton-Barker finite-I Type-I ancient class, arXiv:1811.00502v2", "shared": "exact producer class", "effect": "uniform local scale-critical A,C,D,E", "difference_witness": "global Type-I norms such as L^{3,infinity} are listed as sufficient for finite I; the deliberately weaker finite-I notion does not supply the converse global norm or tail summability"},
+    {"source": "Gallagher-Koch-Planchon critical-element/profile decomposition, arXiv:1012.0145", "shared": "translation/dilation noncompactness in NSE", "effect": "compactness/minimality in global L^3/Besov state spaces", "difference_witness": "requires a globally finite critical norm and profile decoupling absent from finite I"},
+    {"source": "bounded ancient caloric/shear Liouville analogy", "shared": "ancientness can suppress backward linear modes", "difference_witness": "3D vorticity stretching and nonlocal velocity coupling remove the scalar linear maximum-principle structure"}
+  ],
+  "expert_cell": [
+    {"role": "ancient NSE/Type-I analyst", "finding": "finite I is an all-parabolic-ball local ledger; no source-global tail theorem was found"},
+    {"role": "Lorentz/Morrey harmonic analyst", "finding": "global weak-L^{3/2} requires sup_R m_lambda(R)<infinity for each lambda; any Phi(R)->infinity fails to identify this"},
+    {"role": "concentration-compactness analyst", "finding": "critical-element transfer is blocked by the missing global critical norm/profile-decoupling precondition"},
+    {"role": "vorticity-geometry analyst", "finding": "amplitude remains distinct from morphology/direction consumers"},
+    {"role": "pressure/nonlocality analyst", "finding": "D is local pressure-oscillation control; pressure remains a possible rescue coordinate but no annular-tail theorem is source-bound"},
+    {"role": "analogy/method-transfer analyst", "finding": "no SEARCH/JUMP theorem transfer survives all source preconditions"},
+    {"role": "adversarial verifier/metrology analyst", "finding": "the current proposal-only SummationCompatibilityWitness fail-closes the gluing step; same-context review earns zero independent-review credit"}
+  ],
+  "dual_memory_review": {
+    "retrieved_ids": ["PR165-NS-B1a3b1a1-R3-SAME-SLAB-EXACT-NSE-SEPARATOR", "PR170-NS-B1a3b1a2-R4-SCALING-LIFT-SHADOW", "L-NS-B1a3b1a2a-TEMPORAL-PERSISTENCE-CONVERTS-E-TO-PACKING", "RAKL#384-SummationCompatibilityWitness-v1", "F-NS-B1a3b1a2a-ANCIENT-SMOOTHING-STILL-LINEAR-PACKET-CAPACITY", "O-NS-B1a3b1a2a-LINEAR-PACKET-CAPACITY-GLOBAL-LORENTZ", "G-NS-B1a3b1a2-LOCAL-DERIVATIVE-TO-GLOBAL-LORENTZ", "F-NS-B1a3-UNCONTROLLED-FAR-FIELD"],
+    "selected_ids": ["F-NS-B1a3b1a2a-ANCIENT-SMOOTHING-STILL-LINEAR-PACKET-CAPACITY", "O-NS-B1a3b1a2a-LINEAR-PACKET-CAPACITY-GLOBAL-LORENTZ", "L-NS-B1a3b1a2a-TEMPORAL-PERSISTENCE-CONVERTS-E-TO-PACKING", "RAKL#384-SummationCompatibilityWitness-v1"],
+    "rejected": [{"id": "PR165-NS-B1a3b1a1-R3-SAME-SLAB-EXACT-NSE-SEPARATOR", "why": "temporal-edge discriminator already served upstream role"}, {"id": "PR170-NS-B1a3b1a2-R4-SCALING-LIFT-SHADOW", "why": "history/scaling route does not supply annular convergence"}, {"id": "G-NS-B1a3b1a2-LOCAL-DERIVATIVE-TO-GLOBAL-LORENTZ", "why": "warning diagnosis, not a transformation"}, {"id": "F-NS-B1a3-UNCONTROLLED-FAR-FIELD", "why": "too coarse to identify exact summation obligation"}],
+    "missed": "CANNOT_MEASURE: no complete denominator over canonical plus proposal/shadow memory is exposed through the connector.",
+    "routing_effect": "The R6 failure plus current summation witness changed the first action from seeking a generic sublinear packet-count gain to testing exact infinite-exhaustion compatibility."
+  },
+  "obstruction_transformation_review": {
+    "fingerprint": {"roles": ["local radius-indexed distribution", "monotone exhaustion", "global Lorentz consumer", "annular tail"], "relation": "B_R estimates must glue through R->infinity to finite global superlevel measure", "failure_mechanisms": ["unbounded sparse packet count", "non-summable annular upper bounds", "missing global critical norm"], "desired_transition": "radius-uniform distribution or summable annular tail", "forbidden_losses": ["fixed-ball substitution", "assumed compact support/tightness", "treat o(R) as O(1)", "import L^3 compactness without its global norm"]},
+    "SEARCH": {"status": "NO_VIABLE_MATCH", "reason": "R6 packing does not break exhaustion; critical-element source loses its global-norm precondition"},
+    "JUMP": {"status": "NO_VIABLE_MATCH", "reason": "linear-heat ancient rigidity loses vorticity-stretching/nonlocal preconditions"},
+    "GLUE": {"status": "NO_VIABLE_MATCH", "reason": "packing plus profile compactness cannot compose before the missing global state-space/tail interface exists"},
+    "LIFT": {"status": "NOT_LICENSED", "reason": "cross-problem coverage and actual NSE-specific pressure/ancestry/no-incoming mechanisms are not exhausted"},
+    "selected_route": "CANNOT_CHECK",
+    "pre_candidate_action": "SUMMATION_COMPATIBILITY_AUDIT"
+  },
+  "summation_compatibility_witness": {
+    "schema_version": "summation-compatibility-witness-v1",
+    "witness_id": "SCW-NS-B1a3b1a2b-R7-GLOBAL-LORENTZ-20260812",
+    "witness_canonical_sha256": "ee54ef7976a96c7bf4c8e8139b7781eda87f8e0ad2f041838548cb8ada391e31",
+    "source_accumulation_method": "Monotone B_R exhaustion, equivalently dyadic nonnegative annular decomposition.",
+    "convergence_status": "UNKNOWN",
+    "finite_grouping_permitted": "YES",
+    "infinite_regrouping_reordering_permitted": "YES",
+    "nested_limit_order": "Fix t and lambda; derive a source-valid B_R estimate; take R->infinity by monotone convergence; only then take the lambda supremum.",
+    "local_block_definition": "A_j=B_(2^(j+1))\\B_(2^j), m_j=|A_j intersect {|omega(t)|>lambda}|.",
+    "block_tail_or_convergence_theorem_required": "Need sum_j m_j<infinity with <=C lambda^(-3/2), equivalently sup_R m_lambda(R)<infinity. Any cumulative Phi(R)->infinity is insufficient.",
+    "alternate_summation_equivalence_proof": "Countable additivity/Tonelli identifies the global nonnegative superlevel mass with the increasing-ball limit and annular sum in [0,infinity]; finiteness is unresolved.",
+    "gluing_status": "FAIL_CLOSED_UNKNOWN",
+    "authority_claim": "ROUTING_GLUING_ONLY_NOT_THEOREM",
+    "unknown_fields": ["convergence_status"]
+  },
+  "verification": {
+    "consumer_semantics": "m_lambda(R) is monotone in R and global superlevel measure is lim_R m_lambda(R); weak-L^{3/2} requires a radius-uniform scale-correct bound.",
+    "counterexample_first_thinning": "An infinite equal-threshold packet family may be placed arbitrarily sparsely, so its cumulative count can grow slower than any prescribed unbounded envelope while global superlevel mass stays infinite. This is representation-only, not an NSE counterexample.",
+    "scaling": "I and the weak-L^{3/2} vorticity quasi-norm are critical; an observation-radius factor cannot be removed dimensionally.",
+    "pressure": "kept open as a separate possible equation-specific rescue; no pressure-tail implication claimed.",
+    "endpoints_derivative_loss_circularity": "no endpoint interpolation, derivative-gain bootstrap or epsilon-regularity iteration used."
+  },
+  "outcome": "GLOBAL_LORENTZ_REQUIRES_BOUNDED_EXHAUSTION_OR_SUMMABLE_ANNULAR_TAIL",
+  "residual": "RES-NS-B1a3b1a2b-R7-SOURCE_VALID_TAIL_SUMMABILITY_OR_ALTERNATE_CONSUMER",
+  "episode": {"episode_id": "E-NS-B1a3b1a2b-R7-20260812", "artifact_hash": "315fc74691c22cca7acbc9215f82bf7ff43d8216d30cea9a71e0fa1d4710a747", "outcome": "ROUTE_REFINED_TRUE_TAIL_SUMMABILITY_REQUIRED", "residual_signature": "Need an actual finite-I ancient-NSE radius-uniform/summable annular vorticity tail or a different compatible consumer.", "cost": {"tokens": "CANNOT_MEASURE", "tool_calls": "CANNOT_MEASURE_TOTAL", "wall_seconds_proxy": 1152.0}},
+  "diagnosis": {"id": "D-NS-B1a3b1a2b-R7", "category": "GLOBAL_SUMMATION_TARGET_MISSPECIFICATION_REFINED", "statement": "The missing object is true tail summability/radius-uniformity, not merely sublinear packet growth."},
+  "failure": {"id": "F-NS-B1a3b1a2b-UNBOUNDED-RADIUS-ENVELOPE-NOT-LORENTZ", "authority": "OBSERVED_ONLY_PROPOSAL_SHADOW", "category": "LOCAL_TO_GLOBAL_SUMMATION_GLUING_FAILURE", "scope": "Routes whose only global information is m_lambda(R)<=C(lambda)Phi(R) with Phi(R)->infinity; does not refute equation-specific tightness/no-incoming/pressure/ancestry mechanisms."},
+  "obstruction": {"id": "O-NS-B1a3b1a2b-ANNULAR-TAIL-SUMMABILITY", "statement": "Global weak-L^{3/2} identification needs an l1-type annular tail or equivalent radius-uniform distribution control."},
+  "lesson": {"id": "L-NS-B1a3b1a2b-TEST-SUMMABILITY-BEFORE-DIMENSION-GAIN", "authority": "CANDIDATE", "statement": "For unbounded-domain local-to-global transfers, test the exact infinite-exhaustion contract before optimizing local growth exponents."},
+  "motif": {"id": "M-NS-LOCAL-MORREY-TO-GLOBAL-LORENTZ-NEEDS-L1-TAIL", "authority": "PROPOSAL_SHADOW_PATTERN", "statement": "Uniform bounded-ball control can leave an infinite sparse tail; global Lorentz identification needs summability/tightness."},
+  "successful_reuse_ids": ["RAKL#384-SummationCompatibilityWitness-v1", "F-NS-B1a3b1a2a-ANCIENT-SMOOTHING-STILL-LINEAR-PACKET-CAPACITY", "L-NS-B1a3b1a2a-TEMPORAL-PERSISTENCE-CONVERTS-E-TO-PACKING"],
+  "novelty_class": {"summation_target_refinement": "representation", "source_transfer_rejection": "transfer", "root_theorem": "NONE"},
+  "canonical_method_specs_surfaces_invoked": ["decomposition", "routing", "search_query_generation", "source_selection_reliability", "claim_extraction", "mathematical_context_translation", "equivalence_similarity", "contextual_theory_gluing", "contradiction_diagnosis", "gap_discovery", "memory", "review", "saturation_stopping", "prompting_context_policy"],
+  "protected_runtime_status": {"plan_math_research": "CANNOT_EXECUTE: connector exposes repository state but not installed RAKL Python runtime", "candidate_generation_allowed": "CANNOT_CHECK", "action_taken": "pre-candidate source/context/memory/shortcut/summation-routing only; no theorem/lemma candidate minted"},
+  "trace": [
+    "ATOMIZED", "CONTEXT_FROZEN", "ANALOGY_SCAN", "METHOD_TRANSFER_REVIEW", "EXPERT_CONTEXT_REVIEW", "EXPERIENCE_MEMORY_REVIEW", "OBSTRUCTION_TRANSFORMATION_REVIEW", "NEXT_STEP_PROPOSED", "SUMMATION_COMPATIBILITY_REVIEW", "RESULT_RECORDED", "RESIDUAL_OPENED"
+  ]
+}
