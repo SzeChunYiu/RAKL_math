@@ -1,0 +1,37 @@
+{
+  "artifact_hash": "sha256:5704aaaa83423cf3897ac58c71ce804b7dbf31a4266c659bc81747cd0ef52584",
+  "candidate_method_families": [
+    "Cassels--Tate radical/quotient audit",
+    "finite alternating-pairing parity transfer"
+  ],
+  "cross_problem_coverage_receipt_hash": "",
+  "evidence_pointers": [
+    "git:b128515b4e6a25676fb36cfe2a72450e4ecccc50:research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a2_R15_KUMMER_SHA_EXACT_RANK_RESULT_20260812.json",
+    "git:b128515b4e6a25676fb36cfe2a72450e4ecccc50:research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R8_SOURCE_FAMILY_FAILURE_SHADOW_20260812.json"
+  ],
+  "failure_lattice_snapshot_hash": "sha256:8d3ce802f0ff7c28633c559643c42a5754b4db5f0b5d65b44539f34f4d6f8a68",
+  "failure_query_status": "MATCHES_FOUND",
+  "failure_reuse_notes": [
+    "Reject any pairing route that assumes finite Sha or exact rank as an enabling premise."
+  ],
+  "relevant_failure_ids": [
+    "F-BSD-A1A1-R8-SOURCE-FAMILY-REIMPORTS-ARITHMETIC-ENTRY"
+  ],
+  "relevant_tool_ids": [
+    "LEM-BSD-R12-PINFINITY-VP-CORANK-DIM",
+    "LEM-BSD-R15-KUMMER-SHA-CORANK-DECOMPOSITION"
+  ],
+  "selected_tool_ids": [
+    "LEM-BSD-R15-KUMMER-SHA-CORANK-DECOMPOSITION"
+  ],
+  "target_atom_id": "BSD-A1a3-CASSELSTATEDIV-CORANK-GATE",
+  "target_context_hash": "sha256:4445f308448114792a28b89fed707fc8503f929cefb7899db7f1fca547c476b7",
+  "tool_applicability_notes": [
+    "R15 exactly identifies the target slack term but does not constrain it."
+  ],
+  "tool_inventory_snapshot_hash": "sha256:efb5bed237f15188b90f314b6fd966316d6f42a8d0be88e000d18007143b5995",
+  "tool_query_status": "MATCHES_FOUND",
+  "unresolved_warnings": [
+    "No exact Cassels--Tate source theorem has been accessed in this result-blind freeze."
+  ]
+}
