@@ -1,0 +1,93 @@
+{
+  "record_type": "SOURCE_FAMILY_AUDIT",
+  "cycle_id": "BSD-A1a1-R13-TRANSVERSE-LOCALIZATION-AUDIT-20260812",
+  "authority": "SOURCE_BOUND_PROPOSAL_SHADOW_ZERO_NEW_MATHEMATICAL_CREDIT",
+  "pre_action_receipt": "pre_action_receipt:619bf3a9ea70257e83cf3ff333b998fc9780aa73a5781789b756453623ac80bc",
+  "active_atom": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "nested_obstruction": "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE",
+  "fibre_snapshot_hash": "sha256:fb7eeef69b93846882820e85e533b3472468d3a0804e053b2d5b4344a9b91089",
+  "residual_before": [
+    "EXACT_COMPLEX_RANK2_TO_TRANSVERSE_P_LOCALIZATION_NONZERO_OPEN",
+    "SELMER_VP_DIMENSION_LOWER_BOUND_TO_EXACT_DIMENSION2_UPPER_BOUND",
+    "MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_PERIOD_COMPLEX_LEADING_TERM_GLUE_OPEN"
+  ],
+  "predeclared_discriminator": "Find a same-E/Q primary theorem beginning from exact complex analytic rank two and ending in nonzero p-local localization/restriction without importing exact Selmer rank two, the desired localization, finite Sha plus p-adic order hypotheses, p-adic BSD/main-conjecture-equivalent strength, root-strength p-adic-height nondegeneracy, or a rank-one premise.",
+  "primary_sources_checked_after_receipt": [
+    {
+      "id": "arXiv:2312.01481",
+      "title": "Nonvanishing of generalised Kato classes and Iwasawa main conjectures",
+      "author": "Francesc Castella",
+      "primary_url": "https://arxiv.org/abs/2312.01481",
+      "theorem_direction": "kappa_p(E) nonzero implies dim Sel(Q,V_pE)=2; conversely, under dim Sel=2, kappa_p(E) nonzero iff loc_p is nonzero",
+      "route_verdict": "REJECT_AS_ANALYTIC_RANK2_TO_LOCALIZATION_BRIDGE",
+      "reason": "The transverse-localization statement is conditional on exact Selmer dimension two; it does not derive loc_p nonzero from exact complex analytic rank two."
+    },
+    {
+      "id": "arXiv:2204.09608",
+      "title": "Generalised Kato classes on CM elliptic curves of rank 2",
+      "author": "Francesc Castella",
+      "primary_url": "https://arxiv.org/abs/2204.09608",
+      "theorem_direction": "In the CM good-ordinary cell, nonzero generalized Kato class implies two-dimensional Selmer; under two-dimensional Selmer, nonvanishing is equivalent to nonzero restriction map",
+      "route_verdict": "REJECT_AS_ROOT_ENTRY",
+      "reason": "R10 already separated the Selmer-dimension and transverse-localization gates; the displayed transverse step remains downstream of p-adic order / finite-Sha arithmetic input and is special-scope."
+    },
+    {
+      "id": "DOI:10.4007/annals.2020.191.2.1 / arXiv:1405.7294",
+      "title": "A converse to a theorem of Gross, Zagier, and Kolyvagin",
+      "author": "Christopher Skinner",
+      "primary_url": "https://annals.math.princeton.edu/2020/191-2/p01",
+      "theorem_direction": "Arithmetic rank-one/Selmer criteria imply analytic rank one; proof uses Iwasawa theory to obtain nonzero p-adic logarithm of a Heegner point",
+      "route_verdict": "REJECT_AS_RANK2_FORWARD_LOCALIZATION_BRIDGE",
+      "reason": "Direction and rank are wrong for the active residual: it is a rank-one p-converse, not exact complex rank two -> transverse localization."
+    },
+    {
+      "id": "arXiv:2409.01360",
+      "title": "Exceptional zeros for Heegner points and p-converse to the theorem of Gross-Zagier and Kolyvagin",
+      "author": "Francesc Castella",
+      "primary_url": "https://arxiv.org/abs/2409.01360",
+      "theorem_direction": "p-converse in a multiplicative-reduction rank-one setting using p-adic/exceptional-zero formulas",
+      "route_verdict": "REJECT_AS_RANK2_FORWARD_LOCALIZATION_BRIDGE",
+      "reason": "The theorem is a p-converse/rank-one result and does not start from exact complex analytic rank two."
+    },
+    {
+      "id": "arXiv:2506.03465 / Annals 203 (2026)",
+      "title": "A rank zero p-converse to a theorem of Gross-Zagier, Kolyvagin and Rubin",
+      "authors": ["Ashay A. Burungale", "Ye Tian"],
+      "primary_url": "https://annals.math.princeton.edu/2026/203-1/p01",
+      "theorem_direction": "p-infinity Selmer corank zero implies complex analytic rank zero for CM elliptic curves",
+      "route_verdict": "REJECT_AS_RANK2_FORWARD_LOCALIZATION_BRIDGE",
+      "reason": "Rank zero and converse direction; no transverse localization conclusion."
+    },
+    {
+      "id": "arXiv:2203.12161",
+      "title": "A higher Gross-Zagier formula and the structure of Selmer groups",
+      "author": "Chan-Ho Kim",
+      "primary_url": "https://arxiv.org/abs/2203.12161",
+      "theorem_direction": "Sharp Selmer structure is controlled by Kolyvagin/Kurihara arithmetic-discrete data and localized main-conjecture input",
+      "route_verdict": "REJECT_AS_COMPLEX_RANK2_TO_LOCALIZATION_BRIDGE",
+      "reason": "R11 DifferenceWitness remains: complex Taylor order two is not identified with the required sharp discrete order, and no loc_p conclusion is sourced from bare analytic rank two."
+    }
+  ],
+  "source_family_completeness": "NOT_CLAIMED: bounded theorem-direction search over the active generalized-Kato, p-converse, Heegner/Kolyvagin and higher-Gross-Zagier families after a prospective pre-action receipt.",
+  "counterexample_first_result": "Every inspected candidate fails the predeclared discriminator by theorem direction, rank/scope, or an imported arithmetic/p-adic premise. No candidate survives to a proof attempt.",
+  "local_mathematical_validity": "NO_LOCAL_THEOREM_REFUTED; source theorems remain valid in their stated scopes.",
+  "root_gluing_status": "OPEN: no theorem-backed complex-rank-two -> transverse-localization edge was added; full BSD leading-term gluing remains separately open.",
+  "hypothesis_ledger": {
+    "tamagawa": "OPEN_AND_NOT_USED_AS_SHORTCUT",
+    "torsion": "OPEN_AND_NOT_USED_AS_SHORTCUT",
+    "sha": "finite p-primary Sha appears in special p-adic theorem cells but is not imported as a root-facing bridge",
+    "regulator": "no p-adic-height/regulator nondegeneracy imported from complex rank two",
+    "extra_or_trivial_zeros": "exceptional-zero formulas remain source-specific and do not create a generic rank-two localization theorem",
+    "complex_vs_p_adic_or_discrete": "KEPT_DISTINCT_PENDING_EXPLICIT_COMPARISON_THEOREM"
+  },
+  "outcome": "FAILURE_NO_NEW_CANDIDATE_KNOWN_TRANSVERSE_LOCALIZATION_RELATION_GAP_REOBSERVED",
+  "residual_after": [
+    "EXACT_COMPLEX_RANK2_TO_TRANSVERSE_P_LOCALIZATION_NONZERO_OPEN",
+    "SELMER_VP_DIMENSION_LOWER_BOUND_TO_EXACT_DIMENSION2_UPPER_BOUND",
+    "MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_PERIOD_COMPLEX_LEADING_TERM_GLUE_OPEN"
+  ],
+  "new_mathematical_theorem_credit": 0,
+  "new_obstruction_family": null,
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "recorded_at_utc": "2026-08-12T05:53:00Z"
+}

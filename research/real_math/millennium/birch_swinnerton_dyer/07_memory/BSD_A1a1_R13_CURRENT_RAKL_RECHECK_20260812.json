@@ -1,0 +1,10 @@
+{
+  "record_type": "RAKL_CURRENT_MAIN_RECHECK",
+  "cycle_id": "BSD-A1a1-R13-TRANSVERSE-LOCALIZATION-AUDIT-20260812",
+  "authority": "PROPOSAL_SHADOW_ASSURANCE_ONLY",
+  "scientific_pre_action_freeze": {"rakl_main_sha": "1382a32d93bdf8c20b415c6a8552cfd3069968d5", "method_version": "3.0.0", "receipt_hash": "619bf3a9ea70257e83cf3ff333b998fc9780aa73a5781789b756453623ac80bc", "note": "Preserved; not rewritten after framework drift."},
+  "latest_recheck": {"rakl_main_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554", "method_version": "3.0.0", "software_package_version": "0.1.0", "constitution_epoch": "v3-authority-hardening-20260811"},
+  "new_feature_inspected": {"name": "proposal-only sequential evidence sufficiency", "path": "src/rakl/epistemic_sufficiency.py", "authority": "PROPOSAL_ONLY_NO_SCIENTIFIC_AUTHORITY", "applicability": "NOT_INVOKED_FOR_R13_RESULT", "reason": "The current module requires an externally supplied, known-answer-validated frozen decision contract. R13 has a prospectively frozen discriminator but no known-answer validation for the mathematical claim, so using this module to declare evidence sufficient would be outside its contract."},
+  "v3_feature_used_operationally": {"name": "pre_action_receipt", "freeze_sha": "1382a32d93bdf8c20b415c6a8552cfd3069968d5", "effect": "bound fibre/operators/retrieval authorities/discriminator before consequential source search; chronology only, no theorem authority"},
+  "effect_on_cycle": {"mathematical_result_changed": false, "routing_changed_after_freeze": false, "root_state_changed": false, "historical_receipt_rewritten": false, "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"}
+}
