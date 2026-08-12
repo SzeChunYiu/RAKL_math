@@ -1,0 +1,52 @@
+{
+  "artifact_hash": "sha256:574ea1a17709eb9ec8fa38f1e8f05ea6e1b09008cea2c7923fd1eb10e7041b58",
+  "atom_id": "O9d12a2a1b-C050",
+  "authority": {
+    "formal": false,
+    "independent": false,
+    "mathematical_result": "SCOPED_SAME_CONTEXT_HAND_PROOF",
+    "novelty": false,
+    "root": "OPEN"
+  },
+  "candidate_id": "C050-K15-TARGET-BLIND-SELECTOR-DISCRIMINATOR-v1",
+  "deduplication_note": "The changed separating coordinate is new k=15 evidence, but the failure mechanism is not a new global cause; it is a scoped specialization/repetition of C049.",
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C050_K15_PROOF_CERTIFICATE_FREEZE_20260812.json",
+    "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C050_K15_MATHEMATICAL_LESSON_20260812.json"
+  ],
+  "independent_review": false,
+  "review_authority": "SAME_CONTEXT_ROLE_SEPARATED_INTERNAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "review_id": "PNP-C050-K15-RESULT-REVIEW-20260812",
+  "role_reviews": [
+    {
+      "finding": "The length formulas force the sole parent regime and exhaust both current branch families; canonical-language definitions exclude total-decoder fallbacks.",
+      "role": "domain_theory_lead",
+      "verdict": "ACCEPT_SCOPED"
+    },
+    {
+      "finding": "The strongest attacks are an omitted length-32 branch, a noncanonical fallback smuggled into P_16, or one common label; the certificate addresses the first two and freezes the third as falsifier.",
+      "role": "adversarial_falsification_lead",
+      "verdict": "ACCEPT_SCOPED"
+    },
+    {
+      "finding": "The certificate is a hand proof with a deterministic record checker, not a proof-assistant theorem. Candidate and proof-input identities precede execution.",
+      "role": "formal_methods_lead",
+      "verdict": "ACCEPT_NONFORMAL"
+    },
+    {
+      "finding": "The k=15 coordinate differs from k=12 but the mechanism repeats fixed variable-code versus MAGIC mismatch; retain one scoped unit and no novelty or new-global-cause claim.",
+      "role": "novelty_research_value_lead",
+      "verdict": "ACCEPT_DEDUPLICATED"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "strongest_objection": "P_16 branch exhaustion would be false if total-decoder malformed/all-zero branches were included; the frozen P_16 definition is canonical-prefix only, and the certificate states this boundary explicitly.",
+  "unresolved_uncertainties": [
+    "no independent or formal proof check",
+    "no novelty search",
+    "all k>15 remain open",
+    "cover and complexity bridges remain open"
+  ],
+  "verdict": "ACCEPT_SCOPED_K15_EMPTY_INTERSECTION_HAND_PROOF"
+}
