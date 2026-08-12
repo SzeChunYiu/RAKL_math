@@ -1,0 +1,46 @@
+schema_version: problem-dag-delta-v3-proposal-shadow
+parent_atom: NS-B1a3b
+result_id: NS-B1a3b-C001-VORTICITY-DIRECTION-TRANSPORT-AUDIT
+authority: SOURCE_BOUND_ROUTE_PRUNING_ONLY
+status: PARTIAL_SUCCESS
+root_status: OPEN_NO_SOLUTION_CERTIFICATE
+root_authority: NONE
+resolved_edges:
+  - id: NS-B1a3b-edge-bare-direction-glue
+    from: "Albritton-Barker finite-I local compactness"
+    to: "inherited Lei-Ren-Tian vorticity-direction cone on ancient limit"
+    disposition: BLOCKED_AS_UNLICENSED
+    reason: "strong local velocity convergence plus weak derivative compactness does not preserve the nonconvex two-sided vorticity cone; explicit smooth divergence-free branch-mixing calibration"
+retained_valid_edges:
+  - id: NS-B1a3b-edge-LRT-local-consumer
+    from: "fixed high-vorticity double-cone hypothesis on a local suitable weak solution"
+    to: "local regularity on a smaller cylinder"
+    disposition: SOURCE_VALID
+    source: "Lei-Ren-Tian arXiv:2501.08976 Theorem 1.1"
+  - id: NS-B1a3b-edge-singular-range
+    from: "singular origin"
+    to: "limiting high-vorticity direction set meets every great circle"
+    disposition: SOURCE_VALID
+    source: "Lei-Ren-Tian arXiv:2501.08976 Corollary 1.5"
+new_obstruction:
+  id: O-NS-B1a3b-VORTICITY-DIRECTION-TRANSPORT-INTERFACE
+  status: SCOPED_CANDIDATE_OBSTRUCTION
+  falsifier: "source-valid vorticity-level transport/branch-selection theorem for the exact Type-I rescalings, or a valid direct flux bypass"
+new_children:
+  - id: NS-B1a3b1
+    goal: "vorticity-flux / branch-compactness certificate: test whether finite-I dynamics supplies an oriented or source-native absolute-flux observable stable enough under blow-up to replace raw xi transport"
+    priority: HIGH
+  - id: NS-B1a3b2
+    goal: "direct pre-limit great-circle/cone contradiction: derive from finite-I dynamics an exact local geometric condition activating a source-valid regularity theorem without transporting xi to the ancient limit"
+    priority: HIGH
+unchanged_siblings:
+  - id: NS-B1a3a
+    residual: "global critical tightness/state-space certificate before minimal critical-element logic"
+  - id: NS-B2
+    residual: "Type-II classification/mechanism remains open"
+nonclaims:
+  - "no Type-I exclusion"
+  - "no Type-II result"
+  - "no global regularity proof"
+  - "no independent-review credit"
+  - "no root promotion"
