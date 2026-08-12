@@ -1,0 +1,39 @@
+atom_id: O9d12a2a1a1e
+parent_atom_id: O9d12a2a1a1d
+status: LOCAL_SOLVED_GLUE_OPEN
+root_authority: NONE
+local_claim: >-
+  For finite Γ, target A, base B and H superset B, if
+  T_A(H)={C intersect A:C in U(H)} and Phi_A(H;B)=log2|T_A(H)|-log2|T_A(B)|,
+  then adjoining any set D changes Phi by a value in [0,1].
+local_scope:
+  - immutable added-set / acyclic intermediate-set accounting
+  - arbitrary free unions
+  - finite set systems
+local_math_status: EXACT_ELEMENTARY_LEMMA_PROPOSAL_SHADOW
+cyclic_transport_status: OPEN
+cyclic_transport_reason: >-
+  A cyclic syntactic intersection coordinate is least-fixed-point evaluated and is not
+  identified with a single immutable added set. Direct one-gate Lipschitz transport is rejected.
+target_gluing_failure:
+  id: F-O9D12A2A1A1E-TERMINAL-TARGET-TRACE-INVISIBLE
+  category: GLUING
+  statement: >-
+    If Gamma is in U(B), then T_A(H union {A})=T_A(H); terminal target membership
+    alone cannot force positive normalized trace entropy.
+local_failure_separate:
+  id: NONE
+  note: the local one-added-set lemma survived falsification
+proposal_obstruction:
+  id: OB-PNP-PAIRED-LIPSCHITZ-TARGET-FORCING
+  authority: PROPOSAL_ONLY_NOT_RETAINED
+  statement: >-
+    Candidate potentials must provide both operation-wise accounting and a target-forcing
+    theorem compatible with cyclic semantics.
+next_child_atom:
+  id: O9d12a2a1a1f
+  objective: >-
+    Test target-intrinsic quotient-of-trace-partition invariants for construction-forced growth
+    and audit whether cyclic transport improves on generic quadratic unfolding.
+novelty_class_shadow: compositional
+root_status: OPEN_NO_SOLUTION_CERTIFICATE

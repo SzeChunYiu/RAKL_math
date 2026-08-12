@@ -1,0 +1,46 @@
+schema_note: RAKL-v3-TaskEpisode-style-shadow
+shadow_task_episode_id: PNP-O9d12a2a1a1e-INCREMENTAL-TRACE-R5-20260811
+task_id: pnp-verified-discovery-incremental-trace-r5
+atom_id: O9d12a2a1a1e
+context_hash: f8930c257c123659a217e678a4f59b61ba9cad477dd5a0b1ed59fa789e22dcd9
+problem_signature:
+  - P-vs-NP via graph/two-dimensional cover complexity
+  - base-normalized target-trace entropy
+  - acyclic one-intersection accounting
+  - cyclic transport and target forcing audited separately
+fibre_snapshot_hash: f8930c257c123659a217e678a4f59b61ba9cad477dd5a0b1ed59fa789e22dcd9
+operator_ids:
+  - OP-COUNTEREXAMPLE-FIRST
+  - OP-UNION-CLOSURE-DOUBLING
+  - OP-DIFFERENCE-WITNESS
+  - OP-CYCLIC-SEMANTICS-BARRIER-CHECK
+motifs_tried:
+  - MOTIF-PNP-ZERO-COST-BASE-NORMALIZATION
+  - MOTIF-PNP-ONE-STEP-ENTROPY-LIPSCHITZ
+  - MOTIF-PNP-TERMINAL-TARGET-INVISIBILITY
+search_policy: ACCOUNTING_FIRST_THEN_GLUE_FALSIFIER
+observations:
+  - factor-2 trace-family growth under one arbitrary added set
+  - terminal target adjoin is invisible when Gamma is free-union reachable
+  - direct cyclic-gate equivalence to added-set accounting rejected
+verification_ids:
+  - VER-PNP-INCREMENTAL-TRACE-ENUM-N3
+  - PRIMARY-ECCC-TR25-033-SEC2.5-COR17
+outcome: LOCAL_SOLVED_GLUE_OPEN
+residual_signature: PNP_INCREMENTAL_TRACE_TARGET_FORCE_AND_CYCLIC_TRANSPORT_MISSING
+local_failure_signature: NONE
+gluing_failure_signature: F-O9D12A2A1A1E-TERMINAL-TARGET-TRACE-INVISIBLE
+cost:
+  retrieval_calls: 18
+  web_primary_source_queries: 5
+  exhaustive_calibration_cases: 18128
+  model_tokens: "CANNOT_MEASURE: runtime does not expose exact token accounting"
+next_action: O9d12a2a1a1f target-intrinsic quotient-of-trace-partition forcing plus cyclic transport audit
+episode_diagnosis_separated: true
+proposal_lesson_id: L-PNP-PAIRED-LIPSCHITZ-TARGET-FORCING-001
+proposal_obstruction_id: OB-PNP-PAIRED-LIPSCHITZ-TARGET-FORCING
+authority: PROPOSAL_SHADOW_ONLY
+grants_theorem_authority: false
+grants_tool_promotion: false
+grants_gluing_authority: false
+grants_review_independence: false
