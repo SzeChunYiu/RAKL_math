@@ -1,0 +1,64 @@
+{
+  "authority": "PROPOSAL_SHADOW_TRACE",
+  "events": [
+    {
+      "event_hash": "e7e59021d69244afb1f74b857ce138d080cf48b5f293801b1a595ef09bde3e7c",
+      "event_type": "FRAMEWORK_BOUND",
+      "index": 0,
+      "payload": {
+        "framework_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+        "method_version": "3.0.0"
+      },
+      "previous_event_hash": "GENESIS"
+    },
+    {
+      "event_hash": "191f90e08f981ad7f4bc2ac5bcae05d7ad8197221d5a85c8de73bb28bf10866b",
+      "event_type": "APPLICATION_FIBRE_BOUND",
+      "index": 1,
+      "payload": {
+        "application_base": "046864c970966e2b4e6e6bd652140c6c408c4f10",
+        "atom": "O9d12a2a1b-C050",
+        "fibre_hash": "sha256:b50f857493e88680bd74943321316451b379c664e0e39d7d2d709f01d5be2a56"
+      },
+      "previous_event_hash": "e7e59021d69244afb1f74b857ce138d080cf48b5f293801b1a595ef09bde3e7c"
+    },
+    {
+      "event_hash": "88890127b1dd42870904ca18ed5a9c00a2074a94b0bf30e8d9db8756999bd572",
+      "event_type": "PRE_ACTION_FROZEN",
+      "index": 2,
+      "payload": {
+        "commit": "7efad33fd4f1042be16d342bcb1af9c022bffb47",
+        "discriminator": "support 28/30 before symbol/UNSAT checks",
+        "target": "k=14"
+      },
+      "previous_event_hash": "191f90e08f981ad7f4bc2ac5bcae05d7ad8197221d5a85c8de73bb28bf10866b"
+    },
+    {
+      "event_hash": "75560f10906b0e0191fcfd2d662ae82b56301ac4fa279e1143e6ff5aaf7802ed",
+      "event_type": "MATHEMATICAL_OBSERVATION",
+      "index": 3,
+      "payload": {
+        "observation": "no canonical length 28; length 30 exactly v=1,m=3",
+        "proof": "exhaustive hand case split"
+      },
+      "previous_event_hash": "88890127b1dd42870904ca18ed5a9c00a2074a94b0bf30e8d9db8756999bd572"
+    },
+    {
+      "event_hash": "251bea222108834a56dbad2329cfda7d9bb6b0d012123bea82cc62ba476d27f8",
+      "event_type": "OUTCOME_RECORDED",
+      "index": 4,
+      "payload": {
+        "episode_hash": "496ba5c27f125f228900d565cf45c9d2fb96b9e58d8fe9dfdaa9ade64832f38a",
+        "episode_id": "E-PNP-C050-K14-20260812-v2",
+        "next_atom": "O9d12a2a1b-C050-SUPPORT-SPECTRUM",
+        "outcome": "PARTIAL_SUCCESS"
+      },
+      "previous_event_hash": "75560f10906b0e0191fcfd2d662ae82b56301ac4fa279e1143e6ff5aaf7802ed"
+    }
+  ],
+  "hash_algorithm": "SHA-256 over canonical sorted compact JSON excluding event_hash",
+  "last_event_hash": "251bea222108834a56dbad2329cfda7d9bb6b0d012123bea82cc62ba476d27f8",
+  "schema_version": "1.0.0",
+  "supersedes_invalid_embedded_trace_in_commit": "31a17d06fd8832d30cd75a7ee68866aca49b1d4c",
+  "trace_id": "PNP-C050-K14-HASH-CHAIN-20260812-v2"
+}
