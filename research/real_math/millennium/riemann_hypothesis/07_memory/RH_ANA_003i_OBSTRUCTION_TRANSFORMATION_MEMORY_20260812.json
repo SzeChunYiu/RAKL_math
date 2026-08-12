@@ -1,0 +1,259 @@
+{
+  "episodes": [
+    {
+      "artifact_hash": "sha256:422ca7625086b3b985a3c71bab231e07de5792fb74314d14e675f152c68ae4a2",
+      "authority": "PROPOSAL_ONLY",
+      "episode_id": "E-RH-R8-EFFECTIVE-ENDPOINT-AUDIT-SHADOW",
+      "evidence_pointers": [
+        "draft PR #320@022da37dbdb9ae5d60e7877ac2cb7b7f6f8426c8"
+      ],
+      "known_breakpoints": [
+        "does not classify non-extremal families",
+        "does not provide target-domain strictness",
+        "source episode is proposal-only"
+      ],
+      "lineage_ids": [],
+      "operation": "test an internal control together with its exact complement against endpoint downside",
+      "preconditions": [
+        "running-extremum family is fixed",
+        "exact cutoff target and complement are fixed",
+        "shadow authority is retained"
+      ],
+      "preserved_invariants": [
+        "exact x_{n,m}, R_n, S_n, D_n definitions",
+        "natural order",
+        "fixed source and shadow authority levels",
+        "OPEN_NO_SOLUTION_CERTIFICATE"
+      ],
+      "relaxed_or_broken_constraints": [],
+      "resulting_relations": [
+        "running-extremum plus complement controls one-sided endpoint downside"
+      ],
+      "source_context": "draft PR #320 effective-endpoint dichotomy",
+      "source_domain": "analytic number theory / ordered arithmetic transforms",
+      "source_obstruction": {
+        "constraints": [
+          "exact Coffey normalization",
+          "natural source order without regrouping",
+          "moving cutoff log Y_n=C n^(5/3) log^2(n+e)",
+          "target-domain arithmetic realization",
+          "no candidate object in this round"
+        ],
+        "desired_transition": [
+          "identify a source-bound internal-family class that survives endpoint projection, arithmetic realization, exact complement gluing, and strict-premise comparison"
+        ],
+        "domain": "analytic number theory / ordered arithmetic transforms",
+        "failure_mechanisms": [
+          "internal constraint contains or dominates the cutoff endpoint",
+          "constraint plus complement reconstructs the Q+D endpoint mechanism",
+          "ambient witness is not attainable by the fixed arithmetic array",
+          "premises silently import a root-sensitive endpoint obligation"
+        ],
+        "forbidden_losses": [
+          "reordering or regrouping",
+          "ambient-path-only attainability",
+          "endpoint reconstruction",
+          "shadow-to-theorem promotion",
+          "candidate generation before the family discriminator",
+          "LIFT without SEARCH/JUMP/GLUE exhaustion"
+        ],
+        "invariants_to_preserve": [
+          "exact x_{n,m}, R_n, S_n, D_n definitions",
+          "natural order",
+          "fixed source and shadow authority levels",
+          "OPEN_NO_SOLUTION_CERTIFICATE"
+        ],
+        "obstruction_id": "OBS-RH-ANA-003i-NONEXTREMAL-TARGET-REALIZATION",
+        "relations": [
+          "the internal family is evaluated only on 2<=M<=Y_n",
+          "R_n(Y_n) is the final member of the same natural-order prefix",
+          "D_n(Y_n)=|S_n-R_n(Y_n)| glues cutoff to target",
+          "strict weakening requires premises and feasible target projection weaker than endpoint control"
+        ],
+        "roles": [
+          "actual natural-order coefficient array",
+          "unnamed non-extremal internal-family constraint",
+          "cutoff endpoint R_n(Y_n)",
+          "exact target S_n",
+          "natural-order complement D_n(Y_n)",
+          "one-sided endpoint decision scale"
+        ]
+      },
+      "transformation_name": "PROJECT_INTERNAL_CONTROL_TO_ENDPOINT_BEFORE_ESTIMATION"
+    },
+    {
+      "artifact_hash": "sha256:b9e0c24d6377823e3c8792fb53279dc8aff1cf39eb08b6afe47bfc2bf14511b2",
+      "authority": "PROPOSAL_ONLY",
+      "episode_id": "E-RH-R9-OUTER-COMPLEMENT-SCALE-SHADOW",
+      "evidence_pointers": [
+        "draft PR #316@13062780d022c43395ed36d78e276c837bfb4352"
+      ],
+      "known_breakpoints": [
+        "controls the outer complement rather than the internal prefix",
+        "does not supply arithmetic attainability or strict weakening",
+        "source episode is proposal-only"
+      ],
+      "lineage_ids": [],
+      "operation": "replace a crude envelope by exact finite-degree coefficient accounting",
+      "preconditions": [
+        "R5 shadow Abel/PNT premise",
+        "exact generalized Laguerre finite sum",
+        "moving outer-complement question only"
+      ],
+      "preserved_invariants": [
+        "exact x_{n,m}, R_n, S_n, D_n definitions",
+        "natural order",
+        "fixed source and shadow authority levels",
+        "OPEN_NO_SOLUTION_CERTIFICATE"
+      ],
+      "relaxed_or_broken_constraints": [],
+      "resulting_relations": [
+        "proposal-only smaller sufficient outer-complement cutoff"
+      ],
+      "source_context": "draft PR #316 finite-degree Laguerre outer majorant",
+      "source_domain": "analytic number theory / ordered arithmetic transforms",
+      "source_obstruction": {
+        "constraints": [
+          "exact Coffey normalization",
+          "natural source order without regrouping",
+          "moving cutoff log Y_n=C n^(5/3) log^2(n+e)",
+          "target-domain arithmetic realization",
+          "no candidate object in this round"
+        ],
+        "desired_transition": [
+          "identify a source-bound internal-family class that survives endpoint projection, arithmetic realization, exact complement gluing, and strict-premise comparison"
+        ],
+        "domain": "analytic number theory / ordered arithmetic transforms",
+        "failure_mechanisms": [
+          "internal constraint contains or dominates the cutoff endpoint",
+          "constraint plus complement reconstructs the Q+D endpoint mechanism",
+          "ambient witness is not attainable by the fixed arithmetic array",
+          "premises silently import a root-sensitive endpoint obligation"
+        ],
+        "forbidden_losses": [
+          "reordering or regrouping",
+          "ambient-path-only attainability",
+          "endpoint reconstruction",
+          "shadow-to-theorem promotion",
+          "candidate generation before the family discriminator",
+          "LIFT without SEARCH/JUMP/GLUE exhaustion"
+        ],
+        "invariants_to_preserve": [
+          "exact x_{n,m}, R_n, S_n, D_n definitions",
+          "natural order",
+          "fixed source and shadow authority levels",
+          "OPEN_NO_SOLUTION_CERTIFICATE"
+        ],
+        "obstruction_id": "OBS-RH-ANA-003i-NONEXTREMAL-TARGET-REALIZATION",
+        "relations": [
+          "the internal family is evaluated only on 2<=M<=Y_n",
+          "R_n(Y_n) is the final member of the same natural-order prefix",
+          "D_n(Y_n)=|S_n-R_n(Y_n)| glues cutoff to target",
+          "strict weakening requires premises and feasible target projection weaker than endpoint control"
+        ],
+        "roles": [
+          "actual natural-order coefficient array",
+          "unnamed non-extremal internal-family constraint",
+          "cutoff endpoint R_n(Y_n)",
+          "exact target S_n",
+          "natural-order complement D_n(Y_n)",
+          "one-sided endpoint decision scale"
+        ]
+      },
+      "transformation_name": "SHARPEN_OUTER_REPRESENTATION_BEFORE_ARITHMETIC_INPUT"
+    },
+    {
+      "artifact_hash": "sha256:05a27b0212597db34221c8a6731ef3e5b499dfa857868f8fa36cb0e307249fde",
+      "authority": "PROPOSAL_ONLY",
+      "episode_id": "E-CROSSDOMAIN-LEGAL-STATE-REALIZATION-PROPOSAL",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003i_MATH_CONTEXT_FIBER_20260812.json"
+      ],
+      "known_breakpoints": [
+        "no legal-move generator exists for alternative zeta paths",
+        "analogy supplies no arithmetic realization theorem"
+      ],
+      "lineage_ids": [],
+      "operation": "discard hostile states not reachable under the actual system rules",
+      "preconditions": [
+        "a complete legal move system exists",
+        "reachability is decidable or witnessed",
+        "terminal projection is explicit"
+      ],
+      "preserved_invariants": [
+        "exact x_{n,m}, R_n, S_n, D_n definitions",
+        "natural order",
+        "fixed source and shadow authority levels",
+        "OPEN_NO_SOLUTION_CERTIFICATE"
+      ],
+      "relaxed_or_broken_constraints": [],
+      "resulting_relations": [
+        "proposal to require target-domain realization before strictness credit"
+      ],
+      "source_context": "legal-state reachability versus ambient-state counterexample",
+      "source_domain": "games / reachability",
+      "source_obstruction": {
+        "constraints": [
+          "exact Coffey normalization",
+          "natural source order without regrouping",
+          "moving cutoff log Y_n=C n^(5/3) log^2(n+e)",
+          "target-domain arithmetic realization",
+          "no candidate object in this round"
+        ],
+        "desired_transition": [
+          "identify a source-bound internal-family class that survives endpoint projection, arithmetic realization, exact complement gluing, and strict-premise comparison"
+        ],
+        "domain": "analytic number theory / ordered arithmetic transforms",
+        "failure_mechanisms": [
+          "internal constraint contains or dominates the cutoff endpoint",
+          "constraint plus complement reconstructs the Q+D endpoint mechanism",
+          "ambient witness is not attainable by the fixed arithmetic array",
+          "premises silently import a root-sensitive endpoint obligation"
+        ],
+        "forbidden_losses": [
+          "reordering or regrouping",
+          "ambient-path-only attainability",
+          "endpoint reconstruction",
+          "shadow-to-theorem promotion",
+          "candidate generation before the family discriminator",
+          "LIFT without SEARCH/JUMP/GLUE exhaustion"
+        ],
+        "invariants_to_preserve": [
+          "exact x_{n,m}, R_n, S_n, D_n definitions",
+          "natural order",
+          "fixed source and shadow authority levels",
+          "OPEN_NO_SOLUTION_CERTIFICATE"
+        ],
+        "obstruction_id": "OBS-RH-ANA-003i-NONEXTREMAL-TARGET-REALIZATION",
+        "relations": [
+          "the internal family is evaluated only on 2<=M<=Y_n",
+          "R_n(Y_n) is the final member of the same natural-order prefix",
+          "D_n(Y_n)=|S_n-R_n(Y_n)| glues cutoff to target",
+          "strict weakening requires premises and feasible target projection weaker than endpoint control"
+        ],
+        "roles": [
+          "actual natural-order coefficient array",
+          "unnamed non-extremal internal-family constraint",
+          "cutoff endpoint R_n(Y_n)",
+          "exact target S_n",
+          "natural-order complement D_n(Y_n)",
+          "one-sided endpoint decision scale"
+        ]
+      },
+      "transformation_name": "REQUIRE_REACHABILITY_BEFORE_DIFFERENCE_WITNESS"
+    }
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003i_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003i_SOURCE_METHOD_TRANSFER_PACKET_20260812.json"
+  ],
+  "memory_id": "RH-ANA-003i-TRANSFORMATION-MEMORY-20260812",
+  "snapshot_hash": "79f1bb98f966b128a8db259d2903f03eec42247675225a84deb9d6d50ca80849",
+  "source_universe": [
+    "merged RH C002 fixed-n natural-order proof surface",
+    "draft PR #320 R8 proposal/shadow episode",
+    "draft PR #316 R9 proposal/shadow episode",
+    "issues #265, #315, and #324",
+    "bounded engineering/game analogy scan recorded in the context fiber"
+  ]
+}

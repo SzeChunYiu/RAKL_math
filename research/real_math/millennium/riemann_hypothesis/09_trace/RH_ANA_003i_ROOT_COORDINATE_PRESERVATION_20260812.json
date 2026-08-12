@@ -1,0 +1,100 @@
+{
+  "bridge_edges": [
+    {
+      "edge_id": "RH003i-B1",
+      "enabling_assumptions": [
+        "family definition",
+        "endpoint-projection proof",
+        "target-domain realization"
+      ],
+      "interface_map": "must not be assumed; exact family-specific projection is the first discriminator",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "internal-family bound",
+      "target_coordinate": "cutoff endpoint downside"
+    },
+    {
+      "edge_id": "RH003i-B2",
+      "enabling_assumptions": [
+        "moving-n complement theorem",
+        "premise-strength audit"
+      ],
+      "interface_map": "requires the exact natural-order complement at the same moving scale",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "cutoff endpoint downside",
+      "target_coordinate": "exact S_n downside"
+    },
+    {
+      "edge_id": "RH003i-B3",
+      "enabling_assumptions": [
+        "archimedean ledger",
+        "all-index sign bridge",
+        "Li criterion"
+      ],
+      "interface_map": "requires the complete Coffey/Li ledger and all-index one-sided implication",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "S_n downside",
+      "target_coordinate": "Li positivity and RH"
+    }
+  ],
+  "cheapest_hostile_world": "an internal constraint holds but either fixes the endpoint already or permits no actual arithmetic realization",
+  "known_disanalogies": [
+    "ambient path strictness is not arithmetic attainability",
+    "fixed-n convergence is not moving-n control",
+    "internal-family control is not Li positivity"
+  ],
+  "obligations": [
+    {
+      "description": "classify internal-family endpoint projection",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "RH003i-O1"
+    },
+    {
+      "description": "prove target-domain realization",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "RH003i-O2"
+    },
+    {
+      "description": "prove exact moving-scale complement from weaker premises",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "RH003i-O3"
+    }
+  ],
+  "prior_failure_ids": [
+    "F-RH-ANA-003g-COMPLEMENT-FIRST-WEAKENING-FAIL",
+    "F-RH-ANA-003g-AMBIENT-WITNESS-CURRENT-V3-REPRESENTATION-ONLY",
+    "F-RH-ANA-003f-STRICT-CUT-SUFFIX-GLUE",
+    "F-RH-ANA-003f-PATH-WITNESS-NOT-ARITHMETIC",
+    "F-RH-ANA-003e-MOVING-PREFIX-POLYBOUND-NOT-WEAKER",
+    "F-RH-ANA-003c-UNWITNESSED-WINDOW-GLUE",
+    "R9-STRICT-PREFIX-ARITHMETIC-ATTAINABILITY-OBSTRUCTION"
+  ],
+  "receipt_canonical_sha256": "a7412d26bd1c15ea5f3d31817f92239ee9f88dab75b004961bdaf6c9e6d7cfe4",
+  "receipt_id": "RH-ANA-003i-ROOT-PRESERVATION-20260812",
+  "registered_observations": [
+    {
+      "projected_state": "fixed-n natural-order identity proved",
+      "registered_downstream_outcome": "moving prefix open",
+      "state_id": "C002"
+    },
+    {
+      "projected_state": "candidate absent",
+      "registered_downstream_outcome": "root open",
+      "state_id": "RH003i-pre"
+    }
+  ],
+  "reverification_triggers": [
+    "family definition changes",
+    "cutoff scale changes",
+    "summation order changes",
+    "a Li or RH implication is asserted"
+  ],
+  "root_claim_id": "RH-ANA-003i",
+  "root_coordinate": "every nontrivial zero of zeta has real part one half",
+  "schema_version": "root-coordinate-preservation-receipt-v1",
+  "source_authority": "PROPOSAL_ONLY",
+  "surrogate_coordinate": "source-bound internal-prefix family at a moving natural-order cutoff",
+  "target_authority": "PROPOSAL_ONLY"
+}
