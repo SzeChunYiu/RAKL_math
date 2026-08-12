@@ -1,0 +1,74 @@
+{
+  "all_planted_worlds_match": true,
+  "allowed_next_action": "Merge evaluator identity without target evaluation; then freeze a separate retrospective-reproduction authorization bound to these bytes.",
+  "artifact_hash": "sha256:067fdaf01adaa0e0a97e3877a2997afcc4f6c9e9112b968b19140db597814404",
+  "authority": {
+    "evaluator_identity_frozen": true,
+    "grants_independent_review": false,
+    "grants_mathematical_result_credit": false,
+    "grants_proof_authority": false,
+    "grants_target_truth": false,
+    "licenses_target_execution": false,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "candidate_id": "YM-S1a2i-K1-D001-C001-TWO-STAGE-SOURCE-BRIDGE",
+  "chronology_boundary": {
+    "evaluator_bytes_publicly_frozen_before_any_future_authorized_execution": true,
+    "evaluator_was_specified_by_pr405_and_authorized_for_implementation_by_pr407": true,
+    "future_reproduction_must_be_labeled_retrospective_not_prospective_discovery": true,
+    "prior_local_result_access_preceded_public_evaluator_byte_freeze": true,
+    "prior_local_unpublished_result_commit": "25c0271d6a0f379cad4dab3c2a4be56d732f5a00",
+    "strict_rakl_discovery_chronology_for_prior_generation": false
+  },
+  "current_round_state": {
+    "g_star_selected": false,
+    "source_audit_executed": false,
+    "target_result_recorded": false,
+    "target_stage_a_evaluated": false,
+    "target_stage_b_evaluated": false
+  },
+  "evaluator_identity": {
+    "evaluator_id": "YM-S1a2i-K1-D001-C001-TWO-STAGE-EVALUATOR-v1",
+    "frozen_contract": [
+      "Stage A routes INSUFFICIENT to CANNOT_CHECK.",
+      "Stage A routes literal conflated C_dom=C_force=C with 0<rho<1 to STRONGER_PREMISE_MISMATCH_A.",
+      "Stage A routes separately derived incompatible constants to STRONGER_PREMISE_MISMATCH_A.",
+      "Stage B cannot enter without a Stage-A pass and a separately frozen positive g_star.",
+      "Stage B rejects a factor-two-only argument as FLOW_MARGIN_FAIL_B.",
+      "APPLICABLE_BRIDGE requires Stage-A compatibility and exact full-interval Stage-B predicates."
+    ],
+    "path": "research/real_math/millennium/yang_mills/05_oracles/ym_k1_d001_c001_two_stage_evaluator.py",
+    "raw_sha256": "f480f3b6237d8069233122543fdd4159f070e9a7283a55cef01c7ab900303e80"
+  },
+  "framework_sha": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+  "freeze_id": "YM-S1a2i-K1-D001-C001-EVALUATOR-IDENTITY-FREEZE-20260812",
+  "parent_main_sha": "6d191b91d2201e28ba2a505dad7b5a9515e54605",
+  "planted_world_receipt": [
+    {
+      "expected_branch": "APPLICABLE_BRIDGE",
+      "match": true,
+      "observed_branch": "APPLICABLE_BRIDGE",
+      "world_id": "WORLD-A-B-PASS-SEPARATE-CONSTANTS-EXACT-MARGIN"
+    },
+    {
+      "expected_branch": "STRONGER_PREMISE_MISMATCH_A",
+      "match": true,
+      "observed_branch": "STRONGER_PREMISE_MISMATCH_A",
+      "world_id": "WORLD-A-FAIL-CONFLATED-C-TRAP"
+    },
+    {
+      "expected_branch": "FLOW_MARGIN_FAIL_B",
+      "match": true,
+      "observed_branch": "FLOW_MARGIN_FAIL_B",
+      "world_id": "WORLD-B-FAIL-FACTOR-TWO-TRAP"
+    },
+    {
+      "expected_branch": "CANNOT_CHECK",
+      "match": true,
+      "observed_branch": "CANNOT_CHECK",
+      "world_id": "WORLD-CANNOT-CHECK-UPSTREAM-CONSTANTS"
+    }
+  ],
+  "record_type": "YM_K1_D001_C001_EVALUATOR_IDENTITY_FREEZE",
+  "schema_version": "1.0.0"
+}
