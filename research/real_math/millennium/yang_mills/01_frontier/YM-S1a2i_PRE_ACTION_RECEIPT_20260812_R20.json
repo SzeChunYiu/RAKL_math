@@ -1,0 +1,35 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "PRE-YM-S1a2i-R20-20260812",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "d2213cb1d821796c08098aad0dffee1824e7bd02",
+  "task_id": "YM-root-5",
+  "atom_id": "YM-S1a2i",
+  "context_hash": "da6619f320b5a70f2655e40d948943a20662f468d9bd94806f9b40d3ed2dc51b",
+  "fibre_snapshot_hash": "df4e539ed6ddc54fac8006a6ec9c856a154270e5c4dad0c771ce6c89af4a47e2",
+  "operator_ids": [
+    "PRIMARY_SOURCE_EQ578_580_AUDIT",
+    "GRAPH_TRANSFORM_TYPE_CHECK",
+    "HOSTILE_CONTROL"
+  ],
+  "selected_retrievals": [
+    {"retrieval_id": "RAKL_VERSION@5dc0627", "authority": "CANONICAL", "payload_hash": "1e3d3e815a296d579caa900f78e9eada8547b99988a87aa1b3c8a765df6e88d5"},
+    {"retrieval_id": "RAKL_method_specs@5dc0627", "authority": "CANONICAL", "payload_hash": "fcf5005866090349b9d76e52e3c66a4cb31c72b68ea5f491fa473133d74e0132"},
+    {"retrieval_id": "RAKL_pre_action_receipt@5dc0627", "authority": "CANONICAL", "payload_hash": "561b4e5c0e7b637ebabc1c84c352d19b1f3dba63a0b94c4283c42c01fb9f6269"},
+    {"retrieval_id": "RAKL_math#5", "authority": "CANONICAL", "payload_hash": "0934668fd8ade9ac9b4a9a5e78607fd6085e6acb64935c8e24bb7d35c6c6e12a"},
+    {"retrieval_id": "RAKL_math#301/PR#308", "authority": "PENDING", "payload_hash": "ea27ec708b6a40e3a91d1131780a56823bff60fc30e84e1f7fb04c18f20e2003"},
+    {"retrieval_id": "otc-v1-seed-memory", "authority": "NONCANONICAL", "payload_hash": "ebcfdcc52b3f2df79d4b0d309d578929ee4bf340cf27c3bfbf8e12cf12ef0fad"}
+  ],
+  "rejected_retrievals": [
+    {"retrieval_id": "#253/PR#256/PR#258", "rejection_reason": "fixed-cutoff SZZ spectral lane already active and orthogonal to current graph-transform discriminator"},
+    {"retrieval_id": "#276/PR#278", "rejection_reason": "MRS fixed-IR continuum lane does not test Wilson Section 38 graph-transform typing"},
+    {"retrieval_id": "#205/#220", "rejection_reason": "nontriviality/tightness lanes remain open but do not discriminate base inversion/relevant backward contraction"}
+  ],
+  "predeclared_discriminator": "Source-bind equations (578)-(580) and verify that Section 38 defines the graph transform through an invertible/monotone base map g->g' plus a backward/inverse relevant contraction (or an equivalent explicit graph contraction constant) compatible with the shrinking O(g^2) domain; otherwise retain BLOCKED/CANNOT_CHECK.",
+  "allowed_outcome_branches": ["SUCCESS", "PARTIAL_SUCCESS", "FAILURE", "BLOCKED", "UNKNOWN"],
+  "frozen_at_utc": "2026-08-12T05:56:28Z",
+  "sequence_index": 20,
+  "receipt_canonical_sha256": "706918031143a49a89b352156a214b6d4d53f9857ad2ecb7e32bfe2ed7747987"
+}
