@@ -1,0 +1,98 @@
+{
+  "application_parent_sha": "08c1a790f94c708ed5a463c7a8d6b036fd5828ff",
+  "artifact_hash": "sha256:5e8ceb4422cee3a0970796d4b01f1e89fa97daa452e1253a108c83e40dfafc02",
+  "atom_id": "YM-S1a2i-K1",
+  "durable_state": "MATERIALIZED",
+  "grants_mathematical_credit": false,
+  "hook_result": {
+    "durable_receipt_pointer": "git+https://github.com/SzeChunYiu/RAKL_math.git@a5a5bccdb9b308d90ff04a4ab7bdc506e2a18331#blob=f83ef82e60bb889290226b86c30f97cf425c3044&path=research/real_math/millennium/yang_mills/09_trace/YM-S1a2i_K1_PRE_ACTION_RECEIPT_20260812.json",
+    "hook_id": "HOOK-YM-S1a2i-K1-POSTMERGE-DURABILITY-20260812",
+    "hook_invoked_at_utc": "2026-08-12T10:58:00Z",
+    "materialization_status": "ALREADY_MATERIALIZED",
+    "reasons": [
+      "durable_receipt_already_materialized"
+    ],
+    "receipt": {
+      "allowed_outcome_branches": [
+        "SUCCESS",
+        "PARTIAL_SUCCESS",
+        "FAILURE",
+        "BLOCKED",
+        "UNKNOWN"
+      ],
+      "application_commit": "b7ca6ac51fa8319b559e95402c47959c626f284a",
+      "application_repository": "SzeChunYiu/RAKL_math",
+      "atom_id": "YM-S1a2i-K1",
+      "context_hash": "sha256:62b283503fa2f62349dea2b2bb8f67dc65e1b1d944cec01cbd5df8e0bed806ae",
+      "fibre_snapshot_hash": "sha256:62b283503fa2f62349dea2b2bb8f67dc65e1b1d944cec01cbd5df8e0bed806ae",
+      "framework_commit": "62e97d545f93ff604b2db47a7c8d41a59a1c5286",
+      "framework_repository": "SzeChunYiu/RAKL",
+      "frozen_at_utc": "2026-08-12T10:29:00Z",
+      "operator_ids": [
+        "SOURCE_SCOPED_SCALAR_INVARIANT_REGION_DISCRIMINATOR"
+      ],
+      "predeclared_discriminator": "Using only source-bound k-uniform constants, decide whether strict irrelevant contraction plus higher-order forcing fits the next O(g_{k+1}^2) K radius on one predeclared small-coupling interval; otherwise return ASSUMPTIONS_INSUFFICIENT or CANNOT_CHECK.",
+      "receipt_canonical_sha256": "750361c3807e3f0d7eae34fe52eed45a6411948f0968e80b55a57275ca3039fa",
+      "receipt_id": "PRE-YM-S1a2i-K1-20260812",
+      "rejected_retrievals": [
+        {
+          "rejection_reason": "requires new PDE tail input rather than the selected cheap scalar discriminator",
+          "retrieval_id": "Navier-Stokes-B2a1a3"
+        },
+        {
+          "rejection_reason": "requires target incidence geometry not present on merged main",
+          "retrieval_id": "Hodge-C008"
+        },
+        {
+          "rejection_reason": "deep arithmetic input and no cheap merged-main discriminator",
+          "retrieval_id": "BSD-Sha-finiteness"
+        }
+      ],
+      "schema_version": "pre-action-fibre-receipt-v1",
+      "selected_retrievals": [
+        {
+          "authority": "CANONICAL",
+          "payload_hash": "d05e7e19bb57e43f1fbffb2ccc5bbe8745caa34f8b032fd62e32a08595fc4a89",
+          "retrieval_id": "RAKL/main@62e97d54"
+        },
+        {
+          "authority": "CANONICAL",
+          "payload_hash": "18c39a9a7ea90fede4fb3672d1e777886fea7e88e094f453bb8fada799018a73",
+          "retrieval_id": "YM-R20-lesson"
+        },
+        {
+          "authority": "CANONICAL",
+          "payload_hash": "db809b89815e0ca6a58eaa915e531bcd52d127f5449469dd087f349763f69d11",
+          "retrieval_id": "global-failure-atlas"
+        }
+      ],
+      "sequence_index": 21,
+      "task_id": "YM-root-5"
+    },
+    "receipt_canonical_sha256": "750361c3807e3f0d7eae34fe52eed45a6411948f0968e80b55a57275ca3039fa",
+    "result_canonical_sha256": "0617ff07560a4192703ca8693a250ffd708444356ee81b54210881d71b32117d",
+    "schema_version": "pre-scratch-fibre-freeze-hook-result-v1"
+  },
+  "licenses_result_blind_candidate_freeze": true,
+  "literal_hook_status": "ALREADY_MATERIALIZED",
+  "persistence_acknowledgement": {
+    "persisted_at_utc": "2026-08-12T10:54:45Z",
+    "receipt_canonical_sha256": "750361c3807e3f0d7eae34fe52eed45a6411948f0968e80b55a57275ca3039fa",
+    "storage_pointer": "git+https://github.com/SzeChunYiu/RAKL_math.git@a5a5bccdb9b308d90ff04a4ab7bdc506e2a18331#blob=f83ef82e60bb889290226b86c30f97cf425c3044&path=research/real_math/millennium/yang_mills/09_trace/YM-S1a2i_K1_PRE_ACTION_RECEIPT_20260812.json"
+  },
+  "public_reachability_evidence": {
+    "github_merged_at": "2026-08-12T10:54:45Z",
+    "meaning": "Conservative first public-persistence observation: GitHub reports PR381 merged at this time with PUBLIC_RECEIPT_COMMIT reachable from main. The local commit timestamp is not used as remote-durability evidence.",
+    "pr": 381,
+    "url": "https://github.com/SzeChunYiu/RAKL_math/pull/381"
+  },
+  "public_receipt": {
+    "git_blob": "f83ef82e60bb889290226b86c30f97cf425c3044",
+    "path": "research/real_math/millennium/yang_mills/09_trace/YM-S1a2i_K1_PRE_ACTION_RECEIPT_20260812.json",
+    "raw_sha256": "42330f8a4ebd93ea4c97435ed5d8ffdb81ceef0468a4228b8aca99f1466f2e47",
+    "receipt_canonical_sha256": "750361c3807e3f0d7eae34fe52eed45a6411948f0968e80b55a57275ca3039fa"
+  },
+  "public_receipt_commit": "a5a5bccdb9b308d90ff04a4ab7bdc506e2a18331",
+  "schema_version": "ym-postmerge-durability-ack-v1",
+  "semantic_note": "The fixed API reports ALREADY_MATERIALIZED when an exact prior receipt is supplied with a hash-matching acknowledgement. The operational durable state is MATERIALIZED; no bare in-memory build is relabelled."
+}
