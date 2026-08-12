@@ -1,0 +1,108 @@
+{
+  "record_type": "SCOPED_EXACT_OVERLAP_WITNESS_CERTIFICATE",
+  "authority": "PROPOSAL_SHADOW_SAME_CONTEXT_HAND_CHECKED_NO_ROOT_AUTHORITY",
+  "atom_id": "O9d12a2a1b-C051",
+  "candidate_id": "C051-K40-EXACT-CANONICAL-OVERLAP-WITNESS-v1",
+  "source_binding": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "frozen_encoder_path": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+    "frozen_encoder_blob_sha": "fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+    "grammar": "MAGIC || gamma(v) || gamma(m) || 3m copies of sign||width-bit variable-index, followed by one zero pad iff raw length is odd",
+    "split": "equal split of a canonical length-2k word",
+    "transpose_label": "1 || parent_suffix_k",
+    "current_language": "canonical length-2(k+1) prefixes of length k+1",
+    "fallbacks_excluded": true
+  },
+  "claim": "Under the frozen C041 canonical grammar and C048 swapped/equal-split interface, H_40 intersection P_41 is nonempty.",
+  "exact_witness": {
+    "k": 40,
+    "parent": {
+      "v": 3,
+      "m": 7,
+      "width": 2,
+      "gamma_v": "011",
+      "gamma_m": "00111",
+      "header": "1110010101100111",
+      "header_length": 16,
+      "raw_length": 79,
+      "encoded_length": 80,
+      "padding": "0",
+      "formula": "(x1 OR x1 OR x1) AND (not x1 OR not x1 OR not x1) AND (x1 OR x1 OR not x2) AND (x2 OR not x2 OR x1) AND (x3 OR x2 OR not x1) AND (x2 OR not x1 OR x2) AND (not x1 OR x2 OR not x1)",
+      "literal_tokens_sign_plus_index": ["001","001","001","101","101","101","001","001","110","010","110","001","011","010","101","010","101","010","101","010","101"],
+      "word": "11100101011001110010010011011011010010011100101100010110101010101010101010101010",
+      "prefix_40": "1110010101100111001001001101101101001001",
+      "suffix_40": "1100101100010110101010101010101010101010",
+      "transpose_label_1_suffix": "11100101100010110101010101010101010101010"
+    },
+    "current": {
+      "v": 1,
+      "m": 11,
+      "width": 1,
+      "gamma_v": "1",
+      "gamma_m": "0001011",
+      "header": "1110010110001011",
+      "header_length": 16,
+      "raw_length": 82,
+      "encoded_length": 82,
+      "padding": null,
+      "formula_choice": "eleven copies of (x1 OR x1 OR x1)",
+      "literal_token": "01",
+      "word": "1110010110001011010101010101010101010101010101010101010101010101010101010101010101",
+      "prefix_41": "11100101100010110101010101010101010101010"
+    },
+    "equality": "1 || parent_suffix_40 = current_prefix_41 = 11100101100010110101010101010101010101010"
+  },
+  "hand_proof_obligations": [
+    {
+      "id": "PARENT_LENGTH_80",
+      "status": "PROVED",
+      "proof": "For v=3,m=7, width=2 and bit_length(m)=3. The raw length is 6+2*2+2*3+3*7*(2+1)=79, so the frozen even encoder appends one zero and produces length 80=2*40."
+    },
+    {
+      "id": "PARENT_EXACT_SPLIT_PHASE",
+      "status": "PROVED",
+      "proof": "MAGIC has 8 bits, gamma(3)=011 has 3, and gamma(7)=00111 has 5, so the header has length 16. Each literal token has 3 bits. The half split at bit 40 is therefore exactly after 8 literal tokens: 16+8*3=40. The suffix is the remaining 13 literal tokens followed by the unique zero pad. Direct concatenation gives 1100101100010110101010101010101010101010."
+    },
+    {
+      "id": "PARENT_CANONICAL_AND_UNSAT",
+      "status": "PROVED",
+      "proof": "Every listed variable index is in {1,2,3}, so encode_formula accepts the word as canonical. The first clause (x1 OR x1 OR x1) forces x1=true while the second clause (not x1 OR not x1 OR not x1) forces x1=false. Hence the entire seven-clause conjunction is UNSAT independently of the remaining clauses. Therefore 1||suffix_40 belongs to H_40."
+    },
+    {
+      "id": "CURRENT_LENGTH_82_AND_CANONICAL",
+      "status": "PROVED",
+      "proof": "For v=1,m=11, width=1 and bit_length(m)=4. The raw length is 6+2*1+2*4+3*11*(1+1)=82, already even. MAGIC||gamma(1)||gamma(11)=11100101||1||0001011 has length 16. Choosing every literal as positive x1 gives 33 canonical tokens 01, so a canonical length-82 word exists and its first 41 bits are exactly the displayed prefix."
+    },
+    {
+      "id": "EXACT_INTERFACE_EQUALITY",
+      "status": "PROVED",
+      "proof": "Prepending 1 to the displayed parent suffix gives 11100101100010110101010101010101010101010. The displayed canonical current prefix is bit-for-bit the same 41-bit string. Thus the exact C050 synchronized-language condition has a witness."
+    },
+    {
+      "id": "SCOPE_AND_NONPROMOTION",
+      "status": "PROVED",
+      "proof": "This certificate proves only H_40 intersection P_41 nonempty for the unchanged canonical grammar/equal split/swapped interface. It does not prove cover-number growth, a recurrence, circuit lower bounds, or P != NP."
+    }
+  ],
+  "discovery_vs_verification": {
+    "bounded_search_role": "A bounded source-derived CSP search was used only to locate a hostile candidate after the prospective fibre authorized counterexample-first search.",
+    "proof_role": "The certificate above is a direct finite symbolic construction: exact length arithmetic, canonical encoding, explicit UNSAT contradiction, and literal bit-string equality. The search procedure has zero proof authority."
+  },
+  "difference_witnesses": [
+    {
+      "against": "F-PNP-C049-K12-FIXED-VARIABLE-BIT-VERSUS-MAGIC",
+      "difference": "k=12 is separated by a fixed shared-bit mismatch; k=40 has an exact shared label."
+    },
+    {
+      "against": "F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC",
+      "difference": "k=15 is separated at zero-based bit 3; k=40 crosses width classes (parent width 2, current width 1) and aligns the entire 41-bit interface exactly."
+    },
+    {
+      "against": "PR332-C050-SUPPORT-SPECTRUM-SHADOW",
+      "difference": "The shadow support-spectrum observation that adjacent support must cross width classes is satisfied rather than violated: k=40 uses parent width 2 and k+1=41 uses current width 1."
+    }
+  ],
+  "residual": "The fixed-bit row-language disjointness obstruction is false as a universal later-k strategy. The next local question is whether this exact H_40/P_41 overlap survives the full graph/cover incidence requirements needed for any cover-growth argument; that is a gluing problem, not settled by this label witness.",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "independent_mathematical_review_credit": "0/3"
+}
