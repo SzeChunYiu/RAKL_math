@@ -1,0 +1,76 @@
+{
+  "schema_version": "rakl-shadow-revalidation-v1",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "revalidation_id": "PNP-C050-SUPPORT-SPECTRUM-RV-CURRENT-MAIN-REVALIDATION-20260812",
+  "reason": "Both framework main and application main advanced during this cycle. Final authority and novelty accounting are rebound to the then-current heads rather than silently treating the cycle-start snapshots as current.",
+  "framework_revalidation": {
+    "cycle_start_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+    "current_main_sha": "b0a5820dc607b0ef711d5aa1fc6d2bbcec39d311",
+    "current_method_version": "3.0.0",
+    "current_software_package_version": "0.1.0",
+    "current_constitution_epoch": "v3-authority-hardening-20260811",
+    "critical_surface_blob_checks": {
+      "src/rakl/method_specs.py": "26a90bf748d3b4969fc61c1f5666380eacfd7e3f unchanged from cycle-start subject",
+      "src/rakl/pre_action_receipt.py": "4378b1e4d141acc3e0764c305e130977c01fd23a unchanged from cycle-start subject",
+      "src/rakl/experience_substrate.py": "bac7467472fc93ca068bcc1195f763bd2b207b58 unchanged from cycle-start subject",
+      "src/rakl/problem_fibre.py": "387654660608216c65ae8efd1121f869bad91a9c unchanged from cycle-start subject",
+      "src/rakl/experience_policy.py": "448d9f18d01dec3030cc92a67d690e2f30561bb4 unchanged from cycle-start subject"
+    },
+    "semantic_effect_on_cycle": "NONE_DETECTED_ON_INVOKED_V3_SURFACES: the intervening framework-main change is Paper-3 preregistration research; the method/version and critical v3 code blobs used in this cycle are unchanged."
+  },
+  "application_revalidation": {
+    "cycle_start_main": "451d9506d365f06eb314323523ba123edd3ffb32",
+    "current_main_sha": "0b0f1840f99043a57050d625683ba8311fef3f24",
+    "current_main_tree": "cbcabf283c6059142762ce744faedb53fb72b071",
+    "intervening_material_pnp_change": {
+      "pr": 331,
+      "merge_sha": "0b0f1840f99043a57050d625683ba8311fef3f24",
+      "title": "research(pnp): freeze target-blind C050 k=15 discriminator",
+      "effect": "Current main now prospectively freezes k=15, proves source-only length-30/length-32 selector facts, and forbids target evaluation until a separate successor authorization."
+    },
+    "deduplication_effect": [
+      "The cycle's proposal that k15 be the next path is no longer novel at final current-main revalidation and must count PATH=0.",
+      "The facts that total lengths 30 and 32 are syntactically supported are no longer counted as novel; PR #331 now contains stronger source-only selector facts for those two lengths.",
+      "The parametric exact support formula k(w,m) and fixed-w gap >=3 are not stated in the inspected PR #331 summary/current search results, so they remain proposal/shadow local mathematical content, subject to incomplete-search caveat and no protected novelty."
+    ],
+    "search_completeness": "CANNOT_MEASURE: repository keyword/search and the inspected PR #331 do not constitute a complete semantic novelty universe."
+  },
+  "RAKL_CYCLE_METRICS_CORRECTION": {
+    "rakl_git_sha_exact_current_at_final_revalidation": "b0a5820dc607b0ef711d5aa1fc6d2bbcec39d311",
+    "rakl_method_version": "3.0.0",
+    "rakl_software_package_version": "0.1.0",
+    "rakl_math_cycle_base": "451d9506d365f06eb314323523ba123edd3ffb32",
+    "rakl_math_current_main_at_final_revalidation": "0b0f1840f99043a57050d625683ba8311fef3f24",
+    "retained_semantic_novelty_proposal_shadow_after_current_main_dedup": {
+      "KNOWLEDGE": 1,
+      "OPERATOR": 0,
+      "EXPERIENCE_PATTERN": 0,
+      "OBSTRUCTION": 1,
+      "RELATION": 1,
+      "PATH": 0,
+      "META_METHOD": 0
+    },
+    "retained_semantic_novelty_protected": {
+      "KNOWLEDGE": 0,
+      "OPERATOR": 0,
+      "EXPERIENCE_PATTERN": 0,
+      "OBSTRUCTION": 0,
+      "RELATION": 0,
+      "PATH": 0,
+      "META_METHOD": 0
+    },
+    "new_path_id_counted_as_learning": false,
+    "candidate_lesson_counted_as_learning": false,
+    "raw_repository_growth_counted_as_learning": false,
+    "final_next_action": "Do not duplicate the now-merged k15 selector. Respect PR #331's result-access firewall; only a separately authorized successor may inspect H_15 intersection P_16 target bits/UNSAT. The support-spectrum fixed-w obstruction may be supplied as proposal/shadow routing context, not authority.",
+    "gate_effect": "NONE; chronology remains RETROSPECTIVE_ONLY and root remains OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "supersedes_fields_only": [
+    "framework_subject exact-current SHA in C050_SUPPORT_SPECTRUM_RV_VERIFIED_DISCOVERY_CYCLE_20260812.json",
+    "RAKL_CYCLE_METRICS.rakl_git_sha exact-current interpretation",
+    "RAKL_CYCLE_METRICS retained_semantic_novelty_proposal_shadow.PATH",
+    "DAG/next-action novelty claim for k15"
+  ],
+  "mathematical_statement_effect": "The exact support-spectrum formula and fixed-w gap statement are unchanged; this revalidation changes current-subject binding, deduplication, and routing only.",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+}

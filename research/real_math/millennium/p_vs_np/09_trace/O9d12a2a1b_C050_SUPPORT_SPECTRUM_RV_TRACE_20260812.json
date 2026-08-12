@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "trace_id": "PNP-C050-SUPPORT-SPECTRUM-RV-HASH-CHAIN-20260812",
+  "authority": "PROPOSAL_SHADOW_TRACE",
+  "hash_algorithm": "SHA-256 over canonical sorted compact JSON excluding event_hash",
+  "events": [
+    {
+      "index": 0,
+      "event_type": "FRAMEWORK_BOUND",
+      "previous_event_hash": "GENESIS",
+      "payload": {
+        "framework_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+        "method_version": "3.0.0",
+        "v3_surfaces": [
+          "TaskEpisode",
+          "ProblemFibre",
+          "experience_policy",
+          "pre_action_receipt",
+          "saturation_vector"
+        ]
+      },
+      "event_hash": "511960d0ff78019dfbb8c7b1e2365b99cdcd8693179653862423058c45a65503"
+    },
+    {
+      "index": 1,
+      "event_type": "APPLICATION_BOUND",
+      "previous_event_hash": "511960d0ff78019dfbb8c7b1e2365b99cdcd8693179653862423058c45a65503",
+      "payload": {
+        "application_base": "451d9506d365f06eb314323523ba123edd3ffb32",
+        "root_issue": 2,
+        "parent_atom": "O9d12a2a1b-C050",
+        "fibre_hash": "b27b2fa3ddbeb67c050e7de802fdc91d77c5995b4faed117243ffec6312d725a"
+      },
+      "event_hash": "bfe2a7159f1e1dc2366042d0d7e7d94e32ce8a1147bd3935168681ccc392bca9"
+    },
+    {
+      "index": 2,
+      "event_type": "RETROSPECTIVE_RECEIPT_BOUND",
+      "previous_event_hash": "bfe2a7159f1e1dc2366042d0d7e7d94e32ce8a1147bd3935168681ccc392bca9",
+      "payload": {
+        "commit": "c9db5b3ee38f86d3fba6e62cd4d960f7b4d0067c",
+        "receipt_sha256": "c56d7c1213f7c7680cc3a8156ca39318eaf313a8fda4bb1b6bd2e0904e1afd2f",
+        "chronology": "RETROSPECTIVE_ONLY_BY_DISCLOSURE"
+      },
+      "event_hash": "51df41da4e47e66c672a99c3fbdc6abbec817ecf1811836ee91fd0a45b0c32be"
+    },
+    {
+      "index": 3,
+      "event_type": "MEMORY_ROUTED",
+      "previous_event_hash": "51df41da4e47e66c672a99c3fbdc6abbec817ecf1811836ee91fd0a45b0c32be",
+      "payload": {
+        "selected": [
+          "C050_CURRENT_FIBRE",
+          "C050_RESEARCH_MEMORY_REVIEW",
+          "C050_OBSTRUCTION_TRANSFORMATION_REVIEW"
+        ],
+        "rejected": [
+          "PR327_K14_PENDING_RESULT",
+          "PR307_K13_RESULT",
+          "C049_K12_FIXED_BIT_CONCLUSION"
+        ],
+        "mode": "SEARCH_REPRESENTATION_FIRST"
+      },
+      "event_hash": "666c33569b3657961ce986c671409e02fb2c253b8622f6993661251a59b1c6ce"
+    },
+    {
+      "index": 4,
+      "event_type": "MATHEMATICAL_OBSERVATION",
+      "previous_event_hash": "666c33569b3657961ce986c671409e02fb2c253b8622f6993661251a59b1c6ce",
+      "payload": {
+        "statement": "support half-length k(w,m)=3+w+bit_length(m)+ceil(3m(w+1)/2); for fixed w successive m values change k by at least 3",
+        "proof_mode": "hand algebra plus converse construction"
+      },
+      "event_hash": "88780036a5bf4150d91b1263e94e4949df2e767eb216001fc22972867b0129db"
+    },
+    {
+      "index": 5,
+      "event_type": "FALSIFICATION_VERIFIED",
+      "previous_event_hash": "88780036a5bf4150d91b1263e94e4949df2e767eb216001fc22972867b0129db",
+      "payload": {
+        "attacked": "same variable-bitlength w could realize consecutive supported half-lengths",
+        "outcome": "REFUTED_BY_EXACT_GAP_LOWER_BOUND",
+        "calibration": "bounded direct-encoder shape checks only"
+      },
+      "event_hash": "770f322710d983c93dc13ea5468403d91422c9adaef9030b48ebfcaa73b73f5c"
+    },
+    {
+      "index": 6,
+      "event_type": "OUTCOME_RECORDED",
+      "previous_event_hash": "770f322710d983c93dc13ea5468403d91422c9adaef9030b48ebfcaa73b73f5c",
+      "payload": {
+        "episode_id": "E-PNP-C050-SUPPORT-SPECTRUM-RV-20260812",
+        "episode_hash": "67f6d9938bf4908880f5497b84f8041cbbb7c4f2ffd606922d0cebdcd0348064",
+        "outcome": "PARTIAL_SUCCESS",
+        "next_atom": "O9d12a2a1b-C050-K15-CROSS-WIDTH-SYNCHRONIZATION"
+      },
+      "event_hash": "88bc6b2dac9a55083a88c7ab88d70f98f10a430d0c3b2a041d983f6631997128"
+    }
+  ],
+  "last_event_hash": "88bc6b2dac9a55083a88c7ab88d70f98f10a430d0c3b2a041d983f6631997128"
+}
