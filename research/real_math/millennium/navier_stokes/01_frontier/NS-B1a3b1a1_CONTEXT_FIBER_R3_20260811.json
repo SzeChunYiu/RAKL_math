@@ -1,0 +1,142 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow-r3",
+  "atom_id": "NS-B1a3b1a1",
+  "parent_atom_id": "NS-B1a3b1a",
+  "issue_id": "RAKL_math#148",
+  "authority": "PROPOSAL_SHADOW / PRE_CANDIDATE_FROZEN / ROOT_AUTHORITY_NONE",
+  "problem_signature": "whole-space 3D incompressible Navier-Stokes; test whether same-slab finite-I plus uniformly controlled scale-critical velocity can force uniform-in-time global vorticity L^{3/2,infinity} amplitude",
+  "object_context": "Counterexample-first producer-interface audit inside the Type-I / critical-compactness route. The target implication is deliberately scoped to same-slab data and does not include first-singular-time nonregularity, one-sided pre-singularity history, frequency tightness, ancient-limit persistence, or Grujic critical-profile/phase hypotheses.",
+  "root_contract": {
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "accepted_terminal_outcomes": [
+      "Clay A",
+      "Clay B",
+      "Clay C",
+      "Clay D"
+    ],
+    "current_lane": "positive regularity / Type-I classification / vorticity-amplitude producer",
+    "independent_reviews": "0/3",
+    "root_promotion_allowed": false
+  },
+  "success_contract": {
+    "scoped_success": "produce an exact smooth whole-space Navier-Stokes family with a common critical-velocity / finite-I bound on the normalized same-slab producer context but unbounded global L^{3/2,infinity} vorticity amplitude near a temporal edge; or prove such a family impossible from source-valid estimates",
+    "falsifier": "a valid exact family proves the universal same-slab producer implication false, but only under the explicitly frozen missing-history/profile DifferenceWitnesses",
+    "forbidden_overreach": [
+      "do not infer failure of history-sensitive first-singular-time producer theorems",
+      "do not infer a Navier-Stokes singularity or root result",
+      "do not use numerical computation as proof",
+      "do not linearly superpose evolved nonlinear solutions"
+    ]
+  },
+  "structural_coordinates": [
+    "Navier-Stokes scaling u_lambda=lambda u(lambda x,lambda^2 t), omega_lambda=lambda^2 omega(lambda x,lambda^2 t)",
+    "velocity L^3 and vorticity L^{3/2,infinity} are both scaling-critical in R^3",
+    "Albritton-Barker finite-I uses local scale-invariant A,C,D,E quantities and is implied by weak Serrin data at 3/p+2/q=1",
+    "Kato small-L^3 theory supplies exact global strong/mild whole-space solutions for sufficiently small L^3 initial data",
+    "spatial packet multiplicity can keep an L^3 velocity norm fixed while increasing a derivative weak-L^{3/2} distribution norm",
+    "whole-space pressure may be represented by Riesz transforms of u_i u_j and controlled in L^{3/2}; curl removes pressure from the vorticity equation but not from finite-I verification",
+    "positive-time persistence is required only pointwise in family index N; no N-uniform persistence time is assumed",
+    "the target consumer is global weak-L^{3/2} vorticity amplitude, not merely a local cylinder norm",
+    "first-singular-time history and ancient compactness are not encoded in the same-slab producer hypothesis under test"
+  ],
+  "actual_fibre_consulted": [
+    {
+      "id": "NS-B1_CONTEXT_FIBER_20260811",
+      "sha": "462c00de88b4be32ff4c91149f0d9c8e9c8faa3a",
+      "role": "root Type-I route context"
+    },
+    {
+      "id": "NS-B1_SOURCE_PACKET_20260811",
+      "sha": "21957a1a645faee1bb6222b5853268900b68d136",
+      "role": "primary-source route contract and Type-I interfaces"
+    },
+    {
+      "id": "NS-B1a3b1_CONTEXT_FIBER_R2_20260811",
+      "sha": "738fa2acc83789386c136e427d14e7b8bb330df0",
+      "role": "immediate parent producer/consumer signature and DifferenceWitnesses"
+    },
+    {
+      "id": "NS-B1a3b1_C001_R2_LOGBMO_ZOOM_INTERFACE_AUDIT_20260811",
+      "sha": "7608baa9587d73bc6fdb3d5982ea0a5d18ad20ac",
+      "role": "prior representation success that redirects search upstream"
+    },
+    {
+      "id": "RAKL_math#148",
+      "role": "active exact atom and frozen counterexample-first discriminator"
+    }
+  ],
+  "solved_or_near_solved_analogues": [
+    {
+      "id": "KATO-1984-SMALL-L3-GLOBAL",
+      "role": "exact solution producer",
+      "transfer_assumption": "small L^3 norm below the source threshold",
+      "disanalogy": "does not encode a first singular time; produces regular small-data solutions"
+    },
+    {
+      "id": "AB-2019-WEAK-SERRIN-TO-TYPE-I",
+      "role": "finite-I certification",
+      "transfer_assumption": "same suitable/strong whole-space solution on fixed cylinder and critical weak-Serrin norm",
+      "disanalogy": "finite-I is local/cylinder based while target vorticity amplitude is global"
+    },
+    {
+      "id": "NS-B1a3b1-C001-R2",
+      "role": "representation success",
+      "transfer_assumption": "conditional consumer norms already exist",
+      "disanalogy": "zoom stability does not produce those norms"
+    }
+  ],
+  "explicit_difference_witnesses": [
+    "constructed family is smooth small-data and therefore has no first-singular-time nonregularity",
+    "no uniform one-sided history length tied to a singular edge is imposed",
+    "no frequency-envelope or derivative-tightness hypothesis is imposed",
+    "no ancient-limit singularity-persistence property is imposed",
+    "Grujic critical-profile and phase hypotheses are not imposed",
+    "global energy is not required to be uniform across packet multiplicity; the active producer hypothesis is critical velocity plus same-slab finite-I"
+  ],
+  "counterexample_first_tests": [
+    "verify exact divergence-free compactly supported packet data and disjoint-support L^3 identity",
+    "obtain exact global Navier-Stokes solutions from small-data L^3 theory without superposing evolved solutions",
+    "derive a common finite-I bound on the normalized same-slab cylinder from the common critical L^3 bound and pressure/local-energy estimates",
+    "prove a weak-L^{3/2} vorticity lower bound by superlevel-set counting",
+    "use positive-time C^1 trace continuity for each fixed family index to move the lower bound off the temporal edge",
+    "audit pressure, endpoints, derivative loss, and circularity separately",
+    "check DifferenceWitness before any transfer back to first-singular-time or ancient contexts"
+  ],
+  "search_policy": {
+    "choice": "COUNTEREXAMPLE_FIRST / EXACT_SIGNATURE_THEN_SAME_FIBRE_FAILURE_MEMORY / LOWEST_ASSUMPTION_COMPOSITION",
+    "reason": "parent R2 already verified representation transport, while the active edge is producer generation; a packet-multiplicity stress test directly targets the derivative/global-amplitude implication before attempting a positive bootstrap"
+  },
+  "same_context_expert_cell": [
+    {
+      "id": "EX-NS-R3-A",
+      "background": "critical PDE and local-energy theory",
+      "role": "audit Kato small-L3 producer, Albritton-Barker finite-I certification, scaling and suitable-solution hypotheses"
+    },
+    {
+      "id": "EX-NS-R3-B",
+      "background": "harmonic analysis and Lorentz/Campanato spaces",
+      "role": "audit weak-L^{3/2} lower bound, pressure Calderon-Zygmund control, endpoints and distribution functions"
+    },
+    {
+      "id": "EX-NS-R3-C",
+      "background": "adversarial PDE constructions and concentration-compactness",
+      "role": "audit packet geometry, divergence-free data, multiplicity scaling, and prohibition on nonlinear superposition"
+    },
+    {
+      "id": "EX-NS-R3-D",
+      "background": "verification, gluing and proof-assurance",
+      "role": "audit positive-time trace, DifferenceWitnesses, local-vs-global failure separation, and root gates"
+    }
+  ],
+  "framework": {
+    "method": "RAKL Verified Discovery Method",
+    "version": "3.0.0",
+    "method_spec_version": "2026-08-07.3",
+    "git_sha": "bf94d16847971069912501e9a63f0e97a1e3e159"
+  },
+  "application_base_sha": "350861b1c2755033893068e5519b8b06a6315aa6",
+  "pre_state_fingerprint": "git-tree:c779c3bb98a24a70054571b9c63a46673c711cec",
+  "frozen_at": "2026-08-11T20:10:00Z",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:5fcac58aaeec6abba3faf07d37ec7e94b9fbc5a180763082afa2d881aa07cdaf"
+}
