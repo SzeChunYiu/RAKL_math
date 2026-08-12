@@ -352,7 +352,7 @@ def trace(context_hash: str, memory_hash: str, shortcut_hash: str) -> MathResear
         if kind is ResearchTraceEventType.OBSTRUCTION_TRANSFORMATION_REVIEW: outputs[:0] = [shortcut_hash, "selected_mode:SEARCH"]
         payload = {
             "event_id": f"O9d12a2a1b-C050-E{i:02d}", "atom_id": ATOM,
-            "event_type": kind.value, "timestamp": f"2026-08-12T04:19:{i:02d}Z",
+            "event_type": kind.value, "timestamp": f"2026-08-12T05:06:{i:02d}Z",
             "state_summary": "C050 asks how the k=12 fixed-bit obstruction changes for k>12 and whether any later H_k intersects P_(k+1), with the C048 swapped reduction fixed; no k, construction, decoder result, target, or evaluator has been accessed or executed.",
             "action_summary": kind.value, "evidence_pointers": [evidence_map[kind]],
             "alternatives_considered": ["scan k values", "change encoding or split", "infer later_k from high-half occupancy", "freeze a synchronized syntax-plus-UNSAT discriminator"],

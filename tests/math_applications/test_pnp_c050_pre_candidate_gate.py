@@ -4,6 +4,7 @@ import importlib.util
 import json
 from pathlib import Path
 import sys
+from datetime import datetime
 
 import jsonschema
 from rakl.math_context import ContextGateVerdict
@@ -128,6 +129,21 @@ def test_c050_memory_and_expert_roles_preserve_scope() -> None:
     }
     assert "NOT_INDEPENDENT_PEER_REVIEW" in expert["review_authority"]
     assert "UNSAT" in expert["strongest_objection"]
+
+
+def test_c050_trace_events_do_not_predate_atom_or_context_freeze() -> None:
+    atom = _load(ARTIFACTS["atomization"])
+    context = _load(ARTIFACTS["context"])
+    trace = _load(ARTIFACTS["trace"])
+    chronology_floor = max(
+        datetime.fromisoformat(atom["recorded_at"].replace("Z", "+00:00")),
+        datetime.fromisoformat(context["frozen_at"].replace("Z", "+00:00")),
+    )
+    assert all(
+        datetime.fromisoformat(entry["timestamp"].replace("Z", "+00:00"))
+        > chronology_floor
+        for entry in trace["entries"]
+    )
 
 
 def test_c050_full_document_verifier_detects_stale_context(tmp_path: Path) -> None:

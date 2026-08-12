@@ -2,6 +2,7 @@
 """Capability-free full-document integrity verifier for C050 pre-candidate state."""
 from __future__ import annotations
 import argparse, hashlib, json
+from datetime import datetime
 from pathlib import Path
 
 BASE = Path("research/real_math/millennium/p_vs_np")
@@ -46,6 +47,11 @@ def audit_packet(root):
     if gate.get("chronology",{}).get("target_result_accessed") is not False: errors.append("gate: target access boundary changed")
     expert=load(root/INPUTS["expert_review"])
     if expert.get("review_authority")!="SAME_CONTEXT_ROLE_SEPARATED_INTERNAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW": errors.append("expert: authority widened")
+    atomization=load(root/INPUTS["atomization"]); context=load(root/INPUTS["context"]); trace=load(root/INPUTS["trace"])
+    try:
+        chronology_floor=max(datetime.fromisoformat(atomization["recorded_at"].replace("Z","+00:00")),datetime.fromisoformat(context["frozen_at"].replace("Z","+00:00")))
+        if any(datetime.fromisoformat(entry["timestamp"].replace("Z","+00:00"))<=chronology_floor for entry in trace["entries"]): errors.append("trace: event predates or equals atom/context freeze")
+    except (KeyError, TypeError, ValueError) as exc: errors.append(f"trace: invalid chronology: {exc}")
     return tuple(errors)
 def verify_packet(root):
     errors=audit_packet(root)
