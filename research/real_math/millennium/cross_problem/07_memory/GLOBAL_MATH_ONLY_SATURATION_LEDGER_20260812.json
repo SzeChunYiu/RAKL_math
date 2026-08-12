@@ -1,0 +1,841 @@
+{
+  "schema_version": "1.0.0",
+  "ledger_id": "GLOBAL-MATH-ONLY-SATURATION-20260812",
+  "as_of_utc": "2026-08-12T04:06:38Z",
+  "base_repository_sha": "21d22075fa250e4ded412fd292b7942b87503266",
+  "authority_universe": {
+    "kind": "MERGED_ORIGIN_MAIN_ONLY",
+    "repository_sha": "21d22075fa250e4ded412fd292b7942b87503266",
+    "pending_or_open_pr_material_counted": false,
+    "rule": "Only content reachable from the exact frozen origin/main SHA is eligible. Open or unmerged work may be listed only as noncanonical pending provenance and receives zero credit."
+  },
+  "object": "Deduplicated application-local mathematical knowledge retained across P versus NP and every Millennium lane represented or explicitly absent at the frozen repository base.",
+  "quantity_of_interest": "Count atomic retained mathematical claims only, while preserving all assurance and process records at zero mathematical credit.",
+  "counting_rule": {
+    "unit": "One credit unit per unique scoped atomic mathematical claim, deduplicated by claim meaning and evidence scope rather than by file, identifier, commit, or repetition.",
+    "eligible_types": [
+      "BROKEN_MATHEMATICAL_ASSUMPTION",
+      "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+      "MATHEMATICAL_FALSIFIER",
+      "PROOF_OR_LEMMA",
+      "TRANSFER_CONDITION"
+    ],
+    "eligible_content": [
+      "proofs or lemmas",
+      "explicit constructions or counterexamples",
+      "broken mathematical assumptions",
+      "transfer conditions",
+      "mathematical falsifiers"
+    ],
+    "ineligible_content": [
+      "repository, branch, commit, pull-request, merge, or chronology observations",
+      "test status, runtime, solver behavior, enumeration alone, or computation alone",
+      "schema, reference, serialization, or content-identity checks",
+      "same-context review or self-reported novelty",
+      "TaskEpisode, process-surface, metric, or repository-growth telemetry"
+    ],
+    "deduplication": "A proof and its repeated lesson, failure, trace, review, or inventory copies count once unless they state materially distinct mathematical claims. One artifact may support multiple genuinely distinct atomic claims; repeated artifacts never multiply a claim.",
+    "authority_separation": "Truth-check or proof-draft credit is not strict discovery, novelty, independent review, promotion, or root credit."
+  },
+  "global_artifact_audit": {
+    "search_boundary": "Tracked files below research/real_math/millennium at the frozen base whose filenames contain LESSON, INVENTORY, or SATURATION.",
+    "filename_inventory": {
+      "lesson_named_files": 8,
+      "lesson_named_paths": [
+        "research/real_math/millennium/cross_problem/10_study_pattern/LESSON_PROPOSAL.schema.json",
+        "research/real_math/millennium/cross_problem/10_study_pattern/LESSON_PROPOSAL_EXAMPLE_20260811.json",
+        "research/real_math/millennium/hodge/deformation/07_memory/H4d1b_CANDIDATE_REPRESENTATION_LESSON_20260811.json",
+        "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b1_C001_R2_OBSTRUCTION_LESSON_20260811.json",
+        "research/real_math/millennium/navier_stokes/07_memory/NS-B1a3b_C001_OBSTRUCTION_LESSON_20260811.json",
+        "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1a_LESSON_PROPOSAL_SHADOW_20260811.json",
+        "research/real_math/millennium/p_vs_np/10_feedback/C045_ROW_PROJECTION_COLLISION_MATHEMATICAL_LESSON_20260812.json",
+        "research/real_math/millennium/p_vs_np/10_feedback/O9d12a2a1a1b1_R1_MATHEMATICAL_METHOD_LESSON_PROPOSAL_20260811.json"
+      ],
+      "inventory_named_files": 32,
+      "inventory_named_paths": [
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD-S001_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R4_LEGACY_EPISODE_INVENTORY_FAILURE_SHADOW_20260811.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R6_EPISODE_INVENTORY_FAILURE_SHADOW_20260811.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/hodge/deformation/07_memory/H4d1a_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/hodge_conjecture/07_memory/HM1_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/hodge_conjecture/07_memory/HM1a_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/navier_stokes/07_memory/NS_R001_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_COORDINATE_INVENTORY_R2_RESULT_20260811.json",
+        "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_SOURCE_NATIVE_THEOREM_INVENTORY_R1_20260811.json",
+        "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_SOURCE_NATIVE_THEOREM_INVENTORY_R1_V2_20260811.json",
+        "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_COORDINATE_INVENTORY_R2_MATHEMATICAL_EXPERIENCE_20260811.json",
+        "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1a1b1_COORDINATE_INVENTORY_R2_HOSTILE_MATH_REVIEW_20260811.json",
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1a1b1_SOURCE_INVENTORY_R1_CHRONOLOGY_CORRECTION_20260811.json",
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1a1b1_SOURCE_INVENTORY_R1_HOSTILE_MATH_REVIEW_20260811.json",
+        "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_COORDINATE_INVENTORY_R2_PRE_ACTION_20260811.json",
+        "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_COORDINATE_INVENTORY_R2_RESULT_TRACE_20260811.json",
+        "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_SOURCE_INVENTORY_R1_PRE_ACTION_20260811.json",
+        "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_SOURCE_INVENTORY_R1_RESULT_TRACE_20260811.json.shadow",
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_SPEC_002_PR15_TOOL_INVENTORY_SNAPSHOT_7F45008.json",
+        "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_001_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_001_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/yang_mills/07_memory/YM_E1a1_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/yang_mills/07_memory/YM_E1a1a_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/yang_mills/07_memory/YM_E1a_RESEARCH_TOOL_INVENTORY_20260811.json"
+      ],
+      "saturation_named_files": 2,
+      "saturation_named_paths": [
+        "research/real_math/millennium/navier_stokes/10_case_study/NS-B2a1a2_C001_MATHEMATICAL_SATURATION_RECEIPT_20260812.json",
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_SATURATION_VECTOR_SHADOW_20260811.json"
+      ]
+    },
+    "classification": "Only atomic mathematical contents separately enumerated in credited_items receive credit. Schemas, examples, shadows, source or coordinate lists, snapshots, review records, and telemetry retain provenance at zero.",
+    "rules": {
+      "filename_or_record_name_never_mints_credit": true,
+      "computation_alone_is_not_proof": true,
+      "same_context_review_is_not_independent": true,
+      "assurance_metadata_credit_units": 0
+    }
+  },
+  "lanes": [
+    {
+      "lane_id": "p_vs_np",
+      "display_name": "P versus NP",
+      "status": "ACTIVE_APPLICATION_LANE",
+      "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "credited_items": [
+        {
+          "item_id": "MATH-PNP-C041-SPARSE-LANGUAGE-BRIDGE",
+          "credit_type": "PROOF_OR_LEMMA",
+          "exact_claim": "Restricting a gamma-coded formula to variables that occur in literal slots preserves satisfiability and gives a polynomial verifier and a two-to-the-input-length complement decider for the frozen language.",
+          "scope": "The exact frozen one-sided decoder and its fixed fallbacks.",
+          "authority": "RETROSPECTIVE_HAND_PROOF_DRAFT",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/p_vs_np/04_candidates/C041_FX_SAT_ONE_SIDED_RESULT_20260812.md"
+          ],
+          "non_implications": [
+            "No circuit lower bound or P-versus-NP consequence."
+          ]
+        },
+        {
+          "item_id": "F-C041-FX-SAT-FIRST-STEP-ZERO-AUGMENTATION",
+          "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+          "exact_claim": "Two saturated legal full-union pairs cover every child-relevant semi-filter at the first frozen extension, forcing the nonnegative residual packing optimum to zero while lifted parent mass remains feasible.",
+          "scope": "The registered n=2 to n=3 C041 seed and fixed lifted parent weights.",
+          "authority": "EXACT_FINITE_MATHEMATICAL_COUNTEREXAMPLE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/p_vs_np/04_candidates/C041_FX_SAT_ONE_SIDED_RESULT_20260812.md",
+            "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041_ZERO_AUGMENTATION_FAILURE_DELTA_20260812.json"
+          ],
+          "non_implications": [
+            "Does not determine the reoptimized child optimum or any later increment."
+          ]
+        },
+        {
+          "item_id": "MATH-PNP-C042-ACTIVATION-THRESHOLDS",
+          "credit_type": "PROOF_OR_LEMMA",
+          "exact_claim": "Prefix fit, syntactic validity, and unsatisfiable semantic activation occur at distinct exact lengths in the frozen decoder.",
+          "scope": "The C042 frozen activation schedule through its first obstruction-capable levels.",
+          "authority": "SCOPED_PROOF_DRAFT",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/p_vs_np/04_candidates/C042_ACTIVATION_QUOTIENT_RESULT_20260812.md"
+          ],
+          "non_implications": [
+            "No asymptotic amplification theorem."
+          ]
+        },
+        {
+          "item_id": "MATH-PNP-C042-EXACT-TWO-PAIR-COVERS",
+          "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+          "exact_claim": "Exact quotient analysis supplies legal two-pair covers at the first semantic levels, giving rho of G9 and G13 at most two.",
+          "scope": "The exact early complements and source-polarity quotient lift in C042.",
+          "authority": "SCOPED_EXPLICIT_CONSTRUCTION",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/p_vs_np/04_candidates/C042_ACTIVATION_QUOTIENT_RESULT_20260812.md"
+          ],
+          "non_implications": [
+            "No lower bound and no uniform recurrence."
+          ]
+        },
+        {
+          "item_id": "L-PNP-C042-ACTIVATION-BEFORE-AMPLIFICATION",
+          "credit_type": "TRANSFER_CONDITION",
+          "exact_claim": "When exact row and column neighborhood classes support the registered quotient lift, intersection-cover complexity is at most the smaller exact type count; semantic activation alone is therefore not amplification.",
+          "scope": "Parameterized bipartite complements with exact neighborhood equivalence and a proved polarity-preserving lift.",
+          "authority": "APPLICATION_MATHEMATICAL_LESSON_PROPOSAL",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/p_vs_np/10_feedback/C042_SEMANTIC_ACTIVATION_GATE_FEEDBACK_20260812.json"
+          ],
+          "non_implications": [
+            "Does not promote a framework method or establish later type growth."
+          ]
+        },
+        {
+          "item_id": "MATH-PNP-C043-FULL-HISTORY-TYPE-BOUND",
+          "credit_type": "PROOF_OR_LEMMA",
+          "exact_claim": "The complete accumulated complement through G16 has exact bidirectional neighborhood types that yield a source-polarity type-class construction and rho of G16 at most eight.",
+          "scope": "The complete C043 length-through-30 classification including old bands and fallback contributions.",
+          "authority": "SCOPED_PROOF_DRAFT",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/p_vs_np/04_candidates/C043_FIRST_ROW_SPLIT_RESULT_20260812.md"
+          ],
+          "non_implications": [
+            "No exact value and no uniform asymptotic upper bound."
+          ]
+        },
+        {
+          "item_id": "L-PNP-C043-SEMANTIC-MULTIPLICITY-NONCOERCIVE",
+          "credit_type": "BROKEN_MATHEMATICAL_ASSUMPTION",
+          "exact_claim": "More unsatisfiable formulas, active rows, or residual languages do not force cover growth when the full accumulated neighborhoods remain in few exact twin classes.",
+          "scope": "The one-sided C043 family under exact full-history row and column classification.",
+          "authority": "APPLICATION_MATHEMATICAL_LESSON_PROPOSAL",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/p_vs_np/10_feedback/C043_BIDIRECTIONAL_TWIN_GATE_FEEDBACK_20260812.json"
+          ],
+          "non_implications": [
+            "Does not say semantic multiplicity is never useful."
+          ]
+        },
+        {
+          "item_id": "MATH-PNP-C044-HETEROGENEOUS-BLOCK-MULTIPLEXING",
+          "credit_type": "PROOF_OR_LEMMA",
+          "exact_claim": "For disjoint complement components with disjoint row and column projections and local disjoint generator-separating sizes k_r, the full cover is at most max k_r plus the binary component-separation cost.",
+          "scope": "Finite t at least one, exact complement decomposition, legal local families, and common full-cover polarity.",
+          "authority": "RETROSPECTIVE_HAND_PROOF_DRAFT",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/p_vs_np/04_candidates/C044_RETROSPECTIVE_Q16_MULTIPLEXING_RESULT_20260812.md"
+          ],
+          "non_implications": [
+            "No lower bound and no claim that arbitrary components satisfy the hypotheses."
+          ]
+        },
+        {
+          "item_id": "MATH-PNP-C044-Q16-THREE-PAIR-COVER",
+          "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+          "exact_claim": "Three explicit disjoint generator-separating pairs cover the exact Q16 quotient and lift to rho of G16 at most three.",
+          "scope": "The exact Q16 complement quotient and fibre-containment proof.",
+          "authority": "RETROSPECTIVE_EXPLICIT_UPPER_WITNESS",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/p_vs_np/04_candidates/C044_RETROSPECTIVE_Q16_MULTIPLEXING_RESULT_20260812.md"
+          ],
+          "non_implications": [
+            "Does not prove the exact quotient value; exhaustive computation alone is not proof."
+          ]
+        },
+        {
+          "item_id": "F-C044-HETEROGENEOUS-BLOCK-MULTIPLEXING",
+          "credit_type": "BROKEN_MATHEMATICAL_ASSUMPTION",
+          "exact_claim": "Exact quotient-type growth is not coercive when complement growth remains component-separable, because local covers can be multiplexed instead of added.",
+          "scope": "The exact C044 component-separable complement and the proved multiplexing hypotheses.",
+          "authority": "SCOPED_MATHEMATICAL_FAILURE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C044_HETEROGENEOUS_MULTIPLEXING_FAILURE_DELTA_20260812.json"
+          ],
+          "non_implications": [
+            "Does not globally blacklist quotient growth."
+          ]
+        },
+        {
+          "item_id": "MATH-PNP-C045-G17-BLOCK-COVER",
+          "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+          "exact_claim": "The exact length-32 unsatisfiable batch forms a disjoint new complement block with an explicit three-pair star code, and indexwise multiplexing plus one separator gives rho of G17 at most four.",
+          "scope": "The frozen one-sided recursion at G16 to G17 and the hand-checked ten-edge batch.",
+          "authority": "RETROSPECTIVE_MATHEMATICAL_TRUTH_CHECK",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/p_vs_np/04_candidates/C045_G17_COMPONENT_SEPARABILITY_RESULT_20260812.md"
+          ],
+          "non_implications": [
+            "Does not prove rho equals four or a uniform recurrence."
+          ]
+        },
+        {
+          "item_id": "L-PNP-C045-ROW-PROJECTION-COLLISION-NECESSITY",
+          "credit_type": "TRANSFER_CONDITION",
+          "exact_claim": "Fresh columns cannot couple backward when every newly unsatisfiable prefix row has empty old complement fibre; reuse of an already active row is necessary for coupling by this mechanism.",
+          "scope": "The same one-sided recursive construction, complete old row projection, exact new-band classification, and legal local covers.",
+          "authority": "RETROSPECTIVE_MATHEMATICAL_LESSON_PROPOSAL",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/p_vs_np/10_feedback/C045_ROW_PROJECTION_COLLISION_MATHEMATICAL_LESSON_20260812.json"
+          ],
+          "non_implications": [
+            "A row collision is not sufficient for cover growth and failure of separability is not a lower bound."
+          ]
+        },
+        {
+          "item_id": "T-PNP-FRACTIONAL-SEMIFILTER-PACKING",
+          "credit_type": "TRANSFER_CONDITION",
+          "exact_claim": "A dual-feasible weighting of relevant semi-filters with load at most one on every legal pair lower-bounds fractional cover and cyclic intersection complexity by its total mass.",
+          "scope": "Cavalar-Oliveira cover polarity after exact source normalization.",
+          "authority": "VERIFIED_LOCAL_RESEARCH_TOOL",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a_RESEARCH_TOOL_INVENTORY_20260811.json",
+            "research/real_math/millennium/p_vs_np/07_memory/C024_RESEARCH_TOOL_DELTA_20260811.json"
+          ],
+          "non_implications": [
+            "Does not turn fractional growth into an integral or circuit lower bound."
+          ]
+        }
+      ]
+    },
+    {
+      "lane_id": "riemann_hypothesis",
+      "display_name": "Riemann Hypothesis",
+      "status": "ACTIVE_APPLICATION_LANE",
+      "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "credited_items": [
+        {
+          "item_id": "F-RH-ANA-001-FINITE-LI-PREFIX",
+          "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+          "exact_claim": "An exact symmetric off-critical zero quartet has positive Li transforms for indices one through 626 and a negative transform at index 627.",
+          "scope": "The registered quartet with rho equal to one quarter plus one hundred i and exact rational evaluation.",
+          "authority": "EXACT_FINITE_MATHEMATICAL_COUNTEREXAMPLE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_001_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json"
+          ],
+          "non_implications": [
+            "Does not model the zeta zero set or disprove the Li criterion."
+          ]
+        },
+        {
+          "item_id": "F-RH-SPEC-002-STRONG-RESOLVENT-INCOMPLETE",
+          "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+          "exact_claim": "Wandering rank-one projections each have eigenvalue one but converge in strong resolvent sense to the zero operator, whose spectrum omits one.",
+          "scope": "Generic self-adjoint approximants when no no-escape or determinant structure is supplied.",
+          "authority": "STANDARD_EXACT_COUNTEREXAMPLE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json"
+          ],
+          "non_implications": [
+            "Does not refute stronger convergence packages."
+          ]
+        },
+        {
+          "item_id": "F-RH-SPEC-002-GALERKIN-POLLUTION",
+          "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+          "exact_claim": "Dense Galerkin compressions of an operator with spectrum minus one and plus one can retain a spurious zero eigenvalue in the true spectral gap.",
+          "scope": "Projection or compression approximants without a route-specific no-pollution theorem.",
+          "authority": "STANDARD_EXACT_COUNTEREXAMPLE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json"
+          ],
+          "non_implications": [
+            "Does not refute pollution-controlled spectral methods."
+          ]
+        },
+        {
+          "item_id": "F-RH-SPEC-002-JOINT-LIMIT-AMBIGUITY",
+          "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+          "exact_claim": "The self-adjoint scalar family N divided by N plus lambda has two iterated limits zero and one while the diagonal limit is one half.",
+          "scope": "Two-parameter approximants lacking a cofinal path-independent limit theorem.",
+          "authority": "EXACT_LIMIT_COUNTEREXAMPLE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json"
+          ],
+          "non_implications": [
+            "Does not rule out a separately proved joint limit."
+          ]
+        },
+        {
+          "item_id": "F-RH-SPEC-002-FINITE-ZERO-PREFIX",
+          "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+          "exact_claim": "Entire functions can match arbitrarily long exact real-zero prefixes and one-point normalization while diverging locally from the intended entire target.",
+          "scope": "Finite-zero-prefix arguments without source-side growth and locally uniform convergence control.",
+          "authority": "EXACT_ENTIRE_FUNCTION_COUNTEREXAMPLE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_FAILURE_EXPERIENCE_LATTICE_20260811.json"
+          ],
+          "non_implications": [
+            "Does not weaken exact full-spectrum or locally uniform convergence theorems."
+          ]
+        },
+        {
+          "item_id": "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE",
+          "credit_type": "BROKEN_MATHEMATICAL_ASSUMPTION",
+          "exact_claim": "Positivity of Suzuki unconditioned L2 norms does not transfer to Li-coefficient positivity through the audited proof because the norm-to-Li identity enters only after an RH-equivalent inner-function and model-space step.",
+          "scope": "The dependency chain in the cited Suzuki norm representation, not all possible norm approaches.",
+          "authority": "SOURCE_BOUND_APPLICABILITY_FAILURE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_POSTAUDIT_FAILURE_EXPERIENCE_LATTICE_20260811.json"
+          ],
+          "non_implications": [
+            "Does not establish that no weaker unconditional identity exists."
+          ]
+        },
+        {
+          "item_id": "T-RH-SPEC-HURWITZ-DOMAIN-ZERO-TRANSPORT",
+          "credit_type": "TRANSFER_CONDITION",
+          "exact_claim": "Local uniform convergence of holomorphic approximants that are zero-free off the real axis transports zero-freeness to a nonzero limit by Hurwitz, with local multiplicity transported on isolating contours.",
+          "scope": "Only on the exact open domain with full compact-local convergence and source-normalized nonzero limit.",
+          "authority": "CONDITIONALLY_REUSABLE_STANDARD_THEOREM",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/riemann_hypothesis/07_memory/RH_SPEC_002_POSTCAL_RESEARCH_TOOL_INVENTORY_20260811.json"
+          ],
+          "non_implications": [
+            "Does not supply the convergence hypotheses or identify an RH operator."
+          ]
+        }
+      ]
+    },
+    {
+      "lane_id": "navier_stokes",
+      "display_name": "Navier-Stokes existence and smoothness",
+      "status": "ACTIVE_APPLICATION_LANE",
+      "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "credited_items": [
+        {
+          "item_id": "F-NS-B1A-C001-PRESSURE-SUMMABILITY",
+          "credit_type": "PROOF_OR_LEMMA",
+          "exact_claim": "A critical Morrey energy bound makes the instantaneous far-field quadratic pressure shell contribution decay quadratically in radius and its kernel-gradient contribution cubically.",
+          "scope": "Whole-space fixed-time absolute far-field shells outside a fixed radius; local and temporal pressure effects excluded.",
+          "authority": "RETROSPECTIVE_ANALYTIC_CALIBRATION",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/navier_stokes/07_memory/NS-B1a_C001_FAILURE_EXPERIENCE_DELTA_20260811.json"
+          ],
+          "non_implications": [
+            "No global L3 tail tightness or regularity conclusion."
+          ]
+        },
+        {
+          "item_id": "F-NS-B1A2-KINETIC-ENERGY-NONQUANTIZATION",
+          "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+          "exact_claim": "Scale-correct disjoint divergence-free critical blobs can have bounded kinetic energy while their number grows like inverse scale and global L3 grows like the inverse cube root of scale.",
+          "scope": "Instantaneous inequalities with finite kinetic energy and favorable Type-I amplitude control, without equation dynamics.",
+          "authority": "SCOPED_FUNCTIONAL_COUNTEREXAMPLE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/navier_stokes/07_memory/NS-B1a2_C001_FAILURE_EXPERIENCE_DELTA_20260811.json"
+          ],
+          "non_implications": [
+            "Not a Navier-Stokes solution and not a PDE impossibility theorem."
+          ]
+        },
+        {
+          "item_id": "F-NS-B1A3B-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY",
+          "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+          "exact_claim": "Divergence-free fields can converge strongly to zero locally in L3 with uniformly bounded gradient L2 while normalized curl directions flip at arbitrarily small scales.",
+          "scope": "Functional producer topology alone; equation-specific geometric coherence remains possible.",
+          "authority": "EXACT_TOPOLOGY_COUNTEREXAMPLE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3b_C001_VORTICITY_DIRECTION_INHERITANCE_AUDIT_20260811.md"
+          ],
+          "non_implications": [
+            "Not a Navier-Stokes solution and not a refutation of vorticity criteria."
+          ]
+        },
+        {
+          "item_id": "F-NS-B2A1C-F1-AXIAL-44-EXPONENT-INCOMPATIBLE",
+          "credit_type": "PROOF_OR_LEMMA",
+          "exact_claim": "The Section-4 constraints force l1 at most five quarters, so with F equal to one the condition-4.4 factor grows at least as a to the one eighth and cannot tend to zero.",
+          "scope": "The exact exponent regime and logarithmic F equal to one example in the audited Seregin source.",
+          "authority": "SOURCE_BOUND_SCOPED_PROOF",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1c_F1_AXIAL_44_COMPATIBILITY_AUDIT_R2_20260812.md",
+            "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1c_EXPERIENCE_DELTA_R2_20260812.json"
+          ],
+          "non_implications": [
+            "Does not rule out the general F-equal-one ancient Euler branch or other flux mechanisms."
+          ]
+        },
+        {
+          "item_id": "MATH-NS-B2A1A1-MESOSCOPIC-WINDOW",
+          "credit_type": "PROOF_OR_LEMMA",
+          "exact_claim": "For the logarithmic scaling, source-native normalized gain occurs exactly on moving radii with one much less than h_lambda much less than L_lambda; fixed-power interior radii have bounded gain.",
+          "scope": "The frozen logarithmic Seregin normalization and admissible radii.",
+          "authority": "SOURCE_INTERFACE_PROOF_DRAFT",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1a1_LOG_MESOSCOPIC_WINDOW_AUDIT_20260812.md"
+          ],
+          "non_implications": [
+            "The normalized gain is not absolute tail tightness."
+          ]
+        },
+        {
+          "item_id": "F-NS-B2A1-DOUBLE-LIMIT-TAIL-INHERITANCE-SHARPENED",
+          "credit_type": "BROKEN_MATHEMATICAL_ASSUMPTION",
+          "exact_claim": "Fixed-radius compactness cannot by itself transport the only logarithmic gain, which lives on radii moving to infinity without a convergence rate tied to that movement.",
+          "scope": "The logarithmic prelimit window and the cited fixed-cylinder compactness theorem.",
+          "authority": "SCOPED_GLUE_INTERFACE_FAILURE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1a1_LOG_MESOSCOPIC_WINDOW_AUDIT_20260812.md",
+            "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1a1_EXPERIENCE_DELTA_20260812.json"
+          ],
+          "non_implications": [
+            "Does not prove a rate-compatible compactness theorem impossible."
+          ]
+        },
+        {
+          "item_id": "F-NS-B2A1A2-FIXED-TO-MOVING-RADIUS-ESCAPE",
+          "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+          "exact_claim": "A smooth divergence-free bump translated to radius a_k over two converges to zero on every fixed compact and has normalized moving-ball energy tending to zero, while its absolute L2 mass inside the moving ball diverges.",
+          "scope": "The exact logarithmic mesoscopic parameters L_k=k squared, h_k=k, a_k=exp(L_k-h_k), amplitude sqrt(a_k)/F_k; functional fields only.",
+          "authority": "EXACT_SMOOTH_DIVERGENCE_FREE_FUNCTIONAL_COUNTEREXAMPLE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/navier_stokes/04_candidates/NS-B2a1a2_C001_ESCAPING_BUMP_RESULT_20260812.md",
+            "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1a2_C001_FAILURE_EXPERIENCE_CANONICAL_20260812.json"
+          ],
+          "non_implications": [
+            "Not a Navier-Stokes or Euler solution and not a source-PDE impossibility theorem."
+          ]
+        },
+        {
+          "item_id": "MATH-NS-B2A1A2-UNIFORM-ANNULUS-TAIL-IFF",
+          "credit_type": "TRANSFER_CONDITION",
+          "exact_claim": "Under strong L2 convergence on every fixed ball, convergence on moving balls B(a_k) is equivalent to uniform vanishing of the intermediate-annulus L2 mass after first taking limsup in k and then radius to infinity.",
+          "scope": "Any a_k tending to infinity and locally square-integrable fields; the exact inner and annular decomposition.",
+          "authority": "SCOPED_IF_AND_ONLY_IF_LEMMA",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/navier_stokes/04_candidates/NS-B2a1a2_C001_ESCAPING_BUMP_RESULT_20260812.md"
+          ],
+          "non_implications": [
+            "Does not provide the tail condition for the source PDE sequence."
+          ]
+        }
+      ]
+    },
+    {
+      "lane_id": "yang_mills",
+      "display_name": "Yang-Mills existence and mass gap",
+      "status": "ACTIVE_APPLICATION_LANE",
+      "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "credited_items": [
+        {
+          "item_id": "F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE",
+          "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+          "exact_claim": "Exact one-link Haar integration generates the concatenated coordinate Tr(AB) divided by two N, and an SU(3) witness changes Tr(AB) while preserving the separate traces.",
+          "scope": "One shared link, SU(N) for N at least three, and a marked vocabulary omitting the concatenated contour.",
+          "authority": "EXACT_LOCAL_NEGATIVE_CALIBRATION",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/yang_mills/07_memory/YM_E1a1_C001_FAILURE_EXPERIENCE_DELTA_20260811.json"
+          ],
+          "non_implications": [
+            "No Balaban-wide impossibility or continuum result."
+          ]
+        },
+        {
+          "item_id": "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE",
+          "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+          "exact_claim": "A positive three-state transfer operator has a tested correlator decaying as four to the minus n while an orthogonal lower excitation gives the actual smaller gap.",
+          "scope": "Restricted non-dense source families in an abstract positive transfer system.",
+          "authority": "EXACT_SPECTRAL_COUNTEREXAMPLE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_FAILURE_EXPERIENCE_LATTICE_QZERO_RUNTIME_CONFORMANT_V2_20260811.json"
+          ],
+          "non_implications": [
+            "No target-specific lattice Yang-Mills conclusion."
+          ]
+        },
+        {
+          "item_id": "MATH-YM-S1A1-DENSE-SOURCE-COMMON-RATE-LEMMA",
+          "credit_type": "PROOF_OR_LEMMA",
+          "exact_claim": "For a positive self-adjoint contraction, a dense excited source span with one common nth-root rate q below one forces the entire excited spectrum into zero through q.",
+          "scope": "Abstract Hilbert-space transfer operator with a separately bound physical normalization for any Hamiltonian corollary.",
+          "authority": "LOCALLY_DERIVED_SPECTRAL_LEMMA",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/yang_mills/04_candidates/YM-S1A1_C001_V2_DENSE_SOURCE_COMMON_RATE_SPECTRAL_EXCLUSION_20260811.md"
+          ],
+          "non_implications": [
+            "Does not establish source density, moment identification, physical scaling, or continuum reconstruction."
+          ]
+        },
+        {
+          "item_id": "F-YM-S1A2-OS-SZZ-SAME-THEORY-GLUING-UNBOUND",
+          "credit_type": "BROKEN_MATHEMATICAL_ASSUMPTION",
+          "exact_claim": "Separate reflection-positive transfer, Euclidean covariance-decay, and kinematic completeness ingredients cannot be composed without same-theory moment identification and density after the Osterwalder-Schrader null quotient.",
+          "scope": "One fixed-cutoff infinite-volume strong-coupling theory and application of the abstract dense-source common-rate lemma.",
+          "authority": "SUPPORTED_BOUNDED_APPLICABILITY_INTERFACE_FAILURE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/yang_mills/07_memory/YM-S1A2_OS_SZZ_GLUING_FAILURE_EXPERIENCE_DELTA_20260812.json"
+          ],
+          "non_implications": [
+            "This is not a verified impossibility; a missing theorem may close the interface.",
+            "No weak-coupling, physical-scaling, continuum, novelty, or root authority."
+          ]
+        }
+      ]
+    },
+    {
+      "lane_id": "hodge_conjecture",
+      "display_name": "Hodge Conjecture",
+      "status": "ACTIVE_APPLICATION_LANE",
+      "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "credited_items": [
+        {
+          "item_id": "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO",
+          "credit_type": "PROOF_OR_LEMMA",
+          "exact_claim": "If Hodge persistence puts the branch-generated first-order obstruction image inside the kernel of the same detector, injectivity of that detector on the image forces the image to vanish.",
+          "scope": "The registered first-order linear same-detector branch envelope only.",
+          "authority": "VERIFIED_SCOPED_IMPOSSIBILITY",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/hodge/deformation/07_memory/H4d1a_FAILURE_EXPERIENCE_DELTA_20260811.json"
+          ],
+          "non_implications": [
+            "Does not rule out another detector, higher-order structure, or direct vanishing."
+          ]
+        },
+        {
+          "item_id": "F-H4D1B-DIRECT-VANISHING-NO-COMPLEXITY-REDUCTION",
+          "credit_type": "PROOF_OR_LEMMA",
+          "exact_claim": "For a complete first-order obstruction map, vanishing on the Hodge-branch tangent is equivalent to tangent surjectivity; for a detector-only map, vanishing is insufficient for lifting.",
+          "scope": "A fixed algebraic witness and first-order deformation semantics with completeness explicitly typed.",
+          "authority": "VERIFIED_SCOPED_REPRESENTATION_EQUIVALENCE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/hodge/deformation/07_memory/H4d1b_FAILURE_EXPERIENCE_DELTA_20260811.json"
+          ],
+          "non_implications": [
+            "No higher-order lifting, algebraization, globalization, or root result."
+          ]
+        }
+      ]
+    },
+    {
+      "lane_id": "birch_swinnerton_dyer",
+      "display_name": "Birch and Swinnerton-Dyer Conjecture",
+      "status": "ACTIVE_APPLICATION_LANE",
+      "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "credited_items": [
+        {
+          "item_id": "F-BSD-A1A1-R8-SOURCE-FAMILY-REIMPORTS-ARITHMETIC-ENTRY",
+          "credit_type": "BROKEN_MATHEMATICAL_ASSUMPTION",
+          "exact_claim": "Changing arithmetic carrier does not close the complex-rank-to-arithmetic bridge when the needed nonvanishing, localization, Selmer rank, or comparable root-facing witness is merely reintroduced as a premise.",
+          "scope": "The four-source bounded same-curve rank-two audit; no literature-wide no-match or causal obstruction claim.",
+          "authority": "SUPPORTED_BOUNDED_APPLICABILITY_INTERFACE_FAILURE",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R8_CANONICAL_FAILURE_EXPERIENCE_DELTA_20260812.json"
+          ],
+          "non_implications": [
+            "A missing theorem may exist; no verified impossibility is claimed.",
+            "Full BSD leading-term gluing remains a separate open obligation."
+          ]
+        }
+      ]
+    },
+    {
+      "lane_id": "poincare_conjecture",
+      "display_name": "Poincare Conjecture",
+      "status": "NO_ACTIVE_APPLICATION_ARTIFACTS",
+      "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "credited_items": [],
+      "boundary_note": "No Poincare application directory or source-bound result exists in this checkout; no mathematical credit is invented. The historical external solution status is outside this application ledger."
+    }
+  ],
+  "excluded_provenance": [
+    {
+      "item_id": "EXCLUDED-CROSS-PROBLEM-STUDY-PATTERN-EXAMPLES",
+      "category": "SOFTWARE_STUDY_PATTERN_EXAMPLE",
+      "reason": "Preserved application software and routing-study examples cannot prove mathematics or create saturation; they remain provenance for the shadow pilot.",
+      "mathematical_credit": false,
+      "credit_units": 0,
+      "evidence_pointers": [
+        "research/real_math/millennium/cross_problem/10_study_pattern/README.md",
+        "research/real_math/millennium/cross_problem/10_study_pattern/LESSON_PROPOSAL_EXAMPLE_20260811.json",
+        "research/real_math/millennium/cross_problem/10_study_pattern/EXPERIENCE_EPISODE_PROPOSAL_SUPPORT_EXAMPLE_20260811.json",
+        "research/real_math/millennium/cross_problem/10_study_pattern/EXPERIENCE_EPISODE_PROPOSAL_CONTRADICTION_EXAMPLE_20260811.json"
+      ]
+    },
+    {
+      "item_id": "EXCLUDED-SCHEMAS-AND-SERIALIZATION",
+      "category": "ASSURANCE_METADATA",
+      "reason": "Schema conformance, reference checks, serialization, and content identity preserve provenance but have zero mathematical credit.",
+      "mathematical_credit": false,
+      "credit_units": 0,
+      "evidence_pointers": [
+        "research/real_math/millennium/cross_problem/10_study_pattern/LESSON_PROPOSAL.schema.json",
+        "research/real_math/millennium/cross_problem/10_study_pattern/EXPERIENCE_EPISODE_PROPOSAL.schema.json",
+        "schemas/retrospective-correction-chronology-receipt.schema.json"
+      ]
+    },
+    {
+      "item_id": "EXCLUDED-GIT-PR-MERGE-CHRONOLOGY",
+      "category": "ASSURANCE_METADATA",
+      "reason": "Repository identities, exposure ordering, pull-request state, and merge state govern authority only and earn zero mathematical credit.",
+      "mathematical_credit": false,
+      "credit_units": 0,
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1a1b1_SOURCE_INVENTORY_R1_CHRONOLOGY_CORRECTION_20260811.json",
+        "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_U17_PRE_FREEZE_EXPOSURE_AUDIT_20260812.json",
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_SPEC_002_PR15_CHRONOLOGY_HASH_AUDIT_20260811.json"
+      ]
+    },
+    {
+      "item_id": "EXCLUDED-CI-RUNTIME-SOLVER-ENUMERATION",
+      "category": "ASSURANCE_METADATA",
+      "reason": "Green tests, runtime behavior, and canonical enumeration corroborate or reproduce claims but are not mathematical proof by themselves.",
+      "mathematical_credit": false,
+      "credit_units": 0,
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/05_falsification/C044_RETROSPECTIVE_Q16_MULTIPLEXING_RECEIPT_20260812.json",
+        "research/real_math/millennium/p_vs_np/05_falsification/C045_G17_COMPONENT_SEPARABILITY_RECEIPT_20260812.json"
+      ]
+    },
+    {
+      "item_id": "EXCLUDED-SOURCE-COORDINATE-AND-EPISODE-INVENTORIES-AS-NAMES",
+      "category": "NON_MATHEMATICAL_INVENTORY",
+      "reason": "A filename containing inventory does not mint credit; source lists, coordinate lists, snapshots, and episode scanner records are provenance until an atomic mathematical claim satisfies the counting rule.",
+      "mathematical_credit": false,
+      "credit_units": 0,
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_SOURCE_NATIVE_THEOREM_INVENTORY_R1_V2_20260811.json",
+        "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1a1b1_COORDINATE_INVENTORY_R2_MATHEMATICAL_EXPERIENCE_20260811.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R6_EPISODE_INVENTORY_FAILURE_SHADOW_20260811.json"
+      ]
+    },
+    {
+      "item_id": "EXCLUDED-EMPTY-STALE-OR-CROSS-DOMAIN-TOOL-SNAPSHOTS",
+      "category": "NON_MATHEMATICAL_INVENTORY",
+      "reason": "Empty inventories, stale snapshots, and cross-domain applicability records receive no new lane credit unless their exact mathematical transfer condition is separately listed.",
+      "mathematical_credit": false,
+      "credit_units": 0,
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/hodge_conjecture/07_memory/HM1a_RESEARCH_TOOL_INVENTORY_20260811.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD-S001_RESEARCH_TOOL_INVENTORY_20260811.json"
+      ]
+    },
+    {
+      "item_id": "EXCLUDED-SAME-CONTEXT-REVIEWS",
+      "category": "SAME_CONTEXT_REVIEW",
+      "reason": "Role-separated and hostile same-context review can check scope but is not independent mathematical review and receives zero independent-review and saturation credit.",
+      "mathematical_credit": false,
+      "credit_units": 0,
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C045_EXPERT_CELL_REVIEW_20260812.json",
+        "research/real_math/millennium/riemann_hypothesis/08_reviews/SAME_CONTEXT_REVIEW_RH_ANA_002_FAITHFULNESS_RESULT_20260811.md",
+        "research/real_math/millennium/yang_mills/08_reviews/YM-S1A1_C001_RESULT_REVIEW_20260811.md"
+      ]
+    },
+    {
+      "item_id": "EXCLUDED-SATURATION-AND-TASK-EPISODE-SHADOWS",
+      "category": "PROCESS_OR_TELEMETRY_SHADOW",
+      "reason": "Self-reported novelty vectors, TaskEpisode records, cycle metrics, process-surface counts, and repository growth are telemetry only.",
+      "mathematical_credit": false,
+      "credit_units": 0,
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_SATURATION_VECTOR_SHADOW_20260811.json",
+        "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C045_RETROSPECTIVE_TASK_EPISODE_CASE_STUDY_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R8_POSTDRIFT_V3_TASK_EPISODE_SHADOW_20260812.taskepisode"
+      ]
+    },
+    {
+      "item_id": "EXCLUDED-OPEN-PR-244-NONCANONICAL-PENDING",
+      "category": "ASSURANCE_METADATA",
+      "reason": "Open PR 244 is outside the merged-origin-main authority universe and is preserved only as noncanonical pending provenance with zero credit.",
+      "mathematical_credit": false,
+      "credit_units": 0,
+      "evidence_pointers": [
+        "https://github.com/SzeChunYiu/RAKL_math/pull/244"
+      ]
+    },
+    {
+      "item_id": "EXCLUDED-FRAMEWORK-PIN-AND-PROMOTION-OBSERVATIONS",
+      "category": "ASSURANCE_METADATA",
+      "reason": "Framework dependency synchronization and application feedback are assurance or proposal provenance, never application mathematics or framework promotion evidence.",
+      "mathematical_credit": false,
+      "credit_units": 0,
+      "evidence_pointers": [
+        "config/rakl-framework-pin.json",
+        "research/meta/application_feedback/round1/README.md"
+      ]
+    }
+  ],
+  "totals": {
+    "mathematical_credit_units": 35,
+    "mathematical_credit_units_by_lane": {
+      "p_vs_np": 13,
+      "riemann_hypothesis": 7,
+      "navier_stokes": 8,
+      "yang_mills": 4,
+      "hodge_conjecture": 2,
+      "birch_swinnerton_dyer": 1,
+      "poincare_conjecture": 0
+    },
+    "mathematical_credit_units_by_type": {
+      "BROKEN_MATHEMATICAL_ASSUMPTION": 6,
+      "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE": 14,
+      "MATHEMATICAL_FALSIFIER": 0,
+      "PROOF_OR_LEMMA": 10,
+      "TRANSFER_CONDITION": 5
+    },
+    "excluded_provenance_items": 10
+  },
+  "claim_boundary": {
+    "any_root_solved": false,
+    "framework_promotion_implied": false,
+    "absolute_saturation_claim": false,
+    "knowledge_saturation_equals_problem_closure": false,
+    "independent_review_credit": 0,
+    "statement": "This is a bounded, base-SHA-specific ledger of retained mathematical content, not a proof of portfolio saturation, literature completeness, novelty, or any Millennium solution."
+  },
+  "artifact_hash": "sha256:42b9522b6a61475d0e9043a2819459d174a524cc186f1e0a8ac70fd4ac61d9d6"
+}
