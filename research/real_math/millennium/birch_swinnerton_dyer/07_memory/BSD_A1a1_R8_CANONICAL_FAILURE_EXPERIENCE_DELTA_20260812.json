@@ -1,0 +1,68 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-BSD-A1A1-R8-SOURCE-FAMILY-REIMPORTS-ARITHMETIC-ENTRY",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "candidate_id": "NO_MATHEMATICAL_CANDIDATE_R8_SOURCE_FAMILY_AUDIT",
+      "context_packet_hash": "sha256:1169325f3cc17acc2094488809bc13ebba796a54aa51bcbc132690c98e1987c9",
+      "research_trace_event_id": "BSD-A1a1-E28-R8-SOURCE-FAMILY-AUDIT",
+      "method_family": "same-curve complex-rank-two to arithmetic nonvanishing/localization transfer through Euler systems, Kolyvagin systems, higher Gross--Zagier, Selmer structure, or generalized Heegner cycles",
+      "failure_mode": "Every audited theorem family with relevant downstream arithmetic strength enters through a main-conjecture, Kolyvagin-system nonvanishing, primitive localization, Selmer-rank, regulator/height, or comparable arithmetic premise that is not supplied by exact complex analytic rank two for the same elliptic curve.",
+      "residual_signature": [
+        "COMPLEX_ANALYTIC_RANK2_TO_SELMER_DIM2_PLUS_TRANSVERSE_LOC_NONZERO",
+        "SELMER_TO_MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_COMPLEX_LEADING_TERM_GLUE",
+        "ROOT_FACING_ARITHMETIC_ENTRY_PREMISE_RELOCATED_OR_ASSUMED_NOT_DERIVED"
+      ],
+      "broken_assumptions": [
+        "Changing to an Euler-system, Kolyvagin-system, plectic, Selmer, or generalized-Heegner carrier automatically turns exact complex analytic rank two into the required arithmetic nonvanishing witness.",
+        "A theorem whose arithmetic conclusion is downstream of a main conjecture or nonvanishing premise can be reversed to derive that premise from exact complex analytic rank two.",
+        "A p-adic derivative order, augmentation-ideal order, discrete nonvanishing statement, or Selmer coordinate is interchangeable with complex s-order without an explicit comparison theorem.",
+        "Construction of an arithmetic class implies its nonvanishing or primitive transverse localization.",
+        "A twist, base change, or auxiliary field preserves and returns the exact same E/Q root coordinate without an explicit return theorem and DifferenceWitness.",
+        "Obtaining one local arithmetic witness would by itself discharge the separate Mordell--Weil, Sha, regulator, Tamagawa, torsion, period, and complex leading-term gluing obligations."
+      ],
+      "scope_conditions": [
+        "Active atom BSD-A1a1-THETA-ORDER-COMPARISON with nested obstruction BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE.",
+        "Exact same E/Q root scope with source datum ord_{s=1} L(E,s)=2 and no substitution of algebraic rank two or Selmer rank two.",
+        "Bounded source-family audit represented by BSD_A1a1_R8_SOURCE_FAMILY_AUDIT_20260812.json: Heegner-point and Beilinson--Kato Kolyvagin-system nonvanishing, higher Gross--Zagier/arbitrary-rank Selmer structure, and generalized Heegner-cycle localization.",
+        "This is not a literature-wide theorem-nonexistence claim, a blacklist of the audited methods, a counterexample to BSD, or a refutation of any audited local theorem.",
+        "The supported conclusion is target applicability and interface failure only; the evidence does not distinguish a merely missing source theorem from a genuine mathematical obstruction.",
+        "Full same-theory BSD leading-term gluing remains a separate open residual even if a local arithmetic witness is later obtained.",
+        "Git/CI/schema/hash/chronology checks are assurance-only and carry zero mathematical saturation, result, and root credit; they do not strengthen the bounded mathematical diagnosis."
+      ],
+      "competing_diagnoses": [
+        "The bounded source audit reflects a missing theorem in the inspected family even though an existing same-curve theorem elsewhere derives the arithmetic witness from exact complex analytic rank two.",
+        "A genuine analytic-to-arithmetic obstruction prevents any theorem of the required direction in the registered same-curve scope.",
+        "The apparent progress is a representation-entry mismatch: p-adic, augmentation, Selmer, or localization coordinates have silently replaced rather than been derived from complex s-order.",
+        "The route has already supplied the local arithmetic entry and only the downstream full-BSD leading-term gluing remains open.",
+        "The observed no-match is retrieval incompleteness of a bounded family rather than evidence about mathematical availability."
+      ],
+      "selected_diagnosis": "SUPPORTED_BOUNDED_APPLICABILITY_INTERFACE_FAILURE: within the four-source audited family, every strong route is downstream of or reimports a root-facing arithmetic entry premise and therefore re-enters BSD-A1a2 rather than closing it. NO_SUPPORTED_CAUSAL_DIAGNOSIS: the evidence does not distinguish a missing theorem from a genuine obstruction and establishes no global impossibility.",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a1_R8_SOURCE_FAMILY_AUDIT_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R8_CURRENT_V3_TASK_EPISODE_SHADOW_20260812.taskepisode",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R8_SOURCE_FAMILY_FAILURE_SHADOW_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R8_DIAGNOSIS_SHADOW_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/08_reviews/BSD_A1a1_R8_PROSPECTIVE_EXPERT_REVIEW_20260812.md",
+        "research/real_math/millennium/birch_swinnerton_dyer/09_trace/BSD_A1a1_R8_RESULT_TRACE_DELTA_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R8_CROSS_PROBLEM_COVERAGE_RECEIPT_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R8_POSTDRIFT_OBSTRUCTION_TRANSFORMATION_LIFT_REVIEW_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R8_POSTDRIFT_V3_TASK_EPISODE_SHADOW_20260812.taskepisode"
+      ],
+      "falsifier_or_attempt": "Exhibit a theorem in the exact same E/Q scope whose hypotheses start from exact complex analytic rank two and are strictly weaker than the desired arithmetic witness, yet conclude root-faithful Selmer dimension two plus nonzero transverse localization with an explicit complex-to-arithmetic coordinate comparison and without assuming algebraic/Selmer rank two, p-adic BSD, a comparable main conjecture, the required nonvanishing/localization, or root-strength regulator/height nondegeneracy.",
+      "observed_result": "The bounded audit of four theorem families verified locally valid downstream arithmetic conclusions but found no source-to-target implication from exact complex analytic rank two; each near-match assumed a main-conjecture, nonvanishing, primitive-localization, Selmer-rank, regulator/height, or comparable arithmetic entry premise. The mathematical residual and full BSD glue remain open.",
+      "local_repair_attempts": [
+        "Separated validity of each audited local theorem from applicability to the root-facing source-to-arithmetic transition.",
+        "Kept complex s-order, p-adic derivative order, augmentation order, Selmer dimension, localization, Tamagawa, torsion, Sha, regulator, and leading-term coordinates distinct.",
+        "Applied the root-strength-premise falsifier separately to the Heegner/Beilinson--Kato Kolyvagin, higher Gross--Zagier/Selmer, and generalized-Heegner localization routes.",
+        "Cross-artifact prior-warning narrative only, not runtime links: F-BSD-A1A1-R5-AUXILIARY-K-EXACT-SCOPE-GAP, F-BSD-A1A1-R6-AUXILIARY-K-CANNOT-SUPPLY-INTRINSIC-ENTRY, and F-BSD-A1A1-R7-ANALYTIC-TO-TRANSVERSE-LOCALIZATION share the bounded premise-relocation warning.",
+        "ASSURANCE_ONLY_SUPERSESSION: the later bounded coverage receipt and proposal-only LIFT review replace the historical SEMANTIC_SHORTCUT_CROSS_PROBLEM_COVERAGE_UNAVAILABLE_FOR_LIFT process residual with MISSING_TRANSFORMATION_SPEC_FROZEN_NO_MATHEMATICAL_CANDIDATE; this changes neither the mathematical residual nor saturation, result, root, framework-promotion, or theorem authority.",
+        "MATH_ONLY_LESSON: A change of arithmetic carrier does not close the complex-rank-to-arithmetic bridge when it merely relocates the required nonvanishing or localization into a hypothesis. Credit a route only when a same-curve theorem derives a root-faithful arithmetic witness from exact complex analytic rank two under hypotheses strictly weaker than that witness; keep subsequent BSD leading-term gluing as a separate obligation."
+      ],
+      "timestamp": "2026-08-11T23:58:00Z",
+      "artifact_hash": "sha256:6341dba5aa3c84f6b848add5a2683bba15f2c2a2ab02bfb8f0a5b99e1adcd882"
+    }
+  ],
+  "links": []
+}

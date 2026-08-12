@@ -1,0 +1,119 @@
+{
+  "artifact_hash": "sha256:690c5ad2d9ab0838cebcc0306badc796674edc5fbd78611248d93cf51c320c3c",
+  "audit_id": "PNP-C045-U17-PRE-FREEZE-EXPOSURE-AUDIT-20260812",
+  "authority": {
+    "mathematical_result_credit": false,
+    "mathematical_saturation_credit": false,
+    "p_vs_np_authority": false,
+    "prospective_u17_authority": false,
+    "root_status": "OPEN",
+    "strict_discovery_credit": false
+  },
+  "chronology": {
+    "candidate_commit": {
+      "committed_at": "2026-08-12T01:29:51Z",
+      "sha": "93a15a994a03482982a0393f521df3e449b4cf2a",
+      "subject": "research(pnp): freeze C045 U17 incidence classifier"
+    },
+    "candidate_merge": {
+      "merged_at": "2026-08-12T01:38:20Z",
+      "pull_request": 232,
+      "sha": "9b6354da2123cb93ed164bed1628c46fbcf334f6",
+      "subject": "research(pnp): freeze C045 U17 incidence classifier (#232)"
+    },
+    "earliest_defensible_public_exposure": {
+      "kind": "GITHUB_PR_CREATED",
+      "pr": 228,
+      "timestamp": "2026-08-12T01:17:20Z",
+      "url": "https://github.com/SzeChunYiu/RAKL_math/pull/228"
+    },
+    "embedded_freezes": {
+      "evaluator_manifest": "2026-08-12T01:18:29Z",
+      "plan": "2026-08-12T01:18:28Z",
+      "receipt": "2026-08-12T01:18:31Z"
+    },
+    "pr_228": {
+      "base": "main",
+      "closed_at": "2026-08-12T01:22:03Z",
+      "created_at": "2026-08-12T01:17:20Z",
+      "head": "research/pnp-c045-g17-coupling-gate-20260812",
+      "state": "CLOSED_UNMERGED",
+      "title": "research(pnp): C045 G17 component-separability gate"
+    },
+    "public_exposure_boundary": "PR_228_CREATION_IS_THE_LATEST_DEFENSIBLE_PUBLIC_EXPOSURE_TIME; ACTUAL_PUSH_MAY_HAVE_BEEN_EARLIER_BUT_CANNOT_BE_ESTABLISHED_FROM_INSPECTED_METADATA",
+    "result_signaling_commit": {
+      "authored_at": "2026-08-12T01:09:38Z",
+      "committed_at": "2026-08-12T01:09:38Z",
+      "public_push_time": "CANNOT_CHECK",
+      "sha": "b8f59bca9609d454612e45a8998e584dad7aa043",
+      "subject": "research(pnp): prove C045 G17 block separability upper cover"
+    },
+    "retrospective_result_branch": {
+      "commit": "2ab8b62b038f153f524b184a6b41b0652048d51e",
+      "committed_at": "2026-08-12T01:21:44Z",
+      "pr_created_at": "2026-08-12T01:22:21Z",
+      "pull_request": 229,
+      "state": "OPEN",
+      "url": "https://github.com/SzeChunYiu/RAKL_math/pull/229"
+    },
+    "seconds_after_public_exposure": {
+      "evaluator_manifest": 69,
+      "plan": 68,
+      "receipt": 71
+    }
+  },
+  "epistemic_boundary": {
+    "filenames_commit_subjects_and_pr_metadata_are_sufficient_to_fail_closed": true,
+    "result_payload_opened_for_this_audit": false,
+    "target_decoder_imported_or_executed_for_this_audit": false,
+    "target_evaluator_imported_or_executed_for_this_audit": false
+  },
+  "full_document_integrity": {
+    "artifact_hash_rule": "SHA256_OF_CANONICAL_DOCUMENT_WITH_ARTIFACT_HASH_EMPTY",
+    "canonicalization": "UTF8_JSON_SORT_KEYS_COMPACT_WITH_ARTIFACT_HASH_EMPTY",
+    "historical_inputs": {
+      "v1_evaluator_manifest": {
+        "artifact_hash": "sha256:d98e5ed477acb5fc2775d1c6bf8819c53916bc1388525aea5f2d6ff5d85c9c51",
+        "commit": "9b6354da2123cb93ed164bed1628c46fbcf334f6",
+        "git_blob_sha": "ceb93e386a8f544c3eb52584450858ba9175a6de",
+        "path": "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C045_U17_INCIDENCE_EVALUATOR_FREEZE_20260812.json",
+        "raw_sha256": "sha256:508a2bf317b354165bb2f6ce6bf7c28d6e3405744276abf37752c5bf49fad22a"
+      },
+      "v1_plan": {
+        "artifact_hash": "sha256:5e3f0cdd703de1290832caf3cb412e6d04b198eba0f4b6fe1c372eb46142900c",
+        "commit": "9b6354da2123cb93ed164bed1628c46fbcf334f6",
+        "git_blob_sha": "857cfbe065006b97e65a4f3840f9fe93bd5225ec",
+        "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C045_U17_INCIDENCE_CLASSIFICATION_PLAN_FREEZE_20260812.json",
+        "raw_sha256": "sha256:5a66e724b72a89ac620200799276c3a39539333b785109d58c671b4ecae33502"
+      },
+      "v1_receipt": {
+        "artifact_hash": "sha256:3997de96d64dc753ac6385bcb2726f90ffd5a663def552a2a8171b216c73bde1",
+        "commit": "9b6354da2123cb93ed164bed1628c46fbcf334f6",
+        "git_blob_sha": "1229e2b3945995ffd299fd974f75252b71e16418",
+        "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_CANDIDATE_FREEZE_RECEIPT_20260812.json",
+        "raw_sha256": "sha256:fcdec421f50e2e15809e25fd4074326b8864145d94f18bc310d1d2f45e7f82a5"
+      },
+      "v1_trace": {
+        "commit": "9b6354da2123cb93ed164bed1628c46fbcf334f6",
+        "git_blob_sha": "5c79446a54c77e1a59a2b67b1bcefc31a7c0b228",
+        "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_CANDIDATE_FREEZE_TRACE_20260812.json",
+        "raw_sha256": "sha256:8a875ddcb0e79151568e0477cce21f1eb9183e576183e8dbfbc3d83ad6aa170f"
+      }
+    }
+  },
+  "object_qoi_context": {
+    "object": "C045 U17 incidence candidate and frozen evaluator chronology relative to public C045 result-signaling metadata",
+    "observation_boundary": "Git commit metadata, GitHub pull-request metadata, filenames, and historical freeze metadata only; no target decoder/evaluator execution and no result payload inspection",
+    "qoi": "whether the U17 candidate/evaluator packet retained untouched-target prospective authority"
+  },
+  "recorded_at": "2026-08-12T01:49:26Z",
+  "review_authority": "SAME_CONTEXT_ROLE_SEPARATED_INTERNAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "schema_version": "1.0.0",
+  "source_binding": {
+    "correction_base_commit": "9d7d167b5ffa398582550a0492a1e895786137d4",
+    "framework_pin": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "github_metadata_observed_at": "2026-08-12T01:49:26Z",
+    "repository": "https://github.com/SzeChunYiu/RAKL_math.git"
+  },
+  "verdict": "TARGET_EXPOSED_BEFORE_ALL_THREE_EMBEDDED_FREEZES"
+}

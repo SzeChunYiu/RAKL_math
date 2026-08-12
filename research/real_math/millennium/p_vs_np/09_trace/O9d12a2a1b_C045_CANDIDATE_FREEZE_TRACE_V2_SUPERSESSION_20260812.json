@@ -1,0 +1,118 @@
+{
+  "artifact_hash": "sha256:ee8d058518821c670dacea98a22cabd2e662684623b1802042cbbb3fc9aa840a",
+  "correction_events": [
+    {
+      "event_type": "CHRONOLOGY_REVALIDATED",
+      "evidence": "exposure_audit",
+      "state": "PR_228_PUBLIC_AT_2026-08-12T01:17:20Z_BEFORE_ALL_EMBEDDED_FREEZES"
+    },
+    {
+      "event_type": "AUTHORITY_SUPERSEDED",
+      "evidence": "receipt_correction",
+      "state": "NO_PROSPECTIVE_U17_OR_STRICT_DISCOVERY_AUTHORITY"
+    },
+    {
+      "event_type": "NEXT_STEP_CORRECTED",
+      "evidence": "this_supersession",
+      "state": "MOVE_TO_NEW_UNTOUCHED_SUCCESSOR_TARGET"
+    }
+  ],
+  "credit": {
+    "mathematical_result_credit": false,
+    "mathematical_saturation_credit": false,
+    "strict_discovery_result_credit": false
+  },
+  "forbidden_next_actions": [
+    "DO_NOT_EXECUTE_THE_U17_EVALUATOR_FOR_STRICT_DISCOVERY",
+    "DO_NOT_USE_PR_229_AS_PROSPECTIVE_EVIDENCE",
+    "DO_NOT_ERASE_OR_REWRITE_V1_HISTORY"
+  ],
+  "full_document_integrity": {
+    "artifact_hash_rule": "SHA256_OF_CANONICAL_DOCUMENT_WITH_ARTIFACT_HASH_EMPTY",
+    "canonicalization": "UTF8_JSON_SORT_KEYS_COMPACT_WITH_ARTIFACT_HASH_EMPTY",
+    "inputs": {
+      "exposure_audit_artifact_hash": "sha256:690c5ad2d9ab0838cebcc0306badc796674edc5fbd78611248d93cf51c320c3c",
+      "historical_bindings": {
+        "v1_evaluator_manifest": {
+          "artifact_hash": "sha256:d98e5ed477acb5fc2775d1c6bf8819c53916bc1388525aea5f2d6ff5d85c9c51",
+          "commit": "9b6354da2123cb93ed164bed1628c46fbcf334f6",
+          "git_blob_sha": "ceb93e386a8f544c3eb52584450858ba9175a6de",
+          "path": "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C045_U17_INCIDENCE_EVALUATOR_FREEZE_20260812.json",
+          "raw_sha256": "sha256:508a2bf317b354165bb2f6ce6bf7c28d6e3405744276abf37752c5bf49fad22a"
+        },
+        "v1_plan": {
+          "artifact_hash": "sha256:5e3f0cdd703de1290832caf3cb412e6d04b198eba0f4b6fe1c372eb46142900c",
+          "commit": "9b6354da2123cb93ed164bed1628c46fbcf334f6",
+          "git_blob_sha": "857cfbe065006b97e65a4f3840f9fe93bd5225ec",
+          "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C045_U17_INCIDENCE_CLASSIFICATION_PLAN_FREEZE_20260812.json",
+          "raw_sha256": "sha256:5a66e724b72a89ac620200799276c3a39539333b785109d58c671b4ecae33502"
+        },
+        "v1_receipt": {
+          "artifact_hash": "sha256:3997de96d64dc753ac6385bcb2726f90ffd5a663def552a2a8171b216c73bde1",
+          "commit": "9b6354da2123cb93ed164bed1628c46fbcf334f6",
+          "git_blob_sha": "1229e2b3945995ffd299fd974f75252b71e16418",
+          "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_CANDIDATE_FREEZE_RECEIPT_20260812.json",
+          "raw_sha256": "sha256:fcdec421f50e2e15809e25fd4074326b8864145d94f18bc310d1d2f45e7f82a5"
+        },
+        "v1_trace": {
+          "commit": "9b6354da2123cb93ed164bed1628c46fbcf334f6",
+          "git_blob_sha": "5c79446a54c77e1a59a2b67b1bcefc31a7c0b228",
+          "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_CANDIDATE_FREEZE_TRACE_20260812.json",
+          "raw_sha256": "sha256:8a875ddcb0e79151568e0477cce21f1eb9183e576183e8dbfbc3d83ad6aa170f"
+        }
+      },
+      "receipt_correction_artifact_hash": "sha256:ff009eed1f9effe7b908d5dd07a09cdeb06a8443c2ee4a4207537a3c14688db8"
+    }
+  },
+  "historical_bindings": {
+    "v1_evaluator_manifest": {
+      "artifact_hash": "sha256:d98e5ed477acb5fc2775d1c6bf8819c53916bc1388525aea5f2d6ff5d85c9c51",
+      "commit": "9b6354da2123cb93ed164bed1628c46fbcf334f6",
+      "git_blob_sha": "ceb93e386a8f544c3eb52584450858ba9175a6de",
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C045_U17_INCIDENCE_EVALUATOR_FREEZE_20260812.json",
+      "raw_sha256": "sha256:508a2bf317b354165bb2f6ce6bf7c28d6e3405744276abf37752c5bf49fad22a"
+    },
+    "v1_plan": {
+      "artifact_hash": "sha256:5e3f0cdd703de1290832caf3cb412e6d04b198eba0f4b6fe1c372eb46142900c",
+      "commit": "9b6354da2123cb93ed164bed1628c46fbcf334f6",
+      "git_blob_sha": "857cfbe065006b97e65a4f3840f9fe93bd5225ec",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C045_U17_INCIDENCE_CLASSIFICATION_PLAN_FREEZE_20260812.json",
+      "raw_sha256": "sha256:5a66e724b72a89ac620200799276c3a39539333b785109d58c671b4ecae33502"
+    },
+    "v1_receipt": {
+      "artifact_hash": "sha256:3997de96d64dc753ac6385bcb2726f90ffd5a663def552a2a8171b216c73bde1",
+      "commit": "9b6354da2123cb93ed164bed1628c46fbcf334f6",
+      "git_blob_sha": "1229e2b3945995ffd299fd974f75252b71e16418",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_CANDIDATE_FREEZE_RECEIPT_20260812.json",
+      "raw_sha256": "sha256:fcdec421f50e2e15809e25fd4074326b8864145d94f18bc310d1d2f45e7f82a5"
+    },
+    "v1_trace": {
+      "commit": "9b6354da2123cb93ed164bed1628c46fbcf334f6",
+      "git_blob_sha": "5c79446a54c77e1a59a2b67b1bcefc31a7c0b228",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_CANDIDATE_FREEZE_TRACE_20260812.json",
+      "raw_sha256": "sha256:8a875ddcb0e79151568e0477cce21f1eb9183e576183e8dbfbc3d83ad6aa170f"
+    }
+  },
+  "historical_preservation": {
+    "v1_bytes_preserved": true,
+    "v1_last_event_hash": "sha256:e61aa69da2e05008dd861aee47fe6134edb641228c99100da28359a8207d26d2",
+    "v1_result_blind_text_retained_as_superseded_history": true,
+    "v1_trace_entry_count": 9
+  },
+  "next_action": "FREEZE_A_NEW_CONTEXT_FIRST_CANDIDATE_AND_EVALUATOR_ON_AN_UNTOUCHED_SUCCESSOR_TARGET",
+  "recorded_at": "2026-08-12T01:49:26Z",
+  "review_authority": "SAME_CONTEXT_ROLE_SEPARATED_INTERNAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "root_status": "OPEN",
+  "schema_version": "2.0.0",
+  "supersession": {
+    "does_not_erase_v1": true,
+    "replacement_status": "POST_EXPOSURE_RETROSPECTIVE_ONLY_U17_NOT_AN_UNTOUCHED_TARGET",
+    "supersedes_all_v1_result_blind_assertions": true,
+    "supersedes_trace_id": "PNP-O9d12a2a1b-C045-CANDIDATE-FREEZE-TRACE-20260812"
+  },
+  "trace_supersession_id": "PNP-C045-U17-CANDIDATE-FREEZE-TRACE-V2-SUPERSESSION-20260812",
+  "upstream_bindings": {
+    "exposure_audit_artifact_hash": "sha256:690c5ad2d9ab0838cebcc0306badc796674edc5fbd78611248d93cf51c320c3c",
+    "receipt_correction_artifact_hash": "sha256:ff009eed1f9effe7b908d5dd07a09cdeb06a8443c2ee4a4207537a3c14688db8"
+  }
+}
