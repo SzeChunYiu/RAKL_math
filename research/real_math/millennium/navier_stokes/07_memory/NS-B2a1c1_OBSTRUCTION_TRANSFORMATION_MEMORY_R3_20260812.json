@@ -1,0 +1,25 @@
+{
+  "schema_version":"obstruction-transformation-memory-v1-shadow",
+  "memory_id":"OTM-NS-B2a1c1-R3-20260812",
+  "source_universe":["Seregin arXiv:2402.13229v3 Section 2 cutoff episode","RAKL_math Type-II predecessor negative history"],
+  "episodes":[{
+    "episode_id":"OTEP-NS-SEREGIN-PUREPOWER-CUTOFF-R3",
+    "source_domain":"axisymmetric Type-II ancient Euler cutoff",
+    "source_context":"Seregin arXiv:2402.13229v3 Section 2, condition (2.11) and Proposition 2.2",
+    "source_obstruction":{"obstruction_id":"O-SRC-SEREGIN-PUREPOWER-CUTOFF","domain":"axisymmetric Type-II ancient Euler cutoff","roles":["ancient Euler state","cutoff boundary term","power exponent","vorticity functional"],"relations":["cutoff boundary term must decay at spatial infinity","power exponent controls cutoff decay"],"constraints":["axisymmetric swirl-free ancient Euler","3/s1+2/l1=4","unbounded spatial domain"],"failure_mechanisms":["cutoff exponent nonnegative"],"invariants_to_preserve":["same omega_theta/r functional","same Euler equation"],"desired_transition":["cutoff exponent becomes strictly negative and boundary term vanishes"],"forbidden_losses":["do not change the vorticity functional"]},
+    "transformation_name":"restrict_power_exponent_for_cutoff_decay",
+    "operation":"impose the strict pure-power cutoff exponent bound so the far-cutoff power is negative",
+    "preconditions":["axisymmetric swirl-free ancient Euler","3/s1+2/l1=4","strict pure-power cutoff bound"],
+    "resulting_relations":["cutoff exponent becomes strictly negative and boundary term vanishes"],
+    "preserved_invariants":["same omega_theta/r functional","same Euler equation"],
+    "relaxed_or_broken_constraints":[],
+    "known_breakpoints":["equality gives no decay","conservation still needs finite g(t0)","terminal zero needs extra hypotheses"],
+    "evidence_pointers":["Seregin arXiv:2402.13229v3 (2.11), Proposition 2.2"],
+    "authority":"SOURCE_EVENT_VERIFIED",
+    "artifact_hash":"sha256:d7565804451a99fd817297ca137c1cbf4536868236fd4843a5f846ecbf8922e8",
+    "lineage_ids":[]
+  }],
+  "evidence_pointers":["Seregin arXiv:2402.13229v3","RAKL_math main@d5d6ce6026bfdef0a2cd6f2d57ac38ff30af8f51"],
+  "snapshot_hash":"13513794a33943e38f2ecf252bff3552d918440b38c2ae98ed38cc3050bf4799",
+  "authority":"PROPOSAL_SHADOW_COMPILED_MEMORY"
+}
