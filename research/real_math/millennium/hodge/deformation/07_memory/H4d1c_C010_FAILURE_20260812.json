@@ -1,0 +1,17 @@
+{
+  "record_type": "FailureExperienceShadow",
+  "failure_id": "F-H4D1C-AMBIENT-SMOOTHNESS-NOT-NECESSARY-FOR-BRANCH-COVERAGE",
+  "episode_id": "H4d1c-C010-BRANCH-BASECHANGE-SMOOTHNESS-NOGO",
+  "authority": "VERIFIED_SCOPED_NONIMPLICATION_PROPOSAL_SHADOW_ONLY",
+  "failed_inference": "smooth/full branch-restricted consumer W x_S H -> H requires ambient W->S to be smooth",
+  "exact_falsifier": "S=Spec C[x,y], H=W=V(x); W->S is nonflat hence nonsmooth, while W x_S H -> H is identity",
+  "normalized_cause": "AMBIENT_TO_BRANCH_CONSUMER_SCOPE_MISMATCH",
+  "scope_guards": [
+    "does not falsify ambient smoothness as a sufficient condition",
+    "does not assert a real Hodge witness incidence has branch-relative smoothness",
+    "does not change rational/integral coefficient boundaries",
+    "does not discharge monodromy, singular degeneration or globalization"
+  ],
+  "repair": "Type the root-critical consumer after Hodge-branch base change and seek branch-relative smoothness or actual-image dominance; retain ambient smoothness only as an optional stronger sufficient route.",
+  "local_to_global_gluing_failure": false
+}
