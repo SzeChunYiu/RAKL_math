@@ -1,0 +1,24 @@
+{
+  "schema_version": "same-context-expert-cell-v3-proposal-shadow",
+  "atom_id": "NS-B2a1a1",
+  "context_hash": "sha256:1e8c94dfeb38cd42b7dd3d9bad9233529fb2e6ea46730e57ccedeebfe3074373",
+  "independence_credit": "NONE_SAME_CONTEXT",
+  "members": [
+    {"role":"critical-PDE/scaling","background":"Navier-Stokes scaling, local dimensionless quantities","task":"audit F_lambda algebra, units, scale normalization and viscosity coefficient"},
+    {"role":"concentration-compactness","background":"profile/tightness and local-to-global limits","task":"audit fixed-radius versus moving-radius quantifiers and tail escape"},
+    {"role":"pressure/harmonic-analysis","background":"nonlocal pressure decomposition and cutoff estimates","task":"check D_F implications and block silent pressure-tail upgrades"},
+    {"role":"Euler/flux","background":"ancient Euler local energy and global cutoff identities","task":"test whether moving-scale smallness is actually enough for a source-valid Euler consumer"},
+    {"role":"skeptical verifier","background":"endpoint/quantifier/counterexample-first auditing","task":"stress a*lambda<=1, physical radius lambda*a, absolute-vs-normalized mass, epsilon-regularity circularity"},
+    {"role":"RAKL method auditor","background":"v3 chronology, authority and metrology","task":"enforce Gate C before NEXT_STEP_PROPOSED, separate episode/diagnosis/lesson and preserve CANNOT_MEASURE fields"}
+  ],
+  "pre_findings": [
+    "Scaling expert: logarithmic F_lambda can only diverge on lambda-dependent radii; quantify exactly.",
+    "Compactness expert: fixed-a convergence cannot by itself certify a_k->infinity transfer; do not assume a diagonal rate.",
+    "Pressure expert: weighted D smallness is normalized and does not alone prove pressure-work tail integrability.",
+    "Euler expert: a global cutoff consumer must be named before any tail claim is upgraded.",
+    "Verifier: derive the scaled PDE viscosity coefficient; a vanishing coefficient may block uniform NS epsilon-regularity.",
+    "Method auditor: observation predates freeze, so only verification/decomposition credit is admissible."
+  ],
+  "frozen_at": "2026-08-12T00:32:50Z",
+  "artifact_hash": "sha256:37b16288f41815cd8612cd2b2a26fefb7b70b57377fe138dd286267b58f9e195"
+}
