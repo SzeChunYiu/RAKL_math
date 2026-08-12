@@ -1,0 +1,70 @@
+{
+  "application_base_sha": "8b05d8248c68b7fe80e42cb202f0129d55df751e",
+  "artifact_hash": "sha256:4779f3f40ceb1b6ade1ecd378b4dc003c81722a031545bd1a57794a1d41d144c",
+  "candidate_artifact_hash": "sha256:38e20ca16fdd42ce4fd1643c98abf44b5e0ffc2d6818daf372ad586fef2c717d",
+  "candidate_id": "PNP-C052-K31-TARGET-BLIND-OVERLAP-CERTIFICATE-DISCRIMINATOR-v1",
+  "chronology_firewall": {
+    "SAT_UNSAT_or_overlap_executed": false,
+    "candidate_identity_frozen": true,
+    "evaluation_authorized": false,
+    "falsifier_identity_frozen": true,
+    "future_world_materialized": false,
+    "implementation_created": false,
+    "new_formula_or_label_constructed": false,
+    "public_witness_bits_or_labels_inspected_or_compared": false,
+    "result_accessed": false
+  },
+  "credit": {
+    "Git_CI_trace": 0,
+    "independent_review": 0,
+    "mathematical_result": 0,
+    "mathematical_saturation": 0
+  },
+  "falsifier_artifact_hash": "sha256:46409b4f38ead079aa0e08e17a4321d3632a0df4dd04aa8658bb4b77cf03a972",
+  "falsifier_id": "PNP-C052-K31-OVERLAP-CERTIFICATE-FALSIFIER-v1",
+  "framework_pin": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+  "frozen_at_utc": "2026-08-12T14:52:40Z",
+  "next_authorized_action": "PR_REVIEW_MERGE_ONLY",
+  "receipt_id": "PNP-C052-K31-OVERLAP-CANDIDATE-FREEZE-RECEIPT-20260812",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "trace_delta": {
+    "action_summary": "Freeze exact positive/negative/CANNOT_CHECK branch contracts and future planted/integration world identities.",
+    "alternatives_considered": [
+      "run overlap now",
+      "construct a common label",
+      "freeze only a kernel",
+      "freeze full source-bound discriminator plus mandatory integration worlds"
+    ],
+    "artifact_hash": "sha256:ed3015be353c6ca8aadf07f1900608682f4de1bb35d32d309cac80948ab642d3",
+    "atom_id": "O9d12a2a1b-C052-K31-OVERLAP",
+    "decision_rationale": "The pre-candidate packet permits candidate generation but the full-label result remains firewalled; freeze identities before any materialization or execution.",
+    "event_id": "O9d12a2a1b-C052-K31-OVERLAP-E09",
+    "event_type": "CANDIDATE_PROPOSED",
+    "evidence_pointers": [
+      "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C052_K31_OVERLAP_DISCRIMINATOR_IDENTITY_20260812.json",
+      "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C052_K31_OVERLAP_FALSIFIER_IDENTITY_20260812.json"
+    ],
+    "next_steps": [
+      "PR and merge this identity freeze",
+      "freeze a separate evaluation authorization before implementation or world materialization"
+    ],
+    "outputs": [
+      "sha256:38e20ca16fdd42ce4fd1643c98abf44b5e0ffc2d6818daf372ad586fef2c717d",
+      "sha256:46409b4f38ead079aa0e08e17a4321d3632a0df4dd04aa8658bb4b77cf03a972",
+      "ZERO_RESULT_OR_MATHEMATICAL_CREDIT"
+    ],
+    "previous_event_hash": "sha256:cad6a71070adf7deffcdf0af98b374878c235576381f429efbcecda0ed16537c",
+    "residuals": [
+      "future public evaluation authorization required",
+      "H_31 intersection P_32 unresolved",
+      "root open"
+    ],
+    "state_summary": "Only inert target-blind discriminator and falsifier identities are frozen; no evaluator, certificate, formula, label, or result exists in this round.",
+    "timestamp": "2026-08-12T14:52:40Z",
+    "uncertainties": [
+      "no certificate materialized",
+      "same-context review is not independent"
+    ]
+  }
+}

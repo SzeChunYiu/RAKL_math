@@ -1,0 +1,82 @@
+{
+  "artifact_hash": "sha256:46409b4f38ead079aa0e08e17a4321d3632a0df4dd04aa8658bb4b77cf03a972",
+  "candidate_artifact_hash": "sha256:38e20ca16fdd42ce4fd1643c98abf44b5e0ffc2d6818daf372ad586fef2c717d",
+  "candidate_id": "PNP-C052-K31-TARGET-BLIND-OVERLAP-CERTIFICATE-DISCRIMINATOR-v1",
+  "credit": {
+    "independent_review": 0,
+    "mathematical_result": 0,
+    "root_authority": 0
+  },
+  "decisive_refuters": [
+    "acceptance of a marginal-only packet as NONEMPTY",
+    "acceptance of an incomplete enumeration as EMPTY",
+    "any source mismatch producing a decisive branch",
+    "any valid positive or negative certificate producing the wrong branch",
+    "kernel invocation or branch-propagation mismatch in the full discriminator"
+  ],
+  "evaluation_authorized": false,
+  "falsifier_id": "PNP-C052-K31-OVERLAP-CERTIFICATE-FALSIFIER-v1",
+  "frozen_at_utc": "2026-08-12T14:52:39Z",
+  "future_worlds": [
+    {
+      "expected_branch": "NONEMPTY_WITH_EXACT_POSITIVE_CERTIFICATE",
+      "future_materialization_obligation": "supply synthetically validated P1-P7 flags without any native k31 label",
+      "layer": "decision_kernel",
+      "materialized": false,
+      "standalone_credit": "ZERO_MATHEMATICAL_OR_INTEGRATION_CREDIT",
+      "world_id": "K31-PLANTED-POSITIVE-CERTIFICATE-KERNEL-v1"
+    },
+    {
+      "expected_branch": "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE",
+      "future_materialization_obligation": "supply synthetically validated N1-N6 flags without any native k31 enumeration",
+      "layer": "decision_kernel",
+      "materialized": false,
+      "standalone_credit": "ZERO_MATHEMATICAL_OR_INTEGRATION_CREDIT",
+      "world_id": "K31-PLANTED-NEGATIVE-CERTIFICATE-KERNEL-v1"
+    },
+    {
+      "expected_branch": "CANNOT_CHECK",
+      "future_materialization_obligation": "omit or corrupt one mandatory source/proof/membership field",
+      "layer": "full_discriminator",
+      "materialized": false,
+      "world_id": "K31-MALFORMED-CERTIFICATE-CANNOT-CHECK-v1"
+    },
+    {
+      "expected_branch": "CANNOT_CHECK",
+      "future_materialization_obligation": "submit only the already-public coordinate-wise marginal theorem and witness-count receipt, never witness bits",
+      "layer": "full_discriminator",
+      "materialized": false,
+      "world_id": "K31-MARGINAL-ONLY-FALSE-POSITIVE-v1"
+    },
+    {
+      "expected_branch": "CANNOT_CHECK",
+      "future_materialization_obligation": "mutate one C041/C048/pre-candidate source hash while all caller flags claim validity",
+      "layer": "integration",
+      "materialized": false,
+      "world_id": "K31-SOURCE-BINDING-MISMATCH-v1"
+    },
+    {
+      "expected_branches": [
+        "NONEMPTY_WITH_EXACT_POSITIVE_CERTIFICATE",
+        "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE",
+        "CANNOT_CHECK"
+      ],
+      "future_materialization_obligation": "prove the full frontend serializes the exact kernel input, invokes the bound kernel, and propagates each branch unchanged",
+      "layer": "integration",
+      "materialized": false,
+      "world_id": "K31-FRONTEND-KERNEL-BRANCH-PROPAGATION-v1"
+    }
+  ],
+  "identity_kind": "INERT_FUTURE_FALSIFIER_AND_INTEGRATION_WORLD_MANIFEST",
+  "implementation": null,
+  "independence_requirements": [
+    "future falsifier must rederive source hashes and certificate obligations rather than import candidate proof code",
+    "kernel planted worlds must not be represented as full-discriminator validation",
+    "integration worlds must reject caller-supplied authority booleans",
+    "same-context roles are not independent peer review"
+  ],
+  "result_accessed": false,
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "worlds_materialized": false
+}

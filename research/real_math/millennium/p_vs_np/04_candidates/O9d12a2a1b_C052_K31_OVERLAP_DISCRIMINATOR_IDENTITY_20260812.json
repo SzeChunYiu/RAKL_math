@@ -1,0 +1,128 @@
+{
+  "allowed_branches": [
+    "NONEMPTY_WITH_EXACT_POSITIVE_CERTIFICATE",
+    "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE",
+    "CANNOT_CHECK"
+  ],
+  "application_base_sha": "8b05d8248c68b7fe80e42cb202f0129d55df751e",
+  "architecture": {
+    "decision_kernel_input": [
+      "source_binding_valid",
+      "positive_certificate_complete_and_valid",
+      "negative_certificate_complete_and_valid",
+      "malformed_or_ambiguous"
+    ],
+    "frontend": "rederive exact source identities, formula-bound memberships, proof completeness, and full 32-bit equality/separation",
+    "integration_obligation": "the full discriminator must invoke the exact kernel identity and propagate its branch without caller-supplied authority booleans",
+    "standalone_kernel_worlds_are_insufficient": true
+  },
+  "artifact_hash": "sha256:38e20ca16fdd42ce4fd1643c98abf44b5e0ffc2d6818daf372ad586fef2c717d",
+  "atom_id": "O9d12a2a1b-C052-K31-OVERLAP",
+  "branch_contract": {
+    "CANNOT_CHECK": "otherwise, including malformed, incomplete, source-mismatched, marginal-only, ambiguous, or conflicting input",
+    "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE": "all N1-N6 pass and no conflicting valid positive certificate exists",
+    "NONEMPTY_WITH_EXACT_POSITIVE_CERTIFICATE": "all P1-P7 pass and no conflicting valid negative certificate exists"
+  },
+  "candidate_id": "PNP-C052-K31-TARGET-BLIND-OVERLAP-CERTIFICATE-DISCRIMINATOR-v1",
+  "candidate_kind": "INERT_TARGET_BLIND_EXACT_CERTIFICATE_DISCRIMINATOR_IDENTITY",
+  "credit": {
+    "independent_review": 0,
+    "mathematical_result": 0,
+    "mathematical_saturation": 0,
+    "software_process": 0
+  },
+  "evaluation_authorized": false,
+  "fail_closed_non_guarantees": [
+    "coordinate-wise marginals do not establish a common label",
+    "ambient canonical syntax does not establish H_31 membership",
+    "support-cell arithmetic does not establish overlap or disjointness",
+    "computation without a proof/completeness certificate is not a mathematical result",
+    "no cover, circuit, novelty, independent-review, or P-versus-NP authority"
+  ],
+  "framework_pin": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+  "frozen_at_utc": "2026-08-12T14:52:38Z",
+  "implementation": null,
+  "negative_certificate_obligations": [
+    "N1 exact C041/C048 and pre-candidate source identities match",
+    "N2 quantify the complete frozen parent cell including every canonical formula and semantic UNSAT membership",
+    "N3 quantify all three frozen current cells including every canonical current formula",
+    "N4 provide either a universal invariant separating every H_31 member from every P_32 member or an exhaustive enumeration with proof of completeness",
+    "N5 independently check that no identical 32-bit label has both formula-bound memberships",
+    "N6 fail closed if canonicality, UNSAT, full-cell coverage, proof trust, or completeness is missing"
+  ],
+  "positive_certificate_obligations": [
+    "P1 exact C041/C048 and pre-candidate source identities match",
+    "P2 one exact canonical length-62 parent word lies in the frozen (a,b,m,v) support cell",
+    "P3 the parent word is decoded to a formula-bound C041 3CNF and an independently checkable proof establishes UNSAT",
+    "P4 split the exact parent word as r||c with |r|=|c|=31 and derive the 32-bit label h=1||c",
+    "P5 one exact canonical length-64 current word lies in one of the three frozen current support cells",
+    "P6 derive its exact 32-bit prefix p and check byte-for-byte h=p",
+    "P7 bind the common label to the unchanged C048 literal-transpose collision equivalence"
+  ],
+  "qoi": "Decide exact H_31 intersection P_32 only from a source-bound complete positive or negative certificate.",
+  "result_state": "UNEVALUATED",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "source_bindings": {
+    "c041_grammar": {
+      "git_blob": "fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+      "raw_sha256": "sha256:c0caca2fe7244c3d847de8b59473cec72132ec04ad3e9fab668f5cd95a2bd75a"
+    },
+    "c048_proof_certificate": {
+      "content_hash": "sha256:84ebf84c9b90a99c3f5e348bacad53ee1d700e2d0c746805cf4b8a0439cd1e33",
+      "git_blob": "1283219dec4d6a39cf43d5f2d9a4fafa1883d016",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C048_LITERAL_TRANSPOSE_PROOF_CERTIFICATE_FREEZE_20260812.json",
+      "raw_sha256": "sha256:fd4d478d816c50423f2d6fbd668305bec911bcf3a035a2a5b516eb08796ec16c"
+    },
+    "c048_transfer_condition": {
+      "content_hash": "sha256:b03a1090e7b25222dc2377e309b8600b6e2064d6fc74f702b1f3f984d68cff5e",
+      "git_blob": "fed9057163bec46325115e8f6cfbb5c6f3c3d485",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C048_LITERAL_TRANSPOSE_TRANSFER_CONDITION_FREEZE_20260812.json",
+      "raw_sha256": "sha256:e2a924e708c1ab17b78e06a3935fd48772c0c172b9f01b0c756de80f1430908b"
+    },
+    "certificate_firewall": {
+      "content_hash": "sha256:fda8088b8bde32488f9a9e18096f2c2e6d1b61bd23a36b74996dc74acd045103",
+      "git_blob": "276a35919a72ebc1d9b68115cbf8a85dc0c0236a",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_K31_OVERLAP_CERTIFICATE_FIREWALL_20260812.json",
+      "raw_sha256": "sha256:cb2501908327ec03a0a103691f824e06514616e04fda170b6803eef4935da971"
+    },
+    "context": {
+      "content_hash": "sha256:9b195fe641a94855ac068e8aec4d20c55a051b377e5f91b22e57944036391482",
+      "git_blob": "e57537977dc8bffbac8ce61a8e43114f291c75bd",
+      "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C052_K31_OVERLAP_CONTEXT_20260812.json",
+      "raw_sha256": "sha256:f3a8dd3efbdfb034b1549341f51c47bf417d9d10c5e301caad76dda19f2b215b"
+    },
+    "memory_review": {
+      "content_hash": "sha256:d5da74964ed9e9815fb65af1a516191788c2ec7be50e5464c75a432f8dffa0cd",
+      "git_blob": "1d2833f43fa24686058c87d4e8893ce354aa15dc",
+      "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C052_K31_OVERLAP_RESEARCH_MEMORY_REVIEW_20260812.json",
+      "raw_sha256": "sha256:b5bc34335f5e15677bd8ea4f44e23fdcb7313cf10c6d0bb04c6643bef82304ea"
+    },
+    "pre_candidate_gate": {
+      "content_hash": "sha256:6749bd81c19e691c7089808fb252bffef86c5397a066a3fb8844c82ce84e3ead",
+      "git_blob": "7f6d27e7e08a6e1e4b9254c490498ddde10bca1a",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_K31_OVERLAP_PRE_CANDIDATE_GATE_RECEIPT_20260812.json",
+      "raw_sha256": "sha256:14ff95e6a48cd51e74824530f61292ec9e5276f72a6c66132d8a184b3d7f6f83"
+    },
+    "pre_candidate_trace": {
+      "git_blob": "ce564addfb9c432c14703c1a630fe9a630a6fd2f",
+      "last_event_hash": "sha256:cad6a71070adf7deffcdf0af98b374878c235576381f429efbcecda0ed16537c",
+      "last_event_id": "O9d12a2a1b-C052-K31-OVERLAP-E08",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_K31_OVERLAP_PRE_CANDIDATE_TRACE_20260812.json",
+      "raw_sha256": "sha256:b53fc0311ad4d49e6f89938b306d788785f9b6290d192261a6fafdbcb044b5f1"
+    },
+    "shortcut_review": {
+      "content_hash": "sha256:06285109d6c733336517015041a6f1959516f9cb17ee9add7cdcae60cc76e74a",
+      "git_blob": "cebfebca050bafc63acd7415ef3a6fb04181e458",
+      "path": "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C052_K31_OVERLAP_OBSTRUCTION_TRANSFORMATION_REVIEW_20260812.json",
+      "raw_sha256": "sha256:90ef5bc08757da741badcb36752fdaa4e0c0ed59603714ecdc9cec2f7e9ddec6"
+    }
+  },
+  "target_blindness": {
+    "overlap_label_or_branch_included": false,
+    "public_marginal_witnesses_used_as_overlap_candidates": false,
+    "same branch rules apply before any certificate content is accessed": true,
+    "target_result_used_to_choose_identity": false
+  }
+}
