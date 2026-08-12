@@ -84,6 +84,8 @@ def test_atlas_adds_distinct_projection_failure_and_preserves_representation_war
     assert "B/A -> H/p(A)" in item["falsifier"]
     assert "p(B)=H" in item["falsifier"]
     assert "signed rational" in item["repair"]
+    assert len(item["competing_causes"]) == 4
+    assert {row["status"].split(";")[0] for row in item["competing_causes"]} == {"REJECTED_BY_SCOPE", "UNTESTED_AND_DOWNSTREAM", "NOT_USED_IN_COUNTERMODEL", "VERIFIED_IN_EXPLICIT_COUNTERMODEL"}
     assert item["related_failure"]["id"] == "FM-HODGE-REPRESENTATION-EQUIVALENCE-NOT-REDUCTION"
     assert "mathematical consumer map" in item["proposal_only_rakl_lesson"]
     assert "framework promotion" in item["proposal_only_rakl_lesson"]
