@@ -1,0 +1,81 @@
+{
+  "activated_at_utc": "2026-08-12T17:35:00Z",
+  "activation_id": "RH-ANA-003k-JY-C001-FLOOR-RATIO-EXECUTION-ACTIVATION-20260812",
+  "artifact_hash": "sha256:e15340e1af6a8afefc784a3d37449819b49809fb21e757055954596308ce4660",
+  "authority": {
+    "independent_review": false,
+    "mathematical_result": false,
+    "operational_authorization_only": true,
+    "proof": false,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "software_credit_units": 0
+  },
+  "authorized_next_actions": [
+    "execute the exact written derivation against PO1 through PO7",
+    "materialize and run all ten frozen worlds",
+    "emit one result receipt at certificate-incompatibility-only scope"
+  ],
+  "candidate_id": "RH-ANA-003k-JY-C001-FLOOR-RATIO-ASYMPTOTIC",
+  "chronology": {
+    "application_main_at_activation": "04d8ca7af5c007d3d5f93dd9f47b411a07e95822",
+    "candidate_and_conditional_authorization_present_on_active_main": true,
+    "candidate_freeze_commit": "919e7219ee5f702e26d16706ca030bad455e5e0c",
+    "candidate_public_merge": "cde7c63769f35230be158f5525239287f51bfb09",
+    "hand_proof_executed": false,
+    "result_accessed": false,
+    "worlds_materialized": false
+  },
+  "conditional_authorization_binding": {
+    "artifact_hash": "sha256:cc1b6b2b106e3ac6be9ddf66bf5caca985a2da966804f88f2b7504384b6765e8",
+    "path": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003k_JY_C001_FLOOR_RATIO_EVALUATION_AUTHORIZATION_20260812.json",
+    "post_merge_condition_satisfied": true,
+    "raw_sha256": "sha256:6b7c189bdced35502c40764b015a864046d260ceeef4a17d311a16d95d702d75"
+  },
+  "evaluator_implementation": {
+    "authority": "RECORD_CHECK_ONLY_NOT_PROOF",
+    "evaluator_id": "RH-ANA-003k-JY-C001-FLOOR-RATIO-SYMBOLIC-EVALUATOR-v1",
+    "matches_frozen_future_path": true,
+    "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/rh_ana003k_jy_c001_floor_ratio_evaluator.py",
+    "raw_sha256": "sha256:e009e1c864d7968f00d6501508f8f78d2628197d0db397ecc85b605f99905a1c"
+  },
+  "immutable_boundaries": {
+    "actual_remainder_li_or_rh_inference_allowed": false,
+    "candidate_mutation_allowed": false,
+    "falsifier_mutation_allowed": false,
+    "numerical_proof_substitution_allowed": false,
+    "theorem_scope_expansion_allowed": false
+  },
+  "record_type": "RH_ANA003K_JY_C001_EXECUTION_ACTIVATION",
+  "schema_version": "1.0.0",
+  "status": "EXECUTION_ACTIVATED_AFTER_ACTIVE_MAIN_IDENTITY_VERIFICATION",
+  "verified_frozen_bindings": {
+    "candidate": {
+      "artifact_hash": "sha256:f99b6553969d2e035e87bc7c62f5ad7f163c69e09ce55278d3e34329028ba1bf",
+      "matches": true,
+      "observed_raw_sha256": "sha256:c51ca1d45b4454baf10e6a4f09ba0b06d5df4d5a04feb4238a5d4e1cab3687bd",
+      "path": "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_ANA_003k_JY_C001_FLOOR_RATIO_CANDIDATE_FREEZE_20260812.json",
+      "raw_sha256": "sha256:c51ca1d45b4454baf10e6a4f09ba0b06d5df4d5a04feb4238a5d4e1cab3687bd"
+    },
+    "evaluator": {
+      "artifact_hash": "sha256:707a8a22cfef81bf9ee60b50e98008ad5bb4ab51847e543c9466453723b6a7d2",
+      "matches": true,
+      "observed_raw_sha256": "sha256:bc56d0aea4f08cb183a68f289d3e2ea4b1f93b8d54be442d0f48965252688fb4",
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003k_JY_C001_FLOOR_RATIO_EVALUATOR_IDENTITY_20260812.json",
+      "raw_sha256": "sha256:bc56d0aea4f08cb183a68f289d3e2ea4b1f93b8d54be442d0f48965252688fb4"
+    },
+    "falsifier": {
+      "artifact_hash": "sha256:df91c4f87bd590da80557e3d00057eab029fb07d28732e02bb21d023a26d5daa",
+      "matches": true,
+      "observed_raw_sha256": "sha256:524e5923462e2481e72211dede25e968b3f5157440201b89f10d70dc7c6e33a6",
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003k_JY_C001_FLOOR_RATIO_FALSIFIER_FREEZE_20260812.json",
+      "raw_sha256": "sha256:524e5923462e2481e72211dede25e968b3f5157440201b89f10d70dc7c6e33a6"
+    },
+    "trace": {
+      "artifact_hash": "sha256:2dc0eb8969c1b5e39e53796b30a208d4c09f241bced53ec5e36dc2bfa05d662e",
+      "matches": true,
+      "observed_raw_sha256": "sha256:0e6e86d51034da89fc55fe9ee1f2f22151e406a927092502afe3026862008471",
+      "path": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003k_JY_C001_FLOOR_RATIO_CANDIDATE_FREEZE_TRACE_20260812.json",
+      "raw_sha256": "sha256:0e6e86d51034da89fc55fe9ee1f2f22151e406a927092502afe3026862008471"
+    }
+  }
+}
