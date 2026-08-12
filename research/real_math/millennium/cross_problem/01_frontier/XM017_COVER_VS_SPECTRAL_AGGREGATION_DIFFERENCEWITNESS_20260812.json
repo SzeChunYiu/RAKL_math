@@ -1,0 +1,71 @@
+{
+  "schema": "RAKL_math.cross_millennium_transfer_falsifier.v3.proposal_shadow",
+  "cycle_id": "XM017-PNP-C044-TO-YM-S1A2-AGGREGATOR-TYPING-20260812",
+  "active_atom": "XM017-PNP-C044-TO-YM-S1A2-COMPONENT-AGGREGATION",
+  "atom_signature": "DISJOINT_LOCAL_CERTIFICATES_REQUIRE_TARGET_AGGREGATION_LAW_BEFORE_TRANSFER",
+  "frozen_fibre_hash": "sha256:9d6f66a6ae952e51f501dfeea204ce24ddd895efcf8ffbe5960d874b505941c0",
+  "source": {
+    "problem": "P_vs_NP",
+    "atom": "O9d12a2a1b-C044",
+    "result": "In the registered disjoint-complement-component setting, local generator-separating families combine with upper cost max_r k_r + ceil(log2 t); for Q16 the current retrospective packet gives an explicit three-partition upper cover.",
+    "scope": "finite/local upper-bound certificate; retrospective; no P-vs-NP/root authority"
+  },
+  "target": {
+    "problem": "Yang_Mills",
+    "atom": "YM-S1a2",
+    "residual": "same-theory OS/SZZ covariance-to-transfer-moment binding plus post-null-quotient density/cyclicity of the same controlled source class",
+    "scope": "fixed-cutoff strong-coupling infinite-volume spectral gluing only; no continuum/root authority"
+  },
+  "transfer": {
+    "common_abstraction": "A global target is assembled from several locally certified components/sectors, so the aggregation law is load-bearing.",
+    "enabling_assumptions": [
+      "there is a finite component/sector decomposition meaningful for the target quantity",
+      "each local component carries a valid local certificate",
+      "the map from local certificates to the global target is explicitly typed"
+    ],
+    "disanalogies": [
+      "C044 is a minimization problem for cover families on disjoint complement components; spectral gap is an infimum over energies in accessible excited sectors",
+      "C044 can pay a binary separator overhead ceil(log2 t); a transfer operator has no analogous free separator coordinate",
+      "OS reconstruction quotients null vectors and then completes a Hilbert space, so source sectors can disappear, couple, or fail density",
+      "a correlation rate seen by one source need not detect a lower-energy orthogonal sector"
+    ],
+    "predicted_principle": "DISJOINT_LOCAL_CERTIFICATES_COMBINE_WITH_ONLY_MAX_PLUS_LOG_GLOBAL_COST",
+    "cheapest_falsifier": "Two-sector positive transfer operator T=diag(q_h,q_l) with 0<q_h<q_l<1 and source psi_h=e_h.",
+    "DifferenceWitness": "C044 cover cost aggregates by max local cost plus logarithmic component separation. In the target spectral world the full gap aggregates by the minimum accessible energy, while a non-dense source can see only the faster sector and miss the lower-energy state entirely. Thus the aggregation law and source-completeness condition are not preserved."
+  },
+  "verification": {
+    "exact_model": [
+      "<e_h,T^n e_h>=q_h^n",
+      "<e_l,T^n e_l>=q_l^n",
+      "M=-log(q_h)>epsilon=-log(q_l)",
+      "gap(T on H_exc)=epsilon",
+      "span{e_h} is not dense in H_exc"
+    ],
+    "target_source_control": "Shen-Zhu-Zhu prove exponential decay for a broad class of observables at explicit strong coupling; current YM failure memory requires a separate same-theory transfer-moment and density/cyclicity witness before that decay is used as the physical spectral gap.",
+    "source_control": "Cavalar-Oliveira define the two-dimensional cover framework used by the C044 local certificate; C044's multiplexing lemma is application-local and not attributed to the paper."
+  },
+  "primary_source_provenance": [
+    "Cavalar and Oliveira, ECCC TR25-033, 2025, current ECCC report page rechecked 2026-08-12",
+    "Shen, Zhu, Zhu, A stochastic analysis approach to lattice Yang--Mills at strong coupling, arXiv:2204.12737, current arXiv HTML revision dated 2026-03-22 rechecked 2026-08-12"
+  ],
+  "outcome": "PARTIAL_SUCCESS_SUCCESSFUL_OVERTRANSFER_FALSIFICATION_AGGREGATION_FAMILY_REFINEMENT",
+  "residual_before": [
+    "XM016 had QUOTIENT_COLLAPSE versus SIGNED_CANCELLATION but no direct spectral-aggregation comparator",
+    "YM-S1a2 same-theory moment/density gluing open"
+  ],
+  "residual_after": [
+    "type at least COVER_COMPONENT_MULTIPLEXING versus SIGNED_CANCELLATION versus SPECTRAL_MINIMUM_SOURCE_COMPLETENESS before cross-problem normalization",
+    "YM-S1a2 same-theory moment/density gluing unchanged",
+    "PNP C044 cross-component coupling residual unchanged"
+  ],
+  "failure_class": ["representation", "transfer", "gluing-boundary"],
+  "local_mathematical_failure": false,
+  "local_to_global_gluing_failure": true,
+  "novelty_class": {
+    "cross_problem": "transfer",
+    "taxonomy": "representation",
+    "literature_novelty": "NOT_CLAIMED"
+  },
+  "authority": "PROPOSAL_SHADOW_MEASUREMENT_ONLY_NO_ROOT_OR_FRAMEWORK_PROMOTION",
+  "canonical_content_hash": "sha256:2e3df92b0835da415f5a1558938950f59f8bac8668095ae31122be6e8701fb73"
+}
