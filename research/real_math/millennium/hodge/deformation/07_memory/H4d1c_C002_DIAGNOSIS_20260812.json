@@ -1,0 +1,26 @@
+{
+  "diagnosis_id": "D-H4D1C-FIXED-COMPONENT-COUPLING-NONEXPANSION",
+  "failure_id": "F-H4D1C-FIXED-COMPONENT-COUPLING-NO-EXPANSION",
+  "episode_id": "H4d1c-C002-FIXED-COMPONENT-FIBRE-PRODUCT-NONEXPANSION",
+  "atom_id": "H4d1c-b",
+  "failure_category": "MATHEMATICAL_REPRESENTATION_TRANSFER",
+  "local_mathematical_failure": true,
+  "local_to_global_gluing_failure": false,
+  "statement": "The attempted repair treats coefficient-preserving simultaneous fixed-component packaging as if it could create additional first-order base directions. For the exact fibre-product representation, its base tangent image is the intersection of the component base tangent images, so it cannot enlarge reachability.",
+  "mechanism": "Dual-number tangent vectors into a fibre product are exactly compatible tuples with a common base tangent; the universal property gives both inclusions in the image-intersection equality.",
+  "broken_transfer_assumption": "Coupling fixed selected component witness spaces over the same branch can recover total-class Hodge directions that are not already liftable componentwise.",
+  "scope_guard": "Only fixed selected component local representable charts and ordinary first-order tangents. No impossibility claim for changing-decomposition, correspondence, Picard-type, flag-incidence, stacky or higher-order representations.",
+  "competing_diagnoses_rejected": [
+    "source incompleteness alone: rejected for this exact fibre-product claim because the non-expansion follows formally from the representation definition",
+    "H4d1b detector incompleteness: rejected because this atom starts from actual tangent images, not detector vanishing",
+    "global gluing failure: rejected because no local-to-global composition is attempted"
+  ],
+  "verification": [
+    "Stacks tag 0B28 dual-number tangent definition",
+    "Stacks tag 001U fibre-product universal property",
+    "same-context adversarial two-inclusion check"
+  ],
+  "authority": "SCOPED_SUPPORTED_DIAGNOSIS_PROPOSAL_SHADOW",
+  "timestamp": "2026-08-12T01:10:31+00:00",
+  "artifact_hash": "sha256:93498f11e0d08d9fcc24b88ba1662e9093ce30229655e01f82fb0d4a841ff550"
+}
