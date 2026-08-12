@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "packet_id": "PNP-O9d12a2a1b-C044-CURRENT-V3-PRE-CANDIDATE-20260812",
+  "status": "PROSPECTIVE_PRE_CANDIDATE_FROZEN",
+  "atom_id": "O9d12a2a1b-C044",
+  "parent_atom_id": "O9d12a2a1b-C043",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "bbc1edcac2dbb5825cfdb0b2cb612bb53137a4d5",
+    "pre_state_fingerprint": "git:bbc1edcac2dbb5825cfdb0b2cb612bb53137a4d5"
+  },
+  "active_atom": {
+    "signature": "On the exact C043 G16 eight-by-eight twin quotient with ten complement cells, determine whether quotient multiplexing still admits a very small full Definition-21 pair cover before any larger-level or fractional lower-bound search.",
+    "quotient_side": 8,
+    "quotient_complement": [[0,0],[1,2],[2,1],[2,2],[4,4],[5,5],[5,6],[6,5],[7,5],[7,7]],
+    "residual_before": "G16 has t_row=t_column=8 and rho(G16)<=8, but the quotient full-cover optimum and a sharper explicit quotient cover are unknown."
+  },
+  "fibre_contents_actually_consulted": [
+    "C043 exact G16 full-history row/column twin classification and ten-cell quotient",
+    "C043 failure F-C043-FIRST-ROW-SPLIT-TYPE-CEILING",
+    "C043 successful scoped tool reuse T-PNP-EXACT-NEIGHBORHOOD-TYPE-UPPER-BOUND",
+    "C042 exact quotient pair witnesses and quotient cover number two at G9/G13",
+    "C041 fractional semi-filter packing tool and C024 fractional-integrality warning",
+    "Cavalar-Oliveira ECCC TR25-033 Definitions 18-21 and Theorem 30",
+    "RAKL v3 MathContextFiber, dual ResearchMemoryReview, obstruction-transformation SEARCH/JUMP/GLUE/LIFT gate, hash-chained trace, and metrology surfaces"
+  ],
+  "equivalent_formulations": [
+    "full Definition-21 cover of all relevant semi-filters by legal pairs (E,H)",
+    "cyclic intersection complexity via Cavalar-Oliveira Theorem 30 when target is non-trivial and generators are non-empty",
+    "finite quotient set-cover certificate whose legal pair family lifts only in the proved upper-bound direction to G16"
+  ],
+  "solved_or_near_solved_analogues": [
+    {
+      "source": "C042 G9/G13 exact quotient",
+      "method": "construct a small explicit legal-pair family and prove it covers every quotient-relevant semi-filter",
+      "shared_structure": ["finite exact twin quotient", "same Definition-21 semi-filter/pair semantics", "same upper-bound lift polarity"],
+      "required_assumptions": ["exact quotient classes", "full unrestricted pair universe", "source-valid relevance definition"],
+      "disanalogies": ["C044 quotient has ten complement cells rather than four/five", "old exhaustive oracle is guarded at five complement cells", "two source pairs need not cover the larger quotient"],
+      "minimum_repair_question": "Can a bounded pair family on the ten-cell quotient be falsified or certified without assuming that type growth implies cover growth?"
+    },
+    {
+      "source": "C043 exact bidirectional type-class upper construction",
+      "method": "compress by full complement-neighborhood equality before expensive lower-bound work",
+      "shared_structure": ["same accumulated G16 graph", "exact block-constant quotient"],
+      "required_assumptions": ["full-history twin equality on both sides"],
+      "disanalogies": ["type-class rectangles give eight pairs/rectangles but do not expose whether the quotient multiplexes further"],
+      "minimum_repair_question": "Does the quotient itself admit substantially fewer legal pairs than the eight type classes?"
+    }
+  ],
+  "cross_domain_analogy_scan": {
+    "status": "NO_SAFE_BRIDGE_FOUND",
+    "notes": "A same-domain verified-local quotient-cover episode survives SEARCH. Cross-Millennium and everyday analogies were therefore not used to bypass the direct route."
+  },
+  "dual_memory_review": {
+    "retrieved_tool_ids": ["T-PNP-EXACT-NEIGHBORHOOD-TYPE-UPPER-BOUND", "T-PNP-FRACTIONAL-SEMIFILTER-PACKING"],
+    "selected_tool_ids": ["T-PNP-EXACT-NEIGHBORHOOD-TYPE-UPPER-BOUND"],
+    "rejected_tool_ids": ["T-PNP-FRACTIONAL-SEMIFILTER-PACKING"],
+    "retrieved_failure_ids": ["F-C043-FIRST-ROW-SPLIT-TYPE-CEILING", "F-C042-FIRST-UNSAT-QUOTIENT-COMPRESSION", "F-C024-FRACTIONAL-INTEGRALITY-GAP"],
+    "selected_failure_ids": ["F-C043-FIRST-ROW-SPLIT-TYPE-CEILING", "F-C024-FRACTIONAL-INTEGRALITY-GAP"],
+    "routing_effect": "C043 changes the immediate action from counting semantic rows/types to direct quotient-multiplexing falsification. C024 keeps fractional packing out of the immediate integral-cover step.",
+    "rejected_or_warning_reason": "Fractional packing remains valid only as a scoped lower-bound tool and cannot replace the direct full-cover quotient discriminator; C042 finite two-pair success is a source episode, not evidence that two pairs will work at G16.",
+    "missed_prior_experience": "CANNOT_MEASURE: no complete governed recall denominator exists for every potentially relevant repository/cross-problem episode in this run."
+  },
+  "obstruction_transformation_review": {
+    "mode": "SEARCH",
+    "selected_episode_id": "E-PNP-C042-EXPLICIT-QUOTIENT-PAIR-COVER",
+    "source_authority": "VERIFIED_LOCAL",
+    "source_operation": "on an exact finite quotient, construct explicit legal pairs and prove by upward-closure/relevance structure that they cover every relevant semi-filter",
+    "mapped_target_transition": "replace the unknown ten-cell quotient cover by a falsifiable bounded explicit pair-family certificate, or return a concrete preserving relevant semi-filter as residual",
+    "precondition_mapping": ["exact quotient is already proved in C043", "full Definition-21 pair universe is retained", "target is finite and non-trivial", "any lift to G16 is upper-bound only"],
+    "disanalogies": ["ten complement cells exceed the old exact-antichain oracle guard", "source two-pair witnesses may fail", "computation can calibrate/falsify but cannot itself supply asymptotic/root authority"],
+    "jump_status": "NOT_RUN",
+    "glue_status": "NOT_RUN",
+    "lift_status": "NOT_RUN"
+  },
+  "same_context_expert_cell": [
+    {"role": "circuit-complexity/domain theorist", "background": "communication/circuit lower bounds and Karchmer-Wigderson style characterizations", "objection": "A finite small quotient cover is only a local upper obstruction; no P-vs-NP conclusion follows."},
+    {"role": "extremal-combinatorics specialist", "background": "set systems, monotone families, quotient/twin compression", "objection": "Type count is not cover count; test shared legal-pair multiplexing directly."},
+    {"role": "SAT/encoding specialist", "background": "3CNF encodings and exact finite language classification", "objection": "Do not use additional semantic formula counts unless they change quotient incidence."},
+    {"role": "adversarial falsification specialist", "background": "counterexample-first finite model search", "objection": "Search k=2,3,... pair families and demand an explicit preserving relevant semi-filter whenever a family fails."},
+    {"role": "formal/verification specialist", "background": "proof obligations, exact finite encodings, verifier trust", "objection": "MILP/SAT output is calibration unless converted into a transparent pair witness plus proof or checked certificate."},
+    {"role": "novelty/source historian", "background": "primary-literature and barrier audit", "objection": "Keep exact ECCC provenance; local finite cover sharpening is not novelty/root promotion by itself."}
+  ],
+  "decision_policy": "invention-last SEARCH; rotate away from saturated semantic-row/type counting and immediate fractional LP; run the cheapest direct quotient-multiplexing falsifier after prospective current-v3 gate PASS",
+  "candidate_generation_allowed_before_gate": false,
+  "next_action_if_and_only_if_gate_passes": "Freeze k-bounded quotient pair-cover predictions before computation; use exact finite counterexample search only to falsify/calibrate; if a small family survives, write an explicit combinatorial coverage proof and hostile review before recording any mathematical result.",
+  "authority": "PROPOSAL_SHADOW_PRE_CANDIDATE_ONLY / ROOT_OPEN"
+}
