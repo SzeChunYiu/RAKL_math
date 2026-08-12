@@ -1,0 +1,104 @@
+{
+  "analogy_scan_notes": "One order-preserving ledger analogy survives only as a proposal for the cumulative-state transform; all mathematical authority remains target-specific.",
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "atom_id": "RH-ANA-003-ABEL-001",
+  "cross_domain_analogies": [
+    {
+      "common_abstraction": [
+        "ordered signed increments",
+        "cumulative state",
+        "integration by parts against a changing weight"
+      ],
+      "disanalogies": [
+        "the ledger analogy supplies no analytic bound or theorem authority",
+        "prime powers and Laguerre growth have no ordinary-ledger analogue",
+        "the target limit is infinite and requires mathematical convergence"
+      ],
+      "proposed_principle": "move cancellation into the exact cumulative state before estimating, while preserving source order",
+      "provenance_note": "proposal-only everyday analogy; zero theorem authority",
+      "shared_constraints": [
+        "order is part of the object",
+        "the cumulative state must use the same ordering",
+        "the endpoint balance cannot be silently discarded"
+      ],
+      "source_kind": "ordinary bookkeeping / event-sourced ledger",
+      "source_situation": "A chronological ledger is reconciled by its running balance and time-varying weight without permuting transactions",
+      "source_to_target_mapping": [
+        "transaction increment -> a_m=1-Lambda(m)",
+        "running balance -> A(x)=floor(x)-psi(x)",
+        "time-varying weight -> b_n(x)",
+        "chronological reconciliation -> natural-order Abel identity"
+      ],
+      "validation_obligation": "derive the exact finite endpoint identity, prove the Bellotti-based boundary and integral limits for fixed n, and independently test whether absolute convergence actually fails"
+    }
+  ],
+  "equivalent_formulations": [
+    "existence of the natural-order limit of finite partial sums for one fixed n",
+    "vanishing of the Abel endpoint plus convergence of the exact derivative integral",
+    "a Dirichlet/Abel convergence problem with cumulative source A(x) and fixed polynomial-log weight"
+  ],
+  "explicit_disanalogies": [
+    "fixed-n convergence is not n-uniform tail control",
+    "the source-order limit is not an authorization to reorder the series",
+    "Bellotti bounds psi(x)-x but does not mention Laguerre weights or Li coefficients",
+    "unmerged PR316 and historical R4/R5 proposal branches supply no authority to this atom",
+    "a local Abel-interface lemma does not imply a PR316 decay rate, Li positivity, or RH",
+    "same-context review is not independent review and computation is not proof"
+  ],
+  "first_candidate_at": null,
+  "frozen_at": "2026-08-12T07:23:10Z",
+  "method_transfers": [
+    {
+      "disanalogies": [
+        "finite Abel summation alone does not prove the infinite boundary vanishes",
+        "the target weight depends on n and the prospective claim fixes n before the limit",
+        "an absolutely convergent transformed integral does not make the original term series absolutely convergent",
+        "no estimate uniform in n follows from a fixed-n argument"
+      ],
+      "method": "replace a finite weighted sum by two cumulative-sum boundary terms and one integral against the derivative of the weight",
+      "repair_question": "For each already fixed n, do Bellotti's unconditional PNT error and the exact polynomial nature of L_{n-1}^{(1)} suffice to kill the Abel boundary and make the derivative integral convergent without reordering the original terms?",
+      "required_assumptions": [
+        "the finite endpoints and endpoint convention are fixed exactly",
+        "A(x)=sum_{m<=x}a_m uses the same natural order as the target series",
+        "b_n is C1 on the endpoint interval",
+        "boundary decay and improper-integral convergence are proved separately before Y tends to infinity"
+      ],
+      "shared_structure": [
+        "a_m is read in its original integer order",
+        "A(x) is the exact cumulative source state through floor(x)",
+        "b_n is continuously differentiable on each fixed positive tail",
+        "the finite identity precedes every limiting argument"
+      ],
+      "source_anchors": [
+        "classical finite Abel/summation-by-parts identity",
+        "https://arxiv.org/html/2508.02041v1#S1.Thmtheorem5",
+        "https://arxiv.org/html/2508.02041v1#S1.E3",
+        "https://arxiv.org/html/2508.02041v1#S1.E4"
+      ],
+      "source_context": "finite Abel summation for a naturally ordered sequence"
+    }
+  ],
+  "near_solved_analogues": [
+    "prime-number-theorem weighted sums with polynomial functions of log x",
+    "conditionally convergent ordered arithmetic series whose transformed integral is absolutely convergent"
+  ],
+  "object_context": "The exact fixed-index convergence interface between the natural-order prime/Laguerre term series and an Abel-transformed cumulative-PNT integral.  The object is the ordered series, not any rearrangement.",
+  "packet_hash": "sha256:1cefd235555778753fb0731e783ff94cd9b888b941813a5dc00b11e302362f2f",
+  "solved_analogues": [
+    "finite Abel summation for a C1 weight and its exact cumulative sequence",
+    "Dirichlet tests in which cumulative cancellation is estimated before the weight derivative"
+  ],
+  "source_anchors": [
+    "classical finite Abel/summation-by-parts identity",
+    "https://arxiv.org/html/2508.02041v1#S1.Thmtheorem5",
+    "https://arxiv.org/html/2508.02041v1#S1.E3",
+    "https://arxiv.org/html/2508.02041v1#S1.E4"
+  ],
+  "structural_coordinates": [
+    "a_m=1-Lambda(m)",
+    "A(x)=sum_{m<=x}a_m=floor(x)-psi(x)",
+    "b_n(x)=L_{n-1}^{(1)}(log x)/x",
+    "fixed n before Y tends to infinity",
+    "natural source order and exact finite endpoint convention"
+  ]
+}

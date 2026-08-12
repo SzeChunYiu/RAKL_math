@@ -1,0 +1,41 @@
+{
+  "artifact_hash": "sha256:9d420fe455eee0774f218f45ec17961b5895f1a7eacd318154daa678a9711551",
+  "candidate_method_families": [
+    "finite Abel summation followed by fixed-n limit justification",
+    "termwise absolute convergence",
+    "series rearrangement or regrouping",
+    "uniform-in-n Laguerre tail estimate"
+  ],
+  "cross_problem_coverage_receipt_hash": "",
+  "evidence_pointers": [
+    "git:58de5548d337d4ea3c83b5fcde6ed5c6aee3f2e0:research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history/RH_ANA_001_FINITE_LI_PREFIX_NO_GO_20260811.md",
+    "git:58de5548d337d4ea3c83b5fcde6ed5c6aee3f2e0:research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_POSTAUDIT_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "git:58de5548d337d4ea3c83b5fcde6ed5c6aee3f2e0:research/real_math/millennium/riemann_hypothesis/02_problem_dag/RH_ANA_003.yaml"
+  ],
+  "failure_lattice_snapshot_hash": "git:58de5548:RH_MAIN_FAILURE_SURFACE",
+  "failure_query_status": "MATCHES_FOUND",
+  "failure_reuse_notes": [
+    "The finite-prefix failure forbids promoting any fixed-n or finite-index statement to all-index Li control.",
+    "The Suzuki faithfulness failure warns that a positive or convergent surrogate still needs an exact transport to the root-relevant coordinate."
+  ],
+  "relevant_failure_ids": [
+    "F-RH-ANA-001-FINITE-LI-PREFIX",
+    "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE"
+  ],
+  "relevant_tool_ids": [],
+  "selected_tool_ids": [],
+  "target_atom_id": "RH-ANA-003-ABEL-001",
+  "target_context_hash": "sha256:1cefd235555778753fb0731e783ff94cd9b888b941813a5dc00b11e302362f2f",
+  "tool_applicability_notes": [
+    "NO_RELEVANT_MATCH: current canonical RH tool inventory contains no proved fixed-n Abel/Laguerre convergence tool"
+  ],
+  "tool_inventory_snapshot_hash": "git:58de5548:RH_MAIN_TOOL_SURFACE",
+  "tool_query_status": "NO_RELEVANT_MATCH",
+  "unresolved_warnings": [
+    "The original weighted series may be conditional rather than absolute.",
+    "The exact endpoint convention must be checked before taking Y to infinity.",
+    "Constants depending on fixed n cannot be promoted to n-uniform bounds.",
+    "No content or authority is imported from unmerged PR316 or historical R4/R5 branches.",
+    "Same-context review is not independent peer review."
+  ]
+}

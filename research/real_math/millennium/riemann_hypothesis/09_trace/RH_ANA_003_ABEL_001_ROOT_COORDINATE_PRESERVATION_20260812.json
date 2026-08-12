@@ -1,0 +1,93 @@
+{
+  "bridge_edges": [
+    {
+      "edge_id": "RH-ABEL-B1",
+      "enabling_assumptions": [
+        "exact Coffey/Bombieri-Lagarias normalization",
+        "all remaining terms"
+      ],
+      "interface_map": "requires source-normalization and archimedean/gluing terms not proved here",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "fixed-n ordered Abel identity",
+      "target_coordinate": "exact full Li-coefficient arithmetic identity"
+    },
+    {
+      "edge_id": "RH-ABEL-B2",
+      "enabling_assumptions": [
+        "all-index uniformity",
+        "one-sided sign control"
+      ],
+      "interface_map": "requires sign control for every n, not mere convergence",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "exact Li arithmetic identity",
+      "target_coordinate": "all-index Li positivity"
+    },
+    {
+      "edge_id": "RH-ABEL-B3",
+      "enabling_assumptions": [
+        "Li criterion",
+        "root contract"
+      ],
+      "interface_map": "requires exact Li criterion hypotheses and complete proof",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "all-index Li positivity",
+      "target_coordinate": "Riemann Hypothesis"
+    }
+  ],
+  "cheapest_hostile_world": "the fixed-n series converges exactly but the full Li ledger still has an uncontrolled negative coordinate",
+  "known_disanalogies": [
+    "convergence is not positivity",
+    "fixed n is not uniform in n",
+    "a local arithmetic term is not the full Li coefficient"
+  ],
+  "obligations": [
+    {
+      "description": "prove the fixed-n natural-order Abel identity",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "RH-ABEL-O1"
+    },
+    {
+      "description": "bind it to the exact full Li decomposition",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "RH-ABEL-O2"
+    },
+    {
+      "description": "prove all-index sign control",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "RH-ABEL-O3"
+    }
+  ],
+  "prior_failure_ids": [
+    "F-RH-ANA-001-FINITE-LI-PREFIX",
+    "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE"
+  ],
+  "receipt_canonical_sha256": "203ee923512270d2aee729f8fd86439e64506f488cddd24ff80210f0de8c8e8d",
+  "receipt_id": "RH-ANA-003-ABEL-001-ROOT-PRESERVATION-20260812",
+  "registered_observations": [
+    {
+      "projected_state": "RH-ANA-003 context required",
+      "registered_downstream_outcome": "root open",
+      "state_id": "RH-main"
+    },
+    {
+      "projected_state": "candidate absent",
+      "registered_downstream_outcome": "root open",
+      "state_id": "ABEL001-pre"
+    }
+  ],
+  "reverification_triggers": [
+    "normalization changes",
+    "n is allowed to vary with the endpoint",
+    "the term order changes",
+    "a Li or RH implication is asserted"
+  ],
+  "root_claim_id": "RH-ANA-003-ABEL-001",
+  "root_coordinate": "every nontrivial zero of zeta has real part one half",
+  "schema_version": "root-coordinate-preservation-receipt-v1",
+  "source_authority": "PROPOSAL_ONLY",
+  "surrogate_coordinate": "fixed-n natural-order convergence of one prime/Laguerre weighted series",
+  "target_authority": "PROPOSAL_ONLY"
+}
