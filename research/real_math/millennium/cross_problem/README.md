@@ -2,6 +2,29 @@
 
 This workspace stores **cross-problem research-process transfers**, not a seventh Millennium root and not a claim that the six open problems share one mathematics.
 
+## Math-first lesson boundary
+
+For the active P-vs-NP and Millennium programme, a retained lesson must be
+about a mathematical implication, obstruction, construction, counterexample,
+transfer condition, or proof method.  Every such lesson must state:
+
+1. the attempted mathematical implication;
+2. the exact mathematical success or failure;
+3. the strongest supported mathematical cause and competing causes;
+4. the scope in which that diagnosis is justified;
+5. a mathematical falsifier;
+6. the resulting mathematical repair or next discriminator; and
+7. the proof, derivation, construction, or source theorem supporting it.
+
+Git state, chronology, hashes, schemas, CI, runtime, serialization, and PR
+status are assurance metadata.  They can decide whether a result is admissible,
+but they receive **zero mathematical credit** and must not be presented as the
+lesson learned from a mathematics round.  The canonical scoped accounting is
+the latest successor of
+`07_memory/GLOBAL_MATH_ONLY_SATURATION_LEDGER_20260812.json`; supported failure
+causes are recorded in the latest successor of
+`07_memory/GLOBAL_MATHEMATICAL_FAILURE_CAUSE_ATLAS_20260812.json`.
+
 Every retained transfer must name the source atom/result, target atom, common abstraction, enabling assumptions, explicit disanalogies, DifferenceWitness, cheapest target falsifier, and actual authority. Literal mathematical tools may be reused only when their registered preconditions hold.
 
 ## XM001 — root-bridge stability audit
