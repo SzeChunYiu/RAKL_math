@@ -1,0 +1,41 @@
+{
+  "schema_version": "rakl-hodge-obstruction-v1",
+  "obstruction_id": "O-H4D1C-SAME-CLASS-CLOSED-TOPDIM-SOURCE-IMAGE",
+  "atom_id": "H4d1c-e",
+  "parent_obstruction_id": "O-H4D1C-TOTAL-WITNESS-NONVERTICAL-HODGE-BRANCH-COVERAGE",
+  "obstruction": "For a genuinely varying smooth-projective family and one exact rational Hodge class alpha, construct a coupled algebraic-witness incidence whose reduced image in each target irreducible Hodge component is (i) bound to alpha, (ii) closed, and (iii) top-dimensional. C005 proves these conditions would suffice for reduced local branch coverage but does not supply them generally.",
+  "why_reusable": "The obstruction is phrased at the consumer image rather than at source tangent dimension, so any proposed Hilbert/Chow/normal-function/correspondence source can be tested against the same four coordinates before higher-order work begins.",
+  "required_coordinates": [
+    "exact same-class binding for the signed rational witness",
+    "closed reduced image (proper/projective source is one sufficient route)",
+    "irreducible target-component binding",
+    "top-dimensional source image in that component"
+  ],
+  "difference_witnesses": [
+    "nonclosed dense proper image: same dimension without coverage",
+    "one component of a reducible Hodge germ: closed and full-dimensional but incomplete globally",
+    "wrong-class dominating source: base coverage without algebraicity of alpha",
+    "same reduced germ with different nilpotent structure: reduced coverage without formal/scheme-theoretic lifting"
+  ],
+  "separate_downstream_obstructions": [
+    "higher Artin order/formal compatibility",
+    "algebraization/effectivity of compatible formal witnesses",
+    "monodromy beyond the local marking and component switching",
+    "singular degeneration/specialization",
+    "global continuation/domination",
+    "root initial algebraicity"
+  ],
+  "local_vs_gluing": {
+    "local_mathematical_status": "C005 reduced-germ sufficiency lemma verified directly",
+    "local_to_base_status": "consumer-image condition sharpened but source-specific geometry still open",
+    "local_to_global_status": "NOT_ATTEMPTED",
+    "global_continuation_status": "OPEN_SEPARATE"
+  },
+  "falsifier": "A general construction satisfying all required coordinates for arbitrary signed rational alpha would resolve this obstruction; a counterexample to the C005 dimension lemma would invalidate the stated sufficiency certificate.",
+  "supporting_episode_ids": [
+    "H4d1c-C004-TOTAL-WITNESS-PROJECTION-FAITHFULNESS",
+    "H4d1c-C005-CLOSED-TOPDIM-SOURCE-IMAGE-CERTIFICATE"
+  ],
+  "authority": "PROPOSAL_SHADOW_OBSTRUCTION_ONLY",
+  "timestamp": "2026-08-12T04:12:00Z"
+}
