@@ -1,0 +1,137 @@
+{
+  "schema_version": "rakl-math-v3-experience-shadow-separation-v1",
+  "cycle_id": "PNP-O9d12a2a1a1b1-R2-SRC1-WIG95-SOURCE-RECOVERY-20260811",
+  "authority": "PROPOSAL_SHADOW_ONLY_NO_CANONICAL_ADMISSION_NO_PROTECTED_PROMOTION",
+  "episode": {
+    "episode_id": "EP-PNP-O9d12a2a1a1b1-R2-SRC1-WIG95-20260811",
+    "artifact_hash": "95cd8cf96e93e6a6f7c41459e5a8bf1b88145fa18635478daf5a071fda1f6b18",
+    "role": "immutable attempted-action/outcome evidence root",
+    "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_R2_SRC1_TASK_EPISODE_SHADOW_20260811.json"
+  },
+  "diagnosis": {
+    "diagnosis_id": "D-PNP-R2-WIG95-PRIMARY-BYTES-NOT-RECOVERED",
+    "derived_from_episode_id": "EP-PNP-O9d12a2a1a1b1-R2-SRC1-WIG95-20260811",
+    "statement": "The bounded route reached an authoritative identity and legacy McGill location, but not the primary report bytes/theorem text. The blockage is source/retrieval completeness before theorem verification, not a refutation or proof of any mathematical characterization.",
+    "category": "SOURCE_RETRIEVAL_DIAGNOSIS_NOT_LOCAL_MATHEMATICAL_FAILURE"
+  },
+  "failure": {
+    "failure_id": "F-PNP-R2-WIG95-PRIMARY-SOURCE-UNAVAILABLE-BOUNDED-SEARCH",
+    "derived_from_diagnosis_id": "D-PNP-R2-WIG95-PRIMARY-BYTES-NOT-RECOVERED",
+    "failure_family": [
+      "source",
+      "retrieval",
+      "verification",
+      "tooling-boundary"
+    ],
+    "local_math_failed": false,
+    "local_to_global_gluing_failed": true,
+    "falsifier": "Recover primary Wig95 theorem bytes with provenance and inspect the exact statement.",
+    "repeat_links": [
+      {
+        "id": "R1-ANCESTRY-COMPLETENESS-UNRESOLVED",
+        "authority": "CURRENT_MAIN_TRACE_RESIDUAL"
+      },
+      {
+        "id": "R2-COORDINATE-INVENTORY-PRIMARY-ANCESTRY-INCOMPLETE",
+        "authority": "CURRENT_MAIN_TRACE_RESIDUAL"
+      },
+      {
+        "id": "RAKL_math#162:WIG95-PRIMARY-THEOREM-TEXT-CANNOT_CHECK",
+        "authority": "UNMERGED_CURRENT_WORK_SHADOW_LINK_ONLY"
+      }
+    ]
+  },
+  "obstruction": {
+    "obstruction_id": "O-PNP-R2-WIG95-PRIMARY-THEOREM-TEXT-MISSING",
+    "derived_from_failure_id": "F-PNP-R2-WIG95-PRIMARY-SOURCE-UNAVAILABLE-BOUNDED-SEARCH",
+    "statement": "A scope pointer to a branching-model characterization cannot supply the exact hypotheses, quantifiers, simulation loss or restricted/full relation needed for root-facing transfer. Primary Wig95 theorem text remains a source gate.",
+    "reusable_status": "PROPOSAL_OBSTRUCTION_ONLY"
+  },
+  "lesson": {
+    "lesson_id": "L-PNP-SOURCE-POINTER-NOT-THEOREM",
+    "kind": "BOUNDARY",
+    "trigger_signature": [
+      "theorem transfer depends on historical or external source",
+      "current evidence is citation/scope note/index pointer rather than inspected primary theorem text",
+      "consumer requires exact quantifiers or model map"
+    ],
+    "context_scope": [
+      "P-vs-NP fusion/two-dimensional-cover source transfer",
+      "historical technical reports with incomplete primary-byte recovery"
+    ],
+    "action": "Preserve exact bibliographic and legacy-location provenance, but block theorem import and bridge construction until primary theorem bytes and exact quantifiers are inspected; distinguish identity recovery from content verification.",
+    "expected_effects": [
+      "prevents citation-level scope pointers from being promoted into theorem claims",
+      "makes repeated source-recovery failures explicit and reusable for routing"
+    ],
+    "boundaries": [
+      "does not prove the cited theorem false",
+      "does not establish archive nonexistence",
+      "does not replace an assumption-preserving DifferenceWitness after primary text is recovered"
+    ],
+    "supporting_episode_ids": [
+      "EP-PNP-O9d12a2a1a1b1-R2-SRC1-WIG95-20260811"
+    ],
+    "contradicting_episode_ids": [],
+    "falsifier": "Recover provenance-preserving Wig95 primary bytes and verify exact theorem text; then this source-content blockage is resolved, though transfer must still pass a DifferenceWitness.",
+    "authority": "CANDIDATE",
+    "validation_obligations": [
+      "recover primary bytes or an authoritative facsimile",
+      "record byte/checksum provenance when recovered",
+      "extract exact relevant theorem statement and quantifiers",
+      "test consumer/source model map separately"
+    ],
+    "evidence_pointers": [
+      "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1a1b1_R2_SRC1_TASK_EPISODE_SHADOW_20260811.json",
+      "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1a1b1_R2_SRC1_WIG95_SOURCE_RECOVERY_RESULT_20260811.json",
+      "https://eccc.weizmann.ac.il/static/pointers/lecture_notes/"
+    ],
+    "parent_lesson_id": null,
+    "authority_attestation_id": null,
+    "authority_subject_hash": null,
+    "authority_evidence_packet_hash": null,
+    "artifact_hash": "4dbf231076eb1646f849b4b36d9a7c47b3a0c54ffa19926619042189b153359b",
+    "storage_note": "CANDIDATE_PROPOSAL_SHADOW_ONLY; no authority attestation or promotion receipt exists."
+  },
+  "motif": {
+    "motif_id": "M-PNP-PRIMARY-BYTES-BEFORE-MODEL-BRIDGE",
+    "derived_from_lesson_id": "L-PNP-SOURCE-POINTER-NOT-THEOREM",
+    "template": "historical model bridge cited -> recover exact primary bytes -> extract quantifiers/model -> DifferenceWitness -> only then attempt transfer",
+    "status": "PROPOSAL_MOTIF_SEARCH_GUIDANCE_ONLY"
+  },
+  "routing_attribution": {
+    "successful_reuse_ids": [
+      "R2-COORDINATE-INVENTORY-RESULT",
+      "R1-NEXT-STEP",
+      "PNP-RESTRICTION-CLASS-NONTRANSFER",
+      "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE"
+    ],
+    "current_work_guidance_ids": [
+      "RAKL_math#162",
+      "O-PNP-R2-REVERSE-BRIDGE-MISSING"
+    ],
+    "rejected_ids": [
+      "T-PNP-FRACTIONAL-SEMIFILTER-PACKING",
+      "T-PNP-UPPER-FIRST",
+      "T-PNP-EXTREMAL-CALIBRATION",
+      "T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION",
+      "RAKL_math#154",
+      "RAKL_math#128"
+    ],
+    "counterfactual_action_change": {
+      "observable": true,
+      "before_memory_current_work_preference": "Search or derive a reverse comparison immediately from the R2 restricted/full residual.",
+      "after_memory_current_work_action": "First close the explicit Wig95 primary-source gap and do not duplicate the unmerged transfer-polarity episode; no bridge candidate is generated from citation-level evidence.",
+      "interpretation": "Protocol-observed routing change only; not a causal effect estimate."
+    }
+  },
+  "lineage_order": [
+    "episode",
+    "diagnosis",
+    "failure",
+    "obstruction",
+    "lesson",
+    "motif"
+  ],
+  "protected_retention": false
+}
