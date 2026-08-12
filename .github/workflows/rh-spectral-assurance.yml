@@ -5,6 +5,7 @@ on:
     paths:
       - 'research/real_math/millennium/riemann_hypothesis/**'
       - 'tests/math_applications/test_rh_spec_*.py'
+      - 'tests/math_applications/test_rh_ana*.py'
       - '.github/workflows/rh-spectral-assurance.yml'
   workflow_dispatch:
 
@@ -44,7 +45,7 @@ jobs:
       - name: Install test dependencies
         run: python -m pip install -r requirements-test.txt
 
-      - name: Run RH spectral strict assurance regressions
+      - name: Run RH spectral and analytic strict assurance regressions
         shell: bash
         run: |
           set -euo pipefail
@@ -55,4 +56,5 @@ jobs:
             tests/math_applications/test_rh_spec_001_strict_packet.py \
             tests/math_applications/test_rh_spec_001_bridge_matrix.py \
             tests/math_applications/test_rh_spec_002_strict_packet.py \
-            tests/math_applications/test_rh_spec_002_limit_calibration.py
+            tests/math_applications/test_rh_spec_002_limit_calibration.py \
+            tests/math_applications/test_rh_ana003f_r7_pre_candidate.py
