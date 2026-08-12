@@ -1,0 +1,23 @@
+{
+  "artifact_hash": "sha256:31c16a03a738e30b18b16678e93f1948b10bcf67cd475f013be89e52a05bfca2",
+  "difference_witness": {
+    "changed_question": "suffix-as-row literal transpose instead of C047 prefix-as-row mirror",
+    "cheapest_repeat_failure_test": "derive 1||c exactly, compare with the canonical-prefix language, and audit x=r||c against query (M+c,r)",
+    "restored_assumption": "the tested row coordinate is now the decoded suffix; exact equality and reduction faithfulness remain unproved"
+  },
+  "failures": [
+    {
+      "failure_id": "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT",
+      "warning": "coarse fresh-row occupancy does not imply exact binary interface congruence"
+    },
+    {
+      "failure_id": "F-C045-U17-PROJECTION-DISJOINT",
+      "warning": "fresh columns cannot couple backward without exact old/new row-projection collision"
+    }
+  ],
+  "mathematical_credit": false,
+  "schema_version": "1.0.0",
+  "snapshot_id": "PNP-C048-FAILURE-SNAPSHOT-20260812",
+  "target_atom_id": "O9d12a2a1b-C048",
+  "target_state": "TARGET_RESULT_UNACCESSED"
+}

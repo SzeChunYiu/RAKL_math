@@ -1,0 +1,43 @@
+{
+  "artifact_hash": "sha256:5c4babce4eae8fe1954f3f3f099c3d018d6b807043aee1262bd10fb609082429",
+  "candidate_method_families": [
+    "literal transpose with suffix on the fresh row",
+    "literal transpose plus original old-new block",
+    "header-aligned coordinate relabelling",
+    "unequal or overlapping split"
+  ],
+  "cross_problem_coverage_receipt_hash": "",
+  "evidence_pointers": [
+    "git:9e36dd83874bfc9f8ef94a2ce2708769cc25861e:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C047_ORIENTATION_FEASIBILITY_PROOF_CHECK_RESULT_20260812.json@blob:850737df2b015378d8735a1ea03cfea27aefb3e1",
+    "git:9e36dd83874bfc9f8ef94a2ce2708769cc25861e:research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C047_ORIENTATION_REPAIR_FAILURE_EXPERIENCE_DELTA_20260812.json@blob:fa4dd6c82481640391b81339a02b2eaa2afb06a6"
+  ],
+  "failure_lattice_snapshot_hash": "gitblob:fa4dd6c82481640391b81339a02b2eaa2afb06a6",
+  "failure_query_status": "MATCHES_FOUND",
+  "failure_reuse_notes": [
+    "C047 proves prefix-as-row mirroring shifts MAGIC; C048 materially changes the coordinate to the suffix and must rerun exact interface congruence rather than reuse that conclusion.",
+    "C045 warns that fresh columns alone cannot couple backward; even an exact row collision is only a precondition for a later interaction argument."
+  ],
+  "relevant_failure_ids": [
+    "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT",
+    "F-C045-U17-PROJECTION-DISJOINT"
+  ],
+  "relevant_tool_ids": [
+    "T-PNP-C046-PARTITION-INVARIANT-FEASIBILITY-FIRST"
+  ],
+  "selected_tool_ids": [
+    "T-PNP-C046-PARTITION-INVARIANT-FEASIBILITY-FIRST"
+  ],
+  "target_atom_id": "O9d12a2a1b-C048",
+  "target_context_hash": "sha256:01d7b9c9aae3a1a87019349e787495b809d6ad1b187ba1b647bb2b6bed4716bc",
+  "tool_applicability_notes": [
+    "C046's invariant-first operation is reusable only as a search-order heuristic: derive the exact suffix-as-row language and compare it with MAGIC prefixes before target enumeration."
+  ],
+  "tool_inventory_snapshot_hash": "gitblob:850737df2b015378d8735a1ea03cfea27aefb3e1",
+  "tool_query_status": "MATCHES_FOUND",
+  "unresolved_warnings": [
+    "No later target result has been accessed.",
+    "No conclusion about literal-transpose feasibility is available until a candidate is publicly frozen and checked.",
+    "Relabelled and split-changing variants are intentionally outside this atom.",
+    "Same-context review is not independent peer review."
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "bridge_edges": [
+    {
+      "edge_id": "C048-B1",
+      "enabling_assumptions": [
+        "collision exists",
+        "both endpoint semantics preserved",
+        "legal cover polarity"
+      ],
+      "interface_map": "exact row collision plus a faithful swapped reduction are only preconditions for testing one coupling mechanism",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "literal-transpose repair feasibility",
+      "target_coordinate": "cover obstruction"
+    },
+    {
+      "edge_id": "C048-B2",
+      "enabling_assumptions": [
+        "uniformity",
+        "explicitness",
+        "source theorem alignment"
+      ],
+      "interface_map": "requires uniform superlogarithmic lower bound and exact complexity bridge",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "cover obstruction",
+      "target_coordinate": "P versus NP"
+    }
+  ],
+  "cheapest_hostile_world": "literal transpose creates a row collision but the unrevised ordered query no longer represents satisfiability",
+  "known_disanalogies": [
+    "repair classification is not root progress",
+    "collision alone is not reduction faithfulness",
+    "failure of one transpose class does not decide P versus NP"
+  ],
+  "obligations": [
+    {
+      "description": "classify literal-transpose collision feasibility and reduction faithfulness",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "C048-O1"
+    },
+    {
+      "description": "supply a cover lower-bound mechanism",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "C048-O2"
+    },
+    {
+      "description": "discharge asymptotic and complexity bridge",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "C048-O3"
+    }
+  ],
+  "prior_failure_ids": [
+    "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT",
+    "F-C045-U17-PROJECTION-DISJOINT"
+  ],
+  "receipt_canonical_sha256": "7322beaf874992748b79a5be35b3a71f91d7288ad637ecc08666e36786b93bea",
+  "receipt_id": "PNP-C048-ROOT-COORDINATE-PRESERVATION-20260812",
+  "registered_observations": [
+    {
+      "projected_state": "prefix-mirror-interface-impossible",
+      "registered_downstream_outcome": "literal transpose not yet classified",
+      "state_id": "C047"
+    },
+    {
+      "projected_state": "literal-transpose-feasibility-unresolved",
+      "registered_downstream_outcome": "root open",
+      "state_id": "C048-pre"
+    }
+  ],
+  "reverification_triggers": [
+    "decoder changes",
+    "split or row-coordinate changes",
+    "only one endpoint is transposed",
+    "the reduction map changes",
+    "a new family is proposed"
+  ],
+  "root_claim_id": "O9d12a2a1b-C048",
+  "root_coordinate": "explicit superlogarithmic full-cover family with circuit and P-versus-NP bridge",
+  "schema_version": "root-coordinate-preservation-receipt-v1",
+  "source_authority": "PROPOSAL_ONLY",
+  "surrogate_coordinate": "whether the literal suffix-as-row transpose has exact row-label congruence and a faithful endpoint-swapped SAT reduction",
+  "target_authority": "PROPOSAL_ONLY"
+}
