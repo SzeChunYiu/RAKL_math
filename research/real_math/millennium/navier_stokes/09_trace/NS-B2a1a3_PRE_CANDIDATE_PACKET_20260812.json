@@ -1,0 +1,107 @@
+{
+  "record_type": "RAKL_V3_PRE_CANDIDATE_PACKET",
+  "schema_version": "v3-proposal-shadow",
+  "framework": {"method_version": "3.0.0", "manifest_version": "0.7.0", "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0"},
+  "application": {"repo": "SzeChunYiu/RAKL_math", "base_sha": "21d22075fa250e4ded412fd292b7942b87503266"},
+  "root_contract": {
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "terminal_only": ["Clay A", "Clay B", "Clay C", "Clay D"],
+    "requirements": ["exact_statement_binding", "closed_proof_dag", "dependency_axiom_audit", "formal_or_verifier_evidence_where_supported", "isolated_recheck", "bounded_novelty_search", "three_genuinely_isolated_reviews"]
+  },
+  "fibre_snapshot": {
+    "atom_id": "NS-B2a1a3",
+    "parent_atom_id": "NS-B2a1a2",
+    "problem_signature": "logarithmic Type-II Euler-scaled weighted A/E/D -> absolute moving-annulus L2 tightness through one-scale local-energy/pressure estimates",
+    "qoi": "ONE_SCALE_PDE_TAIL_MODULUS_FROM_WEIGHTED_LOCAL_ENERGY",
+    "structural_coordinates": [
+      "f(r)=log(e/r)^(-gamma), gamma>0; F_lambda(a)=f(lambda a)/f(lambda)",
+      "L=log(e/lambda), h=log(e/(lambda a)); mesoscopic h->infinity and h/L->0 gives a=exp(L-h)->infinity and F=(L/h)^gamma->infinity",
+      "Seregin (2.9) gives normalized A=O(F^-2), E=O(F^-1), D=O(F^-2) at the moving scale",
+      "fixed-a compactness after (2.9) is not k-uniform on a(lambda)->infinity",
+      "scaled viscosity f(lambda)->0; Euler-limit rigidity cannot silently reuse unit-viscosity assumptions",
+      "NS-B2a1a2 identifies uniform intermediate-annulus absolute L2 tightness as the required gluing coordinate",
+      "absolute one-scale cutoff/Hölder bounds may retain a geometric factor a; signed cancellation/multiscale structure is outside current scope"
+    ],
+    "equivalent_formulations": ["compare a/F^beta for finite beta supplied by one-scale estimates", "restore physical radius factors after normalized A/E/D -> C/pressure interpolation", "test the exact local-to-global gluing interface rather than fixed-radius local mathematics"],
+    "solved_near_analogues": [
+      {"id": "NS-B2a1a2", "lesson": "moving-ball L2 transfer iff uniform intermediate-annulus tail tightness; normalized A smallness alone fails"},
+      {"id": "NS-B2a1a1", "lesson": "logarithmic gain lives only on a moving mesoscopic window; fixed-radius compactness has no compatible rate"},
+      {"id": "standard_local_energy_interpolation", "lesson": "normalized A,E control normalized cubic C, but absolute cutoff terms recover scale factors"}
+    ],
+    "transfer_assumptions_disanalogies": [
+      "reuse B2a1a2 only for the exact tail target, not as a PDE counterexample",
+      "reuse B2a1a1 h/L representation under the same logarithmic f; no fixed-radius-to-moving-radius diagonalization",
+      "unit-viscosity Type-I local-energy/epsilon-regularity arguments are not directly transferable because scaled viscosity tends to zero",
+      "a failing absolute-value certificate does not refute signed cancellation, pressure decomposition, multiscale telescoping or a source-specific quantitative compactness theorem"
+    ],
+    "cross_domain_bridge": {"source": "network accounting", "mapping": "network size -> moving radius a; fractional loss -> F^-beta; total leakage -> absolute shell term", "principle": "normalized improvement controls an absolute total only if it outruns domain growth", "validation": "prove the target asymptotic directly; analogy has zero mathematical authority"},
+    "source_anchors": ["Gregory Seregin, arXiv:2606.29468v1 (2026-06-28), especially (1.7), (2.2), (2.7), (2.9), fixed-a compactness after (2.9), and (2.10)", "RAKL_math: NS-B2a1a2_C001_ESCAPING_BUMP_RESULT_20260812.md", "RAKL_math: NS-B2a1a1_EXPERIENCE_DELTA_20260812.json", "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0", "RAKL_math@21d22075fa250e4ded412fd292b7942b87503266"],
+    "frozen_at": "2026-08-12T02:31:00Z",
+    "authority": "PROPOSAL_SHADOW_ONLY"
+  },
+  "fibre_snapshot_hash": "sha256:907ca8070ffbe9e896d79fd00f3c89352afd702f50a7ea197ff6d1e8c85924a0",
+  "research_memory_review": {
+    "tool_inventory": {"count": 0, "ids": [], "source": "NS_R001_RESEARCH_TOOL_INVENTORY_20260811.json"},
+    "failures_retrieved": ["F-NS-B2a1a2-FIXED-TO-MOVING-RADIUS-ESCAPE", "F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH", "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY", "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE", "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION", "F-NS-B2a1c-F1-AXIAL-44-EXPONENT-INCOMPATIBLE", "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER"],
+    "selected_ids": ["F-NS-B2a1a2-FIXED-TO-MOVING-RADIUS-ESCAPE", "F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH", "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY"],
+    "rejected_ids": [
+      {"id": "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE", "why": "subsumed by the sharper B2a1a2/B2a1a1 moving-radius failures for this atom"},
+      {"id": "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION", "why": "supports normalization warning but Type-I packed-core geometry is not the current one-scale cutoff interface"},
+      {"id": "F-NS-B2a1c-F1-AXIAL-44-EXPONENT-INCOMPATIBLE", "why": "specialized axial consumer mismatch"},
+      {"id": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER", "why": "Type-I/unit-viscosity context; current scaled viscosity tends to zero"}
+    ],
+    "routing_effect": "Changed first action from detailed cutoff expansion toward an asymptotic certifiability test of whether any finite F-power can beat the moving radius.",
+    "missed": "CANNOT_MEASURE: no exhaustive governed repository-memory coverage receipt",
+    "authority": "SEARCH_PRIORITY_ONLY"
+  },
+  "research_memory_review_hash": "sha256:aaf7e9bf811d46983d1fd9b8b6de4d923e83e102119b470e011f7fa1252b27fe",
+  "obstruction_transformation_review": {
+    "obstruction_id": "O-NS-B2a1a3-RADIUS-VS-LOG-WEIGHT",
+    "fingerprint": {"roles": ["normalized weighted estimate", "moving radius", "absolute shell consumer"], "relations": ["finite powers of F must compensate geometric factor a"], "constraints": ["h->infinity", "h/L->0", "gamma and beta fixed finite", "one-scale absolute-value estimate family"], "invariants": ["exact source scaling", "absolute-vs-normalized distinction", "open root authority"], "desired_transition": "certify tail or sharply prune the tested family", "forbidden_losses": ["divergent upper bound treated as actual divergence", "unit-viscosity import", "PDE/root escalation"]},
+    "episode_memory": [
+      {"id": "OTEP-NS-B2a1a2-TAIL-REPAIR", "effect": "turn moving-radius transfer into an exact uniform-annulus tail obligation", "preconditions": ["local strong L2 on fixed balls", "moving radius"], "authority": "VERIFIED_LOCAL_SCOPED"},
+      {"id": "OTEP-NS-B2a1a1-LOG-WINDOW", "effect": "use h/L to expose the only logarithmic mesoscopic gain", "preconditions": ["same log f", "same Euler scaling"], "authority": "PROPOSAL_SHADOW_SCOPED"}
+    ],
+    "route": {"SEARCH": "SELECTED", "JUMP": "REJECTED_DIRECT_ROUTE_EXISTS", "GLUE": "REJECTED_NOT_NEEDED_FOR_DISCRIMINATOR", "LIFT": "BLOCKED_DIRECT_ROUTE_EXISTS_AND_NO_CROSS_PROBLEM_COVERAGE"},
+    "validation": ["prove a/F^beta asymptotics for all fixed beta>0", "derive C and pressure-velocity F exponents from source A/E/D", "restore cutoff radius factors", "separate estimator insufficiency from actual PDE failure"],
+    "authority": "PROPOSAL_SHADOW_ONLY"
+  },
+  "obstruction_transformation_review_hash": "sha256:87a2cf0110183abeb1671b02e7b5d4abbe03e5ab70dac8c477b9e878092ee510",
+  "expert_context_review": {
+    "roles": [
+      {"role": "domain/theory", "background": "Type-II NS/Euler scaling", "objection": "scaled viscosity tends to zero; rigidity hypotheses belong to the correct equation"},
+      {"role": "compactness", "background": "concentration-compactness/tightness", "objection": "fixed-radius subsequences do not yield a moving-radius modulus"},
+      {"role": "pressure/local-energy", "background": "local energy and pressure flux", "objection": "absolute bounds may erase cancellation; prune only the tested family"},
+      {"role": "adversarial", "background": "counterexample-first asymptotics", "objection": "diverging upper bound is not lower-bound evidence"},
+      {"role": "formal/verifier", "background": "quantifier/scaling audit", "objection": "beta must remain fixed finite; do not let it depend on L"},
+      {"role": "novelty/value", "background": "route-pruning/prior-art risk", "objection": "elementary asymptotic earns no literature novelty claim"}
+    ],
+    "recommendation": "Run the finite-power F versus moving-radius discriminator before detailed PDE expansion; on failure rotate to multiscale/signed/PDE-specific tail structure.",
+    "independent_review_credit": 0
+  },
+  "expert_context_review_hash": "sha256:2aa2a0dcf68dc824d19805cbd00aaa604a9118ca49917f3377ffca4bdde8b8e9",
+  "research_trace": {
+    "trace_id": "TRACE-NS-B2a1a3-PRE-20260812",
+    "entries": [
+      {"event_id": "NS-B2a1a3-E00", "event_type": "ATOMIZED", "timestamp": "2026-08-12T02:30:00Z", "decision": "freeze one-scale PDE tail-certifiability child", "evidence_pointers": ["NS-B2a1a2"], "previous_event_hash": "", "artifact_hash": "sha256:aff5a0417bb63b722ed5680de87ac929d68929cae9969bfbe3a49aadc74c1f47"},
+      {"event_id": "NS-B2a1a3-E01", "event_type": "CONTEXT_FROZEN", "timestamp": "2026-08-12T02:31:00Z", "decision": "bind exact log scaling, moving-tail target, equation-change boundaries", "evidence_pointers": ["sha256:907ca8070ffbe9e896d79fd00f3c89352afd702f50a7ea197ff6d1e8c85924a0"], "previous_event_hash": "sha256:aff5a0417bb63b722ed5680de87ac929d68929cae9969bfbe3a49aadc74c1f47", "artifact_hash": "sha256:8125fb39cac3792ccb02fdfbeb1e94680e6907216206334ef43e24a7acde92ae"},
+      {"event_id": "NS-B2a1a3-E02", "event_type": "ANALOGY_SCAN", "timestamp": "2026-08-12T02:32:00Z", "decision": "retain normalized-vs-absolute network analogy proposal-only", "evidence_pointers": ["sha256:907ca8070ffbe9e896d79fd00f3c89352afd702f50a7ea197ff6d1e8c85924a0"], "previous_event_hash": "sha256:8125fb39cac3792ccb02fdfbeb1e94680e6907216206334ef43e24a7acde92ae", "artifact_hash": "sha256:7a1991977e4af5e3204c9bab672449f7b1edc0e6c13975132cf0779d4452e7e6"},
+      {"event_id": "NS-B2a1a3-E03", "event_type": "METHOD_TRANSFER_REVIEW", "timestamp": "2026-08-12T02:33:00Z", "decision": "retain B2a1a2 tail target and B2a1a1 h/L representation with disanalogies", "evidence_pointers": ["sha256:907ca8070ffbe9e896d79fd00f3c89352afd702f50a7ea197ff6d1e8c85924a0"], "previous_event_hash": "sha256:7a1991977e4af5e3204c9bab672449f7b1edc0e6c13975132cf0779d4452e7e6", "artifact_hash": "sha256:c0b8193224746a47667b762294fcbdd4e0829b8f48156ee3f05b9703e527c7d1"},
+      {"event_id": "NS-B2a1a3-E04", "event_type": "EXPERT_CONTEXT_REVIEW", "timestamp": "2026-08-12T02:34:00Z", "decision": "six same-context roles recommend cheapest asymptotic discriminator", "evidence_pointers": ["sha256:2aa2a0dcf68dc824d19805cbd00aaa604a9118ca49917f3377ffca4bdde8b8e9"], "previous_event_hash": "sha256:c0b8193224746a47667b762294fcbdd4e0829b8f48156ee3f05b9703e527c7d1", "artifact_hash": "sha256:5661e8fb4d79fb5a702e1299a6c6dcc4161907605beb0fb50173d25e6ff7acc5"},
+      {"event_id": "NS-B2a1a3-E05", "event_type": "EXPERIENCE_MEMORY_REVIEW", "timestamp": "2026-08-12T02:35:00Z", "decision": "selected failures redirect action before detailed flux expansion", "evidence_pointers": ["sha256:aaf7e9bf811d46983d1fd9b8b6de4d923e83e102119b470e011f7fa1252b27fe"], "previous_event_hash": "sha256:5661e8fb4d79fb5a702e1299a6c6dcc4161907605beb0fb50173d25e6ff7acc5", "artifact_hash": "sha256:a98211c56e347e7c83e243dbc43b3a8bc55b889df30fad2eacd1f808093a5894"},
+      {"event_id": "NS-B2a1a3-E06", "event_type": "OBSTRUCTION_TRANSFORMATION_REVIEW", "timestamp": "2026-08-12T02:36:00Z", "decision": "SEARCH selected; JUMP/GLUE/LIFT rejected", "evidence_pointers": ["sha256:87a2cf0110183abeb1671b02e7b5d4abbe03e5ab70dac8c477b9e878092ee510"], "previous_event_hash": "sha256:a98211c56e347e7c83e243dbc43b3a8bc55b889df30fad2eacd1f808093a5894", "artifact_hash": "sha256:2c46d01f25384d03da402a3d439fedf0c1f525bc468172a38388d14cbe8fd5ae"},
+      {"event_id": "NS-B2a1a3-E07", "event_type": "NEXT_STEP_PROPOSED", "timestamp": "2026-08-12T02:37:00Z", "decision": "after packet commit, test whether any fixed finite F-power beats a; no PDE/root escalation", "evidence_pointers": ["sha256:907ca8070ffbe9e896d79fd00f3c89352afd702f50a7ea197ff6d1e8c85924a0", "sha256:aaf7e9bf811d46983d1fd9b8b6de4d923e83e102119b470e011f7fa1252b27fe", "sha256:87a2cf0110183abeb1671b02e7b5d4abbe03e5ab70dac8c477b9e878092ee510", "sha256:2aa2a0dcf68dc824d19805cbd00aaa604a9118ca49917f3377ffca4bdde8b8e9"], "previous_event_hash": "sha256:2c46d01f25384d03da402a3d439fedf0c1f525bc468172a38388d14cbe8fd5ae", "artifact_hash": "sha256:026dd645bfde6fa86a868f4c9700d69e2d73bdbfaf96855e6f8d9809ac377c15"}
+    ]
+  },
+  "research_trace_hash": "sha256:8f731dc117a80eda9c61ae426b246df8bb83d8b7c31956945940ebb591ec9a03",
+  "gate": {
+    "context": "PASS_SHADOW", "memory": "PASS_SHADOW", "shortcut": "PASS_SHADOW", "trace": "PASS_HASH_CHAIN_SHADOW",
+    "candidate_generation_allowed": true,
+    "licensed_action": "BOUNDED_ONE_SCALE_CERTIFIABILITY_VALIDATION_ONLY",
+    "strict_discovery_credit": false,
+    "strict_discovery_credit_reason": "high-level one-scale cutoff direction preexisted public freeze; validation may earn scoped mathematical credit but not strict RAKL hypothesis-generation credit",
+    "root_authority": "NONE"
+  },
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "artifact_hash": "sha256:9e63ebfaf8c3268e928e8136ebfdceceff364731a2068439f25ffb46bc130194"
+}
