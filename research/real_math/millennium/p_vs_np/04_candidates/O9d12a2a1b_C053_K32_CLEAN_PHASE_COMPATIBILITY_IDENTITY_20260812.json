@@ -1,0 +1,312 @@
+{
+  "allowed_branches": [
+    "COMPATIBLE_WITH_EXACT_FORMULA_BOUND_UNSAT_WITNESS",
+    "INCOMPATIBLE_WITH_UNIVERSAL_FULL_WORD_PROOF",
+    "CANNOT_CHECK"
+  ],
+  "application_base_sha": "47fcc8f71f5d4801b3c337d50c3b17bb6b8a648d",
+  "artifact_hash": "sha256:81f173681f6178507eef8e32b71857fccb8308c87dd6be588e0aeba172dd87fb",
+  "atom_id": "O9d12a2a1b-C053-K32-CLEAN-PHASE-COMPATIBILITY",
+  "branch_contract": {
+    "CANNOT_CHECK": "otherwise, including syntax-only survival, SAT without UNSAT proof, partial equality, incomplete pair coverage, source mismatch, ambiguity, or conflicting certificates",
+    "COMPATIBLE_WITH_EXACT_FORMULA_BOUND_UNSAT_WITNESS": "W1-W7 pass for at least one of the 32 frozen parameter pairs and no valid universal negative certificate conflicts",
+    "INCOMPATIBLE_WITH_UNIVERSAL_FULL_WORD_PROOF": "W1-W6 and W8 pass for every one of the 32 frozen parameter pairs and no valid positive witness conflicts"
+  },
+  "candidate_id": "PNP-C053-K32-CLEAN-PHASE-FULL-WORD-COMPATIBILITY-v1",
+  "candidate_kind": "INERT_EXACT_32_PAIR_FULL_WORD_COMPATIBILITY_DISCRIMINATOR",
+  "credit": {
+    "Git_CI_schema_hash": 0,
+    "independent_review": 0,
+    "mathematical_result": 0
+  },
+  "evaluation_authorized": false,
+  "exact_phase": {
+    "current": {
+      "a": 3,
+      "encoded_length": 66,
+      "header_length": 18,
+      "m": 4,
+      "padding": 0,
+      "raw_length": 66,
+      "v_range": [
+        4,
+        7
+      ],
+      "width": 4
+    },
+    "k": 32,
+    "parameter_pair_count": 32,
+    "parameter_pairs": [
+      {
+        "current_v": 4,
+        "parent_v": 8
+      },
+      {
+        "current_v": 5,
+        "parent_v": 8
+      },
+      {
+        "current_v": 6,
+        "parent_v": 8
+      },
+      {
+        "current_v": 7,
+        "parent_v": 8
+      },
+      {
+        "current_v": 4,
+        "parent_v": 9
+      },
+      {
+        "current_v": 5,
+        "parent_v": 9
+      },
+      {
+        "current_v": 6,
+        "parent_v": 9
+      },
+      {
+        "current_v": 7,
+        "parent_v": 9
+      },
+      {
+        "current_v": 4,
+        "parent_v": 10
+      },
+      {
+        "current_v": 5,
+        "parent_v": 10
+      },
+      {
+        "current_v": 6,
+        "parent_v": 10
+      },
+      {
+        "current_v": 7,
+        "parent_v": 10
+      },
+      {
+        "current_v": 4,
+        "parent_v": 11
+      },
+      {
+        "current_v": 5,
+        "parent_v": 11
+      },
+      {
+        "current_v": 6,
+        "parent_v": 11
+      },
+      {
+        "current_v": 7,
+        "parent_v": 11
+      },
+      {
+        "current_v": 4,
+        "parent_v": 12
+      },
+      {
+        "current_v": 5,
+        "parent_v": 12
+      },
+      {
+        "current_v": 6,
+        "parent_v": 12
+      },
+      {
+        "current_v": 7,
+        "parent_v": 12
+      },
+      {
+        "current_v": 4,
+        "parent_v": 13
+      },
+      {
+        "current_v": 5,
+        "parent_v": 13
+      },
+      {
+        "current_v": 6,
+        "parent_v": 13
+      },
+      {
+        "current_v": 7,
+        "parent_v": 13
+      },
+      {
+        "current_v": 4,
+        "parent_v": 14
+      },
+      {
+        "current_v": 5,
+        "parent_v": 14
+      },
+      {
+        "current_v": 6,
+        "parent_v": 14
+      },
+      {
+        "current_v": 7,
+        "parent_v": 14
+      },
+      {
+        "current_v": 4,
+        "parent_v": 15
+      },
+      {
+        "current_v": 5,
+        "parent_v": 15
+      },
+      {
+        "current_v": 6,
+        "parent_v": 15
+      },
+      {
+        "current_v": 7,
+        "parent_v": 15
+      }
+    ],
+    "parent": {
+      "a": 4,
+      "encoded_length": 64,
+      "header_length": 18,
+      "m": 3,
+      "padding": 1,
+      "raw_length": 63,
+      "v_range": [
+        8,
+        15
+      ],
+      "width": 5
+    }
+  },
+  "forbidden_scope": [
+    "the other clean (6,2)->(3,4) phase",
+    "the partial (6,2)->(11,1) phase",
+    "global H_32 intersection P_33",
+    "any k outside this frozen phase",
+    "cover growth, circuits, novelty, P versus NP, or Millennium-root promotion"
+  ],
+  "framework_pin": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+  "frozen_at_utc": "2026-08-12T16:31:00Z",
+  "full_word_compatibility_obligations": [
+    "W1 rederive the exact C041 source identity and the two support cells without importing candidate verdicts",
+    "W2 quantify all 8*4=32 parameter pairs (v,v+) in {8,...,15}x{4,...,7}, with no data-dependent pair selection",
+    "W3 enforce every parent field boundary, gamma code, sign bit, width-5 variable code in 1..v, clause boundary, and the final zero padding bit",
+    "W4 enforce every current field boundary, gamma code, sign bit, width-4 variable code in 1..v+, and clause boundary through the first 33 bits",
+    "W5 derive the exact coordinate equation h[0]=1 and h[j]=x[31+j] for 1<=j<=32, then impose all 33 equalities h[j]=p[j]",
+    "W6 screen every complete mapped parent token and every cross-boundary partial block induced by the equality; the three known legal header tokens are necessary conditions only",
+    "W7 for a positive branch exhibit x,y,r,c,h,p and independent canonical decodes, prove Dec(x) UNSAT, and verify h=p in all 33 positions",
+    "W8 for a negative branch give a hand-checkable universal contradiction covering all 32 parameter pairs and all legal literal choices, or an exhaustive proof-producing search with a separately justified completeness theorem",
+    "W9 return CANNOT_CHECK if UNSAT proof, coverage, canonicality, equality, source identity, or proof trust is incomplete or conflicting"
+  ],
+  "full_word_definitions": {
+    "compatibility": "h=p byte-for-byte in all 33 positions",
+    "current_prefix": "p is the first 33 bits of y",
+    "current_word": "y=MAGIC||gamma(v+)||gamma(4)||twelve signed width-4 literal tokens, with each variable code in 1..v+",
+    "parent_language": "h belongs to H_32 iff x is canonical in the exact parent phase and Dec(x) is UNSAT",
+    "parent_split": "x=r||c with |r|=|c|=32; h=1||c has length 33",
+    "parent_word": "x=MAGIC||gamma(v)||gamma(3)||nine signed width-5 literal tokens||0, with each variable code in 1..v"
+  },
+  "hand_proof_plan": [
+    "P1 write the 33 coordinate equalities with both field-boundary tables before substituting any literal value",
+    "P2 partition coordinates into complete aligned tokens, partial tokens crossing the split, and variable payload coordinates",
+    "P3 propagate gamma/header and padding constraints symbolically for each of the 32 parameter pairs",
+    "P4 derive any forced sign/variable-code relation and test it against the exact legal ranges 1..v and 1..v+",
+    "P5 if syntax remains compatible, reconstruct the parent and current formulas and separate the semantic parent-UNSAT obligation from mere canonicality",
+    "P6 seek a short universal contradiction first; otherwise state precisely what exhaustive completeness argument is still owed",
+    "P7 use computation only as corroboration after the mathematical certificate is written"
+  ],
+  "implementation": null,
+  "mathematical_learning_credit_policy": {
+    "credited_only": [
+      "the exact full-word implication under study",
+      "field-boundary and coordinate-equality obligations",
+      "supported and competing mathematical obstructions",
+      "falsifiable hand-proof plan"
+    ],
+    "zero_credit": [
+      "Git",
+      "CI",
+      "schemas",
+      "hashes",
+      "chronology",
+      "repository activity"
+    ]
+  },
+  "mathematical_lesson": {
+    "attempted_implication": "Survival of both known k31 syntax separators in all 32 parameter pairs may leave at least one full canonical parent/current word pair with equal 33-bit label and an UNSAT parent.",
+    "exact_theorem_or_failure": "UNEVALUATED: this round proves no compatibility or incompatibility theorem; it freezes the exact full-word proposition and proof obligations.",
+    "mathematical_falsifier": "Any source-bound counterexample to an asserted universal step, incomplete coverage of the 32 pairs, failure of full 33-bit equality, noncanonical word, or satisfiable alleged parent refutes the corresponding branch.",
+    "proof_and_source_evidence": "The merged C053 structural lemma proves only that all 32 parameter pairs survive two syntax screens. Exact C041 grammar and C048 overlap equivalence are bound; no candidate outcome has been accessed.",
+    "repair_or_next_mathematical_move": "After separate public authorization, derive field equalities by hand and run the cheapest universal syntax refuters before any formula enumeration or UNSAT proof search.",
+    "scope": "Only the 32 pairs v in 8..15 and v+ in 4..7 for parent (4,3), current (3,4), k=32 under exact C041 encoding.",
+    "supported_and_competing_mathematical_causes": "Supported motivation is clean survival of endpoint and complete fixed-header-token separators. Competing obstructions are a different forced coordinate, partial-token inconsistency, clause-boundary incompatibility, or absence of an UNSAT parent among syntactically compatible words."
+  },
+  "qoi": "For exactly parent (a,m)=(4,3), v in 8..15 and current (a,m)=(3,4), v+ in 4..7 at k=32, decide whether any 33-bit label h=1||c from a canonical UNSAT parent equals any canonical current 33-bit prefix p.",
+  "result_state": "UNEVALUATED",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "source_bindings": {
+    "c041_grammar": {
+      "git_blob": "fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+      "raw_sha256": "sha256:c0caca2fe7244c3d847de8b59473cec72132ec04ad3e9fab668f5cd95a2bd75a"
+    },
+    "c048_transfer_condition": {
+      "artifact_hash": "sha256:b03a1090e7b25222dc2377e309b8600b6e2064d6fc74f702b1f3f984d68cff5e",
+      "git_blob": "fed9057163bec46325115e8f6cfbb5c6f3c3d485",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C048_LITERAL_TRANSPOSE_TRANSFER_CONDITION_FREEZE_20260812.json",
+      "raw_sha256": "sha256:e2a924e708c1ab17b78e06a3935fd48772c0c172b9f01b0c756de80f1430908b"
+    },
+    "context": {
+      "artifact_hash": "sha256:1f3e30329dd73f447b3963756edee0b338a6abaa8ffab39495a65476d0624b23",
+      "git_blob": "4ae9414b1a6ed0b52be5f3a1271f272410b0aedd",
+      "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C053_K32_PHASE_SCREEN_CONTEXT_20260812.json",
+      "raw_sha256": "sha256:cd5a2292812a46fc21c7c20b5c0eae92f8607b92cdbd3b2569868aa5cf4fadac"
+    },
+    "mathematical_lesson": {
+      "artifact_hash": "sha256:3fdb26761ff17578299c7a23e9f53824d18f6ed5d2b61be462ef4e8b0b66b044",
+      "git_blob": "74d1e708b4c73840f91c94a3b27ea659f8dbfc0f",
+      "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C053_K32_PHASE_SCREEN_MATHEMATICAL_LESSON_20260812.json",
+      "raw_sha256": "sha256:180f4857280c352a88698afa8a7d60e89b52a0de690bbe997a5b69f6610a4bb5"
+    },
+    "memory_review": {
+      "artifact_hash": "sha256:2604d66f59996dcf40f3e38b6b16c55f6e054bb91650aa7dbda69172d0aab902",
+      "git_blob": "e86855638fd363426c771241cf2f1ff1ca990c9b",
+      "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C053_K32_PHASE_SCREEN_RESEARCH_MEMORY_REVIEW_20260812.json",
+      "raw_sha256": "sha256:db76b3493245d250227ea6a934c40a1f1065474abe1c80cf5759441e8da14138"
+    },
+    "next_discriminator": {
+      "artifact_hash": "sha256:82e6847847ce3f1dafaa2191b17cc26abe0af040e46431c9b8ace5ab90511bb6",
+      "git_blob": "5e76fa10c1c53c721a9def6cc6263ccd668d519a",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C053_K32_NEXT_DISCRIMINATOR_PROPOSAL_20260812.json",
+      "raw_sha256": "sha256:2f6efa473c83250ddc4222841a8ed47eed9ef0eb917c672d70cf5b73c93db99b"
+    },
+    "pre_candidate_gate": {
+      "artifact_hash": "sha256:36b088e410c8e9a4aa863f40b454dee5bd77bdba719a4c07ced0ed85f6aae813",
+      "git_blob": "00738e383668158ba7448f41dbaa80cf210a5ced",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C053_K32_PHASE_SCREEN_PRE_CANDIDATE_GATE_20260812.json",
+      "raw_sha256": "sha256:da62e782f32c66ab480b7fcd4e01ee828077f7b99f270bfd7874f3ab7964fab0"
+    },
+    "pre_candidate_trace": {
+      "git_blob": "4a95c6a67f04d89effc736346341e62438c9a281",
+      "last_event_hash": "sha256:56d1be41dc0ad67f65e8ac4e2e65c9ff95afea4d39f342a304b549961f13052d",
+      "last_event_id": "O9d12a2a1b-C053-K32-PHASE-SCREEN-E08",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C053_K32_PHASE_SCREEN_PRE_CANDIDATE_TRACE_20260812.json",
+      "raw_sha256": "sha256:e6263a6d60675c27a2da7cf050c2e7e11e48081bdfb04253505050b4419b9340"
+    },
+    "shortcut_review": {
+      "artifact_hash": "sha256:77289fe8fc64137e3f1f08aae3e9f231bc67c42ee3954202f1c1c7802848bb8f",
+      "git_blob": "10c67a542bb636656da8908eb69d70dbb2199bb3",
+      "path": "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C053_K32_PHASE_SCREEN_OBSTRUCTION_TRANSFORMATION_REVIEW_20260812.json",
+      "raw_sha256": "sha256:22b2d704aed109557163e97dd06c4baa1dc86fa8532d4edabb2e00dcbdf95009"
+    },
+    "structural_lemma": {
+      "artifact_hash": "sha256:cb84056f781529860033575b18f545d323b51fd733b704a8d6762661da26b694",
+      "git_blob": "4f53699945114a7dbd658319a20e10a8e591b559",
+      "path": "research/real_math/millennium/p_vs_np/03_routes/O9d12a2a1b_C053_K32_PHASE_SCREEN_STRUCTURAL_LEMMA_20260812.json",
+      "raw_sha256": "sha256:614724d6113c017ca3f2e57bf4a86b4df780c556ba488a93f6ea365db6981a01"
+    }
+  }
+}

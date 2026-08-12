@@ -1,0 +1,37 @@
+{
+  "artifact_hash": "sha256:c227e468481a6347940ffb68a369fcc0f54ea584e0f51ad31eae4cca5ffaf3d1",
+  "branch_rules": {
+    "CANNOT_CHECK": "otherwise, including syntax-only survival, SAT without UNSAT proof, partial equality, incomplete pair coverage, source mismatch, ambiguity, or conflicting certificates",
+    "COMPATIBLE_WITH_EXACT_FORMULA_BOUND_UNSAT_WITNESS": "W1-W7 pass for at least one of the 32 frozen parameter pairs and no valid universal negative certificate conflicts",
+    "INCOMPATIBLE_WITH_UNIVERSAL_FULL_WORD_PROOF": "W1-W6 and W8 pass for every one of the 32 frozen parameter pairs and no valid positive witness conflicts"
+  },
+  "candidate_artifact_hash": "sha256:81f173681f6178507eef8e32b71857fccb8308c87dd6be588e0aeba172dd87fb",
+  "candidate_id": "PNP-C053-K32-CLEAN-PHASE-FULL-WORD-COMPATIBILITY-v1",
+  "evaluation_authorized": false,
+  "evaluator_id": "PNP-C053-K32-CLEAN-PHASE-SOURCE-BOUND-EVALUATOR-v1",
+  "frozen_at_utc": "2026-08-12T16:31:01Z",
+  "identity_kind": "INERT_SOURCE_BOUND_MATHEMATICAL_CERTIFICATE_EVALUATOR",
+  "implementation": null,
+  "input_contract": {
+    "candidate_binding": "exact candidate artifact and source bindings",
+    "malformed_or_conflicting_packet": "anything incomplete, ambiguous, source-mismatched, partial, or mutually conflicting",
+    "negative_packet": "one W1-W6,W8 universal proof covering every frozen pair and literal choice",
+    "positive_packet": "one full W1-W7 witness with an independently checkable UNSAT proof"
+  },
+  "required_rederivations": [
+    "support-cell and 32-pair coverage",
+    "parent/current canonical parsing and field boundaries",
+    "all 33 split/equality coordinates",
+    "parent UNSAT proof verification for a positive packet",
+    "universal coverage/completeness verification for a negative packet"
+  ],
+  "result_accessed": false,
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "trust_boundary": [
+    "caller assertions do not establish canonicality, UNSAT, equality, or completeness",
+    "candidate proof code cannot certify itself",
+    "finite enumeration without a completeness proof cannot authorize the negative branch",
+    "SAT/UNSAT solver output without a proof certificate is corroboration only"
+  ]
+}
