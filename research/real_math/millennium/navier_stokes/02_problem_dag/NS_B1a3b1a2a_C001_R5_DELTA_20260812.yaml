@@ -1,0 +1,71 @@
+atom_id: NS-B1a3b1a2a
+parent_atom_id: NS-B1a3b1a2
+issue_id: RAKL_math#221
+candidate_id: NS-B1a3b1a2a-C001-R5
+status: ANCIENT_LOCAL_SMOOTHING_BOUND_GLOBAL_LORENTZ_GLUE_OPEN
+authority: PROPOSAL_SHADOW_NO_ROOT_AUTHORITY
+root_status: OPEN_NO_SOLUTION_CERTIFICATE
+result: >-
+  Genuine bounded ancient mildness plus the Koch-Nadirashvili-Seregin-Sverak
+  bounded-data smoothing estimate yields scale-covariant uniform derivative
+  bounds ||grad^k partial_t^l u||_infinity <= C M^(k+2l+1). Combining the
+  resulting vorticity persistence scales with the Albritton-Barker finite-I E
+  ledger yields only |{|omega(t)|>2a} cap B_R| <= C I M^4 R a^-3. The retained
+  observation-radius factor blocks this direct route from producing a global
+  weak-L^(3/2) vorticity bound.
+local_math_status: ANCIENT_SMOOTHING_INTERFACE_CLOSED
+local_representation_status: DERIVATIVE_SCALING_SCALE_COVARIANT
+local_to_global_gluing_status: RADIUS_DEPENDENT_SUPERLEVEL_GROWTH_GLOBAL_TAIL_OPEN
+pressure_status: NO_NEW_PRESSURE_GLUE_PRESSURE_FAR_FIELD_DOWNSTREAM
+limit_passage_status: NO_NEW_LIMIT_PASSAGE_USED
+noncompact_symmetry_status: TRANSLATION_MULTIPLICITY_AND_SPATIAL_TAIL_OPEN
+backward_uniqueness_status: NOT_INVOKED_HYPOTHESES_NOT_PRODUCED
+equation_change_status: NONE
+type_II_status: UNTOUCHED
+consumer_status: >-
+  Grujic-v2 global weak-L^(3/2) amplitude remains unproduced, and its separate
+  critical-profile/one-center morphology plus log-weighted-BMO direction inputs
+  are also unproduced.
+closed_or_pruned_subroutes:
+  - ancient_mildness_to_uniform_local_derivative_control
+  - finite_I_E_plus_local_smoothing_direct_radius_free_global_Lorentz_bridge
+live_routes:
+  - equation_specific_ancient_tail_or_no_dichotomy
+  - backward_sequence_global_critical_control
+  - one_center_or_profile_multiplicity_elimination
+  - alternate_exact_ancient_Liouville_trigger
+next_children:
+  - id: NS-B1a3b1a2a1
+    title: Equation-specific ancient tail/no-dichotomy discriminator
+    question: >-
+      Does the exact finite-I mild bounded ancient NSE source class supply a
+      radius-uniform vorticity-distribution/tightness certificate, a backward-
+      sequence global critical bound, or a one-center/no-multiplicity mechanism
+      that improves the R-dependent superlevel estimate without assuming the
+      desired global state space?
+    status: FRESH_CONTEXT_AND_STRICT_PRECOMMIT_REQUIRED
+failure_ids:
+  - G-NS-B1a3b1a2a-MORREY-TO-GLOBAL-LORENTZ-RADIUS
+obstruction_ids:
+  - O-NS-B1a3b1a2a-ANCIENT-SMOOTHING-TO-GLOBAL-TAIL
+motif_ids:
+  - M-NS-ANCIENT-REGULARITY-LOCALIZES-TIME-NOT-SPACE
+lesson_ids:
+  - L-NS-B1a3b1a2a-R5-TAIL-PREFLIGHT-PROPOSAL
+successful_reuse_ids:
+  - F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH
+  - F-NS-B1a3-UNCONTROLLED-FAR-FIELD
+  - PR165-NS-B1a3b1a1-R3
+  - PR170-NS-B1a3b1a2-R4-SHADOW
+  - PR184-NS-GRUJIC-V2-CONSUMER-SIGNATURE-SHADOW
+novelty_class: compositional
+chronology_status: >-
+  Issue #221 prospectively froze the discriminator and expert/audit contract,
+  but the complete fibre hash was not durably precommitted before verification;
+  no strict full Gate-C preregistration or promotion credit is claimed.
+nonpromotion:
+  - local_smoothing_is_not_global_regular_stokes_or_clay_closure
+  - direct_bridge_insufficiency_is_not_a_counterexample_to_global_Lorentz
+  - amplitude_is_not_morphology_or_direction
+  - same_context_review_is_not_independent_review
+  - Type_I_progress_does_not_close_Type_II
