@@ -1,0 +1,35 @@
+{
+  "record_type": "DUAL_MEMORY_AND_OBSTRUCTION_TRANSFORMATION_REVIEW",
+  "atom_id": "NS-B2a1a2",
+  "fibre_snapshot_hash": "sha256:b67456f9f1b37137e10faf869e0ddf43381778ccba7520101aaf0b8bd5d4e841",
+  "retrieved": [
+    {"id":"F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY","kind":"failure","decision":"SELECT","why":"rules out treating scale-critical absolute annular estimates as automatic vanishing and raises value of a cheaper normalization discriminator"},
+    {"id":"F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE","kind":"failure","decision":"SELECT","why":"fixed-radius compactness cannot justify a moving/global tail limit; prevents using local convergence to patch the direct CKN lift"},
+    {"id":"F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH","kind":"failure","decision":"SELECT","why":"immediate predecessor: identifies divergent F_lambda gain but leaves viscosity-normalized epsilon threshold quantitative cost open"},
+    {"id":"XM-MOVING-CORE-RIGIDITY-005","kind":"experience_pattern","decision":"REJECT_AS_AUTHORITY_USE_AS_FALSIFIER","why":"translation-loss pattern is relevant to global tightness but does not determine the local parabolic normalization algebra"},
+    {"id":"O-NS-B2a1d-PRODUCER-MUST-EXCLUDE-TRANSLATING-INCOMING-CORE","kind":"open_proposal_shadow_obstruction","decision":"REJECT_AS_STRICT_AUTHORITY_USE_AS_HOSTILE_CHECK","why":"PR #219 is open proposal/shadow and Hill is not producer ancestry; it constrains future flux/tightness routes only"},
+    {"id":"F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER","kind":"failure","decision":"REJECT_FOR_IMMEDIATE_STEP","why":"Type-I local-energy scale-neutrality is structurally analogous but the current atom has a different Euler scaling and explicit viscosity parameter"}
+  ],
+  "retrieved_counts": {"failures":4,"experience_patterns":1,"open_shadow_obstructions":1,"success_episodes":0,"tools":0,"motifs":0},
+  "selected_ids": ["F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY","F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE","F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH"],
+  "rejected_ids": ["XM-MOVING-CORE-RIGIDITY-005","O-NS-B2a1d-PRODUCER-MUST-EXCLUDE-TRANSLATING-INCOMING-CORE","F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER"],
+  "missed_memory_count": "CANNOT_MEASURE: no exhaustive governed repository-wide memory coverage receipt is exposed in this runtime",
+  "experience_policy": "Experience changes route priority only; no retrieved item supplies theorem authority.",
+  "obstruction_transformation_review": {
+    "SEARCH": {"candidate":"same-source direct epsilon-regularity lift from Seregin (2.9) plus the paper's displayed CKN carrier","verdict":"SELECT","reason":"cheapest exact quantitative discriminator"},
+    "JUMP": {"candidate":"signed prelimit annular-flux/telescoping","verdict":"DEFER","reason":"open Hill shadow adversary requires any future signed flux route to detect/exclude translation/incoming-core escape"},
+    "GLUE": {"candidate":"moving-radius compactness plus logarithmic gain","verdict":"DEFER","reason":"predecessor already exposes missing rate-compatible moving-radius compactness"},
+    "LIFT": {"candidate":"restore physical unit-viscosity parabolic aspect ratio and audit A/E/D powers","verdict":"SELECT_AS_SEARCH_SUBSTEP","reason":"tests whether the apparent Euler-scale smallness survives the exact source-to-CKN coordinate map"}
+  },
+  "difference_witnesses": [
+    "Failure of the direct estimate does not imply actual CKN quantities cannot be small; it says only the weighted ledger cannot certify that smallness through this coordinate map.",
+    "An Euler-side translating adversary is not a Navier-Stokes blow-up limit and cannot refute the producer theorem.",
+    "The Type-I scale-neutral ledger and the Type-II Euler-scale ledger share scale-criticality but not the same viscosity/time geometry."
+  ],
+  "observable_action_preference_change": {
+    "pre_memory_pre_gate":"attempt to exploit mesoscopic F_lambda growth directly via a local epsilon-regularity insertion or move immediately to signed flux",
+    "post_review":"first perform SEARCH+LIFT exponent audit because it can cheaply fail-close the direct CKN bridge before more expensive flux or moving-radius compactness work",
+    "changed":true
+  },
+  "authority":"PROPOSAL_SHADOW_ONLY"
+}
