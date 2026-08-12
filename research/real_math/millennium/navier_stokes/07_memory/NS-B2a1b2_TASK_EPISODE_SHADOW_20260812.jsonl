@@ -1,0 +1,23 @@
+{
+  "record_type":"TASK_EPISODE_SHADOW",
+  "episode_id":"E-NS-B2a1b2-R1-20260812",
+  "task_id":"NAVIER-STOKES-ROOT-4",
+  "atom_id":"NS-B2a1b2",
+  "context_hash":"sha256:a5b8ffa5d1a73f20ca226e1141c13eec09ba5f622ebbca26ee1aabd1eed653e2",
+  "problem_signature":"Test whether positive/nonzero Seregin F=1 Euler-side local nontriviality forces positive asymptotic linear kinetic-energy density Lambda_chi.",
+  "fibre_snapshot_hash":"sha256:a5b8ffa5d1a73f20ca226e1141c13eec09ba5f622ebbca26ee1aabd1eed653e2",
+  "operators_motifs_tried":["same-domain SEARCH","exact hostile profile reuse","finite-energy normalization","translation/noncompactness DifferenceWitness","source-interface audit"],
+  "retrieved_memory_ids":["FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE","F-NS-B2a1d-F1-CENTERED-LOCAL-RIGIDITY-NONCOMPACT-TRANSLATION","O-NS-B2a1d-PRODUCER-MUST-EXCLUDE-TRANSLATING-INCOMING-CORE","O-NS-B2a1b1-ASYMPTOTIC-DENSITY-LOCAL-NONTRIVIALITY-DISCONNECT","F-NS-B2a1a2-DIRECT-CKN-LEDGER-INSUFFICIENT","XM-PC-NS-001-C001-ENSTROPHY-SIGN"],
+  "selected_memory_ids":["FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE","F-NS-B2a1d-F1-CENTERED-LOCAL-RIGIDITY-NONCOMPACT-TRANSLATION","O-NS-B2a1d-PRODUCER-MUST-EXCLUDE-TRANSLATING-INCOMING-CORE","O-NS-B2a1b1-ASYMPTOTIC-DENSITY-LOCAL-NONTRIVIALITY-DISCONNECT"],
+  "rejected_memory_ids":["F-NS-B2a1a2-DIRECT-CKN-LEDGER-INSUFFICIENT","XM-PC-NS-001-C001-ENSTROPHY-SIGN"],
+  "decision_policy":"Counterexample-first exact same-domain falsifier before any positivity proof.",
+  "observations":["Hill exact traveling Euler vortex is nonzero and finite-energy","same explicit profile has V in L2 intersect L3, grad V in L2 and pressure in L3/2","for every fixed time and 0<=chi_R<=1, R^-1 int chi_R|U|^2 <= R^-1||V||_2^2"],
+  "verification":["primary-source Seregin Theorem 3.1 equations (3.5)-(3.8) inspected","primary-source Choi Hill traveling-wave identity inspected","explicit decay/integrability and moving-core budget re-derived","asymptotic-density limit proved analytically"],
+  "outcome":"HILL_F1_NONZERO_WITH_ZERO_ASYMPTOTIC_LINEAR_DENSITY",
+  "residual_signature":"RES-NS-B2a1b2-SOURCE-INHERITED-NONLINEAR-DENSITY-OR-NO-INCOMING-BRIDGE",
+  "failure_category":"LOCAL_TO_GLOBAL_OBSERVATION_MAP_NONIDENTIFYING",
+  "cost_effort_proxy":{"source_papers_rechecked":2,"exact_profiles_checked":1,"numerical_runs":0,"formal_proof_checker_runs":0},
+  "next_action":"Search for a source-inherited lower linear-energy-growth/no-incoming/tightness/recentering bridge, or a different Lyapunov observable whose zero set excludes finite-energy traveling Hill states.",
+  "authority":"PROPOSAL_SHADOW_ONLY",
+  "shadow_content_sha256":"sha256:222c48e1aae8dc802983a5c11d14a30f1e242c1455632dd56794e87e833829fc"
+}

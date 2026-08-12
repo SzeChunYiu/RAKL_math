@@ -1,0 +1,56 @@
+{
+  "schema_version": "proposal-shadow-math-context-fiber-v3",
+  "atom_id": "NS-B2a1b2",
+  "parent_atom_id": "NS-B2a1b1",
+  "problem_signature": "In Seregin Theorem 3.1 F(a)=1 ancient-Euler class, test whether root-facing local/spacetime nontriviality or mere nonzero state can force positive asymptotic linear energy density Lambda_chi, sufficient to close the signed-flux Lyapunov route.",
+  "root_contract": {"root":"3D incompressible Navier-Stokes global regularity/existence","success":"Exact root statement binding + closed proof DAG + dependency/axiom/verifier audits + isolated recheck + bounded novelty search + three genuinely isolated mathematical reviews","current_status":"OPEN_NO_SOLUTION_CERTIFICATE"},
+  "actual_fibre": {
+    "target_state":["Seregin 2026 Theorem 3.1 ancient Euler pair on R^3 x (-infinity,0)","F(a)=1 displayed bound (3.5)","Euler equation (3.6)","local energy inequality (3.7)","source nontriviality (3.8)"],
+    "observable":"Lambda_chi(t)=limsup_{R->infinity} R^-1 int chi_R |u(x,t)|^2 dx",
+    "candidate_bridge":"nonzero/source-nontrivial F=1 Euler state => Lambda_chi(t)>0 for some/all admissible t",
+    "hostile_world":"exact translating Hill spherical vortex with finite kinetic energy",
+    "separate_gluing_coordinate":"membership in displayed Euler-side class is not proven equivalent to being in the image of Seregin's Navier-Stokes blow-up extraction"
+  },
+  "analogues":[
+    {"id":"HILL-CHOI-2011.06808v2","role":"same-domain exact traveling Euler profile","disanalogy":"not shown source-realizable by Seregin extraction"},
+    {"id":"NS-B2a1d-PR219","role":"proposal/shadow exact-interface audit","authority":"guides priority only"},
+    {"id":"NS-B2a1b1-PR242","role":"proposal/shadow Lyapunov precursor","authority":"guides priority only"}
+  ],
+  "expert_cell":[
+    {"role":"PDE/domain","background":"Navier-Stokes/Euler blow-up limits","delegation":"check Seregin signature and Hill membership","finding":"If Hill is an exact F=1 Euler-side member with finite L2, Lambda_chi vanishes while the state is nonzero."},
+    {"role":"harmonic-analysis","background":"critical norms/local energy","delegation":"audit normalization","finding":"R^-1 makes every uniformly finite total kinetic energy profile have zero asymptotic linear density."},
+    {"role":"adversarial-falsification","background":"counterexamples/noncompact symmetries","delegation":"find cheapest hostile world","finding":"Hill is cheaper and stronger than constructing a new flow."},
+    {"role":"gluing/transfer","background":"compactness/source-to-limit interfaces","delegation":"separate Euler-side falsification from NS ancestry","finding":"Hill cannot falsify Seregin's theorem without source-realizability; it tests only the bare Euler-side bridge."},
+    {"role":"formal/verifier","background":"proof specification","delegation":"check quantifiers","finding":"For each fixed t, 0<=R^-1 int chi_R|U|^2<=R^-1||V||_2^2, so limsup=0 without limit interchange."},
+    {"role":"novelty/value","background":"PDE literature/claim scope","delegation":"scope novelty","finding":"Representation/transfer route pruning only; no theorem novelty or root authority."}
+  ],
+  "memory_review": {
+    "retrieved_ids":["FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE","F-NS-B2a1d-F1-CENTERED-LOCAL-RIGIDITY-NONCOMPACT-TRANSLATION","O-NS-B2a1d-PRODUCER-MUST-EXCLUDE-TRANSLATING-INCOMING-CORE","O-NS-B2a1b1-ASYMPTOTIC-DENSITY-LOCAL-NONTRIVIALITY-DISCONNECT","F-NS-B2a1a2-DIRECT-CKN-LEDGER-INSUFFICIENT","XM-PC-NS-001-C001-ENSTROPHY-SIGN"],
+    "selected_ids":["FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE","F-NS-B2a1d-F1-CENTERED-LOCAL-RIGIDITY-NONCOMPACT-TRANSLATION","O-NS-B2a1d-PRODUCER-MUST-EXCLUDE-TRANSLATING-INCOMING-CORE","O-NS-B2a1b1-ASYMPTOTIC-DENSITY-LOCAL-NONTRIVIALITY-DISCONNECT"],
+    "rejected":[{"id":"F-NS-B2a1a2-DIRECT-CKN-LEDGER-INSUFFICIENT","why":"orthogonal moving-radius/viscosity-normalization lane"},{"id":"XM-PC-NS-001-C001-ENSTROPHY-SIGN","why":"instantaneous periodic enstrophy transfer, not asymptotic spatial density"}],
+    "missed":"CANNOT_MEASURE: no complete denominator for all potentially relevant repository experience is exposed by the connector."
+  },
+  "obstruction_transformation_review": {
+    "fingerprint":{"roles":["local nontriviality detector","large-radius normalized energy density","translation symmetry"],"relation":"attempted implication local/nonzero -> positive asymptotic density","failure_mechanism":"a coherent finite-energy state may be locally nonzero yet have sublinear total energy growth","desired_transition":"falsify or certify the bridge","forbidden_losses":["silently assume source-realizability","erase ancestry-specific threshold boundary"]},
+    "SEARCH":{"status":"VIABLE_SOURCE_EVENT","selected":"Hill spherical vortex from Choi primary source; PR219 only guides mapping","validation":["re-verify finite L2","re-verify exact Euler traveling solution","bind DifferenceWitness to Seregin ancestry"]},
+    "JUMP":{"status":"DEFERRED","reason":"same-domain exact event is cheaper"},"GLUE":{"status":"DEFERRED","reason":"single event suffices"},"LIFT":{"status":"NOT_LICENSED","reason":"SEARCH viable"},"selected_route":"SEARCH"
+  },
+  "decision_policy":"Counterexample-first: before proving positivity of Lambda_chi, test the cheapest exact same-domain F=1 Euler state exploiting translation and finite energy.",
+  "falsifier":"If an exact nonzero source-side F=1 Euler state has finite global kinetic energy, then Lambda_chi=0; this falsifies any bare nonzero/local-nontriviality -> positive-Lambda bridge.",
+  "canonical_method_specs_surfaces":["decomposition","routing","search_query_generation","source_selection_reliability","claim_extraction","mathematical_context_translation","equivalence_similarity","contextual_theory_gluing","contradiction_diagnosis","gap_discovery","experiment_query_selection","memory","review","saturation_stopping","prompting_context_policy"],
+  "framework":{"method_version":"3.0.0","git_sha":"43897d3afaf0038385102d5acc64793c05ec40f0","software_package_version":"0.1.0","constitution_epoch":"v3-authority-hardening-20260811"},
+  "rakl_math_base":"9e36dd83874bfc9f8ef94a2ce2708769cc25861e",
+  "atom_fibre_snapshot_hash":"sha256:a5b8ffa5d1a73f20ca226e1141c13eec09ba5f622ebbca26ee1aabd1eed653e2",
+  "pre_state_fingerprint":"sha256:95698dd8eecd69e76c912ddd8245fcef21fdacecb5430d070a450c29a4005e38",
+  "research_trace":[
+    {"seq":1,"event":"ATOMIZED","previous_event_hash":null,"artifact_hash":"sha256:cd4c94962dafdf4d1d8402ed8cd1caf75bd85f749ac979a093e94ec5dd45cb94"},
+    {"seq":2,"event":"CONTEXT_FROZEN","previous_event_hash":"sha256:cd4c94962dafdf4d1d8402ed8cd1caf75bd85f749ac979a093e94ec5dd45cb94","artifact_hash":"sha256:2528a12d31c47a3c6fd61377596a31f7a644a664d6038d5b0b1b902b74672b8e"},
+    {"seq":3,"event":"ANALOGY_SCAN","previous_event_hash":"sha256:2528a12d31c47a3c6fd61377596a31f7a644a664d6038d5b0b1b902b74672b8e","artifact_hash":"sha256:2f4cd83d93cd598fe819e634fb24c6fe207be2cfaf5a809997bf8df687d408e9"},
+    {"seq":4,"event":"METHOD_TRANSFER_REVIEW","previous_event_hash":"sha256:2f4cd83d93cd598fe819e634fb24c6fe207be2cfaf5a809997bf8df687d408e9","artifact_hash":"sha256:eedb105a88964f654f5133b02dcb1ec09ee4c6fb54c484457ea83ea6b7ae4d5f"},
+    {"seq":5,"event":"EXPERT_CONTEXT_REVIEW","previous_event_hash":"sha256:eedb105a88964f654f5133b02dcb1ec09ee4c6fb54c484457ea83ea6b7ae4d5f","artifact_hash":"sha256:15bd68d97120c09ac40b8389a7d8d4d906634d7b6bef774049992cb8c93d6a3c"},
+    {"seq":6,"event":"EXPERIENCE_MEMORY_REVIEW","previous_event_hash":"sha256:15bd68d97120c09ac40b8389a7d8d4d906634d7b6bef774049992cb8c93d6a3c","artifact_hash":"sha256:925093255f9a582518e1467c7a142eb316165ee8aef4feca09e88f2e621737d4"},
+    {"seq":7,"event":"OBSTRUCTION_TRANSFORMATION_REVIEW","previous_event_hash":"sha256:925093255f9a582518e1467c7a142eb316165ee8aef4feca09e88f2e621737d4","artifact_hash":"sha256:efe107b85557c2d838c0afa1efc21b31dc92bfc97f4afa4e5f1db4bf3be84f45"},
+    {"seq":8,"event":"NEXT_STEP_PROPOSED","previous_event_hash":"sha256:efe107b85557c2d838c0afa1efc21b31dc92bfc97f4afa4e5f1db4bf3be84f45","artifact_hash":"sha256:d797170f6e11af36b943e6a111d7d16695310aa4b63ccfb5dd367d47d7812dc2"}
+  ],
+  "authority":"PROPOSAL_SHADOW_PRE_CANDIDATE"
+}

@@ -1,0 +1,14 @@
+{
+  "record_type": "OBSTRUCTION_SHADOW",
+  "obstruction_id": "O-NS-B2a1b2-FINITE-ENERGY-KERNEL-OF-LINEAR-DENSITY",
+  "derived_from_episode": "E-NS-B2a1b2-R1-20260812",
+  "derived_from_diagnosis": "D-NS-B2a1b2-R1",
+  "supported_by_failure": "F-NS-B2a1b2-LOCAL-NONTRIVIALITY-NOT-POSITIVE-ASYMPTOTIC-DENSITY",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "relational_obstruction": "The large-radius observable Lambda_chi cannot distinguish a nonzero local state from zero when the state has finite global kinetic energy, because the R^-1 normalization annihilates every L2 state.",
+  "invariants_to_preserve": ["exact Euler dynamics", "pressure/nonlocality", "source-ancestry DifferenceWitness", "F=1 scaling", "root statement unchanged"],
+  "must_break": "finite-energy kernel / sublinear large-radius energy growth",
+  "repair_families": ["source-inherited lower linear-energy growth", "no-incoming/tightness/recentering with correct double-limit quantifiers", "observable with smaller zero set", "quantitative ancestry-specific nontriviality-to-density coupling"],
+  "transfer_boundary": "This obstruction transfers only after checking that the proposed observable has the same kernel and that the target source class does not already exclude finite-energy/coherent states.",
+  "falsifier": "A theorem proving every source-realizable F=1 blow-up limit obeys limsup_R R^-1 int chi_R |u|^2 >= c>0 would close this obstruction for that source class."
+}
