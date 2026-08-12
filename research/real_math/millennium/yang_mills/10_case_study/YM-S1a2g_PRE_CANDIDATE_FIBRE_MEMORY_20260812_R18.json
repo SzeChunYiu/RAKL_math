@@ -1,0 +1,215 @@
+{
+  "schema_version": "ym-r18-pre-candidate-v1",
+  "cycle_id": "YM-S1a2g-R18-20260812",
+  "atom_id": "YM-S1a2g",
+  "issue": 295,
+  "problem_signature": [
+    "exact Yang-Mills Clay root remains OPEN_NO_SOLUTION_CERTIFICATE",
+    "R15/R17 leave weak-UV to nonperturbative same-theory spectral transport unbound",
+    "R17 stopped its Wilson-2026 falsifier audit at Section 37 although the same manuscript immediately adds Section 38 claiming UVR2-UVR4 closure",
+    "live fixed-cutoff OS/transfer work PR #256/#258 must not be duplicated",
+    "active discriminator is whether Section 38 displayed bounds actually close invariant/stable-manifold and regulator-universality coordinates"
+  ],
+  "exact_question": "Do the displayed UVR3/UVR4 hypotheses and inequalities in Wilson 2026 Section 38 actually imply the shrinking invariant region, tuned stable manifold, and full cross-regulator relevant-coordinate decay needed for the claimed continuum universality, without silently dropping a relevant coordinate or reversing an inequality?",
+  "residual_before": "RES-YM-S1a2f-UVR3-STABLE-MANIFOLD-AND-SAME-THEORY-UNIVERSALITY-SOURCE-BINDING-UNRESOLVED",
+  "framework": {
+    "rakl_method_version": "3.0.0",
+    "package_version": "0.1.0",
+    "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "authority": "PROPOSAL_SHADOW_ONLY"
+  },
+  "rakl_math": {
+    "base_sha": "5a7831bd04b195e2a1690da338f538b7db7e9366",
+    "pre_tree_fingerprint": "git-tree:5b1925e579066e8162dc45def226f466cae5d18e"
+  },
+  "fibre_contents_consulted": [
+    "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: RAKL_VERSION.json",
+    "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: ARCHITECTURE.md",
+    "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: src/rakl/v3.py",
+    "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: src/rakl/method_specs.py",
+    "RAKL_math@5a7831bd04b195e2a1690da338f538b7db7e9366: root issue #5",
+    "RAKL_math issue #283 / draft PR #290 (R17 Balaban/source/gluing audit)",
+    "RAKL_math draft PR #256 and #258 (live fixed-cutoff OS/transfer work; route-collision boundary)",
+    "RAKL_math draft PR #193 (R10 stable/slaved-coordinate and marginal-cancellation failure memory)",
+    "new prospective issue #295 / YM-S1a2g",
+    "Wilson 2026 author-uploaded manuscript indexed full text: Sections 37-38, especially Lemma 38.2, Lemma 38.4, Theorem 38.5, Lemmas 38.9-38.10, Theorem 38.11",
+    "Brydges-Slade arXiv:1403.7255 and arXiv:1403.7256 structural RG analogues"
+  ],
+  "selected_experience_ids": [
+    "YM-S1a2f-R17-PR290",
+    "YM-R10-STABLE-COORDINATE-PR193"
+  ],
+  "rejected_experience": [
+    {
+      "id": "YM-S1a2d-R14-PR256",
+      "reason": "live same-context fixed-cutoff OS/reflected-form work; does not address UVR3 relevant-coordinate closure"
+    },
+    {
+      "id": "YM-R14-LIVE-COLLISION-PR258",
+      "reason": "live same-context fixed-cutoff transfer strengthening; duplicate fibre for this cycle"
+    },
+    {
+      "id": "BBS-RG-IV-V-ARXIV-1403.7255-1403.7256",
+      "reason": "selected only as structural analogue; theorem transfer rejected because model, gauge constraints, GZ/OS structure, relevant sector, and physical spectral transport are unmatched"
+    },
+    {
+      "id": "BALABAN-LARGE-FIELD-REVISIT",
+      "reason": "R17 already typed field-amplitude control versus coupling regime; repeating that source family is lower information than auditing the newly exposed Section 38 claims"
+    }
+  ],
+  "missed_prior_experience_or_source": [
+    {
+      "id": "WILSON-2026-SECTION38-UVR2-UVR4",
+      "missed_by": "YM-S1a2f-R17-PR290",
+      "effect": "R17's use of Section 37 as a current-manuscript incompleteness witness was source-incomplete because Section 38 immediately claims to close that roadmap; R18 reopens source/decomposition and audits Section 38 directly"
+    }
+  ],
+  "pre_memory_preference": "CANNOT_MEASURE: the R18 pre-memory/pre-gate action preference was not frozen before reading R17/PR290 in this runtime; no counterfactual will be invented.",
+  "post_memory_route": "SEARCH current Wilson Section 38 first; type-check K, lambda, and regulator-difference coordinates separately; use R10 only as a falsifier template, not authority.",
+  "rakl_changed_action": "CANNOT_MEASURE: no prospectively frozen pre-memory R18 preference.",
+  "method_policy": {
+    "search": "same-source Section 38 primary author text first because it directly falsifies R17's Section-37-only source diagnosis",
+    "jump": "structural rigorous-RG analogues may supply required shape only with DifferenceWitness; no theorem transfer",
+    "glue": "require explicit stable/relevant coordinate map plus full cross-regulator difference decay and later same-theory OS/spectral/physical-time interface",
+    "lift": "forbidden without bounded SEARCH/JUMP/GLUE coverage receipt",
+    "current_route": "SEARCH",
+    "authority": "proposal/shadow; source labels and theorem numbers do not self-certify"
+  },
+  "canonical_process_surfaces_invoked": [
+    "decomposition",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "ontology_terminology_normalization",
+    "mathematical_context_translation",
+    "equivalence_similarity",
+    "contextual_theory_gluing",
+    "contradiction_diagnosis",
+    "gap_discovery",
+    "experiment_query_selection",
+    "memory",
+    "review",
+    "saturation_stopping",
+    "prompting_context_policy",
+    "synthesis"
+  ],
+  "analogues": [
+    {
+      "source": "Brydges-Slade rigorous RG stability/single-step framework, arXiv:1403.7255 and 1403.7256",
+      "shared": "separates relevant/marginal flow from a nonperturbative coordinate and requires explicit contraction/stability estimates",
+      "difference_witness": "weakly self-avoiding-walk / supersymmetric field theory rather than 4D nonabelian gauge/GZ theory; no inherited gauge constraints, OS/reflection-positive source algebra, Yang-Mills relevant-sector tuning, or physical spectral transport"
+    },
+    {
+      "source": "R10 scalar slaving hostile control in PR #193",
+      "shared": "a stable/slaved-coordinate label is insufficient unless the displayed recurrence quantitatively supports the claimed invariant graph and marginal flow",
+      "difference_witness": "R10 audited Faizal-Shabir recurrences, not Wilson Section 38; it is experience-guided falsification only"
+    }
+  ],
+  "falsifiers": [
+    "Retain a strict irrelevant-sector margin and prove quantitatively that rho*cK*g_k^2 + C1*g_k^4 <= cK*g_{k+1}^2 for all permitted k; this repairs the K-direction gap.",
+    "Exhibit an explicit hyperbolic/stable splitting, tuned graph-transform equation, or operator estimate whose constants imply ||lambda_{k+1}|| <= c_lambda*g_{k+1}^2; mere uniform boundedness of A_k is insufficient.",
+    "Prove a regulator-matched stable-manifold Lipschitz/intertwining estimate controlling Delta lambda by Delta g and Delta K, or directly show full ||Delta u_k|| -> 0 from a stronger recursion; this repairs the universality handoff."
+  ],
+  "expert_cell": [
+    {
+      "role": "rigorous lattice-gauge RG specialist",
+      "task": "audit exact one-step and invariant-region inequalities; separate irrelevant K contraction from relevant-coordinate tuning"
+    },
+    {
+      "role": "dynamical-systems/stable-manifold analyst",
+      "task": "test whether bounded A_k plus nonlinear remainder estimates are sufficient for a shrinking invariant graph; demand quantitative splitting/graph-transform hypotheses"
+    },
+    {
+      "role": "OS/transfer-Hamiltonian spectral specialist",
+      "task": "keep UV trajectory closure separate from same-theory OS null quotient, transfer operator, and physical spectral identification"
+    },
+    {
+      "role": "asymptotic-freedom/coupling-normalization specialist",
+      "task": "check that decay/control of g does not silently substitute for control of all relevant/marginal coordinates or physical mass normalization"
+    },
+    {
+      "role": "adversarial mathematical physicist",
+      "task": "construct scalar recurrences satisfying displayed inequalities while violating the claimed conclusion"
+    },
+    {
+      "role": "primary-source/provenance auditor",
+      "task": "correct R17's Section-38 miss; distinguish indexed author text from a full PDF verifier audit"
+    },
+    {
+      "role": "RAKL v3 metrology/authority auditor",
+      "task": "keep TaskEpisode/diagnosis/obstruction separate, record seven axes and non-measurable resource fields, deny independent-review credit"
+    }
+  ],
+  "independent_review_credit": "0/3",
+  "frozen_at": "2026-08-12T04:35:29Z",
+  "fibre_snapshot_hash": "sha256:98de4e7733b71108afe541967524872c686cfd4654da668d2ef50ecc7f735d1a",
+  "pre_candidate_trace": [
+    {
+      "seq": 1,
+      "event": "ATOMIZED",
+      "atom_id": "YM-S1a2g",
+      "previous_event_hash": null,
+      "timestamp": "2026-08-12T04:35:29Z",
+      "artifact_hash": "sha256:fb48e06a9adfce62b70212373f4860914017e18ccdc35d9cae9a9363d6372bb0"
+    },
+    {
+      "seq": 2,
+      "event": "CONTEXT_FROZEN",
+      "atom_id": "YM-S1a2g",
+      "previous_event_hash": "sha256:fb48e06a9adfce62b70212373f4860914017e18ccdc35d9cae9a9363d6372bb0",
+      "timestamp": "2026-08-12T04:35:29Z",
+      "artifact_hash": "sha256:f80de49ac70d21353d141f55270ab6e187ffea1c59176324a3413c88803364ed"
+    },
+    {
+      "seq": 3,
+      "event": "MEMORY_REVIEW",
+      "atom_id": "YM-S1a2g",
+      "previous_event_hash": "sha256:f80de49ac70d21353d141f55270ab6e187ffea1c59176324a3413c88803364ed",
+      "timestamp": "2026-08-12T04:35:29Z",
+      "artifact_hash": "sha256:c1d74cd883b2d3af9e635fd220e454be263dcf64fe4d7b474d21a256d782b0a4"
+    },
+    {
+      "seq": 4,
+      "event": "ANALOGY_SCAN",
+      "atom_id": "YM-S1a2g",
+      "previous_event_hash": "sha256:c1d74cd883b2d3af9e635fd220e454be263dcf64fe4d7b474d21a256d782b0a4",
+      "timestamp": "2026-08-12T04:35:29Z",
+      "artifact_hash": "sha256:1094fb08d0696a0a250847e4e5cb6f864791526329b7e55e40d123e2264167f2"
+    },
+    {
+      "seq": 5,
+      "event": "METHOD_TRANSFER_REVIEW",
+      "atom_id": "YM-S1a2g",
+      "previous_event_hash": "sha256:1094fb08d0696a0a250847e4e5cb6f864791526329b7e55e40d123e2264167f2",
+      "timestamp": "2026-08-12T04:35:29Z",
+      "artifact_hash": "sha256:ed80109dd524c0567abdb988e38777beb59014af30b2f68cf54dce47b4b6d042"
+    },
+    {
+      "seq": 6,
+      "event": "EXPERT_CONTEXT_REVIEW",
+      "atom_id": "YM-S1a2g",
+      "previous_event_hash": "sha256:ed80109dd524c0567abdb988e38777beb59014af30b2f68cf54dce47b4b6d042",
+      "timestamp": "2026-08-12T04:35:29Z",
+      "artifact_hash": "sha256:05fcbe347c82349d8860852f509163109fab71f514ead3817ee0ece5fbe82168"
+    },
+    {
+      "seq": 7,
+      "event": "FALSIFIER_SELECTED",
+      "atom_id": "YM-S1a2g",
+      "previous_event_hash": "sha256:05fcbe347c82349d8860852f509163109fab71f514ead3817ee0ece5fbe82168",
+      "timestamp": "2026-08-12T04:35:29Z",
+      "artifact_hash": "sha256:d957dddbdd4a0dc54215b41755a12d2e246aa96ae0c90d5ec4c3befbf9a2590f"
+    },
+    {
+      "seq": 8,
+      "event": "NEXT_STEP_PROPOSED",
+      "atom_id": "YM-S1a2g",
+      "previous_event_hash": "sha256:d957dddbdd4a0dc54215b41755a12d2e246aa96ae0c90d5ec4c3befbf9a2590f",
+      "timestamp": "2026-08-12T04:35:29Z",
+      "artifact_hash": "sha256:9f68dadf5245911864850184408f6666de372a87e4056650723b42da944c2099"
+    }
+  ],
+  "artifact_hash": "sha256:9a22520585612d7194285a8c47ab4b8dd6130a96813e699215439f99ab2d9b01"
+}
