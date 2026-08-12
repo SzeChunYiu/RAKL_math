@@ -1,0 +1,45 @@
+{
+  "allowed_future_result_branches": [
+    "EXACT_OVERLAP_WITNESS",
+    "SCOPED_OVERLAP_IMPOSSIBILITY",
+    "BOUNDED_NO_MATCH_ONLY",
+    "CANNOT_CHECK"
+  ],
+  "artifact_hash": "sha256:5729031c983516db3ca48ad411126e7c3482f5446580dab816ec189221e9c36e",
+  "authority": {
+    "mathematical_result_credit": false,
+    "mathematical_saturation_credit": false,
+    "p_vs_np_authority": false,
+    "proof_authority": false,
+    "target_result_authority": false
+  },
+  "candidate_core_sha256": "sha256:c869e4726c36551b69f10407dd482f30d83f2b2a8129c5364ac2c08eda4c1d43",
+  "candidate_id": "C050-K15-TARGET-BLIND-SELECTOR-DISCRIMINATOR-v1",
+  "evaluator": {
+    "path": "research/real_math/millennium/p_vs_np/05_falsification/c050_k15_alignment_inert_evaluator.py",
+    "raw_sha256": "76aa37db99021e324955e157759f1985904182b90bf14939dcafb353e8cf2607"
+  },
+  "frozen_at": "2026-08-12T06:14:09Z",
+  "inert_behavior": "Every invocation raises TargetEvaluationNotAuthorized; the module contains no decoder, parser, search, bit-comparison, or satisfiability capability.",
+  "later_execution_gate": {
+    "current_task_execution_authorized": false,
+    "decoder_import_forbidden": true,
+    "result_classification_forbidden": true,
+    "separate_post_publication_authorization_required": true,
+    "target_bit_comparison_forbidden": true
+  },
+  "manifest_id": "PNP-C050-K15-ALIGNMENT-EVALUATOR-FREEZE-20260812",
+  "required_future_obligations": [
+    "PARENT_LENGTH_30_PARAMETER_EXHAUSTION",
+    "CURRENT_LENGTH_32_PARAMETER_BRANCH_EXHAUSTION",
+    "EXACT_CANONICAL_PARENT_PARSE",
+    "EXACT_CANONICAL_CURRENT_PARSE",
+    "EXACT_1C_EQUALS_PREFIX16_BITWISE",
+    "PARENT_UNSAT_PROOF_INDEPENDENT_OF_SYNTAX",
+    "SWAPPED_REDUCTION_PRESERVED",
+    "BOUNDED_SCOPE_ONLY"
+  ],
+  "schema_version": "1.0.0",
+  "status": "FROZEN_INERT_CONTRACT_NOT_IMPORTED_NOT_EXECUTED",
+  "target_result_capability": false
+}
