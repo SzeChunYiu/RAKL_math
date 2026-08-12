@@ -23,3 +23,15 @@ def test_relevant_margin_condition_is_exact():
   assert C2*c_lambda+C2*(1+cK)<=c_lambda
  C2=1.0
  assert not (C2*100+C2*(1+cK)<=100)
+def test_frozen_retrieval_accounting_is_not_backfilled():
+ receipt=load('01_frontier/YM-S1a2i_PRE_ACTION_RECEIPT_20260812_R20.json')
+ metrics=load('10_case_study/YM-S1a2i_RAKL_CYCLE_METRICS_20260812_R20.json')['RAKL_CYCLE_METRICS']['memory']
+ case=load('10_case_study/YM-S1a2i_RAKL_METHOD_CASE_STUDY_20260812_R20.json')['RAKL_METHOD_CASE_STUDY']['memory']
+ correction=load('10_case_study/YM-S1a2i_R20_RETRIEVAL_ACCOUNTING_CORRECTION_20260812.json')
+ selected=sorted(x['retrieval_id'] for x in receipt['selected_retrievals'])
+ rejected=sorted(x['retrieval_id'] for x in receipt['rejected_retrievals'])
+ assert metrics['selected_ids']==case['selected_ids']==selected
+ assert metrics['rejected_ids']==case['rejected_ids']==rejected
+ assert '#295/PR#297' in correction['later_nonfrozen_retrievals']
+ assert '#295/PR#297' not in selected
+ assert correction['frozen_receipt_unchanged'] is True
