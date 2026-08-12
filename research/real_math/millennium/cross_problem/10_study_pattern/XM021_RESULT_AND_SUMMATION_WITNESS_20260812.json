@@ -1,0 +1,109 @@
+{
+  "authority": "PROPOSAL_SHADOW_ROUTE_DIAGNOSTIC_NO_RH_OR_NS_THEOREM_AUTHORITY",
+  "cycle_id": "XM021-NS-RH-WEIGHTED-TAIL-20260812",
+  "difference_witness": {
+    "definition": "For q>=2 and sigma in {+1,-1}, set r_j^(sigma)(q)=sigma*(q-1)! if j=q and 0 otherwise.",
+    "exact_rational_calibration_q2_q8": [
+      {"aggregate": -1, "q": 2, "sigma": 1}, {"aggregate": 1, "q": 2, "sigma": -1},
+      {"aggregate": 1, "q": 3, "sigma": 1}, {"aggregate": -1, "q": 3, "sigma": -1},
+      {"aggregate": -1, "q": 4, "sigma": 1}, {"aggregate": 1, "q": 4, "sigma": -1},
+      {"aggregate": 1, "q": 5, "sigma": 1}, {"aggregate": -1, "q": 5, "sigma": -1},
+      {"aggregate": -1, "q": 6, "sigma": 1}, {"aggregate": 1, "q": 6, "sigma": -1},
+      {"aggregate": 1, "q": 7, "sigma": 1}, {"aggregate": -1, "q": 7, "sigma": -1},
+      {"aggregate": -1, "q": 8, "sigma": 1}, {"aggregate": 1, "q": 8, "sigma": -1}
+    ],
+    "fixed_index_property": "For every fixed j, r_j^(sigma)(q)=0 for every q>j, hence lim_{q->infinity} r_j^(sigma)(q)=0.",
+    "logical_conclusion": "The proposition [for every fixed j, r_j(q)->0] does not imply uniform/all-index control of the weighted aggregate. A moving-index or otherwise n-uniform bound is logically necessary for that gluing step.",
+    "moving_index_calculation": "At n=q only j=q is nonzero, so sum_{j=1}^q w_{q,j} r_j^(sigma)(q)=sigma*(-1)^(q-1). Its magnitude is exactly 1 for every q.",
+    "not_claimed": [
+      "that actual Bombieri-Lagarias remainders have diagonal factorial spikes",
+      "that RH-ANA-003-ABEL-001 fixed-n candidate is true or false",
+      "that the required n-uniform theorem is impossible",
+      "any new result on Li coefficient signs or the Riemann Hypothesis"
+    ],
+    "opposite_worlds": "sigma=+1 and sigma=-1 satisfy the identical fixed-index convergence property but give opposite order-one moving-index weighted aggregates.",
+    "target_weight": "w_{n,j}=(-1)^(j-1) binom(n,j)/(j-1)!.",
+    "verification": "Hand algebra is exact. A rational-arithmetic calibration for q=2..12 and both signs matched the formula in all 22 cases; computation is calibration only, not proof."
+  },
+  "failure_class": ["GLUING", "REPRESENTATION", "VERIFICATION_SCOPE"],
+  "framework_improvement_hypothesis": {
+    "cheapest_prospective_discriminator": "On the same frozen RH fibre, compare manual routing with and without the witness and measure whether the witness catches the forbidden fixed-n->all-n leap without blocking the legitimate fixed-n Abel atom.",
+    "expected_benefit": "Automatically force explicit limit-order/tail fields when a proposed cross-lane synthesis consumes an infinite or nested accumulation.",
+    "issue_action": "NO_NEW_RAKL_ISSUE; avoid duplicating the already-declared #384 integration boundary.",
+    "observation": "Current v3 SummationCompatibilityWitness already represents the exact quantifier/order/tail hazard and correctly fail-closes theorem authority. It is not automatically wired into contextual_theory_gluing, but the framework module itself explicitly declares that limitation.",
+    "possible_regression": "Over-triggering on finite sums or source-proved absolute convergence could add unnecessary ceremony.",
+    "target_module": "src/rakl/summation_compatibility.py / future contextual_theory_gluing integration",
+    "warranted_new_issue": false
+  },
+  "independent_review_credit": "0/3",
+  "local_vs_global": "LOCAL_FIXED_N_MATHEMATICS_UNEVALUATED; GLOBAL_ALL_N_GLUING_RULE_REFUTED_ABSTRACTLY",
+  "novelty_class": {"literature_novelty_claim": false, "primary": "transfer", "secondary": ["representation"]},
+  "outcome": "PARTIAL_SUCCESS_TARGET_SHARPENING_NO_RH_CANDIDATE",
+  "primary_source_binding": {
+    "scope_warning": "The source statement is for each positive integer n. XM021 does not attribute any uniform-in-n remainder theorem to Bombieri-Lagarias.",
+    "source": "Enrico Bombieri and Jeffrey C. Lagarias, Complements to Li's Criterion for the Riemann Hypothesis, Journal of Number Theory 77 (1999), 274-287.",
+    "theorem": "Theorem 2 arithmetic formula for lambda_n using a finite j=1..n combination of regularized von Mangoldt cutoff limits plus explicit archimedean/zeta terms.",
+    "visual_verification": "Author-hosted PDF pages 8-10 inspected; page 8 states the regularized formula, pages 9-10 justify the fixed-n cutoff limit using PNT error control."
+  },
+  "record_type": "CROSS_PROBLEM_TRANSFER_FALSIFIER_RESULT",
+  "residual_after": "Fixed-n convergence -> all-index positivity is now explicitly falsified as a bare gluing rule. Remaining load-bearing atom: prove or refute an n-uniform binomial/factorial-weighted tail/cancellation theorem for the actual zeta-specific remainder family while preserving regularization/order.",
+  "residual_before": "RH-ANA-003 seeks a weakest arithmetic cancellation/tail mechanism; RH-ANA-003-ABEL-001 freezes a fixed-n natural-order candidate with NO_N_UNIFORMITY.",
+  "same_context_expert_cell": [
+    {"finding": "Receipt preceded discriminator execution on the branch, but earlier source reconnaissance/route ideation receives no prospective credit; all records remain proposal/shadow.", "role": "RAKL v3 provenance/metrology auditor"},
+    {"finding": "Scope is acceptable only if the diagonal family is presented as a logical DifferenceWitness, not as a model of actual zeta remainders; Bombieri-Lagarias fixed-n regularization must remain exact.", "role": "analytic number theory / explicit-formula specialist"},
+    {"finding": "NS contributes the reusable pattern 'local capacity plus unsummed multiplicity is not global exhaustion'; no PDE quantitative constant transfers to RH.", "role": "PDE local-to-global specialist"},
+    {"finding": "The diagonal construction exactly separates pointwise fixed-index convergence from uniform weighted aggregate control; it does not establish what quantitative n-X schedule would suffice for the real remainder.", "role": "asymptotic/summability analyst"},
+    {"finding": "The falsifier eliminates one gluing inference and sharpens the next atom; it does not falsify RH, the fixed-n Abel candidate, or the existence of a stronger cancellation theorem.", "role": "falsification/method-science auditor"}
+  ],
+  "schema_version": "xm021-result-v1",
+  "summation_audit": {
+    "consumer": "LOCAL_TO_GLOBAL_GLUING",
+    "grants_gluing_authority": false,
+    "grants_theorem_authority": false,
+    "reason": "Fixed-n natural-order compatibility does not carry n-uniform/all-index gluing authority without the explicit weighted tail/cancellation condition.",
+    "verdict": "CONDITIONAL_REQUIRES_CONDITION"
+  },
+  "summation_compatibility_witness": {
+    "alternate_summation_equivalence_proof": "NONE_PROVIDED; no alternate blocking, regrouping, or interchange is treated as equivalent without an exact proof preserving the regularization and consumer.",
+    "atom_id": "RH-ANA-003-ABEL-001",
+    "authority_claim": "ROUTING_GLUING_ONLY_NOT_THEOREM",
+    "block_tail_or_convergence_theorem_required": "For any all-index positivity consumer, prove a binomial/factorial-weighted remainder or cancellation theorem controlling sum_{j<=n} (-1)^(j-1) binom(n,j) r_j(X)/(j-1)! in the required n,X regime; fixed-j convergence alone is insufficient.",
+    "condition": "Exact fixed-n regularization/order is preserved and an n-uniform binomial-weighted tail/cancellation certificate adequate for the all-index sign consumer is supplied.",
+    "convergence_status": "CONDITIONAL",
+    "evidence_pointers": [
+      "Bombieri-Lagarias JNT 77 (1999) Theorem 2, author-hosted PDF pp.8-10",
+      "RAKL_math:RH-ANA-003-ABEL-001-C001-FREEZE@6016dd6",
+      "RAKL_math:MATH-NS-B1A3B1A2A-R6-ANCIENT-SMOOTHING-TO-FIXED-TIME-CAPACITY"
+    ],
+    "finite_grouping_permitted": "YES",
+    "gluing_status": "CONDITIONAL",
+    "infinite_regrouping_reordering_permitted": "NO",
+    "local_block_definition": "For fixed j, cutoff prime-power block sum_{m<=X} Lambda(m)(log m)^(j-1)/m minus (log X)^j/j, retained with its exact regularization.",
+    "nested_limit_order": "FOR EACH FIXED n>=1: preserve each j regularized cutoff X=1/epsilon -> infinity with matching (log X)^j/j counterterm; then form the finite j=1..n combination. No n->infinity interchange is source-authorized by this witness.",
+    "recorded_at_utc": "2026-08-12T07:56:00Z",
+    "schema_version": "summation-compatibility-witness-v1",
+    "source_accumulation_method": "Bombieri-Lagarias Theorem 2 Guinand-Weil arithmetic formula: for each fixed n, finite j-combination of regularized von Mangoldt cutoff limits with explicit logarithmic counterterms, plus explicit archimedean/zeta terms.",
+    "unknown_fields": [],
+    "witness_canonical_sha256": "7f464a48f9b504ab1bba18b75fc9021541384661242d54bb3aa43f7c57d6e71e",
+    "witness_id": "SCW-XM021-RH-ANA003-ABEL001-20260812"
+  },
+  "transfer": {
+    "cheapest_falsifier": "Diagonal moving-index tail family; a single exact family with fixed-index convergence but order-one moving-index aggregate defeats the bare local-to-global implication.",
+    "common_abstraction": "A fixed-parameter/local estimate can be mathematically correct while failing the downstream global/all-parameter consumer because an unsummed or moving-index tail is uncontrolled.",
+    "difference_witness_id": "DW-XM021-DIAGONAL-MOVING-INDEX-TAIL",
+    "disanalogies": [
+      "NS superlevel mass is nonnegative; the RH arithmetic side is signed and renormalized, so cancellation can be essential.",
+      "NS exhausts spatial radius R at fixed time; RH has a cutoff limit plus a separate coefficient index n, so the dangerous operation is quantifier/limit transport rather than spatial monotonicity.",
+      "Absolute summability is not required by the RH fixed-n candidate and would be stronger than its natural-order claim.",
+      "The diagonal remainder witness is abstract and is not asserted to satisfy actual prime-number-theorem remainder estimates."
+    ],
+    "enabling_assumptions": [
+      "Use only the exact scoped NS R6 conclusion: the fixed-time superlevel estimate retains an unbounded spatial-radius factor R.",
+      "Treat RH-ANA-003-ABEL-001 exactly as frozen: fixed n first, natural-order endpoint limit second, NO_N_UNIFORMITY and NO_SERIES_REORDERING_OR_REGROUPING.",
+      "Use Bombieri-Lagarias Theorem 2 only as a fixed-n arithmetic identity with exact regularization; do not infer any n-uniform remainder estimate from its fixed-n proof."
+    ],
+    "predicted_principle": "Even a future proof that every fixed-n Abel identity is correct cannot, by itself, support all-index Li positivity. The missing bridge is an n-uniform binomial/factorial-weighted tail or cancellation certificate in the exact regularization/order used by the target consumer.",
+    "source_atom": "MATH-NS-B1A3B1A2A-R6-ANCIENT-SMOOTHING-TO-FIXED-TIME-CAPACITY",
+    "target_atom": "RH-ANA-003-ABEL-001"
+  }
+}
