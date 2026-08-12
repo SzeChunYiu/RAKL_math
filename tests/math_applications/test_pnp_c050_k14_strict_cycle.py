@@ -35,7 +35,10 @@ def test_k14_length_support_matches_hand_proof_calibration() -> None:
 
 def test_v2_task_episode_hash_matches_current_v3_contract() -> None:
     path = BASE / "09_trace" / "O9d12a2a1b_C050_K14_TASK_EPISODE_V2_20260812.json"
-    episode = json.loads(path.read_text())
+    container = json.loads(path.read_text())
+    assert "episode_id" not in container
+    assert container["inventory_disposition"] == "NESTED_TASK_EPISODE_NOT_TOP_LEVEL_INVENTORY_OBJECT"
+    episode = container["task_episode"]
     payload = {
         "episode_id": episode["episode_id"],
         "task_id": episode["task_id"],
@@ -86,5 +89,7 @@ def test_correction_preserves_zero_protected_novelty_and_open_root() -> None:
         "META_METHOD": 0,
     }
     assert metrics["correction_counts_as_learning"] is False
+    assert doc["replacement_task_episode"]["json_pointer"] == "/task_episode"
+    assert doc["ci_failure_correction"]["diagnosis"] == "TOOLING_REPOSITORY_INVENTORY_INTEGRATION_FAILURE_NOT_MATHEMATICAL_FAILURE"
     assert doc["root_status"] == "OPEN_NO_SOLUTION_CERTIFICATE"
     assert doc["negative_history_preserved"] is True
