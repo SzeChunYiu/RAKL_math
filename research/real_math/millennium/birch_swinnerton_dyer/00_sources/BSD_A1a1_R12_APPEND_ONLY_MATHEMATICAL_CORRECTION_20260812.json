@@ -1,0 +1,124 @@
+{
+  "record_type": "BSD_R12_APPEND_ONLY_MATHEMATICAL_CORRECTION",
+  "correction_id": "BSD-A1a1-R12-APPEND-ONLY-MATHEMATICAL-CORRECTION-20260812",
+  "authority": "SOURCE_BOUND_APPEND_ONLY_TRANSFER_CONDITION_CORRECTION_NO_NEW_THEOREM_NOVELTY",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "chronology_boundary": {
+    "historical_pr_head": "8421f272f3cb53ab486fe1d074a90ccfef93cded",
+    "historical_frozen_packet": "01_frontier/BSD_A1a1_R12_PRE_CANDIDATE_PACKET_20260812.json",
+    "historical_result": "00_sources/BSD_A1a1_R12_PINFINITY_VP_BINDING_RESULT_20260812.json",
+    "historical_files_rewritten": false,
+    "repairs_original_chronology": false,
+    "correction_role": "Successor authority/proof/residual clarification only. The frozen packet and original result remain immutable evidence of what was recorded then."
+  },
+  "preserved_historical_identities": [
+    {
+      "path": "01_frontier/BSD_A1a1_R12_PRE_CANDIDATE_PACKET_20260812.json",
+      "original_git_blob": "6d1800720d8c366cad7cb127de1c438da2f5474e",
+      "raw_sha256": "923a4d51b287e17cb95d5b529241ce08b67bdcb5810d52dca0f836460ec2bcb4"
+    },
+    {
+      "path": "00_sources/BSD_A1a1_R12_PINFINITY_VP_BINDING_RESULT_20260812.json",
+      "original_git_blob": "97d42c8a9c1b7c66c907687ee39ccbbe6e92f5da",
+      "raw_sha256": "21612360d0e25ca72e8c627fccdc4de777d5ffafeb570b587639d864415e9823"
+    },
+    {
+      "path": "09_trace/BSD_A1a1_R12_PRE_CANDIDATE_TRACE_20260812.json",
+      "original_git_blob": "ab0eeff6c4186f581bfbc26fb0c46ca2811ac1c7",
+      "raw_sha256": "1f6cd309e51eed47966ea120d091e30902127a72d6c92d30805d034049a02624"
+    }
+  ],
+  "source_authority_correction": {
+    "sole_frozen_prospective_authority": {
+      "id": "DOI:10.4007/annals.2020.191.2.1",
+      "source": "Christopher Skinner, A converse to a theorem of Gross, Zagier, and Kolyvagin, Annals of Mathematics 191 (2020), Section 2.2, pp. 337-338",
+      "authority_role": "SOLE_FROZEN_PROSPECTIVE_AUTHORITY_FOR_THE_COEFFICIENT_COMPARISON",
+      "frozen_packet_witness": "The frozen actual_fibre_contents names Skinner 2020 Annals Sec.2.2 before candidate generation.",
+      "verified_source_effects": [
+        "For W=V_pA_f/T_pA_f=A_f[p^infinity], each classical local Kummer condition is the image of the characteristic-zero Bloch-Kato H^1_f local condition.",
+        "The maximal divisible subgroup of the global p-infinity Selmer group is the image of the characteristic-zero Bloch-Kato Selmer group.",
+        "The ambient global V_p-to-W image is maximal divisible and has finite index; in the usual Selmer subgroup this gives finite quotient by the maximal divisible image."
+      ]
+    },
+    "post_freeze_corroboration": {
+      "id": "arXiv:2109.12344v3",
+      "source": "Chan-Ho Kim, On the soft p-converse to a theorem of Gross-Zagier and Kolyvagin, proof of Proposition 3.3",
+      "authority_role": "POST_FREEZE_CORROBORATION_ONLY",
+      "observed_after_freeze": "Kim states that the compact-kernel/cokernel argument for 0 -> T -> V -> V/T -> 0 applies to usual Selmer groups, explicitly recording the corank-one/dimension-one instance.",
+      "may_repair_frozen_fibre_membership": false,
+      "may_supply_retroactive_strict_discovery_credit": false
+    },
+    "other_frozen_material": {
+      "cesnavicius_role": "Representation-consistency cross-check only, not authority for the exact displayed equality.",
+      "zhang_r9_role": "Separate already-merged analytic-rank-two to p-infinity Selmer-corank lower-bound input, not authority for the coefficient identity."
+    }
+  },
+  "exact_coefficient_comparison": {
+    "object": "An elliptic curve E/Q and prime p, with T=T_pE, V=V_pE=T tensor_Zp Q_p, W=V/T=E[p^infinity], and the usual Kummer/Bloch-Kato Selmer structures.",
+    "map": "phi: H^1_f(Q,V_pE) -> Sel_{p^infinity}(E/Q)",
+    "local_condition_witness": "Skinner identifies the W-valued Kummer local condition with the image of H^1_f(Q_v,V_pE) at every place, so phi has the claimed global target.",
+    "image": "Sel_{p^infinity}(E/Q)^div",
+    "kernel": "a full Z_p-lattice in H^1_f(Q,V_pE)",
+    "kernel_reason": [
+      "The exact coefficient sequence gives a compact Z_p-submodule as kernel.",
+      "The image lies in a p-primary torsion group, so every source class has a p-power multiple in the kernel.",
+      "Therefore the compact kernel spans H^1_f(Q,V_pE) over Q_p and is a full Z_p-lattice."
+    ],
+    "quotient": "Sel_{p^infinity}(E/Q) / im(phi) is finite",
+    "quotient_reason": "The usual p-infinity Selmer group is cofinitely generated over Z_p, and its quotient by its maximal divisible subgroup is finite; Skinner identifies im(phi) with that subgroup.",
+    "dimension_corank_reason": "If d=dim_Qp H^1_f(Q,V_pE), quotienting by a full lattice gives a divisible p-primary group isomorphic noncanonically to (Q_p/Z_p)^d, hence corank d; the remaining finite quotient contributes zero corank.",
+    "conclusion": "corank_Zp Sel_{p^infinity}(E/Q) = dim_Qp H^1_f(Q,V_pE)",
+    "sha_finiteness_required": false,
+    "selmer_structure_scope": "USUAL_KUMMER_BLOCH_KATO_ONLY",
+    "excluded_structures": [
+      "strict",
+      "signed",
+      "fine",
+      "relaxed",
+      "modified"
+    ],
+    "proof_direction": "COEFFICIENT_EQUALITY; when composed with Zhang R9, only the stored lower-bound implication analytic rank two -> dimension at least two is obtained."
+  },
+  "scoped_corollary": {
+    "statement": "For the same E/Q and the same p>=5 satisfying all four hypotheses of Wei Zhang Theorem 1.4, ord_{s=1} L(E,s)=2 implies dim_Qp H^1_f(Q,V_pE)>=2.",
+    "zhang_hypotheses_preserved": [
+      "rho_{E,p} is surjective",
+      "rho_{E,p} is ramified at every prime l||N with l congruent to +/-1 modulo p",
+      "if N is not square-free, Ram(rho_{E,p}) is nonempty and, when it has size one, the number of primes l||N is even",
+      "p is good ordinary and p>=5"
+    ],
+    "strict_nonclaims": [
+      "no exact Selmer dimension two",
+      "no nonzero transverse p-local localization",
+      "no Mordell-Weil rank two",
+      "no Sha finiteness",
+      "no BSD leading-term formula",
+      "no simultaneous statement for every prime p"
+    ]
+  },
+  "r11_residual_reconciliation": {
+    "residual_id": "COMPLEX_RANK2_TO_SHARP_DERIVED_HEEGNER_KOLYVAGIN_OR_KURIHARA_ORDER_OPEN",
+    "status": "OPEN_PRESERVED",
+    "relation": "POSSIBLE_SUBROUTE_TO_EXACT_VP_DIMENSION_UPPER_BOUND_NOT_CLOSED",
+    "explanation": "R12 closes only coefficient-category equality. R11 sharp derived-order control could still be one route to the missing exact upper bound; R12 neither proves, refutes, nor silently drops it.",
+    "active_exactness_residual": "SELMER_VP_DIMENSION_LOWER_BOUND_TO_EXACT_DIMENSION2_UPPER_BOUND"
+  },
+  "full_bsd_residual_aliases": {
+    "canonical_id": "MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_PERIOD_COMPLEX_LEADING_TERM_GLUE_OPEN",
+    "legacy_aliases": [
+      "FULL_BSD_LEADING_TERM_GLUE_OPEN",
+      "SELMER_TO_MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_COMPLEX_LEADING_TERM_GLUE"
+    ],
+    "alias_effect": "Identifier reconciliation only; every named form denotes the still-open full arithmetic/leading-term glue obligation.",
+    "mathematical_status_changed": false
+  },
+  "credit_boundary": {
+    "classification": "ONE_SCOPED_SOURCE_BOUND_TRANSFER_CONDITION_PENDING_SEPARATE_LEDGER_SYNTHESIS",
+    "new_literature_theorem": false,
+    "separate_credit_for_lemma_corollary_trace_review_or_tests": false,
+    "math_only_ledger_modified_in_this_round": false,
+    "failure_cause_atlas_modified_in_this_round": false
+  },
+  "recorded_at_utc": "2026-08-12T06:26:30Z",
+  "artifact_hash": "sha256:cc29cd9a1e5d970b27a3fd9e26c9696a4415b1942dcc092c73b9623acb265406"
+}
