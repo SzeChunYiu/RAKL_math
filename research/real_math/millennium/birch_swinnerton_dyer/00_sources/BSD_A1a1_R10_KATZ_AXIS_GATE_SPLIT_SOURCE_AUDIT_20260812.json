@@ -4,9 +4,11 @@
   "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
   "active_atom": "BSD-A1a1-THETA-ORDER-COMPARISON",
   "nested_obstruction": "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE",
-  "fibre_snapshot_hash": "sha256:5913e3f7f24fe72170ced53f6cd110e0f7c6c2be84299d1d0df37ec0602950e2",
+  "fibre_snapshot_hash": "sha256:a88412d53c35650cedf9e173f9339cbc12da5a2e73c9addd2a98a309fd9c0808",
   "primary_source": {
-    "authors": ["Francesc Castella"],
+    "authors": [
+      "Francesc Castella"
+    ],
     "title": "Generalised Kato classes on CM elliptic curves of rank 2",
     "arxiv_id": "2204.09608",
     "version": "v3, revised 2026-02-13; PDF manuscript date 2026-02-17",
@@ -23,15 +25,18 @@
   },
   "verified_local_decomposition": {
     "dimension_gate": {
-      "input": "Theorem B setup plus ord_{s=1} L_p(s)=2",
-      "proof_direction": "Theorem C proof gives r=dim_Qp Sel(Q,V_pE)<=2 from Rubin's CM Iwasawa main conjecture/Perrin-Riou and r>=2 from Coates-Wiles plus p-parity, hence r=2.",
-      "uses_finite_Sha_in_this_displayed_step": false,
-      "uses_ord_Lp_star_eq_1_in_this_displayed_step": false,
+      "ambient_statement": "Castella Theorem C assumes the Theorem B setup, finite Sha(E/Q)[p^infinity], ord_{s=1} L_p(s)=2, and ord_{s=1} L_p^*(s)=1.",
+      "displayed_subargument": "Inside that stated theorem, the displayed sentences establishing r=dim_Qp Sel(Q,V_pE)=2 explicitly invoke ord_{s=1} L_p(s)=2: Rubin/Perrin-Riou give r<=2 and Coates-Wiles plus p-parity give r>=2.",
+      "explicitly_invokes_finite_Sha_in_these_displayed_sentences": false,
+      "explicitly_invokes_ord_Lp_star_eq_1_in_these_displayed_sentences": false,
+      "hypothesis_removal_authority": "NONE: this proof-interface audit does not restate Theorem C with hypotheses deleted and does not audit every transitive hypothesis of the cited Rubin/Perrin-Riou/Coates-Wiles/parity results.",
       "scope": "special CM/good-ordinary/split-p/Theorem-B setup only"
     },
     "transverse_localization_gate": {
-      "input": "after r=2, Theorem C additionally assumes finite Sha(E/Q)[p^infinity] and ord_{s=1} L_p^*(s)=1",
-      "output": "Rubin's derived elliptic unit x_p^(2) has res_p(x_p^(2)) != 0; together with Theorem B this gives the displayed two-dimensional basis",
+      "ambient_statement": "After r=2, Theorem C concludes res_p(x_p^(2)) != 0 by Rubin [Rub92, Thm. 9.5(ii)] and 'our assumptions'.",
+      "displayed_sufficient_package": "The theorem's remaining stated package includes ord_{s=1} L_p^*(s)=1 and finite Sha(E/Q)[p^infinity].",
+      "minimality_or_necessity_authority": "NONE: this bounded audit records the sufficient package and target conjunct; it does not prove those hypotheses individually necessary or a new weakened lemma.",
+      "output": "Together with Theorem B, the nonzero transverse localization yields the displayed two-dimensional basis.",
       "scope": "special CM/good-ordinary/split-p/Theorem-B setup only"
     }
   },
@@ -41,7 +46,7 @@
     "interpolation_region": "Theorem 2.1.1 states interpolation for Hecke characters of infinity type (k+j,-j) with k>=1 and j>=0.",
     "psi_E_infinity_type_reason": "lambda_0 has infinity type (-1,0); lambda_1, lambda_2 are finite order; equation (1.5) expresses psi_E as lambda_0 times finite-order conjugate characters, so psi_E has infinity type (-1,0).",
     "consequence": "psi_E itself is outside the displayed critical interpolation region, and the interpolation formula does not state a derivative/order-preservation theorem comparing ord_{complex,s=1} L(E,s) with ord_{p-adic,s=1} L_p(s) or L_p^*(s).",
-    "authority_boundary": "This is a source/interface route-pruning statement only, not a theorem that no such comparison can exist."
+    "authority_boundary": "This is only a bounded source/interface route-pruning statement: the cited interpolation formula does not itself supply the missing derivative/order transition. It is not a theorem that no comparison exists, and it supplies no transfer theorem."
   },
   "difference_witness": {
     "id": "DW-BSD-R10-TWO-AXIS-VANISHING-ORDER-INDEPENDENCE",
@@ -71,12 +76,18 @@
     "extra_trivial_zeros": "no Euler/local/exceptional-zero corrections are cancelled by assertion; any future comparison must expose them",
     "coordinate_faithfulness": "complex s-order and p-adic character-variable orders remain distinct pending an explicit differential/order-preserving theorem"
   },
-  "outcome": "PARTIAL_SUCCESS_DIMENSION_AND_TRANSVERSE_GATES_SEPARATED_NAIVE_INTERPOLATION_SHORTCUT_PRUNED",
+  "outcome": "BOUNDED_SOURCE_AND_PROOF_INTERFACE_AUDIT_CORROBORATES_EXISTING_PREMISE_REIMPORT_WARNING_ZERO_NEW_MATHEMATICAL_CREDIT",
   "residual_after": [
     "CM_SPECIAL_CELL_COMPLEX_RANK2_TO_ORD_LP_EQ_2_UNSOURCED",
-    "CM_SPECIAL_CELL_COMPLEX_RANK2_TO_TRANSVERSE_LOC_NONZERO_UNSOURCED; Castella sufficient cell uses ORD_LP_STAR_EQ_1_PLUS_FINITE_P_SHA",
+    "CM_SPECIAL_CELL_COMPLEX_RANK2_TO_TRANSVERSE_LOC_NONZERO_UNSOURCED",
     "GENERIC_NON_CM_AND_ARBITRARY_RANK_ARITHMETIC_ENTRY_OPEN",
     "MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_PERIOD_COMPLEX_LEADING_TERM_GLUE_OPEN"
   ],
-  "recorded_at_utc": "2026-08-12T03:10:00Z"
+  "recorded_at_utc": "2026-08-12T03:10:00Z",
+  "mathematical_credit": "ZERO: no new lemma, proof, transfer condition, obstruction family, or root path; the audit only separates displayed proof roles and rejects an unsupported shortcut.",
+  "atlas_warning_preserved": {
+    "id": "FM-BSD-ARITHMETIC-PREMISE-REIMPORT",
+    "status": "CORROBORATED_NOT_SUPERSEDED",
+    "meaning": "The missing complex-to-p-adic/arithmetic entry premise remains open; a representation or interpolation formula cannot silently reimport it."
+  }
 }

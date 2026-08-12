@@ -1,4 +1,4 @@
-# BSD A1a1 R10 prospective same-context expert cell
+# BSD A1a1 R10 same-context source-audit expert cell
 
 **Authority:** proposal/shadow same-context review only; independent mathematical-review credit **0/3**.  
 **Framework:** RAKL `3.0.0` at `43897d3afaf0038385102d5acc64793c05ec40f0`.  
@@ -6,7 +6,7 @@
 **Fibre:** `sha256:5913e3f7f24fe72170ced53f6cd110e0f7c6c2be84299d1d0df37ec0602950e2`.  
 **Root:** `OPEN_NO_SOLUTION_CERTIFICATE`.
 
-The cell was constituted before accepting the R10 route conclusion. Each role received the same frozen fibre and was asked to challenge a distinct possible hidden inference.
+The packet records role-separated same-context checks. All R10 context, result, review, and trace records share the same recorded second and first entered git together, so repository chronology does **not** establish a prospective freeze. This review receives no prospective or independent-review credit.
 
 1. **Complex analytic L-function specialist** — verifies that the root datum is the exact complex order at the fixed curve's Hasse–Weil L-function and refuses to replace `=2` by merely positive even order. Finding: Castella's CM setup is compatible with positive even order, but no displayed theorem in the audited pages identifies the complex derivative coordinate with a Katz p-adic derivative coordinate.
 
@@ -24,7 +24,7 @@ The cell was constituted before accepting the R10 route conclusion. Each role re
 
 ## Cell synthesis
 
-Local source verification passes in its special CM scope. The R9 bundled cell can be sharpened into a **dimension gate** and a **transverse-localization gate**. The naive route “Katz interpolation ⇒ complex/p-adic vanishing orders agree” is rejected as a representation/coordinate-faithfulness shortcut. No expert role found a source-backed exact complex-rank-two-to-Katz-order theorem in the bounded search, but literature completeness is not claimed. Root authority remains none.
+The bounded source/interface audit passes in its special CM scope. Inside Theorem C, the displayed `r=2` sentences and later transverse-localization sentence have different explicit proof roles; this observation does **not** restate Theorem C with hypotheses removed or prove a new weakened lemma. The R9 bundled cell can be audited as a **dimension subargument** and a **transverse-localization subargument**. The naive route “Katz interpolation ⇒ complex/p-adic vanishing orders agree” is rejected as a representation/coordinate-faithfulness shortcut. The three recorded queries found no source-backed exact complex-rank-two-to-Katz-order theorem, but literature completeness is not claimed. The result only corroborates existing `FM-BSD-ARITHMETIC-PREMISE-REIMPORT`; it earns zero new mathematical credit. Root authority remains none.
 
 The prior R7/R8/R9 failure family changed routing: it blocked another carrier rotation and forced a theorem-proof decomposition plus coordinate-axis audit. R9's shadow episode was retrieved but rejected as technical authority and independently reverified in the primary PDF. XM018 was retrieved but rejected as a strict transfer because it addresses intersection-only nonexpansion rather than differential coordinate faithfulness.
 

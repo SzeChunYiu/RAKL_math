@@ -10,14 +10,18 @@
 - **Missed prior experience:** `CANNOT_MEASURE` — no coverage-complete all-history denominator was frozen.
 - **Decision policy:** cheapest falsifier first: decompose the theorem proof by which premise closes which target conjunct, then demand an explicit transition preserving differential/vanishing-order information across complex and p-adic coordinates.
 - **Verification/falsifier:** current primary PDF visually checked; theorem directions and hypothesis use separated; abstract two-axis DifferenceWitness used only to test the routing inference; bounded current primary-literature search performed; seven-role same-context adversarial cell completed.
-- **Outcome:** `PARTIAL_SUCCESS_DIMENSION_AND_TRANSVERSE_GATES_SEPARATED_NAIVE_INTERPOLATION_SHORTCUT_PRUNED`. No root candidate or protected promotion.
+- **Outcome:** bounded source/proof-interface audit only. It records displayed proof roles and prunes only the unsupported interpolation shortcut. It is not a weakened lemma or transfer theorem; new mathematical credit is zero. No root candidate or protected promotion.
 - **Residual:** (A) same-E CM complex rank two -> `ord L_p=2`; (B) same-E complex rank two -> transverse `res_p != 0` (Castella's sufficient cell uses `ord L_p^*=1` + finite p-primary Sha); generic non-CM/arbitrary-rank entry; full refined BSD glue.
 - **Failure category:** mathematical open relation + representation/coordinate-faithfulness + local-to-global gluing. Local Castella theorem cell itself did not fail.
-- **Saturation:** KNOWLEDGE and RELATION reopened; OPERATOR, EXPERIENCE_PATTERN, OBSTRUCTION, PATH, META_METHOD remain flat in this cycle.
-- **Novelty class:** scoped solved route-pruning/decomposition subproblem: primary `representation`, secondary `compositional`; no literature novelty claim.
+- **Saturation:** all mathematical axes are flat for this cycle. The audit corroborates existing `FM-BSD-ARITHMETIC-PREMISE-REIMPORT`; repository growth and proof-role restatement receive zero mathematical credit.
+- **Novelty class:** none. This is a bounded source audit, not a new lemma, transfer condition, or literature-novel result.
 - **Episode -> diagnosis -> obstruction/lesson:** episode `EP-BSD-A1A1-R10-KATZ-AXIS-SPLIT-20260812` records what was done; diagnosis `DG-BSD-A1A1-R10-KATZ-AXIS-AND-GATE-SPLIT` identifies the split/axis issue; failure `F-BSD-A1A1-R10-NAIVE-KATZ-INTERPOLATION-NOT-ORDER-TRANSPORT` records the bounded failed inference; the existing A1a2/FM-BSD obstruction family is reused rather than duplicated; `L-BSD-A1A1-R10-SPLIT-DIMENSION-FROM-TRANSVERSE-LOCALIZATION-CANDIDATE` is candidate-only and not counted as canonical learning.
 - **What v3 helped:** proposal-shadow admission prevented R9/open-PR evidence from becoming authority; semantic-shortcut/LIFT lineage prevented carrier repetition; typed context translation/equivalence + DifferenceWitness discipline exposed the axis mismatch; seven-axis saturation prevented repository growth from counting as learning.
 - **What was missing / improvement hypothesis:** no defect blocked the cycle. A benchmarkable optional enhancement is a typed `differential_invariants_to_preserve` coordinate in structural mapping/translation witnesses so value interpolation and derivative/order preservation are mechanically distinguishable.
 - **Repeated process failures:** none newly observed in this R10 cycle. Historical R7–R9 arithmetic-premise relocation is a mathematical/search-pattern lineage, not a tooling chronology failure.
 
 Same-context expert review is not independent review. Computation/DifferenceWitness algebra is not proof of BSD. Root remains `OPEN_NO_SOLUTION_CERTIFICATE`.
+
+**Chronology boundary:** the R10 context, review, result, and trace entries share the same recorded second and first entered git together. The internal hash-chain order is not prospective-freeze evidence. Same-context review remains 0/3 independent credit.
+
+**Atlas warning preserved:** `FM-BSD-ARITHMETIC-PREMISE-REIMPORT` remains open and is corroborated, not superseded.
