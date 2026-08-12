@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "lesson_id": "L-PNP-C045-ROW-PROJECTION-COLLISION-NECESSITY",
+  "source_atom_id": "O9d12a2a1b-C045",
+  "status": "RETROSPECTIVE_MATHEMATICAL_LESSON_PROPOSAL_ONLY",
+  "mathematical_statement": "For the frozen one-sided recursion, new complement columns at U_n to U_{n+1} lie in a fresh column half. If every newly UNSAT prefix row has empty accumulated U_n complement fibre, then the old and new complement supports have disjoint row and column projections and no old/new complement coupling. Thus reuse of an already active prefix row is necessary for backward coupling by this mechanism.",
+  "proved_instance": "At U16 to U17, all eight new prefix rows were absent from the exact nonempty G16 complement row projection, so U17 is block-separable and rho(G17)<=sigma(G17)<=4.",
+  "transfer_conditions": [
+    "the same frozen one-sided recursive complement construction is used",
+    "the new band is classified exactly rather than sampled",
+    "the old nonempty row projection is complete",
+    "new columns lie outside the old column projection",
+    "old and new local generator-separating families are legal in the same full-cover polarity"
+  ],
+  "falsifiers": [
+    "a newly UNSAT prefix row already has a nonempty old complement fibre",
+    "a new complement column lies in the old column projection",
+    "the recursive rule contributes complement edges in another quadrant",
+    "the old active-row inventory or new UNSAT classification is incomplete"
+  ],
+  "non_guarantees": [
+    "a row-projection collision is not sufficient for cover growth",
+    "failure of block separability is not a lower bound",
+    "the U17 finite upper bound is not a uniform recurrence",
+    "no circuit lower bound or P-versus-NP authority",
+    "no strict RAKL discovery credit because U17 was publicly exposed before candidate freeze"
+  ],
+  "mathematical_saturation_credit": true,
+  "strict_rakl_discovery_credit": false,
+  "protected_novelty_promotion": false,
+  "assurance_only_zero_credit": [
+    "Git/PR/branch state",
+    "CI/test counts",
+    "schemas",
+    "hashes",
+    "serialization",
+    "runtime",
+    "chronology"
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C045_U17_COUPLING_FAILURE_DELTA_20260812.json",
+    "research/real_math/millennium/p_vs_np/04_candidates/C045_G17_COMPONENT_SEPARABILITY_RESULT_20260812.md"
+  ],
+  "artifact_hash": "sha256:c9f595dd5ec161dae7941a4c1dcfd0a54ac7c705ba7a4e673b97458f40060c2a"
+}

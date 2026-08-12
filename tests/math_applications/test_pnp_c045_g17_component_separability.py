@@ -146,3 +146,31 @@ def test_c045_receipts_trace_and_shadow_authority_fail_closed() -> None:
     assert case["RAKL_METHOD_CASE_STUDY"]["credit_policy"].startswith(
         "All mathematical and method records remain proposal/shadow"
     )
+
+FAILURE = PNP / "07_memory/O9d12a2a1b_C045_U17_COUPLING_FAILURE_DELTA_20260812.json"
+LESSON = PNP / "10_feedback/C045_ROW_PROJECTION_COLLISION_MATHEMATICAL_LESSON_20260812.json"
+
+
+def test_c045_canonical_failure_and_math_only_lesson_are_runtime_valid() -> None:
+    from rakl.failure_lattice import reconstruct_failure_lattice
+    from rakl.schema_reference_constraints import check_reference_constraints
+
+    failure = _load(FAILURE)
+    schema = _load(ROOT / "framework/RAKL/schemas/failure-experience-lattice.schema.json")
+    jsonschema.Draft202012Validator(schema, format_checker=jsonschema.FormatChecker()).validate(failure)
+    assert check_reference_constraints(failure, schema) == ()
+    lattice = reconstruct_failure_lattice(failure)
+    assert len(lattice.experiences) == 1 and lattice.links == ()
+    experience = failure["experiences"][0]
+    assert experience["artifact_hash"] == _canonical_hash(experience)
+    assert experience["diagnosis_status"] == "SUPPORTED"
+    assert "does not establish" in experience["selected_diagnosis"]
+
+    lesson = _load(LESSON)
+    assert lesson["artifact_hash"] == _canonical_hash(lesson)
+    assert lesson["mathematical_saturation_credit"] is True
+    assert lesson["strict_rakl_discovery_credit"] is False
+    assert lesson["protected_novelty_promotion"] is False
+    assert "necessary for backward coupling" in lesson["mathematical_statement"]
+    assert any("not sufficient for cover growth" in item for item in lesson["non_guarantees"])
+    assert "Git/PR/branch state" in lesson["assurance_only_zero_credit"]

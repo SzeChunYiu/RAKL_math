@@ -1,9 +1,20 @@
 # C045 G17 component-separability result
 
-**Frozen fibre commit:** `e6d7f886416bf954e368db8edd028f4870fc7a1f`  
+**Parallel fibre commit actually used:** `e6d7f886416bf954e368db8edd028f4870fc7a1f`  
 **Fibre hash:** `sha256:7c96aab2cbb6bb6151aaa9ae2c34c9259d0964417ce7c9300be9e6d04573f182`  
-**Authority:** `PROPOSAL/SHADOW ONLY`  
+**Authority:** `RETROSPECTIVE MATHEMATICAL TRUTH CHECK / NO STRICT DISCOVERY CREDIT`  
 **Root:** `OPEN_PROBLEM / NO_SOLUTION_CERTIFICATE`
+
+## Chronology boundary
+
+The mathematical result commit `b8f59bca9609d454612e45a8998e584dad7aa043`
+was publicly exposed through PR #228 no later than `2026-08-12T01:17:20Z`.
+The later merged C045 candidate/evaluator freeze was materialized only after that
+exposure. Therefore no later U17 packet can receive prospective, untouched-target,
+or strict RAKL discovery authority. The hand arguments below may be checked for
+truth retrospectively; the frozen U17 evaluator remains unauthorized and is not
+used here. Chronology, Git and CI are assurance metadata and earn zero
+mathematical saturation credit.
 
 ## Source binding
 
@@ -119,4 +130,4 @@ This is distinct from local-to-global gluing. The local G17 proof closes; the gl
 
 ## Authority and novelty
 
-The solved subproblem is defensibly `compositional` novelty with a `representation` sublemma: exact decoder classification + a new three-bit star code + the prior C044 multiplexing theorem yield the four-pair upper cover. It is proposal/shadow only. Protected retained semantic novelty remains zero on all seven RAKL axes until promotion gates authorize otherwise. Same-context review is not independent review; independent mathematical review count remains `0/3`.
+The local result is a proposal-only `compositional` mathematical contribution with a `representation` sublemma: exact decoder classification + a new three-bit star code + the prior C044 multiplexing theorem yield the four-pair upper cover. It is proposal/shadow only. Protected retained semantic novelty remains zero on all seven RAKL axes until promotion gates authorize otherwise. Same-context review is not independent review; independent mathematical review count remains `0/3`.
