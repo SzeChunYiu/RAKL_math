@@ -1,17 +1,17 @@
 {
   "allowed_result_branches": [
     "TRANSPOSE_BREAKS_REDUCTION",
-    "TRANSPOSE_PRESERVES_REDUCTION_NO_COUPLING_WITNESS",
-    "TRANSPOSE_PRESERVES_REDUCTION_EXPLICIT_COUPLING_WITNESS",
+    "TRANSPOSE_PRESERVES_REDUCTION_BUT_IS_EXACT_GENERATOR_AUTOMORPHISM",
+    "TRANSPOSE_PRESERVES_REDUCTION_NONCONJUGATE_INTERACTION",
     "CANNOT_CHECK"
   ],
-  "artifact_hash": "sha256:c84d7e25ff941ee6761d0419f6e9298c521ab3818abc1abe13c2593cecde4a1b",
+  "artifact_hash": "sha256:03a7507cec5405633c41ef939fe5cedfa4ef8ad19f140d5240df32ffaf89b27c",
   "atomic_obligations": [
-    "T1 define the transposed complement and graph-witness clauses without changing the decoded word",
-    "T2 prove the SAT reduction maps a code x||y to the transposed graph query (2^k+y,x)",
-    "T3 find or rule out an exact adjacent-length UNSAT pair with prefix(w_{2k+2}) = 1||suffix(w_{2k})",
-    "T4 if T3 succeeds, prove the resulting transposed edge shares an inherited complement column",
-    "T5 keep cover-cost, uniform recurrence, circuit consequences and P-vs-NP root glue separate"
+    "T1 define the uniform transposed complement and graph-witness clauses without changing the decoded word",
+    "T2 prove or falsify exact SAT reduction preservation under (r,M+c)->(M+c,r)",
+    "T3 before finite collision/cover search, test whether the entire recursive family is conjugate to C041 by coordinate swap",
+    "T4 if conjugacy fails, locate the first exact support DifferenceWitness; if conjugacy holds, transport rho/D/D_intersection and stop",
+    "T5 keep nonuniform/hybrid schedules, cover growth, circuit consequences and P-vs-NP root glue separate"
   ],
   "atom_id": "O9d12a2a1b-C048",
   "atomization_id": "PNP-C048-ATOMIZATION-20260812",
@@ -41,7 +41,7 @@
       "component incidence without exact inherited coordinate equality",
       "same-context review"
     ],
-    "local_success": "exact source-bound proof of reduction preservation plus one exact inherited support coupling witness",
+    "local_success": "Exact classification of uniform literal transpose: either a source-bound nonconjugate interaction witness, or a proof that it is a generator-preserving representation isomorphism and therefore cover-neutral.",
     "root_success": "unchanged full RAKL root closure contract; not in scope"
   },
   "target_access": "RETROSPECTIVE_PUBLIC_APPLICATION_STATE_ONLY"
