@@ -1,0 +1,171 @@
+{
+  "application_base_sha": "f9c1fc6d367d99cb685f310703dffacbb71f8c3e",
+  "artifact_hash": "sha256:c11023a75afaf8128d3b3233cd50eec6de63c762a335adefcece139620ffe42d",
+  "authorization": {
+    "git_blob": "c1224faa0416a20a96a29eeb6d050ef5db9e8df5",
+    "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_V21_OFFWINDOW_EVALUATION_AUTHORIZATION_20260812.json",
+    "raw_sha256": "sha256:5d0e3ad889195e7b3aeda2677b9435257a392c7a22736d31f3416e1e88695059"
+  },
+  "candidate_id": "PNP-C052-OFFWINDOW-UNSAT-ANCHOR-MARGINAL-LEMMA-v1",
+  "exact_mathematical_result": "The off-window UNSAT-anchor marginal lemma holds in its frozen scope. The least adjacent-supported premise cell is k=31 with parent (a,b,m)=(2,3,5), v in {2,3}; its seven-bit window touches clauses 2 and 3, and length 64 has exactly the three frozen current support cells. This proves only absence of a universal unequal coordinate among h[0..7].",
+  "forbidden_evaluations_executed": [],
+  "framework_pin": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+  "marginal_not_independent_caveat_preserved": true,
+  "mathematical_credit": [
+    "scoped symbolic off-window lemma",
+    "explicit UNSAT-preserving construction",
+    "k31 minimal adjacent-support classification"
+  ],
+  "obligation_status": [
+    {
+      "id": "O1",
+      "independent_check": "PASS",
+      "symbolic_proof": "PROVED"
+    },
+    {
+      "id": "O2",
+      "independent_check": "PASS",
+      "symbolic_proof": "PROVED"
+    },
+    {
+      "id": "O3",
+      "independent_check": "PASS",
+      "symbolic_proof": "PROVED"
+    },
+    {
+      "id": "O4",
+      "independent_check": "PASS",
+      "symbolic_proof": "PROVED"
+    },
+    {
+      "id": "O5",
+      "independent_check": "PASS",
+      "symbolic_proof": "PROVED"
+    },
+    {
+      "id": "O6",
+      "independent_check": "PASS",
+      "symbolic_proof": "PROVED"
+    },
+    {
+      "id": "O7",
+      "independent_check": "PASS",
+      "symbolic_proof": "PROVED"
+    },
+    {
+      "id": "O8",
+      "independent_check": "PASS",
+      "symbolic_proof": "PROVED"
+    },
+    {
+      "id": "O9",
+      "independent_check": "PASS",
+      "symbolic_proof": "PROVED"
+    },
+    {
+      "id": "O10",
+      "independent_check": "PASS",
+      "symbolic_proof": "PROVED"
+    },
+    {
+      "id": "O11",
+      "independent_check": "PASS",
+      "symbolic_proof": "PROVED"
+    },
+    {
+      "id": "O12",
+      "independent_check": "PASS",
+      "symbolic_proof": "PROVED"
+    },
+    {
+      "id": "O13",
+      "independent_check": "PASS",
+      "symbolic_proof": "PROVED"
+    }
+  ],
+  "public_k31": {
+    "current_support_cell_count": 3,
+    "minimality": "PROVED",
+    "status": "PUBLIC_REGRESSION_PASS",
+    "witness_count": 28
+  },
+  "public_trace_deltas": [
+    {
+      "action_summary": "Run the independently reimplemented grammar/length/marginal checker without overlap, native, or hidden evaluation.",
+      "artifact_hash": "sha256:8fce15ecc5c201252d207f39ef3d61187dcf0c44c351b13a759424f39b8f8e8f",
+      "atom_id": "O9d12a2a1b-C052-V2.1",
+      "chronology_order_index": 34,
+      "event_id": "O9d12a2a1b-C052-V21-E34",
+      "event_type": "FALSIFIER_RUN",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C052_V21_OFFWINDOW_INDEPENDENT_CHECK_RESULT_20260812.json",
+        "research/real_math/millennium/p_vs_np/05_falsification/c052_v21_offwindow_independent_checker.py"
+      ],
+      "next_steps": [
+        "record the result only if symbolic and independent-implementation obligations agree"
+      ],
+      "outputs": [
+        "sha256:e045740e85c7779faa2bf10b03a7882ec99c0e556ffe5d7fa4e2579834bea1e5",
+        "PASS_ALL_O1_O13"
+      ],
+      "previous_event_hash": "sha256:d1b5d84450f5746894e18297ade73af113d3737c8dd5186dafbd834df3c5ffc6",
+      "residuals": [
+        "overlap remains open",
+        "P-versus-NP root remains open"
+      ],
+      "state_summary": "Only authorized O1-O13 and the public k31 regression were checked after authorization merged.",
+      "timestamp": "2026-08-12T14:25:06Z",
+      "uncertainties": [
+        "computation is corroboration only",
+        "review remains same-context"
+      ]
+    },
+    {
+      "action_summary": "Record PROVED_EXACT_QUANTIFIED_SCOPE without overlap, hidden, native, circuit, or root escalation.",
+      "artifact_hash": "sha256:dbacfc05874002b6568d5e9fc436f6a540a7d1c68d2914a5c09492da09eeef67",
+      "atom_id": "O9d12a2a1b-C052-V2.1",
+      "chronology_order_index": 35,
+      "event_id": "O9d12a2a1b-C052-V21-E35",
+      "event_type": "RESULT_RECORDED",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C052_V21_OFFWINDOW_SYMBOLIC_HAND_PROOF_20260812.json",
+        "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C052_V21_OFFWINDOW_INDEPENDENT_CHECK_RESULT_20260812.json",
+        "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_V21_OFFWINDOW_RESULT_RECEIPT_20260812.json"
+      ],
+      "next_steps": [
+        "preserve the result as scoped mathematical experience",
+        "require a separate candidate freeze before any overlap question"
+      ],
+      "outputs": [
+        "PROVED_EXACT_QUANTIFIED_SCOPE",
+        "OPEN_NO_SOLUTION_CERTIFICATE"
+      ],
+      "previous_event_hash": "sha256:8fce15ecc5c201252d207f39ef3d61187dcf0c44c351b13a759424f39b8f8e8f",
+      "residuals": [
+        "actual H_k intersection P_(k+1) remains open",
+        "root remains open"
+      ],
+      "state_summary": "The frozen marginal lemma survives all exact symbolic obligations and the public k31 regression in its bounded scope.",
+      "timestamp": "2026-08-12T14:25:06Z",
+      "uncertainties": [
+        "no independent peer review",
+        "no overlap result"
+      ]
+    }
+  ],
+  "result_branch": "PROVED_EXACT_QUANTIFIED_SCOPE",
+  "result_id": "PNP-C052-V21-OFFWINDOW-LEMMA-RESULT-20260812",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "source_bindings": {
+    "candidate_raw_sha256": "sha256:9c1916588060aaa127b8c5a3828e9c5f07840e7f8ee986bba819829e6e3accab",
+    "check_artifact_hash": "sha256:e045740e85c7779faa2bf10b03a7882ec99c0e556ffe5d7fa4e2579834bea1e5",
+    "proof_artifact_hash": "sha256:cd51bbf8ae9acc0a2e2c77f7d8e6c052c3c3a1e9a22b50ddee6271663e6699f7"
+  },
+  "zero_credit": [
+    "Git/CI/hashes",
+    "computation as proof",
+    "independent review",
+    "overlap/native/hidden/P-versus-NP claims"
+  ]
+}
