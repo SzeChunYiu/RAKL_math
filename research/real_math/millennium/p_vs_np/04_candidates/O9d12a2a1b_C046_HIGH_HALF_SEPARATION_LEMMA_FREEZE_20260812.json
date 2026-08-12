@@ -1,0 +1,84 @@
+{
+  "artifact_hash": "sha256:1bf603a82b845edb442d54d66a6f098d06d194df79cd57cc70d32114710dccd6",
+  "assumptions": [
+    "unchanged C041 one-sided recursion",
+    "seed complement exactly frozen",
+    "canonical long words begin with MAGIC=11100101",
+    "prefix length n is at least 8 in the successor search"
+  ],
+  "atom_id": "O9d12a2a1b-C046",
+  "candidate_id": "C046-HIGH-HALF-SEPARATION-LEMMA-v1",
+  "candidate_kind": "MATHEMATICAL_LEMMA_CANDIDATE",
+  "construction": {
+    "base_case": "at U3, every inherited U2 row is below 4 and every new cross-band complement row is an old-half row below 4",
+    "canonical_claim": "for n>=8, the first prefix bit is the first MAGIC bit 1, hence every canonical n-bit prefix lies in HIGH_n",
+    "inductive_claim": "for every n>=3, Rows(U_n) is contained in [0,2^(n-1)) because U_n inherits U_(n-1) in the old-old quadrant and adds complement only for old rows against fresh columns",
+    "row_partition": [
+      "LOW_n=[0,2^(n-1))",
+      "HIGH_n=[2^(n-1),2^n)"
+    ],
+    "scope_note": "the collision search begins after U17; the stronger old-row containment starts at n=3, while the frozen candidate only claims the needed n>=17 consequence"
+  },
+  "credit_boundary": {
+    "assurance_only_zero_credit": [
+      "Git/branch/PR chronology",
+      "CI/tests",
+      "schemas/hashes/serialization",
+      "runtime and evaluator wiring"
+    ],
+    "candidate_freeze_mathematical_result_credit": false,
+    "candidate_freeze_mathematical_saturation_credit": false,
+    "candidate_mathematical_content": "lemma/construction/assumptions/transfer conditions/falsifiers"
+  },
+  "falsifiers": [
+    "a U3 complement edge has row >= 4",
+    "a recursive complement clause creates support with row >= 2^(n-1)",
+    "a canonical MAGIC word has leading bit 0",
+    "a canonical prefix belongs to both half intervals",
+    "the source family, encoding, or coordinate embedding differs from the frozen identities"
+  ],
+  "frozen_at": "2026-08-12T02:18:06Z",
+  "non_guarantees": [
+    "candidate is not yet proved",
+    "no novelty claim",
+    "no cover or circuit lower bound",
+    "no P-versus-NP authority",
+    "no framework promotion authority"
+  ],
+  "proof_obligations": [
+    "BASE_U3_ROW_PROJECTION",
+    "INDUCTIVE_SUPPORT_QUADRANT_CONTAINMENT",
+    "MAGIC_LEADING_BIT_PREFIX_CONTAINMENT",
+    "DISJOINT_HALF_INTERVAL_CONCLUSION"
+  ],
+  "schema_version": "1.0.0",
+  "source_identity": {
+    "application_base_commit": "ac8c0745be8aed791a446fd55fcf5154cac01962",
+    "framework_commit": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "pre_candidate_freeze_commit": "538d689390fb60d30cba31863c1b73cc1716036e",
+    "pre_candidate_gate": {
+      "git_blob": "471f48b0c131c7d5c5fe7ec3a34440fec603cf38",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C046_PRE_CANDIDATE_GATE_RECEIPT_20260812.json",
+      "raw_sha256": "78683a54d02c8e2d81ad36ab5fd7bd5a62e413d0d743d7a04ba5550e65d92fdb"
+    }
+  },
+  "statement": {
+    "canonical_prefix_projection": "every length-2n canonical MAGIC word has n-bit prefix in [2^(n-1), 2^n)",
+    "collision_consequence": "there is no finite canonical UNSAT prefix-row collision level in the frozen one-sided family",
+    "conclusion": "Rows(U_n) is disjoint from the set of canonical MAGIC n-bit prefixes",
+    "old_row_projection": "Rows(U_n) is a subset of [0, 2^(n-1))",
+    "quantifier": "for every integer n >= 17"
+  },
+  "target_access": {
+    "decoder_imported_or_executed": false,
+    "evaluator_imported_or_executed": false,
+    "finite_collision_level_selected": false,
+    "later_target_enumerated": false,
+    "later_target_result_accessed": false
+  },
+  "transfer_conditions": [
+    "support-producing quadrants remain old-old and old-new only",
+    "row indices are inherited without relabelling",
+    "the target property is row-projection collision"
+  ]
+}
