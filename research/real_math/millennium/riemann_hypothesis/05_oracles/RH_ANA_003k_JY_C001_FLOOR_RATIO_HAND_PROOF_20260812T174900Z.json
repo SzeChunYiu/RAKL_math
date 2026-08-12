@@ -1,0 +1,99 @@
+{
+  "artifact_hash": "sha256:806dc96800a6f793bd6cbab5aaad24c6d2a23bffed13f447f00430c4f5e15af8",
+  "atom_id": "RH-ANA-003k-JY-MOVING-DIAGONAL",
+  "authority": {
+    "actual_jy_remainder": false,
+    "formal_proof": false,
+    "independent_review": false,
+    "li_signs": false,
+    "novelty": false,
+    "riemann_hypothesis": false,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "same_context_hand_proof": true,
+    "software_credit_units": 0
+  },
+  "candidate_id": "RH-ANA-003k-JY-C001-FLOOR-RATIO-ASYMPTOTIC",
+  "chronology": {
+    "activation_head_sha": "e6bcb8ac5c01a5d2075b1be9349b30cf413a820a",
+    "activation_present_on_active_main_before_hand_proof": true,
+    "activation_public_merge_sha": "c2479b8c258146be582306d6d75b8af6b3149a81",
+    "candidate_or_falsifier_mutated": false,
+    "computation_used_in_derivation": false,
+    "hostile_worlds_materialized": false,
+    "record_checker_executed": false,
+    "result_round_base_sha": "c2479b8c258146be582306d6d75b8af6b3149a81"
+  },
+  "conclusion": {
+    "certificate_chain": "u_n(C)<F_n<=U_JY(n)<=ceil(U_JY(n))<=tilde_m_JY(n,epsilon), hence Y_n(C)<tilde_M_JY(n,epsilon)",
+    "classification_scope": "CURRENT_SUFFICIENT_CERTIFICATE_FLOOR_INCOMPATIBILITY_ONLY",
+    "limit": "For every fixed C>0, rho_C(n)=O_C(log^2(n)/n^(1/3))->0.",
+    "quantifiers": "forall fixed C>0, exists N_C, forall integers n>=N_C"
+  },
+  "evaluation_state": {
+    "final_result_receipt_pending": true,
+    "hand_proof_completed": true,
+    "hostile_worlds_pending": true,
+    "record_checker_is_proof_authority": false
+  },
+  "exact_hand_proof": {
+    "PO1-RATIO-ALGEBRA": [
+      "F_n=[2(n+0.515)/0.8274]^2=4(n+0.515)^2/(0.8274)^2 exactly.",
+      "Thus rho_C(n)=u_n(C)/F_n=K_C [n^2/(n+0.515)^2][log^2(n+e)/n^(1/3)], where K_C=C(0.8274)^2/4. The constants 0.515 and 0.8274 are unchanged and C is independent of n."
+    ],
+    "PO2-ELEMENTARY-LIMIT": [
+      "Let t_n=(1/3)log(n+e). Then t_n tends to infinity and (n+e)^(1/3)=exp(t_n).",
+      "The identity log^2(n+e)/n^(1/3)=9[(n+e)/n]^(1/3)t_n^2 exp(-t_n) is exact.",
+      "For n>=1, [(n+e)/n]^(1/3)<=(1+e)^(1/3). Since exp(t)>=t^3/6 for t>0 by the positive exponential series, 0<=9t_n^2 exp(-t_n)<=54/t_n.",
+      "Therefore 0<=log^2(n+e)/n^(1/3)<=54(1+e)^(1/3)/t_n, and the upper bound tends to zero. The squeeze theorem proves the limit."
+    ],
+    "PO3-FIXED-C-QUANTIFIER": [
+      "For an arbitrary fixed C>0, K_C is a finite positive constant and 0<n^2/(n+0.515)^2<1, so PO2 gives rho_C(n)->0.",
+      "For n>=3, n+e<=2n and log(n+e)<=log(2n)<=2log n. Hence rho_C(n)=O_C(log^2(n)/n^(1/3)).",
+      "By the limit definition, for this fixed C there exists N_C such that every integer n>=N_C satisfies rho_C(n)<1. No cutoff uniform over unbounded C is asserted."
+    ],
+    "PO4-FLOOR-CHAIN": [
+      "Since F_n>0, rho_C(n)<1 implies u_n(C)<F_n.",
+      "Because U_JY(n)=max(log 2,n-1,F_n), one has F_n<=U_JY(n); because z<=ceil(z) for every real z, U_JY(n)<=ceil(U_JY(n))."
+    ],
+    "PO5-SUFFICIENT-SEARCH-BOUND": [
+      "The previously proved strict-search family starts at m_0=ceil(U_JY(n)); hence tilde_m_JY(n,epsilon)>=ceil(U_JY(n)) for every epsilon>0 in that family. Its computable-input implementation is stated for positive rational epsilon, but the floor inequality itself is the defining start constraint and does not use epsilon magnitude."
+    ],
+    "PO6-EXPONENTIATION": [
+      "PO4 and PO5 give u_n(C)<tilde_m_JY(n,epsilon). Strict monotonicity of exp yields Y_n(C)=exp(u_n(C))<exp(tilde_m_JY(n,epsilon))=tilde_M_JY(n,epsilon)."
+    ],
+    "PO7-SCOPE": [
+      "Only eventual incompatibility of the current sufficient certificate floor with the fixed-C diagonal is proved. No statement about the actual natural-order remainder below U_JY, other sufficient moduli, internal prefixes, Li coefficients, or RH follows."
+    ]
+  },
+  "input_bindings": {
+    "activation": {
+      "path": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003k_JY_C001_FLOOR_RATIO_EXECUTION_ACTIVATION_20260812.json",
+      "raw_sha256": "sha256:8500a22966c98abce842a6fc59b484f68c97dda346d935f9aae4104b8dcfcb53"
+    },
+    "candidate": {
+      "path": "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_ANA_003k_JY_C001_FLOOR_RATIO_CANDIDATE_FREEZE_20260812.json",
+      "raw_sha256": "sha256:c51ca1d45b4454baf10e6a4f09ba0b06d5df4d5a04feb4238a5d4e1cab3687bd"
+    },
+    "falsifier": {
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003k_JY_C001_FLOOR_RATIO_FALSIFIER_FREEZE_20260812.json",
+      "raw_sha256": "sha256:524e5923462e2481e72211dede25e968b3f5157440201b89f10d70dc7c6e33a6"
+    },
+    "jy_result": {
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_JY_C001_PUBLIC_VALIDATION_RESULT_20260812.json",
+      "raw_sha256": "sha256:ee5cb68a30a234b7bf93f6988577bb22d59d41dc82e3678845c6d3dadac3a867"
+    }
+  },
+  "proof_obligation_verdicts": {
+    "PO1": "PASS_EXACT_HAND_PROOF",
+    "PO2": "PASS_EXACT_HAND_PROOF",
+    "PO3": "PASS_EXACT_HAND_PROOF",
+    "PO4": "PASS_EXACT_HAND_PROOF",
+    "PO5": "PASS_EXACT_HAND_PROOF",
+    "PO6": "PASS_EXACT_HAND_PROOF",
+    "PO7": "PASS_EXACT_HAND_PROOF"
+  },
+  "proof_record_id": "RH-ANA-003k-JY-C001-FLOOR-RATIO-HAND-PROOF-20260812T174900Z",
+  "record_type": "RH_ANA003K_JY_C001_POST_ACTIVATION_HAND_PROOF_RECORD",
+  "recorded_at_utc": "2026-08-12T17:49:00Z",
+  "schema_version": "1.0.0"
+}
