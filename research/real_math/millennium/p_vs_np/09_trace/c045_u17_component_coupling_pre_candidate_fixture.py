@@ -4,7 +4,9 @@ This module constructs governance artifacts only.  It deliberately has no
 dependency on the frozen decoder, satisfiability code, finite cover machinery,
 or any target evaluator.  Candidate generation is licensed only to freeze a
 later incidence-classification plan; no mathematical candidate or target
-output is produced here.
+output is produced here.  This revision is a prospective context refresh onto
+the latest merged application and C044 authority; the refresh earns zero
+mathematical saturation or result credit.
 """
 
 from __future__ import annotations
@@ -42,13 +44,53 @@ from rakl.semantic_shortcut import (
 
 ATOM = "O9d12a2a1b-C045"
 FRAMEWORK_SHA = "43897d3afaf0038385102d5acc64793c05ec40f0"
-APPLICATION_BASE_SHA = "e768b7da7dc48739ccb581dea0eb2cfeb8a701e7"
-C044_RETROSPECTIVE_COMMIT = "58ef4f6d18fd7ee621a0ad4e0534922fa19a03e3"
-C044_RESULT_BLOB = "93121efbc29b8f917afd8b50f6876359c3c5f9e5"
-C044_FAILURE_BLOB = "6e02d33c05e13a3a1a634a953d02f6e0a724d75b"
-C044_TOOL_BLOB = "fd68bfb412dfdab77296ee664a7722a3031325ad"
+APPLICATION_BASE_SHA = "e5f50a1dc5c20bee7cfc3c3d6edf980d5cc72e1c"
+PREVIOUS_PACKET_COMMIT = "7238973d18e67356bd5e7cbf2d6214da32f0e81e"
+C044_MERGE_COMMIT = "122ade1bbf5e396b30d28e49a20bb3b02adf4ca9"
+C044_CONTENT_COMMIT = "49b0d13bbefbc469c5f171a90434b299c5e1c5a7"
+C044_RESULT_BLOB = "a0e71d36ff2e07d79c5e55caf171792a491f1c56"
+C044_RECEIPT_BLOB = "2c164c794723fe39a49da4b110fccc4eaf427198"
+C044_FAILURE_BLOB = "e805d3f9a3e0625a4dab632b34ba359902ca9f0c"
+C044_TOOL_BLOB = "70f51a496fc1b6c325cec20d648838088ab97873"
+C044_PROOF_REVIEW_BLOB = "b2324a92a48663d5d922807bbf199c2e989232ea"
+C044_LOWER_REVIEW_BLOB = "e97fc8a5febe4474e23a9213af283c8f44243e5e"
+C044_TRACE_BLOB = "ae0a5119404a49afe84ea8c8729b898ef4d12f49"
+C044_FEEDBACK_BLOB = "9206662bdb1565569dcbd7b7ba3871bce592966a"
 C043_TOOL_BLOB = "6d2ba546cce8686a21c13e3291109f8ae945bc44"
-C043_FAILURE_BLOB = "df83caec4a0c95da2a5c929dfc2957794f41c358"
+C043_FAILURE_BLOB = "c9e47beb4059028d64f199249dfbbed663d9b668"
+
+C044_RESULT_PATH = (
+    "research/real_math/millennium/p_vs_np/04_candidates/"
+    "C044_RETROSPECTIVE_Q16_MULTIPLEXING_RESULT_20260812.md"
+)
+C044_RECEIPT_PATH = (
+    "research/real_math/millennium/p_vs_np/05_falsification/"
+    "C044_RETROSPECTIVE_Q16_MULTIPLEXING_RECEIPT_20260812.json"
+)
+C044_FAILURE_PATH = (
+    "research/real_math/millennium/p_vs_np/07_memory/"
+    "O9d12a2a1b_C044_HETEROGENEOUS_MULTIPLEXING_FAILURE_DELTA_20260812.json"
+)
+C044_TOOL_PATH = (
+    "research/real_math/millennium/p_vs_np/07_memory/"
+    "O9d12a2a1b_C044_RESEARCH_TOOL_PROPOSAL_DELTA_20260812.json"
+)
+C044_PROOF_REVIEW_PATH = (
+    "research/real_math/millennium/p_vs_np/08_reviews/"
+    "O9d12a2a1b_C044_MULTIPLEXING_PROOF_HOSTILE_REVIEW_20260812.json"
+)
+C044_LOWER_REVIEW_PATH = (
+    "research/real_math/millennium/p_vs_np/08_reviews/"
+    "O9d12a2a1b_C044_CANONICAL_LOWER_AUTHORITY_REVIEW_20260812.json"
+)
+C044_TRACE_PATH = (
+    "research/real_math/millennium/p_vs_np/09_trace/"
+    "O9d12a2a1b_C044_RETROSPECTIVE_FINAL_TRACE_20260812.json"
+)
+C044_FEEDBACK_PATH = (
+    "research/real_math/millennium/p_vs_np/10_feedback/"
+    "C044_COMPONENT_COUPLING_GATE_FEEDBACK_20260812.json"
+)
 
 ATOMIZATION_PATH = (
     "research/real_math/millennium/p_vs_np/02_problem_dag/"
@@ -110,6 +152,84 @@ def _with_artifact_hash(payload: dict) -> dict:
     return document
 
 
+def _refresh_record() -> dict:
+    return {
+        "kind": "PRE_CANDIDATE_CONTEXT_REFRESH",
+        "previous_packet_commit": PREVIOUS_PACKET_COMMIT,
+        "application_base_commit": APPLICATION_BASE_SHA,
+        "source_authority_merge_commit": C044_MERGE_COMMIT,
+        "source_authority_content_commit": C044_CONTENT_COMMIT,
+        "candidate_identity": None,
+        "candidate_proposed": False,
+        "target_output_accessed": False,
+        "target_state": "TARGET_OUTCOME_UNOBSERVED",
+        "mathematical_saturation_credit": False,
+        "mathematical_result_credit": False,
+        "strict_discovery_result_credit": False,
+    }
+
+
+def _c044_authority_bindings() -> dict:
+    return {
+        "merge_commit": C044_MERGE_COMMIT,
+        "content_commit": C044_CONTENT_COMMIT,
+        "included_in_application_base": APPLICATION_BASE_SHA,
+        "authority_boundary": (
+            "reviewed retrospective finite upper lemma; canonical lower support remains "
+            "computational only; reusable tool remains proposal-only"
+        ),
+        "files": [
+            {
+                "role": "retrospective_upper_result",
+                "path": C044_RESULT_PATH,
+                "blob": C044_RESULT_BLOB,
+            },
+            {
+                "role": "canonical_support_receipt",
+                "path": C044_RECEIPT_PATH,
+                "blob": C044_RECEIPT_BLOB,
+                "declared_artifact_hash": "sha256:0f726e5d6c59a26d66d68b239c17ac672e4bfb2dc7acf86c0e5d41ab698097c0",
+            },
+            {
+                "role": "failure_experience",
+                "path": C044_FAILURE_PATH,
+                "blob": C044_FAILURE_BLOB,
+                "declared_artifact_hash": "sha256:3dee514ab96532e869c7f3fb402844f7640667751682c86e0b338d9e1bf4c353",
+            },
+            {
+                "role": "proposal_only_tool",
+                "path": C044_TOOL_PATH,
+                "blob": C044_TOOL_BLOB,
+                "declared_artifact_hash": "sha256:94ea03890853a5cd19747e1be95c03dae009449d64a8a8854d805e9cda68367e",
+            },
+            {
+                "role": "upper_proof_hostile_review",
+                "path": C044_PROOF_REVIEW_PATH,
+                "blob": C044_PROOF_REVIEW_BLOB,
+                "declared_artifact_hash": "sha256:51fda03fd0ceb79cbf45b7056448530e11fc1df8d14b1e1a19d62b0fb5418498",
+            },
+            {
+                "role": "lower_authority_review",
+                "path": C044_LOWER_REVIEW_PATH,
+                "blob": C044_LOWER_REVIEW_BLOB,
+                "declared_artifact_hash": "sha256:f86852520c6f043e802ca0b8dff534ccb653eb3ce25f7e0495d2cbc5b3e7079a",
+            },
+            {
+                "role": "retrospective_trace",
+                "path": C044_TRACE_PATH,
+                "blob": C044_TRACE_BLOB,
+                "declared_last_event_hash": "sha256:959a2fd74585a8f8356ff4a9b7a4653a541bcd19e24f54c77fbd80f16c154aa6",
+            },
+            {
+                "role": "component_coupling_feedback",
+                "path": C044_FEEDBACK_PATH,
+                "blob": C044_FEEDBACK_BLOB,
+                "declared_artifact_hash": "sha256:c44877a11af9575517b843ca003d065a4aa6fc3c9b15ca46d05b3b7d568ea986",
+            },
+        ],
+    }
+
+
 def context() -> MathContextFiber:
     residual_transfer = MethodTransfer(
         source_context="C043 exact fixed-split residual and full-history twin classification",
@@ -167,7 +287,8 @@ def context() -> MathContextFiber:
             "pair-family, fractional, or lower-bound search?"
         ),
         source_anchors=(
-            f"git:{C044_RETROSPECTIVE_COMMIT}:C044_RETROSPECTIVE_Q16_MULTIPLEXING_RESULT_20260812.md",
+            f"git:{C044_CONTENT_COMMIT}:{C044_RESULT_PATH}@blob:{C044_RESULT_BLOB}",
+            f"git-merge:{C044_MERGE_COMMIT}",
             "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C010_fixed_gadget_block_sum_ceiling.md",
         ),
     )
@@ -184,10 +305,24 @@ def context() -> MathContextFiber:
             "upper-bound-only downstream transfer",
         ),
         "sources": (
+            f"application-base:{APPLICATION_BASE_SHA}",
             "RAKL_math:C041-frozen-decoder-definition",
             "RAKL_math:C043-exact-residual-twins",
-            f"git:{C044_RETROSPECTIVE_COMMIT}:C044-component-lemma",
+            f"git:{C044_CONTENT_COMMIT}:{C044_RESULT_PATH}@blob:{C044_RESULT_BLOB}",
+            f"git-merge:{C044_MERGE_COMMIT}",
             "ECCC-TR25-033:Definitions18-21",
+        ),
+        "source_blobs": (
+            C043_TOOL_BLOB,
+            C043_FAILURE_BLOB,
+            C044_RESULT_BLOB,
+            C044_RECEIPT_BLOB,
+            C044_FAILURE_BLOB,
+            C044_TOOL_BLOB,
+            C044_PROOF_REVIEW_BLOB,
+            C044_LOWER_REVIEW_BLOB,
+            C044_TRACE_BLOB,
+            C044_FEEDBACK_BLOB,
         ),
     }
     return MathContextFiber(
@@ -224,7 +359,7 @@ def context() -> MathContextFiber:
             "Same-domain C043/C044 structural episodes cover the required classification and "
             "component gate. No cross-domain or everyday analogy is retained."
         ),
-        frozen_at="2026-08-12T00:40:00+00:00",
+        frozen_at="2026-08-12T00:52:22+00:00",
         first_candidate_at=None,
         packet_hash=_hash(payload),
     )
@@ -289,7 +424,9 @@ def memory_review(context_hash: str) -> ResearchMemoryReview:
         evidence_pointers=(
             "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C043_TOOL_SNAPSHOT_20260812.json",
             "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C043_FIRST_ROW_SPLIT_FAILURE_DELTA_20260812.json",
-            f"git:{C044_RETROSPECTIVE_COMMIT}:O9d12a2a1b_C044_HETEROGENEOUS_MULTIPLEXING_FAILURE_DELTA_20260812.json",
+            f"git:{C044_CONTENT_COMMIT}:{C044_FAILURE_PATH}@blob:{C044_FAILURE_BLOB}",
+            f"git:{C044_CONTENT_COMMIT}:{C044_TOOL_PATH}@blob:{C044_TOOL_BLOB}",
+            f"git-merge:{C044_MERGE_COMMIT}",
         ),
         artifact_hash=_hash(payload),
     )
@@ -416,13 +553,20 @@ def transformation_memory_and_review(context_hash: str, memory_hash: str):
         ),
         evidence_pointers=(
             "research/real_math/millennium/p_vs_np/04_candidates/C043_FIRST_ROW_SPLIT_RESULT_20260812.md",
-            f"git:{C044_RETROSPECTIVE_COMMIT}:C044_RETROSPECTIVE_Q16_MULTIPLEXING_RESULT_20260812.md",
+            f"git:{C044_CONTENT_COMMIT}:{C044_RESULT_PATH}@blob:{C044_RESULT_BLOB}",
+            f"git:{C044_CONTENT_COMMIT}:{C044_PROOF_REVIEW_PATH}@blob:{C044_PROOF_REVIEW_BLOB}",
+            f"git:{C044_CONTENT_COMMIT}:{C044_LOWER_REVIEW_PATH}@blob:{C044_LOWER_REVIEW_BLOB}",
         ),
         authority=TransformationEpisodeAuthority.VERIFIED_LOCAL,
         artifact_hash=_hash(
             {
                 "episode": "C044-exact-component-coupling-gate",
                 "source_result_blob": C044_RESULT_BLOB,
+                "source_receipt_blob": C044_RECEIPT_BLOB,
+                "source_proof_review_blob": C044_PROOF_REVIEW_BLOB,
+                "source_lower_authority_review_blob": C044_LOWER_REVIEW_BLOB,
+                "source_content_commit": C044_CONTENT_COMMIT,
+                "source_merge_commit": C044_MERGE_COMMIT,
                 "authority": "VERIFIED_LOCAL_MATHEMATICAL_UPPER_LEMMA",
             }
         ),
@@ -432,7 +576,9 @@ def transformation_memory_and_review(context_hash: str, memory_hash: str):
         memory_id="PNP-C045-OTM-20260812",
         source_universe=(
             "RAKL_math PNP C010/C013/C043 current-main mathematical history",
-            f"RAKL_math retrospective C044 commit {C044_RETROSPECTIVE_COMMIT}",
+            f"RAKL_math retrospective C044 content commit {C044_CONTENT_COMMIT}",
+            f"RAKL_math merged C044 authority commit {C044_MERGE_COMMIT}",
+            f"RAKL_math application base {APPLICATION_BASE_SHA}",
             "Cavalar-Oliveira Definition-21 model",
         ),
         episodes=(episode,),
@@ -440,7 +586,9 @@ def transformation_memory_and_review(context_hash: str, memory_hash: str):
             "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C010_fixed_gadget_block_sum_ceiling.md",
             "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C013_quotient_blowup_ceiling.md",
             "research/real_math/millennium/p_vs_np/04_candidates/C043_FIRST_ROW_SPLIT_RESULT_20260812.md",
-            f"git:{C044_RETROSPECTIVE_COMMIT}:C044_RETROSPECTIVE_Q16_MULTIPLEXING_RESULT_20260812.md",
+            f"git:{C044_CONTENT_COMMIT}:{C044_RESULT_PATH}@blob:{C044_RESULT_BLOB}",
+            f"git:{C044_CONTENT_COMMIT}:{C044_TRACE_PATH}@blob:{C044_TRACE_BLOB}",
+            f"git-merge:{C044_MERGE_COMMIT}",
         ),
     )
     mapping = StructuralMappingWitness(
@@ -523,9 +671,10 @@ def expert_review_document(context_hash: str) -> dict:
         {
             "schema_version": "1.0.0",
             "review_id": "PNP-O9d12a2a1b-C045-EXPERT-CONTEXT-REVIEW-20260812",
-            "recorded_at": "2026-08-12T00:44:00+00:00",
+            "recorded_at": "2026-08-12T00:52:25+00:00",
             "atom_id": ATOM,
             "context_hash": context_hash,
+            "refresh": _refresh_record(),
             "review_authority": "SAME_CONTEXT_ROLE_SEPARATED_INTERNAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
             "roles": [
                 {
@@ -586,25 +735,30 @@ def trace(context_hash: str, memory_hash: str, shortcut_hash: str) -> MathResear
     previous = ""
     for index, kind in enumerate(kinds, start=1):
         evidence = (ATOMIZATION_PATH,)
-        outputs = ("TARGET_OUTCOME_UNOBSERVED",)
+        outputs = (
+            "PRE_CANDIDATE_CONTEXT_REFRESH",
+            "ZERO_MATHEMATICAL_SATURATION_CREDIT",
+            "ZERO_MATHEMATICAL_RESULT_CREDIT",
+            "TARGET_OUTCOME_UNOBSERVED",
+        )
         if kind is ResearchTraceEventType.CONTEXT_FROZEN:
             evidence = (CONTEXT_PATH,)
-            outputs = (context_hash, "TARGET_OUTCOME_UNOBSERVED")
+            outputs = (context_hash, *outputs)
         elif kind is ResearchTraceEventType.EXPERT_CONTEXT_REVIEW:
             evidence = (EXPERT_PATH,)
-            outputs = role_outputs
+            outputs = (*role_outputs, *outputs)
         elif kind is ResearchTraceEventType.EXPERIENCE_MEMORY_REVIEW:
             evidence = (MEMORY_PATH,)
-            outputs = (memory_hash, "TARGET_OUTCOME_UNOBSERVED")
+            outputs = (memory_hash, *outputs)
         elif kind is ResearchTraceEventType.OBSTRUCTION_TRANSFORMATION_REVIEW:
             evidence = (SHORTCUT_PATH,)
-            outputs = (shortcut_hash, "selected_mode:SEARCH", "TARGET_OUTCOME_UNOBSERVED")
+            outputs = (shortcut_hash, "selected_mode:SEARCH", *outputs)
         payload = {
             "event_id": f"O9d12a2a1b-C045-E{index:02d}",
             "atom_id": ATOM,
             "event_type": kind.value,
-            "timestamp": f"2026-08-12T00:{44 + index:02d}:00+00:00",
-            "state_summary": "Result-blind C045 immediate-successor component-incidence pre-candidate gate; no target output or candidate identity exists.",
+            "timestamp": f"2026-08-12T00:52:{29 + index:02d}+00:00",
+            "state_summary": "Prospectively refreshed, result-blind C045 immediate-successor component-incidence pre-candidate gate; no target output or candidate identity exists and the refresh earns zero mathematical saturation or result credit.",
             "action_summary": kind.value,
             "evidence_pointers": evidence,
             "alternatives_considered": (
@@ -613,7 +767,7 @@ def trace(context_hash: str, memory_hash: str, shortcut_hash: str) -> MathResear
                 "run fractional or lower-bound machinery",
                 "freeze the exact incidence-classification gate only",
             ),
-            "decision_rationale": "C043 and C044 make exact full-history component incidence the smallest discriminator that changes the proof DAG before any downstream cover action.",
+            "decision_rationale": "Latest-main and final merged C044 authority are rebound without inspecting the target; C043 and C044 still make exact full-history component incidence the smallest discriminator before any downstream cover action.",
             "outputs": outputs,
             "uncertainties": (
                 "target incidence is unobserved",
@@ -626,6 +780,7 @@ def trace(context_hash: str, memory_hash: str, shortcut_hash: str) -> MathResear
             ),
             "next_steps": (
                 "only after all gates pass, freeze an incidence-classification plan without executing it",
+                "do not count this context refresh as mathematical saturation or result progress",
             ),
             "previous_event_hash": previous,
         }
@@ -769,9 +924,10 @@ def build_documents() -> dict[str, dict]:
         {
             "schema_version": "1.0.0",
             "atomization_id": "PNP-O9d12a2a1b-C045-ATOMIZATION-20260812",
-            "recorded_at": "2026-08-12T00:39:00+00:00",
+            "recorded_at": "2026-08-12T00:52:21+00:00",
             "atom_id": ATOM,
             "parent_atom_id": "O9d12a2a1b-C044-RETROSPECTIVE",
+            "refresh": _refresh_record(),
             "target_extension": "U16_TO_U17_IMMEDIATE_SOURCE_EXTENSION",
             "object": "The untouched immediate recursive extension, its canonical cross-band relation, full accumulated row and column neighbourhood twins, and quotient support-component incidence.",
             "qoi": "EXACT_FULL_HISTORY_QUOTIENT_COMPONENT_INCIDENCE",
@@ -796,6 +952,8 @@ def build_documents() -> dict[str, dict]:
             "authority_boundary": {
                 "incidence_is_not_cover_growth": True,
                 "finite_computation_is_proof": False,
+                "context_refresh_has_mathematical_saturation_credit": False,
+                "context_refresh_has_mathematical_result_credit": False,
                 "grants_circuit_lower_bound": False,
                 "grants_p_vs_np_authority": False,
             },
@@ -806,6 +964,9 @@ def build_documents() -> dict[str, dict]:
             "schema_version": "1.0.0",
             "snapshot_id": "PNP-C045-TOOL-SNAPSHOT-20260812",
             "target_atom_id": ATOM,
+            "application_base_commit": APPLICATION_BASE_SHA,
+            "source_authority_merge_commit": C044_MERGE_COMMIT,
+            "source_authority_content_commit": C044_CONTENT_COMMIT,
             "tools": [
                 {
                     "tool_id": "T-PNP-EXACT-NEIGHBORHOOD-TYPE-UPPER-BOUND",
@@ -823,6 +984,10 @@ def build_documents() -> dict[str, dict]:
                 },
             ],
             "target_state": "TARGET_OUTCOME_UNOBSERVED",
+            "refresh_credit": {
+                "mathematical_saturation_credit": False,
+                "mathematical_result_credit": False,
+            },
         }
     )
     failure_snapshot = _with_artifact_hash(
@@ -830,6 +995,9 @@ def build_documents() -> dict[str, dict]:
             "schema_version": "1.0.0",
             "snapshot_id": "PNP-C045-FAILURE-SNAPSHOT-20260812",
             "target_atom_id": ATOM,
+            "application_base_commit": APPLICATION_BASE_SHA,
+            "source_authority_merge_commit": C044_MERGE_COMMIT,
+            "source_authority_content_commit": C044_CONTENT_COMMIT,
             "failures": [
                 {
                     "failure_id": "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING",
@@ -848,6 +1016,10 @@ def build_documents() -> dict[str, dict]:
             ],
             "reuse_assessment": "DIFFERENCE_WITNESSED_ONLY_BY_UNTOUCHED_IMMEDIATE_EXTENSION; RUN_OLD_COUPLING_FALSIFIER_FIRST",
             "target_state": "TARGET_OUTCOME_UNOBSERVED",
+            "refresh_credit": {
+                "mathematical_saturation_credit": False,
+                "mathematical_result_credit": False,
+            },
         }
     )
     expert = expert_review_document(fiber.packet_hash)
@@ -871,6 +1043,8 @@ def build_documents() -> dict[str, dict]:
             "framework_version": "0.7.0",
             "application_base_commit": APPLICATION_BASE_SHA,
             "atom_id": ATOM,
+            "refresh": _refresh_record(),
+            "source_authority_bindings": {"c044": _c044_authority_bindings()},
             "artifact_bindings": {
                 "context_hash": fiber.packet_hash,
                 "memory_review_hash": memory.artifact_hash,
@@ -878,6 +1052,7 @@ def build_documents() -> dict[str, dict]:
                 "shortcut_review_hash": shortcut.artifact_hash,
                 "trace_last_event_hash": research_trace.entries[-1].artifact_hash,
                 "preservation_sha256": preservation.document()["receipt_canonical_sha256"],
+                "c044_source_authority_bindings_hash": _hash(_c044_authority_bindings()),
             },
             "gate_verdicts": {
                 "context": plan.context_gate.verdict.value,
@@ -911,6 +1086,8 @@ def build_documents() -> dict[str, dict]:
             },
             "authority": {
                 "assurance_only": True,
+                "mathematical_saturation_credit": False,
+                "mathematical_result_credit": False,
                 "grants_mathematical_result": False,
                 "grants_theorem_truth": False,
                 "grants_novelty": False,

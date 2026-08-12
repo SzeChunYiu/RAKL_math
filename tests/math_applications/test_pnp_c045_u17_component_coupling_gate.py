@@ -61,7 +61,18 @@ def test_c045_all_current_v3_pre_candidate_gates_pass_without_candidate() -> Non
         module.build_current_gate_plan()
     )
     assert module.FRAMEWORK_SHA == "43897d3afaf0038385102d5acc64793c05ec40f0"
-    assert module.APPLICATION_BASE_SHA == "e768b7da7dc48739ccb581dea0eb2cfeb8a701e7"
+    assert module.APPLICATION_BASE_SHA == "e5f50a1dc5c20bee7cfc3c3d6edf980d5cc72e1c"
+    assert module.C044_MERGE_COMMIT == "122ade1bbf5e396b30d28e49a20bb3b02adf4ca9"
+    assert module.C044_CONTENT_COMMIT == "49b0d13bbefbc469c5f171a90434b299c5e1c5a7"
+    assert module.C044_RESULT_BLOB == "a0e71d36ff2e07d79c5e55caf171792a491f1c56"
+    assert module.C044_RECEIPT_BLOB == "2c164c794723fe39a49da4b110fccc4eaf427198"
+    assert module.C044_FAILURE_BLOB == "e805d3f9a3e0625a4dab632b34ba359902ca9f0c"
+    assert module.C044_TOOL_BLOB == "70f51a496fc1b6c325cec20d648838088ab97873"
+    assert module.C044_PROOF_REVIEW_BLOB == "b2324a92a48663d5d922807bbf199c2e989232ea"
+    assert module.C044_LOWER_REVIEW_BLOB == "e97fc8a5febe4474e23a9213af283c8f44243e5e"
+    assert module.C044_TRACE_BLOB == "ae0a5119404a49afe84ea8c8729b898ef4d12f49"
+    assert module.C044_FEEDBACK_BLOB == "9206662bdb1565569dcbd7b7ba3871bce592966a"
+    assert module.C043_FAILURE_BLOB == "c9e47beb4059028d64f199249dfbbed663d9b668"
     assert plan.context_gate.verdict is ContextGateVerdict.PASS
     assert plan.memory_gate.verdict is ResearchMemoryVerdict.PASS
     assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.PASS
@@ -172,3 +183,65 @@ def test_c045_freezes_branch_complete_incidence_gate_without_an_outcome() -> Non
     assert gate["chronology"]["target_output_accessed"] is False
     assert gate["authority"]["grants_mathematical_result"] is False
     assert gate["authority"]["grants_p_vs_np_authority"] is False
+
+
+def test_c045_is_a_zero_credit_pre_candidate_context_refresh() -> None:
+    module = _load_fixture()
+    documents = module.build_documents()
+    atomization = documents["atomization"]
+    gate = documents["gate"]
+
+    assert atomization["refresh"]["kind"] == "PRE_CANDIDATE_CONTEXT_REFRESH"
+    assert atomization["refresh"]["previous_packet_commit"] == (
+        "7238973d18e67356bd5e7cbf2d6214da32f0e81e"
+    )
+    assert atomization["refresh"]["mathematical_saturation_credit"] is False
+    assert atomization["refresh"]["mathematical_result_credit"] is False
+    assert atomization["refresh"]["target_output_accessed"] is False
+
+    assert gate["application_base_commit"] == module.APPLICATION_BASE_SHA
+    assert gate["refresh"]["kind"] == "PRE_CANDIDATE_CONTEXT_REFRESH"
+    assert gate["refresh"]["mathematical_saturation_credit"] is False
+    assert gate["refresh"]["mathematical_result_credit"] is False
+    assert gate["refresh"]["strict_discovery_result_credit"] is False
+    assert gate["refresh"]["candidate_identity"] is None
+    assert gate["refresh"]["target_output_accessed"] is False
+    assert gate["authority"]["mathematical_saturation_credit"] is False
+    assert gate["authority"]["mathematical_result_credit"] is False
+
+    c044 = gate["source_authority_bindings"]["c044"]
+    assert c044["merge_commit"] == module.C044_MERGE_COMMIT
+    assert c044["content_commit"] == module.C044_CONTENT_COMMIT
+    assert c044["included_in_application_base"] == module.APPLICATION_BASE_SHA
+    assert {binding["blob"] for binding in c044["files"]} == {
+        module.C044_RESULT_BLOB,
+        module.C044_RECEIPT_BLOB,
+        module.C044_FAILURE_BLOB,
+        module.C044_TOOL_BLOB,
+        module.C044_PROOF_REVIEW_BLOB,
+        module.C044_LOWER_REVIEW_BLOB,
+        module.C044_TRACE_BLOB,
+        module.C044_FEEDBACK_BLOB,
+    }
+    files = {binding["role"]: binding for binding in c044["files"]}
+    assert files["retrospective_upper_result"] == {
+        "role": "retrospective_upper_result",
+        "path": module.C044_RESULT_PATH,
+        "blob": module.C044_RESULT_BLOB,
+    }
+    assert files["canonical_support_receipt"]["path"] == module.C044_RECEIPT_PATH
+    assert files["canonical_support_receipt"]["declared_artifact_hash"] == (
+        "sha256:0f726e5d6c59a26d66d68b239c17ac672e4bfb2dc7acf86c0e5d41ab698097c0"
+    )
+    assert files["failure_experience"]["path"] == module.C044_FAILURE_PATH
+    assert files["failure_experience"]["declared_artifact_hash"] == (
+        "sha256:3dee514ab96532e869c7f3fb402844f7640667751682c86e0b338d9e1bf4c353"
+    )
+    assert files["proposal_only_tool"]["path"] == module.C044_TOOL_PATH
+    assert files["proposal_only_tool"]["declared_artifact_hash"] == (
+        "sha256:94ea03890853a5cd19747e1be95c03dae009449d64a8a8854d805e9cda68367e"
+    )
+    assert files["upper_proof_hostile_review"]["path"] == module.C044_PROOF_REVIEW_PATH
+    assert files["lower_authority_review"]["path"] == module.C044_LOWER_REVIEW_PATH
+    assert files["retrospective_trace"]["path"] == module.C044_TRACE_PATH
+    assert files["component_coupling_feedback"]["path"] == module.C044_FEEDBACK_PATH
