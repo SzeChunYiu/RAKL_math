@@ -1,0 +1,47 @@
+{
+  "record_type": "ResearchMemoryReviewShadow",
+  "authority": "PROPOSAL_SHADOW_SEARCH_GUIDANCE_ONLY",
+  "atom_id": "H4d1c-C010",
+  "context_hash": "sha256:bd78e3af63a1eec1c262852b544e200fb1a12673b8682242bf1e1b5db57f17f2",
+  "success_tool_inventory": {
+    "query_families": ["witness-incidence image coverage", "relative Hilbert smoothness", "base-change smoothness", "signed-Q witness source"],
+    "relevant_tool_ids": [],
+    "status": "NO_RELEVANT_PROMOTED_TOOL_MATCH"
+  },
+  "failure_experience_review": {
+    "retrieved_ids": [
+      "MATH-HODGE-C007-SINGULAR-TANGENT-SURJECTIVITY-NONIMPLICATION",
+      "MATH-HODGE-C006-RAMIFICATION-POINTWISE-DIFFERENTIAL-NONIMPLICATION",
+      "MATH-HODGE-C004-PROJECTION-KERNEL-NONIMPLICATION",
+      "H4d1c-C001-RATIONAL-COEFFICIENT-CANCELLATION",
+      "F-H4D1C-C008-PREFREEZE-HYPOTHESIS-EXPOSURE",
+      "F-H4D1C-C009-PREFREEZE-HYPOTHESIS-EXPOSURE"
+    ],
+    "selected_ids": [
+      "MATH-HODGE-C007-SINGULAR-TANGENT-SURJECTIVITY-NONIMPLICATION",
+      "MATH-HODGE-C006-RAMIFICATION-POINTWISE-DIFFERENTIAL-NONIMPLICATION",
+      "H4d1c-C001-RATIONAL-COEFFICIENT-CANCELLATION",
+      "F-H4D1C-C009-PREFREEZE-HYPOTHESIS-EXPOSURE"
+    ],
+    "rejected_ids": [
+      {"id": "MATH-HODGE-C004-PROJECTION-KERNEL-NONIMPLICATION", "reason": "different proxy level; does not decide branch-base-change necessity"},
+      {"id": "F-H4D1C-C008-PREFREEZE-HYPOTHESIS-EXPOSURE", "reason": "retained in repeat lineage; C009 is the nearest prior process instance"}
+    ],
+    "warnings": [
+      "C007: use the actual morphism/image rather than raw tangent rank at a singular point.",
+      "C006: selected-point differential surjectivity is not necessary for image coverage.",
+      "C001: preserve exact total signed-Q class semantics; do not infer componentwise persistence."
+    ]
+  },
+  "open_shadow_current_work": [
+    {"id": "PR350/H4d1c-C009", "disposition": "SELECTED_AS_NONAUTHORITY_ROUTE_CONTEXT"},
+    {"id": "PR340/H4d1c-C008", "disposition": "SELECTED_AS_NONAUTHORITY_SOURCE_CONTEXT"}
+  ],
+  "pre_memory_action_preference": "EXTEND_C009_BY_SEARCHING_FOR_AMBIENT_RELATIVE_HILBERT_SMOOTHNESS_OVER_S",
+  "post_memory_action_preference": "TEST_NECESSITY_OF_AMBIENT_SMOOTHNESS_ON_THE_BRANCH_RESTRICTED_CONSUMER_BEFORE_ANY_EXTENSION",
+  "observable_route_change": true,
+  "causal_RAKL_attribution": "CANNOT_MEASURE: no matched MODEL_ONLY/RAKL_RESET/RAKL_LEARNING control; only within-cycle action-state change is observed.",
+  "memory_counts": {"retrieved_failure_or_episode_ids": 6, "selected": 4, "rejected": 2, "promoted_tools_selected": 0, "open_shadow_items_consulted": 2},
+  "missed_relevant_memory": "CANNOT_MEASURE: bounded connector retrieval is not an exhaustive recall universe.",
+  "frozen_at_utc": "2026-08-12T07:54:00Z"
+}
