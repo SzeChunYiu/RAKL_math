@@ -1,0 +1,52 @@
+atom_id: RH-ANA-003c
+parent_atom_id: RH-ANA-003b
+root_issue: 3
+status: CONTEXT_REQUIRED
+root_authority: NONE
+
+question: >-
+  Construct a source-bound proper decomposition of Coffey's full S_Lambda(n),
+  for example by prime/logarithmic scale or a rigorously justified
+  Laguerre-kernel partition, and identify the smallest one-sided or
+  cancellation-preserving sub-obligation that is strictly weaker than
+  polynomial boundedness of the full S_Lambda, strong enough to change the
+  Li lower-bound ledger after gluing, and accompanied by a DifferenceWitness
+  against finite-prefix, zero-density-average, and absolute-majorant failures.
+
+opened_by:
+  result: PARTIAL_SUCCESS_ROUTE_PRUNING
+  failure_ids:
+    - F-RH-ANA-003b-FULL-SLAMBDA-POLYNOMIAL-SMALLNESS-ROOT-COUPLED
+    - F-RH-ANA-003b-PRIME-REMAINDER-AS-WEAKER-BRIDGE
+  diagnosis_id: D-RH-ANA-003b-TAME-COMPLEMENT-RETAINS-ROOT-MODE
+  obstruction_id: O-RH-ANA-003b-FULL-REMAINDER-ROOT-COUPLING
+  predecessor_trace_event_id: RH-ANA-003b-E11
+  task_episode_id: EP-RH-ANA-003b-ROOT-COUPLING-20260811-R3
+
+known_boundary:
+  - Coffey 0706.0343v2 gives S_2=S_gamma+S_Lambda with S_gamma=O(n).
+  - Coffey math-ph/0505052v1 gives lambda_n=S_2+S_1+an explicit linear term and S_1=(n/2)log(n)+O(n).
+  - Therefore lambda_n-S_Lambda(n)=(n/2)log(n)+O(n) unconditionally.
+  - Voros math/0506326v2 gives the rigorous RH asymptotic alternative: tempered n log n growth under RH versus exponentially growing two-sign oscillations if RH is false.
+  - Hence polynomial boundedness of the full S_Lambda is RH-equivalent; a global polynomial/PNT bound for the entire remainder is not a strictly weaker child lemma.
+  - One-sided or proper localized subcomponent bounds are not classified by the parent cycle.
+
+candidate_generation_gate:
+  allowed: false
+  reason: >-
+    RH-ANA-003c is a fresh representation/decomposition child. Before any
+    kernel partition, prime-window estimate, mollifier/resonance construction,
+    zero-density transfer, or positivity mechanism, freeze a new
+    MathContextFiber, exact source definitions and convergence/quantifier
+    ledger, analogues/disanalogies, same-context expert cell, dual memory
+    review, and hash-chained pre-candidate trace under current RAKL main.
+
+next_pre_candidate_discriminators:
+  - Choose a proper S_Lambda decomposition whose pieces have source-valid convergence and n-uniformity.
+  - For every proposed piecewise bound, run an obligation-strength audit to show it does not alone reconstruct polynomial boundedness of the full S_Lambda.
+  - Preserve Laguerre-kernel sign/oscillation; reject termwise absolute majorants unless a DifferenceWitness repairs the R2 cancellation failure.
+  - Treat zero-density and mollifier/resonance averages as non-pointwise until an exact bridge to the selected prime-window ledger is proved.
+  - Separate local prime-window estimates from global reassembly/gluing and from the final all-n Li positivity obligation.
+  - Use numerics only to calibrate or falsify kernel partitions; no finite prefix can promote the root.
+
+authority: STRICT_CHILD_RESIDUAL_ONLY / NO_SUCCESSOR_MATHEMATICAL_CANDIDATE / ROOT_AUTHORITY_NONE

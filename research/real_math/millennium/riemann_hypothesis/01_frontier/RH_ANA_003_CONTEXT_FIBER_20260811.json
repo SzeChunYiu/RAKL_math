@@ -1,0 +1,74 @@
+{
+  "schema": "RAKL-v3-shadow-MathContextFiber",
+  "atom_id": "RH-ANA-003",
+  "problem_signature": [
+    "Riemann Hypothesis",
+    "Li coefficients",
+    "Bombieri-Lagarias arithmetic explicit formula",
+    "prime/archimedean cancellation",
+    "all-index uniformity",
+    "zero-density disanalogy"
+  ],
+  "root_contract": {
+    "statement": "Every nontrivial zero rho of zeta(s) has Re(rho)=1/2.",
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "success_contract_path": "research/real_math/millennium/riemann_hypothesis/00_problem_contract/success_contract.yaml"
+  },
+  "active_atom": {
+    "question": "In the Bombieri-Lagarias arithmetic formula for lambda_n, locate the first exact n-dependent cancellation/uniformity coordinate where available unconditional prime-side/zero-density control ceases to imply all-n positivity, without importing an RH-equivalent condition.",
+    "residual_before": "RH-ANA-003: prime/archimedean or all-n uniform-tail coordinate not localized.",
+    "candidate_generation": "BLOCKED; source reconstruction and falsification only."
+  },
+  "actual_fibre_consulted": [
+    "00_problem_contract/canonical_statement.md",
+    "00_problem_contract/success_contract.yaml",
+    "02_problem_dag/RH_ANA_003.yaml",
+    "07_memory/RH_ANA_002_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "07_memory/RH_ANA_002_POSTAUDIT_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+    "07_memory/RH_ANA_002_SUZUKI_FAITHFULNESS_TASK_EPISODE_RUNTIME_HASH_SUCCESSOR_V2_20260811.json",
+    "cross_problem/07_memory/XM001_RESEARCH_TOOL_DELTA_20260811.json",
+    "Bombieri-Lagarias 1999 primary preprint, Theorem 2 and proof pp. 6-10",
+    "Lagarias arXiv:math/0404394v4",
+    "Guth-Maynard arXiv:2405.20552"
+  ],
+  "equivalent_analogues": [
+    {
+      "id": "A-RH-LI",
+      "statement": "Li positivity lambda_n>=0 for all n is RH-equivalent.",
+      "use": "root binding only",
+      "disanalogy": "equivalence itself supplies no weaker proof obligation."
+    },
+    {
+      "id": "A-RH-WEIL",
+      "statement": "Weil explicit-formula positivity on the full admissible class is RH-equivalent.",
+      "use": "checks exact-transform provenance",
+      "disanalogy": "a specialized Bombieri-Lagarias polynomial/test family is not automatically a positive core with a continuity theorem."
+    }
+  ],
+  "near_solved_analogues": [
+    {
+      "id": "A-RH-PNT-RENORM",
+      "statement": "For each fixed j, Bombieri-Lagarias define the renormalized von-Mangoldt moment limit used in Theorem 2.",
+      "transfer_assumption": "fixed-j existence and regularization may be used exactly as source-proved.",
+      "difference_witness": "RH needs a sign statement after an n-dependent alternating triangular transform over every 1<=j<=n; fixed-j existence does not provide uniform sign or stability in n."
+    },
+    {
+      "id": "A-RH-ZD-GM",
+      "statement": "Guth-Maynard prove N(sigma,T)<=T^{30(1-sigma)/13+o(1)}.",
+      "transfer_assumption": "usable as a current unconditional density input.",
+      "difference_witness": "a density upper bound need not vanish and therefore does not exclude an isolated off-line zero; Li all-index positivity is sensitive to every such zero."
+    }
+  ],
+  "expert_cell": [
+    {"role": "analytic-number-theory lead", "background": "zeta explicit formulas and zero-free/density estimates", "task": "source-bind Theorem 2 and identify quantifier order."},
+    {"role": "Li-Weil/positivity specialist", "background": "Li coefficients, Weil functional and transform domains", "task": "separate exact equivalence from weaker source-local obligations."},
+    {"role": "mollifier/resonance specialist", "background": "mean values, mollifiers, resonance and density", "task": "test whether average zero control can close a pointwise all-n sign obligation."},
+    {"role": "adversarial proof auditor", "background": "uniform asymptotics and counterexample-first analysis", "task": "construct the cheapest inference falsifier and separate local from gluing failure."},
+    {"role": "RAKL v3 provenance/metrology lead", "background": "TaskEpisode, saturation and promotion gates", "task": "track memory influence, source authority, hashes, novelty and gate status."}
+  ],
+  "counterfactual_pre_memory_pre_gate_preference": "Audit restricted positivity/test-function extension to the full Weil class, counterexample-first at density/continuity/boundary steps.",
+  "search_policy": "RAKL memory routed away from another positivity-equivalence variant to RH-ANA-003 Bombieri-Lagarias prime/archimedean all-n uniformity; counterexample-first; source-bound; candidate-free.",
+  "proposal_authority": "SHADOW_ONLY",
+  "fibre_snapshot_hash": "sha256:1708d7be2a9a8403c727ee4e5c1723fe5ff44e46fed3843290e804b3c84b4dc1",
+  "hash_scope": "canonical JSON of this record before insertion of fibre_snapshot_hash"
+}
