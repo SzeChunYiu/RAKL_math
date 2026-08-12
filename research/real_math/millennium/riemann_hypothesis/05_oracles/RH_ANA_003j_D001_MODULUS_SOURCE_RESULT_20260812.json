@@ -1,0 +1,72 @@
+{
+  "artifact_hash": "sha256:c4860a3df86fc2fca2a8b0cbdd6e54d9e185584814e3095370ff3d5efb292306",
+  "atom_id": "RH-ANA-003j",
+  "computation_as_proof": false,
+  "discriminator_id": "RH-ANA-003j-D001-C002-EXPLICIT-BOUNDARY-TAIL-MODULUS-SOURCE-AUDIT",
+  "exact_mathematical_result": {
+    "conditional_boundary_tail_modulus": {
+      "authority": "SAME_CONTEXT_HAND_DERIVATION_CONDITIONAL_ON_UNEXPOSED_BELLOTTI_CONSTANTS",
+      "coefficient_identity_proof": [
+        "For 0<=j<=n-2, the u^j coefficient of P_n'-P_n is (-1)^(j+1)[binom(n,j+2)+binom(n,j+1)]/j!.",
+        "Pascal's identity makes this (-1)^(j+1)binom(n+1,j+2)/j!; the same formula at j=n-1 equals -(-1)^(n-1)/(n-1)!.",
+        "Therefore |P_n(u)|<=H_n(u) and |P_n'(u)-P_n(u)|<=Q_n(u) for u>=0 with every n-dependence explicit."
+      ],
+      "conditional_envelope": {
+        "endpoint_extension": "R_n is constant on each interval [m,m+1), so the C002 nonintegral identity plus the monotone envelope extends the estimate to every real cutoff without regrouping or reordering.",
+        "formula": "B_(K_B,x_B)(n,u)=H_n(u)[exp(-u)+K_B exp(55A_0)exp(-d sqrt(u))] + sum_(j=0)^(n-1) q_(n,j)[Gamma(j+1,u)+2K_B exp(55A_0)d^(-2j-2)Gamma(2j+2,d sqrt(u))]",
+        "monotonicity_proof": "On u>=U_0, every u^j exp(-u) and u^j exp(-d sqrt(u)) term is nonincreasing; every upper incomplete-gamma term decreases in its lower endpoint. Thus B is nonincreasing and tends to zero.",
+        "proved_implication": "For every fixed n>=1 and nonintegral Y=exp(u) with u>=U_0, |S_n-R_n(Y)|<=B_(K_B,x_B)(n,u); for integer Y use Y*=Y+1/2, so R_n(Y*)=R_n(Y) and monotonicity gives B(n,log Y*)<=B(n,log Y). Hence the same threshold controls every real Y, including integer endpoints.",
+        "tail_derivation": [
+          "The floor-error part gives integral_u^infinity Q_n(s)exp(-s)ds=sum_j q_(n,j)Gamma(j+1,u).",
+          "The PNT-error part is bounded using s=r^2 by 2 sum_j q_(n,j)d^(-2j-2)Gamma(2j+2,d sqrt(u))."
+        ],
+        "validity_floor": "U_0(n;d,x_B)=max(e, log x_B, n-1, [2(n-1)/d]^2)",
+        "variable": "u=log Y"
+      },
+      "conditional_modulus": {
+        "existence": "B is nonincreasing and tends to zero, so the defining integer set is nonempty.",
+        "forall_Y_statement": "For every real Y>=M_(K_B,x_B)(n,epsilon), the natural-order endpoint error is <epsilon.",
+        "log_threshold": "m_(K_B,x_B)(n,epsilon)=the least integer m>=ceil(U_0) with B_(K_B,x_B)(n,m)<=epsilon/2",
+        "source_complete_materialization_status": "NOT_MATERIALIZED_BECAUSE_K_B_AND_X_B_ARE_NOT_EXPOSED",
+        "threshold": "M_(K_B,x_B)(n,epsilon)=exp(m_(K_B,x_B)(n,epsilon))"
+      },
+      "conditional_source_bound": "If |psi(x)-x|/x <= K_B exp(55A_0)exp(-omega(x)) for all x>=x_B, then |A(x)|<=1+K_B exp(55A_0)x exp(-omega(x)).",
+      "definitions": [
+        "P_n(u)=L_(n-1)^(1)(u)=sum_(j=0)^(n-1) (-1)^j h_(n,j) u^j, h_(n,j)=binom(n,j+1)/j!",
+        "P_n'(u)-P_n(u)=sum_(j=0)^(n-1) (-1)^(j+1) q_(n,j)u^j, q_(n,j)=binom(n+1,j+2)/j!",
+        "H_n(u)=sum_(j=0)^(n-1) h_(n,j)u^j and Q_n(u)=sum_(j=0)^(n-1)q_(n,j)u^j for u>=0",
+        "Gamma(r,z)=integral_z^infinity t^(r-1)exp(-t)dt",
+        "d=(5^6 A_0^3/(2^2 3^4))^(1/5)",
+        "K_B>0 and x_B are placeholders for the unexposed Theorem-1.5 implied constant and validity threshold"
+      ],
+      "elementary_omega_reduction": "For s>=e, log s<=sqrt(s), hence omega(exp(s))=d s^(3/5)/(log s)^(1/5)>=d sqrt(s).",
+      "scope_exclusions": [
+        "no numerical or source-bound K_B",
+        "no numerical or source-bound x_B",
+        "no frozen epsilon_n",
+        "no numerical cutoff constant C",
+        "no comparison M(n,epsilon_n)<=Y_n",
+        "no internal-prefix maximal bound",
+        "no Li positivity or RH implication",
+        "no formal proof or independent review"
+      ]
+    },
+    "laguerre_constant_ledger": "The exact finite normalization yields h_(n,j)=binom(n,j+1)/j! and q_(n,j)=binom(n+1,j+2)/j!, so both polynomial coefficient envelopes are explicit finite expressions in n.",
+    "source_completeness_failure": "Bellotti v1 Theorem 1.5 supplies only Delta(x)<<exp(55A_0)exp(-omega(x)) for sufficiently large x. Its absolute implied constant K_B and sufficiently-large threshold x_B are not explicitly bound in the acquired v1, so D001 cannot materialize the required source-derived explicit M(n,epsilon).",
+    "truth_boundary": "The conditional envelope is a mathematical implication for any fixed admissible K_B,x_B satisfying the source inequality. It is not an unconditional explicit modulus artifact until exact source-valid K_B,x_B are supplied."
+  },
+  "formal_proof": false,
+  "independent_review": false,
+  "novelty_claim": false,
+  "record_type": "RH_ANA003J_D001_MODULUS_SOURCE_RESULT",
+  "result_status": "SCOPED_SOURCE_SUFFICIENCY_FAILURE_WITH_CONDITIONAL_PARAMETERIZED_ENVELOPE",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "selected_result_branch": "QUALITATIVE_OR_INEFFECTIVE_SOURCE_ONLY_NO_EXPLICIT_MODULUS",
+  "source_audit_hash": "sha256:f0a81a0a7fdc358e1796ba4d1ee95c2d5f6e706df07b3a94bee72af64652f701",
+  "target_identity_firewall": {
+    "M_n_epsilon_n_le_Y_n_status": "NOT_AUTHORIZED_NOT_EVALUATED",
+    "cutoff_constant_identity": null,
+    "diagonal_comparison_attempted": false,
+    "epsilon_sequence_identity": null
+  }
+}

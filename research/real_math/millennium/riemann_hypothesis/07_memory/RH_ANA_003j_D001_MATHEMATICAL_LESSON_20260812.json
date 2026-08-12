@@ -1,0 +1,45 @@
+{
+  "artifact_hash": "sha256:58950e5d3e0dbd26220f18dc6544af6de1c4cf6acb70e6f279c21bce935c799a",
+  "atom_id": "RH-ANA-003j",
+  "attempted_mathematical_implication": "Turn the acquired fixed-n Abel identity and Bellotti prime-number-theorem decay into an explicit n-dependent modulus M(n,epsilon) by exposing every Laguerre, boundary, tail, and validity constant.",
+  "exact_mathematical_result_or_failure": "The Laguerre coefficient ledgers and a monotone boundary-plus-tail envelope are derivable explicitly in n, conditional on constants K_B and x_B in Bellotti's estimate. But acquired Bellotti v1 states the estimate with << for sufficiently large x and does not expose K_B or x_B. Therefore the source-complete explicit modulus was not materialized; the selected branch is QUALITATIVE_OR_INEFFECTIVE_SOURCE_ONLY_NO_EXPLICIT_MODULUS, where only the qualitative/unexposed disjunct is asserted.",
+  "mathematical_falsifier": "An exact passage in the acquired Bellotti v1 that binds a valid numerical or explicit K_B and x_B for Theorem 1.5 falsifies the missing-source-coordinate classification. A counterexample to the coefficient identity, boundary-plus-tail inequality, omega lower bound, monotonicity domain, or integer-endpoint step-function extension falsifies the corresponding conditional envelope step.",
+  "proof_or_source_evidence": [
+    "research/real_math/millennium/riemann_hypothesis/03_sources/RH_ANA_003j_D001_EXACT_SOURCE_SCOPE_AUDIT_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_MODULUS_SOURCE_RESULT_20260812.json",
+    "Bellotti arXiv:2508.02041v1, Theorem 1.5 and proof pages 14-15, PDF SHA-256 39a39e3dbc73506cf5dfd0b8a18b24e85302d305fa3059a60abcfa6f23292568",
+    "Dunster-Gil-Segura arXiv:1705.01190v1, equation (1.1), PDF SHA-256 e93985f8ede2799f6e9f3b12dad2565228fefa0b1f662306e2caf9768d2b423c",
+    "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003_ABEL_001_C002_PROOF_CHECK_RESULT_20260812.json"
+  ],
+  "record_type": "RH_ANA003J_D001_SEVEN_FIELD_MATHEMATICAL_LESSON",
+  "repair_or_next_discriminator": "Before revisiting epsilon_n or Y_n, freeze one authoritative explicit PNT bound with a numerical constant and validity range, or perform a separately frozen line-by-line constant extraction from Bellotti's proof including H, O, and every << dependency. Then substitute those exact values into the already derived conditional envelope and test source-complete modulus materialization.",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "scope": "Exact acquired C002 natural-order fixed-n remainder, Bellotti arXiv:2508.02041v1, and DGS equation (1.1). The direct Abel formula uses a nonintegral cutoff, then step-function constancy and envelope monotonicity extend it to every real cutoff. The result is endpoint-only. It makes no claim that all literature lacks explicit PNT constants, and it does not address internal prefixes, epsilon_n, numerical C, diagonal compatibility, Li positivity, novelty, or RH.",
+  "supported_and_competing_mathematical_causes": {
+    "competing": [
+      {
+        "cause": "the exact Laguerre normalization is unavailable or mismatched",
+        "status": "REFUTED_BY_DGS_EQUATION_1_1_SPECIALIZATION"
+      },
+      {
+        "cause": "even with K_B,x_B the Abel tail cannot be bounded for all later Y",
+        "status": "REFUTED_BY_THE_CONDITIONAL_MONOTONE_ENVELOPE_DERIVATION"
+      },
+      {
+        "cause": "Bellotti's argument is genuinely ineffective",
+        "status": "NOT_ESTABLISHED; THE PAPER SAYS RELATED RESULTS CAN BE MADE FULLY_EXPLICIT"
+      },
+      {
+        "cause": "another explicit PNT theorem or a full constant extraction from the proof supplies valid K_B,x_B",
+        "status": "OPEN"
+      }
+    ],
+    "supported": "The obstruction is not Laguerre degree bookkeeping: exact finite coefficients give h_(n,j) and q_(n,j). The obstruction is the source-level loss of two quantitative coordinates, the absolute implied constant and validity threshold, which prevents a fully instantiated modulus."
+  },
+  "zero_mathematical_credit": [
+    "Git/branch/PR state",
+    "CI/tests",
+    "schemas/hashes/chronology",
+    "telemetry/repository growth"
+  ]
+}

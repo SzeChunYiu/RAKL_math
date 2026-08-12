@@ -1,0 +1,113 @@
+{
+  "experiences": [
+    {
+      "artifact_hash": "sha256:a1fefd3134adbcd53cc277b1508c21ffa8b4a6eedb5548f0c4d04f2f9fac21e9",
+      "atom_id": "RH-ANA-002",
+      "broken_assumptions": [
+        "manifest positivity of P_n is informative about lambda_n before an independently proved faithfulness theorem",
+        "Suzuki Proposition 2.1 or Proposition 2.2 already contains a weaker unconditional defect identity sufficient for Li positivity",
+        "Parseval/model-space transport can be imported unconditionally from the RH proof"
+      ],
+      "candidate_id": "METHOD-FAMILY:SUZUKI-LI-NORM-FAITHFULNESS",
+      "competing_diagnoses": [
+        "the route is genuinely root-equivalent at its first positivity-transport step, so further notation-level norm reformulations are saturated",
+        "a weaker unconditional relation may exist but is not explicit in Suzuki's audited proof and would require new mathematics around xi+xi' zeros or non-orthogonal expansions",
+        "the useful coordinate may lie outside the norm representation, for example in Bombieri-Lagarias prime/archimedean cancellation or a global Li-growth exclusion theorem"
+      ],
+      "context_packet_hash": "sha256:300b787769442af040d944e0b52db106881844a9238c021e8804c7f382660742",
+      "diagnosis_status": "OBSERVED_ONLY",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_002_LI_NORM_FAITHFULNESS_MATRIX_20260811.md",
+        "research/real_math/millennium/riemann_hypothesis/08_reviews/SAME_CONTEXT_REVIEW_RH_ANA_002_FAITHFULNESS_RESULT_20260811.md",
+        "Masatoshi Suzuki, arXiv:2301.05779, Theorem 1.1, Propositions 2.1, 2.2, 3.1, 3.2 and Section 4.1"
+      ],
+      "failure_id": "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE",
+      "failure_mode": "the audited primary-source dependency chain reaches the RH-equivalent model-space/inner-function coordinate before positivity of the unconditional L2 norm is transported to the exact Li coefficients; no strictly weaker source-proved defect identity was exposed",
+      "falsifier_or_attempt": "dependency-classify the exact source proof and search the unconditional layer for an exact defect/sign/orthogonality subidentity before the RH-equivalent model-space step",
+      "local_repair_attempts": [
+        "do not pursue D_n=0 as a renamed RH target",
+        "rotate to a fresh context for the exact prime/archimedean cancellation and all-n uniform-tail coordinate",
+        "retain xi+xi' zero structure only as a source-identified obstacle, not as a new theorem claim"
+      ],
+      "method_family": "manifestly positive norm surrogate transported to all-index Li positivity through exact faithfulness",
+      "observed_result": "Propositions 2.1 and 2.2 supply an unconditional explicit-formula identity and L2 object, but the theorem's norm-to-Li transport uses Proposition 3.2 under RH after Proposition 3.1's RH-equivalent inner-function condition; Section 4.1 does not supply an unconditional replacement",
+      "research_trace_event_id": "RH-ANA-002-E08",
+      "residual_signature": [
+        "unconditional G_n in L2 yields only P_n >= 0",
+        "orthonormal model-space expansion used for the norm identity is RH-conditional",
+        "the all-n equality P_n=lambda_n is RH-equivalent",
+        "source section 4.1 leaves the unconditional relation unresolved and points to xi+xi' zero structure as an obstacle"
+      ],
+      "scope_conditions": [
+        "the specific Suzuki norm/model-space route as represented in arXiv:2301.05779 / JNT 252 (2023)",
+        "claims that rely only on the source-proved unconditional Proposition 2.1/2.2 layer plus the norm's nonnegativity",
+        "this record does not claim that no other analytic norm identity, deformation, or later theorem can expose a weaker bridge"
+      ],
+      "selected_diagnosis": "",
+      "timestamp": "2026-08-11T10:43:00+00:00"
+    },
+    {
+      "artifact_hash": "sha256:fc4e527adb5745a49a0150c049a116b4d3a9170678719854b05dd48022d620bb",
+      "atom_id": "RH-ANA-003j",
+      "broken_assumptions": [
+        "an asymptotic << theorem statement automatically exposes the constant needed by an explicit modulus",
+        "the phrase sufficiently large x automatically exposes a usable validity threshold"
+      ],
+      "candidate_id": "RH-ANA-003j-D001-C002-EXPLICIT-BOUNDARY-TAIL-MODULUS-SOURCE-AUDIT",
+      "competing_diagnoses": [
+        "Laguerre coefficient growth prevents an explicit n-ledger",
+        "the transformed tail remains nonquantitative even after K_B,x_B are supplied",
+        "Bellotti's proof is effective but the paper omits materialized constants",
+        "another authoritative explicit PNT theorem can replace the missing source coordinates"
+      ],
+      "context_packet_hash": "sha256:08dc06f14c732d28d179d74ed109b0ee8f8af5efb8dce3895427c333ea3fb580",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/03_sources/RH_ANA_003j_D001_EXACT_SOURCE_SCOPE_AUDIT_20260812.json",
+        "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_MODULUS_SOURCE_RESULT_20260812.json",
+        "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_D001_MATHEMATICAL_LESSON_20260812.json",
+        "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003j_MODULUS_SOURCE_DISCRIMINATOR_FREEZE_20260812.json",
+        "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003_ABEL_001_C002_PROOF_CHECK_RESULT_20260812.json"
+      ],
+      "failure_id": "F-RH-ANA003j-D001-BELLOTTI-CONSTANTS-UNEXPOSED",
+      "failure_mode": "the acquired Bellotti v1 statement preserves decay but hides the absolute implied constant and sufficiently-large-x threshold needed to instantiate the otherwise derivable modulus",
+      "falsifier_or_attempt": "An exact passage in the acquired Bellotti v1 that binds a valid numerical or explicit K_B and x_B for Theorem 1.5 falsifies the missing-source-coordinate classification. A counterexample to the coefficient identity, boundary-plus-tail inequality, omega lower bound, monotonicity domain, or integer-endpoint step-function extension falsifies the corresponding conditional envelope step.",
+      "local_repair_attempts": [
+        "derived exact h_(n,j) and q_(n,j) rather than hiding n-dependence",
+        "derived a monotone conditional envelope and conditional modulus",
+        "separated unexposed constants from mathematical ineffectivity",
+        "kept epsilon_n, numerical C, and diagonal comparison outside the result"
+      ],
+      "method_family": "explicit source-derived modulus from a fixed-n natural-order Abel boundary-plus-tail representation",
+      "observed_result": "The Laguerre coefficient ledgers and a monotone boundary-plus-tail envelope are derivable explicitly in n, conditional on constants K_B and x_B in Bellotti's estimate. But acquired Bellotti v1 states the estimate with << for sufficiently large x and does not expose K_B or x_B. Therefore the source-complete explicit modulus was not materialized; the selected branch is QUALITATIVE_OR_INEFFECTIVE_SOURCE_ONLY_NO_EXPLICIT_MODULUS, where only the qualitative/unexposed disjunct is asserted.",
+      "research_trace_event_id": "RH-ANA-003j-D001-E11",
+      "residual_signature": [
+        "EXACT_LAGUERRE_COEFFICIENT_LEDGER_DERIVED",
+        "CONDITIONAL_MONOTONE_BOUNDARY_TAIL_ENVELOPE_DERIVED",
+        "BELLOTTI_IMPLIED_CONSTANT_UNEXPOSED",
+        "BELLOTTI_VALIDITY_THRESHOLD_UNEXPOSED",
+        "SOURCE_COMPLETE_EXPLICIT_MODULUS_NOT_MATERIALIZED"
+      ],
+      "scope_conditions": [
+        "only Bellotti arXiv:2508.02041v1 as acquired and hash-bound",
+        "only the C002 fixed-n natural-order endpoint remainder",
+        "no claim of source-wide or literature-wide impossibility",
+        "reuse is allowed if exact valid K_B,x_B are later bound"
+      ],
+      "selected_diagnosis": "SUPPORTED_BOUNDED_SOURCE_SUFFICIENCY_FAILURE: exact finite Laguerre bookkeeping and a conditional envelope survive, but the acquired v1 does not expose K_B or x_B; this is not a theorem of ineffectivity or global impossibility.",
+      "timestamp": "2026-08-12T12:33:00Z"
+    }
+  ],
+  "links": [
+    {
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_D001_MATHEMATICAL_LESSON_20260812.json",
+        "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_POSTAUDIT_FAILURE_EXPERIENCE_LATTICE_20260811.json"
+      ],
+      "rationale": "Both bounded audits show that a mathematically valid source object does not transport to the target when an additional source-level interface is unbound. The domains and causes are not asserted identical: ANA-002 lacks norm faithfulness, while D001 lacks quantitative constants and threshold.",
+      "relation": "SHARES_BROKEN_ASSUMPTION_WITH",
+      "source_id": "F-RH-ANA003j-D001-BELLOTTI-CONSTANTS-UNEXPOSED",
+      "target_id": "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE"
+    }
+  ]
+}
