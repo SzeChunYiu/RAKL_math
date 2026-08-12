@@ -1,90 +1,84 @@
 {
   "atom_id": "H4d1d1",
-  "parent_atom_id": "H4d1d",
-  "root_issue": "SzeChunYiu/RAKL_math#6",
-  "root_contract": "For every smooth projective complex variety X and every rational Hodge class alpha in H^{2p}(X,Q) of type (p,p), alpha lies in the Q-span of cycle classes of codimension-p algebraic cycles. This child is only a propagation/descent question conditional on an already algebraic witness over a deformation branch.",
-  "object_context": "Let pi:X->T be the restriction of a smooth projective family to an irreducible reduced Hodge-locus branch for a fixed flat rational class alpha. Current H4d1d asks for exact-category witness-incidence domination. H4d1d1 isolates whether monodromy/component switching truly forces a single global witness section, or whether a finite-cover family of exact-class algebraic witnesses could be enough after rational trace/pushforward. No claim about root initial algebraicity is in scope.",
-  "problem_signature": [
-    "rational coefficients are essential",
-    "smooth-projective complex family and fixed flat rational Hodge class",
-    "exact algebraic-cycle category and codimension must be preserved",
-    "witness-incidence branch may dominate without possessing a global section",
+  "object_context": "Child of H4d1d. Fix a smooth projective complex family X->T on an irreducible reduced Hodge-locus branch for a fixed flat rational class alpha and an exact-category witness-incidence problem. Determine whether monodromy/component switching really requires one global witness section, or whether an exact-class witness family on a finite cover can be descended by rational proper pushforward/trace. Root initial algebraicity is outside this atom.",
+  "structural_coordinates": [
+    "root coefficients are rational and degree normalization by a positive integer is allowed only in Q",
+    "ambient fibres are smooth projective complex varieties and alpha is a fixed flat rational Hodge class",
+    "the witness category must remain algebraic cycles/Chow data of codimension p",
+    "domination of witness incidence does not by itself produce a global section or a finite multisection",
     "monodromy may permute witness components",
-    "finite-cover trace must preserve the exact target class rather than merely algebraicity",
-    "ramification/singular boundary and specialization are separate from the generic finite-cover calculation",
-    "formal/Artin lifting, completion descent, and global continuation remain distinct obligations"
+    "a finite-cover trace is useful only if the upstairs cycle has exact class equal to the pullback of alpha",
+    "generic finite-flat descent, ramified/singular boundary specialization, completion descent, and root initial algebraicity are separate obligations"
   ],
-  "active_obstruction": {
-    "id": "O-H4D1D1-MONODROMY-NO-WITNESS-SECTION",
-    "statement": "The current branch-domination route lacks a justified replacement for a single globally consistent witness when witness components permute under monodromy.",
-    "residual_before": "MONODROMY_COMPONENT_SWITCHING_NO_GLOBAL_WITNESS_SECTION"
-  },
   "equivalent_formulations": [
-    "replace a section of the witness incidence W->T by a finite multisection/finite cover carrying exact-class witnesses",
-    "ask whether degree-normalized proper pushforward can descend a Q-cycle from a finite cover to the base family",
-    "separate generic finite-cover descent from branch-boundary specialization and from existence of the finite-cover witness family itself"
+    "replace a global witness section by a finite multisection/finite cover carrying exact-class witnesses",
+    "test whether degree-normalized proper pushforward descends a Q-cycle from a finite cover to the branch family",
+    "separate finite-cover existence, exact class identity, and singular-boundary gluing into independent atoms"
   ],
   "solved_analogues": [
-    "finite locally free pull-push on cycles: f_* f^* alpha = d alpha (Stacks 42.15.2)",
-    "proper pushforward of cycles and descent to Chow groups modulo rational equivalence (Stacks 42.12 and 42.20)",
-    "proper pushforward compatibility with flat pullback/base change and relative cycles (Stacks 42.15, 62.5, 62.6)"
+    "finite locally free pull-push on cycles f_*f^*=d (Stacks 42.15.2)",
+    "proper pushforward of cycles and compatibility with rational equivalence (Stacks 42.12, 42.20)",
+    "proper pushforward compatibility with specialization/relative cycles (Stacks 62.4, 62.5, 62.6)"
   ],
   "near_solved_analogues": [
-    "special variational-Hodge witness families in complete-intersection settings (Kloosterman 2104.14845), where witness geometry is much more rigid than H4d1d",
-    "semiregular relative divisor-map deformation (Nishinou 2009.01651), which does not solve arbitrary-codimension monodromy/descent",
-    "completion-level effectivity split recorded in application PR #143, which leaves completion-to-branch descent and exact class identity open"
+    "Kloosterman complete-intersection variational-Hodge families, where witness geometry is special",
+    "Nishinou semiregular relative divisor-map deformation, which does not cover arbitrary codimension or monodromy",
+    "application PR #143 completion-level effectivity split, which leaves exact class and branch descent open"
   ],
-  "method_transfer_matrix": [
+  "method_transfers": [
     {
-      "source_context": "finite locally free morphism; Chow cycle push-pull",
+      "source_context": "finite locally free morphisms and Chow cycle push-pull",
       "method": "degree-normalized proper pushforward / trace",
-      "required_assumptions": [
-        "finite locally free cover of constant positive degree on the active open",
-        "an upstairs algebraic cycle of the required codimension",
-        "proper finite map from the base-changed total space to the base total space",
-        "rational coefficients if normalization by 1/d is used"
-      ],
-      "shared_structure": ["many finite sheets with no preferred sheet", "need an invariant aggregate on the base", "proper pushforward preserves algebraicity and rational equivalence"],
-      "disanalogies": [
-        "H4d1d does not yet supply the finite cover or a relative exact-class cycle upstairs",
-        "Betti/Hodge cycle-class compatibility must be checked in the target family; Chow pushforward alone does not certify Hodge-class identity",
-        "ramification and singular branch boundary require separate audit"
-      ],
-      "minimum_repair_question": "Can an exact-class witness family be produced over a finite locally free cover of a dense branch open, and can the descended class be identified with alpha without assuming the desired theorem?",
+      "shared_structure": ["finitely many sheets with no preferred sheet", "need an invariant aggregate on the base", "proper pushforward preserves algebraicity and rational equivalence"],
+      "required_assumptions": ["finite locally free cover of positive constant degree d on the active open", "upstairs algebraic cycle of the required codimension", "proper finite map from base-changed total space to base total space", "rational coefficients when dividing by d"],
+      "disanalogies": ["H4d1d does not yet supply the finite cover or an exact-class relative cycle upstairs", "Chow pushforward alone does not certify that the Betti class is exactly alpha", "ramified/singular branch boundary requires a separate audit"],
+      "repair_question": "Can an exact-class witness family be produced over a finite locally free cover of a branch open and can normalized pushforward be source-bound to the exact class alpha?",
       "source_anchors": ["https://stacks.math.columbia.edu/tag/02R3", "https://stacks.math.columbia.edu/tag/02RF", "https://stacks.math.columbia.edu/tag/02S0"]
     },
     {
-      "source_context": "specialization of relative cycles",
-      "method": "specialize a properly pushed cycle across a DVR boundary",
-      "required_assumptions": ["a relative cycle exists on the generic side", "a proper model over the DVR is available"],
-      "disanalogies": ["specialization does not prove exact-class identity over an arbitrary singular Hodge branch", "DVR tests do not automatically supply global branch gluing"],
+      "source_context": "specialization of relative cycles over a DVR",
+      "method": "commute proper pushforward with specialization at a branch boundary",
+      "shared_structure": ["generic branch open versus boundary point", "need compatibility of a descended cycle under specialization"],
+      "required_assumptions": ["a proper model over the DVR", "a relative/generic cycle to which specialization applies"],
+      "disanalogies": ["DVR specialization does not prove global branch gluing", "it does not establish exact Hodge class identity by itself"],
+      "repair_question": "Which branch-boundary models let a verified generic trace construction specialize without losing exact class/category?",
       "source_anchors": ["https://stacks.math.columbia.edu/tag/0H4M", "https://stacks.math.columbia.edu/tag/0H4Z"]
     }
   ],
-  "cross_domain_analogy_scan": [{
-    "source_kind": "finite-sheet averaging / orbit symmetrization",
-    "common_abstraction": "replace a noncanonical choice among finitely permuted sheets by an invariant aggregate",
-    "role_mapping": ["permuted sheets -> witness branches over a finite cover", "symmetrized aggregate -> degree-normalized pushforward Q-cycle", "choice invariance -> independence from a global witness section"],
-    "disanalogies": ["algebraic cycles have codimension/category and rational-equivalence structure absent from generic averaging", "monodromy need not be finite before one has a finite cover"],
-    "validation_obligation": "target proof must come from algebraic-cycle pushforward and cycle-class functoriality, not from the analogy",
-    "status": "PROPOSAL_ONLY"
-  }],
-  "adversarial_boundaries": [
-    "integral coefficients: division by the cover degree is unavailable in general",
-    "finite cover carries witnesses with different cohomology classes whose average is not alpha",
-    "dominant incidence with positive-dimensional generic fibre: no degree normalization is defined without first obtaining a finite multisection",
-    "ramified/nonflat cover requires separate audit",
-    "generic-open descent is not full singular/nonreduced branch domination",
-    "formal witness over completion need not descend to an algebraic branch neighbourhood"
+  "explicit_disanalogies": [
+    "rational degree normalization does not transfer to the integral Hodge conjecture",
+    "dominant incidence with positive-dimensional generic fibre is not already a finite cover",
+    "algebraic witnesses on different sheets may represent different classes and cannot be averaged without exact class control",
+    "generic finite-flat descent is not full singular/nonreduced branch domination",
+    "formal completion data do not automatically descend to an algebraic branch neighbourhood",
+    "the child begins from witness geometry and cannot solve root initial algebraicity"
   ],
-  "actual_fibre_snapshot": {
-    "framework": ["RAKL@43897d3:SKILL.md", "RAKL@43897d3:manifest.yaml", "RAKL@43897d3:core principles/workflow", "RAKL@43897d3:mathematical-research.md", "RAKL@43897d3:method_specs.py", "RAKL@43897d3:experience_substrate.py", "RAKL@43897d3:semantic_shortcut.py", "current schemas for memory/shortcut/trace"],
-    "application_current": ["RAKL_math@d2b306f:AGENTS.md", "RAKL_math@d2b306f:framework pin", "#6", "#197", "#146", "#143", "#119", "#106", "#100", "#77", "#42", "merged H4d1a context/memory"],
-    "primary_sources": ["Stacks 02R3", "Stacks 02RF", "Stacks 02S0", "Stacks 0H4M", "Stacks 0H4P", "Stacks 0H4Z", "Kloosterman 2104.14845", "Nishinou 2009.01651", "Movasati 1902.00831"],
-    "retrieval_boundary": "Current open Hodge PR query plus exact current framework/application files and bounded primary-source query. No complete cross-repository or cross-Millennium coverage claim."
-  },
-  "fibre_snapshot_hash": "sha256:d582c382a39e84dd48c3be36f7f9aa11adea27110e5f69bbe45074d8d7c6fc6a",
+  "source_anchors": [
+    "https://stacks.math.columbia.edu/tag/02R3",
+    "https://stacks.math.columbia.edu/tag/02RF",
+    "https://stacks.math.columbia.edu/tag/02S0",
+    "https://stacks.math.columbia.edu/tag/0H4M",
+    "https://stacks.math.columbia.edu/tag/0H4P",
+    "https://stacks.math.columbia.edu/tag/0H4Z",
+    "https://arxiv.org/abs/2104.14845",
+    "https://arxiv.org/abs/2009.01651",
+    "https://github.com/SzeChunYiu/RAKL_math/pull/119",
+    "https://github.com/SzeChunYiu/RAKL_math/pull/143"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [{
+    "source_kind": "finite-sheet averaging / orbit symmetrization",
+    "source_situation": "When finitely many equivalent sheets are permuted and no preferred sheet is globally available, an invariant aggregate can replace the choice if the downstream invariant is additive and preserved.",
+    "common_abstraction": ["finite sheet permutation", "no canonical global choice", "invariant aggregation"],
+    "source_to_target_mapping": ["permuted sheets -> witness branches over a finite cover", "invariant aggregate -> degree-normalized proper pushforward Q-cycle", "preserved additive invariant -> exact target cycle class"],
+    "shared_constraints": ["finite multiplicity", "aggregate must preserve the registered downstream invariant"],
+    "disanalogies": ["algebraic cycles have codimension/category and rational-equivalence structure absent from generic averaging", "monodromy need not be finite before a finite cover is independently produced"],
+    "proposed_principle": "Before demanding a global witness section, test whether a finite-cover exact-class witness family plus an invariant trace satisfies the same downstream consumer.",
+    "validation_obligation": "The target move must be proved with algebraic-cycle pushforward and cycle-class functoriality; the analogy supplies no Hodge authority.",
+    "provenance_note": "Cross-domain proposal analogy only."
+  }],
+  "analogy_scan_notes": "Retained only the finite-sheet symmetrization bridge because it maps directly to a same-domain Chow operation and exposes exact target validation obligations.",
   "frozen_at": "2026-08-12T00:04:00Z",
   "first_candidate_at": null,
-  "packet_hash": "sha256:ef3d9ce8955d1e3184e5895de35dae604cca8ef63bde239dbda921ef79ac48bb"
+  "packet_hash": "sha256:4d9f15276fe9e9f02f67402355d64d06d8dcf138348b891178a65c80b0d5f793"
 }
