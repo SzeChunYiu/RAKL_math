@@ -26,7 +26,7 @@ def test_relevant_margin_condition_is_exact():
 def test_frozen_retrieval_accounting_is_not_backfilled():
  receipt=load('01_frontier/YM-S1a2i_PRE_ACTION_RECEIPT_20260812_R20.json')
  metrics=load('10_case_study/YM-S1a2i_RAKL_CYCLE_METRICS_20260812_R20.json')['RAKL_CYCLE_METRICS']['memory']
- case=load('10_case_study/YM-S1a2i_RAKL_METHOD_CASE_STUDY_20260812_R20.json')['RAKL_METHOD_CASE_STUDY']['memory']
+ case=load('10_case_study/YM-S1a2i_RAKL_METHOD_CASE_STUDY_20260812_R20.json')['memory']
  correction=load('10_case_study/YM-S1a2i_R20_RETRIEVAL_ACCOUNTING_CORRECTION_20260812.json')
  selected=sorted(x['retrieval_id'] for x in receipt['selected_retrievals'])
  rejected=sorted(x['retrieval_id'] for x in receipt['rejected_retrievals'])
