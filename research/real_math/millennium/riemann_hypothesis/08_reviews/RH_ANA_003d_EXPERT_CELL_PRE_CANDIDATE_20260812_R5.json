@@ -1,0 +1,27 @@
+{
+  "schema": "RAKL-v3-shadow-EXPERT_CONTEXT_REVIEW",
+  "atom_id": "RH-ANA-003d",
+  "cycle": "R5",
+  "context_hash": "sha256:7c39ec6c7b39c5fd573a4e2d252d08c039952faf87c506a972a86d64b41cf59c",
+  "memory_review_hash": "sha256:f2a1312755cb2ee5b8e30f0182b9ee9dd6a9d9eafea8c517cea63f8c1545fc2c",
+  "shortcut_review_hash": "sha256:bb61b310b67d717d5d6e55db15451301898b522d8fbd325dd50042d5f959c7fa",
+  "independent_review_credit": 0,
+  "roles": [
+    {"role": "analytic-number-theory lead", "background": "zeta functions, explicit formulae, zero-free regions, PNT error terms", "finding": "The exact source-order transform should use A(x)=floor(x)-psi(x); Bellotti's KV-scale PNT error is unconditional and has exponent 3/5 in log x.", "objection": "Do not use a zero-density statement as pointwise RH control; use it only through the stated unconditional PNT consequence.", "recommendation": "Accept SEARCH/Abel routing subject to exact boundary and quantifier checks."},
+    {"role": "special-functions/asymptotics lead", "background": "Laguerre polynomials, coefficient estimates, uniform asymptotics", "finding": "Coefficient formulas give elementary envelopes of exp(2 sqrt(nu)) scale for L_{n-1}^1(u) and n^2 exp(2 sqrt(nu)) for the derivative companion.", "objection": "The envelope is intentionally crude and forces an enormous cutoff; it is not a sharp Laguerre asymptotic.", "recommendation": "Use it only as a rigorous discriminator; do not claim optimal cutoff."},
+    {"role": "adversarial falsification lead", "background": "counterexample-first mathematical testing and quantifier stress tests", "finding": "A sqrt(log x)-scale PNT decay cannot dominate exp(2 sqrt(n log x)) uniformly in n under this operator family.", "objection": "This refutes the classical-log-plus-crude-envelope route, not every possible use of the 2026 explicit zero-free region.", "recommendation": "Run the exponent comparator before any detailed constant chase; handle n=1 separately."},
+    {"role": "formal/proof-obligation lead", "background": "formal mathematics, quantifier order, dependency and verifier audits", "finding": "The candidate must state existence of constants and a moving cutoff law before using the tail identity; boundary vanishing and the derivative identity are separate obligations.", "objection": "No proof assistant or isolated checker is presently bound, so even a paper proof remains shadow mathematical evidence.", "recommendation": "Record exact lemma statement and dependency ledger; no PROOF_CHECKED event."},
+    {"role": "novelty/research-value lead", "background": "analytic-number-theory literature mapping and prior-art normalization", "finding": "The move is a composition of standard Abel summation, elementary Laguerre bounds, and a current PNT theorem.", "objection": "No literature novelty can be inferred from this cycle.", "recommendation": "If it survives, classify as compositional/transfer/representation, not theorem novelty."},
+    {"role": "local-to-global/gluing lead", "background": "proof DAG interfaces and local-to-global theorem assembly", "finding": "Even a negligible source-order tail leaves the moving finite prefix and archimedean/Li ledger untouched.", "objection": "A finite-prefix lower bound sufficient for all-n Li positivity may carry essentially all root difficulty.", "recommendation": "Record tail closure and finite-prefix gluing as distinct statuses; successor should begin with obligation-strength audit."},
+    {"role": "RAKL metrology/provenance lead", "background": "v3 process gates, evidence identity, telemetry and reproducibility", "finding": "RAKL_math main is pinned to the exact current RAKL main and PR #200 migrated historical pre-gate traces fail-closed.", "objection": "R4 suffered current-framework drift and late TaskEpisode materialization; candidate freeze must recheck current RAKL SHA and pin.", "recommendation": "No candidate until context, dual memory, shortcut review and hash-chained trace are committed and the live SHA is revalidated."}
+  ],
+  "disagreements": [
+    "Special-functions lead considers the cutoff far too crude for practical computation; analytic lead accepts it because the current atom asks only for existence of a uniform source-order tail modulus.",
+    "Novelty lead rejects any novelty claim; gluing lead agrees the value is route localization rather than a new RH theorem."
+  ],
+  "strongest_objection": "A successful tail lemma may merely move essentially all RH difficulty into an astronomically long finite prefix; local success must not be confused with progress toward root closure.",
+  "unresolved_uncertainty": "Whether a sharper Laguerre representation yields a materially smaller cutoff and whether the moving-prefix obligation is strictly weaker than RH remain open.",
+  "recommendation": "Proceed only with the SEARCH/Abel candidate after the live framework/pin recheck; use classical-log decay as a falsifier and KV PNT decay as the surviving input.",
+  "authority": "SAME_CONTEXT_ROLE_SEPARATED_ONLY",
+  "artifact_hash": "sha256:bd620ac6e35c7ee1de82f8067ff028c14eddfa136310c9e1a4dd5dbc328f37fd"
+}
