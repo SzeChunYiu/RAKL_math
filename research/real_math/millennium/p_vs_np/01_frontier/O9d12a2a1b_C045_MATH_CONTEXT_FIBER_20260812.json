@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0.0",
+  "authority": "PROPOSAL_SHADOW_CONTEXT_FREEZE",
+  "atom_id": "O9d12a2a1b-C045",
+  "problem_signature": "PNP-C045-G17-LENGTH32-COMPONENT-COUPLING-GATE",
+  "root_binding": "P != NP via registered B1/B2/B3 only; no neighboring separation is equivalent",
+  "framework": {
+    "rakl_method_version": "3.0.0",
+    "rakl_git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "rakl_math_base": "e5f50a1dc5c20bee7cfc3c3d6edf980d5cc72e1c"
+  },
+  "active_atom": "At the first untouched canonical parent after C044, parent n=16 / 32-bit words feeding G17, determine whether the new canonical UNSAT batch introduces cross-component complement/fibre coupling that defeats the inherited explicit three-pair Q16 code. Success for this atom is an exact new relevant quotient edge whose row/column stars are not E/H-opposed in any inherited coordinate because new complement support contaminates the stars; failure is proof the inherited three pairs still generator-separate every new relevant edge.",
+  "frozen_fibre": {
+    "consulted_problem_contract": [
+      "00_problem_contract/canonical_statement.md",
+      "00_problem_contract/success_contract.yaml"
+    ],
+    "consulted_current_facts": [
+      "C043 length formula L0=6+2a+2b+3m(a+1), even padded; through 30 bits exact classification; m=1,a=4 and m>=2,a>=2 cases begin at 32 bits",
+      "C043 G16 exact twin quotient has 10 complement cells, two active components in C044 notation, and only upper-bound authority",
+      "C044 explicit inherited Q16 cover P1,P2,P3 and heterogeneous block-multiplexing lemma",
+      "C044 component-coupling gate: a cross-component complement cell or changed endpoint fibre is the first falsifier worth testing"
+    ],
+    "structural_coordinates": [
+      "frozen MAGIC/gamma/fixed-width one-sided decoder and padding",
+      "32-bit canonical word split 16/16",
+      "parent complement U16 and child U17",
+      "exact new canonical UNSAT words at length 32",
+      "new row and column complement fibres before quotienting",
+      "old Q16 twin classes and explicit pairs P1,P2,P3",
+      "E/H/X star signature under each inherited pair",
+      "relevance/full-semi-filter polarity and generator-separation implication",
+      "local quotient conclusion versus any uniform/root bridge"
+    ],
+    "solved_analogues": [
+      "C043 exact residual/twin classification and bidirectional type ceiling",
+      "C044 heterogeneous component multiplexing and explicit Q16 three-pair cover",
+      "C013 exact twin-quotient cover lift (retrieved only for upper-bound polarity)"
+    ],
+    "near_solved_analogues": [
+      "finite Myhill-Nerode/communication row residual classification; accepted only for finite equality classification, rejected for lower-bound transfer",
+      "C041B tight-intersection absorption; retrieved as a dual-saturation analogue but rejected for this first pass because C045 tests the cheaper primal inherited-code falsifier"
+    ],
+    "explicit_disanalogies": [
+      "one new cross-component complement cell can change endpoint fibres but need not raise rho",
+      "failure of the inherited P1-P3 code is not a lower bound against other three-pair covers",
+      "finite G17 behavior is not asymptotic amplification",
+      "quotient/type growth is not circuit lower-bound growth",
+      "same-context hostile review is not independent review"
+    ]
+  },
+  "memory_routing": {
+    "selected": [
+      {
+        "id": "C044-HETEROGENEOUS-MULTIPLEXING-FAILURE",
+        "reason": "changed route from type-count search to first cross-component-coupling falsifier"
+      },
+      {
+        "id": "C044-COMPONENT-COUPLING-GATE",
+        "reason": "defines exact cheap discriminator before crediting amplification"
+      },
+      {
+        "id": "C043-FIRST-ROW-SPLIT",
+        "reason": "supplies decoder/length/residual/twin coordinates and identifies 32 bits as next untouched semantic batch"
+      },
+      {
+        "id": "C013-QUOTIENT-BLOWUP-CEILING",
+        "reason": "upper-bound polarity and quotient-lift guardrail"
+      }
+    ],
+    "retrieved_rejected": [
+      {
+        "id": "C041A-ZERO-AUGMENTATION",
+        "reason": "same broad saturation family but acts on copy/relabelling, not the current canonical decoder layer"
+      },
+      {
+        "id": "C041B-TIGHT-INTERSECTION-ABSORPTION",
+        "reason": "dual-load obstruction is more expensive than the primal inherited-code falsifier; reserve if inherited code breaks"
+      },
+      {
+        "id": "MYHILL-NERODE-ANALOGY",
+        "reason": "use only for finite residual equality; no cover/circuit lower-bound transfer"
+      },
+      {
+        "id": "CROSS-MILLENNIUM-MEMORY",
+        "reason": "not queried: no applicability witness suggesting another Millennium lane preserves this exact finite cover/fibre structure"
+      }
+    ]
+  },
+  "v3_operational_policy": {
+    "canonical_surfaces": [
+      "decomposition",
+      "routing",
+      "search_query_generation",
+      "source_selection_reliability",
+      "claim_extraction",
+      "equivalence_similarity",
+      "gap_discovery",
+      "experiment_query_selection",
+      "memory",
+      "review",
+      "benchmarking",
+      "saturation_stopping",
+      "prompting_context_policy",
+      "authority_promotion"
+    ],
+    "route": "GLUE current exact length/decoder facts + C044 component-coupling obstruction, then falsify inherited P1-P3 before any expensive lower-bound search",
+    "counterexample_first": "Enumerate/derive the exact 32-bit UNSAT batch and test whether any inherited-code coordinate loses E/H separation on a relevant new edge.",
+    "authority": "All findings remain proposal/shadow. No protected memory or root authority may be minted by this cycle."
+  },
+  "expert_cell": [
+    {
+      "role": "definition/source auditor",
+      "background": "complexity lower bounds, formal definitions, source provenance",
+      "delegation": "bind every cover/relevance/decoder claim to frozen definitions and reject polarity drift"
+    },
+    {
+      "role": "finite combinatorics/LP expert",
+      "background": "set systems, covering LPs, communication matrices",
+      "delegation": "analyze P1-P3 signatures and distinguish code failure from rho lower bounds"
+    },
+    {
+      "role": "decoder/gadget expert",
+      "background": "Boolean encodings, CNF syntax, finite-state residuals",
+      "delegation": "derive exact length-32 canonical UNSAT families and endpoint fibres"
+    },
+    {
+      "role": "counterexample verifier",
+      "background": "exhaustive finite search, property testing",
+      "delegation": "independently enumerate small finite objects only to falsify/calibrate hand claims; computation never proves theorem"
+    },
+    {
+      "role": "gluing/barrier reviewer",
+      "background": "complexity barriers, proof dependency audits",
+      "delegation": "separate local G17 statements from quotient lift, asymptotics, circuit lower bounds, and P!=NP bridge"
+    }
+  ],
+  "success_and_falsifiers": {
+    "local_success": "hand-checkable exact witness that the first new coupling destroys inherited P1-P3 generator separation for at least one relevant quotient edge, with exact fibres/signatures",
+    "local_negative_success": "hand proof that all new relevant edges remain separated by inherited P1-P3, extending the cheap upper obstruction one layer",
+    "falsifiers": [
+      "length-32 candidate classification misses padded/raw cases",
+      "purported UNSAT word is satisfiable or violates decoder syntax",
+      "row/column fibre is computed from a truncated rather than accumulated complement",
+      "Q16 pair membership is extended to new complement cells without an explicit rule",
+      "a claimed relevant edge has an empty generator trace",
+      "code failure is mislabeled as rho>3",
+      "finite result is promoted toward P!=NP without asymptotic/circuit bridge"
+    ]
+  },
+  "saturation_pre": {
+    "KNOWLEDGE": "open on first untouched length-32 batch",
+    "OPERATOR": "C044 component-coupling gate selected",
+    "EXPERIENCE_PATTERN": "C043/C044 route selected; copy/type-count families flattened",
+    "OBSTRUCTION": "reopened: load-bearing cross-component fibre coupling",
+    "RELATION": "reopened: new complement cells -> star signatures -> inherited cover",
+    "PATH": "reopened: G17 as next canonical discriminator",
+    "META_METHOD": "chronology repair reopened: freeze before derivation"
+  },
+  "chronology": {
+    "result_derived_before_freeze": false,
+    "candidate_output_before_freeze": false,
+    "note": "Only current-state facts and the test atom are frozen here; no C045 length-32 UNSAT classification or inherited-code outcome has been derived yet."
+  },
+  "fibre_snapshot_hash": "sha256:7c96aab2cbb6bb6151aaa9ae2c34c9259d0964417ce7c9300be9e6d04573f182"
+}
