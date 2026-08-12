@@ -1,0 +1,65 @@
+{
+  "schema_version": "task-episode-v3-proposal-shadow-r5",
+  "episode_id": "EP-NS-B1a3b1a2a-C001-R5-20260812",
+  "task_id": "NAVIER-STOKES-BLOWUP-CLASSIFICATION",
+  "atom_id": "NS-B1a3b1a2a",
+  "context_hash": "sha256:1a892b2ff499c26774b01cf1fac82049f51bc569b9538939bbd3a43930555851",
+  "problem_signature": "For a nontrivial finite-I mild bounded ancient NSE solution, verify genuine-ancient local derivative smoothing and test whether the resulting local control glues through finite I to the global weak-L^{3/2} vorticity amplitude consumed downstream.",
+  "fibre_snapshot_hash": "sha256:b7da816523a56e404375ca51da6d983854798ef9b8c1b1288146a9cd276a3b8a",
+  "operator_ids": [
+    "OP-NSE-MILD-INTERMEDIATE-RESTART",
+    "OP-KNSS-LINF-SMOOTHING",
+    "OP-AB-FINITE-I-E-LEDGER",
+    "OP-SUPERLEVEL-PERSISTENCE-PACKING",
+    "OP-DIFFERENCE-WITNESS"
+  ],
+  "motif_ids": [
+    "M-NS-CRITICAL-FAILURE-SCALING-LIFT",
+    "M-NS-ANCIENT-REGULARITY-LOCALIZES-TIME-NOT-SPACE"
+  ],
+  "action_trace": [
+    {"step": 1, "action": "read_current_framework_main", "result": "RAKL method 3.0.0 at 43897d3afaf0038385102d5acc64793c05ec40f0"},
+    {"step": 2, "action": "bind_current_application_root_and_issue", "result": "root #4 OPEN_NO_SOLUTION_CERTIFICATE; active discriminator #221"},
+    {"step": 3, "action": "review_dual_memory_and_obstruction_transformations", "result": "rotate away from finite-history, geometry-inheritance and Type-II sibling families"},
+    {"step": 4, "action": "source_bind_ancient_mild_restart_and_smoothing", "result": "uniform M^{k+2l+1} derivative scaling verified"},
+    {"step": 5, "action": "attempt_local_to_global_glue", "result": "persistent-superlevel packing against E ledger retains radius R"},
+    {"step": 6, "action": "audit_consumer_completeness_and_rigidity", "result": "global Lorentz plus morphology/direction remain open; backward uniqueness not licensed"},
+    {"step": 7, "action": "same_context_expert_postcheck", "result": "scoped local success/global gluing residual accepted; 0/3 independent review"}
+  ],
+  "observation_ids": [
+    "OBS-NS-R5-ANCIENT-MILD-RESTART",
+    "OBS-NS-R5-DERIVATIVE-SCALING",
+    "OBS-NS-R5-E-RADIUS-LINEAR-BUDGET",
+    "OBS-NS-R5-SUPERLEVEL-PERSISTENCE",
+    "OBS-NS-R5-GLOBAL-RADIUS-RESIDUAL",
+    "OBS-NS-R5-GRUJIC-CONSUMER-EXTRA-COORDINATES"
+  ],
+  "verification_ids": [
+    "VER-NS-R5-KNSS-PROP4.1-RESTART",
+    "VER-NS-R5-SCALING-DIMENSIONS",
+    "VER-NS-R5-VITALI-PACKING",
+    "VER-NS-R5-AB-E-LEDGER",
+    "VER-NS-R5-DIFFERENCE-WITNESSES",
+    "VER-NS-R5-NONPROMOTION-AUDIT"
+  ],
+  "outcome": "ANCIENT_LOCAL_SMOOTHING_BOUND__GLOBAL_LORENTZ_GLUE_OPEN",
+  "residual_signature": "RADIUS_DEPENDENT_SUPERLEVEL_PACKING__GLOBAL_TAIL_MULTIPLICITY_AND_GRUJIC_MORPHOLOGY_DIRECTION_OPEN",
+  "evidence_pointers": [
+    "01_frontier/NS-B1a3b1a2a_CONTEXT_FIBER_R5_20260812.json",
+    "04_candidates/NS-B1a3b1a2a_C001_R5_ANCIENT_SMOOTHING_TAIL_GLUE_20260812.md",
+    "08_reviews/NS-B1a3b1a2a_EXPERT_POSTCHECK_R5_20260812.json",
+    "09_trace/NS-B1a3b1a2a_TRACE_R5_20260812.jsonl"
+  ],
+  "artifact_hash": "git-blob-sha1:0d6cd6ef9b5debd4c94cf186b5170852a1f4e19b",
+  "timestamp": "2026-08-12",
+  "cost": {
+    "model_tokens": "CANNOT_MEASURE: runtime does not expose authoritative model-token accounting",
+    "context_tokens": "CANNOT_MEASURE: runtime does not expose authoritative context-token accounting",
+    "retrieval_calls": "CANNOT_MEASURE: no authoritative run-wide call counter is exposed after context compaction",
+    "tool_calls": "CANNOT_MEASURE: no authoritative run-wide call counter is exposed after context compaction",
+    "elapsed_time": "CANNOT_MEASURE: no user-authorized elapsed-run clock independent of automation-runtime metadata is exposed"
+  },
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "chronology_note": "Issue #221 prospectively froze the discriminator and expert/audit contract. The complete fibre hash was not durably precommitted before source verification, so strict full Gate-C preregistration credit is not claimed.",
+  "independent_review_credit": "0/3"
+}
