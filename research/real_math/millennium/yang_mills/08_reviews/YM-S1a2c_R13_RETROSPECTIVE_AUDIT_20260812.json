@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "YM-S1a2c-R13-RETROSPECTIVE-AUDIT-20260812",
+  "subject": {
+    "pull_request": 240,
+    "original_head": "90ff9f31d29be9317e9f7a77b8d82fcb7cd32f8b",
+    "original_base": "7c44a3a19f79e4beb41af6b55b1bb1cc043d8d42",
+    "latest_main_audited": "ec8a9eb5eeedaaf1d3f497a8688384256a2079e0",
+    "framework_pin_audited": "43897d3afaf0038385102d5acc64793c05ec40f0"
+  },
+  "exact_statement": {
+    "status": "BOUNDED_RETROSPECTIVE_DERIVATION_SURVIVES",
+    "text": "Let N >= 2, d=4, G=SU(N), and 0 < beta < 1/48. Let mu_L be the SZZ L-periodic pure Wilson measures, periodically embedded in the common product configuration space, and let mu be their whole-sequence weak limit. For the site reflection r(n0,nsp)=(-n0,nsp), with its induced oriented-link involution theta, every bounded continuous gauge-invariant cylinder F whose link support lies strictly in n0>0 satisfies integral conjugate(F(theta Q)) F(Q) dmu(Q) >= 0.",
+    "authority": "PROPOSAL_SHADOW_RETROSPECTIVE_TRUTH_CHECK_ONLY",
+    "not_claimed": [
+      "strict context-first RAKL discovery",
+      "novel theorem authority",
+      "covariance-to-transfer-moment identification",
+      "post-null-quotient density or source completeness",
+      "physical Hamiltonian mass gap",
+      "lattice-spacing uniformity or continuum existence",
+      "Yang-Mills root closure"
+    ]
+  },
+  "assumptions": [
+    "N is an integer at least 2",
+    "the theory is the fermion-free SU(N) Wilson plaquette theory",
+    "beta is positive and satisfies the SZZ strong-coupling bound beta < 1/[16(d-1)] = 1/48",
+    "unit lattice spacing is fixed",
+    "finite volumes use the isotropic odd periods ell_j=2m_j+1, a cofinal subsequence of the SZZ sequence",
+    "positive-time cylinders are supported on finitely many oriented links strictly in n0>0",
+    "theta is induced from the site reflection on oriented paths, so a reflected temporal positive link is represented by the inverse matrix on the corresponding positive orientation"
+  ],
+  "primary_sources": [
+    {
+      "id": "SZZ-2204.12737v1",
+      "url": "https://arxiv.org/pdf/2204.12737",
+      "download_sha256": "21d0cf19e74e13f8468d1f980ba05849a781f28018301ea2b11d7551822597d1",
+      "anchors": [
+        "equations (1.1)-(1.3): periodic Wilson measure and SU(N) range",
+        "Theorem 1.2(2): every tight limit is the same and the whole finite-volume sequence converges weakly",
+        "paragraph before equation (1.5): periodic embedding into the common compact product space"
+      ]
+    },
+    {
+      "id": "LUESCHER-DESY-76-54",
+      "url": "https://bib-pubdb1.desy.de/record/396349/files/7611148.pdf",
+      "doi": "10.1007/BF01614090",
+      "download_sha256": "2093c7460bf010832659e4ddd2a5170224dbd79c5240849a7cf134d3204e8d11",
+      "anchors": [
+        "equation (2): Wilson plaquette coefficient 1/(2 g0^2) over both plaquette orientations",
+        "equation (4): OS positivity for gauge-invariant positive-time polynomials",
+        "equations (20)-(23) and Proposition 1: positivity of the pure gauge transfer kernel for SU(N)",
+        "boundary paragraph and equation (28): periodic gauge boundary conditions in space and time on odd site counts",
+        "Proposition 2: reconstruction and the stated implication to OS positivity"
+      ]
+    }
+  ],
+  "derivation_audit": [
+    {
+      "step": "same finite measure",
+      "verdict": "PASS_WITH_EXPLICIT_PURE_GAUGE_SCOPE",
+      "reason": "Luescher sums the two orientations with coefficient 1/(2 g0^2), hence each unoriented plaquette contributes g0^-2 Re Tr(U_p). Setting g0^-2=N beta matches SZZ. The relevant positivity is the separately displayed pure gauge kernel; no fermionic determinant or gauge-fixed measure is transported."
+    },
+    {
+      "step": "finite geometry and reflection",
+      "verdict": "PASS_AFTER_RETROSPECTIVE_INTERFACE_EXPLICITATION",
+      "reason": "Set Luescher's spatial and temporal half-widths equal to m_j. The resulting period 2m_j+1 matches the isotropic SZZ odd subsequence. The site reflection is well defined on each odd torus and its induced action on oriented links agrees with the infinite-lattice action on any fixed source and reflected source once j is large enough."
+    },
+    {
+      "step": "finite-volume positivity",
+      "verdict": "PASS_BOUNDED",
+      "reason": "Luescher equation (4), the positive pure gauge kernel, and Proposition 2 give the nonnegative quadratic form for gauge-invariant positive-time polynomial cylinders on the matching finite periodic pure Wilson measure."
+    },
+    {
+      "step": "weak-limit transport",
+      "verdict": "PASS",
+      "reason": "For a polynomial cylinder P, conjugate(P(theta Q))P(Q) is a bounded continuous cylinder on the common compact product space. Whole-sequence weak convergence therefore transports its finite-volume nonnegativity along the odd cofinal subsequence to mu."
+    },
+    {
+      "step": "continuous cylinder extension",
+      "verdict": "PASS",
+      "reason": "Matrix coefficients and their conjugates form a unital self-adjoint point-separating algebra on each finite SU(N)^m. Stone-Weierstrass gives uniform approximation. Haar averaging over the compact gauge group at the finitely many incident vertices preserves polynomiality and link support, contracts the uniform error, and produces gauge-invariant approximants. The OS quadratic functional is uniform-norm continuous."
+    }
+  ],
+  "transfer_interfaces": {
+    "source_A_to_source_B": "same fermion-free Wilson density after g0^-2=N beta, same odd periodic torus, same induced site reflection, same gauge-invariant polynomial positive-time algebra",
+    "finite_to_infinite": "SZZ periodic embedding into one compact product space plus whole-sequence weak convergence; only bounded continuous reflected cylinders are transported",
+    "polynomial_to_continuous": "uniform Stone-Weierstrass approximation followed by finite-vertex compact gauge averaging",
+    "forbidden_transfers": [
+      "SZZ support-distance clustering to OS transfer moments",
+      "finite-cutoff reflection positivity to a continuum theory",
+      "reflection positivity alone to a nonzero physical Hamiltonian gap"
+    ]
+  },
+  "falsifiers": [
+    {
+      "id": "R13-F1-ACTION-NORMALIZATION",
+      "result": "NOT_TRIGGERED",
+      "test": "compare oriented/unoriented plaquette sums and require g0^-2=N beta"
+    },
+    {
+      "id": "R13-F2-QUARK-OR-GAUGE-FIXING-CONTAMINATION",
+      "result": "NOT_TRIGGERED_AFTER_SCOPE_NARROWING",
+      "test": "use only the fermion-free Wilson measure and the separately positive pure gauge kernel"
+    },
+    {
+      "id": "R13-F3-REFLECTION-GEOMETRY-MISMATCH",
+      "result": "NOT_TRIGGERED_AFTER_INTERFACE_EXPLICITATION",
+      "test": "identify odd periods, site reflection, temporal-link inversion, and eventual seam avoidance"
+    },
+    {
+      "id": "R13-F4-WEAK-CONVERGENCE-CLASS",
+      "result": "NOT_TRIGGERED",
+      "test": "require the reflected quadratic integrand to be a bounded continuous finite cylinder"
+    },
+    {
+      "id": "R13-F5-GAUGE-INVARIANT-DENSITY",
+      "result": "NOT_TRIGGERED",
+      "test": "uniform matrix-coordinate approximation followed by contractive compact gauge averaging"
+    }
+  ],
+  "chronology_audit": {
+    "prospective_issue": {
+      "number": 238,
+      "created_at": "2026-08-12T02:01:38Z"
+    },
+    "result_commit": {
+      "sha": "680de024ec8419147063bf1952ec9f77cfe13fec",
+      "committed_at": "2026-08-12T02:12:11Z"
+    },
+    "purported_pre_candidate_fibre_commit": {
+      "sha": "0b7fd0ab92cb3af1082ac83bdaf502c86636ae00",
+      "committed_at": "2026-08-12T02:12:34Z",
+      "parent": "680de024ec8419147063bf1952ec9f77cfe13fec"
+    },
+    "metrics_commit": {
+      "sha": "d4de51872ef6c8805c8f85435fd55426cc8617b2",
+      "committed_at": "2026-08-12T02:14:47Z"
+    },
+    "trace_commit": {
+      "sha": "90ff9f31d29be9317e9f7a77b8d82fcb7cd32f8b",
+      "committed_at": "2026-08-12T02:15:18Z"
+    },
+    "framework_43897d3_requirement": "A content-bound obstruction-transformation memory/review and its trace event must precede candidate generation; R13 contains neither.",
+    "verdict": "FAIL_STRICT_PRE_CANDIDATE_CHRONOLOGY",
+    "reason": "The theorem-like derivation was committed before the file labelled pre-candidate fibre and before the trace. The earlier issue froze the atom and success contract but is not the required complete context, dual-memory, obstruction-transformation, and trace packet. Public history is preserved rather than backfilled."
+  },
+  "classification": {
+    "mathematical_truth_check": "PASS_BOUNDED_RETROSPECTIVE",
+    "strict_rakl_discovery": "FAIL",
+    "overall_pr_state": "DRAFT_BLOCKED_FROM_READY_OR_MERGE",
+    "failure_type": "BOUNDED_PROCESS_APPLICABILITY_FAILURE",
+    "mathematical_impossibility": false,
+    "issue_238_closed": false,
+    "independent_review_credit": "0/3",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "proposal_only_rakl_lesson": {
+    "id": "L-YM-R13-PUBLIC-PARENT-BEFORE-PROOF-PROPOSAL",
+    "status": "PROPOSAL_ONLY_NOT_PROMOTED",
+    "text": "For a theorem-like application step, make the complete current-gate packet, including obstruction-transformation review and public pre-candidate trace, a public parent of the first result-capable commit. A prospective issue contract does not substitute for those content-bound artifacts, and later files cannot backfill chronology.",
+    "validation_obligation": "On a fresh child atom, require the gate receipt commit to be an ancestor of the candidate commit and make tests fail if any required current-framework event or content-bound artifact is absent.",
+    "framework_authority": false,
+    "mathematical_credit": false
+  },
+  "authority_contract": {
+    "grants_strict_discovery_credit": false,
+    "grants_theorem_or_novelty_authority": false,
+    "grants_root_authority": false,
+    "grants_review_independence": false,
+    "may_backfill_chronology": false,
+    "may_promote_lesson": false,
+    "git_ci_schema_hash_runtime_math_credit": 0
+  },
+  "artifact_hash": "sha256:ca5bb8bd2c8c13f8ed2301bdeb8a4d978be5685a4a9596dd80f7e52477b490b5"
+}
