@@ -58,7 +58,9 @@ def test_r9_episode_diagnosis_failure_obstruction_are_distinct():
     episode = load_json("07_memory/BSD_A1a1_R9_CM_KATZ_ORDER_TASK_EPISODE_SHADOW_20260812.taskepisode")
     diagnosis = load_json("07_memory/BSD_A1a1_R9_CM_KATZ_ORDER_DIAGNOSIS_SHADOW_20260812.json")
     failure = load_json("07_memory/BSD_A1a1_R9_COMPLEX_TO_KATZ_ORDER_FAILURE_SHADOW_20260812.json")
-    assert episode["episode_id"] == diagnosis["episode_id"] == failure["episode_id"]
+    assert episode["episode_id"] == diagnosis["source_episode_ref"] == failure["source_episode_ref"]
+    assert "episode_id" not in diagnosis
+    assert "episode_id" not in failure
     assert diagnosis["diagnosis_id"] == failure["diagnosis_id"]
     assert diagnosis["existing_obstruction_reused"] == "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE"
     assert failure["existing_obstruction"] == "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE"
