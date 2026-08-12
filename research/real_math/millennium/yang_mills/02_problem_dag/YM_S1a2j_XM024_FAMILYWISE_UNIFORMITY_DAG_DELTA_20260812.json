@@ -1,0 +1,35 @@
+{
+  "schema_version": "ym-xm024-dag-delta-v1",
+  "authority": "PROPOSAL_SHADOW_ROUTE_REFINEMENT_ONLY",
+  "root_issue": 5,
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "target_atom": "YM-S1a2j",
+  "source_cross_atom": "XM024-HODGE-YM-FAMILYWISE-UNIFORMITY",
+  "source_issue": 358,
+  "supersedes_nothing": true,
+  "observed_prior_residual": "Bind an inverse/conorm margin for the relevant block in the actual graph norm, identify Section-30 and Section-38 operators, then discharge nonlinear/regulator/OS/continuum interfaces.",
+  "refined_children": [
+    {
+      "atom_id": "YM-S1a2j-u1",
+      "goal": "Bind a scale/regulator-uniform relevant-block margin inf_k m(L_k)>=1+eta>1 in the actual graph norm, equivalently sup_k ||L_k^{-1}||<=q<1, or bind a quantitatively equivalent nonautonomous dichotomy.",
+      "status": "OPEN",
+      "why": "XM024 hostile family L_k=diag(2,1+1/k) proves that pointwise m(L_k)>1 for every k does not imply a strict contraction on l_infinity trajectory space because sup_k||L_k^{-1}||=1."
+    },
+    {
+      "atom_id": "YM-S1a2j-u2",
+      "goal": "If Wilson uses a different weighted/adapted/coupled graph-transform metric, bind its norm-equivalence constants, scale dependence, multi-step contraction/dichotomy estimate and exact relation to the Section-30/38 block.",
+      "status": "OPEN",
+      "why": "A different metric may evade the simple sup-norm hostile model, but only under explicit typed quantitative control; no such control is inferred from pointwise operator-norm expansion."
+    }
+  ],
+  "unchanged_downstream": [
+    "SECTION30_SECTION38_OPERATOR_IDENTITY",
+    "NONLINEAR_CROSS_DERIVATIVE_GRAPH_MARGIN",
+    "SHRINKING_DOMAIN_INVARIANCE",
+    "REGULATOR_SLAVING",
+    "GAUGE_TO_OS_PHYSICAL_RECONSTRUCTION",
+    "CONTINUUM_LIMIT_AND_PHYSICAL_MASS_GAP_NORMALIZATION"
+  ],
+  "difference_witness": "research/real_math/millennium/cross_problem/07_memory/XM024_HODGE_YM_FAMILYWISE_UNIFORMITY_20260812.json",
+  "nonclaims": ["No claim about the actual numerical spectrum or conorm of Wilson's L_k.","No theorem authority.","No root closure."]
+}
