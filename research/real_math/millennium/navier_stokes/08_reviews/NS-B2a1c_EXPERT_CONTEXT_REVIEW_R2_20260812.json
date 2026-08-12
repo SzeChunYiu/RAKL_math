@@ -1,0 +1,19 @@
+{
+  "schema_version": "same-context-expert-cell-v3-shadow",
+  "atom_id": "NS-B2a1c",
+  "context_hash": "sha256:363c17506e93af1047dc4d10d10b4c35fb603ac842cf5b37236ef8d924762e71",
+  "frozen_at": "2026-08-12T00:07:00+00:00",
+  "independent_review_credit": "0/3",
+  "roles": [
+    {"role":"Type-II Euler-scaling PDE lead","background":"suitable weak solutions, blow-up scaling, ancient Euler limits","precheck":"Bind Theorem 3.1 (3.5)-(3.8) and the F(a)=1 example exactly; reject any Navier-Stokes-only rigidity after the viscosity vanishes."},
+    {"role":"local-energy / pressure analyst","background":"localized energy identities, pressure decomposition, cutoff flux","precheck":"Treat (4.4) as a large-radius cutoff hypothesis, not a consequence; keep signed pressure/flux and absolute tail control separate."},
+    {"role":"concentration-compactness / far-field analyst","background":"critical compactness, profile escape, noncompact symmetries","precheck":"Use the prior double-limit failure to prevent fixed-Q(a) convergence from being misread as tail tightness; test the explicit tail condition first."},
+    {"role":"Euler rigidity / unique-continuation specialist","background":"Euler Liouville problems and unique-continuation interfaces","precheck":"Section-4 conservation law is not a generic Euler Liouville theorem; backward uniqueness is not admissible without exact matching equation/hypotheses."},
+    {"role":"vorticity / geometric-depletion specialist","background":"vorticity transport, axisymmetric Euler/Navier-Stokes structure","precheck":"Audit the special axisymmetric/swirl-free and derivative hypotheses in Section 4; do not transfer vorticity structure to the general branch."},
+    {"role":"adversarial algebra / scaling specialist","background":"critical exponents, endpoint inequalities, hostile calibrations","precheck":"Solve the admissible l1,s1 region exactly, including strict endpoints, before interpreting (4.4). Try endpoint and sign errors first."},
+    {"role":"formal assurance / provenance reviewer","background":"RAKL v3 gates, source provenance, chronology, nonpromotion","precheck":"Require current Gate C objects and ordered trace before verification; preserve the scoping chronology caveat and separate source-interface failure from root authority."}
+  ],
+  "consensus_pre_action": "Route to the cheapest exact source-exponent compatibility audit. Do not search for a new Euler lemma until the specialized positive analogue has been checked against F=1. Prior failures may change priority only.",
+  "authority": "SAME_CONTEXT_ROLE_SEPARATED_ONLY",
+  "artifact_hash": "sha256:25024fed01d310ebbf736eca8c506f62f63a3ca046b6e7f121e2ae583f1757f5"
+}
