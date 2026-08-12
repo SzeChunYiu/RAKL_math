@@ -1,0 +1,64 @@
+{
+  "artifact_hash": "sha256:f0eedc775248af5f9cacfd573a3000b5989492a1a37de6e26631b179fdcc727c",
+  "atom_id": "O9d12a2a1b-C048",
+  "attempted_implication": "literal transposition should preserve the graph-language reduction while changing the row interface from prefix-as-row to suffix-as-row",
+  "candidate_id": "C048-LITERAL-TRANSPOSE-TRANSFER-CONDITION-v1",
+  "cause_and_competing_causes": {
+    "competing_causes_rejected": [
+      "coarse high-half occupancy alone supplies equality",
+      "the old unswapped reduction remains valid by default",
+      "record completeness proves overlap nonemptiness"
+    ],
+    "supported_bounded_cause": "transpose is a bijective relation symmetry, whereas collision depends on decoder-specific suffix/prefix synchronization not supplied by that symmetry"
+  },
+  "chronology": {
+    "candidate_public_merge": "fb51331129a4c7a0830cc72ffe72c52efdfb434e",
+    "evaluation_after_both_public_freezes": true,
+    "proof_inputs_public_merge": "02c859e7bf82ba4c70df0656f09cc48803e9e393"
+  },
+  "evaluator_output": {
+    "candidate_id": "C048-LITERAL-TRANSPOSE-TRANSFER-CONDITION-v1",
+    "verdict": "PASS"
+  },
+  "exact_mathematical_result": {
+    "overall_repair": "NOT_ESTABLISHED: no overlap witness or nonemptiness theorem was frozen or checked.",
+    "success": "For the full square relation transpose, graph membership is exactly equivariant under swapping both query endpoints; hence the C041 3SAT reduction remains correctly directed after changing (r,M+c) to (M+c,r).",
+    "transfer_condition": "Literal-transpose high cross rows are exactly 1||c for UNSAT suffixes c, and exact collision with a current canonical prefix occurs iff this row language intersects P_(k+1)."
+  },
+  "execution": {
+    "evaluator_path": "research/real_math/millennium/p_vs_np/05_falsification/c048_literal_transpose_transfer_evaluator.py",
+    "evaluator_raw_sha256": "c6dad8202ae0dcaf1bce4b0b6c45b6ffad9c39cd636626e57715ca1624c994b6",
+    "executed_at": "2026-08-12T04:09:35Z",
+    "network_used": false,
+    "raw_output_sha256": "baa3f1e09420fe901150023af21ca46aa23ae877ef63e73306d3553cd5997009"
+  },
+  "falsifier": "A pair violating G^T=tau(G), a transposed decoded high row outside 1||S_k, or a label collision not equivalent to the frozen overlap refutes the corresponding lemma.",
+  "inputs": {
+    "authorization": {
+      "artifact_hash": "sha256:33d12b908e92ece2b09fd3b389234ea69027e464dabc9dde8a3f7710d217431d",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C048_POST_FREEZE_PROOF_CHECK_AUTHORIZATION_20260812.json"
+    },
+    "certificate": {
+      "artifact_hash": "sha256:84ebf84c9b90a99c3f5e348bacad53ee1d700e2d0c746805cf4b8a0439cd1e33",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C048_LITERAL_TRANSPOSE_PROOF_CERTIFICATE_FREEZE_20260812.json"
+    }
+  },
+  "interpretation": {
+    "formal_proof_checked": false,
+    "independent_review": false,
+    "record_checker_validates_semantics": false,
+    "same_context_hand_derivation_supported": true,
+    "software_assurance_mathematical_credit": 0
+  },
+  "repair": "Construct and freeze a target-blind canonical UNSAT word whose suffix is the tail of a current canonical prefix, or prove such overlap impossible; then separately retain the swapped reduction map.",
+  "result_id": "PNP-C048-LITERAL-TRANSPOSE-PROOF-CHECK-20260812",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "scope": [
+    "exact C041 square relation and equal split",
+    "full recursive transpose with both endpoints swapped",
+    "all k>=2 for identities/equivalences",
+    "no overlap existence, target enumeration, cover/lower-bound, novelty, or root claim"
+  ],
+  "status": "PASS_SAME_CONTEXT_CERTIFICATE_RECORD_CHECK"
+}
