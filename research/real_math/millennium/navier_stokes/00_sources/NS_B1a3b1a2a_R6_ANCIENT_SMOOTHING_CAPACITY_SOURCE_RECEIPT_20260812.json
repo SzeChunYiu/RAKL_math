@@ -1,0 +1,49 @@
+{
+  "record_type": "PRIMARY_REFERENCE_SCOPE_RECEIPT",
+  "unit_id": "MATH-NS-B1A3B1A2A-R6-ANCIENT-SMOOTHING-TO-FIXED-TIME-CAPACITY",
+  "authority": "SOURCE_BOUND_SCOPED_PROOF_NO_NAVIER_STOKES_ROOT_AUTHORITY",
+  "application_base_sha": "58de5548d337d4ea3c83b5fcde6ed5c6aee3f2e0",
+  "framework_main_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+  "sources": [
+    {
+      "role": "BOUNDED_MILD_SMOOTHING",
+      "authors": "G. Koch, N. Nadirashvili, G. Seregin, V. Sverak",
+      "title": "Liouville theorems for the Navier-Stokes equations and applications",
+      "arxiv": "0709.3599",
+      "url": "https://arxiv.org/abs/0709.3599",
+      "locator": "Section 4, Proposition 4.1",
+      "claim_used": "For a mild solution launched from bounded data u_0, t^(k/2+l) nabla^k partial_t^l u is bounded by C(k,l)||u_0||_infinity on a time interval of length epsilon(k,l)||u_0||_infinity^(-2).",
+      "authority": "PRIMARY_SOURCE_CONTROL"
+    },
+    {
+      "role": "ANCIENT_MILD_RESTART_CLASS",
+      "authors": "G. Koch, N. Nadirashvili, G. Seregin, V. Sverak",
+      "title": "Liouville theorems for the Navier-Stokes equations and applications",
+      "arxiv": "0709.3599",
+      "url": "https://arxiv.org/abs/0709.3599",
+      "locator": "Section 6, ancient mild solution definition",
+      "claim_used": "An ancient mild solution is mild on R^3 x (T_j,0) from its value at T_j for a sequence T_j tending to minus infinity; semigroup splitting at an interior smooth time permits the bounded-mild estimate to restart there.",
+      "authority": "PRIMARY_SOURCE_CONTROL_PLUS_STANDARD_SEMIGROUP_SPLITTING"
+    },
+    {
+      "role": "FINITE_I_DISSIPATION_LEDGER",
+      "authors": "D. Albritton, T. Barker",
+      "title": "On local Type I singularities of the Navier-Stokes equations and Liouville theorems",
+      "arxiv": "1811.00502v2",
+      "url": "https://arxiv.org/abs/1811.00502v2",
+      "locator": "equations (1.1)-(1.5)",
+      "claim_used": "For every parabolic ball Q(z,R), E(Q)=R^(-1) integral_Q |nabla u|^2 and I is the supremum of the nonnegative sum A+C+D+E over parabolic subballs, so finite I gives integral_Q |nabla u|^2 <= I R.",
+      "authority": "PRIMARY_SOURCE_CONTROL"
+    }
+  ],
+  "direct_calculation": {
+    "curl_bound": "|curl u|^2 <= 2|nabla u|^2",
+    "temporal_persistence": "If K=||partial_t omega||_infinity and |omega(x,t)|>lambda, then |omega(x,s)|>lambda/2 for t-delta<=s<=t when delta<=lambda/(2K).",
+    "measure_step": "Integrate the lower bound lambda^2/4 over the persistent superlevel cylinder and compare with the finite-I upper bound 2 I R."
+  },
+  "source_nonclaims": [
+    "The sources do not state that finite I implies a radius-free global weak-L^(3/2) vorticity bound.",
+    "The sources do not supply a summable annular vorticity tail, no-incoming theorem, one-profile morphology, or vorticity-direction certificate for this producer.",
+    "The sources do not prove Navier-Stokes regularity or close the Clay problem."
+  ]
+}
