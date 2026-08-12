@@ -3,7 +3,7 @@
 **Authority:** proposal/shadow same-context review only; independent mathematical-review credit **0/3**.  
 **Framework:** RAKL `3.0.0` at `43897d3afaf0038385102d5acc64793c05ec40f0`.  
 **Application freeze:** `597b7d98b514af33808d5f32be2cd5c906cfe036` / tree `c4b4fd034a0a9856bb78338e784ad42f67aa7a64`.  
-**Fibre:** `sha256:5913e3f7f24fe72170ced53f6cd110e0f7c6c2be84299d1d0df37ec0602950e2`.  
+**Fibre:** `sha256:a88412d53c35650cedf9e173f9339cbc12da5a2e73c9addd2a98a309fd9c0808`.  
 **Root:** `OPEN_NO_SOLUTION_CERTIFICATE`.
 
 The packet records role-separated same-context checks. All R10 context, result, review, and trace records share the same recorded second and first entered git together, so repository chronology does **not** establish a prospective freeze. This review receives no prospective or independent-review credit.
