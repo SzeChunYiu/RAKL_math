@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "feedback_id": "RAKL-MATH-C044-PARALLEL-RESULT-LEAKAGE-20260812",
+  "source_atom_id": "O9d12a2a1b-C044-RETROSPECTIVE",
+  "status": "APPLICATION_PROCESS_FAILURE_PROPOSAL_ONLY_ZERO_MATHEMATICAL_CREDIT",
+  "observed_failure": "A read-only parallel worker was asked to identify the next atom but computed and disclosed the target quotient value and witness before the orchestrator froze the strict pre-candidate packet.",
+  "root_cause": "The delegated task constrained filesystem writes but did not constrain target-result access or candidate computation. Read-only is not result-blind.",
+  "impact": [
+    "strict C044 context-first discovery chronology was forfeited",
+    "truth checking remained possible only as retrospective work",
+    "the exposed target cannot be reused as a fresh assurance case"
+  ],
+  "proposed_framework_delta": {
+    "name": "pre-candidate result-capability firewall for parallel agents",
+    "rule": "Before the strict gate passes, delegated workers may inspect sources and context but must be explicitly forbidden from evaluating the target QoI, running candidate oracles, constructing target witnesses, or reporting candidate outcomes.",
+    "activation": "Any atom with frozen-candidate chronology or held-out evaluator requirements.",
+    "falsifiers": [
+      "a permitted pre-gate worker task can still compute the target result under its declared command/data capabilities",
+      "the firewall blocks source/context retrieval required by the gate",
+      "post-gate evaluator workers cannot receive the committed candidate identity"
+    ],
+    "non_authority": "This is proposal-only process feedback and creates no mathematical, theorem, review-independence, or framework-promotion authority."
+  },
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/04_candidates/C044_RETROSPECTIVE_Q16_MULTIPLEXING_RESULT_20260812.md",
+    "research/real_math/millennium/p_vs_np/05_falsification/C044_RETROSPECTIVE_Q16_MULTIPLEXING_RECEIPT_20260812.json"
+  ],
+  "mathematical_saturation_credit": false,
+  "software_assurance_saturation_credit": false,
+  "artifact_hash": "sha256:7bf9cc8c3d02ff0450128f9f925256e59a18fa76939f81d4283954e67a329ab2"
+}
