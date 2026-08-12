@@ -314,7 +314,7 @@ def failure_document(lesson: dict) -> dict:
         falsifier_or_attempt=lesson["mathematical_falsifier"],
         observed_result=lesson["exact_mathematical_result_or_failure"],
         artifact_hash="",
-        timestamp="2026-08-12T12:06:00Z",
+        timestamp="2026-08-12T12:02:00Z",
         local_repair_attempts=(
             "separated the fixed-constant scalar lemma from source applicability",
             "audited all five required constants before target composition",
