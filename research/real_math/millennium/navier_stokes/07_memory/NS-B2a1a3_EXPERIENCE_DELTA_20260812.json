@@ -1,0 +1,61 @@
+{
+  "schema_version": "v3-proposal-shadow-experience-delta",
+  "episode": {
+    "episode_id": "E-NS-B2a1a3-R1",
+    "task_id": "NS-V3-BLOWUP-CLASSIFICATION-20260812",
+    "atom_id": "NS-B2a1a3",
+    "context_hash": "sha256:907ca8070ffbe9e896d79fd00f3c89352afd702f50a7ea197ff6d1e8c85924a0",
+    "problem_signature": ["Type-II Euler-scaled logarithmic weighted estimates", "moving-annulus absolute L2 tightness", "one-scale local-energy/Hölder/pressure certificate"],
+    "fibre_snapshot_hash": "sha256:907ca8070ffbe9e896d79fd00f3c89352afd702f50a7ea197ff6d1e8c85924a0",
+    "operator_ids": ["OP-LOG-MESOSCOPIC-ASYMPTOTIC", "OP-AED-TO-C-PRESSURE-INTERPOLATION", "OP-ABSOLUTE-CUTOFF-DIMENSION-RESTORATION"],
+    "motif_ids": [],
+    "action_trace": ["SEARCH same-domain tail/log-window episodes", "prove a^m f^alpha F^-beta diverges for fixed m>0 and finite alpha,beta on h->infinity,h/L->0", "map source A/E/D to C=O(F^-9/4) and pressure-velocity=O(F^-25/12)", "restore absolute cutoff radius factors", "scope outcome to estimator insufficiency; retain signed/multiscale/source-specific routes"],
+    "observation_ids": ["OBS-NS-B2a1a3-A-BOUND-aFminus2", "OBS-NS-B2a1a3-C-BOUND-Fminus9over4", "OBS-NS-B2a1a3-PRESSURE-BOUND-Fminus25over12", "OBS-NS-B2a1a3-RADIUS-OUTRUNS-FINITE-LOG-POWERS"],
+    "verification_ids": ["V-NS-B2a1a3-EXACT-LOG-ASYMPTOTIC", "V-NS-B2a1a3-SCALE-NORMALIZATION", "V-NS-B2a1a3-PRESSURE-HOLDER", "V-NS-B2a1a3-EQUATION-CHANGE-AUDIT", "V-NS-B2a1a3-NUMERICAL-SPOT-CHECK-CALIBRATION-ONLY"],
+    "outcome": "PARTIAL_SUCCESS",
+    "residual_signature": ["standard one-scale finite-log-power absolute-value certificate does not yield the required moving-annulus tail", "actual PDE tail/cancellation remains unknown", "fixed-radius compactness still does not bind a(lambda)->infinity", "scaled viscosity tends to zero and Euler-limit rigidity remains a separate interface"],
+    "evidence_pointers": ["research/real_math/millennium/navier_stokes/09_trace/NS-B2a1a3_PRE_CANDIDATE_PACKET_20260812.json", "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1a3_ONE_SCALE_LOG_WEIGHT_OBSTRUCTION_20260812.md", "Gregory Seregin, arXiv:2606.29468v1 (2026-06-28), especially (1.7), (2.2), (2.7), (2.9), fixed-a compactness after (2.9), and (2.10)"],
+    "timestamp": "2026-08-12T02:49:30Z",
+    "cost": 0.0,
+    "cost_note": "CANNOT_MEASURE: RAKL TaskEpisode requires numeric cost; no calibrated episode cost policy or authoritative token/tool/wall-time meter was available, so numeric field remains default 0.0 and must not be interpreted as zero resource use.",
+    "storage_admission": "PROPOSAL_SHADOW_STORED",
+    "artifact_hash": "sha256:b3d1ab4d9a53804a8e22e52496d3e2da192b9dd482424acf2681d1ee3e4aa0f4"
+  },
+  "diagnosis": {
+    "type": "Diagnosis", "id": "D-NS-B2a1a3-R1", "status": "SUPPORTED_SCOPED",
+    "category": ["LOCAL_TO_GLOBAL_GLUING", "BOUND_STRENGTH", "REPRESENTATION"],
+    "local_mathematical_failure": "NO: the exact source normalization and finite-log asymptotic survive the audit.",
+    "local_to_global_gluing_failure": "YES: standard one-scale absolute-value reductions do not produce the uniform moving-annulus tail needed to glue fixed-radius compactness to the same moving scale.",
+    "statement": "The logarithmic source gain is real in normalized coordinates, but any tested absolute shell estimate retaining a positive power of a and only finite powers of f and F has a non-vanishing/diverging control scale on 1<<h<<L. This diagnoses certificate insufficiency, not actual PDE tail failure."
+  },
+  "obstruction": {
+    "type": "ReusableObstruction", "id": "O-NS-B2a1a3-RADIUS-VS-LOG-WEIGHT",
+    "statement": "On a moving mesoscopic domain, a positive geometric power a^m outruns every fixed algebraic combination of logarithmic f(lambda) and F_lambda gains; therefore such an estimate cannot certify an absolute vanishing tail.",
+    "applicability": "moving-domain absolute estimates with h->infinity,h/L->0 and fixed finite exponents; one-scale absolute-value estimate family",
+    "difference_witness_required": true, "authority": "SEARCH_GUIDANCE_ONLY"
+  },
+  "lesson": {
+    "type": "Lesson", "lesson_id": "L-NS-B2a1a3-RESTORE-GEOMETRIC-SCALE-FIRST", "kind": "REPRESENTATION",
+    "trigger_signature": ["normalized weighted bound", "moving observation radius", "absolute consumer"],
+    "action": "restore the physical scale factor before trusting normalized decay; compare log of geometric growth with log of every retained weight gain",
+    "expected_effects": ["prune finite-log-power one-scale certificates early", "redirect search to cancellation/multiscale/source-specific compactness when needed"],
+    "boundaries": ["does not prove actual flux/tail divergence", "does not apply when geometric factors cancel or exponents/representations change non-algebraically"],
+    "supporting_episode_ids": ["E-NS-B2a1a3-R1"], "contradicting_episode_ids": [],
+    "falsifier": "produce a valid same-source one-scale absolute estimate for the required tail with no positive geometric factor or with a gain outside the fixed finite log-power class",
+    "authority": "CANDIDATE", "validation_obligations": ["fresh same-theory reuse with DifferenceWitness", "independent audit before any tool/motif promotion"]
+  },
+  "prior_experience": {
+    "routing_changed_by": ["F-NS-B2a1a2-FIXED-TO-MOVING-RADIUS-ESCAPE", "F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH", "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY"],
+    "retrieved_rejected": [
+      {"id": "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE", "why": "subsumed by sharper moving-radius failures"},
+      {"id": "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION", "why": "Type-I packed-core geometry differs"},
+      {"id": "F-NS-B2a1c-F1-AXIAL-44-EXPONENT-INCOMPATIBLE", "why": "specialized axial consumer mismatch"},
+      {"id": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER", "why": "Type-I/unit-viscosity context; scaled viscosity here tends to zero"}
+    ],
+    "missed": "CANNOT_MEASURE: no exhaustive governed repository-memory coverage receipt"
+  },
+  "next_action": "Test scale-nonlocal/signed/PDE-specific tail mechanisms; keep NS-B2a1b signed flux as orthogonal bypass. LIFT remains blocked without bounded SEARCH/JUMP/GLUE exhaustion and cross-problem coverage.",
+  "novelty_class": {"class": "representation", "scope": "scoped solved subproblem/route-pruning", "literature_novelty_claim": false},
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "artifact_hash": "sha256:3e110599461f9387ecb2da65b466c3c342175101e5b423f9693882849a7a0b47"
+}
