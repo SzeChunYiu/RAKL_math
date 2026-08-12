@@ -1,0 +1,43 @@
+{
+  "artifact_hash": "sha256:f89cf576acc9d95737e1446f8bea985c3806d9913c94324a34b2aeb2f9ab3616",
+  "atom_id": "O9d12a2a1b-C051",
+  "context_hash": "sha256:8a06db5b4fdfcc3a11a7284772a8c4dfd8ccf6b8583438b84ff9bbc7efc2925f",
+  "disagreements": [
+    "Whether k=19 should be attacked by a full symbolic product or by searching first for a single forced unequal coordinate; all lenses prefer the cheapest coordinate-first falsifier, while requiring exhaustive grammar branches."
+  ],
+  "mathematical_result_credit": false,
+  "mathematical_saturation_credit": false,
+  "next_action_recommendation": "After all gates pass, freeze the cheapest exact k=19 discriminator: exhaustive length/parity branches and earliest forced unequal coordinate first, explicit canonical parses and UNSAT proof only if syntax survives; no other-k scan and no use of k=13.",
+  "review_authority": "SAME_CONTEXT_ROLE_SEPARATED_INTERNAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "review_id": "PNP-C051-EXPERT-CONTEXT-REVIEW-20260812",
+  "role_reviews": [
+    {
+      "objection": "Separate the complete length-38 and length-40 canonical parameter regimes from the semantic condition that the parent decodes to UNSAT.",
+      "recommendation": "Require exhaustive parameter branches, explicit parses, exact shared bits, and an UNSAT proof for every positive witness.",
+      "role": "domain_theory_lead"
+    },
+    {
+      "objection": "Sequence-later_k and product-automaton methods handle syntax only.",
+      "recommendation": "Use them to prune length/bit branches, then return to the exact decoder semantics.",
+      "role": "analogy_method_transfer_lead"
+    },
+    {
+      "objection": "Attack padding parity, gamma boundaries, payload widths, all-zero noncanonical leakage, and SAT syntactic survivors.",
+      "recommendation": "One mismatched bit or a satisfiable parent formula refutes a proposed witness.",
+      "role": "adversarial_falsification_lead"
+    },
+    {
+      "objection": "Bind H_19, P_20, both parses, equality 1||c=p, and the unchanged swapped reduction.",
+      "recommendation": "Freeze the exact symbolic discriminator before importing the decoder or solving any instance.",
+      "role": "formal_methods_lead"
+    },
+    {
+      "objection": "Treat any result as a code-later_k lemma for this decoder.",
+      "recommendation": "Value is an explicit witness family or scoped obstruction, not finite search volume or P-versus-NP progress.",
+      "role": "novelty_research_value_lead"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "strongest_objection": "A syntactically synchronized pair is not an later_k witness unless the parent parse is canonical and mathematically UNSAT; brute-force survival supplies no proof authority.",
+  "unresolved_uncertainty": "No k=19 candidate proof or result exists at this stage; the full length-38 and length-40 parameter branch sets and shared coordinates remain unevaluated."
+}

@@ -1,0 +1,28 @@
+{
+  "artifact_hash": "sha256:c312f11bc2b8e79bbb709fca0919193e0190d7b4f017c9e948d7cf2623a97856",
+  "difference_witness": {
+    "changed_structure": "k=19 uses length-38 parent and length-40 current regimes with different gamma widths, payload widths, and suffix offset",
+    "cheapest_illusory_difference_test": "derive every length-38/40 parameter branch and compare the earliest shared fixed coordinate before any semantic search",
+    "prior_failure": "k=15 forced h[3]=1 while every P_16 prefix had bit 3 equal to MAGIC[3]=0",
+    "restored_or_replaced_assumption": "none assumed; the old separating coordinate must be rederived rather than copied",
+    "why_old_falsifier_may_not_apply": "the length-19 suffix begins at a different parent coordinate and the length-40 current branch set differs"
+  },
+  "failures": [
+    {
+      "failure_id": "F-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION",
+      "warning": "a moved split can preserve a forced suffix-code versus MAGIC collision"
+    },
+    {
+      "failure_id": "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT",
+      "warning": "near-aligned headers can remain exactly disjoint"
+    }
+  ],
+  "mathematical_credit": false,
+  "quarantined_families": [
+    "k=13"
+  ],
+  "schema_version": "1.0.0",
+  "snapshot_id": "PNP-C051-FAILURE-SNAPSHOT-20260812",
+  "target_atom_id": "O9d12a2a1b-C051",
+  "target_state": "K19_TARGET_RESULT_UNACCESSED"
+}

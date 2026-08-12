@@ -1,0 +1,97 @@
+{
+  "analogy_scan_notes": "One proposal-only coarse-location versus fine-interface analogy survives explicit mapping and disanalogy review.",
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "atom_id": "O9d12a2a1b-C051",
+  "cross_domain_analogies": [
+    {
+      "common_abstraction": [
+        "suffix/prefix later_k",
+        "exact symbol synchronization",
+        "semantic acceptance after syntactic alignment"
+      ],
+      "disanalogies": [
+        "ordinary sequence assembly has no UNSAT predicate",
+        "the analogy supplies no theorem authority",
+        "variable-length gamma parsing must be proved exactly"
+      ],
+      "proposed_principle": "solve length and symbol synchronization before invoking the semantic UNSAT obligation",
+      "provenance_note": "proposal-only sequence-assembly analogy; no mathematical authority",
+      "shared_constraints": [
+        "later_k is position-sensitive",
+        "one mismatch refutes a proposed witness",
+        "the target object has an additional acceptance condition"
+      ],
+      "source_kind": "engineering / addressing",
+      "source_situation": "sequence assembly joins a fixed length-19 suffix to a fixed length-20 prefix only when every shared symbol agrees",
+      "source_to_target_mapping": [
+        "source suffix -> c from a canonical UNSAT parent word",
+        "target prefix -> tail of a canonical current prefix after its leading 1",
+        "valid assembly -> exact label in H_19 intersection P_20"
+      ],
+      "validation_obligation": "freeze an exact pair of code-grammar derivations and an UNSAT proof, or an exhaustive symbolic obstruction, before declaring the later_k nonempty or empty"
+    }
+  ],
+  "equivalent_formulations": [
+    "existence of canonical words x=r||c and y with x UNSAT and prefix_(k+1)(y)=1||c",
+    "nonemptiness of the synchronized suffix/prefix code-language product with an UNSAT side condition",
+    "impossibility via incompatible length/header/gamma/payload constraints"
+  ],
+  "explicit_disanalogies": [
+    "C048 proved an iff condition, not H_19 intersection P_20 existence",
+    "K13_QUARANTINED_PROCESS_CONTAMINATION is excluded from strict candidate design and certification; no mathematical content from that non-strict branch is imported here",
+    "syntax synchronization does not prove the parent formula UNSAT",
+    "the all-zero short contradiction is not canonical and cannot witness S_k as defined",
+    "relabelled encodings and changed splits are outside this atom",
+    "an H_19 intersection P_20 result is not a cover theorem, circuit lower bound, or P-versus-NP result",
+    "computation is not proof and assurance is not mathematics"
+  ],
+  "first_candidate_at": null,
+  "frozen_at": "2026-08-12T09:15:20Z",
+  "method_transfers": [
+    {
+      "disanalogies": [
+        "canonical syntax includes variable-length gamma fields and semantic UNSAT, so a finite-state prefix/suffix analogy alone is insufficient",
+        "a syntactic later_k witness is invalid unless the parent decoded formula is actually UNSAT",
+        "later_k nonemptiness does not determine cover growth or lower bounds"
+      ],
+      "method": "compile both exact label languages into a synchronized constraint system, discharge syntax and length constraints first, and test UNSAT semantics only for a frozen surviving construction",
+      "repair_question": "Does there exist a canonical UNSAT length-38 word r||c such that 1||c is the length-20 prefix of a canonical length-40 word, or does an exact shared-coordinate obstruction rule it out?",
+      "required_assumptions": [
+        "the C041 decoder and equal prefix/suffix split remain unchanged",
+        "the swapped reduction established in C048 remains fixed",
+        "the decoder grammar, MAGIC header, padding rule, and equal split remain unchanged"
+      ],
+      "shared_structure": [
+        "relations are assembled from inherited and fresh blocks",
+        "H_19 contains labels 1||c from length-19 suffixes of canonical UNSAT length-38 parent words",
+        "P_20 contains length-20 prefixes of canonical length-40 words",
+        "the desired event is exact equality of a suffix-derived label and a prefix-derived label"
+      ],
+      "source_anchors": [
+        "git:a060514e894ec6566b01bb4c89a8aa806ef0048c:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+        "git:a060514e894ec6566b01bb4c89a8aa806ef0048c:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:f3eaad2496e80aa64b8081868021cc1a89304ef2"
+      ],
+      "source_context": "exact fixed-level intersection of a semantic suffix language with a canonical prefix language"
+    }
+  ],
+  "near_solved_analogues": [
+    "word borders and suffix-prefix synchronization in variable-length prefix codes",
+    "product-automaton language intersection with a non-regular semantic side condition"
+  ],
+  "object_context": "Fixed untouched atom: decide H_19 intersection P_20, where H_19 is the literal-transpose canonical-UNSAT length-19 suffix-row language and P_20 is the canonical length-20 prefix language from length-40 words, retaining the C048 endpoint-swapped reduction.",
+  "packet_hash": "sha256:8a06db5b4fdfcc3a11a7284772a8c4dfd8ccf6b8583438b84ff9bbc7efc2925f",
+  "solved_analogues": [
+    "C048 exact equivalence between literal-transpose row collision and H_k intersection P_(k+1)"
+  ],
+  "source_anchors": [
+    "git:a060514e894ec6566b01bb4c89a8aa806ef0048c:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+    "git:a060514e894ec6566b01bb4c89a8aa806ef0048c:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:f3eaad2496e80aa64b8081868021cc1a89304ef2"
+  ],
+  "structural_coordinates": [
+    "H_19={1||c: |r|=|c|=19 and Dec(r||c) is canonical UNSAT}",
+    "P_20={length-20 prefixes of canonical words of length 40}",
+    "exact fixed-level intersection H_19 intersection P_20",
+    "C041 MAGIC, gamma fields, payload width, optional zero padding, and equal split",
+    "C048 swapped reduction retained unchanged"
+  ]
+}
