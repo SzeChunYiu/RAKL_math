@@ -1,7 +1,7 @@
 {
-  "artifact_hash": "sha256:469177fafc3d3d298447cb878a566866762012f4f30eda14321a7fb5ae9a0e06",
+  "artifact_hash": "sha256:69c89f069754e64a1da6f743622839edd823e27756fa443db7eebfeaf2b35b1c",
   "atom_id": "O9d12a2a1b-C051",
-  "authority": "CANDIDATE_FREEZE_ONLY_NO_EVALUATED_RESULT_NO_ROOT_AUTHORITY",
+  "authority": "RETROSPECTIVE_SUPPORT_SELECTION__PROSPECTIVE_SHARED_BIT_AND_UNSAT_DISCRIMINATOR_FREEZE__NO_EVALUATED_RESULT_NO_ROOT_AUTHORITY",
   "candidate": {
     "candidate_id": "C051-K19-TARGET-BLIND-SYNCHRONIZED-DISCRIMINATOR-v1",
     "current_length_classification": {
@@ -71,19 +71,19 @@
     "evaluator_executed": false,
     "frozen_at": "2026-08-12T09:44:24Z",
     "generic_target_result_accessed": true,
+    "k19_shared_bits_unsat_and_intersection_unaccessed": true,
+    "k19_support_parameters_preexposed": true,
     "quarantined_families": [
       "k=13"
     ],
     "result_artifact": null,
-    "target_state": "K13_QUARANTINED_PROCESS_CONTAMINATION__K19_TARGET_RESULT_UNACCESSED",
-    "untouched_k19_target_result_accessed": false
+    "target_state": "K13_QUARANTINED__K19_SUPPORT_PREEXPOSED__K19_SHARED_BITS_UNSAT_INTERSECTION_UNACCESSED"
   },
   "mathematical_credit_boundary": {
-    "credit_now": [
-      "exact length-support classifications and their displayed arithmetic proofs"
-    ],
+    "credit_now": [],
     "future_result_requires_direct_mathematical_certificate": true,
     "no_credit_now": [
+      "preexposed k19 support selection and repeated length classifications",
       "candidate existence",
       "evaluator existence",
       "tests",
@@ -114,6 +114,7 @@
     },
     "framework_revalidated_current_main_commit": "55c688dc42352c8c254f7d370c66d999b414fc52",
     "pre_candidate_authoritative_framework_commit": "9da0f4d331e9ae61f1309b3a006d7a3c67fa217c",
-    "pre_candidate_gate_artifact_hash": "sha256:0be3205e7c7a3a88f150e4c0caae1d95284a041c8fda93a7cd2f81b7b1cf4212"
+    "pre_candidate_gate_artifact_hash": "sha256:0be3205e7c7a3a88f150e4c0caae1d95284a041c8fda93a7cd2f81b7b1cf4212",
+    "support_contamination_correction_artifact_hash": "sha256:0973f3abcf46267e6ac74cfe10a89b9e645a2c3553ef70ba28f3595620bdd4e1"
   }
 }

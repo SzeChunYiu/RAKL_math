@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[5]
 PNP = ROOT / "research/real_math/millennium/p_vs_np"
 CONTEXT = PNP / "01_frontier/O9d12a2a1b_C051_MATH_CONTEXT_FIBER_20260812.json"
 GATE = PNP / "09_trace/O9d12a2a1b_C051_PRE_CANDIDATE_GATE_RECEIPT_20260812.json"
+CORRECTION = PNP / "09_trace/O9d12a2a1b_C051_SUPPORT_CONTAMINATION_CORRECTION_20260812.json"
 EVALUATOR = PNP / "05_falsification/c051_k19_alignment_evaluator.py"
 OUTPUT = PNP / "04_candidates/O9d12a2a1b_C051_K19_ALIGNMENT_DISCRIMINATOR_FREEZE_20260812.json"
 
@@ -30,8 +31,11 @@ def seal(document: dict) -> dict:
 def build() -> dict:
     context = json.loads(CONTEXT.read_text(encoding="utf-8"))
     gate = json.loads(GATE.read_text(encoding="utf-8"))
-    if gate["gate_verdicts"]["licensed_action"] != "FREEZE_K19_ALIGNMENT_DISCRIMINATOR_ONLY":
-        raise RuntimeError("C051 gate does not license this candidate")
+    correction = json.loads(CORRECTION.read_text(encoding="utf-8"))
+    if correction["corrected_authority"]["licensed_action"] != "FREEZE_RETROSPECTIVE_K19_DISCRIMINATOR_BEFORE_ANY_SHARED_BIT_OR_UNSAT_EVALUATION":
+        raise RuntimeError("C051 correction does not license this retrospective candidate")
+    if correction["corrected_authority"]["candidate_generation_allowed_under_original_strict_gate"] is not False:
+        raise RuntimeError("C051 correction must fail the original strict gate closed")
     if gate["chronology"]["candidate_identity"] is not None:
         raise RuntimeError("C051 pre-candidate gate already binds a candidate")
 
@@ -102,7 +106,7 @@ def build() -> dict:
     return seal({
         "schema_version": "1.0.0",
         "record_type": "PROSPECTIVE_MATHEMATICAL_CANDIDATE_AND_EVALUATOR_FREEZE",
-        "authority": "CANDIDATE_FREEZE_ONLY_NO_EVALUATED_RESULT_NO_ROOT_AUTHORITY",
+        "authority": "RETROSPECTIVE_SUPPORT_SELECTION__PROSPECTIVE_SHARED_BIT_AND_UNSAT_DISCRIMINATOR_FREEZE__NO_EVALUATED_RESULT_NO_ROOT_AUTHORITY",
         "atom_id": "O9d12a2a1b-C051",
         "candidate_identity": {
             "candidate_id": candidate_core["candidate_id"],
@@ -125,6 +129,7 @@ def build() -> dict:
             },
             "context_packet_hash": context["packet_hash"],
             "pre_candidate_gate_artifact_hash": gate["artifact_hash"],
+            "support_contamination_correction_artifact_hash": correction["artifact_hash"],
             "evaluator_path": str(EVALUATOR.relative_to(ROOT)),
             "evaluator_raw_sha256": sha256_bytes(EVALUATOR.read_bytes()),
         },
@@ -132,14 +137,15 @@ def build() -> dict:
             "frozen_at": "2026-08-12T09:44:24Z",
             "evaluator_executed": False,
             "generic_target_result_accessed": True,
-            "untouched_k19_target_result_accessed": False,
-            "target_state": "K13_QUARANTINED_PROCESS_CONTAMINATION__K19_TARGET_RESULT_UNACCESSED",
+            "k19_support_parameters_preexposed": True,
+            "k19_shared_bits_unsat_and_intersection_unaccessed": True,
+            "target_state": "K13_QUARANTINED__K19_SUPPORT_PREEXPOSED__K19_SHARED_BITS_UNSAT_INTERSECTION_UNACCESSED",
             "quarantined_families": ["k=13"],
             "result_artifact": None,
         },
         "mathematical_credit_boundary": {
-            "credit_now": ["exact length-support classifications and their displayed arithmetic proofs"],
-            "no_credit_now": ["candidate existence", "evaluator existence", "tests", "CI", "Git", "hashes", "schemas", "chronology"],
+            "credit_now": [],
+            "no_credit_now": ["preexposed k19 support selection and repeated length classifications", "candidate existence", "evaluator existence", "tests", "CI", "Git", "hashes", "schemas", "chronology"],
             "future_result_requires_direct_mathematical_certificate": True,
         },
         "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",

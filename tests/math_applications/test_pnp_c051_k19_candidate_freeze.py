@@ -29,10 +29,11 @@ def test_candidate_document_matches_prospective_fixture() -> None:
         "evaluator_executed": False,
         "frozen_at": "2026-08-12T09:44:24Z",
         "generic_target_result_accessed": True,
+        "k19_shared_bits_unsat_and_intersection_unaccessed": True,
+        "k19_support_parameters_preexposed": True,
         "quarantined_families": ["k=13"],
         "result_artifact": None,
-        "target_state": "K13_QUARANTINED_PROCESS_CONTAMINATION__K19_TARGET_RESULT_UNACCESSED",
-        "untouched_k19_target_result_accessed": False,
+        "target_state": "K13_QUARANTINED__K19_SUPPORT_PREEXPOSED__K19_SHARED_BITS_UNSAT_INTERSECTION_UNACCESSED",
     }
     assert observed["candidate_identity"]["candidate_id"] == "C051-K19-TARGET-BLIND-SYNCHRONIZED-DISCRIMINATOR-v1"
     assert observed["candidate"]["parent_length_classification"]["claim"].endswith("v=1,m=4.")
@@ -52,4 +53,5 @@ def test_freeze_contains_no_evaluated_result_or_result_receipt() -> None:
 def test_assurance_surfaces_receive_zero_mathematical_credit() -> None:
     boundary = json.loads(CANDIDATE.read_text(encoding="utf-8"))["mathematical_credit_boundary"]
     assert {"tests", "CI", "Git", "hashes", "schemas", "chronology"} <= set(boundary["no_credit_now"])
+    assert boundary["credit_now"] == []
     assert boundary["future_result_requires_direct_mathematical_certificate"] is True
