@@ -1,0 +1,70 @@
+{
+  "schema": "RAKL_math.math_context_fibre.v3_shadow",
+  "cycle_id": "YM-S1a2c-SZZ-RP-LIMIT-20260812-R13",
+  "authority": "PROPOSAL_SHADOW_PRE_CANDIDATE_ONLY",
+  "root": {
+    "issue": "#5",
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "atom": {
+    "id": "YM-S1a2c",
+    "issue": "#238",
+    "signature": "YM-S1a2c-SZZ-STRONG-COUPLING-LIMIT-SAME-MEASURE-REFLECTION-POSITIVITY",
+    "qoi": "Does the exact SZZ infinite-volume SU(N) Wilson measure inherit OS reflection positivity from matching finite periodic Wilson measures under the SZZ thermodynamic limit?"
+  },
+  "frozen_contract": {
+    "dimension": 4,
+    "group": "SU(N)",
+    "coupling": "0 < beta < 1/48",
+    "scale": "unit lattice spacing; finite periodic volume -> infinite volume only",
+    "measure": "SZZ mu_{Lambda_L,N,beta} and unique mu^ym_{N,beta}",
+    "source_algebra": "gauge-invariant bounded continuous positive-time cylinder functions; polynomial cylinder core first",
+    "reflection": "Euclidean time reflection matching Luescher finite periodic geometry on a cofinal odd-volume subsequence",
+    "no_claims": [
+      "centered covariance-to-transfer-moment identity",
+      "support-distance-to-time conversion",
+      "source completeness after OS null quotient",
+      "physical Hamiltonian mass gap",
+      "lattice-spacing or continuum limit",
+      "nontriviality",
+      "Clay root solution"
+    ]
+  },
+  "memory": {
+    "retrieved": [
+      "#5",
+      "#238",
+      "#88",
+      "F-YM-S1A2-OS-SZZ-SAME-THEORY-GLUING-UNBOUND",
+      "PR#209",
+      "#220",
+      "#205",
+      "#177",
+      "#159",
+      "#141"
+    ],
+    "selected": [
+      "#5",
+      "#238",
+      "#88",
+      "F-YM-S1A2-OS-SZZ-SAME-THEORY-GLUING-UNBOUND/PR#209"
+    ],
+    "rejected": [
+      "#220",
+      "#205",
+      "#177",
+      "#159",
+      "#141"
+    ],
+    "missed": "CANNOT_MEASURE — no exhaustive governed cross-problem memory coverage certificate"
+  },
+  "decision_policy": "source-bind same action/geometry/coupling first; then weak-limit gluing; fail closed on any mismatch; local coordinate only",
+  "cheap_falsifiers": [
+    "finite-volume positivity source uses different action/sign/boundary/reflection/gauge sector",
+    "no reflection-compatible cofinal subsequence",
+    "SZZ convergence not on common product space",
+    "reflected integrand not bounded continuous cylinder",
+    "polynomial core not dense within gauge-invariant finite-coordinate algebra"
+  ],
+  "fibre_hash": "sha256:f8e69c5e6305b4a1a0290017c363b4dd9937a515e099a9c1d36e08e8eeb3b460"
+}
