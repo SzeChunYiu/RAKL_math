@@ -1,0 +1,73 @@
+{
+  "application_main_at_audit": "f3275302b2198bbd15d551d57adce85c5762c013",
+  "artifact_hash": "sha256:0973f3abcf46267e6ac74cfe10a89b9e645a2c3553ef70ba28f3595620bdd4e1",
+  "atom_id": "O9d12a2a1b-C051",
+  "corrected_authority": {
+    "candidate_generation_allowed_under_original_strict_gate": false,
+    "k19_support_selection_authority": "PREEXPOSED_SAME_SESSION_ZERO_DISCOVERY_CREDIT",
+    "licensed_action": "FREEZE_RETROSPECTIVE_K19_DISCRIMINATOR_BEFORE_ANY_SHARED_BIT_OR_UNSAT_EVALUATION",
+    "remaining_unevaluated_mathematics": [
+      "exact shared-coordinate compatibility of H_19 and P_20",
+      "canonical parent and current parses beyond support parameters",
+      "parent UNSAT condition",
+      "H_19 intersection P_20"
+    ],
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "strict_context_first_discovery_status": "RETROSPECTIVE_ONLY_SUPPORT_SELECTION_CONTAMINATION"
+  },
+  "correction_id": "PNP-C051-SUPPORT-CONTAMINATION-CORRECTION-20260812",
+  "credit": {
+    "mathematical": 0,
+    "new_lesson": 0,
+    "process_assurance": 0
+  },
+  "failure_diagnosis": {
+    "attempted_implication": "A green strict pre-candidate packet implied k=19 had remained target-blind.",
+    "competing_causes": [
+      "Git movement did not cause the error",
+      "schema validation did not cause the error",
+      "the mathematical support formula was not itself false"
+    ],
+    "exact_failure": "The same session had already computed and printed the k=19/k=20 support parameter regimes before the recorded context freeze.",
+    "falsifier": "Evidence that the bounded support calculation occurred after the C051 context freeze, or that its output omitted the k=19/k=20 regimes, would refute this diagnosis.",
+    "mathematical_repair": "Treat k=19 support as known input; prospectively freeze the exact shared-coordinate discriminator before deriving any common bit or UNSAT consequence. Do not count the repair as mathematics.",
+    "proof_and_source_evidence": [
+      "same-session command receipt: bounded formula output contained (19,[(1,4)],[(3,2)])",
+      "C041 exact encoder source fixes the length formula"
+    ],
+    "scope": "C051 strict discovery authority for k=19 support selection only; no claim that shared bits, UNSAT, or the intersection were evaluated.",
+    "supported_cause": "The workflow tracked decoder/shared-bit result access but failed to classify support-spectrum calculation as target mathematical result access."
+  },
+  "observed_pre_freeze_event": {
+    "canonical_parse_result_accessed": false,
+    "event_preceded_c051_context_freeze": true,
+    "intersection_result_accessed": false,
+    "observed_k19_support_content": [
+      "k=19 parent half-length support includes (variable bit-length=1,m=4)",
+      "k=20 current half-length support includes (variable bit-length=3,m=2)"
+    ],
+    "operation": "evaluated the exact canonical half-length formula over bounded (width,m) pairs and printed supported consecutive k values",
+    "private_same_session_observation": true,
+    "shared_bit_result_accessed": false,
+    "unsat_result_accessed": false
+  },
+  "preservation": [
+    "do not rewrite or delete the original packet",
+    "preserve the valid context fiber and protected DifferenceWitness",
+    "mark every k=19 successor retrospective for support selection",
+    "do not call same-session correction independent review"
+  ],
+  "recorded_at": "2026-08-12T09:40:59Z",
+  "schema_version": "1.0.0",
+  "supersedes_authority_fields_only": {
+    "artifact": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C051_PRE_CANDIDATE_GATE_RECEIPT_20260812.json",
+    "fields": [
+      "chronology.untouched_target_result_accessed",
+      "chronology.target_state",
+      "gate_verdicts.candidate_generation_allowed",
+      "application_authority.candidate_construction_authorized",
+      "application_authority.licensed_actions"
+    ],
+    "git_blob": "179f99f607a6659c3ff3222ac441ef04f961b510"
+  }
+}
