@@ -1,0 +1,64 @@
+{
+  "artifact_hash": "sha256:5c4d9ac96f5d869a533e31acb21313e111efffc1269fe3a57601e4beedba0b0a",
+  "atom_id": "O9d12a2a1b-C052",
+  "authority": "SOURCE_AND_METHOD_TRANSFER_CONTEXT_ONLY_NO_PARAMETRIC_RESULT",
+  "credit": {
+    "git_ci_schema_hash_chronology": 0,
+    "independent_review": 0,
+    "mathematical_results": 0
+  },
+  "method_transfer_matrix": [
+    {
+      "broken_assumption": "a,b vary globally",
+      "method": "affine support plus modular phase",
+      "repair_question": "partition by exact bit-length cells",
+      "source_context": "fixed bit-length cell",
+      "works_because": "a,b fix gamma widths and 1+a fixes token width"
+    },
+    {
+      "broken_assumption": "two cells do not cover the family",
+      "method": "coordinate-first regression",
+      "repair_question": "retain total branches and hostile escape cells",
+      "source_context": "C050/C051 fixed conflicts",
+      "works_because": "one universal unequal coordinate proves scoped disjointness"
+    }
+  ],
+  "packet_id": "PNP-C052-SOURCE-METHOD-TRANSFER-PACKET-20260812",
+  "parent_seven_field_mathematical_lessons": [
+    {
+      "fields": {
+        "attempted_implication": "Moving from k=12 to the prospectively selected k=15 split might produce H_15 intersection P_16 nonempty.",
+        "exact_result_or_failure": "H_15 intersection P_16 is empty: every H_15 label has h[3]=1 and every P_16 prefix has p[3]=MAGIC[3]=0.",
+        "falsifier": "A supported k=15 branch without h[3]=1 versus p[3]=0, an omitted branch, or one exact common label.",
+        "mathematical_repair": "Rederive support, cut phase, and forced coordinates for any successor rather than assuming half-length movement repairs alignment.",
+        "proof_and_source_evidence": "C050 hand/symbolic certificate and proof record at blob f3eaad2496e80aa64b8081868021cc1a89304ef2; computation and process metadata receive zero mathematical credit.",
+        "scope": "Exactly k=15, the canonical length-30/32 branches, unchanged equal split, and C048 reduction; no other k or root conclusion.",
+        "supported_and_competing_causes": "Supported bounded cause is the v=1 variable-code bit at the moved cut; H_15 vacuity, omitted current branches, UNSAT as the bit source, and transpose as the source are rejected."
+      },
+      "lesson_id": "MATH-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION",
+      "source_atom": "O9d12a2a1b-C050"
+    },
+    {
+      "fields": {
+        "attempted_implication": "Changing from k=15 to k=19 might make the canonical UNSAT suffix label compatible with the next canonical prefix.",
+        "exact_result_or_failure": "H_19 intersection P_20 is empty: every H_19 label has h[3]=1 and every P_20 prefix has p[3]=MAGIC[3]=0.",
+        "falsifier": "A supported k=19 branch without h[3]=1 versus p[3]=0, an omitted branch, or one exact common label.",
+        "mathematical_repair": "Classify the exact suffix-start residue and forced coordinate before semantic work; preserve an explicit escape class instead of extrapolating two cases.",
+        "proof_and_source_evidence": "C051 exact proof certificate and retrospective proof record at blob 6bed55d3eb101ff165a72883adb89601d0345c39; no prospective discovery credit.",
+        "scope": "Exactly k=19, parent v=1,m=4, current v in {4,5,6,7},m=2, unchanged equal split and C048 reduction; retrospective verification only.",
+        "supported_and_competing_causes": "Supported bounded cause is the repeated v=1 token phase; H_19 vacuity, omitted current v branches, UNSAT as the bit source, and transpose as the source are rejected."
+      },
+      "lesson_id": "MATH-PNP-C051-K19-FIXED-CODE-MAGIC-SEPARATION",
+      "source_atom": "O9d12a2a1b-C051"
+    }
+  ],
+  "quantifier_domain": {
+    "claim_scope": "every tuple in an explicitly frozen class; no inference from k=15 and k=19 alone",
+    "current": "forall a_plus,b_plus,m_plus,v_plus with positive integers, bit-length range constraints, derived padding p_plus, and E(a_plus,b_plus,m_plus)=2(k+1)",
+    "parent": "forall k,a,b,m,v with positive integers, bit-length range constraints, derived padding p, and E(a,b,m)=2k",
+    "phase": "phi_c0=(k-(6+2a+2b)) mod (1+a) is the phase of c[0]=x[k]=h[1]; h[0] is prepended, and phase(h[j])=(phi_c0+j-1) mod (1+a) for j>=1",
+    "support_vs_content": "support depends on v only through a, but any forced variable-code bit assertion is universal over each v in its a-cell and every legal literal index/sign in every canonical word; likewise for v_plus"
+  },
+  "retrieved_before_candidate": true,
+  "schema_version": "1.0.0"
+}
