@@ -1,14 +1,15 @@
 {
-  "record_type": "APPEND_ONLY_TIMESTAMP_CORRECTION",
+  "record_type": "TIMESTAMP_AUTHORITY_CORRECTION",
   "cycle_id": "BSD-A1A2-KURIHARA-EXACT-RANK-20260812-R14",
   "authority": "PROVENANCE_CORRECTION_ONLY_ZERO_MATHEMATICAL_CREDIT",
   "corrects_pointer": "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a2_R14_KIM_POLLACK_KURIHARA_EXACT_RANK_SOURCE_AUDIT_20260812.json",
   "field": "recorded_at_utc",
   "stored_value": "2026-08-12T07:42:00Z",
-  "correction_status": "INVALID_AS_EXACT_ACTION_TIMESTAMP",
-  "replacement_value": "CANNOT_MEASURE",
-  "reason": "The exact source-audit completion time was not captured by an authoritative clock at write time. A later authoritative runtime clock sample was 2026-08-12T07:42:26.923163+00:00, so the stored coarse timestamp must not be interpreted as a prospectively bound or exact research-action timestamp. Preserve the original artifact and this correction rather than silently rewriting chronology.",
+  "correction_status": "NOT_AUTHORIZED_AS_EXACT_PRE_ACTION_CHRONOLOGY",
+  "replacement_value": "CANNOT_MEASURE: exact source-audit action completion timestamp was not captured by a prospectively bound authoritative clock receipt",
+  "reason": "The stored timestamp is a coarse artifact field and may be temporally plausible, but no pre-action clock receipt binds it to the research action. It therefore cannot establish prospective chronology. Preserve the source audit and classify the exact action timestamp as CANNOT_MEASURE rather than inferring precision from the field or from Git commit time.",
   "allowed_use": "Git commit timestamps may be used as repository-materialization chronology only; they do not retroactively prove pre-action research chronology.",
+  "supersedes_same_run_commit_note": "The immediately preceding version of this correction overstated the clock inference by calling the stored value invalid. This replacement narrows the claim to the supported authority boundary; Git history preserves that repair.",
   "mathematical_novelty_credit": 0,
   "framework_learning_credit": 0
 }
