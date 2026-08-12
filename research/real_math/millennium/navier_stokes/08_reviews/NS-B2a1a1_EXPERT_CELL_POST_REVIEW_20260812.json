@@ -1,0 +1,21 @@
+{
+  "schema_version": "same-context-expert-cell-v3-proposal-shadow-post",
+  "atom_id": "NS-B2a1a1",
+  "independence_credit": "NONE_SAME_CONTEXT",
+  "findings": [
+    {"role":"critical-PDE/scaling","verdict":"PASS_SCOPED","finding":"F_lambda=(L/h)^gamma and F_lambda->infinity iff h/L->0; fixed-power theta<1 gives only finite gain; domain a*lambda<=1 and dimensions check."},
+    {"role":"concentration-compactness","verdict":"BLOCKED_GLUE","finding":"the gain requires a_k->infinity coupled to lambda_k, while the cited convergence is for each fixed a; no quantitative moving-radius convergence rate is supplied, so no transfer is licensed."},
+    {"role":"pressure/harmonic-analysis","verdict":"BLOCKED_TAIL","finding":"D/F-normalized smallness does not give absolute pressure-work tail integrability; nonlocal pressure remains a separate residual."},
+    {"role":"Euler/flux","verdict":"BLOCKED_CONSUMER","finding":"no signed/telescoping/no-incoming-flux identity was obtained; NS-B2a1b and the exact global Euler consumer remain open."},
+    {"role":"skeptical-verifier","verdict":"PASS_FALSIFIERS","finding":"the absolute L2 upper bound M a/F^2 can grow in the useful window, and the scaled viscosity is f(lambda)->0; these block two tempting but invalid shortcuts."},
+    {"role":"RAKL-method-auditor","verdict":"PROCESS_FAIL_CLOSED","finding":"Gate C and dual memory were prospective and changed the action, but the custom pre-candidate trace was not validated against the current canonical ResearchTraceEntry schema before candidate work; strict canonical process credit is withheld."}
+  ],
+  "consensus": "SCOPED_ROUTE_REFINEMENT_ONLY",
+  "local_mathematics": "NO_LOCAL_FAILURE_FOUND",
+  "local_to_global_gluing": "OPEN_OBSTRUCTION_SHARPENED",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "independent_mathematical_reviews": "0/3",
+  "promotion": "BLOCKED",
+  "next_action": "rate-compatible mesoscopic compactness/tightness or signed prelimit flux/telescoping bypass",
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}
