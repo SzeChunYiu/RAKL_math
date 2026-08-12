@@ -1,0 +1,61 @@
+{
+  "atom_id": "H4d1c4a-FLAT-RELATIVE-WITNESS-CLASS-TRANSPORT",
+  "atom_signature_hash": "sha256:8c3b9d8c4717ca9510c3c5f3dc24b19a6791e019155ab8300bec248f16efdd26",
+  "authority": "PROPOSAL_SHADOW_CONTEXT_FROZEN",
+  "root_contract": "For every smooth projective complex variety X and codimension p, every rational Hodge class of type (p,p) in H^{2p}(X,Q) is in the Q-span of codimension-p algebraic cycle classes.",
+  "question": "Once an exact finite signed rational witness is realized by flat proper relative cycle components over a connected smooth reduced Hodge-branch locus, is preservation of the prescribed rational cohomology class an additional independent obligation, or is it forced by cycle-class transport?",
+  "scope": [
+    "smooth projective complex family f:X->T over a connected smooth analytic/algebraic locus T contained in one reduced Hodge branch",
+    "fixed rational flat section alpha of R^{2p}f_*Q",
+    "fixed denominator N and integer coefficients n_i",
+    "closed subschemes Z_i subset X flat and proper over T of relative codimension p",
+    "class identity at one base point t0",
+    "no claim about constructing Z_i, formal-to-neighborhood descent, singular branch points, monodromy/component switching outside T, or root initial algebraicity"
+  ],
+  "active_boundary": "COEFFICIENT_CATEGORY / WITNESS_LIFTING -> CLASS_IDENTITY",
+  "frozen_fibre_hash": "sha256:e63a3d719cdbabefd5e7c31028bed3f0b4c1efe0a77d720dacfa2822bfe2e5f5",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "method_version": "3.0.0",
+    "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "tree_sha": "ec40a373576d2db7efcc6b8fa34bf48023fd4c47",
+    "v3_use": "TaskEpisode/experience evidence remains proposal/shadow; experience changes routing only and cannot promote mathematical authority."
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "c96894a6fcefbc6ba8ad34959d2acdfa9437e288",
+    "base_tree_sha": "2cceca7081e927fff944db343ed3f8fb957343c5",
+    "agents_blob": "2fae7dfa9e2a9754d84fcae549f268c30349cbd2",
+    "framework_pin_blob": "db9fadd9eb9f34b3cc7a447ed5bf99caae8bad86",
+    "framework_pin": "43897d3afaf0038385102d5acc64793c05ec40f0"
+  },
+  "actual_fibre_contents_consulted": [
+    "GitHub issue #6 exact rational Hodge root contract",
+    "current H4d1c obstruction register blob eaddcafb2dc04794604a7133e89c67525253781c",
+    "current H4d1b research-memory review blob 149f77fec4e66195f590d67b4430633cc1da1532",
+    "open proposal/shadow PR #119 head 7b7f682fa2033e2f57fde0589df1199b3e291a59",
+    "open proposal/shadow PR #143 head 18f8657e0cb3592b45a657382b5602af270ebd29",
+    "open proposal/shadow PR #146 head d2e2ff7116ad8ada08440e96f4fd74f9a3deb971",
+    "open proposal/shadow PR #197 head c04c9f2a3e41f246f32458b02096fd7bb9bd9e6f",
+    "RAKL v3 method_specs.py and experience_substrate.py at framework SHA",
+    "Cattani-Deligne-Kaplan arXiv:alg-geom/9402009",
+    "Nishinou arXiv:2009.01651",
+    "Kloosterman arXiv:2104.14845",
+    "Bloch-Esnault-Kerz arXiv:1310.1773",
+    "Liu-Shen arXiv:2602.13951",
+    "Stacks relative-cycle/base-change interfaces tags 0H4N, 0H4P, 0FGS"
+  ],
+  "solved_or_near_solved_analogues": [
+    "codimension-one Picard/Lefschetz-(1,1), where one line-bundle class gives exact cohomological identity",
+    "Kloosterman complete-intersection variational-Hodge setting, where an explicit witness family is constructed over the deformation base",
+    "Nishinou semiregular relative divisor-map setting, where Hodge persistence is tied to actual relative deformation"
+  ],
+  "disanalogies": [
+    "the present atom starts only after a flat relative witness exists and therefore does not construct that witness",
+    "higher-codimension rational signed cycles need fixed denominator/coefficient bookkeeping and cannot be replaced by Picard data",
+    "class transport on a smooth connected locus does not by itself cross singular degeneration or monodromy/component switching",
+    "formal effectivity over a completed local ring is not the same as a flat relative family over an actual branch neighborhood"
+  ],
+  "precommitted_falsifier": "If a flat proper relative cycle family of fixed codimension can have a fibre cycle class that is not the parallel transport of its class at t0, the proposed conditional closure fails. Independently, a nonflat family with vertical components is a hostile control showing flatness cannot be dropped.",
+  "frozen_at": "2026-08-12T00:43:00Z"
+}
