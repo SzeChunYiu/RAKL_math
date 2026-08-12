@@ -7,3 +7,6 @@ def test_exactly_one_unit_preserves_predecessor():
  o,n=load(O),load(N);oi,ni=items(o),items(n);assert set(ni)-set(oi)=={'MATH-PNP-C049-K12-FIRST-ADMISSIBLE-FIXED-BIT-SEPARATION'};assert all(ni[k]==v for k,v in oi.items());assert n['totals']['mathematical_credit_units']==o['totals']['mathematical_credit_units']+1;assert n['totals']['mathematical_credit_units_by_lane']['p_vs_np']==16;assert n['totals']['mathematical_credit_units_by_type']['PROOF_OR_LEMMA']==14
 def test_scope_and_distinct_cause():
  n,a=load(N),load(A);i=items(n)['MATH-PNP-C049-K12-FIRST-ADMISSIBLE-FIXED-BIT-SEPARATION'];assert 'k=12 only' in i['scope'];assert any('No conclusion for k>12' in x for x in i['non_implications']);c=a['failure_mechanisms'][-1];assert c['id']=='FM-PNP-C049-FIRST-ADMISSIBLE-FIELD-ALIGNMENT-CONFLICT';assert c['root_cause_status']=='SUPPORTED_BOUNDED_K12_EXACT_SEPARATION';assert 'k=12 only' in c['scope']
+
+def test_ledger_points_to_added_atlas_cause():
+ n=load(N);d=n['bounded_disposition']['failure_atlas'];assert d['action']=='ADD_DISTINCT_BOUNDED_CAUSE';assert d['cause_id']=='FM-PNP-C049-FIRST-ADMISSIBLE-FIELD-ALIGNMENT-CONFLICT';assert d['successor_path'].endswith('GLOBAL_MATHEMATICAL_FAILURE_CAUSE_ATLAS_PNP_C049_SUCCESSOR_20260812.json')
