@@ -1,0 +1,60 @@
+{
+  "H19_nonvacuity": {
+    "c": "1111111010101010101",
+    "formula": "(z or z or z) AND (not-z or not-z or not-z) AND (z or z or z) AND (z or z or z)",
+    "h": "11111111010101010101",
+    "purpose": "rules out H_19 emptiness as the diagnosis; it is not needed for the set-disjointness implication.",
+    "r": "1110010110010001010",
+    "unsat_proof": "The first clause forces z=true while the second forces z=false; therefore no assignment satisfies the conjunction.",
+    "word_x": "11100101100100010101111111010101010101"
+  },
+  "artifact_hash": "sha256:8747492b0036fd74e3dd95a4817ad04282b176638b34390bd6f3094e8ebea418",
+  "atom_id": "O9d12a2a1b-C051",
+  "authority": "SAME_CONTEXT_EXACT_HAND_DERIVATION_NOT_FORMAL_NOT_INDEPENDENT_NOT_NOVELTY_CHECKED",
+  "candidate_artifact_hash": "sha256:17cd59fa427b03b6e3cb27a3dee18043414f27792fa405b7a030353a8f3ac285",
+  "candidate_core_sha256": "sha256:96f28f710882cbc51042f2a04f41ab6d992f8b2587134fa60db186a0ee9f12a3",
+  "candidate_id": "C051-K19-RETROSPECTIVE-SUPPORT-DISCRIMINATOR-v1",
+  "claim": "H_19 intersection P_20 is empty under the exact C041 canonical long-form grammar, equal split, and C048 swapped reduction.",
+  "current_branches": {
+    "consequence": "For every p in P_20, p[3]=MAGIC[3]=0.",
+    "m": 2,
+    "prefix_shape": "Every canonical length-40 word begins with MAGIC=11100101.",
+    "v_values": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "parent_branch": {
+    "consequence": "For every canonical length-38 parent suffix c, c[0]=1 and c[2]=1; hence h=1||c has h[3]=1.",
+    "m": 4,
+    "payload_shape": "t1 1 t2 1 ... t12 1",
+    "prefix_before_payload": "MAGIC||gamma(1)||gamma(4)=11100101100100",
+    "split": "the length-19 suffix starts at source coordinate 19, which is the fixed variable-code bit of literal 3",
+    "v": 1
+  },
+  "recorded_at": "2026-08-12T09:54:30Z",
+  "schema_version": "1.0.0",
+  "scope": [
+    "k=19 only",
+    "exact C041 canonical long-form language",
+    "equal length-19/19 split",
+    "all four exact length-40 current regimes",
+    "C048 swapped reduction unchanged",
+    "no extrapolation to another k or P versus NP"
+  ],
+  "separation": {
+    "H19_value": 1,
+    "P20_value": 0,
+    "conclusion": "No binary word can lie in both H_19 and P_20.",
+    "coordinate": 3,
+    "coordinate_convention": "zero-based"
+  },
+  "support_parameter_proof": {
+    "exact_source_formula_check": "Using 8+(2a-1)+(2b-1)+3m(1+a)=6+2a+2b+3m(1+a), v=1,m=4 has a=1,b=3 and R=6+2+6+24=38.",
+    "length_38": "Since E=38 requires R in {37,38}, split on m. For m=1, R=11+5a, which skips 37 and 38. For m=2, R=16+8a, which skips them. For m=3, R=19+11a, which skips them. For m=4, R=24+14a, so a=1 uniquely gives R=38. For m>=5, monotonicity gives R>=44. Thus a=1,m=4, hence v=1,m=4, is unique.",
+    "length_40": "Since E=40 requires R in {39,40}, m=1 gives R=11+5a and skips both; m=2 gives R=16+8a and uniquely a=3 gives R=40; m=3 gives R=19+11a and skips both; m=4 gives R=24+14a and skips both; m>=5 gives R>=44. Hence a=3,m=2, so v in {4,5,6,7}, are exactly the current regimes.",
+    "raw_length_formula": "R(v,m)=6+2a+2b+3m(1+a), where a=bit_length(v), b=bit_length(m); encoded length E=R+(R mod 2)."
+  }
+}
