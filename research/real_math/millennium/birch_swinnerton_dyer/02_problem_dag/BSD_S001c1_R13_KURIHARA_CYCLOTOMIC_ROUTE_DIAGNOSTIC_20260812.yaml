@@ -1,0 +1,43 @@
+schema_version: bsd-r13-kurihara-cyclotomic-route-diagnostic-v1
+artifact_type: SHADOW_ROUTE_DIAGNOSTIC
+cycle_id: BSD-S001c1-KURIHARA-CYCLOTOMIC-ORDER-AUDIT-20260812-R13
+atom_id: BSD-S001c1-KURIHARA-TAYLOR-COMPARISON
+framework_method: "Research Audit Kernel Lattice v3 3.0.0"
+framework_sha: 44058e21e16b085b421638fadad5086e31472f0f
+application_base: 58de5548d337d4ea3c83b5fcde6ed5c6aee3f2e0
+fibre_hash: sha256:64ad8c7c676e2fb959cb36573efcb8b3ca530a764521a2f1711c8e01c2df9932
+authority: PROPOSAL_SHADOW_SEARCH_PRIORITY_ONLY
+root_state: OPEN_NO_SOLUTION_CERTIFICATE
+status: THREE_ORDER_COORDINATE_CUT_SOURCE_BOUND
+coordinates:
+  complex:
+    symbol: r_C
+    definition: "ord_(s=1) L(E,s)"
+  cyclotomic_padic:
+    symbol: r_p
+    definition: "ord_(X=0) L_p(E,X), with exact normalization and local hypotheses"
+  discrete_kurihara:
+    symbol: r_K
+    definition: "Kim/Kurihara discrete order"
+source_bound_edges:
+  - "r_K = corank_Zp Sel(Q,E[p^infinity]) in Kim's theorem scope"
+  - "Selmer corank <= r_p via the standard one-sided Kato/Iwasawa route in its scope"
+  - "Selmer corank and r_C have the established parity relation in the audited source layer"
+missing_edges:
+  - COMPLEX_TAYLOR_ORDER_TO_DISCRETE_KURIHARA_ORDER_EXACT_COMPARISON_OPEN
+  - COMPLEX_S_ORDER_2_TO_CYCLOTOMIC_PADIC_X_ORDER_LE2_OPEN
+disallowed_shortcuts:
+  - "identify complex s-order with cyclotomic X-order by shared 'order of vanishing' language"
+  - "treat Kurihara nonvanishing as exact Kurihara order two"
+  - "import p-adic BSD, Sha finiteness, height nondegeneracy, analytic-rank equality or equivalent main-conjecture strength as the missing root direction"
+  - "promote numerical examples to proof"
+local_failure: NONE_IN_AUDITED_KIM_THEOREM_CELL
+gluing_failure:
+  - "complex s -> cyclotomic X"
+  - "complex s -> discrete Kurihara order"
+  - "rank/Selmer -> full complex BSD leading-term coordinates"
+next_step_policy: >-
+  Search primary literature only for an exact noncircular comparison that closes one
+  of the two missing order edges under hypotheses weaker than the target arithmetic
+  conclusion. Preserve the existing obstruction if none is found; do not invent a
+  new scalar carrier merely to rename the same coordinate mismatch.
