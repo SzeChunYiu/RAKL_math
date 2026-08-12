@@ -82,19 +82,45 @@
     "obstruction_id": "O-PNP-C045-ROW-PROJECTION-COLLISION-GATE",
     "lesson_id": "L-PNP-C045-FRESH-ROWS-IMPLY-BLOCK-SEPARABILITY",
     "statement": "For the frozen one-sided recursive family, fresh-half columns cannot by themselves couple backward. If every newly UNSAT prefix row was complement-empty before the step, old and new complement support is block-separable. A necessary first discriminator for this coupling mechanism is a newly UNSAT prefix row already in accumulated Rows(U_n).",
-    "non_guarantees": ["row collision is not sufficient for rho growth", "failure of one cover is not a lower bound", "finite G17 behavior is not asymptotic", "no root authority"]
+    "non_guarantees": [
+      "row collision is not sufficient for rho growth",
+      "failure of one cover is not a lower bound",
+      "finite G17 behavior is not asymptotic",
+      "no root authority"
+    ]
   },
   "experience_routing": {
     "selected_changed_routing": [
-      {"id": "F-C044-HETEROGENEOUS-BLOCK-MULTIPLEXING", "effect": "replaced semantic/type counting by component-incidence testing"},
-      {"id": "E-PNP-C044-EXACT-COMPONENT-COUPLING-GATE", "effect": "made exact support incidence the first decision coordinate"},
-      {"id": "C043-FIRST-ROW-SPLIT", "effect": "supplied exact decoder/length/full-history support data"},
-      {"id": "C013-QUOTIENT-BLOWUP-CEILING", "effect": "kept quotient transfer upper-bound-only"}
+      {
+        "id": "F-C044-HETEROGENEOUS-BLOCK-MULTIPLEXING",
+        "effect": "replaced semantic/type counting by component-incidence testing"
+      },
+      {
+        "id": "E-PNP-C044-EXACT-COMPONENT-COUPLING-GATE",
+        "effect": "made exact support incidence the first decision coordinate"
+      },
+      {
+        "id": "C043-FIRST-ROW-SPLIT",
+        "effect": "supplied exact decoder/length/full-history support data"
+      },
+      {
+        "id": "C013-QUOTIENT-BLOWUP-CEILING",
+        "effect": "kept quotient transfer upper-bound-only"
+      }
     ],
     "retrieved_rejected": [
-      {"id": "C041A-ZERO-AUGMENTATION", "reason": "copy/relabelling disanalogy"},
-      {"id": "C041B-TIGHT-INTERSECTION-ABSORPTION", "reason": "dual saturation analysis deferred because incidence gate decided the atom first"},
-      {"id": "MYHILL-NERODE-ANALOGY", "reason": "finite residual equality only; no cover/circuit authority"}
+      {
+        "id": "C041A-ZERO-AUGMENTATION",
+        "reason": "copy/relabelling disanalogy"
+      },
+      {
+        "id": "C041B-TIGHT-INTERSECTION-ABSORPTION",
+        "reason": "dual saturation analysis deferred because incidence gate decided the atom first"
+      },
+      {
+        "id": "MYHILL-NERODE-ANALOGY",
+        "reason": "finite residual equality only; no cover/circuit authority"
+      }
     ],
     "missed_prior_experience": "The concurrently prepared C045 pre-candidate packet was not available on main at the initial read and became visible only after the parallel result path had begun. This is recorded as a handoff/meta-policy failure, not silently treated as prior knowledge.",
     "cross_millennium": "NOT_QUERIED: no applicability/DifferenceWitness supported transfer of the exact cover/fibre structure"
@@ -116,13 +142,42 @@
   },
   "RAKL_METHOD_CASE_STUDY": {
     "method": "v3 obstruction-directed routing -> exact syntax classification -> component-incidence falsifier -> representation repair -> block gluing -> hostile review -> current-main reconciliation",
-    "what_worked": ["C044 failure memory changed routing", "smallest incidence gate was decisive", "exact hand proof separated mathematics from computation", "representation review caught undefined pair extension", "same-context expert cell separated local and global claims"],
-    "what_failed": ["U17 was not the first coupling layer", "parallel branch was not bound to the concurrently merged strict C045 packet", "no asymptotic/circuit/root gluing followed"],
-    "failure_categories": ["mathematical", "representation", "gluing", "meta-policy"],
-    "v3_feature_helped": ["decomposition", "routing", "gap_discovery", "memory", "review", "saturation_stopping", "authority_promotion non-escalation"],
+    "what_worked": [
+      "C044 failure memory changed routing",
+      "smallest incidence gate was decisive",
+      "exact hand proof separated mathematics from computation",
+      "representation review caught undefined pair extension",
+      "same-context expert cell separated local and global claims"
+    ],
+    "what_failed": [
+      "U17 was not the first coupling layer",
+      "parallel branch was not bound to the concurrently merged strict C045 packet",
+      "no asymptotic/circuit/root gluing followed"
+    ],
+    "failure_categories": [
+      "mathematical",
+      "representation",
+      "gluing",
+      "meta-policy"
+    ],
+    "v3_feature_helped": [
+      "decomposition",
+      "routing",
+      "gap_discovery",
+      "memory",
+      "review",
+      "saturation_stopping",
+      "authority_promotion non-escalation"
+    ],
     "v3_feature_missing_or_weak": "No automatic atom lease/fresh-main handoff prevents a parallel result-capable path from continuing once a stricter pre-candidate packet for the same atom is merged elsewhere.",
     "framework_improvement_hypothesis": "Add an atom-scoped freshness/lease gate: before first result-capable action, re-resolve current main for the active atom ID and require the latest authoritative pre-candidate packet hash plus candidate/evaluator authorization. If a newer packet exists, force CANNOT_CHECK/REBASE rather than allowing strict discovery credit.",
-    "repeated_process_failure_links": ["C041A late-fibre chronology denial", "C041B repeated late-fibre chronology denial", "C044 result-exposed-before-freeze retrospective denial", "C045 parallel authoritative-packet handoff denial"],
+    "repeated_process_failure_links": [
+      "C041A late-fibre chronology denial",
+      "C041B repeated late-fibre chronology denial",
+      "C044 result-exposed-before-freeze retrospective denial",
+      "C045 parallel authoritative-packet handoff denial"
+    ],
     "credit_policy": "All mathematical and method records remain proposal/shadow; no protected novelty or root authority is minted."
-  }
+  },
+  "artifact_hash": "sha256:769d05c3a2cf549d60b4a5f6792a1f8b520c3b3a8e5e2204404bc0931bbc10e9"
 }

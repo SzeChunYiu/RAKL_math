@@ -1,5 +1,6 @@
 """Finite falsifier/calibration for C045. Computation is not theorem authority."""
 from itertools import product
+import json
 
 MAGIC="11100101"
 NEW_EDGES=[(58696,37741),(58698,55881),(58697,9654),(58699,27794),(58728,37741),(58730,55881),(58729,9654),(58729,47103),(58731,27794),(58731,65243)]
@@ -59,4 +60,4 @@ def verify():
     s=signatures(); assert not s["bad"],s["bad"]
     return {"unsat_word_count":len(words),"new_edge_count":len(NEW_EDGES),"local_uncovered_active_cells":0,"status":"CALIBRATION_MATCH"}
 
-if __name__=="__main__": print(verify())
+if __name__=="__main__": print(json.dumps(verify(), sort_keys=True, separators=(",", ":")))
