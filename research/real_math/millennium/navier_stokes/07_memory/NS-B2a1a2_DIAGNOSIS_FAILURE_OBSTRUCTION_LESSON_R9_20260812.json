@@ -1,0 +1,30 @@
+{
+  "atom_id": "NS-B2a1a2",
+  "source_episode_ref": "TE-NS-B2a1a2-R9-20260812",
+  "diagnosis": {
+    "id": "D-NS-B2a1a2-PARABOLIC-ASPECT-COST-R9",
+    "statement": "Seregin's Euler scaling gives physical spatial extent lambda*a but time depth lambda^2*nu*a^2. A physical unit-viscosity parabolic cylinder fitting inside therefore has radius at most lambda*a*sqrt(nu). Pulling A/E/D to that cylinder costs nu^(-5/2), nu^(-3/2), and nu^(-3) against the weighted prelimit ledger.",
+    "failure_category": "REPRESENTATION_AND_LOCAL_ESTIMATE_INTERFACE",
+    "local_mathematical_failure": "NONE: the source estimates and coordinate transforms remain valid",
+    "local_to_global_or_gluing_failure": "YES: Euler-scaled ledger smallness does not glue directly to a physical parabolic epsilon-regularity certificate"
+  },
+  "failure": {
+    "id": "F-NS-B2a1a2-DIRECT-CKN-LEDGER-INSUFFICIENT",
+    "statement": "Starting only from Seregin (2.9), the direct centered-cylinder covering estimate cannot force physical CKN A or E smallness at any allowed scale: F_lambda(a)<=nu^-1, while the sufficient derived E estimate would require nu^(3/2)F_lambda(a) to grow, and the A estimate would require nu^(5/2)F_lambda(a)^2 to grow.",
+    "scope": "direct estimate from weighted A_F/E_F/D_F ledger through maximal physical parabolic subcylinder",
+    "not_claimed": ["no lower bound on actual A/E/D","no impossibility of another epsilon criterion","no Navier-Stokes blow-up example","no root theorem"]
+  },
+  "obstruction": {
+    "id": "O-NS-B2a1a2-VISCOSITY-NORMALIZATION-GAIN-DEFICIT",
+    "statement": "The maximum source-valid gain F_lambda<=nu^-1 is weaker than the direct viscosity/parabolic normalization cost: E needs F beyond nu^-3/2 and A needs F beyond nu^-5/4 in the relevant F-power sense; pressure D has the same nu^-3/2 threshold in F after squaring.",
+    "applicability_conditions": ["Seregin scaling (2.7)","weighted ledger (2.9)","0<f<=1","centered source cylinders","direct physical parabolic CKN insertion without extra time-uniform propagation/cancellation"],
+    "difference_witness": "Additional producer-specific time-uniform control, cancellation, tightness, or a different conditional regularity carrier lies outside this obstruction and may reopen the route."
+  },
+  "candidate_lesson": {
+    "id": "L-NS-B2a1a2-EULER-GAIN-DOES-NOT-PAY-PARABOLIC-COST",
+    "statement": "When an inviscid/Euler zoom makes weighted local quantities small, first price the time-aspect and viscosity normalization required by the intended parabolic consumer; scale smallness is not consumer-valid until that coordinate cost is paid.",
+    "authority": "PROPOSAL_SHADOW_ONLY"
+  },
+  "repeated_process_link": ["F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH","F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE"],
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}
