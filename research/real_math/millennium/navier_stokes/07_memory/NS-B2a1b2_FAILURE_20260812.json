@@ -1,0 +1,27 @@
+{
+  "record_type": "FAILURE_EXPERIENCE_SHADOW",
+  "failure_id": "F-NS-B2a1b2-LOCAL-NONTRIVIALITY-NOT-POSITIVE-ASYMPTOTIC-DENSITY",
+  "episode_id": "E-NS-B2a1b2-R1-20260812",
+  "diagnosis_id": "D-NS-B2a1b2-R1",
+  "atom_id": "NS-B2a1b2",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "failed_inference": "positive/nonzero unit-scale F=1 Euler-side state implies Lambda_chi(t)>0",
+  "exact_hostile_witness": "Hill spherical vortex traveling at nonzero constant velocity with finite global kinetic energy",
+  "verification": "For every fixed t and 0<=chi_R<=1, 0 <= R^-1 int chi_R|U(t)|^2 <= R^-1||V||_2^2 -> 0 while U is nonzero.",
+  "failure_category": "LOCAL_TO_GLOBAL_OBSERVATION_MAP_NONIDENTIFYING",
+  "broken_assumption": "qualitative local/spacetime nontriviality was treated as if it forced linear-in-radius kinetic-energy growth",
+  "scope": [
+    "displayed Seregin F(a)=1 Euler-side class and the bare qualitative bridge",
+    "does not falsify Seregin Theorem 3.1",
+    "does not show Hill is a Navier-Stokes blow-up limit",
+    "does not identify Hill's positive unit-scale norm with Seregin's ancestry-specific epsilon_0",
+    "does not exclude a source-inherited quantitative growth/tightness/no-incoming theorem"
+  ],
+  "difference_witness": [
+    "Euler-side class membership is weaker than source-realizability by the Navier-Stokes extraction",
+    "finite total energy makes Lambda_chi vanish independently of local nontriviality",
+    "translation escape remains a noncompact symmetry coordinate"
+  ],
+  "cheapest_repeat_failure_test": "Before any future density-rigidity claim, inspect the observable's zero set on finite-energy translating/coherent states and check whether source ancestry supplies a theorem excluding that kernel.",
+  "residual": "RES-NS-B2a1b2-SOURCE-INHERITED-NONLINEAR-DENSITY-OR-NO-INCOMING-BRIDGE"
+}
