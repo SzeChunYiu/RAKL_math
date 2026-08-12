@@ -1,0 +1,34 @@
+{
+  "allowed_next_action": "COMMIT_PUBLIC_CANDIDATE_AND_INERT_EVALUATOR_FREEZE_ONLY",
+  "artifact_hash": "sha256:6f948fe1b2a8822c87fe17cdb198009a7777522f871abe2ecbd57d9103f51513",
+  "authorization_id": "PNP-C050-K15-EVALUATION-AUTHORIZATION-20260812",
+  "candidate_core_sha256": "sha256:c869e4726c36551b69f10407dd482f30d83f2b2a8129c5364ac2c08eda4c1d43",
+  "candidate_id": "C050-K15-TARGET-BLIND-SELECTOR-DISCRIMINATOR-v1",
+  "current_task_evaluator_execution_authorized": false,
+  "decoder_access_authorized": false,
+  "evaluator_raw_sha256": "76aa37db99021e324955e157759f1985904182b90bf14939dcafb353e8cf2607",
+  "future_target_work_requires_separate_successor_authorization": true,
+  "math_ledger_entry_created": false,
+  "mathematical_result_credit": false,
+  "result_access_firewall": {
+    "allowed_now": [
+      "use the frozen public grammar length formula",
+      "prove source-only selector arithmetic and explicit source-side UNSAT nonvacuity",
+      "freeze the exact two-sided discriminator and all future result branches",
+      "freeze an inert evaluator identity without importing or executing it"
+    ],
+    "breach_policy": "Quarantine this candidate identity, preserve it as retrospective history, and open a fresh untouched-family successor.",
+    "forbidden_now": [
+      "inspect or use the quarantined family or any of its mathematical content",
+      "import or execute the target decoder or any target-capable evaluator",
+      "compare target shared bits",
+      "determine or predict H_15 intersection P_16",
+      "claim target theorem truth, mathematical saturation, cover growth, or P-versus-NP progress"
+    ]
+  },
+  "schema_version": "1.0.0",
+  "target_bit_comparison_authorized": false,
+  "target_result_access_authorized": false,
+  "target_result_classification_authorized": false,
+  "target_result_state": "H15_INTERSECTION_P16_UNACCESSED_UNDETERMINED"
+}
