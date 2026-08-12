@@ -4,9 +4,10 @@
   "framework": {
     "method_version": "3.0.0",
     "skill_manifest_version": "0.7.0",
-    "current_rakl_main_sha": "d594e6864f49ecf6dac394173082fbf0174b422e",
+    "current_rakl_main_sha": "182f0eff233b8608bc38c4869f52a5bb15e7e5fd",
     "candidate_subject_sha": "d594e6864f49ecf6dac394173082fbf0174b422e",
-    "candidate_subject_status": "CURRENT_UNCHANGED_FROM_PROSPECTIVE_FREEZE",
+    "candidate_subject_status": "FROZEN_AND_CURRENT_AT_CANDIDATE_EVALUATION; cycle-close main advanced by 8 commits after evaluation",
+    "cycle_close_framework_diff_review": "d594e6864f49ecf6dac394173082fbf0174b422e..182f0eff233b8608bc38c4869f52a5bb15e7e5fd adds epistemic/capability/research surfaces only; compare contains no AGENTS.md, RAKL_VERSION.json, skills/rakl-core manifest/workflow, src/rakl/method_specs.py, experience_substrate.py, RAKL_METROLOGY.md, or math-research schemas. No post-evaluation mathematical-process rebind is required, but the exact candidate subject remains d594.",
     "application_framework_pin_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
     "application_pin_status": "STALE_RELATIVE_TO_CURRENT_RAKL_MAIN; pinned application suite cannot attest current-framework semantics"
   },
@@ -14,13 +15,13 @@
     "cycle_base_sha": "6016dd6a87d87b18d8f5498e2537b043a8468c04",
     "evaluation_authorization_head_sha": "0ff39b6fb100d81a79892627be0d02ebbe1eb8e6",
     "mathematical_result_head_sha": "ac726bc1ce555e957a8d2aeea91827bb68193f55",
-    "receipt_storage_head_sha": "CANNOT_MEASURE_SELF_REFERENCE: committing this receipt creates a new head; the exact result subject is bound to mathematical_result_head_sha.",
+    "receipt_storage_head_sha": "CANNOT_MEASURE_SELF_REFERENCE: committing/updating this receipt creates a new head; the exact mathematical result subject is bound to mathematical_result_head_sha.",
     "branch": "research/rh-abel001-evaluate-fixed-n-20260812"
   },
   "state_fingerprints": {
     "pre_state_semantic_fingerprint": "sha256:51641dee1204a17425f0168a682c37764c9825a08261b5afff13c9a4e389cdf4",
     "post_state_semantic_fingerprint": "sha256:7217c8ff26e19267c04aec21865ac1d9de670c99932230202d883579834d59ee",
-    "fingerprint_scope": "Canonical JSON over semantic state: framework subject, application subject, atom/fibre, candidate/result status, residuals and root status. Raw files, commits, prose and issue counts excluded."
+    "fingerprint_scope": "Canonical JSON over candidate-subject semantic state: frozen framework subject d594, application subject, atom/fibre, candidate/result status, residuals and root status. Later cycle-close framework drift is recorded separately and does not rewrite the prospective fingerprint. Raw files, commits, prose and issue counts excluded."
   },
   "active_atom": {
     "atom_id": "RH-ANA-003-ABEL-001",
@@ -28,24 +29,7 @@
     "atom_fibre_snapshot_hash": "sha256:22160bf063b748fcca247514fd9a499c266a42bb26da114363f4a0909679f5cd",
     "problem_signature": ["Riemann Hypothesis", "zeta/prime-side Li representation", "a_m=1-Lambda(m)", "A=floor-psi", "Laguerre kernel", "natural source order", "fixed n before limit", "Abel summation", "conditional convergence", "fixed-n versus all-index uniformity"]
   },
-  "canonical_method_specs_process_surfaces_invoked": [
-    "decomposition",
-    "routing",
-    "search_query_generation",
-    "source_selection_reliability",
-    "claim_extraction",
-    "mathematical_context_translation",
-    "equivalence_similarity",
-    "contextual_theory_gluing",
-    "contradiction_diagnosis",
-    "gap_discovery",
-    "experiment_query_selection",
-    "synthesis",
-    "memory",
-    "review",
-    "authority_promotion",
-    "saturation_stopping"
-  ],
+  "canonical_method_specs_process_surfaces_invoked": ["decomposition", "routing", "search_query_generation", "source_selection_reliability", "claim_extraction", "mathematical_context_translation", "equivalence_similarity", "contextual_theory_gluing", "contradiction_diagnosis", "gap_discovery", "experiment_query_selection", "synthesis", "memory", "review", "authority_promotion", "saturation_stopping"],
   "memory_retrieval": {
     "retrieved_or_screened_count": 5,
     "selected_count": 4,
@@ -68,39 +52,23 @@
   "saturation": {
     "reopened": ["KNOWLEDGE", "EXPERIENCE_PATTERN", "RELATION", "PATH"],
     "flattened": ["OPERATOR", "OBSTRUCTION", "META_METHOD"],
-    "detail": {
-      "KNOWLEDGE": "fixed-n convergence/nonabsolute classification locally verified",
-      "OPERATOR": "no new operator; existing Abel and polynomial methods",
-      "EXPERIENCE_PATTERN": "cumulative source-order cancellation succeeds while termwise absolute control fails",
-      "OBSTRUCTION": "uniformity/gluing barrier already known",
-      "RELATION": "exact Abel tail identity locally verified",
-      "PATH": "source-order checkpoint validated, root path still open",
-      "META_METHOD": "current v3 separation worked as intended"
-    }
+    "detail": {"KNOWLEDGE": "fixed-n convergence/nonabsolute classification locally verified", "OPERATOR": "no new operator; existing Abel and polynomial methods", "EXPERIENCE_PATTERN": "cumulative source-order cancellation succeeds while termwise absolute control fails", "OBSTRUCTION": "uniformity/gluing barrier already known", "RELATION": "exact Abel tail identity locally verified", "PATH": "source-order checkpoint validated, root path still open", "META_METHOD": "current v3 separation worked as intended"}
   },
   "resource_proxies": {
     "model_tokens": "CANNOT_MEASURE: runtime exposes no authoritative model-token counter.",
     "context_tokens": "CANNOT_MEASURE: runtime exposes no authoritative context-token counter.",
-    "retrieval_calls": "CANNOT_MEASURE exact aggregate: web/GitHub runtimes expose no governed full-cycle counter; observed calls include current-framework reads, RH-state reads, one primary-source web search/open, and cross-memory screening.",
+    "retrieval_calls": "CANNOT_MEASURE exact aggregate: web/GitHub runtimes expose no governed full-cycle counter; observed calls include current-framework reads, RH-state reads, primary-source web search/open, cross-memory screening, and cycle-close framework-diff review.",
     "tool_calls": "CANNOT_MEASURE exact aggregate: heterogeneous connector and analysis-tool calls have no authoritative aggregate counter.",
     "wall_time": "CANNOT_MEASURE authoritative end-to-end wall time; repository-event proxy from evaluation-authorization commit 2026-08-12T07:57:07Z to result/test head 2026-08-12T08:10:19Z is 792 seconds.",
     "same_context_expert_roles": 7,
     "independent_reviews": 0
   },
-  "new_ids": {
-    "episode_ids": ["EP-RH-ANA-003-ABEL-001-FIXED-N-EVALUATION-20260812-R10"],
-    "diagnosis_ids": ["D-RH-ANA-003-ABEL-001-CUMULATIVE-CANCELLATION-SUFFICES-FIXED-N"],
-    "lesson_ids": ["L-RH-ANA-003-ABEL-001-ABEL-BEFORE-ABSOLUTE-MAJORANT"],
-    "failure_ids": [],
-    "tool_ids": [],
-    "obstruction_ids": ["O-RH-ANA-003-ABEL-001-FIXED-N-TO-ALL-INDEX-UNIFORMITY"],
-    "motif_ids": []
-  },
+  "new_ids": {"episode_ids": ["EP-RH-ANA-003-ABEL-001-FIXED-N-EVALUATION-20260812-R10"], "diagnosis_ids": ["D-RH-ANA-003-ABEL-001-CUMULATIVE-CANCELLATION-SUFFICES-FIXED-N"], "lesson_ids": ["L-RH-ANA-003-ABEL-001-ABEL-BEFORE-ABSOLUTE-MAJORANT"], "failure_ids": [], "tool_ids": [], "obstruction_ids": ["O-RH-ANA-003-ABEL-001-FIXED-N-TO-ALL-INDEX-UNIFORMITY"], "motif_ids": []},
   "successful_reuse_ids": ["E-CLASSICAL-FINITE-ABEL-SUMMATION", "M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING", "F-RH-ANA-001-FINITE-LI-PREFIX", "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE"],
   "gate_provenance_ci": {
     "root_contract": "OPEN_NO_SOLUTION_CERTIFICATE",
     "candidate_pre_gates": "PASS_PROSPECTIVELY_IN_MERGED_PR_349",
-    "candidate_framework_subject": "CURRENT_UNCHANGED_AT_d594e6864f49ecf6dac394173082fbf0174b422e",
+    "candidate_framework_subject": "FROZEN_d594e6864f49ecf6dac394173082fbf0174b422e; cycle-close main 182f0eff233b8608bc38c4869f52a5bb15e7e5fd has no changed mathematical-research protected surface in the reviewed diff",
     "separate_evaluation_authorization": "PASS_AT_0ff39b6fb100d81a79892627be0d02ebbe1eb8e6",
     "frozen_obligations_O1_O7": "PASS_DIRECT_DERIVATION",
     "task_episode_content_hash": "cf6cc40941366b2927c8bb972b9972fe771c4ded521f164a3049dc4e4c50a4f7",
@@ -120,5 +88,5 @@
     "changed_by_ids": ["F-RH-ANA-001-FINITE-LI-PREFIX", "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE", "E-CLASSICAL-FINITE-ABEL-SUMMATION", "M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING", "CURRENT-v3 pre-candidate chronology and authority separation"]
   },
   "authority": "PROPOSAL_SHADOW_METROLOGY_RECEIPT_ONLY",
-  "recorded_at": "2026-08-12T08:11:00Z"
+  "recorded_at": "2026-08-12T08:16:00Z"
 }
