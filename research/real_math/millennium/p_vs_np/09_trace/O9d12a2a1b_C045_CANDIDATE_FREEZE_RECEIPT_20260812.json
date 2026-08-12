@@ -1,0 +1,81 @@
+{
+  "application_authority": {
+    "candidate_construction_authorized": false,
+    "cover_or_lower_bound_conclusion_authorized": false,
+    "generic_runtime_candidate_paths_non_authoritative": true,
+    "licensed_actions": [
+      "FREEZE_INCIDENCE_CLASSIFICATION_PLAN_ONLY"
+    ],
+    "target_evaluator_execution_authorized": false
+  },
+  "application_base_commit": "4653b516349d158279a8792aa503c209ed0cecab",
+  "artifact_hash": "sha256:3997de96d64dc753ac6385bcb2726f90ffd5a663def552a2a8171b216c73bde1",
+  "candidate_id": "C045-U17-INCIDENCE-CLASSIFICATION-PLAN-v1",
+  "chronology": {
+    "candidate_precedes_any_target_access": true,
+    "decoder_imported_or_executed": false,
+    "evaluator_frozen_before_any_later_execution": true,
+    "evaluator_imported_or_executed": false,
+    "outcome_branch_selected": false,
+    "pre_candidate_gate_precedes_candidate": true,
+    "target_enumerated": false,
+    "target_output_accessed": false
+  },
+  "credit": {
+    "mathematical_result_credit": false,
+    "mathematical_saturation_credit": false,
+    "strict_discovery_result_credit": false
+  },
+  "framework_commit": "43897d3afaf0038385102d5acc64793c05ec40f0",
+  "frozen_at": "2026-08-12T01:18:31Z",
+  "full_document_integrity": {
+    "algorithm": "SHA-256",
+    "byte_inputs": {
+      "decoder_source": {
+        "git_blob": "fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+        "path": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+        "raw_sha256": "c0caca2fe7244c3d847de8b59473cec72132ec04ad3e9fab668f5cd95a2bd75a"
+      },
+      "evaluator_source": {
+        "path": "research/real_math/millennium/p_vs_np/05_falsification/c045_u17_incidence_classification_evaluator.py",
+        "raw_sha256": "692973741158f8123c0c4f19a306d9bc45a9ff9ba86e574199e5962b345e3211"
+      },
+      "sparse_semantics_source": {
+        "git_blob": "f81c4b20af57528432e1077810528be02450c7c3",
+        "path": "research/real_math/millennium/p_vs_np/05_falsification/c041_sparse_bridge_repair.py",
+        "raw_sha256": "a151014f45b0fd6ac7a0235b01b0f6fd8de8b7b2d1d816dca3e8dd4e6dd32e3b"
+      }
+    },
+    "json_canonicalization": "JSON_SORT_KEYS_COMPACT_UTF8",
+    "json_inputs": {
+      "candidate": {
+        "canonical_sha256": "sha256:af5d6c936cea1c665fb98ed669f5f973f31e78ba8ffe422c3d9c013ac74e41cb",
+        "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C045_U17_INCIDENCE_CLASSIFICATION_PLAN_FREEZE_20260812.json"
+      },
+      "evaluator_manifest": {
+        "canonical_sha256": "sha256:e01ae84b11784b8a2d63714a61d9cd404d889ce7341a3890dc62e817a7e1626c",
+        "path": "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C045_U17_INCIDENCE_EVALUATOR_FREEZE_20260812.json"
+      },
+      "pre_candidate_gate": {
+        "canonical_sha256": "sha256:bad15fef7e3914dc54a85d6e306dfb553242a3b1ecbe83a8f28a64827634c118",
+        "git_blob": "d89d70c745abe03060cb0a916cbe375ae1c65f1b",
+        "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_LATEST_RAKL_GATE_RECEIPT_20260812.json"
+      },
+      "trace": {
+        "canonical_sha256": "sha256:4c9ad91cb12dffe0cc1728f95447ecb72542d734cda65c5ba7533852df6e407a",
+        "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_CANDIDATE_FREEZE_TRACE_20260812.json"
+      }
+    },
+    "self_binding_excluded": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_CANDIDATE_FREEZE_RECEIPT_20260812.json"
+  },
+  "full_document_integrity_hash": "sha256:018607a72e8c48766cfea4378ca1217535dbf5f5679a0e17c7d05a9bfc7d592b",
+  "later_execution": {
+    "may_only_classify_the_registered_incidence_branches": true,
+    "requires_separate_post_freeze_authorization": true,
+    "requires_this_receipt_and_exact_evaluator_hash": true,
+    "status": "NOT_AUTHORIZED_IN_THIS_TASK"
+  },
+  "receipt_id": "PNP-C045-U17-INCIDENCE-CANDIDATE-FREEZE-20260812",
+  "review_authority": "SAME_CONTEXT_ROLE_SEPARATED_INTERNAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "schema_version": "1.0.0"
+}
