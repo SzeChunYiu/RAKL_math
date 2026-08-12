@@ -1,0 +1,96 @@
+{
+  "atom_id": "YM-E2a1",
+  "object_context": "Source-bound quantitative repair child of YM-E2a (#73): at fixed physical transfer time tau, determine whether the Faizal–Shabir RG defect estimates actually prove a positive margin delta0 - sum_k epsilon_k > 0 uniformly in volume, rather than only summability.",
+  "structural_coordinates": [
+    "fixed-physical-time transfer gap Delta_{k,L}=1-||T_{k,L}|Q|| versus Hamiltonian gap -tau^{-1}log(1-Delta)",
+    "initial strong-coupling lower bound delta0 and its parameter/volume dependence",
+    "defect sequence epsilon_k and exact operator-norm definition",
+    "Proposition 5.5 constants C, theta and their block-factor/FRD/collar dependence",
+    "total budget sum epsilon_k versus delta0, not summability alone",
+    "volume uniformity and same RG trajectory",
+    "first-defect versus tail dependence when block factor is enlarged"
+  ],
+  "equivalent_formulations": [
+    "positive margin: inf_k,L Delta_{k,L} >= delta0-sum epsilon_k > 0",
+    "geometric sufficient condition: if epsilon_k <= C theta^k then C/(1-theta) < delta0",
+    "first-term/tail split: epsilon_0 + sum_{k>=1} epsilon_k < delta0",
+    "Hamiltonian fixed-tau form: m0 - tau^{-1} sum epsilon_k > 0"
+  ],
+  "solved_analogues": [
+    "Abstract telescoping stability: x_{k+1}>=x_k-e_k implies x_n>=x_0-sum_{j<n}e_j; positivity needs total loss strictly below the initial reserve."
+  ],
+  "near_solved_analogues": [
+    "Faizal–Shabir Proposition 5.5 supplies a summable geometric envelope epsilon_k<=C theta^k but issue #73 records that the source-facing positive-margin constant chain remains unbound."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Perturbative/stability estimates with cumulative error budgets",
+      "method": "separate the first error from the asymptotic tail and propagate explicit constants before claiming invariant positivity",
+      "shared_structure": [
+        "one-sided recurrence with nonnegative losses",
+        "positive initial reserve",
+        "summable tail"
+      ],
+      "required_assumptions": [
+        "all losses are measured in the same normalized gap coordinate",
+        "constants are uniform over volume and scale",
+        "parameter changes do not silently change the initial reserve"
+      ],
+      "disanalogies": [
+        "the Yang–Mills defects arise from RG/OS coarse-graining rather than a fixed-space numerical perturbation",
+        "block-factor changes may also alter C, delta0, and the admissible regulator family"
+      ],
+      "repair_question": "Does the actual source prove a parameter choice for which the full same-theory loss budget is strictly below the strong-coupling reserve?",
+      "source_anchors": [
+        "RAKL_math#73",
+        "arXiv:2606.19362v1 Prop.5.5 / Cor.D.5"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "A generic geometric-series estimate does not determine the source constants C or theta.",
+    "Making a tail decay faster cannot by itself control epsilon_0 if its prefactor or first-scale geometry does not shrink.",
+    "The main-text variable-a_k gap route is a separate normalization problem (#92); this atom stays at fixed tau.",
+    "A source-local repair would not by itself establish continuum OS identification, source completeness, or asymptotic freedom."
+  ],
+  "source_anchors": [
+    "SzeChunYiu/RAKL@f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
+    "SzeChunYiu/RAKL_math#5",
+    "SzeChunYiu/RAKL_math#73",
+    "SzeChunYiu/RAKL_math#92",
+    "SzeChunYiu/RAKL_math#138 and draft PR#140 (retrieved to avoid duplicate D.5 route)",
+    "Mir Faizal and Arshid Shabir, arXiv:2606.19362v1 (2026-06-09)"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "control/engineering budget",
+      "source_situation": "A stable controller has an initial robustness margin and incurs a sequence of implementation losses; convergence of total loss is insufficient unless the accumulated loss stays below the margin.",
+      "common_abstraction": [
+        "positive reserve",
+        "nonnegative cumulative losses",
+        "tail suppression versus first-loss control"
+      ],
+      "source_to_target_mapping": [
+        "robustness reserve -> delta0",
+        "implementation losses -> epsilon_k",
+        "stability retained -> positive transfer gap"
+      ],
+      "shared_constraints": [
+        "losses compose additively in the certified inequality",
+        "the reserve and losses must use one normalization"
+      ],
+      "disanalogies": [
+        "no gauge theory, reflection positivity, or RG geometry is represented",
+        "the analogy gives no source constant"
+      ],
+      "proposed_principle": "Audit the first loss and the total quantitative budget separately from qualitative summability.",
+      "validation_obligation": "Locate source-valid constants and prove the strict inequality in the actual RG family; otherwise reject the analogy as merely suggestive.",
+      "provenance_note": "Structural proposal aid only; no mathematical or source authority."
+    }
+  ],
+  "analogy_scan_notes": "One structural budget analogy retained solely to select a constant-lineage audit.",
+  "frozen_at": "2026-08-11T19:36:44Z",
+  "first_candidate_at": null,
+  "packet_hash": "7e282738c83f91399ad98948dc6ef2efd67ddd5cb207bf61b6e1efb7789f407d"
+}

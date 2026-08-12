@@ -1,0 +1,47 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "YM-E2a1-PRE-ACTION-20260811T1937Z",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "f224d91d9fbd2844a89921ca4a30b77a7954ecd2",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "24803b714dbb3ab714f60f6a8a12d14a88c77c97",
+  "task_id": "YM-SPECTRAL-LATTICE-RG",
+  "atom_id": "YM-E2a1",
+  "context_hash": "7e282738c83f91399ad98948dc6ef2efd67ddd5cb207bf61b6e1efb7789f407d",
+  "fibre_snapshot_hash": "4e3b229d5ac5a618d5397eb44719c748c90cb3638fc085297c3342ee37e169d7",
+  "operator_ids": [
+    "decomposition",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "mathematical_context_translation",
+    "equivalence_similarity",
+    "contextual_theory_gluing",
+    "gap_discovery",
+    "memory",
+    "review",
+    "saturation_stopping"
+  ],
+  "selected_retrievals": [
+    {"retrieval_id":"RAKL-main@f224d91d9fbd2844a89921ca4a30b77a7954ecd2","authority":"CANONICAL","payload_hash":"274b2408718931ffca7e268d6fc2db7041eb17779345e876bd9d692416b36b3a"},
+    {"retrieval_id":"RAKL-math-context-fiber-schema@b24aa8db49aa4548fbd9eccd132b5bbd37230529","authority":"CANONICAL","payload_hash":"6d1272e891dd02fa7d9b135b432dd911c9aaf5cd1e6c6291ac57900af734934f"},
+    {"retrieval_id":"RAKL-math-trace-schema@700e9fd81fe7cf6e7ee956fcef05fd2006ff310d","authority":"CANONICAL","payload_hash":"e46bfaa52eb1a0e69c30a0d53bbcc6af146fc237a7b87b772421ad026a606887"},
+    {"retrieval_id":"RAKL_math#73-YM-E2a","authority":"CANONICAL","payload_hash":"75c32b48b1669a89963a1211359c2bf449cb009c24d56fa7d5d7d22c9aaae948"},
+    {"retrieval_id":"RAKL_math-root-contract@1b09055d655a28375b894a9a94b63ad54fa3abc1","authority":"CANONICAL","payload_hash":"a83ff5bbb0ff021954c1b96f9c71d94974318d8c9c5993f14e2d4a0a5b8e1894"},
+    {"retrieval_id":"RAKL_math#92-YM-E2b","authority":"CANONICAL","payload_hash":"855a8e1483c4c022fdec483618ce439476af2cd9f74ea1ebb5c6ff95d2fc102f"},
+    {"retrieval_id":"RAKL_math#138-plus-draft-PR140","authority":"NONCANONICAL","payload_hash":"933ed4363674b9000583e87ebe32b24605e9f382c4f08733b1cc6deb03f1280f"}
+  ],
+  "rejected_retrievals": [
+    {"retrieval_id":"RAKL_math#138/PR140","rejection_reason":"D.5 ordinary-tightness/clustering implication already tested; duplicate route saturated."},
+    {"retrieval_id":"RAKL_math#109/PR62","rejection_reason":"source completeness is downstream of a surviving RG gap and does not answer the defect budget."},
+    {"retrieval_id":"RAKL_math#93","rejection_reason":"weak-coupling recurrence is a separate RG contraction defect."},
+    {"retrieval_id":"RAKL_math#69","rejection_reason":"bare-coupling escape is downstream/separate from the fixed-tau total-defect budget."},
+    {"retrieval_id":"RAKL_math#141","rejection_reason":"O(4) restoration is a continuum OS1 gluing issue, not the present spectral budget."}
+  ],
+  "predeclared_discriminator": "Find a source-valid explicit constant chain proving sum epsilon_k < delta0 with all block-factor/FRD/volume dependencies; otherwise locate the first missing quantitative interface. A merely finite sum or an assertion that a large block factor suffices is a falsifying failure for the claimed derivation.",
+  "allowed_outcome_branches": ["SUCCESS","PARTIAL_SUCCESS","FAILURE","BLOCKED","UNKNOWN"],
+  "frozen_at_utc": "2026-08-11T19:37:24Z",
+  "sequence_index": 1,
+  "receipt_canonical_sha256": "d40544165a6472c62eca4f959e8a5676187dc58915cc09f913a827168dd77fa6"
+}
