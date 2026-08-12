@@ -1,0 +1,63 @@
+{
+  "review_id": "OTR-H4D1D1-TRACE-SEARCH-20260812",
+  "target_atom_id": "H4d1d1",
+  "target_context_hash": "sha256:4d9f15276fe9e9f02f67402355d64d06d8dcf138348b891178a65c80b0d5f793",
+  "research_memory_review_hash": "sha256:14838ac77bc8b09f62635a9f7ae88c38d52aaf7261099a5123a44ffa227a2337",
+  "episode_memory_snapshot_hash": "4ee8e3bb144f437762cd278ff5d62016fe13a99a80ac7eefcc607e45652c506d",
+  "obstruction": {
+    "obstruction_id": "O-H4D1D1-MONODROMY-NO-WITNESS-SECTION",
+    "domain": "algebraic-cycle deformation/descent",
+    "roles": ["finite witness cover", "Hodge branch base", "exact-class algebraic cycle on the cover", "fixed flat rational Hodge class alpha"],
+    "relations": ["finite sheets have no canonical preferred sheet but admit a degree-weighted aggregate on the base"],
+    "constraints": ["finite locally free cover of constant degree over the active open", "rational coefficients are allowed for degree normalization", "the descended cycle must have Betti class exactly alpha", "ambient fibres remain smooth projective complex varieties"],
+    "failure_mechanisms": ["a single global section is unavailable because witness sheets can permute"],
+    "invariants_to_preserve": ["algebraic-cycle category", "codimension p", "exact flat rational class alpha", "smooth-projective root scope"],
+    "desired_transition": ["replace single-section dependence by a base algebraic cycle obtained from finite-sheet aggregation"],
+    "forbidden_losses": ["replace algebraic cycles by a weaker motivated or cohomological category", "lose exact class alpha", "silently assume integral divisibility by the cover degree"]
+  },
+  "direct_search_status": "MATCHES_FOUND",
+  "jump_search_status": "NOT_RUN",
+  "glue_search_status": "NOT_RUN",
+  "selected_mode": "SEARCH",
+  "direct_candidate_episode_ids": ["OT-CHOW-FINITE-COVER-DEGREE-NORMALIZED-PUSHFORWARD-02RF"],
+  "direct_mapping_witnesses": [{
+    "witness_id": "SMW-H4D1D1-TRACE-SEARCH-20260812",
+    "episode_id": "OT-CHOW-FINITE-COVER-DEGREE-NORMALIZED-PUSHFORWARD-02RF",
+    "target_obstruction_id": "O-H4D1D1-MONODROMY-NO-WITNESS-SECTION",
+    "role_mapping": [["finite cover source", "finite witness cover"], ["base target", "Hodge branch base"], ["cycle on the cover", "exact-class algebraic cycle on the cover"]],
+    "shared_relations": ["finite sheets have no canonical preferred sheet but admit a degree-weighted aggregate on the base"],
+    "shared_constraints": ["finite locally free cover of constant degree over the active open"],
+    "precondition_mapping": [
+      ["the cover is finite locally free of positive constant degree d on the active open", "finite witness cover is finite locally free of positive constant degree d on the active branch open"],
+      ["the upstairs object is an algebraic cycle of the required codimension", "the upstairs witness is a codimension-p algebraic cycle in the same family after base change"],
+      ["proper pushforward is taken along the induced proper finite map to the base family", "the induced map X_T' -> X_T is proper finite on the active open"],
+      ["rational coefficients are available if normalization by 1/d is used", "the root contract uses Q coefficients, so normalization by 1/d is meaningful"]
+    ],
+    "unmatched_source_preconditions": [],
+    "disanalogies": [
+      "the source theorem controls Chow push-pull but does not supply a finite witness cover from Hodge-incidence domination",
+      "the target additionally needs Betti cycle-class functoriality and exact alpha identity",
+      "generic-open finite-flat descent does not settle ramified/singular branch boundaries or formal-to-algebraic descent"
+    ],
+    "target_validation_obligations": [
+      "prove or source-bind compatibility of the complex Betti cycle-class map with the exact proper pushforward used here",
+      "verify that every sheet/upstairs relative cycle represents the pulled-back flat class alpha, not merely some algebraic class",
+      "separate generic finite-flat open from branch-boundary specialization and from existence of a finite witness multisection",
+      "check that rational degree normalization preserves the prescribed class and codimension"
+    ],
+    "evidence_pointers": ["https://stacks.math.columbia.edu/tag/02RF", "https://stacks.math.columbia.edu/tag/02S0", "https://github.com/SzeChunYiu/RAKL_math/pull/119", "https://github.com/SzeChunYiu/RAKL_math/pull/143", "https://github.com/SzeChunYiu/RAKL_math/pull/197"],
+    "artifact_hash": "b4797388868f199c0a8fd31e2866916fa5084026854e82087637710996c3f708"
+  }],
+  "jump_mapping_witnesses": [],
+  "glue_witness": null,
+  "selected_episode_ids": ["OT-CHOW-FINITE-COVER-DEGREE-NORMALIZED-PUSHFORWARD-02RF"],
+  "exhaustion_witness": null,
+  "missing_transformation_specification": null,
+  "unresolved_warnings": [
+    "The SEARCH route is a source-supported candidate-routing result only; it does not establish the Hodge target transfer.",
+    "A candidate-like finite-cover trace idea was noticed before the current Gate-C packet was materialized; strict discovery chronology for that idea is therefore not claimed in this cycle.",
+    "No JUMP/GLUE/LIFT claim is needed because a same-domain source transformation survives mapping."
+  ],
+  "evidence_pointers": ["memory:4ee8e3bb144f437762cd278ff5d62016fe13a99a80ac7eefcc607e45652c506d", "context:sha256:4d9f15276fe9e9f02f67402355d64d06d8dcf138348b891178a65c80b0d5f793", "research_memory_review:sha256:14838ac77bc8b09f62635a9f7ae88c38d52aaf7261099a5123a44ffa227a2337", "https://stacks.math.columbia.edu/tag/02RF"],
+  "artifact_hash": "sha256:b371da0883599be4f4acc70754f3826e2824fa78fa51ebfc9eb8659cd002da3b"
+}
