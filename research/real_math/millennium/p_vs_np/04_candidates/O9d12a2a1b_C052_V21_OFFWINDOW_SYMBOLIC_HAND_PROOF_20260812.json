@@ -1,0 +1,100 @@
+{
+  "all_obligations_proved": true,
+  "artifact_hash": "sha256:cd51bbf8ae9acc0a2e2c77f7d8e6c052c3c3a1e9a22b50ddee6271663e6699f7",
+  "atom_id": "O9d12a2a1b-C052-V2.1",
+  "authority": "SAME_CONTEXT_SYMBOLIC_HAND_PROOF_NOT_FORMAL_NOT_INDEPENDENT",
+  "candidate_id": "PNP-C052-OFFWINDOW-UNSAT-ANCHOR-MARGINAL-LEMMA-v1",
+  "construction_algorithm": [
+    "compute H,w,R,p,k and map x[k+j-1] to its payload literal token and phase",
+    "mark every clause touched by x[k..k+6] and choose any two untouched clauses A,B",
+    "set A to three positive copies of x1 and B to three negative copies of x1",
+    "if the target phase is a sign, set it to epsilon with index 1",
+    "if it is index bit s, use 2^(a-1-s) for epsilon 1; for epsilon 0 use 2 at the LSB and 1 otherwise",
+    "fill remaining literals with any legal literals, encode canonically, append the parity pad, and split at k"
+  ],
+  "marginal_not_independent_caveat": "forall v forall j forall epsilon exists F(v,j,epsilon); no joint-pattern or single-bit-flip claim",
+  "non_guarantees": [
+    "no H_k intersection P_(k+1) result",
+    "no hidden/native result",
+    "no novelty, circuit lower bound, or P-versus-NP authority"
+  ],
+  "obligations": [
+    {
+      "id": "O1",
+      "proof": "For a=bit_length(v), b=bit_length(m), gamma lengths are 2a-1 and 2b-1. Hence H=8+(2a-1)+(2b-1)=6+2a+2b. Each of 3m literals has sign plus a index bits, so w=1+a, R=H+3mw, p=R mod 2, and E=R+p=2k by the premise.",
+      "status": "PROVED"
+    },
+    {
+      "id": "O2",
+      "proof": "A clause is a consecutive block of L=3w=3(a+1)>=9 payload bits. An interval of seven consecutive bits cannot meet three such blocks: the shortest interval meeting blocks q and q+2 runs from the last bit of q through the first bit of q+2 and has L+2>=11 bits. Thus x[k..k+6] touches at most two clauses.",
+      "status": "PROVED"
+    },
+    {
+      "id": "O3",
+      "proof": "There are m>=4 clauses and O2 removes at most two touched clauses. Therefore at least m-2>=2 untouched clauses remain.",
+      "status": "PROVED"
+    },
+    {
+      "id": "O4",
+      "proof": "Choose two untouched clauses A,B and variable 1, legal for every v>=1. C041 permits repeated literals, so A=(x1 OR x1 OR x1) and B=(not x1 OR not x1 OR not x1) are canonical 3-literal clauses for every v in the entire a-cell.",
+      "status": "PROVED"
+    },
+    {
+      "id": "O5",
+      "proof": "A requires x1=true and B requires x1=false. No assignment satisfies both, independently of every other clause and every literal placed in a touched clause. Hence every constructed parent formula is UNSAT.",
+      "status": "PROVED"
+    },
+    {
+      "id": "O6",
+      "proof": "If x[k+j-1] is a sign phase, set the target literal sign to epsilon and use variable index 1. The anchor clauses are untouched, so O5 preserves UNSAT for epsilon=0 and epsilon=1.",
+      "status": "PROVED"
+    },
+    {
+      "id": "O7",
+      "proof": "Fix v in [2^(a-1),2^a-1] and an a-bit index coordinate s counted from the MSB. To realize bit 1 choose q=2^(a-1-s), which lies in [1,2^(a-1)] subset [1,v]. To realize bit 0 choose q=1 unless s is the LSB, and choose q=2 for the LSB. Since a>=2, v>=2; these choices are legal and have the requested bit. Put q in the target touched literal. O5 preserves UNSAT.",
+      "status": "PROVED"
+    },
+    {
+      "id": "O8",
+      "proof": "Within fixed (a,b,m), signs and legal a-bit indices change only payload content, not MAGIC, gamma fields, token count, R, p, or E. The constructed formula therefore has exact canonical length 2k; splitting it as r||c gives 1||c in H_k because O5 proves UNSAT.",
+      "status": "PROVED"
+    },
+    {
+      "id": "O9",
+      "proof": "By definition h[0]=1=MAGIC[0]. For each j=1,...,7, O6 or O7 supplies an H_k member for epsilon=MAGIC[j] (indeed for both epsilon values). Therefore no h[j], j=0,...,7, is universally forced unequal to MAGIC[j].",
+      "status": "PROVED"
+    },
+    {
+      "id": "O10",
+      "proof": "At (a,b,m)=(2,3,5), H=16,w=3,R=61,p=1,E=62,k=31. The window x[31..37] is payload offsets 15..21. Nine payload bits form each clause, so offsets 15..17 lie in clause 2 and 18..21 in clause 3 (one-based); clauses 1,4,5 are untouched.",
+      "status": "PROVED"
+    },
+    {
+      "id": "O11",
+      "proof": "E=64 means R is 63 or 64. If m>=9 then already a=1,m=9 gives R>64, so m<=8. Substitution for m=1,...,8 gives respectively R=11+5a,16+8a,19+11a,24+14a,27+17a,30+20a,33+23a,38+26a. The only positive integer solutions at 63 or 64 are (a,m,R,p)=(6,2,64,0),(4,3,63,1),(1,8,64,0), with the asserted full v-ranges.",
+      "status": "PROVED"
+    },
+    {
+      "id": "O12",
+      "proof": "Among premise cells, (a,m)=(2,4) has E=52 and is the only possible cell below E=62: a=2,m>=5 gives E>=62, while a>=3,m>=4 gives E>=66. Its adjacent length is 54. E=54 requires R in {53,54}; m>=7 gives R>=56 at a=1. For m=1,...,6, R is 11+5a,16+8a,19+11a,24+14a,27+17a,30+20a, none equal 53 or 54 for positive integer a. Thus length 54 has no support, while O10 and O11 give adjacent support at k=31. Hence k=31 is least.",
+      "status": "PROVED"
+    },
+    {
+      "id": "O13",
+      "proof": "The quantifier order is forall v forall j forall epsilon exists F(v,j,epsilon). The construction may change other bits and may choose a different formula for every triple. It asserts neither a common formula for a joint pattern nor witnesses differing only at j. Legal indices are not a full Boolean cube, so no stronger reading is inferred.",
+      "status": "PROVED"
+    }
+  ],
+  "proof_id": "PNP-C052-V21-OFFWINDOW-SYMBOLIC-HAND-PROOF-20260812",
+  "proved_statement": "For every frozen premise cell, every fixed v in its full a-cell, every j=1..7, and every epsilon in {0,1}, an exact canonical UNSAT length-2k parent exists with h[j]=epsilon. Consequently no h[0..7] coordinate is universally forced unequal to MAGIC. With adjacent support this removes only that local coordinate obstruction.",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "scope": [
+    "exact C041 grammar",
+    "a>=2",
+    "m>=4",
+    "x[k..k+6] wholly in unpadded payload",
+    "coordinate-wise marginals only",
+    "k31 public regression"
+  ]
+}
