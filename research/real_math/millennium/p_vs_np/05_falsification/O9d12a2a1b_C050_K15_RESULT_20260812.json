@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "C050_K15_SCOPED_MATHEMATICAL_RESULT",
+  "authority": "PROPOSAL_SHADOW_SAME_CONTEXT_MATHEMATICS_NO_ROOT_AUTHORITY",
+  "result_id": "PNP-C050-K15-BIT3-SEPARATION-20260812",
+  "atom_id": "O9d12a2a1b-C050-K15-EVAL",
+  "candidate_id": "C050-K15-TARGET-BLIND-SELECTOR-DISCRIMINATOR-v1",
+  "chronology": {
+    "pre_action_receipt_commit": "f79c1eafca0aaaa34113589cb6c3a73a05e5eb83",
+    "pre_action_receipt_sha256": "e271fe900e30162615a419f4776fa16da208521643acba9afd1f4f6b1ca49ab6",
+    "proof_input_freeze_commit": "bbbc6d8e4c2d5f8e954b3ca1e5a68fa55c9f0b8d",
+    "target_mathematics_after_pre_action_freeze": true,
+    "calibration_after_proof_input_freeze": true,
+    "formal_pre_action_pair_runtime_check": "CANNOT_MEASURE: GitHub connector environment does not execute the local RAKL pre_action_receipt runtime; repository chronology and content hashes are preserved for later machine recheck."
+  },
+  "exact_mathematical_result": {
+    "lemma": "H_15 intersection P_16 is empty under the frozen C041 canonical grammar, equal split, literal-transpose row label 1||c, and unchanged C048 swapped reduction.",
+    "proof_core": [
+      "The frozen k=15 selector exhausts canonical length-30 UNSAT-capable parents to v=1,m=3, width=1, with no padding.",
+      "For v=1 every literal variable-index field is the one-bit word 1. The 12-bit header is MAGIC||gamma(1)||gamma(3)=111001011011.",
+      "The equal split after 15 bits consumes the first three payload bits s1,1,s2. Hence c=1,s3,1,s4,1,s5,1,s6,1,s7,1,s8,1,s9,1 and 1||c has zero-indexed bit 3 equal to 1.",
+      "Every canonical length-32 current word begins MAGIC=11100101, so every prefix_16(y) has zero-indexed bit 3 equal to MAGIC[3]=0, in both frozen current parameter regimes.",
+      "Therefore 1||c cannot equal prefix_16(y) for any canonical length-30 parent and canonical length-32 current word. Restricting parents to the canonical-UNSAT subset preserves emptiness."
+    ],
+    "scope": "Exact k=15 decoder-specific overlap only.",
+    "novelty_class": {
+      "primary": "representation",
+      "secondary": "compositional",
+      "literature_novelty_claim": false
+    },
+    "does_not_establish": [
+      "any statement for k>15",
+      "a cover-complexity lower bound or recurrence",
+      "a general circuit lower bound",
+      "P not equal to NP",
+      "independent review"
+    ]
+  },
+  "difference_witness_vs_prior_success_failure": {
+    "prior_id": "C049-K12-FIRST-ADMISSIBLE-OVERLAP-SEPARATION-v1",
+    "prior_role": "Changed routing by suggesting exact synchronized-bit falsification before semantic search; its k=12 conclusion was not transported.",
+    "same_deep_family": "payload/header fixed-bit incompatibility after equal splitting",
+    "difference_witness": "At k=12 the forced mismatch was at zero-indexed label bit 4; at k=15 the split phase changes and the independently rederived forced mismatch is at zero-indexed label bit 3.",
+    "why_retrieval_not_theorem_transfer": "The parent parameter regime, suffix start, and bit coordinate differ; only the falsification discipline transfers."
+  },
+  "counterexample_first_verification": {
+    "falsifiers_checked": [
+      "alternative canonical length-30 parent parameter regime",
+      "off-by-one equal-split suffix start",
+      "non-one v=1 width-one variable-index field",
+      "length-32 canonical prefix not beginning MAGIC",
+      "one exact common 16-bit label",
+      "changed split/encoding/reduction"
+    ],
+    "hand_verdict": "PASS_SCOPED_IMPOSSIBILITY",
+    "bounded_calibration": {
+      "authority": "CALIBRATION_ONLY_NOT_PROOF",
+      "parent_sign_assignments_checked": 512,
+      "distinct_parent_transpose_labels": 128,
+      "parent_label_bit3_values": [
+        "1"
+      ],
+      "distinct_current_prefixes_across_frozen_length32_regimes": 16,
+      "current_prefix_bit3_values": [
+        "0"
+      ],
+      "intersection_size": 0,
+      "length30_parameter_regimes": [
+        [
+          1,
+          3
+        ]
+      ],
+      "length32_parameter_regimes": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          14,
+          1
+        ],
+        [
+          15,
+          1
+        ]
+      ]
+    }
+  },
+  "source_provenance": [
+    {
+      "source": "SzeChunYiu/RAKL_math frozen C041 source",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+      "git_blob": "fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+      "role": "Authoritative application encoding/decoder semantics for the local lemma."
+    },
+    {
+      "source": "Cavalar and Oliveira, Boolean Circuit Complexity and Two-Dimensional Cover Problems, ECCC TR25-033 (2025)",
+      "url": "https://eccc.weizmann.ac.il/report/2025/033/",
+      "role": "Current primary downstream cover/circuit interface control only; no k=15 encoding claim is attributed to the paper."
+    }
+  ],
+  "local_vs_gluing": {
+    "local_mathematical_status": "SOLVED_SCOPED_K15_OVERLAP_IMPOSSIBILITY",
+    "local_failure_category": "The frozen positive-overlap route fails mathematically at an exact shared-bit constraint.",
+    "local_to_global_gluing_status": "OPEN_BLOCKED",
+    "gluing_failure": "The local overlap impossibility neither yields cover growth nor transports through the cover/circuit/root interfaces. The next route must change the finite-target strategy before any downstream gluing can even be attempted.",
+    "root_effect": "NONE"
+  },
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "independent_mathematical_review_credit": "0/3",
+  "canonical_core_sha256": "3be5a73953649aa5f701f52107d3a0c11cbf93ea999277086e28ad66d21e2b19"
+}
