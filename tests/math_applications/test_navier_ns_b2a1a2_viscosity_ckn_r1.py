@@ -1,8 +1,12 @@
+import hashlib
 import json
 from pathlib import Path
 
+from jsonschema import Draft202012Validator, FormatChecker
+
 ROOT = Path(__file__).resolve().parents[2]
 NS = ROOT / "research" / "real_math" / "millennium" / "navier_stokes"
+FRAMEWORK = ROOT / "framework" / "RAKL"
 
 
 def test_unit_viscosity_coefficient_matching():
@@ -43,10 +47,27 @@ def test_certificate_exponent_floors():
     assert -3.0 + 9.0 / 4.0 == -3.0 / 4.0  # leading C term
 
 
-def test_shadow_authority_and_root_remain_open():
-    episode = json.loads((NS / "07_memory" / "NS-B2a1a2_TASK_EPISODE_R1_20260812.json").read_text())
-    delta = json.loads((NS / "02_problem_dag" / "NS_B2A1A2_R1_DELTA_20260812.json").read_text())
+def test_nested_shadow_episode_matches_current_v3_schema_and_hash():
+    envelope = json.loads((NS / "07_memory" / "NS-B2a1a2_TASK_EPISODE_R1_20260812.json").read_text())
+    episode = envelope["task_episode"]
+    schema = json.loads((FRAMEWORK / "schemas" / "task-episode.schema.json").read_text())
+    Draft202012Validator(schema, format_checker=FormatChecker()).validate(episode)
+    payload = {key: episode[key] for key in (
+        "episode_id", "task_id", "atom_id", "context_hash", "problem_signature",
+        "fibre_snapshot_hash", "operator_ids", "action_trace", "observation_ids",
+        "verification_ids", "outcome", "residual_signature", "evidence_pointers",
+        "timestamp", "cost", "storage_admission"
+    )}
+    digest = hashlib.sha256(
+        json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+    ).hexdigest()
+    assert digest == episode["artifact_hash"]
     assert episode["storage_admission"] == "PROPOSAL_SHADOW_STORED"
-    assert episode["outcome"].endswith("DIRECT_CKN_BRIDGE_ESTIMATE_INSUFFICIENT")
+    assert envelope["inventory_disposition"].startswith("NOT_CANONICAL_INVENTORY_ADMITTED")
+
+
+def test_shadow_authority_and_root_remain_open():
+    delta = json.loads((NS / "02_problem_dag" / "NS_B2A1A2_R1_DELTA_20260812.json").read_text())
+    assert delta["outcome"] == "DIRECT_CKN_BRIDGE_ESTIMATE_INSUFFICIENT"
     assert delta["root_status"] == "OPEN_NO_SOLUTION_CERTIFICATE"
     assert delta["root_promotion"] == "NONE"
