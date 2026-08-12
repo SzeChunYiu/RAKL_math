@@ -1,0 +1,46 @@
+{
+  "schema_version": "rakl-math-fibre-shadow-v1",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "task_id": "YM-root-5",
+  "atom_id": "YM-S1a2i",
+  "issue": 321,
+  "signature": "YM-S1a2i-WILSON-SECTION38-GRAPH-TRANSFORM-BASE-INVERSION-RELEVANT-BACKWARD-CONTRACTION",
+  "root_contract": "For every compact simple gauge group, construct a non-trivial 4D quantum Yang-Mills theory satisfying Clay-strength axiomatic requirements and prove a finite positive mass gap above the vacuum, with required continuum/short-distance behavior.",
+  "actual_fibre": {
+    "object": "Wilson 2026 Section 38 graph-transform/tuning theorem",
+    "qoi": "whether the graph transform is mathematically well-defined and contractive in the presence of relevant expansion",
+    "regime": "weak-coupling UV, nonautonomous RG, shrinking O(g^2) graph domain",
+    "measurement": "primary-source equations (578)-(580), theorem 38.5 proof steps, exact constants and map types",
+    "assumptions": [
+      "same GZ/gauge-fixed theory",
+      "same regulator norm",
+      "no generic stable-manifold theorem imported without source binding"
+    ]
+  },
+  "predeclared_discriminator": {
+    "must_bind": [
+      "exact equations 578-580 and map domains/codomains",
+      "g->g' injectivity/monotonicity or equivalent base reparametrization",
+      "backward/inverse relevant contraction or explicit graph-transform contraction constant",
+      "cross-derivative control on graph metric",
+      "O(g^2) domain invariance under g' < g",
+      "compatibility with Section 30 splitting and Section 38.11 regulator slaving"
+    ],
+    "falsifier": "A primary source proof with a quantitative inverse/base-map estimate and relevant inverse factor <1, plus a full graph-transform contraction inequality on the stated shrinking domain, withdraws the obstruction.",
+    "allowed_outcomes": ["SUCCESS", "PARTIAL_SUCCESS", "FAILURE", "BLOCKED", "UNKNOWN"]
+  },
+  "methods_operators": [
+    "primary theorem/equation extraction",
+    "typed map/domain comparison",
+    "counterexample-first scalar controls",
+    "DifferenceWitness against standard hyperbolic graph transform",
+    "same-theory gluing audit",
+    "current RAKL dual-memory and transformation-memory routing"
+  ],
+  "context_hash": "da6619f320b5a70f2655e40d948943a20662f468d9bd94806f9b40d3ed2dc51b",
+  "fibre_hash": "df4e539ed6ddc54fac8006a6ec9c856a154270e5c4dad0c771ce6c89af4a47e2",
+  "atom_hash": "addbe5147958c09612b7a5642cade28b16ce427d41e7a58598febcf4b05ab743",
+  "framework_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+  "application_base": "bc55996ef611c93fcc85162f5a2dfe5450cef8b1",
+  "frozen_at_utc": "2026-08-12T05:56:28Z"
+}
