@@ -30,7 +30,7 @@ pre_candidate_packet:
 candidate_generation_gate:
   allowed: false
   reason: >-
-    The pre-candidate packet is frozen, but current RAKL main must be revalidated
+    The pre-candidate packet was failed closed after framework drift, then rebound to current RAKL main. Current RAKL main must still be revalidated
     immediately before candidate materialization using the prospective
     framework-candidate-freeze surface. Until that receipt passes, no candidate
     is authorized.

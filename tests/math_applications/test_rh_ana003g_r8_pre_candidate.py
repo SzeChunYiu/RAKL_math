@@ -21,8 +21,8 @@ def test_r8_pre_candidate_packet_and_current_v3_realization_domain_gate():
     fibre=load("01_frontier/RH_ANA_003g_CONTEXT_FIBER_20260812_R8.json")
     x=dict(fibre); got=x.pop("packet_hash")
     assert got=="sha256:"+h(x)
-    assert fibre["framework_subject"]["rakl_main_sha"]=="bd6b0e3edeb2b94b3f31b17e111c7a278f461f96"
-    assert fibre["framework_subject"]["application_pin"]=="bd6b0e3edeb2b94b3f31b17e111c7a278f461f96"
+    assert fibre["framework_subject"]["rakl_main_sha"]=="5dc0627f039e8f3e1cdcb7e05cd7603860afc554"
+    assert fibre["framework_subject"]["application_pin"]=="5dc0627f039e8f3e1cdcb7e05cd7603860afc554"
 
     for rel in [
         "07_memory/RH_ANA_003g_RESEARCH_MEMORY_REVIEW_20260812_R8.json",
