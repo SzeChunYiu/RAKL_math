@@ -1,0 +1,186 @@
+{
+  "application_base_commit": "329a69493762fc7df086c45e8d194486bcb53ef3",
+  "artifact_hash": "sha256:70ad9afea77c0ed2eedb563d6e3d9bd597ccada24f03f132cc0fe0ea1768bc97",
+  "atom_id": "O9d12a2a1b-C052-V2.1",
+  "authorization_id": "PNP-C052-V21-OFFWINDOW-EVALUATION-AUTHORIZATION-20260812",
+  "authorization_kind": "PUBLIC_RESULT_BLIND_PROOF_AND_PUBLIC_REGRESSION_AUTHORIZATION",
+  "authorized_after_public_merge": {
+    "allowed_result_branches": [
+      "PROVED_EXACT_QUANTIFIED_SCOPE",
+      "REFUTED_BY_EXACT_COUNTEREXAMPLE_OR_BROKEN_OBLIGATION",
+      "CANNOT_CHECK"
+    ],
+    "falsifier_requirements": [
+      "validate source identity, full quantifier domain, length equations, and payload-window premise",
+      "rederive maximum touched-clause count and untouched-clause reserve",
+      "check repeated-unit anchor legality and symbolic UNSAT implication",
+      "check sign and every variable-index bit marginal over each fixed v in the full a-cell",
+      "check exact canonical bytes, split, h coordinate, and H_k membership for any later witness",
+      "check the marginal-not-single-bit-flip boundary is preserved",
+      "check k31 minimality and every length64 current support branch without reading overlap labels"
+    ],
+    "proof_obligations_in_exact_order": [
+      "O1_EXACT_C041_HEADER_TOKEN_RAW_AND_PADDED_LENGTH_IDENTITIES",
+      "O2_SEVEN_BIT_PAYLOAD_INTERVAL_TOUCHES_AT_MOST_TWO_CLAUSES",
+      "O3_M_GE_4_LEAVES_TWO_UNTOUCHED_CLAUSES",
+      "O4_OPPOSITE_REPEATED_UNIT_CLAUSES_ARE_CANONICAL_FOR_EVERY_V_IN_FULL_A_CELL",
+      "O5_RESERVED_ANCHOR_PAIR_MAKES_THE_WHOLE_FORMULA_UNSAT_INDEPENDENT_OF_TOUCHED_CLAUSES",
+      "O6_EVERY_SIGN_PHASE_HAS_BOTH_MARGINAL_VALUES_INSIDE_H_K",
+      "O7_EVERY_VARIABLE_INDEX_BIT_HAS_BOTH_LEGAL_MARGINAL_VALUES_FOR_EVERY_FIXED_V_IN_THE_FULL_A_CELL",
+      "O8_LITERAL_CONTENT_CHANGES_PRESERVE_HEADER_LENGTH_PADDING_AND_EXACT_H_K_BINDING",
+      "O9_H0_EQUALS_MAGIC0_AND_EACH_H1_THROUGH_H7_HAS_A_MAGIC_MATCHING_H_K_MEMBER",
+      "O10_K31_PARENT_PREMISES_AND_WINDOW_TO_CLAUSE_BINDING",
+      "O11_LENGTH64_CURRENT_SUPPORT_BRANCH_EXHAUSTION",
+      "O12_NO_SMALLER_ADJACENT_SUPPORTED_PREMISE_CELL",
+      "O13_MARGINAL_QUANTIFIER_IS_NOT_STRENGTHENED_TO_SINGLE_BIT_FLIP_OR_JOINT_PATTERN_COVERAGE"
+    ],
+    "public_k31_regression": {
+      "authorized": true,
+      "consumed_k20_not_reused_as_hidden_validation": true,
+      "expected_current_cells": [
+        {
+          "R_plus": 64,
+          "a_plus": 1,
+          "b_plus": 4,
+          "m_plus": 8,
+          "p_plus": 0,
+          "v_plus_range": [
+            1,
+            1
+          ]
+        },
+        {
+          "R_plus": 63,
+          "a_plus": 4,
+          "b_plus": 2,
+          "m_plus": 3,
+          "p_plus": 1,
+          "v_plus_range": [
+            8,
+            15
+          ]
+        },
+        {
+          "R_plus": 64,
+          "a_plus": 6,
+          "b_plus": 2,
+          "m_plus": 2,
+          "p_plus": 0,
+          "v_plus_range": [
+            32,
+            63
+          ]
+        }
+      ],
+      "expected_parent_cell": {
+        "E": 62,
+        "H": 16,
+        "R": 61,
+        "a": 2,
+        "b": 3,
+        "expected_touched_clause_indices_one_based": [
+          2,
+          3
+        ],
+        "k": 31,
+        "m": 5,
+        "p": 1,
+        "v_range": [
+          2,
+          3
+        ],
+        "w": 3,
+        "window_parent_indices": [
+          31,
+          37
+        ],
+        "window_payload_offsets": [
+          15,
+          21
+        ]
+      },
+      "must_discharge_obligations": [
+        "O10",
+        "O11",
+        "O12"
+      ],
+      "public_only_not_hidden_validation": true,
+      "required_current_encoded_length": 64,
+      "selection_rule": "least k among cells satisfying every lemma premise and having nonempty adjacent current support"
+    },
+    "result_recording": "MACHINE_READABLE_RECEIPT_WITH_EXACT_PUBLIC_EVIDENCE_AFTER_CHECK_ONLY"
+  },
+  "candidate_id": "PNP-C052-OFFWINDOW-UNSAT-ANCHOR-MARGINAL-LEMMA-v1",
+  "chronology": {
+    "authorization_frozen_at_utc": "2026-08-12T14:12:22Z",
+    "candidate_freeze_public_merge": "329a69493762fc7df086c45e8d194486bcb53ef3",
+    "candidate_freeze_public_merged_at_utc": "2026-08-12T14:10:16Z",
+    "evaluation_may_begin_only_after_authorization_public_merge": true,
+    "formula_witness_constructed_in_this_round": false,
+    "k31_regression_executed_in_this_round": false,
+    "overlap_native_or_hidden_execution_in_this_round": false,
+    "proof_or_falsifier_executed_in_this_round": false,
+    "result_or_label_accessed_in_this_round": false
+  },
+  "credit": {
+    "independent_review": 0,
+    "mathematical_result": 0,
+    "mathematical_saturation": 0,
+    "software_process": 0
+  },
+  "fail_closed_rules": {
+    "any_unchecked_O1_through_O13": "CANNOT_CHECK",
+    "incomplete_full_a_cell_or_length64_support_enumeration": "CANNOT_CHECK",
+    "joint_pattern_or_single_bit_flip_strengthening": "CANDIDATE_REFUTED_OR_STATEMENT_NARROWED_TO_FROZEN_MARGINAL_SCOPE",
+    "missing_formula_bound_H_k_or_UNSAT_evidence": "CANNOT_CHECK",
+    "source_identity_mismatch": "CANNOT_CHECK"
+  },
+  "forbidden_capabilities": [
+    "overlap comparison or execution",
+    "native parametric target selection or execution",
+    "hidden-world materialization, label access, or execution",
+    "reuse of consumed k20 as fresh hidden validation",
+    "modification of the frozen candidate or falsifier after evaluated result access"
+  ],
+  "framework_pin": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+  "marginal_not_independent_caveat": {
+    "asserted_meaning": "For each fixed (v,j,epsilon), a possibly different H_k member may witness h[j]=epsilon.",
+    "not_asserted": [
+      "one common formula realizes arbitrary prescribed values at all seven coordinates",
+      "all 2^7 window patterns occur",
+      "two witnesses can be chosen to differ only at coordinate j",
+      "other bits of the same variable-index token remain fixed while one index bit flips"
+    ],
+    "reason_for_boundary": "Legal variable indices form {1,...,v}, not an unconstrained Boolean a-cube; coordinate-wise marginal support is the exact quantifier needed for the local forced-coordinate corollary."
+  },
+  "non_authority": [
+    "this authorization contains no proof, result, or formula witness",
+    "authorization and later computation are not a proof",
+    "same-context review is not independent peer review",
+    "no H_k intersection P_(k+1), cover, circuit, novelty, or P-versus-NP claim is authorized"
+  ],
+  "result_state": "UNEVALUATED",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "source_bindings": {
+    "candidate": {
+      "artifact_hash": "sha256:04f0e62b88ee03c371c92f998340c842e82d822fed2f378dabb04eee549f1ab5",
+      "git_blob_at_application_base": "02938109aa792a671440bafda1ac0dc577e0bded",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C052_V21_OFFWINDOW_UNSAT_ANCHOR_LEMMA_FREEZE_20260812.json",
+      "raw_sha256": "sha256:9c1916588060aaa127b8c5a3828e9c5f07840e7f8ee986bba819829e6e3accab"
+    },
+    "candidate_freeze_receipt": {
+      "artifact_hash": "sha256:d5c400811bca69b77e5e35198ed6ed766ab24e8b9938325b94f6dc149e71f912",
+      "git_blob_at_application_base": "c29bf41888ca6b22908a57c29ade247a94c94176",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_V21_OFFWINDOW_CANDIDATE_FREEZE_RECEIPT_20260812.json",
+      "raw_sha256": "sha256:50197b46f4f55d96238c4e67a038ec7fcc279e1937e7d0b9f15c2fb8584ce008"
+    },
+    "falsifier": {
+      "artifact_hash": "sha256:655487d3814bcfa2eeedc0ef87f0082f6dd17fbf6df0cf3741dabd9d8ed69675",
+      "falsifier_id": "PNP-C052-OFFWINDOW-UNSAT-ANCHOR-FALSIFIER-MANIFEST-v1",
+      "git_blob_at_application_base": "ad9d03e2bbe761e74ccbc3c2a7b6c6f7959d4137",
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C052_V21_OFFWINDOW_LEMMA_FALSIFIER_MANIFEST_20260812.json",
+      "raw_sha256": "sha256:01fa7f0c38989ab8335d646bdbdddde2e7cc3ccce2475ae151ee42b4fa394bfc"
+    }
+  }
+}
