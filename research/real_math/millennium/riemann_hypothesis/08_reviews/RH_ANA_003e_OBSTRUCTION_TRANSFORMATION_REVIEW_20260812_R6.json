@@ -4,7 +4,7 @@
   "target_atom_id": "RH-ANA-003e",
   "target_context_hash": "sha256:b74ba6625b14b3ed16f1278543a1651a3df825b6ff2eb5133d34d442a4495296",
   "research_memory_review_hash": "sha256:f5bb50fd35d4c464d802a9620b2af530505fa2451ee63d6bacc7d8c50087b474",
-  "episode_memory_snapshot_hash": "d41bb0588cb98431460c62b61f0ec582b4b54fe10056eb8bab0420436e7f9081",
+  "episode_memory_snapshot_hash": "17f370a392dfdbac7df8d42060a943c7397f04167de6c95c1bf9ca773b696bda",
   "obstruction": {
     "obstruction_id": "O-RH-ANA-003e-PREFIX-POLYBOUND-MAY-RECONSTRUCT-ROOTLOAD",
     "domain": "analytic number theory",
@@ -29,12 +29,7 @@
       "role_mapping": [["primary component", "primary component"], ["negligible remainder", "negligible remainder"], ["full quantity", "full quantity"], ["growth-class obligation", "growth-class obligation"]],
       "shared_relations": ["full quantity equals primary component plus negligible remainder", "polynomial boundedness is stable under adding a bounded remainder", "local certificate may reconstruct the full global obligation"],
       "shared_constraints": ["same index n", "two-sided absolute polynomial bound", "uniform remainder bound"],
-      "precondition_mapping": [
-        ["the decomposition b_n=a_n+e_n is exact", "S_Lambda(n)=P_n(X_n)+T_n(X_n) in the natural source order"],
-        ["e_n=O(1) uniformly in n", "R5 shadow tail bound is superpolynomially small uniformly in n"],
-        ["A>=0 is fixed", "test each fixed candidate polynomial exponent A>=0"],
-        ["the same two-sided absolute-value growth notion is used on both sides", "compare |P_n| and |S_Lambda(n)| in the same O(n^A) norm"]
-      ],
+      "precondition_mapping": [["the decomposition b_n=a_n+e_n is exact", "S_Lambda(n)=P_n(X_n)+T_n(X_n) in the natural source order"], ["e_n=O(1) uniformly in n", "R5 shadow tail bound is superpolynomially small uniformly in n"], ["A>=0 is fixed", "test each fixed candidate polynomial exponent A>=0"], ["the same two-sided absolute-value growth notion is used on both sides", "compare |P_n| and |S_Lambda(n)| in the same O(n^A) norm"]],
       "unmatched_source_preconditions": [],
       "disanalogies": ["The target tail premise is only proposal/shadow and unmerged.", "The target full remainder is RH-sensitive; the generic lemma has no root semantics."],
       "target_validation_obligations": ["bind exact R5 tail premise and cutoff", "prove both triangle-inequality directions explicitly", "keep one-sided and other-statistic obligations outside this equivalence claim", "do not promote to RH authority"],
