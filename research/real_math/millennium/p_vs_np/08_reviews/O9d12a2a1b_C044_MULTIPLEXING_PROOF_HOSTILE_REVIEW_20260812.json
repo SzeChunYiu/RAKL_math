@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "PNP-C044-HETEROGENEOUS-MULTIPLEXING-PROOF-REVIEW-20260812",
+  "review_type": "SAME_CONTEXT_HOSTILE_MATHEMATICAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "object": "C044 heterogeneous block multiplexing lemma and explicit three-pair full-cover upper bound for Q16",
+  "verdict": "ACCEPT_UPPER_BOUND_AFTER_SCOPE_CORRECTIONS",
+  "blocking_concerns_resolved": [
+    "the Q16 quotient complement is stated exactly and split into two disjoint active components",
+    "the empty-star label 3 is excluded from relevant semi-filter obligations for the source-defined reason",
+    "each proposed pair is disjoint and every relevant graph edge has an explicit generator-separating orientation",
+    "the heterogeneous lemma pads local families before indexwise union and proves cross-component separation independently",
+    "C013 is applied only as rho(G16)<=rho(Q16)"
+  ],
+  "accepted_mathematical_claims": [
+    "heterogeneous block-diagonal complements satisfy sigma(G)<=max_r sigma(G_r)+ceil(log2 t)",
+    "the displayed three pairs generator-separate all 39 relevant Q16 graph cells",
+    "rho(Q16)<=3",
+    "rho(G16)<=3 by the exact C043 quotient and C013 upper lift"
+  ],
+  "hostile_checks": {
+    "pair_legality": "All three pairs partition the ten-cell complement and hence have empty intersections.",
+    "within_component": "Restrictions of P2 and P3 separate the old and new active component edges; the receipt names at least one separating pair for each relevant cell.",
+    "cross_component": "P1=(U_A,U_B) separates all active cross-component cells because no such cell lies in the complement.",
+    "empty_fibres": "A graph cell with an empty row or column complement fibre has no semi-filter above it under Definition 19.",
+    "lift_polarity": "The quotient cover lifts to an upper bound on the blow-up; no reverse inequality is used."
+  },
+  "rejected_overclaims": [
+    "rho(Q16)=3 is not hand-proved here",
+    "rho(G16)=3 does not follow",
+    "D_intersection(G16)<=3 is not established by the full-cover pair family",
+    "one finite block decomposition does not imply a uniform decoder theorem",
+    "the retrospective chronology is not strict RAKL discovery"
+  ],
+  "authority": {
+    "computation_is_proof": false,
+    "independent_peer_review": false,
+    "strict_rakl_discovery": false,
+    "grants_exact_quotient_value": false,
+    "grants_p_vs_np_authority": false
+  },
+  "artifact_hash": "sha256:51fda03fd0ceb79cbf45b7056448530e11fc1df8d14b1e1a19d62b0fb5418498"
+}

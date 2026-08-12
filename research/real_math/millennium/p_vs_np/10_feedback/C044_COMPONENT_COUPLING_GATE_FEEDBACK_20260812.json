@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "feedback_id": "RAKL-MATH-C044-COMPONENT-COUPLING-GATE-20260812",
+  "source_atom_id": "O9d12a2a1b-C044-RETROSPECTIVE",
+  "status": "APPLICATION_EVIDENCE_PROPOSAL_ONLY_NOT_FRAMEWORK_PROMOTION",
+  "mathematical_lesson": "Exact type growth is noncoercive when complement growth is component-separable: heterogeneous local disjoint covers multiplex by maximum local cost plus logarithmic component separation.",
+  "proposed_reusable_method_delta": {
+    "name": "component-coupling gate before amplification credit",
+    "preconditions": [
+      "a proposed cover-amplification step adds new quotient types or semantic components",
+      "the complement relation and endpoint fibres are exactly available"
+    ],
+    "steps": [
+      "form the graph of complement support components",
+      "test for cross-component complement cells and endpoint-fibre coupling",
+      "derive local disjoint generator-separating covers",
+      "attempt indexwise heterogeneous multiplexing plus binary component separation",
+      "credit amplification only if an explicit coupling falsifier defeats the upper construction"
+    ],
+    "transfer_condition": "For t>=1 disjoint complement components with pairwise disjoint row and column projections and local disjoint generator-separating sizes k_r, rho(G)<=sigma(G)<=max_r k_r+ceil(log2 t).",
+    "falsifiers": [
+      "a cross-component complement cell changes local endpoint fibres",
+      "a local family is not disjoint or fails generator separation",
+      "component grounds overlap",
+      "a source cover does not use the same full-cover polarity"
+    ],
+    "non_guarantees": [
+      "does not prove a lower bound",
+      "does not globally blacklist quotient growth",
+      "does not infer a uniform theorem from Q16",
+      "does not promote retrospective application evidence into framework authority"
+    ]
+  },
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/04_candidates/C044_RETROSPECTIVE_Q16_MULTIPLEXING_RESULT_20260812.md",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C044_HETEROGENEOUS_MULTIPLEXING_FAILURE_DELTA_20260812.json"
+  ],
+  "mathematical_saturation_credit": true,
+  "software_assurance_saturation_credit": false,
+  "strict_rakl_discovery_credit": false,
+  "saturation_credit_policy": {
+    "mathematical_credit": [
+      "proofs",
+      "lemmas",
+      "explicit counterexamples or covers",
+      "broken mathematical assumptions",
+      "transfer conditions",
+      "falsifiers"
+    ],
+    "assurance_only_zero_credit": [
+      "chronology",
+      "Git state",
+      "PR or merge state",
+      "CI",
+      "schemas",
+      "hashes",
+      "serialization",
+      "implementation status",
+      "solver behavior",
+      "observed runtime"
+    ]
+  },
+  "artifact_hash": "sha256:c44877a11af9575517b843ca003d065a4aa6fc3c9b15ca46d05b3b7d568ea986"
+}
