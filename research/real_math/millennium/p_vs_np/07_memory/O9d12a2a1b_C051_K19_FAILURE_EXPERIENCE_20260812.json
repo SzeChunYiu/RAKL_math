@@ -1,0 +1,27 @@
+{
+  "artifact_hash": "sha256:873059b6729f352dc96621649ed085b7f4a8222dfe729947ebc9b949ab99e3b7",
+  "atom_id": "O9d12a2a1b-C051",
+  "attempted_implication": "Changing from the k=15 split to k=19 might make the canonical UNSAT suffix label compatible with a next-level canonical prefix.",
+  "candidate_id": "C051-K19-RETROSPECTIVE-SUPPORT-DISCRIMINATOR-v1",
+  "diagnosis": "Supported bounded cause: the length-19 suffix again starts on a forced v=1 variable-code bit, so prepending 1 moves another forced 1 to label coordinate 3, while the current prefix retains fixed MAGIC coordinate 3 equal to 0. Rejected alternatives: H_19 is empty (explicit UNSAT witness), only one current v branch was checked (v=4,5,6,7 are all covered), UNSAT semantics creates the bit (the bit is syntactic), or the swapped reduction creates it (the reduction only transports the already separated labels).",
+  "diagnosis_status": "SUPPORTED_BOUNDED",
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C051_K19_EXACT_PROOF_CERTIFICATE_20260812.json",
+    "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C051_K19_PROOF_RESULT_20260812.json"
+  ],
+  "failure_id": "F-PNP-C051-K19-FIXED-VARIABLE-BIT-VERSUS-MAGIC",
+  "falsifier": "A further length-38 or length-40 canonical parameter regime; an H_19 label with h[3]=0; a P_20 prefix with p[3]=1; an exact common label; failure of the explicit word to be canonical UNSAT; or any changed grammar/split/reduction.",
+  "mathematical_repair": "Do not treat split movement as alignment repair. Before testing UNSAT at a later level, derive the exact suffix-start residue relative to fixed-width variable-code bits and compare it with the invariant MAGIC coordinates. Seek a level where the suffix does not place a forced 1 against MAGIC[3]=0, or prove a parametric residue-class obstruction.",
+  "method_family": "literal-transpose suffix-row overlap repair",
+  "observed_result": "It does not: H_19 intersection P_20 is empty. Every H_19 label has zero-based bit 3 equal to 1, whereas every P_20 prefix has bit 3 equal to MAGIC[3]=0.",
+  "proof_and_source_evidence": "The exact C041 length formula gives the unique length-38 parent regime and four length-40 current regimes; field indexing yields h[3]=1 versus p[3]=0; the explicit 38-bit canonical word decodes to four v=1 clauses whose first two are contradictory.",
+  "relation_to_c050": "REPEATED_MORPHOLOGY_AT_DIFFERENT_SPLIT_AND_PARAMETER_REGIMES",
+  "residual_signature": [
+    "field-boundary alignment",
+    "forced variable-code bit versus MAGIC[3]",
+    "bounded exact suffix/prefix disjointness"
+  ],
+  "schema_version": "1.0.0",
+  "scope": "Exactly k=19 under the unchanged C041 canonical grammar, equal split, the sole length-38 parent regime v=1,m=4, all length-40 current regimes v in {4,5,6,7},m=2, and the C048 swapped reduction. No other k, cover lower bound, circuit lower bound, or P-vs-NP conclusion.",
+  "timestamp": "2026-08-12T09:54:30Z"
+}
