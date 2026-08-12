@@ -1,0 +1,150 @@
+{
+  "record_type": "RAKL_V3_PRE_CANDIDATE_PACKET",
+  "cycle_id": "BSD-A1a1-KURIHARA-ORDER-BRIDGE-20260812-R13",
+  "authority": "PROPOSAL_SHADOW_PRE_CANDIDATE_ONLY",
+  "framework": {
+    "method_version": "3.0.0",
+    "package_version": "0.1.0",
+    "main_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "v3_surfaces_inspected": [
+      "src/rakl/v3.py",
+      "src/rakl/experience_substrate.py",
+      "src/rakl/method_specs.py",
+      "src/rakl/epistemic_sufficiency.py",
+      "RAKL_VERSION.json"
+    ]
+  },
+  "application": {
+    "base_main_sha": "046864c970966e2b4e6e6bd652140c6c408c4f10",
+    "base_tree_sha": "930eef63b3be84885369be6e9ef6a97ec6f382fd",
+    "root_issue": 7,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "current_work_dependency": "PR312_R12_OPEN_NOT_ASSUMED_MERGED"
+  },
+  "math_context_fibre": {
+    "fibre_id": "BSD-A1a1-R13-KURIHARA-EXACTNESS-FIBRE",
+    "active_atom": "BSD-A1a1-THETA-ORDER-COMPARISON",
+    "active_subobligation": "COMPLEX_ANALYTIC_ORDER_2_TO_KURIHARA_DISCRETE_ORDER_EXACTNESS",
+    "problem_signature": [
+      "same elliptic curve E/Q and a good ordinary p>=5 satisfying the scoped source hypotheses",
+      "exact complex analytic order ord_{s=1} L(E,s)=2",
+      "merged R9 gives corank_Zp Sel_{p^infinity}(E/Q)>=2 under Wei Zhang theorem-cell hypotheses",
+      "test whether refined Tamagawa/Kurihara exact-Selmer machinery supplies an upper-bound/exactness bridge from complex order two",
+      "keep transverse p-local localization and full BSD leading-term factors separate"
+    ],
+    "actual_fibre_contents": [
+      "BSD root issue #7 exact rank/leading-term contract",
+      "merged R9 Zhang lower-bound transfer and math-only credit",
+      "merged R10 Katz-axis coordinate warning",
+      "merged R11 structural higher-Gross-Zagier/Kurihara route pruning",
+      "open PR #312 R12 p-infinity/V_p coefficient-binding packet treated as current work, not merged authority",
+      "R8 source-family arithmetic-premise-reimport failure",
+      "XM018 intersection-is-not-generation DifferenceWitness for transverse localization",
+      "current RAKL v3 TaskEpisode/shadow admission and method-spec contracts",
+      "current RAKL epistemic_sufficiency proposal-only surface, applicability checked but not invoked because this novel theorem audit lacks a known-answer-validated decision contract",
+      "pre-freeze scouting pointer: Kim-Pollack arXiv:2505.09121 current March 22 2026 manuscript; detailed theorem audit deferred until after this freeze"
+    ],
+    "success_contract": [
+      "locate a primary theorem whose hypotheses are strictly weaker than exact rank/Selmer-rank-two/BSD and whose conclusion forces Kurihara discrete order <=2 or =2 from exact complex analytic order two",
+      "or source-prove an equivalent exact Selmer upper bound from the same complex datum without reimporting the target arithmetic conclusion",
+      "track large-image, ordinarity, p-distinguished, Tamagawa/local, period, and Iwasawa-main-conjecture hypotheses exactly",
+      "do not infer a complex-discrete order identity from analogy, numerical examples, or rank-zero/rank-one p-converse statements"
+    ],
+    "falsifiers": [
+      "the discrete order is only shown equal to Selmer corank, with no theorem from complex Taylor order two",
+      "the required nonvanishing/order hypothesis is equivalent to or stronger than an Iwasawa main conjecture or exact Selmer structure",
+      "rank-zero/rank-one implication is silently extrapolated to rank two",
+      "a computational Kurihara upper bound is curve-specific rather than a generic analytic-rank-two theorem",
+      "different modular form/weight/field/local condition or p-adic coordinate is substituted without a typed comparison"
+    ],
+    "fibre_snapshot_hash": "sha256:68b0815a58f58bfb0e25f20ed8d9b51995493a9ece60c191e161d9e4afea5f42"
+  },
+  "research_memory_review": {
+    "retrieved_ids": [
+      "EP-BSD-A1A1-ZHANG-LOWER-BOUND-20260812-R9",
+      "EP-BSD-A1A1-R10-KATZ-AXIS-SPLIT-20260812",
+      "EP-BSD-A1A1-R11-STRUCTURAL-HIGHER-GZ-20260812",
+      "PR312-R12-PINFINITY-VP-CURRENT-WORK",
+      "F-BSD-A1A1-R8-SOURCE-FAMILY-REIMPORTS-ARITHMETIC-ENTRY",
+      "F-BSD-A1A1-R10-NAIVE-KATZ-INTERPOLATION-NOT-ORDER-TRANSPORT",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "XM018-INTERSECTION-IS-NOT-GENERATION",
+      "RAKL-EPISODIC-SUFFICIENCY-5dc0627"
+    ],
+    "selected_ids": [
+      "EP-BSD-A1A1-ZHANG-LOWER-BOUND-20260812-R9",
+      "EP-BSD-A1A1-R11-STRUCTURAL-HIGHER-GZ-20260812",
+      "PR312-R12-PINFINITY-VP-CURRENT-WORK",
+      "F-BSD-A1A1-R8-SOURCE-FAMILY-REIMPORTS-ARITHMETIC-ENTRY",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "rejected_ids": [
+      {"id": "EP-BSD-A1A1-R10-KATZ-AXIS-SPLIT-20260812", "why": "retained as coordinate warning but not selected route; R13 tests a distinct discrete Kurihara coordinate"},
+      {"id": "F-BSD-A1A1-R10-NAIVE-KATZ-INTERPOLATION-NOT-ORDER-TRANSPORT", "why": "different p-adic character-axis failure; useful warning only"},
+      {"id": "XM018-INTERSECTION-IS-NOT-GENERATION", "why": "transverse-localization route is a separate residual, not the exact-Selmer upper-bound discriminator"},
+      {"id": "RAKL-EPISODIC-SUFFICIENCY-5dc0627", "why": "current API requires a frozen known-answer-validated decision contract; novel BSD theorem search does not satisfy that precondition, so using it to force a conclusion would be unlicensed"}
+    ],
+    "missed_relevant_memory": "CANNOT_MEASURE: no recall-complete denominator across current/open application work and cross-problem memory",
+    "routing_effect": "R9 plus R11 plus open R12 moved the action away from another coefficient or plectic scan and toward the exact upper-bound coordinate in the discrete Kurihara representation"
+  },
+  "obstruction_transformation_review": {
+    "fingerprint": {
+      "roles": ["complex Taylor order two", "Kurihara discrete order", "Bloch-Kato/p-infinity Selmer corank", "exact-rank consumer"],
+      "failure_mechanisms": ["coordinate faithfulness gap", "downstream exactness without upstream order transport", "arithmetic-premise reimport"],
+      "desired_transition": "ord_{s=1}L(E,s)=2 -> discrete order <=2 (hence exact Selmer corank two when composed with R9)",
+      "forbidden_losses": ["assume Selmer rank two", "assume Mordell-Weil rank two", "assume BSD", "use numerical verification as proof", "promote rank-zero/rank-one p-converse to rank two"]
+    },
+    "SEARCH": {"status": "SELECTED", "target": "current Kim-Pollack refined Tamagawa/Kurihara theorem cell and exact complex-vs-discrete interface"},
+    "JUMP": {"status": "REJECTED", "reason": "same-domain exact theorem cell has higher expected information than cross-Millennium analogy"},
+    "GLUE": {"status": "DEFERRED", "reason": "first test the local complex-to-discrete exactness edge; full BSD gluing remains separate"},
+    "LIFT": {"status": "BLOCKED_UNTIL_SEARCH_DISCRIMINATOR_RUNS"},
+    "candidate_generation_allowed": true,
+    "selected_route": "SEARCH"
+  },
+  "expert_cell": {
+    "independent_review_credit": "0/3",
+    "roles": [
+      {"role": "complex L-functions and automorphy", "delegation": "bind exact complex order-two datum and reject p-adic/discrete coordinate substitution"},
+      {"role": "Euler systems/Kolyvagin/Heegner", "delegation": "audit Kato/Kolyvagin and Kurihara theorem directions and hidden nonvanishing assumptions"},
+      {"role": "Selmer/Poitou-Tate", "delegation": "track exact corank versus lower bound and local-condition identity"},
+      {"role": "p-adic L-functions/derived heights", "delegation": "audit IMC, extra-zero, regulator and p-adic-order hypotheses"},
+      {"role": "BSD global arithmetic", "delegation": "quarantine Mordell-Weil/Sha/Tamagawa/torsion/period/leading-term glue"},
+      {"role": "adversarial transfer/falsification", "delegation": "try the cheapest counterexample to complex-discrete order faithfulness and flag low-rank overtransfer"},
+      {"role": "RAKL v3 authority/metrology", "delegation": "preserve shadow authority, exact provenance, seven-axis accounting, and local-vs-gluing failure separation"}
+    ],
+    "consensus": "run the exact source-interface discriminator; no root or protected promotion"
+  },
+  "canonical_process_surfaces": [
+    "decomposition",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "ontology_terminology_normalization",
+    "mathematical_context_translation",
+    "equivalence_similarity",
+    "contextual_theory_gluing",
+    "contradiction_diagnosis",
+    "gap_discovery",
+    "experiment_query_selection",
+    "synthesis",
+    "memory",
+    "review",
+    "saturation_stopping",
+    "prompting_context_policy"
+  ],
+  "pre_candidate_trace": [
+    "ATOMIZED",
+    "CONTEXT_FROZEN",
+    "ANALOGY_SCAN",
+    "METHOD_TRANSFER_REVIEW",
+    "EXPERT_CONTEXT_REVIEW",
+    "EXPERIENCE_MEMORY_REVIEW",
+    "OBSTRUCTION_TRANSFORMATION_REVIEW",
+    "NEXT_STEP_PROPOSED"
+  ],
+  "next_step": "after this freeze, source-audit the current Kim-Pollack theorem cell for a proved complex-order-two to discrete-order upper-bound/exactness implication and run counterexample-first scope checks",
+  "chronology_note": "web scouting that identified the paper family occurred before this durable freeze and receives zero prospective discovery credit; theorem-level source extraction occurs after the freeze",
+  "frozen_at_utc": "2026-08-12T06:05:00Z"
+}
