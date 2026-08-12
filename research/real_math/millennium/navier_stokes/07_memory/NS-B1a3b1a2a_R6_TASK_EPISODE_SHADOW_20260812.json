@@ -1,0 +1,105 @@
+{
+  "schema_version": "task-episode-v3-proposal-shadow-r6",
+  "episode_id": "E-NS-B1a3b1a2a-R6-20260812",
+  "cycle_id": "NS-B1a3b1a2a-R6-ANCIENT-SMOOTHING-GLOBAL-LORENTZ-20260812",
+  "authority": "PROPOSAL_SHADOW_STORED",
+  "atom_id": "NS-B1a3b1a2a-R6",
+  "problem_signature": "For a nontrivial bounded mild ancient 3D Navier-Stokes solution with finite Albritton-Barker I, verify uniform ancient smoothing and then decide whether the resulting local derivative control plus finite I can supply uniform global weak-L^{3/2} vorticity amplitude.",
+  "fibre_consulted": {
+    "pre_candidate_packet": "research/real_math/millennium/navier_stokes/03_context/NS-B1a3b1a2a_R6_PRE_CANDIDATE_PACKET_20260812.json",
+    "snapshot_hash": "sha256:9fedacb434823f8ab3f3c0cb924968644378c74d096d79158588381d16e886f5",
+    "source_objects": [
+      "Koch-Nadirashvili-Seregin-Sverak arXiv:0709.3599 Proposition 4.1 and ancient-mild definition",
+      "Albritton-Barker arXiv:1811.00502v2 definitions (1.1)-(1.5)",
+      "Grujic arXiv:2607.08866v2 Definition 2.1 / Lorentz consumer boundary"
+    ],
+    "active_coordinates": [
+      "bounded ancient mild restart",
+      "scale-correct derivative powers",
+      "finite-I E spacetime dissipation",
+      "fixed-time vorticity superlevel persistence",
+      "large-radius packet multiplicity",
+      "global weak-L^{3/2} distribution measure",
+      "pressure/far-field separation",
+      "consumer morphology/direction completeness"
+    ]
+  },
+  "methods_operators_motifs_tried": [
+    "OP-NSE-MILD-INTERMEDIATE-RESTART",
+    "OP-KNSS-LINF-SMOOTHING",
+    "OP-AB-FINITE-I-E-LEDGER",
+    "OP-TEMPORAL-PERSISTENCE-SUPERLEVEL-PACKING",
+    "OP-LINEAR-PACKET-REPLICATION-FALSIFIER",
+    "OP-DIFFERENCE-WITNESS",
+    "M-NS-CRITICAL-FAILURE-SCALING-LIFT",
+    "local-to-global critical-tail mismatch",
+    "noncompact spatial multiplicity"
+  ],
+  "memory_routing": {
+    "retrieved_count": 12,
+    "selected_count": 4,
+    "rejected_count": 8,
+    "selected_ids": [
+      "PR170-NS-B1a3b1a2-R4-SCALING-LIFT-SHADOW",
+      "F-NS-B1a3b1a2-FIXED-FINITE-HISTORY-NONCOERCIVE",
+      "G-NS-B1a3b1a2-LOCAL-DERIVATIVE-TO-GLOBAL-LORENTZ",
+      "F-NS-B1a3-UNCONTROLLED-FAR-FIELD"
+    ],
+    "other_retrieved_not_selected": [
+      "PR165-NS-B1a3b1a1-R3-SAME-SLAB-EXACT-NSE-SEPARATOR",
+      "M-NS-CRITICAL-FAILURE-SCALING-LIFT",
+      "F-NS-B1a3b1a1-SAME-SLAB-DERIVATIVE-AMPLITUDE-PRODUCER",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH"
+    ],
+    "explicitly_rejected_ids": [
+      "NS-B2a-TYPEII-EULER",
+      "F-NS-B2a1a2-DIRECT-CKN-LEDGER-INSUFFICIENT",
+      "F-NS-B2a1b2-FINITE-ENERGY-KERNEL-NONIDENTIFYING-DENSITY",
+      "XM-PC-NS-001-C001-ENSTROPHY-SIGN"
+    ],
+    "missed": "CANNOT_MEASURE: connector retrieval exposes no complete denominator over all historical proposal/canonical memory.",
+    "changed_routing": "The fixed-finite-history failure prevented another finite-window smoothing repair. The local-to-global and far-field failures forced the cycle to test the large-radius superlevel capacity immediately after the ancient smoothing lemma rather than treating local regularity as a global critical-state result."
+  },
+  "decision_policy": "SEARCH same-domain bounded-mild smoothing first; if it succeeds, run a counterexample-first large-radius capacity discriminator before any Grujic consumer transfer. Experience affects priority only and supplies no theorem authority.",
+  "observations": [
+    "KNSS Proposition 4.1 is scale-compatible with a restart depth c M^{-2}.",
+    "The ancient mild definition supplies arbitrarily early mild Cauchy intervals; semigroup splitting licenses an interior restart.",
+    "Therefore ||nabla^k partial_t^l u||_infinity <= C_{k,l} M^{k+2l+1} uniformly in ancient time.",
+    "In particular ||partial_t omega||_infinity <= C M^4.",
+    "Finite I gives int_Q |omega|^2 <= C I R on every radius-R backward parabolic cylinder.",
+    "Temporal persistence of a fixed-time lambda-superlevel set therefore yields local measure <= C I R/[lambda^2 min(R^2,lambda/K_t)].",
+    "For large R at fixed lambda this is only O(I M^4 R lambda^{-3}), leaving an unbounded radius factor.",
+    "A smooth linearly replicated compact-time divergence-free near-miss has finite A/C/E bookkeeping and infinite vorticity superlevel measure at one time, showing the linear spatial capacity is not removed by magnitude bookkeeping alone."
+  ],
+  "verification_performed": [
+    "Primary-source statement check against arXiv:0709.3599 PDF Section 4 Proposition 4.1 and Section 6 ancient-mild definition.",
+    "Primary-source statement check against arXiv:1811.00502v2 PDF equations (1.1)-(1.5) for A,C,D,E,I.",
+    "Primary-source consumer-boundary check against arXiv:2607.08866v2 Definition 2.1.",
+    "Navier-Stokes scaling/units audit of derivative powers and the packing-measure formula.",
+    "Endpoint audit: restart occurs at fixed positive interior depth and does not use t=0 terminal data.",
+    "Pressure audit: pressure is absent only from mild smoothing; D/far-field remains a separate gluing coordinate.",
+    "Counterexample-first direct packet-count audit with hard non-NSE DifferenceWitness.",
+    "Seven-role same-context expert postcheck; zero independent-review credit."
+  ],
+  "outcome": "ANCIENT_LOCAL_SMOOTHING_BOUND__GLOBAL_LORENTZ_GLUE_OPEN_QUANTIFIED_LINEAR_CAPACITY",
+  "residual_before": "Does genuine ancientness repair the temporal-edge derivative obstruction strongly enough to produce global critical vorticity amplitude from finite I?",
+  "residual_after": "Ancientness repairs local derivative control, but finite I plus temporal persistence yields only O(R) fixed-time high-vorticity capacity. Need an equation-specific source-valid tail/profile-count/no-incoming/cancellation mechanism contracting this to a radius-free global weak-L^{3/2} distribution bound.",
+  "failure_signature": {
+    "category": "LOCAL_TO_GLOBAL_GLUING_AFTER_LOCAL_SUCCESS",
+    "local_mathematical_failure": "NONE: the bounded-ancient local smoothing step succeeds as a source consequence.",
+    "gluing_failure": "The currently registered local smoothing + finite-I magnitude ledger leaves a linear observation-radius factor in the high-vorticity distribution estimate.",
+    "consumer_failure": "Grujic-v2 morphology and direction inputs are additionally unproduced."
+  },
+  "cost_effort_proxy": {
+    "primary_source_documents_consulted": 3,
+    "same_context_expert_roles": 7,
+    "major_symbolic_derivations": 2,
+    "hostile_falsifier_families": 1,
+    "tokens_context": "CANNOT_MEASURE: runtime does not expose authoritative token/context counters.",
+    "tool_call_total": "CANNOT_MEASURE: connectors expose individual calls but no authoritative run-level cumulative counter.",
+    "wall_time": "CANNOT_MEASURE: no stable run-level monotonic timing receipt is exposed to the research artifact."
+  },
+  "next_action": "Open atom NS-B1a3b1a2b: search actual finite-I ancient NSE dynamics for a sublinear-to-finite packet-count/tail-tightness/no-incoming or pressure/local-energy cancellation theorem; rotate away from strengthening local smoothing if none is source-valid.",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "independent_mathematical_review": "0/3"
+}
