@@ -1,0 +1,87 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow-r5",
+  "cycle_id": "NS-B1a3b1a2a-C001-R5-ANCIENT-SMOOTHING-TAIL-20260812",
+  "atom_id": "NS-B1a3b1a2a",
+  "parent_atom_id": "NS-B1a3b1a2",
+  "issue_id": "RAKL_math#221",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "method": "RAKL v3 Verified Discovery / proposal-shadow experience substrate",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "skill_version": "0.7.0"
+  },
+  "application_base_sha": "ac8c0745be8aed791a446fd55fcf5154cac01962",
+  "fibre_snapshot_hash": "sha256:b7da816523a56e404375ca51da6d983854798ef9b8c1b1288146a9cd276a3b8a",
+  "problem_signature": "For a nontrivial whole-space 3D incompressible mild bounded ancient NSE solution with finite Albritton-Barker I=A+C+D+E, first verify whether ancient mildness plus global L-infinity boundedness yields uniform pointwise vorticity/derivative control, then test whether that local control plus finite I supplies the global weak-L^{3/2} vorticity amplitude needed by the selected Grujic-v2 geometry consumer without hidden tail, morphology, direction, pressure, or backward-uniqueness hypotheses.",
+  "root_contract": {
+    "root_issue": "RAKL_math#4",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "root_authority": "NONE",
+    "independent_mathematical_reviews": "0/3",
+    "closure_requirement": "one accepted Clay alternative with exact statement binding, closed proof DAG, verifier/dependency/axiom audits, isolated recheck where supported, bounded novelty search, and three genuinely isolated mathematical reviews"
+  },
+  "frozen_success_contract": {
+    "allowed_positive_local": "ANCIENT_LOCAL_SMOOTHING_BOUND",
+    "allowed_global": "GLOBAL_CRITICAL_AMPLITUDE_PRODUCED only if a source-valid scale-correct global argument closes tail and multiplicity",
+    "allowed_scoped_residual": "ANCIENT_LOCAL_SMOOTHING_BOUND / GLOBAL_LORENTZ_GLUE_OPEN",
+    "falsifier": "Any retained observation-radius/tail dependence blocks the global Lorentz promotion."
+  },
+  "selected_memory": [
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+    "PR165-NS-B1a3b1a1-R3",
+    "PR170-NS-B1a3b1a2-R4-SHADOW",
+    "PR184-NS-GRUJIC-V2-CONSUMER-SIGNATURE-SHADOW"
+  ],
+  "rejected_memory": [
+    {"id": "F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY", "why": "already diagnoses a different direction-modulus transfer; does not answer ancient smoothing"},
+    {"id": "PV-NEAR-SELF-SIMILAR-ROUTE-ISSUE211", "why": "requires a one-time self-similar-speed interface not produced by finite I; saturated sibling"},
+    {"id": "NS-B2a-TYPEII-EULER", "why": "different Type-II lane and limiting equation; equation-change DifferenceWitness"},
+    {"id": "T-XM-ROOT-BRIDGE-STABILITY-AUDIT-DIRECT-TRANSFER", "why": "cross-Millennium analogy only; lacks an NSE global critical-state-space witness"}
+  ],
+  "missed_memory": "CANNOT_MEASURE: repository retrieval does not expose completeness over all historical/proposal records",
+  "primary_sources": [
+    {"id": "SRC-KNSS-0709.3599", "role": "bounded mild smoothing and ancient mild definition", "authority": "PRIMARY"},
+    {"id": "SRC-AB-1811.00502v2", "role": "finite-I Type-I ancient source class", "authority": "PRIMARY"},
+    {"id": "SRC-GRUJIC-2607.08866v2", "role": "downstream geometry consumer signature", "authority": "PRIMARY"}
+  ],
+  "operators": [
+    "OP-NSE-MILD-INTERMEDIATE-RESTART",
+    "OP-KNSS-LINF-SMOOTHING",
+    "OP-AB-FINITE-I-E-LEDGER",
+    "OP-SUPERLEVEL-PERSISTENCE-PACKING",
+    "OP-DIFFERENCE-WITNESS"
+  ],
+  "motifs_consulted": [
+    "M-NS-CRITICAL-FAILURE-SCALING-LIFT",
+    "local-to-global critical-tail mismatch",
+    "noncompact translation/profile leakage"
+  ],
+  "analogues_and_difference_witnesses": [
+    {"analogue": "critical-element/profile compactness in a globally controlled critical state space", "transfer": "separate local compactness from global orbit/tail compactness", "difference_witness": "finite Albritton-Barker I is local/scale-critical and does not itself supply the global critical state space"},
+    {"analogue": "finite-history smoothing", "transfer": "history can remove a temporal-edge derivative singularity", "difference_witness": "every fixed finite history length is dilation-normalizable and is not genuine ancientness"},
+    {"analogue": "Grujic-v2 geometric depletion", "transfer": "global weak-L^{3/2} vorticity is one exact consumer coordinate", "difference_witness": "the consumer additionally requires critical-profile morphology and log-weighted BMO direction control"}
+  ],
+  "counterexample_first_falsifiers": [
+    "Reject the local smoothing claim if the ancient mild definition does not license restart from an arbitrary intermediate time.",
+    "Reject the derivative scaling if the cited bounded-mild smoothing estimate does not yield M^{k+2l+1} after a fixed M^{-2} restart interval.",
+    "Reject a global Lorentz conclusion if the finite-I packing estimate retains observation-radius or tail dependence.",
+    "Reject any transfer to Grujic-v2 if critical-profile morphology or log-weighted BMO direction is not produced.",
+    "Reject backward uniqueness or Euler/self-similar rigidity imports unless exact equation and terminal/global hypotheses match."
+  ],
+  "chronology_boundary": {
+    "prospective_freeze_present": "RAKL_math#221 prospectively froze the discriminator, same-context roles, audits and allowed outcomes before this run's source-bound verification.",
+    "full_fibre_precommit": "NOT_CERTIFIED",
+    "reason": "the complete fibre hash was materialized to the repository only during this execution after source inspection; no strict full Gate-C preregistration credit is claimed",
+    "authority_effect": "FAIL_CLOSED_TO_PROPOSAL_SHADOW"
+  },
+  "warnings": [
+    "open/draft prior PRs are routing memory only and grant no mathematical authority",
+    "same-context expert cell is not independent review",
+    "Type II is untouched",
+    "computation is not proof and no numerical evidence is used"
+  ]
+}
