@@ -13,7 +13,7 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "7d67a18a96499f5df7bf58bc6b1356d1ce1cafbf"
+EXPECTED_FRAMEWORK_COMMIT = "ea607c8cd8e4fd308ea9a4e024d8c93ff87f5fda"
 HISTORICAL_F224_FRAMEWORK_COMMIT = "f224d91d9fbd2844a89921ca4a30b77a7954ecd2"
 HISTORICAL_4EE_FRAMEWORK_COMMIT = "4ee5e9afe77870c684b798e0ed4c9fcee62a4365"
 HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
@@ -78,12 +78,11 @@ def test_machine_readable_framework_pin_is_valid_and_loaded_exactly() -> None:
     ).stdout
     assert framework_status == ""
     assert pin["authority"] == (
-        "Dependency synchronization to exact clean RAKL origin/main 7d67a18a96499f5df7bf58bc6b1356d1ce1cafbf observed 2026-08-12; "
-        "mathematical discovery/candidate-freeze gate code is unchanged from 62e97d545f93ff604b2db47a7c8d41a59a1c5286; "
-        "structural_transport_v2 at 496edc5ead136980287ac2e72efb486691945366 and objective_transfer_benchmark at 7d67a18a96499f5df7bf58bc6b1356d1ce1cafbf are method-adjacent optional and unwired to the mandatory mathematical gates; "
-        "the raw a6946c74..7d67a18a diff changes 26 Paper3 objective research/script/module/test files (1098 insertions and 139 deletions) and no mandatory mathematical gate; "
+        "Dependency synchronization to exact clean RAKL origin/main ea607c8cd8e4fd308ea9a4e024d8c93ff87f5fda observed 2026-08-12; "
+        "the raw 7d67a18..ea607c8 diff changes only 19 Paper2/Paper3 manuscript, registration, objective receipt, script, and test files and no protected mathematical gate; "
+        "the C052 license remains identity-freeze-only; "
         "historical artifacts retain recorded authority and chronology; "
-        "no proof, research, review-independence, method-evolution, or mathematical-saturation authority"
+        "no proof, research result, review-independence, method-evolution, or mathematical-saturation authority"
     )
 
 

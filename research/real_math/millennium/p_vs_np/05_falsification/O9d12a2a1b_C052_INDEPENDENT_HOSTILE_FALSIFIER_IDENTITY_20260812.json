@@ -1,0 +1,62 @@
+{
+  "atom_id": "O9d12a2a1b-C052",
+  "falsification_conditions": [
+    "any omitted support, padding, v, literal-index, literal-sign, or coordinate branch",
+    "any h[0] and h[1]=c[0] conflation",
+    "a FORCED_CONFLICT claim without universal forced-bit coverage",
+    "failure to retain ESCAPE_ADMISSIBLE, UNRESOLVED, or CANNOT_CHECK",
+    "finite C050/C051 evidence used as a universal induction premise",
+    "an escape-admissible cell described as exact overlap",
+    "any decoder, SAT, overlap, selected-target, or new-k result leakage"
+  ],
+  "hostile_supported_escape_cell": {
+    "cell_value_status": "WITHHELD_UNMATERIALIZED_UNTIL_SEPARATE_EXECUTION_AUTHORIZATION",
+    "frozen_obligations": [
+      "exact parent/current support",
+      "derived padding",
+      "complete quantifier coverage",
+      "no universally unequal MAGIC coordinate",
+      "no overlap inference"
+    ],
+    "no_new_k_access_in_this_round": true,
+    "selection_rule_identity": "INDEPENDENT-SYMBOLIC-SUPPORT-SOLVER-WITH-NO-FORCED-MAGIC-CONFLICT-v1",
+    "world_id": "C052-HOSTILE-SUPPORTED-ESCAPE-CELL-v1"
+  },
+  "identity_id": "PNP-C052-INDEPENDENT-HOSTILE-SUPPORTED-CELL-FALSIFIER-v1",
+  "identity_kind": "INERT_DATA_ONLY_FALSIFIER_SPECIFICATION",
+  "independence_boundary": {
+    "classifier_certificate_reuse_allowed": false,
+    "classifier_import_allowed": false,
+    "future_observation_must_recompute_support_phase_and_quantifier_coverage": true,
+    "implementation_identity_distinct_from_classifier": true,
+    "same_context_review_is_independent_peer_review": false
+  },
+  "independent_checks": [
+    "recompute both adjacent support equations and derived padding",
+    "recompute phi_c0 and the h[0] versus c[0]=h[1] index map",
+    "audit every v in each bit-length cell and every legal literal index/sign used by a forced-bit claim",
+    "verify exactly one of FORCED_CONFLICT, ESCAPE_ADMISSIBLE, UNRESOLVED, CANNOT_CHECK was returned",
+    "reproduce C050 k=15 and C051 k=19 only as bounded FORCED_CONFLICT regression worlds",
+    "validate the hostile supported escape witness without treating it as an overlap witness"
+  ],
+  "inputs_after_separate_authorization": [
+    "frozen classifier bytes and raw SHA-256",
+    "complete symbolic support-cell record",
+    "claimed classifier branch and certificate",
+    "C050 and C051 immutable regression source records",
+    "independently generated hostile supported escape-cell witness"
+  ],
+  "non_guarantees": [
+    "identity separation is not independent peer review",
+    "the falsifier is not executed",
+    "no mathematical result or theorem authority"
+  ],
+  "schema_version": "1.0.0",
+  "status": "FROZEN_NOT_EXECUTED",
+  "total_falsifier_outcomes": [
+    "CLASSIFIER_SURVIVES",
+    "CLASSIFIER_FALSIFIED",
+    "UNRESOLVED",
+    "CANNOT_CHECK"
+  ]
+}
