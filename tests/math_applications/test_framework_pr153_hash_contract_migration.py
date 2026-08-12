@@ -18,6 +18,10 @@ INVENTORY_EXTENSION_REGISTRY = (
         ROOT / "receipts/framework-episode-inventory-extension-h4d1b-20260811.json",
         ROOT / "schemas/framework-episode-inventory-extension.schema.json",
     ),
+    (
+        ROOT / "receipts/framework-episode-inventory-extension-h4d1c-20260811.json",
+        ROOT / "schemas/framework-episode-inventory-extension-h4d1c.schema.json",
+    ),
 )
 INVENTORY_CLASSIFICATION_EXTENSION_REGISTRY = (
     (
