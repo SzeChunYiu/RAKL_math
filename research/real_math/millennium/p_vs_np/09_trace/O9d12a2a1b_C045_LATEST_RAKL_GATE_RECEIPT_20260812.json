@@ -1,15 +1,24 @@
 {
+  "application_authority": {
+    "candidate_construction_authorized": false,
+    "generic_runtime_candidate_paths_non_authoritative": true,
+    "licensed_actions": [
+      "FREEZE_INCIDENCE_CLASSIFICATION_PLAN_ONLY"
+    ],
+    "target_evaluator_execution_authorized": false
+  },
   "application_base_commit": "e5f50a1dc5c20bee7cfc3c3d6edf980d5cc72e1c",
   "artifact_bindings": {
     "c044_source_authority_bindings_hash": "sha256:3e1538f833749673273249e3281e9e628c8ef859172d0bbaa72e4955be722886",
     "context_hash": "sha256:0cf4c07e20ba1bda93d3acea8714928599aa450d81f902fdff86d8f4d764dd11",
+    "full_document_integrity_hash": "sha256:34558a31df1af0f493caea9d6281ea5991d06389840d7adf810e9c097c491e6c",
     "memory_review_hash": "sha256:c58f9bcc1da10aa160cb28453e0b1283fb3484d43d4d252ebbf81bf389d287be",
     "preservation_sha256": "08172bec77410e31717d86d2cbea8ff8252a3852fb9cf6646c672c9994c8ba87",
     "shortcut_review_hash": "sha256:8f2f295a16682f4c7bdc390769ecedf3fb21f02418ca4d46ee17a9aa3174815c",
     "trace_last_event_hash": "sha256:83cb11b84072c529c9e617e448dfefaa693f04e6a6bd4ba9f737bc4aae0a3de9",
     "transformation_memory_snapshot_hash": "162989e5f8cc4df26ea8901e019a7bd8e56e838db8b11b56311af881cdc869e3"
   },
-  "artifact_hash": "sha256:254ac2763c3741a480e0e25520f9f18a0b52fbc19c99b24640099ad8e460b3a9",
+  "artifact_hash": "sha256:d9d5b530f9ba63c705e4fb3f1db2b92bcec9cc34a3424e2317f2e7037942958a",
   "atom_id": "O9d12a2a1b-C045",
   "authority": {
     "assurance_only": true,
@@ -29,6 +38,53 @@
   },
   "framework_commit": "43897d3afaf0038385102d5acc64793c05ec40f0",
   "framework_version": "0.7.0",
+  "full_document_integrity": {
+    "algorithm": "SHA-256",
+    "canonicalization": "JSON_SORT_KEYS_COMPACT_UTF8",
+    "inputs": {
+      "atomization": {
+        "canonical_sha256": "sha256:789b1c12c5f04d6361d39f3c2bfbefc35fccc3567944032b573db64ebd292070",
+        "path": "research/real_math/millennium/p_vs_np/02_problem_dag/O9d12a2a1b_C045_ATOMIZATION_20260812.json"
+      },
+      "context": {
+        "canonical_sha256": "sha256:1805c252a8ad6c380d3ac9674e576e6d3fa9c1d93d6d02e8614cec7abf6cdd6c",
+        "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C045_MATH_CONTEXT_FIBER_20260812.json"
+      },
+      "expert_review": {
+        "canonical_sha256": "sha256:3351001851ad326ea7c7f07ef6619b071935b1896f99743b4ccb139fa2158cf1",
+        "path": "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C045_EXPERT_CONTEXT_REVIEW_20260812.json"
+      },
+      "failure_snapshot": {
+        "canonical_sha256": "sha256:a0c54a0499a590ce83d57a9d76df7d0702da52be864a1aa4f6118a2626ecdb4e",
+        "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C045_FAILURE_SNAPSHOT_20260812.json"
+      },
+      "memory": {
+        "canonical_sha256": "sha256:f902d8ded324d84c433b39c4f535d2d9c37d8443358c2c699a5440c1619b1b0f",
+        "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C045_RESEARCH_MEMORY_REVIEW_20260812.json"
+      },
+      "preservation": {
+        "canonical_sha256": "sha256:95fdf0df876e55a5fe2797c047a15ea72a91f8e10e32ddf139978b0846e0a1d6",
+        "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_ROOT_COORDINATE_PRESERVATION_20260812.json"
+      },
+      "shortcut_review": {
+        "canonical_sha256": "sha256:ebf2b3de1bfd650924a10155d1c650cdb34921a6751462737e95df330411e4a8",
+        "path": "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C045_OBSTRUCTION_TRANSFORMATION_REVIEW_20260812.json"
+      },
+      "tool_snapshot": {
+        "canonical_sha256": "sha256:3cebdd14bab0a82bf5b5b7a13b710b03785717b408313eeb8e6c6f1e09344ca5",
+        "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C045_TOOL_SNAPSHOT_20260812.json"
+      },
+      "trace": {
+        "canonical_sha256": "sha256:f12046f8e65b03fa65c2efb1a708171fd4852004fd404d67eee717dcfe2e4084",
+        "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_PRE_CANDIDATE_TRACE_20260812.json"
+      },
+      "transformation_memory": {
+        "canonical_sha256": "sha256:949b5167de448d5ff7fed9a7628f88c0969a12c888461579ff88ec10fd1d1e04",
+        "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C045_OBSTRUCTION_TRANSFORMATION_MEMORY_20260812.json"
+      }
+    },
+    "scope": "FULL_PARSED_DOCUMENT_INCLUDING_DECLARED_RUNTIME_HASHES"
+  },
   "gate_verdicts": {
     "candidate_generation_allowed": true,
     "context": "PASS",

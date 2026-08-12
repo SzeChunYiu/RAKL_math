@@ -6,6 +6,7 @@ from pathlib import Path
 import sys
 
 import jsonschema
+import pytest
 from rakl.math_context import ContextGateVerdict
 from rakl.research_memory import ResearchMemoryVerdict
 from rakl.research_trace import ResearchTraceEventType, TraceGateVerdict
@@ -16,6 +17,7 @@ from rakl.semantic_shortcut import ShortcutMode, ShortcutReviewVerdict
 ROOT = Path(__file__).resolve().parents[2]
 PNP = ROOT / "research/real_math/millennium/p_vs_np"
 FIXTURE = PNP / "09_trace/c045_u17_component_coupling_pre_candidate_fixture.py"
+VERIFIER = PNP / "09_trace/verify_c045_pre_candidate_packet.py"
 
 ARTIFACTS = {
     "atomization": PNP / "02_problem_dag/O9d12a2a1b_C045_ATOMIZATION_20260812.json",
@@ -34,6 +36,15 @@ ARTIFACTS = {
 
 def _load_fixture():
     spec = importlib.util.spec_from_file_location("pnp_c045_pre_candidate_fixture", FIXTURE)
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+def _load_verifier():
+    spec = importlib.util.spec_from_file_location("pnp_c045_packet_verifier", VERIFIER)
     assert spec is not None and spec.loader is not None
     module = importlib.util.module_from_spec(spec)
     sys.modules[spec.name] = module
@@ -145,7 +156,9 @@ def test_c045_packet_is_result_blind_and_has_no_target_capability() -> None:
     assert "rho(G17)=" not in artifact_text
     assert "rho(G_17)=" not in artifact_text
 
-    fixture_text = FIXTURE.read_text(encoding="utf-8")
+    capability_free_source_text = "\n".join(
+        path.read_text(encoding="utf-8") for path in (FIXTURE, VERIFIER)
+    )
     for forbidden in (
         "C041_fx_sat_one_sided",
         "decode_formula",
@@ -156,7 +169,7 @@ def test_c045_packet_is_result_blind_and_has_no_target_capability() -> None:
         "c044_retrospective_quotient_multiplexing",
         "subprocess",
     ):
-        assert forbidden not in fixture_text
+        assert forbidden not in capability_free_source_text
 
 
 def test_c045_freezes_branch_complete_incidence_gate_without_an_outcome() -> None:
@@ -245,3 +258,81 @@ def test_c045_is_a_zero_credit_pre_candidate_context_refresh() -> None:
     assert files["lower_authority_review"]["path"] == module.C044_LOWER_REVIEW_PATH
     assert files["retrospective_trace"]["path"] == module.C044_TRACE_PATH
     assert files["component_coupling_feedback"]["path"] == module.C044_FEEDBACK_PATH
+
+
+def test_c045_full_document_integrity_verifier_accepts_committed_packet() -> None:
+    verifier = _load_verifier()
+    gate = _load(ARTIFACTS["gate"])
+    integrity = gate["full_document_integrity"]
+
+    assert integrity["algorithm"] == "SHA-256"
+    assert integrity["canonicalization"] == "JSON_SORT_KEYS_COMPACT_UTF8"
+    assert set(integrity["inputs"]) == set(ARTIFACTS) - {"gate"}
+    assert "gate" not in integrity["inputs"]
+    assert gate["application_authority"] == {
+        "generic_runtime_candidate_paths_non_authoritative": True,
+        "licensed_actions": ["FREEZE_INCIDENCE_CLASSIFICATION_PLAN_ONLY"],
+        "candidate_construction_authorized": False,
+        "target_evaluator_execution_authorized": False,
+    }
+    assert verifier.audit_packet(ROOT) == ()
+    verifier.verify_packet(ROOT)
+
+
+@pytest.mark.parametrize(
+    ("document_name", "mutation", "declared_hash_path"),
+    [
+        ("context", "object_context", ("packet_hash",)),
+        ("memory", "applicability_note", ("artifact_hash",)),
+        ("shortcut_review", "mapping_disanalogy", ("artifact_hash",)),
+        ("trace", "state_summary", ("entries", 0, "artifact_hash")),
+        ("transformation_memory", "nested_episode", ("episodes", 0, "artifact_hash")),
+        ("shortcut_review", "nested_mapping", ("direct_mapping_witnesses", 0, "artifact_hash")),
+    ],
+)
+def test_c045_full_document_integrity_rejects_substantive_hash_preserving_mutations(
+    tmp_path: Path,
+    document_name: str,
+    mutation: str,
+    declared_hash_path: tuple[str | int, ...],
+) -> None:
+    verifier = _load_verifier()
+    documents = {name: _load(path) for name, path in ARTIFACTS.items()}
+    document = documents[document_name]
+
+    def nested(value, path):
+        for part in path:
+            value = value[part]
+        return value
+
+    declared_before = nested(document, declared_hash_path)
+    if mutation == "object_context":
+        document["object_context"] += " HOSTILE_UNBOUND_CONTEXT_MUTATION"
+    elif mutation == "applicability_note":
+        document["tool_applicability_notes"][0] += " HOSTILE_UNBOUND_APPLICABILITY_MUTATION"
+    elif mutation == "mapping_disanalogy":
+        document["direct_mapping_witnesses"][0]["disanalogies"][0] += (
+            " HOSTILE_UNBOUND_DISANALOGY_MUTATION"
+        )
+    elif mutation == "state_summary":
+        document["entries"][0]["state_summary"] += " HOSTILE_UNBOUND_TRACE_MUTATION"
+    elif mutation == "nested_episode":
+        document["episodes"][0]["operation"] += " HOSTILE_UNBOUND_EPISODE_MUTATION"
+    elif mutation == "nested_mapping":
+        document["direct_mapping_witnesses"][0]["precondition_mapping"][0][1] += (
+            " HOSTILE_UNBOUND_MAPPING_MUTATION"
+        )
+    else:  # pragma: no cover - parameter list is closed above
+        raise AssertionError(mutation)
+    assert nested(document, declared_hash_path) == declared_before
+
+    for name, source_path in ARTIFACTS.items():
+        target = tmp_path / source_path.relative_to(ROOT)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(
+            json.dumps(documents[name], indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+
+    with pytest.raises(verifier.PacketIntegrityError, match=document_name):
+        verifier.verify_packet(tmp_path)

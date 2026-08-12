@@ -1035,6 +1035,40 @@ def build_documents() -> dict[str, dict]:
         "preservation": _jsonable(preservation.document()),
         "trace": _document(research_trace),
     }
+    integrity_paths = {
+        "atomization": ATOMIZATION_PATH,
+        "context": CONTEXT_PATH,
+        "tool_snapshot": (
+            "research/real_math/millennium/p_vs_np/07_memory/"
+            "O9d12a2a1b_C045_TOOL_SNAPSHOT_20260812.json"
+        ),
+        "failure_snapshot": (
+            "research/real_math/millennium/p_vs_np/07_memory/"
+            "O9d12a2a1b_C045_FAILURE_SNAPSHOT_20260812.json"
+        ),
+        "memory": MEMORY_PATH,
+        "transformation_memory": TRANSFORMATION_MEMORY_PATH,
+        "expert_review": EXPERT_PATH,
+        "shortcut_review": SHORTCUT_PATH,
+        "preservation": (
+            "research/real_math/millennium/p_vs_np/09_trace/"
+            "O9d12a2a1b_C045_ROOT_COORDINATE_PRESERVATION_20260812.json"
+        ),
+        "trace": TRACE_PATH,
+    }
+    assert set(integrity_paths) == set(documents)
+    full_document_integrity = {
+        "algorithm": "SHA-256",
+        "canonicalization": "JSON_SORT_KEYS_COMPACT_UTF8",
+        "scope": "FULL_PARSED_DOCUMENT_INCLUDING_DECLARED_RUNTIME_HASHES",
+        "inputs": {
+            name: {
+                "path": integrity_paths[name],
+                "canonical_sha256": _hash(documents[name]),
+            }
+            for name in sorted(documents)
+        },
+    }
     gate = _with_artifact_hash(
         {
             "schema_version": "1.0.0",
@@ -1045,6 +1079,7 @@ def build_documents() -> dict[str, dict]:
             "atom_id": ATOM,
             "refresh": _refresh_record(),
             "source_authority_bindings": {"c044": _c044_authority_bindings()},
+            "full_document_integrity": full_document_integrity,
             "artifact_bindings": {
                 "context_hash": fiber.packet_hash,
                 "memory_review_hash": memory.artifact_hash,
@@ -1053,6 +1088,7 @@ def build_documents() -> dict[str, dict]:
                 "trace_last_event_hash": research_trace.entries[-1].artifact_hash,
                 "preservation_sha256": preservation.document()["receipt_canonical_sha256"],
                 "c044_source_authority_bindings_hash": _hash(_c044_authority_bindings()),
+                "full_document_integrity_hash": _hash(full_document_integrity),
             },
             "gate_verdicts": {
                 "context": plan.context_gate.verdict.value,
@@ -1063,6 +1099,12 @@ def build_documents() -> dict[str, dict]:
                 "selected_mode": shortcut.selected_mode.value,
                 "candidate_generation_allowed": plan.candidate_generation_allowed,
                 "licensed_action": "FREEZE_INCIDENCE_CLASSIFICATION_PLAN_ONLY",
+            },
+            "application_authority": {
+                "generic_runtime_candidate_paths_non_authoritative": True,
+                "licensed_actions": ["FREEZE_INCIDENCE_CLASSIFICATION_PLAN_ONLY"],
+                "candidate_construction_authorized": False,
+                "target_evaluator_execution_authorized": False,
             },
             "result_capability_firewall": {
                 "allowed": [
