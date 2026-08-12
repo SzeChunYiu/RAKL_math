@@ -1,0 +1,137 @@
+{
+  "allowed_future_branches": [
+    "NONEMPTY_WITH_EXACT_POSITIVE_CERTIFICATE",
+    "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE",
+    "CANNOT_CHECK"
+  ],
+  "artifact_hash": "sha256:fda8088b8bde32488f9a9e18096f2c2e6d1b61bd23a36b74996dc74acd045103",
+  "atom_id": "O9d12a2a1b-C052-K31-OVERLAP",
+  "candidate_independent_negative_certificate_requirements": [
+    "a universal invariant separating every formula-bound H_31 member from every P_32 member, or an exhaustive enumeration with a proof of completeness",
+    "complete coverage of v in {2,3}, every canonical parent formula, and semantic UNSAT membership",
+    "complete coverage of all three current support cells and every canonical current formula",
+    "a checked argument that no identical 32-bit label has both memberships",
+    "fail closed if canonicality, UNSAT, source identity, or enumeration completeness is missing"
+  ],
+  "candidate_independent_positive_certificate_requirements": [
+    "one exact 32-bit label h",
+    "one exact canonical length-62 parent word r||c from the frozen parent cell with h=1||c",
+    "formula-bound proof that the parent 3CNF is UNSAT, hence h is in H_31",
+    "one exact canonical length-64 current word from one frozen current cell whose first 32 bits equal h",
+    "byte-for-byte full-label equality and unchanged C048 literal-transpose binding"
+  ],
+  "chronology_firewall": {
+    "SAT_or_UNSAT_executed": false,
+    "candidate_or_evaluator_identity_frozen": false,
+    "formula_constructed_beyond_already_public_regression_witnesses": false,
+    "hidden_or_native_result_accessed": false,
+    "overlap_executed_or_label_accessed": false,
+    "public_regression_witness_bits_or_labels_compared": false
+  },
+  "exhaustive_current_support_cells": [
+    {
+      "a": 1,
+      "b": 4,
+      "encoded_length": 64,
+      "m": 8,
+      "padding": 0,
+      "raw_length": 64,
+      "v_range": [
+        1,
+        1
+      ]
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "encoded_length": 64,
+      "m": 3,
+      "padding": 1,
+      "raw_length": 63,
+      "v_range": [
+        8,
+        15
+      ]
+    },
+    {
+      "a": 6,
+      "b": 2,
+      "encoded_length": 64,
+      "m": 2,
+      "padding": 0,
+      "raw_length": 64,
+      "v_range": [
+        32,
+        63
+      ]
+    }
+  ],
+  "firewall_id": "PNP-C052-K31-OVERLAP-CERTIFICATE-FIREWALL-20260812",
+  "forbidden_in_this_round": [
+    "construct a new formula or label",
+    "compare any H_31 and P_32 labels",
+    "run SAT, decoder, or overlap",
+    "propose or freeze a candidate identity",
+    "access an overlap result"
+  ],
+  "parent_support_cell": {
+    "a": 2,
+    "b": 3,
+    "encoded_length": 62,
+    "k": 31,
+    "m": 5,
+    "padding": 1,
+    "raw_length": 61,
+    "v_range": [
+      2,
+      3
+    ]
+  },
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "source_bindings": {
+    "c041_grammar": {
+      "git_blob": "fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+      "raw_sha256": "sha256:c0caca2fe7244c3d847de8b59473cec72132ec04ad3e9fab668f5cd95a2bd75a"
+    },
+    "c048_proof_certificate": {
+      "artifact_hash": "sha256:84ebf84c9b90a99c3f5e348bacad53ee1d700e2d0c746805cf4b8a0439cd1e33",
+      "git_blob": "1283219dec4d6a39cf43d5f2d9a4fafa1883d016",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C048_LITERAL_TRANSPOSE_PROOF_CERTIFICATE_FREEZE_20260812.json",
+      "raw_sha256": "sha256:fd4d478d816c50423f2d6fbd668305bec911bcf3a035a2a5b516eb08796ec16c"
+    },
+    "c048_transfer_condition": {
+      "artifact_hash": "sha256:b03a1090e7b25222dc2377e309b8600b6e2064d6fc74f702b1f3f984d68cff5e",
+      "git_blob": "fed9057163bec46325115e8f6cfbb5c6f3c3d485",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C048_LITERAL_TRANSPOSE_TRANSFER_CONDITION_FREEZE_20260812.json",
+      "raw_sha256": "sha256:e2a924e708c1ab17b78e06a3935fd48772c0c172b9f01b0c756de80f1430908b"
+    },
+    "offwindow_experience": {
+      "artifact_hash": "sha256:df07e8fe9f84c16dc9ecd6dce0adda5d5fac82673f922363764b47f34e1f5ae5",
+      "git_blob": "57f2f024c3620c1679b79773fb23a9bf892d4e1d",
+      "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C052_V21_OFFWINDOW_MATHEMATICAL_EXPERIENCE_20260812.json",
+      "raw_sha256": "sha256:a6bf9f14a65af46e2c954723e4e0f565fb717aeaecb3191447779bb099672074"
+    },
+    "offwindow_proof": {
+      "artifact_hash": "sha256:cd51bbf8ae9acc0a2e2c77f7d8e6c052c3c3a1e9a22b50ddee6271663e6699f7",
+      "git_blob": "56255112e4d5a7e3c962c7eb7ffb423fe92c51f6",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C052_V21_OFFWINDOW_SYMBOLIC_HAND_PROOF_20260812.json",
+      "raw_sha256": "sha256:28be0eba0d1c4610c07c034911e627d31c276e34474186b70259f4a0480cc494"
+    },
+    "offwindow_result": {
+      "artifact_hash": "sha256:c11023a75afaf8128d3b3233cd50eec6de63c762a335adefcece139620ffe42d",
+      "git_blob": "d0b7511848924e6ef87fb2b090fab8fd821d6388",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_V21_OFFWINDOW_RESULT_RECEIPT_20260812.json",
+      "raw_sha256": "sha256:58d86baf589fa3be1acc8ba599ac4aa0286a152ce4309ddfc1873d0000634b46"
+    }
+  },
+  "zero_mathematical_credit": [
+    "Git",
+    "CI",
+    "hashes",
+    "schemas",
+    "trace chronology",
+    "same-context review"
+  ]
+}

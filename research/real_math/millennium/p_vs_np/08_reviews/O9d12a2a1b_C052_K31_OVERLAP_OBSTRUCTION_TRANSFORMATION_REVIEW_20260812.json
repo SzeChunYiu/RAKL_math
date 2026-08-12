@@ -1,0 +1,64 @@
+{
+  "artifact_hash": "sha256:06285109d6c733336517015041a6f1959516f9cb17ee9add7cdcae60cc76e74a",
+  "direct_candidate_episode_ids": [],
+  "direct_mapping_witnesses": [],
+  "direct_search_status": "NO_VIABLE_MATCH",
+  "episode_memory_snapshot_hash": "faeaa29c7e49322256bf35c75c8ff1444c6c3e8b4a1cbf3c76c673bd7ce87d5e",
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C052_K31_OVERLAP_CONTEXT_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C052_K31_OVERLAP_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_V21_OFFWINDOW_RESULT_RECEIPT_20260812.json"
+  ],
+  "exhaustion_witness": null,
+  "glue_search_status": "NO_VIABLE_MATCH",
+  "glue_witness": null,
+  "jump_mapping_witnesses": [],
+  "jump_search_status": "NO_VIABLE_MATCH",
+  "missing_transformation_specification": null,
+  "obstruction": {
+    "constraints": [
+      "canonical length 62 UNSAT parent",
+      "canonical length 64 current word",
+      "unchanged C048 transpose"
+    ],
+    "desired_transition": [
+      "certify nonempty intersection or certify universal disjointness"
+    ],
+    "domain": "exact finite formula-bound code-language intersection",
+    "failure_mechanisms": [
+      "marginal flexibility fails to compose into one common label",
+      "unproved membership or enumeration completeness"
+    ],
+    "forbidden_losses": [
+      "ambient-only variation",
+      "partial-prefix match",
+      "marginal-to-joint quantifier swap"
+    ],
+    "invariants_to_preserve": [
+      "C041 grammar",
+      "UNSAT semantics",
+      "equal split",
+      "full 32-bit equality"
+    ],
+    "obstruction_id": "O-PNP-C052-K31-FULL-LABEL-INTERSECTION",
+    "relations": [
+      "same full label must have both memberships"
+    ],
+    "roles": [
+      "H_31 member",
+      "P_32 member",
+      "common 32-bit label"
+    ]
+  },
+  "research_memory_review_hash": "sha256:d5da74964ed9e9815fb65af1a516191788c2ec7be50e5464c75a432f8dffa0cd",
+  "review_id": "PNP-C052-K31-OVERLAP-SHORTCUT-REVIEW-20260812",
+  "selected_episode_ids": [],
+  "selected_mode": "CANNOT_CHECK",
+  "target_atom_id": "O9d12a2a1b-C052-K31-OVERLAP",
+  "target_context_hash": "sha256:9b195fe641a94855ac068e8aec4d20c55a051b377e5f91b22e57944036391482",
+  "unresolved_warnings": [
+    "off-window transformation breaks only an eight-coordinate separator, not the full-label obstruction",
+    "no recorded episode supplies a formula-bound common label or a universal k31 separator",
+    "LIFT is not justified because bounded cross-problem coverage and two shared residual failures are not frozen for this exact obstruction"
+  ]
+}

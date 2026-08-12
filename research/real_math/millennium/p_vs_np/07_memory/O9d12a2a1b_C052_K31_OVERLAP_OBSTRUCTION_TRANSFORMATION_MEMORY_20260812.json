@@ -1,0 +1,86 @@
+{
+  "episodes": [
+    {
+      "artifact_hash": "sha256:4152631340488122565b2b600a549f40917e43813357e448754793dd3095f4eb",
+      "authority": "PROOF_BACKED",
+      "episode_id": "E-PNP-C052-OFFWINDOW-ANCHOR-DECOUPLING",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C052_V21_OFFWINDOW_SYMBOLIC_HAND_PROOF_20260812.json",
+        "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_V21_OFFWINDOW_RESULT_RECEIPT_20260812.json"
+      ],
+      "known_breakpoints": [
+        "does not produce joint patterns",
+        "does not prove overlap"
+      ],
+      "lineage_ids": [
+        "PNP-C052-OFFWINDOW-UNSAT-ANCHOR-MARGINAL-LEMMA-v1"
+      ],
+      "operation": "reserve untouched opposite repeated-unit clauses and vary one touched coordinate",
+      "preconditions": [
+        "a>=2",
+        "m>=4",
+        "window in unpadded payload",
+        "two untouched clauses"
+      ],
+      "preserved_invariants": [
+        "canonical encoding",
+        "UNSAT",
+        "exact length"
+      ],
+      "relaxed_or_broken_constraints": [
+        "fixed local coordinate"
+      ],
+      "resulting_relations": [
+        "every h[1..7] coordinate has both H_k marginals",
+        "no local forced-MAGIC coordinate remains"
+      ],
+      "source_context": "off-window UNSAT anchor marginal theorem",
+      "source_domain": "P-vs-NP C041 code language",
+      "source_obstruction": {
+        "constraints": [
+          "UNSAT membership",
+          "canonical encoding"
+        ],
+        "desired_transition": [
+          "remove the forced-coordinate separator"
+        ],
+        "domain": "fixed-level canonical code language",
+        "failure_mechanisms": [
+          "one universally unequal coordinate separates the languages"
+        ],
+        "forbidden_losses": [
+          "ambient-only variation"
+        ],
+        "invariants_to_preserve": [
+          "canonicality",
+          "UNSAT",
+          "exact length"
+        ],
+        "obstruction_id": "O-PNP-C052-LOCAL-FORCED-COORDINATE",
+        "relations": [
+          "first eight coordinates compared to MAGIC"
+        ],
+        "roles": [
+          "UNSAT suffix language",
+          "current prefix language"
+        ]
+      },
+      "transformation_name": "decouple UNSAT anchor from touched window"
+    }
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+    "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C048_LITERAL_TRANSPOSE_TRANSFER_CONDITION_FREEZE_20260812.json",
+    "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C048_LITERAL_TRANSPOSE_PROOF_CERTIFICATE_FREEZE_20260812.json",
+    "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C052_V21_OFFWINDOW_SYMBOLIC_HAND_PROOF_20260812.json",
+    "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_V21_OFFWINDOW_RESULT_RECEIPT_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C052_V21_OFFWINDOW_MATHEMATICAL_EXPERIENCE_20260812.json"
+  ],
+  "memory_id": "PNP-C052-K31-OVERLAP-TRANSFORMATION-MEMORY-20260812",
+  "snapshot_hash": "faeaa29c7e49322256bf35c75c8ff1444c6c3e8b4a1cbf3c76c673bd7ce87d5e",
+  "source_universe": [
+    "C048 exact overlap equivalence",
+    "C052 off-window theorem",
+    "C049/C050/C051 empty overlap certificates"
+  ]
+}
