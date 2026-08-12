@@ -1,0 +1,48 @@
+{
+  "trace_id": "TRACE-BSD-S001c1-R14-20260812",
+  "parent_trace": "TRACE-BSD-S001c1-STRICT-20260811",
+  "events": [
+    {
+      "event_id": "BSD-S001c1-R14-E08",
+      "event_type": "PRE_ACTION_FROZEN",
+      "state_summary": "R14 freezes current RAKL 3.0.0, application base, S001c1 fibre, selected/rejected memory and parity falsifier before source search.",
+      "action_summary": "Route from direct-equality search to parity-first discriminator under proposal/shadow authority.",
+      "outputs": ["pre_action_receipt:PRE-BSD-S001c1-R14-20260812"],
+      "residuals": ["complex/discrete exact magnitude open"],
+      "previous_event_hash": "sha256:67a09967e75a4b56fb4bbf3440b58295b88ce3a419da8285c030a7439344e5ca",
+      "artifact_hash": "sha256:c48a4a9651da106a281db2198d67159b5babdb4efd2cfc2d6fec537fe4ebf4a3"
+    },
+    {
+      "event_id": "BSD-S001c1-R14-E09",
+      "event_type": "SOURCE_GLUE",
+      "state_summary": "Dokchitser-Dokchitser p-parity and Kim exact Kurihara-order/classical-Selmer reconstruction type-check on the same E/Q and p-primary Selmer coordinate.",
+      "action_summary": "Compose only modulo 2.",
+      "outputs": ["LEM-BSD-R14-KURIHARA-COMPLEX-PARITY"],
+      "residuals": ["mod2 relation closed in theorem cell", "exact magnitude open"],
+      "previous_event_hash": "sha256:c48a4a9651da106a281db2198d67159b5babdb4efd2cfc2d6fec537fe4ebf4a3",
+      "artifact_hash": "sha256:5bee73591641f38394e95b89caf88a6aa6b080c38c6b93aabbaf5ab544148f91"
+    },
+    {
+      "event_id": "BSD-S001c1-R14-E10",
+      "event_type": "COUNTEREXAMPLE_FIRST",
+      "state_summary": "The hostile pair 2 and 4 survives the parity relation.",
+      "action_summary": "Reject parity-only exact equality; retain magnitude residual.",
+      "outputs": ["F-BSD-S001c1-R14-PARITY-ONLY-CLOSURE"],
+      "residuals": ["same-coordinate magnitude comparison open", "full BSD glue open"],
+      "previous_event_hash": "sha256:5bee73591641f38394e95b89caf88a6aa6b080c38c6b93aabbaf5ab544148f91",
+      "artifact_hash": "sha256:e87b30b7e3c210687f66e64cdce31c7fc7f938f23dd6e823ae2dafb0d89b75fe"
+    },
+    {
+      "event_id": "BSD-S001c1-R14-E11",
+      "event_type": "EXPERT_REVIEW",
+      "state_summary": "Seven same-context roles agree on scoped parity composition and reject root promotion.",
+      "action_summary": "Record compositional success, zero independent-review credit, next magnitude discriminator.",
+      "outputs": ["DG-BSD-S001c1-R14-PARITY-QUOTIENT-NOT-MAGNITUDE-20260812"],
+      "residuals": ["root OPEN_NO_SOLUTION_CERTIFICATE"],
+      "previous_event_hash": "sha256:e87b30b7e3c210687f66e64cdce31c7fc7f938f23dd6e823ae2dafb0d89b75fe",
+      "artifact_hash": "sha256:61bab4d7a5acb864656acae282e7fd1e4a37a1693bf502dfdebb0236db27e8bf"
+    }
+  ],
+  "trace_tail_hash": "sha256:61bab4d7a5acb864656acae282e7fd1e4a37a1693bf502dfdebb0236db27e8bf",
+  "authority": "PROPOSAL_SHADOW_HASH_CHAIN"
+}
