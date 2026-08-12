@@ -1,0 +1,180 @@
+{
+  "observation_id": "PNP-C045::META::TYPED-CONTENT-HASH-CONTRACT-INCOMPLETE::20260812",
+  "method_surface": "mathematical pre-candidate typed content-integrity assurance",
+  "observation": "At exact RAKL 43897d3, the generic typed validators require declared hashes but do not uniformly recompute them from every semantic dataclass field. A hostile C045 reconstruction can therefore retain stale declared hashes after substantive mutation while the generic pre-candidate runtime reports candidate_generation_allowed=true. The merged C045 application compensates with a full-parsed-document verifier and hostile mutation tests that reject the same mutations; this observation proposes repairing the generic framework contract without claiming that C045 application assurance failed.",
+  "evidence_pointers": [
+    "PNP-C045-TYPED-CONTENT-HASH-ASSURANCE-RESULT-20260812",
+    "PNP-C045-TYPED-CONTENT-HASH-ASSURANCE-EVENT-20260812",
+    "tests/math_applications/test_pnp_c045_u17_component_coupling_gate.py",
+    "research/real_math/millennium/p_vs_np/09_trace/verify_c045_pre_candidate_packet.py",
+    "research/real_math/millennium/p_vs_np/09_trace/c045_u17_component_coupling_pre_candidate_fixture.py",
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C045_MATH_CONTEXT_FIBER_20260812.json",
+    "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_PRE_CANDIDATE_TRACE_20260812.json",
+    "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_LATEST_RAKL_GATE_RECEIPT_20260812.json"
+  ],
+  "candidate_framework_delta": "Proposal only: define one canonical content serializer and recomputation contract for every affected typed object; validate full semantic field coverage, nested binding cascades, strict hash encodings, missing-object CANNOT_CHECK, and legitimate downstream rebindings under a protected benchmark frozen outside challenger write authority. Do not change mathematical semantics or promote from this application observation.",
+  "validation_status": "UNVALIDATED_PROPOSAL",
+  "context_sha256": "258510be7eb0fbfcc63a8e4b45129cae811de580ba8cfcd2664cdc396c4b0830",
+  "result_id": "PNP-C045-TYPED-CONTENT-HASH-ASSURANCE-RESULT-20260812",
+  "event_id": "PNP-C045-TYPED-CONTENT-HASH-ASSURANCE-EVENT-20260812",
+  "classification": "CLASS_A_SOFTWARE_ASSURANCE_DEFECT",
+  "failure_attribution": "IMPLEMENTATION_DEFECT",
+  "mathematical_lesson_credit": false,
+  "failure_experience_credit": false,
+  "observed_application_binding": {
+    "commit_sha": "4c33934030f98ba81a77b419d2317a1b31173fdc",
+    "tree_sha": "d7104d18f0f34317b358dedadd72a101d4359bdf",
+    "framework_commit": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "evidence": [
+      {
+        "path": "tests/math_applications/test_pnp_c045_u17_component_coupling_gate.py",
+        "git_blob_sha": "509166aff36d1a3405bce999fd1ac74841ed5394",
+        "raw_sha256": "094f4aa36c1a7da18264fabe89fc35ce375d19a644ae68acf30f9fbb3cb8ef20"
+      },
+      {
+        "path": "research/real_math/millennium/p_vs_np/09_trace/verify_c045_pre_candidate_packet.py",
+        "git_blob_sha": "a3bcb6de281b6e2095aaf945d8f03f711a460181",
+        "raw_sha256": "8ba86835ed71d9ba48d4a7d0fff4b770baa689db70042437f7205366760e79ee"
+      },
+      {
+        "path": "research/real_math/millennium/p_vs_np/09_trace/c045_u17_component_coupling_pre_candidate_fixture.py",
+        "git_blob_sha": "692cff249bea0de115ad109bf836994966023129",
+        "raw_sha256": "d202550785405078e56a27dd6d1a3dc1859810f45cd8111090d130f639aacc47"
+      },
+      {
+        "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C045_MATH_CONTEXT_FIBER_20260812.json",
+        "git_blob_sha": "c169d750a5e962f5109a57b6138ebfa906c7b557",
+        "raw_sha256": "258510be7eb0fbfcc63a8e4b45129cae811de580ba8cfcd2664cdc396c4b0830"
+      },
+      {
+        "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_PRE_CANDIDATE_TRACE_20260812.json",
+        "git_blob_sha": "832ea87152ebeda8702f8001739ba926e698211e",
+        "raw_sha256": "06801151ba6b71b3356f5ed374936abbb8fedb3321c3ababb8bf767c525f7fad"
+      },
+      {
+        "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_LATEST_RAKL_GATE_RECEIPT_20260812.json",
+        "git_blob_sha": "d89d70c745abe03060cb0a916cbe375ae1c65f1b",
+        "raw_sha256": "62eaa24185ac20dba9a324f53d7b06bb05796236e5cc81ffbebd2ba1484bc675"
+      }
+    ]
+  },
+  "affected_typed_hash_contracts": [
+    {
+      "type": "MathContextFiber",
+      "framework_path": "src/rakl/math_context.py",
+      "declared_hash_field": "packet_hash",
+      "gap": "declared hash is required but is not directly recomputed across the full semantic object"
+    },
+    {
+      "type": "ResearchMemoryReview",
+      "framework_path": "src/rakl/research_memory.py",
+      "declared_hash_field": "artifact_hash",
+      "gap": "declared hash is required but is not directly recomputed across the full semantic object"
+    },
+    {
+      "type": "ObstructionTransformationEpisode",
+      "framework_path": "src/rakl/semantic_shortcut.py",
+      "declared_hash_field": "artifact_hash",
+      "gap": "declared hash is required but is not directly recomputed across the full semantic object"
+    },
+    {
+      "type": "ObstructionTransformationReview",
+      "framework_path": "src/rakl/semantic_shortcut.py",
+      "declared_hash_field": "artifact_hash",
+      "gap": "declared hash is required but is not directly recomputed across the full semantic object"
+    },
+    {
+      "type": "StructuralMappingWitness",
+      "framework_path": "src/rakl/semantic_shortcut.py",
+      "declared_hash_field": "artifact_hash",
+      "gap": "declared hash is required but is not directly recomputed across the full semantic object"
+    }
+  ],
+  "aggregate_boundary": {
+    "ObstructionTransformationMemory.snapshot_hash": "does recompute aggregate episode content and catches stale nested episode mutation, while the nested episode artifact_hash itself is not directly recomputed"
+  },
+  "compensating_control": {
+    "status": "DETECTS_IN_C045",
+    "generic_contract_repaired": false,
+    "verifier_path": "research/real_math/millennium/p_vs_np/09_trace/verify_c045_pre_candidate_packet.py",
+    "test_path": "tests/math_applications/test_pnp_c045_u17_component_coupling_gate.py",
+    "scope": "application-level full parsed documents including declared runtime hashes"
+  },
+  "future_protected_benchmark": {
+    "chronology": "freeze evaluator and benchmark outside challenger write authority before framework implementation",
+    "canonicalization": "canonical JSON, UTF-8, sorted keys, compact separators, no NaN; field coverage derived from the dataclass contract",
+    "cases": [
+      {
+        "case_id": "CLEAN_CANONICAL_HASH",
+        "expected": "PASS"
+      },
+      {
+        "case_id": "EVERY_SEMANTIC_DATACLASS_FIELD_STALE_HASH",
+        "expected": "FAIL"
+      },
+      {
+        "case_id": "NESTED_TRANSFERS_ANALOGIES_OBSTRUCTION_MAPPING_GLUE_EXHAUSTION_LIFT",
+        "expected": "FAIL"
+      },
+      {
+        "case_id": "STALE_CONTEXT_BLOCKS_MEMORY",
+        "expected": "FAIL"
+      },
+      {
+        "case_id": "STALE_MEMORY_BLOCKS_SHORTCUT",
+        "expected": "FAIL"
+      },
+      {
+        "case_id": "REHASHED_REVIEW_WITHOUT_TRACE_REBIND",
+        "expected": "FAIL"
+      },
+      {
+        "case_id": "REHASHED_EPISODE_WITHOUT_MEMORY_SNAPSHOT_REBIND",
+        "expected": "FAIL"
+      },
+      {
+        "case_id": "LEGITIMATE_SUCCESSOR_AFTER_ALL_DOWNSTREAM_REBINDINGS",
+        "expected": "PASS"
+      },
+      {
+        "case_id": "MALFORMED_PREFIX_LENGTH_CASE_WHITESPACE_ENCODING",
+        "expected": "FAIL"
+      },
+      {
+        "case_id": "MISSING_OBJECT",
+        "expected": "CANNOT_CHECK"
+      },
+      {
+        "case_id": "CANONICAL_JSON_FORMAT_AND_KEY_ORDER_INVARIANCE",
+        "expected": "PASS"
+      },
+      {
+        "case_id": "DATACLASS_FIELD_COVERAGE_ASSERTION",
+        "expected": "PASS"
+      },
+      {
+        "case_id": "PLANTED_WEAK_IDENTIFIER_ONLY_HASH",
+        "expected": "FAIL"
+      }
+    ]
+  },
+  "authority_contract": {
+    "effective_authority": "PROPOSAL_ONLY",
+    "grants_mathematical_saturation": false,
+    "grants_mathematical_result": false,
+    "grants_p_vs_np_root_authority": false,
+    "grants_framework_evolution_authority": false,
+    "grants_review_independence": false,
+    "grants_method_promotion": false,
+    "grants_framework_promotion": false,
+    "grants_review_authority": false
+  },
+  "non_guarantees": [
+    "not a mathematical result or saturation increment",
+    "not P versus NP or root authority",
+    "not a failure-lattice experience record or research-tool candidate",
+    "not independent review",
+    "not framework evolution, method promotion, or permission to edit a protected evaluator",
+    "hostile reconstruction is a bounded software-assurance witness at exact RAKL 43897d3, not a claim about every version or serializer"
+  ]
+}
