@@ -1,0 +1,85 @@
+{
+  "record_type": "SOURCE_FAMILY_AUDIT",
+  "cycle_id": "BSD-A1a1-STRUCTURAL-HIGHER-GZ-COORDINATE-20260812-R11",
+  "authority": "SOURCE_BOUND_PROPOSAL_SHADOW_ZERO_NEW_MATHEMATICAL_CREDIT",
+  "active_atom": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "nested_obstruction": "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE",
+  "fibre_snapshot_hash": "sha256:3f726353d39b2c454de8486af785e53ac7c11c4a0b69b75cd4823d33540f2c4c",
+  "residual_before": [
+    "CM_SPECIAL_CELL_COMPLEX_RANK2_TO_ORD_LP_EQ_2_UNSOURCED",
+    "EXACT_COMPLEX_RANK2_TO_TRANSVERSE_P_LOCALIZATION_NONZERO_OPEN",
+    "ZHANG_TECHNICAL_PRIME_PINFINITY_LOWER_BOUND_TO_EXACT_CORANK2_AND_VP_BINDING_OPEN",
+    "MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_PERIOD_COMPLEX_LEADING_TERM_GLUE_OPEN"
+  ],
+  "primary_sources": [
+    {
+      "id": "arXiv:2203.12161",
+      "title": "A higher Gross-Zagier formula and the structure of Selmer groups",
+      "author": "Chan-Ho Kim",
+      "verified_scope": "Kolyvagin-system-theoretic structural refinement comparing Heegner-point Kolyvagin systems with Kurihara numbers and Selmer structure; arbitrary-rank arithmetic structure is downstream of discrete/Kolyvagin data and main-conjecture/nontriviality inputs rather than a theorem from exact complex Taylor order two.",
+      "strict_nonclaim": "The source does not identify exact complex order two or L''(E,1) with the sharp Kolyvagin/Kurihara order required to turn Zhang's lower bound into exact Selmer rank."
+    },
+    {
+      "id": "arXiv:2203.12159",
+      "title": "The structure of Selmer groups and the Iwasawa main conjecture for elliptic curves",
+      "author": "Chan-Ho Kim",
+      "verified_scope": "Selmer structure of elliptic curves of arbitrary rank is determined from modular-symbol/Kurihara data under the source's Iwasawa/nontriviality hypotheses.",
+      "strict_nonclaim": "This classifier does not supply an exact complex-rank-two to discrete-order comparison theorem."
+    },
+    {
+      "id": "arXiv:2607.07531",
+      "title": "A higher Gross-Zagier type formula for moduli of shtukas at deeper level",
+      "author": "Patrick Bieker",
+      "verified_scope": "Current higher-derivative Gross-Zagier-type theorem in the bounded search is a function-field shtuka result extending Yun-Zhang.",
+      "strict_nonclaim": "No number-field E/Q transport theorem is supplied."
+    }
+  ],
+  "counterexample_first_route_test": {
+    "candidate_route": "Use a structural higher-Gross-Zagier/Kurihara theorem as the missing exactness step after Zhang R9's p-infinity Selmer-corank lower bound.",
+    "falsifier": "Inspect the theorem's actual input coordinate. If sharp Selmer information starts from a Kolyvagin/Kurihara arithmetic-discrete order rather than the complex Taylor order/second derivative, the theorem is downstream of the missing bridge and cannot itself discharge it.",
+    "observation": "The Kim sources are in the downstream arithmetic/discrete category; the Bieker higher-derivative source is in the function-field shtuka category.",
+    "verdict": "ROUTE_PRUNED_AS_DIRECT_COMPLEX_RANK2_TO_EXACT_SELMER_BRIDGE"
+  },
+  "difference_witnesses": [
+    {
+      "id": "DW-BSD-R11-COMPLEX-VS-DISCRETE-DERIVATIVE",
+      "shared_structure": "both source families use derivative/order language and can classify vanishing or Selmer structure",
+      "target_required_structure": "complex Taylor order/derivative at s=1 for the same E/Q",
+      "source_actual_structure": "Kolyvagin divisibility and Kurihara/modular-symbol discrete derivatives",
+      "unrepaired_difference": "no source-backed order-preserving comparison from exact complex rank two to the sharp arithmetic/discrete order",
+      "status": "BLOCKS_STRICT_TRANSFER"
+    },
+    {
+      "id": "DW-BSD-R11-FUNCTION-FIELD-SHTUKA-TO-NUMBER-FIELD-EQ",
+      "shared_structure": "higher automorphic derivatives related to geometric cycle/intersection data",
+      "source_actual_structure": "global function field and moduli of shtukas",
+      "target_required_structure": "number-field elliptic curve over Q with Heegner/Galois/Selmer objects",
+      "unrepaired_difference": "no typed transport theorem from shtuka intersection formulas to E/Q",
+      "status": "BLOCKS_STRICT_TRANSFER"
+    }
+  ],
+  "route_result": {
+    "status": "SCOPED_ROUTE_PRUNING_ONLY",
+    "refined_missing_transition": "exact complex analytic rank two -> sharp derived Heegner-Kolyvagin/Kurihara order (or an equivalent exact arithmetic coordinate) under hypotheses compatible with the Zhang technical-prime cell",
+    "residual_after": [
+      "COMPLEX_RANK2_TO_SHARP_DERIVED_HEEGNER_KOLYVAGIN_OR_KURIHARA_ORDER_OPEN",
+      "EXACT_COMPLEX_RANK2_TO_TRANSVERSE_P_LOCALIZATION_NONZERO_OPEN",
+      "PINFINITY_SELMER_TO_VP_SELMER_EXACT_COORDINATE_BINDING_OPEN",
+      "MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_PERIOD_COMPLEX_LEADING_TERM_GLUE_OPEN"
+    ],
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "new_mathematical_theorem_credit": 0
+  },
+  "hypothesis_ledger": {
+    "tamagawa": "OPEN",
+    "torsion": "OPEN",
+    "regulator": "OPEN; no nondegeneracy imported",
+    "sha": "OPEN; no finiteness/order imported",
+    "extra_trivial_zeros": "OPEN; any p-adic comparison must expose corrections",
+    "transverse_localization": "OPEN",
+    "complex_vs_p_adic_discrete_coordinate_faithfulness": "PRESERVED_AS_DISTINCT_PENDING_EXPLICIT_COMPARISON_THEOREM"
+  },
+  "verification": "CURRENT_PRIMARY_ARXIV_RECORDS_RECHECKED_2026-08-12; no numerics used as proof",
+  "chronology_boundary": "The Kim/Bieker source family was explored before the R11 repository fibre freeze on an unmerged exploratory branch; this R11 record is therefore a current-state sourced route audit, not strict prospective discovery credit.",
+  "recorded_at_utc": "2026-08-12T04:44:00Z"
+}
