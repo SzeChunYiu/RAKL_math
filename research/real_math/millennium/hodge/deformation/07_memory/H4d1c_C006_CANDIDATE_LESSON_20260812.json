@@ -1,0 +1,50 @@
+{
+  "lesson_id": "L-H4D1C-RAMIFICATION-DECOUPLES-DIFFERENTIAL-FROM-IMAGE-GERM-V1",
+  "kind": "REPRESENTATION",
+  "trigger_signature": [
+    "consumer QoI is actual image-germ coverage",
+    "candidate proxy is differential rank at a single selected point",
+    "ramification/singularity is admissible"
+  ],
+  "context_scope": [
+    "local algebraic/analytic morphism germs",
+    "reduced-image branch coverage"
+  ],
+  "action": "Prefer direct image dimension/closedness or generic-point rank evidence; treat selected-point differential surjectivity as sufficient only under separately stated hypotheses, not as a necessary condition.",
+  "expected_effects": [
+    "avoid false-negative routing caused by ramified central witnesses",
+    "align verification proxy with actual branch-image consumer"
+  ],
+  "boundaries": [
+    "does not supply a witness incidence",
+    "does not close formal or global gluing"
+  ],
+  "supporting_episode_ids": [
+    "H4d1c-C006-RAMIFIED-IMAGE-TANGENT-PROXY-NOGO"
+  ],
+  "contradicting_episode_ids": [],
+  "falsifier": "Prove that every admissible target witness-incidence realizing full reduced image is necessarily unramified/submersive at the selected central witness under source-specific Hodge hypotheses.",
+  "authority": "CANDIDATE",
+  "validation_obligations": [
+    "test on an actual Hodge-incidence source before reuse as a theorem-level route"
+  ],
+  "evidence_pointers": [
+    "H4d1c_C006_RAMIFICATION_PROXY_NOGO_20260812.md"
+  ],
+  "artifact_hash": "sha256:4805940818f330e009ea339ef8bcd895cbe95828dc9fab33299e9026566c44a1",
+  "attempted_mathematical_implication": "If the actual witness-incidence image covers the local target germ, then the differential at the selected central witness is surjective.",
+  "exact_mathematical_result": "For pi:A^1_t -> A^1_u, u=t^2 at t=0, Q[u] -> Q[t] is injective and the scheme-theoretic image is all A^1_u, but the cotangent map u mod u^2 -> t^2 mod t^2 is zero, hence d pi_0=0. Selected-point differential surjectivity is not necessary for full nonlinear image.",
+  "supported_cause": "Ramification makes first-order tangent data under-report nonlinear image coverage.",
+  "competing_causes": [
+    "Non-dominance is excluded because Q[u] -> Q[t] is injective.",
+    "Target singularity or nonreducedness is unnecessary because A^1_u is smooth and reduced.",
+    "Hodge-specific coefficient and gluing defects remain applicability boundaries rather than causes of this counterexample."
+  ],
+  "mathematical_repair": "Use direct image geometry, or prove a source-specific generic/nonramified witness theorem; use pointwise differential surjectivity only as a sufficient certificate under explicit hypotheses.",
+  "proof_evidence": [
+    "Injectivity of Q[u] -> Q[t], u |-> t^2, gives full affine scheme-theoretic image.",
+    "The induced cotangent map sends u mod u^2 to zero in (t)/(t^2), so the tangent map at zero vanishes.",
+    "Stacks Project tag 01R5 controls affine scheme-theoretic image."
+  ],
+  "novelty_boundary": "No literature-novel theorem is claimed. This is one repository-scoped explicit counterexample unit and an application-routing correction, not a Hodge-incidence construction."
+}

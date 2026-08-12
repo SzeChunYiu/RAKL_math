@@ -1,0 +1,81 @@
+{
+  "schema_version": "hodge-frozen-math-context-v2",
+  "atom_id": "H4d1c-f",
+  "cycle_id": "H4d1c-C006-RAMIFICATION-PROXY-AUDIT",
+  "exact_root_contract": "For every smooth projective complex algebraic variety X and every codimension p, every rational Hodge class of type (p,p) in H^{2p}(X,Q) lies in the Q-span of codimension-p algebraic cycle classes.",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "framework": {
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "live_main_sha": "2fecf79859d8c378d6b6e1d556e8293b13952815",
+    "live_tree_sha": "fbe72de2f90876ae60dc2d2a9d6d735374adbe9a",
+    "constitution_epoch": "v3-authority-hardening-20260811"
+  },
+  "application": {
+    "base_sha": "5dd7c0d5084dfb0dd3cd3a1619badd30b532b975",
+    "pre_tree_fingerprint": "git-tree:fa148a111f74285537f4ad7bf4d01a546e66f669",
+    "execution_pin_observed": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "pin_relation": "STALE_RELATIVE_TO_LIVE_FRAMEWORK; semantic source-of-truth uses live main; no pin mutation in this cycle"
+  },
+  "problem_signature": [
+    "rational Hodge conjecture; smooth projective complex; rational coefficients",
+    "conditional local propagation from an already algebraic central signed-Q witness",
+    "root-aligned consumer is actual algebraic-witness incidence image in one reduced Hodge-locus branch",
+    "C004: source tangent enlargement can be vertical under the base projection",
+    "C005 open shadow: closed top-dimensional exact-class source image would cover one reduced irreducible Hodge germ",
+    "audit whether pointwise tangent-map surjectivity at a selected witness is a necessary proxy for reduced image-germ coverage"
+  ],
+  "exact_question": "For a reduced local witness-incidence map pi:(W,w)->(H,s), is surjectivity of d pi_w necessary for the reduced image germ at s to equal H, or can ramification make the derivative rank-deficient while the actual image still covers the target germ?",
+  "success_contract": "Either prove necessity under explicit hypotheses, or give an exact counterexample and replace the proxy by a correctly scoped consumer-aligned condition. No inference to Hodge algebraicity, higher-order lifting, or globalization.",
+  "falsifier": "Find a morphism of reduced germs with full reduced image germ but non-surjective differential at the selected point; conversely, if no such morphism exists under the frozen hypotheses, justify the missing hypothesis.",
+  "scope_exclusions": [
+    "no initial algebraicity claim",
+    "no scheme-theoretic/nonreduced or all-Artin-order conclusion",
+    "no completion-to-branch descent",
+    "no algebraization/effectivity conclusion",
+    "no monodromy/global continuation conclusion",
+    "no componentwise replacement for a coupled signed rational witness"
+  ],
+  "fibre_contents_consulted": [
+    "RAKL@2fecf79859d8c378d6b6e1d556e8293b13952815: RAKL_VERSION.json",
+    "RAKL@2fecf79859d8c378d6b6e1d556e8293b13952815: src/rakl/method_specs.py",
+    "RAKL@2fecf79859d8c378d6b6e1d556e8293b13952815: src/rakl/experience_substrate.py",
+    "RAKL@2fecf79859d8c378d6b6e1d556e8293b13952815: src/rakl/experience_policy.py",
+    "RAKL@2fecf79859d8c378d6b6e1d556e8293b13952815: src/rakl/saturation_vector.py",
+    "RAKL@2fecf79859d8c378d6b6e1d556e8293b13952815: skills/rakl-core/workflows/mathematical-research.md",
+    "RAKL@2fecf79859d8c378d6b6e1d556e8293b13952815: schemas/obstruction-transformation-memory.schema.json",
+    "RAKL@2fecf79859d8c378d6b6e1d556e8293b13952815: schemas/obstruction-transformation-review.schema.json",
+    "RAKL@2fecf79859d8c378d6b6e1d556e8293b13952815: research/obstruction_transformation_corpus_v1/EPISODES.jsonl",
+    "RAKL_math@5dd7c0d5084dfb0dd3cd3a1619badd30b532b975: issue #6 exact root contract/status",
+    "RAKL_math merged PR #264 / C004 projection-faithfulness audit",
+    "RAKL_math merged PR #285 / MATH-HODGE-C004-PROJECTION-KERNEL-NONIMPLICATION",
+    "RAKL_math open draft PR #287 / C005 closed-top-dimensional source-image certificate (shadow only)",
+    "Stacks Project tags 056B, 01R5, 01W6, 01V4 as primary technical controls"
+  ],
+  "analogue_transfer": [
+    {
+      "source": "C004 projection-kernel counterexample",
+      "shared_structure": "progress must be measured after the consumer map, not in the source representation",
+      "enabling_assumptions": ["linear first-order consumer map"],
+      "disanalogy": "C006 target is an actual nonlinear/local morphism germ; differential can lose information through ramification",
+      "use": "routing only"
+    },
+    {
+      "source": "C005 open shadow closed-topdim certificate",
+      "shared_structure": "actual reduced image germ is the consumer-aligned object",
+      "enabling_assumptions": ["closed reduced image and irreducible target germ"],
+      "disanalogy": "C005 is unmerged proposal/shadow and cannot supply theorem authority",
+      "use": "routing only"
+    }
+  ],
+  "expert_cell": [
+    {"role": "VHS/Hodge-locus lead", "background": "polarized VHS, local systems, Hodge loci", "delegation": "bind target to one locally marked reduced Hodge germ; reject monodromy/global extrapolation"},
+    {"role": "Hilbert/Chow deformation lead", "background": "relative Hilbert/Chow/flag incidence", "delegation": "distinguish actual source image from tangent source size and selected-point differential"},
+    {"role": "singularity/ramification lead", "background": "local algebraic geometry, tangent maps, ramification", "delegation": "audit necessity of pointwise differential rank for image-germ coverage"},
+    {"role": "cycle/coefficient lead", "background": "algebraic cycles and rational cycle-class realization", "delegation": "preserve exact coupled signed-Q witness semantics"},
+    {"role": "formal/algebraization lead", "background": "Artin deformation, formal geometry, Grothendieck existence", "delegation": "separate reduced local image claims from all-order lifting/effectivity/descent"},
+    {"role": "adversarial verifier/RAKL lead", "background": "counterexample-first proof auditing and v3 authority/metrology", "delegation": "enforce pre-candidate gates, proposal/shadow storage, failure typing, and zero independent-review credit"}
+  ],
+  "context_hash": "sha256:ead0b31009ed31138b439d372e65f6a2eed8f46b594d0cd865ee6898172e2905",
+  "fibre_snapshot_hash": "sha256:604517fe5119df8bffa25c32e3e6e3565ce2122e69085dc1115bc9fbbb64154d"
+}
