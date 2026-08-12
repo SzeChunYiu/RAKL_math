@@ -1,0 +1,55 @@
+{
+  "record_type": "SOURCE_FAMILY_AUDIT",
+  "cycle_id": "BSD-A1a1-ZHANG-LOWER-BOUND-20260812-R9",
+  "authority": "SOURCE_BOUND_PROPOSAL_SHADOW",
+  "active_atom": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "nested_obstruction": "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE",
+  "fibre_snapshot_hash": "sha256:1169325f3cc17acc2094488809bc13ebba796a54aa51bcbc132690c98e1987c9",
+  "target_transition_before": "exact complex analytic rank two for the same E/Q -> Selmer dimension/corank two plus a transverse nonzero p-local localization witness, without importing algebraic rank two, Selmer rank two, p-adic BSD, a comparable main conjecture, or root-strength regulator/height nondegeneracy",
+  "primary_source": {
+    "id": "DOI:10.4310/CJM.2014.V2.N2.A2",
+    "title": "Selmer groups and the indivisibility of Heegner points",
+    "author": "Wei Zhang",
+    "venue": "Cambridge Journal of Mathematics 2 (2014), 191-253",
+    "author_publication_page": "https://math.mit.edu/~wz2113/math/pub.html",
+    "author_hosted_pdf": "https://math.mit.edu/~wz2113/math/online/Kconj.pdf",
+    "selectors": ["Theorem 1.1, p.5", "Theorem 1.2, p.5", "Theorem 1.4(ii), p.7", "proof of Theorem 1.4(ii) and Remarks 2-3, p.8"],
+    "verified_claims": [
+      "Under Theorem 1.1's generalized-Heegner, residual-surjectivity, ramification and good-ordinary hypotheses, some derived Heegner class is nonzero, hence the Kolyvagin system is nonzero.",
+      "Theorem 1.2 identifies the Kolyvagin-system vanishing order with max of the two p-infinity Selmer eigencoranks over the auxiliary imaginary quadratic field minus one.",
+      "Theorem 1.4(ii) states that, for E/Q and p satisfying its four hypotheses, analytic rank greater than one implies Z_p-corank Sel_{p^infinity}(E/Q) at least two for root number +1 and at least three for root number -1.",
+      "For exact complex analytic rank two, functional-equation parity forces root number +1, so Theorem 1.4(ii) yields the scoped stored transfer ord_{s=1} L(E,s)=2 -> corank_Zp Sel_{p^infinity}(E/Q) >= 2.",
+      "In the proof of Theorem 1.4(ii), the auxiliary twist is chosen with nonzero first derivative in the root-number +1 case; Gross-Zagier then makes the base Heegner point torsion, giving only Kolyvagin-system vanishing order >=1 before Theorem 1.2 supplies the Selmer lower bound.",
+      "Remark 3 states that the set of primes satisfying Theorem 1.4(1)-(4) has density one for a fixed E/Q."
+    ],
+    "strict_nonclaims": [
+      "The theorem does not prove exact Selmer corank two from exact complex analytic rank two.",
+      "The theorem does not prove a nonzero transverse localization at p; Remark 2 explicitly contrasts this method with Skinner's p-local surjectivity approach.",
+      "The theorem does not prove Mordell-Weil rank two, Sha finiteness, regulator nondegeneracy, or the full rank-two BSD leading-term formula.",
+      "The theorem is a technical-prime cell, not a theorem simultaneously at every prime p."
+    ]
+  },
+  "current_frontier_cross_check": {
+    "id": "arXiv:2505.09121",
+    "title": "The refined Tamagawa number conjectures for GL_2",
+    "authors": ["Chan-Ho Kim", "Robert Pollack"],
+    "current_text_date_observed": "2026-03-22",
+    "verified_claim": "Exact Bloch-Kato Selmer rank and module structure are determined by discrete Kolyvagin derivatives/Kurihara numbers in the theorem's scope, while the route uses an Iwasawa-main-conjecture-localized-at-augmentation input and is explicitly insensitive to analytic rank.",
+    "route_verdict": "REJECT_AS_COMPLEX_RANK2_TO_EXACT_SELMER_UPPER_BOUND",
+    "difference_witness": "The source coordinate is a discrete special-value/Kurihara family with main-conjecture input, not exact complex Taylor order two; no theorem in the audited statement identifies its discrete order with complex analytic rank two."
+  },
+  "route_result": {
+    "status": "PARTIAL_STORED_TRANSFER_FOUND",
+    "closed_subobligation": "COMPLEX_ANALYTIC_RANK2_TO_PINFINITY_SELMER_CORANK_AT_LEAST_2_UNDER_ZHANG_THEOREM_1_4_HYPOTHESES",
+    "residual_after": [
+      "SELMER_CORANK_LOWER_BOUND_TO_EXACT_CORANK2_UPPER_BOUND",
+      "TRANSVERSE_P_LOCALIZATION_NONZERO",
+      "PINFINITY_SELMER_TO_VP_SELMER_COORDINATE_BINDING_WHERE_USED",
+      "SELMER_TO_MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_COMPLEX_LEADING_TERM_GLUE"
+    ],
+    "high_information_refinement": "In the auxiliary-Heegner/Kolyvagin representation, exact rank two currently forces vanishing order nu_infinity >= 1, whereas exact rank control would require a sharp upper/equality mechanism rather than mere nonvanishing of the Kolyvagin system.",
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "verification": "AUTHOR_HOSTED_PRIMARY_PDF_PLUS_CURRENT_ARXIV_PRIMARY_TEXT; theorem selectors and proof direction checked directly; no numerical evidence used as proof",
+  "recorded_at_utc": "2026-08-12T04:19:30Z"
+}

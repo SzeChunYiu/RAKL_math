@@ -1,0 +1,44 @@
+{
+  "artifact_hash": "sha256:8df3f0b22c055ec228d2e96ba2798eb5fb4699361a3839df47ddc47df6ea73bb",
+  "candidate_method_families": [
+    "explicit synchronized-code construction",
+    "symbolic impossibility from length/header/gamma constraints",
+    "bounded product-grammar discriminator followed by semantic UNSAT proof",
+    "encoding or split change (out of scope)"
+  ],
+  "cross_problem_coverage_receipt_hash": "",
+  "evidence_pointers": [
+    "git:9b2282b72dbca18ae1c7da92e972efe4de3a24a4:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C048_LITERAL_TRANSPOSE_PROOF_CHECK_RESULT_20260812.json@blob:04e808d56f433b143dc816117328f623e41807ee",
+    "git:9b2282b72dbca18ae1c7da92e972efe4de3a24a4:research/real_math/millennium/p_vs_np/10_case_study/C048_LITERAL_TRANSPOSE_MATHEMATICAL_SATURATION_RECEIPT_20260812.json@blob:33f80ef5ded497aee18679a3e438c72be5beda74"
+  ],
+  "failure_lattice_snapshot_hash": "gitblob:33f80ef5ded497aee18679a3e438c72be5beda74",
+  "failure_query_status": "MATCHES_FOUND",
+  "failure_reuse_notes": [
+    "C047 warns that near-aligned fixed headers can still be exactly disjoint; any witness must compare every synchronized bit.",
+    "C043 warns that finite semantic multiplicity does not imply the requested overlap or downstream cover growth."
+  ],
+  "relevant_failure_ids": [
+    "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT",
+    "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING"
+  ],
+  "relevant_tool_ids": [
+    "T-PNP-C048-EXACT-OVERLAP-TRANSFER-CONDITION"
+  ],
+  "selected_tool_ids": [
+    "T-PNP-C048-EXACT-OVERLAP-TRANSFER-CONDITION"
+  ],
+  "target_atom_id": "O9d12a2a1b-C049",
+  "target_context_hash": "sha256:0f8536262ce1be248443147a8c5aa843e5ebbffda620f469878f3141a523576a",
+  "tool_applicability_notes": [
+    "C048's exact iff is reusable only as the QoI definition: it reduces collision to H_k intersection P_(k+1) but supplies no existence evidence."
+  ],
+  "tool_inventory_snapshot_hash": "gitblob:04e808d56f433b143dc816117328f623e41807ee",
+  "tool_query_status": "MATCHES_FOUND",
+  "unresolved_warnings": [
+    "No later target result has been accessed.",
+    "No overlap witness, empty-language theorem, or finite level has been selected.",
+    "The cheapest exact discriminator must be frozen before any code-grammar or UNSAT evaluation.",
+    "Relabelled and split-changing variants are outside this atom.",
+    "Same-context review is not independent peer review."
+  ]
+}
