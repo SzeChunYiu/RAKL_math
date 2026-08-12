@@ -1,0 +1,96 @@
+{
+  "schema_version": "rakl-v3-task-episode-shadow-1",
+  "episode_id": "EP-PNP-C046R-20260812",
+  "task_id": "millennium-p-vs-np",
+  "atom_id": "O9d12a2a1b-C046R",
+  "context_hash": "sha256:4359003a6565cd8db6934f404f8380b5a07b2233d64c381464da245ea71c2c70",
+  "problem_signature": "G17_FULL_SUPPORT_FALLBACK_AWARE_FOUR_PAIR_COVER_REPAIR",
+  "fibre_snapshot_hash": "sha256:4359003a6565cd8db6934f404f8380b5a07b2233d64c381464da245ea71c2c70",
+  "operator_ids": [
+    "method_specs:routing",
+    "method_specs:gap_discovery",
+    "method_specs:memory",
+    "method_specs:equivalence_similarity",
+    "method_specs:contextual_theory_gluing",
+    "method_specs:experiment_query_selection",
+    "method_specs:review",
+    "method_specs:saturation_stopping"
+  ],
+  "motifs": [
+    "fallback singleton representation split",
+    "EEE codeword extension",
+    "old-side separator absorption",
+    "counterexample-first active-cell separation"
+  ],
+  "search_policy_choice": "Resolve the exact PR243 support/gluing residual before any later-level or new-operator search; use stored success/failure experience only to route and falsify, never as theorem authority.",
+  "action_trace": [
+    {
+      "event_id": "C046R-E01",
+      "event_type": "ROUTED",
+      "summary": "Memory review selected PR243 exact support correction before immediate post-C046 route rotation.",
+      "observations": ["PR243-FALLBACK-AUDIT", "C044-Q16-THREE-PAIR-COVER", "C045-TEN-EDGE-LOCAL-CODE"],
+      "outputs": ["live residual became fallback-aware G17 cover repair"],
+      "previous_event_hash": "",
+      "artifact_hash": "sha256:8079db4fb2f86c60995dd55d11d6225788fe47db5a9676b7c9b54dbb9c573c75"
+    },
+    {
+      "event_id": "C046R-E02",
+      "event_type": "REPRESENTATION_SPLIT",
+      "summary": "Split full U17 into U_o, U_m and singleton f; distinguished edge-ground disjointness from row-projection coupling.",
+      "observations": ["U_o=U16", "U_m=ten MAGIC edges", "f=(0,65536)"],
+      "outputs": ["component-separability theorem cannot be invoked as written"],
+      "previous_event_hash": "sha256:8079db4fb2f86c60995dd55d11d6225788fe47db5a9676b7c9b54dbb9c573c75",
+      "artifact_hash": "sha256:205562a008b16cde049eb77d323d424ead89a8d82b631fc2124f55d81b8cf5ab"
+    },
+    {
+      "event_id": "C046R-E03",
+      "event_type": "CANDIDATE_REPAIR",
+      "summary": "Assigned f to E in all three multiplexed local coordinates and to old side of fourth separator.",
+      "observations": ["row0 old signature EEE", "every other active old row has an H coordinate"],
+      "outputs": ["four-pair repair candidate"],
+      "previous_event_hash": "sha256:205562a008b16cde049eb77d323d424ead89a8d82b631fc2124f55d81b8cf5ab",
+      "artifact_hash": "sha256:0a90362f820da163c4bb13d704645cf70fec2c632fcbfd821a061ec1e6ddf623"
+    },
+    {
+      "event_id": "C046R-E04",
+      "event_type": "FALSIFIED_COUNTEREXAMPLES",
+      "summary": "Hostile case split and bounded quotient enumeration found no uncovered relevant active cell.",
+      "observations": ["189 active non-complement quotient cells checked", "computation calibration only"],
+      "outputs": ["local hand proof survives falsifier"],
+      "previous_event_hash": "sha256:0a90362f820da163c4bb13d704645cf70fec2c632fcbfd821a061ec1e6ddf623",
+      "artifact_hash": "sha256:d620e8a107e38dc12222ce44f66579be9f182c08425b880ee64d0a5f506bc6e3"
+    },
+    {
+      "event_id": "C046R-E05",
+      "event_type": "SYNTHESIZED",
+      "summary": "Closed local upper-cover repair; kept uniform/asymptotic/root gluing residuals open and rotated next path away from canonical row-collision scans.",
+      "observations": ["rho(G17)<=sigma(G17)<=4", "independent_review=0/3", "root OPEN"],
+      "outputs": ["proposal-only bridge-absorption obstruction/lesson"],
+      "previous_event_hash": "sha256:d620e8a107e38dc12222ce44f66579be9f182c08425b880ee64d0a5f506bc6e3",
+      "artifact_hash": "sha256:eced786be9f3561f8d408bf6c2f8ba518b98e238a6c6da11584a03585b7cfba2"
+    }
+  ],
+  "observation_ids": ["OBS-C046R-FULL-U17-SPLIT", "OBS-C046R-ROW0-EEE", "OBS-C046R-189-CELL-CALIBRATION"],
+  "verification_ids": ["VER-C046R-HAND-CASE-PROOF", "VER-C046R-BOUND-QUOTIENT-FALSIFIER", "REV-PNP-C046R-EXPERT-CELL-20260812"],
+  "outcome": "SOLVED_LOCAL_UPPER_COVER_REPAIR",
+  "residual_signature": "NO_UNIFORM_FALLBACK_NEUTRALITY__NO_RHO_LOWER_BOUND__NO_GROWTH_RECURRENCE__NO_CIRCUIT_BRIDGE__ROOT_OPEN",
+  "evidence_pointers": [
+    "01_frontier/O9d12a2a1b_C046R_MATH_CONTEXT_FIBER_20260812.json",
+    "04_candidates/C046R_FALLBACK_ABSORPTION_RESULT_20260812.md",
+    "07_memory/O9d12a2a1b_C046R_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "08_reviews/O9d12a2a1b_C046R_EXPERT_CONTEXT_REVIEW_20260812.json",
+    "tests/math_applications/test_pnp_c046r_fallback_absorption.py"
+  ],
+  "cost": {
+    "model_tokens": "CANNOT_MEASURE: automation runtime exposes no authoritative token counter",
+    "context_tokens": "CANNOT_MEASURE: automation runtime exposes no authoritative context-token counter",
+    "retrieval_calls": "CANNOT_MEASURE exact aggregate: connector/web runtime exposes per-call results but no authoritative cycle aggregate",
+    "tool_calls": "CANNOT_MEASURE exact aggregate: no authoritative cycle-level counter is exposed",
+    "wall_time": "CANNOT_MEASURE: no authoritative elapsed-run timer is exposed",
+    "observable_proxy": "one bounded 189-cell quotient falsifier plus sequential current-main/source/memory/review retrieval and repository materialization"
+  },
+  "next_action": "Rotate away from later canonical-row collision scans in the frozen one-sided family. Freeze a fresh atom for the smallest support/operator perturbation that can break the C046 half-space invariant while preserving the exact NP/reduction contract, and test it first against C041A/C041B/C043/C044/C046/C046R falsifiers.",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "strict_discovery_credit": "DENIED_LATE_FIBRE",
+  "timestamp": "2026-08-12T03:04:48Z"
+}
