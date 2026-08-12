@@ -1,0 +1,136 @@
+{
+  "artifact_hash": "sha256:9f297dcd1ad8092a8f96ab8f0443c8279214814f84c30c95464222471a3dd601",
+  "direct_candidate_episode_ids": [
+    "E-PNP-C047-COARSE-REPAIR-THEN-INTERFACE-CHECK"
+  ],
+  "direct_mapping_witnesses": [
+    {
+      "artifact_hash": "sha256:79dd507ae604ccf8d9a80d2d8d248e74e1c5fcea066296483c77c888d41ec2c2",
+      "disanalogies": [
+        "C046 separated coarse halves whereas C047 changes the occupied half",
+        "exact transpose and label-map changes are outside scope",
+        "no cover consequence follows"
+      ],
+      "episode_id": "E-PNP-C047-COARSE-REPAIR-THEN-INTERFACE-CHECK",
+      "evidence_pointers": [
+        "git:ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1"
+      ],
+      "precondition_mapping": [
+        [
+          "recursive support clauses are exhaustive",
+          "define mirror and two-sided successors with no hidden quadrant"
+        ],
+        [
+          "decoder output branches are exhaustive",
+          "classify all-zero, MAGIC canonical, and tautology fallback branches"
+        ],
+        [
+          "quadrant placement induces a fixed binary label map",
+          "derive the exact n-bit fresh-row form from the prefix coordinate"
+        ]
+      ],
+      "role_mapping": [
+        [
+          "inherited support",
+          "inherited support"
+        ],
+        [
+          "orientation-generated fresh rows",
+          "orientation-generated fresh rows"
+        ],
+        [
+          "canonical prefix rows",
+          "canonical prefix rows"
+        ],
+        [
+          "exact label interface",
+          "exact label interface"
+        ]
+      ],
+      "shared_constraints": [
+        "unchanged decoder and equal split",
+        "prefix coordinate remains the semantic row coordinate",
+        "only quadrant orientation may change",
+        "target results remain unaccessed"
+      ],
+      "shared_relations": [
+        "quadrant placement controls which decoded coordinate receives a new leading fresh-half bit",
+        "the decoder classifies non-tautological words into all-zero and MAGIC forms",
+        "a collision requires exact binary equality between a generated row and a current canonical prefix"
+      ],
+      "target_obstruction_id": "OBS-PNP-C047-ORIENTATION-ONLY-ROW-COLLISION-REPAIR",
+      "target_validation_obligations": [
+        "derive every possible new high row without enumerating targets",
+        "compare each header with MAGIC",
+        "include inherited old rows",
+        "fail closed if decoder or coordinate placement differs"
+      ],
+      "unmatched_source_preconditions": [],
+      "witness_id": "MAP-PNP-C047-COARSE-REPAIR-INTERFACE"
+    }
+  ],
+  "direct_search_status": "MATCHES_FOUND",
+  "episode_memory_snapshot_hash": "abe424cf51b61da08cd87ebc909cdaf19f44ff50061b4da57a7a65d26a08fc62",
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C047_MATH_CONTEXT_FIBER_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C047_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C047_OBSTRUCTION_TRANSFORMATION_MEMORY_20260812.json"
+  ],
+  "exhaustion_witness": null,
+  "glue_search_status": "NOT_RUN",
+  "glue_witness": null,
+  "jump_mapping_witnesses": [],
+  "jump_search_status": "NOT_RUN",
+  "missing_transformation_specification": null,
+  "obstruction": {
+    "constraints": [
+      "unchanged decoder and equal split",
+      "prefix coordinate remains the semantic row coordinate",
+      "only quadrant orientation may change",
+      "target results remain unaccessed"
+    ],
+    "desired_transition": [
+      "decide whether orientation alone restores exact canonical row coupling"
+    ],
+    "domain": "mathematics",
+    "failure_mechanisms": [
+      "coarse high-half repair may leave the generated binary header shifted relative to MAGIC"
+    ],
+    "forbidden_losses": [
+      "target-result leakage",
+      "silent decoder or label-map change",
+      "promoting feasibility to root authority"
+    ],
+    "invariants_to_preserve": [
+      "SAT reduction direction",
+      "canonical/fallback separation",
+      "target blindness",
+      "root authority boundary"
+    ],
+    "obstruction_id": "OBS-PNP-C047-ORIENTATION-ONLY-ROW-COLLISION-REPAIR",
+    "relations": [
+      "quadrant placement controls which decoded coordinate receives a new leading fresh-half bit",
+      "the decoder classifies non-tautological words into all-zero and MAGIC forms",
+      "a collision requires exact binary equality between a generated row and a current canonical prefix"
+    ],
+    "roles": [
+      "inherited support",
+      "orientation-generated fresh rows",
+      "canonical prefix rows",
+      "exact label interface"
+    ]
+  },
+  "research_memory_review_hash": "sha256:71582d95ff342d15b9e19089e3c35a69b92e6b43f70200711b70fca108b2d791",
+  "review_id": "PNP-C047-OBSTRUCTION-TRANSFORMATION-REVIEW-20260812",
+  "selected_episode_ids": [
+    "E-PNP-C047-COARSE-REPAIR-THEN-INTERFACE-CHECK"
+  ],
+  "selected_mode": "SEARCH",
+  "target_atom_id": "O9d12a2a1b-C047",
+  "target_context_hash": "sha256:78b2f983f0ca9ed62562d210d6426e64339308208f03bfa800ab0ff1034e6f24",
+  "unresolved_warnings": [
+    "route selection is proposal-only",
+    "target theorem truth remains unchecked",
+    "root remains open"
+  ]
+}

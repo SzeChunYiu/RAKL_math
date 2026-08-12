@@ -1,0 +1,82 @@
+{
+  "bridge_edges": [
+    {
+      "edge_id": "C047-B1",
+      "enabling_assumptions": [
+        "collision exists",
+        "legal cover polarity"
+      ],
+      "interface_map": "an exact row collision is only a precondition for testing one coupling mechanism",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "orientation-repair feasibility",
+      "target_coordinate": "cover obstruction"
+    },
+    {
+      "edge_id": "C047-B2",
+      "enabling_assumptions": [
+        "uniformity",
+        "explicitness",
+        "source theorem alignment"
+      ],
+      "interface_map": "requires uniform superlogarithmic lower bound and exact complexity bridge",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "cover obstruction",
+      "target_coordinate": "P versus NP"
+    }
+  ],
+  "cheapest_hostile_world": "orientation-only placement fails while an out-of-scope relabelled or suffix-row family admits useful coupling",
+  "known_disanalogies": [
+    "repair classification is not root progress",
+    "failure of one orientation class does not decide P versus NP"
+  ],
+  "obligations": [
+    {
+      "description": "classify orientation-only collision feasibility",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "C047-O1"
+    },
+    {
+      "description": "supply a cover lower-bound mechanism",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "C047-O2"
+    },
+    {
+      "description": "discharge asymptotic and complexity bridge",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "C047-O3"
+    }
+  ],
+  "prior_failure_ids": [
+    "F-C045-U17-PROJECTION-DISJOINT",
+    "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING"
+  ],
+  "receipt_canonical_sha256": "9e2b93b37158f44e335990e994049381fbe59e470ceddc15636fb0847ecee967",
+  "receipt_id": "PNP-C047-ROOT-COORDINATE-PRESERVATION-20260812",
+  "registered_observations": [
+    {
+      "projected_state": "original-orientation-impossible",
+      "registered_downstream_outcome": "quadrant repair not yet classified",
+      "state_id": "C046"
+    },
+    {
+      "projected_state": "orientation-feasibility-unresolved",
+      "registered_downstream_outcome": "root open",
+      "state_id": "C047-pre"
+    }
+  ],
+  "reverification_triggers": [
+    "decoder changes",
+    "split or row-coordinate changes",
+    "suffix-row transpose is admitted",
+    "a new family is proposed"
+  ],
+  "root_claim_id": "O9d12a2a1b-C047",
+  "root_coordinate": "explicit superlogarithmic full-cover family with circuit and P-versus-NP bridge",
+  "schema_version": "root-coordinate-preservation-receipt-v1",
+  "source_authority": "PROPOSAL_ONLY",
+  "surrogate_coordinate": "whether a quadrant-orientation-only successor can restore canonical prefix-row collision feasibility",
+  "target_authority": "PROPOSAL_ONLY"
+}
