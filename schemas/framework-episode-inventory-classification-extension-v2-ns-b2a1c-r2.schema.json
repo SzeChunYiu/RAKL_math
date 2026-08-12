@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rakl-math.local/schemas/framework-episode-inventory-classification-extension-v2-ns-b2a1c-r2.schema.json",
+  "title": "RAKL_math NS-B2a1c R2 TaskEpisode inventory classification extension receipt v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "receipt_id", "recorded_at", "object", "qoi",
+    "lineage", "audit_binding", "classifications", "disposition",
+    "authority_contract", "evidence_pointers", "artifact_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "2.0.0"},
+    "receipt_id": {"const": "RAKL-MATH-TASK-EPISODE-INVENTORY-CLASSIFICATION-EXTENSION-NS-B2A1C-R2-V2-20260812"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "object": {"type": "string", "minLength": 1},
+    "qoi": {"type": "string", "minLength": 1},
+    "lineage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["frozen_parent_inventory", "preserved_prior_extensions"],
+      "properties": {
+        "frozen_parent_inventory": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "receipt_path", "receipt_artifact_hash", "receipt_blob_at_merge",
+            "receipt_file_sha256", "merge_commit", "frozen_episode_count"
+          ],
+          "properties": {
+            "receipt_path": {"const": "receipts/framework-pr153-hash-contract-migration-20260811.json"},
+            "receipt_artifact_hash": {"const": "sha256:a607a86135e4acbfeb551af86e8dd10febfeb0a3d461daf53c4862339e5c0f77"},
+            "receipt_blob_at_merge": {"const": "92135fdc9db0f37679fa5656e7052c7e02e00ec3"},
+            "receipt_file_sha256": {"const": "sha256:4f431762422e5746966ea55ab2b1da3d9c9c60ce263aebfa688a44dc5e629594"},
+            "merge_commit": {"const": "b18fcd35855d67962e28036f4a445ab24d0c4406"},
+            "frozen_episode_count": {"const": 19}
+          }
+        },
+        "preserved_prior_extensions": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "prefixItems": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["receipt_path", "introduction_commit", "introduction_tree", "git_blob_sha", "raw_sha256", "receipt_artifact_hash"],
+              "properties": {
+                "receipt_path": {"const": "receipts/framework-episode-inventory-extension-h4d1b-20260811.json"},
+                "introduction_commit": {"const": "7d664b20dc691170d86d9757aaa5edd1db16ddb4"},
+                "introduction_tree": {"const": "a886af4ec504c40ab0e2e0392f4e3a7f0b8dafa6"},
+                "git_blob_sha": {"const": "cb8296b8b7491afc0c655430b8c65c8fd92e16eb"},
+                "raw_sha256": {"const": "68c1c9c33b4a0c438a1a8fac865718de1c7a7e4bc111d881037b38fe30eb5216"},
+                "receipt_artifact_hash": {"const": "sha256:5e39ced6010ed4d8800b8cb34585184389956d68d194fdea533588aba2eb9351"}
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["receipt_path", "introduction_commit", "introduction_tree", "git_blob_sha", "raw_sha256", "receipt_artifact_hash"],
+              "properties": {
+                "receipt_path": {"const": "receipts/framework-episode-inventory-classification-extension-v2-ns-b1a3b1-r2-20260811.json"},
+                "introduction_commit": {"const": "f81b3f086cf2c375d41f5a9d83899c1dd1b6ddeb"},
+                "introduction_tree": {"const": "fef08fb8fd632dc36b2956c37771828cc44bf961"},
+                "git_blob_sha": {"const": "82110482c116bac7981b76a6b3031a3469790e74"},
+                "raw_sha256": {"const": "b9a8e934a7ac018408f6cd6e9b5fed03b94bd9264b651d69e84175dcda80aab9"},
+                "receipt_artifact_hash": {"const": "sha256:0218a4312ec2c186f40987fa2aa8db8fe7ad56ff7574cb36bfa0dbdee1600519"}
+              }
+            }
+          ],
+          "items": false
+        }
+      }
+    },
+    "audit_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository_url", "current_main_at_audit", "current_tree", "framework_commit", "task_episode_schema_blob", "experience_substrate_blob"],
+      "properties": {
+        "repository_url": {"const": "https://github.com/SzeChunYiu/RAKL_math.git"},
+        "current_main_at_audit": {"const": "e768b7da7dc48739ccb581dea0eb2cfeb8a701e7"},
+        "current_tree": {"const": "fcca7b7271ed9349f21204a319b3b31438ae3088"},
+        "framework_commit": {"const": "43897d3afaf0038385102d5acc64793c05ec40f0"},
+        "task_episode_schema_blob": {"const": "62ab5b250c7cc075dbac7da47e3ca3ba9e32175e"},
+        "experience_substrate_blob": {"const": "bac7467472fc93ca068bcc1195f763bd2b207b58"}
+      }
+    },
+    "classifications": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "prefixItems": [
+        {"$ref": "#/$defs/task_episode_classification"},
+        {"$ref": "#/$defs/experience_delta_classification"},
+        {"$ref": "#/$defs/expert_postcheck_classification"}
+      ],
+      "items": false
+    },
+    "disposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "parent_receipt_modified", "prior_extensions_modified", "source_containers_modified",
+        "classification_extension_registered", "task_episode_objects_registered",
+        "non_task_episode_containers_registered", "classification_basis"
+      ],
+      "properties": {
+        "parent_receipt_modified": {"const": false},
+        "prior_extensions_modified": {"const": false},
+        "source_containers_modified": {"const": false},
+        "classification_extension_registered": {"const": true},
+        "task_episode_objects_registered": {"const": 1},
+        "non_task_episode_containers_registered": {"const": 2},
+        "classification_basis": {"const": "EXPLICIT_CONTAINER_IDENTITY_AND_CURRENT_TASK_EPISODE_SCHEMA_RUNTIME_CLASSIFICATION"}
+      }
+    },
+    "authority_contract": {"$ref": "#/$defs/all_false_authority"},
+    "evidence_pointers": {
+      "type": "array",
+      "minItems": 8,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "artifact_hash": {"$ref": "#/$defs/prefixed_sha256"}
+  },
+  "$defs": {
+    "classification_common": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path", "container_kind", "observed_episode_id", "classification",
+        "introduction_commit", "introduction_tree", "current_version_commit",
+        "current_version_tree", "git_blob_sha", "raw_sha256", "current_main_blob_sha",
+        "strict_task_episode_schema_verdict", "strict_task_episode_schema_error_count",
+        "runtime_constructor_invoked", "runtime_constructor_disposition"
+      ],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "container_kind": {"type": "string", "minLength": 1},
+        "observed_episode_id": {"const": "TE-NS-B2a1c-R2-20260812"},
+        "classification": {"enum": ["CURRENT_VALID_TASK_EPISODE_PROPOSAL_SHADOW", "NON_TASK_EPISODE_CONTAINER_WITH_EPISODE_ID"]},
+        "introduction_commit": {"$ref": "#/$defs/git_sha"},
+        "introduction_tree": {"$ref": "#/$defs/git_sha"},
+        "current_version_commit": {"$ref": "#/$defs/git_sha"},
+        "current_version_tree": {"$ref": "#/$defs/git_sha"},
+        "git_blob_sha": {"$ref": "#/$defs/git_sha"},
+        "raw_sha256": {"$ref": "#/$defs/raw_sha256"},
+        "current_main_blob_sha": {"$ref": "#/$defs/git_sha"},
+        "strict_task_episode_schema_verdict": {"enum": ["PASS", "FAIL"]},
+        "strict_task_episode_schema_error_count": {"type": "integer", "minimum": 0},
+        "runtime_constructor_invoked": {"type": "boolean"},
+        "runtime_constructor_disposition": {"enum": ["EXACT_TASK_EPISODE_VALIDATION_PASS", "NOT_APPLICABLE_NON_TASK_EPISODE_CONTAINER"]},
+        "storage_admission": {"const": "PROPOSAL_SHADOW_STORED"},
+        "stored_hash": {"$ref": "#/$defs/raw_sha256"},
+        "computed_runtime_digest": {"$ref": "#/$defs/raw_sha256"}
+      }
+    },
+    "task_episode_classification": {
+      "allOf": [
+        {"$ref": "#/$defs/classification_common"},
+        {
+          "required": ["storage_admission", "stored_hash", "computed_runtime_digest"],
+          "properties": {
+            "path": {"const": "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1c_TASK_EPISODE_R2_20260812.json"},
+            "container_kind": {"const": "TASK_EPISODE_PROPOSAL_SHADOW"},
+            "classification": {"const": "CURRENT_VALID_TASK_EPISODE_PROPOSAL_SHADOW"},
+            "introduction_commit": {"const": "a3ea551cda76cc3fd0e18c9f762b5a0a0424e1b5"},
+            "introduction_tree": {"const": "59097b191efa537abb83df61bc5e085acef5e7ae"},
+            "current_version_commit": {"const": "49f1dae610da79ac4d3ca2701e1ba8b8d64e4350"},
+            "current_version_tree": {"const": "d2206ffe9a9a13bbdccb2a6063a56f99f1e23689"},
+            "git_blob_sha": {"const": "e4bb1ace36fcd794144659d2088ec3e50801d785"},
+            "raw_sha256": {"const": "9f8082c155a4587aa2c8040de5565c0e10fa7ffbbd7c2cb1376a8a6492540654"},
+            "current_main_blob_sha": {"const": "e4bb1ace36fcd794144659d2088ec3e50801d785"},
+            "strict_task_episode_schema_verdict": {"const": "PASS"},
+            "strict_task_episode_schema_error_count": {"const": 0},
+            "runtime_constructor_invoked": {"const": true},
+            "runtime_constructor_disposition": {"const": "EXACT_TASK_EPISODE_VALIDATION_PASS"},
+            "stored_hash": {"const": "77a7751d1c37954091fd4ef3a4527e9c61d09ee41d151f06f914ad244f5da978"},
+            "computed_runtime_digest": {"const": "77a7751d1c37954091fd4ef3a4527e9c61d09ee41d151f06f914ad244f5da978"}
+          }
+        }
+      ]
+    },
+    "experience_delta_classification": {
+      "allOf": [
+        {"$ref": "#/$defs/classification_common"},
+        {
+          "not": {
+            "anyOf": [
+              {"required": ["storage_admission"]},
+              {"required": ["stored_hash"]},
+              {"required": ["computed_runtime_digest"]}
+            ]
+          },
+          "properties": {
+            "path": {"const": "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1c_EXPERIENCE_DELTA_R2_20260812.json"},
+            "container_kind": {"const": "EXPERIENCE_DELTA_PROPOSAL_SHADOW"},
+            "classification": {"const": "NON_TASK_EPISODE_CONTAINER_WITH_EPISODE_ID"},
+            "introduction_commit": {"const": "2695cab93723446192979f7e3ce3df8718d1a682"},
+            "introduction_tree": {"const": "1d592cc4d122453dff6532839514c8a6231f4a56"},
+            "current_version_commit": {"const": "2695cab93723446192979f7e3ce3df8718d1a682"},
+            "current_version_tree": {"const": "1d592cc4d122453dff6532839514c8a6231f4a56"},
+            "git_blob_sha": {"const": "75f8c4a53d091bf80f75c1b1065d82f1ddadae4b"},
+            "raw_sha256": {"const": "050e2284f86a7e8dafc204a1af09f6c7f0297ae98469a6e3e3a7f0b7cea9e592"},
+            "current_main_blob_sha": {"const": "75f8c4a53d091bf80f75c1b1065d82f1ddadae4b"},
+            "strict_task_episode_schema_verdict": {"const": "FAIL"},
+            "strict_task_episode_schema_error_count": {"const": 16},
+            "runtime_constructor_invoked": {"const": false},
+            "runtime_constructor_disposition": {"const": "NOT_APPLICABLE_NON_TASK_EPISODE_CONTAINER"}
+          }
+        }
+      ]
+    },
+    "expert_postcheck_classification": {
+      "allOf": [
+        {"$ref": "#/$defs/classification_common"},
+        {
+          "not": {
+            "anyOf": [
+              {"required": ["storage_admission"]},
+              {"required": ["stored_hash"]},
+              {"required": ["computed_runtime_digest"]}
+            ]
+          },
+          "properties": {
+            "path": {"const": "research/real_math/millennium/navier_stokes/08_reviews/NS-B2a1c_EXPERT_POSTCHECK_R2_20260812.json"},
+            "container_kind": {"const": "SAME_CONTEXT_EXPERT_POSTCHECK_SHADOW"},
+            "classification": {"const": "NON_TASK_EPISODE_CONTAINER_WITH_EPISODE_ID"},
+            "introduction_commit": {"const": "1cbbf5becf02d2245af6bb0e56444b306a91cd1b"},
+            "introduction_tree": {"const": "cfec908bf5573cea673fde19a6039022f08b3e05"},
+            "current_version_commit": {"const": "1cbbf5becf02d2245af6bb0e56444b306a91cd1b"},
+            "current_version_tree": {"const": "cfec908bf5573cea673fde19a6039022f08b3e05"},
+            "git_blob_sha": {"const": "05f914ee87aebc102b00f14cf345cbf1ed5d087b"},
+            "raw_sha256": {"const": "8a7ab6dad37c3b8e3f9016e02b8353a6886c387a40e854a5e5011b8a229516fd"},
+            "current_main_blob_sha": {"const": "05f914ee87aebc102b00f14cf345cbf1ed5d087b"},
+            "strict_task_episode_schema_verdict": {"const": "FAIL"},
+            "strict_task_episode_schema_error_count": {"const": 16},
+            "runtime_constructor_invoked": {"const": false},
+            "runtime_constructor_disposition": {"const": "NOT_APPLICABLE_NON_TASK_EPISODE_CONTAINER"}
+          }
+        }
+      ]
+    },
+    "git_sha": {"type": "string", "minLength": 40, "maxLength": 40, "pattern": "^[0-9a-f]{40}$"},
+    "raw_sha256": {"type": "string", "minLength": 64, "maxLength": 64, "pattern": "^[0-9a-f]{64}$"},
+    "prefixed_sha256": {"type": "string", "minLength": 71, "maxLength": 71, "pattern": "^sha256:[0-9a-f]{64}$"},
+    "all_false_authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "grants_mathematical_result", "grants_proof_authority", "grants_novelty_authority",
+        "grants_millennium_root_authority", "grants_framework_authority", "grants_review_independence"
+      ],
+      "properties": {
+        "grants_mathematical_result": {"const": false},
+        "grants_proof_authority": {"const": false},
+        "grants_novelty_authority": {"const": false},
+        "grants_millennium_root_authority": {"const": false},
+        "grants_framework_authority": {"const": false},
+        "grants_review_independence": {"const": false}
+      }
+    }
+  }
+}
