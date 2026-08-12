@@ -1,0 +1,39 @@
+{
+  "memory_id": "H4d1c-C006-OBSTRUCTION-TRANSFORMATION-MEMORY",
+  "source_universe": [
+    "RAKL_math merged Hodge C004/C004-successor current-main history",
+    "RAKL_math open Hodge C005 proposal/shadow",
+    "RAKL obstruction_transformation_corpus_v1@2fecf79859d8c378d6b6e1d556e8293b13952815 (cross-domain candidates inspected but not selected)"
+  ],
+  "episodes": [
+    {
+      "episode_id": "OT-HODGE-C004-CONSUMER-PROJECTION-ALIGNMENT",
+      "source_domain": "rational_hodge_deformation",
+      "source_context": "Merged C004 first-order witness-projection counterexample, credited by PR #285",
+      "source_obstruction": {
+        "obstruction_id": "O-H4D1C-SOURCE-SIZE-AS-CONSUMER-PROXY",
+        "domain": "rational_hodge_deformation",
+        "roles": ["witness_source", "consumer_projection", "hodge_base_target"],
+        "relations": ["source_subspace_enlargement", "projection_to_target", "image_comparison"],
+        "constraints": ["first-order linearized setting", "same target vector space"],
+        "failure_mechanisms": ["new source directions can lie in projection kernel"],
+        "invariants_to_preserve": ["exact target consumer", "signed-rational witness semantics"],
+        "desired_transition": ["replace source-size proxy by consumer-image criterion"],
+        "forbidden_losses": ["do not infer Hodge branch coverage from source dimension alone"]
+      },
+      "transformation_name": "consumer_projection_alignment",
+      "operation": "push progress measure through the exact consumer map; compare quotient/image at target rather than source dimension",
+      "preconditions": ["exact consumer map identified", "target quantity is image/reachability after that map", "source and target scopes fixed"],
+      "resulting_relations": ["strict source enlargement no longer counted unless it survives target projection", "full first-order reachability requires target-image coverage"],
+      "preserved_invariants": ["root-aligned base target", "first-order scope", "coefficient/category guard"],
+      "relaxed_or_broken_constraints": ["source tangent dimension as standalone progress proxy"],
+      "known_breakpoints": ["does not decide nonlinear image-germ coverage", "does not imply higher-order lifting or algebraization", "does not identify actual Hodge incidence geometry"],
+      "evidence_pointers": ["RAKL_math PR #264 merged at e51a8c3722546b6ead3f0dcc48bb2262aadb68c0", "RAKL_math PR #285 merged at 9b2282b72dbca18ae1c7da92e972efe4de3a24a4"],
+      "authority": "SOURCE_EVENT_VERIFIED",
+      "artifact_hash": "sha256:41df8da7a186b8e43b1e954b7e3f65678094abbd74af45957c5cf9962239b00a",
+      "lineage_ids": ["MATH-HODGE-C004-PROJECTION-KERNEL-NONIMPLICATION", "FM-HODGE-SOURCE-ENLARGEMENT-NOT-PROJECTION-GAIN"]
+    }
+  ],
+  "evidence_pointers": ["RAKL_math PR #264", "RAKL_math PR #285", "RAKL_math PR #287", "RAKL obstruction_transformation_corpus_v1/EPISODES.jsonl"],
+  "snapshot_hash": "sha256:fd9b06dc0065720712359b029fa81e8ea055bf24b73075c71d3070842783b8bc"
+}
