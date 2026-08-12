@@ -1,0 +1,76 @@
+{
+  "record_type": "RAKL_V3_PRE_VERIFICATION_FIBRE",
+  "authority": "PROPOSAL_SHADOW_ONLY_RETROSPECTIVE_HYPOTHESIS_PROSPECTIVE_VERIFICATION",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "main_sha": "8db3343dfb764c9a139f9ba76f6f44c76eaf86de",
+    "method_version": "3.0.0"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_main_sha": "02c5fb7764116cf075d8dd5efd7b6fe835275ab9",
+    "base_tree_sha": "4cd0c3a26dc37400cc1864bb77367b314406c786",
+    "root_issue": 6,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "fibre_id": "H4d1c-C008-HILBERT-INCIDENCE-FIBRE",
+  "active_atom": "H4d1c-C008",
+  "active_subobligation": "EXACT_SIGNED_Q_WITNESS_SOURCE_PLUS_BRANCH_PROPERNESS",
+  "problem_signature": [
+    "smooth projective complex family f:X->S near s0",
+    "fixed locally marked rational Hodge class alpha and chosen irreducible reduced Hodge-locus branch H through s0",
+    "central algebraic witness z0=sum q_i[Z_i] with q_i in Q",
+    "construct an exact-class coupled witness incidence whose projection to H is proper/closed",
+    "do not infer branch coverage unless smoothness/dominance/integrability is separately proved"
+  ],
+  "actual_fibre_contents": {
+    "root_contract": "every rational (p,p) Hodge class on every smooth projective complex variety is in Q-span of codimension-p algebraic cycle classes",
+    "selected_same_lane": [
+      "MATH-HODGE-C006-RAMIFICATION-POINTWISE-DIFFERENTIAL-NONIMPLICATION",
+      "MATH-HODGE-C007-SINGULAR-TANGENT-SURJECTIVITY-NONIMPLICATION",
+      "O-H4D1C-SMOOTH-SOURCE-OR-DIRECT-IMAGE-CERTIFICATE",
+      "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO"
+    ],
+    "rejected_or_boundary": [
+      "Kloosterman special complete-intersection flag-Hilbert result: positive calibration only, not arbitrary rational Hodge transfer",
+      "HM1b Moonen-Zarhin/Markman generator route: motives/correspondence bounded-class analogue, rejected as active geometric-deformation route",
+      "cross-Millennium linearization episodes: method morphology only; no Hodge authority"
+    ],
+    "required_guards": [
+      "exact signed rational coefficient binding",
+      "local marking / monodromy scope",
+      "properness/closed image distinct from local integrability",
+      "chosen Hodge branch binding",
+      "smoothness or direct dominance not assumed",
+      "higher-Artin lifting/algebraization/globalization kept separate"
+    ],
+    "falsifiers": [
+      "negative rational coefficients cannot be represented by a finite signed product of relative Hilbert factors",
+      "flat relative Hilbert deformation does not preserve the cohomology class under Gauss-Manin transport",
+      "base change to the chosen Hodge branch destroys properness",
+      "source smoothness/dominance is being smuggled into the construction",
+      "monodromy/global branch claims exceed the simply-connected/local marking scope"
+    ]
+  },
+  "operator_ids": [
+    "decomposition",
+    "routing",
+    "memory",
+    "equivalence_similarity",
+    "mathematical_context_translation",
+    "contextual_theory_gluing",
+    "gap_discovery",
+    "experiment_query_selection",
+    "review",
+    "saturation_stopping"
+  ],
+  "decision_policy": "Counterexample-first audit of the smallest C007 residual coordinate: attempt to discharge exact-class source construction plus properness without touching smoothness/dominance.",
+  "allowed_outcomes": ["SUCCESS", "PARTIAL_SUCCESS", "FAILURE", "BLOCKED", "UNKNOWN"],
+  "chronology": {
+    "status": "RETROSPECTIVE_HYPOTHESIS_SEED_PROSPECTIVE_VERIFICATION_ONLY",
+    "reason": "The automation scratch generated the relative-Hilbert-product hypothesis before this durable application receipt. Current v3 therefore forbids prospective discovery credit; all consequential source verification and falsification after this receipt are still logged prospectively."
+  },
+  "fibre_snapshot_hash": "sha256:b7849c27a78bf8d3686057d0898469dc9759937a29246f87a0228971e4381e31",
+  "hash_definition": "sha256 of canonical JSON of the fibre payload prior to adding record wrapper and this hash field",
+  "frozen_at_utc": "2026-08-12T06:58:00Z"
+}
