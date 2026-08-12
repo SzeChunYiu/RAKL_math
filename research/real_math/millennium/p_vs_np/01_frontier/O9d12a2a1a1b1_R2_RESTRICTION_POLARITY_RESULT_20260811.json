@@ -1,0 +1,171 @@
+{
+  "schema_version": "rakl-math-verified-discovery-result-shadow-v1",
+  "cycle_id": "PNP-O9d12a2a1a1b1-R2-RESTRICTION-POLARITY-20260811",
+  "atom_id": "O9d12a2a1a1b1-R2",
+  "framework": {
+    "action_freeze_sha": "fc8253046fd216cd42d2e253874f54a735f7d52a",
+    "current_receipt_sha": "dfac8287383b87d1e0eed10a6338c420a22870ec",
+    "method_version": "3.0.0",
+    "v3_core_drift": "NONE_OBSERVED: exact compare fc825304..dfac828 changed Paper-2-specific experiment/research/paper surfaces, not the inspected v3 TaskEpisode/method-spec/experience/metrology core"
+  },
+  "application_base_sha": "350861b1c2755033893068e5519b8b06a6315aa6",
+  "fibre_snapshot_hash": "sha256:7a8c1bdc3dea29a1c1e555705ebf1253743568651884931ee72c4f579a70997a",
+  "exact_local_claim": {
+    "setup": "Fix one target/base object x. Let W_full(x) be the legal full Definition-21 witness class, and let W_res(x) be any restricted legal witness class with W_res(x) subseteq W_full(x). Define rho_full(x)=inf{|w|:w in W_full(x)} and rho_res(x)=inf{|w|:w in W_res(x)}, using +infinity when a class is empty.",
+    "claim": "rho_full(x) <= rho_res(x). Consequently, a lower bound rho_res(x) >= L does not by itself imply rho_full(x) >= L.",
+    "proof": "The infimum is taken over a superset for rho_full. Every restricted witness is also a full witness, so the best full witness can be no more expensive than the best restricted witness. The implication from a restricted lower bound to a full lower bound therefore has the wrong polarity unless an independent reverse comparison or a direct full-model lower bound is proved.",
+    "status": "SOLVED_PROPOSAL_SHADOW_LOCAL_TRANSFER_POLARITY",
+    "shadow_novelty_class": "transfer",
+    "protected_novelty_authority": "NONE"
+  },
+  "source_family_audit": [
+    {
+      "source_id": "ECCC-TR25-033-2025",
+      "primary_status": "FULL_PRIMARY_TEXT_INSPECTED",
+      "identity": "Bruno P. Cavalar and Igor C. Oliveira, Boolean Circuit Complexity and Two-Dimensional Cover Problems, ECCC TR25-033 (2025), arXiv:2503.14117",
+      "use": "Definition-21 full semi-filter cover object and the paper's explicit scope note that imposing a generator-intersection-derived operand restriction yields branching-model characterizations attributed to Wigderson 1995.",
+      "non_guarantee": "The cited scope note is not a reverse comparison from the branching-restricted optimum to unrestricted rho."
+    },
+    {
+      "source_id": "WIGDERSON-SOCS-95.2",
+      "primary_status": "CANNOT_CHECK: bibliographic identity and the 2025 paper's attribution were recovered, but Wigderson 1995 primary report bytes/theorem text were not inspected in this cycle",
+      "identity": "Avi Wigderson, Lectures on the Fusion Method and Derandomization, Technical Report SOCS-95.2, School of Computer Science, McGill University (1995)",
+      "use": "SCOPE_POINTER_ONLY_NO_THEOREM_TRANSFER",
+      "non_guarantee": "No theorem, quantifier, or comparison direction is imported from uninspected primary bytes."
+    },
+    {
+      "source_id": "ECCC-TR25-102-2025",
+      "primary_status": "PRIMARY_TEXT_INSPECTED",
+      "identity": "Cavalar et al., Monotone Circuit Complexity of Matching, ECCC TR25-102 (2025), arXiv:2507.16105",
+      "use": "Solved/near-solved analogue: a strong explicit lower bound exists in the monotone circuit model.",
+      "difference_witness": "Monotone circuits are a restricted circuit class, whereas the P-vs-NP root contract requires a bridge to unrestricted polynomial-time/general circuit computation. The restricted lower bound therefore cannot be promoted through model inclusion alone."
+    },
+    {
+      "source_id": "ECCC-TR26-128-2026",
+      "primary_status": "PRIMARY_TEXT_INSPECTED",
+      "identity": "Cavalar, de Rezende, Gray, and Santhanam, ECCC TR26-128 (2026), arXiv:2607.12331",
+      "use": "Current nearby literature control only.",
+      "difference_witness": "The result is conditional and concerns monotone-circuit learning/approximation; it supplies neither an unconditional reverse witness-class bridge nor a full-rho lower bound."
+    }
+  ],
+  "prior_experience_effect_on_routing": {
+    "changed_routing": [
+      {
+        "id": "R1-NEXT-STEP",
+        "effect": "forced a prospective R2 criterion distinct from the already-known/circular T24/T30 matches and required the missing Wig95 scope addition"
+      },
+      {
+        "id": "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+        "effect": "prevented another fractional-packing attempt that would not preserve one common integral witness"
+      },
+      {
+        "id": "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",
+        "effect": "prevented canonical-only signature reuse as if it covered full noncanonical obligations"
+      },
+      {
+        "id": "RAKL_math#154",
+        "effect": "live same-lane work showed incremental trace accounting has a separate target/cyclic gluing failure, so the cycle did not duplicate that saturated route"
+      },
+      {
+        "id": "XM011-CURRENT_WORK_BOUND_BEFORE_CONSEQUENTIAL_ROUTING",
+        "effect": "caused explicit consultation of open same-atom/same-lane work before selecting R2"
+      }
+    ],
+    "retrieved_but_rejected": [
+      {"id": "T-PNP-FRACTIONAL-SEMIFILTER-PACKING", "why": "materially mismatched to transfer polarity and blocked for direct integral-witness reuse by F-C024"},
+      {"id": "RAKL_math#128", "why": "absolute trace-entropy route already saturated by zero-cost shattering"},
+      {"id": "RAKL_math#113", "why": "free-union quotient is valid but does not decide witness-class inclusion polarity"},
+      {"id": "ECCC-TR25-102", "why": "restricted monotone theorem cannot serve as the missing full-model bridge"},
+      {"id": "ECCC-TR26-128", "why": "conditional/restricted nearby result cannot serve as the missing full-model bridge"}
+    ],
+    "missed_prior_experience_later_found": [],
+    "coverage_caveat": "No all-history completeness claim; this is the bounded fibre actually consulted."
+  },
+  "same_context_expert_cell": [
+    {
+      "role": "fusion-method complexity theorist",
+      "background": "Razborov/Karchmer/Wigderson cover and restricted-model lower-bound interfaces",
+      "delegated_check": "type the full versus branching-restricted witness classes before theorem transfer",
+      "finding": "model restriction changes the feasible witness set; direct lower-bound transfer needs a reverse bridge"
+    },
+    {
+      "role": "circuit lower-bound specialist",
+      "background": "monotone versus unrestricted Boolean circuit complexity",
+      "delegated_check": "test the monotone-matching analogue against the exact P-vs-NP root contract",
+      "finding": "monotone lower bounds do not lift to unrestricted circuits merely from inclusion"
+    },
+    {
+      "role": "extremal combinatorics/cover specialist",
+      "background": "set systems, minima over constrained witness families",
+      "delegated_check": "prove the feasible-set inclusion inequality and search for edge cases",
+      "finding": "rho_full <= rho_res holds even with +infinity convention; no local counterexample"
+    },
+    {
+      "role": "structural-transfer specialist",
+      "background": "DifferenceWitness and assumption-preserving theorem transfer",
+      "delegated_check": "state preserved assumptions, broken assumptions, and required reverse direction",
+      "finding": "the broken coordinate is witness-class completeness; a reverse comparison rho_res <= g(rho_full) or direct full-model result is required"
+    },
+    {
+      "role": "adversarial gluing reviewer",
+      "background": "local-to-global proof interfaces and root-coordinate faithfulness",
+      "delegated_check": "attempt to glue the local polarity result to an explicit-target/full-rho lower bound and then to P != NP",
+      "finding": "gluing fails: no reverse bridge and no new explicit-target full-rho lower-bound coordinate were proved"
+    },
+    {
+      "role": "provenance/metrology verifier",
+      "background": "RAKL v3 proposal/shadow authority, source lineage, saturation metrology",
+      "delegated_check": "audit current framework, source completeness, TaskEpisode boundary, and novelty accounting",
+      "finding": "Wig95 primary theorem text is CANNOT_CHECK; same-context role separation earns zero independent-review credit; protected retained novelty remains zero"
+    }
+  ],
+  "verification": {
+    "counterexample_first_falsifier": "Before importing any restricted-family lower bound, compare feasible witness classes. W_res subseteq W_full forces rho_full <= rho_res and rejects the desired direct lower-bound implication.",
+    "formal_check": "elementary order/minimization proof desk-checked by the cover and adversarial roles; no computation is used as proof",
+    "primary_source_scope_check": "PASS for ECCC TR25-033, TR25-102, TR26-128; CANNOT_CHECK for Wig95 theorem text",
+    "root_contract_check": "PASS: result is explicitly non-root and restricted-model transfer is not treated as P-vs-NP closure",
+    "independent_review_count": 0,
+    "same_context_review_only": true
+  },
+  "outcome": "PARTIAL_SUCCESS",
+  "local_mathematical_status": "SOLVED_SHADOW: exact transfer-polarity lemma",
+  "local_mathematical_failure": null,
+  "local_to_global_gluing_failure": {
+    "status": "OPEN",
+    "failure_id": "F-PNP-R2-DIRECT-RESTRICTED-LOWER-BOUND-TRANSFER",
+    "diagnosis_id": "D-PNP-R2-RESTRICTED-LOWER-BOUND-WRONG-POLARITY",
+    "obstruction_id": "O-PNP-R2-REVERSE-BRIDGE-MISSING",
+    "statement": "The local restricted-family theorem may be valid, but model inclusion yields the opposite inequality from the one needed to lower-bound unrestricted rho. A reverse comparison or direct full-rho theorem is missing."
+  },
+  "episode_diagnosis_lesson_separation": {
+    "episode_observation": "restricted/full feasible-set inclusion was tested before theorem import and direct lower-bound transfer failed",
+    "diagnosis": "the failed inference is caused by minimization polarity under witness-class inclusion, not by falsity of the restricted theorem",
+    "reusable_obstruction_proposal": "O-PNP-R2-REVERSE-BRIDGE-MISSING",
+    "candidate_lesson_id": "L-PNP-R2-RESTRICTION-POLARITY-BEFORE-LOWER-BOUND-TRANSFER",
+    "candidate_lesson": "Before reusing a lower bound from a restricted model/witness family, derive the inequality direction induced by the exact feasible-set map. If inclusion points toward an easier target class, block lower-bound transfer unless a reverse bridge is independently proved.",
+    "lesson_authority": "CANDIDATE_PROPOSAL_SHADOW_ONLY"
+  },
+  "saturation": {
+    "KNOWLEDGE": "ACTIVE_NO_PROTECTED_RETENTION",
+    "OPERATOR": "FLAT_THIS_CYCLE",
+    "EXPERIENCE_PATTERN": "ACTIVE_REUSE_ONLY_NO_PROTECTED_RETENTION",
+    "OBSTRUCTION": "REOPENED_BY_REVERSE_BRIDGE_RESIDUAL",
+    "RELATION": "REOPENED_BY_EXPLICIT_MODEL_INCLUSION_POLARITY",
+    "PATH": "REOPENED_TOWARD_REVERSE_BRIDGE_OR_DIRECT_FULL_MODEL_ROUTE",
+    "META_METHOD": "FLAT_THIS_CYCLE"
+  },
+  "residual_signature_before": [
+    "PROSPECTIVE-R2-DISTINCT-NONCIRCULAR-EXPLICIT-TARGET-LOWER-BOUND-COORDINATE-CRITERION-REQUIRED",
+    "WIG95-SCOPE-ADDITION-REQUIRED",
+    "CURRENT-FRAMEWORK-AND-CURRENT-WORK-REVALIDATION-REQUIRED"
+  ],
+  "residual_signature_after": [
+    "FULL-RHO-EXPLICIT-TARGET-LOWER-BOUND-COORDINATE-NOT-IDENTIFIED",
+    "REVERSE-RESTRICTED-TO-FULL-BRIDGE-NOT-PROVED",
+    "WIG95-PRIMARY-THEOREM-TEXT-CANNOT_CHECK",
+    "PNP-ROOT-OPEN_NO_SOLUTION_CERTIFICATE"
+  ],
+  "next_action": "Search source-native or newly derived reverse-comparison candidates of the exact form rho_restricted <= g(rho_full), with g explicit and useful, and falsify them first on cheap/full-cover witnesses before any explicit hard-target scoring. If no such bridge survives bounded source/analogue search, rotate to a direct full-Definition-21 explicit-target coordinate rather than retrying restricted-model lower bounds.",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "authority": "PROPOSAL_SHADOW_LOCAL_RESULT_ONLY_NO_THEOREM_PROMOTION_NO_NOVELTY_AUTHORITY_NO_ROOT_AUTHORITY"
+}

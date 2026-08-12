@@ -1,0 +1,116 @@
+{
+  "schema_version": "rakl-v3-problem-fibre-shadow-v1",
+  "fibre_snapshot_hash": "sha256:7a8c1bdc3dea29a1c1e555705ebf1253743568651884931ee72c4f579a70997a",
+  "hash_scope": "SHA-256 of the canonical JSON encoding of the snapshot object only (sorted keys; compact separators; UTF-8; ensure_ascii=false)",
+  "snapshot": {
+    "cycle_id": "PNP-O9d12a2a1a1b1-R2-RESTRICTION-POLARITY-20260811",
+    "atom_id": "O9d12a2a1a1b1-R2",
+    "problem_signature": [
+      "P-vs-NP via graph/two-dimensional-cover/fusion route",
+      "Definition-21 full semi-filter cover complexity rho(A,B)",
+      "restricted witness/model families versus unrestricted full cover",
+      "lower-bound transfer polarity",
+      "reverse bridge required before root-facing reuse"
+    ],
+    "framework": {
+      "action_freeze_sha": "fc8253046fd216cd42d2e253874f54a735f7d52a",
+      "current_at_receipt_sha": "dfac8287383b87d1e0eed10a6338c420a22870ec",
+      "method_version": "3.0.0",
+      "software_package_version": "0.1.0",
+      "drift_assessment": "Five post-freeze commits changed Paper-2 experiment/paper-specific surfaces only; compare fc825...dfac828 shows no change to RAKL_VERSION.json, method_specs.py, experience_substrate.py, task-episode schema, or core v3 architecture."
+    },
+    "application": {
+      "main_sha": "350861b1c2755033893068e5519b8b06a6315aa6",
+      "root_issue": "RAKL_math#2",
+      "live_pnp_pr": "RAKL_math#154@148de86c2d246005684527a9468463d9a1f296d6",
+      "current_work_observer": "RAKL_math#160@cb3040819aea497c2ac0fea36fc55f23503341cf"
+    },
+    "actual_fibre_consulted": [
+      "RAKL@current RAKL_VERSION.json",
+      "RAKL@current docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md",
+      "RAKL@current docs/RAKL_METROLOGY.md",
+      "RAKL@current src/rakl/method_specs.py",
+      "RAKL@current src/rakl/experience_substrate.py",
+      "RAKL@current schemas/task-episode.schema.json",
+      "RAKL_math p_vs_np/00_problem_contract/canonical_statement.md",
+      "RAKL_math p_vs_np/00_problem_contract/success_contract.yaml",
+      "RAKL_math p_vs_np/02_problem_dag/O9d12a2a1a1b1_ATOMIZATION_V2_20260811.json",
+      "RAKL_math p_vs_np/01_frontier/O9d12a2a1a1b1_PROBLEM_FIBRE_V3_20260811.json",
+      "RAKL_math p_vs_np/07_memory/O9d12a2a1a1b1_RESEARCH_MEMORY_REVIEW_V2_20260811.json",
+      "RAKL_math p_vs_np/01_frontier/O9d12a2a1a1b1_SOURCE_NATIVE_THEOREM_INVENTORY_R1_V2_20260811.json",
+      "RAKL_math p_vs_np/09_trace/O9d12a2a1a1b1_SOURCE_INVENTORY_R1_RESULT_TRACE_20260811.json.shadow",
+      "RAKL_math PR #154 live PNP incremental-trace/gluing cycle",
+      "RAKL_math PR #160 XM011 current-work coverage observer",
+      "Cavalar-Oliveira ECCC TR25-033 / arXiv:2503.14117 primary text",
+      "Cavalar et al. ECCC TR25-102 / arXiv:2507.16105 primary text",
+      "Cavalar-de Rezende-Gray-Santhanam ECCC TR26-128 / arXiv:2607.12331 primary text",
+      "Wigderson 1995 bibliographic identity recovered; primary report bytes not inspected"
+    ],
+    "memory": {
+      "retrieved_tools": [
+        "T-PNP-UPPER-FIRST",
+        "T-PNP-EXTREMAL-CALIBRATION",
+        "T-PNP-FRACTIONAL-SEMIFILTER-PACKING",
+        "T-PNP-GNEQ-JOINT-SIGNATURE-CALIBRATION"
+      ],
+      "retrieved_failures": [
+        "F-C010-MULTIPLEXING",
+        "F-C021-CHEAP-ADJACENCY",
+        "F-C023-SCALAR-COLLAPSE",
+        "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+        "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",
+        "F-O9D12A2A1A1-PARTITION-CLOSURE-COLLAPSE"
+      ],
+      "retrieved_other": [
+        "R1-NEXT-STEP",
+        "RAKL_math#154",
+        "XM011-CURRENT_WORK_BOUND_BEFORE_CONSEQUENTIAL_ROUTING",
+        "RAKL_math#128",
+        "RAKL_math#113"
+      ],
+      "selected": [
+        "R1-NEXT-STEP",
+        "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+        "F-C025-FIRST-ORDER-CANONICAL-COLLAPSE",
+        "RAKL_math#154",
+        "XM011-CURRENT_WORK_BOUND_BEFORE_CONSEQUENTIAL_ROUTING"
+      ],
+      "rejected": [
+        {"id": "T-PNP-FRACTIONAL-SEMIFILTER-PACKING", "why": "wrong immediate family; F-C024 already shows independent fractional mass does not preserve one common integral witness"},
+        {"id": "RAKL_math#128", "why": "absolute target-trace entropy family already fails zero-cost-base shattering and is saturated for this transfer question"},
+        {"id": "RAKL_math#113", "why": "free-union quotient is valid hygiene but does not decide model-inclusion transfer polarity"},
+        {"id": "ECCC-TR25-102", "why": "strong monotone matching lower bound is restricted-model evidence; no unrestricted lifting theorem is supplied"},
+        {"id": "ECCC-TR26-128", "why": "conditional learning/approximation result and monotone scope do not supply an unconditional full-rho/root bridge"}
+      ],
+      "missed_prior_experience_later_found": []
+    },
+    "analogy_transfer": {
+      "source_analogue": "monotone/restricted circuit lower bounds and branching-restricted cover families",
+      "target": "full Definition-21 semi-filter cover complexity rho(A,B)",
+      "preserved": [
+        "same minimization-over-legal-witnesses form",
+        "same target/base when comparing a restricted witness subset to the full witness class"
+      ],
+      "disanalogies": [
+        "restricted families exclude legal full witnesses",
+        "monotone/branching models are not unrestricted circuit computation",
+        "P-vs-NP root contract requires an independently validated general-computation bridge"
+      ],
+      "difference_witness": "W_res subset W_full changes the feasible set itself, so min(W_full) <= min(W_res); a restricted lower bound therefore has the wrong direction for a lower bound on the larger full class."
+    },
+    "operators_motifs_tried": [
+      "decomposition: isolate transfer polarity before target scoring",
+      "routing: rotate from saturated entropy/packing candidates to model-inclusion audit",
+      "equivalence_similarity: explicit preserved/non-preserved structure and DifferenceWitness",
+      "contradiction_diagnosis: distinguish wrong-direction transfer from refutation of the restricted theorem",
+      "gap_discovery: identify missing reverse bridge",
+      "contextual_theory_gluing: test local restricted result against full-rho/root consumer",
+      "review: six same-context adversarial roles",
+      "saturation_stopping: reopen only OBSTRUCTION/RELATION/PATH",
+      "MOTIF-DIFFERENCE-WITNESS-BEFORE-TRANSFER",
+      "MOTIF-CURRENT-WORK-BOUND-BEFORE-ROUTING"
+    ],
+    "search_policy": "COUNTEREXAMPLE_FIRST_MINIMIZATION_POLARITY_THEN_PRIMARY_SOURCE_SCOPE_AUDIT",
+    "authority": "PROPOSAL_SHADOW_WORKING_FIBRE_ONLY"
+  }
+}
