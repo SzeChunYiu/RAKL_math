@@ -1,0 +1,169 @@
+{
+  "schema_version": "ym-rakl-v3-case-study-metrics-taskepisode-r18-v1",
+  "cycle_id": "YM-S1a2g-R18-20260812",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "RAKL_CYCLE_METRICS": {
+    "rakl_method_version": "3.0.0",
+    "rakl_package_version": "0.1.0",
+    "rakl_git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "rakl_constitution_epoch": "v3-authority-hardening-20260811",
+    "rakl_math_base_sha": "5a7831bd04b195e2a1690da338f538b7db7e9366",
+    "rakl_math_scientific_head_sha": "efcc02137ada208555ce7ef7d68e21e9921a2615",
+    "rakl_math_receipt_head_sha": "CANNOT_SELF_BIND: this receipt is itself a commit; exact final branch head is bound by GitHub PR metadata after write",
+    "pre_state_tree": "5b1925e579066e8162dc45def226f466cae5d18e",
+    "post_scientific_state_tree": "2f33724dc4001ba6f75604273c1f483f564e6635",
+    "pre_state_fingerprint": "sha256:9c12e8e4633edda3f46ce95087a8d97789df050b59c44a7c74ddf471d3bfbbe1",
+    "post_scientific_state_fingerprint": "sha256:940258870fe9ca0410ac17a66ff47bda3d18aec83f7f41d6a1af4889c9fd4330",
+    "state_fingerprint_definition": "sha256(head_sha|'|'|git_tree_sha); repository-state proxy because an in-process RAKLV3State object is not materialized by the connector",
+    "active_atom": "YM-S1a2g",
+    "problem_signature": "YM-S1a2g-WILSON-UVR3-INVARIANT-STABLE-MANIFOLD-AND-UNIVERSALITY-CLOSURE",
+    "fibre_snapshot_hash": "sha256:98de4e7733b71108afe541967524872c686cfd4654da668d2ef50ecc7f735d1a",
+    "fibre_artifact_hash": "sha256:9a22520585612d7194285a8c47ab4b8dd6130a96813e699215439f99ab2d9b01",
+    "scientific_audit_artifact_sha256": "sha256:badfbb50152d22984ed26c004128d187be4f7f3480f2a9e18e4a20d28d4fc871",
+    "task_episode_hash": "sha256:812d397a07c78473f11727b06fd93b8e4011a8061a41c2f40282670d2be720ca",
+    "trace_final_hash": "sha256:cfede68407ebd6d0d6dea6aa42b10c30602c7e8311932de58953acbfd52512de",
+    "canonical_method_specs_surfaces_invoked": [
+      "decomposition", "routing", "search_query_generation", "source_selection_reliability", "claim_extraction",
+      "ontology_terminology_normalization", "mathematical_context_translation", "equivalence_similarity",
+      "contextual_theory_gluing", "contradiction_diagnosis", "gap_discovery", "experiment_query_selection",
+      "memory", "review", "saturation_stopping", "prompting_context_policy", "synthesis"
+    ],
+    "memory_retrieved": {
+      "episodes_or_prior_cycle_records_count": 4,
+      "episodes_or_prior_cycle_record_ids": ["YM-S1a2f-R17-PR290", "YM-S1a2d-R14-PR256", "YM-R14-LIVE-COLLISION-PR258", "YM-R10-STABLE-COORDINATE-PR193"],
+      "motifs_count": 0,
+      "motif_ids": [],
+      "other_memory_count": 2,
+      "other_memory_ids": ["BBS-RG-IV-ARXIV-1403.7255", "BBS-RG-V-ARXIV-1403.7256"]
+    },
+    "selected_memory_ids": ["YM-S1a2f-R17-PR290", "YM-R10-STABLE-COORDINATE-PR193"],
+    "rejected_memory_ids": [
+      {"id": "YM-S1a2d-R14-PR256", "why": "live fixed-cutoff route"},
+      {"id": "YM-R14-LIVE-COLLISION-PR258", "why": "live fixed-cutoff route"},
+      {"id": "BBS-RG-IV-ARXIV-1403.7255", "why": "DifferenceWitness blocks theorem transfer; structural analogue only"},
+      {"id": "BBS-RG-V-ARXIV-1403.7256", "why": "DifferenceWitness blocks theorem transfer; structural analogue only"}
+    ],
+    "missed_prior_source_ids": ["WILSON-2026-SECTION38-UVR2-UVR4"],
+    "outcome": "MATERIAL_SOURCE_CORRECTION_PLUS_SCOPED_PROOF_GAPS__UVR3_NOT_SOURCE_CERTIFIED_ON_DISPLAYED_BOUNDS",
+    "residual_before": "RES-YM-S1a2f-UVR3-STABLE-MANIFOLD-AND-SAME-THEORY-UNIVERSALITY-SOURCE-BINDING-UNRESOLVED",
+    "residual_after": "RES-YM-S1a2g-QUANTITATIVE-STABLE-SPLITTING-REGULATOR-MATCHED-DELTA-LAMBDA-AND-OS-PHYSICAL-GLUE-UNBOUND",
+    "proposal_shadow_retained_semantic_novelty": {"KNOWLEDGE": 1, "OPERATOR": 0, "EXPERIENCE_PATTERN": 0, "OBSTRUCTION": 1, "RELATION": 1, "PATH": 1, "META_METHOD": 0},
+    "protected_retained_semantic_novelty": {"KNOWLEDGE": 0, "OPERATOR": 0, "EXPERIENCE_PATTERN": 0, "OBSTRUCTION": 0, "RELATION": 0, "PATH": 0, "META_METHOD": 0},
+    "novelty_counting_note": "Only semantic proposal/shadow deltas are counted; raw files, prose, issues, commits, PRs, CI, hashes and proposed lessons receive zero protected-learning credit.",
+    "saturation_axes_reopened": ["KNOWLEDGE", "OBSTRUCTION", "RELATION", "PATH"],
+    "saturation_axes_flattened": ["OPERATOR: fixed-cutoff OS/transfer route intentionally not revisited because PR #256/#258 are live", "EXPERIENCE_PATTERN: no protected pattern admission", "META_METHOD: improvement hypothesis only, no protected method change"],
+    "resource_proxies": {
+      "model_tokens": "CANNOT_MEASURE: runtime does not expose reliable model token accounting",
+      "context_tokens": "CANNOT_MEASURE: runtime does not expose reliable context token accounting",
+      "retrieval_calls": "CANNOT_MEASURE: exact aggregate retrieval-call log was compacted before receipt materialization",
+      "tool_calls": "CANNOT_MEASURE: exact aggregate tool-call log was compacted before receipt materialization",
+      "wall_time": "CANNOT_MEASURE: monotonic elapsed-run clock is not exposed in the research state",
+      "repository_mutations_before_receipt": 4,
+      "repository_mutation_ids": ["issue#295", "branch:research/ym-s1a2g-uvr3-invariant-r18-20260812", "commit:636287b4c409cf090e6999358a0f54b793d2c114", "commit:efcc02137ada208555ce7ef7d68e21e9921a2615"]
+    },
+    "new_episode_ids": ["EP-YM-S1a2g-R18-20260812"],
+    "new_lesson_ids": [],
+    "new_failure_ids": ["F-YM-S1a2g-R18-R17-SECTION38-MISSED-SOURCE-COVERAGE"],
+    "new_tool_ids": [],
+    "new_obstruction_ids": ["OBS-YM-S1a2g-R18-RELEVANT-STABLE-SPLITTING-UNBOUND", "OBS-YM-S1a2g-R18-DELTA-U-TO-DELTA-G-SUBSTITUTION-UNBOUND"],
+    "new_motif_ids": [],
+    "successful_reuse_ids": ["YM-R10-STABLE-COORDINATE-PR193"],
+    "process_failure_links": [{"current": "F-YM-S1a2g-R18-R17-SECTION38-MISSED-SOURCE-COVERAGE", "related_prior": "FS-RAKL-YM-R14-LIVE-WORK-COLLISION-MISS-SHADOW", "relation": "same broad retrieval/coverage family but distinct mechanisms; linked without conflating causes"}],
+    "gate_status": {
+      "scientific_authority_promotion": "DENIED_NOT_ATTEMPTED",
+      "root_promotion": "DENIED_NOT_ATTEMPTED",
+      "independent_mathematical_reviews": "0/3",
+      "same_context_expert_review": "7 roles; 0 independent-review credit",
+      "formal_verifier": "NOT_APPLICABLE_TO_SOURCE_AUDIT / no root proof candidate",
+      "full_pdf_verifier": "BLOCKED_SOURCE_RETRIEVAL",
+      "cross_problem_transfer": "NO_THEOREM_TRANSFER",
+      "SEARCH": "EXECUTED",
+      "JUMP": "STRUCTURAL_ANALOGY_ONLY_REJECTED_FOR_THEOREM_TRANSFER",
+      "GLUE": "BLOCKED_AT_REGULATOR_MATCHED_LAMBDA_COMPARISON",
+      "LIFT": "FORBIDDEN_NO_COVERAGE_RECEIPT"
+    },
+    "provenance_status": {
+      "framework_source_of_truth": "current RAKL main rechecked at 43897d3afaf0038385102d5acc64793c05ec40f0",
+      "application_base": "current RAKL_math main at freeze 5a7831bd04b195e2a1690da338f538b7db7e9366",
+      "primary_source": "Wilson 2026 author-uploaded ResearchGate-indexed manuscript text; exposed Sections 37-38",
+      "primary_source_limit": "direct full-PDF retrieval blocked; no page-by-page PDF claim",
+      "analogue_sources": "primary arXiv records 1403.7255 and 1403.7256",
+      "negative_history_preserved": ["R17 large-field != strong-coupling type correction retained", "R17 Section-37-only incompleteness inference corrected rather than erased", "R10 stable-coordinate warning reused"]
+    },
+    "ci_status": "PENDING_NOT_CHECKED_AT_RECEIPT_WRITE; CI is assurance-only and has no mathematical authority",
+    "rakl_changed_chosen_action_relative_to_pre_memory_pre_gate_preference": "CANNOT_MEASURE: R18 pre-memory/pre-gate action preference was not prospectively frozen before R17/PR290 was read in this runtime; no counterfactual invented."
+  },
+  "TaskEpisode": {
+    "episode_id": "EP-YM-S1a2g-R18-20260812",
+    "authority": "PROPOSAL_SHADOW_ONLY",
+    "atom_id": "YM-S1a2g",
+    "problem_signature": "YM-S1a2g-WILSON-UVR3-INVARIANT-STABLE-MANIFOLD-AND-UNIVERSALITY-CLOSURE",
+    "fibre_snapshot_hash": "sha256:98de4e7733b71108afe541967524872c686cfd4654da668d2ef50ecc7f735d1a",
+    "operators_methods_motifs_tried": [
+      {"mode": "SEARCH", "action": "current same-source Section 38 audit", "result": "selected; corrected R17 source coverage"},
+      {"mode": "counterexample_first", "action": "scalar K/lambda/difference hostile recurrences", "result": "inference forms falsified under displayed hypotheses; K gap plausibly repairable"},
+      {"mode": "JUMP", "action": "Brydges-Slade rigorous RG IV/V structural analogy", "result": "theorem transfer rejected by DifferenceWitness"},
+      {"mode": "GLUE", "action": "UVR3 -> regulator universality -> same-theory OS/spectral chain", "result": "blocked at regulator-matched lambda comparison"},
+      {"mode": "LIFT", "action": "cross-problem exhaustion", "result": "forbidden; no coverage receipt"}
+    ],
+    "retrieved_experience_ids": ["YM-S1a2f-R17-PR290", "YM-S1a2d-R14-PR256", "YM-R14-LIVE-COLLISION-PR258", "YM-R10-STABLE-COORDINATE-PR193", "BBS-RG-IV-ARXIV-1403.7255", "BBS-RG-V-ARXIV-1403.7256"],
+    "selected_experience_ids": ["YM-S1a2f-R17-PR290", "YM-R10-STABLE-COORDINATE-PR193"],
+    "missed_prior_source": ["WILSON-2026-SECTION38-UVR2-UVR4 missed by R17"],
+    "decision_policy": "highest-information same-source falsifier first; separate irrelevant/relevant/coupling coordinates; require explicit quantitative interface before gluing",
+    "observations": [
+      "Section 38 explicitly supersedes the roadmap framing and must be audited directly.",
+      "K invariant proof uses monotonicity in the wrong inequality direction after an old-scale strict-margin estimate.",
+      "Uniformly bounded relevant linear transport does not imply a shrinking lambda ball; tuned stable graph needs additional quantitative structure.",
+      "Displayed full Delta-u recursion is noncontractive and compatible with nonzero residual differences.",
+      "Exposed universality reasoning narrows to Delta-g/Delta-K and leaves the regulator-matched lambda-slaving handoff unbound."
+    ],
+    "verification": ["algebraic substitution into displayed invariant bounds", "hostile scalar A_k=2 control", "hostile nondecaying Delta-u recurrence", "primary-arXiv structural analogue check", "root/framework recheck", "full PDF verifier audit BLOCKED_SOURCE_RETRIEVAL"],
+    "outcome": "MATERIAL_SOURCE_CORRECTION_PLUS_SCOPED_PROOF_GAPS__UVR3_NOT_SOURCE_CERTIFIED_ON_DISPLAYED_BOUNDS",
+    "residual_after": "RES-YM-S1a2g-QUANTITATIVE-STABLE-SPLITTING-REGULATOR-MATCHED-DELTA-LAMBDA-AND-OS-PHYSICAL-GLUE-UNBOUND",
+    "failure_signature": {
+      "local_mathematical": "K monotonicity inference direction invalid; plausible explicit ratio-margin repair remains",
+      "local_proof_source": "lambda shrinking/stable-manifold conclusion not certified by bounded-A hypotheses",
+      "retrieval_decomposition_source": "R17 missed immediately subsequent Section 38",
+      "representation": "bounded transport != contraction; Delta g != full Delta u",
+      "local_to_global_gluing": "regulator-matched lambda/stable-graph comparison missing before universality",
+      "verification_tooling": "full PDF unavailable to runtime"
+    },
+    "cost_effort_proxy": "see RAKL_CYCLE_METRICS.resource_proxies",
+    "next_action": "Source-bind the quantitative K ratio margin, then the relevant stable/unstable splitting/graph-transform constants and a regulator-matched Delta-lambda estimate; only afterward revisit same-theory OS/transfer and physical mass normalization."
+  },
+  "diagnosis": {
+    "diagnosis_id": "DG-YM-S1a2g-R18-UVR3-INVARIANCE-AND-UNIVERSALITY-NOT-CLOSED-BY-DISPLAYED-BOUNDS",
+    "supported_by": ["K inequality-direction check", "bounded-A scalar hostile control", "nondecaying Delta-u hostile recurrence", "Section 37 -> Section 38 source correction"],
+    "not_claimed": ["Yang-Mills counterexample", "Wilson theorem globally false", "Balaban refutation", "theorem nonexistence", "root solution"]
+  },
+  "obstruction_and_lesson_boundary": {
+    "shadow_obstructions": ["OBS-YM-S1a2g-R18-RELEVANT-STABLE-SPLITTING-UNBOUND", "OBS-YM-S1a2g-R18-DELTA-U-TO-DELTA-G-SUBSTITUTION-UNBOUND"],
+    "candidate_reusable_lesson": "Keep irrelevant contraction, relevant tuning, coupling asymptotics, regulator comparison, and OS/spectral transport as separate typed coordinates; require an explicit quantitative interface before substitution or gluing.",
+    "lesson_authority": "PROPOSAL_ONLY_NOT_ADMITTED",
+    "protected_lesson_ids": []
+  },
+  "RAKL_METHOD_CASE_STUDY": {
+    "research_method_used": "experience-conditioned SEARCH with same-source supersession audit, typed-coordinate decomposition, counterexample-first scalar controls, structural analogy with DifferenceWitness, then explicit local-vs-gluing diagnosis",
+    "what_worked": ["R10 memory forced typed stable-coordinate checking", "adjacent-section audit corrected R17", "hostile controls separated a repairable K slip from the relevant-coordinate/universality gap", "v3 authority separation prevented fixed-cutoff OS evidence from being promoted into UV/continuum authority"],
+    "what_failed": ["R17 missed Section 38", "direct full-PDF retrieval was blocked", "displayed bounds do not furnish quantitative stable splitting or regulator-matched Delta-lambda comparison"],
+    "failure_categories": {"mathematical": true, "retrieval": true, "decomposition": true, "representation": true, "gluing": true, "source": true, "verification": true, "tooling": true, "meta_policy": false},
+    "v3_feature_helped": ["ProblemFibre/context separation", "proposal/shadow TaskEpisode", "experience-conditioned routing without authority transfer", "DifferenceWitness analogy rejection", "contextual gluing fail-closed", "seven-axis metrology", "protected authority boundary"],
+    "v3_feature_missing_or_weak": "No explicit adjacent-section/supersession completeness receipt is enforced before a 'remaining work' statement is used as a source-level falsifier.",
+    "framework_improvement_hypothesis": "Add a proposal-only source_selection_reliability check: when a source says work remains, require a bounded forward scan for later sections/theorem correspondence/supersession language and record the scan range before using that span as evidence of current incompleteness.",
+    "framework_change_requested": "NO: preserve as application case-study hypothesis until repeated evidence/gating warrants a narrowly scoped RAKL framework issue."
+  },
+  "novelty_classification": {
+    "subproblem": "Do the exposed Section-38 inequalities alone imply the shrinking invariant ball and full regulator-difference decay?",
+    "class": "compositional",
+    "rakl_triviality": "RAKL_TRIVIAL",
+    "reason": "elementary substitution and scalar hostile controls suffice; no new Yang-Mills theorem or operator is introduced"
+  },
+  "trace_continuation": [
+    {"seq": 9, "event": "SOURCE_CLAIM_EXTRACTED", "previous_event_hash": "sha256:9f68dadf5245911864850184408f6666de372a87e4056650723b42da944c2099"},
+    {"seq": 10, "event": "COUNTEREXAMPLE_FIRST_CHECK"},
+    {"seq": 11, "event": "CONTRADICTION_DIAGNOSED"},
+    {"seq": 12, "event": "GLUING_AUDIT"},
+    {"seq": 13, "event": "EXPERT_SYNTHESIS"},
+    {"seq": 14, "event": "OUTCOME_RECORDED", "artifact_hash": "sha256:cfede68407ebd6d0d6dea6aa42b10c30602c7e8311932de58953acbfd52512de"}
+  ]
+}
