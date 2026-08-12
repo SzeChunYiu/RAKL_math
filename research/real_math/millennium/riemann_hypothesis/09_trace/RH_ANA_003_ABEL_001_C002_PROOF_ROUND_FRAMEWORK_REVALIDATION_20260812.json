@@ -1,0 +1,42 @@
+{
+  "artifact_hash": "sha256:1b63616572569a650c8d50ba0f64027936df99da718ee8a9fb0cf0411671a071",
+  "candidate_id": "RH-ANA-003-ABEL-001-C002-FIXED-N-NATURAL-ORDER-ABEL",
+  "grants_mathematical_or_scientific_authority": false,
+  "licenses_checker_execution_after_public_freeze": true,
+  "live_framework_origin_main_sha": "55132eddafd95065fd7afa217b53ead88f5763c2",
+  "new_relevant_modules": [
+    {
+      "applicability": "No authority is transported or inherited in this proof round; the result remains a new scoped same-context hand-proof record with no independent/formal/root authority.",
+      "classification": "PROPOSAL_ONLY_NOT_CANONICAL_RUNTIME_WIRING",
+      "path": "src/rakl/authority_transport.py"
+    },
+    {
+      "applicability": "No scientific promotion is requested; exact source, candidate, proof-input, certificate, and checker identities remain explicitly bound.",
+      "classification": "PROPOSAL_ONLY_NOT_CANONICAL_RUNTIME_WIRING",
+      "path": "src/rakl/evidence_binding_certificate.py"
+    },
+    {
+      "applicability": "This application proof round does not promote or modify RAKL.",
+      "classification": "SELF_RAKL_CHALLENGER_SELECTION_ONLY",
+      "path": "src/rakl/epistemic_evolution.py"
+    },
+    {
+      "applicability": "The target is a mathematical lemma, not a mechanism-identification or prediction claim.",
+      "classification": "KNOWN_WORLD_MECHANISM_BENCHMARK_ONLY",
+      "path": "src/rakl/mechanism_fidelity.py"
+    }
+  ],
+  "observation_id": "RH-ANA-003-ABEL-001-C002-PROOF-ROUND-FRAMEWORK-REVALIDATION-20260812",
+  "observed_at": "2026-08-12T08:04:00Z",
+  "pinned_framework_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+  "protected_surface_hashes": {
+    "skills/rakl-core/static/core/principles.md": "fe0e80d1a8adab1f948f8e23d8aea842dd5b5e9d9921024d9466c9df0aacd728",
+    "skills/rakl-core/static/core/workflow.md": "65cc1a23563ac3c978a801bc38e9712ad083b8a0afb44bcd0f0c2231102adcfe",
+    "skills/rakl-core/workflows/mathematical-research.md": "7fe020438097a975d9b944720bde01a731e4860f469de3c735d52ce714cb3888",
+    "src/rakl/method_specs.py": "ea954bff0168638ec23e13957c5a8b29fdfeac9b2d125c4fe5091025238eae45"
+  },
+  "protected_surfaces_byte_identical_between_pin_and_live": true,
+  "recheck_trigger": "live framework main moves again before the result commit or a canonical mathematical-authority gate changes",
+  "schema_version": "1.0.0",
+  "verdict": "CURRENT_NONBLOCKING_PROPOSAL_ONLY_ADDITIONS"
+}
