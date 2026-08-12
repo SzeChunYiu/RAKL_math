@@ -1,6 +1,6 @@
 {
-  "artifact_hash": "sha256:922492863daab2a439af92334240c1f6635b6d44ed242cdb326273decdef01b6",
-  "candidate_artifact_hash": "sha256:d42333dba6e2b98e86c3c6635f597b43bdde551539401339a598ec596c2c9df9",
+  "artifact_hash": "sha256:4b90366ef589154a4401250ff557738e945a4115081209b3c42c473d8c29f0fe",
+  "candidate_artifact_hash": "sha256:81f173681f6178507eef8e32b71857fccb8308c87dd6be588e0aeba172dd87fb",
   "candidate_id": "PNP-C053-K32-CLEAN-PHASE-FULL-WORD-COMPATIBILITY-v1",
   "direct_mathematical_refuters": [
     "one claimed compatible witness violates a field boundary, variable range, clause boundary, padding bit, or one of the 33 equalities",
@@ -10,61 +10,81 @@
     "any conclusion inferred merely from survival of the two old syntax screens"
   ],
   "evaluation_authorized": false,
-  "evaluator_artifact_hash": "sha256:138139fb5cbd10e6490e50b71ca9eb1a847be55c31555cde91da3a986fa7f149",
+  "evaluator_artifact_hash": "sha256:c227e468481a6347940ffb68a369fcc0f54ea584e0f51ad31eae4cca5ffaf3d1",
   "evaluator_id": "PNP-C053-K32-CLEAN-PHASE-SOURCE-BOUND-EVALUATOR-v1",
   "falsifier_id": "PNP-C053-K32-CLEAN-PHASE-FALSIFIER-v1",
   "frozen_at_utc": "2026-08-12T16:31:02Z",
   "future_worlds": [
     {
-      "expected_branch": "COMPATIBLE_WITH_EXACT_FORMULA_BOUND_UNSAT_WITNESS",
+      "expected_branches": [
+        "COMPATIBLE_WITH_EXACT_FORMULA_BOUND_UNSAT_WITNESS"
+      ],
       "future_materialization_obligation": "a complete synthetic W1-W7 packet",
       "materialized": false,
       "world_id": "C053-CLEAN-PHASE-PLANTED-POSITIVE-v1"
     },
     {
-      "expected_branch": "INCOMPATIBLE_WITH_UNIVERSAL_FULL_WORD_PROOF",
+      "expected_branches": [
+        "INCOMPATIBLE_WITH_UNIVERSAL_FULL_WORD_PROOF"
+      ],
       "future_materialization_obligation": "a complete synthetic W1-W6,W8 packet",
       "materialized": false,
       "world_id": "C053-CLEAN-PHASE-PLANTED-NEGATIVE-v1"
     },
     {
-      "expected_branch": "CANNOT_CHECK",
+      "expected_branches": [
+        "CANNOT_CHECK"
+      ],
       "future_materialization_obligation": "only the 32/32 two-screen structural lemma",
       "materialized": false,
       "world_id": "C053-CLEAN-PHASE-SYNTAX-SURVIVAL-ONLY-v1"
     },
     {
-      "expected_branch": "CANNOT_CHECK",
+      "expected_branches": [
+        "CANNOT_CHECK"
+      ],
       "future_materialization_obligation": "a packet matching fewer than all 33 label coordinates",
       "materialized": false,
       "world_id": "C053-CLEAN-PHASE-PARTIAL-EQUALITY-v1"
     },
     {
-      "expected_branch": "CANNOT_CHECK",
+      "expected_branches": [
+        "CANNOT_CHECK"
+      ],
       "future_materialization_obligation": "a full equality witness whose parent formula is satisfiable",
       "materialized": false,
       "world_id": "C053-CLEAN-PHASE-SAT-PARENT-FALSE-POSITIVE-v1"
     },
     {
-      "expected_branch": "CANNOT_CHECK",
+      "expected_branches": [
+        "CANNOT_CHECK"
+      ],
       "future_materialization_obligation": "a negative packet omitting at least one of the 32 parameter pairs",
       "materialized": false,
       "world_id": "C053-CLEAN-PHASE-INCOMPLETE-PAIR-COVERAGE-v1"
     },
     {
-      "expected_branch": "CANNOT_CHECK",
+      "expected_branches": [
+        "CANNOT_CHECK"
+      ],
       "future_materialization_obligation": "a packet with one mutated C041/C048/pre-candidate binding",
       "materialized": false,
       "world_id": "C053-CLEAN-PHASE-SOURCE-MISMATCH-v1"
     },
     {
-      "expected_branch": "CANNOT_CHECK",
+      "expected_branches": [
+        "CANNOT_CHECK"
+      ],
       "future_materialization_obligation": "simultaneously valid-looking positive and negative packets",
       "materialized": false,
       "world_id": "C053-CLEAN-PHASE-CONFLICTING-CERTIFICATES-v1"
     },
     {
-      "expected_branch": "EXACT_BRANCH_PROPAGATION",
+      "expected_branches": [
+        "COMPATIBLE_WITH_EXACT_FORMULA_BOUND_UNSAT_WITNESS",
+        "INCOMPATIBLE_WITH_UNIVERSAL_FULL_WORD_PROOF",
+        "CANNOT_CHECK"
+      ],
       "future_materialization_obligation": "all branches through the future full evaluator",
       "materialized": false,
       "world_id": "C053-CLEAN-PHASE-FRONTEND-BRANCH-PROPAGATION-v1"

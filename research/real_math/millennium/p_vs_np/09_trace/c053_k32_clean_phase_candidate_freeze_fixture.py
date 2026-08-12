@@ -141,7 +141,7 @@ def candidate_identity() -> dict:
         "framework_pin": FRAMEWORK_SHA,
         "frozen_at_utc": CANDIDATE_FROZEN_AT,
         "source_bindings": SOURCE_BINDINGS,
-        "qoi": "For exactly parent (a,m)=(4,3), v in 8..15 and current (a,m)=(3,4), v+ in 4..7 at k=32, decide whether any canonical UNSAT parent suffix equals any canonical current 33-bit prefix.",
+        "qoi": "For exactly parent (a,m)=(4,3), v in 8..15 and current (a,m)=(3,4), v+ in 4..7 at k=32, decide whether any 33-bit label h=1||c from a canonical UNSAT parent equals any canonical current 33-bit prefix p.",
         "exact_phase": {
             "k": 32,
             "parent": {"a": 4, "m": 3, "v_range": [8, 15], "width": 5, "header_length": 18, "raw_length": 63, "encoded_length": 64, "padding": 1},
@@ -257,15 +257,15 @@ def evaluator_identity(candidate: dict) -> dict:
 
 def falsifier_identity(candidate: dict, evaluator: dict) -> dict:
     worlds = [
-        ("C053-CLEAN-PHASE-PLANTED-POSITIVE-v1", "a complete synthetic W1-W7 packet", "COMPATIBLE_WITH_EXACT_FORMULA_BOUND_UNSAT_WITNESS"),
-        ("C053-CLEAN-PHASE-PLANTED-NEGATIVE-v1", "a complete synthetic W1-W6,W8 packet", "INCOMPATIBLE_WITH_UNIVERSAL_FULL_WORD_PROOF"),
-        ("C053-CLEAN-PHASE-SYNTAX-SURVIVAL-ONLY-v1", "only the 32/32 two-screen structural lemma", "CANNOT_CHECK"),
-        ("C053-CLEAN-PHASE-PARTIAL-EQUALITY-v1", "a packet matching fewer than all 33 label coordinates", "CANNOT_CHECK"),
-        ("C053-CLEAN-PHASE-SAT-PARENT-FALSE-POSITIVE-v1", "a full equality witness whose parent formula is satisfiable", "CANNOT_CHECK"),
-        ("C053-CLEAN-PHASE-INCOMPLETE-PAIR-COVERAGE-v1", "a negative packet omitting at least one of the 32 parameter pairs", "CANNOT_CHECK"),
-        ("C053-CLEAN-PHASE-SOURCE-MISMATCH-v1", "a packet with one mutated C041/C048/pre-candidate binding", "CANNOT_CHECK"),
-        ("C053-CLEAN-PHASE-CONFLICTING-CERTIFICATES-v1", "simultaneously valid-looking positive and negative packets", "CANNOT_CHECK"),
-        ("C053-CLEAN-PHASE-FRONTEND-BRANCH-PROPAGATION-v1", "all branches through the future full evaluator", "EXACT_BRANCH_PROPAGATION"),
+        ("C053-CLEAN-PHASE-PLANTED-POSITIVE-v1", "a complete synthetic W1-W7 packet", ["COMPATIBLE_WITH_EXACT_FORMULA_BOUND_UNSAT_WITNESS"]),
+        ("C053-CLEAN-PHASE-PLANTED-NEGATIVE-v1", "a complete synthetic W1-W6,W8 packet", ["INCOMPATIBLE_WITH_UNIVERSAL_FULL_WORD_PROOF"]),
+        ("C053-CLEAN-PHASE-SYNTAX-SURVIVAL-ONLY-v1", "only the 32/32 two-screen structural lemma", ["CANNOT_CHECK"]),
+        ("C053-CLEAN-PHASE-PARTIAL-EQUALITY-v1", "a packet matching fewer than all 33 label coordinates", ["CANNOT_CHECK"]),
+        ("C053-CLEAN-PHASE-SAT-PARENT-FALSE-POSITIVE-v1", "a full equality witness whose parent formula is satisfiable", ["CANNOT_CHECK"]),
+        ("C053-CLEAN-PHASE-INCOMPLETE-PAIR-COVERAGE-v1", "a negative packet omitting at least one of the 32 parameter pairs", ["CANNOT_CHECK"]),
+        ("C053-CLEAN-PHASE-SOURCE-MISMATCH-v1", "a packet with one mutated C041/C048/pre-candidate binding", ["CANNOT_CHECK"]),
+        ("C053-CLEAN-PHASE-CONFLICTING-CERTIFICATES-v1", "simultaneously valid-looking positive and negative packets", ["CANNOT_CHECK"]),
+        ("C053-CLEAN-PHASE-FRONTEND-BRANCH-PROPAGATION-v1", "all branches through the future full evaluator", list(candidate["allowed_branches"])),
     ]
     return seal({
         "schema_version": "1.0.0",
@@ -277,8 +277,8 @@ def falsifier_identity(candidate: dict, evaluator: dict) -> dict:
         "frozen_at_utc": FALSIFIER_FROZEN_AT,
         "identity_kind": "INERT_FUTURE_MATHEMATICAL_REFUTER_WORLD_MANIFEST",
         "future_worlds": [
-            {"world_id": world_id, "future_materialization_obligation": obligation, "expected_branch": branch, "materialized": False}
-            for world_id, obligation, branch in worlds
+            {"world_id": world_id, "future_materialization_obligation": obligation, "expected_branches": branches, "materialized": False}
+            for world_id, obligation, branches in worlds
         ],
         "direct_mathematical_refuters": [
             "one claimed compatible witness violates a field boundary, variable range, clause boundary, padding bit, or one of the 33 equalities",

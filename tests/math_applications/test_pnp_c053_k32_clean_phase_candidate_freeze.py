@@ -89,9 +89,10 @@ def test_evaluator_and_falsifier_fail_closed_without_materialization() -> None:
     assert evaluator["result_accessed"] is False
     assert len(worlds) == 9
     assert all(world["materialized"] is False for world in worlds.values())
-    assert worlds["C053-CLEAN-PHASE-SYNTAX-SURVIVAL-ONLY-v1"]["expected_branch"] == "CANNOT_CHECK"
-    assert worlds["C053-CLEAN-PHASE-SAT-PARENT-FALSE-POSITIVE-v1"]["expected_branch"] == "CANNOT_CHECK"
-    assert worlds["C053-CLEAN-PHASE-INCOMPLETE-PAIR-COVERAGE-v1"]["expected_branch"] == "CANNOT_CHECK"
+    assert worlds["C053-CLEAN-PHASE-SYNTAX-SURVIVAL-ONLY-v1"]["expected_branches"] == ["CANNOT_CHECK"]
+    assert worlds["C053-CLEAN-PHASE-SAT-PARENT-FALSE-POSITIVE-v1"]["expected_branches"] == ["CANNOT_CHECK"]
+    assert worlds["C053-CLEAN-PHASE-INCOMPLETE-PAIR-COVERAGE-v1"]["expected_branches"] == ["CANNOT_CHECK"]
+    assert worlds["C053-CLEAN-PHASE-FRONTEND-BRANCH-PROPAGATION-v1"]["expected_branches"] == load(CANDIDATE)["allowed_branches"]
 
 
 def test_freeze_accesses_no_result_or_authority_and_extends_trace_tip() -> None:
