@@ -1,0 +1,88 @@
+{
+  "application_base_sha": "ce7e3491c67ae62b387ce77e71cb1bf37acace48",
+  "artifact_hash": "sha256:d5c400811bca69b77e5e35198ed6ed766ab24e8b9938325b94f6dc149e71f912",
+  "atom_id": "O9d12a2a1b-C052-V2.1",
+  "authority": {
+    "candidate_is_proposal_only": true,
+    "independent_review": false,
+    "mathematical_result_credit": 0,
+    "mathematical_saturation_credit": 0,
+    "p_vs_np_authority": false,
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "candidate_id": "PNP-C052-OFFWINDOW-UNSAT-ANCHOR-MARGINAL-LEMMA-v1",
+  "chronology": {
+    "candidate_identity_frozen": true,
+    "falsifier_manifest_frozen": true,
+    "formula_witness_constructed": false,
+    "hidden_label_accessed": false,
+    "implementation_created": false,
+    "k31_regression_executed": false,
+    "overlap_or_native_result_accessed": false,
+    "proof_or_falsifier_executed": false,
+    "v21_pre_candidate_packet_merged_before_candidate": true
+  },
+  "framework_pin": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+  "frozen_at_utc": "2026-08-12T13:59:53Z",
+  "frozen_scope": [
+    "exact quantified marginal off-window lemma identity",
+    "marginal-not-single-bit-flip caveat",
+    "proof obligations and decisive falsifiers",
+    "k31 as an unevaluated planned public regression identity"
+  ],
+  "next_authorized_action": "PR_REVIEW_MERGE_ONLY_NO_PROOF_OR_EVALUATION",
+  "public_trace_delta": {
+    "action_summary": "Freeze the exact quantified off-window UNSAT-anchor lemma, its marginal-only boundary, and a planned unevaluated k31 regression.",
+    "alternatives_considered": [
+      "execute constructed witnesses now",
+      "freeze a stronger single-bit-flip statement",
+      "reuse consumed k20 as hidden validation",
+      "freeze the exact marginal lemma and defer every proof/evaluation"
+    ],
+    "artifact_hash": "sha256:d1b5d84450f5746894e18297ade73af113d3737c8dd5186dafbd834df3c5ffc6",
+    "atom_id": "O9d12a2a1b-C052-V2.1",
+    "chronology_basis": "EXACT_MERGED_MAIN_THEN_LOCAL_RESULT_BLIND_CANDIDATE_FREEZE",
+    "chronology_order_index": 33,
+    "decision_rationale": "The marginal quantifier is sufficient for the local forced-coordinate corollary, while proof, regression, and overlap must remain later separately authorized actions.",
+    "event_id": "O9d12a2a1b-C052-V21-E33",
+    "event_type": "CANDIDATE_PROPOSED",
+    "evidence_pointers": [
+      "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C052_V21_OFFWINDOW_UNSAT_ANCHOR_LEMMA_FREEZE_20260812.json",
+      "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C052_V21_OFFWINDOW_LEMMA_FALSIFIER_MANIFEST_20260812.json"
+    ],
+    "next_steps": [
+      "PR and merge this candidate identity after review",
+      "freeze a separate proof-check authorization before constructing witnesses or executing the k31 regression"
+    ],
+    "outputs": [
+      "sha256:04f0e62b88ee03c371c92f998340c842e82d822fed2f378dabb04eee549f1ab5",
+      "sha256:655487d3814bcfa2eeedc0ef87f0082f6dd17fbf6df0cf3741dabd9d8ed69675",
+      "ZERO_MATHEMATICAL_RESULT_CREDIT"
+    ],
+    "previous_event_hash": "sha256:d27ecbd279497f7b645c805ec064479bc7e7575ea98628a6c538b8391540307d",
+    "residuals": [
+      "future proof-check authorization required",
+      "actual H_k intersection P_(k+1) remains open",
+      "P-versus-NP root remains open"
+    ],
+    "state_summary": "The v2.1 pre-candidate packet is public on exact main; only an inert off-window marginal-lemma identity and future falsifier manifest are frozen.",
+    "timestamp": "2026-08-12T13:59:53Z",
+    "uncertainties": [
+      "the lemma has not been proof-checked in this freeze",
+      "k31 arithmetic and semantic obligations remain planned",
+      "same-context review is not independent peer review"
+    ]
+  },
+  "receipt_id": "PNP-C052-V21-OFFWINDOW-CANDIDATE-FREEZE-RECEIPT-20260812",
+  "schema_version": "1.0.0",
+  "source_identities": {
+    "candidate_artifact_hash": "sha256:04f0e62b88ee03c371c92f998340c842e82d822fed2f378dabb04eee549f1ab5",
+    "candidate_raw_sha256": "sha256:9c1916588060aaa127b8c5a3828e9c5f07840e7f8ee986bba819829e6e3accab",
+    "candidate_trace_delta_artifact_hash": "sha256:d1b5d84450f5746894e18297ade73af113d3737c8dd5186dafbd834df3c5ffc6",
+    "falsifier_artifact_hash": "sha256:655487d3814bcfa2eeedc0ef87f0082f6dd17fbf6df0cf3741dabd9d8ed69675",
+    "falsifier_raw_sha256": "sha256:01fa7f0c38989ab8335d646bdbdddde2e7cc3ccce2475ae151ee42b4fa394bfc",
+    "pre_candidate_last_event_id": "O9d12a2a1b-C052-V21-E32",
+    "pre_candidate_trace_git_blob": "b22c284180118a5d363aed6a7b688aceb98f79c0",
+    "pre_candidate_trace_raw_sha256": "sha256:040464460d99e7abdea80ef841c11a4d2635fc89f2ef3bba8383df97f498c659"
+  }
+}

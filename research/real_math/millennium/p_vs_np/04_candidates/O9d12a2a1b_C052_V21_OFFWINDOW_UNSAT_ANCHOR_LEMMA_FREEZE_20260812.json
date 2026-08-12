@@ -1,0 +1,191 @@
+{
+  "adjacent_support_corollary_boundary": {
+    "additional_premise": "At least one current C041 support cell has encoded length 2*(k+1).",
+    "non_effect": "This does not construct or prove an element of H_k intersection P_(k+1).",
+    "proposed_local_effect": "The current prefix exposes MAGIC[0..7], while the parent semantic language has no universally unequal coordinate among h[0..7]."
+  },
+  "allowed_future_result_branches": [
+    "PROVED_EXACT_QUANTIFIED_SCOPE",
+    "REFUTED_BY_EXACT_COUNTEREXAMPLE_OR_BROKEN_OBLIGATION",
+    "CANNOT_CHECK"
+  ],
+  "artifact_hash": "sha256:04f0e62b88ee03c371c92f998340c842e82d822fed2f378dabb04eee549f1ab5",
+  "atom_id": "O9d12a2a1b-C052-V2.1",
+  "candidate_id": "PNP-C052-OFFWINDOW-UNSAT-ANCHOR-MARGINAL-LEMMA-v1",
+  "candidate_kind": "INERT_PROSPECTIVE_MATHEMATICAL_LEMMA_SPECIFICATION",
+  "credit": {
+    "independent_review": 0,
+    "mathematical_result": 0,
+    "mathematical_saturation": 0,
+    "software_process": 0
+  },
+  "definitions": {
+    "a": "bit_length(v)",
+    "b": "bit_length(m)",
+    "encoded_length_E": "R+p=2*k",
+    "header_length_H": "6+2*a+2*b",
+    "literal_token_width_w": "1+a",
+    "magic": "11100101",
+    "padding_p": "R mod 2",
+    "payload_index_interval": "[H,R-1] using zero-based inclusive bit indices before optional padding",
+    "raw_length_R": "H+3*m*w",
+    "semantic_language": "H_k={1||c: there exists r such that x=r||c is an exact length-2k canonical C041 encoding of an UNSAT 3CNF}",
+    "window": "h[j]=x[k+j-1] for 1<=j<=7, so the parent window is x[k..k+6]"
+  },
+  "exact_quantified_candidate": {
+    "anchor_structure": "the clauses touched by x[k..k+6] are left available for the coordinate witness, while two untouched clauses are reserved as opposite repeated-unit clauses on one legal variable",
+    "cell_quantifiers": "For every positive integer tuple (k,a,b,m) satisfying b=bit_length(m), a>=2, m>=4, R=H+3*m*(1+a), p=R mod 2, and R+p=2*k",
+    "coordinate_corollary": "h[0]=1=MAGIC[0], and both marginal values are proposed for every h[j], 1<=j<=7; therefore no coordinate j in {0,...,7} is universally forced unequal to MAGIC[j] over H_k",
+    "existential_conclusion": "there exists an exact canonical UNSAT length-2k parent word x, with h=1||x[k:], such that h[j]=epsilon",
+    "full_a_cell_quantifier": "for every v with 2^(a-1)<=v<=2^a-1",
+    "marginal_quantifiers": "for every j in {1,...,7} and every epsilon in {0,1}",
+    "window_premise": "H<=k and k+6<R, equivalently x[k..k+6] lies wholly in the unpadded literal payload"
+  },
+  "frozen_at_utc": "2026-08-12T13:59:53Z",
+  "future_result_firewall": {
+    "decoder_or_sat_executed": false,
+    "formula_witness_constructed": false,
+    "hidden_world_materialized_or_label_accessed": false,
+    "implementation_present": false,
+    "k31_regression_executed": false,
+    "overlap_compared": false,
+    "proof_checked": false
+  },
+  "lineage": {
+    "candidate_generated_only_after_v21_pre_candidate_packet_merged": true,
+    "consumed_k20_not_reused_as_hidden_validation": true,
+    "public_v2_invalid_freeze_preserved": true,
+    "superseding_parent_atom": "O9d12a2a1b-C052-V2.1",
+    "v1_semantic_subset_failure_preserved": true
+  },
+  "marginal_not_independent_caveat": {
+    "asserted_meaning": "For each fixed (v,j,epsilon), a possibly different H_k member may witness h[j]=epsilon.",
+    "not_asserted": [
+      "one common formula realizes arbitrary prescribed values at all seven coordinates",
+      "all 2^7 window patterns occur",
+      "two witnesses can be chosen to differ only at coordinate j",
+      "other bits of the same variable-index token remain fixed while one index bit flips"
+    ],
+    "reason_for_boundary": "Legal variable indices form {1,...,v}, not an unconstrained Boolean a-cube; coordinate-wise marginal support is the exact quantifier needed for the local forced-coordinate corollary."
+  },
+  "non_guarantees": [
+    "no proof or mathematical result in this freeze",
+    "no H_k intersection P_(k+1) witness or impossibility result",
+    "no classifier, kernel, adapter, falsifier, or evaluator implementation",
+    "no hidden label, theorem novelty, independent review, circuit lower bound, or P-versus-NP authority"
+  ],
+  "object": "The exact C041 canonical UNSAT suffix language H_k when h[1..7] is wholly inside the literal payload and at least two clauses can be reserved outside the clauses touched by that window.",
+  "proof_obligations_for_future_authorized_check": [
+    "O1_EXACT_C041_HEADER_TOKEN_RAW_AND_PADDED_LENGTH_IDENTITIES",
+    "O2_SEVEN_BIT_PAYLOAD_INTERVAL_TOUCHES_AT_MOST_TWO_CLAUSES",
+    "O3_M_GE_4_LEAVES_TWO_UNTOUCHED_CLAUSES",
+    "O4_OPPOSITE_REPEATED_UNIT_CLAUSES_ARE_CANONICAL_FOR_EVERY_V_IN_FULL_A_CELL",
+    "O5_RESERVED_ANCHOR_PAIR_MAKES_THE_WHOLE_FORMULA_UNSAT_INDEPENDENT_OF_TOUCHED_CLAUSES",
+    "O6_EVERY_SIGN_PHASE_HAS_BOTH_MARGINAL_VALUES_INSIDE_H_K",
+    "O7_EVERY_VARIABLE_INDEX_BIT_HAS_BOTH_LEGAL_MARGINAL_VALUES_FOR_EVERY_FIXED_V_IN_THE_FULL_A_CELL",
+    "O8_LITERAL_CONTENT_CHANGES_PRESERVE_HEADER_LENGTH_PADDING_AND_EXACT_H_K_BINDING",
+    "O9_H0_EQUALS_MAGIC0_AND_EACH_H1_THROUGH_H7_HAS_A_MAGIC_MATCHING_H_K_MEMBER",
+    "O10_K31_PARENT_PREMISES_AND_WINDOW_TO_CLAUSE_BINDING",
+    "O11_LENGTH64_CURRENT_SUPPORT_BRANCH_EXHAUSTION",
+    "O12_NO_SMALLER_ADJACENT_SUPPORTED_PREMISE_CELL",
+    "O13_MARGINAL_QUANTIFIER_IS_NOT_STRENGTHENED_TO_SINGLE_BIT_FLIP_OR_JOINT_PATTERN_COVERAGE"
+  ],
+  "qoi": "Whether an off-window contradictory clause pair certifies coordinate-wise marginal variation inside H_k and thereby removes only the local h[0..7] forced-MAGIC obstruction.",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "smallest_planned_public_regression": {
+    "arithmetic_or_semantic_evaluation_executed_in_this_round": false,
+    "authority": "FROZEN_EXPECTATION_FOR_LATER_PROOF_NOT_A_RESULT",
+    "expected_exhaustive_current_cells_for_future_proof": [
+      {
+        "R_plus": 64,
+        "a_plus": 1,
+        "b_plus": 4,
+        "m_plus": 8,
+        "p_plus": 0,
+        "v_plus_range": [
+          1,
+          1
+        ]
+      },
+      {
+        "R_plus": 63,
+        "a_plus": 4,
+        "b_plus": 2,
+        "m_plus": 3,
+        "p_plus": 1,
+        "v_plus_range": [
+          8,
+          15
+        ]
+      },
+      {
+        "R_plus": 64,
+        "a_plus": 6,
+        "b_plus": 2,
+        "m_plus": 2,
+        "p_plus": 0,
+        "v_plus_range": [
+          32,
+          63
+        ]
+      }
+    ],
+    "expected_parent_cell_for_future_proof": {
+      "E": 62,
+      "H": 16,
+      "R": 61,
+      "a": 2,
+      "b": 3,
+      "expected_touched_clause_indices_one_based": [
+        2,
+        3
+      ],
+      "k": 31,
+      "m": 5,
+      "p": 1,
+      "v_range": [
+        2,
+        3
+      ],
+      "w": 3,
+      "window_parent_indices": [
+        31,
+        37
+      ],
+      "window_payload_offsets": [
+        15,
+        21
+      ]
+    },
+    "required_current_encoded_length": 64,
+    "selection_rule": "least k among cells satisfying every lemma premise and having nonempty adjacent current support",
+    "status": "UNEVALUATED_PLANNED_REGRESSION_IDENTITY_ONLY",
+    "witness_formulas_or_labels_included": false
+  },
+  "source_identity": {
+    "application_base_commit": "ce7e3491c67ae62b387ce77e71cb1bf37acace48",
+    "c041_grammar": {
+      "git_blob": "fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+      "raw_sha256": "sha256:c0caca2fe7244c3d847de8b59473cec72132ec04ad3e9fab668f5cd95a2bd75a"
+    },
+    "context": {
+      "git_blob": "805dbb6b2089930b76fb7b95613c533c5241f82d",
+      "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C052_V21_SEMANTIC_KERNEL_CONTEXT_20260812.json",
+      "raw_sha256": "sha256:94911e17b89b694e19736e7b663922c172c4c676de522e43ed76e6dbb6fb32ff"
+    },
+    "framework_pin": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+    "pre_candidate_last_event": "O9d12a2a1b-C052-V21-E32",
+    "pre_candidate_trace": {
+      "git_blob": "b22c284180118a5d363aed6a7b688aceb98f79c0",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_V21_SUPERSEDING_PRE_CANDIDATE_TRACE_20260812.json",
+      "raw_sha256": "sha256:040464460d99e7abdea80ef841c11a4d2635fc89f2ef3bba8383df97f498c659"
+    }
+  },
+  "status": "FROZEN_NOT_PROVED_NOT_EXECUTED",
+  "touched_clause_bound_candidate": {
+    "claim": "The seven consecutive payload bits touch at most two clauses because each clause occupies 3*(1+a)>=9 consecutive payload bits.",
+    "reserve_consequence": "Since m>=4, at least two clauses remain untouched and are available for the opposite repeated-unit UNSAT anchor."
+  }
+}
