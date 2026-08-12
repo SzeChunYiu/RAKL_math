@@ -1,0 +1,25 @@
+{
+  "candidate_id": "C-RH-ANA-003-ZD-EXCEPTION-BRIDGE",
+  "atom_id": "RH-ANA-003",
+  "frozen_at": "2026-08-11T15:41:10Z",
+  "context_hash": "sha256:d4c0af4c47905f84e3ca740251c75379c44c48de5c5cadc2b5ee6ea023f19e5f",
+  "pre_candidate_terminal_trace_hash": "sha256:fe75bacb41ea77be033316cb6a83bb7ad4f3bd65e704f18709b634171c4cc8be",
+  "claim_under_test": "Current aggregate zeta zero-density and zero-free inputs, together with standard functional-equation and conjugation symmetry but without an additional pointwise exceptional-zero theorem, are sufficient by themselves to supply the missing all-index sign/tail bridge needed to promote the Bombieri-Lagarias/Li explicit-formula representation to lambda_n >= 0 for every n.",
+  "scope_guard": [
+    "This tests sufficiency of the aggregate inputs alone, not every possible future use of zero-density estimates inside a stronger zeta-specific argument.",
+    "No synthetic zero multiset is asserted to be the actual zeta zero set.",
+    "No numerical verification can carry theorem authority."
+  ],
+  "falsifier_spec": {
+    "construction": "Plant one off-critical quartet closed under rho -> conjugate(rho) and rho -> 1-rho: {3/4+iT, 3/4-iT, 1/4+iT, 1/4-iT}, with T sufficiently large.",
+    "checks": [
+      "Verify that the current explicit zero-free region near sigma=1 does not exclude beta=3/4 for the chosen large T.",
+      "Verify that a zero-density upper bound of positive power size does not force the exceptional count to be zero and therefore is logically compatible with one planted quartet.",
+      "For rho_L=1/4+iT, evaluate |1-1/rho_L|^2 exactly and determine whether it exceeds 1.",
+      "Use the exact Li zero-transform sensitivity and the Voros non-RH growth dichotomy only as source-bound interpretation; do not infer that the quartet occurs for zeta."
+    ],
+    "pass_condition": "The aggregate hypotheses themselves imply an exact mechanism that excludes or sign-neutralizes the planted quartet uniformly for every Li index n.",
+    "fail_condition": "The aggregate hypotheses permit the planted quartet while its left partner has |1-1/rho|>1, leaving the all-n Li sign bridge uncontrolled."
+  },
+  "authority": "PROPOSAL_ONLY"
+}

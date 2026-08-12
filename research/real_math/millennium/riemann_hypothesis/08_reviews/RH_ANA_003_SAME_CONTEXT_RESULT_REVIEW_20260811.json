@@ -1,0 +1,15 @@
+{
+  "review_id": "RH-ANA-003-SAME-CONTEXT-RESULT",
+  "atom_id": "RH-ANA-003",
+  "candidate_id": "C-RH-ANA-003-ZD-EXCEPTION-BRIDGE",
+  "authority": "SAME_CONTEXT_ROLE_SEPARATED_NOT_INDEPENDENT_REVIEW",
+  "roles": [
+    {"role":"explicit-formula/zero-density","finding":"PASS_SCOPE: Guth-Maynard is an aggregate positive-power zero-count upper bound at sigma=3/4, so the bound itself does not imply zero exceptions; Bellotti-Trudgian-Yang excludes only a region near sigma=1 and therefore does not exclude beta=3/4 at large height."},
+    {"role":"Li/positivity","finding":"PASS_SCOPE: the exact identity |1-1/(1/4+iT)|^2=(T^2+9/16)/(T^2+1/16)>1 confirms exceptional-zero sensitivity; Voros supplies the source-bound RH/non-RH Li growth dichotomy. Do not overclaim that the synthetic quartet is a zeta zero set."},
+    {"role":"mollifier/resonance","finding":"PASS_WITH_GUARD: the obstruction transfers to proportion outputs only at the quantifier level. It does not show mollifiers/resonance cannot contribute to a future endpoint or pointwise theorem."},
+    {"role":"adversarial verifier","finding":"PASS: the result is a no-go for the stated sufficiency implication, not an RH disproof or a theorem about actual off-line zeros. The residual explicitly requires extinction or neutralization."},
+    {"role":"RAKL/provenance","finding":"PASS: pre-candidate context, memory and trace were committed before candidate commit 747660d9b5c129a6a2f433f0d61b8bd22b0eddc7; negative history remains route-local and root promotion is ineligible."}
+  ],
+  "consensus": "Retain the result as a project-local structural obstruction and rotate the next analytic search toward exceptional-zero-sensitive exact cancellation or a genuinely pointwise theorem. No root or novelty authority.",
+  "independent_review_count": 0
+}
