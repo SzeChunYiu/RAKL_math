@@ -53,19 +53,19 @@ No new reusable operator or motif is promoted by this single cycle.
 
 ### Success / analogue memory
 
-Retrieved: `LRT-THM1.1-DOUBLE-CONE`, `LRT-COR1.5-GREAT-CIRCLE`, `AB-TYPEI-ANCIENT`, `AB-COMPACT`, `GM-TYPEI-DIRECTION-CONTINUITY`, `GRUJIC-2607.08866-LOG-BMO-DEPLETION`, `T-XM-ROOT-BRIDGE-STABILITY-AUDIT`.
+Retrieved (7): `LRT-THM1.1-DOUBLE-CONE`, `LRT-COR1.5-GREAT-CIRCLE`, `AB-TYPEI-ANCIENT`, `AB-COMPACT`, `GM-TYPEI-DIRECTION-CONTINUITY`, `GRUJIC-2607.08866-LOG-BMO-DEPLETION`, `T-XM-ROOT-BRIDGE-STABILITY-AUDIT`.
 
-Selected: the two Lei–Ren–Tian interfaces, `AB-COMPACT`, and `T-XM-ROOT-BRIDGE-STABILITY-AUDIT`.
+Selected (4): the two Lei–Ren–Tian interfaces, `AB-COMPACT`, and `T-XM-ROOT-BRIDGE-STABILITY-AUDIT`.
 
-Rejected/deferred: Giga–Miura because its direction-continuity hypothesis is additional and its exact theorem text was not needed as a load-bearing interface; Grujic 2026 because its `L^{3/2,infinity}` vorticity concentration and weighted-BMO direction assumptions are not consequences of the active fibre; classical coherence criteria for the same reason.
+Rejected/deferred from that retrieved set (3): `AB-TYPEI-ANCIENT@BACKGROUND_PRODUCER_NOT_SELECTED_FOR_TRANSPORT_TEST` because the exact compactness output was already represented by `AB-COMPACT`; Giga–Miura because its direction-continuity hypothesis is additional and its exact theorem text was not needed as a load-bearing interface; Grujic 2026 because its `L^{3/2,infinity}` vorticity concentration and weighted-BMO direction assumptions are not consequences of the active fibre. Classical Constantin–Fefferman / Beirão da Veiga–Berselli coherence was considered as a source family but is not counted as a retrieved memory ID in this receipt.
 
 ### Failure memory
 
-Retrieved: `F-NS-B1a3-PROFILE-LEAKAGE`, `F-NS-B1a3-UNCONTROLLED-FAR-FIELD`, `F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH`, `F-NS-B1a3-UNIQUE-CONTINUATION-HYPOTHESIS-GAP`, `F-NS-B1a3-EQUATION-CHANGE-MISMATCH`, `F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER`, and `F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION`.
+Retrieved (7): `F-NS-B1a3-PROFILE-LEAKAGE`, `F-NS-B1a3-UNCONTROLLED-FAR-FIELD`, `F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH`, `F-NS-B1a3-UNIQUE-CONTINUATION-HYPOTHESIS-GAP`, `F-NS-B1a3-EQUATION-CHANGE-MISMATCH`, `F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER`, and `F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION`.
 
-Selected for routing: the previous interface-mismatch and equation-class lessons, specifically to prevent another implicit producer/consumer glue and to keep stationary/profile theorems out of a general ancient class.
+Selected (2) for routing: the previous interface-mismatch and equation-class failures, specifically to prevent another implicit producer/consumer glue and to keep stationary/profile theorems out of a general ancient class.
 
-Rejected as primary diagnoses here: far-field pressure/global tail, profile leakage, and backward uniqueness. They remain valid scoped experience but Lei–Ren–Tian is a local suitable-weak consumer, so importing those blockers into this child would be category error.
+Rejected/deferred as primary diagnoses (5): profile leakage, uncontrolled far field, unique-continuation gap, scale-neutral local-energy ledger, and kinetic-energy nonquantization. They remain valid scoped experience but do not diagnose this local derivative/direction interface.
 
 **Missed relevant memory:** `CANNOT_MEASURE` because no exhaustive relevance-labelled universe was frozen. Absence of additional relevant memory is not asserted.
 
