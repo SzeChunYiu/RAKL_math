@@ -1,0 +1,44 @@
+{
+  "trace_id": "TRACE-BSD-A1a1-R10-20260812",
+  "delta_id": "TRACE-BSD-A1a1-R10-HIGHER-GZ-COORDINATE-AUDIT-20260812",
+  "base_last_event_id": "BSD-A1a1-E33-R9-RESIDUAL-SPLIT-REVIEW",
+  "base_last_event_hash": "sha256:da620654c4c05e4f59039a1722405548183cdf0630e2674f1c07872df61426ea",
+  "hash_rule": "event artifact_hash is sha256 of canonical JSON for that event with keys sorted and artifact_hash omitted",
+  "entries": [
+    {
+      "event_id": "BSD-A1a1-E34-R10-STRUCTURAL-HIGHER-GZ-ROUTE-FALSIFIED",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "COUNTEREXAMPLE_FIRST_ROUTE_PRUNING",
+      "timestamp": "2026-08-12T04:36:00Z",
+      "state_summary": "R9 proved only a scoped complex-rank-two to p-infinity Selmer-corank lower bound; exactness and transverse localization remained open.",
+      "action_summary": "Audit Kim's structural higher Gross-Zagier theorem as the sharp-order candidate; test whether its source coordinate is the complex Taylor derivative/order or an arithmetic/discrete Kolyvagin-Kurihara order; cross-check a current higher-Gross-Zagier theorem family for number-field applicability.",
+      "evidence_pointers": ["BSD_A1a1_R10_HIGHER_GZ_COORDINATE_AUDIT_20260812.json", "arXiv:2203.12161", "arXiv:2203.12159", "arXiv:2607.07531"],
+      "alternatives_considered": ["read the structural higher Gross-Zagier title as a complex-derivative bridge", "transfer the current function-field shtuka theorem to E/Q", "repeat generalized-Kato or plectic carrier rotation"],
+      "decision_rationale": "The sharp structural equalities begin in arithmetic/discrete coordinates; they do not derive those coordinates from exact complex analytic rank two. The function-field higher-derivative theorem has an unrepaired domain/interface difference witness.",
+      "outputs": ["ROUTE_FAMILY_PRUNED_STRUCTURAL_HIGHER_GZ_AS_COMPLEX_RANK2_UPPER_BOUND", "NO_NEW_MATHEMATICAL_CANDIDATE", "COORDINATE_TYPE_MISMATCH_VERIFIED_IN_SOURCE_SCOPE"],
+      "uncertainties": ["bounded search is not literature-complete", "future number-field analytic higher-Gross-Zagier results may exist outside audited sources", "transverse p-local localization remains independent"],
+      "residuals": ["COMPLEX_RANK2_TO_SHARP_DERIVED_HEEGNER_KOLYVAGIN_OR_KURIHARA_ORDER", "TRANSVERSE_P_LOCALIZATION_NONZERO", "PINFINITY_SELMER_TO_VP_SELMER_COORDINATE_BINDING_WHERE_USED", "SELMER_TO_MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_COMPLEX_LEADING_TERM_GLUE"],
+      "next_steps": ["search for an actual number-field complex second-derivative to derived-Heegner/Kolyvagin comparison theorem", "test any claimed sharp-order theorem for strict premise discharge before carrier rotation"],
+      "previous_event_hash": "sha256:da620654c4c05e4f59039a1722405548183cdf0630e2674f1c07872df61426ea",
+      "artifact_hash": "sha256:55012336726e5242deb14327fe61f0adba041bdb3532d84b419fbbe492cace2d"
+    },
+    {
+      "event_id": "BSD-A1a1-E35-R10-COORDINATE-RESIDUAL-REVIEW",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "SAME_CONTEXT_REVIEW_AND_RESIDUAL_REFINEMENT",
+      "timestamp": "2026-08-12T04:38:00Z",
+      "state_summary": "The structural higher Gross-Zagier route is valid in its arithmetic scope but cannot supply the missing source-coordinate conversion from complex analytic rank two.",
+      "action_summary": "Run seven-role same-context review, apply cross-problem representation-relocation memory only through a DifferenceWitness, separate route-pruning failure from local theorem validity and full BSD gluing, and freeze the next exact discriminator.",
+      "evidence_pointers": ["BSD_A1a1_R10_PROSPECTIVE_EXPERT_REVIEW_20260812.md", "BSD_A1a1_R10_DIAGNOSIS_SHADOW_20260812.json", "BSD_A1a1_R10_STRUCTURAL_HIGHER_GZ_FAILURE_SHADOW_20260812.json"],
+      "alternatives_considered": ["promote a new obstruction family", "count the cross-problem Hodge failure as BSD theorem authority", "count the source-title ambiguity as a framework lesson", "close A1a2 using arithmetic sharpness alone"],
+      "decision_rationale": "Only the representation route is falsified. The theorem itself remains valid, no universal no-go is proved, and the active BSD obstruction persists with a sharper source-coordinate residual.",
+      "outputs": ["ROUTE_PRUNING_SUCCESS", "A1A2_ACTIVE_REFINED_RESIDUAL", "NO_LESSON_TOOL_MOTIF_OR_OBSTRUCTION_PROMOTION", "ROOT_OPEN_NO_SOLUTION_CERTIFICATE"],
+      "uncertainties": ["no independent mathematical review", "no recall-complete literature denominator", "no causal no-memory counterfactual"],
+      "residuals": ["COMPLEX_RANK2_TO_SHARP_DERIVED_HEEGNER_KOLYVAGIN_OR_KURIHARA_ORDER", "TRANSVERSE_P_LOCALIZATION_NONZERO", "PINFINITY_SELMER_TO_VP_SELMER_COORDINATE_BINDING_WHERE_USED", "SELMER_TO_MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_COMPLEX_LEADING_TERM_GLUE"],
+      "next_steps": ["bounded historical-and-current search for number-field analytic higher Gross-Zagier/explicit-reciprocity comparisons with exact complex-rank-two source", "if none survives, revisit SEARCH/JUMP/GLUE coverage before any LIFT or new carrier"],
+      "previous_event_hash": "sha256:55012336726e5242deb14327fe61f0adba041bdb3532d84b419fbbe492cace2d",
+      "artifact_hash": "sha256:aab8b787ec4c40cbb14f48f70a24476c6d0fe7431f1a46993725dec3b0345286"
+    }
+  ],
+  "authority": "PUBLIC_DECISION_TRACE_DELTA_PROPOSAL_ONLY_NO_ROOT_AUTHORITY"
+}
