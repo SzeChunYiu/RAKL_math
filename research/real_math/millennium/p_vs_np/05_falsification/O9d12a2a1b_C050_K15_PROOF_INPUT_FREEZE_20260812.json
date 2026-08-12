@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "C050_K15_HAND_PROOF_INPUT_FREEZE",
+  "authority": "PROPOSAL_SHADOW_SAME_CONTEXT_NOT_INDEPENDENT_REVIEW",
+  "atom_id": "O9d12a2a1b-C050-K15-EVAL",
+  "candidate_id": "C050-K15-TARGET-BLIND-SELECTOR-DISCRIMINATOR-v1",
+  "pre_action_receipt_sha256": "e271fe900e30162615a419f4776fa16da208521643acba9afd1f4f6b1ca49ab6",
+  "fibre_snapshot_hash": "0e2585c818da2cded625fcf97d91864d4136c2962a5bf996597dfebd7fc27da0",
+  "frozen_at_utc": "2026-08-12T06:53:00Z",
+  "qoi": "EXACT_H15_INTERSECTION_P16_CLASSIFICATION",
+  "proposed_result_branch": "SCOPED_OVERLAP_IMPOSSIBILITY_CANDIDATE_PENDING_HOSTILE_VERIFICATION",
+  "source_bindings": [
+    {
+      "role": "EXACT_APPLICATION_ENCODING_SOURCE",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+      "git_blob": "fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+      "application_base": "2c0303c65947918af90ba968efcb5f7aeb0acce2"
+    },
+    {
+      "role": "FROZEN_K15_SELECTOR_AND_DISCRIMINATOR",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C050_K15_SELECTOR_DISCRIMINATOR_FREEZE_20260812.json",
+      "artifact_hash": "sha256:47bf8d99a7c5620b8ab8f2e3fadfb762125df921bed4b65fe2ddb56f4733c5e1"
+    },
+    {
+      "role": "SUCCESSOR_TARGET_AUTHORIZATION",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C050_K15_TARGET_EVAL_PRE_ACTION_20260812.json",
+      "pre_action_receipt_sha256": "e271fe900e30162615a419f4776fa16da208521643acba9afd1f4f6b1ca49ab6"
+    }
+  ],
+  "proof_inputs": {
+    "magic": "11100101",
+    "magic_zero_indexed_bit_3": "0",
+    "parent_length": 30,
+    "parent_half_length": 15,
+    "parent_parameter_regime": {"v": 1, "m": 3, "width": 1, "padding": false},
+    "parent_header": "111001011011",
+    "parent_header_length": 12,
+    "parent_payload_form": "s1 1 s2 1 s3 1 s4 1 s5 1 s6 1 s7 1 s8 1 s9 1",
+    "parent_suffix_after_equal_split": "1 s3 1 s4 1 s5 1 s6 1 s7 1 s8 1 s9 1",
+    "transpose_row_label": "1 || c = 1 1 s3 1 s4 1 s5 1 s6 1 s7 1 s8 1 s9 1",
+    "transpose_row_label_zero_indexed_bit_3": "1",
+    "current_length": 32,
+    "current_parameter_regimes_frozen": [
+      {"v_range": [2,3], "m": 2, "width": 2, "padding": false},
+      {"v_range": [8,15], "m": 1, "width": 4, "padding": true}
+    ],
+    "current_prefix_invariant": "Every canonical length-32 current word begins with MAGIC, so prefix_16(y)[3]=MAGIC[3]=0."
+  },
+  "hand_derivation": [
+    "The frozen selector proves that every canonical length-30 UNSAT-capable parent has v=1,m=3. The raw encoding length is 30, so there is no pad.",
+    "For v=1 the literal width is one and every variable-index bit is exactly 1. The 12-bit header is MAGIC || gamma(1) || gamma(3) = 111001011011.",
+    "The equal split occurs three payload bits after that header. Writing the nine literal signs as s1,...,s9, the suffix c is 1,s3,1,s4,1,s5,1,s6,1,s7,1,s8,1,s9,1.",
+    "Therefore the literal-transpose row label 1||c has zero-indexed bit 3 equal to 1, independently of every sign and independently of whether the parent formula is SAT or UNSAT.",
+    "Every canonical current word begins with MAGIC=11100101. Hence every length-16 canonical prefix has zero-indexed bit 3 equal to 0, including both frozen length-32 parameter regimes.",
+    "Thus exact equality 1||c=prefix_16(y) is impossible for every canonical length-30 parent and every canonical length-32 current word. A fortiori it is impossible for the canonical-UNSAT parent subset H_15."
+  ],
+  "candidate_conclusion": "H_15 intersection P_16 is empty under the unchanged C041 grammar and C048 swapped reduction.",
+  "difference_witness_vs_c049_k12": {
+    "shared_family": "fixed payload/header bit incompatibility after equal split",
+    "changed_coordinate": "k=12 mismatch was at zero-indexed label bit 4; k=15 split phase shifts the forced parent variable-index bit to zero-indexed label bit 3.",
+    "nontransfer_statement": "The k=12 bit position was not assumed. The k=15 bit position is rederived from the frozen v=1,m=3 parse and equal split."
+  },
+  "falsifiers": [
+    "a canonical length-30 parent outside v=1,m=3",
+    "a legal v=1 literal whose width-one variable-index bit is not 1",
+    "a different equal-split suffix start than payload position 3",
+    "a canonical length-32 word whose zero-indexed prefix bit 3 is not MAGIC[3]=0",
+    "one exact canonical pair with 1||c equal to prefix_16(y)",
+    "any silent change to grammar, split, label map, or C048 swapped reduction"
+  ],
+  "expert_cell": [
+    {"role":"domain_theory_lead","finding":"The contradiction is syntactic and uniform over the whole canonical parent regime, so UNSAT semantics need not be invoked after the fixed-bit clash is established."},
+    {"role":"analogy_method_transfer_lead","finding":"The synchronized-code analogy is useful only to expose the shared coordinate; it contributes no theorem authority and no semantic UNSAT claim."},
+    {"role":"adversarial_falsification_lead","finding":"Recompute the split phase and MAGIC indexing independently; an off-by-one error is the cheapest decisive falsifier."},
+    {"role":"formal_methods_lead","finding":"Bind zero-indexing, header length 12, suffix start at payload position 3, and unchanged C048 label/reduction explicitly before result promotion."},
+    {"role":"novelty_research_value_lead","finding":"At most a decoder-specific representation/compositional lemma; repeated finite fixed-bit failures should reroute toward a parametric split-phase compatibility screen rather than another blind finite-k scan."}
+  ],
+  "verification_authorization": {
+    "allowed": [
+      "independent hand recomputation of the bit positions from frozen source",
+      "bounded symbolic calibration that enumerates only the already-frozen length-30/32 parameter regimes",
+      "record-level checker over this frozen proof input"
+    ],
+    "forbidden": [
+      "treat computation as proof",
+      "infer any cover lower bound or circuit lower bound",
+      "generalize to k>15 without a new atom/falsifier",
+      "claim independent review credit"
+    ]
+  },
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+}
