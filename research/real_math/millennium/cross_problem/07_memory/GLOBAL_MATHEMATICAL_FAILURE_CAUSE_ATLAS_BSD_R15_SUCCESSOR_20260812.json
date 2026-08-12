@@ -1,0 +1,634 @@
+{
+  "artifact_hash": "sha256:db809b89815e0ca6a58eaa915e531bcd52d127f5449469dd087f349763f69d11",
+  "as_of_utc": "2026-08-12T09:45:00Z",
+  "atlas_id": "GLOBAL-MATHEMATICAL-FAILURE-CAUSE-ATLAS-BSD-R15-SUCCESSOR-20260812",
+  "authority_universe": {
+    "framework_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+    "kind": "MERGED_ORIGIN_MAIN_ONLY",
+    "mathematical_only": true,
+    "pending_or_open_pr_material_counted": false,
+    "repository_sha": "f3275302b2198bbd15d551d57adce85c5762c013",
+    "software_assurance_excluded_from_mathematical_causality": true
+  },
+  "bounded_disposition": {
+    "added_specialization_ids": [
+      "SP-BSD-R15-UNCONTROLLED-QUOTIENT-CORANK"
+    ],
+    "deduplication_verdict": "SPECIALIZATION_OF_EXISTING_BSD_PREMISE_REIMPORT_AND_CROSS_REPRESENTATION_RELOCATION",
+    "distinct_failure_mechanisms_after": 12,
+    "distinct_failure_mechanisms_before": 12,
+    "mathematical_basis": "The exact sequence shows how the Selmer carrier aggregates the target rank with an uncontrolled quotient. Using carrier exactness as target exactness therefore imports quotient-zero as an unstated premise, matching the existing mechanism.",
+    "new_distinct_failure_mechanism_ids": []
+  },
+  "causal_status_vocabulary": {
+    "CANNOT_IDENTIFY_UNIQUE_CAUSE": "multiple mathematical causes remain live",
+    "OBSERVED_ONLY": "the inference failed but its cause is not identified",
+    "SUPPORTED_BOUNDED": "evidence supports a cause only in a frozen scope",
+    "VERIFIED_SCOPED": "a proof/counterexample establishes the cause in its exact scope"
+  },
+  "credit_contract": {
+    "atlas_synthesis_creates_new_mathematical_credit": false,
+    "same_context_review_is_independent": false,
+    "software_assurance_credit_units": 0,
+    "source_mathematical_claims_remain_counted_only_in_global_math_ledger": true
+  },
+  "cross_problem_equivalence_classes": [
+    {
+      "advisory": "state and attack the missing injectivity/tightness theorem before optimizing the proxy",
+      "class_id": "CROSS-IDENTIFICATION-LOSS",
+      "disanalogy": "RH needs global analytic/spectral faithfulness; NS needs scale-aligned spatial tightness and PDE compatibility",
+      "members": [
+        "FM-RH-SPEC-ANA-PROXY-NONFAITHFULNESS",
+        "FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE"
+      ],
+      "shared_structure": "the recorded observation/proxy map is many-to-one with respect to the target QoI"
+    },
+    {
+      "advisory": "freeze explicit coupling/interface obligations and reject composition when any shared-object witness is absent",
+      "class_id": "CROSS-INTERACTION-INTERFACE-LOSS",
+      "disanalogy": "PNP obstruction is exact support separability in a finite combinatorial family; YM interface may be a missing theorem or genuine infinite-volume obstruction",
+      "members": [
+        "FM-PNP-C043-C046-SEMANTICS-WITHOUT-INTERACTION",
+        "FM-YM-SAME-THEORY-INTERFACE-AND-DENSITY"
+      ],
+      "shared_structure": "locally meaningful components do not generate the target interaction after composition/projection"
+    },
+    {
+      "advisory": "require a strict-reduction or premise-discharge witness for every representation change",
+      "class_id": "CROSS-REPRESENTATION-RELOCATION",
+      "disanalogy": "Hodge equivalence is verified in a scoped first-order setting; BSD is only a bounded applicability audit",
+      "members": [
+        "FM-HODGE-REPRESENTATION-EQUIVALENCE-NOT-REDUCTION",
+        "FM-BSD-ARITHMETIC-PREMISE-REIMPORT"
+      ],
+      "shared_structure": "a new representation restates or imports the hard obligation instead of reducing it"
+    }
+  ],
+  "failure_mechanism_specializations": [
+    {
+      "attempted_implication": "corank_Zp Sel(Q,E[p^infinity])=2 -> rank_Z E(Q)=2",
+      "classification": "VERIFIED_EXACT_SEQUENCE_SPECIALIZATION_NOT_NEW_CAUSE",
+      "equivalence_class": "CROSS-REPRESENTATION-RELOCATION",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a2_R15_KUMMER_SHA_EXACT_RANK_RESULT_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a2_R15_SCOPED_MATHEMATICAL_LESSON_20260812.json"
+      ],
+      "exact_result_or_failure": "The implication is not licensed by the Selmer dimension alone. The exact identity is corank Sel=rank E(Q)+corank Sha[p^infinity]. Therefore Selmer corank two leaves the alternatives (rank, Sha-corank)=(2,0),(1,1),(0,2), subject to any additional target theorems; the exact sequence by itself selects none.",
+      "mathematical_falsifier": "A counterexample to the lemma would be an E/Q,p for which Kim's exact Kummer-Selmer sequence has the usual Selmer meaning but corank additivity fails. For the stronger attempted implication, an actual E/Q with Selmer corank 2 and positive Sha[p^infinity] corank would falsify it; no such target example is asserted here.",
+      "mathematical_ledger_credit_units": 1,
+      "mechanism_mapping": {
+        "carrier_or_representation": "p-infinity Selmer corank",
+        "exact_interface": "0 -> E(Q) tensor Q_p/Z_p -> Sel(Q,E[p^infinity]) -> Sha(E/Q)[p^infinity] -> 0",
+        "relocated_or_reimported_obligation": "corank_Zp Sha(E/Q)[p^infinity]=0, equivalently p-primary Sha finiteness in the cofinite scope",
+        "target_coordinate": "Mordell-Weil rank",
+        "why_not_new": "The parent mechanism already records that a Selmer carrier does not discharge the missing root-facing arithmetic premise. R15 identifies that premise exactly as the quotient corank in this coordinate transition; it does not introduce a different failure morphology."
+      },
+      "new_global_failure_cause_credit_units": 0,
+      "nonclaim": "No actual elliptic curve with positive Sha[p^infinity] corank is asserted; this is an exact logical sufficiency diagnosis.",
+      "parent_cause_id": "FM-BSD-ARITHMETIC-PREMISE-REIMPORT",
+      "proof_or_source_evidence": [
+        "Kim arXiv:2109.12344v3 p.1 displayed fundamental exact sequence",
+        "Mordell-Weil finite generation",
+        "additivity of Z_p-rank after Pontryagin duality",
+        "R12 coefficient-binding result",
+        "R14 Kim-Pollack theorem-direction audit"
+      ],
+      "repair_or_next_discriminator": "After any complex-order-to-Kurihara-order theorem gives exact Selmer corank two, prove Sha(E/Q)[p^infinity] finite (equivalently corank zero) from hypotheses no stronger than the active root input, or prove rank E(Q)=2 by an independent rational-point mechanism. Do not treat exact Selmer dimension as rank equality before this discriminator.",
+      "scope": "A logical sufficiency audit of the exact sequence. It does not assert existence of an elliptic curve realizing rank<2 and Selmer corank 2.",
+      "specialization_id": "SP-BSD-R15-UNCONTROLLED-QUOTIENT-CORANK",
+      "supported_and_competing_causes": {
+        "competing": [
+          {
+            "cause": "p-infinity versus V_p coefficient mismatch",
+            "status": "REJECTED_IN_THIS_SCOPE_BY_R12"
+          },
+          {
+            "cause": "Kurihara order versus Selmer corank mismatch",
+            "status": "REJECTED_CONDITIONALLY_UNDER_KIM_POLLACK_THEOREM_HYPOTHESES_BY_R14"
+          },
+          {
+            "cause": "transverse localization nonvanishing",
+            "status": "ORTHOGONAL_TO_THIS_EXACT_SEQUENCE_IDENTITY; may supply other arithmetic information but is not the missing term in this corank decomposition"
+          },
+          {
+            "cause": "finite p-primary Sha order versus corank",
+            "status": "DISTINCT_REFINED_BSD_OBLIGATION; corank zero gives finiteness here but not its exact order"
+          }
+        ],
+        "supported": "Uncontrolled p-divisible Tate-Shafarevich contribution is the unique slack term in the exact Kummer-Selmer corank identity."
+      }
+    }
+  ],
+  "failure_mechanisms": [
+    {
+      "evidence": [
+        "research/real_math/millennium/p_vs_np/04_candidates/C043_FIRST_ROW_SPLIT_RESULT_20260812.md",
+        "research/real_math/millennium/p_vs_np/04_candidates/C044_RETROSPECTIVE_Q16_MULTIPLEXING_RESULT_20260812.md",
+        "research/real_math/millennium/p_vs_np/10_feedback/C045_ROW_PROJECTION_COLLISION_MATHEMATICAL_LESSON_20260812.json",
+        "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C046_HIGH_HALF_SEPARATION_PROOF_CERTIFICATE_FREEZE_20260812.json",
+        "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C047_ORIENTATION_ONLY_SEPARATION_PROOF_CERTIFICATE_FREEZE_20260812.json",
+        "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C047_ORIENTATION_FEASIBILITY_PROOF_CHECK_RESULT_20260812.json",
+        "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C047_ORIENTATION_REPAIR_FAILURE_EXPERIENCE_DELTA_20260812.json",
+        "research/real_math/millennium/p_vs_np/10_case_study/C047_ORIENTATION_REPAIR_MATHEMATICAL_SATURATION_RECEIPT_20260812.json"
+      ],
+      "failed_inference": "more semantic objects, quotient types, or merely moving/copying prefix-selected support into the fresh-row half were expected to force exact old/new coupling and additive cover resources",
+      "falsifier": "before target enumeration, prove an exact row-label intersection under the proposed label map and exhibit reused active row and column witnesses that defeat prior multiplexing; for C047 specifically, falsify the header trichotomy by producing a supported row outside low 0..., all-zero 10..., or canonical 1||MAGIC=1111... classes, or equality with current MAGIC=1110...",
+      "id": "FM-PNP-C043-C046-SEMANTICS-WITHOUT-INTERACTION",
+      "lane": "p_vs_np",
+      "method": "derive growing cover complexity from accumulating semantic UNSAT structure in a one-sided recursive language",
+      "proximate_cause": "the original representation kept old and new support component-separable or in disjoint row/column projections; C046 proved the canonical prefix rows cannot meet the old-row support, and C047 proved the prefix-preserving mirror/two-sided repair reaches the high half but shifts MAGIC to 1||MAGIC=1111... rather than the required current MAGIC=1110... interface",
+      "repair": "change the label interface rather than only quadrant occupancy: test literal suffix-to-fresh-row transpose, header-aligned relabelling, or a different split only with an exact DifferenceWitness and a separate language/reduction preservation proof before cover evaluation",
+      "root_cause": "missing exact mathematical interaction/interface congruence in the frozen one-sided and prefix-preserving orientation variants, not insufficient enumeration depth or coarse quadrant occupancy",
+      "root_cause_status": "SUPPORTED_WITHIN_FROZEN_AND_PREFIX_PRESERVING_ORIENTATION_FAMILIES",
+      "scope": [
+        "exact frozen C041 one-sided recursion through the C046 invariant",
+        "C047 prefix-preserving new-old mirror and its union with the original old-new block for n at least 18",
+        "does not rule out literal matrix transpose with suffix on the fresh row, coordinate relabelling, unequal/overlapping splits, or other encodings",
+        "does not establish cover growth, a circuit lower bound, or P versus NP"
+      ],
+      "source_items": [
+        "L-PNP-C043-SEMANTIC-MULTIPLICITY-NONCOERCIVE",
+        "F-C044-HETEROGENEOUS-BLOCK-MULTIPLEXING",
+        "L-PNP-C045-ROW-PROJECTION-COLLISION-NECESSITY",
+        "MATH-PNP-C046-HIGH-HALF-SEPARATION",
+        "MATH-PNP-C047-ORIENTATION-ONLY-HEADER-SEPARATION"
+      ]
+    },
+    {
+      "evidence": [
+        "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_002_POSTAUDIT_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+        "research/real_math/millennium/riemann_hypothesis/04_candidates/negative_history"
+      ],
+      "failed_inference": "agreement/convergence/positivity of the representation was treated as faithful transport of the root property",
+      "falsifier": "construct two admissible global objects with the same registered finite/proxy observations but different root property, or prove a domain-uniform zero-transport/no-pollution theorem that rules such pairs out",
+      "id": "FM-RH-SPEC-ANA-PROXY-NONFAITHFULNESS",
+      "lane": "riemann_hypothesis",
+      "method": "infer global zero geometry or Li positivity from finite prefixes, convergent operator proxies, or a manifestly positive norm surrogate",
+      "proximate_cause": "finite or strong-resolvent information permits spectral pollution, wandering modes, joint-limit ambiguity, and off-critical completions; the Suzuki norm-to-Li identification reaches an RH-equivalent premise before faithfulness is obtained",
+      "repair": "require an explicit injectivity/faithfulness theorem at the exact infinite-object topology before treating proxy positivity or convergence as root evidence",
+      "root_cause": "the observation map is non-identifying for the root coordinate unless a separate global faithfulness/no-pollution theorem is proved",
+      "root_cause_status": "SUPPORTED_ACROSS_REGISTERED_FAILURES",
+      "scope": [
+        "registered finite-prefix, Galerkin, strong-resolvent, joint-limit, and Suzuki-norm routes",
+        "does not rule out faithful spectral or analytic representations"
+      ],
+      "source_items": [
+        "F-RH-ANA-001-FINITE-LI-PREFIX",
+        "F-RH-SPEC-002-STRONG-RESOLVENT-INCOMPLETE",
+        "F-RH-SPEC-002-GALERKIN-POLLUTION",
+        "F-RH-SPEC-002-JOINT-LIMIT-AMBIGUITY",
+        "F-RH-SPEC-002-FINITE-ZERO-PREFIX",
+        "F-RH-ANA-002-SUZUKI-NORM-NO-WEAKER-BRIDGE"
+      ]
+    },
+    {
+      "evidence": [
+        "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1a2_C001_FAILURE_EXPERIENCE_CANONICAL_20260812.json",
+        "research/real_math/millennium/navier_stokes/10_case_study/NS-B2a1a2_C001_MATHEMATICAL_SATURATION_RECEIPT_20260812.json"
+      ],
+      "failed_inference": "fixed-observer convergence and coarse scale-normalized bounds were assumed to control absolute mass, geometry, or pressure at sequence-dependent scales",
+      "falsifier": "translated divergence-free bump and packet constructions attack the bare transfer; a PDE-specific uniform annular-tail/pressure modulus would falsify their applicability to the solution class",
+      "id": "FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE",
+      "lane": "navier_stokes",
+      "method": "transport local compactness, topology, or normalized energy control to a moving-scale regularity quantity",
+      "proximate_cause": "translation, packet multiplicity, pressure tails, and intermediate annuli remain invisible to the registered local topology/normalization",
+      "repair": "derive a scale-aligned uniform tail/rate modulus or replace the route with a signed/telescoping identity that controls the moving QoI directly",
+      "root_cause": "scale mismatch in the observation map; whether Navier-Stokes dynamics supplies the missing modulus remains open",
+      "root_cause_status": "SUPPORTED_FUNCTIONAL_CAUSE_PDE_CAUSE_OPEN",
+      "scope": [
+        "functional transfer logic and registered NS atoms",
+        "not an NSE/Euler counterexample or impossibility theorem"
+      ],
+      "source_items": [
+        "F-NS-B1A-C001-PRESSURE-SUMMABILITY",
+        "F-NS-B1A2-KINETIC-ENERGY-NONQUANTIZATION",
+        "F-NS-B1A3B-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY",
+        "F-NS-B2A1-DOUBLE-LIMIT-TAIL-INHERITANCE-SHARPENED",
+        "F-NS-B2A1A2-FIXED-TO-MOVING-RADIUS-ESCAPE",
+        "MATH-NS-B2A1A2-UNIFORM-ANNULUS-TAIL-IFF"
+      ]
+    },
+    {
+      "evidence": [
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1A2_OS_SZZ_GLUING_FAILURE_EXPERIENCE_DELTA_20260812.json"
+      ],
+      "failed_inference": "separately valid ingredients were treated as if they acted on one invariant, dense source class in one reconstructed theory",
+      "falsifier": "in one fixed theory bind the OS quotient vector, exact translated moment identity, source-independent decay rate, and dense/cyclic excited subspace; failure of any witness rejects the composition only",
+      "id": "FM-YM-SAME-THEORY-INTERFACE-AND-DENSITY",
+      "lane": "yang_mills",
+      "method": "compose local operator closure, reflection positivity, covariance decay, and source completeness into a spectral-gap inference",
+      "proximate_cause": "operator elimination proliferates geometry; restricted sources can miss hidden states; exact covariance-to-transfer moments and post-null-quotient density for the same controlled class are unbound",
+      "repair": "construct a common invariant graded source space and prove both closure under the dynamics and density after quotient/completion before spectral exclusion",
+      "root_cause": "missing same-object/same-algebra/same-measure interface witnesses; evidence does not decide missing theorem versus genuine obstruction",
+      "root_cause_status": "SUPPORTED_INTERFACE_FAILURE_UNIQUE_MATHEMATICAL_CAUSE_OPEN",
+      "scope": [
+        "registered fixed-cutoff strong-coupling route",
+        "not a Yang-Mills no-go or continuum mass-gap claim"
+      ],
+      "source_items": [
+        "F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE",
+        "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE",
+        "F-YM-S1A2-OS-SZZ-SAME-THEORY-GLUING-UNBOUND"
+      ]
+    },
+    {
+      "evidence": [
+        "research/real_math/millennium/hodge/deformation/07_memory/H4d1a_FAILURE_EXPERIENCE_DELTA_20260811.json",
+        "research/real_math/millennium/hodge/deformation/07_memory/H4d1b_FAILURE_EXPERIENCE_DELTA_20260811.json"
+      ],
+      "failed_inference": "a reformulation of liftability was treated as an easier mechanism",
+      "falsifier": "exhibit a detector or higher-order invariant whose target obligation is strictly weaker than lift existence but still implies the required algebraic continuation",
+      "id": "FM-HODGE-REPRESENTATION-EQUIVALENCE-NOT-REDUCTION",
+      "lane": "hodge_conjecture",
+      "method": "replace first-order branch lifting by same-detector annihilation or direct obstruction vanishing",
+      "proximate_cause": "under complete first-order obstruction semantics, vanishing on the tangent branch is equivalent to the original lift statement; the same detector cannot recover information deliberately killed by Hodge persistence",
+      "repair": "change detector/order/geometry with an explicit strict-reduction proof, rather than rename the original obligation",
+      "root_cause": "no reduction in mathematical complexity and no new identifying coordinate",
+      "root_cause_status": "VERIFIED_SCOPED_REPRESENTATION_EQUIVALENCE",
+      "scope": [
+        "fixed witness, registered first-order branch and complete-obstruction fork",
+        "does not cover higher-order or other detectors"
+      ],
+      "source_items": [
+        "F-H4D1A-SAME-DETECTOR-BRANCH-NOGO",
+        "F-H4D1B-DIRECT-VANISHING-NO-COMPLEXITY-REDUCTION"
+      ]
+    },
+    {
+      "evidence": [
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a1_R8_CANONICAL_FAILURE_EXPERIENCE_DELTA_20260812.json"
+      ],
+      "failed_inference": "a new Euler-system, Kolyvagin, plectic, Selmer, or Heegner representation was assumed to derive the required arithmetic entry condition",
+      "falsifier": "produce a same-E/Q theorem starting only from exact complex analytic rank two and proving root-faithful Selmer dimension plus nonzero transverse localization without importing equivalent arithmetic strength",
+      "id": "FM-BSD-ARITHMETIC-PREMISE-REIMPORT",
+      "lane": "birch_swinnerton_dyer",
+      "method": "change arithmetic carrier to transport exact complex analytic rank two into nonvanishing/localization and full BSD data",
+      "proximate_cause": "audited theorems are downstream of, or explicitly assume, a main-conjecture/nonvanishing/localization/Selmer-rank/regulator premise not supplied by complex analytic rank two",
+      "repair": "demand an explicit complex-to-arithmetic comparison theorem and a separate full-leading-term gluing chain; do not reverse downstream implications",
+      "root_cause": "representation change relocates rather than closes the analytic-to-arithmetic bridge; no global theorem-nonexistence is established",
+      "root_cause_status": "SUPPORTED_BOUNDED_APPLICABILITY_FAILURE_CAUSE_OPEN",
+      "scope": [
+        "four audited source families and exact same E/Q scope",
+        "not a blacklist or BSD counterexample"
+      ],
+      "source_items": [
+        "F-BSD-A1A1-R8-SOURCE-FAMILY-REIMPORTS-ARITHMETIC-ENTRY"
+      ]
+    },
+    {
+      "competing_causes": [
+        {
+          "cause": "the C003 fixed-P2 conic tangent computation is false",
+          "status": "REJECTED_BY_SCOPE; C004 accepts the internal tangent calculation and tests only its projection consequence"
+        },
+        {
+          "cause": "global Hodge continuation fails",
+          "status": "UNTESTED_AND_DOWNSTREAM; the counterexample is first-order and abstract"
+        },
+        {
+          "cause": "signed-rational coefficient/category mismatch causes the unchanged image",
+          "status": "NOT_USED_IN_COUNTERMODEL; coefficient preservation is a separate obligation for an actual incidence"
+        },
+        {
+          "cause": "all added source directions are killed by the consumer projection modulo p(A)",
+          "status": "VERIFIED_IN_EXPLICIT_COUNTERMODEL; MUST_BE_TESTED_FROM_GEOMETRY_IN_ANY ACTUAL HODGE FAMILY"
+        }
+      ],
+      "evidence": [
+        "research/real_math/millennium/hodge/deformation/03_routes/H4d1c_C004_TOTAL_WITNESS_BASE_PROJECTION_NOGO_20260812.md",
+        "research/real_math/millennium/hodge/deformation/07_memory/H4d1c_C004_DIAGNOSIS_20260812.json"
+      ],
+      "failed_inference": "A properly contained in B implies p(A) properly contained in p(B) for the root-critical projection p",
+      "falsifier": "For a proposed source family, prove that the induced map B/A -> H/p(A) is nonzero for strict image gain, or prove p(B)=H for full first-order branch coverage; either certificate makes this failure mechanism inapplicable to that family but does not erase the counterexample.",
+      "id": "FM-HODGE-SOURCE-ENLARGEMENT-NOT-PROJECTION-GAIN",
+      "lane": "hodge_conjecture",
+      "method": "infer Hodge-base image enlargement from strict enlargement of an internal total-witness tangent source",
+      "proposal_only_rakl_lesson": "Bind the exact mathematical consumer map before crediting a representation change, and require a nonzero induced quotient image or surjectivity certificate. This is mathematical routing guidance only, not framework promotion.",
+      "proximate_cause": "the added quotient B/A may lie entirely in the projection kernel modulo A; the exact countermodel sends e2 to zero, so the enlarged source has unchanged image",
+      "related_failure": {
+        "id": "FM-HODGE-REPRESENTATION-EQUIVALENCE-NOT-REDUCTION",
+        "relation": "DISTINCT_PROJECTION_NONCONGRUENCE_PRESERVES_EXISTING_REPRESENTATION_NOT_REDUCTION_WARNING"
+      },
+      "repair": "Replace source tangent dimension/inclusion by the exact quotient-image obligation B/A -> H/p(A); for full branch reachability, prove every required Hodge-base tangent has a preimage while preserving signed rational class/category.",
+      "root_cause": "source-space inclusion is not a congruent quantity for target-image inclusion without a nonvertical quotient-image witness",
+      "root_cause_status": "VERIFIED_SCOPED_EXPLICIT_COUNTEREXAMPLE_AND_TRANSFER_CONDITION",
+      "scope": [
+        "linear first-order source-to-consumer projection interface",
+        "the counterexample refutes the unqualified implication only",
+        "does not decide any particular varying-family Hodge incidence without its differential",
+        "does not cover higher-order lifting, algebraization, globalization, or root initial algebraicity"
+      ],
+      "source_items": [
+        "MATH-HODGE-C004-PROJECTION-KERNEL-NONIMPLICATION"
+      ]
+    },
+    {
+      "competing_causes": [
+        {
+          "cause": "pressure or Euler nonlocality destroys positivity",
+          "status": "NOT_CAUSAL; pressure does not enter the kinetic upper bound"
+        },
+        {
+          "cause": "limit interchange or endpoint pathology creates zero density",
+          "status": "REJECTED; the inequality holds directly for each fixed time and radius limit"
+        },
+        {
+          "cause": "the hostile state violates the Euler equation or local-energy interface",
+          "status": "REJECTED_BY_SOURCE_BOUND_EXACT_TRAVELING_SOLUTION_AND_LOCAL_EQUALITY"
+        },
+        {
+          "cause": "Navier-Stokes blow-up ancestry excludes Hill or enforces quantitative growth",
+          "status": "UNRESOLVED_AND_MAY_RESTRICT_APPLICABILITY; not assumed by the bare Euler-side bridge"
+        }
+      ],
+      "evidence": [
+        "research/real_math/millennium/navier_stokes/04_candidates/NS-B2a1b2_HILL_ASYMPTOTIC_DENSITY_FALSIFIER_20260812.md",
+        "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1b2_DIAGNOSIS_20260812.json",
+        "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1b2_FAILURE_20260812.json"
+      ],
+      "exact_hill_inequality": "For U(x,t)=V(x-ct) with V in L2 and 0<=chi_R<=1: 0 <= R^-1 int chi_R(x)|U(x,t)|^2 dx <= R^-1||V||_2^2 -> 0 for every fixed t.",
+      "exact_result": "The nonzero exact translating Hill Euler state has Lambda_chi(t)=0 at every fixed time while satisfying the displayed F(a)=1 Euler-side carrier/interface checks.",
+      "failed_inference": "nonzero/unit-scale F(a)=1 Euler-side state implies Lambda_chi(t)>0",
+      "falsifier": "A source-valid theorem deriving a positive lower linear-energy-growth bound from the ancestry-specific Seregin data, or proving every source-realizable nontrivial F=1 state lies outside the finite-energy kernel, defeats this diagnosis for that narrower source class.",
+      "id": "FM-NS-FINITE-ENERGY-KERNEL-NONIDENTIFYING-DENSITY",
+      "lane": "navier_stokes",
+      "method": "use positivity or monotonicity of asymptotic linear kinetic-energy density to detect qualitative local/unit-scale nontriviality of an Euler-side state",
+      "proposal_only_rakl_lesson": "For a mathematical observable proposed as a rigidity detector, compute its exact kernel on source-admissible states before using positivity or monotonicity; require a source theorem excluding the kernel. This is mathematical routing guidance only, not framework promotion.",
+      "proximate_cause": "the R^-1-normalized observation map has every finite-total-energy state in its zero set, so finite-energy local structure is erased at linear-radius density scale",
+      "related_failure": {
+        "id": "FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE",
+        "relation": "DISTINCT_FIXED_TIME_OBSERVABLE_KERNEL_CAUSE_RELATED_TO_BUT_NOT_IDENTICAL_WITH_MOVING_SCALE_ESCAPE"
+      },
+      "repair": "Before density rigidity, characterize the observable zero set and prove source ancestry excludes it; concretely derive lower linear growth, no-incoming flux, tightness/recentering with correct quantifiers, or replace Lambda_chi by an observable coercive on source-realizable nonzero states.",
+      "root_cause": "qualitative local or unit-scale nontriviality is not coercive for linear-in-radius energy growth; the chosen observable is non-identifying without a source-inherited growth coordinate",
+      "root_cause_status": "VERIFIED_SOURCE_BOUND_EXACT_COUNTEREXAMPLE_FOR_BARE_EULER_SIDE_BRIDGE",
+      "scope": [
+        "displayed Seregin F(a)=1 Euler-side carrier class and the bare qualitative bridge",
+        "fixed-time cutoffs satisfying 0<=chi_R<=1 and finite-total-energy translating Hill witness",
+        "does not falsify Seregin Theorem 3.1",
+        "does not show Hill is a Navier-Stokes blow-up limit or identify its unit-scale norm with ancestry-specific epsilon_0",
+        "does not exclude a narrower source-realizable class with a proved lower-growth or kernel-exclusion theorem"
+      ],
+      "source_items": [
+        "MATH-NS-B2A1B2-HILL-FINITE-ENERGY-DENSITY-FALSIFIER"
+      ],
+      "supported_causes": [
+        {
+          "cause": "finite total kinetic energy forces zero R^-1-normalized expanding-cutoff density",
+          "status": "VERIFIED_BY_EXACT_HILL_INEQUALITY"
+        },
+        {
+          "cause": "qualitative nontriviality alone supplies no lower linear-energy-growth bound",
+          "status": "VERIFIED_FOR_THE_BARE_IMPLICATION_BY_NONZERO_HILL_WITNESS"
+        }
+      ]
+    },
+    {
+      "competing_causes": [
+        {
+          "cause": "no canonical UNSAT length-24 words",
+          "status": "REJECTED_BY_EXPLICIT_V1_M2_CONTRADICTION_SYNTAX"
+        },
+        {
+          "cause": "padding shifts the suffix",
+          "status": "REJECTED_RAW_LENGTH_24_IS_EVEN"
+        },
+        {
+          "cause": "transpose faithfulness causes separation",
+          "status": "REJECTED_SEPARATE_C048_EQUIVARIANCE"
+        }
+      ],
+      "evidence": [
+        "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C049_K12_PROOF_CERTIFICATE_FREEZE_20260812.json",
+        "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C049_K12_PROOF_CHECK_RESULT_20260812.json",
+        "research/real_math/millennium/p_vs_np/10_case_study/C049_K12_OVERLAP_MATHEMATICAL_SATURATION_RECEIPT_20260812.json"
+      ],
+      "failed_inference": "first semantically admissible suffix-row layer may intersect the next canonical-prefix language",
+      "falsifier": "A valid H_12 label with bit 4 zero, P_13 prefix with bit 4 one, or common label refutes the diagnosis.",
+      "id": "FM-PNP-C049-FIRST-ADMISSIBLE-FIELD-ALIGNMENT-CONFLICT",
+      "lane": "p_vs_np",
+      "method": "seek literal-transpose row collision at the first canonical-UNSAT encoding length",
+      "proposal_only_rakl_lesson": "At a first admissible size, inspect equality-case field alignment for forced-bit conflicts; rederive before transport.",
+      "proximate_cause": "minimal length forces the split exactly before v=1 payload, fixing H_12 bit 4 to 1 while MAGIC fixes P_13 bit 4 to 0",
+      "repair": "For k>12 rederive length equality/slack, field boundaries, padding, and shared bits; do not transport the k=12 alignment.",
+      "root_cause": "equality in the minimal encoding-length bound rigidly aligns variable-width fields so a payload invariant conflicts with the target header invariant",
+      "root_cause_status": "SUPPORTED_BOUNDED_K12_EXACT_SEPARATION",
+      "scope": [
+        "k=12 only",
+        "exact C041 grammar/equal split",
+        "no k>12 generalization"
+      ],
+      "source_items": [
+        "MATH-PNP-C049-K12-FIRST-ADMISSIBLE-FIXED-BIT-SEPARATION"
+      ]
+    },
+    {
+      "competing_causes": [
+        {
+          "cause": "non-dominance",
+          "status": "REJECTED_BY_INJECTIVITY_OF_Q_U_TO_Q_T"
+        },
+        {
+          "cause": "singular or nonreduced target",
+          "status": "REJECTED; TARGET_A1_IS_SMOOTH_AND_REDUCED"
+        },
+        {
+          "cause": "Hodge-specific coefficient or gluing defect",
+          "status": "UNTESTED_APPLICABILITY_BOUNDARY_NOT_CAUSE_OF_ABSTRACT_COUNTEREXAMPLE"
+        }
+      ],
+      "evidence": [
+        "research/real_math/millennium/hodge/deformation/03_routes/H4d1c_C006_RAMIFICATION_PROXY_NOGO_20260812.md",
+        "research/real_math/millennium/hodge/deformation/07_memory/H4d1c_C006_FAILURE_20260812.json"
+      ],
+      "exact_result": "For pi:A^1_t -> A^1_u, u=t^2, at t=0, Q[u] -> Q[t] is injective so the affine scheme-theoretic image is all A^1_u, while u mod u^2 maps to zero in (t)/(t^2), hence d pi_0=0.",
+      "failed_inference": "full reduced or scheme-theoretic local image implies d pi is surjective at the selected central witness",
+      "falsifier": "Prove that every admissible exact-class Hodge witness-incidence covering its target germ is unramified/submersive at the chosen witness, or that the source class excludes t -> t^2 type ramification.",
+      "id": "FM-HODGE-C006-RAMIFICATION-FIRST-ORDER-INVISIBILITY",
+      "lane": "hodge_conjecture",
+      "method": "use surjectivity of the differential at one selected witness as a necessary proxy for full local image coverage",
+      "proposal_only_rakl_lesson": "When the mathematical consumer is nonlinear image coverage, test whether the proposed pointwise first-order proxy is identifying under ramification. This is scoped mathematical routing guidance, not framework promotion.",
+      "proximate_cause": "ramification can erase first-order tangent information while preserving full nonlinear image coverage",
+      "repair": "Replace selected-point differential necessity by direct image geometry, or prove a source-specific generic/nonramified witness theorem; retain differential surjectivity only as a sufficient certificate under explicit hypotheses.",
+      "root_cause": "a pointwise first-order observable is non-identifying for nonlinear image coverage when ramification is allowed",
+      "root_cause_status": "VERIFIED_SCOPED_EXPLICIT_COUNTEREXAMPLE",
+      "scope": [
+        "abstract algebraic morphism germ at one selected point",
+        "not an actual Hodge-incidence realization",
+        "no higher-order lifting, algebraization, descent, monodromy, globalization, or Hodge root conclusion"
+      ],
+      "source_items": [
+        "MATH-HODGE-C006-RAMIFICATION-POINTWISE-DIFFERENTIAL-NONIMPLICATION"
+      ],
+      "supported_causes": [
+        {
+          "cause": "ramification/first-order invisibility",
+          "status": "VERIFIED_BY_AFFINE_RING_AND_COTANGENT_CALCULATION"
+        }
+      ]
+    },
+    {
+      "competing_causes": [
+        {
+          "cause": "irrelevant K coordinate is intrinsically irreparable",
+          "status": "NOT_SUPPORTED; rho<1 and higher-order forcing may supply slack"
+        },
+        {
+          "cause": "the complete source has no unexposed stable-manifold theorem",
+          "status": "CANNOT_CHECK from bounded indexed primary-author text"
+        },
+        {
+          "cause": "Yang-Mills construction is impossible",
+          "status": "REJECTED_BY_SCOPE"
+        }
+      ],
+      "evidence": [
+        "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_R20_SOURCE_AUDIT.md",
+        "research/real_math/millennium/yang_mills/07_memory/YM-S1a2i_R20_MATHEMATICAL_LESSON_20260812.json"
+      ],
+      "exact_result": "The inequality direction is reversed because c g_{k+1}^2<=c g_k^2. The displayed relevant estimate closes even c_lambda g_k^2 only if (1-C_2)c_lambda>=C_2(1+c_K); no choice of larger c_lambda can satisfy this when C_2>=1. A bounded value remainder alone also does not prove injectivity of the base map.",
+      "failed_inference": "g_{k+1}<=g_k together with ||lambda_{k+1}||<=c_lambda g_k^2 and ||K_{k+1}||<=c_K g_k^2 was treated as membership in the smaller next-radius ball, while increasing c_lambda was treated as absorbing the displayed multiplicative relevant term.",
+      "falsifier": "Produce source-bound equations proving quantitative next-radius slack, derivative or reparametrized injectivity for g->g prime, and a backward/inverse relevant contraction or full hyperbolic graph-transform estimate on the stated shrinking domain.",
+      "id": "FM-YM-R20-SHRINKING-DOMAIN-RELEVANT-MARGIN",
+      "lane": "yang_mills",
+      "method": "infer invariant shrinking graph balls and full forward graph-transform contraction from old-radius bounds, monotone g, irrelevant contraction, and qualitative tuning",
+      "proposal_only_rakl_lesson": "For shrinking-domain graph transforms, require an explicit next-radius margin and type relevant directions through inverse/backward dynamics; this is routing guidance, not framework promotion.",
+      "proximate_cause": "the proof spends no quantitative slack against the shrinking radius and exposes no strict relevant-coordinate inverse/dichotomy margin or base-map derivative control",
+      "repair": "Spend the K-coordinate contraction slack against g_k^2-g_{k+1}^2 explicitly; expose a strict relevant inverse/dichotomy margin; bind derivative control or reparametrize the base; then prove regulator-uniform stable-graph continuity separately.",
+      "root_cause": "shrinking target-domain invariance and forward relevant expansion require separate quantitative margins; irrelevant contraction and qualitative tuning do not control them",
+      "root_cause_status": "SUPPORTED_BOUNDED_SOURCE_SCOPED_BROKEN_ASSUMPTION",
+      "scope": [
+        "displayed Section-38 inference forms and bounded indexed primary-author surface",
+        "not a source-wide refutation",
+        "not a Yang-Mills counterexample, continuum construction, or mass-gap result"
+      ],
+      "source_items": [
+        "MATH-YM-R20-SHRINKING-GRAPH-INVARIANCE-AND-RELEVANT-MARGIN"
+      ],
+      "supported_causes": [
+        {
+          "cause": "old-radius bound was promoted to a strictly smaller next radius in the wrong inequality direction",
+          "status": "VERIFIED_BY_DIRECT_SCALAR_INEQUALITY"
+        },
+        {
+          "cause": "displayed relevant bound lacks a strict linear margin unless C_2<1",
+          "status": "VERIFIED_BY_REARRANGING_THE_DISPLAYED_ESTIMATE"
+        },
+        {
+          "cause": "value-only remainder control is insufficient for base-map inversion",
+          "status": "SUPPORTED_MISSING_DERIVATIVE_OR_LIPSCHITZ_WITNESS"
+        }
+      ]
+    },
+    {
+      "competing_causes": [
+        {
+          "cause": "properness is missing",
+          "status": "REJECTED; closed immersion is proper"
+        },
+        {
+          "cause": "target singularity creates the false positive",
+          "status": "REJECTED; A^2_C is smooth"
+        },
+        {
+          "cause": "coefficient or formal/global Hodge defect causes the counterexample",
+          "status": "NOT_CAUSAL_TO_ABSTRACT_COUNTEREXAMPLE; remains target-applicability boundary"
+        }
+      ],
+      "evidence": [
+        "research/real_math/millennium/hodge/deformation/03_routes/H4d1c_C007_TANGENT_INTEGRABILITY_REPAIR_20260812.md",
+        "research/real_math/millennium/hodge/deformation/00_sources/H4d1c_C007_ALGEBRAIC_GEOMETRY_SOURCE_RECEIPT_20260812.json",
+        "research/real_math/millennium/hodge/deformation/07_memory/H4d1c_C007_MATHEMATICAL_LESSON_20260812.json"
+      ],
+      "exact_result": "For the reduced irreducible cusp W=V(y^2-x^3) and closed immersion pi:W->A^2_C, T_0W=T_0A^2_C and d pi_0 is surjective, but pi(W)=W is a proper closed subset.",
+      "failed_inference": "surjectivity of d pi_w at a singular source point, even for proper pi and irreducible source/target, implies pi(W)=H",
+      "falsifier": "For the exact Hodge witness-incidence morphism, prove smoothness at a selected point, properness, and binding to one irreducible target component; then singular-tangent excess is excluded and open-plus-closed image coverage follows.",
+      "id": "FM-HODGE-C007-SINGULAR-TANGENT-EXCESS-NONINTEGRABILITY",
+      "lane": "hodge_conjecture",
+      "method": "use a surjective pointwise Zariski tangent map at one selected incidence point as sufficient evidence for whole-target image coverage",
+      "proposal_only_rakl_lesson": "At singular source points, distinguish Zariski tangent size from integrable image directions; this scoped guidance does not promote the framework.",
+      "proximate_cause": "the singular source has excess Zariski tangent directions that do not integrate into actual local source motion",
+      "repair": "Replace raw tangent rank by smoothness at a suitable incidence point plus properness and irreducible-component binding, or prove the actual image closed and dominant/top-dimensional directly.",
+      "root_cause": "raw tangent-space surjectivity is non-identifying for image coverage without a smoothness/integrability witness at the source point",
+      "root_cause_status": "VERIFIED_SCOPED_EXPLICIT_COUNTEREXAMPLE",
+      "scope": [
+        "abstract finite-type complex algebraic morphisms and one pointwise tangent proxy",
+        "not an actual Hodge witness incidence",
+        "does not decide exact-class availability, higher-order lifting, algebraization, monodromy, degeneration, globalization, or the Hodge root"
+      ],
+      "source_items": [
+        "MATH-HODGE-C007-SINGULAR-TANGENT-SURJECTIVITY-NONIMPLICATION"
+      ],
+      "supported_causes": [
+        {
+          "cause": "singular-tangent excess/nonintegrability",
+          "status": "VERIFIED_BY_CUSP_JACOBIAN_AND_PROPER_IMAGE_CALCULATION"
+        }
+      ]
+    }
+  ],
+  "object": "Cross-Millennium mathematical failure mechanisms and supported causes, excluding software assurance as mathematical progress.",
+  "quantity_of_interest": "Which exact mathematical inference failed, why/how it failed at the strongest supported causal level, and what cheapest mathematical discriminator or repair follows?",
+  "root_status": {
+    "birch_swinnerton_dyer": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "hodge_conjecture": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "navier_stokes": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "p_vs_np": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "poincare_conjecture": "SOLVED_EXTERNALLY_NO_ACTIVE_APPLICATION_CLAIM",
+    "riemann_hypothesis": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "yang_mills": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "schema_version": "1.0.0",
+  "self_rakl_feedback": {
+    "activation": "after a material mathematical candidate failure or repeated residual, before selecting the next representation or transfer",
+    "falsifier": "On frozen matched mathematical failure cases, reject or narrow the compiler if it does not improve valid next-action selection and repeat-failure avoidance at matched resources, if it labels an observed failure as a unique cause without evidence, or if it suppresses a viable route.",
+    "framework_mutation_allowed": false,
+    "fresh_assurance_required": true,
+    "mathematical_credit_units": 0,
+    "non_activation": [
+      "software-only CI/schema/hash/chronology defects",
+      "a single unexplained failed search",
+      "cases already closed by a verified proof certificate"
+    ],
+    "poincare_success_transfer_fresh_assurance": "Required before any framework or ResearchTool promotion.",
+    "poincare_success_transfer_hypothesis": "Proposal-only source-success chain extraction with explicit enabling assumptions and target disanalogy tests.",
+    "predicted_benefit": [
+      "reduce repeated proxy optimization when identification is missing",
+      "detect premise reimport and representation-equivalent reformulations",
+      "prioritize family-wide invariant tests and shared-interface witnesses"
+    ],
+    "proposed_method_delta": "Add a mathematical failure-cause compiler that maps each failed inference to (source facts, attempted implication, minimal countermodel or missing witness, supported causal level, exact scope, cheapest mathematical falsifier, repair obligation). Route by supported cause rather than file/test failure.",
+    "risks": [
+      "premature causal attribution",
+      "overgeneralizing across disanalogous problems",
+      "reflection overhead without better next actions"
+    ],
+    "same_context_review_is_independent": false,
+    "status": "APPLICATION_FEEDBACK_PROPOSAL_ONLY_NOT_PROMOTED"
+  },
+  "success_transfer_failures": [
+    {
+      "cause_status": "VERIFIED_SCOPED",
+      "evidence": [
+        "research/real_math/millennium/cross_problem/poincare_transfer/04_candidates/XM_PC_NS_001_C001_ENSTROPHY_SIGN_RESULT_20260812.md"
+      ],
+      "exact_result": "Cubic vortex stretching is exactly zero and dissipation is 1297(2 pi)^3, so initial enstrophy strictly decreases.",
+      "failure_scope": "The frozen field fails as an intended positive-derivative counterexample; universal enstrophy monotonicity remains unresolved.",
+      "id": "FM-XM-PC-NS-C001-CANDIDATE-STRETCHING-CANCELLATION",
+      "non_transfer": "No Perelman entropy, noncollapse, canonical-neighborhood, surgery, extinction, topology, or theorem authority transfers.",
+      "proximate_cause": "candidate-specific Fourier phase and polarization cancellation",
+      "source_condition_tested": "equation-specific sign-definite monotone defect",
+      "source_success_case": "Perelman Poincare Ricci-flow chain",
+      "surviving_success_lesson": "Extract source success as a composite chain and test the earliest target-native load-bearing precondition.",
+      "target_lane": "navier_stokes"
+    }
+  ],
+  "successor_lineage": {
+    "predecessor_artifact_hash": "sha256:10af783bcf9f04c05dba5ac40c2346d44c3d13ad03f4ccfaca150de450d7e254",
+    "predecessor_git_blob": "38995f589715c1496c5e91cfe81e18a0743656fc",
+    "predecessor_path": "research/real_math/millennium/cross_problem/07_memory/GLOBAL_MATHEMATICAL_FAILURE_CAUSE_ATLAS_YM_R20_HODGE_C007_SUCCESSOR_20260812.json",
+    "predecessor_raw_sha256": "fe9d71646b451548f11edb301bf3c1e7b736e688fc87e3108b233d68dad01f8e",
+    "predecessor_repository_sha": "02c5fb7764116cf075d8dd5efd7b6fe835275ab9",
+    "preservation": "ALL 12 PRIOR DISTINCT FAILURE MECHANISMS REMAIN BYTE-SEMANTICALLY UNCHANGED. BSD R15 ADDS ONE SEVEN-FIELD SPECIALIZATION UNDER FM-BSD-ARITHMETIC-PREMISE-REIMPORT AND ZERO NEW DISTINCT GLOBAL FAILURE CAUSES."
+  }
+}
