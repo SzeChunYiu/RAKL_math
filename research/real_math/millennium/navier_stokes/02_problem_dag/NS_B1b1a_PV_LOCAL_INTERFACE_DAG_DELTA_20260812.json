@@ -1,0 +1,42 @@
+{
+  "record_type": "PROBLEM_DAG_DELTA",
+  "cycle_id": "NS-B1b1a-R11-PV-LOCAL-INTERFACE-20260812",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "parent": "NS-B1b1",
+  "current": "NS-B1b1a",
+  "status": "PARTIAL_SUCCESS_ROUTE_SPLIT",
+  "edges": [
+    {
+      "from": "NS-B1b1a",
+      "to": "PV-G",
+      "interface": "pointwise local Type-I + annular L∞ pressure + late small generator",
+      "status": "SOURCE_VERIFIED_CONSUMER; GENERIC_FINITE_I_GLUE_BLOCKED"
+    },
+    {
+      "from": "NS-B1b1a",
+      "to": "PV-E",
+      "interface": "suitable weak + pointwise local Type-I + late scaled-enstrophy epsilon dip",
+      "status": "SOURCE_VERIFIED_PRESSURE_BYPASS; GENERIC_FINITE_I_GLUE_BLOCKED"
+    },
+    {
+      "from": "finite-I suitable-weak producer",
+      "to": "PV-E",
+      "interface": "pointwise Type-I + epsilon enstrophy dip",
+      "status": "OPEN"
+    },
+    {
+      "from": "critical-element compact orbit",
+      "to": "PV-G generator smallness",
+      "interface": "finite weighted generator action / Lyapunov / no-recurrence witness",
+      "status": "OPEN; COMPACTNESS_ALONE_REJECTED"
+    }
+  ],
+  "next_atom": {
+    "id": "NS-B1b1a1",
+    "statement": "Within suitable weak solutions already satisfying the pointwise local Type-I bound, determine whether local NSE dynamics, vorticity stretching/depletion, or a self-similar-time monotonicity can force one late PV-E critical-enstrophy dip below θ_*²/4 without assuming small finite I.",
+    "success": "prove a source-valid epsilon-dip theorem with exact constants/quantifiers or construct an admissible mechanism showing the current local-energy information cannot force it",
+    "blocked_from_root": true
+  },
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "artifact_hash": "sha256:3babb06ae4c8c28e7d01cdb822e4687266f39a49220d3a37627bf603246a9e5b"
+}
