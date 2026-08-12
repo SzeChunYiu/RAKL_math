@@ -1,0 +1,29 @@
+{
+  "failure_id": "F-BSD-A1A1-R10-STRUCTURAL-HIGHER-GZ-NOT-COMPLEX-DERIVATIVE-BRIDGE",
+  "record_type": "FAILURE_EXPERIENCE_SHADOW",
+  "authority": "PROPOSAL_SHADOW_SEARCH_GUIDANCE_ONLY",
+  "cycle_id": "BSD-A1a1-HIGHER-GZ-COORDINATE-AUDIT-20260812-R10",
+  "active_atom": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "failed_inference": "A theorem called a higher Gross-Zagier formula was expected to convert the exact complex rank-two Taylor datum directly into the sharp derived arithmetic order needed to upgrade R9's Selmer lower bound to exactness.",
+  "observed_failure": "In Kim arXiv:2203.12161 the higher statement is a structural refinement comparing Heegner-Kolyvagin and Kurihara/discrete orders with Selmer structure. The paper explicitly distinguishes this from a number-field higher-rank formula for derivatives of Rankin-Selberg L-functions. Its sharp equalities therefore start after the source-coordinate conversion required by the BSD atom.",
+  "cause_status": "VERIFIED_SCOPED_TRANSFER_FAILURE",
+  "failure_category": ["REPRESENTATION", "SOURCE_SCOPE", "TARGET_TRANSFER"],
+  "not_a_mathematical_refutation_of_source": true,
+  "not_a_universal_no_go": true,
+  "scope": [
+    "Kim arXiv:2203.12161 structural higher Gross-Zagier route as a direct complex-rank-two to exact-Selmer bridge",
+    "Kim arXiv:2203.12159 Kurihara-number Selmer classifier used without a separate complex-to-discrete comparison",
+    "does not rule out an actual number-field analytic higher Gross-Zagier theorem or another comparison mechanism"
+  ],
+  "falsifier_that_triggered_failure": "Identify the theorem's actual source coordinate. If it is a Kolyvagin/Kurihara arithmetic-discrete order rather than the complex Taylor coefficient/order, then it cannot by itself discharge the complex-rank-two source premise.",
+  "repair_requirement": "Require an explicit theorem whose hypotheses begin with the complex Taylor datum for the same E/Q and whose conclusion supplies a sharp derived arithmetic order, with all local/prime, exceptional-zero, and coordinate-change hypotheses exposed.",
+  "links_to_prior_failures": [
+    "F-BSD-A1A1-R8-SOURCE-FAMILY-REIMPORTS-ARITHMETIC-ENTRY",
+    "F-BSD-A1A1-R7-ANALYTIC-TO-TRANSVERSE-LOCALIZATION",
+    "FM-BSD-ARITHMETIC-PREMISE-REIMPORT"
+  ],
+  "repeated_process_failure_relation": "This is a more precise source-coordinate manifestation of the R8 representation-relocation pattern: the carrier/classifier is powerful downstream but does not itself discharge the complex-to-arithmetic entry premise.",
+  "lesson_status": "NO_PROMOTION",
+  "obstruction_status": "NO_NEW_OBSTRUCTION_PROMOTION",
+  "recorded_at_utc": "2026-08-12T04:37:30Z"
+}
