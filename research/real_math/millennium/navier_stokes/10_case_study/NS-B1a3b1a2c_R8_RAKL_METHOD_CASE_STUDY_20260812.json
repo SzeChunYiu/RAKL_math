@@ -1,0 +1,173 @@
+{
+  "schema_version": "RAKL_METHOD_CASE_STUDY-v3-proposal-shadow",
+  "cycle_id": "NS-B1a3b1a2c-R8-GEOMETRIC-DEPLETION-TRANSFER-20260812",
+  "authority": "PROPOSAL_SHADOW_ROUTING_GLUING_ONLY",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "main_sha_bound": "d594e6864f49ecf6dac394173082fbf0174b422e",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "current_main_drift_handling": "Initial framework read was at 44058e21e16b085b421638fadad5086e31472f0f. During the run main advanced to d594e6864f49ecf6dac394173082fbf0174b422e; exact compare showed only Paper-II research files changed, no canonical method surface, and RAKL_VERSION at d594e686 confirms method 3.0.0. The retained cycle is rebound to d594e686."
+  },
+  "atom_problem_signature": "Can Grujic arXiv:2607.08866v2 logarithmic-vorticity-direction depletion be transferred to the Albritton-Barker finite-I Type-I blow-up/ancient class using only registered compactness plus R6/R7 local amplitude information, without importing the global critical amplitude/tail or morphology/direction premises the consumer assumes?",
+  "actual_fibre": {
+    "atom_id": "NS-B1a3b1a2c-R8",
+    "producer": [
+      "Albritton-Barker finite-I Type-I source / mild bounded ancient blow-up class",
+      "R6 ancient smoothing plus fixed-time O(R) vorticity superlevel capacity",
+      "R7 exact bounded-exhaustion/summable-tail obligation"
+    ],
+    "consumer": [
+      "Grujic 2026 logarithmic vortex-stretching depletion singularity-evasion theorem",
+      "global uniform weak-L^(3/2) vorticity",
+      "one-core critical-point singularity morphology",
+      "uniform log-weighted BMO control of vorticity direction"
+    ],
+    "interfaces": [
+      "finite-I local ledger -> global Lorentz amplitude",
+      "velocity L3_loc compactness -> normalized vorticity-direction convergence",
+      "original finite-time solution -> ancient blow-up limit -> original-flow rigidity",
+      "whole-space Biot-Savart/nonlocal estimates -> local pressure/far-field control"
+    ],
+    "snapshot_hash": "sha256:e3646d2fa66f041d5a11691b808534d44bbf28b23c6390a9eb80da0173a9570e"
+  },
+  "methods_operators_motifs_tried": [
+    {
+      "id": "RAKL-v3-DifferenceWitness",
+      "result": "WORKED",
+      "effect": "separated theorem-level geometric depletion from unavailable finite-I producer premises"
+    },
+    {
+      "id": "RAKL#384-SummationCompatibilityWitness-v1",
+      "result": "SUCCESSFUL_REUSE_ROUTING_ONLY",
+      "effect": "recognized global weak-L^(3/2) as the already-isolated bounded-exhaustion consumer and prevented disguising O(R) capacity as global control"
+    },
+    {
+      "id": "normalized-field limit-passage audit",
+      "result": "BLOCKED",
+      "effect": "xi=omega/|omega| weighted-BMO convergence lacks a source-valid stability lemma under the registered compactness mode"
+    },
+    {
+      "id": "critical-element/profile analogue",
+      "result": "REJECTED_BY_DIFFERENCE_WITNESS",
+      "effect": "requires global critical norm/profile decoupling absent from finite I"
+    },
+    {
+      "id": "direct geometric-criterion application",
+      "result": "CONDITIONAL_ONLY",
+      "effect": "works only if the original solution already satisfies global Lorentz amplitude, critical-point morphology and log-BMO direction; that does not classify generic finite-I Type-I blow-up"
+    }
+  ],
+  "prior_experience": {
+    "retrieved_count": 8,
+    "selected_count": 5,
+    "rejected_count": 3,
+    "retrieved_ids": [
+      "F-NS-B1a3b1a2a-ANCIENT-SMOOTHING-STILL-LINEAR-PACKET-CAPACITY",
+      "O-NS-B1a3b1a2a-LINEAR-PACKET-CAPACITY-GLOBAL-LORENTZ",
+      "L-NS-B1a3b1a2a-TEMPORAL-PERSISTENCE-CONVERTS-E-TO-PACKING",
+      "F-NS-B1a3b1a2b-UNBOUNDED-RADIUS-ENVELOPE-NOT-LORENTZ",
+      "O-NS-B1a3b1a2b-ANNULAR-TAIL-SUMMABILITY",
+      "L-NS-B1a3b1a2b-TEST-SUMMABILITY-BEFORE-DIMENSION-GAIN",
+      "M-NS-LOCAL-MORREY-TO-GLOBAL-LORENTZ-NEEDS-L1-TAIL",
+      "RAKL#384-SummationCompatibilityWitness-v1"
+    ],
+    "selected_ids": [
+      "O-NS-B1a3b1a2b-ANNULAR-TAIL-SUMMABILITY",
+      "L-NS-B1a3b1a2b-TEST-SUMMABILITY-BEFORE-DIMENSION-GAIN",
+      "F-NS-B1a3b1a2a-ANCIENT-SMOOTHING-STILL-LINEAR-PACKET-CAPACITY",
+      "RAKL#384-SummationCompatibilityWitness-v1",
+      "M-NS-LOCAL-MORREY-TO-GLOBAL-LORENTZ-NEEDS-L1-TAIL"
+    ],
+    "rejected": [
+      {
+        "id": "L-NS-B1a3b1a2a-TEMPORAL-PERSISTENCE-CONVERTS-E-TO-PACKING",
+        "why": "local packing already established; does not address direction convergence"
+      },
+      {
+        "id": "F-NS-B1a3b1a2b-UNBOUNDED-RADIUS-ENVELOPE-NOT-LORENTZ",
+        "why": "subsumed here by the sharper observation that the new consumer directly assumes global Lorentz amplitude"
+      },
+      {
+        "id": "O-NS-B1a3b1a2a-LINEAR-PACKET-CAPACITY-GLOBAL-LORENTZ",
+        "why": "older formulation superseded for routing by the R7 annular-tail obligation"
+      }
+    ],
+    "missed": "CANNOT_MEASURE: connector does not expose a complete denominator over canonical plus proposal/shadow historical memory.",
+    "observable_routing_change": "R6/R7 experience changed the first action from trying to turn a recent geometric criterion into a Type-I exclusion to auditing global-exhaustion and normalized-field state-space premises before candidate generation."
+  },
+  "decision_policy": "Apply the newest geometric result only after exact producer/consumer premise matching. Fail cheap on global-tail, morphology and normalized-field convergence interfaces; do not construct an ancient Liouville candidate from a finite-time criterion unless every limit-passage and back-transfer hypothesis is source-bound.",
+  "falsifier_and_verification": {
+    "falsifier": "A source-valid theorem proving for the registered finite-I Albritton-Barker blow-up ancestry the required global weak-L^(3/2) vorticity bound, one-core critical-point localization, weighted-BMO direction control, and a limit-stability/back-transfer lemma would defeat this obstruction.",
+    "verification": [
+      "checked Grujic v2 critical-point profile and global Lorentz premise",
+      "checked separate uniform log-weighted-BMO direction premise",
+      "checked whole-space far-field/CZ dependence",
+      "checked Albritton-Barker finite-I producer and local compactness mode",
+      "checked that strong velocity L3_loc does not itself license weighted-BMO convergence of xi=omega/|omega|",
+      "checked original-flow criterion versus ancient-limit Liouville interface",
+      "checked critical-element analogue retains a global critical-state premise",
+      "kept pressure, no-incoming/tightness, backward-uniqueness and stronger compactness as open rather than silently assumed"
+    ]
+  },
+  "outcome": "GEOMETRIC_DEPLETION_CONSUMER_NOT_TRANSFERABLE_FROM_FINITE_I_WITH_REGISTERED_INTERFACES",
+  "residual_before": "RES-NS-B1a3b1a2b-R7-SOURCE_VALID_TAIL_SUMMABILITY_OR_ALTERNATE_CONSUMER",
+  "residual_after": "RES-NS-B1a3b1a2c-R8-LOCAL_GEOMETRIC_CONSUMER_STABLE_UNDER_FINITE_I_COMPACTNESS_OR_PROVE_GLOBAL_PROFILE_PRECONDITIONS",
+  "failure_category": "CROSS_STATE_SPACE_GEOMETRIC_CONSUMER_PRECONDITION_MISMATCH",
+  "episode_diagnosis_obstruction_lesson_separation": {
+    "episode_id": "E-NS-B1a3b1a2c-R8-20260812",
+    "diagnosis_id": "D-NS-B1a3b1a2c-R8-CONSUMER-PRECONDITION-IMPORT",
+    "failure_id": "F-NS-B1a3b1a2c-GEOMETRIC-DEPLETION-NOT-CLOSED-UNDER-FINITE-I-BLOWUP",
+    "obstruction_id": "O-NS-B1a3b1a2c-GLOBAL-AMPLITUDE-MORPHOLOGY-DIRECTION-TRANSFER",
+    "lesson_id": "L-NS-B1a3b1a2c-AUDIT-CONSUMER-PREMISES-BEFORE-GEOMETRIC-GLUE",
+    "motif_id": "M-NS-LOCAL-TYPEI-TO-GEOMETRIC-CONSUMER-NEEDS-CLOSED-PROFILE-DATA",
+    "invariant": "episode != diagnosis != failure != obstruction != lesson; experience changes search priority only"
+  },
+  "seven_saturation_axes_retained_semantic_novelty": {
+    "KNOWLEDGE": 1,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 1,
+    "OBSTRUCTION": 1,
+    "RELATION": 1,
+    "PATH": 1,
+    "META_METHOD": 1
+  },
+  "axes_reopened": [
+    "KNOWLEDGE",
+    "EXPERIENCE_PATTERN",
+    "OBSTRUCTION",
+    "RELATION",
+    "PATH",
+    "META_METHOD"
+  ],
+  "axes_flattened": [
+    "OPERATOR"
+  ],
+  "novelty_class": {
+    "recent_primary_source_relation": "transfer",
+    "normalized_field_stability_gap": "obstruction",
+    "root_theorem": "NONE",
+    "literature_novelty_claim": "NONE"
+  },
+  "framework_improvement_hypothesis": "Proposal only: add a normalization-stability preflight for transferred observables of the form F(z)=z/|z| or other singular nonlinear quotients. Before contextual gluing across a compactness limit, require explicit convergence mode, nonvanishing/defect-set treatment, target topology, and transfer direction. This is not a v3 promotion claim.",
+  "successful_reuse_ids": [
+    "O-NS-B1a3b1a2b-ANNULAR-TAIL-SUMMABILITY",
+    "L-NS-B1a3b1a2b-TEST-SUMMABILITY-BEFORE-DIMENSION-GAIN",
+    "RAKL#384-SummationCompatibilityWitness-v1"
+  ],
+  "new_ids": {
+    "episode": "E-NS-B1a3b1a2c-R8-20260812",
+    "diagnosis": "D-NS-B1a3b1a2c-R8-CONSUMER-PRECONDITION-IMPORT",
+    "failure": "F-NS-B1a3b1a2c-GEOMETRIC-DEPLETION-NOT-CLOSED-UNDER-FINITE-I-BLOWUP",
+    "obstruction": "O-NS-B1a3b1a2c-GLOBAL-AMPLITUDE-MORPHOLOGY-DIRECTION-TRANSFER",
+    "lesson": "L-NS-B1a3b1a2c-AUDIT-CONSUMER-PREMISES-BEFORE-GEOMETRIC-GLUE",
+    "motif": "M-NS-LOCAL-TYPEI-TO-GEOMETRIC-CONSUMER-NEEDS-CLOSED-PROFILE-DATA",
+    "tool": null
+  },
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "root_promotion_attempted": false,
+  "independent_mathematical_review_credit": "0/3",
+  "numerics": "NOT_USED",
+  "metrology_receipt_pointer": "research/real_math/millennium/navier_stokes/10_case_study/NS-B1a3b1a2c_R8_RAKL_CYCLE_METRICS_20260812.json"
+}
