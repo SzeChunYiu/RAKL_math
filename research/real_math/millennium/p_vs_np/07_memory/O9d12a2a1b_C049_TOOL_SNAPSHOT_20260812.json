@@ -1,0 +1,26 @@
+{
+  "application_base_commit": "9b2282b72dbca18ae1c7da92e972efe4de3a24a4",
+  "artifact_hash": "sha256:962a352de7e51cc1eecc4e7e4e7f0d006683826126b3de9435cfc6b1cb09e245",
+  "mathematical_credit": false,
+  "schema_version": "1.0.0",
+  "snapshot_id": "PNP-C049-TOOL-SNAPSHOT-20260812",
+  "target_atom_id": "O9d12a2a1b-C049",
+  "target_state": "TARGET_RESULT_UNACCESSED",
+  "tools": [
+    {
+      "guarantees": [
+        "collision is equivalent to overlap after target-specific proof"
+      ],
+      "non_guarantees": [
+        "does not prove overlap existence",
+        "no cover or root authority"
+      ],
+      "preconditions": [
+        "exact frozen H_k and P_(k+1)",
+        "swapped reduction retained"
+      ],
+      "source": "C048 literal-transpose transfer lemma",
+      "tool_id": "T-PNP-C048-EXACT-OVERLAP-TRANSFER-CONDITION"
+    }
+  ]
+}
