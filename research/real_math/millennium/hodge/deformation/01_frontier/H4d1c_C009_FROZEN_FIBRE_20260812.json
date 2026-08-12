@@ -1,0 +1,92 @@
+{
+  "record_type": "RAKL_V3_PRE_VERIFICATION_FIBRE",
+  "authority": "PROPOSAL_SHADOW_ONLY_RETROSPECTIVE_HYPOTHESIS_PROSPECTIVE_VERIFICATION",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "main_sha": "44058e21e16b085b421638fadad5086e31472f0f",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_main_sha": "d65014c9a4dfa251ed9453addb3ac87815ab949a",
+    "base_tree_sha": "e2bf03716bfb084ac8da70aacd39045bf1e07463",
+    "root_issue": 6,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "fibre_id": "H4d1c-C009-HILBERT-SMOOTHNESS-FIBRE",
+  "active_atom": "H4d1c-C009",
+  "active_subobligation": "RELATIVE_HILBERT_SMOOTHNESS_AS_BRANCH_COVERAGE_CERTIFICATE",
+  "problem_signature": [
+    "rational Hodge conjecture; smooth projective complex varieties; Q coefficients",
+    "local variational lane assumes a chosen central signed-Q algebraic witness and one locally marked reduced irreducible Hodge branch",
+    "merged C006: selected-point differential surjectivity is not necessary for full image because of ramification",
+    "merged C007: tangent surjectivity at a singular source is not sufficient; proper plus smooth-at-one-point over irreducible target is sufficient",
+    "open draft C008: fixed-witness Hilbert-product exact-class/proper source construction is proposal/shadow guidance only and cannot supply theorem authority",
+    "active discriminator: whether factorwise relative Hilbert smoothness gives a clean sufficient producer for C007 without silently replacing relative motion by absolute/fibrewise unobstructedness"
+  ],
+  "exact_question": "Given fixed-polynomial relative Hilbert factors through the components of one central signed-Q witness, what exact smoothness hypothesis is sufficient to make their coupled incidence smooth over the chosen Hodge branch, and which tempting weaker deformation proxies must remain unlicensed?",
+  "success_contract": "Prove a source-independent algebraic-geometry implication from relative Hilbert smoothness to coupled source smoothness and Hodge-branch coverage under explicit properness/exact-class/component hypotheses, or give a counterexample. Do not assert that H^1 of a normal sheaf or absolute Hilbert smoothness implies relative smoothness without a source-specific lifting theorem.",
+  "falsifier": "Try to break the implication by base change, finite fibre product, component restriction, or singular target; separately test whether absolute/fibrewise Hilbert smoothness can be substituted for relative smoothness. Any such substitution must be rejected unless its ambient-direction lifting obstruction is controlled.",
+  "actual_fibre_contents": {
+    "root_contract": "For every smooth projective complex algebraic variety X and every codimension p, every rational Hodge class of type (p,p) in H^{2p}(X,Q) lies in the Q-span of codimension-p algebraic cycle classes.",
+    "selected_same_lane": [
+      "MATH-HODGE-C006-RAMIFICATION-POINTWISE-DIFFERENTIAL-NONIMPLICATION",
+      "MATH-HODGE-C007-SINGULAR-TANGENT-SURJECTIVITY-NONIMPLICATION",
+      "O-H4D1C-SMOOTH-SOURCE-OR-DIRECT-IMAGE-CERTIFICATE",
+      "H4d1c-C001-RATIONAL-COEFFICIENT-CANCELLATION"
+    ],
+    "open_shadow_retrieved_not_authority": [
+      "PR340/H4d1c-C008 fixed-witness Hilbert exact-class proper source",
+      "O-H4D1C-HILBERT-INCIDENCE-SMOOTHNESS-OR-DIRECT-DOMINANCE"
+    ],
+    "rejected_or_boundary": [
+      "Kloosterman complete-intersection flag-Hilbert: positive special-family calibration only",
+      "Nishinou semiregular divisor-map deformation: positive source-specific calibration only",
+      "absolute/fibrewise Hilbert smoothness or H^1(N)=0 as an automatic replacement for relative Hilbert smoothness: rejected absent a source-specific ambient-direction lifting theorem",
+      "cross-Millennium linearization episodes: rejected; consumer semantics differ from relative embedded deformation"
+    ],
+    "required_guards": [
+      "exact signed-Q class binding remains separate",
+      "properness/closed image remains separate from local smoothness",
+      "chosen irreducible Hodge branch and local marking",
+      "relative Hilbert smoothness is over the ambient deformation base, not merely smoothness of a fixed-fibre Hilbert scheme",
+      "no componentwise persistence inference from total Hodge tangency",
+      "monodromy, singular degeneration, globalization and root initial algebraicity remain separate"
+    ]
+  },
+  "operator_ids": [
+    "decomposition",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "equivalence_similarity",
+    "mathematical_context_translation",
+    "contextual_theory_gluing",
+    "gap_discovery",
+    "experiment_query_selection",
+    "memory",
+    "review",
+    "saturation_stopping",
+    "prompting_context_policy"
+  ],
+  "decision_policy": "SEARCH same-domain first: combine the merged C007 image certificate with standard smooth-morphism stability, while treating open C008 only as proposal/shadow route guidance. Counterexample-first audit forbids upgrading absolute/fibrewise unobstructedness to relative smoothness.",
+  "expert_cell": [
+    {"role":"VHS/Hodge-locus lead","background":"polarized VHS, Hodge loci, local systems","delegation":"bind one reduced irreducible marked Hodge branch and isolate monodromy/globalization"},
+    {"role":"Hilbert/embedded-deformation lead","background":"relative Hilbert schemes, normal sheaves, embedded deformation theory","delegation":"audit smoothness over the base versus fibrewise Hilbert smoothness"},
+    {"role":"cycle/coefficient lead","background":"Chow groups, rational cycles, cycle-class maps","delegation":"preserve signed-Q exact-class semantics and block componentwise substitution"},
+    {"role":"formal-deformation lead","background":"formal smoothness, obstruction theory, Artin-style lifting","delegation":"separate pointwise tangent rank, formal lifting, and actual smooth morphisms"},
+    {"role":"special-family transfer lead","background":"Noether-Lefschetz/variational Hodge special families","delegation":"compare Kloosterman and Nishinou assumptions and record disanalogies"},
+    {"role":"adversarial verifier","background":"counterexamples, singular moduli, hypothesis auditing","delegation":"attack base change/product/component/properness and absolute-vs-relative proxy swaps"},
+    {"role":"RAKL/metrology lead","background":"v3 gates, TaskEpisode authority, saturation and longitudinal receipts","delegation":"preserve chronology failure, shadow admission, seven-axis counts, and zero root authority"}
+  ],
+  "chronology": {
+    "status": "RETROSPECTIVE_HYPOTHESIS_SEED_PROSPECTIVE_VERIFICATION_ONLY",
+    "reason": "The factorwise-relative-Hilbert-smoothness hypothesis was formed in private automation scratch before this durable fibre was materialized. Current v3 therefore forbids strict prospective discovery attribution; all verification/falsification after this freeze is proposal/shadow evidence."
+  },
+  "fibre_snapshot_hash": "sha256:6e169c7d5212556fb32a02b9b6b46d38b5c150d9a1cc4de31d764690d1286e7e",
+  "context_hash": "sha256:6e169c7d5212556fb32a02b9b6b46d38b5c150d9a1cc4de31d764690d1286e7e",
+  "frozen_at_utc": "2026-08-12T07:24:00Z"
+}
