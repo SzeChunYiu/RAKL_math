@@ -1,0 +1,51 @@
+{
+  "record_type": "RAKL_METHOD_CASE_STUDY",
+  "schema_version": "v3-quantified-case-study-proposal-shadow",
+  "atom": {
+    "id": "NS-B2a1b1",
+    "problem_signature": ["Seregin Type-II F(a)=1 ancient Euler limit", "signed spatial-cutoff flux", "fixed-time local-energy inequality", "large-radius asymptotic linear energy density"],
+    "fibre_snapshot_hash": "sha256:1396f6c504dd4db763376714440d216fba614d7dbe1177b79cfbc206afe6aecc",
+    "actual_fibre_consulted": ["Seregin arXiv:2606.29468v1 (3.5)-(3.8)", "same-source Section 4 (4.3)-(4.4) as disanalogy", "Cheskidov-Constantin-Friedlander-Shvydkoy arXiv:0704.0759 as method-transfer analogue", "RAKL_math NS-B2a1a1/NS-B2a1c DAG and failure memory", "current RAKL v3 math workflow, schemas, metrology and experience substrate"]
+  },
+  "research_method": "RAKL v3 invention-last SEARCH followed by source-native nested-cutoff representation, fixed-time scaling audit, pressure-retaining falsification, and root-interface stress test.",
+  "methods_operators_motifs_tried": [
+    "nested nonnegative shell cutoff applied directly to one-sided local energy inequality",
+    "local Sobolev plus time Hölder for fixed-window L3 control",
+    "pressure-work Hölder audit using p in L^(3/2)",
+    "divide by R and limsup_R to extract a Lyapunov-at-infinity observable",
+    "localized-state counterexample-first test of any proposed implication Lambda=0 => u=0",
+    "fixed-time versus R-dependent parabolic-time quantifier separation"
+  ],
+  "experience_review": {
+    "retrieved_failure_ids": ["F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY", "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE", "F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH", "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER", "F-NS-B2a1c-F1-AXIAL-44-EXPONENT-INCOMPATIBLE"],
+    "selected_for_routing": ["F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY", "F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH", "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER"],
+    "rejected_or_background": {"F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE": "background residual but not a signed-flux theorem", "F-NS-B2a1c-F1-AXIAL-44-EXPONENT-INCOMPATIBLE": "specialized axisymmetric consumer mismatch, not generic shell flux"},
+    "retrieved_success_episode_ids": ["OT-SEREGIN-T31-NESTED-CUTOFF-ANNULARIZATION"],
+    "missed_prior_experience": "CANNOT_MEASURE: no governed exhaustive repository-wide coverage receipt was materialized",
+    "decision_policy": "Experience changed priority only: avoid repeating unsigned estimates and avoid assuming moving-radius compactness; Gate C SEARCH selected a source-verified nested-cutoff transformation before candidate work."
+  },
+  "expert_cell": {
+    "roles": ["domain/theory", "harmonic-analysis/transfer", "adversarial falsification", "pressure/nonlocality", "formal/verifier trust", "novelty/value"],
+    "authority": "SAME_CONTEXT_INTERNAL_ROLE_SEPARATION_ONLY_0_OF_3_INDEPENDENT_REVIEWS"
+  },
+  "falsifier_and_verification": {
+    "falsifier": "Even if the asymptotic linear density is zero, nonzero localized/unit-scale states are not excluded; therefore the new Lyapunov quantity cannot by itself serve as the rigidity consumer.",
+    "verified": ["cubic boundary magnitude O_I(R^(1/2))", "pressure-work boundary magnitude O_I(R^(5/6))", "normalized full boundary magnitude O_I(R^(-1/6))", "direct shell-test admissibility avoids subtracting one-sided inequalities", "Lambda_chi(t)=limsup R^-1 E_R(t) is forward non-increasing for a.e. admissible times"],
+    "not_verified": ["existence of a limit in R rather than limsup", "positive lower bound on Lambda from Seregin (3.8)", "Lambda=0 implies u=0", "terminal/no-incoming-flux condition", "R-dependent parabolic-window telescoping"]
+  },
+  "outcome": "FIXED_TIME_NORMALIZED_FLUX_VANISHES_ASYMPTOTIC_DENSITY_LYAPUNOV_NO_RIGIDITY_BRIDGE",
+  "residual": "F-NS-B2a1b1-LYAPUNOV-DENSITY-NO-RIGIDITY-BRIDGE",
+  "failure_category": {"local_mathematics": "NO_FAILURE_AT_DERIVED_LEMMA_LEVEL", "retrieval": "NO", "decomposition": "NO", "representation": "PARTIAL_SUCCESS", "verification": "PASS_SCOPED", "tooling": "NO_MATHEMATICAL_BLOCK", "local_to_global_gluing": "YES", "rigidity_consumer": "MISSING"},
+  "episode_diagnosis_obstruction_separation": {"episode": "E-NS-B2a1b1-R1", "diagnosis": "D-NS-B2a1b1-R1", "obstruction": "O-NS-B2a1b1-ASYMPTOTIC-DENSITY-LOCAL-NONTRIVIALITY-DISCONNECT", "lesson": "L-NS-B2a1b1-FIXED-TIME-FLUX-LYAPUNOV"},
+  "saturation_axes": {"KNOWLEDGE": 1, "OPERATOR": 0, "EXPERIENCE_PATTERN": 1, "OBSTRUCTION": 1, "RELATION": 1, "PATH": 1, "META_METHOD": 0},
+  "axes_reopened": ["KNOWLEDGE", "EXPERIENCE_PATTERN", "OBSTRUCTION", "RELATION", "PATH"],
+  "axes_flattened": ["OPERATOR", "META_METHOD"],
+  "novelty_class": {"class": "representation", "scope": "scoped derived subproblem", "literature_novelty_claim": false, "structural_rank": 0},
+  "what_worked": "Freezing a common finite time interval before the spatial large-radius limit changed the scaling: pressure is still the worst term, but after division by R its contribution decays like R^(-1/6), yielding a valid asymptotic-density monotonicity law.",
+  "what_failed": "The Lyapunov-at-infinity observable is not tied by the source to the unit-scale nontriviality functional or to any terminal density value, so it does not exclude the ancient Euler state.",
+  "v3_feature_helped": "Gate C SEARCH plus DifferenceWitness discipline prevented two opposite mistakes: prematurely pruning signed flux by importing the Type-I scale-neutral result, and prematurely claiming closure by importing Onsager/symmetry assumptions.",
+  "v3_feature_missing": "No new blocking framework defect identified. Exact end-to-end token/tool-call/wall-time counters remain unavailable to this runtime and are reported as CANNOT_MEASURE in metrology.",
+  "framework_improvement_hypothesis": "NOT_WARRANTED_THIS_CYCLE: the observed mathematical residual is a PDE interface gap, not a demonstrated RAKL framework defect.",
+  "next_action": "Test a source-valid bridge from (3.8) to asymptotic density or a source-valid terminal/no-incoming-flux/BV-in-radius condition; keep moving-radius compactness as an orthogonal lane.",
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}
