@@ -1,0 +1,255 @@
+{
+  "schema": "RAKL_math.math_context_fibre.v3_shadow",
+  "cycle_id": "YM-N1a-NONTRIVIALITY-CUMULANT-PERSISTENCE-20260812-R11",
+  "authority": "PROPOSAL_SHADOW_PRE_CANDIDATE_ONLY",
+  "chronology": {
+    "retrospective_observation_boundary": "Primary-source Theorem 10.4/10.5 arithmetic and persistence observations were noticed before this durable fibre. They receive zero strict prospective discovery credit.",
+    "prospective_action": "Bounded same-source search for an explicit observable/source renormalization, beta-scale restriction, or alternative source-valid persistence theorem that repairs the nontriviality interface. No new mathematical candidate may be generated unless all current RAKL pre-candidate gates pass."
+  },
+  "root": {
+    "issue": "#5",
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "exact_obligation": "non-trivial 4D quantum Yang-Mills theory for every compact simple gauge group plus positive mass gap at Clay axiomatic strength"
+  },
+  "atom": {
+    "id": "YM-N1a",
+    "signature": "YM-N1a-NONTRIVIALITY-CUMULANT-PERSISTENCE-OBSERVABLE-NORMALIZATION-SAME-CONTINUUM-SOURCE",
+    "qoi": "Can the source's non-Gaussianity/nontriviality argument produce a volume-, scale-, lattice-spacing-, and regulator-uniform nonzero connected gauge-invariant continuum cumulant at fixed physical observable normalization?"
+  },
+  "structural_coordinates": [
+    "connected fourth cumulant of local gauge-invariant observable",
+    "strong-coupling beta dependence and continuum/RG scale dependence",
+    "observable self-overlap/source renormalization s_k",
+    "summable reblocking error delta_k",
+    "fixed lattice versus fixed physical observable normalization",
+    "weak/subsequential continuum convergence of the same observable family",
+    "gauge-invariant OS source algebra and reconstructed state"
+  ],
+  "equivalent_formulations": [
+    "uniform positive lower bound on a fixed-physical-normalization connected cumulant",
+    "nonzero continuum fourth derivative of a source generating functional on the same OS source algebra",
+    "non-Gaussianity witness surviving the regulated-to-continuum observable identification"
+  ],
+  "source_observations_retrospective": [
+    "Theorem 10.4 states a k- and volume-uniform positive fourth-cumulant floor for all 0<beta<=beta0 while its leading term is proportional to beta^6.",
+    "Theorem 10.5 derives a recurrence a_{k+1}>=rho a_k-delta_k with rho<1 but then states a positive liminf that does not follow from the displayed geometric factor."
+  ],
+  "solved_near_solved_analogues": [
+    {
+      "source": "elementary stable/contractive recurrence",
+      "shared": "multiplicative contraction plus summable additive errors",
+      "disanalogy": "an elementary recurrence diagnoses persistence logic but does not supply a Yang-Mills observable renormalization or continuum theorem",
+      "allowed_use": "falsifier architecture only"
+    },
+    {
+      "source": "prior YM endpoint/vanishing episodes #171/#177 and PRs #172/#178",
+      "shared": "bounded or summable local control does not by itself imply the required asymptotic endpoint property",
+      "disanalogy": "those episodes concern AF/IR scheme identification, not non-Gaussian cumulant normalization",
+      "allowed_use": "route warning only"
+    }
+  ],
+  "minimum_repair_questions": [
+    "Is beta fixed in Theorem 10.4, or does the claimed continuum sequence vary beta; if fixed, how does that sequence meet the weak-coupling/continuum contract?",
+    "If beta varies toward a regime where the leading cumulant weight vanishes, what renormalized observable/source normalization keeps a nonzero fixed-physical cumulant?",
+    "In Theorem 10.5, is s_k identically 1, or is there a compensating normalization by the accumulated self-overlap product?",
+    "Can the same renormalized observable be embedded in the gauge-invariant OS source algebra and shown to converge on the same continuum subsequence?",
+    "Are all error and normalization controls uniform in volume, lattice spacing, regulator and RG scale?"
+  ],
+  "falsifiers": [
+    "A source theorem explicitly restricts beta away from zero and separately binds that restriction to the continuum trajectory.",
+    "A source-defined renormalized observable O_k or source coordinate exactly compensates the product of self-overlap factors with summably controlled transformed errors.",
+    "An independent same-theory nontriviality theorem supplies a fixed-physical nonzero continuum cumulant without using Theorems 10.4/10.5."
+  ],
+  "expert_cell": [
+    {
+      "role": "constructive QFT / OS reconstruction",
+      "background": "Euclidean measures, reflection positivity, Schwinger-to-Wightman reconstruction",
+      "objection": "A lattice cumulant is a continuum nontriviality witness only after same-source, same-subsequence observable binding."
+    },
+    {
+      "role": "rigorous RG / polymer expansions",
+      "background": "cluster expansions, block-spin maps, Banach-space RG",
+      "objection": "Scale contraction of an observable coordinate normally changes its normalization; persistence needs a typed scaling/renormalization theorem."
+    },
+    {
+      "role": "lattice gauge theory / gauge invariance",
+      "background": "Wilson action, character expansions, gauge-invariant observables",
+      "objection": "Strong-coupling beta asymptotics and weak-coupling continuum scaling must not be conflated."
+    },
+    {
+      "role": "functional analysis / asymptotic recurrences",
+      "background": "stability, discrete dynamical systems, limit estimates",
+      "objection": "A geometric lower-bound factor with rho<1 cannot yield the claimed unchanged positive floor without extra structure."
+    },
+    {
+      "role": "formal proof / quantifier audit",
+      "background": "theorem statement binding, quantifier order, dependency checks",
+      "objection": "Uniformity in beta, k, volume and continuum subsequence must be audited as separate quantifiers."
+    },
+    {
+      "role": "adversarial source / novelty / metrology",
+      "background": "primary-source verification, failure attribution, RAKL authority",
+      "objection": "Treat observed inconsistencies as scoped source-proof failures, not Yang-Mills impossibility or root evidence."
+    }
+  ],
+  "dual_memory_review": {
+    "selected": [
+      {
+        "id": "#5",
+        "reason": "root contract and nontriviality obligation"
+      },
+      {
+        "id": "#177",
+        "reason": "prior asymptotic vanishing discriminator; warning against boundedness=>endpoint inference"
+      },
+      {
+        "id": "PR#178",
+        "reason": "hostile-control pattern for asymptotic conclusion"
+      },
+      {
+        "id": "#159",
+        "reason": "same-theory RG constants/uniformity source-binding discipline"
+      },
+      {
+        "id": "PR#157",
+        "reason": "strict recurrence-domain reasoning and source-vs-local-lemma separation"
+      }
+    ],
+    "rejected": [
+      {
+        "id": "#109",
+        "reason": "source-family spectral completeness is downstream and distinct"
+      },
+      {
+        "id": "#138/PR#140",
+        "reason": "OS-form relative domination is a different quotient/gluing interface"
+      },
+      {
+        "id": "#189/PR#193",
+        "reason": "marginal/irrelevant coordinate slaving is related RG structure but not this nontriviality source normalization atom"
+      }
+    ],
+    "missed": "CANNOT_MEASURE: no complete governed success-tool/failure-lattice coverage receipt is available through this connector runtime."
+  },
+  "obstruction_transformation_review": {
+    "fingerprint": {
+      "roles": [
+        "regulated cumulant",
+        "RG observable coordinate",
+        "continuum nontriviality witness"
+      ],
+      "relations": [
+        "positive lower bound must survive scale transport and observable identification"
+      ],
+      "constraints": [
+        "gauge invariance",
+        "OS source compatibility",
+        "volume/a/regulator uniformity",
+        "fixed physical normalization"
+      ],
+      "failure_mechanisms": [
+        "vanishing prefactor",
+        "contractive self-overlap",
+        "unbound observable rescaling",
+        "limit/subsequence mismatch"
+      ],
+      "invariants_to_preserve": [
+        "same theory",
+        "same physical observable normalization",
+        "gauge-invariant source algebra",
+        "continuum subsequence"
+      ],
+      "desired_transition": "finite-scale nonzero cumulant -> nonzero continuum cumulant",
+      "forbidden_losses": [
+        "renormalizing observable without source pushforward",
+        "changing coupling regime without trajectory binding",
+        "using boundedness as positivity"
+      ]
+    },
+    "SEARCH": "NO_STRICT_VIABLE_MATCH: retrieved same-domain episodes are proposal/shadow warnings, not protected transformation episodes that repair nontriviality.",
+    "JUMP": "NO_STRICT_VIABLE_MATCH: elementary recurrence analogues diagnose failure but carry no same-theory gauge/OS observable transport.",
+    "GLUE": "NO_STRICT_VIABLE_MATCH: no composition witness jointly covers coupling scaling, observable normalization, and OS source pushforward.",
+    "LIFT": "FORBIDDEN: cross-problem coverage receipt and repeated protected residual evidence are absent.",
+    "selected_route": "CANNOT_CHECK",
+    "candidate_generation_allowed": false,
+    "next_pre_candidate_action": "search the exact primary source and cited same-theory source genealogy for a normalization/trajectory theorem before proposing any repair"
+  },
+  "trace_events": [
+    "ATOMIZED",
+    "CONTEXT_FROZEN",
+    "ANALOGY_SCAN",
+    "METHOD_TRANSFER_REVIEW",
+    "EXPERT_CONTEXT_REVIEW",
+    "EXPERIENCE_MEMORY_REVIEW",
+    "OBSTRUCTION_TRANSFORMATION_REVIEW",
+    "NEXT_STEP_PROPOSED"
+  ],
+  "fibre_hash": "1579203af8ccb0d86db00e68929b32cbd7d71387b162dc6a695a3478e06da3ed",
+  "trace_chain": [
+    {
+      "seq": 1,
+      "event": "ATOMIZED",
+      "cycle_id": "YM-N1a-NONTRIVIALITY-CUMULANT-PERSISTENCE-20260812-R11",
+      "fibre_hash": "1579203af8ccb0d86db00e68929b32cbd7d71387b162dc6a695a3478e06da3ed",
+      "previous_event_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "artifact_hash": "8bf2bb5395a49be41f2c4e3c7968f51a55a7d96df08da791c5c17f4648551ba5"
+    },
+    {
+      "seq": 2,
+      "event": "CONTEXT_FROZEN",
+      "cycle_id": "YM-N1a-NONTRIVIALITY-CUMULANT-PERSISTENCE-20260812-R11",
+      "fibre_hash": "1579203af8ccb0d86db00e68929b32cbd7d71387b162dc6a695a3478e06da3ed",
+      "previous_event_hash": "8bf2bb5395a49be41f2c4e3c7968f51a55a7d96df08da791c5c17f4648551ba5",
+      "artifact_hash": "5546fc16e3b0ed20968f58127dba0a2df42983075dca80e80fc57b016568ebcc"
+    },
+    {
+      "seq": 3,
+      "event": "ANALOGY_SCAN",
+      "cycle_id": "YM-N1a-NONTRIVIALITY-CUMULANT-PERSISTENCE-20260812-R11",
+      "fibre_hash": "1579203af8ccb0d86db00e68929b32cbd7d71387b162dc6a695a3478e06da3ed",
+      "previous_event_hash": "5546fc16e3b0ed20968f58127dba0a2df42983075dca80e80fc57b016568ebcc",
+      "artifact_hash": "d8f3ad77ea4cc9599a151b731288d1228a1ed7c53fd016696520461be317300d"
+    },
+    {
+      "seq": 4,
+      "event": "METHOD_TRANSFER_REVIEW",
+      "cycle_id": "YM-N1a-NONTRIVIALITY-CUMULANT-PERSISTENCE-20260812-R11",
+      "fibre_hash": "1579203af8ccb0d86db00e68929b32cbd7d71387b162dc6a695a3478e06da3ed",
+      "previous_event_hash": "d8f3ad77ea4cc9599a151b731288d1228a1ed7c53fd016696520461be317300d",
+      "artifact_hash": "bec2061161bc8fe462a2f4ddb9ef13489fd9022a130dcc8009888f09b87efcc9"
+    },
+    {
+      "seq": 5,
+      "event": "EXPERT_CONTEXT_REVIEW",
+      "cycle_id": "YM-N1a-NONTRIVIALITY-CUMULANT-PERSISTENCE-20260812-R11",
+      "fibre_hash": "1579203af8ccb0d86db00e68929b32cbd7d71387b162dc6a695a3478e06da3ed",
+      "previous_event_hash": "bec2061161bc8fe462a2f4ddb9ef13489fd9022a130dcc8009888f09b87efcc9",
+      "artifact_hash": "8eac3c802fe45806ca6d182c49335cd7cf7308041570840782aa16a35647d820"
+    },
+    {
+      "seq": 6,
+      "event": "EXPERIENCE_MEMORY_REVIEW",
+      "cycle_id": "YM-N1a-NONTRIVIALITY-CUMULANT-PERSISTENCE-20260812-R11",
+      "fibre_hash": "1579203af8ccb0d86db00e68929b32cbd7d71387b162dc6a695a3478e06da3ed",
+      "previous_event_hash": "8eac3c802fe45806ca6d182c49335cd7cf7308041570840782aa16a35647d820",
+      "artifact_hash": "3c28ebc32ec439528d84a714ed44e3e4aba01e1bf44b2f19777f051ef089a32d"
+    },
+    {
+      "seq": 7,
+      "event": "OBSTRUCTION_TRANSFORMATION_REVIEW",
+      "cycle_id": "YM-N1a-NONTRIVIALITY-CUMULANT-PERSISTENCE-20260812-R11",
+      "fibre_hash": "1579203af8ccb0d86db00e68929b32cbd7d71387b162dc6a695a3478e06da3ed",
+      "previous_event_hash": "3c28ebc32ec439528d84a714ed44e3e4aba01e1bf44b2f19777f051ef089a32d",
+      "artifact_hash": "98b0b32e62c14bf6a910025968643403157616765adbe009abf5a81060be3413"
+    },
+    {
+      "seq": 8,
+      "event": "NEXT_STEP_PROPOSED",
+      "cycle_id": "YM-N1a-NONTRIVIALITY-CUMULANT-PERSISTENCE-20260812-R11",
+      "fibre_hash": "1579203af8ccb0d86db00e68929b32cbd7d71387b162dc6a695a3478e06da3ed",
+      "previous_event_hash": "98b0b32e62c14bf6a910025968643403157616765adbe009abf5a81060be3413",
+      "artifact_hash": "e55bb346a8dd0814b910fcee2f4d9e0f0393327f49356e3c3c9ba39dafc6b44f"
+    }
+  ],
+  "trace_head_hash": "e55bb346a8dd0814b910fcee2f4d9e0f0393327f49356e3c3c9ba39dafc6b44f"
+}
