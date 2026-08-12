@@ -27,6 +27,16 @@ Then `A proper_subset B`, but `p(A)=p(B)=span(v1)`, and the required Hodge direc
 
 Hence any claimed H4d1c gain from a larger total-witness tangent space needs an additional **nonverticality / image-coverage certificate**. Source tangent dimension or source tangent strict inclusion alone is not congruent for the root-critical quantity `im(d pi_alpha)`.
 
+The exact transfer condition is visible on the quotients. For `A subseteq B`, the inclusion `p(A) subseteq p(B)` is strict exactly when the induced map
+
+`bar p : B/A -> H/p(A)`
+
+is nonzero. Full first-order branch coverage is the separate condition `p(B)=H`, equivalently every required `h in H` has some witness tangent `b in B` with `p(b)=h`. Thus a successor must prove a nonzero quotient image for a strict gain, and surjectivity for full branch coverage; neither follows from `A proper_subset B`.
+
+## Compatibility with the Hodge failure atlas
+
+Current main records `FM-HODGE-REPRESENTATION-EQUIVALENCE-NOT-REDUCTION`: renaming a fixed first-order lifting obligation by an equivalent same-detector condition does not reduce it. This result preserves rather than replaces that warning. The present failure has a distinct scoped form: enlarging a source representation does not establish progress in the target image unless the new quotient direction survives the consumer projection. Representation equivalence is not reduction, and representation enlargement is not target-image gain. Neither statement covers higher-order lifting, other detectors, or the root conjecture.
+
 ## Audit of the C003 conic control
 
 The C003 family `C_t = V(xy+t z^2)` varies the conic while the ambient variety is fixed as `P^2`. Against the H4d1 interface, there is no nontrivial ambient Hodge-deformation base in that control; if it is mapped to a base at all, the root-aligned base is a point. Thus the exhibited `z^2` direction is an **internal witness-deformation direction**, not evidence that the image of a witness-incidence projection onto a nontrivial Hodge branch has enlarged.

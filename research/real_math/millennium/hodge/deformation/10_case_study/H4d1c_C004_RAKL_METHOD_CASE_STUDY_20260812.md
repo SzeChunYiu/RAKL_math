@@ -80,3 +80,9 @@ Failed: source-tangent enlargement alone did not answer the H4d1c consumer. The 
 Helpful v3 features: frozen fibre identity, TaskEpisode shadow admission, DifferenceWitness-style equivalence/disanalogy checks, explicit QoI/consumer scope in `method_specs.py`, separate memory/review/saturation surfaces, and non-escalating authority semantics.
 
 Framework-improvement hypothesis (proposal only): benchmark a first-class `target_projection_effect` / consumer-image field in structural mapping witnesses so that source-space enlargement cannot be routed as target progress without recording whether the added directions survive the root-critical map. No RAKL issue is opened in this cycle because current v3 already contains the relevant QoI/consumer and mathematical-context-translation primitives; the observed miss can presently be classified as application routing rather than a demonstrated framework defect.
+
+## Chronology and proposal-only RAKL lesson
+
+The exact linear counterexample can be checked directly, but this cycle's custom trace does not contain the full pinned-RAKL pre-candidate event sequence (`ATOMIZED`, `CONTEXT_FROZEN`, `ANALOGY_SCAN`, `METHOD_TRANSFER_REVIEW`, `EXPERT_CONTEXT_REVIEW`, `EXPERIENCE_MEMORY_REVIEW`, `OBSTRUCTION_TRANSFORMATION_REVIEW`, `NEXT_STEP_PROPOSED`) required by `RAKL@43897d3`. This repair does not backfill those gates after seeing the result. Accordingly, the counterexample may receive only its scoped mathematical authority; it is **not** a strict RAKL context-first discovery certificate.
+
+The reusable RAKL lesson remains proposal-only: a structural mapping review should expose the consumer map and require proof that a source-space change survives it. Software tests, CI, hashes, repository growth, and same-context role separation provide zero mathematical or independent-review credit.
