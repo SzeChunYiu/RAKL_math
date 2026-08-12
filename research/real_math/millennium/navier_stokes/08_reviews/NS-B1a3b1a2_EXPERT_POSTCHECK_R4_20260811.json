@@ -1,0 +1,47 @@
+{
+  "atom_id": "NS-B1a3b1a2",
+  "authority": "SAME_CONTEXT_INTERNAL_REVIEW_ONLY",
+  "cycle_id": "NS-B1a3b1a2-C001-R4-HISTORY-MULTIPLICITY-20260811",
+  "independent_review_credit": "0/3",
+  "overall": "ACCEPT_SCOPED_FIXED_FINITE_HISTORY_ROUTE_PRUNING / REJECT_ANCIENT_OR_ROOT_OVERREACH",
+  "reviews": [
+    {
+      "finding": "The exact scaling/time-translation proof is equation-preserving. The decisive DifferenceWitness is finite left endpoint versus a mild bounded ancient solution on all negative times.",
+      "role": "Type-I/ancient PDE lead",
+      "verdict": "ACCEPT_SCOPED"
+    },
+    {
+      "finding": "The weak-L^{3/2} norm is exactly invariant under omega_lambda=lambda^2 omega(lambda x); the distribution-function exponent cancels. No local-to-global norm inference is used in the scaling step.",
+      "role": "Vorticity/Lorentz analyst",
+      "verdict": "ACCEPT"
+    },
+    {
+      "finding": "Dilation, not separated translation, is the cheapest noncompact symmetry. The pre-frozen multi-profile route should be rejected because exact nonlinear decoupling would add unnecessary hypotheses after the scaling lift closes the finite-H discriminator.",
+      "role": "Concentration-compactness analyst",
+      "verdict": "ACCEPT_AND_ROTATE"
+    },
+    {
+      "finding": "Pressure transforms exactly with lambda^2 and D is scale invariant. The transfer adds no new pressure-localization argument. Far-field/tail control remains a separate residual for any ancient/global consumer.",
+      "role": "Pressure/local-energy analyst",
+      "verdict": "ACCEPT_SCOPED"
+    },
+    {
+      "finding": "Backward uniqueness is neither needed nor activated. No terminal global vorticity or far-field hypothesis is produced by finite history alone.",
+      "role": "Rigidity/unique-continuation analyst",
+      "verdict": "ACCEPT_NONUSE"
+    },
+    {
+      "finding": "Counterexample-first falsification succeeds with a simpler transformed exact-NSE family than the initial separated-profile plan. The new family attacks the frozen history coordinate directly rather than repeating short-time smoothing estimates.",
+      "role": "Adversarial construction lead",
+      "verdict": "ACCEPT"
+    },
+    {
+      "finding": "Episode, diagnosis, failure, obstruction, motif and candidate lesson remain separate. Open PR #165 was used only as shadow search-priority experience and its mathematical antecedent was re-verified locally. No root or independent-review authority is granted.",
+      "role": "Formal assurance/source-boundary lead",
+      "verdict": "ACCEPT_FAIL_CLOSED"
+    }
+  ],
+  "residual": "ANCIENT_INFINITE_HISTORY_OR_SCALE_RELATIVE_TIGHTNESS_STILL_OPEN",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "same-context-expert-postcheck-v3-proposal-shadow-r4"
+}

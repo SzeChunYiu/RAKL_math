@@ -1,0 +1,62 @@
+atom_id: NS-B1a3b1a2
+parent_atom_id: NS-B1a3b1a1
+candidate_id: NS-B1a3b1a2-C001-R4
+status: FIXED_FINITE_HISTORY_PRODUCER_PRUNED_ANCIENT_RESIDUAL_OPEN
+root_status: OPEN_NO_SOLUTION_CERTIFICATE
+authority: PROPOSAL_SHADOW_NO_ROOT_AUTHORITY
+result: >-
+  For every fixed finite H>0, a positive-time exact-NSE critical-vorticity
+  separator with uniformly bounded finite-I ledger can be mapped by exact
+  Navier-Stokes parabolic scaling and time translation to an exact smooth
+  solution on [-H,0] with the same I bound and the same endpoint
+  L^{3/2,infinity} vorticity norm. Therefore fixed finite backward-history
+  length alone is not a coercive producer coordinate.
+local_math_status: FIXED_FINITE_HISTORY_IMPLICATION_FALSIFIED
+local_representation_status: HISTORY_LENGTH_NORMALIZED_AWAY_BY_CRITICAL_SCALING
+local_to_global_gluing_status: ANCIENT_SOURCE_CLASS_NOT_REACHED
+state_space_status: GENUINE_ANCIENT_INFINITE_HISTORY_OPEN
+pressure_status: EXACT_SCALING_ONLY_NO_NEW_PRESSURE_GLUE
+limit_passage_status: NO_LIMIT_PASSAGE_USED_IN_R4_PROPOSITION
+noncompact_symmetry_status: DILATION_IDENTIFIED_AS_DECISIVE
+backward_uniqueness_status: NOT_INVOKED_HYPOTHESES_NOT_PRODUCED
+pruned_or_closed_subroutes:
+  - fixed_H_finite_I_to_global_vorticity_L3_2_infinity
+  - finite_history_length_as_standalone_smoothing_coordinate
+  - separated_multi_profile_hostile_route_for_this_discriminator_as_unnecessarily_complex
+live_routes:
+  - genuine_ancient_backward_sequence_critical_control
+  - scale_relative_global_tail_or_profile_tightness
+  - scale_relative_frequency_envelope_or_derivative_control
+  - alternate_source_valid_ancient_liouville_trigger
+next_children:
+  - id: NS-B1a3b1a2a
+    title: Genuine ancient / scale-relative producer discriminator
+    question: >-
+      In the actual mild bounded ancient finite-I Type-I source class, does an
+      inherited scale-relative compactness, tail, frequency or backward-sequence
+      certificate yield the global vorticity amplitude required by the selected
+      consumer, with constants stable under blow-up and without assuming the
+      desired global critical state space?
+    status: CONTEXT_REQUIRED
+failure_ids:
+  - F-NS-B1a3b1a2-FIXED-FINITE-HISTORY-NONCOERCIVE
+gluing_failure_ids:
+  - G-NS-B1a3b1a2-FINITE-TO-ANCIENT-HISTORY
+  - G-NS-B1a3b1a2-LOCAL-DERIVATIVE-TO-GLOBAL-LORENTZ
+obstruction_ids:
+  - O-NS-B1a3b1a2-FINITE-HISTORY-SCALING-LIFT
+motif_ids:
+  - M-NS-CRITICAL-FAILURE-SCALING-LIFT
+successful_reuse_ids:
+  - PR165-NS-B1a3b1a1-R3
+  - F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH
+  - F-NS-B1a3-UNCONTROLLED-FAR-FIELD
+  - T-XM-ROOT-BRIDGE-STABILITY-AUDIT
+  - OP-NSE-PARABOLIC-SCALING
+novelty_class: transfer
+nonpromotion:
+  - fixed_finite_history_failure_is_not_an_ancient_solution_counterexample
+  - amplitude_is_not_morphology_or_vorticity_direction
+  - Type_I_progress_does_not_close_Type_II
+  - same_context_review_is_not_independent_review
+  - root_remains_open
