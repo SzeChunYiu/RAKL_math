@@ -1,0 +1,51 @@
+{
+  "schema": "RAKL-RH-LOCAL-MATH-RESULT-v1",
+  "result_id": "RH-ANA-003-ABEL-001-R10-FIXED-N-ABEL-RESULT",
+  "atom_id": "RH-ANA-003-ABEL-001",
+  "candidate_id": "RH-ANA-003-ABEL-001-C001-FIXED-N-NATURAL-ORDER-ABEL",
+  "candidate_core_sha256": "sha256:19a265e1498ad67db256c2ef1315a370d2b72107618f67c54fb7b0828eac3bcc",
+  "evaluation_authorization": "RH-ANA-003-ABEL-001-EVALUATION-AUTHORIZATION-R2-20260812",
+  "result_branch": "PROVED_FIXED_N_NATURAL_ORDER_IDENTITY",
+  "status": "VERIFIED_LOCAL_MATHEMATICAL_RESULT",
+  "statement": {
+    "quantifiers": "For each fixed integer n>=1, then Y tends to infinity; X>=1 is fixed and nonintegral.",
+    "definitions": ["a_m=1-Lambda(m)", "A(x)=sum_{m<=x}a_m=floor(x)-psi(x)", "P_n(u)=L_{n-1}^{(1)}(u)", "b_n(x)=P_n(log x)/x"],
+    "finite_identity": "For nonintegral 1<=X<Y, sum_{X<m<=Y}a_m b_n(m)=A(Y)b_n(Y)-A(X)b_n(X)-integral_X^Y A(t)b_n'(t)dt.",
+    "boundary": "A(Y)b_n(Y)->0.",
+    "transformed_integral": "integral_X^infinity |A(t)b_n'(t)|dt<infinity.",
+    "natural_order_tail": "lim_{Y->infinity}sum_{X<m<=Y}a_m b_n(m)=-A(X)b_n(X)-integral_X^infinity A(t)b_n'(t)dt.",
+    "convergence_class": "The original term series converges in natural integer order for each fixed n, but is not absolutely convergent."
+  },
+  "proof_obligations": [
+    {"id": "O1-FINITE-ABEL-ENDPOINTS", "status": "PASS", "derivation": "A is the exact step cumulative sum. Stieltjes integration by parts on nonintegral endpoints gives the frozen finite identity with both boundary terms and signs exactly."},
+    {"id": "O2-KERNEL-DERIVATIVE", "status": "PASS", "derivation": "b_n'(t)=t^-2[P_n'(log t)-P_n(log t)]. For fixed n, P_n and P_n' are fixed polynomials, so |b_n'(t)|<=C_n(1+(log t)^(n-1))/t^2."},
+    {"id": "O3-BELLOTTI-TO-A", "status": "PASS", "derivation": "Bellotti Theorem 1.5 and (1.3)-(1.4) give |psi(x)-x|<=C x exp(-d(log x)^(3/5)/(log log x)^(1/5)) for large x. Since |floor(x)-x|<1, the frozen A bound follows."},
+    {"id": "O4-FIXED-N-BOUNDARY", "status": "PASS", "derivation": "For fixed n, |b_n(Y)|<=D_n(1+(log Y)^(n-1))/Y. The floor term vanishes, and polynomial(log Y) times exp(-d(log Y)^(3/5)/(log log Y)^(1/5)) tends to zero."},
+    {"id": "O5-FIXED-N-INTEGRAL", "status": "PASS", "derivation": "O2-O3 reduce the nontrivial term by u=log t to integral polynomial(u) exp(-d u^(3/5)/(log u)^(1/5))du, which converges because the stretched exponent dominates every constant multiple of log u."},
+    {"id": "O6-NATURAL-ORDER-LIMIT", "status": "PASS", "derivation": "Take Y->infinity in the exact finite identity only after O4-O5; the partial sums remain the original integer order with no permutation or regrouping."},
+    {"id": "O7-NONABSOLUTE-WITNESS", "status": "PASS", "derivation": "Every 6k has prime divisors 2 and 3, so it is not a prime power and Lambda(6k)=0. For n=1 the harmonic subseries diverges. For n>=2 the leading Laguerre coefficient gives |P_n(log(6k))|>=c_n(log k)^(n-1) eventually, so the absolute subseries dominates c'_n sum (log k)^(n-1)/k and diverges."}
+  ],
+  "counterexample_first_checks": [
+    {"check": "finite endpoint/sign convention", "outcome": "PASS"},
+    {"check": "m=6k prime-power witness", "outcome": "PASS"},
+    {"check": "fixed-n quantifier leakage", "outcome": "PASS_SCOPED"},
+    {"check": "u=log t transformed-integral integrability", "outcome": "PASS"}
+  ],
+  "primary_source_binding": [{
+    "id": "BELLOTTI-ARXIV-2508.02041v1",
+    "title": "A new zero-density estimate for zeta(s) and the error term in the Prime Number Theorem",
+    "author": "Chiara Bellotti",
+    "url": "https://arxiv.org/abs/2508.02041",
+    "used_for": "Theorem 1.5 and equations (1.3)-(1.4), unconditional PNT error for psi(x)-x",
+    "non_guarantees": ["does not state the target Laguerre lemma", "does not supply n-uniformity", "does not imply Li positivity or RH"]
+  }],
+  "standard_method_binding": ["finite Abel/summation-by-parts, derived for the frozen endpoints", "elementary fixed-polynomial growth and leading-term dominance"],
+  "authority_boundary": ["NO_N_UNIFORMITY", "NO_SERIES_REORDERING_OR_REGROUPING", "NO_PR316_RATE_OR_CUTOFF_CLAIM", "NO_LI_COEFFICIENT_SIGN_CLAIM", "NO_RIEMANN_HYPOTHESIS_CLAIM", "NO_LITERATURE_NOVELTY_CLAIM", "NO_INDEPENDENT_REVIEW_CREDIT", "NO_FORMAL_PROOF_ASSISTANT_CREDIT"],
+  "residuals": ["UNIFORM_IN_N_CONTROL_REMAINS_OPEN", "LOCAL_FIXED_N_CONVERGENCE_DOES_NOT_CONTROL_ALL_INDEX_LI_SIGNS", "CONDITIONAL_CONVERGENCE_FORBIDS_UNWITNESSED_REORDERING_OR_INFINITE_WINDOW_GLUE", "CURRENT_TARGET_DOMAIN_STRICT_PREFIX_DIFFERENCEWITNESS_REMAINS_OPEN", "RH_ROOT_OPEN_NO_SOLUTION_CERTIFICATE"],
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "same_context_review_independent_credit": 0,
+  "formal_verifier": "NOT_RUN",
+  "novelty_status": "NOT_CLAIMED_LOCAL_RECONSTRUCTION",
+  "recorded_at": "2026-08-12T08:04:00Z",
+  "artifact_hash": "sha256:72d073413cab3c8d707990b1ba5c3d573f37a47a080158687031f3601d59217e"
+}
