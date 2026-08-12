@@ -1,0 +1,124 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow",
+  "atom_id": "NS-B1a3b",
+  "parent_atom_id": "NS-B1a3",
+  "authority": "FROZEN_PROPOSAL_SHADOW_CONTEXT_ONLY",
+  "bound_rakl": {
+    "repository": "SzeChunYiu/RAKL",
+    "main_sha_read_before_math": "8db3343dfb764c9a139f9ba76f6f44c76eaf86de",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0"
+  },
+  "bound_rakl_math_base_sha": "02c5fb7764116cf075d8dd5efd7b6fe835275ab9",
+  "root_contract": {
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "accepted_terminal_outcomes": [
+      "clay_A_global_smoothness_R3",
+      "clay_B_global_smoothness_periodic",
+      "clay_C_breakdown_R3",
+      "clay_D_breakdown_periodic"
+    ],
+    "strict_requirements": [
+      "exact_statement_binding",
+      "closed_proof_dag",
+      "dependency_and_axiom_audit",
+      "formal_or_verifier_evidence_where_supported",
+      "isolated_recheck",
+      "bounded_novelty_search",
+      "three_genuinely_isolated_mathematical_reviews"
+    ]
+  },
+  "object_context": "Orthogonal Type-I blow-up-classification child. Test whether vorticity-direction/geometric-depletion criteria can be inherited through the Albritton-Barker finite-I blow-up compactness passage and used as an exactly matched rigidity trigger, or whether the producer/consumer topology fails before any ancient-solution Liouville argument. Type-II remains a sibling residual.",
+  "problem_signature": [
+    "3D incompressible Navier-Stokes",
+    "Type-I suitable weak singularity",
+    "finite local scale-invariant A+C+D+E/F control",
+    "ancient blow-up limit",
+    "vorticity direction xi=omega/|omega|",
+    "double-cone/great-circle geometry",
+    "weak derivative compactness",
+    "high-vorticity superlevel sets",
+    "geometric depletion",
+    "producer-consumer transport"
+  ],
+  "structural_coordinates": [
+    "whole-space unforced 3D incompressible Navier-Stokes with viscosity normalized to 1",
+    "parabolic scaling u_lambda(x,t)=lambda u(lambda x,lambda^2 t), p_lambda=lambda^2 p(lambda x,lambda^2 t)",
+    "Albritton-Barker Type-I blow-up extraction yields a nontrivial mild bounded ancient solution with finite local scale-invariant Type-I control",
+    "registered compactness strength for the prior B1a3 interface is strong L3_loc convergence of velocity and weak L3/2_loc convergence of pressure on fixed cylinders; local-energy bounds give only weak derivative control without an added compactness lemma",
+    "vorticity omega=curl u is derivative-defined; direction xi=omega/|omega| is undefined at omega=0 and nonlinear under weak convergence",
+    "Lei-Ren-Tian Theorem 1.1 is a local suitable-weak regularity criterion: high-vorticity vectors constrained to a fixed double cone imply regularity",
+    "Lei-Ren-Tian Corollary 1.5 recasts singularity as a large directional range: the limiting direction set meets every great circle",
+    "Lei-Ren-Tian proof mechanism uses local absolute-vorticity flux and De Giorgi decay; it is local and does not require the global-L3 tail interface blocked in B1a3",
+    "Giga-Miura and older coherence criteria are analogues requiring additional directional continuity/coherence hypotheses, not consequences of finite-I alone",
+    "recent logarithmic-depletion criteria add concentration and weighted-BMO hypotheses and therefore do not automatically attach to the generic finite-I class",
+    "noncompact translations/dilations remain relevant to global ancient classification, but this child first tests a derivative-observable transport interface on fixed local cylinders",
+    "backward uniqueness and stationary Leray-profile rigidity are not invoked in the selected child; their prior hypothesis/equation mismatches remain scoped memory",
+    "Type-II blow-up is outside this finite-I inheritance audit"
+  ],
+  "target_interface": {
+    "producer": {
+      "input": "Type-I singular suitable weak solution and its parabolically rescaled sequence",
+      "registered_output": "velocity compactness strong in L3_loc plus local-energy/pressure bounds sufficient for suitable-weak limit extraction"
+    },
+    "candidate_geometry_consumer": {
+      "input": "a stable high-vorticity directional restriction/coherence observable, e.g. a fixed double-cone condition or another source-valid geometric hypothesis on xi=omega/|omega|",
+      "desired_output": "regularity/rigidity contradiction for the singular core"
+    },
+    "audit_question": "Does the registered Type-I compactness topology transport the required vorticity-direction geometry to the limit, or can velocity convergence coexist with oscillatory/nonconvergent vorticity directions?"
+  },
+  "child_success_contract": {
+    "theorem_path": [
+      "state an exact source-valid geometric hypothesis and its regularity conclusion",
+      "prove the hypothesis is inherited by the relevant rescaled sequence/ancient limit under exactly stated convergence",
+      "verify normalization at omega=0 and high-vorticity-set passage",
+      "bind local pressure/energy assumptions and scaling",
+      "derive a contradiction without importing a stronger unproved global critical norm"
+    ],
+    "route_pruning_path": [
+      "give an exact producer-consumer mismatch",
+      "supply a falsifier showing the available velocity topology does not control the derivative-defined direction observable",
+      "separate observation, diagnosis, and scoped obstruction",
+      "leave a falsifiable next interface rather than declaring geometry impossible"
+    ],
+    "root_promotion": "FORBIDDEN unless the repository root contract is independently satisfied"
+  },
+  "solved_analogues": [
+    {
+      "id": "LRT-THM1.1-DOUBLE-CONE",
+      "source": "Lei-Ren-Tian, arXiv:2501.08976, Theorem 1.1",
+      "fact": "double-cone confinement of high-vorticity directions for a local suitable weak solution implies regularity on a smaller cylinder"
+    },
+    {
+      "id": "LRT-COR1.5-GREAT-CIRCLE",
+      "source": "Lei-Ren-Tian, arXiv:2501.08976, Corollary 1.5",
+      "fact": "their limiting vorticity-direction set intersects every great circle iff the origin is singular"
+    },
+    {
+      "id": "AB-TYPEI-ANCIENT",
+      "source": "Albritton-Barker, arXiv:1811.00502",
+      "fact": "local Type-I singularity is tied to a nontrivial mild bounded ancient finite-Type-I solution"
+    }
+  ],
+  "disanalogies": [
+    {
+      "id": "GM-DIRECTION-CONTINUITY",
+      "source": "Giga-Miura, Commun. Math. Phys. 303 (2011)",
+      "difference": "pointwise Type-I plus uniform direction continuity on high-vorticity regions is an extra hypothesis; it is not finite-I compactness itself"
+    },
+    {
+      "id": "GRUJIC-LOG-BMO-2026",
+      "source": "Grujic, arXiv:2607.08866",
+      "difference": "requires a critical vorticity-concentration scenario and weighted-BMO direction control; these are not registered consequences of generic finite-I"
+    },
+    {
+      "id": "B1a3-GLOBAL-L3",
+      "source": "NS-B1a3-C001",
+      "difference": "the prior obstruction was global tail/topology mismatch; the present child is local derivative/direction transport and must not be collapsed into far-field failure"
+    }
+  ],
+  "adversarial_probe_registered": "Use the smooth divergence-free fields u_n(x)=(0,n^{-1} sin(n x_1),0) on fixed compact sets. Then u_n -> 0 strongly in L3_loc while curl u_n=(0,0,cos(n x_1)) oscillates with direction switching between +/-e3 away from zeros. This is NOT a Navier-Stokes counterexample; it falsifies only the topological inference 'strong L3 velocity convergence => vorticity-direction convergence'.",
+  "falsifier": "A source-valid compactness/transport theorem deriving stable high-vorticity directional range/coherence for the rescaled sequence or its ancient limit from the actual finite-I hypotheses would overturn the anticipated transport obstruction. A direct pre-limit geometric argument that avoids transporting xi would also bypass, rather than refute, the obstruction.",
+  "numerics_policy": "calibration/falsification only; no numerical evidence can promote a theorem or root",
+  "frozen_before_candidate": true
+}
