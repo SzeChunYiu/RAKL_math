@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0.0",
+  "trace_id": "PNP-O9d12a2a1b-C045-FINAL-TRACE-20260812",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "hash_method": "artifact_hash is SHA-256 of canonical JSON for the entry excluding artifact_hash; previous_event_hash chains to the previous entry; E01 chains to the C044 terminal trace hash",
+  "prior_trace_terminal_hash": "sha256:959a2fd74585a8f8356ff4a9b7a4653a541bcd19e24f54c77fbd80f16c154aa6",
+  "entries": [
+    {
+      "event_id": "O9d12a2a1b-C045-E01",
+      "event_type": "CONTEXT_FROZEN",
+      "state_commit": "e6d7f886416bf954e368db8edd028f4870fc7a1f",
+      "summary": "Prospectively froze the G17/length-32 component-coupling atom, exact root binding, actual fibre, analogues/disanalogies, selected/rejected experience, five-role expert cell, falsifiers, saturation pre-state, and RAKL v3 route before deriving the C045 result.",
+      "action": "Use v3 decomposition/routing/gap_discovery to test the cheapest component-coupling discriminator before cover-LP or lower-bound search.",
+      "outputs": ["strict_pre_result_fibre:true", "fibre_snapshot_hash:sha256:7c96aab2cbb6bb6151aaa9ae2c34c9259d0964417ce7c9300be9e6d04573f182", "root_authority:none"],
+      "residual": "Does the first untouched length-32 UNSAT batch reuse an accumulated complement row and couple blocks?",
+      "previous_event_hash": "sha256:959a2fd74585a8f8356ff4a9b7a4653a541bcd19e24f54c77fbd80f16c154aa6",
+      "artifact_hash": "sha256:8767c68a9e7b53ef6a43b1a99d1887488e7dab5f6fe9ee019f2bce0d96b1876f"
+    },
+    {
+      "event_id": "O9d12a2a1b-C045-E02",
+      "event_type": "HYPOTHESIS_FALSIFIED",
+      "state_commit": "b8f59bca9609d454612e45a8998e584dad7aa043",
+      "summary": "Exact hand classification found ten length-32 canonical UNSAT words, all with fresh prefix rows relative to U16 and fresh-half columns.",
+      "action": "Reject G17 as the first load-bearing coupling layer; preserve the local negative and test whether the new block itself admits a small legal cover.",
+      "outputs": ["length32_unsat_words:10", "old_new_row_projection_disjoint:true", "old_new_column_projection_disjoint:true", "cross_component_complement_cells:0"],
+      "residual": "Construct a source-valid local cover for U_new and keep asymptotic/root gluing separate.",
+      "previous_event_hash": "sha256:8767c68a9e7b53ef6a43b1a99d1887488e7dab5f6fe9ee019f2bce0d96b1876f",
+      "artifact_hash": "sha256:749576a551674a3d1654ca8ee901e3ff48585cdf4fc72ab6d5274fc1f439095f"
+    },
+    {
+      "event_id": "O9d12a2a1b-C045-E03",
+      "event_type": "LOCAL_UPPER_COVER_PROVED",
+      "state_commit": "af39c95f6feb4b7b6838c2f4adb1649801614bfe",
+      "summary": "An explicit three-bit E/H/X code covers all 38 active row-column graph cells of the new block; indexwise union with the C044 old three-pair cover plus one block separator yields a four-pair G17 upper cover.",
+      "action": "Record rho(G17)<=sigma(G17)<=4 as proposal/shadow only; do not infer equality, rho>3, a uniform recurrence, a circuit lower bound, or P!=NP.",
+      "outputs": ["new_block_pairs:3", "new_block_active_cells:38", "new_block_uncovered_cells:0", "rho_G17_upper:4", "computation_is_proof:false"],
+      "residual": "Earliest future canonical UNSAT prefix-row collision; uniform/asymptotic gluing; circuit bridge.",
+      "previous_event_hash": "sha256:749576a551674a3d1654ca8ee901e3ff48585cdf4fc72ab6d5274fc1f439095f",
+      "artifact_hash": "sha256:04b4d0ef8a887db8530efbe991640f9e7989153a408047d409136d15470d4419"
+    },
+    {
+      "event_id": "O9d12a2a1b-C045-E04",
+      "event_type": "REVIEWED_AND_DIAGNOSED",
+      "state_commit": "9b501448ab08c8677dbce6e4c49b0d26e8e4ed3c",
+      "summary": "Five-role same-context hostile review accepts the local hand proof with scope, catches the undefined literal extension of old pairs to new cells, and keeps global/root promotion blocked.",
+      "action": "Separate local mathematical closure from gluing failure; register the row-projection-collision gate as the reusable obstruction and route the next strict atom there.",
+      "outputs": ["same_context_roles:5", "independent_review_credit:0", "root_status:OPEN_NO_SOLUTION_CERTIFICATE", "next_obstruction:ROW_PROJECTION_COLLISION_GATE"],
+      "residual": "Locate earliest later n/n UNSAT prefix already in Rows(U_n), then stress a legal global cover; independent reviews remain 0/3.",
+      "previous_event_hash": "sha256:04b4d0ef8a887db8530efbe991640f9e7989153a408047d409136d15470d4419",
+      "artifact_hash": "sha256:28e5770115b2b44882d58be6c539098e8ec0ffa91a21007d941fedb5b01b0be2"
+    }
+  ],
+  "RAKL_CYCLE_METRICS": {
+    "record_type": "RAKL_CYCLE_METRICS",
+    "cycle_id": "PNP-C045-G17-COMPONENT-SEPARABILITY-20260812",
+    "authority": "PROPOSAL_SHADOW_ONLY",
+    "rakl_framework": {
+      "method_version": "3.0.0",
+      "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+      "v3_architecture_inspected": ["AGENTS.md", "skills/rakl-core/SKILL.md", "skills/rakl-core/manifest.yaml", "skills/rakl-core/static/core/principles.md", "skills/rakl-core/static/core/workflow.md", "skills/rakl-core/workflows/mathematical-research.md", "src/rakl/method_specs.py", "RAKL_VERSION.json"]
+    },
+    "rakl_math": {
+      "base": "e5f50a1dc5c20bee7cfc3c3d6edf980d5cc72e1c",
+      "head_semantic_before_receipt": "ba065446f8ede9a7c94c6666c57d747758a260c0",
+      "final_receipt_containing_head": "CANNOT_MEASURE: self-reference; the commit SHA containing this record only exists after the record is written. The resulting exact final branch head is attested in the draft PR body without another branch mutation."
+    },
+    "state_fingerprints": {
+      "pre_state": "sha256:8a8ecf9fefbc924844ed946cc5d192a201881aed98494232de36372ac6261bf6",
+      "post_semantic_state": "sha256:25e4e95c767b0e2b1a48c381c59dc3246a5cbc4dde6b508809dad333bd26399a",
+      "scope": "canonical semantic state only; Git/CI/schema growth is assurance and not learning"
+    },
+    "active_atom": {
+      "id": "O9d12a2a1b-C045",
+      "signature": "PNP-C045-G17-LENGTH32-COMPONENT-COUPLING-GATE",
+      "fibre_snapshot_hash": "sha256:7c96aab2cbb6bb6151aaa9ae2c34c9259d0964417ce7c9300be9e6d04573f182",
+      "fibre_freeze_commit": "e6d7f886416bf954e368db8edd028f4870fc7a1f"
+    },
+    "canonical_process_surfaces_invoked": ["decomposition", "routing", "search_query_generation", "source_selection_reliability", "claim_extraction", "equivalence_similarity", "gap_discovery", "experiment_query_selection", "memory", "review", "benchmarking", "saturation_stopping", "prompting_context_policy", "authority_promotion"],
+    "memory_retrieval": {
+      "episodes": {"count": 4, "ids": ["C043-FIRST-ROW-SPLIT", "C044-RETROSPECTIVE-Q16-MULTIPLEXING", "C041A-ZERO-AUGMENTATION", "C041B-TIGHT-INTERSECTION-ABSORPTION"]},
+      "failures": {"count": 3, "ids": ["C044-HETEROGENEOUS-MULTIPLEXING-FAILURE", "C041A-ZERO-AUGMENTATION", "C041B-TIGHT-INTERSECTION-ABSORPTION"]},
+      "motifs": {"count": 5, "ids": ["COMPONENT-MULTIPLEXING", "COMPONENT-COUPLING-GATE", "BIDIRECTIONAL-TWIN-QUOTIENT", "TIGHT-INTERSECTION-ABSORPTION", "FINITE-RESIDUAL-EQUIVALENCE"]},
+      "tool_memory": {"count": "CANNOT_MEASURE", "reason": "No canonical tool-memory ID registry was consulted; method surfaces are recorded separately."},
+      "other": {"count": 3, "ids": ["C044-COMPONENT-COUPLING-GATE", "C013-QUOTIENT-BLOWUP-CEILING", "MYHILL-NERODE-ANALOGY"]},
+      "selected_ids": ["C044-HETEROGENEOUS-MULTIPLEXING-FAILURE", "C044-COMPONENT-COUPLING-GATE", "C043-FIRST-ROW-SPLIT", "C013-QUOTIENT-BLOWUP-CEILING"],
+      "rejected_ids": ["C041A-ZERO-AUGMENTATION", "C041B-TIGHT-INTERSECTION-ABSORPTION", "MYHILL-NERODE-ANALOGY"],
+      "rejection_reasons": {
+        "C041A-ZERO-AUGMENTATION": "copy/relabelling family differs from canonical decoder activation",
+        "C041B-TIGHT-INTERSECTION-ABSORPTION": "dual saturation analysis was more expensive than the primal component gate and was deferred after the cheaper discriminator decided the atom",
+        "MYHILL-NERODE-ANALOGY": "finite residual equality transfers, but cover/circuit lower-bound authority does not"
+      },
+      "cross_millennium": "NOT_QUERIED: no applicability witness/DifferenceWitness supported transfer of this exact finite cover/fibre structure"
+    },
+    "outcome": {
+      "status": "MATERIAL_LOCAL_NEGATIVE_MILESTONE",
+      "mathematical": "The first untouched length-32 canonical UNSAT batch is a new complement block with row and column projections disjoint from U16; an explicit local three-pair code plus C044 multiplexing proves rho(G17)<=sigma(G17)<=4.",
+      "root": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "independent_review_credit": "0/3"
+    },
+    "residual_signatures": {
+      "before": "FIRST_LATER_CROSS_COMPONENT_COUPLING_TRANSITION",
+      "after": "EARLIEST_CANONICAL_UNSAT_PREFIX_ROW_COLLISION_WITH_ROWS(U_n); THEN TEST_LEGAL_GLOBAL_COVER_STRESS; UNIFORM_RECURRENCE_AND_CIRCUIT_BRIDGE_OPEN"
+    },
+    "retained_semantic_novelty": {
+      "protected": {"KNOWLEDGE": 0, "OPERATOR": 0, "EXPERIENCE_PATTERN": 0, "OBSTRUCTION": 0, "RELATION": 0, "PATH": 0, "META_METHOD": 0},
+      "shadow_proposal_deltas": {
+        "KNOWLEDGE": ["exact length-32 UNSAT classification", "finite G17 four-pair upper construction"],
+        "OPERATOR": [],
+        "EXPERIENCE_PATTERN": ["fresh semantic mass on previously complement-empty prefix rows remains block-multiplexable"],
+        "OBSTRUCTION": ["row-projection-collision gate"],
+        "RELATION": ["canonical prefix collision -> old/new complement coupling -> cover-code stress"],
+        "PATH": ["locate earliest row collision before LP/lower-bound search"],
+        "META_METHOD": ["prospective fibre chronology repaired for C045"]
+      },
+      "raw_repository_growth_counted_as_learning": false
+    },
+    "saturation": {
+      "axes_reopened": ["KNOWLEDGE", "OBSTRUCTION", "RELATION", "PATH"],
+      "axes_flattened": ["G17-as-first-coupling hypothesis", "semantic/type-count amplification family at G17", "literal inherited-pair extension without representation rule"],
+      "meta_method_note": "Chronology axis repaired prospectively; no protected novelty credit follows from assurance repair."
+    },
+    "resources": {
+      "model_tokens": "CANNOT_MEASURE: no authoritative per-cycle model-token counter is exposed",
+      "context_tokens": "CANNOT_MEASURE: no authoritative per-cycle context-token counter is exposed",
+      "retrieval_calls": "CANNOT_MEASURE: runtime compaction prevents an authoritative full-cycle dispatch count",
+      "tool_calls": "CANNOT_MEASURE: runtime compaction prevents an authoritative full-cycle dispatch count",
+      "wall_time": "CANNOT_MEASURE: no authoritative cycle-start/stop timer is exposed",
+      "finite_unsat_words_enumerated": 10,
+      "local_active_cells_verified": 38,
+      "expert_roles": 5
+    },
+    "new_ids": {
+      "episode": ["E-PNP-C045-G17-COUPLING-20260812"],
+      "diagnosis": ["D-PNP-C045-FRESH-ROW-BLOCK"],
+      "lesson": ["L-PNP-C045-FRESH-COLUMNS-NOT-COUPLING"],
+      "failure": ["F-PNP-C045-COUPLING-HYPOTHESIS-REFUTED", "F-PNP-C045-ASYMPTOTIC-GLUING-OPEN"],
+      "tool": [],
+      "obstruction": ["O-PNP-C045-ROW-PROJECTION-COLLISION-GATE"],
+      "motif": ["M-PNP-C045-FRESH-ROW-BLOCK-SEPARABILITY"]
+    },
+    "successful_reuse_ids": ["C043-LENGTH-FORMULA-AND-ACCUMULATED-FIBRES", "C044-HETEROGENEOUS-BLOCK-MULTIPLEXING", "C044-Q16-THREE-PAIR-UPPER-COVER"],
+    "gates": {
+      "exact_statement_binding": "PASS_LOCAL_ONLY",
+      "closed_root_proof_dag": "FAIL_NOT_ATTEMPTED",
+      "formal_verifier": "NO_FORMAL_PROOF; finite calibration only",
+      "dependency_axiom_audit": "LOCAL_HAND_AUDIT_ONLY",
+      "relevant_barrier_audit": "ROOT_PROMOTION_NOT_REACHED; no barrier-evasion claim",
+      "isolated_recheck": "SAME_CONTEXT_ONLY_NOT_INDEPENDENT",
+      "bounded_novelty_search": "LOCAL_SCOPE_ONLY",
+      "independent_mathematical_reviews": "0/3",
+      "promotion": "BLOCKED",
+      "root": "OPEN_NO_SOLUTION_CERTIFICATE"
+    },
+    "provenance": {
+      "primary_source": {"id": "ECCC-TR25-033", "authors": ["Bruno P. Cavalar", "Igor C. Oliveira"], "date": "2025-03-18", "selectors": ["Definition 18", "Definition 19", "Definition 20", "Definition 21", "Theorem 22"], "local_blob_sha": "8dfe370a6bf687eb33ebf52eaaf9308e1bdf0230"},
+      "application_decoder_blob_sha": "fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+      "status": "PINNED_AND_SCOPED"
+    },
+    "ci_status": "CANNOT_MEASURE_AT_RECEIPT_MATERIALIZATION: the exact final receipt commit and its CI run do not exist until this record is committed; the draft PR attests the resulting final head and observable CI status without counting CI as mathematics",
+    "rakl_changed_action_counterfactual": {
+      "value": "CANNOT_MEASURE",
+      "reason": "The mandatory current-memory/current-gate read preceded any instrumented pre-memory action preference. Causal routing influence is documented, but the counterfactual was not prospectively observed."
+    }
+  }
+}
