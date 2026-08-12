@@ -1,0 +1,34 @@
+{
+  "delta_id": "NS-B2a1a2-R1-20260812",
+  "parent": "NS-B2a1a1 / issue #227 route context",
+  "atom": "NS-B2a1a2",
+  "question": "Can Seregin (2.9) alone, after lawful unit-viscosity normalization, force standard CKN smallness on a controlled unit-parabolic cylinder?",
+  "status": "PARTIAL_SUCCESS_ROUTE_PRUNING",
+  "outcome": "DIRECT_CKN_BRIDGE_ESTIMATE_INSUFFICIENT",
+  "closed_scoped_obligation": "Quantify the exact direct normalization/aspect-ratio powers and optimize against maximal source-certified F_lambda.",
+  "result": {
+    "unit_viscosity_normalization": "c=alpha/nu, beta=alpha^2/nu",
+    "max_target_radius": "r=a sqrt(nu)/alpha",
+    "A_certificate": "M1 nu^-5/2 F^-2",
+    "E_certificate": "M1 nu^-3/2 F^-1",
+    "D_certificate": "M1 nu^-3 F^-2",
+    "F_ceiling": "F<=nu^-1",
+    "best_direct_A_E_floor": "nu^-1/2 in the derived upper-bound expressions"
+  },
+  "new_obstruction": "O-NS-B2a1a2-F-GAIN-CANNOT-BEAT-NU-ASPECT-COST",
+  "open_children_or_routes": [
+    "variable-viscosity/moving-radius epsilon or compactness route that avoids unit-viscosity lift",
+    "prelimit signed/no-incoming-flux route",
+    "moving-core producer-ancestry exclusion with Hill construction as shadow falsifier",
+    "pressure/far-field and noncompact-symmetry control",
+    "Euler rigidity/unique-continuation consumer with exact hypothesis binding"
+  ],
+  "gluing_residuals_unchanged": [
+    "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE",
+    "moving-radius compactness/rate gap",
+    "producer ancestry and far-field leakage"
+  ],
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "root_promotion": "NONE",
+  "authority": "PROPOSAL_SHADOW_DAG_DELTA_ONLY"
+}
