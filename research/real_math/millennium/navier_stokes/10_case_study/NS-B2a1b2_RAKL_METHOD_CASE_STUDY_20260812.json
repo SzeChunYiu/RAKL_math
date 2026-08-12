@@ -1,0 +1,73 @@
+{
+  "record_type": "RAKL_METHOD_CASE_STUDY",
+  "case_study_id": "CS-NS-B2a1b2-R1-20260812",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "atom_problem_signature": "NS-B2a1b2: test whether qualitative/root-facing F=1 Euler-side nontriviality can close the NS-B2a1b1 Lyapunov route by forcing Lambda_chi>0.",
+  "actual_fibre": {
+    "source_state": "Seregin Theorem 3.1 F(a)=1 ancient Euler pair with (3.5)-(3.8)",
+    "observable": "Lambda_chi(t)=limsup_R R^-1 int chi_R |u(t)|^2",
+    "hostile_state": "Choi Hill spherical vortex traveling wave",
+    "gluing_boundary": "displayed Euler-side state class != proven image of the Navier-Stokes blow-up extraction"
+  },
+  "research_method_used": [
+    "current-v3 Gate A MathContextFiber",
+    "Gate B dual success/failure memory",
+    "Gate C same-domain SEARCH before invention",
+    "Gate D prospective hash-chained trace",
+    "role-separated six-lens expert cell",
+    "counterexample-first exact hostile-state verification",
+    "DifferenceWitness separation of Euler-side falsification from source ancestry"
+  ],
+  "methods_operators_motifs_tried": [
+    "SEARCH exact same-domain obstruction transformation",
+    "finite-energy kernel test",
+    "translation/noncompactness motif",
+    "source-to-limit interface audit",
+    "observable coercivity/zero-set audit"
+  ],
+  "prior_successes_failures": {
+    "retrieved": ["FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE","F-NS-B2a1d-F1-CENTERED-LOCAL-RIGIDITY-NONCOMPACT-TRANSLATION","O-NS-B2a1d-PRODUCER-MUST-EXCLUDE-TRANSLATING-INCOMING-CORE","O-NS-B2a1b1-ASYMPTOTIC-DENSITY-LOCAL-NONTRIVIALITY-DISCONNECT","F-NS-B2a1a2-DIRECT-CKN-LEDGER-INSUFFICIENT","XM-PC-NS-001-C001-ENSTROPHY-SIGN"],
+    "selected": ["FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE","F-NS-B2a1d-F1-CENTERED-LOCAL-RIGIDITY-NONCOMPACT-TRANSLATION","O-NS-B2a1d-PRODUCER-MUST-EXCLUDE-TRANSLATING-INCOMING-CORE","O-NS-B2a1b1-ASYMPTOTIC-DENSITY-LOCAL-NONTRIVIALITY-DISCONNECT"],
+    "rejected": [{"id":"F-NS-B2a1a2-DIRECT-CKN-LEDGER-INSUFFICIENT","reason":"orthogonal moving-radius/vanishing-viscosity CKN interface"},{"id":"XM-PC-NS-001-C001-ENSTROPHY-SIGN","reason":"periodic instantaneous enstrophy cancellation is not the asymptotic-density obstruction"}],
+    "missed": "CANNOT_MEASURE: connector does not expose a complete denominator of all potentially relevant repository memory."
+  },
+  "decision_policy": "Experience changes search priority only: use the prior translation/density residual to rank a same-domain exact Hill falsifier before attempting a new positivity estimate; independently reverify the mathematics from source-bound formulas.",
+  "falsifier_verification": "For the exact finite-energy traveling Euler state, translation preserves ||V||_2 and 0<=chi_R<=1 gives R^-1 int chi_R|U(t)|^2 <= R^-1||V||_2^2 -> 0 for each fixed t. Rechecked displayed F=1 kinetic/pressure/gradient carriers and the Euler/local-energy interface; no numerics used.",
+  "outcome": "HILL_F1_NONZERO_WITH_ZERO_ASYMPTOTIC_LINEAR_DENSITY",
+  "residual": "RES-NS-B2a1b2-SOURCE-INHERITED-NONLINEAR-DENSITY-OR-NO-INCOMING-BRIDGE",
+  "failure_category": {
+    "mathematics": "NO_LOCAL_MATHEMATICAL_FAILURE",
+    "retrieval": "NO_LOAD_BEARING_RETRIEVAL_FAILURE",
+    "decomposition": "BARE_BRIDGE_TOO_COARSE; source ancestry must be a separate coordinate",
+    "representation": "PRIMARY_FAILURE: asymptotic linear density is non-identifying for finite-energy nonzero states",
+    "verification": "NO_FAILURE; exact inequality is analytic",
+    "tooling": "NO_MATERIAL_TOOL_FAILURE",
+    "local_to_global_gluing": "OPEN_AND_LOAD_BEARING"
+  },
+  "episode_diagnosis_lesson_separation": {
+    "episode": "E-NS-B2a1b2-R1-20260812 records what happened",
+    "diagnosis": "D-NS-B2a1b2-R1 attributes the failure to a non-identifying observation map within frozen scope",
+    "obstruction": "O-NS-B2a1b2-FINITE-ENERGY-KERNEL-OF-LINEAR-DENSITY abstracts the relational barrier",
+    "lesson": "L-NS-B2a1b2-DENSITY-RIGIDITY-NEEDS-SOURCE-GROWTH remains candidate/proposal-only"
+  },
+  "saturation_axes_retained_semantic_novelty": {
+    "KNOWLEDGE": 1,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 1,
+    "OBSTRUCTION": 1,
+    "RELATION": 1,
+    "PATH": 1,
+    "META_METHOD": 0
+  },
+  "axes_reopened": ["OBSTRUCTION","RELATION","PATH"],
+  "axes_flattened": ["OPERATOR","META_METHOD"],
+  "novelty_class": "representation",
+  "novelty_boundary": "Scoped RAKL representation/route-pruning novelty only; no literature-novelty, theorem, or root claim.",
+  "what_worked": "Current v3 Gate C and the dual-memory review made the exact same-domain hostile state the first discriminator; the observable-kernel test closed the bare bridge with a one-line coercivity bound after source checks.",
+  "what_failed": "The monotone asymptotic linear density from NS-B2a1b1 is too noncoercive to convert qualitative local nontriviality into rigidity: every finite-energy state lies in its zero set.",
+  "v3_feature_helped": ["obstruction-transformation SEARCH", "DifferenceWitness", "dual failure memory", "prospective trace ordering", "episode/diagnosis/lesson authority separation"],
+  "v3_feature_missing_or_weak": "No first-class observable-kernel/coercivity preflight is required before a proposed Lyapunov quantity is asked to detect nontriviality.",
+  "framework_improvement_hypothesis": "Benchmark, but do not promote, an observable-kernel preflight under gap_discovery/mathematical_context_translation: before investing in monotonicity closure, automatically test whether the observable's zero set contains exact admissible nontrivial states and whether source ancestry excludes them. One case is insufficient to establish a framework defect.",
+  "repeated_process_failure_links": ["FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE"],
+  "next_action": "Search for a source-inherited lower-growth/no-incoming/tightness/recentering bridge or an alternative Lyapunov observable coercive against finite-energy traveling states; keep moving-radius compactness orthogonal."
+}
