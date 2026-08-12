@@ -22,7 +22,7 @@
   "TaskEpisode": {
     "active_atom": "O9d12a2a1b-C050",
     "authority": "PROPOSAL_SHADOW_ONLY",
-    "cost_effort_proxy": {"retrieval_calls_observed": 17,"web_search_calls_observed": 1,"calibration_executions": 2,"model_tokens":"CANNOT_MEASURE: runtime does not expose token counters","wall_time":"CANNOT_MEASURE: no trustworthy full-cycle monotonic timer was captured before first action"},
+    "cost_effort_proxy": {"retrieval_calls_observed":"CANNOT_MEASURE: automation-context compaction removed the complete call ledger; four fibre-memory objects are exactly identified separately","web_search_calls_observed":1,"calibration_executions":2,"model_tokens":"CANNOT_MEASURE: runtime does not expose token counters","wall_time":"CANNOT_MEASURE: no trustworthy full-cycle monotonic timer was captured before first action"},
     "diagnosis_id": "PNP-C050-K13-GRAMMAR-HOLE-DIAGNOSIS-20260812",
     "episode_id": "PNP-C050-K13-NONVACUITY-EPISODE-20260812",
     "failure_signature": "K13_DUAL_LANGUAGE_VACUITY__H13_EMPTY__P14_EMPTY",
@@ -36,7 +36,7 @@
     "outcome": "SCOPED_SOLVED_NEGATIVE",
     "residual_signature": "K_GT_13_NONVACUITY_AND_OVERLAP_OPEN__DOWNSTREAM_COVER_AND_ROOT_OPEN",
     "search_policy": "SEARCH / exact smallest-scale obstruction elimination",
-    "verification_performed": ["symbolic proof","hostile boundary cases m=1,2,>=3 and w strata","bounded calibration only after fibre freeze" ]
+    "verification_performed": ["symbolic proof","hostile boundary cases m=1,2,>=3 and w strata","bounded calibration only after fibre freeze"]
   },
   "diagnosis": {
     "cause": "The canonical encoding has discrete length support. At k=13 the producer side length 26 contains only satisfiable one-clause formulas, while the consumer side length 28 has no canonical encodings at all.",
@@ -50,5 +50,12 @@
     "proposal_only": true,
     "reusable_lesson": "Before a suffix/prefix overlap search at scale k, prove both the semantic producer H_k and the canonical consumer P_(k+1) are nonempty; a representation-level support hole dominates all bit-synchronization and downstream cover arguments at that scale.",
     "not_promoted": true
+  },
+  "tooling_failure": {
+    "failure_id": "F-PNP-C050-TEST-WRITE-BLOCKED-20260812",
+    "category": "tooling",
+    "effect_on_mathematics": "none",
+    "observation": "An attempted assurance-test file creation was blocked by the connector safety layer before repository mutation.",
+    "repair": "Do not treat missing local test as mathematical evidence; rely on the persisted symbolic proof plus bounded calibration, and leave CI/test assurance unresolved."
   }
 }
