@@ -1,20 +1,36 @@
 {
   "record_type": "DIAGNOSIS_SHADOW",
   "diagnosis_id": "D-NS-B2a1b2-R1",
-  "episode_id": "E-NS-B2a1b2-R1-20260812",
   "atom_id": "NS-B2a1b2",
   "authority": "PROPOSAL_SHADOW_ONLY",
   "observation": "An exact nonzero finite-energy Hill traveling Euler state satisfying the displayed F(a)=1 Euler-side budget/interface has Lambda_chi(t)=0 for every fixed time.",
   "supported_diagnosis": "The observation map u -> Lambda_chi is non-identifying for qualitative local/unit-scale nontriviality because its zero set contains every finite-global-energy state. The failed bridge is therefore a local-to-global representation/observation-map mismatch, not a failure of the local Euler equations or local-energy identity.",
   "competing_diagnoses": [
-    {"candidate": "pressure/nonlocality destroys the sign", "status": "NOT_CAUSAL_FOR_THIS_FAILURE", "reason": "The falsifier uses only the positive kinetic-energy density upper bound by total L2 energy; pressure does not enter the Lambda_chi=0 calculation."},
-    {"candidate": "endpoint or limit-interchange pathology", "status": "REJECTED", "reason": "For each fixed time, 0 <= R^-1 int chi_R |U|^2 <= R^-1 ||V||_2^2, so the limit is direct and no interchange is used."},
-    {"candidate": "Euler-side local mathematical inconsistency", "status": "REJECTED", "reason": "The hostile state is an exact traveling Euler solution; the local equations remain valid."},
-    {"candidate": "Seregin blow-up extraction permits Hill", "status": "UNRESOLVED_AND_NOT_ASSUMED", "reason": "Membership in the displayed Euler-side class is distinct from membership in the image of the Navier-Stokes extraction."}
+    {
+      "candidate": "pressure/nonlocality destroys the sign",
+      "status": "NOT_CAUSAL_FOR_THIS_FAILURE",
+      "reason": "The falsifier uses only the positive kinetic-energy density upper bound by total L2 energy; pressure does not enter the Lambda_chi=0 calculation."
+    },
+    {
+      "candidate": "endpoint or limit-interchange pathology",
+      "status": "REJECTED",
+      "reason": "For each fixed time, 0 <= R^-1 int chi_R |U|^2 <= R^-1 ||V||_2^2, so the limit is direct and no interchange is used."
+    },
+    {
+      "candidate": "Euler-side local mathematical inconsistency",
+      "status": "REJECTED",
+      "reason": "The hostile state is an exact traveling Euler solution; the local equations remain valid."
+    },
+    {
+      "candidate": "Seregin blow-up extraction permits Hill",
+      "status": "UNRESOLVED_AND_NOT_ASSUMED",
+      "reason": "Membership in the displayed Euler-side class is distinct from membership in the image of the Navier-Stokes extraction."
+    }
   ],
   "local_mathematical_failure": false,
   "local_to_global_gluing_failure": true,
   "reusable_scope": "Only bare qualitative local/nonzero-state -> positive asymptotic linear-density bridges, or other observables whose zero set contains all finite-energy states. Any transfer requires a DifferenceWitness for source ancestry, scale growth, and the observable kernel.",
   "falsifier_of_diagnosis": "A source-valid theorem deriving a lower linear-energy growth bound from Seregin's ancestry-specific data, or an exact proof that every source-realizable F=1 state necessarily lies outside the finite-energy kernel, would defeat this diagnosis for that narrower source class.",
-  "next_discriminator": "Search for a source-inherited lower-growth/no-incoming/tightness/recentering condition or replace Lambda_chi by an observable whose zero set excludes the exact Hill world."
+  "next_discriminator": "Search for a source-inherited lower-growth/no-incoming/tightness/recentering condition or replace Lambda_chi by an observable whose zero set excludes the exact Hill world.",
+  "episode_pointer": "E-NS-B2a1b2-R1-20260812"
 }
