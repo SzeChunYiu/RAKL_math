@@ -1,0 +1,98 @@
+{
+  "schema_version": "math-context-fibre-shadow-v3",
+  "atom_id": "NS-B1a4a",
+  "root_problem": "3D incompressible Navier–Stokes existence and smoothness, positive regularity lane",
+  "root_contract_refs": [
+    "research/real_math/millennium/navier_stokes/00_problem_contract/canonical_statement.md",
+    "research/real_math/millennium/navier_stokes/00_problem_contract/success_contract.yaml",
+    "RAKL_math issue #4"
+  ],
+  "problem_signature": [
+    "mild bounded ancient or local pre-singularity 3D NSE state",
+    "scale-critical finite-I ledger A+C+D+E as in Albritton–Barker",
+    "potential Type-I singularity at a top-center",
+    "candidate rigidity consumer: Pineau–Vicol Theorem 1.9",
+    "new coordinate: one-time self-similar-time velocity defect ∂_s U"
+  ],
+  "object_context": "Audit whether the current finite-I/Type-I compactness lane can legally glue to the 2026 Pineau–Vicol one-time approximate-self-similarity regularity criterion, after the signed local-energy/no-recrossing family was route-pruned.",
+  "structural_coordinates": [
+    "A(Q)=r^-1 ess sup_t ∫_B |u|^2",
+    "C(Q)=r^-2 ∫_Q |u|^3",
+    "D(Q)=r^-2 ∫_Q |p-[p]_{B,r}|^(3/2)",
+    "E(Q)=r^-1 ∫_Q |∇u|^2",
+    "I=sup_Q (A+C+D+E)",
+    "Pineau–Vicol pointwise Type-I carrier |u(x,t)|≤C_u/(sqrt(-t)+|x|)",
+    "Pineau–Vicol annular pressure carrier |p|≤C_p on 1/2<|x|<3/4",
+    "self-similar variables U(y,s)=sqrt(-t)u(x,t), t=-e^-s",
+    "generator defect ∂_s U=sqrt(-t)((-t)∂_t u-1/2 u-1/2(x·∇)u)",
+    "weaker weighted-L1 generator criterion from Pineau–Vicol Remark 1.11"
+  ],
+  "equivalent_formulations": [
+    "small ∂_s U at one late self-similar time is local approximate backward self-similarity",
+    "the generator defect is -1/2 the infinitesimal scaling generator in original variables",
+    "a direct finite-I→Pineau–Vicol bridge must bind all three extra carriers: pointwise Type-I, annular pressure boundedness, and one-time generator-defect smallness"
+  ],
+  "solved_analogues": [
+    {
+      "id": "PV-2026-THM1.9",
+      "result": "Type-I pointwise bound + annular pressure bound + one-time small self-similar generator implies regularity at the top-center",
+      "source": "Pineau–Vicol, arXiv:2607.09619v2, Theorem 1.9 and Remarks 1.10–1.11"
+    },
+    {
+      "id": "AB-2018/2026-THM1.1",
+      "result": "Type-I singularity exists iff a nontrivial mild bounded ancient solution with finite I exists",
+      "source": "Albritton–Barker, arXiv:1811.00502, Theorem 1.1"
+    }
+  ],
+  "near_solved_analogues": [
+    {
+      "id": "PV-RSS-RDSS",
+      "shared_structure": "self-similar-time rigidity under Type-I control",
+      "disanalogy": "RSS/RDSS impose exact global scaling/rotation structure; the target finite-I ancient class does not"
+    },
+    {
+      "id": "AB-LOCAL-COMPACTNESS",
+      "shared_structure": "Type-I blow-up extraction and ancient-limit compactness",
+      "disanalogy": "local compactness does not itself provide a one-time small scaling-generator defect"
+    }
+  ],
+  "transfer_assumptions": [
+    "same Navier–Stokes viscosity normalization after parabolic rescaling",
+    "same top-center and local cylinder after translation/rescaling",
+    "pressure gauge fixed strongly enough to compare the annular L∞ hypothesis",
+    "any use of Pineau–Vicol must preserve its exact carrier, not replace it by finite I"
+  ],
+  "difference_witnesses": [
+    "finite I is an integral scale-invariant ledger; Pineau–Vicol (1.15) is a pointwise Type-I bound, so the data types are not definitionally equivalent",
+    "D controls pressure oscillation in L^(3/2) spacetime; Theorem 1.9 assumes an L∞ pressure bound on a fixed annulus",
+    "E controls one spatial derivative in spacetime L2; the generator defect contains ∂_t u and, after NSE substitution, Δu and ∇p, creating derivative/time-trace obligations",
+    "exact RSS/RDSS states have special self-similar-time structure absent from a generic finite-I ancient solution"
+  ],
+  "counterexample_first_falsifier": "Before attempting a bound, expand the Pineau–Vicol generator via NSE and audit whether A,C,D,E control every derivative and time-trace term at one slice. Any missing derivative/time-trace carrier blocks the direct estimate without claiming impossibility.",
+  "success_contract": {
+    "positive": "source-bind a legal finite-I→PV carrier map with constants and no endpoint/derivative loss",
+    "negative": "prove the proposed direct glue is unlicensed by exact source signatures and isolate the missing carrier(s)",
+    "blocked": "CANNOT_CHECK if source or transformation coverage is incomplete",
+    "root_effect": "none; even positive closure would only address a Type-I subroute"
+  },
+  "saturation_prior": {
+    "KNOWLEDGE": "partly open",
+    "OPERATOR": "flattened for standard local-energy sign estimates",
+    "EXPERIENCE_PATTERN": "active",
+    "OBSTRUCTION": "reopened by signed-temporal-coordinate failure",
+    "RELATION": "reopened",
+    "PATH": "reopened",
+    "META_METHOD": "reopened by current Gate C adoption"
+  },
+  "authority": "PROPOSAL_SHADOW_FROZEN_BEFORE_CANDIDATE",
+  "framework_binding": {
+    "rakl_main": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "method_version": "3.0.0",
+    "skill_manifest": "0.7.0"
+  },
+  "application_base": {
+    "sha": "590fada40db007185e31d849a82349c4c21d75ac",
+    "tree": "d59b2dce79f7866a658608898f104bb8f2b582e6"
+  },
+  "fibre_snapshot_hash": "sha256:19b56b70600d4f82f07f2f629ce27a193d68d097935e774c3121b7e1fb0c4d1d"
+}
