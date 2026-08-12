@@ -1,0 +1,35 @@
+{
+  "schema": "RAKL_math.shadow_failure_experience.v1",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "failure_id": "F-YM-E3A1-MAIN-5P11-N-BOUND-INVALID",
+  "atom_id": "YM-E3a1",
+  "problem_signature": "weak_coupling_RG | discrete_quadratic_recurrence | source_proof | geometric_weight_sum",
+  "source": {
+    "work": "Faizal-Shabir, Reflection-Positive Construction of a Four-Dimensional SU(N) Yang-Mills Theory with Mass Gap and Confinement",
+    "version": "arXiv:2606.19362v1 (2026-06-09)",
+    "selector": "main Theorem 5.3, equation (5.11), PDF page 574"
+  },
+  "observation": "The proof writes sum_{j=0}^{n-1} rho^j rho^{n-1-j}=n rho^{n-1} <= (1/(1-rho)) rho^{n-1}. For rho in (0,1), the last inequality is equivalent to n<=1/(1-rho), so it fails for sufficiently large n; e.g. rho=1/2,n=4.",
+  "diagnosis": "The main-text theorem contains the correct shape of a smallness assumption but its printed geometric-weight estimate is not a valid all-n bound. The displayed additive-floor estimate also does not by itself imply the immediately asserted exponential convergence.",
+  "failure_category": ["MATHEMATICAL_LOCAL", "SOURCE_PROOF"],
+  "falsifier": {
+    "rho": "1/2",
+    "n": 4,
+    "lhs_n_rho_power": "1/2",
+    "rhs_claimed_upper_bound": "1/4",
+    "verdict": "CLAIMED_INEQUALITY_FALSE"
+  },
+  "scope": "Local proof route only. This does not establish that the intended contraction theorem is false; the invariant-ball lemma YM-E3a1-C001 supplies a corrected sufficient condition.",
+  "reusable_obstruction_relation": {
+    "existing_parent": "RAKL_math#93 / YM-E3a",
+    "status": "NARROWS_EXISTING_SOURCE_REPAIR_OBLIGATION",
+    "new_protected_obstruction_minted": false
+  },
+  "lesson_status": "NO_PROTECTED_LESSON_MINTED",
+  "episode_relation": "Evidence is attached to the cycle TaskEpisode; diagnosis and parent obstruction remain distinct records.",
+  "verification": {
+    "parsed_primary_pdf": "CHECKED",
+    "visual_primary_pdf_page_574": "CHECKED",
+    "independent_mathematical_review_count": 0
+  }
+}
