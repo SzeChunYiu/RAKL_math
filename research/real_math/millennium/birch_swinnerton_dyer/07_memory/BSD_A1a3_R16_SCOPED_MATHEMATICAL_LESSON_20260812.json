@@ -1,0 +1,39 @@
+{
+  "artifact_hash": "sha256:622c514097ca3ec388b0ef8236a7cd3fe6322e97bc0ef795cfc506f131c93bbd",
+  "atom_id": "BSD-A1a3-CASSELSTATEDIV-CORANK-GATE",
+  "attempted_mathematical_implication": "Cassels--Tate alternation/nondegeneracy -> corank_Zp Sha(E/Q)[p^infinity]=0 ->, after exact Selmer corank two, rank E(Q)=2.",
+  "exact_mathematical_result_or_failure": "The route fails as a standalone implication: nondegeneracy is on Sha/D, where D is the maximal divisible subgroup. The theorem controls the nondivisible quotient, not corank D. The explicit divisible-group countermodel shows it implies neither D=0 nor parity of corank D.",
+  "mathematical_falsifier": "A theorem derived solely from the frozen pairing properties that forces corank D=0 would have to exclude M=(Q_p/Z_p, zero pairing), whose quotient is zero with nondegenerate alternating induced pairing. Thus that implication is impossible without an additional hypothesis not present in the pairing properties.",
+  "proof_or_source_evidence": [
+    "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a3_R16_CASSELSTATE_SOURCE_AUDIT_20260812.json",
+    "Poonen--Stoll arXiv:math/9911267v1, abstract/introduction/Section 2",
+    "elementary countermodel M=(Q_p/Z_p)^r with zero pairing"
+  ],
+  "record_type": "BSD_R16_SEVEN_FIELD_MATHEMATICAL_LESSON",
+  "repair_or_next_discriminator": "Seek an independent same-E/Q theorem forcing D=0 (equivalently p-primary Sha finiteness in the R15 cofinite scope) from input no stronger than the active analytic/arithmetic data, or construct two independent rational points. Use Cassels--Tate only downstream to constrain the finite quotient/order; do not use it to prove its own radical vanishes.",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "scope": "Logical sufficiency of the exact Poonen--Stoll/Cassels pairing properties for the R15 p-primary divisible-corank slack, for the same E/Q and p. This is not an existence claim for infinite Sha, not a refutation of Cassels--Tate theory, and not a blacklist on pairing methods combined with independent input.",
+  "supported_and_competing_mathematical_causes": {
+    "competing": [
+      {
+        "cause": "alternation forces D to have even corank",
+        "status": "REFUTED_BY_r_EQUALS_1_COUNTERMODEL"
+      },
+      {
+        "cause": "square order of finite Sha forces finiteness",
+        "status": "REVERSED_DIRECTION_FINITE_IS_A_PREMISE"
+      },
+      {
+        "cause": "the pairing plus an additional theorem controlling D may still prove finiteness",
+        "status": "OPEN_NOT_REFUTED"
+      }
+    ],
+    "supported": "The source theorem asserts nondegeneracy only after quotienting by D, so it supplies no control on the size or corank of the removed divisible subgroup."
+  },
+  "zero_math_credit": [
+    "Git/branch/PR state",
+    "CI/tests",
+    "schemas/hashes/chronology",
+    "telemetry/repository growth"
+  ]
+}

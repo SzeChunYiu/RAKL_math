@@ -1,0 +1,137 @@
+{
+  "artifact_hash": "sha256:37b6a04acd99a343403dc0da26fad28d6f15fe5f5e5f565ce285bf4972869c8f",
+  "direct_candidate_episode_ids": [
+    "OTEP-BSD-R16-CASSELSTATE-RADICAL-QUOTIENT"
+  ],
+  "direct_mapping_witnesses": [
+    {
+      "artifact_hash": "sha256:b3df283c0241374ec1d1ed28b6a317fd3a6ae01b700e1a9115c792be24c0fbb6",
+      "disanalogies": [
+        "Poonen--Stoll treats the full global Sha while R15 targets one p-primary component; primary decomposition supplies the specialization."
+      ],
+      "episode_id": "OTEP-BSD-R16-CASSELSTATE-RADICAL-QUOTIENT",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a3_R16_CASSELSTATE_SOURCE_AUDIT_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a3_R16_SCOPED_MATHEMATICAL_LESSON_20260812.json"
+      ],
+      "precondition_mapping": [
+        [
+          "E is an elliptic curve over a global field",
+          "verified by Poonen--Stoll source scope and target specialization E/Q"
+        ],
+        [
+          "D is the maximal divisible subgroup of Sha(E)",
+          "verified by Poonen--Stoll source scope and target specialization E/Q"
+        ],
+        [
+          "use the Cassels--Tate pairing and its elliptic-curve alternation theorem",
+          "verified by Poonen--Stoll source scope and target specialization E/Q"
+        ]
+      ],
+      "role_mapping": [
+        [
+          "exact_selmer_corank",
+          "exact_selmer_corank"
+        ],
+        [
+          "mordell_weil_rank",
+          "mordell_weil_rank"
+        ],
+        [
+          "divisible_sha_slack",
+          "divisible_sha_slack"
+        ],
+        [
+          "pairing",
+          "pairing"
+        ],
+        [
+          "pairing_radical_or_quotient",
+          "pairing_radical_or_quotient"
+        ]
+      ],
+      "shared_constraints": [
+        "same_E_Q_and_p",
+        "no_Sha_finiteness_premise",
+        "exact_pairing_hypotheses",
+        "p_equals_2_scope_explicit"
+      ],
+      "shared_relations": [
+        "selmer_corank_equals_rank_plus_sha_corank",
+        "pairing_structure_may_apply_only_after_quotient"
+      ],
+      "target_obstruction_id": "O-BSD-R16-DIVISIBLE-RADICAL-SLACK",
+      "target_validation_obligations": [
+        "keep D distinct from Sha/D",
+        "do not convert conditional finite-order consequences into finiteness"
+      ],
+      "unmatched_source_preconditions": [],
+      "witness_id": "SMW-BSD-R16-CASSELSTATE-SAME-DOMAIN"
+    }
+  ],
+  "direct_search_status": "MATCHES_FOUND",
+  "episode_memory_snapshot_hash": "07a7e911ca6b4822882a8df7191eb2b9479b9c45f27a373b43ad238dd62d27b3",
+  "evidence_pointers": [
+    "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a3_R16_CASSELSTATE_SOURCE_AUDIT_20260812.json",
+    "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a3_R16_SCOPED_MATHEMATICAL_LESSON_20260812.json",
+    "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a3_R16_POSTRESULT_TRANSFORMATION_MEMORY_20260812.json"
+  ],
+  "exhaustion_witness": null,
+  "glue_search_status": "NO_VIABLE_MATCH",
+  "glue_witness": null,
+  "jump_mapping_witnesses": [],
+  "jump_search_status": "NO_VIABLE_MATCH",
+  "missing_transformation_specification": null,
+  "obstruction": {
+    "constraints": [
+      "same_E_Q_and_p",
+      "no_Sha_finiteness_premise",
+      "exact_pairing_hypotheses",
+      "p_equals_2_scope_explicit"
+    ],
+    "desired_transition": [
+      "determine_exact_pairing_implication_for_corank_of_maximal_divisible_sha_subgroup"
+    ],
+    "domain": "arithmetic_geometry",
+    "failure_mechanisms": [
+      "radical_is_invisible_to_pairing",
+      "finite_quotient_parity_misapplied_to_divisible_corank",
+      "target_assumed_as_hypothesis"
+    ],
+    "forbidden_losses": [
+      "replace_D_by_Sha_mod_D",
+      "assume_D_zero",
+      "infer_zero_from_even_parity",
+      "ignore_2_primary_scope"
+    ],
+    "invariants_to_preserve": [
+      "R15_exact_corank_identity",
+      "same_curve_and_prime",
+      "proof_direction",
+      "root_remains_open"
+    ],
+    "obstruction_id": "O-BSD-R16-DIVISIBLE-RADICAL-SLACK",
+    "relations": [
+      "selmer_corank_equals_rank_plus_sha_corank",
+      "pairing_structure_may_apply_only_after_quotient"
+    ],
+    "roles": [
+      "exact_selmer_corank",
+      "mordell_weil_rank",
+      "divisible_sha_slack",
+      "pairing",
+      "pairing_radical_or_quotient"
+    ]
+  },
+  "research_memory_review_hash": "sha256:5704aaaa83423cf3897ac58c71ce804b7dbf31a4266c659bc81747cd0ef52584",
+  "review_id": "OTR-BSD-R16-POSTRESULT-SEARCH-20260812",
+  "selected_episode_ids": [
+    "OTEP-BSD-R16-CASSELSTATE-RADICAL-QUOTIENT"
+  ],
+  "selected_mode": "SEARCH",
+  "target_atom_id": "BSD-A1a3-CASSELSTATEDIV-CORANK-GATE",
+  "target_context_hash": "sha256:4445f308448114792a28b89fed707fc8503f929cefb7899db7f1fca547c476b7",
+  "unresolved_warnings": [
+    "This post-result assimilation does not retroactively authorize candidate generation or claim discovery chronology."
+  ]
+}

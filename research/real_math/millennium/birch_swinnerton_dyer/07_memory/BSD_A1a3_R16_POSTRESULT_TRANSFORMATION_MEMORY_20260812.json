@@ -1,0 +1,95 @@
+{
+  "episodes": [
+    {
+      "artifact_hash": "sha256:e03f2854f21681199973aea484fd20cf68d7aa9bfe12ea42dfdddbb333cca794",
+      "authority": "SOURCE_EVENT_VERIFIED",
+      "episode_id": "OTEP-BSD-R16-CASSELSTATE-RADICAL-QUOTIENT",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a3_R16_CASSELSTATE_SOURCE_AUDIT_20260812.json",
+        "https://arxiv.org/pdf/math/9911267"
+      ],
+      "known_breakpoints": [
+        "cannot infer D=0",
+        "cannot infer parity of corank D",
+        "finite-order square consequence assumes finiteness"
+      ],
+      "lineage_ids": [
+        "LEM-BSD-R15-KUMMER-SHA-CORANK-DECOMPOSITION"
+      ],
+      "operation": "replace Sha by Sha_nd=Sha/D before invoking nondegeneracy; retain D as an independent uncontrolled coordinate",
+      "preconditions": [
+        "E is an elliptic curve over a global field",
+        "D is the maximal divisible subgroup of Sha(E)",
+        "use the Cassels--Tate pairing and its elliptic-curve alternation theorem"
+      ],
+      "preserved_invariants": [
+        "same E and p",
+        "R15 corank identity",
+        "pairing theorem direction",
+        "finite Sha remains an extra hypothesis"
+      ],
+      "relaxed_or_broken_constraints": [
+        "nondegeneracy_on_full_Sha"
+      ],
+      "resulting_relations": [
+        "determine_exact_pairing_implication_for_corank_of_maximal_divisible_sha_subgroup",
+        "nondegenerate_alternating_pairing_on_Sha_mod_D",
+        "D_corank_remains_uncontrolled"
+      ],
+      "source_context": "Cassels--Tate pairing for elliptic curves over global fields, as stated by Poonen--Stoll",
+      "source_domain": "arithmetic_geometry",
+      "source_obstruction": {
+        "constraints": [
+          "same_E_Q_and_p",
+          "no_Sha_finiteness_premise",
+          "exact_pairing_hypotheses",
+          "p_equals_2_scope_explicit"
+        ],
+        "desired_transition": [
+          "determine_exact_pairing_implication_for_corank_of_maximal_divisible_sha_subgroup"
+        ],
+        "domain": "arithmetic_geometry",
+        "failure_mechanisms": [
+          "radical_is_invisible_to_pairing",
+          "finite_quotient_parity_misapplied_to_divisible_corank",
+          "target_assumed_as_hypothesis"
+        ],
+        "forbidden_losses": [
+          "replace_D_by_Sha_mod_D",
+          "assume_D_zero",
+          "infer_zero_from_even_parity",
+          "ignore_2_primary_scope"
+        ],
+        "invariants_to_preserve": [
+          "R15_exact_corank_identity",
+          "same_curve_and_prime",
+          "proof_direction",
+          "root_remains_open"
+        ],
+        "obstruction_id": "O-BSD-R16-DIVISIBLE-RADICAL-SLACK",
+        "relations": [
+          "selmer_corank_equals_rank_plus_sha_corank",
+          "pairing_structure_may_apply_only_after_quotient"
+        ],
+        "roles": [
+          "exact_selmer_corank",
+          "mordell_weil_rank",
+          "divisible_sha_slack",
+          "pairing",
+          "pairing_radical_or_quotient"
+        ]
+      },
+      "transformation_name": "quotient by the maximal divisible subgroup before invoking nondegeneracy"
+    }
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a3_R16_CASSELSTATE_SOURCE_AUDIT_20260812.json",
+    "research/real_math/millennium/birch_swinnerton_dyer/09_trace/BSD_A1a3_R16_SOURCE_DISCRIMINATOR_FREEZE_20260812.json"
+  ],
+  "memory_id": "OTM-BSD-R16-POSTRESULT-20260812",
+  "snapshot_hash": "07a7e911ca6b4822882a8df7191eb2b9479b9c45f27a373b43ad238dd62d27b3",
+  "source_universe": [
+    "Poonen--Stoll arXiv:math/9911267v1",
+    "merged BSD R15 result"
+  ]
+}
