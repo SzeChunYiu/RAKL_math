@@ -1,0 +1,47 @@
+{
+  "artifact_hash": "sha256:80b88bd5fb4cef74c5b1841c7fe1c97adf4086c969af4e0a696602fa266321c1",
+  "atom_id": "O9d12a2a1b-C052-K31-OVERLAP",
+  "broken_assumptions": [
+    "coordinate-wise local variation composes into a common full label",
+    "removing the first known separator removes all canonical separators"
+  ],
+  "candidate_id": "PNP-C052-K31-TARGET-BLIND-OVERLAP-CERTIFICATE-DISCRIMINATOR-v1",
+  "competing_diagnoses": [
+    "H_31 is empty",
+    "current support omitted",
+    "UNSAT semantics causes separation",
+    "marginal theorem implies overlap"
+  ],
+  "diagnosis_status": "PROVED_EXACT_K31_SCOPE",
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C052_K31_OVERLAP_NEGATIVE_CERTIFICATE_20260812.json",
+    "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C052_K31_OVERLAP_INDEPENDENT_CHECK_RESULT_20260812.json"
+  ],
+  "failed_implication": "Coordinate-wise removal of the old h[0..7] forced-MAGIC separator does not imply removal of every whole-label separator.",
+  "failure_id": "F-PNP-C052-K31-ACTUAL-OVERLAP-EMPTY-BY-SYNTAX-DICHOTOMY",
+  "failure_mode": "a boundary-pad/current-payload dichotomy plus an illegal mapped parent token separates every full label",
+  "local_repair_attempts": [
+    "proved off-window marginal lemma",
+    "tested exact full-label certificate rather than extrapolating marginals"
+  ],
+  "mathematical_classification": "SCOPED_STRUCTURAL_LEMMA_AND_FAILED_LOCAL_TO_GLOBAL_IMPLICATION",
+  "method_family": "off-window local obstruction escape followed by exact literal-transpose overlap",
+  "observed_result": "H_31 intersection P_32 is empty despite removal of every forced-MAGIC obstruction among h[0..7].",
+  "residual_signature": [
+    "marginal local escape",
+    "full-word boundary obstruction",
+    "p31 or token-100 separator",
+    "exact bounded disjointness"
+  ],
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "scope_conditions": [
+    "k=31",
+    "unchanged C041 canonical encoding",
+    "unchanged C048 literal transpose",
+    "exact parent/current support cells only"
+  ],
+  "selected_diagnosis": "The local h[0..7] obstruction was removed, but full 32-bit equality exposes two later canonical constraints: parent padding at h31 and parent token legality at h7..h9.",
+  "verified_impossibility_scope": "H_31 intersection P_32 only",
+  "warning_not_blacklist": "Future k or changed structural coordinates require a DifferenceWitness; this k31 result does not block them universally."
+}
