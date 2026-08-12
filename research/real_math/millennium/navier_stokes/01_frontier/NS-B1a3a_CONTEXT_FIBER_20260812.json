@@ -1,0 +1,75 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow",
+  "atom_id": "NS-B1a3a",
+  "frozen_at": "2026-08-12T04:15:00+00:00",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "framework": {
+    "repo": "SzeChunYiu/RAKL",
+    "sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "method_version": "3.0.0",
+    "package_version": "0.1.0"
+  },
+  "application_base": {
+    "repo": "SzeChunYiu/RAKL_math",
+    "sha": "28e47e241fd04fb196032f961bc607dd70618ea8",
+    "tree": "bc2980efb0c87ce027c46d43613bf5fc03d7f75e"
+  },
+  "root_contract": {
+    "problem": "3D incompressible Navier-Stokes existence and smoothness",
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "promotion_authority": "NONE",
+    "independent_mathematical_reviews": "0/3"
+  },
+  "problem_signature": [
+    "object: nontrivial mild bounded ancient Navier-Stokes solution (v,q) on R^3 x (-infinity,0) with Albritton-Barker I(v,q)=M<infinity",
+    "producer: C(Q)=r^-2 integral_Q |v|^3 is one summand of I, uniformly bounded on every parabolic cylinder",
+    "consumer: Albritton-Barker Theorem 1.2 requires a backward sequence t_k down to -infinity with uniformly bounded global L3(R^3) norm",
+    "goal: isolate the strongest source-compatible part of the consumer signature forced directly by finite I and re-atomize the remaining local-to-global glue"
+  ],
+  "fibre_contents_consulted": {
+    "definitions": [
+      "Q(z,r)=B(x,r)x(t-r^2,t)",
+      "C(Q)=r^-2 integral_Q |v|^3",
+      "I=sup_Q [A(Q)+C(Q)+D(Q)+E(Q)]"
+    ],
+    "source_claims": [
+      "Albritton-Barker Theorem 1.1: Type-I singular point iff nontrivial mild bounded ancient solution with I<infinity",
+      "Albritton-Barker Theorem 1.2: mild ancient + backward sequence with bounded global L3 implies v identically zero"
+    ],
+    "prior_experience_selected": [
+      "F-NS-B1a3-UNCONTROLLED-FAR-FIELD",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "F-NS-B1a3-PROFILE-LEAKAGE"
+    ],
+    "prior_experience_retrieved_rejected": [
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER: saturated energy-ledger family",
+      "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION: saturated energy-counting family",
+      "F-NS-B1a3b1-GLOBAL-CONSUMER-SIGNATURE-MISMATCH: orthogonal geometry route needs unsourced global phase/amplitude producer",
+      "F-NS-B1a3b1-PRESINGULAR-ANCIENT-MISMATCH: warning only for this atom",
+      "Type-II B2a* experience: rejected by DifferenceWitness because finite-I ancient producer is a Type-I premise"
+    ],
+    "cross_millennium_memory": {
+      "queried": false,
+      "reason": "same-problem experience was sufficient; no applicability-certified cross-problem transfer was needed"
+    }
+  },
+  "assumptions": [
+    "M=I(v,q)<infinity",
+    "v is a mild bounded ancient solution as in the source theorem",
+    "time slices are interpreted at Lebesgue/a.e.-good times"
+  ],
+  "falsifiers": [
+    "If the C summand does not bound the stated large cylinder, the averaging lemma fails.",
+    "If chosen good times need not tend to -infinity as R tends to infinity, the backward-sequence transfer fails.",
+    "Any inference from expanding-ball L3 control to global L3 without an explicit same-time far-tail bound is forbidden."
+  ],
+  "interfaces_audited": [
+    "local cylinder integral -> time-slice on expanding ball",
+    "expanding-ball time-slice -> global L3 consumer",
+    "same-time core/tail gluing",
+    "pressure dependency",
+    "Type-I/Type-II regime boundary"
+  ],
+  "semantic_snapshot_hash": "sha256:43f69f47f7abcfbb48983e04efaa7712bd97260ddd846916d48100ff349a4d0e",
+  "hash_note": "semantic_snapshot_hash is SHA-256 of canonical sorted compact JSON before insertion of this self-describing hash field"
+}
