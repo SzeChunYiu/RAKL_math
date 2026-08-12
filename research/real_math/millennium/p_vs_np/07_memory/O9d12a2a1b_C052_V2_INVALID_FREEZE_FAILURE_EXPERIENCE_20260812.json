@@ -1,0 +1,52 @@
+{
+  "artifact_hash": "sha256:22737048121f753806f37ed749ff4a1925e6d6d396b7c314cce82ad050dbf83e",
+  "atom_id": "O9d12a2a1b-C052-V2",
+  "authority": "ZERO_AUTHORITY_INVALID_FREEZE_PRESERVED_NEGATIVE_HISTORY",
+  "broken_assumptions": [
+    "a validator world must inhabit the tested component's declared input domain",
+    "pre-candidate chronology must be observed and ordered before candidate identity, not asserted with future/equal timestamps"
+  ],
+  "candidate_id": "PNP-C052-TARGET-BLIND-UNSAT-AWARE-TOTAL-CLASSIFIER-v2",
+  "chronology_order_index": 24,
+  "competing_diagnoses": [
+    "trap expected branch is wrong: it is correct for a semantic-coordinate kernel but not for the whole C041 classifier domain",
+    "hash order alone repairs invented time: it does not make an unsupported future observation truthful",
+    "no result access makes the defects harmless: absence of execution permits prospective supersession but does not validate v2"
+  ],
+  "credit": {
+    "independent_review": 0,
+    "mathematical": 0,
+    "software_process": 0
+  },
+  "diagnosis_status": "SUPPORTED",
+  "evidence_pointers": [
+    "git:5dd517842ed24bd91a3754312b15c519d394135c:research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C052_V2_UNSAT_AWARE_CLASSIFIER_IDENTITY_20260812.json",
+    "git:5dd517842ed24bd91a3754312b15c519d394135c:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C052_V2_SEMANTIC_SUBSET_TRAP_IDENTITY_20260812.json",
+    "git:5dd517842ed24bd91a3754312b15c519d394135c:research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_V2_IDENTITY_FREEZE_TRACE_20260812.json"
+  ],
+  "exact_failures": [
+    "The abstract A/S trap is outside the adjacent-C041 classifier input domain, so the whole classifier may correctly return CANNOT_CHECK without testing semantic decision logic.",
+    "The public artifacts asserted 2026-08-12T13:30:00Z although the public commit time was 2026-08-12T13:28:03Z, and all pre-candidate events shared that unsupported future timestamp."
+  ],
+  "execution_or_result_accessed": false,
+  "failure_id": "F-PNP-C052-V2-INVALID-TRAP-DOMAIN-AND-FUTURE-TIMESTAMP",
+  "failure_mode": "out-of-domain planted trap plus unsupported future/equal pre-candidate chronology",
+  "falsifier_or_attempt": "Type-check the trap against the whole classifier input contract and compare asserted artifact time with the public commit time.",
+  "local_repair_attempts": [
+    "introduce a semantic-coordinate decision-kernel identity whose input domain includes the abstract trap",
+    "require the C041 classifier to integrate that exact kernel after constructing support and H_k evidence",
+    "record a post-publication ordered v2.1 trace with new identities"
+  ],
+  "observed_at_utc": "2026-08-12T13:30:12Z",
+  "observed_result": "V2_FREEZE_INVALID_TRAP_DOMAIN_AND_FUTURE_TIMESTAMP",
+  "public_commit": "5dd517842ed24bd91a3754312b15c519d394135c",
+  "public_commit_time_utc": "2026-08-12T13:28:03Z",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "scope_conditions": [
+    "public commit 5dd51784 and its v2 freeze artifacts only",
+    "no classifier/falsifier/hostile/native execution occurred"
+  ],
+  "selected_diagnosis": "The proposed repair lacked a typed sub-kernel boundary and auditable post-publication chronology.",
+  "superseded_not_rewritten": true
+}
