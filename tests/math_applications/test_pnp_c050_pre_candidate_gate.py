@@ -8,6 +8,7 @@ from datetime import datetime
 
 import jsonschema
 from rakl.math_context import ContextGateVerdict
+from rakl.framework_candidate_freeze import CandidateFreezeRevalidationVerdict
 from rakl.research_memory import ResearchMemoryVerdict
 from rakl.research_trace import ResearchTraceEventType, TraceGateVerdict
 from rakl.root_coordinate_preservation import PreservationGateVerdict
@@ -30,6 +31,8 @@ ARTIFACTS = {
     "preservation": PNP / "09_trace/O9d12a2a1b_C050_ROOT_COORDINATE_PRESERVATION_20260812.json",
     "trace": PNP / "09_trace/O9d12a2a1b_C050_PRE_CANDIDATE_TRACE_20260812.json",
     "gate": PNP / "09_trace/O9d12a2a1b_C050_PRE_CANDIDATE_GATE_RECEIPT_20260812.json",
+    "framework_binding": PNP / "09_trace/O9d12a2a1b_C050_FRAMEWORK_SUBJECT_FREEZE_BINDING_20260812.json",
+    "framework_observation": PNP / "09_trace/O9d12a2a1b_C050_FRAMEWORK_SUBJECT_REVALIDATION_20260812.json",
 }
 
 
@@ -51,13 +54,19 @@ def _load(path: Path) -> dict:
 def test_c050_strict_v3_gate_licenses_only_exact_later_k_discriminator() -> None:
     module = _module("pnp_c050_pre", FIXTURE)
     plan, fiber, memory, transformation_memory, shortcut, trace, preservation = module.build_current_gate_plan()
-    assert module.APPLICATION_BASE_SHA == "5dd7c0d5084dfb0dd3cd3a1619badd30b532b975"
-    assert module.FRAMEWORK_SHA == "43897d3afaf0038385102d5acc64793c05ec40f0"
+    assert module.APPLICATION_BASE_SHA == "bbad57cddd6bee7397b2b31bd1d1552c40c07247"
+    assert module.FRAMEWORK_SHA == "bd6b0e3edeb2b94b3f31b17e111c7a278f461f96"
     assert plan.context_gate.verdict is ContextGateVerdict.PASS
     assert plan.memory_gate.verdict is ResearchMemoryVerdict.PASS
     assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.PASS
     assert plan.trace_gate.verdict is TraceGateVerdict.PASS
     assert plan.preservation_gate.verdict is PreservationGateVerdict.SEARCH_LICENSED
+    assert plan.framework_subject_gate.verdict is CandidateFreezeRevalidationVerdict.CURRENT_UNCHANGED
+    assert plan.framework_subject_gate.licenses_candidate_materialization is True
+    assert plan.framework_subject_gate.binding_id == "PNP-C050-FRAMEWORK-SUBJECT-FREEZE-20260812"
+    assert plan.framework_subject_gate.freeze_sha == module.FRAMEWORK_SHA
+    assert plan.framework_subject_gate.observed_current_main_sha == module.FRAMEWORK_SHA
+    assert plan.framework_subject_gate.reasons == ("authoritative_framework_sha_still_current_main",)
     assert plan.candidate_generation_allowed is True
     assert shortcut.selected_mode is ShortcutMode.SEARCH
     assert shortcut.selected_episode_ids == ("E-PNP-C050-SYNCHRONIZED-CODE-LANGUAGE-INTERSECTION",)
@@ -99,8 +108,15 @@ def test_c050_gate_is_result_capability_free_and_mathematics_first() -> None:
     atom = _load(ARTIFACTS["atomization"])
     gate = _load(ARTIFACTS["gate"])
     assert atom["qoi"] == "LATER_K_FIELD_ALIGNMENT_OVERLAP_NONEMPTINESS_OR_IMPOSSIBILITY"
-    assert atom["target_result_accessed"] is False
-    assert gate["gate_verdicts"]["licensed_action"] == "FREEZE_FIRST_LATER_K_ALIGNMENT_DISCRIMINATOR_ONLY"
+    assert atom["target_result_accessed"] is True
+    assert atom["untouched_target_result_accessed"] is False
+    assert atom["target_state"].startswith("K13_QUARANTINED_PROCESS_CONTAMINATION")
+    assert atom["quarantine"]["may_influence_candidate_design"] is False
+    assert atom["quarantine"]["may_certify_candidate"] is False
+    assert gate["gate_verdicts"]["licensed_action"] == "FREEZE_UNTOUCHED_LATER_K_ALIGNMENT_DISCRIMINATOR_ONLY"
+    assert gate["gate_verdicts"]["framework_subject"] == "CURRENT_UNCHANGED"
+    assert gate["application_authority"]["isolated_target_blind_operator_required"] is True
+    assert gate["application_authority"]["quarantined_families"] == ["k=13"]
     assert gate["chronology"]["candidate_identity"] is None
     assert gate["authority"]["mathematical_saturation_credit"] is False
     source = FIXTURE.read_text(encoding="utf-8") + VERIFIER.read_text(encoding="utf-8")

@@ -38,6 +38,7 @@
   ],
   "explicit_disanalogies": [
     "C048 proved an iff condition, not later_k existence",
+    "K13_QUARANTINED_PROCESS_CONTAMINATION is excluded from strict candidate design and certification; no mathematical content from that non-strict branch is imported here",
     "syntax synchronization does not prove the parent formula UNSAT",
     "the all-zero short contradiction is not canonical and cannot witness S_k as defined",
     "relabelled encodings and changed splits are outside this atom",
@@ -45,7 +46,7 @@
     "computation is not proof and assurance is not mathematics"
   ],
   "first_candidate_at": null,
-  "frozen_at": "2026-08-12T05:06:00Z",
+  "frozen_at": "2026-08-12T05:19:20Z",
   "method_transfers": [
     {
       "disanalogies": [
@@ -67,8 +68,8 @@
         "the desired event is exact equality of a suffix-derived label and a prefix-derived label"
       ],
       "source_anchors": [
-        "git:5dd7c0d5084dfb0dd3cd3a1619badd30b532b975:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
-        "git:5dd7c0d5084dfb0dd3cd3a1619badd30b532b975:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C049_K12_PROOF_CHECK_RESULT_20260812.json@blob:65057f9b71f8d683ff07b07d5bba9ec514fcf96d"
+        "git:bbad57cddd6bee7397b2b31bd1d1552c40c07247:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+        "git:bbad57cddd6bee7397b2b31bd1d1552c40c07247:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C049_K12_PROOF_CHECK_RESULT_20260812.json@blob:65057f9b71f8d683ff07b07d5bba9ec514fcf96d"
       ],
       "source_context": "exact later_k of a semantic suffix language with a canonical prefix language"
     }
@@ -78,13 +79,13 @@
     "product-automaton language intersection with a non-regular semantic side condition"
   ],
   "object_context": "Target-blind later_k atom: characterize, construct, or prove impossible H_k intersection P_(k+1), where H_k is the literal-transpose UNSAT suffix-row language and P_(k+1) is the current canonical-prefix language, while retaining the C048 endpoint-swapped reduction.",
-  "packet_hash": "sha256:c7814ceddddfdbaf0fa2000b1e9b3660b70c049f6238de8fe815eba8ed6cfac7",
+  "packet_hash": "sha256:b50f857493e88680bd74943321316451b379c664e0e39d7d2d709f01d5be2a56",
   "solved_analogues": [
     "C048 exact equivalence between literal-transpose row collision and H_k intersection P_(k+1)"
   ],
   "source_anchors": [
-    "git:5dd7c0d5084dfb0dd3cd3a1619badd30b532b975:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
-    "git:5dd7c0d5084dfb0dd3cd3a1619badd30b532b975:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C049_K12_PROOF_CHECK_RESULT_20260812.json@blob:65057f9b71f8d683ff07b07d5bba9ec514fcf96d"
+    "git:bbad57cddd6bee7397b2b31bd1d1552c40c07247:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+    "git:bbad57cddd6bee7397b2b31bd1d1552c40c07247:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C049_K12_PROOF_CHECK_RESULT_20260812.json@blob:65057f9b71f8d683ff07b07d5bba9ec514fcf96d"
   ],
   "structural_coordinates": [
     "H_k={1||c: exists r, Dec(r||c) canonical UNSAT}",

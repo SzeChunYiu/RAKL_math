@@ -1,5 +1,5 @@
 {
-  "artifact_hash": "sha256:040fd4b8bd91ca0ac73bf11e0a6ab54aa28e5efd244abaed221e9c64f21dc6e6",
+  "artifact_hash": "sha256:2b8138920163ee9087746354f6abe46fc48334bdbf45c14445bcfeb636d7d45a",
   "candidate_method_families": [
     "explicit synchronized-code construction",
     "symbolic impossibility from length/header/gamma constraints",
@@ -8,8 +8,8 @@
   ],
   "cross_problem_coverage_receipt_hash": "",
   "evidence_pointers": [
-    "git:5dd7c0d5084dfb0dd3cd3a1619badd30b532b975:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C049_K12_PROOF_CHECK_RESULT_20260812.json@blob:65057f9b71f8d683ff07b07d5bba9ec514fcf96d",
-    "git:5dd7c0d5084dfb0dd3cd3a1619badd30b532b975:research/real_math/millennium/p_vs_np/10_case_study/C049_K12_OVERLAP_MATHEMATICAL_SATURATION_RECEIPT_20260812.json@blob:4ef155679f78819255de3070afe0733b3db870aa"
+    "git:bbad57cddd6bee7397b2b31bd1d1552c40c07247:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C049_K12_PROOF_CHECK_RESULT_20260812.json@blob:65057f9b71f8d683ff07b07d5bba9ec514fcf96d",
+    "git:bbad57cddd6bee7397b2b31bd1d1552c40c07247:research/real_math/millennium/p_vs_np/10_case_study/C049_K12_OVERLAP_MATHEMATICAL_SATURATION_RECEIPT_20260812.json@blob:4ef155679f78819255de3070afe0733b3db870aa"
   ],
   "failure_lattice_snapshot_hash": "gitblob:4ef155679f78819255de3070afe0733b3db870aa",
   "failure_query_status": "MATCHES_FOUND",
@@ -28,15 +28,16 @@
     "T-PNP-C049-K12-FIXED-BIT-SEPARATION"
   ],
   "target_atom_id": "O9d12a2a1b-C050",
-  "target_context_hash": "sha256:c7814ceddddfdbaf0fa2000b1e9b3660b70c049f6238de8fe815eba8ed6cfac7",
+  "target_context_hash": "sha256:b50f857493e88680bd74943321316451b379c664e0e39d7d2d709f01d5be2a56",
   "tool_applicability_notes": [
     "C049's fixed-bit separation is reusable only as the QoI definition: it reduces collision to H_k intersection P_(k+1) but supplies no existence evidence."
   ],
   "tool_inventory_snapshot_hash": "gitblob:65057f9b71f8d683ff07b07d5bba9ec514fcf96d",
   "tool_query_status": "MATCHES_FOUND",
   "unresolved_warnings": [
-    "No later target result has been accessed.",
-    "No later_k witness, empty-language theorem, or finite level has been selected.",
+    "K13_QUARANTINED_PROCESS_CONTAMINATION: a separate non-strict public k=13 result branch was exposed before this rebound packet and is excluded from strict candidate design or certification.",
+    "No result for any untouched later-k family has been accessed.",
+    "No untouched later_k witness, empty-language theorem, or finite level has been selected.",
     "The cheapest exact discriminator must be frozen before any code-grammar or UNSAT evaluation.",
     "Relabelled and split-changing variants are outside this atom.",
     "Same-context review is not independent peer review."

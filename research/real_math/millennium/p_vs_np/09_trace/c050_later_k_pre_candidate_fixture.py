@@ -14,6 +14,11 @@ import hashlib
 import json
 
 from rakl.math_context import AnalogyScanStatus, CrossDomainAnalogy, MathContextFiber, MethodTransfer
+from rakl.framework_candidate_freeze import (
+    CandidateFreezeRevalidationVerdict,
+    FrameworkSubjectFreezeBinding,
+    FrameworkSubjectRevalidationObservation,
+)
 from rakl.math_research_assurance import MathResearchRecord
 from rakl.math_research_runtime import plan_math_research
 from rakl.problem_solving_algebra import ProblemSignature
@@ -31,9 +36,9 @@ from rakl.semantic_shortcut import (
 )
 
 ATOM = "O9d12a2a1b-C050"
-APPLICATION_BASE_SHA = "5dd7c0d5084dfb0dd3cd3a1619badd30b532b975"
-FRAMEWORK_SHA = "43897d3afaf0038385102d5acc64793c05ec40f0"
-FROZEN_AT = "2026-08-12T05:06:00Z"
+APPLICATION_BASE_SHA = "bbad57cddd6bee7397b2b31bd1d1552c40c07247"
+FRAMEWORK_SHA = "bd6b0e3edeb2b94b3f31b17e111c7a278f461f96"
+FROZEN_AT = "2026-08-12T05:19:20Z"
 DECODER_BLOB = "fcc4814dd618da96ef9bb8144a4783a0a6e886e1"
 DECODER_RAW_SHA256 = "c0caca2fe7244c3d847de8b59473cec72132ec04ad3e9fab668f5cd95a2bd75a"
 C049_RESULT_BLOB = "65057f9b71f8d683ff07b07d5bba9ec514fcf96d"
@@ -52,6 +57,8 @@ PATHS = {
     "preservation": f"{BASE}/09_trace/O9d12a2a1b_C050_ROOT_COORDINATE_PRESERVATION_20260812.json",
     "trace": f"{BASE}/09_trace/O9d12a2a1b_C050_PRE_CANDIDATE_TRACE_20260812.json",
     "gate": f"{BASE}/09_trace/O9d12a2a1b_C050_PRE_CANDIDATE_GATE_RECEIPT_20260812.json",
+    "framework_binding": f"{BASE}/09_trace/O9d12a2a1b_C050_FRAMEWORK_SUBJECT_FREEZE_BINDING_20260812.json",
+    "framework_observation": f"{BASE}/09_trace/O9d12a2a1b_C050_FRAMEWORK_SUBJECT_REVALIDATION_20260812.json",
 }
 
 
@@ -150,6 +157,7 @@ def context() -> MathContextFiber:
         method_transfers=(transfer,),
         explicit_disanalogies=(
             "C048 proved an iff condition, not later_k existence",
+            "K13_QUARANTINED_PROCESS_CONTAMINATION is excluded from strict candidate design and certification; no mathematical content from that non-strict branch is imported here",
             "syntax synchronization does not prove the parent formula UNSAT",
             "the all-zero short contradiction is not canonical and cannot witness S_k as defined",
             "relabelled encodings and changed splits are outside this atom",
@@ -190,8 +198,9 @@ def memory_review(context_hash: str) -> ResearchMemoryReview:
             "C043 warns that finite semantic multiplicity does not imply the requested later_k or downstream cover growth.",
         ),
         unresolved_warnings=(
-            "No later target result has been accessed.",
-            "No later_k witness, empty-language theorem, or finite level has been selected.",
+            "K13_QUARANTINED_PROCESS_CONTAMINATION: a separate non-strict public k=13 result branch was exposed before this rebound packet and is excluded from strict candidate design or certification.",
+            "No result for any untouched later-k family has been accessed.",
+            "No untouched later_k witness, empty-language theorem, or finite level has been selected.",
             "The cheapest exact discriminator must be frozen before any code-grammar or UNSAT evaluation.",
             "Relabelled and split-changing variants are outside this atom.",
             "Same-context review is not independent peer review.",
@@ -313,10 +322,10 @@ def expert_review_document(context_hash: str) -> dict:
         "context_hash": context_hash,
         "review_authority": "SAME_CONTEXT_ROLE_SEPARATED_INTERNAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
         "role_reviews": [{"role": role, "objection": objection, "recommendation": recommendation} for role, objection, recommendation in roles],
-        "disagreements": ["Whether to freeze a smallest finite k or a parametric grammar construction; all lenses agree no k may be inspected before the discriminator is frozen."],
+        "disagreements": ["Whether an isolated target-blind operator should freeze an untouched finite k or a parametric grammar construction; all lenses agree the quarantined k=13 branch and its mathematical content cannot influence that choice."],
         "strongest_objection": "A syntactically synchronized pair is not an later_k witness unless the parent parse is canonical and mathematically UNSAT; brute-force survival supplies no proof authority.",
-        "unresolved_uncertainty": "No candidate proof or result exists at this stage.",
-        "next_action_recommendation": "After all gates pass, freeze the cheapest exact synchronized-grammar discriminator: length/parity and bit equality first, explicit canonical parses and UNSAT proof second; no downstream target enumeration.",
+        "unresolved_uncertainty": "No admissible untouched-family candidate proof or result exists at this stage; k=13 is process-quarantined and carries zero strict-discovery credit.",
+        "next_action_recommendation": "After all gates pass, require an isolated target-blind operator to freeze the cheapest exact synchronized-grammar discriminator for an untouched family: length/parity and bit equality first, explicit canonical parses and UNSAT proof second; no downstream target enumeration and no use of k=13.",
         "mathematical_saturation_credit": False,
         "mathematical_result_credit": False,
     })
@@ -346,21 +355,21 @@ def trace(context_hash: str, memory_hash: str, shortcut_hash: str) -> MathResear
     entries = []
     previous = ""
     for i, kind in enumerate(kinds, 1):
-        outputs = ["PRE_CANDIDATE_ONLY", "TARGET_RESULT_UNACCESSED", "ZERO_MATHEMATICAL_CREDIT"]
+        outputs = ["PRE_CANDIDATE_ONLY", "UNTOUCHED_TARGET_RESULT_UNACCESSED", "K13_QUARANTINED_PROCESS_CONTAMINATION", "ZERO_MATHEMATICAL_CREDIT"]
         if kind is ResearchTraceEventType.CONTEXT_FROZEN: outputs.insert(0, context_hash)
         if kind is ResearchTraceEventType.EXPERIENCE_MEMORY_REVIEW: outputs.insert(0, memory_hash)
         if kind is ResearchTraceEventType.OBSTRUCTION_TRANSFORMATION_REVIEW: outputs[:0] = [shortcut_hash, "selected_mode:SEARCH"]
         payload = {
             "event_id": f"O9d12a2a1b-C050-E{i:02d}", "atom_id": ATOM,
-            "event_type": kind.value, "timestamp": f"2026-08-12T05:06:{i:02d}Z",
-            "state_summary": "C050 asks how the k=12 fixed-bit obstruction changes for k>12 and whether any later H_k intersects P_(k+1), with the C048 swapped reduction fixed; no k, construction, decoder result, target, or evaluator has been accessed or executed.",
+            "event_type": kind.value, "timestamp": f"2026-08-12T05:19:{20 + i:02d}Z",
+            "state_summary": "C050 asks how the k=12 fixed-bit obstruction changes for an untouched k>12 family and whether its H_k intersects P_(k+1), with the C048 swapped reduction fixed. A separately exposed non-strict k=13 branch is quarantined for process contamination and cannot influence design or certification; no untouched family, construction, decoder result, target, or evaluator has been selected, accessed, or executed.",
             "action_summary": kind.value, "evidence_pointers": [evidence_map[kind]],
             "alternatives_considered": ["scan k values", "change encoding or split", "infer later_k from high-half occupancy", "freeze a synchronized syntax-plus-UNSAT discriminator"],
             "decision_rationale": "C048 proves collision iff later_k but does not decide existence; the selected SEARCH episode prunes exact syntax first and retains UNSAT as a separate proof obligation.",
             "outputs": outputs,
             "uncertainties": ["candidate theorem not yet frozen", "same-context review is not independent"],
-            "residuals": ["later_k nonemptiness/impossibility unresolved", "no k or construction selected", "root OPEN"],
-            "next_steps": ["only after gate PASS, freeze the exact later_k discriminator and inert evaluator", "do not access any decoder result or downstream target"],
+            "residuals": ["untouched later_k nonemptiness/impossibility unresolved", "no untouched k or construction selected", "k=13 permanently excluded from strict discovery", "root OPEN"],
+            "next_steps": ["only after gate PASS, an isolated target-blind operator may freeze an exact untouched-family later_k discriminator and inert evaluator", "do not access any untouched decoder result or downstream target", "never use the quarantined k=13 branch for candidate design or certification"],
             "previous_event_hash": previous,
         }
         artifact_hash = _hash(payload)
@@ -397,24 +406,51 @@ def preservation_receipt() -> RootCoordinatePreservationReceipt:
     )
 
 
+def framework_subject(context_hash: str):
+    binding = FrameworkSubjectFreezeBinding(
+        binding_id="PNP-C050-FRAMEWORK-SUBJECT-FREEZE-20260812",
+        authoritative_framework_sha=FRAMEWORK_SHA,
+        pre_candidate_packet_hash=context_hash.removeprefix("sha256:"),
+        frozen_at_utc=FROZEN_AT,
+        evidence_pointers=(
+            f"git:{APPLICATION_BASE_SHA}:config/rakl-framework-pin.json",
+            f"git:{FRAMEWORK_SHA}:src/rakl/math_research_runtime.py",
+            f"git:{FRAMEWORK_SHA}:src/rakl/framework_candidate_freeze.py",
+        ),
+    )
+    observation = FrameworkSubjectRevalidationObservation(
+        observed_current_main_sha=FRAMEWORK_SHA,
+        intervening_diff=(),
+        observation_evidence_pointers=(
+            f"git:{APPLICATION_BASE_SHA}:config/rakl-framework-pin.json",
+            f"git:{APPLICATION_BASE_SHA}:framework/RAKL",
+        ),
+    )
+    return binding, observation
+
+
 def build_current_gate_plan():
     fiber = context()
     memory = memory_review(fiber.packet_hash)
     tm, shortcut = transformation_memory_and_review(fiber.packet_hash, memory.artifact_hash)
     research_trace = trace(fiber.packet_hash, memory.artifact_hash, shortcut.artifact_hash)
     preservation = preservation_receipt()
+    framework_binding, framework_observation = framework_subject(fiber.packet_hash)
     plan = plan_math_research(
         signature=ProblemSignature(
             objects=("UNSAT suffix-row language H_k", "canonical current-prefix language P_(k+1)", "C041 code grammar", "C048 swapped reduction"),
             relations=("suffix extraction", "prefix extraction", "exact synchronized equality", "canonical parsing", "UNSAT semantic filter"),
             domain="circuit complexity / recursive bipartite graph covers",
-            goal_type="freeze a target-blind exact discriminator for the first later-k field-alignment regime before any decoder or target access",
+            goal_type="license an isolated target-blind operator to freeze an exact discriminator for one untouched later-k field-alignment regime before any untouched decoder or target access",
         ),
         record=MathResearchRecord(claim_id=ATOM),
         context_fiber=fiber, memory_review=memory, transformation_memory=tm,
         shortcut_review=shortcut, research_trace=research_trace,
         preservation_receipt=preservation, require_preservation_gate=True,
         expected_preservation_sha256=preservation.document()["receipt_canonical_sha256"],
+        framework_subject_binding=framework_binding,
+        framework_subject_observation=framework_observation,
+        require_framework_subject_gate=True,
     )
     return plan, fiber, memory, tm, shortcut, research_trace, preservation
 
@@ -423,21 +459,24 @@ def build_documents() -> dict[str, dict]:
     plan, fiber, memory, tm, shortcut, research_trace, preservation = build_current_gate_plan()
     atomization = _sealed({
         "schema_version": "1.0.0", "atomization_id": "PNP-C050-ATOMIZATION-20260812",
-        "recorded_at": "2026-08-12T05:06:00Z", "atom_id": ATOM,
+        "recorded_at": FROZEN_AT, "atom_id": ATOM,
         "parent_atom_id": "O9d12a2a1b-C049",
         "object": "The later-k language intersections H_k ∩ P_(k+1) left open by the k=12 C049 separation, with H_k carrying a canonical-UNSAT suffix condition and P_(k+1) carrying the next-length canonical-prefix condition.",
         "qoi": "LATER_K_FIELD_ALIGNMENT_OVERLAP_NONEMPTINESS_OR_IMPOSSIBILITY",
         "allowed_result_branches": ["EXACT_OVERLAP_WITNESS", "SCOPED_OVERLAP_IMPOSSIBILITY", "BOUNDED_NO_MATCH_ONLY", "CANNOT_CHECK"],
-        "atomic_obligations": ["freeze the first later-k grammar regime or a parametric range before evaluation", "derive both exact canonical length/parity constraints", "prove exact bit equality 1||c=p", "prove the parent parse is canonical UNSAT", "retain the C048 swapped reduction", "do not generalize bounded absence"],
+        "atomic_obligations": ["an isolated target-blind operator freezes one untouched later-k grammar regime or a parametric range before evaluation", "exclude k=13 and all mathematical content from its non-strict branch", "derive both exact canonical length/parity constraints", "prove exact bit equality 1||c=p", "prove the parent parse is canonical UNSAT", "retain the C048 swapped reduction", "do not generalize bounded absence"],
         "candidate_generation_allowed": False, "candidate_proposed": False,
-        "target_result_accessed": False, "target_state": "TARGET_RESULT_UNACCESSED",
+        "target_result_accessed": True,
+        "untouched_target_result_accessed": False,
+        "target_state": "K13_QUARANTINED_PROCESS_CONTAMINATION__UNTOUCHED_TARGET_RESULT_UNACCESSED",
+        "quarantine": {"family": "k=13", "reason": "NON_STRICT_RESULT_PRECEDED_REBOUND_CONTEXT_AND_FRAMEWORK_SUBJECT_GATE", "may_influence_candidate_design": False, "may_certify_candidate": False, "mathematical_content_imported": False},
         "authority_boundary": {"assurance_only_zero_credit": True, "grants_cover_lower_bound": False, "grants_p_vs_np_authority": False},
     })
     tool_snapshot = _sealed({
         "schema_version": "1.0.0", "snapshot_id": "PNP-C050-TOOL-SNAPSHOT-20260812", "target_atom_id": ATOM,
         "application_base_commit": APPLICATION_BASE_SHA,
         "tools": [{"tool_id": "T-PNP-C049-K12-FIXED-BIT-SEPARATION", "source": "C049 k=12 fixed-bit separation lemma", "preconditions": ["exact frozen H_k and P_(k+1)", "swapped reduction retained"], "guarantees": ["collision is equivalent to later_k after target-specific proof"], "non_guarantees": ["does not prove later_k existence", "no cover or root authority"]}],
-        "target_state": "TARGET_RESULT_UNACCESSED", "mathematical_credit": False,
+        "target_state": "UNTOUCHED_TARGET_RESULT_UNACCESSED", "quarantined_families": ["k=13"], "mathematical_credit": False,
     })
     failure_snapshot = _sealed({
         "schema_version": "1.0.0", "snapshot_id": "PNP-C050-FAILURE-SNAPSHOT-20260812", "target_atom_id": ATOM,
@@ -446,26 +485,39 @@ def build_documents() -> dict[str, dict]:
             {"failure_id": "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING", "warning": "semantic multiplicity does not imply the requested collision or cover growth"},
         ],
         "difference_witness": {"changed_question": "exact suffix/prefix later_k after C048 proved reduction faithfulness", "restored_assumption": "the QoI is now the exact later_k language rather than coarse placement", "cheapest_repeat_failure_test": "freeze and solve length/parity plus shared-bit constraints, then prove UNSAT for a surviving parent parse"},
-        "target_state": "TARGET_RESULT_UNACCESSED", "mathematical_credit": False,
+        "target_state": "UNTOUCHED_TARGET_RESULT_UNACCESSED", "quarantined_families": ["k=13"], "mathematical_credit": False,
     })
     expert = expert_review_document(fiber.packet_hash)
+    framework_binding, framework_observation = framework_subject(fiber.packet_hash)
+    framework_binding_document = _sealed(dict(framework_binding.document()))
+    framework_observation_document = _sealed({
+        "schema_version": "framework-subject-revalidation-observation-v1",
+        "observation_id": "PNP-C050-FRAMEWORK-SUBJECT-REVALIDATION-20260812",
+        "observed_current_main_sha": framework_observation.observed_current_main_sha,
+        "intervening_diff": [],
+        "observation_evidence_pointers": list(framework_observation.observation_evidence_pointers),
+        "verdict": plan.framework_subject_gate.verdict.value,
+        "licenses_candidate_materialization": plan.framework_subject_gate.licenses_candidate_materialization,
+        "grants_scientific_authority": False,
+    })
     documents = {
         "atomization": atomization, "context": _document(fiber), "tool_snapshot": tool_snapshot,
         "failure_snapshot": failure_snapshot, "memory": _document(memory),
         "transformation_memory": _document(tm), "expert_review": expert,
         "shortcut_review": _document(shortcut), "preservation": _jsonable(preservation.document()),
-        "trace": _document(research_trace),
+        "trace": _document(research_trace), "framework_binding": framework_binding_document,
+        "framework_observation": framework_observation_document,
     }
     integrity = {"algorithm": "SHA-256", "canonicalization": "JSON_SORT_KEYS_COMPACT_UTF8", "scope": "FULL_PARSED_DOCUMENT_INCLUDING_DECLARED_RUNTIME_HASHES", "inputs": {name: {"path": PATHS[name], "canonical_sha256": _hash(doc)} for name, doc in sorted(documents.items())}}
     gate = _sealed({
         "schema_version": "1.0.0", "receipt_id": "PNP-C050-PRE-CANDIDATE-GATE-20260812",
         "framework_commit": FRAMEWORK_SHA, "framework_version": "0.7.0", "application_base_commit": APPLICATION_BASE_SHA, "atom_id": ATOM,
         "full_document_integrity": integrity,
-        "artifact_bindings": {"context_hash": fiber.packet_hash, "memory_review_hash": memory.artifact_hash, "transformation_memory_snapshot_hash": tm.snapshot_hash, "shortcut_review_hash": shortcut.artifact_hash, "trace_last_event_hash": research_trace.entries[-1].artifact_hash, "preservation_sha256": preservation.document()["receipt_canonical_sha256"], "full_document_integrity_hash": _hash(integrity)},
-        "gate_verdicts": {"context": plan.context_gate.verdict.value, "dual_memory": plan.memory_gate.verdict.value, "obstruction_transformation": plan.shortcut_gate.verdict.value, "trace": plan.trace_gate.verdict.value, "preservation": plan.preservation_gate.verdict.value, "selected_mode": shortcut.selected_mode.value, "candidate_generation_allowed": plan.candidate_generation_allowed, "licensed_action": "FREEZE_FIRST_LATER_K_ALIGNMENT_DISCRIMINATOR_ONLY"},
-        "application_authority": {"licensed_actions": ["FREEZE_FIRST_LATER_K_ALIGNMENT_DISCRIMINATOR_ONLY"], "candidate_construction_authorized": True, "target_evaluator_execution_authorized": False, "finite_target_scan_authorized": False},
-        "result_capability_firewall": {"allowed": ["read frozen definitions and prior reviewed mathematical lessons", "freeze one later-k field-boundary/bit-synchronization plus UNSAT discriminator and inert evaluator"], "forbidden": ["execute or import the target decoder", "select or enumerate a later k before candidate freeze", "inspect result-signaling branches", "report an later_k witness or impossibility", "infer UNSAT from syntax", "change the split/encoding or swapped reduction"], "breach_policy": "MARK_RETROSPECTIVE_AND_SELECT_A_DIFFERENT_UNTOUCHED_FAMILY"},
-        "chronology": {"candidate_identity": None, "candidate_proposed": False, "target_result_accessed": False, "target_state": "TARGET_RESULT_UNACCESSED", "public_candidate_freeze": "PENDING_AFTER_CANDIDATE_COMMIT_AND_PR"},
+        "artifact_bindings": {"context_hash": fiber.packet_hash, "memory_review_hash": memory.artifact_hash, "transformation_memory_snapshot_hash": tm.snapshot_hash, "shortcut_review_hash": shortcut.artifact_hash, "trace_last_event_hash": research_trace.entries[-1].artifact_hash, "preservation_sha256": preservation.document()["receipt_canonical_sha256"], "framework_subject_binding_sha256": framework_binding.binding_canonical_sha256, "framework_subject_observation_hash": framework_observation_document["artifact_hash"], "full_document_integrity_hash": _hash(integrity)},
+        "gate_verdicts": {"context": plan.context_gate.verdict.value, "dual_memory": plan.memory_gate.verdict.value, "obstruction_transformation": plan.shortcut_gate.verdict.value, "trace": plan.trace_gate.verdict.value, "preservation": plan.preservation_gate.verdict.value, "framework_subject": plan.framework_subject_gate.verdict.value, "selected_mode": shortcut.selected_mode.value, "candidate_generation_allowed": plan.candidate_generation_allowed, "licensed_action": "FREEZE_UNTOUCHED_LATER_K_ALIGNMENT_DISCRIMINATOR_ONLY"},
+        "application_authority": {"licensed_actions": ["FREEZE_UNTOUCHED_LATER_K_ALIGNMENT_DISCRIMINATOR_ONLY"], "candidate_construction_authorized": True, "isolated_target_blind_operator_required": True, "quarantined_families": ["k=13"], "target_evaluator_execution_authorized": False, "finite_target_scan_authorized": False},
+        "result_capability_firewall": {"allowed": ["read frozen definitions and prior reviewed C048/C049 mathematical lessons", "an isolated target-blind operator may freeze one untouched later-k field-boundary/bit-synchronization plus UNSAT discriminator and inert evaluator"], "forbidden": ["use the quarantined k=13 branch or its mathematical content in candidate design or certification", "execute or import the target decoder", "select or enumerate an untouched later k before candidate freeze", "inspect untouched result-signaling branches", "report an untouched later_k witness or impossibility", "infer UNSAT from syntax", "change the split/encoding or swapped reduction"], "breach_policy": "MARK_RETROSPECTIVE_AND_SELECT_A_DIFFERENT_UNTOUCHED_FAMILY"},
+        "chronology": {"candidate_identity": None, "candidate_proposed": False, "target_result_accessed": True, "untouched_target_result_accessed": False, "target_state": "K13_QUARANTINED_PROCESS_CONTAMINATION__UNTOUCHED_TARGET_RESULT_UNACCESSED", "quarantined_families": ["k=13"], "public_candidate_freeze": "PENDING_ISOLATED_TARGET_BLIND_OPERATOR_COMMIT_AND_PR"},
         "authority": {"assurance_only": True, "mathematical_saturation_credit": False, "mathematical_result_credit": False, "grants_theorem_truth": False, "grants_novelty": False, "grants_independent_review": False, "grants_p_vs_np_authority": False},
     })
     documents["gate"] = gate
