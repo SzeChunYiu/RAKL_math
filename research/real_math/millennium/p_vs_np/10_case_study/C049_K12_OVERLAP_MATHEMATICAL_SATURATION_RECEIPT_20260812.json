@@ -1,0 +1,47 @@
+{
+  "artifact_hash": "sha256:a46e512370acbafaad9a357f289a7967eb6110186366e48e222491970ddf51ce",
+  "atom_id": "O9d12a2a1b-C049",
+  "candidate_id": "C049-K12-FIRST-ADMISSIBLE-OVERLAP-SEPARATION-v1",
+  "diagnosis": {
+    "cause": "at the first admissible UNSAT length, minimal parameter forcing aligns the split with the payload; the repeated v=1 variable-code bit conflicts with fixed MAGIC bit 4",
+    "competing_causes_rejected": [
+      "H_12 is empty only because no canonical UNSAT length-24 word exists",
+      "optional padding shifts the suffix pattern",
+      "transpose reduction faithfulness itself causes separation",
+      "record-check PASS proves any k>12 behavior"
+    ],
+    "status": "SUPPORTED_BOUNDED",
+    "unique_global_cause_claimed": false
+  },
+  "exact_result": {
+    "lemma": "H_12 intersection P_13 is empty.",
+    "proof_core": [
+      "canonical UNSAT needs m>=2, so encoded length is at least 24 and k=12 is first admissible",
+      "at length 24 equality forces v=1,m=2 and no padding",
+      "the split is exactly before six sign||1 literals, so every H_12 label has zero-indexed bit 4 equal to 1",
+      "every P_13 label begins MAGIC=11100101 and has bit 4 equal to 0"
+    ],
+    "scope_consequence": "literal transpose does not repair exact row coupling at k=12; no conclusion for k>12"
+  },
+  "falsifier": "A canonical UNSAT encoding below length 24, alternative parameters/padding at length 24, an H_12 label with bit 4 zero, a P_13 label with bit 4 one, or a common label refutes the corresponding claim.",
+  "lesson_authority": "PROPOSAL_ONLY_APPLICATION_LESSON_REQUIRES_FRESH_SELF_RAKL_ASSURANCE",
+  "mathematical_credit": {
+    "bounded_failure_cause": true,
+    "ci_schema_hash_chronology_runtime": 0,
+    "first_admissible_length_lemma": true,
+    "fixed_bit_separation": true,
+    "k12_parameter_forcing": true
+  },
+  "proposal_only_rakl_lesson": "At a first admissible encoding length, equality in a length lower bound can force field alignment and expose a fixed-bit obstruction; the obstruction must be rederived before transport to later lengths.",
+  "repair_condition": "Open a fresh strict k>12 or parametric overlap atom; rederive field alignment because the k=12 split-at-payload-boundary argument does not transport automatically. Preserve the swapped reduction.",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "round_kind": "SCOPED_K12_MATHEMATICAL_SATURATION",
+  "same_context_not_independent": true,
+  "schema_version": "1.0.0",
+  "scope": [
+    "k=12 only",
+    "exact C041 canonical grammar/equal split",
+    "C048 swapped reduction retained",
+    "no k>12 or downstream claim"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "artifact_hash": "sha256:e4f2d6e1c8fda67395b89f9bc38516adde4692510deac620e487ae3640c3ac17",
+  "atom_id": "O9d12a2a1b-C049",
+  "authority": {
+    "formal": false,
+    "independent": false,
+    "novelty": false,
+    "root": "OPEN",
+    "same_context_hand_derivation": true
+  },
+  "candidate_id": "C049-K12-FIRST-ADMISSIBLE-OVERLAP-SEPARATION-v1",
+  "chronology": {
+    "candidate_public_merge": "17208e34bdd55f12c02d9709eab26381f7b479da",
+    "evaluation_after_both_public_freezes": true,
+    "proof_inputs_public_merge": "fa664ce63529853fe0055cd9820ea813a5f6f0a5"
+  },
+  "credit": {
+    "ci_schema_hash_runtime": 0,
+    "mathematical": [
+      "minimal-k lemma",
+      "parameter-forcing lemma",
+      "fixed-bit separation",
+      "bounded cause/falsifier/repair"
+    ],
+    "software_process": 0
+  },
+  "diagnosis": {
+    "cause": "at the first admissible UNSAT length, minimal parameter forcing aligns the split with the payload; the repeated v=1 variable-code bit conflicts with fixed MAGIC bit 4",
+    "competing_causes_rejected": [
+      "H_12 is empty only because no canonical UNSAT length-24 word exists",
+      "optional padding shifts the suffix pattern",
+      "transpose reduction faithfulness itself causes separation",
+      "record-check PASS proves any k>12 behavior"
+    ],
+    "status": "SUPPORTED_BOUNDED",
+    "unique_global_cause_claimed": false
+  },
+  "evaluator_output": {
+    "candidate_id": "C049-K12-FIRST-ADMISSIBLE-OVERLAP-SEPARATION-v1",
+    "verdict": "PASS"
+  },
+  "exact_mathematical_result": {
+    "lemma": "H_12 intersection P_13 is empty.",
+    "proof_core": [
+      "canonical UNSAT needs m>=2, so encoded length is at least 24 and k=12 is first admissible",
+      "at length 24 equality forces v=1,m=2 and no padding",
+      "the split is exactly before six sign||1 literals, so every H_12 label has zero-indexed bit 4 equal to 1",
+      "every P_13 label begins MAGIC=11100101 and has bit 4 equal to 0"
+    ],
+    "scope_consequence": "literal transpose does not repair exact row coupling at k=12; no conclusion for k>12"
+  },
+  "execution": {
+    "executed_at": "2026-08-12T04:47:34Z",
+    "network_used": false,
+    "raw_output_sha256": "e29b0669e036cf18ccbe459fcbb185ac00436c0e7852161c41ef9169c74fe605"
+  },
+  "falsifier": "A canonical UNSAT encoding below length 24, alternative parameters/padding at length 24, an H_12 label with bit 4 zero, a P_13 label with bit 4 one, or a common label refutes the corresponding claim.",
+  "inputs": {
+    "authorization": {
+      "artifact_hash": "sha256:ec1b79c5622d49943a62d2983ccb2881eea3b03315ce35ee47d41932787daadb",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C049_POST_FREEZE_PROOF_CHECK_AUTHORIZATION_20260812.json"
+    },
+    "certificate": {
+      "artifact_hash": "sha256:04ef559ddc6987625e7e2293d15c40c7840c3ea49ac3b7f1186def27c4df29e0",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C049_K12_PROOF_CERTIFICATE_FREEZE_20260812.json"
+    }
+  },
+  "repair": "Open a fresh strict k>12 or parametric overlap atom; rederive field alignment because the k=12 split-at-payload-boundary argument does not transport automatically. Preserve the swapped reduction.",
+  "result_id": "PNP-C049-K12-PROOF-CHECK-20260812",
+  "schema_version": "1.0.0",
+  "status": "PASS_SAME_CONTEXT_CERTIFICATE_RECORD_CHECK"
+}

@@ -1,0 +1,30 @@
+{
+  "artifact_hash": "sha256:72d1ccc8a4db488e87b691f4d821617aadcad4606abc13e9be6d16ed1c7ccd80",
+  "atom_id": "O9d12a2a1b-C049",
+  "attempted_implication": "the first semantically admissible suffix-row layer might already collide with a current canonical prefix",
+  "candidate_id": "C049-K12-FIRST-ADMISSIBLE-OVERLAP-SEPARATION-v1",
+  "cause": {
+    "cause": "at the first admissible UNSAT length, minimal parameter forcing aligns the split with the payload; the repeated v=1 variable-code bit conflicts with fixed MAGIC bit 4",
+    "competing_causes_rejected": [
+      "H_12 is empty only because no canonical UNSAT length-24 word exists",
+      "optional padding shifts the suffix pattern",
+      "transpose reduction faithfulness itself causes separation",
+      "record-check PASS proves any k>12 behavior"
+    ],
+    "status": "SUPPORTED_BOUNDED",
+    "unique_global_cause_claimed": false
+  },
+  "diagnosis_id": "PNP-C049-K12-OVERLAP-DIAGNOSIS-20260812",
+  "falsifier": "A canonical UNSAT encoding below length 24, alternative parameters/padding at length 24, an H_12 label with bit 4 zero, a P_13 label with bit 4 one, or a common label refutes the corresponding claim.",
+  "math_only": true,
+  "observed_result": "H_12 intersection P_13 is empty by bit-4 separation",
+  "repair": "Open a fresh strict k>12 or parametric overlap atom; rederive field alignment because the k=12 split-at-payload-boundary argument does not transport automatically. Preserve the swapped reduction.",
+  "schema_version": "1.0.0",
+  "scope": [
+    "k=12 only",
+    "exact C041 canonical grammar/equal split",
+    "C048 swapped reduction retained",
+    "no k>12 or downstream claim"
+  ],
+  "software_credit": 0
+}
