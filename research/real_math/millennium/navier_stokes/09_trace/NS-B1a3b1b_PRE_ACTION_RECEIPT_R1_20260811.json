@@ -1,0 +1,48 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "PRE-NS-B1a3b1b-R1-20260811T1904Z",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "3863b4814e0020e72c8681727357eda1aab7bf2b",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "47f56df0492339097a651d40b6c7289c4e2d4034",
+  "task_id": "NS-B1a3b1b-C001-R1",
+  "atom_id": "NS-B1a3b1b",
+  "context_hash": "sha256:f86f9db826ceb8a6e44cbbe1d63052a0ee7261f709a61d19ab2a5453f7567da8",
+  "fibre_snapshot_hash": "sha256:620fb4f52e69f364506e519ec6e85208dcc29d4813dfa0ccf0a346c04c97cfce",
+  "operator_ids": [
+    "counterexample-first-two-core-critical-scaling",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "selected_retrievals": [
+    {
+      "retrieval_id": "NS-B1a3b_CONTEXT_FIBER_20260811",
+      "authority": "CANONICAL",
+      "payload_hash": "864b444da3b0ef1b0a0e396ea89011fbad691cbbe35e88b78ec3613756ef92ca"
+    }
+  ],
+  "rejected_retrievals": [
+    {
+      "retrieval_id": "PR131/EP-NS-B1a3b1a-C001-R1-20260811",
+      "rejection_reason": "open/noncanonical and non-mergeable at freeze time; may alter search priority but bears no authority"
+    },
+    {
+      "retrieval_id": "repeat-direction-modulus-interpolation",
+      "rejection_reason": "same failure family was already saturated by canonical NS-B1a3b"
+    },
+    {
+      "retrieval_id": "finite-energy-single-core-quantization",
+      "rejection_reason": "canonical NS-B1a2 failure shows finite kinetic energy is not a scale-independent critical-core count"
+    }
+  ],
+  "predeclared_discriminator": "For a fixed nonzero smooth compactly supported divergence-free template omega0 and two fixed separated centers a±, set omega_r(x)=r^-2[omega0((x-a+)/r)+omega0((x-a-)/r)]. Verify exactly that ||omega_r||_{L^{3/2,infinity}} is independent of r while, for lambda_r proportional to r^-2, the super-level set contains two components at fixed macroscopic separation, so no fixed constant C and no one-center ball can satisfy R<=C lambda_r^-1/2 for all small r.",
+  "allowed_outcome_branches": [
+    "SUCCESS",
+    "PARTIAL_SUCCESS",
+    "FAILURE",
+    "BLOCKED",
+    "UNKNOWN"
+  ],
+  "frozen_at_utc": "2026-08-11T19:04:00Z",
+  "sequence_index": 0,
+  "receipt_canonical_sha256": "600be22b2b3644cce725a3a4a9811d739cafd2bcf11e1ddab17d89204d06cafb"
+}

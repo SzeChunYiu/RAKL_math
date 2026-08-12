@@ -1,0 +1,62 @@
+schema_version: problem-dag-delta-v3-proposal-shadow-r1
+root:
+  id: NS0
+  status: OPEN_NO_SOLUTION_CERTIFICATE
+  authority: NONE
+parent_atom:
+  id: NS-B1a3b1
+active_atom:
+  id: NS-B1a3b1b
+  issue: 145
+  title: Audit critical-point morphology/source-family completeness
+  outcome: PARTIAL_SUCCESS_REPRESENTATION_ROUTE_PRUNING
+  novelty_class: REPRESENTATION_NOVEL_SHADOW
+verified_scoped_result:
+  statement: >-
+    Uniform weak-L3/2 vorticity amplitude, even for smooth compactly supported
+    divergence-free fields, does not by itself imply the one-center critical-point
+    super-level geometry used by Grujic arXiv:2607.08866v2. A two-core critically
+    scaled family keeps the weak-L3/2 distribution quasi-norm scale-uniform while
+    forcing any enclosing ball at lambda~r^-2 to retain a macroscopic radius.
+  scope: >-
+    Bare representation/norm inference only; the hostile family is not asserted
+    to solve Navier-Stokes and does not refute NSE+finite-I -> morphology.
+failures:
+  local_mathematical:
+    - F-NS-B1a3b1b-AMPLITUDE-DOES-NOT-SELECT-ONE-CORE-MORPHOLOGY
+  local_to_global_gluing:
+    - F-NS-B1a3b1b-LOCAL-CORE-TO-GLOBAL-CONSUMER-GLUING
+obstruction:
+  id: O-NS-B1a3b1b-ONE-CENTER-MORPHOLOGY-PRODUCER
+  statement: >-
+    The selected geometry consumer requires an equation-specific one-center/source-family
+    producer certificate in addition to amplitude and direction inputs.
+next_child:
+  id: NS-B1a3b1b1
+  title: Equation-specific one-core/no-dichotomy producer or consumer replacement
+  discriminator: >-
+    Source-bind a theorem showing that every relevant finite-I Type-I blow-up/ancient
+    object admits a unique critical core with uniform O(lambda^-1/2) high-vorticity
+    containment in the same pre-singularity theory, or falsify the proposed mechanism
+    and rotate to a consumer compatible with multi-profile ancient limits.
+  required_interfaces:
+    - translation/dilation tightness and profile no-dichotomy
+    - weak/strong convergence sufficient for vorticity source-family identification
+    - pressure/local-energy hypotheses needed by the actual blow-up limit
+    - global Lorentz/far-field compatibility
+    - pre-singularity versus ancient-solution state-space bridge
+    - backward-uniqueness hypotheses only if explicitly activated
+saturation_axes:
+  KNOWLEDGE: REOPENED_SOURCE_SIGNATURE
+  OPERATOR: ACTIVE_COUNTEREXAMPLE_FIRST_BUT_NO_NEW_OPERATOR
+  EXPERIENCE_PATTERN: REOPENED_MULTI_CORE_SOURCE_FAMILY
+  OBSTRUCTION: REOPENED_ONE_CENTER_PRODUCER
+  RELATION: REOPENED_AMPLITUDE_VS_MORPHOLOGY
+  PATH: REOPENED_EQUATION_SPECIFIC_CORE_SELECTION_OR_CONSUMER_ROTATION
+  META_METHOD: FLATTENED_NO_METHOD_CHANGE
+nonpromotion:
+  - hostile non-solution is not a Navier-Stokes counterexample
+  - conditional Grujic theorem is not refuted
+  - Type-I partial route pruning is not root regularity
+  - Type-II remains open
+  - same-context review is not independent review

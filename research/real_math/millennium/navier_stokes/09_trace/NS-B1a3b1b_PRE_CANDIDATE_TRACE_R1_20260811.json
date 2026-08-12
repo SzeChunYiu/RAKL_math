@@ -1,0 +1,94 @@
+{
+  "schema_version": "hash-chain-trace-v3-proposal-shadow-r1",
+  "atom_id": "NS-B1a3b1b",
+  "events": [
+    {
+      "index": 0,
+      "kind": "ROOT_AND_FRAMEWORK_BOUND",
+      "timestamp": "2026-08-11T19:01:45Z",
+      "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "payload": {
+        "framework_sha": "3863b4814e0020e72c8681727357eda1aab7bf2b",
+        "application_base": "47f56df0492339097a651d40b6c7289c4e2d4034",
+        "root": "RAKL_math#4",
+        "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+      },
+      "event_hash": "842997249491980e1672d811526692691c6bc9e38db48e02666c93005e5de64c"
+    },
+    {
+      "index": 1,
+      "kind": "SUCCESS_CONTRACT_FROZEN",
+      "timestamp": "2026-08-11T19:02:00Z",
+      "prev_hash": "842997249491980e1672d811526692691c6bc9e38db48e02666c93005e5de64c",
+      "payload": {
+        "issue": "RAKL_math#145",
+        "chronology_note": "hostile idea predates durable issue; verification target only receives prospective freeze credit"
+      },
+      "event_hash": "efc471a57335840324b6cd5536299550930b905566c343b2b7e0b49ce3035eb5"
+    },
+    {
+      "index": 2,
+      "kind": "CONTEXT_FROZEN",
+      "timestamp": "2026-08-11T19:03:30Z",
+      "prev_hash": "efc471a57335840324b6cd5536299550930b905566c343b2b7e0b49ce3035eb5",
+      "payload": {
+        "context_hash": "sha256:f86f9db826ceb8a6e44cbbe1d63052a0ee7261f709a61d19ab2a5453f7567da8"
+      },
+      "event_hash": "d11190743c6ed2927beb4c9d8a6df716a6b08d059ca64b171011a461581ce5b0"
+    },
+    {
+      "index": 3,
+      "kind": "DUAL_MEMORY_REVIEW_FROZEN",
+      "timestamp": "2026-08-11T19:03:35Z",
+      "prev_hash": "d11190743c6ed2927beb4c9d8a6df716a6b08d059ca64b171011a461581ce5b0",
+      "payload": {
+        "memory_hash": "sha256:adba7ed36119ee28b2b71b03ad709beb96abeaea513bb8966a2d14e4328146fd"
+      },
+      "event_hash": "e170392bd6d67c2b87a8577187f2dd2ef4b31c0378bd63f32a35d080433e6e8f"
+    },
+    {
+      "index": 4,
+      "kind": "EXPERT_CELL_FROZEN",
+      "timestamp": "2026-08-11T19:03:40Z",
+      "prev_hash": "e170392bd6d67c2b87a8577187f2dd2ef4b31c0378bd63f32a35d080433e6e8f",
+      "payload": {
+        "expert_raw_sha256": "198c76450ea3aad3aab3670cfe1525a4507db9f5e39ab9bf931db503c87e7ebf",
+        "independent_review_credit": "0/3"
+      },
+      "event_hash": "18d916bc34e6075fe4a9bf5bd73fb837804f76799d0a6abdd3f8f995dc437f71"
+    },
+    {
+      "index": 5,
+      "kind": "FIBRE_FROZEN",
+      "timestamp": "2026-08-11T19:03:45Z",
+      "prev_hash": "18d916bc34e6075fe4a9bf5bd73fb837804f76799d0a6abdd3f8f995dc437f71",
+      "payload": {
+        "fibre_snapshot_hash": "sha256:620fb4f52e69f364506e519ec6e85208dcc29d4813dfa0ccf0a346c04c97cfce"
+      },
+      "event_hash": "74eb6339611537217ee1e3aafc2884222cf735c61388ee13ad65245cb8d950e8"
+    },
+    {
+      "index": 6,
+      "kind": "PRE_ACTION_RECEIPT_FROZEN",
+      "timestamp": "2026-08-11T19:04:00Z",
+      "prev_hash": "74eb6339611537217ee1e3aafc2884222cf735c61388ee13ad65245cb8d950e8",
+      "payload": {
+        "receipt_sha256": "600be22b2b3644cce725a3a4a9811d739cafd2bcf11e1ddab17d89204d06cafb",
+        "prospective_scope": "verification/serialization only"
+      },
+      "event_hash": "3b825acfa6a5fd9713f1ad9660675b543b9acfd60ab7e6f97b0146f7e9da9b6"
+    },
+    {
+      "index": 7,
+      "kind": "NEXT_STEP_PROPOSED",
+      "timestamp": "2026-08-11T19:04:05Z",
+      "prev_hash": "3b825acfa6a5fd9713f1ad9660675b543b9acfd60ab7e6f97b0146f7e9da9b6",
+      "payload": {
+        "action": "execute exact two-core weak-L3/2 distribution scaling and one-center super-level containment falsifier; source-check Grujic v2 before interpreting"
+      },
+      "event_hash": "38a3a17bb054abfe91fd726cc0ff29972c2c98721bc9f973e72e52c513d495f5"
+    }
+  ],
+  "terminal_hash": "38a3a17bb054abfe91fd726cc0ff29972c2c98721bc9f973e72e52c513d495f5",
+  "authority": "PRE_CANDIDATE_PROPOSAL_SHADOW_ONLY"
+}

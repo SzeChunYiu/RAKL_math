@@ -1,0 +1,31 @@
+{
+  "schema_version": "failure-experience-v3-proposal-shadow-r1",
+  "episode_id": "EP-NS-B1a3b1b-C001-R1-20260811",
+  "diagnosis_id": "D-NS-B1a3b1b-CRITICAL-AMPLITUDE-MORPHOLOGY-SEPARATION-R1",
+  "failures": [
+    {
+      "failure_id": "F-NS-B1a3b1b-AMPLITUDE-DOES-NOT-SELECT-ONE-CORE-MORPHOLOGY",
+      "category": "LOCAL_MATHEMATICAL_REPRESENTATION_FAILURE",
+      "signature": "scale-uniform weak-L3/2 critical vorticity amplitude plus divergence-free smoothness does not imply a one-center high-vorticity set radius O(lambda^-1/2)",
+      "falsifier": "two fixed separated critically scaled divergence-free vortex blobs",
+      "scope": "bare norm/representation inference only; not NSE+finite-I",
+      "status": "SUPPORTED_SCOPED_FAILURE"
+    },
+    {
+      "failure_id": "F-NS-B1a3b1b-LOCAL-CORE-TO-GLOBAL-CONSUMER-GLUING",
+      "category": "LOCAL_TO_GLOBAL_GLUING_FAILURE",
+      "signature": "selecting/recentering one local blow-up core does not by itself control secondary translated/dilated profiles, global weak-Lorentz/far-field data, or identify the same pre-singularity source family globally",
+      "falsifier": "not closed by the local two-core lemma; retained as a separate interface residual",
+      "scope": "same-theory gluing/recentering/tail compatibility",
+      "status": "OPEN_RESIDUAL_NOT_FALSIFIED_HERE"
+    }
+  ],
+  "negative_history_links": [
+    "F-NS-B1a3-PROFILE-LEAKAGE",
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "F-NS-B1a3b-GEOMETRY-NOT-INHERITED-BY-TOPOLOGY",
+    "F-NS-B1a2-KINETIC-ENERGY-NONQUANTIZATION"
+  ],
+  "routing_use_only": true,
+  "authority": "PROPOSAL_SHADOW_FAILURE_EXPERIENCE_ONLY"
+}
