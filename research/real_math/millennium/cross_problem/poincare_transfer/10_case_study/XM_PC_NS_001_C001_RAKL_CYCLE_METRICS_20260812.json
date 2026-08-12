@@ -1,33 +1,17 @@
 {
-  "record_type": "RAKL_CYCLE_METRICS",
-  "cycle_id": "XM-PC-NS-001-C001-20260812",
-  "authority": "PROPOSAL_SHADOW_ONLY",
-  "rakl_method_version": "3.0.0",
-  "rakl_package_version": "0.1.0",
-  "rakl_git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
-  "rakl_math": {
-    "current_main_at_cycle_start": "597b7d98b514af33808d5f32be2cd5c906cfe036",
-    "stack_parent_pre_candidate_head": "b47f5f289a19d79c608e904d450903aeabf818cc",
-    "candidate_freeze_commit": "58948d71d63a79a9daba03333eedbd6d7e5adca7",
-    "post_mathematical_result_commit": "dc6572b75ee4d64b8c8d99d8decd44b77788119f",
-    "branch_head_before_metrics_commit": "4aa3e977c2e281b9f345a8e2bf56d194e2e277de",
-    "exact_final_head": "CANNOT_MEASURE: the SHA of the commit containing this metrics file is self-referential; exact final branch head is attested in the pull-request body and closeout report after this file is committed"
-  },
-  "state_fingerprints": {
-    "pre_outcome_semantic_snapshot_sha256": "c0f79d3ecf2306fe6c0e281595d72aa86e130e3a33761ceaba93dffdb767458c",
-    "post_outcome_semantic_snapshot_sha256": "7fd0b79a069488807e4f069032e7475fceafd7f005fdd128ad8bf020098cdfab",
-    "pre_outcome_repository_fingerprint": "git-commit:58948d71d63a79a9daba03333eedbd6d7e5adca7",
-    "post_outcome_repository_fingerprint": "git-commit:dc6572b75ee4d64b8c8d99d8decd44b77788119f",
-    "fingerprint_scope": "semantic snapshot binds framework/main/parent gate/atom/context/candidate/residual; post snapshot additionally binds exact coefficients/outcome/failure/diagnosis"
-  },
   "atom_fibre": {
     "atom_id": "XM-PC-NS-001",
-    "problem_signature": ["3D periodic incompressible Navier-Stokes","bare enstrophy sign precondition","Poincare-success JUMP calibration"],
-    "math_context_fibre_hash": "sha256:29ed9784fbccb0e16018e27cc9c934dd38fa58faab8b86af0986bc8da9283cb5",
     "candidate_freeze_hash": "sha256:3f9e712501e53f3b4628acb5183474f78f9b8f44dbd26ba7901e226175b160a3",
-    "task_episode_hash": "f4acef061f94b93ac952f3f3c4585905a326bfe32df18863f4875bc62490d00d",
-    "trace_continuation_final_hash": "sha256:6348c3b8459b4f47fc7c4219e7391f9163eb126f7222249c71dbc8c8dd9bd519"
+    "experience_shadow_hash": "06fccb3ecadb95af4bfb099d6cdc167bd95304a2514cc4fff840d1456c2033bc",
+    "math_context_fibre_hash": "sha256:29ed9784fbccb0e16018e27cc9c934dd38fa58faab8b86af0986bc8da9283cb5",
+    "problem_signature": [
+      "3D periodic incompressible Navier-Stokes",
+      "bare enstrophy sign precondition",
+      "Poincare-success JUMP calibration"
+    ],
+    "trace_continuation_final_hash": "sha256:1710199e3ca47ea5eb631061684676e2caa10a3effe0df70f1621cf6ab6b00ac"
   },
+  "authority": "PROPOSAL_SHADOW_ONLY",
   "canonical_method_specs_process_surfaces_invoked": [
     "decomposition",
     "routing",
@@ -39,99 +23,135 @@
     "saturation_stopping",
     "prompting_context_policy"
   ],
+  "cycle_id": "XM-PC-NS-001-C001-20260812",
+  "exact_mathematical_observables": {
+    "initial_enstrophy_derivative": "-1297*nu*A^2*(2*pi)^3",
+    "spatial_mean_curl_square": 122,
+    "spatial_mean_grad_curl_square": 1297,
+    "spatial_mean_vortex_stretching": 0
+  },
+  "framework_improvement_hypothesis": "Add an assurance-only parent-hash-bound research-trace continuation validator for stacked application cycles; no framework authority is claimed from this hypothesis.",
+  "gate_provenance_ci": {
+    "candidate_freeze_chronology": "PASS: freeze commit 58948d71 precedes result commit dc6572b75",
+    "ci_status_at_metrics_freeze": "NOT_YET_OBSERVED: PR not yet created for the child result branch; CI cannot be counted as mathematical authority",
+    "episode_storage_admission": "PROPOSAL_SHADOW_STORED",
+    "gate_A_context": "PASS inherited from exact parent receipt",
+    "gate_B_dual_memory": "PASS inherited from exact parent receipt",
+    "gate_C_obstruction_transformation": "PASS selected JUMP inherited from exact parent receipt",
+    "gate_D_pre_candidate_trace": "PASS inherited from exact parent receipt",
+    "independent_mathematical_reviews": "0/3",
+    "licensed_action": "FREEZE_ONE_EXPLICIT_3D_NS_ENSTROPHY_SIGN_FALSIFIER",
+    "proof_dag": "OPEN",
+    "root_promotion": "DENIED_NOT_ATTEMPTED",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "source_success_authority": "PRIMARY_SOURCE_BOUND in parent packet",
+    "target_transfer_authority": "NONE"
+  },
   "memory": {
-    "selected_ids": [
-      "E-PC-ENTROPY-NONCOLLAPSE-CANONICAL-SURGERY-EXTINCTION",
-      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
-      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER"
-    ],
-    "selected_count": 3,
+    "missed_ids_count": "CANNOT_MEASURE: no exhaustive governed recall denominator is exposed by the connector/runtime",
+    "rejected_count": 3,
     "rejected_ids": [
       "FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE",
       "F-NS-B2a1b1-LYAPUNOV-DENSITY-NO-RIGIDITY-BRIDGE",
       "F-NS-B2a1d-F1-CENTERED-LOCAL-RIGIDITY-NONCOMPACT-TRANSLATION"
     ],
-    "rejected_count": 3,
     "retrieved_count_known_lower_bound": 6,
-    "missed_ids_count": "CANNOT_MEASURE: no exhaustive governed recall denominator is exposed by the connector/runtime",
-    "successful_reuse_ids": [],
-    "routing_reuse_ids": ["E-PC-ENTROPY-NONCOLLAPSE-CANONICAL-SURGERY-EXTINCTION","T-XM-ROOT-BRIDGE-STABILITY-AUDIT"]
-  },
-  "outcome": "CANDIDATE_FAILURE_ZERO_STRETCHING_COEFFICIENT",
-  "residual_before": "OBS-XM-PC-NS-ENSTROPHY-SIGN unresolved: determine whether a smooth 3D NS datum can make the exact initial enstrophy derivative positive",
-  "residual_after": "OBS-XM-PC-NS-ENSTROPHY-SIGN remains unresolved; exact C001 cancellation is negative history and PATH is reopened for a fresh structurally distinct candidate",
-  "exact_mathematical_observables": {
-    "spatial_mean_curl_square": 122,
-    "spatial_mean_grad_curl_square": 1297,
-    "spatial_mean_vortex_stretching": 0,
-    "initial_enstrophy_derivative": "-1297*nu*A^2*(2*pi)^3"
-  },
-  "retained_semantic_novelty": {
-    "proposal_shadow": {
-      "KNOWLEDGE": 1,
-      "OPERATOR": 0,
-      "EXPERIENCE_PATTERN": 0,
-      "OBSTRUCTION": 0,
-      "RELATION": 0,
-      "PATH": 0,
-      "META_METHOD": 0
-    },
-    "protected": {
-      "KNOWLEDGE": 0,
-      "OPERATOR": 0,
-      "EXPERIENCE_PATTERN": 0,
-      "OBSTRUCTION": 0,
-      "RELATION": 0,
-      "PATH": 0,
-      "META_METHOD": 0
-    },
-    "axes_reopened": ["PATH"],
-    "axes_flattened": []
-  },
-  "observable_resource_proxies": {
-    "model_tokens": "CANNOT_MEASURE: automation runtime does not expose a reliable exact per-cycle token counter",
-    "model_context_tokens": "CANNOT_MEASURE: automation runtime does not expose a reliable exact compiled-context counter",
-    "full_cycle_retrieval_tool_calls": "CANNOT_MEASURE: connector responses do not expose a cumulative per-cycle call counter and preflight/state-scan calls preceded the durable candidate freeze",
-    "repository_write_calls_before_metrics": 9,
-    "post_freeze_exact_math_python_calls_known": 6,
-    "primary_web_calls_in_preflight_known": 2,
-    "candidate_attempts": 1,
-    "durable_candidate_freeze_to_result_elapsed_seconds": 154,
-    "full_cycle_wall_time": "CANNOT_MEASURE: no monotonic wall-clock timer is exposed; commit timestamps only bound the durable candidate-to-result interval"
+    "routing_reuse_ids": [
+      "E-PC-ENTROPY-NONCOLLAPSE-CANONICAL-SURGERY-EXTINCTION",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+    ],
+    "selected_count": 3,
+    "selected_ids": [
+      "E-PC-ENTROPY-NONCOLLAPSE-CANONICAL-SURGERY-EXTINCTION",
+      "T-XM-ROOT-BRIDGE-STABILITY-AUDIT",
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER"
+    ],
+    "successful_reuse_ids": []
   },
   "new_ids": {
-    "episode": ["E-XM-PC-NS-001-C001-20260812"],
-    "diagnosis": ["DG-XM-PC-NS-001-C001-RESONANT-PHASE-CANCELLATION"],
-    "failure": ["F-XM-PC-NS-001-C001-TRIAD-STRETCHING-CANCELLATION"],
+    "diagnosis": [
+      "DG-XM-PC-NS-001-C001-RESONANT-PHASE-CANCELLATION"
+    ],
+    "experience_shadow": [
+      "XSH-XM-PC-NS-001-C001-20260812"
+    ],
+    "failure": [
+      "F-XM-PC-NS-001-C001-TRIAD-STRETCHING-CANCELLATION"
+    ],
     "lesson": [],
-    "tool": [],
-    "obstruction": [],
     "motif": [],
-    "successful_reuse": []
-  },
-  "gate_provenance_ci": {
-    "gate_A_context": "PASS inherited from exact parent receipt",
-    "gate_B_dual_memory": "PASS inherited from exact parent receipt",
-    "gate_C_obstruction_transformation": "PASS selected JUMP inherited from exact parent receipt",
-    "gate_D_pre_candidate_trace": "PASS inherited from exact parent receipt",
-    "licensed_action": "FREEZE_ONE_EXPLICIT_3D_NS_ENSTROPHY_SIGN_FALSIFIER",
-    "candidate_freeze_chronology": "PASS: freeze commit 58948d71 precedes result commit dc6572b75",
-    "episode_storage_admission": "PROPOSAL_SHADOW_STORED",
-    "source_success_authority": "PRIMARY_SOURCE_BOUND in parent packet",
-    "target_transfer_authority": "NONE",
-    "independent_mathematical_reviews": "0/3",
-    "proof_dag": "OPEN",
-    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
-    "root_promotion": "DENIED_NOT_ATTEMPTED",
-    "ci_status_at_metrics_freeze": "NOT_YET_OBSERVED: PR not yet created for the child result branch; CI cannot be counted as mathematical authority"
-  },
-  "rakl_changed_observable_action_preference": {
-    "changed": true,
-    "pre_memory_pre_gate_options": ["copy a source monotone quantity by analogy","search directly for a new NS monotone","import Ricci surgery semantics","derive and sign-test target enstrophy identity"],
-    "post_gate_selected_action": "derive and sign-test target enstrophy identity first",
-    "evidence": "parent ResearchMemoryReview and ObstructionTransformationReview selected the root-bridge audit tool plus Poincare success JUMP and required the exact target sign falsifier before larger transfer"
+    "obstruction": [],
+    "successful_reuse": [],
+    "tool": []
   },
   "novelty_class": "NO_DEFENSIBLE_EXTERNAL_NOVELTY_CLASS__SCOPED_CALIBRATION_ONLY",
-  "framework_improvement_hypothesis": "Add an assurance-only parent-hash-bound research-trace continuation validator for stacked application cycles; no framework authority is claimed from this hypothesis.",
-  "raw_growth_is_learning": false
+  "observable_resource_proxies": {
+    "candidate_attempts": 1,
+    "durable_candidate_freeze_to_result_elapsed_seconds": 154,
+    "full_cycle_retrieval_tool_calls": "CANNOT_MEASURE: connector responses do not expose a cumulative per-cycle call counter and preflight/state-scan calls preceded the durable candidate freeze",
+    "full_cycle_wall_time": "CANNOT_MEASURE: no monotonic wall-clock timer is exposed; commit timestamps only bound the durable candidate-to-result interval",
+    "model_context_tokens": "CANNOT_MEASURE: automation runtime does not expose a reliable exact compiled-context counter",
+    "model_tokens": "CANNOT_MEASURE: automation runtime does not expose a reliable exact per-cycle token counter",
+    "post_freeze_exact_math_python_calls_known": 6,
+    "primary_web_calls_in_preflight_known": 2,
+    "repository_write_calls_before_metrics": 9
+  },
+  "outcome": "CANDIDATE_FAILURE_ZERO_STRETCHING_COEFFICIENT",
+  "rakl_changed_observable_action_preference": {
+    "changed": true,
+    "evidence": "parent ResearchMemoryReview and ObstructionTransformationReview selected the root-bridge audit tool plus Poincare success JUMP and required the exact target sign falsifier before larger transfer",
+    "post_gate_selected_action": "derive and sign-test target enstrophy identity first",
+    "pre_memory_pre_gate_options": [
+      "copy a source monotone quantity by analogy",
+      "search directly for a new NS monotone",
+      "import Ricci surgery semantics",
+      "derive and sign-test target enstrophy identity"
+    ]
+  },
+  "rakl_git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+  "rakl_math": {
+    "branch_head_before_metrics_commit": "4aa3e977c2e281b9f345a8e2bf56d194e2e277de",
+    "candidate_freeze_commit": "58948d71d63a79a9daba03333eedbd6d7e5adca7",
+    "current_main_at_cycle_start": "597b7d98b514af33808d5f32be2cd5c906cfe036",
+    "exact_final_head": "CANNOT_MEASURE: the SHA of the commit containing this metrics file is self-referential; exact final branch head is attested in the pull-request body and closeout report after this file is committed",
+    "post_mathematical_result_commit": "dc6572b75ee4d64b8c8d99d8decd44b77788119f",
+    "stack_parent_pre_candidate_head": "b47f5f289a19d79c608e904d450903aeabf818cc"
+  },
+  "rakl_method_version": "3.0.0",
+  "rakl_package_version": "0.1.0",
+  "raw_growth_is_learning": false,
+  "record_type": "RAKL_CYCLE_METRICS",
+  "residual_after": "OBS-XM-PC-NS-ENSTROPHY-SIGN remains unresolved; exact C001 cancellation is negative history and PATH is reopened for a fresh structurally distinct candidate",
+  "residual_before": "OBS-XM-PC-NS-ENSTROPHY-SIGN unresolved: determine whether a smooth 3D NS datum can make the exact initial enstrophy derivative positive",
+  "retained_semantic_novelty": {
+    "axes_flattened": [],
+    "axes_reopened": [
+      "PATH"
+    ],
+    "proposal_shadow": {
+      "EXPERIENCE_PATTERN": 0,
+      "KNOWLEDGE": 1,
+      "META_METHOD": 0,
+      "OBSTRUCTION": 0,
+      "OPERATOR": 0,
+      "PATH": 0,
+      "RELATION": 0
+    },
+    "protected": {
+      "EXPERIENCE_PATTERN": 0,
+      "KNOWLEDGE": 0,
+      "META_METHOD": 0,
+      "OBSTRUCTION": 0,
+      "OPERATOR": 0,
+      "PATH": 0,
+      "RELATION": 0
+    }
+  },
+  "state_fingerprints": {
+    "fingerprint_scope": "semantic snapshot binds framework/main/parent gate/atom/context/candidate/residual; post snapshot additionally binds exact coefficients/outcome/failure/diagnosis",
+    "post_outcome_repository_fingerprint": "git-commit:dc6572b75ee4d64b8c8d99d8decd44b77788119f",
+    "post_outcome_semantic_snapshot_sha256": "7fd0b79a069488807e4f069032e7475fceafd7f005fdd128ad8bf020098cdfab",
+    "pre_outcome_repository_fingerprint": "git-commit:58948d71d63a79a9daba03333eedbd6d7e5adca7",
+    "pre_outcome_semantic_snapshot_sha256": "c0f79d3ecf2306fe6c0e281595d72aa86e130e3a33761ceaba93dffdb767458c"
+  }
 }
