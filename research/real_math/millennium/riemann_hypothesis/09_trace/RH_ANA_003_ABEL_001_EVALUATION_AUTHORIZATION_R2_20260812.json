@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "authorization_id": "RH-ANA-003-ABEL-001-EVALUATION-AUTHORIZATION-R2-20260812",
+  "candidate_id": "RH-ANA-003-ABEL-001-C001-FIXED-N-NATURAL-ORDER-ABEL",
+  "candidate_core_sha256": "sha256:19a265e1498ad67db256c2ef1315a370d2b72107618f67c54fb7b0828eac3bcc",
+  "predecessor_authorization": "RH-ANA-003-ABEL-001-EVALUATION-AUTHORIZATION-20260812",
+  "predecessor_disposition": "PREVIOUS_ROUND_FREEZE_ONLY_COMPLETED; this is the separate successor authorization required there.",
+  "authoritative_rakl_main_sha": "d594e6864f49ecf6dac394173082fbf0174b422e",
+  "rakl_method_version": "3.0.0",
+  "rakl_skill_manifest_version": "0.7.0",
+  "rakl_math_base_sha": "6016dd6a87d87b18d8f5498e2537b043a8468c04",
+  "framework_candidate_subject_revalidation": "CURRENT_UNCHANGED: candidate freeze already bound to d594e6864f49ecf6dac394173082fbf0174b422e and current RAKL/main is the same SHA.",
+  "candidate_identity_mutation_allowed": false,
+  "proof_derivation_authorized": true,
+  "result_classification_authorized": true,
+  "evaluator_execution_authorized": true,
+  "allowed_result_branches": [
+    "PROVED_FIXED_N_NATURAL_ORDER_IDENTITY",
+    "FINITE_ENDPOINT_IDENTITY_FALSE",
+    "BELLOTTI_BOUNDARY_OR_INTEGRAL_INSUFFICIENT",
+    "ABSOLUTE_DIVERGENCE_WITNESS_FALSE",
+    "CANNOT_CHECK"
+  ],
+  "required_evaluation_order": [
+    "O1 finite Abel endpoint identity",
+    "O2 exact kernel derivative and fixed-n polynomial-log bound",
+    "O3 Bellotti-to-A(x) bound",
+    "O4 boundary vanishing",
+    "O5 absolute convergence of transformed improper integral",
+    "O6 natural-order limit",
+    "O7 nonabsolute-divergence witness"
+  ],
+  "counterexample_first": [
+    "check endpoint sign/convention with finite step-function examples before limit arguments",
+    "check whether m=6k can ever be a prime power",
+    "check fixed-n versus n-uniform quantifier leakage",
+    "check transformed-integral integrability after u=log t"
+  ],
+  "authority_boundary": [
+    "NO_N_UNIFORMITY",
+    "NO_REORDERING_OR_REGROUPING",
+    "NO_PR316_RATE_OR_CUTOFF_CLAIM",
+    "NO_LI_SIGN_CLAIM",
+    "NO_RH_CLAIM",
+    "NO_LITERATURE_NOVELTY_CLAIM",
+    "NO_INDEPENDENT_REVIEW_CREDIT"
+  ],
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "recorded_at": "2026-08-12T07:52:00Z",
+  "mathematical_result_credit": false,
+  "note": "Authorization is process-only. It permits evaluation of the already frozen candidate and grants no mathematical truth.",
+  "artifact_hash": "sha256:9003f6446fc5dcb2ab4dca02c2553065445bb4bb965a7f3ed56ab38679dd1c6d"
+}
