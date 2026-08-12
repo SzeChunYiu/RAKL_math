@@ -25,3 +25,7 @@ Same-context expert review is not independent review. Computation/DifferenceWitn
 **Chronology boundary:** the R10 context, review, result, and trace entries share the same recorded second and first entered git together. The internal hash-chain order is not prospective-freeze evidence. Same-context review remains 0/3 independent credit.
 
 **Atlas warning preserved:** `FM-BSD-ARITHMETIC-PREMISE-REIMPORT` remains open and is corroborated, not superseded.
+
+## Post-cycle Zhang R9 reconciliation
+
+Merged PR #292 supplies a distinct stored source theorem cell: under Wei Zhang Theorem 1.4(ii)'s technical-prime hypotheses, exact analytic rank two implies `corank_Zp Sel_{p^infinity}(E/Q) >= 2`. This supersedes R10's coarse historical `GENERIC_NON_CM_AND_ARBITRARY_RANK_ARITHMETIC_ENTRY_OPEN` label for active routing, but it does not backfill the earlier R10 chronology. The active residual is now exactness/upper control plus explicit `p^infinity`/`V_p` binding, transverse p-local localization, the unsourced special-CM complex-to-Katz order step, and full BSD leading-term glue. Zhang R9 receives the distinct stored-transfer unit; R10 remains zero-credit route pruning.

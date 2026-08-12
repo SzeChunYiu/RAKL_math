@@ -92,3 +92,15 @@ def test_bsd_r10_context_and_trace_hashes_and_no_root_promotion():
     assert tr["terminal_event_hash"] == prev
     assert all("ROOT_CERTIFICATE" not in " ".join(event["outputs"]) for event in tr["entries"])
     assert "not evidence of prospective" in tr["chronology_boundary"]
+
+
+def test_bsd_r10_post_zhang_reconciliation_is_distinct_and_noninflating():
+    rec = load("07_memory/BSD_A1a1_R10_POST_ZHANG_R9_RECONCILIATION_20260812.json")
+    assert rec["merged_source_unit"]["exact_statement"].startswith("For E/Q and p>=5")
+    assert len(rec["merged_source_unit"]["hypotheses"]) == 4
+    assert rec["r10_distinct_unit"]["relation_to_zhang_r9"].startswith("DISTINCT_AND_COMPLEMENTARY")
+    assert rec["r10_distinct_unit"]["mathematical_credit"] == 0
+    assert rec["historical_r10_residual_supersession"]["superseded_id"] == "GENERIC_NON_CM_AND_ARBITRARY_RANK_ARITHMETIC_ENTRY_OPEN"
+    active = rec["historical_r10_residual_supersession"]["active_residuals"]
+    assert "ZHANG_TECHNICAL_PRIME_PINFINITY_LOWER_BOUND_TO_EXACT_CORANK2_AND_VP_BINDING_OPEN" in active
+    assert rec["atlas_warning"]["id"] == "FM-BSD-ARITHMETIC-PREMISE-REIMPORT"
