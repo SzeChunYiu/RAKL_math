@@ -1,0 +1,100 @@
+{
+  "artifact_hash": "sha256:afc7c85be7a2d9f61d5f356256708b2d4ac70074b52fe8843306e003179058cf",
+  "authority": {
+    "candidate_truth": false,
+    "independent_review": false,
+    "li_positivity": false,
+    "mathematical_result": false,
+    "novelty": false,
+    "operational_authorization_only": true,
+    "proof": false,
+    "riemann_hypothesis": false,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "software_or_governance_credit_units": 0
+  },
+  "authorization_id": "RH-ANA-003j-D001-JY-C001-EVALUATION-AUTHORIZATION-20260812",
+  "candidate_id": "RH-ANA-003j-D001-JY-C001-DIRECT-ENVELOPE",
+  "chronology": {
+    "authorization_base_sha": "e14c0708861fe04a0cfad4116e1e9b003e6702ff",
+    "authorization_commit_sha": null,
+    "authorization_merge_sha": null,
+    "authorization_present_on_active_main": false,
+    "candidate_and_falsifier_public_before_authorization": true,
+    "candidate_freeze_merge_sha": "e14c0708861fe04a0cfad4116e1e9b003e6702ff",
+    "candidate_freeze_pr": "https://github.com/SzeChunYiu/RAKL_math/pull/404",
+    "evaluator_executed_before_authorization_freeze": false,
+    "evaluator_implemented_before_authorization_freeze": false,
+    "result_accessed_before_authorization_freeze": false
+  },
+  "current_round": {
+    "allowed_action": "COMMIT_AND_MERGE_THIS_AUTHORIZATION_ONLY",
+    "evaluator_implementation_authorized": false,
+    "evaluator_import_or_execution_authorized": false,
+    "validation_result_classification_authorized": false
+  },
+  "exact_identity_bindings": {
+    "candidate": {
+      "artifact_hash": "sha256:e079308e6d89d6ed028f31843e1f230b5d5bb3636b6a5099f1a679363a31a84b",
+      "candidate_core_sha256": "sha256:082bc762b994bce8348da1ea99933fe14c965f9dff98296b6e9177cd94b974be",
+      "path": "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_ANA_003j_D001_JY_C001_DIRECT_ENVELOPE_CANDIDATE_FREEZE_20260812.json",
+      "raw_sha256": "ba83993220dd2b587330bbee7000f7e50c7a7fad3ee50c0c7051b9f1a7b7a885"
+    },
+    "candidate_trace": {
+      "last_event_hash": "sha256:f60403d63d5282cc94aaff1ebed2a86acabb0a94825a5549b0688006eadbab56",
+      "path": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003j_D001_JY_C001_CANDIDATE_FREEZE_TRACE_20260812.json",
+      "raw_sha256": "041b7aad863591ae23abc09fdc119ab8fed46577a85e48a45ff0e7021b87b13c"
+    },
+    "falsifier": {
+      "artifact_hash": "sha256:dcc3611449e8f651fea29983504dcbdb04de72744c5b6192c675cdede853e9bd",
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_JY_C001_FALSIFIER_FREEZE_20260812.json",
+      "raw_sha256": "7e59f54cbde76bd3b1149ff7b03e6c101c6ee63146a71f13c5d271d773d629bb"
+    },
+    "public_validation_inputs": {
+      "artifact_hash": "sha256:42b2450184a6e819a9373d61346be1cf33b7da5007d9d45b5c8f55ba971fbc01",
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_JY_C001_PUBLIC_VALIDATION_INPUTS_20260812.json",
+      "raw_sha256": "fd0f8f73abf53b54a004ec8ff8bfb9da1592b92cf625cad7c01a31f077b6d7a4"
+    }
+  },
+  "forbidden_even_after_activation": [
+    "calculate or publish any numerical B_JY value",
+    "calculate or publish any m_JY or M_JY value",
+    "run numerical incomplete-gamma validation before a separate precision contract is publicly frozen",
+    "run a numerical natural-order remainder test",
+    "select epsilon_n",
+    "select a diagonal cutoff constant C",
+    "attempt a moving-diagonal or internal-prefix conclusion",
+    "change the candidate, planted worlds, expected classifications, or public input set",
+    "claim a mathematical result, proof, novelty, independent review, Li positivity, or RH"
+  ],
+  "frozen_at_utc": "2026-08-12T15:20:00Z",
+  "post_merge_successor_authorization": {
+    "activation_condition": "A successor must prove that the exact raw bytes of this authorization are committed on active main and bind that active-main merge SHA before implementing or executing the evaluator.",
+    "authorized_actions_after_activation": [
+      "Implement an evaluator bound to the exact candidate core, candidate artifact, falsifier artifact, and public-input artifact identities above.",
+      "Classify only the frozen planted PASS, FAIL, and CANNOT_CHECK worlds.",
+      "Run only the twelve public symbolic inputs n in {1,2,3,5} at U_JY(n), ceil(U_JY(n)), and ceil(U_JY(n))+1.",
+      "Check the frozen coefficient ledger, exact substitution identity, component nonnegativity, componentwise monotonicity obligations, and endpoint-extension logic.",
+      "Emit a receipt that preserves per-obligation PASS, FAIL, or CANNOT_CHECK without averaging or threshold rescue."
+    ],
+    "candidate_or_falsifier_mutation_allowed": false,
+    "planned_evaluator_path": "research/real_math/millennium/riemann_hypothesis/05_oracles/rh_ana003j_d001_jy_c001_evaluator.py",
+    "planned_result_path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_JY_C001_PUBLIC_VALIDATION_RESULT_20260812.json",
+    "scope_expansion_allowed": false
+  },
+  "record_type": "RH_ANA003J_D001_JY_C001_POSTMERGE_EVALUATION_AUTHORIZATION",
+  "result_firewall": {
+    "B_JY_values": [],
+    "M_JY_values": [],
+    "diagonal_cutoff_constant_identity": null,
+    "epsilon_sequence_identity": null,
+    "evaluator_executed": false,
+    "evaluator_implemented": false,
+    "evaluator_imported": false,
+    "evaluator_path_exists": false,
+    "m_JY_values": [],
+    "result_state": "NOT_EVALUATED",
+    "validation_receipt_exists": false
+  },
+  "schema_version": "1.0.0",
+  "status": "FROZEN_INERT_UNTIL_AUTHORIZATION_MERGED_INTO_ACTIVE_MAIN"
+}
