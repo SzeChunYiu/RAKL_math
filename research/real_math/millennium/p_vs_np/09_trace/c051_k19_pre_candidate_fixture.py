@@ -489,7 +489,7 @@ def preservation_receipt() -> RootCoordinatePreservationReceipt:
             RegisteredStateObservation("C051-pre", "H19-intersection-P20-unresolved", "root open"),
         ),
         reverification_triggers=("decoder or padding changes", "split changes", "the reduction map changes", "a bounded miss is generalized", "a new witness family is proposed"),
-        prior_failure_ids=("F-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION", "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT"),
+        prior_failure_ids=("F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC", "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT"),
     )
 
 
