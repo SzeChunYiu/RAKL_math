@@ -1,79 +1,34 @@
 {
-  "artifact_hash": "sha256:83b20ed76dc31b459417308a7bef8f02a478e676569f69107cc5e430cf4232fe",
+  "artifact_hash": "sha256:b4dedeaaaece2ca459dbacdaa4f05fa7d4533ff4c8ee42773012be01d4041f88",
   "authority": "PROPOSAL_SHADOW_ONLY",
   "bundle_id": "PNP-C048-MEMORY-TRANSFORMATION-BUNDLE-20260812",
   "obstruction_transformation_review": {
-    "artifact_hash": "sha256:cfca86da8b1afed413b1ca38ef5c47ce9182bd218a1fa99bf383324d413534cb",
+    "artifact_hash": "sha256:77c8a85f162015e6a5c6292b65d12b0bff691400d6c5df42fb64ff00bd3c485b",
     "atom_id": "O9d12a2a1b-C048",
     "authority": "PROPOSAL_SHADOW_ONLY",
-    "fibre_snapshot_hash": "sha256:bf87028b2a9c1663ff61bb77d28de284f47fac35d01e53d246e034386a7fdc67",
-    "glue": {
-      "reason": "direct same-context SEARCH matched",
-      "status": "NOT_RUN"
-    },
-    "jump": {
-      "reason": "direct same-context SEARCH matched",
-      "status": "NOT_RUN"
-    },
-    "lift": {
-      "reason": "direct same-context SEARCH matched; no exhaustion witness required",
-      "status": "NOT_RUN"
-    },
+    "fibre_snapshot_hash": "sha256:42625f3b5e7a51f2ccd215813e2ee2fae2d98e1eafc1e5df17d9e55b309b4e4b",
+    "glue": {"reason": "direct same-context SEARCH matched", "status": "NOT_RUN"},
+    "jump": {"reason": "direct same-context SEARCH matched", "status": "NOT_RUN"},
+    "lift": {"reason": "direct same-context SEARCH matched; no exhaustion witness required", "status": "NOT_RUN"},
     "obstruction": {
-      "constraints": [
-        "unchanged C041 decoder",
-        "equal split",
-        "same seed",
-        "same inherited old-old embedding",
-        "NP verifier remains assignment checking",
-        "no target-root promotion"
-      ],
-      "desired_transition": [
-        "preserve the SAT/graph reduction while obtaining one exact inherited support coupling"
-      ],
+      "constraints": ["unchanged C041 decoder","equal split","same seed","same inherited old-old embedding","NP verifier remains assignment checking","no target-root promotion"],
+      "desired_transition": ["preserve the SAT/graph reduction while obtaining one exact inherited support coupling"],
       "domain": "mathematics",
-      "failure_mechanisms": [
-        "transpose may simply relocate projection-disjointness",
-        "a shared coordinate may still be cover-neutral"
-      ],
-      "forbidden_losses": [
-        "changing decoded word",
-        "using UNSAT as an NP witness",
-        "treating finite incidence as cover growth",
-        "target-result leakage claims inconsistent with retrospective chronology"
-      ],
+      "failure_mechanisms": ["transpose may simply relocate projection-disjointness","a shared coordinate may still be cover-neutral"],
+      "forbidden_losses": ["changing decoded word","using UNSAT as an NP witness","treating finite incidence as cover growth","target-result leakage claims inconsistent with retrospective chronology"],
       "obstruction_id": "OBS-PNP-C048-EXACT-INTERFACE-COUPLING",
-      "relations": [
-        "C047 fails because prefix receives the fresh leading bit and becomes 1||MAGIC",
-        "literal transpose instead leaves prefix as an old column and puts suffix on the fresh row",
-        "backward component coupling can therefore occur through columns rather than rows"
-      ],
-      "roles": [
-        "inherited complement support",
-        "new transposed complement support",
-        "old-column prefix coordinate",
-        "fresh-row suffix coordinate",
-        "exact shared incidence coordinate"
-      ]
+      "relations": ["C047 fails because prefix receives the fresh leading bit and becomes 1||MAGIC","literal transpose instead leaves prefix as an old column and puts suffix on the fresh row","backward component coupling can therefore occur through columns rather than rows"],
+      "roles": ["inherited complement support","new transposed complement support","old-column prefix coordinate","fresh-row suffix coordinate","exact shared incidence coordinate"]
     },
     "recorded_at": "2026-08-12T04:02:00Z",
-    "research_memory_review_hash": "sha256:3ba706aa03500a7ede257a8e4beda742d88f36c7c2796d7b4494bd981dc70c4b",
+    "research_memory_review_hash": "sha256:754a89bf16e343f7d7445143affc7de6aeacbcbd88b740ce2868f243e89d4aac",
     "review_id": "PNP-C048-OBSTRUCTION-TRANSFORMATION-REVIEW-20260812",
     "schema_version": "1.0.0",
     "search": {
       "difference_witness": {
-        "different": [
-          "C047 new row = 1||x",
-          "C048 new row = 1||y and old column = x"
-        ],
+        "different": ["C047 new row = 1||x","C048 new row = 1||y and old column = x"],
         "load_bearing": "the changed coordinate placement moves possible backward coupling from row-prefix alignment to prefix/prior-suffix column alignment",
-        "shared": [
-          "equal split",
-          "decoder",
-          "seed",
-          "inherited block",
-          "word x||y"
-        ],
+        "shared": ["equal split","decoder","seed","inherited block","word x||y"],
         "source": "C047 prefix-preserving mirror",
         "target": "C048 literal transpose"
       },
@@ -85,90 +40,28 @@
   },
   "recorded_at": "2026-08-12T04:02:00Z",
   "research_memory_review": {
-    "artifact_hash": "sha256:3ba706aa03500a7ede257a8e4beda742d88f36c7c2796d7b4494bd981dc70c4b",
+    "artifact_hash": "sha256:754a89bf16e343f7d7445143affc7de6aeacbcbd88b740ce2868f243e89d4aac",
     "atom_id": "O9d12a2a1b-C048",
     "authority": "PROPOSAL_SHADOW_ONLY",
-    "cross_millennium_query": {
-      "performed": false,
-      "reason": "Direct same-context SEARCH produced an applicable stored breakpoint, so JUMP/GLUE/LIFT and cross-Millennium retrieval were not needed; no cross-problem item was silently imported."
-    },
+    "cross_millennium_query": {"performed": false,"reason": "Direct same-context SEARCH produced an applicable stored breakpoint, so JUMP/GLUE/LIFT and cross-Millennium retrieval were not needed; no cross-problem item was silently imported."},
     "decision_policy": "SEARCH direct same-context v3 transformation memory first; apply DifferenceWitness against C047; use counterexample-first exact bit/interface checks; stop before cover optimization if exact coupling fails.",
-    "fibre_snapshot_hash": "sha256:bf87028b2a9c1663ff61bb77d28de284f47fac35d01e53d246e034386a7fdc67",
+    "fibre_snapshot_hash": "sha256:42625f3b5e7a51f2ccd215813e2ee2fae2d98e1eafc1e5df17d9e55b309b4e4b",
     "memory_review_id": "PNP-C048-RESEARCH-MEMORY-REVIEW-20260812",
     "missed_prior_experience": "CANNOT_MEASURE: no complete recall denominator over all application memory is exposed by the connector/runtime in this run.",
     "recorded_at": "2026-08-12T04:02:00Z",
-    "rejected_ids": [
-      "T-PNP-C046-PARTITION-INVARIANT-FEASIBILITY-FIRST"
-    ],
-    "retrieved_counts": {
-      "cross_millennium": 0,
-      "episodes": 1,
-      "failure_mechanisms": 1,
-      "failures": 2,
-      "motifs": 0,
-      "prior_results": 2,
-      "tools": 1
-    },
+    "rejected_ids": ["T-PNP-C046-PARTITION-INVARIANT-FEASIBILITY-FIRST"],
+    "retrieved_counts": {"cross_millennium":0,"episodes":1,"failure_mechanisms":1,"failures":2,"motifs":0,"prior_results":2,"tools":1},
     "retrieved_memory": [
-      {
-        "effect_on_routing": "CHANGED_ACTION",
-        "id": "E-PNP-C047-COARSE-REPAIR-THEN-INTERFACE-CHECK",
-        "kind": "success_episode",
-        "reason": "Its known breakpoint explicitly names 'suffix rather than prefix on the fresh row'; this routes from saturated orientation-only mirror to literal transpose.",
-        "selected": true
-      },
-      {
-        "effect_on_routing": "SET_FALSIFIER",
-        "id": "F-C045-U17-PROJECTION-DISJOINT",
-        "kind": "failure",
-        "reason": "Requires an exact reused projection coordinate before any cover search.",
-        "selected": true
-      },
-      {
-        "effect_on_routing": "BLOCKED_OVERCLAIM",
-        "id": "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING",
-        "kind": "failure",
-        "reason": "Semantic support/type growth is noncoercive; even a coupling witness is not a lower bound.",
-        "selected": true
-      },
-      {
-        "effect_on_routing": "REJECTED_FOR_DIRECT_REUSE",
-        "id": "T-PNP-C046-PARTITION-INVARIANT-FEASIBILITY-FIRST",
-        "kind": "tool",
-        "reason": "Its low-half/high-half invariant assumes prefix remains the semantic row coordinate; literal transpose deliberately breaks that precondition.",
-        "selected": false
-      },
-      {
-        "effect_on_routing": "DIFFERENCE_WITNESS",
-        "id": "MATH-PNP-C046-HIGH-HALF-SEPARATION",
-        "kind": "prior_result",
-        "reason": "Control case for why transpose must change the label interface, not only quadrant.",
-        "selected": true
-      },
-      {
-        "effect_on_routing": "DIFFERENCE_WITNESS",
-        "id": "MATH-PNP-C047-ORIENTATION-ONLY-HEADER-SEPARATION",
-        "kind": "prior_result",
-        "reason": "Directly eliminates prefix-preserving mirror/two-sided variants and leaves literal transpose as the smallest stored breakpoint.",
-        "selected": true
-      },
-      {
-        "effect_on_routing": "SET_SUCCESS_CONTRACT",
-        "id": "FM-PNP-C043-C046-SEMANTICS-WITHOUT-INTERACTION",
-        "kind": "failure_mechanism",
-        "reason": "Demands exact interaction/interface congruence before cover evaluation.",
-        "selected": true
-      }
+      {"effect_on_routing":"CHANGED_ACTION","id":"E-PNP-C047-COARSE-REPAIR-THEN-INTERFACE-CHECK","kind":"success_episode","reason":"Its known breakpoint explicitly names 'suffix rather than prefix on the fresh row'; this routes from saturated orientation-only mirror to literal transpose.","selected":true},
+      {"effect_on_routing":"SET_FALSIFIER","id":"F-C045-U17-PROJECTION-DISJOINT","kind":"failure","reason":"Requires an exact reused projection coordinate before any cover search.","selected":true},
+      {"effect_on_routing":"BLOCKED_OVERCLAIM","id":"F-C043-FIRST-ROW-SPLIT-TYPE-CEILING","kind":"failure","reason":"Semantic support/type growth is noncoercive; even a coupling witness is not a lower bound.","selected":true},
+      {"effect_on_routing":"REJECTED_FOR_DIRECT_REUSE","id":"T-PNP-C046-PARTITION-INVARIANT-FEASIBILITY-FIRST","kind":"tool","reason":"Its low-half/high-half invariant assumes prefix remains the semantic row coordinate; literal transpose deliberately breaks that precondition.","selected":false},
+      {"effect_on_routing":"DIFFERENCE_WITNESS","id":"MATH-PNP-C046-HIGH-HALF-SEPARATION","kind":"prior_result","reason":"Control case for why transpose must change the label interface, not only quadrant.","selected":true},
+      {"effect_on_routing":"DIFFERENCE_WITNESS","id":"MATH-PNP-C047-ORIENTATION-ONLY-HEADER-SEPARATION","kind":"prior_result","reason":"Directly eliminates prefix-preserving mirror/two-sided variants and leaves literal transpose as the smallest stored breakpoint.","selected":true},
+      {"effect_on_routing":"SET_SUCCESS_CONTRACT","id":"FM-PNP-C043-C046-SEMANTICS-WITHOUT-INTERACTION","kind":"failure_mechanism","reason":"Demands exact interaction/interface congruence before cover evaluation.","selected":true}
     ],
     "schema_version": "1.0.0",
-    "selected_ids": [
-      "E-PNP-C047-COARSE-REPAIR-THEN-INTERFACE-CHECK",
-      "F-C045-U17-PROJECTION-DISJOINT",
-      "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING",
-      "MATH-PNP-C046-HIGH-HALF-SEPARATION",
-      "MATH-PNP-C047-ORIENTATION-ONLY-HEADER-SEPARATION",
-      "FM-PNP-C043-C046-SEMANTICS-WITHOUT-INTERACTION"
-    ]
+    "selected_ids": ["E-PNP-C047-COARSE-REPAIR-THEN-INTERFACE-CHECK","F-C045-U17-PROJECTION-DISJOINT","F-C043-FIRST-ROW-SPLIT-TYPE-CEILING","MATH-PNP-C046-HIGH-HALF-SEPARATION","MATH-PNP-C047-ORIENTATION-ONLY-HEADER-SEPARATION","FM-PNP-C043-C046-SEMANTICS-WITHOUT-INTERACTION"]
   },
   "schema_version": "1.0.0"
 }
