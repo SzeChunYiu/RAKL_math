@@ -1,0 +1,95 @@
+{
+  "schema_version": "rakl-obstruction-transformation-review-shadow-v3",
+  "record_type": "ObstructionTransformationReview",
+  "authority": "PROPOSAL_SHADOW_SEARCH_CONTROL_ONLY",
+  "cycle_id": "XM022-HODGE-YM-POSTNULL-SPECTRAL-COVERAGE-20260812",
+  "atom_id": "XM022-YM-POSTNULL-DENSE-SOURCE-SPECTRAL-EXCLUSION",
+  "context_fibre_hash": "sha256:7856a270ed7563f3616e49200a44a284785de89b83818b485efd23381a8ff432",
+  "memory_review_hash": "sha256:6ec336041c04acfd5c5dce41de61a35b93cf510be15c78821947cca61bc03e53",
+  "obstruction_fingerprint": {
+    "roles": [
+      "controlled Euclidean sources",
+      "OS quotient/reconstructed excited vectors",
+      "positive transfer operator",
+      "hidden slow excited modes"
+    ],
+    "relations": [
+      "source -> quotient vector",
+      "vector -> positive transfer moments",
+      "dense image -> spectral visibility"
+    ],
+    "constraints": [
+      "same theory",
+      "positive self-adjoint transfer operator",
+      "common rate q0",
+      "finite source-dependent prefactor allowed",
+      "post-null density required"
+    ],
+    "failure_mechanisms": [
+      "consumer kernel",
+      "restricted-source hidden state",
+      "proxy/moment mismatch",
+      "moving/regulator normalization conflation"
+    ],
+    "invariants_to_preserve": [
+      "same measure/theory",
+      "OS quotient identity",
+      "common exponential rate",
+      "excited-space/vacuum separation"
+    ],
+    "desired_transition": "source-family decay -> full fixed-cutoff excited spectral exclusion",
+    "forbidden_losses": [
+      "replace covariance by unrelated moment",
+      "drop density",
+      "let q0 depend on source without accounting",
+      "promote fixed-cutoff exclusion to continuum gap"
+    ]
+  },
+  "transformation_memory_snapshot": {
+    "selected_source_episode_or_result": "MATH-HODGE-C004-PROJECTION-KERNEL-NONIMPLICATION",
+    "same_domain_warning": "FM-YM-SAME-THEORY-INTERFACE-AND-DENSITY",
+    "corroborating_warning": "MATH-NS-B2A1B2-HILL-FINITE-ENERGY-DENSITY-FALSIFIER",
+    "snapshot_hash": "CANNOT_MEASURE: no canonical materialized ObstructionTransformationMemory object spanning these application records exists at this base; exact selected IDs and source commits are bound instead"
+  },
+  "structural_mapping_witness": {
+    "source_atom": "H4d1c-C004",
+    "target_atom": "YM-S1a2",
+    "common_abstraction": "consumer-image coverage after quotient",
+    "source_precondition_accounting": [
+      "Hodge A subset B becomes source-family inclusion",
+      "linear projection p becomes OS quotient/reconstruction map q only at the level of information flow; no algebraic-geometry theorem transfers",
+      "target gain is measured after q, not before q"
+    ],
+    "material_disanalogies": [
+      "finite-dimensional tangent spaces versus reconstructed Hilbert space",
+      "algebraic projection versus null quotient/completion",
+      "no Hodge theorem implies a Yang-Mills source theorem"
+    ],
+    "target_validation": [
+      "prove/refute dense-source common-rate positive-moment spectral-exclusion lemma",
+      "freeze explicit hidden-mode near-miss when density is dropped",
+      "keep SZZ covariance-to-transfer-moment binding unresolved unless source-proved"
+    ]
+  },
+  "route_decision": {
+    "SEARCH": "SELECTED_AS_PRIMARY_ROUTING_WARNING",
+    "JUMP": "SELECTED_AS_DISCRIMINATOR_SHARPENING",
+    "GLUE": "NO_VIABLE_NEED_BEFORE_LOCAL_DISCRIMINATOR",
+    "LIFT": "NOT_AUTHORIZED",
+    "selected_action": "TEST_ABSTRACT_POSITIVE_MOMENT_SUFFICIENCY_AND_EXPLICIT_DENSITY_DIFFERENCE_WITNESS"
+  },
+  "validation_obligations": [
+    "spectral-theorem proof must use a common q0 and allow C_v dependence explicitly",
+    "hidden-mode countermodel must fail only density/coverage, not positivity",
+    "no claim that SZZ support-distance covariance equals OS transfer moments",
+    "no continuum/lattice-spacing/root promotion"
+  ],
+  "residual_before": [
+    "UNCLEAR_WHETHER_SOURCE_DEPENDENT_PREFATORS_REQUIRE_UNIFORMITY_FOR_SPECTRAL_EXCLUSION",
+    "POST_NULL_DENSITY_UNBOUND",
+    "COVARIANCE_TO_TRANSFER_MOMENT_IDENTITY_UNBOUND",
+    "FIXED_CUTOFF_TO_CONTINUUM_GAP_UNBOUND"
+  ],
+  "next_step_proposed": "Freeze a candidate theorem/countermodel pair only after this review is public: positive self-adjoint contraction + dense D + common q0 moment bounds versus the nearest non-dense hidden-mode world.",
+  "artifact_hash": "sha256:106edfa86c9e89e817ce4742d8712afc003df294133bd25a74b1a8efbae31808"
+}
