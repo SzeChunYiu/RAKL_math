@@ -1,0 +1,521 @@
+{
+  "schema_version": "pnp-rakl-v3-cycle-packet-shadow-v1",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "cycle_id": "PNP-C050-SUPPORT-SPECTRUM-RV-20260812",
+  "framework_subject": {
+    "repository": "SzeChunYiu/RAKL",
+    "git_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "v3_surfaces_explicitly_inspected": [
+      "docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md",
+      "src/rakl/experience_substrate.py::TaskEpisode",
+      "src/rakl/problem_fibre.py::ProblemFibre/LocalSection/GluingReport",
+      "src/rakl/experience_policy.py::rank_operators_with_experience",
+      "src/rakl/pre_action_receipt.py::PreActionFibreReceipt/ChronologyStatus",
+      "src/rakl/method_specs.py canonical process surfaces"
+    ]
+  },
+  "application_subject": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "451d9506d365f06eb314323523ba123edd3ffb32",
+    "base_tree": "ee0c402754b1133a1bb6765946519d0fa530b943",
+    "branch": "research/pnp-c050-support-spectrum-rv-20260812",
+    "root_issue": 2,
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "chronology": {
+    "status": "RETROSPECTIVE_ONLY",
+    "pre_action_receipt_commit": "c9db5b3ee38f86d3fba6e62cd4d960f7b4d0067c",
+    "pre_action_receipt_sha256": "c56d7c1213f7c7680cc3a8156ca39318eaf313a8fda4bb1b6bd2e0904e1afd2f",
+    "reason": "Private automation scratch touched the exact half-length formula before durable fibre persistence. Current RAKL pre_action_receipt semantics therefore cannot grant prospective credit. The receipt governs verification and routing only.",
+    "repeated_process_failure_id": "PF-PNP-C050-SUPPORT-LATE-FIBRE-20260812",
+    "links": [
+      "PF-PNP-C041A-LATE-CHILD-FIBRE-20260812",
+      "PF-PNP-C041B-LATE-CHILD-FIBRE-20260812",
+      "C045 exposed-target chronology family"
+    ]
+  },
+  "mathematical_result": {
+    "result_id": "PNP-C050-EXACT-CANONICAL-SUPPORT-SPECTRUM-20260812",
+    "atom_id": "O9d12a2a1b-C050-SUPPORT-SPECTRUM-RV",
+    "novelty_class": {
+      "primary": "representation",
+      "secondary": "compositional",
+      "authority": "PROPOSAL_SHADOW_ONLY"
+    },
+    "definitions": {
+      "w": "bit_length(v)",
+      "b": "bit_length(m)",
+      "raw_length_B": "6+2w+2b+3m(w+1)",
+      "canonical_even_length": "L=B+(B mod 2)=2k",
+      "half_length_support_function": "k(w,m)=3+w+bit_length(m)+ceil(3m(w+1)/2)"
+    },
+    "theorem": [
+      "A positive integer k is the half-length of some canonical C041 long-form word if and only if k=k(w,m)=3+w+bit_length(m)+ceil(3m(w+1)/2) for some integers w>=1,m>=1.",
+      "For fixed w, k(w,m+1)-k(w,m)>=3 for every m>=1. Therefore two consecutive supported half-lengths k and k+1 can never be realized with the same variable-bitlength w.",
+      "The first syntactically supported consecutive pair after the unsupported integer 14 is 15,16: k(1,3)=15 and k(2,2)=k(4,1)=16. This identifies only a syntax-level next discriminator; H_15 nonemptiness and H_15 intersection P_16 are not decided here."
+    ],
+    "proof": [
+      "The frozen encoder contributes 8 MAGIC bits, gamma(v) length 2w-1, gamma(m) length 2b-1, and 3m literals of width w+1. Thus B=8+(2w-1)+(2b-1)+3m(w+1)=6+2w+2b+3m(w+1).",
+      "Only a trailing zero may be added to make the word even, so k=ceil(B/2)=3+w+b+ceil(3m(w+1)/2).",
+      "Conversely, for every w>=1 and m>=1 choose v=2^(w-1) and any valid nonempty 3CNF with m clauses using variable 1. The frozen encoder accepts it canonically, so every displayed arithmetic support point is realized.",
+      "Fix w and set q=w+1. If q is even, ceil(3mq/2)=3mq/2 and successive m increase k by 3q/2>=3, apart from a nonnegative bit_length(m) jump. If q is odd, then w is even and q>=3; with a=3q odd, ceil(a(m+1)/2)-ceil(am/2) alternates between (a-1)/2 and (a+1)/2, whose minimum is at least 4. Again bit_length(m) can only add 0 or 1. Hence the fixed-w gap is always at least 3.",
+      "For a fixed bit-length cell b, if w is odd the support values form an arithmetic progression of step 3(w+1)/2. If w is even, the even-m and odd-m subsequences are arithmetic progressions of step 3(w+1), offset by (3(w+1)+1)/2. This is an exact representation of the support spectrum, not a density or asymptotic completeness claim."
+    ],
+    "counterexample_first_falsification": {
+      "attacked_claim": "a consecutive support pair k,k+1 could come from the same variable-width class and permit a same-width suffix/prefix synchronization shortcut",
+      "falsification_search": [
+        "derive the exact discrete difference for q even",
+        "derive both parity branches for q odd",
+        "include bit_length(m) boundary jumps rather than ignoring them",
+        "boundedly calibrate the formula against the exact encoder shape"
+      ],
+      "outcome": "CLAIM_REFUTED_EXACTLY: same-w consecutive support is impossible",
+      "calibration_only": "For bounded w,m the direct formula/encoder-shape comparison agrees and the smallest observed same-w half-length increment is 3. Computation is not proof."
+    },
+    "bitlength_cell_representation": {
+      "w_odd": "for 2^(b-1)<=m<2^b, k=3+w+b+[3(w+1)/2]m",
+      "w_even_m_even": "m=2t gives k=3+w+b+3(w+1)t",
+      "w_even_m_odd": "m=2t+1 gives k=3+w+b+3(w+1)t+(3(w+1)+1)/2"
+    },
+    "transfer_assumptions": [
+      "exact frozen C041 MAGIC/gamma/payload/padding grammar",
+      "positive v and m in the canonical long form",
+      "no change to C048 swapped reduction or equal split when this support result is later reused"
+    ],
+    "explicit_disanalogies": [
+      "syntax support is not canonical UNSAT support",
+      "a supported pair k,k+1 does not imply H_k intersection P_(k+1) is nonempty",
+      "the fixed-w obstruction does not rule out cross-width exact bit synchronization",
+      "pending PR327 is search context only and bears no authority here",
+      "quarantined PR307 k13 content is not used",
+      "no cover, circuit, or P-versus-NP conclusion follows"
+    ],
+    "source_provenance": [
+      {
+        "source": "SzeChunYiu/RAKL_math C041_fx_sat_one_sided.py",
+        "application_sha": "451d9506d365f06eb314323523ba123edd3ffb32",
+        "blob": "fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+        "role": "authoritative frozen encoder grammar for this internal lemma"
+      },
+      {
+        "source": "Cavalar and Oliveira, Boolean Circuit Complexity and Two-Dimensional Cover Problems, ECCC TR25-033, 2025",
+        "url": "https://eccc.weizmann.ac.il/report/2025/033/",
+        "role": "current primary downstream cover/circuit interface control only; no encoding lemma is attributed to the paper"
+      }
+    ],
+    "local_to_global": {
+      "local_mathematical_failure": "NONE_ON_THE_REPRESENTATION_LEMMA",
+      "local_to_global_gluing_failure": "OPEN: syntax support does not identify H_k semantic support, exact suffix/prefix equality, cover growth, a circuit lower bound, or the root statement",
+      "next_gluing_interface": "Any H_15 intersection P_16 witness must cross variable-bitlength classes before exact bit equality and UNSAT are checked.",
+      "root_effect": "NONE"
+    }
+  },
+  "episode_diagnosis_obstruction_lesson": {
+    "episode_id": "E-PNP-C050-SUPPORT-SPECTRUM-RV-20260812",
+    "episode_artifact_hash": "67f6d9938bf4908880f5497b84f8041cbbb7c4f2ffd606922d0cebdcd0348064",
+    "diagnosis": {
+      "diagnosis_id": "D-PNP-C050-SUPPORT-BITLENGTH-LADDERS",
+      "authority": "PROPOSAL_SHADOW_DIAGNOSIS",
+      "observation": "The canonical half-length support is irregular and fixed-w consecutive support never occurs.",
+      "supported_cause": "The gamma/payload length arithmetic collapses exactly to k(w,m), whose fixed-w discrete increments are at least 3.",
+      "rejected_causes": [
+        "padding parity alone: the gap persists after exact parity handling",
+        "UNSAT semantics: no semantic condition enters the support theorem",
+        "C049 k12 fixed-bit mismatch: that k-specific bit conflict is not used"
+      ],
+      "falsifier": "Exhibit a canonical C041 long-form word whose half-length is outside the k(w,m) set, or fixed w and m with k(w,m+1)-k(w,m)<3."
+    },
+    "obstruction": {
+      "obstruction_id": "OB-PNP-C050-FIXED-W-CONSECUTIVE-SUPPORT-IMPOSSIBLE",
+      "authority": "PROPOSAL_SHADOW_OBSTRUCTION",
+      "derived_from_episode": "E-PNP-C050-SUPPORT-SPECTRUM-RV-20260812",
+      "derived_from_diagnosis": "D-PNP-C050-SUPPORT-BITLENGTH-LADDERS",
+      "statement": "Any consecutive canonical half-length pair relevant to H_k/P_(k+1) must cross variable-bitlength classes; a same-w synchronization shortcut is impossible.",
+      "scope": [
+        "exact frozen C041 canonical long form",
+        "syntax support only"
+      ],
+      "does_not_obstruct": [
+        "cross-width synchronization",
+        "UNSAT at a supported length",
+        "other encodings or splits",
+        "cover/circuit/root claims"
+      ]
+    },
+    "candidate_lesson": {
+      "lesson_id": "L-PNP-C050-WIDTH-CROSSING-BEFORE-SYNCHRONIZATION-v1",
+      "authority": "CANDIDATE",
+      "kind": "REPRESENTATION",
+      "action": "For a consecutive-length H_k/P_(k+1) atom, bind the producer and consumer variable-width cells explicitly before shared-bit search; same-width candidates can be rejected symbolically.",
+      "supporting_episode_ids": [
+        "E-PNP-C050-SUPPORT-SPECTRUM-RV-20260812"
+      ],
+      "contradicting_episode_ids": [],
+      "boundaries": [
+        "candidate lesson is not counted as learning",
+        "requires a fresh prospective transfer before reusable promotion",
+        "does not decide cross-width bit equality or UNSAT"
+      ],
+      "falsifier": "A valid same-width pair of canonical words at consecutive even total lengths.",
+      "validation_obligations": [
+        "prospectively freeze a fresh supported k and width-cell pair",
+        "verify exact shared bits and semantic side condition without using this retrospective result as authority"
+      ]
+    },
+    "process_failure": {
+      "failure_id": "PF-PNP-C050-SUPPORT-LATE-FIBRE-20260812",
+      "category": "META_POLICY_CHRONOLOGY",
+      "observation": "The formula was touched in private scratch before durable pre-action binding.",
+      "diagnosis": "Current RAKL already provides a pre-execution receipt gate; this automation path did not invoke it before mathematical scratch.",
+      "authority_effect": "STRICT_PROSPECTIVE_DISCOVERY_CREDIT_DENIED",
+      "mathematical_truth_effect": "NONE"
+    }
+  },
+  "same_context_expert_cell": {
+    "review_id": "PNP-C050-SUPPORT-SPECTRUM-FIVE-ROLE-REVIEW-20260812",
+    "authority": "SAME_CONTEXT_ROLE_SEPARATED_INTERNAL_REVIEW_NOT_INDEPENDENT",
+    "independent_mathematical_review_credit": "0/3",
+    "roles": [
+      {
+        "role": "complexity_and_reduction_lead",
+        "background": "structural complexity, reductions, cover-complexity interfaces",
+        "delegated_check": "police scope between syntax support, C048 overlap, cover complexity and root claims",
+        "finding": "The support theorem changes only the representation/search interface; it supplies no circuit consequence."
+      },
+      {
+        "role": "formal_language_and_coding_lead",
+        "background": "prefix codes, Elias-gamma coding, canonical encodings",
+        "delegated_check": "derive B and the converse realization without omitting padding",
+        "finding": "B=6+2w+2b+3m(w+1), and every k(w,m) is syntactically realizable."
+      },
+      {
+        "role": "discrete_arithmetic_lead",
+        "background": "integer sequences, parity decompositions, discrete differences",
+        "delegated_check": "classify support cells and prove the fixed-w gap",
+        "finding": "Odd w gives one arithmetic ladder; even w gives two parity ladders; fixed-w increments are at least 3."
+      },
+      {
+        "role": "adversarial_falsification_and_verification_lead",
+        "background": "counterexamples, proof-obligation stress tests, finite calibration",
+        "delegated_check": "search for padding/bitlength-boundary counterexamples and check bounded encoder instances",
+        "finding": "No counterexample survives the exact discrete-difference proof; bounded checks are calibration only."
+      },
+      {
+        "role": "gluing_provenance_and_rakl_v3_lead",
+        "background": "proof DAGs, RAKL v3 experience substrate, chronology and metrology",
+        "delegated_check": "separate local/global failure and enforce retrospective authority after the late fibre",
+        "finding": "The local lemma may route search, but chronology is retrospective and root/gluing gates remain blocked."
+      }
+    ],
+    "discussion_synthesis": [
+      "Coding lead handed the exact k(w,m) formula to the arithmetic lead rather than allowing a finite support scan to stand as evidence.",
+      "Arithmetic lead's fixed-w gap converted a numerical pattern into a hand theorem; falsification lead checked the bit_length boundary where an omitted +1 could have invalidated the lower bound.",
+      "Complexity lead rejected any inference from syntax support to H_k semantic support or cover growth.",
+      "RAKL/provenance lead denied prospective discovery credit and retained the result only as proposal/shadow verification evidence."
+    ],
+    "consensus": "Accept the exact support-spectrum representation and fixed-w obstruction only; next strict mathematical target is a prospectively frozen cross-width k=15 synchronization/UNSAT discriminator."
+  },
+  "dag_delta": {
+    "resolved_local_atom": {
+      "atom_id": "O9d12a2a1b-C050-SUPPORT-SPECTRUM-RV",
+      "status": "RETROSPECTIVE_PROPOSAL_SHADOW_REPRESENTATION_LEMMA",
+      "result": "exact syntax support formula plus fixed-w gap"
+    },
+    "new_proposed_atom": {
+      "atom_id": "O9d12a2a1b-C050-K15-CROSS-WIDTH-SYNCHRONIZATION",
+      "goal": "Prospectively freeze k=15 and all syntactically possible producer/consumer width cells, then decide exact H_15 intersection P_16 bit equality and parent UNSAT without importing pending/quarantined outcomes.",
+      "candidate_generation_allowed_in_this_cycle": false
+    },
+    "still_open": [
+      "H_15 intersection P_16",
+      "later supported k if k15 fails",
+      "cover-complexity growth",
+      "circuit lower-bound bridge",
+      "root proof DAG"
+    ]
+  },
+  "RAKL_METHOD_CASE_STUDY": {
+    "research_method": "Current-v3 problem-conditioned fibre plus experience-conditioned SEARCH routing, followed by exact representation normalization, counterexample-first discrete-difference falsification, hand converse proof, same-context expert cell, and explicit gluing audit.",
+    "active_atom_signature": [
+      "O9d12a2a1b-C050-SUPPORT-SPECTRUM-RV",
+      "canonical C041 length support",
+      "fixed-w consecutive-support obstruction",
+      "retrospective verification only"
+    ],
+    "actual_fibre": {
+      "fibre_snapshot_hash": "b27b2fa3ddbeb67c050e7de802fdc91d77c5995b4faed117243ffec6312d725a",
+      "selected": [
+        "C050_CURRENT_FIBRE",
+        "C050_RESEARCH_MEMORY_REVIEW",
+        "C050_OBSTRUCTION_TRANSFORMATION_REVIEW",
+        "C041_FROZEN_GRAMMAR_SOURCE"
+      ],
+      "retrieved_rejected": [
+        {
+          "id": "PR327_K14_PENDING_RESULT",
+          "why": "pending proposal/shadow content may guide search but cannot bear authority"
+        },
+        {
+          "id": "PR307_K13_RESULT",
+          "why": "K13_QUARANTINED_PROCESS_CONTAMINATION"
+        },
+        {
+          "id": "C049_K12_FIXED_BIT_CONCLUSION",
+          "why": "k-specific conclusion not transferable; only discipline retained"
+        }
+      ],
+      "missed_prior_experience": "CANNOT_MEASURE: no complete bounded retrieval-universe coverage receipt was materialized",
+      "cross_millennium_memory": "NOT_QUERIED: same-context exact grammar and C050 obstruction memory already supplied a direct applicable representation route; no cross-problem theorem transfer was needed"
+    },
+    "methods_operators_motifs_tried": {
+      "operators": [
+        "REPRESENTATION_NORMALIZE_CANONICAL_LENGTH_SUPPORT",
+        "COUNTEREXAMPLE_FIRST_BITLENGTH_CELL_PARTITION",
+        "SAME_W_CONSECUTIVE_SUPPORT_FALSIFIER",
+        "HAND_CONVERSE_CONSTRUCTION"
+      ],
+      "motifs": [],
+      "search_policy": "SEARCH exact same-context representation before any JUMP/GLUE/LIFT; pending experience changes routing priority only, never authority"
+    },
+    "what_worked": [
+      "exact source grammar made a global syntax-support characterization possible",
+      "bitlength-cell normalization exposed the discrete gap without target enumeration",
+      "counterexample-first parity analysis caught the only delicate branch, odd q with alternating ceil increments",
+      "v3 authority separation prevented pending PR327 and quarantined PR307 from becoming proof premises"
+    ],
+    "what_failed": [
+      "pre-action durability failed before the first private mathematical scratch, so strict prospective discovery credit is unavailable",
+      "local syntax result still does not glue to semantic overlap, cover growth or the root"
+    ],
+    "failure_classification": {
+      "mathematical": "NONE_ON_LOCAL_LEMMA",
+      "retrieval": "COMPLETENESS_CANNOT_MEASURE",
+      "decomposition": "SUCCESS: support spectrum isolated before shared-bit/UNSAT search",
+      "representation": "SUCCESS_LOCAL",
+      "gluing": "OPEN",
+      "source": "NO_BLOCK",
+      "verification": "SAME_CONTEXT_ONLY_0_OF_3_INDEPENDENT",
+      "tooling": "NO_MATHEMATICAL_BLOCK",
+      "meta_policy": "FAILURE_LATE_FIBRE_RETROSPECTIVE_ONLY"
+    },
+    "saturation_axes": {
+      "shadow_reopened": [
+        "KNOWLEDGE",
+        "OBSTRUCTION",
+        "RELATION",
+        "PATH"
+      ],
+      "shadow_flattened": [
+        "OPERATOR",
+        "EXPERIENCE_PATTERN",
+        "META_METHOD"
+      ],
+      "protected_retained_novelty_all_zero": true
+    },
+    "v3_feature_helped": [
+      "TaskEpisode immutable evidence root",
+      "ProblemFibre typed retrieval separation",
+      "experience_policy search-priority-only semantics",
+      "PreActionFibreReceipt/ChronologyStatus fail-closed retrospective classification",
+      "episode versus diagnosis versus obstruction/lesson separation",
+      "vector-valued saturation and local-to-global gluing distinction"
+    ],
+    "v3_feature_missing_or_not_invoked": "The necessary pre-execution gate already exists in current RAKL; the automation/connector path did not invoke require_consequential_operator_receipt before private mathematical scratch. This is recorded as an integration/meta-policy failure, not a demonstrated framework-core defect.",
+    "framework_improvement_hypothesis": "Benchmark an automation adapter that requires a content-bound PreActionFibreReceipt before any consequential mathematical scratch/tool call and records RETROSPECTIVE_ONLY automatically when the guard is bypassed. No gate weakening and no RAKL core issue is warranted from this run alone.",
+    "repeated_process_failure_links": [
+      "PF-PNP-C041A-LATE-CHILD-FIBRE-20260812",
+      "PF-PNP-C041B-LATE-CHILD-FIBRE-20260812",
+      "PF-PNP-C050-SUPPORT-LATE-FIBRE-20260812"
+    ],
+    "next_action": "Before any k15 bit or UNSAT inspection, persist a prospective exact fibre for O9d12a2a1b-C050-K15-CROSS-WIDTH-SYNCHRONIZATION binding producer w=1,m=3 syntax and all length-32 consumer width cells, then run exact bit equality and semantic falsification."
+  },
+  "RAKL_CYCLE_METRICS": {
+    "record_type": "RAKL_CYCLE_METRICS",
+    "rakl_method_version": "3.0.0",
+    "rakl_software_package_version": "0.1.0",
+    "rakl_git_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+    "rakl_math_base": "451d9506d365f06eb314323523ba123edd3ffb32",
+    "rakl_math_head": "CANNOT_MEASURE_IN_SELF_CONTAINING_RECEIPT: exact final branch head is externally attestable only after this packet and its regression test are committed",
+    "pre_state_fingerprint": "git_tree:ee0c402754b1133a1bb6765946519d0fa530b943",
+    "post_state_fingerprint": "CANNOT_MEASURE_IN_SELF_CONTAINING_RECEIPT: final tree depends on bytes committed after this field is materialized; final PR body must attest it",
+    "active_atom": "O9d12a2a1b-C050-SUPPORT-SPECTRUM-RV",
+    "fibre_snapshot_hash": "b27b2fa3ddbeb67c050e7de802fdc91d77c5995b4faed117243ffec6312d725a",
+    "canonical_process_surfaces_invoked": [
+      "decomposition",
+      "routing",
+      "memory",
+      "mathematical_context_translation",
+      "equivalence_similarity",
+      "contradiction_diagnosis",
+      "gap_discovery",
+      "experiment_query_selection",
+      "contextual_theory_gluing",
+      "review",
+      "saturation_stopping",
+      "source_selection_reliability"
+    ],
+    "retrieved_memory": {
+      "tools": {
+        "count": 1,
+        "ids": [
+          "T-PNP-C049-K12-FIXED-BIT-SEPARATION"
+        ],
+        "selected": [],
+        "rejected": [
+          "T-PNP-C049-K12-FIXED-BIT-SEPARATION"
+        ],
+        "rejection_reason": "k-specific conclusion not needed for the representation lemma; only its exact-synchronization discipline remained as background"
+      },
+      "failures": {
+        "count": 2,
+        "ids": [
+          "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT",
+          "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING"
+        ],
+        "selected": [
+          "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING"
+        ],
+        "rejected": [
+          "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT"
+        ]
+      },
+      "episodes_direct": {
+        "count": 0,
+        "ids": [],
+        "note": "episode-derived experience was consulted through current C050 projections; no raw TaskEpisode was directly imported as authority"
+      },
+      "episode_projection_ids": {
+        "count": 1,
+        "ids": [
+          "E-PNP-C050-SYNCHRONIZED-CODE-LANGUAGE-INTERSECTION"
+        ],
+        "selected": [
+          "E-PNP-C050-SYNCHRONIZED-CODE-LANGUAGE-INTERSECTION"
+        ]
+      },
+      "motifs": {
+        "count": 0,
+        "ids": []
+      },
+      "other": {
+        "count": 6,
+        "selected": [
+          "C050_CURRENT_FIBRE",
+          "C050_RESEARCH_MEMORY_REVIEW",
+          "C050_OBSTRUCTION_TRANSFORMATION_REVIEW",
+          "C041_FROZEN_GRAMMAR_SOURCE"
+        ],
+        "rejected": [
+          "PR327_K14_PENDING_RESULT",
+          "PR307_K13_RESULT"
+        ]
+      },
+      "missed_relevant_memory": "CANNOT_MEASURE: no complete bounded retrieval-universe coverage receipt"
+    },
+    "selected_memory_ids": [
+      "C050_CURRENT_FIBRE",
+      "C050_RESEARCH_MEMORY_REVIEW",
+      "C050_OBSTRUCTION_TRANSFORMATION_REVIEW",
+      "E-PNP-C050-SYNCHRONIZED-CODE-LANGUAGE-INTERSECTION",
+      "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING"
+    ],
+    "rejected_memory_ids": [
+      "PR327_K14_PENDING_RESULT",
+      "PR307_K13_RESULT",
+      "T-PNP-C049-K12-FIXED-BIT-SEPARATION",
+      "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT"
+    ],
+    "outcome": "PARTIAL_SUCCESS_RETROSPECTIVE_LOCAL_REPRESENTATION_LEMMA",
+    "residual_before": [
+      "later-k syntax support not characterized parametrically on current main",
+      "same-width versus cross-width synchronization structure unknown in the active C050 representation",
+      "H_k intersection P_(k+1), cover/circuit and root glue open"
+    ],
+    "residual_after": [
+      "exact syntax support k(w,m) characterized",
+      "same-width consecutive support excluded",
+      "k15/k16 identified as next syntax-supported consecutive pair but H_15 intersection P_16 remains uninspected",
+      "cover/circuit/root glue open",
+      "independent review 0/3",
+      "prospective discovery credit denied by late fibre"
+    ],
+    "retained_semantic_novelty_proposal_shadow": {
+      "KNOWLEDGE": 1,
+      "OPERATOR": 0,
+      "EXPERIENCE_PATTERN": 0,
+      "OBSTRUCTION": 1,
+      "RELATION": 1,
+      "PATH": 1,
+      "META_METHOD": 0
+    },
+    "retained_semantic_novelty_protected": {
+      "KNOWLEDGE": 0,
+      "OPERATOR": 0,
+      "EXPERIENCE_PATTERN": 0,
+      "OBSTRUCTION": 0,
+      "RELATION": 0,
+      "PATH": 0,
+      "META_METHOD": 0
+    },
+    "novelty_counting_notes": "The exact hand lemma/obstruction/relation/path are counted only in proposal/shadow state. The candidate lesson, files, commits, PR, tests, CI and process prose count zero learning. Protected retained novelty is zero on all axes.",
+    "saturation_axes_reopened_shadow": [
+      "KNOWLEDGE",
+      "OBSTRUCTION",
+      "RELATION",
+      "PATH"
+    ],
+    "saturation_axes_flattened_shadow": [
+      "OPERATOR",
+      "EXPERIENCE_PATTERN",
+      "META_METHOD"
+    ],
+    "resource_proxies": {
+      "model_tokens": "CANNOT_MEASURE: no authoritative model-token counter exposed to the automation",
+      "context_tokens": "CANNOT_MEASURE: no authoritative context-token counter exposed",
+      "retrieval_calls": "CANNOT_MEASURE_EXACT_TOTAL: connector exposes no cumulative per-run retrieval counter",
+      "tool_calls": "CANNOT_MEASURE_EXACT_TOTAL: connector exposes no cumulative per-run tool counter",
+      "primary_literature_web_searches_observed": 1,
+      "wall_time": "CANNOT_MEASURE: no authoritative elapsed-run timer is exposed in the research state",
+      "effort_proxy": "TaskEpisode cost=1.0 means one consequential-cycle unit only, not a token/time estimate"
+    },
+    "new_ids": {
+      "episode": [
+        "E-PNP-C050-SUPPORT-SPECTRUM-RV-20260812"
+      ],
+      "diagnosis": [
+        "D-PNP-C050-SUPPORT-BITLENGTH-LADDERS"
+      ],
+      "failure": [
+        "PF-PNP-C050-SUPPORT-LATE-FIBRE-20260812"
+      ],
+      "obstruction": [
+        "OB-PNP-C050-FIXED-W-CONSECUTIVE-SUPPORT-IMPOSSIBLE"
+      ],
+      "lesson": [
+        "L-PNP-C050-WIDTH-CROSSING-BEFORE-SYNCHRONIZATION-v1"
+      ],
+      "tool": [],
+      "motif": []
+    },
+    "successful_reuse_ids": [
+      "C050_CURRENT_FIBRE",
+      "C050_RESEARCH_MEMORY_REVIEW",
+      "C050_OBSTRUCTION_TRANSFORMATION_REVIEW",
+      "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING"
+    ],
+    "gate_provenance_ci": {
+      "chronology": "RETROSPECTIVE_ONLY_FAIL_CLOSED",
+      "task_episode_storage": "PROPOSAL_SHADOW_STORED",
+      "same_context_review": "5 roles; independent credit 0/3",
+      "root_gate": "BLOCKED_OPEN_NO_SOLUTION_CERTIFICATE",
+      "provenance": "current RAKL 5dc0627 and current RAKL_math base 451d950 bound; exact C041 blob bound; ECCC TR25-033 primary control verified on 2026-08-12",
+      "ci": "NOT_YET_RUN_AT_PACKET_MATERIALIZATION"
+    },
+    "rakl_changed_action_relative_to_pre_memory_pre_gate_preference": "CANNOT_MEASURE: no pre-memory/pre-gate counterfactual action preference was durably frozen; experience clearly constrained authority and route but causal action change is not attributed",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "recorded_at": "2026-08-12T06:33:53Z"
+}
