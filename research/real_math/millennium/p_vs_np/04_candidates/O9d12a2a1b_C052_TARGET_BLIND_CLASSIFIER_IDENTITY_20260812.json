@@ -2,7 +2,7 @@
   "atom_id": "O9d12a2a1b-C052",
   "certificate_interfaces": {
     "cannot_check": [
-      "failed_closed_obligation",
+      "input_or_support_validation_failure",
       "evidence_pointer_if_available"
     ],
     "escape_admissible": [
@@ -110,10 +110,10 @@
   "status": "FROZEN_NOT_EXECUTED",
   "total_result_algebra": {
     "branches": {
-      "CANNOT_CHECK": "The record, source identity, arithmetic, quantifier coverage, or certificate is missing, malformed, inconsistent, or outside the frozen decidable interface.",
+      "CANNOT_CHECK": "Input validity, source identity, domain membership, arithmetic, quantifier coverage, or support cannot be validated; no supported-cell semantic branch is reached.",
       "ESCAPE_ADMISSIBLE": "Support is proved and an independently checkable certificate shows that no j in 0..7 is universally forced unequal by this local support/phase obstruction. This is not an overlap witness.",
       "FORCED_CONFLICT": "Support is proved and a certificate gives j in 0..7 and bit q such that every legal parent realization has h[j]=q while q differs from MAGIC[j].",
-      "UNRESOLVED": "Support is proved, but neither a universal forced-conflict certificate nor an escape-admissibility certificate is established."
+      "UNRESOLVED": "The input and support proof are valid, but neither a universal forced-conflict certificate nor an escape-admissibility certificate validates."
     },
     "exactly_one_branch_required": true,
     "ordered_precedence": [
@@ -121,6 +121,7 @@
       "FORCED_CONFLICT",
       "ESCAPE_ADMISSIBLE",
       "UNRESOLVED"
-    ]
+    ],
+    "partition_rule": "First validate the input, source identity, domain membership, arithmetic, quantifier coverage, and support proof. Failure at that stage is CANNOT_CHECK. For a valid supported cell, exactly one of FORCED_CONFLICT, ESCAPE_ADMISSIBLE, or UNRESOLVED applies according to the two decisive certificates."
   }
 }

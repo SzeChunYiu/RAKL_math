@@ -13,7 +13,7 @@ import rakl
 
 APPLICATION_ROOT = Path(__file__).resolve().parents[2]
 FRAMEWORK_ROOT = Path(rakl.__file__).resolve().parents[2]
-EXPECTED_FRAMEWORK_COMMIT = "ea607c8cd8e4fd308ea9a4e024d8c93ff87f5fda"
+EXPECTED_FRAMEWORK_COMMIT = "6756ebec40b90f327d879410539f5146e188f34d"
 HISTORICAL_F224_FRAMEWORK_COMMIT = "f224d91d9fbd2844a89921ca4a30b77a7954ecd2"
 HISTORICAL_4EE_FRAMEWORK_COMMIT = "4ee5e9afe77870c684b798e0ed4c9fcee62a4365"
 HISTORICAL_FRAMEWORK_COMMIT = "15f1c3affe5bf85ba41ff0ab65b25ba19e0d28a3"
@@ -78,9 +78,9 @@ def test_machine_readable_framework_pin_is_valid_and_loaded_exactly() -> None:
     ).stdout
     assert framework_status == ""
     assert pin["authority"] == (
-        "Dependency synchronization to exact clean RAKL origin/main ea607c8cd8e4fd308ea9a4e024d8c93ff87f5fda observed 2026-08-12; "
-        "the raw 7d67a18..ea607c8 diff changes only 19 Paper2/Paper3 manuscript, registration, objective receipt, script, and test files and no protected mathematical gate; "
-        "the C052 license remains identity-freeze-only; "
+        "Dependency synchronization to exact clean RAKL origin/main 6756ebec40b90f327d879410539f5146e188f34d observed 2026-08-12; "
+        "ea607c8..6756ebe is Paper1 projection-benchmark/manuscript-only and has no protected mathematical gate change; "
+        "the previously frozen C052 identities remain unexecuted and byte-identical; "
         "historical artifacts retain recorded authority and chronology; "
         "no proof, research result, review-independence, method-evolution, or mathematical-saturation authority"
     )

@@ -78,12 +78,13 @@ def classifier_identity() -> dict:
             ],
         },
         "total_result_algebra": {
+            "partition_rule": "First validate the input, source identity, domain membership, arithmetic, quantifier coverage, and support proof. Failure at that stage is CANNOT_CHECK. For a valid supported cell, exactly one of FORCED_CONFLICT, ESCAPE_ADMISSIBLE, or UNRESOLVED applies according to the two decisive certificates.",
             "ordered_precedence": ["CANNOT_CHECK", "FORCED_CONFLICT", "ESCAPE_ADMISSIBLE", "UNRESOLVED"],
             "branches": {
                 "FORCED_CONFLICT": "Support is proved and a certificate gives j in 0..7 and bit q such that every legal parent realization has h[j]=q while q differs from MAGIC[j].",
                 "ESCAPE_ADMISSIBLE": "Support is proved and an independently checkable certificate shows that no j in 0..7 is universally forced unequal by this local support/phase obstruction. This is not an overlap witness.",
-                "UNRESOLVED": "Support is proved, but neither a universal forced-conflict certificate nor an escape-admissibility certificate is established.",
-                "CANNOT_CHECK": "The record, source identity, arithmetic, quantifier coverage, or certificate is missing, malformed, inconsistent, or outside the frozen decidable interface.",
+                "UNRESOLVED": "The input and support proof are valid, but neither a universal forced-conflict certificate nor an escape-admissibility certificate validates.",
+                "CANNOT_CHECK": "Input validity, source identity, domain membership, arithmetic, quantifier coverage, or support cannot be validated; no supported-cell semantic branch is reached.",
             },
             "exactly_one_branch_required": True,
         },
@@ -91,7 +92,7 @@ def classifier_identity() -> dict:
             "forced_conflict": ["support_equalities", "coordinate_j", "forced_parent_bit", "MAGIC_bit", "all_v_indices_signs_coverage_proof"],
             "escape_admissible": ["support_equalities", "coordinates_0_through_7", "no_universal_unequal_bit_proof", "not_overlap_disclaimer"],
             "unresolved": ["support_equalities", "failed_certificate_obligations"],
-            "cannot_check": ["failed_closed_obligation", "evidence_pointer_if_available"],
+            "cannot_check": ["input_or_support_validation_failure", "evidence_pointer_if_available"],
         },
         "mandatory_regression_worlds": [
             {
@@ -134,7 +135,8 @@ def falsifier_identity() -> dict:
         "identity_kind": "INERT_DATA_ONLY_FALSIFIER_SPECIFICATION",
         "status": "FROZEN_NOT_EXECUTED",
         "independence_boundary": {
-            "implementation_identity_distinct_from_classifier": True,
+            "specification_identity_distinct_from_classifier": True,
+            "falsifier_implementation_status": "ABSENT_UNTIL_SEPARATE_POST_MERGE_AUTHORIZATION",
             "classifier_import_allowed": False,
             "classifier_certificate_reuse_allowed": False,
             "same_context_review_is_independent_peer_review": False,
@@ -207,7 +209,7 @@ def candidate_trace(classifier: dict, falsifier: dict) -> dict:
         "event_id": "O9d12a2a1b-C052-E09",
         "atom_id": "O9d12a2a1b-C052",
         "event_type": "CANDIDATE_PROPOSED",
-        "timestamp": "2026-08-12T12:20:00Z",
+        "timestamp": "2026-08-12T12:31:24Z",
         "state_summary": "The target-blind total classifier and a distinct hostile-falsifier identity now exist as inert data specifications. No native support cell, class result, decoder/SAT state, overlap result, theorem, or root result has been accessed.",
         "action_summary": "Freeze the exact symbolic domain, four total classifier branches, bounded C050/C051 regression worlds, and independent hostile supported-escape falsifier identity without execution.",
         "evidence_pointers": [str(CLASSIFIER.relative_to(ROOT)), str(FALSIFIER.relative_to(ROOT)), str(REVALIDATION.relative_to(ROOT))],

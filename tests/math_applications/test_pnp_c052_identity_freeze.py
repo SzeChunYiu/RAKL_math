@@ -52,6 +52,7 @@ def test_c052_identity_artifacts_match_serializer_and_remain_inert() -> None:
         "target_k_selected": False,
     }
     assert trace["entries"][-1]["event_type"] == "CANDIDATE_PROPOSED"
+    assert trace["entries"][-1]["timestamp"] == "2026-08-12T12:31:24Z"
     assert trace["entries"][-1]["previous_event_hash"] == trace["entries"][-2]["artifact_hash"]
     assert trace["entries"][-1]["outputs"][-1] == "ZERO_MATHEMATICAL_RESULT_CREDIT"
 
@@ -76,6 +77,10 @@ def test_c052_classifier_is_total_over_exact_four_branches() -> None:
         "UNRESOLVED",
     ]
     assert classifier["total_result_algebra"]["exactly_one_branch_required"] is True
+    algebra = classifier["total_result_algebra"]
+    assert algebra["partition_rule"].startswith("First validate the input")
+    assert "no supported-cell semantic branch is reached" in algebra["branches"]["CANNOT_CHECK"]
+    assert algebra["branches"]["UNRESOLVED"].startswith("The input and support proof are valid")
     domain = classifier["domain"]
     assert "h[0]=1 is prepended; c[0]=x[k]=h[1]" in domain["derived_equalities"]
     assert any("every legal literal variable index" in item for item in domain["quantifiers"])
@@ -94,6 +99,8 @@ def test_c052_regressions_and_hostile_escape_world_are_mandatory_but_unrun() -> 
     assert classifier["hostile_world_contract"]["expected_branch_if_certificate_valid"] == "ESCAPE_ADMISSIBLE"
     assert classifier["hostile_world_contract"]["materialization_and_execution_status"] == "NOT_MATERIALIZED_NOT_EXECUTED"
     assert falsifier["hostile_supported_escape_cell"]["cell_value_status"] == "WITHHELD_UNMATERIALIZED_UNTIL_SEPARATE_EXECUTION_AUTHORIZATION"
+    assert falsifier["independence_boundary"]["specification_identity_distinct_from_classifier"] is True
+    assert falsifier["independence_boundary"]["falsifier_implementation_status"].startswith("ABSENT")
     assert falsifier["independence_boundary"]["classifier_import_allowed"] is False
     assert freeze["mandatory_validation_worlds"] == [
         "C050-k15-bounded-regression",
@@ -124,12 +131,10 @@ def test_c052_freeze_has_zero_mathematical_credit_and_root_remains_open() -> Non
     assert "not independent peer review" in freeze["review_boundary"]
 
 
-def test_c052_framework_revalidation_is_identity_only_and_current() -> None:
+def test_c052_identity_freeze_framework_revalidation_is_preserved_historically() -> None:
     observation = load(REVALIDATION)
-    pin = load(ROOT / "config/rakl-framework-pin.json")
     expected = "ea607c8cd8e4fd308ea9a4e024d8c93ff87f5fda"
     assert observation["observed_current_main_sha"] == expected
-    assert pin["commit"] == expected
     assert observation["identity_creation_authorized"] is True
     assert observation["classifier_or_falsifier_execution_authorized"] is False
     assert observation["new_k_enumeration_or_selection_authorized"] is False
@@ -141,3 +146,18 @@ def test_c052_fixture_source_has_no_classifier_or_evaluator_execution_surface() 
     source = FIXTURE.read_text(encoding="utf-8")
     forbidden_definitions = ["def classify(", "def evaluate(", "def enumerate(", "decode_formula", "is_satisfiable", "materialize_complement"]
     assert not any(token in source for token in forbidden_definitions)
+
+
+def test_c052_postfreeze_framework_revalidation_preserves_exact_inert_identities() -> None:
+    path = BASE / "09_trace/O9d12a2a1b_C052_POSTFREEZE_FRAMEWORK_REVALIDATION_6756EBE_20260812.json"
+    observation = load(path)
+    assert observation["observed_current_main_sha"] == "6756ebec40b90f327d879410539f5146e188f34d"
+    assert observation["classifier_raw_sha256"] == raw_sha(CLASSIFIER)
+    assert observation["falsifier_raw_sha256"] == raw_sha(FALSIFIER)
+    assert observation["identity_hashes_recomputed_unchanged"] is True
+    assert observation["classifier_or_falsifier_execution_authorized"] is False
+    assert observation["hostile_cell_materialization_authorized"] is False
+    assert observation["new_k_enumeration_or_selection_authorized"] is False
+    assert observation["decoder_sat_overlap_access_authorized"] is False
+    assert observation["mathematical_result_credit"] == 0
+    assert observation["root_status"] == "OPEN_NO_SOLUTION_CERTIFICATE"
