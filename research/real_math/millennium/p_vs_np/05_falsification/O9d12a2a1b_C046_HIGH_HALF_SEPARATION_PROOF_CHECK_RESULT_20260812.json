@@ -1,0 +1,83 @@
+{
+  "artifact_hash": "sha256:ac77220c366a9be5da7f36407d1736450f383a197af62236ce65736848a9013e",
+  "atom_id": "O9d12a2a1b-C046",
+  "authority": {
+    "cover_or_circuit_lower_bound": false,
+    "formal_proof": false,
+    "independent_review": false,
+    "novelty": false,
+    "p_vs_np_authority": false,
+    "root_status": "OPEN",
+    "same_context_hand_derivation_record_check": true,
+    "theorem_truth": false
+  },
+  "candidate_id": "C046-HIGH-HALF-SEPARATION-LEMMA-v1",
+  "chronology": {
+    "candidate_evaluator_and_no_execution_authorization_freeze_commit": "c76177457d6c75189b7cc80a3ccc012cb9f1e655",
+    "evaluation_strictly_after_public_input_freeze": true,
+    "public_freeze_chronology_commit": "68a0d8bcd4a13a351bb10738dc36ede1a97204e8",
+    "public_proof_input_freeze": {
+      "observed_at": "2026-08-12T02:29:52Z",
+      "pull_request": 244,
+      "remote_head_sha": "ae9c196d3f879ba6b1140af0878a416cf16df6c0",
+      "url": "https://github.com/SzeChunYiu/RAKL_math/pull/244"
+    }
+  },
+  "evaluator_output": {
+    "candidate_id": "C046-HIGH-HALF-SEPARATION-LEMMA-v1",
+    "verdict": "PASS"
+  },
+  "execution": {
+    "evaluator_path": "research/real_math/millennium/p_vs_np/05_falsification/c046_high_half_separation_evaluator.py",
+    "evaluator_raw_sha256": "c45fd7a7e8fc05f61ef653a07c3882c1c33fbf878a98391646c8db0338a65193",
+    "executed_at": "2026-08-12T02:32:55Z",
+    "network_used": false,
+    "operation": "evaluate_certificate(exact_certificate, exact_post_freeze_authorization)",
+    "raw_output_sha256": "e0e536c9c6a5460f4bd36069f9455fe3ff87b548ab44ffd9c63cb03f1d3dd23a"
+  },
+  "inputs": {
+    "authorization": {
+      "artifact_hash": "sha256:b2290b278f872538a3656fed585d23961dee8f3cd576f746d1a0f126e3f5758b",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C046_POST_FREEZE_PROOF_CHECK_AUTHORIZATION_20260812.json"
+    },
+    "certificate": {
+      "artifact_hash": "sha256:275241364fc0136bc18f74a341704514690bae687bb163caa221f8e3a2dcd47f",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C046_HIGH_HALF_SEPARATION_PROOF_CERTIFICATE_FREEZE_20260812.json"
+    }
+  },
+  "interpretation": {
+    "evaluator_checks_record_completeness_not_derivation_semantics": true,
+    "formal_proof_checked": false,
+    "mathematical_reading": "The same-context direct derivation supports the high-half separation candidate and eliminates the need to enumerate a later collision target inside the frozen one-sided family, subject to source identity and proof review.",
+    "passed": "The exact frozen evaluator accepted the exact certificate because all four frozen obligation records were present, marked PROVED, and carried nonempty evidence pointers under the exact post-freeze token.",
+    "semantic_derivation_independently_checked": false
+  },
+  "obligation_summary": {
+    "all_evidence_pointers_nonempty": true,
+    "obligation_ids": [
+      "BASE_U3_ROW_PROJECTION",
+      "INDUCTIVE_SUPPORT_QUADRANT_CONTAINMENT",
+      "MAGIC_LEADING_BIT_PREFIX_CONTAINMENT",
+      "DISJOINT_HALF_INTERVAL_CONCLUSION"
+    ],
+    "proved_record_count": 4,
+    "required_count": 4
+  },
+  "residuals": [
+    "independent mathematical review of the direct derivation is still absent",
+    "formal proof is absent",
+    "novelty is unchecked",
+    "no cover or circuit lower bound follows",
+    "the P-versus-NP root remains open"
+  ],
+  "result_id": "PNP-C046-HIGH-HALF-SEPARATION-PROOF-CHECK-RESULT-20260812",
+  "schema_version": "1.0.0",
+  "status": "PASS_SAME_CONTEXT_CERTIFICATE_RECORD_CHECK",
+  "target_access": {
+    "finite_collision_level_selected": false,
+    "later_target_enumerated": false,
+    "later_target_result_accessed": false,
+    "proof_obligation_evaluator_imported_and_executed": true,
+    "target_decoder_imported_or_executed": false
+  }
+}

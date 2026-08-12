@@ -1,0 +1,81 @@
+{
+  "bridge_edges": [
+    {
+      "edge_id": "C046-B1",
+      "enabling_assumptions": [
+        "collision exists",
+        "legal cover polarity"
+      ],
+      "interface_map": "a collision is only a precondition for testing one coupling mechanism",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "collision feasibility",
+      "target_coordinate": "cover obstruction"
+    },
+    {
+      "edge_id": "C046-B2",
+      "enabling_assumptions": [
+        "uniformity",
+        "explicitness",
+        "source theorem alignment"
+      ],
+      "interface_map": "requires uniform superlogarithmic lower bound and exact complexity bridge",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "cover obstruction",
+      "target_coordinate": "P versus NP"
+    }
+  ],
+  "cheapest_hostile_world": "the desired collision is impossible in this family while a different family admits a useful lower-bound mechanism",
+  "known_disanalogies": [
+    "search pruning is not root progress",
+    "nonexistence in one construction does not decide P versus NP"
+  ],
+  "obligations": [
+    {
+      "description": "prove feasibility lemma",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "C046-O1"
+    },
+    {
+      "description": "supply a cover lower-bound mechanism",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "C046-O2"
+    },
+    {
+      "description": "discharge asymptotic and complexity bridge",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "C046-O3"
+    }
+  ],
+  "prior_failure_ids": [
+    "F-C045-U17-PROJECTION-DISJOINT",
+    "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING"
+  ],
+  "receipt_canonical_sha256": "7a05f60f9bcb50ec96ea2276a7b84bdb56ba757662800a7662bc3bb6dbb6b1ae",
+  "receipt_id": "PNP-C046-ROOT-COORDINATE-PRESERVATION-20260812",
+  "registered_observations": [
+    {
+      "projected_state": "projection-disjoint",
+      "registered_downstream_outcome": "no backward coupling by this mechanism",
+      "state_id": "C045-U17"
+    },
+    {
+      "projected_state": "feasibility-unresolved",
+      "registered_downstream_outcome": "root open",
+      "state_id": "C046-pre"
+    }
+  ],
+  "reverification_triggers": [
+    "recursive rule changes",
+    "canonical prefix changes",
+    "a new family is proposed"
+  ],
+  "root_claim_id": "O9d12a2a1b-C046",
+  "root_coordinate": "explicit superlogarithmic full-cover family with circuit and P-versus-NP bridge",
+  "schema_version": "root-coordinate-preservation-receipt-v1",
+  "source_authority": "PROPOSAL_ONLY",
+  "surrogate_coordinate": "existence or nonexistence of a canonical prefix-row collision in one frozen family",
+  "target_authority": "PROPOSAL_ONLY"
+}

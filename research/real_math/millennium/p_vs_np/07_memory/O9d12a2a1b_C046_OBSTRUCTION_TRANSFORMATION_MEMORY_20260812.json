@@ -1,0 +1,85 @@
+{
+  "episodes": [
+    {
+      "artifact_hash": "sha256:cd5cee67dac825a0ffbee073e17f91aa1c204e307ecf4b6da45b20d7a2ace5db",
+      "authority": "PROOF_BACKED",
+      "episode_id": "E-PNP-C046-PARTITION-INVARIANT-BEFORE-TARGET-SCAN",
+      "evidence_pointers": [
+        "git:ac8c0745be8aed791a446fd55fcf5154cac01962:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1"
+      ],
+      "known_breakpoints": [
+        "another quadrant contributes support",
+        "canonical encoding loses its fixed leading bit",
+        "coordinate relabelling crosses the partition"
+      ],
+      "lineage_ids": [],
+      "operation": "derive invariant projection containments, compare their cells, and search finite targets only if intersection remains possible",
+      "preconditions": [
+        "recursive support clauses are exhaustive",
+        "fixed prefix determines a partition cell",
+        "coordinate embedding preserves the partition"
+      ],
+      "preserved_invariants": [
+        "exact source definition",
+        "canonical/fallback separation",
+        "target blindness",
+        "root authority boundary"
+      ],
+      "relaxed_or_broken_constraints": [],
+      "resulting_relations": [
+        "replace unbounded finite target scan with family-wide feasibility decision"
+      ],
+      "source_context": "recursive support feasibility checks before finite collision search",
+      "source_domain": "mathematics",
+      "source_obstruction": {
+        "constraints": [
+          "unchanged one-sided recursion",
+          "fixed MAGIC canonical prefix",
+          "target results remain unaccessed"
+        ],
+        "desired_transition": [
+          "replace unbounded finite target scan with family-wide feasibility decision"
+        ],
+        "domain": "mathematics",
+        "failure_mechanisms": [
+          "desired collision property may be globally forbidden by invariant partition"
+        ],
+        "forbidden_losses": [
+          "target-result leakage",
+          "changing the recursive family",
+          "promoting feasibility to root authority"
+        ],
+        "invariants_to_preserve": [
+          "exact source definition",
+          "canonical/fallback separation",
+          "target blindness",
+          "root authority boundary"
+        ],
+        "obstruction_id": "OBS-SOURCE-PARTITION-BEFORE-SEARCH",
+        "relations": [
+          "recursive clauses constrain support projection by binary half",
+          "fixed leading bits constrain canonical prefixes by binary half",
+          "a collision requires the two projections to intersect"
+        ],
+        "roles": [
+          "recursively inherited support",
+          "canonical prefix rows",
+          "candidate collision level",
+          "partition invariant"
+        ]
+      },
+      "transformation_name": "PARTITION_INVARIANT_FEASIBILITY_FIRST"
+    }
+  ],
+  "evidence_pointers": [
+    "git:ac8c0745be8aed791a446fd55fcf5154cac01962:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+    "gitblob:294cacf54775741e4b916ceed271ec7c6becfe74"
+  ],
+  "memory_id": "PNP-C046-OBSTRUCTION-TRANSFORMATION-MEMORY-20260812",
+  "snapshot_hash": "c9528927c15f1c5fb270eb973beb16181e8a2470a9c6e8aaa305c5d01f8a5ef1",
+  "source_universe": [
+    "C041 frozen recursive definition",
+    "C045 retrospective collision necessity lesson",
+    "recursive invariant method"
+  ]
+}
