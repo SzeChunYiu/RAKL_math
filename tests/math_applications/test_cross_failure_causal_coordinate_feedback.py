@@ -73,6 +73,11 @@ def test_activation_requires_distinct_math_failures_and_controls() -> None:
     assert any("non-activation" in row for row in assurance["worlds"])
     assert any("CANNOT_CHECK" in row for row in assurance["worlds"])
     assert assurance["falsifier"]
+    relation = challenger["current_framework_relation"]
+    assert relation["present_classification"] == "OPTIONAL_METHOD_ADJACENT_UNWIRED_TO_MANDATORY_MATHEMATICAL_GATES"
+    assert "no natural mathematical efficacy evidence" in relation["evidence_boundary"]
+    assert "do not replace failure-diagnosis routing" in relation["evidence_boundary"]
+    assert "no new method surface" in relation["consequence"]
 
 
 def test_zero_authority_and_all_roots_open() -> None:

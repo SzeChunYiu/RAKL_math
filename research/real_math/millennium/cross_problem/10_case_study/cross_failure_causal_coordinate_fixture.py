@@ -18,7 +18,7 @@ OUT = ROOT / "research/real_math/millennium/cross_problem/10_case_study/CROSS_FA
 
 APPLICATION_SHA = "3ebde341484e6781796229d3b2328def257deae0"
 FRAMEWORK_PIN = "6756ebec40b90f327d879410539f5146e188f34d"
-FRAMEWORK_LIVE = FRAMEWORK_PIN
+FRAMEWORK_LIVE = "7a95860924f73c02113d11d3837ea22eefa8cc44"
 
 SOURCES = {
     "pnp_c050": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C050_K15_MATHEMATICAL_LESSON_20260812.json",
@@ -67,7 +67,7 @@ def build() -> dict:
             "application_repository_sha": APPLICATION_SHA,
             "framework_pin_sha": FRAMEWORK_PIN,
             "framework_live_sha": FRAMEWORK_LIVE,
-            "framework_pin_to_live_diff_scope": "CURRENT_APPLICATION_BASE_PIN_EQUALS_OBSERVED_LIVE_FRAMEWORK_MAIN",
+            "framework_pin_to_live_diff_scope": "6756EBEC_TO_7A958609_ADDS_PAPER1_PAPER2_OBJECTIVE_TRANSFER_AND_TCSQ_ARTIFACTS_MODULES_TESTS; NO_CORE_MANIFEST_SCHEMA_OR_MANDATORY_MATH_GATE_CHANGE",
         },
         "shared_obstruction_morphology": {
             "statement": "An outer index, scale, quotient, or qualitative estimate can change while the desired implication remains controlled by a load-bearing mathematical coordinate that the current representation erases, fixes incompatibly, or leaves quantitatively unbound.",
@@ -136,6 +136,13 @@ def build() -> dict:
             "existing_method_surface": "failure-diagnosis residual routing and context reopening",
             "new_method_surface_requested": False,
             "candidate_delta": "Add an activation policy that schedules causal-coordinate reparameterization before another instance/scale progression when the evidence rule is met.",
+            "current_framework_relation": {
+                "related_surface": "TCSQ task/context-conditioned semantic quotient and raw-fallback coordinate-preservation modules at live framework 7a95860924f73c02113d11d3837ea22eefa8cc44",
+                "possible_future_owner": "A later validated implementation may use TCSQ to preserve protected or load-bearing coordinates during representation change.",
+                "present_classification": "OPTIONAL_METHOD_ADJACENT_UNWIRED_TO_MANDATORY_MATHEMATICAL_GATES",
+                "evidence_boundary": "SQ0 is conformance-only and SQ1/SQ2 are controlled results; they provide no natural mathematical efficacy evidence for this activation policy and do not replace failure-diagnosis routing.",
+                "consequence": "TCSQ strengthens the conclusion that no new method surface is requested, but does not validate or promote the challenger.",
+            },
             "activation_rule": {
                 "minimum_genuinely_distinct_bounded_failures": 2,
                 "requirements": [
