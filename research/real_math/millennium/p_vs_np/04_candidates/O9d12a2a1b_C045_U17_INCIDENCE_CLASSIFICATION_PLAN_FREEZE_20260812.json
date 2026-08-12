@@ -1,0 +1,245 @@
+{
+  "analytic_obligations": [
+    {
+      "failure_branch": "CANNOT_CHECK",
+      "obligation_id": "C045-A1",
+      "requirement": "Verify exact application-base, framework, decoder, sparse-semantics, and pre-candidate-gate identities before any target access."
+    },
+    {
+      "failure_branch": "CANNOT_CHECK",
+      "obligation_id": "C045-A2",
+      "requirement": "Derive the complete U16-to-U17 source syntax and canonical cross-band residual cases analytically from the frozen source definition, without learning them from outputs."
+    },
+    {
+      "failure_branch": "CANNOT_CHECK",
+      "obligation_id": "C045-A3",
+      "requirement": "Prove that the analytic residual cases are mutually exclusive and cover every source-defined canonical case; keep the fallback branch separate."
+    },
+    {
+      "failure_branch": "CANNOT_CHECK",
+      "obligation_id": "C045-A4",
+      "requirement": "Freeze the branch predicates, precedence, evidence schema, and falsifiers before later evaluator or decoder execution."
+    }
+  ],
+  "artifact_hash": "sha256:5e3f0cdd703de1290832caf3cb412e6d04b198eba0f4b6fe1c372eb46142900c",
+  "atom_id": "O9d12a2a1b-C045",
+  "authority": {
+    "generic_runtime_candidate_paths_non_authoritative": true,
+    "grants_circuit_lower_bound": false,
+    "grants_cover_or_lower_bound_conclusion": false,
+    "grants_incidence_outcome": false,
+    "grants_p_vs_np_authority": false,
+    "licensed_action_exercised": "FREEZE_INCIDENCE_CLASSIFICATION_PLAN_ONLY",
+    "mathematical_result_credit": false,
+    "mathematical_saturation_credit": false,
+    "target_evaluator_execution_authorized": false
+  },
+  "branch_definitions": [
+    {
+      "branch": "CANNOT_CHECK",
+      "non_implications": [
+        "not evidence for or against coupling",
+        "not permission to change the evaluator"
+      ],
+      "precedence_rank": 1,
+      "predicate": "Any source-identity, analytic coverage, exhaustive coverage, full-history twin, provenance, or evidence obligation is incomplete or inconsistent.",
+      "required_evidence": [
+        "bounded reason codes for every failed obligation"
+      ]
+    },
+    {
+      "branch": "OLD_TYPE_COLLISION_OR_SPLIT",
+      "non_implications": [
+        "does not establish cross-component coupling",
+        "does not establish cover growth"
+      ],
+      "precedence_rank": 2,
+      "predicate": "Complete full-history recomputation proves an inherited twin class splits or a previously distinct old/new endpoint type collides, so inherited component attribution is not stable.",
+      "required_evidence": [
+        "explicit proof/certificate pointer for the collision or split",
+        "complete twin-partition certificate"
+      ]
+    },
+    {
+      "branch": "NO_NEW_SEMANTIC_CELL",
+      "non_implications": [
+        "does not prove future stagnation",
+        "does not determine a cover value"
+      ],
+      "precedence_rank": 3,
+      "predicate": "After stable full-history twins are certified, the complete immediate-extension relation adds no semantic quotient-support cell.",
+      "required_evidence": [
+        "exhaustive no-new-cell certificate",
+        "complete source-domain coverage certificate"
+      ]
+    },
+    {
+      "branch": "CROSS_COMPONENT_COUPLING_WITNESS",
+      "non_implications": [
+        "retires only the separable transfer precondition",
+        "does not prove a cover lower bound"
+      ],
+      "precedence_rank": 4,
+      "predicate": "With stable inherited provenance and at least one new semantic cell, a certified new support incidence has endpoints in distinct inherited active components.",
+      "required_evidence": [
+        "one checkable witness pointer",
+        "complete provenance and quotient-support certificates"
+      ]
+    },
+    {
+      "branch": "NO_CROSS_COMPONENT_COUPLING",
+      "non_implications": [
+        "does not prove a transferred upper bound until local preconditions are checked",
+        "does not determine a cover value"
+      ],
+      "precedence_rank": 5,
+      "predicate": "With stable inherited provenance and at least one new semantic cell, exhaustive exact support classification proves every new incidence stays within one inherited component.",
+      "required_evidence": [
+        "exhaustive no-coupling certificate",
+        "complete provenance and quotient-support certificates"
+      ]
+    }
+  ],
+  "branch_precedence": [
+    "CANNOT_CHECK_ON_IDENTITY_OR_COMPLETENESS_FAILURE",
+    "OLD_TYPE_COLLISION_OR_SPLIT",
+    "NO_NEW_SEMANTIC_CELL",
+    "CROSS_COMPONENT_COUPLING_WITNESS",
+    "NO_CROSS_COMPONENT_COUPLING"
+  ],
+  "candidate_id": "C045-U17-INCIDENCE-CLASSIFICATION-PLAN-v1",
+  "candidate_kind": "TYPED_PLAN_ONLY_NO_TARGET_OUTPUT",
+  "evidence_contract": {
+    "branch_observations": [
+      "old_type_collision_or_split",
+      "new_semantic_cell_exists",
+      "cross_component_coupling_exists"
+    ],
+    "obligation_records": "exactly C045-A1..A4 and C045-E1..E7, each discharged with a nonempty evidence pointer",
+    "positive_branch_evidence": "proof/certificate pointer required under the frozen branch definition",
+    "raw_target_data_in_freeze_packet": false
+  },
+  "exhaustive_obligations": [
+    {
+      "failure_branch": "CANNOT_CHECK",
+      "obligation_id": "C045-E1",
+      "requirement": "Later, enumerate the complete frozen source domain for the immediate extension and prove coverage rather than sample it."
+    },
+    {
+      "failure_branch": "CANNOT_CHECK",
+      "obligation_id": "C045-E2",
+      "requirement": "Later, prove every emitted relation belongs to exactly one frozen analytic case and that no source case or relation is omitted or duplicated."
+    },
+    {
+      "failure_branch": "CANNOT_CHECK",
+      "obligation_id": "C045-E3",
+      "requirement": "Later, recompute every row and column neighbourhood from the full accumulated old-plus-new history on both sides."
+    },
+    {
+      "failure_branch": "OLD_TYPE_COLLISION_OR_SPLIT_OR_CANNOT_CHECK",
+      "obligation_id": "C045-E4",
+      "requirement": "Later, certify the twin partitions biconditionally and classify every inherited-type collision or split before component attribution."
+    },
+    {
+      "failure_branch": "CANNOT_CHECK",
+      "obligation_id": "C045-E5",
+      "requirement": "Later, certify the exact quotient-complement support extensionally from the full-history twin classes."
+    },
+    {
+      "failure_branch": "CANNOT_CHECK",
+      "obligation_id": "C045-E6",
+      "requirement": "Later, map every eligible quotient endpoint to inherited component provenance and test every new support incidence for cross-component coupling."
+    },
+    {
+      "failure_branch": "CANNOT_CHECK",
+      "obligation_id": "C045-E7",
+      "requirement": "Later, discharge exactly one registered branch under the frozen precedence and attach a complete proof or exhaustive certificate pointer."
+    }
+  ],
+  "falsifiers": [
+    {
+      "condition": "Any bound source identity differs from the frozen identity.",
+      "effect": "CANNOT_CHECK",
+      "falsifier_id": "C045-F1"
+    },
+    {
+      "condition": "The analytic source-case partition is incomplete or overlapping.",
+      "effect": "CANNOT_CHECK",
+      "falsifier_id": "C045-F2"
+    },
+    {
+      "condition": "Target relations are sampled or inferred rather than exhaustively certified.",
+      "effect": "CANNOT_CHECK",
+      "falsifier_id": "C045-F3"
+    },
+    {
+      "condition": "Any old-band relation is omitted from full-history neighbourhood recomputation.",
+      "effect": "CANNOT_CHECK",
+      "falsifier_id": "C045-F4"
+    },
+    {
+      "condition": "An old type collision or split is left unclassified before component attribution.",
+      "effect": "CANNOT_CHECK",
+      "falsifier_id": "C045-F5"
+    },
+    {
+      "condition": "One certified new support incidence joins distinct inherited components.",
+      "effect": "FALSIFIES_NO_CROSS_COMPONENT_COUPLING",
+      "falsifier_id": "C045-F6"
+    },
+    {
+      "condition": "A coupling claim lacks a checkable witness pointer and complete provenance certificate.",
+      "effect": "CANNOT_CHECK",
+      "falsifier_id": "C045-F7"
+    },
+    {
+      "condition": "A no-new-cell or no-coupling claim lacks an exhaustive completeness certificate.",
+      "effect": "CANNOT_CHECK",
+      "falsifier_id": "C045-F8"
+    },
+    {
+      "condition": "Target output is accessed before this candidate, evaluator, and receipt are frozen.",
+      "effect": "MARK_RETROSPECTIVE_AND_MOVE_STRICT_ASSURANCE_TO_A_NEW_UNTOUCHED_TARGET",
+      "falsifier_id": "C045-F9"
+    }
+  ],
+  "frozen_at": "2026-08-12T01:18:28Z",
+  "qoi": "EXACT_FULL_HISTORY_QUOTIENT_COMPONENT_INCIDENCE",
+  "registered_branches": [
+    "NO_NEW_SEMANTIC_CELL",
+    "NO_CROSS_COMPONENT_COUPLING",
+    "CROSS_COMPONENT_COUPLING_WITNESS",
+    "OLD_TYPE_COLLISION_OR_SPLIT",
+    "CANNOT_CHECK"
+  ],
+  "schema_version": "1.0.0",
+  "source_identity": {
+    "application_base_commit": "4653b516349d158279a8792aa503c209ed0cecab",
+    "decoder": {
+      "git_blob": "fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+      "raw_sha256": "c0caca2fe7244c3d847de8b59473cec72132ec04ad3e9fab668f5cd95a2bd75a",
+      "use_boundary": "IDENTITY_ONLY_NOT_IMPORTED_OR_EXECUTED_IN_THIS_FREEZE"
+    },
+    "framework_commit": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "pre_candidate_gate": {
+      "canonical_sha256": "sha256:bad15fef7e3914dc54a85d6e306dfb553242a3b1ecbe83a8f28a64827634c118",
+      "git_blob": "d89d70c745abe03060cb0a916cbe375ae1c65f1b",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_LATEST_RAKL_GATE_RECEIPT_20260812.json"
+    },
+    "sparse_semantics": {
+      "git_blob": "f81c4b20af57528432e1077810528be02450c7c3",
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/c041_sparse_bridge_repair.py",
+      "raw_sha256": "a151014f45b0fd6ac7a0235b01b0f6fd8de8b7b2d1d816dca3e8dd4e6dd32e3b",
+      "use_boundary": "IDENTITY_ONLY_NOT_IMPORTED_OR_EXECUTED_IN_THIS_FREEZE"
+    }
+  },
+  "target_access": {
+    "decoder_imported_or_executed": false,
+    "evaluator_imported_or_executed": false,
+    "outcome_branch_selected": false,
+    "target_enumerated": false,
+    "target_output_accessed": false
+  },
+  "target_extension": "U16_TO_U17_IMMEDIATE_SOURCE_EXTENSION"
+}
