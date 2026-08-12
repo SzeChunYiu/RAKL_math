@@ -1,0 +1,71 @@
+{
+  "artifact_hash": "sha256:04ef559ddc6987625e7e2293d15c40c7840c3ea49ac3b7f1186def27c4df29e0",
+  "authority": {
+    "formal": false,
+    "independent": false,
+    "root": "OPEN",
+    "same_context_hand_proof": true
+  },
+  "candidate_artifact_hash": "sha256:2f8f1f12acb42d177f53d0fb7695d03d1d5a44922bf8411fad3503c2472b649c",
+  "candidate_id": "C049-K12-FIRST-ADMISSIBLE-OVERLAP-SEPARATION-v1",
+  "certificate_id": "PNP-C049-K12-PROOF-CERTIFICATE-20260812",
+  "credit": {
+    "ci_schema_hash_runtime": 0,
+    "mathematical": [
+      "minimality",
+      "parameter forcing",
+      "fixed-bit separation",
+      "swapped reduction preservation"
+    ],
+    "software_process": 0
+  },
+  "falsifier": "Any canonical UNSAT word below length 24, alternative parameters at length 24, H_12 label with bit 4 zero, P_13 label with bit 4 one, or exact common label refutes a corresponding obligation.",
+  "frozen_at": "2026-08-12T04:38:00Z",
+  "nonvacuity_note": "Canonical UNSAT length-24 syntax is nonvacuous: v=1,m=2 permits (z OR z OR z) AND (NOT z OR NOT z OR NOT z). The separation proof does not depend on choosing or evaluating this instance.",
+  "obligations": [
+    {
+      "evidence_pointer": "certificate#O1",
+      "obligation_id": "MINIMAL_K_JUSTIFICATION",
+      "proof": "Any one-clause CNF is satisfiable: choose an assignment satisfying one of its literals. Thus canonical UNSAT requires m>=2. Canonical length is 8+(2 floor(log2 v)+1)+(2 floor(log2 m)+1)+3m(1+bit_length(v)), before optional padding. With v>=1,m>=2 this is at least 8+1+3+12=24, already even. Hence H_k is empty for k<12 and k=12 is first admissible.",
+      "status": "PROVED"
+    },
+    {
+      "evidence_pointer": "certificate#O2",
+      "obligation_id": "K12_CANONICAL_UNSAT_PARAMETER_FORCING",
+      "proof": "At total length 24 every lower bound in O1 is equality. Therefore v=1 and m=2. The raw length is 24, so optional padding is absent. MAGIC||gamma(1)||gamma(2)=11100101||1||010 has length 12, placing the equal split exactly before the payload.",
+      "status": "PROVED"
+    },
+    {
+      "evidence_pointer": "certificate#O3",
+      "obligation_id": "K12_SUFFIX_ROW_FIXED_BIT",
+      "proof": "For v=1 each of six literals is encoded as sign||1. Thus c is 12 payload bits and h=1||c. Zero-indexed bit 4 of h is the variable-code bit of the second literal and equals 1.",
+      "status": "PROVED"
+    },
+    {
+      "evidence_pointer": "certificate#O4",
+      "obligation_id": "K13_CANONICAL_PREFIX_FIXED_BIT",
+      "proof": "Every p in P_13 is the first 13 bits of a canonical length-26 word and therefore begins with MAGIC=11100101. Its zero-indexed bit 4 equals MAGIC[4]=0.",
+      "status": "PROVED"
+    },
+    {
+      "evidence_pointer": "certificate#O5",
+      "obligation_id": "BIT4_SEPARATION",
+      "proof": "O3 fixes bit 4 to 1 on every h in H_12, whereas O4 fixes bit 4 to 0 on every p in P_13. Exact equality is impossible, so H_12 intersection P_13 is empty.",
+      "status": "PROVED"
+    },
+    {
+      "evidence_pointer": "certificate#O6",
+      "obligation_id": "SWAPPED_REDUCTION_PRESERVED",
+      "proof": "No decoder, split, or coordinate map changes. For x=r||c the transposed query remains (2^12+c,r), exactly the C048 endpoint-swapped reduction.",
+      "status": "PROVED"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "scope": [
+    "k=12 only",
+    "exact C041 grammar/equal split",
+    "C048 swapped reduction retained",
+    "no k>12, cover/lower-bound, novelty, or root result"
+  ],
+  "scoped_conclusion_if_records_validate": "H_12 intersection P_13 is empty; no conclusion for any k>12."
+}
