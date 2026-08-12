@@ -1,0 +1,38 @@
+{
+  "schema": "RAKL-v3-shadow-candidate",
+  "candidate_id": "C-RH-ANA-003c-INDEPENDENT-WINDOW-REORDERABILITY",
+  "atom_id": "RH-ANA-003c",
+  "cycle": "R4",
+  "frozen_after_pre_candidate_trace_hash": "sha256:bc31cb846636bbd8881f7ab6e820a9d5b71707afe7fac5edd63502e757251e82",
+  "context_fibre_hash": "sha256:f8f65c468d80f321113e4752664a1fecd41ed9376df22f1462ff99d3fb739bed",
+  "claim_under_test": "For each fixed Li index n, Coffey's exact S_Lambda(n) source series is absolutely convergent, so an infinite prime/log-scale partition may be treated as an order-independent sum of local windows without an additional summation-method or block-tail gluing certificate.",
+  "scope_guard": [
+    "Refuting this claim does not refute all localized decompositions.",
+    "Contiguous finite windows in the original m-order remain admissible algebraically.",
+    "A specially chosen block decomposition may acquire absolute convergence at the block-sum level; that must be proved and is not inherited from the term series.",
+    "No claim is made about RH truth or falsity."
+  ],
+  "source_bindings": [
+    {"source":"Coffey arXiv:0706.0343v2","location":"Proposition 1 equations (12)-(13), Proposition 2 equations (15)-(17), proof around equation (48)","role":"defines convergent natural-order moment series and S_Lambda representation"},
+    {"source":"Coffey arXiv:math-ph/0505052","role":"Li coefficient normalization / route context only"},
+    {"source":"Voros arXiv:math/0506326","role":"R3 obligation-strength regression only; not used to prove convergence claim"},
+    {"source":"Guth-Maynard Annals 203 (2026)","role":"current zero-density lane context; not used to repair source summation order"},
+    {"source":"Conrey et al arXiv:2508.11108","role":"current mollifier lane context; not used to repair source summation order"},
+    {"source":"Bellotti-Trudgian-Yang arXiv:2603.21490","role":"current zero-free lane context; not used to repair source summation order"}
+  ],
+  "falsifier": {
+    "analytic_test": [
+      "For fixed n>=1, write L_{n-1}^1(x) as its degree n-1 polynomial; its leading coefficient is (-1)^(n-1)/(n-1)!.",
+      "Choose E={m: m is even and not a power of 2}. For m in E, Lambda(m)=0.",
+      "For sufficiently large m, |L_{n-1}^1(log m)| >= c_n (log m)^(n-1).",
+      "Therefore the absolute subseries over E dominates c_n sum_{m in E} (log m)^(n-1)/m, which diverges.",
+      "Cross-check natural-order convergence from Coffey's source representation / convergent moment series."
+    ],
+    "numerical_calibration": "For n=1,2,3,5 and cutoffs through 2e5, natural signed partial sums stabilized at O(1) scale while absolute partial sums kept growing. Calibration only; not proof.",
+    "pass_condition": "Absolute term series converges for the exact source representation.",
+    "fail_condition": "A rigorously identified subseries of absolute values diverges while source-order convergence remains intact."
+  },
+  "authority": "PROPOSAL_ONLY",
+  "created_at": "2026-08-11T23:07:00Z",
+  "artifact_hash": "sha256:bb035458060539c34e4d033587d067bbde185748c227f0277a471225e011b1f0"
+}

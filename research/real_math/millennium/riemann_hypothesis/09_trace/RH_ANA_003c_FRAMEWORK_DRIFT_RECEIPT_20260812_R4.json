@@ -1,0 +1,75 @@
+{
+  "schema": "RAKL-v3-shadow-framework-drift-receipt",
+  "atom_id": "RH-ANA-003c",
+  "cycle": "R4",
+  "application_base_sha": "3cfc8a3b2ff6d981351d2f15421c8cc08048f74b",
+  "initial_framework_observation": {
+    "rakl_main_sha": "b8f96b8c90745c6a7a6ed57bc55d90319db505f7",
+    "method_version": "3.0.0",
+    "skill_manifest_version": "0.6.6",
+    "required_pre_candidate_trace_events": [
+      "ATOMIZED",
+      "CONTEXT_FROZEN",
+      "ANALOGY_SCAN",
+      "METHOD_TRANSFER_REVIEW",
+      "EXPERT_CONTEXT_REVIEW",
+      "EXPERIENCE_MEMORY_REVIEW",
+      "NEXT_STEP_PROPOSED"
+    ]
+  },
+  "candidate_freeze": {
+    "candidate_id": "C-RH-ANA-003c-INDEPENDENT-WINDOW-REORDERABILITY",
+    "commit_sha": "d6b9c441cea05b1226e084ea1843eacb1ca22c6d",
+    "commit_timestamp_utc": "2026-08-11T23:07:13Z",
+    "pre_candidate_terminal_trace_hash": "sha256:bc31cb846636bbd8881f7ab6e820a9d5b71707afe7fac5edd63502e757251e82"
+  },
+  "framework_change_detected": {
+    "semantic_shortcut_merge_sha": "62df980514cc60d63f99b810c3664b68d9a5a565",
+    "semantic_shortcut_merge_timestamp_utc": "2026-08-11T23:07:01Z",
+    "current_rakl_main_sha_at_recheck": "992eda867588378fafb1f8b8997c8ecc725f88ad",
+    "method_version_at_recheck": "3.0.0",
+    "skill_manifest_version_at_recheck": "0.7.0",
+    "material_change": "Current mathematical-research workflow added a mandatory content-bound ObstructionTransformationMemory, ObstructionTransformationReview, and OBSTRUCTION_TRANSFORMATION_REVIEW trace event before NEXT_STEP_PROPOSED, with SEARCH/JUMP/GLUE/LIFT/CANNOT_CHECK routing and new plan_math_research arguments.",
+    "candidate_commit_after_gate_merge_seconds": 12
+  },
+  "gate_audit": {
+    "context_fibre": "FROZEN_BEFORE_CANDIDATE",
+    "dual_experience_memory": "FROZEN_BEFORE_CANDIDATE",
+    "same_context_expert_review": "FROZEN_BEFORE_CANDIDATE",
+    "old_schema_hash_chained_trace": "FROZEN_BEFORE_CANDIDATE",
+    "current_main_obstruction_transformation_memory": "MISSING_AT_CANDIDATE_FREEZE",
+    "current_main_obstruction_transformation_review": "MISSING_AT_CANDIDATE_FREEZE",
+    "current_main_obstruction_transformation_trace_event": "MISSING_AT_CANDIDATE_FREEZE",
+    "current_main_plan_math_research_gate": "NOT_EXECUTED_WITH_NEW_REQUIRED_ARGUMENTS",
+    "strict_current_main_discovery_status": "FAIL_CLOSED_NOT_STRICT_RAKL_VERIFIED_DISCOVERY"
+  },
+  "chronology_caveats": [
+    {
+      "failure_id": "F-RH-ANA-003c-CURRENT-FRAMEWORK-DRIFT-GATE-MISS",
+      "category": "meta-policy",
+      "statement": "The framework source of truth changed materially between the initial pre-candidate freeze and the exact candidate commit; current-main Gate C was therefore absent at candidate time."
+    },
+    {
+      "failure_id": "F-RH-ANA-003c-CANDIDATE-IDENTITY-LATE-FREEZE",
+      "category": "provenance",
+      "statement": "The pre-candidate trace froze the discriminator and falsifier family before primary-source body inspection, but the exact candidate JSON identity was materialized only after that inspection. The result can be checked for truth but is not credited as strict candidate-identity-before-evaluation discovery chronology."
+    },
+    {
+      "failure_id": "F-RH-ANA-003c-TASKEPISODE-LATE-MATERIALIZATION",
+      "category": "meta-policy",
+      "statement": "The separate TaskEpisode artifact was materialized after the combined result/diagnosis artifact; it is retained as proposal/shadow evidence and not represented as strict driver_learning episode-before-interpretation chronology."
+    }
+  ],
+  "mathematical_result_disposition": "The fixed-n conditional-convergence proof is retained only as a source-bound shadow mathematical check. Framework-process noncompliance does not make a true derivation false, but it blocks any claim that R4 itself satisfied the exact current-main Verified Discovery procedure.",
+  "prospective_repair": {
+    "child_atom": "RH-ANA-003d",
+    "child_status": "CONTEXT_SHORTCUT_REVIEW_REQUIRED",
+    "current_main_sha_bound": "992eda867588378fafb1f8b8997c8ecc725f88ad",
+    "selected_mode_before_child_review": "CANNOT_CHECK",
+    "reason": "No fresh child MathContextFiber, dual-memory snapshot, content-bound transformation memory, shortcut review or current-schema trace exists yet; LIFT and candidate generation fail closed."
+  },
+  "framework_improvement_hypothesis": "At candidate freeze, re-resolve the authoritative RAKL main SHA and compare it with the SHA bound by the pre-candidate packet. A changed SHA should force a diff-classification step; any change touching required workflow/gate/schema/runtime surfaces should invalidate candidate_generation_allowed until the newly required gates are frozen. This is a proposal, not validated method evolution.",
+  "authority": "PROPOSAL_SHADOW_PROCESS_RECEIPT_ONLY",
+  "recorded_at": "2026-08-11T23:17:00Z",
+  "artifact_hash": "sha256:1e9ba8e96c3d5861420c9e3d99be66f35c14390bb58f749a1752177edfd79628"
+}
