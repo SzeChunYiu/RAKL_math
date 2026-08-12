@@ -1,0 +1,96 @@
+{
+  "artifact_hash": "sha256:14a95e6161f423ae0c2819243d708d4e31df10620a425ee4877e5586af53a890",
+  "atom_id": "O9d12a2a1b-C047",
+  "authority": {
+    "cover_or_circuit_lower_bound": false,
+    "formal_proof": false,
+    "independent_review": false,
+    "novelty": false,
+    "p_vs_np_authority": false,
+    "root_status": "OPEN",
+    "same_context_hand_derivation_record_check": true,
+    "theorem_truth": false
+  },
+  "candidate_id": "C047-ORIENTATION-ONLY-SEPARATION-LEMMA-v1",
+  "chronology": {
+    "candidate_evaluator_public_commit": "e033df7a4f0276abb218027451754695679ec288",
+    "evaluation_strictly_after_public_input_freeze": true,
+    "pre_candidate_public_commit": "d84e3814f1d8f355246f2bddb6982c3a1859fb6c",
+    "public_proof_input_freeze": {
+      "observed_at": "2026-08-12T03:09:34Z",
+      "pull_request": 260,
+      "remote_head_sha": "95ac661de3dce2c100ff9ed34e531becb47d7d92",
+      "url": "https://github.com/SzeChunYiu/RAKL_math/pull/260"
+    }
+  },
+  "evaluator_output": {
+    "candidate_id": "C047-ORIENTATION-ONLY-SEPARATION-LEMMA-v1",
+    "verdict": "PASS"
+  },
+  "execution": {
+    "evaluator_path": "research/real_math/millennium/p_vs_np/05_falsification/c047_orientation_feasibility_evaluator.py",
+    "evaluator_raw_sha256": "28040619b04031d33932203d96fdbb49a0da697c8990e096c9b00bf562a21043",
+    "executed_at": "2026-08-12T03:09:48Z",
+    "network_used": false,
+    "operation": "evaluate_certificate(exact_certificate, exact_public_authorization)",
+    "raw_output_sha256": "8de95b41966c74771f74f4dd5831c2c1fcb8d19ff30068428a84348749e3b105"
+  },
+  "inputs": {
+    "authorization": {
+      "artifact_hash": "sha256:1838f134fb0bbb2495ccbbd15a026f05da29b8298d67f8b572c39fad755db12c",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C047_POST_FREEZE_PROOF_CHECK_AUTHORIZATION_20260812.json"
+    },
+    "certificate": {
+      "artifact_hash": "sha256:550622d9ab4ad635b253d6a41cbf084974540b748d47d6b360b61684934cbd9c",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C047_ORIENTATION_ONLY_SEPARATION_PROOF_CERTIFICATE_FREEZE_20260812.json"
+    }
+  },
+  "interpretation": {
+    "evaluator_checks_record_completeness_not_derivation_semantics": true,
+    "formal_proof_checked": false,
+    "mathematical_reading": "The same-context hand derivation gives a scoped symbolic impossibility for mirror-only and two-sided prefix-preserving orientation repair.",
+    "passed": "The exact inert evaluator accepted five present PROVED obligation records with evidence pointers.",
+    "semantic_derivation_independently_checked": false
+  },
+  "mathematical_result": {
+    "bounded_failure_cause": "the fresh leading bit shifts the fixed MAGIC header; coarse high-half occupancy therefore fails exact interface congruence",
+    "failed_repair": "quadrant orientation alone, with prefix r kept as the fresh-row coordinate",
+    "lemma": "For every n>=18, neither the prefix-preserving new-old mirror nor its union with the original old-new block has a complement row equal to a current canonical MAGIC n-bit prefix.",
+    "proof_core": [
+      "old/inherited rows begin 0",
+      "the all-zero fresh row begins 10",
+      "a canonical prefix-mirror row begins 1||MAGIC=1111...",
+      "a current canonical prefix begins MAGIC=1110..."
+    ],
+    "repair_condition": "a successor must change the label map or split (for example test suffix-to-row literal transpose) and separately preserve the NP language/reduction before coupling can be viable"
+  },
+  "obligation_summary": {
+    "all_evidence_pointers_nonempty": true,
+    "obligation_ids": [
+      "DEFINE_ORIENTATION_ONLY_FAMILIES",
+      "EXHAUSTIVE_ROW_SUPPORT_TRICHOTOMY",
+      "DECODER_BRANCH_TO_FRESH_ROW_FORMS",
+      "BINARY_HEADER_DISJOINTNESS",
+      "MIRROR_AND_TWO_SIDED_CONCLUSION"
+    ],
+    "proved_record_count": 5,
+    "required_count": 5
+  },
+  "residuals": [
+    "literal matrix transpose with suffix c on the fresh row",
+    "header-aligning relabelling or unequal/overlapping split with language preservation",
+    "independent mathematical review",
+    "formal proof and bounded novelty review",
+    "cover/circuit bridge and P-versus-NP root"
+  ],
+  "result_id": "PNP-C047-ORIENTATION-FEASIBILITY-PROOF-CHECK-RESULT-20260812",
+  "schema_version": "1.0.0",
+  "status": "PASS_SAME_CONTEXT_CERTIFICATE_RECORD_CHECK",
+  "target_access": {
+    "finite_collision_level_selected": false,
+    "later_target_enumerated": false,
+    "later_target_result_accessed": false,
+    "proof_obligation_evaluator_imported_and_executed": true,
+    "target_decoder_imported_or_executed": false
+  }
+}

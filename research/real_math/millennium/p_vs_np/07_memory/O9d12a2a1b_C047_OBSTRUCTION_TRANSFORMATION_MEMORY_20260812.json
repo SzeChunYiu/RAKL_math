@@ -1,0 +1,88 @@
+{
+  "episodes": [
+    {
+      "artifact_hash": "sha256:5e6784eba6a2914e6520f767efd9953ede732c5a1a91d05b186ab9eb7c274852",
+      "authority": "PROOF_BACKED",
+      "episode_id": "E-PNP-C047-COARSE-REPAIR-THEN-INTERFACE-CHECK",
+      "evidence_pointers": [
+        "git:ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1"
+      ],
+      "known_breakpoints": [
+        "the decoder changes",
+        "the split becomes unequal or overlapping",
+        "the suffix rather than prefix is placed on the fresh row",
+        "a coordinate relabelling is introduced"
+      ],
+      "lineage_ids": [],
+      "operation": "after changing the support quadrant, classify the exact generated row-label language and compare it symbolically with the required canonical prefix language",
+      "preconditions": [
+        "recursive support clauses are exhaustive",
+        "decoder output branches are exhaustive",
+        "quadrant placement induces a fixed binary label map"
+      ],
+      "preserved_invariants": [
+        "SAT reduction direction",
+        "canonical/fallback separation",
+        "target blindness",
+        "root authority boundary"
+      ],
+      "relaxed_or_broken_constraints": [],
+      "resulting_relations": [
+        "decide whether orientation alone restores exact canonical row coupling"
+      ],
+      "source_context": "C046 recursive support partition and prefix-code alignment analysis",
+      "source_domain": "mathematics",
+      "source_obstruction": {
+        "constraints": [
+          "unchanged decoder and equal split",
+          "prefix coordinate remains the semantic row coordinate",
+          "only quadrant orientation may change",
+          "target results remain unaccessed"
+        ],
+        "desired_transition": [
+          "decide whether orientation alone restores exact canonical row coupling"
+        ],
+        "domain": "mathematics",
+        "failure_mechanisms": [
+          "coarse high-half repair may leave the generated binary header shifted relative to MAGIC"
+        ],
+        "forbidden_losses": [
+          "target-result leakage",
+          "silent decoder or label-map change",
+          "promoting feasibility to root authority"
+        ],
+        "invariants_to_preserve": [
+          "SAT reduction direction",
+          "canonical/fallback separation",
+          "target blindness",
+          "root authority boundary"
+        ],
+        "obstruction_id": "OBS-SOURCE-COARSE-REPAIR-THEN-INTERFACE-CHECK",
+        "relations": [
+          "quadrant placement controls which decoded coordinate receives a new leading fresh-half bit",
+          "the decoder classifies non-tautological words into all-zero and MAGIC forms",
+          "a collision requires exact binary equality between a generated row and a current canonical prefix"
+        ],
+        "roles": [
+          "inherited support",
+          "orientation-generated fresh rows",
+          "canonical prefix rows",
+          "exact label interface"
+        ]
+      },
+      "transformation_name": "COARSE_REPAIR_THEN_FINE_INTERFACE_CONGRUENCE"
+    }
+  ],
+  "evidence_pointers": [
+    "git:ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+    "gitblob:cca23988bad443f252c5be8489e6b1562b1acbb0"
+  ],
+  "memory_id": "PNP-C047-OBSTRUCTION-TRANSFORMATION-MEMORY-20260812",
+  "snapshot_hash": "abe424cf51b61da08cd87ebc909cdaf19f44ff50061b4da57a7a65d26a08fc62",
+  "source_universe": [
+    "C041 frozen recursive definition",
+    "C045 coupling failure",
+    "C046 high-half separation result",
+    "prefix-code alignment method"
+  ]
+}
