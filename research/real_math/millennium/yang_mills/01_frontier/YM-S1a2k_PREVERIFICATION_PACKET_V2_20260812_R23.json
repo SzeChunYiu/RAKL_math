@@ -1,0 +1,214 @@
+{
+  "actual_fibre": {
+    "assumptions": [
+      "same measure and reflection conventions",
+      "site/link positivity kept distinct",
+      "source-independent rate",
+      "no continuum promotion"
+    ],
+    "consumer": "fixed-cutoff transfer spectrum on Omega-perp",
+    "measurement": "primary-source theorem selectors plus direct functional-analysis proof",
+    "object": "SZZ infinite-volume Wilson measure and its gauge-invariant positive-time OS quotient",
+    "regime": "strong-coupling SU(N), unit lattice spacing, infinite volume"
+  },
+  "analogues_and_disanalogies": [
+    {
+      "analogue": "finite-dimensional positive contraction",
+      "disanalogy": "no OS/gauge/limit structure",
+      "transfer": "spectral-projector contradiction"
+    },
+    {
+      "analogue": "finite-volume Wilson transfer matrix",
+      "disanalogy": "cannot identify finite-volume Hilbert/operator with SZZ infinite-volume quotient",
+      "transfer": "site/link reflection logic"
+    },
+    {
+      "analogue": "real Hilbert form complexification",
+      "disanalogy": "must prove conjugation descends and commutes with T",
+      "transfer": "conjugation-invariant spectral detection"
+    }
+  ],
+  "application": {
+    "base_sha": "301f6f9db54784d250a49c4a5766384df31989dd",
+    "branch": "research/ym-s1a2k-fixed-cutoff-spectral-verification-20260812",
+    "issue": 360,
+    "repo": "SzeChunYiu/RAKL_math"
+  },
+  "artifact_hash": "sha256:ec5be8d2ba76306564a8a60a4ef69abbfb820d9df43de540d5a422908c8a5c66",
+  "atom": {
+    "id": "YM-S1a2k",
+    "qoi": "Does the same SZZ measure/OS quotient support a positive one-step transfer T, dense centered smooth gauge-invariant real sources, a source-independent moment rate q<1, and therefore excited-spectrum containment in [0,q]?",
+    "residual_before": "RES-YM-S1a2j-SAME-HILBERT-DENSE-DECAY-HANDOFF-PLUS-STRICT-HAMILTONIAN-IF-REQUIRED-PLUS-A-UNIFORM-RG-CONTINUUM-UNBOUND",
+    "root_contract": "For every compact simple gauge group, construct a nontrivial 4D quantum Yang-Mills theory satisfying Clay-strength axiomatic requirements and prove a finite positive physical mass gap above the vacuum, with required continuum/short-distance behavior.",
+    "scope": "fixed lattice spacing; infinite-volume strong-coupling SU(N), d=4, 0<beta<1/48; verification of preexisting proposal only",
+    "signature": "YM-S1a2k-SZZ-SAME-THEORY-DENSE-SOURCE-COMMON-RATE-TRANSFER-SPECTRAL-GAP-VERIFICATION"
+  },
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "correction_of": "YM-S1a2k_PREVERIFICATION_PACKET_20260812_R23.json",
+  "correction_reason": "The first frozen packet carried internally inconsistent nested self-declared hashes. No consequential primary-source verification had begun. This V2 packet supersedes it for strict chronology; the original remains immutable provenance.",
+  "decision_policy": {
+    "action": "verify/falsify preexisting proposal from primary sources and direct proofs",
+    "new_candidate_generation": "NO:proposal already exists",
+    "numerics": "calibration/falsification only",
+    "root_promotion": "forbidden"
+  },
+  "dual_memory": {
+    "counts": {
+      "missed": "CANNOT_MEASURE:no exhaustive coverage certificate",
+      "rejected": 3,
+      "retrieved": 10,
+      "selected": 7
+    },
+    "effect_on_action": {
+      "changed": true,
+      "post_memory": "verify preexisting fixed-cutoff spectral glue",
+      "pre_memory": "another Wilson conorm/source lookup"
+    },
+    "failure_experience": [
+      "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE",
+      "PR#273:R15-STRONG-AF-DOMAIN-NONOVERLAP",
+      "PR#268:XM020-SCALE-NORMALIZATION",
+      "PR#328:R20-RG-BACKWARD-CONTRACTION-UNBOUND"
+    ],
+    "rejected": {
+      "PR#240": "retrospective chronology; provenance only",
+      "PR#351": "saturated/source-blocked Wilson conorm family for this action",
+      "issue#88": "parent scope, not method authority"
+    },
+    "retrieved": [
+      "root#5",
+      "issue#88",
+      "PR#225",
+      "PR#240",
+      "PR#256",
+      "PR#258",
+      "PR#273",
+      "PR#328",
+      "PR#337",
+      "PR#351"
+    ],
+    "selected": [
+      "root#5",
+      "PR#225",
+      "PR#256",
+      "PR#258",
+      "PR#273",
+      "PR#328",
+      "PR#337"
+    ],
+    "success_experience": [
+      "YM-S1A1-C001-V2 proposal-shadow",
+      "PR#225 proposal-shadow",
+      "PR#337 proposal-shadow"
+    ]
+  },
+  "equivalent_formulations": [
+    "dense detecting sources + common diagonal moment nth-root q<1 => excited spectral edge <=q",
+    "reflected Euclidean covariance = same-theory transfer moment only after OS/time-shift typing",
+    "lattice energy lower bound -log q remains dimensionless until divided by a with uniform scaling control"
+  ],
+  "framework": {
+    "method_version": "3.0.0",
+    "package_version": "0.1.0",
+    "repo": "SzeChunYiu/RAKL",
+    "sha": "fa6f305412ff5d0ef0bbbad174e83887e248b742",
+    "skill_version": "0.7.0"
+  },
+  "frozen_at_utc": "2026-08-12T08:12:00Z",
+  "hash_scope": "SHA256 of canonical sorted-key compact JSON of this object excluding artifact_hash",
+  "method_transfer_assumptions": [
+    {
+      "method": "spectral projector",
+      "minimum_repair": "same-OS density + real/complex detection",
+      "needs": [
+        "T positive self-adjoint",
+        "dense detecting real form",
+        "common q"
+      ]
+    },
+    {
+      "method": "L2-to-OS density",
+      "minimum_repair": "same SZZ measure carries RP",
+      "needs": [
+        "compact product",
+        "gauge/reflection invariant probability measure",
+        "OS norm <= L2"
+      ]
+    },
+    {
+      "method": "support/time geometry",
+      "minimum_repair": "derive n-O_F(1) separation",
+      "needs": [
+        "finite edge support",
+        "matching reflection/translation",
+        "SZZ distance"
+      ]
+    },
+    {
+      "method": "continuum transport",
+      "minimum_repair": "RG/a-uniform/continuum OS spectral glue; currently absent",
+      "needs": [
+        "delta_latt(a)>=m0 a on same AF trajectory"
+      ]
+    }
+  ],
+  "predeclared_falsifiers": [
+    "source-dependent rate collapses across dense family",
+    "density fails on same OS quotient",
+    "one-step T not nonnegative",
+    "site/link reflection conflated",
+    "time support distance not n-O(1)",
+    "real sources miss a complex spectral subspace",
+    "Omega-perp misstates zero-energy sector under degeneracy",
+    "fixed-cutoff gap overpromoted to continuum"
+  ],
+  "same_context_experts": [
+    {
+      "check": "same Wilson measure; site/link; thermodynamic passage",
+      "role": "lattice gauge/RP"
+    },
+    {
+      "check": "null quotient, shift, positivity/self-adjointness, vacuum",
+      "role": "OS/transfer"
+    },
+    {
+      "check": "projector lemma, real/complex detection",
+      "role": "spectral analysis"
+    },
+    {
+      "check": "SZZ class/exponent/support metric",
+      "role": "strong-coupling correlations"
+    },
+    {
+      "check": "a-uniform physical normalization and AF transport",
+      "role": "RG/continuum"
+    },
+    {
+      "check": "hidden sector, vacuum degeneracy, wrong reflection/measure",
+      "role": "adversarial"
+    },
+    {
+      "check": "chronology, dedup, novelty, authority",
+      "role": "formal/metrology"
+    }
+  ],
+  "same_context_independent_review_credit": "0/3",
+  "schema_version": "rakl-v3-verified-math-preverification-v2",
+  "structural_analogy_scan": {
+    "GLUE": "selected verification route: OS transfer + same-quotient density + reflected common rate + spectral projector",
+    "JUMP": "no strict cross-domain match binds OS/gauge/spectral hypotheses",
+    "LIFT": "forbidden; no completeness claim and no need to bypass direct verification",
+    "SEARCH": "direct proposal-shadow same-domain matches exist for verification only",
+    "complete_knowledge_claim": false,
+    "snapshot_hash": "732ec44e38414fdb17a445d457c8089fa21153a3fafcab83f44da043e184fbef",
+    "transformation_memory_id": "otc-v1-seed-memory"
+  },
+  "task_episode": {
+    "diagnosis": "PENDING",
+    "episode": "fixed-cutoff spectral glue verification",
+    "id": "EP-YM-S1a2k-R23-20260812",
+    "lesson": "PENDING_OR_NONE",
+    "obstruction": "PENDING_OR_NONE",
+    "storage": "PROPOSAL_SHADOW_STARTED"
+  }
+}
