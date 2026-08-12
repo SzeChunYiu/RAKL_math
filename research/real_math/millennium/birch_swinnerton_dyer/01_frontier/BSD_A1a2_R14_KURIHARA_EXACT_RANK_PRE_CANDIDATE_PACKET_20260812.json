@@ -1,0 +1,181 @@
+{
+  "record_type": "BSD_R14_PRE_CANDIDATE_FIBRE_PACKET",
+  "cycle_id": "BSD-A1A2-KURIHARA-EXACT-RANK-20260812-R14",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "main_sha": "44058e21e16b085b421638fadad5086e31472f0f",
+    "method_version": "3.0.0",
+    "skill_manifest_version": "0.7.0"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "d65014c9a4dfa251ed9453addb3ac87815ab949a",
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "fibre_snapshot_sha256": "81ac2b39d9bc10d33dd77c8ffe237bef4ea625820ef323c9608a318d3cc67168",
+  "fibre_payload": {
+    "atom_id": "BSD-A1a2-EXACT-SELMER-DIMENSION-KURIHARA-ORDER-BRIDGE",
+    "parent_atom": "BSD-A1a1-THETA-ORDER-COMPARISON",
+    "root_contract": "For every elliptic curve E/Q, ord_{s=1} L(E,s)=rank E(Q); refined leading-term coordinates remain separately bound to regulator, period, Tamagawa/local factors, torsion and Sha/finiteness.",
+    "cycle_question": "Can the current Kim-Pollack refined Tamagawa/Kurihara-number theorem cell convert exact complex analytic rank two into exact Bloch-Kato Selmer dimension two, rather than only a lower bound, without importing exact algebraic/Selmer rank, Sha finiteness, p-adic BSD, or an equivalent root-strength premise?",
+    "success_contract": {
+      "strict_success": "A primary-source theorem, with exact hypotheses, giving ord_{s=1}L(E,s)=2 -> exact Selmer corank/dimension 2 (or a complex-to-Kurihara order equality/bound that composes to it) for the same E/Q and prime, without presupposing the desired rank/equality.",
+      "scoped_success": "A primary-source theorem cell giving exact Selmer rank from an independently defined discrete Kurihara order, together with a source-bound proof that the missing complex-rank-two -> discrete-order-two relation remains separate; this may sharpen routing but does not close BSD.",
+      "failure": "No theorem cell survives theorem-direction, same-curve, coefficient, local-condition, or premise-strength checks."
+    },
+    "residual_before": [
+      "Under stored Zhang R9 hypotheses and R12 coefficient binding: ord_{s=1}L(E,s)=2 -> dim_Qp H^1_f(Q,V_pE)>=2.",
+      "Exact upper bound/equality dim_Qp H^1_f(Q,V_pE)=2 remains open.",
+      "Transverse p-local localization remains open separately.",
+      "Mordell-Weil/Sha/regulator/Tamagawa/torsion/period/complex-leading-term glue remains open."
+    ],
+    "structural_coordinates": {
+      "same_curve": "E/Q",
+      "analytic_coordinate": "complex Taylor order at s=1",
+      "arithmetic_coordinate": "Bloch-Kato/usual p-Selmer corank/dimension",
+      "candidate_discrete_coordinate": "Kurihara-number order from Kolyvagin derivatives of special L-values",
+      "local_prime_scope": "good ordinary p>=5, p-distinguished and large-image hypotheses when invoking the strongest Kim-Pollack unconditional ordinary-prime cell",
+      "directionality": "complex rank two must be an input; arithmetic equality must be output",
+      "forbidden_shortcuts": [
+        "assume rank E(Q)=2",
+        "assume exact Selmer corank/dimension 2",
+        "assume Sha finiteness to manufacture the rank equality",
+        "treat parity as equality",
+        "treat a discrete/complex Taylor analogy as an order-preserving theorem",
+        "promote a numerical Kurihara computation to proof of root-general analytic-to-arithmetic equality"
+      ]
+    },
+    "equivalent_or_related_representations": [
+      "Sel_{p^infinity}(E/Q) corank and H^1_f(Q,V_pE) dimension are coefficient-coordinate equivalent under R12's usual Kummer/Bloch-Kato structures.",
+      "Kim-Pollack's Kurihara order is a discrete special-value/Kolyvagin-derivative coordinate that may determine the Selmer module under its theorem hypotheses.",
+      "Complex Taylor order and Kurihara order are not assumed equivalent absent a theorem."
+    ],
+    "solved_near_solved_analogues": [
+      {
+        "id": "BSD-R9-ZHANG",
+        "status": "stored scoped transfer",
+        "works": "analytic rank two -> p-infinity Selmer corank >=2 under Zhang Theorem 1.4 hypotheses",
+        "break": "lower bound does not give exactness"
+      },
+      {
+        "id": "BSD-R12-PINFINITY-VP",
+        "status": "stored scoped composition",
+        "works": "p-infinity Selmer corank = V_p Bloch-Kato Selmer dimension under usual local conditions",
+        "break": "coordinate binding does not supply an upper bound"
+      },
+      {
+        "id": "BSD-R11-KURIHARA",
+        "status": "prior route-pruning experience",
+        "works": "higher GZ/Kolyvagin/Kurihara structures give strong downstream Selmer information",
+        "break": "complex Taylor order two was not identified with the sharp discrete arithmetic order"
+      },
+      {
+        "id": "KIM-POLLACK-2505.09121",
+        "status": "primary-source candidate theorem cell; full directional audit pending",
+        "works": "abstract and Theorem 1.1 state exact Selmer rank/module structure from nonzero Kurihara-number data",
+        "break": "paper emphasizes discrete variation rather than complex/p-adic derivatives; exact complex-rank-two entry still requires audit"
+      }
+    ],
+    "method_transfer_matrix": [
+      {
+        "source_context": "Kim-Pollack exact Selmer structure from Kurihara-number order",
+        "method": "explicit reciprocity + Kolyvagin-system rigidity + global duality + modular-symbol functional equation",
+        "enabling_assumptions": [
+          "large image",
+          "nonvanishing Kurihara collection; good ordinary p>=5+p-distinguished gives a strong source route"
+        ],
+        "shared_structure": "both target and source seek an exact arithmetic rank coordinate",
+        "disanalogy": "source order is discrete Kolyvagin-derivative order, not complex Taylor order",
+        "minimum_repair_question": "Does a theorem derive discrete order exactly two from complex analytic order exactly two without importing exact Selmer/algebraic rank?"
+      }
+    ],
+    "cross_domain_analogy": {
+      "status": "RETAINED_PROPOSAL_ONLY",
+      "source": "calibrating two instruments that measure a common latent quantity",
+      "common_abstraction": "two coordinate systems each order states but require an independently verified calibration map before values can be identified",
+      "source_to_target_mapping": {
+        "instrument_A": "complex Taylor-order detector",
+        "instrument_B": "Kurihara discrete-order detector",
+        "latent_quantity": "arithmetic rank"
+      },
+      "shared_constraints": [
+        "same underlying E/Q",
+        "exact, not merely parity/monotonicity, calibration required"
+      ],
+      "disanalogies": [
+        "arithmetic coordinates can encode additional local/Iwasawa information; physical calibration intuition supplies no theorem"
+      ],
+      "transferable_principle": "audit the coordinate-transition theorem before composing exactness claims",
+      "falsifiable_validation": "find a primary theorem proving order transport, or reject the analogy as non-certifying"
+    },
+    "actual_fibre_consulted": [
+      "RAKL current main v3 facade/architecture/AGENTS/SKILL/manifest/core workflow/mathematical-research workflow/method_specs/pre_action_receipt/TaskEpisode contract",
+      "RAKL_math BSD root issue #7",
+      "merged BSD R9, R11, R12 application artifacts and R13 pending audit",
+      "Kim-Pollack arXiv:2505.09121 current manuscript introduction and Theorem 1.1/1.2"
+    ],
+    "memory_review": {
+      "selected": [
+        {
+          "id": "COR-BSD-R12-ZHANG-R9-TO-VP-LOWER",
+          "reason": "fixes the exact current lower-bound starting state"
+        },
+        {
+          "id": "LEM-BSD-R12-PINFINITY-VP-CORANK-DIM",
+          "reason": "prevents a duplicate coefficient-coordinate search"
+        },
+        {
+          "id": "F-BSD-A1A1-R8-SOURCE-FAMILY-REIMPORTS-ARITHMETIC-ENTRY",
+          "reason": "warns against carriers that simply reimport exact rank/nonvanishing"
+        },
+        {
+          "id": "BSD-R11-KURIHARA-ORDER-RESIDUAL",
+          "reason": "prior failure localizes the complex-vs-discrete order mismatch and changes routing toward a stronger direct same-Q theorem cell"
+        }
+      ],
+      "rejected": [
+        {
+          "id": "EP-BSD-A1A1-R7-GENERALIZED-KATO",
+          "reason": "useful for transverse localization diagnosis but does not answer exact-rank upper-bound coordinate"
+        },
+        {
+          "id": "XM018-INTERSECTION-NONEXPANSION",
+          "reason": "relevant to localization/generative directions, not to the exact-rank discrete-order micro-question"
+        },
+        {
+          "id": "R6-PLECTIC-CARRIER",
+          "reason": "introduces base-change/local reduction interfaces already known to be orthogonal to this same-Q exactness test"
+        }
+      ],
+      "misses": "CANNOT_MEASURE: repository/search-universe coverage is not complete; absence cannot be interpreted as no other relevant experience."
+    },
+    "decision_policy": "SEARCH same-domain direct exact-rank theorem cell first; reject parity/analogy/premise-reimport; only then consider JUMP/GLUE. No LIFT in this micro-cycle because bounded cross-problem exhaustion is not established.",
+    "predeclared_falsifier": "The candidate route fails if the primary source determines exact Selmer rank only from Kurihara order/nonvanishing but provides no theorem sending complex analytic order 2 to Kurihara order 2 (or an equivalent exact upper bound) under hypotheses weaker than the target arithmetic equality.",
+    "allowed_outcomes": [
+      "SUCCESS",
+      "PARTIAL_SUCCESS",
+      "FAILURE",
+      "BLOCKED"
+    ],
+    "canonical_method_surfaces": [
+      "decomposition",
+      "routing",
+      "search_query_generation",
+      "source_selection_reliability",
+      "claim_extraction",
+      "mathematical_context_translation",
+      "equivalence_similarity",
+      "contextual_theory_gluing",
+      "contradiction_diagnosis",
+      "gap_discovery",
+      "memory",
+      "synthesis",
+      "review",
+      "saturation_stopping"
+    ],
+    "authority": "PROPOSAL_SHADOW_PRE_CANDIDATE",
+    "independent_review_credit": "0/3",
+    "frozen_at_utc": "2026-08-12T07:30:47Z"
+  },
+  "chronology_note": "Frozen on the R14 branch before the deeper theorem-direction/Section-7 audit and before any R14 candidate composition or result record. Earlier discovery of the Kim-Pollack source is literature absorption, not candidate authority."
+}
