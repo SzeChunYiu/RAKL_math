@@ -1,0 +1,51 @@
+{
+  "schema_version": "rakl-hodge-diagnosis-v1",
+  "diagnosis_id": "D-H4D1C-IMAGE-COMPLETENESS-IS-CLOSED-TOPDIM-PROBLEM",
+  "atom_id": "H4d1c-e",
+  "attempted_implication": "A genuinely varying algebraic-witness source should cover the target Hodge branch once its actual image, rather than its source tangent, is controlled.",
+  "exact_mathematical_result": "For one reduced irreducible Hodge-locus germ H, a closed reduced same-class witness-image germ L contained in H with dim(L)=dim(H) equals H as a reduced germ.",
+  "diagnosis": "After C004 removes source-tangent dimension as a faithful progress measure, the first local completeness discriminator can be moved to the geometry of the image itself: exact class binding + closed image + target-component irreducibility + top-dimensionality are sufficient for reduced set-theoretic coverage.",
+  "strongest_supported_cause": "Irreducibility plus the strict dimension drop for proper closed subsets; the certificate succeeds because it controls the root consumer image directly rather than inferring it from source coordinates.",
+  "competing_causes_or_boundaries": [
+    "without closedness, a proper dense subset can have full dimension",
+    "without component binding, one top-dimensional component can miss another",
+    "without exact-class binding, domination can concern the wrong cohomology class",
+    "reduced-germ equality leaves nilpotents/formal neighborhoods uncontrolled",
+    "monodromy requires a local marking/trivialization before 'same alpha' is meaningful"
+  ],
+  "failure_category": [
+    "NO_FAILURE_FOR_SCOPED_LEMMA",
+    "REPRESENTATION_BOUNDARY_IF_CLASS_BINDING_DROPPED",
+    "LOCAL_TO_BASE_IMAGE_GLUING_BOUNDARY_IF_CLOSEDNESS_OR_COMPONENT_BINDING_DROPPED"
+  ],
+  "not_failure_category": [
+    "ROOT_SOLUTION",
+    "HIGHER_ARTIN_LIFTING",
+    "ALGEBRAIZATION",
+    "GLOBAL_CONTINUATION",
+    "INDEPENDENT_REVIEW"
+  ],
+  "falsifier": "Produce a proper closed reduced subgerm L of a reduced irreducible germ H with dim_s L = dim_s H, or an admissible same-class source satisfying all stated hypotheses whose reduced image germ fails to equal H.",
+  "repair_or_next_discriminator": "Construct a source-specific coupled signed-Q incidence and prove exact class identity, closedness/properness and top-dimensional reduced image for each target Hodge component; do not return to source-tangent-size arguments.",
+  "evidence": [
+    "direct irreducible-germ dimension proof in H4d1c_C005_CLOSED_TOPDIM_SOURCE_IMAGE_CERTIFICATE_20260812.md",
+    "C004 obstruction O-H4D1C-TOTAL-WITNESS-NONVERTICAL-HODGE-BRANCH-COVERAGE",
+    "Kloosterman arXiv:2104.14845 as special-family positive image-coverage calibration",
+    "Cattani-Deligne-Kaplan arXiv:alg-geom/9402009 as Hodge-locus geometric target control"
+  ],
+  "linked_prior_process_failures": [
+    {
+      "id": "D-H4D1C-INTERNAL-TANGENT-VS-BASE-IMAGE-CONFLATION",
+      "relation": "DIRECT_MATHEMATICAL_PREDECESSOR",
+      "reason": "C004 showed that source tangent enlargement may be vertical; C005 repairs routing by testing the actual closed image germ"
+    },
+    {
+      "id": "H4d1c-C001-RATIONAL-COEFFICIENT-CANCELLATION",
+      "relation": "COEFFICIENT_BOUNDARY_REUSE",
+      "reason": "prevents interpreting total-class persistence as componentwise persistence when constructing a signed-Q source"
+    }
+  ],
+  "episode_pointer": "H4d1c-C005-CLOSED-TOPDIM-SOURCE-IMAGE-CERTIFICATE",
+  "authority": "PROPOSAL_SHADOW_DIAGNOSIS_ONLY",
+  "timestamp": "2026-08-12T04:12:00Z"
+}

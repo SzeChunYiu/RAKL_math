@@ -1,0 +1,108 @@
+{
+  "schema_version": "hodge-frozen-math-context-v1",
+  "atom_id": "H4d1c-e",
+  "parent_obstruction_id": "O-H4D1C-TOTAL-WITNESS-NONVERTICAL-HODGE-BRANCH-COVERAGE",
+  "exact_root_contract": "For every smooth projective complex algebraic variety X and every codimension p, every rational Hodge class of type (p,p) in H^{2p}(X,Q) lies in the Q-span of codimension-p algebraic cycle classes.",
+  "framework": {
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "live_main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0"
+  },
+  "rakl_math_base_sha": "48c88e4f099806bbc50d55d010e558f833d82a49",
+  "rakl_math_pre_tree_fingerprint": "git-tree:d8e24b5df1064ac2aca1cc817d5af6db494a97ab",
+  "fibre_manifest": {
+    "atom_id": "H4d1c-e",
+    "problem_signature": [
+      "rational Hodge conjecture exact smooth-projective/rational scope",
+      "conditional local propagation from an already algebraic signed rational central witness",
+      "C004 residual: branch reachability requires controlling the image of a genuinely varying witness/incidence source in one Hodge-locus component",
+      "replace source-tangent size heuristics by a closed-image same-class top-dimensionality certificate",
+      "separate reduced set-theoretic branch coverage from scheme-theoretic/higher-Artin lifting"
+    ],
+    "exact_question": "For one irreducible reduced local Hodge-locus component H for a fixed flat rational class alpha, what minimal source-family conditions suffice to turn an algebraic-witness incidence image into complete local branch coverage without inferring coverage from source tangent dimension?",
+    "falsifier": "Exhibit an irreducible reduced germ H and a closed analytic/algebraic subgerm L contained in H, through the base point, with dim L = dim H but L a proper subgerm; or show that same-class proper witness incidence can satisfy the proposed hypotheses while failing set-theoretic local coverage.",
+    "fibre_contents_consulted": [
+      "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: RAKL_VERSION.json",
+      "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: ARCHITECTURE.md",
+      "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: src/rakl/method_specs.py",
+      "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: src/rakl/experience_substrate.py",
+      "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0: src/rakl/saturation_vector.py",
+      "RAKL_math@48c88e4f099806bbc50d55d010e558f833d82a49: issue #6 exact root contract/status",
+      "RAKL_math@48c88e4f099806bbc50d55d010e558f833d82a49: config/rakl-framework-pin.json",
+      "RAKL_math@48c88e4f099806bbc50d55d010e558f833d82a49: H4d1c-C004 proposal/shadow packet merged by PR #264",
+      "RAKL_math@48c88e4f099806bbc50d55d010e558f833d82a49: cross_problem math-first lesson boundary PR #281",
+      "RAKL_math@48c88e4f099806bbc50d55d010e558f833d82a49: GLOBAL_MATH_ONLY_SATURATION_LEDGER_POINCARE_C001_SUCCESSOR_20260812.json (bounded cross-problem accounting; no C004 hit observed in searched content)",
+      "Kloosterman arXiv:2104.14845",
+      "Cattani-Deligne-Kaplan arXiv:alg-geom/9402009",
+      "Buchweitz-Flenner arXiv:math/9912245"
+    ],
+    "selected_experience_ids": [
+      "H4d1c-C004-TOTAL-WITNESS-PROJECTION-FAITHFULNESS",
+      "O-H4D1C-TOTAL-WITNESS-NONVERTICAL-HODGE-BRANCH-COVERAGE",
+      "L-H4D1C-TANGENT-ENLARGEMENT-NEEDS-PROJECTION-WITNESS-V1",
+      "H4d1c-C001-RATIONAL-COEFFICIENT-CANCELLATION",
+      "H4d1c-C003-TOTAL-WITNESS-CONIC-TANGENT-ESCAPE"
+    ],
+    "rejected_experience_ids": [
+      {
+        "id": "H4d1a same-detector branch no-go family",
+        "reason": "different discriminator: detector injectivity rather than source-image completeness"
+      },
+      {
+        "id": "Buchweitz-Flenner-semiregularity-as-general-rational-cycle-transfer",
+        "reason": "positive deformation analogue, but its semiregularity/coherent-module hypotheses do not supply a general coupled signed-Q-cycle source for the root"
+      },
+      {
+        "id": "cross-Millennium gluing analogies",
+        "reason": "same-context Hodge source-image residual already determines the smallest discriminator; no transfer needed"
+      }
+    ],
+    "missed_prior_experience": "NONE_OBSERVED_IN_BOUNDED_CURRENT-MAIN/PR/LITERATURE_CHECK; repository code search found no C005/source-image-certificate duplicate, but this is not a completeness proof.",
+    "operators_motifs_tried": [
+      "consumer-first image-completeness reformulation",
+      "irreducible-germ dimension certificate",
+      "counterexample-first assumption deletion: closedness, irreducibility, exact-class binding, monodromy trivialization",
+      "positive-source calibration against Kloosterman flag-Hilbert incidence",
+      "semiregularity transfer-disanalogy audit",
+      "rational coefficient/category guard",
+      "higher-Artin/algebraization/globalization separation"
+    ],
+    "expert_cell": [
+      {
+        "role": "VHS/Hodge-locus lead",
+        "background": "polarized VHS, Hodge loci, local systems",
+        "delegation": "freeze one reduced irreducible Hodge component and exact flat-class binding; audit monodromy/local marking"
+      },
+      {
+        "role": "Hilbert/Chow deformation lead",
+        "background": "relative Hilbert/Chow/flag incidence and proper morphisms",
+        "delegation": "state source-family image hypotheses and distinguish closed image coverage from tangent-space size"
+      },
+      {
+        "role": "algebraic-cycle coefficient lead",
+        "background": "cycles with rational coefficients and cycle-class realization",
+        "delegation": "ensure signed Q-witness semantics are coupled and no effective/componentwise substitution is smuggled in"
+      },
+      {
+        "role": "deformation/formal lead",
+        "background": "infinitesimal, Artin and algebraization theory",
+        "delegation": "separate reduced set-theoretic branch coverage from formal/scheme-theoretic lifting and algebraization"
+      },
+      {
+        "role": "variational-analogue lead",
+        "background": "variational Hodge results and semiregularity",
+        "delegation": "check Kloosterman/Buchweitz-Flenner as positive shapes with explicit disanalogies"
+      },
+      {
+        "role": "adversarial verifier/RAKL lead",
+        "background": "counterexamples, scope auditing, v3 authority/metrology",
+        "delegation": "delete each hypothesis, test the cheapest boundary case, and prevent same-context review from receiving independent credit"
+      }
+    ],
+    "authority": "PROPOSAL_SHADOW_ONLY"
+  },
+  "fibre_snapshot_hash": "sha256:96633bf85520c261d7651566ef7980cb49cfbb2588c3c7c94cb53123f4cbc9f2",
+  "frozen_at": "2026-08-12T04:12:00Z",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "context_hash": "sha256:7f8f5ddb80081f3b0330db77e3dc84668add79bf757b9bf1f48924409f7e091f"
+}
