@@ -1,0 +1,100 @@
+{
+  "actual_fibre": [
+    "CURRENT RAKL@10c35704445216fb7595fefb10e06e8ddaf694a2: RAKL_VERSION.json, src/rakl/method_specs.py, docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md, schemas/task-episode.schema.json, src/rakl/experience_substrate.py, src/rakl/v3_authority.py",
+    "RAKL_math@3cfc8a3b2ff6d981351d2f15421c8cc08048f74b: Navier-Stokes canonical_statement.md and success_contract.yaml",
+    "RAKL_math issue #173 prospectively frozen signed-flux/no-recrossing discriminator",
+    "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+    "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+    "PR184 Grujic consumer-signature audit (retrieved as current open sibling, no authority)",
+    "PR183 terminal-cardinality-to-morphology audit (retrieved as current open sibling, no authority)",
+    "PR170 finite-history amplitude scaling-lift episode (retrieved as proposal/shadow, no authority)",
+    "Albritton-Barker arXiv:1811.00502 primary source",
+    "Pineau-Vicol arXiv:2607.09619 current v2 source as orthogonal rigidity/interface analogue"
+  ],
+  "analogues": [
+    {
+      "disanalogy": "not finite global energy and not a finite-I ancient Clay-class solution",
+      "id": "HEAT-SHEAR-EXACT-NSE",
+      "role": "solved exact-equation analogue",
+      "transfer": "pressure-free shear reduces NSE to one-dimensional heat flow, allowing exact local-energy sign calibration"
+    },
+    {
+      "disanalogy": "instantaneous far-field summability is not a signed temporal law",
+      "id": "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+      "role": "same-context failure analogue",
+      "transfer": "pressure nonlocality alone did not create anti-replication via far-field divergence"
+    },
+    {
+      "disanalogy": "scale-neutrality does not itself exclude signed cancellation or no-recrossing",
+      "id": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "role": "same-context failure analogue",
+      "transfer": "absolute magnitude ledger is scale-neutral and lacks a summable descendant currency"
+    },
+    {
+      "disanalogy": "requires stronger pointwise Type-I/structural hypotheses than finite A+C+D+E",
+      "id": "PINEAU-VICOL-2607.09619v2",
+      "role": "near-solved rigidity analogue",
+      "transfer": "one-slice/generator-smallness and weighted structures are examples of extra temporal/rigidity coordinates"
+    }
+  ],
+  "application_base_sha": "3cfc8a3b2ff6d981351d2f15421c8cc08048f74b",
+  "atom_id": "NS-B1a4",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "candidate_route": {
+    "policy": "counterexample_first / exact-equation low-cost sign falsifier",
+    "proposal": "Use an off-center Gaussian heat shear u=(f(x2,t),0,0), p=0. Verify exact NSE, then choose parameters so localized kinetic energy in a fixed ball/cutoff increases. If successful, prune only generic local-energy/pressure-only monotonicity and retain the global finite-I DifferenceWitness.",
+    "why_high_information": "It directly tests the sign source with no pressure or nonlinear ambiguity before searching for a new flux theorem."
+  },
+  "counterexample_first_falsifiers": [
+    "If the proposed shear is not an exact smooth NSE solution with p=0, reject.",
+    "If localized kinetic energy cannot be made strictly increasing for a fixed positive interval, reject.",
+    "If the increase is caused by an unaccounted pressure or nonlinear term, reject the pressure-zero calibration.",
+    "If the calibration actually satisfies the global finite-I ancient source contract, re-audit the claimed scope rather than assuming it.",
+    "If it violates global finite-I, use it only to falsify generic local-balance sign and keep the finite-I-specific theorem open."
+  ],
+  "cycle_id": "NS-B1a4-C001-R1-SIGNED-RECROSSING-20260812",
+  "fibre_snapshot_hash": "sha256:acfb51eae1499ab1bd355871efd7371ca1774cd2692ddb1646afdc0ae603da41",
+  "framework": {
+    "core_surface_drift_from_application_pin": "NONE_IN_INSPECTED_V3_CORE; current main advanced only in Paper-2 research files from the last inspected core SHA",
+    "current_main_read_before_math": true,
+    "git_sha": "10c35704445216fb7595fefb10e06e8ddaf694a2",
+    "method": "RAKL v3 Verified Discovery / proposal-shadow experience substrate",
+    "method_version": "3.0.0",
+    "package_version": "0.1.0"
+  },
+  "interfaces_to_audit": [
+    "exact divergence-free NSE identity and viscosity normalization",
+    "localized kinetic-energy derivative with a fixed ball/cutoff",
+    "convective flux and pressure contribution",
+    "parameter inequalities and endpoint strictness",
+    "global energy and finite-I membership of the hostile calibration",
+    "scaling and units",
+    "pressure/nonlocality versus viscous boundary transport",
+    "finite-I ancient/local-to-global DifferenceWitness",
+    "whether any conclusion circularly assumes a signed observable absent from A+C+D+E"
+  ],
+  "issue_id": "RAKL_math#173",
+  "nonpromotion": [
+    "local sign calibration is not a finite-I ancient counterexample unless exact source membership is proved",
+    "same-context expert review is not independent review",
+    "computation/calculus checking is not theorem authority",
+    "Type-I route progress does not close Type-II",
+    "no root promotion without protected gates"
+  ],
+  "parent_residual": "NS-B1a1/NS-B1a2 scale-symmetry-breaker and no-recrossing residual",
+  "problem_signature": "Whole-space 3D incompressible Navier-Stokes. Test whether the registered finite-I magnitude ledger A+C+D+E plus standard suitable-solution local-energy balance and pressure localization intrinsically yields a one-sided signed temporal/no-recrossing law at nested scales, without adding a new signed flux/correlation/trajectory observable or stronger global input.",
+  "root_contract": {
+    "independent_mathematical_reviews": "0/3",
+    "root_authority": "NONE",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "target": "Clay statement (A) positive-regularity lane; root alternatives unchanged"
+  },
+  "schema_version": "math-context-fiber-v3-proposal-shadow-r1",
+  "success_contract": {
+    "blocked": "CANNOT_CHECK_SOURCE_OR_INTERFACE: isolate the first unavailable pressure/local-energy/source interface.",
+    "negative": "EXISTING_LEDGER_SIGN_INSUFFICIENT_ROUTE_PRUNING: exhibit an exact NSE calibration showing the local-energy/pressure machinery has no generic intrinsic sign, while preserving a DifferenceWitness if the calibration is outside the global finite-I ancient class.",
+    "positive": "EXISTING_LEDGER_HAS_SIGN_CERTIFICATE: derive a source-valid one-sided signed/no-recrossing quantity from the exact finite-I source class with constants uniform under scaling and limit passage.",
+    "root_nonpromotion": "No allowed branch is a Clay theorem or root promotion."
+  }
+}
