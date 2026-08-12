@@ -1,0 +1,65 @@
+{
+  "review_id": "XM-PC-NS-001-C001-EXPERT-POSTCHECK-20260812",
+  "atom_id": "XM-PC-NS-001",
+  "candidate_id": "XM-PC-NS-001-C001-HASH-TRIAD",
+  "authority": "SAME_CONTEXT_ROLE_SEPARATED_ONLY",
+  "independent_review_credit": "0/3",
+  "roles": [
+    {
+      "role": "3D Navier-Stokes / vorticity analyst",
+      "background": "periodic incompressible Navier-Stokes, vorticity formulation, a priori identities",
+      "delegated_check": "derive the exact enstrophy identity and verify that only the t=0 classical derivative is consumed",
+      "finding": "the identity is valid for the frozen smooth divergence-free trigonometric datum; no global existence assumption is used",
+      "objection": "a negative derivative at one datum is not evidence for universal monotonicity"
+    },
+    {
+      "role": "harmonic-analysis / Fourier specialist",
+      "background": "Fourier triads, Parseval, resonant convolution on the torus",
+      "delegated_check": "verify divergence-free polarizations, curl norms, dissipation and the cubic resonant sum",
+      "finding": "mean curl-square is 122, mean grad-curl-square is 1297, and all twelve nonzero resonant cubic contributions cancel exactly",
+      "objection": "the cancellation may be phase/polarization-specific and should not be generalized from one triad"
+    },
+    {
+      "role": "scaling and dimensional auditor",
+      "background": "Navier-Stokes scaling, amplitude homogeneity, endpoint and constant checks",
+      "delegated_check": "audit A and nu powers and sign logic",
+      "finding": "stretching scales as A^3 and viscous dissipation as nu A^2; for this frozen field the A^3 coefficient is exactly zero, leaving -1297 nu A^2 (2pi)^3",
+      "objection": "there is no amplitude threshold to exploit inside C001 because the cubic coefficient vanishes"
+    },
+    {
+      "role": "adversarial falsification specialist",
+      "background": "counterexample-first PDE testing and failure-scope control",
+      "delegated_check": "try to over-interpret the candidate outcome and identify the cheapest invalid inference",
+      "finding": "C001 fails as a falsifier; it neither supports nor refutes universal enstrophy monotonicity",
+      "objection": "repairing the field after seeing the result would violate the frozen-candidate contract; a second field needs a fresh continuation"
+    },
+    {
+      "role": "analogy and method-transfer specialist",
+      "background": "structural transfer, DifferenceWitness analysis, geometric-flow versus fluid-PDE disanalogies",
+      "delegated_check": "audit the Perelman-to-Navier-Stokes JUMP boundary",
+      "finding": "the parent JUMP licenses only the first-condition sign falsifier; Ricci entropy, noncollapse, canonical neighborhoods, surgery and extinction remain non-transferable",
+      "objection": "source success never creates target theorem authority"
+    },
+    {
+      "role": "formal methods / verifier-trust auditor",
+      "background": "exact arithmetic, trace chronology, provenance and promotion gates",
+      "delegated_check": "check that the candidate was durably frozen before the exact sign calculation and that the result uses exact rather than floating-point arithmetic",
+      "finding": "candidate freeze commit 58948d71d63a79a9daba03333eedbd6d7e5adca7 precedes result commit dc6572b75ee4d64b8c8d99d8decd44b77788119f; the displayed coefficient calculation is finite Gaussian-rational algebra",
+      "objection": "this is not a machine-checked proof artifact and earns no protected proof authority"
+    },
+    {
+      "role": "novelty and research-value reviewer",
+      "background": "mathematical novelty triage and route-value assessment",
+      "delegated_check": "separate exact local fact from research novelty and root progress",
+      "finding": "the exact cancellation is useful negative history for this candidate construction but has no defensible external novelty claim and no Clay-root progress",
+      "objection": "repository growth and a failed candidate must not be counted as framework or mathematical learning without retained semantic evidence"
+    }
+  ],
+  "discussion_synthesis": [
+    "All roles agree the C001 algebra is internally consistent and candidate-specific.",
+    "The local mathematical candidate failed before any local-to-global/gluing question arose.",
+    "The only justified routing change is to avoid reusing this exact phase/polarization triad and reopen PATH for a structurally distinct frozen field under a fresh continuation.",
+    "No obstruction or reusable lesson is promoted from one failure; the failure record remains OBSERVED_ONLY."
+  ],
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+}
