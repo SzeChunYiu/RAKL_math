@@ -1,0 +1,132 @@
+{
+  "artifact_type": "CURRENT_WORK_COVERAGE_OBSERVATION_PROPOSAL_ONLY",
+  "authority": {
+    "grants_application_evidence_authority": false,
+    "grants_mathematical_authority": false,
+    "grants_novelty_authority": false,
+    "grants_promotion_authority": false,
+    "grants_review_independence_authority": false,
+    "grants_tool_authority": false
+  },
+  "bound_open_work_universe": [
+    "issue:1",
+    "issue:3",
+    "issue:5",
+    "issue:6",
+    "issue:7",
+    "issue:171",
+    "pr:146",
+    "pr:147",
+    "pr:167",
+    "pr:168",
+    "pr:169",
+    "pr:170",
+    "pr:172"
+  ],
+  "coverage_semantics": "SAMPLED_SUBSET",
+  "current_work_binding_status": "CURRENT_WORK_NOT_BOUND",
+  "cycle_id": "XM012-ENDPOINT-ANCHOR-OVERTRANSFER-FALSIFIER-20260811",
+  "framework_defect_status": "NO_NEW_FRAMEWORK_DEFECT: fail-closed behavior is the intended v3 behavior; this run exposes a connector/pagination materialization limitation.",
+  "framework_subject": "fd188f9664da0a1dcba633c30c17ce511f598d51",
+  "framework_surface": "current_work_coverage.CurrentWorkCoverageReceipt / audit_current_work_coverage",
+  "native_binding_verdict": "CURRENT_WORK_INCOMPLETE",
+  "observed_default_branch": "main",
+  "observed_default_branch_head": "9c2cebe8d5a2b1381af5a40cbea86a6826e7210a",
+  "observed_open_counts": {
+    "api_incomplete_results": false,
+    "issues": 32,
+    "pull_requests": 58,
+    "total": 90
+  },
+  "raw_repository_growth_is_learning": false,
+  "recorded_at_utc": "2026-08-11T21:11:44Z",
+  "repository": "SzeChunYiu/RAKL_math",
+  "routing_consequence": "Targeted current work informed route selection, but no completeness claim is made and missed live work remains possible.",
+  "schema_version": "xm012-current-work-coverage-observation-v1",
+  "search_surface": [
+    "GitHub REST search: repo:SzeChunYiu/RAKL_math is:open is:issue per_page=100",
+    "GitHub REST search: repo:SzeChunYiu/RAKL_math is:open is:pr per_page=100",
+    "targeted retrieval of six latest lane records and predecessor/supersession items"
+  ],
+  "why_not_bound": "The API reported all-count totals below 100 with incomplete_results=false, but the connector response was content-truncated before the agent could materialize and hash all 90 work-item records. Under current RAKL v3 SAMPLED_SUBSET cannot support CURRENT_WORK_BOUND.",
+  "work_item_records": [
+    {
+      "disposition": "INCLUDED",
+      "kind": "ISSUE",
+      "reason": "cross-Millennium root control",
+      "work_item_id": "issue:1"
+    },
+    {
+      "disposition": "INCLUDED",
+      "kind": "ISSUE",
+      "reason": "RH root control",
+      "work_item_id": "issue:3"
+    },
+    {
+      "disposition": "INCLUDED",
+      "kind": "ISSUE",
+      "reason": "Yang-Mills root control",
+      "work_item_id": "issue:5"
+    },
+    {
+      "disposition": "INCLUDED",
+      "kind": "ISSUE",
+      "reason": "Hodge root control",
+      "work_item_id": "issue:6"
+    },
+    {
+      "disposition": "INCLUDED",
+      "kind": "ISSUE",
+      "reason": "BSD root control",
+      "work_item_id": "issue:7"
+    },
+    {
+      "disposition": "INCLUDED",
+      "kind": "ISSUE",
+      "reason": "YM terminal-anchor prospective repair child",
+      "work_item_id": "issue:171"
+    },
+    {
+      "disposition": "INCLUDED",
+      "kind": "PULL_REQUEST",
+      "reason": "Hodge live-case telemetry and work-state failure",
+      "work_item_id": "pr:146"
+    },
+    {
+      "disposition": "INCLUDED",
+      "kind": "PULL_REQUEST",
+      "reason": "RH target residual",
+      "work_item_id": "pr:147"
+    },
+    {
+      "disposition": "INCLUDED",
+      "kind": "PULL_REQUEST",
+      "reason": "BSD latest merged cycle; current-main parent",
+      "work_item_id": "pr:167"
+    },
+    {
+      "disposition": "REJECTED",
+      "kind": "PULL_REQUEST",
+      "reason": "YM predecessor retrieved for chronology but superseded for the terminal-anchor detail by newer PR172",
+      "work_item_id": "pr:168"
+    },
+    {
+      "disposition": "INCLUDED",
+      "kind": "PULL_REQUEST",
+      "reason": "PNP latest merged coordinate inventory",
+      "work_item_id": "pr:169"
+    },
+    {
+      "disposition": "INCLUDED",
+      "kind": "PULL_REQUEST",
+      "reason": "NS latest live cycle",
+      "work_item_id": "pr:170"
+    },
+    {
+      "disposition": "INCLUDED",
+      "kind": "PULL_REQUEST",
+      "reason": "YM source atom / newest terminal-anchor audit",
+      "work_item_id": "pr:172"
+    }
+  ]
+}
