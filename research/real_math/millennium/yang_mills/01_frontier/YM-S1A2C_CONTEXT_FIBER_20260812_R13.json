@@ -1,0 +1,147 @@
+{
+  "schema": "RAKL_math.math_context_fiber_shadow.v1",
+  "atom_id": "YM-S1a2c",
+  "parent_atom_id": "YM-S1a2",
+  "root_issue": 5,
+  "control_issue": 238,
+  "problem_signature": "YM-S1A2C-SZZ-WEAK-LIMIT-REFLECTION-POSITIVITY-SAME-WILSON-MEASURE",
+  "object_context": "At one fixed lattice spacing in the explicit Shen-Zhu-Zhu strong-coupling SU(N) Wilson lattice theory, determine whether the exact infinite-volume measure obtained as the thermodynamic limit of the finite-volume Wilson measures inherits Osterwalder-Schrader reflection positivity for bounded continuous positive-time gauge-invariant cylinder sources, without changing action, boundary condition, reflection, gauge sector, measure, or normalization.",
+  "qoi_success_contract": [
+    "Source-bind the finite-volume SZZ measure as the Wilson plaquette measure on periodic lattices in the selected positive-beta strong-coupling regime.",
+    "Source-bind finite-volume reflection positivity/physical positivity for the matching Wilson action and a compatible finite-volume reflection geometry.",
+    "Use a reflection-compatible cofinal subsequence and bind SZZ convergence strongly enough that its limit is the same mu^ym_{N,beta}.",
+    "For every bounded continuous positive-time cylinder F in scope, verify conjugate(theta F) F is a bounded continuous cylinder so finite-volume nonnegativity passes through weak convergence.",
+    "Keep gauge invariance, reflection invariance, positive transfer/Hamiltonian identification, covariance-to-transfer moments, support-distance-to-time geometry, lattice-spacing uniformity, RG transport, and continuum spectral identification as separate coordinates."
+  ],
+  "scope": {
+    "gauge_group": "SU(N)",
+    "dimension": "d >= 2 as source permits; Yang-Mills root relevance d=4 only",
+    "coupling": "prospectively restrict to 0 < beta < 1/[16(d-1)] unless primary sources force a narrower overlap",
+    "cutoff": "fixed lattice spacing",
+    "volume": "thermodynamic limit only",
+    "excluded": [
+      "a->0 continuum limit",
+      "weak-coupling/asymptotic-freedom interpolation",
+      "physical mass-gap normalization",
+      "Clay root closure"
+    ]
+  },
+  "structural_coordinates": [
+    "finite periodic Wilson lattice Gibbs measures",
+    "fixed Euclidean time reflection compatible with an even temporal torus",
+    "reflection-positive quadratic cone Q_L(F)=mu_L(conj(theta F)F)>=0",
+    "local/cylinder weak convergence on a common compact product configuration space",
+    "bounded-continuous reflected quadratic cylinder functional",
+    "same-measure identity across finite-volume subsequence and SZZ infinite-volume limit",
+    "gauge invariance and reflection invariance typed separately from reflection positivity"
+  ],
+  "equivalent_formulations": [
+    "For every bounded continuous F supported in a fixed positive-time half-space cylinder algebra, show lim_L Q_L(F)=Q_infty(F)>=0 along a reflection-compatible cofinal sequence.",
+    "Show the positive cone of OS quadratic forms on the local cylinder algebra is closed under the exact local weak limit defining the SZZ infinite-volume state."
+  ],
+  "solved_near_solved_analogues": [
+    {
+      "id": "weak-limit-positive-functional",
+      "method": "closedness of a scalar nonnegative inequality under convergence of expectations of bounded continuous observables",
+      "transfer_assumptions": [
+        "common measurable/configuration space",
+        "test observable belongs to convergence class"
+      ],
+      "disanalogies": [
+        "does not create reflection positivity if finite-volume inequality is for a different action/reflection"
+      ]
+    },
+    {
+      "id": "finite-Wilson-RP-literature",
+      "method": "factor plaquette weights across a reflection plane and prove positive/physical positivity for Wilson gauge action",
+      "transfer_assumptions": [
+        "exact Wilson action",
+        "compatible lattice/reflection/boundary geometry",
+        "positive beta or theorem-specific coupling scope"
+      ],
+      "disanalogies": [
+        "finite-volume positivity does not itself identify the SZZ thermodynamic limit"
+      ]
+    },
+    {
+      "id": "R11-source-density-proposal",
+      "method": "same-measure L2 density plus OS-seminorm continuity",
+      "transfer_assumptions": [
+        "same reflection-positive measure"
+      ],
+      "disanalogies": [
+        "open PR #225 proposal/shadow only; not strict authority; presupposes the same-measure RP coordinate now under test"
+      ]
+    }
+  ],
+  "method_transfer_matrix": [
+    {
+      "method": "weak-limit closure of RP inequality",
+      "source_role": "probability/functional analysis",
+      "shared_structure": "one bounded continuous scalar test functional per cylinder source",
+      "required_assumptions": [
+        "finite-volume RP",
+        "local weak convergence",
+        "reflection-compatible embeddings"
+      ],
+      "target_falsifier": "find F for which reflected product is outside the convergence class or finite-volume reflections/actions do not match"
+    },
+    {
+      "method": "Wilson-action finite-volume reflection positivity",
+      "source_role": "constructive lattice gauge theory",
+      "shared_structure": "plaquette Wilson Gibbs weight and coordinate reflection",
+      "required_assumptions": [
+        "same action/sign/coupling",
+        "reflection-compatible torus/box"
+      ],
+      "target_falsifier": "source theorem needs boundary/action/gauge fixing different from SZZ finite-volume family"
+    }
+  ],
+  "cross_domain_analogy_scan": [
+    {
+      "analogy": "positive-semidefinite matrices are closed under entrywise limits",
+      "common_abstraction": "nonnegative quadratic inequalities survive convergence when every tested quadratic coordinate converges",
+      "status": "PROPOSAL_ONLY",
+      "difference_witness": "OS reflection couples reflected and unreflected local fields and still needs common source state/reflection; matrix analogy supplies no lattice-gauge theorem"
+    }
+  ],
+  "same_context_expert_cell": [
+    {
+      "role": "constructive QFT / OS reconstruction",
+      "pre_candidate_objection": "Do not infer a transfer operator or Hamiltonian merely from limiting reflection positivity."
+    },
+    {
+      "role": "lattice gauge transfer theory",
+      "pre_candidate_objection": "Finite-volume RP must match Wilson action, sign, lattice geometry and reflection plane exactly; even-time subsequence may be necessary."
+    },
+    {
+      "role": "Gibbs / weak-limit probability",
+      "pre_candidate_objection": "Weak convergence passes only bounded continuous local functionals; verify whole-sequence or subsequence limit identity."
+    },
+    {
+      "role": "spectral theory",
+      "pre_candidate_objection": "Even passed RP is upstream of the covariance-to-transfer-moment and excited-spectrum gap steps."
+    },
+    {
+      "role": "RG / continuum uniformity",
+      "pre_candidate_objection": "Fixed-cutoff positivity supplies no lattice-spacing-uniform physical spectral lower bound."
+    },
+    {
+      "role": "adversarial source / RAKL assurance",
+      "pre_candidate_objection": "Open PR #225 and PR #62 may guide routing but cannot act as strict authority; preserve local-vs-gluing separation and zero independent-review credit."
+    }
+  ],
+  "source_anchors_prospective": [
+    "H. Shen, R. Zhu, X. Zhu, A stochastic analysis approach to lattice Yang-Mills at strong coupling, arXiv:2204.12737 / CMP 400 (2023).",
+    "K. Osterwalder, E. Seiler, Gauge field theories on a lattice, Annals of Physics 110 (1978), DOI 10.1016/0003-4916(78)90039-8.",
+    "M. Luescher, Construction of a selfadjoint, strictly positive transfer matrix for Euclidean lattice gauge theories, Communications in Mathematical Physics 54 (1977)."
+  ],
+  "frozen_at": "2026-08-12T02:17:00Z",
+  "framework_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+  "rakl_method_version": "3.0.0",
+  "skill_manifest_version": "0.7.0",
+  "rakl_math_base": "ac8c0745be8aed791a446fd55fcf5154cac01962",
+  "candidate_generation_status": "BLOCKED_PENDING_CURRENT_GATE_C_AND_SOURCE_BINDING_ACTION",
+  "authority": "PROPOSAL_SHADOW_PRE_CANDIDATE_ONLY",
+  "packet_hash": "sha256:f8afb1a5b12fde492714a7db26121c98c4339d8550271be31a2349324b58b767"
+}
