@@ -1,0 +1,33 @@
+{
+  "artifact_hash": "sha256:43209876a6c243397a08628626f8a88b2686281839fa5ee59fed36514c4ca104",
+  "authority": "SAME_CONTEXT_SCOPED_MATHEMATICS_NO_RH_ROOT_AUTHORITY",
+  "credit_type": "SCOPED_PROOF_OR_LEMMA",
+  "deduplication": {
+    "assurance_metadata_mathematical_credit": 0,
+    "global_ledger_updated": false,
+    "independent_review_credit": 0,
+    "literature_novelty_claim": false,
+    "new_scoped_mathematical_unit_count": 1
+  },
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_ANA_003k_JY_C001_FLOOR_RATIO_CANDIDATE_FREEZE_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003k_JY_C001_FLOOR_RATIO_EXECUTION_ACTIVATION_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003k_JY_C001_FLOOR_RATIO_HAND_PROOF_20260812T174900Z.json",
+    "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003k_JY_C001_POST_ACTIVATION_RESULT_20260812T175100Z.json"
+  ],
+  "mathematical_unit_count": 1,
+  "record_type": "SCOPED_MATHEMATICAL_LESSON",
+  "result_artifact_hash": "sha256:9396021b213bb9c676e616386c9c0dbfd66ffbe79331bffdef5538f9bcace990",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "seven_field_math_lesson": {
+    "attempted_implication": "Test whether the currently proved Johnston--Yang sufficient strict-search certificate can cover log Y_n=C n^(5/3)log^2(n+e), separately for each arbitrary fixed C>0.",
+    "exact_result_or_failure": "The ratio to the mandatory quadratic floor tends to zero for every fixed C>0. Consequently the diagonal is eventually below F_n, U_JY, ceil(U_JY), and tilde_m_JY, so Y_n(C)<tilde_M_JY. This is failure of the current sufficient certificate to reach that diagonal, not failure of the actual remainder.",
+    "falsifier": "Refute the exact ratio identity or logarithm-over-power limit; let C depend on n; reverse the max/ceiling chain; break the bound tilde_m_JY>=ceil(U_JY); or infer actual remainder, prefixes, Li signs, or RH from certificate insufficiency.",
+    "mathematical_repair": "A positive successor must freeze and validate a source-complete envelope whose proof domain extends below the quadratic U_JY floor, or prospectively freeze a larger diagonal. It may not alter the evaluated theorem, choose C after outcomes, or relabel certificate insufficiency as object failure.",
+    "proof_and_source_evidence": "Exact algebra for F_n; t_n=(1/3)log(n+e); exp(t)>=t^3/6; squeezing; fixed-C scalar multiplication; max and ceiling order; strict monotonicity of exp; and the earlier proved strict-search start m0=ceil(U_JY). The record checker, planted software worlds, Git, CI, hashes, schemas, and chronology receive zero mathematical credit.",
+    "scope": "One arbitrary fixed real C>0 at a time and only the current sufficient strict-search certificate. No cutoff uniform over unbounded C; no actual-remainder, internal-prefix, Li-sign, novelty, independent-review, formal-proof, or RH authority.",
+    "supported_and_competing_causes": "Supported cause: exact division leaves a bounded n^2/(n+0.515)^2 factor times the vanishing scale log^2(n+e)/n^(1/3). Fixed C preserves this degree gap. The competing growing-C_n world can erase the gap but is outside the frozen quantifier. A sharper envelope valid below U_JY could still control the actual remainder. Epsilon-dependent excess cannot lower a strict-search threshold below its mandatory start."
+  },
+  "unit_id": "MATH-RH-ANA003K-JY-C001-POST-ACTIVATION-FIXED-C-FLOOR"
+}
