@@ -1,0 +1,90 @@
+{
+  "application_base_sha": "31cc68929a947311b9abfcc7b397c83b8ec30d3f",
+  "artifact_hash": "sha256:9d920d5243d9dcc5e51b9088909f99f19373e7e86dc5731bc40c765ab23f6d17",
+  "authorization_artifact_hash": "sha256:078ed4be2cf0f4da62f8960d7cb19519b73a2ac797f219ba8f5dd7f6d48dd299",
+  "exact_mathematical_result": "The frozen 32-pair clean phase is compatible: pair (parent v,current v+)=(8,5) has a canonical UNSAT parent whose 33-bit label equals a canonical current prefix.",
+  "implementation_hashes": {
+    "candidate": "sha256:e01a2456a01fd1808dd34ce7a79df363e33586057543c9abe98841369070fd51",
+    "independent_checker": "sha256:ae4a7550fe46845f071f447660edf86871cd2d5072dcbbd5b84f3e7cf9009575"
+  },
+  "independent_check_artifact_hash": "sha256:01bd74e30c122a90be10a621b1ce3228da5f037b760f1e2954e4fa16f808d0ca",
+  "lesson_artifact_hash": "sha256:953de3d30a0f86cd00186b722898811907931fd0f84c04fde4eacdf9d32986ba",
+  "mathematical_credit": [
+    "explicit formula-bound 33-bit compatibility witness",
+    "three-step hand resolution refutation of the parent formula"
+  ],
+  "open_residual": "Whether this compatible label forces any new cover requirement remains unevaluated and requires a separately frozen discriminator.",
+  "positive_certificate_artifact_hash": "sha256:bea74485b372a7ee0f05dbba294d0f26c8aa0cd97d51cbdf72620620548f0da6",
+  "public_trace_deltas": [
+    {
+      "action_summary": "Check the hand certificate, source bindings, branch propagation, false positives, and exact corroboration.",
+      "artifact_hash": "sha256:f19ffc3e56da7db064a52b5abcffe1eeaa619a48670674a4c8213e1de4447847",
+      "atom_id": "O9d12a2a1b-C053-K32-CLEAN-PHASE-COMPATIBILITY",
+      "event_id": "O9d12a2a1b-C053-K32-CLEAN-PHASE-E10",
+      "event_type": "FALSIFIER_RUN",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C053_K32_CLEAN_PHASE_INDEPENDENT_CHECK_RESULT_20260812.json"
+      ],
+      "next_steps": [
+        "record only the source-bound compatibility result and mathematical lesson"
+      ],
+      "outputs": [
+        "sha256:01bd74e30c122a90be10a621b1ce3228da5f037b760f1e2954e4fa16f808d0ca",
+        "PUBLIC_WORLDS_PASS",
+        "COMPATIBLE_WITH_EXACT_FORMULA_BOUND_UNSAT_WITNESS"
+      ],
+      "previous_event_hash": "sha256:70be8e174b8f7e05c94cc1cac73296ac1e7cb889b2917be7d9517f5097a1d02b",
+      "residuals": [
+        "record exact bounded result",
+        "collision-to-cover implication remains open",
+        "root open"
+      ],
+      "state_summary": "All nine frozen hostile/conformance/integration worlds pass and the separately rederived checker agrees on the exact positive witness.",
+      "timestamp": "2026-08-12T17:52:00Z"
+    },
+    {
+      "action_summary": "Record the positive branch, seven-field lesson, scope, and next mathematical residual.",
+      "artifact_hash": "sha256:9aebbcaefd5818d53ec702327eb3d955a8978222f9e07dcf5f23321a6f5461dd",
+      "atom_id": "O9d12a2a1b-C053-K32-CLEAN-PHASE-COMPATIBILITY",
+      "event_id": "O9d12a2a1b-C053-K32-CLEAN-PHASE-E11",
+      "event_type": "RESULT_RECORDED",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C053_K32_CLEAN_PHASE_POSITIVE_CERTIFICATE_20260812.json",
+        "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C053_K32_CLEAN_PHASE_MATHEMATICAL_LESSON_20260812.json",
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C053_K32_CLEAN_PHASE_SAME_CONTEXT_REVIEW_20260812.json"
+      ],
+      "next_steps": [
+        "freeze a separate collision-to-cover discriminator before evaluating any cover effect"
+      ],
+      "outputs": [
+        "sha256:bea74485b372a7ee0f05dbba294d0f26c8aa0cd97d51cbdf72620620548f0da6",
+        "sha256:953de3d30a0f86cd00186b722898811907931fd0f84c04fde4eacdf9d32986ba",
+        "COMPATIBLE_WITH_EXACT_FORMULA_BOUND_UNSAT_WITNESS",
+        "OPEN_NO_SOLUTION_CERTIFICATE"
+      ],
+      "previous_event_hash": "sha256:f19ffc3e56da7db064a52b5abcffe1eeaa619a48670674a4c8213e1de4447847",
+      "residuals": [
+        "collision does not establish a new cover requirement",
+        "other 31 pairs unclassified",
+        "root open"
+      ],
+      "state_summary": "The exact 32-pair existential is positive via the (8,5) formula-bound UNSAT witness; no root or cover claim follows.",
+      "timestamp": "2026-08-12T17:52:01Z"
+    }
+  ],
+  "result_branch": "COMPATIBLE_WITH_EXACT_FORMULA_BOUND_UNSAT_WITNESS",
+  "result_id": "PNP-C053-K32-CLEAN-PHASE-RESULT-20260812",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "same_context_review_artifact_hash": "sha256:8218adbcd1e5451bff39665fab48464fcb87e3545490409457216aaba42c29bb",
+  "schema_version": "1.0.0",
+  "zero_credit": [
+    "Git",
+    "CI",
+    "schemas",
+    "hashes",
+    "chronology",
+    "repository activity",
+    "computation as proof",
+    "independent peer review"
+  ]
+}
