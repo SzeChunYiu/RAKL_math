@@ -1,0 +1,55 @@
+{
+  "artifact_hash": "sha256:7d2878958edb86b1a22dab90245b0207353a10c26f41c6461d413c92f565f8bc",
+  "candidate_method_families": [
+    "fixed-n natural-order Abel convergence",
+    "quantitative Abel remainder with explicit n-dependence",
+    "uniform or diagonal-compatible convergence modulus",
+    "common or n-controlled domination of the boundary and tail-integral terms",
+    "endpoint-to-prefix maximal inequalities",
+    "exact endpoint-plus-complement target transfer"
+  ],
+  "cross_problem_coverage_receipt_hash": "",
+  "evidence_pointers": [
+    "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003_ABEL_001_C002_PROOF_CHECK_RESULT_20260812.json",
+    "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003i_MATH_CONTEXT_FIBER_20260812.json",
+    "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003i_RESEARCH_MEMORY_REVIEW_20260812.json"
+  ],
+  "failure_lattice_snapshot_hash": "git:b7ca6ac51fa8319b559e95402c47959c626f284a:RH_ANA003e_i_FAILURE_SURFACES",
+  "failure_query_status": "MATCHES_FOUND",
+  "failure_reuse_notes": [
+    "The moving-prefix failure warns that a growing cutoff alone cannot repair missing n-dependence.",
+    "The suffix-glue failure keeps endpoint, complement, and internal-prefix obligations separate.",
+    "The ambient-path failure forbids replacing the arithmetic array by freely chosen rows.",
+    "The complement-first failure forbids treating outer control as internal-prefix control.",
+    "The R9 attainability obstruction remains a warning for any later strict-prefix route."
+  ],
+  "relevant_failure_ids": [
+    "F-RH-ANA-003e-MOVING-PREFIX-POLYBOUND-NOT-WEAKER",
+    "F-RH-ANA-003f-STRICT-CUT-SUFFIX-GLUE",
+    "F-RH-ANA-003f-PATH-WITNESS-NOT-ARITHMETIC",
+    "F-RH-ANA-003g-COMPLEMENT-FIRST-WEAKENING-FAIL",
+    "R9-STRICT-PREFIX-ARITHMETIC-ATTAINABILITY-OBSTRUCTION"
+  ],
+  "relevant_tool_ids": [
+    "T-RH-C002-FIXED-N-NATURAL-ORDER-ABEL-IDENTITY"
+  ],
+  "selected_tool_ids": [
+    "T-RH-C002-FIXED-N-NATURAL-ORDER-ABEL-IDENTITY"
+  ],
+  "target_atom_id": "RH-ANA-003j",
+  "target_context_hash": "sha256:08dc06f14c732d28d179d74ed109b0ee8f8af5efb8dce3895427c333ea3fb580",
+  "tool_applicability_notes": [
+    "Applicable only to the inner statement obtained after fixing n: existence of the natural-order row limit and exact row remainder representation.",
+    "Not applicable to any diagonal rate, n-uniform constant, internal-prefix maximum, Li positivity, or RH implication.",
+    "The reusable mathematical operation is Abel tail representation at fixed degree, not software replay or receipt validation."
+  ],
+  "tool_inventory_snapshot_hash": "git:b7ca6ac51fa8319b559e95402c47959c626f284a:RH_C002_SCOPED_TOOL_SURFACE",
+  "tool_query_status": "MATCHES_FOUND",
+  "unresolved_warnings": [
+    "No quantitative modulus M(n,epsilon) has been proved for the C002 remainder.",
+    "No comparison M(n,epsilon_n)<=Y_n has been proved.",
+    "No endpoint-to-all-prefix maximal estimate has been proved.",
+    "SEARCH has a direct uniform-modulus transformation but its target preconditions are unmet.",
+    "JUMP and GLUE remain unexhausted; LIFT is forbidden."
+  ]
+}

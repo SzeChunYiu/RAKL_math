@@ -1,0 +1,38 @@
+{
+  "application_pin_lacks_live_quantifier_compatibility_surface": true,
+  "artifact_hash": "sha256:672590c9420b0e706c2c8a5a28372bbcfa9f9477c206601a981102fa8e456812",
+  "grants_scientific_authority": false,
+  "intervening_diff": [
+    {
+      "path": "research/HOSTED_ANTHROPIC_GLM_API.md",
+      "surface_class": "NON_METHOD_PUBLICATION_OR_RESEARCH"
+    },
+    {
+      "path": "research/glm52_mechanism_suite_v1_1/HOSTED_SMOKE_RECEIPT.json",
+      "surface_class": "NON_METHOD_PUBLICATION_OR_RESEARCH"
+    },
+    {
+      "path": "research/glm52_mechanism_suite_v1_1/OFFLINE_SELFTEST_RECEIPT.json",
+      "surface_class": "NON_METHOD_PUBLICATION_OR_RESEARCH"
+    },
+    {
+      "path": "research/glm52_mechanism_suite_v1_1/STATUS.md",
+      "surface_class": "NON_METHOD_PUBLICATION_OR_RESEARCH"
+    },
+    {
+      "path": "scripts/glm52_hosted_smoke.py",
+      "surface_class": "NON_METHOD_PUBLICATION_OR_RESEARCH"
+    }
+  ],
+  "licenses_candidate_materialization": true,
+  "live_quantifier_semantics_applied_manually_fail_closed": true,
+  "observation_evidence_pointers": [
+    "git:62e97d545f93ff604b2db47a7c8d41a59a1c5286:RAKL_VERSION.json",
+    "git-diff:2834760f4ae96684654a2080f5f36b24dc1d1ef7..62e97d545f93ff604b2db47a7c8d41a59a1c5286",
+    "live main moved only on classified non-method GLM hosted-smoke research/script surfaces; quantifier semantics remain those frozen at 2834760"
+  ],
+  "observation_id": "RH-ANA-003j-FRAMEWORK-REVALIDATION-20260812",
+  "observed_current_main_sha": "62e97d545f93ff604b2db47a7c8d41a59a1c5286",
+  "schema_version": "framework-subject-revalidation-observation-v1",
+  "verdict": "ACKNOWLEDGED_NON_METHOD_DRIFT"
+}

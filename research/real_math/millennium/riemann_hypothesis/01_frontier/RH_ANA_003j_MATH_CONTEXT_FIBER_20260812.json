@@ -1,0 +1,187 @@
+{
+  "analogy_scan_notes": "Two structural analogies survive only as search-control proposals. Their shared lesson is threshold comparison, not theorem authority.",
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "atom_id": "RH-ANA-003j",
+  "cross_domain_analogies": [
+    {
+      "common_abstraction": [
+        "row-specific eventual behavior",
+        "moving observation deadline",
+        "unknown stabilization-time function",
+        "diagonal compatibility"
+      ],
+      "disanalogies": [
+        "engineering stabilization may be measured empirically whereas the target needs a number-theoretic proof",
+        "the analogy supplies no Laguerre bound, modulus, complement estimate, or Li implication"
+      ],
+      "proposed_principle": "do not replace object-wise eventuality by a moving-deadline guarantee without bounding the object-wise threshold",
+      "provenance_note": "proposal-only ordinary/engineering analogy; zero theorem authority",
+      "shared_constraints": [
+        "each individual object may eventually stabilize",
+        "the observation deadline varies with the object",
+        "a deadline claim needs comparison with the stabilization time"
+      ],
+      "source_kind": "engineering fleet stabilization",
+      "source_situation": "Every machine eventually reaches tolerance after its own startup time, while an operator asks whether machine n is within tolerance at a fleet deadline assigned to that machine",
+      "source_to_target_mapping": [
+        "machine index -> n",
+        "elapsed time -> Y",
+        "machine-specific stabilization time -> M(n,epsilon)",
+        "fleet deadline -> Y_n",
+        "tolerance error -> |S_n-R_n(Y)|"
+      ],
+      "validation_obligation": "derive M(n,epsilon_n) in the target arithmetic setting and prove M(n,epsilon_n)<=Y_n eventually"
+    },
+    {
+      "common_abstraction": [
+        "pointwise existence",
+        "input-dependent threshold",
+        "moving resource schedule",
+        "missing quantitative modulus"
+      ],
+      "disanalogies": [
+        "runtime is discrete and operational; the RH remainder is analytic",
+        "the analogy cannot prove any arithmetic rate"
+      ],
+      "proposed_principle": "make hidden threshold dependence an explicit mathematical object before diagonal substitution",
+      "provenance_note": "proposal-only algorithms analogy; zero theorem authority",
+      "shared_constraints": [
+        "pointwise existence permits arbitrarily poor dependence on the outer index",
+        "the scheduled diagonal must dominate the hidden threshold"
+      ],
+      "source_kind": "algorithmic per-input termination versus scheduled timeout",
+      "source_situation": "An algorithm terminates on every fixed input, but input n may still exceed a prescribed timeout T_n unless its input-dependent running time is bounded relative to T_n",
+      "source_to_target_mapping": [
+        "input -> row n",
+        "runtime threshold -> M(n,epsilon_n)",
+        "timeout -> Y_n",
+        "successful termination -> endpoint error within epsilon_n"
+      ],
+      "validation_obligation": "produce and verify a target-domain modulus/diagonal comparison or reject the transfer"
+    }
+  ],
+  "equivalent_formulations": [
+    "row-wise convergence: forall n forall epsilon>0 exists M(n,epsilon) forall Y>=M: E(n,Y)<epsilon",
+    "diagonal control: E(n,Y_n)<=epsilon_n eventually",
+    "diagonal-compatible modulus: choose a valid M(n,epsilon) and prove M(n,epsilon_n)<=Y_n eventually",
+    "full uniform convergence: forall epsilon>0 exists M(epsilon) forall n forall Y>=M: E(n,Y)<epsilon; sufficient but not required",
+    "endpoint versus internal-prefix: E(n,Y_n) does not imply a bound on sup_{2<=M<=Y_n}|R_n(M)|"
+  ],
+  "explicit_disanalogies": [
+    "fixed-n convergence does not control a moving diagonal",
+    "Y_n->infinity does not imply Y_n exceeds an arbitrary n-dependent convergence threshold",
+    "a diagonal-compatible modulus is weaker than full uniform convergence and should not be conflated with it",
+    "endpoint control does not imply control of all internal prefixes",
+    "outer-complement control does not imply internal-prefix control",
+    "C002 allows n-dependent constants and supplies no moving-n rate",
+    "natural-order convergence grants no reordering or regrouping authority",
+    "a bound on S_n still does not complete the Li ledger or prove RH",
+    "same-context expert roles provide zero independent-review credit"
+  ],
+  "first_candidate_at": null,
+  "frozen_at": "2026-08-12T10:18:00Z",
+  "method_transfers": [
+    {
+      "disanalogies": [
+        "the target evaluates a different row at every n",
+        "the target cutoff Y_n is fixed before any row-wise threshold is known",
+        "C002 supplies neither a quantitative modulus nor constants controlled in n"
+      ],
+      "method": "for each fixed integer n, integrate the natural-order partial sum A(t) against the fixed-degree Laguerre weight and pass Y to infinity",
+      "repair_question": "Can one prove a quantitative threshold M(n,epsilon) for the C002 remainder and show M(n,epsilon_n)<=Y_n eventually?",
+      "required_assumptions": [
+        "n is fixed before Y tends to infinity",
+        "the implied derivative and tail constants may depend on n",
+        "summation remains in natural order"
+      ],
+      "shared_structure": [
+        "the same coefficients x_{n,m}=((1-Lambda(m))/m)L_{n-1}^{(1)}(log m)",
+        "the same natural integer order",
+        "the same row limit S_n and remainder |S_n-R_n(Y)|"
+      ],
+      "source_anchors": [
+        "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003_ABEL_001_C002_PROOF_CHECK_RESULT_20260812.json",
+        "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003_ABEL_001_C002_SCOPED_MATHEMATICAL_LESSON_20260812.json"
+      ],
+      "source_context": "fixed-index natural-order Abel convergence (merged C002)"
+    },
+    {
+      "disanalogies": [
+        "full uniform convergence in n is stronger than the minimal diagonal-compatible modulus needed here",
+        "no common domination or n-uniform Laguerre remainder bound is currently bound",
+        "an endpoint modulus does not control the maximum over all internal prefixes M<=Y_n"
+      ],
+      "method": "replace bare row-wise convergence by either a threshold independent of n or a controlled n-dependent modulus whose growth is explicitly dominated by the proposed diagonal",
+      "repair_question": "Is there a diagonal-compatible quantitative modulus, possibly n-dependent, at the frozen epsilon_n and Y_n, and what constants or regimes does it require?",
+      "required_assumptions": [
+        "a modulus is proved rather than inferred from Y_n tending to infinity",
+        "all n-dependence of constants and thresholds is exposed",
+        "the comparison M(n,epsilon_n)<=Y_n holds eventually"
+      ],
+      "shared_structure": [
+        "row index n and approximation parameter Y are distinct quantifier axes",
+        "a diagonal evaluation substitutes Y=Y_n into a two-parameter error family",
+        "valid substitution requires the diagonal to lie inside each row's proved validity region"
+      ],
+      "source_anchors": [
+        "elementary uniform-convergence/diagonal-substitution theorem",
+        "hostile triangular-array example e_n(Y)=1_{Y<=Y_n}, which is row-wise eventually zero but equals one on the diagonal"
+      ],
+      "source_context": "uniform convergence and diagonal substitution for a doubly indexed family"
+    },
+    {
+      "disanalogies": [
+        "the polynomial degree grows with n",
+        "C002's constants C_n are allowed to grow without a registered bound",
+        "Bellotti's fixed source estimate alone does not dominate the full varying Laguerre family"
+      ],
+      "method": "obtain a limit interchange or uniform tail bound from domination that is valid across the varying family",
+      "repair_question": "Can the boundary and tail-integral terms be majorized with explicit n-dependence small at Y_n?",
+      "required_assumptions": [
+        "a common or quantitatively n-controlled majorant",
+        "uniform control of Laguerre degree growth and all implied constants",
+        "a tail integral estimate evaluated at the proposed Y_n"
+      ],
+      "shared_structure": [
+        "the C002 proof represents the row remainder by a boundary term plus a tail integral",
+        "uniform endpoint control would follow from a majorant whose tail is controlled at Y_n"
+      ],
+      "source_anchors": [
+        "C002 Abel remainder representation",
+        "Dunster-Gil-Segura uniform Laguerre asymptotic context, not a target remainder theorem"
+      ],
+      "source_context": "dominated convergence with a common integrable majorant"
+    }
+  ],
+  "near_solved_analogues": [
+    "dominated-convergence tail control under a common or quantitatively controlled majorant",
+    "uniform asymptotics for growing-degree Laguerre polynomials with explicit validity regimes",
+    "algorithmic per-input termination upgraded to a scheduled timeout only through a runtime bound",
+    "hostile triangular-array construction proposed for the later discriminator, not evaluated in this round"
+  ],
+  "object_context": "The two-parameter natural-order error E(n,Y)=|S_n-R_n(Y)| for the actual von-Mangoldt/Laguerre array, the proved fixed-n limit Y->infinity, the moving cutoff Y_n=exp(C n^(5/3) log^2(n+e)), a future preregistered positive tolerance sequence epsilon_n, and the distinction between the endpoint M=Y_n and every internal prefix M<=Y_n.",
+  "packet_hash": "sha256:08dc06f14c732d28d179d74ed109b0ee8f8af5efb8dce3895427c333ea3fb580",
+  "solved_analogues": [
+    "uniform convergence permits substitution along every divergent diagonal",
+    "a controlled n-dependent modulus permits substitution along a particular diagonal that dominates it"
+  ],
+  "source_anchors": [
+    "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003_ABEL_001_C002_PROOF_CHECK_RESULT_20260812.json",
+    "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003_ABEL_001_C002_SCOPED_MATHEMATICAL_LESSON_20260812.json",
+    "elementary uniform-convergence/diagonal-substitution theorem",
+    "hostile triangular-array example e_n(Y)=1_{Y<=Y_n}, which is row-wise eventually zero but equals one on the diagonal",
+    "C002 Abel remainder representation",
+    "Dunster-Gil-Segura uniform Laguerre asymptotic context, not a target remainder theorem"
+  ],
+  "structural_coordinates": [
+    "x_{n,m}=((1-Lambda(m))/m)L_{n-1}^{(1)}(log m) in natural integer order",
+    "R_n(Y)=sum_{2<=m<=Y}x_{n,m} and S_n=S_{2Lambda}(n)",
+    "row-wise source: forall n forall epsilon>0 exists M(n,epsilon) forall Y>=M: |R_n(Y)-S_n|<epsilon",
+    "diagonal target: exists N forall n>=N: |R_n(Y_n)-S_n|<=epsilon_n",
+    "minimal bridge: exists a proved modulus M with exists N forall n>=N: M(n,epsilon_n)<=Y_n",
+    "full n-uniform convergence is sufficient but stronger than the minimal diagonal-compatible bridge",
+    "endpoint R_n(Y_n) is distinct from sup_{2<=M<=Y_n}|R_n(M)| or any internal-prefix family",
+    "natural order is exact and regrouping/reordering is forbidden",
+    "target/complement transfer and the Li/RH bridge remain separate obligations"
+  ]
+}
