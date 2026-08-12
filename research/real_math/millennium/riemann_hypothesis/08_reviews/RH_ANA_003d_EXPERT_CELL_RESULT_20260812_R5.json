@@ -1,0 +1,22 @@
+{
+  "schema":"RAKL-v3-shadow-EXPERT_RESULT_REVIEW",
+  "review_id":"REV-RH-ANA-003d-C001-R5",
+  "candidate_id":"RH-ANA-003d-C001-KV-ABEL-MOVING-TAIL",
+  "context_hash":"sha256:7c39ec6c7b39c5fd573a4e2d252d08c039952faf87c506a972a86d64b41cf59c",
+  "candidate_hash":"sha256:973bf48e91e035d945f54f4017628d2859a9e92a0c426606e97a5ed02687fdc0",
+  "independent_review_credit":0,
+  "roles":[
+    {"role":"analytic-number-theory lead","background":"zeta/L-functions, explicit formulae, zero-free regions, PNT error terms","finding":"Bellotti's unconditional KV-scale PNT estimate supplies |psi(x)-x|/x << exp(-d (log x)^(3/5)(loglog x)^(-1/5)); the floor correction is asymptotically absorbable.","challenge":"The candidate must not use zero-density as a pointwise RH bridge; only the unconditional PNT consequence is used.","verdict":"PASS_SCOPED"},
+    {"role":"special-functions/asymptotics lead","background":"Laguerre polynomials, uniform asymptotics, coefficient estimates","finding":"The coefficient identity gives |L_{n-1}^{(1)}(u)|<=n exp(2sqrt(nu)); the derivative identity gives the n^2 companion bound. n=1 is separately valid.","challenge":"The bounds are deliberately crude and provide no cutoff optimality.","verdict":"PASS_AS_DISCRIMINATOR"},
+    {"role":"adversarial falsification lead","background":"counterexample-first analysis, quantifier stress tests, hostile asymptotics","finding":"The logarithmic-zero-free comparator loses the exponent race under the same crude Laguerre envelope, while KV decay wins after a moving cutoff.","challenge":"The negative result is method-family-specific and cannot be generalized to the 2026 zero-free theorem itself.","verdict":"PASS_WITH_SCOPE_LIMIT"},
+    {"role":"formal/proof-obligation lead","background":"proof DAGs, quantifier order, dependency and verifier audits","finding":"The proof order is coherent: exact Abel identity -> source bound -> kernel/derivative envelopes -> monotone ratio -> boundary/integral. Constants are existential and uniform in n after C0 is fixed.","challenge":"No formal verifier or proof assistant is bound; no PROOF_CHECKED authority.","verdict":"PAPER_DERIVATION_ONLY"},
+    {"role":"novelty/research-value lead","background":"analytic-number-theory literature mapping, theorem normalization, novelty control","finding":"The result composes standard Abel summation and Laguerre identities with Bellotti's current PNT theorem.","challenge":"No literature-novelty claim is defensible from this bounded search.","verdict":"COMPOSITIONAL_TRANSFER_REPRESENTATION_ONLY"},
+    {"role":"local-to-global/gluing lead","background":"proof-DAG interfaces, local-to-global synthesis, equivalent-criterion auditing","finding":"The tail is negligible only beyond an enormous X_n; the moving prefix and archimedean/Li ledger remain unclosed.","challenge":"A polynomial bound on the combined prefix may simply repackage the R3 root-strength obligation.","verdict":"LOCAL_PASS_GLOBAL_OPEN"},
+    {"role":"RAKL metrology/provenance lead","background":"v3 gates, evidence identity, CI/provenance, longitudinal telemetry","finding":"Focused current-v3 gate passed at exact branch head 27b9a761... with current framework pin 43897d3..., authorizing shadow materialization. Full application suite remains red and the branch is behind current RAKL_math main.","challenge":"Do not treat focused CI as integration assurance, mathematical review, novelty authority, or root promotion.","verdict":"SHADOW_MATERIALIZATION_ALLOWED_INTEGRATION_BLOCKED"}
+  ],
+  "consensus":"Retain candidate as a source-bound route-local mathematical lemma; close RH-ANA-003d locally and open RH-ANA-003e for moving-prefix obligation strength and exact Li gluing.",
+  "strongest_objection":"The theorem may reduce only a tail that was never the root-hard coordinate; the finite prefix may retain essentially all RH difficulty.",
+  "unresolved":["cutoff sharpness","strict weakness of any useful prefix certificate relative to RH","formal verification","independent mathematical review"],
+  "authority":"SAME_CONTEXT_ROLE_SEPARATED_ONLY / NO_INDEPENDENT_REVIEW",
+  "artifact_hash":"sha256:5a5efa7c9a0cd72b38bb769c8df0ea08522f2d099a9216e8e26a3925ca89e467"
+}

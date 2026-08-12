@@ -1,0 +1,54 @@
+{
+  "schema": "RAKL-v3-shadow-ObstructionTransformationReview",
+  "review_id": "OTR-RH-ANA-003d-R5",
+  "target_atom_id": "RH-ANA-003d",
+  "target_context_hash": "sha256:7c39ec6c7b39c5fd573a4e2d252d08c039952faf87c506a972a86d64b41cf59c",
+  "research_memory_review_hash": "sha256:f2a1312755cb2ee5b8e30f0182b9ee9dd6a9d9eafea8c517cea63f8c1545fc2c",
+  "episode_memory_snapshot_hash": "b5256b0917f502c3ce3e19d9f50ba20fe2c7763d7639d2cb416b7afd7d3a3f2e",
+  "obstruction": {
+    "obstruction_id": "O-RH-ANA-003d-UNIFORM-ORDERED-TAIL",
+    "domain": "analytic number theory",
+    "roles": ["signed source sequence", "cumulative error", "Laguerre kernel", "moving cutoff"],
+    "relations": ["direct termwise bounds erase cancellation", "cumulative error controls ordered tail", "kernel growth competes with prime-error decay"],
+    "constraints": ["natural source order is fixed", "uniformity in Li index n is required", "root statement and Li normalization remain fixed"],
+    "failure_mechanisms": ["absolute majorant loses arithmetic cancellation", "kernel envelope can outrun available prime-error decay", "tail certificate may not glue to finite prefix"],
+    "invariants_to_preserve": ["natural source order", "exact Coffey kernel", "all-index quantifier", "no root authority from local tail"],
+    "desired_transition": ["replace termwise tail by cumulative-error boundary-plus-integral identity", "obtain a source-order uniform tail discriminator"],
+    "forbidden_losses": ["reordering the source series", "dropping all-index uniformity", "silently replacing tail control by root closure"]
+  },
+  "direct_search_status": "MATCHES_FOUND",
+  "jump_search_status": "NOT_RUN",
+  "glue_search_status": "NOT_RUN",
+  "selected_mode": "SEARCH",
+  "direct_candidate_episode_ids": ["EP-ABEL-SUMMATION-CUMULATIVE-CANCELLATION"],
+  "direct_mapping_witnesses": [
+    {
+      "witness_id": "W-RH-ANA-003d-ABEL-SEARCH",
+      "episode_id": "EP-ABEL-SUMMATION-CUMULATIVE-CANCELLATION",
+      "target_obstruction_id": "O-RH-ANA-003d-UNIFORM-ORDERED-TAIL",
+      "role_mapping": [["signed source sequence", "signed source sequence"], ["cumulative error", "cumulative error"], ["Laguerre kernel", "Laguerre kernel"], ["moving cutoff", "moving cutoff"]],
+      "shared_relations": ["direct termwise bounds erase cancellation", "cumulative error controls ordered tail", "kernel growth competes with prime-error decay"],
+      "shared_constraints": ["natural source order is fixed", "uniformity in Li index n is required", "root statement and Li normalization remain fixed"],
+      "precondition_mapping": [
+        ["natural source order is fixed", "natural source order is fixed"],
+        ["cumulative source function A(x) is defined and bounded", "A(x)=floor(x)-psi(x) and current unconditional PNT bounds it"],
+        ["kernel is differentiable between source jumps", "b_n(t)=L_{n-1}^1(log t)/t is differentiable for t>1"],
+        ["boundary term is controlled", "same PNT/Laguerre exponent comparison is a frozen validation obligation"],
+        ["target-specific uniform kernel estimate is supplied", "derive coefficient envelope and derivative identity before accepting the candidate"]
+      ],
+      "unmatched_source_preconditions": [],
+      "disanalogies": ["the generic source episode has no n-dependent Laguerre family; the target must prove an all-n envelope", "source Abel identity alone provides no finite-prefix or RH closure"],
+      "target_validation_obligations": ["derive finite-X Abel identity exactly", "prove boundary vanishes", "prove all-n Laguerre and derivative envelopes", "compare classical-log and KV PNT decay honestly", "keep finite-prefix gluing open"],
+      "evidence_pointers": ["RAKL_math issue #202", "Coffey arXiv:0706.0343v2", "Bellotti arXiv:2508.02041"],
+      "artifact_hash": "sha256:a63284a04e1dca4f23671ed668a5a8667ffac311ca942eb02f8aebb118b16a04"
+    }
+  ],
+  "jump_mapping_witnesses": [],
+  "glue_witness": null,
+  "selected_episode_ids": ["EP-ABEL-SUMMATION-CUMULATIVE-CANCELLATION"],
+  "exhaustion_witness": null,
+  "missing_transformation_specification": null,
+  "unresolved_warnings": ["SEARCH licenses routing only; target-specific PNT/Laguerre validation remains mandatory.", "No finite-prefix or root authority is transferred."],
+  "evidence_pointers": ["RAKL semantic_shortcut.py @ 43897d3afaf0038385102d5acc64793c05ec40f0", "RAKL_math issue #202", "R4 obstruction O-RH-ANA-003c-SUMMATION-METHOD-BOUNDARY"],
+  "artifact_hash": "sha256:bb61b310b67d717d5d6e55db15451301898b522d8fbd325dd50042d5f959c7fa"
+}

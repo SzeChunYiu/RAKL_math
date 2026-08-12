@@ -1,0 +1,111 @@
+{
+  "schema": "RAKL-v3-shadow-MathematicalCandidate",
+  "candidate_id": "RH-ANA-003d-C001-KV-ABEL-MOVING-TAIL",
+  "atom_id": "RH-ANA-003d",
+  "cycle": "R5",
+  "root_issue": 3,
+  "context_fibre_hash": "sha256:7c39ec6c7b39c5fd573a4e2d252d08c039952faf87c506a972a86d64b41cf59c",
+  "framework_subject": {
+    "method_version": "3.0.0",
+    "rakl_main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0"
+  },
+  "application_subject": {
+    "rakl_math_current_main_observed": "e5f50a1dc5c20bee7cfc3c3d6edf980d5cc72e1c",
+    "candidate_branch_gate_head": "27b9a76112303a56fcddc07555acae6e9924dd43"
+  },
+  "gate_basis": {
+    "focused_current_v3_run_id": 31552496471,
+    "focused_current_v3_run_conclusion": "success",
+    "focused_current_v3_test": "tests/math_applications/test_rh_ana003d_r5_pre_candidate.py",
+    "full_application_run_id": 31552496573,
+    "full_application_run_conclusion": "failure",
+    "authority_effect": "focused gate authorizes proposal/shadow candidate materialization only; full repository integration assurance remains red"
+  },
+  "statement": {
+    "source_sequence": "a_m = 1 - Lambda(m)",
+    "cumulative_source": "A(x) = sum_{m<=x} a_m = floor(x) - psi(x)",
+    "kernel": "b_n(x) = L_{n-1}^{(1)}(log x)/x",
+    "pnt_input": "There exist d0,C,x0>0 such that |A(x)| <= C x exp(-d0 f(log x)) for x>=x0, with f(v)=v^(3/5)(log v)^(-1/5). This follows from Bellotti's unconditional optimal Korobov-Vinogradov-scale PNT error, after absorbing floor(x)-x.",
+    "moving_cutoff": "There exists C0>0 such that U_n=C0 n^5 [log(n+e)]^2 and X_n=exp(U_n) satisfy d0 f(v) >= 4 sqrt(n v) for every n>=1 and all v>=U_n.",
+    "ordered_tail": "T_n(X_n) := lim_{Y->infinity} sum_{X_n<m<=Y} a_m b_n(m) exists in natural m-order.",
+    "tail_bound": "For a constant C1 independent of n, |T_n(X_n)| <= C1 (n + n^(3/2) sqrt(U_n)) exp(-2 sqrt(n U_n)). Hence T_n(X_n) is smaller than every negative power of n, and in particular is <= C2 exp(-kappa n^3 log(n+e)) for suitable C2,kappa>0.",
+    "scope": "This is only a source-order tail certificate. It does not bound the moving finite prefix, prove any Li coefficient positive, or imply RH."
+  },
+  "derivation": [
+    {
+      "step": "Exact source-order Abel transform",
+      "formula": "For finite Y>X, sum_{X<m<=Y} a_m b_n(m) = A(Y)b_n(Y)-A(X)b_n(X)-integral_X^Y A(t)b_n'(t) dt.",
+      "authority": "elementary summation by parts"
+    },
+    {
+      "step": "Laguerre coefficient envelope",
+      "formula": "L_{n-1}^{(1)}(u)=sum_{k=0}^{n-1}(-1)^k binom(n,k+1)u^k/k!, so |L_{n-1}^{(1)}(u)| <= n sum_{k>=0}(nu)^k/(k!)^2 <= n exp(2 sqrt(nu)).",
+      "authority": "elementary coefficient formula plus I_0(2sqrt(nu)) <= exp(2sqrt(nu))"
+    },
+    {
+      "step": "Derivative envelope",
+      "formula": "d/du L_{n-1}^{(1)}(u)=-L_{n-2}^{(2)}(u) for n>=2, and |L_{n-2}^{(2)}(u)| <= n^2 exp(2 sqrt(nu)); therefore |b_n'(t)| <= 2 n^2 t^(-2) exp(2 sqrt(n log t)), with n=1 checked directly.",
+      "authority": "standard Laguerre derivative identity plus elementary coefficient bound"
+    },
+    {
+      "step": "Uniform exponent domination",
+      "formula": "f(v)/sqrt(v)=v^(1/10)(log v)^(-1/5) is increasing for v>e^2. At U_n=C0 n^5 log^2(n+e), its value is a positive C0^(1/10)-multiple of sqrt(n) up to a bounded logarithmic ratio. Choose C0 so d0 f(U_n)>=4 sqrt(n U_n); monotonicity then gives d0 f(v)>=4 sqrt(nv) for all v>=U_n.",
+      "authority": "elementary calculus and quantifier check"
+    },
+    {
+      "step": "Boundary and integral",
+      "formula": "The boundary obeys |A(X_n)b_n(X_n)| <= C n exp(-2 sqrt(nU_n)). With v=log t, the derivative integral is <=2C n^2 integral_{U_n}^infinity exp(-2 sqrt(nv))dv =2C n^2( sqrt(U_n)/sqrt(n)+1/(2n))exp(-2sqrt(nU_n)).",
+      "authority": "Bellotti PNT input + preceding envelopes"
+    }
+  ],
+  "negative_comparator": {
+    "failure_id": "F-RH-ANA-003d-LOG-ZFR-CRUDE-LAGUERRE-ENVELOPE-FAIL",
+    "input": "For a logarithmic zero-free region nu(t)=c/log t, the Ingham optimization omega(x)=min_y {c log(x)/y+y}=2sqrt(c log x). Bellotti-Trudgian-Yang 2026 provides the explicit c=1/4.896 region.",
+    "comparison": "The same crude Laguerre boundary envelope has exponent -2sqrt(c v)+2sqrt(nv)=2(sqrt(n)-sqrt(c))sqrt(v), so this operator/majorant family does not force boundary decay once n>c.",
+    "scope_limit": "This falsifies only logarithmic-zero-free-region + this crude Laguerre-envelope routing. It is not a no-go theorem for the 2026 zero-free result or for sharper transforms."
+  },
+  "local_to_global": {
+    "local_status": "RH-ANA-003d ordered moving tail CLOSED at proposal/shadow mathematical level for this explicit cutoff family.",
+    "gluing_status": "OPEN",
+    "open_coordinates": [
+      "moving finite prefix m<=X_n",
+      "archimedean/S_gamma bookkeeping in the exact Li identity",
+      "one-sided sign/cancellation control sufficient for all-index Li positivity",
+      "obligation-strength audit preventing a disguised root-equivalent global bound"
+    ],
+    "successor_atom": "RH-ANA-003e — MOVING_PREFIX_OBLIGATION_STRENGTH_AND_LI_GLUE"
+  },
+  "primary_sources": [
+    {
+      "id": "Coffey-arXiv-0706.0343v2",
+      "use": "exact S_gamma/S_Lambda decomposition context and natural Laguerre representation"
+    },
+    {
+      "id": "Bellotti-arXiv-2508.02041",
+      "use": "unconditional optimal Korobov-Vinogradov-scale PNT error"
+    },
+    {
+      "id": "Bellotti-Trudgian-Yang-arXiv-2603.21490",
+      "use": "current explicit logarithmic zero-free comparator"
+    }
+  ],
+  "verification": {
+    "same_context_expert_roles": 7,
+    "independent_mathematical_reviews": 0,
+    "formal_proof_assistant": "NOT_BOUND",
+    "numerics": "NOT_USED_AS_PROOF",
+    "source_checks": "primary-source statements re-read; derived inequalities separately stress-tested for quantifier order and n=1",
+    "proof_status": "SOURCE_BOUND_PAPER_DERIVATION / PROPOSAL_SHADOW_ONLY"
+  },
+  "novelty": {
+    "defensible_classes": [
+      "compositional",
+      "transfer",
+      "representation"
+    ],
+    "literature_novelty_claim": "NONE",
+    "root_novelty_claim": "NONE"
+  },
+  "authority": "PROPOSAL_SHADOW_MATHEMATICAL_RESULT_ONLY / NO_RH_THEOREM / NO_ROOT_AUTHORITY",
+  "artifact_hash": "sha256:973bf48e91e035d945f54f4017628d2859a9e92a0c426606e97a5ed02687fdc0"
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "RAKL-v3-shadow-ResearchMemoryReview",
+  "target_atom_id": "RH-ANA-003d",
+  "target_context_hash": "sha256:7c39ec6c7b39c5fd573a4e2d252d08c039952faf87c506a972a86d64b41cf59c",
+  "tool_inventory_snapshot_hash": "sha256:1e384c2653be5156db7d5ff96da088544be1076727ffb2a0f201666b62c24c54",
+  "failure_lattice_snapshot_hash": "sha256:c149537a4e4703744410639132909616bc851fd3ce2fe775ff12dac93afe1b50",
+  "tool_query_status": "NO_RELEVANT_MATCH",
+  "failure_query_status": "MATCHES_FOUND",
+  "candidate_method_families": [
+    "source-order Abel/partial summation",
+    "Korobov-Vinogradov PNT tail decay",
+    "classical logarithmic zero-free/PNT decay comparator",
+    "coefficientwise Laguerre envelopes",
+    "zero-density-only exceptional-set control",
+    "finite-prefix Li extrapolation",
+    "full S_Lambda global polynomial control"
+  ],
+  "relevant_tool_ids": [],
+  "relevant_failure_ids": [
+    "F-RH-ANA-003-DENSITY-EXCEPTION-GAP",
+    "F-RH-ANA-003a-MAGNITUDE-MAJORANT-CANCELLATION-LOSS",
+    "F-RH-ANA-003b-FULL-SLAMBDA-POLYNOMIAL-SMALLNESS-ROOT-COUPLED",
+    "F-RH-ANA-003c-ABSOLUTE-CONVERGENCE-FALSE",
+    "F-RH-ANA-003c-UNWITNESSED-WINDOW-GLUE",
+    "F-RH-ANA-003c-CURRENT-FRAMEWORK-DRIFT-GATE-MISS"
+  ],
+  "selected_tool_ids": [],
+  "tool_applicability_notes": [],
+  "failure_reuse_notes": [
+    "R4 absolute-convergence failure requires source-order rather than rearranged window semantics.",
+    "R2 magnitude-majorant failure warns that absolute values may erase useful cancellation; R5 applies them only after Abel moves source cancellation into A(x).",
+    "R3 full-remainder root coupling forbids presenting a global S_Lambda polynomial bound as a weaker intermediate result.",
+    "Density-only control remains insufficient for pointwise RH closure and is not used as a root bridge.",
+    "The R4 framework-drift failure changes policy: recheck exact RAKL main and application pin immediately before candidate materialization."
+  ],
+  "unresolved_warnings": [
+    "No canonical ResearchTool is selected; proposal/shadow motifs guide routing only.",
+    "A local tail result cannot acquire root authority without finite-prefix and Li gluing.",
+    "Complete cross-problem memory denominator is not available in this runtime."
+  ],
+  "evidence_pointers": [
+    "RAKL_math draft PR #195 R4 memory/TaskEpisode/case study",
+    "RAKL_math PR #200 framework-gate migration",
+    "RAKL_math issue #202",
+    "Coffey arXiv:0706.0343v2",
+    "Bellotti arXiv:2508.02041",
+    "Bellotti-Trudgian-Yang arXiv:2603.21490"
+  ],
+  "proposal_shadow_experience": {
+    "selected_ids": [
+      "M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING",
+      "M-RH-ANA-ROOT-SENSITIVE-REMAINDER",
+      "CURRENT_WORK_BOUND_BEFORE_CONSEQUENTIAL_ROUTING"
+    ],
+    "rejected_ids": [
+      {"id": "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE", "reason": "source-family completeness is not the active cumulative-tail coordinate"},
+      {"id": "finite-prefix-extrapolation-as-solution", "reason": "finite verification cannot establish all-index Li positivity"},
+      {"id": "zero-density-only-universal-bridge", "reason": "does not exclude a sparse off-critical zero"},
+      {"id": "full-S_Lambda-global-bound", "reason": "R3 route classified global polynomial control as root-strength"}
+    ],
+    "missed_ids": "CANNOT_MEASURE: no governed complete denominator over all memories is exposed."
+  },
+  "decision_policy": {
+    "pre_memory_pre_gate_preference": "Use the newest explicit 2026 logarithmic zero-free region directly in a moving-tail estimate.",
+    "post_memory_choice": "First preserve source order with Abel summation, then discriminate PNT decay exponents against the all-n Laguerre envelope; only a surviving decay family may support a candidate.",
+    "rakl_changed_action": true,
+    "changed_by": [
+      "F-RH-ANA-003c-UNWITNESSED-WINDOW-GLUE",
+      "F-RH-ANA-003a-MAGNITUDE-MAJORANT-CANCELLATION-LOSS",
+      "M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING"
+    ]
+  },
+  "authority": "PROPOSAL_SHADOW_MEMORY_ONLY",
+  "frozen_at": "2026-08-12T00:00:40+00:00",
+  "artifact_hash": "sha256:f2a1312755cb2ee5b8e30f0182b9ee9dd6a9d9eafea8c517cea63f8c1545fc2c"
+}

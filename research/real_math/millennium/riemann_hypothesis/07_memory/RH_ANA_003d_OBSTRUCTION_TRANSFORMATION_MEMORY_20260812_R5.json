@@ -1,0 +1,56 @@
+{
+  "memory_id": "OTM-RH-ANA-003d-R5",
+  "source_universe": [
+    "analytic number theory",
+    "real analysis",
+    "special functions",
+    "cross-Millennium proposal memory"
+  ],
+  "episodes": [
+    {
+      "episode_id": "EP-ABEL-SUMMATION-CUMULATIVE-CANCELLATION",
+      "source_domain": "analytic number theory",
+      "source_context": "Abel summation of an ordered signed arithmetic tail with cumulative sum A(x) and a differentiable weight b(x)",
+      "source_obstruction": {
+        "obstruction_id": "O-ABEL-SIGNED-TAIL-CUMULATIVE",
+        "domain": "analytic number theory",
+        "roles": ["signed source sequence", "cumulative error", "Laguerre kernel", "moving cutoff"],
+        "relations": ["direct termwise bounds erase cancellation", "cumulative error controls ordered tail", "kernel growth competes with prime-error decay"],
+        "constraints": ["natural source order is fixed", "uniformity in Li index n is required", "root statement and Li normalization remain fixed"],
+        "failure_mechanisms": ["absolute majorant loses arithmetic cancellation", "kernel envelope can outrun available prime-error decay", "tail certificate may not glue to finite prefix"],
+        "invariants_to_preserve": ["natural source order", "exact Coffey kernel", "all-index quantifier", "no root authority from local tail"],
+        "desired_transition": ["replace termwise tail by cumulative-error boundary-plus-integral identity", "obtain a source-order uniform tail discriminator"],
+        "forbidden_losses": ["reordering the source series", "dropping all-index uniformity", "silently replacing tail control by root closure"]
+      },
+      "transformation_name": "ordered Abel summation",
+      "operation": "replace sum a_m b(m) over a fixed source interval by cumulative boundary terms and integral of A(t)b'(t), preserving order",
+      "preconditions": [
+        "natural source order is fixed",
+        "cumulative source function A(x) is defined and bounded",
+        "kernel is differentiable between source jumps",
+        "boundary term is controlled",
+        "target-specific uniform kernel estimate is supplied"
+      ],
+      "resulting_relations": ["replace termwise tail by cumulative-error boundary-plus-integral identity", "obtain a source-order uniform tail discriminator"],
+      "preserved_invariants": ["natural source order", "exact Coffey kernel", "all-index quantifier", "no root authority from local tail"],
+      "relaxed_or_broken_constraints": [],
+      "known_breakpoints": [
+        "boundary term does not vanish",
+        "kernel derivative lacks required uniform control",
+        "available cumulative-error decay is too weak",
+        "local tail estimate is incorrectly promoted through an unwitnessed finite-prefix glue"
+      ],
+      "evidence_pointers": ["Abel summation identity", "Coffey arXiv:0706.0343v2", "Bellotti arXiv:2508.02041"],
+      "authority": "PROOF_BACKED",
+      "artifact_hash": "sha256:e91e4c8853d6894aa0875767857e22bb57187cd86f8f5b444d4ab0b64b2c8e28",
+      "lineage_ids": ["EP-RH-ANA-003c-CUTOFF-GLUING-20260812-R4"]
+    }
+  ],
+  "evidence_pointers": [
+    "RAKL semantic-shortcut gate @ 43897d3afaf0038385102d5acc64793c05ec40f0",
+    "RAKL_math draft PR #195",
+    "Coffey arXiv:0706.0343v2",
+    "Bellotti arXiv:2508.02041"
+  ],
+  "snapshot_hash": "b5256b0917f502c3ce3e19d9f50ba20fe2c7763d7639d2cb416b7afd7d3a3f2e"
+}

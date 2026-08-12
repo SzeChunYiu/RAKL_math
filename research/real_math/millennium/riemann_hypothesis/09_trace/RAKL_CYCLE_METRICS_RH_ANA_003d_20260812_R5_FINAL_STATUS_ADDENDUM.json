@@ -1,0 +1,17 @@
+{
+  "schema": "RAKL_CYCLE_METRICS_FINAL_STATUS_ADDENDUM",
+  "cycle": "R5",
+  "parent_receipt_hash": "sha256:6cb583af27f3da2ecb16b64ef7581d8911e38f8aff0539f86c5592ea5e1c5d61",
+  "pr_number": 206,
+  "pr_head_before_addendum": "c37b3036d84446d43a00e5b0b00c0b3e8a87c290",
+  "pre_candidate_test_head": "63d3a5efcd94a828e6ce4a05052f7286e2073604",
+  "ci_delta": {
+    "pinned_application_run": {"id": 31549231823, "status": "queued", "conclusion": null},
+    "rh_assurance_run": {"id": 31549231857, "status": "completed", "conclusion": "success"}
+  },
+  "gate_effect": "UNCHANGED: RH assurance success is not a substitute for the canonical current-v3 application pre-candidate gate; candidate_generation_allowed remains CANNOT_CHECK while run 31549231823 is queued.",
+  "semantic_outcome": "BLOCKED_PRE_CANDIDATE_CANONICAL_GATE_EXECUTION_QUEUED",
+  "retained_semantic_novelty_counts": {"KNOWLEDGE": 0, "OPERATOR": 0, "EXPERIENCE_PATTERN": 0, "OBSTRUCTION": 0, "RELATION": 0, "PATH": 0, "META_METHOD": 0},
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "authority": "PROPOSAL_SHADOW_METROLOGY_ADDENDUM_ONLY"
+}

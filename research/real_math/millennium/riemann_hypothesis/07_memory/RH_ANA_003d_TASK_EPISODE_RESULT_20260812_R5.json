@@ -1,0 +1,69 @@
+{
+  "schema": "RAKL-v3-shadow-TaskEpisode",
+  "episode_id": "EP-RH-ANA-003d-KV-ABEL-MOVING-TAIL-20260812-R5",
+  "parent_episode_id": "EP-RH-ANA-003d-PRE-CANDIDATE-GATE-BLOCK-20260812-R5",
+  "atom_id": "RH-ANA-003d",
+  "cycle": "R5",
+  "problem_signature": ["Riemann Hypothesis","Li coefficients","Coffey S_Lambda natural-order tail","A(x)=floor(x)-psi(x)","Abel summation","Laguerre kernel","Korobov-Vinogradov PNT error","moving cutoff","tail-to-prefix gluing"],
+  "context_fibre_hash": "sha256:7c39ec6c7b39c5fd573a4e2d252d08c039952faf87c506a972a86d64b41cf59c",
+  "actual_fibre_contents_consulted": [
+    "current RAKL main 43897d3afaf0038385102d5acc64793c05ec40f0: RAKL_VERSION.json, ARCHITECTURE.md, src/rakl/method_specs.py, semantic shortcut router/runtime surfaces",
+    "R5 frozen MathContextFiber sha256:7c39ec6c7b39c5fd573a4e2d252d08c039952faf87c506a972a86d64b41cf59c",
+    "R5 ResearchMemoryReview sha256:f2a1312755cb2ee5b8e30f0182b9ee9dd6a9d9eafea8c517cea63f8c1545fc2c",
+    "R5 ObstructionTransformationReview sha256:bb61b310b67d717d5d6e55db15451301898b522d8fbd325dd50042d5f959c7fa",
+    "R5 seven-role pre-candidate expert review sha256:bd620ac6e35c7ee1de82f8067ff028c14eddfa136310c9e1a4dd5dbc328f37fd",
+    "Coffey arXiv:0706.0343v2","Bellotti arXiv:2508.02041","Bellotti-Trudgian-Yang arXiv:2603.21490",
+    "current RAKL_math main e5f50a1dc5c20bee7cfc3c3d6edf980d5cc72e1c and draft PR #206 exact branch gate head 27b9a76112303a56fcddc07555acae6e9924dd43"
+  ],
+  "methods_operators_motifs_tried": [
+    {"id":"EP-ABEL-SUMMATION-CUMULATIVE-CANCELLATION","kind":"v3 SEARCH transformation episode","status":"SUCCESSFUL_REUSE"},
+    {"id":"M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING","kind":"proposal/shadow motif","status":"SUCCESSFUL_REUSE_ROUTING_AND_SCOPE"},
+    {"id":"M-RH-ANA-ROOT-SENSITIVE-REMAINDER","kind":"proposal/shadow motif","status":"SUCCESSFUL_REUSE_SCOPE_GUARD"},
+    {"id":"Bellotti-KV-PNT","kind":"source-bound operator input","status":"SURVIVED"},
+    {"id":"BTY-LOG-ZFR-INHAM-CRUDE-LAGUERRE","kind":"counterexample-first comparator","status":"FALSIFIED_AS_ROUTE_FAMILY"},
+    {"id":"RH-ANA-003d-C001-KV-ABEL-MOVING-TAIL","kind":"candidate","status":"RETAINED_PROPOSAL_SHADOW"}
+  ],
+  "experience_retrieval": {
+    "selected_failure_ids":["F-RH-ANA-003-DENSITY-EXCEPTION-GAP","F-RH-ANA-003a-MAGNITUDE-MAJORANT-CANCELLATION-LOSS","F-RH-ANA-003b-FULL-SLAMBDA-POLYNOMIAL-SMALLNESS-ROOT-COUPLED","F-RH-ANA-003c-ABSOLUTE-CONVERGENCE-FALSE","F-RH-ANA-003c-UNWITNESSED-WINDOW-GLUE","F-RH-ANA-003c-CURRENT-FRAMEWORK-DRIFT-GATE-MISS"],
+    "selected_proposal_ids":["M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING","M-RH-ANA-ROOT-SENSITIVE-REMAINDER","CURRENT_WORK_BOUND_BEFORE_CONSEQUENTIAL_ROUTING"],
+    "selected_transformation_episode_ids":["EP-ABEL-SUMMATION-CUMULATIVE-CANCELLATION"],
+    "rejected_ids":[
+      {"id":"F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE","reason":"source-family completeness is not the active cumulative-tail coordinate"},
+      {"id":"finite-prefix-extrapolation-as-solution","reason":"finite verification cannot establish all-index Li positivity"},
+      {"id":"zero-density-only-universal-bridge","reason":"does not exclude a sparse off-critical zero"},
+      {"id":"full-S_Lambda-global-bound","reason":"R3 classified global polynomial control as root-strength"}],
+    "missed_ids":"CANNOT_MEASURE: no governed complete memory denominator is exposed by the connector runtime.",
+    "later_found_missed_ids":[],"changed_routing":true,
+    "routing_change":"Pre-memory preference for the newest logarithmic zero-free region was replaced by source-order Abel transformation, exponent discrimination, and the KV PNT input."
+  },
+  "search_policy":"CURRENT_WORK_BOUND + direct SEARCH mapping + source-order-first + counterexample-first exponent comparison + obligation-strength guard + fail-closed exact-head gate.",
+  "observations":[
+    "Focused current-v3 pre-candidate gate passed on exact head 27b9a76112303a56fcddc07555acae6e9924dd43 against exact framework pin 43897d3afaf0038385102d5acc64793c05ec40f0.",
+    "Bellotti's unconditional KV-scale PNT error outruns exp(2sqrt(n log x)) after log X_n=C0 n^5 log^2(n+e).",
+    "The 2026 logarithmic zero-free scale, through the same omega + crude Laguerre envelope, loses the exponent comparison.",
+    "The resulting tail is negligible but the moving finite prefix and exact Li/archimedean glue are untouched."
+  ],
+  "falsifier_verification":[
+    {"kind":"CURRENT_V3_FOCUSED_GATE","status":"PASS","evidence":"GitHub Actions run 31552496471 exact head 27b9a76112303a56fcddc07555acae6e9924dd43"},
+    {"kind":"FULL_APPLICATION_SUITE","status":"FAIL","evidence":"GitHub Actions run 31552496573; exact failing test not exposed by available annotation/log surface"},
+    {"kind":"PRIMARY_SOURCE_RECHECK","status":"PASS","evidence":"Coffey 0706.0343v2; Bellotti 2508.02041; Bellotti-Trudgian-Yang 2603.21490"},
+    {"kind":"EXPONENT_FALSIFIER","status":"PASS","evidence":"nu(t)=c/log t gives omega=2sqrt(c log x), which cannot dominate exp(2sqrt(n log x)) in the crude envelope for n>c"},
+    {"kind":"SAME_CONTEXT_EXPERT_REVIEW","status":"PASS_SCOPED","evidence":"REV-RH-ANA-003d-C001-R5","independent_credit":0},
+    {"kind":"FORMAL_VERIFIER","status":"NOT_RUN","evidence":"no proof assistant/verifier bound"}
+  ],
+  "outcome":"PARTIAL_SUCCESS_SOURCE_BOUND_UNIFORM_ORDERED_TAIL_CERTIFICATE",
+  "residual_before":"RH-ANA-003d — synchronized moving-cutoff tail: obtain a source-order all-index tail certificate while keeping moving-prefix/Li gluing separate.",
+  "residual_after":"RH-ANA-003e — MOVING_PREFIX_OBLIGATION_STRENGTH_AND_LI_GLUE: audit and prove a strictly weaker source-bound moving-prefix/sign certificate and glue it to the exact Li ledger; tail is locally closed only.",
+  "failure_categories":["mathematical","representation","gluing","verification","provenance"],
+  "local_mathematical_failure":"Only the logarithmic-zero-free + crude-Laguerre majorant family failed; the KV/Abel candidate succeeded locally.",
+  "local_to_global_gluing_failure":"OPEN_SEPARATELY: no exact finite-prefix plus archimedean route to all-index Li positivity is proved.",
+  "saturation_axes":{"KNOWLEDGE":"REOPENED_THEN_LOCAL_FLAT: explicit ordered-tail modulus retained for this cutoff family","OPERATOR":"FLAT: Abel is reused, not new","EXPERIENCE_PATTERN":"REOPENED: prior order-sensitivity motif successfully reused","OBSTRUCTION":"REOPENED: logarithmic-ZFR/crude-envelope failure plus moving-prefix root-load localized","RELATION":"REOPENED: exact KV-decay versus Laguerre-growth cutoff relation retained","PATH":"REOPENED: successor RH-ANA-003e becomes active","META_METHOD":"FLAT: v3 behaved as designed; no framework method change"},
+  "novelty_class":["compositional","transfer","representation"],
+  "retained_semantic_novelty_counts":{"KNOWLEDGE":1,"OPERATOR":0,"EXPERIENCE_PATTERN":1,"OBSTRUCTION":1,"RELATION":1,"PATH":1,"META_METHOD":0},
+  "cost_effort_proxy":{"same_context_expert_roles":7,"independent_reviews":0,"primary_source_families_consulted":3,"focused_ci_runs_observed":1,"full_ci_runs_observed":1,"web_retrieval_calls_observed_this_result_phase":2,"model_context_tokens":"CANNOT_MEASURE: runtime exposes no authoritative token/context counter.","aggregate_tool_calls":"CANNOT_MEASURE: runtime exposes no authoritative aggregate tool-call counter.","elapsed_wall_time":"CANNOT_MEASURE: no authoritative per-cycle timer is exposed to the artifact writer."},
+  "new_ids":{"episode_ids":["EP-RH-ANA-003d-KV-ABEL-MOVING-TAIL-20260812-R5"],"diagnosis_ids":["D-RH-ANA-003d-TAIL-LOCAL-CLOSURE-PREFIX-LOAD"],"failure_ids":["F-RH-ANA-003d-LOG-ZFR-CRUDE-LAGUERRE-ENVELOPE-FAIL"],"obstruction_ids":["O-RH-ANA-003e-MOVING-PREFIX-LI-GLUE"],"lesson_ids":["L-RH-ANA-003d-CUMULATIVE-CANCELLATION-BEFORE-UNIFORM-MAJORANT"],"tool_ids":[],"motif_ids":[]},
+  "successful_reuse_ids":["EP-ABEL-SUMMATION-CUMULATIVE-CANCELLATION","M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING","M-RH-ANA-ROOT-SENSITIVE-REMAINDER"],
+  "next_action":"Freeze RH-ANA-003e context before any prefix candidate; first run an obligation-strength/DifferenceWitness audit showing any proposed moving-prefix certificate is strictly weaker than whole-remainder polynomial control and exact RH.",
+  "authority":"PROPOSAL_SHADOW_TASK_EPISODE_ONLY / EXPERIENCE_SEARCH_GUIDANCE_ONLY",
+  "artifact_hash":"sha256:0dd9278f9390c0b564dea91909899bb3260f82927fe1c578a2f0a166a29d4e6d"
+}
