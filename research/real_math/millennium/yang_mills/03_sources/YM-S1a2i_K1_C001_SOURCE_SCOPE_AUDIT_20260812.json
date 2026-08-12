@@ -1,0 +1,64 @@
+{
+  "artifact_hash": "sha256:cf07137c74eeb4c749d3b9d7ef415bc08562e645dec830a2ee875b01cbdf9e61",
+  "atom_id": "YM-S1a2i-K1",
+  "bounded_conclusion": "The acquired evidence does not bind the exact uniform five-constant family and norm/scale scope required by C001. This does not assert that the inaccessible full source lacks such statements.",
+  "candidate_id": "YM-S1a2i-K1-C001-SYMBOLIC-NEXT-RADIUS-MARGIN",
+  "classified_branch": "SOURCE_UNIFORMITY_OR_NORM_ASSUMPTIONS_INSUFFICIENT",
+  "evaluated_obligations_in_frozen_order": [
+    "O1-SOURCE-UNIFORMITY",
+    "O4-NORM-AND-SCALE-SCOPE"
+  ],
+  "obligation_results": {
+    "O1-SOURCE-UNIFORMITY": "NOT_DISCHARGED_BY_ACQUIRED_EVIDENCE",
+    "O4-NORM-AND-SCALE-SCOPE": "NOT_DISCHARGED_BY_ACQUIRED_EVIDENCE"
+  },
+  "record_type": "YM_K1_C001_ACQUIRED_SOURCE_UNIFORMITY_AND_NORM_SCOPE_AUDIT",
+  "required_binding_audit": [
+    {
+      "acquired_evidence": "the indexed audit reports a strict contraction factor rho<1 in equation (573)",
+      "coordinate": "rho",
+      "required": "one finite 0<rho<1 valid uniformly for every admitted scale k",
+      "status": "NOT_BOUND_AS_ONE_K_UNIFORM_CONSTANT_FAMILY_BY_ACQUIRED_EVIDENCE"
+    },
+    {
+      "acquired_evidence": "the indexed audit reports graph balls with radius c_K g^2",
+      "coordinate": "c_K",
+      "required": "one positive graph-radius coefficient used at every admitted k and at k+1",
+      "status": "NOT_BOUND_JOINTLY_WITH_THE_ONE_STEP_ESTIMATE_OVER_ALL_ADMITTED_K"
+    },
+    {
+      "acquired_evidence": "the indexed audit reports only O(g_k^4) forcing for the K coordinate",
+      "coordinate": "C_K",
+      "required": "one finite nonnegative coefficient for the exact O(g_k^4) forcing bound, uniform in k",
+      "status": "NO_EXACT_K_UNIFORM_FORCING_COEFFICIENT_BOUND_IN_ACQUIRED_AUDIT"
+    },
+    {
+      "acquired_evidence": "the indexed audit reports g'=g-b_0 g^3+r_k",
+      "coordinate": "b_0",
+      "required": "one positive cubic base-flow coefficient on the admitted scale range",
+      "status": "NOT_BOUND_AS_PART_OF_ONE_JOINT_K_UNIFORM_HYPOTHESIS_PACKET"
+    },
+    {
+      "acquired_evidence": "the indexed audit reports the displayed value-remainder inequality",
+      "coordinate": "C_beta",
+      "required": "one finite nonnegative remainder coefficient with |r_k|<=C_beta g_k^5 uniformly in k",
+      "status": "NOT_BOUND_AS_PART_OF_ONE_JOINT_K_UNIFORM_HYPOTHESIS_PACKET"
+    },
+    {
+      "acquired_evidence": "the indexed audit records scale-labelled K norms and the Section-38 graph-ball discussion",
+      "coordinate": "K_norm_and_graph_ball_scope",
+      "required": "the exact scale-indexed norms and graph-ball domain for both ||K_k||_k and ||K_{k+1}||_{k+1}, with one-step theorem quantifiers covering every admitted k",
+      "status": "EXACT_DEFINITIONS_AND_JOINT_THEOREM_SCOPE_NOT_BOUND_BY_ACQUIRED_AUDIT"
+    }
+  ],
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "source_boundary": {
+    "access_state": "Direct SSRN PDF remains HTTP 403; ResearchGate direct access previously returned HTTP 429/failed fetch. Findings are bounded to the already acquired indexed primary-author text.",
+    "acquired_audit_commit": "c67226cf46fee0a72b492fed23f837593021ca57",
+    "acquired_audit_git_blob": "1bb1372e783dd805e4f6f97ebd1c5475d100383d",
+    "acquired_audit_path": "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_R20_SOURCE_AUDIT.md",
+    "acquired_audit_raw_sha256": "5d7f56df67fa566d4d4d066a811127fcf5234534d3274d159c533e29ee70768e",
+    "citation": "Jonathan J. Wilson (2026), author-uploaded/indexed Yang--Mills manuscript, Section 38, especially equations (573)--(580), Lemmas 38.2--38.4 and Theorem 38.5",
+    "global_source_absence_claim": false
+  }
+}
