@@ -28,12 +28,15 @@ pre_candidate_packet:
   trace: research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003g_PRE_CANDIDATE_TRACE_20260812_R8.json
 
 candidate_generation_gate:
-  allowed: false
+  allowed: true
+  authority: PROPOSAL_SHADOW_CANDIDATE_MATERIALIZATION_ONLY
   reason: >-
-    The pre-candidate packet was failed closed after framework drift, then rebound to current RAKL main. Current RAKL main must still be revalidated
-    immediately before candidate materialization using the prospective
-    framework-candidate-freeze surface. Until that receipt passes, no candidate
-    is authorized.
+    The stale earlier freeze was failed closed, the packet was rebound to
+    current RAKL main 5dc0627f039e8f3e1cdcb7e05cd7603860afc554, the branch gitlink/pin were synchronized,
+    and an immediate second observation found current main unchanged. The
+    framework-candidate-freeze report is CURRENT_UNCHANGED and licenses only
+    proposal/shadow candidate materialization; it grants no scientific authority.
+  receipt: research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003g_FRAMEWORK_CANDIDATE_FREEZE_20260812_R8.json
 
 next_discriminator:
   - Revalidate current RAKL main at candidate freeze.

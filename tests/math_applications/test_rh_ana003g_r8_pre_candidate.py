@@ -76,3 +76,29 @@ def test_r8_pre_candidate_packet_and_current_v3_realization_domain_gate():
     experts=load("08_reviews/RH_ANA_003g_EXPERT_CELL_PRE_CANDIDATE_20260812_R8.json")
     assert len(experts["roles"])==7
     assert experts["independent_review_credit"]==0
+
+def test_r8_framework_candidate_freeze_is_operationally_current():
+    receipt=load("09_trace/RH_ANA_003g_FRAMEWORK_CANDIDATE_FREEZE_20260812_R8.json")
+    prefixed(receipt)
+    from rakl.framework_candidate_freeze import (
+        FrameworkSubjectFreezeBinding, FrameworkSubjectRevalidationObservation,
+        CandidateFreezeRevalidationVerdict, audit_candidate_freeze_framework_subject,
+    )
+    bdoc=receipt["binding"]
+    binding=FrameworkSubjectFreezeBinding(
+        binding_id=bdoc["binding_id"],
+        authoritative_framework_sha=bdoc["authoritative_framework_sha"],
+        pre_candidate_packet_hash=bdoc["pre_candidate_packet_hash"],
+        frozen_at_utc=bdoc["frozen_at_utc"],
+        evidence_pointers=tuple(bdoc["evidence_pointers"]),
+    )
+    assert binding.binding_canonical_sha256==bdoc["binding_canonical_sha256"]
+    obs=FrameworkSubjectRevalidationObservation(
+        observed_current_main_sha=receipt["observation"]["observed_current_main_sha"],
+        intervening_diff=(),
+        observation_evidence_pointers=tuple(receipt["observation"]["observation_evidence_pointers"]),
+    )
+    report=audit_candidate_freeze_framework_subject(binding, obs, required=True)
+    assert report.verdict is CandidateFreezeRevalidationVerdict.CURRENT_UNCHANGED
+    assert report.licenses_candidate_materialization is True
+    assert report.grants_scientific_authority is False
