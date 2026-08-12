@@ -16,9 +16,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[5]
 OUT = ROOT / "research/real_math/millennium/cross_problem/10_case_study/CROSS_FAILURE_CAUSAL_COORDINATE_FEEDBACK_20260812.json"
 
-APPLICATION_SHA = "f0c20a3126c61effc8defbbb66f6e9306f349ad8"
-FRAMEWORK_PIN = "7d67a18a96499f5df7bf58bc6b1356d1ce1cafbf"
-FRAMEWORK_LIVE = "ea607c8cd8e4fd308ea9a4e024d8c93ff87f5fda"
+APPLICATION_SHA = "3ebde341484e6781796229d3b2328def257deae0"
+FRAMEWORK_PIN = "6756ebec40b90f327d879410539f5146e188f34d"
+FRAMEWORK_LIVE = FRAMEWORK_PIN
 
 SOURCES = {
     "pnp_c050": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C050_K15_MATHEMATICAL_LESSON_20260812.json",
@@ -67,7 +67,7 @@ def build() -> dict:
             "application_repository_sha": APPLICATION_SHA,
             "framework_pin_sha": FRAMEWORK_PIN,
             "framework_live_sha": FRAMEWORK_LIVE,
-            "framework_pin_to_live_diff_scope": "PAPER3_REGISTRATION_MARKDOWN_ONLY_NO_MATHEMATICAL_GATE_CHANGE",
+            "framework_pin_to_live_diff_scope": "CURRENT_APPLICATION_BASE_PIN_EQUALS_OBSERVED_LIVE_FRAMEWORK_MAIN",
         },
         "shared_obstruction_morphology": {
             "statement": "An outer index, scale, quotient, or qualitative estimate can change while the desired implication remains controlled by a load-bearing mathematical coordinate that the current representation erases, fixes incompatibly, or leaves quantitatively unbound.",
@@ -96,7 +96,7 @@ def build() -> dict:
                 "exact_result_or_failure": "The source gives a row threshold M(n,epsilon), while the target additionally requires M(n,epsilon_n)<=Y_n eventually; no modulus or comparison is proved.",
                 "supported_and_competing_mathematical_causes": "Supported logical gap: unbound n-dependence of the threshold. A useful n-dependent modulus, diagonal compatibility without full uniformity, and endpoint-only control remain competing open possibilities.",
                 "scope": "Pre-candidate quantifier/method-transfer diagnosis only; epsilon_n is not frozen, and complement, internal-prefix, and Li/RH obligations remain separate.",
-                "mathematical_falsifier": "Derive a valid target-domain M(n,epsilon) and prove the eventual diagonal comparison; the frozen triangular-array world falsifies any generic pointwise-only rule.",
+                "mathematical_falsifier": "Derive a valid target-domain M(n,epsilon) and prove the eventual diagonal comparison; separately execute the still-unevaluated frozen triangular-array world, whose preregistered expected branch would reject a generic pointwise-only transfer rule.",
                 "repair_or_next_discriminator": "Expose all n-dependent Abel/Laguerre constants and compare the resulting modulus with the prospectively frozen diagonal.",
                 "proof_or_source_evidence": [source_binding(SOURCES["rh_ana003j"])],
                 "load_bearing_coordinate": "growth of M(n,epsilon_n) relative to Y_n",

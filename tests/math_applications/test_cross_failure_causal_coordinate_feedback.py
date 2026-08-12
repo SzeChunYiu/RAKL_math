@@ -56,6 +56,9 @@ def test_synthesis_is_morphology_not_cross_domain_causal_claim() -> None:
         "BIRCH_AND_SWINNERTON_DYER",
         "YANG_MILLS",
     }
+    rh = next(row for row in artifact["mathematical_witnesses"] if row["problem"] == "RIEMANN_HYPOTHESIS")
+    assert "still-unevaluated" in rh["mathematical_falsifier"]
+    assert "preregistered expected branch" in rh["mathematical_falsifier"]
 
 
 def test_activation_requires_distinct_math_failures_and_controls() -> None:
