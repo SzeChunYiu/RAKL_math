@@ -19,6 +19,8 @@ BRANCHES = (
     "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE",
     "CANNOT_CHECK",
 )
+POSITIVE_OBLIGATIONS = tuple(f"P{i}" for i in range(1, 8))
+NEGATIVE_OBLIGATIONS = tuple(f"N{i}" for i in range(1, 7))
 ROOT = Path(__file__).resolve().parents[5]
 IDENTITY = ROOT / "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C052_K31_OVERLAP_DISCRIMINATOR_IDENTITY_20260812.json"
 IDENTITY_SHA256 = "92d145fd1240891a747fe49b3223845f0cecc2eae339a449f57b4b42af10a11b"
@@ -92,6 +94,28 @@ def decision_kernel(*, source_valid: bool, positive_valid: bool, negative_valid:
     return "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE"
 
 
+def certificate_frontend(
+    *,
+    positive_certificate: dict | None = None,
+    negative_certificate: dict | None = None,
+    source_overrides: dict[str, bytes] | None = None,
+    malformed_or_ambiguous: bool = False,
+) -> dict:
+    """Validate certificate structure and pass only derived states to the kernel."""
+    source_valid = verify_frozen_source_bindings(source_overrides)
+    positive = (positive_certificate or {}).get("positive_obligations")
+    negative = (negative_certificate or {}).get("negative_obligations")
+    positive_valid = isinstance(positive, dict) and set(positive) == set(POSITIVE_OBLIGATIONS) and all(positive.values())
+    negative_valid = isinstance(negative, dict) and set(negative) == set(NEGATIVE_OBLIGATIONS) and all(negative.values())
+    kernel_input = {
+        "source_valid": source_valid,
+        "positive_valid": positive_valid,
+        "negative_valid": negative_valid,
+        "malformed_or_ambiguous": malformed_or_ambiguous,
+    }
+    return {"kernel_input": kernel_input, "branch": decision_kernel(**kernel_input)}
+
+
 def build_public_k31_negative_certificate(*, source_binding_valid: bool) -> dict:
     parent = cell(2, 5)
     current = support_cells(64)
@@ -116,6 +140,28 @@ def build_public_k31_negative_certificate(*, source_binding_valid: bool) -> dict
                 "all_prefixes_separated": pad_separator + invalid_token_separator == len(prefixes),
             })
             total_prefixes += len(prefixes)
+    expected_parent = {"a": 2, "b": 3, "m": 5, "header": 16, "width": 3, "raw": 61, "padding": 1, "encoded": 62}
+    parent_support_valid = parent == expected_parent
+    current_support_valid = current == expected_current
+    parent_pad_separator_valid = parent_support_valid and parent["raw"] == 61 and parent["padding"] == 1
+    a1_endpoint_separator_valid = cell(1, 8)["header"] == 16 and (1).bit_length() == 1
+    later_token_separator_valid = all(
+        MAGIC[7] + gamma(v)[:2] == "100"
+        for support in expected_current
+        if support["a"] in {4, 6}
+        for v in range(support["v_range"][0], support["v_range"][1] + 1)
+    )
+    parent_token_mapping_valid = parent["header"] == 16 and 37 - parent["header"] == 7 * parent["width"] and int("00", 2) == 0
+    symbolic_separator_valid = all((parent_pad_separator_valid, a1_endpoint_separator_valid, later_token_separator_valid, parent_token_mapping_valid))
+    enumeration_separator_valid = all(row["all_prefixes_separated"] for row in rows)
+    negative_obligations = {
+        "N1": source_binding_valid,
+        "N2": parent_support_valid,
+        "N3": current_support_valid,
+        "N4": symbolic_separator_valid,
+        "N5": enumeration_separator_valid,
+        "N6": all((source_binding_valid, parent_support_valid, current_support_valid, symbolic_separator_valid, enumeration_separator_valid)),
+    }
     return {
         "certificate_id": "PNP-C052-K31-UNIVERSAL-SYNTAX-SEPARATOR-v1",
         "source_valid": source_binding_valid,
@@ -132,23 +178,20 @@ def build_public_k31_negative_certificate(*, source_binding_valid: bool) -> dict
         "public_enumeration_rows": rows,
         "public_unique_prefixes_checked_with_multiplicity_by_v": total_prefixes,
         "all_public_prefix_rows_separated": all(row["all_prefixes_separated"] for row in rows),
-        "negative_obligations": {"N1": source_binding_valid, "N2": True, "N3": current == expected_current, "N4": True, "N5": True, "N6": True},
-        "negative_valid": source_binding_valid and parent == {"a": 2, "b": 3, "m": 5, "header": 16, "width": 3, "raw": 61, "padding": 1, "encoded": 62} and current == expected_current and all(row["all_prefixes_separated"] for row in rows),
+        "symbolic_separator_valid": symbolic_separator_valid,
+        "negative_obligations": negative_obligations,
+        "negative_valid": all(negative_obligations.values()),
     }
 
 
 def evaluate_public_k31(*, source_overrides: dict[str, bytes] | None = None) -> dict:
     source_binding_valid = verify_frozen_source_bindings(source_overrides)
     certificate = build_public_k31_negative_certificate(source_binding_valid=source_binding_valid)
-    branch = decision_kernel(
-        source_valid=certificate["source_valid"],
-        positive_valid=False,
-        negative_valid=certificate["negative_valid"],
-        malformed_or_ambiguous=False,
-    )
+    frontend = certificate_frontend(negative_certificate=certificate, source_overrides=source_overrides)
     return {
-        "branch": branch,
+        "branch": frontend["branch"],
         "certificate": certificate,
+        "frontend_kernel_input": frontend["kernel_input"],
         "source_binding_valid": source_binding_valid,
         "hidden_or_native_executed": False,
     }

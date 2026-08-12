@@ -47,6 +47,8 @@ def test_negative_certificate_proves_exact_two_case_separator() -> None:
     negative = load(PATHS[0])
     assert negative["branch"] == "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE"
     assert all(negative["negative_obligations"].values())
+    assert negative["negative_obligations"]["N4"] == negative["symbolic_separator_valid"]
+    assert negative["negative_obligations"]["N5"] == negative["all_public_prefix_rows_separated"]
     assert negative["parent_cell"]["padding"] == 1
     assert len(negative["current_cells"]) == 3
     assert negative["public_unique_prefixes_checked_with_multiplicity_by_v"] == 82928
@@ -63,6 +65,16 @@ def test_frontend_rederives_frozen_source_binding_and_fails_closed_on_mutation()
     mutated = discriminator.evaluate_public_k31(source_overrides={"c041_grammar": b"mutated"})
     assert mutated["source_binding_valid"] is False
     assert mutated["branch"] == "CANNOT_CHECK"
+
+
+def test_full_frontend_propagation_world_covers_all_three_frozen_branches() -> None:
+    check = load(PATHS[1])
+    world = check["world_results"]["K31-FRONTEND-KERNEL-BRANCH-PROPAGATION-v1"]
+    assert world == {
+        "CANNOT_CHECK": "CANNOT_CHECK",
+        "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE": "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE",
+        "NONEMPTY_WITH_EXACT_POSITIVE_CERTIFICATE": "NONEMPTY_WITH_EXACT_POSITIVE_CERTIFICATE",
+    }
 
 
 def test_independent_worlds_and_integration_pass_without_hidden_native() -> None:
