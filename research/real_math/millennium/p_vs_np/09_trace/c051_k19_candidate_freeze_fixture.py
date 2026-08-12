@@ -125,7 +125,7 @@ def build() -> dict:
                     "proposal-only quantifier/scope compatibility witness, not wired into protected math gates",
                     "pre-scratch host hook, not wired into the protected math runtime",
                 ],
-                "effect": "Candidate materialization remains governed by the already-passed C051 gate; the new proposal-only surfaces add no mandatory precondition to this fixed finite interface atom.",
+                "effect": "The original strict C051 gate is superseded and cannot authorize candidate generation. This retrospective support-selection freeze is licensed only by the append-only contamination correction; the new proposal-only framework surfaces add no further mandatory precondition to freezing the still-unevaluated shared-bit/UNSAT discriminator.",
             },
             "context_packet_hash": context["packet_hash"],
             "pre_candidate_gate_artifact_hash": gate["artifact_hash"],
