@@ -1,0 +1,103 @@
+{
+  "record_type": "BSD_R12_SOURCE_BOUND_RESULT_PACKET",
+  "cycle_id": "BSD-A1a1-PINFINITY-VP-BINDING-20260812-R12",
+  "authority": "PROPOSAL_SHADOW_SOURCE_BOUND",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "active_atom": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "fibre_snapshot_hash": "sha256:f1cd498b05c1d2dfca66f7f45b8c4a8cedf9b2c33c21b3001527c9f4a12afd0f",
+  "source_audit": [
+    {
+      "id": "arXiv:2109.12344v3",
+      "title": "On the soft p-converse to a theorem of Gross-Zagier and Kolyvagin",
+      "author": "Chan-Ho Kim",
+      "primary_url": "https://arxiv.org/abs/2109.12344",
+      "selectors": ["p.1 definition of Sel(Q,E[p^infinity]) and Sel(Q,V)", "proof of Proposition 3.3, pp.4-5, especially the compact-kernel/cokernel comparison and lines stating the same argument for usual Selmer groups"],
+      "verified_claims": ["Sel(Q,E[p^infinity]) is the usual Kummer Selmer group over Q and Sel(Q,V) is defined by the corresponding E(Q_v) tensor Q_p local condition", "from 0 -> T -> V -> V/T -> 0 with E[p^infinity] isomorphic to V/T, the induced strict-Selmer comparison has kernel and cokernel lying in compact Z_p-modules", "the paper explicitly says that applying the same argument to usual Selmer groups gives equivalence between corank_Zp Sel(Q,E[p^infinity])=1 and dim_Qp Sel(Q,V)=1"],
+      "strict_nonclaims": ["the paper does not state a rank-two BSD theorem", "its p-converse theorem uses additional rank-one hypotheses and is not imported here", "the current R12 use is only the coefficient-comparison argument"]
+    },
+    {
+      "id": "DOI:10.4007/annals.2020.191.2.1",
+      "title": "A converse to a theorem of Gross, Zagier, and Kolyvagin",
+      "author": "Christopher Skinner",
+      "venue": "Annals of Mathematics 191 (2020), 329-354",
+      "selectors": ["Sec. 2.2, pp.337-338"],
+      "verified_claims": ["for W=V_pA_f/T_pA_f=A_f[p^infinity], the classical p-infinity local Kummer condition is the image of the characteristic-zero Bloch-Kato H^1_f local condition", "the maximal divisible subgroup of the global p-infinity Selmer group is the image of the characteristic-zero Bloch-Kato Selmer group"],
+      "strict_nonclaims": ["Skinner's rank-one converse and p-local injectivity criteria are not imported into R12"]
+    },
+    {
+      "id": "arXiv:1301.4724",
+      "title": "Selmer groups as flat cohomology groups",
+      "author": "Kestutis Cesnavicius",
+      "verified_claim": "Bloch-Kato determine the p-infinity Selmer group of an abelian variety from the p-adic Tate module; used only as a representation-consistency cross-check"
+    },
+    {
+      "id": "RAKL_math:R9-ZHANG",
+      "pointer": "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a1_R9_ZHANG_LOWER_BOUND_SOURCE_AUDIT_20260812.json",
+      "verified_stored_input": "under Wei Zhang Theorem 1.4 hypotheses, exact complex analytic rank two gives corank_Zp Sel_{p^infinity}(E/Q)>=2 at the same technical prime p"
+    }
+  ],
+  "exact_result": {
+    "lemma_id": "LEM-BSD-R12-PINFINITY-VP-CORANK-DIM",
+    "statement": "For an elliptic curve E/Q and prime p, with the usual Kummer/Bloch-Kato Selmer structures on E[p^infinity]=V_pE/T_pE and V_pE, corank_Zp Sel_{p^infinity}(E/Q) = dim_Qp Sel(Q,V_pE)=dim_Qp H^1_f(Q,V_pE).",
+    "proof_core": [
+      "Kim defines the torsion and characteristic-zero Selmer groups using the corresponding E(Q_v) tensor local conditions and records the natural comparison induced by 0 -> T_pE -> V_pE -> E[p^infinity] -> 0.",
+      "Kim's compact-kernel/cokernel comparison, independently corroborated by Skinner's maximal-divisible-subgroup description, implies that replacing V_pE by E[p^infinity] changes only a full Z_p lattice in the source and a compact/finite quotient in the target.",
+      "If d=dim_Qp Sel(Q,V_pE), the image is a divisible p-primary group of corank d: the kernel is a full Z_p lattice because the target is p-power torsion, while compactness forbids a nonzero Q_p-line in the kernel.",
+      "The quotient of the classical p-infinity Selmer group by that maximal divisible image has zero Z_p-corank; hence the two size coordinates are equal. No Sha-finiteness hypothesis is needed for this corank identity."
+    ],
+    "corollary_id": "COR-BSD-R12-ZHANG-R9-TO-VP-LOWER",
+    "corollary": "Under the exact hypotheses of the merged Zhang R9 theorem cell, ord_{s=1}L(E,s)=2 implies dim_Qp H^1_f(Q,V_pE)>=2.",
+    "scope": ["same E/Q", "same technical prime p", "all Zhang Theorem 1.4 hypotheses retained", "lower-bound direction only"],
+    "novelty_class": "stored",
+    "secondary_novelty_classes": ["compositional", "representation"],
+    "novelty_claim": "NO_NEW_MATHEMATICS_CLAIM; source-bound restatement/composition closing an application residual"
+  },
+  "counterexample_first_falsification": {
+    "checks": ["full versus strict Selmer structures kept distinct", "same curve and prime retained", "local Kummer/Bloch-Kato condition checked", "compact kernel/cokernel cannot carry Q_p-dimensional loss", "no Sha finiteness, algebraic rank two, main conjecture, p-adic BSD or localization premise inserted"],
+    "outcome": "PASS_WITHIN_STATED_COEFFICIENT_SCOPE",
+    "pdf_visual_verification": "CANNOT_CHECK: mandatory screenshot calls for the Skinner and Kim primary PDFs returned backend Cache miss; parsed primary-PDF text and publisher/arXiv metadata were inspected instead"
+  },
+  "task_episode_shadow": {
+    "episode_id": "EP-BSD-A1A1-R12-PINFINITY-VP-BINDING-20260812",
+    "task_id": "RAKL-VERIFIED-DISCOVERY-BSD-ANALYTIC",
+    "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+    "problem_signature": ["R9 complex rank2 -> p-infinity corank>=2", "p-infinity to V_p exact coordinate binding open", "transverse localization and full BSD glue separate"],
+    "actual_fibre": ["root contract", "R9", "R10", "R11", "R8 transformation memory", "current RAKL 3.0.0 surfaces", "Kim 2109.12344v3", "Skinner Annals 2020", "Cesnavicius 1301.4724"],
+    "operators_tried": ["decomposition", "routing", "source_selection_reliability", "claim_extraction", "mathematical_context_translation", "equivalence_similarity", "contradiction_diagnosis", "gap_discovery", "memory", "synthesis", "review", "saturation_stopping", "difference_witness", "counterexample_first_coordinate_type_check"],
+    "motifs_tried": [],
+    "search_policy": "INVENTION_LAST_SEARCH_SAME_DOMAIN_COEFFICIENT_EXACT_SEQUENCE",
+    "observations": ["Kim gives the direct Q definitions and compact-kernel/cokernel comparison", "Skinner identifies the same local conditions and maximal divisible subgroup", "the coefficient conversion therefore preserves corank/dimension without any rank-two or Sha-finite assumption"],
+    "verification": ["primary arXiv text", "primary Annals text", "current R9 repository source audit", "seven-role same-context expert cell", "hostile local-condition and premise checks"],
+    "outcome": "SCOPED_STORED_COMPOSITION_SUCCESS",
+    "residual_before": ["PINFINITY_SELMER_TO_VP_SELMER_EXACT_COORDINATE_BINDING_OPEN", "SELMER_CORANK_LOWER_BOUND_TO_EXACT_CORANK2_UPPER_BOUND", "TRANSVERSE_P_LOCALIZATION_NONZERO", "FULL_BSD_LEADING_TERM_GLUE_OPEN"],
+    "residual_after": ["SELMER_VP_DIMENSION_LOWER_BOUND_TO_EXACT_DIMENSION2_UPPER_BOUND", "TRANSVERSE_P_LOCALIZATION_NONZERO", "MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_PERIOD_COMPLEX_LEADING_TERM_GLUE_OPEN"],
+    "failure_category": "NONE_LOCAL; ROOT_FACING_GLUING_REMAINS_OPEN",
+    "cost_effort_proxy": 1.0,
+    "cost_basis": "normalized effort proxy; authoritative model-token/tool/wall-time ledger unavailable",
+    "next_action": "seek an exact upper-bound/equality or transverse-localization theorem from analytic rank two without importing algebraic rank/Sha/main-conjecture strength",
+    "storage_admission": "PROPOSAL_SHADOW_STORED"
+  },
+  "diagnosis_shadow": {
+    "diagnosis_id": "DG-BSD-A1A1-R12-COEFFICIENT-BINDING-CLOSED",
+    "episode_reference_id": "EP-BSD-A1A1-R12-PINFINITY-VP-BINDING-20260812",
+    "status": "SUPPORTED_SOURCE_BOUND",
+    "diagnosis": "R11's p-infinity/V_p mismatch is not an independent arithmetic obstruction: for the usual elliptic-curve Selmer structure it is a coefficient-coordinate change controlled by T subset V and V/T, with compact/finite discrepancy. The remaining obstruction is exactness/localization and then full BSD gluing.",
+    "new_obstruction_id": null,
+    "new_lesson_id": null,
+    "existing_obstruction_retained": "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE"
+  },
+  "saturation": {
+    "axes_reopened": ["KNOWLEDGE", "RELATION", "PATH"],
+    "axes_flattened": ["OPERATOR", "EXPERIENCE_PATTERN", "OBSTRUCTION", "META_METHOD"],
+    "retained_semantic_novelty": {"KNOWLEDGE": 1, "OPERATOR": 0, "EXPERIENCE_PATTERN": 0, "OBSTRUCTION": 0, "RELATION": 1, "PATH": 1, "META_METHOD": 0},
+    "note": "counts application-state semantic closure/composition, not literature novelty or framework learning"
+  },
+  "trace_continuation": [
+    {"event_id":"BSD-A1A1-R12-E09","event_type":"CANDIDATE_PROPOSED","previous_event_hash":"sha256:3e1f56cb90bb649d243b01e6d2cb646523ab3264741bf33b011ab9d0f69f5fce","artifact_hash":"sha256:1840a3520ffdf8047effd1b2788c95b8381d0079e52d313d04ad7fffdd6cf38f"},
+    {"event_id":"BSD-A1A1-R12-E10","event_type":"FALSIFIER_RUN","previous_event_hash":"sha256:1840a3520ffdf8047effd1b2788c95b8381d0079e52d313d04ad7fffdd6cf38f","artifact_hash":"sha256:04fac133ce893f0bd190d9b74c34ac1bccba1ab82a6786b77d76e97be73664ba"},
+    {"event_id":"BSD-A1A1-R12-E11","event_type":"RESULT_RECORDED","previous_event_hash":"sha256:04fac133ce893f0bd190d9b74c34ac1bccba1ab82a6786b77d76e97be73664ba","artifact_hash":"sha256:a56689f5bc38b8faac0b1c757e00886b9c96dcc6f47202bc8ecd9a6c0d197f1b"},
+    {"event_id":"BSD-A1A1-R12-E12","event_type":"RESIDUAL_OPENED","previous_event_hash":"sha256:a56689f5bc38b8faac0b1c757e00886b9c96dcc6f47202bc8ecd9a6c0d197f1b","artifact_hash":"sha256:249649b26096a20fae9f9b478a0409903d57ab09c0b30e5ea206a8ea6a7c85d3"}
+  ],
+  "root_promotion": "FORBIDDEN_NO_ROOT_CERTIFICATE",
+  "recorded_at_utc": "2026-08-12T05:07:00Z"
+}

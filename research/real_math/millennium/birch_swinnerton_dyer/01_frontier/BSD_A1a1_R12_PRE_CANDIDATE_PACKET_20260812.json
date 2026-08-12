@@ -1,0 +1,54 @@
+{
+  "record_type": "RAKL_V3_PRE_CANDIDATE_PACKET",
+  "cycle_id": "BSD-A1a1-PINFINITY-VP-BINDING-20260812-R12",
+  "authority": "PROPOSAL_SHADOW_PRE_CANDIDATE_ONLY",
+  "framework": {"method_version": "3.0.0", "main_sha": "9d61749c087994654515b2d087758f0ce0efaeb4"},
+  "application": {"base_main_sha": "3871283cfe5040801b174e25b045e05ee0228cc2", "base_tree_sha": "32405c355483aa9857d5642bc7b3f85801512539", "root_issue": 7, "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"},
+  "math_context_fibre": {
+    "fibre_id": "BSD-A1a1-R12-PINFINITY-VP-FIBRE",
+    "active_atom": "BSD-A1a1-THETA-ORDER-COMPARISON",
+    "active_subobligation": "PINFINITY_SELMER_TO_VP_SELMER_EXACT_COORDINATE_BINDING_OPEN",
+    "problem_signature": ["same E/Q and same technical prime p as Zhang R9", "R9 gives corank_Zp Sel_{p^infinity}(E/Q) >= 2 from exact analytic rank two under Theorem 1.4 hypotheses", "test exact coefficient/local-condition binding to H^1_f(Q,V_pE)", "keep exact Selmer rank, transverse localization and full BSD leading term separate"],
+    "actual_fibre_contents": ["BSD root contract", "R9 Zhang lower-bound source audit and credited transfer", "R10 Katz-axis coordinate warning", "R11 higher-GZ route pruning and residual", "R8 cross-Millennium transformation memory", "RAKL 3.0.0 v3.py/method_specs.py/math_research_api.py/mathematical-research workflow", "Skinner 2020 Annals Sec.2.2", "Cesnavicius arXiv:1301.4724"],
+    "success_contract": ["source-bind corank_Zp Sel_{p^infinity}(E/Q)=dim_Qp H^1_f(Q,V_pE) or an exactly sufficient maximal-divisible statement", "verify Kummer local conditions equal images of Bloch-Kato H_f local conditions", "compose only with the already-credited R9 lower bound", "do not import Sha finiteness, algebraic rank, exact Selmer rank, main conjecture, localization or leading-term claims"],
+    "falsifiers": ["local-condition mismatch", "positive-corank quotient beyond the characteristic-zero image", "positive-dimensional kernel changing corank versus dimension", "different E, p or Selmer structure", "hidden rank/Sha/main-conjecture/localization premise"],
+    "analogues": [{"id": "AN-SKINNER-2.2", "shared": "same p-infinity and V_p coefficient system", "disanalogy": "rank-one converse/local injectivity in Skinner is not imported"}, {"id": "AN-CESNAVICIUS-TATE-MODULE", "shared": "p-infinity Selmer determined by p-adic Tate module", "disanalogy": "determination alone is weaker than exact corank/dimension equality"}],
+    "cross_domain_analogy": "NO_STRICT_BRIDGE_SELECTED",
+    "fibre_snapshot_hash": "sha256:f1cd498b05c1d2dfca66f7f45b8c4a8cedf9b2c33c21b3001527c9f4a12afd0f"
+  },
+  "research_memory_review": {
+    "retrieved_ids": ["EP-BSD-A1A1-ZHANG-LOWER-BOUND-20260812-R9", "EP-BSD-A1A1-R10-KATZ-AXIS-SPLIT-20260812", "EP-BSD-A1A1-R11-STRUCTURAL-HIGHER-GZ-20260812", "F-BSD-A1A1-R8-SOURCE-FAMILY-REIMPORTS-ARITHMETIC-ENTRY", "F-BSD-A1A1-R10-NAIVE-KATZ-INTERPOLATION-NOT-ORDER-TRANSPORT", "CROSS-REPRESENTATION-RELOCATION", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT", "E-PNP-C042-EXACT-NEIGHBORHOOD-QUOTIENT", "OTEP-LIONS-LOCAL-TO-GLOBAL-TIGHTNESS-SPLIT"],
+    "selected_ids": ["EP-BSD-A1A1-ZHANG-LOWER-BOUND-20260812-R9", "EP-BSD-A1A1-R10-KATZ-AXIS-SPLIT-20260812", "EP-BSD-A1A1-R11-STRUCTURAL-HIGHER-GZ-20260812", "F-BSD-A1A1-R8-SOURCE-FAMILY-REIMPORTS-ARITHMETIC-ENTRY", "F-BSD-A1A1-R10-NAIVE-KATZ-INTERPOLATION-NOT-ORDER-TRANSPORT", "CROSS-REPRESENTATION-RELOCATION", "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"],
+    "rejected_ids": [{"id": "E-PNP-C042-EXACT-NEIGHBORHOOD-QUOTIENT", "why": "DifferenceWitness: finite adjacency quotient has no Selmer cohomology/local-condition/lattice mapping"}, {"id": "OTEP-LIONS-LOCAL-TO-GLOBAL-TIGHTNESS-SPLIT", "why": "DifferenceWitness: spatial escape/tightness is not torsion-to-characteristic-zero coefficient identity"}, {"id": "REPEAT_STRUCTURAL_HIGHER_GZ_KURIHARA", "why": "R11 already pruned this downstream coordinate family"}],
+    "missed_relevant_memory": "CANNOT_MEASURE: no recall-complete denominator",
+    "routing_effect": "R9/R10/R11 select the smallest coefficient-binding residual instead of another carrier rotation",
+    "snapshot_hash": "sha256:da2bcf3581166d8f6e49c57cae15aef721d045198735d1efede3160792937071"
+  },
+  "obstruction_transformation_memory": {
+    "memory_id": "TM-BSD-A1A1-R12-PINFINITY-VP",
+    "source_universe": ["Skinner 2020 Sec.2.2", "Cesnavicius arXiv:1301.4724", "R8 cross-Millennium memory"],
+    "episodes": [{"episode_id": "OTEP-BSD-R12-PINFINITY-TO-VP-MAXDIV", "authority": "SOURCE_EVENT_VERIFIED_PENDING_TARGET_VALIDATION", "obstruction": "same Selmer object represented using W=V/T versus V with missing exact coordinate binding", "transformation": "identify classical local Kummer conditions with Bloch-Kato images and the global H_f(V) image with the maximal divisible subgroup of Sel_{p^infinity}", "preconditions": ["same E/Q,p", "same local Selmer conditions", "W=V_pE/T_pE=E[p^infinity]"], "effect": "corank/dimension coordinate can be compared without changing theory", "forbidden_losses": ["exact-rank promotion", "Sha finiteness", "transverse localization", "different Selmer structure"]}, {"episode_id": "E-PNP-C042-EXACT-NEIGHBORHOOD-QUOTIENT", "authority": "ADVISORY_ONLY"}, {"episode_id": "OTEP-LIONS-LOCAL-TO-GLOBAL-TIGHTNESS-SPLIT", "authority": "ADVISORY_ONLY"}],
+    "snapshot_hash": "sha256:ced8ac8e2555fcb22ea0273394771c4aace29d31f515ce3bb8c14f61789137eb"
+  },
+  "obstruction_transformation_review": {
+    "fingerprint": {"roles": ["Sel_{p^infinity}", "H^1_f(Q,V_pE)", "local conditions", "corank/dimension consumer"], "failure_mechanisms": ["representation-coordinate mismatch", "hidden local-condition substitution", "arithmetic-premise reimport"], "desired_transition": "R9 p-infinity corank lower bound -> V_pE Bloch-Kato dimension lower bound", "forbidden_losses": ["exact dimension", "localization", "rank/Sha", "leading term"]},
+    "SEARCH": {"status": "VIABLE_MATCH", "selected": "OTEP-BSD-R12-PINFINITY-TO-VP-MAXDIV"},
+    "JUMP": {"status": "NOT_SELECTED_DUE_TO_VIABLE_SEARCH", "difference_witnesses": ["PNP quotient roles/constraints do not map", "NS tightness roles/constraints do not map"]},
+    "GLUE": {"status": "NOT_NEEDED"},
+    "LIFT": {"status": "BLOCKED_NOT_NEEDED"},
+    "selected_route": "SEARCH",
+    "validation_obligations": ["source-check local Kummer/Bloch-Kato identity", "source-check maximal-divisible subgroup identity", "derive corank=max-divisible corank=dim H_f(V)", "confirm no rank/Sha/main-conjecture/localization premise", "compose only with R9 after validation"],
+    "candidate_generation_allowed": true,
+    "review_hash": "sha256:6b7cab1d8edbff84e135c0282fd050054853eec29e36f5f577fdece0b2d3f53e"
+  },
+  "expert_cell": {
+    "independent_review_credit": "0/3",
+    "roles": [{"role": "analytic BSD/automorphic", "delegation": "freeze exact analytic-rank-two/R9 input; forbid converse/exact-rank overclaim"}, {"role": "Selmer/Galois cohomology", "delegation": "check classical versus Bloch-Kato local conditions"}, {"role": "Iwasawa/Euler systems", "delegation": "audit hidden main-conjecture/nonvanishing/arithmetic premises"}, {"role": "p-adic representation", "delegation": "check T subset V, W=V/T, maximal divisible subgroup and corank"}, {"role": "adversarial falsification", "delegation": "test strict-Selmer substitution, positive-corank quotient, curve/prime mismatch"}, {"role": "local-to-global/gluing", "delegation": "separate coefficient lemma from localization and full BSD glue"}, {"role": "formal/novelty/provenance", "delegation": "same-context only; stored/compositional classification unless genuinely new proof"}],
+    "consensus": "run the same-domain SEARCH validation; no protected promotion"
+  },
+  "canonical_process_surfaces": ["decomposition", "routing", "search_query_generation", "source_selection_reliability", "claim_extraction", "mathematical_context_translation", "equivalence_similarity", "contradiction_diagnosis", "gap_discovery", "memory", "synthesis", "review", "saturation_stopping", "prompting_context_policy"],
+  "pre_candidate_trace": ["ATOMIZED", "CONTEXT_FROZEN", "ANALOGY_SCAN", "METHOD_TRANSFER_REVIEW", "EXPERT_CONTEXT_REVIEW", "EXPERIENCE_MEMORY_REVIEW", "OBSTRUCTION_TRANSFORMATION_REVIEW", "NEXT_STEP_PROPOSED"],
+  "next_step": "source-bind and derive the p-infinity/V_p coefficient comparison, then compose only the R9 lower bound",
+  "frozen_at_utc": "2026-08-12T04:59:30Z",
+  "packet_hash": "sha256:3ba68fe2ffd1ced58928535ff88f03239b48d348ae2e70a0cddc8804a9a6fcd2"
+}
