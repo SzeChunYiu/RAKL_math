@@ -1,0 +1,49 @@
+{
+  "schema_version": "ym-rakl-trace-delta-v1",
+  "trace_id": "YM-E1a1a0-RTR-20260811T1505Z",
+  "atom_id": "YM-E1a1a0",
+  "context_hash": "f9404d230586967ab018d4d6537676dba58637e953e462fe0b8f52c662825b5a",
+  "prior_canonical_trace": {
+    "path": "research/real_math/millennium/yang_mills/09_trace/YM_E1a1a0_PRIMARY_SOURCE_RETRIEVAL_TRACE_20260811.json",
+    "blob_sha": "cd35d89fcffba0684a747c9b5afb739e81259398"
+  },
+  "pre_action_receipt_hash": "d0310672a9926efd2fda728b573e35277f5c3556e1fb47dff8ccbef3a5b79e5e",
+  "task_episode_id": "YM-E1a1a0-EP-SOURCE-20260811T1505Z",
+  "task_episode_artifact_hash": "5bb4078a4ab7365dd3a42254442145c118876633a1f21b52b198a327a6232824",
+  "events": [
+    {
+      "event_id": "YM-E1a1a0-E-PROSPECTIVE-001",
+      "phase": "PRE_ACTION",
+      "result": "fibre and discriminator content-bound before external source probe",
+      "evidence": "pre_action_receipt:d0310672a9926efd2fda728b573e35277f5c3556e1fb47dff8ccbef3a5b79e5e"
+    },
+    {
+      "event_id": "YM-E1a1a0-E-RETRIEVAL-002",
+      "phase": "ACTION",
+      "result": "bounded primary-content probe found metadata/access records but no technical body",
+      "evidence": [
+        "Springer DOI 10.1007/BF01211042 subscription-preview",
+        "INSPIRE HUTMP-83-B147 metadata"
+      ]
+    },
+    {
+      "event_id": "YM-E1a1a0-E-DIAGNOSIS-003",
+      "phase": "DIAGNOSIS",
+      "result": "SOURCE_CONTEXT_COVERAGE_BLOCK; B1-B3 unchanged",
+      "evidence": "task_episode:5bb4078a4ab7365dd3a42254442145c118876633a1f21b52b198a327a6232824"
+    },
+    {
+      "event_id": "YM-E1a1a0-E-SATURATION-004",
+      "phase": "SATURATION",
+      "result": "seven-axis retained novelty all zero; primary-scan data requirement remains open",
+      "evidence": "RAKL_METHOD_CASE_STUDY_20260811T1505Z"
+    }
+  ],
+  "episode_diagnosis_obstruction_separation": {
+    "episode": "BLOCKED retrieval attempt",
+    "diagnosis": "insufficient primary source instantiation for exact weak-block candidate",
+    "obstruction_or_lesson": "NO_NEW_RECORD; existing source/context blocker persists"
+  },
+  "authority": "TRACE_DELTA_ONLY / NO_THEOREM / NO_PROMOTION",
+  "artifact_hash": "72e378a5e464e68545842971e8962ee7cde5d33a9a25dc7c3e3b827186b22ecf"
+}

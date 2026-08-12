@@ -1,0 +1,138 @@
+{
+  "schema_version": "ym-pre-action-fibre-manifest-v1",
+  "atom_id": "YM-E1a1a0",
+  "parent_atom_id": "YM-E1a1a",
+  "task_id": "YM-E1a1a0-source-acquisition-20260811T1500Z",
+  "context_hash": "f9404d230586967ab018d4d6537676dba58637e953e462fe0b8f52c662825b5a",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "commit": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "operational_contracts_read": [
+      "RAKL_VERSION.json",
+      "docs/RAKL_METROLOGY.md",
+      "docs/RAKL_V3_API.md",
+      "docs/RAKL_V3_IMPLEMENTATION_MANIFEST.md",
+      "src/rakl/method_specs.py",
+      "src/rakl/pre_action_receipt.py"
+    ]
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+    "framework_pin": "bd1a2768f0f474ff44ffa25243241f94bfaf6466",
+    "pin_lag_to_current_main_commits": 37
+  },
+  "residual_before": [
+    "B1_FINE_COARSE_GEOMETRY",
+    "B2_GAUGE_AVERAGING_MAP",
+    "B3_REGULARITY_DOMAIN"
+  ],
+  "selected_retrievals": [
+    {
+      "retrieval_id": "ROOT_CONTRACT",
+      "repository": "SzeChunYiu/RAKL_math",
+      "commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "path": "research/real_math/millennium/yang_mills/00_problem_contract/ROOT_CONTRACT.md",
+      "blob_sha": "1b09055d655a28375b894a9a94b63ad54fa3abc1",
+      "identity_payload_sha256": "cdffec6a2dcfafc129736d671d684728deebeb586ce57d7f12fda91f7fc25cef",
+      "authority": "CANONICAL"
+    },
+    {
+      "retrieval_id": "YM_E1a1a_CONTEXT_FIBER_20260811",
+      "repository": "SzeChunYiu/RAKL_math",
+      "commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "path": "research/real_math/millennium/yang_mills/01_frontier/YM_E1a1a_CONTEXT_FIBER_20260811.json",
+      "blob_sha": "21629992b9bbfabd961002463474bd57e23a26de",
+      "identity_payload_sha256": "7bb5018d83d2a74b9762cf34d60291b01fe48f36772be7e75f889eb85c570813",
+      "authority": "CANONICAL"
+    },
+    {
+      "retrieval_id": "YM_E1a1a_ACTUAL_BLOCK_SOURCE_CONTRACT_20260811",
+      "repository": "SzeChunYiu/RAKL_math",
+      "commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "path": "research/real_math/millennium/yang_mills/03_sources/YM_E1a1a_ACTUAL_BLOCK_SOURCE_CONTRACT_20260811.md",
+      "blob_sha": "7a80d9afb41d885b60c7d154646d7edf17d8d9ab",
+      "identity_payload_sha256": "53131a6e9b8a47637802f453215139161e73b5de2f44cf91a232af66445fa6bb",
+      "authority": "CANONICAL"
+    },
+    {
+      "retrieval_id": "YM_E1a1a0_PRIMARY_SOURCE_RETRIEVAL_20260811",
+      "repository": "SzeChunYiu/RAKL_math",
+      "commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "path": "research/real_math/millennium/yang_mills/03_sources/YM_E1a1a0_PRIMARY_SOURCE_RETRIEVAL_20260811.md",
+      "blob_sha": "9fbee63196f16a0fb5d0c15af302bf038383a6e6",
+      "identity_payload_sha256": "fa49910f4bed5bc4fd9f53dad7ca1117878d39bfafef9a0ade60bb8e4e58cb0a",
+      "authority": "CANONICAL"
+    },
+    {
+      "retrieval_id": "YM_E1a1a_RESEARCH_MEMORY_REVIEW_20260811",
+      "repository": "SzeChunYiu/RAKL_math",
+      "commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "path": "research/real_math/millennium/yang_mills/07_memory/YM_E1a1a_RESEARCH_MEMORY_REVIEW_20260811.json",
+      "blob_sha": "baf1e4d97dd46446a53033cc670ab1d60519c7bc",
+      "identity_payload_sha256": "c14f8a4b4abb26f3fc2c6871f1ec483bb03c8bc2b383f8fd3ef3177f73690517",
+      "authority": "CANONICAL"
+    },
+    {
+      "retrieval_id": "YM_E1a1a_FAILURE_EXPERIENCE_LATTICE_20260811",
+      "repository": "SzeChunYiu/RAKL_math",
+      "commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "path": "research/real_math/millennium/yang_mills/07_memory/YM_E1a1a_FAILURE_EXPERIENCE_LATTICE_20260811.json",
+      "blob_sha": "9fce089864ab887856031e9c8915e1f635e43b98",
+      "identity_payload_sha256": "a2eaf8644660319362f8fcae92c3a0f32e750edfa033a161f4f3298908c8de58",
+      "authority": "CANONICAL"
+    },
+    {
+      "retrieval_id": "YM_E1a1a_RESEARCH_TOOL_INVENTORY_20260811",
+      "repository": "SzeChunYiu/RAKL_math",
+      "commit": "bd36e1661053a07b53af8f0b8bdf44da7c9d677e",
+      "path": "research/real_math/millennium/yang_mills/07_memory/YM_E1a1a_RESEARCH_TOOL_INVENTORY_20260811.json",
+      "blob_sha": "18959577ed007f27773a7e64a4fe8cfd799ce759",
+      "identity_payload_sha256": "6c93a0bc8e34545d8b3ff4504f3402dc52b5280b7e4671ccb90c036879bf49d5",
+      "authority": "CANONICAL"
+    },
+    {
+      "retrieval_id": "RAKL_VERSION",
+      "repository": "SzeChunYiu/RAKL",
+      "commit": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+      "path": "RAKL_VERSION.json",
+      "blob_sha": "7363c88f4b19638299968e5e0ee3a93c3d567121",
+      "identity_payload_sha256": "d91e45ac8043082aa8204681207d527051065632196d683e564585e5004bd300",
+      "authority": "CANONICAL"
+    },
+    {
+      "retrieval_id": "RAKL_METROLOGY",
+      "repository": "SzeChunYiu/RAKL",
+      "commit": "9027cc6beab7e935d714bbdf8e902b89b50caaa8",
+      "path": "docs/RAKL_METROLOGY.md",
+      "blob_sha": "e8951600061a297e48db6e3965e8fec3977cf966",
+      "identity_payload_sha256": "0ec2d84026f58e6147a3e60c7c74a1bc885e9432f5ef96296236382a637f8124",
+      "authority": "CANONICAL"
+    }
+  ],
+  "rejected_retrievals": [],
+  "relevant_prior_failure_ids": [
+    "F-YM-E1A1-FINITE-LOOP-GEOMETRY-CLOSURE",
+    "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE"
+  ],
+  "relevant_promoted_tool_ids": [],
+  "operator_ids": [
+    "memory_first_primary_source_acquisition",
+    "exact_primary_content_probe"
+  ],
+  "decision_policy": "Do not repeat metadata-only source work as a scientific action. Search only for a content-bearing primary copy of DOI 10.1007/BF01211042 / HUTMP-83-B147; missing primary mathematical detail blocks candidate generation and no formula may be reconstructed from memory.",
+  "predeclared_discriminator": "SUCCESS/PARTIAL_SUCCESS requires acquisition of a content-bearing primary copy of Bałaban, Averaging operations for lattice gauge theories (DOI 10.1007/BF01211042 / HUTMP-83-B147) and extraction of at least one exact B1/B2/B3 definition or hypothesis with page/equation anchor. Metadata-only, abstract-only, access-page, secondary, or remembered-formula evidence does not count and leaves the cycle BLOCKED.",
+  "allowed_outcome_branches": [
+    "SUCCESS",
+    "PARTIAL_SUCCESS",
+    "FAILURE",
+    "BLOCKED",
+    "UNKNOWN"
+  ],
+  "authority": "PROPOSAL_SHADOW_PRE_ACTION_ONLY",
+  "manifest_canonical_sha256": "83ece3a1666448c72571fa066624c353c0ad8ef777918b27aaa4656d01466505",
+  "manifest_hash_basis": "sha256(canonical JSON of all manifest fields except manifest_canonical_sha256 and manifest_hash_basis)"
+}
