@@ -1,0 +1,75 @@
+{
+  "allowed_future_outcomes": [
+    "CANDIDATE_SURVIVES_EXACT_SCOPE",
+    "CANDIDATE_REFUTED",
+    "CANNOT_CHECK"
+  ],
+  "artifact_hash": "sha256:655487d3814bcfa2eeedc0ef87f0082f6dd17fbf6df0cf3741dabd9d8ed69675",
+  "atom_id": "O9d12a2a1b-C052-V2.1",
+  "candidate_artifact_hash": "sha256:04f0e62b88ee03c371c92f998340c842e82d822fed2f378dabb04eee549f1ab5",
+  "candidate_id": "PNP-C052-OFFWINDOW-UNSAT-ANCHOR-MARGINAL-LEMMA-v1",
+  "cannot_check_conditions": [
+    "source identity mismatch",
+    "incomplete a-cell or support-cell quantification",
+    "missing canonical or UNSAT evidence",
+    "coordinate or padding ambiguity",
+    "only ambient syntax variation is shown",
+    "candidate is silently strengthened to joint-pattern or single-bit-flip coverage"
+  ],
+  "credit": {
+    "independent_review": 0,
+    "mathematical_result": 0,
+    "root_authority": 0
+  },
+  "decisive_refuters": [
+    "one premise-satisfying cell whose seven-bit window touches three or more clauses",
+    "one premise-satisfying cell with fewer than two untouched clauses",
+    "one fixed v in an a>=2 cell and one index-bit position lacking either legal marginal among indices 1 through v",
+    "one exact C041 grammar rule that rejects the reserved repeated-unit clauses",
+    "one satisfying assignment to the claimed opposite-unit anchor conjunction",
+    "one literal-content change that alters the registered length or padding inside a fixed cell",
+    "one j and epsilon for which complete proof shows no formula-bound H_k witness exists",
+    "one smaller adjacent-supported cell satisfying every frozen premise",
+    "one omitted length64 current support cell or one listed current cell that fails exact support"
+  ],
+  "execution_surface": {
+    "entrypoint": null,
+    "executed": false,
+    "implementation_path": null
+  },
+  "falsifier_id": "PNP-C052-OFFWINDOW-UNSAT-ANCHOR-FALSIFIER-MANIFEST-v1",
+  "frozen_at_utc": "2026-08-12T13:59:53Z",
+  "future_inputs": [
+    "exact candidate bytes and artifact hash",
+    "exact C041 grammar identity",
+    "one explicit premise cell or a symbolic universal proof domain",
+    "formula-bound H_k membership and UNSAT evidence only after separate authorization"
+  ],
+  "hidden_world_policy": {
+    "consumed_k20_excluded_from_fresh_hidden_validation": true,
+    "hidden_labels_included": false,
+    "hidden_value_materialized": false
+  },
+  "identity_kind": "INERT_FUTURE_FALSIFIER_MANIFEST",
+  "independence_boundary": {
+    "candidate_implementation_import_allowed": false,
+    "candidate_proof_certificate_reuse_allowed": false,
+    "future_checker_must_rederive_source_identities_and_every_obligation": true,
+    "same_context_role_separated_not_independent_peer_review": true
+  },
+  "ordered_future_checks": [
+    "validate source identity, full quantifier domain, length equations, and payload-window premise",
+    "rederive maximum touched-clause count and untouched-clause reserve",
+    "check repeated-unit anchor legality and symbolic UNSAT implication",
+    "check sign and every variable-index bit marginal over each fixed v in the full a-cell",
+    "check exact canonical bytes, split, h coordinate, and H_k membership for any later witness",
+    "check the marginal-not-single-bit-flip boundary is preserved",
+    "check k31 minimality and every length64 current support branch without reading overlap labels"
+  ],
+  "planned_public_regressions": [
+    "k31 off-window parent/current support identity after separate proof-check authorization"
+  ],
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "status": "FROZEN_NOT_IMPLEMENTED_NOT_EXECUTED"
+}
