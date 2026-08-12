@@ -1,0 +1,22 @@
+{
+  "schema": "RAKL-SAME-CONTEXT-EXPERT-CELL-v1",
+  "review_id": "RH-ANA-003-ABEL-001-EXPERT-RESULT-20260812-R10",
+  "candidate_id": "RH-ANA-003-ABEL-001-C001-FIXED-N-NATURAL-ORDER-ABEL",
+  "result_id": "RH-ANA-003-ABEL-001-R10-FIXED-N-ABEL-RESULT",
+  "roles": [
+    {"role": "analytic-number-theory lead", "background": "zeta, Chebyshev functions, PNT error terms", "finding": "Bellotti controls A=floor-psi strongly enough for every fixed polynomial-log kernel after Abel summation; scope must remain fixed-n."},
+    {"role": "real-analysis/Abel lead", "background": "Stieltjes integration, summation by parts, improper integrals", "finding": "The finite half-open identity and limit order are correct for nonintegral endpoints; the transformed integral is absolutely convergent."},
+    {"role": "special-functions lead", "background": "Laguerre polynomials and parameter asymptotics", "finding": "Only finite-degree polynomial facts are used; no joint n-u asymptotics are justified or needed."},
+    {"role": "adversarial-falsification lead", "background": "counterexamples, quantifier and rearrangement traps", "finding": "The m=6k subsequence proves nonabsolute convergence; this blocks silent rearrangement and separates local convergence from window gluing."},
+    {"role": "formal-methods/verifier lead", "background": "statement binding, proof obligations, trust boundaries", "finding": "O1-O7 close by auditable derivations, but no proof assistant or dependency certificate is bound; formal credit remains zero."},
+    {"role": "root/gluing lead", "background": "Li criteria and local-to-global proof architecture", "finding": "The result closes only a fixed-n interface and cannot establish an all-index Li sign or RH statement without a new uniformity bridge."},
+    {"role": "novelty/research-value lead", "background": "analytic-number-theory literature and prior-art risk", "finding": "Treat as source-bound reconstruction/verification, not literature novelty; its value is eliminating ambiguity about the legal source-order interface."}
+  ],
+  "strongest_objection": "A fixed-n convergence lemma is local and classical in spirit; it does not reduce the root-sensitive all-index obstruction unless a genuinely uniform target-domain bridge is found.",
+  "disagreements": ["No role disputes O1-O7; disagreement is only over strategic value versus the harder n-uniform successor."],
+  "recommendation": "Retain the result as a verified local checkpoint, preserve nonabsolute convergence as a gluing warning, and return to current-v3 target-domain strict-reduction/uniformity discrimination rather than extrapolating fixed-n convergence.",
+  "same_context_review": true,
+  "independent_review_credit": 0,
+  "recorded_at": "2026-08-12T08:06:00Z",
+  "artifact_hash": "sha256:9038da2364980098b95b63f01aecfab75b577b29cf10b54e8bd41f40c01edf54"
+}
