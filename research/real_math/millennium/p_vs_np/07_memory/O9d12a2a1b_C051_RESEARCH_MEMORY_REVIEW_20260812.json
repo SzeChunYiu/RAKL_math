@@ -1,5 +1,5 @@
 {
-  "artifact_hash": "sha256:329f44f571a880db0401740fdbb882588745492ae3f5dea95820c93a353c3f0d",
+  "artifact_hash": "sha256:984e88e82965d93f4c90b704e995ea01ee504c2dacbd2de1a90a2df9dddbde92",
   "candidate_method_families": [
     "explicit synchronized-code construction",
     "symbolic impossibility from length/header/gamma constraints",
@@ -11,28 +11,27 @@
     "git:a060514e894ec6566b01bb4c89a8aa806ef0048c:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:f3eaad2496e80aa64b8081868021cc1a89304ef2",
     "git:a060514e894ec6566b01bb4c89a8aa806ef0048c:research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C050_K15_MATHEMATICAL_LESSON_20260812.json@blob:b1b574cdd8ba43a4545c00a07bcb50a933c05941"
   ],
-  "failure_lattice_snapshot_hash": "gitblob:f3eaad2496e80aa64b8081868021cc1a89304ef2",
+  "failure_lattice_snapshot_hash": "sha256:099e82f4bc995271c510a068f9d1a8400f0fa7157f59a46db0d79c5b87e0a08b",
   "failure_query_status": "MATCHES_FOUND",
   "failure_reuse_notes": [
     "C050 warns that a changed split can retain a forced suffix-code/MAGIC collision; k=19 changes both parameter regimes and the split offset, so the old bit-3 proof is only a warning.",
     "C047 warns that near-aligned fixed headers can still be exactly disjoint; any witness must compare every synchronized bit."
   ],
   "relevant_failure_ids": [
-    "F-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION",
-    "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT"
+    "F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC"
   ],
   "relevant_tool_ids": [
-    "T-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION"
+    "T-PNP-C049-K12-FIXED-BIT-SEPARATION"
   ],
   "selected_tool_ids": [
-    "T-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION"
+    "T-PNP-C049-K12-FIXED-BIT-SEPARATION"
   ],
   "target_atom_id": "O9d12a2a1b-C051",
   "target_context_hash": "sha256:8a06db5b4fdfcc3a11a7284772a8c4dfd8ccf6b8583438b84ff9bbc7efc2925f",
   "tool_applicability_notes": [
-    "C050's coordinate-first separation is reusable only as a search operation: rederive all length-38 and length-40 grammar branches, then look for the earliest forced unequal coordinate; the k=15 coordinate and value are not transferable without a DifferenceWitness."
+    "C049's established fixed-bit operation and C050's failure experience jointly license only a target-specific coordinate-first search; the protected reuse verdict is DIFFERENCE_WITNESSED, not proof that k=19 escapes the old falsifier."
   ],
-  "tool_inventory_snapshot_hash": "gitblob:b1b574cdd8ba43a4545c00a07bcb50a933c05941",
+  "tool_inventory_snapshot_hash": "gitblob:b7a599c9a5c7a585ad1787504e5747ece4382fa0",
   "tool_query_status": "MATCHES_FOUND",
   "unresolved_warnings": [
     "K13_QUARANTINED_PROCESS_CONTAMINATION: a separate non-strict public k=13 result branch was exposed before this rebound packet and is excluded from strict candidate design or certification.",

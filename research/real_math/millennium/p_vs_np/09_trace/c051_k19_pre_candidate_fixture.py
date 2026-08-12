@@ -19,6 +19,15 @@ from rakl.framework_candidate_freeze import (
     FrameworkSubjectFreezeBinding,
     FrameworkSubjectRevalidationObservation,
 )
+from rakl.failure_lattice import (
+    DifferenceWitness,
+    FailureDiagnosisStatus,
+    FailureExperience,
+    FailureExperienceLattice,
+    ReuseVerdict,
+    add_failure_experience,
+    assess_method_reuse,
+)
 from rakl.math_research_assurance import MathResearchRecord
 from rakl.math_research_runtime import plan_math_research
 from rakl.problem_solving_algebra import ProblemSignature
@@ -43,6 +52,8 @@ DECODER_BLOB = "fcc4814dd618da96ef9bb8144a4783a0a6e886e1"
 DECODER_RAW_SHA256 = "c0caca2fe7244c3d847de8b59473cec72132ec04ad3e9fab668f5cd95a2bd75a"
 C050_RESULT_BLOB = "f3eaad2496e80aa64b8081868021cc1a89304ef2"
 C050_LESSON_BLOB = "b1b574cdd8ba43a4545c00a07bcb50a933c05941"
+C050_TOOL_SNAPSHOT_BLOB = "b7a599c9a5c7a585ad1787504e5747ece4382fa0"
+C050_FAILURE_BLOB = "7da72bf415296c616632bbad0ff16974a73f7737"
 
 BASE = "research/real_math/millennium/p_vs_np"
 PATHS = {
@@ -174,13 +185,89 @@ def context() -> MathContextFiber:
     )
 
 
+def failure_reuse_bundle(context_hash: str):
+    """Return a protected DifferenceWitness and executable reuse assessment."""
+
+    prior = FailureExperience(
+        failure_id="F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC",
+        atom_id="O9d12a2a1b-C050",
+        candidate_id="C050-K15-TARGET-BLIND-SELECTOR-DISCRIMINATOR-v1",
+        context_packet_hash="sha256:b50f857493e88680bd74943321316451b379c664e0e39d7d2d709f01d5be2a56",
+        research_trace_event_id="O9d12a2a1b-C050-E13",
+        method_family="coordinate-first synchronized suffix-prefix separation",
+        failure_mode="fixed variable-code bit versus canonical MAGIC bit",
+        residual_signature=("field-boundary alignment", "exact suffix/prefix equality failure", "bounded k-specific obstruction"),
+        broken_assumptions=("moving the half split removes the fixed code/header collision",),
+        scope_conditions=("k=15 only", "exact C041 canonical grammar and equal split", "C048 swapped reduction retained"),
+        competing_diagnoses=("H_15 is empty", "a current grammar branch was omitted", "UNSAT semantics creates the separating bit"),
+        selected_diagnosis="all H_15 labels have bit 3 equal to 1 while all exhaustive P_16 branches inherit MAGIC bit 3 equal to 0",
+        diagnosis_status=FailureDiagnosisStatus.SUPPORTED,
+        evidence_pointers=(
+            f"git:{APPLICATION_BASE_SHA}:{BASE}/07_memory/O9d12a2a1b_C050_K15_FAILURE_EXPERIENCE_20260812.json@blob:{C050_FAILURE_BLOB}",
+            f"git:{APPLICATION_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:{C050_RESULT_BLOB}",
+        ),
+        falsifier_or_attempt="an alternative length-30 parent regime, omitted length-32 current regime, or equality at zero-based bit 3",
+        observed_result="H_15 intersection P_16 is empty by the exact zero-based bit-3 contradiction",
+        artifact_hash="sha256:09b56ac732c375fd90b609a38760199fb57243418035e7638f3a58a8c41721c0",
+        timestamp="2026-08-12T07:05:33Z",
+        local_repair_attempts=("move from k=12 to k=15", "exhaust padded and unpadded current branches"),
+    )
+    lattice = add_failure_experience(FailureExperienceLattice(), prior)
+    witness = DifferenceWitness(
+        target_atom_id=ATOM,
+        target_context_hash=context_hash,
+        method_family="coordinate-first synchronized suffix-prefix separation",
+        prior_failure_ids=(prior.failure_id,),
+        changed_structural_coordinates=(
+            "parent half-length changes from 15 to 19 and encoded length from 30 to 38",
+            "current prefix length changes from 16 to 20 and encoded length from 32 to 40",
+            "gamma widths, payload widths, canonical parameter regimes, and suffix start coordinate must be rederived",
+        ),
+        restored_or_replaced_assumptions=(
+            "replace the invalid assumption that a moved split removes the collision with target-specific exhaustive branch derivation",
+            "replace direct reuse of zero-based bit 3 with a search for the earliest k=19 forced unequal coordinate",
+        ),
+        prior_falsifier_escape_reason="the k=15 falsifier is coordinate-specific; the length-19 suffix starts at a different parent coordinate and the length-40 current branch set is different",
+        cheapest_repeat_failure_test="derive every canonical length-38 parent and length-40 current parameter branch, then compare the earliest shared fixed coordinate before any semantic search",
+        evidence_pointers=(
+            PATHS["context"],
+            f"git:{APPLICATION_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:{C050_RESULT_BLOB}",
+            f"git:{APPLICATION_BASE_SHA}:{BASE}/04_candidates/C041_fx_sat_one_sided.py@blob:{DECODER_BLOB}",
+        ),
+    )
+    assessment = assess_method_reuse(
+        lattice,
+        target_atom_id=ATOM,
+        target_context_hash=context_hash,
+        method_family=witness.method_family,
+        relevant_failure_ids=witness.prior_failure_ids,
+        difference_witness=witness,
+    )
+    if assessment.verdict is not ReuseVerdict.DIFFERENCE_WITNESSED:
+        raise RuntimeError("C051 protected failure-reuse gate did not establish DIFFERENCE_WITNESSED")
+    document = _sealed({
+        "schema_version": "1.0.0",
+        "snapshot_id": "PNP-C051-FAILURE-SNAPSHOT-20260812",
+        "target_atom_id": ATOM,
+        "source_failure_blob": C050_FAILURE_BLOB,
+        "registered_failures": [_jsonable(asdict(prior))],
+        "difference_witness": _jsonable(asdict(witness)),
+        "reuse_assessment": _jsonable(asdict(assessment)),
+        "target_state": "K19_TARGET_RESULT_UNACCESSED",
+        "quarantined_families": ["k=13"],
+        "mathematical_credit": False,
+    })
+    return witness, assessment, document
+
+
 def memory_review(context_hash: str) -> ResearchMemoryReview:
-    payload = {"atom": ATOM, "context": context_hash, "tools": ["T-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION"], "failures": ["F-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION", "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT"]}
+    _, assessment, failure_snapshot = failure_reuse_bundle(context_hash)
+    payload = {"atom": ATOM, "context": context_hash, "tools": ["T-PNP-C049-K12-FIXED-BIT-SEPARATION"], "failures": list(assessment.relevant_failure_ids), "reuse_verdict": assessment.verdict.value}
     return ResearchMemoryReview(
         target_atom_id=ATOM,
         target_context_hash=context_hash,
-        tool_inventory_snapshot_hash=f"gitblob:{C050_LESSON_BLOB}",
-        failure_lattice_snapshot_hash=f"gitblob:{C050_RESULT_BLOB}",
+        tool_inventory_snapshot_hash=f"gitblob:{C050_TOOL_SNAPSHOT_BLOB}",
+        failure_lattice_snapshot_hash=_hash(failure_snapshot),
         tool_query_status=MemoryQueryStatus.MATCHES_FOUND,
         failure_query_status=MemoryQueryStatus.MATCHES_FOUND,
         candidate_method_families=(
@@ -189,10 +276,10 @@ def memory_review(context_hash: str) -> ResearchMemoryReview:
             "bounded product-grammar discriminator followed by semantic UNSAT proof",
             "encoding or split change (out of scope)",
         ),
-        relevant_tool_ids=("T-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION",),
-        relevant_failure_ids=("F-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION", "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT"),
-        selected_tool_ids=("T-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION",),
-        tool_applicability_notes=("C050's coordinate-first separation is reusable only as a search operation: rederive all length-38 and length-40 grammar branches, then look for the earliest forced unequal coordinate; the k=15 coordinate and value are not transferable without a DifferenceWitness.",),
+        relevant_tool_ids=("T-PNP-C049-K12-FIXED-BIT-SEPARATION",),
+        relevant_failure_ids=assessment.relevant_failure_ids,
+        selected_tool_ids=("T-PNP-C049-K12-FIXED-BIT-SEPARATION",),
+        tool_applicability_notes=("C049's established fixed-bit operation and C050's failure experience jointly license only a target-specific coordinate-first search; the protected reuse verdict is DIFFERENCE_WITNESSED, not proof that k=19 escapes the old falsifier.",),
         failure_reuse_notes=(
             "C050 warns that a changed split can retain a forced suffix-code/MAGIC collision; k=19 changes both parameter regimes and the split offset, so the old bit-3 proof is only a warning.",
             "C047 warns that near-aligned fixed headers can still be exactly disjoint; any witness must compare every synchronized bit.",
@@ -475,18 +562,12 @@ def build_documents() -> dict[str, dict]:
     tool_snapshot = _sealed({
         "schema_version": "1.0.0", "snapshot_id": "PNP-C051-TOOL-SNAPSHOT-20260812", "target_atom_id": ATOM,
         "application_base_commit": APPLICATION_BASE_SHA,
-        "tools": [{"tool_id": "T-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION", "source": "C050 k=15 coordinate-first separation", "preconditions": ["complete target-specific grammar branches", "exact suffix offset", "swapped reduction retained"], "guarantees": ["a single proved forced unequal coordinate certifies bounded disjointness"], "non_guarantees": ["the k=15 coordinate or values transfer to k=19", "no cover or root authority"]}],
+        "tools": [{"tool_id": "T-PNP-C049-K12-FIXED-BIT-SEPARATION", "source": "C049 fixed-bit separation operation retained in the C050 tool snapshot", "preconditions": ["complete target-specific grammar branches", "exact suffix offset", "swapped reduction retained"], "guarantees": ["a single proved forced unequal coordinate certifies bounded disjointness"], "non_guarantees": ["the k=12 or k=15 coordinate or values transfer to k=19", "no cover or root authority"]}],
         "target_state": "K19_TARGET_RESULT_UNACCESSED", "quarantined_families": ["k=13"], "mathematical_credit": False,
     })
-    failure_snapshot = _sealed({
-        "schema_version": "1.0.0", "snapshot_id": "PNP-C051-FAILURE-SNAPSHOT-20260812", "target_atom_id": ATOM,
-        "failures": [
-            {"failure_id": "F-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION", "warning": "a moved split can preserve a forced suffix-code versus MAGIC collision"},
-            {"failure_id": "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT", "warning": "near-aligned headers can remain exactly disjoint"},
-        ],
-        "difference_witness": {"prior_failure": "k=15 forced h[3]=1 while every P_16 prefix had bit 3 equal to MAGIC[3]=0", "changed_structure": "k=19 uses length-38 parent and length-40 current regimes with different gamma widths, payload widths, and suffix offset", "restored_or_replaced_assumption": "none assumed; the old separating coordinate must be rederived rather than copied", "why_old_falsifier_may_not_apply": "the length-19 suffix begins at a different parent coordinate and the length-40 current branch set differs", "cheapest_illusory_difference_test": "derive every length-38/40 parameter branch and compare the earliest shared fixed coordinate before any semantic search"},
-        "target_state": "K19_TARGET_RESULT_UNACCESSED", "quarantined_families": ["k=13"], "mathematical_credit": False,
-    })
+    _, reuse_assessment, failure_snapshot = failure_reuse_bundle(fiber.packet_hash)
+    if reuse_assessment.verdict is not ReuseVerdict.DIFFERENCE_WITNESSED:
+        raise RuntimeError("C051 failure reuse is not licensed")
     expert = expert_review_document(fiber.packet_hash)
     framework_binding, framework_observation = framework_subject(fiber.packet_hash)
     framework_binding_document = _sealed(dict(framework_binding.document()))

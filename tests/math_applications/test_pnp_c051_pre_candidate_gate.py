@@ -9,6 +9,7 @@ from datetime import datetime
 import jsonschema
 from rakl.math_context import ContextGateVerdict
 from rakl.framework_candidate_freeze import CandidateFreezeRevalidationVerdict
+from rakl.failure_lattice import ReuseVerdict
 from rakl.research_memory import ResearchMemoryVerdict
 from rakl.research_trace import ResearchTraceEventType, TraceGateVerdict
 from rakl.root_coordinate_preservation import PreservationGateVerdict
@@ -134,8 +135,17 @@ def test_c051_gate_is_result_capability_free_and_mathematics_first() -> None:
 def test_c051_memory_and_expert_roles_preserve_scope() -> None:
     memory = _load(ARTIFACTS["memory"])
     expert = _load(ARTIFACTS["expert_review"])
-    assert memory["selected_tool_ids"] == ["T-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION"]
-    assert "F-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION" in memory["relevant_failure_ids"]
+    failure_snapshot = _load(ARTIFACTS["failure_snapshot"])
+    assert memory["selected_tool_ids"] == ["T-PNP-C049-K12-FIXED-BIT-SEPARATION"]
+    assert memory["relevant_failure_ids"] == ["F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC"]
+    witness, assessment, expected_snapshot = _module("pnp_c051_failure_reuse", FIXTURE).failure_reuse_bundle(
+        _load(ARTIFACTS["context"])["packet_hash"]
+    )
+    assert assessment.verdict is ReuseVerdict.DIFFERENCE_WITNESSED
+    assert witness.target_atom_id == "O9d12a2a1b-C051"
+    assert witness.target_context_hash == _load(ARTIFACTS["context"])["packet_hash"]
+    assert failure_snapshot == expected_snapshot
+    assert failure_snapshot["reuse_assessment"]["verdict"] == "DIFFERENCE_WITNESSED"
     assert {row["role"] for row in expert["role_reviews"]} == {
         "domain_theory_lead",
         "analogy_method_transfer_lead",

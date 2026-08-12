@@ -1,28 +1,94 @@
 {
-  "artifact_hash": "sha256:c312f11bc2b8e79bbb709fca0919193e0190d7b4f017c9e948d7cf2623a97856",
+  "artifact_hash": "sha256:0f93717b2ecc95e34abeacbbe978f0b3bf39a1bcdf53f96631bd699511ad344c",
   "difference_witness": {
-    "changed_structure": "k=19 uses length-38 parent and length-40 current regimes with different gamma widths, payload widths, and suffix offset",
-    "cheapest_illusory_difference_test": "derive every length-38/40 parameter branch and compare the earliest shared fixed coordinate before any semantic search",
-    "prior_failure": "k=15 forced h[3]=1 while every P_16 prefix had bit 3 equal to MAGIC[3]=0",
-    "restored_or_replaced_assumption": "none assumed; the old separating coordinate must be rederived rather than copied",
-    "why_old_falsifier_may_not_apply": "the length-19 suffix begins at a different parent coordinate and the length-40 current branch set differs"
+    "changed_structural_coordinates": [
+      "parent half-length changes from 15 to 19 and encoded length from 30 to 38",
+      "current prefix length changes from 16 to 20 and encoded length from 32 to 40",
+      "gamma widths, payload widths, canonical parameter regimes, and suffix start coordinate must be rederived"
+    ],
+    "cheapest_repeat_failure_test": "derive every canonical length-38 parent and length-40 current parameter branch, then compare the earliest shared fixed coordinate before any semantic search",
+    "evidence_pointers": [
+      "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C051_MATH_CONTEXT_FIBER_20260812.json",
+      "git:a060514e894ec6566b01bb4c89a8aa806ef0048c:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:f3eaad2496e80aa64b8081868021cc1a89304ef2",
+      "git:a060514e894ec6566b01bb4c89a8aa806ef0048c:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1"
+    ],
+    "method_family": "coordinate-first synchronized suffix-prefix separation",
+    "prior_failure_ids": [
+      "F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC"
+    ],
+    "prior_falsifier_escape_reason": "the k=15 falsifier is coordinate-specific; the length-19 suffix starts at a different parent coordinate and the length-40 current branch set is different",
+    "realization_domain": null,
+    "restored_or_replaced_assumptions": [
+      "replace the invalid assumption that a moved split removes the collision with target-specific exhaustive branch derivation",
+      "replace direct reuse of zero-based bit 3 with a search for the earliest k=19 forced unequal coordinate"
+    ],
+    "target_atom_id": "O9d12a2a1b-C051",
+    "target_context_hash": "sha256:8a06db5b4fdfcc3a11a7284772a8c4dfd8ccf6b8583438b84ff9bbc7efc2925f",
+    "transfer_assumptions": [],
+    "transfer_disanalogies": [],
+    "transfer_role_mapping": [],
+    "transfer_shared_constraints": [],
+    "transfer_source_context_hash": ""
   },
-  "failures": [
-    {
-      "failure_id": "F-PNP-C050-K15-FIXED-CODE-MAGIC-SEPARATION",
-      "warning": "a moved split can preserve a forced suffix-code versus MAGIC collision"
-    },
-    {
-      "failure_id": "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT",
-      "warning": "near-aligned headers can remain exactly disjoint"
-    }
-  ],
   "mathematical_credit": false,
   "quarantined_families": [
     "k=13"
   ],
+  "registered_failures": [
+    {
+      "artifact_hash": "sha256:09b56ac732c375fd90b609a38760199fb57243418035e7638f3a58a8c41721c0",
+      "atom_id": "O9d12a2a1b-C050",
+      "broken_assumptions": [
+        "moving the half split removes the fixed code/header collision"
+      ],
+      "candidate_id": "C050-K15-TARGET-BLIND-SELECTOR-DISCRIMINATOR-v1",
+      "competing_diagnoses": [
+        "H_15 is empty",
+        "a current grammar branch was omitted",
+        "UNSAT semantics creates the separating bit"
+      ],
+      "context_packet_hash": "sha256:b50f857493e88680bd74943321316451b379c664e0e39d7d2d709f01d5be2a56",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "git:a060514e894ec6566b01bb4c89a8aa806ef0048c:research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C050_K15_FAILURE_EXPERIENCE_20260812.json@blob:7da72bf415296c616632bbad0ff16974a73f7737",
+        "git:a060514e894ec6566b01bb4c89a8aa806ef0048c:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:f3eaad2496e80aa64b8081868021cc1a89304ef2"
+      ],
+      "failure_id": "F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC",
+      "failure_mode": "fixed variable-code bit versus canonical MAGIC bit",
+      "falsifier_or_attempt": "an alternative length-30 parent regime, omitted length-32 current regime, or equality at zero-based bit 3",
+      "local_repair_attempts": [
+        "move from k=12 to k=15",
+        "exhaust padded and unpadded current branches"
+      ],
+      "method_family": "coordinate-first synchronized suffix-prefix separation",
+      "observed_result": "H_15 intersection P_16 is empty by the exact zero-based bit-3 contradiction",
+      "research_trace_event_id": "O9d12a2a1b-C050-E13",
+      "residual_signature": [
+        "field-boundary alignment",
+        "exact suffix/prefix equality failure",
+        "bounded k-specific obstruction"
+      ],
+      "scope_conditions": [
+        "k=15 only",
+        "exact C041 canonical grammar and equal split",
+        "C048 swapped reduction retained"
+      ],
+      "selected_diagnosis": "all H_15 labels have bit 3 equal to 1 while all exhaustive P_16 branches inherit MAGIC bit 3 equal to 0",
+      "timestamp": "2026-08-12T07:05:33Z"
+    }
+  ],
+  "reuse_assessment": {
+    "reasons": [
+      "reuse_allowed_with_targeted_repeat_failure_test"
+    ],
+    "relevant_failure_ids": [
+      "F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC"
+    ],
+    "verdict": "DIFFERENCE_WITNESSED"
+  },
   "schema_version": "1.0.0",
   "snapshot_id": "PNP-C051-FAILURE-SNAPSHOT-20260812",
+  "source_failure_blob": "7da72bf415296c616632bbad0ff16974a73f7737",
   "target_atom_id": "O9d12a2a1b-C051",
   "target_state": "K19_TARGET_RESULT_UNACCESSED"
 }

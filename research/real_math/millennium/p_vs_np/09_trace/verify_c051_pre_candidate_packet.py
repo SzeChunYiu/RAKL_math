@@ -61,6 +61,14 @@ def audit_packet(root):
     expert=load(root/INPUTS["expert_review"])
     if expert.get("review_authority")!="SAME_CONTEXT_ROLE_SEPARATED_INTERNAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW": errors.append("expert: authority widened")
     atomization=load(root/INPUTS["atomization"]); context=load(root/INPUTS["context"]); trace=load(root/INPUTS["trace"])
+    memory=load(root/INPUTS["memory"]); failure_snapshot=load(root/INPUTS["failure_snapshot"])
+    witness=failure_snapshot.get("difference_witness",{}); reuse=failure_snapshot.get("reuse_assessment",{})
+    required_witness_fields={"target_atom_id","target_context_hash","method_family","prior_failure_ids","changed_structural_coordinates","restored_or_replaced_assumptions","prior_falsifier_escape_reason","cheapest_repeat_failure_test","evidence_pointers"}
+    if not required_witness_fields.issubset(witness): errors.append("failure reuse: protected DifferenceWitness fields missing")
+    if witness.get("target_atom_id") != atomization.get("atom_id") or witness.get("target_context_hash") != context.get("packet_hash"): errors.append("failure reuse: witness target binding mismatch")
+    if reuse.get("verdict") != "DIFFERENCE_WITNESSED": errors.append("failure reuse: protected reuse gate did not pass")
+    if memory.get("relevant_failure_ids") != reuse.get("relevant_failure_ids"): errors.append("failure reuse: memory review ids differ from assessed ids")
+    if memory.get("failure_lattice_snapshot_hash") != digest(failure_snapshot): errors.append("failure reuse: memory review is not bound to C051 failure snapshot")
     try:
         chronology_floor=max(datetime.fromisoformat(atomization["recorded_at"].replace("Z","+00:00")),datetime.fromisoformat(context["frozen_at"].replace("Z","+00:00")))
         if any(datetime.fromisoformat(entry["timestamp"].replace("Z","+00:00"))<=chronology_floor for entry in trace["entries"]): errors.append("trace: event predates or equals atom/context freeze")
