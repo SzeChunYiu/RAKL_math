@@ -1,0 +1,124 @@
+{
+  "artifact_hash": "sha256:550622d9ab4ad635b253d6a41cbf084974540b748d47d6b360b61684934cbd9c",
+  "atom_id": "O9d12a2a1b-C047",
+  "authority": {
+    "cover_or_circuit_lower_bound": false,
+    "formal_proof": false,
+    "independent_review": false,
+    "novelty": false,
+    "p_vs_np_authority": false,
+    "root_status": "OPEN",
+    "same_context_hand_derivation": true,
+    "theorem_truth": false
+  },
+  "candidate_artifact_hash": "sha256:cf4e5758d46396acd0589f228d695b4da31b1c850a694c27ffcaf08ccc7d6dec",
+  "candidate_id": "C047-ORIENTATION-ONLY-SEPARATION-LEMMA-v1",
+  "certificate_id": "PNP-C047-ORIENTATION-ONLY-SEPARATION-PROOF-CERTIFICATE-v1-20260812",
+  "definitions": {
+    "canonical_current_prefix": "the first n bits of a canonical length-2n MAGIC word",
+    "mirror_only": "inherit U_(n-1) old-old and add (M+r,c) exactly for UNSAT Dec(bin_(n-1)(r)||bin_(n-1)(c))",
+    "side_and_half": "at level n the side is 2^n and the old/fresh threshold is M=2^(n-1)",
+    "two_sided": "mirror_only union the old-new cells (r,M+c) from the same UNSAT predicate"
+  },
+  "failure_cause": {
+    "bounded_cause": "prepending the fresh-half bit shifts the fixed MAGIC header, while the all-zero exception has an incompatible 10 header",
+    "diagnosis_status": "PROVED_WITHIN_FROZEN_ORIENTATION_ONLY_SCOPE",
+    "failed_repair": "prefix-preserving quadrant mirror and its two-sided union",
+    "not_claimed": "no unique cause for every possible family repair"
+  },
+  "frozen_at": "2026-08-12T03:08:03Z",
+  "mathematical_lesson": "Coarse high-half occupancy is not sufficient for exact backward coupling: the fresh-row label map must also be congruent with the canonical prefix language.",
+  "obligations": [
+    {
+      "evidence_pointer": "proof_steps/C047-P1-DEFINITION",
+      "obligation_id": "DEFINE_ORIENTATION_ONLY_FAMILIES",
+      "status": "PROVED"
+    },
+    {
+      "evidence_pointer": "proof_steps/C047-P2-ROWS",
+      "obligation_id": "EXHAUSTIVE_ROW_SUPPORT_TRICHOTOMY",
+      "status": "PROVED"
+    },
+    {
+      "evidence_pointer": "proof_steps/C047-P3-DECODER",
+      "obligation_id": "DECODER_BRANCH_TO_FRESH_ROW_FORMS",
+      "status": "PROVED"
+    },
+    {
+      "evidence_pointer": "proof_steps/C047-P4-HEADERS",
+      "obligation_id": "BINARY_HEADER_DISJOINTNESS",
+      "status": "PROVED"
+    },
+    {
+      "evidence_pointer": "proof_steps/C047-P5-CONCLUSION",
+      "obligation_id": "MIRROR_AND_TWO_SIDED_CONCLUSION",
+      "status": "PROVED"
+    }
+  ],
+  "proof_steps": [
+    {
+      "derivation": "Fix n>=18 and M=2^(n-1). In MIRROR_ONLY the level-n complement is the inherited old-old copy of U_(n-1) together with new-old cells (M+r,c) selected by the unchanged decoder on bin_(n-1)(r)||bin_(n-1)(c). TWO_SIDED adds only old-new cells (r,M+c) selected by that same predicate. Neither variant adds new-new cells, changes labels, or places suffix c on the fresh row.",
+      "obligation_id": "DEFINE_ORIENTATION_ONLY_FAMILIES",
+      "source_pointer": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C047_ORIENTATION_ONLY_SEPARATION_LEMMA_FREEZE_20260812.json#family_definition",
+      "step_id": "C047-P1-DEFINITION"
+    },
+    {
+      "derivation": "Every inherited old-old cell and every optional old-new cell has row r<M, so its n-bit row label begins 0. A new-old cell has row M+r, whose n-bit label is 1 concatenated with bin_(n-1)(r). These exhaustive clauses reduce the high-row classification to the decoded word that selected the new-old cell.",
+      "obligation_id": "EXHAUSTIVE_ROW_SUPPORT_TRICHOTOMY",
+      "source_pointer": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C047_ORIENTATION_ONLY_SEPARATION_LEMMA_FREEZE_20260812.json#family_definition",
+      "step_id": "C047-P2-ROWS"
+    },
+    {
+      "derivation": "The unchanged total decoder has exactly three output routes relevant here: the all-zero word decodes to the fixed contradiction; a well-formed word starting MAGIC=11100101 decodes to its canonical formula; every other word decodes to a tautology. Hence an UNSAT selecting word is either all-zero, giving r=0 and fresh-row label 1 followed by n-1 zeros, or a valid MAGIC word. Since n-1>=17>8, the latter has bin_(n-1)(r) beginning with the full MAGIC header and its fresh-row label begins 1||MAGIC.",
+      "obligation_id": "DECODER_BRANCH_TO_FRESH_ROW_FORMS",
+      "source_pointer": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py#decode_formula",
+      "step_id": "C047-P3-DECODER"
+    },
+    {
+      "derivation": "Every current canonical n-bit prefix begins MAGIC=11100101. A low inherited/old-new row begins 0 and differs at bit 1. The all-zero fresh row begins 10 and differs from MAGIC=11... at bit 2. A canonical mirror row begins 1||MAGIC, whose first four bits are 1111, whereas MAGIC has first four bits 1110; these differ at bit 4. Thus none of the three exhaustive row classes equals a current canonical prefix.",
+      "obligation_id": "BINARY_HEADER_DISJOINTNESS",
+      "source_pointer": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C047_ORIENTATION_ONLY_SEPARATION_LEMMA_FREEZE_20260812.json#predicted_discriminator",
+      "step_id": "C047-P4-HEADERS"
+    },
+    {
+      "derivation": "P2-P4 apply to MIRROR_ONLY. TWO_SIDED adds only old-new complement cells whose rows remain below M and are already covered by the low-row case. Therefore for every n>=18 both variants have complement row projection disjoint from all current canonical MAGIC n-bit prefixes. In particular no current canonical UNSAT prefix row collides.",
+      "obligation_id": "MIRROR_AND_TWO_SIDED_CONCLUSION",
+      "source_pointer": "proof_steps/C047-P2-ROWS..C047-P4-HEADERS",
+      "step_id": "C047-P5-CONCLUSION"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "scope_boundary": {
+    "coordinate_relabelling": false,
+    "cover_or_circuit_lower_bound": false,
+    "decoder_change": false,
+    "literal_matrix_transpose": false,
+    "suffix_to_fresh_row": false,
+    "unequal_or_overlapping_split": false
+  },
+  "source_identity": {
+    "candidate_git_blob": "e6f354164407e0c8e4e810d37aaa964e0a95c638",
+    "candidate_public_freeze_commit": "e033df7a4f0276abb218027451754695679ec288",
+    "candidate_raw_sha256": "05642ea504f18fe39c478ef25d1ea86b4fe634bc653f879ad9e893c754f397ec",
+    "evaluator_git_blob": "0444072ee72b0105be7e59b0dd49a53231ee4807",
+    "evaluator_raw_sha256": "28040619b04031d33932203d96fdbb49a0da697c8990e096c9b00bf562a21043"
+  },
+  "statement_checked": {
+    "canonical_current_rows": "every n-bit prefix of a current canonical length-2n word begins with MAGIC=11100101",
+    "conclusion": "the complement row projection is disjoint from the set of current canonical MAGIC n-bit prefixes",
+    "generated_row_classes": [
+      "inherited rows in [0,2^(n-1))",
+      "the all-zero fresh row with n-bit word 1 followed by n-1 zeroes",
+      "canonical fresh rows whose n-bit word begins with 1 followed by MAGIC=11100101"
+    ],
+    "quantifier": "for every integer n >= 18 and each frozen orientation-only variant",
+    "repair_consequence": "moving or copying only the prefix coordinate into the fresh-row quadrant does not repair the C046 canonical row-collision impossibility"
+  },
+  "status": "FROZEN_HAND_DERIVATION_AWAITING_EVALUATOR",
+  "target_access": {
+    "finite_collision_level_selected": false,
+    "later_target_enumerated": false,
+    "later_target_result_accessed": false,
+    "target_decoder_imported_or_executed": false
+  }
+}
