@@ -1,0 +1,82 @@
+{
+  "schema_version": "failure-experience-delta-v3-proposal-shadow",
+  "atom_id": "NS-B1a3b",
+  "result_id": "NS-B1a3b-C001-VORTICITY-DIRECTION-TRANSPORT-AUDIT",
+  "authority": "PROPOSAL_SHADOW_SCOPED_EXPERIENCE_ONLY",
+  "episode_root": {
+    "episode_id": "EP-NS-B1a3b-VORTICITY-DIRECTION-TRANSPORT-20260812",
+    "status": "TO_BE_FROZEN_AS_IMMUTABLE_TASK_EPISODE",
+    "observation": "The registered Type-I velocity/local-energy compactness output does not determine the vorticity-direction range required by the selected geometric consumer."
+  },
+  "failure_observations": [
+    {
+      "id": "F-NS-B1a3b-DIRECTION-TRANSPORT-NONCLOSURE",
+      "maturity": "OBSERVED_ONLY",
+      "scope": "transport of a fixed two-sided vorticity cone through strong local velocity plus weak derivative compactness",
+      "evidence": "explicit smooth divergence-free sequence in NS-B1a3b-C001",
+      "claim": "a fixed two-sided cone can be lost in the weak vorticity limit even when velocities converge strongly locally and gradients are uniformly locally bounded"
+    },
+    {
+      "id": "F-NS-B1a3b-HIGH-VORTICITY-DIRECTION-INSTABILITY",
+      "maturity": "OBSERVED_ONLY",
+      "scope": "normalized derivative observable xi=omega/|omega| and moving high-vorticity sets",
+      "evidence": "nonlinear normalization at omega=0 plus weak derivative topology",
+      "claim": "bare compactness does not supply pointwise/range stability for xi"
+    }
+  ],
+  "competing_diagnoses": [
+    {
+      "id": "D-NS-B1a3b-DERIVATIVE-LOSS",
+      "status": "SUPPORTED_IN_SCOPED_FUNCTIONAL_CALIBRATION",
+      "support": "u_n-u is O(1/n) locally while curl u_n retains order-one oscillation",
+      "falsifier": "a source-valid equation-specific theorem upgrading the actual rescaled sequence to strong enough vorticity compactness"
+    },
+    {
+      "id": "D-NS-B1a3b-NONCONVEX-BRANCH-MIXING",
+      "status": "SUPPORTED_IN_SCOPED_FUNCTIONAL_CALIBRATION",
+      "support": "each omega_n lies in one fixed two-sided double cone about +/-e3, but the weak limit is transverse because opposite branches mix",
+      "falsifier": "a source-valid branch-selection/oriented-flux theorem preventing such mixing for the Navier-Stokes rescalings"
+    },
+    {
+      "id": "D-NS-B1a3b-NORMALIZATION-SUPERLEVEL",
+      "status": "PLAUSIBLE_SECONDARY",
+      "support": "xi is undefined at zero and weak convergence does not control moving superlevel sets",
+      "falsifier": "a theorem giving a.e./strong convergence on the relevant high-vorticity sets"
+    },
+    {
+      "id": "D-NS-B1a3b-FAR-FIELD-PRESSURE",
+      "status": "REJECTED_AS_PRIMARY",
+      "reason": "Lei-Ren-Tian is a local suitable-weak theorem and does not consume the global-L3/far-field interface blocked in B1a3"
+    },
+    {
+      "id": "D-NS-B1a3b-UNIQUE-CONTINUATION",
+      "status": "NOT_INVOKED",
+      "reason": "the selected geometry consumer bypasses backward uniqueness"
+    }
+  ],
+  "obstruction_candidate": {
+    "id": "O-NS-B1a3b-VORTICITY-DIRECTION-TRANSPORT-INTERFACE",
+    "status": "SCOPED_CANDIDATE_OBSTRUCTION_NOT_PROMOTED_LESSON",
+    "statement": "The current Type-I producer supplies local velocity compactness and weak derivative control, while the selected geometry consumer requires a nonlinear derivative-defined directional-range condition. Because the two-sided cone is nonconvex and can be destroyed by weak branch mixing, a valid glue requires an additional equation-specific vorticity-level transport certificate.",
+    "supporting_episode_ids": [
+      "EP-NS-B1a3b-VORTICITY-DIRECTION-TRANSPORT-20260812"
+    ],
+    "contradicting_episode_ids": [],
+    "falsifier": "prove a source-valid transport theorem for the exact Navier-Stokes Type-I rescalings, or bypass raw direction with a source-native flux variable"
+  },
+  "lesson_candidate": {
+    "id": "L-NS-B1a3b-BARE-VELOCITY-COMPACTNESS-DOES-NOT-GLUE-DIRECTION@PROPOSED_NOT_CONSOLIDATED",
+    "status": "CANDIDATE_ONLY",
+    "action": "before gluing a derivative-defined geometric regularity criterion to a blow-up limit, audit strong/weak closure of the exact geometric hypothesis under the producer topology; if nonconvex, test branch mixing explicitly",
+    "authority": "NONE_REUSABLE_YET",
+    "promotion_requirements": [
+      "fresh transfer or proof-backed generalization",
+      "registered verification",
+      "scope boundaries preserving PDE-specific exceptions"
+    ]
+  },
+  "new_tool_ids": [],
+  "new_motif_ids": [],
+  "root_effect": "NONE",
+  "raw_record_growth_is_learning": false
+}
