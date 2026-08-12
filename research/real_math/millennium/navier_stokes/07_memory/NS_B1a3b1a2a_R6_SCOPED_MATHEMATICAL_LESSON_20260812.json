@@ -1,0 +1,90 @@
+{
+  "record_type": "SCOPED_MATHEMATICAL_LESSON",
+  "unit_id": "MATH-NS-B1A3B1A2A-R6-ANCIENT-SMOOTHING-TO-FIXED-TIME-CAPACITY",
+  "mathematical_unit_count": 1,
+  "credit_type": "PROOF_OR_LEMMA",
+  "transfer_condition_separate_credit_units": 0,
+  "authority": "SOURCE_BOUND_SCOPED_PROOF_NO_NAVIER_STOKES_ROOT_AUTHORITY",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "rakl_main_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+    "method_version": "3.0.0"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "58de5548d337d4ea3c83b5fcde6ed5c6aee3f2e0",
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "independent_mathematical_review_credit": "0/3",
+  "scoped_result": {
+    "assumptions": "u is a bounded ancient mild three-dimensional Navier-Stokes solution on R^3 x (-infinity,0), M=||u||_infinity, omega=curl u, and the Albritton-Barker quantity I is finite.",
+    "derivative_estimate": {
+      "quantifiers": "for every k,l in Z_ge_0",
+      "bound": "||nabla^k partial_t^l u||_infinity <= C_{k,l} M^(k+2l+1)",
+      "restart_depth": "theta_{k,l} M^(-2) with 0<theta_{k,l}<epsilon(k,l); M=0 is trivial",
+      "time_uniformity": "the bound holds on R^3 x (-infinity,0) because the target time is arbitrary"
+    },
+    "temporal_vorticity_constant": "K:=||partial_t omega||_infinity <= C_omega M^4",
+    "finite_I_input": "For Q=B(x0,R) x (t-R^2,t), integral_Q |omega|^2 <= 2 I R.",
+    "fixed_time_capacity": {
+      "superlevel_set": "S_lambda(t):={x in R^3: |omega(x,t)|>lambda}",
+      "quantifiers": "for every t<0, x0 in R^3, lambda>0, and R>0",
+      "delta_when_K_positive": "min(R^2,lambda/(2K))",
+      "delta_when_K_zero": "R^2",
+      "all_radius_bound": "|S_lambda(t) intersect B(x0,R)| <= 8 I R/(lambda^2 delta)",
+      "large_radius_condition": "K>0 and R^2>=lambda/(2K)",
+      "large_radius_bound": "|S_lambda(t) intersect B(x0,R)| <= 16 I K R lambda^(-3) <= C I M^4 R lambda^(-3)",
+      "K_zero_consequence": "|S_lambda(t) intersect B(x0,R)| <= 8 I/(lambda^2 R), hence omega=0"
+    },
+    "nonimplication": "The large-radius estimate retains an unbounded factor R and therefore does not imply a radius-free global weak-L^(3/2) vorticity distribution bound."
+  },
+  "attached_representation_witness": {
+    "description": "An infinite line of disjoint smooth compactly supported divergence-free packets with compact time support can keep the bare A/C/E magnitude bookkeeping bounded while a fixed-time vorticity superlevel set has infinite measure.",
+    "realization_domain": "AMBIENT_REPRESENTATION",
+    "role": "ATTACHED_LEDGER_STRESS_TEST_ONLY",
+    "separate_credit_units": 0,
+    "not_claimed": [
+      "Navier-Stokes solution",
+      "suitable local-energy solution",
+      "Albritton-Barker blow-up limit",
+      "PDE impossibility theorem"
+    ]
+  },
+  "pending_overlap_disposition": {
+    "pr310": {
+      "reference": "RAKL_math pull request 310, research/ns-b1a5-ledger-slice-tail-20260812 at 597fd28d8f322bdb4396ca7204a0dc0c21c690e7",
+      "state": "OPEN_DRAFT_PENDING_NOT_MERGED",
+      "overlap": "Its ambient finite-I-ledger packet train already attacks ledger-only same-time global-tail inference.",
+      "separate_r6_credit_units": 0
+    },
+    "r7": {
+      "reference": "research/ns-b1a3b1a2b-summation-tail-r7-20260812 at 937f73c1",
+      "state": "PENDING_BRANCH_NOT_MERGED",
+      "overlap": "It sharpens the required global interface to bounded exhaustion or a summable annular tail and is not imported into this R6 unit.",
+      "separate_r6_credit_units": 0
+    }
+  },
+  "deduplication": {
+    "new_unit_count": 1,
+    "source_smoothing_and_capacity_counted_as_one_chain": true,
+    "representation_witness_counted_separately": false,
+    "global_failure_cause_added": false,
+    "global_ledger_updated": false,
+    "literature_novelty_claim": false,
+    "assurance_metadata_mathematical_credit": 0
+  },
+  "seven_field_math_lesson": {
+    "attempted_implication": "Bounded ancient mild smoothing plus finite Albritton-Barker I forces a radius-free global weak-L^(3/2) vorticity distribution bound.",
+    "exact_result_or_failure": "Ancient restart gives ||nabla^k partial_t^l u||_infinity <= C_{k,l}M^(k+2l+1). Finite I and temporal persistence then give |S_lambda(t) intersect B(x0,R)| <= 8IR/(lambda^2 delta), and for K>0 with R^2>=lambda/(2K), at most 16IKR lambda^(-3). This genuine source-class inequality retains an unbounded observation-radius factor and therefore does not close the global Lorentz implication.",
+    "supported_and_competing_causes": "Supported: genuine ancientness removes the earlier finite-left-endpoint derivative obstruction, while the registered local estimates remain blind to global spatial tail or packet multiplicity. Competing and open: actual Navier-Stokes pressure, local-energy dynamics, blow-up ancestry, no-incoming flux, compactness, or profile rigidity may contract that tail. The lambda^(-3) factor is not uniformly weaker than lambda^(-3/2): it is numerically stronger for lambda>1 and weaker for 0<lambda<1; the decisive demonstrated obstruction is the unbounded R factor.",
+    "scope": "Whole-space bounded ancient mild three-dimensional Navier-Stokes solutions with finite I; every fixed t<0, spatial center, positive radius, and positive threshold. The packet witness is representation-only. No global Lorentz, Grujic morphology/direction, Type-I exclusion, novelty, or Clay-root authority is obtained; the root remains OPEN_NO_SOLUTION_CERTIFICATE.",
+    "falsifier": "A source-valid theorem for the actual finite-I ancient Navier-Stokes class giving sup_R |S_lambda(t) intersect B_R| <= C lambda^(-3/2), or an equivalent summable annular tail with the consumer's time uniformity, would defeat the gluing obstruction. Failure of the KNSS restart or Albritton-Barker E definitions would defeat the scoped lemma itself; neither failure is present in the cited sources.",
+    "mathematical_repair": "Replace the vague global inference by the quantified capacity lemma: define K globally, state the K=0 branch, preserve the exact 8 and 16 constants and all quantifiers, and qualify the threshold-exponent comparison. Open a separate source-valid tail-summability, no-incoming, ancestry, or pressure-cancellation atom; improving O(R) to another still-unbounded envelope is not sufficient for global exhaustion.",
+    "proof_and_source_evidence": "Koch-Nadirashvili-Seregin-Sverak arXiv:0709.3599, Section 4 Proposition 4.1 and Section 6 ancient-mild definition; Albritton-Barker arXiv:1811.00502v2 equations (1.1)-(1.5); mild semigroup splitting; |curl u|^2<=2|nabla u|^2; temporal Lipschitz persistence; and integration over the persistent superlevel cylinder."
+  },
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/00_sources/NS_B1a3b1a2a_R6_ANCIENT_SMOOTHING_CAPACITY_SOURCE_RECEIPT_20260812.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS_B1a3b1a2a_R6_SCOPED_MATHEMATICAL_LESSON_20260812.json"
+  ],
+  "nonmathematical_credit_boundary": "Git, pull requests, CI, tests, schemas, hashes, chronology, serialization, repository growth, and telemetry receive zero mathematical credit; same-context review receives zero independent-review credit."
+}
