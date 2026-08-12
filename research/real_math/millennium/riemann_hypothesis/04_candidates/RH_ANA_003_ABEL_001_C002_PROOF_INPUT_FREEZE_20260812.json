@@ -1,0 +1,55 @@
+{
+  "allowed_result_branches": [
+    "PROVED_FIXED_N_NATURAL_ORDER_IDENTITY",
+    "FINITE_ENDPOINT_IDENTITY_FALSE",
+    "BELLOTTI_BOUNDARY_OR_INTEGRAL_INSUFFICIENT",
+    "ABSOLUTE_DIVERGENCE_WITNESS_FALSE",
+    "CANNOT_CHECK"
+  ],
+  "artifact_hash": "sha256:9f84444abee6661db81500f875f10063297c793a504be26e29ff75301efec71a",
+  "candidate_core_sha256": "sha256:b9bd54e72850dbc31b2fba344d978ee3660f0004bf81fb237347f0eb8b5ab3ab",
+  "candidate_id": "RH-ANA-003-ABEL-001-C002-FIXED-N-NATURAL-ORDER-ABEL",
+  "evaluation_authorized": false,
+  "frozen_at": "2026-08-12T07:48:10Z",
+  "mathematical_result_credit": false,
+  "proof_input_id": "RH-ANA-003-ABEL-001-C002-PROOF-INPUT-FREEZE-20260812",
+  "proof_obligations": [
+    {
+      "id": "O1-FINITE-ABEL-ENDPOINTS",
+      "obligation": "derive the displayed finite half-open identity with X,Y nonintegral and exact A(X),A(Y) terms",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O2-KERNEL-DERIVATIVE",
+      "obligation": "derive b_n'(t)=t^(-2)[(L_{n-1}^{(1)})'(log t)-L_{n-1}^{(1)}(log t)] and prove |b_n'(t)|<=C_n(1+(log t)^(n-1))/t^2 for all t>=1, where n>=1 is fixed before choosing C_n and taking t to infinity",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O3-BELLOTTI-TO-A",
+      "obligation": "from Bellotti v1 Theorem 1.5 and equations (1.3)-(1.4), derive for sufficiently large x |A(x)|<=1+C x exp(-d(log x)^(3/5)/(log log x)^(1/5))",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O4-FIXED-N-BOUNDARY",
+      "obligation": "combine O2-O3 with fixed n to prove A(Y)b_n(Y)->0",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O5-FIXED-N-INTEGRAL",
+      "obligation": "combine O2-O3 with fixed n to prove integral_X^infinity |A(t)b_n'(t)|dt<infinity",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O6-NATURAL-ORDER-LIMIT",
+      "obligation": "take Y to infinity only after O1,O4,O5 and preserve original integer order",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O7-NONABSOLUTE-WITNESS",
+      "obligation": "for m=6k, prove Lambda(m)=0 because 6k has at least prime factors 2 and 3, so |a_m|=1; use the leading coefficient (-1)^(n-1)/(n-1)! of L_{n-1}^{(1)} to obtain |b_n(6k)|>=c_n(log k)^(n-1)/k for all sufficiently large k; conclude divergence of the absolute subseries, including n=1",
+      "status": "FROZEN_UNEVALUATED"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "FROZEN_UNEVALUATED"
+}
