@@ -1,0 +1,170 @@
+{
+  "allowed_result_branches": [
+    "PROVED_FIXED_N_NATURAL_ORDER_IDENTITY",
+    "FINITE_ENDPOINT_IDENTITY_FALSE",
+    "BELLOTTI_BOUNDARY_OR_INTEGRAL_INSUFFICIENT",
+    "ABSOLUTE_DIVERGENCE_WITNESS_FALSE",
+    "CANNOT_CHECK"
+  ],
+  "artifact_hash": "sha256:734c652a20218886dfcd2d1d3e14fcd67ee7a3252f505a05efd3eb99fbcbc8ee",
+  "atom_id": "RH-ANA-003-ABEL-001",
+  "bellotti_source_binding": {
+    "equation_1_3": "Delta(x)=|psi(x)-x|/x",
+    "equation_1_4": "omega(x)=d(log x)^(3/5)/(log log x)^(1/5), d=(5^6 A_0^3/(2^2*3^4))^(1/5)",
+    "retrieved_v1_html_sha256": "2b57101a941e31c033ae2510efe8f4b3e81f22f025cd857fcb53d8ce77f3e634",
+    "source": "Bellotti, arXiv:2508.02041v1",
+    "theorem": "Theorem 1.5",
+    "theorem_bound": "Delta(x)<<exp(55 A_0)exp(-omega(x))",
+    "use_scope": "sufficient boundary source for fixed n only"
+  },
+  "candidate_id": "RH-ANA-003-ABEL-001-C002-FIXED-N-NATURAL-ORDER-ABEL",
+  "candidate_identity": {
+    "candidate_id": "RH-ANA-003-ABEL-001-C002-FIXED-N-NATURAL-ORDER-ABEL",
+    "canonical_core_sha256": "sha256:b9bd54e72850dbc31b2fba344d978ee3660f0004bf81fb237347f0eb8b5ab3ab",
+    "identity_scope": "FULL_C002_CORE_BEFORE_IDENTITY_AND_ARTIFACT_HASH"
+  },
+  "candidate_kind": "FIXED_N_NATURAL_ORDER_CONVERGENCE_LEMMA_PROPOSAL",
+  "candidate_statement": {
+    "boundary_claim": "lim_{Y->infinity} A(Y)b_n(Y)=0",
+    "convergence_class": "the natural-order series converges for each fixed n, but the original term series sum_m |a_m b_n(m)| does not converge absolutely",
+    "finite_endpoint_identity": "For real 1<=X<Y that are not positive integers, sum_{X<m<=Y} a_m b_n(m) = A(Y)b_n(Y)-A(X)b_n(X) - integral_X^Y A(t)b_n'(t)dt.",
+    "integral_claim": "integral_X^infinity |A(t)b_n'(t)|dt<infinity",
+    "natural_order_tail_identity": "lim_{Y->infinity}sum_{X<m<=Y}a_m b_n(m)=-A(X)b_n(X)-integral_X^infinity A(t)b_n'(t)dt"
+  },
+  "credit_boundary": {
+    "candidate_freeze_mathematical_result_credit": false,
+    "math_ledger_entry_created": false,
+    "operational_metadata_zero_math_credit": [
+      "Git/branch/PR chronology",
+      "CI/tests",
+      "schemas/hashes/serialization",
+      "framework subject and evaluator wiring"
+    ]
+  },
+  "definitions": {
+    "chebyshev_psi": "psi(x)=sum_{m<=x}Lambda(m)",
+    "cumulative_source": "A(x)=sum_{m<=x}a_m=floor(x)-psi(x)",
+    "kernel": "b_n(x)=L_{n-1}^{(1)}(log x)/x",
+    "laguerre_normalization": "L_{n-1}^{(1)}(u)=sum_{j=0}^{n-1}(-1)^j binom(n,j+1)u^j/j!",
+    "source_sequence": "a_m=1-Lambda(m)",
+    "von_mangoldt": "Lambda(m)=log p if m=p^j for a prime p and integer j>=1; Lambda(m)=0 otherwise"
+  },
+  "explicit_exclusions": [
+    "NO_N_UNIFORMITY",
+    "NO_SERIES_REORDERING_OR_REGROUPING",
+    "NO_PR316_RATE_OR_CUTOFF_CLAIM",
+    "NO_LI_COEFFICIENT_SIGN_CLAIM",
+    "NO_RIEMANN_HYPOTHESIS_CLAIM",
+    "NO_NOVELTY_CLAIM",
+    "NO_INDEPENDENT_REVIEW_CLAIM"
+  ],
+  "falsifiers": {
+    "boundary_integral": [
+      "Bellotti v1 does not imply the stated A bound",
+      "the fixed Laguerre derivative grows faster than the frozen polynomial-log bound",
+      "the transformed improper integral diverges for one fixed n"
+    ],
+    "finite_identity": [
+      "one endpoint convention for which the displayed signs or boundary terms are false",
+      "a direct finite example contradicting the formula"
+    ],
+    "nonabsolute": [
+      "one m=6k that is a prime power",
+      "failure of the leading Laguerre term to dominate eventually",
+      "convergence of the stated positive comparison subseries"
+    ],
+    "scope": [
+      "any proof step requires a constant uniform in n",
+      "any regrouping or permutation of the original term series",
+      "any use of unmerged PR316 or historical R4/R5 as theorem authority"
+    ]
+  },
+  "frozen_at": "2026-08-12T07:48:10Z",
+  "proof_obligations": [
+    {
+      "id": "O1-FINITE-ABEL-ENDPOINTS",
+      "obligation": "derive the displayed finite half-open identity with X,Y nonintegral and exact A(X),A(Y) terms",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O2-KERNEL-DERIVATIVE",
+      "obligation": "derive b_n'(t)=t^(-2)[(L_{n-1}^{(1)})'(log t)-L_{n-1}^{(1)}(log t)] and prove |b_n'(t)|<=C_n(1+(log t)^(n-1))/t^2 for all t>=1, where n>=1 is fixed before choosing C_n and taking t to infinity",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O3-BELLOTTI-TO-A",
+      "obligation": "from Bellotti v1 Theorem 1.5 and equations (1.3)-(1.4), derive for sufficiently large x |A(x)|<=1+C x exp(-d(log x)^(3/5)/(log log x)^(1/5))",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O4-FIXED-N-BOUNDARY",
+      "obligation": "combine O2-O3 with fixed n to prove A(Y)b_n(Y)->0",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O5-FIXED-N-INTEGRAL",
+      "obligation": "combine O2-O3 with fixed n to prove integral_X^infinity |A(t)b_n'(t)|dt<infinity",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O6-NATURAL-ORDER-LIMIT",
+      "obligation": "take Y to infinity only after O1,O4,O5 and preserve original integer order",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O7-NONABSOLUTE-WITNESS",
+      "obligation": "for m=6k, prove Lambda(m)=0 because 6k has at least prime factors 2 and 3, so |a_m|=1; use the leading coefficient (-1)^(n-1)/(n-1)! of L_{n-1}^{(1)} to obtain |b_n(6k)|>=c_n(log k)^(n-1)/k for all sufficiently large k; conclude divergence of the absolute subseries, including n=1",
+      "status": "FROZEN_UNEVALUATED"
+    }
+  ],
+  "quantifier_order": "FOR_EACH_FIXED_INTEGER_N_GE_1__THEN_TAKE_Y_TO_INFINITY",
+  "schema_version": "1.0.0",
+  "seven_field_mathematical_rubric": {
+    "attempted_implication": "Bellotti cumulative PNT decay plus exact finite Abel summation implies a fixed-n natural-order tail identity while the original term series remains nonabsolute",
+    "exact_result_or_failure": "UNEVALUATED_CANDIDATE_FREEZE_ONLY",
+    "mathematical_falsifier": "any item in the frozen falsifier map",
+    "mathematical_repair": "if an endpoint convention fails, restate the exact finite Stieltjes identity; if Bellotti is insufficient, narrow to the proven boundary; if m=6k fails, replace it only prospectively with a proved arithmetic subsequence",
+    "proof_source_evidence": [
+      "classical finite Abel summation",
+      "Bellotti arXiv:2508.02041v1 Theorem 1.5 and equations (1.3)-(1.4)",
+      "exact generalized Laguerre finite polynomial normalization",
+      "elementary arithmetic fact that 6k is not a prime power"
+    ],
+    "scope": "each fixed integer n>=1; natural order; exact nonintegral endpoints",
+    "supported_and_competing_causes": [
+      "supported proposal: cumulative cancellation survives through A=floor-psi",
+      "competing failure: an endpoint sign/convention error invalidates the identity",
+      "competing failure: Bellotti decay is insufficient after the exact derivative",
+      "competing failure: the m=6k absolute-divergence witness is malformed"
+    ]
+  },
+  "source_identity": {
+    "corrected_framework_binding": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003_ABEL_001_C002_FRAMEWORK_SUBJECT_FREEZE_20260812.json",
+    "pre_candidate_gate": {
+      "note": "file digest is evidence identity only and is not substituted for the context packet hash",
+      "path": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003_ABEL_001_PRE_CANDIDATE_GATE_RECEIPT_20260812.json",
+      "raw_sha256": "8fa0778327c198c7e5e1b3a7e6f9ebdb59735ef067e8545c7f0eb62cb38ff777"
+    },
+    "predecessor_invalidation": "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_ANA_003_ABEL_001_C001_POSTMERGE_INVALIDATION_20260812.json",
+    "repair_base_commit": "6016dd6a87d87b18d8f5498e2537b043a8468c04",
+    "valid_pre_candidate_context": {
+      "packet_hash": "sha256:1cefd235555778753fb0731e783ff94cd9b888b941813a5dc00b11e302362f2f",
+      "path": "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003_ABEL_001_MATH_CONTEXT_FIBER_20260812.json"
+    }
+  },
+  "successor_lineage": {
+    "predecessor_chronology_repaired_retroactively": false,
+    "predecessor_quarantined": true,
+    "result_access_before_successor_freeze": false,
+    "supersedes_candidate_id": "RH-ANA-003-ABEL-001-C001-FIXED-N-NATURAL-ORDER-ABEL",
+    "supersedes_core_sha256": "sha256:19a265e1498ad67db256c2ef1315a370d2b72107618f67c54fb7b0828eac3bcc",
+    "supersession_reason": "postmerge review found malformed O2 and invalid framework context binding"
+  },
+  "target_access": {
+    "absolute_divergence_checked": false,
+    "boundary_checked": false,
+    "finite_identity_checked": false,
+    "proof_evaluator_imported_or_executed": false,
+    "result_accessed": false
+  }
+}

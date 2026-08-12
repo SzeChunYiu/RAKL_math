@@ -1,0 +1,30 @@
+{
+  "artifact_hash": "sha256:a99b59d4c0cadd11b279c533ed1172ce6acf1cdd2a5c5db539ac401a50310e0d",
+  "atom_id": "RH-ANA-003-ABEL-001",
+  "attempted_implication": "For each fixed integer n>=1, b_n(t)=L_{n-1}^{(1)}(log t)/t should satisfy |b_n'(t)|<=C_n(1+(log t)^(n-1))/t^2 for t>=1, so the Bellotti-weighted Abel boundary and improper integral can be tested without any constant uniform in n.",
+  "authority": "SCOPED_SPECIFICATION_FAILURE_LESSON_NO_THEOREM_RESULT_NO_NOVELTY",
+  "candidate_core_sha256": "sha256:b9bd54e72850dbc31b2fba344d978ee3660f0004bf81fb237347f0eb8b5ab3ab",
+  "candidate_id": "RH-ANA-003-ABEL-001-C002-FIXED-N-NATURAL-ORDER-ABEL",
+  "exact_result_or_failure": "C001 wrote C_n(1+log t^(n-1))/t^2. Under the conventional parse log(t^(n-1))=(n-1)log t, that envelope grows only linearly in log t. But (L_{n-1}^{(1)})'(u)-L_{n-1}^{(1)}(u) is a polynomial of degree n-1 with nonzero leading coefficient, so the written envelope is false for every fixed n>=3. It happens to have sufficient degree for n=1 and n=2. C002 only freezes the corrected parenthesized proposal; it does not prove the corrected bound or any Abel conclusion.",
+  "mathematical_falsifier": "For the corrected proposal, exhibit a fixed n>=1 and a sequence t_k->infinity for which t_k^2|b_n'(t_k)|/(1+(log t_k)^(n-1)) is unbounded, or derive the exact polynomial and show that its degree or leading coefficient differs from the frozen Laguerre normalization.",
+  "mathematical_repair": "Introduce u=log t, differentiate b_n(t)=L_{n-1}^{(1)}(u)/t explicitly, and state the envelope as |(L_{n-1}^{(1)})'(u)-L_{n-1}^{(1)}(u)| <=C_n(1+u^(n-1)) for u>=0. Then substitute u=log t, keeping the quantifier order for each fixed n, there exists C_n, for all t>=1. Test n=1, n=2, and n=3 separately before using the asymptotic polynomial-degree argument.",
+  "mathematical_result_credit": false,
+  "mathematical_saturation_credit": false,
+  "nonmathematical_governance_note": "The separate context-hash identity defect explains why C001 cannot retain strict RAKL chronology, but hashes, Git history, CI, schemas, and chronology are governance checks and receive zero mathematical lesson credit.",
+  "proof_source_evidence": [
+    "L_{n-1}^{(1)}(u)=sum_{j=0}^{n-1}(-1)^j binom(n,j+1)u^j/j!",
+    "b_n'(t)=t^(-2)[(L_{n-1}^{(1)})'(log t)-L_{n-1}^{(1)}(log t)] by the chain and product rules",
+    "the leading coefficient of L_{n-1}^{(1)} is (-1)^(n-1)/(n-1)!, so the derivative difference has the nonzero opposite leading coefficient in degree n-1",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003_ABEL_001_MATH_CONTEXT_FIBER_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_ANA_003_ABEL_001_C002_FIXED_N_ABEL_CANDIDATE_FREEZE_20260812.json"
+  ],
+  "schema_version": "1.0.0",
+  "scope": "The diagnosed failure concerns the derivative-envelope statement for b_n on t>=1, with n fixed before t tends to infinity. It establishes no n-uniform estimate, no endpoint identity, no transformed-integral convergence, no natural-order convergence, no absolute-divergence result, no Li-coefficient sign, and no RH implication.",
+  "supported_and_competing_causes": [
+    "supported mathematical cause: operator precedence replaced the required degree-(n-1) polynomial growth in u=log t by degree-one growth, losing n-2 powers when n>=3",
+    "supported mathematical cause: the leading u^(n-1) term of (L_{n-1}^{(1)})'(u)-L_{n-1}^{(1)}(u) comes from -L_{n-1}^{(1)}(u) and cannot be absorbed by a linear-u envelope for n>=3",
+    "competing mathematical cause not selected: Bellotti decay may still be insufficient after multiplication by the corrected derivative envelope",
+    "competing mathematical cause not selected: an endpoint convention or sign error may independently invalidate the finite Abel identity"
+  ],
+  "unit_id": "MATH-RH-ABEL-C001-C002-PARENTHESIZED-LOG-GROWTH-REPAIR"
+}

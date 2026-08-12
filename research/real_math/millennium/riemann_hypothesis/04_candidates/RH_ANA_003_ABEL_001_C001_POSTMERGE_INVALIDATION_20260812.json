@@ -1,0 +1,59 @@
+{
+  "artifact_hash": "sha256:1c8ddc39a16f98a9638ae4d01380ea92d5605e26a6d4848111b3b5fc96f8c9cc",
+  "atom_id": "RH-ANA-003-ABEL-001",
+  "authority": {
+    "grants_independent_review": false,
+    "grants_li_or_rh_authority": false,
+    "grants_theorem_truth": false,
+    "mathematical_result_credit": false,
+    "mathematical_saturation_credit": false,
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "blocking_findings": [
+    {
+      "conventional_parse": "C_n(1+(n-1)log t)/t^2",
+      "correct_successor": "C_n(1+(log t)^(n-1))/t^2",
+      "exact_original": "C_n(1+log t^(n-1))/t^2",
+      "failure": "for n>=3 this does not dominate the actual fixed-n polynomial-log growth (log t)^(n-1)/t^2",
+      "finding_id": "C001-B1-MALFORMED-DERIVATIVE-GROWTH-BOUND",
+      "scope": "O2 and every downstream obligation that cites that exact bound"
+    },
+    {
+      "failure": "the candidate framework freeze was not bound to the mathematical context packet used by the strict pre-candidate gate",
+      "finding_id": "C001-B2-WRONG-FRAMEWORK-PACKET-BINDING",
+      "original_binding_value": "8fa0778327c198c7e5e1b3a7e6f9ebdb59735ef067e8545c7f0eb62cb38ff777",
+      "original_value_identity": "raw SHA-256 of the pre-candidate gate receipt file",
+      "required_context_packet_hash": "1cefd235555778753fb0731e783ff94cd9b888b941813a5dc00b11e302362f2f",
+      "scope": "strict RAKL candidate-materialization chronology for C001"
+    }
+  ],
+  "candidate_id": "RH-ANA-003-ABEL-001-C001-FIXED-N-NATURAL-ORDER-ABEL",
+  "candidate_status": "QUARANTINED_STRICT_RAKL_IDENTITY_AND_MALFORMED_O2_PROPOSAL",
+  "fail_closed_decision": {
+    "may_describe_c001_as_strict_rakl_candidate": false,
+    "may_use_c001_for_evaluation": false,
+    "new_successor_identity_required": true,
+    "original_candidate_identity_quarantined": true,
+    "original_files_rewritten": false,
+    "reason": "a content-bearing mathematical obligation and its required framework-subject binding were both wrong at C001 freeze time",
+    "retroactive_chronology_repair_claimed": false
+  },
+  "historical_bindings": {
+    "candidate_core_sha256": "sha256:19a265e1498ad67db256c2ef1315a370d2b72107618f67c54fb7b0828eac3bcc",
+    "candidate_path": "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_ANA_003_ABEL_001_FIXED_N_ABEL_CANDIDATE_FREEZE_20260812.json",
+    "candidate_raw_sha256": "452f69fc29dbc5d1b97c7f966417856debc52b77bf65f4818cfa4716e3f8ee64",
+    "framework_binding_path": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003_ABEL_001_CANDIDATE_FRAMEWORK_SUBJECT_FREEZE_20260812.json",
+    "framework_binding_raw_sha256": "9afa7c74c1e38ef633b8343606cd178cbcdfc352f3ab15f1ad6f6208efc11825",
+    "trace_path": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003_ABEL_001_CANDIDATE_FREEZE_TRACE_20260812.json",
+    "trace_raw_sha256": "6ee14c6153c8c40af0f136850c48c2b0bf627419d54626421f7770501934e050"
+  },
+  "invalidation_id": "RH-ANA-003-ABEL-001-C001-POSTMERGE-INVALIDATION-20260812",
+  "result_access": {
+    "candidate_evaluator_executed": false,
+    "candidate_result_accessed": false,
+    "proof_result_accessed": false
+  },
+  "review_authority": "POSTMERGE_AUTOMATED_CODE_REVIEW_NOT_INDEPENDENT_MATHEMATICAL_PEER_REVIEW",
+  "reviewed_at": "2026-08-12T07:45:19Z",
+  "schema_version": "1.0.0"
+}
