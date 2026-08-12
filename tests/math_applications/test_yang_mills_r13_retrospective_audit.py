@@ -35,7 +35,7 @@ def test_r13_retrospective_math_scope_and_interfaces_are_exact() -> None:
         "pull_request": 240,
         "original_head": "90ff9f31d29be9317e9f7a77b8d82fcb7cd32f8b",
         "original_base": "7c44a3a19f79e4beb41af6b55b1bb1cc043d8d42",
-        "latest_main_audited": "fd7efabd201ae6da3d255074573cac7d584c0518",
+        "latest_main_audited": "c9f5eda909518042987ce4b69579048f17cf4c46",
         "framework_pin_audited": "43897d3afaf0038385102d5acc64793c05ec40f0",
     }
     assert audit["successor_scope"] == {
