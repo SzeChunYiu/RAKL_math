@@ -1,0 +1,25 @@
+{
+  "schema_version": "obstruction-transformation-memory-v1-shadow",
+  "memory_id": "OTM-NS-B2a1c-R2-20260812",
+  "source_universe": ["same-domain mathematical-analysis transformations selected for this atom","current RAKL_math prior Type-II experience used as proposal-only routing context"],
+  "episodes": [{
+    "episode_id": "OTEP-LIONS-LOCAL-TO-GLOBAL-TIGHTNESS-SPLIT",
+    "source_domain": "mathematical analysis",
+    "source_context": "Lions concentration-compactness, locally compact case: local compactness on unbounded domains is separated from concentration/tightness/escape phenomena.",
+    "source_obstruction": {"obstruction_id":"O-GENERIC-LOCAL-COMPACTNESS-WITHOUT-GLOBAL-TIGHTNESS","domain":"mathematical analysis","roles":["approximating sequence","local limit","global quantity","tail region"],"relations":["sequence converges on bounded regions","global quantity may escape through the tail"],"constraints":["unbounded domain","local compactness alone is insufficient for a global compactness conclusion"],"failure_mechanisms":["translation/escape to infinity","loss of global mass or boundary control"],"invariants_to_preserve":["local limit identity","global target definition"],"desired_transition":["separate local compactness from tail control and test an explicit tightness condition before global passage"],"forbidden_losses":["silently assuming tightness","changing the target global quantity"]},
+    "transformation_name": "local_global_split_then_explicit_tail_test",
+    "operation": "Do not glue local convergence directly to a global conclusion; introduce an explicit tail/tightness coordinate and test it before the global passage.",
+    "preconditions": ["unbounded domain","local compactness/convergence on bounded regions","global target can be affected by escape at infinity"],
+    "resulting_relations": ["local convergence and tail control are separately typed obligations","global passage is conditional on the tail/tightness test"],
+    "preserved_invariants": ["local limit identity","global target definition"],
+    "relaxed_or_broken_constraints": [],
+    "known_breakpoints": ["signed/nonpositive target quantities may need a tailored absolute-uniform-integrability surrogate","PDE dynamics can supply additional structure not captured by generic compactness"],
+    "evidence_pointers": ["P.-L. Lions, Ann. IHP C Analyse non lineaire 1 (1984), 109-145","Numdam AIHPC_1984__1_2_109_0"],
+    "authority": "SOURCE_EVENT_VERIFIED",
+    "artifact_hash": "sha256:e47b3c27ce2602bd2dffc576b859bd77221f355e45a80ff2f1888d028b9077e4",
+    "lineage_ids": []
+  }],
+  "evidence_pointers": ["Lions 1984 source anchor","RAKL_math PR #72","RAKL_math PR #91","RAKL_math#203"],
+  "snapshot_hash": "33899a36cd9a61ebb8d78900ef0ce23585ba6bebdb17a82f89272ff505afb4d2",
+  "authority": "PROPOSAL_SHADOW_COMPILED_MEMORY"
+}
