@@ -1,0 +1,118 @@
+{
+  "application_subject": {
+    "frozen_main_sha": "e51a8c3722546b6ead3f0dcc48bb2262aadb68c0",
+    "pre_candidate_head": "6d7a0a6c6bfbdb1b3f60fbc7b939bbad29ee2e6b"
+  },
+  "artifact_hash": "sha256:7e8b61be0645df21fcf306c073d8524208ea3420bd0306785ab34819c48488cb",
+  "atom_id": "XM021-PC-SUCCESS-CHAIN-TO-RH-ANA-003h-OUTER-LAGUERRE",
+  "authority": "PROPOSAL_SHADOW_MATHEMATICAL_RESULT_ONLY / NO_RH_THEOREM / NO_ROOT_AUTHORITY / NO_INDEPENDENT_REVIEW",
+  "candidate_id": "XM021-RH-ANA-003h-C001-OUTER-LAGUERRE-QUADRATIC-CUTOFF",
+  "context_fibre_hash": "sha256:96dcf2eb2c6ef86128abbd0e9c12415a2ee30fa520d40c9bd68a452bb7ea3f79",
+  "cycle": "XM021",
+  "difference_witness": {
+    "new_outer_coefficient_envelope": "log majorant contribution n log U_n-log((n-1)!)+O(n)=n log n+O_K(n), which is dominated by Bellotti's decay exponent.",
+    "old_crude_R5_envelope": "log majorant contribution 2 sqrt(nU_n)=2 sqrt(K)n^(3/2), which dominates Bellotti's Theta(n^(6/5)/(log n)^(1/5)) decay and is non-discriminating.",
+    "same_cutoff": "U_n=K n^2",
+    "verdict": "The R8 obstruction is operator/representation-specific: the same source-order Abel representation survives at quadratic cutoff under a sharper exact outer-regime bound."
+  },
+  "falsification_and_boundaries": [
+    "The proof does not lower-bound the true complement or claim the crude R5 bound is false; it shows the crude upper bound is too lossy.",
+    "The proof does not imply a subcritical prefix estimate, endpoint sign control or any RH-equivalent inequality.",
+    "The proof uses only the outer polynomial coefficient structure; it makes no claim about the oscillatory transition region u=O(n).",
+    "Finite-n thresholds and explicit constants are not optimized; asymptotic scope only.",
+    "Numerical checks, if any, are calibration only and carry no proof credit."
+  ],
+  "framework_subject": {
+    "method_version": "3.0.0",
+    "rakl_main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0"
+  },
+  "local_to_global": {
+    "gluing": "OPEN",
+    "local_mathematics": "CLOSED_PROPOSAL_SHADOW for the R5 natural-order complement at U_n=K n^2, asymptotically.",
+    "residual": "Prefix Q_n / endpoint-strength reduction remains load-bearing under R7; after preserving this sharper complement lemma, test whether any prefix statistic is strictly weaker than whole-remainder polynomial control before additional estimation."
+  },
+  "novelty_class": {
+    "literature_novelty_claim": "NONE",
+    "rakl": [
+      "operator",
+      "representation",
+      "compositional",
+      "transfer"
+    ],
+    "root_novelty_claim": "NONE"
+  },
+  "outcome": "MATERIAL_ROUTE_REOPENING_PARTIAL_SUCCESS",
+  "pre_action_receipt_pointer": "pre_action_receipt:bd7ca821907c78c110ba99da00d82939eff6d55f9a9fbc4b5f1a211094af7b76",
+  "pre_candidate_trace_terminal_hash": "sha256:57aaed370a3de7271914ba635a61abd1aa6adb34703fe739244e02050566550e",
+  "primary_source_provenance": [
+    {
+      "id": "Bellotti-arXiv-2508.02041",
+      "role": "unconditional PNT decay exponent d (log x)^(3/5)/(loglog x)^(1/5), epsilon=0"
+    },
+    {
+      "id": "Coffey-arXiv-0706.0343",
+      "role": "S_2=S_gamma+S_Lambda / Li-context source family already bound in the RH lane"
+    }
+  ],
+  "proof": [
+    {
+      "detail": "Write L_{n-1}^{(1)}(u)=sum_{k=0}^{n-1}(-1)^k a_k with a_k=binom(n,k+1)u^k/k!. For 1<=k<=n-1, a_{k-1}/a_k=k(k+1)/((n-k)u)<=n(n-1)/u. Hence when u>=2n(n-1), every downward ratio is <=1/2, so sum_k a_k<=2a_{n-1}=2u^(n-1)/(n-1)!.",
+      "step": "Exact outer coefficient ratio for L_{n-1}^{(1)}"
+    },
+    {
+      "detail": "Using d/du L_{n-1}^{(1)}(u)=-L_{n-2}^{(2)}(u), write the latter coefficient magnitudes as c_k=binom(n,k+2)u^k/k!. Then c_{k-1}/c_k=k(k+2)/((n-k-1)u)<=n(n-2)/u<1/2 in the same outer regime. Thus |L_{n-2}^{(2)}(u)|<=2u^(n-2)/(n-2)!, and |b_n'(t)|<=3 t^-2 u^(n-1)/(n-1)! for n>=2, u=log t>=2n(n-1). The n=1 case is elementary.",
+      "step": "Derivative Laguerre bound"
+    },
+    {
+      "detail": "The PNT estimate and outer Laguerre bound give |A(e^U)b_n(e^U)|<=2C U^(n-1)/(n-1)! exp(-d f(U)). For fixed n this also tends to zero as U->infinity, so the terminal Abel boundary vanishes.",
+      "step": "Abel boundary term"
+    },
+    {
+      "detail": "For U>=6, f(2u)>=sqrt(2) f(u), since [f(2u)/f(u)]^5=8 log(u)/log(2u)>=2^(5/2). On dyadic blocks [2^j U,2^(j+1)U], J_n(U)=int_U^infinity u^(n-1)e^{-d f(u)}du is at most 2^(n-1)U^n sum_{j>=0}2^(jn)e^{-d f(2^jU)}. Consecutive summands have ratio at most q_n=2^n exp(-d(sqrt(2)-1)f(U)). For U=K n^2, f(U)/n -> infinity, hence q_n<=1/2 for all sufficiently large n, and J_n(U)<=2^n U^n e^{-d f(U)}.",
+      "step": "Dyadic tail integral"
+    },
+    {
+      "detail": "Therefore |T_n(e^U)|<=2C U^(n-1)/(n-1)! e^{-d f(U)} + 3C 2^n U^n/(n-1)! e^{-d f(U)} for U=K n^2 and all sufficiently large n.",
+      "step": "Full Abel complement bound"
+    },
+    {
+      "detail": "By Stirling, the logarithm of the dominant prefactor is at most n log n+O_K(n), whereas d f(K n^2)=Theta_{d,K}(n^(6/5)/(log n)^(1/5)). The latter dominates n log n, so the displayed bound is O_B(n^-B) for every fixed B.",
+      "step": "Superpolynomial decay"
+    }
+  ],
+  "schema": "RAKL-v3-shadow-MathematicalCandidate",
+  "source_atom": "POINCARE-SUCCESS-TRANSFER-SYNTHESIS-20260812",
+  "statement": {
+    "claim": "Under the exact R5 source-order Abel identity, for every fixed K>=2 the complement T_n(X_n)=lim_{Y->infinity} sum_{X_n<m<=Y}(1-Lambda(m)) b_n(m) satisfies T_n(X_n)=O_B(n^-B) for every fixed B>0 as n->infinity. Thus the natural-order absolute-after-Abel complement route reopens at logarithmic cutoff U_n=Theta(n^2), without invoking an oscillatory/nonabsolute Laguerre theorem.",
+    "definitions": [
+      "A(x)=floor(x)-psi(x), f(u)=u^(3/5)/(log u)^(1/5), b_n(t)=L_{n-1}^{(1)}(log t)/t.",
+      "Assume the Bellotti PNT consequence |A(x)| <= C x exp(-d f(log x)) for x sufficiently large, with fixed C,d>0.",
+      "For any fixed K>=2 set U_n=K n^2 and X_n=exp(U_n), with finitely many small n enlarged if needed to enter the PNT range."
+    ],
+    "scope": "Proposal/shadow local analytic lemma only. It does not control the moving prefix Q_n, archimedean terms, Li positivity or RH; R7 root-load conservation remains."
+  },
+  "target_atom": "RH-ANA-003h",
+  "transfer": {
+    "cheapest_falsifier": {
+      "difference_witness": "Same exact Laguerre polynomial at U_n=K n^2: crude envelope has exponent 2 sqrt(K) n^(3/2), while the outer coefficient envelope has logarithm O(n log n); Bellotti's decay exponent is Theta(n^(6/5)/(log n)^(1/5)). Thus the crude envelope loses the comparison although the outer envelope may preserve it.",
+      "stage_1": "For L_{n-1}^{(1)}(u), check whether a_{k-1}/a_k = k(k+1)/((n-k)u) is <=1/2 throughout 1<=k<=n-1 when u>=2n(n-1); do the analogous check for L_{n-2}^{(2)}.",
+      "stage_2": "At U_n=K n^2 compare the exact leading-term log growth O(n log n) with d U_n^(3/5)/(log U_n)^(1/5).",
+      "stage_3": "Audit the v-integral in the Abel derivative term; fail if no n-uniform monotone exponent/one-sided integral bound follows on [U_n,infinity)."
+    },
+    "common_abstraction": "When a downstream route fails after a chain of sound identities, first test whether the earliest lossy intermediate operator/majorant discarded target-relevant structure before changing the whole representation family.",
+    "difference_witness": "Same exact Laguerre polynomial at U_n=K n^2: crude envelope has exponent 2 sqrt(K) n^(3/2), while the outer coefficient envelope has logarithm O(n log n); Bellotti's decay exponent is Theta(n^(6/5)/(log n)^(1/5)). Thus the crude envelope loses the comparison although the outer envelope may preserve it.",
+    "disanalogies": [
+      "Perelman's chain is geometric/PDE and already belongs to a solved source problem; no Ricci-flow theorem or entropy is transferred to RH.",
+      "The target operation is an analytic inequality inside an RH representation, not a successful source theorem chain.",
+      "A shorter complement cutoff does not control the moving prefix Q_n, Li positivity, or RH.",
+      "A bound on an absolute majorant is operator-specific and does not certify optimality or literature novelty."
+    ],
+    "enabling_assumptions": [
+      "R5 exact source-order Abel identity for the Coffey S_Lambda complement is retained as proposal/shadow source-bound mathematics.",
+      "Exact generalized Laguerre coefficient formula is available algebraically.",
+      "Bellotti 2025 supplies an unconditional PNT error of Korobov-Vinogradov scale exp(-d u^(3/5)/(log u)^(1/5)) for some d>0.",
+      "The candidate outer regime is u>=K n^2 with fixed K>=2, so consecutive Laguerre coefficient magnitudes can be ratio-controlled from the top degree."
+    ],
+    "predicted_principle": "At u≈K n^2 the crude Bessel envelope exp(2 sqrt(nu)) is asymptotically too large for Bellotti's PNT exponent, but an exact outer leading-term coefficient bound is only exp(O(n log n)); if the latter controls both L and its derivative uniformly for u>=K n^2, the absolute Abel-complement route reopens at quadratic logarithmic cutoff."
+  }
+}

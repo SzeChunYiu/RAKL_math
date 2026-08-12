@@ -1,0 +1,77 @@
+{
+  "allowed_outcome_branches": [
+    "SUCCESS",
+    "PARTIAL_SUCCESS",
+    "FAILURE",
+    "BLOCKED",
+    "UNKNOWN"
+  ],
+  "application_commit": "ee4fa06511fc71e2b336afc1536d7639b4f015ce",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "atom_id": "XM021-PC-SUCCESS-CHAIN-TO-RH-ANA-003h-OUTER-LAGUERRE",
+  "context_hash": "17bcd3a55c8edc95b9460b6640119563f7c52145230b54f044cd04caedc5a4c2",
+  "fibre_snapshot_hash": "96dcf2eb2c6ef86128abbd0e9c12415a2ee30fa520d40c9bd68a452bb7ea3f79",
+  "framework_commit": "43897d3afaf0038385102d5acc64793c05ec40f0",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "frozen_at_utc": "2026-08-12T04:08:30+00:00",
+  "operator_ids": [
+    "routing",
+    "memory",
+    "equivalence_similarity",
+    "gap_discovery",
+    "experiment_query_selection"
+  ],
+  "predeclared_discriminator": "At U_n=K n^2 (K>=2), derive exact top-degree ratio bounds for L_{n-1}^{(1)} and L_{n-2}^{(2)}, compare their logarithmic growth against Bellotti's PNT exponent, then bound the full Abel derivative tail uniformly on [U_n,infinity).",
+  "receipt_canonical_sha256": "bd7ca821907c78c110ba99da00d82939eff6d55f9a9fbc4b5f1a211094af7b76",
+  "receipt_id": "PAR-XM021-PC-RH-OUTER-LAGUERRE-20260812",
+  "rejected_retrievals": [
+    {
+      "rejection_reason": "different representation-faithfulness family",
+      "retrieval_id": "FM-RH-SPEC-ANA-PROXY-NONFAITHFULNESS"
+    },
+    {
+      "rejection_reason": "target identification is not the local operator residual",
+      "retrieval_id": "CROSS-IDENTIFICATION-LOSS"
+    },
+    {
+      "rejection_reason": "no technical Laguerre/PNT transfer",
+      "retrieval_id": "FM-PNP-C043-C046-SEMANTICS-WITHOUT-INTERACTION"
+    },
+    {
+      "rejection_reason": "analogy only; no technical analytic bound",
+      "retrieval_id": "H4d1c-C004-BASE-PROJECTION-FAITHFULNESS"
+    },
+    {
+      "rejection_reason": "wrong failure family",
+      "retrieval_id": "FM-BSD-ARITHMETIC-PREMISE-REIMPORT"
+    },
+    {
+      "rejection_reason": "wrong local bottleneck",
+      "retrieval_id": "FM-YM-SAME-THEORY-INTERFACE-AND-DENSITY"
+    },
+    {
+      "rejection_reason": "wrong local bottleneck",
+      "retrieval_id": "FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE"
+    }
+  ],
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "selected_retrievals": [
+    {
+      "authority": "CANONICAL",
+      "payload_hash": "c9d69d2a1426f024f269392e912acdb6b1a5fac2ff01e1c8e4519f8e43f12ec9",
+      "retrieval_id": "POINCARE-SUCCESS-TRANSFER-SYNTHESIS-20260812"
+    },
+    {
+      "authority": "NONCANONICAL",
+      "payload_hash": "e23f0aaa3b2b19270c9fc0ba88d94848eef0ca8a28f69705916ba9f1a0507a80",
+      "retrieval_id": "RH-ANA-003g-C001-KV-ABSOLUTE-MAJORANT-FIXED-SCALE-DICHOTOMY"
+    },
+    {
+      "authority": "NONCANONICAL",
+      "payload_hash": "973bf48e91e035d945f54f4017628d2859a9e92a0c426606e97a5ed02687fdc0",
+      "retrieval_id": "RH-ANA-003d-C001-KV-ABEL-MOVING-TAIL"
+    }
+  ],
+  "sequence_index": 21,
+  "task_id": "XM021"
+}
