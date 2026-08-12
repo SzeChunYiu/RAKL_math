@@ -1,0 +1,130 @@
+{
+  "artifact_hash": "sha256:24b3c5990d6bbcb08c72ee1f794af094267b7991ab828abf7ce7cc8ceb6ac987",
+  "direct_candidate_episode_ids": [
+    "E-ASYMPTOTIC-MANDATORY-FLOOR-FIRST"
+  ],
+  "direct_mapping_witnesses": [
+    {
+      "artifact_hash": "sha256:74b653fb6fb5e92eed0f25329323d0dba353cc6224d3409308b9c2f8132e30c1",
+      "disanalogies": [
+        "target threshold also has epsilon-dependent excess",
+        "certificate failure is not actual remainder failure"
+      ],
+      "episode_id": "E-ASYMPTOTIC-MANDATORY-FLOOR-FIRST",
+      "evidence_pointers": [
+        "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003k_JY_MOVING_DIAGONAL_SOURCE_TRANSFER_20260812.json",
+        "research/real_math/millennium/riemann_hypothesis/08_reviews/RH_ANA_003k_JY_MOVING_DIAGONAL_SYMBOLIC_DISCRIMINATOR_FREEZE_20260812.json"
+      ],
+      "precondition_mapping": [
+        [
+          "same certificate",
+          "merged tilde_M_JY certificate"
+        ],
+        [
+          "fixed diagonal before classification",
+          "required in a later candidate round"
+        ]
+      ],
+      "role_mapping": [
+        [
+          "mandatory source floor",
+          "U_JY(n)"
+        ],
+        [
+          "moving deadline",
+          "log Y_n"
+        ]
+      ],
+      "shared_constraints": [
+        "fixed n-indexed scales",
+        "positive thresholds"
+      ],
+      "shared_relations": [
+        "sufficient threshold is at least its floor"
+      ],
+      "target_obstruction_id": "OBS-RH-ANA003K-JY-SUFFICIENT-MODULUS-VS-MOVING-DIAGONAL",
+      "target_validation_obligations": [
+        "freeze epsilon_n and diagonal contract",
+        "prove ratio limit symbolically",
+        "classify only certificate compatibility"
+      ],
+      "unmatched_source_preconditions": [
+        "epsilon_n and exact diagonal/C are not frozen"
+      ],
+      "witness_id": "W-RH-ANA003K-FLOOR-FIRST"
+    }
+  ],
+  "direct_search_status": "MATCHES_FOUND",
+  "episode_memory_snapshot_hash": "sha256:7977a53439c186b7185e6bde3190efcc695156e88808a3434c2fac26371bb7d8",
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003k_JY_MOVING_DIAGONAL_SOURCE_TRANSFER_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003k_JY_MOVING_DIAGONAL_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003k_JY_MOVING_DIAGONAL_OBSTRUCTION_TRANSFORMATION_MEMORY_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/08_reviews/RH_ANA_003k_JY_MOVING_DIAGONAL_SYMBOLIC_DISCRIMINATOR_FREEZE_20260812.json"
+  ],
+  "exhaustion_witness": null,
+  "glue_search_status": "NOT_RUN",
+  "glue_witness": null,
+  "jump_mapping_witnesses": [],
+  "jump_search_status": "NOT_RUN",
+  "missing_transformation_specification": null,
+  "obstruction": {
+    "constraints": [
+      "natural order",
+      "fixed-n result authority only",
+      "endpoint not internal-prefix control",
+      "no outcome-dependent epsilon_n or C",
+      "no discriminator execution in this round"
+    ],
+    "desired_transition": [
+      "decide prospectively whether tilde_m_JY(n,epsilon_n)<=log Y_n eventually or the proved sufficient certificate has a scoped growth obstruction"
+    ],
+    "domain": "analytic number theory / asymptotic comparison / quantifier control",
+    "failure_mechanisms": [
+      "quadratic validity floor outgrows a proposed subquadratic-log diagonal",
+      "tolerance choice makes the threshold larger",
+      "mistaking a sufficient modulus for a necessary convergence threshold",
+      "post-outcome parameter rescue"
+    ],
+    "forbidden_losses": [
+      "drop U_JY without a new proof",
+      "claim failure of all possible remainder methods from failure of this sufficient modulus",
+      "select epsilon_n or C after branch access",
+      "promote endpoint control to Li positivity or RH"
+    ],
+    "invariants_to_preserve": [
+      "exact Johnston--Yang profile",
+      "U_JY including +1.515",
+      "least-M computability CANNOT_CHECK",
+      "separate tilde_M identity",
+      "OPEN root"
+    ],
+    "obstruction_id": "OBS-RH-ANA003K-JY-SUFFICIENT-MODULUS-VS-MOVING-DIAGONAL",
+    "relations": [
+      "tilde_m_JY(n,epsilon)>=ceil(U_JY(n)) by construction",
+      "the inherited proposed diagonal has log Y_n=C n^(5/3)log^2(n+e) for one fixed C>0",
+      "diagonal use of the sufficient modulus requires tilde_m_JY(n,epsilon_n)<=log Y_n eventually",
+      "epsilon_n and the numerical diagonal constant are not selected in this round"
+    ],
+    "roles": [
+      "row n",
+      "tolerance epsilon_n",
+      "sufficient threshold tilde_M_JY",
+      "moving endpoint Y_n",
+      "monotonicity floor U_JY(n)"
+    ]
+  },
+  "research_memory_review_hash": "sha256:a94de87f4398c4c95a4d7ab9529b1f803fa8323a588752ba6f2b13ceedf4ae85",
+  "review_id": "RH-ANA003K-JY-OBSTRUCTION-REVIEW-20260812",
+  "selected_episode_ids": [
+    "E-ASYMPTOTIC-MANDATORY-FLOOR-FIRST"
+  ],
+  "selected_mode": "SEARCH",
+  "target_atom_id": "RH-ANA-003k-JY-MOVING-DIAGONAL",
+  "target_context_hash": "sha256:534ab229ac464209c330909053a8e1d91f658fb828e3d78425a94e67757c6646",
+  "unresolved_warnings": [
+    "SEARCH selects a discriminator route, not a candidate conclusion",
+    "parameters remain unfrozen",
+    "no LIFT authority"
+  ]
+}

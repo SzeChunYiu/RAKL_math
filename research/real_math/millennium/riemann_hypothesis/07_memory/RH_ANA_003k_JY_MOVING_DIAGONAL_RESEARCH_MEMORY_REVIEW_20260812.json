@@ -1,0 +1,46 @@
+{
+  "artifact_hash": "sha256:a94de87f4398c4c95a4d7ab9529b1f803fa8323a588752ba6f2b13ceedf4ae85",
+  "candidate_method_families": [
+    "direct comparison of tilde_m with log diagonal",
+    "mandatory-floor obstruction test",
+    "sharper below-floor envelope",
+    "larger preregistered diagonal family"
+  ],
+  "cross_problem_coverage_receipt_hash": "",
+  "evidence_pointers": [
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003k_JY_MOVING_DIAGONAL_TOOL_SNAPSHOT_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003k_JY_MOVING_DIAGONAL_FAILURE_SNAPSHOT_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_JY_C001_PUBLIC_VALIDATION_RESULT_20260812.json",
+    "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_RESEARCH_MEMORY_REVIEW_20260812.json"
+  ],
+  "failure_lattice_snapshot_hash": "sha256:0bfa37e9f75afa68431b75989fa243a7d222fc688cca8d8d4433a1afa2b7e8d8",
+  "failure_query_status": "MATCHES_FOUND",
+  "failure_reuse_notes": [
+    "Keep certificate obstruction distinct from actual remainder obstruction.",
+    "Do not use the noncomputable frozen least index as an executable discriminator."
+  ],
+  "relevant_failure_ids": [
+    "F-RH-POINTWISE-TO-DIAGONAL-WITHOUT-MODULUS",
+    "F-RH-JY-LEAST-INDEX-COMPUTABILITY",
+    "F-RH-SUFFICIENT-CERTIFICATE-NOT-NECESSARY"
+  ],
+  "relevant_tool_ids": [
+    "T-RH-JY-C001-FIXED-N-SUFFICIENT-TILDE-M"
+  ],
+  "selected_tool_ids": [
+    "T-RH-JY-C001-FIXED-N-SUFFICIENT-TILDE-M"
+  ],
+  "target_atom_id": "RH-ANA-003k-JY-MOVING-DIAGONAL",
+  "target_context_hash": "sha256:534ab229ac464209c330909053a8e1d91f658fb828e3d78425a94e67757c6646",
+  "tool_applicability_notes": [
+    "The tool exposes a sufficient fixed-n threshold and its U_JY floor; it grants no diagonal conclusion."
+  ],
+  "tool_inventory_snapshot_hash": "sha256:d88d7708779d5247153fb87a4d979e62f283e94b35ba774cbe98ad0206a4fa6c",
+  "tool_query_status": "MATCHES_FOUND",
+  "unresolved_warnings": [
+    "epsilon_n is unfrozen",
+    "diagonal C is unfrozen",
+    "no below-floor envelope is proved",
+    "no discriminator result exists"
+  ]
+}
