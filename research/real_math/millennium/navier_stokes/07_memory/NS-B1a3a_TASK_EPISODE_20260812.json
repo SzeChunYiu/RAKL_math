@@ -1,0 +1,65 @@
+{
+  "episode_id": "TE-NS-B1a3a-C001-20260812",
+  "task_id": "Navier-Blowup-RAKL-Math",
+  "atom_id": "NS-B1a3a",
+  "context_hash": "sha256:43f69f47f7abcfbb48983e04efaa7712bd97260ddd846916d48100ff349a4d0e",
+  "problem_signature": [
+    "object: nontrivial mild bounded ancient Navier-Stokes solution (v,q) on R^3 x (-infinity,0) with Albritton-Barker I(v,q)=M<infinity",
+    "producer: C(Q)=r^-2 integral_Q |v|^3 is one summand of I, uniformly bounded on every parabolic cylinder",
+    "consumer: Albritton-Barker Theorem 1.2 requires a backward sequence t_k down to -infinity with uniformly bounded global L3(R^3) norm",
+    "goal: isolate the strongest source-compatible part of the consumer signature forced directly by finite I and re-atomize the remaining local-to-global glue"
+  ],
+  "fibre_snapshot_hash": "sha256:43f69f47f7abcfbb48983e04efaa7712bd97260ddd846916d48100ff349a4d0e",
+  "operator_ids": [
+    "decomposition",
+    "routing",
+    "source_selection_reliability",
+    "claim_extraction",
+    "mathematical_context_translation",
+    "contextual_theory_gluing",
+    "contradiction_diagnosis",
+    "gap_discovery",
+    "synthesis",
+    "memory",
+    "review",
+    "saturation_stopping"
+  ],
+  "action_trace": [
+    "read current RAKL main and inspect v3 method_specs, experience substrate, metrology and saturation semantics before mathematics",
+    "read current RAKL_math main, parent NS-B1a3 interface record, DAG, fibre/memory/trace artifacts",
+    "retrieve prior B1a3/B1a1/B1a2/B1a3b1 experience for routing only and reject Type-II by DifferenceWitness",
+    "freeze NS-B1a3a fibre",
+    "bind Albritton-Barker C(Q), I, Theorem 1.1 and Theorem 1.2",
+    "apply counterexample-first audit to forbid local-to-global inference",
+    "derive expanding-ball backward-time L3 good-set reservoir by time-slab averaging",
+    "glue the proved core signature to the exact Liouville consumer and isolate the same-time far-tail residual",
+    "run five-role same-context expert cell and saturation/method-basis audit"
+  ],
+  "observation_ids": [
+    "OBS-NS-B1a3a-C-CYLINDER",
+    "OBS-NS-B1a3a-GOOD-TIME-DENSITY",
+    "OBS-NS-B1a3a-TAIL-ONLY-CONSUMER-REDUCTION"
+  ],
+  "verification_ids": [
+    "VER-NS-B1a3a-PRIMARY-ARXIV",
+    "VER-NS-B1a3a-CHEBYSHEV-CONSTANTS",
+    "VER-NS-B1a3a-SAME-CONTEXT-EXPERT-CELL",
+    "VER-NS-B1a3a-DIFFERENCE-WITNESS"
+  ],
+  "outcome": "PARTIAL_SUCCESS",
+  "residual_signature": [
+    "O-NS-B1a3a-SAME-TIME-FAR-L3-TAIL",
+    "produce R_n->infinity and t_n in G_Rn with uniformly bounded L3 mass on R3\\B_{2R_n}",
+    "root remains OPEN_NO_SOLUTION_CERTIFICATE with 0/3 independent mathematical reviews"
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a3a_C001_FINITE_I_EXPANDING_BALL_L3_TAIL_REDUCTION_20260812.md",
+    "RAKL_math#286",
+    "Albritton-Barker arXiv:1811.00502"
+  ],
+  "timestamp": "2026-08-12T04:15:00+00:00",
+  "cost": 6.0,
+  "storage_admission": "PROPOSAL_SHADOW_STORED",
+  "artifact_hash": "6ca1e7e28e78ab805fd244ba4cddf563f80b13531e0de2d87c32edcde26bb4a5",
+  "artifact_hash_note": "computed with current RAKL v3 episode_content_bytes field set, excluding artifact_hash itself"
+}
