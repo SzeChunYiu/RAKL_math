@@ -1,0 +1,33 @@
+schema_version: bsd-r15-kummer-sha-dag-delta-v1
+cycle_id: BSD-A1A2-KUMMER-SHA-EXACT-RANK-20260812-R15
+root_state: OPEN_NO_SOLUTION_CERTIFICATE
+authority: SOURCE_BOUND_RETROSPECTIVE_HAND_LEMMA
+parent_atom: BSD-A1a2-EXACT-SELMER-DIMENSION-KURIHARA-ORDER-BRIDGE
+closed_scoped_node:
+  id: BSD-A1a2-SELMER-CORANK-TWO-TO-RANK-TWO-EXACT-CONDITIONAL-CRITERION
+  statement: >-
+    For the usual p-infinity Selmer group, corank Sel=2 gives rank E(Q)=2
+    if and only if Sha(E/Q)[p-infinity] has corank zero; in the cofinitely
+    generated scope this is equivalent to p-primary Sha finiteness.
+  proof_pointer: 00_sources/BSD_A1a2_R15_KUMMER_SHA_EXACT_RANK_RESULT_20260812.json
+  state: SOURCE_BOUND_HAND_LEMMA
+open_children:
+  - id: BSD-A1a3-COMPLEX-RANK-TWO-TO-P-PRIMARY-SHA-FINITENESS-OR-INDEPENDENT-MW-RANK-TWO
+    statement: >-
+      After any valid complex-order-to-exact-Selmer-corank-two bridge, prove
+      p-primary Sha finiteness or produce two independent rational points
+      without importing BSD-strength arithmetic information.
+    state: OPEN
+  - id: BSD-A1a2-COMPLEX-TAYLOR-ORDER-TO-KURIHARA-ORDER
+    statement: >-
+      Prove the rank-two complex-to-discrete order calibration currently
+      identified with the weight-two Kim-Pollack Conjecture 1.6 boundary.
+    state: OPEN
+separate_root_obligations:
+  - exact finite Sha order
+  - Neron-Tate regulator
+  - Tamagawa and local factors
+  - torsion denominator
+  - real period
+  - complex leading coefficient
+root_promotion: FORBIDDEN_NO_ROOT_CERTIFICATE
