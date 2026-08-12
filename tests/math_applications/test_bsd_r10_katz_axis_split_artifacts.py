@@ -60,6 +60,12 @@ def test_bsd_r10_lineage_metrics_and_query_count_are_consistent():
     assert fl["diagnosis_lineage"] == dg["diagnosis_id"]
     assert ls["authority"].startswith("CANDIDATE_PROPOSAL_ONLY")
     assert fl["failure_id"] not in ep["episode_id"]
+    assert fl["exact_failed_implication"].startswith("ord_{s=1} L(E,s)=2")
+    assert len(fl["competing_mathematical_causes"]) == 4
+    assert fl["selected_bounded_diagnosis"].startswith("SOURCE_DOES_NOT_LICENSE")
+    assert "same-E/Q theorem" in fl["repair_obligation"]
+    assert ls["lesson_kind"].startswith("MATHEMATICAL_RESEARCH")
+    assert ls["mathematical_credit"].startswith("ZERO_UNTIL")
     assert met["residual_after"] == ep["residual_signature"] == RESIDUALS
     assert met["resource_proxies"]["primary_literature_search_queries_observed"] == len(src["bounded_current_literature_search"]["queries"]) == 3
     assert all(value == 0 for value in met["retained_semantic_novelty"].values())

@@ -9,5 +9,30 @@
   "root_cause": "Existing FM-BSD-ARITHMETIC-PREMISE-REIMPORT warning: missing source-backed differential/order-preserving complex-to-p-adic transition; cause is bounded to the failed inference and is not a theorem-nonexistence claim.",
   "reusable_obstruction_or_lesson_status": "NO_NEW_PROTECTED_OBSTRUCTION; existing A1a2 and FM-BSD premise-reimport family reused",
   "recorded_at_utc": "2026-08-12T03:10:00Z",
-  "mathematical_credit": "ZERO_NEW_MATHEMATICAL_CREDIT"
+  "mathematical_credit": "ZERO_NEW_MATHEMATICAL_CREDIT",
+  "exact_failed_implication": "ord_{s=1} L(E,s)=2 for the same CM elliptic curve E/Q -> ord_{s=1} L_p(s)=2 (and/or ord_{s=1} L_p^*(s)=1) merely because Katz L_p interpolates related critical Hecke L-values.",
+  "competing_mathematical_causes": [
+    {
+      "cause": "COORDINATE_TRANSITION_UNPROVED",
+      "status": "SUPPORTED_AS_SOURCE_AUDIT_DIAGNOSIS_ONLY",
+      "detail": "The displayed Katz interpolation theorem is a value formula on a critical character region and supplies no differential/order-preserving comparison to the complex s-axis."
+    },
+    {
+      "cause": "EULER_LOCAL_OR_EXCEPTIONAL_ZERO_CORRECTIONS_CHANGE_ORDER",
+      "status": "UNRESOLVED",
+      "detail": "A valid comparison could require explicit removal/accounting of local Euler or exceptional-zero factors."
+    },
+    {
+      "cause": "PADIC_HEIGHT_OR_REGULATOR_DEGENERACY",
+      "status": "UNRESOLVED",
+      "detail": "Remark 1.3.1 ties equality of predicted p-adic orders to nondegeneracy conditions not supplied by exact complex rank two."
+    },
+    {
+      "cause": "FINITE_SHA_OR_TRANSVERSE_LOCALIZATION_FAILURE",
+      "status": "UNRESOLVED_FOR_TRANSVERSE_GATE",
+      "detail": "The sufficient transverse package includes finite p-primary Sha and ord L_p^*=1; neither follows here from complex rank two."
+    }
+  ],
+  "selected_bounded_diagnosis": "SOURCE_DOES_NOT_LICENSE_THE_IMPLICATION. This diagnoses the failed route, not the true arithmetic reason any particular complex and p-adic orders might differ.",
+  "repair_obligation": "Provide a same-E/Q theorem with an explicit map between the exact complex s-germ and the chosen Katz p-adic character germ that proves preservation/correction of vanishing order, audits Euler/local/exceptional-zero factors, and derives rather than assumes every p-adic height, regulator, Sha, Selmer-rank, main-conjecture, and localization premise."
 }

@@ -1,11 +1,36 @@
 {
   "lesson_id": "L-BSD-A1A1-R10-SPLIT-DIMENSION-FROM-TRANSVERSE-LOCALIZATION-CANDIDATE",
   "authority": "CANDIDATE_PROPOSAL_ONLY_NOT_CANONICAL_LEARNING",
-  "supporting_episode_ids": ["EP-BSD-A1A1-R10-KATZ-AXIS-SPLIT-20260812"],
-  "trigger_signature": ["downstream theorem conclusion bundles rank/dimension and nonzero local detector","entry hypotheses include multiple p-adic order/Sha coordinates"],
-  "action": "decompose the theorem proof by which hypothesis discharges which target conjunct before searching an upstream comparison; separately type the coordinate axis and differential invariant that must be transported",
-  "expected_effects": ["avoid requiring finite Sha for a dimension-only target when the displayed proof does not use it there","avoid treating interpolation of values as derivative/order transport","narrow falsifiers for the next cycle"],
-  "boundaries": ["proposal-only","special CM cell","does not imply a complex-to-p-adic comparison exists","does not close full BSD gluing"],
+  "supporting_episode_ids": [
+    "EP-BSD-A1A1-R10-KATZ-AXIS-SPLIT-20260812"
+  ],
+  "trigger_signature": [
+    "downstream theorem conclusion bundles rank/dimension and nonzero local detector",
+    "entry hypotheses include multiple p-adic order/Sha coordinates"
+  ],
+  "action": "For an arithmetic theorem whose conclusion bundles Selmer dimension and transverse localization, audit the displayed proof by target conjunct without claiming hypothesis deletion; then require a same-object differential/order-preserving theorem, including Euler/local/exceptional-zero corrections, before transporting vanishing order between complex and p-adic coordinates.",
+  "expected_effects": [
+    "avoid requiring finite Sha for a dimension-only target when the displayed proof does not use it there",
+    "avoid treating interpolation of values as derivative/order transport",
+    "narrow falsifiers for the next cycle"
+  ],
+  "boundaries": [
+    "proposal-only",
+    "special CM cell",
+    "does not imply a complex-to-p-adic comparison exists",
+    "does not close full BSD gluing"
+  ],
   "falsifier": "If a primary source proves a direct same-E order-preserving comparison from exact complex rank two that bypasses this decomposition, revise or supersede the lesson.",
-  "recorded_at_utc": "2026-08-12T03:10:00Z"
+  "recorded_at_utc": "2026-08-12T03:10:00Z",
+  "lesson_kind": "MATHEMATICAL_RESEARCH_DECOMPOSITION_AND_TRANSFER_LESSON",
+  "exact_failed_implication": "complex analytic order two -> exact Katz p-adic order pair by critical-value interpolation alone",
+  "competing_cause_checklist": [
+    "coordinate transition absent",
+    "Euler/local/exceptional-zero correction",
+    "p-adic height/regulator degeneracy",
+    "finite-Sha/transverse-localization premise"
+  ],
+  "scope": "special CM/good-ordinary/split-p Castella Theorem-B/C cell; proposal-only search guidance; no weakened lemma and no generic BSD transfer",
+  "validation_obligation": "A future success must prove the exact same-E/Q complex-to-Katz germ comparison and discharge every arithmetic premise without premise reimport; a future failure must distinguish the competing mathematical causes rather than naming source insufficiency as the arithmetic cause.",
+  "mathematical_credit": "ZERO_UNTIL_TARGET_SPECIFIC_VALIDATION; CI, schemas, hashes, and chronology contribute no mathematical credit."
 }
