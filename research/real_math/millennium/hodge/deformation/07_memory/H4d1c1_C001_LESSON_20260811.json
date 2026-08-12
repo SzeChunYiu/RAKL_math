@@ -1,0 +1,46 @@
+{
+  "lesson_id": "L-H4D1C1-COMPLETION-EFFECTIVITY-BEFORE-DESCENT-v1",
+  "kind": "REPRESENTATION",
+  "trigger_signature": [
+    "deformation route carries a generic 'algebraization' residual",
+    "candidate witness is already a compatible closed-subscheme tower over a complete Noetherian local base",
+    "special-fibre support is proper"
+  ],
+  "context_scope": [
+    "formal algebraic-cycle/witness deformation over completed local bases",
+    "fixed finite signed rational component decomposition",
+    "separated finite-type ambient scheme"
+  ],
+  "action": "Apply exact Grothendieck-effectivity first, then route separately to exact-category/class-identity checks and completion-to-neighborhood descent instead of treating all three as one algebraization problem.",
+  "expected_effects": [
+    "avoid redundant search on a stored effectivity theorem",
+    "separate local mathematical lifting failure from local-to-global gluing failure",
+    "make downstream descent assumptions explicit"
+  ],
+  "boundaries": [
+    "does not construct the compatible tower",
+    "does not imply flatness or exact Hilbert/Chow membership unless separately proved",
+    "does not prove the cycle class is alpha",
+    "does not descend from the completion to a branch neighborhood",
+    "does not address root initial algebraicity"
+  ],
+  "supporting_episode_ids": ["H4d1c1-C001-FORMAL-EFFECTIVITY-SPLIT"],
+  "contradicting_episode_ids": [],
+  "falsifier": "Produce a compatible closed-subscheme tower satisfying Stacks 30.28.1 hypotheses for which no closed-subscheme effectivity over the complete base exists, or show that the active witness representation falls outside those hypotheses.",
+  "authority": "CANDIDATE",
+  "validation_obligations": [
+    "repeat on another algebraic-cycle deformation atom with the same formal-effectivity interface",
+    "independently review the completion-versus-neighborhood distinction",
+    "do not promote until exact-category flatness/class boundaries are tested"
+  ],
+  "evidence_pointers": [
+    "H4d1c1-C001-FORMAL-EFFECTIVITY-SPLIT",
+    "https://stacks.math.columbia.edu/tag/0898",
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1c1_FORMAL_EFFECTIVITY_SPLIT_20260811.md"
+  ],
+  "parent_lesson_id": null,
+  "authority_attestation_id": null,
+  "authority_subject_hash": null,
+  "authority_evidence_packet_hash": null,
+  "artifact_hash": "09aa2215cfd729ab7145e2cd0ad7b4e72c47c61f9c3da28ee13bd4d689d94a04"
+}

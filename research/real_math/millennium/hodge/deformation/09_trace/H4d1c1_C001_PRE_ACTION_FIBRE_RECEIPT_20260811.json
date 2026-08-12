@@ -1,0 +1,30 @@
+{
+  "schema_version": "pre-action-fibre-receipt-v1",
+  "receipt_id": "H4d1c1-C001-PRE-ACTION-FIBRE",
+  "framework_repository": "SzeChunYiu/RAKL",
+  "framework_commit": "c38f2e2e5248feae28e9ff586ff8d188309efd14",
+  "application_repository": "SzeChunYiu/RAKL_math",
+  "application_commit": "a43c402872a0c9ec69a59551fe4abab1e0fc5e78",
+  "task_id": "RATIONAL-HODGE-DEFORMATION-VERIFIED-DISCOVERY",
+  "atom_id": "H4d1c1-FORMAL-EFFECTIVITY-SPLIT",
+  "context_hash": "d6acff4efd897f643cb8f859d9d257d532bcdffe42bdb31a8479af273189c7f0",
+  "fibre_snapshot_hash": "e7e63e8a742274261b06fd6188655e57144c423227cd20ab85cc01cce179eb5f",
+  "operator_ids": ["OP-H4D1C1-GROTHENDIECK-FORMAL-EFFECTIVITY-TRANSFER-AUDIT", "OP-H4D1C1-COMPLETION-DESCENT-DIFFERENCE-WITNESS"],
+  "selected_retrievals": [
+    {"retrieval_id":"H4d1b-C001-FIRST-ORDER-TANGENT-EQUIVALENCE","authority":"CANONICAL","payload_hash":"8925f83f6f0a7f2536b26408569c178147dd47f2b5e830b18747fb7d17262396"},
+    {"retrieval_id":"F-H4D1B-DIRECT-VANISHING-NO-COMPLEXITY-REDUCTION","authority":"CANONICAL","payload_hash":"f662b7d8088219f9a7f482bde78ff5118ddd89cda59a8d004ec8fc0026bd4bc6"},
+    {"retrieval_id":"proposal-shadow:PR#119:H4d1d-REDUCED-BRANCH-PROPER-WITNESS-DOMINATION","authority":"PENDING","payload_hash":"5547e7a7313505ce905c58f0f1fda503f1fd8f19ffc5baef0f27a3a21e98a3af"},
+    {"retrieval_id":"H4d1c1-SOURCE-PACKET-20260811","authority":"NONCANONICAL","payload_hash":"1559c41877c8067e765305fc73e37aab112910f8e4d8f4acd160b9cc60ad98d5"}
+  ],
+  "rejected_retrievals": [
+    {"retrieval_id":"F-H4D1A-SAME-DETECTOR-BRANCH-NOGO","rejection_reason":"retrieved as saturation history but active atom has no detector-faithfulness step"},
+    {"retrieval_id":"KLOOSTERMAN-2104.14845-TANGENT-CONTROL","rejection_reason":"special-family first-order tangent geometry is disanalogous to all-order formal effectivity"},
+    {"retrieval_id":"NISHINOU-2009.01651-SEMIREGULAR-DIVISOR-CONTROL","rejection_reason":"semiregular divisor obstruction control does not certify completion effectivity"}
+  ],
+  "predeclared_discriminator": "For the exact fixed signed closed-subscheme witness representation, test whether a compatible cartesian tower over all A/m^n with proper special fibre satisfies the hypotheses of Stacks Project Lemma 30.28.1 componentwise. Then adversarially test whether the same conclusion survives if compatibility, coefficient indexing, exact-category flatness/class identity, or completion-to-neighborhood descent is removed.",
+  "allowed_outcome_branches": ["SUCCESS", "PARTIAL_SUCCESS", "FAILURE", "BLOCKED", "UNKNOWN"],
+  "frozen_at_utc": "2026-08-11T18:34:00Z",
+  "sequence_index": 1,
+  "receipt_canonical_sha256": "e37684540e5d288191ea9d237c5918745c63c9e0523336bd3a878f81e41a8c3f",
+  "authority": "PROPOSAL_SHADOW_NO_PROOF_OR_PROMOTION_AUTHORITY"
+}

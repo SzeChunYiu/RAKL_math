@@ -1,0 +1,30 @@
+{
+  "diagnosis_id": "D-H4D1C1-ALGEBRAIZATION-RESIDUAL-UNDER-TYPED",
+  "supporting_episode_id": "H4d1c1-C001-FORMAL-EFFECTIVITY-SPLIT",
+  "atom_id": "H4d1c1-FORMAL-EFFECTIVITY-SPLIT",
+  "competing_diagnoses": [
+    "formal witness algebraization itself remains a hard independent Hodge obstruction even after an all-order compatible closed-subscheme tower exists",
+    "the residual is representation-dependent: closed-subscheme effectivity over a completion is standard once the tower is compatible, while category/class identity and descent remain separate"
+  ],
+  "selected_diagnosis": "The application residual named 'algebraization' was under-typed. For fixed componentwise compatible closed-subscheme towers with proper special fibre, effectivity over the completed local branch is supplied by Grothendieck existence. The unsolved obligations are tower construction, exact-category/class identity, and completion-to-neighborhood descent.",
+  "diagnosis_status": "VERIFIED_SCOPED_REPRESENTATION_TRANSFER",
+  "failure_category": {
+    "local_mathematical": "OPEN: construct compatible all-order exact witness tower",
+    "retrieval": "RESOLVED_LOCALLY: exact Grothendieck-existence source located",
+    "decomposition": "PARTIAL_FAILURE_REPAIRED: algebraization residual split into effectivity/category/descent",
+    "representation": "PARTIAL_FAILURE_REPAIRED: completion effectivity distinguished from neighborhood descent",
+    "gluing": "OPEN: completion-to-neighborhood descent and branch/global continuation",
+    "verification": "PASS_SCOPED: source theorem and hypothesis match checked",
+    "tooling": "NO_MATHEMATICAL_EFFECT",
+    "meta_policy": "PASS: proposal/shadow only; no promotion"
+  },
+  "difference_witness": {
+    "same_context": ["same smooth-projective family", "same fixed rational signed central witness", "same Hodge branch"],
+    "changed_coordinate": "replace undifferentiated algebraization by (i) compatible tower effectivity over completed local ring, (ii) exact-category/class identity, (iii) descent to actual branch neighborhood",
+    "why_material": "Grothendieck existence closes only (i); treating (i)-(iii) as one residual wastes routing and risks an invalid local-to-global inference."
+  },
+  "novelty_class": "TRANSFER",
+  "proof_novelty": "NONE",
+  "timestamp": "2026-08-11T18:38:00Z",
+  "artifact_hash": "sha256:4b2f71addd7a67019fe1adfacc03fc02624eb22c9dd278816ac7feb64005dcb4"
+}

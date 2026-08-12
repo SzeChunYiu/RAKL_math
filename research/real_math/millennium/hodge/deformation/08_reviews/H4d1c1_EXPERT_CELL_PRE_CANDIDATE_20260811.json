@@ -1,0 +1,17 @@
+{
+  "atom_id": "H4d1c1-FORMAL-EFFECTIVITY-SPLIT",
+  "context_hash": "sha256:d6acff4efd897f643cb8f859d9d257d532bcdffe42bdb31a8479af273189c7f0",
+  "review_kind": "SAME_CONTEXT_EXPERT_CELL_PRE_CANDIDATE",
+  "independence_authority": "NONE",
+  "roles": [
+    {"role":"Hodge/VHS lead","background":"polarized VHS, Hodge loci, variational Hodge","delegated_check":"Verify exact rational/smooth-projective scope, algebraic Hodge-branch model, and that formal effectivity does not imply class identity or initial algebraicity.","finding":"Scope is coherent if the completed local ring is taken from an algebraic Hodge-locus branch; CDK supports algebraicity of the Hodge locus. Class identity remains separate."},
+    {"role":"Cycle-moduli lead","background":"Hilbert/Chow schemes, algebraic cycles, relative moduli","delegated_check":"Check signed rational witness bookkeeping and whether componentwise closed-subscheme effectivity preserves the fixed coefficient vector.","finding":"A fixed finite denominator-cleared component indexing can be algebraized componentwise; component switching or a different witness category is not solved."},
+    {"role":"Deformation/obstruction lead","background":"Artin rings, formal deformation theory, obstruction towers","delegated_check":"Distinguish one lift per order from a compatible inverse system and test the exact theorem hypotheses.","finding":"Compatibility is essential. The candidate must not credit arbitrary per-order existence as a formal object."},
+    {"role":"Algebraization/descent lead","background":"Grothendieck existence, Artin approximation, formal geometry","delegated_check":"Verify what Grothendieck existence actually gives and where the completion-to-neighborhood boundary lies.","finding":"Stacks tag 0898 gives closed-subscheme effectivity over Spec(A) for compatible towers with proper special fibre. It does not by itself descend the resulting object to an open/etale neighborhood of the original branch."},
+    {"role":"Adversarial geometry lead","background":"scheme-theoretic boundary cases, properness, singular/nonreduced geometry","delegated_check":"Try hostile cases: incompatible lifts, coefficient switching, nonreduced target, completion-only points.","finding":"Each hostile case survives unless explicitly excluded; therefore the result must be a scoped transfer lemma, not variational Hodge."},
+    {"role":"Formal/metrology/novelty lead","background":"proof statement binding, RAKL authority/metrology","delegated_check":"Classify authority, local-vs-gluing failure, novelty and retained semantic axes.","finding":"No new mathematical theorem: novelty class TRANSFER/REPRESENTATION. Formal effectivity over completion is locally closed under hypotheses; descent is a distinct gluing residual. No root or independent-review authority."}
+  ],
+  "consensus": "Proceed with a counterexample-first discriminator: attempt to falsify the exact implication compatible closed-subscheme tower -> algebraic closed subscheme over the completed local base. If source theorem matches exactly, record only a source-bound transfer and split the residual; do not promote to a Hodge theorem.",
+  "frozen_at": "2026-08-11T18:31:00Z",
+  "artifact_hash": "sha256:18b6083b421179c37ae9ca76c193f61b6a3a9adcb7c862d4d7d54b8ea1dc2d96"
+}

@@ -1,0 +1,34 @@
+{
+  "parent_episode_id": "H4d1c1-C001-FORMAL-EFFECTIVITY-SPLIT",
+  "diagnosis_id": "D-H4D1C1-ALGEBRAIZATION-RESIDUAL-UNDER-TYPED",
+  "obstructions": [
+    {
+      "obstruction_id": "H4d1c2-ALL-ORDER-EXACT-WITNESS-TOWER",
+      "category": "LOCAL_MATHEMATICAL_FAILURE",
+      "statement": "Construct a single compatible all-Artin-order tower for the fixed denominator-cleared signed rational witness in the exact witness category, preserving the intended class/interface; independent per-order lifts do not suffice.",
+      "falsifier": "Reject any purported solution consisting only of first-order tangent surjectivity, obstruction vanishing without compatibility, or separately chosen n-th order lifts.",
+      "authority": "OPEN_RESIDUAL_ONLY"
+    },
+    {
+      "obstruction_id": "H4d1c3-COMPLETION-TO-BRANCH-DESCENT",
+      "category": "LOCAL_TO_GLOBAL_GLUING_FAILURE",
+      "statement": "Given an effective exact witness over the completed local Hodge branch, obtain a source-bound descent/spread to an actual henselian/etale/Zariski branch neighborhood with coefficient, component and class identity preserved.",
+      "falsifier": "Reject any argument that treats an object over Spec(completed local ring) as already giving witnesses on nearby complex points of the original branch.",
+      "authority": "OPEN_RESIDUAL_ONLY"
+    },
+    {
+      "obstruction_id": "H4d1c4-EXACT-CATEGORY-AND-CLASS-IDENTITY",
+      "category": "REPRESENTATION_INTERFACE_FAILURE",
+      "statement": "Verify that the algebraized componentwise closed subschemes satisfy the exact Hilbert/Chow flatness/cycle interface and that the resulting signed rational cycle represents the prescribed flat class alpha.",
+      "falsifier": "Reject fixed coefficient bookkeeping alone as a proof of Gauss-Manin class identity or flat Hilbert membership.",
+      "authority": "OPEN_RESIDUAL_ONLY"
+    }
+  ],
+  "closed_scoped_obligation": {
+    "id": "H4d1c1-FORMAL-CLOSED-SUBSCHEME-EFFECTIVITY-OVER-COMPLETION",
+    "status": "CONDITIONALLY_CLOSED_BY_SOURCE_TRANSFER",
+    "scope": "only after the compatible closed-subscheme tower and proper special fibre are supplied; no descent or root authority"
+  },
+  "timestamp": "2026-08-11T18:38:30Z",
+  "artifact_hash": "sha256:70f9a9408535fd30a21dcbe1f5bca20b94a9a81b9614d78c9b841cddb6e72ba9"
+}
