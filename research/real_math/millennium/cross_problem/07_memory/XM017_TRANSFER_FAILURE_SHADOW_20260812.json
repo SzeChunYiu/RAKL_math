@@ -1,0 +1,20 @@
+{
+  "schema": "RAKL_math.cross_problem_transfer_failure.v3.proposal_shadow",
+  "failure_id": "F-XM017-C044-YM-OVERTRANSFER-AGGREGATION-LAW",
+  "episode_pointer": "EP-XM017-PNP-YM-AGGREGATOR-DW-20260812",
+  "diagnosis_pointer": "D-XM017-AGGREGATION-LAW-NONPRESERVATION",
+  "source_atom": "O9d12a2a1b-C044",
+  "target_atom": "YM-S1a2",
+  "failure_mode": "The source max-plus-log cover multiplexing law is not preserved by the target spectral/source-completeness semantics.",
+  "broken_assumptions": [
+    "local component certificates aggregate under the same order operation in source and target",
+    "a source family seeing one decaying sector is automatically complete for the target excited state space",
+    "component separation overhead in the cover problem has a transfer-operator analogue"
+  ],
+  "falsifier": "H_exc=span(e_h,e_l), T=diag(q_h,q_l), 0<q_h<q_l<1, psi_h=e_h: psi_h correlations decay with M=-log q_h while the global spectral gap is epsilon=-log q_l<M and span{psi_h} is not dense.",
+  "observed_result": "OVERTRANSFER_FALSIFIED",
+  "safe_transfer_condition": "Only transfer a componentwise structural lesson after explicitly mapping the target aggregation law and proving any required source completeness/quotient compatibility. No PNP cover inequality is transferred into Yang-Mills.",
+  "failure_category": ["representation", "transfer"],
+  "local_to_global_gluing_note": "The target's existing YM-S1a2 same-theory OS/SZZ gluing residual remains open and is not caused or solved by this abstract falsifier.",
+  "authority": "PROPOSAL_SHADOW_ONLY_NO_IMPOSSIBILITY_OR_ROOT_AUTHORITY"
+}
