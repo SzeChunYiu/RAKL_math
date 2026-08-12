@@ -1,0 +1,137 @@
+{
+  "schema": "RAKL_math.math_context_fibre.v3_shadow",
+  "cycle_id": "YM-S1a2d-OS-MOMENT-SUPPORT-20260812-R14",
+  "authority": "PROPOSAL_SHADOW_PRE_CANDIDATE_ONLY",
+  "framework": {
+    "rakl_method_version": "3.0.0",
+    "rakl_main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "rakl_math_base_sha": "79e853ad56b5704348e194f1dc42a6943029c381",
+    "rakl_math_base_tree": "be86a2a21e70a5e271739380298d96030faaab80"
+  },
+  "root": {
+    "issue": "#5",
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "atom": {
+    "id": "YM-S1a2d",
+    "issue": "#253",
+    "signature": "YM-S1a2d-SZZ-OS-TIME-SHIFT-MOMENT-SUPPORT-GROWTH",
+    "qoi": "In the exact SZZ strong-coupling infinite-volume SU(N) Wilson measure, can centered smooth gauge-invariant positive-time cylinders be bound to exact OS time-shift matrix elements with linear temporal support separation, while separately source-binding one-step transfer positivity?"
+  },
+  "frozen_contract": {
+    "dimension": 4,
+    "group": "SU(N)",
+    "coupling": "0 < beta < 1/48",
+    "scale": "unit lattice spacing; infinite volume; fixed cutoff",
+    "measure": "SZZ mu^ym_{N,beta}",
+    "source_algebra": "centered gauge-invariant C-infinity finite-edge positive-time cylinders",
+    "target_local_coordinates": [
+      "exact OS time-shift matrix element = translated Euclidean covariance",
+      "SZZ edge-support distance grows at least n-C_F",
+      "one-sided SZZ decay usable only when same moment is nonnegative",
+      "one-step shift positivity/selfadjointness must be separately source-bound"
+    ],
+    "explicit_nonclaims": [
+      "continuum Yang-Mills existence",
+      "continuum physical mass gap",
+      "lattice-spacing-uniform physical mass",
+      "strong-to-weak coupling interpolation",
+      "RG transport",
+      "continuum OS spectral identification",
+      "root #5 closure"
+    ]
+  },
+  "memory": {
+    "retrieved": [
+      "#5",
+      "#88",
+      "#253",
+      "YM-S1A1-C001-V2-DENSE-SOURCE-COMMON-RATE-SPECTRAL-EXCLUSION",
+      "F-YM-S1A2-OS-SZZ-SAME-THEORY-GLUING-UNBOUND/PR#209",
+      "PR#225",
+      "PR#240",
+      "EP-YM-S1a2c-R13-20260812"
+    ],
+    "selected": [
+      "#5",
+      "#88",
+      "#253",
+      "YM-S1A1-C001-V2-DENSE-SOURCE-COMMON-RATE-SPECTRAL-EXCLUSION",
+      "F-YM-S1A2-OS-SZZ-SAME-THEORY-GLUING-UNBOUND/PR#209",
+      "PR#225",
+      "PR#240"
+    ],
+    "rejected": [
+      "R9-AF-universality-chain route",
+      "R10-irrelevant-coordinate-normal-form route",
+      "YM-E2a1-RG-defect-margin route"
+    ],
+    "missed": "CANNOT_MEASURE — no exhaustive governed cross-Millennium memory coverage certificate",
+    "cross_millennium_query": "NOT_INVOKED — same-context exact failure/success memory already isolates the active interface; no structural cross-problem lift is needed"
+  },
+  "prior_experience_effect": {
+    "pre_memory_pre_gate_preference": "compose SZZ exponential covariance with the existing dense-source spectral lemma to seek a fixed-cutoff gap",
+    "changed_route": "yes",
+    "reason": "PR#209 and the C001 DifferenceWitness force exact same-theory moment/support and transfer-positivity typing before any spectral handoff; PR#240 only closes same-measure reflection positivity and explicitly leaves transfer moments open",
+    "retrieved_but_rejected_reason": "RG/AF episodes attack downstream coupling/continuum transport, not the fixed-cutoff OS/SZZ interface, so they are not admissible substitutes for this atom"
+  },
+  "semantic_shortcut_audit": {
+    "SEARCH": "same-context exact memory found C001-v2, PR#209, PR#225, PR#240; no cross-domain theorem required",
+    "JUMP": "conditional abstract jump C001-v2 maps common nonnegative transfer moments plus dense source class to spectral exclusion",
+    "GLUE": "not yet closed: exact infinite-volume one-step OS shift positivity and convention-correct moment/support binding are active obligations",
+    "LIFT": "FORBIDDEN — no coverage receipt and GLUE is not closed"
+  },
+  "primary_source_targets": [
+    "Shen-Zhu-Zhu arXiv:2204.12737 current manuscript dated 2026-03-22",
+    "Luescher CMP 54 (1977), DOI 10.1007/BF01614090",
+    "Osterwalder-Seiler Ann. Phys. 110 (1978), DOI 10.1016/0003-4916(78)90039-8",
+    "Menotti-Pelissetto CMP 113 (1987), DOI 10.1007/BF01221251"
+  ],
+  "cheap_falsifiers": [
+    "the OS shift identity uses a reflection/translation convention inconsistent with the source support geometry",
+    "the shifted/reflected supports fail disjointness or only have sublinear distance growth",
+    "SZZ supplies only a one-sided covariance estimate while the target matrix element can have either sign",
+    "one-step shift fails to descend to the OS null quotient",
+    "reflection positivity available only for a plane insufficient to prove one-step transfer positivity",
+    "finite-volume positivity is used without a valid infinite-volume same-operator passage"
+  ],
+  "same_context_expert_cell": [
+    {
+      "role": "constructive lattice gauge / OS lead",
+      "background": "reflection-positive Euclidean lattice gauge measures and OS reconstruction",
+      "task": "type the exact measure, reflection planes, quotient and time-shift"
+    },
+    {
+      "role": "transfer-matrix lead",
+      "background": "Wilson lattice transfer matrices and Hamiltonian reconstruction",
+      "task": "separate site/link RP and one-step positivity/selfadjointness"
+    },
+    {
+      "role": "spectral analyst",
+      "background": "positive self-adjoint contractions and spectral measures",
+      "task": "audit exact hypotheses needed by C001-v2"
+    },
+    {
+      "role": "stochastic-correlation lead",
+      "background": "strong-coupling covariance inequalities and SZZ source classes",
+      "task": "audit common exponent, prefactors, sign and support metric"
+    },
+    {
+      "role": "lattice-geometry lead",
+      "background": "finite-edge supports and Euclidean lattice metrics",
+      "task": "derive exact affine support-distance growth"
+    },
+    {
+      "role": "RG/continuum lead",
+      "background": "lattice-spacing scaling, RG transport and continuum limits",
+      "task": "prevent fixed-cutoff dimensionless decay from being promoted to a physical continuum gap"
+    },
+    {
+      "role": "adversarial provenance/v3 lead",
+      "background": "source identity, proof gates and RAKL v3 authority",
+      "task": "hostile controls, provenance, chronology and telemetry"
+    }
+  ],
+  "decision_policy": "close the moment/support coordinate by exact algebra and source geometry if possible; fail closed on one-step transfer positivity; no spectral or root promotion until all same-theory hypotheses are bound",
+  "fibre_hash": "sha256:a5d653721edaffb1358834e5c4d6f6f0bf848328ff9ffa5e86e1e9db1358bf79"
+}
