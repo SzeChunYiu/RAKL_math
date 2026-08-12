@@ -1,0 +1,67 @@
+{
+  "schema": "RAKL_math.cross_millennium_candidate.v3.proposal_shadow",
+  "cycle": "XM023",
+  "authority": "PROPOSAL_SHADOW_ONLY / NO_ROOT_AUTHORITY / NO_FRAMEWORK_AUTHORITY",
+  "atom_id": "XM023-HODGE-YM-LINEARIZATION-CONSUMER-TYPE",
+  "context_hash": "sha256:0537237a3be06b527f17cbee5f1e33b0da3d25cc7740ead0e5f88837bbde49b7",
+  "fibre_snapshot_hash": "sha256:c7f973787ca2f28630736ce02607ada116296f486ef2d2e4329f0f81c92bcae9",
+  "transfer": {
+    "source_atom": "H4d1c-f / H4d1c-C006-RAMIFICATION-PROXY-AUDIT",
+    "target_atom": "YM-S1a2h / R19",
+    "common_abstraction": "A first-order/local linear object is being used as evidence about a downstream consumer; validity depends on the exact consumer semantics, realization domain, map, norm and direction.",
+    "enabling_assumptions": [
+      "source: reduced affine/local morphism image is the consumer and ramification is admissible",
+      "target: the full Lipschitz claim and derivative/relevant restriction concern the same differentiable forward map on the same normed state space",
+      "target: relevant sector is nonempty and restriction uses the inherited norm",
+      "no scientific authority is transferred from Hodge to Yang-Mills; only a method-level discriminator is transferred"
+    ],
+    "disanalogies": [
+      "Hodge C006 concerns image/reachability: a derivative may under-report a nonlinear image under ramification.",
+      "YM R19 concerns metric contraction: if F is L-Lipschitz and Frechet differentiable, ||DF(x)||<=L, so a derivative restriction >1 is incompatible with L<1 for the same map/norm.",
+      "A Yang-Mills repair may exist by changing the contracted object, projection, norm, graph transform, or forward/backward direction; that is a different typed claim, not a ramification exception.",
+      "The Wilson source packet remains source-scoped and visually unverified at PDF level in R19; XM023 adds no source theorem claim."
+    ],
+    "predicted_principle": "TYPE_THE_CONSUMER_BEFORE_REUSING_A_LINEARIZATION_WARNING: differential rank is a lossy proxy for nonlinear image coverage, but derivative norm is a hard lower-bound falsifier for a same-map same-norm global Lipschitz constant. Overtransfer must fail unless the target consumer relation is preserved.",
+    "cheapest_falsifier": "Attempt a differentiable same-map same-norm example with global Lip(F)<1 but ||DF(x)|_E||>1. The derivative limit gives ||DF(x)h||<=Lip(F)||h|| for every h, so no such example exists. Then retain f(t)=t^2 as the positive disanalogy showing image coverage can coexist with zero differential.",
+    "DifferenceWitness": {
+      "world_A_image_consumer": {
+        "map": "f:A1_t->A1_u, u=t^2 at 0",
+        "consumer": "scheme-theoretic/reduced image coverage",
+        "observation": "full target image but df_0=0"
+      },
+      "world_B_metric_consumer": {
+        "map": "differentiable F:X->Y, same norm",
+        "consumer": "global Lipschitz contraction",
+        "observation": "Lip(F)>=||DF(x)||>=||DF(x)|_E||"
+      },
+      "changed_coordinate": "consumer_semantics plus map/norm/direction identity",
+      "verdict": "METHOD_ANALOGY_RETAINED__TARGET_AUTHORITY_OVERTRANSFER_BLOCKED"
+    }
+  },
+  "proof_control": {
+    "lemma": "If F:X->Y is L-Lipschitz between normed spaces and Frechet differentiable at x, then ||DF(x)||<=L. For any h, ||DF(x)h|| = lim_{t->0} ||F(x+th)-F(x)||/|t| <= L||h||. Hence every restriction DF(x)|_E also has operator norm <=L.",
+    "consequence": "No same-map same-norm differentiable example can satisfy global Lip(F)<1 and ||DF(x)|_E||>1.",
+    "hodge_positive_disanalogy": "For u=t^2, Q[u]->Q[t] is injective, so the affine scheme-theoretic image is all A1_u; at t=0 the cotangent map sends u mod u^2 to t^2 mod t^2=0, so df_0=0.",
+    "scope": "This proves only the transfer discriminator. It neither verifies Wilson's source hypotheses nor constructs a Yang-Mills stable manifold nor advances Hodge algebraicity."
+  },
+  "sequential_evidence_contract": {
+    "framework_surface": "rakl.epistemic_sufficiency",
+    "pre_discriminator_case": "known-answer-validated frozen proposal-only case with one blocking DISCRIMINATOR obligation; expected action RUN_DISCRIMINATOR",
+    "post_discriminator_case": "exact elementary lemma refutes the overtransfer claim; expected action COMMIT_REFUTED on that scoped claim only",
+    "scientific_authority": "NONE; module explicitly grants no scientific/target authority"
+  },
+  "outcome": "PARTIAL_SUCCESS_STRUCTURAL_FAMILY_SPLIT_OVERTRANSFER_BLOCKED",
+  "residual_before": "A superficial linearization analogy could suggest Hodge ramification weakens the Yang-Mills R19 same-map contraction collision.",
+  "residual_after": "Hodge C006 remains an image-consumer warning; it cannot excuse a same-map same-norm Lipschitz/restriction contradiction. YM still must source-bind a distinct projected/graph/backward object or norm and close regulator/OS glue; Hodge still must realize actual witness-incidence image geometry.",
+  "novelty_class": {
+    "rakl": ["stored", "compositional", "transfer", "representation"],
+    "literature": "NOT_CLAIMED",
+    "root": "NONE"
+  },
+  "primary_source_provenance": [
+    {"id":"Stacks-01R5","url":"https://stacks.math.columbia.edu/tag/01R5","checked":"2026-08-12"},
+    {"id":"Stacks-056B","url":"https://stacks.math.columbia.edu/tag/056B","checked":"2026-08-12"},
+    {"id":"Wilson-SSRN-6419219","url":"https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6419219","checked":"2026-08-12","scope":"record only; no new PDF technical claim"}
+  ],
+  "artifact_hash": "sha256:30c1ff7e654eca2b8d4498819fe3c6605e5db658603a20e91046908f1d86f910"
+}
