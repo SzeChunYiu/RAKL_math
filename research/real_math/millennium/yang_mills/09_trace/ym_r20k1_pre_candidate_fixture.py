@@ -59,6 +59,16 @@ HOOK_AT = "2026-08-12T10:29:00Z"
 DOMAIN = "Yang-Mills nonautonomous RG invariant-region analysis"
 
 BASE = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[5]
+R20_LESSON = "research/real_math/millennium/yang_mills/07_memory/YM-S1a2i_R20_MATHEMATICAL_LESSON_20260812.json"
+FAILURE_ATLAS = "research/real_math/millennium/cross_problem/07_memory/GLOBAL_MATHEMATICAL_FAILURE_CAUSE_ATLAS_BSD_R15_SUCCESSOR_20260812.json"
+TOOL_INVENTORY = "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_TOOL_INVENTORY_20260811.json"
+R20_LESSON_BLOB = "463c5a0022c78ac4d6551c225f37ae4efb103242"
+FAILURE_ATLAS_BLOB = "dbfe7d1d9f82c894bb68f1c988bbb26318c0416f"
+TOOL_INVENTORY_BLOB = "bcd83b24d5bf28134d3ec2586386cc5dbd1b46e8"
+R20_LESSON_ARTIFACT_SHA256 = "18c39a9a7ea90fede4fb3672d1e777886fea7e88e094f453bb8fada799018a73"
+FAILURE_ATLAS_ARTIFACT_SHA256 = "db809b89815e0ca6a58eaa915e531bcd52d127f5449469dd087f349763f69d11"
+TOOL_INVENTORY_RAW_SHA256 = "e392651dfa64976a1586a25fe709f37f2606914a0d3f043a5b0a2865834992f0"
 PATHS = {
     "selection": BASE / "01_frontier/YM-S1a2i_K1_CROSS_MILLENNIUM_SELECTION_20260812.json",
     "atomization": BASE / "02_problem_dag/YM-S1a2i_K1_DELTA_20260812.json",
@@ -71,6 +81,7 @@ PATHS = {
     "trace": BASE / "09_trace/YM-S1a2i_K1_PRE_CANDIDATE_TRACE_20260812.json",
     "framework_binding": BASE / "09_trace/YM-S1a2i_K1_FRAMEWORK_SUBJECT_BINDING_20260812.json",
     "pre_action": BASE / "09_trace/YM-S1a2i_K1_PRE_ACTION_RECEIPT_20260812.json",
+    "retrieval_bindings": BASE / "09_trace/YM-S1a2i_K1_RETRIEVAL_BINDINGS_REPAIR_20260812.json",
     "hook": BASE / "09_trace/YM-S1a2i_K1_PRE_SCRATCH_HOOK_RESULT_20260812.json",
     "gate": BASE / "09_trace/YM-S1a2i_K1_PRE_CANDIDATE_GATE_20260812.json",
 }
@@ -102,6 +113,97 @@ def _seal(value: dict, field: str = "artifact_hash") -> dict:
     result[field] = ""
     result[field] = _hash(result)
     return result
+
+
+def _source_binding(
+    *,
+    retrieval_id: str,
+    relative_path: str,
+    git_blob: str,
+    selected_hash_semantics: str,
+    expected_selected_sha256: str,
+) -> dict:
+    path = PROJECT_ROOT / relative_path
+    raw = path.read_bytes()
+    document = json.loads(raw)
+    raw_sha256 = hashlib.sha256(raw).hexdigest()
+    full_canonical_sha256 = _hash(document, prefix=False)
+    declared = document.get("artifact_hash")
+    recomputed_declared = None
+    if declared is not None:
+        payload = dict(document)
+        payload["artifact_hash"] = ""
+        recomputed_declared = _hash(payload)
+        if declared != recomputed_declared:
+            raise RuntimeError(f"{retrieval_id}: declared artifact hash does not recompute")
+    if selected_hash_semantics == "DECLARED_ARTIFACT_HASH_WITHOUT_SHA256_PREFIX":
+        selected = str(declared).removeprefix("sha256:")
+    elif selected_hash_semantics == "RAW_FILE_SHA256_NO_DECLARED_ARTIFACT_HASH":
+        if declared is not None:
+            raise RuntimeError(f"{retrieval_id}: raw semantics forbidden when artifact_hash exists")
+        selected = raw_sha256
+    else:
+        raise RuntimeError(f"{retrieval_id}: unknown selected hash semantics")
+    if selected != expected_selected_sha256:
+        raise RuntimeError(f"{retrieval_id}: selected payload hash drift")
+    return {
+        "retrieval_id": retrieval_id,
+        "application_commit": APPLICATION_BASE_SHA,
+        "path": relative_path,
+        "git_blob": git_blob,
+        "selected_payload_hash_semantics": selected_hash_semantics,
+        "selected_payload_sha256": selected,
+        "declared_artifact_hash": declared,
+        "recomputed_declared_artifact_hash": recomputed_declared,
+        "full_canonical_document_sha256": full_canonical_sha256,
+        "raw_file_sha256": raw_sha256,
+    }
+
+
+def build_retrieval_bindings() -> dict:
+    return _seal(
+        {
+            "schema_version": "ym-retrieval-content-binding-v1",
+            "repair_id": "YM-S1a2i-K1-PR379-RETRIEVAL-BINDING-REPAIR-20260812",
+            "atom_id": ATOM,
+            "supersedes": {
+                "merged_pr": 379,
+                "merge_sha": "cc39c7a2553c2e20aa7103652d1429675164016b",
+                "defect": "two SelectedRetrieval values used raw-file SHA256 while their JSON sources declared artifact_hash identities",
+                "candidate_or_result_accessed_before_repair": False,
+            },
+            "selected_hash_rule": (
+                "When a JSON memory artifact declares artifact_hash, SelectedRetrieval.payload_hash and the "
+                "corresponding memory snapshot hash use that declared content identity without the sha256: prefix. "
+                "Raw and full-canonical hashes remain separate byte/document checks."
+            ),
+            "bindings": [
+                _source_binding(
+                    retrieval_id="YM-R20-lesson",
+                    relative_path=R20_LESSON,
+                    git_blob=R20_LESSON_BLOB,
+                    selected_hash_semantics="DECLARED_ARTIFACT_HASH_WITHOUT_SHA256_PREFIX",
+                    expected_selected_sha256=R20_LESSON_ARTIFACT_SHA256,
+                ),
+                _source_binding(
+                    retrieval_id="global-failure-atlas",
+                    relative_path=FAILURE_ATLAS,
+                    git_blob=FAILURE_ATLAS_BLOB,
+                    selected_hash_semantics="DECLARED_ARTIFACT_HASH_WITHOUT_SHA256_PREFIX",
+                    expected_selected_sha256=FAILURE_ATLAS_ARTIFACT_SHA256,
+                ),
+                _source_binding(
+                    retrieval_id="YM-S1A1-research-tool-inventory",
+                    relative_path=TOOL_INVENTORY,
+                    git_blob=TOOL_INVENTORY_BLOB,
+                    selected_hash_semantics="RAW_FILE_SHA256_NO_DECLARED_ARTIFACT_HASH",
+                    expected_selected_sha256=TOOL_INVENTORY_RAW_SHA256,
+                ),
+            ],
+            "authority": "PRE_CANDIDATE_BINDING_REPAIR_ONLY_NO_MATHEMATICAL_RESULT_CREDIT",
+            "artifact_hash": "",
+        }
+    )
 
 
 def build_selection() -> dict:
@@ -204,8 +306,8 @@ def build_memory(context: MathContextFiber) -> ResearchMemoryReview:
     review = ResearchMemoryReview(
         target_atom_id=ATOM,
         target_context_hash=context.packet_hash,
-        tool_inventory_snapshot_hash="sha256:e392651dfa64976a1586a25fe709f37f2606914a0d3f043a5b0a2865834992f0",
-        failure_lattice_snapshot_hash="sha256:395608d8decec9643c6226d16b59538b0c41eec9c090f538815f7794d16d7249",
+        tool_inventory_snapshot_hash="sha256:" + TOOL_INVENTORY_RAW_SHA256,
+        failure_lattice_snapshot_hash="sha256:" + FAILURE_ATLAS_ARTIFACT_SHA256,
         tool_query_status=MemoryQueryStatus.NO_RELEVANT_MATCH,
         failure_query_status=MemoryQueryStatus.MATCHES_FOUND,
         candidate_method_families=("small invariant-region inequality", "stable-coordinate margin isolation", "full hyperbolic graph transform"),
@@ -219,9 +321,10 @@ def build_memory(context: MathContextFiber) -> ResearchMemoryReview:
         ),
         unresolved_warnings=("Uniformity in k is load-bearing.", "No result may be extrapolated to lambda, base inversion, OS reconstruction or the root."),
         evidence_pointers=(
-            "research/real_math/millennium/yang_mills/07_memory/YM-S1A1_RESEARCH_TOOL_INVENTORY_20260811.json",
-            "research/real_math/millennium/cross_problem/07_memory/GLOBAL_MATHEMATICAL_FAILURE_CAUSE_ATLAS_BSD_R15_SUCCESSOR_20260812.json",
-            "research/real_math/millennium/yang_mills/07_memory/YM-S1a2i_R20_MATHEMATICAL_LESSON_20260812.json",
+            TOOL_INVENTORY,
+            FAILURE_ATLAS,
+            R20_LESSON,
+            "research/real_math/millennium/yang_mills/09_trace/YM-S1a2i_K1_RETRIEVAL_BINDINGS_REPAIR_20260812.json",
         ),
         artifact_hash="",
     )
@@ -441,8 +544,8 @@ def build_pre_action(context: MathContextFiber) -> PreActionFibreReceipt:
         operator_ids=("SOURCE_SCOPED_SCALAR_INVARIANT_REGION_DISCRIMINATOR",),
         selected_retrievals=(
             SelectedRetrieval(f"RAKL/main@{FRAMEWORK_SHA[:8]}", RetrievalAuthority.CANONICAL, "d05e7e19bb57e43f1fbffb2ccc5bbe8745caa34f8b032fd62e32a08595fc4a89"),
-            SelectedRetrieval("YM-R20-lesson", RetrievalAuthority.CANONICAL, "69ccccf3766bd6f2cca79ea9c02dff6a524a590f9f3c50b6723030b365d0378f"),
-            SelectedRetrieval("global-failure-atlas", RetrievalAuthority.CANONICAL, "395608d8decec9643c6226d16b59538b0c41eec9c090f538815f7794d16d7249"),
+            SelectedRetrieval("YM-R20-lesson", RetrievalAuthority.CANONICAL, R20_LESSON_ARTIFACT_SHA256),
+            SelectedRetrieval("global-failure-atlas", RetrievalAuthority.CANONICAL, FAILURE_ATLAS_ARTIFACT_SHA256),
         ),
         rejected_retrievals=(
             RejectedRetrieval("Navier-Stokes-B2a1a3", "requires new PDE tail input rather than the selected cheap scalar discriminator"),
@@ -456,7 +559,7 @@ def build_pre_action(context: MathContextFiber) -> PreActionFibreReceipt:
 
 
 def build_documents():
-    plan,context,memory,tm,shortcut,expert,quantifier,trace,binding=build_plan(); pre=build_pre_action(context)
+    retrieval_bindings=build_retrieval_bindings(); plan,context,memory,tm,shortcut,expert,quantifier,trace,binding=build_plan(); pre=build_pre_action(context)
     hook = dict(run_pre_scratch_fibre_freeze_hook(
         hook_id="HOOK-YM-S1a2i-K1-20260812",
         hook_invoked_at_utc=HOOK_AT,
@@ -483,6 +586,11 @@ def build_documents():
         "operational_candidate_materialization_allowed":False,
         "release_condition":"Only after this exact packet and hook receipt are merged to public main and revalidated against live RAKL main.",
         "pre_scratch_durability":{"receipt_path":"research/real_math/millennium/yang_mills/09_trace/YM-S1a2i_K1_PRE_ACTION_RECEIPT_20260812.json","status":"BUILT_NOT_PERSISTED_PENDING_PUBLIC_MAIN_MERGE","required_acknowledgement":"A hash-matching DurablePersistenceAcknowledgement bound to the public Git blob must precede candidate exposure."},
+        "pre_candidate_binding_repair":{
+            "status":"REPAIRED_BEFORE_CANDIDATE_OR_RESULT_ACCESS",
+            "artifact_hash":retrieval_bindings["artifact_hash"],
+            "supersedes_pr379_raw_hash_ambiguity":True
+        },
         "future_material_result_contract":{
             "mathematical_credit_only":True,
             "required_fields":["attempted_mathematical_implication","exact_mathematical_result_or_failure","supported_and_competing_mathematical_causes","scope","mathematical_falsifier","repair_or_next_discriminator","proof_or_source_evidence"],
@@ -490,7 +598,7 @@ def build_documents():
             "current_status":"NO_RESULT_NO_LESSON"
         },
         "licensed_after_release":"Freeze one result-blind K-coordinate scalar discriminator only.","mathematical_credit":0,"root_state":"OPEN_NO_SOLUTION_CERTIFICATE","artifact_hash":""})
-    return {"selection":build_selection(),"atomization":atom,"context":_document(context),"memory":_document(memory),"transformation_memory":_document(tm),"expert_review":expert,"shortcut_review":_document(shortcut),"quantifier":dict(quantifier.document()),"trace":_document(trace),"framework_binding":dict(binding.document()),"pre_action":dict(pre.document()),"hook":hook,"gate":gate}
+    return {"selection":build_selection(),"atomization":atom,"context":_document(context),"memory":_document(memory),"transformation_memory":_document(tm),"expert_review":expert,"shortcut_review":_document(shortcut),"quantifier":dict(quantifier.document()),"trace":_document(trace),"framework_binding":dict(binding.document()),"pre_action":dict(pre.document()),"retrieval_bindings":retrieval_bindings,"hook":hook,"gate":gate}
 
 
 def write_documents():
