@@ -1,0 +1,90 @@
+{
+  "audit_id": "BSD-A1A1-R9-CM-KATZ-ORDER-SOURCE-AUDIT-20260812",
+  "authority": "PROPOSAL_SHADOW_SOURCE_AUDIT_ONLY",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "active_atom": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "nested_obstruction": "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE",
+  "fibre_snapshot_hash": "sha256:1169325f3cc17acc2094488809bc13ebba796a54aa51bcbc132690c98e1987c9",
+  "primary_source": {
+    "authors": ["Francesc Castella"],
+    "title": "Generalised Kato classes on CM elliptic curves of rank 2",
+    "arxiv_id": "2204.09608",
+    "arxiv_url": "https://arxiv.org/abs/2204.09608",
+    "pdf_url": "https://arxiv.org/pdf/2204.09608",
+    "fetched_pdf_version_marker": "arXiv:2204.09608v3 [math.NT] 13 Feb 2026",
+    "paper_date_in_fetched_pdf": "2026-02-17",
+    "accessed_utc": "2026-08-12T01:57:16Z",
+    "version_note": "The current arXiv PDF fetched in this cycle identifies itself as v3 dated 13 Feb 2026 and the manuscript header says 17 Feb 2026. Technical claims below were checked against the fetched primary PDF; no secondary source is used for theorem authority.",
+    "selectors": ["Theorem B, pp. 4-5", "Theorem C, p. 6 in the PDF page numbering shown by the viewer / manuscript page 6", "Remark 1.3.1", "Theorem 6.3.1"]
+  },
+  "source_scope": {
+    "curve": "CM elliptic curve E/Q",
+    "prime": "p >= 5 of good ordinary reduction, split in the CM imaginary quadratic field K",
+    "analytic_entry_in_theorem_B": "L(E,s) vanishes to positive even order at s=1, together with the stated auxiliary Hecke-character hypotheses",
+    "additional_theorem_C_hypotheses": [
+      "Sha(E/Q)[p^infinity] is finite",
+      "ord_{s=1} L_p(s) = 2",
+      "ord_{s=1} L_p^*(s) = 1"
+    ],
+    "not_generic_BSD_scope": true
+  },
+  "verified_claims": [
+    {
+      "claim_id": "CASTELLA-B-R9-1",
+      "selector": "Theorem B",
+      "claim": "For the stated CM/good-ordinary setup with positive even complex vanishing, nonzero generalized Kato class kappa_p implies dim_Qp Sel(Q,V_pE)=2; conversely, under dim Sel=2, kappa_p is nonzero iff the restriction/localization map res_p to E(Q_p) completed tensor Q_p is nonzero.",
+      "direction_audited": true
+    },
+    {
+      "claim_id": "CASTELLA-B-R9-2",
+      "selector": "Introduction immediately before Theorem C",
+      "claim": "Whenever nonzero, kappa_p spans ker(res_p); therefore it cannot itself supply the transverse nonzero localization direction.",
+      "direction_audited": true
+    },
+    {
+      "claim_id": "CASTELLA-C-R9-1",
+      "selector": "Theorem C",
+      "claim": "Under Theorem B hypotheses, finite Sha(E/Q)[p^infinity], ord L_p=2 and ord L_p^*=1, Sel(Q,V_pE) is two-dimensional with explicit basis Q_p kappa_p direct-sum Q_p x_p^(2), where x_p^(2) is a derived elliptic unit.",
+      "direction_audited": true
+    },
+    {
+      "claim_id": "CASTELLA-C-R9-2",
+      "selector": "Proof of Theorem C",
+      "claim": "The first Katz p-adic order condition yields Selmer dimension exactly two through an upper bound from the CM Iwasawa main-conjecture/Perrin-Riou input and a lower bound from Coates-Wiles plus p-parity; the second order condition together with the theorem hypotheses supplies res_p(x_p^(2)) != 0.",
+      "direction_audited": true
+    },
+    {
+      "claim_id": "CASTELLA-R13-R9-1",
+      "selector": "Remark 1.3.1",
+      "claim": "The p-adic BSD formulations predict equivalence between the exact Katz p-adic order conditions and Selmer dimension two; the reverse inequalities from Selmer dimension two become equalities only under stated p-adic-height/nondegeneracy and, for L_p^*, finiteness/nonvanishing conditions.",
+      "direction_audited": true
+    }
+  ],
+  "bounded_route_cell": {
+    "proved_downstream_cell": "{CM E/Q, good-ordinary split p, Theorem B character hypotheses, finite Sha[p^infinity], ord L_p=2, ord L_p^*=1} => {dim Sel=2 plus explicit transverse derived elliptic-unit basis direction}",
+    "missing_upstream_arrow": "exact ord_{s=1} L(E,s)=2 for the same E/Q => the exact Katz p-adic order pair, finite p-primary Sha, and every required local/character hypothesis without importing root-strength arithmetic information",
+    "root_facing_status": "MISSING",
+    "generic_scope_status": "SPECIAL_CM_CELL_ONLY",
+    "full_leading_term_status": "OPEN_SEPARATE_GLUE"
+  },
+  "falsifiers": [
+    "Treat Theorem C's Katz p-adic order hypotheses as consequences of exact complex analytic rank two without an explicit comparison theorem.",
+    "Use the p-adic BSD prediction in Remark 1.3.1 as a proved bridge.",
+    "Import p-adic height nondegeneracy, finite Sha, or nonzero p-adic regulator pairings as free consequences of the complex rank-two datum.",
+    "Promote a CM/good-ordinary result to arbitrary elliptic curves over Q.",
+    "Conflate complex s-order, Katz p-adic s-order, anticyclotomic augmentation order, or a discrete Kurihara/Kolyvagin coordinate.",
+    "Count the locally valid theorem cell as closure of the full Mordell-Weil/Sha/regulator/Tamagawa/torsion/period leading-term glue."
+  ],
+  "hypothesis_ledger": {
+    "tamagawa": "not discharged by this cell; full BSD leading-term bookkeeping remains open",
+    "torsion": "not discharged by this cell; full BSD leading-term bookkeeping remains open",
+    "regulator": "p-adic height nondegeneracy appears in converse/equality discussion and is not assumed as a complex-rank bridge",
+    "sha": "finite Sha(E/Q)[p^infinity] is an explicit additional Theorem C hypothesis, not proved here from complex analytic rank two",
+    "extra_or_trivial_zeros": "no exceptional/trivial-zero correction is silently erased; any future complex-to-p-adic order comparison must expose Euler/local corrections",
+    "coordinate_faithfulness": "complex and Katz p-adic orders remain distinct until a theorem explicitly compares them"
+  },
+  "bounded_search_outcome": "PARTIAL_SUCCESS_SCOPED_DOWNSTREAM_CELL_IDENTIFIED_NO_ROOT_CANDIDATE",
+  "literature_completeness": "NOT_CLAIMED",
+  "next_discriminator": "Search only for a source-faithful same-E/Q theorem that starts from exact complex analytic rank two and proves the required Katz p-adic order pair (with all exceptional/local factors explicit), or proves a strictly weaker sufficient input to Theorem C, without assuming Selmer/algebraic rank two, p-adic BSD, main-conjecture-equivalent root information, finite Sha at root strength, or regulator nondegeneracy.",
+  "recorded_at_utc": "2026-08-12T01:57:16Z"
+}
