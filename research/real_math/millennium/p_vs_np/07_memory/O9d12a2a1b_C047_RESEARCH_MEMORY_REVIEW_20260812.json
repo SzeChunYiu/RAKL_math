@@ -1,0 +1,43 @@
+{
+  "artifact_hash": "sha256:71582d95ff342d15b9e19089e3c35a69b92e6b43f70200711b70fca108b2d791",
+  "candidate_method_families": [
+    "prefix-preserving new-old mirror",
+    "old-new plus prefix-preserving new-old two-sided union",
+    "exact transpose with suffix on the fresh row",
+    "overlapping split or coordinate relabelling"
+  ],
+  "cross_problem_coverage_receipt_hash": "",
+  "evidence_pointers": [
+    "git:ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C046_HIGH_HALF_SEPARATION_PROOF_CHECK_RESULT_20260812.json@blob:cca23988bad443f252c5be8489e6b1562b1acbb0",
+    "git:ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C045_U17_COUPLING_FAILURE_DELTA_20260812.json@blob:12a8099833c27218550855bb37614e8cfb8b1274"
+  ],
+  "failure_lattice_snapshot_hash": "gitblob:12a8099833c27218550855bb37614e8cfb8b1274+gitref:C043-first-row-split",
+  "failure_query_status": "MATCHES_FOUND",
+  "failure_reuse_notes": [
+    "C045 warns that fresh columns alone cannot couple backward; C047 materially changes row occupancy but must prove that this restores equality rather than merely a coarse half.",
+    "C043 warns that semantic multiplicity and support growth do not imply the requested collision or cover growth."
+  ],
+  "relevant_failure_ids": [
+    "F-C045-U17-PROJECTION-DISJOINT",
+    "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING"
+  ],
+  "relevant_tool_ids": [
+    "T-PNP-C046-PARTITION-INVARIANT-FEASIBILITY-FIRST"
+  ],
+  "selected_tool_ids": [
+    "T-PNP-C046-PARTITION-INVARIANT-FEASIBILITY-FIRST"
+  ],
+  "target_atom_id": "O9d12a2a1b-C047",
+  "target_context_hash": "sha256:78b2f983f0ca9ed62562d210d6426e64339308208f03bfa800ab0ff1034e6f24",
+  "tool_applicability_notes": [
+    "C046's invariant-first operation is reusable only as a search-order heuristic: after changing the quadrant, rederive the exact high-row label language and compare it with MAGIC prefixes."
+  ],
+  "tool_inventory_snapshot_hash": "gitblob:cca23988bad443f252c5be8489e6b1562b1acbb0",
+  "tool_query_status": "MATCHES_FOUND",
+  "unresolved_warnings": [
+    "No later target result has been accessed.",
+    "No conclusion about mirror or two-sided feasibility is available until a candidate is publicly frozen and checked.",
+    "Exact transpose and relabelled/split-changing variants are intentionally outside the first repair atom.",
+    "Same-context review is not independent peer review."
+  ]
+}

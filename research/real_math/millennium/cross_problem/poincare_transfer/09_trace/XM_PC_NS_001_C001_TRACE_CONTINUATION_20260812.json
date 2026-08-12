@@ -1,0 +1,129 @@
+{
+  "authority": "HASH_CHAINED_CONTINUATION / PROPOSAL_SHADOW_ONLY",
+  "entries": [
+    {
+      "action_summary": "Freeze hash-derived divergence-free Fourier triad C001 before any sign calculation.",
+      "alternatives_considered": [
+        "freeze a deterministic Fourier triad",
+        "invent a new scalar functional",
+        "reuse Type-II signed-flux lane"
+      ],
+      "artifact_hash": "sha256:d89f0becc2b40a76583f0bb83f49fb5f6af344617d1638a0cbde7d7dc59b123e",
+      "atom_id": "XM-PC-NS-001",
+      "decision_rationale": "The parent JUMP requires the cheapest target sign test first; the deterministic field freeze avoids outcome-conditioned repair.",
+      "event_id": "XM-PC-NS-001-E09",
+      "event_type": "CANDIDATE_PROPOSED",
+      "evidence_pointers": [
+        "research/real_math/millennium/cross_problem/poincare_transfer/04_candidates/XM_PC_NS_001_C001_ENSTROPHY_FIELD_FREEZE_20260812.json"
+      ],
+      "next_steps": [
+        "derive exact enstrophy derivative without changing the field"
+      ],
+      "outputs": [
+        "candidate:XM-PC-NS-001-C001-HASH-TRIAD",
+        "freeze_commit:58948d71d63a79a9daba03333eedbd6d7e5adca7"
+      ],
+      "previous_event_hash": "sha256:0bdd5ca1dda562336287b35437ab6ccc7c526b941d4b5dc88ef05d83be33d283",
+      "residuals": [
+        "OBS-XM-PC-NS-ENSTROPHY-SIGN unresolved"
+      ],
+      "state_summary": "Parent Gate A-D packet passes and licenses one exact 3D NS enstrophy-sign falsifier; target authority remains NONE.",
+      "timestamp": "2026-08-12T03:11:13Z",
+      "uncertainties": [
+        "candidate may have zero or wrong-sign stretching coefficient"
+      ]
+    },
+    {
+      "action_summary": "Run exact Fourier resonance and Parseval audits.",
+      "alternatives_considered": [],
+      "artifact_hash": "sha256:964ee3c11d8e0268379fbe2ec58c24a906eb8ba440d5f614e2056ded4dbe8462",
+      "atom_id": "XM-PC-NS-001",
+      "decision_rationale": "Exact arithmetic is cheaper and stronger than numerical sampling for this finite trigonometric polynomial.",
+      "event_id": "XM-PC-NS-001-E10",
+      "event_type": "FALSIFIER_RUN",
+      "evidence_pointers": [
+        "research/real_math/millennium/cross_problem/poincare_transfer/04_candidates/XM_PC_NS_001_C001_ENSTROPHY_SIGN_RESULT_20260812.md"
+      ],
+      "next_steps": [
+        "record result and stop C001"
+      ],
+      "outputs": [
+        "mean_curl_square:122",
+        "mean_grad_curl_square:1297",
+        "stretching_coefficient:0"
+      ],
+      "previous_event_hash": "sha256:d89f0becc2b40a76583f0bb83f49fb5f6af344617d1638a0cbde7d7dc59b123e",
+      "residuals": [
+        "C001 falsifier did not fire"
+      ],
+      "state_summary": "C001 is frozen; the only allowed question is whether its exact initial enstrophy derivative is positive for some frozen A>0.",
+      "timestamp": "2026-08-12T03:13:47Z",
+      "uncertainties": [
+        "single-candidate outcome cannot establish a general sign law"
+      ]
+    },
+    {
+      "action_summary": "Record candidate-specific failure without repairing the field.",
+      "alternatives_considered": [],
+      "artifact_hash": "sha256:b66ce820e5226a67f0bad700372d2b1f755457fc6c935da7629226d12c9c0cb1",
+      "atom_id": "XM-PC-NS-001",
+      "decision_rationale": "Frozen-candidate chronology forbids post-outcome sign flipping or phase repair inside C001.",
+      "event_id": "XM-PC-NS-001-E11",
+      "event_type": "RESULT_RECORDED",
+      "evidence_pointers": [
+        "research/real_math/millennium/cross_problem/poincare_transfer/04_candidates/XM_PC_NS_001_C001_ENSTROPHY_SIGN_RESULT_20260812.md",
+        "research/real_math/millennium/cross_problem/poincare_transfer/07_memory/XM_PC_NS_001_C001_FAILURE_20260812.json"
+      ],
+      "next_steps": [
+        "derive a scoped diagnosis, then reopen PATH only"
+      ],
+      "outputs": [
+        "outcome:CANDIDATE_FAILURE_ZERO_STRETCHING_COEFFICIENT",
+        "failure:F-XM-PC-NS-001-C001-TRIAD-STRETCHING-CANCELLATION"
+      ],
+      "previous_event_hash": "sha256:964ee3c11d8e0268379fbe2ec58c24a906eb8ba440d5f614e2056ded4dbe8462",
+      "residuals": [
+        "OBS-XM-PC-NS-ENSTROPHY-SIGN remains open"
+      ],
+      "state_summary": "The exact stretching coefficient cancels and the viscous coefficient is positive.",
+      "timestamp": "2026-08-12T03:13:47Z",
+      "uncertainties": [
+        "universal enstrophy sign remains unresolved"
+      ]
+    },
+    {
+      "action_summary": "Reopen PATH for a structurally distinct fresh candidate; keep episode, diagnosis, and observed failure separate.",
+      "alternatives_considered": [],
+      "artifact_hash": "sha256:1710199e3ca47ea5eb631061684676e2caa10a3effe0df70f1621cf6ab6b00ac",
+      "atom_id": "XM-PC-NS-001",
+      "decision_rationale": "RAKL v3 forbids turning one failure into a global blacklist or missing-operator claim.",
+      "event_id": "XM-PC-NS-001-E12",
+      "event_type": "RESIDUAL_OPENED",
+      "evidence_pointers": [
+        "research/real_math/millennium/cross_problem/poincare_transfer/07_memory/XM_PC_NS_001_C001_EXPERIENCE_SHADOW_20260812.json",
+        "research/real_math/millennium/cross_problem/poincare_transfer/07_memory/XM_PC_NS_001_C001_DIAGNOSIS_20260812.json"
+      ],
+      "next_steps": [
+        "freeze a second field only after consuming F-XM-PC-NS-001-C001-TRIAD-STRETCHING-CANCELLATION as scoped warning"
+      ],
+      "outputs": [
+        "axis_reopened:PATH",
+        "reusable_obstruction:none",
+        "reusable_lesson:none"
+      ],
+      "previous_event_hash": "sha256:b66ce820e5226a67f0bad700372d2b1f755457fc6c935da7629226d12c9c0cb1",
+      "residuals": [
+        "OBS-XM-PC-NS-ENSTROPHY-SIGN unresolved",
+        "NS root OPEN_NO_SOLUTION_CERTIFICATE"
+      ],
+      "state_summary": "C001 supplies exact negative history but no reusable obstruction; the parent enstrophy-sign question is still open.",
+      "timestamp": "2026-08-12T03:13:47Z",
+      "uncertainties": [
+        "a second candidate needs a fresh continuation and memory update"
+      ]
+    }
+  ],
+  "parent_last_event_hash": "sha256:0bdd5ca1dda562336287b35437ab6ccc7c526b941d4b5dc88ef05d83be33d283",
+  "parent_trace_id": "XM-PC-NS-001-PRE-CANDIDATE-TRACE-20260812",
+  "trace_id": "XM-PC-NS-001-C001-CONTINUATION-20260812"
+}

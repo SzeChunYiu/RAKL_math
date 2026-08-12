@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "candidate_id": "XM-PC-NS-001-C001",
+  "candidate_type": "EXACT_MATHEMATICAL_TRANSFER_FALSIFIER",
+  "parent_success_episode_id": "E-PC-ENTROPY-NONCOLLAPSE-CANONICAL-SURGERY-EXTINCTION",
+  "pre_candidate_gate_receipt": "research/real_math/millennium/cross_problem/poincare_transfer/09_trace/XM_PC_NS_001_PRE_CANDIDATE_GATE_RECEIPT_20260812.json",
+  "frozen_at": "2026-08-12T10:30:00Z",
+  "target_domain": {
+    "space": "flat three-torus T^3=(R/2piZ)^3",
+    "viscosity": "nu>0",
+    "equation": "partial_t u + (u dot grad)u = -grad p + nu Delta u; div u=0",
+    "solution_scope": "unique smooth classical solution on its local existence interval from the frozen trigonometric datum"
+  },
+  "frozen_field": {
+    "amplitude": "A=100 nu",
+    "base_field": [
+      "v_1(x,y,z)=cos(y)+cos(x+y)",
+      "v_2(x,y,z)=cos(x)-cos(x+y)",
+      "v_3(x,y,z)=cos(x+y)"
+    ],
+    "initial_datum": "u_0=A v",
+    "divergence_free_obligation": "partial_x v_1+partial_y v_2+partial_z v_3=0 exactly",
+    "mean_zero": true
+  },
+  "quantity": {
+    "name": "enstrophy",
+    "definition": "E(t)=1/2 integral_T3 |omega(x,t)|^2 dx, omega=curl u",
+    "exact_initial_balance": "E'(0)=A^3 P(v)-nu A^2 D(v)",
+    "stretching_integral": "P(v)=integral_T3 curl(v) dot ((curl(v) dot grad)v) dx",
+    "dissipation_integral": "D(v)=integral_T3 |grad curl(v)|^2 dx"
+  },
+  "frozen_evaluator": {
+    "method": "exact symbolic differentiation, expansion, and trigonometric integration over [0,2pi]^3",
+    "allowed_exact_output_basis": "rational multiple of pi^3",
+    "required_checks": [
+      "divergence is identically zero",
+      "P(v) and D(v) are computed exactly",
+      "D(v)>0",
+      "the enstrophy balance is independently recomputed from omega_t=nu Delta omega+(omega dot grad)u-(u dot grad)omega",
+      "no floating-point sign decision"
+    ]
+  },
+  "preregistered_result_branches": [
+    {
+      "condition": "E'(0)>0",
+      "verdict": "POSITIVE_DERIVATIVE_REFUTES_BARE_ENSTROPHY_MONOTONICITY",
+      "authority": "exact counterexample to the proposed transfer condition only"
+    },
+    {
+      "condition": "E'(0)<=0",
+      "verdict": "FROZEN_FIELD_DOES_NOT_REFUTE_MONOTONICITY",
+      "authority": "no universal monotonicity conclusion"
+    },
+    {
+      "condition": "exact derivation or identity check fails",
+      "verdict": "CANNOT_CHECK",
+      "authority": "none"
+    }
+  ],
+  "falsifier_scope": "A positive derivative disproves the universal claim that unweighted enstrophy is nonincreasing for every smooth 3D periodic Navier-Stokes solution.",
+  "non_guarantees": [
+    "does not exclude a weighted, localized, scale-critical, or corrected Navier-Stokes monotone",
+    "does not construct a singular solution",
+    "does not establish or refute global regularity",
+    "does not transfer Ricci surgery, canonical neighborhoods, noncollapse, or finite extinction",
+    "does not establish novelty"
+  ],
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "independent_review_credit": 0,
+  "candidate_canonical_sha256": "sha256:07aec802808cf94d0ace2200460e71621a8587e6a60df8ba1fe918953cc9db3e"
+}

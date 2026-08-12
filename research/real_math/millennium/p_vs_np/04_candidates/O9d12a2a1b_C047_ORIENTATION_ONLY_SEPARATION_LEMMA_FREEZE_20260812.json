@@ -1,0 +1,101 @@
+{
+  "artifact_hash": "sha256:cf4e5758d46396acd0589f228d695b4da31b1c850a694c27ffcaf08ccc7d6dec",
+  "assumptions": [
+    "unchanged total C041 decoder: all-zero contradiction, valid MAGIC canonical form, every other word tautology",
+    "unchanged equal prefix/suffix split",
+    "prefix coordinate r is placed on the fresh row without relabelling",
+    "no complement in the new-new quadrant",
+    "n>=18, so predecessor and current prefixes expose the full eight-bit MAGIC header"
+  ],
+  "atom_id": "O9d12a2a1b-C047",
+  "candidate_id": "C047-ORIENTATION-ONLY-SEPARATION-LEMMA-v1",
+  "candidate_kind": "MATHEMATICAL_LEMMA_CANDIDATE",
+  "credit_boundary": {
+    "assurance_only_zero_credit": [
+      "Git/branch/PR chronology",
+      "CI/tests",
+      "schemas/hashes/serialization",
+      "runtime and evaluator wiring"
+    ],
+    "candidate_freeze_mathematical_result_credit": false,
+    "candidate_freeze_mathematical_saturation_credit": false,
+    "candidate_mathematical_content": "lemma/construction/assumptions/transfer conditions/falsifiers"
+  },
+  "falsifiers": [
+    "an orientation-only complement row lies outside the three frozen row classes",
+    "a non-tautological nonzero decoded word lacks the MAGIC header",
+    "1||MAGIC and MAGIC agree through the first four bits",
+    "an inherited old row has n-bit leading bit 1",
+    "the claimed family silently places suffix c rather than prefix r on the fresh row"
+  ],
+  "family_definition": {
+    "excluded_variants": [
+      "literal matrix transpose with suffix c on the fresh row",
+      "unequal or overlapping split",
+      "coordinate relabelling",
+      "decoder or MAGIC change"
+    ],
+    "inherited_block": "embed U_(n-1) unchanged in the old-old quadrant",
+    "old_new_option": "for UNSAT Dec(bin_(n-1)(r)||bin_(n-1)(c)), add (r,2^(n-1)+c)",
+    "prefix_preserving_new_old_option": "for the same decoded word, add (2^(n-1)+r,c)",
+    "seed": "the exact C041 U_2 seed",
+    "variants": [
+      "MIRROR_ONLY",
+      "TWO_SIDED_OLD_NEW_PLUS_PREFIX_MIRROR"
+    ]
+  },
+  "frozen_at": "2026-08-12T03:05:02Z",
+  "non_guarantees": [
+    "candidate is not yet proved",
+    "literal transpose, relabelling, and split-changing repairs remain open",
+    "no cover or circuit lower bound",
+    "no novelty or P-versus-NP authority",
+    "no framework promotion authority"
+  ],
+  "predicted_discriminator": {
+    "all_zero_case": "first two bits 10 versus first two MAGIC bits 11",
+    "canonical_mirror_case": "1||MAGIC begins 1111 while MAGIC begins 1110",
+    "low_inherited_case": "first bit 0 versus first MAGIC bit 1"
+  },
+  "proof_obligations": [
+    "DEFINE_ORIENTATION_ONLY_FAMILIES",
+    "EXHAUSTIVE_ROW_SUPPORT_TRICHOTOMY",
+    "DECODER_BRANCH_TO_FRESH_ROW_FORMS",
+    "BINARY_HEADER_DISJOINTNESS",
+    "MIRROR_AND_TWO_SIDED_CONCLUSION"
+  ],
+  "schema_version": "1.0.0",
+  "source_identity": {
+    "application_base_commit": "ec8a9eb5eeedaaf1d3f497a8688384256a2079e0",
+    "framework_commit": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "pre_candidate_freeze_commit": "d84e3814f1d8f355246f2bddb6982c3a1859fb6c",
+    "pre_candidate_gate": {
+      "git_blob": "0973599f68f24f4e520e2df3b3f5ec27393cffad",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C047_PRE_CANDIDATE_GATE_RECEIPT_20260812.json",
+      "raw_sha256": "9749cfb0fbbb2e8d45737b0ceae400ceb9ac5103866d5cb89b85d6a9aa49a273"
+    }
+  },
+  "statement": {
+    "canonical_current_rows": "every n-bit prefix of a current canonical length-2n word begins with MAGIC=11100101",
+    "conclusion": "the complement row projection is disjoint from the set of current canonical MAGIC n-bit prefixes",
+    "generated_row_classes": [
+      "inherited rows in [0,2^(n-1))",
+      "the all-zero fresh row with n-bit word 1 followed by n-1 zeroes",
+      "canonical fresh rows whose n-bit word begins with 1 followed by MAGIC=11100101"
+    ],
+    "quantifier": "for every integer n >= 18 and each frozen orientation-only variant",
+    "repair_consequence": "moving or copying only the prefix coordinate into the fresh-row quadrant does not repair the C046 canonical row-collision impossibility"
+  },
+  "target_access": {
+    "decoder_imported_or_executed": false,
+    "evaluator_imported_or_executed": false,
+    "finite_collision_level_selected": false,
+    "later_target_enumerated": false,
+    "later_target_result_accessed": false
+  },
+  "transfer_conditions": [
+    "the recursive quadrant clauses are exhaustive",
+    "orientation changes neither decoded word nor coordinate ordering",
+    "the target property is exact row-label collision"
+  ]
+}
