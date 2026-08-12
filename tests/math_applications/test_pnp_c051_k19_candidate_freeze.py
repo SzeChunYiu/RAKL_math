@@ -27,9 +27,12 @@ def test_candidate_document_matches_prospective_fixture() -> None:
     assert observed == module().build()
     assert observed["chronology"] == {
         "evaluator_executed": False,
-        "frozen_at": "2026-08-12T09:55:00Z",
+        "frozen_at": "2026-08-12T09:44:24Z",
+        "generic_target_result_accessed": True,
+        "quarantined_families": ["k=13"],
         "result_artifact": None,
-        "target_result_accessed": False,
+        "target_state": "K13_QUARANTINED_PROCESS_CONTAMINATION__K19_TARGET_RESULT_UNACCESSED",
+        "untouched_k19_target_result_accessed": False,
     }
     assert observed["candidate_identity"]["candidate_id"] == "C051-K19-TARGET-BLIND-SYNCHRONIZED-DISCRIMINATOR-v1"
     assert observed["candidate"]["parent_length_classification"]["claim"].endswith("v=1,m=4.")

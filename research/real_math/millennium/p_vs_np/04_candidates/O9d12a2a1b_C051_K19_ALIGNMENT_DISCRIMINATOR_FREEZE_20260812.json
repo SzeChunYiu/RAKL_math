@@ -1,5 +1,5 @@
 {
-  "artifact_hash": "sha256:5048c18d57b6da15fea9780ed007e80376565c9a601bb0a91f7e11ca783bc028",
+  "artifact_hash": "sha256:469177fafc3d3d298447cb878a566866762012f4f30eda14321a7fb5ae9a0e06",
   "atom_id": "O9d12a2a1b-C051",
   "authority": "CANDIDATE_FREEZE_ONLY_NO_EVALUATED_RESULT_NO_ROOT_AUTHORITY",
   "candidate": {
@@ -69,9 +69,14 @@
   },
   "chronology": {
     "evaluator_executed": false,
-    "frozen_at": "2026-08-12T09:55:00Z",
+    "frozen_at": "2026-08-12T09:44:24Z",
+    "generic_target_result_accessed": true,
+    "quarantined_families": [
+      "k=13"
+    ],
     "result_artifact": null,
-    "target_result_accessed": false
+    "target_state": "K13_QUARANTINED_PROCESS_CONTAMINATION__K19_TARGET_RESULT_UNACCESSED",
+    "untouched_k19_target_result_accessed": false
   },
   "mathematical_credit_boundary": {
     "credit_now": [
@@ -94,10 +99,21 @@
   "schema_version": "1.0.0",
   "source_bindings": {
     "application_base_commit": "f3275302b2198bbd15d551d57adce85c5762c013",
+    "application_pinned_framework_commit": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
     "context_packet_hash": "sha256:8a06db5b4fdfcc3a11a7284772a8c4dfd8ccf6b8583438b84ff9bbc7efc2925f",
     "evaluator_path": "research/real_math/millennium/p_vs_np/05_falsification/c051_k19_alignment_evaluator.py",
     "evaluator_raw_sha256": "sha256:0b21232a509ecd525e000840d490c4294f23ea7f053b117ff746f87fe13f72cc",
-    "framework_commit": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+    "framework_intervening_diff_assessment": {
+      "effect": "Candidate materialization remains governed by the already-passed C051 gate; the new proposal-only surfaces add no mandatory precondition to this fixed finite interface atom.",
+      "math_context_runtime_or_candidate_freeze_files_changed": false,
+      "new_relevant_surfaces": [
+        "proposal-only quantifier/scope compatibility witness, not wired into protected math gates",
+        "pre-scratch host hook, not wired into the protected math runtime"
+      ],
+      "verdict": "CURRENT_CHANGED_NO_PROTECTED_C051_GATE_SEMANTIC_CHANGE"
+    },
+    "framework_revalidated_current_main_commit": "55c688dc42352c8c254f7d370c66d999b414fc52",
+    "pre_candidate_authoritative_framework_commit": "9da0f4d331e9ae61f1309b3a006d7a3c67fa217c",
     "pre_candidate_gate_artifact_hash": "sha256:0be3205e7c7a3a88f150e4c0caae1d95284a041c8fda93a7cd2f81b7b1cf4212"
   }
 }

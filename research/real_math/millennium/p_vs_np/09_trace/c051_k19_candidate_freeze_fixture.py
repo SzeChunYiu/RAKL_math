@@ -111,16 +111,30 @@ def build() -> dict:
         "candidate": candidate_core,
         "source_bindings": {
             "application_base_commit": "f3275302b2198bbd15d551d57adce85c5762c013",
-            "framework_commit": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+            "application_pinned_framework_commit": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+            "pre_candidate_authoritative_framework_commit": "9da0f4d331e9ae61f1309b3a006d7a3c67fa217c",
+            "framework_revalidated_current_main_commit": "55c688dc42352c8c254f7d370c66d999b414fc52",
+            "framework_intervening_diff_assessment": {
+                "verdict": "CURRENT_CHANGED_NO_PROTECTED_C051_GATE_SEMANTIC_CHANGE",
+                "math_context_runtime_or_candidate_freeze_files_changed": False,
+                "new_relevant_surfaces": [
+                    "proposal-only quantifier/scope compatibility witness, not wired into protected math gates",
+                    "pre-scratch host hook, not wired into the protected math runtime",
+                ],
+                "effect": "Candidate materialization remains governed by the already-passed C051 gate; the new proposal-only surfaces add no mandatory precondition to this fixed finite interface atom.",
+            },
             "context_packet_hash": context["packet_hash"],
             "pre_candidate_gate_artifact_hash": gate["artifact_hash"],
             "evaluator_path": str(EVALUATOR.relative_to(ROOT)),
             "evaluator_raw_sha256": sha256_bytes(EVALUATOR.read_bytes()),
         },
         "chronology": {
-            "frozen_at": "2026-08-12T09:55:00Z",
+            "frozen_at": "2026-08-12T09:44:24Z",
             "evaluator_executed": False,
-            "target_result_accessed": False,
+            "generic_target_result_accessed": True,
+            "untouched_k19_target_result_accessed": False,
+            "target_state": "K13_QUARANTINED_PROCESS_CONTAMINATION__K19_TARGET_RESULT_UNACCESSED",
+            "quarantined_families": ["k=13"],
             "result_artifact": None,
         },
         "mathematical_credit_boundary": {
