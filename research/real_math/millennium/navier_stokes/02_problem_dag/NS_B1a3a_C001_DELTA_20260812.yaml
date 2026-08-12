@@ -1,0 +1,26 @@
+schema_version: "1.0"
+atom_id: "NS-B1a3a"
+parent_atom: "NS-B1a3"
+candidate_id: "NS-B1a3a-C001"
+authority: "PROPOSAL_SHADOW_ONLY"
+status: "PARTIAL_SUCCESS_COMPOSITIONAL_INTERFACE_REDUCTION"
+root_status: "OPEN_NO_SOLUTION_CERTIFICATE"
+result:
+  proved_local_lemma: "finite I yields, for every R, a set G_R subset (-4R^2,-R^2) of measure at least (3/2)R^2 on which ||v(t)||_{L3(B_{2R})}^3 <= 8M/3"
+  gluing_reduction: "Albritton-Barker Theorem 1.2 reduces to finding same-time uniformly bounded L3 far tails along one t_n in G_{R_n}, R_n->infinity"
+  stronger_than_needed_rejected: "full global critical precompactness/tightness is not required by this consumer"
+failure:
+  failure_id: "F-NS-B1a3a-GLOBAL-L3-TAIL-UNCONTROLLED"
+  category: "LOCAL_TO_GLOBAL_GLUING"
+  not_local_mathematical_failure: true
+obstruction:
+  obstruction_id: "O-NS-B1a3a-SAME-TIME-FAR-L3-TAIL"
+  exact_residual: "produce R_n->infinity and t_n in G_{R_n} with sup_n integral_{|x|>2R_n}|v(x,t_n)|^3 < infinity"
+next_children:
+  - "NS-B1a3a1: seek a same-theory far-tail producer or tail-good temporal-density estimate"
+  - "NS-B1a3b1a: orthogonal finite-I to global geometry producer remains separate"
+saturation:
+  reopened: ["RELATION", "PATH"]
+  flattened: ["KNOWLEDGE", "EXPERIENCE_PATTERN"]
+novelty_class: "COMPOSITIONAL"
+independent_mathematical_reviews: "0/3"
