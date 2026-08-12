@@ -1,0 +1,112 @@
+{
+  "schema": "RAKL_math.cross_problem.frozen_fibre.v3.proposal_shadow",
+  "cycle": "XM022",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "frozen_at_utc": "2026-08-12T05:08:00Z",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "main_sha": "1b866dc5aafc7e952f4de5acaa75bd3f7b71048e",
+    "tree_sha": "ee4a7a92d9cea10cfff503535a6a37a15ebc3558",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "current_feature": {
+      "issue": 396,
+      "pr": 416,
+      "surface": "failure_lattice.DifferenceWitness.realization_domain + assess_obligation_strength_claim",
+      "domains": ["AMBIENT_REPRESENTATION", "TARGET_DOMAIN", "TRANSFERRED_WITH_WITNESS"],
+      "gate_boundary": "strict-reduction/obligation-strength routing only; ordinary assess_method_reuse unchanged"
+    }
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_main_sha": "3871283cfe5040801b174e25b045e05ee0228cc2",
+    "base_tree_sha": "32405c355483aa9857d5642bc7b3f85801512539"
+  },
+  "active_atom": {
+    "atom_id": "XM022-NS-HODGE-REALIZATION-DOMAIN-AUTHORITY",
+    "signature": "OBSERVATION_KERNEL_FALSIFIER_AUTHORITY_DEPENDS_ON_REALIZATION_DOMAIN",
+    "source_atom": "NS-B2a1b2",
+    "target_atom": "H4d1c-d/C004",
+    "root_status": "ALL_SIX_OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "problem_contract": {
+    "question": "Can the NS finite-energy observation-kernel falsifier and Hodge C004 projection-faithfulness countermodel be treated as the same target-domain obstruction family?",
+    "success": "Either bind target-domain realizability/applicability for the Hodge hostile pair, or prove that current v3 correctly restricts it to representation-only authority while preserving method-level analogy.",
+    "non_success": ["no Navier-Stokes root claim", "no Hodge root claim", "no literal PDE-to-Hodge theorem transfer", "no independent-review credit", "no protected admission/promotion"]
+  },
+  "actual_fibre": [
+    "CURRENT RAKL main@1b866dc5: RAKL_VERSION.json, src/rakl/method_specs.py, src/rakl/failure_lattice.py, issue #396, merged PR #416",
+    "RAKL_math main@3871283c and current/open cross work through XM021",
+    "NS PR #280 and NS-B2a1b2 RAKL_CYCLE_METRICS",
+    "Hodge C004 merged PR #264 and H4d1c_C004_RAKL_CYCLE_METRICS",
+    "YM current open R18 PR #297 telemetry",
+    "BSD R11 metrics commit 0ac0168",
+    "PNP C049 exact k=12 result on current main; no comparable numeric current receipt found",
+    "RH current open XM021 PR #289 telemetry",
+    "primary: Choi arXiv:2011.06808; Kloosterman arXiv:2104.14845"
+  ],
+  "bounded_memory_review": {
+    "retrieved_count": 11,
+    "selected_count": 6,
+    "rejected_count": 5,
+    "selected_ids": [
+      "RAKL-ISSUE-396-DIFFERENCEWITNESS-REALIZATION-DOMAIN",
+      "RAKL-PR-416-OBLIGATION-STRENGTH-GATE",
+      "E-NS-B2a1b2-R1-20260812",
+      "M-NS-FINITE-ENERGY-INVISIBLE-TO-LINEAR-DENSITY",
+      "H4d1c-C004-TOTAL-WITNESS-PROJECTION-FAITHFULNESS",
+      "XM020-NS-YM-SCALE-ALIGNED-GAP"
+    ],
+    "rejected": [
+      {"id": "XM021-PC-RH-OUTER-LAGUERRE", "why": "operator-majorant sharpening; no realization-domain ambiguity"},
+      {"id": "YM-S1a2g-R18", "why": "current source/stable-manifold/gluing audit; different obstruction family"},
+      {"id": "BSD-A1a1-R11", "why": "coordinate-order bridge pruning; no hostile-pair realizability claim"},
+      {"id": "O9d12a2a1b-C049", "why": "exact finite interface collision is target-local, not observation-kernel authority ambiguity"},
+      {"id": "XM016-QUOTIENT-VS-SIGNED-CANCELLATION", "why": "aggregation-law taxonomy already resolved; not the realization-domain coordinate"}
+    ],
+    "missed": "CANNOT_MEASURE: no coverage-complete governed relevance universe across canonical and shadow current work."
+  },
+  "search_policy": {
+    "chosen": "COUNTEREXAMPLE_FIRST_AUTHORITY_SCOPE_CALIBRATION",
+    "why": "The new current v3 feature directly distinguishes the two structurally similar hostile controls by where their hostile pair is realized, so authority typing is cheaper and more informative than inventing another mathematical bridge.",
+    "saturated_families_rotated_away": [
+      "literal observation-kernel equivalence across disciplines",
+      "more Hodge internal-tangent enlargement without consumer-visible base realization",
+      "more NS qualitative local-nontriviality-to-global-density inference"
+    ]
+  },
+  "source_target_mapping": {
+    "common_abstraction": "An upstream state/direction can be nonzero or larger while a downstream observation/projection kills the newly relevant coordinate; noninjective observation can invalidate a stronger implication.",
+    "enabling_assumptions": [
+      "the attempted inference is mediated by an explicit observation/projection map",
+      "the falsifier is used only at the atom scope in which its hostile objects are admissible",
+      "research-control analogy does not transfer source equations or theorems"
+    ],
+    "disanalogies": [
+      "Hill vortex is an actual incompressible Euler solution in the displayed Euler-side class; it is not established as an NSE blow-up limit",
+      "Hodge C004 uses an abstract linear pair A⊂B with p(e2)=0; no geometric Hodge witness-space realization of that exact hostile pair is established",
+      "finite-energy asymptotic-density kernel and vertical tangent/kernel of a witness projection are different mathematics",
+      "Kloosterman gives a positive special-family variational-Hodge control, not a realization theorem for the C004 abstract hostile pair"
+    ],
+    "predicted_principle": "OBSERVATION_KERNEL_NO_GO_AUTHORITY_IS_REALIZATION_DOMAIN_SCOPED",
+    "cheapest_falsifier": "Run the exact current-v3 obligation-strength gate on the scoped NS hostile witness and the Hodge C004 abstract hostile witness. A correct method must accept TARGET_DOMAIN only for the scoped NS Euler-side implication and return REPRESENTATION_ONLY for Hodge C004 absent a geometric realization.",
+    "difference_witness": {
+      "changed_structural_coordinate": "hostile-pair realization domain",
+      "source_realization": "TARGET_DOMAIN at NS-B2a1b2 Euler-side scope",
+      "target_realization": "AMBIENT_REPRESENTATION for Hodge C004 abstract linear control",
+      "prior_falsifier_escape_reason": "structural analogy survives at method level, but target-domain obligation authority does not transfer without Hodge realization evidence",
+      "repeat_failure_test": "produce a source-bound Hodge geometric pair realizing the same projection collision; until then target-domain obligation weakening remains unlicensed",
+      "authority": "METHOD_TRANSFER_WARNING_ONLY"
+    }
+  },
+  "primary_literature": [
+    {"id": "arXiv:2011.06808", "authors": "Kyudong Choi", "title": "Stability of Hill's spherical vortex", "scope": "Hill's spherical vortex is an explicit three-dimensional incompressible Euler solution; used only to bind source witness admissibility at Euler-side scope."},
+    {"id": "arXiv:2104.14845", "authors": "Remke Kloosterman", "title": "Variational Hodge conjecture for complete intersections on hypersurfaces in projective space", "scope": "positive special-family variational-Hodge control; does not realize the C004 abstract hostile pair."}
+  ],
+  "preference_counterfactual": {
+    "pre_memory_pre_gate_preference": "CANNOT_MEASURE: no prospectively persisted pre-memory action preference exists before current framework/memory retrieval in this automation run.",
+    "observable_within_cycle_route_change": "Current realization-domain gate changed the live synthesis from treating 'observation kernel' as one undifferentiated falsifier family to an authority-scope split before any cross-target obligation claim.",
+    "causal_rakl_attribution": "CANNOT_MEASURE: matched no-memory/no-gate control was not executed."
+  }
+}
