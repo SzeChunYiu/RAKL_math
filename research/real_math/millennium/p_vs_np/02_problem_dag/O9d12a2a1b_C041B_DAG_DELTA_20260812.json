@@ -1,0 +1,43 @@
+{
+  "dag_delta_id": "DAG-PNP-C041B-20260812",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "root": {"id": "millennium-p-vs-np", "status": "OPEN_NO_SOLUTION_CERTIFICATE", "effect": "NONE"},
+  "nodes": [
+    {
+      "id": "O9d12a2a1b-C041A",
+      "status": "SOLVED_PROPOSAL_SHADOW_NEGATIVE_FOR_SELECTED_RULE",
+      "result": "Pure odd-slice copy preserves the cover graph exactly and gives ZERO_AUGMENTATION."
+    },
+    {
+      "id": "O9d12a2a1b-C041B",
+      "status": "SOLVED_PROPOSAL_SHADOW_NECESSARY_CONDITION",
+      "result": "For even-even off-slice witnesses under fixed cylinder-lifted old dual mass, a fresh K must absorb the embedded intersection of every tight parent pair; an empty tight intersection blocks all such one-coordinate augmentation."
+    },
+    {
+      "id": "O9d12a2a1b-C041C",
+      "status": "OPEN_PROSPECTIVE_CHILD",
+      "statement": "Resolve the parent tight-intersection obstruction on a source-compatible certificate: determine whether the relevant fixed/optimal parent duals force a forbidden tight intersection (especially empty), or exhibit a graph-realizable child relevant K that absorbs every tight parent intersection while still avoiding all saturated child pairs. Freeze the exact parent certificate/family before evaluation.",
+      "success_condition": "An exact, source-bound witness decides one branch of the tight-intersection obstruction without finite computation being promoted to recurrence evidence.",
+      "failure_condition": "The selected certificate/family is shown incapable of deciding the obstruction, or a candidate K is covered by a saturated child pair.",
+      "root_effect": "NONE_UNTIL_UNIFORM_RECURRENCE_RATE_AND_NP_BRIDGE"
+    }
+  ],
+  "edges": [
+    {"from": "O9d12a2a1b-C041A", "to": "O9d12a2a1b-C041B", "relation": "RESIDUAL_REFINEMENT", "witness": "O-PNP-C041A-SATURATED-NEIGHBORHOOD-AUGMENTATION"},
+    {"from": "O9d12a2a1b-C041B", "to": "O9d12a2a1b-C041C", "relation": "RESIDUAL_REFINEMENT", "witness": "O-PNP-C041B-TIGHT-INTERSECTION-FAMILY"}
+  ],
+  "closed_local_obligation": "Decorated-pair load equality and necessary tight-intersection absorption for even-even witnesses.",
+  "open_local_obligations": [
+    "parent tight-intersection family structure",
+    "sufficiency/other saturated child pairs",
+    "mixed-parity witness geometry",
+    "graph-realizable positive augmentation"
+  ],
+  "open_gluing_obligations": [
+    "uniform iterability and divergence",
+    "root-relevant circuit rate",
+    "source graph/Boolean interface",
+    "NP verifier or lower-bound-preserving reduction",
+    "root proof DAG/review/formal/novelty gates"
+  ]
+}

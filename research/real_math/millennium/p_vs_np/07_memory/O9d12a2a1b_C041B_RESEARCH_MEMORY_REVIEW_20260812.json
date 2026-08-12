@@ -1,0 +1,103 @@
+{
+  "schema_version": "rakl-research-memory-review-shadow-v1",
+  "review_id": "RM-PNP-C041B-20260812",
+  "target_atom_id": "O9d12a2a1b-C041B",
+  "target_context_hash": "sha256:ff67df4831b0028a2df6335ea7088ecca81ff9542477acef87faee9772d2b836",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "method_families_searched": [
+    "fractional full-semi-filter dual packing",
+    "old-support cylinder transport",
+    "saturated-neighbourhood avoidance",
+    "restricted/full witness transfer",
+    "source-recovery route",
+    "trace-richness and correlation-sensitive relaxations"
+  ],
+  "tools_retrieved": [
+    {
+      "id": "T-PNP-FRACTIONAL-SEMIFILTER-PACKING",
+      "selected": true,
+      "why": "Exact pair-load/slack semantics are directly applicable to a fixed feasible dual. The known G_NEQ integrality gap is preserved as a warning and no global approximation claim is made."
+    }
+  ],
+  "failures_retrieved": [
+    {
+      "id": "F-C024-FRACTIONAL-INTEGRALITY-GAP",
+      "selected": true,
+      "routing_effect": "Blocks any inference from local fractional augmentation to comparable integral growth."
+    },
+    {
+      "id": "F-C037-ARBITRARY-EXTENSION-NONMONOTONE",
+      "selected": true,
+      "routing_effect": "Forces explicit old-slice/relevance preservation instead of arbitrary complement extension."
+    },
+    {
+      "id": "F-C041A-COPY-ONLY-COVER-GRAPH-ISOMORPHISM",
+      "selected": true,
+      "routing_effect": "Rotates away from pure-copy rules and makes saturated lifted-pair neighbourhoods the active obstruction."
+    },
+    {
+      "id": "F-C041-POLYTIME-EXPLICITNESS-SUPERPOLY-CONTRADICTION",
+      "selected": false,
+      "why_rejected_for_this_atom": "Still globally relevant but does not decide the local fixed-dual saturated-neighbourhood question."
+    }
+  ],
+  "episodes_retrieved": [
+    {
+      "id": "EP-PNP-O9d12a2a1b-C041A-ODD-SLICE-20260811",
+      "selected": true,
+      "routing_effect": "Supplies the immediate residual ZERO_AUGMENTATION and the parent obstruction O-PNP-C041A-SATURATED-NEIGHBORHOOD-AUGMENTATION."
+    }
+  ],
+  "motifs_retrieved": [
+    {
+      "id": "M-PNP-SLICE-TRANSPORT-THEN-SLACK-AVOIDANCE",
+      "selected": true,
+      "routing_effect": "Orders verification as transport -> saturated constraints -> fresh witness -> recurrence/rate only if local slack survives."
+    }
+  ],
+  "retrieved_but_rejected": [
+    {
+      "id": "C038-AS-AUGMENTATION-THEOREM",
+      "why": "Persistence is not residual capacity and authority remains conditional desk-check."
+    },
+    {
+      "id": "RAKL_math#162-RESTRICTED-TO-FULL-RETRY",
+      "why": "Current live draft already owns restriction polarity and it is orthogonal to the local child-pair load identity."
+    },
+    {
+      "id": "RAKL_math#179-WIG95-SOURCE-RECOVERY-RETRY",
+      "why": "Current live draft already owns source recovery; missing Wig95 text does not decide this local full-Definition-21 algebra."
+    },
+    {
+      "id": "ABSOLUTE-TRACE-RICHNESS",
+      "why": "Previously flattened by the zero-cost shattering family and not targeted at residual dual slack."
+    },
+    {
+      "id": "INCREMENTAL-TRACE-LIPSCHITZNESS",
+      "why": "Sibling path retains a gluing defect and gives no direct discriminator for saturated lifted-pair neighbourhoods."
+    }
+  ],
+  "known_missed_prior_experience": [],
+  "missed_relevant_memory_rate": "CANNOT_MEASURE: the repository/literature universe is open and no bounded recall gold set exists for this atom.",
+  "cross_millennium_memory": {
+    "queried": false,
+    "reason": "A same-context exact success tool, exact same-context failures, and the immediate C041A episode already match the active obstruction. No cross-Millennium candidate had a preregistered applicability/DifferenceWitness advantage, so querying would not satisfy a defensible transfer gate."
+  },
+  "pre_memory_preference_counterfactual": "Before bound memory review the local temptation is to try an arbitrary off-slice extension and search for a fresh K. C037 and C041A change that route: first project any proposed K against saturated parent constraints, and reject pure-copy/arbitrary-extension families before recurrence search.",
+  "memory_changed_action": true,
+  "unresolved_warnings": [
+    "The exact current v3 semantic-shortcut gate did not exist in the prior C041A packet and must be applied now.",
+    "No protected lesson/tool/motif promotion is licensed by this review.",
+    "The local dual analysis cannot repair C024's integrality gap or the root NP bridge."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/04_candidates/C024_fractional_semifilter_packing.md",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041_RESEARCH_MEMORY_REVIEW_20260811.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041A_EPISODE_DIAGNOSIS_OBSTRUCTION_20260811.json",
+    "https://github.com/SzeChunYiu/RAKL_math/pull/162",
+    "https://github.com/SzeChunYiu/RAKL_math/pull/179",
+    "https://github.com/SzeChunYiu/RAKL_math/pull/182"
+  ],
+  "artifact_hash": "sha256:4f3e319f0547ffca76c49d9f8a4b1f5d724ccb00c95df6ee49d079b7db94a72d",
+  "frozen_at": "2026-08-12T00:30:10Z"
+}

@@ -1,0 +1,74 @@
+{
+  "review_id": "OTR-PNP-C041B-20260812",
+  "target_atom_id": "O9d12a2a1b-C041B",
+  "target_context_hash": "sha256:ff67df4831b0028a2df6335ea7088ecca81ff9542477acef87faee9772d2b836",
+  "research_memory_review_hash": "sha256:4f3e319f0547ffca76c49d9f8a4b1f5d724ccb00c95df6ee49d079b7db94a72d",
+  "episode_memory_snapshot_hash": "sha256:ae9ac87669e82cc0377b02eca725033918083e919ce621ef95ddd3304b96a649",
+  "obstruction": {
+    "obstruction_id": "O-PNP-C041B-CHILD-SATURATION-TO-PARENT-DATA",
+    "domain": "complexity-theory/two-dimensional-cover",
+    "roles": ["fixed parent dual", "tight parent pairs", "off-slice child graph edge", "fresh relevant child semi-filter", "lifted old dual"],
+    "relations": ["fresh mass requires positive slack on every child pair covering K", "cylinder lift reads old-slice membership by projection", "relevance above w forces row and column traces into K"],
+    "constraints": ["full Definition-21 pair side", "old-slice complement exactly preserved", "even-even child graph edge", "old dual held fixed"],
+    "failure_mechanisms": ["a saturated lifted child pair covering K leaves zero residual capacity"],
+    "invariants_to_preserve": ["old relevance", "old dual feasibility", "exact pair-cover incidence", "empty set excluded from semi-filters"],
+    "desired_transition": ["reduce a child saturated-neighbourhood obstruction to explicit parent tight-pair intersection data"],
+    "forbidden_losses": ["no sufficiency overclaim", "no integral-gap erasure", "no recurrence/rate/root promotion"]
+  },
+  "direct_search_status": "NO_VIABLE_MATCH",
+  "direct_candidate_episode_ids": ["OT-PNP-C024-DUALIZE-COVER-20260812", "OT-PNP-C041A-SLICE-PROJECT-20260812"],
+  "direct_mapping_witnesses": [],
+  "jump_search_status": "NO_VIABLE_MATCH",
+  "jump_mapping_witnesses": [],
+  "glue_search_status": "MATCHES_FOUND",
+  "selected_mode": "GLUE",
+  "glue_witness": {
+    "composition_id": "GLUE-PNP-C041B-C024-C041A-20260812",
+    "target_obstruction_id": "O-PNP-C041B-CHILD-SATURATION-TO-PARENT-DATA",
+    "episode_ids": ["OT-PNP-C024-DUALIZE-COVER-20260812", "OT-PNP-C041A-SLICE-PROJECT-20260812"],
+    "operation_order": [
+      "Use C024 to represent the fixed parent dual by explicit pair loads and identify tight parent pairs.",
+      "Use C041A old-slice projection/cylinder membership to transport pair-preservation tests into the child.",
+      "Adjoin the mandatory even-even row/column traces to each projected parent pair and verify the resulting intersection/load algebra in the target."
+    ],
+    "interface_obligations": [
+      "The child generator traces must be disjoint from the old slice and from one another.",
+      "Cylinder-lift membership must depend only on old-slice projection.",
+      "The decorated child pair must project exactly to the selected parent pair and its intersection."
+    ],
+    "incompatibilities_checked": [
+      "C024 integrality gap is not used as an approximation claim.",
+      "C041A pure-copy ZERO_AUGMENTATION is not assumed to persist under arbitrary off-slice additions.",
+      "Mixed-parity child edges are outside the proposed composition because cross terms appear."
+    ],
+    "target_validation_obligations": [
+      "prove the decorated-pair set-intersection identity",
+      "prove cylinder preservation equivalence for the decorated pair",
+      "prove equality of lifted old child-pair load and parent pair load",
+      "derive only a necessary one-coordinate augmentation condition",
+      "run boundary falsifiers for empty traces, mixed parity, and false sufficiency"
+    ],
+    "evidence_pointers": [
+      "research/real_math/millennium/p_vs_np/04_candidates/C024_fractional_semifilter_packing.md",
+      "research/real_math/millennium/p_vs_np/04_candidates/C041A_ODD_SLICE_COPY_RULE.md",
+      "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041A_EPISODE_DIAGNOSIS_OBSTRUCTION_20260811.json"
+    ],
+    "artifact_hash": "sha256:2dbfcdcaf5225a7303100f735d141dd32b7301593989ad3682bdfc389fc298e9"
+  },
+  "selected_episode_ids": ["OT-PNP-C024-DUALIZE-COVER-20260812", "OT-PNP-C041A-SLICE-PROJECT-20260812"],
+  "exhaustion_witness": null,
+  "missing_transformation_specification": null,
+  "unresolved_warnings": [
+    "This review can only route target verification; it cannot repair the already-missed strict pre-candidate chronology of the idea itself.",
+    "No cross-problem coverage receipt was needed because LIFT was not selected.",
+    "No JUMP source survived the prior structural analogy scan with better applicability than the same-domain GLUE."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C041B_MATH_CONTEXT_FIBER_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041B_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C041B_OBSTRUCTION_TRANSFORMATION_MEMORY_20260812.json",
+    "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C041B_EXPERT_CONTEXT_REVIEW_20260812.json"
+  ],
+  "artifact_hash": "sha256:6f1f51b500e8d4bc4eb6a9c2a3c59bb32a8cd6e8aa6aad21c165c6620d6570e9",
+  "frozen_at": "2026-08-12T00:32:00Z"
+}
