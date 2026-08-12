@@ -1,0 +1,920 @@
+{
+  "schema": "RAKL_math.rakl_v3_case_study_metrics_episode.v2",
+  "cycle_id": "YM-S1c1a-SECTION9-TYPECHECK-20260811-R8",
+  "authority": "PROPOSAL_SHADOW_MEASUREMENT_ONLY_ROOT_AUTHORITY_NONE",
+  "framework_subject": {
+    "repository": "SzeChunYiu/RAKL",
+    "main_sha": "fd188f9664da0a1dcba633c30c17ce511f598d51",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "rakl_core_manifest_version": "0.6.6",
+    "version_manifest_evidence_cutoff_sha": "0cea6cc39a3cf67ef7ecff3fff9a704944c32ab8",
+    "v3_surfaces_inspected": [
+      "RAKL_VERSION.json",
+      "skills/rakl-core/SKILL.md",
+      "skills/rakl-core/manifest.yaml",
+      "src/rakl/method_specs.py",
+      "src/rakl/v3.py",
+      "src/rakl/v3_scientific_authority.py",
+      "src/rakl/experience_substrate.py",
+      "src/rakl/saturation_vector.py",
+      "src/rakl/gluing_learning.py",
+      "src/rakl/problem_fibre.py"
+    ],
+    "operational_v3_use": [
+      "TaskEpisode modeled with proposal/shadow storage_admission",
+      "ProblemFibre/LocalSection/GluingObstruction/GluingReport semantics used to separate local source sections from failed global assembly",
+      "gluing_residual_signature vocabulary used for local-to-global residual",
+      "current seven SaturationAxis values used, with native residual reopening independent of retained novelty",
+      "scientific-authority transitions checked and not invoked"
+    ]
+  },
+  "application_subject": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "current_main_at_cycle": "9c2cebe8d5a2b1381af5a40cbea86a6826e7210a",
+    "active_pr": 168,
+    "pr_base_sha_frozen_at_creation": "55f1b786396f0f29ee4edd7e80b0b0023b34e90f",
+    "branch": "research/ym-s1c1a-af-ir-gluing-20260811-r7",
+    "branch_head_before_cycle": "9e7569b8998d75eee8981a9ff44d26ed817151fc",
+    "branch_tree_before_cycle": "bef865c50cf68dbf7c6b6ee8f1937c43de08ec25",
+    "branch_final_head": "CANNOT_MEASURE_IN_SELF_APPENDING_RECEIPT: exact final head is created by/after writing this receipt; bind externally from PR #168 after the write.",
+    "root": "#5 OPEN_NO_SOLUTION_CERTIFICATE",
+    "parent": "#69",
+    "active_issue": "#166",
+    "semantic_head_after_source_audit_before_receipt": "8ea52e6ef76c8214530b3c3021d986ebc0d99e36"
+  },
+  "MathContextFiber": {
+    "schema": "RAKL_math.math_context_fibre.shadow.v1",
+    "cycle_id": "YM-S1c1a-SECTION9-TYPECHECK-20260811-R8",
+    "authority": "PROPOSAL_SHADOW_NO_PROMOTION_AUTHORITY",
+    "root": {
+      "id": "#5",
+      "state": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "exact_contract": "Construct a non-trivial 4D quantum Yang–Mills theory for every compact simple gauge group satisfying the official Clay-strength axiomatic requirements and prove a finite positive mass gap above the vacuum; fixed-cutoff/lattice/numerical/confinement-only results do not close the root."
+    },
+    "parent": {
+      "id": "#69",
+      "atom": "YM-S1c1"
+    },
+    "active_atom": {
+      "id": "YM-S1c1a",
+      "issue": "#166",
+      "signature": "YM-S1c1a-SECTION9-UNIVERSALITY-AFIR-TRAJECTORY-TO-SCHEME-EMBEDDING-SAME-THEORY-GLUING",
+      "goal": "Type-check whether Section 9 Theorems 9.3/9.4 actually apply to the AF and IR trajectories used in Section 10 strongly enough to force a vanishing same-theory comparison."
+    },
+    "structural_coordinates": [
+      "Section-9 admissible regulator coordinates (alpha,beta): slice-projector profile and reflection-positive block map",
+      "Section-9 single-scale O(a_k) Lipschitz modulus in the admissible metric",
+      "Section-9 fixed-physical-time Schwinger telescoping with geometric tail sum_{ell>=k} a_ell",
+      "Section-9 Markov uniqueness inputs: one-slice marginal rho and one-step/continuum semigroup K/T",
+      "Section-10 AF/IR trajectory coordinates (g_k,K_k) and bare-coupling tuning",
+      "same lattice-spacing sequence and hyperplane geometry do not by themselves identify one-slice state/kernel",
+      "same-theory OS quotient/Hilbert-space and regulator-sequence identification",
+      "volume/lattice-spacing/regulator uniformity and physical spectral identification downstream"
+    ],
+    "equivalent_formulations": [
+      "Existence of a typed map from AF and IR trajectory data into one Section-9 admissible parameter space with uniform finite metric distance and the required O(a_k) local response.",
+      "Direct vanishing comparison |S_AF,k-S_IR,k| <= C sum_{ell>=k} a_ell d_ell with sup d_ell<infinity, or another source-valid tail tending to zero.",
+      "Independent proof that AF and IR one-slice marginals and semigroups converge to the same limiting pair (rho,T), allowing Theorem 9.4 to identify the path measure."
+    ],
+    "solved_or_near_solved_analogues": [
+      {
+        "context": "Section 9 regulator universality within a fixed admissible class",
+        "method": "single-scale O(a_k) Lipschitz control plus telescoping",
+        "works_because": [
+          "alpha is a slice-projector profile",
+          "beta is a reflection-positive block-map parameter",
+          "the per-scale modulus has an explicit a_k factor",
+          "the admissible metric path is controlled"
+        ],
+        "transfer_question": "Do AF and IR define points/paths in this same typed admissible parameter space with those exact estimates?"
+      },
+      {
+        "context": "Section 9 Markovian uniqueness",
+        "method": "identify the path measure from one-slice marginal plus transition kernel/limiting semigroup",
+        "works_because": [
+          "the compared pairs have equal rho and K on a core, or converge to a common limiting (rho,T)"
+        ],
+        "transfer_question": "Can common limiting (rho,T) be established independently rather than inferred from the desired AF/IR equality?"
+      }
+    ],
+    "shared_structure": [
+      "reflection positivity",
+      "FRD locality",
+      "one-slice transfer kernels",
+      "common lattice spacing sequence",
+      "fixed continuum-time observables"
+    ],
+    "disanalogies": [
+      "Section 9 defines alpha,beta as regulator/blocking coordinates; Section 10 parameterizes the running effective theory by the gauge coupling and polymer activity (g_k,K_k).",
+      "Finite FRD distance is not the same as the scale-decaying O(a_k) modulus required by Theorem 9.3.",
+      "Markov uniqueness propagates equality of state/kernel data; it does not manufacture equality of those data from broad admissibility.",
+      "Section 10's use of alpha,alpha' for generic one-slice data may intend a broader admissible metric, but no explicit trajectory-to-Section-9 coordinate map or uniform hypothesis verification is displayed."
+    ],
+    "smallest_repair_question": "Exhibit and verify a source-valid trajectory-to-scheme embedding with the Section-9 O(a_k) modulus, or replace it with a direct vanishing AF/IR inter-trajectory estimate/common-limit (rho,T) proof.",
+    "primary_sources": [
+      {
+        "id": "arXiv:2606.19362v1",
+        "date": "2026-06-09",
+        "selectors": [
+          "§9 pp.95-108, especially (9.3),(9.6), Theorems 9.3 and 9.4",
+          "§10 pp.108-128, especially (10.3)-(10.6), Theorem 10.8, (10.78)-(10.81)"
+        ],
+        "role": "load-bearing source under audit"
+      },
+      {
+        "id": "Clay Yang-Mills official problem page",
+        "role": "root-status and problem-contract cross-check"
+      }
+    ],
+    "cross_domain_analogy": {
+      "source_kind": "measurement/calibration",
+      "common_abstraction": "invariance under nuisance-coordinate changes does not imply invariance under changes of the state-defining object",
+      "mapping": [
+        "instrument casing/calibration-profile changes -> regulator/block-map (alpha,beta) changes",
+        "different physical sample -> different RG trajectory/bare-coupling path",
+        "calibration stability modulus -> O(a_k) Section-9 Lipschitz modulus"
+      ],
+      "disanalogies": [
+        "the analogy has no gauge/OS/RG content and supplies no mathematical estimate"
+      ],
+      "validation_obligation": "A genuine transfer requires an explicit coordinate map and the theorem's scale-decaying modulus; otherwise reject the analogy.",
+      "authority": "PROPOSAL_ONLY"
+    },
+    "memory_actually_consulted": {
+      "selected": [
+        "EP-YM-S1c1a-R7-20260811",
+        "#166",
+        "#126",
+        "#92"
+      ],
+      "rejected": [
+        "PR#158"
+      ],
+      "rejection_reasons": {
+        "PR#158": "Its strict defect-budget lesson already shaped R7; it does not type the Section-9 regulator coordinates against AF/IR trajectory coordinates in R8."
+      },
+      "missed": "CANNOT_MEASURE: connector/runtime exposes repository artifacts but not a complete protected v3 episode/failure/motif inventory materialization."
+    },
+    "frozen_at": "2026-08-11T21:15:24Z",
+    "first_candidate_at": null,
+    "fibre_snapshot_hash": "b958d0e01ccc66947d198957d06fc6b4c9d125794a9888014a0297f593395d57"
+  },
+  "TaskEpisode": {
+    "episode_id": "EP-YM-S1c1a-R8-20260811",
+    "task_id": "YM-VERIFIED-DISCOVERY-SPECTRAL-LATTICE-RG",
+    "atom_id": "YM-S1c1a",
+    "context_hash": "b958d0e01ccc66947d198957d06fc6b4c9d125794a9888014a0297f593395d57",
+    "problem_signature": [
+      "SECTION9-REGULATOR-UNIVERSALITY",
+      "SECTION10-AFIR-TRAJECTORY-IDENTIFICATION",
+      "TRAJECTORY-TO-SCHEME-EMBEDDING",
+      "O(a_k)-LIPSCHITZ-MODULUS",
+      "COMMON-LIMIT-(rho,T)",
+      "SAME-THEORY-GLUING"
+    ],
+    "fibre_snapshot_hash": "b958d0e01ccc66947d198957d06fc6b4c9d125794a9888014a0297f593395d57",
+    "operator_ids": [
+      "counterexample_first_applicability_test",
+      "typed_parameter_identity_audit",
+      "same_theory_gluing_check",
+      "markov_uniqueness_hypothesis_audit",
+      "source_local_theorem_transfer"
+    ],
+    "action_trace": [
+      "ATOMIZED",
+      "CONTEXT_FROZEN",
+      "ANALOGY_SCAN",
+      "METHOD_TRANSFER_REVIEW",
+      "EXPERT_CONTEXT_REVIEW",
+      "EXPERIENCE_MEMORY_REVIEW",
+      "NEXT_STEP_PROPOSED",
+      "FALSIFIER_RUN",
+      "RESULT_RECORDED",
+      "RESIDUAL_OPENED",
+      "NOVELTY_CHECKED",
+      "REVIEWED"
+    ],
+    "observation_ids": [
+      "OBS-R8-SEC9-PARAMETER-TYPE",
+      "OBS-R8-OAK-MODULUS",
+      "OBS-R8-MARKOV-CONDITIONALITY",
+      "OBS-R8-SEC10-UNTYPED-ALPHA"
+    ],
+    "verification_ids": [
+      "VER-R8-PDF-LINES-SEC9",
+      "VER-R8-PDF-SCREENSHOT-SEC10-127-128",
+      "VER-R8-HOSTILE-FINITE-DISTANCE",
+      "VER-R8-HOSTILE-MARKOV-PAIR"
+    ],
+    "outcome": "PARTIAL_SUCCESS",
+    "residual_signature": [
+      "RES-YM-S1c1a-R8-TRAJECTORY-TO-SECTION9-SCHEME-EMBEDDING-OR-VANISHING-INTERTRAJECTORY-ESTIMATE"
+    ],
+    "evidence_pointers": [
+      "arXiv:2606.19362v1 §9 pp95-108",
+      "arXiv:2606.19362v1 §10 pp109-128",
+      "RAKL_math#166",
+      "PR#168"
+    ],
+    "timestamp": "2026-08-11T21:15:24Z",
+    "cost": 0.0,
+    "storage_admission": "PROPOSAL_SHADOW_STORED",
+    "artifact_hash": "887677bdee4b936fc62d79bda6cd23a8226960945d971f64a770117f31d3a7d4"
+  },
+  "trace": {
+    "schema": "RAKL_math.math_research_trace.shadow.v1",
+    "hash_chained": true,
+    "events": [
+      {
+        "event_type": "ATOMIZED",
+        "timestamp": "2026-08-11T21:15:24Z",
+        "previous_event_hash": null,
+        "payload": {
+          "atom": "YM-S1c1a",
+          "signature": "YM-S1c1a-SECTION9-UNIVERSALITY-AFIR-TRAJECTORY-TO-SCHEME-EMBEDDING-SAME-THEORY-GLUING",
+          "root": "#5",
+          "parent": "#69",
+          "child": "#166"
+        },
+        "artifact_hash": "f83add72615aa3a6f729ed9e4f5a1f406226888758e4c6302929d61323d043df"
+      },
+      {
+        "event_type": "CONTEXT_FROZEN",
+        "timestamp": "2026-08-11T21:15:24Z",
+        "previous_event_hash": "f83add72615aa3a6f729ed9e4f5a1f406226888758e4c6302929d61323d043df",
+        "payload": {
+          "fibre_snapshot_hash": "b958d0e01ccc66947d198957d06fc6b4c9d125794a9888014a0297f593395d57",
+          "first_candidate_at": null
+        },
+        "artifact_hash": "19ffc0497d3b84534e7dfcd0ec384128d8d15f332bef76986d2aba07371d0634"
+      },
+      {
+        "event_type": "ANALOGY_SCAN",
+        "timestamp": "2026-08-11T21:15:24Z",
+        "previous_event_hash": "19ffc0497d3b84534e7dfcd0ec384128d8d15f332bef76986d2aba07371d0634",
+        "payload": {
+          "status": "BRIDGE_RETAINED_PROPOSAL_ONLY",
+          "analogy": {
+            "source_kind": "measurement/calibration",
+            "common_abstraction": "invariance under nuisance-coordinate changes does not imply invariance under changes of the state-defining object",
+            "mapping": [
+              "instrument casing/calibration-profile changes -> regulator/block-map (alpha,beta) changes",
+              "different physical sample -> different RG trajectory/bare-coupling path",
+              "calibration stability modulus -> O(a_k) Section-9 Lipschitz modulus"
+            ],
+            "disanalogies": [
+              "the analogy has no gauge/OS/RG content and supplies no mathematical estimate"
+            ],
+            "validation_obligation": "A genuine transfer requires an explicit coordinate map and the theorem's scale-decaying modulus; otherwise reject the analogy.",
+            "authority": "PROPOSAL_ONLY"
+          }
+        },
+        "artifact_hash": "2cc3dc667b235638fcfb1eb9e6d46f54e47e6985b15702ba8030213e0b5fa042"
+      },
+      {
+        "event_type": "METHOD_TRANSFER_REVIEW",
+        "timestamp": "2026-08-11T21:15:24Z",
+        "previous_event_hash": "2cc3dc667b235638fcfb1eb9e6d46f54e47e6985b15702ba8030213e0b5fa042",
+        "payload": {
+          "analogues": [
+            {
+              "context": "Section 9 regulator universality within a fixed admissible class",
+              "method": "single-scale O(a_k) Lipschitz control plus telescoping",
+              "works_because": [
+                "alpha is a slice-projector profile",
+                "beta is a reflection-positive block-map parameter",
+                "the per-scale modulus has an explicit a_k factor",
+                "the admissible metric path is controlled"
+              ],
+              "transfer_question": "Do AF and IR define points/paths in this same typed admissible parameter space with those exact estimates?"
+            },
+            {
+              "context": "Section 9 Markovian uniqueness",
+              "method": "identify the path measure from one-slice marginal plus transition kernel/limiting semigroup",
+              "works_because": [
+                "the compared pairs have equal rho and K on a core, or converge to a common limiting (rho,T)"
+              ],
+              "transfer_question": "Can common limiting (rho,T) be established independently rather than inferred from the desired AF/IR equality?"
+            }
+          ],
+          "disanalogies": [
+            "Section 9 defines alpha,beta as regulator/blocking coordinates; Section 10 parameterizes the running effective theory by the gauge coupling and polymer activity (g_k,K_k).",
+            "Finite FRD distance is not the same as the scale-decaying O(a_k) modulus required by Theorem 9.3.",
+            "Markov uniqueness propagates equality of state/kernel data; it does not manufacture equality of those data from broad admissibility.",
+            "Section 10's use of alpha,alpha' for generic one-slice data may intend a broader admissible metric, but no explicit trajectory-to-Section-9 coordinate map or uniform hypothesis verification is displayed."
+          ]
+        },
+        "artifact_hash": "57d3592c98ba29c71cc1a628568adfc8e76b14c4ccdc83f68d5f04aee85fe841"
+      },
+      {
+        "event_type": "EXPERT_CONTEXT_REVIEW",
+        "timestamp": "2026-08-11T21:15:24Z",
+        "previous_event_hash": "57d3592c98ba29c71cc1a628568adfc8e76b14c4ccdc83f68d5f04aee85fe841",
+        "payload": {
+          "same_context_roles": [
+            {
+              "role": "lattice gauge / rigorous RG lead",
+              "background": "lattice gauge theory, constructive RG, coupling-flow coordinates",
+              "finding": "Section 9 fixes regulator/blocking coordinates (alpha,beta), whereas Section 10 separately evolves (g_k,K_k); shared FRD/OS admissibility does not by itself provide the missing coordinate embedding.",
+              "objection": "Section 10 later calls generic one-slice data alpha,alpha' and may intend a broader metric; treat this as under-typed rather than impossible."
+            },
+            {
+              "role": "constructive QFT / OS lead",
+              "background": "Osterwalder-Schrader reconstruction, Markov semigroups, continuum limits",
+              "finding": "Theorem 9.4 is conditional on equal finite-scale (rho,K) or convergence to a common limiting (rho,T); it cannot independently establish that common limiting pair for AF versus IR.",
+              "objection": "A separate Section-10 argument could still prove common limiting data, but (10.80)-(10.81) does not."
+            },
+            {
+              "role": "dynamical systems / asymptotic analysis lead",
+              "background": "renormalization flows, contraction/stable-manifold estimates",
+              "finding": "Theorem 9.3's decisive feature is the explicit O(a_k) response, which gives a geometric vanishing tail. Finite parameter distance without that scale factor is insufficient.",
+              "objection": "A trajectory-aware stable-manifold estimate could supply an alternative vanishing tail even if the Section-9 metric is not the right representation."
+            },
+            {
+              "role": "adversarial falsification lead",
+              "background": "counterexamples, perturbation bounds, Markov-process logic",
+              "finding": "Bounded distance or bounded cumulative drift does not force equality. The exact logical controls are d_k=1 without an a_k factor, and two Markov pairs with different transition kernels despite common positivity/Markov structure.",
+              "objection": "These controls falsify inference forms, not the Yang-Mills theorem statement itself."
+            },
+            {
+              "role": "formal methods / provenance lead",
+              "background": "typed interfaces, proof obligations, source/statement binding",
+              "finding": "The unbound interface key is parameter_identity/comparison_modulus: Section-9 theorem hypotheses are not mapped field-by-field to the AF/IR inputs used in Theorem 10.8.",
+              "objection": "No proof assistant or independent verifier was run; this is a source-bound proof-interface diagnosis only."
+            },
+            {
+              "role": "novelty / research-value lead",
+              "background": "mathematical-physics literature review and negative-history control",
+              "finding": "The result sharpens the existing R7 residual rather than establishing a new Yang-Mills theorem. It is useful because it converts 'apply universality' into a precise missing witness.",
+              "objection": "Retained semantic novelty must remain zero until protected novelty/authority gates admit anything."
+            }
+          ],
+          "independent_review_credit": 0
+        },
+        "artifact_hash": "8b9cbcd92b465511221c6d6b7fc42b043679b554ea65378eb831ec5ec29d3539"
+      },
+      {
+        "event_type": "EXPERIENCE_MEMORY_REVIEW",
+        "timestamp": "2026-08-11T21:15:24Z",
+        "previous_event_hash": "8b9cbcd92b465511221c6d6b7fc42b043679b554ea65378eb831ec5ec29d3539",
+        "payload": {
+          "selected": [
+            "EP-YM-S1c1a-R7-20260811",
+            "#166",
+            "#126",
+            "#92"
+          ],
+          "rejected": [
+            "PR#158"
+          ],
+          "rejection_reasons": {
+            "PR#158": "Its strict defect-budget lesson already shaped R7; it does not type the Section-9 regulator coordinates against AF/IR trajectory coordinates in R8."
+          },
+          "missed": "CANNOT_MEASURE: connector/runtime exposes repository artifacts but not a complete protected v3 episode/failure/motif inventory materialization."
+        },
+        "artifact_hash": "611f0c4d388cb6e48ed02e9143b73f4d14e252ba2a65f0c1ca1344bfd84fa520"
+      },
+      {
+        "event_type": "NEXT_STEP_PROPOSED",
+        "timestamp": "2026-08-11T21:15:24Z",
+        "previous_event_hash": "611f0c4d388cb6e48ed02e9143b73f4d14e252ba2a65f0c1ca1344bfd84fa520",
+        "payload": {
+          "action": "Type-check Section 9 Theorems 9.3/9.4 against the two Section-10 AF/IR constructions before invoking universality.",
+          "alternatives_rejected": [
+            "repeat harmonic-series control from R7",
+            "generic FRD source hunt",
+            "invent new RG mechanism before source applicability audit"
+          ],
+          "expected_discriminator": "Either a typed trajectory-to-scheme map with O(a_k) modulus/common (rho,T), or a precise gluing residual."
+        },
+        "artifact_hash": "690fb70fe0335385181499414e5210fcaa9b4d5f63edc884af4a9b969326a50b"
+      },
+      {
+        "event_type": "FALSIFIER_RUN",
+        "timestamp": "2026-08-11T21:15:24Z",
+        "previous_event_hash": "690fb70fe0335385181499414e5210fcaa9b4d5f63edc884af4a9b969326a50b",
+        "payload": {
+          "controls": [
+            "finite FRD distance without O(a_k) does not force vanishing",
+            "Markov uniqueness requires common marginal/kernel or common limiting pair",
+            "R7 one-sided recurrence control retained"
+          ],
+          "result": "Section-9 repair is not source-bound without an applicability witness."
+        },
+        "artifact_hash": "01591d67b0498ebf262c4c1ea2dc3da79f025f7719bb571496ceade700ff571c"
+      },
+      {
+        "event_type": "RESULT_RECORDED",
+        "timestamp": "2026-08-11T21:15:24Z",
+        "previous_event_hash": "01591d67b0498ebf262c4c1ea2dc3da79f025f7719bb571496ceade700ff571c",
+        "payload": {
+          "gluing_report": {
+            "compatible": false,
+            "all_sections_verified": false,
+            "complete_coverage": false,
+            "covered_atom_ids": [
+              "YM-S1c1a:Section9-regulator-universality",
+              "YM-S1c1a:Section10-AFIR-identification"
+            ],
+            "local_sections": [
+              {
+                "section_id": "SEC9",
+                "assignments": {
+                  "parameter_identity": "(alpha,beta)=slice-projector profile + block map",
+                  "comparison_modulus": "O(a_k)*[d(alpha,alpha')+d(beta,beta')]",
+                  "uniqueness_input": "common limiting (rho,T)"
+                },
+                "source_verified": true,
+                "mathematical_authority_verified": false
+              },
+              {
+                "section_id": "SEC10",
+                "assignments": {
+                  "parameter_identity": "AF/IR trajectories generated by running effective data (g_k,K_k); proof also labels generic slice data alpha,alpha'",
+                  "comparison_modulus": "finite FRD distance plus summable interlacing defects asserted",
+                  "uniqueness_input": "equality of AF/IR limits claimed"
+                },
+                "source_verified": true,
+                "mathematical_authority_verified": false
+              }
+            ],
+            "obstructions": [
+              {
+                "key": "parameter_identity",
+                "left_atom_id": "Section9",
+                "right_atom_id": "Section10",
+                "reason": "No explicit typed map from AF/IR trajectory coordinates to the Section-9 admissible scheme coordinates is displayed."
+              },
+              {
+                "key": "comparison_modulus",
+                "left_atom_id": "Section9",
+                "right_atom_id": "Section10",
+                "reason": "Theorem 9.3 needs a scale-decaying O(a_k) modulus; finite distance/summable within-trajectory defects alone do not establish it for AF-vs-IR."
+              },
+              {
+                "key": "common_limit_pair",
+                "left_atom_id": "Section9-Theorem9.4",
+                "right_atom_id": "Section10-Theorem10.8",
+                "reason": "Markov uniqueness assumes/effects equality once common (rho,T) is available; the displayed Section-10 recurrence does not prove the common pair."
+              }
+            ],
+            "v3_gluing_residual_signature": [
+              "gluing:incomplete_atom_coverage",
+              "gluing:unverified_local_section",
+              "gluing:interface_conflict:parameter_identity:Section9:Section10",
+              "gluing:interface_conflict:comparison_modulus:Section9:Section10",
+              "gluing:interface_conflict:common_limit_pair:Section9-Theorem9.4:Section10-Theorem10.8"
+            ],
+            "v3_gluing_episode_outcome": "FAILURE"
+          },
+          "outcome": "PARTIAL_SUCCESS__SECTION9_REPAIR_SURFACE_TYPED__AFIR_TRAJECTORY_TO_SCHEME_APPLICABILITY_NOT_ESTABLISHED"
+        },
+        "artifact_hash": "1f516c47c4199c7622885e58ac2e9c70b25d83ae288cd75f304ce0a2ed8c4ff2"
+      },
+      {
+        "event_type": "RESIDUAL_OPENED",
+        "timestamp": "2026-08-11T21:15:24Z",
+        "previous_event_hash": "1f516c47c4199c7622885e58ac2e9c70b25d83ae288cd75f304ce0a2ed8c4ff2",
+        "payload": {
+          "residual": "RES-YM-S1c1a-R8-TRAJECTORY-TO-SECTION9-SCHEME-EMBEDDING-OR-VANISHING-INTERTRAJECTORY-ESTIMATE",
+          "local_mathematical_failure": "NONE",
+          "local_to_global_gluing_failure": true
+        },
+        "artifact_hash": "12a9dfa56511441590b5cfe84dffbf3b01e418df3033d9e55207927958f78790"
+      },
+      {
+        "event_type": "NOVELTY_CHECKED",
+        "timestamp": "2026-08-11T21:15:24Z",
+        "previous_event_hash": "12a9dfa56511441590b5cfe84dffbf3b01e418df3033d9e55207927958f78790",
+        "payload": {
+          "retained": {
+            "KNOWLEDGE": 0,
+            "OPERATOR": 0,
+            "EXPERIENCE_PATTERN": 0,
+            "OBSTRUCTION": 0,
+            "RELATION": 0,
+            "PATH": 0,
+            "META_METHOD": 0
+          },
+          "reason": "proposal/shadow source audit only; raw repository growth is not learning"
+        },
+        "artifact_hash": "0a2f8982b2588f9512758312a5754979941d7cb0b33ca30414f35c55e5977eaa"
+      },
+      {
+        "event_type": "REVIEWED",
+        "timestamp": "2026-08-11T21:15:24Z",
+        "previous_event_hash": "0a2f8982b2588f9512758312a5754979941d7cb0b33ca30414f35c55e5977eaa",
+        "payload": {
+          "same_context_review_roles": 6,
+          "independent_mathematical_reviews": 0,
+          "root_promotion": false
+        },
+        "artifact_hash": "aa361ad5c44be6c2812f3019ae0ca68950de2bdfce55d3bd71e472c586ee9995"
+      }
+    ],
+    "head_hash": "aa361ad5c44be6c2812f3019ae0ca68950de2bdfce55d3bd71e472c586ee9995"
+  },
+  "typed_gluing_audit": {
+    "compatible": false,
+    "all_sections_verified": false,
+    "complete_coverage": false,
+    "covered_atom_ids": [
+      "YM-S1c1a:Section9-regulator-universality",
+      "YM-S1c1a:Section10-AFIR-identification"
+    ],
+    "local_sections": [
+      {
+        "section_id": "SEC9",
+        "assignments": {
+          "parameter_identity": "(alpha,beta)=slice-projector profile + block map",
+          "comparison_modulus": "O(a_k)*[d(alpha,alpha')+d(beta,beta')]",
+          "uniqueness_input": "common limiting (rho,T)"
+        },
+        "source_verified": true,
+        "mathematical_authority_verified": false
+      },
+      {
+        "section_id": "SEC10",
+        "assignments": {
+          "parameter_identity": "AF/IR trajectories generated by running effective data (g_k,K_k); proof also labels generic slice data alpha,alpha'",
+          "comparison_modulus": "finite FRD distance plus summable interlacing defects asserted",
+          "uniqueness_input": "equality of AF/IR limits claimed"
+        },
+        "source_verified": true,
+        "mathematical_authority_verified": false
+      }
+    ],
+    "obstructions": [
+      {
+        "key": "parameter_identity",
+        "left_atom_id": "Section9",
+        "right_atom_id": "Section10",
+        "reason": "No explicit typed map from AF/IR trajectory coordinates to the Section-9 admissible scheme coordinates is displayed."
+      },
+      {
+        "key": "comparison_modulus",
+        "left_atom_id": "Section9",
+        "right_atom_id": "Section10",
+        "reason": "Theorem 9.3 needs a scale-decaying O(a_k) modulus; finite distance/summable within-trajectory defects alone do not establish it for AF-vs-IR."
+      },
+      {
+        "key": "common_limit_pair",
+        "left_atom_id": "Section9-Theorem9.4",
+        "right_atom_id": "Section10-Theorem10.8",
+        "reason": "Markov uniqueness assumes/effects equality once common (rho,T) is available; the displayed Section-10 recurrence does not prove the common pair."
+      }
+    ],
+    "v3_gluing_residual_signature": [
+      "gluing:incomplete_atom_coverage",
+      "gluing:unverified_local_section",
+      "gluing:interface_conflict:parameter_identity:Section9:Section10",
+      "gluing:interface_conflict:comparison_modulus:Section9:Section10",
+      "gluing:interface_conflict:common_limit_pair:Section9-Theorem9.4:Section10-Theorem10.8"
+    ],
+    "v3_gluing_episode_outcome": "FAILURE"
+  },
+  "episode_diagnosis_obstruction_lesson": {
+    "episode": "EP-YM-S1c1a-R8-20260811",
+    "diagnosis_id": "DG-YM-S1c1a-R8-SECTION9-TYPE-MISMATCH-SHADOW",
+    "diagnosis": "Section 9 proves vanishing regulator-scheme differences only under a typed admissible metric with an explicit O(a_k) modulus, while its Markov uniqueness theorem assumes equal/common one-slice state and semigroup data. Section 10's AF/IR constructions are running theory trajectories and the source does not display the field-by-field applicability witness that imports those hypotheses.",
+    "obstruction_id": "OBS-YM-S1c1a-R8-TRAJECTORY-SCHEME-GLUE-SHADOW",
+    "obstruction_status": "PROPOSAL_SHADOW_ONLY_NOT_PROTECTED",
+    "reusable_lesson_id": "LESSON-YM-S1c1a-R8-UNIVERSALITY-COORDINATE-SCOPE-SHADOW",
+    "lesson_status": "PROPOSAL_SHADOW_ONLY_NOT_PROTECTED",
+    "reusable_lesson": "A universality theorem along nuisance/regulator coordinates cannot be transferred to distinct state-defining RG trajectories without a typed coordinate map and the theorem's convergence modulus; finite metric distance or broad admissibility is not a substitute.",
+    "failure_signature": "FS-YM-S1c1a-R8-SECTION9-APPLICABILITY-GLUING-SHADOW"
+  },
+  "same_context_expert_cell": {
+    "roles": [
+      {
+        "role": "lattice gauge / rigorous RG lead",
+        "background": "lattice gauge theory, constructive RG, coupling-flow coordinates",
+        "finding": "Section 9 fixes regulator/blocking coordinates (alpha,beta), whereas Section 10 separately evolves (g_k,K_k); shared FRD/OS admissibility does not by itself provide the missing coordinate embedding.",
+        "objection": "Section 10 later calls generic one-slice data alpha,alpha' and may intend a broader metric; treat this as under-typed rather than impossible."
+      },
+      {
+        "role": "constructive QFT / OS lead",
+        "background": "Osterwalder-Schrader reconstruction, Markov semigroups, continuum limits",
+        "finding": "Theorem 9.4 is conditional on equal finite-scale (rho,K) or convergence to a common limiting (rho,T); it cannot independently establish that common limiting pair for AF versus IR.",
+        "objection": "A separate Section-10 argument could still prove common limiting data, but (10.80)-(10.81) does not."
+      },
+      {
+        "role": "dynamical systems / asymptotic analysis lead",
+        "background": "renormalization flows, contraction/stable-manifold estimates",
+        "finding": "Theorem 9.3's decisive feature is the explicit O(a_k) response, which gives a geometric vanishing tail. Finite parameter distance without that scale factor is insufficient.",
+        "objection": "A trajectory-aware stable-manifold estimate could supply an alternative vanishing tail even if the Section-9 metric is not the right representation."
+      },
+      {
+        "role": "adversarial falsification lead",
+        "background": "counterexamples, perturbation bounds, Markov-process logic",
+        "finding": "Bounded distance or bounded cumulative drift does not force equality. The exact logical controls are d_k=1 without an a_k factor, and two Markov pairs with different transition kernels despite common positivity/Markov structure.",
+        "objection": "These controls falsify inference forms, not the Yang-Mills theorem statement itself."
+      },
+      {
+        "role": "formal methods / provenance lead",
+        "background": "typed interfaces, proof obligations, source/statement binding",
+        "finding": "The unbound interface key is parameter_identity/comparison_modulus: Section-9 theorem hypotheses are not mapped field-by-field to the AF/IR inputs used in Theorem 10.8.",
+        "objection": "No proof assistant or independent verifier was run; this is a source-bound proof-interface diagnosis only."
+      },
+      {
+        "role": "novelty / research-value lead",
+        "background": "mathematical-physics literature review and negative-history control",
+        "finding": "The result sharpens the existing R7 residual rather than establishing a new Yang-Mills theorem. It is useful because it converts 'apply universality' into a precise missing witness.",
+        "objection": "Retained semantic novelty must remain zero until protected novelty/authority gates admit anything."
+      }
+    ],
+    "independent_review_credit": 0,
+    "consensus": "MISSING_TYPED_APPLICABILITY_WITNESS_NOT_CATEGORICAL_INAPPLICABILITY",
+    "strongest_objection": "Section 10's notation alpha,alpha' for one-slice data could be intended to broaden Section 9's admissible metric beyond projector/block parameters. The source must therefore be audited for an explicit broadened definition and O(a_k) estimate before concluding the repair fails.",
+    "next_action": "Search the source and current primary literature for an explicit trajectory-aware Section-9 admissible metric or direct vanishing AF/IR comparison; if absent, freeze a constructive stable-manifold/inter-trajectory repair atom rather than repeat generic universality prose."
+  },
+  "RAKL_METHOD_CASE_STUDY": {
+    "active_atom": "YM-S1c1a",
+    "atom_signature": "YM-S1c1a-SECTION9-UNIVERSALITY-AFIR-TRAJECTORY-TO-SCHEME-EMBEDDING-SAME-THEORY-GLUING",
+    "actual_fibre_hash": "b958d0e01ccc66947d198957d06fc6b4c9d125794a9888014a0297f593395d57",
+    "research_method_used": [
+      "exact root contract",
+      "frozen MathContextFiber",
+      "dual-memory review",
+      "v3 ProblemFibre/gluing decomposition",
+      "primary-source theorem typing",
+      "same-context six-role expert cell",
+      "counterexample-first logical controls",
+      "hash-chained trace",
+      "proposal/shadow authority boundary"
+    ],
+    "methods_operators_motifs_tried": [
+      "typed_parameter_identity_audit",
+      "O(a_k)_modulus_transfer_check",
+      "Markov_common_limit_hypothesis_check",
+      "same_theory_gluing_report",
+      "finite_distance_hostile_control",
+      "conditional_uniqueness_hostile_control"
+    ],
+    "retrieved_prior_experience": {
+      "selected": [
+        {
+          "id": "EP-YM-S1c1a-R7-20260811",
+          "effect": "directly supplied the frozen residual asking for a Section-9 applicability type-check"
+        },
+        {
+          "id": "#166",
+          "effect": "bound exact prospective success contract for the AF/IR repair"
+        },
+        {
+          "id": "#126",
+          "effect": "kept same-theory OS state/semigroup identification separate from local source estimates"
+        },
+        {
+          "id": "#92",
+          "effect": "kept physical scale/normalization as a separate representation obligation"
+        }
+      ],
+      "rejected": [
+        {
+          "id": "PR#158",
+          "why": "strict-defect-budget analogy already shaped R7; it does not decide the Section-9 coordinate embedding now under audit"
+        }
+      ],
+      "missed": "CANNOT_MEASURE: no complete protected episode/failure/motif inventory was materialized through the connector runtime."
+    },
+    "decision_policy": "Follow the previously frozen R7 residual and choose the smallest theorem-applicability discriminator. Prefer a typed source-local witness over another generic FRD/universality search; do not invent a new RG mechanism unless the source repair fails.",
+    "falsifier_verification": {
+      "finite_distance": "If a comparison only has d_k=1 with no O(a_k) factor, bounded parameter distance does not make the difference vanish; Theorem 9.3 works because the source supplies an explicit scale-decaying modulus.",
+      "markov_uniqueness": "Two Markov systems may satisfy positivity/locality/Markov structure while differing when their invariant marginal or transition kernel differs; Theorem 9.4 explicitly requires equality/common limiting (rho,T).",
+      "section10_recurrence": "R7 control D_k=1, epsilon_k=0 remains a valid falsifier of the one-sided recurrence as an equality-of-limits argument."
+    },
+    "outcome": "PARTIAL_SUCCESS__SECTION9_REPAIR_SURFACE_TYPED__AFIR_TRAJECTORY_TO_SCHEME_APPLICABILITY_NOT_ESTABLISHED",
+    "residual": "RES-YM-S1c1a-R8-TRAJECTORY-TO-SECTION9-SCHEME-EMBEDDING-OR-VANISHING-INTERTRAJECTORY-ESTIMATE",
+    "failure_categories": {
+      "mathematical": false,
+      "retrieval": false,
+      "decomposition": false,
+      "representation": true,
+      "gluing": true,
+      "source": true,
+      "verification": false,
+      "tooling": true,
+      "meta_policy": false
+    },
+    "local_vs_gluing": {
+      "local_mathematical_failure": "NONE: source formulas and logical controls were checked locally.",
+      "local_source_failure": "The inspected source does not display the trajectory-to-scheme field mapping and O(a_k) applicability proof needed to invoke Section 9 for AF versus IR.",
+      "local_to_global_gluing_failure": "Section-9 regulator universality is not yet glued to the Section-10 AF/IR same-theory identification.",
+      "representation_failure": "Parameter symbol alpha is used more broadly in Section 10 than its explicit Section-9 definition; without a typed redefinition this risks collapsing regulator and running-theory coordinates."
+    },
+    "seven_saturation_axes": {
+      "KNOWLEDGE": {
+        "state": "FLAT_THIS_ROUND",
+        "retained_novelty": 0
+      },
+      "OPERATOR": {
+        "state": "FLAT_THIS_ROUND",
+        "retained_novelty": 0
+      },
+      "EXPERIENCE_PATTERN": {
+        "state": "REOPENED_BY_NATIVE_RESIDUAL",
+        "retained_novelty": 0,
+        "reason": "repeated same-theory/gluing failure links #126 -> R7 -> R8"
+      },
+      "OBSTRUCTION": {
+        "state": "REOPENED_BY_NATIVE_RESIDUAL",
+        "retained_novelty": 0,
+        "reason": "RES-YM-S1c1a-R8-TRAJECTORY-TO-SECTION9-SCHEME-EMBEDDING-OR-VANISHING-INTERTRAJECTORY-ESTIMATE"
+      },
+      "RELATION": {
+        "state": "REOPENED_BY_NATIVE_RESIDUAL",
+        "retained_novelty": 0,
+        "reason": "unresolved relation between regulator coordinates and AF/IR trajectory coordinates"
+      },
+      "PATH": {
+        "state": "REOPENED_BY_NATIVE_RESIDUAL",
+        "retained_novelty": 0,
+        "reason": "repair path now requires a typed embedding/direct vanishing estimate/common-limit proof"
+      },
+      "META_METHOD": {
+        "state": "FLAT_THIS_ROUND",
+        "retained_novelty": 0
+      }
+    },
+    "solved_subproblem_novelty_class": {
+      "classification": "representation",
+      "secondary": "transfer",
+      "authority": "classification only; no novelty promotion"
+    },
+    "what_worked": [
+      "v3 GluingReport semantics made the local-vs-global failure explicit",
+      "R7 experience routing prevented a repeat of the harmonic-series check",
+      "primary-source parameter definitions exposed the exact type mismatch",
+      "Theorem 9.4's own hypotheses prevent circular use of Markov uniqueness"
+    ],
+    "what_failed": [
+      "no explicit trajectory-to-Section-9 admissible-coordinate witness was source-bound",
+      "Section-9 screenshots for pp95/101/104 hit arXiv cache misses; parsed primary-PDF text remained available and Section-10 pp127/128 screenshots succeeded"
+    ],
+    "v3_feature_helped": [
+      "TaskEpisode proposal/shadow admission",
+      "ProblemFibre LocalSection/GluingObstruction/GluingReport",
+      "gluing_learning residual vocabulary",
+      "current seven-axis SaturationVector",
+      "scientific-authority noninterference"
+    ],
+    "v3_feature_missing_or_weak": "Current GluingObstruction records conflicting key/value interfaces, but a domain-typed convergence witness for regulator/trajectory/state-space identifications is not first-class.",
+    "framework_improvement_hypothesis": "Before any framework change, benchmark whether repeated continuum-transfer cases (#126, R7, R8 and cross-problem cases) benefit from extending existing ProblemFibre gluing with a proposal-only InterfaceWitness carrying source/target coordinate types, regulator sequence, state-space maps, comparison norm, convergence mode, and subject hashes. Do not open or promote a framework change from this application evidence alone.",
+    "repeated_process_failure_links": [
+      "#126 OS semigroup/same-theory identification",
+      "EP-YM-S1c1a-R7-20260811 AF/IR equality glue",
+      "EP-YM-S1c1a-R8-20260811 Section9 trajectory-to-scheme applicability"
+    ]
+  },
+  "RAKL_CYCLE_METRICS": {
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "rakl_core_manifest_version": "0.6.6",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "rakl_main_sha": "fd188f9664da0a1dcba633c30c17ce511f598d51",
+    "rakl_math_current_main_sha": "9c2cebe8d5a2b1381af5a40cbea86a6826e7210a",
+    "rakl_math_pr_base_sha": "55f1b786396f0f29ee4edd7e80b0b0023b34e90f",
+    "rakl_math_branch_head_before": "9e7569b8998d75eee8981a9ff44d26ed817151fc",
+    "rakl_math_branch_head_after": "CANNOT_MEASURE_IN_SELF_APPENDING_RECEIPT: external PR-head binding required after writes.",
+    "pre_state_fingerprint": {
+      "kind": "application-study-input-fingerprint",
+      "sha256": "e49d6ceecd6f3efca643a8b7a6b412a71b36e8d2c78c77e55214f31cb9654fe9",
+      "protected_RAKL_state_identity_hash": "CANNOT_MEASURE: no protected RAKLV3State/MemoryState materialization invoked."
+    },
+    "post_state_fingerprint": {
+      "kind": "proposal-shadow-semantic-output-fingerprint",
+      "sha256": "11caa2989bbedf346fac361ee0288e9a08e401c8c15a844d6938255424c08a3c",
+      "protected_RAKL_state_identity_hash": "CANNOT_MEASURE: no protected state materialization or promotion invoked; proposal files are not protected semantic state."
+    },
+    "active_atom": "YM-S1c1a",
+    "atom_signature": "YM-S1c1a-SECTION9-UNIVERSALITY-AFIR-TRAJECTORY-TO-SCHEME-EMBEDDING-SAME-THEORY-GLUING",
+    "fibre_snapshot_hash": "b958d0e01ccc66947d198957d06fc6b4c9d125794a9888014a0297f593395d57",
+    "canonical_method_specs_surfaces_invoked": [
+      "decomposition",
+      "routing",
+      "search_query_generation",
+      "source_selection_reliability",
+      "claim_extraction",
+      "ontology_terminology_normalization",
+      "mathematical_context_translation",
+      "equivalence_similarity",
+      "contextual_theory_gluing",
+      "contradiction_diagnosis",
+      "gap_discovery",
+      "experiment_query_selection",
+      "synthesis",
+      "memory",
+      "review",
+      "saturation_stopping",
+      "prompting_context_policy"
+    ],
+    "memory_retrieval": {
+      "selected_count": 4,
+      "selected_ids": [
+        "EP-YM-S1c1a-R7-20260811",
+        "#166",
+        "#126",
+        "#92"
+      ],
+      "rejected_count": 1,
+      "rejected_ids": [
+        "PR#158"
+      ],
+      "protected_tools_retrieved_count": 0,
+      "protected_failures_retrieved_count": 0,
+      "protected_episodes_retrieved_count": 0,
+      "protected_motifs_retrieved_count": 0,
+      "missed": "CANNOT_MEASURE: complete protected v3 inventory not materialized via connector runtime."
+    },
+    "outcome": "PARTIAL_SUCCESS__SECTION9_REPAIR_SURFACE_TYPED__AFIR_TRAJECTORY_TO_SCHEME_APPLICABILITY_NOT_ESTABLISHED",
+    "residual_before": "RES-YM-S1c1a-SAME-THEORY-VANISHING-AFIR-DIFFERENCE-OR-TYPED-SECTION9-REPAIR",
+    "residual_after": "RES-YM-S1c1a-R8-TRAJECTORY-TO-SECTION9-SCHEME-EMBEDDING-OR-VANISHING-INTERTRAJECTORY-ESTIMATE",
+    "retained_semantic_novelty": {
+      "KNOWLEDGE": 0,
+      "OPERATOR": 0,
+      "EXPERIENCE_PATTERN": 0,
+      "OBSTRUCTION": 0,
+      "RELATION": 0,
+      "PATH": 0,
+      "META_METHOD": 0
+    },
+    "saturation_axes_reopened": [
+      "EXPERIENCE_PATTERN",
+      "OBSTRUCTION",
+      "RELATION",
+      "PATH"
+    ],
+    "saturation_axes_flattened": [
+      "KNOWLEDGE",
+      "OPERATOR",
+      "META_METHOD"
+    ],
+    "resource_proxies": {
+      "model_tokens": "CANNOT_MEASURE: exact model token counter not exposed.",
+      "context_tokens": "CANNOT_MEASURE: exact context token counter not exposed.",
+      "retrieval_calls": "CANNOT_MEASURE: orchestration/context compaction prevents exact end-to-end reconstruction.",
+      "tool_calls": "CANNOT_MEASURE: orchestration/context compaction prevents exact end-to-end reconstruction.",
+      "wall_time": "CANNOT_MEASURE: no authoritative end-to-end cycle timer was frozen at start.",
+      "tool_types_used": [
+        "GitHub connector",
+        "web primary-source/PDF search/open/screenshot",
+        "private Python hashing/serialization"
+      ],
+      "pdf_screenshot_success_pages": [
+        127,
+        128
+      ],
+      "pdf_screenshot_cache_miss_pages": [
+        95,
+        101,
+        104
+      ]
+    },
+    "new_ids": {
+      "shadow_episode_ids": [
+        "EP-YM-S1c1a-R8-20260811"
+      ],
+      "shadow_diagnosis_ids": [
+        "DG-YM-S1c1a-R8-SECTION9-TYPE-MISMATCH-SHADOW"
+      ],
+      "shadow_failure_ids": [
+        "FS-YM-S1c1a-R8-SECTION9-APPLICABILITY-GLUING-SHADOW"
+      ],
+      "shadow_obstruction_ids": [
+        "OBS-YM-S1c1a-R8-TRAJECTORY-SCHEME-GLUE-SHADOW"
+      ],
+      "shadow_lesson_ids": [
+        "LESSON-YM-S1c1a-R8-UNIVERSALITY-COORDINATE-SCOPE-SHADOW"
+      ],
+      "new_protected_episode_ids": [],
+      "new_protected_lesson_ids": [],
+      "new_protected_failure_ids": [],
+      "new_protected_tool_ids": [],
+      "new_protected_obstruction_ids": [],
+      "new_protected_motif_ids": []
+    },
+    "successful_reuse_ids": [
+      "EP-YM-S1c1a-R7-20260811",
+      "#126",
+      "#92"
+    ],
+    "gate_status": {
+      "root": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "scientific_authority": "NO_PROMOTION_TRANSITION_INVOKED",
+      "formal_verifier": "NOT_RUN",
+      "dependency_axiom_audit": "INCOMPLETE",
+      "barrier_audit": "INCOMPLETE",
+      "isolated_recheck": "0",
+      "independent_mathematical_reviews": 0,
+      "novelty_gate": "NO_RETAINED_NOVELTY",
+      "ci": "PENDING_EXACT_NEW_HEAD"
+    },
+    "provenance_status": "PRIMARY_SOURCE_BOUND_WITH_EXACT_SELECTORS; current RAKL main re-read; GitHub application lineage exact through branch-head-before field.",
+    "rakl_changed_observable_action_preference": "CANNOT_MEASURE_CAUSAL_COUNTERFACTUAL: no fresh pre-memory action ranking was frozen in R8. Observable continuity is strong: the R7 residual explicitly selected this Section-9 type-check, and that prior episode was reused.",
+    "raw_repository_growth_counts_as_learning": false,
+    "rakl_math_semantic_head_after_source_audit_before_receipt": "8ea52e6ef76c8214530b3c3021d986ebc0d99e36"
+  }
+}
