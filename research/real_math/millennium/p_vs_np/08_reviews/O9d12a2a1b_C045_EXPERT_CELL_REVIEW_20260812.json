@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "R-PNP-C045-EXPERT-CELL-20260812",
+  "authority": "SAME_CONTEXT_HOSTILE_REVIEW_NOT_INDEPENDENT",
+  "candidate": "C045_G17_COMPONENT_SEPARABILITY_RESULT_20260812",
+  "roles": [
+    {
+      "role": "definition/source auditor",
+      "background": "complexity lower bounds and formal source provenance",
+      "checks": [
+        "ECCC TR25-033 Definitions 18-21 bound exactly",
+        "empty generator trace makes above semi-filter impossible",
+        "upper-bound polarity only"
+      ],
+      "finding": "PASS_WITH_SCOPE: the generator-trace argument uses upward closure and empty-set exclusion correctly; no source statement is used to infer a lower bound."
+    },
+    {
+      "role": "finite combinatorics/LP expert",
+      "background": "set systems, cover LPs and communication matrices",
+      "checks": [
+        "three-bit local pair disjointness",
+        "38 active-cell separator table",
+        "global indexwise union plus separator"
+      ],
+      "finding": "PASS_WITH_SCOPE: explicit local three-pair cover and four-pair block construction are valid upper constructions. No claim rho(G17)>3 or equality is supported."
+    },
+    {
+      "role": "decoder/gadget expert",
+      "background": "Boolean encodings and CNF syntax",
+      "checks": [
+        "L0 in {31,32}",
+        "m=1 padding case",
+        "v=2,3,m=2 only UNSAT-capable exact case",
+        "two-clause falsifying-set proof",
+        "prefix/suffix coordinates"
+      ],
+      "finding": "PASS: exactly ten canonical UNSAT length-32 words follow from the frozen decoder."
+    },
+    {
+      "role": "counterexample verifier",
+      "background": "finite exhaustive search and property testing",
+      "checks": [
+        "enumerate v=2,3 two-clause encodings",
+        "compare exact ten words",
+        "recompute row/column E/H/X signatures",
+        "look for uncovered active cell"
+      ],
+      "finding": "CALIBRATION_MATCH: ten words and zero uncovered local active cells. Computation is corroboration only and is not promoted as proof."
+    },
+    {
+      "role": "gluing/barrier reviewer",
+      "background": "complexity barriers and proof-dependency auditing",
+      "checks": [
+        "local G17 to future layers",
+        "cover upper bound to circuit complexity",
+        "root contract B1/B2/B3",
+        "independent-review status"
+      ],
+      "finding": "BLOCK_GLOBAL_PROMOTION: finite four-pair upper cover neither supplies a uniform recurrence nor any circuit lower bound. P-vs-NP root remains open; independent mathematical reviews 0/3."
+    }
+  ],
+  "atomic_gap_discussion": [
+    "The initial phrase 'inherited P1-P3 code' was representation-incomplete on new complement cells. The cell rejected silent inheritance and repaired the proof via an independently coded new block plus C044 multiplexing.",
+    "Row-projection disjointness is load-bearing. Column disjointness is automatic for the fresh half, so the next genuine coupling search should target first repeated active prefix row.",
+    "A row collision would only defeat block separability; it would not by itself imply rho growth because a different global cover may still exist.",
+    "The G17 upper result is local mathematical closure. The lack of a uniform recurrence/circuit bridge is a separate gluing failure, not a defect in the finite proof."
+  ],
+  "verdict": "LOCAL_RESULT_ACCEPTABLE_AS_PROPOSAL_SHADOW; ROOT_AND_PROTECTED_PROMOTION_BLOCKED",
+  "independent_review_credit": 0,
+  "required_independent_reviews_for_root": 3,
+  "artifact_hash": "sha256:9cd5298c4f5d224dc850c69ea1de98528ac250aa034b099c57a5e57f8e2470e0"
+}

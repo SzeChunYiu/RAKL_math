@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0.0",
+  "authority": "PROPOSAL_SHADOW_RETROSPECTIVE_TRUTH_CHECK_ONLY",
+  "task_episode": {
+    "episode_id": "E-PNP-C045-U17-RETROSPECTIVE-20260812",
+    "atom_id": "O9d12a2a1b-C045",
+    "problem_signature": "EXACT_FULL_HISTORY_QUOTIENT_COMPONENT_INCIDENCE_AT_U16_TO_U17",
+    "authoritative_fibre": {
+      "source_commit": "4c33934030f98ba81a77b419d2317a1b31173fdc",
+      "packet_hash": "sha256:0cf4c07e20ba1bda93d3acea8714928599aa450d81f902fdff86d8f4d764dd11",
+      "target_state_at_freeze": "TARGET_OUTCOME_UNOBSERVED",
+      "candidate_generation_allowed": false
+    },
+    "parallel_fibre_actually_used_during_derivation": {
+      "commit": "e6d7f886416bf954e368db8edd028f4870fc7a1f",
+      "hash": "sha256:7c96aab2cbb6bb6151aaa9ae2c34c9259d0964417ce7c9300be9e6d04573f182",
+      "note": "This independently frozen fibre preceded the parallel derivation but was not bound to the later-merged authoritative C045 packet. It therefore cannot receive strict current-packet discovery credit."
+    },
+    "fibre_contents_actually_consulted": [
+      "exact P!=NP root contract and B1/B2/B3 authority boundary",
+      "frozen C041 one-sided decoder and recursive complement rule",
+      "C043 exact length formula and accumulated G16 support/twin facts",
+      "C044 heterogeneous component-multiplexing lemma and Q16 three-pair cover",
+      "C044 component-coupling failure/gate",
+      "ECCC TR25-033 Definitions 18-21 and Theorem 22",
+      "RAKL 3.0.0 current main method_specs surfaces",
+      "after discovery: merged C045 result-blind pre-candidate packet from PR #224"
+    ],
+    "operators_motifs_tried": [
+      "component-incidence/coupling gate",
+      "exact Diophantine encoding-length classification",
+      "two-clause falsifying-set half-cube classification",
+      "full accumulated row/column projection comparison",
+      "three-bit E/H/X star code",
+      "heterogeneous block multiplexing",
+      "finite exhaustive decoder calibration"
+    ],
+    "search_policy": "Use RAKL v3 routing/gap discovery to test the smallest high-information obstruction first: whether U17 creates a row/column support incidence joining inherited components. After the negative incidence result, repair representation by constructing a legal local code before gluing with C044.",
+    "observations": [
+      "Exactly ten canonical length-32 UNSAT words occur: v in {2,3}, m=2, with opposite repeated unit clauses on the same variable in either order.",
+      "All eight new prefix rows were complement-empty in U16 and every new column lies in the fresh half, so old and new complement support has disjoint row and column projections.",
+      "The authoritative C045 result branch is therefore NO_CROSS_COMPONENT_COUPLING.",
+      "The new block has an explicit three-pair generator-separating code; with C044 multiplexing and one block separator, rho(G17)<=sigma(G17)<=4.",
+      "Literal extension of the old Q16 pair labels to new complement cells was rejected as undefined; an independent local code was required.",
+      "A concurrently merged strict C045 pre-candidate packet existed before final preservation and had not licensed candidate execution; the parallel derivation was not bound to it."
+    ],
+    "verification": [
+      "hand length-31/32 padding audit",
+      "hand falsifying-set cardinality proof",
+      "exact 16/16 prefix/suffix table",
+      "full-history row/column projection check",
+      "38-cell E/H/X separation table",
+      "finite exhaustive enumeration as calibration only",
+      "five-role same-context hostile review",
+      "current-main/PR reconciliation and authority downgrade"
+    ],
+    "outcome": "MATHEMATICAL_TRUTH_CHECK_ACCEPTED_LOCALLY; STRICT_RAKL_DISCOVERY_CREDIT_DENIED; NO_CROSS_COMPONENT_COUPLING_AT_U17; rho(G17)<=sigma(G17)<=4",
+    "residual_failure_signature": "EARLIEST_LATER_UNSAT_PREFIX_ROW_COLLISION_OPEN; UNIFORM_RECURRENCE_OPEN; CIRCUIT_BRIDGE_OPEN; ROOT_OPEN; CURRENT-PACKET_CANDIDATE_CHRONOLOGY_NOT_SATISFIED",
+    "cost_effort_proxy": {
+      "finite_unsat_words": 10,
+      "active_cells_checked": 38,
+      "expert_roles": 5,
+      "model_tokens": "CANNOT_MEASURE: no authoritative counter",
+      "context_tokens": "CANNOT_MEASURE: no authoritative counter",
+      "tool_calls": "CANNOT_MEASURE: runtime compaction prevents exact full-cycle count",
+      "retrieval_calls": "CANNOT_MEASURE: runtime compaction prevents exact full-cycle count",
+      "wall_time": "CANNOT_MEASURE: no authoritative cycle timer"
+    },
+    "next_action": "Do not promote this result as strict discovery. From current main, preserve it as retrospective local truth/negative history and route the next fresh atom to the earliest canonical UNSAT prefix row that collides with accumulated Rows(U_n), with a canonical candidate freeze bound to the current packet before target execution."
+  },
+  "episode_to_diagnosis": {
+    "diagnosis_id": "D-PNP-C045-FRESH-ROW-BLOCK-PLUS-PACKET-HANDOFF",
+    "local_mathematical_failure": "The hypothesized first coupling event is false at U17 because all new UNSAT prefix rows are fresh relative to old complement row support.",
+    "representation_failure": "Old pair coordinates had no defined membership on new ground; repaired by an independent local three-pair code and legal block gluing.",
+    "local_to_global_gluing_failure": "The finite G17 upper construction gives no uniform recurrence, circuit lower bound, or P!=NP bridge.",
+    "meta_policy_failure": "A parallel result path continued on an independently frozen fibre while a stricter authoritative C045 pre-candidate packet was concurrently merged with candidate_generation_allowed=false. Strict current-packet discovery credit is therefore denied rather than backfilled.",
+    "retrieval_failure": false,
+    "source_failure": false,
+    "verification_failure": false
+  },
+  "reusable_obstruction_or_lesson": {
+    "obstruction_id": "O-PNP-C045-ROW-PROJECTION-COLLISION-GATE",
+    "lesson_id": "L-PNP-C045-FRESH-ROWS-IMPLY-BLOCK-SEPARABILITY",
+    "statement": "For the frozen one-sided recursive family, fresh-half columns cannot by themselves couple backward. If every newly UNSAT prefix row was complement-empty before the step, old and new complement support is block-separable. A necessary first discriminator for this coupling mechanism is a newly UNSAT prefix row already in accumulated Rows(U_n).",
+    "non_guarantees": [
+      "row collision is not sufficient for rho growth",
+      "failure of one cover is not a lower bound",
+      "finite G17 behavior is not asymptotic",
+      "no root authority"
+    ]
+  },
+  "experience_routing": {
+    "selected_changed_routing": [
+      {
+        "id": "F-C044-HETEROGENEOUS-BLOCK-MULTIPLEXING",
+        "effect": "replaced semantic/type counting by component-incidence testing"
+      },
+      {
+        "id": "E-PNP-C044-EXACT-COMPONENT-COUPLING-GATE",
+        "effect": "made exact support incidence the first decision coordinate"
+      },
+      {
+        "id": "C043-FIRST-ROW-SPLIT",
+        "effect": "supplied exact decoder/length/full-history support data"
+      },
+      {
+        "id": "C013-QUOTIENT-BLOWUP-CEILING",
+        "effect": "kept quotient transfer upper-bound-only"
+      }
+    ],
+    "retrieved_rejected": [
+      {
+        "id": "C041A-ZERO-AUGMENTATION",
+        "reason": "copy/relabelling disanalogy"
+      },
+      {
+        "id": "C041B-TIGHT-INTERSECTION-ABSORPTION",
+        "reason": "dual saturation analysis deferred because incidence gate decided the atom first"
+      },
+      {
+        "id": "MYHILL-NERODE-ANALOGY",
+        "reason": "finite residual equality only; no cover/circuit authority"
+      }
+    ],
+    "missed_prior_experience": "The concurrently prepared C045 pre-candidate packet was not available on main at the initial read and became visible only after the parallel result path had begun. This is recorded as a handoff/meta-policy failure, not silently treated as prior knowledge.",
+    "cross_millennium": "NOT_QUERIED: no applicability/DifferenceWitness supported transfer of the exact cover/fibre structure"
+  },
+  "saturation_axes": {
+    "KNOWLEDGE": "shadow reopened on exact U17 classification; protected retained novelty 0",
+    "OPERATOR": "component-incidence gate and block multiplexing reused; protected retained novelty 0",
+    "EXPERIENCE_PATTERN": "fresh-row semantic activation remains noncoercive; protected retained novelty 0",
+    "OBSTRUCTION": "shadow reopened as row-projection collision; protected retained novelty 0",
+    "RELATION": "shadow reopened prefix collision -> component coupling -> cover stress; protected retained novelty 0",
+    "PATH": "shadow reopened toward earliest row collision; U17 coupling path flattened; protected retained novelty 0",
+    "META_METHOD": "reopened due parallel authoritative-packet handoff failure; protected retained novelty 0"
+  },
+  "novelty_classification": {
+    "subproblem": "finite U17 component-separability and four-pair upper cover",
+    "class": "compositional",
+    "secondary": "representation",
+    "authority": "proposal/shadow retrospective truth only"
+  },
+  "RAKL_METHOD_CASE_STUDY": {
+    "method": "v3 obstruction-directed routing -> exact syntax classification -> component-incidence falsifier -> representation repair -> block gluing -> hostile review -> current-main reconciliation",
+    "what_worked": [
+      "C044 failure memory changed routing",
+      "smallest incidence gate was decisive",
+      "exact hand proof separated mathematics from computation",
+      "representation review caught undefined pair extension",
+      "same-context expert cell separated local and global claims"
+    ],
+    "what_failed": [
+      "U17 was not the first coupling layer",
+      "parallel branch was not bound to the concurrently merged strict C045 packet",
+      "no asymptotic/circuit/root gluing followed"
+    ],
+    "failure_categories": [
+      "mathematical",
+      "representation",
+      "gluing",
+      "meta-policy"
+    ],
+    "v3_feature_helped": [
+      "decomposition",
+      "routing",
+      "gap_discovery",
+      "memory",
+      "review",
+      "saturation_stopping",
+      "authority_promotion non-escalation"
+    ],
+    "v3_feature_missing_or_weak": "No automatic atom lease/fresh-main handoff prevents a parallel result-capable path from continuing once a stricter pre-candidate packet for the same atom is merged elsewhere.",
+    "framework_improvement_hypothesis": "Add an atom-scoped freshness/lease gate: before first result-capable action, re-resolve current main for the active atom ID and require the latest authoritative pre-candidate packet hash plus candidate/evaluator authorization. If a newer packet exists, force CANNOT_CHECK/REBASE rather than allowing strict discovery credit.",
+    "repeated_process_failure_links": [
+      "C041A late-fibre chronology denial",
+      "C041B repeated late-fibre chronology denial",
+      "C044 result-exposed-before-freeze retrospective denial",
+      "C045 parallel authoritative-packet handoff denial"
+    ],
+    "credit_policy": "All mathematical and method records remain proposal/shadow; no protected novelty or root authority is minted."
+  },
+  "artifact_hash": "sha256:769d05c3a2cf549d60b4a5f6792a1f8b520c3b3a8e5e2204404bc0931bbc10e9"
+}

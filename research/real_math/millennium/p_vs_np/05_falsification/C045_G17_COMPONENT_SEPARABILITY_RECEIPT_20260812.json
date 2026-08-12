@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "receipt_id": "PNP-C045-G17-COMPONENT-SEPARABILITY-20260812",
+  "atom_id": "O9d12a2a1b-C045",
+  "authority": "PROPOSAL_SHADOW",
+  "frozen_fibre_commit": "e6d7f886416bf954e368db8edd028f4870fc7a1f",
+  "fibre_snapshot_hash": "sha256:7c96aab2cbb6bb6151aaa9ae2c34c9259d0964417ce7c9300be9e6d04573f182",
+  "source_provenance": {
+    "primary": {
+      "title": "Boolean Circuit Complexity and Two-Dimensional Cover Problems",
+      "authors": [
+        "Bruno P. Cavalar",
+        "Igor C. Oliveira"
+      ],
+      "report": "ECCC TR25-033",
+      "date": "2025-03-18",
+      "url": "https://eccc.weizmann.ac.il/report/2025/033/",
+      "local_blob_sha": "8dfe370a6bf687eb33ebf52eaaf9308e1bdf0230",
+      "selectors": [
+        "Definition 18",
+        "Definition 19",
+        "Definition 20",
+        "Definition 21",
+        "Theorem 22"
+      ]
+    },
+    "application_decoder": {
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+      "blob_sha": "fcc4814dd618da96ef9bb8144a4783a0a6e886e1"
+    },
+    "parent_results": [
+      "C043_FIRST_ROW_SPLIT_RESULT_20260812",
+      "C044_RETROSPECTIVE_Q16_MULTIPLEXING_RESULT_20260812"
+    ]
+  },
+  "length32": {
+    "candidate_parameter_pairs": {
+      "satisfiable_only": [
+        [
+          "v=8..15",
+          "m=1"
+        ]
+      ],
+      "potential_unsat": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    "unsat_characterization": "exactly two repeated unit clauses on the same variable with opposite signs, in either order",
+    "count": 10,
+    "new_edges": [
+      [
+        58696,
+        37741
+      ],
+      [
+        58698,
+        55881
+      ],
+      [
+        58697,
+        9654
+      ],
+      [
+        58699,
+        27794
+      ],
+      [
+        58728,
+        37741
+      ],
+      [
+        58730,
+        55881
+      ],
+      [
+        58729,
+        9654
+      ],
+      [
+        58729,
+        47103
+      ],
+      [
+        58731,
+        27794
+      ],
+      [
+        58731,
+        65243
+      ]
+    ]
+  },
+  "component_gate": {
+    "old_new_ground_disjoint": true,
+    "row_projections_disjoint": true,
+    "column_projections_disjoint": true,
+    "cross_component_complement_cells": [],
+    "outcome": "NO_LOAD_BEARING_COUPLING_AT_G17"
+  },
+  "local_cover": {
+    "edge_codes_lsb_coordinate_order": [
+      0,
+      2,
+      7,
+      1,
+      4,
+      2,
+      6,
+      6,
+      1,
+      5
+    ],
+    "row_signatures": {
+      "58696": "EEE",
+      "58697": "HHH",
+      "58698": "EHE",
+      "58699": "HEE",
+      "58728": "EEH",
+      "58729": "EHH",
+      "58730": "EHE",
+      "58731": "HEX"
+    },
+    "column_signatures": {
+      "9654": "XHH",
+      "27794": "HEE",
+      "37741": "EEX",
+      "47103": "EHH",
+      "55881": "EHE",
+      "65243": "HEH"
+    },
+    "active_cells": 38,
+    "uncovered_active_cells": 0,
+    "proof_role": "finite table corroborates explicit hand cover; computation is falsifier/calibration only"
+  },
+  "global_conclusion": {
+    "proved": "rho(G17) <= sigma(G17) <= 4",
+    "not_proved": [
+      "rho(G17)=4",
+      "rho(G17)>3",
+      "uniform constant upper bound",
+      "circuit lower bound",
+      "P != NP"
+    ]
+  },
+  "residual": "Find the first future canonical batch with a new UNSAT prefix row in the accumulated old complement row projection; fresh columns alone cannot create backward coupling.",
+  "novelty_class": {
+    "primary": "compositional",
+    "secondary": "representation",
+    "authority": "proposal/shadow"
+  },
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "artifact_hash": "sha256:ad662942cbffe0cfb47ea0b31ba33a7b3c958e85e10bd1b9c72fb6e32a519330"
+}
