@@ -1,0 +1,37 @@
+{
+  "schema_version": "bsd-r13-pre-action-fibre-v1",
+  "cycle_id": "BSD-A1a1-R13-TRANSVERSE-LOCALIZATION-AUDIT-20260812",
+  "task_id": "RAKL-VERIFIED-DISCOVERY-BSD-ANALYTIC",
+  "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "nested_obstruction_id": "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE",
+  "active_residual": "EXACT_COMPLEX_RANK2_TO_TRANSVERSE_P_LOCALIZATION_NONZERO_OPEN",
+  "framework": {"repo": "SzeChunYiu/RAKL", "sha": "1382a32d93bdf8c20b415c6a8552cfd3069968d5", "method_version": "3.0.0"},
+  "application": {"repo": "SzeChunYiu/RAKL_math", "base_sha": "320db4230608c5e39eb475b8239507b08ee10f9c"},
+  "root_contract": [
+    "same elliptic curve E/Q",
+    "input exact ord_{s=1}L(E,s)=2",
+    "target a theorem-backed nonzero p-local restriction/localization witness or strictly sufficient arithmetic witness",
+    "do not assume algebraic rank two, exact Selmer rank two, the desired localization/nonvanishing, p-adic BSD, comparable main-conjecture strength, or root-strength regulator/height nondegeneracy",
+    "local/Tamagawa/torsion/Sha/regulator/exceptional-zero hypotheses remain explicit",
+    "full BSD leading-term gluing remains separate"
+  ],
+  "selected_retrievals": [
+    {"retrieval_id": "RAKL_math@320db423:R9_ZHANG_SOURCE_AUDIT", "authority": "CANONICAL", "payload_hash": "525e5f74566a29bf6280e656792f3c24f40f3fb30716814192dc86a59700eab7", "payload_hash_semantics": "sha256 of canonical retrieval-identity envelope binding repository/ref/path/Git-blob-SHA"},
+    {"retrieval_id": "RAKL_math@320db423:R10_KATZ_AXIS_SOURCE_AUDIT", "authority": "CANONICAL", "payload_hash": "33277ba168675f3efa220940f49c58a8a315557a3ba7cb61406c2b0dc8d9caf7", "payload_hash_semantics": "sha256 of canonical retrieval-identity envelope binding repository/ref/path/Git-blob-SHA"},
+    {"retrieval_id": "RAKL_math@320db423:R11_HIGHER_GZ_SOURCE_AUDIT", "authority": "CANONICAL", "payload_hash": "ffdb5532abeecfd92e089f64308cfb06564274cc1cb30d3cdecb70f51aeced6b", "payload_hash_semantics": "sha256 of canonical retrieval-identity envelope binding repository/ref/path/Git-blob-SHA"},
+    {"retrieval_id": "RAKL_math_PR312@8421f272:R12_PINFINITY_VP_BINDING", "authority": "PENDING", "payload_hash": "ac69a71be99532488b31175dad4ef6d43054d37bb062197c5fff929b0c43521e", "payload_hash_semantics": "sha256 of canonical retrieval-identity envelope binding repository/ref/path/Git-blob-SHA; pending proposal has no authority-bearing role"}
+  ],
+  "rejected_or_non_authority": [
+    {"id": "RAKL_math_PR312@8421f272:R12_PINFINITY_VP_BINDING", "reason": "pending proposal may inform coefficient-coordinate context but does not bear authority and does not address transverse localization"},
+    {"id": "E-PNP-C042-EXACT-NEIGHBORHOOD-QUOTIENT", "reason": "R8 DifferenceWitness rejects arithmetic transfer"},
+    {"id": "OTEP-LIONS-LOCAL-TO-GLOBAL-TIGHTNESS-SPLIT", "reason": "retain only as gluing discipline; no arithmetic witness"}
+  ],
+  "predeclared_discriminator": "Locate a primary theorem in the generalized-Kato, Gross-Zagier/Kolyvagin, Skinner-style p-local, or derived-height families whose hypotheses begin from exact complex analytic rank two for the same E/Q and whose conclusion gives nonzero p-local localization/restriction without importing exact Selmer rank two, finite Sha as root-strength proxy, p-adic vanishing-order assumptions, p-adic BSD/main-conjecture-equivalent strength, or the desired localization itself.",
+  "falsifier": "Reject any candidate if the theorem direction starts from Selmer dimension/rank, nonzero generalized Kato/plectic class, finite Sha plus p-adic order, a different deformation/discrete coordinate without a proved complex-order comparison, or a rank-one hypothesis.",
+  "planned_process_surfaces": ["decomposition", "routing", "search_query_generation", "source_selection_reliability", "claim_extraction", "mathematical_context_translation", "equivalence_similarity", "contradiction_diagnosis", "gap_discovery", "contextual_theory_gluing", "memory", "synthesis", "review", "saturation_stopping"],
+  "pre_gate_action_preference": "bounded primary-source theorem-direction audit of transverse localization; do not invent a new carrier unless this discriminator yields a genuinely new route",
+  "independent_review_credit": 0,
+  "fibre_snapshot_hash": "sha256:fb7eeef69b93846882820e85e533b3472468d3a0804e053b2d5b4344a9b91089",
+  "hash_semantics": "fibre_snapshot_hash is sha256 of the canonical JSON semantic object before adding this hash field",
+  "authority": "PROPOSAL_SHADOW_PRE_ACTION_ONLY"
+}
