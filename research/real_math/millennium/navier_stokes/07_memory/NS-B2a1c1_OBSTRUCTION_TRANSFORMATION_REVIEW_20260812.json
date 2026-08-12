@@ -1,0 +1,46 @@
+{
+  "schema_version": "obstruction-transformation-review-v3-shadow",
+  "review_id": "OTR-NS-B2a1c1-20260812",
+  "target_atom_id": "NS-B2a1c1",
+  "target_context_hash": "sha256:663e72979a23265725349862397e5d8a7c2d94b75613ba062d504a7ea9a858b9",
+  "research_memory_review_hash": "sha256:26e03202f49226bd38d0b1fcf699216d00f5620739249fa467d6db217e8cc8a5",
+  "episode_memory_snapshot_hash": "sha256:f8424e62cde9c2229693963656381ab5305381c34c6e5a83cdaaf5a6a184849e",
+  "obstruction_fingerprint": {
+    "roles": ["2026 generalized-F producer", "Section-4 cutoff consumer", "old pure-power source episode"],
+    "relations": ["F(a) controls growth weights", "cutoff conservation needs strict decay at infinity", "alpha=2-m aligns power exponents"],
+    "constraints": ["1<alpha<2", "2alpha-3<=0", "3/s1+2/l1=4", "l1<=s1", "no assumption strengthening"],
+    "failure_mechanisms": ["wrong asymptotic exponent sign", "endpoint nondecay", "source-to-consumer hypothesis mismatch"],
+    "invariants_to_preserve": ["same axisymmetric swirl-free Euler equation", "same l1,s1 relation", "same omega_theta/r functional"],
+    "desired_transition": ["F=1 incompatibility -> exact nonempty compatible generalized-F parameter window"],
+    "forbidden_losses": ["do not import Proposition 2.3 L^q assumptions without inheritance", "do not promote conservation to regularity"]
+  },
+  "route_search": {
+    "SEARCH": "VIABLE_MATCH",
+    "JUMP": "NOT_RUN_BECAUSE_SEARCH_SURVIVED",
+    "GLUE": "NOT_RUN_BECAUSE_SEARCH_SURVIVED",
+    "LIFT": "NOT_ELIGIBLE"
+  },
+  "selected_mode": "SEARCH",
+  "selected_episode_ids": ["OTEP-NS-SEREGIN-POWERLAW-CUTOFF-20260812"],
+  "mapping_witness": {
+    "source_parameter": "m",
+    "target_parameter": "alpha",
+    "map": "alpha=2-m",
+    "shared_cutoff_mechanism": "m(1+l1)+3-4l1<0 maps to 4-3l1-(alpha-1)(l1+1)<0",
+    "unmatched_source_preconditions": [
+      "old Proposition 2.3 ancestor ess-sup_t L^q velocity assumption is not supplied by the 2026 generalized producer",
+      "power-log source is not identical to pure-power source; only the F(a) cutoff exponent is mapped"
+    ],
+    "difference_witness": "The transfer is only an exponent/representation equivalence; it does not transfer the old Type-II exclusion theorem or terminal-time vanishing argument."
+  },
+  "validation_obligations": [
+    "derive l1<=5/4",
+    "substitute F(a)=a^(alpha-1) into (4.4)",
+    "solve the strict exponent inequality and test equality",
+    "verify intersection with alpha<=3/2",
+    "verify alpha=2-m reproduces current v3 (2.11)",
+    "audit the source-to-terminal-time rigidity interface separately"
+  ],
+  "artifact_hash": "sha256:18916d9eccc7a00b890a723a97b1901c1da52994a17d6925842c81b9df7872a3",
+  "authority": "PROPOSAL_SHADOW_ROUTING_ONLY"
+}
