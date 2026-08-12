@@ -51,9 +51,11 @@ from rakl.semantic_shortcut import (
 
 ATOM = "O9d12a2a1b-C052"
 PARENT = "O9d12a2a1b-C051"
-APPLICATION_BASE_SHA = "b7ca6ac51fa8319b559e95402c47959c626f284a"
+ROUND_BASE_SHA = "cc39c7a2553c2e20aa7103652d1429675164016b"
+HISTORICAL_PREACTION_SUBJECT_BASE_SHA = "b7ca6ac51fa8319b559e95402c47959c626f284a"
 FRAMEWORK_PIN_SHA = "62e97d545f93ff604b2db47a7c8d41a59a1c5286"
 FRAMEWORK_CURRENT_SHA = "62e97d545f93ff604b2db47a7c8d41a59a1c5286"
+HISTORICAL_PREACTION_APPLICATION_PIN_SHA = "5dc0627f039e8f3e1cdcb7e05cd7603860afc554"
 FRAMEWORK_QUANTIFIER_RUNTIME_SHA256 = "cbbf7c125a505f4914a2253e75e5a809c67fb74e8193cc31d19ab3019938accc"
 FRAMEWORK_QUANTIFIER_SCHEMA_SHA256 = "2874ab098fd28941c1e001abdb90b2a164d0af6fe282bbcbdf68bdb38403917f"
 FROZEN_AT = "2026-08-12T10:35:00Z"
@@ -149,8 +151,8 @@ def context() -> MathContextFiber:
                 "MAGIC conflict while retaining escape and unresolved branches?"
             ),
             source_anchors=(
-                f"git:{APPLICATION_BASE_SHA}:{BASE}/04_candidates/C041_fx_sat_one_sided.py@blob:{DECODER_BLOB}",
-                f"git:{APPLICATION_BASE_SHA}:{BASE}/09_trace/O9d12a2a1b_C052_PARAMETRIC_RESIDUE_PRE_ACTION_20260812.json@blob:{PREACTION_BLOB}",
+                f"git:{HISTORICAL_PREACTION_SUBJECT_BASE_SHA}:{BASE}/04_candidates/C041_fx_sat_one_sided.py@blob:{DECODER_BLOB}",
+                f"git:{HISTORICAL_PREACTION_SUBJECT_BASE_SHA}:{BASE}/09_trace/O9d12a2a1b_C052_PARAMETRIC_RESIDUE_PRE_ACTION_20260812.json@blob:{PREACTION_BLOB}",
             ),
         ),
         MethodTransfer(
@@ -180,8 +182,8 @@ def context() -> MathContextFiber:
                 "or unresolved without selecting a new k?"
             ),
             source_anchors=(
-                f"git:{APPLICATION_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:{C050_RESULT_BLOB}",
-                f"git:{APPLICATION_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C051_K19_PROOF_RESULT_20260812.json@blob:{C051_RESULT_BLOB}",
+                f"git:{HISTORICAL_PREACTION_SUBJECT_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:{C050_RESULT_BLOB}",
+                f"git:{HISTORICAL_PREACTION_SUBJECT_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C051_K19_PROOF_RESULT_20260812.json@blob:{C051_RESULT_BLOB}",
             ),
         ),
     )
@@ -286,7 +288,7 @@ def _parent_failure_lattice() -> tuple[FailureExperienceLattice, FailureExperien
         competing_diagnoses=("H_15 empty", "omitted current branch", "UNSAT semantics creates the bit", "transpose creates separation"),
         selected_diagnosis="The length-30 v=1,m=3 parent forces h[3]=1 while every length-32 current prefix has MAGIC[3]=0.",
         diagnosis_status=FailureDiagnosisStatus.SUPPORTED,
-        evidence_pointers=(f"git:{APPLICATION_BASE_SHA}:{BASE}/07_memory/O9d12a2a1b_C050_K15_FAILURE_EXPERIENCE_20260812.json@blob:{C050_FAILURE_BLOB}", f"git:{APPLICATION_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:{C050_RESULT_BLOB}"),
+        evidence_pointers=(f"git:{HISTORICAL_PREACTION_SUBJECT_BASE_SHA}:{BASE}/07_memory/O9d12a2a1b_C050_K15_FAILURE_EXPERIENCE_20260812.json@blob:{C050_FAILURE_BLOB}", f"git:{HISTORICAL_PREACTION_SUBJECT_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:{C050_RESULT_BLOB}"),
         falsifier_or_attempt="A supported k=15 branch without the forced bit-3 conflict or one exact common label.",
         observed_result="H_15 intersection P_16 is empty by h[3]=1 versus p[3]=0.",
         timestamp="2026-08-12T07:05:33Z",
@@ -306,7 +308,7 @@ def _parent_failure_lattice() -> tuple[FailureExperienceLattice, FailureExperien
         competing_diagnoses=("H_19 empty", "omitted current v branch", "UNSAT semantics creates the bit", "transpose creates separation"),
         selected_diagnosis="The length-38 v=1,m=4 parent forces h[3]=1 while every length-40 current prefix has MAGIC[3]=0.",
         diagnosis_status=FailureDiagnosisStatus.SUPPORTED,
-        evidence_pointers=(f"git:{APPLICATION_BASE_SHA}:{BASE}/07_memory/O9d12a2a1b_C051_K19_FAILURE_EXPERIENCE_20260812.json@blob:{C051_FAILURE_BLOB}", f"git:{APPLICATION_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C051_K19_PROOF_RESULT_20260812.json@blob:{C051_RESULT_BLOB}"),
+        evidence_pointers=(f"git:{HISTORICAL_PREACTION_SUBJECT_BASE_SHA}:{BASE}/07_memory/O9d12a2a1b_C051_K19_FAILURE_EXPERIENCE_20260812.json@blob:{C051_FAILURE_BLOB}", f"git:{HISTORICAL_PREACTION_SUBJECT_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C051_K19_PROOF_RESULT_20260812.json@blob:{C051_RESULT_BLOB}"),
         falsifier_or_attempt="A supported k=19 branch without the forced bit-3 conflict or one exact common label.",
         observed_result="H_19 intersection P_20 is empty by h[3]=1 versus p[3]=0.",
         timestamp="2026-08-12T09:54:30Z",
@@ -341,7 +343,7 @@ def failure_reuse_bundle(context_hash: str):
         cheapest_repeat_failure_test=(
             "the later classifier/falsifier pair must reproduce the k=15 v=1,m=3 support cell and its h[3]=1 versus MAGIC[3]=0 conflict before any new class is trusted"
         ),
-        evidence_pointers=(PATHS["context"], f"git:{APPLICATION_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:{C050_RESULT_BLOB}"),
+        evidence_pointers=(PATHS["context"], f"git:{HISTORICAL_PREACTION_SUBJECT_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:{C050_RESULT_BLOB}"),
     )
     witness_c051 = DifferenceWitness(
         target_atom_id=ATOM,
@@ -363,7 +365,7 @@ def failure_reuse_bundle(context_hash: str):
         cheapest_repeat_failure_test=(
             "the later classifier/falsifier pair must reproduce the k=19 v=1,m=4 parent cell and all frozen current support branches with the exact bit-3 conflict"
         ),
-        evidence_pointers=(PATHS["context"], f"git:{APPLICATION_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C051_K19_PROOF_RESULT_20260812.json@blob:{C051_RESULT_BLOB}"),
+        evidence_pointers=(PATHS["context"], f"git:{HISTORICAL_PREACTION_SUBJECT_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C051_K19_PROOF_RESULT_20260812.json@blob:{C051_RESULT_BLOB}"),
     )
     assessments = []
     for witness in (witness_c050, witness_c051):
@@ -398,7 +400,7 @@ def memory_review(context_hash: str) -> ResearchMemoryReview:
     draft = ResearchMemoryReview(
         target_atom_id=ATOM,
         target_context_hash=context_hash,
-        tool_inventory_snapshot_hash=f"git:{APPLICATION_BASE_SHA}:C049_FIXED_BIT_TOOL_WITH_C050_C051_REUSE_RECORDS",
+        tool_inventory_snapshot_hash=f"git:{HISTORICAL_PREACTION_SUBJECT_BASE_SHA}:C049_FIXED_BIT_TOOL_WITH_C050_C051_REUSE_RECORDS",
         failure_lattice_snapshot_hash=_hash(failure_snapshot),
         tool_query_status=MemoryQueryStatus.MATCHES_FOUND,
         failure_query_status=MemoryQueryStatus.MATCHES_FOUND,
@@ -427,7 +429,7 @@ def memory_review(context_hash: str) -> ResearchMemoryReview:
             "K13 remains excluded from prospective design and certification.",
             "Same-context roles are not independent peer review.",
         ),
-        evidence_pointers=(PATHS["failure_snapshot"], PATHS["source_packet"], f"git:{APPLICATION_BASE_SHA}:{BASE}/09_trace/O9d12a2a1b_C052_PARAMETRIC_RESIDUE_PRE_ACTION_20260812.json@blob:{PREACTION_BLOB}"),
+        evidence_pointers=(PATHS["failure_snapshot"], PATHS["source_packet"], f"git:{HISTORICAL_PREACTION_SUBJECT_BASE_SHA}:{BASE}/09_trace/O9d12a2a1b_C052_PARAMETRIC_RESIDUE_PRE_ACTION_20260812.json@blob:{PREACTION_BLOB}"),
         artifact_hash="",
     )
     return replace(draft, artifact_hash=_hash(_document(draft)))
@@ -514,7 +516,7 @@ def transformation_memory_and_review(context_hash: str, memory_hash: str):
             "a phase class is called a theorem without universal forced-bit proof",
             "an escape-admissible class is called an overlap witness",
         ),
-        evidence_pointers=(PATHS["context"], PATHS["source_packet"], f"git:{APPLICATION_BASE_SHA}:{BASE}/09_trace/O9d12a2a1b_C052_PARAMETRIC_RESIDUE_PRE_ACTION_20260812.json@blob:{PREACTION_BLOB}"),
+        evidence_pointers=(PATHS["context"], PATHS["source_packet"], f"git:{HISTORICAL_PREACTION_SUBJECT_BASE_SHA}:{BASE}/09_trace/O9d12a2a1b_C052_PARAMETRIC_RESIDUE_PRE_ACTION_20260812.json@blob:{PREACTION_BLOB}"),
         authority=TransformationEpisodeAuthority.PROOF_BACKED,
         artifact_hash=_hash({"episode": "C052-support-phase-reparameterization", "context": context_hash}),
     )
@@ -870,13 +872,19 @@ def build_documents() -> dict[str, dict]:
         "new_level_result_accessed": False,
         "target_k_selected": False,
         "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+        "application_subject_binding": {
+            "round_branch_base_commit": ROUND_BASE_SHA,
+            "historical_preaction_subject_base_commit": HISTORICAL_PREACTION_SUBJECT_BASE_SHA,
+            "distinction": "The C052 context round starts from cc39c7a; b7ca6ac is retained only as the immutable mathematical/source subject of the already merged C052 pre-action.",
+        },
         "authority_boundary": {"assurance_only_zero_credit": True, "grants_parametric_theorem": False, "grants_cover_lower_bound": False, "grants_p_vs_np_authority": False},
     })
     tool_snapshot = _sealed({
         "schema_version": "1.0.0",
         "snapshot_id": "PNP-C052-TOOL-SNAPSHOT-20260812",
         "target_atom_id": ATOM,
-        "application_base_commit": APPLICATION_BASE_SHA,
+        "round_branch_base_commit": ROUND_BASE_SHA,
+        "historical_preaction_subject_base_commit": HISTORICAL_PREACTION_SUBJECT_BASE_SHA,
         "tools": [{"tool_id": "T-PNP-C049-K12-FIXED-BIT-SEPARATION", "operation": "prove one universal unequal coordinate only after exact target support and alignment are established", "successful_bounded_reuse": ["C050-k15", "C051-k19-retrospective"], "preconditions": ["explicit support domain", "exact cut phase", "universal bit forcing on the claimed class"], "guarantees": ["one proved unequal coordinate certifies disjointness only on the exact class"], "non_guarantees": ["no fixed coordinate, residue, or class transfers automatically", "no UNSAT, overlap, cover, or root authority"]}],
         "mathematical_credit": False,
     })
@@ -895,6 +903,8 @@ def build_documents() -> dict[str, dict]:
         "verdict": plan.framework_subject_gate.verdict.value,
         "licenses_candidate_materialization": plan.framework_subject_gate.licenses_candidate_materialization,
         "application_pin": FRAMEWORK_PIN_SHA,
+        "historical_preaction_application_pin": HISTORICAL_PREACTION_APPLICATION_PIN_SHA,
+        "historical_pin_scope": "The 5dc0627 pin belongs only to the already merged C052 pre-action and is not the framework pin, runtime, or current-main subject of this context round.",
         "pin_lacks_live_quantifier_runtime": False,
         "live_quantifier_semantics_adopted": True,
         "grants_scientific_authority": False,
@@ -919,9 +929,15 @@ def build_documents() -> dict[str, dict]:
     documents["gate"] = _sealed({
         "schema_version": "1.0.0",
         "receipt_id": "PNP-C052-PRE-CANDIDATE-GATE-20260812",
-        "application_base_commit": APPLICATION_BASE_SHA,
+        "application_base_commit": ROUND_BASE_SHA,
+        "round_branch_base_commit": ROUND_BASE_SHA,
+        "historical_preaction_subject_base_commit": HISTORICAL_PREACTION_SUBJECT_BASE_SHA,
+        "application_subject_distinction": "cc39c7a is the base of this context round; b7ca6ac is only the historical frozen subject/base recorded by the merged pre-action.",
         "framework_current_commit": FRAMEWORK_CURRENT_SHA,
         "framework_application_pin": FRAMEWORK_PIN_SHA,
+        "framework_runtime_commit": FRAMEWORK_CURRENT_SHA,
+        "historical_preaction_application_pin": HISTORICAL_PREACTION_APPLICATION_PIN_SHA,
+        "historical_preaction_pin_scope": "5dc0627 is provenance for the merged C052 pre-action only; it is not an active framework binding for this round.",
         "framework_method_version": "3.0.0",
         "atom_id": ATOM,
         "artifact_bindings": {"context_hash": fiber.packet_hash, "memory_review_hash": memory.artifact_hash, "transformation_memory_snapshot_hash": tm.snapshot_hash, "shortcut_review_hash": shortcut.artifact_hash, "quantifier_witness_sha256": quantifier["witness_canonical_sha256"], "trace_last_event_hash": research_trace.entries[-1].artifact_hash, "preservation_sha256": preservation.document()["receipt_canonical_sha256"], "framework_subject_binding_sha256": binding.binding_canonical_sha256, "full_document_integrity_hash": _hash(integrity)},

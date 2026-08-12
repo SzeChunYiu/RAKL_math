@@ -45,9 +45,11 @@ def raw_sha256(path: Path) -> str:
 def test_c052_gate_passes_but_licenses_identity_freeze_only() -> None:
     m = module()
     plan, fiber, memory, tm, shortcut, trace, _ = m.build_current_gate_plan()
-    assert m.APPLICATION_BASE_SHA == "b7ca6ac51fa8319b559e95402c47959c626f284a"
+    assert m.ROUND_BASE_SHA == "cc39c7a2553c2e20aa7103652d1429675164016b"
+    assert m.HISTORICAL_PREACTION_SUBJECT_BASE_SHA == "b7ca6ac51fa8319b559e95402c47959c626f284a"
     assert m.FRAMEWORK_CURRENT_SHA == "62e97d545f93ff604b2db47a7c8d41a59a1c5286"
     assert m.FRAMEWORK_PIN_SHA == "62e97d545f93ff604b2db47a7c8d41a59a1c5286"
+    assert m.HISTORICAL_PREACTION_APPLICATION_PIN_SHA == "5dc0627f039e8f3e1cdcb7e05cd7603860afc554"
     assert plan.context_gate.verdict is ContextGateVerdict.PASS
     assert plan.memory_gate.verdict is ResearchMemoryVerdict.PASS
     assert plan.shortcut_gate.verdict is ShortcutReviewVerdict.PASS
@@ -193,6 +195,16 @@ def test_c052_has_no_candidate_result_or_target_capability() -> None:
     docs = module().build_documents()
     atom = docs["atomization"]
     gate = docs["gate"]
+    assert gate["application_base_commit"] == module().ROUND_BASE_SHA
+    assert gate["round_branch_base_commit"] == module().ROUND_BASE_SHA
+    assert gate["historical_preaction_subject_base_commit"] == module().HISTORICAL_PREACTION_SUBJECT_BASE_SHA
+    assert gate["framework_application_pin"] == module().FRAMEWORK_PIN_SHA
+    assert gate["framework_runtime_commit"] == module().FRAMEWORK_CURRENT_SHA
+    assert gate["framework_current_commit"] == module().FRAMEWORK_CURRENT_SHA
+    assert gate["historical_preaction_application_pin"] == module().HISTORICAL_PREACTION_APPLICATION_PIN_SHA
+    assert "not an active framework binding" in gate["historical_preaction_pin_scope"]
+    assert atom["application_subject_binding"]["round_branch_base_commit"] == module().ROUND_BASE_SHA
+    assert atom["application_subject_binding"]["historical_preaction_subject_base_commit"] == module().HISTORICAL_PREACTION_SUBJECT_BASE_SHA
     assert atom["candidate_proposed"] is False
     assert atom["classifier_identity"] is None
     assert atom["falsifier_identity"] is None

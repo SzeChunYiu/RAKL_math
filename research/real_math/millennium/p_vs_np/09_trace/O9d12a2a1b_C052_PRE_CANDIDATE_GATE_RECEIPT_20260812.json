@@ -10,11 +10,12 @@
     "target_blind_operator_required": true,
     "target_k_selection_authorized": false
   },
-  "application_base_commit": "b7ca6ac51fa8319b559e95402c47959c626f284a",
+  "application_base_commit": "cc39c7a2553c2e20aa7103652d1429675164016b",
+  "application_subject_distinction": "cc39c7a is the base of this context round; b7ca6ac is only the historical frozen subject/base recorded by the merged pre-action.",
   "artifact_bindings": {
     "context_hash": "sha256:9d40561c8b60531e1b424dc0daa66f308a000e76154d36295c91836004dce125",
     "framework_subject_binding_sha256": "a2ac81a4f5797a259ac56e4d7321bc933ffa5b8980a5198e91015be1a19820d7",
-    "full_document_integrity_hash": "sha256:23f0129d80ac4ea81f0725cecb57845c92a4b1518dd3bb08014c653797e066b1",
+    "full_document_integrity_hash": "sha256:bb00ebdad8e5b295defdadf5a2f4908bb6739e32aab298e4b586aa14a73ed76f",
     "memory_review_hash": "sha256:589583f4f1ec73a4a85c9fa60c2cfb9032037fcaf468951ed6b840e3fa3aea73",
     "preservation_sha256": "3e4c033c73cd53ddecb20b2ad88b26b62559d2025290ba8ebdd981877bc891b2",
     "quantifier_witness_sha256": "d2824f517b1f0cf6fc582febd0f88499b04834d11767e8fafaff9584d1abd66a",
@@ -22,7 +23,7 @@
     "trace_last_event_hash": "sha256:c1004a313218c844f7ee2e121bae85992479f3840e341ffc82c3601945a32c84",
     "transformation_memory_snapshot_hash": "798e175ac49e2ca9702074f2e2f69d96d0c0a5ff4390ecab4d76196601e0eb52"
   },
-  "artifact_hash": "sha256:687a7df108fe8ff9b3d290f8a81d3140ca0894f85d515e2fe4eab8b957467a7c",
+  "artifact_hash": "sha256:9463f86a4e45dc75ab04e1ee7f1add05c300a6bdfb11a9d0ff59fa9cdbb3f3f1",
   "atom_id": "O9d12a2a1b-C052",
   "authority": {
     "assurance_only": true,
@@ -45,12 +46,13 @@
   "framework_application_pin": "62e97d545f93ff604b2db47a7c8d41a59a1c5286",
   "framework_current_commit": "62e97d545f93ff604b2db47a7c8d41a59a1c5286",
   "framework_method_version": "3.0.0",
+  "framework_runtime_commit": "62e97d545f93ff604b2db47a7c8d41a59a1c5286",
   "full_document_integrity": {
     "algorithm": "SHA-256",
     "canonicalization": "JSON_SORT_KEYS_COMPACT_UTF8",
     "inputs": {
       "atomization": {
-        "canonical_sha256": "sha256:ce0bf6c4e778dee36d206f5d56fea05b216fa4ce67cab95e61c9376ed78ccc44",
+        "canonical_sha256": "sha256:f854cb34df800d72d3dfa6dd1bb0551348340076be1e9a90ce79cb487e76f90c",
         "path": "research/real_math/millennium/p_vs_np/02_problem_dag/O9d12a2a1b_C052_ATOMIZATION_20260812.json"
       },
       "context": {
@@ -70,7 +72,7 @@
         "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_FRAMEWORK_SUBJECT_FREEZE_BINDING_20260812.json"
       },
       "framework_observation": {
-        "canonical_sha256": "sha256:d374e1a9cc4a295e6ead8d8fb3d907ab91c4a439a936b809b2f8aa632a2125f4",
+        "canonical_sha256": "sha256:e65420fd9ec2b480cf3cbba95cd3318f0ab5e7446bee14bc9a9363d7ca10edeb",
         "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_FRAMEWORK_SUBJECT_REVALIDATION_20260812.json"
       },
       "memory": {
@@ -94,7 +96,7 @@
         "path": "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C052_SOURCE_METHOD_TRANSFER_PACKET_20260812.json"
       },
       "tool_snapshot": {
-        "canonical_sha256": "sha256:09144af431357fe64bdbc3882b8fc10f41327b934c9cedd774ed60644f8447f1",
+        "canonical_sha256": "sha256:3aa5be9aba1ca0a31208377b40b4097ecd2fbca66733699abaeeb255b4a14add",
         "path": "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C052_TOOL_SNAPSHOT_20260812.json"
       },
       "trace": {
@@ -118,6 +120,10 @@
     "selected_mode": "SEARCH",
     "trace": "PASS"
   },
+  "historical_preaction_application_pin": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+  "historical_preaction_pin_scope": "5dc0627 is provenance for the merged C052 pre-action only; it is not an active framework binding for this round.",
+  "historical_preaction_subject_base_commit": "b7ca6ac51fa8319b559e95402c47959c626f284a",
   "receipt_id": "PNP-C052-PRE-CANDIDATE-GATE-20260812",
+  "round_branch_base_commit": "cc39c7a2553c2e20aa7103652d1429675164016b",
   "schema_version": "1.0.0"
 }
