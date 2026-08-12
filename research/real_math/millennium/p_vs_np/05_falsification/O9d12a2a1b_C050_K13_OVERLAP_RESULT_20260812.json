@@ -1,0 +1,48 @@
+{
+  "atom_id": "O9d12a2a1b-C050",
+  "authority": {
+    "formal": false,
+    "independent_reviews": 0,
+    "novelty_gate": false,
+    "proposal_shadow_only": true,
+    "root": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "same_context_hand_derivation": true
+  },
+  "calibration": {
+    "mathematical_credit": 0,
+    "raw_output_sha256": "b5c9890258ca0c92a15cf48d9129d3146140d9758d295dc8288bd1d70abd9bac",
+    "result": {
+      "length26_parameter_pairs": [[4,1],[5,1],[6,1],[7,1]],
+      "length28_parameter_pairs": []
+    },
+    "role": "post-freeze arithmetic calibration/falsification only; not proof"
+  },
+  "candidate_id": "C050-K13-CANONICAL-LENGTH-HOLE-v1",
+  "exact_result": {
+    "lemma": "For the frozen C041 canonical grammar, H_13 is empty and P_14 is empty. Hence H_13 intersection P_14 is empty.",
+    "length_formula": "Let w=bit_length(v), b=bit_length(m). Before optional padding, B(v,m)=8+(2w-1)+(2b-1)+3m(w+1)=6+2w+2b+3m(w+1). The canonical even length is L=B+(B mod 2).",
+    "proof_26": [
+      "If m>=3, then w>=1 and b>=2, so B>=6+2+4+18=30>26.",
+      "If m=2, then b=2. For w=1, B=24 and L=24; for w>=2, B>=32. Thus L is not 26.",
+      "If m=1, then b=1 and B=11+5w. The even lengths for w=1,2,3 and w>=4 are 16,22,26 and at least 32, respectively. Therefore L=26 iff w=3, i.e. v in {4,5,6,7}.",
+      "Every one-clause CNF is satisfiable: choose an assignment satisfying any one literal in its sole nonempty three-literal clause. Hence no canonical UNSAT word has length 26, so H_13 is empty."
+    ],
+    "proof_28": [
+      "If m>=3, the same lower bound gives B>=30>28.",
+      "If m=2, the only w=1 length is 24 and every w>=2 length is at least 32.",
+      "If m=1, the possible even lengths around 28 are 26 at w=3 and at least 32 at w>=4. Hence no canonical word has length 28, so P_14 is empty."
+    ],
+    "scope_consequence": "The k=13 literal-transpose collision route is vacuous before any suffix/prefix bit comparison. No statement is made for k>13, cover complexity, circuit lower bounds, or P versus NP."
+  },
+  "falsifier": "Any canonical C041 word of length 28; any canonical UNSAT C041 word of length 26; or an overlooked (v,m) case violating the displayed length bounds refutes the corresponding claim.",
+  "novelty_classification": {
+    "class": "compositional",
+    "secondary": "representation",
+    "defensibility": "The local lemma composes the already-frozen encoding length law with the elementary satisfiability of one-clause CNF; no new external theorem is claimed.",
+    "authority": "proposal-only classification"
+  },
+  "source_boundary": {
+    "internal_math_source": "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+    "downstream_primary_literature": "Cavalar--Oliveira, Boolean Circuit Complexity and Two-Dimensional Cover Problems (2025), used only to preserve the cover-complexity consumer boundary; this local encoding lemma does not claim a theorem from that paper."
+  }
+}
