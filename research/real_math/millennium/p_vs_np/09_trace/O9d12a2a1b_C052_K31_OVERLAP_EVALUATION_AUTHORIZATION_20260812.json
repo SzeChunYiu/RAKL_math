@@ -1,0 +1,94 @@
+{
+  "application_base_sha": "c8c8501105ed952dc9773f7e93dfd5418eb1c80c",
+  "artifact_hash": "sha256:036b653fcdc1e47a1b5361c017cd2d483e84632d37e07b8fa682741219ef17eb",
+  "atom_id": "O9d12a2a1b-C052-K31-OVERLAP",
+  "authorization_id": "PNP-C052-K31-OVERLAP-EVALUATION-AUTHORIZATION-20260812",
+  "authorized_public_scope_after_merge": {
+    "actual_public_k31_evaluation": "only after every public conformance, false-positive, source-binding, and integration world passes",
+    "actual_result_branches": [
+      "NONEMPTY_WITH_EXACT_POSITIVE_CERTIFICATE",
+      "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE",
+      "CANNOT_CHECK"
+    ],
+    "implementation": [
+      "implement the exact bound source-verifying frontend and exact three-branch decision kernel",
+      "implement a separately rederived falsifier that does not import candidate proof/certificate authority",
+      "preserve CANNOT_CHECK for every malformed, incomplete, source-mismatched, marginal-only, ambiguous, or conflicting input"
+    ],
+    "public_validation_worlds_in_order": [
+      "K31-PLANTED-POSITIVE-CERTIFICATE-KERNEL-v1",
+      "K31-PLANTED-NEGATIVE-CERTIFICATE-KERNEL-v1",
+      "K31-MALFORMED-CERTIFICATE-CANNOT-CHECK-v1",
+      "K31-MARGINAL-ONLY-FALSE-POSITIVE-v1",
+      "K31-SOURCE-BINDING-MISMATCH-v1",
+      "K31-FRONTEND-KERNEL-BRANCH-PROPAGATION-v1"
+    ],
+    "result_receipt": "record exact public inputs, implementation hashes, proof/completeness evidence, branch, residuals, and zero root authority"
+  },
+  "candidate_id": "PNP-C052-K31-TARGET-BLIND-OVERLAP-CERTIFICATE-DISCRIMINATOR-v1",
+  "chronology": {
+    "SAT_UNSAT_or_overlap_executed_in_this_round": false,
+    "authorization_frozen_after_candidate_merge": true,
+    "candidate_freeze_public_merged_at_utc": "2026-08-12T15:00:14Z",
+    "formula_label_or_certificate_constructed_in_this_round": false,
+    "implementation_and_execution_may_begin_only_after_this_authorization_is_publicly_merged": true,
+    "implementation_exists_in_this_round": false,
+    "result_or_branch_accessed_in_this_round": false,
+    "validation_world_materialized_in_this_round": false
+  },
+  "credit": {
+    "independent_review": 0,
+    "mathematical_result": 0,
+    "mathematical_saturation": 0,
+    "software_process": 0
+  },
+  "exact_identity_bindings": {
+    "candidate": {
+      "artifact_hash": "sha256:38e20ca16fdd42ce4fd1643c98abf44b5e0ffc2d6818daf372ad586fef2c717d",
+      "git_blob": "2297a93898c472dc7059dc9dc72e78264350cb9f",
+      "path": "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C052_K31_OVERLAP_DISCRIMINATOR_IDENTITY_20260812.json",
+      "raw_sha256": "sha256:92d145fd1240891a747fe49b3223845f0cecc2eae339a449f57b4b42af10a11b"
+    },
+    "falsifier": {
+      "artifact_hash": "sha256:46409b4f38ead079aa0e08e17a4321d3632a0df4dd04aa8658bb4b77cf03a972",
+      "git_blob": "669f88431c706cb7cf569c61f539bb14009fb486",
+      "path": "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C052_K31_OVERLAP_FALSIFIER_IDENTITY_20260812.json",
+      "raw_sha256": "sha256:895d3f311804ce2df064eedcf2511d8aaf5c48e745ce854299f3113a38ae1a6c"
+    },
+    "freeze_receipt": {
+      "artifact_hash": "sha256:4779f3f40ceb1b6ade1ecd378b4dc003c81722a031545bd1a57794a1d41d144c",
+      "git_blob": "e02c8c4747f45b265b209f126bdac969cf77864b",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_K31_OVERLAP_CANDIDATE_FREEZE_RECEIPT_20260812.json",
+      "raw_sha256": "sha256:82e27329cb2bec99385d7c703cd67a17b58db898c9606417b23e82ad29854354"
+    }
+  },
+  "fail_closed_stop_rules": {
+    "any_public_validation_world_fails": "STOP_CANNOT_CHECK_NO_ACTUAL_K31_EVALUATION",
+    "candidate_and_falsifier_disagree": "CANNOT_CHECK_AND_PRESERVE_DISAGREEMENT",
+    "candidate_or_falsifier_source_binding_mismatch": "CANNOT_CHECK",
+    "marginal_only_or_partial_prefix_evidence": "CANNOT_CHECK",
+    "negative_branch_missing_universal_separation_or_exhaustive_completeness_proof": "CANNOT_CHECK",
+    "positive_branch_missing_formula_bound_parent_UNSAT_current_word_or_full32_equality": "CANNOT_CHECK"
+  },
+  "falsifier_id": "PNP-C052-K31-OVERLAP-CERTIFICATE-FALSIFIER-v1",
+  "forbidden": [
+    "any implementation, world materialization, or execution before this authorization merge",
+    "hidden-world materialization, label access, validation, or execution",
+    "native parametric k selection, scan, extrapolation, or execution beyond public k31",
+    "reuse of consumed k20 as fresh hidden validation",
+    "changing candidate/falsifier/source/branch identities after evaluated result access",
+    "claiming computation alone as proof or same-context work as independent peer review",
+    "cover, circuit, novelty, P-versus-NP, or root promotion"
+  ],
+  "framework_pin": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+  "frozen_at_utc": "2026-08-12T15:02:10Z",
+  "public_only_boundary": {
+    "all_validation_inputs_and_receipts_must_be_public": true,
+    "hidden_worlds_allowed": false,
+    "native_parametric_expansion_allowed": false,
+    "target_k": 31
+  },
+  "result_state": "UNEVALUATED",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0"
+}
