@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "fibre_id": "FIBRE-PNP-C046R-FALLBACK-ABSORPTION-20260812",
+  "fibre_snapshot_hash": "sha256:4359003a6565cd8db6934f404f8380b5a07b2233d64c381464da245ea71c2c70",
+  "atom_id": "O9d12a2a1b-C046R",
+  "problem_signature": "G17_FULL_SUPPORT_FALLBACK_AWARE_FOUR_PAIR_COVER_REPAIR",
+  "authority": "PROPOSAL_SHADOW_RETROSPECTIVE_VERIFICATION_ONLY",
+  "chronology": {
+    "strict_discovery_credit": "DENIED",
+    "reason": "The fallback-absorption construction was formed in the running research cycle before this durable fibre was persisted; this fibre freezes the actual consulted context for retrospective verification and does not backfill prospective chronology.",
+    "repeated_process_failure_links": [
+      "C041A late-fibre chronology denial",
+      "C041B late-fibre chronology denial",
+      "C044 exposed-before-freeze denial",
+      "C045 handoff/chronology denial",
+      "PR243 C046 fallback-audit late-fibre denial"
+    ]
+  },
+  "root_contract": {
+    "target": "P != NP",
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "success_contract": "00_problem_contract/success_contract.yaml"
+  },
+  "object_context": "Repair the reopened C045 G17 upper-cover claim after the exact all-zero fallback edge f=(0,65536) is included. Decide whether the existing C044 old three-pair code and C045 ten-edge MAGIC code can absorb f without increasing the four-pair cover count.",
+  "actual_fibre_contents_consulted": [
+    "SzeChunYiu/RAKL@43897d3afaf0038385102d5acc64793c05ec40f0:RAKL_VERSION.json method_version=3.0.0",
+    "SzeChunYiu/RAKL@43897d3afaf0038385102d5acc64793c05ec40f0:docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md",
+    "SzeChunYiu/RAKL@43897d3afaf0038385102d5acc64793c05ec40f0:src/rakl/method_specs.py",
+    "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:00_problem_contract/canonical_statement.md and success_contract.yaml",
+    "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:04_candidates/C041_fx_sat_one_sided.py blob fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+    "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:04_candidates/C043_FIRST_ROW_SPLIT_RESULT_20260812.md",
+    "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:04_candidates/C044_RETROSPECTIVE_Q16_MULTIPLEXING_RESULT_20260812.md",
+    "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:04_candidates/C045_G17_COMPONENT_SEPARABILITY_RESULT_20260812.md",
+    "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:10_feedback/C043_BIDIRECTIONAL_TWIN_GATE_FEEDBACK_20260812.json",
+    "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:10_feedback/C044_COMPONENT_COUPLING_GATE_FEEDBACK_20260812.json",
+    "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:10_feedback/C045_ROW_PROJECTION_COLLISION_MATHEMATICAL_LESSON_20260812.json",
+    "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:01_frontier/O9d12a2a1b_C046_MATH_CONTEXT_FIBER_20260812.json",
+    "RAKL_math@ec8a9eb5eeedaaf1d3f497a8688384256a2079e0:07_memory/O9d12a2a1b_C046_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "RAKL_math open PR #243 fallback audit at head fdeae143381618ad621c48fbe7b371ea98f9c11c",
+    "Cavalar--Oliveira ECCC TR25-033 official report/PDF, Definitions 18--21 and Theorem 22; local pinned source blob previously recorded as 8dfe370a6bf687eb33ebf52eaaf9308e1bdf0230"
+  ],
+  "solved_near_solved_analogues": [
+    {
+      "id": "C044-Q16-THREE-PAIR-COVER",
+      "mapping": "old G16 exact twin quotient supplies three pair coordinates and row-zero signature EEE",
+      "disanalogy": "G17 has a bridge fallback edge and a distinct ten-edge MAGIC block"
+    },
+    {
+      "id": "C045-TEN-EDGE-LOCAL-CODE",
+      "mapping": "ten canonical G17 complement edges supply a three-bit generator-separating code",
+      "disanalogy": "the local code omitted the all-zero decoder fallback edge"
+    },
+    {
+      "id": "PR243-FALLBACK-AUDIT",
+      "mapping": "establishes the exact omitted edge and reopens the four-pair gluing claim",
+      "disanalogy": "it does not decide whether the fallback edge is cover-neutral"
+    }
+  ],
+  "transfer_assumptions": [
+    "the C044 three-pair cover lifts through the exact G16 twin quotient as recorded",
+    "the C045 ten-edge MAGIC classification and local three-pair code are correct subfamily statements",
+    "the full G17 new complement band is exactly the ten canonical MAGIC UNSAT edges plus the single all-zero fallback edge",
+    "row 0 has C044 old-star signature EEE; each other active old row quotient class has at least one H coordinate",
+    "empty generator traces make an above semi-filter impossible under Definition 19 plus Definition 18 non-triviality"
+  ],
+  "explicit_disanalogies": [
+    "a cross-component complement edge need not force extra cover cost",
+    "absorbing one fallback bridge at G17 does not establish a uniform recurrence",
+    "an upper cover is not a lower bound",
+    "same-context checking is not independent review",
+    "finite computation is only witness calibration"
+  ],
+  "operators_motifs_tried": [
+    "RAKL v3 gap_discovery on the reopened C045 gluing residual",
+    "counterexample-first check of bridge-edge load-bearingness",
+    "representation split: old U16 / ten-edge MAGIC block / singleton fallback",
+    "code-extension motif: assign fallback EEE in the three multiplexed local coordinates",
+    "separator repair motif: place fallback on old side of the fourth block separator",
+    "same-context hostile expert cell",
+    "bounded quotient witness enumeration as falsifier/calibration only"
+  ],
+  "search_policy": "Use v3 routing/gap_discovery to attack the smallest live obstruction from PR243: test whether the single exact bridge edge actually breaks the four-pair witness before any later-level search, LP, or circuit bridge.",
+  "predeclared_falsifier": "Reject the repair if any relevant full-G17 graph cell has no one of the four proposed disjoint pairs with its row and column complement fibres contained on opposite sides.",
+  "verification_obligations": [
+    "bind exact full G17 support including fallback f=(0,65536)",
+    "prove the three repaired multiplexed pairs remain disjoint",
+    "prove row-zero old cells retain their old separations after f is assigned EEE",
+    "prove all other old active rows are separated from the fallback column by an H coordinate",
+    "prove all old/MAGIC and fallback/MAGIC cross obligations are covered by the repaired separator",
+    "treat empty-trace graph cells correctly",
+    "run bounded quotient-cell enumeration only as a falsifier, not theorem authority"
+  ],
+  "saturation_pre": {
+    "KNOWLEDGE": "REOPENED by PR243 correction",
+    "OPERATOR": "REOPENED: cover-repair operator now admissible",
+    "EXPERIENCE_PATTERN": "REOPENED: cross-component edge may be absorbable",
+    "OBSTRUCTION": "REOPENED: load-bearingness of singleton fallback",
+    "RELATION": "REOPENED: full support versus canonical subblock",
+    "PATH": "REOPENED: restore-or-refute G17 constant upper cover",
+    "META_METHOD": "REOPENED: repeated late-fibre chronology plus handoff correction"
+  },
+  "frozen_at": "2026-08-12T03:04:48Z"
+}
