@@ -1,0 +1,46 @@
+{
+  "obstruction": {
+    "obstruction_id": "O-NS-B1a3a-SAME-TIME-FAR-L3-TAIL",
+    "supporting_episode_id": "TE-NS-B1a3a-C001-20260812",
+    "statement": "After finite I supplies the expanding-ball good-time reservoir G_R, the Albritton-Barker Liouville consumer still needs a uniformly bounded global L3 norm at the same selected times; the missing term is the L3 far tail outside B_{2R}.",
+    "failure_id": "F-NS-B1a3a-GLOBAL-L3-TAIL-UNCONTROLLED",
+    "failure_category": "LOCAL_TO_GLOBAL_GLUING",
+    "local_mathematical_failure": false,
+    "gluing_failure": true,
+    "falsifier": "Produce a source-bound theorem deriving the required same-time tail bound directly from finite I, or show the core/tail decomposition does not match Theorem 1.2."
+  },
+  "lesson": {
+    "lesson_id": "L-NS-B1a3a-CYLINDER-AVERAGE-TO-BACKWARD-SLICE",
+    "kind": "DECOMPOSITION",
+    "trigger_signature": [
+      "finite scale-invariant spacetime C bound",
+      "consumer asks for backward time-slice L3 bound",
+      "expanding cylinders available"
+    ],
+    "context_scope": [
+      "3D whole-space mild bounded ancient Navier-Stokes",
+      "Albritton-Barker I<infinity",
+      "Theorem-1.2 backward-sequence consumer"
+    ],
+    "action": "Before searching for global compactness, average C over a far-back slab to extract a positive-measure set of times with uniformly bounded L3 mass on the expanding core; then isolate only the same-time spatial tail as the residual.",
+    "expected_effects": [
+      "shrinks a broad global-critical-state-space obligation to a tail-only gluing atom",
+      "creates a temporal-density interface that can intersect an independent tail-good set"
+    ],
+    "boundaries": [
+      "does not bound the far tail",
+      "does not give global L3",
+      "does not apply to Type-II branches without finite I",
+      "does not grant canonical memory authority"
+    ],
+    "supporting_episode_ids": ["TE-NS-B1a3a-C001-20260812"],
+    "contradicting_episode_ids": [],
+    "authority": "CANDIDATE_PROPOSAL_SHADOW",
+    "validation_obligations": [
+      "independent mathematical review",
+      "source recheck of exact theorem signature",
+      "any later tail producer must be same-theory and same-time"
+    ]
+  },
+  "separation_note": "The obstruction and lesson are abstractions derived from, but not identical to, the immutable TaskEpisode; neither has promotion authority."
+}
