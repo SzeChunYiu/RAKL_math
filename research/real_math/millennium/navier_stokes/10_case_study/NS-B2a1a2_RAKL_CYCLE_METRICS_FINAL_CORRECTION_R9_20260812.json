@@ -1,0 +1,98 @@
+{
+  "record_type": "RAKL_CYCLE_METRICS_FINAL_CORRECTION",
+  "cycle_id": "NS-B2A1A2-VISCOSITY-NORMALIZATION-R9-20260812",
+  "supersedes_for_closeout": [
+    "NS-B2a1a2_RAKL_CYCLE_METRICS_R9_20260812.json",
+    "NS-B2a1a2_RAKL_CYCLE_METRICS_CLOSEOUT_AMENDMENT_R9_20260812.json"
+  ],
+  "framework": {
+    "method_version": "3.0.0",
+    "framework_version": "3.0.0",
+    "package_version": "0.1.0",
+    "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "observable_framework_drift": false
+  },
+  "application": {
+    "frozen_mathematical_base_sha": "4c33934030f98ba81a77b419d2317a1b31173fdc",
+    "current_main_closeout_sha": "4653b516349d158279a8792aa503c209ed0cecab",
+    "main_drift_after_freeze": true,
+    "branch_head_before_this_correction": "62da1f27f21c08cc4e26a7a59f16b1df3b650daa",
+    "correction_commit_head": "CANNOT_MEASURE: self-referential until this correction is committed",
+    "pull_request": 230,
+    "pull_request_mode": "DRAFT_PROPOSAL_SHADOW"
+  },
+  "state_fingerprints": {
+    "pre_state": "sha256:5ab9120665019ce6011db76aab34f5bf51d65ca6a25405a94298b931d155e110",
+    "post_mathematical_state": "sha256:ebfa941109f0eeee52f7299a8d2917a8f0e8a8658e007d34eea1f906ee1cb234",
+    "post_process_repair_state": "CANNOT_MEASURE: no predeclared canonical hash recipe included the subsequently discovered CI-inventory representation failure; inventing a retrospective fingerprint would not be comparable to the frozen pre/post pair"
+  },
+  "atom_id": "NS-B2a1a2",
+  "fibre_snapshot_hash": "sha256:b67456f9f1b37137e10faf869e0ddf43381778ccba7520101aaf0b8bd5d4e841",
+  "outcome": "DIRECT_CKN_BRIDGE_ESTIMATE_INSUFFICIENT",
+  "residual_before": "F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH",
+  "residual_after": "RES-NS-B2a1-PRODUCER-NO-INCOMING-TIGHTNESS-OR-NON-CKN-CARRIER",
+  "final_retained_semantic_novelty": {
+    "KNOWLEDGE": 1,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 1,
+    "OBSTRUCTION": 1,
+    "RELATION": 1,
+    "PATH": 1,
+    "META_METHOD": 1
+  },
+  "axes_reopened": ["KNOWLEDGE","EXPERIENCE_PATTERN","OBSTRUCTION","RELATION","PATH","META_METHOD"],
+  "axes_flattened": ["OPERATOR"],
+  "memory": {
+    "retrieved_total": 6,
+    "selected_count": 3,
+    "rejected_count": 3,
+    "missed_count": "CANNOT_MEASURE: no exhaustive governed repository-wide memory coverage receipt is exposed in this runtime",
+    "selected_ids": ["F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY","F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE","F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH"],
+    "rejected_ids": ["XM-MOVING-CORE-RIGIDITY-005","O-NS-B2a1d-PRODUCER-MUST-EXCLUDE-TRANSLATING-INCOMING-CORE","F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER"]
+  },
+  "new_ids": {
+    "episode": ["TE-NS-B2a1a2-R9-20260812"],
+    "mathematical_diagnosis": ["D-NS-B2a1a2-PARABOLIC-ASPECT-COST-R9"],
+    "mathematical_failure": ["F-NS-B2a1a2-DIRECT-CKN-LEDGER-INSUFFICIENT"],
+    "mathematical_obstruction": ["O-NS-B2a1a2-VISCOSITY-NORMALIZATION-GAIN-DEFICIT"],
+    "candidate_lesson": ["L-NS-B2a1a2-EULER-GAIN-DOES-NOT-PAY-PARABOLIC-COST"],
+    "process_diagnosis": ["D-NS-B2a1a2-CI-EPISODE-INVENTORY-COLLISION-R9"],
+    "process_failure": ["F-NS-B2a1a2-PROCESS-EPISODE-INVENTORY-COLLISION"],
+    "tool": [],
+    "motif": []
+  },
+  "successful_reuse_ids": ["F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY","F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE","F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH"],
+  "canonical_process_surfaces_invoked": ["decomposition","routing","search_query_generation","source_selection_reliability","claim_extraction","mathematical_context_translation","equivalence_similarity","contextual_theory_gluing","contradiction_diagnosis","gap_discovery","experiment_query_selection","memory","review","synthesis","saturation_stopping","prompting_context_policy"],
+  "resources": {
+    "model_tokens": "CANNOT_MEASURE: runtime exposes no authoritative end-to-end model-token total",
+    "context_tokens": "CANNOT_MEASURE: runtime exposes no authoritative end-to-end context-token total",
+    "retrieval_calls": "CANNOT_MEASURE: no authoritative end-to-end retrieval counter survives runtime/tool compaction",
+    "tool_calls": "CANNOT_MEASURE: no authoritative end-to-end tool-call counter survives runtime/tool compaction",
+    "wall_time": "CANNOT_MEASURE: authoritative run-start wall clock is not exposed as a metrology surface",
+    "primary_source_families": 1,
+    "same_context_expert_roles": 7,
+    "symbolic_calibration_runs": 1
+  },
+  "ci_history": [
+    {"run_number":605,"run_id":31553690008,"head_sha":"c235edee3e480a0eec119319098151c241662889","status":"COMPLETED_FAILURE","result":"559 passed, 1 failed","failure_id":"F-NS-B2a1a2-PROCESS-EPISODE-INVENTORY-COLLISION","mathematical_failure":false},
+    {"status":"PENDING_NEW_HEAD_AFTER_REPAIR","reason":"moving TaskEpisode to .taskepisode, removing top-level episode_id from diagnosis, and updating assurance test changed branch head; full pinned suite must rerun before merge"}
+  ],
+  "gates": {
+    "root": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "root_proof_dag": "OPEN",
+    "independent_mathematical_reviews": "0/3",
+    "source_provenance": "PASS",
+    "gate_c_for_consequential_verification": "PASS",
+    "prospective_hypothesis_generation_credit": "DENIED_PRE_FREEZE_IDEA_NOTICE",
+    "custom_hash_chain": "PASS_PROPOSAL_SHADOW",
+    "canonical_research_trace_schema": "CANNOT_CHECK",
+    "ci": "REPAIR_RERUN_REQUIRED",
+    "root_promotion": "BLOCKED"
+  },
+  "rakl_changed_observable_action_preference": true,
+  "rakl_action_change": "SEARCH+LIFT consumer-normalization falsifier was executed before signed flux or moving-radius GLUE because selected failures plus Gate C made it the cheapest discriminator.",
+  "raw_repository_growth_counted_as_learning": false,
+  "novelty_class": {"mathematics":"representation","process":"representation","structural_rank":0,"literature_novelty_claim":false},
+  "framework_improvement_hypothesis": "NONE_WARRANTED: existing assurance caught the process representation error. A convenience linter could reduce iteration cost but no reusable RAKL framework defect is established.",
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}
