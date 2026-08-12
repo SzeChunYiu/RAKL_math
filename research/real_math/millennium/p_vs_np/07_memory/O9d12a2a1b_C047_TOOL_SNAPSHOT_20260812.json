@@ -1,0 +1,27 @@
+{
+  "application_base_commit": "ec8a9eb5eeedaaf1d3f497a8688384256a2079e0",
+  "artifact_hash": "sha256:9797aead5e327e44969fa6de4e507d200ee59863c81554cc10b59a1c52053404",
+  "mathematical_credit": false,
+  "schema_version": "1.0.0",
+  "snapshot_id": "PNP-C047-TOOL-SNAPSHOT-20260812",
+  "target_atom_id": "O9d12a2a1b-C047",
+  "target_state": "TARGET_RESULT_UNACCESSED",
+  "tools": [
+    {
+      "guarantees": [
+        "search-order pruning after target-specific proof"
+      ],
+      "non_guarantees": [
+        "worked once is not universal",
+        "no theorem before proof",
+        "no cover or root authority"
+      ],
+      "preconditions": [
+        "exact target-specific coordinate map",
+        "fixed decoder branches"
+      ],
+      "source": "C046 high-half separation plus C041 recursive definition",
+      "tool_id": "T-PNP-C046-PARTITION-INVARIANT-FEASIBILITY-FIRST"
+    }
+  ]
+}

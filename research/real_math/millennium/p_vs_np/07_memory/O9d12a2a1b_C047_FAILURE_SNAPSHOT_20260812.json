@@ -1,0 +1,23 @@
+{
+  "artifact_hash": "sha256:3cc09698b2e1d2bb9535e54381f50849d503d4bdd15b48ba02fae7f0c5379fb0",
+  "difference_witness": {
+    "changed_question": "fresh-row orientation instead of the original old-row orientation",
+    "cheapest_repeat_failure_test": "derive generated row headers and compare symbolically with MAGIC",
+    "restored_assumption": "coarse high-half occupancy only; exact equality remains unproved"
+  },
+  "failures": [
+    {
+      "failure_id": "F-C045-U17-PROJECTION-DISJOINT",
+      "warning": "fresh columns cannot couple backward without exact old/new row-projection collision"
+    },
+    {
+      "failure_id": "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING",
+      "warning": "semantic type growth does not imply collision or cover growth"
+    }
+  ],
+  "mathematical_credit": false,
+  "schema_version": "1.0.0",
+  "snapshot_id": "PNP-C047-FAILURE-SNAPSHOT-20260812",
+  "target_atom_id": "O9d12a2a1b-C047",
+  "target_state": "TARGET_RESULT_UNACCESSED"
+}

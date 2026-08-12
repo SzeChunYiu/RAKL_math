@@ -1,0 +1,44 @@
+{
+  "trace_id": "XM-PC-NS-001-C001-CANDIDATE-FREEZE-TRACE-20260812",
+  "entries": [
+    {
+      "event_id": "XM-PC-NS-001-E09",
+      "atom_id": "XM-PC-NS-001",
+      "event_type": "CANDIDATE_PROPOSED",
+      "timestamp": "2026-08-12T10:30:00Z",
+      "state_summary": "The merged strict gate licensed exactly one target enstrophy-sign falsifier; an explicit smooth periodic divergence-free trigonometric field is now frozen without evaluation.",
+      "action_summary": "Freeze XM-PC-NS-001-C001 with A=100 nu and the three exact base-field components.",
+      "evidence_pointers": [
+        "research/real_math/millennium/cross_problem/poincare_transfer/09_trace/XM_PC_NS_001_PRE_CANDIDATE_GATE_RECEIPT_20260812.json",
+        "research/real_math/millennium/cross_problem/poincare_transfer/04_candidates/XM_PC_NS_001_C001_ENSTROPHY_SIGN_FALSIFIER_FREEZE_20260812.json"
+      ],
+      "alternatives_considered": ["ABC/Beltrami field", "finite random Fourier scan", "frozen three-mode Fourier triad"],
+      "decision_rationale": "The three-mode field is explicit, mean-zero, target-native, and cheap to falsify exactly; no finite scan or result access is needed before its identity is frozen.",
+      "outputs": ["candidate_canonical_sha256:sha256:07aec802808cf94d0ace2200460e71621a8587e6a60df8ba1fe918953cc9db3e", "TARGET_ALGEBRA_NOT_EXECUTED", "ROOT_OPEN"],
+      "uncertainties": ["the exact sign is not known at freeze time", "the field may fail to refute the universal monotonicity claim"],
+      "residuals": ["execute only the frozen exact evaluator after public merge", "every result branch leaves NS-B1a1 and the Clay root open"],
+      "next_steps": ["merge this candidate/evaluator freeze", "post-merge execute the exact symbolic evaluator without modifying candidate identity"],
+      "previous_event_hash": "sha256:0bdd5ca1dda562336287b35437ab6ccc7c526b941d4b5dc88ef05d83be33d283",
+      "artifact_hash": "sha256:e7c6b86fbdaa34c59d2cc246bc8b5c967b0048476ab7105655131ef615f8de2c"
+    },
+    {
+      "event_id": "XM-PC-NS-001-E10",
+      "atom_id": "XM-PC-NS-001",
+      "event_type": "FORMALIZED",
+      "timestamp": "2026-08-12T10:30:01Z",
+      "state_summary": "The target proposition and exact evaluator are frozen: decide the sign of E'(0)=A^3P(v)-nu A^2D(v) on the stated torus datum.",
+      "action_summary": "Freeze symbolic differentiation/integration and an independent vorticity-balance recomputation.",
+      "evidence_pointers": [
+        "research/real_math/millennium/cross_problem/poincare_transfer/05_falsification/XM_PC_NS_001_C001_EVALUATOR_FREEZE_20260812.json"
+      ],
+      "alternatives_considered": ["floating-point quadrature", "single symbolic calculation", "two exact derivations"],
+      "decision_rationale": "Two exact derivations are cheap and prevent numerical or sign-convention ambiguity.",
+      "outputs": ["EVALUATOR_NOT_EXECUTED", "NO_RESULT", "ROOT_OPEN"],
+      "uncertainties": ["exact integrals remain uncomputed"],
+      "residuals": ["public freeze must precede execution"],
+      "next_steps": ["execute after merge only"],
+      "previous_event_hash": "sha256:e7c6b86fbdaa34c59d2cc246bc8b5c967b0048476ab7105655131ef615f8de2c",
+      "artifact_hash": "sha256:639f88541e6f931b2778caaf787b38dba2f072397b4939139605632213f39bc4"
+    }
+  ]
+}
