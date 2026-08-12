@@ -44,8 +44,10 @@ it under the registered source definition.
 
 ## Lemma 1 — heterogeneous block multiplexing
 
-Let a bipartite complement be the disjoint union of \(t\) diagonal component
-ground sets \(U_1,\ldots,U_t\), with no cross-component complement cell.  If
+Let \(t\ge1\). Let a bipartite complement be the disjoint union of \(t\)
+diagonal component ground sets \(U_1,\ldots,U_t\), with pairwise disjoint
+row projections and pairwise disjoint column projections, and with no
+cross-component complement cell. If
 component \(r\) has a disjoint generator-separating family of size \(k_r\),
 then
 

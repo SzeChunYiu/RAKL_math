@@ -15,6 +15,7 @@ from pathlib import Path
 import sys
 
 import jsonschema
+from rakl.failure_lattice import reconstruct_failure_lattice
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -99,6 +100,9 @@ def test_failure_reviews_tool_and_feedback_separate_math_from_assurance() -> Non
     schema = json.loads((ROOT / "framework/RAKL/schemas/failure-experience-lattice.schema.json").read_text(encoding="utf-8"))
     jsonschema.Draft202012Validator(schema, format_checker=jsonschema.FormatChecker()).validate(failure)
     assert len(failure["experiences"]) == 1
+    assert failure["links"] == []
+    lattice = reconstruct_failure_lattice(failure)
+    assert len(lattice.experiences) == 1 and lattice.links == ()
     exp = failure["experiences"][0]
     assert exp["failure_id"] == "F-C044-HETEROGENEOUS-BLOCK-MULTIPLEXING"
     assert exp["artifact_hash"] == _canonical_hash(exp)
@@ -123,11 +127,15 @@ def test_failure_reviews_tool_and_feedback_separate_math_from_assurance() -> Non
         "check all cross-component active edge orientations",
     ]
     assert all("framework promotion" not in item for item in tool["validation_obligations"])
+    assert "t>=1" in tool["abstraction"]
+    assert any("row projections" in item and "column projections" in item for item in tool["preconditions"])
 
     math_feedback = json.loads(MATH_FEEDBACK.read_text(encoding="utf-8"))
     leak_feedback = json.loads(LEAK_FEEDBACK.read_text(encoding="utf-8"))
     assert math_feedback["artifact_hash"] == _canonical_hash(math_feedback)
     assert math_feedback["mathematical_saturation_credit"] is True
+    transfer = math_feedback["proposed_reusable_method_delta"]["transfer_condition"]
+    assert "t>=1" in transfer and "row and column projections" in transfer
     assert math_feedback["strict_rakl_discovery_credit"] is False
     assert leak_feedback["artifact_hash"] == _canonical_hash(leak_feedback)
     assert leak_feedback["mathematical_saturation_credit"] is False
