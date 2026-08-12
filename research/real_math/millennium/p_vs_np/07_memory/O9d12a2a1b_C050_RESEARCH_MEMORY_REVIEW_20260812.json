@@ -1,0 +1,44 @@
+{
+  "artifact_hash": "sha256:040fd4b8bd91ca0ac73bf11e0a6ab54aa28e5efd244abaed221e9c64f21dc6e6",
+  "candidate_method_families": [
+    "explicit synchronized-code construction",
+    "symbolic impossibility from length/header/gamma constraints",
+    "bounded product-grammar discriminator followed by semantic UNSAT proof",
+    "encoding or split change (out of scope)"
+  ],
+  "cross_problem_coverage_receipt_hash": "",
+  "evidence_pointers": [
+    "git:5dd7c0d5084dfb0dd3cd3a1619badd30b532b975:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C049_K12_PROOF_CHECK_RESULT_20260812.json@blob:65057f9b71f8d683ff07b07d5bba9ec514fcf96d",
+    "git:5dd7c0d5084dfb0dd3cd3a1619badd30b532b975:research/real_math/millennium/p_vs_np/10_case_study/C049_K12_OVERLAP_MATHEMATICAL_SATURATION_RECEIPT_20260812.json@blob:4ef155679f78819255de3070afe0733b3db870aa"
+  ],
+  "failure_lattice_snapshot_hash": "gitblob:4ef155679f78819255de3070afe0733b3db870aa",
+  "failure_query_status": "MATCHES_FOUND",
+  "failure_reuse_notes": [
+    "C047 warns that near-aligned fixed headers can still be exactly disjoint; any witness must compare every synchronized bit.",
+    "C043 warns that finite semantic multiplicity does not imply the requested later_k or downstream cover growth."
+  ],
+  "relevant_failure_ids": [
+    "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT",
+    "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING"
+  ],
+  "relevant_tool_ids": [
+    "T-PNP-C049-K12-FIXED-BIT-SEPARATION"
+  ],
+  "selected_tool_ids": [
+    "T-PNP-C049-K12-FIXED-BIT-SEPARATION"
+  ],
+  "target_atom_id": "O9d12a2a1b-C050",
+  "target_context_hash": "sha256:c7814ceddddfdbaf0fa2000b1e9b3660b70c049f6238de8fe815eba8ed6cfac7",
+  "tool_applicability_notes": [
+    "C049's fixed-bit separation is reusable only as the QoI definition: it reduces collision to H_k intersection P_(k+1) but supplies no existence evidence."
+  ],
+  "tool_inventory_snapshot_hash": "gitblob:65057f9b71f8d683ff07b07d5bba9ec514fcf96d",
+  "tool_query_status": "MATCHES_FOUND",
+  "unresolved_warnings": [
+    "No later target result has been accessed.",
+    "No later_k witness, empty-language theorem, or finite level has been selected.",
+    "The cheapest exact discriminator must be frozen before any code-grammar or UNSAT evaluation.",
+    "Relabelled and split-changing variants are outside this atom.",
+    "Same-context review is not independent peer review."
+  ]
+}

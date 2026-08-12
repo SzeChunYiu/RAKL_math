@@ -1,0 +1,26 @@
+{
+  "application_base_commit": "5dd7c0d5084dfb0dd3cd3a1619badd30b532b975",
+  "artifact_hash": "sha256:07ed5813dcb3ff918e3159ac486308d513d0c7d852786be7bae7312693355ce5",
+  "mathematical_credit": false,
+  "schema_version": "1.0.0",
+  "snapshot_id": "PNP-C050-TOOL-SNAPSHOT-20260812",
+  "target_atom_id": "O9d12a2a1b-C050",
+  "target_state": "TARGET_RESULT_UNACCESSED",
+  "tools": [
+    {
+      "guarantees": [
+        "collision is equivalent to later_k after target-specific proof"
+      ],
+      "non_guarantees": [
+        "does not prove later_k existence",
+        "no cover or root authority"
+      ],
+      "preconditions": [
+        "exact frozen H_k and P_(k+1)",
+        "swapped reduction retained"
+      ],
+      "source": "C049 k=12 fixed-bit separation lemma",
+      "tool_id": "T-PNP-C049-K12-FIXED-BIT-SEPARATION"
+    }
+  ]
+}

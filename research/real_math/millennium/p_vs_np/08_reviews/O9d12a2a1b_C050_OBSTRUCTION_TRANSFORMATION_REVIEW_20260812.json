@@ -1,0 +1,150 @@
+{
+  "artifact_hash": "sha256:ef2aec01ee41aa55284ccd4833b6bb2b7ba17bf996b96a2eef6ca468adc0ef51",
+  "direct_candidate_episode_ids": [
+    "E-PNP-C050-SYNCHRONIZED-CODE-LANGUAGE-INTERSECTION"
+  ],
+  "direct_mapping_witnesses": [
+    {
+      "artifact_hash": "sha256:297f38672f2ea5cb7483231622307435dfe665fee7623dc59a00636f336499bc",
+      "disanalogies": [
+        "UNSAT is a semantic side condition absent from ordinary code-language intersection",
+        "gamma/payload lengths are arithmetic rather than fixed-state alone",
+        "no cover consequence follows"
+      ],
+      "episode_id": "E-PNP-C050-SYNCHRONIZED-CODE-LANGUAGE-INTERSECTION",
+      "evidence_pointers": [
+        "git:5dd7c0d5084dfb0dd3cd3a1619badd30b532b975:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1"
+      ],
+      "precondition_mapping": [
+        [
+          "both languages and the shared coordinate map are exact",
+          "use the exact frozen definitions of H_k, P_(k+1), and equality 1||c=p"
+        ],
+        [
+          "length and optional-padding branches are exhaustive",
+          "derive both canonical word-length formulas including optional zero padding"
+        ],
+        [
+          "a syntactic survivor carries an explicit canonical parse on both sides",
+          "require explicit parses for parent x and current y"
+        ],
+        [
+          "the parent formula's UNSAT status is proved rather than inferred from syntax",
+          "require a mathematical UNSAT proof for x after syntax survives"
+        ]
+      ],
+      "role_mapping": [
+        [
+          "canonical UNSAT parent words",
+          "canonical UNSAT parent words"
+        ],
+        [
+          "their length-k suffixes",
+          "their length-k suffixes"
+        ],
+        [
+          "canonical current words",
+          "canonical current words"
+        ],
+        [
+          "their length-(k+1) prefixes",
+          "their length-(k+1) prefixes"
+        ],
+        [
+          "swapped reduction invariant",
+          "swapped reduction invariant"
+        ]
+      ],
+      "shared_constraints": [
+        "unchanged decoder, MAGIC, gamma grammar, padding, and equal split",
+        "parent formula must be canonical UNSAT",
+        "current word must be canonical at length 2(k+1)",
+        "swapped reduction remains fixed",
+        "target results remain unaccessed"
+      ],
+      "shared_relations": [
+        "H_k contains 1||c exactly when some canonical UNSAT parent word ends in c",
+        "P_(k+1) contains the current canonical prefixes",
+        "later_k requires exact equality 1||c=p across length, header, gamma, and payload coordinates",
+        "a witness must preserve the C048 swapped reduction rather than relabel the query"
+      ],
+      "target_obstruction_id": "OBS-PNP-C050-UNSAT-SUFFIX-CANONICAL-PREFIX-OVERLAP",
+      "target_validation_obligations": [
+        "freeze the exact k range or parametric construction before evaluation",
+        "prove both canonical parses and exact bit equality",
+        "prove parent UNSAT independently of syntax",
+        "retain the swapped reduction unchanged",
+        "do not generalize a bounded miss to all k"
+      ],
+      "unmatched_source_preconditions": [],
+      "witness_id": "MAP-PNP-C050-SYNCHRONIZED-OVERLAP"
+    }
+  ],
+  "direct_search_status": "MATCHES_FOUND",
+  "episode_memory_snapshot_hash": "14e6aad4c98f2083bf60f725bd513af4484a47a2f2d2dc9b8755b41523932950",
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C050_MATH_CONTEXT_FIBER_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C050_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C050_OBSTRUCTION_TRANSFORMATION_MEMORY_20260812.json"
+  ],
+  "exhaustion_witness": null,
+  "glue_search_status": "NOT_RUN",
+  "glue_witness": null,
+  "jump_mapping_witnesses": [],
+  "jump_search_status": "NOT_RUN",
+  "missing_transformation_specification": null,
+  "obstruction": {
+    "constraints": [
+      "unchanged decoder, MAGIC, gamma grammar, padding, and equal split",
+      "parent formula must be canonical UNSAT",
+      "current word must be canonical at length 2(k+1)",
+      "swapped reduction remains fixed",
+      "target results remain unaccessed"
+    ],
+    "desired_transition": [
+      "derive an exact nonemptiness witness or scoped impossibility theorem for H_k intersection P_(k+1)"
+    ],
+    "domain": "mathematics",
+    "failure_mechanisms": [
+      "suffix bits may be incompatible with the current prefix grammar, or syntax may align while the parent formula remains SAT"
+    ],
+    "forbidden_losses": [
+      "target-result leakage",
+      "silent decoder or label-map change",
+      "promoting feasibility to root authority"
+    ],
+    "invariants_to_preserve": [
+      "correctly directed polynomial 3SAT reduction",
+      "canonical/fallback separation",
+      "target blindness",
+      "root authority boundary"
+    ],
+    "obstruction_id": "OBS-PNP-C050-UNSAT-SUFFIX-CANONICAL-PREFIX-OVERLAP",
+    "relations": [
+      "H_k contains 1||c exactly when some canonical UNSAT parent word ends in c",
+      "P_(k+1) contains the current canonical prefixes",
+      "later_k requires exact equality 1||c=p across length, header, gamma, and payload coordinates",
+      "a witness must preserve the C048 swapped reduction rather than relabel the query"
+    ],
+    "roles": [
+      "canonical UNSAT parent words",
+      "their length-k suffixes",
+      "canonical current words",
+      "their length-(k+1) prefixes",
+      "swapped reduction invariant"
+    ]
+  },
+  "research_memory_review_hash": "sha256:040fd4b8bd91ca0ac73bf11e0a6ab54aa28e5efd244abaed221e9c64f21dc6e6",
+  "review_id": "PNP-C050-OBSTRUCTION-TRANSFORMATION-REVIEW-20260812",
+  "selected_episode_ids": [
+    "E-PNP-C050-SYNCHRONIZED-CODE-LANGUAGE-INTERSECTION"
+  ],
+  "selected_mode": "SEARCH",
+  "target_atom_id": "O9d12a2a1b-C050",
+  "target_context_hash": "sha256:c7814ceddddfdbaf0fa2000b1e9b3660b70c049f6238de8fe815eba8ed6cfac7",
+  "unresolved_warnings": [
+    "route selection is proposal-only",
+    "target theorem truth remains unchecked",
+    "root remains open"
+  ]
+}

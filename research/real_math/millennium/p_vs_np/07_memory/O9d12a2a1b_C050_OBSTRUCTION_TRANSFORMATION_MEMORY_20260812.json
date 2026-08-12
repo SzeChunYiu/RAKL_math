@@ -1,0 +1,94 @@
+{
+  "episodes": [
+    {
+      "artifact_hash": "sha256:345aa8444e17e44ebfa4e0ea4d27a1dc19b8e4b9e25fd8c6495c2af957088b2d",
+      "authority": "PROOF_BACKED",
+      "episode_id": "E-PNP-C050-SYNCHRONIZED-CODE-LANGUAGE-INTERSECTION",
+      "evidence_pointers": [
+        "git:5dd7c0d5084dfb0dd3cd3a1619badd30b532b975:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1"
+      ],
+      "known_breakpoints": [
+        "the decoder or padding convention changes",
+        "the split changes",
+        "the all-zero noncanonical contradiction is admitted",
+        "syntax is mistaken for UNSAT",
+        "a finite miss is generalized without proof"
+      ],
+      "lineage_ids": [],
+      "operation": "intersect exact suffix and prefix syntax constraints in shared bit coordinates, then discharge the retained UNSAT semantic condition",
+      "preconditions": [
+        "both languages and the shared coordinate map are exact",
+        "length and optional-padding branches are exhaustive",
+        "a syntactic survivor carries an explicit canonical parse on both sides",
+        "the parent formula's UNSAT status is proved rather than inferred from syntax"
+      ],
+      "preserved_invariants": [
+        "correctly directed polynomial 3SAT reduction",
+        "canonical/fallback separation",
+        "target blindness",
+        "root authority boundary"
+      ],
+      "relaxed_or_broken_constraints": [],
+      "resulting_relations": [
+        "derive an exact nonemptiness witness or scoped impossibility theorem for H_k intersection P_(k+1)"
+      ],
+      "source_context": "C048 exact later_k equivalence plus prefix/suffix synchronization of encoded languages",
+      "source_domain": "mathematics",
+      "source_obstruction": {
+        "constraints": [
+          "unchanged decoder, MAGIC, gamma grammar, padding, and equal split",
+          "parent formula must be canonical UNSAT",
+          "current word must be canonical at length 2(k+1)",
+          "swapped reduction remains fixed",
+          "target results remain unaccessed"
+        ],
+        "desired_transition": [
+          "derive an exact nonemptiness witness or scoped impossibility theorem for H_k intersection P_(k+1)"
+        ],
+        "domain": "mathematics",
+        "failure_mechanisms": [
+          "suffix bits may be incompatible with the current prefix grammar, or syntax may align while the parent formula remains SAT"
+        ],
+        "forbidden_losses": [
+          "target-result leakage",
+          "silent decoder or label-map change",
+          "promoting feasibility to root authority"
+        ],
+        "invariants_to_preserve": [
+          "correctly directed polynomial 3SAT reduction",
+          "canonical/fallback separation",
+          "target blindness",
+          "root authority boundary"
+        ],
+        "obstruction_id": "OBS-SOURCE-SYNCHRONIZED-LANGUAGE-INTERSECTION",
+        "relations": [
+          "H_k contains 1||c exactly when some canonical UNSAT parent word ends in c",
+          "P_(k+1) contains the current canonical prefixes",
+          "later_k requires exact equality 1||c=p across length, header, gamma, and payload coordinates",
+          "a witness must preserve the C048 swapped reduction rather than relabel the query"
+        ],
+        "roles": [
+          "canonical UNSAT parent words",
+          "their length-k suffixes",
+          "canonical current words",
+          "their length-(k+1) prefixes",
+          "swapped reduction invariant"
+        ]
+      },
+      "transformation_name": "SYNCHRONIZED_PRODUCT_THEN_SEMANTIC_FILTER"
+    }
+  ],
+  "evidence_pointers": [
+    "git:5dd7c0d5084dfb0dd3cd3a1619badd30b532b975:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+    "gitblob:65057f9b71f8d683ff07b07d5bba9ec514fcf96d"
+  ],
+  "memory_id": "PNP-C050-OBSTRUCTION-TRANSFORMATION-MEMORY-20260812",
+  "snapshot_hash": "14e6aad4c98f2083bf60f725bd513af4484a47a2f2d2dc9b8755b41523932950",
+  "source_universe": [
+    "C041 exact canonical decoder grammar",
+    "C043 finite canonical-length analysis",
+    "C047 exact header mismatch",
+    "C048 later_k equivalence",
+    "prefix/suffix code synchronization"
+  ]
+}
