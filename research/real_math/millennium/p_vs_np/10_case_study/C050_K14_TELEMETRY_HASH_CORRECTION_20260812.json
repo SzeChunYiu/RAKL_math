@@ -10,7 +10,9 @@
   "reason": "Post-write hostile verification found that the first combined packet embedded a TaskEpisode hash computed from a different evidence-pointer payload and a trace hash chain computed from a richer draft payload. RAKL v3 requires exact content hashes, so those identities fail closed rather than being treated as valid.",
   "replacement_task_episode": {
     "episode_id": "E-PNP-C050-K14-20260812-v2",
-    "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C050_K14_TASK_EPISODE_V2_20260812.json",
+    "container_path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C050_K14_TASK_EPISODE_V2_20260812.json",
+    "json_pointer": "/task_episode",
+    "inventory_disposition": "NESTED_TASK_EPISODE_NOT_TOP_LEVEL_INVENTORY_OBJECT",
     "artifact_hash": "496ba5c27f125f228900d565cf45c9d2fb96b9e58d8fe9dfdaa9ade64832f38a",
     "storage_admission": "PROPOSAL_SHADOW_STORED"
   },
@@ -18,6 +20,15 @@
     "trace_id": "PNP-C050-K14-HASH-CHAIN-20260812-v2",
     "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C050_K14_TRACE_V2_20260812.json",
     "last_event_hash": "251bea222108834a56dbad2329cfda7d9bb6b0d012123bea82cc62ba476d27f8"
+  },
+  "ci_failure_correction": {
+    "failed_head": "0a20de7eb9bcc4cb80773bb5dd1954000381118e",
+    "workflow_run_id": 31569260426,
+    "failure_signature": "frozen top-level episode inventory scanner discovered the standalone v2 TaskEpisode as an unregistered extra item",
+    "diagnosis": "TOOLING_REPOSITORY_INVENTORY_INTEGRATION_FAILURE_NOT_MATHEMATICAL_FAILURE",
+    "repair": "Preserve the exact TaskEpisode object under /task_episode inside a proposal/shadow trace container so this cycle does not silently mutate the separate frozen top-level inventory contract.",
+    "mathematical_effect": "NONE",
+    "learning_effect": "NONE"
   },
   "RAKL_CYCLE_METRICS_CORRECTION": {
     "new_episode_ids": ["E-PNP-C050-K14-20260812-v2"],
@@ -34,7 +45,7 @@
     "correction_counts_as_learning": false,
     "gate_effect": "NONE; proposal/shadow only"
   },
-  "verification_status": "REPLACEMENT_HASHES_RECOMPUTED_FROM_EXACT_CURRENT_V3_CONTENT CONTRACT; repository test added separately",
+  "verification_status": "REPLACEMENT_HASHES_RECOMPUTED_FROM_EXACT_CURRENT_V3_CONTENT_CONTRACT; exact-head repository CI re-run required after wrapper/test repair",
   "negative_history_preserved": true,
   "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
 }
