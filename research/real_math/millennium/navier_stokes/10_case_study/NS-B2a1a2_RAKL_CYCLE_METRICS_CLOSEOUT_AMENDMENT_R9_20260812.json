@@ -1,0 +1,40 @@
+{
+  "record_type": "RAKL_CYCLE_METRICS_CLOSEOUT_AMENDMENT",
+  "cycle_id": "NS-B2A1A2-VISCOSITY-NORMALIZATION-R9-20260812",
+  "amends": "NS-B2a1a2_RAKL_CYCLE_METRICS_R9_20260812.json",
+  "reason": "RAKL_math main advanced after the frozen application context and before PR closeout, and a post-metrics C-carrier completeness check sharpened the direct CKN audit. This amendment corrects observable closeout state without rewriting the frozen mathematical context or backfilling discovery authority.",
+  "framework_closeout": {
+    "rakl_method_version": "3.0.0",
+    "rakl_framework_version": "3.0.0",
+    "rakl_git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "drift": false
+  },
+  "application_closeout": {
+    "frozen_mathematical_base_sha": "4c33934030f98ba81a77b419d2317a1b31173fdc",
+    "main_sha_observed_at_closeout": "4653b516349d158279a8792aa503c209ed0cecab",
+    "main_drift_after_freeze": true,
+    "drift_scope": "current-main advance contains unrelated BSD application work relative to the frozen Navier-Stokes base; the frozen fibre and source-to-consumer calculation were not rebased or silently altered",
+    "branch_head_before_this_amendment": "b5af0a591232056591ff6a84557332624d403b84",
+    "amendment_commit_head": "CANNOT_MEASURE: self-referential until this amendment commit is created",
+    "pull_request": 230,
+    "pull_request_state_at_amendment": "OPEN_DRAFT_MERGEABLE"
+  },
+  "mathematical_completeness_addendum": {
+    "new_result_id": "OBS-NS-B2a1a2-C-CARRIER-STANDARD-INTERPOLATION-INSUFFICIENT",
+    "statement": "Standard local Sobolev interpolation gives C(v,r*) <= c M1^(3/2)[nu^-3 F^-9/4 + nu^-3 F^-3]. With F<=nu^-1, even the maximal-gain substitution leaves a nu^-3/4 term, so the ordinary C carrier explicitly named in the source g0 interface also receives no vanishing bound from the bare direct centered-cylinder ledger transformation.",
+    "scope": "standard C interpolation from the same A/E ledger only; not an impossibility theorem for equation-specific cancellation or a different regularity carrier",
+    "novelty_accounting_change": "NONE: this closes completeness within the already-counted KNOWLEDGE/RELATION/PATH delta and does not mint an additional retained semantic unit"
+  },
+  "ci": {
+    "workflow": "Pinned RAKL application tests",
+    "run_number": 604,
+    "run_id": 31553660403,
+    "status": "IN_PROGRESS",
+    "conclusion": null,
+    "head_sha_checked": "b5af0a591232056591ff6a84557332624d403b84"
+  },
+  "unchanged_retained_semantic_novelty": {"KNOWLEDGE":1,"OPERATOR":0,"EXPERIENCE_PATTERN":1,"OBSTRUCTION":1,"RELATION":1,"PATH":1,"META_METHOD":0},
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "independent_mathematical_reviews": "0/3"
+}
