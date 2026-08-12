@@ -1,0 +1,356 @@
+{
+  "schema_version": "pnp-rakl-v3-cycle-packet-shadow-v1",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "cycle_id": "PNP-C050-K14-20260812",
+  "framework_subject": {
+    "repository": "SzeChunYiu/RAKL",
+    "git_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811"
+  },
+  "application_subject": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "046864c970966e2b4e6e6bd652140c6c408c4f10",
+    "pre_action_commit": "7efad33fd4f1042be16d342bcb1af9c022bffb47",
+    "pre_action_receipt": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C050_K14_PRE_ACTION_FIBRE_RECEIPT_20260812.json",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "mathematical_result": {
+    "result_id": "PNP-C050-K14-CANONICAL-LENGTH-HOLE-20260812",
+    "atom_id": "O9d12a2a1b-C050-K14",
+    "novelty_class": {
+      "primary": "representation",
+      "secondary": "compositional",
+      "authority": "PROPOSAL_ONLY"
+    },
+    "definitions": {
+      "MAGIC": "11100101",
+      "w": "bit_length(v)",
+      "b": "bit_length(m)",
+      "raw_length_B": "6+2w+2b+3m(w+1)",
+      "canonical_even_length_L": "B+(B mod 2)",
+      "H_14": "{1||c: exists r with r||c a canonical UNSAT word of total length 28}",
+      "P_15": "{length-15 prefixes of canonical words of total length 30}"
+    },
+    "statement": "There is no canonical C041 long-form word of total length 28. Therefore H_14 is empty and H_14 intersection P_15 is empty. Canonical length 30 is nonempty and occurs exactly in parameter class v=1,m=3.",
+    "proof": [
+      "For m=1, b=1 and B=11+5w. Around the target, w=1,2,3,4 gives raw lengths 16,21,26,31 and canonical lengths 16,22,26,32, so neither 28 nor 30 occurs.",
+      "For m>=2 and w>=2, b>=2 and B>=6+4+4+3*2*3=32, so neither target length occurs.",
+      "For m>=2 and w=1, v=1 and B=8+2b+6m. If b=2 then m=2 or 3 and B is 24 or 30. If b>=3 then m>=4 and B>=38. Thus no raw length 27 or 28 exists, hence no canonical length 28; canonical length 30 occurs exactly at v=1,m=3.",
+      "Since every H_14 element requires a canonical parent of length 28, H_14 is empty before any UNSAT semantic test is needed. Hence H_14 intersection P_15 is empty.",
+      "P_15 is nonempty: any syntactically valid v=1,m=3 formula has raw and canonical length 30."
+    ],
+    "counterexample_first_falsification": {
+      "attacked": [
+        "raw length 27 could pad to 28",
+        "raw length 28 could occur exactly",
+        "a missed w/b/m class could realize 28",
+        "consumer P_15 could be empty"
+      ],
+      "outcome": "ALL_REFUTED_BY_EXHAUSTIVE_HAND_CASE_PARTITION",
+      "calibration": "A bounded enumeration over v<=64,m<=32 found no canonical length-28 class and only (v,m)=(1,3) at length 30. Calibration is not proof."
+    },
+    "transfer_assumptions": [
+      "exact frozen C041 MAGIC/gamma/payload/padding grammar",
+      "equal prefix/suffix split",
+      "C048 endpoint-swapped reduction unchanged"
+    ],
+    "explicit_disanalogies": [
+      "C049 k=12 failed by a fixed-bit mismatch; k=14 fails earlier by a producer support hole.",
+      "PR307 k=13 is process-quarantined and contributes no mathematical content to this strict derivation.",
+      "The k=14 support hole gives no statement for k>14."
+    ],
+    "primary_literature_control": "Cavalar and Oliveira, Boolean Circuit Complexity and Two-Dimensional Cover Problems, ECCC TR25-033 (2025), is retained only for the downstream cover/circuit interface; the k=14 grammar lemma is internal to the exact frozen application encoding.",
+    "local_to_global": {
+      "local_mathematical_failure": "NONE_ON_K14",
+      "gluing_failure": "No licensed theorem transports this finite grammar support hole to cover-complexity growth, a recurrence, circuit lower bounds, or the P-versus-NP root.",
+      "root_effect": "NONE"
+    }
+  },
+  "task_episode": {
+    "episode_id": "E-PNP-C050-K14-20260812",
+    "task_id": "P_VS_NP_VERIFIED_DISCOVERY",
+    "atom_id": "O9d12a2a1b-C050-K14",
+    "context_hash": "sha256:b50f857493e88680bd74943321316451b379c664e0e39d7d2d709f01d5be2a56",
+    "problem_signature": [
+      "H_14 intersection P_15 under frozen C041 grammar",
+      "exact canonical length/parity support before symbol synchronization",
+      "C048 swapped reduction unchanged",
+      "k=13 excluded by strict quarantine"
+    ],
+    "fibre_snapshot_hash": "sha256:b50f857493e88680bd74943321316451b379c664e0e39d7d2d709f01d5be2a56",
+    "operator_ids": [
+      "SEARCH_SYNCHRONIZED_GRAMMAR_K14",
+      "COUNTEREXAMPLE_FIRST_LENGTH_SYMBOL_FALSIFIER",
+      "HAND_UNSAT_SEMANTIC_CHECK_IF_SYNTAX_SURVIVES"
+    ],
+    "action_trace": [
+      "read current RAKL main and bind v3 method/experience/pre-action contracts",
+      "read current RAKL_math main, root, C050 fibre/DAG/memory/gate and exact C041 grammar",
+      "persist k=14 pre-action fibre receipt on Git before mathematical evaluation",
+      "derive raw/canonical length formula and exhaust the m/w cases",
+      "falsify canonical length-28 support and establish length-30 support at v=1,m=3",
+      "conclude H_14 empty and H_14 intersection P_15 empty",
+      "run bounded calibration with zero proof authority and five-role same-context review",
+      "separate episode, diagnosis, obstruction and candidate lesson; keep gluing residual open"
+    ],
+    "observation_ids": [
+      "OBS-PNP-C050-K14-NO-CANONICAL-LENGTH-28",
+      "OBS-PNP-C050-K14-LENGTH-30-ONLY-V1-M3"
+    ],
+    "verification_ids": [
+      "VER-PNP-C050-K14-HAND-LENGTH-CASE-SPLIT",
+      "VER-PNP-C050-K14-BOUNDED-CALIBRATION",
+      "REV-PNP-C050-K14-FIVE-ROLE-SAME-CONTEXT"
+    ],
+    "outcome": "PARTIAL_SUCCESS",
+    "residual_signature": [
+      "C050 overlap remains open at supported k>14",
+      "no cover-complexity growth or recurrence established",
+      "no circuit-lower-bound or P-versus-NP bridge established",
+      "independent mathematical review remains 0/3"
+    ],
+    "evidence_pointers": [
+      "git:7efad33fd4f1042be16d342bcb1af9c022bffb47:research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C050_K14_PRE_ACTION_FIBRE_RECEIPT_20260812.json",
+      "this-cycle-packet:mathematical_result",
+      "this-cycle-packet:same_context_expert_review"
+    ],
+    "artifact_hash": "7afc62eada6a45d660a83a4de99c33d914bb4a9b15d1b3e41e31d708bf5d2279",
+    "timestamp": "2026-08-12T06:05:00Z",
+    "cost": 1.0,
+    "storage_admission": "PROPOSAL_SHADOW_STORED"
+  },
+  "diagnosis": {
+    "diagnosis_id": "D-PNP-C050-K14-LENGTH-SUPPORT-HOLE",
+    "episode_id": "E-PNP-C050-K14-20260812",
+    "authority": "PROPOSAL_SHADOW_DIAGNOSIS",
+    "observation": "The exact k=14 overlap is empty.",
+    "supported_cause": "The producer language is empty because the frozen canonical grammar realizes no total length 28.",
+    "causal_status": "SUPPORTED_BOUNDED_BY_HAND_PROOF",
+    "rejected_causes": [
+      "C049-style fixed-bit mismatch: no H_14 word exists far enough for a shared-bit conflict to be load-bearing.",
+      "UNSAT nonexistence at a supported length: no canonical length-28 syntax exists at all.",
+      "P_15 emptiness: length 30 exists exactly at v=1,m=3.",
+      "k=13 transfer: quarantined and excluded."
+    ],
+    "falsifier": "Exhibit any valid canonical C041 long-form word of total length 28 or an omitted grammar branch."
+  },
+  "obstruction": {
+    "obstruction_id": "OB-PNP-C050-K14-CANONICAL-LENGTH-SUPPORT-HOLE",
+    "derived_from_episode": "E-PNP-C050-K14-20260812",
+    "derived_from_diagnosis": "D-PNP-C050-K14-LENGTH-SUPPORT-HOLE",
+    "authority": "PROPOSAL_SHADOW_OBSTRUCTION",
+    "obstruction": "At k=14 no canonical parent object exists at total length 28, so H_14 is empty before interface synchronization or UNSAT checks.",
+    "scope": ["k=14", "exact C041 grammar", "equal split", "C048 transpose language"],
+    "does_not_obstruct": ["k>14", "other encodings/splits", "cover growth", "circuit lower bounds", "P versus NP"]
+  },
+  "candidate_lesson": {
+    "lesson_id": "L-PNP-C050-SUPPORT-SCREEN-BEFORE-SYNCHRONIZATION-v1",
+    "kind": "STRATEGY",
+    "authority": "CANDIDATE",
+    "trigger_signature": ["variable-length canonical code intersection", "producer/consumer consecutive lengths", "semantic side condition downstream"],
+    "action": "Before shared-bit or semantic search, characterize whether both producer and consumer canonical length supports are nonempty at the frozen k.",
+    "expected_effects": ["avoid vacuous overlap search", "separate support failure from interface-bit failure and semantic failure"],
+    "boundaries": ["not a theorem about all k", "not a reusable framework tool without fresh validation", "does not infer cover growth"],
+    "supporting_episode_ids": ["E-PNP-C050-K14-20260812"],
+    "contradicting_episode_ids": [],
+    "falsifier": "A fresh supported level where support screening would reject the route but a valid overlap witness exists.",
+    "validation_obligations": ["fresh later-k transfer on an untouched supported level", "independent or proof-backed validation before reusable promotion"]
+  },
+  "dag_delta": {
+    "resolved_local_atom": {
+      "atom_id": "O9d12a2a1b-C050-K14",
+      "status": "SCOPED_OVERLAP_IMPOSSIBILITY",
+      "result": "H_14 intersection P_15 is empty because H_14 is empty."
+    },
+    "new_active_atom": {
+      "atom_id": "O9d12a2a1b-C050-SUPPORT-SPECTRUM",
+      "goal": "Characterize the exact even canonical-length support of the frozen C041 grammar for k>14, excluding quarantined k=13 history. Only supported levels may open synchronization/UNSAT children.",
+      "candidate_generation_allowed": false
+    },
+    "still_open": ["overlap at supported k>14", "cover growth after any overlap", "root proof DAG"]
+  },
+  "same_context_expert_review": {
+    "review_id": "PNP-C050-K14-SAME-CONTEXT-EXPERT-CELL-20260812",
+    "authority": "SAME_CONTEXT_ROLE_SEPARATED_INTERNAL_REVIEW_NOT_INDEPENDENT",
+    "independent_mathematical_review_credit": "0/3",
+    "roles": [
+      {
+        "role": "complexity_and_reduction_lead",
+        "background": "structural complexity, reductions, cover-complexity interfaces",
+        "finding": "Local grammar lemma only; C048 reduction direction is unchanged and no circuit consequence follows."
+      },
+      {
+        "role": "formal_languages_and_coding_lead",
+        "background": "prefix codes, gamma coding, finite-language intersections",
+        "finding": "The length formula and case partition are exhaustive; 28 is unsupported and 30 occurs exactly at v=1,m=3."
+      },
+      {
+        "role": "adversarial_falsification_lead",
+        "background": "counterexamples and proof-obligation stress testing",
+        "finding": "Padding would require raw 27 or 28; neither occurs, and no omitted w/b/m branch survives."
+      },
+      {
+        "role": "local_to_global_gluing_lead",
+        "background": "proof DAGs, transfer and obstruction localization",
+        "finding": "The result does not glue to a cover recurrence or root claim; route next to the support spectrum."
+      },
+      {
+        "role": "rakl_v3_provenance_and_metrology_lead",
+        "background": "v3 experience substrate, chronology, authority and measurement",
+        "finding": "The k=14 discriminator was committed before result derivation and k=13 was rejected; authority remains shadow only."
+      }
+    ],
+    "strongest_objection": "Do not generalize a finite support hole into a family-wide obstruction.",
+    "consensus": "Accept only the scoped k=14 result and route to a parametric support-spectrum atom."
+  },
+  "hash_chained_trace": {
+    "trace_id": "PNP-C050-K14-HASH-CHAIN-20260812",
+    "authority": "PROPOSAL_SHADOW_TRACE",
+    "hash_algorithm": "SHA-256 over canonical sorted compact JSON excluding event_hash",
+    "events": [
+      {
+        "index": 0,
+        "event_type": "FRAMEWORK_BOUND",
+        "previous_event_hash": "GENESIS",
+        "payload": {"framework_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554", "method_version": "3.0.0"},
+        "event_hash": "d3af0d398f2eec21b0ac895885c37045dc7fa17b084611516380a36858eae4d5"
+      },
+      {
+        "index": 1,
+        "event_type": "APPLICATION_FIBRE_BOUND",
+        "previous_event_hash": "d3af0d398f2eec21b0ac895885c37045dc7fa17b084611516380a36858eae4d5",
+        "payload": {"application_base": "046864c970966e2b4e6e6bd652140c6c408c4f10", "atom": "O9d12a2a1b-C050", "fibre_hash": "sha256:b50f857493e88680bd74943321316451b379c664e0e39d7d2d709f01d5be2a56"},
+        "event_hash": "2adce57c02f176fbe2c06a3ecc7903ab53256202047f698e18556c21c82ca741"
+      },
+      {
+        "index": 2,
+        "event_type": "PRE_ACTION_FROZEN",
+        "previous_event_hash": "2adce57c02f176fbe2c06a3ecc7903ab53256202047f698e18556c21c82ca741",
+        "payload": {"commit": "7efad33fd4f1042be16d342bcb1af9c022bffb47", "target": "k=14", "discriminator": "support 28/30 before symbol/UNSAT checks"},
+        "event_hash": "c0650095a61df0b58e3e29d375d98d81fd01954aec7f5cdb314e926995668bd2"
+      },
+      {
+        "index": 3,
+        "event_type": "MATHEMATICAL_OBSERVATION",
+        "previous_event_hash": "c0650095a61df0b58e3e29d375d98d81fd01954aec7f5cdb314e926995668bd2",
+        "payload": {"observation": "no canonical length 28; length 30 exactly v=1,m=3", "proof": "exhaustive hand case split"},
+        "event_hash": "593a8cda5f8dfbc0594a5f2c75a3d18ab28807360dd66d00689bbeaf0e7227a1"
+      },
+      {
+        "index": 4,
+        "event_type": "OUTCOME_RECORDED",
+        "previous_event_hash": "593a8cda5f8dfbc0594a5f2c75a3d18ab28807360dd66d00689bbeaf0e7227a1",
+        "payload": {"outcome": "PARTIAL_SUCCESS", "episode_id": "E-PNP-C050-K14-20260812", "next_atom": "O9d12a2a1b-C050-SUPPORT-SPECTRUM"},
+        "event_hash": "fd300fb67452193198159a85aaac9f6167104db077ce356d5899c22b271f46bb"
+      }
+    ],
+    "last_event_hash": "fd300fb67452193198159a85aaac9f6167104db077ce356d5899c22b271f46bb"
+  },
+  "RAKL_METHOD_CASE_STUDY": {
+    "active_atom_signature": ["O9d12a2a1b-C050-K14", "strict untouched k=14", "H_14 intersection P_15", "frozen C041 grammar/equal split"],
+    "actual_fibre_consulted": ["C050_CURRENT_FIBRE", "C050_RESEARCH_MEMORY_REVIEW", "C050_PRE_CANDIDATE_GATE", "C041_FROZEN_GRAMMAR", "C050_FAILURE_SNAPSHOT", "C050_TOOL_SNAPSHOT"],
+    "methods_operators_motifs_tried": {
+      "operators": ["SEARCH_SYNCHRONIZED_GRAMMAR_K14", "COUNTEREXAMPLE_FIRST_LENGTH_SYMBOL_FALSIFIER", "HAND_UNSAT_SEMANTIC_CHECK_IF_SYNTAX_SURVIVES"],
+      "motifs": [],
+      "search_policy": "least untouched integer after quarantined k=13; support before bits before UNSAT"
+    },
+    "prior_experience": {
+      "changed_routing": [
+        "T-PNP-C049-K12-FIXED-BIT-SEPARATION",
+        "F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT",
+        "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING",
+        "C050_PRE_CANDIDATE_GATE"
+      ],
+      "retrieved_but_rejected": [
+        {"id": "PR307_K13_RESULT", "why": "process-quarantined; mathematical content excluded"},
+        {"id": "C049_K12_FIXED_BIT_CONCLUSION", "why": "k-specific result does not transfer"}
+      ],
+      "missed_prior_experience": "CANNOT_MEASURE: no complete bounded retrieval-universe coverage receipt"
+    },
+    "decision_policy": "Persist pre-action receipt, then attack producer/consumer support; stop semantic work if producer syntax is empty.",
+    "observations": ["no canonical length 28", "length 30 exactly v=1,m=3", "H_14 empty"],
+    "verification": ["hand case split", "bounded calibration only", "five-role same-context review", "root/gluing scope audit"],
+    "outcome": "PARTIAL_SUCCESS_SCOPED_K14",
+    "residual": ["supported k>14 overlap", "support spectrum", "cover/circuit/root gluing", "independent review 0/3"],
+    "failure_category": {
+      "mathematical": "NO_LOCAL_FAILURE_ON_K14",
+      "retrieval": "CANNOT_MEASURE_COMPLETENESS",
+      "decomposition": "NEXT_RESIDUAL_REFACTORED_TO_SUPPORT_SPECTRUM",
+      "representation": "ACTIVE_BOUNDED_LENGTH_SUPPORT_HOLE",
+      "gluing": "OPEN_NO_COVER_OR_ROOT_TRANSPORT",
+      "source": "NO_BLOCK",
+      "verification": "SAME_CONTEXT_ONLY",
+      "tooling": "NO_BLOCKING_FAILURE_OBSERVED",
+      "meta_policy": "PRE_ACTION_DURABILITY_SUCCEEDED"
+    },
+    "saturation_axes": {
+      "shadow_reopened": ["KNOWLEDGE", "OBSTRUCTION", "PATH"],
+      "shadow_flattened": ["OPERATOR", "EXPERIENCE_PATTERN", "RELATION", "META_METHOD"],
+      "protected_retained_novelty_all_zero": true
+    },
+    "episode_diagnosis_lesson_separation": true,
+    "repeated_process_failure_links": ["PF-PNP-C041A-LATE-CHILD-FIBRE-20260812", "PF-PNP-C041B-LATE-CHILD-FIBRE-20260812", "C045 exposed-target chronology family"],
+    "repeated_process_failure_status": "NOT_REPEATED: pre-action fibre was persisted before evaluation.",
+    "v3_feature_helped": ["problem-conditioned fibre", "selected/rejected retrievals", "pre-action chronology boundary", "TaskEpisode", "episode/diagnosis/lesson separation", "proposal/shadow admission", "seven-axis metrology"],
+    "v3_missing_or_weak": "No connector-native helper was available to instantiate/validate canonical PreActionFibreReceipt and Git chronology in one operation; this cycle uses a shadow receipt plus external Git ordering.",
+    "framework_improvement_hypothesis": "Benchmark a proposal-only ordered-family selector/receipt helper that binds quarantine set, monotone target selector, selected/rejected retrievals, falsifier and exact framework/application subjects, then derives chronology from repository commits.",
+    "next_action": "Open O9d12a2a1b-C050-SUPPORT-SPECTRUM and characterize exact canonical even-length support for k>14 before another finite synchronization target."
+  },
+  "RAKL_CYCLE_METRICS": {
+    "record_type": "RAKL_CYCLE_METRICS",
+    "rakl_method_version": "3.0.0",
+    "rakl_software_package_version": "0.1.0",
+    "rakl_git_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+    "rakl_math_base": "046864c970966e2b4e6e6bd652140c6c408c4f10",
+    "rakl_math_head": "CANNOT_MEASURE_IN_SELF_CONTAINING_RECEIPT: exact final branch head is externally attested after this packet is committed",
+    "pre_state_fingerprint": "git_tree:930eef63b3be84885369be6e9ef6a97ec6f382fd",
+    "post_state_fingerprint": "CANNOT_MEASURE_IN_SELF_CONTAINING_RECEIPT: final tree depends on these bytes; post-write Git query/PR body attests it",
+    "active_atom": "O9d12a2a1b-C050-K14",
+    "fibre_snapshot_hash": "sha256:b50f857493e88680bd74943321316451b379c664e0e39d7d2d709f01d5be2a56",
+    "canonical_process_surfaces_invoked": ["decomposition", "routing", "memory", "equivalence_similarity", "experiment_query_selection", "gap_discovery", "review", "saturation_stopping", "source_selection_reliability"],
+    "retrieved_memory": {
+      "tools": {"count": 1, "ids": ["T-PNP-C049-K12-FIXED-BIT-SEPARATION"], "selected": ["T-PNP-C049-K12-FIXED-BIT-SEPARATION"], "rejected": []},
+      "failures": {"count": 2, "ids": ["F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT", "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING"], "selected": ["F-PNP-C047-ORIENTATION-ONLY-INTERFACE-MISALIGNMENT", "F-C043-FIRST-ROW-SPLIT-TYPE-CEILING"], "rejected": []},
+      "episodes": {"count": 0, "ids": [], "note": "episode-derived experience was consulted through current memory projections; no raw TaskEpisode was directly retrieved"},
+      "motifs": {"count": 0, "ids": []},
+      "other": {"count": 6, "selected": ["C050_CURRENT_FIBRE", "C050_RESEARCH_MEMORY_REVIEW", "C050_PRE_CANDIDATE_GATE", "C041_FROZEN_GRAMMAR"], "rejected": ["PR307_K13_RESULT", "C049_K12_FIXED_BIT_CONCLUSION"]},
+      "missed_relevant_memory": "CANNOT_MEASURE: no complete bounded retrieval-universe coverage receipt"
+    },
+    "outcome": "PARTIAL_SUCCESS_SCOPED_K14_OVERLAP_IMPOSSIBILITY",
+    "residual_before": ["no strict untouched later-k result after k13 quarantine", "H_k intersection P_(k+1) open beyond k12", "no cover/circuit/root bridge"],
+    "residual_after": ["k14 resolved by parent support hole", "supported k>14 open", "support spectrum required", "no cover/circuit/root bridge", "independent review 0/3"],
+    "retained_semantic_novelty": {"KNOWLEDGE": 0, "OPERATOR": 0, "EXPERIENCE_PATTERN": 0, "OBSTRUCTION": 0, "RELATION": 0, "PATH": 0, "META_METHOD": 0},
+    "saturation_axes_reopened_shadow": ["KNOWLEDGE", "OBSTRUCTION", "PATH"],
+    "saturation_axes_flattened_shadow": ["OPERATOR", "EXPERIENCE_PATTERN", "RELATION", "META_METHOD"],
+    "resource_proxies": {
+      "model_tokens": "CANNOT_MEASURE: no authoritative counter exposed",
+      "context_tokens": "CANNOT_MEASURE: no authoritative counter exposed",
+      "retrieval_calls": "CANNOT_MEASURE_EXACT_TOTAL: connector exposes no cumulative run counter",
+      "tool_calls": "CANNOT_MEASURE_EXACT_TOTAL: connector exposes no cumulative run counter",
+      "web_search_calls_observed": 1,
+      "python_calibration_calls_observed": 1,
+      "elapsed_run_proxy": ">=10 minutes from 2026-08-12T05:55:01Z to packet timestamp; exact tool wall-time not exposed"
+    },
+    "new_ids": {
+      "episode": ["E-PNP-C050-K14-20260812"],
+      "lesson": ["L-PNP-C050-SUPPORT-SCREEN-BEFORE-SYNCHRONIZATION-v1"],
+      "failure": [],
+      "tool": [],
+      "obstruction": ["OB-PNP-C050-K14-CANONICAL-LENGTH-SUPPORT-HOLE"],
+      "motif": [],
+      "diagnosis": ["D-PNP-C050-K14-LENGTH-SUPPORT-HOLE"]
+    },
+    "successful_reuse_ids": ["T-PNP-C049-K12-FIXED-BIT-SEPARATION"],
+    "gate_provenance_ci": {
+      "pre_action_chronology": "PASS_SHADOW_GIT_ORDER",
+      "same_context_review": "5 roles; independent credit 0/3",
+      "root_gate": "BLOCKED_OPEN_NO_SOLUTION_CERTIFICATE",
+      "provenance": "exact grammar blob/fibre/pre-action commit bound",
+      "ci": "PENDING_AT_PACKET_MATERIALIZATION"
+    },
+    "rakl_changed_action_relative_to_pre_memory_pre_gate_preference": "CANNOT_MEASURE: no counterfactual action preference was frozen before memory/gate access"
+  },
+  "recorded_at": "2026-08-12T06:05:00Z"
+}
