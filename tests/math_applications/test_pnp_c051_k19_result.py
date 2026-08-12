@@ -1,7 +1,9 @@
 from __future__ import annotations
 import importlib.util,json,sys
 from pathlib import Path
+from datetime import datetime
 ROOT=Path(__file__).resolve().parents[2]; P=ROOT/'research/real_math/millennium/p_vs_np'; F=P/'09_trace/c051_k19_result_fixture.py'; C041=P/'04_candidates/C041_fx_sat_one_sided.py'
+EVALUATOR=P/'05_falsification/c051_k19_alignment_evaluator.py'
 def mod(name,path):
  s=importlib.util.spec_from_file_location(name,path);assert s and s.loader;m=importlib.util.module_from_spec(s);sys.modules[name]=m;s.loader.exec_module(m);return m
 def test_result_documents_match_fixture_and_seven_fields():
@@ -24,7 +26,24 @@ def test_exact_length_regimes_and_bit3_separation():
  h='1'+x[19:];assert h[3]=='1'
  for v in range(4,8):
   f=c.Formula3CNF(v,(((1,False),(1,False),(1,False)),((1,False),(1,False),(1,False))),'TEST');p=c.encode_formula(f)[:20];assert p[3]=='0';assert h!=p
+ evaluator=mod('c051_bound_evaluator',EVALUATOR).evaluate()
+ assert evaluator['branch']=='SCOPED_OVERLAP_IMPOSSIBILITY'
+ assert evaluator['parent_unsat_words_examined']==590
+ assert evaluator['current_prefixes_examined']==44
+ result=mod('c051_result_for_authority',F).documents()['result']
+ assert result['authority']['retrospective_verification_only'] is True
+ assert result['authority']['prospective_evaluation_credit'] is False
+ assert (ROOT/result['authorization']['path']).exists()
 def test_trace_is_hash_chained():
  m=mod('c051trace',F);t=m.documents()['trace'];prev=''
  for e in t['entries']:
   assert e['previous_event_hash']==prev; core=dict(e);ah=core.pop('artifact_hash');assert m.h(core)==ah;prev=ah
+ timestamps=[datetime.fromisoformat(e['timestamp'].replace('Z','+00:00')) for e in t['entries']]
+ assert timestamps==sorted(timestamps)
+ by_type={e['event_type']:e for e in t['entries']}
+ assert by_type['CANDIDATE_PROPOSED']['timestamp'] < by_type['FALSIFIER_RUN']['timestamp']
+ assert by_type['FALSIFIER_RUN']['timestamp'] == by_type['RESULT_RECORDED']['timestamp']
+ assert by_type['PROOF_CHECKED']['timestamp'] > by_type['RESULT_RECORDED']['timestamp']
+ for e in t['entries']:
+  for pointer in e['evidence_pointers']:
+   assert (ROOT/pointer).exists(), pointer
