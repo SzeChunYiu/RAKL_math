@@ -1,0 +1,99 @@
+{
+  "actual_fibre": [
+    "RAKL current v3 workflow/method_specs/pre-action/DifferenceWitness",
+    "RAKL_math #4/#221/PR311/PR310/PR288/PR211/PR219/PR280",
+    "Albritton-Barker 1811.00502",
+    "Koch et al 0709.3599",
+    "Albritton-Bradshaw 2110.02187",
+    "Grujic 1111.0217",
+    "Grujic 2607.08866v2",
+    "Gallagher-Koch-Planchon 1012.0145"
+  ],
+  "atom": "NS-B1a3b1a2b",
+  "authority": "PROPOSAL_SHADOW_STORED",
+  "content_hash": "sha256:ee096bf0a406c45e7bd5e3a5d69da4e2715af1b1e5bb22f5f06608bec687307d",
+  "cost_effort_proxy": {
+    "application_or_framework_records_consulted": 13,
+    "primary_sources_consulted": 6,
+    "tokens_context": "CANNOT_MEASURE: runtime does not expose authoritative totals",
+    "tool_calls": "CANNOT_MEASURE: no authoritative aggregate counter after conversation compaction",
+    "wall_time": "CANNOT_MEASURE: runtime does not expose authoritative per-cycle elapsed time"
+  },
+  "cycle_id": "NS-B1a3b1a2b-R7-PACKET-SPARSENESS-SCALE-20260812",
+  "decision_policy": {
+    "after_memory_gate": "first normalize capacity at critical vorticity scale and type-check exact consumers",
+    "before_memory_gate": "attempt direct geometric sparsity glue",
+    "rakl_changed_action_preference": true
+  },
+  "episode_id": "TE-NS-B1a3b1a2b-R7-20260812",
+  "failure_category": {
+    "decomposition": "REFINED",
+    "local_mathematics": "SUCCESS",
+    "local_to_global_gluing": "OPEN",
+    "representation": "TYPE_MISMATCH_IDENTIFIED",
+    "retrieval": "SUCCESS_BOUNDED",
+    "tooling": "CANONICAL_RUNTIME_CANNOT_CHECK",
+    "verification": "PASS_AT_PROPOSAL_SHADOW_SCOPE"
+  },
+  "failure_signature": "DIRECT_GEOMETRIC_CONSUMER_GLUE_UNLICENSED_BY_SCALE_SMALLNESS_AND_CONSUMER_TYPE",
+  "fibre_hash": "sha256:a9a676e9c985a234809d1216f98be33f7b3c9b2ba5919ebc20c2e7fb21932c6c",
+  "methods_operators_motifs_tried": [
+    "SEARCH same-domain sparseness-scale diagnostic",
+    "critical-scale nondimensionalization R=a Omega^-1/2",
+    "dimensionless temporal-coherence coordinate chi=K/Omega^2",
+    "consumer signature type-check",
+    "realization-domain DifferenceWitness for ambient packet-train stress"
+  ],
+  "next_action": "Open NS-B1a3b1a2c: search actual finite-I NSE dynamics for scale-aligned temporal coherence I*chi control, a valid volume-to-1D/analyticity transformation, or an alternate consumer accepting finite-I capacity geometry.",
+  "observations": [
+    "For Omega>0, K=||partial_t omega||_infinity and chi=K/Omega^2, the R6 bound yields all-center half-max volume fraction <= C I/[a^2 min(a^2,1/chi)] on radius R=a Omega^-1/2.",
+    "Finite I and bounded ancient smoothing make I,chi finite but do not make I or I chi universally small.",
+    "The audited primary consumers do not accept exactly this input: AB is velocity-Lp volumetric sparsity, Grujic 2011 is local 1D sparsity, Grujic 2026 has Lorentz amplitude+direction upstream, GKP needs a global critical space."
+  ],
+  "outcome": "CRITICAL_SCALE_VOLUME_FRACTION_FORMULA_IDENTIFIED__DIRECT_GEOMETRIC_CONSUMER_GLUE_OPEN",
+  "prior_experience": {
+    "missed": "CANNOT_MEASURE: no complete recall denominator.",
+    "rejected": [
+      {
+        "id": "PR288:SAME_TIME_FAR_L3_TAIL",
+        "reason": "parallel L3 consumer"
+      },
+      {
+        "id": "PR211:PV_CONSUMER_INTERFACE_GAP",
+        "reason": "stronger source signature"
+      },
+      {
+        "id": "PR219:HILL_MOVING_CORE",
+        "reason": "Euler ancestry mismatch"
+      },
+      {
+        "id": "PR280:HILL_DENSITY_KERNEL",
+        "reason": "different observable"
+      },
+      {
+        "id": "SRC:GKP1012_CRITICAL_ELEMENTS",
+        "reason": "unmapped global critical-space premise"
+      }
+    ],
+    "rejected_count": 5,
+    "retrieved_count": 10,
+    "selected": [
+      "PR311:R6_LINEAR_PACKET_CAPACITY",
+      "PR310:REPRESENTATION_ONLY_LEDGER_TAIL",
+      "SRC:AB2110_SPARSENESS_SCALING",
+      "SRC:GRUJIC1111_LINEAR_SPARSENESS",
+      "SRC:GRUJIC2607_LOG_DEPLETION"
+    ],
+    "selected_count": 5
+  },
+  "problem_signature": "finite-I ancient NSE O(R) high-vorticity packet capacity -> exact geometric regularity consumer",
+  "record_type": "TaskEpisodeShadow",
+  "residual": "SOURCE_VALID_CONTROL_OF_I_CHI_OR_VOLUME_TO_EXACT_CONSUMER_TRANSFORMATION_OR_ALTERNATE_FINITE_I_CONSUMER",
+  "verification": [
+    "symbolic exponent/unit check",
+    "two temporal-persistence regimes checked separately",
+    "Navier-Stokes scaling check of a and chi",
+    "primary-source consumer signature audit",
+    "representation-to-target DifferenceWitness"
+  ]
+}
