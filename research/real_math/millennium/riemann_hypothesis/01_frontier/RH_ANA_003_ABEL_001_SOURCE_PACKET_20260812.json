@@ -1,0 +1,36 @@
+{
+  "artifact_hash": "sha256:3c605651ea4add0757aff7ebd8d86ca8c311c886b1e1f94147902ccc27373c20",
+  "atom_id": "RH-ANA-003-ABEL-001",
+  "authority": "PRIMARY_SOURCE_PACKET_AND_STANDARD_METHOD_CONTEXT_ONLY_NO_TARGET_RESULT",
+  "excluded_authority": [
+    "unmerged PR316",
+    "historical R4 proposal/shadow branch",
+    "historical R5 proposal/shadow branch"
+  ],
+  "mathematical_result_credit": false,
+  "packet_id": "RH-ANA-003-ABEL-001-SOURCE-PACKET-20260812",
+  "retrieved_before_candidate": true,
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "authorized_use": "prospective sufficient source for fixed-n Abel boundary and integral estimates",
+      "equation_1_3": "Delta(x)=|psi(x)-x|/x",
+      "equation_1_4": "omega(x)=d (log x)^(3/5)/(log log x)^(1/5), d=(5^6 A_0^3/(2^2*3^4))^(1/5)",
+      "id": "BELLOTTI-ARXIV-2508.02041v1",
+      "non_guarantees": [
+        "does not state the target Laguerre identity",
+        "does not provide n-uniformity",
+        "does not imply Li positivity or RH"
+      ],
+      "quoted_input": "Delta(x) << exp(55 A_0) exp(-omega(x))",
+      "retrieved_html_sha256": "2b57101a941e31c033ae2510efe8f4b3e81f22f025cd857fcb53d8ce77f3e634",
+      "theorem": "Theorem 1.5",
+      "url": "https://arxiv.org/html/2508.02041v1"
+    },
+    {
+      "authorized_use": "method-transfer source only; target endpoint identity must be derived",
+      "id": "CLASSICAL-FINITE-ABEL-SUMMATION",
+      "statement_scope": "finite ordered sequence, exact cumulative sum, C1 weight, exact endpoints"
+    }
+  ]
+}

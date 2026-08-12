@@ -1,0 +1,91 @@
+{
+  "episodes": [
+    {
+      "artifact_hash": "sha256:fa1341dfbe7d7cfb433f5f3855bb62eae98bebcc0e9624572de8beb67d8d12ee",
+      "authority": "PROOF_BACKED",
+      "episode_id": "E-CLASSICAL-FINITE-ABEL-SUMMATION",
+      "evidence_pointers": [
+        "classical Abel summation identity"
+      ],
+      "known_breakpoints": [
+        "taking Y to infinity without a boundary proof",
+        "reordering the original increments",
+        "using a different cumulative convention at X or Y"
+      ],
+      "lineage_ids": [],
+      "operation": "for finite X<Y, replace sum_{X<m<=Y} a_m b(m) by A(Y)b(Y)-A(X)b(X)-integral_X^Y A(t)b'(t)dt",
+      "preconditions": [
+        "A(t)=sum_{m<=t}a_m in the same order",
+        "b is continuously differentiable on [X,Y]",
+        "the half-open source interval and endpoint convention are fixed"
+      ],
+      "preserved_invariants": [
+        "natural source order",
+        "exact a_m, A(x), and b_n definitions",
+        "fixed-n quantifier order",
+        "local-to-root authority boundary"
+      ],
+      "relaxed_or_broken_constraints": [],
+      "resulting_relations": [
+        "license a candidate asking whether the exact finite identity extends to a fixed-n natural-order improper identity"
+      ],
+      "source_context": "classical finite partial summation / Stieltjes integration by parts",
+      "source_domain": "analytic number theory / real analysis",
+      "source_obstruction": {
+        "constraints": [
+          "n is fixed before the infinite endpoint limit",
+          "the original integer order is preserved",
+          "finite endpoint terms are retained exactly",
+          "no unmerged branch is a theorem source"
+        ],
+        "desired_transition": [
+          "license a candidate asking whether the exact finite identity extends to a fixed-n natural-order improper identity"
+        ],
+        "domain": "analytic number theory / real analysis",
+        "failure_mechanisms": [
+          "termwise absolute values can destroy cumulative prime cancellation",
+          "discarding a nonzero endpoint invalidates the infinite identity",
+          "an n-dependent constant can be mistaken for a uniform estimate"
+        ],
+        "forbidden_losses": [
+          "series reordering",
+          "silent n-uniformity",
+          "PR316 rate claims",
+          "Li-positivity or RH promotion"
+        ],
+        "invariants_to_preserve": [
+          "natural source order",
+          "exact a_m, A(x), and b_n definitions",
+          "fixed-n quantifier order",
+          "local-to-root authority boundary"
+        ],
+        "obstruction_id": "OBS-SOURCE-FINITE-ABEL-SUMMATION",
+        "relations": [
+          "A(x) is the exact cumulative sum of a_m through floor(x)",
+          "finite Abel summation replaces the weighted sum by boundary terms and an integral",
+          "Bellotti controls psi(x)-x and hence A(x) after the floor correction",
+          "the fixed-n Laguerre factor is a polynomial in log x divided by x"
+        ],
+        "roles": [
+          "natural-order increments a_m",
+          "cumulative source A(x)",
+          "fixed-index Laguerre weight b_n",
+          "finite endpoints X and Y",
+          "improper natural-order limit"
+        ]
+      },
+      "transformation_name": "ORDERED_CUMULATIVE_SUMMATION_BY_PARTS"
+    }
+  ],
+  "evidence_pointers": [
+    "https://arxiv.org/html/2508.02041v1#S1.Thmtheorem5",
+    "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003_ABEL_001_SOURCE_PACKET_20260812.json"
+  ],
+  "memory_id": "RH-ANA-003-ABEL-001-TRANSFORMATION-MEMORY-20260812",
+  "snapshot_hash": "0c42639d149ad513fd06cf33e352182b1a4c84933bfdbe0c72d329690c7adfd8",
+  "source_universe": [
+    "classical finite Abel summation",
+    "Bellotti arXiv:2508.02041v1 Theorem 1.5 and equations (1.3)-(1.4)",
+    "canonical RH-ANA-001/002 failure surfaces on current main"
+  ]
+}

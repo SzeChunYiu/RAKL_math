@@ -1,0 +1,76 @@
+{
+  "allowed_result_branches": [
+    "PROVED_FIXED_N_NATURAL_ORDER_IDENTITY",
+    "FINITE_ENDPOINT_IDENTITY_FALSE",
+    "BELLOTTI_BOUNDARY_OR_INTEGRAL_INSUFFICIENT",
+    "ABSOLUTE_DIVERGENCE_WITNESS_FALSE",
+    "CANNOT_CHECK"
+  ],
+  "artifact_hash": "sha256:064d0e439a07d53984f8a446678ffd176f6642cc30a97ea1fcea5ee430e4db6f",
+  "candidate_core_sha256": "sha256:19a265e1498ad67db256c2ef1315a370d2b72107618f67c54fb7b0828eac3bcc",
+  "candidate_id": "RH-ANA-003-ABEL-001-C001-FIXED-N-NATURAL-ORDER-ABEL",
+  "evaluation_authorized": false,
+  "frozen_at": "2026-08-12T07:30:00Z",
+  "inputs": {
+    "absolute_divergence_subsequence": "m=6k, so Lambda(6k)=0; compare eventual Laguerre leading term against sum_k (log k)^(n-1)/k",
+    "bellotti": {
+      "equation_1_3": "Delta(x)=|psi(x)-x|/x",
+      "equation_1_4": "omega(x)=d(log x)^(3/5)/(log log x)^(1/5), d=(5^6 A_0^3/(2^2*3^4))^(1/5)",
+      "retrieved_v1_html_sha256": "2b57101a941e31c033ae2510efe8f4b3e81f22f025cd857fcb53d8ce77f3e634",
+      "source": "Bellotti, arXiv:2508.02041v1",
+      "theorem": "Theorem 1.5",
+      "theorem_bound": "Delta(x)<<exp(55 A_0)exp(-omega(x))",
+      "use_scope": "sufficient boundary source for fixed n only"
+    },
+    "exact_definitions": {
+      "chebyshev_psi": "psi(x)=sum_{m<=x}Lambda(m)",
+      "cumulative_source": "A(x)=sum_{m<=x}a_m=floor(x)-psi(x)",
+      "kernel": "b_n(x)=L_{n-1}^{(1)}(log x)/x",
+      "laguerre_normalization": "L_{n-1}^{(1)}(u)=sum_{j=0}^{n-1}(-1)^j binom(n,j+1)u^j/j!",
+      "source_sequence": "a_m=1-Lambda(m)",
+      "von_mangoldt": "Lambda(m)=log p if m=p^j for a prime p and integer j>=1; Lambda(m)=0 otherwise"
+    },
+    "finite_identity": "For real 1<=X<Y that are not positive integers, sum_{X<m<=Y} a_m b_n(m) = A(Y)b_n(Y)-A(X)b_n(X) - integral_X^Y A(t)b_n'(t)dt."
+  },
+  "mathematical_result_credit": false,
+  "proof_input_id": "RH-ANA-003-ABEL-001-PROOF-INPUT-FREEZE-20260812",
+  "proof_obligations": [
+    {
+      "id": "O1-FINITE-ABEL-ENDPOINTS",
+      "obligation": "derive the displayed finite half-open identity with X,Y nonintegral and exact A(X),A(Y) terms",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O2-KERNEL-DERIVATIVE",
+      "obligation": "derive b_n'(t)=t^(-2)[(L_{n-1}^{(1)})'(log t)-L_{n-1}^{(1)}(log t)] and bound it by C_n(1+log t^(n-1))/t^2 for fixed n",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O3-BELLOTTI-TO-A",
+      "obligation": "from Bellotti v1 Theorem 1.5 and equations (1.3)-(1.4), derive for sufficiently large x |A(x)|<=1+C x exp(-d(log x)^(3/5)/(log log x)^(1/5))",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O4-FIXED-N-BOUNDARY",
+      "obligation": "combine O2-O3 with fixed n to prove A(Y)b_n(Y)->0",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O5-FIXED-N-INTEGRAL",
+      "obligation": "combine O2-O3 with fixed n to prove integral_X^infinity |A(t)b_n'(t)|dt<infinity",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O6-NATURAL-ORDER-LIMIT",
+      "obligation": "take Y to infinity only after O1,O4,O5 and preserve original integer order",
+      "status": "FROZEN_UNEVALUATED"
+    },
+    {
+      "id": "O7-NONABSOLUTE-WITNESS",
+      "obligation": "for m=6k, prove Lambda(m)=0 because 6k has at least prime factors 2 and 3, so |a_m|=1; use the leading coefficient (-1)^(n-1)/(n-1)! of L_{n-1}^{(1)} to obtain |b_n(6k)|>=c_n(log k)^(n-1)/k for all sufficiently large k; conclude divergence of the absolute subseries, including n=1",
+      "status": "FROZEN_UNEVALUATED"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "FROZEN_UNEVALUATED"
+}
