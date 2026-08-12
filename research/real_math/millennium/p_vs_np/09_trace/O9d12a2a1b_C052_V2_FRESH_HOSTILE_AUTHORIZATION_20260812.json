@@ -1,0 +1,102 @@
+{
+  "artifact_hash": "sha256:cd6c157b7719888e219fa92792297ec1cdf1617d18b4f02b92b3b181ba440d96",
+  "atom_id": "O9d12a2a1b-C052-V2",
+  "authority": "RESULT_BLIND_IDENTITY_AND_FUTURE_BENCHMARK_FREEZE_ONLY",
+  "authorization_id": "PNP-C052-V2-RESULT-BLIND-FRESH-HOSTILE-FREEZE-20260812",
+  "chronology": {
+    "decoder_sat_overlap_executed": false,
+    "fresh_hostile_world_executed": false,
+    "fresh_hostile_world_materialized": false,
+    "native_parametric_evaluation_executed": false,
+    "semantic_subset_trap_executed": false,
+    "v2_classifier_implemented": false,
+    "v2_falsifier_implemented": false
+  },
+  "credit": {
+    "independent_review": 0,
+    "mathematical_result_units": 0,
+    "software_git_ci_schema_hash": 0
+  },
+  "execution_authorized_now": false,
+  "forbidden_now": [
+    "implement or execute classifier/falsifier",
+    "materialize or infer fresh hidden world value",
+    "reuse k=20",
+    "run decoder, SAT/UNSAT, overlap, or native parametric evaluation"
+  ],
+  "framework_revalidation": {
+    "artifact_hash": "sha256:bc3a0720353cad7a93ab0614cc7161fa16992ba3e41d75c634b0d90dea95f3d5",
+    "observed_main": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+    "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_V2_FRAMEWORK_REVALIDATION_D21592B_20260812.json"
+  },
+  "fresh_hidden_hostile_world": {
+    "bounded_domain": {
+      "a": [
+        1,
+        8
+      ],
+      "a_plus": [
+        1,
+        8
+      ],
+      "k": [
+        8,
+        128
+      ],
+      "m": [
+        2,
+        32
+      ],
+      "m_plus": [
+        1,
+        32
+      ]
+    },
+    "eligibility": [
+      "exact adjacent support with derived padding",
+      "h[1] through h[7] lie in the registered local grammar region",
+      "for every j in 0..7 an explicit canonical formula in H_k matches MAGIC[j]",
+      "each formula carries a symbolic or exact-checker UNSAT proof",
+      "any variability claim has both-bit witnesses inside H_k",
+      "no overlap inference"
+    ],
+    "excluded_consumed_half_lengths": [
+      20
+    ],
+    "expected_branch_if_later_materialized_certificate_valid": "ESCAPE_ADMISSIBLE",
+    "native_target_status": "CONTROLLED_HIDDEN_VALIDATOR_NOT_NATIVE_TARGET",
+    "ordered_coordinates": [
+      "k",
+      "a",
+      "m",
+      "a_plus",
+      "m_plus"
+    ],
+    "ordering": "LEXICOGRAPHIC_ASCENDING",
+    "selection_rule_id": "LEXICOGRAPHIC-FIRST-EXPLICIT-HK-WITNESS-COMPLETE-ESCAPE-EXCLUDING-CONSUMED-v1",
+    "value_status": "WITHHELD_NOT_MATERIALIZED_NOT_EXECUTED",
+    "world_id": "C052-V2-FRESH-HIDDEN-UNSAT-AWARE-HOSTILE-v1"
+  },
+  "frozen_at_utc": "2026-08-12T13:30:00Z",
+  "future_benchmark": {
+    "identity": "C052-V2-UNSAT-AWARE-CONTROLLED-BENCHMARK-v1",
+    "no_average_or_partial_credit": true,
+    "pass_rule": "all worlds pass in the frozen order; any missing semantic proof fails closed",
+    "required_world_count": 4
+  },
+  "identity_bytes": {
+    "byte_distinct": true,
+    "classifier_raw_sha256": "sha256:4a931f0f9af526868604056c1e6c5c9121056f15a7d2cbd938ab9d1ffeaae584",
+    "falsifier_raw_sha256": "sha256:e80a9304073674c036d03a75fa8707a028c2eb580243c7424d5382affa85de4d",
+    "semantic_trap_raw_sha256": "sha256:8edd2d41dd8f1fa00907a7187a619aaa6eed505517862583e2505901a2350779"
+  },
+  "mandatory_future_execution_order": [
+    "C050-k15-bounded-regression",
+    "C051-k19-bounded-regression",
+    "C052-V2-SEMANTIC-SUBSET-TRAP-v1",
+    "C052-V2-FRESH-HIDDEN-UNSAT-AWARE-HOSTILE-v1"
+  ],
+  "native_evaluation_authorized_now": false,
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "2.0.0"
+}

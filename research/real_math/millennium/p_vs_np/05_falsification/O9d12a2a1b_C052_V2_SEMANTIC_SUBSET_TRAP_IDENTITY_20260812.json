@@ -1,0 +1,36 @@
+{
+  "MAGIC_bit": 1,
+  "abstract_object": "One projected bit over ambient set A with strict semantic subset S.",
+  "ambient_elements": [
+    {
+      "bit": 0,
+      "id": "a0"
+    },
+    {
+      "bit": 1,
+      "id": "a1"
+    }
+  ],
+  "ambient_only_buggy_branch": "ESCAPE_ADMISSIBLE",
+  "ambient_syntax_bits_at_coordinate": [
+    0,
+    1
+  ],
+  "expected_v2_branch": "FORCED_CONFLICT",
+  "failure_if": "v2 returns ESCAPE_ADMISSIBLE from ambient variation without an H_k-preserving witness",
+  "identity_kind": "INERT_PLANTED_VALIDATOR_WORLD",
+  "schema_version": "1.0.0",
+  "scope": "Abstract planted semantic-domain validator only; no native C041 or P-versus-NP evidence.",
+  "semantic_subset_bits_at_coordinate": [
+    0
+  ],
+  "semantic_subset_elements": [
+    {
+      "bit": 0,
+      "id": "a0",
+      "semantic_membership_proved": true
+    }
+  ],
+  "status": "FROZEN_NOT_EXECUTED",
+  "trap_id": "C052-V2-SEMANTIC-SUBSET-TRAP-v1"
+}

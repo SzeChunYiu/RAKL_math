@@ -1,0 +1,83 @@
+{
+  "atom_id": "O9d12a2a1b-C052-V2",
+  "certificate_interfaces": {
+    "cannot_check": [
+      "validation_failure",
+      "missing_semantic_membership_evidence",
+      "evidence_pointer_if_available"
+    ],
+    "escape_admissible": [
+      "support_equalities",
+      "explicit_canonical_UNSAT_formula_in_H_k_for_each_coordinate_matching_MAGIC",
+      "formula_bytes_length_and_coordinate_binding",
+      "truth_or_symbolic_UNSAT_proof_for_each_formula",
+      "both_bits_in_H_k_if_variability_is_claimed",
+      "ambient_syntax_variation_is_insufficient",
+      "not_overlap_disclaimer"
+    ],
+    "forced_conflict": [
+      "support_equalities",
+      "coordinate_j",
+      "forced_parent_bit",
+      "MAGIC_bit",
+      "proof_quantifying_every_formula_in_H_k",
+      "checker_and_statement_binding"
+    ],
+    "unresolved": [
+      "support_equalities",
+      "validated_partial_semantic_evidence",
+      "failed_decisive_obligations"
+    ]
+  },
+  "context_hash": "sha256:44a48e559f7b58aa83ee85c99be3a748052e2483612fb8429ca7244d69018f6d",
+  "expert_review_hash": "sha256:fb23096f8f3d795db600d204052ef731a3b2546d253a774055debba04fa1b856",
+  "forbidden_capabilities": [
+    "classifier execution in this round",
+    "decoder or SAT/UNSAT execution",
+    "overlap comparison",
+    "fresh hostile value materialization",
+    "native target-k selection or evaluation",
+    "reuse k=20 as fresh validation"
+  ],
+  "identity_id": "PNP-C052-TARGET-BLIND-UNSAT-AWARE-TOTAL-CLASSIFIER-v2",
+  "identity_kind": "INERT_DATA_ONLY_CLASSIFIER_SPECIFICATION",
+  "mandatory_future_worlds": [
+    "C050-k15-bounded-regression",
+    "C051-k19-bounded-regression",
+    "C052-V2-SEMANTIC-SUBSET-TRAP-v1",
+    "C052-V2-FRESH-HIDDEN-UNSAT-AWARE-HOSTILE-v1"
+  ],
+  "memory_review_hash": "sha256:a223baafb7d65873f880f6f10aa574a0349307e553af8b737d6810a61e02692f",
+  "non_guarantees": [
+    "identity does not prove any native cell branch",
+    "escape admissibility is not an intersection witness",
+    "no theorem, novelty, independent review, cover, circuit, or P-versus-NP result"
+  ],
+  "object": "Adjacent C041 support cells projected through h[0]=1, h[1]=c[0]=x[k], and MAGIC[0..7], with every parent claim restricted to H_k.",
+  "parent_identity_id": "PNP-C052-TARGET-BLIND-TOTAL-SUPPORT-PHASE-CLASSIFIER-v1",
+  "qoi": "Classify a complete supported cell as semantic forced conflict, semantic escape admissible, unresolved, or cannot-check.",
+  "result_algebra": {
+    "branches": {
+      "CANNOT_CHECK": "Input, support, formula bytes, canonical membership, H_k membership proof, coordinate binding, or quantifier coverage cannot be validated.",
+      "ESCAPE_ADMISSIBLE": "A proved support cell and explicit H_k counterwitness for every j in 0..7 show h[j]=MAGIC[j]; this refutes only the local universal-conflict obstruction.",
+      "FORCED_CONFLICT": "A proved support cell and complete semantic-domain proof establish some j in 0..7 with every h in H_k fixed to q != MAGIC[j].",
+      "UNRESOLVED": "Support and supplied semantic evidence are valid but neither decisive certificate closes."
+    },
+    "exactly_one_branch_required": true,
+    "ordered_precedence": [
+      "CANNOT_CHECK",
+      "FORCED_CONFLICT",
+      "ESCAPE_ADMISSIBLE",
+      "UNRESOLVED"
+    ]
+  },
+  "schema_version": "2.0.0",
+  "semantic_domain": "H_k, the canonical UNSAT parent language at half-length k; not the ambient canonical syntax language",
+  "status": "FROZEN_NOT_EXECUTED",
+  "support_contract": [
+    "derive b=bit_length(m), padding=R mod 2, and R+padding=2k",
+    "derive current b_plus, padding_plus, and R_plus+padding_plus=2(k+1)",
+    "quantify every v in each bit-length cell and every legal literal index/sign relevant to the certificate",
+    "preserve h[0] separately from h[1]=c[0]=x[k]"
+  ]
+}
