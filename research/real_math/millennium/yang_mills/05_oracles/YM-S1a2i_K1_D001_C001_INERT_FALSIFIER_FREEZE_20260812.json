@@ -1,0 +1,69 @@
+{
+  "artifact_hash": "sha256:4055c788b2e20f0540a015ad8add013e612fe90bbe7675bf7a2446aa21592579",
+  "candidate_core_sha256": "sha256:fb50ccd8ca6079c7827d812fc6d3b2cf5136cc2196ed0fb3aba9da525bdfb71e",
+  "candidate_id": "YM-S1a2i-K1-D001-C001-TWO-STAGE-SOURCE-BRIDGE",
+  "current_round_execution_authorized": false,
+  "evaluator_identity": null,
+  "evaluator_implementation_present": false,
+  "evaluator_path": null,
+  "falsifier_identity": {
+    "candidate_id": "YM-S1a2i-K1-D001-C001-TWO-STAGE-SOURCE-BRIDGE",
+    "canonical_core_sha256": "sha256:db9610f14fb631ff99c79aa37db53b664de298be2d6ffa47f0343d6a19f69c1c",
+    "identity_scope": "FULL_DECLARATIVE_FALSIFIER_CORE_BEFORE_IDENTITY_AND_ARTIFACT_HASH",
+    "manifest_id": "YM-S1a2i-K1-D001-C001-DECLARATIVE-FALSIFIER-20260812"
+  },
+  "future_authorization_status": "NOT_CREATED; authorization is a separate post-merge round",
+  "manifest_id": "YM-S1a2i-K1-D001-C001-DECLARATIVE-FALSIFIER-20260812",
+  "mathematical_result_credit": false,
+  "planted_worlds": [
+    {
+      "expected_branch": "APPLICABLE_BRIDGE",
+      "purpose": "Clean PASS world for the two-stage routing contract; it supplies no target constants.",
+      "structural_payload": [
+        "C_dom,C_force,rho are independently source-derived",
+        "4C_force/(1-rho)<=C_dom",
+        "one g_star is frozen before result access",
+        "both exact L(g) predicates hold on the full interval"
+      ],
+      "world_id": "WORLD-A-B-PASS-SEPARATE-CONSTANTS-EXACT-MARGIN",
+      "world_kind": "PLANTED_PASS_SPECIFICATION_NO_VALUES"
+    },
+    {
+      "expected_branch": "STRONGER_PREMISE_MISMATCH_A",
+      "purpose": "Reject post hoc splitting or domain enlargement when the source proof supports only the displayed conflated C.",
+      "structural_payload": [
+        "the only justified statement uses C_dom=C_force=C",
+        "0<rho<1",
+        "c_K=4C/(1-rho)>C"
+      ],
+      "world_id": "WORLD-A-FAIL-CONFLATED-C-TRAP",
+      "world_kind": "PLANTED_FAIL_SPECIFICATION_NO_VALUES"
+    },
+    {
+      "expected_branch": "FLOW_MARGIN_FAIL_B",
+      "purpose": "Reject the coarse factor-two implication as a proof of the exact next-radius margin.",
+      "structural_payload": [
+        "Stage A passes",
+        "the claimed Stage B proof uses only ((1+rho)/2)c_K g_k^2 and g_k^2<=2g_{k+1}^2",
+        "the product coefficient is 1+rho>1"
+      ],
+      "world_id": "WORLD-B-FAIL-FACTOR-TWO-TRAP",
+      "world_kind": "PLANTED_FAIL_SPECIFICATION_NO_VALUES"
+    },
+    {
+      "expected_branch": "CANNOT_CHECK",
+      "purpose": "Ensure missing source evidence fails closed rather than inventing constants.",
+      "structural_payload": [
+        "the upstream proof does not expose separately justified C_dom and C_force",
+        "no authorized derivation supplies their relation"
+      ],
+      "world_id": "WORLD-CANNOT-CHECK-UPSTREAM-CONSTANTS",
+      "world_kind": "PLANTED_CANNOT_CHECK_SPECIFICATION_NO_VALUES"
+    }
+  ],
+  "result_classification_authorized": false,
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "source_proof_execution_authorized": false,
+  "world_payload_policy": "Structural predicate specifications only; no hidden, symbolic-assigned, or numeric constant values are chosen in this round."
+}

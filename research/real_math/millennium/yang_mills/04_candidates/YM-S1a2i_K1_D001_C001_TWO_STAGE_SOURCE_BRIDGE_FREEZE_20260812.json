@@ -1,0 +1,179 @@
+{
+  "allowed_result_branches": {
+    "APPLICABLE_BRIDGE": "Stage A passes and Stage B passes; authority is limited to conditional applicability of the K-coordinate bridge.",
+    "CANNOT_CHECK": "Required source derivation or exact interval-wide evidence is insufficient at either stage.",
+    "FLOW_MARGIN_FAIL_B": "Stage A passes, then an exact Stage B predicate fails or the factor-two trap is the only claimed derivation.",
+    "STRONGER_PREMISE_MISMATCH_A": "Stage A derives constants but c_K>C_dom; Stage B is not entered."
+  },
+  "artifact_hash": "sha256:208fb8983228e4edb2937e30dd235a3290e5f8ee66f163ce0fc82a7cf9b1feaf",
+  "atom_id": "YM-S1a2i-K1-D001",
+  "authority": {
+    "diagnostic_candidate_proposal": true,
+    "mathematical_result_credit": false,
+    "proof_authority": false,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "strict_proof_candidate_authority": false,
+    "target_truth": false
+  },
+  "branch_precedence": [
+    "If Stage A cannot be checked, return CANNOT_CHECK and do not enter Stage B.",
+    "If Stage A is checked and fails, return STRONGER_PREMISE_MISMATCH_A and do not enter Stage B.",
+    "If Stage A passes but Stage B cannot be checked, return CANNOT_CHECK.",
+    "If Stage A passes and Stage B fails, return FLOW_MARGIN_FAIL_B.",
+    "Return APPLICABLE_BRIDGE only when both stages pass."
+  ],
+  "candidate_id": "YM-S1a2i-K1-D001-C001-TWO-STAGE-SOURCE-BRIDGE",
+  "candidate_identity": {
+    "candidate_id": "YM-S1a2i-K1-D001-C001-TWO-STAGE-SOURCE-BRIDGE",
+    "canonical_core_sha256": "sha256:fb50ccd8ca6079c7827d812fc6d3b2cf5136cc2196ed0fb3aba9da525bdfb71e",
+    "identity_scope": "FULL_CANDIDATE_CORE_BEFORE_IDENTITY_AND_ARTIFACT_HASH"
+  },
+  "candidate_kind": "SOURCE_APPLICABILITY_DISCRIMINATOR_PROTOCOL_NOT_A_PROOF_LEMMA",
+  "explicit_exclusions": [
+    "NO_EVALUATOR_IMPLEMENTATION",
+    "NO_SOURCE_PROOF_EXECUTION",
+    "NO_HIDDEN_OR_NUMERIC_CONSTANT_VALUES",
+    "NO_G_STAR_VALUE_OR_THRESHOLD_SELECTION",
+    "NO_FALSIFIER_EXECUTION",
+    "NO_RESULT_CLASSIFICATION_IN_THIS_ROUND",
+    "NO_REFUTATION_CLAIM",
+    "NO_STABLE_MANIFOLD_OR_MASS_GAP_CLAIM",
+    "NO_INDEPENDENT_REVIEW_CLAIM"
+  ],
+  "falsifiers": {
+    "authority": "Any conclusion extends beyond the local K-coordinate applicability bridge to lambda, full stable manifold, continuum limit, OS reconstruction or mass gap.",
+    "stage_a": "A source-faithful derivation gives c_K>C_dom; the conflated-C trap is the cheapest planted case.",
+    "stage_b": "After Stage A passes, one exact interval predicate fails; the factor-two trap rejects the displayed coarse implication."
+  },
+  "frozen_at": "2026-08-12T15:30:00Z",
+  "future_result_lesson_contract": {
+    "current_status": "NO_RESULT_NO_LESSON",
+    "operational_metadata_zero_math_credit": [
+      "Git/branch/PR state",
+      "CI/tests",
+      "schemas/hashes/chronology",
+      "telemetry/repository growth"
+    ],
+    "required_after_material_result": [
+      "attempted_mathematical_implication",
+      "exact_mathematical_result_or_failure",
+      "supported_and_competing_mathematical_causes",
+      "scope",
+      "mathematical_falsifier",
+      "repair_or_next_discriminator",
+      "proof_or_source_evidence"
+    ]
+  },
+  "operator_process_note": "The direct operator instruction freezes this diagnostic protocol after PR401. It does not convert the PR401 CANNOT_CHECK shortcut review into theorem or method authority.",
+  "parent_packet_binding": {
+    "framework_sha": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+    "inputs": {
+      "context": {
+        "application_commit": "4c9e987483c06b56e8a060ca58ac3b98e365941f",
+        "canonical_sha256": "sha256:100b3d666f803f7c02860e87697f572a56b35d764fb4b302242fcccaf3007aba",
+        "declared_content_hash": "sha256:35b646d79a98d7255b0c2a9f60bfb582e1f8dbeaae3218f9c7225cd902b2aec0",
+        "git_blob": "8625d51af9f21ce276c76043e81680b920519ae6",
+        "path": "research/real_math/millennium/yang_mills/01_frontier/YM-S1a2i_K1_D001_CONTEXT_FIBER_20260812.json",
+        "raw_sha256": "28d72e76d778b03764d602c60641c741623a801151b69acaf91e85dc3b507910"
+      },
+      "memory_review": {
+        "application_commit": "4c9e987483c06b56e8a060ca58ac3b98e365941f",
+        "canonical_sha256": "sha256:bdfc37a2766c30ff16b21fbce9d57657d23cc69e14ed8f114decca4aae29ae89",
+        "declared_content_hash": "sha256:cca9beb37c11976703debef874bf8cead91b99f9e8332c65198dc5496a63fca1",
+        "git_blob": "438c7886fc6e6d4a7978e60a3ab18cc174da202c",
+        "path": "research/real_math/millennium/yang_mills/07_memory/YM-S1a2i_K1_D001_RESEARCH_MEMORY_REVIEW_20260812.json",
+        "raw_sha256": "048754cc92443b732c2e2d4c164ac65d38c347a749aec669f0f2d8bd8db29d8a"
+      },
+      "pre_candidate_trace": {
+        "application_commit": "4c9e987483c06b56e8a060ca58ac3b98e365941f",
+        "canonical_sha256": "sha256:6e13752f676eb36b0c01786c8e4cc6d206f9c0e77a21207f6b50d89954161f19",
+        "declared_content_hash": "",
+        "git_blob": "0b7e58890f18618b63e3ae1591e544f28b086ba1",
+        "path": "research/real_math/millennium/yang_mills/09_trace/YM-S1a2i_K1_D001_PRE_CANDIDATE_TRACE_20260812.json",
+        "raw_sha256": "1e8bdb75be6fb01e53928241753259f6095b88926c73d2b16c7809d6d725e78f"
+      },
+      "shortcut_review": {
+        "application_commit": "4c9e987483c06b56e8a060ca58ac3b98e365941f",
+        "canonical_sha256": "sha256:d0c7c5f51c443c6b9f431c4f056eaacc8ac5e7e434bd54a40e7f48feebe0cf25",
+        "declared_content_hash": "sha256:5d8f703f391917110ab1647a1c7dfc972c1db621c3ad1a65f9b71a25fd538515",
+        "git_blob": "744fcfb1dcc8c94213c9b6bca45b0797d2419b6c",
+        "path": "research/real_math/millennium/yang_mills/08_reviews/YM-S1a2i_K1_D001_OBSTRUCTION_TRANSFORMATION_REVIEW_20260812.json",
+        "raw_sha256": "f8248a7cd0a6ffd2a8d4e909da1cc6fec416c353c3b1be78621f6b4173e9ce29"
+      },
+      "source_audit": {
+        "application_commit": "4c9e987483c06b56e8a060ca58ac3b98e365941f",
+        "canonical_sha256": "sha256:176fe3d6c7e79ec9f20a6592566485fd16ebf62a1ab7aaf1dd51460ec8d323b8",
+        "declared_content_hash": "sha256:6b50b477bbf914715c000f6fbd28346e7b733a4af4174598395fea3e79b7a71a",
+        "git_blob": "d6dd0cac6bc5d679434a6d2275718868b6e64485",
+        "path": "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_K1_D001_WILSON_SOURCE_APPLICABILITY_AUDIT_20260812.json",
+        "raw_sha256": "72bef1ea79856aef06e3f7e987321cd2b4ea65d42989c90516453708f4507094"
+      }
+    },
+    "merge_commit": "4c9e987483c06b56e8a060ca58ac3b98e365941f",
+    "pr": 401,
+    "pr_url": "https://github.com/SzeChunYiu/RAKL_math/pull/401"
+  },
+  "quantifier_order": "FIRST derive one source-faithful k-uniform C_dom,C_force,rho packet; THEN decide c_K<=C_dom; ONLY ON PASS freeze one g_star before result access; THEN require both Stage B predicates FOR ALL 0<g<=g_star.",
+  "schema_version": "1.0.0",
+  "source_identity": {
+    "author": "Jonathan J. Wilson",
+    "authority": "PRIMARY_AUTHOR_OPEN_ARTIFACT_NOT_INDEPENDENT_PEER_REVIEW",
+    "pdf_filename": "4D GZ-Yang-Mills.pdf",
+    "pdf_sha256": "08013e1ce75c8b2be79c62ba61f70e30024b9bb427c465ceab7ee9266236690d",
+    "tex_filename": "GZYM_submission_final.tex",
+    "tex_sha256": "ef936e502e84b0cafabc594c9705c16c9c1df29dc95f2a6a679b6b446c526c18",
+    "zenodo_concept_doi": "10.5281/zenodo.19393831",
+    "zenodo_version_doi": "10.5281/zenodo.19393832"
+  },
+  "target_access": {
+    "constants_derived": false,
+    "g_star_selected": false,
+    "planted_worlds_executed": false,
+    "result_accessed": false,
+    "source_proof_accessed_or_executed": false,
+    "stage_a_evaluated": false,
+    "stage_b_evaluated": false
+  },
+  "two_stage_discriminator": {
+    "stage_a": {
+      "cannot_check_predicate": "the upstream proof does not expose enough information to derive separately justified C_dom,C_force,rho or their compatibility",
+      "chosen_graph_radius": "c_K=4*C_force/(1-rho)",
+      "failure_predicate": "the constants are derived but c_K>C_dom, including the literal conflated-C case C_dom=C_force=C because 4C/(1-rho)>C",
+      "next_stage_rule": "Stage B is forbidden unless Stage A passes.",
+      "no_reinterpretation_rule": "The displayed single symbol C may not be split into C_dom and C_force unless the upstream derivation independently justifies both roles and their relation.",
+      "object": "Determine from the upstream proof of Wilson Lemma 40.3 whether separately justified C_dom,C_force,rho exist with the contraction estimate valid for every ||K_k||_k<=C_dom g_k^2 and forcing coefficient C_force.",
+      "pass_predicate": "all three constants are separately source-derived with exact provenance and c_K<=C_dom",
+      "required_extractions": [
+        "C_dom with exact proof passage/provenance for the admitted K-ball coefficient",
+        "C_force with exact proof passage/provenance for the g_k^4 forcing coefficient",
+        "rho with exact proof passage/provenance and 0<rho<1"
+      ],
+      "stage_id": "STAGE_A_SOURCE_DOMAIN_COMPATIBILITY"
+    },
+    "stage_b": {
+      "cannot_check_predicate": "Stage A passed but the exact interval-wide predicates cannot be proved or disproved from the authorized evidence",
+      "entry_condition": "STAGE_A_SOURCE_DOMAIN_COMPATIBILITY=PASS only",
+      "factor_two_rejection_rule": "The pair ||K_{k+1}||<=((1+rho)/2)c_K g_k^2 and g_k^2<=2g_{k+1}^2 yields only (1+rho)c_K g_{k+1}^2 and cannot discharge the exact margin.",
+      "failure_predicate": "Stage A passed but one exact Stage B predicate is disproved, or the claimed proof relies only on the rejected factor-two implication",
+      "frozen_interval": "0<g<=g_star, where one positive source-faithful g_star and its provenance must be frozen before result access; no value is selected in this freeze round",
+      "lower_flow_factor": "L(g)=1-b_0*g^2-C_beta*g^4",
+      "pass_predicate": "both exact predicates are proved on the entire frozen interval",
+      "required_predicates": [
+        "L(g)>=0 for every 0<g<=g_star",
+        "L(g)^2>=rho+(C_force/c_K)*g^2 for every 0<g<=g_star"
+      ],
+      "source_constants": [
+        "b_0>0",
+        "C_beta>=0",
+        "rho",
+        "C_force",
+        "c_K"
+      ],
+      "stage_id": "STAGE_B_EXACT_FLOW_MARGIN"
+    },
+    "stage_order": [
+      "STAGE_A_SOURCE_DOMAIN_COMPATIBILITY",
+      "STAGE_B_EXACT_FLOW_MARGIN"
+    ]
+  }
+}
