@@ -10,7 +10,9 @@ CROSS = ROOT / "research/real_math/millennium/cross_problem"
 YM = ROOT / "research/real_math/millennium/yang_mills"
 RESULT = CROSS / "07_memory/XM024_HODGE_YM_FAMILYWISE_UNIFORMITY_20260812.json"
 CASE = CROSS / "10_case_study/XM024_RAKL_METHOD_CASE_STUDY_20260812.json"
+CASE_DRIFT = CROSS / "10_case_study/XM024_RAKL_METHOD_CASE_STUDY_DRIFT_DELTA_20260812.json"
 METRICS = CROSS / "10_case_study/XM024_RAKL_CYCLE_METRICS_20260812.json"
+METRICS_DRIFT = CROSS / "10_case_study/XM024_RAKL_CYCLE_METRICS_DRIFT_CORRECTION_20260812.json"
 DAG = YM / "02_problem_dag/YM_S1a2j_XM024_FAMILYWISE_UNIFORMITY_DAG_DELTA_20260812.json"
 
 AXES = {
@@ -91,3 +93,26 @@ def test_cross_lane_case_study_covers_all_six_and_separates_observation_from_les
     assert case["cross_lane_synthesis"]["recurring_process_pathology"] == "CONSUMER_SCOPE_UNIFORMITY_LOSS"
     assert case["cross_lane_synthesis"]["reusable_lesson_status"].startswith("PROPOSAL_ONLY")
     assert case["cross_lane_synthesis"]["framework_hypothesis"]["target"].startswith("RAKL issue #459")
+
+
+def test_current_main_drift_is_append_only_and_updates_rh_bsd_metrology() -> None:
+    drift = _load(CASE_DRIFT)
+    correction = _load(METRICS_DRIFT)
+    assert drift["preserves_original_snapshot"].endswith("XM024_RAKL_METHOD_CASE_STUDY_20260812.json")
+    assert "riemann_hypothesis" in drift["lane_updates"]
+    assert "birch_swinnerton_dyer" in drift["lane_updates"]
+    assert drift["lane_updates"]["riemann_hypothesis"]["outcome"].startswith("PASS_SAME_CONTEXT_HAND_PROOF")
+    assert drift["lane_updates"]["birch_swinnerton_dyer"]["novelty_seven_axes"]["PATH"] == 1
+    agg = correction["corrections"]["cross_lane_retained_novelty_lower_bound"]
+    assert {axis: agg[axis] for axis in AXES} == {
+        "KNOWLEDGE": 5,
+        "OPERATOR": 1,
+        "EXPERIENCE_PATTERN": 2,
+        "OBSTRUCTION": 3,
+        "RELATION": 4,
+        "PATH": 4,
+        "META_METHOD": 0,
+    }
+    protected = correction["unchanged_xm024_retained_novelty_protected"]
+    assert {axis: protected[axis] for axis in AXES} == {axis: 0 for axis in AXES}
+    assert correction["raw_repository_growth_learning_credit"] == 0
