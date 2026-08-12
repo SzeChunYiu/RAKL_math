@@ -1,0 +1,101 @@
+{
+  "atom_id": "H4d1c",
+  "parent_obstruction_id": "H4d1c-INDEPENDENT-HODGE-TO-WITNESS-TANGENT-SURJECTIVITY-MECHANISM",
+  "object_context": "Let f:X→S be a smooth projective family of complex varieties, s0∈S, and α a flat rational cohomology class already algebraic on X_s0 via one fixed finite signed rational witness z0. Fix an irreducible local Hodge-locus branch through s0. Before seeking geometry forcing witness tangent surjectivity, H4d1c audits whether the target is the tangent space of the full Hodge-locus scheme or the reduced branch/support relevant to pointwise rational Hodge algebraicity. Initial algebraicity, higher Artin lifting, algebraization, monodromy/global continuation, and singular degeneration remain outside this atom.",
+  "structural_coordinates": [
+    "exact root scope is rational cohomology on smooth projective complex varieties; this deformation lane assumes one already algebraic central witness",
+    "signed rational witnesses require coefficient-preserving finite multi-component Hilbert/Chow bookkeeping after denominator clearing",
+    "distinguish the Hodge-locus scheme T_sch, its reduction T_red, and the smooth locus T_red^sm",
+    "Zariski tangent vectors are dual-number infinitesimal directions; nilpotent scheme structure can enlarge tangent spaces without adding closed complex points",
+    "pointwise variational algebraicity is a statement about actual fibres/points on the Hodge support, not automatically about nilpotent infinitesimal thickening",
+    "a selected witness-incidence component need not contain every representative of the class; component switching and exact coefficient/category preservation remain explicit",
+    "proper/projective witness-incidence images are closed; domination of a dense open in an irreducible reduced branch is therefore a set-theoretic route to the whole reduced branch",
+    "surjective differential is only a local domination certificate under suitable smoothness hypotheses and is not demanded at singular/nonreduced points",
+    "full scheme-theoretic tangent surjectivity is a strictly stronger infinitesimal target unless reduced/smoothness or an explicit infinitesimal-strengthening goal is frozen"
+  ],
+  "equivalent_formulations": [
+    "root-aligned local target: every nearby complex point of T_red is reached by an exact-category algebraic witness representing α",
+    "geometric sufficient target: some exact coefficient-preserving proper witness-incidence component dominates the irreducible reduced Hodge branch",
+    "generic smooth-locus certificate: at a smooth point of source and T_red, a surjective differential can certify local dominance/open image",
+    "full T_{s0}T_sch surjectivity is a scheme-theoretic infinitesimal strengthening and is not equivalent to pointwise branch domination without additional hypotheses"
+  ],
+  "solved_analogues": [
+    "codimension-one Lefschetz (1,1): rational (1,1) classes are algebraic, providing a solved pointwise Hodge control",
+    "Dan's Noether-Lefschetz results: special variational Hodge loci are realized by flag-Hilbert images, while in the surface/divisor setting non-reduced Hodge-locus components occur",
+    "Kloosterman complete-intersection cycles on hypersurfaces: flag-Hilbert geometry plus tangent/dimension comparison proves a special variational Hodge result"
+  ],
+  "near_solved_analogues": [
+    "Buchweitz–Flenner and Pridham semiregularity/reduced obstruction theories",
+    "normal-function/infinitesimal-invariant approaches when coupled to an actual witness-reachability theorem rather than detector vanishing alone"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Dan complete-intersection and Noether-Lefschetz geometry",
+      "method": "separate reduced Hodge support from scheme-theoretic nonreduced structure, and compare flag-Hilbert image with the reduced/pointwise variational target",
+      "shared_structure": [
+        "Hodge locus is a base-side condition",
+        "algebraic witnesses live in Hilbert/flag-Hilbert-type incidence spaces",
+        "scheme structure can carry infinitesimal information beyond closed points"
+      ],
+      "required_assumptions": [
+        "smooth projective hypersurface family in the source",
+        "special divisor/complete-intersection witness geometry",
+        "exact source theorem hypotheses"
+      ],
+      "disanalogies": [
+        "general smooth-projective higher-codimension cycles have no equivalent explicit Hilbert/Jacobian calculation",
+        "source nonreduced examples are codimension-one/divisor controls",
+        "a rational signed witness can require multiple incidence components"
+      ],
+      "repair_question": "Is full scheme tangent surjectivity actually necessary for the root-aligned deformation objective, or should H4d1c seek reduced-branch domination first?",
+      "source_anchors": [
+        "https://arxiv.org/abs/1404.7519",
+        "https://arxiv.org/abs/1407.8491"
+      ]
+    },
+    {
+      "source_context": "Kloosterman complete intersections on hypersurfaces",
+      "method": "use flag-Hilbert incidence and tangent/dimension calculations as a sufficient local domination certificate in a special smooth setting",
+      "shared_structure": [
+        "witness incidence maps to deformation base",
+        "Hodge tangent space is computable",
+        "geometric image can be compared with Hodge locus"
+      ],
+      "required_assumptions": [
+        "special hypersurface/complete-intersection geometry",
+        "source smoothness/dimension identities"
+      ],
+      "disanalogies": [
+        "not a general smooth-projective theorem",
+        "full tangent equality at a singular/nonreduced point can be stronger than pointwise domination",
+        "does not settle all-order lifting or algebraization"
+      ],
+      "repair_question": "Can a general route target proper domination of T_red and reserve tangent-surjectivity tests for generic smooth points?",
+      "source_anchors": [
+        "https://arxiv.org/abs/2104.14845"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "H4d1c starts from an algebraic central witness and therefore cannot address the root initial-existence problem.",
+    "Divisor/Noether-Lefschetz controls are solved/special and cannot be generalized by analogy.",
+    "Set-theoretic domination of T_red does not imply lifting of nilpotent thickenings or higher Artin orders.",
+    "A proper-image closure argument does not by itself preserve a selected witness component, rational coefficient vector, or monodromy branch.",
+    "Singular reduced branches can have tangent directions that do not represent integrable local arcs, so full tangent surjectivity is not a generic replacement for domination."
+  ],
+  "cross_domain_analogies": [],
+  "analogy_scan_status": "NO_SAFE_BRIDGE_FOUND",
+  "analogy_scan_notes": "Nonmathematical analogies were not retained because they do not preserve scheme reduction, exact algebraic-cycle categories, rational coefficients, or Hodge-locus infinitesimal structure.",
+  "pre_gate_inherited_action_preference": "KLOOSTERMAN_STYLE_FULL_HODGE_TANGENT_SURJECTIVITY_AUDIT",
+  "source_anchors": [
+    "research/real_math/millennium/hodge/deformation/07_memory/H4d1c_OBSTRUCTION_REGISTER_20260811.json",
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1b_FIRST_ORDER_TANGENT_OBSTRUCTION_EQUIVALENCE_20260811.md",
+    "https://arxiv.org/abs/1404.7519",
+    "https://arxiv.org/abs/1407.8491",
+    "https://arxiv.org/abs/2104.14845",
+    "https://stacks.math.columbia.edu/tag/0B28"
+  ],
+  "frozen_at": "2026-08-11T15:25:20+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:06612d67f289d411b95bff132164e0057b67b306fbb0b8db985cc7bfbd9093a3"
+}
