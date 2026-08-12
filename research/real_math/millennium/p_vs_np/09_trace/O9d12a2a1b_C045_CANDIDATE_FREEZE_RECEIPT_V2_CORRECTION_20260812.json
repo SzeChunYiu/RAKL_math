@@ -1,0 +1,73 @@
+{
+  "artifact_hash": "sha256:ff009eed1f9effe7b908d5dd07a09cdeb06a8443c2ee4a4207537a3c14688db8",
+  "authority": {
+    "mathematical_result_credit": false,
+    "mathematical_saturation_credit": false,
+    "p_vs_np_authority": false,
+    "prospective_u17_authority": false,
+    "retrospective_reproducibility_allowed": true,
+    "retrospective_truth_check_allowed": true,
+    "root_status": "OPEN",
+    "strict_discovery_authority": false,
+    "u17_execution_authorized_for_strict_discovery": false,
+    "u17_strict_discovery_execution_barred_permanently": true
+  },
+  "corrected_assertions": [
+    {
+      "v1_assertion": "candidate_precedes_any_target_access=true",
+      "v2_status": "FALSE_AT_PROJECT_LEVEL"
+    },
+    {
+      "v1_assertion": "TARGET_OUTCOME_UNOBSERVED",
+      "v2_status": "SUPERSEDED_FAIL_CLOSED_BY_PRIOR_PUBLIC_RESULT_SIGNAL"
+    },
+    {
+      "v1_assertion": "result-blind",
+      "v2_status": "NOT_AVAILABLE_AS_PROJECT_LEVEL_PROSPECTIVE_AUTHORITY"
+    },
+    {
+      "v1_assertion": "later strict U17 evaluator execution may be authorized",
+      "v2_status": "PERMANENTLY_UNAUTHORIZED_FOR_STRICT_DISCOVERY"
+    }
+  ],
+  "corrected_chronology": {
+    "candidate_precedes_any_target_access": false,
+    "earliest_defensible_public_exposure": "2026-08-12T01:17:20Z",
+    "evaluator_frozen_before_any_project_level_target_exposure": false,
+    "evaluator_manifest_frozen_at": "2026-08-12T01:18:29Z",
+    "plan_frozen_at": "2026-08-12T01:18:28Z",
+    "project_level_target_exposed_before_freeze": true,
+    "receipt_frozen_at": "2026-08-12T01:18:31Z",
+    "session_local_decoder_imported_or_executed": false,
+    "session_local_evaluator_imported_or_executed": false,
+    "session_local_nonexecution_does_not_restore_target_blindness": true,
+    "session_local_target_enumerated": false
+  },
+  "full_document_integrity": {
+    "artifact_hash_rule": "SHA256_OF_CANONICAL_DOCUMENT_WITH_ARTIFACT_HASH_EMPTY",
+    "canonicalization": "UTF8_JSON_SORT_KEYS_COMPACT_WITH_ARTIFACT_HASH_EMPTY",
+    "inputs": {
+      "exposure_audit_artifact_hash": "sha256:690c5ad2d9ab0838cebcc0306badc796674edc5fbd78611248d93cf51c320c3c",
+      "v1_receipt": {
+        "artifact_hash": "sha256:3997de96d64dc753ac6385bcb2726f90ffd5a663def552a2a8171b216c73bde1",
+        "commit": "9b6354da2123cb93ed164bed1628c46fbcf334f6",
+        "git_blob_sha": "1229e2b3945995ffd299fd974f75252b71e16418",
+        "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C045_CANDIDATE_FREEZE_RECEIPT_20260812.json",
+        "raw_sha256": "sha256:fcdec421f50e2e15809e25fd4074326b8864145d94f18bc310d1d2f45e7f82a5"
+      }
+    }
+  },
+  "receipt_id": "PNP-C045-U17-INCIDENCE-CANDIDATE-FREEZE-V2-CHRONOLOGY-CORRECTION-20260812",
+  "recorded_at": "2026-08-12T01:49:26Z",
+  "review_authority": "SAME_CONTEXT_ROLE_SEPARATED_INTERNAL_REVIEW_NOT_INDEPENDENT_PEER_REVIEW",
+  "schema_version": "2.0.0",
+  "supersession": {
+    "historical_v1_bytes_preserved": true,
+    "reason": "PUBLIC_RESULT_SIGNALING_PR_PRECEDED_PLAN_EVALUATOR_AND_RECEIPT_FREEZES",
+    "supersedes_receipt_artifact_hash": "sha256:3997de96d64dc753ac6385bcb2726f90ffd5a663def552a2a8171b216c73bde1",
+    "supersedes_receipt_id": "PNP-C045-U17-INCIDENCE-CANDIDATE-FREEZE-20260812"
+  },
+  "upstream_bindings": {
+    "exposure_audit_artifact_hash": "sha256:690c5ad2d9ab0838cebcc0306badc796674edc5fbd78611248d93cf51c320c3c"
+  }
+}
