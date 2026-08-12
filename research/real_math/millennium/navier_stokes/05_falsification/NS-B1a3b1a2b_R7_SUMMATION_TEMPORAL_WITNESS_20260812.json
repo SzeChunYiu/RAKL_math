@@ -1,0 +1,22 @@
+{
+  "schema_version": "summation-compatibility-witness-v1",
+  "witness_id": "SW-NS-B1a3b1a2b-R7-TEMPORAL-DUHAMEL",
+  "atom_id": "NS-B1a3b1a2b-R7",
+  "source_accumulation_method": "Dyadic spatial shell bounds at fixed tau followed by Bochner integration in tau, split into (0,tau0] and [tau0,infinity), with T->infinity only after absolute norm-tail bounds.",
+  "convergence_status": "ABSOLUTE",
+  "finite_grouping_permitted": "YES",
+  "infinite_regrouping_reordering_permitted": "YES",
+  "nested_limit_order": "For each fixed tau, sum spatial kernel shells absolutely; then integrate the resulting L-infinity norm majorant in tau; only then pass T->infinity in the ancient mild formula.",
+  "local_block_definition": "Spatial blocks B_sqrt(tau) and annuli 2^k sqrt(tau), plus temporal blocks near zero and infinity.",
+  "block_tail_or_convergence_theorem_required": "Explicit shell majorants sum_k 2^(2k)e^(-c4^k)<infinity and sum_k 2^(-3k)<infinity; temporal majorants M^2 tau^(-1/2) near zero and A_* tau^(-3/2) at infinity are integrable.",
+  "alternate_summation_equivalence_proof": "No distinct alternate summation is claimed; finite/dyadic regrouping represents the same Bochner integral and is justified by absolute L-infinity norm convergence.",
+  "gluing_status": "COMPATIBLE",
+  "authority_claim": "ROUTING_GLUING_ONLY_NOT_THEOREM",
+  "evidence_pointers": [
+    "arXiv:0709.3599 Sections 3,4,6",
+    "NS-B1a3b1a2b_R7_NO_INCOMING_DUHAMEL_TAIL_20260812.md"
+  ],
+  "recorded_at_utc": "2026-08-12T06:07:37Z",
+  "unknown_fields": [],
+  "witness_canonical_sha256": "54fd89a751afee888cf67c573463e01c946781a33eba9735a9ea7df116927cef"
+}
