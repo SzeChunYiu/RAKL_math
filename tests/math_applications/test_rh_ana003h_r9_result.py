@@ -58,6 +58,18 @@ def test_r9_hash_chains_and_framework_drift_fail_closed():
     assert drift["strict_discovery_effect"] == "FAIL_CLOSED_NOT_CURRENT_MAIN_DISCOVERY_COMPLIANT"
 
 
+def test_r9_summation_witness_preserves_natural_order_without_theorem_authority():
+    w = load("08_reviews/RH_ANA_003h_SUMMATION_COMPATIBILITY_WITNESS_20260812_R9.json")
+    got = w.pop("witness_canonical_sha256")
+    assert got == h(w)
+    assert w["convergence_status"] == "CONDITIONAL"
+    assert w["finite_grouping_permitted"] == "YES"
+    assert w["infinite_regrouping_reordering_permitted"] == "NO"
+    assert w["gluing_status"] == "COMPATIBLE"
+    assert w["authority_claim"] == "ROUTING_GLUING_ONLY_NOT_THEOREM"
+    assert w["unknown_fields"] == []
+
+
 def test_r9_coefficient_balance_scale_and_scope_guard():
     c = load("04_candidates/RH_ANA_003h_EXACT_LAGUERRE_COEFFICIENT_SUBCRITICAL_TAIL_20260812_R9.json")
     assert c["outcome"] == "MATERIAL_REPRESENTATION_AND_CUTOFF_SCALE_IMPROVEMENT"
