@@ -1,0 +1,26 @@
+{
+  "episode_id": "EP-RH-ANA-003-ABEL-001-FIXED-N-EVALUATION-20260812-R10",
+  "task_id": "RH-ROOT-3",
+  "atom_id": "RH-ANA-003-ABEL-001",
+  "context_hash": "sha256:1cefd235555778753fb0731e783ff94cd9b888b941813a5dc00b11e302362f2f",
+  "problem_signature": ["Riemann Hypothesis", "zeta/prime-side Li representation", "a_m=1-Lambda(m)", "A=floor-psi", "Laguerre kernel", "natural source order", "fixed n before limit", "Abel summation", "conditional convergence", "fixed-n versus all-index uniformity"],
+  "fibre_snapshot_hash": "sha256:1cefd235555778753fb0731e783ff94cd9b888b941813a5dc00b11e302362f2f",
+  "operator_ids": ["E-CLASSICAL-FINITE-ABEL-SUMMATION", "BELLOTTI-ARXIV-2508.02041v1", "OP-FIXED-POLYNOMIAL-GROWTH", "OP-LEADING-TERM-DIVERGENCE-WITNESS", "GUARD-FIXED-N-QUANTIFIER", "M-RH-ANA-SUMMATION-ORDER-SENSITIVE-GLUING"],
+  "action_trace": [
+    "Read current RAKL main d594e6864f49ecf6dac394173082fbf0174b422e and v3 contracts before mathematics.",
+    "Reconciled current RAKL_math main 6016dd6a87d87b18d8f5498e2537b043a8468c04 and merged PR #349 candidate freeze.",
+    "Created the separately required successor evaluation authorization without mutating candidate identity.",
+    "Ran endpoint/sign, 6k prime-power, quantifier-leakage, and transformed-integral falsifiers first.",
+    "Discharged frozen O1-O7 with exact Abel summation, Bellotti PNT error, fixed-polynomial estimates, and the 6k nonabsolute witness.",
+    "Ran seven role-separated same-context reviews with zero independent-review credit."
+  ],
+  "observation_ids": ["RH-ANA-003-ABEL-001-R10-FIXED-N-ABEL-RESULT", "D-RH-ANA-003-ABEL-001-CUMULATIVE-CANCELLATION-SUFFICES-FIXED-N", "O-RH-ANA-003-ABEL-001-FIXED-N-TO-ALL-INDEX-UNIFORMITY", "L-RH-ANA-003-ABEL-001-ABEL-BEFORE-ABSOLUTE-MAJORANT"],
+  "verification_ids": ["VERIFY-O1-O7-DIRECT-DERIVATION", "VERIFY-BELLOTTI-PRIMARY-SOURCE", "VERIFY-M6K-PRIME-POWER-FALSIFIER", "VERIFY-SAME-CONTEXT-EXPERT-R10"],
+  "outcome": "SUCCESS",
+  "residual_signature": ["UNIFORM_IN_N_CONTROL_OPEN", "ALL_INDEX_LI_SIGN_GLUE_OPEN", "CONDITIONAL_CONVERGENCE_REORDERING_GUARD_ACTIVE", "TARGET_DOMAIN_STRICT_PREFIX_DIFFERENCEWITNESS_OPEN", "RH_ROOT_OPEN_NO_SOLUTION_CERTIFICATE"],
+  "evidence_pointers": ["git:d594e6864f49ecf6dac394173082fbf0174b422e:AGENTS.md", "git:6016dd6a87d87b18d8f5498e2537b043a8468c04:research/real_math/millennium/riemann_hypothesis/04_candidates/RH_ANA_003_ABEL_001_FIXED_N_ABEL_CANDIDATE_FREEZE_20260812.json", "git:0ff39b6fb100d81a79892627be0d02ebbe1eb8e6:research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003_ABEL_001_EVALUATION_AUTHORIZATION_R2_20260812.json", "primary:Bellotti-arXiv:2508.02041v1"],
+  "artifact_hash": "36ea2325b2162465792b38e754b94c29f018b31e754274ecc72f18b59022ee45",
+  "timestamp": "2026-08-12T08:07:00Z",
+  "cost": 0.0,
+  "storage_admission": "PROPOSAL_SHADOW_STORED"
+}
