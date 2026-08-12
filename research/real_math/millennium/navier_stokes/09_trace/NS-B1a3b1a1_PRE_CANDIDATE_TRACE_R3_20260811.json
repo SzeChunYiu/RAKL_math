@@ -1,0 +1,95 @@
+{
+  "cycle_id": "NS-B1a3b1a1-C001-R3-HIGHFREQ-PRODUCER-20260811",
+  "events": [
+    {
+      "event_hash": "sha256:85498c3b63a07f2be19268269873e85f2812f91d99b7a63050f0d255f3385724",
+      "index": 1,
+      "kind": "FRAMEWORK_BOUND",
+      "payload": {
+        "application_base": "350861b1c2755033893068e5519b8b06a6315aa6",
+        "method_version": "3.0.0",
+        "rakl_sha": "fc8253046fd216cd42d2e253874f54a735f7d52a"
+      },
+      "prev_hash": "GENESIS",
+      "timestamp": "2026-08-11T20:06:38Z"
+    },
+    {
+      "event_hash": "sha256:c2a1df182309643c5cd2a7b449d59e53aa0b19ca76223dd3762217268605892e",
+      "index": 2,
+      "kind": "ROOT_CONTRACT_BOUND",
+      "payload": {
+        "allowed_scope": "NS-B1a3b1a1 only",
+        "root": "OPEN_NO_SOLUTION_CERTIFICATE"
+      },
+      "prev_hash": "sha256:85498c3b63a07f2be19268269873e85f2812f91d99b7a63050f0d255f3385724",
+      "timestamp": "2026-08-11T20:06:38Z"
+    },
+    {
+      "event_hash": "sha256:2d052131196638c2bb69b4e1eed2cab17eebaf7139ff5014c2ec3cdfcced6a0e",
+      "index": 3,
+      "kind": "CURRENT_WORK_COVERAGE",
+      "payload": {
+        "reason": "same atom vs sibling collision",
+        "rejected": [
+          "PR#149",
+          "PR#156"
+        ],
+        "selected": [
+          "issue#148",
+          "PR#131"
+        ]
+      },
+      "prev_hash": "sha256:c2a1df182309643c5cd2a7b449d59e53aa0b19ca76223dd3762217268605892e",
+      "timestamp": "2026-08-11T20:06:38Z"
+    },
+    {
+      "event_hash": "sha256:db89dd108bb5ac0ff7cbf46f798fb65df54bd7521498d091636d9e13c11bc84a",
+      "index": 4,
+      "kind": "FIBRE_FROZEN",
+      "payload": {
+        "fibre_hash": "sha256:777837bc68b1a2c694a56ac3d8d2502d30ed604f01538789bc85012ca305a7cb"
+      },
+      "prev_hash": "sha256:2d052131196638c2bb69b4e1eed2cab17eebaf7139ff5014c2ec3cdfcced6a0e",
+      "timestamp": "2026-08-11T20:06:38Z"
+    },
+    {
+      "event_hash": "sha256:3e31974b5fa250721015d4a1918b6d53e3a7104d74a99041f1e7ba2687511fc6",
+      "index": 5,
+      "kind": "MEMORY_ROUTED",
+      "payload": {
+        "effect": "priority_only",
+        "selected": [
+          "EP-NS-B1a3b1-C001-R2-20260811",
+          "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION",
+          "PR-131-BARE-NORM-PRODUCER-FALSIFIER"
+        ]
+      },
+      "prev_hash": "sha256:db89dd108bb5ac0ff7cbf46f798fb65df54bd7521498d091636d9e13c11bc84a",
+      "timestamp": "2026-08-11T20:06:38Z"
+    },
+    {
+      "event_hash": "sha256:900263435e4a6d0b07cbe9fb568bdbf21e8519e2bdf14b19f4a1a975c05a81db",
+      "index": 6,
+      "kind": "EXPERT_CELL_FROZEN",
+      "payload": {
+        "independent_credit": 0,
+        "roles": 7
+      },
+      "prev_hash": "sha256:3e31974b5fa250721015d4a1918b6d53e3a7104d74a99041f1e7ba2687511fc6",
+      "timestamp": "2026-08-11T20:06:38Z"
+    },
+    {
+      "event_hash": "sha256:f5954682d63fe66d88bea70bf90b50b0772377e06cfaf70fc74c011d114041c8",
+      "index": 7,
+      "kind": "VERIFICATION_TARGET_FROZEN",
+      "payload": {
+        "candidate_idea_credit": "retrospective_scoping_only",
+        "target": "exact NSE family: uniform producer ledger + unbounded positive-time weak-L3/2 vorticity"
+      },
+      "prev_hash": "sha256:900263435e4a6d0b07cbe9fb568bdbf21e8519e2bdf14b19f4a1a975c05a81db",
+      "timestamp": "2026-08-11T20:06:38Z"
+    }
+  ],
+  "final_hash": "sha256:f5954682d63fe66d88bea70bf90b50b0772377e06cfaf70fc74c011d114041c8",
+  "schema_version": "hash-chained-trace-v3-proposal-shadow"
+}

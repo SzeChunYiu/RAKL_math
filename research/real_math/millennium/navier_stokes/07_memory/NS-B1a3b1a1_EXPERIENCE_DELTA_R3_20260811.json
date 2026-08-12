@@ -1,0 +1,99 @@
+{
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "cycle_id": "NS-B1a3b1a1-C001-R3-HIGHFREQ-PRODUCER-20260811",
+  "diagnosis": {
+    "derived_from_episode_ids": [
+      "EP-NS-B1a3b1a1-C001-R3-20260811"
+    ],
+    "diagnosis_id": "D-NS-B1a3b1a1-C001-R3-DERIVATIVE-TIME-EDGE-BLINDNESS",
+    "statement": "The failed producer is not repaired merely by imposing exact NSE dynamics: arbitrarily high spatial frequency can coexist with a uniform critical L3/finite-I velocity ledger for arbitrarily short positive times. The decisive missing coordinate is history/frequency information, not equation membership alone.",
+    "status": "PROPOSAL_SHADOW_DIAGNOSIS"
+  },
+  "episode_ref": {
+    "artifact_hash": "e7b7c23b0507947855970e471f01e9ba2d629ac48adf2ee5a6b3930ac2bd3ec9",
+    "authority": "PROPOSAL_SHADOW_STORED",
+    "episode_id": "EP-NS-B1a3b1a1-C001-R3-20260811"
+  },
+  "failure_experience": {
+    "boundaries": [
+      "does not enter first-singular-time class",
+      "does not produce an ancient solution",
+      "does not test long backward history",
+      "does not test Grujic morphology or direction hypotheses"
+    ],
+    "category": "LOCAL_MATHEMATICAL_FAILURE",
+    "failed_implication": "FINITE_I_SAME_SLAB -> UNIFORM_GLOBAL_VORTICITY_L3_2_INFINITY",
+    "failure_id": "F-NS-B1a3b1a1-EXACT-NSE-SAME-SLAB-AMPLITUDE-PRODUCER",
+    "status": "PROPOSAL_SHADOW_FAILURE_EXPERIENCE",
+    "trigger_signature": [
+      "finite-I same slab",
+      "global L3 velocity control",
+      "desired uniform global weak-L3/2 vorticity amplitude",
+      "exact smooth NSE"
+    ],
+    "witness": "small-data high-frequency vector-potential family with t_N>0 and ||omega(t_N)||_{L3/2,infinity} ~ N"
+  },
+  "gluing_failures_separate": [
+    {
+      "category": "LOCAL_TO_GLOBAL_GLUING_FAILURE",
+      "failure_id": "F-NS-B1a3b1a1-PRESINGULAR-HISTORY-ENTRY-OPEN",
+      "statement": "Globally regular initial-layer solutions do not automatically glue to first-singular-time or ancient source families."
+    },
+    {
+      "category": "LOCAL_TO_GLOBAL_GLUING_FAILURE",
+      "failure_id": "F-NS-B1a3b1a1-ANCIENT-FAR-FIELD-TIGHTNESS-OPEN",
+      "statement": "No far-field/tail compactness or pressure normalization under the Type-I blow-up limit is supplied by C001."
+    },
+    {
+      "category": "STATE_SPACE_GLUING_FAILURE",
+      "failure_id": "F-NS-B1a3b1a1-GRUJIC-SOURCE-SIGNATURE-OPEN",
+      "statement": "Critical-point morphology and log-BMO direction remain separate consumer hypotheses; C001 neither generates nor refutes them."
+    }
+  ],
+  "lesson_candidate": {
+    "action": "Before routing a derivative-level consumer from a scale-critical velocity ledger, test exact smooth high-frequency solutions at the temporal edge; if the consumer estimate is intended to be uniform there, demand an explicit history/frequency coordinate.",
+    "authority": "CANDIDATE",
+    "boundaries": [
+      "same-context Navier-Stokes priority guidance only",
+      "not a theorem authority source",
+      "not promoted",
+      "must not be transferred cross-problem without a DifferenceWitness"
+    ],
+    "kind": "REPRESENTATION",
+    "lesson_id": "L-NS-B1a3b1a1-TEMPORAL-EDGE-CAN-HIDE-CRITICAL-DERIVATIVES@CANDIDATE",
+    "supporting_episode_ids": [
+      "EP-NS-B1a3b1a1-C001-R3-20260811"
+    ]
+  },
+  "next_action": {
+    "atom_id": "NS-B1a3b1a2",
+    "name": "HISTORY-SEPARATED AMPLITUDE PRODUCER",
+    "priority": "test whether quantified backward history/ancientness suppresses the temporal-edge separator before any Grujic gluing"
+  },
+  "novelty_class": "representation",
+  "obstruction": {
+    "derived_from_diagnosis_id": "D-NS-B1a3b1a1-C001-R3-DERIVATIVE-TIME-EDGE-BLINDNESS",
+    "falsifier": "Produce a theorem deriving the required weak-L3/2 amplitude from the exact same finite-I same-slab signature with no extra history/frequency/state-space hypothesis; the exact NSE family in C001 must then violate one of its verified producer bounds.",
+    "obstruction_id": "O-NS-B1a3b1a1-SAME-SLAB-DERIVATIVE-AMPLITUDE-PRODUCER",
+    "statement": "Any positive amplitude producer suitable for the Type-I/ancient route must add at least one coordinate that excludes arbitrarily short temporal-edge high-frequency layers: quantified backward history, frequency envelope, a derivative/vorticity bound, or an equivalent compactness/tightness input.",
+    "status": "PROPOSAL_SHADOW_OBSTRUCTION"
+  },
+  "repeated_process_failure_links": [
+    {
+      "new_id": "F-NS-B1a3b1a1-EXACT-NSE-SAME-SLAB-AMPLITUDE-PRODUCER",
+      "prior_id": "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION",
+      "relation": "SAME_DERIVATIVE_LOSS_FAMILY_BUT_STRONGER_EXACT_PDE_WITNESS"
+    },
+    {
+      "new_id": "EP-NS-B1a3b1a1-C001-R3-20260811",
+      "prior_id": "PR-131-BARE-NORM-PRODUCER-FALSIFIER",
+      "relation": "UPGRADES_NON_SOLUTION_REPRESENTATION_FAILURE_TO_EXACT_NSE_FAMILY"
+    },
+    {
+      "new_id": "F-NS-B1a3b1a1-PRESINGULAR-HISTORY-ENTRY-OPEN",
+      "prior_id": "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "relation": "PRESERVED_AS_SEPARATE_GLUING_RESIDUAL_NOT_CONFLATED_WITH_LOCAL_PRODUCER_FAILURE"
+    }
+  ],
+  "schema_version": "RAKL-v3-experience-delta-proposal-shadow-r3"
+}
