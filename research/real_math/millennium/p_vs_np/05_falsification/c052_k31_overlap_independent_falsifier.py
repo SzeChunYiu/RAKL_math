@@ -8,6 +8,8 @@ from pathlib import Path
 
 
 M = "11100101"
+POS = tuple(f"P{i}" for i in range(1, 8))
+NEG = tuple(f"N{i}" for i in range(1, 7))
 ROOT = Path(__file__).resolve().parents[5]
 FROZEN_SOURCES = {
     "c041_grammar": ("research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py", "c0caca2fe7244c3d847de8b59473cec72132ec04ad3e9fab668f5cd95a2bd75a"),
@@ -65,15 +67,30 @@ def kernel(source: bool, pos: bool, neg: bool, bad: bool) -> str:
     return "NONEMPTY_WITH_EXACT_POSITIVE_CERTIFICATE" if pos else "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE"
 
 
+def frontend(*, positive: dict | None = None, negative: dict | None = None, bad: bool = False, source_overrides: dict[str, bytes] | None = None) -> str:
+    """Independently serialize validated packet structure into kernel input."""
+    p = (positive or {}).get("positive_obligations")
+    n = (negative or {}).get("negative_obligations")
+    pos_valid = isinstance(p, dict) and set(p) == set(POS) and all(p.values())
+    neg_valid = isinstance(n, dict) and set(n) == set(NEG) and all(n.values())
+    return kernel(source_bindings_hold(source_overrides), pos_valid, neg_valid, bad)
+
+
 def run() -> dict:
     source_valid = source_bindings_hold()
     mutated_source_valid = source_bindings_hold({"c041_grammar": b"mutated"})
+    propagation = {
+        "NONEMPTY_WITH_EXACT_POSITIVE_CERTIFICATE": frontend(positive={"positive_obligations": {key: True for key in POS}}),
+        "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE": frontend(negative={"negative_obligations": {key: True for key in NEG}}),
+        "CANNOT_CHECK": frontend(negative={"negative_obligations": {key: True for key in NEG if key != "N6"}}),
+    }
     worlds = {
         "K31-PLANTED-POSITIVE-CERTIFICATE-KERNEL-v1": kernel(True, True, False, False),
         "K31-PLANTED-NEGATIVE-CERTIFICATE-KERNEL-v1": kernel(True, False, True, False),
         "K31-MALFORMED-CERTIFICATE-CANNOT-CHECK-v1": kernel(True, False, False, True),
         "K31-MARGINAL-ONLY-FALSE-POSITIVE-v1": kernel(True, False, False, False),
         "K31-SOURCE-BINDING-MISMATCH-v1": kernel(mutated_source_valid, False, True, False),
+        "K31-FRONTEND-KERNEL-BRANCH-PROPAGATION-v1": propagation,
     }
     expected = {
         "K31-PLANTED-POSITIVE-CERTIFICATE-KERNEL-v1": "NONEMPTY_WITH_EXACT_POSITIVE_CERTIFICATE",
@@ -81,6 +98,11 @@ def run() -> dict:
         "K31-MALFORMED-CERTIFICATE-CANNOT-CHECK-v1": "CANNOT_CHECK",
         "K31-MARGINAL-ONLY-FALSE-POSITIVE-v1": "CANNOT_CHECK",
         "K31-SOURCE-BINDING-MISMATCH-v1": "CANNOT_CHECK",
+        "K31-FRONTEND-KERNEL-BRANCH-PROPAGATION-v1": {
+            "NONEMPTY_WITH_EXACT_POSITIVE_CERTIFICATE": "NONEMPTY_WITH_EXACT_POSITIVE_CERTIFICATE",
+            "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE": "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE",
+            "CANNOT_CHECK": "CANNOT_CHECK",
+        },
     }
     current = supports(64)
     expected_support = [(1, 8, 16, 64, 0), (4, 3, 18, 63, 1), (6, 2, 22, 64, 0)]

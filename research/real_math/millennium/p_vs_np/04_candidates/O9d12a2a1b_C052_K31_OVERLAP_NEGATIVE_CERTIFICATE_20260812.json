@@ -1,5 +1,6 @@
 {
-  "artifact_hash": "sha256:894cdc240fce22fbf7023a3457a9ba0c03a195f717746796a1b98ffe0432d040",
+  "all_public_prefix_rows_separated": true,
+  "artifact_hash": "sha256:b292f34701ba9945f34f9ec5b3adb324c91f075c4339b8b88ced74efac08cd3f",
   "branch": "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE",
   "candidate_id": "PNP-C052-K31-TARGET-BLIND-OVERLAP-CERTIFICATE-DISCRIMINATOR-v1",
   "certificate_id": "PNP-C052-K31-UNIVERSAL-SYNTAX-SEPARATOR-v1",
@@ -408,5 +409,6 @@
     "For current a+ in {4,6}, MAGIC[7]=1 and gamma(v+) begins with at least two zero bits, so p[7:10]=100.",
     "If h=p in either a+ in {4,6} cell, parent bits h[7:10]=x[37:40] are payload token 7 (zero-based) with sign 1 and variable code 00; variable zero is illegal for parent v in {2,3}.",
     "Thus every P_32 prefix is excluded by either p[31]=1 or the illegal mapped parent token 100, proving H_31 intersection P_32 empty without inspecting UNSAT labels."
-  ]
+  ],
+  "symbolic_separator_valid": true
 }

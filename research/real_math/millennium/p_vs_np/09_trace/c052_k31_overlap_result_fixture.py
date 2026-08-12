@@ -61,6 +61,8 @@ def build() -> tuple[dict, ...]:
         "parent_cell": candidate_result["certificate"]["parent_cell"],
         "current_cells": candidate_result["certificate"]["current_cells"],
         "negative_obligations": candidate_result["certificate"]["negative_obligations"],
+        "symbolic_separator_valid": candidate_result["certificate"]["symbolic_separator_valid"],
+        "all_public_prefix_rows_separated": candidate_result["certificate"]["all_public_prefix_rows_separated"],
         "public_enumeration_rows": candidate_result["certificate"]["public_enumeration_rows"],
         "public_unique_prefixes_checked_with_multiplicity_by_v": candidate_result["certificate"]["public_unique_prefixes_checked_with_multiplicity_by_v"],
         "exact_result": "H_31 intersection P_32 is empty: every current prefix either has p[31]=1 while every H_31 label has h[31]=0, or has p[31]=0 and p[7:10]=100, which would map to an illegal parent variable code 00.",
