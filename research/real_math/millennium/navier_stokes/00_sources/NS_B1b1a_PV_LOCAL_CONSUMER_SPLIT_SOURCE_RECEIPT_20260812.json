@@ -1,0 +1,74 @@
+{
+  "record_type": "PRIMARY_SOURCE_INTERFACE_RECEIPT",
+  "cycle_id": "NS-B1b1a-R11-PV-LOCAL-INTERFACE-20260812",
+  "atom_id": "NS-B1b1a",
+  "authority": "PROPOSAL_SHADOW_SOURCE_BOUND_SCOPED_NO_ROOT_AUTHORITY",
+  "framework": {
+    "freeze_sha": "fa6f305412ff5d0ef0bbbad174e83887e248b742",
+    "closeout_observed_sha": "182f0eff233b8608bc38c4869f52a5bb15e7e5fd",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811"
+  },
+  "application": {
+    "freeze_sha": "6016dd6a87d87b18d8f5498e2537b043a8468c04",
+    "closeout_observed_main_sha": "c78e91c73aa9639b3b09874b6394dab0f115731d",
+    "issue": 359
+  },
+  "primary_sources": [
+    {
+      "id": "PV-2607.09619v2",
+      "authors": "Ben Pineau; Vlad Vicol",
+      "title": "On rotated backwards self-similar solutions of the incompressible 3D Navier-Stokes equations",
+      "version_date": "2026-08-06",
+      "locators": [
+        "Theorem 1.9 and Remarks 1.10-1.11",
+        "Proposition 9.5 and footnote 27",
+        "proof of Theorem 1.9, equations (9.17)-(9.25)"
+      ],
+      "verified_interfaces": {
+        "PV_G": "smooth NSE on B1×[-1,0), pointwise local Type-I |u|<=C_u/(sqrt(-t)+|x|), annular pressure L∞, and one sufficiently late time with small self-similar generator ∂_s U (L∞ or the weighted L1 alternative) imply regularity at (0,0).",
+        "PV_E": "Proposition 9.5 consumes a late one-slice critical enstrophy smallness condition. Footnote 27 explicitly permits replacing the annular-pressure assumption by the assumption that (u,p) is a suitable weak solution in Q1 satisfying the same pointwise Type-I bound.",
+        "pressure_bifurcation": "The annular pressure is not merely cosmetic in the PV_G proof as written: the proof uses it at the selected time to obtain annular/bulk pressure and Bernoulli bounds before the weighted identity (9.20)-(9.25). Suitability is an explicit alternative only for the downstream PV_E criterion."
+      }
+    },
+    {
+      "id": "AB-1811.00502v2",
+      "authors": "Dallas Albritton; Tobias Barker",
+      "title": "On local Type I singularities of the Navier-Stokes equations and Liouville theorems",
+      "locators": [
+        "Theorem 1.1",
+        "definitions A,C,D,E,I",
+        "Lemma 2.2 and persistence package as source-bound in RAKL_math PR #110"
+      ],
+      "verified_interfaces": {
+        "producer": "finite I is the scale-critical local A+C+D+E ledger used in the Type-I suitable-weak / bounded-ancient equivalence; stronger pointwise/weak-Serrin Type-I bounds can imply finite I, but the converse is not licensed.",
+        "compactness": "the registered local compactness interface is strong L3_loc convergence of velocity and weak L3/2_loc convergence of pressure on fixed smaller cylinders; this does not transport annular L∞ pressure, ∂_t u, ∇u time traces, or the one-slice generator."
+      }
+    }
+  ],
+  "direct_derivations": {
+    "self_similar_generator": "U(y,s)=sqrt(-t)u(x,t), y=x/sqrt(-t), s=-log(-t); then ∂_s U=sqrt(-t)[(-t)∂_t u-(1/2)u-(1/2)(x·∇)u].",
+    "PV_E_singularity_floor": "If the PV_E consumer hypotheses hold and (0,0) is singular, then for every sufficiently late admissible time t, with r=sqrt(-t), r∫_{B_{2R** r}}|ω(x,t)|²dx > θ_*²/4; otherwise Proposition 9.5 would imply regularity.",
+    "finite_I_good_time_upper_bound": "Assume additionally finite I and fix r>0. Put ρ=2R**r. The finite-I E-ledger gives ∫_{-ρ²}^0∫_{B_ρ}|∇u|²<=Iρ. Averaging on t∈[-r²,-r²/2] gives a t_* with r_*=sqrt(-t_*)∈[r/sqrt(2),r] and r_*∫_{B_{2R**r_*}}|ω|²<=8R** I. Thus finite I gives O(I), not the source epsilon threshold unless I is correspondingly small.",
+    "singular_subclass_I_lower_bound": "Under the PV_E singularity floor, integrate on t∈[-r0²,0], use |ω|²<=2|∇u|² and B_{2R**sqrt(-t)}⊂B_{2R**r0}. Then ∫_{-r0²}^0∫_{B_{2R**r0}}|∇u|² >= θ_*² r0/4, whereas finite I gives at most 2R** I r0; hence any such singular solution must satisfy I>=θ_*²/(8R**). This is a scoped corollary, not a regularity theorem.",
+    "compact_orbit_falsifier": "Precompactness of a trajectory does not imply liminf ||∂_s U||=0: an abstract periodic orbit s↦(cos s,sin s) is compact and has unit speed. Therefore a critical-element route needs an additional finite-action/Lyapunov/no-recurrence witness before it can feed PV_G."
+  },
+  "limit_and_rigidity_audit": {
+    "weak_strong": "AB strong L3_loc velocity is adequate for local nonlinear passage but does not control derivatives or one-time generator traces; weak L3/2_loc pressure is weaker than the PV_G annular L∞ hypothesis.",
+    "pressure_localization": "Local Calderón–Zygmund plus harmonic-remainder control is sufficient for suitable-weak/local epsilon-regularity but not the PV_G annular/bulk pointwise pressure estimates used in (9.17)-(9.25). Switching to PV_E avoids that pressure interface if suitability is available.",
+    "far_field": "PV_E is genuinely local and does not require the global critical tail that blocked PR #110; this is why R6/PR110 failures changed routing. No global tail conclusion is inferred.",
+    "noncompact_symmetries": "translation/dilation/profile leakage remains relevant to global critical-element constructions. Rotation/self-similar-time periodicity is an additional recurrence obstruction for generator-smallness.",
+    "backward_uniqueness": "not used by PV_E/PV_G. No unique-continuation hypotheses are imported.",
+    "equation_change": "this atom remains Type-I Navier–Stokes. Type-II Euler limits are rejected as a transfer source for this interface."
+  },
+  "exact_missing_interfaces": {
+    "generic_finite_I_to_PV_E": "prove pointwise local Type-I plus a sufficiently late one-slice critical-enstrophy dip, or replace PV_E by a theorem whose input is exactly finite I/suitable weak.",
+    "critical_element_to_PV_G": "prove annular pressure at the needed strength and liminf_{s→∞} A(s)=0, where A(s) is the PV weighted generator action; a sufficient stronger bridge is finite total weighted generator action in self-similar time.",
+    "subclass_next_atom": "NS-B1b1a1: within suitable weak solutions already satisfying the pointwise local Type-I bound, test whether NSE dynamics/geometric depletion/local enstrophy evolution can force the PV_E one-slice epsilon dip without small-I."
+  },
+  "outcome": "PV_LOCAL_CONSUMER_BIFURCATION_VERIFIED__ENSTROPHY_PATH_REMOVES_PRESSURE_BUT_FINITE_I_GLUE_REMAINS_BLOCKED",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "literature_novelty": "NOT_CLAIMED",
+  "artifact_hash": "sha256:60f69e5afa4ba6d578d4afa68eadb2fa79da27ec8d8fd3f563db9a8671598724"
+}
