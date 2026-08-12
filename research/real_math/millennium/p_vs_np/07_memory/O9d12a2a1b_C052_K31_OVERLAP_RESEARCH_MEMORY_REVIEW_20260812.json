@@ -1,0 +1,51 @@
+{
+  "artifact_hash": "sha256:d5da74964ed9e9815fb65af1a516191788c2ec7be50e5464c75a432f8dffa0cd",
+  "candidate_method_families": [
+    "exact language-intersection certificate",
+    "universal separator",
+    "complete finite formula-bound enumeration"
+  ],
+  "cross_problem_coverage_receipt_hash": "",
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py",
+    "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C048_LITERAL_TRANSPOSE_TRANSFER_CONDITION_FREEZE_20260812.json",
+    "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C048_LITERAL_TRANSPOSE_PROOF_CERTIFICATE_FREEZE_20260812.json",
+    "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C052_V21_OFFWINDOW_SYMBOLIC_HAND_PROOF_20260812.json",
+    "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_V21_OFFWINDOW_RESULT_RECEIPT_20260812.json",
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C052_V21_OFFWINDOW_MATHEMATICAL_EXPERIENCE_20260812.json"
+  ],
+  "failure_lattice_snapshot_hash": "sha256:94f1494c936152eac2c9c02c5d80dbb9cd89a94a700179512a3ba875b46e0800",
+  "failure_query_status": "MATCHES_FOUND",
+  "failure_reuse_notes": [
+    "k12/k15/k19 warn that support does not imply overlap but cannot be extrapolated to k31",
+    "v1 requires formula-bound H_31 evidence; ambient syntax is rejected",
+    "the old v2 trap is preserved as zero-authority negative history"
+  ],
+  "relevant_failure_ids": [
+    "F-PNP-C049-K12-EXACT-OVERLAP-EMPTY",
+    "F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC",
+    "F-PNP-C051-K19-FIXED-VARIABLE-BIT-VERSUS-MAGIC",
+    "F-PNP-C052-V1-UNSAT-SUBSET-OMISSION",
+    "F-PNP-C052-V2-INVALID-TRAP-DOMAIN-AND-FUTURE-TIMESTAMP"
+  ],
+  "relevant_tool_ids": [
+    "T-PNP-C048-EXACT-OVERLAP-TRANSFER-CONDITION",
+    "MATH-PNP-C052-OFFWINDOW-UNSAT-ANCHOR-20260812"
+  ],
+  "selected_tool_ids": [
+    "T-PNP-C048-EXACT-OVERLAP-TRANSFER-CONDITION"
+  ],
+  "target_atom_id": "O9d12a2a1b-C052-K31-OVERLAP",
+  "target_context_hash": "sha256:9b195fe641a94855ac068e8aec4d20c55a051b377e5f91b22e57944036391482",
+  "tool_applicability_notes": [
+    "C048 fixes the QoI equivalence but does not decide k31",
+    "the off-window result may prune local forced-coordinate arguments only inside its scope"
+  ],
+  "tool_inventory_snapshot_hash": "sha256:83306c7b622ad44ac8e0b8ddd30e74fe431fdd9c5d5fc43e0d7ef220c179725d",
+  "tool_query_status": "MATCHES_FOUND",
+  "unresolved_warnings": [
+    "marginal witnesses may differ at all other coordinates",
+    "no full-label positive or universal negative certificate is frozen yet",
+    "actual overlap result remains inaccessible"
+  ]
+}
