@@ -1,0 +1,59 @@
+{
+  "artifact_hash": "sha256:707a8a22cfef81bf9ee60b50e98008ad5bb4ab51847e543c9466453723b6a7d2",
+  "authority": {
+    "evaluator_identity_only": true,
+    "independent_review": false,
+    "mathematical_result": false,
+    "proof": false,
+    "software_credit_units": 0
+  },
+  "candidate_id": "RH-ANA-003k-JY-C001-FLOOR-RATIO-ASYMPTOTIC",
+  "chronology": {
+    "base_sha": "47fcc8f71f5d4801b3c337d50c3b17bb6b8a648d",
+    "candidate_and_falsifier_frozen_in_same_inert_packet": true,
+    "execution_requires_later_active_main activation": true,
+    "result_accessed": false
+  },
+  "current_round_firewall": {
+    "evaluator_executed": false,
+    "evaluator_imported": false,
+    "implementation_exists": false,
+    "result_classified": false,
+    "worlds_materialized": false
+  },
+  "evaluator_id": "RH-ANA-003k-JY-C001-FLOOR-RATIO-SYMBOLIC-EVALUATOR-v1",
+  "evaluator_identity": {
+    "allowed_outputs": [
+      "PASS_CANDIDATE_THEOREM",
+      "FAIL_RATIO_IDENTITY",
+      "FAIL_ELEMENTARY_LIMIT",
+      "FAIL_QUANTIFIER_CONTRACT",
+      "FAIL_FLOOR_CHAIN",
+      "FAIL_SCOPE_OVERREACH",
+      "CANNOT_CHECK"
+    ],
+    "future_entrypoint": "evaluate_rh_ana003k_jy_c001(candidate, falsifier, source_bindings)",
+    "future_implementation_path": "research/real_math/millennium/riemann_hypothesis/05_oracles/rh_ana003k_jy_c001_floor_ratio_evaluator.py",
+    "kind": "INERT_SYMBOLIC_PROOF_CONTRACT_NO_IMPLEMENTATION",
+    "proof_authority_requirement": "Exact written derivation or proof-producing formal artifact; computation alone is corroboration only.",
+    "required_checks_in_order": [
+      "raw identity bindings",
+      "PO1 ratio algebra",
+      "PO2 elementary limit",
+      "PO3 fixed-C quantifiers",
+      "PO4 max/ceiling chain",
+      "PO5 proved sufficient-search lower bound",
+      "PO6 exponentiation",
+      "PO7 scope firewall",
+      "all planted worlds"
+    ]
+  },
+  "exact_bindings": {
+    "candidate_artifact_hash": "sha256:f99b6553969d2e035e87bc7c62f5ad7f163c69e09ce55278d3e34329028ba1bf",
+    "candidate_core_sha256": "sha256:a29a7437b79aed85e858c78e8c182e2b15ee89ea383fd3b9f9b5bd127683a423",
+    "falsifier_artifact_hash": "sha256:df91c4f87bd590da80557e3d00057eab029fb07d28732e02bb21d023a26d5daa"
+  },
+  "record_type": "RH_ANA003K_JY_C001_FLOOR_RATIO_EVALUATOR_IDENTITY_FREEZE",
+  "schema_version": "1.0.0",
+  "status": "IDENTITY_FROZEN_IMPLEMENTATION_AND_EXECUTION_FORBIDDEN_THIS_ROUND"
+}

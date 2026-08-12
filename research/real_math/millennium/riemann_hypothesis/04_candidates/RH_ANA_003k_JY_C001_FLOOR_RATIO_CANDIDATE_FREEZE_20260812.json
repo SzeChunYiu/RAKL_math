@@ -1,0 +1,115 @@
+{
+  "artifact_hash": "sha256:f99b6553969d2e035e87bc7c62f5ad7f163c69e09ce55278d3e34329028ba1bf",
+  "atom_id": "RH-ANA-003k-JY-MOVING-DIAGONAL",
+  "authority": {
+    "candidate_proposal_only": true,
+    "formal_proof": false,
+    "independent_review": false,
+    "li_or_rh": false,
+    "mathematical_result": false,
+    "proof": false,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "software_credit_units": 0
+  },
+  "candidate_id": "RH-ANA-003k-JY-C001-FLOOR-RATIO-ASYMPTOTIC",
+  "candidate_identity": {
+    "canonical_core_sha256": "sha256:a29a7437b79aed85e858c78e8c182e2b15ee89ea383fd3b9f9b5bd127683a423",
+    "identity_scope": "candidate_core() exact canonical JSON"
+  },
+  "chronology": {
+    "application_base_sha": "47fcc8f71f5d4801b3c337d50c3b17bb6b8a648d",
+    "candidate_frozen_before_evaluation": true,
+    "evaluator_executed": false,
+    "framework_pin_sha": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+    "limit_proof_executed": false,
+    "pre_candidate_merge_sha": "47fcc8f71f5d4801b3c337d50c3b17bb6b8a648d",
+    "pre_candidate_packet_merged_before_candidate": true,
+    "result_accessed": false
+  },
+  "definitions": {
+    "F_n": "[2(n+0.515)/0.8274]^2",
+    "U_JY_n": "max(log 2,n-1,F_n)",
+    "Y_n_C": "exp(u_n(C))",
+    "rho_C_n": "u_n(C)/F_n=(C(0.8274)^2/4) [n^(5/3)log^2(n+e)/(n+0.515)^2]",
+    "u_n_C": "C n^(5/3) log^2(n+e)"
+  },
+  "domain": "integers n>=1 and one arbitrary but fixed real C>0",
+  "evaluation_firewall": {
+    "branch_selected": false,
+    "eventual_cutoff_N_C_calculated": false,
+    "numerical_ratio_values_calculated": false,
+    "proof_attempt_run": false,
+    "result_recorded": false,
+    "symbolic_limit_classified": false
+  },
+  "evidence_bindings": {
+    "jy_lesson": {
+      "path": "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_D001_JY_C001_MATHEMATICAL_LESSON_20260812.json",
+      "raw_sha256": "sha256:606f33868f5b485eb9f383e5c1cdd8061970d7b0dd58908939f291da04fc1f90"
+    },
+    "jy_result": {
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_JY_C001_PUBLIC_VALIDATION_RESULT_20260812.json",
+      "raw_sha256": "sha256:ee5cb68a30a234b7bf93f6988577bb22d59d41dc82e3678845c6d3dadac3a867"
+    },
+    "pre_candidate_discriminator": {
+      "path": "research/real_math/millennium/riemann_hypothesis/08_reviews/RH_ANA_003k_JY_MOVING_DIAGONAL_SYMBOLIC_DISCRIMINATOR_FREEZE_20260812.json",
+      "raw_sha256": "sha256:bbc6c3aea57d17aadf32182991a793698b0cdb59116aedaeea8ee3744dd3b8f2"
+    },
+    "pre_candidate_gate": {
+      "path": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003k_JY_MOVING_DIAGONAL_PRE_CANDIDATE_GATE_20260812.json",
+      "raw_sha256": "sha256:796c7e2633f371ba67fa3b4e091639a925cbb4cdb8a61c2d913bf73c8f95bb98"
+    },
+    "pre_candidate_trace": {
+      "path": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003k_JY_MOVING_DIAGONAL_PRE_CANDIDATE_TRACE_20260812.json",
+      "raw_sha256": "sha256:4201a555046cc75fe582c1d6c1662a0cfad1b6477b763d58c9b5e15730da6d7c"
+    }
+  },
+  "exact_scoped_interpretation_if_proved": "For every fixed C>0, the current Johnston--Yang sufficient certificate is eventually incompatible with the diagonal log Y_n=C n^(5/3)log^2(n+e), independently of epsilon. This is only failure of that sufficient certificate on that diagonal.",
+  "frozen_constant_contract": {
+    "C": "arbitrary fixed real C>0",
+    "C_may_depend_on_n": false,
+    "epsilon_sequence_needed_for_floor_result": false,
+    "numeric_C_selected": false
+  },
+  "non_implications": [
+    "not failure of the actual natural-order remainder below U_JY",
+    "not a lower bound on every possible sufficient modulus",
+    "not internal-prefix control or failure thereof",
+    "not Li coefficient negativity or positivity",
+    "not evidence for or against the Riemann hypothesis"
+  ],
+  "proof_obligations": [
+    {
+      "id": "PO1-RATIO-ALGEBRA",
+      "obligation": "Derive rho_C(n) exactly from u_n(C)/F_n without dropping 0.515, changing 0.8274, or treating C as n-dependent."
+    },
+    {
+      "id": "PO2-ELEMENTARY-LIMIT",
+      "obligation": "Prove log^2(n+e)/n^(1/3) tends to 0 by an exact standard theorem or explicit epsilon argument; finite numerical fitting is insufficient."
+    },
+    {
+      "id": "PO3-FIXED-C-QUANTIFIER",
+      "obligation": "Keep the order forall fixed C>0, exists N_C, forall n>=N_C; do not claim one N uniform over unbounded C."
+    },
+    {
+      "id": "PO4-FLOOR-CHAIN",
+      "obligation": "From rho_C(n)<1 derive u_n(C)<F_n<=U_JY(n)<=ceil(U_JY(n)), with the correct ceiling direction."
+    },
+    {
+      "id": "PO5-SUFFICIENT-SEARCH-BOUND",
+      "obligation": "Use only the proved construction tilde_m_JY(n,epsilon)>=ceil(U_JY(n)) for every epsilon>0."
+    },
+    {
+      "id": "PO6-EXPONENTIATION",
+      "obligation": "Use strict monotonicity of exp to pass from u_n(C)<tilde_m_JY to Y_n(C)<tilde_M_JY."
+    },
+    {
+      "id": "PO7-SCOPE",
+      "obligation": "Classify only current-sufficient-certificate incompatibility and reject every actual-remainder, Li, or RH inference."
+    }
+  ],
+  "record_type": "RH_ANA003K_JY_C001_FLOOR_RATIO_CANDIDATE_FREEZE",
+  "schema_version": "1.0.0",
+  "status": "FROZEN_UNEVALUATED_ELEMENTARY_ASYMPTOTIC_CANDIDATE",
+  "theorem_statement_to_evaluate_later": "For every fixed C>0, lim_(n->infinity) rho_C(n)=0. Consequently there exists N_C such that for every integer n>=N_C, u_n(C)<F_n<=U_JY(n)<=ceil(U_JY(n))<=tilde_m_JY(n,epsilon) for every epsilon>0. Hence Y_n(C)<tilde_M_JY(n,epsilon) for every epsilon>0 under the separately proved sufficient strict-search family."
+}
