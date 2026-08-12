@@ -1,0 +1,76 @@
+{
+  "application_base_sha": "47fcc8f71f5d4801b3c337d50c3b17bb6b8a648d",
+  "artifact_hash": "sha256:3bc771b8e1763939f14b461e509808abfb6656bc146ef6ebacb52e642a0d5ffc",
+  "candidate_artifact_hash": "sha256:d42333dba6e2b98e86c3c6635f597b43bdde551539401339a598ec596c2c9df9",
+  "candidate_id": "PNP-C053-K32-CLEAN-PHASE-FULL-WORD-COMPATIBILITY-v1",
+  "chronology_firewall": {
+    "SAT_UNSAT_executed_or_accessed": false,
+    "candidate_identity_frozen": true,
+    "evaluation_authorized": false,
+    "evaluator_identity_frozen": true,
+    "falsifier_identity_frozen": true,
+    "formula_decoded": false,
+    "full_label_equality_executed_or_accessed": false,
+    "implementation_created": false,
+    "overlap_result_accessed": false,
+    "parent_or_current_word_constructed": false,
+    "validation_world_materialized": false
+  },
+  "credit": {
+    "Git_CI_schema_hash": 0,
+    "independent_review": 0,
+    "mathematical_result": 0
+  },
+  "evaluator_artifact_hash": "sha256:138139fb5cbd10e6490e50b71ca9eb1a847be55c31555cde91da3a986fa7f149",
+  "evaluator_id": "PNP-C053-K32-CLEAN-PHASE-SOURCE-BOUND-EVALUATOR-v1",
+  "falsifier_artifact_hash": "sha256:922492863daab2a439af92334240c1f6635b6d44ed242cdb326273decdef01b6",
+  "falsifier_id": "PNP-C053-K32-CLEAN-PHASE-FALSIFIER-v1",
+  "framework_pin": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+  "frozen_at_utc": "2026-08-12T16:31:03Z",
+  "next_authorized_action": "PR_REVIEW_MERGE_ONLY",
+  "receipt_id": "PNP-C053-K32-CLEAN-PHASE-CANDIDATE-FREEZE-RECEIPT-20260812",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "trace_delta": {
+    "action_summary": "Freeze full-word mathematical obligations and counterexample-first evaluator worlds without executing them.",
+    "alternatives_considered": [
+      "evaluate immediately",
+      "use only the old two-screen survival",
+      "broaden to 128 or 24320 pairs",
+      "freeze the smallest 32-pair full-word discriminator"
+    ],
+    "artifact_hash": "sha256:4d94b4ce64205f2462498cf38b16e003e267a6eb9883d36cbb778e00687cd99b",
+    "atom_id": "O9d12a2a1b-C053-K32-CLEAN-PHASE-COMPATIBILITY",
+    "decision_rationale": "The merged pre-candidate packet selected the smallest clean phase, and exact whole-word compatibility is the next unresolved mathematical implication.",
+    "event_id": "O9d12a2a1b-C053-K32-CLEAN-PHASE-E09",
+    "event_type": "CANDIDATE_PROPOSED",
+    "evidence_pointers": [
+      "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C053_K32_CLEAN_PHASE_COMPATIBILITY_IDENTITY_20260812.json",
+      "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C053_K32_CLEAN_PHASE_EVALUATOR_IDENTITY_20260812.json",
+      "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C053_K32_CLEAN_PHASE_FALSIFIER_IDENTITY_20260812.json"
+    ],
+    "next_steps": [
+      "PR and merge identities only",
+      "freeze a separate authorization round before materialization or evaluation"
+    ],
+    "outputs": [
+      "sha256:d42333dba6e2b98e86c3c6635f597b43bdde551539401339a598ec596c2c9df9",
+      "sha256:138139fb5cbd10e6490e50b71ca9eb1a847be55c31555cde91da3a986fa7f149",
+      "sha256:922492863daab2a439af92334240c1f6635b6d44ed242cdb326273decdef01b6",
+      "ZERO_EVALUATED_MATHEMATICAL_RESULT"
+    ],
+    "previous_event_hash": "sha256:56d1be41dc0ad67f65e8ac4e2e65c9ff95afea4d39f342a304b549961f13052d",
+    "residuals": [
+      "separate post-merge evaluation authorization required",
+      "all 32 full-word obligations unevaluated",
+      "P-versus-NP root open"
+    ],
+    "state_summary": "Exact candidate, evaluator, proof-plan, and falsifier identities are frozen for the 32-pair clean phase; no word, formula, SAT/UNSAT fact, equality result, or branch is accessed.",
+    "timestamp": "2026-08-12T16:31:03Z",
+    "uncertainties": [
+      "full-word compatibility is unknown",
+      "parent UNSAT membership is unknown",
+      "same-context review is not independent"
+    ]
+  }
+}
