@@ -1,0 +1,150 @@
+{
+  "schema": "RAKL_math.math_context_fibre.v3_shadow",
+  "cycle_id": "YM-S1a2-TRANSFER-GAP-20260812-R14",
+  "authority": "PROPOSAL_SHADOW_PRE_CANDIDATE_ONLY",
+  "framework": {
+    "repo": "SzeChunYiu/RAKL",
+    "main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "v3_blob": "280bf143fc8910d5860aaa02fbe3817a6aacfb72",
+    "method_specs_blob": "6342f2692b3fd85de3f274f9c6548c9736225691"
+  },
+  "root": {
+    "issue": "#5",
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "atom": {
+    "id": "YM-S1a2",
+    "issue": "#88",
+    "signature": "YM-S1a2-SZZ-COVARIANCE-TO-SAME-OS-TRANSFER-SPECTRAL-GAP",
+    "qoi": "Can SZZ's source-independent exponential covariance exponent be bound to moments of the same infinite-volume OS transfer operator and, with dense centered sources, imply a fixed-cutoff transfer spectral gap?"
+  },
+  "actual_fibre": {
+    "dimension": 4,
+    "group": "SU(N)",
+    "coupling": "0 < beta < 1/48",
+    "cutoff": "unit lattice spacing; infinite volume; no a->0 claim",
+    "measure": "the exact SZZ unique infinite-volume Wilson measure mu^ym_{N,beta}",
+    "source_family": "centered smooth gauge-invariant positive-time cylinder functions and their complex linear span",
+    "reflection": "the same time reflection used for the R13 reflection-positive weak-limit certificate",
+    "transfer": "OS positive one-step Euclidean time shift T on the same quotient/completion, normalized so T=e^{-aH} with a=1 in SZZ lattice units",
+    "target": "show <[F],T^n[F]> is a translated SZZ covariance with support distance n+O_F(1), then infer spec(T|Omega^perp) subset [0,e^{-c_N}]",
+    "excluded_claims": [
+      "continuum mass gap",
+      "lattice-spacing-uniform physical mass",
+      "asymptotic freedom or RG transport",
+      "continuum existence/nontriviality",
+      "root #5 closure"
+    ]
+  },
+  "primary_source_packet": {
+    "SZZ": [
+      "arXiv:2204.12737v1, (1.8): C_infty cylinder functions",
+      "Corollary 1.6, p.7: one exponent c_N depending on K_S,N,d; prefactor c_1 depends on source support sizes; distance is nearest vertex distance between support edge sets",
+      "Corollary 4.11, p.28: same estimate for every tight limit; uniqueness later identifies mu^ym_{N,beta}"
+    ],
+    "Luescher": [
+      "DESY 76/54 / CMP 54 (1977), Eq. (4)-(5): gauge-invariant positive-time OS form and quotient-completion",
+      "same source: T is the one-step positive Euclidean time shift and equals e^{-aH}",
+      "Proposition 2 / reconstruction section: Euclidean expectations equal transfer-matrix Schwinger functions for matching Wilson theory"
+    ],
+    "repository_reuse": [
+      "PR#240 / #238: proposal-shadow same-measure reflection positivity for exact SZZ infinite-volume measure",
+      "PR#225 / #88 comment: conditional density of centered smooth gauge-invariant positive-time cylinders in Omega^perp after OS quotient"
+    ]
+  },
+  "memory": {
+    "retrieved": [
+      "#5",
+      "#88",
+      "#238",
+      "PR#240",
+      "PR#225",
+      "F-YM-S1A2-OS-SZZ-SAME-THEORY-GLUING-UNBOUND",
+      "#220",
+      "#205",
+      "#177",
+      "#159",
+      "#141"
+    ],
+    "selected": [
+      "#5",
+      "#88",
+      "PR#240",
+      "PR#225",
+      "F-YM-S1A2-OS-SZZ-SAME-THEORY-GLUING-UNBOUND"
+    ],
+    "rejected": [
+      "#220",
+      "#205",
+      "#177",
+      "#159",
+      "#141"
+    ],
+    "missed": "CANNOT_MEASURE — no exhaustive governed cross-problem memory-coverage certificate"
+  },
+  "methods_operators_motifs_tried": [
+    "same-measure source binding",
+    "OS quotient identity",
+    "translation/reflection support geometry",
+    "counterexample-first support-distance check",
+    "spectral-measure nth-root exclusion on a dense source family"
+  ],
+  "analogues_disanalogies": {
+    "analogues": [
+      "standard reflection-positive reconstruction: Euclidean time translation becomes a positive selfadjoint contraction",
+      "standard spectral-measure argument: uniform source-independent moment rate on a dense set excludes slower spectrum"
+    ],
+    "disanalogies": [
+      "SZZ Langevin semigroup is not the physical Euclidean transfer operator",
+      "SZZ use of 'mass gap' means Euclidean exponential clustering and cannot be imported as the physical Hamiltonian gap without this bridge",
+      "fixed lattice spacing q=e^{-c_N} does not yield a positive continuum physical mass unless c_N/a is uniformly bounded below as a->0",
+      "finite-volume canonical transfer statements cannot substitute for the same infinite-volume OS quotient unless the limit passage is typed"
+    ]
+  },
+  "decision_policy": "Only write a local candidate if the same SZZ measure, same reflection, exact OS shift identity, n+O_F(1) support-distance growth, common c_N, and dense-source spectral exclusion all type-check. Otherwise record the first residual and block.",
+  "cheap_falsifiers": [
+    "c_N depends on F or n",
+    "OS moment involves a function outside SZZ C_infty cylinder class",
+    "translation/reflection changes the source norm or measure",
+    "support distance can remain O(1) as n grows",
+    "the moment is only a Langevin-semigroup covariance rather than a Euclidean translate",
+    "source density is across a different measure/quotient",
+    "T is not positive/selfadjoint/contractive on the same infinite-volume OS Hilbert space"
+  ],
+  "expert_cell": [
+    {
+      "role": "constructive QFT / OS lead",
+      "check": "same-measure quotient, time-shift operator, reflection conventions, null-space stability"
+    },
+    {
+      "role": "lattice gauge transfer lead",
+      "check": "Wilson action/reflection match and physical transfer normalization"
+    },
+    {
+      "role": "spectral analysis lead",
+      "check": "dense-source moment decay => operator spectral edge and vacuum complement"
+    },
+    {
+      "role": "SZZ probability lead",
+      "check": "exact Cor.1.6/4.11 scope, common exponent, support metric, translation invariance"
+    },
+    {
+      "role": "gauge-theory lead",
+      "check": "gauge invariance under reflection/translation and no gauge-fixed substitution"
+    },
+    {
+      "role": "continuum/RG lead",
+      "check": "fixed-cutoff versus a->0 scaling; forbid continuum promotion"
+    },
+    {
+      "role": "adversarial provenance/metrology lead",
+      "check": "chronology, source completeness, authority, novelty and resource accounting"
+    }
+  ],
+  "frozen_at": "2026-08-12T02:53:01Z",
+  "first_candidate_at": null,
+  "fibre_hash": "sha256:92994cf46d5e458e71d5018ba9870c900e7abe662702bb5f89544854a6071952"
+}
