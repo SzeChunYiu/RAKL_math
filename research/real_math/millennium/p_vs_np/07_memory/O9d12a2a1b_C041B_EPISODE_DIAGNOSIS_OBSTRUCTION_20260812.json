@@ -1,0 +1,123 @@
+{
+  "schema_version": "rakl-math-v3-experience-separation-v1",
+  "cycle_id": "PNP-O9d12a2a1b-C041B-TIGHT-INTERSECTION-20260812",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "episode": {
+    "id": "EP-PNP-O9d12a2a1b-C041B-TIGHT-INTERSECTION-20260812",
+    "fact": "For any fixed parent feasible dual and any even-even child graph-edge witness under an unchanged odd-odd old slice, decorating a parent pair with the mandatory child row/column traces preserves the parent pair's cylinder-lifted old load. Therefore a fresh relevant K must contain the embedded intersection of every tight parent pair; a tight disjoint parent pair blocks all such K from positive one-coordinate augmentation.",
+    "outcome": "PARTIAL_SUCCESS",
+    "residual_signature": [
+      "TIGHT_PARENT_INTERSECTION_FAMILY_STRUCTURE_UNKNOWN",
+      "NECESSARY_NOT_SUFFICIENT_FOR_AUGMENTATION",
+      "NO_UNIFORM_RECURRENCE_OR_ROOT_BRIDGE"
+    ],
+    "authority_effect": "SEARCH_PRIORITY_ONLY"
+  },
+  "diagnosis": {
+    "id": "DX-PNP-C041B-OBSTRUCTION-COMPRESSION-20260812",
+    "episode_id": "EP-PNP-O9d12a2a1b-C041B-TIGHT-INTERSECTION-20260812",
+    "category": "MATHEMATICAL_LOCAL_PARTIAL_SUCCESS",
+    "diagnosis": "The C041A child-neighbourhood obstruction can be compressed for even-even witnesses: a verified GLUE of C024 pair-load semantics and C041A slice projection maps every tight parent pair to an equally tight decorated child pair. The remaining local problem is no longer arbitrary child slack; it is whether a graph-realizable K can absorb all tight parent intersections and still evade every other saturated child pair.",
+    "confidence": "PAPER_PROOF_LEVEL_PROPOSAL_SHADOW_NO_FORMAL_CHECKER"
+  },
+  "process_failure": {
+    "id": "PF-PNP-C041B-LATE-CHILD-FIBRE-20260812",
+    "category": "PROVENANCE_CHRONOLOGY",
+    "effect": "STRICT_RAKL_DISCOVERY_CREDIT_DENIED",
+    "mathematical_truth_effect": "NONE",
+    "repeat_links": [
+      {
+        "prior_cycle": "PNP-O9d12a2a1b-C041A-ODD-SLICE-COPY-20260811",
+        "prior_failure_description": "C041A concrete rule was derived before its child fibre/trace was persisted.",
+        "relation": "REPEATED_PROCESS_FAILURE",
+        "note": "Two successive child cycles exposed the same persistence-latency problem: runtime idea formation can precede durable fibre materialization. This is tracked separately from mathematical outcome."
+      }
+    ]
+  },
+  "obstruction": {
+    "id": "O-PNP-C041B-TIGHT-INTERSECTION-FAMILY",
+    "derived_from": [
+      "EP-PNP-O9d12a2a1b-C041B-TIGHT-INTERSECTION-20260812",
+      "O-PNP-C041A-SATURATED-NEIGHBORHOOD-AUGMENTATION",
+      "T-PNP-FRACTIONAL-SEMIFILTER-PACKING"
+    ],
+    "statement": "For a fixed parent dual, any fresh even-even relevant child semi-filter K that can receive positive one-coordinate mass while old cylinder weights are fixed must contain i(A intersect B) for every tight parent pair (A,B). Thus the intersection family of tight parent constraints is a necessary parent-side object for augmentation. Empty tight intersection is an immediate blocker.",
+    "scope": "Full Definition-21 cover; unchanged odd-odd old slice; even-even child graph-edge witness; fixed lifted old dual; one-coordinate augmentation.",
+    "authority": "PROPOSAL_SHADOW_EXACT_LOCAL_LEMMA",
+    "not_claimed": [
+      "sufficiency of tight-intersection absorption",
+      "existence of a tight disjoint pair for every parent certificate",
+      "mixed-parity analogue",
+      "multi-coordinate augmentation",
+      "uniform recurrence/divergence/rate",
+      "NP or P-vs-NP conclusion"
+    ]
+  },
+  "lesson_candidate": {
+    "id": "L-PNP-C041B-COMPILE-TIGHT-INTERSECTIONS-FIRST",
+    "status": "CANDIDATE_ONLY_NOT_PROMOTED",
+    "lesson": "Before constructing an off-slice augmentation rule for a transported packing certificate, compile the tight parent constraints and their intersections. For parity-separated witnesses, any proposed fresh semi-filter must absorb every tight intersection; reject the candidate immediately if one required intersection is forbidden (especially empty).",
+    "episode_support": ["EP-PNP-O9d12a2a1b-C041B-TIGHT-INTERSECTION-20260812"],
+    "transfer_status": "UNVERIFIED_OUTSIDE_THIS_LOCAL_SCOPE"
+  },
+  "motif_candidate": {
+    "id": "M-PNP-DECORATE-TIGHT-PAIR-WITH-MANDATORY-TRACES",
+    "status": "CANDIDATE_ONLY_NOT_PROMOTED",
+    "sequence": [
+      "identify mandatory generator traces of a fresh relevant witness",
+      "decorate each tight parent constraint with those traces",
+      "project preservation/load back to the parent",
+      "compile required parent intersections",
+      "reject impossible absorption before recurrence search"
+    ]
+  },
+  "experience_routing": {
+    "prior_success_or_failure_that_changed_route": [
+      {"id": "F-C037-ARBITRARY-EXTENSION-NONMONOTONE", "effect": "Blocked arbitrary-extension monotonicity and forced exact old-slice control."},
+      {"id": "F-C041A-COPY-ONLY-COVER-GRAPH-ISOMORPHISM", "effect": "Rotated away from pure-copy rules to residual-capacity analysis."},
+      {"id": "T-PNP-FRACTIONAL-SEMIFILTER-PACKING", "effect": "Made tight pair load the exact local obstruction representation."},
+      {"id": "M-PNP-SLICE-TRANSPORT-THEN-SLACK-AVOIDANCE", "effect": "Forced slack analysis before recurrence or rate work."},
+      {"id": "RAKL_math#162", "effect": "Rejected duplicate restricted/full transfer work."},
+      {"id": "RAKL_math#179", "effect": "Rejected duplicate Wig95 source-recovery work."}
+    ],
+    "retrieved_but_rejected": [
+      {"id": "C038-AS-AUGMENTATION-THEOREM", "why": "Persistence has no residual-mass implication."},
+      {"id": "ABSOLUTE-TRACE-RICHNESS", "why": "Saturated failure family and wrong coordinate."},
+      {"id": "INCREMENTAL-TRACE-LIPSCHITZNESS", "why": "Sibling gluing defect; no direct discriminator for tight lifted constraints."},
+      {"id": "C041-POLYTIME-EXPLICITNESS-SUPERPOLY-CONTRADICTION", "why": "Still a root-interface warning but not decision-relevant to the local fixed-dual lemma."}
+    ],
+    "known_missed_prior_experience": [],
+    "cross_millennium_memory_queried": false,
+    "cross_millennium_reason": "No registered applicability/DifferenceWitness advantage over same-context exact memory."
+  },
+  "local_vs_gluing": {
+    "local_mathematical_status": "SOLVED_PROPOSAL_SHADOW_NECESSARY_CONDITION",
+    "local_residual": "Characterize the tight-parent-intersection family and remaining saturated child pairs.",
+    "gluing_status": "OPEN_NOT_A_FAILURE_OF_THE_LOCAL_LEMMA",
+    "gluing_residual_id": "GLUE-PNP-C041B-LOCAL-INTERSECTION-OBSTRUCTION-TO-ROOT-RATE",
+    "gluing_residuals": [
+      "construct a graph-realizable K satisfying all local slack obligations",
+      "prove uniform positive augmentation and iterability",
+      "prove divergence and root-relevant circuit rate",
+      "preserve source graph/Boolean transference",
+      "supply NP membership or lower-bound-preserving NP reduction"
+    ]
+  },
+  "saturation_observation": {
+    "protected_state_mutated": false,
+    "retained_semantic_novelty": {
+      "KNOWLEDGE": 0,
+      "OPERATOR": 0,
+      "EXPERIENCE_PATTERN": 0,
+      "OBSTRUCTION": 0,
+      "RELATION": 0,
+      "PATH": 0,
+      "META_METHOD": 0
+    },
+    "shadow_axes_reopened": ["OBSTRUCTION", "RELATION", "PATH"],
+    "axes_flattened": [],
+    "conditional_family_blocked": "EVEN_EVEN_OFFSLICE_ONE_COORDINATE_AUGMENTATION_WHEN_PARENT_HAS_TIGHT_DISJOINT_PAIR"
+  },
+  "novelty_class_shadow": ["COMPOSITIONAL", "REPRESENTATION"],
+  "novelty_authority": "NONE"
+}
