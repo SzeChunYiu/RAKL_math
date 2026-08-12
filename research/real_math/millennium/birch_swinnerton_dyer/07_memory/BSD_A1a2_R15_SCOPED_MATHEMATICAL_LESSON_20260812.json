@@ -1,0 +1,50 @@
+{
+  "record_type": "SCOPED_MATHEMATICAL_LESSON",
+  "lesson_id": "LESSON-BSD-R15-SELMER-EXACTNESS-IS-NOT-MW-EXACTNESS",
+  "authority": "SOURCE_BOUND_HAND_LEMMA_NO_NOVELTY_NO_ROOT_AUTHORITY",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "attempted_implication": "corank_Zp Sel(Q,E[p^infinity])=2 -> rank_Z E(Q)=2",
+  "exact_result_or_failure": "The implication is not licensed by the Selmer dimension alone. The exact identity is corank Sel=rank E(Q)+corank Sha[p^infinity]. Therefore Selmer corank two leaves the alternatives (rank, Sha-corank)=(2,0),(1,1),(0,2), subject to any additional target theorems; the exact sequence by itself selects none.",
+  "supported_and_competing_causes": {
+    "supported": "Uncontrolled p-divisible Tate-Shafarevich contribution is the unique slack term in the exact Kummer-Selmer corank identity.",
+    "competing": [
+      {
+        "cause": "p-infinity versus V_p coefficient mismatch",
+        "status": "REJECTED_IN_THIS_SCOPE_BY_R12"
+      },
+      {
+        "cause": "Kurihara order versus Selmer corank mismatch",
+        "status": "REJECTED_CONDITIONALLY_UNDER_KIM_POLLACK_THEOREM_HYPOTHESES_BY_R14"
+      },
+      {
+        "cause": "transverse localization nonvanishing",
+        "status": "ORTHOGONAL_TO_THIS_EXACT_SEQUENCE_IDENTITY; may supply other arithmetic information but is not the missing term in this corank decomposition"
+      },
+      {
+        "cause": "finite p-primary Sha order versus corank",
+        "status": "DISTINCT_REFINED_BSD_OBLIGATION; corank zero gives finiteness here but not its exact order"
+      }
+    ]
+  },
+  "scope": "A logical sufficiency audit of the exact sequence. It does not assert existence of an elliptic curve realizing rank<2 and Selmer corank 2.",
+  "mathematical_falsifier": "A counterexample to the lemma would be an E/Q,p for which Kim's exact Kummer-Selmer sequence has the usual Selmer meaning but corank additivity fails. For the stronger attempted implication, an actual E/Q with Selmer corank 2 and positive Sha[p^infinity] corank would falsify it; no such target example is asserted here.",
+  "mathematical_repair_or_next_discriminator": "After any complex-order-to-Kurihara-order theorem gives exact Selmer corank two, prove Sha(E/Q)[p^infinity] finite (equivalently corank zero) from hypotheses no stronger than the active root input, or prove rank E(Q)=2 by an independent rational-point mechanism. Do not treat exact Selmer dimension as rank equality before this discriminator.",
+  "proof_or_source_evidence": [
+    "Kim arXiv:2109.12344v3 p.1 displayed fundamental exact sequence",
+    "Mordell-Weil finite generation",
+    "additivity of Z_p-rank after Pontryagin duality",
+    "R12 coefficient-binding result",
+    "R14 Kim-Pollack theorem-direction audit"
+  ],
+  "method_lesson": "When a proof route changes from a Selmer coordinate to a Mordell-Weil coordinate, expand the defining exact sequence and name every additive corank term before composing the edge. Downstream exactness in the larger object is useful only after the quotient term is independently controlled.",
+  "lesson_scope_warning": "This is a scoped arithmetic exact-sequence lesson, not a universal ban on Selmer-to-Mordell-Weil arguments; a theorem forcing Sha[p^infinity] finite repairs the edge.",
+  "zero_mathematical_credit": [
+    "git",
+    "ci",
+    "schema",
+    "hash",
+    "chronology",
+    "telemetry"
+  ],
+  "artifact_hash": "sha256:0ac63cd58f3f452df677491121316420e4260cbc0e682c4fa5c833b5b0bc41cc"
+}

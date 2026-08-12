@@ -1,0 +1,167 @@
+{
+  "trace_id": "TRACE-BSD-A1A2-R15-KUMMER-SHA-20260812",
+  "authority": "RETROSPECTIVE_RESULT_TRACE_NO_STRICT_DISCOVERY_CREDIT_NO_ROOT_AUTHORITY",
+  "strict_pre_candidate_trace_present": false,
+  "strict_pre_candidate_block_reason": "candidate observation preceded a fresh R15 strict packet; chronology is preserved rather than backfilled",
+  "entries": [
+    {
+      "event_id": "BSD-A1A2-R15-E01",
+      "event_type": "CANDIDATE_PROPOSED",
+      "atom_id": "BSD-A1a2-SELMER-CORANK-TWO-TO-MORDELL-WEIL-RANK-TWO",
+      "timestamp": "2026-08-12T09:11:21Z",
+      "state_summary": "The Kummer/Sha corank decomposition was observed before a fresh R15 strict packet.",
+      "action_summary": "Admit the lemma only for retrospective truth checking; deny strict context-first discovery credit.",
+      "alternatives_considered": [
+        "silently equate Selmer rank and Mordell-Weil rank",
+        "assume finite Sha",
+        "expand the exact sequence and retain the quotient term"
+      ],
+      "decision_rationale": "The exact Kummer-Selmer sequence is the authoritative mathematical interface; no omitted term may be erased by representation language.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a2_R15_KUMMER_SHA_EXACT_RANK_RESULT_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a2_R15_SCOPED_MATHEMATICAL_LESSON_20260812.json",
+        "arXiv:2109.12344v3 p.1"
+      ],
+      "outputs": [
+        "RETROSPECTIVE_HAND_LEMMA_ONLY"
+      ],
+      "uncertainties": [
+        "same-context hand proof only",
+        "no actual infinite-Sha target counterexample asserted"
+      ],
+      "residuals": [
+        "TRUTH_CHECK_REQUIRED"
+      ],
+      "previous_event_hash": null,
+      "artifact_hash": "sha256:4f84a6ae73712926e1826258c3023c708286d54847ec10d77e2ed9bfb66c0633"
+    },
+    {
+      "event_id": "BSD-A1A2-R15-E02",
+      "event_type": "FALSIFIER_RUN",
+      "atom_id": "BSD-A1a2-SELMER-CORANK-TWO-TO-MORDELL-WEIL-RANK-TWO",
+      "timestamp": "2026-08-12T09:11:21Z",
+      "state_summary": "The exact sequence is fixed; coefficient, quotient, and finite/cofinite boundary cases were attacked.",
+      "action_summary": "Check torsion tensoring, corank additivity, possible positive Sha corank, and whether corank zero really implies finite in the cofinitely generated scope.",
+      "alternatives_considered": [
+        "silently equate Selmer rank and Mordell-Weil rank",
+        "assume finite Sha",
+        "expand the exact sequence and retain the quotient term"
+      ],
+      "decision_rationale": "The exact Kummer-Selmer sequence is the authoritative mathematical interface; no omitted term may be erased by representation language.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a2_R15_KUMMER_SHA_EXACT_RANK_RESULT_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a2_R15_SCOPED_MATHEMATICAL_LESSON_20260812.json",
+        "arXiv:2109.12344v3 p.1"
+      ],
+      "outputs": [
+        "NO_ALGEBRAIC_GAP_FOUND_WITHIN_SCOPE"
+      ],
+      "uncertainties": [
+        "same-context hand proof only",
+        "no actual infinite-Sha target counterexample asserted"
+      ],
+      "residuals": [
+        "NO_ACTUAL_INFINITE_SHA_ELLIPTIC_CURVE_ASSERTED"
+      ],
+      "previous_event_hash": "sha256:4f84a6ae73712926e1826258c3023c708286d54847ec10d77e2ed9bfb66c0633",
+      "artifact_hash": "sha256:97892b1f106ab1e3ca83185a7ccb4dc95c31a71bc5076c2289e5737c781ed649"
+    },
+    {
+      "event_id": "BSD-A1A2-R15-E03",
+      "event_type": "RESULT_RECORDED",
+      "atom_id": "BSD-A1a2-SELMER-CORANK-TWO-TO-MORDELL-WEIL-RANK-TWO",
+      "timestamp": "2026-08-12T09:11:21Z",
+      "state_summary": "The source-bound hand proof establishes corank Sel=rank E(Q)+corank Sha[p^infinity].",
+      "action_summary": "Record the exact conditional rank-two criterion and preserve all nonclaims.",
+      "alternatives_considered": [
+        "silently equate Selmer rank and Mordell-Weil rank",
+        "assume finite Sha",
+        "expand the exact sequence and retain the quotient term"
+      ],
+      "decision_rationale": "The exact Kummer-Selmer sequence is the authoritative mathematical interface; no omitted term may be erased by representation language.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a2_R15_KUMMER_SHA_EXACT_RANK_RESULT_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a2_R15_SCOPED_MATHEMATICAL_LESSON_20260812.json",
+        "arXiv:2109.12344v3 p.1"
+      ],
+      "outputs": [
+        "LEM-BSD-R15-KUMMER-SHA-CORANK-DECOMPOSITION"
+      ],
+      "uncertainties": [
+        "same-context hand proof only",
+        "no actual infinite-Sha target counterexample asserted"
+      ],
+      "residuals": [
+        "COMPLEX_ORDER_TO_KURIHARA_ORDER",
+        "P_PRIMARY_SHA_FINITE_OR_INDEPENDENT_MW_RANK2"
+      ],
+      "previous_event_hash": "sha256:97892b1f106ab1e3ca83185a7ccb4dc95c31a71bc5076c2289e5737c781ed649",
+      "artifact_hash": "sha256:76a6552b3f2f00a316a48ac7aea978c203b1afd4ab09c1f9786bba91d97464aa"
+    },
+    {
+      "event_id": "BSD-A1A2-R15-E04",
+      "event_type": "RESIDUAL_OPENED",
+      "atom_id": "BSD-A1a2-SELMER-CORANK-TWO-TO-MORDELL-WEIL-RANK-TWO",
+      "timestamp": "2026-08-12T09:11:21Z",
+      "state_summary": "Exact Selmer corank two leaves exactly the p-divisible Sha term before Mordell-Weil rank equality.",
+      "action_summary": "Open the smallest child around Sha[p^infinity] finiteness or an independent rational-point rank-two producer.",
+      "alternatives_considered": [
+        "silently equate Selmer rank and Mordell-Weil rank",
+        "assume finite Sha",
+        "expand the exact sequence and retain the quotient term"
+      ],
+      "decision_rationale": "The exact Kummer-Selmer sequence is the authoritative mathematical interface; no omitted term may be erased by representation language.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a2_R15_KUMMER_SHA_EXACT_RANK_RESULT_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a2_R15_SCOPED_MATHEMATICAL_LESSON_20260812.json",
+        "arXiv:2109.12344v3 p.1"
+      ],
+      "outputs": [
+        "BSD-A1a3-COMPLEX-RANK-TWO-TO-P-PRIMARY-SHA-FINITENESS-OR-INDEPENDENT-MW-RANK-TWO"
+      ],
+      "uncertainties": [
+        "same-context hand proof only",
+        "no actual infinite-Sha target counterexample asserted"
+      ],
+      "residuals": [
+        "REFINED_SHA_ORDER_REGULATOR_LOCAL_FACTOR_PERIOD_GLUE"
+      ],
+      "previous_event_hash": "sha256:76a6552b3f2f00a316a48ac7aea978c203b1afd4ab09c1f9786bba91d97464aa",
+      "artifact_hash": "sha256:dcedfcf7a044b05e16752a547244903860bc59444c10f576a903929dbd4d2ece"
+    },
+    {
+      "event_id": "BSD-A1A2-R15-E05",
+      "event_type": "REVIEWED",
+      "atom_id": "BSD-A1a2-SELMER-CORANK-TWO-TO-MORDELL-WEIL-RANK-TWO",
+      "timestamp": "2026-08-12T09:11:21Z",
+      "state_summary": "Seven-lens same-context review accepted only the scoped hand lemma.",
+      "action_summary": "Retain the exact proof-DAG edge; reject novelty, independent-review, formal-proof, and BSD-root claims.",
+      "alternatives_considered": [
+        "silently equate Selmer rank and Mordell-Weil rank",
+        "assume finite Sha",
+        "expand the exact sequence and retain the quotient term"
+      ],
+      "decision_rationale": "The exact Kummer-Selmer sequence is the authoritative mathematical interface; no omitted term may be erased by representation language.",
+      "evidence_pointers": [
+        "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a2_R15_KUMMER_SHA_EXACT_RANK_RESULT_20260812.json",
+        "research/real_math/millennium/birch_swinnerton_dyer/07_memory/BSD_A1a2_R15_SCOPED_MATHEMATICAL_LESSON_20260812.json",
+        "arXiv:2109.12344v3 p.1"
+      ],
+      "outputs": [
+        "SAME_CONTEXT_ACCEPT_SCOPED"
+      ],
+      "uncertainties": [
+        "same-context hand proof only",
+        "no actual infinite-Sha target counterexample asserted"
+      ],
+      "residuals": [
+        "OPEN_NO_SOLUTION_CERTIFICATE"
+      ],
+      "previous_event_hash": "sha256:dcedfcf7a044b05e16752a547244903860bc59444c10f576a903929dbd4d2ece",
+      "artifact_hash": "sha256:1e3e86edc217f23746ee7517d9c4d47ed33ae206286be091992b82783d68be5c"
+    }
+  ],
+  "terminal_event_hash": "sha256:1e3e86edc217f23746ee7517d9c4d47ed33ae206286be091992b82783d68be5c",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "artifact_hash": "sha256:e8b4871e322670b366262398beadc935250cc9d749ce460410a45e8847882fe2"
+}
