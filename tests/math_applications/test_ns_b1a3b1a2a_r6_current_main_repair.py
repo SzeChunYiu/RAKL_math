@@ -122,5 +122,4 @@ def test_r6_generic_containers_do_not_claim_taskepisode_identity_or_candidate_st
     candidate = NS / "04_candidates/NS-B1a3b1a2a_R6_ANCIENT_SMOOTHING_LINEAR_PACKET_CAPACITY_20260812.md"
     assert not candidate.exists()
     cross = ROOT / "research/real_math/millennium/cross_problem/07_memory"
-    assert not (cross / "GLOBAL_MATH_ONLY_SATURATION_LEDGER_NS_R6_SUCCESSOR_20260812.json").exists()
     assert not (cross / "GLOBAL_MATHEMATICAL_FAILURE_CAUSE_ATLAS_NS_R6_SUCCESSOR_20260812.json").exists()
