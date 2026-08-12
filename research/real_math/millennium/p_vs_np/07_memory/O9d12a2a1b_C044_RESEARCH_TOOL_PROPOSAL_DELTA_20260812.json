@@ -1,0 +1,50 @@
+{
+  "tool_id": "T-PNP-HETEROGENEOUS-BLOCK-MULTIPLEXING-UPPER",
+  "name": "Heterogeneous block-diagonal generator-separation upper construction",
+  "kind": "upper_bound_falsifier",
+  "source_atom_id": "O9d12a2a1b-C044-RETROSPECTIVE",
+  "source_candidate_id": "C044-RETROSPECTIVE-Q16-MULTIPLEXING-v1",
+  "source_result_ids": [
+    "PNP-C044-RETROSPECTIVE-Q16-MULTIPLEXING-20260812"
+  ],
+  "authority": "HEURISTIC_PROPOSAL_PENDING_FRESH_REUSE_ASSURANCE",
+  "abstraction": "For t>=1 complement components with disjoint cell grounds and pairwise disjoint row and column projections, pad and union same-index local pairs, then add binary whole-component separators to obtain sigma(G)<=max_r k_r+ceil(log2 t).",
+  "preconditions": [
+    "at least one complement component",
+    "no cross-component complement cell",
+    "component complement cell grounds are disjoint",
+    "component row projections are pairwise disjoint and component column projections are pairwise disjoint",
+    "each component local family is explicitly disjoint and generator-separating",
+    "empty endpoint fibres are handled under the source definition",
+    "upper-bound cover polarity is preserved"
+  ],
+  "operation": "prove the component decomposition, validate every local family, multiplex pair indices across components, and add binary whole-component partitions",
+  "guaranteed_effects": [
+    "under the stated preconditions, gives an explicit full-cover upper bound max local size plus logarithmic component separation"
+  ],
+  "non_guarantees": [
+    "does not give a lower bound or exact full-cover value",
+    "does not apply after cross-component complement coupling changes endpoint fibres",
+    "does not imply later decoder levels remain decomposable",
+    "one retrospective application does not promote universal method authority"
+  ],
+  "validation_obligations": [
+    "prove the full complement decomposition rather than infer it from samples",
+    "check all local generator fibres and pair disjointness",
+    "check all cross-component active edge orientations"
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/04_candidates/C044_RETROSPECTIVE_Q16_MULTIPLEXING_RESULT_20260812.md",
+    "research/real_math/millennium/p_vs_np/04_candidates/negative_history/C010_fixed_gadget_block_sum_ceiling.md"
+  ],
+  "known_failure_ids": [
+    "F-C010-MULTIPLEXING",
+    "F-C044-HETEROGENEOUS-BLOCK-MULTIPLEXING"
+  ],
+  "successful_reuse_ids": [],
+  "proof_backing": [
+    "C010-L1",
+    "C044 heterogeneous block multiplexing hand proof"
+  ],
+  "artifact_hash": "sha256:94ea03890853a5cd19747e1be95c03dae009449d64a8a8854d805e9cda68367e"
+}
