@@ -1,0 +1,54 @@
+{
+  "lesson_id": "L-BSD-A1A1-R10-SPLIT-DIMENSION-FROM-TRANSVERSE-LOCALIZATION-CANDIDATE",
+  "authority": "CANDIDATE_PROPOSAL_ONLY_NOT_CANONICAL_LEARNING",
+  "supporting_episode_ids": [
+    "EP-BSD-A1A1-R10-KATZ-AXIS-SPLIT-20260812"
+  ],
+  "trigger_signature": [
+    "downstream theorem conclusion bundles rank/dimension and nonzero local detector",
+    "entry hypotheses include multiple p-adic order/Sha coordinates"
+  ],
+  "action": "For an arithmetic theorem whose conclusion bundles Selmer dimension and transverse localization, audit the displayed proof by target conjunct without claiming hypothesis deletion; then require a same-object differential/order-preserving theorem, including Euler/local/exceptional-zero corrections, before transporting vanishing order between complex and p-adic coordinates.",
+  "expected_effects": [
+    "avoid requiring finite Sha for a dimension-only target when the displayed proof does not use it there",
+    "avoid treating interpolation of values as derivative/order transport",
+    "narrow falsifiers for the next cycle"
+  ],
+  "boundaries": [
+    "proposal-only",
+    "special CM cell",
+    "does not imply a complex-to-p-adic comparison exists",
+    "does not close full BSD gluing"
+  ],
+  "falsifier": "If a primary source proves a direct same-E order-preserving comparison from exact complex rank two that bypasses this decomposition, revise or supersede the lesson.",
+  "recorded_at_utc": "2026-08-12T03:10:00Z",
+  "lesson_kind": "MATHEMATICAL_RESEARCH_DECOMPOSITION_AND_TRANSFER_LESSON",
+  "exact_failed_implication": "complex analytic order two -> exact Katz p-adic order pair by critical-value interpolation alone",
+  "competing_cause_checklist": [
+    "coordinate transition absent",
+    "Euler/local/exceptional-zero correction",
+    "p-adic height/regulator degeneracy",
+    "finite-Sha/transverse-localization premise"
+  ],
+  "scope": "special CM/good-ordinary/split-p Castella Theorem-B/C cell; proposal-only search guidance; no weakened lemma and no generic BSD transfer",
+  "validation_obligation": "A future success must prove the exact same-E/Q complex-to-Katz germ comparison and discharge every arithmetic premise without premise reimport; a future failure must distinguish the competing mathematical causes rather than naming source insufficiency as the arithmetic cause.",
+  "mathematical_credit": "ZERO_UNTIL_TARGET_SPECIFIC_VALIDATION; CI, schemas, hashes, and chronology contribute no mathematical credit.",
+  "attempted_mathematical_implication": "For the same CM elliptic curve E/Q, ord_{s=1} L(E,s)=2 implies ord_{s=1} L_p(s)=2 and ord_{s=1} L_p^*(s)=1 because Katz L_p interpolates related critical Hecke L-values.",
+  "exact_mathematical_result": "NOT ESTABLISHED: Castella Theorem 2.1.1 is a critical-value interpolation formula and does not state the required derivative/vanishing-order transport. Theorem C instead assumes the p-adic orders and finite p-primary Sha; its displayed r=2 and transverse-localization subarguments do not supply the missing complex-to-p-adic entry implication.",
+  "strongest_supported_mathematical_cause": "SOURCE-BOUND COORDINATE GAP: no differential/order-preserving map from the exact complex s-germ to either Katz p-adic character germ is stated in the audited source. This explains why the proposed derivation is invalid, not why the actual orders must differ.",
+  "competing_mathematical_causes": [
+    "Euler/local/exceptional-zero corrections may alter the order comparison",
+    "p-adic height or regulator degeneracy may prevent equality in the p-adic BSD order prediction",
+    "finite p-primary Sha or transverse-localization nonvanishing may fail to be derivable from complex rank two"
+  ],
+  "justified_scope": "Castella arXiv:2204.09608v3, Theorem-B/C special CM, good-ordinary, split-p cell and the exact displayed Katz interpolation theorem; bounded search only, no theorem-nonexistence or generic-E/Q claim.",
+  "mathematical_falsifier": "Exhibit a source theorem for the same E/Q proving the exact complex-to-Katz germ comparison, including every Euler/local/exceptional-zero correction, and deriving the asserted p-adic orders without assuming Selmer rank, p-adic BSD, main-conjecture-strength input, p-adic height/regulator nondegeneracy, finite Sha, or localization nonvanishing at equivalent strength.",
+  "resulting_mathematical_repair": "Search for and prove the explicit derivative/order-preserving bridge first; separately type the ord L_p=2 dimension subargument and the sufficient ord L_p^*=1 plus finite-Sha transverse package, without claiming hypothesis deletion.",
+  "supporting_mathematics": [
+    "Castella arXiv:2204.09608v3 Theorem C and displayed proof (p.6)",
+    "Castella arXiv:2204.09608v3 Remark 1.3.1 (p-adic-height/nondegeneracy equality conditions)",
+    "Castella arXiv:2204.09608v3 Theorem 2.1.1 (critical-value interpolation region)",
+    "F_m(X,Y)=X^2+Y^m as a DifferenceWitness only against the abstract equal-axis-order inference; no arithmetic authority"
+  ],
+  "deduplication_against_merged_zhang_r9": "Zhang R9 is the distinct stored source-bound transfer condition analytic rank two -> p-infinity Selmer corank >=2 under Theorem 1.4 hypotheses. R10 receives zero credit and remains only the special-CM Katz-axis route-pruning audit; its lesson applies after the Zhang lower bound to exactness, coordinate binding, and transverse localization."
+}

@@ -1,0 +1,95 @@
+{
+  "audit_id": "BSD-A1A1-R10-KATZ-AXIS-AND-GATE-SPLIT-SOURCE-AUDIT-20260812",
+  "authority": "PROPOSAL_SHADOW_SOURCE_AUDIT_ONLY",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "active_atom": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "nested_obstruction": "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE",
+  "fibre_snapshot_hash": "sha256:a88412d53c35650cedf9e173f9339cbc12da5a2e73c9addd2a98a309fd9c0808",
+  "primary_source": {
+    "authors": [
+      "Francesc Castella"
+    ],
+    "title": "Generalised Kato classes on CM elliptic curves of rank 2",
+    "arxiv_id": "2204.09608",
+    "version": "v3, revised 2026-02-13; PDF manuscript date 2026-02-17",
+    "url": "https://arxiv.org/abs/2204.09608",
+    "pdf_url": "https://arxiv.org/pdf/2204.09608",
+    "selectors": [
+      "p.3: lambda_0 infinity type (-1,0), lambda_1/lambda_2 finite order",
+      "pp.4-5: psi_E is the Hecke character of E with L(E,s)=L(psi_E,s), and equation (1.5) expresses psi_E via lambda_0 times finite-order characters",
+      "p.5 Theorem B: generalized-Kato nonvanishing / Selmer dimension / res_p directions",
+      "p.6 Theorem C and proof: p-adic order hypotheses and derived elliptic-unit basis",
+      "p.6 Remark 1.3.1: p-adic BSD prediction and height/nondegeneracy equality caveats",
+      "p.7 Theorem 2.1.1: Katz interpolation for infinity types (k+j,-j), k>=1, j>=0"
+    ]
+  },
+  "verified_local_decomposition": {
+    "dimension_gate": {
+      "ambient_statement": "Castella Theorem C assumes the Theorem B setup, finite Sha(E/Q)[p^infinity], ord_{s=1} L_p(s)=2, and ord_{s=1} L_p^*(s)=1.",
+      "displayed_subargument": "Inside that stated theorem, the displayed sentences establishing r=dim_Qp Sel(Q,V_pE)=2 explicitly invoke ord_{s=1} L_p(s)=2: Rubin/Perrin-Riou give r<=2 and Coates-Wiles plus p-parity give r>=2.",
+      "explicitly_invokes_finite_Sha_in_these_displayed_sentences": false,
+      "explicitly_invokes_ord_Lp_star_eq_1_in_these_displayed_sentences": false,
+      "hypothesis_removal_authority": "NONE: this proof-interface audit does not restate Theorem C with hypotheses deleted and does not audit every transitive hypothesis of the cited Rubin/Perrin-Riou/Coates-Wiles/parity results.",
+      "scope": "special CM/good-ordinary/split-p/Theorem-B setup only"
+    },
+    "transverse_localization_gate": {
+      "ambient_statement": "After r=2, Theorem C concludes res_p(x_p^(2)) != 0 by Rubin [Rub92, Thm. 9.5(ii)] and 'our assumptions'.",
+      "displayed_sufficient_package": "The theorem's remaining stated package includes ord_{s=1} L_p^*(s)=1 and finite Sha(E/Q)[p^infinity].",
+      "minimality_or_necessity_authority": "NONE: this bounded audit records the sufficient package and target conjunct; it does not prove those hypotheses individually necessary or a new weakened lemma.",
+      "output": "Together with Theorem B, the nonzero transverse localization yields the displayed two-dimensional basis.",
+      "scope": "special CM/good-ordinary/split-p/Theorem-B setup only"
+    }
+  },
+  "coordinate_axis_audit": {
+    "complex_axis": "L(E,s)=L(psi_E,s) varies the complex L-function argument s near 1.",
+    "katz_axis": "L_p(s)=mathcal{L}_p(psi_E <psi_E>^{s-1}) is a one-variable p-adic character specialization.",
+    "interpolation_region": "Theorem 2.1.1 states interpolation for Hecke characters of infinity type (k+j,-j) with k>=1 and j>=0.",
+    "psi_E_infinity_type_reason": "lambda_0 has infinity type (-1,0); lambda_1, lambda_2 are finite order; equation (1.5) expresses psi_E as lambda_0 times finite-order conjugate characters, so psi_E has infinity type (-1,0).",
+    "consequence": "psi_E itself is outside the displayed critical interpolation region, and the interpolation formula does not state a derivative/order-preservation theorem comparing ord_{complex,s=1} L(E,s) with ord_{p-adic,s=1} L_p(s) or L_p^*(s).",
+    "authority_boundary": "This is only a bounded source/interface route-pruning statement: the cited interpolation formula does not itself supply the missing derivative/order transition. It is not a theorem that no comparison exists, and it supplies no transfer theorem."
+  },
+  "difference_witness": {
+    "id": "DW-BSD-R10-TWO-AXIS-VANISHING-ORDER-INDEPENDENCE",
+    "abstract_model": "F_m(X,Y)=X^2+Y^m has order 2 on the Y=0 axis and order m on the X=0 axis.",
+    "use": "Falsifies the structural shortcut 'shared ambient function/object name implies equal vanishing order on distinct axes' without an order-preserving transition witness.",
+    "disanalogy": "This formal two-axis germ is not a model of complex or Katz p-adic L-functions and carries no arithmetic authority; it only tests the routing inference."
+  },
+  "bounded_current_literature_search": {
+    "queries": [
+      "CM elliptic curve analytic rank 2 Katz p-adic order vanishing complex rank two p-adic BSD",
+      "Katz p-adic L-function order complex analytic rank two CM elliptic 2026",
+      "p-adic height Katz rank 2 elliptic CM"
+    ],
+    "nearby_primary_sources": [
+      "arXiv:1809.09066 Castella-Hsieh: generalized Kato nonvanishing via derived p-adic heights/enhanced regulator",
+      "arXiv:2312.01481 Castella: generalized Kato nonvanishing/main conjectures and localization criterion",
+      "arXiv:2308.10474 Castella-Hsu-Kundu-Lee-Liu: p-adic BSD order part from expected maximal p-adic-height nondegeneracy in a BDP setting"
+    ],
+    "exact_same_E_complex_rank2_to_Castella_Katz_order_pair_found": false,
+    "completeness": "NOT_CLAIMED; bounded search only"
+  },
+  "hypothesis_ledger": {
+    "tamagawa": "UNTOUCHED; full refined BSD gluing remains open",
+    "torsion": "UNTOUCHED; full refined BSD gluing remains open",
+    "regulator": "p-adic-height nondegeneracy is not imported from complex rank two",
+    "sha": "finite p-primary Sha is not needed for the displayed dimension step but remains an explicit input to the displayed transverse derived-unit step",
+    "extra_trivial_zeros": "no Euler/local/exceptional-zero corrections are cancelled by assertion; any future comparison must expose them",
+    "coordinate_faithfulness": "complex s-order and p-adic character-variable orders remain distinct pending an explicit differential/order-preserving theorem"
+  },
+  "outcome": "BOUNDED_SOURCE_AND_PROOF_INTERFACE_AUDIT_CORROBORATES_EXISTING_PREMISE_REIMPORT_WARNING_ZERO_NEW_MATHEMATICAL_CREDIT",
+  "residual_after": [
+    "CM_SPECIAL_CELL_COMPLEX_RANK2_TO_ORD_LP_EQ_2_UNSOURCED",
+    "CM_SPECIAL_CELL_COMPLEX_RANK2_TO_TRANSVERSE_LOC_NONZERO_UNSOURCED",
+    "GENERIC_NON_CM_AND_ARBITRARY_RANK_ARITHMETIC_ENTRY_OPEN",
+    "MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_PERIOD_COMPLEX_LEADING_TERM_GLUE_OPEN"
+  ],
+  "recorded_at_utc": "2026-08-12T03:10:00Z",
+  "mathematical_credit": "ZERO: no new lemma, proof, transfer condition, obstruction family, or root path; the audit only separates displayed proof roles and rejects an unsupported shortcut.",
+  "atlas_warning_preserved": {
+    "id": "FM-BSD-ARITHMETIC-PREMISE-REIMPORT",
+    "status": "CORROBORATED_NOT_SUPERSEDED",
+    "meaning": "The missing complex-to-p-adic/arithmetic entry premise remains open; a representation or interpolation formula cannot silently reimport it."
+  },
+  "post_zhang_r9_reconciliation": "07_memory/BSD_A1a1_R10_POST_ZHANG_R9_RECONCILIATION_20260812.json",
+  "historical_residual_boundary": "The recorded R10 residual list predates merged Zhang R9 and is superseded for active routing only by the post-cycle reconciliation; original chronology is not backfilled."
+}

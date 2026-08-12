@@ -1,0 +1,51 @@
+{
+  "record_type": "POST_CYCLE_RESIDUAL_RECONCILIATION",
+  "reconciliation_id": "BSD-A1a1-R10-POST-ZHANG-R9-RECONCILIATION-20260812",
+  "authority": "PROPOSAL_SHADOW_DEDUPLICATION_ONLY_ZERO_NEW_MATHEMATICAL_CREDIT",
+  "current_main_observed": "5a7831bd04b195e2a1690da338f538b7db7e9366",
+  "chronology_boundary": "This is a successor reconciliation after merged PR #292. It does not backfill Zhang R9 into the earlier R10 context, review, or hash-chained trace.",
+  "merged_source_unit": {
+    "id": "BSD-A1a1-R9-ZHANG-LOWER-BOUND-20260812-R9",
+    "source": "Wei Zhang, Selmer groups and the indivisibility of Heegner points, Theorem 1.4(ii), Cambridge Journal of Mathematics 2 (2014), 191-253",
+    "primary_pdf_reverified_in_reconciliation": "https://math.mit.edu/~wz2113/math/online/Kconj.pdf",
+    "exact_statement": "For E/Q and p>=5 satisfying Theorem 1.4(1)-(4), analytic rank >1 implies corank_Zp Sel_{p^infinity}(E/Q)>=2 when the root number is +1 and >=3 when it is -1.",
+    "rank_two_specialization": "Exact complex analytic order two has root number +1, hence corank_Zp Sel_{p^infinity}(E/Q)>=2 under those technical-prime hypotheses.",
+    "hypotheses": [
+      "rho_{E,p} is surjective",
+      "rho_{E,p} is ramified at each l||N with l congruent to +/-1 mod p",
+      "if N is not square-free then Ram(rho_{E,p}) is nonempty and, when it has size one, the number of primes l||N is even",
+      "p is good ordinary and p>=5"
+    ],
+    "strict_nonclaims": [
+      "no exact Selmer corank two",
+      "no transverse p-local localization",
+      "no automatic p-infinity/V_p exact-coordinate identification",
+      "no Mordell-Weil rank two, Sha finiteness, regulator, Tamagawa, torsion, period, or rank-two leading-term formula",
+      "no statement at every prime p"
+    ],
+    "credit_recommendation": "DISTINCT_STORED_SOURCE_BOUND_TRANSFER_CONDITION_IN_THE_BSD_PROOF_DAG; not a new theorem or literature-novel result. Credit belongs to the Zhang R9 source unit, not R10."
+  },
+  "r10_distinct_unit": {
+    "scope": "Castella arXiv:2204.09608v3 special CM/good-ordinary/split-p Katz cell",
+    "result": "Bounded proof-interface audit only: Theorem C assumes p-adic orders and finite p-primary Sha; its displayed r=2 and transverse-localization proof roles are distinct, and Katz critical-value interpolation alone supplies no complex-to-p-adic derivative/order transport.",
+    "relation_to_zhang_r9": "DISTINCT_AND_COMPLEMENTARY_NOT_DUPLICATIVE: Zhang supplies a technical-prime p-infinity Selmer lower bound directly from analytic rank; R10 audits a special-CM proposed route to exact dimension/localization through Katz p-adic orders and rejects an unsupported coordinate shortcut.",
+    "mathematical_credit": 0,
+    "reason": "No new lemma or transfer theorem is proved; the result only prunes a route and corroborates the arithmetic-premise-reimport warning."
+  },
+  "historical_r10_residual_supersession": {
+    "superseded_id": "GENERIC_NON_CM_AND_ARBITRARY_RANK_ARITHMETIC_ENTRY_OPEN",
+    "why": "Too coarse after Zhang Theorem 1.4(ii): exact analytic rank two now has a theorem-backed p-infinity Selmer lower-bound entry under technical-prime hypotheses.",
+    "active_residuals": [
+      "CM_SPECIAL_CELL_COMPLEX_RANK2_TO_ORD_LP_EQ_2_UNSOURCED",
+      "EXACT_COMPLEX_RANK2_TO_TRANSVERSE_P_LOCALIZATION_NONZERO_OPEN",
+      "ZHANG_TECHNICAL_PRIME_PINFINITY_LOWER_BOUND_TO_EXACT_CORANK2_AND_VP_BINDING_OPEN",
+      "MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_PERIOD_COMPLEX_LEADING_TERM_GLUE_OPEN"
+    ]
+  },
+  "atlas_warning": {
+    "id": "FM-BSD-ARITHMETIC-PREMISE-REIMPORT",
+    "status": "PRESERVED_WITH_NARROWER_SCOPE",
+    "meaning": "Do not reimport exactness, V_p binding, transverse localization, p-adic order equality, height/regulator nondegeneracy, finite Sha, or full leading-term data after the Zhang lower bound."
+  },
+  "recorded_at_utc": "2026-08-12T04:28:00Z"
+}
