@@ -1,0 +1,44 @@
+{
+  "artifact_hash": "sha256:984e88e82965d93f4c90b704e995ea01ee504c2dacbd2de1a90a2df9dddbde92",
+  "candidate_method_families": [
+    "explicit synchronized-code construction",
+    "symbolic impossibility from length/header/gamma constraints",
+    "bounded product-grammar discriminator followed by semantic UNSAT proof",
+    "encoding or split change (out of scope)"
+  ],
+  "cross_problem_coverage_receipt_hash": "",
+  "evidence_pointers": [
+    "git:a060514e894ec6566b01bb4c89a8aa806ef0048c:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:f3eaad2496e80aa64b8081868021cc1a89304ef2",
+    "git:a060514e894ec6566b01bb4c89a8aa806ef0048c:research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C050_K15_MATHEMATICAL_LESSON_20260812.json@blob:b1b574cdd8ba43a4545c00a07bcb50a933c05941"
+  ],
+  "failure_lattice_snapshot_hash": "sha256:76fd09b61ae843a9cde560d52d3d2696d358c14771116ec9eff372c19795526e",
+  "failure_query_status": "MATCHES_FOUND",
+  "failure_reuse_notes": [
+    "C050 warns that a changed split can retain a forced suffix-code/MAGIC collision; k=19 changes both parameter regimes and the split offset, so the old bit-3 proof is only a warning.",
+    "C047 warns that near-aligned fixed headers can still be exactly disjoint; any witness must compare every synchronized bit."
+  ],
+  "relevant_failure_ids": [
+    "F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC"
+  ],
+  "relevant_tool_ids": [
+    "T-PNP-C049-K12-FIXED-BIT-SEPARATION"
+  ],
+  "selected_tool_ids": [
+    "T-PNP-C049-K12-FIXED-BIT-SEPARATION"
+  ],
+  "target_atom_id": "O9d12a2a1b-C051",
+  "target_context_hash": "sha256:8a06db5b4fdfcc3a11a7284772a8c4dfd8ccf6b8583438b84ff9bbc7efc2925f",
+  "tool_applicability_notes": [
+    "C049's established fixed-bit operation and C050's failure experience jointly license only a target-specific coordinate-first search; the protected reuse verdict is DIFFERENCE_WITNESSED, not proof that k=19 escapes the old falsifier."
+  ],
+  "tool_inventory_snapshot_hash": "gitblob:b7a599c9a5c7a585ad1787504e5747ece4382fa0",
+  "tool_query_status": "MATCHES_FOUND",
+  "unresolved_warnings": [
+    "K13_QUARANTINED_PROCESS_CONTAMINATION: a separate non-strict public k=13 result branch was exposed before this rebound packet and is excluded from strict candidate design or certification.",
+    "No result for H_19 intersection P_20 has been accessed.",
+    "The k=19 target was selected as an untouched bounded atom, not as a claimed first admissible level; no support-spectrum shadow conclusion has theorem authority here.",
+    "The exact k=19 discriminator must be frozen before any shared-bit, parse, or UNSAT evaluation.",
+    "Relabelled and split-changing variants are outside this atom.",
+    "Same-context review is not independent peer review."
+  ]
+}
