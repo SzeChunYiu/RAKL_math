@@ -1,0 +1,92 @@
+{
+  "artifact_hash": "sha256:2f8f1f12acb42d177f53d0fb7695d03d1d5a44922bf8411fad3503c2472b649c",
+  "atom_id": "O9d12a2a1b-C049",
+  "candidate_id": "C049-K12-FIRST-ADMISSIBLE-OVERLAP-SEPARATION-v1",
+  "candidate_kind": "SCOPED_MATHEMATICAL_IMPOSSIBILITY_LEMMA_CANDIDATE",
+  "credit_boundary": {
+    "assurance_only_zero_credit": [
+      "Git/PR chronology",
+      "CI/tests",
+      "schemas/hashes",
+      "runtime/evaluator wiring"
+    ],
+    "candidate_freeze_mathematical_result_credit": false,
+    "mathematical_content": [
+      "minimal-k length lemma",
+      "parameter-forcing lemma",
+      "fixed-bit separation",
+      "scope/falsifiers/swapped-reduction condition"
+    ]
+  },
+  "definitions": {
+    "H_12": "{1||c: exists r such that x=r||c is a canonical length-24 UNSAT word}",
+    "P_13": "{first 13 bits of canonical length-26 words}",
+    "canonical_raw_length": "8 + |gamma(v)| + |gamma(m)| + 3m(1+bit_length(v)); append one zero iff raw length is odd",
+    "swapped_reduction": "retain x=r||c -> (2^12+c,r) for the transposed graph"
+  },
+  "falsifiers": [
+    "a canonical UNSAT encoding of length below 24",
+    "a canonical UNSAT length-24 encoding with (v,m) other than (1,2)",
+    "a v=1 payload literal whose variable-code bit is 0",
+    "a canonical prefix whose MAGIC bit 4 is not 0",
+    "a label lying in both H_12 and P_13",
+    "any hidden change to the C048 swapped reduction"
+  ],
+  "frozen_at": "2026-08-12T04:29:00Z",
+  "length_parity_padding_obligations": [
+    "prove m>=2 for UNSAT",
+    "prove raw length lower bound 24 and equality conditions",
+    "show equality case raw length is already even, so no padding bit is used",
+    "do not assume later lengths share the k=12 payload alignment"
+  ],
+  "non_guarantees": [
+    "candidate is not yet proved or evaluated",
+    "no statement about k>12",
+    "no downstream target, cover, circuit lower bound, novelty, or P-versus-NP result",
+    "same-context review is not independent"
+  ],
+  "proof_obligations": [
+    "MINIMAL_K_JUSTIFICATION",
+    "K12_CANONICAL_UNSAT_PARAMETER_FORCING",
+    "K12_SUFFIX_ROW_FIXED_BIT",
+    "K13_CANONICAL_PREFIX_FIXED_BIT",
+    "BIT4_SEPARATION",
+    "SWAPPED_REDUCTION_PRESERVED"
+  ],
+  "schema_version": "1.0.0",
+  "selected_discriminator": {
+    "justification": "This is the smallest k at which H_k can be nonempty: a canonical UNSAT 3CNF needs at least two clauses, and the exact encoding lower bound is 8+1+3+12=24=2k bits.",
+    "k": 12,
+    "selection_target_blind": true,
+    "selection_used_decoder_or_result": false
+  },
+  "shared_bit_obligation": "Compare zero-indexed bit 4: H_12 fixes it to the variable-code bit 1, while P_13 fixes it to MAGIC[4]=0.",
+  "source_identity": {
+    "application_base_commit": "5a7831bd04b195e2a1690da338f538b7db7e9366",
+    "framework_commit": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "pre_candidate_freeze_commit": "dc72d9b950bf6f4fb2a3d63659d0eb66069fdf78",
+    "pre_candidate_gate": {
+      "git_blob": "e4e0945f5a0747175f903c31f1cfbe0093476a71",
+      "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C049_PRE_CANDIDATE_GATE_RECEIPT_20260812.json",
+      "raw_sha256": "5f7aab0a0c4d312011ff9d5d484da35806b7140d097d62ad59cc67d5a44391dc"
+    }
+  },
+  "statement": {
+    "conclusion": "H_12 intersection P_13 is empty by the fixed bit-4 mismatch.",
+    "minimality": "H_k is empty for k<12 because every canonical UNSAT 3CNF needs m>=2 and every such encoding has even length at least 24.",
+    "parameter_forcing": "Any canonical UNSAT word of length 24 attains every lower bound, hence v=1, m=2, |gamma(v)|=1, |gamma(m)|=3, and the 12-bit header MAGIC||1||010 occupies exactly the first half.",
+    "prefix_pattern": "Every p in P_13 begins with MAGIC=11100101, so zero-indexed bit 4 of p is 0.",
+    "quantifier": "at the first semantically admissible parent half-length k=12",
+    "scope_consequence": "The literal-transpose repair fails at the first k where a canonical UNSAT suffix row can exist; this does not decide overlap at k>12.",
+    "suffix_pattern": "The suffix c is the complete 12-bit payload of six v=1 literals. Each literal is sign||1, so h=1||c has bit 4 equal to 1 (indeed every even-indexed bit of h is 1)."
+  },
+  "swapped_reduction_preservation": "No coordinate, decoder, split, or reduction change is proposed; x=r||c continues to map to (2^12+c,r) exactly as C048 requires.",
+  "target_access": {
+    "decoder_imported_or_executed": false,
+    "evaluator_imported_or_executed": false,
+    "k_instance_enumerated": false,
+    "later_target_enumerated": false,
+    "later_target_result_accessed": false
+  },
+  "unsat_proof_obligation": "For minimality, prove a one-clause CNF is satisfiable. For nonvacuity of the first admissible syntax, an eventual certificate may exhibit the v=1,m=2 formula (z\u2228z\u2228z) AND (not z\u2228not z\u2228not z); the candidate conclusion itself uses only the conditional form for every canonical UNSAT length-24 word."
+}
