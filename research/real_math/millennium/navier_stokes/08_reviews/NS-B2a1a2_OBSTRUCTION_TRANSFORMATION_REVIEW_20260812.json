@@ -1,0 +1,128 @@
+{
+  "review_id": "OTR-NS-B2a1a2-20260812",
+  "target_atom_id": "NS-B2a1a2",
+  "target_context_hash": "sha256:73a2b1673a27d6d1047289ed3c9708f8778a4074a6102e5b767c6bf72d5640f3",
+  "research_memory_review_hash": "sha256:552afdc25642ac651d32189ce1106cb4c2b984791b5d3d3316417ed2d6db4eab",
+  "episode_memory_snapshot_hash": "e75fedf4b4fd0978edce838c63e475284cfe0ddf6c376749416f19a17a247e33",
+  "obstruction": {
+    "obstruction_id": "O-NS-B2a1a2-FIXED-TO-MOVING-RADIUS",
+    "domain": "Navier-Stokes functional compactness calibration",
+    "roles": [
+      "approximating fields",
+      "fixed bounded observers",
+      "moving integration balls",
+      "absolute mass"
+    ],
+    "relations": [
+      "fixed bounded observers eventually miss scale-dependent supports",
+      "scale-normalized control coexists with uncontrolled absolute mass"
+    ],
+    "constraints": [
+      "unbounded spatial domain",
+      "smooth divergence-free calibration",
+      "no PDE-solution authority"
+    ],
+    "failure_mechanisms": [
+      "translation or scale escape to infinity",
+      "normalization hides absolute mass"
+    ],
+    "invariants_to_preserve": [
+      "divergence-free kinematics",
+      "exact scale normalization",
+      "open root authority"
+    ],
+    "desired_transition": [
+      "separate fixed-radius convergence from moving-radius tightness"
+    ],
+    "forbidden_losses": [
+      "claiming a functional calibration is a PDE counterexample"
+    ]
+  },
+  "direct_search_status": "MATCHES_FOUND",
+  "jump_search_status": "NOT_RUN",
+  "glue_search_status": "NOT_RUN",
+  "selected_mode": "SEARCH",
+  "direct_candidate_episode_ids": [
+    "OTEP-NS-B1a2-DIVERGENCE-FREE-SCALE-CALIBRATION"
+  ],
+  "direct_mapping_witnesses": [
+    {
+      "witness_id": "SMW-NS-B2a1a2-B1a2-CALIBRATION",
+      "episode_id": "OTEP-NS-B1a2-DIVERGENCE-FREE-SCALE-CALIBRATION",
+      "target_obstruction_id": "O-NS-B2a1a2-FIXED-TO-MOVING-RADIUS",
+      "role_mapping": [
+        [
+          "approximating fields",
+          "approximating fields"
+        ],
+        [
+          "fixed bounded observers",
+          "fixed bounded observers"
+        ],
+        [
+          "scale-dependent supports",
+          "moving integration balls"
+        ],
+        [
+          "absolute mass",
+          "absolute mass"
+        ]
+      ],
+      "shared_relations": [
+        "fixed bounded observers eventually miss scale-dependent supports",
+        "scale-normalized control coexists with uncontrolled absolute mass"
+      ],
+      "shared_constraints": [
+        "unbounded spatial domain",
+        "smooth divergence-free calibration",
+        "no PDE-solution authority"
+      ],
+      "precondition_mapping": [
+        [
+          "unbounded spatial domain",
+          "Euler-scaled space is R^3"
+        ],
+        [
+          "target inference is functional before PDE dynamics",
+          "first test only the compactness implication"
+        ],
+        [
+          "calibration authority remains kinematic only",
+          "forbid Navier-Stokes or Euler solution claims"
+        ]
+      ],
+      "unmatched_source_preconditions": [],
+      "disanalogies": [
+        "the source packs shrinking Type-I blobs while the target uses an expanding Type-II observation radius",
+        "the target additionally audits a logarithmic F_k window and vanishing viscosity"
+      ],
+      "target_validation_obligations": [
+        "derive all moving-window exponents from exact definitions",
+        "prove smoothness, divergence freedom, support geometry, local convergence, and mass identities",
+        "state and prove a sharp uniform-tail repair condition",
+        "reject every PDE-solution or root-authority escalation"
+      ],
+      "evidence_pointers": [
+        "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1a1_LOG_MESOSCOPIC_WINDOW_AUDIT_20260812.md",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a2_C001_CRITICAL_BLOB_PACKING_AUDIT_20260811.md"
+      ],
+      "artifact_hash": "sha256:bc4dbce251dd29020b01da77da20256d96256dfa4d2e39aedbcbb3144f3a76fb"
+    }
+  ],
+  "jump_mapping_witnesses": [],
+  "glue_witness": null,
+  "selected_episode_ids": [
+    "OTEP-NS-B1a2-DIVERGENCE-FREE-SCALE-CALIBRATION"
+  ],
+  "exhaustion_witness": null,
+  "missing_transformation_specification": null,
+  "unresolved_warnings": [
+    "SEARCH chooses a validation pattern, not a theorem.",
+    "The inherited informal construction direction predates this packet and earns no strict discovery credit."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1a2_OBSTRUCTION_TRANSFORMATION_MEMORY_20260812.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1a2_RESEARCH_MEMORY_REVIEW_20260812.json"
+  ],
+  "artifact_hash": "sha256:6e743a4cc00890796e22232e94db3c6740beb4ddad9fc91c8a787858b1a1c765"
+}
