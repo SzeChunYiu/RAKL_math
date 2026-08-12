@@ -1,0 +1,80 @@
+{
+  "analogues": [
+    {
+      "common_abstraction": "make a spatial-cutoff derivative term vanish at infinity to obtain a conservation law",
+      "disanalogy": "general 3D target has no axisymmetry/swirl-free transport scalar, no registered N_f derivative bound, no pointwise |v| <= c/(|x'|f(|x'|)) hypothesis, and no source-valid analogue of (4.4)",
+      "id": "AN-SEREGIN-2026-SEC4",
+      "shared": "same paper, same Euler limit family, same cutoff-at-infinity obstruction",
+      "source": "Seregin 2026 Section 4, equations (4.1)-(4.6)",
+      "source_method": "axisymmetric swirl-free transported omega_theta/r functional plus extra derivative integrability N_f^{s1,l1} and cutoff condition (4.4)",
+      "validation_obligation": "do not transfer the conservation law; use it only as evidence that a successful signed bypass must eliminate geometric radius debt via extra structure"
+    },
+    {
+      "common_abstraction": "source-native logarithmic F gain on moving radii",
+      "disanalogy": "previous atom stopped before explicit cutoff-ledger exponent audit",
+      "id": "AN-NS-B2a1a1",
+      "shared": "identical scaling/source family",
+      "source": "merged proposal-shadow episode #218",
+      "source_method": "exact two-scale algebra and quantifier audit",
+      "validation_obligation": "reuse only verified identities and rederive every cutoff exponent"
+    },
+    {
+      "common_abstraction": "local-energy sign/no-recrossing",
+      "disanalogy": "shear is outside finite-I/global target class",
+      "id": "AN-NS-B1a4",
+      "shared": "same NS local-energy structure",
+      "source": "prior proposal-shadow pressure-free shear failure",
+      "source_method": "exact counterexample to generic sign",
+      "validation_obligation": "treat as warning against generic sign only, not as impossibility in Type-II class"
+    }
+  ],
+  "atom_id": "NS-B2a1b1",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "context_hash": "sha256:93318a8ff66032f8857ec41341bb61b526f653a9e8f2ea04b911d5e535835d29",
+  "framework": {
+    "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "method_version": "3.0.0"
+  },
+  "issue": 234,
+  "load_bearing_coordinates": [
+    "a lambda <= 1 hence 1 <= h <= L",
+    "useful F_lambda->infinity iff h/L->0",
+    "a->infinity and lambda a->0 in mesoscopic window 1<<h<<L",
+    "A<=M F^-2, E<=M F^-1, D<=M F^-2",
+    "Euler-scaled viscosity mu=f(lambda)->0",
+    "standard cutoff derivatives cost positive powers of 1/a but spacetime volume/norms can leave positive net a debt",
+    "pressure work is nonlocal/sign-indefinite",
+    "actual signed cancellation must be distinguished from magnitude upper bounds"
+  ],
+  "minimum_repair_questions": [
+    "Can any standard cutoff remainder be bounded with zero or negative net power of a using only A,E,D?",
+    "Does fixed-time truncation remove all positive a debt?",
+    "Can pressure cancellation be sourced rather than bounded absolutely?",
+    "Is there a general-3D transported/coherent vorticity functional replacing the axisymmetric omega_theta/r mechanism?"
+  ],
+  "primary_sources": [
+    "arXiv:2606.29468v1 equations (1.7),(2.2),(2.7),(2.9),(2.10),(3.5)-(3.8),(4.1)-(4.6)"
+  ],
+  "problem_signature": {
+    "question": "Can finite algebraic F_lambda gain force standard local-energy/cutoff magnitude remainders to vanish on the logarithmic mesoscopic moving-radius window?",
+    "source_regime": "Seregin 2026 Type-II Euler scaling; f(lambda)=log(e/lambda)^(-gamma)",
+    "target_transition": "moving-scale normalized smallness -> source-valid vanishing cutoff/tail bridge without moving-radius strong convergence",
+    "variables": [
+      "L=log(e/lambda)",
+      "h=log(e/(lambda a))",
+      "a=exp(L-h)",
+      "F_lambda(a)=(L/h)^gamma",
+      "mu=f(lambda)=L^(-gamma)"
+    ]
+  },
+  "rakl_math_base": "9d7d167b5ffa398582550a0492a1e895786137d4",
+  "representations": [
+    "logarithmic coordinates (L,h)",
+    "dimensionless local quantities A,E,C,D",
+    "unnormalized local-energy cutoff ledger",
+    "signed flux/telescoping versus absolute-magnitude estimate"
+  ],
+  "root": "NS0",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "math-context-fiber-v3-proposal-shadow"
+}
