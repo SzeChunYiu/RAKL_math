@@ -110,6 +110,11 @@ def test_inert_worlds_include_conflated_c_and_factor_two_traps_without_values() 
     assert manifest["world_payload_policy"].startswith("Structural predicate specifications only")
     assert manifest["current_round_execution_authorized"] is False
     assert manifest["source_proof_execution_authorized"] is False
+    core = {key: value for key, value in manifest.items() if key not in {"falsifier_identity", "artifact_hash"}}
+    assert manifest["falsifier_identity"]["canonical_core_sha256"] == fixture()._sha(core)
+    mutated = dict(core)
+    mutated["schema_version"] = "2.0.0"
+    assert fixture()._sha(mutated) != manifest["falsifier_identity"]["canonical_core_sha256"]
 
 
 def test_freeze_has_no_authorization_or_evaluator_implementation() -> None:

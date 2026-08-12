@@ -246,6 +246,7 @@ def build_documents() -> dict[str, dict[str, Any]]:
     bindings = parent_bindings()
     candidate = candidate_document(bindings)
     declarative_core = {
+        "schema_version": "1.0.0",
         "manifest_id": "YM-S1a2i-K1-D001-C001-DECLARATIVE-FALSIFIER-20260812",
         "candidate_id": CANDIDATE_ID,
         "candidate_core_sha256": candidate["candidate_identity"]["canonical_core_sha256"],
@@ -267,7 +268,7 @@ def build_documents() -> dict[str, dict[str, Any]]:
         "canonical_core_sha256": _sha(declarative_core),
         "identity_scope": "FULL_DECLARATIVE_FALSIFIER_CORE_BEFORE_IDENTITY_AND_ARTIFACT_HASH",
     }
-    falsifier = _seal({**declarative_core, "schema_version": "1.0.0", "falsifier_identity": falsifier_identity, "artifact_hash": ""})
+    falsifier = _seal({**declarative_core, "falsifier_identity": falsifier_identity, "artifact_hash": ""})
     pre_trace = json.loads((ROOT / PRE_TRACE).read_text())
     entries = list(pre_trace["entries"])
     event = {
