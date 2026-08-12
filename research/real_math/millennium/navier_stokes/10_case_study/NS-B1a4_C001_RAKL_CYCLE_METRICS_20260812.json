@@ -1,0 +1,198 @@
+{
+  "schema_version": "RAKL_CYCLE_METRICS-v3-proposal-shadow",
+  "cycle_id": "EP-NS-B1a4-C001-SIGNED-FLUX-20260812",
+  "record_type": "RAKL_CYCLE_METRICS",
+  "rakl": {
+    "method_version": "3.0.0",
+    "package_version": "0.1.0",
+    "skill_manifest_version": "0.6.6",
+    "git_sha": "2f722d42db240538e1bdec146aebc7e9d5eeb8a6",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "source_of_truth": "CURRENT SzeChunYiu/RAKL main inspected before mathematical verification"
+  },
+  "rakl_math": {
+    "base_sha": "a7301f0f0e2cab2750ac6e923efe18b5750b5af6",
+    "head_before_metrics_receipt_sha": "458503ef3def08ada6fefc59546942d5b4ef3c00",
+    "head_before_metrics_receipt_tree_sha": "641b56b1664b885444b3f5f5f3ba9f6e496f9584",
+    "final_head_sha": "CANNOT_MEASURE: a commit cannot embed its own final SHA without self-reference; exact pre-receipt head is recorded and final PR head is externally observable after this receipt is written"
+  },
+  "state_fingerprints": {
+    "pre_state_fingerprint": "git_tree:9875ce4947b736a6caa64f29c1b020bd9be06cc0",
+    "post_semantic_state_fingerprint_before_metrics": "git_tree:641b56b1664b885444b3f5f5f3ba9f6e496f9584",
+    "post_state_including_metrics": "CANNOT_MEASURE: final tree changes when this receipt is materialized; use final PR head/tree externally",
+    "fingerprint_semantics": "Git tree hashes; post-semantic fingerprint includes all cycle artifacts and test except this self-describing metrics receipt"
+  },
+  "active_atom": {
+    "atom_id": "NS-B1a4",
+    "problem_signature": [
+      "3D incompressible unforced whole-space Navier-Stokes",
+      "Type-I blow-up-classification / finite Albritton-Barker I",
+      "signed temporal local-energy / no-recrossing discriminator",
+      "pressure localization separated from signed flux",
+      "proposal-shadow only; Type-II and root remain open"
+    ],
+    "context_fibre_snapshot_hash": "sha256:4f4201800bdb64d85704ed43c5acb44bb0a3edc4772df2a0477f4ad989c0f83a",
+    "pre_action_fibre_receipt_hash": "sha256:cffa5d00fe4a5b3bced0c68328546f988801fdbea7a6b552527cac500f5fc29d"
+  },
+  "canonical_method_specs_process_surfaces": {
+    "execution_mode": "AGENT_LEVEL_OPERATIONAL_USE; method_specs.py surfaces were followed semantically, not invoked as executable functions through the connector",
+    "invoked": [
+      "decomposition",
+      "routing",
+      "search_query_generation",
+      "source_selection_reliability",
+      "claim_extraction",
+      "ontology_terminology_normalization",
+      "mathematical_context_translation",
+      "equivalence_similarity",
+      "contextual_theory_gluing",
+      "contradiction_diagnosis",
+      "gap_discovery",
+      "experiment_query_selection",
+      "synthesis",
+      "memory",
+      "review",
+      "saturation_stopping",
+      "prompting_context_policy"
+    ]
+  },
+  "memory_retrieval": {
+    "failure_records_retrieved": 6,
+    "failure_ids_selected": 3,
+    "failure_ids_rejected": 3,
+    "selected_ids": [
+      "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH"
+    ],
+    "rejected_ids": [
+      "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION",
+      "F-NS-B1a3b-NORMALIZATION-ZERO-INSTABILITY",
+      "F-NS-B1a3b1-GLOBAL-CONSUMER-SIGNATURE-MISMATCH"
+    ],
+    "episodes_directly_retrieved": 0,
+    "episode_ids_selected": [],
+    "episode_ids_rejected": [],
+    "success_tools_retrieved": 0,
+    "success_tool_ids_selected": [],
+    "motifs_retrieved": 0,
+    "motif_ids_selected": [],
+    "expertise_chunks_retrieved": 0,
+    "cross_millennium_items_retrieved": 0,
+    "missed_relevant_memory": "CANNOT_MEASURE: no closed recall/relevance oracle exists"
+  },
+  "search_policy": {
+    "choice": "counterexample-first verification of issue-#173 preregistered pressure-free exact NSE shear before any new signed-flux lemma",
+    "why": "selected failures already saturate raw pressure-tail divergence, absolute scale-budget summation, and silent local-to-global gluing"
+  },
+  "outcome": "PARTIAL_SUCCESS / EXISTING_LEDGER_SIGN_INSUFFICIENT_ROUTE_PRUNING",
+  "residual_before_signature": [
+    "pressure-aware temporal cancellation/no-recrossing might be extractable from existing finite-I local ledger"
+  ],
+  "residual_after_signature": [
+    "existing unsigned ledger lacks a fixed-region sign certificate",
+    "need new signed/correlation/trajectory coordinate or stronger global finite-I input",
+    "global ancient-state gluing remains separate",
+    "Type-II remains open"
+  ],
+  "retained_semantic_novelty_counts": {
+    "KNOWLEDGE": 0,
+    "OPERATOR": 0,
+    "EXPERIENCE_PATTERN": 0,
+    "OBSTRUCTION": 1,
+    "RELATION": 1,
+    "PATH": 0,
+    "META_METHOD": 0
+  },
+  "novelty_counting_note": "Only retained semantic obstruction/relation deltas are counted. Files, prose, commits, issue/PR activity, and proposed unvalidated lessons are zero-credit.",
+  "saturation_axes": {
+    "KNOWLEDGE": "FLATTENED_FOR_NARROW_EXISTING_LEDGER_SIGN_QUESTION_ONLY",
+    "OPERATOR": "REOPENED_SIGNED_CORRELATION_TRAJECTORY_OPERATOR",
+    "EXPERIENCE_PATTERN": "FLATTENED_REUSED_COUNTEREXAMPLE_FIRST_INTERFACE_PATTERN",
+    "OBSTRUCTION": "REOPENED_AND_CLASSIFIED_O-NS-B1a4-SIGNED-FLUX-COORDINATE",
+    "RELATION": "REOPENED_PRESSURE_FREE_INFLUX_LINK_TO_PRIOR_MAGNITUDE_FAILURES",
+    "PATH": "REOPENED_NS-B1a4a_BUT_ZERO_NOVELTY_BECAUSE_PROSPECTIVELY_PRESENT",
+    "META_METHOD": "FLATTENED_NO_NEW_META_METHOD_RETAINED"
+  },
+  "axes_reopened": [
+    "OPERATOR",
+    "OBSTRUCTION",
+    "RELATION",
+    "PATH"
+  ],
+  "axes_flattened": [
+    "KNOWLEDGE",
+    "EXPERIENCE_PATTERN",
+    "META_METHOD"
+  ],
+  "resource_proxies": {
+    "model_tokens": "CANNOT_MEASURE: runtime does not expose exact token count",
+    "context_tokens": "CANNOT_MEASURE: runtime does not expose exact context-token count",
+    "aggregate_retrieval_calls": "CANNOT_MEASURE: compacted tool history prevents a reliable aggregate count",
+    "aggregate_tool_calls": "CANNOT_MEASURE: runtime does not expose a reliable aggregate counter",
+    "memory_failure_artifact_fetches_observed": 5,
+    "bounded_web_search_batches_observed_after_cycle_resume": 2,
+    "core_cycle_elapsed_seconds": 675,
+    "elapsed_scope": "from frozen context timestamp 2026-08-11T22:47:08Z to metrics-preparation timestamp 2026-08-11T22:58:23Z"
+  },
+  "new_ids": {
+    "episodes": [
+      "EP-NS-B1a4-C001-SIGNED-FLUX-20260812"
+    ],
+    "lessons": [
+      "L-NS-B1a4-MAGNITUDE-LEDGER-DOES-NOT-ORIENT-FLUX"
+    ],
+    "failures": [
+      "F-NS-B1a4-UNSIGNED-LOCAL-ENERGY-NO-SIGN"
+    ],
+    "tools": [],
+    "obstructions": [
+      "O-NS-B1a4-SIGNED-FLUX-COORDINATE"
+    ],
+    "motifs": []
+  },
+  "successful_reuse_ids": [
+    "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+    "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH"
+  ],
+  "candidate_generation_credit": 0,
+  "candidate_origin": "PREEXISTING_PROSPECTIVE_CANDIDATE_IN_ISSUE_173",
+  "rakl_changed_chosen_action_relative_to_pre_memory_pre_gate_preference": "CANNOT_MEASURE: no pre-memory/pre-gate action preference was frozen; only bounded routing effects of selected memories are observed",
+  "gate_and_provenance": {
+    "root_gate": "NOT_ATTEMPTED",
+    "proposal_shadow_gate": "PASS",
+    "exact_statement_binding": "PASS_FOR_SCOPED_SUBPROBLEM_ONLY",
+    "strict_candidate_chronology": "NOT_CLAIMED: candidate existed before this cycle",
+    "same_context_expert_review": "PASS_BUT_NOT_INDEPENDENT_REVIEW",
+    "independent_mathematical_reviews": 0,
+    "formal_verifier": "NOT_REQUIRED_FOR_LOCAL_ANALYTIC_CALIBRATION; deterministic regression test is nonauthoritative",
+    "source_provenance": "PRIMARY_SOURCE_BOUND: Albritton-Barker arXiv:1811.00502v2; Pineau-Vicol arXiv:2607.09619v2 only as rejected direct-transfer analogue",
+    "literature_novelty_search": "BOUNDED_NO_DIRECT_MATCH; NOT_A_COMPLETENESS_CERTIFICATE",
+    "ci_status_at_receipt_creation": "NOT_YET_RUN",
+    "required_before_merge": "exact-head application CI",
+    "root_authority": "NONE"
+  },
+  "root_gate": {
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "closed_proof_dag": false,
+    "formal_dependency_axiom_audits": "NOT_ATTEMPTED",
+    "barrier_audit": "NOT_ATTEMPTED_FOR_ROOT",
+    "isolated_rechecks": 0,
+    "bounded_novelty_search": "SCOPED_ONLY",
+    "genuinely_isolated_mathematical_reviews": 0
+  },
+  "local_vs_gluing": {
+    "new_local_mathematical_failure": true,
+    "new_local_to_global_gluing_failure": false,
+    "preexisting_gluing_failure_still_active": "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH"
+  },
+  "novelty_class": {
+    "class": "REPRESENTATION",
+    "external_novelty_claim": false
+  },
+  "framework_improvement_hypothesis": "Add typed candidate_origin/origin_evidence_pointer to TaskEpisode/trace metrology so strict post-gate candidate generation can be attributed without giving credit to prospectively preexisting candidates.",
+  "timestamp": "2026-08-11T22:58:23Z",
+  "authority": "PROPOSAL_SHADOW_METROLOGY_ONLY",
+  "artifact_hash": "sha256:47160540d5da361d235a5eec2f1ed474cedb710875180faa0dd6a921fd8531b0"
+}

@@ -1,0 +1,55 @@
+{
+  "trace_id": "NS-B1a4-C001-TRACE-CONTINUATION-20260812",
+  "schema_version": "hash-chained-trace-v3-proposal-shadow",
+  "atom_id": "NS-B1a4",
+  "previous_trace_terminal_hash": "sha256:215240ad65603c8e062e9ea5ade1055bcdfeb315648510ce9d5731909bc150eb",
+  "events": [
+    {
+      "sequence_index": 8,
+      "event_id": "NS-B1a4-E08",
+      "event_type": "CANDIDATE_PROPOSED",
+      "current_public_state": "Issue #173 preregistered pressure-free shear accepted as the exact local discriminator; no candidate-generation credit assigned.",
+      "observations": ["u=(eps exp(k x2+k^2 t),0,0), p=0", "scope: local/magnitude inference only"],
+      "next_action": "Run exact algebra and local-energy checks.",
+      "timestamp": "2026-08-11T22:51:53Z",
+      "previous_event_hash": "sha256:215240ad65603c8e062e9ea5ade1055bcdfeb315648510ce9d5731909bc150eb",
+      "artifact_hash": "sha256:be5880ed98fbd83ac781032db3f42622106130e0cda01da8d82fbc596d6e17c7"
+    },
+    {
+      "sequence_index": 9,
+      "event_id": "NS-B1a4-E09",
+      "event_type": "FALSIFIER_RUN",
+      "current_public_state": "Verified exact NSE algebra and differentiated fixed-ball kinetic energy.",
+      "observations": ["div u=0", "(u·grad)u=0", "partial_t u=Delta u", "dE_R/dt=2k^2E_R>0", "p=0"],
+      "next_action": "Audit target-class DifferenceWitness.",
+      "timestamp": "2026-08-11T22:51:53Z",
+      "previous_event_hash": "sha256:be5880ed98fbd83ac781032db3f42622106130e0cda01da8d82fbc596d6e17c7",
+      "artifact_hash": "sha256:7369ac19f79cf9f85e8f485dd9f0bfa906f668011828768074913127168bf339"
+    },
+    {
+      "sequence_index": 10,
+      "event_id": "NS-B1a4-E10",
+      "event_type": "RESULT_RECORDED",
+      "current_public_state": "Outcome EXISTING_LEDGER_SIGN_INSUFFICIENT_ROUTE_PRUNING.",
+      "observations": ["pressure localization alone cannot supply universal sign", "unsigned local ledger does not orient fixed-region flux"],
+      "next_action": "Separate local failure from global gluing.",
+      "timestamp": "2026-08-11T22:51:53Z",
+      "previous_event_hash": "sha256:7369ac19f79cf9f85e8f485dd9f0bfa906f668011828768074913127168bf339",
+      "artifact_hash": "sha256:f666d495f420d75744c339b50a847ed2320eb09c015bab73e2707341ded4b71b"
+    },
+    {
+      "sequence_index": 11,
+      "event_id": "NS-B1a4-E11",
+      "event_type": "RESIDUAL_OPENED",
+      "current_public_state": "Retained a new signed-flux/trajectory-coordinate obstruction and kept finite-I ancient/global gluing open.",
+      "observations": ["local failure F-NS-B1a4-UNSIGNED-LOCAL-ENERGY-NO-SIGN", "no new gluing failure", "Type-II untouched"],
+      "next_action": "Search only source-valid signed/correlation/trajectory successors or rotate orthogonally.",
+      "timestamp": "2026-08-11T22:51:53Z",
+      "previous_event_hash": "sha256:f666d495f420d75744c339b50a847ed2320eb09c015bab73e2707341ded4b71b",
+      "artifact_hash": "sha256:6a41e74bbd4e0cf0c3acc3fdce06bcc363eb01144bcee366611f3a11573efbd8"
+    }
+  ],
+  "authority": "PROPOSAL_SHADOW_TRACE_ONLY",
+  "terminal_event_hash": "sha256:6a41e74bbd4e0cf0c3acc3fdce06bcc363eb01144bcee366611f3a11573efbd8",
+  "artifact_hash": "sha256:e59f4a004fe2d39480765fc072161f487fd2e49a083b3dd7920d4e656885dafa"
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "failure-experience-delta-v3-proposal-shadow",
+  "atom_id": "NS-B1a4",
+  "source_episode_id": "EP-NS-B1a4-C001-SIGNED-FLUX-20260812",
+  "failure_records": [
+    {
+      "failure_id": "F-NS-B1a4-UNSIGNED-LOCAL-ENERGY-NO-SIGN",
+      "category": "LOCAL_MATHEMATICAL_REPRESENTATION",
+      "observation": "Exact smooth pressure-free NSE shear has dE_R/dt=2 k^2 E_R>0 on every fixed ball while all local A,C,E magnitudes are finite and D=0.",
+      "diagnosis": "Unsigned local magnitude coordinates plus standard localized energy balance do not determine the orientation of boundary/cutoff energy transfer.",
+      "scope": "fixed-region/local-ledger inference only",
+      "difference_witness": "Calibration is not globally finite energy, not globally bounded, and not in the global finite-I mild bounded ancient class.",
+      "repair": "Introduce and verify a signed/correlated flux or trajectory observable, or prove a stronger finite-I global dynamics theorem that supplies the missing orientation.",
+      "not_a_global_blacklist": true
+    }
+  ],
+  "repeated_process_failure_links": [
+    {
+      "prior_id": "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+      "shared_pattern": "magnitude/nonlocal bookkeeping is non-discriminating without the missing dynamic coordinate",
+      "difference_witness": "prior failure concerns absolute far-field pressure summability; present failure concerns sign of local energy transfer"
+    },
+    {
+      "prior_id": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "shared_pattern": "absolute local-energy bookkeeping does not terminate recurrence",
+      "difference_witness": "prior failure is scale-neutrality of costs; present failure isolates missing sign/orientation"
+    }
+  ],
+  "local_to_global_gluing": "NO_NEW_GLUING_FAILURE",
+  "authority": "PROPOSAL_SHADOW_FAILURE_MEMORY_ONLY",
+  "timestamp": "2026-08-11T22:51:53Z",
+  "artifact_hash": "sha256:d556ec130ee0a4e5070c9260bc619ebaf34fb00e6874c6f234ac5465a96e8f79"
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": "research-memory-review-v3-proposal-shadow",
+  "target_atom_id": "NS-B1a4",
+  "target_context_hash": "sha256:4f4201800bdb64d85704ed43c5acb44bb0a3edc4772df2a0477f4ad989c0f83a",
+  "framework_sha": "2f722d42db240538e1bdec146aebc7e9d5eeb8a6",
+  "application_base_sha": "a7301f0f0e2cab2750ac6e923efe18b5750b5af6",
+  "actual_fibre_contents_consulted": {
+    "root_contract": [
+      "canonical_statement.md",
+      "success_contract.yaml",
+      "root issue #4"
+    ],
+    "problem_state": [
+      "open_obligations.yaml",
+      "issue #173"
+    ],
+    "failures_selected": [
+      "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH"
+    ],
+    "failures_retrieved_but_rejected": [
+      {
+        "id": "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION",
+        "reason": "orthogonal representation/derivative geometry failure; does not bear on signed local energy flux"
+      },
+      {
+        "id": "F-NS-B1a3b-NORMALIZATION-ZERO-INSTABILITY",
+        "reason": "vorticity normalization-specific; no applicability to local kinetic-energy sign"
+      },
+      {
+        "id": "F-NS-B1a3b1-GLOBAL-CONSUMER-SIGNATURE-MISMATCH",
+        "reason": "same general local-to-global warning already represented more directly by F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH for this atom"
+      }
+    ],
+    "success_tools": [
+      "NO_RELEVANT_MATCH: NS_R001_RESEARCH_TOOL_INVENTORY_20260811.json contains an empty tools list"
+    ],
+    "motifs": [
+      "NO_PROMOTED_MOTIF_ID_FOUND; reuse only the unpromoted counterexample-first/interface-audit pattern visible in prior episodes"
+    ],
+    "expertise_chunks": [
+      "NO_CANONICAL_EXPERTISE_CHUNK_ID_CONSULTED"
+    ],
+    "cross_millennium": [
+      "NOT_QUERIED: same-problem memory already directly matches the residual; no applicability gain justifies cross-Millennium retrieval"
+    ]
+  },
+  "retrieval_counts": {
+    "failure_records_consulted": 6,
+    "failure_ids_selected": 3,
+    "failure_ids_rejected": 3,
+    "success_tools_consulted": 0,
+    "motif_ids_consulted": 0,
+    "expertise_chunk_ids_consulted": 0,
+    "cross_millennium_items": 0
+  },
+  "selected_ids": [
+    "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+    "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+    "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH"
+  ],
+  "rejected_ids": [
+    "F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION",
+    "F-NS-B1a3b-NORMALIZATION-ZERO-INSTABILITY",
+    "F-NS-B1a3b1-GLOBAL-CONSUMER-SIGNATURE-MISMATCH"
+  ],
+  "decision_effects": [
+    {
+      "id": "F-NS-B1a-C001-PRESSURE-SUMMABILITY",
+      "effect": "Do not retry raw instantaneous far-field pressure divergence; test sign/coherence instead."
+    },
+    {
+      "id": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "effect": "Do not sum absolute shell costs again; directly test whether any sign information is present."
+    },
+    {
+      "id": "F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH",
+      "effect": "Keep any local sign result separate from ancient/global-L3/tail gluing and backward uniqueness."
+    }
+  ],
+  "search_policy": {
+    "choice": "counterexample-first verification of the preregistered pressure-free shear discriminator before attempting a new signed-flux lemma",
+    "why": "Three selected failures jointly say magnitude-only pressure/shell/global-gluing routes are already warning-saturated; the cheapest decisive question is whether local NSE itself permits energy influx with p=0.",
+    "counterfactual_pre_memory_preference": "CANNOT_MEASURE: no pre-memory action preference was frozen by the automation harness; do not infer causal action change."
+  },
+  "missed_relevant_experience": "CANNOT_MEASURE: no closed relevance universe or recall oracle exists for repository memory.",
+  "authority": "PROPOSAL_SHADOW_SEARCH_ROUTING_ONLY",
+  "frozen_at": "2026-08-11T22:47:08Z",
+  "artifact_hash": "sha256:8c660286fcb35e8f02d9bd1923cbbf3b08cb6ffd2274a363ae2c9f484da2bc6f"
+}
