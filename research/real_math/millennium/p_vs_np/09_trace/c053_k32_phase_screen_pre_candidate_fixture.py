@@ -182,6 +182,16 @@ def structural_lemma(screen: dict) -> dict:
         ],
         "partial_phase": {"k": 32, "parent_cell": [6, 2], "current_cell": [11, 1], "surviving_pairs": 24320, "total_pairs": 32768},
         "hand_count_certificate": {
+            "support_derivation": "With H=6+2a+2 bit_length(m), R=H+3m(a+1), and E=R+(R mod 2), exact E=64 parent support (m>=2) is (1,8),(4,3),(6,2), while exact E=66 current support is (3,4),(11,1).",
+            "cell_pair_sizes": [4, 1024, 32, 8192, 128, 32768],
+            "endpoint_derivation": "For current (3,4), (32-18) mod 4=2 and legal variables attain both endpoint bits; for current (11,1), (32-30) mod 12=2 and legal variables likewise attain both bits. Hence no k32 endpoint is forced to one.",
+            "case_derivations": [
+                "(1,8)->(3,4) and (1,8)->(11,1): a complete mapped token has variable code 0, so all 4 and 1024 pairs reject.",
+                "(4,3)->(3,4): mapped starts 2,7,12 have only legal parent codes, so all 32 pairs survive.",
+                "(4,3)->(11,1): the complete start 12 lies in the leading-zero gamma(v_current) run and has code 0, so all 8192 pairs reject.",
+                "(6,2)->(3,4): the only complete start 5 has code 18 or 19, legal for every parent p in {32,...,63}, so all 128 pairs survive.",
+                "(6,2)->(11,1): starts 5,12,19 have codes 16,1,r; the residue count below gives 8448 rejected and 24320 surviving pairs.",
+            ],
             "partial_phase": "(a_parent,m_parent)=(6,2) to (a_current,m_current)=(11,1)",
             "parent_parameter_range": "p=v_parent in {32,...,63}",
             "mapped_token_starts": [5, 12, 19],
@@ -418,7 +428,7 @@ def mathematical_lesson(lemma: dict) -> dict:
             "scope": "Exact C041 encoding, k=31 and k=32 only, all exact parent/current support cells and parameter pairs, and only the two separator families proved at k=31. No statement about overlap, general k, collision, covers, circuits, or P versus NP.",
             "mathematical_falsifier": "A missed exact support cell, an incorrect split-coordinate map, a k32 current endpoint forced to one in a claimed survivor, an illegal complete fixed-header parent token in a claimed clean phase, or a recomputation count different from 0/82 and 24480/42148 refutes the corresponding lemma component.",
             "repair_or_next_mathematical_move": "Analyze full-word compatibility first in the smallest clean phase (parent a,m)=(4,3) and current a+,m+=(3,4), while screening every other complete mapped block before constructing formulas; retain the larger clean and partial phases as alternatives.",
-            "proof_and_source_evidence": "Derive E(a,m)=6+2a+2 bit_length(m)+3m(a+1)+parity padding and the exact support cells, then use h[j]=x[k+j-1] and token start j=H+t(a+1)-k+1 with j>=1. In the only nontrivial partial phase (6,2)->(11,1), the mapped h-starts 5,12,19 have variable codes 16,1,r with r=((v_current-1024)>>3)&63; each r in {0,...,63} occurs 16 times. For p=v_parent in {32,...,63}, only r=0 or r>p is illegal, so the hand count is 16*sum_{p=32}^{63}(64-p)=16*(1+...+32)=8448 rejected and 32768-8448=24320 survivors. Together with the other rejected phases, 4+1024+8192+8448=17668, while 32+128+24320=24480 survive. The source-bound program corroborates these hand derivations only and receives no proof authority.",
+            "proof_and_source_evidence": "Hand derivation: H=6+2a+2 bit_length(m), R=H+3m(a+1), and E=R+(R mod 2) give exact E=64 parent cells (1,8),(4,3),(6,2) and exact E=66 current cells (3,4),(11,1). The split map h[j]=x[k+j-1] gives complete token start j=H+t(a+1)-k+1 with j>=1. Endpoint phases are variable in both current cells. The six cell-pair cases respectively reject/survive 4/0, 1024/0, 0/32, 8192/0, 0/128, and 8448/24320 pairs. In the partial (6,2)->(11,1) case, starts 5,12,19 have codes 16,1,r with r=((v_current-1024)>>3)&63; each r in {0,...,63} occurs 16 times. For p=v_parent in {32,...,63}, only r=0 or r>p is illegal, so 16*sum_{p=32}^{63}(64-p)=16*(1+...+32)=8448 reject and 32768-8448=24320 survive. Therefore 17668 reject and 24480 survive. The source-bound program corroborates these hand derivations only and receives no proof authority.",
         },
         "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
     })

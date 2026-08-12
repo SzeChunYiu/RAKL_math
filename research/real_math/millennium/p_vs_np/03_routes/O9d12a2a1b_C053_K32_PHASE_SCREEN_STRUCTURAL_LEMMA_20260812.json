@@ -1,5 +1,5 @@
 {
-  "artifact_hash": "sha256:d3f2becf13ec64a7e37f11acf26acd04faf2ff434103f390ad552d805f2a48af",
+  "artifact_hash": "sha256:cb84056f781529860033575b18f545d323b51fd733b704a8d6762661da26b694",
   "atom_id": "O9d12a2a1b-C053-K32-PHASE-SCREEN",
   "authority": "SOURCE_BOUND_EXACT_STRUCTURAL_LEMMA_FOR_TWO_SEPARATOR_FAMILIES_ONLY",
   "bounded_classification": {
@@ -379,7 +379,23 @@
   ],
   "hand_count_certificate": {
     "all_phase_totals": "rejected=4+1024+8192+8448=17668; survivors=32+128+24320=24480",
+    "case_derivations": [
+      "(1,8)->(3,4) and (1,8)->(11,1): a complete mapped token has variable code 0, so all 4 and 1024 pairs reject.",
+      "(4,3)->(3,4): mapped starts 2,7,12 have only legal parent codes, so all 32 pairs survive.",
+      "(4,3)->(11,1): the complete start 12 lies in the leading-zero gamma(v_current) run and has code 0, so all 8192 pairs reject.",
+      "(6,2)->(3,4): the only complete start 5 has code 18 or 19, legal for every parent p in {32,...,63}, so all 128 pairs survive.",
+      "(6,2)->(11,1): starts 5,12,19 have codes 16,1,r; the residue count below gives 8448 rejected and 24320 surviving pairs."
+    ],
+    "cell_pair_sizes": [
+      4,
+      1024,
+      32,
+      8192,
+      128,
+      32768
+    ],
     "computation_role": "The source-bound program corroborates these hand counts only; it is not the proof.",
+    "endpoint_derivation": "For current (3,4), (32-18) mod 4=2 and legal variables attain both endpoint bits; for current (11,1), (32-30) mod 12=2 and legal variables likewise attain both bits. Hence no k32 endpoint is forced to one.",
     "illegality_condition": "The fixed codes 16 and 1 are legal for every p>=32, so rejection occurs exactly when r=0 or r>p.",
     "mapped_token_starts": [
       5,
@@ -400,7 +416,8 @@
     "partial_phase": "(a_parent,m_parent)=(6,2) to (a_current,m_current)=(11,1)",
     "partial_phase_survivor_derivation": "32*1024-8448=32768-8448=24320",
     "rejected_pair_derivation": "16*sum_{p=32}^{63}(64-p)=16*(1+...+32)=8448",
-    "residue_multiplicity": "Each r in {0,...,63} occurs for exactly 16 of the 1024 current parameters v_current in {1024,...,2047}."
+    "residue_multiplicity": "Each r in {0,...,63} occurs for exactly 16 of the 1024 current parameters v_current in {1024,...,2047}.",
+    "support_derivation": "With H=6+2a+2 bit_length(m), R=H+3m(a+1), and E=R+(R mod 2), exact E=64 parent support (m>=2) is (1,8),(4,3),(6,2), while exact E=66 current support is (3,4),(11,1)."
   },
   "lemma_id": "PNP-C053-K32-BOUNDARY-TOKEN-PHASE-SCREEN-LEMMA-20260812",
   "non_guarantees": [
