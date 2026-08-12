@@ -1,0 +1,53 @@
+{
+  "experiences": [
+    {
+      "failure_id": "F-C044-HETEROGENEOUS-BLOCK-MULTIPLEXING",
+      "atom_id": "O9d12a2a1b-C044-RETROSPECTIVE",
+      "candidate_id": "C044-RETROSPECTIVE-Q16-MULTIPLEXING-v1",
+      "context_packet_hash": "retrospective:no-strict-context:C044",
+      "research_trace_event_id": "O9d12a2a1b-C044-R03",
+      "method_family": "semantic quotient-type amplification under component-separable complement growth",
+      "failure_mode": "the new exact quotient types form a second disjoint complement component, so local cover pairs multiplex indexwise and one component bit covers all cross-component obligations",
+      "residual_signature": [
+        "Q16 has eight row and eight column types but its ten complement cells split into two active five-edge components",
+        "two local pair indices are reused across both nonisomorphic components",
+        "one whole-component partition handles every active cross-component graph edge",
+        "rho(Q16)<=3 and rho(G16)<=3"
+      ],
+      "broken_assumptions": [
+        "new exact types were treated as necessarily consuming new cover resources additively",
+        "nonisomorphic semantic components were treated as defeating the C010 multiplexing mechanism",
+        "the eight type-class rectangles were treated as close to the finite cover scale"
+      ],
+      "scope_conditions": [
+        "exact finite C043 Q16 quotient only",
+        "block-diagonal complement with old active labels {0,1,2,4}, new labels {5,6,7}, and empty-star label 3",
+        "disjoint generator-separating full-cover upper model",
+        "C013 quotient lift in the upper-bound direction"
+      ],
+      "competing_diagnoses": [
+        "the decoder remains permanently block-decomposable",
+        "only the first new semantic component is isolated and later layers may couple components",
+        "the quotient may admit even fewer overlapping full-cover pairs than the disjoint witness",
+        "the representation creates semantic diversity without cover-resource interaction"
+      ],
+      "selected_diagnosis": "SUPPORTED FINITE DIAGNOSIS ONLY: at Q16 the complement is component-separable, and heterogeneous local pair reuse plus one component separator proves rho(G16)<=3. No later or uniform decomposition is established.",
+      "diagnosis_status": "SUPPORTED",
+      "evidence_pointers": [
+        "research/real_math/millennium/p_vs_np/04_candidates/C044_RETROSPECTIVE_Q16_MULTIPLEXING_RESULT_20260812.md",
+        "research/real_math/millennium/p_vs_np/05_falsification/C044_RETROSPECTIVE_Q16_MULTIPLEXING_RECEIPT_20260812.json",
+        "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C044_MULTIPLEXING_PROOF_HOSTILE_REVIEW_20260812.json"
+      ],
+      "falsifier_or_attempt": "decompose the exact quotient complement, construct globally reused disjoint pairs, and test every relevant row/column fibre pair before any lower-bound search",
+      "observed_result": "three explicit legal pairs cover every relevant full semi-filter of Q16, sharpening the lifted G16 upper bound from eight to three",
+      "local_repair_attempts": [
+        "require load-bearing cross-component complement cells before crediting future type growth",
+        "test whether the inherited three-pair signature extends to the next untouched quotient",
+        "keep the canonical computed lower value unpromoted until a transparent proof certificate exists"
+      ],
+      "timestamp": "2026-08-12T00:15:00Z",
+      "artifact_hash": "sha256:3dee514ab96532e869c7f3fb402844f7640667751682c86e0b338d9e1bf4c353"
+    }
+  ],
+  "links": []
+}

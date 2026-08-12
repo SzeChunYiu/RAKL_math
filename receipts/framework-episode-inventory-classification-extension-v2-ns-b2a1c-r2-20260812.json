@@ -1,0 +1,127 @@
+{
+  "schema_version": "2.0.0",
+  "receipt_id": "RAKL-MATH-TASK-EPISODE-INVENTORY-CLASSIFICATION-EXTENSION-NS-B2A1C-R2-V2-20260812",
+  "recorded_at": "2026-08-12T00:26:10Z",
+  "object": "post-migration explicit inventory classification for one current-valid Navier-Stokes TaskEpisode proposal shadow and two episode-linked non-TaskEpisode containers",
+  "qoi": "Can every NS-B2a1c R2 top-level episode_id container present at exact current main be classified under the exact pinned schema and runtime without rewriting the frozen 19-object parent inventory, prior extensions, or source containers?",
+  "lineage": {
+    "frozen_parent_inventory": {
+      "receipt_path": "receipts/framework-pr153-hash-contract-migration-20260811.json",
+      "receipt_artifact_hash": "sha256:a607a86135e4acbfeb551af86e8dd10febfeb0a3d461daf53c4862339e5c0f77",
+      "receipt_blob_at_merge": "92135fdc9db0f37679fa5656e7052c7e02e00ec3",
+      "receipt_file_sha256": "sha256:4f431762422e5746966ea55ab2b1da3d9c9c60ce263aebfa688a44dc5e629594",
+      "merge_commit": "b18fcd35855d67962e28036f4a445ab24d0c4406",
+      "frozen_episode_count": 19
+    },
+    "preserved_prior_extensions": [
+      {
+        "receipt_path": "receipts/framework-episode-inventory-extension-h4d1b-20260811.json",
+        "introduction_commit": "7d664b20dc691170d86d9757aaa5edd1db16ddb4",
+        "introduction_tree": "a886af4ec504c40ab0e2e0392f4e3a7f0b8dafa6",
+        "git_blob_sha": "cb8296b8b7491afc0c655430b8c65c8fd92e16eb",
+        "raw_sha256": "68c1c9c33b4a0c438a1a8fac865718de1c7a7e4bc111d881037b38fe30eb5216",
+        "receipt_artifact_hash": "sha256:5e39ced6010ed4d8800b8cb34585184389956d68d194fdea533588aba2eb9351"
+      },
+      {
+        "receipt_path": "receipts/framework-episode-inventory-classification-extension-v2-ns-b1a3b1-r2-20260811.json",
+        "introduction_commit": "f81b3f086cf2c375d41f5a9d83899c1dd1b6ddeb",
+        "introduction_tree": "fef08fb8fd632dc36b2956c37771828cc44bf961",
+        "git_blob_sha": "82110482c116bac7981b76a6b3031a3469790e74",
+        "raw_sha256": "b9a8e934a7ac018408f6cd6e9b5fed03b94bd9264b651d69e84175dcda80aab9",
+        "receipt_artifact_hash": "sha256:0218a4312ec2c186f40987fa2aa8db8fe7ad56ff7574cb36bfa0dbdee1600519"
+      }
+    ]
+  },
+  "audit_binding": {
+    "repository_url": "https://github.com/SzeChunYiu/RAKL_math.git",
+    "current_main_at_audit": "e768b7da7dc48739ccb581dea0eb2cfeb8a701e7",
+    "current_tree": "fcca7b7271ed9349f21204a319b3b31438ae3088",
+    "framework_commit": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "task_episode_schema_blob": "62ab5b250c7cc075dbac7da47e3ca3ba9e32175e",
+    "experience_substrate_blob": "bac7467472fc93ca068bcc1195f763bd2b207b58"
+  },
+  "classifications": [
+    {
+      "path": "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1c_TASK_EPISODE_R2_20260812.json",
+      "container_kind": "TASK_EPISODE_PROPOSAL_SHADOW",
+      "observed_episode_id": "TE-NS-B2a1c-R2-20260812",
+      "classification": "CURRENT_VALID_TASK_EPISODE_PROPOSAL_SHADOW",
+      "introduction_commit": "a3ea551cda76cc3fd0e18c9f762b5a0a0424e1b5",
+      "introduction_tree": "59097b191efa537abb83df61bc5e085acef5e7ae",
+      "current_version_commit": "49f1dae610da79ac4d3ca2701e1ba8b8d64e4350",
+      "current_version_tree": "d2206ffe9a9a13bbdccb2a6063a56f99f1e23689",
+      "git_blob_sha": "e4bb1ace36fcd794144659d2088ec3e50801d785",
+      "raw_sha256": "9f8082c155a4587aa2c8040de5565c0e10fa7ffbbd7c2cb1376a8a6492540654",
+      "current_main_blob_sha": "e4bb1ace36fcd794144659d2088ec3e50801d785",
+      "strict_task_episode_schema_verdict": "PASS",
+      "strict_task_episode_schema_error_count": 0,
+      "runtime_constructor_invoked": true,
+      "runtime_constructor_disposition": "EXACT_TASK_EPISODE_VALIDATION_PASS",
+      "storage_admission": "PROPOSAL_SHADOW_STORED",
+      "stored_hash": "77a7751d1c37954091fd4ef3a4527e9c61d09ee41d151f06f914ad244f5da978",
+      "computed_runtime_digest": "77a7751d1c37954091fd4ef3a4527e9c61d09ee41d151f06f914ad244f5da978"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1c_EXPERIENCE_DELTA_R2_20260812.json",
+      "container_kind": "EXPERIENCE_DELTA_PROPOSAL_SHADOW",
+      "observed_episode_id": "TE-NS-B2a1c-R2-20260812",
+      "classification": "NON_TASK_EPISODE_CONTAINER_WITH_EPISODE_ID",
+      "introduction_commit": "2695cab93723446192979f7e3ce3df8718d1a682",
+      "introduction_tree": "1d592cc4d122453dff6532839514c8a6231f4a56",
+      "current_version_commit": "2695cab93723446192979f7e3ce3df8718d1a682",
+      "current_version_tree": "1d592cc4d122453dff6532839514c8a6231f4a56",
+      "git_blob_sha": "75f8c4a53d091bf80f75c1b1065d82f1ddadae4b",
+      "raw_sha256": "050e2284f86a7e8dafc204a1af09f6c7f0297ae98469a6e3e3a7f0b7cea9e592",
+      "current_main_blob_sha": "75f8c4a53d091bf80f75c1b1065d82f1ddadae4b",
+      "strict_task_episode_schema_verdict": "FAIL",
+      "strict_task_episode_schema_error_count": 16,
+      "runtime_constructor_invoked": false,
+      "runtime_constructor_disposition": "NOT_APPLICABLE_NON_TASK_EPISODE_CONTAINER"
+    },
+    {
+      "path": "research/real_math/millennium/navier_stokes/08_reviews/NS-B2a1c_EXPERT_POSTCHECK_R2_20260812.json",
+      "container_kind": "SAME_CONTEXT_EXPERT_POSTCHECK_SHADOW",
+      "observed_episode_id": "TE-NS-B2a1c-R2-20260812",
+      "classification": "NON_TASK_EPISODE_CONTAINER_WITH_EPISODE_ID",
+      "introduction_commit": "1cbbf5becf02d2245af6bb0e56444b306a91cd1b",
+      "introduction_tree": "cfec908bf5573cea673fde19a6039022f08b3e05",
+      "current_version_commit": "1cbbf5becf02d2245af6bb0e56444b306a91cd1b",
+      "current_version_tree": "cfec908bf5573cea673fde19a6039022f08b3e05",
+      "git_blob_sha": "05f914ee87aebc102b00f14cf345cbf1ed5d087b",
+      "raw_sha256": "8a7ab6dad37c3b8e3f9016e02b8353a6886c387a40e854a5e5011b8a229516fd",
+      "current_main_blob_sha": "05f914ee87aebc102b00f14cf345cbf1ed5d087b",
+      "strict_task_episode_schema_verdict": "FAIL",
+      "strict_task_episode_schema_error_count": 16,
+      "runtime_constructor_invoked": false,
+      "runtime_constructor_disposition": "NOT_APPLICABLE_NON_TASK_EPISODE_CONTAINER"
+    }
+  ],
+  "disposition": {
+    "parent_receipt_modified": false,
+    "prior_extensions_modified": false,
+    "source_containers_modified": false,
+    "classification_extension_registered": true,
+    "task_episode_objects_registered": 1,
+    "non_task_episode_containers_registered": 2,
+    "classification_basis": "EXPLICIT_CONTAINER_IDENTITY_AND_CURRENT_TASK_EPISODE_SCHEMA_RUNTIME_CLASSIFICATION"
+  },
+  "authority_contract": {
+    "grants_mathematical_result": false,
+    "grants_proof_authority": false,
+    "grants_novelty_authority": false,
+    "grants_millennium_root_authority": false,
+    "grants_framework_authority": false,
+    "grants_review_independence": false
+  },
+  "evidence_pointers": [
+    "receipts/framework-pr153-hash-contract-migration-20260811.json",
+    "receipts/framework-episode-inventory-extension-h4d1b-20260811.json",
+    "receipts/framework-episode-inventory-classification-extension-v2-ns-b1a3b1-r2-20260811.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1c_TASK_EPISODE_R2_20260812.json",
+    "research/real_math/millennium/navier_stokes/07_memory/NS-B2a1c_EXPERIENCE_DELTA_R2_20260812.json",
+    "research/real_math/millennium/navier_stokes/08_reviews/NS-B2a1c_EXPERT_POSTCHECK_R2_20260812.json",
+    "tests/math_applications/test_framework_pr153_hash_contract_migration.py",
+    "tests/math_applications/test_framework_episode_inventory_classification_extension_v2_ns_b2a1c_r2.py"
+  ],
+  "artifact_hash": "sha256:f0af611807c0ff264dc9f380e002fcef71c76bc30b413b978c51e6853c5b44c7"
+}
