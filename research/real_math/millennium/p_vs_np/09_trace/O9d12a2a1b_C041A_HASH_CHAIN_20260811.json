@@ -1,0 +1,73 @@
+{
+  "schema_version": "rakl-math-shadow-hash-chain-v1",
+  "cycle_id": "PNP-O9d12a2a1b-C041A-ODD-SLICE-COPY-20260811",
+  "hash_semantics": "Each event_hash is SHA-256 of canonical compact JSON over event_id,event_type,payload,prev_hash with sorted keys. This is a proposal/shadow integrity chain, not protected trace admission.",
+  "strict_discovery_credit": false,
+  "chronology_note": "The parent C041 no-rule discriminator predates this cycle, but the concrete child rule was derived before this child trace was persisted. The trace preserves that chronology and grants no strict result-blind credit.",
+  "events": [
+    {
+      "event_id": "E01",
+      "event_type": "CONTEXT_BOUND",
+      "payload": "C041 parent context/memory/discriminator bound; no candidate authority",
+      "prev_hash": "GENESIS",
+      "event_hash": "7a29cda67b7807cc85865f3be9874d5fef498035e897b9b5496298794aaa5ab4"
+    },
+    {
+      "event_id": "E02",
+      "event_type": "CURRENT_FRAMEWORK_RECHECK",
+      "payload": "RAKL 1ec71b2 v3.0.0; no core drift from app snapshot 91f182a",
+      "prev_hash": "7a29cda67b7807cc85865f3be9874d5fef498035e897b9b5496298794aaa5ab4",
+      "event_hash": "59c720499364eb321beae0e15bd162ffd4f1262a283bef4ece5a9fcd34574dac"
+    },
+    {
+      "event_id": "E03",
+      "event_type": "CURRENT_WORK_REVIEW",
+      "payload": "Reject duplicate PR179 Wig95 and PR162 polarity routes",
+      "prev_hash": "59c720499364eb321beae0e15bd162ffd4f1262a283bef4ece5a9fcd34574dac",
+      "event_hash": "e553e3575232bcc179b57a08209856f25519dd38a611ea098c0e2137cc0f9194"
+    },
+    {
+      "event_id": "E04",
+      "event_type": "RULE_SELECTED",
+      "payload": "Odd-slice copy U'=i(U), post-derivation persisted; no strict discovery credit",
+      "prev_hash": "e553e3575232bcc179b57a08209856f25519dd38a611ea098c0e2137cc0f9194",
+      "event_hash": "712c61c3703f86df78c370a227d4d594252e190919398919b95af34b211d5647"
+    },
+    {
+      "event_id": "E05",
+      "event_type": "SOURCE_VERIFIED",
+      "payload": "ECCC TR25-033 Definitions 18-21 source PDF sha256 3f7d9869...",
+      "prev_hash": "712c61c3703f86df78c370a227d4d594252e190919398919b95af34b211d5647",
+      "event_hash": "d2dff309207927eabd8b89e4bdce043aef822f093c19b65d43c9d00d5f480898"
+    },
+    {
+      "event_id": "E06",
+      "event_type": "FALSIFIER_RUN",
+      "payload": "Off-slice empty generator excludes relevance; on-slice cover graph isomorphic",
+      "prev_hash": "d2dff309207927eabd8b89e4bdce043aef822f093c19b65d43c9d00d5f480898",
+      "event_hash": "c37ee3a38e758fa6e57119eaa7c5509048cb886c2ee665082100d3dffe1d47fb"
+    },
+    {
+      "event_id": "E07",
+      "event_type": "RESULT_RECORDED",
+      "payload": "FAILURE ZERO_AUGMENTATION; rho and rho_frac unchanged",
+      "prev_hash": "c37ee3a38e758fa6e57119eaa7c5509048cb886c2ee665082100d3dffe1d47fb",
+      "event_hash": "4fb89453292a569c2e820f8acff775fc9134b9ac1227f3a4d77cc9a4f96aebde"
+    },
+    {
+      "event_id": "E08",
+      "event_type": "DIAGNOSIS_RECORDED",
+      "payload": "local mathematical copy-only isomorphism failure; gluing remains separate",
+      "prev_hash": "4fb89453292a569c2e820f8acff775fc9134b9ac1227f3a4d77cc9a4f96aebde",
+      "event_hash": "7fac0163b4ad578c6ff55f30cfecbf5b59e63824534241b8b45b977432ff670d"
+    },
+    {
+      "event_id": "E09",
+      "event_type": "NEXT_STEP_PROPOSED",
+      "payload": "seek graph-realizable off-slice relevant filter avoiding saturated lifted-pair neighborhoods",
+      "prev_hash": "7fac0163b4ad578c6ff55f30cfecbf5b59e63824534241b8b45b977432ff670d",
+      "event_hash": "c0aeb7cf466611762cb25c355f3672e0ec9394ab97b505b5f55741df88d7051d"
+    }
+  ],
+  "terminal_hash": "c0aeb7cf466611762cb25c355f3672e0ec9394ab97b505b5f55741df88d7051d"
+}
