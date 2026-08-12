@@ -5,29 +5,34 @@ ROOT = Path(__file__).resolve().parents[2]
 NS = ROOT / "research" / "real_math" / "millennium" / "navier_stokes"
 
 
-def test_unit_viscosity_coefficient_matching_and_aspect_cost():
-    # W=c V(alpha z,beta s), V_t+V.grad V-nu Delta V+grad P=0.
-    # Unit convection and diffusion require beta=c*alpha=alpha**2/nu.
+def test_unit_viscosity_coefficient_matching():
+    # Source: V_t + V.grad V - nu Delta V + grad P = 0.
+    # Target: W=c V(alpha z,beta s) solves viscosity-one NSE.
+    # Cancellation after substituting the source PDE requires
+    # beta=c*alpha and beta*nu=alpha**2.
     for alpha, nu in [(1.0, 0.25), (2.0, 0.04), (0.5, 0.01)]:
         c = alpha / nu
         beta = alpha**2 / nu
         assert c * alpha / beta == 1.0
-        assert nu * alpha**2 / beta == nu**2  # coefficient before correcting expression below
-        # Diffusion coefficient after division by c*beta is alpha**2/beta = nu;
-        # to turn source viscosity nu into one, the PDE coefficient is nu*alpha**2/beta.
-        # With beta=alpha**2*nu, not alpha**2/nu, this would be 1; guard the actual algebra separately.
+        assert beta * nu / alpha**2 == 1.0
 
 
-def test_correct_normalization_equations():
-    # Direct coefficient equations: c*alpha/beta=1 and nu*alpha**2/beta=1.
-    # Therefore beta=nu*alpha**2 and c=nu*alpha, for W=c V(alpha z,beta s).
-    # The audit uses the inverse-coordinate convention W=c V(z/alpha,s/beta), which yields
-    # c=alpha/nu, beta=alpha**2/nu. This test prevents silently mixing conventions.
-    for alpha, nu in [(1.0, 0.25), (2.0, 0.04), (0.5, 0.01)]:
-        beta_direct = nu * alpha**2
-        c_direct = nu * alpha
-        assert c_direct * alpha / beta_direct == 1.0
-        assert nu * alpha**2 / beta_direct == 1.0
+def test_maximal_target_cylinder_and_alpha_invariance():
+    # Q_W(r) maps to spatial radius alpha*r and source time depth beta*r**2.
+    # The source Q_V(a) permits r=a*sqrt(nu)/alpha.  The induced A/E/D
+    # prefactors are independent of alpha at this maximal lawful radius.
+    for alpha, nu, a in [(1.0, 0.25, 3.0), (2.0, 0.04, 5.0), (0.5, 0.01, 2.0)]:
+        c = alpha / nu
+        beta = alpha**2 / nu
+        r = a * nu**0.5 / alpha
+        assert alpha * r <= a
+        assert abs(beta * r**2 - a**2) < 1e-12
+        a_prefactor = c**2 * alpha**-3 * (a / r)
+        e_prefactor = (c * alpha)**2 * alpha**-3 / beta * (a / r)
+        d_prefactor = c**3 * alpha**-3 / beta * (a**2 / r**2)
+        assert abs(a_prefactor - nu**-2.5) / nu**-2.5 < 1e-12
+        assert abs(e_prefactor - nu**-1.5) / nu**-1.5 < 1e-12
+        assert abs(d_prefactor - nu**-3.0) / nu**-3.0 < 1e-12
 
 
 def test_certificate_exponent_floors():
