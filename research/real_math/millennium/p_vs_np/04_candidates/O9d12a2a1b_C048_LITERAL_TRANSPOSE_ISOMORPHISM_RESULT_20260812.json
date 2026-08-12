@@ -1,0 +1,100 @@
+{
+  "artifact_hash": "sha256:efad77d568bf22247adbc6b7b2584bf640549169d1b474c7d66dfc1f4d645767",
+  "atom_id": "O9d12a2a1b-C048",
+  "authority": {
+    "circuit_lower_bound": false,
+    "cover_lower_bound": false,
+    "formal_proof": false,
+    "independent_review": false,
+    "novelty": false,
+    "p_vs_np_authority": false,
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "status": "PROPOSAL_SHADOW_RETROSPECTIVE_HAND_DERIVATION",
+    "strict_rakl_discovery_credit": false
+  },
+  "canonical_projection_note": {
+    "fallback": "The all-zero fallback is also transposed, so any fallback incidence is the image of an existing original-family incidence rather than new cover complexity.",
+    "hybrid_switch_outside_scope": "A one-time or nonuniform orientation schedule that transposes only selected levels is not globally tau(U_n) and is not ruled out by this theorem; it requires a separate language/reduction/gluing analysis.",
+    "uniform_transpose": "Canonical fresh transposed batches do not create a genuinely new interaction mechanism; the entire family is the row/column-swapped original family."
+  },
+  "chronology": {
+    "late_fibre_persistence": true,
+    "reason": "The literal-transpose isomorphism idea was derived in-run before durable C048 fibre persistence; this artifact preserves retrospective truth-check evidence only.",
+    "strict_prospective_credit_denied": true
+  },
+  "definitions": {
+    "coordinate_swap": "tau(i,j)=(j,i).",
+    "literal_transpose_family": "Let T_2=U_2. For n>=3, T_n inherits T_(n-1) on old-old cells and adds (M+c,r) exactly when the same word Dec(bin_(n-1)(r)||bin_(n-1)(c)) is UNSAT; no other new complement cells are added.",
+    "original_family": "Let U_n be the frozen C041 complement family. For level n with M=2^(n-1), U_n inherits U_(n-1) on old-old cells and adds (r,M+c) exactly when Dec(bin_(n-1)(r)||bin_(n-1)(c)) is UNSAT."
+  },
+  "diagnosis": {
+    "local_mathematical_failure": "Uniform literal transpose preserves the reduction but is an exact representation isomorphism; it cannot improve any transpose-invariant graph/cover quantity.",
+    "local_to_global_gluing_failure": "No new local resource exists to glue; cover growth, a circuit lower bound, and the root remain absent.",
+    "representation_failure": "The stored C047 breakpoint changes labels but not the mathematical isomorphism class of the recursive family."
+  },
+  "episode_outcome": "LOCAL_NEGATIVE_EXACT_REPRESENTATION_EQUIVALENCE",
+  "novelty_class": {
+    "operator_novelty": false,
+    "primary": "stored",
+    "reason": "Literal transpose was already stored in C047 memory; the cycle composes that stored operator with an exact automorphism/cover-invariance proof.",
+    "secondary": [
+      "compositional",
+      "representation"
+    ]
+  },
+  "primary_source_binding": {
+    "source": "Cavalar and Oliveira, ECCC TR25-033 (18 Mar 2025)",
+    "url": "https://eccc.weizmann.ac.il/report/2025/033/",
+    "used_definitions": [
+      "graph generator family of rows/columns",
+      "Definitions 18-21 semi-filter/above/preservation/cover complexity",
+      "Theorem 22 only as authority boundary; no lower bound is claimed"
+    ]
+  },
+  "recorded_at": "2026-08-12T04:02:00Z",
+  "residuals": [
+    "nonuniform/hybrid orientation schedules remain open",
+    "header-aligned relabelling or unequal/overlapping splits remain open only with a separate reduction-preservation proof",
+    "no cover lower bound or asymptotic growth follows",
+    "no circuit lower bound follows",
+    "formal verification, novelty audit, and three isolated mathematical reviews are absent"
+  ],
+  "result_id": "PNP-C048-LITERAL-TRANSPOSE-ISOMORPHISM-RESULT-20260812",
+  "reusable_obstruction": {
+    "falsifier_for_future": "Exhibit an invariant or exact coordinate witness showing the proposed operator is not conjugate to C041 by a generator-family automorphism before spending effort on cover optimization.",
+    "id": "OBS-PNP-C048-TRANSPOSE-ISOMORPHISM",
+    "lesson": "Any repair obtained only by globally swapping row/column roles of a square graph family is cover-neutral. A next operator must break global transpose equivalence while preserving the SAT/NP language interface."
+  },
+  "schema_version": "1.0.0",
+  "theorems": [
+    {
+      "id": "C048-T1-REDUCTION-PRESERVATION",
+      "proof": [
+        "The transposed complement selector reconstructs the identical decoded word x||y from old column x and fresh-row offset y.",
+        "Therefore the cell is complement exactly for UNSAT and graph exactly for SAT.",
+        "The NP witness remains an assignment accepted by the unchanged clause checker; only coordinate placement changes."
+      ],
+      "statement": "The literal-transpose family preserves the C041 SAT/graph reduction exactly: if a canonical code is x||y with |x|=|y|=k, map it to the level k+1 query (2^k+int(y), int(x)); this cell is in the graph iff the unchanged decoder formula is SAT, with the same assignment witness."
+    },
+    {
+      "id": "C048-T2-EXACT-TRANSPOSE",
+      "proof": [
+        "Base: the frozen seed U_2={(0,0),(2,1),(1,2),(2,2)} is invariant under tau.",
+        "Induction old-old: assuming T_(n-1)=tau(U_(n-1)), inherited cells map exactly under tau.",
+        "Induction cross block: tau sends each original old-new complement cell (r,M+c) selected by UNSAT Dec(bin(r)||bin(c)) to (M+c,r), exactly the literal-transpose selector.",
+        "Both families add no complement cells in the remaining new quadrants, so the cases are exhaustive."
+      ],
+      "statement": "For every n>=2, T_n = tau(U_n)."
+    },
+    {
+      "id": "C048-T3-COVER-INVARIANCE",
+      "proof": [
+        "The coordinate swap tau is a bijection of the ground set [N]x[N] and permutes the graph generator family by exchanging row and column generators.",
+        "It sends the complement U to tau(U), subsets E,H of U to tau(E),tau(H), and semi-filters F to {tau(S): S in F}. Upward closure, exclusion of the empty set, 'above w', and pair preservation are invariant under this bijection.",
+        "Hence the cover graphs in Definition 21 are isomorphic, preserving minimum pair-cover size rho.",
+        "The same generator permutation transports any union/intersection construction, so D and D_intersection are equal as well."
+      ],
+      "statement": "For every n, rho(G_n^T,G_{2^n,2^n}) = rho(G_n,G_{2^n,2^n}); likewise intersection/discrete graph complexity is unchanged under tau."
+    }
+  ]
+}
