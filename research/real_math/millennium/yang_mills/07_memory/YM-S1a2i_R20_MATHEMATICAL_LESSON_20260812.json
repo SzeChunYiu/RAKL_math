@@ -1,0 +1,40 @@
+{
+  "lesson_id": "MATH-YM-R20-SHRINKING-GRAPH-INVARIANCE-AND-RELEVANT-MARGIN",
+  "authority": "SOURCE_SCOPED_BROKEN_ASSUMPTION_CANDIDATE",
+  "attempted_mathematical_implication": "From g_{k+1}<=g_k and old-radius bounds ||lambda_{k+1}||<=c_lambda g_k^2 and ||K_{k+1}||<=c_K g_k^2, infer membership in the smaller next graph ball with radii c_lambda g_{k+1}^2 and c_K g_{k+1}^2; then infer full graph-transform contraction from irrelevant contraction plus qualitative tuning.",
+  "exact_mathematical_result": [
+    "The monotonicity implication is reversed because g_{k+1}<=g_k gives c g_{k+1}^2<=c g_k^2, not the required old-radius-to-new-radius containment.",
+    "The displayed bound ||lambda_{k+1}||<=[C_2 c_lambda+C_2(1+c_K)]g_k^2 closes even the old radius only if (1-C_2)c_lambda>=C_2(1+c_K); enlarging c_lambda cannot repair C_2>=1.",
+    "A bounded value remainder |r(g)|<=C g^5 does not by itself make g->g-bg^3+r(g) injective; a derivative or Lipschitz estimate is load-bearing.",
+    "Forward expansion in a relevant coordinate is not contracted by strict contraction in an irrelevant coordinate; a backward/inverse relevant mechanism or equivalent hyperbolic graph transform is required."
+  ],
+  "supported_causes": [
+    "shrinking target radius was compared in the wrong inequality direction",
+    "no strict relevant-coordinate linear margin is exposed in the displayed estimate",
+    "value control of the base remainder is weaker than derivative control needed for inversion",
+    "irrelevant contraction does not control forward relevant expansion"
+  ],
+  "competing_causes": [
+    {
+      "cause": "the irrelevant K coordinate is impossible to repair",
+      "status": "NOT_SUPPORTED; rho<1 plus O(g^4) forcing may supply a quantitative next-radius margin"
+    },
+    {
+      "cause": "the source has no stronger unexposed stable-manifold theorem",
+      "status": "CANNOT_CHECK from the bounded indexed-source surface"
+    },
+    {
+      "cause": "the defect proves Yang-Mills construction impossible",
+      "status": "REJECTED_BY_SCOPE"
+    }
+  ],
+  "scope": "The displayed Section-38 inference forms and acquired primary-author text only; not a source-wide refutation, Yang-Mills counterexample, continuum construction, or mass-gap result.",
+  "mathematical_falsifier": "A primary-source proof giving a quantitative next-radius margin, a typed injective/reparametrized base map, and a backward/inverse relevant contraction or full graph-transform estimate on the stated shrinking domain defeats this diagnosis.",
+  "mathematical_repair": "Prove the K-coordinate slack against g_k^2-g_{k+1}^2 explicitly; expose a strict relevant inverse/dichotomy margin; bind derivative control or a reparametrization for g->g'; and prove regulator-uniform stable-graph continuity separately.",
+  "proof_or_source_evidence": [
+    "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_R20_SOURCE_AUDIT.md",
+    "Jonathan J. Wilson 2026 author-uploaded/indexed manuscript, Lemma 38.2, Lemmas 38.3-38.4, and Theorem 38.5 as boundedly inspected"
+  ],
+  "novelty_boundary": "No literature novelty is claimed; one deduplicated source-scoped broken-assumption unit is eligible only after integration and global-ledger review.",
+  "artifact_hash": "sha256:18c39a9a7ea90fede4fb3672d1e777886fea7e88e094f453bb8fada799018a73"
+}
