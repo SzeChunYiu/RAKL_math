@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0.0",
+  "trace_id": "PNP-C045-RETROSPECTIVE-RECONCILIATION-TRACE-20260812",
+  "authority": "PROPOSAL_SHADOW_RETROSPECTIVE_TRUTH_CHECK_ONLY",
+  "hash_method": "Each artifact_hash is SHA-256 of canonical sorted compact JSON for the entry excluding artifact_hash; first entry chains to the C044 terminal trace hash.",
+  "entries": [
+    {
+      "event_id": "C045-R01",
+      "event_type": "AUTHORITATIVE_PRE_CANDIDATE_PACKET_MERGED",
+      "state_commit": "4c33934030f98ba81a77b419d2317a1b31173fdc",
+      "summary": "Current main contains a result-blind C045 U16->U17 component-incidence packet with candidate_generation_allowed=false and target outcome unobserved.",
+      "action": "Treat this packet as current application authority and deny a parallel result path strict current-packet discovery credit unless rebound before target execution.",
+      "previous_event_hash": "sha256:959a2fd74585a8f8356ff4a9b7a4653a541bcd19e24f54c77fbd80f16c154aa6",
+      "artifact_hash": "sha256:37e141f4f416e079d9e283aa4be21b387f324e76dd30b30217af67eb2eeb3af3"
+    },
+    {
+      "event_id": "C045-R02",
+      "event_type": "PARALLEL_LOCAL_TRUTH_CHECK_PRESERVED",
+      "state_commit": "14dbd5c2f2a14a9dccdb7be6ebc94f7e8551c44c",
+      "summary": "Parallel derivation established exact length-32 UNSAT support, no old/new row/column projection coupling, and a four-pair G17 upper cover as proposal/shadow mathematics.",
+      "action": "Preserve the local mathematical truth and negative history, but separate it from strict discovery chronology and current-packet authority.",
+      "previous_event_hash": "sha256:37e141f4f416e079d9e283aa4be21b387f324e76dd30b30217af67eb2eeb3af3",
+      "artifact_hash": "sha256:43eaac2623a82979ca8865f87f22083f5ecf061e8c97c84fda467b5c026d5417"
+    },
+    {
+      "event_id": "C045-R03",
+      "event_type": "AUTHORITY_RECONCILED",
+      "state_commit": "CANNOT_MEASURE_SELF_REFERENCE",
+      "summary": "The current-main packet and parallel result were reconciled. The result answers the frozen incidence atom with NO_CROSS_COMPONENT_COUPLING, but strict discovery credit is denied because no current-packet candidate/evaluator freeze authorized target execution.",
+      "action": "Register episode -> diagnosis -> obstruction lesson, keep protected novelty zero, and route the next fresh atom to earliest prefix-row collision with an atom-scoped freshness handoff.",
+      "previous_event_hash": "sha256:43eaac2623a82979ca8865f87f22083f5ecf061e8c97c84fda467b5c026d5417",
+      "artifact_hash": "sha256:74a73eed51b2417f3959f89bfc8e6859ff5224207ccfb0d0057af19f9211901b"
+    }
+  ],
+  "RAKL_CYCLE_METRICS": {
+    "record_type": "RAKL_CYCLE_METRICS",
+    "cycle_id": "PNP-C045-U17-RETROSPECTIVE-RECONCILIATION-20260812",
+    "rakl": {
+      "method_version": "3.0.0",
+      "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+      "architecture_inspected": ["AGENTS.md", "skills/rakl-core/SKILL.md", "skills/rakl-core/manifest.yaml", "skills/rakl-core/static/core/principles.md", "skills/rakl-core/static/core/workflow.md", "skills/rakl-core/workflows/mathematical-research.md", "src/rakl/method_specs.py", "RAKL_VERSION.json"]
+    },
+    "rakl_math": {
+      "current_main_base_for_reconciliation": "4c33934030f98ba81a77b419d2317a1b31173fdc",
+      "parallel_derivation_base": "e5f50a1dc5c20bee7cfc3c3d6edf980d5cc72e1c",
+      "parallel_result_head": "14dbd5c2f2a14a9dccdb7be6ebc94f7e8551c44c",
+      "final_reconciliation_head": "CANNOT_MEASURE: self-reference; exact resulting head is attested in the draft PR body without another branch mutation"
+    },
+    "state_fingerprints": {
+      "pre": "sha256:c1e39ad44c29ce525150f2b605c2cb6422cc296e5144cc9e79c181efb54f6363",
+      "post_semantic": "sha256:a24c2feeaf80e4bd4c270de603292c1b41eb4a2fee9729289798508346b61d3a",
+      "scope": "canonical semantic state; Git/CI/schema growth is assurance only"
+    },
+    "active_atom": {
+      "id": "O9d12a2a1b-C045",
+      "signature": "EXACT_FULL_HISTORY_QUOTIENT_COMPONENT_INCIDENCE_AT_U16_TO_U17",
+      "authoritative_fibre_hash": "sha256:0cf4c07e20ba1bda93d3acea8714928599aa450d81f902fdff86d8f4d764dd11",
+      "authoritative_fibre_commit": "4c33934030f98ba81a77b419d2317a1b31173fdc",
+      "parallel_fibre_hash": "sha256:7c96aab2cbb6bb6151aaa9ae2c34c9259d0964417ce7c9300be9e6d04573f182"
+    },
+    "canonical_method_specs_surfaces": ["decomposition", "routing", "search_query_generation", "source_selection_reliability", "claim_extraction", "equivalence_similarity", "gap_discovery", "experiment_query_selection", "memory", "review", "benchmarking", "saturation_stopping", "prompting_context_policy", "authority_promotion"],
+    "memory_retrieved": {
+      "episodes": {"count": 5, "ids": ["E-PNP-C044-EXACT-COMPONENT-COUPLING-GATE", "C043-FIRST-ROW-SPLIT", "C044-RETROSPECTIVE-Q16-MULTIPLEXING", "C041A-ZERO-AUGMENTATION", "C041B-TIGHT-INTERSECTION-ABSORPTION"]},
+      "failures": {"count": 4, "ids": ["F-C043-FIRST-ROW-SPLIT-TYPE-CEILING", "F-C044-HETEROGENEOUS-BLOCK-MULTIPLEXING", "C041A-ZERO-AUGMENTATION", "C041B-TIGHT-INTERSECTION-ABSORPTION"]},
+      "motifs": {"count": 5, "ids": ["COMPONENT-INCI​DENCE-GATE", "HETEROGENEOUS-BLOCK-MULTIPLEXING", "BIDIRECTIONAL-TWIN-QUOTIENT", "TIGHT-INTERSECTION-ABSORPTION", "FINITE-RESIDUAL-EQUIVALENCE"]},
+      "tools": {"count": "CANNOT_MEASURE", "reason": "No canonical tool-memory ID registry was the source of method choice; method surfaces are recorded separately."},
+      "other": {"count": 3, "ids": ["C044-COMPONENT-COUPLING-GATE", "C013-QUOTIENT-BLOWUP-CEILING", "MYHILL-NERODE-ANALOGY"]},
+      "selected_ids": ["E-PNP-C044-EXACT-COMPONENT-COUPLING-GATE", "F-C044-HETEROGENEOUS-BLOCK-MULTIPLEXING", "C043-FIRST-ROW-SPLIT", "C013-QUOTIENT-BLOWUP-CEILING"],
+      "rejected_ids": ["C041A-ZERO-AUGMENTATION", "C041B-TIGHT-INTERSECTION-ABSORPTION", "MYHILL-NERODE-ANALOGY"],
+      "rejected_reasons": {"C041A-ZERO-AUGMENTATION": "copy/relabelling disanalogy", "C041B-TIGHT-INTERSECTION-ABSORPTION": "dual saturation analysis deferred after cheaper incidence gate decided the atom", "MYHILL-NERODE-ANALOGY": "finite residual equality only; no cover/circuit authority"},
+      "missed_or_late": "The same-atom C045 pre-candidate packet was not on main at the initial read and was merged concurrently. It became authoritative before final preservation; strict credit is denied rather than backfilled.",
+      "cross_millennium": "NOT_QUERIED: no applicability/DifferenceWitness supported exact transfer"
+    },
+    "outcome": {
+      "mathematical": "NO_CROSS_COMPONENT_COUPLING_AT_U17; exact ten length-32 UNSAT words; explicit local three-pair new-block code; rho(G17)<=sigma(G17)<=4",
+      "discovery_authority": "DENIED_STRICT_CURRENT_PACKET_CREDIT; RETROSPECTIVE_TRUTH_CHECK_ONLY",
+      "root": "OPEN_NO_SOLUTION_CERTIFICATE",
+      "independent_reviews": "0/3"
+    },
+    "residual_before": "FIRST_UNTOUCHED_U16_TO_U17_COMPONENT_INCIDENCE_BRANCH",
+    "residual_after": "EARLIEST_LATER_CANONICAL_UNSAT_PREFIX_ROW_COLLISION_WITH_ROWS(U_n); THEN LEGAL_GLOBAL_COVER_STRESS; UNIFORM_RECURRENCE/CIRCUIT/ROOT GLUING OPEN",
+    "retained_semantic_novelty": {
+      "KNOWLEDGE": 0,
+      "OPERATOR": 0,
+      "EXPERIENCE_PATTERN": 0,
+      "OBSTRUCTION": 0,
+      "RELATION": 0,
+      "PATH": 0,
+      "META_METHOD": 0,
+      "note": "All nonzero observations are proposal/shadow only; raw files, commits, CI and prose are not learning."
+    },
+    "shadow_axis_deltas": {
+      "KNOWLEDGE": ["exact U17 classification", "finite four-pair upper cover"],
+      "OPERATOR": [],
+      "EXPERIENCE_PATTERN": ["fresh UNSAT rows remain block-multiplexable"],
+      "OBSTRUCTION": ["row-projection-collision gate"],
+      "RELATION": ["prefix collision -> component coupling -> cover stress"],
+      "PATH": ["locate earliest row collision before LP/lower-bound search"],
+      "META_METHOD": ["atom-scoped current-main handoff failure"]
+    },
+    "saturation": {
+      "reopened": ["KNOWLEDGE", "OBSTRUCTION", "RELATION", "PATH", "META_METHOD"],
+      "flattened": ["U17-as-first-coupling hypothesis", "semantic/type-count amplification at U17", "silent old-pair extension to new ground"]
+    },
+    "resources": {
+      "model_tokens": "CANNOT_MEASURE: no authoritative per-cycle counter",
+      "context_tokens": "CANNOT_MEASURE: no authoritative per-cycle counter",
+      "retrieval_calls": "CANNOT_MEASURE: runtime compaction prevents exact full-cycle count",
+      "tool_calls": "CANNOT_MEASURE: runtime compaction prevents exact full-cycle count",
+      "wall_time": "CANNOT_MEASURE: no authoritative cycle timer",
+      "finite_unsat_words": 10,
+      "active_cells_checked": 38,
+      "expert_roles": 5
+    },
+    "new_ids": {
+      "episode": ["E-PNP-C045-U17-RETROSPECTIVE-20260812"],
+      "diagnosis": ["D-PNP-C045-FRESH-ROW-BLOCK-PLUS-PACKET-HANDOFF"],
+      "lesson": ["L-PNP-C045-FRESH-ROWS-IMPLY-BLOCK-SEPARABILITY"],
+      "failure": ["F-PNP-C045-U17-COUPLING-HYPOTHESIS-REFUTED", "F-PNP-C045-CURRENT-PACKET-HANDOFF", "F-PNP-C045-ASYMPTOTIC-GLUING-OPEN"],
+      "tool": [],
+      "obstruction": ["O-PNP-C045-ROW-PROJECTION-COLLISION-GATE"],
+      "motif": ["M-PNP-C045-FRESH-ROW-BLOCK-SEPARABILITY"]
+    },
+    "successful_reuse_ids": ["C043-LENGTH-FORMULA-AND-ACCUMULATED-FIBRES", "E-PNP-C044-EXACT-COMPONENT-COUPLING-GATE", "C044-HETEROGENEOUS-BLOCK-MULTIPLEXING", "C044-Q16-THREE-PAIR-UPPER-COVER"],
+    "gates": {
+      "current_packet_candidate_authorization": "FAIL_NOT_BOUND_BEFORE_PARALLEL_TARGET_EXECUTION",
+      "exact_local_statement_binding": "PASS_TRUTH_CHECK_ONLY",
+      "closed_root_proof_dag": "FAIL_NOT_ATTEMPTED",
+      "formal_verifier": "NO_FORMAL_PROOF; finite calibration only",
+      "dependency_axiom_audit": "LOCAL_HAND_AUDIT_ONLY",
+      "barrier_audit": "ROOT_PROMOTION_NOT_REACHED",
+      "isolated_recheck": "SAME_CONTEXT_ONLY_NOT_INDEPENDENT",
+      "independent_reviews": "0/3",
+      "promotion": "BLOCKED",
+      "root": "OPEN_NO_SOLUTION_CERTIFICATE"
+    },
+    "provenance": {
+      "rakl_main": "43897d3afaf0038385102d5acc64793c05ec40f0",
+      "current_application_packet_merge": "4c33934030f98ba81a77b419d2317a1b31173fdc",
+      "parallel_result_head": "14dbd5c2f2a14a9dccdb7be6ebc94f7e8551c44c",
+      "primary_source": "ECCC TR25-033, 2025-03-18, Definitions 18-21 and Theorem 22, local blob 8dfe370a6bf687eb33ebf52eaaf9308e1bdf0230",
+      "decoder_blob": "fcc4814dd618da96ef9bb8144a4783a0a6e886e1"
+    },
+    "ci_status": "CANNOT_MEASURE_AT_RECEIPT_MATERIALIZATION: final reconciliation commit/PR CI does not exist until this receipt is committed; exact resulting head and observable CI are attested in the draft PR without mathematical credit",
+    "rakl_changed_action_counterfactual": {
+      "value": "CANNOT_MEASURE",
+      "reason": "Mandatory memory/gate read preceded any instrumented pre-memory preference. The selected experience demonstrably changed routing relative to the saturated type-count family, but no prospectively logged counterfactual action exists."
+    }
+  }
+}
