@@ -1,0 +1,68 @@
+{
+  "schema_version": "math-context-fibre-v3-proposal-shadow",
+  "atom_id": "NS-B2a1b1",
+  "parent_atom_id": "NS-B2a1b",
+  "control_issue": 234,
+  "problem_signature": {
+    "root": "NS0",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "lane": "Type-II Euler-scaling / signed prelimit flux-telescoping bypass",
+    "question": "For Seregin's logarithmic Type-II scaling f(lambda)=log(e/lambda)^(-gamma), can finite algebraic powers of the moving-radius gain F_lambda(a) pay any positive geometric cutoff debt a^beta on a local mesoscopic sequence, and do standard local-energy magnitude bounds leave such debt after full-parabolic or fixed-time localization?",
+    "allowed_outcomes": [
+      "FINITE_POWER_F_GAIN_CANNOT_PAY_POSITIVE_RADIUS_DEBT",
+      "SOURCE_VALID_VANISHING_CUTOFF_BRIDGE_FOUND",
+      "CANNOT_CHECK_SOURCE_INTERFACE"
+    ]
+  },
+  "framework_pin": {
+    "repo": "SzeChunYiu/RAKL",
+    "main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "v3_storage_policy": "PROPOSAL_SHADOW_STORED"
+  },
+  "application_pin": {
+    "repo": "SzeChunYiu/RAKL_math",
+    "base_sha": "597b7d98b514af33808d5f32be2cd5c906cfe036"
+  },
+  "actual_fibre_consulted": [
+    {"id":"RAKL-V3-EXPERIENCE","ref":"docs/RAKL_V3_EXPERIENCE_SUBSTRATE.md","sha":"43897d3afaf0038385102d5acc64793c05ec40f0"},
+    {"id":"RAKL-V3-API","ref":"docs/RAKL_V3_API.md","sha":"43897d3afaf0038385102d5acc64793c05ec40f0"},
+    {"id":"RAKL-METROLOGY","ref":"docs/RAKL_METROLOGY.md","sha":"43897d3afaf0038385102d5acc64793c05ec40f0"},
+    {"id":"RAKL-METHOD-SPECS","ref":"src/rakl/method_specs.py","sha":"43897d3afaf0038385102d5acc64793c05ec40f0"},
+    {"id":"RAKL-TASK-EPISODE-SCHEMA","ref":"schemas/task-episode.schema.json","sha":"43897d3afaf0038385102d5acc64793c05ec40f0"},
+    {"id":"NS-ROOT-CONTRACT","ref":"research/real_math/millennium/navier_stokes/00_problem_contract/canonical_statement.md","app_base_sha":"597b7d98b514af33808d5f32be2cd5c906cfe036"},
+    {"id":"NS-ISSUE-234","ref":"https://github.com/SzeChunYiu/RAKL_math/issues/234"},
+    {"id":"E-NS-B2a1a1-R1","ref":"07_memory/NS-B2a1a1_EXPERIENCE_DELTA_20260812.json","role":"selected prior partial-success episode"},
+    {"id":"F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH","ref":"07_memory/NS-B2a1a1_EXPERIENCE_DELTA_20260812.json","role":"selected failure"},
+    {"id":"F-NS-B2a1a2-FIXED-TO-MOVING-RADIUS-ESCAPE","ref":"merged PR #245 / current main","role":"selected failure"},
+    {"id":"F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE-SHARPENED","ref":"NS-B2a1 prior memory","role":"selected failure"},
+    {"id":"F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY","ref":"NS-B2a prior memory","role":"selected failure"},
+    {"id":"FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE","ref":"GLOBAL-MATHEMATICAL-FAILURE-CAUSE-ATLAS-20260812","role":"selected routing synthesis; no new mathematical credit"},
+    {"id":"SEREGIN-2026-TYPEII-v1","ref":"Gregory Seregin, arXiv:2606.29468v1, 28 Jun 2026","selectors":["(1.7) weighted A_f,E_f,D_f","(2.2) F_lambda=f(lambda a)/f(lambda)","(2.7) Euler scaling","(2.9) prelimit weighted bound","(2.10) logarithmic f","Theorem 3.1 / (3.5)-(3.8)"]}
+  ],
+  "structural_coordinates": [
+    "L=log(e/lambda), h=log(e/(lambda a))=L-log a, 1<=h<=L",
+    "F_lambda(a)=(L/h)^gamma for logarithmic f",
+    "local mesoscopic gain requires h->infinity and h/L->0",
+    "prelimit weighted ledger gives A<=M F^-2, E<=M F^-1, D<=M F^-2",
+    "standard local-energy spatial cutoff pays inverse powers of a but absolute integrals can carry positive powers of a"
+  ],
+  "transfer_assumptions_and_disanalogies": [
+    {"edge":"fixed-radius compactness -> moving-radius tightness","status":"rejected by prior failure","difference_witness":"moving observation radius a_lambda->infinity is not controlled by convergence on each fixed a"},
+    {"edge":"Type-I signed-flux shear warning -> Type-II Euler-scaled atom","status":"retrieved but rejected as authority","difference_witness":"open PR #187 is noncanonical, Type-I/local, and its exact shear is outside the finite-I/global target; only the generic sign-warning is retained"},
+    {"edge":"cross-Millennium failure atlas analogues -> current PDE estimate","status":"not queried","difference_witness":"no non-Navier Millennium item was needed after the same-lane asymptotic discriminator closed; cross-problem transfer would add representation risk without a target-specific benefit"}
+  ],
+  "hard_falsifiers": [
+    "If F_lambda->infinity while a^beta F_lambda^-alpha can tend to zero for some fixed alpha,beta>0, reject the claimed obstruction.",
+    "Do not infer actual signed flux nonvanishing from failure of an absolute upper bound to vanish.",
+    "Audit full-parabolic and fixed-time localizations separately; fixed-time restriction must not be assumed to remove every positive radius power.",
+    "Pressure work may use only D_F plus a proved L3 interpolation bound; no unregistered far-field cancellation.",
+    "Do not transport a prelimit cutoff estimate to the ancient Euler state without a matching convergence/tightness theorem.",
+    "Do not use Navier-Stokes backward uniqueness after the source limit equation has changed to Euler.",
+    "Same-context expert roles give zero independent-review credit."
+  ],
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "frozen_at": "2026-08-12T03:12:00+00:00",
+  "snapshot_hash": "sha256:d76b820a4f1c065eb174b0d3d82aea816b0e650b990044244d428b9a58663bf6"
+}

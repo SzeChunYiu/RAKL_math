@@ -1,0 +1,59 @@
+{
+  "record_type": "RAKL_METHOD_CASE_STUDY",
+  "schema_version": "rakl-method-case-study-v3-proposal-shadow",
+  "case_study_id": "RAKL-METHOD-NS-B2a1b1-C001-20260812",
+  "atom_id": "NS-B2a1b1",
+  "problem_signature": {"root":"NS0","root_status":"OPEN_NO_SOLUTION_CERTIFICATE","lane":"Type-II Euler-scaling / signed prelimit flux-telescoping bypass","question":"For Seregin's logarithmic Type-II scaling f(lambda)=log(e/lambda)^(-gamma), can finite algebraic powers of the moving-radius gain F_lambda(a) pay any positive geometric cutoff debt a^beta on a local mesoscopic sequence, and do standard local-energy magnitude bounds leave such debt after full-parabolic or fixed-time localization?","allowed_outcomes":["FINITE_POWER_F_GAIN_CANNOT_PAY_POSITIVE_RADIUS_DEBT","SOURCE_VALID_VANISHING_CUTOFF_BRIDGE_FOUND","CANNOT_CHECK_SOURCE_INTERFACE"]},
+  "fibre_snapshot_hash": "sha256:d76b820a4f1c065eb174b0d3d82aea816b0e650b990044244d428b9a58663bf6",
+  "actual_fibre_ids": ["RAKL-V3-EXPERIENCE","RAKL-V3-API","RAKL-METROLOGY","RAKL-METHOD-SPECS","RAKL-TASK-EPISODE-SCHEMA","NS-ROOT-CONTRACT","NS-ISSUE-234","E-NS-B2a1a1-R1","F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH","F-NS-B2a1a2-FIXED-TO-MOVING-RADIUS-ESCAPE","F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE-SHARPENED","F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY","FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE","SEREGIN-2026-TYPEII-v1"],
+  "methods_operators_motifs_tried": {
+    "methods": ["exact source-signature binding","bounded dual-memory routing","counterexample/asymptotic-falsifier first","logarithmic coordinate normalization","source-native weighted-ledger unpacking","standard local interpolation exponent audit","pressure Hölder exponent audit","fixed-time hostile audit","local-vs-gluing failure separation","same-context expert review","saturation/method-basis audit"],
+    "operator_ids": ["OP-NS-LOG-F-GEOMETRIC-DEBT-COMPARISON","OP-NS-WEIGHTED-LEDGER-TO-CUTOFF-EXPONENT-AUDIT","OP-NS-FIXED-TIME-DEBT-STRESS-TEST"],
+    "motifs_tried": [],
+    "promoted_tools_used": []
+  },
+  "prior_experience": {
+    "selected_ids": ["E-NS-B2a1a1-R1","F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH","F-NS-B2a1a2-FIXED-TO-MOVING-RADIUS-ESCAPE","F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE-SHARPENED","F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY","FM-NS-LOCAL-TO-MOVING-SCALE-ESCAPE"],
+    "rejected_ids": ["F-NS-B1a3-LOCAL-GLOBAL-INTERFACE-MISMATCH","F-NS-B1a4-UNSIGNED-LOCAL-ENERGY-NO-SIGN","F-NS-B1a3b-DERIVATIVE-LOSS-VORTICITY-DIRECTION"],
+    "missed": "CANNOT_MEASURE: no exhaustive governed memory-universe coverage receipt was available in the application harness",
+    "successful_reuse_ids": ["E-NS-B2a1a1-R1","F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH","F-NS-B2a1a2-FIXED-TO-MOVING-RADIUS-ESCAPE"],
+    "routing_effect": "Prior moving-scale failures prevented another fixed-radius compactness transfer attempt and moved the cycle to the orthogonal signed/cutoff discriminator. The latest NS failure atlas advisory reinforced the same rotation but received zero mathematical novelty credit."
+  },
+  "decision_policy": "Attack the smallest high-information obstruction that can close an entire estimate family: prove or falsify finite-power compensation before constructing a new flux identity.",
+  "falsifier_verification": {
+    "falsifier": "Find fixed alpha,beta>0 and an admissible divergent-gain mesoscopic sequence with a^beta F^-alpha -> 0.",
+    "result": "Falsifier fails: exact inequality gives a^beta F^-alpha -> infinity.",
+    "verification": ["primary-source check of F_lambda and weighted ledger","symbolic proof of the asymptotic lemma","independent manual exponent recomputation inside same-context expert roles","bounded numerical spot checks only as calibration, not proof","hash-chain and TaskEpisode content-hash validation"]
+  },
+  "outcome": "PARTIAL_SUCCESS / FINITE_POWER_F_GAIN_CANNOT_PAY_POSITIVE_RADIUS_DEBT",
+  "residual_after": ["actual signed annular flux/telescoping cancellation not constructed","scale-neutral/debt-free flux functional not yet identified","moving-center and profile leakage not controlled","pressure correlation identity not transported through vanishing-viscosity limit","same-theory ancient Euler rigidity consumer remains open","other Type-II scenarios and Type-I route remain open","root remains OPEN_NO_SOLUTION_CERTIFICATE"],
+  "failure_category": {
+    "primary": "LOCAL_MATHEMATICAL_ESTIMATE / REPRESENTATION",
+    "local_failure": "magnitude-only cutoff bounds retain positive geometric radius debt",
+    "gluing_failure": "SEPARATE: existing moving-scale/tail/vanishing-viscosity gluing failures remain open",
+    "retrieval": "NO_NEW_FAILURE",
+    "decomposition": "NO_NEW_FAILURE",
+    "representation": "YES: unsigned magnitude representation loses cancellations and carries geometric debt",
+    "source": "NO_NEW_FAILURE; primary source exact formulas bound",
+    "verification": "NO_NEW_FAILURE within scoped result",
+    "tooling": "NO_NEW_FAILURE",
+    "meta_policy": "NO_NEW_FAILURE"
+  },
+  "seven_saturation_axes": {
+    "KNOWLEDGE":{"state":"FLAT","note":"no new literature/source fact claimed"},
+    "OPERATOR":{"state":"FLAT","note":"no new promoted operator"},
+    "EXPERIENCE_PATTERN":{"state":"FLAT","note":"no promoted pattern; one proposal lesson only"},
+    "OBSTRUCTION":{"state":"REOPENED_THEN_RESOLVED_SCOPED","note":"finite-power compensation obstruction made exact"},
+    "RELATION":{"state":"REOPENED","note":"exact growth relation log a~L versus log F=O(log L) retained"},
+    "PATH":{"state":"FLATTENED_SCOPED","note":"standard magnitude cutoff family with positive a-power pruned"},
+    "META_METHOD":{"state":"FLAT","note":"no framework method change"}
+  },
+  "novelty_class": {"class":"COMPOSITIONAL","defensible_scope":"scoped subproblem only","literature_novelty_claim":false},
+  "what_worked": "The h/L coordinate from the prior episode plus source-native unnormalization turned a broad flux question into a one-line growth-separation lemma, then exposed which cutoff terms remain impossible to close by magnitude estimates.",
+  "what_failed": "Trying to pay geometric cutoff powers by taking larger but fixed powers of the logarithmic F gain. Fixed-time localization improves some quadratic terms but does not remove cubic/pressure positive radius debt.",
+  "v3_feature_helped": ["experience-conditioned routing prevented repeating saturated fixed-to-moving compactness work","DifferenceWitness discipline prevented treating estimate failure as signed-flux nonvanishing","episode/diagnosis/obstruction separation kept route evidence from becoming theorem authority","seven-axis saturation forced the successor to change representation rather than optimize exponents inside a flattened path"],
+  "v3_feature_missing_or_limited": "The application harness still does not materialize a canonical RAKLV3State or expose authoritative token/context/wall-time counters; memory-recall completeness is also not machine-certified.",
+  "framework_improvement_hypothesis": "Add a proposal-only 'asymptotic debt signature' field/operator to routing: normalize candidate bounds as scale-debt monomials (or slowly varying factors) before costly proof search, and automatically flag when a source gain is asymptotically incapable of paying the registered debt. This should remain search guidance until fresh-transfer validation.",
+  "repeated_process_failures_linkage": "NONE_NEW. Prior trace-schema and framework-drift process failures were not repeated in this cycle.",
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}

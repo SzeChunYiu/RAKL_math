@@ -1,0 +1,18 @@
+{
+  "schema_version": "same-context-expert-cell-v3-proposal-shadow",
+  "atom_id": "NS-B2a1b1",
+  "fibre_snapshot_hash": "sha256:d76b820a4f1c065eb174b0d3d82aea816b0e650b990044244d428b9a58663bf6",
+  "independent_review_credit": "0/3",
+  "roles": [
+    {"role":"Type-II/Seregin source analyst","finding":"Bounded the producer to Seregin v1 (1.7),(2.2),(2.7),(2.9),(2.10). The logarithmic example has fixed-a limit F(a)=1, so any divergent gain is necessarily prelimit and moving-radius."},
+    {"role":"asymptotic/scaling analyst","finding":"With L=log(e/lambda), h=L-log a and F=(L/h)^gamma, F->infinity forces h/L->0. Therefore log a=L-h~L while log F<=gamma log L; every fixed positive a-power dominates every fixed finite F-power."},
+    {"role":"local-energy/cutoff analyst","finding":"From A<=MF^-2 and E<=MF^-1, the standard ball interpolation gives full-parabolic cubic cutoff debt O(a F^-9/4) and, on a fixed time interval, a surviving O(a^1/2 F^-9/4) term. Fixed time does not remove all positive geometric debt."},
+    {"role":"pressure/Lorentz analyst","finding":"Using only D<=MF^-2 and the same L3 bound, the absolute pressure-work cutoff has positive radius debt: full-parabolic O(a F^-25/12); fixed-time leading terms include O(a^5/6 F^-25/12) and O(a^1/3 F^-7/3). No far-field cancellation is licensed."},
+    {"role":"concentration-compactness/gluing analyst","finding":"The result is prelimit estimate architecture only. It neither passes to the ancient Euler limit nor controls moving centers/tails; those remain separate gluing obligations."},
+    {"role":"adversarial falsifier","finding":"Checked the strongest possible logarithmic gain allowed by h>=1: F<=L^gamma. In the divergent-gain window log a~L, so no choice of fixed alpha,beta>0 makes a^beta/F^alpha vanish. This directly falsifies the hoped-for magnitude-only compensation."},
+    {"role":"RAKL metrology/authority analyst","finding":"Classified the result as scoped route pruning, kept episode/diagnosis/obstruction distinct, assigned zero independent-review and root authority, and counted only obstruction/relation semantic retention."}
+  ],
+  "consensus": "FINITE_POWER_F_GAIN_CANNOT_PAY_POSITIVE_RADIUS_DEBT / MAGNITUDE_ONLY_STANDARD_CUTOFF_ROUTE_PRUNED / SIGNED_OR_DEBT_FREE_CANCELLATION_STILL_OPEN",
+  "authority": "SAME_CONTEXT_ONLY",
+  "reviewed_at": "2026-08-12T03:12:00+00:00"
+}
