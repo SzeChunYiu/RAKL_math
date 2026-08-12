@@ -1,0 +1,31 @@
+{
+  "artifact_hash": "sha256:7981ea7c0bba7be7e9fc40c8e532c9e790700bea4c9e4dcd0830ae4f2471c7b3",
+  "historical_preaction_subject_base_commit": "b7ca6ac51fa8319b559e95402c47959c626f284a",
+  "mathematical_credit": false,
+  "round_branch_base_commit": "cc39c7a2553c2e20aa7103652d1429675164016b",
+  "schema_version": "1.0.0",
+  "snapshot_id": "PNP-C052-TOOL-SNAPSHOT-20260812",
+  "target_atom_id": "O9d12a2a1b-C052",
+  "tools": [
+    {
+      "guarantees": [
+        "one proved unequal coordinate certifies disjointness only on the exact class"
+      ],
+      "non_guarantees": [
+        "no fixed coordinate, residue, or class transfers automatically",
+        "no UNSAT, overlap, cover, or root authority"
+      ],
+      "operation": "prove one universal unequal coordinate only after exact target support and alignment are established",
+      "preconditions": [
+        "explicit support domain",
+        "exact cut phase",
+        "universal bit forcing on the claimed class"
+      ],
+      "successful_bounded_reuse": [
+        "C050-k15",
+        "C051-k19-retrospective"
+      ],
+      "tool_id": "T-PNP-C049-K12-FIXED-BIT-SEPARATION"
+    }
+  ]
+}

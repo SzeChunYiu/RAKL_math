@@ -1,0 +1,47 @@
+{
+  "artifact_hash": "sha256:589583f4f1ec73a4a85c9fa60c2cfb9032037fcaf468951ed6b840e3fa3aea73",
+  "candidate_method_families": [
+    "piecewise Diophantine support classifier",
+    "modular suffix-phase and forced-coordinate classifier",
+    "synchronized code-language product with semantic UNSAT filter deferred",
+    "blind next-k scan (negative control only)"
+  ],
+  "cross_problem_coverage_receipt_hash": "",
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/07_memory/O9d12a2a1b_C052_FAILURE_SNAPSHOT_20260812.json",
+    "research/real_math/millennium/p_vs_np/01_frontier/O9d12a2a1b_C052_SOURCE_METHOD_TRANSFER_PACKET_20260812.json",
+    "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_PARAMETRIC_RESIDUE_PRE_ACTION_20260812.json@blob:70a8e8b2c7fef20ec6a2734c85ba5d809caa1ad4"
+  ],
+  "failure_lattice_snapshot_hash": "sha256:65c71bad392c0c7296d8b4e4f1970ca8e49578ed8c5a894068fcb533cd6cd53c",
+  "failure_query_status": "MATCHES_FOUND",
+  "failure_reuse_notes": [
+    "The exact DifferenceWitness against C050 converts k=15 into a mandatory regression world and preserves escape/unresolved branches.",
+    "The exact DifferenceWitness against C051 converts k=19 into a separate mandatory regression world; retrospective verification supplies no prospective target-selection credit.",
+    "Both executable assessments are DIFFERENCE_WITNESSED; neither asserts that any unexamined class escapes the old falsifier."
+  ],
+  "relevant_failure_ids": [
+    "F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC",
+    "F-PNP-C051-K19-FIXED-VARIABLE-BIT-VERSUS-MAGIC"
+  ],
+  "relevant_tool_ids": [
+    "T-PNP-C049-K12-FIXED-BIT-SEPARATION"
+  ],
+  "selected_tool_ids": [
+    "T-PNP-C049-K12-FIXED-BIT-SEPARATION"
+  ],
+  "target_atom_id": "O9d12a2a1b-C052",
+  "target_context_hash": "sha256:9d40561c8b60531e1b424dc0daa66f308a000e76154d36295c91836004dce125",
+  "tool_applicability_notes": [
+    "A proved forced unequal coordinate can certify a scoped disjointness class only after support, phase, and universal bit forcing are proved on that exact class.",
+    "C050 and C051 show successful bounded reuse of the coordinate-first operation but do not promote any fixed coordinate or residue to a universal tool."
+  ],
+  "tool_inventory_snapshot_hash": "git:b7ca6ac51fa8319b559e95402c47959c626f284a:C049_FIXED_BIT_TOOL_WITH_C050_C051_REUSE_RECORDS",
+  "tool_query_status": "MATCHES_FOUND",
+  "unresolved_warnings": [
+    "No support-phase class beyond the two parent regression worlds has been classified.",
+    "No new k, target residue, forced coordinate, or escape class has been selected.",
+    "Syntax classification cannot establish canonical UNSAT or overlap.",
+    "K13 remains excluded from prospective design and certification.",
+    "Same-context roles are not independent peer review."
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "analogy_scan_notes": "One phase-alignment analogy survives only as a proposal for search organization and a hostile validation obligation.",
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "atom_id": "O9d12a2a1b-C052",
+  "cross_domain_analogies": [
+    {
+      "common_abstraction": [
+        "variable-width periodic block",
+        "moving cut",
+        "fixed comparison mask",
+        "phase-indexed conflict"
+      ],
+      "disanalogies": [
+        "the arithmetic code also has gamma headers, padding, and an UNSAT side condition",
+        "the analogy supplies no support theorem, forced bit, or overlap result"
+      ],
+      "proposed_principle": "index the search by exact phase cells and preserve a hostile escape branch",
+      "provenance_note": "proposal-only engineering analogy; zero theorem authority",
+      "shared_constraints": [
+        "phase rather than coarse length controls the local interface",
+        "one conflicting coordinate rules out exact synchronization",
+        "different widths require separate residue accounting"
+      ],
+      "source_kind": "engineering / cyclic conveyor alignment",
+      "source_situation": "Items with variable-width repeating slots cross a fixed inspection mask; two observed collisions motivate tracking slot phase, but every claimed class still needs its own phase-domain proof",
+      "source_to_target_mapping": [
+        "slot width -> literal-token width 1+a",
+        "cut position -> suffix start k",
+        "inspection mask -> current MAGIC prefix",
+        "item class -> exact parent/current support cell"
+      ],
+      "validation_obligation": "a later frozen falsifier must reject universality upon any supported cell without a proved forced conflict"
+    }
+  ],
+  "equivalent_formulations": [
+    "piecewise affine support equations plus congruences inside fixed (a,b,a_plus,b_plus) cells",
+    "intersection impossibility via one universally forced suffix-label/MAGIC disagreement",
+    "escape admissibility when the exact support system survives but no forced conflict is proved",
+    "three-way classifier: FORCED_CONFLICT, ESCAPE_ADMISSIBLE, or UNRESOLVED, with CANNOT_CHECK preserved"
+  ],
+  "explicit_disanalogies": [
+    "C050 and C051 are bounded cases, not induction bases",
+    "support and phase classification is not an overlap theorem or a proof of canonical UNSAT",
+    "a forced conflict may depend on actual variable-code ranges, not phase alone",
+    "an escape-admissible cell is not an overlap witness",
+    "the fixed k=13 contaminated branch remains excluded from prospective design and certification",
+    "no classifier result is accessed or selected in this round",
+    "no finite or parametric code lemma is a cover lower bound, circuit lower bound, or P-versus-NP result"
+  ],
+  "first_candidate_at": null,
+  "frozen_at": "2026-08-12T10:35:00Z",
+  "method_transfers": [
+    {
+      "disanalogies": [
+        "bit-length cells vary with a and b, so one global affine equation is insufficient",
+        "a phase match or mismatch is syntactic and does not establish canonical UNSAT",
+        "an algebraically allowed support tuple need not realize an overlap label"
+      ],
+      "method": "within each bit-length cell, rewrite the exact canonical length equation as an affine support constraint and compute the suffix start modulo the literal-token width before any instance choice",
+      "repair_question": "Can a later target-blind classifier partition the exact support cells by suffix phase and forced MAGIC conflict while retaining escape and unresolved branches?",
+      "required_assumptions": [
+        "a=bit_length(v), b=bit_length(m), and their range constraints remain explicit",
+        "support feasibility may depend only on a,b,m, but every forced variable-code bit claim quantifies v and every legal literal index separately inside the bit-length cell",
+        "padding is the exact parity bit p=R mod 2 rather than an independent choice",
+        "parent and current support variables are not silently identified",
+        "no fixed-instance evidence is promoted to a universal class"
+      ],
+      "shared_structure": [
+        "R=6+2a+2b+3m(1+a) and E=R+(R mod 2)",
+        "parent support is E=2k and current support is E'=2(k+1)",
+        "payload tokens have width 1+a and the suffix begins at word coordinate k",
+        "a fixed MAGIC prefix supplies comparison bits independently of UNSAT semantics"
+      ],
+      "source_anchors": [
+        "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+        "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_PARAMETRIC_RESIDUE_PRE_ACTION_20260812.json@blob:70a8e8b2c7fef20ec6a2734c85ba5d809caa1ad4"
+      ],
+      "source_context": "fixed-cell linear Diophantine support and modular word phase"
+    },
+    {
+      "disanalogies": [
+        "the parent clause counts differ: m=3 versus m=4",
+        "current support branches and encoded lengths differ",
+        "two repeated instances do not determine every residue or bit-length cell",
+        "C051 supplies retrospective mathematical verification, not prospective discovery credit"
+      ],
+      "method": "retain the two proved fixed-level failures as mandatory regression worlds for a symbolic support-phase classifier, not as induction bases for a universal theorem",
+      "repair_question": "Which exact support/phase cells inherit a forced conflict, and which cells remain escape-admissible or unresolved without selecting a new k?",
+      "required_assumptions": [
+        "C050 remains scoped to k=15 and C051 to k=19",
+        "the classifier must reproduce both exact phase/conflict records",
+        "a new class claim must quantify all support variables in its stated domain"
+      ],
+      "shared_structure": [
+        "both levels use the unchanged C041 canonical long form and equal split",
+        "both suffix labels meet the fixed current MAGIC prefix",
+        "both failures arise before UNSAT semantics from a forced variable-code bit"
+      ],
+      "source_anchors": [
+        "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:f3eaad2496e80aa64b8081868021cc1a89304ef2",
+        "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C051_K19_PROOF_RESULT_20260812.json@blob:6bed55d3eb101ff165a72883adb89601d0345c39"
+      ],
+      "source_context": "C050 and C051 exact fixed-level forced-coordinate separations"
+    }
+  ],
+  "near_solved_analogues": [
+    "semilinear language intersections with piecewise bit-length constraints",
+    "variable-width word-border problems with a non-regular semantic UNSAT filter"
+  ],
+  "object_context": "The exact C041 canonical-code support relation and suffix/prefix interface, represented symbolically by parent and current bit-length cells, clause counts, parity padding, equal half-length k, and the suffix-start phase within width-(1+a) literal tokens; no new k is selected.",
+  "packet_hash": "sha256:9d40561c8b60531e1b424dc0daa66f308a000e76154d36295c91836004dce125",
+  "solved_analogues": [
+    "linear Diophantine support and congruence classification inside one fixed bit-length cell",
+    "finite cyclic phase tracking for concatenations of fixed-width tokens",
+    "C050 k=15 and C051 k=19 exact forced-coordinate regression worlds"
+  ],
+  "source_anchors": [
+    "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1",
+    "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_PARAMETRIC_RESIDUE_PRE_ACTION_20260812.json@blob:70a8e8b2c7fef20ec6a2734c85ba5d809caa1ad4",
+    "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:f3eaad2496e80aa64b8081868021cc1a89304ef2",
+    "git:b7ca6ac51fa8319b559e95402c47959c626f284a:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C051_K19_PROOF_RESULT_20260812.json@blob:6bed55d3eb101ff165a72883adb89601d0345c39"
+  ],
+  "structural_coordinates": [
+    "v,m,k are positive integers; a=bit_length(v), b=bit_length(m)",
+    "2^(a-1)<=v<=2^a-1 and 2^(b-1)<=m<=2^b-1",
+    "header H(a,b)=6+2a+2b and literal-token width w(a)=1+a",
+    "raw length R(a,b,m)=H(a,b)+3m w(a)",
+    "padding p(a,b,m)=R(a,b,m) mod 2 in {0,1}; encoded length E=R+p",
+    "parent support E(a,b,m)=2k; current support E(a_plus,b_plus,m_plus)=2(k+1)",
+    "parent suffix-start phase phi_c0=(k-H(a,b)) mod w(a) is the token phase of c[0]=x[k], equivalently h[1]; phase 0=sign and phases 1..a=variable-code bits",
+    "label h[0]=1 is prepended and has no parent-token phase; for j>=1, h[j]=x[k+j-1] has token phase (phi_c0+j-1) mod w(a)",
+    "although E depends on v only through a, a forced-bit class must quantify every v with 2^(a-1)<=v<=2^a-1 and every legal literal index and sign in every canonical parent word; the analogous rule holds for v_plus",
+    "every current canonical prefix begins with MAGIC=11100101, so p[j]=MAGIC[j] for 0<=j<=7",
+    "a conflict class requires an explicitly quantified coordinate j and forced unequal bits on every canonical parent/current word in the claimed support cell"
+  ]
+}
