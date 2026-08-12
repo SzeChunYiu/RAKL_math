@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[5]
 BASE = "research/real_math/millennium/riemann_hypothesis"
 OUTPUT = ROOT / BASE / "09_trace/RH_ANA_003j_MODULUS_SOURCE_DISCRIMINATOR_FREEZE_20260812.json"
 APPLICATION_BASE_SHA = "f0c20a3126c61effc8defbbb66f6e9306f349ad8"
-FRAMEWORK_LIVE_SHA = "ea607c8cd8e4fd308ea9a4e024d8c93ff87f5fda"
+FRAMEWORK_LIVE_SHA = "6756ebec40b90f327d879410539f5146e188f34d"
 FRAMEWORK_REVIEW_BASE_SHA = "09f524ae"
 FROZEN_AT = "2026-08-12T12:26:00Z"
 
@@ -74,8 +74,17 @@ def build() -> dict:
             "intervening_paths": [
                 "research/empirical_10_of_10_v1/PAPER3/DOWNSTREAM/ROUTING_REGISTRATION_V1.md",
                 "research/empirical_10_of_10_v1/PAPER3/OBJECTIVE/ROBUSTNESS_REGISTRATION_V1.md",
+                "publication/papers/paper-01-epistemic-mechanics/main.tex",
+                "publication/papers/paper-01-epistemic-mechanics/sections/02d_projection_sufficiency.tex",
+                "research/paper1_adversarial_epistemic_benchmark_v1/COMPARATOR_MODELS.md",
+                "research/paper1_adversarial_epistemic_benchmark_v1/FORMAL_TO_EXECUTABLE_MATRIX.md",
+                "research/paper1_adversarial_epistemic_benchmark_v1/PROJECTION_SUFFICIENCY_RESULT_V1.json",
+                "research/paper1_adversarial_epistemic_benchmark_v1/PROTOCOL.md",
+                "scripts/paper1_projection_sufficiency.py",
+                "src/rakl/epistemic_projection_benchmark.py",
+                "tests/test_epistemic_projection_benchmark.py",
             ],
-            "classification": "PAPER3_REGISTRATION_ONLY_NO_MATHEMATICAL_GATE_CHANGE",
+            "classification": "PAPER1_PROJECTION_AND_PAPER3_REGISTRATION_ONLY_NO_MATHEMATICAL_GATE_CHANGE",
             "application_gitlink_edited": False,
             "grants_mathematical_authority": False,
         },

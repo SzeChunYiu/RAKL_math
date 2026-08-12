@@ -71,7 +71,16 @@ def test_all_parent_bindings_match_bytes_and_observed_framework_drift_is_scoped(
     assert record["framework_authority"]["intervening_paths"] == [
         "research/empirical_10_of_10_v1/PAPER3/DOWNSTREAM/ROUTING_REGISTRATION_V1.md",
         "research/empirical_10_of_10_v1/PAPER3/OBJECTIVE/ROBUSTNESS_REGISTRATION_V1.md",
+        "publication/papers/paper-01-epistemic-mechanics/main.tex",
+        "publication/papers/paper-01-epistemic-mechanics/sections/02d_projection_sufficiency.tex",
+        "research/paper1_adversarial_epistemic_benchmark_v1/COMPARATOR_MODELS.md",
+        "research/paper1_adversarial_epistemic_benchmark_v1/FORMAL_TO_EXECUTABLE_MATRIX.md",
+        "research/paper1_adversarial_epistemic_benchmark_v1/PROJECTION_SUFFICIENCY_RESULT_V1.json",
+        "research/paper1_adversarial_epistemic_benchmark_v1/PROTOCOL.md",
+        "scripts/paper1_projection_sufficiency.py",
+        "src/rakl/epistemic_projection_benchmark.py",
+        "tests/test_epistemic_projection_benchmark.py",
     ]
-    assert record["framework_authority"]["classification"] == "PAPER3_REGISTRATION_ONLY_NO_MATHEMATICAL_GATE_CHANGE"
+    assert record["framework_authority"]["classification"] == "PAPER1_PROJECTION_AND_PAPER3_REGISTRATION_ONLY_NO_MATHEMATICAL_GATE_CHANGE"
     assert record["framework_authority"]["grants_mathematical_authority"] is False
     assert record["framework_authority"]["application_gitlink_edited"] is False
