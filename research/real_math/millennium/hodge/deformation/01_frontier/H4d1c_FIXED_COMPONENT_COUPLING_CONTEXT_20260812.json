@@ -1,0 +1,36 @@
+{
+  "atom_id": "H4d1c-b",
+  "parent_obstruction_id": "H4d1c-INDEPENDENT-HODGE-TO-WITNESS-TANGENT-SURJECTIVITY-MECHANISM",
+  "exact_root_contract": "For every smooth projective complex algebraic variety X and codimension p, every rational Hodge class of type (p,p) in H^{2p}(X,Q) lies in the Q-span of codimension-p algebraic cycle classes.",
+  "question": "Can coefficient-preserving simultaneous packaging of a fixed finite signed rational witness by a fibre product of its selected component witness spaces create new first-order base directions and thereby repair the total-class/componentwise cancellation gap?",
+  "scope": [
+    "smooth projective complex family; fixed local Hodge-locus branch T through s0",
+    "central rational signed witness already algebraic and denominator-cleared; selected component identities are fixed",
+    "local scheme/algebraic-space witness charts pi_i:W_i->T at complex points w_i over s0; ordinary dual-number tangent spaces",
+    "first-order only; the proposed coupled object is exactly the fibre product W^x = W_1 x_T ... x_T W_m with its common base projection",
+    "no claim about a global fine Chow moduli space, stacky tangent automorphisms, rational-equivalence moduli, changing decompositions, component splitting/collision, higher Artin orders, algebraization, monodromy, degeneration, globalization, or initial algebraicity"
+  ],
+  "candidate_transfer": "Replace separate component witness problems by their coefficient-preserving fibre product over T, hoping that the coupled object has a larger tangent image in T than the individual component images and can cover total-class Hodge directions lost to cancellation.",
+  "precommitted_falsifier": "Using dual-number tangent definitions and the fibre-product universal property, prove or refute im(d pi^x_w)=intersection_i im(d pi_i,w_i). Equality would show that bookkeeping coupling creates no new base tangent directions.",
+  "solved_positive_controls": [
+    "codimension-one Picard/line-bundle geometry, where a denominator-cleared divisor class can be represented by a genuinely different single object rather than a fixed tuple of components",
+    "Kloosterman complete-intersection hypersurface geometry, where source-specific flag-Hilbert incidence plus Hodge-locus tangent/dimension control supplies an actual geometric mechanism"
+  ],
+  "transfer_disanalogies": [
+    "a fibre-product tuple only synchronizes already available component lifts over one base direction",
+    "H4d1c-a's total cohomological Hodge condition can exhibit cancellation across components and therefore can be strictly weaker than simultaneous componentwise Hodge persistence",
+    "a genuinely coupled moduli object may permit changing decomposition, correspondences, extensions, or a single-object representation not factoring through fixed component charts",
+    "first-order tangent reachability does not imply higher-order formal lifting or algebraization"
+  ],
+  "actual_fibre_manifest_hash": "sha256:0e6303bda14de60ade661ef49916c6de26287cc0d58c0f5402739c013060f410",
+  "framework": {
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "live_main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0"
+  },
+  "rakl_math_base_sha": "e5f50a1dc5c20bee7cfc3c3d6edf980d5cc72e1c",
+  "rakl_math_pre_tree_fingerprint": "5d1421b6c0c5b49739f04ec089014630f8198fd5",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "frozen_at": "2026-08-12T01:06:56+00:00",
+  "packet_hash": "sha256:545b546d4394368b90e60d45e827e3b3bd9ef109000cde5af5aec95f1874d1ca"
+}
