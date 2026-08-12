@@ -1,0 +1,44 @@
+{
+  "schema_version": "research-memory-review-v3-proposal-shadow",
+  "target_atom_id": "NS-B2a1a1",
+  "target_context_hash": "sha256:1e8c94dfeb38cd42b7dd3d9bad9233529fb2e6ea46730e57ccedeebfe3074373",
+  "retrieved": {
+    "failure_ids": [
+      "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY",
+      "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE",
+      "F-NS-B2a1c-F1-AXIAL-44-EXPONENT-INCOMPATIBLE",
+      "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER"
+    ],
+    "success_episode_ids": [],
+    "tool_ids": [],
+    "motif_ids": []
+  },
+  "selected": {
+    "failure_ids": [
+      "F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY",
+      "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE"
+    ],
+    "success_episode_ids": [],
+    "tool_ids": [],
+    "motif_ids": []
+  },
+  "rejected": [
+    {
+      "id": "F-NS-B2a1c-F1-AXIAL-44-EXPONENT-INCOMPATIBLE",
+      "why": "same source but specialized Section-4 F=1 consumer mismatch; it does not determine prelimit F_lambda moving-radius behavior"
+    },
+    {
+      "id": "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER",
+      "why": "structurally suggestive scale-neutrality warning, but Type-I ancient Navier-Stokes context differs from vanishing-viscosity Type-II Euler scaling; DifferenceWitness blocks load-bearing transfer"
+    }
+  ],
+  "routing_effect": [
+    "Absolute-cutoff failure deprioritizes another raw unsigned flux magnitude estimate.",
+    "Double-limit-tail failure makes the fixed-a versus moving-a quantifier the first discriminator.",
+    "No prior success/tool closes the target; experience changes search priority only."
+  ],
+  "missed_memory": "CANNOT_MEASURE: no governed exhaustive repository-wide coverage receipt was materialized in this run",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "frozen_at": "2026-08-12T00:32:50Z",
+  "artifact_hash": "sha256:90ef495abff1d5e3c7260202a2643e480b4311572a02a81de057f77b27de7afa"
+}

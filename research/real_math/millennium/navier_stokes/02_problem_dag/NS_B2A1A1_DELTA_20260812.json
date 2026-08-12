@@ -1,0 +1,28 @@
+{
+  "schema_version": "problem-dag-delta-v3-proposal-shadow",
+  "atom_id": "NS-B2a1a1",
+  "parent": "NS-B2a1a",
+  "status": "SCOPED_SUBPROBLEM_SOLVED_RESIDUAL_OPEN",
+  "scoped_resolution": [
+    "For logarithmic f, exact moving-scale gain is characterized by h_lambda/L_lambda->0.",
+    "There is a nonempty local mesoscopic regime 1<<h_lambda<<L_lambda giving normalized A,E,D smallness.",
+    "The cited fixed-radius compactness does not, as stated, transfer this moving-radius gain; no rate-compatible bridge was established.",
+    "Unit-viscosity epsilon-regularity cannot be silently imported because scaled viscosity f(lambda)->0."
+  ],
+  "closed_route_edges": [
+    {"edge":"fixed-power interior radius -> asymptotically divergent F_lambda gain","status":"PRUNED","reason":"F_lambda(lambda^-theta)->(1-theta)^(-gamma) for fixed theta<1"},
+    {"edge":"(2.9) mesoscopic normalized smallness + fixed-a convergence -> ancient Euler global tail tightness","status":"NOT_ESTABLISHED_FROM_SOURCE_AS_STATED","reason":"moving-radius/fixed-radius quantifier mismatch and no compatible rate"}
+  ],
+  "open_obligations": [
+    {"id":"NS-B2a1a2","statement":"RATE_COMPATIBLE_MESOSCOPIC_COMPACTNESS_OR_TIGHTNESS: establish a source-valid moving-radius compactness/tightness bridge on 1<<h<<L, with pressure and vanishing-viscosity audits."},
+    {"id":"NS-B2a1b","statement":"SIGNED_EULER_FLUX_TELESCOPING remains an orthogonal bypass candidate."},
+    {"id":"NS-B2a1-global","statement":"exact source-valid global Euler rigidity consumer remains open."}
+  ],
+  "new_failure_ids": ["F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH", "F-NS-B2a1a1-PROCESS-TRACE-SCHEMA-NONCONFORMANCE"],
+  "new_obstruction_ids": ["O-NS-B2a1a1-MESOSCOPIC-FIXED-COMPACTNESS"],
+  "new_lesson_ids": ["L-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS"],
+  "new_episode_ids": ["E-NS-B2a1a1-R1"],
+  "novelty_class": "representation",
+  "root": {"id":"NS0","status":"OPEN_NO_SOLUTION_CERTIFICATE","independent_reviews":"0/3"},
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}

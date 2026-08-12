@@ -1,0 +1,18 @@
+{
+  "schema_version": "hash-chained-research-trace-v3-proposal-shadow-continuation",
+  "atom_id": "NS-B2a1a1",
+  "continued_from_head": "sha256:794eff63962c6d3362ae48b9afb39f467fa20d81433f148439eebf0e7881f187",
+  "events": [
+    {"seq":9,"event":"CANDIDATE_PROPOSED","payload":{"candidate":"NS-B2a1a1_LOG_MESOSCOPIC_WINDOW_AUDIT","authority":"PROPOSAL_SHADOW_ONLY","generation_credit":"NONE_PRE_FREEZE_OBSERVATION_VERIFICATION_ONLY"},"prev_hash":"sha256:794eff63962c6d3362ae48b9afb39f467fa20d81433f148439eebf0e7881f187","event_hash":"sha256:cf35bdfecccbca8f9b41959149900970289bfd5f91f30bf990311caa0ccdf372"},
+    {"seq":10,"event":"FALSIFIER_RUN","payload":{"checks":["fixed-power theta<1","absolute-vs-normalized L2 bound","fixed-vs-moving convergence","vanishing-viscosity epsilon shortcut","pressure/signed-flux interface"],"verdict":"SURVIVED_ALGEBRA_BUT_GLOBAL_TRANSFER_BLOCKED"},"prev_hash":"sha256:cf35bdfecccbca8f9b41959149900970289bfd5f91f30bf990311caa0ccdf372","event_hash":"sha256:415ab6a881e049f6bf9fb246aba48309b111aa766ab6e2f8f560cc9372f5e649"},
+    {"seq":11,"event":"RESULT_RECORDED","payload":{"outcome":"MESOSCOPIC_WINDOW_IDENTIFIED_COMPACTNESS_GAP_PERSISTS","audit_commit":"21985a5ea98fa1a4eb6ab193f9d82bbba94d2975"},"prev_hash":"sha256:415ab6a881e049f6bf9fb246aba48309b111aa766ab6e2f8f560cc9372f5e649","event_hash":"sha256:aa507c73317c48f9c4147f907957ac7fbbc6d8076a25950891816b57b8a64312"},
+    {"seq":12,"event":"RESIDUAL_OPENED","payload":{"residual":"F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH","next":"NS-B2a1a2 or NS-B2a1b"},"prev_hash":"sha256:aa507c73317c48f9c4147f907957ac7fbbc6d8076a25950891816b57b8a64312","event_hash":"sha256:08380b670741885c4188835e9fd66e34f607410df9f6623795bbadf9df6f4392"},
+    {"seq":13,"event":"NOVELTY_CHECKED","payload":{"novelty_class":"representation","literature_novelty":false,"seven_axes":{"KNOWLEDGE":1,"OPERATOR":0,"EXPERIENCE_PATTERN":1,"OBSTRUCTION":1,"RELATION":1,"PATH":1,"META_METHOD":0}},"prev_hash":"sha256:08380b670741885c4188835e9fd66e34f607410df9f6623795bbadf9df6f4392","event_hash":"sha256:be87ca5ca5fd2ad604f5419626485732dced5c66c876bcf35d4dd896ddd94ba0"},
+    {"seq":14,"event":"REVIEWED","payload":{"same_context_expert":"SCOPED_ROUTE_REFINEMENT_ONLY","independent_credit":"0/3","root":"OPEN_NO_SOLUTION_CERTIFICATE"},"prev_hash":"sha256:be87ca5ca5fd2ad604f5419626485732dced5c66c876bcf35d4dd896ddd94ba0","event_hash":"sha256:e0eefc5f630c373e0c95f151edafb103a403a17369f5073f125a1ab6f4f4f0d2"},
+    {"seq":15,"event":"RESULT_RECORDED","payload":{"process_failure":"F-NS-B2a1a1-PROCESS-TRACE-SCHEMA-NONCONFORMANCE","canonical_trace_credit":"FAIL_CLOSED"},"prev_hash":"sha256:e0eefc5f630c373e0c95f151edafb103a403a17369f5073f125a1ab6f4f4f0d2","event_hash":"sha256:19742d0cc93f84eea54c781e9519f3e1e38260bf9fddf8f019c4a1da536485e7"}
+  ],
+  "head_hash": "sha256:19742d0cc93f84eea54c781e9519f3e1e38260bf9fddf8f019c4a1da536485e7",
+  "canonical_schema_audit": {"status":"FAIL_CLOSED","reason":"the prospective custom pre-candidate trace was not validated against the exact current ResearchTraceEntry dataclass schema before candidate work; this continuation preserves chronology but does not backfill procedural authority"},
+  "recorded_at": "2026-08-12T00:39:16Z",
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}
