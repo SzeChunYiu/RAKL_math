@@ -1,0 +1,132 @@
+{
+  "review_id": "OTR-YM-S1a2i-K1-D001-20260812",
+  "target_atom_id": "YM-S1a2i-K1-D001",
+  "target_context_hash": "sha256:35b646d79a98d7255b0c2a9f60bfb582e1f8dbeaae3218f9c7225cd902b2aec0",
+  "research_memory_review_hash": "sha256:cca9beb37c11976703debef874bf8cead91b99f9e8332c65198dc5496a63fca1",
+  "episode_memory_snapshot_hash": "sha256:74ee94bc7ecf7f6dc1693e50b773d4164edbce68bd80bc8b591ad43af274156f",
+  "obstruction": {
+    "obstruction_id": "OBS-YM-K1-D001-JOINT-APPLICABILITY",
+    "domain": "Yang-Mills polymer RG source applicability",
+    "roles": [
+      "Lemma 40.3 admissible K ball",
+      "Lemma 40.3 forcing term",
+      "Theorem 40.5 chosen graph ball",
+      "beta-flow lower factor",
+      "next-scale graph radius"
+    ],
+    "relations": [
+      "the one-step contraction may be invoked only inside its proved domain",
+      "the contracted-plus-forced upper bound must not exceed the next-scale lower radius"
+    ],
+    "constraints": [
+      "0<rho<1",
+      "uniformity in k",
+      "exact ||.||_k to ||.||_{k+1} transport",
+      "no reinterpretation of source constants",
+      "future thresholds frozen before evaluation"
+    ],
+    "failure_mechanisms": [
+      "chosen c_K ball may exceed C_dom ball",
+      "factor-two comparison leaves coefficient 1+rho rather than one"
+    ],
+    "invariants_to_preserve": [
+      "source theorem quantifiers",
+      "scale-indexed norm scope",
+      "historical candidate chronology",
+      "open root status"
+    ],
+    "desired_transition": [
+      "establish or reject domain-radius compatibility",
+      "only after compatibility, establish or reject exact scalar flow margin"
+    ],
+    "forbidden_losses": [
+      "shrinking the graph ball after outcome access",
+      "inventing separate constants without derivation",
+      "claiming mass gap authority"
+    ]
+  },
+  "direct_search_status": "NO_VIABLE_MATCH",
+  "jump_search_status": "NO_VIABLE_MATCH",
+  "glue_search_status": "NO_VIABLE_MATCH",
+  "selected_mode": "CANNOT_CHECK",
+  "direct_candidate_episode_ids": [
+    "EP-YM-K1-C001-ABSTRACT-SCALAR-MARGIN"
+  ],
+  "direct_mapping_witnesses": [
+    {
+      "witness_id": "MAP-YM-K1-D001-ABSTRACT-MARGIN",
+      "episode_id": "EP-YM-K1-C001-ABSTRACT-SCALAR-MARGIN",
+      "target_obstruction_id": "OBS-YM-K1-D001-JOINT-APPLICABILITY",
+      "role_mapping": [
+        [
+          "abstract input ball",
+          "Wilson Lemma 40.3 admitted ball"
+        ],
+        [
+          "abstract graph radius",
+          "Theorem 40.5 c_K graph radius"
+        ],
+        [
+          "abstract lower flow factor",
+          "L(g)=1-b_0g^2-C_beta g^4"
+        ]
+      ],
+      "shared_relations": [
+        "the one-step upper bound must be valid on the entire input ball before it can be compared with the next lower radius"
+      ],
+      "shared_constraints": [
+        "0<rho<1",
+        "fixed constants",
+        "same k-to-k+1 norm transport"
+      ],
+      "precondition_mapping": [
+        [
+          "estimate valid on full input ball",
+          "UNPROVED: c_K<=C_dom"
+        ],
+        [
+          "jointly applicable constants",
+          "PARTIAL: named but not jointly applicable on chosen ball"
+        ],
+        [
+          "nonnegative lower factor",
+          "DEFERRED: not evaluated in this packet"
+        ]
+      ],
+      "unmatched_source_preconditions": [
+        "proof that c_K<=C_dom or equivalent contraction validity on the chosen graph ball"
+      ],
+      "disanalogies": [
+        "the abstract episode assumes its domain premise; the source application is precisely missing that premise"
+      ],
+      "target_validation_obligations": [
+        "derive C_dom and C_force separately without reinterpretation",
+        "test 4C_force/(1-rho)<=C_dom",
+        "only after a pass, freeze and test the exact L(g)^2 margin"
+      ],
+      "evidence_pointers": [
+        "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_K1_D001_WILSON_SOURCE_APPLICABILITY_AUDIT_20260812.json",
+        "sha256:6b50b477bbf914715c000f6fbd28346e7b733a4af4174598395fea3e79b7a71a",
+        "sha256:74ee94bc7ecf7f6dc1693e50b773d4164edbce68bd80bc8b591ad43af274156f"
+      ],
+      "artifact_hash": "sha256:994b0c8997a0adf1560805eead9bf4ff6d5a1bd35fc82e8a80396c22e002daad"
+    }
+  ],
+  "jump_mapping_witnesses": [],
+  "glue_witness": null,
+  "selected_episode_ids": [],
+  "exhaustion_witness": null,
+  "missing_transformation_specification": null,
+  "unresolved_warnings": [
+    "SEARCH is blocked by the unmatched graph-ball domain precondition.",
+    "JUMP and GLUE add no authority over the exact source constants.",
+    "LIFT is forbidden because a single source-applicability residual and no bounded cross-problem coverage cannot justify invention."
+  ],
+  "evidence_pointers": [
+    "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_K1_D001_WILSON_SOURCE_APPLICABILITY_AUDIT_20260812.json",
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1a2i_K1_D001_RESEARCH_MEMORY_REVIEW_20260812.json",
+    "research/real_math/millennium/yang_mills/07_memory/YM-S1a2i_K1_D001_OBSTRUCTION_TRANSFORMATION_MEMORY_20260812.json",
+    "research/real_math/millennium/yang_mills/08_reviews/YM-S1a2i_K1_D001_EXPERT_CONTEXT_REVIEW_20260812.json"
+  ],
+  "artifact_hash": "sha256:5d8f703f391917110ab1647a1c7dfc972c1db621c3ad1a65f9b71a25fd538515"
+}
