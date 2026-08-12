@@ -1,0 +1,88 @@
+{
+  "record_type": "SOURCE_FAMILY_AUDIT",
+  "cycle_id": "BSD-A1a1-HIGHER-GZ-COORDINATE-AUDIT-20260812-R10",
+  "authority": "SOURCE_BOUND_PROPOSAL_SHADOW",
+  "active_atom": "BSD-A1a1-THETA-ORDER-COMPARISON",
+  "nested_obstruction": "BSD-A1a2-LOCALIZATION-POSITIVE-RANK-BRIDGE",
+  "fibre_snapshot_hash": "sha256:1169325f3cc17acc2094488809bc13ebba796a54aa51bcbc132690c98e1987c9",
+  "residual_before": [
+    "SELMER_CORANK_LOWER_BOUND_TO_EXACT_CORANK2_UPPER_BOUND",
+    "TRANSVERSE_P_LOCALIZATION_NONZERO",
+    "PINFINITY_SELMER_TO_VP_SELMER_COORDINATE_BINDING_WHERE_USED",
+    "SELMER_TO_MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_COMPLEX_LEADING_TERM_GLUE"
+  ],
+  "primary_source": {
+    "id": "arXiv:2203.12161v7",
+    "title": "A higher Gross-Zagier formula and the structure of Selmer groups",
+    "author": "Chan-Ho Kim",
+    "published_form": "Transactions of the American Mathematical Society 377 (2024), 3691-3725",
+    "url": "https://arxiv.org/abs/2203.12161",
+    "selectors": [
+      "Introduction 1.1, especially the higher-rank number-field disclaimer",
+      "Introduction 1.4 on non-triviality of Kolyvagin systems",
+      "Theorem 2.2",
+      "Theorem 2.3 (Higher Gross-Zagier)",
+      "Remark 2.4(2)",
+      "Section 2.7 comparison with classical Gross-Zagier"
+    ],
+    "verified_claims": [
+      "The paper calls its result a structural refinement: it compares Heegner-point Kolyvagin-system divisibilities with Kurihara-number/discrete data and Selmer structure, rather than proving a higher complex-derivative Gross-Zagier formula over number fields.",
+      "The introduction explicitly states that for rank larger than one no analogous number-field higher Gross-Zagier result is addressed, contrasting the function-field Yun-Zhang theory.",
+      "Under Theorem 2.3 hypotheses and non-triviality assumptions, the Heegner Kolyvagin-system order and Kurihara-number orders recover the relevant p-infinity Selmer coranks. This is a sharp arithmetic/discrete structure theorem once those source-side objects are available.",
+      "Remark 2.4 describes the discrete derivative operators as playing the role of Taylor coefficients only conceptually; it does not identify them with the complex Taylor coefficients of L(E,s) at s=1.",
+      "Theorem 2.2 obtains required non-triviality statements from localized Iwasawa/main-conjecture inputs; Section 2.5 separately notes unconditional low-analytic-rank non-triviality sources in analytic rank at most one."
+    ],
+    "strict_nonclaims": [
+      "Theorem 2.3 does not prove that exact complex analytic rank two forces Heegner Kolyvagin-system vanishing order exactly one.",
+      "Theorem 2.3 does not prove that exact complex analytic rank two forces the relevant Kurihara/discrete order to be exactly two.",
+      "The structural higher Gross-Zagier identity does not identify a nonzero complex second derivative L''(E,1) with a first nonzero derived Heegner/Kolyvagin class in the number-field setting.",
+      "The theorem does not produce the transverse nonzero p-local localization required by the active A1a2 interface.",
+      "The theorem does not close Sha finiteness, regulator nondegeneracy, Tamagawa/torsion factors, all-prime arithmetic, or the complex BSD leading coefficient."
+    ]
+  },
+  "companion_primary_source": {
+    "id": "arXiv:2203.12159v6",
+    "title": "The structure of Selmer groups and the Iwasawa main conjecture for elliptic curves",
+    "author": "Chan-Ho Kim",
+    "url": "https://arxiv.org/abs/2203.12159",
+    "selectors": ["Theorem 1.1 / Corollaries 1.5-1.6", "Theorem 1.4 discussion", "Theorem 1.9", "Introduction 1.1.2-1.1.3"],
+    "verified_claim": "For arbitrary rank, exact p-infinity Selmer structure can be encoded by Kurihara numbers once their non-triviality is supplied; the bridge is through Iwasawa/refined-Iwasawa and discrete modular-symbol coordinates, not an identity from exact complex Taylor order two to the required discrete order.",
+    "route_verdict": "USE_AS_ARITHMETIC_COORDINATE_CLASSIFIER_NOT_COMPLEX_RANK2_ENTRY_THEOREM"
+  },
+  "current_frontier_cross_check": {
+    "id": "arXiv:2607.07531",
+    "title": "A higher Gross-Zagier type formula for moduli of shtukas at deeper level",
+    "author": "Patrick Bieker",
+    "url": "https://arxiv.org/abs/2607.07531",
+    "verified_claim": "The 2026 higher-derivative theorem returned by the bounded current search is a function-field shtuka result extending Yun-Zhang, not a number-field elliptic-curve theorem.",
+    "difference_witness": {
+      "shared_structure": "higher derivatives of automorphic L-functions related to geometric cycle/intersection data",
+      "source_specific_structure": "global function field and moduli of shtukas",
+      "target_specific_structure": "elliptic curve over Q, number-field Galois/Selmer/Heegner setting",
+      "unrepaired_precondition": "no theorem transporting the shtuka intersection identity to number-field E/Q",
+      "transfer_status": "REJECT_AS_STRICT_BSD_TRANSFER"
+    }
+  },
+  "counterexample_first_route_test": {
+    "candidate_route": "Use Kim's higher Gross-Zagier theorem as the missing sharp upper-bound step after the R9 Zhang lower bound.",
+    "falsifier": "Check whether the theorem's left input is the exact complex Taylor order/leading derivative, or instead an arithmetic/discrete Kolyvagin/Kurihara order whose exact value already determines Selmer corank.",
+    "observation": "The theorem is in the second category. Its sharp equalities classify Selmer structure from arithmetic/discrete orders; they do not derive those orders from exact complex analytic rank two.",
+    "verdict": "FALSIFIED_AS_COMPLEX_RANK2_TO_EXACT_SELMER_UPPER_BOUND"
+  },
+  "route_result": {
+    "status": "ROUTE_PRUNING_SUCCESS_NO_NEW_MATH_THEOREM",
+    "pruned_route_family": "STRUCTURAL_HIGHER_GROSS_ZAGIER_AS_COMPLEX_RANK2_UPPER_BOUND",
+    "refined_missing_transition": "exact complex analytic rank two -> sharp first nonzero arithmetic/discrete derivative coordinate (e.g. Heegner-Kolyvagin order exactly one or an equivalent Kurihara-order witness) in a scope compatible with the R9 Zhang cell",
+    "residual_after": [
+      "COMPLEX_RANK2_TO_SHARP_DERIVED_HEEGNER_KOLYVAGIN_OR_KURIHARA_ORDER",
+      "TRANSVERSE_P_LOCALIZATION_NONZERO",
+      "PINFINITY_SELMER_TO_VP_SELMER_COORDINATE_BINDING_WHERE_USED",
+      "SELMER_TO_MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_COMPLEX_LEADING_TERM_GLUE"
+    ],
+    "local_mathematical_status": "PRIMARY_SOURCE_THEOREM_SCOPE_VERIFIED",
+    "local_to_global_gluing_status": "OPEN",
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "verification": "CURRENT_PRIMARY_ARXIV_HTML_FOR_KIM_2203.12161_AND_2203.12159_PLUS_CURRENT_PRIMARY_ARXIV_FUNCTION_FIELD_CROSS_CHECK; theorem direction and coordinate types checked; no numerics used as proof",
+  "recorded_at_utc": "2026-08-12T04:35:00Z"
+}
