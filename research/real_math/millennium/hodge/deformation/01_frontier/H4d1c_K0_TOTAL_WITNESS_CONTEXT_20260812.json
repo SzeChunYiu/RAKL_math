@@ -1,0 +1,120 @@
+{
+  "atom_id": "H4d1c-c",
+  "object_context": "Fix a smooth projective complex family f:X->S, s0 in S, a flat rational degree-2p class alpha, an irreducible reduced local Hodge-locus branch T through s0, and an already algebraic central signed rational witness z0 for alpha_s0. The active atom tests a proposed genuinely total witness representation after fixed-component bookkeeping routes: replace a signed cycle/Chow class by a rational algebraic K0 class via Chern character, then ask whether this packaging itself supplies new branch-reachable witness deformations. Initial algebraicity, higher Artin effectivity, algebraization, monodromy, singular degeneration and globalization remain outside this first source-interface audit.",
+  "structural_coordinates": [
+    "exact root scope is rational cohomology on smooth projective complex varieties; this deformation lane assumes one already algebraic central witness",
+    "for smooth projective complex X, algebraic K0(Vect(X)) tensor Q and CH*(X) tensor Q are related by the rational Chern-character isomorphism; this is a static representation statement",
+    "an abstract K0 group-completion class is not by itself a chosen point of a witness moduli functor; dynamic reachability requires a representative such as a perfect complex and its deformation functor",
+    "perfect-complex deformation obstructions live in Ext^2 and are functorially mapped by generalized Abel-Jacobi/semiregularity data to the obstruction for the Chern character to remain horizontal/Hodge",
+    "kernel vanishing of a detector is weaker than vanishing of the original obstruction unless detector faithfulness on the actual obstruction image is independently proved",
+    "denominator clearing and exact codimension-p Chern-character binding must be preserved; a derived representative can have additional Chern-character components and representative-dependent deformation theory",
+    "a derived/direct-sum representative can have off-diagonal Ext directions, so moduli-level perfect-complex geometry is not identified with fixed-component Hilbert fibre-product bookkeeping",
+    "reduced-branch domination remains the root-aligned local target; full nonreduced scheme-tangent lifting is a separately stronger goal",
+    "formal pro-K/Chow lifting results with extra hypotheses are positive source controls but do not automatically transport to arbitrary smooth-projective Hodge branches"
+  ],
+  "equivalent_formulations": [
+    "static root reformulation: alpha is algebraic iff alpha lies in the degree-2p cohomological Chern-character image of an algebraic K0(X)_Q class",
+    "deformation reformulation after choosing E: for every Hodge-preserving branch direction v, the perfect-complex obstruction o_E(v) must vanish (or an exact witness-moduli map must reach v)",
+    "detector formulation: Hodge persistence can force only the semiregularity/Abel-Jacobi image of o_E(v) to vanish; a separate kernel-freeness/completeness condition is needed to conclude o_E(v)=0",
+    "root-aligned geometric formulation: a coefficient/category-safe total-witness moduli object must dominate T_red, not merely represent the same central Chow class"
+  ],
+  "solved_analogues": [
+    "codimension-one Picard/line-bundle geometry, where a class has a genuine single-object moduli interpretation and Lefschetz (1,1) supplies algebraicity",
+    "rational K0-to-Chow Chern-character isomorphism on regular smooth projective schemes, giving exact static representation equivalence",
+    "Pridham's generalized Abel-Jacobi/semiregularity construction for perfect complexes, giving a precise obstruction map and Hodge-filtration obstruction comparison"
+  ],
+  "near_solved_analogues": [
+    "Bloch-Esnault-Kerz formal deformation of rational algebraic cycle classes under additional Chow-Kunneth/decomposition hypotheses, including abelian-scheme applications",
+    "special flag-Hilbert variational Hodge results where an actual source-specific witness incidence dominates the Hodge locus"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Stacks Project rational K0/Chow comparison on regular schemes",
+      "method": "use the Chern-character isomorphism as an exact representation audit before crediting K0 packaging as new geometry",
+      "shared_structure": [
+        "signed rational algebraic-cycle classes",
+        "group completion",
+        "rational coefficient bookkeeping"
+      ],
+      "required_assumptions": [
+        "X regular/quasi-compact of the finite-type kind required by the cited Stacks result; smooth projective complex X satisfies the target instance"
+      ],
+      "disanalogies": [
+        "the isomorphism is static and does not provide a family/moduli lift",
+        "an element of K0_Q is not a canonical perfect-complex representative with controlled deformation"
+      ],
+      "repair_question": "After static compression into K0, what additional moduli-level structure actually creates new base directions?",
+      "source_anchors": [
+        "https://stacks.math.columbia.edu/tag/0FEX",
+        "https://stacks.math.columbia.edu/tag/0FIF"
+      ]
+    },
+    {
+      "source_context": "Pridham derived perfect-complex semiregularity",
+      "method": "map perfect-complex lift obstructions to generalized Abel-Jacobi/Hodge-filtration obstructions and audit whether vanishing in the target is complete",
+      "shared_structure": [
+        "perfect-complex representative",
+        "deformation obstruction",
+        "Chern-character Hodge persistence"
+      ],
+      "required_assumptions": [
+        "smooth characteristic-zero source setup and exact derived deformation functor hypotheses of the source",
+        "a chosen perfect-complex representative of the denominator-cleared K-class"
+      ],
+      "disanalogies": [
+        "the source gives a functorial detector/reduced obstruction theory, not a general theorem that every Hodge-preserving direction lifts the chosen perfect complex",
+        "representative choice and Ext-kernel geometry are target-specific"
+      ],
+      "repair_question": "Is the semiregularity map faithful on the branch-reachable obstruction image, or is there an independent direct lifting theorem?",
+      "source_anchors": [
+        "https://arxiv.org/abs/1208.3111",
+        "https://arxiv.org/abs/0805.3527"
+      ]
+    },
+    {
+      "source_context": "Bloch-Esnault-Kerz characteristic-zero formal cycle deformation",
+      "method": "use source-specific formal pro-class lifting as a positive control for what a genuine dynamic K/Chow mechanism must add beyond static representation",
+      "shared_structure": [
+        "rational algebraic cycle class",
+        "formal deformation",
+        "variational Hodge motivation"
+      ],
+      "required_assumptions": [
+        "the paper's additional decomposition/source hypotheses; applications include abelian schemes"
+      ],
+      "disanalogies": [
+        "not an arbitrary smooth-projective family theorem",
+        "formal pro-class existence does not by itself discharge algebraization/globalization in the current root lane"
+      ],
+      "repair_question": "Can any source-specific hypothesis be verified on the active Hodge branch without assuming the root or a comparably strong algebraicity statement?",
+      "source_anchors": [
+        "https://arxiv.org/abs/1310.1773"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "K0_Q group completion packages signs algebraically but does not automatically produce a fine moduli point or a deformation map to the base.",
+    "A perfect complex representing an integral multiple of a K0_Q class may have deformation directions unrelated to deformations of the originally selected cycle components; this is an escape hatch, not an equivalence.",
+    "Vanishing of a semiregularity/Hodge obstruction is a detector statement unless kernel-freeness on actual obstructions is proved.",
+    "Bloch-Esnault-Kerz formal deformation is source/hypothesis bound and cannot be generalized by analogy.",
+    "A local perfect-complex lift would still require exact rational codimension-p class binding, higher-order compatibility/algebraization as applicable, and local-to-global Hodge-branch coverage."
+  ],
+  "source_anchors": [
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1b_FIRST_ORDER_TANGENT_OBSTRUCTION_EQUIVALENCE_20260811.md",
+    "RAKL_math PR #197 H4d1c-a rational coefficient cancellation (proposal/shadow only)",
+    "RAKL_math PR #226 H4d1c-b fixed-component fibre-product non-expansion (proposal/shadow only)",
+    "RAKL_math PR #119 reduced-branch target correction (proposal/shadow only)",
+    "https://stacks.math.columbia.edu/tag/0FEX",
+    "https://stacks.math.columbia.edu/tag/0FIF",
+    "https://arxiv.org/abs/1208.3111",
+    "https://arxiv.org/abs/0805.3527",
+    "https://arxiv.org/abs/1310.1773",
+    "https://arxiv.org/abs/2602.13951"
+  ],
+  "analogy_scan_status": "NO_SAFE_BRIDGE_FOUND",
+  "cross_domain_analogies": [],
+  "analogy_scan_notes": "Cross-domain packaging/group-completion analogies were rejected because they do not preserve algebraic K-theory versus Chow semantics, derived obstruction theory, Hodge filtration, or exact rational cycle-class binding. Same-domain exact representation and deformation sources are stronger.",
+  "frozen_at": "2026-08-12T02:17:26+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:c17ce3194598a472167995c64ec6c9a68b2ca5a718ea486946019cf07b453235"
+}
