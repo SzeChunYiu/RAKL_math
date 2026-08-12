@@ -1,0 +1,508 @@
+{
+  "artifact_hash": "sha256:1ef6193d3b8fd09d6fde1a03c0158cd86134749d13922799a4c3e8535cd3ca22",
+  "authority": {
+    "computable_sufficient_tilde_M_algorithm": true,
+    "epsilon_n_or_diagonal": false,
+    "fixed_n_direct_envelope": true,
+    "formal_proof": false,
+    "frozen_least_M_computability": "CANNOT_CHECK",
+    "frozen_least_M_exists": true,
+    "independent_review": false,
+    "li_positivity": false,
+    "novelty": false,
+    "numerical_M_value": false,
+    "riemann_hypothesis": false,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "candidate_id": "RH-ANA-003j-D001-JY-C001-DIRECT-ENVELOPE",
+  "chronology": {
+    "authorization_artifact_hash": "sha256:74a46f4ac7101292452ae6e3c12e311c15f5b95ec60f22ed3f49677278809bc2",
+    "authorization_merge_sha": "aa6386126229bdfcae57fcf10a5b46ee8e91b83b",
+    "authorization_path": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003j_D001_JY_C001_EXECUTION_AUTHORIZATION_20260812.json",
+    "authorization_present_on_active_main_before_execution": true,
+    "authorization_raw_sha256": "6d2ee14ddff6bd99bf4001ba732113622a174b7518dc47324dd403e665a89b6f",
+    "evaluator_raw_sha256": "55c73c2975924683ed537d394af75475022a6703a7a63c9d3a7c46bfeac31267",
+    "result_base_sha": "aa6386126229bdfcae57fcf10a5b46ee8e91b83b"
+  },
+  "machine_validation_receipt": {
+    "candidate_id": "RH-ANA-003j-D001-JY-C001-DIRECT-ENVELOPE",
+    "forbidden_outputs": {
+      "B_JY_values": [],
+      "M_JY_values": [],
+      "diagonal_cutoff_constant_identity": null,
+      "epsilon_sequence_identity": null,
+      "m_JY_values": [],
+      "natural_order_remainder_values": []
+    },
+    "input_raw_sha256": {
+      "authorization": "99a224ceca4ecced628fd998f0ec2306744b79b283110d7b6d7a767ab8cee4c0",
+      "candidate": "ba83993220dd2b587330bbee7000f7e50c7a7fad3ee50c0c7051b9f1a7b7a885",
+      "falsifier": "7e59f54cbde76bd3b1149ff7b03e6c101c6ee63146a71f13c5d271d773d629bb",
+      "public_inputs": "fd0f8f73abf53b54a004ec8ff8bfb9da1592b92cf625cad7c01a31f077b6d7a4"
+    },
+    "overall_classification": "PASS",
+    "planted_world_validation": {
+      "pass": true,
+      "rows": [
+        {
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "pass": true,
+          "world_id": "ALG-WRONG-GAMMA-ORDER"
+        },
+        {
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "pass": true,
+          "world_id": "ALG-MISSING-FACTOR-TWO"
+        },
+        {
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "pass": true,
+          "world_id": "ALG-WRONG-PREFACTOR-EXPONENT"
+        },
+        {
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "pass": true,
+          "world_id": "NORM-OMIT-FLOOR-ONE"
+        },
+        {
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "pass": true,
+          "world_id": "NORM-REDEFINE-A"
+        },
+        {
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "pass": true,
+          "world_id": "MONO-DROP-LOG-POWER"
+        },
+        {
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "pass": true,
+          "world_id": "MONO-BELOW-DOMAIN"
+        },
+        {
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "pass": true,
+          "world_id": "SOURCE-CALL-939-BELLOTTI"
+        },
+        {
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "pass": true,
+          "world_id": "SOURCE-MIX-BELLOTTI-FACTORS"
+        },
+        {
+          "expected": "FAIL",
+          "observed": "FAIL",
+          "pass": true,
+          "world_id": "SOURCE-DROP-LOG-POWER"
+        },
+        {
+          "expected": "CANNOT_CHECK",
+          "observed": "CANNOT_CHECK",
+          "pass": true,
+          "world_id": "CC-SOURCE-BYTES"
+        },
+        {
+          "expected": "CANNOT_CHECK",
+          "observed": "CANNOT_CHECK",
+          "pass": true,
+          "world_id": "CC-C002-IDENTITY"
+        },
+        {
+          "expected": "CANNOT_CHECK",
+          "observed": "CANNOT_CHECK",
+          "pass": true,
+          "world_id": "CC-NUMERIC-CONTRACT"
+        },
+        {
+          "expected": "CANNOT_CHECK",
+          "observed": "CANNOT_CHECK",
+          "pass": true,
+          "world_id": "CC-EVALUATOR-SOURCE"
+        },
+        {
+          "expected": "PASS",
+          "observed": "PASS",
+          "pass": true,
+          "world_id": "CONTROL-EXACT-DIRECT-FORMULA"
+        }
+      ]
+    },
+    "public_validation": {
+      "corroboration_only_not_proof": true,
+      "maximum_relative_error": "3.03305944063e-101",
+      "numerical_method": "mpmath direct quadrature in the original s variable versus independent upper-incomplete-gamma evaluation",
+      "pass": true,
+      "precision_dps": 100,
+      "relative_tolerance": "1e-70",
+      "rows": [
+        {
+          "B_JY_value": null,
+          "M_JY_value": null,
+          "coefficient_ledger_pass": true,
+          "gamma_identity_checks": 1,
+          "gamma_identity_max_relative_error": "8.62167873706e-102",
+          "gamma_identity_pass": true,
+          "input_id": "N1-AT-U",
+          "m_JY_value": null,
+          "monotonicity_domain_pass": true,
+          "n": 1,
+          "nonnegative_components_pass": true,
+          "u_exact_constructor": "U_JY(1)",
+          "u_exact_rational": "25502500/1901641"
+        },
+        {
+          "B_JY_value": null,
+          "M_JY_value": null,
+          "coefficient_ledger_pass": true,
+          "gamma_identity_checks": 1,
+          "gamma_identity_max_relative_error": "0.0",
+          "gamma_identity_pass": true,
+          "input_id": "N1-AT-CEIL-U",
+          "m_JY_value": null,
+          "monotonicity_domain_pass": true,
+          "n": 1,
+          "nonnegative_components_pass": true,
+          "u_exact_constructor": "ceil(U_JY(1))",
+          "u_exact_rational": "14/1"
+        },
+        {
+          "B_JY_value": null,
+          "M_JY_value": null,
+          "coefficient_ledger_pass": true,
+          "gamma_identity_checks": 1,
+          "gamma_identity_max_relative_error": "0.0",
+          "gamma_identity_pass": true,
+          "input_id": "N1-AFTER-CEIL-U",
+          "m_JY_value": null,
+          "monotonicity_domain_pass": true,
+          "n": 1,
+          "nonnegative_components_pass": true,
+          "u_exact_constructor": "ceil(U_JY(1))+1",
+          "u_exact_rational": "15/1"
+        },
+        {
+          "B_JY_value": null,
+          "M_JY_value": null,
+          "coefficient_ledger_pass": true,
+          "gamma_identity_checks": 2,
+          "gamma_identity_max_relative_error": "1.33151124794e-101",
+          "gamma_identity_pass": true,
+          "input_id": "N2-AT-U",
+          "m_JY_value": null,
+          "monotonicity_domain_pass": true,
+          "n": 2,
+          "nonnegative_components_pass": true,
+          "u_exact_constructor": "U_JY(2)",
+          "u_exact_rational": "632522500/17114769"
+        },
+        {
+          "B_JY_value": null,
+          "M_JY_value": null,
+          "coefficient_ledger_pass": true,
+          "gamma_identity_checks": 2,
+          "gamma_identity_max_relative_error": "7.97416025704e-102",
+          "gamma_identity_pass": true,
+          "input_id": "N2-AT-CEIL-U",
+          "m_JY_value": null,
+          "monotonicity_domain_pass": true,
+          "n": 2,
+          "nonnegative_components_pass": true,
+          "u_exact_constructor": "ceil(U_JY(2))",
+          "u_exact_rational": "37/1"
+        },
+        {
+          "B_JY_value": null,
+          "M_JY_value": null,
+          "coefficient_ledger_pass": true,
+          "gamma_identity_checks": 2,
+          "gamma_identity_max_relative_error": "1.34985631103e-101",
+          "gamma_identity_pass": true,
+          "input_id": "N2-AFTER-CEIL-U",
+          "m_JY_value": null,
+          "monotonicity_domain_pass": true,
+          "n": 2,
+          "nonnegative_components_pass": true,
+          "u_exact_constructor": "ceil(U_JY(2))+1",
+          "u_exact_rational": "38/1"
+        },
+        {
+          "B_JY_value": null,
+          "M_JY_value": null,
+          "coefficient_ledger_pass": true,
+          "gamma_identity_checks": 3,
+          "gamma_identity_max_relative_error": "3.03305944063e-101",
+          "gamma_identity_pass": true,
+          "input_id": "N3-AT-U",
+          "m_JY_value": null,
+          "monotonicity_domain_pass": true,
+          "n": 3,
+          "nonnegative_components_pass": true,
+          "u_exact_constructor": "U_JY(3)",
+          "u_exact_rational": "1235522500/17114769"
+        },
+        {
+          "B_JY_value": null,
+          "M_JY_value": null,
+          "coefficient_ledger_pass": true,
+          "gamma_identity_checks": 3,
+          "gamma_identity_max_relative_error": "2.06434279315e-101",
+          "gamma_identity_pass": true,
+          "input_id": "N3-AT-CEIL-U",
+          "m_JY_value": null,
+          "monotonicity_domain_pass": true,
+          "n": 3,
+          "nonnegative_components_pass": true,
+          "u_exact_constructor": "ceil(U_JY(3))",
+          "u_exact_rational": "73/1"
+        },
+        {
+          "B_JY_value": null,
+          "M_JY_value": null,
+          "coefficient_ledger_pass": true,
+          "gamma_identity_checks": 3,
+          "gamma_identity_max_relative_error": "0.0",
+          "gamma_identity_pass": true,
+          "input_id": "N3-AFTER-CEIL-U",
+          "m_JY_value": null,
+          "monotonicity_domain_pass": true,
+          "n": 3,
+          "nonnegative_components_pass": true,
+          "u_exact_constructor": "ceil(U_JY(3))+1",
+          "u_exact_rational": "74/1"
+        },
+        {
+          "B_JY_value": null,
+          "M_JY_value": null,
+          "coefficient_ledger_pass": true,
+          "gamma_identity_checks": 5,
+          "gamma_identity_max_relative_error": "8.46955042632e-102",
+          "gamma_identity_pass": true,
+          "input_id": "N5-AT-U",
+          "m_JY_value": null,
+          "monotonicity_domain_pass": true,
+          "n": 5,
+          "nonnegative_components_pass": true,
+          "u_exact_constructor": "U_JY(5)",
+          "u_exact_rational": "3041522500/17114769"
+        },
+        {
+          "B_JY_value": null,
+          "M_JY_value": null,
+          "coefficient_ledger_pass": true,
+          "gamma_identity_checks": 5,
+          "gamma_identity_max_relative_error": "2.419472459e-101",
+          "gamma_identity_pass": true,
+          "input_id": "N5-AT-CEIL-U",
+          "m_JY_value": null,
+          "monotonicity_domain_pass": true,
+          "n": 5,
+          "nonnegative_components_pass": true,
+          "u_exact_constructor": "ceil(U_JY(5))",
+          "u_exact_rational": "178/1"
+        },
+        {
+          "B_JY_value": null,
+          "M_JY_value": null,
+          "coefficient_ledger_pass": true,
+          "gamma_identity_checks": 5,
+          "gamma_identity_max_relative_error": "8.3640917888e-102",
+          "gamma_identity_pass": true,
+          "input_id": "N5-AFTER-CEIL-U",
+          "m_JY_value": null,
+          "monotonicity_domain_pass": true,
+          "n": 5,
+          "nonnegative_components_pass": true,
+          "u_exact_constructor": "ceil(U_JY(5))+1",
+          "u_exact_rational": "179/1"
+        }
+      ]
+    },
+    "symbolic_derivation": {
+      "coefficient_ledgers": [
+        {
+          "n": 1,
+          "pass": true,
+          "rows": [
+            {
+              "expected_P_prime_minus_P": "-1/1",
+              "h": "1/1",
+              "j": 0,
+              "observed_P_prime_minus_P": "-1/1",
+              "pass": true,
+              "q": "1/1"
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "pass": true,
+          "rows": [
+            {
+              "expected_P_prime_minus_P": "-3/1",
+              "h": "2/1",
+              "j": 0,
+              "observed_P_prime_minus_P": "-3/1",
+              "pass": true,
+              "q": "3/1"
+            },
+            {
+              "expected_P_prime_minus_P": "1/1",
+              "h": "1/1",
+              "j": 1,
+              "observed_P_prime_minus_P": "1/1",
+              "pass": true,
+              "q": "1/1"
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "pass": true,
+          "rows": [
+            {
+              "expected_P_prime_minus_P": "-6/1",
+              "h": "3/1",
+              "j": 0,
+              "observed_P_prime_minus_P": "-6/1",
+              "pass": true,
+              "q": "6/1"
+            },
+            {
+              "expected_P_prime_minus_P": "4/1",
+              "h": "3/1",
+              "j": 1,
+              "observed_P_prime_minus_P": "4/1",
+              "pass": true,
+              "q": "4/1"
+            },
+            {
+              "expected_P_prime_minus_P": "-1/2",
+              "h": "1/2",
+              "j": 2,
+              "observed_P_prime_minus_P": "-1/2",
+              "pass": true,
+              "q": "1/2"
+            }
+          ]
+        },
+        {
+          "n": 5,
+          "pass": true,
+          "rows": [
+            {
+              "expected_P_prime_minus_P": "-15/1",
+              "h": "5/1",
+              "j": 0,
+              "observed_P_prime_minus_P": "-15/1",
+              "pass": true,
+              "q": "15/1"
+            },
+            {
+              "expected_P_prime_minus_P": "20/1",
+              "h": "10/1",
+              "j": 1,
+              "observed_P_prime_minus_P": "20/1",
+              "pass": true,
+              "q": "20/1"
+            },
+            {
+              "expected_P_prime_minus_P": "-15/2",
+              "h": "5/1",
+              "j": 2,
+              "observed_P_prime_minus_P": "-15/2",
+              "pass": true,
+              "q": "15/2"
+            },
+            {
+              "expected_P_prime_minus_P": "1/1",
+              "h": "5/6",
+              "j": 3,
+              "observed_P_prime_minus_P": "1/1",
+              "pass": true,
+              "q": "1/1"
+            },
+            {
+              "expected_P_prime_minus_P": "-1/24",
+              "h": "1/24",
+              "j": 4,
+              "observed_P_prime_minus_P": "-1/24",
+              "pass": true,
+              "q": "1/24"
+            }
+          ]
+        }
+      ],
+      "endpoint_extension": [
+        "For noninteger Y=exp(u), use the exact C002 Abel boundary-plus-tail identity.",
+        "For integer Y, set Y*=Y+1/2; the natural-order step-function remainder satisfies R_n(Y*)=R_n(Y).",
+        "Since log(Y*)>=log(Y) and B_JY is nonincreasing at and above U_JY(n), the same threshold controls all real endpoints."
+      ],
+      "incomplete_gamma_substitution": [
+        "Set r=c sqrt(s), so s=(r/c)^2 and ds=2r c^(-2)dr.",
+        "Then s^(j+a)ds=2 c^(-2j-2a-2) r^(2j+2a+1)dr.",
+        "The lower endpoint becomes c sqrt(u), hence the integral equals 2 c^(-2j-2a-2)Gamma(2j+2a+2,c sqrt(u)).",
+        "For a=1.515, the order and negative prefactor exponent are both 2j+5.03; multiplying source amplitude 9.39 by 2 gives 18.78."
+      ],
+      "monotonicity": [
+        "d/du log(u^j exp(-u))=j/u-1<=0 for u>=j.",
+        "d/du log(u^(j+a)exp(-c sqrt(u)))=(j+a)/u-c/(2sqrt(u))<=0 for u>=[2(j+a)/c]^2.",
+        "U_JY(n) uses j=n-1 and includes +a=+1.515, so it covers every boundary monomial.",
+        "d/dz Gamma(alpha,z)=-z^(alpha-1)exp(-z)<0; both lower endpoints u and c sqrt(u) increase with u."
+      ],
+      "nonnegativity": {
+        "pass": true,
+        "statement": "For u>=log 2, h_(n,j), q_(n,j), exp terms, positive powers, and upper incomplete-gamma integrals are nonnegative, so every displayed B_JY component is nonnegative."
+      },
+      "pass": true,
+      "symbolic_modulus": "The nonnegative monotone envelope tends to zero; thus the least integer m_JY in the frozen definition exists, and B_JY(n,m)<=epsilon/2 implies the scoped remainder is <epsilon. No value is calculated."
+    }
+  },
+  "proof_computation_boundary": {
+    "computation": "The twelve fixed public rows and fifteen planted worlds corroborate implementation/algebra; 100-dps direct quadrature versus gammainc is corroboration only and is not theorem authority.",
+    "proof": "Exact coefficient arithmetic, the r=c sqrt(s) substitution, derivative sign calculations, gamma-tail monotonicity, endpoint identity, and limit argument establish the scoped result."
+  },
+  "proved_fixed_n_result": {
+    "change_of_variables_proof": [
+      "In integral_u^infinity s^(j+a)exp(-c sqrt(s))ds set r=c sqrt(s), so s=(r/c)^2 and ds=2r c^(-2)dr.",
+      "Therefore s^(j+a)ds=2c^(-2j-2a-2)r^(2j+2a+1)dr, with lower endpoint c sqrt(u).",
+      "Thus the integral is exactly 2c^(-2j-2a-2)Gamma(2j+2a+2,c sqrt(u)); for a=1.515 the order and negative exponent are 2j+5.03 and the source amplitude becomes 18.78."
+    ],
+    "coefficient_identity": "For 0<=j<=n-1, the coefficient of u^j in P_n'(u)-P_n(u) is (-1)^(j+1)q_(n,j), q_(n,j)=binom(n+1,j+2)/j!, by direct differentiation and Pascal's identity (including the top degree separately).",
+    "computable_sufficient_tilde_modulus_algorithm": [
+      "Input a fixed integer n>=1 and positive rational epsilon; compute the symbolic start m0=ceil(U_JY(n)).",
+      "At dovetail stage k=1,2,..., compute certified enclosures for every B_JY(n,m), m0<=m<=m0+k, each with enclosure width at most 2^(-k).",
+      "As soon as any enclosure has certified upper endpoint strictly below epsilon/2, choose the smallest such m at that stage and output it as tilde_m_JY(n,epsilon).",
+      "Define the sufficient real threshold tilde_M_JY(n,epsilon)=exp(tilde_m_JY(n,epsilon)); if an integer cutoff is operationally required, use ceil(exp(tilde_m_JY(n,epsilon))).",
+      "Termination follows because B_JY(n,m) tends to zero, so some later m has the strict margin B_JY(n,m)<epsilon/2; computability of exp and upper incomplete gamma supplies arbitrarily tight certified enclosures.",
+      "This dovetailed strict-search threshold is not claimed to equal the frozen least-index M_JY."
+    ],
+    "envelope": "B_JY(n,u)=H_n(u)[exp(-u)+9.39u^1.515exp(-0.8274sqrt(u))]+sum_(j=0)^(n-1)q_(n,j)[Gamma(j+1,u)+18.78(0.8274)^(-2j-5.03)Gamma(2j+5.03,0.8274sqrt(u))].",
+    "frozen_least_modulus": {
+      "blocker": "Certified interval refinement need not decide the non-strict comparison B_JY(n,m)<=epsilon/2 when equality holds, so a sequential search can stall before the least index. General constructive-real epsilon adds the same equality-decision obstruction.",
+      "definition": "m_JY(n,epsilon) is the least integer m>=ceil(U_JY(n)) with B_JY(n,m)<=epsilon/2; M_JY(n,epsilon)=exp(m_JY(n,epsilon)).",
+      "existence": "PROVED because B_JY is nonnegative, nonincreasing, and tends to zero for fixed n.",
+      "least_index_computability": "CANNOT_CHECK"
+    },
+    "integer_endpoint_extension": "For integer Y let Y*=Y+1/2. Then R_n(Y*)=R_n(Y), log Y*>=log Y, and monotonicity gives B_JY(n,log Y*)<=B_JY(n,log Y). Thus the same real-Y threshold applies without regrouping.",
+    "monotonicity_domain": "Only for u>=U_JY(n)=max(log 2,n-1,[2(n-1+1.515)/0.8274]^2): each u^jexp(-u) decreases for u>=j; each u^(j+1.515)exp(-0.8274sqrt(u)) decreases for u>=[2(j+1.515)/0.8274]^2; upper incomplete gamma decreases with its increasing lower endpoint.",
+    "noninteger_bound": "For noninteger Y=exp(u) with u>=U_JY(n), the exact C002 Abel identity and the source-consistent Johnston--Yang bound give |S_n-R_n(Y)|<=B_JY(n,u).",
+    "normalization": "A(x)=floor(x)-psi(x), hence |A(x)|<=1+|psi(x)-x|; omitting +1 is invalid.",
+    "numerical_M_values_materialized": false,
+    "scope": "For each fixed integer n>=1 and epsilon>0, natural order and all real endpoints Y.",
+    "strict_epsilon_and_all_real_Y": "If Y>=tilde_M_JY then log Y>=tilde_m_JY and B_JY(n,log Y)<=B_JY(n,tilde_m_JY)<epsilon/2<epsilon. For integer Y the Y* argument above only decreases B. Hence |S_n-R_n(Y)|<epsilon for every real Y>=tilde_M_JY."
+  },
+  "record_type": "RH_ANA003J_D001_JY_C001_FIXED_N_DIRECT_ENVELOPE_RESULT",
+  "recorded_at_utc": "2026-08-12T15:50:00Z",
+  "result_id": "RH-ANA-003j-D001-JY-C001-RESULT-20260812",
+  "result_status": "PASS_FIXED_N_DIRECT_ENVELOPE__LEAST_M_COMPUTABILITY_CANNOT_CHECK__COMPUTABLE_SUFFICIENT_TILDE_MODULUS",
+  "schema_version": "1.0.0"
+}
