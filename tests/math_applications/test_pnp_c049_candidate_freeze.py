@@ -1,0 +1,14 @@
+import hashlib,importlib.util,json,sys
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2];B=ROOT/'research/real_math/millennium/p_vs_np';F=B/'09_trace/c049_k12_candidate_fixture.py';E=B/'05_falsification/c049_k12_overlap_evaluator.py';A={'candidate':B/'04_candidates/O9d12a2a1b_C049_K12_OVERLAP_SEPARATION_FREEZE_20260812.json','manifest':B/'05_falsification/O9d12a2a1b_C049_K12_OVERLAP_EVALUATOR_FREEZE_20260812.json','authorization':B/'09_trace/O9d12a2a1b_C049_EVALUATION_AUTHORIZATION_20260812.json','trace':B/'09_trace/O9d12a2a1b_C049_CANDIDATE_FREEZE_TRACE_20260812.json','feedback':B/'10_feedback/C049_FIRST_ADMISSIBLE_LENGTH_FIXED_BIT_PROPOSAL_20260812.json','receipt':B/'09_trace/O9d12a2a1b_C049_CANDIDATE_FREEZE_RECEIPT_20260812.json'}
+def load(p):return json.loads(p.read_text())
+def module():s=importlib.util.spec_from_file_location('c49fix',F);m=importlib.util.module_from_spec(s);sys.modules[s.name]=m;s.loader.exec_module(m);return m
+def test_documents_match_public_pre_candidate_parent():assert {n:load(p) for n,p in A.items()}==module().build_documents()
+def test_k12_is_frozen_from_math_not_evaluation():
+ c=load(A['candidate']);assert c['selected_discriminator']=={'k':12,'justification':'This is the smallest k at which H_k can be nonempty: a canonical UNSAT 3CNF needs at least two clauses, and the exact encoding lower bound is 8+1+3+12=24=2k bits.','selection_used_decoder_or_result':False,'selection_target_blind':True};assert c['statement']['conclusion']=='H_12 intersection P_13 is empty by the fixed bit-4 mismatch.';assert c['shared_bit_obligation'].endswith('MAGIC[4]=0.');assert c['statement']['scope_consequence'].endswith('does not decide overlap at k>12.')
+def test_swapped_reduction_and_unsat_are_explicit_obligations():
+ c=load(A['candidate']);assert '(2^12+c,r)' in c['swapped_reduction_preservation'];assert 'one-clause CNF is satisfiable' in c['unsat_proof_obligation'];assert 'SWAPPED_REDUCTION_PRESERVED' in c['proof_obligations'];assert c['target_access']=={'decoder_imported_or_executed':False,'evaluator_imported_or_executed':False,'k_instance_enumerated':False,'later_target_enumerated':False,'later_target_result_accessed':False}
+def test_evaluator_is_inert_and_execution_forbidden():
+ m=load(A['manifest']);a=load(A['authorization']);assert m['evaluator']['raw_sha256']==hashlib.sha256(E.read_bytes()).hexdigest();assert a['current_task_evaluator_execution_authorized'] is False and a['decoder_access_authorized'] is False;src=E.read_text();assert all(x not in src for x in ('C041_fx_sat_one_sided','decode_formula','is_satisfiable','materialize_complement','subprocess'))
+def test_candidate_only_trace_and_math_only_feedback():
+ t=load(A['trace']);assert t['entries'][-1]['event_type']=='CANDIDATE_PROPOSED';assert 'RESULT_RECORDED' not in json.dumps(t);f=load(A['feedback']);assert f['status']=='APPLICATION_FEEDBACK_PROPOSAL_ONLY_NOT_PROMOTED';assert f['credit']['software_process']==0
