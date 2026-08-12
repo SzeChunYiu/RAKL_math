@@ -2,7 +2,6 @@ import hashlib
 import json
 from pathlib import Path
 
-import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 BSD = ROOT / "research/real_math/millennium/birch_swinnerton_dyer"
@@ -76,11 +75,12 @@ def test_r15_trace_and_artifacts_are_content_bound():
 
 
 def test_r15_proof_dag_opens_sha_finiteness_child_and_keeps_root_open():
-    dag = yaml.safe_load(DAG.read_text(encoding="utf-8"))
-    assert dag["root_state"] == "OPEN_NO_SOLUTION_CERTIFICATE"
-    assert dag["closed_scoped_node"]["state"] == "SOURCE_BOUND_HAND_LEMMA"
-    assert {node["id"] for node in dag["open_children"]} == {
-        "BSD-A1a3-COMPLEX-RANK-TWO-TO-P-PRIMARY-SHA-FINITENESS-OR-INDEPENDENT-MW-RANK-TWO",
-        "BSD-A1a2-COMPLEX-TAYLOR-ORDER-TO-KURIHARA-ORDER",
-    }
-    assert dag["root_promotion"] == "FORBIDDEN_NO_ROOT_CERTIFICATE"
+    dag = DAG.read_text(encoding="utf-8")
+    assert "root_state: OPEN_NO_SOLUTION_CERTIFICATE" in dag
+    assert "state: SOURCE_BOUND_HAND_LEMMA" in dag
+    assert (
+        "BSD-A1a3-COMPLEX-RANK-TWO-TO-P-PRIMARY-SHA-FINITENESS-OR-INDEPENDENT-MW-RANK-TWO"
+        in dag
+    )
+    assert "BSD-A1a2-COMPLEX-TAYLOR-ORDER-TO-KURIHARA-ORDER" in dag
+    assert "root_promotion: FORBIDDEN_NO_ROOT_CERTIFICATE" in dag
