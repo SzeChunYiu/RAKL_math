@@ -1,0 +1,14 @@
+{
+  "schema_version": "hodge-failure-v1-shadow",
+  "failure_id": "F-H4D1C-SINGULAR-SOURCE-TANGENT-SURJECTIVITY",
+  "episode_id": "H4d1c-C007-TANGENT-SURJECTIVITY-SINGULAR-SOURCE-TRAP",
+  "atom_id": "H4d1c-g",
+  "attempted_inference": "surjective d pi_w => actual image covers H",
+  "counterexample": "closed immersion V(y^2-x^3) -> A2_C at the cusp origin; tangent map is surjective because the equation has no linear term, but the image is the proper cusp",
+  "failure_category": ["MATHEMATICAL", "REPRESENTATION", "LOCAL_INTEGRABILITY"],
+  "gluing_failure_separate": "Without properness, A1_C -> P1_C has full-rank differential and local openness but does not cover the target.",
+  "repair": "Require pi smooth at a suitable point (or source/target smooth plus verified Jacobian/submersion criterion), and properness/component binding; alternatively use direct image dimension/dominance.",
+  "scope": "SCOPED_ROUTE_FAILURE_ONLY",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "artifact_hash": "sha256:b4ef475226fd5db288cc9afd6192723a22062ffc1696cc62aaac75cb1f43045a"
+}
