@@ -1,0 +1,182 @@
+{
+  "artifact_hash": "sha256:9396021b213bb9c676e616386c9c0dbfd66ffbe79331bffdef5538f9bcace990",
+  "authority": {
+    "actual_jy_remainder": false,
+    "formal_proof": false,
+    "independent_review": false,
+    "li_signs": false,
+    "novelty": false,
+    "riemann_hypothesis": false,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "same_context_hand_proof": true,
+    "scoped_mathematical_result": true,
+    "software_credit_units": 0
+  },
+  "candidate_artifact_hash": "sha256:f99b6553969d2e035e87bc7c62f5ad7f163c69e09ce55278d3e34329028ba1bf",
+  "candidate_id": "RH-ANA-003k-JY-C001-FLOOR-RATIO-ASYMPTOTIC",
+  "chronology": {
+    "activation_artifact_hash": "sha256:e15340e1af6a8afefc784a3d37449819b49809fb21e757055954596308ce4660",
+    "activation_head_sha": "e6bcb8ac5c01a5d2075b1be9349b30cf413a820a",
+    "activation_public_before_hand_proof": true,
+    "activation_public_merge_sha": "c2479b8c258146be582306d6d75b8af6b3149a81",
+    "candidate_or_falsifier_mutated": false,
+    "hand_proof_commit": "2cbc8c07c28707b90134445ca44a6aadd183b9ff",
+    "hand_proof_commit_precedes_record_checker_execution": true,
+    "record_checker_executed_at_utc": "2026-08-12T17:50:00Z",
+    "result_recorded_at_utc": "2026-08-12T17:51:00Z",
+    "result_round_base_sha": "c2479b8c258146be582306d6d75b8af6b3149a81"
+  },
+  "credit": {
+    "git_ci_schema_hash_runtime": 0,
+    "mathematical": [
+      "one elementary fixed-C current-sufficient-certificate floor-incompatibility lemma"
+    ],
+    "record_checker_computation_alone": 0
+  },
+  "exact_mathematical_result": {
+    "asymptotic": "For every fixed real C>0, rho_C(n)=O_C(log^2(n)/n^(1/3)) and rho_C(n)->0.",
+    "certificate_chain": "For every epsilon>0 in the proved strict-search family, u_n(C)<F_n<=U_JY(n)<=ceil(U_JY(n))<=tilde_m_JY(n,epsilon), hence Y_n(C)<tilde_M_JY(n,epsilon).",
+    "interpretation": "The fixed-C diagonal eventually lies below the current sufficient certificate's mandatory floor, so that sufficient certificate does not certify the diagonal there.",
+    "quantifiers": "forall fixed C>0, exists N_C, forall integers n>=N_C; no N uniform over unbounded C",
+    "ratio_identity": "rho_C(n)=[C(0.8274)^2/4][n^2/(n+0.515)^2][log^2(n+e)/n^(1/3)]."
+  },
+  "falsifier_artifact_hash": "sha256:df91c4f87bd590da80557e3d00057eab029fb07d28732e02bb21d023a26d5daa",
+  "hand_proof": {
+    "artifact_hash": "sha256:806dc96800a6f793bd6cbab5aaad24c6d2a23bffed13f447f00430c4f5e15af8",
+    "obligation_verdicts": {
+      "PO1": "PASS_EXACT_HAND_PROOF",
+      "PO2": "PASS_EXACT_HAND_PROOF",
+      "PO3": "PASS_EXACT_HAND_PROOF",
+      "PO4": "PASS_EXACT_HAND_PROOF",
+      "PO5": "PASS_EXACT_HAND_PROOF",
+      "PO6": "PASS_EXACT_HAND_PROOF",
+      "PO7": "PASS_EXACT_HAND_PROOF"
+    },
+    "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003k_JY_C001_FLOOR_RATIO_HAND_PROOF_20260812T174900Z.json",
+    "proof_is_primary_authority_for_scoped_result": true
+  },
+  "identity_lineage": {
+    "earlier_draft_content_used_as_evidence": false,
+    "earlier_draft_identity_promoted_or_reused": false,
+    "earlier_uncommitted_draft_status": "INVALID_CHRONOLOGY_NEVER_COMMITTED_OR_PUSHED_NOT_EVIDENCE",
+    "hand_proof_record_is_input_not_competing_final_result": true,
+    "valid_final_result_identity": "RH-ANA-003k-JY-C001-POST-ACTIVATION-RESULT-20260812T175100Z",
+    "valid_final_result_identity_count": 1
+  },
+  "input_bindings": {
+    "activation_raw_sha256": "sha256:8500a22966c98abce842a6fc59b484f68c97dda346d935f9aae4104b8dcfcb53",
+    "candidate_raw_sha256": "sha256:c51ca1d45b4454baf10e6a4f09ba0b06d5df4d5a04feb4238a5d4e1cab3687bd",
+    "evaluator_raw_sha256": "sha256:e009e1c864d7968f00d6501508f8f78d2628197d0db397ecc85b605f99905a1c",
+    "falsifier_raw_sha256": "sha256:524e5923462e2481e72211dede25e968b3f5157440201b89f10d70dc7c6e33a6",
+    "hand_proof_raw_sha256": "sha256:7b8487fa68d7e3067841a52c8b88dc2fed698204ca616055207575d5bc7ef0c3"
+  },
+  "machine_validation_receipt": {
+    "all_worlds_pass": true,
+    "authority": "RECORD_CHECK_ONLY_NOT_PROOF",
+    "corroboration_only_not_proof": true,
+    "executed_at_utc": "2026-08-12T17:50:00Z",
+    "hand_proof_artifact_hash": "sha256:806dc96800a6f793bd6cbab5aaad24c6d2a23bffed13f447f00430c4f5e15af8",
+    "hand_proof_commit": "2cbc8c07c28707b90134445ca44a6aadd183b9ff",
+    "overall_classification": "PASS_CANDIDATE_THEOREM",
+    "raw_execution_output_sha256": "sha256:dd1aa15001f7b7f7c93be9924170207b80d3b286e315df54bad98772dc594512",
+    "raw_identity_checks": {
+      "candidate": true,
+      "evaluator": true,
+      "falsifier": true,
+      "jy_floor_source": true,
+      "trace": true
+    },
+    "worlds": [
+      {
+        "expected": "PASS_CANDIDATE_THEOREM",
+        "mutation": null,
+        "observed": "PASS_CANDIDATE_THEOREM",
+        "pass": true,
+        "world_id": "CONTROL-EXACT-FIXED-C"
+      },
+      {
+        "expected": "FAIL_QUANTIFIER_CONTRACT",
+        "mutation": "C_DEPENDS_ON_N",
+        "observed": "FAIL_QUANTIFIER_CONTRACT",
+        "pass": true,
+        "world_id": "FAIL-C-DEPENDS-ON-N"
+      },
+      {
+        "expected": "FAIL_ELEMENTARY_LIMIT",
+        "mutation": "WRONG_LOG_POWER_LIMIT",
+        "observed": "FAIL_ELEMENTARY_LIMIT",
+        "pass": true,
+        "world_id": "FAIL-WRONG-LOG-POWER-LIMIT"
+      },
+      {
+        "expected": "FAIL_RATIO_IDENTITY",
+        "mutation": "DROP_0515",
+        "observed": "FAIL_RATIO_IDENTITY",
+        "pass": true,
+        "world_id": "FAIL-DROP-0515"
+      },
+      {
+        "expected": "FAIL_FLOOR_CHAIN",
+        "mutation": "REVERSE_CEILING",
+        "observed": "FAIL_FLOOR_CHAIN",
+        "pass": true,
+        "world_id": "FAIL-CEILING-DIRECTION"
+      },
+      {
+        "expected": "FAIL_SCOPE_OVERREACH",
+        "mutation": "CERTIFICATE_TO_OBJECT",
+        "observed": "FAIL_SCOPE_OVERREACH",
+        "pass": true,
+        "world_id": "FAIL-CERTIFICATE-TO-OBJECT"
+      },
+      {
+        "expected": "FAIL_SCOPE_OVERREACH",
+        "mutation": "ENDPOINT_TO_PREFIX",
+        "observed": "FAIL_SCOPE_OVERREACH",
+        "pass": true,
+        "world_id": "FAIL-ENDPOINT-TO-PREFIX"
+      },
+      {
+        "expected": "FAIL_SCOPE_OVERREACH",
+        "mutation": "RH_INFERENCE",
+        "observed": "FAIL_SCOPE_OVERREACH",
+        "pass": true,
+        "world_id": "FAIL-RH-INFERENCE"
+      },
+      {
+        "expected": "CANNOT_CHECK",
+        "mutation": "INVALID_SOURCE_BINDING",
+        "observed": "CANNOT_CHECK",
+        "pass": true,
+        "world_id": "CANNOT-CHECK-SOURCE"
+      },
+      {
+        "expected": "CANNOT_CHECK",
+        "mutation": "MISSING_SYMBOLIC_PROOF",
+        "observed": "CANNOT_CHECK",
+        "pass": true,
+        "world_id": "CANNOT-CHECK-PROOF"
+      }
+    ]
+  },
+  "non_implications": [
+    "no failure or lower bound for the actual natural-order remainder",
+    "no claim about a sharper below-floor sufficient envelope or every possible sufficient modulus",
+    "no internal-prefix control or failure",
+    "no Li-coefficient sign conclusion",
+    "no evidence for or against RH"
+  ],
+  "proof_computation_boundary": {
+    "computation": "The merged evaluator checked frozen bytes and the ten planted classifications only after the hand-proof commit; this is corroboration and receives zero theorem credit.",
+    "proof": "Exact division by F_n, exponential-series domination and squeezing, fixed-C quantifiers, max/ceiling order, the already proved strict-search start, and monotonicity of exp prove the scoped statement."
+  },
+  "record_type": "RH_ANA003K_JY_C001_POST_ACTIVATION_RESULT_RECEIPT",
+  "residuals": [
+    "a source-justified sufficient envelope below the quadratic U_JY floor",
+    "the actual remainder on the fixed-C diagonal",
+    "internal prefixes, Li signs, formalization, novelty, independent review, and RH"
+  ],
+  "result_id": "RH-ANA-003k-JY-C001-POST-ACTIVATION-RESULT-20260812T175100Z",
+  "schema_version": "1.0.0",
+  "status": "PASS_FIXED_C_FLOOR_RATIO__CURRENT_SUFFICIENT_CERTIFICATE_INCOMPATIBILITY_ONLY"
+}
