@@ -1,0 +1,140 @@
+{
+  "artifact_hash": "sha256:dcc3611449e8f651fea29983504dcbdb04de72744c5b6192c675cdede853e9bd",
+  "authority": {
+    "expected_labels_are_oracle_inputs_only": true,
+    "independent_review": false,
+    "li_or_rh_authority": false,
+    "mathematical_result": false,
+    "proof": false
+  },
+  "candidate_artifact_hash": "sha256:e079308e6d89d6ed028f31843e1f230b5d5bb3636b6a5099f1a679363a31a84b",
+  "candidate_core_sha256": "sha256:082bc762b994bce8348da1ea99933fe14c965f9dff98296b6e9177cd94b974be",
+  "candidate_id": "RH-ANA-003j-D001-JY-C001-DIRECT-ENVELOPE",
+  "classification_vocabulary": [
+    "PASS",
+    "FAIL",
+    "CANNOT_CHECK"
+  ],
+  "falsifier_id": "RH-ANA-003j-D001-JY-C001-FALSIFIER-20260812",
+  "frozen_at_utc": "2026-08-12T15:10:01Z",
+  "future_evaluator_contract": {
+    "execution_authorized_this_round": false,
+    "implementation_frozen": false,
+    "implementation_path": null,
+    "must_check_all_raw_source_bindings": true,
+    "must_check_candidate_identity": true,
+    "must_not_emit_a_mathematical_result_from_expected_labels": true,
+    "must_not_infer_missing_inputs": true
+  },
+  "record_type": "RH_ANA003J_D001_JY_DIRECT_ENVELOPE_FALSIFIER_FREEZE",
+  "result_state": "NO_FALSIFIER_RUN_NO_RESULT_CLASSIFICATION",
+  "schema_version": "1.0.0",
+  "status": "FROZEN_EXPECTED_WORLDS_EVALUATOR_NOT_IMPLEMENTED_OR_EXECUTED",
+  "worlds": [
+    {
+      "category": "algebra",
+      "classification_basis": "The substitution r=c sqrt(s) fixes order 2j+2a+2=2j+5.03.",
+      "expected_future_classification": "FAIL",
+      "input_mutation": "Replace every direct-tail order 2j+5.03 by 2j+4.03.",
+      "world_id": "ALG-WRONG-GAMMA-ORDER"
+    },
+    {
+      "category": "algebra",
+      "classification_basis": "The Jacobian ds=2r c^(-2)dr supplies the factor 2.",
+      "expected_future_classification": "FAIL",
+      "input_mutation": "Remove the leading factor 2 from the incomplete-gamma integral identity and the derived 18.78 amplitude.",
+      "world_id": "ALG-MISSING-FACTOR-TWO"
+    },
+    {
+      "category": "algebra",
+      "classification_basis": "The power after substitution is exactly -2j-2a-2=-2j-5.03.",
+      "expected_future_classification": "FAIL",
+      "input_mutation": "Replace c^(-2j-5.03) by c^(-2j-4.03).",
+      "world_id": "ALG-WRONG-PREFACTOR-EXPONENT"
+    },
+    {
+      "category": "normalization",
+      "classification_basis": "A=floor(x)-psi(x) requires |floor(x)-x|<=1.",
+      "expected_future_classification": "FAIL",
+      "input_mutation": "Use |A(x)|<=|psi(x)-x| and omit the additive floor-error one.",
+      "world_id": "NORM-OMIT-FLOOR-ONE"
+    },
+    {
+      "category": "normalization",
+      "classification_basis": "The C002 cumulative source is floor(x)-psi(x), not x-psi(x).",
+      "expected_future_classification": "FAIL",
+      "input_mutation": "Treat A(x) as exactly x-psi(x).",
+      "world_id": "NORM-REDEFINE-A"
+    },
+    {
+      "category": "monotonicity",
+      "classification_basis": "The direct source boundary contains u^(j+1.515).",
+      "expected_future_classification": "FAIL",
+      "input_mutation": "Use a floor with [2(n-1)/0.8274]^2 and omit +1.515 from the direct boundary term.",
+      "world_id": "MONO-DROP-LOG-POWER"
+    },
+    {
+      "category": "monotonicity",
+      "classification_basis": "The source and boundary derivative domains are part of the candidate obligation.",
+      "expected_future_classification": "FAIL",
+      "input_mutation": "Claim B_JY is nonincreasing below log 2 or below the frozen componentwise floor.",
+      "world_id": "MONO-BELOW-DOMAIN"
+    },
+    {
+      "category": "source_mismatch",
+      "classification_basis": "9.39 is the Johnston--Yang amplitude; Bellotti's K_B remains unexposed in the acquired text.",
+      "expected_future_classification": "FAIL",
+      "input_mutation": "Call 9.39 Bellotti's K_B.",
+      "world_id": "SOURCE-CALL-939-BELLOTTI"
+    },
+    {
+      "category": "source_mismatch",
+      "classification_basis": "Constants from distinct source profiles cannot be spliced without a separate derivation.",
+      "expected_future_classification": "FAIL",
+      "input_mutation": "Retain Bellotti's exp(55A_0) or d with the Johnston--Yang amplitude.",
+      "world_id": "SOURCE-MIX-BELLOTTI-FACTORS"
+    },
+    {
+      "category": "source_mismatch",
+      "classification_basis": "The Johnston--Yang source statement contains the log-power factor.",
+      "expected_future_classification": "FAIL",
+      "input_mutation": "Drop (log x)^1.515 without the explicit K=172, decay=0.4 domination proof.",
+      "world_id": "SOURCE-DROP-LOG-POWER"
+    },
+    {
+      "category": "structural_unavailability",
+      "classification_basis": "Missing or unfrozen authority-bearing input fails closed and cannot be relabeled PASS or FAIL.",
+      "expected_future_classification": "CANNOT_CHECK",
+      "input_condition": "The Johnston--Yang PDF, exact hash, or v2 identity is unavailable or mismatched.",
+      "world_id": "CC-SOURCE-BYTES"
+    },
+    {
+      "category": "structural_unavailability",
+      "classification_basis": "Missing or unfrozen authority-bearing input fails closed and cannot be relabeled PASS or FAIL.",
+      "expected_future_classification": "CANNOT_CHECK",
+      "input_condition": "The exact C002 Abel identity or its A(x)=floor(x)-psi(x) normalization is unavailable.",
+      "world_id": "CC-C002-IDENTITY"
+    },
+    {
+      "category": "structural_unavailability",
+      "classification_basis": "Missing or unfrozen authority-bearing input fails closed and cannot be relabeled PASS or FAIL.",
+      "expected_future_classification": "CANNOT_CHECK",
+      "input_condition": "Numerical special-function validation is requested outside a frozen input and precision contract.",
+      "world_id": "CC-NUMERIC-CONTRACT"
+    },
+    {
+      "category": "structural_unavailability",
+      "classification_basis": "Missing or unfrozen authority-bearing input fails closed and cannot be relabeled PASS or FAIL.",
+      "expected_future_classification": "CANNOT_CHECK",
+      "input_condition": "A future evaluator lacks the required source bytes or cannot reproduce their raw SHA-256 bindings.",
+      "world_id": "CC-EVALUATOR-SOURCE"
+    },
+    {
+      "category": "control",
+      "classification_basis": "Positive control for future evaluator validation only; this expected label is not an executed result.",
+      "expected_future_classification": "PASS",
+      "input_condition": "Exact Johnston--Yang v2 source/hash, exact C002 identity and normalization, exact coefficient ledger, exact direct formula, exact U_JY floor, and all required bytes match the frozen packet.",
+      "world_id": "CONTROL-EXACT-DIRECT-FORMULA"
+    }
+  ]
+}

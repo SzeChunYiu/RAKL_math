@@ -1,0 +1,214 @@
+{
+  "artifact_hash": "sha256:e079308e6d89d6ed028f31843e1f230b5d5bb3636b6a5099f1a679363a31a84b",
+  "atom_id": "RH-ANA-003j-D001-JY-SA001",
+  "authority": {
+    "candidate_proposal_only": true,
+    "independent_review": false,
+    "li_positivity": false,
+    "mathematical_result": false,
+    "novelty": false,
+    "proof": false,
+    "riemann_hypothesis": false,
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "software_or_governance_credit_units": 0
+  },
+  "bellotti_boundary": {
+    "ineffectivity_claimed": false,
+    "mixing_forbidden": [
+      "9.39 is not Bellotti's K_B",
+      "do not retain Bellotti's exp(55A_0) or d with the Johnston--Yang amplitude",
+      "do not drop (log x)^1.515 without the explicit independent 172 domination proof"
+    ],
+    "status": "EFFECTIVE_BUT_CONSTANT_AND_THRESHOLD_UNEXPOSED_IN_ACQUIRED_TEXT"
+  },
+  "candidate_envelope": {
+    "floor_rationale_to_validate": [
+      "u^j exp(-u) is nonincreasing for u>=j, so n-1 covers every boundary floor-error monomial.",
+      "u^(j+1.515)exp(-0.8274sqrt(u)) is nonincreasing when u>=[2(j+1.515)/0.8274]^2, so j=n-1 supplies the frozen maximum.",
+      "Each upper incomplete-gamma term is nonincreasing as its positive lower endpoint increases."
+    ],
+    "formula": "B_JY(n,u)=H_n(u)[exp(-u)+9.39u^1.515exp(-0.8274sqrt(u))]+sum_(j=0)^(n-1)q_(n,j)[Gamma(j+1,u)+18.78(0.8274)^(-2j-5.03)Gamma(2j+5.03,0.8274sqrt(u))].",
+    "integral_identity": "integral_u^infinity s^(j+a)exp(-c sqrt(s))ds = 2 c^(-2j-2a-2) Gamma(2j+2a+2,c sqrt(u))",
+    "monotonicity_floor": "U_JY(n)=max(log 2,n-1,[2(n-1+1.515)/0.8274]^2).",
+    "specialized_integral_identity": "With a=1.515: integral_u^infinity s^(j+1.515)exp(-0.8274 sqrt(s))ds = 2(0.8274)^(-2j-5.03)Gamma(2j+5.03,0.8274 sqrt(u)).",
+    "symbolic_modulus": {
+      "evaluation_status": "SYMBOLIC_DEFINITION_ONLY_NOT_EVALUATED",
+      "log_threshold": "m_JY(n,epsilon)=the least integer m>=ceil(U_JY(n)) such that B_JY(n,m)<=epsilon/2",
+      "threshold": "M_JY(n,epsilon)=exp(m_JY(n,epsilon))"
+    }
+  },
+  "candidate_id": "RH-ANA-003j-D001-JY-C001-DIRECT-ENVELOPE",
+  "candidate_identity": {
+    "candidate_id": "RH-ANA-003j-D001-JY-C001-DIRECT-ENVELOPE",
+    "canonical_core_sha256": "sha256:082bc762b994bce8348da1ea99933fe14c965f9dff98296b6e9177cd94b974be",
+    "identity_scope": "FULL_CANDIDATE_CORE_BEFORE_IDENTITY_AND_ARTIFACT_HASH"
+  },
+  "candidate_implication_obligations": {
+    "integer_endpoint": "For integer Y, set Y*=Y+1/2; validate R_n(Y*)=R_n(Y), log Y*>=log Y, and B_JY(n,log Y*)<=B_JY(n,log Y), so the same threshold extends to every real Y.",
+    "modulus": "Only after the envelope and monotonicity obligations pass, validate that for every fixed n>=1 and epsilon>0, every real Y>=M_JY(n,epsilon) has |S_n-R_n(Y)|<epsilon.",
+    "noninteger_endpoint": "For noninteger Y=exp(u), validate from the exact C002 Abel identity that |S_n-R_n(Y)|<=B_JY(n,u) for u>=U_JY(n).",
+    "status": "FROZEN_CANDIDATE_OBLIGATIONS_NOT_PROVED_OR_TESTED_THIS_ROUND"
+  },
+  "chronology": {
+    "application_base_sha": "334c3cf0a405906fe14b07067d6d7f73b6170d4f",
+    "candidate_result_accessed_before_freeze": false,
+    "evaluator_implemented_or_executed_before_freeze": false,
+    "framework_pin_sha": "d21592b0ff8da988deabb923fd549891ff8ad9f0",
+    "pre_candidate_packet_committed_before_candidate": true,
+    "source_assimilation_commit_sha": "93ff7026d27a1cf1b4f698448e7a8501b04a07b7",
+    "source_assimilation_pr": "https://github.com/SzeChunYiu/RAKL_math/pull/400"
+  },
+  "comparison_boundary": {
+    "direct_versus_simple_order_claim": "NONE_FROZEN_OR_AUTHORIZED",
+    "reason": "No pointwise or aggregate larger/smaller comparison was derived in this freeze round."
+  },
+  "evaluation_firewall": {
+    "M_values_calculated": false,
+    "diagonal_comparison_attempted": false,
+    "diagonal_cutoff_constant_identity": null,
+    "envelope_values_calculated": false,
+    "epsilon_sequence_identity": null,
+    "evaluator_executed": false,
+    "evaluator_implemented": false,
+    "falsifier_run_event_emitted": false,
+    "natural_order_remainder_tests_run": false,
+    "result_classified": false
+  },
+  "evidence_bindings": {
+    "c002_candidate": {
+      "path": "research/real_math/millennium/riemann_hypothesis/04_candidates/RH_ANA_003_ABEL_001_C002_FIXED_N_ABEL_CANDIDATE_FREEZE_20260812.json",
+      "raw_sha256": "7eb1e7e369dde0b6532ceae005f62fabf37e83abe2dd7cd663d1cd60137189a8"
+    },
+    "c002_proof_result": {
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003_ABEL_001_C002_PROOF_CHECK_RESULT_20260812.json",
+      "raw_sha256": "0d1dd6087f752307f4270ce97b1ad4f88d6809037a856c979837b85d94b91b6b"
+    },
+    "d001_conditional_result": {
+      "path": "research/real_math/millennium/riemann_hypothesis/05_oracles/RH_ANA_003j_D001_MODULUS_SOURCE_RESULT_20260812.json",
+      "raw_sha256": "2e9f247aa2aff699bbbd94ecb2ada4ed61d16e703172a555340f974069a7aedd"
+    },
+    "d001_failure_experience": {
+      "path": "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_D001_FAILURE_EXPERIENCE_20260812.json",
+      "raw_sha256": "97eca225bd813ede522e6a8458f572c50c808d8bb9ad5acbdaaaa27dafb56c46"
+    },
+    "d001_mathematical_lesson": {
+      "path": "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_D001_MATHEMATICAL_LESSON_20260812.json",
+      "raw_sha256": "18b1ff51a40c2d5187516414791a840bb3624e56fb5c8d784f28269d4b31630c"
+    },
+    "d001_source_audit": {
+      "path": "research/real_math/millennium/riemann_hypothesis/03_sources/RH_ANA_003j_D001_EXACT_SOURCE_SCOPE_AUDIT_20260812.json",
+      "raw_sha256": "46abdbad71ecd04e47f255afb18a92482a65d5374feb5d33aa57e71080a01346"
+    },
+    "framework_pin": {
+      "path": "config/rakl-framework-pin.json",
+      "raw_sha256": "e97dbc1c49d9338b3340338b8173f0c8c3f2f6aff53be08af7e60d2b183dd6e7"
+    },
+    "jy_context": {
+      "path": "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003j_D001_JY_MATH_CONTEXT_FIBER_20260812.json",
+      "raw_sha256": "a0d4f1604aa22868e3558a31e502887620c94ee3068acb3abff7e1574b208af3"
+    },
+    "jy_expert_review": {
+      "path": "research/real_math/millennium/riemann_hypothesis/08_reviews/RH_ANA_003j_D001_JY_EXPERT_SOURCE_ASSIMILATION_REVIEW_20260812.json",
+      "raw_sha256": "2d27323bcdc82bb75a8af89ae890c877fa869c32187e3a9b0c9f30c9a103ab5e"
+    },
+    "jy_memory_review": {
+      "path": "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_D001_JY_RESEARCH_MEMORY_REVIEW_20260812.json",
+      "raw_sha256": "e2f3229d604d1e382a0f674555538c40cbc729e00b3155fba9a4e537574895a0"
+    },
+    "jy_pre_candidate_trace": {
+      "path": "research/real_math/millennium/riemann_hypothesis/09_trace/RH_ANA_003j_D001_JY_PRE_CANDIDATE_TRACE_20260812.json",
+      "raw_sha256": "aa0dba40ed2ab5872e6a3f915e14f8f0dcee34bdd509deda02dcfc824537606c"
+    },
+    "jy_prior_failure_assimilation": {
+      "path": "research/real_math/millennium/riemann_hypothesis/07_memory/RH_ANA_003j_D001_JY_PRIOR_FAILURE_ASSIMILATION_20260812.json",
+      "raw_sha256": "3381b5ee16e436613ed3ed6d4ba6b40f5c949bb2b29c69d903bd80f44733486d"
+    },
+    "jy_shortcut_review": {
+      "path": "research/real_math/millennium/riemann_hypothesis/08_reviews/RH_ANA_003j_D001_JY_OBSTRUCTION_TRANSFORMATION_REVIEW_20260812.json",
+      "raw_sha256": "f81c57e7968d5f2bdb01e39cb0d32df0db4f10982d7ecc85b1445a29e67cb9fd"
+    },
+    "jy_source_assimilation": {
+      "path": "research/real_math/millennium/riemann_hypothesis/01_frontier/RH_ANA_003j_D001_JY_SOURCE_ASSIMILATION_PACKET_20260812.json",
+      "raw_sha256": "d3628027d20733d81524e48c864d4fdf6c58ade2c9eb88e2d6ec0a838dd72490"
+    }
+  },
+  "exact_definitions": {
+    "H": "H_n(u)=sum_(j=0)^(n-1)h_(n,j)u^j",
+    "P": "P_n(u)=L_(n-1)^(1)(u)=sum_(j=0)^(n-1)(-1)^j h_(n,j)u^j",
+    "P_derivative_minus_P": "P_n'(u)-P_n(u)=sum_(j=0)^(n-1)(-1)^(j+1)q_(n,j)u^j",
+    "Q": "Q_n(u)=sum_(j=0)^(n-1)q_(n,j)u^j",
+    "a": "1.515",
+    "c": "0.8274",
+    "domain": "n is an integer >=1; j is an integer with 0<=j<=n-1; u=log Y",
+    "h": "h_(n,j)=binom(n,j+1)/j!",
+    "q": "q_(n,j)=binom(n+1,j+2)/j!",
+    "upper_incomplete_gamma": "Gamma(alpha,z)=integral_z^infinity t^(alpha-1)exp(-t)dt"
+  },
+  "explicit_exclusions": [
+    "NO_EVALUATOR_IMPLEMENTATION_OR_EXECUTION",
+    "NO_B_JY_OR_M_JY_NUMERICAL_VALUES",
+    "NO_NATURAL_ORDER_REMAINDER_TEST",
+    "NO_EPSILON_N_SELECTION",
+    "NO_DIAGONAL_C_SELECTION",
+    "NO_INTERNAL_PREFIX_CONTROL",
+    "NO_MATHEMATICAL_RESULT_CLAIM",
+    "NO_NOVELTY_CLAIM",
+    "NO_INDEPENDENT_REVIEW_CLAIM",
+    "NO_LI_POSITIVITY_CLAIM",
+    "NO_RIEMANN_HYPOTHESIS_CLAIM"
+  ],
+  "frozen_at_utc": "2026-08-12T15:10:00Z",
+  "independent_hostile_cross_check": {
+    "constants": {
+      "K": "172",
+      "decay": "0.4",
+      "x_threshold": "2"
+    },
+    "decay_gap": "D=0.8274-0.4=0.4274",
+    "denominator_guard": "The denominator is D, not 2D; 3.03=2*1.515 already.",
+    "derivative": "d/dv log(v^3.03 exp(-Dv))=3.03/v-D",
+    "maximizer": "v*=3.03/D",
+    "maximum": "9.39[3.03/(eD)]^3.03=171.43357721989227<172",
+    "role": "INDEPENDENT_ALGEBRAIC_CROSS_CHECK_NOT_PREFERRED_CANDIDATE",
+    "source_consistency": "This is derived solely from Johnston--Yang and is never mixed with Bellotti constants.",
+    "transformed_ratio": "With v=sqrt(u), the ratio is 9.39 v^3.03 exp(-Dv)."
+  },
+  "normalization": {
+    "Delta": "Delta(x)=|psi(x)-x|/x",
+    "application_source": "A(x)=floor(x)-psi(x)",
+    "floor_error_one_is_mandatory": true,
+    "required_transfer": "|A(x)| <= 1 + |psi(x)-x|",
+    "transferred_bound": "For x>=2, |A(x)| <= 1 + 9.39 x (log x)^1.515 exp(-0.8274 sqrt(log x))."
+  },
+  "object_qoi_context": {
+    "object": "The exact C002 fixed-n natural-order endpoint remainder after a source-consistent substitution of the Johnston--Yang all-x Chebyshev-psi error bound.",
+    "quantity_of_interest": "Whether the displayed direct incomplete-gamma envelope is a valid explicit upper bound and yields the displayed symbolic fixed-n modulus family.",
+    "scope": "For each fixed integer n>=1, epsilon>0, and real endpoint Y only; candidate and falsifier freeze before any evaluation."
+  },
+  "primary_source": {
+    "arxiv": "2204.01980v2 [math.NT]",
+    "authors": [
+      "Daniel R. Johnston",
+      "Andrew Yang"
+    ],
+    "doi": "10.1016/j.jmaa.2023.127460",
+    "exact_anchors": [
+      "Theorem 1.1, arXiv PDF page 2",
+      "equation (1.3), arXiv PDF page 2",
+      "Table 1, arXiv PDF page 3, X=log 2 row"
+    ],
+    "exact_bound": "For every real x>=2, |psi(x)-x| <= 9.39 x (log x)^1.515 exp(-0.8274 sqrt(log x)).",
+    "exact_decimal_constants": {
+      "amplitude": "9.39",
+      "log_power_a": "1.515",
+      "sqrt_log_decay_c": "0.8274",
+      "x_threshold": "2"
+    },
+    "pdf_sha256": "565993a6def48b237a68a92acba604f2c42f99165e0e71e390f8e21a313b74b2",
+    "title": "Some explicit estimates for the error term in the prime number theorem",
+    "version_date": "2022-04-20"
+  },
+  "record_type": "RH_ANA003J_D001_JY_DIRECT_ENVELOPE_CANDIDATE_FREEZE",
+  "schema_version": "1.0.0",
+  "status": "FROZEN_UNEVALUATED_DIRECT_ENVELOPE_PROPOSAL"
+}

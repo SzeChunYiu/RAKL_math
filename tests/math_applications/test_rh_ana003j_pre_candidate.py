@@ -238,9 +238,11 @@ def test_packet_contains_no_candidate_result_or_evaluator() -> None:
     assert docs["gate"]["chronology"]["evaluator_executed"] is False
     assert docs["quantifier_discriminator"]["evaluator_capability"] is False
     assert docs["quantifier_discriminator"]["evaluated_result"] is False
-    assert not list((RH / "04_candidates").glob("*ANA_003j*"))
     # Append-only successor results may exist after this historical pre-candidate freeze;
     # the assertions above bind this packet itself to no candidate/result/evaluator.
+    # Removing the former repository-global path assertion is a zero-credit
+    # compatibility correction: later append-only candidate files cannot alter
+    # the historical packet's already-frozen chronology or authority.
     text = FIXTURE.read_text(encoding="utf-8")
     for forbidden in ("sympy", "mpmath", "subprocess", "scipy", "candidate_result", "proof_candidate"):
         assert forbidden not in text
