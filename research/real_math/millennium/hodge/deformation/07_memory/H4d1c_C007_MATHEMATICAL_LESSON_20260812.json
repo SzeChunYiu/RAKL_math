@@ -1,0 +1,53 @@
+{
+  "record_type": "SCOPED_MATHEMATICAL_LESSON",
+  "unit_id": "MATH-HODGE-C007-SINGULAR-TANGENT-SURJECTIVITY-NONIMPLICATION",
+  "mathematical_unit_count": 1,
+  "credit_type": "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE",
+  "authority": "PROPOSAL_SHADOW_SCOPED_MATHEMATICS_NO_HODGE_ROOT_AUTHORITY",
+  "framework": {
+    "repository": "SzeChunYiu/RAKL",
+    "rakl_main_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+    "method_version": "3.0.0"
+  },
+  "application": {
+    "repository": "SzeChunYiu/RAKL_math",
+    "base_sha": "451d9506d365f06eb314323523ba123edd3ffb32",
+    "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "predecessor": {
+    "cycle": "H4d1c-C006-RAMIFICATION-PROXY-AUDIT",
+    "status": "MERGED_AND_CREDITED",
+    "unit_id": "MATH-HODGE-C006-RAMIFICATION-POINTWISE-DIFFERENTIAL-NONIMPLICATION",
+    "relation": "DISTINCT_CONVERSE_PROXY_FAILURE: C006 proves full image does not force selected-point differential surjectivity; C007 proves selected-point differential surjectivity at a singular source does not force full image."
+  },
+  "attempted_implication": "For a proper morphism pi:W->H into an irreducible target, surjectivity of d pi_w on Zariski tangent spaces at one selected incidence point implies pi(W)=H.",
+  "exact_result_or_failure": "Let W=V(y^2-x^3) be the reduced irreducible cusp and let pi:W->A^2_C be the closed immersion. Since d(y^2-x^3)_0=0, T_0 W = T_0 A^2_C and d pi_0 is surjective. Nevertheless pi(W) is the proper closed subset W, not all A^2_C. Raw tangent surjectivity at a singular source is therefore insufficient for image coverage.",
+  "attached_sufficient_certificate": {
+    "statement": "If pi:W->H is proper, H is irreducible, and pi is smooth at some w in W, then pi(W)=H.",
+    "proof": "Smoothness holds on a source neighborhood U of w and smooth morphisms are open, so pi(U) contains a nonempty open subset of H. Properness makes pi(W) closed. A closed subset of irreducible H containing a nonempty open is H.",
+    "role": "REPAIR_BOUNDARY_ATTACHED_TO_THE_COUNTEREXAMPLE",
+    "separate_credit_units": 0
+  },
+  "seven_field_math_lesson": {
+    "attempted_implication": "Surjective d pi_w at a selected witness-incidence point implies that the actual image covers the target Hodge component.",
+    "exact_result_or_failure": "The cusp closed immersion has a surjective tangent map at its singular origin but a proper image; the implication fails even with reduced irreducible source, smooth irreducible target, and proper pi.",
+    "supported_and_competing_causes": "Supported cause: the singular source has excess Zariski tangent directions that need not integrate into actual motion. Properness is not the local cause and is retained as a separate whole-component guard. Target singularity is not needed; coefficient and formal/global Hodge obligations are applicability boundaries rather than causes of this counterexample.",
+    "scope": "Abstract finite-type complex algebraic morphisms and a pointwise tangent proxy. This is not an actual Hodge-incidence construction and does not prove initial algebraicity, exact signed-Q witness availability, all-order lifting, algebraization, monodromy, degeneration, or global continuation.",
+    "falsifier": "For target use, prove that the exact-class witness-incidence morphism is smooth at w and proper over one irreducible target component; then the cusp mechanism is inapplicable and the attached open-plus-closed certificate yields coverage.",
+    "mathematical_repair": "Replace raw tangent rank by smoothness at a suitable incidence point plus properness and component binding, or prove the actual image is closed and dominant/top-dimensional directly.",
+    "proof_and_source_evidence": "Direct cusp tangent/closed-immersion calculation; Stacks Project tags 056G for smooth morphisms being universally open, 01W6 for proper closed image, and 01W5 for closed immersions being proper."
+  },
+  "deduplication": {
+    "new_unit_count": 1,
+    "attached_certificate_counted_separately": false,
+    "literature_novelty_claim": false,
+    "independent_review_credit": 0,
+    "assurance_metadata_mathematical_credit": 0
+  },
+  "evidence_pointers": [
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1c_C007_TANGENT_INTEGRABILITY_REPAIR_20260812.md",
+    "research/real_math/millennium/hodge/deformation/00_sources/H4d1c_C007_ALGEBRAIC_GEOMETRY_SOURCE_RECEIPT_20260812.json",
+    "research/real_math/millennium/hodge/deformation/03_routes/H4d1c_C006_RAMIFICATION_PROXY_NOGO_20260812.md",
+    "research/real_math/millennium/cross_problem/07_memory/GLOBAL_MATH_ONLY_SATURATION_LEDGER_HODGE_C006_SUCCESSOR_20260812.json"
+  ]
+}
