@@ -188,35 +188,53 @@ def context() -> MathContextFiber:
 def failure_reuse_bundle(context_hash: str):
     """Return a protected DifferenceWitness and executable reuse assessment."""
 
-    prior = FailureExperience(
+    prior_core = dict(
         failure_id="F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC",
         atom_id="O9d12a2a1b-C050",
         candidate_id="C050-K15-TARGET-BLIND-SELECTOR-DISCRIMINATOR-v1",
         context_packet_hash="sha256:b50f857493e88680bd74943321316451b379c664e0e39d7d2d709f01d5be2a56",
         research_trace_event_id="O9d12a2a1b-C050-E13",
-        method_family="coordinate-first synchronized suffix-prefix separation",
+        method_family="literal-transpose suffix-row overlap repair",
         failure_mode="fixed variable-code bit versus canonical MAGIC bit",
-        residual_signature=("field-boundary alignment", "exact suffix/prefix equality failure", "bounded k-specific obstruction"),
-        broken_assumptions=("moving the half split removes the fixed code/header collision",),
-        scope_conditions=("k=15 only", "exact C041 canonical grammar and equal split", "C048 swapped reduction retained"),
-        competing_diagnoses=("H_15 is empty", "a current grammar branch was omitted", "UNSAT semantics creates the separating bit"),
-        selected_diagnosis="all H_15 labels have bit 3 equal to 1 while all exhaustive P_16 branches inherit MAGIC bit 3 equal to 0",
+        residual_signature=("field-boundary alignment", "fixed variable-code bit versus canonical MAGIC bit", "exact suffix/prefix equality failure", "bounded k-specific obstruction"),
+        broken_assumptions=("changing the half-length and suffix alignment need not remove the earlier fixed-code-versus-header obstruction", "multiple current grammar branches do not help when all share the conflicting MAGIC coordinate"),
+        scope_conditions=("k=15 only", "exact canonical long-form grammar and equal split", "all frozen encoded-length-32 parameter regimes", "C048 swapped reduction retained", "no finite-to-general extrapolation"),
+        competing_diagnoses=(
+            "H_15 is empty: the explicit v=1,m=3 contradictory formula proves nonvacuity",
+            "only one current branch was checked: both unpadded and all eight padded parameter regimes are exhausted",
+            "UNSAT semantics creates the separating bit: the bit follows from canonical v=1 syntax before semantic filtering",
+            "noncanonical total-decoder fallbacks change P_16: those branches are outside the frozen canonical-prefix language",
+            "literal transposition itself creates separation: C048 reduction faithfulness is independent of decoder-specific label alignment",
+            "the record checker supplies proof authority: mathematical credit belongs to the hand/symbolic certificate",
+        ),
+        selected_diagnosis="At the unique length-30 UNSAT-capable parent regime, the changed half-split still places a fixed v=1 variable-code bit at H-label coordinate 3; every canonical current prefix retains MAGIC[3]=0.",
         diagnosis_status=FailureDiagnosisStatus.SUPPORTED,
         evidence_pointers=(
             f"git:{APPLICATION_BASE_SHA}:{BASE}/07_memory/O9d12a2a1b_C050_K15_FAILURE_EXPERIENCE_20260812.json@blob:{C050_FAILURE_BLOB}",
             f"git:{APPLICATION_BASE_SHA}:{BASE}/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:{C050_RESULT_BLOB}",
         ),
-        falsifier_or_attempt="an alternative length-30 parent regime, omitted length-32 current regime, or equality at zero-based bit 3",
-        observed_result="H_15 intersection P_16 is empty by the exact zero-based bit-3 contradiction",
-        artifact_hash="sha256:09b56ac732c375fd90b609a38760199fb57243418035e7638f3a58a8c41721c0",
+        falsifier_or_attempt="A canonical UNSAT length-30 parent outside v=1,m=3; an omitted canonical length-32 current regime; an H_15 label with h[3]=0; a P_16 prefix with p[3]=1; one exact common label; or a changed grammar, split, or reduction refutes the corresponding scoped obligation.",
+        observed_result="H_15 intersection P_16 is empty by an exact zero-based bit-3 contradiction.",
         timestamp="2026-08-12T07:05:33Z",
-        local_repair_attempts=("move from k=12 to k=15", "exhaust padded and unpadded current branches"),
+        local_repair_attempts=("changed from the k=12 payload-boundary split to the target-blind source-admissible k=15 split", "exhausted both unpadded and padded current-word branch families"),
+    )
+    # The source JSON predates the canonical FailureExperience schema.  This is
+    # an explicit schema projection with a new hash, never a rewrite that keeps
+    # the source artifact hash after adding required protected fields.
+    prior = FailureExperience(
+        **prior_core,
+        artifact_hash=_hash({
+            "projection_id": "PNP-C051-CANONICAL-PROJECTION-OF-C050-FAILURE",
+            "source_artifact_hash": "sha256:09b56ac732c375fd90b609a38760199fb57243418035e7638f3a58a8c41721c0",
+            "source_blob": C050_FAILURE_BLOB,
+            "projected_fields": _jsonable(prior_core),
+        }),
     )
     lattice = add_failure_experience(FailureExperienceLattice(), prior)
     witness = DifferenceWitness(
         target_atom_id=ATOM,
         target_context_hash=context_hash,
-        method_family="coordinate-first synchronized suffix-prefix separation",
+        method_family="literal-transpose suffix-row overlap repair",
         prior_failure_ids=(prior.failure_id,),
         changed_structural_coordinates=(
             "parent half-length changes from 15 to 19 and encoded length from 30 to 38",
@@ -250,6 +268,8 @@ def failure_reuse_bundle(context_hash: str):
         "snapshot_id": "PNP-C051-FAILURE-SNAPSHOT-20260812",
         "target_atom_id": ATOM,
         "source_failure_blob": C050_FAILURE_BLOB,
+        "source_failure_artifact_hash": "sha256:09b56ac732c375fd90b609a38760199fb57243418035e7638f3a58a8c41721c0",
+        "projection_authority": "CANONICAL_SCHEMA_PROJECTION_PRESERVES_SOURCE_MATHEMATICAL_FIELDS_NO_NEW_FAILURE_CREDIT",
         "registered_failures": [_jsonable(asdict(prior))],
         "difference_witness": _jsonable(asdict(witness)),
         "reuse_assessment": _jsonable(asdict(assessment)),

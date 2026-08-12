@@ -146,6 +146,16 @@ def test_c051_memory_and_expert_roles_preserve_scope() -> None:
     assert witness.target_context_hash == _load(ARTIFACTS["context"])["packet_hash"]
     assert failure_snapshot == expected_snapshot
     assert failure_snapshot["reuse_assessment"]["verdict"] == "DIFFERENCE_WITNESSED"
+    projected = failure_snapshot["registered_failures"][0]
+    assert projected["method_family"] == "literal-transpose suffix-row overlap repair"
+    assert projected["residual_signature"] == [
+        "field-boundary alignment",
+        "fixed variable-code bit versus canonical MAGIC bit",
+        "exact suffix/prefix equality failure",
+        "bounded k-specific obstruction",
+    ]
+    assert projected["artifact_hash"] != failure_snapshot["source_failure_artifact_hash"]
+    assert failure_snapshot["projection_authority"].startswith("CANONICAL_SCHEMA_PROJECTION")
     assert {row["role"] for row in expert["role_reviews"]} == {
         "domain_theory_lead",
         "analogy_method_transfer_lead",

@@ -69,6 +69,10 @@ def audit_packet(root):
     if reuse.get("verdict") != "DIFFERENCE_WITNESSED": errors.append("failure reuse: protected reuse gate did not pass")
     if memory.get("relevant_failure_ids") != reuse.get("relevant_failure_ids"): errors.append("failure reuse: memory review ids differ from assessed ids")
     if memory.get("failure_lattice_snapshot_hash") != digest(failure_snapshot): errors.append("failure reuse: memory review is not bound to C051 failure snapshot")
+    projected=(failure_snapshot.get("registered_failures") or [{}])[0]
+    if projected.get("method_family") != "literal-transpose suffix-row overlap repair": errors.append("failure reuse: C050 method family was rewritten")
+    if projected.get("artifact_hash") == failure_snapshot.get("source_failure_artifact_hash"): errors.append("failure reuse: schema projection improperly retained source artifact hash")
+    if not str(failure_snapshot.get("projection_authority","")).startswith("CANONICAL_SCHEMA_PROJECTION"): errors.append("failure reuse: schema projection authority missing")
     try:
         chronology_floor=max(datetime.fromisoformat(atomization["recorded_at"].replace("Z","+00:00")),datetime.fromisoformat(context["frozen_at"].replace("Z","+00:00")))
         if any(datetime.fromisoformat(entry["timestamp"].replace("Z","+00:00"))<=chronology_floor for entry in trace["entries"]): errors.append("trace: event predates or equals atom/context freeze")

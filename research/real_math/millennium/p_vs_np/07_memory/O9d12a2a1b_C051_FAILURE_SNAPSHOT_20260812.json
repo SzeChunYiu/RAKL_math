@@ -1,5 +1,5 @@
 {
-  "artifact_hash": "sha256:0f93717b2ecc95e34abeacbbe978f0b3bf39a1bcdf53f96631bd699511ad344c",
+  "artifact_hash": "sha256:cbf368df5c085909b3c2cf9b8d0c528a7f0b1e0e51d647606e38dcfb19af318c",
   "difference_witness": {
     "changed_structural_coordinates": [
       "parent half-length changes from 15 to 19 and encoded length from 30 to 38",
@@ -12,7 +12,7 @@
       "git:a060514e894ec6566b01bb4c89a8aa806ef0048c:research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json@blob:f3eaad2496e80aa64b8081868021cc1a89304ef2",
       "git:a060514e894ec6566b01bb4c89a8aa806ef0048c:research/real_math/millennium/p_vs_np/04_candidates/C041_fx_sat_one_sided.py@blob:fcc4814dd618da96ef9bb8144a4783a0a6e886e1"
     ],
-    "method_family": "coordinate-first synchronized suffix-prefix separation",
+    "method_family": "literal-transpose suffix-row overlap repair",
     "prior_failure_ids": [
       "F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC"
     ],
@@ -31,21 +31,26 @@
     "transfer_source_context_hash": ""
   },
   "mathematical_credit": false,
+  "projection_authority": "CANONICAL_SCHEMA_PROJECTION_PRESERVES_SOURCE_MATHEMATICAL_FIELDS_NO_NEW_FAILURE_CREDIT",
   "quarantined_families": [
     "k=13"
   ],
   "registered_failures": [
     {
-      "artifact_hash": "sha256:09b56ac732c375fd90b609a38760199fb57243418035e7638f3a58a8c41721c0",
+      "artifact_hash": "sha256:2471b4349c31502e77d9023529871c11e3ca26f864db57fa32f6fd81b275bedf",
       "atom_id": "O9d12a2a1b-C050",
       "broken_assumptions": [
-        "moving the half split removes the fixed code/header collision"
+        "changing the half-length and suffix alignment need not remove the earlier fixed-code-versus-header obstruction",
+        "multiple current grammar branches do not help when all share the conflicting MAGIC coordinate"
       ],
       "candidate_id": "C050-K15-TARGET-BLIND-SELECTOR-DISCRIMINATOR-v1",
       "competing_diagnoses": [
-        "H_15 is empty",
-        "a current grammar branch was omitted",
-        "UNSAT semantics creates the separating bit"
+        "H_15 is empty: the explicit v=1,m=3 contradictory formula proves nonvacuity",
+        "only one current branch was checked: both unpadded and all eight padded parameter regimes are exhausted",
+        "UNSAT semantics creates the separating bit: the bit follows from canonical v=1 syntax before semantic filtering",
+        "noncanonical total-decoder fallbacks change P_16: those branches are outside the frozen canonical-prefix language",
+        "literal transposition itself creates separation: C048 reduction faithfulness is independent of decoder-specific label alignment",
+        "the record checker supplies proof authority: mathematical credit belongs to the hand/symbolic certificate"
       ],
       "context_packet_hash": "sha256:b50f857493e88680bd74943321316451b379c664e0e39d7d2d709f01d5be2a56",
       "diagnosis_status": "SUPPORTED",
@@ -55,25 +60,28 @@
       ],
       "failure_id": "F-PNP-C050-K15-FIXED-VARIABLE-BIT-VERSUS-MAGIC",
       "failure_mode": "fixed variable-code bit versus canonical MAGIC bit",
-      "falsifier_or_attempt": "an alternative length-30 parent regime, omitted length-32 current regime, or equality at zero-based bit 3",
+      "falsifier_or_attempt": "A canonical UNSAT length-30 parent outside v=1,m=3; an omitted canonical length-32 current regime; an H_15 label with h[3]=0; a P_16 prefix with p[3]=1; one exact common label; or a changed grammar, split, or reduction refutes the corresponding scoped obligation.",
       "local_repair_attempts": [
-        "move from k=12 to k=15",
-        "exhaust padded and unpadded current branches"
+        "changed from the k=12 payload-boundary split to the target-blind source-admissible k=15 split",
+        "exhausted both unpadded and padded current-word branch families"
       ],
-      "method_family": "coordinate-first synchronized suffix-prefix separation",
-      "observed_result": "H_15 intersection P_16 is empty by the exact zero-based bit-3 contradiction",
+      "method_family": "literal-transpose suffix-row overlap repair",
+      "observed_result": "H_15 intersection P_16 is empty by an exact zero-based bit-3 contradiction.",
       "research_trace_event_id": "O9d12a2a1b-C050-E13",
       "residual_signature": [
         "field-boundary alignment",
+        "fixed variable-code bit versus canonical MAGIC bit",
         "exact suffix/prefix equality failure",
         "bounded k-specific obstruction"
       ],
       "scope_conditions": [
         "k=15 only",
-        "exact C041 canonical grammar and equal split",
-        "C048 swapped reduction retained"
+        "exact canonical long-form grammar and equal split",
+        "all frozen encoded-length-32 parameter regimes",
+        "C048 swapped reduction retained",
+        "no finite-to-general extrapolation"
       ],
-      "selected_diagnosis": "all H_15 labels have bit 3 equal to 1 while all exhaustive P_16 branches inherit MAGIC bit 3 equal to 0",
+      "selected_diagnosis": "At the unique length-30 UNSAT-capable parent regime, the changed half-split still places a fixed v=1 variable-code bit at H-label coordinate 3; every canonical current prefix retains MAGIC[3]=0.",
       "timestamp": "2026-08-12T07:05:33Z"
     }
   ],
@@ -88,6 +96,7 @@
   },
   "schema_version": "1.0.0",
   "snapshot_id": "PNP-C051-FAILURE-SNAPSHOT-20260812",
+  "source_failure_artifact_hash": "sha256:09b56ac732c375fd90b609a38760199fb57243418035e7638f3a58a8c41721c0",
   "source_failure_blob": "7da72bf415296c616632bbad0ff16974a73f7737",
   "target_atom_id": "O9d12a2a1b-C051",
   "target_state": "K19_TARGET_RESULT_UNACCESSED"
