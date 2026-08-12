@@ -89,6 +89,7 @@ def test_atlas_preserves_all_12_causes_and_adds_only_typed_specialization() -> N
     assert len(old["failure_mechanisms"]) == len(new["failure_mechanisms"]) == 12
     assert semantic(old["failure_mechanisms"]) == semantic(new["failure_mechanisms"])
     assert semantic(old["cross_problem_equivalence_classes"]) == semantic(new["cross_problem_equivalence_classes"])
+    assert new["authority_universe"]["framework_sha"] == old["authority_universe"]["framework_sha"]
     assert new["bounded_disposition"]["new_distinct_failure_mechanism_ids"] == []
     assert new["bounded_disposition"]["added_specialization_ids"] == [SPECIALIZATION]
     specialization = new["failure_mechanism_specializations"]

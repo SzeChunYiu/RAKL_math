@@ -20,6 +20,7 @@ RESULT = ROOT / "research/real_math/millennium/birch_swinnerton_dyer/00_sources/
 DAG = ROOT / "research/real_math/millennium/birch_swinnerton_dyer/02_problem_dag/BSD_A1a2_R15_KUMMER_SHA_DAG_DELTA_20260812.yaml"
 REVIEW = ROOT / "research/real_math/millennium/birch_swinnerton_dyer/08_reviews/BSD_A1a2_R15_RESULT_REVIEW_20260812.md"
 BASE = "f3275302b2198bbd15d551d57adce85c5762c013"
+FRAMEWORK = "5dc0627f039e8f3e1cdcb7e05cd7603860afc554"
 ITEM = "MATH-BSD-R15-KUMMER-SHA-CORANK-DECOMPOSITION"
 SPECIALIZATION = "SP-BSD-R15-UNCONTROLLED-QUOTIENT-CORANK"
 PARENT_CAUSE = "FM-BSD-ARITHMETIC-PREMISE-REIMPORT"
@@ -169,6 +170,7 @@ def build_atlas() -> dict:
     value["atlas_id"] = "GLOBAL-MATHEMATICAL-FAILURE-CAUSE-ATLAS-BSD-R15-SUCCESSOR-20260812"
     value["as_of_utc"] = "2026-08-12T09:45:00Z"
     value["authority_universe"] = {
+        "framework_sha": FRAMEWORK,
         "kind": "MERGED_ORIGIN_MAIN_ONLY",
         "repository_sha": BASE,
         "pending_or_open_pr_material_counted": False,
