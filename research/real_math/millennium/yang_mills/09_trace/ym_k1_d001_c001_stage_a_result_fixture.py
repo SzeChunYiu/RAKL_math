@@ -15,6 +15,7 @@ ORIGINAL_AUTHORIZATION_MERGE_SHA = "1bf48bf755bb057d822b496fe7b4152c00e3a6bc"
 EVALUATOR_IDENTITY_MERGE_SHA = "ff21299ae77dde937e00c5739de3c526a30736d5"
 RETROSPECTIVE_AUTHORIZATION_MERGE_SHA = "ba9749865e99acf0a9751754cdee3931225804ef"
 FRAMEWORK_SHA = "d21592b0ff8da988deabb923fd549891ff8ad9f0"
+CANDIDATE_FREEZE_TERMINAL_EVENT_HASH = "sha256:4e9d35f677ff9f2bf9b1148453454bfec2e76026fd38229d516c1a9b089f73c2"
 CANDIDATE_ID = "YM-S1a2i-K1-D001-C001-TWO-STAGE-SOURCE-BRIDGE"
 SOURCE_TEX_SHA256 = "ef936e502e84b0cafabc594c9705c16c9c1df29dc95f2a6a679b6b446c526c18"
 SOURCE_PDF_SHA256 = "08013e1ce75c8b2be79c62ba61f70e30024b9bb427c465ceab7ee9266236690d"
@@ -575,7 +576,7 @@ def build_trace(
     e08 = trace_event(
         "YM-S1a2i-K1-D001-C001-E08",
         "FALSIFIER_RUN",
-        "sha256:c71a13ac9370968d892ea60aa7b0e303a383a609d8cba100d584a895354ebada",
+        CANDIDATE_FREEZE_TERMINAL_EVENT_HASH,
         "The retrospective authorization is active and the exact two-stage evaluator is bound; strict discovery chronology is irrecoverably false for this generation.",
         "Reproduce the four frozen planted worlds and Stage A from the bound public source without entering Stage B.",
         [str(EVALUATOR.relative_to(ROOT)), historical_binding(RETROSPECTIVE_AUTHORIZATION, RETROSPECTIVE_AUTHORIZATION_MERGE_SHA)["raw_sha256"]],
@@ -629,7 +630,7 @@ def build_trace(
             "run_type": "RETROSPECTIVE_REPRODUCTION_NOT_PROSPECTIVE_DISCOVERY",
             "strict_rakl_discovery_chronology": False,
             "prior_local_non_strict_result_commit": "25c0271d6a0f379cad4dab3c2a4be56d732f5a00",
-            "parent_trace_terminal_event_hash": "sha256:c71a13ac9370968d892ea60aa7b0e303a383a609d8cba100d584a895354ebada",
+            "parent_trace_terminal_event_hash": CANDIDATE_FREEZE_TERMINAL_EVENT_HASH,
             "events": [e08, e09, e10, e11],
             "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
             "artifact_hash": "",

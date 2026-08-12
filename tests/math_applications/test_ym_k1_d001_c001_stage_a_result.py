@@ -110,6 +110,19 @@ def test_generated_receipts_and_hashes_are_exact() -> None:
         assert actual == "sha256:" + hashlib.sha256(f.canonical(unsigned)).hexdigest()
 
 
+def test_result_trace_continues_after_the_exact_candidate_freeze() -> None:
+    f = load(FIXTURE, "ym_k1_d001_c001_stage_a_fixture_lineage")
+    trace = f.build_documents()["trace"]
+    candidate_trace = json.loads(
+        (YM / "09_trace/YM-S1a2i_K1_D001_C001_CANDIDATE_FREEZE_TRACE_20260812.json").read_text()
+    )
+    candidate_terminal_hash = candidate_trace["entries"][-1]["artifact_hash"]
+    assert candidate_trace["entries"][-1]["event_type"] == "CANDIDATE_PROPOSED"
+    assert candidate_terminal_hash == f.CANDIDATE_FREEZE_TERMINAL_EVENT_HASH
+    assert trace["parent_trace_terminal_event_hash"] == candidate_terminal_hash
+    assert trace["events"][0]["previous_event_hash"] == candidate_terminal_hash
+
+
 def test_failure_delta_is_canonical_and_external_supersession_is_only_proposed() -> None:
     f = load(FIXTURE, "ym_k1_d001_c001_stage_a_fixture_failure")
     failure = f.build_documents()["failure"]
