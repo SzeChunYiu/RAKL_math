@@ -1,0 +1,439 @@
+{
+  "TaskEpisode": {
+    "episode_id": "EP-YM-S1a2e-R15-20260812",
+    "task_id": "YM-ROOT-5-VERIFIED-DISCOVERY",
+    "atom_id": "YM-S1a2e",
+    "context_hash": "sha256:bfe3afc6c4b7df265538fbc52b859dde926c8372509b33fa590a0c4e54e72428",
+    "problem_signature": [
+      "YM-S1a2e-SZZ-STRONG-COUPLING-TO-CONTINUUM-PHYSICAL-MASS-SCALING",
+      "d=4",
+      "G=SU(N)",
+      "fixed N",
+      "SZZ 0<beta<1/48",
+      "same Wilson action",
+      "a->0 asymptotically-free cutoff-removal target",
+      "same gauge-invariant OS theory required"
+    ],
+    "fibre_snapshot_hash": "sha256:d123cdf30c1e950fee28a520a74e7c4dababcd4717f225d11fe4cf2afa683cbd",
+    "operator_ids": [
+      "decomposition",
+      "routing",
+      "search_query_generation",
+      "source_selection_reliability",
+      "claim_extraction",
+      "ontology_terminology_normalization",
+      "mathematical_context_translation",
+      "equivalence_similarity",
+      "contextual_theory_gluing",
+      "contradiction_diagnosis",
+      "gap_discovery",
+      "memory",
+      "review",
+      "saturation_stopping",
+      "prompting_context_policy",
+      "authority_promotion"
+    ],
+    "action_trace": [
+      "read current RAKL main/version/v3/method_specs",
+      "read exact root contract and live Yang-Mills memory",
+      "detect live-work collision on fixed-cutoff OS-transfer fibre #253/PR#256/PR#258",
+      "rotate to unsaturated G6 physical-scaling interface",
+      "freeze issue #269 and pre-candidate fibre before exact parameter/regime test",
+      "source-bind SZZ unit-spacing Wilson action and SU(N) beta-domain",
+      "source-bind Luescher Wilson bare-coupling action and T_a=e^{-aH_a}",
+      "derive exact coefficient map N beta = g0^{-2}",
+      "source-bind Luescher-Weisz bare/renormalized coupling matching at scale s/a and positive asymptotic-freedom coefficient",
+      "apply hostile domain-overlap control g0(a)->0 versus g0^2>48/N",
+      "audit gauge, regularization, limit interchange, OS/source and a-uniformity",
+      "run seven-role same-context expert review",
+      "bounded search for same-theory weak-UV to strong-IR spectral transport theorem",
+      "record proposal/shadow obstruction; deny theorem/root promotion"
+    ],
+    "observation_ids": [
+      "OBS-SZZ-UNIT-SPACING-R15",
+      "OBS-SZZ-ACTION-NBETA-R15",
+      "OBS-SZZ-SU(N)-BETA-1OVER48-R15",
+      "OBS-LUESCHER-WILSON-G0-ACTION-R15",
+      "OBS-LUESCHER-TA-EXP-MINUS-AH-R15",
+      "OBS-LW-ALPHA0-MS-SOVERA-R15",
+      "OBS-R15-EXACT-NBETA-G0MAP",
+      "OBS-R15-STRONG-AF-DOMAIN-NONOVERLAP"
+    ],
+    "verification_ids": [
+      "VIS-SZZ-UNIT-SPACING-ACTION-R15",
+      "VIS-SZZ-BETA-DOMAIN-R15",
+      "VIS-LUESCHER-ACTION-R15",
+      "VIS-LUESCHER-CONTINUUM-G0-OS-R15",
+      "VIS-LW-BARE-MATCH-R15",
+      "VIS-LW-BETA-FUNCTION-R15",
+      "CHK-ORIENTATION-PAIR-COEFFICIENT-R15",
+      "CHK-DOMAIN-INEQUALITY-G0SQ-GT-48OVERN-R15",
+      "CHK-PHYSICAL-GAP-SCALING-R15"
+    ],
+    "outcome": "PARTIAL_SUCCESS",
+    "residual_signature": [
+      "RES-YM-S1a2e-WEAK-UV-TO-GAPPED-IR-SAME-OS-SPECTRAL-TRANSPORT-WITH-PHYSICAL-SCALING-UNBOUND"
+    ],
+    "evidence_pointers": [
+      "arXiv:2204.12737v1 Sec.1.1 Eq.(1.2), Assumption 1.1/Eq.(1.3)",
+      "Luescher DESY 76/54 Eq.(2), Eq.(5) discussion and T=e^{-aH}",
+      "arXiv:hep-lat/9502001 Eq.(1.2), Appendix A beta function",
+      "RAKL_math issue #269",
+      "R15 source audit commit 619af43c0dfb84f94b5b510bcc13be880957cb75"
+    ],
+    "timestamp": "2026-08-12T03:36:00Z",
+    "cost": 0.0,
+    "storage_admission": "PROPOSAL_SHADOW_STORED",
+    "artifact_hash": "sha256:4b6f24c2e5ba0a9c7f24ee4a95defeeeb7b1807d0da73aa4cdcd7992ec7f683e"
+  },
+  "RAKL_METHOD_CASE_STUDY": {
+    "schema": "RAKL_math.RAKL_METHOD_CASE_STUDY.v3_shadow",
+    "cycle_id": "YM-S1a2e-G6-PHYSICAL-SCALING-20260812-R15",
+    "authority": "PROPOSAL_SHADOW_ONLY",
+    "atom": {
+      "id": "YM-S1a2e",
+      "issue": "#269",
+      "signature": "YM-S1a2e-SZZ-STRONG-COUPLING-TO-CONTINUUM-PHYSICAL-MASS-SCALING",
+      "atom_hash": "sha256:e07dd2526dbbec3fd640908e165a462d23602b2230c464dbeb1dca53711abe01"
+    },
+    "actual_fibre": {
+      "scope": "d=4; fixed N; G=SU(N); exact Wilson coefficient comparison; SZZ fixed unit spacing 0<beta<1/48 versus a->0 asymptotically-free Wilson trajectory",
+      "target": "bind fixed-cutoff lattice spectral evidence to a positive physical continuum mass gap without measure/OS/source/subsequence switching",
+      "declared_fibre_hash": "sha256:d123cdf30c1e950fee28a520a74e7c4dababcd4717f225d11fe4cf2afa683cbd",
+      "fibre_commit": "1e1c270a695a2a8c34eeb27041feb86c05bbb3eb"
+    },
+    "methods_operators_motifs_tried": {
+      "methods": [
+        "live-work collision rejection",
+        "exact Wilson action coefficient matching",
+        "regime-overlap test",
+        "dimensional T_a=e^{-aH_a} physical-gap scaling",
+        "same-theory RG/OS gluing audit",
+        "hostile-sequence/domain control",
+        "bounded primary-source repair search"
+      ],
+      "canonical_operators": [
+        "decomposition",
+        "routing",
+        "search_query_generation",
+        "source_selection_reliability",
+        "claim_extraction",
+        "ontology_terminology_normalization",
+        "mathematical_context_translation",
+        "equivalence_similarity",
+        "contextual_theory_gluing",
+        "contradiction_diagnosis",
+        "gap_discovery",
+        "memory",
+        "review",
+        "authority_promotion",
+        "saturation_stopping",
+        "prompting_context_policy"
+      ],
+      "motifs_tried": [
+        "parameter-regime overlap before theorem transport",
+        "fixed-cutoff-to-continuum same-theory gluing"
+      ],
+      "motifs_minted": []
+    },
+    "prior_experience": {
+      "retrieved_ids": [
+        "#5",
+        "#88",
+        "#253",
+        "PR#256",
+        "PR#258",
+        "PR#225",
+        "PR#240",
+        "root-comment-G3-G5-G6-G7-open"
+      ],
+      "selected_ids": [
+        "#5",
+        "#88",
+        "#253/PR#256",
+        "PR#258",
+        "PR#225/PR#240"
+      ],
+      "rejected_ids": [
+        "duplicate fixed-cutoff sign/support/operator fibre",
+        "Balaban B1-B3 source-acquisition repetition",
+        "Faizal-Shabir defect-budget family",
+        "Faizal-Shabir AF/IR telescope family"
+      ],
+      "missed": "CANNOT_MEASURE — no exhaustive governed cross-problem/live-work coverage certificate",
+      "successful_reuse_ids": [
+        "#5",
+        "#88",
+        "PR#258"
+      ]
+    },
+    "decision_policy": "Source-bind the exact parameter map and theorem-domain intersection before any fixed-cutoff theorem is lifted to an a->0 trajectory. If domains separate, block direct transport and require an explicit same-theory RG/universality/spectral theorem; do not infer from memory.",
+    "falsifier_verification": {
+      "falsifiers": [
+        "exact action matching does not give N beta = g0^{-2}",
+        "the SZZ d=4 SU(N) domain contains arbitrarily small g0 under that map",
+        "the asymptotically-free cutoff-removal tail does not require g0(a)->0 in the standard Wilson matching",
+        "a source-bound theorem is found that transports the exact SZZ/OS spectral edge along the same cutoff-removal trajectory with uniform physical scaling"
+      ],
+      "verification": [
+        "SZZ primary PDF text and screenshots for unit spacing, Eq.(1.2), Eq.(1.3)",
+        "Luescher primary PDF text and screenshots for Eq.(2), T=e^{-aH}, g0=0 continuum critical coordinate",
+        "Luescher-Weisz primary PDF text and screenshots for alpha_MS(s/a)=alpha0+... and b0>0",
+        "elementary orientation-pair coefficient check",
+        "elementary inequality beta<1/48 => g0^2>48/N",
+        "seven-role same-context expert cell",
+        "bounded primary-source search for same-theory repair"
+      ]
+    },
+    "outcome": "PARTIAL_SUCCESS_EXACT_MICROSCOPIC_DOMAIN_NONOVERLAP_AND_G6_TRANSPORT_RESIDUAL",
+    "residual_before": "RES-YM-G6-FIXED-CUTOFF-LATTICE-GAP-TO-POSITIVE-PHYSICAL-CONTINUUM-MASS-UNBOUND",
+    "residual_after": "RES-YM-S1a2e-WEAK-UV-TO-GAPPED-IR-SAME-OS-SPECTRAL-TRANSPORT-WITH-PHYSICAL-SCALING-UNBOUND",
+    "failure_category": "CONTEXTUAL_THEORY_GLUING / PARAMETER_REGIME_NONOVERLAP; NO MATHEMATICAL CANDIDATE FAILURE",
+    "saturation_axes": {
+      "KNOWLEDGE": "REOPENED_AND_RETAINED_PROPOSAL_SHADOW",
+      "OPERATOR": "FLAT",
+      "EXPERIENCE_PATTERN": "FLAT",
+      "OBSTRUCTION": "REOPENED_AND_RETAINED_PROPOSAL_SHADOW",
+      "RELATION": "REOPENED_AND_RETAINED_PROPOSAL_SHADOW",
+      "PATH": "REOPENED_AND_RETAINED_PROPOSAL_SHADOW",
+      "META_METHOD": "FLAT"
+    },
+    "novelty_class": "RAKL_TRIVIAL_LOCAL_PARAMETER_GLUE / NEW_SOURCE_SCOPED_DOMAIN_RELATION_AND_OBSTRUCTION_ONLY",
+    "framework_improvement_hypothesis": {
+      "status": "MEASUREMENT_ONLY_UNPROMOTED",
+      "hypothesis": "A theorem-transport routing check should require a nonempty parameter-domain intersection after exact convention normalization, and separately require the physical-unit scaling map before fixed-cutoff evidence can enter a continuum fibre.",
+      "retained_meta_method_novelty_credit": 0
+    },
+    "expert_cell": [
+      {
+        "role": "lattice renormalization / asymptotic freedom",
+        "finding": "exact N beta=g0^-2 plus SZZ beta<1/48 gives g0^2>48/N; the AF microscopic tail g0(a)->0 is outside that domain"
+      },
+      {
+        "role": "constructive RG",
+        "finding": "direct microscopic SZZ use is blocked; a separately proved weak-UV to strong-effective-IR same-theory RG route remains logically possible"
+      },
+      {
+        "role": "OS / spectral",
+        "finding": "T_a=e^{-aH_a} makes c(a)/a the physical coordinate; fixed lattice-unit c_N has no a->0 authority"
+      },
+      {
+        "role": "SZZ probability",
+        "finding": "strong-coupling domain and unit-spacing scope are exact; no continuum trajectory is supplied"
+      },
+      {
+        "role": "gauge representation",
+        "finding": "action match is gauge-invariant and orientation double-counting is explicitly resolved"
+      },
+      {
+        "role": "adversarial mathematical physics",
+        "finding": "domain non-overlap defeats direct theorem substitution but is not an impossibility theorem for RG transport or Yang-Mills"
+      },
+      {
+        "role": "provenance / metrology",
+        "finding": "pre-freeze observations receive zero strict discovery credit; same-context expert cell gives 0/3 independent review"
+      }
+    ],
+    "episode_diagnosis_obstruction_lesson": {
+      "episode": "EP-YM-S1a2e-R15-20260812",
+      "diagnosis": "DG-YM-S1a2e-R15-STRONG-AF-DOMAIN-NONOVERLAP-SHADOW",
+      "new_failures": [],
+      "new_obstructions": [
+        "O-YM-S1a2e-MICROSCOPIC-STRONG-AF-DOMAIN-NONOVERLAP-R15-SHADOW"
+      ],
+      "lessons": [],
+      "separation": "Episode records what was done; diagnosis records the scoped interpretation; the obstruction is the typed theorem-domain/gluing block. No FailureExperience or reusable lesson is minted because no mathematical candidate was executed."
+    },
+    "case_study_hash": "sha256:80c6a2167814ed30737d62ac7cd2fb260b335701b26a546a06ba9fbb523b0294"
+  },
+  "RAKL_CYCLE_METRICS": {
+    "schema": "RAKL_CYCLE_METRICS.v3_shadow",
+    "cycle_id": "YM-S1a2e-G6-PHYSICAL-SCALING-20260812-R15",
+    "RAKL": {
+      "method_version": "3.0.0",
+      "software_package_version": "0.1.0",
+      "constitution_epoch": "v3-authority-hardening-20260811",
+      "git_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+      "version_manifest_blob": "7363c88f4b19638299968e5e0ee3a93c3d567121",
+      "v3_py_blob": "280bf143fc8910d5860aaa02fbe3817a6aacfb72",
+      "method_specs_py_blob": "6342f2692b3fd85de3f274f9c6548c9736225691"
+    },
+    "RAKL_math": {
+      "base": "fd7efabd201ae6da3d255074573cac7d584c0518",
+      "base_tree": "c53a69e3532fe152a6ab12d2aa0f81c9abbd2064",
+      "fibre_head": "1e1c270a695a2a8c34eeb27041feb86c05bbb3eb",
+      "scientific_source_audit_head": "619af43c0dfb84f94b5b510bcc13be880957cb75",
+      "packet_pre_metrics_head": "619af43c0dfb84f94b5b510bcc13be880957cb75",
+      "exact_packet_head": "POST_SERIALIZATION_BINDING_REQUIRED",
+      "branch": "research/ym-r15-g6-physical-scaling-20260812",
+      "issue": "#269"
+    },
+    "pre_post_state_fingerprints": {
+      "protected_RAKLV3State_pre": "CANNOT_MEASURE — connector runtime exposes no materialized protected RAKLV3State",
+      "protected_RAKLV3State_post": "CANNOT_MEASURE — no scientific-authority transition invoked",
+      "repository_pre": "git:fd7efabd201ae6da3d255074573cac7d584c0518;tree:c53a69e3532fe152a6ab12d2aa0f81c9abbd2064",
+      "repository_scientific_post": "git:619af43c0dfb84f94b5b510bcc13be880957cb75",
+      "pre_candidate_chronology": "issue:#269;fibre_commit:1e1c270a695a2a8c34eeb27041feb86c05bbb3eb;exact source/regime test followed"
+    },
+    "atom_fibre": {
+      "atom_hash": "sha256:e07dd2526dbbec3fd640908e165a462d23602b2230c464dbeb1dca53711abe01",
+      "declared_fibre_hash": "sha256:d123cdf30c1e950fee28a520a74e7c4dababcd4717f225d11fe4cf2afa683cbd",
+      "context_hash": "sha256:bfe3afc6c4b7df265538fbc52b859dde926c8372509b33fa590a0c4e54e72428"
+    },
+    "canonical_method_specs_process_surfaces": [
+      "decomposition",
+      "routing",
+      "search_query_generation",
+      "source_selection_reliability",
+      "claim_extraction",
+      "ontology_terminology_normalization",
+      "mathematical_context_translation",
+      "equivalence_similarity",
+      "contextual_theory_gluing",
+      "contradiction_diagnosis",
+      "gap_discovery",
+      "memory",
+      "review",
+      "authority_promotion",
+      "saturation_stopping",
+      "prompting_context_policy"
+    ],
+    "memory": {
+      "retrieved_count": 8,
+      "retrieved_ids": [
+        "#5",
+        "#88",
+        "#253",
+        "PR#256",
+        "PR#258",
+        "PR#225",
+        "PR#240",
+        "root-comment-G3-G5-G6-G7-open"
+      ],
+      "selected_count_logical": 5,
+      "selected_ids": [
+        "#5",
+        "#88",
+        "#253/PR#256",
+        "PR#258",
+        "PR#225/PR#240"
+      ],
+      "rejected_count_logical": 4,
+      "rejected_ids": [
+        "duplicate fixed-cutoff sign/support/operator fibre",
+        "Balaban B1-B3 source-acquisition repetition",
+        "Faizal-Shabir defect-budget family",
+        "Faizal-Shabir AF/IR telescope family"
+      ],
+      "missed": "CANNOT_MEASURE — no exhaustive governed cross-problem/live-work coverage certificate",
+      "successful_reuse_ids": [
+        "#5",
+        "#88",
+        "PR#258"
+      ]
+    },
+    "outcome": "PARTIAL_SUCCESS_EXACT_MICROSCOPIC_DOMAIN_NONOVERLAP_AND_G6_TRANSPORT_RESIDUAL",
+    "residual_before": "RES-YM-G6-FIXED-CUTOFF-LATTICE-GAP-TO-POSITIVE-PHYSICAL-CONTINUUM-MASS-UNBOUND",
+    "residual_after": "RES-YM-S1a2e-WEAK-UV-TO-GAPPED-IR-SAME-OS-SPECTRAL-TRANSPORT-WITH-PHYSICAL-SCALING-UNBOUND",
+    "retained_proposal_shadow_novelty": {
+      "KNOWLEDGE": 1,
+      "OPERATOR": 0,
+      "EXPERIENCE_PATTERN": 0,
+      "OBSTRUCTION": 1,
+      "RELATION": 1,
+      "PATH": 1,
+      "META_METHOD": 0
+    },
+    "protected_retained_novelty": {
+      "KNOWLEDGE": 0,
+      "OPERATOR": 0,
+      "EXPERIENCE_PATTERN": 0,
+      "OBSTRUCTION": 0,
+      "RELATION": 0,
+      "PATH": 0,
+      "META_METHOD": 0
+    },
+    "axes_reopened": [
+      "KNOWLEDGE",
+      "OBSTRUCTION",
+      "RELATION",
+      "PATH"
+    ],
+    "axes_flattened": [
+      "OPERATOR",
+      "EXPERIENCE_PATTERN",
+      "META_METHOD"
+    ],
+    "observable_resources": {
+      "exact_model_tokens": "CANNOT_MEASURE — runtime exposes no durable exact model-token ledger",
+      "exact_context_tokens": "CANNOT_MEASURE — runtime exposes no durable exact context-token ledger",
+      "aggregate_retrieval_calls": "CANNOT_MEASURE — no consolidated durable cross-tool retrieval ledger for the whole cycle",
+      "aggregate_tool_calls": "CANNOT_MEASURE — no consolidated durable cross-tool call ledger for the whole cycle",
+      "wall_clock": "CANNOT_MEASURE — no trustworthy durable cycle timer",
+      "post_freeze_primary_web_search_query_strings": 7,
+      "post_freeze_primary_PDFs_inspected": 3,
+      "post_freeze_primary_PDF_screenshot_attempts": 6,
+      "post_freeze_primary_PDF_screenshot_successes": 6,
+      "post_freeze_primary_PDF_screenshot_failures": 0,
+      "post_freeze_live_work_repository_searches": 1
+    },
+    "new_ids": {
+      "episodes": [
+        "EP-YM-S1a2e-R15-20260812"
+      ],
+      "diagnoses": [
+        "DG-YM-S1a2e-R15-STRONG-AF-DOMAIN-NONOVERLAP-SHADOW"
+      ],
+      "failures": [],
+      "tools": [],
+      "obstructions": [
+        "O-YM-S1a2e-MICROSCOPIC-STRONG-AF-DOMAIN-NONOVERLAP-R15-SHADOW"
+      ],
+      "motifs": [],
+      "lessons": []
+    },
+    "successful_reuses": [
+      "#5",
+      "#88",
+      "PR#258"
+    ],
+    "TaskEpisode_hash": "sha256:4b6f24c2e5ba0a9c7f24ee4a95defeeeb7b1807d0da73aa4cdcd7992ec7f683e",
+    "RAKL_METHOD_CASE_STUDY_hash": "sha256:80c6a2167814ed30737d62ac7cd2fb260b335701b26a546a06ba9fbb523b0294",
+    "gate_provenance": {
+      "frozen_context": "PASS_WITH_PREEXISTING_OBSERVATION_BOUNDARY",
+      "live_work_collision": "PASS_ROTATED_AWAY_FROM_#253_PR#256_PR#258_DUPLICATION",
+      "dual_memory": "PASS_BOUNDED_NOT_EXHAUSTIVE",
+      "exact_Wilson_parameter_map": "PASS_N_BETA_EQUALS_G0_INVERSE_SQUARED",
+      "direct_parameter_domain_overlap": "FAIL_SZZ_STRONG_DOMAIN_DOES_NOT_CONTAIN_AF_MICROSCOPIC_TAIL",
+      "gauge_dependence": "PASS_NO_GAUGE_FIXED_SUBSTITUTION",
+      "reflection_positivity_OS": "DEPENDENCY_PRESERVED_FIXED_CUTOFF_ONLY; CONTINUUM_TRANSPORT_OPEN",
+      "regularization": "TYPED_FIXED_UNIT_LATTICE_VERSUS_EXPLICIT_A_TO_ZERO_TARGET",
+      "limit_interchange": "NOT_ATTEMPTED; UNIFORM SAME_THEORY TRANSPORT REQUIRED",
+      "candidate_generation": "BLOCKED_DIRECT_FIXED_CUTOFF_TO_CONTINUUM_LIFT",
+      "bounded_repair_search": "PASS_NO_FULL_CONTRACT_SOURCE_LOCATED; NOT_EXHAUSTIVE",
+      "formal_verifier": "NOT_RUN",
+      "dependency_axiom_root_audit": "NOT_RUN",
+      "isolated_recheck": "NOT_RUN",
+      "bounded_root_novelty_search": "NOT_RUN",
+      "expert_cell": "PASS_SAME_CONTEXT / ZERO_INDEPENDENT_CREDIT",
+      "independent_mathematical_reviews": "0/3",
+      "scientific_authority_transition": "NONE",
+      "root": "OPEN_NO_SOLUTION_CERTIFICATE"
+    },
+    "CI": {
+      "exact_head": "POST_SERIALIZATION_BINDING_REQUIRED",
+      "workflow": "Pinned RAKL application tests",
+      "status": "PENDING_PR_OPEN",
+      "conclusion": null
+    },
+    "RAKL_action_preference_attribution": {
+      "observable_memory_constrained_routing": "YES",
+      "effect": "live-work memory #253/PR#256/PR#258 prevented duplicate fixed-cutoff operator work and rotated the cycle to G6 physical scaling",
+      "observable_gate_action_change": "YES",
+      "gate_effect": "exact parameter-domain overlap gate blocked direct SZZ fixed-cutoff-to-continuum lifting and forced the residual to a same-theory weak-UV-to-gapped-IR transport theorem",
+      "strict_pre_memory_counterfactual": "CANNOT_MEASURE — no prospective pre-memory action-ranking receipt was frozen before live-work retrieval",
+      "semantic_shortcut_runtime": "CANNOT_CHECK — no materialized semantic-shortcut decision object was exposed in the connector runtime"
+    },
+    "raw_repository_growth_learning_credit": 0
+  }
+}

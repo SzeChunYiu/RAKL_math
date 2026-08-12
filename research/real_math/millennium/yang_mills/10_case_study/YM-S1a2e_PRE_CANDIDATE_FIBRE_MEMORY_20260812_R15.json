@@ -1,0 +1,141 @@
+{
+  "schema": "RAKL_math.math_context_fibre.v3_shadow",
+  "cycle_id": "YM-S1a2e-G6-PHYSICAL-SCALING-20260812-R15",
+  "authority": "PROPOSAL_SHADOW_PRE_CANDIDATE_ONLY",
+  "framework": {
+    "repo": "SzeChunYiu/RAKL",
+    "main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0",
+    "method_version": "3.0.0",
+    "software_package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "v3_blob": "280bf143fc8910d5860aaa02fbe3817a6aacfb72",
+    "method_specs_blob": "6342f2692b3fd85de3f274f9c6548c9736225691"
+  },
+  "application": {
+    "repo": "SzeChunYiu/RAKL_math",
+    "frozen_base": "fd7efabd201ae6da3d255074573cac7d584c0518",
+    "frozen_base_tree": "c53a69e3532fe152a6ab12d2aa0f81c9abbd2064"
+  },
+  "root": {
+    "issue": "#5",
+    "status": "OPEN_NO_SOLUTION_CERTIFICATE"
+  },
+  "atom": {
+    "id": "YM-S1a2e",
+    "issue": "#269",
+    "signature": "YM-S1a2e-SZZ-STRONG-COUPLING-TO-CONTINUUM-PHYSICAL-MASS-SCALING",
+    "qoi": "Can the exact fixed-cutoff SZZ/OS lattice-unit spectral edge be placed on the same a->0 constructive Yang-Mills trajectory with exact Wilson coupling normalization and a uniform positive physical mass bound?"
+  },
+  "actual_fibre": {
+    "dimension": 4,
+    "group": "SU(N)",
+    "fixed_cutoff_input": "SZZ infinite-volume Wilson theory at unit lattice spacing in its explicit strong-coupling beta-domain; active draft operator/gluing work #256/#258 is prior/concurrent experience, not to be duplicated.",
+    "continuum_target": "a->0 same-theory trajectory satisfying the root's continuum/short-distance requirements",
+    "required_parameter_binding": "exact Wilson-action coefficient map between SZZ beta and the bare coupling convention used on the continuum trajectory",
+    "required_gap_binding": "same-theory statement implying m_lat(a)/a >= m_* > 0 or equivalent physical Hamiltonian-gap normalization uniformly along the cutoff-removal path",
+    "same_objects": [
+      "gauge-invariant Euclidean measure/Schwinger family",
+      "reflection-positive OS source algebra and quotient",
+      "physical time normalization",
+      "thermodynamic/continuum subsequence",
+      "observable normalization"
+    ],
+    "excluded_claims": [
+      "a fixed-cutoff gap proves the continuum mass gap",
+      "strong-coupling and asymptotically-free regimes can be identified without a theorem",
+      "RG running alone is a spectral-gap transport theorem",
+      "root #5 closure"
+    ]
+  },
+  "preexisting_observation_boundary": [
+    "Before this R15 fibre was committed, this runtime had already re-read SZZ's fixed strong-coupling domain and Luescher's lattice transfer/continuum discussion while auditing live R14 work. Those observations receive zero strict R15 discovery credit.",
+    "R15 prospective credit is limited to the post-freeze exact parameter/regime/gluing test and any source-bound residual refinement."
+  ],
+  "memory": {
+    "retrieved": [
+      "#5",
+      "#88",
+      "#253",
+      "PR#256",
+      "PR#258",
+      "PR#225",
+      "PR#240",
+      "root-comment-G3-G5-G6-G7-open"
+    ],
+    "selected": [
+      "#5",
+      "#88",
+      "#253/PR#256",
+      "PR#258",
+      "PR#225/PR#240"
+    ],
+    "rejected": [
+      "duplicate fixed-cutoff sign/support/operator fibre",
+      "Bałaban B1-B3 source-acquisition repetition",
+      "Faizal-Shabir defect-budget family",
+      "Faizal-Shabir AF/IR telescope family"
+    ],
+    "missed": "CANNOT_MEASURE — no exhaustive governed cross-problem/live-work coverage certificate"
+  },
+  "methods_operators_motifs_tried": [
+    "live-work collision rejection",
+    "exact action-parameter normalization",
+    "regime-overlap test",
+    "dimensional physical-mass scaling audit",
+    "same-theory RG/OS gluing audit",
+    "counterexample/hostile-sequence first"
+  ],
+  "analogues_disanalogies": {
+    "analogues": [
+      "a lattice spectral edge becomes a physical mass only after explicit restoration of lattice spacing in T_a=e^{-aH_a}",
+      "asymptotic-freedom continuum trajectories approach a weak bare-coupling regime and require a controlled cutoff-removal construction"
+    ],
+    "disanalogies": [
+      "a fixed strong-coupling clustering theorem is not itself a weak-coupling continuum theorem",
+      "dimensionless lattice rate c_N is not a physical mass until its a-dependence is bound",
+      "effective RG coupling flow is not automatically an isometric/spectral identification of OS Hilbert spaces"
+    ]
+  },
+  "decision_policy": "First source-bind the exact action coefficient and the cutoff-removal coupling regime. If the SZZ theorem domain does not contain that trajectory, do not extrapolate; require an explicit same-theory RG/universality/spectral-transport theorem. Only then test a uniform positive physical-mass bound.",
+  "cheap_falsifiers": [
+    "the a->0 trajectory leaves the source theorem's beta-domain",
+    "the action coefficient mapping is convention-ambiguous",
+    "m_lat(a) is only bounded below in lattice units with no a-dependence",
+    "transport changes the measure/OS quotient/source family or subsequence",
+    "required uniformity is pointwise in a or volume rather than uniform",
+    "limit interchange between infinite volume, RG scale and a->0 is unsupported"
+  ],
+  "expert_cell": [
+    {
+      "role": "lattice renormalization / asymptotic-freedom specialist",
+      "check": "exact bare-coupling/action normalization and a->0 trajectory"
+    },
+    {
+      "role": "constructive RG specialist",
+      "check": "same-theory weak/strong transport, regulator and scale uniformity"
+    },
+    {
+      "role": "OS/spectral specialist",
+      "check": "T_a=e^{-aH_a}, quotient/source compatibility and physical gap scaling"
+    },
+    {
+      "role": "SZZ probability specialist",
+      "check": "exact theorem domain, exponent dependence and fixed-cutoff scope"
+    },
+    {
+      "role": "gauge representation specialist",
+      "check": "gauge/action convention match; no gauge-fixed substitute"
+    },
+    {
+      "role": "adversarial mathematical physicist",
+      "check": "regime mismatch, unsupported extrapolation and limit interchange"
+    },
+    {
+      "role": "provenance/metrology reviewer",
+      "check": "v3 chronology, live-work collision, TaskEpisode authority, novelty and resources"
+    }
+  ],
+  "frozen_at": "2026-08-12T03:30:00Z",
+  "first_candidate_at": null,
+  "fibre_hash": "sha256:d123cdf30c1e950fee28a520a74e7c4dababcd4717f225d11fe4cf2afa683cbd"
+}
