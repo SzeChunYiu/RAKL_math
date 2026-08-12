@@ -1,0 +1,42 @@
+schema_version: problem-dag-delta-v3-proposal-shadow-r6
+cycle_id: NS-B1a3b1a2a-R6-ANCIENT-SMOOTHING-GLOBAL-LORENTZ-20260812
+authority: PROPOSAL_SHADOW_ONLY
+root:
+  issue: RAKL_math#4
+  status: OPEN_NO_SOLUTION_CERTIFICATE
+  independent_mathematical_reviews: 0/3
+parent_atom: NS-B1a3b1a2a
+resolved_or_refined_nodes:
+  - id: NS-B1a3b1a2a-LOCAL-SMOOTHING
+    prior_status: OPEN
+    new_status: SOURCE_VALID_SCOPED_CONSEQUENCE
+    statement: >-
+      For bounded ancient mild NSE with M=sup|u|, every spatial/time derivative is
+      uniformly bounded with ||nabla^k partial_t^l u||_infinity <= C_{k,l} M^(k+2l+1).
+    authority: PROPOSAL_SHADOW_SOURCE_BOUND
+  - id: NS-B1a3b1a2a-GLOBAL-LORENTZ-GLUE
+    prior_status: OPEN_UNQUANTIFIED
+    new_status: OPEN_QUANTIFIED_LINEAR_CAPACITY_OBSTRUCTION
+    statement: >-
+      Finite I plus ancient smoothing yields, for fixed lambda and sufficiently large R,
+      |{|omega(t)|>=lambda} cap B_R| <= C I M^4 R lambda^(-3), which does not
+      imply a radius-free global weak-L^(3/2) distribution bound.
+new_residual_nodes:
+  - id: NS-B1a3b1a2b
+    statement: >-
+      Find or falsify an equation-specific source-valid tail/profile-count/no-incoming or
+      pressure/local-energy cancellation mechanism that contracts O(R) high-vorticity
+      packet capacity to a radius-free global distribution estimate.
+    status: OPEN_ATOMIC_RESIDUAL
+  - id: NS-B1a3b1-GRUJIC-MORPHOLOGY-DIRECTION
+    statement: >-
+      Even global weak-L^(3/2) vorticity amplitude would not supply the one-center
+      critical-profile and log-weighted BMO direction hypotheses.
+    status: OPEN_SEPARATE_CONSUMER_INTERFACE
+failure_links:
+  - F-NS-B1a3b1a2-FIXED-FINITE-HISTORY-NONCOERCIVE
+  - F-NS-B1a3b1a2a-ANCIENT-SMOOTHING-STILL-LINEAR-PACKET-CAPACITY
+obstruction_link: O-NS-B1a3b1a2a-LINEAR-PACKET-CAPACITY-GLOBAL-LORENTZ
+lesson_link: L-NS-B1a3b1a2a-TEMPORAL-PERSISTENCE-CONVERTS-E-TO-PACKING
+proof_dag_closed: false
+root_promotion_attempted: false
