@@ -1,0 +1,104 @@
+{
+  "artifact_hash": "sha256:1a6e48e85eabaef4d60e4875c1817701a662ff46e17f4b650d32e0bb06f2733e",
+  "authority": "SOURCE_THEOREMS_PROOF_BACKED_IN_RICCI_FLOW_SCOPE_ONLY",
+  "chain_id": "PC-SUCCESS-CHAIN-ENTROPY-NONCOLLAPSE-SURGERY-EXTINCTION",
+  "composition_obligations": [
+    "T1 does not imply T3: noncollapse must be combined with three-dimensional singularity classification.",
+    "T3 does not imply T5: controlled surgery continuation must be combined with the independent width/extinction inequality.",
+    "Every topological conclusion is restricted to the source theorem's manifold hypotheses."
+  ],
+  "object": "Perelman's successful three-dimensional Ricci-flow route to the Poincare conjecture",
+  "schema_version": "1.0.0",
+  "source_receipt_hash": "sha256:e16de945d0e3941db7060f8e3a979c779ca536396fcad43ebd40048143800df3",
+  "success_lesson": "The reusable proposal-level pattern is not 'find a monotone quantity'; it is 'derive a source-specific monotone defect, prove degeneration control, classify bad regions, define a controlled restart, and add a terminal coercive quantity'.",
+  "target_transfer_authority": "NONE",
+  "transformation_chain": [
+    {
+      "enabling_assumptions": [
+        "smooth Ricci flow before singular time",
+        "closed source manifold for the stated mu theorem",
+        "normalized positive conjugate-heat density",
+        "Ricci-specific evolution identities"
+      ],
+      "failure_modes": [
+        "noncompact or surgery intervals require additional justification",
+        "a monotone scalar alone does not classify high-curvature geometry"
+      ],
+      "obstruction": "singular rescaling may degenerate without a scale-aware control quantity",
+      "resulting_state": "a scale-sensitive monotone quantity whose defect is an integral square and whose collapse consequence can be tested",
+      "source": "PERELMAN-I eq. (3.4), Sections 6-7",
+      "step_id": "PC-T1-ENTROPY",
+      "transformation": "couple Ricci flow to the conjugate heat density and use Perelman's W/mu or reduced-volume monotonicity"
+    },
+    {
+      "enabling_assumptions": [
+        "finite singular time",
+        "closed initial manifold",
+        "curvature bound on the tested ball",
+        "Ricci-flow compactness hypotheses"
+      ],
+      "failure_modes": [
+        "no curvature bound means the stated ball test does not apply",
+        "noncollapse does not itself identify a neck or permit surgery"
+      ],
+      "obstruction": "bounded-curvature balls can collapse in normalized volume, destroying blow-up compactness",
+      "resulting_state": "kappa-noncollapsed singularity models and complete ancient blow-up limits under the theorem's bounds",
+      "source": "PERELMAN-I Theorem 4.1 and Section 4.2 corollary",
+      "step_id": "PC-T2-NONCOLLAPSE",
+      "transformation": "apply entropy/reduced-volume monotonicity to exclude local collapse"
+    },
+    {
+      "enabling_assumptions": [
+        "dimension three",
+        "Hamilton-Ivey pinching",
+        "kappa-noncollapse",
+        "classification of relevant ancient kappa-solutions",
+        "small epsilon and delta parameters"
+      ],
+      "failure_modes": [
+        "without canonical neighborhoods surgery has no exhaustive geometric interface",
+        "higher dimensions admit different singular models"
+      ],
+      "obstruction": "arbitrary high-curvature geometry gives no controlled place to cut",
+      "resulting_state": "singular regions have controlled neck/cap models at the surgery scale",
+      "source": "PERELMAN-II Sections 1, 4.1 and 4.3",
+      "step_id": "PC-T3-CANONICAL-NEIGHBORHOODS",
+      "transformation": "classify high-curvature regions by canonical neighborhoods and locate strong delta-necks in horns"
+    },
+    {
+      "enabling_assumptions": [
+        "canonical-neighborhood theorem",
+        "controlled surgery parameters",
+        "cap construction preserving pinching",
+        "noncollapse across the surgery construction"
+      ],
+      "failure_modes": [
+        "arbitrary deletion or capping can lose topology or estimates",
+        "continuation alone does not force finite extinction"
+      ],
+      "obstruction": "the smooth evolution terminates at a singular time",
+      "resulting_state": "a global Ricci flow with surgery whose surgery times are discrete on finite intervals",
+      "source": "PERELMAN-II Sections 4.4-5",
+      "step_id": "PC-T4-SURGERY-CONTINUATION",
+      "transformation": "cut controlled necks, discard prescribed components, glue standard caps, and restart with pinching preserved"
+    },
+    {
+      "enabling_assumptions": [
+        "closed oriented three-manifold",
+        "no aspherical prime factors",
+        "nontrivial loop-space homotopy class",
+        "surgery maps preserve the width inequality",
+        "three-dimensional scalar-curvature evolution"
+      ],
+      "failure_modes": [
+        "aspherical prime factors are outside Theorem 1.1",
+        "finite extinction is not a consequence of entropy monotonicity alone"
+      ],
+      "obstruction": "a controlled global surgery flow could persist forever without the desired topological conclusion",
+      "resulting_state": "for manifolds with no aspherical prime factors, every such surgery flow becomes extinct in finite time; the homotopy-sphere case yields the Poincare conclusion",
+      "source": "PERELMAN-III Theorem 1.1, Lemma 1.2, Sections 1.3-1.5",
+      "step_id": "PC-T5-FINITE-EXTINCTION",
+      "transformation": "use the least-area disk width and its surgery-stable differential inequality to force finite extinction"
+    }
+  ]
+}

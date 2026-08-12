@@ -1,0 +1,80 @@
+{
+  "bridge_edges": [
+    {
+      "edge_id": "XM-PC-NS-B1",
+      "enabling_assumptions": [
+        "exact enstrophy identity",
+        "scale-critical relevance"
+      ],
+      "interface_map": "bare enstrophy would need scale-critical localization and recurrence control beyond an instantaneous sign",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "enstrophy sign",
+      "target_coordinate": "NS-B1a1 scale-symmetry breaker"
+    },
+    {
+      "edge_id": "XM-PC-NS-B2",
+      "enabling_assumptions": [
+        "all Type-I and Type-II scenarios",
+        "root proof DAG closure"
+      ],
+      "interface_map": "requires a complete blow-up exclusion or global regularity proof",
+      "proof_status": "UNPROVED",
+      "source_coordinate": "NS-B1a1 scale-symmetry breaker",
+      "target_coordinate": "Clay regularity root"
+    }
+  ],
+  "cheapest_hostile_world": "smooth 3D Navier-Stokes data for which vortex stretching makes enstrophy increase at the initial time while the Ricci source identity remains valid in its own domain",
+  "known_disanalogies": [
+    "Ricci entropy is not enstrophy",
+    "Ricci surgery has no established Navier-Stokes analogue",
+    "Poincare extinction is topological"
+  ],
+  "obligations": [
+    {
+      "description": "decide the instantaneous enstrophy sign condition",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "XM-PC-NS-O1"
+    },
+    {
+      "description": "prove any surviving functional controls scale recurrence",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "XM-PC-NS-O2"
+    },
+    {
+      "description": "close the Navier-Stokes root proof",
+      "discharged_by_surrogate_evidence_only": false,
+      "non_compensatory": true,
+      "obligation_id": "XM-PC-NS-O3"
+    }
+  ],
+  "prior_failure_ids": [
+    "F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER"
+  ],
+  "receipt_canonical_sha256": "829e5c5097494540cce8cbff8816f4be4e050e689ae15ce1f2c39f5e7b0d1055",
+  "receipt_id": "XM-PC-NS-001-ROOT-COORDINATE-PRESERVATION-20260812",
+  "registered_observations": [
+    {
+      "projected_state": "source monotone identity",
+      "registered_downstream_outcome": "Ricci degeneration control only with extra source theorems",
+      "state_id": "PC-SOURCE"
+    },
+    {
+      "projected_state": "target sign unresolved",
+      "registered_downstream_outcome": "no NS-B1a1 or root consequence",
+      "state_id": "NS-PRE"
+    }
+  ],
+  "reverification_triggers": [
+    "functional changes",
+    "target domain changes from 3D periodic NS",
+    "a target scale-critical bridge is proved"
+  ],
+  "root_claim_id": "XM-PC-NS-001",
+  "root_coordinate": "a scale-critical monotone/no-recrossing or compactness mechanism sufficient to advance NS-B1a1 toward the Navier-Stokes regularity root",
+  "schema_version": "root-coordinate-preservation-receipt-v1",
+  "source_authority": "ESTABLISHED",
+  "surrogate_coordinate": "instantaneous monotonicity or nonmonotonicity of unweighted enstrophy on smooth periodic data",
+  "target_authority": "PROPOSAL_ONLY"
+}

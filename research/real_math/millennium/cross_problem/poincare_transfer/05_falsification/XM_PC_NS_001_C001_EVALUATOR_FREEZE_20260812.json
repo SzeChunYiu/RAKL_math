@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "evaluator_id": "XM-PC-NS-001-C001-EXACT-ENSTROPHY-EVALUATOR",
+  "candidate_id": "XM-PC-NS-001-C001",
+  "frozen_at": "2026-08-12T10:30:01Z",
+  "candidate_path": "research/real_math/millennium/cross_problem/poincare_transfer/04_candidates/XM_PC_NS_001_C001_ENSTROPHY_SIGN_FALSIFIER_FREEZE_20260812.json",
+  "candidate_canonical_sha256": "sha256:07aec802808cf94d0ace2200460e71621a8587e6a60df8ba1fe918953cc9db3e",
+  "algorithm": [
+    "parse the three frozen base-field components into exact SymPy expressions",
+    "differentiate symbolically to verify divergence equals zero",
+    "form omega=curl(v), P integrand=omega dot ((omega dot grad)v), and D integrand=sum_ij (partial_i omega_j)^2",
+    "integrate exactly in x,y,z from 0 to 2pi",
+    "substitute A=100 nu and simplify E'(0)/(nu^3 pi^3)",
+    "independently differentiate the vorticity equation at t=0 and integrate omega dot omega_t",
+    "require exact equality of both expressions"
+  ],
+  "pass_fail_contract": {
+    "POSITIVE_DERIVATIVE_REFUTES_BARE_ENSTROPHY_MONOTONICITY": "all checks pass and the exact normalized derivative is positive",
+    "FROZEN_FIELD_DOES_NOT_REFUTE_MONOTONICITY": "all checks pass and the exact normalized derivative is nonpositive",
+    "CANNOT_CHECK": "any exact symbolic check is unavailable or inconsistent"
+  },
+  "forbidden": [
+    "change the field, amplitude, viscosity relation, domain, or threshold after result access",
+    "use numerical quadrature as sign authority",
+    "promote the result to a Navier-Stokes root statement",
+    "represent same-context evaluation as independent peer review"
+  ],
+  "execution_status": "NOT_EXECUTED",
+  "result": null,
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "artifact_hash": "sha256:a9ca67f4e78eca50670afc244c7d557149a656b63e17cca15c889bdcf9fe2eb6"
+}
