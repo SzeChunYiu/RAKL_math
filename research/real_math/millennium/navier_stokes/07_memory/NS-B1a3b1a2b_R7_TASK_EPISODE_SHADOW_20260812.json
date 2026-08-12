@@ -1,0 +1,73 @@
+{
+  "schema_version": "task-episode-shadow-v3-r7",
+  "episode_id": "E-NS-B1a3b1a2b-R7-20260812",
+  "cycle_id": "NS-B1a3b1a2b-R7-NO-INCOMING-DUHAMEL-20260812",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "context_id": "NS-B1a3b1a2b-R7",
+  "context_hash": "sha256:3ccbe164235f07ee846d25a6b3ce4ef2e3f217ecec9f9971bba87ca455d0ba68",
+  "framework_subject": {
+    "method_version": "3.0.0",
+    "git_sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+    "application_pin": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554"
+  },
+  "active_problem_signature": "For a nontrivial bounded ancient mild 3D Navier-Stokes solution with finite Albritton-Barker Type-I ledger, determine whether the exact mild evolution eliminates remote-past incoming velocity strongly enough to contract the R6 O(R) high-vorticity packet capacity to a radius-free global critical-vorticity distribution bound.",
+  "fibre_contents_consulted": [
+    "RAKL current main: v3 experience substrate, mathematical-research workflow, method_specs, summation_compatibility, epistemic_sufficiency, version manifest",
+    "RAKL_math root issue #4 and current main",
+    "R6 pre-candidate/candidate/experience artifacts at 67ec2a2598a867685486b545936e1b22d89484c4",
+    "Koch-Nadirashvili-Seregin-Sverak arXiv:0709.3599 Sections 3,4,6",
+    "Albritton-Barker arXiv:1811.00502 root-facing Type-I ancient-solution interface and parent source-bound A coordinate"
+  ],
+  "operators_motifs_tried": [
+    "same-domain SEARCH via ancient mild Duhamel restart",
+    "critical-Morrey heat shell summation",
+    "projected Oseen-kernel shell summation",
+    "small/large time integrability split",
+    "counterexample-first spatial-transport discriminator",
+    "v3 SummationCompatibilityWitness on temporal and spatial accumulation variables"
+  ],
+  "search_policy_choice": {
+    "route": "SEARCH",
+    "reason": "R6 local smoothing succeeded but left O(R) spatial capacity; same-domain ancient Duhamel ancestry is cheaper and more source-compatible than a cross-domain jump.",
+    "experience_effect": "priority only; no premise imported from memory"
+  },
+  "observations": [
+    "heat ancestry decays uniformly as C A_*^(1/2) T^(-1/2)",
+    "large-time projected nonlinearity is C A_* tau^(-3/2)",
+    "small-time projected nonlinearity is C M^2 tau^(-1/2)",
+    "the infinite-past Duhamel integral is absolutely L-infinity convergent",
+    "the remote nonlinear time tail is C A_* T^(-1/2)",
+    "temporal absolute convergence supplies no spatial packet-count or radius-free Lorentz tail"
+  ],
+  "verification_performed": [
+    "primary-source mild representation and K_ijk decay check",
+    "dyadic heat shell Cauchy-Schwarz calculation",
+    "dyadic Oseen shell calculation",
+    "small/large tau integrability audit",
+    "Navier-Stokes scaling and units audit",
+    "pressure/nonlocality audit through Helmholtz projection",
+    "endpoint/derivative-loss/circularity/parasitic-solution audit",
+    "two current-v3 summation-compatibility witnesses with distinct accumulation variables",
+    "seven-role same-context expert postcheck"
+  ],
+  "outcome": "REMOTE_PAST_LINEAR_ANCESTRY_ELIMINATED__ABSOLUTE_DUHAMEL_TIME_TAIL_OBTAINED__SPATIAL_PACKET_SUMMABILITY_STILL_OPEN",
+  "residual_before": "finite-I ancient NSE must supply a no-incoming/tail/profile-count mechanism contracting O(R) high-vorticity capacity",
+  "residual_after": "temporal ancestry is controlled; a source-valid spatial summability/recentering/coercivity bridge to a radius-free critical-vorticity state remains open",
+  "failure_signature": "F-NS-B1a3b1a2b-TEMPORAL-NO-INCOMING-NOT-SPATIAL-SUMMABILITY",
+  "failure_category": "LOCAL_MATHEMATICAL_SUCCESS__LOCAL_TO_GLOBAL_GLUING_FAILURE",
+  "cost_effort_proxy": {
+    "expert_roles": 7,
+    "proof_obligation_checks": 9,
+    "summation_witnesses": 2,
+    "primary_source_families": 2,
+    "aggregate_tokens_context_tool_calls_wall_time": "CANNOT_MEASURE: runtime exposes no authoritative aggregate counters"
+  },
+  "chronology_status": "STRICT_DISCOVERY_ATTRIBUTION_BLOCKED_BUT_VERIFICATION_SCOPE_PRESERVED",
+  "evidence_refs": [
+    "03_context/NS-B1a3b1a2b_R7_PRE_CANDIDATE_PACKET_20260812.json",
+    "04_candidates/NS-B1a3b1a2b_R7_NO_INCOMING_DUHAMEL_TAIL_20260812.md",
+    "05_falsification/NS-B1a3b1a2b_R7_SUMMATION_TEMPORAL_WITNESS_20260812.json",
+    "05_falsification/NS-B1a3b1a2b_R7_SUMMATION_SPATIAL_WITNESS_20260812.json"
+  ],
+  "artifact_hash": "sha256:93743cb3cf647c51c78ece580eac3ad1eac4e1bc21d52d16d1a866fa4d3292b1"
+}
