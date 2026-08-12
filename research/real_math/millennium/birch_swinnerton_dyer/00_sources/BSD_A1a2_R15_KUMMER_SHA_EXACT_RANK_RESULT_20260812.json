@@ -1,0 +1,104 @@
+{
+  "record_type": "BSD_R15_SOURCE_BOUND_HAND_LEMMA_RESULT",
+  "cycle_id": "BSD-A1A2-KUMMER-SHA-EXACT-RANK-20260812-R15",
+  "authority": "RETROSPECTIVE_SOURCE_BOUND_HAND_LEMMA_SAME_CONTEXT_REVIEW_ONLY",
+  "discovery_chronology": "NOT_STRICT_CONTEXT_FIRST: the exact-sequence lemma was observed before a fresh R15 pre-candidate packet; it is checked for truth only and receives no strict RAKL discovery credit",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "active_atom": "BSD-A1a2-SELMER-CORANK-TWO-TO-MORDELL-WEIL-RANK-TWO",
+  "parent_state": {
+    "r14_result": "Under the exact Kim-Pollack hypotheses, Kurihara order equals p-infinity Selmer corank; complex Taylor order equals Kurihara order remains Conjecture 1.6 in rank two.",
+    "r12_result": "For the usual Kummer/Bloch-Kato structures, corank_Zp Sel_{p^infinity}(E/Q)=dim_Qp H^1_f(Q,V_pE)."
+  },
+  "source_evidence": [
+    {
+      "id": "arXiv:2109.12344v3",
+      "authors": "Chan-Ho Kim",
+      "title": "On the soft p-converse to a theorem of Gross-Zagier and Kolyvagin",
+      "selector": "p.1, fundamental exact sequence immediately after the definition of Sel(Q,E[p^infinity])",
+      "quoted_mathematical_content": "0 -> E(Q) tensor Q_p/Z_p -> Sel(Q,E[p^infinity]) -> Sha(E/Q)[p^infinity] -> 0",
+      "url": "https://arxiv.org/pdf/2109.12344"
+    },
+    {
+      "id": "RAKL_math:R12",
+      "pointer": "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a1_R12_PINFINITY_VP_BINDING_RESULT_20260812.json",
+      "role": "same-curve same-prime coefficient identity"
+    },
+    {
+      "id": "RAKL_math:R14",
+      "pointer": "research/real_math/millennium/birch_swinnerton_dyer/00_sources/BSD_A1a2_R14_KIM_POLLACK_KURIHARA_EXACT_RANK_SOURCE_AUDIT_20260812.json",
+      "role": "conditional downstream exact Selmer-corank theorem cell and complex-to-discrete conjectural boundary"
+    }
+  ],
+  "lemma": {
+    "id": "LEM-BSD-R15-KUMMER-SHA-CORANK-DECOMPOSITION",
+    "statement": "Let E/Q be an elliptic curve and p a prime. If S=Sel(Q,E[p^infinity]) and X=Sha(E/Q)[p^infinity], then corank_Zp S = rank_Z E(Q) + corank_Zp X. Consequently, if corank_Zp S=2, then rank_Z E(Q)=2 if and only if corank_Zp X=0; because X is cofinitely generated in this scope, this is equivalent to X being finite.",
+    "proof": [
+      "Mordell-Weil gives E(Q) isomorphic to Z^r plus a finite group, where r=rank_Z E(Q).",
+      "Tensoring with Q_p/Z_p kills the finite summand and sends Z^r to (Q_p/Z_p)^r, so corank_Zp(E(Q) tensor Q_p/Z_p)=r.",
+      "Kim's displayed Kummer-Selmer sequence 0 -> E(Q) tensor Q_p/Z_p -> S -> X -> 0 is exact.",
+      "Pontryagin duality turns this into a short exact sequence of finitely generated compact Z_p-modules with the arrow order reversed. Z_p-rank is additive in a short exact sequence, giving corank_Zp S=r+corank_Zp X.",
+      "When corank_Zp S=2, nonnegative integrality gives r in {0,1,2} and corank_Zp X=2-r. Hence r=2 exactly when corank_Zp X=0.",
+      "The quotient X is cofinitely generated because S is; a cofinitely generated discrete p-primary group of corank zero has finitely generated torsion Pontryagin dual over Z_p, hence is finite. The converse is immediate."
+    ],
+    "scope": [
+      "same elliptic curve E/Q and prime p throughout",
+      "usual p-infinity Kummer Selmer structure",
+      "cofinitely generated p-primary groups",
+      "rank equality only; no Sha-order or leading-term formula"
+    ],
+    "nonclaims": [
+      "No actual elliptic curve with infinite Sha[p^infinity] is exhibited.",
+      "No claim that exact Selmer corank two fails to imply rank two after adding an independent Sha-finiteness theorem.",
+      "No proof of Kim-Pollack Conjecture 1.6, Sha finiteness, BSD rank equality, or refined BSD.",
+      "No formal proof or independent peer review; this is a same-context hand proof checked against a primary displayed exact sequence.",
+      "No novelty claim."
+    ]
+  },
+  "attempted_implication_audit": {
+    "attempted_implication": "corank_Zp Sel(Q,E[p^infinity])=2 -> rank_Z E(Q)=2",
+    "exact_result_or_failure": "The implication is not licensed by the Selmer dimension alone. The exact identity is corank Sel=rank E(Q)+corank Sha[p^infinity]. Therefore Selmer corank two leaves the alternatives (rank, Sha-corank)=(2,0),(1,1),(0,2), subject to any additional target theorems; the exact sequence by itself selects none.",
+    "supported_cause": "Uncontrolled p-divisible Tate-Shafarevich contribution is the unique slack term in the exact Kummer-Selmer corank identity.",
+    "competing_causes": [
+      {
+        "cause": "p-infinity versus V_p coefficient mismatch",
+        "status": "REJECTED_IN_THIS_SCOPE_BY_R12"
+      },
+      {
+        "cause": "Kurihara order versus Selmer corank mismatch",
+        "status": "REJECTED_CONDITIONALLY_UNDER_KIM_POLLACK_THEOREM_HYPOTHESES_BY_R14"
+      },
+      {
+        "cause": "transverse localization nonvanishing",
+        "status": "ORTHOGONAL_TO_THIS_EXACT_SEQUENCE_IDENTITY; may supply other arithmetic information but is not the missing term in this corank decomposition"
+      },
+      {
+        "cause": "finite p-primary Sha order versus corank",
+        "status": "DISTINCT_REFINED_BSD_OBLIGATION; corank zero gives finiteness here but not its exact order"
+      }
+    ],
+    "scope": "A logical sufficiency audit of the exact sequence. It does not assert existence of an elliptic curve realizing rank<2 and Selmer corank 2.",
+    "mathematical_falsifier": "A counterexample to the lemma would be an E/Q,p for which Kim's exact Kummer-Selmer sequence has the usual Selmer meaning but corank additivity fails. For the stronger attempted implication, an actual E/Q with Selmer corank 2 and positive Sha[p^infinity] corank would falsify it; no such target example is asserted here.",
+    "repair_next_discriminator": "After any complex-order-to-Kurihara-order theorem gives exact Selmer corank two, prove Sha(E/Q)[p^infinity] finite (equivalently corank zero) from hypotheses no stronger than the active root input, or prove rank E(Q)=2 by an independent rational-point mechanism. Do not treat exact Selmer dimension as rank equality before this discriminator.",
+    "proof_source_evidence": [
+      "Kim arXiv:2109.12344v3 p.1 displayed fundamental exact sequence",
+      "Mordell-Weil finite generation",
+      "additivity of Z_p-rank after Pontryagin duality",
+      "R12 coefficient-binding result",
+      "R14 Kim-Pollack theorem-direction audit"
+    ]
+  },
+  "proof_dag_effect": {
+    "before": "complex order 2 -> ? Kurihara order 2 -> exact Selmer corank 2 -> undifferentiated Mordell-Weil/Sha glue",
+    "after": "complex order 2 -> ? Kurihara order 2 -> exact Selmer corank 2 -> [rank 2 iff Sha[p^infinity] finite] -> separate refined Sha-order/regulator/local-factor/period obligations",
+    "closed_node": "BSD-A1a2-SELMER-CORANK-TWO-TO-RANK-TWO-EXACT-CONDITIONAL-CRITERION",
+    "open_child": "BSD-A1a3-COMPLEX-RANK-TWO-TO-P-PRIMARY-SHA-FINITENESS-OR-INDEPENDENT-MW-RANK-TWO",
+    "impact": "The downstream exact-Selmer theorem cell cannot by itself close the Clay rank statement; the sole missing corank coordinate is now an exact Sha-divisibility term rather than an undifferentiated gluing label."
+  },
+  "root_promotion": "FORBIDDEN_NO_ROOT_CERTIFICATE",
+  "independent_review_credit": "0/3",
+  "mathematical_credit": {
+    "retained": "one exact source-bound conditional decomposition lemma and one sharpened proof-DAG edge",
+    "not_counted": "Git, CI, schemas, hashes, chronology, telemetry, repository growth"
+  },
+  "artifact_hash": "sha256:416d200a6206c1fefdf33f2a674b6841eef7f5571938a66ac1f74809ae5cd914"
+}
