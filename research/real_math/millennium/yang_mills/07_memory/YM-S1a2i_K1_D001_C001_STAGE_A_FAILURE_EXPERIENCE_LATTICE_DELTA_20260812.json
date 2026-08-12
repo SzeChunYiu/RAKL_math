@@ -1,8 +1,9 @@
 {
-  "artifact_hash": "sha256:eea72cd33cfab1b8e0f29c08887588c1f9daab7a24cdf94d678374f6432b362d",
+  "artifact_hash": "sha256:ed90903211b56f17b279d4bcc2d70e1b63670f5d524f3e680907c3ef97b46bc7",
+  "canonical_contract_scope": "Only the experiences and links fields form the schema-valid canonical lattice delta; external lineage metadata is proposal-only.",
   "experiences": [
     {
-      "artifact_hash": "sha256:50596d6f20072319cdd428b55e4eeb617c95bd5216b458244ae3dfbd2aa3ca56",
+      "artifact_hash": "sha256:1d2c56abc48df4fb5ba2cc342cce38961fdea0921b9b2f90bcb157961a1d2494",
       "atom_id": "YM-S1a2i-K1-D001",
       "broken_assumptions": [
         "one overloaded source symbol can be split into independently adjustable constants without a derivation",
@@ -16,7 +17,7 @@
         "later source theorem supplies domain containment"
       ],
       "context_packet_hash": "sha256:35b646d79a98d7255b0c2a9f60bfb582e1f8dbeaae3218f9c7225cd902b2aec0",
-      "diagnosis_status": "SUPPORTED_BOUNDED",
+      "diagnosis_status": "SUPPORTED",
       "evidence_pointers": [
         "research/real_math/millennium/yang_mills/03_sources/YM-S1a2i_K1_D001_C001_STAGE_A_SOURCE_RESULT_20260812.json",
         "sha256:0843df987c0d200d33a0410a5676caeef363dd5f198dd6d5bc43c0f64b5ae32c",
@@ -52,15 +53,15 @@
       "timestamp": "2026-08-12T16:15:00Z"
     }
   ],
-  "links": [
-    {
-      "rationale": "Stage A turns the earlier unproved domain compatibility residual into a source-bound symbolic failure for the displayed same-C statement while preserving alternate-source repair routes.",
-      "relation": "SUPERSEDES_DIAGNOSIS",
-      "source_id": "F-YM-K1-D001-C001-CONFLATED-CONSTANT-DOMAIN-MISMATCH",
-      "target_id": "F-YM-K1-D001-JOINT-DOMAIN-AND-FLOW-TRANSPORT-MISMATCH"
-    }
-  ],
-  "parent_failure_id": "F-YM-K1-D001-JOINT-DOMAIN-AND-FLOW-TRANSPORT-MISMATCH",
-  "record_type": "FAILURE_EXPERIENCE_LATTICE_DELTA",
-  "schema_version": "1.0.0"
+  "external_link_proposal": {
+    "rationale": "A later canonical combined lattice may register this relation after both experiences are present in one artifact.",
+    "relation": "SUPERSEDES_DIAGNOSIS",
+    "source_id": "F-YM-K1-D001-C001-CONFLATED-CONSTANT-DOMAIN-MISMATCH",
+    "status": "NOT_REGISTERED_HERE_BECAUSE_CANONICAL_LINK_ENDPOINTS_MUST_BE_LOCAL",
+    "target_id": "F-YM-K1-D001-JOINT-DOMAIN-AND-FLOW-TRANSPORT-MISMATCH"
+  },
+  "links": [],
+  "record_type": "NONCANONICAL_FAILURE_LINEAGE_PATCH_WITH_EMBEDDED_CANONICAL_DELTA",
+  "schema_version": "1.0.0",
+  "supersedes_external_failure_id": "F-YM-K1-D001-JOINT-DOMAIN-AND-FLOW-TRANSPORT-MISMATCH"
 }

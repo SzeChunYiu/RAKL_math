@@ -436,7 +436,7 @@ def build_failure(source_result: dict[str, Any], result: dict[str, Any], lesson:
                 "later source theorem supplies domain containment",
             ],
             "selected_diagnosis": "SUPPORTED_CONFLATED_CONSTANT_DOMAIN_MISMATCH_IN_THE_DISPLAYED_SOURCE_STATEMENT",
-            "diagnosis_status": "SUPPORTED_BOUNDED",
+            "diagnosis_status": "SUPPORTED",
             "evidence_pointers": [
                 str(OUTPUTS["source_result"].relative_to(ROOT)),
                 source_result["artifact_hash"],
@@ -459,17 +459,18 @@ def build_failure(source_result: dict[str, Any], result: dict[str, Any], lesson:
     )
     return {
         "schema_version": "1.0.0",
-        "record_type": "FAILURE_EXPERIENCE_LATTICE_DELTA",
-        "parent_failure_id": "F-YM-K1-D001-JOINT-DOMAIN-AND-FLOW-TRANSPORT-MISMATCH",
+        "record_type": "NONCANONICAL_FAILURE_LINEAGE_PATCH_WITH_EMBEDDED_CANONICAL_DELTA",
+        "canonical_contract_scope": "Only the experiences and links fields form the schema-valid canonical lattice delta; external lineage metadata is proposal-only.",
+        "supersedes_external_failure_id": "F-YM-K1-D001-JOINT-DOMAIN-AND-FLOW-TRANSPORT-MISMATCH",
         "experiences": [experience],
-            "links": [
-            {
-                "source_id": experience["failure_id"],
-                "target_id": "F-YM-K1-D001-JOINT-DOMAIN-AND-FLOW-TRANSPORT-MISMATCH",
-                "relation": "SUPERSEDES_DIAGNOSIS",
-                "rationale": "Stage A turns the earlier unproved domain compatibility residual into a source-bound symbolic failure for the displayed same-C statement while preserving alternate-source repair routes.",
-            }
-        ],
+        "links": [],
+        "external_link_proposal": {
+            "source_id": experience["failure_id"],
+            "target_id": "F-YM-K1-D001-JOINT-DOMAIN-AND-FLOW-TRANSPORT-MISMATCH",
+            "relation": "SUPERSEDES_DIAGNOSIS",
+            "status": "NOT_REGISTERED_HERE_BECAUSE_CANONICAL_LINK_ENDPOINTS_MUST_BE_LOCAL",
+            "rationale": "A later canonical combined lattice may register this relation after both experiences are present in one artifact.",
+        },
         "artifact_hash": "",
     }
 

@@ -5,6 +5,7 @@ import importlib.util
 import json
 from pathlib import Path
 import sys
+from jsonschema import Draft202012Validator
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -107,3 +108,13 @@ def test_generated_receipts_and_hashes_are_exact() -> None:
         actual = unsigned["artifact_hash"]
         unsigned["artifact_hash"] = ""
         assert actual == "sha256:" + hashlib.sha256(f.canonical(unsigned)).hexdigest()
+
+
+def test_failure_delta_is_canonical_and_external_supersession_is_only_proposed() -> None:
+    f = load(FIXTURE, "ym_k1_d001_c001_stage_a_fixture_failure")
+    failure = f.build_documents()["failure"]
+    schema = json.loads((ROOT / "framework/RAKL/schemas/failure-experience-lattice.schema.json").read_text())
+    Draft202012Validator(schema).validate({"experiences": failure["experiences"], "links": failure["links"]})
+    assert failure["experiences"][0]["diagnosis_status"] == "SUPPORTED"
+    assert failure["links"] == []
+    assert failure["external_link_proposal"]["status"] == "NOT_REGISTERED_HERE_BECAUSE_CANONICAL_LINK_ENDPOINTS_MUST_BE_LOCAL"
