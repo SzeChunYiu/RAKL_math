@@ -1,0 +1,37 @@
+{
+  "review_id": "SCR-NS-B2a1a2-C001-20260812",
+  "candidate_id": "NS-B2a1a2-C001-ESCAPING-BUMP",
+  "roles": [
+    {
+      "role": "domain_theory_lead",
+      "verdict": "PASS_SCOPED",
+      "finding": "The support, divergence-free property, mesoscopic logarithmic identities, and A normalization are exact; no PDE equation is claimed."
+    },
+    {
+      "role": "analogy_method_transfer_lead",
+      "verdict": "PASS_SCOPED",
+      "finding": "The concentration-compactness lesson is now replaced by a direct target-domain construction and an iff tail lemma."
+    },
+    {
+      "role": "adversarial_falsification_lead",
+      "verdict": "PASS_SCOPED",
+      "finding": "The hostile cases are load-bearing: a non-divergence-free template, nonescaping center, or moving ball missing the support invalidates the calibration."
+    },
+    {
+      "role": "formal_methods_lead",
+      "verdict": "PASS_SCOPED",
+      "finding": "The exact decomposition proves sufficiency and necessity of the intermediate-annulus condition under fixed-ball strong L2 convergence."
+    },
+    {
+      "role": "novelty_research_value_lead",
+      "verdict": "NO_NOVELTY_CLAIM",
+      "finding": "Escape at infinity and tightness are classical; the retained contribution is a sharp source-interface calibration, not a novel theorem claim."
+    }
+  ],
+  "strongest_objection": "The fields are not solutions, so the result cannot refute a compactness theorem that uses the vanishing-viscosity equation, pressure bounds, or another dynamics-specific hypothesis.",
+  "response": "Accepted as a scope boundary. The result refutes only the bare functional transfer and opens a PDE-specific residual.",
+  "independent_review": false,
+  "authority": "SAME_CONTEXT_REVIEW_NOT_INDEPENDENT",
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "artifact_hash": "sha256:05280e7a40d8a1ce2dfe77d0a9662fcf504bc9a4a1ce2d6c9ed71cf4f8765c97"
+}

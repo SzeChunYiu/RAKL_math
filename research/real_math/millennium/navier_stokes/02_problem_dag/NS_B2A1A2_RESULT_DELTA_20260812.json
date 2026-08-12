@@ -1,0 +1,36 @@
+{
+  "atom_id": "NS-B2a1a2",
+  "parent_atom_id": "NS-B2a1a1",
+  "status": "SCOPED_FUNCTIONAL_TRANSFER_REFUTED_PDE_RESIDUAL_OPEN",
+  "candidate_id": "NS-B2a1a2-C001-ESCAPING-BUMP",
+  "scoped_resolution": [
+    "An explicit smooth divergence-free translated bump converges strongly to zero on every fixed compact and has A(v_k,a_k)=F_k^-2 tending to zero, while its moving-ball L2 mass a_k/F_k^2 diverges.",
+    "The bare fixed-radius compactness plus moving-scale normalized-smallness transfer is false.",
+    "Under fixed-ball strong L2 convergence, moving-ball strong L2 convergence holds exactly when the intermediate-annulus tail has a uniform vanishing modulus."
+  ],
+  "closed_route_edges": [
+    {
+      "edge": "fixed-radius compactness + A(v_k,a_k)->0 -> absolute moving-ball tightness",
+      "status": "PRUNED_AS_BARE_FUNCTIONAL_INFERENCE",
+      "reason": "translated divergence-free bump escapes every fixed compact while remaining inside B(a_k)"
+    }
+  ],
+  "open_obligations": [
+    {
+      "id": "NS-B2a1a3",
+      "statement": "PDE_SCALE_ALIGNED_TIGHTNESS: derive or refute a source-valid uniform intermediate-annulus tail/rate modulus in the logarithmic mesoscopic window, with pressure and vanishing-viscosity audits."
+    },
+    {
+      "id": "NS-B2a1b",
+      "statement": "SIGNED_EULER_FLUX_TELESCOPING remains an orthogonal bypass candidate."
+    }
+  ],
+  "new_failure_ids": ["F-NS-B2a1a2-FIXED-TO-MOVING-RADIUS-ESCAPE"],
+  "mathematical_credit": [
+    "explicit divergence-free translated-bump counterexample",
+    "if-and-only-if uniform intermediate-annulus tightness condition"
+  ],
+  "zero_credit": ["software", "schema", "hash", "chronology", "CI", "PR state"],
+  "root": {"id": "NS0", "status": "OPEN_NO_SOLUTION_CERTIFICATE"},
+  "authority": "SCOPED_ANALYTIC_ROUTE_PRUNING_ONLY"
+}

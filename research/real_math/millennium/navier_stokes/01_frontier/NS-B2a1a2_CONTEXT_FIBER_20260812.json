@@ -1,0 +1,116 @@
+{
+  "atom_id": "NS-B2a1a2",
+  "object_context": "Audit the exact inference from convergence on every fixed Euler-scaled cylinder plus scale-normalized smallness on radii a_k tending to infinity to moving-radius energy tightness in the logarithmic Type-II window.",
+  "structural_coordinates": [
+    "fixed-radius local strong convergence on each bounded cylinder",
+    "moving radii a_k tending to infinity while lambda_k a_k tends to zero",
+    "logarithmic window 1 << h_k << L_k and F_k=(L_k/h_k)^gamma tending to infinity",
+    "scale-normalized kinetic energy A(v,a)=a^-1 sup_t integral_{B(a)} |v|^2",
+    "absolute mass may scale like a_k/F_k^2 despite A(v_k,a_k) tending to zero",
+    "unbounded spatial domain permits translation or annular escape",
+    "vanishing viscosity and pressure remain separate PDE obligations",
+    "root status OPEN_NO_SOLUTION_CERTIFICATE"
+  ],
+  "equivalent_formulations": [
+    "Quantifier form: local convergence for each fixed R does not control a radius R=a_k depending on k.",
+    "Tightness form: identify the uniform tail modulus missing between local L2 convergence and moving-ball mass convergence.",
+    "Calibration form: test whether smooth divergence-free fields can be invisible on each fixed compact while retaining mass in a moving annulus."
+  ],
+  "solved_analogues": [
+    "Lions concentration-compactness separates local compactness from tightness and escape at infinity.",
+    "For locally strongly L2-convergent sequences, global L2 mass convergence is equivalent to uniform tail tightness."
+  ],
+  "near_solved_analogues": [
+    "NS-B1a2 scale-correct divergence-free packed snapshots show that critical normalization can hide unfavorable absolute mass scaling.",
+    "NS-B2a1a1 identifies the exact logarithmic moving window but leaves rate-compatible compactness open."
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Concentration-compactness on an unbounded domain",
+      "method": "Split local convergence from escape at infinity and require an explicit uniform tightness modulus before passing a global or moving-domain quantity.",
+      "shared_structure": [
+        "convergence is available on every fixed bounded region",
+        "the target integration region grows with the sequence index",
+        "mass can move outside every fixed observer"
+      ],
+      "required_assumptions": [
+        "the local topology controls the target integrand on fixed balls",
+        "a separately uniform tail condition controls the complement"
+      ],
+      "disanalogies": [
+        "the target sequence is intended to arise from a vanishing-viscosity PDE",
+        "generic compactness supplies no pressure, time, or Euler rigidity theorem"
+      ],
+      "repair_question": "What uniform moving-annulus modulus is necessary and sufficient for fixed-radius L2 convergence to determine the moving-ball kinetic mass?",
+      "source_anchors": [
+        "P.-L. Lions, Ann. IHP C 1 (1984), 109-145",
+        "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1a1_LOG_MESOSCOPIC_WINDOW_AUDIT_20260812.md"
+      ]
+    },
+    {
+      "source_context": "NS-B1a2 critical divergence-free blob packing calibration",
+      "method": "Use explicitly scaled smooth divergence-free blobs to test whether a proposed functional implication is valid before importing PDE dynamics.",
+      "shared_structure": [
+        "scale-normalized quantities are weaker than absolute mass control",
+        "smooth divergence-free calibration fields preserve the kinematic constraint",
+        "the intended inference is functional before it is dynamical"
+      ],
+      "required_assumptions": [
+        "the calibration is used only to refute an abstract compactness implication",
+        "no calibration field is represented as a Navier-Stokes or Euler solution"
+      ],
+      "disanalogies": [
+        "NS-B1a2 packs shrinking Type-I blobs in a bounded region",
+        "the target concerns one mesoscopic profile escaping to infinity in Euler-scaled variables"
+      ],
+      "repair_question": "Can the moving-radius implication fail already within smooth divergence-free kinematic fields, and which additional condition exactly repairs it?",
+      "source_anchors": [
+        "research/real_math/millennium/navier_stokes/01_frontier/NS-B1a2_C001_CRITICAL_BLOB_PACKING_AUDIT_20260811.md",
+        "research/real_math/millennium/navier_stokes/07_memory/NS-B1a2_C001_FAILURE_EXPERIENCE_DELTA_20260811.json"
+      ]
+    }
+  ],
+  "explicit_disanalogies": [
+    "A functional escaping-mass construction is not a Navier-Stokes counterexample.",
+    "A tail-tightness criterion does not prove that Seregin's PDE sequence satisfies it.",
+    "Control of kinetic mass does not automatically control pressure work or signed flux.",
+    "The inherited informal candidate direction predates this packet, so strict discovery credit is unavailable."
+  ],
+  "source_anchors": [
+    "G. Seregin, arXiv:2606.29468v1, equations (2.2), (2.7), (2.9), and fixed-a compactness after (2.9)",
+    "research/real_math/millennium/navier_stokes/01_frontier/NS-B2a1a1_LOG_MESOSCOPIC_WINDOW_AUDIT_20260812.md",
+    "research/real_math/millennium/navier_stokes/02_problem_dag/NS_B2A1A1_DELTA_20260812.json",
+    "RAKL@43897d3afaf0038385102d5acc64793c05ec40f0"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "distributed-systems monitoring",
+      "source_situation": "Every fixed monitor eventually reports no load while a job migrates outward through an expanding cluster; fleet-wide accounting requires a uniform no-escape invariant.",
+      "common_abstraction": [
+        "pointwise-in-observer convergence",
+        "observer domain grows with time",
+        "workload may escape every fixed observer"
+      ],
+      "source_to_target_mapping": [
+        "fixed monitor -> fixed spatial ball",
+        "migrating job -> moving annular kinetic mass",
+        "fleet-wide accounting -> moving-ball integral"
+      ],
+      "shared_constraints": [
+        "fixed observers do not give uniform control over a growing domain"
+      ],
+      "disanalogies": [
+        "computational load is not a divergence-free vector field",
+        "the analogy supplies no mathematical or PDE authority"
+      ],
+      "proposed_principle": "Add a uniform no-escape/tightness condition before transferring fixed-observer convergence to a growing observation domain.",
+      "validation_obligation": "Prove the target statement directly in L2 and falsify the unqualified transfer with an explicit divergence-free construction.",
+      "provenance_note": "Cross-domain proposal generator only; all target authority must come from direct analysis."
+    }
+  ],
+  "analogy_scan_notes": "Games and ordinary queue analogies were screened but retained only through the stronger monitoring abstraction above.",
+  "frozen_at": "2026-08-12T08:00:00+00:00",
+  "first_candidate_at": null,
+  "packet_hash": "sha256:73a2b1673a27d6d1047289ed3c9708f8778a4074a6102e5b767c6bf72d5640f3"
+}
