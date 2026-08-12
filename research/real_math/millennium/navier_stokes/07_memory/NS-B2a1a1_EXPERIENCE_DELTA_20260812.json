@@ -1,0 +1,65 @@
+{
+  "schema_version": "v3-proposal-shadow-experience-delta",
+  "atom_id": "NS-B2a1a1",
+  "context_hash": "sha256:1e8c94dfeb38cd42b7dd3d9bad9233529fb2e6ea46730e57ccedeebfe3074373",
+  "episode": {
+    "type": "TaskEpisode",
+    "id": "E-NS-B2a1a1-R1",
+    "problem_signature": "logarithmic Type-II Euler-scaling prelimit F_lambda gain versus fixed-radius compactness",
+    "actual_fibre": ["Seregin arXiv:2606.29468v1 equations (1.7),(2.2),(2.7),(2.9),(2.10) and fixed-a compactness", "NS-B2a1a1 frozen context", "dual failure memory", "Gate-C obstruction transformation review", "six-role same-context expert cell"],
+    "operators_tried": ["exact F_lambda algebra", "log-distance coordinate h_lambda=log(e/(lambda a))", "fixed-power hostile comparison", "absolute-vs-scale-normalized stress test", "fixed-vs-moving compactness quantifier audit", "scaled-PDE viscosity audit", "pressure/signed-flux interface audit"],
+    "motifs_tried": [],
+    "search_policy": "SEARCH same-source transformation first; JUMP/GLUE/LIFT rejected at Gate C",
+    "observations": ["F_lambda diverges exactly when h_lambda/L_lambda tends to zero", "a nonempty local mesoscopic window 1<<h_lambda<<L_lambda has scaled radius a_lambda->infinity but original radius lambda*a_lambda->0", "weighted bound forces normalized A,E,D smallness on that moving window", "the corresponding absolute L2 upper bound need not shrink", "source convergence is fixed-radius while the gain requires moving radius", "scaled viscosity is f(lambda)->0"],
+    "verification": ["symbolic scaling/algebra", "endpoint/domain check a*lambda<=1", "dimension/unit audit", "counterexample-first fixed-power scale check", "numerical spot-check used only as calibration, not proof", "same-context expert review"],
+    "outcome": "MESOSCOPIC_WINDOW_IDENTIFIED_COMPACTNESS_GAP_PERSISTS",
+    "local_mathematical_failure": "NONE: source-local estimates and algebra survive",
+    "local_to_global_gluing_failure": "YES: no source-stated rate-compatible moving-radius convergence transfers the F_lambda gain to the ancient Euler state",
+    "residual_signature": "F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH",
+    "cost_effort_proxy": {"primary_source_families":1,"symbolic_audits":1,"same_context_expert_roles":6,"numerical_calibration":"1 bounded spot-check","tokens":"CANNOT_MEASURE: runtime exposes no authoritative total"},
+    "next_action": "either prove/source a rate-compatible mesoscopic compactness/tightness bridge or develop a signed prelimit flux/telescoping bypass not requiring strong convergence on moving radii"
+  },
+  "diagnosis": {
+    "type": "Diagnosis",
+    "id": "D-NS-B2a1a1-R1",
+    "category": ["GLUING", "SOURCE_INTERFACE", "QUANTIFIER"],
+    "statement": "The logarithmic weight contains real prelimit scale-breaking information, but the gain occurs precisely in a moving-radius regime not covered quantitatively by the cited fixed-radius compactness. Normalized smallness is not absolute tail tightness, and vanishing viscosity blocks a silent unit-viscosity epsilon-regularity shortcut."
+  },
+  "obstruction": {
+    "type": "ReusableObstruction",
+    "id": "O-NS-B2a1a1-MESOSCOPIC-FIXED-COMPACTNESS",
+    "statement": "A prelimit estimate whose gain appears only on R_k->infinity cannot be transferred through compactness stated only for each fixed R unless a rate-compatible diagonal/moving-domain theorem or a bypass identity is supplied.",
+    "applicability": "local-to-global limits with parameter-coupled observation scale",
+    "difference_witness_required": true
+  },
+  "lesson": {
+    "type": "ReusableLesson",
+    "id": "L-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS",
+    "statement": "For f(lambda)=log(e/lambda)^(-gamma), parameterize radii by h=log(e/(lambda a)); fixed-power scales flatten the weight, while 1<<h<<L isolates the only local mesoscopic gain. Audit whether the convergence theorem is uniform on that same moving scale before using the gain.",
+    "authority": "SEARCH_GUIDANCE_ONLY"
+  },
+  "failure": {
+    "type": "FailureRecord",
+    "id": "F-NS-B2a1a1-LOG-GAIN-MOVING-RADIUS-COMPACTNESS-MISMATCH",
+    "parent_failure_id": "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE",
+    "failure_category": "LOCAL_TO_GLOBAL_GLUING",
+    "residual_before": "generic double-limit/tail inheritance",
+    "residual_after": "logarithmic F_lambda gain requires 1<<h<<L moving radii; source compactness is fixed-radius/no compatible rate; normalized smallness is not absolute tail control; viscosity vanishes"
+  },
+  "process_failure": {
+    "type": "FailureRecord",
+    "id": "F-NS-B2a1a1-PROCESS-TRACE-SCHEMA-NONCONFORMANCE",
+    "failure_category": "VERIFICATION_META_POLICY",
+    "statement": "Gate-C substance and chronology were frozen before the candidate, but the custom pre-candidate trace was not prospectively validated against the exact current ResearchTraceEntry schema; strict canonical trace-process credit is therefore fail-closed.",
+    "linked_prior_process_failure": "F-NS-B1a4-PROCESS-MIDRUN-RAKL-GATEC-DRIFT",
+    "difference_witness": "prior failure was framework-main drift introducing a new gate midrun; current failure is execution-side omission of the already-current trace-schema audit",
+    "framework_defect_claimed": false
+  },
+  "prior_experience": {
+    "selected_and_routing_changing": ["F-NS-B2a-F1-ABSOLUTE-CUTOFF-FLUX-NONDECAY", "F-NS-B2a1-DOUBLE-LIMIT-TAIL-INHERITANCE"],
+    "retrieved_rejected": [{"id":"F-NS-B2a1c-F1-AXIAL-44-EXPONENT-INCOMPATIBLE","why":"specialized Section-4 consumer mismatch, not a moving-radius bridge"},{"id":"F-NS-B1a1-SCALE-NEUTRAL-LOCAL-ENERGY-LEDGER","why":"Type-I Navier-Stokes context differs from vanishing-viscosity Type-II Euler scaling"}],
+    "missed": "CANNOT_MEASURE: no exhaustive governed repository-memory coverage receipt"
+  },
+  "novelty_class": {"class":"representation","scope":"solved subproblem only","literature_novelty_claim":false,"structural_rank":0},
+  "authority": "PROPOSAL_SHADOW_ONLY"
+}
