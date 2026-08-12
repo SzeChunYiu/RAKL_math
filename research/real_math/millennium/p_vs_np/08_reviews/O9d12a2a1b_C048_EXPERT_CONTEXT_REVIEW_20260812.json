@@ -1,55 +1,20 @@
 {
-  "artifact_hash": "sha256:1c65822b8051c431d1dd369d0ac5d782f949a052868dad5957967c811be6f63e",
+  "artifact_hash": "sha256:81a78da0d8187e0fddc474ab994eeabaedcde53ea597be674415495fcae567dc",
   "atom_id": "O9d12a2a1b-C048",
   "authority": "SAME_CONTEXT_ROLE_SEPARATED_INTERNAL_REVIEW_NOT_INDEPENDENT",
   "consensus": "ACCEPT_SCOPED_RETROSPECTIVE_LOCAL_NEGATIVE",
-  "fibre_snapshot_hash": "sha256:bf87028b2a9c1663ff61bb77d28de284f47fac35d01e53d246e034386a7fdc67",
+  "fibre_snapshot_hash": "sha256:42625f3b5e7a51f2ccd215813e2ee2fae2d98e1eafc1e5df17d9e55b309b4e4b",
   "independent_review_count": "0/3",
   "recorded_at": "2026-08-12T04:02:00Z",
   "review_id": "PNP-C048-SAME-CONTEXT-EXPERT-CELL-20260812",
   "roles": [
-    {
-      "background": "Boolean reductions, NP witness relations, encoding-preserving transformations",
-      "finding": "Literal transpose preserves SAT membership because the decoder still receives x||y and assignment verification is unchanged.",
-      "objection": "Do not infer lower-bound consequences from reduction preservation alone.",
-      "role": "complexity_language_lead"
-    },
-    {
-      "background": "discrete/graph complexity, semi-filter cover formulations",
-      "finding": "Global coordinate swap permutes the row/column generator family and induces an isomorphism of Definition-21 cover graphs, so rho is unchanged.",
-      "objection": "Any claimed cover gain from the uniform transpose contradicts the generator-family automorphism.",
-      "role": "two_dimensional_cover_lead"
-    },
-    {
-      "background": "recursive bit encodings and inductive invariants",
-      "finding": "The C041 seed is symmetric and the cross selector transposes exactly; induction gives T_n=tau(U_n).",
-      "objection": "A hybrid one-level switch is a different object and cannot inherit this conclusion without a new proof.",
-      "role": "formal_encoding_lead"
-    },
-    {
-      "background": "counterexample-first checking and boundary cases",
-      "finding": "Checked seed symmetry, all-zero fallback, canonical/malformed decoder branches, old-old inheritance, and excluded quadrants.",
-      "objection": "The fallback is not an exception to the isomorphism; it is mapped by tau as well.",
-      "role": "adversarial_falsification_lead"
-    },
-    {
-      "background": "RAKL experience routing and DifferenceWitness analysis",
-      "finding": "C047 experience changed routing to the stored suffix-to-fresh-row breakpoint, but C046's partition tool was rejected for direct reuse because its precondition changes.",
-      "objection": "The relevant structural analogy is conjugacy under a generator automorphism, not mere high/low-half occupancy.",
-      "role": "analogy_memory_lead"
-    },
-    {
-      "background": "local-to-global proof DAGs and circuit lower-bound barriers",
-      "finding": "The local proof closes only representation equivalence. It contributes no new cover growth, circuit rate, or P-vs-NP bridge.",
-      "objection": "Same-context review remains 0/3 independent mathematical reviews.",
-      "role": "gluing_barrier_lead"
-    },
-    {
-      "background": "research telemetry, chronology and authority accounting",
-      "finding": "The result idea preceded durable fibre persistence; preserve it retrospectively with strict prospective discovery credit denied.",
-      "objection": "Do not count repository writes or this proposed lesson as protected learning.",
-      "role": "metrology_provenance_lead"
-    }
+    {"background":"Boolean reductions, NP witness relations, encoding-preserving transformations","finding":"Literal transpose preserves SAT membership because the decoder still receives x||y and assignment verification is unchanged.","objection":"Do not infer lower-bound consequences from reduction preservation alone.","role":"complexity_language_lead"},
+    {"background":"discrete/graph complexity, semi-filter cover formulations","finding":"Global coordinate swap permutes the row/column generator family and induces an isomorphism of Definition-21 cover graphs, so rho is unchanged.","objection":"Any claimed cover gain from the uniform transpose contradicts the generator-family automorphism.","role":"two_dimensional_cover_lead"},
+    {"background":"recursive bit encodings and inductive invariants","finding":"The C041 seed is symmetric and the cross selector transposes exactly; induction gives T_n=tau(U_n).","objection":"A hybrid one-level switch is a different object and cannot inherit this conclusion without a new proof.","role":"formal_encoding_lead"},
+    {"background":"counterexample-first checking and boundary cases","finding":"Checked seed symmetry, all-zero fallback, canonical/malformed decoder branches, old-old inheritance, and excluded quadrants.","objection":"The fallback is not an exception to the isomorphism; it is mapped by tau as well.","role":"adversarial_falsification_lead"},
+    {"background":"RAKL experience routing and DifferenceWitness analysis","finding":"C047 experience changed routing to the stored suffix-to-fresh-row breakpoint, but C046's partition tool was rejected for direct reuse because its precondition changes.","objection":"The relevant structural analogy is conjugacy under a generator automorphism, not mere high/low-half occupancy.","role":"analogy_memory_lead"},
+    {"background":"local-to-global proof DAGs and circuit lower-bound barriers","finding":"The local proof closes only representation equivalence. It contributes no new cover growth, circuit rate, or P-vs-NP bridge.","objection":"Same-context review remains 0/3 independent mathematical reviews.","role":"gluing_barrier_lead"},
+    {"background":"research telemetry, chronology and authority accounting","finding":"The result idea preceded durable fibre persistence; preserve it retrospectively with strict prospective discovery credit denied.","objection":"Do not count repository writes or this proposed lesson as protected learning.","role":"metrology_provenance_lead"}
   ],
   "schema_version": "1.0.0",
   "strongest_objection": "The theorem must be scoped to the uniform literal-transpose family; nonuniform orientation schedules are not conjugate by one global tau and remain open."
