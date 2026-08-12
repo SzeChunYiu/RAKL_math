@@ -1,0 +1,24 @@
+{
+  "artifact_hash": "sha256:d80deb2ee4f0f27d768dd1e51ab3aabe62e9ca44fe7ff6e1588fb717feae7267",
+  "atom_id": "NS-B2a1b1",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "context_hash": "sha256:93318a8ff66032f8857ec41341bb61b526f653a9e8f2ea04b911d5e535835d29",
+  "independence_credit": "NONE_SAME_CONTEXT",
+  "members": [
+    {"role":"critical-PDE/scaling","background":"Navier-Stokes/Euler scaling, CKN local quantities","task":"derive exact a,F,mu powers for every cutoff remainder and test endpoints"},
+    {"role":"pressure/harmonic-analysis","background":"Calderon-Zygmund pressure and local-energy pressure work","task":"derive only source-valid pressure-work bounds from D and interpolated C; flag any harmonic/far-field assumption"},
+    {"role":"vorticity/geometric-structure","background":"vorticity transport, stretching, coherence and axisymmetric reductions","task":"audit Seregin Section 4 transport mechanism and identify which axial/derivative assumptions fail in general 3D"},
+    {"role":"compactness/gluing","background":"concentration compactness, tail tightness and ancient limits","task":"decide whether a prelimit cutoff estimate actually bypasses moving-radius strong convergence and what absolute quantity the consumer needs"},
+    {"role":"adversarial verifier","background":"quantifier, endpoint and counterexample-first proof auditing","task":"separate failure of an upper bound to vanish from proof of actual nonzero flux; test fixed-time and alternative cutoff widths"},
+    {"role":"RAKL/provenance auditor","background":"v3 Gate A-D, trace, authority and metrology","task":"enforce pre-candidate chronology, dual memory, Gate C, episode/diagnosis/obstruction separation and CANNOT_MEASURE discipline"}
+  ],
+  "pre_findings": [
+    "Scaling lens: the decisive cheap falsifier is whether every standard remainder carries a positive net power of a after inserting source A,E,D bounds.",
+    "Pressure lens: D alone supplies magnitude control only; any signed pressure cancellation must be separately sourced.",
+    "Vorticity lens: Seregin Section 4 is a same-source success analogue but depends on axisymmetry, swirl-free transport and extra derivative control absent from the general atom.",
+    "Compactness lens: a purely prelimit estimate can avoid moving-radius convergence only if it controls the unnormalized cutoff remainder needed by the Euler/global consumer.",
+    "Verifier lens: if a derived upper bound grows, the correct conclusion is 'this estimate cannot force vanishing', not 'the actual term diverges'.",
+    "Method lens: SEARCH is authorized only for exponent-audit methodology; the Section 4 conservation theorem itself is not transferred."
+  ],
+  "schema_version": "same-context-expert-cell-v3-proposal-shadow"
+}
