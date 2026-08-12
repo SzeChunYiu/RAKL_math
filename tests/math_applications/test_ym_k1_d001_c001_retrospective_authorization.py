@@ -25,7 +25,10 @@ def test_authorization_binds_exact_merged_evaluator_and_freeze() -> None:
     f = module()
     document = f.build_document()
     assert json.loads(f.OUTPUT.read_text()) == document
-    assert document["parent_main_sha"] == "ff21299ae77dde937e00c5739de3c526a30736d5"
+    assert document["authorization_base_sha"] == "0c556fc68cbf4b4d25555437ba4fc26b8128c858"
+    assert document["evaluator_identity_merge_sha"] == "ff21299ae77dde937e00c5739de3c526a30736d5"
+    assert document["evaluator_binding"]["application_commit"] == document["evaluator_identity_merge_sha"]
+    assert document["freeze_binding"]["application_commit"] == document["evaluator_identity_merge_sha"]
     assert document["evaluator_binding"]["raw_sha256"] == "4d096d89f2fdb038e9f26507caaf8393cb6b00cfab60ced6d5b9cfc41c7bc514"
     assert all(document["identity_checks"].values())
 
