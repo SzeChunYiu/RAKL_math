@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
   "ledger_id": "GLOBAL-MATH-ONLY-SATURATION-20260812",
-  "as_of_utc": "2026-08-12T04:06:38Z",
-  "base_repository_sha": "21d22075fa250e4ded412fd292b7942b87503266",
+  "as_of_utc": "2026-08-12T02:46:08Z",
+  "base_repository_sha": "79e853ad56b5704348e194f1dc42a6943029c381",
   "authority_universe": {
     "kind": "MERGED_ORIGIN_MAIN_ONLY",
-    "repository_sha": "21d22075fa250e4ded412fd292b7942b87503266",
+    "repository_sha": "79e853ad56b5704348e194f1dc42a6943029c381",
     "pending_or_open_pr_material_counted": false,
     "rule": "Only content reachable from the exact frozen origin/main SHA is eligible. Open or unmerged work may be listed only as noncanonical pending provenance and receives zero credit."
   },
@@ -286,6 +286,24 @@
           ],
           "non_implications": [
             "A row collision is not sufficient for cover growth and failure of separability is not a lower bound."
+          ]
+        },
+        {
+          "item_id": "MATH-PNP-C046-HIGH-HALF-SEPARATION",
+          "credit_type": "PROOF_OR_LEMMA",
+          "exact_claim": "For every n at least 17 in the frozen one-sided family, the complement row projection lies below 2^(n-1), while every canonical MAGIC n-bit prefix lies at or above 2^(n-1); therefore no later canonical UNSAT prefix-row collision exists in that family.",
+          "scope": "The exact C041 one-sided recursion, inherited row labels, frozen seed complement, canonical MAGIC=11100101 encoding, and n at least 17.",
+          "authority": "SAME_CONTEXT_HAND_DERIVATION_RECORD_CHECK_PASS",
+          "mathematical_credit": true,
+          "credit_units": 1,
+          "evidence_pointers": [
+            "research/real_math/millennium/p_vs_np/04_candidates/O9d12a2a1b_C046_HIGH_HALF_SEPARATION_PROOF_CERTIFICATE_FREEZE_20260812.json",
+            "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C046_HIGH_HALF_SEPARATION_PROOF_CHECK_RESULT_20260812.json"
+          ],
+          "non_implications": [
+            "No formal proof, independent review, novelty, cover or circuit lower bound, or P-versus-NP consequence.",
+            "The certificate-record evaluator checks obligation records and evidence pointers, not derivation semantics.",
+            "The feasibility-first application feedback remains proposal-only and creates no second credit unit."
           ]
         },
         {
@@ -788,13 +806,16 @@
       ]
     },
     {
-      "item_id": "EXCLUDED-OPEN-PR-244-NONCANONICAL-PENDING",
+      "item_id": "EXCLUDED-C046-ASSURANCE-AND-CERTIFICATE-RECORD-CHECK",
       "category": "ASSURANCE_METADATA",
-      "reason": "Open PR 244 is outside the merged-origin-main authority universe and is preserved only as noncanonical pending provenance with zero credit.",
+      "reason": "C046 public-freeze chronology, repository identities, tests, hashes, serialization, and the evaluator record-completeness PASS preserve assurance but earn zero mathematical credit; only the deduplicated scoped hand derivation is credited once.",
       "mathematical_credit": false,
       "credit_units": 0,
       "evidence_pointers": [
-        "https://github.com/SzeChunYiu/RAKL_math/pull/244"
+        "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C046_PUBLIC_FREEZE_CHRONOLOGY_20260812.json",
+        "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C046_POST_FREEZE_PROOF_CHECK_AUTHORIZATION_20260812.json",
+        "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C046_HIGH_HALF_SEPARATION_PROOF_CHECK_RESULT_20260812.json",
+        "tests/math_applications/test_pnp_c046_post_freeze_result.py"
       ]
     },
     {
@@ -810,9 +831,9 @@
     }
   ],
   "totals": {
-    "mathematical_credit_units": 35,
+    "mathematical_credit_units": 36,
     "mathematical_credit_units_by_lane": {
-      "p_vs_np": 13,
+      "p_vs_np": 14,
       "riemann_hypothesis": 7,
       "navier_stokes": 8,
       "yang_mills": 4,
@@ -824,7 +845,7 @@
       "BROKEN_MATHEMATICAL_ASSUMPTION": 6,
       "EXPLICIT_CONSTRUCTION_OR_COUNTEREXAMPLE": 14,
       "MATHEMATICAL_FALSIFIER": 0,
-      "PROOF_OR_LEMMA": 10,
+      "PROOF_OR_LEMMA": 11,
       "TRANSFER_CONDITION": 5
     },
     "excluded_provenance_items": 10
@@ -837,5 +858,5 @@
     "independent_review_credit": 0,
     "statement": "This is a bounded, base-SHA-specific ledger of retained mathematical content, not a proof of portfolio saturation, literature completeness, novelty, or any Millennium solution."
   },
-  "artifact_hash": "sha256:42b9522b6a61475d0e9043a2819459d174a524cc186f1e0a8ac70fd4ac61d9d6"
+  "artifact_hash": "sha256:8772a805a521bcf5965a0ca3c51a0393e482e58b716b15840ee6217f5f7c4746"
 }
