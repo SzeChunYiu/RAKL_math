@@ -26,6 +26,22 @@
     "quantitative_aggregate_action": "KEEP_PNP_EXCLUDED; DO_NOT_INFER_ZERO",
     "linked_repeated_process_observation": "XM015 -> XM016 PNP telemetry-comparability gap persists"
   },
+  "cumulative_aggregate_coverage": {
+    "cumulative_per_lane_episode_counts": "CANNOT_MEASURE: there is no coverage-complete protected episode inventory denominator spanning all six application lanes",
+    "latest_sampled_current_shape_episode_records": {"P_vs_NP":0,"Riemann_Hypothesis":1,"Navier_Stokes":1,"Yang_Mills":1,"Hodge":1,"Birch_Swinnerton_Dyer":1},
+    "repeated_failure_count_global": "CANNOT_MEASURE: heterogeneous failure identity/versioning and no canonical denominator",
+    "repeated_process_observation_lower_bound": {"PNP_TELEMETRY_COMPARABILITY":2},
+    "repeated_failure_rate": "CANNOT_MEASURE: denominator unavailable",
+    "retrieval_misses_in_bound_universes": "CANNOT_MEASURE cross-lane: no common coverage-complete bound universe; individual lane CANNOT_MEASURE fields preserved",
+    "successful_reuse_occurrence_count_lower_bound": 22,
+    "successful_reuse_rate": "CANNOT_MEASURE: eligible reuse opportunity denominator unavailable",
+    "failed_reuse_count": "CANNOT_MEASURE: retrieved-but-rejected items are not equivalent to failed reuse attempts",
+    "failed_reuse_rate": "CANNOT_MEASURE: eligible reuse opportunity denominator unavailable",
+    "local_success_global_gluing_failure_count_lower_bound": 2,
+    "local_success_global_gluing_failure_basis": ["Navier-Stokes PR#211 source-interface/gluing packet","BSD PR#210 local source-direction verification with root-facing gluing open"],
+    "retained_novelty_lower_bound_latest_comparable_lanes": {"KNOWLEDGE":3,"OPERATOR":0,"EXPERIENCE_PATTERN":3,"OBSTRUCTION":3,"RELATION":4,"PATH":3,"META_METHOD":0},
+    "CANNOT_MEASURE_coverage": "6/6 sampled lanes contain at least one nonmeasurable field or lack a complete comparable current-cycle receipt"
+  },
   "retained_semantic_novelty_for_XM016_due_to_drift": {"KNOWLEDGE":0,"OPERATOR":0,"EXPERIENCE_PATTERN":0,"OBSTRUCTION":0,"RELATION":0,"PATH":0,"META_METHOD":0},
   "protected_retained_semantic_novelty_for_XM016_due_to_drift": {"KNOWLEDGE":0,"OPERATOR":0,"EXPERIENCE_PATTERN":0,"OBSTRUCTION":0,"RELATION":0,"PATH":0,"META_METHOD":0},
   "raw_repository_growth_counts_as_learning": false
