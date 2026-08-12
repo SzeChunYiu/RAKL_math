@@ -1,0 +1,107 @@
+{
+  "record_type": "SOURCE_BOUND_THEOREM_CELL_AUDIT",
+  "cycle_id": "BSD-A1a1-KURIHARA-ORDER-BRIDGE-20260812-R13",
+  "authority": "PRIMARY_SOURCE_BOUND_SCOPED_AUDIT_NO_ROOT_AUTHORITY",
+  "source": {
+    "title": "The refined Tamagawa number conjectures for GL2",
+    "author_line": "Chan-Ho Kim, with an appendix in collaboration with Robert Pollack",
+    "arxiv_id": "2505.09121v1",
+    "submitted": "2025-05-14",
+    "pdf_internal_date": "2025-06-10",
+    "pdf_url": "https://arxiv.org/pdf/2505.09121",
+    "abs_url": "https://arxiv.org/abs/2505.09121",
+    "pdf_pages": 40,
+    "retrieved_utc": "2026-08-12",
+    "visual_verification": "PASS_PDF_SCREENSHOTS_PAGES_4_6_8_32"
+  },
+  "claims": [
+    {
+      "claim_id": "R13-KP-THM1.1-DISCRETE-SELMER-EXACTNESS",
+      "selector": "Theorem 1.1, PDF p.4, arXiv parsed lines 266-339",
+      "statement": "If the collection of central-critical Kurihara numbers is nonzero and the theorem hypotheses hold, the Bloch-Kato Selmer module structure is determined and corank_O Sel(Q,W_f^dagger)=ord(Kurihara collection).",
+      "scope": ["newform", "p>=3", "large image", "theorem nonvanishing/main-conjecture hypotheses as stated"],
+      "root_use": "strong downstream discrete-to-Selmer exact classifier only"
+    },
+    {
+      "claim_id": "R13-KP-COR1.5-ORD-AND-PARITY",
+      "selector": "Corollary 1.5, PDF p.6, parsed lines 437-458",
+      "statement": "At good ordinary p>=5 with p-distinguished and large-image hypotheses, ord(Kurihara)=corank_O Sel and complex central vanishing order is congruent to Selmer corank modulo 2.",
+      "root_use": "parity is not an upper bound; analytic rank two remains compatible with Selmer corank 2,4,6,..."
+    },
+    {
+      "claim_id": "R13-KP-CONJ1.6-COMPLEX-DISCRETE-COMPARISON",
+      "selector": "Conjecture 1.6, PDF p.6, parsed lines 462-472",
+      "statement": "The equality ord_{s=k/2} L(f,s)=ord(Kurihara collection) is explicitly stated as the Beilinson-Bloch-Kato conjecture, not as a theorem.",
+      "root_use": "this is the exact generic complex-to-discrete order comparison sought by the R13 target cell"
+    },
+    {
+      "claim_id": "R13-KP-COR1.10-LOW-RANK-CONTROL",
+      "selector": "Corollary 1.10, PDF p.8, parsed lines 632-676",
+      "statement": "For weight-two newforms with analytic rank at most one and the stated hypotheses, Selmer corank, Mordell-Weil dimension, Kurihara order, and complex analytic order agree.",
+      "root_use": "solved low-rank analogue; DifferenceWitness blocks extrapolation to analytic rank two"
+    },
+    {
+      "claim_id": "R13-KP-COR1.11-TWO-PRIME-UPPER-BOUND",
+      "selector": "Corollary 1.11, PDF p.8, parsed lines 684-693",
+      "statement": "If one Kurihara number at squarefree index n is nonzero, then corank_O Sel(Q,W_f^dagger)<=nu(n), the number of prime factors of n.",
+      "root_use": "a source-verified nu(n)=2 witness is an exact-rank-two upper-bound certificate when separately composed with a same-coordinate lower bound >=2"
+    },
+    {
+      "claim_id": "R13-KP-ANALOGY-NOT-IDENTITY",
+      "selector": "Equation (1.1), PDF p.4, parsed lines 241-260",
+      "statement": "The paper presents Kurihara order versus complex Taylor order as an analogy before stating the theorem family.",
+      "root_use": "coordinate-faithfulness guard: analogy cannot be composed as equality"
+    },
+    {
+      "claim_id": "R13-KP-LOCAL-TAMAGAWA-SEPARATION",
+      "selector": "Section 7.2.2, PDF p.32, Conjectures 7.4-7.5",
+      "statement": "Quantitative local/Tamagawa correction identities are separately conjectural in the generality displayed there.",
+      "root_use": "keeps local/Tamagawa/leading-term glue separate from rank exactness"
+    }
+  ],
+  "counterexample_first_checks": [
+    {
+      "check": "LOW_RANK_OVERTRANSFER",
+      "result": "FAIL_FOR_TRANSFER",
+      "reason": "Corollary 1.10 explicitly assumes analytic rank <=1; it cannot justify rank-two equality."
+    },
+    {
+      "check": "PARITY_AS_UPPER_BOUND",
+      "result": "FAIL_FOR_TRANSFER",
+      "reason": "Corollary 1.5 supplies congruence modulo 2 only; rank two does not exclude higher even Selmer corank."
+    },
+    {
+      "check": "DISCRETE_EXACTNESS_AS_COMPLEX_EXACTNESS",
+      "result": "FAIL_FOR_TRANSFER",
+      "reason": "The generic complex/discrete equality is Conjecture 1.6."
+    },
+    {
+      "check": "NUMERICAL_KURIHARA_WITNESS_AS_GENERIC_PROOF",
+      "result": "FAIL_FOR_TRANSFER",
+      "reason": "Corollary 1.11 makes a concrete nonzero witness rigorous for that scoped object, but analytic rank two does not itself prove existence of such a two-prime witness."
+    }
+  ],
+  "scoped_composition": {
+    "status": "VALID_CONDITIONAL_COMPOSITION_PENDING_EXACT_WEIGHT2_COORDINATE_BINDING",
+    "statement": "If (i) an R9-compatible lower bound corank Sel>=2 is transported to the same weight-two Selmer object and (ii) there exists n with nu(n)=2 and nonzero Kurihara number in the Kim theorem cell, then Corollary 1.11 gives corank Sel<=2, hence exact corank Sel=2.",
+    "not_proved": "Exact complex analytic rank two generically implies existence of a nonzero two-prime Kurihara witness.",
+    "coordinate_obligation": "Bind the rational weight-two W_f(1) Selmer object to the exact E[p^infinity]/technical-prime object used in the Zhang R9 cell before crediting a full same-theory path."
+  },
+  "residual_sharpening": {
+    "before": "COMPLEX_RANK2_TO_SHARP_DERIVED_HEEGNER_KOLYVAGIN_OR_KURIHARA_ORDER_OPEN",
+    "after": [
+      "COMPLEX_RANK2_TO_TWO_PRIME_NONZERO_KURIHARA_WITNESS_OR_EQUIVALENT_GENERIC_SELMER_UPPER_BOUND_OPEN",
+      "WEIGHT2_KURIHARA_SELMER_TO_ZHANG_R9_SAME_THEORY_COORDINATE_BINDING_OPEN",
+      "EXACT_COMPLEX_RANK2_TO_TRANSVERSE_P_LOCALIZATION_NONZERO_OPEN",
+      "MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_PERIOD_COMPLEX_LEADING_TERM_GLUE_OPEN"
+    ]
+  },
+  "negative_history": [
+    "Do not relabel Conjecture 1.6 as a theorem.",
+    "Do not promote Corollary 1.10 beyond analytic rank <=1.",
+    "Do not treat p-parity as exact rank.",
+    "Do not treat computed Kurihara witnesses as generic analytic-rank-two proof.",
+    "Do not merge the R12 open-PR conclusion into scientific authority before its own gate status resolves."
+  ],
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+}
