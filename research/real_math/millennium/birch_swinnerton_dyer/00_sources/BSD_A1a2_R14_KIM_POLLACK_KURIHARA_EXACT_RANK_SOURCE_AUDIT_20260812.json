@@ -1,0 +1,97 @@
+{
+  "record_type": "BSD_R14_PRIMARY_SOURCE_AUDIT",
+  "cycle_id": "BSD-A1A2-KURIHARA-EXACT-RANK-20260812-R14",
+  "authority": "PROPOSAL_SHADOW_SOURCE_BOUND",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "active_atom": "BSD-A1a2-EXACT-SELMER-DIMENSION-KURIHARA-ORDER-BRIDGE",
+  "fibre_snapshot_hash": "sha256:81ac2b39d9bc10d33dd77c8ffe237bef4ea625820ef323c9608a318d3cc67168",
+  "primary_source": {
+    "id": "arXiv:2505.09121v1",
+    "authors": "Chan-Ho Kim; appendix in collaboration with Robert Pollack",
+    "title": "The refined Tamagawa number conjectures for GL_2",
+    "canonical_abs_url": "https://arxiv.org/abs/2505.09121",
+    "canonical_pdf_url": "https://arxiv.org/pdf/2505.09121",
+    "selectors": [
+      "PDF pp.3-4, Theorem 1.1 and equation (1.3)",
+      "PDF p.4, Theorem 1.2",
+      "PDF p.5, Corollary 1.5 and Conjecture 1.6",
+      "PDF p.7, Corollary 1.10",
+      "PDF p.8, Corollary 1.11"
+    ]
+  },
+  "verified_theorem_cells": [
+    {
+      "id": "KP-T1.1-DISCRETE-ORDER-TO-EXACT-SELMER",
+      "statement": "If the central Kurihara-number collection is nonzero and the p-adic representation has large image, then the Bloch-Kato Selmer group has the stated module decomposition; in particular cork_O Sel(Q,W_f^dagger)=ord(delta_min^dagger).",
+      "scope": "newform; p>=3; large image; nonzero Kurihara collection",
+      "direction": "DISCRETE_ORDER -> EXACT_SELMER_CORANK",
+      "root_authority": false
+    },
+    {
+      "id": "KP-T1.2-ORD-NONVANISHING",
+      "statement": "Under large image and, in the (ord) branch, p>=5 with f good ordinary and p-distinguished, the central Kurihara collection is nonzero.",
+      "scope": "ordinary-prime source-family completeness/nonvanishing only",
+      "direction": "ORDINARY_IMC_INPUT -> KURIHARA_NONVANISHING",
+      "root_authority": false
+    },
+    {
+      "id": "KP-C1.5-DISCRETE-BBK-PLUS-PARITY",
+      "statement": "For good ordinary p>=5, p-distinguished f with large image, ord(delta_min^dagger)=cork_O Sel(Q,W_f^dagger), while complex analytic order agrees only modulo 2 with that Selmer corank.",
+      "scope": "good ordinary, p-distinguished, large image",
+      "direction": "DISCRETE_ORDER = SELMER_CORANK; COMPLEX_ORDER congruent mod 2",
+      "root_authority": false
+    },
+    {
+      "id": "KP-C1.10-LOW-RANK-COMPARISON",
+      "statement": "For weight two with analytic rank <=1 and the stated technical hypotheses, exact Selmer corank, Mordell-Weil dimension, Kurihara order, and complex analytic order agree.",
+      "scope": "analytic rank <=1 only",
+      "direction": "LOW_RANK_COMPLEX_ORDER -> EXACT_ARITHMETIC_EQUALITY",
+      "root_authority": false,
+      "strict_disanalogy": "rank <=1 cannot be promoted to analytic rank 2"
+    },
+    {
+      "id": "KP-C1.11-COMPUTATIONAL-UPPER-BOUND",
+      "statement": "A verified nonzero individual Kurihara number delta_n gives cork_O Sel(Q,W_f^dagger)<=nu(n).",
+      "scope": "large image; explicit nonzero discrete witness",
+      "direction": "DISCRETE_WITNESS -> SELMER_UPPER_BOUND",
+      "root_authority": false,
+      "strict_nonclaim": "analytic rank two is not shown to produce an n with nu(n)=2 and delta_n nonzero"
+    }
+  ],
+  "decisive_conjectural_boundary": {
+    "id": "KP-CONJECTURE-1.6-BBK-ORDER-COMPARISON",
+    "paper_status": "CONJECTURE_NOT_THEOREM",
+    "statement": "ord_{s=k/2} L(f,s) = ord(delta_min^dagger) under large image.",
+    "importance_for_active_atom": "For weight two, this is precisely the missing complex-Taylor-order -> discrete-Kurihara-order calibration needed to compose Theorem 1.1/Corollary 1.5 into exact Selmer rank from analytic rank two.",
+    "consequence": "The direct same-Q Kurihara route does not close the rank-two bridge; its missing edge is explicitly named by the source as a Beilinson-Bloch-Kato conjecture."
+  },
+  "counterexample_first_falsification": {
+    "tests": [
+      "Parity is rejected as exactness: analytic rank 2 is compatible with even Selmer coranks 2,4,6,... absent an upper bound.",
+      "Corollary 1.10 is rejected as a rank-two transfer because its hypothesis is analytic rank <=1.",
+      "Corollary 1.11 is not an analytic-rank theorem; a concrete nonzero delta_n witness is an additional discrete input.",
+      "The visual analogy between complex Taylor order and Kurihara order is rejected as theorem authority because the paper states the equality separately as Conjecture 1.6.",
+      "Theorem 1.1 is retained as a valid downstream exactness theorem and is not refuted by the failed root transport."
+    ],
+    "outcome": "STRICT_SUCCESS_FAILS; SCOPED_ROUTE_DECOMPOSITION_PASSES"
+  },
+  "exact_chain_after_audit": [
+    "ord_{s=1}L(E,s)=2",
+    "MISSING: Kim-Pollack Conjecture 1.6 specialized to weight two would give ord(delta)=2",
+    "PROVED under Kim-Pollack theorem hypotheses: ord(delta)=cork Sel(Q,W)",
+    "PROVED under R12 coefficient binding: torsion Selmer corank equals dim_Qp H^1_f(Q,V_pE)",
+    "SEPARATELY OPEN: transverse p-local localization",
+    "SEPARATELY OPEN: Mordell-Weil/Sha/regulator/Tamagawa/torsion/period/complex-leading-term glue"
+  ],
+  "local_vs_gluing": {
+    "local_mathematical_failure": "NONE: Theorem 1.1/1.2/Corollary 1.5/1.11 are retained within exact source scope.",
+    "root_facing_gluing_failure": "The complex Taylor-order coordinate is not proved to equal the discrete Kurihara-order coordinate in analytic rank two; the source labels that equality Conjecture 1.6.",
+    "later_gluing_failures_kept_separate": [
+      "exact Selmer dimension does not imply transverse loc_p != 0",
+      "Selmer rank does not by itself identify Mordell-Weil rank or close Sha/regulator/local-factor leading-term obligations"
+    ]
+  },
+  "numerics_policy": "Appendix computations and Corollary 1.11 may calibrate/falsify individual cases only; they do not prove a root-general analytic-rank-two transition.",
+  "outcome": "MATERIAL_SCOPED_RELATION_MILESTONE_NO_BSD_CERTIFICATE",
+  "recorded_at_utc": "2026-08-12T07:42:00Z"
+}
