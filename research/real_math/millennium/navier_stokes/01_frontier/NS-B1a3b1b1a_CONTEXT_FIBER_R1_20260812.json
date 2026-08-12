@@ -1,0 +1,82 @@
+{
+  "schema_version": "math-context-fiber-v3-proposal-shadow-r1",
+  "atom_id": "NS-B1a3b1b1a",
+  "parent_atom_id": "NS-B1a3b1b1",
+  "control_issue": "RAKL_math#180",
+  "root_contract": {
+    "issue": "RAKL_math#4",
+    "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "root_authority": "NONE",
+    "independent_mathematical_reviews": "0/3",
+    "closure_requirements": ["exact statement binding", "closed proof DAG", "verifier/dependency/axiom audits", "relevant barrier audit", "isolated recheck where supported", "bounded novelty search", "three genuinely isolated mathematical reviews"]
+  },
+  "object_context": "Whole-space 3D incompressible Navier-Stokes blow-up-classification lane. Audit a transfer from a finite terminal singular-set theorem in a global velocity-critical state space to a quantitative finite-center vorticity super-level morphology consumed by a recent geometric depletion argument.",
+  "problem_signature": {
+    "source": "Barker arXiv:2111.14776: terminal singular-point count under a backward sequence with uniformly bounded global L^{3,infinity} velocity.",
+    "target": "For large vorticity level lambda on preterminal slices, A_lambda(t) is covered by at most N0 balls of radii R_lambda <= C lambda^{-1/2}.",
+    "success": "A source-bound implication with explicit quantifiers/constants and same-theory preterminal state.",
+    "failure": "Source yields finite terminal singular-set cardinality or fixed-neighborhood localization only, without the critical lambda-to-radius law."
+  },
+  "structural_coordinates": [
+    "terminal singular-set cardinality versus quantitative preterminal super-level geometry",
+    "velocity L^{3,infinity} backward-sequence state versus vorticity L^{3/2,infinity} amplitude/direction state",
+    "critical parabolic spatial exponent lambda^{-1/2} for vorticity level lambda",
+    "fixed-neighborhood regularity versus level-dependent shrinking neighborhoods",
+    "translation/dilation and moving-center noncompactness",
+    "pressure/local-energy inputs on the source side versus pressure-free vorticity consumer equation",
+    "weak/strong convergence needed to transport vorticity or singular-set information",
+    "far-field/global critical control versus local morphology",
+    "backward uniqueness kept downstream until terminal/exterior hypotheses exist",
+    "Type II excluded from this atom"
+  ],
+  "equivalent_formulations": [
+    "Quantitative distance formulation: sup_{x in A_lambda(t)} dist(x,S_*) <= C lambda^{-1/2} for a finite center set S_* (or a same-cardinality moving-center variant with explicit tracking).",
+    "Modulus formulation: a terminal finite singular set supplies a level-to-distance modulus delta(lambda); target requires delta(lambda)=O(lambda^{-1/2}).",
+    "Consumer-interface formulation: finite center count is useful only if the radius law is strong enough to feed localized logarithmic commutator absorption."
+  ],
+  "solved_or_near_solved_analogues": [
+    {"id": "BARKER-2111.14776", "role": "source analogue", "known": "finite terminal singular-point count under stronger global velocity critical control", "unknown": "critical vorticity level-to-radius morphology"},
+    {"id": "GRUJIC-2607.08866v2", "role": "target consumer", "known": "one-center R<=C lambda^{-1/2} containment feeds localized stretching estimate/absorption", "unknown": "whether its one-center morphology can be produced from the source theorem"},
+    {"id": "NS-B1a3", "role": "same-lane negative experience", "known": "local compactness does not automatically glue to global critical rigidity state", "unknown": "not a direct statement about finite singular-set geometry"},
+    {"id": "NS-B1a3b1b / PR149", "role": "proposal-shadow representation warning", "known": "critical amplitude alone does not select one-center morphology on a hostile smooth divergence-free class", "unknown": "not an NSE theorem and not a terminal-singular-set result"}
+  ],
+  "method_transfer_matrix": [
+    {
+      "source_context": "Barker finite-singular-point theorem",
+      "method": "use epsilon-regularity/local regularity away from the terminal singular set to localize bad behavior",
+      "shared_structure": ["finite exceptional center set", "local regularity off the exceptional set", "parabolic NSE scaling"],
+      "required_assumptions": ["exact source hypotheses", "uniform control needed by epsilon-regularity", "quantitative estimates retained with constants"],
+      "disanalogies": ["source conclusion counts terminal singular points; target is preterminal vorticity level geometry", "source state is velocity L^{3,infinity}; target also needs vorticity amplitude/direction", "finite cardinality has no intrinsic lambda-radius modulus"],
+      "repair_question": "Does the proof provide a quantitative distance-to-singular-set estimate at vorticity level lambda with the critical exponent 1/2?",
+      "source_anchors": ["arXiv:2111.14776", "RAKL_math#180"]
+    },
+    {
+      "source_context": "Grujic localized commutator consumer",
+      "method": "localize alpha on shrinking balls and absorb nonlinear stretching via the vanishing weak-L^{3/2} norm",
+      "shared_structure": ["finite collection of spatial centers would allow local estimates to be combined if a finite-union bound is valid"],
+      "required_assumptions": ["global weak-L^{3/2} vorticity amplitude", "uniform log-BMO direction control", "shrinking radius law", "center-uniform local estimate"],
+      "disanalogies": ["consumer relaxation cannot manufacture a producer-side cover"],
+      "repair_question": "If finite-center morphology is available, what multiplicity factor is admissible?",
+      "source_anchors": ["arXiv:2607.08866v2", "RAKL_math#153"]
+    }
+  ],
+  "cross_domain_analogy_scan": {
+    "status": "NO_SAFE_MATHEMATICAL_BRIDGE_RETAINED",
+    "routes": ["finite-defect localization in elliptic regularity", "covering-number arguments", "concentration-compactness exceptional sets"],
+    "reason": "all analogies distinguish finite count from quantitative scale but none supplies the NSE level-to-radius exponent; retained only as search vocabulary."
+  },
+  "counterexample_first_falsifier": "Inspect the source proof for an explicit quantitative estimate coupling vorticity level lambda to distance from the terminal singular set with exponent 1/2. If absent, establish only the weaker fixed-delta localization available from regularity off a finite set and reject cardinality-to-critical-radius transfer.",
+  "interfaces_to_audit": ["source theorem exact hypotheses and conclusion", "preterminal versus terminal quantifier order", "velocity-to-vorticity derivative interface", "fixed delta versus delta(lambda) modulus", "center motion/recentering", "pressure/local-energy dependencies", "far field/global support", "backward uniqueness non-use", "Type-I versus Type-II scope"],
+  "framework": {
+    "semantic_main_sha": "7c1960a034f45d43c567629c0dd6e83f7e6196ec",
+    "method_version": "3.0.0",
+    "package_version": "0.1.0",
+    "constitution_epoch": "v3-authority-hardening-20260811",
+    "execution_pin_sha": "91f182a3e7ad7ba670babbec5f49a1304da2d933",
+    "semantic_pin_difference": "one later Paper-2 benchmark commit only; inspected method_specs/experience/metrology core unchanged from execution pin"
+  },
+  "application_base_sha": "a7301f0f0e2cab2750ac6e923efe18b5750b5af6",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "frozen_at_utc": "2026-08-11T22:20:00Z",
+  "packet_hash": "sha256:f0fdf4433959912fe48c5d749c55393d8ab813d000e8912cb4684821a765cd2e"
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "task-episode-v3-proposal-shadow-r1",
+  "episode_id": "EP-NS-B1a3b1b1a-C001-R1-20260812",
+  "task_id": "navier_stokes_millennium",
+  "atom_id": "NS-B1a3b1b1a",
+  "context_hash": "sha256:f0fdf4433959912fe48c5d749c55393d8ab813d000e8912cb4684821a765cd2e",
+  "problem_signature": "Audit whether Barker's finite terminal singular-point theorem under backward-sequence global velocity L^{3,infinity} supplies the quantitative finite-center preterminal vorticity morphology R_lambda<=C lambda^-1/2 required by the selected geometric consumer.",
+  "fibre_snapshot_hash": "sha256:f0fdf4433959912fe48c5d749c55393d8ab813d000e8912cb4684821a765cd2e",
+  "operator_ids": [
+    "OP-COUNTEREXAMPLE-FIRST",
+    "OP-SOURCE-INTERFACE-TYPECHECK",
+    "T-XM-ROOT-BRIDGE-STABILITY-AUDIT"
+  ],
+  "action_trace": [
+    {"step": 1, "action": "read_current_rakl_main", "result": "semantic main 7c1960a...; method 3.0.0; one-commit delta from execution pin is Paper-2-only"},
+    {"step": 2, "action": "bind_root_and_atom_contract", "result": "root open; issue #180 freezes terminal-cardinality -> critical-radius transfer discriminator"},
+    {"step": 3, "action": "freeze_context_expert_memory_trace", "result": "context, seven-role expert cell, dual memory, and seven-event hash-chained pre-action trace committed before source-proof inspection"},
+    {"step": 4, "action": "inspect_primary_source", "result": "Barker Theorem 2 and proof bound number of terminal singular points by countably additive spacetime packing after time/separation scaling"},
+    {"step": 5, "action": "run_falsifier", "result": "no vorticity-level lambda -> radius C lambda^-1/2 modulus found in inspected proof"},
+    {"step": 6, "action": "separate_failures", "result": "local transfer modulus failure separated from terminal-to-preterminal, far-field, and velocity-to-vorticity gluing residuals"},
+    {"step": 7, "action": "route", "result": "prune direct finite-point-count -> critical finite-center morphology bridge; require quantitative producer or consumer rotation"}
+  ],
+  "observation_ids": [
+    "OBS-NS-R1-BARKER-THEOREM2-TERMINAL-COUNT",
+    "OBS-NS-R1-SOURCE-SCALE-SQRT-TIME-SEPARATION",
+    "OBS-NS-R1-CKN-PACKING-COUNT",
+    "OBS-NS-R1-NO-VORTICITY-LEVEL-RADIUS-MODULUS",
+    "OBS-NS-R1-FAR-FIELD-SEPARATE"
+  ],
+  "verification_ids": [
+    "VER-NS-R1-THEOREM2-HYPOTHESES",
+    "VER-NS-R1-PROOF-EQ62-70",
+    "VER-NS-R1-PROP3-ROLE",
+    "VER-NS-R1-NONUSE-BACKWARD-UNIQUENESS",
+    "VER-NS-R1-DIFFERENCE-WITNESS"
+  ],
+  "outcome": "PARTIAL_SUCCESS_SCOPED_TRANSFER_ROUTE_PRUNING",
+  "residual_signature": "QUANTITATIVE_PRETERMINAL_VORTICITY_LEVEL_RADIUS_MODULUS_PLUS_GLOBAL_TAIL_AND_CONSUMER_STATE_OPEN",
+  "evidence_pointers": [
+    "03_source_audits/NS-B1a3b1b1a_SOURCE_AUDIT_R1_20260812.md",
+    "04_candidates/NS-B1a3b1b1a_C001_R1_FINITE_POINT_TRANSFER_RESULT_20260812.md",
+    "07_memory/NS-B1a3b1b1a_RESEARCH_MEMORY_REVIEW_R1_20260812.json",
+    "08_reviews/NS-B1a3b1b1a_EXPERT_CELL_R1_20260812.md",
+    "09_trace/NS-B1a3b1b1a_PRE_CANDIDATE_TRACE_R1_20260812.json"
+  ],
+  "cost": {
+    "model_tokens": "CANNOT_MEASURE: automation runtime does not expose authoritative token accounting",
+    "context_tokens": "CANNOT_MEASURE: runtime does not expose exact context occupancy",
+    "retrieval_calls": "CANNOT_MEASURE: no authoritative cycle-wide retrieval counter is exposed across connector/web retries",
+    "tool_calls": "CANNOT_MEASURE: no authoritative cycle-wide tool-call counter is exposed",
+    "primary_source_records_consulted": 2,
+    "memory_records_retrieved": 11,
+    "tooling_failures_observed": 1,
+    "elapsed_wall_time_proxy": "from issue #180 freeze timestamp to metrics freeze; recorded in RAKL_CYCLE_METRICS"
+  },
+  "storage_admission": "PROPOSAL_SHADOW_STORED",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "novelty_class": "transfer",
+  "independent_review_credit": "0/3",
+  "timestamp": "2026-08-11T22:30:00Z",
+  "artifact_hash": "bc8e4af76091f204696895c136bafdb6e62faf0b8c53f1a8490a63bb3e964bd0"
+}
