@@ -1,0 +1,412 @@
+{
+  "artifact_hash": "sha256:894cdc240fce22fbf7023a3457a9ba0c03a195f717746796a1b98ffe0432d040",
+  "branch": "EMPTY_WITH_EXACT_NEGATIVE_CERTIFICATE",
+  "candidate_id": "PNP-C052-K31-TARGET-BLIND-OVERLAP-CERTIFICATE-DISCRIMINATOR-v1",
+  "certificate_id": "PNP-C052-K31-UNIVERSAL-SYNTAX-SEPARATOR-v1",
+  "current_cells": [
+    {
+      "a": 1,
+      "b": 4,
+      "encoded": 64,
+      "header": 16,
+      "m": 8,
+      "padding": 0,
+      "raw": 64,
+      "v_range": [
+        1,
+        1
+      ],
+      "width": 2
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "encoded": 64,
+      "header": 18,
+      "m": 3,
+      "padding": 1,
+      "raw": 63,
+      "v_range": [
+        8,
+        15
+      ],
+      "width": 5
+    },
+    {
+      "a": 6,
+      "b": 2,
+      "encoded": 64,
+      "header": 22,
+      "m": 2,
+      "padding": 0,
+      "raw": 64,
+      "v_range": [
+        32,
+        63
+      ],
+      "width": 7
+    }
+  ],
+  "exact_result": "H_31 intersection P_32 is empty: every current prefix either has p[31]=1 while every H_31 label has h[31]=0, or has p[31]=0 and p[7:10]=100, which would map to an illegal parent variable code 00.",
+  "hidden_or_native_executed": false,
+  "negative_obligations": {
+    "N1": true,
+    "N2": true,
+    "N3": true,
+    "N4": true,
+    "N5": true,
+    "N6": true
+  },
+  "parent_cell": {
+    "a": 2,
+    "b": 3,
+    "encoded": 62,
+    "header": 16,
+    "m": 5,
+    "padding": 1,
+    "raw": 61,
+    "width": 3
+  },
+  "proof_boundary": "The symbolic dichotomy is the proof; enumeration corroborates complete public support and does not create proof authority.",
+  "proof_kind": "UNIVERSAL_CANONICAL_SYNTAX_SEPARATOR_WITH_EXHAUSTIVE_PUBLIC_CORROBORATION",
+  "public_enumeration_rows": [
+    {
+      "all_prefixes_separated": true,
+      "m": 8,
+      "p31_equals_0_and_p7_p9_equals_100_count": 0,
+      "p31_equals_1_count": 256,
+      "unique_prefix_count": 256,
+      "v": 1
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 3,
+      "p31_equals_0_and_p7_p9_equals_100_count": 1536,
+      "p31_equals_1_count": 1024,
+      "unique_prefix_count": 2560,
+      "v": 8
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 3,
+      "p31_equals_0_and_p7_p9_equals_100_count": 1944,
+      "p31_equals_1_count": 1296,
+      "unique_prefix_count": 3240,
+      "v": 9
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 3,
+      "p31_equals_0_and_p7_p9_equals_100_count": 2400,
+      "p31_equals_1_count": 2400,
+      "unique_prefix_count": 4800,
+      "v": 10
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 3,
+      "p31_equals_0_and_p7_p9_equals_100_count": 2904,
+      "p31_equals_1_count": 2904,
+      "unique_prefix_count": 5808,
+      "v": 11
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 3,
+      "p31_equals_0_and_p7_p9_equals_100_count": 4608,
+      "p31_equals_1_count": 3456,
+      "unique_prefix_count": 8064,
+      "v": 12
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 3,
+      "p31_equals_0_and_p7_p9_equals_100_count": 5408,
+      "p31_equals_1_count": 4056,
+      "unique_prefix_count": 9464,
+      "v": 13
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 3,
+      "p31_equals_0_and_p7_p9_equals_100_count": 6272,
+      "p31_equals_1_count": 6272,
+      "unique_prefix_count": 12544,
+      "v": 14
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 3,
+      "p31_equals_0_and_p7_p9_equals_100_count": 7200,
+      "p31_equals_1_count": 7200,
+      "unique_prefix_count": 14400,
+      "v": 15
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 256,
+      "p31_equals_1_count": 128,
+      "unique_prefix_count": 384,
+      "v": 32
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 264,
+      "p31_equals_1_count": 132,
+      "unique_prefix_count": 396,
+      "v": 33
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 272,
+      "p31_equals_1_count": 136,
+      "unique_prefix_count": 408,
+      "v": 34
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 280,
+      "p31_equals_1_count": 140,
+      "unique_prefix_count": 420,
+      "v": 35
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 288,
+      "p31_equals_1_count": 144,
+      "unique_prefix_count": 432,
+      "v": 36
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 296,
+      "p31_equals_1_count": 148,
+      "unique_prefix_count": 444,
+      "v": 37
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 304,
+      "p31_equals_1_count": 152,
+      "unique_prefix_count": 456,
+      "v": 38
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 312,
+      "p31_equals_1_count": 156,
+      "unique_prefix_count": 468,
+      "v": 39
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 320,
+      "p31_equals_1_count": 160,
+      "unique_prefix_count": 480,
+      "v": 40
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 328,
+      "p31_equals_1_count": 164,
+      "unique_prefix_count": 492,
+      "v": 41
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 336,
+      "p31_equals_1_count": 168,
+      "unique_prefix_count": 504,
+      "v": 42
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 344,
+      "p31_equals_1_count": 172,
+      "unique_prefix_count": 516,
+      "v": 43
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 352,
+      "p31_equals_1_count": 176,
+      "unique_prefix_count": 528,
+      "v": 44
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 360,
+      "p31_equals_1_count": 180,
+      "unique_prefix_count": 540,
+      "v": 45
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 368,
+      "p31_equals_1_count": 184,
+      "unique_prefix_count": 552,
+      "v": 46
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 376,
+      "p31_equals_1_count": 188,
+      "unique_prefix_count": 564,
+      "v": 47
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 384,
+      "p31_equals_1_count": 384,
+      "unique_prefix_count": 768,
+      "v": 48
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 392,
+      "p31_equals_1_count": 392,
+      "unique_prefix_count": 784,
+      "v": 49
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 400,
+      "p31_equals_1_count": 400,
+      "unique_prefix_count": 800,
+      "v": 50
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 408,
+      "p31_equals_1_count": 408,
+      "unique_prefix_count": 816,
+      "v": 51
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 416,
+      "p31_equals_1_count": 416,
+      "unique_prefix_count": 832,
+      "v": 52
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 424,
+      "p31_equals_1_count": 424,
+      "unique_prefix_count": 848,
+      "v": 53
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 432,
+      "p31_equals_1_count": 432,
+      "unique_prefix_count": 864,
+      "v": 54
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 440,
+      "p31_equals_1_count": 440,
+      "unique_prefix_count": 880,
+      "v": 55
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 448,
+      "p31_equals_1_count": 448,
+      "unique_prefix_count": 896,
+      "v": 56
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 456,
+      "p31_equals_1_count": 456,
+      "unique_prefix_count": 912,
+      "v": 57
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 464,
+      "p31_equals_1_count": 464,
+      "unique_prefix_count": 928,
+      "v": 58
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 472,
+      "p31_equals_1_count": 472,
+      "unique_prefix_count": 944,
+      "v": 59
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 480,
+      "p31_equals_1_count": 480,
+      "unique_prefix_count": 960,
+      "v": 60
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 488,
+      "p31_equals_1_count": 488,
+      "unique_prefix_count": 976,
+      "v": 61
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 496,
+      "p31_equals_1_count": 496,
+      "unique_prefix_count": 992,
+      "v": 62
+    },
+    {
+      "all_prefixes_separated": true,
+      "m": 2,
+      "p31_equals_0_and_p7_p9_equals_100_count": 504,
+      "p31_equals_1_count": 504,
+      "unique_prefix_count": 1008,
+      "v": 63
+    }
+  ],
+  "public_unique_prefixes_checked_with_multiplicity_by_v": 82928,
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "symbolic_proof": [
+    "Every parent word has (a,b,m)=(2,3,5), raw length 61 and canonical parity pad x[61]=0; hence every h in H_31 has h[31]=0.",
+    "For the current (a+,m+)=(1,8) cell, the first 32 bits end at the index bit of the eighth payload literal; v+=1 forces that bit p[31]=1, so h cannot equal p.",
+    "For current a+ in {4,6}, MAGIC[7]=1 and gamma(v+) begins with at least two zero bits, so p[7:10]=100.",
+    "If h=p in either a+ in {4,6} cell, parent bits h[7:10]=x[37:40] are payload token 7 (zero-based) with sign 1 and variable code 00; variable zero is illegal for parent v in {2,3}.",
+    "Thus every P_32 prefix is excluded by either p[31]=1 or the illegal mapped parent token 100, proving H_31 intersection P_32 empty without inspecting UNSAT labels."
+  ]
+}
