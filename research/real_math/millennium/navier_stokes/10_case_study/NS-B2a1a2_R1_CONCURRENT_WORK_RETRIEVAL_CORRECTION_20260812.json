@@ -1,0 +1,86 @@
+{
+  "RAKL_METHOD_CASE_STUDY": {
+    "cycle_id": "NS-B2a1a2-R1-20260812",
+    "phase": "CONCURRENT_WORK_RETRIEVAL_AND_ATTRIBUTION_CORRECTION",
+    "authority": "PROPOSAL_SHADOW_CASE_STUDY_CORRECTION_ONLY",
+    "atom_problem_signature": "Same NS-B2a1a2 viscosity-normalized CKN discriminator. This correction changes attribution and routing status after discovering a concurrent live branch/PR that had already verified the same scoped mathematical obstruction before this branch froze its own fibre.",
+    "chronology": {
+      "automation_run_start_utc": "2026-08-12T01:14:55Z",
+      "concurrent_pr230_first_branch_commit_utc": "2026-08-12T01:18:50Z",
+      "concurrent_pr230_opened_utc": "2026-08-12T01:25:54Z",
+      "this_branch_first_fibre_commit_utc": "2026-08-12T01:31:39Z",
+      "this_branch_first_math_audit_commit_utc": "2026-08-12T01:32:14Z",
+      "diagnosis": "PR #230 did not exist at run start, but it was open and its exact-atom branch had already materialized the mathematical result before this branch froze its own fibre. The application state was therefore stale at consequential fibre freeze because live exact-atom work was not refreshed after the framework/source-of-truth reading interval."
+    },
+    "actual_fibre": "Original frozen fibre sha256:d0f1ec0c2bb800fa434030622222803a6fd4758b2d3738751492fa2a8866d2fa is retained as historical evidence; it is now known to have omitted concurrent live exact-atom work and receives no completeness credit.",
+    "late_retrieval": {
+      "selected_for_attribution_and_routing": [
+        "RAKL_math PR #230",
+        "TE-NS-B2a1a2-R9-20260812 as named in PR #230",
+        "F-NS-B2a1a2-DIRECT-CKN-LEDGER-INSUFFICIENT",
+        "O-NS-B2a1a2-VISCOSITY-NORMALIZATION-GAIN-DEFICIT"
+      ],
+      "rejected_as_proof_or_root_authority": [
+        "PR #230 proposal/shadow records remain non-root authority",
+        "same-context verification does not count as an independent mathematical review"
+      ],
+      "missed_pre_fibre": [
+        "live exact-atom PR #230, which opened before this branch's fibre freeze",
+        "live exact-atom branch research/ns-b2a1a2-viscosity-normalization-r9-20260812, whose first commit predates this branch's fibre freeze"
+      ]
+    },
+    "methods_operators_motifs_tried": [
+      "late open-PR exact-atom search",
+      "commit chronology comparison",
+      "duplicate-result comparison",
+      "authority-preserving attribution correction",
+      "review and saturation_stopping"
+    ],
+    "decision_policy": "Fail closed on novelty and route attribution. Do not merge duplicate mathematical route-pruning merely because the independent derivation agrees. Preserve this branch only as verification/process telemetry unless a non-overlapping delta is established.",
+    "verification": [
+      "PR #230 commit list: first fibre commit d6304215... at 2026-08-12T01:18:50Z and verification commit 3d0e5d6... at 01:20:27Z",
+      "PR #230 opened at 01:25:54Z",
+      "this branch first fibre commit c3d1b5a... at 01:31:39Z and first math audit commit 4593586... at 01:32:14Z",
+      "PR #230 exact-head CI run 31553922177 succeeded",
+      "this branch repaired exact-head CI run 31554617098 succeeded",
+      "PR #230 mathematical formulas/outcome match the scoped DIRECT_CKN_BRIDGE_ESTIMATE_INSUFFICIENT result",
+      "current RAKL_VERSION.json at framework SHA 43897d3... reports method_version 3.0.1 whereas PR #230 metrics currently record 3.0.0; this is a telemetry correction, not a mathematical delta"
+    ],
+    "outcome": "DUPLICATE_CONCURRENT_VERIFICATION / NO_NEW_MATHEMATICAL_ROUTE_PRUNING_CREDIT",
+    "residual": [
+      "use PR #230 rather than this duplicate branch as the primary live shadow carrier for NS-B2a1a2 mathematics after its method-version telemetry is corrected",
+      "next mathematical cycle must rotate to a non-duplicated residual only after a fresh exact-atom open-PR/branch refresh",
+      "Navier-Stokes root remains OPEN_NO_SOLUTION_CERTIFICATE; 0/3 independent mathematical reviews"
+    ],
+    "failure_category": "retrieval/application-state-freshness/meta-policy concurrency collision; not a mathematical, source, gluing, or proof failure",
+    "episode_diagnosis_obstruction_lesson_separation": {
+      "episode": "TE-NS-B2a1a2-R1-20260812 remains a proposal/shadow record of duplicate verification, not a new discovery episode",
+      "diagnosis": "D-NS-B2a1a2-R1-LIVE-ATOM-STATE-STALE-AT-FIBRE-FREEZE",
+      "failure": "F-NS-B2a1a2-R1-MISSED-CONCURRENT-PR230-BEFORE-FIBRE-FREEZE",
+      "obstruction": "O-NS-B2a1a2-LIVE-APPLICATION-WORK-CAN-EMERGE-DURING-FRAMEWORK-SOURCE-READ",
+      "candidate_lesson": "L-NS-B2a1a2-REFRESH-EXACT-ATOM-LIVE-WORK-AT-FIBRE-FREEZE: after a long framework/source read, refresh exact-atom open PRs and branches immediately before freezing a consequential application fibre; treat found work as shadow routing evidence only"
+    },
+    "local_vs_gluing": "Original mathematical local-vs-gluing separation is unchanged; this correction is an orthogonal retrieval/meta-policy failure.",
+    "seven_saturation_axes": {
+      "KNOWLEDGE": "no retained delta from this R1 cycle after duplicate discovery",
+      "OPERATOR": "no retained delta",
+      "EXPERIENCE_PATTERN": "candidate concurrency lesson only; not counted as retained learning",
+      "OBSTRUCTION": "the mathematical obstruction was already present in concurrent PR #230 before this fibre freeze",
+      "RELATION": "no retained delta",
+      "PATH": "this R1 duplicate path is flattened; PR #230 is the existing live carrier",
+      "META_METHOD": "candidate refresh-at-freeze hypothesis only; not counted as retained learning"
+    },
+    "novelty_class_correction": {
+      "previous": "representation",
+      "corrected": "stored",
+      "scope": "relative to live RAKL_math application state at this branch's fibre freeze; no literature-novelty claim",
+      "reason": "the same scoped mathematical result had already been verified on concurrent branch/PR #230"
+    },
+    "framework_improvement_hypothesis": "Add an application-side pre-fibre live-work freshness witness that records exact-atom open-PR and branch search subjects/timestamps, especially when framework/source reading is long enough for concurrent work to appear. This is proposal/shadow only and does not justify a framework PR from one collision.",
+    "process_failure_links": [
+      "F-NS-B2a1a2-TOOLING-TOPLEVEL-EPISODE-INVENTORY-TRIPWIRE",
+      "RAKL#123 chronology/pre-action receipt family",
+      "concurrent RAKL_math PR #230"
+    ]
+  }
+}
