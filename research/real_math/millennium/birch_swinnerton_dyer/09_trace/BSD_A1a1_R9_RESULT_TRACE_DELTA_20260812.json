@@ -1,0 +1,44 @@
+{
+  "trace_id": "TRACE-BSD-A1a1-R9-20260812",
+  "delta_id": "TRACE-BSD-A1a1-R9-ZHANG-LOWER-BOUND-20260812",
+  "base_last_event_id": "BSD-A1a1-E31-R8-BOUNDED-LIFT-SPEC",
+  "base_last_event_hash": "sha256:4be0a96249f07b8468dd21dd246f8665c8b167d49e1b51cc23d356ed620bb2d0",
+  "hash_rule": "event artifact_hash is sha256 of canonical JSON for that event with keys sorted and artifact_hash omitted",
+  "entries": [
+    {
+      "event_id": "BSD-A1a1-E32-R9-ZHANG-DIRECT-LOWER-BOUND",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "PRIMARY_SOURCE_STORED_TRANSFER_FOUND",
+      "timestamp": "2026-08-12T04:19:30Z",
+      "state_summary": "R8 left a broad complex-rank-two to arithmetic-entry residual and a proposal-only missing-transformation specification.",
+      "action_summary": "Search exact theorem direction in historical Gross-Zagier/Kolyvagin literature; verify Wei Zhang 2014 Theorems 1.1, 1.2, 1.4(ii) and proof in author-hosted primary PDF.",
+      "evidence_pointers": ["BSD_A1a1_R9_ZHANG_LOWER_BOUND_SOURCE_AUDIT_20260812.json", "DOI:10.4310/CJM.2014.V2.N2.A2"],
+      "alternatives_considered": ["repeat generalized-Kato carrier", "repeat plectic carrier", "treat discrete Kurihara-number exactness as complex-rank exactness"],
+      "decision_rationale": "R8 experience requires invention-last theorem-direction search; Zhang supplies a strict partial effect from complex analytic rank to p-infinity Selmer lower bound.",
+      "outputs": ["COMPLEX_RANK2_TO_PINFINITY_SELMER_CORANK_GE2_SCOPED", "NO_EXACT_CORANK", "NO_P_LOCAL_LOCALIZATION"],
+      "uncertainties": ["technical prime hypotheses", "no exact upper bound", "no full BSD gluing"],
+      "residuals": ["SELMER_CORANK_LOWER_BOUND_TO_EXACT_CORANK2_UPPER_BOUND", "TRANSVERSE_P_LOCALIZATION_NONZERO", "PINFINITY_SELMER_TO_VP_SELMER_COORDINATE_BINDING_WHERE_USED", "FULL_BSD_LEADING_TERM_GLUE"],
+      "next_steps": ["adversarial expert review", "search sharp Kolyvagin-order/exactness theorem before new carrier invention"],
+      "previous_event_hash": "sha256:4be0a96249f07b8468dd21dd246f8665c8b167d49e1b51cc23d356ed620bb2d0",
+      "artifact_hash": "sha256:18bdd464f7cafc91c96fecadcb4d208ba4f8d1d2686a1b6277aaa4e58c5d1051"
+    },
+    {
+      "event_id": "BSD-A1a1-E33-R9-RESIDUAL-SPLIT-REVIEW",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "SAME_CONTEXT_REVIEW_AND_RESIDUAL_REFINEMENT",
+      "timestamp": "2026-08-12T04:21:30Z",
+      "state_summary": "A stored theorem now closes only the Selmer lower-bound component of the prior A1a2 arithmetic-entry residual.",
+      "action_summary": "Run seven-role same-context adversarial review; separate lower-bound success from exactness, p-local localization, coordinate binding, and full BSD gluing; record source-coverage miss separately from mathematical residual.",
+      "evidence_pointers": ["BSD_A1a1_R9_PROSPECTIVE_EXPERT_REVIEW_20260812.md", "BSD_A1a1_R9_DIAGNOSIS_SHADOW_20260812.json", "BSD_A1a1_R9_SOURCE_COVERAGE_FAILURE_SHADOW_20260812.json"],
+      "alternatives_considered": ["promote A1a2 closed", "create a new obstruction family", "count source-coverage miss as mathematical failure", "promote a reusable framework lesson"],
+      "decision_rationale": "The theorem is directional but lower-bound-only; no equality/localization/full glue is verified. Episode, diagnosis, failure and obstruction must retain distinct authority.",
+      "outputs": ["PARTIAL_SUCCESS_STORED_TRANSFER", "A1A2_ACTIVE_REFINED_RESIDUAL", "SOURCE_RETRIEVAL_FAILURE_SHADOW", "ROOT_OPEN_NO_SOLUTION_CERTIFICATE"],
+      "uncertainties": ["no independent review", "no all-history retrieval denominator", "no exact corank-two theorem found in bounded current cross-check"],
+      "residuals": ["SELMER_CORANK_LOWER_BOUND_TO_EXACT_CORANK2_UPPER_BOUND", "TRANSVERSE_P_LOCALIZATION_NONZERO", "PINFINITY_SELMER_TO_VP_SELMER_COORDINATE_BINDING_WHERE_USED", "SELMER_TO_MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_COMPLEX_LEADING_TERM_GLUE"],
+      "next_steps": ["search theorem controlling Kolyvagin-system vanishing order sharply", "audit any exact Selmer upper bound for complex-order source dependence", "keep root gates closed"],
+      "previous_event_hash": "sha256:18bdd464f7cafc91c96fecadcb4d208ba4f8d1d2686a1b6277aaa4e58c5d1051",
+      "artifact_hash": "sha256:da620654c4c05e4f59039a1722405548183cdf0630e2674f1c07872df61426ea"
+    }
+  ],
+  "authority": "PUBLIC_DECISION_TRACE_DELTA_PROPOSAL_ONLY_NO_ROOT_AUTHORITY"
+}
