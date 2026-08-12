@@ -1,0 +1,1260 @@
+{
+  "artifact_hash": "sha256:528ec61c553250ea1bb9386ce547028a7114a6cc0de66181e2af57cb2fd579e9",
+  "atom_id": "O9d12a2a1b-C052",
+  "authority": {
+    "computation_is_proof": false,
+    "formal_proof": false,
+    "independent_peer_review": false,
+    "native_parametric_evaluation_executed": false,
+    "raw_v1_program_agreement_preserved": true,
+    "root": "OPEN_NO_SOLUTION_CERTIFICATE",
+    "v1_evaluator_mathematical_credit": 0
+  },
+  "authorization": {
+    "artifact_hash": "sha256:84f97eb48491f8f653c3fb46e5dc8c14622721f84c44ce5f0c9b6e07a914a023",
+    "identity_public_merge": "3ebde341484e6781796229d3b2328def257deae0",
+    "path": "research/real_math/millennium/p_vs_np/09_trace/O9d12a2a1b_C052_EVALUATION_AUTHORIZATION_20260812.json"
+  },
+  "exact_bounded_result": {
+    "hostile_escape": "The authorized controlled cell k=20, parent (a,b,m)=(3,2,2), current (a_plus,b_plus,m_plus)=(2,2,3), has exact adjacent support and no universally forced unequal coordinate among h[0] through h[7].",
+    "logical_consequence": "The local forced-MAGIC-conflict obstruction is not universal over supported adjacent cells. This says nothing about actual language intersection in the escape cell.",
+    "regressions": "Both complete C050 current support cells and the C051 current support cell retain the exact h[3]=1 versus MAGIC[3]=0 conflict under the total classifier."
+  },
+  "executed_at_utc": "2026-08-12T12:51:27Z",
+  "execution_order": [
+    "C050-k15-bounded-regression",
+    "C051-k19-bounded-regression",
+    "C052-HOSTILE-SUPPORTED-ESCAPE-CELL-v1"
+  ],
+  "implementation_bytes": {
+    "byte_distinct": true,
+    "classifier_path": "research/real_math/millennium/p_vs_np/04_candidates/c052_support_phase_classifier.py",
+    "classifier_raw_sha256": "sha256:882404ef6c7be35a78a81ff95819914d1728e889c083d83248ff22637f760e2e",
+    "falsifier_imports_classifier": false,
+    "falsifier_path": "research/real_math/millennium/p_vs_np/05_falsification/c052_independent_classifier_falsifier.py",
+    "falsifier_raw_sha256": "sha256:8d5baa8764a7230b79915ad3929d188916122eda39596a56ada605c8d16c62e4"
+  },
+  "native_parametric_gate": "BLOCKED",
+  "next_gate": "FREEZE_V2_UNSAT_AWARE_CLASSIFIER_AND_FRESH_HOSTILE_WORLD_BEFORE_EXECUTION",
+  "raw_execution_verdict": "PASS_CONTROLLED_WORLDS",
+  "raw_pre_review_artifact_hash": "sha256:759d2bbb312e03dfaa16846c004b80faa070457a0dc31d429b37e8e262a8c9ff",
+  "raw_pre_review_proposed_lesson": {
+    "attempted_implication": "The repeated C050/C051 bit-3 conflict might persist across every adjacent support cell represented by the C052 support/phase coordinates.",
+    "exact_result_or_failure": "That implication is not universal: the bounded hostile k=20 support cell is ESCAPE_ADMISSIBLE for the local eight-coordinate obstruction, while the frozen k=15 and k=19 regression worlds remain FORCED_CONFLICT.",
+    "mathematical_falsifier": "Any failed support equation, omitted v/index/sign case, a forced unequal coordinate in the hostile cell, or failure to reproduce either regression refutes the bounded result.",
+    "proof_and_source_evidence": "C050/C051 exact hand certificates plus the independently materialized hostile receipt, classifier certificates, and separately recomputed falsifier audits recorded here. The computation is bounded evidence, not formal proof or independent peer review.",
+    "repair_or_next_discriminator": "Freeze a target-blind native parametric evaluation identity over an explicit cell domain; classify the whole frozen domain rather than selecting another favorable k, and preserve all four branches.",
+    "scope": "C050 k=15, C051 k=19, and the controlled k=20 hostile cell under the exact C041 syntax and local coordinates 0..7; no native class, semantic UNSAT, intersection, cover, circuit, or root claim.",
+    "status": "ZERO_CREDIT_SUPERSEDED_CERTIFICATE",
+    "supported_and_competing_causes": "Supported bounded cause is the parent a=3 token width: complete v=4..7 and legal-index coverage makes each encountered variable-code bit nonconstant, and sign bits are also nonconstant. Rejected causes include chosen padding, one representative v, omitted signs, h[0]/h[1] conflation, regression drift, and an inferred language intersection."
+  },
+  "result_id": "PNP-C052-CONTROLLED-CLASSIFIER-EVALUATION-20260812",
+  "schema_version": "1.0.0",
+  "superseded_by": "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C052_V1_CONTROLLED_SEMANTIC_FALSIFICATION_20260812.json",
+  "verdict": "CANNOT_CHECK_CERTIFICATE_INSUFFICIENT",
+  "worlds": [
+    {
+      "cases": [
+        {
+          "case_id": "C050-current-a2-m2",
+          "cell": {
+            "a": 1,
+            "a_plus": 2,
+            "b": 2,
+            "b_plus": 2,
+            "current_padding": 0,
+            "k": 15,
+            "literal_index_quantifier": "ALL_LEGAL_1_TO_V",
+            "literal_sign_quantifier": "BOTH",
+            "m": 3,
+            "m_plus": 2,
+            "parent_padding": 0,
+            "v_plus_range": [
+              2,
+              3
+            ],
+            "v_range": [
+              1,
+              1
+            ]
+          },
+          "classifier_branch": "FORCED_CONFLICT",
+          "classifier_certificate": {
+            "MAGIC_bit": 0,
+            "all_v_indices_signs_coverage_proof": {
+              "bit_offset_from_most_significant": 0,
+              "both_signs_per_index": true,
+              "complete": true,
+              "legal_indices_per_v": {
+                "1": 1
+              },
+              "phase_kind": "variable_index_bit",
+              "v_index_pairs": 1,
+              "v_values": [
+                1
+              ]
+            },
+            "coordinate_j": 3,
+            "coordinates_0_through_7": [
+              {
+                "MAGIC_bit": 1,
+                "j": 0,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "not_a_parent_token": true
+                },
+                "source": "h[0]=1 separately prepended",
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 1,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 0,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "1": 1
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 1,
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[1]=x[15]",
+                "token_phase": 1,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 2,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "complete": true,
+                  "legal_index_count": 1,
+                  "phase_kind": "literal_sign",
+                  "signs": [
+                    0,
+                    1
+                  ],
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[2]=x[16]",
+                "token_phase": 0,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 0,
+                "j": 3,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 0,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "1": 1
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 1,
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[3]=x[17]",
+                "token_phase": 1,
+                "universally_forced_unequal": true
+              },
+              {
+                "MAGIC_bit": 0,
+                "j": 4,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "complete": true,
+                  "legal_index_count": 1,
+                  "phase_kind": "literal_sign",
+                  "signs": [
+                    0,
+                    1
+                  ],
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[4]=x[18]",
+                "token_phase": 0,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 5,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 0,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "1": 1
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 1,
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[5]=x[19]",
+                "token_phase": 1,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 0,
+                "j": 6,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "complete": true,
+                  "legal_index_count": 1,
+                  "phase_kind": "literal_sign",
+                  "signs": [
+                    0,
+                    1
+                  ],
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[6]=x[20]",
+                "token_phase": 0,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 7,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 0,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "1": 1
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 1,
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[7]=x[21]",
+                "token_phase": 1,
+                "universally_forced_unequal": false
+              }
+            ],
+            "forced_parent_bit": 1,
+            "indexing": "h[0]=1 is prepended; h[1]=c[0]=x[k]",
+            "phi_c0": 1,
+            "support_equalities": {
+              "current_encoded_length": 32,
+              "current_equation": "32+0=2*(15+1)",
+              "current_padding": 0,
+              "current_raw_length": 32,
+              "parent_encoded_length": 30,
+              "parent_equation": "30+0=2*15",
+              "parent_padding": 0,
+              "parent_raw_length": 30,
+              "v_plus_range": [
+                2,
+                3
+              ],
+              "v_range": [
+                1,
+                1
+              ]
+            }
+          },
+          "expected_branch": "FORCED_CONFLICT",
+          "falsifier": {
+            "classifier_certificate_reused": false,
+            "expected_branch": "FORCED_CONFLICT",
+            "outcome": "CLASSIFIER_SURVIVES",
+            "reason": "claimed certificate agrees with independent recomputation",
+            "recomputed_coordinates_sha256": "sha256:30ded809d0cabbe69afb65fa0ff59a32b20eb77708a196a451aba7d4f497b7d2",
+            "recomputed_first_conflict": {
+              "coverage": {
+                "both_signs_for_every_index": true,
+                "complete": true,
+                "kind": "variable_index_bit",
+                "legal_indices_by_v": {
+                  "1": [
+                    1
+                  ]
+                },
+                "offset": 0,
+                "v_values": [
+                  1
+                ]
+              },
+              "j": 3,
+              "magic_bit": 0,
+              "phase": 1,
+              "possible_bits": [
+                1
+              ],
+              "source_index": 17,
+              "unequal": true
+            },
+            "recomputed_phi_c0": 1,
+            "recomputed_support": {
+              "current_padding": 0,
+              "current_raw": 32,
+              "parent_padding": 0,
+              "parent_raw": 30,
+              "v_plus_range": [
+                2,
+                3
+              ],
+              "v_range": [
+                1,
+                1
+              ]
+            },
+            "recomputed_support_phase_quantifier_coverage": true
+          },
+          "passed": true
+        },
+        {
+          "case_id": "C050-current-a4-m1",
+          "cell": {
+            "a": 1,
+            "a_plus": 4,
+            "b": 2,
+            "b_plus": 1,
+            "current_padding": 1,
+            "k": 15,
+            "literal_index_quantifier": "ALL_LEGAL_1_TO_V",
+            "literal_sign_quantifier": "BOTH",
+            "m": 3,
+            "m_plus": 1,
+            "parent_padding": 0,
+            "v_plus_range": [
+              8,
+              15
+            ],
+            "v_range": [
+              1,
+              1
+            ]
+          },
+          "classifier_branch": "FORCED_CONFLICT",
+          "classifier_certificate": {
+            "MAGIC_bit": 0,
+            "all_v_indices_signs_coverage_proof": {
+              "bit_offset_from_most_significant": 0,
+              "both_signs_per_index": true,
+              "complete": true,
+              "legal_indices_per_v": {
+                "1": 1
+              },
+              "phase_kind": "variable_index_bit",
+              "v_index_pairs": 1,
+              "v_values": [
+                1
+              ]
+            },
+            "coordinate_j": 3,
+            "coordinates_0_through_7": [
+              {
+                "MAGIC_bit": 1,
+                "j": 0,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "not_a_parent_token": true
+                },
+                "source": "h[0]=1 separately prepended",
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 1,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 0,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "1": 1
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 1,
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[1]=x[15]",
+                "token_phase": 1,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 2,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "complete": true,
+                  "legal_index_count": 1,
+                  "phase_kind": "literal_sign",
+                  "signs": [
+                    0,
+                    1
+                  ],
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[2]=x[16]",
+                "token_phase": 0,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 0,
+                "j": 3,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 0,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "1": 1
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 1,
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[3]=x[17]",
+                "token_phase": 1,
+                "universally_forced_unequal": true
+              },
+              {
+                "MAGIC_bit": 0,
+                "j": 4,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "complete": true,
+                  "legal_index_count": 1,
+                  "phase_kind": "literal_sign",
+                  "signs": [
+                    0,
+                    1
+                  ],
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[4]=x[18]",
+                "token_phase": 0,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 5,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 0,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "1": 1
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 1,
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[5]=x[19]",
+                "token_phase": 1,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 0,
+                "j": 6,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "complete": true,
+                  "legal_index_count": 1,
+                  "phase_kind": "literal_sign",
+                  "signs": [
+                    0,
+                    1
+                  ],
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[6]=x[20]",
+                "token_phase": 0,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 7,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 0,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "1": 1
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 1,
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[7]=x[21]",
+                "token_phase": 1,
+                "universally_forced_unequal": false
+              }
+            ],
+            "forced_parent_bit": 1,
+            "indexing": "h[0]=1 is prepended; h[1]=c[0]=x[k]",
+            "phi_c0": 1,
+            "support_equalities": {
+              "current_encoded_length": 32,
+              "current_equation": "31+1=2*(15+1)",
+              "current_padding": 1,
+              "current_raw_length": 31,
+              "parent_encoded_length": 30,
+              "parent_equation": "30+0=2*15",
+              "parent_padding": 0,
+              "parent_raw_length": 30,
+              "v_plus_range": [
+                8,
+                15
+              ],
+              "v_range": [
+                1,
+                1
+              ]
+            }
+          },
+          "expected_branch": "FORCED_CONFLICT",
+          "falsifier": {
+            "classifier_certificate_reused": false,
+            "expected_branch": "FORCED_CONFLICT",
+            "outcome": "CLASSIFIER_SURVIVES",
+            "reason": "claimed certificate agrees with independent recomputation",
+            "recomputed_coordinates_sha256": "sha256:30ded809d0cabbe69afb65fa0ff59a32b20eb77708a196a451aba7d4f497b7d2",
+            "recomputed_first_conflict": {
+              "coverage": {
+                "both_signs_for_every_index": true,
+                "complete": true,
+                "kind": "variable_index_bit",
+                "legal_indices_by_v": {
+                  "1": [
+                    1
+                  ]
+                },
+                "offset": 0,
+                "v_values": [
+                  1
+                ]
+              },
+              "j": 3,
+              "magic_bit": 0,
+              "phase": 1,
+              "possible_bits": [
+                1
+              ],
+              "source_index": 17,
+              "unequal": true
+            },
+            "recomputed_phi_c0": 1,
+            "recomputed_support": {
+              "current_padding": 1,
+              "current_raw": 31,
+              "parent_padding": 0,
+              "parent_raw": 30,
+              "v_plus_range": [
+                8,
+                15
+              ],
+              "v_range": [
+                1,
+                1
+              ]
+            },
+            "recomputed_support_phase_quantifier_coverage": true
+          },
+          "passed": true
+        }
+      ],
+      "classifier_branches": [
+        "FORCED_CONFLICT",
+        "FORCED_CONFLICT"
+      ],
+      "falsifier_outcomes": [
+        "CLASSIFIER_SURVIVES",
+        "CLASSIFIER_SURVIVES"
+      ],
+      "passed": true,
+      "source": {
+        "path": "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C050_K15_PROOF_CHECK_RESULT_20260812.json",
+        "raw_sha256": "sha256:a655aaa1697b64b53be4873745c8ab433a84ce2d315dcd2d0563daddbbb9f3bd"
+      },
+      "world_id": "C050-k15-bounded-regression"
+    },
+    {
+      "cases": [
+        {
+          "case_id": "C051-current-a3-m2",
+          "cell": {
+            "a": 1,
+            "a_plus": 3,
+            "b": 3,
+            "b_plus": 2,
+            "current_padding": 0,
+            "k": 19,
+            "literal_index_quantifier": "ALL_LEGAL_1_TO_V",
+            "literal_sign_quantifier": "BOTH",
+            "m": 4,
+            "m_plus": 2,
+            "parent_padding": 0,
+            "v_plus_range": [
+              4,
+              7
+            ],
+            "v_range": [
+              1,
+              1
+            ]
+          },
+          "classifier_branch": "FORCED_CONFLICT",
+          "classifier_certificate": {
+            "MAGIC_bit": 0,
+            "all_v_indices_signs_coverage_proof": {
+              "bit_offset_from_most_significant": 0,
+              "both_signs_per_index": true,
+              "complete": true,
+              "legal_indices_per_v": {
+                "1": 1
+              },
+              "phase_kind": "variable_index_bit",
+              "v_index_pairs": 1,
+              "v_values": [
+                1
+              ]
+            },
+            "coordinate_j": 3,
+            "coordinates_0_through_7": [
+              {
+                "MAGIC_bit": 1,
+                "j": 0,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "not_a_parent_token": true
+                },
+                "source": "h[0]=1 separately prepended",
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 1,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 0,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "1": 1
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 1,
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[1]=x[19]",
+                "token_phase": 1,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 2,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "complete": true,
+                  "legal_index_count": 1,
+                  "phase_kind": "literal_sign",
+                  "signs": [
+                    0,
+                    1
+                  ],
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[2]=x[20]",
+                "token_phase": 0,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 0,
+                "j": 3,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 0,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "1": 1
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 1,
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[3]=x[21]",
+                "token_phase": 1,
+                "universally_forced_unequal": true
+              },
+              {
+                "MAGIC_bit": 0,
+                "j": 4,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "complete": true,
+                  "legal_index_count": 1,
+                  "phase_kind": "literal_sign",
+                  "signs": [
+                    0,
+                    1
+                  ],
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[4]=x[22]",
+                "token_phase": 0,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 5,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 0,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "1": 1
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 1,
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[5]=x[23]",
+                "token_phase": 1,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 0,
+                "j": 6,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "complete": true,
+                  "legal_index_count": 1,
+                  "phase_kind": "literal_sign",
+                  "signs": [
+                    0,
+                    1
+                  ],
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[6]=x[24]",
+                "token_phase": 0,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 7,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 0,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "1": 1
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 1,
+                  "v_values": [
+                    1
+                  ]
+                },
+                "source": "h[7]=x[25]",
+                "token_phase": 1,
+                "universally_forced_unequal": false
+              }
+            ],
+            "forced_parent_bit": 1,
+            "indexing": "h[0]=1 is prepended; h[1]=c[0]=x[k]",
+            "phi_c0": 1,
+            "support_equalities": {
+              "current_encoded_length": 40,
+              "current_equation": "40+0=2*(19+1)",
+              "current_padding": 0,
+              "current_raw_length": 40,
+              "parent_encoded_length": 38,
+              "parent_equation": "38+0=2*19",
+              "parent_padding": 0,
+              "parent_raw_length": 38,
+              "v_plus_range": [
+                4,
+                7
+              ],
+              "v_range": [
+                1,
+                1
+              ]
+            }
+          },
+          "expected_branch": "FORCED_CONFLICT",
+          "falsifier": {
+            "classifier_certificate_reused": false,
+            "expected_branch": "FORCED_CONFLICT",
+            "outcome": "CLASSIFIER_SURVIVES",
+            "reason": "claimed certificate agrees with independent recomputation",
+            "recomputed_coordinates_sha256": "sha256:b2d92e6b8fa29f2e39ecceaec5bda6335a36f1870dfe1ba7460ddfcdf23691d4",
+            "recomputed_first_conflict": {
+              "coverage": {
+                "both_signs_for_every_index": true,
+                "complete": true,
+                "kind": "variable_index_bit",
+                "legal_indices_by_v": {
+                  "1": [
+                    1
+                  ]
+                },
+                "offset": 0,
+                "v_values": [
+                  1
+                ]
+              },
+              "j": 3,
+              "magic_bit": 0,
+              "phase": 1,
+              "possible_bits": [
+                1
+              ],
+              "source_index": 21,
+              "unequal": true
+            },
+            "recomputed_phi_c0": 1,
+            "recomputed_support": {
+              "current_padding": 0,
+              "current_raw": 40,
+              "parent_padding": 0,
+              "parent_raw": 38,
+              "v_plus_range": [
+                4,
+                7
+              ],
+              "v_range": [
+                1,
+                1
+              ]
+            },
+            "recomputed_support_phase_quantifier_coverage": true
+          },
+          "passed": true
+        }
+      ],
+      "classifier_branches": [
+        "FORCED_CONFLICT"
+      ],
+      "falsifier_outcomes": [
+        "CLASSIFIER_SURVIVES"
+      ],
+      "passed": true,
+      "source": {
+        "path": "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C051_K19_PROOF_RESULT_20260812.json",
+        "raw_sha256": "sha256:9b36721f2cb30a2d66c2a05642a582734e82d757795bcef00f2be70bdb9ea3f3"
+      },
+      "world_id": "C051-k19-bounded-regression"
+    },
+    {
+      "cases": [
+        {
+          "case_id": "C052-hostile-first-authorized-cell",
+          "cell": {
+            "a": 3,
+            "a_plus": 2,
+            "b": 2,
+            "b_plus": 2,
+            "current_padding": 1,
+            "k": 20,
+            "literal_index_quantifier": "ALL_LEGAL_1_TO_V",
+            "literal_sign_quantifier": "BOTH",
+            "m": 2,
+            "m_plus": 3,
+            "parent_padding": 0,
+            "v_plus_range": [
+              2,
+              3
+            ],
+            "v_range": [
+              4,
+              7
+            ]
+          },
+          "classifier_branch": "ESCAPE_ADMISSIBLE",
+          "classifier_certificate": {
+            "coordinates_0_through_7": [
+              {
+                "MAGIC_bit": 1,
+                "j": 0,
+                "possible_parent_bits": [
+                  1
+                ],
+                "quantifier_coverage": {
+                  "not_a_parent_token": true
+                },
+                "source": "h[0]=1 separately prepended",
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 1,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "complete": true,
+                  "legal_index_count": 22,
+                  "phase_kind": "literal_sign",
+                  "signs": [
+                    0,
+                    1
+                  ],
+                  "v_values": [
+                    4,
+                    5,
+                    6,
+                    7
+                  ]
+                },
+                "source": "h[1]=x[20]",
+                "token_phase": 0,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 2,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 0,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "4": 4,
+                    "5": 5,
+                    "6": 6,
+                    "7": 7
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 22,
+                  "v_values": [
+                    4,
+                    5,
+                    6,
+                    7
+                  ]
+                },
+                "source": "h[2]=x[21]",
+                "token_phase": 1,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 0,
+                "j": 3,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 1,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "4": 4,
+                    "5": 5,
+                    "6": 6,
+                    "7": 7
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 22,
+                  "v_values": [
+                    4,
+                    5,
+                    6,
+                    7
+                  ]
+                },
+                "source": "h[3]=x[22]",
+                "token_phase": 2,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 0,
+                "j": 4,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 2,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "4": 4,
+                    "5": 5,
+                    "6": 6,
+                    "7": 7
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 22,
+                  "v_values": [
+                    4,
+                    5,
+                    6,
+                    7
+                  ]
+                },
+                "source": "h[4]=x[23]",
+                "token_phase": 3,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 5,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "complete": true,
+                  "legal_index_count": 22,
+                  "phase_kind": "literal_sign",
+                  "signs": [
+                    0,
+                    1
+                  ],
+                  "v_values": [
+                    4,
+                    5,
+                    6,
+                    7
+                  ]
+                },
+                "source": "h[5]=x[24]",
+                "token_phase": 0,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 0,
+                "j": 6,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 0,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "4": 4,
+                    "5": 5,
+                    "6": 6,
+                    "7": 7
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 22,
+                  "v_values": [
+                    4,
+                    5,
+                    6,
+                    7
+                  ]
+                },
+                "source": "h[6]=x[25]",
+                "token_phase": 1,
+                "universally_forced_unequal": false
+              },
+              {
+                "MAGIC_bit": 1,
+                "j": 7,
+                "possible_parent_bits": [
+                  0,
+                  1
+                ],
+                "quantifier_coverage": {
+                  "bit_offset_from_most_significant": 1,
+                  "both_signs_per_index": true,
+                  "complete": true,
+                  "legal_indices_per_v": {
+                    "4": 4,
+                    "5": 5,
+                    "6": 6,
+                    "7": 7
+                  },
+                  "phase_kind": "variable_index_bit",
+                  "v_index_pairs": 22,
+                  "v_values": [
+                    4,
+                    5,
+                    6,
+                    7
+                  ]
+                },
+                "source": "h[7]=x[26]",
+                "token_phase": 2,
+                "universally_forced_unequal": false
+              }
+            ],
+            "indexing": "h[0]=1 is prepended; h[1]=c[0]=x[k]",
+            "no_universal_unequal_bit_proof": "Every payload coordinate audit is complete; none is both universally forced and unequal to its MAGIC coordinate.",
+            "not_overlap_disclaimer": true,
+            "phi_c0": 0,
+            "support_equalities": {
+              "current_encoded_length": 42,
+              "current_equation": "41+1=2*(20+1)",
+              "current_padding": 1,
+              "current_raw_length": 41,
+              "parent_encoded_length": 40,
+              "parent_equation": "40+0=2*20",
+              "parent_padding": 0,
+              "parent_raw_length": 40,
+              "v_plus_range": [
+                2,
+                3
+              ],
+              "v_range": [
+                4,
+                7
+              ]
+            },
+            "universally_forced_unequal_coordinates": []
+          },
+          "expected_branch": "ESCAPE_ADMISSIBLE",
+          "falsifier": {
+            "classifier_certificate_reused": false,
+            "expected_branch": "ESCAPE_ADMISSIBLE",
+            "outcome": "CLASSIFIER_SURVIVES",
+            "reason": "claimed certificate agrees with independent recomputation",
+            "recomputed_coordinates_sha256": "sha256:784381fd36762582bc16c3e90678696b3b451454f36dd899960d0aada0fccf19",
+            "recomputed_first_conflict": null,
+            "recomputed_phi_c0": 0,
+            "recomputed_support": {
+              "current_padding": 1,
+              "current_raw": 41,
+              "parent_padding": 0,
+              "parent_raw": 40,
+              "v_plus_range": [
+                2,
+                3
+              ],
+              "v_range": [
+                4,
+                7
+              ]
+            },
+            "recomputed_support_phase_quantifier_coverage": true
+          },
+          "passed": true
+        }
+      ],
+      "classifier_branches": [
+        "ESCAPE_ADMISSIBLE"
+      ],
+      "falsifier_outcomes": [
+        "CLASSIFIER_SURVIVES"
+      ],
+      "passed": true,
+      "source": {
+        "path": "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C052_HOSTILE_SUPPORTED_ESCAPE_CELL_20260812.json",
+        "raw_sha256": "sha256:0eceeac47ecb147cf22225812b5ef3b18a01ff724f38cccd1da90740c97ed88b"
+      },
+      "world_id": "C052-HOSTILE-SUPPORTED-ESCAPE-CELL-v1"
+    }
+  ]
+}

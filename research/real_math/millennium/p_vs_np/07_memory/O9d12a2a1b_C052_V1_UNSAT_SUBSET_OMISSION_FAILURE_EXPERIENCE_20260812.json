@@ -1,0 +1,54 @@
+{
+  "artifact_hash": "sha256:717dbeef1d4659dbb644bc0e48333eba5c6600ace41b5e26805334e00a5ce100",
+  "atom_id": "O9d12a2a1b-C052",
+  "authority": "SUPPORTED_FAILURE_DIAGNOSIS_NOT_VERIFIED_GLOBAL_IMPOSSIBILITY",
+  "broken_assumptions": [
+    "variation over a superset does not imply variation over a restricted semantic subset",
+    "implementation separation does not help when both specifications share a semantic omission"
+  ],
+  "candidate_id": "PNP-C052-TARGET-BLIND-TOTAL-SUPPORT-PHASE-CLASSIFIER-v1",
+  "competing_diagnoses": [
+    "byte-identical implementations",
+    "bad support arithmetic",
+    "empty H_20",
+    "mere documentation omission with no semantic effect"
+  ],
+  "context_packet_hash": "sha256:9d40561c8b60531e1b424dc0daa66f308a000e76154d36295c91836004dce125",
+  "diagnosis_status": "SUPPORTED",
+  "evidence_pointers": [
+    "research/real_math/millennium/p_vs_np/05_falsification/O9d12a2a1b_C052_CONTROLLED_EVALUATION_RESULT_20260812.json",
+    "research/real_math/millennium/p_vs_np/08_reviews/O9d12a2a1b_C052_V1_CONTROLLED_SEMANTIC_FALSIFICATION_20260812.json"
+  ],
+  "failure_id": "F-PNP-C052-V1-UNSAT-SUBSET-OMISSION",
+  "failure_mode": "ambient syntax variation substituted for variation inside the UNSAT semantic subset",
+  "falsifier_or_attempt": "Post-execution semantic review asks whether every varied bit has an explicit UNSAT-preserving H_k witness.",
+  "local_repair_attempts": [
+    "same-context semantic role review",
+    "separate retrospective k20 UNSAT-aware witness proof"
+  ],
+  "method_family": "semantic-subset forced-bit classification",
+  "observed_result": "Raw candidate/falsifier agreement returned ESCAPE_ADMISSIBLE, but both programs omitted the UNSAT-preserving witness obligation; semantic outcome is CANNOT_CHECK_CERTIFICATE_INSUFFICIENT and native evaluation remains blocked.",
+  "research_trace_event_id": "O9d12a2a1b-C052-E11",
+  "residual_signature": [
+    "quantifier-domain mismatch",
+    "ambient-set versus semantic-subset substitution",
+    "shared candidate/falsifier omission",
+    "same-context agreement without discriminator"
+  ],
+  "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+  "schema_version": "1.0.0",
+  "scope_conditions": [
+    "frozen v1 classifier/falsifier hostile escape certificate",
+    "no impact on independently hand-proved C050/C051 conflicts",
+    "no global impossibility claim"
+  ],
+  "selected_diagnosis": "The defining parent domain is H_k, not all canonical syntax. Universal/non-universal bit claims require witnesses inside H_k. Both implementations checked only the superset, so agreement cannot validate escape.",
+  "timestamp": "2026-08-12T12:56:30Z",
+  "typed_relations": [
+    {
+      "relation": "TRANSFER_WARNING_FOR",
+      "target_failure_id": "F-PNP-C052-LOCAL-FORCED-CONFLICT-UNIVERSALITY-REFUTED",
+      "witness": "The local-obstruction counterpattern requires semantic-set witnesses; raw v1 program agreement cannot supply them."
+    }
+  ]
+}
