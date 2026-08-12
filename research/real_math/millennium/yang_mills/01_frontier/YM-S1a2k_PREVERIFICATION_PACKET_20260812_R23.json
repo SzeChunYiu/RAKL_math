@@ -1,0 +1,388 @@
+{
+  "application": {
+    "base_sha": "301f6f9db54784d250a49c4a5766384df31989dd",
+    "branch": "research/ym-s1a2k-fixed-cutoff-spectral-verification-20260812",
+    "issue": 360,
+    "repository": "SzeChunYiu/RAKL_math"
+  },
+  "artifact_hash": "sha256:5bf425863db367cd9bce0c0f559feab4a3bf28a836a9ba00d494664a77662894",
+  "authority": "PROPOSAL_SHADOW_ONLY",
+  "decision_policy": {
+    "allowed_action": "independent verification/falsification of the already-proposed fixed-cutoff spectral handoff",
+    "new_candidate_generation": "BLOCKED_NOT_NEEDED_PREEXISTING_PROPOSAL",
+    "numerics": "calibration/falsification only",
+    "promotion": "forbidden without exact root gates and 3 independent mathematical reviews"
+  },
+  "expert_context_review": {
+    "artifact_hash": "sha256:dd42702f3cc69ff3df90f4d100bf1f22344db15f80d5fa7916dc6e1ff2672a0c",
+    "disagreements": [
+      "Whether strict positivity/injectivity of T is needed for the scoped spectral exclusion: spectral lead says no for an upper spectral-edge statement; OS lead requires an explicit caveat before interpreting -log T as a globally finite Hamiltonian.",
+      "Whether vacuum uniqueness can be inferred from clustering: not accepted in this cycle without a separately typed theorem; report the gap only on Omega-perp and flag possible extra eigenvalue 1 states as a hostile control."
+    ],
+    "independent_review_credit": "0/3",
+    "recommendation": "Run primary-source and proof-level verification of the preexisting fixed-cutoff handoff. If every local interface passes, record a scoped transfer spectral exclusion and leave vacuum uniqueness/physical continuum mass open; otherwise record the precise failed interface.",
+    "review_id": "EXPERT-YM-S1a2k-R23-20260812",
+    "roles": [
+      {
+        "background": "constructive lattice gauge theory, Wilson action and thermodynamic weak limits",
+        "delegated_check": "same Wilson measure; site/link reflection distinction; finite-to-infinite passage",
+        "role": "lattice gauge / reflection positivity",
+        "strongest_objection": "do not infer adjacent-link positivity from site RP"
+      },
+      {
+        "background": "Osterwalder-Schrader reconstruction and lattice transfer operators",
+        "delegated_check": "null quotient, one-step shift, self-adjointness/positivity, vacuum sector",
+        "role": "OS reconstruction / transfer matrix",
+        "strongest_objection": "finite-volume T is not automatically the infinite-volume operator"
+      },
+      {
+        "background": "positive operators, spectral measures, real Hilbert forms",
+        "delegated_check": "dense-source spectral projector proof and real/complex detection",
+        "role": "functional analysis / spectral",
+        "strongest_objection": "a real source family must detect conjugation-invariant complex spectral subspaces"
+      },
+      {
+        "background": "Gibbs measures and correlation inequalities",
+        "delegated_check": "SZZ exact class, exponent, prefactors, support metric",
+        "role": "strong-coupling correlation",
+        "strongest_objection": "one-sided covariance estimate needs positive transfer moment for lower sign"
+      },
+      {
+        "background": "lattice RG, asymptotic freedom and scaling limits",
+        "delegated_check": "a-uniformity and physical normalization",
+        "role": "RG / continuum",
+        "strongest_objection": "dimensionless lattice gap has zero continuum authority absent delta(a)/a control"
+      },
+      {
+        "background": "counterexamples, hidden sectors and quantifier audits",
+        "delegated_check": "hidden-state, vacuum degeneracy, wrong measure/reflection controls",
+        "role": "adversarial falsification",
+        "strongest_objection": "Omega-perp is not automatically the complement of all zero-energy states if vacuum degeneracy is unproved"
+      },
+      {
+        "background": "proof DAGs, provenance, RAKL v3 authority and deduplication",
+        "delegated_check": "chronology, memory, trace, novelty and root boundary",
+        "role": "formal assurance / novelty metrology",
+        "strongest_objection": "the spectral-edge idea preexists in draft PR#258/R21, so semantic novelty credit must be zero unless a genuinely new coordinate survives deduplication"
+      }
+    ]
+  },
+  "framework": {
+    "git_sha": "fa6f305412ff5d0ef0bbbad174e83887e248b742",
+    "method_version": "3.0.0",
+    "package_version": "0.1.0",
+    "repository": "SzeChunYiu/RAKL",
+    "skill_manifest_version": "0.7.0"
+  },
+  "frozen_at_utc": "2026-08-12T08:07:00Z",
+  "math_context_fibre": {
+    "atom_id": "YM-S1a2k",
+    "chronology": {
+      "frozen_at": "2026-08-12T08:07:00Z",
+      "new_candidate_generation": "FORBIDDEN_NOT_NEEDED",
+      "preexisting_proposal_identity": [
+        "PR#258",
+        "PR#337 conditional spectral handoff"
+      ],
+      "status": "PROSPECTIVE_FOR_VERIFICATION_ONLY"
+    },
+    "cross_domain_analogy_scan": {
+      "note": "Sensor/completeness and control-observability metaphors are morphology-only; they add no theorem authority and are lower information than the direct same-domain spectral projector verification.",
+      "result": "NO_SAFE_STRICT_CROSS_DOMAIN_BRIDGE_FOUND",
+      "retained": [],
+      "search_boundary": "current 15-episode obstruction-transformation corpus plus application-local hidden-state and scale-normalization controls"
+    },
+    "equivalent_formulations": [
+      "Dense detecting sources + common diagonal moment nth-root bound q<1 imply spectral support of T on the excited sector lies in [0,q].",
+      "For positive T, transfer eigenvalue lambda corresponds formally to lattice energy E=-log(lambda); a bound lambda<=q gives lattice-unit energy >=-log(q) on the detected excited sector.",
+      "The reflected Euclidean form mu((Theta F)(tau_n F)) is the same operator moment <[F],T^n[F]> only after same-theory OS/time-shift typing."
+    ],
+    "fibre_hash": "sha256:674bc7ccaac2ba53ffe93f5932bb9dd915dd395d3bd36f713bdbd509bbc063d4",
+    "method_transfer_matrix": [
+      {
+        "broken_or_unbound": [
+          "exact dense same-theory source class until rechecked"
+        ],
+        "method": "spectral projector contradiction",
+        "minimum_repair": "prove same-OS density and real/complex detection",
+        "shared": [
+          "operator spectrum",
+          "diagonal moments"
+        ],
+        "source_assumptions": [
+          "T positive self-adjoint",
+          "dense detection",
+          "common q"
+        ]
+      },
+      {
+        "broken_or_unbound": [
+          "same-measure binding until source audit"
+        ],
+        "method": "L2 cylinder density then continuous OS quotient",
+        "minimum_repair": "bind SZZ limiting measure to the same RP/translation structure",
+        "shared": [
+          "same positive-time edge configuration space"
+        ],
+        "source_assumptions": [
+          "compact countable product",
+          "gauge-invariant measure",
+          "reflection invariance",
+          "OS norm <= L2 norm"
+        ]
+      },
+      {
+        "broken_or_unbound": [
+          "exact reflection/time convention"
+        ],
+        "method": "reflected support separation",
+        "minimum_repair": "derive d(theta supp F,tau_n supp F)>=n-C_F",
+        "shared": [
+          "finite-edge cylinder geometry"
+        ],
+        "source_assumptions": [
+          "finite support",
+          "integer time translation",
+          "SZZ support metric"
+        ]
+      },
+      {
+        "broken_or_unbound": [
+          "no a-uniform bound; SZZ microscopic strong-coupling domain does not overlap AF bare-coupling tail"
+        ],
+        "method": "fixed-cutoff gap to physical mass",
+        "minimum_repair": "same-theory RG transport plus physical-time normalization",
+        "shared": [
+          "transfer gap coordinate"
+        ],
+        "source_assumptions": [
+          "delta_latt(a)>=m0*a uniformly along continuum trajectory"
+        ]
+      }
+    ],
+    "object": "Fixed-cutoff infinite-volume strong-coupling SU(N) Wilson theory: same-theory OS one-step transfer, dense centered gauge-invariant smooth cylinder sources, and common reflected-correlation rate.",
+    "parent_root_issue": 5,
+    "primary_source_anchors_planned": [
+      "Shen-Zhu-Zhu, arXiv:2204.12737 / CMP 400 (2023)",
+      "Luescher, CMP 54 (1977), transfer matrix",
+      "Osterwalder-Seiler, Ann. Phys. 110 (1978)",
+      "Menotti-Pelissetto, CMP 113 (1987), Wilson-action OS positivity"
+    ],
+    "qoi": "Whether the already-proposed local ingredients, when independently rechecked on one exact SZZ measure/OS quotient, rigorously imply an excited transfer-spectrum exclusion in lattice units.",
+    "regime": {
+      "authority_scope": "proposal/shadow verification only",
+      "coupling": "0<beta<1/48",
+      "dimension": 4,
+      "group": "SU(N), N>=2",
+      "lattice_spacing": "fixed/unit",
+      "volume": "infinite"
+    },
+    "root_contract": "For every compact simple gauge group, construct a nontrivial 4D quantum Yang-Mills theory satisfying Clay-strength axiomatic requirements and prove a finite positive physical mass gap above the vacuum, with required continuum/short-distance behavior.",
+    "signature": "YM-S1a2k-SZZ-SAME-THEORY-DENSE-SOURCE-COMMON-RATE-TRANSFER-SPECTRAL-GAP-VERIFICATION",
+    "solved_or_near_solved_analogues": [
+      {
+        "context": "finite-dimensional positive diagonal contraction",
+        "disanalogy": "finite-dimensional model has no OS quotient, gauge invariance, thermodynamic limit, or regulator scaling",
+        "enabling_assumptions": [
+          "positive self-adjoint contraction",
+          "dense/full detecting source family",
+          "common nth-root rate"
+        ],
+        "method": "spectral projector/detecting-vector argument",
+        "repair_question": "prove density/detection in the exact OS Hilbert space and preserve a source-independent exponent"
+      },
+      {
+        "context": "finite-volume Wilson lattice transfer matrix",
+        "disanalogy": "finite-volume operator cannot be silently identified with the infinite-volume SZZ OS operator",
+        "enabling_assumptions": [
+          "matching Wilson action",
+          "compatible site/link reflection structure",
+          "finite-volume Hilbert construction"
+        ],
+        "method": "reflection positivity plus transfer reconstruction",
+        "repair_question": "construct/recheck the shift directly on the exact limiting OS quotient"
+      },
+      {
+        "context": "real Hilbert form with self-adjoint real operator",
+        "disanalogy": "must show the OS quotient/conjugation and gauge-invariant source algebra actually have this structure",
+        "enabling_assumptions": [
+          "antiunitary conjugation J",
+          "JT=TJ",
+          "real source form dense in fixed-point real Hilbert space"
+        ],
+        "method": "complexification and conjugation-invariant spectral projections",
+        "repair_question": "verify no complex spectral sector is invisible to real observables"
+      }
+    ],
+    "structural_coordinates": [
+      "positive reflection form and exact null quotient",
+      "one-step time-translation operator and site/link reflection distinction",
+      "positive self-adjoint contraction spectrum",
+      "vacuum vector Omega=[1] and vacuum complement",
+      "smooth finite-edge gauge-invariant cylinder density",
+      "real-form/complexification detection",
+      "source-independent exponential nth-root rate",
+      "support distance versus Euclidean time shift",
+      "thermodynamic same-measure identity",
+      "lattice-unit versus physical-unit mass normalization"
+    ],
+    "verification_issue": 360
+  },
+  "obstruction_transformation_review": {
+    "GLUE": {
+      "authority": "proposal/shadow until rechecked",
+      "components": [
+        "same-theory OS shift",
+        "OS source density",
+        "common reflected rate",
+        "spectral projector lemma"
+      ],
+      "interface_obligations": [
+        "same measure/quotient",
+        "real-complex detection",
+        "support-time geometry",
+        "vacuum-sector typing"
+      ],
+      "status": "SELECTED_FOR_VERIFICATION_ONLY"
+    },
+    "JUMP": {
+      "reason": "current corpus cross-domain exemplars do not bind OS/gauge/spectral preconditions",
+      "status": "NO_VIABLE_STRICT_MATCH"
+    },
+    "LIFT": {
+      "reason": "SEARCH/GLUE already provide a concrete verification route; corpus also makes no completeness claim",
+      "status": "FORBIDDEN"
+    },
+    "SEARCH": {
+      "matches": [
+        "PR#225",
+        "PR#256",
+        "PR#337"
+      ],
+      "status": "PROPOSAL_SHADOW_DIRECT_MATCH_FOR_VERIFICATION",
+      "strict_candidate_authority": "NO"
+    },
+    "artifact_hash": "sha256:8ebc20cc3649ea71c639fd5bb424509c8ba0a3f786fe25db8b35d39ff5b0f475",
+    "complete_knowledge_claim": false,
+    "new_candidate_generation_allowed": false,
+    "obstruction_fingerprint": {
+      "constraints": [
+        "same measure",
+        "positive one-step transfer",
+        "dense source form",
+        "source-independent rate",
+        "fixed-cutoff scope"
+      ],
+      "desired_transition": [
+        "verified fixed-cutoff spectral exclusion"
+      ],
+      "failure_mechanisms": [
+        "hidden orthogonal state",
+        "wrong Hilbert space",
+        "wrong reflection",
+        "source-dependent vanishing rate",
+        "fixed-cutoff-to-continuum overglue"
+      ],
+      "forbidden_losses": [
+        "dropping density",
+        "switching measures",
+        "using numerics as proof",
+        "claiming continuum physical mass"
+      ],
+      "invariants_to_preserve": [
+        "gauge invariance",
+        "reflection positivity",
+        "same-theory identity",
+        "vacuum complement",
+        "authority scope"
+      ],
+      "relations": [
+        "source moment equals reflected covariance",
+        "source family must detect every excited spectral component",
+        "common rate bounds spectral edge"
+      ],
+      "roles": [
+        "Euclidean source",
+        "OS quotient vector",
+        "one-step transfer operator",
+        "spectral projector",
+        "continuum consumer"
+      ]
+    },
+    "review_id": "OTR-YM-S1a2k-R23-20260812",
+    "selected_route": "GLUE_FOR_VERIFICATION_OF_PREEXISTING_PROPOSAL",
+    "snapshot_episode_count": 15,
+    "snapshot_hash": "732ec44e38414fdb17a445d457c8089fa21153a3fafcab83f44da043e184fbef",
+    "transformation_memory_id": "otc-v1-seed-memory",
+    "verification_action_allowed": true
+  },
+  "research_memory_review": {
+    "artifact_hash": "sha256:fb675911efc1bc5fa63ba410341691ee36ce35827fb628f6833b80885c91def6",
+    "counts": {
+      "missed_relevant": "CANNOT_MEASURE: no exhaustive protected-memory coverage receipt exists",
+      "rejected": 3,
+      "retrieved": 10,
+      "selected": 7
+    },
+    "failure_experience_lattice": {
+      "relevant": [
+        "F-YM-S1A-RESTRICTED-SOURCE-HIDDEN-STATE",
+        "PR#273:R15-MICROSCOPIC-STRONG-AF-DOMAIN-NONOVERLAP",
+        "PR#268:XM020-FIXED-CUTOFF-VS-PHYSICAL-SCALE-NONIDENTIFICATION",
+        "PR#328:R20-WILSON-GRAPH-TRANSFORM-BACKWARD-CONTRACTION-UNBOUND"
+      ],
+      "reuse_scope": "hidden-source failure forces density/detection; scale failure forbids continuum promotion; R20 saturation favors route rotation"
+    },
+    "observable_pre_memory_preference": "continue the latest Wilson relevant-block/conorm source audit",
+    "post_memory_preference": "verify the already-articulated fixed-cutoff same-theory spectral handoff before spending another cycle on the saturated Wilson source family",
+    "rakl_changed_observable_action_preference": true,
+    "rejected_ids": {
+      "PR#240": "retrospective chronology; useful provenance but no strict discovery authority",
+      "PR#351": "current Wilson-conorm lane remains source-blocked and is lower-information for this cycle after R18-R22 saturation",
+      "issue#88": "parent atom retained as scope, not a method result"
+    },
+    "retrieved_ids": [
+      "root#5",
+      "issue#88",
+      "PR#225",
+      "PR#240",
+      "PR#256",
+      "PR#258",
+      "PR#273",
+      "PR#328",
+      "PR#337",
+      "PR#351"
+    ],
+    "review_id": "RM-YM-S1a2k-R23-20260812",
+    "selected_ids": [
+      "root#5",
+      "PR#225",
+      "PR#256",
+      "PR#258",
+      "PR#273",
+      "PR#328",
+      "PR#337"
+    ],
+    "success_tool_inventory": {
+      "canonical_protected_match": "NO_RELEVANT_MATCH",
+      "proposal_shadow_matches": [
+        "YM-S1A1-C001-V2:DENSE-SOURCE-COMMON-RATE-SPECTRAL-EXCLUSION",
+        "PR#225:R11-OS-SOURCE-DENSITY",
+        "PR#337:R21-INFINITE-VOLUME-OS-ONE-STEP-TRANSFER"
+      ],
+      "warning": "proposal/shadow results guide search only and are independently rechecked"
+    }
+  },
+  "schema_version": "rakl-v3-verified-math-preverification-v1",
+  "task_episode_pre": {
+    "atom_id": "YM-S1a2k",
+    "diagnosis_id": null,
+    "episode_id": "EP-YM-S1a2k-R23-20260812",
+    "episode_type": "VERIFICATION_GLUE",
+    "lesson_id": null,
+    "obstruction_id": null,
+    "outcome": "PENDING_PRIMARY_SOURCE_AND_PROOF_VERIFICATION",
+    "residual_before": "RES-YM-S1a2j-SAME-HILBERT-DENSE-DECAY-HANDOFF-PLUS-STRICT-HAMILTONIAN-IF-REQUIRED-PLUS-A-UNIFORM-RG-CONTINUUM-UNBOUND",
+    "storage_admission": "PROPOSAL_SHADOW_STARTED"
+  }
+}
