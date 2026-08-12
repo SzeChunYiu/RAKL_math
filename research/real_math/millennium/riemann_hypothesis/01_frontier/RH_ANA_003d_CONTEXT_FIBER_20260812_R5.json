@@ -1,0 +1,105 @@
+{
+  "schema": "RAKL-v3-shadow-MathContextFiber",
+  "atom_id": "RH-ANA-003d",
+  "cycle": "R5",
+  "root_issue": 3,
+  "control_issue": 202,
+  "object_context": "Coffey's natural-order prime/Laguerre remainder tail T_n(X)=sum_{m>X}(1-Lambda(m))L_{n-1}^1(log m)/m, with cumulative source error A(x)=floor(x)-psi(x), moving cutoff X=X(n), and all-index n-uniformity kept separate from finite-prefix-to-Li gluing.",
+  "structural_coordinates": [
+    "conditionally convergent natural m-order source series",
+    "cumulative signed source error A(x)=floor(x)-psi(x)",
+    "associated Laguerre kernel L_{n-1}^1(log x)/x and its n-dependent growth",
+    "Abel/partial-summation boundary plus derivative integral",
+    "unconditional prime-number-theorem error decay from a Korobov-Vinogradov zero-free region",
+    "moving cutoff log X(n) and quantifier order",
+    "tail-local certificate versus finite-prefix and root gluing"
+  ],
+  "equivalent_formulations": [
+    "For finite Y>X, the exact ordered tail is A(Y)b_n(Y)-A(X)b_n(X)-integral_X^Y A(t)b_n'(t)dt.",
+    "Uniform tail control reduces to whether the PNT decay exponent can dominate a valid all-n envelope for L_{n-1}^1(log t) and its derivative beyond a chosen moving cutoff.",
+    "The full RH/Li obligation is not the tail alone: the finite prefix up to X(n), archimedean terms, and exact Li sign gluing remain separate."
+  ],
+  "solved_analogues": [
+    "Abel summation for signed arithmetic sequences with a controlled cumulative sum",
+    "Coffey's fixed-n natural-order moment/Laguerre representation used in RH-ANA-003c"
+  ],
+  "near_solved_analogues": [
+    "classical logarithmic zero-free regions transferred through Ingham-type PNT error bounds",
+    "Korobov-Vinogradov zero-free regions and the optimal unconditional PNT error scale"
+  ],
+  "method_transfers": [
+    {
+      "source_context": "Abel summation for a signed arithmetic sequence a_m with cumulative A(x)",
+      "method": "replace a cancellation-destroying termwise tail by an exact source-order boundary-plus-integral identity",
+      "shared_structure": ["signed source sequence", "fixed order", "smooth kernel between integer jumps", "cumulative error"],
+      "required_assumptions": ["natural order fixed", "A(x) available", "kernel differentiable on (1,infinity)", "boundary term tends to zero"],
+      "disanalogies": ["the target kernel depends on n", "the target requires one cutoff law valid for every Li index", "tail control does not control the finite prefix"],
+      "repair_question": "Can current unconditional A(x) bounds dominate the n-dependent Laguerre derivative uniformly after a source-bound moving cutoff?",
+      "source_anchors": ["Coffey arXiv:0706.0343v2", "Abel/partial summation identity"]
+    },
+    {
+      "source_context": "Korobov-Vinogradov zero-free region plus Bellotti's optimal PNT error transfer",
+      "method": "use |psi(x)-x|/x << exp(-d (log x)^(3/5)(loglog x)^(-1/5)) as the cumulative-source decay in the Abel tail",
+      "shared_structure": ["cumulative Chebyshev error", "large-x source control", "unconditional zeta information"],
+      "required_assumptions": ["x sufficiently large", "implicit constants may be absorbed", "no RH assumption"],
+      "disanalogies": ["Bellotti controls psi(x)-x, not the Laguerre-weighted Li tail directly", "the cutoff needed after the crude all-n Laguerre envelope is enormous"],
+      "repair_question": "What growth law for log X(n) makes the 3/5 PNT exponent dominate the square-root Laguerre-envelope exponent?",
+      "source_anchors": ["Bellotti arXiv:2508.02041"]
+    },
+    {
+      "source_context": "explicit logarithmic zero-free region sigma >= 1-c/log t",
+      "method": "feed the logarithmic zero-free scale through the classical Ingham optimization as a negative comparator",
+      "shared_structure": ["zeta zero-free input", "PNT cumulative-error route"],
+      "required_assumptions": ["standard zero-free-to-PNT transfer", "same crude Laguerre envelope"],
+      "disanalogies": ["the 2026 result improves an explicit constant within a logarithmic family; it is not the asymptotically wider Korobov-Vinogradov region"],
+      "repair_question": "Does a sqrt(log x)-scale PNT decay ever dominate exp(2 sqrt(n log x)) uniformly in n?",
+      "source_anchors": ["Bellotti-Trudgian-Yang arXiv:2603.21490", "Bellotti arXiv:2508.02041"]
+    }
+  ],
+  "explicit_disanalogies": [
+    "fixed-n convergence from R4 does not imply an n-uniform tail modulus",
+    "a bound for the whole S_Lambda remainder would re-enter the R3 root-strength obstruction",
+    "a tail certificate cannot be promoted to Li positivity without an exact finite-prefix and archimedean gluing argument",
+    "a failure of one crude majorant/operator family is not a theorem that no sharper method exists",
+    "same-context expert review is not independent review"
+  ],
+  "source_anchors": [
+    "RAKL/main@43897d3afaf0038385102d5acc64793c05ec40f0",
+    "RAKL_math/main@590fada40db007185e31d849a82349c4c21d75ac",
+    "RAKL_math issue #3",
+    "RAKL_math issue #202",
+    "RAKL_math draft PR #195",
+    "Coffey arXiv:0706.0343v2",
+    "Bellotti arXiv:2508.02041",
+    "Bellotti-Trudgian-Yang arXiv:2603.21490"
+  ],
+  "analogy_scan_status": "BRIDGES_RETAINED",
+  "cross_domain_analogies": [
+    {
+      "source_kind": "ordered signed ledger",
+      "source_situation": "A signed transaction stream can be reconciled by replacing individual debit/credit magnitudes with cumulative balance changes while preserving transaction order.",
+      "common_abstraction": ["cancellation-sensitive ordered aggregation", "cumulative-state transform", "tail reconciliation"],
+      "source_to_target_mapping": ["ledger entries -> 1-Lambda(m) weighted by b_n(m)", "running balance -> A(x)", "reconciliation by summation by parts -> Abel tail identity"],
+      "shared_constraints": ["entry order fixed", "signed cancellation matters", "boundary and residual must be explicit"],
+      "disanalogies": ["the arithmetic source has a theorem-backed PNT error and an n-dependent special-function kernel absent in a ledger"],
+      "proposed_principle": "Move cancellation into a cumulative state before applying absolute bounds.",
+      "validation_obligation": "Derive the exact target Abel identity and prove the boundary/integral converge under target-specific PNT and Laguerre estimates.",
+      "provenance_note": "Proposal-only structural analogy; no mathematical authority."
+    }
+  ],
+  "analogy_scan_notes": "The ledger analogy survives only as a proposal for cumulative-state transformation; all mathematical authority must come from exact Abel summation, special-function identities, and primary PNT sources.",
+  "actual_fibre_consulted": [
+    "current RAKL AGENTS.md, router, manifest 0.7.0, core principles/workflow, mathematical-research workflow, RAKL_VERSION.json, method_specs.py, semantic_shortcut.py, research_memory.py, math_context.py, research_trace.py",
+    "current RAKL_math framework pin and migration PR #200",
+    "RH root issue #3; R4 control #188; R5 control #202; draft RH PR #195",
+    "R4 context, memory, TaskEpisode and method case study",
+    "Coffey arXiv:0706.0343v2",
+    "Bellotti arXiv:2508.02041",
+    "Bellotti-Trudgian-Yang arXiv:2603.21490"
+  ],
+  "framework_subject": {"method_version": "3.0.0", "skill_manifest_version": "0.7.0", "rakl_main_sha": "43897d3afaf0038385102d5acc64793c05ec40f0", "application_pin": "43897d3afaf0038385102d5acc64793c05ec40f0"},
+  "frozen_at": "2026-08-12T00:00:10+00:00",
+  "first_candidate_at": null,
+  "proposal_authority": "SHADOW_ONLY",
+  "packet_hash": "sha256:7c39ec6c7b39c5fd573a4e2d252d08c039952faf87c506a972a86d64b41cf59c"
+}
