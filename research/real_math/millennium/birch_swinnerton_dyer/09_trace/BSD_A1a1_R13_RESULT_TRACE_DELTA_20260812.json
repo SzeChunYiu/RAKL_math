@@ -1,0 +1,50 @@
+{
+  "trace_id": "TRACE-BSD-A1a1-R13-KURIHARA-ORDER-RESULT-20260812",
+  "authority": "PUBLIC_DECISION_TRACE_DELTA_PROPOSAL_ONLY_NO_ROOT_AUTHORITY",
+  "base_trace": "TRACE-BSD-A1a1-R13-PRE-KURIHARA-ORDER-20260812",
+  "base_last_event_id": "BSD-A1a1-E38-R13-FREEZE",
+  "base_last_event_hash": "sha256:b204757d8e2ddb44da7ef63085d451bbfacbf63b985babee4b7dc7b7a81689ba",
+  "entries": [
+    {
+      "event_id": "BSD-A1a1-E39-R13-SOURCE",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "PRIMARY_SOURCE_DISCRIMINATOR",
+      "timestamp": "2026-08-12T06:04:33Z",
+      "state_summary": "Kim/Pollack discrete Kurihara representation can determine Selmer corank exactly in scope.",
+      "action_summary": "Check whether the source also proves complex Taylor order equals discrete order at analytic rank two; inspect theorem/conjecture labels and low-rank boundary.",
+      "evidence_pointers": ["arXiv:2505.09121v1", "Theorem 1.1", "Corollary 1.5", "Conjecture 1.6", "Corollary 1.10", "Corollary 1.11"],
+      "outputs": ["DISCRETE_ORDER_EQUALS_SELMER_CORANK_IN_SCOPE", "GENERIC_COMPLEX_DISCRETE_EQUALITY_IS_CONJECTURE_1.6"],
+      "residuals": ["COMPLEX_RANK2_TO_KURIHARA_DISCRETE_ORDER_OPEN"],
+      "previous_event_hash": "sha256:b204757d8e2ddb44da7ef63085d451bbfacbf63b985babee4b7dc7b7a81689ba",
+      "artifact_hash": "sha256:463ad9533ba36d678b16f9b835bfac6cfc9fabfd92e82b0240af605525ddd1db"
+    },
+    {
+      "event_id": "BSD-A1a1-E40-R13-FALSIFY",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "COUNTEREXAMPLE_FIRST_SCOPE_FALSIFICATION",
+      "timestamp": "2026-08-12T06:04:33Z",
+      "state_summary": "The generic complex/discrete equality is Conjecture 1.6; rank<=1 equality and parity do not extend to exact rank two.",
+      "action_summary": "Reject low-rank overtransfer, parity-as-upper-bound, analogy-as-identity, and numerical-witness-as-generic-proof; isolate the weaker two-prime witness target.",
+      "evidence_pointers": ["BSD_A1a1_R13_KURIHARA_ORDER_SOURCE_AUDIT_20260812.json", "PDF screenshots p.4/p.6/p.8/p.32"],
+      "outputs": ["LOW_RANK_OVERTRANSFER_REJECTED", "PARITY_NOT_UPPER_BOUND", "TWO_PRIME_WITNESS_SUFFICIENT_CONDITION_IDENTIFIED"],
+      "residuals": ["COMPLEX_RANK2_TO_TWO_PRIME_NONZERO_KURIHARA_WITNESS_OR_EQUIVALENT_GENERIC_SELMER_UPPER_BOUND_OPEN", "WEIGHT2_KURIHARA_SELMER_TO_ZHANG_R9_SAME_THEORY_COORDINATE_BINDING_OPEN"],
+      "previous_event_hash": "sha256:463ad9533ba36d678b16f9b835bfac6cfc9fabfd92e82b0240af605525ddd1db",
+      "artifact_hash": "sha256:0c3ddda7fbcd8f5b6394fa4bf4efc8897a0b529aae237e141421217b532c36d5"
+    },
+    {
+      "event_id": "BSD-A1a1-E41-R13-REVIEW",
+      "atom_id": "BSD-A1a1-THETA-ORDER-COMPARISON",
+      "event_type": "SAME_CONTEXT_REVIEW_AND_RESIDUAL_REFINEMENT",
+      "timestamp": "2026-08-12T06:04:33Z",
+      "state_summary": "Local discrete theorem succeeds; root-facing representation/gluing edge remains open.",
+      "action_summary": "Run seven-role same-context expert review; retain only scoped relation knowledge; keep same-theory coordinate binding, localization and full BSD leading-term glue separate.",
+      "evidence_pointers": ["BSD_A1a1_R13_PROSPECTIVE_EXPERT_REVIEW_20260812.md", "BSD_A1a1_R13_DIAGNOSIS_SHADOW_20260812.json", "BSD_A1a1_R13_FAILURE_SHADOW_20260812.json", "BSD_A1a1_R13_V3_TASK_EPISODE_SHADOW_20260812.taskepisode"],
+      "outputs": ["SCOPED_RESIDUAL_SHARPENING", "INDEPENDENT_REVIEW_0_OF_3", "NO_PROTECTED_PROMOTION", "OPEN_NO_SOLUTION_CERTIFICATE"],
+      "residuals": ["COMPLEX_RANK2_TO_TWO_PRIME_NONZERO_KURIHARA_WITNESS_OR_EQUIVALENT_GENERIC_SELMER_UPPER_BOUND_OPEN", "WEIGHT2_KURIHARA_SELMER_TO_ZHANG_R9_SAME_THEORY_COORDINATE_BINDING_OPEN", "EXACT_COMPLEX_RANK2_TO_TRANSVERSE_P_LOCALIZATION_NONZERO_OPEN", "MORDELL_WEIL_SHA_REGULATOR_TAMAGAWA_TORSION_PERIOD_COMPLEX_LEADING_TERM_GLUE_OPEN"],
+      "previous_event_hash": "sha256:0c3ddda7fbcd8f5b6394fa4bf4efc8897a0b529aae237e141421217b532c36d5",
+      "artifact_hash": "sha256:5f98a34acffc05b23d5c826b9de7e1183d987edf09508c7f1a45daf4481acb61"
+    }
+  ],
+  "terminal_event_hash": "sha256:5f98a34acffc05b23d5c826b9de7e1183d987edf09508c7f1a45daf4481acb61",
+  "root_state": "OPEN_NO_SOLUTION_CERTIFICATE"
+}
