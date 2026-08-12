@@ -115,6 +115,26 @@ def test_learning_artifact_contains_only_seven_mathematical_fields() -> None:
     text = json.dumps(fields).lower()
     for non_math in ("git", " ci ", "schema", "hash", "chronology", "workflow"):
         assert non_math not in text
+    proof = fields["proof_and_source_evidence"]
+    assert "16*sum_{p=32}^{63}(64-p)=16*(1+...+32)=8448" in proof
+    assert "32768-8448=24320" in proof
+    assert "4+1024+8192+8448=17668" in proof
+    assert "32+128+24320=24480" in proof
+    assert "program corroborates" in proof
+    assert "no proof authority" in proof
+
+
+def test_structural_lemma_contains_a_hand_count_not_a_computational_proof() -> None:
+    fixture = load_module("c053_k32_hand_count", FIXTURE)
+    lemma = load(ROOT / fixture.PATHS["structural_lemma"])
+    hand = lemma["hand_count_certificate"]
+    assert hand["mapped_token_starts"] == [5, 12, 19]
+    assert hand["mapped_variable_codes"] == ["16", "1", "r=((v_current-1024)>>3)&63"]
+    assert hand["rejected_pair_derivation"] == "16*sum_{p=32}^{63}(64-p)=16*(1+...+32)=8448"
+    assert hand["partial_phase_survivor_derivation"] == "32*1024-8448=32768-8448=24320"
+    assert hand["all_phase_totals"] == "rejected=4+1024+8192+8448=17668; survivors=32+128+24320=24480"
+    assert "corroborates" in hand["computation_role"]
+    assert "not the proof" in hand["computation_role"]
 
 
 def test_shortcut_review_uses_search_with_exact_mapping_not_topic_similarity() -> None:

@@ -1,5 +1,5 @@
 {
-  "artifact_hash": "sha256:237346203a71d4c85e0ee655bc9aa811b977e9330291f2f5aa3b6c390af556be",
+  "artifact_hash": "sha256:d3f2becf13ec64a7e37f11acf26acd04faf2ff434103f390ad552d805f2a48af",
   "atom_id": "O9d12a2a1b-C053-K32-PHASE-SCREEN",
   "authority": "SOURCE_BOUND_EXACT_STRUCTURAL_LEMMA_FOR_TWO_SEPARATOR_FAMILIES_ONLY",
   "bounded_classification": {
@@ -377,6 +377,31 @@
       "surviving_pairs": 128
     }
   ],
+  "hand_count_certificate": {
+    "all_phase_totals": "rejected=4+1024+8192+8448=17668; survivors=32+128+24320=24480",
+    "computation_role": "The source-bound program corroborates these hand counts only; it is not the proof.",
+    "illegality_condition": "The fixed codes 16 and 1 are legal for every p>=32, so rejection occurs exactly when r=0 or r>p.",
+    "mapped_token_starts": [
+      5,
+      12,
+      19
+    ],
+    "mapped_variable_codes": [
+      "16",
+      "1",
+      "r=((v_current-1024)>>3)&63"
+    ],
+    "other_rejected_phase_counts": [
+      4,
+      1024,
+      8192
+    ],
+    "parent_parameter_range": "p=v_parent in {32,...,63}",
+    "partial_phase": "(a_parent,m_parent)=(6,2) to (a_current,m_current)=(11,1)",
+    "partial_phase_survivor_derivation": "32*1024-8448=32768-8448=24320",
+    "rejected_pair_derivation": "16*sum_{p=32}^{63}(64-p)=16*(1+...+32)=8448",
+    "residue_multiplicity": "Each r in {0,...,63} occurs for exactly 16 of the 1024 current parameters v_current in {1024,...,2047}."
+  },
   "lemma_id": "PNP-C053-K32-BOUNDARY-TOKEN-PHASE-SCREEN-LEMMA-20260812",
   "non_guarantees": [
     "no canonical word compatibility",
@@ -405,7 +430,8 @@
     "The k31 result proves all 82 parameter pairs are removed by the pad endpoint or fixed illegal-token separator.",
     "At k32, current p[32] varies over {0,1} inside a legal payload index for every current parameter, so no pad-versus-forced-one endpoint conflict remains.",
     "Map every complete parent token lying in the fixed current header using j=H_parent+t w_parent-k+1 and decode its variable code against the exact parent v.",
-    "The six cell-pair cases give 17668 fixed-header illegal-token rejections and 24480 survivors; the two current (3,4) clean phases retain all 32 and 128 parameter pairs respectively."
+    "For the only nontrivial partial phase (6,2)->(11,1), the complete mapped tokens start at h[5], h[12], h[19] and have variable codes 16, 1, and r=((v_current-1024)>>3)&63. Each r in {0,...,63} occurs 16 times. For p=v_parent in {32,...,63}, rejection is exactly r=0 or r>p, hence 16*sum_{p=32}^{63}(64-p)=16*(1+...+32)=8448 rejected and 32768-8448=24320 surviving pairs.",
+    "The other three rejected phases contribute 4, 1024, and 8192 pairs, while the two current (3,4) clean phases contribute 32 and 128 survivors. Thus rejected=4+1024+8192+8448=17668 and survivors=32+128+24320=24480. The program only corroborates these hand counts."
   ],
   "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
   "schema_version": "1.0.0",

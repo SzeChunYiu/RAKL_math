@@ -1,5 +1,5 @@
 {
-  "artifact_hash": "sha256:e089275dc9cc935844e606213d49a72eb15dcedaa3b5e51d5452ee4be03789a5",
+  "artifact_hash": "sha256:b64ab75a96d82bf1f33fa55461d3f07e4ba66a970712cc0e568760d4c7bb5faa",
   "lesson_id": "MATH-PNP-C053-K32-PHASE-SCREEN-20260812",
   "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
   "schema_version": "1.0.0",
@@ -7,10 +7,10 @@
     "attempted_implication": "Moving from k=31 to the next adjacent-supported level might remove the parent-pad endpoint conflict and the mapped illegal-parent-token conflict simultaneously.",
     "exact_theorem_or_failure": "Within the checked set {31,32}, k=32 is the least checked k with parameter phases surviving both separator families. At k=32 the endpoint screen excludes none; fixed-current-header token illegality excludes 17668 of 42148 parameter pairs; 24480 survive this two-family screen.",
     "mathematical_falsifier": "A missed exact support cell, an incorrect split-coordinate map, a k32 current endpoint forced to one in a claimed survivor, an illegal complete fixed-header parent token in a claimed clean phase, or a recomputation count different from 0/82 and 24480/42148 refutes the corresponding lemma component.",
-    "proof_and_source_evidence": "Derive E(a,m)=6+2a+2 bit_length(m)+3m(a+1)+parity padding, enumerate exact support solutions, use h[j]=x[k+j-1] and token start j=H+t(a+1)-k+1 with j>=1, then exhaust every parameter pair using endpoint-value and legal-variable-code predicates.",
+    "proof_and_source_evidence": "Derive E(a,m)=6+2a+2 bit_length(m)+3m(a+1)+parity padding and the exact support cells, then use h[j]=x[k+j-1] and token start j=H+t(a+1)-k+1 with j>=1. In the only nontrivial partial phase (6,2)->(11,1), the mapped h-starts 5,12,19 have variable codes 16,1,r with r=((v_current-1024)>>3)&63; each r in {0,...,63} occurs 16 times. For p=v_parent in {32,...,63}, only r=0 or r>p is illegal, so the hand count is 16*sum_{p=32}^{63}(64-p)=16*(1+...+32)=8448 rejected and 32768-8448=24320 survivors. Together with the other rejected phases, 4+1024+8192+8448=17668, while 32+128+24320=24480 survive. The source-bound program corroborates these hand derivations only and receives no proof authority.",
     "repair_or_next_mathematical_move": "Analyze full-word compatibility first in the smallest clean phase (parent a,m)=(4,3) and current a+,m+=(3,4), while screening every other complete mapped block before constructing formulas; retain the larger clean and partial phases as alternatives.",
     "scope": "Exact C041 encoding, k=31 and k=32 only, all exact parent/current support cells and parameter pairs, and only the two separator families proved at k=31. No statement about overlap, general k, collision, covers, circuits, or P versus NP.",
     "supported_and_competing_mathematical_causes": "Supported cause is a changed split/field phase: p[32] is variable rather than forced one, and only some complete current-header blocks map to illegal parent tokens. Competing causes still open include a different fixed coordinate, a different multi-bit legality constraint, full-word incompatibility, and absence of any UNSAT parent in a surviving syntax phase."
   },
-  "structural_lemma_artifact_hash": "sha256:237346203a71d4c85e0ee655bc9aa811b977e9330291f2f5aa3b6c390af556be"
+  "structural_lemma_artifact_hash": "sha256:d3f2becf13ec64a7e37f11acf26acd04faf2ff434103f390ad552d805f2a48af"
 }
