@@ -1,0 +1,109 @@
+{
+  "schema_version": "bsd-r14-pre-action-fibre-v1",
+  "cycle_id": "BSD-S001c1-R14-PARITY-COMPARISON-20260812",
+  "task_id": "RAKL-VERIFIED-DISCOVERY-BSD-ANALYTIC",
+  "atom_id": "BSD-S001c1-KURIHARA-TAYLOR-COMPARISON",
+  "active_residual": "DISCRETE_KURIHARA_ORDER_TO_COMPLEX_TAYLOR_ORDER_ARBITRARY_RANK_OPEN",
+  "framework": {
+    "repo": "SzeChunYiu/RAKL",
+    "sha": "5dc0627f039e8f3e1cdcb7e05cd7603860afc554",
+    "method_version": "3.0.0",
+    "package_version": "0.1.0"
+  },
+  "application": {
+    "repo": "SzeChunYiu/RAKL_math",
+    "base_sha": "451d9506d365f06eb314323523ba123edd3ffb32",
+    "base_tree_sha": "ee0c402754b1133a1bb6765946519d0fa530b943"
+  },
+  "root_contract": [
+    "same elliptic curve E/Q; exact root coordinate is ord_{s=1} L(E,s) versus rank E(Q)",
+    "arbitrary-rank comparison may not assume BSD, analytic-rank equality, algebraic-rank equality, Sha finiteness unless explicitly part of a scoped theorem cell, or equivalent-strength Iwasawa/main-conjecture input without preserving it",
+    "fixed-p Selmer/discrete statements remain distinct from complex Taylor order and refined all-factor leading term",
+    "low-rank or technical-prime cells may not be promoted to arbitrary rank",
+    "root promotion requires the protected proof/review gates"
+  ],
+  "actual_fibre_consulted_before_search": [
+    "RAKL@5dc0627:ARCHITECTURE.md",
+    "RAKL@5dc0627:RAKL_VERSION.json",
+    "RAKL@5dc0627:src/rakl/method_specs.py",
+    "RAKL@5dc0627:src/rakl/epistemic_sufficiency.py",
+    "RAKL_math@451d950:issue#7",
+    "RAKL_math@451d950:02_problem_dag/open_obligations.yaml",
+    "RAKL_math@451d950:01_frontier/BSD-S001c1_KURIHARA_TAYLOR_CONTEXT_FIBER_20260811.json",
+    "RAKL_math@451d950:00_sources/BSD_A1a1_R9_ZHANG_LOWER_BOUND_SOURCE_AUDIT_20260812.json",
+    "RAKL_math:open PR#262 R10 Katz-axis audit (pending/noncanonical)",
+    "RAKL_math:open PR#298 R11 higher-GZ exactness audit (pending/noncanonical)",
+    "RAKL_math:open PR#312 R12 p-infinity/Vp binding (pending/noncanonical)",
+    "RAKL_math:open PR#322 R13 transverse-localization audit (pending/noncanonical)",
+    "RAKL_math:PR#248 XM018 intersection-is-not-generation transfer (proposal/cross-memory)"
+  ],
+  "selected_prior_experience": [
+    {
+      "id": "BSD-S001c1-KURIHARA-TAYLOR-CONTEXT",
+      "reason": "canonical active atom explicitly lists parity-plus-inequality as an equivalent formulation"
+    },
+    {
+      "id": "BSD-R9-ZHANG-LOWER-BOUND",
+      "reason": "canonical same-E/Q analytic-rank-two theorem cell supplies scope discipline and demonstrates one-sided arithmetic control"
+    },
+    {
+      "id": "FM-BSD-ARITHMETIC-PREMISE-REIMPORT",
+      "reason": "negative-history guard against replacing the missing complex/discrete comparison by a Selmer/Iwasawa assumption"
+    }
+  ],
+  "retrieved_but_rejected_prior_experience": [
+    {
+      "id": "BSD-R10-KATZ-AXIS",
+      "reason": "pending/noncanonical and p-adic-character order route is already saturated; not the chosen parity discriminator"
+    },
+    {
+      "id": "BSD-R11-HIGHER-GZ",
+      "reason": "pending/noncanonical and discrete exactness route already found no complex-order identification; retained only as a no-repeat warning"
+    },
+    {
+      "id": "BSD-R12-PINFINITY-VP",
+      "reason": "pending/noncanonical and coefficient conversion does not address the active arbitrary-rank complex/discrete comparison"
+    },
+    {
+      "id": "BSD-R13-TRANSVERSE-LOCALIZATION",
+      "reason": "pending/noncanonical and direct localization family is saturated; current cycle rotates to parity comparison"
+    },
+    {
+      "id": "XM018-INTERSECTION-NONEXPANSION",
+      "reason": "structurally useful but does not directly type the parity/order comparison; no cross-problem JUMP authorized"
+    }
+  ],
+  "pre_memory_pre_gate_preference": "Search for a direct arbitrary-rank exact Kurihara-order = complex-Taylor-order theorem.",
+  "rakl_conditioned_preference": "First test the lower-cost parity-completion formulation explicitly frozen in S001c1: whether a proved Selmer parity theorem plus exact Kurihara-to-Selmer reconstruction yields a noncircular mod-2 complex/discrete comparison, and whether any one-sided bound is sharp enough with parity to force equality.",
+  "decision_policy": "SEARCH -> typed GLUE only after same-coordinate verification; counterexample/hostile-gap first; avoid saturated Katz/localization/higher-GZ repetitions; no candidate invention unless bounded search leaves a precise missing edge.",
+  "predeclared_discriminator": [
+    "Find a primary theorem, applicable to the same E/Q and p-cell as the Kurihara/Selmer theorem, proving parity of the relevant Bloch-Kato/p-infinity Selmer corank from the global root number or complex analytic parity without assuming BSD rank equality.",
+    "Verify that the exact Kim-Pollack discrete invariant equals that same Selmer corank under explicit hypotheses.",
+    "If both hold, conclude only the scoped congruence ord_Kurihara congruent ord_{s=1}L(E,s) mod 2, unless an independent one-sided inequality narrows the discrepancy below 2.",
+    "Reject any route whose parity theorem uses algebraic rank equality, Sha finiteness in a way equivalent to the target, or a different Selmer structure/prime without a valid translation."
+  ],
+  "hostile_falsifier": "Parity alone cannot force equality: values 2 and 4 have the same parity. A claimed closure must additionally supply a source-bound one-sided gap <2 or exact inequality pair on the same coordinates.",
+  "canonical_method_surfaces": [
+    "decomposition",
+    "routing",
+    "search_query_generation",
+    "source_selection_reliability",
+    "claim_extraction",
+    "mathematical_context_translation",
+    "equivalence_similarity",
+    "contextual_theory_gluing",
+    "contradiction_diagnosis",
+    "gap_discovery",
+    "memory",
+    "review",
+    "saturation_stopping",
+    "prompting_context_policy"
+  ],
+  "v3_feature_use": {
+    "pre_action_receipt": "prospective freeze before parity-source search",
+    "epistemic_sufficiency": "INSPECTED_NOT_AUTHORIZED_FOR_ROOT: open BSD is not a known-answer-validated decision case",
+    "authority": "PROPOSAL_SHADOW_ONLY"
+  },
+  "fibre_snapshot_hash": "sha256:07526440f35e0b4fe0c175770dbeca0280613b593667609e14dae257524fa3a6",
+  "frozen_at_utc": "2026-08-12T06:35:33Z"
+}
