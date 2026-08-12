@@ -35,7 +35,7 @@ def test_r13_retrospective_math_scope_and_interfaces_are_exact() -> None:
         "pull_request": 240,
         "original_head": "90ff9f31d29be9317e9f7a77b8d82fcb7cd32f8b",
         "original_base": "7c44a3a19f79e4beb41af6b55b1bb1cc043d8d42",
-        "latest_main_audited": "ec8a9eb5eeedaaf1d3f497a8688384256a2079e0",
+        "latest_main_audited": "597b7d98b514af33808d5f32be2cd5c906cfe036",
         "framework_pin_audited": "43897d3afaf0038385102d5acc64793c05ec40f0",
     }
     assert audit["exact_statement"]["status"] == (
@@ -79,6 +79,12 @@ def test_r13_public_history_fails_strict_chronology_without_impossibility() -> N
         "issue_238_closed": False,
         "independent_review_credit": "0/3",
         "root_status": "OPEN_NO_SOLUTION_CERTIFICATE",
+    }
+    assert audit["current_main_failure_atlas_boundary"] == {
+        "failure_mechanism": "FM-YM-SAME-THEORY-INTERFACE-AND-DENSITY",
+        "status": "SUPPORTED_INTERFACE_FAILURE_UNIQUE_MATHEMATICAL_CAUSE_OPEN",
+        "effect_of_r13": "At most the finite-to-infinite reflection-positivity sub-interface is supported retrospectively. Exact covariance-to-transfer moments, a common invariant source algebra, and post-null-quotient density remain unbound, so the current Yang-Mills cause stays open.",
+        "impossibility_claimed": False,
     }
 
 
